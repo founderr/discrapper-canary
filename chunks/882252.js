@@ -3,16 +3,16 @@ n.d(t, {
         return c;
     },
     Uw: function () {
-        return E;
+        return _;
     },
     nC: function () {
         return d;
     },
     nU: function () {
-        return f;
+        return h;
     },
     yv: function () {
-        return h;
+        return p;
     }
 }),
     n(47120);
@@ -22,7 +22,7 @@ var r = n(683860),
     s = n(306680),
     o = n(710352),
     l = n(176505),
-    u = n(689938);
+    u = n(388032);
 function c(e, t) {
     let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [s.ZP];
     return {
@@ -37,23 +37,23 @@ function d(e) {
     let l = n.getGuild(o.guild_id);
     return null == l ? null : c(o, l, [r]);
 }
-let _ = () => ({
-    minutes: u.Z.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_MINUTES,
-    hours: u.Z.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_HOURS,
-    days: u.Z.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_DAYS,
-    month: u.Z.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_MORE_THAN_MONTH
+let f = () => ({
+    minutes: u.t.nFt9cn,
+    hours: u.t.jzCewc,
+    days: u.t.U4I0s7,
+    month: u.intl.string(u.t['nBNJ/P'])
 });
-function E(e, t) {
-    if (t === o.R6.POSTED_DURATION_AGO && e === r.z.CREATION_DATE) return _;
+function _(e, t) {
+    if (t === o.R6.POSTED_DURATION_AGO && e === r.z.CREATION_DATE) return f;
 }
-function f(e, t) {
+function h(e, t) {
     let [n] = t,
         r = n.hasTrackedUnread(e),
         i = n.hasOpenedThread(e),
         a = null != n.getTrackedAckMessageId(e);
     return r && i && a;
 }
-function h(e) {
+function p(e) {
     var t;
     return (null === (t = i.Z.getChannel(e)) || void 0 === t ? void 0 : t.hasFlag(l.zZ.PINNED)) === !0;
 }

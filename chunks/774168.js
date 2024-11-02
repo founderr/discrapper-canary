@@ -5,17 +5,17 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    a = n(120356),
-    l = n.n(a),
-    r = n(772848),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
+    s = n(772848),
     o = n(960259),
     c = n(481060),
     u = n(481051),
     d = n(948464);
 function h(e) {
-    let { width: t = 24, height: n = 24, isBadged: a = !1, isTyping: l = !1 } = e,
-        [u] = s.useState(() => (0, r.Z)()),
+    let { width: t = 24, height: n = 24, isBadged: r = !1, isTyping: a = !1 } = e,
+        [u] = l.useState(() => (0, s.Z)()),
         d = (0, o.bW)().enabled;
     return (0, i.jsxs)('svg', {
         width: t,
@@ -31,7 +31,7 @@ function h(e) {
                             width: '100%',
                             height: '100%'
                         }),
-                        l &&
+                        a &&
                             (0, i.jsx)('g', {
                                 fill: 'black',
                                 transform: 'translate(5.5, '.concat(d ? 10.5 : 8.5, ') scale(').concat(11 / 24, ')'),
@@ -41,7 +41,7 @@ function h(e) {
                                     fill: 'black'
                                 })
                             }),
-                        a &&
+                        r &&
                             (0, i.jsx)('circle', {
                                 cx: '20',
                                 cy: '19',
@@ -71,16 +71,16 @@ function h(e) {
 }
 function m(e) {
     var t;
-    let { className: n, unreadCount: s, mentionCount: a, isTyping: r, canBadge: o } = e,
-        c = null != a && a > 0,
-        m = null !== (t = c ? a : s) && void 0 !== t ? t : 0,
-        p = o && null != s && s > 0;
+    let { className: n, unreadCount: l, mentionCount: r, isTyping: s, canBadge: o } = e,
+        c = null != r && r > 0,
+        m = null !== (t = c ? r : l) && void 0 !== t ? t : 0,
+        p = o && null != l && l > 0;
     return (0, i.jsxs)('div', {
-        className: l()(d.chatIcon, n),
+        className: a()(d.chatIcon, n),
         children: [
             (0, i.jsx)(h, {
                 isBadged: p,
-                isTyping: r
+                isTyping: s
             }),
             p &&
                 (0, i.jsx)(u.Z, {

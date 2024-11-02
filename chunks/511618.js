@@ -7,29 +7,29 @@ var r = n(200651),
     u = n(768581),
     c = n(981631),
     d = n(185923),
-    _ = n(474936),
-    E = n(689938),
-    f = n(916502);
+    f = n(474936),
+    _ = n(388032),
+    h = n(916502);
 t.Z = (e) => {
     let { emojis: t } = e,
         { analyticsLocations: n } = (0, a.ZP)();
     i.useEffect(() => {
         l.default.track(c.rMx.PREMIUM_UPSELL_VIEWED, {
-            type: _.cd.EMOJI_AUTOCOMPLETE_INLINE,
+            type: f.cd.EMOJI_AUTOCOMPLETE_INLINE,
             location_stack: n
         });
     }, [n]);
-    let h = (0, r.jsx)('div', {
-        className: f.emojis,
+    let p = (0, r.jsx)('div', {
+        className: h.emojis,
         children: t.slice(0, 3).map((e, t) => {
             if (null == e.id) return null;
             let n = (0, r.jsx)(
                 'div',
                 {
-                    className: f.emojiBackground,
+                    className: h.emojiBackground,
                     children: (0, r.jsx)('img', {
                         alt: e.name,
-                        className: f.emoji,
+                        className: h.emoji,
                         src: u.ZP.getEmojiURL({
                             id: e.id,
                             animated: e.animated,
@@ -44,7 +44,7 @@ t.Z = (e) => {
                 : (0, r.jsx)(
                       o.ZP,
                       {
-                          className: f.emojiMask,
+                          className: h.emojiMask,
                           mask: o.ZP.Masks.AUTOCOMPLETE_EMOJI_UPSELL_EMOJI,
                           children: n
                       },
@@ -53,7 +53,7 @@ t.Z = (e) => {
         })
     });
     return (0, r.jsxs)(s.RX, {
-        className: f.upsell,
-        children: [(0, r.jsx)(s.z5, { children: (0, r.jsx)(s.BR, { children: E.Z.Messages.AUTOCOMPLETE_EMOJI_UPSELL.format({ count: t.length }) }) }), (0, r.jsx)(s.dY, { children: h })]
+        className: h.upsell,
+        children: [(0, r.jsx)(s.z5, { children: (0, r.jsx)(s.BR, { children: _.intl.format(_.t['uEky4+'], { count: t.length }) }) }), (0, r.jsx)(s.dY, { children: p })]
     });
 };

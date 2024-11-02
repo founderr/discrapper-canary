@@ -1,10 +1,10 @@
-var s, r, i, a, l, o;
+var i, r, s, a, l, o;
 n.d(t, {
     EW: function () {
         return r;
     }
 }),
-    ((a = s || (s = {})).VIEWED = 'viewed'),
+    ((a = i || (i = {})).VIEWED = 'viewed'),
     (a.SUBMITTED = 'submitted'),
     (a.RESEND_CODE = 'resend_code'),
     (a.INPUT_ERROR = 'input_error'),
@@ -17,7 +17,7 @@ n.d(t, {
     (l.AGE_GATE = 'age_gate'),
     (l.INVITE = 'invite'),
     (l.SMS_VERIFY = 'sms_verify'),
-    ((o = i || (i = {})).ACCOUNT_IDENTITY = 'Account Identity'),
+    ((o = s || (s = {})).ACCOUNT_IDENTITY = 'Account Identity'),
     (o.ACCOUNT_DISPLAY_NAME = 'Account Display Name'),
     (o.ACCOUNT_INFORMATION = 'Account Information'),
     (o.AGE_GATE = 'Age Gate'),

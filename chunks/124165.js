@@ -3,13 +3,13 @@ n.d(t, {
         return i;
     },
     X2: function () {
-        return _;
-    },
-    cg: function () {
         return f;
     },
+    cg: function () {
+        return h;
+    },
     pF: function () {
-        return E;
+        return _;
     }
 });
 var r,
@@ -20,33 +20,33 @@ var r,
     l = n(79874),
     u = n(854698),
     c = n(765305),
-    d = n(689938);
-function _(e, t) {
+    d = n(388032);
+function f(e, t) {
     let n = a.default.getId();
     return s.ZP.getRsvp(e, t, n);
 }
-function E() {
+function _() {
     return [
         {
-            name: d.Z.Messages.GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_SERIES,
+            name: d.intl.string(d.t.uoorxs),
             value: 0
         },
         {
-            name: d.Z.Messages.GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_RECURRENCE,
+            name: d.intl.string(d.t.lwZCFR),
             value: 1
         }
     ];
 }
-function f(e) {
+function h(e) {
     let { eventId: t, recurrenceId: n, guildId: r, updateRsvp: i, openRsvpPicker: a, onRsvp: d } = e,
-        E = s.ZP.getGuildScheduledEvent(t);
-    if (null == E) return;
-    let f = (0, o.c)(n, t),
-        { startTime: h } = (0, l.Kq)(E, n),
-        p = (null == E ? void 0 : E.scheduled_start_time) != null ? (0, u.lh)(f, h, new Date(null == E ? void 0 : E.scheduled_start_time)) : null,
-        I = null != p && c.$I.has(p) ? null : null != n ? n : (0, u.DK)(E),
-        m = _(E.id),
-        T = _(E.id, I);
-    null == I ? (i(t, null, r, null != m ? c.gv.UNINTERESTED : c.gv.INTERESTED), null == d || d()) : null != T ? (i(t, I, r, null != m ? c.gv.INTERESTED : c.gv.UNINTERESTED), null == d || d()) : a(E, I);
+        _ = s.ZP.getGuildScheduledEvent(t);
+    if (null == _) return;
+    let h = (0, o.c)(n, t),
+        { startTime: p } = (0, l.Kq)(_, n),
+        m = (null == _ ? void 0 : _.scheduled_start_time) != null ? (0, u.lh)(h, p, new Date(null == _ ? void 0 : _.scheduled_start_time)) : null,
+        g = null != m && c.$I.has(m) ? null : null != n ? n : (0, u.DK)(_),
+        E = f(_.id),
+        v = f(_.id, g);
+    null == g ? (i(t, null, r, null != E ? c.gv.UNINTERESTED : c.gv.INTERESTED), null == d || d()) : null != v ? (i(t, g, r, null != E ? c.gv.INTERESTED : c.gv.UNINTERESTED), null == d || d()) : a(_, g);
 }
 ((r = i || (i = {}))[(r.SERIES = 0)] = 'SERIES'), (r[(r.RECURRENCE = 1)] = 'RECURRENCE');

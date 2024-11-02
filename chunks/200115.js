@@ -1,79 +1,79 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return g;
+        return S;
     }
 });
-var n = t(200651);
-t(192379);
-var i = t(913527),
-    l = t.n(i),
-    a = t(399606),
-    r = t(481060),
-    o = t(87051),
-    d = t(430824),
-    c = t(9156),
-    u = t(621600),
-    h = t(423589),
-    N = t(969943),
-    S = t(689938),
-    E = t(871839);
-function g(e) {
-    var s;
-    let { guildId: t } = e,
-        i = (0, a.e7)([d.Z], () => d.Z.getGuild(t)),
-        g = (0, a.e7)([c.ZP], () => c.ZP.isMuted(t)),
-        m = (0, a.e7)([c.ZP], () => c.ZP.getMuteConfig(t));
-    return null == i
+var i = n(200651);
+n(192379);
+var s = n(913527),
+    l = n.n(s),
+    r = n(399606),
+    a = n(481060),
+    o = n(87051),
+    d = n(430824),
+    c = n(9156),
+    u = n(621600),
+    h = n(423589),
+    m = n(969943),
+    g = n(388032),
+    x = n(871839);
+function S(e) {
+    var t;
+    let { guildId: n } = e,
+        s = (0, r.e7)([d.Z], () => d.Z.getGuild(n)),
+        S = (0, r.e7)([c.ZP], () => c.ZP.isMuted(n)),
+        p = (0, r.e7)([c.ZP], () => c.ZP.getMuteConfig(n));
+    return null == s
         ? null
-        : (0, n.jsxs)(r.FormItem, {
+        : (0, i.jsxs)(a.FormItem, {
               children: [
-                  (0, n.jsx)(r.FormSwitch, {
+                  (0, i.jsx)(a.FormSwitch, {
                       hideBorder: !0,
-                      value: g,
+                      value: S,
                       onChange: (e) => {
-                          o.Z.updateGuildNotificationSettings(t, { muted: e }, u.UE.muted(e));
+                          o.Z.updateGuildNotificationSettings(n, { muted: e }, u.UE.muted(e));
                       },
                       style: { marginBottom: 0 },
-                      note: S.Z.Messages.FOR_LABEL_MUTE_SEVER_DESCRIPTION_V2,
-                      children: S.Z.Messages.FORM_LABEL_MUTE_SERVER.format({ name: i.name })
+                      note: g.intl.string(g.t.IngcUl),
+                      children: g.intl.format(g.t['J+7D9P'], { name: s.name })
                   }),
-                  g &&
-                      (0, n.jsxs)('div', {
-                          className: E.mutedConfig,
+                  S &&
+                      (0, i.jsxs)('div', {
+                          className: x.mutedConfig,
                           children: [
-                              (0, n.jsxs)('div', {
+                              (0, i.jsxs)('div', {
                                   children: [
-                                      (0, n.jsx)(r.FormTitle, {
+                                      (0, i.jsx)(a.FormTitle, {
                                           tag: 'h3',
-                                          children: S.Z.Messages.MUTE_UNTIL
+                                          children: g.intl.string(g.t.Ztu2Ym)
                                       }),
-                                      (0, n.jsx)(r.Text, {
+                                      (0, i.jsx)(a.Text, {
                                           variant: 'text-xs/normal',
                                           color: 'text-muted',
                                           children: (function (e) {
                                               return null == e || null == e.end_time
                                                   ? null
-                                                  : S.Z.Messages.MUTED_UNTIL_TIME.format({
-                                                        endTime: new Date(e.end_time).toLocaleString(S.Z.getLocale(), {
+                                                  : g.intl.formatToPlainString(g.t.j7h4AA, {
+                                                        endTime: new Date(e.end_time).toLocaleString(g.intl.currentLocale, {
                                                             month: 'numeric',
                                                             day: 'numeric',
                                                             hour: 'numeric',
                                                             minute: '2-digit'
                                                         })
                                                     });
-                                          })(m)
+                                          })(p)
                                       })
                                   ]
                               }),
-                              (0, n.jsx)(r.SingleSelect, {
+                              (0, i.jsx)(a.SingleSelect, {
                                   onChange: (e) => {
-                                      let s = e > 0 ? l()().add(e, 'second').toISOString() : null;
+                                      let t = e > 0 ? l()().add(e, 'second').toISOString() : null;
                                       o.Z.updateGuildNotificationSettings(
-                                          t,
+                                          n,
                                           {
                                               mute_config: {
                                                   selected_time_window: e,
-                                                  end_time: s
+                                                  end_time: t
                                               },
                                               muted: !0
                                           },
@@ -81,7 +81,7 @@ function g(e) {
                                       );
                                   },
                                   options: (0, h.W9)(),
-                                  value: null !== (s = null == m ? void 0 : m.selected_time_window) && void 0 !== s ? s : N.Oe.ALWAYS
+                                  value: null !== (t = null == p ? void 0 : p.selected_time_window) && void 0 !== t ? t : m.Oe.ALWAYS
                               })
                           ]
                       })

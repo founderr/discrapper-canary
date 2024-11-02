@@ -1,89 +1,89 @@
-a.r(s),
-    a.d(s, {
+s.r(t),
+    s.d(t, {
         default: function () {
-            return A;
+            return d;
         }
     }),
-    a(47120);
-var t,
-    c,
-    l = a(200651),
-    r = a(192379),
-    n = a(481060),
-    i = a(689938);
-function A(e) {
+    s(47120);
+var n,
+    l,
+    i = s(200651),
+    c = s(192379),
+    r = s(481060),
+    a = s(388032);
+function d(e) {
     let {
-            modalProps: s,
-            settings: { onConfirm: a, ...t }
+            modalProps: t,
+            settings: { onConfirm: s, ...n }
         } = e,
-        [c, A] = r.useState({
+        [l, d] = c.useState({
             Account: {
                 value: 'Account',
-                label: i.Z.Messages.HARVEST_BACKEND_USERS,
+                label: a.intl.string(a.t['rfe/x8']),
                 checked: !1
             },
             Analytics: {
                 value: 'Analytics',
-                label: i.Z.Messages.HARVEST_BACKEND_ANALYTICS,
+                label: a.intl.string(a.t['j+d6RE']),
                 checked: !1
             },
             Activities: {
                 value: 'Activities',
-                label: i.Z.Messages.HARVEST_BACKEND_ACTIVITIES,
+                label: a.intl.string(a.t.KO88BQ),
                 checked: !1
             },
             Messages: {
                 value: 'Messages',
-                label: i.Z.Messages.HARVEST_BACKEND_MESSAGES,
+                label: a.intl.string(a.t['0dO1t7']),
                 checked: !1
             },
             Programs: {
                 value: 'Programs',
-                label: i.Z.Messages.HARVEST_BACKEND_HUBSPOT,
+                label: a.intl.string(a.t.M4ddeX),
                 checked: !1
             },
             Servers: {
                 value: 'Servers',
-                label: i.Z.Messages.HARVEST_BACKEND_GUILDS,
+                label: a.intl.string(a.t.JN9c39),
                 checked: !1
             }
         }),
-        S = (e) => (s, a) => {
-            A((s) => ({
-                ...s,
+        o = (e) => (t, s) => {
+            d((t) => ({
+                ...t,
                 [e]: {
-                    ...s[e],
-                    checked: a
+                    ...t[e],
+                    checked: s
                 }
             }));
         };
-    return (0, l.jsxs)(n.ConfirmModal, {
-        ...s,
+    return (0, i.jsxs)(r.ConfirmModal, {
         ...t,
+        ...n,
         onConfirm: () => {
-            let e = Object.keys(c)
-                .filter((e) => c[e].checked)
-                .map((e) => c[e].value);
-            null == a || a(e);
+            let e = Object.keys(l)
+                .filter((e) => l[e].checked)
+                .map((e) => l[e].value);
+            null == s || s(e);
         },
         children: [
-            (0, l.jsx)(n.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: 'text-md/normal',
                 style: { marginBottom: '5px' },
-                children: t.body
+                children: n.body
             }),
-            Object.keys(c).map((e) => {
-                let { label: s, checked: a } = c[e];
-                return (0, l.jsx)(
-                    n.Checkbox,
+            Object.keys(l).map((e) => {
+                let { label: t, checked: s } = l[e];
+                return (0, i.jsx)(
+                    r.Checkbox,
                     {
-                        type: n.Checkbox.Types.INVERTED,
-                        value: a,
+                        type: r.Checkbox.Types.INVERTED,
+                        value: s,
                         style: { marginBottom: '2px' },
-                        onChange: S(e),
-                        children: (0, l.jsx)(n.Text, {
+                        onChange: o(e),
+                        children: (0, i.jsx)(r.Text, {
                             variant: 'text-md/normal',
-                            children: s
+                            children: t
                         })
                     },
                     e
@@ -92,4 +92,4 @@ function A(e) {
         ]
     });
 }
-((c = t || (t = {})).USERS = 'Account'), (c.MESSAGES = 'Messages'), (c.GUILDS = 'Servers'), (c.ANALYTICS = 'Analytics'), (c.ACTIVITIES = 'Activities'), (c.HUBSPOT = 'Programs');
+((l = n || (n = {})).USERS = 'Account'), (l.MESSAGES = 'Messages'), (l.GUILDS = 'Servers'), (l.ANALYTICS = 'Analytics'), (l.ACTIVITIES = 'Activities'), (l.HUBSPOT = 'Programs');

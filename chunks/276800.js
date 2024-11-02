@@ -1,22 +1,22 @@
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(774078),
-    r = n(706454),
-    i = n(689938);
+var r = n(774078),
+    a = n(706454),
+    s = n(388032);
 function l(e) {
-    return e.toLocaleString(r.default.locale, {
+    return e.toLocaleString(a.default.locale, {
         minimumIntegerDigits: 2,
         useGrouping: !1
     });
 }
 t.Z = function (e) {
     let { endDate: t } = e,
-        n = (0, a.Z)(t, 1000);
-    return (0, s.jsx)(s.Fragment, {
+        n = (0, r.Z)(t, 1000);
+    return (0, i.jsx)(i.Fragment, {
         children:
             n.days > 0
-                ? i.Z.Messages.BOGO_UNTIL_OFFER_ENDS_DAYS.format({ days: n.days })
-                : i.Z.Messages.BOGO_UNTIL_OFFER_ENDS.format({
+                ? s.intl.formatToPlainString(s.t.f0QaSU, { days: n.days })
+                : s.intl.formatToPlainString(s.t['3MT4MT'], {
                       hours: l(n.hours),
                       minutes: l(n.minutes),
                       seconds: l(n.seconds)

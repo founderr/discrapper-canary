@@ -16,8 +16,8 @@ function r(e) {
             a = [],
             i = [];
         for (var r = 0; r < n.length; r++) {
-            let s = n[r];
-            s.isNew ? t.push(s) : s.hasNewAnswers ? (l.push(s), (e += s.options.filter((e) => e.isUnseen).length)) : s.inOnboarding ? i.push(s) : a.push(s);
+            let o = n[r];
+            o.isNew ? t.push(o) : o.hasNewAnswers ? (l.push(o), (e += o.options.filter((e) => e.isUnseen).length)) : o.inOnboarding ? i.push(o) : a.push(o);
         }
         return {
             onboardingPromptsRaw: n,

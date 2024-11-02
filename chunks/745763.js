@@ -1,33 +1,33 @@
-t.r(n),
-    t.d(n, {
+t.r(e),
+    t.d(e, {
         default: function () {
-            return d;
+            return s;
         }
     });
 var l = t(200651);
 t(192379);
 var o = t(481060),
-    a = t(239091),
-    c = t(358085),
-    s = t(998502),
-    u = t(89013),
-    r = t(689938);
-function d(e) {
-    let { text: n, onSelect: t } = e,
-        d = (0, u.Z)(n);
-    return c.isPlatformEmbedded
+    r = t(239091),
+    u = t(358085),
+    c = t(998502),
+    i = t(89013),
+    a = t(388032);
+function s(n) {
+    let { text: e, onSelect: t } = n,
+        s = (0, i.Z)(e);
+    return u.isPlatformEmbedded
         ? (0, l.jsxs)(o.Menu, {
               navId: 'text-context',
-              onClose: a.Zy,
-              'aria-label': r.Z.Messages.TEXT_ACTIONS_MENU_LABEL,
+              onClose: r.Zy,
+              'aria-label': a.intl.string(a.t.s285pq),
               onSelect: t,
               children: [
-                  (0, l.jsx)(o.MenuGroup, { children: d }),
+                  (0, l.jsx)(o.MenuGroup, { children: s }),
                   (0, l.jsx)(o.MenuGroup, {
                       children: (0, l.jsx)(o.MenuItem, {
                           id: 'copy',
-                          label: r.Z.Messages.COPY,
-                          action: () => s.ZP.copy(n)
+                          label: a.intl.string(a.t.OpuAlJ),
+                          action: () => c.ZP.copy(e)
                       })
                   })
               ]

@@ -1,24 +1,24 @@
 t(789020), t(47120);
 var i = t(200651),
-    a = t(192379),
-    s = t(120356),
-    l = t.n(s),
-    r = t(481060),
-    o = t(332148),
+    l = t(192379),
+    r = t(120356),
+    a = t.n(r),
+    o = t(481060),
+    s = t(332148),
     u = t(904245),
     d = t(933557),
     c = t(951844),
-    E = t(372900),
-    M = t(726521),
-    g = t(294218),
-    f = t(699516),
-    m = t(594174),
+    g = t(372900),
+    m = t(726521),
+    f = t(294218),
+    h = t(699516),
+    v = t(594174),
     I = t(630388),
-    _ = t(970257),
-    Z = t(981631),
-    S = t(689938),
-    h = t(262704);
-function A(e, n, t) {
+    E = t(970257),
+    p = t(981631),
+    M = t(388032),
+    Z = t(262704);
+function x(e, n, t) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -31,45 +31,45 @@ function A(e, n, t) {
         e
     );
 }
-class N extends a.PureComponent {
+class S extends l.PureComponent {
     render() {
         let e, n;
         let { report: t } = this.state,
-            { channel: a, message: s, showContextMenuHint: l, ...o } = this.props,
-            u = a.type === Z.d4z.GUILD_ANNOUNCEMENT && (0, I.yE)(s.flags, Z.iLy.CROSSPOSTED);
+            { channel: l, message: r, showContextMenuHint: a, ...s } = this.props,
+            u = l.type === p.d4z.GUILD_ANNOUNCEMENT && (0, I.yE)(r.flags, p.iLy.CROSSPOSTED);
         return (
-            l &&
+            a &&
                 (e = (0, i.jsx)(c.Z, {
-                    className: h.spacingTop,
-                    children: S.Z.Messages.DELETE_MESSAGE_CONTEXT_MENU_HINT.format()
+                    className: Z.spacingTop,
+                    children: M.intl.format(M.t.IxY7Ex, {})
                 })),
-            (0, _.vc)(s) &&
-                (n = (0, i.jsx)(r.FormSwitch, {
+            (0, E.vc)(r) &&
+                (n = (0, i.jsx)(o.FormSwitch, {
                     value: t,
                     onChange: this.handleToggleReport,
                     hideBorder: !0,
-                    className: h.spacingTop,
-                    children: S.Z.Messages.DELETE_MESSAGE_REPORT
+                    className: Z.spacingTop,
+                    children: M.intl.string(M.t.x0jzo6)
                 })),
-            (0, i.jsx)(E.Z.Provider, {
-                value: a.guild_id,
-                children: (0, i.jsxs)(r.ConfirmModal, {
-                    header: u ? S.Z.Messages.MODIFY_FOLLOWED_NEWS_HEADER : S.Z.Messages.DELETE_MESSAGE_TITLE,
-                    confirmText: S.Z.Messages.DELETE,
-                    cancelText: S.Z.Messages.CANCEL,
+            (0, i.jsx)(g.Z.Provider, {
+                value: l.guild_id,
+                children: (0, i.jsxs)(o.ConfirmModal, {
+                    header: u ? M.intl.string(M.t.aIz1oa) : M.intl.string(M.t.MWMcg4),
+                    confirmText: M.intl.string(M.t.oyYWHB),
+                    cancelText: M.intl.string(M.t['ETE/oK']),
                     onConfirm: this.handleDelete,
-                    ...o,
+                    ...s,
                     children: [
-                        (0, i.jsx)(r.Text, {
+                        (0, i.jsx)(o.Text, {
                             variant: 'text-md/normal',
-                            className: h.spacing,
-                            children: u ? S.Z.Messages.DELETE_FOLLOWED_NEWS_BODY : S.Z.Messages.DELETE_MESSAGE_BODY
+                            className: Z.spacing,
+                            children: u ? M.intl.string(M.t['2kHABQ']) : M.intl.string(M.t.AMvpS0)
                         }),
                         (0, i.jsx)('div', {
-                            className: h.message,
-                            children: (0, i.jsx)(g.Z, {
-                                channel: a,
-                                message: s,
+                            className: Z.message,
+                            children: (0, i.jsx)(f.Z, {
+                                channel: l,
+                                message: r,
                                 disableInteraction: !0
                             })
                         }),
@@ -82,42 +82,42 @@ class N extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            A(this, 'state', { report: !1 }),
-            A(this, 'handleDelete', () => {
+            x(this, 'state', { report: !1 }),
+            x(this, 'handleDelete', () => {
                 let { report: e } = this.state,
                     { channel: n, message: t } = this.props;
-                e ? (0, M.ak)(t, 'message_delete_alert', () => u.Z.deleteMessage(n.id, t.id)) : u.Z.deleteMessage(n.id, t.id);
+                e ? (0, m.ak)(t, 'message_delete_alert', () => u.Z.deleteMessage(n.id, t.id)) : u.Z.deleteMessage(n.id, t.id);
             }),
-            A(this, 'handleToggleReport', (e) => {
+            x(this, 'handleToggleReport', (e) => {
                 this.setState({ report: e });
             });
     }
 }
 n.Z = {
     confirmPin: function (e, n) {
-        (0, r.openModal)((t) => {
-            let a;
-            let s = (0, d.F6)(e, m.default, f.Z);
+        (0, o.openModal)((t) => {
+            let l;
+            let r = (0, d.F6)(e, v.default, h.Z);
             return (
-                (a = e.isPrivate() ? S.Z.Messages.PIN_MESSAGE_BODY_PRIVATE_CHANNEL : S.Z.Messages.PIN_MESSAGE_BODY.format({ channelName: s })),
-                (0, i.jsx)(E.Z.Provider, {
+                (l = e.isPrivate() ? M.intl.string(M.t.hMRngI) : M.intl.formatToPlainString(M.t['3IRluL'], { channelName: r })),
+                (0, i.jsx)(g.Z.Provider, {
                     value: e.guild_id,
-                    children: (0, i.jsxs)(r.ConfirmModal, {
-                        header: S.Z.Messages.PIN_MESSAGE_TITLE,
-                        confirmText: S.Z.Messages.PIN_CONFIRM,
-                        cancelText: S.Z.Messages.CANCEL,
-                        confirmButtonColor: r.Button.Colors.BRAND,
-                        onConfirm: () => o.Z.pinMessage(e, n.id),
+                    children: (0, i.jsxs)(o.ConfirmModal, {
+                        header: M.intl.string(M.t.bKMaZW),
+                        confirmText: M.intl.string(M.t.rOQ5BQ),
+                        cancelText: M.intl.string(M.t['ETE/oK']),
+                        confirmButtonColor: o.Button.Colors.BRAND,
+                        onConfirm: () => s.Z.pinMessage(e, n.id),
                         ...t,
                         children: [
-                            (0, i.jsx)(r.Text, {
+                            (0, i.jsx)(o.Text, {
                                 variant: 'text-md/normal',
-                                className: h.spacing,
-                                children: a
+                                className: Z.spacing,
+                                children: l
                             }),
                             (0, i.jsx)('div', {
-                                className: h.message,
-                                children: (0, i.jsx)(g.Z, {
+                                className: Z.message,
+                                children: (0, i.jsx)(f.Z, {
                                     channel: e,
                                     message: n,
                                     animateAvatar: !1,
@@ -131,30 +131,30 @@ n.Z = {
         });
     },
     confirmUnpin: function (e, n) {
-        (0, r.openModal)((t) =>
-            (0, i.jsx)(E.Z.Provider, {
+        (0, o.openModal)((t) =>
+            (0, i.jsx)(g.Z.Provider, {
                 value: e.guild_id,
-                children: (0, i.jsxs)(r.ConfirmModal, {
-                    header: S.Z.Messages.UNPIN_MESSAGE_TITLE,
-                    confirmText: S.Z.Messages.UNPIN_CONFIRM,
-                    cancelText: S.Z.Messages.CANCEL,
-                    onConfirm: () => o.Z.unpinMessage(e, n.id),
+                children: (0, i.jsxs)(o.ConfirmModal, {
+                    header: M.intl.string(M.t.CFF2vL),
+                    confirmText: M.intl.string(M.t.lAU5jI),
+                    cancelText: M.intl.string(M.t['ETE/oK']),
+                    onConfirm: () => s.Z.unpinMessage(e, n.id),
                     ...t,
                     children: [
-                        (0, i.jsx)(r.Text, {
+                        (0, i.jsx)(o.Text, {
                             variant: 'text-md/normal',
-                            className: h.spacing,
-                            children: S.Z.Messages.UNPIN_MESSAGE_BODY
+                            className: Z.spacing,
+                            children: M.intl.string(M.t.NjEPp6)
                         }),
                         (0, i.jsx)('div', {
-                            className: l()(h.message, h.spacing),
-                            children: (0, i.jsx)(g.Z, {
+                            className: a()(Z.message, Z.spacing),
+                            children: (0, i.jsx)(f.Z, {
                                 channel: e,
                                 message: n,
                                 disableInteraction: !0
                             })
                         }),
-                        (0, i.jsx)(c.Z, { children: S.Z.Messages.UNPIN_MESSAGE_CONTEXT_MENU_HINT.format() })
+                        (0, i.jsx)(c.Z, { children: M.intl.format(M.t.oCVB3d, {}) })
                     ]
                 })
             })
@@ -162,28 +162,28 @@ n.Z = {
     },
     confirmDelete: function (e, n) {
         let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        (0, r.openModal)((a) =>
-            (0, i.jsx)(N, {
+        (0, o.openModal)((l) =>
+            (0, i.jsx)(S, {
                 channel: e,
                 message: n,
                 showContextMenuHint: t,
-                ...a
+                ...l
             })
         );
     },
     confirmEdit: function (e, n, t) {
-        (0, r.openModal)((a) =>
-            (0, i.jsx)(r.ConfirmModal, {
-                header: S.Z.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
-                confirmText: S.Z.Messages.CONFIRM,
-                cancelText: S.Z.Messages.CANCEL,
-                confirmButtonColor: r.Button.Colors.BRAND,
+        (0, o.openModal)((l) =>
+            (0, i.jsx)(o.ConfirmModal, {
+                header: M.intl.string(M.t.aIz1oa),
+                confirmText: M.intl.string(M.t['cY+Ooa']),
+                cancelText: M.intl.string(M.t['ETE/oK']),
+                confirmButtonColor: o.Button.Colors.BRAND,
                 onConfirm: () => u.Z.editMessage(e, n, { content: t }),
-                ...a,
-                children: (0, i.jsx)(r.Text, {
+                ...l,
+                children: (0, i.jsx)(o.Text, {
                     variant: 'text-md/normal',
-                    className: h.spacing,
-                    children: S.Z.Messages.EDIT_FOLLOWED_NEWS_BODY
+                    className: Z.spacing,
+                    children: M.intl.string(M.t.grBcMz)
                 })
             })
         );

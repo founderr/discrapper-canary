@@ -19,23 +19,23 @@ function c(e, t, n) {
     );
 }
 let d = new Map(),
-    _ = {},
-    E = l.VD2.BOTTOM_RIGHT,
-    f = {
+    f = {},
+    _ = l.VD2.BOTTOM_RIGHT,
+    h = {
         [u.cL.VIDEO]: u.l8[u.cL.VIDEO],
         [u.cL.CAMERA_PREVIEW]: u.l8[u.cL.CAMERA_PREVIEW]
     };
-class h extends (a = s.ZP.PersistedStore) {
+class p extends (a = s.ZP.PersistedStore) {
     initialize(e) {
         if (null == e) {
-            (E = l.VD2.BOTTOM_RIGHT),
-                (f = {
+            (_ = l.VD2.BOTTOM_RIGHT),
+                (h = {
                     [u.cL.VIDEO]: u.l8[u.cL.VIDEO],
                     [u.cL.CAMERA_PREVIEW]: u.l8[u.cL.CAMERA_PREVIEW]
                 });
             return;
         }
-        (E = e.openPosition), (f = e.pipWidths);
+        (_ = e.openPosition), (h = e.pipWidths);
     }
     get pipWindow() {
         var e;
@@ -51,27 +51,27 @@ class h extends (a = s.ZP.PersistedStore) {
         return d;
     }
     pipWidth(e) {
-        return f[e];
+        return h[e];
     }
     isEmbeddedActivityHidden() {
         return null == i;
     }
     getDockedRect(e) {
-        return _[e];
+        return f[e];
     }
     isOpen(e) {
         return null != e && d.has(e);
     }
     getState() {
         return {
-            openPosition: E,
-            pipWidths: f
+            openPosition: _,
+            pipWidths: h
         };
     }
 }
-c(h, 'displayName', 'PictureInPictureStore'),
-    c(h, 'persistKey', 'PictureInPictureStore'),
-    c(h, 'migrations', [
+c(p, 'displayName', 'PictureInPictureStore'),
+    c(p, 'persistKey', 'PictureInPictureStore'),
+    c(p, 'migrations', [
         (e) => {
             var t, n;
             return {
@@ -83,7 +83,7 @@ c(h, 'displayName', 'PictureInPictureStore'),
             };
         }
     ]),
-    (t.Z = new h(o.Z, {
+    (t.Z = new p(o.Z, {
         PICTURE_IN_PICTURE_OPEN: function (e) {
             var t, n;
             let { id: a, component: s, props: o } = e;
@@ -91,7 +91,7 @@ c(h, 'displayName', 'PictureInPictureStore'),
             let u = {
                 id: a,
                 component: s,
-                position: null !== (t = o.position) && void 0 !== t ? t : E,
+                position: null !== (t = o.position) && void 0 !== t ? t : _,
                 props: o,
                 docked: null !== (n = o.docked) && void 0 !== n && n
             };
@@ -127,12 +127,12 @@ c(h, 'displayName', 'PictureInPictureStore'),
                     });
                 }),
                     (d = e),
-                    (E = n);
+                    (_ = n);
             }
         },
         PICTURE_IN_PICTURE_RESIZE: function (e) {
             let { width: t, pipType: n } = e;
-            f[n] = t;
+            h[n] = t;
         },
         PICTURE_IN_PICTURE_HIDE: function (e) {
             let { id: t } = e;
@@ -160,7 +160,7 @@ c(h, 'displayName', 'PictureInPictureStore'),
         },
         PICTURE_IN_PICTURE_UPDATE_RECT: function (e) {
             let { id: t, rect: n } = e;
-            _[t] = n;
+            f[t] = n;
         },
         PICTURE_IN_PICTURE_UPDATE_SELECTED_WINDOW: function (e) {
             let { id: t } = e,

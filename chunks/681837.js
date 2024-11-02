@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return f;
     }
 });
 var r = n(200651);
@@ -11,9 +11,9 @@ var i = n(442837),
     o = n(481060),
     l = n(621853),
     u = n(228168),
-    c = n(689938),
+    c = n(388032),
     d = n(19524);
-function _(e) {
+function f(e) {
     let { userId: t } = e;
     return null ==
         (0, i.e7)([l.Z], () => {
@@ -23,7 +23,7 @@ function _(e) {
         ? null
         : (0, r.jsx)(s.DY, {
               className: d.container,
-              text: c.Z.Messages.USER_PROFILE_LOAD_ERROR,
+              text: c.intl.string(c.t.p3Q9Y2),
               delay: u.vB,
               children: (0, r.jsx)(o.CircleWarningIcon, {
                   size: 'xs',

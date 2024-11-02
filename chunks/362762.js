@@ -1,6 +1,6 @@
-var s,
+var i,
     r,
-    i,
+    s,
     a,
     l = n(442837),
     o = n(570140),
@@ -11,15 +11,15 @@ class d extends (a = l.ZP.Store) {
         return u[e];
     }
 }
-(i = 'CodedLinkNativeAppStateStore'),
-    (r = 'displayName') in (s = d)
-        ? Object.defineProperty(s, r, {
-              value: i,
+(s = 'CodedLinkNativeAppStateStore'),
+    (r = 'displayName') in (i = d)
+        ? Object.defineProperty(i, r, {
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (s[r] = i),
+        : (i[r] = s),
     (t.Z = new d(o.Z, {
         NATIVE_APP_MODAL_OPENING: function (e) {
             let { code: t } = e;

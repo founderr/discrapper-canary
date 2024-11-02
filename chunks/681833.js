@@ -1,60 +1,60 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return u;
+        return m;
     }
 });
-var n = t(200651);
-t(192379);
-var a = t(120356),
-    i = t.n(a),
-    r = t(481060),
-    o = t(987997),
-    l = t(689938),
-    c = t(143804),
-    d = t(89216),
-    _ = t(845904);
-function u(e) {
-    let { onClickManageSubscription: s, count: t } = e;
-    return (0, n.jsxs)('div', {
+var i = n(200651);
+n(192379);
+var s = n(120356),
+    r = n.n(s),
+    l = n(481060),
+    a = n(987997),
+    o = n(388032),
+    c = n(143804),
+    d = n(89216),
+    u = n(845904);
+function m(e) {
+    let { onClickManageSubscription: t, count: n } = e;
+    return (0, i.jsxs)('div', {
         children: [
-            (0, n.jsx)(r.Heading, {
+            (0, i.jsx)(l.Heading, {
                 variant: 'heading-md/bold',
-                children: l.Z.Messages.APPLICATION_USER_SUBSCRIPTIONS_TITLE
+                children: o.intl.string(o.t['48ywCg'])
             }),
-            (0, n.jsx)(r.Spacer, { size: 4 }),
-            (0, n.jsx)(r.Text, {
+            (0, i.jsx)(l.Spacer, { size: 4 }),
+            (0, i.jsx)(l.Text, {
                 variant: 'text-md/normal',
                 className: c.sectionDescription,
-                children: l.Z.Messages.APPLICATION_USER_SUBSCRIPTIONS_DESCRIPTION
+                children: o.intl.string(o.t.VWxmSk)
             }),
-            (0, n.jsx)(r.Spacer, { size: 24 }),
-            (0, n.jsxs)('div', {
-                className: i()(d.guildBoostingSubscriptionRow, c.card),
+            (0, i.jsx)(l.Spacer, { size: 24 }),
+            (0, i.jsxs)('div', {
+                className: r()(d.guildBoostingSubscriptionRow, c.card),
                 children: [
-                    (0, n.jsx)('img', {
-                        src: _,
+                    (0, i.jsx)('img', {
+                        src: u,
                         alt: '',
                         className: c.bannerImage
                     }),
-                    (0, n.jsxs)('div', {
+                    (0, i.jsxs)('div', {
                         className: c.textContainer,
                         children: [
-                            (0, n.jsx)(r.Heading, {
+                            (0, i.jsx)(l.Heading, {
                                 variant: 'heading-xl/semibold',
                                 className: c.header,
-                                children: l.Z.Messages.APPLICATION_USER_SUBSCRIPTIONS_TITLE
+                                children: o.intl.string(o.t['48ywCg'])
                             }),
-                            (0, n.jsx)(r.Text, {
+                            (0, i.jsx)(l.Text, {
                                 variant: 'text-md/normal',
                                 className: c.description,
-                                children: l.Z.Messages.APPLICATION_ACTIVE_USER_SUBSCRIPTIONS_DESCRIPTION.format({ numSubscriptions: t })
+                                children: o.intl.format(o.t['/esXLi'], { numSubscriptions: n })
                             })
                         ]
                     }),
-                    (0, n.jsx)(o.Z, {
-                        color: r.Button.Colors.BRAND,
-                        onClick: s,
-                        children: l.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTIONS_BUTTON
+                    (0, i.jsx)(a.Z, {
+                        color: l.Button.Colors.BRAND,
+                        onClick: t,
+                        children: o.intl.string(o.t.z5YcJy)
                     })
                 ]
             })

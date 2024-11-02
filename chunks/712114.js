@@ -4,26 +4,26 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(192379),
-    a = n(990547),
-    l = n(481060),
-    r = n(213609),
+    l = n(192379),
+    r = n(990547),
+    a = n(481060),
+    s = n(213609),
     o = n(536442),
     c = n(39604),
     u = n(176127),
-    d = n(689938),
+    d = n(388032),
     h = n(894438);
 function m(e) {
     let { onOpenClips: t, lastClipsSession: n, closePopout: m } = e;
-    return (s.useEffect(
+    return (l.useEffect(
         () => () => {
             (0, c.eL)();
         },
         []
     ),
-    (0, r.Z)({
-        type: a.ImpressionTypes.VIEW,
-        name: a.ImpressionNames.HOTSPOT,
+    (0, s.Z)({
+        type: r.ImpressionTypes.VIEW,
+        name: r.ImpressionNames.HOTSPOT,
         properties: { hotspot_location: o.v6.CLIPS_CHANNEL_ATTACH_REMINDER }
     }),
     null == n)
@@ -35,33 +35,33 @@ function m(e) {
                       className: h.thumbnailStackContainer,
                       children: (0, i.jsx)(u.Z, {})
                   }),
-                  (0, i.jsx)(l.Heading, {
+                  (0, i.jsx)(a.Heading, {
                       className: h.header,
                       color: 'header-primary',
                       variant: 'heading-md/extrabold',
-                      children: d.Z.Messages.CLIPS_YOU_HAVE_NEW_CLIPS.format({ count: n.newClipIds.length })
+                      children: d.intl.format(d.t['+qxkzM'], { count: n.newClipIds.length })
                   }),
-                  (0, i.jsx)(l.Text, {
+                  (0, i.jsx)(a.Text, {
                       color: 'text-normal',
                       className: h.__invalid_content,
                       variant: 'text-sm/medium',
-                      children: d.Z.Messages.CLIPS_SESSION_ENDED_TOOLTIP_BODY.format({ applicationName: n.applicationName })
+                      children: d.intl.format(d.t['7XX0/f'], { applicationName: n.applicationName })
                   }),
                   (0, i.jsxs)('div', {
                       className: h.buttonsContainer,
                       children: [
-                          (0, i.jsx)(l.Button, {
-                              color: l.Button.Colors.PRIMARY,
-                              look: l.Button.Looks.LINK,
+                          (0, i.jsx)(a.Button, {
+                              color: a.Button.Colors.PRIMARY,
+                              look: a.Button.Looks.LINK,
                               onClick: function () {
                                   (0, o.Kw)(o.v6.CLIPS_CHANNEL_ATTACH_REMINDER), m();
                               },
-                              children: d.Z.Messages.CLIPS_SESSION_ENDED_TOOLTIP_SECONDARY_CTA
+                              children: d.intl.string(d.t['7r5Z19'])
                           }),
-                          (0, i.jsx)(l.Button, {
-                              color: l.Button.Colors.BRAND,
+                          (0, i.jsx)(a.Button, {
+                              color: a.Button.Colors.BRAND,
                               onClick: t,
-                              children: d.Z.Messages.CLIPS_SESSION_ENDED_TOOLTIP_PRIMARY_CTA
+                              children: d.intl.string(d.t.md4qKy)
                           })
                       ]
                   })

@@ -1,26 +1,26 @@
-u.d(n, {
+e.d(t, {
     Z: function () {
-        return S;
+        return d;
     }
 });
-var a = u(200651);
-u(192379);
-var l = u(442837),
-    r = u(481060),
-    t = u(434404),
-    s = u(357156),
-    o = u(430824),
-    i = u(981631),
-    c = u(689938);
-function S(e, n) {
-    let u = (0, l.e7)([o.Z], () => (null != e ? o.Z.getGuild(e) : null)),
-        { canCreateExpressions: S, canManageAllExpressions: d } = (0, s.XJ)(u);
-    return null != e && S && d
-        ? (0, a.jsx)(r.MenuItem, {
-              id: c.Z.Messages.SERVER_SETTINGS,
-              label: c.Z.Messages.SERVER_SETTINGS,
+var l = e(200651);
+e(192379);
+var r = e(442837),
+    u = e(481060),
+    i = e(434404),
+    a = e(357156),
+    o = e(430824),
+    s = e(981631),
+    c = e(388032);
+function d(n, t) {
+    let e = (0, r.e7)([o.Z], () => (null != n ? o.Z.getGuild(n) : null)),
+        { canCreateExpressions: d, canManageAllExpressions: p } = (0, a.XJ)(e);
+    return null != n && d && p
+        ? (0, l.jsx)(u.MenuItem, {
+              id: c.intl.string(c.t['154/bG']),
+              label: c.intl.string(c.t['154/bG']),
               action: () => {
-                  t.Z.open(e, i.pNK.SOUNDBOARD), null == n || n();
+                  i.Z.open(n, s.pNK.SOUNDBOARD), null == t || t();
               }
           })
         : null;

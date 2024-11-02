@@ -11,21 +11,21 @@ var r = n(200651),
     l = n(838331),
     u = n(965793);
 function c(e) {
-    let { children: t, placeholder: n, value: a, onChange: c, onClose: d, showScrollbar: _, className: E, multiSelect: f, ...h } = e,
-        p = i.useCallback(
+    let { children: t, placeholder: n, value: a, onChange: c, onClose: d, showScrollbar: f, className: _, multiSelect: h, ...p } = e,
+        m = i.useCallback(
             (e) => {
-                c(e), !f && (null == d || d());
+                c(e), !h && (null == d || d());
             },
-            [c, d, f]
+            [c, d, h]
         );
     return (0, r.jsx)(o.V, {
-        className: s()(u.container, E, { [u.scroller]: _ }),
+        className: s()(u.container, _, { [u.scroller]: f }),
         children: (0, r.jsx)(l.hQ, {
-            ...h,
-            showScrollbar: _,
+            ...p,
+            showScrollbar: f,
             value: a,
-            multiSelect: f,
-            onChange: p,
+            multiSelect: h,
+            onChange: m,
             placeholder: n,
             children: t,
             listClassName: u.list

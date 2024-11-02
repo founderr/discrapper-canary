@@ -1,32 +1,32 @@
-t.d(n, {
+e.d(t, {
     Z: function () {
         return c;
     },
     s: function () {
-        return o;
+        return s;
     }
 });
-var i = t(200651),
-    a = t(704215),
-    s = t(481060),
-    u = t(570140),
-    r = t(605236),
-    l = t(592125),
-    d = t(305587);
-function o(e) {
-    let { channelId: n, location: t } = e,
-        i = l.Z.getChannel(n),
-        s = (0, r.un)(a.z.USER_DM_MUTE_FEEDBACK);
-    if (null != i && !!i.isDM() && !s)
-        (0, d.Xs)(t) &&
+var i = e(200651),
+    r = e(704215),
+    l = e(481060),
+    u = e(570140),
+    a = e(605236),
+    d = e(592125),
+    o = e(305587);
+function s(n) {
+    let { channelId: t, location: e } = n,
+        i = d.Z.getChannel(t),
+        l = (0, a.un)(r.z.USER_DM_MUTE_FEEDBACK);
+    if (null != i && !!i.isDM() && !l)
+        (0, o.Xs)(e) &&
             u.Z.dispatch({
                 type: 'USER_DM_MUTE_SHOW_FEEDBACK',
                 channel: i
             });
 }
 function c() {
-    (0, s.openModalLazy)(async () => {
-        let { default: e } = await t.e('87995').then(t.bind(t, 180970));
-        return (n) => (0, i.jsx)(e, { ...n });
+    (0, l.openModalLazy)(async () => {
+        let { default: n } = await e.e('87995').then(e.bind(e, 180970));
+        return (t) => (0, i.jsx)(n, { ...t });
     });
 }

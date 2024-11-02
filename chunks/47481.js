@@ -6,10 +6,10 @@ n.d(t, {
     n(653041),
     n(47120);
 var i = n(275726),
-    s = n(135938),
-    a = n(55935),
-    l = n(709054),
-    r = n(554838),
+    l = n(135938),
+    r = n(55935),
+    a = n(709054),
+    s = n(554838),
     o = n(493892),
     c = n(356647),
     u = n(981631);
@@ -17,135 +17,135 @@ function d(e) {
     let t,
         n,
         d,
-        { channel: h, messages: m, oldestUnreadMessageId: p, treatSpam: _, summaries: f, selectedSummary: E } = e,
-        g = [],
-        C = !1,
-        I = null != p ? l.default.extractTimestamp(p) : null,
-        T = null;
+        { channel: h, messages: m, oldestUnreadMessageId: p, treatSpam: f, summaries: g, selectedSummary: C } = e,
+        x = [],
+        v = !1,
+        _ = null != p ? a.default.extractTimestamp(p) : null,
+        I = null;
     return (
         m.forEach((e) => {
-            var s, x, S, v, N, A, Z, M;
-            if (null != f && f.length > 0) {
-                let t = l.default.extractTimestamp(e.id);
-                for (let e = 0; (s = e < (null == f ? void 0 : f.length)), s; e++) {
-                    if (null == f[e]) continue;
-                    let n = l.default.extractTimestamp(f[e].startId),
-                        i = l.default.extractTimestamp(f[e].endId);
+            var l, E, b, S, Z, T, N, j;
+            if (null != g && g.length > 0) {
+                let t = a.default.extractTimestamp(e.id);
+                for (let e = 0; (l = e < (null == g ? void 0 : g.length)), l; e++) {
+                    if (null == g[e]) continue;
+                    let n = a.default.extractTimestamp(g[e].startId),
+                        i = a.default.extractTimestamp(g[e].endId);
                     if (t >= n && t <= i) {
-                        if (T === f[e].id) break;
-                        g.push({
+                        if (I === g[e].id) break;
+                        x.push({
                             type: u.ys_.DIVIDER,
-                            content: f[e].topic,
-                            contentKey: f[e].id
+                            content: g[e].topic,
+                            contentKey: g[e].id
                         }),
-                            (T = f[e].id);
+                            (I = g[e].id);
                         break;
                     }
                 }
             }
-            let b = (0, a.vc)(e.timestamp, 'LL');
-            b !== t &&
-                null == T &&
-                (g.push({
+            let A = (0, r.vc)(e.timestamp, 'LL');
+            A !== t &&
+                null == I &&
+                (x.push({
                     type: u.ys_.DIVIDER,
-                    content: b,
-                    contentKey: b
+                    content: A,
+                    contentKey: A
                 }),
-                (t = b));
-            let R = g[g.length - 1],
-                L = null,
-                P = (0, o.DQ)(e);
-            C = C || P;
-            let j = (function (e, t, n) {
+                (t = A));
+            let y = x[x.length - 1],
+                P = null,
+                M = (0, o.DQ)(e);
+            v = v || M;
+            let R = (function (e, t, n) {
                 if (i.V.NON_COLLAPSIBLE.has(t.type));
                 else if (t.blocked) return u.ys_.MESSAGE_GROUP_BLOCKED;
                 else if ((0, o.P1)(e) && n) return u.ys_.MESSAGE_GROUP_SPAMMER;
                 return null;
-            })(h, e, P && _);
-            if (null !== j) {
+            })(h, e, M && f);
+            if (null !== R) {
                 let t, n;
-                [L, R] =
-                    ((x = g),
-                    (S = e),
-                    (v = j),
-                    (n = N = R),
-                    null == N || N.type !== v
+                [P, y] =
+                    ((E = x),
+                    (b = e),
+                    (S = R),
+                    (n = Z = y),
+                    null == Z || Z.type !== S
                         ? ((t = {
-                              type: v,
+                              type: S,
                               content: [],
-                              key: S.id
+                              key: b.id
                           }),
-                          x.push(t))
-                        : (n = (t = N).content[t.content.length - 1]),
+                          E.push(t))
+                        : (n = (t = Z).content[t.content.length - 1]),
                     [t, n]);
             }
-            if (p === e.id && null != I) {
-                if (null != R && R.type === u.ys_.DIVIDER) (R.unreadId = e.id), (I = null);
-                else if (null !== L) {
-                    (A = L),
-                        (Z = h),
-                        (M = e).isFirstMessageInForumPost(Z) ||
-                            A.content.push({
+            if (p === e.id && null != _) {
+                if (null != y && y.type === u.ys_.DIVIDER) (y.unreadId = e.id), (_ = null);
+                else if (null !== P) {
+                    (T = P),
+                        (N = h),
+                        (j = e).isFirstMessageInForumPost(N) ||
+                            T.content.push({
                                 type: u.ys_.DIVIDER,
-                                unreadId: M.id
+                                unreadId: j.id
                             }),
-                        (A.hasUnread = !0),
-                        (I = null);
+                        (T.hasUnread = !0),
+                        (_ = null);
                 } else
                     !e.isFirstMessageInForumPost(h) &&
-                        g.push({
+                        x.push({
                             type: u.ys_.DIVIDER,
                             unreadId: e.id
                         }),
-                        (I = null);
+                        (_ = null);
             } else
-                null != I &&
-                    l.default.extractTimestamp(e.id) > I &&
+                null != _ &&
+                    a.default.extractTimestamp(e.id) > _ &&
                     (!e.isFirstMessageInForumPost(h) &&
-                        g.push({
+                        x.push({
                             type: u.ys_.DIVIDER,
                             unreadId: e.id
                         }),
-                    (I = null));
-            let O = (0, c.f)(e, h);
-            null != O &&
-                g.push({
+                    (_ = null));
+            let L = (0, c.f)(e, h);
+            null != L &&
+                x.push({
                     type: u.ys_.MESSAGE,
-                    content: O,
-                    groupId: O.id
+                    content: L,
+                    groupId: L.id
                 });
-            let y = (null == R ? void 0 : R.type) === u.ys_.MESSAGE ? d : R;
-            (0, r.J)(h, y, e) && (n = e.id);
-            let D = {
+            let k = (null == y ? void 0 : y.type) === u.ys_.MESSAGE ? d : y;
+            (0, s.J)(h, k, e) && (n = e.id);
+            let O = {
                 type: e.type === u.uaV.THREAD_STARTER_MESSAGE ? u.ys_.THREAD_STARTER_MESSAGE : u.ys_.MESSAGE,
                 content: e,
                 groupId: n
             };
-            n === e.id && (d = D);
-            let { jumpSequenceId: U, jumpFlash: k, jumpTargetId: w } = m;
-            k && e.id === w && null != U && (D.flashKey = U),
-                m.jumpTargetId === e.id && (D.jumpTarget = !0),
-                null != E &&
-                    e.id === E.startId &&
-                    E.count > 1 &&
-                    g.push({
+            n === e.id && (d = O);
+            let { jumpSequenceId: w, jumpFlash: D, jumpTargetId: U } = m;
+            D && e.id === U && null != w && (O.flashKey = w),
+                m.jumpTargetId === e.id && (O.jumpTarget = !0),
+                null != C &&
+                    e.id === C.startId &&
+                    C.count > 1 &&
+                    x.push({
                         type: u.ys_.DIVIDER,
-                        content: E.topic,
-                        contentKey: E.startId,
+                        content: C.topic,
+                        contentKey: C.startId,
                         isSummaryDivider: !0
                     }),
-                null !== L ? (L.content.push(D), D.jumpTarget && (L.hasJumpTarget = !0)) : g.push(D),
-                e.isFirstMessageInForumPost(h) && g.push({ type: u.ys_.FORUM_POST_ACTION_BAR }),
-                null != E &&
-                    e.id === E.endId &&
-                    E.count > 1 &&
-                    g.push({
+                null !== P ? (P.content.push(O), O.jumpTarget && (P.hasJumpTarget = !0)) : x.push(O),
+                e.isFirstMessageInForumPost(h) && x.push({ type: u.ys_.FORUM_POST_ACTION_BAR }),
+                null != C &&
+                    e.id === C.endId &&
+                    C.count > 1 &&
+                    x.push({
                         type: u.ys_.DIVIDER,
-                        contentKey: E.endId,
+                        contentKey: C.endId,
                         isSummaryDivider: !0
                     });
         }),
-        C && (0, o.P1)(h) && s.Z.trackExposure({ location: '416cc9_1' }),
-        g
+        v && (0, o.P1)(h) && l.Z.trackExposure({ location: '416cc9_1' }),
+        x
     );
 }

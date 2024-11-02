@@ -3,7 +3,7 @@ t.d(n, {
         return a;
     },
     bp: function () {
-        return s;
+        return r;
     },
     hp: function () {
         return i;
@@ -28,4 +28,4 @@ let l = {
         return ''.concat(t, '-').concat(JSON.stringify(n));
     },
     i = (e) => ''.concat(e.name, '-').concat(e.size, '-').concat(e.lastModified),
-    s = new Set(['audio/mpeg', 'audio/mp3', 'audio/wav', 'audio/x-wav', 'audio/ogg', 'video/mp4']);
+    r = new Set(['audio/mpeg', 'audio/mp3', 'audio/wav', 'audio/x-wav', 'audio/ogg', 'video/mp4']);

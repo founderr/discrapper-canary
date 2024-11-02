@@ -1,38 +1,38 @@
 n(47120);
-var s = n(200651),
-    a = n(192379),
-    i = n(120356),
-    r = n.n(i),
-    l = n(442837),
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    s = n.n(l),
+    a = n(442837),
     o = n(692547),
     c = n(481060),
     d = n(142497),
     u = n(338327),
-    _ = n(496675),
-    I = n(63063),
-    E = n(981631),
-    T = n(190378),
-    m = n(689938),
-    N = n(333913),
-    S = n(438825),
-    g = n(236140),
-    h = n(37069),
-    C = n(518513),
-    x = n(168179),
-    p = n(348986),
-    R = n(930065),
-    L = n(345669);
-let f = () => [
+    m = n(496675),
+    h = n(63063),
+    g = n(981631),
+    x = n(190378),
+    p = n(388032),
+    f = n(333913),
+    C = n(438825),
+    I = n(236140),
+    _ = n(37069),
+    N = n(518513),
+    v = n(168179),
+    T = n(348986),
+    j = n(930065),
+    E = n(345669);
+let S = () => [
         {
             icon: c.AnalyticsIcon,
             color: o.Z.unsafe_rawColors.GREEN_360.css,
-            header: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_DISCOVERY_HEADER,
-            body: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_DISCOVERY_BODY.format({
+            header: p.intl.string(p.t.oVQF29),
+            body: p.intl.format(p.t.A6G7am, {
                 featureHook: (e, t) =>
-                    (0, s.jsx)(
+                    (0, i.jsx)(
                         'strong',
                         {
-                            className: N.featuredText,
+                            className: f.featuredText,
                             children: e
                         },
                         t
@@ -42,25 +42,25 @@ let f = () => [
         {
             icon: c.AnalyticsIcon,
             color: o.Z.unsafe_rawColors.PARTNER.css,
-            header: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_ANALYTICS_HEADER,
-            body: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_ANALYTICS_BODY.format({
+            header: p.intl.string(p.t['0rJl9/']),
+            body: p.intl.format(p.t.XsCNk5, {
                 infoHook: () =>
-                    (0, s.jsx)(c.Tooltip, {
-                        text: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_ANALYTICS_TOOLTIP,
-                        'aria-label': m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_ANALYTICS_TOOLTIP,
+                    (0, i.jsx)(c.Tooltip, {
+                        text: p.intl.string(p.t.kPJlTk),
+                        'aria-label': p.intl.string(p.t.kPJlTk),
                         children: (e) =>
-                            (0, s.jsx)(c.CircleInformationIcon, {
+                            (0, i.jsx)(c.CircleInformationIcon, {
                                 size: 'xs',
                                 color: 'currentColor',
-                                className: N.infoIcon,
+                                className: f.infoIcon,
                                 ...e
                             })
                     }),
                 featureHook: (e, t) =>
-                    (0, s.jsx)(
+                    (0, i.jsx)(
                         'strong',
                         {
-                            className: N.featuredText,
+                            className: f.featuredText,
                             children: e
                         },
                         t
@@ -70,95 +70,95 @@ let f = () => [
         {
             icon: c.CircleInformationIcon,
             color: o.Z.unsafe_rawColors.RED_360.css,
-            header: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_STAY_INFORMED_HEADER,
-            body: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_UPSELL_STAY_INFORMED_BODY
+            header: p.intl.string(p.t.W2kLJC),
+            body: p.intl.string(p.t.hyNkHx)
         }
     ],
-    O = [
+    b = [
         {
-            iconSrc: p,
+            iconSrc: T,
             name: 'Pokemon GO Paris',
             position: [-230, -100]
         },
         {
-            iconSrc: R,
+            iconSrc: j,
             name: 'Python',
             position: [-180, -100],
             faded: !0,
             rightAlign: !0
         },
         {
-            iconSrc: C,
+            iconSrc: N,
             name: 'Learn Latin',
             position: [-280, -30],
             faded: !0
         },
         {
-            iconSrc: x,
+            iconSrc: v,
             name: 'r/leagueoflegends',
             position: [-320, -30],
             rightAlign: !0
         },
         {
-            iconSrc: L,
+            iconSrc: E,
             name: 'Sneaker Fans',
             position: [-250, 40]
         },
         {
-            iconSrc: h,
+            iconSrc: _,
             name: 'Hogwarts School',
             position: [-270, 40],
             faded: !0,
             rightAlign: !0
         }
     ],
-    A = (e) => {
-        let { icon: t, color: n, size: a = 24, header: i, body: r } = e;
-        return (0, s.jsxs)('div', {
-            className: N.featureCard,
+    R = (e) => {
+        let { icon: t, color: n, size: r = 24, header: l, body: s } = e;
+        return (0, i.jsxs)('div', {
+            className: f.featureCard,
             children: [
-                (0, s.jsx)('div', {
-                    className: N.featureIcon,
-                    children: (0, s.jsx)(t, {
+                (0, i.jsx)('div', {
+                    className: f.featureIcon,
+                    children: (0, i.jsx)(t, {
                         color: null != n ? n : 'currentColor',
-                        width: a,
-                        height: a,
+                        width: r,
+                        height: r,
                         size: 'custom'
                     })
                 }),
-                (0, s.jsx)(c.Heading, {
+                (0, i.jsx)(c.Heading, {
                     variant: 'heading-md/semibold',
-                    className: N.featureHeader,
-                    children: i
+                    className: f.featureHeader,
+                    children: l
                 }),
-                (0, s.jsx)(c.Text, {
+                (0, i.jsx)(c.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
-                    children: r
+                    children: s
                 })
             ]
         });
     },
-    M = (e) => {
-        let { iconSrc: t, name: n, position: a, faded: i, rightAlign: l, imageCoordinates: o } = e,
+    Z = (e) => {
+        let { iconSrc: t, name: n, position: r, faded: l, rightAlign: a, imageCoordinates: o } = e,
             d = {
-                [l ? 'right' : 'left']: o[0] + a[0],
-                top: o[1] + a[1]
+                [a ? 'right' : 'left']: o[0] + r[0],
+                top: o[1] + r[1]
             };
-        return (0, s.jsxs)('div', {
-            className: r()(N.guildDetails, { [N.faded]: i }),
+        return (0, i.jsxs)('div', {
+            className: s()(f.guildDetails, { [f.faded]: l }),
             style: d,
             children: [
-                (0, s.jsx)('div', {
-                    className: N.guildIcon,
-                    children: (0, s.jsx)('img', {
+                (0, i.jsx)('div', {
+                    className: f.guildIcon,
+                    children: (0, i.jsx)('img', {
                         alt: '',
                         src: t,
                         width: 24,
                         height: 24
                     })
                 }),
-                (0, s.jsx)(c.Heading, {
+                (0, i.jsx)(c.Heading, {
                     variant: 'heading-deprecated-12/semibold',
                     children: n
                 })
@@ -167,88 +167,88 @@ let f = () => [
     };
 t.Z = (e) => {
     let { guild: t } = e,
-        [n, i] = a.useState(0),
-        [r, o] = a.useState(0),
-        [h, C] = a.useState(),
-        x = (0, l.e7)([_.Z], () => _.Z.can(E.Plq.ADMINISTRATOR, t)),
-        p = null == h ? void 0 : h.offsetWidth,
-        R = null == h ? void 0 : h.offsetHeight;
-    a.useEffect(() => {
-        null != p && i(p / 2), null != R && o(R / 2);
-    }, [p, R, i, o]),
-        a.useEffect(() => {
-            (0, d.Kw)(T.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL);
+        [n, l] = r.useState(0),
+        [s, o] = r.useState(0),
+        [_, N] = r.useState(),
+        v = (0, a.e7)([m.Z], () => m.Z.can(g.Plq.ADMINISTRATOR, t)),
+        T = null == _ ? void 0 : _.offsetWidth,
+        j = null == _ ? void 0 : _.offsetHeight;
+    r.useEffect(() => {
+        null != T && l(T / 2), null != j && o(j / 2);
+    }, [T, j, l, o]),
+        r.useEffect(() => {
+            (0, d.Kw)(x.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL);
         }, []);
-    let L = () => {
+    let E = () => {
         u.Z.open();
     };
-    return (0, s.jsxs)('div', {
-        className: N.container,
+    return (0, i.jsxs)('div', {
+        className: f.container,
         children: [
-            (0, s.jsxs)('div', {
-                className: N.banner,
-                ref: (e) => C(e),
+            (0, i.jsxs)('div', {
+                className: f.banner,
+                ref: (e) => N(e),
                 children: [
-                    O.map((e) =>
-                        (0, s.jsx)(
-                            M,
+                    b.map((e) =>
+                        (0, i.jsx)(
+                            Z,
                             {
                                 ...e,
-                                imageCoordinates: [n, r]
+                                imageCoordinates: [n, s]
                             },
                             e.name
                         )
                     ),
-                    (0, s.jsx)('img', {
+                    (0, i.jsx)('img', {
                         alt: '',
-                        src: S,
-                        className: N.image,
+                        src: C,
+                        className: f.image,
                         width: 256
                     }),
-                    (0, s.jsx)('img', {
+                    (0, i.jsx)('img', {
                         alt: '',
-                        src: g,
-                        className: N.sparkles
+                        src: I,
+                        className: f.sparkles
                     })
                 ]
             }),
-            (0, s.jsx)(c.Heading, {
+            (0, i.jsx)(c.Heading, {
                 variant: 'heading-xl/semibold',
-                children: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_HEADER
+                children: p.intl.string(p.t['M/gBcH'])
             }),
-            (0, s.jsx)(c.Text, {
+            (0, i.jsx)(c.Text, {
                 color: 'header-secondary',
                 variant: 'text-md/normal',
-                className: N.body,
-                children: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_BODY_WITH_HELP_ARTICLE.format({ helpdeskArticle: I.Z.getArticleURL(E.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES) })
+                className: f.body,
+                children: p.intl.format(p.t['52EgsL'], { helpdeskArticle: h.Z.getArticleURL(g.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES) })
             }),
-            (0, s.jsx)(c.Tooltip, {
-                text: x ? null : m.Z.Messages.GUILD_SETTINGS_COMMUNITY_ADMINISTRATOR_ONLY,
-                'aria-label': x ? void 0 : m.Z.Messages.GUILD_SETTINGS_COMMUNITY_ADMINISTRATOR_ONLY,
+            (0, i.jsx)(c.Tooltip, {
+                text: v ? null : p.intl.string(p.t['pjG+T0']),
+                'aria-label': v ? void 0 : p.intl.string(p.t['pjG+T0']),
                 children: (e) =>
-                    (0, s.jsx)(c.Button, {
-                        onClick: L,
-                        className: N.button,
-                        disabled: !x,
+                    (0, i.jsx)(c.Button, {
+                        onClick: E,
+                        className: f.button,
+                        disabled: !v,
                         ...e,
-                        children: m.Z.Messages.GET_STARTED
+                        children: p.intl.string(p.t.LhlgY2)
                     })
             }),
-            (0, s.jsx)('hr', { className: N.separator }),
-            (0, s.jsx)(c.Text, {
+            (0, i.jsx)('hr', { className: f.separator }),
+            (0, i.jsx)(c.Text, {
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                children: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_DETAILS
+                children: p.intl.string(p.t.OzLWLC)
             }),
-            (0, s.jsx)(c.Text, {
+            (0, i.jsx)(c.Text, {
                 color: 'header-secondary',
-                className: N.body,
+                className: f.body,
                 variant: 'text-sm/normal',
-                children: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_LEARN_MORE.format({ helpdeskArticle: I.Z.getArticleURL(E.BhN.GUILD_COMMUNITY_FEATURE) })
+                children: p.intl.format(p.t.rjhrqK, { helpdeskArticle: h.Z.getArticleURL(g.BhN.GUILD_COMMUNITY_FEATURE) })
             }),
-            (0, s.jsx)('div', {
-                className: N.features,
-                children: f().map((e, t) => (0, s.jsx)(A, { ...e }, t))
+            (0, i.jsx)('div', {
+                className: f.features,
+                children: S().map((e, t) => (0, i.jsx)(R, { ...e }, t))
             })
         ]
     });

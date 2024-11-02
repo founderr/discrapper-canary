@@ -8,14 +8,14 @@ var i = n(481060),
     l = n(287545),
     u = n(318891),
     c = n(719296),
-    d = n(689938);
-class _ extends l.Z {
+    d = n(388032);
+class f extends l.Z {
     showErrorModal(e) {
         let { code: t, message: n } = e;
         (0, i.openModalLazy)(
             async () => (e) =>
                 (0, r.jsx)(s.default, {
-                    title: d.Z.Messages.EMBEDDED_ACTIVITIES_ERROR_TITLE.format({ code: t }),
+                    title: d.intl.formatToPlainString(d.t.hbiAOz, { code: t }),
                     body: n,
                     ...e
                 })
@@ -25,7 +25,7 @@ class _ extends l.Z {
         (0, i.openModalLazy)(
             async () => (t) =>
                 (0, r.jsx)(s.default, {
-                    title: d.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
+                    title: d.intl.string(d.t.PtobXV),
                     body: e,
                     ...t
                 })
@@ -69,4 +69,4 @@ class _ extends l.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new _();
+t.Z = new f();

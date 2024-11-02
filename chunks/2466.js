@@ -1,18 +1,18 @@
-n.d(a, {
+n.d(t, {
     Z: function () {
-        return l;
+        return r;
     }
 });
-var t = n(489887),
-    r = n(689938);
-function l() {
+var a = n(489887),
+    l = n(388032);
+function r() {
     return Object.freeze({
-        [t.lc.ONE_HOUR]: r.Z.Messages.CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS.format({ num: 1 }),
-        [t.lc.FOUR_HOURS]: r.Z.Messages.CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS.format({ num: 4 }),
-        [t.lc.EIGHT_HOURS]: r.Z.Messages.CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS.format({ num: 8 }),
-        [t.lc.ONE_DAY]: r.Z.Messages.CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS.format({ num: 24 }),
-        [t.lc.THREE_DAYS]: r.Z.Messages.CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS,
-        [t.lc.SEVEN_DAYS]: r.Z.Messages.CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS,
-        [t.lc.FOURTEEN_DAYS]: r.Z.Messages.CREATE_POLL_DURATION_OPTION_LABEL_14_DAYS
+        [a.lc.ONE_HOUR]: l.intl.formatToPlainString(l.t['b/mgt7'], { num: 1 }),
+        [a.lc.FOUR_HOURS]: l.intl.formatToPlainString(l.t['b/mgt7'], { num: 4 }),
+        [a.lc.EIGHT_HOURS]: l.intl.formatToPlainString(l.t['b/mgt7'], { num: 8 }),
+        [a.lc.ONE_DAY]: l.intl.formatToPlainString(l.t['b/mgt7'], { num: 24 }),
+        [a.lc.THREE_DAYS]: l.intl.string(l.t.Xn5rX1),
+        [a.lc.SEVEN_DAYS]: l.intl.string(l.t['Lmq+rq']),
+        [a.lc.FOURTEEN_DAYS]: l.intl.string(l.t['mb8A/P'])
     });
 }

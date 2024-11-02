@@ -1,6 +1,6 @@
 n.d(t, {
     g: function () {
-        return f;
+        return h;
     }
 });
 var r = n(200651),
@@ -11,86 +11,86 @@ var r = n(200651),
     l = n.n(o),
     u = n(481060),
     c = n(403182),
-    d = n(689938),
-    _ = n(630622);
-let E = (e) => {
+    d = n(388032),
+    f = n(630622);
+let _ = (e) => {
         let { filename: t } = e,
             i = (0, c.uV)(t),
             a = n(148660)('./icon-file-'.concat(i, '.svg'));
         return (0, r.jsx)('img', {
-            className: _.icon,
+            className: f.icon,
             src: a,
-            alt: d.Z.Messages.IMG_ALT_ATTACHMENT_FILE_TYPE.format({ fileType: i }),
+            alt: d.intl.formatToPlainString(d.t.g6KdFh, { fileType: i }),
             title: i
         });
     },
-    f = (e) => {
-        let { className: t, filename: n, size: i, progress: a, onCancelUpload: o, onClick: c, onContextMenu: f } = e,
-            h = 100 === a,
-            p = !h && i > 0;
+    h = (e) => {
+        let { className: t, filename: n, size: i, progress: a, onCancelUpload: o, onClick: c, onContextMenu: h } = e,
+            p = 100 === a,
+            m = !p && i > 0;
         return (0, r.jsxs)('div', {
-            className: s()(_.attachment, t),
+            className: s()(f.attachment, t),
             children: [
-                (0, r.jsx)(E, { filename: n }),
+                (0, r.jsx)(_, { filename: n }),
                 (0, r.jsxs)('div', {
-                    className: _.attachmentInner,
+                    className: f.attachmentInner,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: _.filenameWrapper,
+                            className: f.filenameWrapper,
                             children: [
                                 (0, r.jsx)(u.Clickable, {
-                                    className: _.filename,
+                                    className: f.filename,
                                     onClick: c,
-                                    onContextMenu: f,
+                                    onContextMenu: h,
                                     children: n
                                 }),
-                                p
+                                m
                                     ? (0, r.jsx)('div', {
-                                          className: _.size,
+                                          className: f.size,
                                           children: '\u2014 '.concat(l().filesize(i))
                                       })
                                     : null
                             ]
                         }),
                         (0, r.jsx)('div', {
-                            className: _.progressContainer,
-                            children: h
-                                ? d.Z.Messages.ATTACHMENT_PROCESSING
+                            className: f.progressContainer,
+                            children: p
+                                ? d.intl.string(d.t.jfKTen)
                                 : (0, r.jsx)(u.Progress, {
-                                      className: _.progress,
+                                      className: f.progress,
                                       percent: a
                                   })
                         })
                     ]
                 }),
-                h
+                p
                     ? null
                     : (0, r.jsx)(u.Clickable, {
                           onClick: o,
                           children: (0, r.jsx)(u.XSmallIcon, {
                               size: 'md',
                               color: 'currentColor',
-                              className: _.cancelButton
+                              className: f.cancelButton
                           })
                       })
             ]
         });
     };
 t.Z = (e) => {
-    let { className: t, url: n, fileName: a, fileSize: o, onClick: c, onContextMenu: d, renderAdjacentContent: f } = e;
+    let { className: t, url: n, fileName: a, fileSize: o, onClick: c, onContextMenu: d, renderAdjacentContent: h } = e;
     return (0, r.jsxs)(i.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: s()(_.attachment, _.newMosaicStyle, t),
+                className: s()(f.attachment, f.newMosaicStyle, t),
                 children: [
-                    (0, r.jsx)(E, { filename: a }),
+                    (0, r.jsx)(_, { filename: a }),
                     (0, r.jsxs)('div', {
-                        className: _.attachmentInner,
+                        className: f.attachmentInner,
                         children: [
                             (0, r.jsx)('div', {
-                                className: _.filenameLinkWrapper,
+                                className: f.filenameLinkWrapper,
                                 children: (0, r.jsx)(u.Anchor, {
-                                    className: _.fileNameLink,
+                                    className: f.fileNameLink,
                                     href: n,
                                     onClick: c,
                                     onContextMenu: d,
@@ -98,14 +98,14 @@ t.Z = (e) => {
                                 })
                             }),
                             (0, r.jsx)('div', {
-                                className: _.metadata,
+                                className: f.metadata,
                                 children: l().filesize(o)
                             })
                         ]
                     })
                 ]
             }),
-            null != f && f()
+            null != h && h()
         ]
     });
 };

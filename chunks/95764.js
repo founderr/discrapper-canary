@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return C;
     }
 });
 var i = n(200651);
 n(192379);
-var s = n(442837),
-    a = n(481060),
-    l = n(40851),
-    r = n(357156),
+var l = n(442837),
+    r = n(481060),
+    a = n(40851),
+    s = n(357156),
     o = n(390322),
     c = n(871499),
     u = n(592125),
@@ -16,66 +16,66 @@ var s = n(442837),
     h = n(482241),
     m = n(389303),
     p = n(554747),
-    _ = n(689938),
-    f = n(249786);
-function E(e) {
+    f = n(388032),
+    g = n(249786);
+function C(e) {
     let { channelId: t, onClick: n } = e,
-        E = (0, l.bp)(),
-        g = (0, p.qY)(t),
-        C = (0, s.e7)([u.Z], () => u.Z.getChannel(t), [t]),
-        { canManageGuildEvent: I } = (0, r.XJ)(C),
-        T = I(g);
-    if (null == g) return null;
-    let x = () => {
-            if (null != C && (0, m.Z)(C)) {
-                (0, d.lC)(C, E);
+        C = (0, a.bp)(),
+        x = (0, p.qY)(t),
+        v = (0, l.e7)([u.Z], () => u.Z.getChannel(t), [t]),
+        { canManageGuildEvent: _ } = (0, s.XJ)(v),
+        I = _(x);
+    if (null == x) return null;
+    let E = () => {
+            if (null != v && (0, m.Z)(v)) {
+                (0, d.lC)(v, C);
                 return;
             }
             n();
         },
-        S = () => {
-            h.Z.endEvent(g.id, g.guild_id);
+        b = () => {
+            h.Z.endEvent(x.id, x.guild_id);
         };
-    return T
-        ? (0, i.jsx)(a.Popout, {
+    return I
+        ? (0, i.jsx)(r.Popout, {
               renderPopout: (e) => {
                   let { closePopout: t } = e;
                   return (0, i.jsx)(o.Z, {
-                      children: (0, i.jsx)(a.Menu, {
+                      children: (0, i.jsx)(r.Menu, {
                           navId: 'exit-options',
                           onSelect: () => {},
-                          'aria-label': _.Z.Messages.DISCONNECT_MENU,
+                          'aria-label': f.intl.string(f.t['K6/mk5']),
                           onClose: t,
-                          children: (0, i.jsx)(a.MenuItem, {
+                          children: (0, i.jsx)(r.MenuItem, {
                               id: 'end-voice-event',
                               color: 'danger',
-                              action: S,
-                              label: _.Z.Messages.END_EVENT,
-                              icon: a.CircleXIcon
+                              action: b,
+                              label: f.intl.string(f.t.qaYzPD),
+                              icon: r.CircleXIcon
                           })
                       })
                   });
               },
               align: 'center',
               position: 'top',
-              animation: a.Popout.Animation.FADE,
+              animation: r.Popout.Animation.FADE,
               children: (e) => {
                   let { onClick: t } = e;
                   return (0, i.jsx)(c.d, {
-                      label: _.Z.Messages.DISCONNECT_SELF,
+                      label: f.intl.string(f.t['6vrfgo']),
                       color: 'red',
-                      iconComponent: a.PhoneHangUpIcon,
-                      onClick: x,
+                      iconComponent: r.PhoneHangUpIcon,
+                      onClick: E,
                       onPopoutClick: t,
-                      className: f.buttonSpacing
+                      className: g.buttonSpacing
                   });
               }
           })
         : (0, i.jsx)(c.d, {
-              className: f.buttonSpacing,
-              label: _.Z.Messages.DISCONNECT_SELF,
+              className: g.buttonSpacing,
+              label: f.intl.string(f.t['6vrfgo']),
               color: 'red',
-              iconComponent: a.PhoneHangUpIcon,
+              iconComponent: r.PhoneHangUpIcon,
               onClick: n
           });
 }

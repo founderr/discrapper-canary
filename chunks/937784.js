@@ -1,35 +1,35 @@
-a.d(t, {
+n.d(t, {
     e: function () {
-        return C;
+        return v;
     }
 });
-var l = a(200651);
-a(192379);
-var n = a(481060),
-    s = a(592125),
-    i = a(703558),
-    o = a(626135),
-    r = a(709054),
-    c = a(127654),
-    d = a(61994),
-    u = a(39604),
-    m = a(356659),
-    p = a(981631);
-async function C(e, t) {
-    let { channelId: C, editMetadata: v, analyticsLocations: h } = t,
-        x = s.Z.getChannel(C);
-    if (null != x)
+var l = n(200651);
+n(192379);
+var a = n(481060),
+    i = n(592125),
+    o = n(703558),
+    s = n(626135),
+    r = n(709054),
+    c = n(127654),
+    d = n(61994),
+    u = n(39604),
+    m = n(356659),
+    p = n(981631);
+async function v(e, t) {
+    let { channelId: v, editMetadata: h, analyticsLocations: x } = t,
+        g = i.Z.getChannel(v);
+    if (null != g)
         try {
-            var g;
-            let t = await (0, u.rO)(e, v),
-                a = null !== (g = e.name) && void 0 !== g ? g : (0, m.yl)(r.default.extractTimestamp(e.id)),
-                l = (0, d.Z)(a);
-            (0, c.d)([new File([t], ''.concat('' !== l ? l : 'clip', '.mp4'), { type: 'video/mp4' })], x, i.d.ChannelMessage, { filesMetadata: [{ clip: e }] }),
-                o.default.track(p.rMx.CLIP_SHARED, {
-                    location_stack: h,
-                    guild_id: x.guild_id,
-                    channel_id: x.id,
-                    channel_type: x.type,
+            var C;
+            let t = await (0, u.rO)(e, h),
+                n = null !== (C = e.name) && void 0 !== C ? C : (0, m.yl)(r.default.extractTimestamp(e.id)),
+                l = (0, d.Z)(n);
+            (0, c.d)([new File([t], ''.concat('' !== l ? l : 'clip', '.mp4'), { type: 'video/mp4' })], g, o.d.ChannelMessage, { filesMetadata: [{ clip: e }] }),
+                s.default.track(p.rMx.CLIP_SHARED, {
+                    location_stack: x,
+                    guild_id: g.guild_id,
+                    channel_id: g.id,
+                    channel_type: g.type,
                     application_id: e.applicationId,
                     clip_id: e.id
                 });
@@ -37,13 +37,13 @@ async function C(e, t) {
             throw (m.jF.error(e), e);
         }
     else
-        (0, n.openModalLazy)(async () => {
-            let { default: t } = await a.e('99617').then(a.bind(a, 502801));
-            return (a) =>
+        (0, a.openModalLazy)(async () => {
+            let { default: t } = await n.e('99617').then(n.bind(n, 502801));
+            return (n) =>
                 (0, l.jsx)(t, {
-                    ...a,
+                    ...n,
                     clip: e,
-                    editMetadata: v
+                    editMetadata: h
                 });
         });
 }

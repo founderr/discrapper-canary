@@ -64,7 +64,7 @@ function l(e) {
         {
             collection: c,
             disabledKeys: d,
-            selectionManager: _
+            selectionManager: f
         } = (function (e) {
             let { filter: t } = e,
                 n = (0, r.q)(e),
@@ -73,15 +73,15 @@ function l(e) {
                 u = (0, i.useMemo)(() => ({ suppressTextValueWarning: e.suppressTextValueWarning }), [e.suppressTextValueWarning]),
                 c = (0, a.Kx)(e, l, u),
                 d = (0, i.useMemo)(() => new r.Z(c, n), [c, n]),
-                _ = (0, i.useRef)(null);
+                f = (0, i.useRef)(null);
             return (
                 (0, i.useEffect)(() => {
                     if (null != n.focusedKey && !c.getItem(n.focusedKey)) {
                         let e;
-                        let t = _.current.getItem(n.focusedKey),
-                            r = [..._.current.getKeys()]
+                        let t = f.current.getItem(n.focusedKey),
+                            r = [...f.current.getKeys()]
                                 .map((e) => {
-                                    let t = _.current.getItem(e);
+                                    let t = f.current.getItem(e);
                                     return 'item' === t.type ? t : null;
                                 })
                                 .filter((e) => null !== e),
@@ -102,7 +102,7 @@ function l(e) {
                         }
                         n.setFocusedKey(e ? e.key : null);
                     }
-                    _.current = c;
+                    f.current = c;
                 }, [c, d, n, n.focusedKey]),
                 {
                     collection: c,
@@ -122,13 +122,13 @@ function l(e) {
                 i === n && e.onSelectionChange && e.onSelectionChange(i), l(i);
             }
         }),
-        E = null != n ? c.getItem(n) : null;
+        _ = null != n ? c.getItem(n) : null;
     return {
         collection: c,
         disabledKeys: d,
-        selectionManager: _,
+        selectionManager: f,
         selectedKey: n,
         setSelectedKey: l,
-        selectedItem: E
+        selectedItem: _
     };
 }

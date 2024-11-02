@@ -5,35 +5,35 @@ n.d(t, {
 }),
     n(733860);
 var i = n(192379),
-    a = n(963202),
-    s = n(169559),
-    r = n(726115),
-    l = n(859921),
+    r = n(963202),
+    l = n(169559),
+    a = n(726115),
+    s = n(859921),
     o = n(128449);
 function c() {
-    let e = (0, s.Z)('global_discovery'),
-        { enableClanCreation: t } = (0, a.C3)({
+    let e = (0, l.Z)('global_discovery'),
+        { enableClanCreation: t } = (0, r.C3)({
             location: 'global_discovery',
             includeConverted: !0,
             autoTrackExposure: !0
         }),
-        { signupEnabled: n } = (0, a.Pu)({
+        { signupEnabled: n } = (0, r.Pu)({
             location: 'global_discovery',
             autoTrackExposure: !0
         }),
-        c = l.Z.useField('selectedTab'),
+        c = s.Z.useField('selectedTab'),
         d = i.useMemo(() => {
             let i = [o.vf.GAMING, o.vf.MUSIC, o.vf.ENTERTAINMENT, o.vf.TECH, o.vf.EDUCATION, o.vf.HUBS];
             return (
                 e || t || n ? i.unshift(o.vf.GUILDS) : i.unshift(o.vf.FEATURED),
                 i.map((e) => ({
                     id: e,
-                    label: (0, r.vb)(e)
+                    label: (0, a.vb)(e)
                 }))
             );
         }, [t, e, n]),
         u = i.useCallback((e) => {
-            l.Z.setState({ selectedTab: e });
+            s.Z.setState({ selectedTab: e });
         }, []);
     return (
         i.useEffect(() => {

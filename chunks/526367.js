@@ -8,15 +8,15 @@ var a = n(192379),
     u = 'unmounted',
     c = 'exited',
     d = 'entering',
-    _ = 'entered',
-    E = 'exiting',
-    f = (function (e) {
+    f = 'entered',
+    _ = 'exiting',
+    h = (function (e) {
         function t(t, n) {
             r = e.call(this, t, n) || this;
             var r,
                 i,
                 a = n && !n.isMounting ? t.enter : t.appear;
-            return (r.appearStatus = null), t.in ? (a ? ((i = c), (r.appearStatus = d)) : (i = _)) : (i = t.unmountOnExit || t.mountOnEnter ? u : c), (r.state = { status: i }), (r.nextCallback = null), r;
+            return (r.appearStatus = null), t.in ? (a ? ((i = c), (r.appearStatus = d)) : (i = f)) : (i = t.unmountOnExit || t.mountOnEnter ? u : c), (r.state = { status: i }), (r.nextCallback = null), r;
         }
         (0, i.Z)(t, e),
             (t.getDerivedStateFromProps = function (e, t) {
@@ -31,7 +31,7 @@ var a = n(192379),
                 var t = null;
                 if (e !== this.props) {
                     var n = this.state.status;
-                    this.props.in ? n !== d && n !== _ && (t = d) : (n === d || n === _) && (t = E);
+                    this.props.in ? n !== d && n !== f && (t = d) : (n === d || n === f) && (t = _);
                 }
                 this.updateStatus(!1, t);
             }),
@@ -67,7 +67,7 @@ var a = n(192379),
                     a = this.getTimeouts(),
                     s = i ? a.appear : a.enter;
                 if ((!t && !r) || o.Z.disabled) {
-                    this.safeSetState({ status: _ }, function () {
+                    this.safeSetState({ status: f }, function () {
                         n.props.onEntered(e);
                     });
                     return;
@@ -76,7 +76,7 @@ var a = n(192379),
                     this.safeSetState({ status: d }, function () {
                         n.props.onEntering(e, i),
                             n.onTransitionEnd(e, s, function () {
-                                n.safeSetState({ status: _ }, function () {
+                                n.safeSetState({ status: f }, function () {
                                     n.props.onEntered(e, i);
                                 });
                             });
@@ -93,7 +93,7 @@ var a = n(192379),
                     return;
                 }
                 this.props.onExit(e),
-                    this.safeSetState({ status: E }, function () {
+                    this.safeSetState({ status: _ }, function () {
                         t.props.onExiting(e),
                             t.onTransitionEnd(e, r.exit, function () {
                                 t.safeSetState({ status: c }, function () {
@@ -143,26 +143,26 @@ var a = n(192379),
             t
         );
     })(a.Component);
-function h() {}
-(f.contextType = l.Z),
-    (f.propTypes = {}),
-    (f.defaultProps = {
+function p() {}
+(h.contextType = l.Z),
+    (h.propTypes = {}),
+    (h.defaultProps = {
         in: !1,
         mountOnEnter: !1,
         unmountOnExit: !1,
         appear: !1,
         enter: !0,
         exit: !0,
-        onEnter: h,
-        onEntering: h,
-        onEntered: h,
-        onExit: h,
-        onExiting: h,
-        onExited: h
+        onEnter: p,
+        onEntering: p,
+        onEntered: p,
+        onExit: p,
+        onExiting: p,
+        onExited: p
     }),
-    (f.UNMOUNTED = 0),
-    (f.EXITED = 1),
-    (f.ENTERING = 2),
-    (f.ENTERED = 3),
-    (f.EXITING = 4),
-    (t.ZP = f);
+    (h.UNMOUNTED = 0),
+    (h.EXITED = 1),
+    (h.ENTERING = 2),
+    (h.ENTERED = 3),
+    (h.EXITING = 4),
+    (t.ZP = h);

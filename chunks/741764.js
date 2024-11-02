@@ -3,8 +3,8 @@ n.d(t, {
         return i;
     },
     N: function () {
-        return a;
+        return r;
     }
 });
 let i = 320,
-    a = 500;
+    r = 500;

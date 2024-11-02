@@ -21,8 +21,8 @@ let u = (e) => {
     }
 };
 function c(e) {
-    let { section: t, className: n, width: i, height: s, padding: o, isSelected: c, selectable: d = !1, ..._ } = e,
-        E = u(t);
+    let { section: t, className: n, width: i, height: s, padding: o, isSelected: c, selectable: d = !1, ...f } = e,
+        _ = u(t);
     return (0, r.jsx)('div', {
         className: a()(l.wrapper, n, {
             [l.selectable]: d,
@@ -34,14 +34,14 @@ function c(e) {
             padding: null != o ? o : 0
         },
         children:
-            null != E
-                ? (0, r.jsx)(E, {
+            null != _
+                ? (0, r.jsx)(_, {
                       className: l.icon,
                       color: 'currentColor',
                       size: 'custom',
                       width: i,
                       height: s,
-                      ..._
+                      ...f
                   })
                 : null
     });

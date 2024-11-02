@@ -1,53 +1,53 @@
-l.d(n, {
+t.d(n, {
     Z: function () {
         return u;
     }
 }),
-    l(47120);
-var s = l(192379),
-    a = l(442837),
-    t = l(951539),
-    i = l(592125),
-    r = l(356685),
-    o = l(486527),
-    d = l(981631);
+    t(47120);
+var l = t(192379),
+    i = t(442837),
+    r = t(951539),
+    a = t(592125),
+    s = t(356685),
+    o = t(486527),
+    d = t(981631);
 let c = { can_broadcast: !1 };
-function u(e, n, l) {
-    let [u, E] = s.useState(c),
-        [_, x] = s.useState(!1),
-        I = s.useRef(!1),
-        m = null == e ? void 0 : e.id,
-        N = null == e ? void 0 : e.hasFeature(d.oNc.HAS_DIRECTORY_ENTRY);
-    s.useEffect(() => {
-        if (!N) {
-            E(c);
+function u(e, n, t) {
+    let [u, m] = l.useState(c),
+        [x, h] = l.useState(!1),
+        g = l.useRef(!1),
+        v = null == e ? void 0 : e.id,
+        f = null == e ? void 0 : e.hasFeature(d.oNc.HAS_DIRECTORY_ENTRY);
+    l.useEffect(() => {
+        if (!f) {
+            m(c);
             return;
         }
-        if (!I.current && null != m)
+        if (!g.current && null != v)
             (async () => {
-                I.current = !0;
+                g.current = !0;
                 try {
-                    let e = await (0, r.X)(m, o.C2.GUILD_SCHEDULED_EVENT, n);
-                    E(e);
+                    let e = await (0, s.X)(v, o.C2.GUILD_SCHEDULED_EVENT, n);
+                    m(e);
                 } catch (e) {
-                    E(c);
+                    m(c);
                 }
-                I.current = !1;
+                g.current = !1;
             })();
-    }, [m, N, n]),
-        s.useEffect(() => {
+    }, [v, f, n]),
+        l.useEffect(() => {
             var e;
             if (!u.can_broadcast) {
-                x(!1);
+                h(!1);
                 return;
             }
-            x(null === (e = u.has_broadcast) || void 0 === e || e);
+            h(null === (e = u.has_broadcast) || void 0 === e || e);
         }, [u]);
-    let T = (0, a.e7)([i.Z], () => (0, t.wg)(l, [i.Z]));
+    let N = (0, i.e7)([a.Z], () => (0, r.wg)(t, [a.Z]));
     return {
         broadcastInfo: u,
-        broadcastToDirectoryChannels: T && _,
-        setBroadcastToDirectoryChannels: x,
-        canEveryoneRoleViewEvent: T
+        broadcastToDirectoryChannels: N && x,
+        setBroadcastToDirectoryChannels: h,
+        canEveryoneRoleViewEvent: N
     };
 }

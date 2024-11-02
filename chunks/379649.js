@@ -1,12 +1,12 @@
 n.d(t, {
     A3: function () {
-        return f;
+        return h;
     },
     CI: function () {
-        return I;
+        return g;
     },
     G9: function () {
-        return _;
+        return f;
     },
     J6: function () {
         return r;
@@ -15,10 +15,10 @@ n.d(t, {
         return c;
     },
     _v: function () {
-        return E;
+        return _;
     },
     jU: function () {
-        return p;
+        return m;
     },
     zO: function () {
         return u;
@@ -62,7 +62,7 @@ class d {
     }
 }
 l(d, 'fromMilliseconds', (e) => new d(0, 0, 0, e)), l(d, 'fromSeconds', (e) => new d(0, 0, e)), l(d, 'fromMinutes', (e) => new d(0, e)), l(d, 'fromHours', (e) => new d(e));
-class _ {
+class f {
     start() {
         if (null == this.startTime) this.startTime = this.timestampProducer.now();
     }
@@ -87,20 +87,20 @@ class _ {
         return null != this.startTime;
     }
     static startNew() {
-        let e = new _();
+        let e = new f();
         return e.start(), e;
     }
     constructor(e = c) {
         l(this, 'timestampProducer', void 0), l(this, 'startTime', void 0), l(this, 'timePassed', void 0), (this.timestampProducer = e), (this.startTime = void 0), (this.timePassed = 0);
     }
 }
-function E(e) {
+function _(e) {
     let t = 'number' == typeof e ? e : e.asMilliseconds();
     return new Promise((e) => {
         setTimeout(() => e(), t);
     });
 }
-function f(e, t) {
+function h(e, t) {
     switch (t) {
         case 'NONE':
             return 0;
@@ -121,7 +121,7 @@ function f(e, t) {
     }
 }
 ((i = r || (r = {})).NONE = 'NONE'), (i.SECONDS = 'SECONDS'), (i.MINUTES = 'MINUTES'), (i.HOURS = 'HOURS'), (i.DAYS = 'DAYS'), (i.WEEKS = 'WEEKS'), (i.MONTHS = 'MONTHS'), (i.YEARS = 'YEARS');
-let h = [
+let p = [
     {
         unit: 'NONE',
         max: 0
@@ -155,13 +155,13 @@ let h = [
         max: 1 / 0
     }
 ];
-function p(e, t) {
-    let n = h.findIndex((t) => {
+function m(e, t) {
+    let n = p.findIndex((t) => {
             let { max: n, unit: r } = t;
             return ('NONE' === r && e === n) || e < n;
         }),
         r = s()(
-            h,
+            p,
             (e) => {
                 let { unit: n } = e;
                 return t(n);
@@ -169,20 +169,20 @@ function p(e, t) {
             n
         );
     if (null != r) return r.unit;
-    let i = h.find((e) => {
+    let i = p.find((e) => {
         let { unit: n } = e;
         return t(n);
     });
     return null != i ? i.unit : null;
 }
-function I(e, t) {
+function g(e, t) {
     if (null == e)
         return {
             unit: 'NONE',
             time: 0
         };
-    let n = p(e, (e) => t.includes(e)),
-        r = null != n ? f(e, n) : null;
+    let n = m(e, (e) => t.includes(e)),
+        r = null != n ? h(e, n) : null;
     return {
         unit: n,
         time: null != r ? Math.floor(r) : null

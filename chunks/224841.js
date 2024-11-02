@@ -1,38 +1,38 @@
-var s = n(200651);
+var i = n(200651);
 n(192379);
 var r = n(481060),
-    i = n(388905),
+    s = n(388905),
     a = n(703656),
     l = n(63063),
     o = n(981631),
-    c = n(689938),
+    c = n(388032),
     u = n(634645);
 let d = () => (0, a.uL)(o.Z5c.LOGIN);
 t.Z = (e) => {
     let { authBoxClassName: t, underageMessage: a } = e;
-    return (0, s.jsxs)(i.ZP, {
+    return (0, i.jsxs)(s.ZP, {
         className: t,
         children: [
-            (0, s.jsx)('img', {
+            (0, i.jsx)('img', {
                 alt: '',
                 src: n(231443),
                 className: u.img
             }),
-            (0, s.jsx)(i.Dx, {
+            (0, i.jsx)(s.Dx, {
                 className: u.title,
-                children: c.Z.Messages.AGE_GATE_UNDERAGE_HEADER
+                children: c.intl.string(c.t.nCB6GR)
             }),
-            (0, s.jsx)(i.DK, {
+            (0, i.jsx)(s.DK, {
                 className: u.subtitle,
-                children: c.Z.Messages.AGE_GATE_UNDERAGE_BODY.format({
-                    underageMessage: null != a ? a : c.Z.Messages.AGE_GATE_UNDERAGE_BODY_DEFAULT_REG_MESSAGE,
+                children: c.intl.format(c.t.b0QzXV, {
+                    underageMessage: null != a ? a : c.intl.string(c.t.WqEH4O),
                     helpURL: l.Z.getArticleURL(o.BhN.AGE_GATE)
                 })
             }),
-            (0, s.jsx)(r.Button, {
+            (0, i.jsx)(r.Button, {
                 fullWidth: !0,
                 onClick: d,
-                children: c.Z.Messages.AGE_GATE_UNDERAGE_BACK_TO_LOGIN
+                children: c.intl.string(c.t.szzQ6O)
             })
         ]
     });

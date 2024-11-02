@@ -1,21 +1,21 @@
-t.d(n, {
+e.d(n, {
     h: function () {
         return o;
     }
 });
-var r = t(200651);
-t(192379);
-var i = t(481060),
-    l = t(302463);
-function o(e, n) {
-    (0, i.openModalLazy)(
+var i = e(200651);
+e(192379);
+var r = e(481060),
+    l = e(302463);
+function o(t, n) {
+    (0, r.openModalLazy)(
         async () => {
-            let { default: i } = await t.e('73628').then(t.bind(t, 458961));
-            return (t) =>
-                (0, r.jsx)(i, {
-                    guildId: e,
+            let { default: r } = await e.e('73628').then(e.bind(e, 458961));
+            return (e) =>
+                (0, i.jsx)(r, {
+                    guildId: t,
                     productId: n,
-                    ...t
+                    ...e
                 });
         },
         { modalKey: l.Yz }

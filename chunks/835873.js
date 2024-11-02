@@ -4,11 +4,11 @@ n.d(t, {
     }
 });
 var r = n(668781),
-    i = n(689938);
+    i = n(388032);
 let a = () => {
     r.Z.show({
-        title: i.Z.Messages.NO_EMBEDDED_ACTIVITY_PERMISSION_DIALOG_TITLE,
-        body: i.Z.Messages.NO_EMBEDDED_ACTIVITY_PERMISSION_DIALOG_BODY,
+        title: i.intl.string(i.t.otsg2d),
+        body: i.intl.string(i.t['/Yx5qa']),
         hideActionSheet: !1
     });
 };

@@ -5,17 +5,17 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(434404),
-    s = n(970731),
-    r = n(981631),
-    l = n(689938),
+var r = n(434404),
+    l = n(970731),
+    a = n(981631),
+    s = n(388032),
     o = n(509874),
     c = n(687351);
 function d(e) {
     let { guild: t, markAsDismissed: n } = e;
-    return (0, i.jsx)(s.ZP, {
-        header: l.Z.Messages.DISCOVERY_LANDING_PAGE_UPSELL_TITLE,
-        content: l.Z.Messages.DISCOVERY_LANDING_PAGE_UPSELL_DESCRIPTION,
+    return (0, i.jsx)(l.ZP, {
+        header: s.intl.string(s.t.Hgd22t),
+        content: s.intl.string(s.t.SorTPD),
         asset: (0, i.jsx)('div', {
             className: o.image,
             children: (0, i.jsx)('img', {
@@ -23,12 +23,12 @@ function d(e) {
                 src: c
             })
         }),
-        buttonCTA: l.Z.Messages.DISCOVERY_LANDING_PAGE_UPSELL_BUTTON_ACCEPT,
+        buttonCTA: s.intl.string(s.t['9l+df3']),
         onClick: (e) => {
             var n;
-            (n = t), a.Z.open(n.id, r.pNK.DISCOVERY_LANDING_PAGE);
+            (n = t), r.Z.open(n.id, a.pNK.DISCOVERY_LANDING_PAGE);
         },
-        secondaryButtonCTA: l.Z.Messages.DISCOVERY_LANDING_PAGE_UPSELL_BUTTON_DISMISS,
+        secondaryButtonCTA: s.intl.string(s.t.duVdqq),
         onSecondaryClick: () => {},
         markAsDismissed: n
     });

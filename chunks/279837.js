@@ -1,41 +1,41 @@
-s.r(t), s(47120), s(773603);
-var n,
-    i = s(200651),
-    o = s(192379),
-    l = s(481060),
-    a = s(689938),
-    r = s(600899);
-function h(e, t, s) {
+n.r(t), n(47120), n(773603);
+var s,
+    i = n(200651),
+    o = n(192379),
+    l = n(481060),
+    a = n(388032),
+    r = n(600899);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: s,
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = s),
+            : (e[t] = n),
         e
     );
 }
-class d extends (n = o.PureComponent) {
+class u extends (s = o.PureComponent) {
     render() {
-        let { title: e, actionText: t, children: s, transitionState: n } = this.props,
-            { error: h, isLoading: d, value: u } = this.state,
+        let { title: e, actionText: t, children: n, transitionState: s } = this.props,
+            { error: h, isLoading: u, value: d } = this.state,
             c =
-                o.Children.count(s) > 0
+                o.Children.count(n) > 0
                     ? (0, i.jsx)(l.Card, {
                           type: l.Card.Types.WARNING,
                           className: r.card,
                           children: (0, i.jsx)(l.Text, {
                               className: r.warning,
                               variant: 'text-md/normal',
-                              children: s
+                              children: n
                           })
                       })
                     : null;
         return (0, i.jsx)(l.ModalRoot, {
-            transitionState: n,
+            transitionState: s,
             children: (0, i.jsxs)('form', {
                 onSubmit: this.handleSubmit,
                 children: [
@@ -50,14 +50,14 @@ class d extends (n = o.PureComponent) {
                         children: [
                             c,
                             (0, i.jsxs)(l.FormItem, {
-                                title: a.Z.Messages.FORM_LABEL_PASSWORD,
+                                title: a.intl.string(a.t['CIGa+/']),
                                 className: r.spacing,
                                 children: [
                                     (0, i.jsx)(l.TextInput, {
                                         type: 'password',
                                         autoComplete: 'off',
                                         autoFocus: !0,
-                                        value: u,
+                                        value: d,
                                         onChange: this.handlePasswordChange
                                     }),
                                     null != h && '' !== h
@@ -76,14 +76,14 @@ class d extends (n = o.PureComponent) {
                         children: [
                             (0, i.jsx)(l.Button, {
                                 type: 'submit',
-                                disabled: d || 0 === u.length,
-                                children: null != t ? t : a.Z.Messages.CONFIRM
+                                disabled: u || 0 === d.length,
+                                children: null != t ? t : a.intl.string(a.t['cY+Ooa'])
                             }),
                             (0, i.jsx)(l.Button, {
                                 onClick: this.handleCancel,
                                 look: l.Button.Looks.LINK,
                                 color: l.Button.Colors.PRIMARY,
-                                children: a.Z.Messages.CANCEL
+                                children: a.intl.string(a.t['ETE/oK'])
                             })
                         ]
                     })
@@ -101,11 +101,11 @@ class d extends (n = o.PureComponent) {
             h(this, 'handleSubmit', (e) => {
                 e.preventDefault();
                 let { value: t } = this.state,
-                    { handleSubmit: s, onClose: n, onError: i } = this.props;
+                    { handleSubmit: n, onClose: s, onError: i } = this.props;
                 this.setState({ isLoading: !0 }),
-                    s(t)
+                    n(t)
                         .then(
-                            (e) => n(null != e ? e : void 0),
+                            (e) => s(null != e ? e : void 0),
                             (e) => {
                                 if (null == e.body) return;
                                 if ((null == i || i(e.body), !this.shouldSkipErrorMsgRender(e.body)))
@@ -137,4 +137,4 @@ class d extends (n = o.PureComponent) {
             });
     }
 }
-h(d, 'key', () => 'password-confirm-modal'), (t.default = d);
+h(u, 'key', () => 'password-confirm-modal'), (t.default = u);

@@ -1,104 +1,104 @@
-a.r(n), a(47120), a(757143);
-var t = a(200651),
-    l = a(192379),
-    r = a(120356),
-    o = a.n(r),
-    s = a(999153),
-    i = a(584922),
-    c = a(692547),
-    d = a(481060),
-    u = a(881052),
-    f = a(186523),
-    m = a(246364),
-    I = a(915509),
-    C = a(592286),
-    p = a(689938),
-    _ = a(352784);
-let E = 'MULTIPLE_CHOICE',
-    x = (e) => {
-        let { choice: n, index: a, onChange: r, onClear: c, onReorder: u, isDropHovered: m } = e,
-            I = l.useRef(null),
-            C = l.useRef(null),
-            [, x, h] = (0, s.c)({
-                type: E,
+t.r(n), t(47120), t(757143);
+var l = t(200651),
+    a = t(192379),
+    r = t(120356),
+    o = t.n(r),
+    i = t(999153),
+    s = t(584922),
+    c = t(692547),
+    d = t(481060),
+    u = t(881052),
+    f = t(186523),
+    m = t(246364),
+    p = t(915509),
+    x = t(592286),
+    h = t(388032),
+    g = t(352784);
+let C = 'MULTIPLE_CHOICE',
+    I = (e) => {
+        let { choice: n, index: t, onChange: r, onClear: c, onReorder: u, isDropHovered: m } = e,
+            p = a.useRef(null),
+            x = a.useRef(null),
+            [, I, _] = (0, i.c)({
+                type: C,
                 item: {
                     choice: n,
-                    index: a
+                    index: t
                 },
                 end: (e, n) => {
                     null != e && !n.didDrop() && u(e.choice, null, !0);
                 }
             }),
-            [, g] = (0, i.L)({
-                accept: E,
+            [, b] = (0, s.L)({
+                accept: C,
                 hover: (e, n) => {
-                    var t;
-                    let { index: l } = e,
-                        r = null === (t = I.current) || void 0 === t ? void 0 : t.getBoundingClientRect(),
+                    var l;
+                    let { index: a } = e,
+                        r = null === (l = p.current) || void 0 === l ? void 0 : l.getBoundingClientRect(),
                         o = n.getClientOffset();
                     if (null == r || null == o) return;
-                    let s = (r.bottom - r.top) / 2,
-                        i = o.y - r.top;
-                    (!(l < a) || !(i < s)) && (!(l > a) || !(i > s)) && u(e.choice, a, !1);
+                    let i = (r.bottom - r.top) / 2,
+                        s = o.y - r.top;
+                    (!(a < t) || !(s < i)) && (!(a > t) || !(s > i)) && u(e.choice, t, !1);
                 },
                 drop: (e) => {
-                    u(e.choice, a, !0);
+                    u(e.choice, t, !0);
                 }
             });
         return (
-            l.useLayoutEffect(
+            a.useLayoutEffect(
                 () => (
-                    x(C),
-                    h(g(I)),
+                    I(x),
+                    _(b(p)),
                     () => {
-                        x(null), g(null);
+                        I(null), b(null);
                     }
                 ),
-                [x, g, h]
+                [I, b, _]
             ),
-            (0, t.jsxs)('div', {
-                ref: I,
-                className: o()(_.draggableInputContainer, { [_.dragging]: m }),
+            (0, l.jsxs)('div', {
+                ref: p,
+                className: o()(g.draggableInputContainer, { [g.dragging]: m }),
                 'data-dnd-name': n,
                 children: [
-                    (0, t.jsx)('div', {
-                        className: _.radioIconEmptyContainer,
-                        children: (0, t.jsx)(f.Z, {
+                    (0, l.jsx)('div', {
+                        className: g.radioIconEmptyContainer,
+                        children: (0, l.jsx)(f.Z, {
                             height: 20,
                             width: 20,
-                            className: _.radioIconEmpty
+                            className: g.radioIconEmpty
                         })
                     }),
-                    (0, t.jsxs)('div', {
-                        className: _.inputWrapper,
+                    (0, l.jsxs)('div', {
+                        className: g.inputWrapper,
                         children: [
-                            (0, t.jsx)(d.TextInput, {
+                            (0, l.jsx)(d.TextInput, {
                                 autoFocus: !0,
                                 onChange: (e) => r(e),
-                                placeholder: p.Z.Messages.MEMBER_VERIFICATION_MULTIPLE_CHOICE_PLACEHOLDER.format({ index: a + 1 }),
+                                placeholder: h.intl.formatToPlainString(h.t['Ep/pbG'], { index: t + 1 }),
                                 value: n
                             }),
-                            (0, t.jsx)(d.Button, {
-                                className: _.clearButton,
+                            (0, l.jsx)(d.Button, {
+                                className: g.clearButton,
                                 onClick: c,
                                 look: d.Button.Looks.BLANK,
                                 size: d.Button.Sizes.NONE,
-                                children: (0, t.jsx)(d.CircleXIcon, {
+                                children: (0, l.jsx)(d.CircleXIcon, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: _.clearIcon
+                                    className: g.clearIcon
                                 })
                             })
                         ]
                     }),
-                    (0, t.jsx)('div', {
-                        ref: C,
-                        className: _.dragContainer,
+                    (0, l.jsx)('div', {
+                        ref: x,
+                        className: g.dragContainer,
                         'data-dnd-name': n,
-                        children: (0, t.jsx)(d.DragIcon, {
+                        children: (0, l.jsx)(d.DragIcon, {
                             size: 'xs',
                             color: 'currentColor',
-                            className: _.dragIcon
+                            className: g.dragIcon
                         })
                     })
                 ]
@@ -106,106 +106,106 @@ let E = 'MULTIPLE_CHOICE',
         );
     };
 n.default = function (e) {
-    var n, a;
-    let { field: r, onSave: o, onClose: s } = e,
-        [i, f] = l.useState(null !== (n = null == r ? void 0 : r.label) && void 0 !== n ? n : ''),
-        [E, h] = l.useState(null !== (a = null == r ? void 0 : r.choices) && void 0 !== a ? a : ['']),
-        [g, R] = l.useState(null),
-        [M, N] = l.useState(null),
-        v = (e, n) => {
-            null != g && R(null);
-            let a = e.replace(/(\r\n|\n|\r)/g, ' ');
-            a.length > C.au && (a = a.slice(0, C.au));
-            let t = [...E];
-            (t[n] = a), h(t);
+    var n, t;
+    let { field: r, onSave: o, onClose: i } = e,
+        [s, f] = a.useState(null !== (n = null == r ? void 0 : r.label) && void 0 !== n ? n : ''),
+        [C, _] = a.useState(null !== (t = null == r ? void 0 : r.choices) && void 0 !== t ? t : ['']),
+        [b, v] = a.useState(null),
+        [j, N] = a.useState(null),
+        B = (e, n) => {
+            null != b && v(null);
+            let t = e.replace(/(\r\n|\n|\r)/g, ' ');
+            t.length > x.au && (t = t.slice(0, x.au));
+            let l = [...C];
+            (l[n] = t), _(l);
         },
-        B = (e, n, a) => {
-            if (null == E) return;
-            null != g && R(null);
-            let t = E.indexOf(e),
-                l = [...E];
-            null != n && n !== t && (l.splice(t, 1), l.splice(n, 0, e), h(l)), a ? null !== n && N(null) : n !== M && N(n);
+        y = (e, n, t) => {
+            if (null == C) return;
+            null != b && v(null);
+            let l = C.indexOf(e),
+                a = [...C];
+            null != n && n !== l && (a.splice(l, 1), a.splice(n, 0, e), _(a)), t ? null !== n && N(null) : n !== j && N(n);
         },
-        b = (e) => {
-            null != g && R(null);
-            let n = [...E.slice(0, e), ...E.slice(e + 1)];
-            h(0 === n.length ? [''] : n);
+        E = (e) => {
+            null != b && v(null);
+            let n = [...C.slice(0, e), ...C.slice(e + 1)];
+            _(0 === n.length ? [''] : n);
         },
-        j = async () => {
-            null != g && R(null);
-            let e = i.trim();
+        T = async () => {
+            null != b && v(null);
+            let e = s.trim();
             if ('' === e) {
-                R(p.Z.Messages.MEMBER_VERIFICATION_FIELD_QUESTION_REQUIRED_ERROR);
+                v(h.intl.string(h.t['G+TI4+']));
                 return;
             }
-            if (0 === E.map((e) => e.trim()).filter((e) => '' !== e).length) {
-                R(p.Z.Messages.MEMBER_VERIFICATION_CHOICES_REQUIRED_ERROR);
+            if (0 === C.map((e) => e.trim()).filter((e) => '' !== e).length) {
+                v(h.intl.string(h.t.jZoHgI));
                 return;
             }
             let n = {
                 field_type: m.QJ.MULTIPLE_CHOICE,
                 label: e,
-                choices: E,
+                choices: C,
                 required: !0
             };
             try {
-                await o(n), s();
+                await o(n), i();
             } catch (e) {
-                R(new u.Hx(e).getAnyErrorMessage());
+                v(new u.Hx(e).getAnyErrorMessage());
             }
         };
-    return (0, t.jsxs)(I.Z, {
+    return (0, l.jsxs)(p.Z, {
         ...e,
-        errorText: g,
-        title: p.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_MULTIPLE_CHOICE,
-        onConfirm: j,
-        onCancel: s,
+        errorText: b,
+        title: h.intl.string(h.t.ooKh3t),
+        onConfirm: T,
+        onCancel: i,
         children: [
-            (0, t.jsx)(d.TextInput, {
+            (0, l.jsx)(d.TextInput, {
                 autoFocus: !0,
-                className: _.spacedItem,
+                className: g.spacedItem,
                 onChange: (e) => {
-                    null != g && R(null);
+                    null != b && v(null);
                     let n = e.replace(/(\r\n|\n|\r)/g, ' ');
-                    n.length > C.XN && (n = e.slice(0, C.XN)), f(n);
+                    n.length > x.XN && (n = e.slice(0, x.XN)), f(n);
                 },
-                placeholder: p.Z.Messages.MEMBER_VERIFICATION_FIELD_QUESTION,
-                value: i
+                placeholder: h.intl.string(h.t.fqVmbG),
+                value: s
             }),
-            (0, t.jsx)('div', { className: _.divider }),
-            E.map((e, n) =>
-                (0, t.jsx)(
-                    x,
+            (0, l.jsx)('div', { className: g.divider }),
+            C.map((e, n) =>
+                (0, l.jsx)(
+                    I,
                     {
                         choice: e,
                         index: n,
-                        onChange: (e) => v(e, n),
-                        onClear: () => b(n),
-                        onReorder: B,
-                        isDropHovered: n === M
+                        onChange: (e) => B(e, n),
+                        onClear: () => E(n),
+                        onReorder: y,
+                        isDropHovered: n === j
                     },
                     'choice-'.concat(n)
                 )
             ),
-            E.length !== C.mb &&
-                (0, t.jsxs)('div', {
-                    className: _.addItemContainer,
+            C.length !== x.mb &&
+                (0, l.jsxs)('div', {
+                    className: g.addItemContainer,
                     children: [
-                        (0, t.jsx)(d.CirclePlusIcon, {
+                        (0, l.jsx)(d.CirclePlusIcon, {
                             size: 'custom',
                             height: 17,
                             width: 17,
                             color: c.Z.unsafe_rawColors.BLUE_345.css
                         }),
-                        (0, t.jsx)(d.Clickable, {
-                            className: _.addItemButton,
+                        (0, l.jsx)(d.Clickable, {
+                            className: g.addItemButton,
                             onClick: () => {
-                                null != g && R(null), E.length !== C.mb && h([...E, '']);
+                                null != b && v(null), C.length !== x.mb && _([...C, '']);
                             },
-                            children: (0, t.jsx)(d.Text, {
+                            children: (0, l.jsx)(d.Text, {
                                 color: 'text-link',
                                 variant: 'text-md/normal',
-                                children: p.Z.Messages.MEMBER_VERIFICATION_MULTIPLE_CHOICE_ADD
+                                children: h.intl.string(h.t.sVfx9v)
                             })
                         })
                     ]

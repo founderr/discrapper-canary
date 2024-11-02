@@ -28,12 +28,12 @@ function d() {
         animateStickers: null === (a = s.textAndImages) || void 0 === a ? void 0 : null === (i = a.animateStickers) || void 0 === i ? void 0 : i.value
     };
 }
-function _() {
+function f() {
     return (c = d()), !1;
 }
-class E extends (r = i.ZP.PersistedStore) {
+class _ extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (u = null != e ? e : {}), this.syncWith([o.Z], _);
+        (u = null != e ? e : {}), this.syncWith([o.Z], f);
     }
     getState() {
         return u;
@@ -46,16 +46,16 @@ class E extends (r = i.ZP.PersistedStore) {
         return u[e];
     }
 }
-l(E, 'displayName', 'UserSettingsOverridesStore'),
-    l(E, 'persistKey', 'UserSettingsOverridesStore'),
-    l(E, 'migrations', [
+l(_, 'displayName', 'UserSettingsOverridesStore'),
+    l(_, 'persistKey', 'UserSettingsOverridesStore'),
+    l(_, 'migrations', [
         () => {
             var e;
             let t = null !== (e = a.K.get('UserSettingsStoreOverrides')) && void 0 !== e ? e : {};
             return a.K.remove('UserSettingsStoreOverrides'), t;
         }
     ]),
-    (t.Z = new E(s.Z, {
+    (t.Z = new _(s.Z, {
         USER_SETTINGS_PROTO_UPDATE: function () {
             let e = d(),
                 t = !1;

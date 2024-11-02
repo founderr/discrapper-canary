@@ -1,27 +1,27 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return N;
     }
 });
 var i = n(200651),
     l = n(192379),
     r = n(442837),
     a = n(481060),
-    s = n(239091),
-    o = n(906732),
+    o = n(239091),
+    s = n(906732),
     c = n(560067),
     u = n(451603),
     d = n(885714),
     h = n(155409),
     p = n(430824),
     f = n(594174),
-    _ = n(40153),
-    m = n(603592),
-    g = n(981631),
-    C = n(675999),
-    I = n(689938),
-    E = n(355355);
-let N = {
+    m = n(40153),
+    g = n(603592),
+    C = n(981631),
+    _ = n(675999),
+    x = n(388032),
+    v = n(355355);
+let I = {
     origin: {
         x: -16,
         y: 0
@@ -33,54 +33,54 @@ let N = {
         y: 0
     }
 };
-function x(e) {
-    (0, s.jW)(e, async () => {
+function b(e) {
+    (0, o.jW)(e, async () => {
         let { default: e } = await n.e('9606').then(n.bind(n, 987578));
         return (t) => (0, i.jsx)(e, { ...t });
     });
 }
-function S(e) {
+function N(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
-        s = (0, r.e7)([p.Z], () => p.Z.getGuilds()),
-        S = l.useMemo(() => Object.values(s), [s]),
-        v = (0, r.e7)([f.default], () => f.default.getCurrentUser()),
-        Z = l.useMemo(() => S.some((e) => e.isOwner(v)), [S, v]),
-        T = (0, a.useModalsStore)((e) => (0, a.hasModalOpenSelector)(e, C.PU)),
-        { analyticsLocations: b } = (0, o.ZP)(),
-        A = (0, a.useRedesignIconContext)().enabled,
-        M = (0, i.jsx)(m.Z, {
+        o = (0, r.e7)([p.Z], () => p.Z.getGuilds()),
+        N = l.useMemo(() => Object.values(o), [o]),
+        E = (0, r.e7)([f.default], () => f.default.getCurrentUser()),
+        S = l.useMemo(() => N.some((e) => e.isOwner(E)), [N, E]),
+        Z = (0, a.useModalsStore)((e) => (0, a.hasModalOpenSelector)(e, _.PU)),
+        { analyticsLocations: y } = (0, s.ZP)(),
+        T = (0, a.useRedesignIconContext)().enabled,
+        j = (0, i.jsx)(g.Z, {
             showPill: !1,
             id: 'create-join-button',
             onClick: () => {
                 (0, u.yU)()
                     ? (0, d.Z)({
-                          analyticsSource: { page: g.Sbl.CREATE_JOIN_GUILD_MODAL },
+                          analyticsSource: { page: C.Sbl.CREATE_JOIN_GUILD_MODAL },
                           analyticsLocation: {
-                              page: g.Sbl.CREATE_JOIN_GUILD_MODAL,
-                              section: g.jXE.GUILD_CAP_UPSELL_MODAL
+                              page: C.Sbl.CREATE_JOIN_GUILD_MODAL,
+                              section: C.jXE.GUILD_CAP_UPSELL_MODAL
                           },
-                          analyticsLocations: b
+                          analyticsLocations: y
                       })
                     : c.Z.openCreateGuildModal({ location: 'Guild List' });
             },
-            selected: T,
-            onContextMenu: x,
-            tooltip: I.Z.Messages.ADD_A_SERVER,
-            icon: A ? a.PlusMediumIcon : a.PlusSmallIcon
+            selected: Z,
+            onContextMenu: b,
+            tooltip: x.intl.string(x.t.l5WIbW),
+            icon: T ? a.PlusMediumIcon : a.PlusSmallIcon
         });
     return t
-        ? M
+        ? j
         : (0, i.jsx)('div', {
-              className: E.tutorialContainer,
+              className: v.tutorialContainer,
               children: (0, i.jsxs)(h.Z, {
-                  tutorialId: Z ? 'create-more-servers' : 'create-first-server',
-                  inlineSpecs: N,
+                  tutorialId: S ? 'create-more-servers' : 'create-first-server',
+                  inlineSpecs: I,
                   position: 'right',
                   children: [
-                      M,
+                      j,
                       null != n &&
-                          (0, i.jsx)(_.ZP, {
-                              name: I.Z.Messages.DND_END_OF_LIST,
+                          (0, i.jsx)(m.ZP, {
+                              name: x.intl.string(x.t['45xjMz']),
                               targetNode: n,
                               below: !0,
                               noCombine: !0

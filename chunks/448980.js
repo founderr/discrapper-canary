@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return _;
     }
 }),
     n(627341);
@@ -22,32 +22,32 @@ function d(e) {
     let { entry: t } = e;
     return (0, r.jsx)(r.Fragment, { children: [o.E6].map((e, n) => (0, r.jsx)(e, { entry: t }, 'entry-'.concat(n))) });
 }
-function _(e) {
+function f(e) {
     let { entry: t } = e;
     return (0, r.jsx)(r.Fragment, { children: [o.An].map((e, n) => (0, r.jsx)(e, { entry: t }, 'entry-'.concat(n))) });
 }
-function E(e) {
-    let { user: t, activity: n, className: E } = e,
-        f = (0, s.Bq)({
+function _(e) {
+    let { user: t, activity: n, className: _ } = e,
+        h = (0, s.Bq)({
             activity: n,
             user: t
         }),
-        h = (0, i.EQ)(n)
+        p = (0, i.EQ)(n)
             .with({ type: u.IIU.PLAYING }, () => [l.ho, l.Xh])
             .with({ type: u.IIU.LISTENING }, () => [l.ho])
             .with({ type: u.IIU.WATCHING }, () => [l.ho, l.Rg])
             .otherwise(() => []);
-    return 0 === h.length
+    return 0 === p.length
         ? null
         : (0, r.jsxs)(o.Gk, {
               location: o.Gt.USER_PROFILE,
-              className: E,
+              className: _,
               children: [
-                  h.map((e, t) => (0, r.jsx)(e, { activity: n }, 'activity-'.concat(t))),
-                  (0, i.EQ)(f)
+                  p.map((e, t) => (0, r.jsx)(e, { activity: n }, 'activity-'.concat(t))),
+                  (0, i.EQ)(h)
                       .when(a.Cb, (e) => (0, r.jsx)(c, { entry: e }))
                       .when(a.Q0, (e) => (0, r.jsx)(d, { entry: e }))
-                      .when(a.KF, (e) => (0, r.jsx)(_, { entry: e }))
+                      .when(a.KF, (e) => (0, r.jsx)(f, { entry: e }))
                       .otherwise(() => null)
               ]
           });

@@ -7,16 +7,16 @@ n.d(t, {
 var l = n(512722),
     u = n.n(l),
     i = n(911969),
-    r = n(689938);
+    r = n(388032);
 let a = (e, t) => {
         let { minValues: n, maxValues: l } = e;
-        if (null == t) return 0 === n ? null : r.Z.Messages.MESSAGE_SELECT_COMPONENT_SELECT_REQUIREMENT.format({ count: n });
+        if (null == t) return 0 === n ? null : r.intl.formatToPlainString(r.t.Jmwzd3, { count: n });
         if (t.type === i.re.STRING_SELECT) {
-            if (t.values.length < n) return r.Z.Messages.MESSAGE_SELECT_COMPONENT_SELECT_REQUIREMENT.format({ count: n });
-            if (t.values.length > l) return r.Z.Messages.MESSAGE_SELECT_COMPONENT_MAX_SELECT_REQUIREMENT.format({ count: l });
+            if (t.values.length < n) return r.intl.formatToPlainString(r.t.Jmwzd3, { count: n });
+            if (t.values.length > l) return r.intl.formatToPlainString(r.t.LDvfRE, { count: l });
         } else {
-            if (t.selectedOptions.length < n) return r.Z.Messages.MESSAGE_SELECT_COMPONENT_SELECT_REQUIREMENT.format({ count: n });
-            if (t.selectedOptions.length > l) return r.Z.Messages.MESSAGE_SELECT_COMPONENT_MAX_SELECT_REQUIREMENT.format({ count: l });
+            if (t.selectedOptions.length < n) return r.intl.formatToPlainString(r.t.Jmwzd3, { count: n });
+            if (t.selectedOptions.length > l) return r.intl.formatToPlainString(r.t.LDvfRE, { count: l });
         }
         return null;
     },
@@ -24,13 +24,13 @@ let a = (e, t) => {
         let { minLength: n, maxLength: l, required: u } = e;
         if (null == t || 0 === t.value.length)
             return u
-                ? r.Z.Messages.FORM_LENGTH_ERROR.format({
+                ? r.intl.formatToPlainString(r.t.ONSqYW, {
                       min: n,
                       max: l
                   })
                 : null;
         return t.value.length < n || t.value.length > l
-            ? r.Z.Messages.FORM_LENGTH_ERROR.format({
+            ? r.intl.formatToPlainString(r.t.ONSqYW, {
                   min: n,
                   max: l
               })

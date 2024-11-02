@@ -18,7 +18,7 @@ var r = n(192379),
             u = e.borderRadius,
             c = e.boxShadow,
             d = e.children,
-            _ = (0, i.default)({
+            f = (0, i.default)({
                 default: {
                     grid: {
                         borderRadius: u,
@@ -28,7 +28,7 @@ var r = n(192379),
                     }
                 }
             });
-        return (0, r.isValidElement)(d) ? r.cloneElement(d, s({}, d.props, { style: s({}, d.props.style, _.grid) })) : r.createElement('div', { style: _.grid });
+        return (0, r.isValidElement)(d) ? r.cloneElement(d, s({}, d.props, { style: s({}, d.props.style, f.grid) })) : r.createElement('div', { style: f.grid });
     };
 (o.defaultProps = {
     size: 8,

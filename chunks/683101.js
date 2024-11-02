@@ -1,19 +1,19 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return f;
     }
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    a = n(392711),
-    l = n.n(a),
-    r = n(374470),
+    l = n(192379),
+    r = n(392711),
+    a = n.n(r),
+    s = n(374470),
     o = n(481060),
     c = n(239091),
     u = n(294218),
     d = n(592125),
-    h = n(689938),
+    h = n(388032),
     m = n(595165);
 function p(e, t, n) {
     return (
@@ -28,14 +28,14 @@ function p(e, t, n) {
         e
     );
 }
-class _ extends s.PureComponent {
+class f extends l.PureComponent {
     render() {
-        let { result: e, listItemProps: t, searchOffset: n, index: s, totalResults: a } = this.props,
-            r = l().find(e, (e) => e.isSearchHit);
-        if (null == r) return null;
-        let c = d.Z.getChannel(r.channel_id);
+        let { result: e, listItemProps: t, searchOffset: n, index: l, totalResults: r } = this.props,
+            s = a().find(e, (e) => e.isSearchHit);
+        if (null == s) return null;
+        let c = d.Z.getChannel(s.channel_id);
         if (null == c) return null;
-        let p = 'search-result-'.concat(r.id);
+        let p = 'search-result-'.concat(s.id);
         return (0, i.jsx)(o.FocusRing, {
             ringTarget: this.hitRef,
             ringClassName: m.__invalid_searchResultFocusRing,
@@ -43,8 +43,8 @@ class _ extends s.PureComponent {
             children: (0, i.jsxs)('li', {
                 className: m.container,
                 ...t,
-                'aria-posinset': 1 + n + s,
-                'aria-setsize': a,
+                'aria-posinset': 1 + n + l,
+                'aria-setsize': r,
                 'aria-labelledby': p,
                 children: [
                     (0, i.jsx)(o.Clickable, {
@@ -60,16 +60,16 @@ class _ extends s.PureComponent {
                                 className: m.message,
                                 children: (0, i.jsx)(u.Z, {
                                     id: p,
-                                    message: r,
+                                    message: s,
                                     channel: c,
-                                    onContextMenu: (e) => this.handleContextMenu(e, r),
+                                    onContextMenu: (e) => this.handleContextMenu(e, s),
                                     animateAvatar: !1,
                                     subscribeToComponentDispatch: !1,
                                     trackAnnouncementViews: !0,
                                     isSearchResult: !0
                                 })
                             },
-                            r.id
+                            s.id
                         )
                     }),
                     (0, i.jsx)('div', {
@@ -78,7 +78,7 @@ class _ extends s.PureComponent {
                         children: (0, i.jsx)(o.Clickable, {
                             className: m.button,
                             onClick: this.jumpTo,
-                            children: h.Z.Messages.JUMP
+                            children: h.intl.string(h.t.k5WiPT)
                         })
                     })
                 ]
@@ -87,11 +87,11 @@ class _ extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            p(this, 'containerRef', s.createRef()),
-            p(this, 'hitRef', s.createRef()),
+            p(this, 'containerRef', l.createRef()),
+            p(this, 'hitRef', l.createRef()),
             p(this, 'handleContextMenu', (e, t) => {
-                let s = d.Z.getChannel(t.channel_id);
-                if (null != s)
+                let l = d.Z.getChannel(t.channel_id);
+                if (null != l)
                     e.stopPropagation(),
                         (0, c.jW)(e, async () => {
                             let { default: e } = await n.e('53809').then(n.bind(n, 858341));
@@ -99,7 +99,7 @@ class _ extends s.PureComponent {
                                 (0, i.jsx)(e, {
                                     ...n,
                                     message: t,
-                                    channel: s
+                                    channel: l
                                 });
                         });
             }),
@@ -116,7 +116,7 @@ class _ extends s.PureComponent {
                         let i = null === (n = window) || void 0 === n ? void 0 : n.getSelection();
                         if (null != i && !i.isCollapsed) return !0;
                         if (null == e || null == t) return !1;
-                        for (; (0, r.k)(e) && e !== t; ) {
+                        for (; (0, s.k)(e) && e !== t; ) {
                             let { tagName: t } = e;
                             if ('A' === t || 'IMG' === t || 'BUTTON' === t) return !0;
                             e = e.parentNode;

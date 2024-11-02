@@ -12,12 +12,12 @@ let s = (e) => {
     let { size: s = 'md', width: o, height: l, ...u } = e,
         c = (0, a.m)(s),
         d = null !== (t = null == c ? void 0 : c.width) && void 0 !== t ? t : o,
-        _ = null !== (n = null == c ? void 0 : c.height) && void 0 !== n ? n : l;
+        f = null !== (n = null == c ? void 0 : c.height) && void 0 !== n ? n : l;
     return (0, r.jsxs)('svg', {
         ...(0, i.Z)(u),
         xmlns: 'http://www.w3.org/2000/svg',
         width: d,
-        height: _,
+        height: f,
         fill: 'none',
         viewBox: '0 0 24 24',
         children: [

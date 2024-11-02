@@ -9,17 +9,17 @@ t.d(n, {
         return s;
     }
 });
-var a = t(192379),
-    r = t(772848);
+var r = t(192379),
+    a = t(772848);
 let i = 262,
     s = 100;
 function o(e, n) {
-    let t = a.useMemo(() => 'clan-banner-container-'.concat((0, r.Z)()), []);
+    let t = r.useMemo(() => 'clan-banner-container-'.concat((0, a.Z)()), []);
     return {
-        styleContent: a.useMemo(() => {
-            let a = e.map((e, n) => '--primary-'.concat(n, ': ').concat(e, ';')).join('\n'),
-                r = n.map((e, n) => '--secondary-'.concat(n, ': ').concat(e, ';')).join('\n');
-            return '#'.concat(t, ' {\n        ').concat(a, '\n        ').concat(r, '\n      }');
+        styleContent: r.useMemo(() => {
+            let r = e.map((e, n) => '--primary-'.concat(n, ': ').concat(e, ';')).join('\n'),
+                a = n.map((e, n) => '--secondary-'.concat(n, ': ').concat(e, ';')).join('\n');
+            return '#'.concat(t, ' {\n        ').concat(r, '\n        ').concat(a, '\n      }');
         }, [t, e, n]),
         containerId: t
     };

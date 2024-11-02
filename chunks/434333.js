@@ -19,13 +19,13 @@ let c = {
         BACKGROUND_ACCENT: u.backgroundAccent
     },
     d = i.forwardRef(function (e, t) {
-        let { role: n, children: i, className: a, onDismiss: d, backgroundColor: _ = c.RED, icon: E = l.CircleWarningIcon, iconClassName: f } = e;
+        let { role: n, children: i, className: a, onDismiss: d, backgroundColor: f = c.RED, icon: _ = l.CircleWarningIcon, iconClassName: h } = e;
         return (0, r.jsxs)('div', {
-            className: s()(u.error, a, _),
+            className: s()(u.error, a, f),
             ref: t,
             children: [
-                (0, r.jsx)(E, {
-                    className: s()(u.icon, f),
+                (0, r.jsx)(_, {
+                    className: s()(u.icon, h),
                     color: 'currentColor'
                 }),
                 (0, r.jsx)('div', {

@@ -5,59 +5,59 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(904245),
-    r = n(739566),
-    l = n(834129),
-    o = n(689938);
+var r = n(481060),
+    l = n(904245),
+    a = n(739566),
+    o = n(834129),
+    s = n(388032);
 function c(e) {
     let { message: t, usernameHook: c, onClickPins: u, compact: d } = e,
-        _ = (0, r.ZP)(t),
-        E = _.nick,
-        I = c(_),
-        m = () => {
+        m = (0, a.ZP)(t),
+        f = m.nick,
+        h = c(m),
+        p = () => {
             if (null == t.messageReference) return;
             let { channel_id: e, message_id: n } = t.messageReference;
-            s.Z.jumpToMessage({
+            l.Z.jumpToMessage({
                 channelId: e,
                 messageId: n,
                 flash: !0
             });
         },
-        f = (0, a.useRedesignIconContext)().enabled
+        g = (0, r.useRedesignIconContext)().enabled
             ? {
-                  iconNode: (0, i.jsx)(a.PinIcon, {
+                  iconNode: (0, i.jsx)(r.PinIcon, {
                       size: 'sm',
                       color: 'currentColor'
                   })
               }
             : { icon: n(879066) };
-    return (0, i.jsx)(l.Z, {
-        ...f,
+    return (0, i.jsx)(o.Z, {
+        ...g,
         timestamp: t.timestamp,
         compact: d,
         children:
             null != t.messageReference
                 ? null == u
-                    ? o.Z.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_NO_CTA_FORMATTED_WITH_MESSAGE_HOOK.format({
-                          usernameHook: I,
-                          username: E,
-                          messageOnClick: m
+                    ? s.intl.format(s.t.lD5tur, {
+                          usernameHook: h,
+                          username: f,
+                          messageOnClick: p
                       })
-                    : o.Z.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_WITH_MESSAGE.format({
-                          usernameHook: I,
-                          username: E,
+                    : s.intl.format(s.t.yIDvPD, {
+                          usernameHook: h,
+                          username: f,
                           pinsActionOnClick: u,
-                          messageOnClick: m
+                          messageOnClick: p
                       })
                 : null == u
-                  ? o.Z.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_NO_CTA_FORMATTED_HOOK.format({
-                        usernameHook: I,
-                        username: E
+                  ? s.intl.format(s.t.vfkjq6, {
+                        usernameHook: h,
+                        username: f
                     })
-                  : o.Z.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE.format({
-                        usernameHook: I,
-                        username: E,
+                  : s.intl.format(s.t.R7vZGR, {
+                        usernameHook: h,
+                        username: f,
                         pinsActionOnClick: u
                     })
     });

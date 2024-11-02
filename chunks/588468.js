@@ -1,9 +1,9 @@
 n.d(t, {
     DJ: function () {
-        return P;
+        return w;
     },
     rp: function () {
-        return U;
+        return M;
     }
 }),
     n(411104),
@@ -17,27 +17,27 @@ var r,
     u = n.n(l),
     c = n(91192),
     d = n(481060),
-    _ = n(607070),
-    E = n(895924),
-    f = n(237375),
-    h = n(342687),
-    p = n(933557),
-    I = n(471445),
-    m = n(511618),
-    T = n(926491),
-    S = n(378233),
-    g = n(695346),
-    A = n(430824),
-    N = n(699516),
-    R = n(594174),
-    O = n(768581),
-    v = n(51144),
+    f = n(607070),
+    _ = n(895924),
+    h = n(237375),
+    p = n(342687),
+    m = n(933557),
+    g = n(471445),
+    E = n(511618),
+    v = n(926491),
+    I = n(378233),
+    S = n(695346),
+    T = n(430824),
+    b = n(699516),
+    y = n(594174),
+    A = n(768581),
+    N = n(51144),
     C = n(965386),
-    L = n(981631),
-    D = n(185923),
-    y = n(689938),
-    b = n(980213);
-function M(e, t, n) {
+    R = n(981631),
+    O = n(185923),
+    D = n(388032),
+    L = n(980213);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -50,14 +50,14 @@ function M(e, t, n) {
         e
     );
 }
-function P(e) {
+function w(e) {
     return null != e ? 'autocomplete-'.concat(e) : null;
 }
-function U(e) {
+function M(e) {
     return 'autocomplete-'.concat(e, '-title');
 }
-let w = a.createContext(null);
-class x extends a.PureComponent {
+let P = a.createContext(null);
+class k extends a.PureComponent {
     isSelectable() {
         return this.selectable;
     }
@@ -73,8 +73,8 @@ class x extends a.PureComponent {
             l = this.isSelectable();
         return (0, i.jsx)(d.Clickable, {
             ...e,
-            className: o()(b.clickable, r, n),
-            id: null !== (t = P(a)) && void 0 !== t ? t : void 0,
+            className: o()(L.clickable, r, n),
+            id: null !== (t = w(a)) && void 0 !== t ? t : void 0,
             onClick: l ? this.handleClick : void 0,
             onMouseMove: l
                 ? () => {
@@ -86,7 +86,7 @@ class x extends a.PureComponent {
             'aria-disabled': !l,
             'aria-selected': l && s,
             children: (0, i.jsx)('div', {
-                className: b.base,
+                className: L.base,
                 children: this.renderContent()
             })
         });
@@ -102,29 +102,29 @@ class x extends a.PureComponent {
     }
     constructor(e) {
         super(e),
-            M(this, 'selectable', !0),
-            M(this, 'layoutClass', b.autocompleteRowVertical),
-            M(this, 'handleMouseEnter', () => {
+            x(this, 'selectable', !0),
+            x(this, 'layoutClass', L.autocompleteRowVertical),
+            x(this, 'handleMouseEnter', () => {
                 let { onHover: e, index: t, selected: n } = this.props;
                 null == e || n || 'number' != typeof t || e(t);
             }),
-            M(this, 'handleClick', (e) => {
+            x(this, 'handleClick', (e) => {
                 let { onClick: t, index: n } = this.props;
                 null != t && 'number' == typeof n && t(n, e);
             }),
             (this.state = { hovered: !1 });
     }
 }
-class G extends (r = a.PureComponent) {
+class U extends (r = a.PureComponent) {
     render() {
         let { children: e, className: t, innerClassName: n, id: r, ...s } = this.props;
         return a.Children.count(e) > 0
-            ? (0, i.jsx)(w.Provider, {
+            ? (0, i.jsx)(P.Provider, {
                   value: { id: null != r ? r : '' },
                   children: (0, i.jsx)('div', {
-                      className: o()(b.autocomplete, t),
+                      className: o()(L.autocomplete, t),
                       children: (0, i.jsx)('div', {
-                          className: o()(b.autocompleteInner, n),
+                          className: o()(L.autocompleteInner, n),
                           ...s,
                           children: e
                       })
@@ -133,10 +133,10 @@ class G extends (r = a.PureComponent) {
             : null;
     }
 }
-M(
-    G,
+x(
+    U,
     'Generic',
-    class e extends x {
+    class e extends k {
         renderContent() {
             let { text: e, description: t } = this.props;
             return (0, i.jsxs)(C.RX, {
@@ -145,16 +145,16 @@ M(
         }
     }
 ),
-    M(G, 'Loading', function (e) {
+    x(U, 'Loading', function (e) {
         let t = a.useMemo(() => u().random(60, 120), []);
         return (0, i.jsx)('div', {
-            className: b.base,
+            className: L.base,
             'aria-busy': !0,
             children: (0, i.jsx)(C.RX, {
                 children: (0, i.jsx)(C.z5, {
                     children: (0, i.jsx)(C.BR, {
                         children: (0, i.jsx)('div', {
-                            className: b.autocompletePlaceholder,
+                            className: L.autocompletePlaceholder,
                             style: { width: t }
                         })
                     })
@@ -162,40 +162,40 @@ M(
             })
         });
     }),
-    M(G, 'Title', function (e) {
+    x(U, 'Title', function (e) {
         let { title: t, className: n, children: r } = e,
-            s = a.useContext(w);
+            s = a.useContext(P);
         return (0, i.jsx)('div', {
-            className: b.base,
+            className: L.base,
             children: (0, i.jsxs)(d.Heading, {
-                id: U(s.id),
-                className: o()(b.contentTitle, n),
+                id: M(s.id),
+                className: o()(L.contentTitle, n),
                 variant: 'heading-deprecated-12/semibold',
                 children: [t, r]
             })
         });
     }),
-    M(
-        G,
+    x(
+        U,
         'Divider',
-        class e extends x {
+        class e extends k {
             renderContent() {
                 let { className: e } = this.props;
-                return (0, i.jsx)('div', { className: o()(e, b.divider) });
+                return (0, i.jsx)('div', { className: o()(e, L.divider) });
             }
             constructor(...e) {
-                super(...e), M(this, 'layoutClass', b.dividerContainer), M(this, 'selectable', !1);
+                super(...e), x(this, 'layoutClass', L.dividerContainer), x(this, 'selectable', !1);
             }
         }
     ),
-    M(
-        G,
+    x(
+        U,
         'User',
-        class e extends x {
+        class e extends k {
             renderContent() {
                 var e;
                 let { user: t, nick: n, status: r, hidePersonalInformation: a, guildId: s } = this.props,
-                    o = null == s ? N.Z.getNickname(t.id) : null;
+                    o = null == s ? b.Z.getNickname(t.id) : null;
                 return (0, i.jsxs)(C.RX, {
                     children: [
                         (0, i.jsx)(C.Tw, {
@@ -206,17 +206,17 @@ M(
                                 status: r
                             })
                         }),
-                        (0, i.jsx)(C.z5, { children: (0, i.jsx)(C.BR, { children: null !== (e = null != n ? n : o) && void 0 !== e ? e : v.ZP.getName(t) }) }),
+                        (0, i.jsx)(C.z5, { children: (0, i.jsx)(C.BR, { children: null !== (e = null != n ? n : o) && void 0 !== e ? e : N.ZP.getName(t) }) }),
                         (0, i.jsxs)(C.dY, {
                             children: [
-                                v.ZP.getUserTag(t, {
+                                N.ZP.getUserTag(t, {
                                     mode: 'username',
                                     identifiable: a ? 'never' : 'always'
                                 }),
                                 a || t.isPomelo()
                                     ? null
                                     : (0, i.jsxs)('span', {
-                                          className: b.descriptionDiscriminator,
+                                          className: L.descriptionDiscriminator,
                                           children: ['#', t.discriminator]
                                       })
                             ]
@@ -226,15 +226,15 @@ M(
             }
         }
     ),
-    M(
-        G,
+    x(
+        U,
         'Role',
-        class e extends x {
+        class e extends k {
             renderContent() {
                 let { role: e, hideDescription: t } = this.props,
                     { colorString: n } = e,
-                    r = 'dot' === _.Z.roleStyle,
-                    a = 'username' === _.Z.roleStyle && null != n ? { color: n } : void 0;
+                    r = 'dot' === f.Z.roleStyle,
+                    a = 'username' === f.Z.roleStyle && null != n ? { color: n } : void 0;
                 return (0, i.jsxs)(C.RX, {
                     children: [
                         (0, i.jsx)(C.z5, {
@@ -242,7 +242,7 @@ M(
                                 children: [
                                     r &&
                                         (0, i.jsx)(d.RoleDot, {
-                                            className: b.roleDot,
+                                            className: L.roleDot,
                                             color: n,
                                             tooltip: !1
                                         }),
@@ -253,29 +253,29 @@ M(
                                 ]
                             })
                         }),
-                        t ? null : (0, i.jsx)(C.dY, { children: y.Z.Messages.MENTION_USERS_WITH_ROLE })
+                        t ? null : (0, i.jsx)(C.dY, { children: D.intl.string(D.t['/91tbm']) })
                     ]
                 });
             }
         }
     ),
-    M(
-        G,
+    x(
+        U,
         'Channel',
-        class e extends x {
+        class e extends k {
             renderContent() {
                 let { channel: e, category: t } = this.props,
-                    n = e.type === L.d4z.GUILD_CATEGORY ? d.FolderIcon : (0, I.KS)(e);
+                    n = e.type === R.d4z.GUILD_CATEGORY ? d.FolderIcon : (0, g.KS)(e);
                 return (0, i.jsxs)(C.RX, {
-                    children: [null != n && (0, i.jsx)(C.Tw, { children: (0, i.jsx)(n, { className: b.icon }) }), (0, i.jsx)(C.z5, { children: (0, i.jsx)(C.BR, { children: (0, p.F6)(e, R.default, N.Z) }) }), null != t ? (0, i.jsx)(C.dY, { children: t.name }) : null]
+                    children: [null != n && (0, i.jsx)(C.Tw, { children: (0, i.jsx)(n, { className: L.icon }) }), (0, i.jsx)(C.z5, { children: (0, i.jsx)(C.BR, { children: (0, m.F6)(e, y.default, b.Z) }) }), null != t ? (0, i.jsx)(C.dY, { children: t.name }) : null]
                 });
             }
         }
     ),
-    M(
-        G,
+    x(
+        U,
         'Command',
-        class e extends x {
+        class e extends k {
             renderContent() {
                 let { command: e } = this.props;
                 return (0, i.jsxs)(C.RX, {
@@ -284,8 +284,8 @@ M(
                             children: (0, i.jsx)(d.SlashIcon, {
                                 size: 'xs',
                                 color: 'currentColor',
-                                className: b.icon,
-                                colorClass: b.iconForeground
+                                className: L.icon,
+                                colorClass: L.iconForeground
                             })
                         }),
                         (0, i.jsx)(C.z5, { children: (0, i.jsx)(C.BR, { children: e.displayName }) }),
@@ -295,20 +295,20 @@ M(
             }
         }
     ),
-    M(
-        G,
+    x(
+        U,
         'NewCommand',
-        class e extends x {
+        class e extends k {
             isSelectable() {
-                return this.props.command.inputType !== E.iw.PLACEHOLDER;
+                return this.props.command.inputType !== _.iw.PLACEHOLDER;
             }
             renderContent() {
                 let { command: e, channel: t, showImage: n, section: r, selected: a } = this.props,
                     { hovered: s } = this.state,
                     o = this.isSelectable();
-                return e.inputType === E.iw.PLACEHOLDER
-                    ? (0, i.jsx)(h.Z, {})
-                    : (0, i.jsx)(f.Z, {
+                return e.inputType === _.iw.PLACEHOLDER
+                    ? (0, i.jsx)(p.Z, {})
+                    : (0, i.jsx)(h.Z, {
                           command: e,
                           channel: t,
                           showImage: n,
@@ -319,29 +319,29 @@ M(
             }
         }
     ),
-    M(
-        G,
+    x(
+        U,
         'Emoji',
-        class e extends x {
+        class e extends k {
             renderContent() {
                 let { emoji: e, sentinel: t, guild: n } = this.props,
-                    r = g.Yk.getSetting(),
+                    r = S.Yk.getSetting(),
                     a =
                         null != e.id || '' !== e.url
                             ? (0, i.jsx)('img', {
                                   alt: '',
-                                  className: b.emojiImage,
+                                  className: L.emojiImage,
                                   src:
                                       null != e.id
-                                          ? O.ZP.getEmojiURL({
+                                          ? A.ZP.getEmojiURL({
                                                 id: e.id,
                                                 animated: e.animated && r,
-                                                size: D.$U
+                                                size: O.$U
                                             })
                                           : e.url
                               })
                             : (0, i.jsx)('span', {
-                                  className: b.emojiRaw,
+                                  className: L.emojiRaw,
                                   children: e.surrogates
                               }),
                     s = null != n ? (0, i.jsx)(C.dY, { children: n.name }) : null;
@@ -358,14 +358,14 @@ M(
                 });
             }
             constructor(...e) {
-                super(...e), M(this, 'layoutClass', o()(b.autocompleteRowVertical, b.autocompleteRowVerticalSmall));
+                super(...e), x(this, 'layoutClass', o()(L.autocompleteRowVertical, L.autocompleteRowVerticalSmall));
             }
         }
     ),
-    M(
-        G,
+    x(
+        U,
         'GIFIntegration',
-        class e extends x {
+        class e extends k {
             renderContent() {
                 let { width: e, height: t, src: n } = this.props;
                 return (0, i.jsx)('img', {
@@ -376,26 +376,26 @@ M(
                 });
             }
             constructor(...e) {
-                super(...e), M(this, 'layoutClass', b.autocompleteRowHorizontal);
+                super(...e), x(this, 'layoutClass', L.autocompleteRowHorizontal);
             }
         }
     ),
-    M(
-        G,
+    x(
+        U,
         'Sticker',
-        class e extends x {
+        class e extends k {
             renderContent() {
                 var e, t;
                 let n;
                 let { queryMatch: r, renderSticker: a, selected: s, sticker: o } = this.props,
                     { hovered: l } = this.state;
                 return (
-                    (0, S.jl)(o) ? (n = null === (e = T.Z.getStickerPack(o.pack_id)) || void 0 === e ? void 0 : e.name) : (0, S.J8)(o) && (n = null === (t = A.Z.getGuild(o.guild_id)) || void 0 === t ? void 0 : t.name),
+                    (0, I.jl)(o) ? (n = null === (e = v.Z.getStickerPack(o.pack_id)) || void 0 === e ? void 0 : e.name) : (0, I.J8)(o) && (n = null === (t = T.Z.getGuild(o.guild_id)) || void 0 === t ? void 0 : t.name),
                     (0, i.jsxs)(C.RX, {
                         children: [
                             (0, i.jsx)(C.Tw, { children: a(o, l || !0 === s) }),
                             (0, i.jsxs)(C.z5, {
-                                children: [(0, i.jsx)(C.BR, { children: o.name }), null != r && (0, i.jsx)(C.wL, { children: y.Z.Messages.AUTOCOMPLETE_STICKERS_QUERY_MATCH.format({ queryMatch: r }) })]
+                                children: [(0, i.jsx)(C.BR, { children: o.name }), null != r && (0, i.jsx)(C.wL, { children: D.intl.format(D.t.PAutaW, { queryMatch: r }) })]
                             }),
                             null != n && (0, i.jsx)(C.dY, { children: n })
                         ]
@@ -403,17 +403,17 @@ M(
                 );
             }
             constructor(...e) {
-                super(...e), M(this, 'layoutClass', o()(b.autocompleteRowVertical, b.autocompleteRowVerticalSmall));
+                super(...e), x(this, 'layoutClass', o()(L.autocompleteRowVertical, L.autocompleteRowVerticalSmall));
             }
         }
     ),
-    M(
-        G,
+    x(
+        U,
         'EmojiUpsell',
-        class e extends x {
+        class e extends k {
             renderContent() {
-                return (0, i.jsx)(m.Z, { emojis: this.props.emojis });
+                return (0, i.jsx)(E.Z, { emojis: this.props.emojis });
             }
         }
     ),
-    (t.ZP = G);
+    (t.ZP = U);

@@ -14,7 +14,7 @@ var i = n(200651),
     c = n(565138),
     _ = n(601964),
     E = n(598077),
-    p = n(689938),
+    p = n(388032),
     h = n(325929);
 let m = (e) => {
         var t;
@@ -49,7 +49,7 @@ let m = (e) => {
                     muted: !0,
                     uppercase: !0,
                     className: h.alignStart,
-                    children: p.Z.Messages.STAGE_INVITE_GUILD_HEADER
+                    children: p.intl.string(p.t.Eabu19)
                 }),
                 (0, i.jsxs)('div', {
                     className: h.guild,
@@ -78,7 +78,7 @@ let m = (e) => {
                                         null != n && n > 0
                                             ? (0, i.jsx)(o.Text, {
                                                   variant: 'text-sm/normal',
-                                                  children: p.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: n })
+                                                  children: p.intl.format(p.t['LC+S+v'], { membersOnline: n })
                                               })
                                             : null
                                     ]
@@ -101,14 +101,14 @@ let m = (e) => {
 t.Z = (e) => {
     var t;
     let { stageInstance: n, guild: r, isCard: E = !1, isEmbed: f = !1, onClick: S } = e,
-        I = s.useMemo(() => (null == r ? null : r instanceof _.ZP ? r : new _.ZP(r)), [r]);
-    if (null == n || null == I) return null;
-    let { topic: g, speaker_count: C, participant_count: A } = n,
-        v = null !== (t = n.members) && void 0 !== t ? t : [],
-        R = f ? v.slice(0, 3) : v,
-        O = C - R.length;
+        g = s.useMemo(() => (null == r ? null : r instanceof _.ZP ? r : new _.ZP(r)), [r]);
+    if (null == n || null == g) return null;
+    let { topic: I, speaker_count: C, participant_count: v } = n,
+        A = null !== (t = n.members) && void 0 !== t ? t : [],
+        y = f ? A.slice(0, 3) : A,
+        b = C - y.length;
     return (
-        f && (O += v.length - R.length),
+        f && (b += A.length - y.length),
         (0, i.jsxs)('div', {
             children: [
                 (0, i.jsxs)('div', {
@@ -127,7 +127,7 @@ t.Z = (e) => {
                                 (0, i.jsx)(o.Heading, {
                                     variant: 'eyebrow',
                                     className: l()(h.__invalid_label, h.live),
-                                    children: p.Z.Messages.STAGE_CHANNEL_LIVE_NOW
+                                    children: p.intl.string(p.t['X2K3//'])
                                 })
                             ]
                         }),
@@ -144,7 +144,7 @@ t.Z = (e) => {
                                 (0, i.jsx)(o.Heading, {
                                     className: l()(h.__invalid_label, h.listeners),
                                     variant: 'heading-sm/semibold',
-                                    children: A
+                                    children: v
                                 })
                             ]
                         })
@@ -159,7 +159,7 @@ t.Z = (e) => {
                                 width: 20,
                                 height: 20,
                                 children: (0, i.jsx)(c.Z, {
-                                    guild: I,
+                                    guild: g,
                                     size: c.Z.Sizes.MINI,
                                     active: !0
                                 })
@@ -168,34 +168,34 @@ t.Z = (e) => {
                                 color: 'header-secondary',
                                 className: h.__invalid_label,
                                 variant: 'text-sm/normal',
-                                children: I.name
+                                children: g.name
                             })
                         ]
                     }),
                 (0, i.jsx)(a.Z, {
                     size: E || f ? a.Z.Sizes.SIZE_16 : a.Z.Sizes.SIZE_20,
                     className: l()(h.header, { [h.embed]: f }),
-                    children: g
+                    children: I
                 }),
                 (0, i.jsxs)('div', {
                     className: l()(h.members, { [h.embed]: f }),
                     children: [
-                        R.length > 0 &&
+                        y.length > 0 &&
                             (0, i.jsxs)('div', {
                                 className: h.speakers,
                                 children: [
-                                    R.map((e) =>
+                                    y.map((e) =>
                                         (0, i.jsx)(
                                             m,
                                             {
                                                 speaker: e,
-                                                guildId: I.id,
+                                                guildId: g.id,
                                                 isEmbed: f
                                             },
                                             e.user.id
                                         )
                                     ),
-                                    O > 0
+                                    b > 0
                                         ? (0, i.jsxs)('div', {
                                               className: h.speaker,
                                               children: [
@@ -211,7 +211,7 @@ t.Z = (e) => {
                                                   (0, i.jsxs)(d.Z, {
                                                       size: f ? d.Z.Sizes.SIZE_12 : d.Z.Sizes.SIZE_14,
                                                       color: d.Z.Colors.HEADER_SECONDARY,
-                                                      children: ['+', p.Z.Messages.STAGE_INVITE_SPEAKER_COUNT.format({ count: O })]
+                                                      children: ['+', p.intl.format(p.t.L1pCBQ, { count: b })]
                                                   })
                                               ]
                                           })
@@ -223,7 +223,7 @@ t.Z = (e) => {
                                 color: o.Button.Colors.GREEN,
                                 onClick: S,
                                 className: h.joinButton,
-                                children: p.Z.Messages.STAGE_CHANNEL_JOIN_BUTTON
+                                children: p.intl.string(p.t.ZYO5OD)
                             })
                     ]
                 })

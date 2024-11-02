@@ -3,7 +3,7 @@ n.d(t, {
         return d;
     },
     rK: function () {
-        return _;
+        return f;
     }
 }),
     n(47120);
@@ -40,7 +40,7 @@ let l = new Date('2024-01-04T07:59:59.000Z'),
             }
         ]
     });
-function _() {
+function f() {
     let [e, t] = r.useState(() => u.isAfter(Date.now()));
     return (
         r.useEffect(() => {

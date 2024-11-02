@@ -1,25 +1,25 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = n(200651),
-    a = n(524437),
-    s = n(453473),
-    r = n(791914),
-    l = n(802840);
-function o(e) {
-    let { setTab: t, closePopout: n, badgeState: o } = e;
+    r = n(524437),
+    l = n(453473),
+    a = n(791914),
+    o = n(802840);
+function s(e) {
+    let { setTab: t, closePopout: n, badgeState: s } = e;
     return (0, i.jsxs)('div', {
-        className: l.container,
+        className: o.container,
         children: [
-            (0, i.jsx)(r.Z, {
-                tab: a.X.BOOKMARKS,
+            (0, i.jsx)(a.Z, {
+                tab: r.X.BOOKMARKS,
                 setTab: t,
                 closePopout: n,
-                badgeState: o
+                badgeState: s
             }),
-            (0, i.jsx)(s.K, { closePopout: n })
+            (0, i.jsx)(l.K, { closePopout: n })
         ]
     });
 }

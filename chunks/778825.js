@@ -1,34 +1,34 @@
-let r, i, a, s, o, l, u, c, d, _, E;
-var f,
-    h,
+let r, i, a, s, o, l, u, c, d, f, _;
+var h,
     p,
-    I,
-    m = n(442837),
-    T = n(570140),
-    S = n(981631);
-let g = S.QZA.CLOSED,
-    A = {};
-function N() {
-    R(), O(), (A = {}), (g = S.QZA.OPEN);
+    m,
+    g,
+    E = n(442837),
+    v = n(570140),
+    I = n(981631);
+let S = I.QZA.CLOSED,
+    T = {};
+function b() {
+    y(), A(), (T = {}), (S = I.QZA.OPEN);
 }
-function R() {
+function y() {
     (r = void 0), (u = void 0), (i = void 0);
 }
-function O() {
+function A() {
     (s = void 0), (o = void 0), (l = void 0), (c = void 0), (a = void 0);
 }
-class v extends (I = m.ZP.Store) {
+class N extends (g = E.ZP.Store) {
     getFormState() {
-        return g;
+        return S;
     }
     getErrors() {
-        return A;
+        return T;
     }
     showNotice() {
         return void 0 !== r || void 0 !== i || void 0 !== a || void 0 !== s || void 0 !== o || void 0 !== l || void 0 !== u || void 0 !== c;
     }
     getIsSubmitDisabled() {
-        return void 0 !== o && o.length > S.tPV;
+        return void 0 !== o && o.length > I.tPV;
     }
     getPendingAvatar() {
         return r;
@@ -73,41 +73,41 @@ class v extends (I = m.ZP.Store) {
         return d;
     }
     getSource() {
-        return _;
+        return f;
     }
     getAnalyticsLocations() {
-        return E;
+        return _;
     }
 }
-(p = 'GuildIdentitySettingsStore'),
-    (h = 'displayName') in (f = v)
-        ? Object.defineProperty(f, h, {
-              value: p,
+(m = 'GuildIdentitySettingsStore'),
+    (p = 'displayName') in (h = N)
+        ? Object.defineProperty(h, p, {
+              value: m,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (f[h] = p),
-    (t.Z = new v(T.Z, {
+        : (h[p] = m),
+    (t.Z = new N(v.Z, {
         GUILD_IDENTITY_SETTINGS_INIT: function (e) {
-            (d = e.guild), (g = S.QZA.OPEN), (A = {}), (_ = e.source), (E = e.analyticsLocations);
+            (d = e.guild), (S = I.QZA.OPEN), (T = {}), (f = e.source), (_ = e.analyticsLocations);
         },
         GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: function () {
-            N(), (g = S.QZA.CLOSED), (A = {}), (_ = void 0), (E = []);
+            b(), (S = I.QZA.CLOSED), (T = {}), (f = void 0), (_ = []);
         },
         GUILD_IDENTITY_SETTINGS_SET_GUILD: function (e) {
-            (d = e.guild), (A = {});
+            (d = e.guild), (T = {});
         },
         GUILD_IDENTITY_SETTINGS_SUBMIT: function () {
-            (g = S.QZA.SUBMITTING), (A = {});
+            (S = I.QZA.SUBMITTING), (T = {});
         },
         GUILD_IDENTITY_SETTINGS_SUBMIT_FAILURE: function (e) {
             var t;
-            if (g !== S.QZA.SUBMITTING) return !1;
-            (g = S.QZA.OPEN), (A = null !== (t = e.errors) && void 0 !== t ? t : {});
+            if (S !== I.QZA.SUBMITTING) return !1;
+            (S = I.QZA.OPEN), (T = null !== (t = e.errors) && void 0 !== t ? t : {});
         },
         USER_PROFILE_UPDATE_FAILURE: function (e) {
-            (g = S.QZA.OPEN), (A = e.errors);
+            (S = I.QZA.OPEN), (T = e.errors);
         },
         GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR: function (e) {
             let { avatar: t } = e;
@@ -141,11 +141,11 @@ class v extends (I = m.ZP.Store) {
             let { themeColors: t } = e;
             c = t;
         },
-        GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: R,
-        GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: O,
-        GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: N,
-        GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: N,
+        GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: y,
+        GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: A,
+        GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: b,
+        GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: b,
         GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: function () {
-            A = {};
+            T = {};
         }
     }));

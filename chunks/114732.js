@@ -3,7 +3,7 @@ n(192379);
 var i = n(780384),
     a = n(481060),
     s = n(410030),
-    o = n(689938),
+    o = n(388032),
     l = n(755129),
     u = n(167969),
     c = n(557256);
@@ -25,7 +25,7 @@ t.Z = function (e) {
                     (0, r.jsx)(a.Heading, {
                         className: l.title,
                         variant: 'heading-xl/medium',
-                        children: o.Z.Messages.STICKER_ASSET_LOAD_ERROR
+                        children: o.intl.string(o.t.tWYWJy)
                     }),
                     (0, r.jsx)(a.ModalCloseButton, {
                         onClick: t,
@@ -37,7 +37,7 @@ t.Z = function (e) {
                 className: l.content,
                 children: (0, r.jsx)(a.Text, {
                     variant: 'text-md/normal',
-                    children: o.Z.Messages.ACTIVATE_DEVICE_ERROR_UNKNOWN
+                    children: o.intl.string(o.t.JNQRU1)
                 })
             }),
             (0, r.jsx)(a.ModalFooter, {
@@ -46,7 +46,7 @@ t.Z = function (e) {
                     color: a.Button.Colors.BRAND,
                     size: a.Button.Sizes.MEDIUM,
                     onClick: t,
-                    children: o.Z.Messages.CLOSE
+                    children: o.intl.string(o.t.cpT0Cg)
                 })
             })
         ]

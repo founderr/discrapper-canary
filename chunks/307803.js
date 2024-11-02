@@ -169,7 +169,7 @@ e.exports = function (e) {
             ],
             relevance: 0
         },
-        _ = [
+        f = [
             s,
             l,
             u,
@@ -248,13 +248,13 @@ e.exports = function (e) {
             }
         ];
     return (
-        (a.contains = _),
-        (s.contains = _.slice(1)),
+        (a.contains = f),
+        (s.contains = f.slice(1)),
         {
             name: 'Crystal',
             aliases: ['cr'],
             keywords: i,
-            contains: _
+            contains: f
         }
     );
 };

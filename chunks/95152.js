@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return R;
+            return y;
         }
     }),
     n(47120),
@@ -19,15 +19,15 @@ var r = n(200651),
     u = n(476326),
     c = n(752305),
     d = n(849522),
-    _ = n(703558),
-    E = n(626135),
-    f = n(358085),
-    h = n(998502),
-    p = n(981631),
-    I = n(689938),
-    m = n(570486),
-    T = n(113207);
-function S(e, t, n) {
+    f = n(703558),
+    _ = n(626135),
+    h = n(358085),
+    p = n(998502),
+    m = n(981631),
+    g = n(388032),
+    E = n(570486),
+    v = n(113207);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,15 +40,15 @@ function S(e, t, n) {
         e
     );
 }
-function g(e) {
+function S(e) {
     var t, n, a, o;
     let { file: l } = e,
         [u, c] = i.useState(),
-        [d, _] = i.useState(!1),
-        [E, f] = i.useState({}),
-        h = i.useRef(null);
+        [d, f] = i.useState(!1),
+        [_, h] = i.useState({}),
+        p = i.useRef(null);
     i.useEffect(() => {
-        if ((null != h.current && _(!1), null == l)) return;
+        if ((null != p.current && f(!1), null == l)) return;
         let e = URL.createObjectURL(l);
         return (
             c(e),
@@ -58,61 +58,61 @@ function g(e) {
         );
     }, [l]),
         i.useLayoutEffect(() => {
-            let e = h.current;
+            let e = p.current;
             null != e &&
                 (e.onload = () => {
                     let t = Math.max(0.66, Math.min(e.naturalWidth / e.naturalHeight, 4));
                     1 === t
-                        ? f({
+                        ? h({
                               width: 104,
                               height: 104
                           })
                         : t > 1
-                          ? f({
+                          ? h({
                                 width: 104 * t,
                                 height: void 0
                             })
-                          : f({
+                          : h({
                                 width: void 0,
                                 height: 104 / t
                             }),
-                        _(!0);
+                        f(!0);
                 });
         }, []);
-    let p = Math.max(16, (120 - (null !== (n = null === (t = h.current) || void 0 === t ? void 0 : t.width) && void 0 !== n ? n : 0)) / 2);
+    let m = Math.max(16, (120 - (null !== (n = null === (t = p.current) || void 0 === t ? void 0 : t.width) && void 0 !== n ? n : 0)) / 2);
     return (0, r.jsx)('img', {
-        ref: h,
+        ref: p,
         src: u,
-        className: s()(m.icon, { [m.image]: !d }),
+        className: s()(E.icon, { [E.image]: !d }),
         'aria-hidden': !0,
         alt: '',
         style: {
-            width: null !== (a = E.width) && void 0 !== a ? a : 'initial',
-            height: null !== (o = E.height) && void 0 !== o ? o : 104,
-            marginLeft: p,
-            marginRight: p,
-            marginTop: null != E.height ? 104 - E.height - 33 : -33
+            width: null !== (a = _.width) && void 0 !== a ? a : 'initial',
+            height: null !== (o = _.height) && void 0 !== o ? o : 104,
+            marginLeft: m,
+            marginRight: m,
+            marginTop: null != _.height ? 104 - _.height - 33 : -33
         }
     });
 }
-class A extends i.Component {
+class T extends i.Component {
     render() {
         var e;
         if (this.props.upload.item.platform !== u.ow.WEB) return null;
-        if (this.props.upload.isImage) return (0, r.jsx)(g, { file: this.props.upload.item.file });
-        return (0, r.jsx)('div', { className: s()(m.icon, { [m[null !== (e = this.props.upload.classification) && void 0 !== e ? e : '']]: !0 }) });
+        if (this.props.upload.isImage) return (0, r.jsx)(S, { file: this.props.upload.item.file });
+        return (0, r.jsx)('div', { className: s()(E.icon, { [E[null !== (e = this.props.upload.classification) && void 0 !== e ? e : '']]: !0 }) });
     }
 }
-class N extends i.Component {
+class b extends i.Component {
     componentDidMount() {
         var e;
         (null === (e = this.props.upload) || void 0 === e ? void 0 : e.showLargeMessageDialog) &&
             this.props.upload.item.platform === u.ow.WEB &&
-            E.default.track(p.rMx.OPEN_MODAL, {
+            _.default.track(m.rMx.OPEN_MODAL, {
                 type: 'Upload Large Message',
                 message_content_length: this.props.upload.item.file.size
             }),
-            f.isPlatformEmbedded && h.ZP.focus();
+            h.isPlatformEmbedded && p.ZP.focus();
     }
     shouldComponentUpdate(e) {
         return null != e.upload;
@@ -125,29 +125,29 @@ class N extends i.Component {
         let { upload: e, transitionState: t, messageMaxLength: n, disableSpoiler: a } = this.props,
             { hasSpoiler: l } = this.state;
         return (0, r.jsxs)(o.ModalRoot, {
-            'aria-label': I.Z.Messages.ATTACH_FILES,
+            'aria-label': g.intl.string(g.t['3AS4UF']),
             size: o.ModalSize.DYNAMIC,
             transitionState: t,
-            className: s()(m.uploadModal),
+            className: s()(E.uploadModal),
             children: [
                 (0, r.jsxs)('div', {
-                    className: m.inner,
+                    className: E.inner,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: s()(m.file, { [m.expandable]: e.isImage }),
+                            className: s()(E.file, { [E.expandable]: e.isImage }),
                             children: [
-                                (0, r.jsx)(A, { upload: e }),
+                                (0, r.jsx)(T, { upload: e }),
                                 (0, r.jsxs)('div', {
-                                    className: m.description,
+                                    className: E.description,
                                     children: [
                                         (0, r.jsx)('div', {
-                                            className: m.filename,
-                                            children: e.showLargeMessageDialog ? I.Z.Messages.LARGE_MESSAGE_UPLOAD_TITLE_MAX_LENGTH.format({ maxLength: n }) : e.filename
+                                            className: E.filename,
+                                            children: e.showLargeMessageDialog ? g.intl.formatToPlainString(g.t.QWQxtL, { maxLength: n }) : e.filename
                                         }),
                                         e.showLargeMessageDialog
                                             ? (0, r.jsx)('div', {
-                                                  className: m.subtitle,
-                                                  children: I.Z.Messages.LARGE_MESSAGE_UPLOAD_SUBTITLE
+                                                  className: E.subtitle,
+                                                  children: g.intl.string(g.t.Plcu09)
                                               })
                                             : null
                                     ]
@@ -155,35 +155,35 @@ class N extends i.Component {
                             ]
                         }),
                         (0, r.jsx)('div', {
-                            className: m.comment,
+                            className: E.comment,
                             children: (0, r.jsxs)(i.Fragment, {
                                 children: [
                                     (0, r.jsx)('div', {
-                                        className: m.label,
-                                        children: (0, r.jsx)('span', { children: I.Z.Messages.UPLOAD_AREA_FILENAME })
+                                        className: E.label,
+                                        children: (0, r.jsx)('span', { children: g.intl.string(g.t.ILJuBg) })
                                     }),
                                     (0, r.jsx)(o.TextInput, {
-                                        className: s()(m.channelTextAreaUpload, T.marginTop8),
+                                        className: s()(E.channelTextAreaUpload, v.marginTop8),
                                         value: this.state.filename,
                                         onChange: (e) => this.setState({ filename: e }),
                                         onKeyDown: (e) => {
-                                            if (e.which === p.yXg.ENTER) return this.handleSubmit();
+                                            if (e.which === m.yXg.ENTER) return this.handleSubmit();
                                         }
                                     }),
                                     e.isImage
                                         ? (0, r.jsxs)(i.Fragment, {
                                               children: [
                                                   (0, r.jsx)('div', {
-                                                      className: m.label,
-                                                      children: (0, r.jsx)('span', { children: I.Z.Messages.ATTACHMENT_MODAL_IMAGE_DESCRIPTION_LABEL })
+                                                      className: E.label,
+                                                      children: (0, r.jsx)('span', { children: g.intl.string(g.t.eOB2eX) })
                                                   }),
                                                   (0, r.jsx)(o.TextInput, {
-                                                      className: s()(m.channelTextAreaUpload, T.marginTop8),
-                                                      placeholder: I.Z.Messages.ATTACHMENT_MODAL_IMAGE_DESCRIPTION_PLACEHOLDER,
+                                                      className: s()(E.channelTextAreaUpload, v.marginTop8),
+                                                      placeholder: g.intl.string(g.t.RNH1jo),
                                                       value: this.state.description,
                                                       onChange: (e) => this.setState({ description: e }),
                                                       onKeyDown: (e) => {
-                                                          if (e.which === p.yXg.ENTER) return this.handleSubmit();
+                                                          if (e.which === m.yXg.ENTER) return this.handleSubmit();
                                                       }
                                                   })
                                               ]
@@ -191,12 +191,12 @@ class N extends i.Component {
                                         : null,
                                     !0 !== a &&
                                         (0, r.jsx)(o.Checkbox, {
-                                            className: T.marginBottom20,
+                                            className: v.marginBottom20,
                                             value: l,
                                             onChange: (e, t) => this.setState({ hasSpoiler: t }),
                                             children: (0, r.jsx)(o.Text, {
                                                 variant: 'text-sm/normal',
-                                                children: I.Z.Messages.SPOILER_MARK_SELECTED
+                                                children: g.intl.string(g.t['gsI+xM'])
                                             })
                                         })
                                 ]
@@ -205,21 +205,21 @@ class N extends i.Component {
                     ]
                 }),
                 (0, r.jsx)('div', {
-                    className: m.footer,
+                    className: E.footer,
                     children: (0, r.jsxs)('div', {
-                        className: s()(m.hasSpoilers, m.footerRightAlign),
+                        className: s()(E.hasSpoilers, E.footerRightAlign),
                         children: [
                             (0, r.jsx)(o.Button, {
                                 type: 'button',
                                 look: o.Button.Looks.LINK,
                                 color: o.Button.Colors.PRIMARY,
                                 onClick: this.cancel,
-                                children: (0, r.jsx)('span', { children: I.Z.Messages.CANCEL })
+                                children: (0, r.jsx)('span', { children: g.intl.string(g.t['ETE/oK']) })
                             }),
                             (0, r.jsx)(o.Button, {
                                 type: 'submit',
                                 onClick: this.handleSubmit,
-                                children: (0, r.jsx)('span', { children: I.Z.Messages.ATTACHMENT_MODAL_SAVE })
+                                children: (0, r.jsx)('span', { children: g.intl.string(g.t['TY+auL']) })
                             })
                         ]
                     })
@@ -230,19 +230,19 @@ class N extends i.Component {
     constructor(e) {
         var t, n, r, i, a, s;
         super(e),
-            S(this, 'cancelAll', () => {
+            I(this, 'cancelAll', () => {
                 l.Z.clearAll(this.props.channelId, this.props.draftType), this.props.onClose();
             }),
-            S(this, 'cancel', () => {
+            I(this, 'cancel', () => {
                 this.props.onClose();
             }),
-            S(this, 'handleTextChange', (e, t, n) => {
+            I(this, 'handleTextChange', (e, t, n) => {
                 this.setState({
                     textValue: t,
                     richValue: n
                 });
             }),
-            S(this, 'handleSubmit', () => {
+            I(this, 'handleSubmit', () => {
                 let { upload: e, onClose: t, onSubmit: n } = this.props,
                     { filename: r, description: i, hasSpoiler: a } = this.state;
                 n({
@@ -253,7 +253,7 @@ class N extends i.Component {
                 }),
                     t();
             });
-        let o = e.ignoreDraft ? '' : _.Z.getDraft(this.props.channelId, e.draftType);
+        let o = e.ignoreDraft ? '' : f.Z.getDraft(this.props.channelId, e.draftType);
         this.state = {
             ...(0, c.eK)(o),
             textFocused: !0,
@@ -264,11 +264,11 @@ class N extends i.Component {
         };
     }
 }
-function R(e) {
+function y(e) {
     let t = (0, d.Z)();
     return e.upload.item.platform !== u.ow.WEB
         ? null
-        : (0, r.jsx)(N, {
+        : (0, r.jsx)(b, {
               ...e,
               file: e.upload.item.file,
               messageMaxLength: t

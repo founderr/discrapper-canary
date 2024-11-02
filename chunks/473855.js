@@ -1,60 +1,60 @@
-a.d(s, {
+n.d(t, {
     Z: function () {
-        return i;
+        return d;
     }
 });
-var E = a(200651);
-a(192379);
-var _ = a(388905),
-    t = a(837748),
-    n = a(306453),
-    r = a(58346),
-    L = a(251320);
-let l = {
-    [r.HQ.CLASSROOM]: a(320440),
-    [r.HQ.LOCAL_COMMUNITIES]: a(526916),
-    [r.HQ.CREATORS_HOBBIES]: a(419185),
-    [r.HQ.GLOBAL_COMMUNITIES]: a(540909),
-    [r.HQ.FRIENDS_FAMILY]: a(826806),
-    [r.HQ.STUDY_GROUPS]: a(29654),
-    [r.HQ.CREATE_FROM_SCRATCH]: a(561030),
-    [r.HQ.CAMPUS_CLUBS]: a(494207),
-    [r.HQ.LEAGUE_CLUBS]: a(232454),
-    [r.HQ.GITHUB_HACKATHON]: a(123013)
+var r = n(200651);
+n(192379);
+var i = n(388905),
+    s = n(837748),
+    l = n(306453),
+    a = n(58346),
+    c = n(251320);
+let u = {
+    [a.HQ.CLASSROOM]: n(320440),
+    [a.HQ.LOCAL_COMMUNITIES]: n(526916),
+    [a.HQ.CREATORS_HOBBIES]: n(419185),
+    [a.HQ.GLOBAL_COMMUNITIES]: n(540909),
+    [a.HQ.FRIENDS_FAMILY]: n(826806),
+    [a.HQ.STUDY_GROUPS]: n(29654),
+    [a.HQ.CREATE_FROM_SCRATCH]: n(561030),
+    [a.HQ.CAMPUS_CLUBS]: n(494207),
+    [a.HQ.LEAGUE_CLUBS]: n(232454),
+    [a.HQ.GITHUB_HACKATHON]: n(123013)
 };
-function i(e) {
-    let { headerId: s, guildTemplate: a } = e,
-        i = a.code,
-        M = l[i];
-    if (null != M) {
-        var c;
-        let { header: e, description: l, author: T } = (0, t.Z)(i);
-        return (0, E.jsxs)('div', {
+function d(e) {
+    let { headerId: t, guildTemplate: n } = e,
+        d = n.code,
+        o = u[d];
+    if (null != o) {
+        var C;
+        let { header: e, description: u, author: m } = (0, s.Z)(d);
+        return (0, r.jsxs)('div', {
             children: [
-                (0, E.jsx)('img', {
-                    className: L.image,
-                    src: M,
+                (0, r.jsx)('img', {
+                    className: c.image,
+                    src: o,
                     alt: ''
                 }),
-                (0, E.jsx)(_.Dx, {
-                    className: L.header,
-                    id: s,
+                (0, r.jsx)(i.Dx, {
+                    className: c.header,
+                    id: t,
                     children: e
                 }),
-                (0, E.jsx)(_.DK, { children: l }),
-                a.state === r.Rj.RESOLVED
-                    ? (0, E.jsx)(n.D, {
-                          className: L.usagePill,
-                          count: null !== (c = a.usageCount) && void 0 !== c ? c : 0,
-                          verifiedName: T
+                (0, r.jsx)(i.DK, { children: u }),
+                n.state === a.Rj.RESOLVED
+                    ? (0, r.jsx)(l.D, {
+                          className: c.usagePill,
+                          count: null !== (C = n.usageCount) && void 0 !== C ? C : 0,
+                          verifiedName: m
                       })
                     : null
             ]
         });
     }
-    return (0, E.jsx)(n.Z, {
-        pillClassName: L.usagePill,
-        guildTemplate: a,
+    return (0, r.jsx)(l.Z, {
+        pillClassName: c.usagePill,
+        guildTemplate: n,
         tall: !0
     });
 }

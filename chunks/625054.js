@@ -1,6 +1,6 @@
-var s = n(525654),
-    r = n.n(s),
-    i = n(643191);
+var i = n(525654),
+    r = n.n(i),
+    s = n(643191);
 t.Z = {
     dump(e) {
         let t;
@@ -22,5 +22,5 @@ t.Z = {
                 memory: t
             });
     },
-    getTimeSinceNavigationStart: () => Date.now() - i.mb
+    getTimeSinceNavigationStart: () => Date.now() - s.mb
 };

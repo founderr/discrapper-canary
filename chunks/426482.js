@@ -1,56 +1,56 @@
 n.d(t, {
     C: function () {
-        return _;
+        return m;
     },
     Z: function () {
-        return a;
+        return r;
     }
 }),
     n(47120);
-var a,
-    r,
-    s = n(200651),
-    i = n(192379),
+var r,
+    i,
+    a = n(200651),
+    l = n(192379),
     o = n(120356),
-    l = n.n(o),
+    s = n.n(o),
     c = n(793030),
-    d = n(689938),
+    d = n(388032),
     u = n(522840);
-function _(e) {
+function m(e) {
     var t;
-    let { game: n, application: a, size: r, className: o } = e,
-        [_, E] = i.useState(!1),
-        m = null !== (t = null == a ? void 0 : a.name) && void 0 !== t ? t : n.name,
-        I = null != n.firstReleaseDate ? new Date(n.firstReleaseDate) : null;
-    return null == n.coverImageUrl || _
-        ? (0, s.jsxs)('div', {
-              className: l()(u.fallback, o),
+    let { game: n, application: r, size: i, className: o } = e,
+        [m, p] = l.useState(!1),
+        g = null !== (t = null == r ? void 0 : r.name) && void 0 !== t ? t : n.name,
+        f = null != n.firstReleaseDate ? new Date(n.firstReleaseDate) : null;
+    return null == n.coverImageUrl || m
+        ? (0, a.jsxs)('div', {
+              className: s()(u.fallback, o),
               children: [
-                  (0, s.jsx)('div', { className: u.spacer }),
-                  (0, s.jsx)(c.xv, {
-                      variant: 1 === r ? 'text-md/medium' : 'text-xs/medium',
+                  (0, a.jsx)('div', { className: u.spacer }),
+                  (0, a.jsx)(c.xv, {
+                      variant: 1 === i ? 'text-md/medium' : 'text-xs/medium',
                       color: 'always-white',
-                      lineClamp: 1 === r ? 4 : 3,
-                      children: m
+                      lineClamp: 1 === i ? 4 : 3,
+                      children: g
                   }),
-                  (0, s.jsx)('div', { className: u.spacer }),
-                  (0, s.jsx)(c.xv, {
-                      variant: 1 === r ? 'text-sm/normal' : 'text-xxs/normal',
+                  (0, a.jsx)('div', { className: u.spacer }),
+                  (0, a.jsx)(c.xv, {
+                      variant: 1 === i ? 'text-sm/normal' : 'text-xxs/normal',
                       color: 'always-white',
-                      children: null != I ? '('.concat(null == I ? void 0 : I.getFullYear(), ')') : null
+                      children: null != f ? '('.concat(null == f ? void 0 : f.getFullYear(), ')') : null
                   })
               ]
           })
-        : (0, s.jsx)('img', {
+        : (0, a.jsx)('img', {
               className: o,
               src: n.coverImageUrl,
-              alt: d.Z.Messages.GAME_PROFILE_GAME_LOGO_ALT.format({ game: m }),
+              alt: d.intl.formatToPlainString(d.t['3ev90d'], { game: g }),
               onError: () => {
-                  E(!0);
+                  p(!0);
               },
               onLoad: () => {
-                  E(!1);
+                  p(!1);
               }
           });
 }
-((r = a || (a = {}))[(r.SMALL = 0)] = 'SMALL'), (r[(r.LARGE = 1)] = 'LARGE');
+((i = r || (r = {}))[(i.SMALL = 0)] = 'SMALL'), (i[(i.LARGE = 1)] = 'LARGE');

@@ -1,92 +1,92 @@
 n.d(t, {
     d: function () {
-        return a;
+        return r;
     }
 });
-var s,
-    a,
-    i = n(200651);
+var i,
+    r,
+    l = n(200651);
 n(192379);
-var r = n(692547),
-    l = n(481060),
+var s = n(692547),
+    a = n(481060),
     o = n(752657),
-    c = n(689938),
+    c = n(388032),
     d = n(514923);
-((s = a || (a = {}))[(s.TOO_BIG = 0)] = 'TOO_BIG'), (s[(s.RATE_LIMIT = 1)] = 'RATE_LIMIT'), (s[(s.TOO_MANY_EMOJI = 2)] = 'TOO_MANY_EMOJI'), (s[(s.TOO_MANY_ANIMATED_EMOJI = 3)] = 'TOO_MANY_ANIMATED_EMOJI'), (s[(s.WRONG_TYPE = 4)] = 'WRONG_TYPE'), (s[(s.RESIZE_GIF = 5)] = 'RESIZE_GIF');
+((i = r || (r = {}))[(i.TOO_BIG = 0)] = 'TOO_BIG'), (i[(i.RATE_LIMIT = 1)] = 'RATE_LIMIT'), (i[(i.TOO_MANY_EMOJI = 2)] = 'TOO_MANY_EMOJI'), (i[(i.TOO_MANY_ANIMATED_EMOJI = 3)] = 'TOO_MANY_ANIMATED_EMOJI'), (i[(i.WRONG_TYPE = 4)] = 'WRONG_TYPE'), (i[(i.RESIZE_GIF = 5)] = 'RESIZE_GIF');
 t.Z = (e) => {
     let { error: t } = e,
-        { type: n, filename: s } = t,
+        { type: n, filename: i } = t,
         {
-            icon: a,
+            icon: r,
             description: u,
-            color: _,
-            tooltip: I
+            color: m,
+            tooltip: h
         } = {
             0: {
-                icon: l.FileWarningIcon,
-                description: c.Z.Messages.UPLOAD_ERROR_TOO_LARGE,
-                color: r.Z.unsafe_rawColors.RED_400.css,
-                tooltip: c.Z.Messages.UPLOAD_ERROR_TITLE
+                icon: a.FileWarningIcon,
+                description: c.intl.string(c.t.YbdEFB),
+                color: s.Z.unsafe_rawColors.RED_400.css,
+                tooltip: c.intl.string(c.t.PanA4O)
             },
             4: {
-                icon: l.FileDenyIcon,
-                description: c.Z.Messages.UPLOAD_ERROR_WRONG_TYPE,
-                color: r.Z.unsafe_rawColors.RED_400.css,
-                tooltip: c.Z.Messages.UPLOAD_ERROR_TITLE
+                icon: a.FileDenyIcon,
+                description: c.intl.string(c.t['01Papq']),
+                color: s.Z.unsafe_rawColors.RED_400.css,
+                tooltip: c.intl.string(c.t.PanA4O)
             },
             5: {
                 icon: o.Z,
-                description: c.Z.Messages.UPLOAD_ERROR_RESIZE_GIF,
-                color: r.Z.unsafe_rawColors.RED_400.css,
-                tooltip: c.Z.Messages.UPLOAD_ERROR_TITLE
+                description: c.intl.string(c.t.sp16MT),
+                color: s.Z.unsafe_rawColors.RED_400.css,
+                tooltip: c.intl.string(c.t.PanA4O)
             },
             1: {
-                icon: l.SpeedometerIcon,
-                description: c.Z.Messages.UPLOAD_ERROR_RATE_LIMIT,
-                color: r.Z.unsafe_rawColors.ORANGE_345.css,
-                tooltip: c.Z.Messages.UPLOAD_ERROR_RETRY
+                icon: a.SpeedometerIcon,
+                description: c.intl.string(c.t['4rjikp']),
+                color: s.Z.unsafe_rawColors.ORANGE_345.css,
+                tooltip: c.intl.string(c.t.dq9aTk)
             },
             2: {
-                icon: l.CircleInformationIcon,
-                description: c.Z.Messages.UPLOAD_ERROR_TOO_MANY_EMOJI,
-                color: r.Z.unsafe_rawColors.RED_400.css,
-                tooltip: c.Z.Messages.UPLOAD_ERROR_TITLE
+                icon: a.CircleInformationIcon,
+                description: c.intl.string(c.t['5VmbbG']),
+                color: s.Z.unsafe_rawColors.RED_400.css,
+                tooltip: c.intl.string(c.t.PanA4O)
             },
             3: {
-                icon: l.CircleInformationIcon,
-                description: c.Z.Messages.UPLOAD_ERROR_TOO_MANY_ANIMATED_EMOJI,
-                color: r.Z.unsafe_rawColors.RED_400.css,
-                tooltip: c.Z.Messages.UPLOAD_ERROR_TITLE
+                icon: a.CircleInformationIcon,
+                description: c.intl.string(c.t.rjFOZ2),
+                color: s.Z.unsafe_rawColors.RED_400.css,
+                tooltip: c.intl.string(c.t.PanA4O)
             }
         }[n];
-    return (0, i.jsxs)('div', {
+    return (0, l.jsxs)('div', {
         className: d.emojiErrorItem,
         children: [
-            (0, i.jsx)(a, {
+            (0, l.jsx)(r, {
                 className: d.fileIcon,
-                color: r.Z.unsafe_rawColors.PRIMARY_300.css
+                color: s.Z.unsafe_rawColors.PRIMARY_300.css
             }),
-            (0, i.jsxs)(l.FormSection, {
+            (0, l.jsxs)(a.FormSection, {
                 className: d.fileInfo,
                 children: [
-                    (0, i.jsx)(l.FormTitle, {
+                    (0, l.jsx)(a.FormTitle, {
                         className: d.fileName,
-                        children: s
+                        children: i
                     }),
-                    (0, i.jsx)(l.FormText, {
-                        type: l.FormTextTypes.DESCRIPTION,
+                    (0, l.jsx)(a.FormText, {
+                        type: a.FormTextTypes.DESCRIPTION,
                         children: u
                     })
                 ]
             }),
-            (0, i.jsx)(l.TooltipContainer, {
+            (0, l.jsx)(a.TooltipContainer, {
                 position: 'right',
-                text: I,
-                children: (0, i.jsx)(l.CircleWarningIcon, {
+                text: h,
+                children: (0, l.jsx)(a.CircleWarningIcon, {
                     size: 'custom',
                     width: 20,
                     height: 20,
-                    color: _
+                    color: m
                 })
             })
         ]

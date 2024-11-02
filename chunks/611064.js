@@ -1,69 +1,69 @@
 n.d(t, {
     R: function () {
-        return E;
+        return C;
     }
 });
 var i = n(200651),
-    s = n(192379),
-    a = n(442837),
-    l = n(481060),
-    r = n(239091),
+    l = n(192379),
+    r = n(442837),
+    a = n(481060),
+    s = n(239091),
     o = n(82295),
     c = n(485267),
     u = n(71585),
     d = n(703180),
     h = n(809017),
     m = n(981631),
-    p = n(689938),
-    _ = n(802444),
-    f = n(204394);
-function E(e) {
+    p = n(388032),
+    f = n(802444),
+    g = n(204394);
+function C(e) {
     return (null == e ? void 0 : e.id) === h.G;
 }
-t.Z = s.memo(function (e) {
+t.Z = l.memo(function (e) {
     let t,
-        { title: h, onToggleExpand: E, expanded: g, expandedCount: C } = e,
-        I = (0, a.e7)([u.Z], () => u.Z.hidden),
-        T = s.useCallback((e) => {
-            (0, r.jW)(e, async () => {
+        { title: h, onToggleExpand: C, expanded: x, expandedCount: v } = e,
+        _ = (0, r.e7)([u.Z], () => u.Z.hidden),
+        I = l.useCallback((e) => {
+            (0, s.jW)(e, async () => {
                 let { MemberListContentSettingsMenu: e } = await Promise.resolve().then(n.bind(n, 703180));
-                return () => (0, i.jsx)(e, { closePopout: r.Zy });
+                return () => (0, i.jsx)(e, { closePopout: s.Zy });
             });
         }, []);
     return (0, i.jsxs)(o.Z, {
-        className: f.membersGroup,
+        className: g.membersGroup,
         children: [
-            (0, i.jsx)(l.HiddenVisually, {
-                children: p.Z.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
+            (0, i.jsx)(a.HiddenVisually, {
+                children: p.intl.format(p.t.UaqbkZ, {
                     title: h,
-                    count: C
+                    count: v
                 })
             }),
-            (0, i.jsxs)(l.Clickable, {
+            (0, i.jsxs)(a.Clickable, {
                 onClick: (e) => {
-                    if (e.currentTarget === e.target || e.currentTarget.contains(e.target)) return I ? (0, c.lY)() : C > 3 ? E() : (0, m.dG4)();
+                    if (e.currentTarget === e.target || e.currentTarget.contains(e.target)) return _ ? (0, c.lY)() : v > 3 ? C() : (0, m.dG4)();
                 },
-                onContextMenu: T,
+                onContextMenu: I,
                 tag: 'span',
                 'aria-hidden': !0,
-                className: _.headerContainer,
+                className: f.headerContainer,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: _.header,
+                        className: f.header,
                         children: [
                             (0, i.jsxs)('span', {
-                                children: [h, ' \u2014 ', C]
+                                children: [h, ' \u2014 ', v]
                             }),
                             (0, i.jsx)(d.default, {})
                         ]
                     }),
-                    C <= 3 && !I
+                    v <= 3 && !_
                         ? null
-                        : ((t = I ? (0, i.jsx)(l.ChevronSmallUpIcon, { className: _.toggleExpandIcon }) : g ? (0, i.jsx)(l.ChevronSmallDownIcon, { className: _.toggleExpandIcon }) : (0, i.jsx)(l.ChevronSmallRightIcon, { className: _.toggleExpandIcon })),
-                          (0, i.jsx)(l.FocusRing, {
+                        : ((t = _ ? (0, i.jsx)(a.ChevronSmallUpIcon, { className: f.toggleExpandIcon }) : x ? (0, i.jsx)(a.ChevronSmallDownIcon, { className: f.toggleExpandIcon }) : (0, i.jsx)(a.ChevronSmallRightIcon, { className: f.toggleExpandIcon })),
+                          (0, i.jsx)(a.FocusRing, {
                               children: (0, i.jsx)('div', {
                                   tabIndex: 0,
-                                  className: _.toggleExpandIcon,
+                                  className: f.toggleExpandIcon,
                                   children: t
                               })
                           }))

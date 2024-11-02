@@ -21,28 +21,28 @@ function o(e, t, n) {
             let a = u[t - 1],
                 s = u[t + 1],
                 o = (0, r.t)(e, l, c, n.start),
-                _ = {
+                f = {
                     anchor: o,
                     focus: (0, r.t)(e, l, c, n.start + n.text.length)
                 },
-                E = i.bN.nodes(e, {
-                    at: _,
+                _ = i.bN.nodes(e, {
+                    at: f,
                     mode: 'lowest',
                     voids: !1
                 }),
-                f = {};
+                h = {};
             for (let e of n.attributes)
-                if (((f[e] = !0), 'syntaxBefore' === e && null != s)) for (let e of s.attributes) f['before_'.concat(e)] = !0;
-                else if ('syntaxAfter' === e && null != a) for (let e of a.attributes) f['after_'.concat(e)] = !0;
-            for (let [t, n] of E) {
+                if (((h[e] = !0), 'syntaxBefore' === e && null != s)) for (let e of s.attributes) h['before_'.concat(e)] = !0;
+                else if ('syntaxAfter' === e && null != a) for (let e of a.attributes) h['after_'.concat(e)] = !0;
+            for (let [t, n] of _) {
                 let t = {
                     anchor: i.bN.start(e, n),
                     focus: i.bN.end(e, n)
                 };
-                i.Jz.isBefore(t.anchor, _.anchor) && (t.anchor = _.anchor),
-                    i.Jz.isAfter(t.focus, _.focus) && (t.focus = _.focus),
+                i.Jz.isBefore(t.anchor, f.anchor) && (t.anchor = f.anchor),
+                    i.Jz.isAfter(t.focus, f.focus) && (t.focus = f.focus),
                     d.push({
-                        ...f,
+                        ...h,
                         ...t
                     });
             }

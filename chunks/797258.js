@@ -7,20 +7,20 @@ var r,
     u = n(442837),
     c = n(570140),
     d = n(314897);
-let _ = Object.freeze([]),
-    E = {};
-function f(e) {
-    (E = {}),
+let f = Object.freeze([]),
+    _ = {};
+function h(e) {
+    (_ = {}),
         e.sessions.forEach((e) => {
-            E[e.sessionId] = e;
+            _[e.sessionId] = e;
         });
 }
-class h extends (s = u.ZP.Store) {
+class p extends (s = u.ZP.Store) {
     initialize() {
         this.waitFor(d.default);
     }
     getSessions() {
-        return E;
+        return _;
     }
     getSession() {
         let e = d.default.getSessionId();
@@ -28,21 +28,21 @@ class h extends (s = u.ZP.Store) {
     }
     getRemoteActivities() {
         let e = d.default.getSessionId(),
-            t = l().find(E, (t) => t.active && t.sessionId !== e);
-        return null != t ? t.activities : _;
+            t = l().find(_, (t) => t.active && t.sessionId !== e);
+        return null != t ? t.activities : f;
     }
     getSessionById(e) {
-        return E[e];
+        return _[e];
     }
     getActiveSession() {
-        return l().find(E, (e) => {
+        return l().find(_, (e) => {
             let { active: t } = e;
             return t;
         });
     }
 }
 (a = 'SessionsStore'),
-    (i = 'displayName') in (r = h)
+    (i = 'displayName') in (r = p)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -50,7 +50,7 @@ class h extends (s = u.ZP.Store) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = new h(c.Z, {
-        CONNECTION_OPEN: f,
-        SESSIONS_REPLACE: f
+    (t.Z = new p(c.Z, {
+        CONNECTION_OPEN: h,
+        SESSIONS_REPLACE: h
     }));

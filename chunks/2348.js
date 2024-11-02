@@ -1,194 +1,194 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return E;
     }
 }),
     n(653041);
-var s = n(200651),
-    a = n(192379),
-    i = n(120356),
-    r = n.n(i),
-    l = n(692547),
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    s = n.n(l),
+    a = n(692547),
     o = n(481060),
     c = n(239091),
     d = n(111028),
     u = n(977258),
-    _ = n(637853),
-    I = n(473403),
-    E = n(216306),
-    T = n(743475),
-    m = n(827907),
-    N = n(868814),
-    S = n(981631),
-    g = n(689938),
-    h = n(697913);
-function C(e) {
-    let { guild: t, channel: a } = e,
-        i = (0, m.Mf)(a.id);
-    return 'null' === a.id
-        ? (0, s.jsx)('div', {
-              className: r()(h.categoryRow, h.uncategorized),
-              children: (0, s.jsx)(o.Text, {
-                  className: h.categoryText,
+    m = n(637853),
+    h = n(473403),
+    g = n(216306),
+    x = n(743475),
+    p = n(827907),
+    f = n(868814),
+    C = n(981631),
+    I = n(388032),
+    _ = n(697913);
+function N(e) {
+    let { guild: t, channel: r } = e,
+        l = (0, p.Mf)(r.id);
+    return 'null' === r.id
+        ? (0, i.jsx)('div', {
+              className: s()(_.categoryRow, _.uncategorized),
+              children: (0, i.jsx)(o.Text, {
+                  className: _.categoryText,
                   color: 'text-muted',
                   variant: 'text-xs/semibold',
                   lineClamp: 1,
-                  children: a.name
+                  children: r.name
               })
           })
-        : (0, s.jsxs)(o.Clickable, {
-              className: r()(h.categoryRow, { [h.uncategorized]: 'null' === a.id }),
+        : (0, i.jsxs)(o.Clickable, {
+              className: s()(_.categoryRow, { [_.uncategorized]: 'null' === r.id }),
               onContextMenu: (e) => {
                   (0, c.jW)(e, async () => {
                       let { default: e } = await Promise.all([n.e('38902'), n.e('58059'), n.e('8965'), n.e('4030')]).then(n.bind(n, 139035));
                       return (n) =>
-                          (0, s.jsx)(e, {
+                          (0, i.jsx)(e, {
                               ...n,
-                              channel: a,
+                              channel: r,
                               guild: t
                           });
                   });
               },
               onClick: (e) => (
                   e.stopPropagation(),
-                  (0, u.s)(t.id, a.id)
-                      ? (0, T.pt)(a.id)
+                  (0, u.s)(t.id, r.id)
+                      ? (0, x.pt)(r.id)
                       : (0, o.openModalLazy)(async () => {
                             let { default: e } = await n.e('35641').then(n.bind(n, 589279));
                             return (n) =>
-                                (0, s.jsx)(e, {
+                                (0, i.jsx)(e, {
                                     ...n,
                                     guildId: t.id,
-                                    startingChannelId: a.id
+                                    startingChannelId: r.id
                                 });
                         }),
                   !0
               ),
               children: [
-                  (0, s.jsx)(o.Text, {
-                      className: h.categoryText,
+                  (0, i.jsx)(o.Text, {
+                      className: _.categoryText,
                       color: 'text-muted',
                       variant: 'text-xs/semibold',
                       lineClamp: 1,
-                      children: a.name
+                      children: r.name
                   }),
-                  (0, s.jsx)(o.Checkbox, {
-                      'aria-checked': i,
-                      value: i,
+                  (0, i.jsx)(o.Checkbox, {
+                      'aria-checked': l,
+                      value: l,
                       type: o.Checkbox.Types.INVERTED,
-                      className: h.checkbox,
+                      className: _.checkbox,
                       displayOnly: !0
                   })
               ]
           });
 }
-let x = a.memo(function () {
-        return (0, s.jsx)('div', { className: h.separator });
+let v = r.memo(function () {
+        return (0, i.jsx)('div', { className: _.separator });
     }),
-    p = a.memo(function (e) {
+    T = r.memo(function (e) {
         let { index: t } = e;
-        return (0, s.jsx)(
+        return (0, i.jsx)(
             o.Text,
             {
                 variant: 'text-xs/normal',
-                className: h.subtitleSeparator,
+                className: _.subtitleSeparator,
                 children: '\xB7'
             },
             'separator-'.concat(t)
         );
     }),
-    R = a.memo(function (e) {
-        let { channel: t, category: a, guild: i, isFirstChannel: E, isLastChannel: C, tooltipDirection: R = 'right' } = e,
-            L = (0, m.Mf)(t.id, a.id),
-            f = (0, m.t4)(t.id, a.id),
-            O = (0, m.EH)(t.id, a.id),
-            A = (0, m.lL)(i.id, a.id),
-            M = null != (0, N.Z)(i).find((e) => e.id === t.id),
-            D = (0, _.mn)(t.id),
-            v = (e) => {
-                if (!f)
+    j = r.memo(function (e) {
+        let { channel: t, category: r, guild: l, isFirstChannel: g, isLastChannel: N, tooltipDirection: j = 'right' } = e,
+            E = (0, p.Mf)(t.id, r.id),
+            S = (0, p.t4)(t.id, r.id),
+            b = (0, p.EH)(t.id, r.id),
+            R = (0, p.lL)(l.id, r.id),
+            Z = null != (0, f.Z)(l).find((e) => e.id === t.id),
+            A = (0, m.mn)(t.id),
+            L = (e) => {
+                if (!S)
                     return (
                         e.stopPropagation(),
-                        (0, u.s)(i.id, t.id)
-                            ? (0, T.pt)(t.id)
+                        (0, u.s)(l.id, t.id)
+                            ? (0, x.pt)(t.id)
                             : (0, o.openModalLazy)(async () => {
                                   let { default: e } = await n.e('35641').then(n.bind(n, 589279));
                                   return (n) =>
-                                      (0, s.jsx)(e, {
+                                      (0, i.jsx)(e, {
                                           ...n,
-                                          guildId: i.id,
+                                          guildId: l.id,
                                           startingChannelId: t.id
                                       });
                               }),
                         !0
                     );
             },
-            j = (e) => {
+            y = (e) => {
                 t.isGuildVocal()
                     ? (0, c.jW)(e, async () => {
-                          let { default: e } = await Promise.all([n.e('79695'), n.e('53115'), n.e('38902'), n.e('58059'), n.e('90029'), n.e('18320'), n.e('83331'), n.e('49398')]).then(n.bind(n, 213202));
+                          let { default: e } = await Promise.all([n.e('79695'), n.e('38902'), n.e('58059'), n.e('90029'), n.e('18320'), n.e('83331'), n.e('49398')]).then(n.bind(n, 213202));
                           return (n) =>
-                              (0, s.jsx)(e, {
+                              (0, i.jsx)(e, {
                                   ...n,
                                   channel: t,
-                                  guild: i
+                                  guild: l
                               });
                       })
                     : (0, c.jW)(e, async () => {
-                          let { default: e } = await Promise.all([n.e('77298'), n.e('23357'), n.e('50506'), n.e('79189'), n.e('99152'), n.e('79695'), n.e('29549'), n.e('12013'), n.e('6380'), n.e('52249'), n.e('18543'), n.e('99783'), n.e('31605'), n.e('72181'), n.e('26182'), n.e('95900'), n.e('81272'), n.e('32776'), n.e('79107'), n.e('95393'), n.e('53115'), n.e('38902'), n.e('56602'), n.e('25788'), n.e('46097'), n.e('8739'), n.e('58059'), n.e('18895'), n.e('87624'), n.e('670'), n.e('99393'), n.e('7590'), n.e('59743'), n.e('68241'), n.e('24648'), n.e('89943'), n.e('67588'), n.e('77564'), n.e('62880'), n.e('28128'), n.e('47321'), n.e('37220'), n.e('90029'), n.e('82158'), n.e('91315'), n.e('18320'), n.e('90148'), n.e('66078')]).then(n.bind(n, 373651));
+                          let { default: e } = await Promise.all([n.e('77298'), n.e('23357'), n.e('50506'), n.e('79189'), n.e('99152'), n.e('79695'), n.e('29549'), n.e('12013'), n.e('6380'), n.e('52249'), n.e('18543'), n.e('99783'), n.e('31605'), n.e('72181'), n.e('26182'), n.e('95900'), n.e('81272'), n.e('32776'), n.e('79107'), n.e('95393'), n.e('38902'), n.e('56602'), n.e('25788'), n.e('46097'), n.e('8739'), n.e('58059'), n.e('18895'), n.e('87624'), n.e('670'), n.e('99393'), n.e('7590'), n.e('59743'), n.e('68241'), n.e('24648'), n.e('89943'), n.e('67588'), n.e('77564'), n.e('62880'), n.e('28128'), n.e('47321'), n.e('37220'), n.e('90029'), n.e('82158'), n.e('91315'), n.e('18320'), n.e('90148'), n.e('66078')]).then(n.bind(n, 373651));
                           return (n) =>
-                              (0, s.jsx)(e, {
+                              (0, i.jsx)(e, {
                                   ...n,
                                   channel: t,
-                                  guild: i
+                                  guild: l
                               });
                       });
             };
-        return (0, s.jsxs)(s.Fragment, {
+        return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, s.jsx)(o.Tooltip, {
-                    text: null != O ? O : A,
+                (0, i.jsx)(o.Tooltip, {
+                    text: null != b ? b : R,
                     delay: 500,
-                    position: R,
+                    position: j,
                     children: (e) =>
-                        (0, s.jsxs)(o.Clickable, {
-                            className: r()(h.channelRow, {
-                                [h.firstChannel]: E,
-                                [h.lastChannel]: C,
-                                [h.disabled]: f
+                        (0, i.jsxs)(o.Clickable, {
+                            className: s()(_.channelRow, {
+                                [_.firstChannel]: g,
+                                [_.lastChannel]: N,
+                                [_.disabled]: S
                             }),
                             ...e,
-                            onClick: v,
-                            onContextMenu: j,
+                            onClick: L,
+                            onContextMenu: y,
                             children: [
-                                (0, s.jsx)('div', {
-                                    className: h.channelInfo,
-                                    children: (0, s.jsxs)('div', {
-                                        className: h.channelName,
+                                (0, i.jsx)('div', {
+                                    className: _.channelInfo,
+                                    children: (0, i.jsxs)('div', {
+                                        className: _.channelName,
                                         children: [
-                                            (0, s.jsx)(I._, {
+                                            (0, i.jsx)(h._, {
                                                 channel: t,
-                                                guild: i
+                                                guild: l
                                             }),
-                                            (0, s.jsx)(d.Z, {
-                                                className: h.__invalid_name,
-                                                children: (0, s.jsx)(o.Text, {
-                                                    className: h.channelText,
+                                            (0, i.jsx)(d.Z, {
+                                                className: _.__invalid_name,
+                                                children: (0, i.jsx)(o.Text, {
+                                                    className: _.channelText,
                                                     variant: 'text-md/medium',
                                                     lineClamp: 1,
-                                                    color: f ? 'text-muted' : 'text-normal',
+                                                    color: S ? 'text-muted' : 'text-normal',
                                                     children: t.name
                                                 })
                                             }),
-                                            M
-                                                ? (0, s.jsxs)(s.Fragment, {
+                                            Z
+                                                ? (0, i.jsxs)(i.Fragment, {
                                                       children: [
-                                                          (0, s.jsx)(p, { index: 0 }),
-                                                          (0, s.jsx)(o.Text, {
+                                                          (0, i.jsx)(T, { index: 0 }),
+                                                          (0, i.jsx)(o.Text, {
                                                               variant: 'text-xs/medium',
-                                                              className: h.channelSubtitle,
+                                                              className: _.channelSubtitle,
                                                               color: 'text-brand',
-                                                              children: g.Z.Messages.CHANNEL_POPULAR
+                                                              children: I.intl.string(I.t.mPxmeH)
                                                           })
                                                       ]
                                                   })
@@ -196,33 +196,33 @@ let x = a.memo(function () {
                                         ]
                                     })
                                 }),
-                                (0, s.jsx)('div', {
-                                    className: h.channelActions,
+                                (0, i.jsx)('div', {
+                                    className: _.channelActions,
                                     children: (0, u.s)(t.guild_id, t.id)
-                                        ? (0, s.jsx)(o.Checkbox, {
-                                              'aria-checked': L,
-                                              value: L,
+                                        ? (0, i.jsx)(o.Checkbox, {
+                                              'aria-checked': E,
+                                              value: E,
                                               type: o.Checkbox.Types.INVERTED,
-                                              disabled: f,
-                                              color: D ? l.Z.colors.TEXT_BRAND.css : l.Z.colors.BUTTON_SECONDARY_BACKGROUND.css,
-                                              innerClassName: h.checkboxInner,
+                                              disabled: S,
+                                              color: A ? a.Z.colors.TEXT_BRAND.css : a.Z.colors.BUTTON_SECONDARY_BACKGROUND.css,
+                                              innerClassName: _.checkboxInner,
                                               displayOnly: !0
                                           })
-                                        : (0, s.jsxs)(o.Button, {
+                                        : (0, i.jsxs)(o.Button, {
                                               look: o.Button.Looks.OUTLINED,
                                               color: o.Button.Colors.PRIMARY,
-                                              className: h.lockedPill,
-                                              innerClassName: h.lockedPillInner,
-                                              onClick: S.dG4,
+                                              className: _.lockedPill,
+                                              innerClassName: _.lockedPillInner,
+                                              onClick: C.dG4,
                                               children: [
-                                                  (0, s.jsx)(o.LockIcon, {
+                                                  (0, i.jsx)(o.LockIcon, {
                                                       size: 'xs',
                                                       color: 'currentColor'
                                                   }),
-                                                  (0, s.jsx)(o.Text, {
+                                                  (0, i.jsx)(o.Text, {
                                                       variant: 'text-sm/medium',
                                                       color: 'none',
-                                                      children: g.Z.Messages.UNLOCK
+                                                      children: I.intl.string(I.t.zA9d1N)
                                                   })
                                               ]
                                           })
@@ -230,58 +230,58 @@ let x = a.memo(function () {
                             ]
                         })
                 }),
-                !C && (0, s.jsx)(x, {})
+                !N && (0, i.jsx)(v, {})
             ]
         });
     });
-function L(e) {
-    let { categories: t, guild: n, className: i, hasSidebar: r } = e,
-        l = a.useCallback(
+function E(e) {
+    let { categories: t, guild: n, className: l, hasSidebar: s } = e,
+        a = r.useCallback(
             (e) => {
-                let a = t._categories[e];
-                return (0, s.jsx)(
-                    C,
+                let r = t._categories[e];
+                return (0, i.jsx)(
+                    N,
                     {
-                        channel: a.channel,
+                        channel: r.channel,
                         guild: n
                     },
-                    a.channel.id
+                    r.channel.id
                 );
             },
             [t, n]
         ),
-        o = a.useCallback(
-            (e, a) => {
-                let i = t._categories[e],
-                    l = t[i.channel.id][a];
-                return null == l
+        o = r.useCallback(
+            (e, r) => {
+                let l = t._categories[e],
+                    a = t[l.channel.id][r];
+                return null == a
                     ? null
-                    : (0, s.jsx)(
-                          R,
+                    : (0, i.jsx)(
+                          j,
                           {
-                              category: i.channel,
-                              channel: l.channel,
+                              category: l.channel,
+                              channel: a.channel,
                               guild: n,
-                              isFirstChannel: 0 === a,
-                              isLastChannel: t[i.channel.id].length - 1 === a,
-                              tooltipDirection: r ? 'right' : 'top'
+                              isFirstChannel: 0 === r,
+                              isLastChannel: t[l.channel.id].length - 1 === r,
+                              tooltipDirection: s ? 'right' : 'top'
                           },
-                          l.channel.id
+                          a.channel.id
                       );
             },
-            [t, n, r]
+            [t, n, s]
         ),
-        c = (0, E.tn)(n.id, t, 64);
-    return (0, s.jsx)('div', {
-        className: i,
+        c = (0, g.tn)(n.id, t, 64);
+    return (0, i.jsx)('div', {
+        className: l,
         children: c.map((e, t) => {
-            let n = l(t),
-                a = [],
-                i = e.rowCount;
-            if (0 === i) return null;
-            for (let e = 0; e < i; e++) a.push(o(t, e));
-            return (0, s.jsxs)(s.Fragment, {
-                children: [n, a]
+            let n = a(t),
+                r = [],
+                l = e.rowCount;
+            if (0 === l) return null;
+            for (let e = 0; e < l; e++) r.push(o(t, e));
+            return (0, i.jsxs)(i.Fragment, {
+                children: [n, r]
             });
         })
     });

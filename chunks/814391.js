@@ -1,54 +1,54 @@
 var r = n(913527),
     i = n.n(r),
-    a = n(689938);
+    a = n(388032);
 let s = 3600,
     o = 86400,
     l = 2592000,
     u = 31104000,
     c = () => ({
-        seconds: a.Z.Messages.THREAD_BROWSER_TIMESTAMP_SECONDS,
-        minutes: a.Z.Messages.THREAD_BROWSER_TIMESTAMP_MINUTES,
-        hours: a.Z.Messages.THREAD_BROWSER_TIMESTAMP_HOURS,
-        days: a.Z.Messages.THREAD_BROWSER_TIMESTAMP_DAYS,
-        months: a.Z.Messages.THREAD_BROWSER_TIMESTAMP_MORE_THAN_MONTH,
-        years: a.Z.Messages.THREAD_BROWSER_TIMESTAMP_MORE_THAN_YEAR
+        seconds: a.t.sMPmtr,
+        minutes: a.t.N9M4Nz,
+        hours: a.t.p0KedH,
+        days: a.t.gjK5am,
+        months: a.t.kHo4Oj,
+        years: a.t.KjKr2N
     }),
     d = (e, t) => null != t && null != t[e],
-    _ = (e, t, n) => {
+    f = (e, t, n) => {
         var r, i, a;
         return d(e, t) ? (null !== (i = null !== (r = t[e]) && void 0 !== r ? r : null == n ? void 0 : n[e]) && void 0 !== i ? i : null) : null !== (a = null == n ? void 0 : n[e]) && void 0 !== a ? a : null;
     };
 t.Z = function (e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         r = i()().diff(i()(e), 's'),
-        a = null != t ? t() : void 0,
-        d = c(),
-        E = (e, t) => {
-            let r = _(e, a, n ? d : void 0);
-            return null == r ? null : 'string' == typeof r ? r : r.format({ count: t });
+        d = null != t ? t() : void 0,
+        _ = c(),
+        h = (e, t) => {
+            let r = f(e, d, n ? _ : void 0);
+            return null == r ? null : 'string' == typeof r ? r : a.intl.formatToPlainString(r, { count: t });
         };
     if (r < 60) {
-        let e = (null == a ? void 0 : a.seconds) != null ? E('seconds', r) : E('minutes', 1);
+        let e = (null == d ? void 0 : d.seconds) != null ? h('seconds', r) : h('minutes', 1);
         if (null != e) return e;
     }
     if (r < s) {
-        let e = E('minutes', Math.floor(r / 60));
+        let e = h('minutes', Math.floor(r / 60));
         if (null != e) return e;
     }
     if (r < o) {
-        let e = E('hours', Math.floor(r / s));
+        let e = h('hours', Math.floor(r / s));
         if (null != e) return e;
     }
     if (r < l) {
-        let e = E('days', Math.floor(r / o));
+        let e = h('days', Math.floor(r / o));
         if (null != e) return e;
     }
     if (r < u) {
-        let e = E('months', Math.floor(r / l));
+        let e = h('months', Math.floor(r / l));
         if (null != e) return e;
     }
-    if (r >= u && (null == a ? void 0 : a.years) != null) {
-        let e = E('years', Math.floor(r / u));
+    if (r >= u && (null == d ? void 0 : d.years) != null) {
+        let e = h('years', Math.floor(r / u));
         if (null != e) return e;
     }
     return i()(e).format('LL');

@@ -1,15 +1,15 @@
-t.d(n, {
+e.d(n, {
     k: function () {
-        return r;
+        return i;
     }
 });
-let r = {
+let i = {
     id: '0',
     name: '',
     mentionable: !1,
     position: 0,
     hoist: !1,
-    permissions: t(981631).Plq.SEND_MESSAGES,
+    permissions: e(981631).Plq.SEND_MESSAGES,
     color: 0,
     colorString: '0',
     icon: null,

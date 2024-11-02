@@ -5,43 +5,43 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(824203),
-    r = n(981631),
-    l = n(689938),
-    o = n(886748);
+var r = n(481060),
+    l = n(824203),
+    a = n(981631),
+    o = n(388032),
+    s = n(886748);
 function c(e) {
     var t;
     let n,
         { message: c, onDeleteMessage: u, children: d } = e,
-        _ = null === (t = c.interactionMetadata) || void 0 === t ? void 0 : t.ephemerality_reason,
-        E = () => u(c, !0);
-    if (null != _) {
-        let e = (0, s.in)(_);
+        m = null === (t = c.interactionMetadata) || void 0 === t ? void 0 : t.ephemerality_reason,
+        f = () => u(c, !0);
+    if (null != m) {
+        let e = (0, l.in)(m);
         n = (0, i.jsx)('div', {
-            className: o.userAppsBetaContent,
-            children: l.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EPHEMERAL_WITH_REASON.format({
-                handleDelete: E,
+            className: s.userAppsBetaContent,
+            children: o.intl.format(o.t.wx1tLS, {
+                handleDelete: f,
                 reason: e
             })
         });
     } else
         n =
-            c.type === r.uaV.STAGE_RAISE_HAND
-                ? l.Z.Messages.STAGE_SYSTEM_MESSAGE_MODERATOR_VISIBILITY_MESSAGE.format({ handleDelete: E })
-                : l.Z.Messages.ONLY_YOU_CAN_SEE_AND_DELETE_THESE.format({
+            c.type === a.uaV.STAGE_RAISE_HAND
+                ? o.intl.format(o.t['qDAX+/'], { handleDelete: f })
+                : o.intl.format(o.t.uX3ecH, {
                       count: 1,
                       countMessages: 1,
-                      handleDelete: E
+                      handleDelete: f
                   });
     return (0, i.jsxs)('div', {
-        className: o.ephemeralMessage,
+        className: s.ephemeralMessage,
         onClick: (e) => e.stopPropagation(),
         children: [
-            (0, i.jsx)(a.EyeIcon, {
+            (0, i.jsx)(r.EyeIcon, {
                 size: 'xs',
                 color: 'currentColor',
-                className: o.icon
+                className: s.icon
             }),
             n,
             d

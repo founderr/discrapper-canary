@@ -1,13 +1,13 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return _;
+            return v;
         }
     });
 var s = n(200651),
-    a = n(192379),
-    r = n(593473),
-    i = n(442837),
+    i = n(192379),
+    a = n(593473),
+    r = n(442837),
     l = n(544891),
     o = n(536285),
     c = n(388905),
@@ -15,10 +15,10 @@ var s = n(200651),
     u = n(703656),
     p = n(314897),
     m = n(981631),
-    x = n(689938),
+    x = n(388032),
     h = n(472585),
-    N = n(113207);
-function f(e, t, n) {
+    f = n(113207);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,22 +31,22 @@ function f(e, t, n) {
         e
     );
 }
-i.ZP.initialize();
-let b = {
+r.ZP.initialize();
+let g = {
     HANDOFF: 'handoff',
     DONE: 'done',
     FAILED: 'failed'
 };
-function g() {
+function j() {
     try {
         window.close();
     } catch (e) {}
 }
-class _ extends a.PureComponent {
+class v extends i.PureComponent {
     componentDidMount() {
         let { stage: e, key: t } = this.state;
-        e === b.DONE
-            ? g()
+        e === g.DONE
+            ? j()
             : p.default.isAuthenticated()
               ? l.tn
                     .post({
@@ -73,19 +73,19 @@ class _ extends a.PureComponent {
             children: [
                 (0, s.jsx)(c.Ee, {
                     src: n(69008),
-                    className: N.marginBottom20
+                    className: f.marginBottom20
                 }),
                 (0, s.jsx)(c.Dx, {
-                    className: N.marginBottom8,
-                    children: x.Z.Messages.BROWSER_HANDOFF_DONE_TITLE
+                    className: f.marginBottom8,
+                    children: x.intl.string(x.t.YsLqvr)
                 }),
                 (0, s.jsx)(c.DK, {
-                    className: N.marginBottom40,
-                    children: x.Z.Messages.BROWSER_HANDOFF_DONE_SAFE_TO_CLOSE
+                    className: f.marginBottom40,
+                    children: x.intl.string(x.t.CSBYDg)
                 }),
                 (0, s.jsx)(c.zx, {
                     onClick: this.handleOpenApp,
-                    children: x.Z.Messages.CONTINUE_TO_WEBAPP
+                    children: x.intl.string(x.t.fIv16O)
                 })
             ]
         });
@@ -95,19 +95,19 @@ class _ extends a.PureComponent {
             children: [
                 (0, s.jsx)(c.Ee, {
                     src: n(69008),
-                    className: N.marginBottom20
+                    className: f.marginBottom20
                 }),
                 (0, s.jsx)(c.Dx, {
-                    className: N.marginBottom8,
-                    children: x.Z.Messages.BROWSER_HANDOFF_FAILED_TITLE
+                    className: f.marginBottom8,
+                    children: x.intl.string(x.t.hsLIsb)
                 }),
                 (0, s.jsx)(c.DK, {
-                    className: N.marginBottom40,
-                    children: x.Z.Messages.BROWSER_HANDOFF_DONE_SAFE_TO_CLOSE
+                    className: f.marginBottom40,
+                    children: x.intl.string(x.t.CSBYDg)
                 }),
                 (0, s.jsx)(c.zx, {
                     onClick: this.handleOpenApp,
-                    children: x.Z.Messages.CONTINUE_TO_WEBAPP
+                    children: x.intl.string(x.t.fIv16O)
                 })
             ]
         });
@@ -117,10 +117,10 @@ class _ extends a.PureComponent {
             children: [
                 (0, s.jsx)(c.Hh, {}),
                 (0, s.jsx)(c.Dx, {
-                    className: N.marginBottom8,
-                    children: x.Z.Messages.BROWSER_HANDOFF_AUTHENTICATING_TITLE
+                    className: f.marginBottom8,
+                    children: x.intl.string(x.t['ctWa6+'])
                 }),
-                (0, s.jsx)(c.DK, { children: x.Z.Messages.BROWSER_HANDOFF_AUTHENTICATING_DESCRIPTION })
+                (0, s.jsx)(c.DK, { children: x.intl.string(x.t['53IHoq']) })
             ]
         });
     }
@@ -128,13 +128,13 @@ class _ extends a.PureComponent {
         let e;
         let { stage: t } = this.state;
         switch (t) {
-            case b.DONE:
+            case g.DONE:
                 e = this.renderDone();
                 break;
-            case b.FAILED:
+            case g.FAILED:
                 e = this.renderFailed();
                 break;
-            case b.HANDOFF:
+            case g.HANDOFF:
             default:
                 e = this.renderHandoff();
         }
@@ -148,20 +148,20 @@ class _ extends a.PureComponent {
     constructor(e) {
         var t;
         super(e),
-            f(this, 'done', () => {
-                g(), this.setState({ stage: b.DONE });
+            b(this, 'done', () => {
+                j(), this.setState({ stage: g.DONE });
             }),
-            f(this, 'failed', () => {
-                this.setState({ stage: b.FAILED }), g();
+            b(this, 'failed', () => {
+                this.setState({ stage: g.FAILED }), j();
             }),
-            f(this, 'handleOpenApp', () => {
+            b(this, 'handleOpenApp', () => {
                 (0, u.uL)(m.Z5c.ME);
             });
         let { search: n } = e.location,
-            s = null != n && '' !== n ? (0, r.parse)(n) : {};
+            s = null != n && '' !== n ? (0, a.parse)(n) : {};
         this.state = {
             key: null !== (t = s.key) && void 0 !== t ? t : '',
-            stage: 'true' === s.done ? b.DONE : b.HANDOFF
+            stage: 'true' === s.done ? g.DONE : g.HANDOFF
         };
     }
 }

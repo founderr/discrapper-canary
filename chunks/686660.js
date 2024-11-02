@@ -15,7 +15,7 @@ var r,
     a = n(278074),
     s = n(981631),
     o = n(490897),
-    l = n(689938);
+    l = n(388032);
 function u(e, t) {
     return (0, a.EQ)([t, e])
         .with([s.bL.ALL_MESSAGES, o.i.ALL_MESSAGES], () => 'all_messages')
@@ -27,10 +27,10 @@ function u(e, t) {
 }
 function c(e) {
     return (0, a.EQ)(e)
-        .with('all_messages', () => l.Z.Messages.NOTIFICATION_PRESET_1)
-        .with('mentions', () => l.Z.Messages.NOTIFICATION_PRESET_2)
-        .with('nothing', () => l.Z.Messages.NOTIFICATION_PRESET_3)
-        .with('custom', () => l.Z.Messages.NOTIFICATION_PRESET_CUSTOM)
+        .with('all_messages', () => l.intl.string(l.t.hZrr6u))
+        .with('mentions', () => l.intl.string(l.t.y59NJi))
+        .with('nothing', () => l.intl.string(l.t['pGn/bG']))
+        .with('custom', () => l.intl.string(l.t['32yow8']))
         .exhaustive();
 }
 ((i = r || (r = {})).ALL_MESSAGES = 'all_messages'), (i.MENTIONS = 'mentions'), (i.NOTHING = 'nothing'), (i.CUSTOM = 'custom');

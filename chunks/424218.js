@@ -9,7 +9,7 @@ n.d(t, {
         return i;
     }
 });
-var r = n(689938);
+var r = n(388032);
 let i = 1024,
     a = {
         useKibibytes: !1,
@@ -21,14 +21,14 @@ function s(e) {
         n = t.useKibibytes ? 1024 : 1000,
         i = t.useKibibytes ? 1024 : 1000,
         s = Math.ceil(e / n);
-    if (s < i) return t.useSpace ? r.Z.Messages.FILE_SIZE_MB.format({ size: s }) : r.Z.Messages.FILE_SIZE_MB_NO_SPACE.format({ size: s });
+    if (s < i) return t.useSpace ? r.intl.formatToPlainString(r.t.cS889P, { size: s }) : r.intl.formatToPlainString(r.t.pIn7AQ, { size: s });
     let o = s / i;
-    return (o = t.showDecimalForGB ? Math.round(10 * o) / 10 : Math.round(o)), t.useSpace ? r.Z.Messages.FILE_SIZE_GB.format({ size: o }) : r.Z.Messages.FILE_SIZE_GB_NO_SPACE.format({ size: o });
+    return (o = t.showDecimalForGB ? Math.round(10 * o) / 10 : Math.round(o)), t.useSpace ? r.intl.formatToPlainString(r.t.yhEXX1, { size: o }) : r.intl.formatToPlainString(r.t.TbMX9P, { size: o });
 }
 function o(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a,
         n = t.useKibibytes ? i : 1000,
         o = t.useKibibytes ? 1024 : 1000,
         l = e / n;
-    return l / o >= 1 ? s(l, t) : t.useSpace ? r.Z.Messages.FILE_SIZE_KB.format({ size: Math.ceil(l) }) : r.Z.Messages.FILE_SIZE_KB_NO_SPACE.format({ size: Math.ceil(l) });
+    return l / o >= 1 ? s(l, t) : t.useSpace ? r.intl.formatToPlainString(r.t.bTzRR0, { size: Math.ceil(l) }) : r.intl.formatToPlainString(r.t.kEk9pq, { size: Math.ceil(l) });
 }

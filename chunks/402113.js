@@ -8,7 +8,7 @@ n(192379);
 var i = n(481060),
     a = n(513202),
     s = n(871499),
-    o = n(689938);
+    o = n(388032);
 function l(e) {
     let { channelId: t, applicationId: n, centerButton: l = !1, ...u } = e,
         c = l ? s.d : s.Z;
@@ -22,6 +22,6 @@ function l(e) {
             });
         },
         iconComponent: i.DoorExitIcon,
-        label: o.Z.Messages.EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY
+        label: o.intl.string(o.t['R/FK4O'])
     });
 }

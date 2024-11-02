@@ -1,61 +1,61 @@
-t.d(s, {
+n.d(t, {
     t: function () {
-        return _;
+        return u;
     }
 });
-var n = t(200651),
-    a = t(192379),
-    i = t(481060),
-    r = t(243778),
-    o = t(921944),
-    l = t(689938),
-    c = t(375186);
+var i = n(200651),
+    s = n(192379),
+    r = n(481060),
+    l = n(243778),
+    a = n(921944),
+    o = n(388032),
+    c = n(375186);
 let d = (e) => {
-        let { markAsDismissed: s } = e;
+        let { markAsDismissed: t } = e;
         return (
-            a.useEffect(() => s(o.L.UNKNOWN), [s]),
-            (0, n.jsx)(i.TextBadge, {
+            s.useEffect(() => t(a.L.UNKNOWN), [t]),
+            (0, i.jsx)(r.TextBadge, {
                 className: c.newBadge,
-                text: l.Z.Messages.NEW
+                text: o.intl.string(o.t.y2b7CA)
             })
         );
     },
-    _ = (e) => {
-        let { title: s, body: t, img: a, newIndicatorDismissibleContent: o, onClick: _ } = e;
-        return (0, n.jsxs)('div', {
+    u = (e) => {
+        let { title: t, body: n, img: s, newIndicatorDismissibleContent: a, onClick: u } = e;
+        return (0, i.jsxs)('div', {
             className: c.container,
             children: [
-                a,
-                (0, n.jsxs)('div', {
+                s,
+                (0, i.jsxs)('div', {
                     className: c.textContainer,
                     children: [
-                        (0, n.jsxs)('div', {
+                        (0, i.jsxs)('div', {
                             className: c.headerText,
                             children: [
-                                (0, n.jsx)(r.ZP, {
-                                    contentTypes: [o],
+                                (0, i.jsx)(l.ZP, {
+                                    contentTypes: [a],
                                     children: (e) => {
-                                        let { visibleContent: s, markAsDismissed: t } = e;
-                                        return s === o ? (0, n.jsx)(d, { markAsDismissed: t }) : null;
+                                        let { visibleContent: t, markAsDismissed: n } = e;
+                                        return t === a ? (0, i.jsx)(d, { markAsDismissed: n }) : null;
                                     }
                                 }),
-                                (0, n.jsx)(i.Text, {
+                                (0, i.jsx)(r.Text, {
                                     variant: 'text-md/semibold',
-                                    children: s
+                                    children: t
                                 })
                             ]
                         }),
-                        (0, n.jsx)(i.Text, {
+                        (0, i.jsx)(r.Text, {
                             variant: 'text-xs/normal',
-                            children: t
+                            children: n
                         })
                     ]
                 }),
-                (0, n.jsx)(i.Button, {
-                    size: i.ButtonSizes.MEDIUM,
-                    onClick: _,
+                (0, i.jsx)(r.Button, {
+                    size: r.ButtonSizes.MEDIUM,
+                    onClick: u,
                     className: c.reconnectButton,
-                    children: l.Z.Messages.RECONNECT
+                    children: o.intl.string(o.t.vD60Pj)
                 })
             ]
         });

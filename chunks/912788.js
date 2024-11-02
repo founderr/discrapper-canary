@@ -7,24 +7,24 @@ var r,
     u = n(881052);
 let c = null,
     d = null,
-    _ = null;
-function E(e) {
+    f = null;
+function _(e) {
     let { error: t } = e;
     c = t;
 }
-function f() {
+function h() {
     c = null;
 }
-class h extends (s = o.ZP.Store) {
+class p extends (s = o.ZP.Store) {
     get paymentError() {
         return c;
     }
     getGiftCode(e) {
-        return e === _ ? d : null;
+        return e === f ? d : null;
     }
 }
 (a = 'PremiumPaymentModalStore'),
-    (i = 'displayName') in (r = h)
+    (i = 'displayName') in (r = p)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -32,14 +32,14 @@ class h extends (s = o.ZP.Store) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = new h(l.Z, {
-        PREMIUM_PAYMENT_SUBSCRIBE_FAIL: E,
-        PREMIUM_PAYMENT_UPDATE_FAIL: E,
+    (t.Z = new p(l.Z, {
+        PREMIUM_PAYMENT_SUBSCRIBE_FAIL: _,
+        PREMIUM_PAYMENT_UPDATE_FAIL: _,
         PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: function () {
-            f();
+            h();
         },
-        PREMIUM_PAYMENT_UPDATE_SUCCESS: f,
-        PREMIUM_PAYMENT_ERROR_CLEAR: f,
+        PREMIUM_PAYMENT_UPDATE_SUCCESS: h,
+        PREMIUM_PAYMENT_ERROR_CLEAR: h,
         BRAINTREE_TOKENIZE_PAYPAL_FAIL: function (e) {
             let { message: t, code: n } = e;
             c = new u.HF(t, n);
@@ -49,17 +49,17 @@ class h extends (s = o.ZP.Store) {
             c = new u.HF(t, n);
         },
         SKU_PURCHASE_SUCCESS: function (e) {
-            (d = e.giftCode), (_ = e.skuId);
+            (d = e.giftCode), (f = e.skuId);
         },
         SKU_PURCHASE_FAIL: function (e) {
             c = e.error;
         },
         SKU_PURCHASE_AWAIT_CONFIRMATION: function (e) {
-            e.isGift && (_ = e.skuId);
+            e.isGift && (f = e.skuId);
         },
         GIFT_CODE_CREATE: function (e) {
             let { giftCode: t } = e;
-            if (0 !== t.uses || t.sku_id !== _) return !1;
+            if (0 !== t.uses || t.sku_id !== f) return !1;
             d = t.code;
         }
     }));

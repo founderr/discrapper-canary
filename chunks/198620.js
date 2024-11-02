@@ -1,15 +1,15 @@
 n.d(t, {
     B_: function () {
-        return T;
+        return v;
     },
     MO: function () {
         return d;
     },
     k5: function () {
-        return I;
+        return g;
     },
     q5: function () {
-        return _;
+        return f;
     }
 }),
     n(47120);
@@ -24,13 +24,13 @@ let l = new Set([window.GLOBAL_ENV.CDN_HOST, null === (r = window.GLOBAL_ENV.MED
 function d(e) {
     return l.has(e.hostname) && Array.from(u).some((t) => e.pathname.startsWith(t));
 }
-function _(e) {
+function f(e) {
     let t = s.Z.toURLSafe(e);
     if (null == t) return e;
     for (let e of ['ex', 'is', 'hm']) t.searchParams.delete(e);
     return t;
 }
-function E(e) {
+function _(e) {
     let t = (function (e) {
         let t = e.searchParams.get('ex'),
             n = parseInt(null != t ? t : '', 16);
@@ -38,32 +38,32 @@ function E(e) {
     })(e);
     return null == t || t <= Date.now() + c;
 }
-function f(e) {
-    let t = s.Z.toURLSafe(e.url);
-    return null != t && E(t);
-}
 function h(e) {
-    if (null == e) return !1;
     let t = s.Z.toURLSafe(e.url);
-    return !!(null != t && d(t)) && E(t);
+    return null != t && _(t);
 }
 function p(e) {
+    if (null == e) return !1;
+    let t = s.Z.toURLSafe(e.url);
+    return !!(null != t && d(t)) && _(t);
+}
+function m(e) {
     var t;
-    return h(e.image) || (null === (t = e.images) || void 0 === t ? void 0 : t.some(h)) || h(e.video);
+    return p(e.image) || (null === (t = e.images) || void 0 === t ? void 0 : t.some(p)) || p(e.video);
 }
-function I(e) {
-    return e.attachments.some(f) || e.embeds.some(p);
+function g(e) {
+    return e.attachments.some(h) || e.embeds.some(m);
 }
-async function m(e) {
+async function E(e) {
     let t = await i.tn.post({
         url: o.ANM.ATTACHMENTS_REFRESH_URLS,
         body: { attachment_urls: [e] }
     });
     return t.ok ? t.body.refreshed_urls[0].refreshed : void 0;
 }
-async function T(e) {
+async function v(e) {
     let t = s.Z.toURLSafe(e);
-    if (null == t || !E(t)) return e;
-    let n = await m(e);
+    if (null == t || !_(t)) return e;
+    let n = await E(e);
     return null != n ? n : e;
 }

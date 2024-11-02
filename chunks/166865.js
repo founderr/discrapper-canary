@@ -10,14 +10,14 @@ var i = n(331595),
 let s = (e) => {
     var t, n;
     let { size: s = 'md', width: o, height: l, color: u = '#fff', colorClass: c = '', ...d } = e,
-        _ = (0, a.m)(s),
-        E = null !== (t = null == _ ? void 0 : _.width) && void 0 !== t ? t : o,
-        f = null !== (n = null == _ ? void 0 : _.height) && void 0 !== n ? n : l;
+        f = (0, a.m)(s),
+        _ = null !== (t = null == f ? void 0 : f.width) && void 0 !== t ? t : o,
+        h = null !== (n = null == f ? void 0 : f.height) && void 0 !== n ? n : l;
     return (0, r.jsx)('svg', {
         ...(0, i.Z)(d),
         xmlns: 'http://www.w3.org/2000/svg',
-        width: E,
-        height: f,
+        width: _,
+        height: h,
         fill: 'none',
         viewBox: '0 0 24 24',
         children: (0, r.jsx)('path', {

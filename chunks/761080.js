@@ -1,6 +1,6 @@
 n.d(t, {
     Lb: function () {
-        return l;
+        return s;
     },
     Rr: function () {
         return i;
@@ -12,7 +12,7 @@ n.d(t, {
         return c;
     },
     xy: function () {
-        return r;
+        return a;
     },
     zd: function () {
         return d;
@@ -20,15 +20,15 @@ n.d(t, {
 }),
     n(47120);
 var i,
-    a,
-    s = n(981631);
-let r = 15,
-    l = 3,
+    r,
+    l = n(981631);
+let a = 15,
+    s = 3,
     o = 50;
 function c(e) {
     switch (e.type) {
         case 0:
-            if (e.data.channel_type === s.d4z.GUILD_ANNOUNCEMENT) return 'announcement';
+            if (e.data.channel_type === l.d4z.GUILD_ANNOUNCEMENT) return 'announcement';
             return 'message';
         case 1:
             return 'summary';
@@ -42,6 +42,6 @@ function c(e) {
             return 'recommended_guilds';
     }
 }
-((a = i || (i = {}))[(a.MESSAGE = 0)] = 'MESSAGE'), (a[(a.SUMMARY = 1)] = 'SUMMARY'), (a[(a.ACTIVITY = 2)] = 'ACTIVITY'), (a[(a.CUSTOM_STATUS = 3)] = 'CUSTOM_STATUS'), (a[(a.GUILD_EVENT = 4)] = 'GUILD_EVENT'), (a[(a.RECOMMENDED_GUILDS = 5)] = 'RECOMMENDED_GUILDS');
+((r = i || (i = {}))[(r.MESSAGE = 0)] = 'MESSAGE'), (r[(r.SUMMARY = 1)] = 'SUMMARY'), (r[(r.ACTIVITY = 2)] = 'ACTIVITY'), (r[(r.CUSTOM_STATUS = 3)] = 'CUSTOM_STATUS'), (r[(r.GUILD_EVENT = 4)] = 'GUILD_EVENT'), (r[(r.RECOMMENDED_GUILDS = 5)] = 'RECOMMENDED_GUILDS');
 let d = new Set([0, 1, 3]);
-s.hBH.IMAGE, s.hBH.GIFV;
+l.hBH.IMAGE, l.hBH.GIFV;

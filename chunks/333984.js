@@ -35,34 +35,34 @@ function d() {
         }),
         (l = !0);
 }
-function _(e) {
+function f(e) {
     let { channelId: t } = e;
     o.add(t);
 }
-function E(e) {
+function _(e) {
     let { channel: t } = e;
     return c(t);
 }
-function f(e) {
+function h(e) {
     let { channels: t } = e;
     for (let e of t) c(e);
 }
-function h(e) {
+function p(e) {
     let { channel: t } = e,
         n = !1;
     return s.has(t.id) && (s.delete(t.id), (n = !0)), n;
 }
-class p extends i.Z {
+class m extends i.Z {
     initialize() {
         this.waitFor(r.Z);
     }
     loadCache() {
-        let e = this.readSnapshot(p.LATEST_SNAPSHOT_VERSION);
+        let e = this.readSnapshot(m.LATEST_SNAPSHOT_VERSION);
         null != e && (s = new Set(e));
     }
     takeSnapshot() {
         return {
-            version: p.LATEST_SNAPSHOT_VERSION,
+            version: m.LATEST_SNAPSHOT_VERSION,
             data: Array.from(s)
         };
     }
@@ -86,11 +86,11 @@ class p extends i.Z {
             CONNECTION_OPEN: d,
             CONNECTION_OPEN_SUPPLEMENTAL: d,
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            CHANNEL_CREATE: E,
-            CHANNEL_UPDATES: f,
-            CHANNEL_DELETE: h,
-            MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: _
+            CHANNEL_CREATE: _,
+            CHANNEL_UPDATES: h,
+            CHANNEL_DELETE: p,
+            MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: f
         });
     }
 }
-a(p, 'displayName', 'SpamMessageRequestStore'), a(p, 'LATEST_SNAPSHOT_VERSION', 1), (t.Z = new p());
+a(m, 'displayName', 'SpamMessageRequestStore'), a(m, 'LATEST_SNAPSHOT_VERSION', 1), (t.Z = new m());

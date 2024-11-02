@@ -1,124 +1,124 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return m;
+        return T;
     }
 }),
-    t(47120);
-var n = t(200651);
-t(192379);
-var a = t(481060),
-    i = t(921801),
-    r = t(430824),
-    o = t(63063),
-    l = t(358085),
-    c = t(709054),
-    d = t(695346),
-    _ = t(726985),
-    u = t(981631),
-    E = t(689938),
-    T = t(113207);
-function S() {
+    n(47120);
+var i = n(200651);
+n(192379);
+var s = n(481060),
+    r = n(921801),
+    l = n(430824),
+    a = n(63063),
+    o = n(358085),
+    c = n(709054),
+    d = n(695346),
+    u = n(726985),
+    m = n(981631),
+    h = n(388032),
+    g = n(113207);
+function p() {
     let e = d.G6.useSetting(),
-        s = d.Wz.useSetting(),
-        t = l.isPlatformEmbedded ? E.Z.Messages.SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED : E.Z.Messages.SHOW_CURRENT_ACTIVITY_DESC,
-        S = (e) => {
+        t = d.Wz.useSetting(),
+        n = o.isPlatformEmbedded ? h.intl.string(h.t.MznbeH) : h.intl.string(h.t.oKqC4u),
+        p = (e) => {
             d.Wz.updateSetting(e),
                 !(function (e) {
-                    let s = () => {
-                        d.SE.updateSetting(e ? c.default.keys(r.Z.getGuilds()) : []);
+                    let t = () => {
+                        d.SE.updateSetting(e ? c.default.keys(l.Z.getGuilds()) : []);
                     };
-                    (0, a.openModal)((e) =>
-                        (0, n.jsx)(a.ConfirmModal, {
-                            header: E.Z.Messages.USER_DM_SETTINGS_TITLE,
-                            confirmText: E.Z.Messages.NO_TEXT,
-                            cancelText: E.Z.Messages.YES_TEXT,
-                            onCancel: s,
-                            confirmButtonColor: a.Button.Colors.BRAND,
+                    (0, s.openModal)((e) =>
+                        (0, i.jsx)(s.ConfirmModal, {
+                            header: h.intl.string(h.t['uUr+GR']),
+                            confirmText: h.intl.string(h.t.gm1Ven),
+                            cancelText: h.intl.string(h.t.p89ACg),
+                            onCancel: t,
+                            confirmButtonColor: s.Button.Colors.BRAND,
                             ...e,
-                            children: (0, n.jsx)(a.Text, {
+                            children: (0, i.jsx)(s.Text, {
                                 variant: 'text-md/normal',
-                                children: E.Z.Messages.ACTIVITY_RESTRICTION_MODAL_DESC
+                                children: h.intl.string(h.t.EFu2Ki)
                             })
                         })
                     );
                 })(e);
         };
-    return (0, n.jsx)(i.F, {
-        setting: _.s6.ACTIVITY_PRIVACY_STATUS,
-        children: (0, n.jsxs)(a.FormSection, {
-            className: T.marginBottom40,
+    return (0, i.jsx)(r.F, {
+        setting: u.s6.ACTIVITY_PRIVACY_STATUS,
+        children: (0, i.jsxs)(s.FormSection, {
+            className: g.marginBottom40,
             children: [
-                (0, n.jsx)(a.FormTitle, {
-                    tag: a.FormTitleTags.H5,
-                    className: T.marginBottom8,
-                    children: E.Z.Messages.ACTIVITY_STATUS
+                (0, i.jsx)(s.FormTitle, {
+                    tag: s.FormTitleTags.H5,
+                    className: g.marginBottom8,
+                    children: h.intl.string(h.t['8ka8lp'])
                 }),
-                (0, n.jsx)(a.FormSwitch, {
+                (0, i.jsx)(s.FormSwitch, {
                     value: e,
                     onChange: (e) => d.G6.updateSetting(e),
-                    note: t,
-                    children: E.Z.Messages.SHOW_CURRENT_ACTIVITY
+                    note: n,
+                    children: h.intl.string(h.t['4q/Ewc'])
                 }),
-                (0, n.jsx)(a.FormSwitch, {
-                    value: !s,
-                    note: E.Z.Messages.ACTIVITY_RESTRICTION_DEFAULT_NOTE.format({ helpdeskArticle: o.Z.getArticleURL(u.BhN.ACTIVITY_STATUS_SETTINGS) }),
-                    onChange: (e) => S(!e),
-                    children: E.Z.Messages.ACTIVITY_RESTRICTION_DEFAULT
+                (0, i.jsx)(s.FormSwitch, {
+                    value: !t,
+                    note: h.intl.format(h.t['+5/xu7'], { helpdeskArticle: a.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS) }),
+                    onChange: (e) => p(!e),
+                    children: h.intl.string(h.t.D5GXTU)
                 })
             ]
         })
     });
 }
-function I() {
+function x() {
     let e = d.cP.useSetting(),
-        s = d.Ou.useSetting();
-    return (0, n.jsx)(i.F, {
-        setting: _.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
-        children: (0, n.jsxs)(a.FormSection, {
-            className: T.marginBottom40,
+        t = d.Ou.useSetting();
+    return (0, i.jsx)(r.F, {
+        setting: u.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
+        children: (0, i.jsxs)(s.FormSection, {
+            className: g.marginBottom40,
             children: [
-                (0, n.jsx)(a.FormTitle, {
-                    tag: a.FormTitleTags.H5,
-                    className: T.marginBottom8,
-                    children: E.Z.Messages.ACTIVITY_PARTY_PRIVACY
+                (0, i.jsx)(s.FormTitle, {
+                    tag: s.FormTitleTags.H5,
+                    className: g.marginBottom8,
+                    children: h.intl.string(h.t.VOszPD)
                 }),
-                (0, n.jsx)(a.FormSwitch, {
+                (0, i.jsx)(s.FormSwitch, {
                     value: e,
-                    note: E.Z.Messages.ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP,
+                    note: h.intl.string(h.t.Hdh7sb),
                     onChange: (e) => d.cP.updateSetting(e),
-                    children: E.Z.Messages.ACTIVITY_PARTY_PRIVACY_FRIENDS
+                    children: h.intl.string(h.t.WEWQQk)
                 }),
-                (0, n.jsx)(a.FormSwitch, {
-                    value: s,
-                    note: E.Z.Messages.ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP,
+                (0, i.jsx)(s.FormSwitch, {
+                    value: t,
+                    note: h.intl.string(h.t.Czr3Bg),
                     onChange: (e) => d.Ou.updateSetting(e),
-                    children: E.Z.Messages.ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL
+                    children: h.intl.string(h.t.UUvJVl)
                 })
             ]
         })
     });
 }
-function N() {
-    return (0, n.jsx)(i.F, {
-        setting: _.s6.ACTIVITY_PRIVACY_TOS,
-        children: (0, n.jsx)(a.FormSection, {
-            className: T.marginBottom40,
-            children: (0, n.jsx)(a.FormNotice, {
-                type: a.FormNotice.Types.PRIMARY,
-                body: E.Z.Messages.USER_SETTINGS_PRIVACY_TERMS.format({
-                    termsLink: u.EYA.TERMS,
-                    privacyLink: u.EYA.PRIVACY
+function S() {
+    return (0, i.jsx)(r.F, {
+        setting: u.s6.ACTIVITY_PRIVACY_TOS,
+        children: (0, i.jsx)(s.FormSection, {
+            className: g.marginBottom40,
+            children: (0, i.jsx)(s.FormNotice, {
+                type: s.FormNotice.Types.PRIMARY,
+                body: h.intl.format(h.t.xvCsx8, {
+                    termsLink: m.EYA.TERMS,
+                    privacyLink: m.EYA.PRIVACY
                 })
             })
         })
     });
 }
-function m(e) {
-    let { className: s, showHeader: t = !0 } = e;
-    return (0, n.jsxs)(a.FormSection, {
-        className: s,
-        tag: a.FormTitleTags.H1,
-        title: t ? E.Z.Messages.ACTIVITY_PRIVACY : null,
-        children: [(0, n.jsx)(S, {}), (0, n.jsx)(I, {}), (0, n.jsx)(N, {})]
+function T(e) {
+    let { className: t, showHeader: n = !0 } = e;
+    return (0, i.jsxs)(s.FormSection, {
+        className: t,
+        tag: s.FormTitleTags.H1,
+        title: n ? h.intl.string(h.t.Cq98yM) : null,
+        children: [(0, i.jsx)(p, {}), (0, i.jsx)(x, {}), (0, i.jsx)(S, {})]
     });
 }

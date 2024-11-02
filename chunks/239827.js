@@ -1,55 +1,55 @@
-var n = t(200651),
-    a = t(192379),
-    i = t(120356),
-    r = t.n(i),
-    o = t(481060),
-    l = t(689938),
-    c = t(32967);
-s.Z = a.forwardRef(function (e, s) {
-    let { currentPageIndex: t, numPages: a, onChangePage: i, children: d, className: _, showPageCount: u = !0, ...E } = e,
-        T = t <= 0,
-        S = t >= a - 1;
-    return (0, n.jsxs)('div', {
-        className: r()(c.__invalid_paginator, _),
-        ref: s,
-        ...E,
+var i = n(200651),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(481060),
+    o = n(388032),
+    c = n(32967);
+t.Z = s.forwardRef(function (e, t) {
+    let { currentPageIndex: n, numPages: s, onChangePage: r, children: d, className: u, showPageCount: m = !0, ...h } = e,
+        g = n <= 0,
+        p = n >= s - 1;
+    return (0, i.jsxs)('div', {
+        className: l()(c.__invalid_paginator, u),
+        ref: t,
+        ...h,
         children: [
             d,
-            (0, n.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: c.pageActions,
                 children: [
-                    (0, n.jsx)(o.Clickable, {
-                        className: r()(c.pageButtonPrev, { [c.disabled]: T }),
-                        tabIndex: T ? -1 : 0,
-                        onClick: T ? void 0 : () => i(t - 1),
-                        children: (0, n.jsx)(o.ChevronSmallLeftIcon, {
+                    (0, i.jsx)(a.Clickable, {
+                        className: l()(c.pageButtonPrev, { [c.disabled]: g }),
+                        tabIndex: g ? -1 : 0,
+                        onClick: g ? void 0 : () => r(n - 1),
+                        children: (0, i.jsx)(a.ChevronSmallLeftIcon, {
                             size: 'md',
                             color: 'currentColor',
                             className: c.pageButtonIcon,
-                            'aria-label': l.Z.Messages.PAGINATION_PREVIOUS
+                            'aria-label': o.intl.string(o.t.vgfxaG)
                         })
                     }),
-                    u
-                        ? (0, n.jsx)('div', {
+                    m
+                        ? (0, i.jsx)('div', {
                               className: c.pageIndicator,
-                              children: l.Z.Messages.PAGINATOR_OF_PAGES.format({
-                                  currentPage: t + 1,
-                                  numPages: a
+                              children: o.intl.format(o.t.MtpIws, {
+                                  currentPage: n + 1,
+                                  numPages: s
                               })
                           })
-                        : (0, n.jsx)('div', {
+                        : (0, i.jsx)('div', {
                               className: c.pageIndicator,
-                              children: l.Z.Messages.PAGINATOR_CURRENT_PAGE.format({ currentPage: t + 1 })
+                              children: o.intl.format(o.t.bKI77e, { currentPage: n + 1 })
                           }),
-                    (0, n.jsx)(o.Clickable, {
-                        className: r()(c.pageButtonNext, { [c.disabled]: S }),
-                        tabIndex: S ? -1 : 0,
-                        onClick: S ? void 0 : () => i(t + 1),
-                        children: (0, n.jsx)(o.ChevronSmallRightIcon, {
+                    (0, i.jsx)(a.Clickable, {
+                        className: l()(c.pageButtonNext, { [c.disabled]: p }),
+                        tabIndex: p ? -1 : 0,
+                        onClick: p ? void 0 : () => r(n + 1),
+                        children: (0, i.jsx)(a.ChevronSmallRightIcon, {
                             size: 'md',
                             color: 'currentColor',
                             className: c.pageButtonIcon,
-                            'aria-label': l.Z.Messages.PAGINATION_NEXT
+                            'aria-label': o.intl.string(o.t.XiOHRU)
                         })
                     })
                 ]

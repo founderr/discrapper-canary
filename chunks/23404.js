@@ -1,59 +1,59 @@
 n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(442837),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    s = n(442837),
     o = n(663002),
     c = n(481060),
     d = n(210887),
     u = n(617136),
-    _ = n(272008),
-    E = n(113434),
-    h = n(569984),
-    m = n(497505),
-    I = n(918701),
-    p = n(585500),
-    g = n(475595),
-    T = n(566078),
-    S = n(602667),
-    C = n(611855),
-    f = n(670638),
+    h = n(272008),
+    m = n(113434),
+    p = n(569984),
+    g = n(497505),
+    f = n(918701),
+    _ = n(585500),
+    E = n(475595),
+    I = n(566078),
+    C = n(602667),
+    v = n(611855),
+    S = n(670638),
     N = n(667105),
-    A = n(860151),
-    v = n(341907),
-    Z = n(46140),
-    L = n(981631),
-    R = n(689938),
-    O = n(233342);
-function x(e) {
+    T = n(860151),
+    x = n(341907),
+    b = n(46140),
+    A = n(981631),
+    Z = n(388032),
+    y = n(233342);
+function L(e) {
     var t;
     let { quest: n } = e,
-        a = (0, E.B6)(n.config.expiresAt),
-        s = (0, E.B6)(T.r.build(n.config).rewardsExpireAt),
-        r = (0, l.e7)([d.Z], () => d.Z.getState().theme),
-        u = (0, o.wj)(r) ? L.BRd.DARK : L.BRd.LIGHT,
-        _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
+        r = (0, m.B6)(n.config.expiresAt),
+        l = (0, m.B6)(I.r.build(n.config).rewardsExpireAt),
+        a = (0, s.e7)([d.Z], () => d.Z.getState().theme),
+        u = (0, o.wj)(a) ? A.BRd.DARK : A.BRd.LIGHT,
+        h = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
     return (0, i.jsxs)('div', {
-        className: O.heading,
+        className: y.heading,
         children: [
             (0, i.jsx)('img', {
-                className: O.headingGameTile,
+                className: y.headingGameTile,
                 alt: '',
-                src: (0, g.fh)(n, g.eC.GAME_TILE, u).url
+                src: (0, E.fh)(n, E.eC.GAME_TILE, u).url
             }),
             (0, i.jsxs)('div', {
-                className: O.headingCopy,
+                className: y.headingCopy,
                 children: [
                     (0, i.jsx)(c.Heading, {
                         variant: 'heading-md/semibold',
                         color: 'header-primary',
-                        children: _ ? R.Z.Messages.QUESTS_COMPLETION_PROGRESS_COMPLETE_ACTIVITY_PANEL : R.Z.Messages.QUESTS_TITLE.format({ questName: n.config.messages.questName })
+                        children: h ? Z.intl.string(Z.t.XBboAA) : Z.intl.formatToPlainString(Z.t.EQa7oq, { questName: n.config.messages.questName })
                     }),
                     (0, i.jsx)(c.Text, {
                         variant: 'text-xs/normal',
                         color: 'header-secondary',
-                        children: _ ? R.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: s }) : R.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({ expirationDate: a })
+                        children: h ? Z.intl.formatToPlainString(Z.t.APddvL, { expirationDate: l }) : Z.intl.formatToPlainString(Z.t['pX+fmp'], { expirationDate: r })
                     })
                 ]
             })
@@ -61,160 +61,160 @@ function x(e) {
     });
 }
 t.Z = function (e) {
-    var t, n, s;
+    var t, n, l;
     let { quest: o } = e,
-        d = (0, l.e7)([h.Z], () => h.Z.isEnrolling(o.id), [o]),
-        [g, T] = a.useState(!1),
-        L = a.useCallback(() => T(!0), []),
-        b = a.useCallback(() => T(!1), []),
-        M = a.useCallback((e) => {
+        d = (0, s.e7)([p.Z], () => p.Z.isEnrolling(o.id), [o]),
+        [E, I] = r.useState(!1),
+        A = r.useCallback(() => I(!0), []),
+        R = r.useCallback(() => I(!1), []),
+        P = r.useCallback((e) => {
             e.stopPropagation();
         }, []),
-        P = a.useCallback(() => {
-            (0, _.AH)(o.id, {
-                questContent: m.jn.ACTIVITY_PANEL,
+        O = r.useCallback(() => {
+            (0, h.AH)(o.id, {
+                questContent: g.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.ACCEPT_QUEST
             });
         }, [o]),
-        D = a.useCallback(() => {
+        j = r.useCallback(() => {
             null != o &&
                 ((0, u._3)({
                     questId: o.id,
-                    questContent: m.jn.ACTIVITY_PANEL,
+                    questContent: g.jn.ACTIVITY_PANEL,
                     questContentCTA: u.jZ.TRACK_PROGRESS
                 }),
-                (0, v.navigateToQuestHome)(Z.dr.ACTIVITY_PANEL, m.jn.ACTIVITY_PANEL, o.id));
+                (0, x.navigateToQuestHome)(b.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, o.id));
         }, [o]),
-        y = a.useCallback(() => {
+        D = r.useCallback(() => {
             (0, u._3)({
                 questId: o.id,
-                questContent: m.jn.ACTIVITY_PANEL,
+                questContent: g.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.LEARN_MORE
             }),
-                (0, v.navigateToQuestHome)(Z.dr.ACTIVITY_PANEL, m.jn.ACTIVITY_PANEL, o.id);
+                (0, x.navigateToQuestHome)(b.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, o.id);
         }, [o]),
-        j = (0, N.hf)({
+        M = (0, N.hf)({
             quest: o,
-            location: m.jn.ACTIVITY_PANEL
+            location: g.jn.ACTIVITY_PANEL
         }),
-        U = (0, E.tP)(o),
-        G = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        w = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        k = (null === (s = o.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null,
-        B = (null == o ? void 0 : o.userStatus) == null || (0, I.zE)(o.userStatus, m.jn.ACTIVITY_PANEL),
-        H = (0, E.Rf)(o),
-        V = (0, p.D)({
+        w = (0, m.tP)(o),
+        k = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        U = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+        G = (null === (l = o.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null,
+        B = (null == o ? void 0 : o.userStatus) == null || (0, f.zE)(o.userStatus, g.jn.ACTIVITY_PANEL),
+        H = (0, m.Rf)(o),
+        V = (0, _.D)({
             quest: o,
             taskDetails: H,
-            location: Z.dr.ACTIVITY_PANEL,
-            questContent: m.jn.ACTIVITY_PANEL
+            location: b.dr.ACTIVITY_PANEL,
+            questContent: g.jn.ACTIVITY_PANEL
         });
-    return B || U || k || !(0, I.dl)(o)
+    return B || w || G || !(0, f.dl)(o)
         ? null
-        : (0, i.jsx)(S.A, {
+        : (0, i.jsx)(C.A, {
               questOrQuests: o,
-              questContent: m.jn.ACTIVITY_PANEL,
+              questContent: g.jn.ACTIVITY_PANEL,
               children: (e) => {
                   var t;
                   return (0, i.jsxs)('div', {
                       ref: (t) => {
                           e.current = t;
                       },
-                      className: r()(O.wrapper, { [O.wrapperQuestAccepted]: G }),
-                      onClick: M,
-                      onKeyPress: M,
-                      onFocus: L,
-                      onMouseEnter: L,
-                      onBlur: b,
-                      onMouseLeave: b,
+                      className: a()(y.wrapper, { [y.wrapperQuestAccepted]: k }),
+                      onClick: P,
+                      onKeyPress: P,
+                      onFocus: A,
+                      onMouseEnter: A,
+                      onBlur: R,
+                      onMouseLeave: R,
                       children: [
                           (0, i.jsxs)('div', {
-                              className: O.utils,
+                              className: y.utils,
                               children: [
-                                  G ? (0, i.jsx)(x, { quest: o }) : (0, i.jsx)(C.Z, { textOpacity: 0.5 }),
-                                  (0, i.jsx)(f.r, {
+                                  k ? (0, i.jsx)(L, { quest: o }) : (0, i.jsx)(v.Z, { textOpacity: 0.5 }),
+                                  (0, i.jsx)(S.r, {
                                       quest: o,
-                                      questContent: m.jn.ACTIVITY_PANEL,
+                                      questContent: g.jn.ACTIVITY_PANEL,
                                       shouldShowDisclosure: (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null,
                                       showShareLink: !0,
                                       children: (e) =>
                                           (0, i.jsx)(c.Clickable, {
                                               ...e,
-                                              'aria-label': R.Z.Messages.ACTIONS,
+                                              'aria-label': Z.intl.string(Z.t.DEoVWV),
                                               children: (0, i.jsx)(c.MoreHorizontalIcon, {
                                                   size: 'md',
                                                   color: 'currentColor',
-                                                  className: O.submenuIcon
+                                                  className: y.submenuIcon
                                               })
                                           })
                                   })
                               ]
                           }),
-                          !G &&
+                          !k &&
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      (0, i.jsx)(x, { quest: o }),
+                                      (0, i.jsx)(L, { quest: o }),
                                       (0, i.jsx)(c.Text, {
-                                          className: O.instructions,
+                                          className: y.instructions,
                                           variant: 'text-sm/normal',
                                           color: 'text-normal',
                                           children: V
                                       })
                                   ]
                               }),
-                          G &&
-                              !w &&
-                              (0, i.jsx)(A.Z, {
-                                  autoplay: g,
-                                  className: O.rewardTileWithInstructions,
+                          k &&
+                              !U &&
+                              (0, i.jsx)(T.Z, {
+                                  autoplay: E,
+                                  className: y.rewardTileWithInstructions,
                                   quest: o,
-                                  questContent: m.jn.ACTIVITY_PANEL,
-                                  location: Z.dr.ACTIVITY_PANEL,
+                                  questContent: g.jn.ACTIVITY_PANEL,
+                                  location: b.dr.ACTIVITY_PANEL,
                                   taskDetails: H
                               }),
                           (0, i.jsxs)('div', {
-                              className: O.ctas,
+                              className: y.ctas,
                               children: [
-                                  !G &&
+                                  !k &&
                                       (0, i.jsxs)(i.Fragment, {
                                           children: [
                                               (0, i.jsx)(c.Button, {
-                                                  className: O.cta,
+                                                  className: y.cta,
                                                   color: c.Button.Colors.PRIMARY,
                                                   fullWidth: !0,
                                                   size: c.Button.Sizes.SMALL,
-                                                  onClick: y,
-                                                  children: R.Z.Messages.QUESTS_LEARN_MORE_V2
+                                                  onClick: D,
+                                                  children: Z.intl.string(Z.t.LLLLPD)
                                               }),
                                               (0, i.jsx)(c.Button, {
-                                                  className: O.cta,
+                                                  className: y.cta,
                                                   color: c.Button.Colors.BRAND,
                                                   fullWidth: !0,
-                                                  onClick: P,
+                                                  onClick: O,
                                                   size: c.Button.Sizes.SMALL,
                                                   submitting: d,
-                                                  children: R.Z.Messages.QUESTS_ACCEPT_QUEST
+                                                  children: Z.intl.string(Z.t.l7E81t)
                                               })
                                           ]
                                       }),
-                                  G &&
-                                      !w &&
+                                  k &&
+                                      !U &&
                                       (0, i.jsx)(c.Button, {
-                                          className: O.cta,
-                                          color: c.Button.Colors.BRAND,
-                                          fullWidth: !0,
-                                          onClick: D,
-                                          size: c.Button.Sizes.SMALL,
-                                          children: R.Z.Messages.QUESTS_CHECK_PROGRESS
-                                      }),
-                                  w &&
-                                      (0, i.jsx)(c.Button, {
-                                          className: O.cta,
+                                          className: y.cta,
                                           color: c.Button.Colors.BRAND,
                                           fullWidth: !0,
                                           onClick: j,
                                           size: c.Button.Sizes.SMALL,
-                                          children: R.Z.Messages.QUESTS_CLAIM_REWARD
+                                          children: Z.intl.string(Z.t.VN1Ajo)
+                                      }),
+                                  U &&
+                                      (0, i.jsx)(c.Button, {
+                                          className: y.cta,
+                                          color: c.Button.Colors.BRAND,
+                                          fullWidth: !0,
+                                          onClick: M,
+                                          size: c.Button.Sizes.SMALL,
+                                          children: Z.intl.string(Z.t.cfY4PD)
                                       })
                               ]
                           })

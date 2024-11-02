@@ -1,15 +1,15 @@
-t.d(s, {
+n.d(t, {
     h: function () {
-        return r;
+        return l;
     }
 });
-var n = t(416867),
-    a = t(549631),
-    i = t(689938);
-let r = () => {
-    (0, n.B)({
-        title: i.Z.Messages.GUILD_ROLE_SUBSCRIPTION_RESTARTED_TITLE,
-        body: i.Z.Messages.GUILD_ROLE_SUBSCRIPTION_RESTARTED_DESCRIPTION,
-        Icon: a.Z
+var i = n(416867),
+    s = n(549631),
+    r = n(388032);
+let l = () => {
+    (0, i.B)({
+        title: r.intl.string(r.t.oPV2c3),
+        body: r.intl.string(r.t.DdRizc),
+        Icon: s.Z
     });
 };

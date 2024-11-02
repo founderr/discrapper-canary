@@ -20,25 +20,25 @@ function d(e, t, n) {
         e
     );
 }
-let _ = 'production' === c.C.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL === c.C.STAGING;
-function E() {
-    _ = (0, s.QI)(l.default.getCurrentUser());
+let f = 'production' === c.C.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL === c.C.STAGING;
+function _() {
+    f = (0, s.QI)(l.default.getCurrentUser());
 }
-class f extends (r = i.ZP.Store) {
+class h extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(l.default, o.Z),
             Object.defineProperties(this, {
                 isDeveloper: {
                     configurable: !1,
-                    get: () => _,
+                    get: () => f,
                     set: () => {}
                 }
             }),
-            E(),
+            _(),
             setTimeout(() => Object.freeze(this));
     }
     getExperimentDescriptor() {
-        return _
+        return f
             ? {
                   type: 'developer',
                   name: 'discord_dev_testing',
@@ -52,9 +52,9 @@ class f extends (r = i.ZP.Store) {
         super(...e), d(this, 'isDeveloper', !1);
     }
 }
-d(f, 'displayName', 'DeveloperExperimentStore'),
-    (t.Z = new f(a.Z, {
-        CONNECTION_OPEN: E,
-        OVERLAY_INITIALIZE: E,
-        CURRENT_USER_UPDATE: E
+d(h, 'displayName', 'DeveloperExperimentStore'),
+    (t.Z = new h(a.Z, {
+        CONNECTION_OPEN: _,
+        OVERLAY_INITIALIZE: _,
+        CURRENT_USER_UPDATE: _
     }));

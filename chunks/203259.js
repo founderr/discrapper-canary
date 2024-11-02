@@ -5,37 +5,37 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(39604),
-    r = n(176127),
-    l = n(689938),
-    o = n(516707);
+var r = n(481060),
+    l = n(39604),
+    a = n(176127),
+    o = n(388032),
+    s = n(516707);
 function c(e) {
     let { onOpenClipsGallery: t, clipIconRef: n, lastClipsSession: c } = e;
-    return (0, i.jsxs)(a.TooltipLayer, {
-        tooltipClassName: o.reminderTooltip,
-        tooltipContentClassName: o.tooltipContent,
+    return (0, i.jsxs)(r.TooltipLayer, {
+        tooltipClassName: s.reminderTooltip,
+        tooltipContentClassName: s.tooltipContent,
         targetElementRef: { current: n },
         position: 'bottom',
-        color: a.TooltipColors.PRIMARY,
+        color: r.TooltipColors.PRIMARY,
         children: [
-            (0, i.jsx)(r.Z, {}),
-            (0, i.jsx)(a.Heading, {
+            (0, i.jsx)(a.Z, {}),
+            (0, i.jsx)(r.Heading, {
                 variant: 'heading-md/extrabold',
-                children: l.Z.Messages.CLIPS_YOU_HAVE_NEW_CLIPS.format({ count: c.newClipIds.length })
+                children: o.intl.format(o.t['+qxkzM'], { count: c.newClipIds.length })
             }),
             (0, i.jsxs)('div', {
-                className: o.buttonContainer,
+                className: s.buttonContainer,
                 children: [
-                    (0, i.jsx)(a.Button, {
-                        color: a.Button.Colors.TRANSPARENT,
-                        onClick: s.eL,
-                        children: l.Z.Messages.DISMISS
+                    (0, i.jsx)(r.Button, {
+                        color: r.Button.Colors.TRANSPARENT,
+                        onClick: l.eL,
+                        children: o.intl.string(o.t.WAI6xs)
                     }),
-                    (0, i.jsx)(a.Button, {
-                        color: a.Button.Colors.BRAND,
+                    (0, i.jsx)(r.Button, {
+                        color: r.Button.Colors.BRAND,
                         onClick: t,
-                        children: l.Z.Messages.CLIPS_REVIEW_NOW
+                        children: o.intl.string(o.t.tQPBmp)
                     })
                 ]
             })

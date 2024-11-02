@@ -1,86 +1,86 @@
-n.r(e);
-var a = n(200651),
-    s = n(192379),
-    o = n(481060),
-    i = n(313201),
-    r = n(434404),
-    c = n(703656),
-    l = n(112612),
-    d = n(981631),
-    u = n(176505),
-    T = n(689938),
-    x = n(213892);
-e.default = function (t) {
-    let { guildId: e, submittedGuildJoinRequestsCount: n, onClose: I, transitionState: _, onConfirm: E } = t,
-        N = (0, i.Dt)(),
+e.r(n);
+var i = e(200651),
+    o = e(192379),
+    a = e(481060),
+    s = e(313201),
+    r = e(434404),
+    l = e(703656),
+    c = e(112612),
+    d = e(981631),
+    u = e(176505),
+    x = e(388032),
+    f = e(213892);
+n.default = function (t) {
+    let { guildId: n, submittedGuildJoinRequestsCount: e, onClose: m, transitionState: h, onConfirm: p } = t,
+        T = (0, s.Dt)(),
         {
-            submitting: f,
-            errorMessage: m,
-            onSubmit: C
-        } = (0, l.Z)({
-            onSubmit: E,
-            onClose: I
+            submitting: C,
+            errorMessage: b,
+            onSubmit: j
+        } = (0, c.Z)({
+            onSubmit: p,
+            onClose: m
         }),
-        M = s.useCallback(() => {
-            I(), r.Z.close(), (0, c.uL)(d.Z5c.CHANNEL(e, u.oC.MEMBER_APPLICATIONS));
-        }, [e, I]);
-    return (0, a.jsxs)(o.ModalRoot, {
-        className: x.container,
-        transitionState: _,
-        'aria-labelledby': N,
+        S = o.useCallback(() => {
+            m(), r.Z.close(), (0, l.uL)(d.Z5c.CHANNEL(n, u.oC.MEMBER_APPLICATIONS));
+        }, [n, m]);
+    return (0, i.jsxs)(a.ModalRoot, {
+        className: f.container,
+        transitionState: h,
+        'aria-labelledby': T,
         children: [
-            (0, a.jsxs)(o.ModalContent, {
-                className: x.content,
+            (0, i.jsxs)(a.ModalContent, {
+                className: f.content,
                 children: [
-                    (0, a.jsx)(o.Heading, {
+                    (0, i.jsx)(a.Heading, {
                         variant: 'heading-md/semibold',
-                        id: N,
-                        children: T.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EDIT_WARNING_TITLE.format({ count: n })
+                        id: T,
+                        children: x.intl.format(x.t.chV4JS, { count: e })
                     }),
-                    (0, a.jsx)(o.Text, {
-                        className: x.descriptionText,
+                    (0, i.jsx)(a.Text, {
+                        className: f.descriptionText,
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: T.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EDIT_WARNING_DESCRIPTIONG
+                        children: x.intl.string(x.t.uNQIt7)
                     }),
-                    (0, a.jsx)(o.Clickable, {
-                        className: x.actionText,
-                        onClick: M,
-                        children: (0, a.jsx)(o.Text, {
+                    (0, i.jsx)(a.Clickable, {
+                        className: f.actionText,
+                        onClick: S,
+                        children: (0, i.jsx)(a.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-link',
-                            children: T.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPLICATIONS_TITLE
+                            children: x.intl.string(x.t.szESVF)
                         })
                     }),
-                    null != m &&
-                        (0, a.jsx)(o.Text, {
-                            className: x.__invalid_errorText,
+                    null != b &&
+                        (0, i.jsx)(a.Text, {
+                            className: f.__invalid_errorText,
                             variant: 'text-xs/normal',
                             color: 'text-danger',
-                            children: m
+                            children: b
                         })
                 ]
             }),
-            (0, a.jsxs)(o.ModalFooter, {
+            (0, i.jsxs)(a.ModalFooter, {
                 children: [
-                    (0, a.jsx)(o.Button, {
-                        className: x.actionButton,
-                        color: o.Button.Colors.BRAND,
-                        submitting: f,
-                        onClick: C,
-                        size: o.Button.Sizes.SMALL,
-                        children: (0, a.jsx)(o.Text, {
+                    (0, i.jsx)(a.Button, {
+                        className: f.actionButton,
+                        color: a.Button.Colors.BRAND,
+                        submitting: C,
+                        onClick: j,
+                        size: a.Button.Sizes.SMALL,
+                        children: (0, i.jsx)(a.Text, {
                             variant: 'text-sm/semibold',
-                            children: T.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_CONTINUE_EDITING
+                            children: x.intl.string(x.t.LW0aUF)
                         })
                     }),
-                    (0, a.jsx)(o.Button, {
-                        color: o.Button.Colors.PRIMARY,
-                        onClick: I,
-                        size: o.Button.Sizes.SMALL,
-                        children: (0, a.jsx)(o.Text, {
+                    (0, i.jsx)(a.Button, {
+                        color: a.Button.Colors.PRIMARY,
+                        onClick: m,
+                        size: a.Button.Sizes.SMALL,
+                        children: (0, i.jsx)(a.Text, {
                             variant: 'text-sm/semibold',
-                            children: T.Z.Messages.CANCEL
+                            children: x.intl.string(x.t['ETE/oK'])
                         })
                     })
                 ]

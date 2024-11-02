@@ -4,77 +4,77 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(913527),
-    o = n.n(l),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    o = n(913527),
+    s = n.n(o),
     c = n(91192),
     u = n(722770),
     d = n(442837),
-    _ = n(481060),
-    E = n(287734),
-    I = n(607070),
-    m = n(385499),
-    f = n(313889),
-    T = n(825829),
-    h = n(226192),
-    N = n(36459),
-    p = n(336197),
-    C = n(359110),
-    g = n(347475),
-    S = n(496675),
-    A = n(594174),
-    x = n(5192),
-    R = n(51144),
-    v = n(937889),
-    M = n(739566),
-    O = n(779125),
-    L = n(890410),
-    Z = n(464891),
-    b = n(507418),
-    P = n(348238),
-    D = n(38267),
-    j = n(83561),
-    U = n(834129),
-    y = n(959517),
+    m = n(481060),
+    f = n(287734),
+    h = n(607070),
+    p = n(385499),
+    g = n(313889),
+    _ = n(825829),
+    C = n(226192),
+    E = n(36459),
+    I = n(336197),
+    x = n(359110),
+    v = n(347475),
+    N = n(496675),
+    T = n(594174),
+    S = n(5192),
+    b = n(51144),
+    A = n(937889),
+    j = n(739566),
+    Z = n(779125),
+    R = n(890410),
+    P = n(464891),
+    y = n(507418),
+    L = n(348238),
+    O = n(38267),
+    M = n(83561),
+    k = n(834129),
+    D = n(959517),
     B = n(981631),
-    k = n(674563),
-    G = n(590433),
-    F = n(689938),
-    w = n(146655);
+    w = n(674563),
+    U = n(590433),
+    F = n(388032),
+    G = n(146655);
 function V(e, t) {
-    let { popouts: n, selected: i, setPopout: s } = (0, D.Z)(e.id, y.d$),
-        { usernameProfile: r, avatarProfile: l } = n,
-        o = (0, P.wq)(e.author.id, t.id),
-        c = (0, P.RN)(e.author.id, t.id, e.id),
-        u = (0, P.XO)(e, t, r, s),
-        d = (0, P.R9)(l, s);
+    let { popouts: n, selected: i, setPopout: l } = (0, O.Z)(e.id, D.d$),
+        { usernameProfile: a, avatarProfile: o } = n,
+        s = (0, L.wq)(e.author.id, t.id),
+        c = (0, L.RN)(e.author.id, t.id, e.id),
+        u = (0, L.XO)(e, t, a, l),
+        d = (0, L.R9)(o, l);
     return {
         selected: i,
-        onContextMenu: o,
+        onContextMenu: s,
         onContextMenuModerateUser: c,
         onClickUsername: u,
         onClickAvatar: d,
-        onPopoutRequestClose: a.useCallback(
+        onPopoutRequestClose: r.useCallback(
             () =>
-                s({
+                l({
                     usernameProfile: !1,
                     avatarProfile: !1,
                     referencedUsernameProfile: !1
                 }),
-            [s]
+            [l]
         ),
-        renderPopout: b.Z,
-        showAvatarPopout: l,
-        showUsernamePopout: r
+        renderPopout: y.Z,
+        showAvatarPopout: o,
+        showUsernamePopout: a
     };
 }
 function H(e, t) {
-    return a.useMemo(() => {
+    return r.useMemo(() => {
         if (null != t)
             return (n) =>
-                (0, i.jsx)(g.Z, {
+                (0, i.jsx)(v.Z, {
                     ...n,
                     userId: t.id,
                     user: t,
@@ -83,84 +83,84 @@ function H(e, t) {
                 });
     }, [e, t]);
 }
-function Y(e) {
-    let { children: t, className: n, compact: a } = e;
+function z(e) {
+    let { children: t, className: n, compact: r } = e;
     return (0, i.jsx)('div', {
-        className: r()(w.footerContainer, n, { [w.compact]: a }),
+        className: a()(G.footerContainer, n, { [G.compact]: r }),
         children: t
     });
 }
 function W(e) {
     let { children: t, className: n } = e;
     return (0, i.jsx)('div', {
-        className: r()(w.annotationRow, n),
+        className: a()(G.annotationRow, n),
         children: t
     });
 }
 function K(e, t) {
     switch (e) {
-        case f.d.DELETE_USER_MESSAGE:
-            return (0, i.jsx)(_.TrashIcon, {
+        case g.d.DELETE_USER_MESSAGE:
+            return (0, i.jsx)(m.TrashIcon, {
                 size: 'xs',
                 color: 'currentColor',
-                className: w.alertActionIcon,
+                className: G.alertActionIcon,
                 ...t
             });
-        case f.d.SET_COMPLETED:
-            return (0, i.jsx)(_.CheckmarkLargeIcon, {
+        case g.d.SET_COMPLETED:
+            return (0, i.jsx)(m.CheckmarkLargeIcon, {
                 size: 'xs',
                 color: 'currentColor',
-                className: r()(w.alertActionIcon, w.alertActionSetCompletedIcon),
+                className: a()(G.alertActionIcon, G.alertActionSetCompletedIcon),
                 ...t
             });
-        case f.d.SUBMIT_FEEDBACK:
-            return (0, i.jsx)(_.FlagIcon, {
+        case g.d.SUBMIT_FEEDBACK:
+            return (0, i.jsx)(m.FlagIcon, {
                 size: 'xs',
                 color: 'currentColor',
-                className: r()(w.alertActionIcon),
+                className: a()(G.alertActionIcon),
                 ...t
             });
         default:
             return null;
     }
 }
-function z(e) {
+function Y(e) {
     let { alertAction: t, guildId: n } = e,
-        a = (0, d.e7)([A.default], () => A.default.getUser(t.actor), [t.actor]);
+        r = (0, d.e7)([T.default], () => T.default.getUser(t.actor), [t.actor]);
     try {
         let e = parseInt(t.actionType);
-        if (null == a) return K(e, {});
-        let s = (function (e, t, n) {
+        if (null == r) return K(e, {});
+        let l = (function (e, t, n) {
             var i;
-            let a = null !== (i = x.ZP.getNickname(n, null, t)) && void 0 !== i ? i : R.ZP.getUserTag(t),
-                s = o()(e.ts),
-                r = ''.concat(a, ' ').concat(s.fromNow());
+            let r = null !== (i = S.ZP.getNickname(n, null, t)) && void 0 !== i ? i : b.ZP.getUserTag(t),
+                l = s()(e.ts),
+                a = ''.concat(r, ' ').concat(l.fromNow());
             try {
                 switch (parseInt(e.actionType)) {
-                    case f.d.DELETE_USER_MESSAGE:
-                        return F.Z.Messages.GUILD_AUTOMOD_ALERT_ACTION_ICON_TOOLTIP_DELETE_MESSAGE.format({
-                            userName: a,
-                            timestamp: s.fromNow()
+                    case g.d.DELETE_USER_MESSAGE:
+                        return F.intl.formatToPlainString(F.t.BtKE9v, {
+                            userName: r,
+                            timestamp: l.fromNow()
                         });
-                    case f.d.SET_COMPLETED:
-                        return F.Z.Messages.GUILD_AUTOMOD_ALERT_ACTION_ICON_TOOLTIP_SET_COMPLETED.format({
-                            userName: a,
-                            timestamp: s.fromNow()
+                    case g.d.SET_COMPLETED:
+                        return F.intl.formatToPlainString(F.t.dyo9UV, {
+                            userName: r,
+                            timestamp: l.fromNow()
                         });
-                    case f.d.SUBMIT_FEEDBACK:
-                        return F.Z.Messages.GUILD_AUTOMOD_ALERT_ACTION_ICON_TOOLTIP_SUBMIT_FEEDBACK.format({
-                            userName: a,
-                            timestamp: s.fromNow()
+                    case g.d.SUBMIT_FEEDBACK:
+                        return F.intl.formatToPlainString(F.t['C9/kIC'], {
+                            userName: r,
+                            timestamp: l.fromNow()
                         });
                     default:
-                        return r;
+                        return a;
                 }
             } catch (e) {
-                return r;
+                return a;
             }
-        })(t, a, n);
-        return (0, i.jsx)(_.Tooltip, {
-            text: s,
+        })(t, r, n);
+        return (0, i.jsx)(m.Tooltip, {
+            text: l,
             children: (t) => K(e, t)
         });
     } catch (e) {
@@ -169,12 +169,12 @@ function z(e) {
 }
 function X(e) {
     let { alertActionsExecution: t, guildId: n } = e,
-        a = Object.values(t.actions).sort((e, t) => (e.actionType < t.actionType ? 1 : -1));
+        r = Object.values(t.actions).sort((e, t) => (e.actionType < t.actionType ? 1 : -1));
     return (0, i.jsx)('div', {
-        className: w.alertActionsIconContainer,
-        children: a.map((e) =>
+        className: G.alertActionsIconContainer,
+        children: r.map((e) =>
             (0, i.jsx)(
-                z,
+                Y,
                 {
                     alertAction: e,
                     guildId: n
@@ -184,55 +184,55 @@ function X(e) {
         )
     });
 }
-let Q = a.memo(function (e) {
+let Q = r.memo(function (e) {
     let t,
-        { message: n, channel: a, embedChannel: s, compact: r, interactionUserId: l } = e,
-        o = V(n, a),
-        c = H(a, n.author),
-        u = (0, M.ZP)(n),
-        d = (0, Z.CF)(
+        { message: n, channel: r, embedChannel: l, compact: a, interactionUserId: o } = e,
+        s = V(n, r),
+        c = H(r, n.author),
+        u = (0, j.ZP)(n),
+        d = (0, P.CF)(
             {
                 message: n,
-                channel: a,
+                channel: r,
                 author: u,
-                guildId: null == a ? void 0 : a.guild_id,
-                compact: r,
-                ...o
+                guildId: null == r ? void 0 : r.guild_id,
+                compact: a,
+                ...s
             },
             c
         ),
-        E = A.default.getUser(l),
-        I = V(n, a),
-        m = H(a, E);
-    if (null != E) {
-        let e = (0, M.ij)(E, a),
-            i = (0, Z.CF)(
+        f = T.default.getUser(o),
+        h = V(n, r),
+        p = H(r, f);
+    if (null != f) {
+        let e = (0, j.ij)(f, r),
+            i = (0, P.CF)(
                 {
                     message: n,
-                    channel: a,
+                    channel: r,
                     author: e,
-                    guildId: null == a ? void 0 : a.guild_id,
-                    compact: r,
-                    ...I
+                    guildId: null == r ? void 0 : r.guild_id,
+                    compact: a,
+                    ...h
                 },
-                m
+                p
             );
         t = () => i;
     }
-    return (0, i.jsx)(_.Text, {
+    return (0, i.jsx)(m.Text, {
         variant: 'text-md/normal',
         color: 'header-primary',
         tag: 'span',
-        className: w.spanCorrection,
-        children: (0, T.Mq)(
+        className: G.spanCorrection,
+        children: (0, _.Mq)(
             n,
-            s,
+            l,
             () =>
                 (0, i.jsx)('div', {
-                    className: w.channelNameContainer,
-                    children: (0, i.jsx)(O.Z, {
-                        channel: s,
-                        className: w.channelName,
+                    className: G.channelNameContainer,
+                    children: (0, i.jsx)(Z.Z, {
+                        channel: l,
+                        className: G.channelName,
                         openChatWithoutConnecting: !0
                     })
                 }),
@@ -243,158 +243,158 @@ let Q = a.memo(function (e) {
 });
 function q(e) {
     var t;
-    let { id: n, compact: s, message: l, channel: o } = e,
+    let { id: n, compact: l, message: o, channel: s } = e,
         {
-            avatarSrc: g,
-            eventHandlers: { onMouseEnter: A, onMouseLeave: x }
-        } = (0, j.m)(!0),
-        { onFocus: R, ...M } = (0, c.JA)(null != n ? n : ''),
-        { isFocused: O, handleFocus: b, handleBlur: D } = (0, P.bb)(R),
-        y = (0, d.e7)([I.Z], () => I.Z.keyboardModeEnabled),
-        H = (0, d.e7)([S.Z], () => S.Z.can(B.Plq.MANAGE_MESSAGES, o), [o]),
-        { ruleName: K, embedChannel: z, decisionId: q, keywordMatchedContent: J, keyword: $, content: ee, flaggedMessageId: et, timeoutDuration: en, decisionReason: ei, alertActionsExecution: ea, quarantineType: es, interactionUserId: er } = (0, T.ZP)(l),
-        el = a.useMemo(() => (0, v.k$)(ee, J, o.id), [ee, J, o]),
-        { selected: eo, ...ec } = V(l, o),
-        eu = a.useCallback(() => {
-            (0, h._s)(l.id, ee, q, o);
-        }, [l.id, ee, q, o]),
-        ed = a.useCallback(
+            avatarSrc: v,
+            eventHandlers: { onMouseEnter: T, onMouseLeave: S }
+        } = (0, M.m)(!0),
+        { onFocus: b, ...j } = (0, c.JA)(null != n ? n : ''),
+        { isFocused: Z, handleFocus: y, handleBlur: O } = (0, L.bb)(b),
+        D = (0, d.e7)([h.Z], () => h.Z.keyboardModeEnabled),
+        H = (0, d.e7)([N.Z], () => N.Z.can(B.Plq.MANAGE_MESSAGES, s), [s]),
+        { ruleName: K, embedChannel: Y, decisionId: q, keywordMatchedContent: J, keyword: $, content: ee, flaggedMessageId: et, timeoutDuration: en, decisionReason: ei, alertActionsExecution: er, quarantineType: el, interactionUserId: ea } = (0, _.ZP)(o),
+        eo = r.useMemo(() => (0, A.k$)(ee, J, s.id), [ee, J, s]),
+        { selected: es, ...ec } = V(o, s),
+        eu = r.useCallback(() => {
+            (0, C._s)(o.id, ee, q, s);
+        }, [o.id, ee, q, s]),
+        ed = r.useCallback(
             (e) => {
-                if (null != et && null != z) e.stopPropagation(), e.preventDefault(), (0, p.Z)(B.Z5c.CHANNEL(null == z ? void 0 : z.guild_id, null == z ? void 0 : z.id, et));
+                if (null != et && null != Y) e.stopPropagation(), e.preventDefault(), (0, I.Z)(B.Z5c.CHANNEL(null == Y ? void 0 : Y.guild_id, null == Y ? void 0 : Y.id, et));
             },
-            [z, et]
+            [Y, et]
         ),
-        e_ = a.useCallback(
+        em = r.useCallback(
             (e) => {
-                null != z &&
-                    (E.default.selectChannel({
-                        guildId: z.guild_id,
+                null != Y &&
+                    (f.default.selectChannel({
+                        guildId: Y.guild_id,
                         channelId: e,
-                        messageId: l.id
+                        messageId: o.id
                     }),
-                    (0, C.Kh)(e));
+                    (0, x.Kh)(e));
             },
-            [l, z]
+            [o, Y]
         ),
-        eE = a.useCallback(() => {
-            (0, N.Xx)(l.id, o, f.d.DELETE_USER_MESSAGE);
-        }, [o, l.id]),
-        eI = (0, G.L9)(Number(en)),
-        em = null != ei,
-        ef = H && null != et && (null == ea || !ea.actions.hasOwnProperty(f.d.DELETE_USER_MESSAGE)),
-        eT = l.embeds.length > 0 ? (null === (t = l.embeds[0].fields.find((e) => 'channel_id' === e.rawName)) || void 0 === t ? void 0 : t.rawValue) : null,
-        eh = null != eT;
+        ef = r.useCallback(() => {
+            (0, E.Xx)(o.id, s, g.d.DELETE_USER_MESSAGE);
+        }, [s, o.id]),
+        eh = (0, U.L9)(Number(en)),
+        ep = null != ei,
+        eg = H && null != et && (null == er || !er.actions.hasOwnProperty(g.d.DELETE_USER_MESSAGE)),
+        e_ = o.embeds.length > 0 ? (null === (t = o.embeds[0].fields.find((e) => 'channel_id' === e.rawName)) || void 0 === t ? void 0 : t.rawValue) : null,
+        eC = null != e_;
     return (0, i.jsx)('div', {
-        onMouseEnter: A,
-        onMouseLeave: x,
-        children: (0, i.jsx)(U.Z, {
-            className: r()(w.mainContainer, { [w.compact]: s }),
-            iconNode: s ? null : (0, i.jsx)(j.S, { src: g }),
-            iconContainerClassName: w.iconContainer,
-            compact: s,
+        onMouseEnter: T,
+        onMouseLeave: S,
+        children: (0, i.jsx)(k.Z, {
+            className: a()(G.mainContainer, { [G.compact]: l }),
+            iconNode: l ? null : (0, i.jsx)(M.S, { src: v }),
+            iconContainerClassName: G.iconContainer,
+            compact: l,
             children: (0, i.jsxs)('div', {
-                className: r()(w.content, { [w.compact]: s }),
+                className: a()(G.content, { [G.compact]: l }),
                 children: [
-                    (0, i.jsx)(Z.nD, {
-                        message: l,
-                        messageClassname: w.spanCorrection,
-                        className: r()(w.usernameContainer, w.spanCorrection, { [w.compact]: s }),
+                    (0, i.jsx)(P.nD, {
+                        message: o,
+                        messageClassname: G.spanCorrection,
+                        className: a()(G.usernameContainer, G.spanCorrection, { [G.compact]: l }),
                         username: (0, i.jsxs)('div', {
-                            className: w.spanCorrection,
+                            className: G.spanCorrection,
                             children: [
-                                (0, i.jsx)(_.Text, {
+                                (0, i.jsx)(m.Text, {
                                     variant: 'text-md/normal',
                                     color: 'text-brand',
                                     tag: 'span',
-                                    className: w.username,
-                                    children: F.Z.Messages.GUILD_AUTOMOD_USERNAME
+                                    className: G.username,
+                                    children: F.intl.string(F.t.hG1StL)
                                 }),
-                                (0, i.jsx)(m.Z, {
-                                    type: k.Hb.SYSTEM_DM,
-                                    className: w.systemTag
+                                (0, i.jsx)(p.Z, {
+                                    type: w.Hb.SYSTEM_DM,
+                                    className: G.systemTag
                                 }),
                                 (0, i.jsx)(Q, {
-                                    message: l,
-                                    channel: o,
-                                    embedChannel: z,
-                                    compact: s,
-                                    interactionUserId: er
+                                    message: o,
+                                    channel: s,
+                                    embedChannel: Y,
+                                    compact: l,
+                                    interactionUserId: ea
                                 })
                             ]
                         }),
-                        compact: s,
+                        compact: l,
                         showTimestamp: !0
                     }),
                     (0, i.jsx)('div', {
-                        className: r()(w.messageContent, { [w.compact]: s }),
-                        children: (0, i.jsx)(L.Z, {
-                            ...M,
-                            message: l,
-                            channel: z,
-                            content: el,
-                            compact: s,
+                        className: a()(G.messageContent, { [G.compact]: l }),
+                        children: (0, i.jsx)(R.Z, {
+                            ...j,
+                            message: o,
+                            channel: Y,
+                            content: eo,
+                            compact: l,
                             withFooter: !0,
                             hideTimestamp: !0,
-                            className: r()(w.embedCard, {
-                                [w.compact]: s,
-                                [w.selected]: eo || (y && O),
-                                [w.isClickable]: null != et && null != z
+                            className: a()(G.embedCard, {
+                                [G.compact]: l,
+                                [G.selected]: es || (D && Z),
+                                [G.isClickable]: null != et && null != Y
                             }),
                             childrenAccessories: (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsxs)('div', {
-                                        className: w.centeredRowContainer,
+                                        className: G.centeredRowContainer,
                                         children: [
                                             null != $ &&
                                                 (0, i.jsxs)(i.Fragment, {
                                                     children: [
-                                                        (0, i.jsx)(_.Text, {
+                                                        (0, i.jsx)(m.Text, {
                                                             variant: 'text-xs/medium',
                                                             color: 'text-muted',
                                                             tag: 'span',
-                                                            children: F.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_KEYWORD.format({ keyword: $ })
+                                                            children: F.intl.format(F.t.SYIUTU, { keyword: $ })
                                                         }),
-                                                        (0, i.jsx)('div', { className: r()(w.dot, w.dotMargin) })
+                                                        (0, i.jsx)('div', { className: a()(G.dot, G.dotMargin) })
                                                     ]
                                                 }),
                                             null != K &&
-                                                (0, i.jsx)(_.Text, {
+                                                (0, i.jsx)(m.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-muted',
                                                     tag: 'span',
-                                                    children: F.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_RULE_NAME.format({ ruleName: K })
+                                                    children: F.intl.format(F.t.ZoOyKC, { ruleName: K })
                                                 }),
-                                            null != eI &&
+                                            null != eh &&
                                                 (0, i.jsxs)(i.Fragment, {
                                                     children: [
-                                                        (0, i.jsx)('div', { className: r()(w.dot, w.dotMargin) }),
-                                                        (0, i.jsx)(_.Text, {
+                                                        (0, i.jsx)('div', { className: a()(G.dot, G.dotMargin) }),
+                                                        (0, i.jsx)(m.Text, {
                                                             variant: 'text-xs/medium',
                                                             color: 'text-muted',
                                                             tag: 'span',
-                                                            className: w.__invalid_footerText,
-                                                            children: F.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_TIMEOUT_DURATION.format({ duration: eI })
+                                                            className: G.__invalid_footerText,
+                                                            children: F.intl.format(F.t['3LYql5'], { duration: eh })
                                                         })
                                                     ]
                                                 }),
-                                            null != es &&
+                                            null != el &&
                                                 (0, i.jsxs)(i.Fragment, {
                                                     children: [
-                                                        (0, i.jsx)('div', { className: r()(w.dot, w.dotMargin) }),
-                                                        (0, i.jsx)(_.Text, {
+                                                        (0, i.jsx)('div', { className: a()(G.dot, G.dotMargin) }),
+                                                        (0, i.jsx)(m.Text, {
                                                             variant: 'text-xs/medium',
                                                             color: 'text-muted',
                                                             tag: 'span',
-                                                            className: w.titleCase,
-                                                            children: F.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_REASON.format({ reason: (0, T.hU)(es) })
+                                                            className: G.titleCase,
+                                                            children: F.intl.format(F.t['26bB2N'], { reason: (0, _.hU)(el) })
                                                         })
                                                     ]
                                                 })
                                         ]
                                     }),
-                                    em
+                                    ep
                                         ? (0, i.jsx)(W, {
-                                              children: (0, i.jsx)(_.Text, {
+                                              children: (0, i.jsx)(m.Text, {
                                                   variant: 'text-xs/medium',
                                                   color: 'text-normal',
                                                   tag: 'span',
@@ -406,105 +406,105 @@ function q(e) {
                             }),
                             popoutProps: ec,
                             zalgo: !0,
-                            onFocus: b,
-                            onBlur: D,
+                            onFocus: y,
+                            onBlur: O,
                             onClick: ed
                         })
                     }),
-                    (0, i.jsx)(Y, {
-                        compact: s,
+                    (0, i.jsx)(z, {
+                        compact: l,
                         children: (0, i.jsxs)('div', {
-                            className: r()(w.centeredRowContainer, w.buttonContainer, { [w.compact]: s }),
+                            className: a()(G.centeredRowContainer, G.buttonContainer, { [G.compact]: l }),
                             children: [
-                                (0, i.jsx)(_.Button, {
+                                (0, i.jsx)(m.Button, {
                                     onClick: (e) => {
                                         var t;
                                         null === (t = ec.onContextMenuModerateUser) || void 0 === t || t.call(ec, e);
                                     },
-                                    color: _.Button.Colors.LINK,
-                                    look: _.Button.Looks.LINK,
-                                    size: _.Button.Sizes.SMALL,
-                                    className: w.buttonStyle,
+                                    color: m.Button.Colors.LINK,
+                                    look: m.Button.Looks.LINK,
+                                    size: m.Button.Sizes.SMALL,
+                                    className: G.buttonStyle,
                                     children: (0, i.jsxs)('div', {
-                                        className: w.footerAction,
+                                        className: G.footerAction,
                                         children: [
-                                            (0, i.jsx)(_.ShieldIcon, {
+                                            (0, i.jsx)(m.ShieldIcon, {
                                                 size: 'xs',
                                                 color: u.Z.BLUE_345,
-                                                className: w.footerIcon
+                                                className: G.footerIcon
                                             }),
-                                            (0, i.jsx)(_.Text, {
+                                            (0, i.jsx)(m.Text, {
                                                 variant: 'text-xs/normal',
                                                 color: 'text-link',
-                                                children: F.Z.Messages.ACTIONS
+                                                children: F.intl.string(F.t.DEoVWV)
                                             })
                                         ]
                                     })
                                 }),
-                                eh
+                                eC
                                     ? (0, i.jsxs)(i.Fragment, {
                                           children: [
-                                              (0, i.jsx)('div', { className: w.dot }),
-                                              (0, i.jsx)(_.Button, {
-                                                  onClick: () => e_(eT),
-                                                  color: _.Button.Colors.LINK,
-                                                  look: _.Button.Looks.LINK,
-                                                  size: _.Button.Sizes.SMALL,
-                                                  className: w.buttonStyle,
+                                              (0, i.jsx)('div', { className: G.dot }),
+                                              (0, i.jsx)(m.Button, {
+                                                  onClick: () => em(e_),
+                                                  color: m.Button.Colors.LINK,
+                                                  look: m.Button.Looks.LINK,
+                                                  size: m.Button.Sizes.SMALL,
+                                                  className: G.buttonStyle,
                                                   children: (0, i.jsx)('div', {
-                                                      className: w.footerAction,
-                                                      children: (0, i.jsx)(_.Text, {
+                                                      className: G.footerAction,
+                                                      children: (0, i.jsx)(m.Text, {
                                                           variant: 'text-xs/normal',
                                                           color: 'text-link',
-                                                          children: F.Z.Messages.GUILD_AUTOMOD_JUMP_TO_SURROUNDING
+                                                          children: F.intl.string(F.t.jtkj09)
                                                       })
                                                   })
                                               })
                                           ]
                                       })
                                     : null,
-                                (0, i.jsx)('div', { className: w.dot }),
-                                (0, i.jsx)(_.Button, {
+                                (0, i.jsx)('div', { className: G.dot }),
+                                (0, i.jsx)(m.Button, {
                                     onClick: eu,
-                                    color: _.Button.Colors.LINK,
-                                    look: _.Button.Looks.LINK,
-                                    size: _.Button.Sizes.SMALL,
-                                    className: w.buttonStyle,
+                                    color: m.Button.Colors.LINK,
+                                    look: m.Button.Looks.LINK,
+                                    size: m.Button.Sizes.SMALL,
+                                    className: G.buttonStyle,
                                     children: (0, i.jsx)('div', {
-                                        className: w.footerAction,
-                                        children: (0, i.jsx)(_.Text, {
+                                        className: G.footerAction,
+                                        children: (0, i.jsx)(m.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'text-link',
-                                            children: F.Z.Messages.GUILD_AUTOMOD_REPORT_ISSUES
+                                            children: F.intl.string(F.t['94JbMz'])
                                         })
                                     })
                                 }),
-                                ef
+                                eg
                                     ? (0, i.jsxs)(i.Fragment, {
                                           children: [
-                                              (0, i.jsx)('div', { className: w.dot }),
-                                              (0, i.jsx)(_.Button, {
-                                                  onClick: eE,
-                                                  color: _.Button.Colors.LINK,
-                                                  look: _.Button.Looks.LINK,
-                                                  size: _.Button.Sizes.SMALL,
-                                                  className: w.buttonStyle,
+                                              (0, i.jsx)('div', { className: G.dot }),
+                                              (0, i.jsx)(m.Button, {
+                                                  onClick: ef,
+                                                  color: m.Button.Colors.LINK,
+                                                  look: m.Button.Looks.LINK,
+                                                  size: m.Button.Sizes.SMALL,
+                                                  className: G.buttonStyle,
                                                   children: (0, i.jsx)('div', {
-                                                      className: w.footerAction,
-                                                      children: (0, i.jsx)(_.Text, {
+                                                      className: G.footerAction,
+                                                      children: (0, i.jsx)(m.Text, {
                                                           variant: 'text-xs/normal',
                                                           color: 'text-link',
-                                                          children: F.Z.Messages.GUILD_AUTOMOD_ALERT_DELETE_MEMBERS_MESSAGE
+                                                          children: F.intl.string(F.t['3A52tb'])
                                                       })
                                                   })
                                               })
                                           ]
                                       })
                                     : null,
-                                null != ea
+                                null != er
                                     ? (0, i.jsx)(X, {
-                                          alertActionsExecution: ea,
-                                          guildId: o.guild_id
+                                          alertActionsExecution: er,
+                                          guildId: s.guild_id
                                       })
                                     : null
                             ]

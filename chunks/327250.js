@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return M;
     }
 });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    a = n.n(s),
-    l = n(399606),
-    r = n(481060),
+var l = n(120356),
+    r = n.n(l),
+    a = n(399606),
+    s = n(481060),
     o = n(493683),
     c = n(906732),
     u = n(979264),
@@ -16,79 +16,79 @@ var s = n(120356),
     h = n(251794),
     m = n(386696),
     p = n(910693),
-    _ = n(314897),
-    f = n(271383),
-    E = n(430824),
-    g = n(496675),
-    C = n(158776),
-    I = n(885110),
-    T = n(594174),
-    x = n(572004),
-    S = n(5192),
-    v = n(51144),
-    N = n(981631),
-    A = n(308083),
-    Z = n(689938),
-    M = n(354418);
-function b(e) {
-    let { user: t, guildId: n, onClose: s } = e,
-        a = t.id,
-        o = (0, l.e7)([I.Z, C.Z, _.default], () => (a === _.default.getId() ? I.Z.getStatus() : C.Z.getStatus(a, n)), [a, n]);
+    f = n(314897),
+    g = n(271383),
+    C = n(430824),
+    x = n(496675),
+    v = n(158776),
+    _ = n(885110),
+    I = n(594174),
+    E = n(572004),
+    b = n(5192),
+    S = n(51144),
+    Z = n(981631),
+    T = n(308083),
+    N = n(388032),
+    j = n(354418);
+function A(e) {
+    let { user: t, guildId: n, onClose: l } = e,
+        r = t.id,
+        o = (0, a.e7)([_.Z, v.Z, f.default], () => (r === f.default.getId() ? _.Z.getStatus() : v.Z.getStatus(r, n)), [r, n]);
     return (0, i.jsxs)('div', {
-        className: M.topRow,
+        className: j.topRow,
         children: [
             (0, i.jsxs)('div', {
-                className: M.memberNameContainer,
+                className: j.memberNameContainer,
                 children: [
                     (0, i.jsx)('div', {
-                        className: M.memberAvatar,
-                        children: (0, i.jsx)(r.Avatar, {
+                        className: j.memberAvatar,
+                        children: (0, i.jsx)(s.Avatar, {
                             src: t.getAvatarURL(n, 48),
                             'aria-label': t.username,
-                            size: r.AvatarSizes.SIZE_48,
+                            size: s.AvatarSizes.SIZE_48,
                             status: o
                         })
                     }),
                     (0, i.jsxs)('div', {
-                        className: M.memberNameAndTagContainer,
+                        className: j.memberNameAndTagContainer,
                         children: [
                             (0, i.jsxs)('div', {
-                                className: M.memberNameTextContainer,
+                                className: j.memberNameTextContainer,
                                 children: [
-                                    (0, i.jsx)(r.Text, {
+                                    (0, i.jsx)(s.Text, {
                                         variant: 'text-lg/medium',
-                                        children: (0, i.jsx)(r.NameWithRole, {
-                                            name: S.ZP.getName(n, null, t),
-                                            color: r.tokens.colors.HEADER_PRIMARY.css
+                                        children: (0, i.jsx)(s.NameWithRole, {
+                                            name: b.ZP.getName(n, null, t),
+                                            color: s.tokens.colors.HEADER_PRIMARY.css
                                         })
                                     }),
                                     (0, i.jsx)(u.ZP, {
                                         clan: null == t ? void 0 : t.clan,
                                         userId: null == t ? void 0 : t.id,
                                         contextGuildId: n,
-                                        badgeSize: A.NC.SIZE_16,
+                                        badgeSize: T.NC.SIZE_16,
                                         textVariant: 'heading-md/semibold',
-                                        className: M.memberClanTag,
-                                        containerClassName: M.memberClanTagContainer
+                                        className: j.memberClanTag,
+                                        containerClassName: j.memberClanTagContainer
                                     })
                                 ]
                             }),
-                            (0, i.jsx)(r.Text, {
+                            (0, i.jsx)(s.Text, {
                                 variant: 'text-md/medium',
                                 color: 'text-normal',
-                                children: v.ZP.getUserTag(t)
+                                children: S.ZP.getUserTag(t)
                             })
                         ]
                     })
                 ]
             }),
-            (0, i.jsx)(r.Text, {
+            (0, i.jsx)(s.Text, {
                 variant: 'text-md/medium',
                 color: 'text-normal',
-                children: (0, i.jsx)(r.Clickable, {
-                    className: M.closeAction,
-                    onClick: s,
-                    children: (0, i.jsx)(r.XSmallIcon, {
+                children: (0, i.jsx)(s.Clickable, {
+                    className: j.closeAction,
+                    onClick: l,
+                    children: (0, i.jsx)(s.XSmallIcon, {
                         size: 'md',
                         color: 'currentColor'
                     })
@@ -97,184 +97,184 @@ function b(e) {
         ]
     });
 }
-function R(e) {
-    let { tag: t = 'div', disabled: n, children: s, onClick: l, ...o } = e;
-    return (0, i.jsx)(r.Clickable, {
+function y(e) {
+    let { tag: t = 'div', disabled: n, children: l, onClick: a, ...o } = e;
+    return (0, i.jsx)(s.Clickable, {
         ...o,
         tag: t,
-        className: a()(M.bottomRowAction, { [M.bottomRowActionDisabled]: n }),
-        onClick: n ? void 0 : l,
+        className: r()(j.bottomRowAction, { [j.bottomRowActionDisabled]: n }),
+        onClick: n ? void 0 : a,
         children: (0, i.jsx)('div', {
-            className: M.innerBottomRowAction,
-            children: s
+            className: j.innerBottomRowAction,
+            children: l
         })
     });
 }
-function L(e) {
-    let { user: t, member: s, guildId: a } = e,
-        u = (0, l.e7)([E.Z], () => E.Z.getGuild(a)),
+function P(e) {
+    let { user: t, member: l, guildId: r } = e,
+        u = (0, a.e7)([C.Z], () => C.Z.getGuild(r)),
         {
-            canKickUser: f,
-            canBanUser: C,
-            canModerateMembers: I
-        } = (0, l.cj)(
-            [g.Z, T.default, E.Z],
+            canKickUser: g,
+            canBanUser: v,
+            canModerateMembers: _
+        } = (0, a.cj)(
+            [x.Z, I.default, C.Z],
             () => ({
-                canKickUser: null != u && g.Z.canManageUser(N.Plq.KICK_MEMBERS, t, u),
-                canBanUser: null != u && g.Z.canManageUser(N.Plq.BAN_MEMBERS, t, u),
-                canModerateMembers: null != u && (0, m.F)(u.id, t.id, [T.default, E.Z, g.Z])
+                canKickUser: null != u && x.Z.canManageUser(Z.Plq.KICK_MEMBERS, t, u),
+                canBanUser: null != u && x.Z.canManageUser(Z.Plq.BAN_MEMBERS, t, u),
+                canModerateMembers: null != u && (0, m.F)(u.id, t.id, [I.default, C.Z, x.Z])
             }),
             [t, u]
         ),
-        S = (0, d.b)(s),
-        { analyticsLocations: v, newestAnalyticsLocation: A } = (0, c.ZP)(),
-        b = (0, p.sE)(a, {
+        b = (0, d.b)(l),
+        { analyticsLocations: S, newestAnalyticsLocation: T } = (0, c.ZP)(),
+        A = (0, p.sE)(r, {
             targetUserId: t.id,
-            location: A,
-            locations: v
+            location: T,
+            locations: S
         }),
-        L = (0, l.e7)([_.default], () => _.default.getId() === (null == t ? void 0 : t.id));
+        P = (0, a.e7)([f.default], () => f.default.getId() === (null == t ? void 0 : t.id));
     return (0, i.jsxs)('div', {
-        className: M.bottomRow,
+        className: j.bottomRow,
         children: [
-            (0, i.jsxs)(R, {
-                disabled: L,
-                'aria-label': Z.Z.Messages.SEND_DM,
+            (0, i.jsxs)(y, {
+                disabled: P,
+                'aria-label': N.intl.string(N.t['g33r/P']),
                 onClick: () => {
                     o.Z.openPrivateChannel(t.id);
                 },
                 children: [
-                    (0, i.jsx)(r.ChatIcon, {
+                    (0, i.jsx)(s.ChatIcon, {
                         size: 'custom',
                         color: 'currentColor',
                         width: 22,
                         height: 22
                     }),
-                    (0, i.jsx)(r.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: Z.Z.Messages.SEND_DM
+                        children: N.intl.string(N.t['g33r/P'])
                     })
                 ]
             }),
-            (0, i.jsxs)(R, {
-                disabled: !f,
-                'aria-label': Z.Z.Messages.KICK,
+            (0, i.jsxs)(y, {
+                disabled: !g,
+                'aria-label': N.intl.string(N.t['3glT6e']),
                 onClick: () => {
-                    (0, r.openModalLazy)(async () => {
+                    (0, s.openModalLazy)(async () => {
                         let { default: e } = await n.e('5454').then(n.bind(n, 854360));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
-                                location: A,
-                                guildId: a,
+                                location: T,
+                                guildId: r,
                                 user: t
                             });
                     });
                 },
                 children: [
-                    (0, i.jsx)(r.UserMinusIcon, {
+                    (0, i.jsx)(s.UserMinusIcon, {
                         size: 'custom',
                         width: 22,
                         height: 22,
-                        color: r.tokens.colors.TEXT_NORMAL.css
+                        color: s.tokens.colors.TEXT_NORMAL.css
                     }),
-                    (0, i.jsx)(r.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: Z.Z.Messages.KICK
+                        children: N.intl.string(N.t['3glT6e'])
                     })
                 ]
             }),
-            (0, i.jsxs)(R, {
-                disabled: !C,
-                'aria-label': Z.Z.Messages.BAN,
+            (0, i.jsxs)(y, {
+                disabled: !v,
+                'aria-label': N.intl.string(N.t['5MBJ5O']),
                 onClick: () => {
-                    (0, r.openModalLazy)(async () => {
+                    (0, s.openModalLazy)(async () => {
                         let { default: e } = await n.e('43350').then(n.bind(n, 98746));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
-                                location: A,
-                                guildId: a,
+                                location: T,
+                                guildId: r,
                                 user: t
                             });
                     });
                 },
                 children: [
-                    (0, i.jsx)(r.HammerIcon, {
+                    (0, i.jsx)(s.HammerIcon, {
                         size: 'custom',
                         width: 22,
                         height: 22,
-                        color: r.tokens.colors.TEXT_NORMAL.css
+                        color: s.tokens.colors.TEXT_NORMAL.css
                     }),
-                    (0, i.jsx)(r.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: Z.Z.Messages.BAN
+                        children: N.intl.string(N.t['5MBJ5O'])
                     })
                 ]
             }),
-            (0, i.jsxs)(R, {
-                disabled: !I,
-                'aria-label': Z.Z.Messages.TIMEOUT_USER,
+            (0, i.jsxs)(y, {
+                disabled: !_,
+                'aria-label': N.intl.string(N.t.kTlLr6),
                 onClick: () => {
-                    S ? (0, h.q)(s.guildId, s.userId, v) : (0, h.z)(s.guildId, s.userId, v);
+                    b ? (0, h.q)(l.guildId, l.userId, S) : (0, h.z)(l.guildId, l.userId, S);
                 },
                 children: [
-                    (0, i.jsx)(r.ClockWarningIcon, {
+                    (0, i.jsx)(s.ClockWarningIcon, {
                         size: 'custom',
                         width: 22,
                         height: 22,
-                        color: r.tokens.colors.TEXT_NORMAL.css
+                        color: s.tokens.colors.TEXT_NORMAL.css
                     }),
-                    (0, i.jsx)(r.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: S ? Z.Z.Messages.REMOVE : Z.Z.Messages.TIMEOUT_USER
+                        children: b ? N.intl.string(N.t.N86XcH) : N.intl.string(N.t.kTlLr6)
                     })
                 ]
             }),
-            (0, i.jsxs)(R, {
-                'aria-label': Z.Z.Messages.COPY_ID,
+            (0, i.jsxs)(y, {
+                'aria-label': N.intl.string(N.t.IHTjzM),
                 onClick: () => {
-                    b(p.jQ.COPY_ID), (0, x.JG)(t.id);
+                    A(p.jQ.COPY_ID), (0, E.JG)(t.id);
                 },
-                disabled: !x.wS,
+                disabled: !E.wS,
                 children: [
-                    (0, i.jsx)(r.IdIcon, {
+                    (0, i.jsx)(s.IdIcon, {
                         size: 'custom',
                         width: 22,
                         height: 22,
-                        color: r.tokens.colors.TEXT_NORMAL.css
+                        color: s.tokens.colors.TEXT_NORMAL.css
                     }),
-                    (0, i.jsx)(r.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: Z.Z.Messages.COPY_ID
+                        children: N.intl.string(N.t.IHTjzM)
                     })
                 ]
             })
         ]
     });
 }
-function P(e) {
-    let { userId: t, guildId: n, onClose: s } = e,
-        a = (0, l.e7)([T.default], () => T.default.getUser(t), [t]),
-        r = (0, l.e7)([f.ZP], () => f.ZP.getMember(n, t), [n, t]);
-    return null == a || null == r
+function M(e) {
+    let { userId: t, guildId: n, onClose: l } = e,
+        r = (0, a.e7)([I.default], () => I.default.getUser(t), [t]),
+        s = (0, a.e7)([g.ZP], () => g.ZP.getMember(n, t), [n, t]);
+    return null == r || null == s
         ? null
         : (0, i.jsxs)('div', {
-              className: M.container,
+              className: j.container,
               children: [
-                  (0, i.jsx)(b, {
-                      user: a,
+                  (0, i.jsx)(A, {
+                      user: r,
                       guildId: n,
-                      onClose: s
+                      onClose: l
                   }),
-                  (0, i.jsx)(L, {
-                      user: a,
-                      member: r,
+                  (0, i.jsx)(P, {
+                      user: r,
+                      member: s,
                       guildId: n
                   })
               ]

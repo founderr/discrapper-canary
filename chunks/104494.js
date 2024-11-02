@@ -1,6 +1,6 @@
 n.d(t, {
     Ng: function () {
-        return E;
+        return _;
     },
     Wp: function () {
         return d;
@@ -24,10 +24,10 @@ function d(e, t) {
     var n;
     return null != e && new Set(null === (n = e.discount) || void 0 === n ? void 0 : n.plan_ids.map((e) => u.GP[e].skuId)).has(t);
 }
-function _(e, t) {
+function f(e, t) {
     let n = (0, i.e7)([o.Z], () => o.Z.getUserDiscountOffer(e)),
         [u, d] = r.useState(c(n)),
-        _ = (0, i.e7)([s.default], () => (0, l.I5)(s.default.getCurrentUser()));
+        f = (0, i.e7)([s.default], () => (0, l.I5)(s.default.getCurrentUser()));
     return (
         r.useEffect(() => {
             if (null == n || null == n.expires_at) return;
@@ -41,14 +41,14 @@ function _(e, t) {
                 };
             return t(), () => e.stop();
         }, [u, n]),
-        u || (_ && !t) ? null : n
+        u || (f && !t) ? null : n
     );
 }
-function E() {
+function _() {
     var e, t;
-    let n = _(u.hs),
-        r = _(u.RU),
-        i = _(u.rB),
-        a = _(u.ih);
+    let n = f(u.hs),
+        r = f(u.RU),
+        i = f(u.rB),
+        a = f(u.ih);
     return null !== (t = null !== (e = null != n ? n : r) && void 0 !== e ? e : i) && void 0 !== t ? t : a;
 }

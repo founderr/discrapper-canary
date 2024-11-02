@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     content: 'content_df0aed',
     bulletContainer: 'bulletContainer_df0aed',
     iconContainer: 'iconContainer_df0aed',

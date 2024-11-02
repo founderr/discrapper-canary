@@ -1,56 +1,56 @@
-var s,
-    a,
-    i,
+var i,
     r,
-    l = n(442837),
+    l,
+    s,
+    a = n(442837),
     o = n(570140),
     c = n(40572),
     d = n(914010);
 let u = {},
-    _ = {},
-    I = 0;
-class E extends (r = l.ZP.Store) {
+    m = {},
+    h = 0;
+class g extends (s = a.ZP.Store) {
     initialize() {
         this.waitFor(d.Z);
     }
     isUploadingEmoji() {
-        return I > 0;
+        return h > 0;
     }
     getEmojiRevision(e) {
         var t;
         return null !== (t = u[e]) && void 0 !== t ? t : 0;
     }
     getEmojis(e) {
-        return _[e];
+        return m[e];
     }
 }
-(i = 'GuildSettingsEmojiStore'),
-    (a = 'displayName') in (s = E)
-        ? Object.defineProperty(s, a, {
-              value: i,
+(l = 'GuildSettingsEmojiStore'),
+    (r = 'displayName') in (i = g)
+        ? Object.defineProperty(i, r, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (s[a] = i),
-    (t.Z = new E(o.Z, {
+        : (i[r] = l),
+    (t.Z = new g(o.Z, {
         EMOJI_DELETE: function (e) {
             let { guildId: t, emojiId: n } = e;
-            _[t] = _[t].filter((e) => e.id !== n);
+            m[t] = m[t].filter((e) => e.id !== n);
         },
         EMOJI_FETCH_SUCCESS: function (e) {
             let { guildId: t, emojis: n } = e;
-            _[t] = n.map((e) => new c.Z(e));
+            m[t] = n.map((e) => new c.Z(e));
         },
         EMOJI_FETCH_FAILURE: function (e) {
             let { guildId: t } = e;
-            _[t] = [];
+            m[t] = [];
         },
         EMOJI_UPLOAD_START: function () {
-            I++;
+            h++;
         },
         EMOJI_UPLOAD_STOP: function () {
-            I--;
+            h--;
         },
         GUILD_EMOJIS_UPDATE: function (e) {
             var t;

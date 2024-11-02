@@ -1,37 +1,37 @@
 t.d(n, {
     Z: function () {
-        return x;
+        return _;
     }
 });
-var l = t(200651),
-    s = t(192379),
+var i = t(200651),
+    l = t(192379),
     o = t(442837),
-    i = t(100527),
+    r = t(100527),
     a = t(906732),
-    r = t(613464),
+    s = t(613464),
     d = t(6025),
     c = t(433355),
     u = t(430824),
-    _ = t(981631),
-    E = t(842100);
-function x(e) {
+    x = t(981631),
+    h = t(842100);
+function _(e) {
     let { guildId: n } = e,
         t = (0, o.e7)([u.Z], () => u.Z.getGuild(n)),
-        { analyticsLocations: x } = (0, a.ZP)(i.Z.MEMBER_SAFETY_PAGE),
-        I = (0, o.e7)([c.ZP], () => c.ZP.getGuildSidebarState(n), [n]),
-        C = s.useCallback(() => {
+        { analyticsLocations: _ } = (0, a.ZP)(r.Z.MEMBER_SAFETY_PAGE),
+        g = (0, o.e7)([c.ZP], () => c.ZP.getGuildSidebarState(n), [n]),
+        C = l.useCallback(() => {
             d.Z.closeGuildSidebar(n);
         }, [n]),
-        N = null != I;
-    return null != t && N && null != I
-        ? (0, l.jsx)(a.Gt, {
-              value: x,
-              children: (0, l.jsx)('div', {
-                  className: E.__invalid_sidebarContainer,
-                  style: { width: _.$Y6 },
-                  children: (0, l.jsx)(r.Z, {
-                      userId: I.details.userId,
-                      guildId: I.details.guildId,
+        I = null != g;
+    return null != t && I && null != g
+        ? (0, i.jsx)(a.Gt, {
+              value: _,
+              children: (0, i.jsx)('div', {
+                  className: h.__invalid_sidebarContainer,
+                  style: { width: x.$Y6 },
+                  children: (0, i.jsx)(s.Z, {
+                      userId: g.details.userId,
+                      guildId: g.details.guildId,
                       onClose: C
                   })
               })

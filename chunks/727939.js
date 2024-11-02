@@ -9,15 +9,15 @@ let l = 48,
     c = 32,
     d = 32;
 t.Z = (0, a.Z)(function (e) {
-    let { className: t, defaultPosition: n = o.VD2.BOTTOM_RIGHT, children: a, width: _, height: E } = e,
-        [f, h] = i.useState(n);
+    let { className: t, defaultPosition: n = o.VD2.BOTTOM_RIGHT, children: a, width: f, height: _ } = e,
+        [h, p] = i.useState(n);
     return (0, r.jsx)(s._, {
         className: t,
-        position: f,
+        position: h,
         id: 0,
-        onMove: (e, t) => h(t),
-        maxX: _,
-        maxY: E,
+        onMove: (e, t) => p(t),
+        maxX: f,
+        maxY: _,
         edgeOffsetTop: l,
         edgeOffsetBottom: u,
         edgeOffsetLeft: c,

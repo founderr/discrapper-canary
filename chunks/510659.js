@@ -6,7 +6,7 @@ n.d(t, {
         return c;
     },
     Xo: function () {
-        return _;
+        return f;
     }
 }),
     n(47120);
@@ -38,35 +38,35 @@ function d() {
                 interactionSourceId: null
             });
         }, [u]),
-        [d, _] = i.useState(!1),
-        [E, f] = i.useState(null),
-        [h] = i.useState(new o.V7()),
-        p = i.useCallback(
+        [d, f] = i.useState(!1),
+        [_, h] = i.useState(null),
+        [p] = i.useState(new o.V7()),
+        m = i.useCallback(
             (e) => {
-                f(e), _(!0), null === e ? h.stop() : h.start(l._1, () => _(!1));
+                h(e), f(!0), null === e ? p.stop() : p.start(l._1, () => f(!1));
             },
-            [h]
+            [p]
         );
     return (
         i.useEffect(() => {
-            h.stop();
-        }, [h]),
+            p.stop();
+        }, [p]),
         i.useMemo(
             () => ({
                 interactionType: e,
                 interactionSource: n,
                 interactionSourceId: a,
                 onInteraction: u,
-                setInteractionToast: p,
+                setInteractionToast: m,
                 resetInteraction: c,
                 showInteractionToast: d,
-                interactionTypeSent: E
+                interactionTypeSent: _
             }),
-            [u, p, n, a, d, e, E, c]
+            [u, m, n, a, d, e, _, c]
         )
     );
 }
-function _() {
+function f() {
     let e = i.useContext(u);
     return s()(null != e, 'must use useUserProfileInteractionContext within a UserProfileInteractionContextProvider'), e;
 }

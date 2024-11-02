@@ -1,12 +1,12 @@
 n.d(t, {
     DR: function () {
-        return S;
+        return I;
     },
     bD: function () {
-        return T;
+        return v;
     },
     oK: function () {
-        return I;
+        return g;
     }
 }),
     n(627341);
@@ -20,26 +20,26 @@ var i = n(120356),
     u = n(780384),
     c = n(481060),
     d = n(210887),
-    _ = n(47760),
-    E = n(798728),
-    f = n(981631),
-    h = n(689938),
-    p = n(405166);
-function I() {
+    f = n(47760),
+    _ = n(798728),
+    h = n(981631),
+    p = n(388032),
+    m = n(405166);
+function g() {
     return (0, r.jsx)('div', {
-        className: p.selectionCircle,
+        className: m.selectionCircle,
         children: (0, r.jsx)(c.CircleCheckIcon, {
             size: 'md',
             color: 'currentColor',
-            className: p.checkmarkCircle,
-            colorClass: p.checkmark,
+            className: m.checkmarkCircle,
+            colorClass: m.checkmark,
             secondaryColor: l.Z.unsafe_rawColors.WHITE_500.css
         })
     });
 }
-function m(e) {
-    let { name: t, className: n, style: i, onSelect: s, isSelected: o = !1, tabIndex: l, children: u, showBadge: d, showLockedBadge: _ } = e,
-        E = (0, c.useRadioItem)({
+function E(e) {
+    let { name: t, className: n, style: i, onSelect: s, isSelected: o = !1, tabIndex: l, children: u, showBadge: d, showLockedBadge: f } = e,
+        _ = (0, c.useRadioItem)({
             label: t,
             isSelected: o
         });
@@ -47,24 +47,24 @@ function m(e) {
         text: t,
         children: (e) =>
             (0, r.jsxs)('div', {
-                className: p.themeSelectionContainer,
+                className: m.themeSelectionContainer,
                 children: [
                     (0, r.jsx)(c.Clickable, {
                         ...e,
-                        ...E,
-                        tabIndex: null != l ? l : E.tabIndex,
-                        className: a()(p.themeSelection, { [p.selected]: o }, n),
+                        ..._,
+                        tabIndex: null != l ? l : _.tabIndex,
+                        className: a()(m.themeSelection, { [m.selected]: o }, n),
                         style: i,
-                        onClick: o ? f.dG4 : s,
+                        onClick: o ? h.dG4 : s,
                         children: u
                     }),
-                    o && (0, r.jsx)(I, {}),
-                    !o && d && (0, r.jsx)('div', { className: p.redCircle }),
-                    _ &&
+                    o && (0, r.jsx)(g, {}),
+                    !o && d && (0, r.jsx)('div', { className: m.redCircle }),
+                    f &&
                         (0, r.jsx)('div', {
-                            className: p.lockedBadgeContainer,
+                            className: m.lockedBadgeContainer,
                             children: (0, r.jsx)(c.LockIcon, {
-                                className: p.lockedBadge,
+                                className: m.lockedBadge,
                                 color: 'currentColor'
                             })
                         })
@@ -72,60 +72,60 @@ function m(e) {
             })
     });
 }
-function T(e) {
+function v(e) {
     let { theme: t, isSelected: n, onSelect: i } = e,
-        _ = (0, o.e7)([d.Z], () => d.Z.systemPrefersColorScheme),
-        I = (e) => ((0, u.ap)(e) ? l.Z.unsafe_rawColors.PRIMARY_600.css : l.Z.unsafe_rawColors.WHITE_500.css),
-        T = (0, s.EQ)({
+        f = (0, o.e7)([d.Z], () => d.Z.systemPrefersColorScheme),
+        g = (e) => ((0, u.ap)(e) ? l.Z.unsafe_rawColors.PRIMARY_600.css : l.Z.unsafe_rawColors.WHITE_500.css),
+        v = (0, s.EQ)({
             theme: t,
-            systemPrefersColorScheme: _
+            systemPrefersColorScheme: f
         })
             .with(
                 {
                     theme: 'system',
-                    systemPrefersColorScheme: f.BRd.LIGHT
+                    systemPrefersColorScheme: h.BRd.LIGHT
                 },
-                () => p.lightIcon
+                () => m.lightIcon
             )
-            .with({ theme: f.BRd.LIGHT }, () => p.lightIcon)
-            .with({ theme: f.BRd.DARK }, () => p.darkIcon)
-            .with({ theme: f.BRd.DARKER }, () => p.darkerIcon)
-            .with({ theme: f.BRd.MIDNIGHT }, () => p.midnightIcon)
-            .otherwise(() => p.darkIcon),
-        S = (0, s.EQ)(t)
-            .with(f.BRd.LIGHT, () => h.Z.Messages.THEME_LIGHT)
-            .with(f.BRd.DARK, () => h.Z.Messages.THEME_DARK)
-            .with(f.BRd.DARKER, () => 'Darker')
-            .with(f.BRd.MIDNIGHT, () => h.Z.Messages.THEME_MIDNIGHT)
-            .with('system', () => h.Z.Messages.THEME_SYSTEM)
+            .with({ theme: h.BRd.LIGHT }, () => m.lightIcon)
+            .with({ theme: h.BRd.DARK }, () => m.darkIcon)
+            .with({ theme: h.BRd.DARKER }, () => m.darkerIcon)
+            .with({ theme: h.BRd.MIDNIGHT }, () => m.midnightIcon)
+            .otherwise(() => m.darkIcon),
+        I = (0, s.EQ)(t)
+            .with(h.BRd.LIGHT, () => p.intl.string(p.t.K2sFfn))
+            .with(h.BRd.DARK, () => p.intl.string(p.t.b8Cei4))
+            .with(h.BRd.DARKER, () => 'Darker')
+            .with(h.BRd.MIDNIGHT, () => p.intl.string(p.t.pQwSpa))
+            .with('system', () => p.intl.string(p.t['7rOU6u']))
             .exhaustive(),
-        g = (0, c.useRedesignIconContext)().enabled;
-    return (0, r.jsx)(m, {
+        S = (0, c.useRedesignIconContext)().enabled;
+    return (0, r.jsx)(E, {
         onSelect: i,
         isSelected: n,
-        name: S,
-        className: a()(p.defaultThemeSelection, T),
+        name: I,
+        className: a()(m.defaultThemeSelection, v),
         children:
             'system' === t &&
             (0, r.jsx)('div', {
-                className: p.iconWrapper,
-                children: g ? (0, r.jsx)(c.RefreshIcon, { color: I(_) }) : (0, r.jsx)(E.Z, { fill: I(_) })
+                className: m.iconWrapper,
+                children: S ? (0, r.jsx)(c.RefreshIcon, { color: g(f) }) : (0, r.jsx)(_.Z, { fill: g(f) })
             })
     });
 }
-function S(e) {
+function I(e) {
     let { preset: t, isSelected: n, disabled: i, tabIndex: s, onSelect: o, showBadge: l, showLockedBadge: c } = e,
-        { colors: d, angle: E, theme: f } = t,
-        h = (0, _.VK)({
+        { colors: d, angle: _, theme: h } = t,
+        p = (0, f.VK)({
             colors: d,
-            angle: E
+            angle: _
         });
-    return (0, r.jsx)(m, {
+    return (0, r.jsx)(E, {
         onSelect: i ? void 0 : o,
         isSelected: n,
         name: t.getName(),
-        className: a()([i ? p.disabled : null, (0, u.wj)(f) ? p.darkOverlay : p.lightOverlay]),
-        style: { background: 'var(--bg-overlay), '.concat(h) },
+        className: a()([i ? m.disabled : null, (0, u.wj)(h) ? m.darkOverlay : m.lightOverlay]),
+        style: { background: 'var(--bg-overlay), '.concat(p) },
         tabIndex: s,
         showBadge: l,
         showLockedBadge: c

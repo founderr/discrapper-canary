@@ -1,80 +1,80 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return C;
     }
 });
 var i = n(200651),
-    a = n(120356),
-    s = n.n(a),
-    r = n(489948),
-    l = n(657707),
-    o = n(442837),
+    r = n(120356),
+    l = n.n(r),
+    a = n(489948),
+    o = n(657707),
+    s = n(442837),
     c = n(481060),
     u = n(933557),
     d = n(471445),
-    _ = n(266076),
-    E = n(565138),
-    I = n(430824),
-    m = n(689938),
-    f = n(239048);
-let T = {
+    m = n(266076),
+    f = n(565138),
+    h = n(430824),
+    p = n(388032),
+    g = n(239048);
+let _ = {
     top: 8,
     bottom: 8,
     left: -4,
     right: -4
 };
-function h(e) {
+function C(e) {
     let { channel: t, children: n } = e;
-    return (0, i.jsx)(r.tE, {
-        offset: T,
+    return (0, i.jsx)(a.tE, {
+        offset: _,
         children: (0, i.jsxs)('div', {
-            className: f.channelHeader,
+            className: g.channelHeader,
             'data-recents-channel': t.id,
-            children: [(0, i.jsx)(N, { channel: t }), t.isPrivate() ? null : (0, i.jsx)(l.Fbu, { size: 'xxs' }), (0, i.jsx)(p, { channel: t }), n]
+            children: [(0, i.jsx)(E, { channel: t }), t.isPrivate() ? null : (0, i.jsx)(o.Fbu, { size: 'xxs' }), (0, i.jsx)(I, { channel: t }), n]
         })
     });
 }
-function N(e) {
+function E(e) {
     let { channel: t } = e,
-        n = (0, o.e7)([I.Z], () => I.Z.getGuild(t.guild_id));
+        n = (0, s.e7)([h.Z], () => h.Z.getGuild(t.guild_id));
     return null != n
-        ? (0, i.jsx)(E.Z, {
-              className: f.icon,
+        ? (0, i.jsx)(f.Z, {
+              className: g.icon,
               guild: n,
-              size: E.Z.Sizes.SMALLER,
+              size: f.Z.Sizes.SMALLER,
               'aria-hidden': !0
           })
         : t.isGroupDM()
-          ? (0, i.jsx)(_.Z, {
+          ? (0, i.jsx)(m.Z, {
                 channel: t,
                 size: c.AvatarSizes.SIZE_24,
                 experimentLocation: 'ForLaterChannelHeader'
             })
           : (0, i.jsx)('div', {
-                className: s()(f.icon, f.dmIcon),
-                children: (0, i.jsx)(l.kBi, { size: 'xxs' })
+                className: l()(g.icon, g.dmIcon),
+                children: (0, i.jsx)(o.kBi, { size: 'xxs' })
             });
 }
-function p(e) {
+function I(e) {
     let { channel: t } = e,
-        n = (0, o.e7)([I.Z], () => I.Z.getGuild(t.guild_id)),
-        a = (0, u.ZP)(t, !1),
-        s = (0, d.KS)(t, n),
-        r = t.isPrivate() || null == s,
-        l = t.isDM() ? m.Z.Messages.FOR_LATER_DIRECT_MESSAGE_WITH.format({ username: a }) : a;
+        n = (0, s.e7)([h.Z], () => h.Z.getGuild(t.guild_id)),
+        r = (0, u.ZP)(t, !1),
+        l = (0, d.KS)(t, n),
+        a = t.isPrivate() || null == l,
+        o = t.isDM() ? p.intl.formatToPlainString(p.t.smD7XV, { username: r }) : r;
     return (0, i.jsxs)('div', {
-        className: f.channelNameSection,
+        className: g.channelNameSection,
         children: [
-            r
+            a
                 ? null
-                : (0, i.jsx)(s, {
-                      className: f.channelTypeIcon,
+                : (0, i.jsx)(l, {
+                      className: g.channelTypeIcon,
                       size: 'xxs'
                   }),
             (0, i.jsx)(c.Heading, {
                 variant: 'text-md/semibold',
                 color: 'header-secondary',
-                children: l
+                children: o
             })
         ]
     });

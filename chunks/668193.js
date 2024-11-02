@@ -59,12 +59,12 @@ function l(e, t, n) {
                 })()),
         c = u[0],
         d = u[1],
-        _ = (0, a.useCallback)(
+        f = (0, a.useCallback)(
             function () {
                 var r = t(e);
                 !i()(c, r) && (d(r), n && n());
             },
             [c, e, n]
         );
-    return (0, s.L)(_), [c, _];
+    return (0, s.L)(f), [c, f];
 }

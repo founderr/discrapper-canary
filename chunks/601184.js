@@ -1,33 +1,33 @@
 t.d(n, {
     Z: function () {
-        return M;
+        return m;
     }
 });
 var i = t(200651);
 t(192379);
-var a = t(442837),
-    s = t(481060),
-    l = t(904245),
-    r = t(257559),
-    o = t(665906),
+var l = t(442837),
+    r = t(481060),
+    a = t(904245),
+    o = t(257559),
+    s = t(665906),
     u = t(496675),
     d = t(594174),
     c = t(981631),
-    E = t(689938);
-function M(e, n) {
-    let t = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
-        M = (0, o.$R)(n),
-        g = (0, a.e7)([u.Z], () => u.Z.can(c.Plq.MANAGE_MESSAGES, n), [n]),
-        f = g || (null != t && e.canDeleteOwnMessage(t.id));
-    return e.state === c.yb.SENDING || !f || c.V$x.UNDELETABLE.has(e.type) || !M
+    g = t(388032);
+function m(e, n) {
+    let t = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
+        m = (0, s.$R)(n),
+        f = (0, l.e7)([u.Z], () => u.Z.can(c.Plq.MANAGE_MESSAGES, n), [n]),
+        h = f || (null != t && e.canDeleteOwnMessage(t.id));
+    return e.state === c.yb.SENDING || !h || c.V$x.UNDELETABLE.has(e.type) || !m
         ? null
-        : (0, i.jsx)(s.MenuItem, {
+        : (0, i.jsx)(r.MenuItem, {
               id: 'delete',
-              label: E.Z.Messages.DELETE_MESSAGE,
+              label: g.intl.string(g.t.xwMqDw),
               action: function (t) {
-                  e.state === c.yb.SEND_FAILED ? l.Z.deleteMessage(n.id, e.id, !0) : t.shiftKey ? l.Z.deleteMessage(n.id, e.id) : r.Z.confirmDelete(n, e, !0);
+                  e.state === c.yb.SEND_FAILED ? a.Z.deleteMessage(n.id, e.id, !0) : t.shiftKey ? a.Z.deleteMessage(n.id, e.id) : o.Z.confirmDelete(n, e, !0);
               },
               color: 'danger',
-              icon: s.TrashIcon
+              icon: r.TrashIcon
           });
 }

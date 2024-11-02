@@ -1,36 +1,36 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return o;
     }
 });
-var i = t(200651);
-t(192379);
-var a = t(481060),
-    r = t(668896);
+var i = n(200651);
+n(192379);
+var a = n(481060),
+    r = n(668896);
 function o(e) {
-    let { activeSection: n, setSection: t, sections: o } = e;
+    let { activeSection: t, setSection: n, sections: o } = e;
     return (0, i.jsx)(a.TabBar, {
-        selectedItem: n,
+        selectedItem: t,
         type: 'top',
-        onItemSelect: t,
+        onItemSelect: n,
         className: r.tabBar,
         children: o.map((e) => {
-            let { name: n, text: t, Icon: o } = e;
+            let { name: t, text: n, Icon: o } = e;
             return (0, i.jsxs)(
                 a.TabBar.Item,
                 {
-                    id: n,
+                    id: t,
                     className: r.tabBarItem,
-                    'aria-label': t,
+                    'aria-label': n,
                     children: [
                         (0, i.jsx)(o, {
                             className: r.icon,
                             color: 'currentColor'
                         }),
-                        t
+                        n
                     ]
                 },
-                n
+                t
             );
         })
     });

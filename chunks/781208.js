@@ -1,32 +1,32 @@
-n.d(s, {
+e.d(t, {
     $l: function () {
-        return S;
+        return l;
     },
     RI: function () {
-        return t;
+        return i;
     },
     Ud: function () {
-        return a;
+        return s;
     }
 });
 var o,
-    c,
-    r = n(689938);
-let t = 'https://discord.com/community/securing-your-server';
-((o = c || (c = {})).DM_SPAM = 'DM_SPAM'), (o.MESSAGE_SPAM = 'MESSAGE_SPAM'), (o.MENTION_SPAM = 'MENTION_SPAM'), (o.SUSPICIOUS_USERS = 'SUSPICIOUS_USERS'), (o.SETTINGS_SPAM = 'SETTINGS_SPAM');
-let a = ['MESSAGE_SPAM', 'DM_SPAM', 'MENTION_SPAM', 'SUSPICIOUS_USERS', 'SETTINGS_SPAM'],
-    S = (e) => {
-        switch (e) {
+    r,
+    c = e(388032);
+let i = 'https://discord.com/community/securing-your-server';
+((o = r || (r = {})).DM_SPAM = 'DM_SPAM'), (o.MESSAGE_SPAM = 'MESSAGE_SPAM'), (o.MENTION_SPAM = 'MENTION_SPAM'), (o.SUSPICIOUS_USERS = 'SUSPICIOUS_USERS'), (o.SETTINGS_SPAM = 'SETTINGS_SPAM');
+let s = ['MESSAGE_SPAM', 'DM_SPAM', 'MENTION_SPAM', 'SUSPICIOUS_USERS', 'SETTINGS_SPAM'],
+    l = (n) => {
+        switch (n) {
             case 'DM_SPAM':
-                return r.Z.Messages.GUILD_REPORT_RAID_MODAL_CHOICE_DM_SPAM;
+                return c.intl.string(c.t['9CYNmZ']);
             case 'MENTION_SPAM':
-                return r.Z.Messages.GUILD_REPORT_RAID_MODAL_CHOICE_MENTION_SPAM;
+                return c.intl.string(c.t['hR/IdH']);
             case 'MESSAGE_SPAM':
-                return r.Z.Messages.GUILD_REPORT_RAID_MODAL_CHOICE_MESSAGE_SPAM;
+                return c.intl.string(c.t.fwloj4);
             case 'SETTINGS_SPAM':
-                return r.Z.Messages.GUILD_REPORT_RAID_MODAL_CHOICE_SETTINGS_SPAM;
+                return c.intl.string(c.t.ETFVFx);
             case 'SUSPICIOUS_USERS':
-                return r.Z.Messages.GUILD_REPORT_RAID_MODAL_CHOICE_SUSPICIOUS_USERS;
+                return c.intl.string(c.t['lKXu+v']);
         }
         return null;
     };

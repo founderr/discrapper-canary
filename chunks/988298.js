@@ -3,7 +3,7 @@ n.d(t, {
         return a;
     },
     R2: function () {
-        return s;
+        return o;
     },
     h7: function () {
         return l;
@@ -37,7 +37,7 @@ function a(e) {
         channelId: e
     });
 }
-function s(e) {
+function o(e) {
     i.Z.dispatch({
         type: 'ACTIVITY_INVITE_MODAL_SEND',
         userId: e

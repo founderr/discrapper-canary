@@ -1,36 +1,36 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return o;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(739566),
-    s = n(834129),
-    r = n(689938);
-function l(e) {
+var r = n(739566),
+    l = n(834129),
+    a = n(388032);
+function o(e) {
     let t,
-        { message: l, usernameHook: o, otherUser: c, otherUsernameHook: u, compact: d, channel: _ } = e,
-        E = (0, a.ZP)(l),
-        I = E.nick,
-        m = o(E),
-        f = (0, a.Sw)(c, _);
-    if (null != f && null != u) {
-        let e = u(f);
-        t = r.Z.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_HOOK.format({
-            username: I,
-            usernameHook: m,
-            otherUsername: f.nick,
+        { message: o, usernameHook: s, otherUser: c, otherUsernameHook: u, compact: d, channel: m } = e,
+        f = (0, r.ZP)(o),
+        h = f.nick,
+        p = s(f),
+        g = (0, r.Sw)(c, m);
+    if (null != g && null != u) {
+        let e = u(g);
+        t = a.intl.format(a.t.L2FyVl, {
+            username: h,
+            usernameHook: p,
+            otherUsername: g.nick,
             otherUsernameHook: e
         });
     } else
-        t = r.Z.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_SELF_HOOK.format({
-            username: I,
-            usernameHook: m
+        t = a.intl.format(a.t['5v2xa2'], {
+            username: h,
+            usernameHook: p
         });
-    return (0, i.jsx)(s.Z, {
+    return (0, i.jsx)(l.Z, {
         icon: n(474019),
-        timestamp: l.timestamp,
+        timestamp: o.timestamp,
         compact: d,
         children: t
     });

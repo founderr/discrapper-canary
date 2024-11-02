@@ -1,23 +1,23 @@
 n.d(t, {
     S: function () {
-        return a;
+        return r;
     }
 });
 var i = n(137006);
-function a(e, t) {
+function r(e, t) {
     var n;
-    let { scope: a, handler: s } = t,
-        r = {
-            scope: a,
-            handler: s
+    let { scope: r, handler: l } = t,
+        a = {
+            scope: r,
+            handler: l
         },
-        l = null === (n = i.m[e]) || void 0 === n ? void 0 : n.request,
+        s = null === (n = i.m[e]) || void 0 === n ? void 0 : n.request,
         o = null;
     return (
-        null != l &&
-            (r.validation = function (e) {
-                return null == o && (o = l(e)), o;
+        null != s &&
+            (a.validation = function (e) {
+                return null == o && (o = s(e)), o;
             }),
-        r
+        a
     );
 }

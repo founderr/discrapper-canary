@@ -62,19 +62,19 @@ e.exports = function (e) {
                 { begin: "'" + n }
             ]
         },
-        _ = {
+        f = {
             variants: [{ begin: "'" + t }, { begin: "#'" + t + '(::' + t + ')*' }]
         },
-        E = {
+        _ = {
             begin: '\\(\\s*',
             end: '\\)'
         },
-        f = {
+        h = {
             endsWithParent: !0,
             relevance: 0
         };
     return (
-        (E.contains = [
+        (_.contains = [
             {
                 className: 'name',
                 variants: [
@@ -85,13 +85,13 @@ e.exports = function (e) {
                     { begin: n }
                 ]
             },
-            f
+            h
         ]),
-        (f.contains = [d, _, E, i, a, s, o, l, u, { begin: n }, c]),
+        (h.contains = [d, f, _, i, a, s, o, l, u, { begin: n }, c]),
         {
             name: 'Lisp',
             illegal: /\S/,
-            contains: [a, e.SHEBANG(), i, s, o, d, _, E, c]
+            contains: [a, e.SHEBANG(), i, s, o, d, f, _, c]
         }
     );
 };

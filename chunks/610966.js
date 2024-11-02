@@ -1,30 +1,30 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return _;
+        return u;
     }
 });
-var n = t(200651);
-t(192379);
-var a = t(866442),
-    i = t(692547),
-    r = t(481060),
-    o = t(220082),
-    l = t(193528),
-    c = t(993413),
-    d = t(689938);
-function _(e) {
-    var s;
-    let { user: t, savedUserColor: _, pendingColor: u, setPendingAccentColor: E } = e,
-        T = t.getAvatarURL(null, 80),
-        S = (0, r.useToken)(i.Z.unsafe_rawColors.PRIMARY_530).hex(),
-        I = (0, o.Cf)(T, S, !1),
-        N = (0, a._i)(I[0]);
-    return (0, n.jsx)(c.Z, {
-        title: d.Z.Messages.USER_SETTINGS_BANNER_COLOR_TITLE,
-        children: (0, n.jsx)(l.Z, {
-            onChange: (e) => E(e),
-            color: null !== (s = null != u ? u : _) && void 0 !== s ? s : N,
-            suggestedColors: I,
+var i = n(200651);
+n(192379);
+var s = n(866442),
+    r = n(692547),
+    l = n(481060),
+    a = n(220082),
+    o = n(193528),
+    c = n(993413),
+    d = n(388032);
+function u(e) {
+    var t;
+    let { user: n, savedUserColor: u, pendingColor: m, setPendingAccentColor: h } = e,
+        g = n.getAvatarURL(null, 80),
+        p = (0, l.useToken)(r.Z.unsafe_rawColors.PRIMARY_530).hex(),
+        x = (0, a.Cf)(g, p, !1),
+        S = (0, s._i)(x[0]);
+    return (0, i.jsx)(c.Z, {
+        title: d.intl.string(d.t['/X3fkZ']),
+        children: (0, i.jsx)(o.Z, {
+            onChange: (e) => h(e),
+            color: null !== (t = null != m ? m : u) && void 0 !== t ? t : S,
+            suggestedColors: x,
             showEyeDropper: !0
         })
     });

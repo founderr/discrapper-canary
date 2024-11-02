@@ -25,7 +25,7 @@ function c(e, t, n) {
     );
 }
 let d = 'guestInviteToAccept';
-class _ extends s.Z {
+class f extends s.Z {
     constructor(...e) {
         super(...e),
             c(this, 'actions', { POST_CONNECTION_OPEN: () => this.handleConnectionOpen() }),
@@ -47,4 +47,4 @@ class _ extends s.Z {
             });
     }
 }
-t.Z = new _();
+t.Z = new f();

@@ -1,6 +1,6 @@
 n.d(t, {
     p: function () {
-        return _;
+        return f;
     }
 });
 var r = n(200651);
@@ -13,9 +13,9 @@ var i = n(120356),
     u = n(197115),
     c = n(474936),
     d = n(422455);
-function _(e) {
-    let { showUpsell: t, text: n, textVariant: i, button: _, buttonAnalyticsObject: E, className: f, onSubscribeModalClose: h, showShadow: p = !0, position: I = 'floating' } = e,
-        m = (0, o.useSpring)({
+function f(e) {
+    let { showUpsell: t, text: n, textVariant: i, button: f, buttonAnalyticsObject: _, className: h, onSubscribeModalClose: p, showShadow: m = !0, position: g = 'floating' } = e,
+        E = (0, o.useSpring)({
             transform: t ? 'translateY(0%)' : 'translateY(120%)',
             opacity: t ? 1 : 0,
             config: {
@@ -24,15 +24,15 @@ function _(e) {
             }
         });
     return (0, r.jsxs)(s.animated.div, {
-        style: { ...m },
+        style: { ...E },
         className: a()(
             d.upsellContainer,
             {
-                [d.upsellContainerShadow]: p,
-                [d.upsellContainerFloating]: 'floating' === I,
-                [d.upsellContainerInline]: 'inline' === I
+                [d.upsellContainerShadow]: m,
+                [d.upsellContainerFloating]: 'floating' === g,
+                [d.upsellContainerInline]: 'inline' === g
             },
-            f
+            h
         ),
         children: [
             (0, r.jsx)(o.NitroWheelIcon, {
@@ -45,17 +45,17 @@ function _(e) {
                 className: d.upsellText,
                 children: n
             }),
-            'string' == typeof _
+            'string' == typeof f
                 ? (0, r.jsx)(u.Z, {
                       className: d.upsellButton,
                       shinyButtonClassName: d.upsellButton,
                       subscriptionTier: c.Si.TIER_2,
-                      buttonText: _,
-                      premiumModalAnalyticsLocation: E,
+                      buttonText: f,
+                      premiumModalAnalyticsLocation: _,
                       tabIndex: t ? 0 : -1,
-                      onSubscribeModalClose: h
+                      onSubscribeModalClose: p
                   })
-                : _
+                : f
         ]
     });
 }

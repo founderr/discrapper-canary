@@ -21,7 +21,7 @@ let s = (e) => {
         let c = r.Z.parseString(o);
         if (null == c) return null;
         let d = (0, i.AZ)(c.red, c.blue, c.green),
-            _ =
+            f =
                 null !==
                     (t = (0, i.k8)({
                         colors: [(0, i.j)(c, 0.6, !0), l],
@@ -30,7 +30,7 @@ let s = (e) => {
                     })) && void 0 !== t
                     ? t
                     : c,
-            E =
+            _ =
                 null !==
                     (n = (0, i.k8)({
                         colors: [(0, i.j)(c, 0.6, !1), u],
@@ -39,30 +39,30 @@ let s = (e) => {
                     })) && void 0 !== n
                     ? n
                     : c,
-            f = (0, i.k8)({
+            h = (0, i.k8)({
                 colors: [c, l],
                 ratio: 7,
                 saturationFactor: s
             }),
-            h = (0, i.k8)({
+            p = (0, i.k8)({
                 colors: [c, u],
                 ratio: 7,
                 saturationFactor: s
             });
         return {
             LIGHT: {
-                accentColor: null == f ? void 0 : f.toHexString(),
+                accentColor: null == h ? void 0 : h.toHexString(),
                 backgroundColor: (0, i.xj)({
-                    colorRGB: _,
+                    colorRGB: f,
                     saturationFactor: s
                 }),
                 highlightColor: null == c ? void 0 : c.toHexString(),
                 opacity: (null == d ? void 0 : d.saturation) < 0.1 ? 0.35 : 0.1
             },
             DARK: {
-                accentColor: null == h ? void 0 : h.toHexString(),
+                accentColor: null == p ? void 0 : p.toHexString(),
                 backgroundColor: (0, i.xj)({
-                    colorRGB: E,
+                    colorRGB: _,
                     saturationFactor: s
                 }),
                 highlightColor: null == c ? void 0 : c.toHexString(),

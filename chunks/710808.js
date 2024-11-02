@@ -1,180 +1,180 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return R;
+        return A;
     }
 }),
-    t(47120);
-var n = t(200651),
-    a = t(192379),
-    i = t(442837),
-    r = t(481060),
-    o = t(846027),
-    l = t(179658),
-    c = t(304680),
-    d = t(579806),
-    _ = t(600164),
-    u = t(729345),
-    E = t(921801),
-    T = t(857192),
-    S = t(131951),
-    I = t(226961),
-    N = t(12647),
-    m = t(726985),
-    C = t(981631),
-    A = t(65154),
-    g = t(689938),
-    h = t(113207);
-async function O() {
+    n(47120);
+var i = n(200651),
+    s = n(192379),
+    r = n(442837),
+    l = n(481060),
+    a = n(846027),
+    o = n(179658),
+    c = n(304680),
+    d = n(579806),
+    u = n(600164),
+    m = n(729345),
+    h = n(921801),
+    g = n(857192),
+    p = n(131951),
+    x = n(226961),
+    S = n(12647),
+    T = n(726985),
+    C = n(981631),
+    _ = n(65154),
+    E = n(388032),
+    f = n(113207);
+async function I() {
     let e = await d.Z.fileManager.getModulePath(),
-        s = d.Z.fileManager.join(e, 'discord_voice');
-    d.Z.fileManager.showItemInFolder(s);
+        t = d.Z.fileManager.join(e, 'discord_voice');
+    d.Z.fileManager.showItemInFolder(t);
 }
-function p(e) {
-    (0, r.openModal)((s) =>
-        (0, n.jsx)(r.ConfirmModal, {
-            header: g.Z.Messages.SET_DEBUG_LOGGING,
-            confirmText: g.Z.Messages.OKAY,
-            cancelText: g.Z.Messages.CANCEL,
-            onCancel: s.onClose,
-            onConfirm: () => o.Z.setDebugLogging(e),
-            ...s,
-            children: (0, n.jsx)(r.Text, {
+function N(e) {
+    (0, l.openModal)((t) =>
+        (0, i.jsx)(l.ConfirmModal, {
+            header: E.intl.string(E.t['7UXEFx']),
+            confirmText: E.intl.string(E.t.BddRzc),
+            cancelText: E.intl.string(E.t['ETE/oK']),
+            onCancel: t.onClose,
+            onConfirm: () => a.Z.setDebugLogging(e),
+            ...t,
+            children: (0, i.jsx)(l.Text, {
                 variant: 'text-md/normal',
-                children: g.Z.Messages.SET_DEBUG_LOGGING_BODY
+                children: E.intl.string(E.t.IYPrRk)
             })
         })
     );
 }
-function R() {
-    let [e, s] = a.useState(!1),
-        { debugLogging: t, aecDumpEnabled: d } = (0, i.cj)([S.Z], () => ({
-            aecDumpSupported: S.Z.isAecDumpSupported(),
-            debugLogging: S.Z.getDebugLogging(),
-            aecDumpEnabled: S.Z.getAecDump(),
-            supportsConnectionReplay: S.Z.supports(A.AN.CONNECTION_REPLAY)
+function A() {
+    let [e, t] = s.useState(!1),
+        { debugLogging: n, aecDumpEnabled: d } = (0, r.cj)([p.Z], () => ({
+            aecDumpSupported: p.Z.isAecDumpSupported(),
+            debugLogging: p.Z.getDebugLogging(),
+            aecDumpEnabled: p.Z.getAecDump(),
+            supportsConnectionReplay: p.Z.supports(_.AN.CONNECTION_REPLAY)
         })),
-        R = (0, i.e7)([T.default], () => T.default.isStreamInfoOverlayEnabled),
-        x = (0, i.e7)([I.ZP], () => I.ZP.shouldRecordNextConnection());
-    async function M() {
-        s(!0);
+        A = (0, r.e7)([g.default], () => g.default.isStreamInfoOverlayEnabled),
+        b = (0, r.e7)([x.ZP], () => x.ZP.shouldRecordNextConnection());
+    async function v() {
+        t(!0);
         try {
-            await S.Z.getMediaEngine().writeAudioDebugState(),
-                await N.Z.submitLiveCrashReport({ message: { message: 'User Live Dump' } }),
-                await (0, u.E)(C.GU0.RTC),
+            await p.Z.getMediaEngine().writeAudioDebugState(),
+                await S.Z.submitLiveCrashReport({ message: { message: 'User Live Dump' } }),
+                await (0, m.E)(C.GU0.RTC),
                 !(function () {
-                    let e = g.Z.Messages.UPLOAD_DEBUG_LOG_SUCCESS_HEADER,
-                        s = g.Z.Messages.UPLOAD_DEBUG_LOG_SUCCESS;
-                    (0, r.openModal)((t) =>
-                        (0, n.jsx)(r.ConfirmModal, {
+                    let e = E.intl.string(E.t['fKBB8/']),
+                        t = E.intl.string(E.t.BvyxEx);
+                    (0, l.openModal)((n) =>
+                        (0, i.jsx)(l.ConfirmModal, {
                             header: e,
-                            confirmButtonColor: r.Button.Colors.BRAND,
-                            confirmText: g.Z.Messages.OKAY,
-                            ...t,
-                            children: (0, n.jsx)(r.Text, {
+                            confirmButtonColor: l.Button.Colors.BRAND,
+                            confirmText: E.intl.string(E.t.BddRzc),
+                            ...n,
+                            children: (0, i.jsx)(l.Text, {
                                 variant: 'text-md/normal',
-                                children: s
+                                children: t
                             })
                         })
                     );
                 })();
         } catch (e) {
             !(function (e) {
-                let s = g.Z.Messages.UPLOAD_DEBUG_LOG_FAILURE_HEADER,
-                    t = null != e ? e : g.Z.Messages.UPLOAD_DEBUG_LOG_FAILURE;
-                (0, r.openModal)((e) =>
-                    (0, n.jsx)(r.ConfirmModal, {
-                        header: s,
-                        confirmButtonColor: r.Button.Colors.BRAND,
-                        confirmText: g.Z.Messages.OKAY,
+                let t = E.intl.string(E.t.QZg0Jy),
+                    n = null != e ? e : E.intl.string(E.t.VzHcSk);
+                (0, l.openModal)((e) =>
+                    (0, i.jsx)(l.ConfirmModal, {
+                        header: t,
+                        confirmButtonColor: l.Button.Colors.BRAND,
+                        confirmText: E.intl.string(E.t.BddRzc),
                         ...e,
-                        children: (0, n.jsx)(r.Text, {
+                        children: (0, i.jsx)(l.Text, {
                             variant: 'text-md/normal',
-                            children: t
+                            children: n
                         })
                     })
                 );
             })(e.displayMessage);
         }
     }
-    return (0, n.jsxs)(r.FormSection, {
-        className: h.marginBottom40,
-        title: g.Z.Messages.FORM_LABEL_DEBUG,
+    return (0, i.jsxs)(l.FormSection, {
+        className: f.marginBottom40,
+        title: E.intl.string(E.t.OFpL3d),
         children: [
-            (0, n.jsx)(E.F, {
-                setting: m.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_STREAM_INFO_OVERLAY,
-                children: (0, n.jsx)(r.FormSwitch, {
-                    value: R,
-                    onChange: (e) => (0, l.y)({ isStreamInfoOverlayEnabled: e }),
-                    note: g.Z.Messages.FORM_HELP_STREAM_INFO_OVERLAY,
-                    children: g.Z.Messages.FORM_LABEL_STREAM_INFO_OVERLAY
+            (0, i.jsx)(h.F, {
+                setting: T.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_STREAM_INFO_OVERLAY,
+                children: (0, i.jsx)(l.FormSwitch, {
+                    value: A,
+                    onChange: (e) => (0, o.y)({ isStreamInfoOverlayEnabled: e }),
+                    note: E.intl.string(E.t.kBXuW1),
+                    children: E.intl.string(E.t['0CEP6e'])
                 })
             }),
-            (0, n.jsx)(E.F, {
-                setting: m.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP,
-                children: (0, n.jsx)(r.FormSwitch, {
+            (0, i.jsx)(h.F, {
+                setting: T.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP,
+                children: (0, i.jsx)(l.FormSwitch, {
                     value: d,
-                    onChange: (e) => o.Z.setAecDump(e),
-                    note: g.Z.Messages.FORM_HELP_AEC_DUMP,
-                    children: g.Z.Messages.FORM_CHECKBOX_AEC_DUMP
+                    onChange: (e) => a.Z.setAecDump(e),
+                    note: E.intl.string(E.t['xl9+Iy']),
+                    children: E.intl.string(E.t['r6K+TE'])
                 })
             }),
-            (0, n.jsxs)(E.F, {
-                setting: m.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_CONNECTION_REPLAY,
+            (0, i.jsxs)(h.F, {
+                setting: T.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_CONNECTION_REPLAY,
                 children: [
-                    (0, n.jsx)(r.FormSwitch, {
+                    (0, i.jsx)(l.FormSwitch, {
                         hideBorder: !0,
-                        value: x,
+                        value: b,
                         onChange: (e) => c.TC(e),
-                        note: g.Z.Messages.FORM_HELP_CONNECTION_LOG,
-                        children: g.Z.Messages.FORM_CHECKBOX_CONNECTION_LOG
+                        note: E.intl.string(E.t.Lm72RU),
+                        children: E.intl.string(E.t.U4FgFB)
                     }),
-                    (0, n.jsx)(r.FormItem, {
-                        children: (0, n.jsx)(_.Z, {
-                            className: h.marginBottom20,
-                            children: (0, n.jsx)(_.Z.Child, {
+                    (0, i.jsx)(l.FormItem, {
+                        children: (0, i.jsx)(u.Z, {
+                            className: f.marginBottom20,
+                            children: (0, i.jsx)(u.Z.Child, {
                                 grow: 0,
                                 shrink: 0,
-                                children: (0, n.jsx)(r.Button, {
-                                    size: r.Button.Sizes.SMALL,
+                                children: (0, i.jsx)(l.Button, {
+                                    size: l.Button.Sizes.SMALL,
                                     onClick: () => c.z4(),
-                                    children: g.Z.Messages.OPEN_CONNECTION_REPLAY
+                                    children: E.intl.string(E.t.nJnOHB)
                                 })
                             })
                         })
                     }),
-                    (0, n.jsx)(r.FormDivider, { className: h.marginBottom20 })
+                    (0, i.jsx)(l.FormDivider, { className: f.marginBottom20 })
                 ]
             }),
-            (0, n.jsxs)(E.F, {
-                setting: m.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING,
+            (0, i.jsxs)(h.F, {
+                setting: T.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING,
                 children: [
-                    (0, n.jsx)(r.FormSwitch, {
+                    (0, i.jsx)(l.FormSwitch, {
                         hideBorder: !0,
-                        value: t,
-                        onChange: p,
-                        note: g.Z.Messages.FORM_HELP_DEBUG_LOGGING,
-                        children: g.Z.Messages.FORM_CHECKBOX_DEBUG_LOGGING
+                        value: n,
+                        onChange: N,
+                        note: E.intl.string(E.t['/7ak9f']),
+                        children: E.intl.string(E.t['726JHB'])
                     }),
-                    (0, n.jsx)(r.FormItem, {
-                        children: (0, n.jsxs)(_.Z, {
+                    (0, i.jsx)(l.FormItem, {
+                        children: (0, i.jsxs)(u.Z, {
                             children: [
-                                (0, n.jsx)(_.Z.Child, {
+                                (0, i.jsx)(u.Z.Child, {
                                     grow: 0,
                                     shrink: 0,
-                                    children: (0, n.jsx)(r.Button, {
+                                    children: (0, i.jsx)(l.Button, {
                                         disabled: e,
-                                        size: r.Button.Sizes.SMALL,
-                                        onClick: M,
-                                        children: g.Z.Messages.UPLOAD
+                                        size: l.Button.Sizes.SMALL,
+                                        onClick: v,
+                                        children: E.intl.string(E.t['3UB9aW'])
                                     })
                                 }),
-                                (0, n.jsx)(_.Z.Child, {
+                                (0, i.jsx)(u.Z.Child, {
                                     grow: 0,
                                     shrink: 0,
-                                    children: (0, n.jsx)(r.Button, {
-                                        size: r.Button.Sizes.SMALL,
-                                        onClick: O,
-                                        children: g.Z.Messages.SHOW_FOLDER
+                                    children: (0, i.jsx)(l.Button, {
+                                        size: l.Button.Sizes.SMALL,
+                                        onClick: I,
+                                        children: E.intl.string(E.t.nuPtYm)
                                     })
                                 })
                             ]

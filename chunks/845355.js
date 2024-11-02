@@ -6,16 +6,16 @@ e.exports = function (e, t, n, o) {
     var l = 0,
         u = null == e ? 0 : e.length;
     if (0 === u) return 0;
-    for (var c = (t = n(t)) != t, d = null === t, _ = r(t), E = void 0 === t; l < u; ) {
-        var f = a((l + u) / 2),
-            h = n(e[f]),
-            p = void 0 !== h,
-            I = null === h,
-            m = h == h,
-            T = r(h);
-        if (c) var S = o || m;
-        else S = E ? m && (o || p) : d ? m && p && (o || !I) : _ ? m && p && !I && (o || !T) : !I && !T && (o ? h <= t : h < t);
-        S ? (l = f + 1) : (u = f);
+    for (var c = (t = n(t)) != t, d = null === t, f = r(t), _ = void 0 === t; l < u; ) {
+        var h = a((l + u) / 2),
+            p = n(e[h]),
+            m = void 0 !== p,
+            g = null === p,
+            E = p == p,
+            v = r(p);
+        if (c) var I = o || E;
+        else I = _ ? E && (o || m) : d ? E && m && (o || !g) : f ? E && m && !g && (o || !v) : !g && !v && (o ? p <= t : p < t);
+        I ? (l = h + 1) : (u = h);
     }
     return s(u, i);
 };

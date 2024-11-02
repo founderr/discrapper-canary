@@ -1,57 +1,57 @@
-var s,
-    a,
-    i,
+var i,
     r,
-    l = n(442837),
+    l,
+    s,
+    a = n(442837),
     o = n(570140),
     c = n(999382),
     d = n(740903),
     u = n(981631);
-let _ = d.u.OVERVIEW,
-    I = null;
-function E(e) {
+let m = d.u.OVERVIEW,
+    h = null;
+function g(e) {
     let { subsection: t } = e;
     switch (t) {
         case u.KsC.SAFETY_AUTOMOD:
-            _ = d.u.AUTOMOD;
+            m = d.u.AUTOMOD;
             break;
         case u.KsC.SAFETY_DM_AND_SPAM_PROTECTION:
-            _ = d.u.DM_AND_SPAM_PROTECTION;
+            m = d.u.DM_AND_SPAM_PROTECTION;
             break;
         case u.KsC.SAFETY_CAPTCHA_AND_RAID_PROTECTION:
-            _ = d.u.CAPTCHA_AND_RAID_PROTECTION;
+            m = d.u.CAPTCHA_AND_RAID_PROTECTION;
             break;
         case u.KsC.SAFETY_PERMISSIONS:
-            _ = d.u.PERMISSIONS;
+            m = d.u.PERMISSIONS;
             break;
         case u.KsC.SAFETY_OVERVIEW:
         default:
-            _ = d.u.OVERVIEW;
+            m = d.u.OVERVIEW;
     }
 }
-class T extends (r = l.ZP.Store) {
+class x extends (s = a.ZP.Store) {
     getCurrentPage() {
-        return _;
+        return m;
     }
 }
-(i = 'GuildSettingsSafetyStore'),
-    (a = 'displayName') in (s = T)
-        ? Object.defineProperty(s, a, {
-              value: i,
+(l = 'GuildSettingsSafetyStore'),
+    (r = 'displayName') in (i = x)
+        ? Object.defineProperty(i, r, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (s[a] = i),
-    (t.Z = new T(o.Z, {
+        : (i[r] = l),
+    (t.Z = new x(o.Z, {
         GUILD_SETTINGS_INIT: function () {
-            if (c.Z.getGuildId() === I) return !1;
-            I = c.Z.getGuildId();
+            if (c.Z.getGuildId() === h) return !1;
+            h = c.Z.getGuildId();
         },
-        GUILD_SETTINGS_SET_SECTION: E,
-        GUILD_SETTINGS_SAFETY_SET_SUBSECTION: E,
+        GUILD_SETTINGS_SET_SECTION: g,
+        GUILD_SETTINGS_SAFETY_SET_SUBSECTION: g,
         GUILD_SETTINGS_SAFETY_PAGE: function (e) {
             let { page: t } = e;
-            _ = t;
+            m = t;
         }
     }));

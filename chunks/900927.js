@@ -5,28 +5,28 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(399606),
-    a = n(481060),
-    l = n(275759),
-    r = n(565138),
+var l = n(399606),
+    r = n(481060),
+    a = n(275759),
+    s = n(565138),
     o = n(706454),
     c = n(271383),
     u = n(430824),
     d = n(709054),
-    h = n(689938),
+    h = n(388032),
     m = n(45844);
 function p(e) {
-    let { userId: t, guildId: n, textClassName: p, tooltipDelay: _ } = e,
-        f = (0, s.e7)([o.default], () => o.default.locale),
-        E = (0, s.e7)([u.Z], () => (null != n ? u.Z.getGuild(n) : null)),
-        g = (0, s.e7)([c.ZP], () => (null != n ? c.ZP.getMember(n, t) : null)),
-        C = (0, l.FI)(d.default.extractTimestamp(t), f),
-        I = (0, l.FI)(null == g ? void 0 : g.joinedAt, f);
-    return null == E || null == g
-        ? (0, i.jsx)(a.Text, {
+    let { userId: t, guildId: n, textClassName: p, tooltipDelay: f } = e,
+        g = (0, l.e7)([o.default], () => o.default.locale),
+        C = (0, l.e7)([u.Z], () => (null != n ? u.Z.getGuild(n) : null)),
+        x = (0, l.e7)([c.ZP], () => (null != n ? c.ZP.getMember(n, t) : null)),
+        v = (0, a.FI)(d.default.extractTimestamp(t), g),
+        _ = (0, a.FI)(null == x ? void 0 : x.joinedAt, g);
+    return null == C || null == x
+        ? (0, i.jsx)(r.Text, {
               variant: 'text-sm/normal',
               className: p,
-              children: C
+              children: v
           })
         : (0, i.jsxs)('div', {
               className: m.memberSinceWrapper,
@@ -34,11 +34,11 @@ function p(e) {
                   (0, i.jsxs)('div', {
                       className: m.memberSince,
                       children: [
-                          (0, i.jsx)(a.Tooltip, {
-                              text: h.Z.Messages.DISCORD_NAME,
-                              delay: _,
+                          (0, i.jsx)(r.Tooltip, {
+                              text: h.intl.string(h.t.uvGmCw),
+                              delay: f,
                               children: (e) =>
-                                  (0, i.jsx)(a.ClydeIcon, {
+                                  (0, i.jsx)(r.ClydeIcon, {
                                       size: 'custom',
                                       width: 28,
                                       height: 28,
@@ -47,10 +47,10 @@ function p(e) {
                                       className: m.discordIcon
                                   })
                           }),
-                          (0, i.jsx)(a.Text, {
+                          (0, i.jsx)(r.Text, {
                               variant: 'text-sm/normal',
                               className: p,
-                              children: C
+                              children: v
                           })
                       ]
                   }),
@@ -58,20 +58,20 @@ function p(e) {
                   (0, i.jsxs)('div', {
                       className: m.memberSince,
                       children: [
-                          (0, i.jsx)(a.Tooltip, {
-                              text: E.name,
-                              delay: _,
+                          (0, i.jsx)(r.Tooltip, {
+                              text: C.name,
+                              delay: f,
                               children: (e) =>
-                                  (0, i.jsx)(r.Z, {
+                                  (0, i.jsx)(s.Z, {
                                       ...e,
-                                      guild: E,
-                                      size: r.Z.Sizes.SMOL
+                                      guild: C,
+                                      size: s.Z.Sizes.SMOL
                                   })
                           }),
-                          (0, i.jsx)(a.Text, {
+                          (0, i.jsx)(r.Text, {
                               variant: 'text-sm/normal',
                               className: p,
-                              children: I
+                              children: _
                           })
                       ]
                   })

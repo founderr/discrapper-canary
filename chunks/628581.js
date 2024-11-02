@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return l;
     }
 });
-var i = n(689938);
-function s(e, t, n, s) {
-    return s ? i.Z.Messages.CONSOLE_CONNECTING_DISABLED : n ? i.Z.Messages.SUPPRESSED : t ? i.Z.Messages.SERVER_MUTED_DIALOG_TITLE : e ? i.Z.Messages.UNMUTE_ALT : i.Z.Messages.MUTE_ALT;
+var i = n(388032);
+function l(e, t, n, l) {
+    return l ? i.intl.string(i.t['2Ne/Y2']) : n ? i.intl.string(i.t.FJSZVF) : t ? i.intl.string(i.t['+JQCa2']) : e ? i.intl.string(i.t.QbFzMz) : i.intl.string(i.t['Fx/4wc']);
 }

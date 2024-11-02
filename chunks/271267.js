@@ -1,136 +1,136 @@
 n.d(t, {
     Q: function () {
-        return _;
+        return m;
     },
     Z: function () {
-        return m;
+        return p;
     }
 }),
     n(47120);
-var s = n(200651),
-    a = n(192379),
-    i = n(481060),
-    r = n(957011),
-    l = n(587431),
+var i = n(200651),
+    r = n(192379),
+    l = n(481060),
+    s = n(957011),
+    a = n(587431),
     o = n(756066),
-    c = n(689938),
+    c = n(388032),
     d = n(585394),
     u = n(270395);
-let _ = 'role_subscriptions_eligibility_modal';
-function I(e) {
-    let { guild: t, eligibility: a, eligibilityLoading: r, eligibilityError: l, refreshEligibility: o } = e;
-    return (0, s.jsxs)(i.Button, {
-        color: i.ButtonColors.CUSTOM,
+let m = 'role_subscriptions_eligibility_modal';
+function h(e) {
+    let { guild: t, eligibility: r, eligibilityLoading: s, eligibilityError: a, refreshEligibility: o } = e;
+    return (0, i.jsxs)(l.Button, {
+        color: l.ButtonColors.CUSTOM,
         className: d.ineligibleButton,
         innerClassName: d.ineligibleButtonContent,
         grow: !0,
         onClick: function () {
-            (0, i.openModalLazy)(
+            (0, l.openModalLazy)(
                 async () => {
                     let { default: e } = await n.e('21863').then(n.bind(n, 466501));
                     return (n) =>
-                        (0, s.jsx)(e, {
+                        (0, i.jsx)(e, {
                             ...n,
-                            eligibility: a,
-                            eligibilityLoading: r,
-                            eligibilityError: l,
+                            eligibility: r,
+                            eligibilityLoading: s,
+                            eligibilityError: a,
                             refreshEligibility: o,
                             guildId: t.id
                         });
                 },
-                { modalKey: _ }
+                { modalKey: m }
             );
         },
-        size: i.Button.Sizes.LARGE,
+        size: l.Button.Sizes.LARGE,
         children: [
-            (0, s.jsx)(i.CircleWarningIcon, {
+            (0, i.jsx)(l.CircleWarningIcon, {
                 size: 'xs',
                 color: 'currentColor'
             }),
-            c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_START_EARNING_CTA
+            c.intl.string(c.t.NL5ZNT)
         ]
     });
 }
-function E(e) {
+function g(e) {
     let { guild: t, checkboxText: n } = e,
-        { canSubmitAcceptance: o, error: u, loading: _, submitAcceptTermsRequest: I } = (0, r.Z)(t.id),
-        [E, T] = a.useState(!1);
-    return (0, s.jsxs)(s.Fragment, {
+        { canSubmitAcceptance: o, error: u, loading: m, submitAcceptTermsRequest: h } = (0, s.Z)(t.id),
+        [g, x] = r.useState(!1);
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, s.jsx)(i.Checkbox, {
+            (0, i.jsx)(l.Checkbox, {
                 onChange: function () {
-                    T((e) => !e);
+                    x((e) => !e);
                 },
                 size: 20,
-                type: i.Checkbox.Types.INVERTED,
-                value: E,
-                children: (0, s.jsx)(i.Text, {
+                type: l.Checkbox.Types.INVERTED,
+                value: g,
+                children: (0, i.jsx)(l.Text, {
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
                     children: n
                 })
             }),
-            (0, s.jsx)(i.Spacer, { size: 24 }),
-            (0, s.jsx)(i.Button, {
+            (0, i.jsx)(l.Spacer, { size: 24 }),
+            (0, i.jsx)(l.Button, {
                 className: d.ctaButton,
-                disabled: !E || !o,
+                disabled: !g || !o,
                 grow: !0,
-                onClick: I,
-                size: i.Button.Sizes.LARGE,
-                submitting: _,
-                children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_START_EARNING_CTA
+                onClick: h,
+                size: l.Button.Sizes.LARGE,
+                submitting: m,
+                children: c.intl.string(c.t.NL5ZNT)
             }),
             null != u &&
-                (0, s.jsxs)(s.Fragment, {
-                    children: [(0, s.jsx)(i.Spacer, { size: 24 }), (0, s.jsx)(l.Z, { children: u.getAnyErrorMessage() })]
+                (0, i.jsxs)(i.Fragment, {
+                    children: [(0, i.jsx)(l.Spacer, { size: 24 }), (0, i.jsx)(a.Z, { children: u.getAnyErrorMessage() })]
                 })
         ]
     });
 }
-function T(e) {
+function x(e) {
     let { guild: t, monetizationEligibility: n } = e,
-        { eligibilityLoading: a, eligibilityError: i, refreshEligibility: r, eligibility: l, eligibleForMonetization: c, acceptTermsCheckboxText: d, wasRejectedInV1: u } = n;
+        { eligibilityLoading: r, eligibilityError: l, refreshEligibility: s, eligibility: a, eligibleForMonetization: c, acceptTermsCheckboxText: d, wasRejectedInV1: u } = n;
     return c
         ? u
-            ? (0, s.jsx)(o.Z, { ...n })
-            : (0, s.jsx)(E, {
+            ? (0, i.jsx)(o.Z, { ...n })
+            : (0, i.jsx)(g, {
                   guild: t,
                   checkboxText: d
               })
-        : (0, s.jsx)(I, {
+        : (0, i.jsx)(h, {
               guild: t,
-              eligibility: l,
-              eligibilityLoading: a,
-              eligibilityError: i,
-              refreshEligibility: r
+              eligibility: a,
+              eligibilityLoading: r,
+              eligibilityError: l,
+              refreshEligibility: s
           });
 }
-function m(e) {
+function p(e) {
     let { guild: t, monetizationEligibility: n } = e;
-    return (0, s.jsxs)('div', {
+    return (0, i.jsxs)('div', {
         className: d.ctaContainer,
         children: [
-            (0, s.jsx)('img', {
+            (0, i.jsx)('img', {
                 className: d.heroBanner,
                 src: u,
-                alt: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_HERO_BANNER_ALT
+                alt: c.intl.string(c.t.Af4klJ)
             }),
-            (0, s.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: d.ctaContent,
                 children: [
-                    (0, s.jsx)(i.Heading, {
+                    (0, i.jsx)(l.Heading, {
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
-                        children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_DESKTOP_V2_TITLE
+                        children: c.intl.string(c.t.PqYfh4)
                     }),
-                    (0, s.jsx)(i.Spacer, { size: 12 }),
-                    (0, s.jsx)(i.Text, {
+                    (0, i.jsx)(l.Spacer, { size: 12 }),
+                    (0, i.jsx)(l.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_V2_SUBTITLE
+                        children: c.intl.string(c.t['41wkMT'])
                     }),
-                    (0, s.jsx)(i.Spacer, { size: 24 }),
-                    (0, s.jsx)(T, {
+                    (0, i.jsx)(l.Spacer, { size: 24 }),
+                    (0, i.jsx)(x, {
                         guild: t,
                         monetizationEligibility: n
                     })

@@ -1,100 +1,100 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return O;
+        return I;
     }
 });
-var n = t(200651),
-    a = t(192379),
-    i = t(120356),
-    r = t.n(i),
-    o = t(442837),
-    l = t(780384),
-    c = t(481060),
-    d = t(846027),
-    _ = t(600164),
-    u = t(921801),
-    E = t(131951),
-    T = t(210887),
-    S = t(996073),
-    I = t(526761),
-    N = t(726985),
-    m = t(689938),
-    C = t(113207);
-let A = t(651714),
-    g = t(297166);
-function h() {
-    let { experimentalEncoders: e } = (0, o.cj)([E.Z], () => ({ experimentalEncoders: E.Z.getExperimentalEncoders() }));
-    return (0, n.jsx)(u.F, {
-        setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_EXPERIMENTAL_ENCODERS,
-        children: (0, n.jsx)(c.FormSwitch, {
-            className: r()(C.marginTop8, C.marginBottom20),
+var i = n(200651),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(442837),
+    o = n(780384),
+    c = n(481060),
+    d = n(846027),
+    u = n(600164),
+    m = n(921801),
+    h = n(131951),
+    g = n(210887),
+    p = n(996073),
+    x = n(526761),
+    S = n(726985),
+    T = n(388032),
+    C = n(113207);
+let _ = n(651714),
+    E = n(297166);
+function f() {
+    let { experimentalEncoders: e } = (0, a.cj)([h.Z], () => ({ experimentalEncoders: h.Z.getExperimentalEncoders() }));
+    return (0, i.jsx)(m.F, {
+        setting: S.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_EXPERIMENTAL_ENCODERS,
+        children: (0, i.jsx)(c.FormSwitch, {
+            className: l()(C.marginTop8, C.marginBottom20),
             value: e,
             onChange: (e) => d.Z.setExperimentalEncoders(e),
             disabled: !1,
-            children: m.Z.Messages.EXPERIMENTAL_ENCODERS
+            children: T.intl.string(T.t.AxnPm5)
         })
     });
 }
-function O() {
-    let e = (0, o.e7)([T.Z], () => T.Z.theme),
-        { openH264: s, hardwareEncoding: t } = (0, o.cj)([E.Z], () => ({
-            openH264: E.Z.getOpenH264(),
-            hardwareEncoding: E.Z.getHardwareEncoding()
+function I() {
+    let e = (0, a.e7)([g.Z], () => g.Z.theme),
+        { openH264: t, hardwareEncoding: n } = (0, a.cj)([h.Z], () => ({
+            openH264: h.Z.getOpenH264(),
+            hardwareEncoding: h.Z.getHardwareEncoding()
         })),
-        i = a.useRef(null);
+        r = s.useRef(null);
     return (
-        (0, S.Z)(i, I.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION),
-        (0, n.jsxs)(n.Fragment, {
+        (0, p.Z)(r, x.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION),
+        (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, n.jsx)(u.F, {
-                    setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_AUDIO,
-                    children: (0, n.jsx)(c.FormSection, {
+                (0, i.jsx)(m.F, {
+                    setting: S.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_AUDIO,
+                    children: (0, i.jsx)(c.FormSection, {
                         className: C.marginBottom20,
-                        title: m.Z.Messages.USER_SETTINGS_VOICE_CODEC_TITLE,
-                        children: (0, n.jsx)(c.FormNotice, {
+                        title: T.intl.string(T.t.DSGme3),
+                        children: (0, i.jsx)(c.FormNotice, {
                             className: C.marginBottom20,
                             type: c.FormNoticeTypes.PRIMARY,
                             imageData: {
-                                src: (0, l.ap)(e) ? A : g,
+                                src: (0, o.ap)(e) ? _ : E,
                                 width: 70,
                                 height: 40
                             },
-                            align: _.Z.Align.CENTER,
-                            body: m.Z.Messages.USER_SETTINGS_VOICE_CODEC_DESCRIPTION
+                            align: u.Z.Align.CENTER,
+                            body: T.intl.string(T.t['2nDAzM'])
                         })
                     })
                 }),
-                (0, n.jsx)(u.F, {
-                    setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO,
-                    children: (0, n.jsxs)(c.FormSection, {
+                (0, i.jsx)(m.F, {
+                    setting: S.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO,
+                    children: (0, i.jsxs)(c.FormSection, {
                         className: C.marginBottom20,
-                        title: m.Z.Messages.USER_SETTINGS_VOICE_VIDEO_CODEC_TITLE,
+                        title: T.intl.string(T.t.Tceiq6),
                         children: [
-                            (0, n.jsx)(u.F, {
-                                setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_OPENH264,
-                                children: (0, n.jsx)(c.FormSwitch, {
-                                    className: r()(C.marginTop8, C.marginBottom20),
-                                    value: s,
+                            (0, i.jsx)(m.F, {
+                                setting: S.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_OPENH264,
+                                children: (0, i.jsx)(c.FormSwitch, {
+                                    className: l()(C.marginTop8, C.marginBottom20),
+                                    value: t,
                                     onChange: (e) => d.Z.setOpenH264(e),
                                     disabled: !1,
-                                    children: m.Z.Messages.USER_SETTINGS_VOICE_OPEN_H264
+                                    children: T.intl.string(T.t['71Ve19'])
                                 })
                             }),
-                            (0, n.jsx)('div', {
+                            (0, i.jsx)('div', {
                                 style: { scrollMarginTop: '48px' },
-                                ref: i
+                                ref: r
                             }),
-                            (0, n.jsx)(u.F, {
-                                setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_HARDWARE_ACCELERATION,
-                                children: (0, n.jsx)(c.FormSwitch, {
-                                    className: r()(C.marginTop8, C.marginBottom20),
-                                    value: t,
+                            (0, i.jsx)(m.F, {
+                                setting: S.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_HARDWARE_ACCELERATION,
+                                children: (0, i.jsx)(c.FormSwitch, {
+                                    className: l()(C.marginTop8, C.marginBottom20),
+                                    value: n,
                                     onChange: (e) => d.Z.setHardwareEncoding(e),
-                                    note: m.Z.Messages.FORM_HELP_HARDWARE_ENCODING,
-                                    children: m.Z.Messages.USER_SETTINGS_VOICE_HARDWARE_ENCODING
+                                    note: T.intl.string(T.t.P1UKqq),
+                                    children: T.intl.string(T.t.Sln58f)
                                 })
                             }),
-                            (0, n.jsx)(h, {})
+                            (0, i.jsx)(f, {})
                         ]
                     })
                 })

@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return y;
+        return k;
     }
 });
 var i = n(200651),
-    s = n(192379),
-    a = n(100621),
-    l = n(597312),
-    r = n(481060),
+    l = n(192379),
+    r = n(100621),
+    a = n(597312),
+    s = n(481060),
     o = n(727637),
     c = n(410030),
     u = n(100527),
@@ -15,51 +15,51 @@ var i = n(200651),
     h = n(688465),
     m = n(680295),
     p = n(785717),
-    _ = n(221292),
-    f = n(687158),
-    E = n(326094),
-    g = n(510659),
-    C = n(113557),
-    I = n(867176),
-    T = n(169979),
-    x = n(451834),
-    S = n(502762),
-    v = n(952124),
-    N = n(544989),
-    A = n(481932),
-    Z = n(272510),
-    M = n(171368),
-    b = n(348540),
-    R = n(179142),
-    L = n(228168),
-    P = n(981631),
-    j = n(689938),
-    O = n(337319);
-function y(e) {
-    let { user: t, currentUser: n, channel: y } = e,
-        D = __OVERLAY__,
-        U = (0, f.ZP)(t.id),
-        k = (0, c.ZP)(),
-        w = (0, E.Z)({
+    f = n(221292),
+    g = n(687158),
+    C = n(326094),
+    x = n(510659),
+    v = n(113557),
+    _ = n(867176),
+    I = n(169979),
+    E = n(451834),
+    b = n(502762),
+    S = n(952124),
+    Z = n(544989),
+    T = n(481932),
+    N = n(272510),
+    j = n(171368),
+    A = n(348540),
+    y = n(179142),
+    P = n(228168),
+    M = n(981631),
+    R = n(388032),
+    L = n(337319);
+function k(e) {
+    let { user: t, currentUser: n, channel: k } = e,
+        O = __OVERLAY__,
+        w = (0, g.ZP)(t.id),
+        D = (0, c.ZP)(),
+        U = (0, C.Z)({
             user: t,
             currentUser: n,
-            location: P.Sbl.PROFILE_PANEL
+            location: M.Sbl.PROFILE_PANEL
         }),
         B = (0, p.ZB)({
-            layout: w ? 'SIMPLIFIED_DM_PANEL' : 'SIMPLIFIED_DM_PANEL_RESTRICTED_BLOCKER_PROFILE',
+            layout: U ? 'SIMPLIFIED_DM_PANEL' : 'SIMPLIFIED_DM_PANEL_RESTRICTED_BLOCKER_PROFILE',
             userId: t.id,
-            channelId: y.id
+            channelId: k.id
         }),
         { analyticsLocations: H } = (0, d.ZP)(u.Z.PROFILE_PANEL),
-        G = s.useRef(null),
-        V = (0, o.Z)(G),
-        F = (0, g.$m)(),
-        W = (0, r.useSpring)({
-            opacity: null != F.interactionType ? 1 : 0,
+        F = l.useRef(null),
+        G = (0, o.Z)(F),
+        V = (0, x.$m)(),
+        z = (0, s.useSpring)({
+            opacity: null != V.interactionType ? 1 : 0,
             config: { duration: 150 }
         }),
-        z = (e) => {
-            (0, M.openUserProfileModal)({
+        W = (e) => {
+            (0, j.openUserProfileModal)({
                 sourceAnalyticsLocations: H,
                 ...B,
                 ...e
@@ -69,98 +69,98 @@ function y(e) {
         value: H,
         children: (0, i.jsx)(p.Mt, {
             value: B,
-            children: (0, i.jsx)(g.NJ, {
-                value: F,
-                children: (0, i.jsxs)(S.Z, {
-                    ref: G,
+            children: (0, i.jsx)(x.NJ, {
+                value: V,
+                children: (0, i.jsxs)(b.Z, {
+                    ref: F,
                     user: t,
-                    displayProfile: U,
-                    profileType: L.y0.PANEL,
-                    themeOverride: k,
-                    className: O.container,
+                    displayProfile: w,
+                    profileType: P.y0.PANEL,
+                    themeOverride: D,
+                    className: L.container,
                     children: [
-                        null != F.interactionType &&
-                            (0, i.jsx)(a.animated.div, {
-                                style: W,
-                                className: O.backdrop
+                        null != V.interactionType &&
+                            (0, i.jsx)(r.animated.div, {
+                                style: z,
+                                className: L.backdrop
                             }),
-                        (0, i.jsxs)(l.u2, {
+                        (0, i.jsxs)(a.u2, {
                             children: [
-                                (0, i.jsxs)(N.Z, {
-                                    profileType: L.y0.PANEL,
+                                (0, i.jsxs)(Z.Z, {
+                                    profileType: P.y0.PANEL,
                                     children: [
-                                        (0, i.jsx)(A.Z, {
+                                        (0, i.jsx)(T.Z, {
                                             user: t,
-                                            profileType: L.y0.PANEL
+                                            profileType: P.y0.PANEL
                                         }),
-                                        t.bot ? (0, i.jsx)(v.Z, { user: t }) : (0, i.jsx)(Z.Z, { user: t })
+                                        t.bot ? (0, i.jsx)(S.Z, { user: t }) : (0, i.jsx)(N.Z, { user: t })
                                     ]
                                 }),
                                 (0, i.jsxs)('header', {
-                                    className: O.header,
+                                    className: L.header,
                                     children: [
-                                        (0, i.jsx)(I.Z, {
+                                        (0, i.jsx)(_.Z, {
                                             user: t,
-                                            displayProfile: U,
-                                            profileType: L.y0.PANEL,
-                                            animateOnHover: !V,
-                                            className: O.banner
+                                            displayProfile: w,
+                                            profileType: P.y0.PANEL,
+                                            animateOnHover: !G,
+                                            className: L.banner
                                         }),
-                                        (0, i.jsx)(x.Z, {
+                                        (0, i.jsx)(E.Z, {
                                             userId: t.id,
-                                            className: O.toast
+                                            className: L.toast
                                         }),
-                                        (0, i.jsx)(C.Z, {
+                                        (0, i.jsx)(v.Z, {
                                             location: 'UserProfilePanel',
                                             user: t,
-                                            displayProfile: U,
-                                            channelId: y.id,
-                                            profileType: L.y0.PANEL,
-                                            onOpenProfile: D ? void 0 : z
+                                            displayProfile: w,
+                                            channelId: k.id,
+                                            profileType: P.y0.PANEL,
+                                            onOpenProfile: O ? void 0 : W
                                         }),
-                                        (0, i.jsx)(T.Z, {
+                                        (0, i.jsx)(I.Z, {
                                             location: 'UserProfilePanel',
                                             user: t,
-                                            channelId: y.id,
-                                            profileType: L.y0.PANEL
+                                            channelId: k.id,
+                                            profileType: P.y0.PANEL
                                         }),
-                                        t.isClyde() && (0, i.jsx)(h.Z, { className: O.headerTag })
+                                        t.isClyde() && (0, i.jsx)(h.Z, { className: L.headerTag })
                                     ]
                                 }),
-                                (0, i.jsx)(b.Z, {
+                                (0, i.jsx)(A.Z, {
                                     user: t,
                                     currentUser: n,
-                                    displayProfile: U,
-                                    channel: y,
-                                    isHovering: null == F.interactionType && V,
-                                    onOpenProfile: D ? void 0 : z
+                                    displayProfile: w,
+                                    channel: k,
+                                    isHovering: null == V.interactionType && G,
+                                    onOpenProfile: O ? void 0 : W
                                 }),
-                                (0, i.jsx)(R.Z, { user: t })
+                                (0, i.jsx)(y.Z, { user: t })
                             ]
                         }),
-                        !D &&
+                        !O &&
                             (0, i.jsx)('footer', {
-                                className: O.footer,
-                                children: (0, i.jsx)(r.Button, {
+                                className: L.footer,
+                                children: (0, i.jsx)(s.Button, {
                                     fullWidth: !0,
-                                    size: r.Button.Sizes.LARGE,
-                                    look: r.Button.Looks.BLANK,
-                                    color: O.footerButtonColor,
+                                    size: s.Button.Sizes.LARGE,
+                                    look: s.Button.Looks.BLANK,
+                                    color: L.footerButtonColor,
                                     onClick: () => {
-                                        z(),
-                                            (0, _.pQ)({
+                                        W(),
+                                            (0, f.pQ)({
                                                 action: 'PRESS_VIEW_PROFILE',
                                                 analyticsLocations: H,
                                                 ...B
                                             });
                                     },
-                                    children: j.Z.Messages.VIEW_FULL_PROFILE
+                                    children: R.intl.string(R.t['+Xp3ho'])
                                 })
                             }),
-                        (null == U ? void 0 : U.profileEffectId) != null &&
+                        (null == w ? void 0 : w.profileEffectId) != null &&
                             (0, i.jsx)(m.Z, {
-                                profileEffectId: null == U ? void 0 : U.profileEffectId,
-                                isHovering: V
+                                profileEffectId: null == w ? void 0 : w.profileEffectId,
+                                isHovering: G
                             })
                     ]
                 })

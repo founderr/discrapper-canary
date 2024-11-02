@@ -1,22 +1,22 @@
 t.d(n, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = t(200651);
 t(192379);
-var a = t(481060),
-    s = t(358085),
-    l = t(998502),
-    r = t(689938);
-function o(e, n) {
-    return s.isPlatformEmbedded && (null == e ? void 0 : e.length) !== 0
-        ? (0, i.jsx)(a.MenuItem, {
+var l = t(481060),
+    r = t(358085),
+    a = t(998502),
+    o = t(388032);
+function s(e, n) {
+    return r.isPlatformEmbedded && (null == e ? void 0 : e.length) !== 0
+        ? (0, i.jsx)(l.MenuItem, {
               id: 'copy',
-              label: r.Z.Messages.COPY,
-              hint: (0, s.isMac)() ? '\u2318C' : 'Ctrl+C',
+              label: o.intl.string(o.t.OpuAlJ),
+              hint: (0, r.isMac)() ? '\u2318C' : 'Ctrl+C',
               action: () => {
-                  l.ZP.copy(e), null == n || n.focus();
+                  a.ZP.copy(e), null == n || n.focus();
               }
           })
         : null;

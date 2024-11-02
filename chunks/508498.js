@@ -9,8 +9,8 @@ n.d(t, {
     n(815648),
     n(47120);
 var r,
-    s,
-    a = n(192379),
+    a,
+    s = n(192379),
     i = n(512969),
     l = n(37234),
     o = n(703656),
@@ -18,10 +18,10 @@ var r,
 function d() {
     let { search: e } = (0, i.TH)(),
         t = (0, i.UO)(),
-        n = a.useMemo(() => new URLSearchParams(e), [e]).get('source'),
+        n = s.useMemo(() => new URLSearchParams(e), [e]).get('source'),
         r = null != n ? parseInt(n, 10) : null;
     return {
-        onClose: a.useCallback(() => {
+        onClose: s.useCallback(() => {
             if (0 === r) {
                 (0, o.op)(), (0, l.jN)(c.S9g.USER_SETTINGS);
                 return;
@@ -36,4 +36,4 @@ function d() {
         ...t
     };
 }
-((s = r || (r = {}))[(s.SETTINGS = 0)] = 'SETTINGS'), (s[(s.CHANGELOG = 1)] = 'CHANGELOG'), (s[(s.DM_LIST = 2)] = 'DM_LIST');
+((a = r || (r = {}))[(a.SETTINGS = 0)] = 'SETTINGS'), (a[(a.CHANGELOG = 1)] = 'CHANGELOG'), (a[(a.DM_LIST = 2)] = 'DM_LIST');

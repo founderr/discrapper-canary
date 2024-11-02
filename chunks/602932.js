@@ -7,20 +7,20 @@ var r,
     u = n(50754),
     c = n(202934),
     d = i.Function;
-var _ = /MSIE .\./.test(l) || (o && ((r = i.Bun.version.split('.')).length < 3 || ('0' === r[0] && (r[1] < 3 || ('3' === r[1] && '0' === r[2])))));
+var f = /MSIE .\./.test(l) || (o && ((r = i.Bun.version.split('.')).length < 3 || ('0' === r[0] && (r[1] < 3 || ('3' === r[1] && '0' === r[2])))));
 e.exports = function (e, t) {
     var n = t ? 2 : 1;
-    return _
+    return f
         ? function (r, i) {
               var o = c(arguments.length, 1) > n,
                   l = s(r) ? r : d(r),
-                  _ = o ? u(arguments, n) : [],
-                  E = o
+                  f = o ? u(arguments, n) : [],
+                  _ = o
                       ? function () {
-                            a(l, this, _);
+                            a(l, this, f);
                         }
                       : l;
-              return t ? e(E, i) : e(E);
+              return t ? e(_, i) : e(_);
           }
         : e;
 };

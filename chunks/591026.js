@@ -1,121 +1,121 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return g;
     }
 }),
     n(47120);
-var s = n(200651),
-    a = n(192379),
-    i = n(481060),
-    r = n(467319),
-    l = n(456677),
+var i = n(200651),
+    r = n(192379),
+    l = n(481060),
+    s = n(467319),
+    a = n(456677),
     o = n(55889),
     c = n(300453),
     d = n(620436),
     u = n(273504),
-    _ = n(689938),
-    I = n(375065);
-function E(e) {
+    m = n(388032),
+    h = n(375065);
+function g(e) {
     var t, n;
-    let { rule: E, onChangeRule: T } = e,
-        [m, N] = a.useState(null === (t = E.triggerMetadata) || void 0 === t ? void 0 : t.mentionTotalLimit),
-        S = (0, r.a)(E.guildId, !1);
-    return (0, s.jsx)(s.Fragment, {
-        children: (0, s.jsxs)('div', {
-            className: I.cardContentsContainer,
+    let { rule: g, onChangeRule: x } = e,
+        [p, f] = r.useState(null === (t = g.triggerMetadata) || void 0 === t ? void 0 : t.mentionTotalLimit),
+        C = (0, s.a)(g.guildId, !1);
+    return (0, i.jsx)(i.Fragment, {
+        children: (0, i.jsxs)('div', {
+            className: h.cardContentsContainer,
             children: [
-                (0, s.jsxs)(c.Z, {
+                (0, i.jsxs)(c.Z, {
                     step: 1,
-                    header: _.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_TRIGGER_HEADER,
+                    header: m.intl.string(m.t.IGfuTU),
                     children: [
-                        (0, s.jsxs)('div', {
-                            className: I.mentionLimitContainer,
+                        (0, i.jsxs)('div', {
+                            className: h.mentionLimitContainer,
                             children: [
-                                (0, s.jsx)('div', {
-                                    className: I.mentionLimitIconContainer,
-                                    children: (0, s.jsx)(i.AtIcon, {
+                                (0, i.jsx)('div', {
+                                    className: h.mentionLimitIconContainer,
+                                    children: (0, i.jsx)(l.AtIcon, {
                                         size: 'md',
                                         color: 'currentColor',
-                                        className: I.mentionLimitIcon
+                                        className: h.mentionLimitIcon
                                     })
                                 }),
-                                (0, s.jsxs)('div', {
-                                    className: I.mentionLimitTextContainer,
+                                (0, i.jsxs)('div', {
+                                    className: h.mentionLimitTextContainer,
                                     children: [
-                                        (0, s.jsx)(i.Heading, {
+                                        (0, i.jsx)(l.Heading, {
                                             variant: 'heading-sm/semibold',
-                                            children: _.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_TRIGGER_DESCRIPTION
+                                            children: m.intl.string(m.t['s/26oa'])
                                         }),
-                                        (0, s.jsx)(i.Text, {
+                                        (0, i.jsx)(l.Text, {
                                             color: 'interactive-normal',
                                             variant: 'text-xs/medium',
-                                            className: I.descriptionHint,
-                                            children: _.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_TRIGGER_DESCRIPTION_HINT
+                                            className: h.descriptionHint,
+                                            children: m.intl.string(m.t['8uW4/P'])
                                         })
                                     ]
                                 }),
-                                (0, s.jsx)('div', {
-                                    className: I.stepperContainer,
-                                    children: (0, s.jsx)(i.NumberInputStepper, {
-                                        value: m,
+                                (0, i.jsx)('div', {
+                                    className: h.stepperContainer,
+                                    children: (0, i.jsx)(l.NumberInputStepper, {
+                                        value: p,
                                         onChange: (e) => {
-                                            N(e),
-                                                T({
-                                                    ...E,
+                                            f(e),
+                                                x({
+                                                    ...g,
                                                     triggerMetadata: {
-                                                        ...E.triggerMetadata,
+                                                        ...g.triggerMetadata,
                                                         mentionTotalLimit: e
                                                     }
                                                 });
                                         },
                                         minValue: u.Vg,
                                         maxValue: u.Lg,
-                                        className: I.stepper
+                                        className: h.stepper
                                     })
                                 })
                             ]
                         }),
-                        S
-                            ? (0, s.jsxs)('div', {
-                                  className: I.mentionLimitContainer,
+                        C
+                            ? (0, i.jsxs)('div', {
+                                  className: h.mentionLimitContainer,
                                   children: [
-                                      (0, s.jsx)('div', {
-                                          className: I.mentionLimitIconContainer,
-                                          children: (0, s.jsx)(i.ShieldAtIcon, {
+                                      (0, i.jsx)('div', {
+                                          className: h.mentionLimitIconContainer,
+                                          children: (0, i.jsx)(l.ShieldAtIcon, {
                                               size: 'md',
                                               color: 'currentColor',
-                                              className: I.mentionLimitIcon
+                                              className: h.mentionLimitIcon
                                           })
                                       }),
-                                      (0, s.jsxs)('div', {
-                                          className: I.mentionLimitTextContainer,
+                                      (0, i.jsxs)('div', {
+                                          className: h.mentionLimitTextContainer,
                                           children: [
-                                              (0, s.jsx)(i.Heading, {
+                                              (0, i.jsx)(l.Heading, {
                                                   variant: 'heading-sm/semibold',
-                                                  children: _.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_RAID_DESCRIPTION
+                                                  children: m.intl.string(m.t.XnuC9v)
                                               }),
-                                              (0, s.jsx)(i.Text, {
+                                              (0, i.jsx)(l.Text, {
                                                   color: 'interactive-normal',
                                                   variant: 'text-xs/medium',
-                                                  className: I.descriptionHint,
-                                                  children: _.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_RAID_DESCRIPTION_HINT
+                                                  className: h.descriptionHint,
+                                                  children: m.intl.string(m.t.EDBe5u)
                                               })
                                           ]
                                       }),
-                                      (0, s.jsx)('div', {
-                                          children: (0, s.jsx)(i.Checkbox, {
-                                              type: i.Checkbox.Types.INVERTED,
-                                              value: null === (n = E.triggerMetadata) || void 0 === n ? void 0 : n.mentionRaidProtectionEnabled,
+                                      (0, i.jsx)('div', {
+                                          children: (0, i.jsx)(l.Checkbox, {
+                                              type: l.Checkbox.Types.INVERTED,
+                                              value: null === (n = g.triggerMetadata) || void 0 === n ? void 0 : n.mentionRaidProtectionEnabled,
                                               onChange: (e, t) => {
-                                                  T({
-                                                      ...E,
+                                                  x({
+                                                      ...g,
                                                       triggerMetadata: {
-                                                          ...E.triggerMetadata,
+                                                          ...g.triggerMetadata,
                                                           mentionRaidProtectionEnabled: t
                                                       }
                                                   });
                                               },
-                                              className: I.__invalid_actionCheckbox
+                                              className: h.__invalid_actionCheckbox
                                           })
                                       })
                                   ]
@@ -123,22 +123,22 @@ function E(e) {
                             : null
                     ]
                 }),
-                (0, s.jsx)(d.Z, { type: d.Z.Type.ARROW_DOWN }),
-                (0, s.jsx)(c.Z, {
+                (0, i.jsx)(d.Z, { type: d.Z.Type.ARROW_DOWN }),
+                (0, i.jsx)(c.Z, {
                     step: 2,
-                    header: _.Z.Messages.GUILD_AUTOMOD_ACTIONS_HEADER,
-                    children: (0, s.jsx)(l.Z, {
-                        rule: E,
-                        onChangeRule: T
+                    header: m.intl.string(m.t['18TOiY']),
+                    children: (0, i.jsx)(a.Z, {
+                        rule: g,
+                        onChangeRule: x
                     })
                 }),
-                (0, s.jsx)(d.Z, { type: d.Z.Type.CROSS }),
-                (0, s.jsx)(c.Z, {
+                (0, i.jsx)(d.Z, { type: d.Z.Type.CROSS }),
+                (0, i.jsx)(c.Z, {
                     step: 3,
-                    header: _.Z.Messages.GUILD_AUTOMOD_EXEMPTION_HEADER,
-                    children: (0, s.jsx)(o.Z, {
-                        rule: E,
-                        onChangeRule: T
+                    header: m.intl.string(m.t.eq3gjo),
+                    children: (0, i.jsx)(o.Z, {
+                        rule: g,
+                        onChangeRule: x
                     })
                 })
             ]

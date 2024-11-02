@@ -3,21 +3,21 @@ t.d(n, {
         return u;
     }
 });
-var o = t(200651);
+var r = t(200651);
 t(192379);
-var r = t(481060),
-    a = t(906732),
-    i = t(453925),
-    l = t(821564),
+var o = t(481060),
+    i = t(906732),
+    l = t(453925),
+    a = t(821564),
     c = t(632304);
 function u() {
-    let { analyticsLocations: e } = (0, a.ZP)();
+    let { analyticsLocations: e } = (0, i.ZP)();
     return [
-        (0, o.jsx)(r.MenuGroup, { children: (0, l.Z)(e) }, 'input-mode-items'),
-        (0, o.jsxs)(
-            r.MenuGroup,
+        (0, r.jsx)(o.MenuGroup, { children: (0, a.Z)(e) }, 'input-mode-items'),
+        (0, r.jsxs)(
+            o.MenuGroup,
             {
-                children: [(0, i.Z)(e), (0, c.Z)(e)]
+                children: [(0, l.Z)(e), (0, c.Z)(e)]
             },
             'input-output'
         )

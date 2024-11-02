@@ -1,24 +1,24 @@
-s.d(n, {
+t.d(n, {
     Z: function () {
-        return _;
+        return m;
     }
 }),
-    s(757143);
-var t = s(200651);
-s(192379);
-var l = s(120356),
-    i = s.n(l),
-    r = s(481060),
-    a = s(403182),
-    c = s(587446),
-    o = s(504983),
-    u = s(651523);
+    t(757143);
+var i = t(200651);
+t(192379);
+var l = t(120356),
+    r = t.n(l),
+    s = t(481060),
+    a = t(403182),
+    c = t(587446),
+    o = t(504983),
+    u = t(651523);
 function d(e) {
     let { errors: n } = e;
-    return (0, t.jsx)(t.Fragment, {
+    return (0, i.jsx)(i.Fragment, {
         children: n.map((e, n) =>
-            (0, t.jsx)(
-                r.Text,
+            (0, i.jsx)(
+                s.Text,
                 {
                     variant: 'text-xs/normal',
                     color: 'text-danger',
@@ -33,36 +33,36 @@ function d(e) {
         )
     });
 }
-function _(e) {
-    let { title: n, titleIcon: s, titleId: l, description: a, children: _, className: m, errors: I, disabled: E = !1, hideDivider: p = !1, showBorder: N = !1, borderType: T, hasBackground: S = !1, forcedDivider: x = !1, showPremiumIcon: h = !1 } = e;
-    return (0, t.jsx)('div', {
-        className: i()(u.customizationSection, m, {
-            [u.disabled]: E,
-            [u.hideDivider]: p,
-            [u.showBorder]: N,
-            [u.withDivider]: x
+function m(e) {
+    let { title: n, titleIcon: t, titleId: l, description: a, children: m, className: p, errors: x, disabled: h = !1, hideDivider: f = !1, showBorder: v = !1, borderType: g, hasBackground: S = !1, forcedDivider: j = !1, showPremiumIcon: E = !1 } = e;
+    return (0, i.jsx)('div', {
+        className: r()(u.customizationSection, p, {
+            [u.disabled]: h,
+            [u.hideDivider]: f,
+            [u.showBorder]: v,
+            [u.withDivider]: j
         }),
-        children: (0, t.jsxs)(o.Z, {
+        children: (0, i.jsxs)(o.Z, {
             className: u.customizationSectionBorder,
             backgroundClassName: u.customizationSectionBackground,
-            isShown: N,
-            type: T,
+            isShown: v,
+            type: g,
             hasBackground: S,
             children: [
-                (0, t.jsxs)(r.FormTitle, {
+                (0, i.jsxs)(s.FormTitle, {
                     className: u.title,
                     id: l,
-                    children: [n, h && (0, t.jsx)(c.Z, {}), s]
+                    children: [n, E && (0, i.jsx)(c.Z, {}), t]
                 }),
                 null != a
-                    ? (0, t.jsx)(r.FormText, {
-                          type: r.FormText.Types.DESCRIPTION,
+                    ? (0, i.jsx)(s.FormText, {
+                          type: s.FormText.Types.DESCRIPTION,
                           className: u.sectionDescription,
                           children: a
                       })
                     : null,
-                _,
-                null != I && (0, t.jsx)(d, { errors: I })
+                m,
+                null != x && (0, i.jsx)(d, { errors: x })
             ]
         })
     });

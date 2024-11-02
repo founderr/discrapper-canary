@@ -1,24 +1,24 @@
-t.d(n, {
+e.d(t, {
     Z: function () {
-        return d;
+        return o;
     }
 });
-var l = t(200651);
-t(192379);
-var i = t(442837),
-    u = t(481060),
-    s = t(726521),
-    r = t(924301),
-    a = t(689938);
-function d(e) {
-    let n = (0, i.e7)([r.ZP], () => r.ZP.getGuildScheduledEvent(e), [e]);
-    return null == e || null == n
+var l = e(200651);
+e(192379);
+var i = e(442837),
+    r = e(481060),
+    u = e(726521),
+    d = e(924301),
+    a = e(388032);
+function o(n) {
+    let t = (0, i.e7)([d.ZP], () => d.ZP.getGuildScheduledEvent(n), [n]);
+    return null == n || null == t
         ? null
-        : (0, l.jsx)(u.MenuItem, {
+        : (0, l.jsx)(r.MenuItem, {
               id: 'report-event',
-              label: a.Z.Messages.REPORT_MODAL_REPORT_EVENT_MENU_ITEM,
-              action: () => (0, s.d$)(n),
-              icon: u.FlagIcon,
+              label: a.intl.string(a.t.IBA5wc),
+              action: () => (0, u.d$)(t),
+              icon: r.FlagIcon,
               color: 'danger'
           });
 }

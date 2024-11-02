@@ -18,53 +18,53 @@ let o = Object.freeze({
     }
 });
 function l(e) {
-    let { sections: t, columns: n, getItemKey: l, getItemHeight: u, getSectionHeight: c, chunkSize: d = 250, getScrollerState: _, maxBufferWidth: E, itemGutter: f, removeEdgeItemGutters: h, sectionGutter: p, padding: I, paddingVertical: m, paddingHorizontal: T, dir: S } = e,
-        g = (0, a.Z)(),
-        A = (0, r.useRef)(o),
-        [N] = (0, r.useState)(() => new i.ZP()),
-        R = _(),
-        O = Math.min(null != E ? E : 1 / 0, R.offsetWidth),
-        v = null != E ? Math.max(0, R.offsetWidth - E) : 0,
+    let { sections: t, columns: n, getItemKey: l, getItemHeight: u, getSectionHeight: c, chunkSize: d = 250, getScrollerState: f, maxBufferWidth: _, itemGutter: h, removeEdgeItemGutters: p, sectionGutter: m, padding: g, paddingVertical: E, paddingHorizontal: v, dir: I } = e,
+        S = (0, a.Z)(),
+        T = (0, r.useRef)(o),
+        [b] = (0, r.useState)(() => new i.ZP()),
+        y = f(),
+        A = Math.min(null != _ ? _ : 1 / 0, y.offsetWidth),
+        N = null != _ ? Math.max(0, y.offsetWidth - _) : 0,
         {
             dirty: C,
-            chunkStart: L,
-            chunkEnd: D,
-            forceUpdateOnChunkChange: y
+            chunkStart: R,
+            chunkEnd: O,
+            forceUpdateOnChunkChange: D
         } = (0, s.Z)({
             chunkSize: d,
-            getScrollerState: _,
-            forceUpdate: g
+            getScrollerState: f,
+            forceUpdate: S
         });
     return (
-        (A.current = (0, r.useMemo)(
+        (T.current = (0, r.useMemo)(
             () =>
                 C > 0
-                    ? A.current
-                    : (N.mergeProps({
+                    ? T.current
+                    : (b.mergeProps({
                           sections: t,
                           columns: n,
                           getItemKey: l,
                           getItemHeight: u,
                           getSectionHeight: c,
-                          bufferWidth: O,
-                          itemGutter: f,
-                          removeEdgeItemGutters: h,
-                          sectionGutter: p,
-                          padding: I,
-                          paddingVertical: m,
-                          paddingHorizontal: T,
-                          marginLeft: v / 2,
-                          dir: S
+                          bufferWidth: A,
+                          itemGutter: h,
+                          removeEdgeItemGutters: p,
+                          sectionGutter: m,
+                          padding: g,
+                          paddingVertical: E,
+                          paddingHorizontal: v,
+                          marginLeft: N / 2,
+                          dir: I
                       }),
-                      N.computeVisibleSections(Math.max(0, L * d), D * d),
-                      N.getState()),
-            [C, N, t, n, l, u, c, L, D, d, f, h, p, I, m, T, O, S]
+                      b.computeVisibleSections(Math.max(0, R * d), O * d),
+                      b.getState()),
+            [C, b, t, n, l, u, c, R, O, d, h, p, m, g, E, v, A, I]
         )),
         {
-            ...A.current,
-            masonryComputer: N,
-            forceUpdateOnChunkChange: y,
-            forceUpdate: g
+            ...T.current,
+            masonryComputer: b,
+            forceUpdateOnChunkChange: D,
+            forceUpdate: S
         }
     );
 }

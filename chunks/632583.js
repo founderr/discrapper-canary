@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return _;
     }
 }),
     n(47120);
@@ -69,33 +69,33 @@ let o = 'currentColor',
             })
         });
     },
-    _ = (e, t, n, r, i) => {
+    f = (e, t, n, r, i) => {
         if (!t || r) return e ? 'url(#nitro_hover)' : o;
         let a = n ? [...u.keys()].filter((e) => e !== i) : [...l.keys()].filter((e) => e !== i),
             s = Math.floor(Math.random() * a.length);
         return a[s];
     };
-function E(e) {
+function _(e) {
     var t;
-    let { width: n = 31, height: u = 22, referralsRemaining: E, isResending: f, hovered: h, shouldShowBirthdayUX: p, isLightTheme: I, ...m } = e,
-        [T, S] = i.useState(o),
-        g = null !== (t = l.get(T)) && void 0 !== t ? t : null;
+    let { width: n = 31, height: u = 22, referralsRemaining: _, isResending: h, hovered: p, shouldShowBirthdayUX: m, isLightTheme: g, ...E } = e,
+        [v, I] = i.useState(o),
+        S = null !== (t = l.get(v)) && void 0 !== t ? t : null;
     return (
         i.useEffect(() => {
-            h ? S((e) => _(h, p, I, f, e)) : f && S(o);
-        }, [h, p, I, f]),
+            p ? I((e) => f(p, m, g, h, e)) : h && I(o);
+        }, [p, m, g, h]),
         (0, r.jsxs)('svg', {
             width: n,
             height: u,
-            ...(0, s.Z)(m),
+            ...(0, s.Z)(E),
             xmlns: 'http://www.w3.org/2000/svg',
             children: [
-                f
-                    ? (0, r.jsx)(d, { fillColor: T })
+                h
+                    ? (0, r.jsx)(d, { fillColor: v })
                     : (0, r.jsx)(c, {
-                          referralsRemaining: E,
-                          fillColor: h ? T : o,
-                          secondaryFillColor: h ? g : null
+                          referralsRemaining: _,
+                          fillColor: p ? v : o,
+                          secondaryFillColor: p ? S : null
                       }),
                 (0, r.jsxs)('defs', {
                     children: [

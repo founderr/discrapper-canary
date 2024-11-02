@@ -1,15 +1,15 @@
 n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(481060),
-    r = n(904245),
-    l = n(944486),
+    r = n(192379),
+    l = n(481060),
+    a = n(904245),
+    s = n(944486),
     o = n(82950),
     c = n(981631),
     d = n(921944),
-    u = n(689938),
-    _ = n(589148);
-function E(e, t, n) {
+    u = n(388032),
+    h = n(589148);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,26 +22,26 @@ function E(e, t, n) {
         e
     );
 }
-class h extends a.PureComponent {
+class p extends r.PureComponent {
     render() {
-        let e = ''.concat(u.Z.Messages.INVITE_NOTICE_MESSAGE, '\n').concat(u.Z.Messages.INVITE_NOTICE_MESSAGE_PART_2);
+        let e = ''.concat(u.intl.string(u.t.VWqWZW), '\n').concat(u.intl.string(u.t['0Lgb/P']));
         return (0, i.jsx)(o.Z, {
             guild: this.props.guild,
             onDismissed: this.handleClose,
             onClick: this.handleInvite,
             message: e,
-            cta: u.Z.Messages.INVITE_PEOPLE,
+            cta: u.intl.string(u.t.BN75l5),
             trackingSource: c.PsQ.INVITE_NOTICE,
             type: c.vID.INVITE,
-            image: _,
+            image: h,
             imageMarginX: 46
         });
     }
     constructor(...e) {
         super(...e),
-            E(this, 'handleInvite', () => {
+            m(this, 'handleInvite', () => {
                 let { guild: e } = this.props;
-                (0, s.openModalLazy)(async () => {
+                (0, l.openModalLazy)(async () => {
                     let { default: t } = await Promise.all([n.e('7654'), n.e('85683')]).then(n.bind(n, 560114));
                     return (n) =>
                         (0, i.jsx)(t, {
@@ -51,10 +51,10 @@ class h extends a.PureComponent {
                         });
                 });
             }),
-            E(this, 'handleClose', () => {
-                let e = l.Z.getChannelId();
-                this.props.markAsDismissed(d.L.UNKNOWN), null != e && r.Z.sendBotMessage(e, u.Z.Messages.HOW_TO_INVITE_OTHERS.format({ invitePeople: u.Z.Messages.INVITE_PEOPLE }));
+            m(this, 'handleClose', () => {
+                let e = s.Z.getChannelId();
+                this.props.markAsDismissed(d.L.UNKNOWN), null != e && a.Z.sendBotMessage(e, u.intl.formatToPlainString(u.t.DEn7np, { invitePeople: u.intl.string(u.t.BN75l5) }));
             });
     }
 }
-t.Z = h;
+t.Z = p;

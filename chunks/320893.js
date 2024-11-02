@@ -1,63 +1,63 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return E;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(780384),
-    i = n(481060),
-    r = n(410030),
-    l = n(293810),
-    o = n(689938),
+var r = n(780384),
+    l = n(481060),
+    s = n(410030),
+    a = n(293810),
+    o = n(388032),
     c = n(401257),
     d = n(934961),
     u = n(568294),
-    _ = n(867861),
-    I = n(860790),
-    E = n(268953),
-    T = n(487703),
-    m = n(458050),
-    N = n(334364),
-    S = n(431712);
-function g(e) {
-    return (0, a.wj)(e) ? c.revenueSharePercentageDark : c.revenueSharePercentageLight;
+    m = n(867861),
+    h = n(860790),
+    g = n(268953),
+    x = n(487703),
+    p = n(458050),
+    f = n(334364),
+    C = n(431712);
+function I(e) {
+    return (0, r.wj)(e) ? c.revenueSharePercentageDark : c.revenueSharePercentageLight;
 }
-function h() {
-    let e = (0, r.ZP)(),
-        t = { backgroundColor: (0, a.wj)(e) ? '#2e3638' : 'var(--background-primary)' };
-    return (0, s.jsxs)('div', {
+function _() {
+    let e = (0, s.ZP)(),
+        t = { backgroundColor: (0, r.wj)(e) ? '#2e3638' : 'var(--background-primary)' };
+    return (0, i.jsxs)('div', {
         className: c.earningsPreviewContainer,
         style: t,
         children: [
-            (0, s.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 children: [
-                    (0, s.jsx)(i.Text, {
+                    (0, i.jsx)(l.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_NEW_SUBS
+                        children: o.intl.string(o.t.TXPK7O)
                     }),
-                    (0, s.jsx)(i.Spacer, { size: 8 }),
-                    (0, s.jsx)(i.Heading, {
+                    (0, i.jsx)(l.Spacer, { size: 8 }),
+                    (0, i.jsx)(l.Heading, {
                         variant: 'heading-md/bold',
-                        className: g(e),
-                        children: o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_REVENUE_INCREASE
+                        className: I(e),
+                        children: o.intl.string(o.t.LdjJGx)
                     })
                 ]
             }),
-            (0, s.jsx)('img', {
+            (0, i.jsx)('img', {
                 className: c.roundAvatar,
-                src: T,
-                alt: o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_1_PREVIEW_IMG_ALT
+                src: x,
+                alt: o.intl.string(o.t.NgjpTE)
             })
         ]
     });
 }
-function C() {
-    let e = (0, r.ZP)();
+function N() {
+    let e = (0, s.ZP)();
     function t(e) {
         let { length: t, horizontal: n } = e;
-        return (0, s.jsx)('div', {
+        return (0, i.jsx)('div', {
             className: n ? c.horizontalConnector : c.verticalConnector,
             style: {
                 ...(n ? { width: t } : { height: t }),
@@ -65,58 +65,58 @@ function C() {
             }
         });
     }
-    return (0, s.jsxs)('div', {
+    return (0, i.jsxs)('div', {
         className: c.avatarGridContainer,
-        'aria-label': o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_1_GRID_ARIA_LABEL,
+        'aria-label': o.intl.string(o.t['P2B/0d']),
         children: [
-            (0, s.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: c.avatarCard,
                 children: [
-                    (0, s.jsx)(t, { length: 24 }),
-                    (0, s.jsx)('img', {
+                    (0, i.jsx)(t, { length: 24 }),
+                    (0, i.jsx)('img', {
                         className: c.roundAvatar,
-                        src: (0, a.wj)(e) ? d : u,
+                        src: (0, r.wj)(e) ? d : u,
                         alt: ''
                     }),
-                    (0, s.jsx)(t, {
+                    (0, i.jsx)(t, {
                         horizontal: !0,
                         length: 12
                     })
                 ]
             }),
-            (0, s.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: c.avatarCard,
                 children: [
-                    (0, s.jsx)(t, { length: 24 }),
-                    (0, s.jsx)('img', {
+                    (0, i.jsx)(t, { length: 24 }),
+                    (0, i.jsx)('img', {
                         className: c.roundAvatar,
-                        src: _,
+                        src: m,
                         alt: ''
                     })
                 ]
             }),
-            (0, s.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: c.avatarCard,
                 children: [
-                    (0, s.jsx)(t, { length: 12 }),
-                    (0, s.jsx)('img', {
+                    (0, i.jsx)(t, { length: 12 }),
+                    (0, i.jsx)('img', {
                         className: c.roundAvatar,
-                        src: I,
+                        src: h,
                         alt: ''
                     }),
-                    (0, s.jsx)(t, {
+                    (0, i.jsx)(t, {
                         horizontal: !0,
                         length: 12
                     })
                 ]
             }),
-            (0, s.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: c.avatarCard,
                 children: [
-                    (0, s.jsx)(t, { length: 12 }),
-                    (0, s.jsx)('img', {
+                    (0, i.jsx)(t, { length: 12 }),
+                    (0, i.jsx)('img', {
                         className: c.roundAvatar,
-                        src: E,
+                        src: g,
                         alt: ''
                     })
                 ]
@@ -124,88 +124,88 @@ function C() {
         ]
     });
 }
-function x() {
-    return (0, s.jsxs)('div', {
+function v() {
+    return (0, i.jsxs)('div', {
         className: c.earningBenefitCard,
         children: [
-            (0, s.jsx)(i.Text, {
+            (0, i.jsx)(l.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                children: o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_1
+                children: o.intl.string(o.t['9CdmS0'])
             }),
-            (0, s.jsx)(i.Spacer, { size: 32 }),
-            (0, s.jsx)(h, {}),
-            (0, s.jsx)(i.Spacer, { size: 24 }),
-            (0, s.jsx)(C, {})
+            (0, i.jsx)(l.Spacer, { size: 32 }),
+            (0, i.jsx)(_, {}),
+            (0, i.jsx)(l.Spacer, { size: 24 }),
+            (0, i.jsx)(N, {})
         ]
     });
 }
-function p() {
-    return (0, s.jsxs)('div', {
+function T() {
+    return (0, i.jsxs)('div', {
         className: c.followerBenefitCard,
         children: [
-            (0, s.jsx)(i.Text, {
+            (0, i.jsx)(l.Text, {
                 className: c.followerBenefitText,
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                children: o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_2
+                children: o.intl.string(o.t.qsKRUV)
             }),
-            (0, s.jsx)('img', {
+            (0, i.jsx)('img', {
                 className: c.roleSubscriptionSocial,
-                src: S,
-                alt: o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_2_IMG_1_ALT
+                src: C,
+                alt: o.intl.string(o.t.yTPpra)
             }),
-            (0, s.jsx)('img', {
+            (0, i.jsx)('img', {
                 className: c.roleSubscriptionLanyardIllo,
-                src: N,
-                alt: o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_2_IMG_2_ALT
+                src: f,
+                alt: o.intl.string(o.t['+gd9QU'])
             })
         ]
     });
 }
-function R() {
-    let e = (0, r.ZP)();
-    return (0, s.jsxs)('div', {
+function j() {
+    let e = (0, s.ZP)();
+    return (0, i.jsxs)('div', {
         className: c.revenueShareBenefitCard,
         children: [
-            (0, s.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 children: [
-                    (0, s.jsxs)(i.Heading, {
-                        className: g(e),
+                    (0, i.jsxs)(l.Heading, {
+                        className: I(e),
                         style: {
                             fontSize: '50px',
                             lineHeight: '52px'
                         },
                         variant: 'heading-xxl/extrabold',
-                        children: [l.NT, '%']
+                        children: [a.NT, '%']
                     }),
-                    (0, s.jsx)(i.Text, {
+                    (0, i.jsx)(l.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_3
+                        children: o.intl.string(o.t.AewsXF)
                     })
                 ]
             }),
-            (0, s.jsx)('img', {
+            (0, i.jsx)('img', {
                 className: c.roleSubscriptionEarningIllo,
-                src: m,
-                alt: o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_3_IMG_ALT
+                src: p,
+                alt: o.intl.string(o.t.fD9Wv7)
             })
         ]
     });
 }
-function L() {
-    return (0, s.jsxs)('div', {
+function E() {
+    return (0, i.jsxs)('div', {
         children: [
-            (0, s.jsx)(i.Heading, {
+            (0, i.jsx)(l.Heading, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
-                children: o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFITS_FOR_CREATORS_TITLE
+                children: o.intl.string(o.t['1QHJaW'])
             }),
-            (0, s.jsx)(i.Spacer, { size: 24 }),
-            (0, s.jsxs)('div', {
+            (0, i.jsx)(l.Spacer, { size: 24 }),
+            (0, i.jsxs)('div', {
                 className: c.creatorBenefitsContainer,
-                children: [(0, s.jsx)(x, {}), (0, s.jsx)(p, {}), (0, s.jsx)(R, {})]
+                children: [(0, i.jsx)(v, {}), (0, i.jsx)(T, {}), (0, i.jsx)(j, {})]
             })
         ]
     });

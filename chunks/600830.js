@@ -1,50 +1,50 @@
-t.r(e),
-    t.d(e, {
+e.r(t),
+    e.d(t, {
         default: function () {
-            return h;
+            return p;
         }
     });
-var u = t(200651);
-t(192379);
-var i = t(442837),
-    s = t(481060),
-    c = t(239091),
-    o = t(522474),
-    l = t(788983),
-    r = t(695346),
-    a = t(393431),
-    d = t(981631),
-    p = t(689938);
-function h(n) {
-    let { channel: e, onSelect: t } = n,
-        h = (0, a.Z)(),
-        Z = r.Fg.useSetting(),
-        _ = (function (n) {
-            let e = (0, i.e7)([o.Z], () => o.Z.getWindow(d.KJ3.CHANNEL_CALL_POPOUT));
-            return null == n || null != e
+var u = e(200651);
+e(192379);
+var i = e(442837),
+    l = e(481060),
+    o = e(239091),
+    r = e(522474),
+    c = e(788983),
+    s = e(695346),
+    a = e(393431),
+    d = e(981631),
+    h = e(388032);
+function p(n) {
+    let { channel: t, onSelect: e } = n,
+        p = (0, a.Z)(),
+        g = s.Fg.useSetting(),
+        Z = (function (n) {
+            let t = (0, i.e7)([r.Z], () => r.Z.getWindow(d.KJ3.CHANNEL_CALL_POPOUT));
+            return null == n || null != t
                 ? null
-                : (0, u.jsx)(s.MenuItem, {
+                : (0, u.jsx)(l.MenuItem, {
                       id: 'popout-call',
-                      label: p.Z.Messages.POPOUT_PLAYER,
-                      icon: s.WindowLaunchIcon,
-                      action: () => l.hP(n)
+                      label: h.intl.string(h.t.JzWez8),
+                      icon: l.WindowLaunchIcon,
+                      action: () => c.hP(n)
                   });
-        })(null != e ? e : void 0);
-    return (0, u.jsxs)(s.Menu, {
+        })(null != t ? t : void 0);
+    return (0, u.jsxs)(l.Menu, {
         navId: 'rtc-channel',
-        'aria-label': p.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
-        onClose: c.Zy,
-        onSelect: t,
+        'aria-label': h.intl.string(h.t.ogxXGh),
+        onClose: o.Zy,
+        onSelect: e,
         children: [
-            h,
-            (0, u.jsxs)(s.MenuGroup, {
+            p,
+            (0, u.jsxs)(l.MenuGroup, {
                 children: [
-                    _,
-                    (0, u.jsx)(s.MenuCheckboxItem, {
+                    Z,
+                    (0, u.jsx)(l.MenuCheckboxItem, {
                         id: 'show-voice-states',
-                        checked: Z,
-                        action: () => r.Fg.updateSetting(!Z),
-                        label: p.Z.Messages.VOICE_PANEL_SHOW_VOICE_USERS
+                        checked: g,
+                        action: () => s.Fg.updateSetting(!g),
+                        label: h.intl.string(h.t.vkbSBw)
                     })
                 ]
             })

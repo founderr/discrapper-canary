@@ -1,58 +1,58 @@
-n.r(s),
-    n.d(s, {
+t.r(n),
+    t.d(n, {
         default: function () {
             return _;
         }
     }),
-    n(47120);
-var l = n(200651);
-n(192379);
-var t = n(399606),
-    o = n(481060),
-    i = n(904245),
-    a = n(434404),
-    r = n(592125),
-    c = n(812545),
-    u = n(981631),
-    d = n(689938),
-    g = n(262704);
+    t(47120);
+var s = t(200651);
+t(192379);
+var l = t(399606),
+    i = t(481060),
+    o = t(904245),
+    a = t(434404),
+    r = t(592125),
+    c = t(812545),
+    u = t(981631),
+    d = t(388032),
+    g = t(262704);
 function _(e) {
-    let { channelId: s, messageId: n, transitionState: _, onClose: S } = e,
-        E = (0, t.e7)([r.Z], () => r.Z.getChannel(s)),
-        [F, C] = (0, c.Z)(s),
-        f = null == E ? void 0 : E.guild_id;
-    return (0, l.jsx)(o.ConfirmModal, {
-        header: d.Z.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
-        confirmText: d.Z.Messages.CONFIRM,
-        cancelText: d.Z.Messages.CANCEL,
-        confirmButtonColor: o.Button.Colors.BRAND,
-        onConfirm: () => i.Z.crosspostMessage(s, n),
+    let { channelId: n, messageId: t, transitionState: _, onClose: f } = e,
+        S = (0, l.e7)([r.Z], () => r.Z.getChannel(n)),
+        [p, C] = (0, c.Z)(n),
+        F = null == S ? void 0 : S.guild_id;
+    return (0, s.jsx)(i.ConfirmModal, {
+        header: d.intl.string(d.t.aIz1oa),
+        confirmText: d.intl.string(d.t['cY+Ooa']),
+        cancelText: d.intl.string(d.t['ETE/oK']),
+        confirmButtonColor: i.Button.Colors.BRAND,
+        onConfirm: () => o.Z.crosspostMessage(n, t),
         transitionState: _,
-        onClose: S,
-        children: (0, l.jsx)(o.Text, {
+        onClose: f,
+        children: (0, s.jsx)(i.Text, {
             variant: 'text-md/normal',
             className: g.spacing,
             children: C
-                ? (0, l.jsx)(o.Spinner, {})
-                : null != F && null != F.guildsFollowing && F.guildsFollowing > 0
-                  ? (0, l.jsxs)(l.Fragment, {
+                ? (0, s.jsx)(i.Spinner, {})
+                : null != p && null != p.guildsFollowing && p.guildsFollowing > 0
+                  ? (0, s.jsxs)(s.Fragment, {
                         children: [
-                            (0, l.jsx)(o.Text, {
+                            (0, s.jsx)(i.Text, {
                                 className: g.spacing,
                                 variant: 'text-sm/normal',
-                                children: d.Z.Messages.PUBLISH_FOLLOWED_NEWS_BODY_REACH.format({ numGuildsFollowing: F.guildsFollowing })
+                                children: d.intl.format(d.t.GCGrND, { numGuildsFollowing: p.guildsFollowing })
                             }),
-                            (0, l.jsx)(o.Text, {
+                            (0, s.jsx)(i.Text, {
                                 variant: 'text-sm/normal',
-                                children: d.Z.Messages.PUBLISH_FOLLOWED_NEWS_BODY_SETTINGS_INSIGHTS.format({
+                                children: d.intl.format(d.t.IMhGZ2, {
                                     onClick: () => {
-                                        null != f && null != S && (S(), a.Z.open(f, u.pNK.ANALYTICS));
+                                        null != F && null != f && (f(), a.Z.open(F, u.pNK.ANALYTICS));
                                     }
                                 })
                             })
                         ]
                     })
-                  : d.Z.Messages.PUBLISH_FOLLOWED_NEWS_BODY
+                  : d.intl.string(d.t['8FpqOj'])
         })
     });
 }

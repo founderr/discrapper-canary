@@ -4,32 +4,32 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(192379),
-    a = n(864094),
-    l = n(871499),
-    r = n(689938);
+    l = n(192379),
+    r = n(864094),
+    a = n(871499),
+    s = n(388032);
 function o(e) {
     let t,
-        { hasPermission: n, streamActive: o, isSelfStream: c, centerButton: u, onMouseEnter: d, onMouseLeave: h, premiumGlow: m, buttonRef: p, ..._ } = e,
-        f = u ? l.d : l.Z;
-    t = o ? (c ? r.Z.Messages.STOP_STREAMING : r.Z.Messages.STOP_WATCHING) : n ? r.Z.Messages.SHARE_YOUR_SCREEN : r.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE;
-    let { Component: E, events: g, play: C } = (0, a.P)(o ? 'disable' : 'enable');
+        { hasPermission: n, streamActive: o, isSelfStream: c, centerButton: u, onMouseEnter: d, onMouseLeave: h, premiumGlow: m, buttonRef: p, ...f } = e,
+        g = u ? a.d : a.Z;
+    t = o ? (c ? s.intl.string(s.t.S5anIS) : s.intl.string(s.t.q3O3Jy)) : n ? s.intl.string(s.t.fjBNo6) : s.intl.string(s.t.uQn9Bw);
+    let { Component: C, events: x, play: v } = (0, r.P)(o ? 'disable' : 'enable');
     return (
-        s.useEffect(() => () => C(), [o, C]),
-        (0, i.jsx)(f, {
+        l.useEffect(() => () => v(), [o, v]),
+        (0, i.jsx)(g, {
             buttonRef: p,
             label: t,
             disabled: !n,
-            iconComponent: E,
+            iconComponent: C,
             isActive: o,
             onMouseEnter: (e) => {
-                null == d || d(e), g.onMouseEnter();
+                null == d || d(e), x.onMouseEnter();
             },
             onMouseLeave: (e) => {
-                null == h || h(e), g.onMouseLeave();
+                null == h || h(e), x.onMouseLeave();
             },
             premiumGlow: m,
-            ..._
+            ...f
         })
     );
 }

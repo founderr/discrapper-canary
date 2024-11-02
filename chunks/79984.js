@@ -4,16 +4,16 @@ t.d(n, {
     }
 });
 var i = t(200651),
-    a = t(192379),
-    l = t(120356),
-    o = t.n(l),
+    l = t(192379),
+    a = t(120356),
+    o = t.n(a),
     r = t(442837),
     s = t(481060),
     c = t(607070),
     d = t(919071);
 function u() {
     let e = (0, r.e7)([c.Z], () => c.Z.useReducedMotion),
-        { styleLarge: n, styleSmall: t } = a.useMemo(
+        { styleLarge: n, styleSmall: t } = l.useMemo(
             () => ({
                 styleLarge: { width: ''.concat(10 + 50 * Math.random(), '%') },
                 styleSmall: { width: ''.concat(30 + 60 * Math.random(), '%') }

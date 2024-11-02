@@ -7,17 +7,17 @@ var r = n(192379),
     u = n(705513),
     c = n(877837),
     d = n(272991),
-    _ = function (e) {
+    f = function (e) {
         var t = e.width,
             n = e.onChange,
             i = e.onSwatchHover,
             a = e.colors,
             u = e.hex,
             c = e.circleSize,
-            _ = e.styles,
-            E = e.circleSpacing,
-            f = e.className,
-            h = (0, s.default)(
+            f = e.styles,
+            _ = e.circleSpacing,
+            h = e.className,
+            p = (0, s.default)(
                 (0, l.Z)(
                     {
                         default: {
@@ -25,15 +25,15 @@ var r = n(192379),
                                 width: t,
                                 display: 'flex',
                                 flexWrap: 'wrap',
-                                marginRight: -E,
-                                marginBottom: -E
+                                marginRight: -_,
+                                marginBottom: -_
                             }
                         }
                     },
-                    void 0 === _ ? {} : _
+                    void 0 === f ? {} : f
                 )
             ),
-            p = function (e, t) {
+            m = function (e, t) {
                 return n(
                     {
                         hex: e,
@@ -45,33 +45,33 @@ var r = n(192379),
         return r.createElement(
             'div',
             {
-                style: h.card,
-                className: 'circle-picker ' + (void 0 === f ? '' : f)
+                style: p.card,
+                className: 'circle-picker ' + (void 0 === h ? '' : h)
             },
             (0, o.Z)(a, function (e) {
                 return r.createElement(d.Z, {
                     key: e,
                     color: e,
-                    onClick: p,
+                    onClick: m,
                     onSwatchHover: i,
                     active: u === e.toLowerCase(),
                     circleSize: c,
-                    circleSpacing: E
+                    circleSpacing: _
                 });
             })
         );
     };
-(_.propTypes = {
+(f.propTypes = {
     width: a().oneOfType([a().string, a().number]),
     circleSize: a().number,
     circleSpacing: a().number,
     styles: a().object
 }),
-    (_.defaultProps = {
+    (f.defaultProps = {
         width: 252,
         circleSize: 28,
         circleSpacing: 14,
         colors: [u.Q6['500'], u.iQ['500'], u.jk['500'], u.vq['500'], u.QN['500'], u.iN['500'], u.f7['500'], u.sl['500'], u.$C['500'], u.ek['500'], u.ZE['500'], u.LR['500'], u.er['500'], u.Dz['500'], u.$y['500'], u.bK['500'], u.P_['500'], u.BU['500']],
         styles: {}
     }),
-    (0, c.t1)(_);
+    (0, c.t1)(f);

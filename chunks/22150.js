@@ -1,76 +1,76 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return c;
+        return E;
     }
 }),
-    t(47120);
-var n = t(200651),
-    o = t(192379),
-    a = t(442837),
-    l = t(481060),
-    r = t(479531),
-    i = t(393869),
-    E = t(594174),
-    _ = t(689938),
-    N = t(859565);
-function c(e) {
-    let { onNext: s, onClose: t } = e,
-        [c, d] = o.useState(!1),
-        u = (0, a.e7)([E.default], () => E.default.getCurrentUser()),
-        A = async (e) => {
-            e.preventDefault(), d(!0);
+    n(47120);
+var o = n(200651),
+    s = n(192379),
+    l = n(442837),
+    a = n(481060),
+    i = n(479531),
+    r = n(393869),
+    d = n(594174),
+    c = n(388032),
+    u = n(859565);
+function E(e) {
+    let { onNext: t, onClose: n } = e,
+        [E, _] = s.useState(!1),
+        m = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
+        N = async (e) => {
+            e.preventDefault(), _(!0);
             try {
-                await (0, i.i)(), s();
-            } catch (s) {
-                let e = new r.Z(s).getAnyErrorMessage();
-                null != e && (0, l.showToast)((0, l.createToast)(e, l.ToastType.FAILURE));
+                await (0, r.i)(), t();
+            } catch (t) {
+                let e = new i.Z(t).getAnyErrorMessage();
+                null != e && (0, a.showToast)((0, a.createToast)(e, a.ToastType.FAILURE));
             } finally {
-                d(!1);
+                _(!1);
             }
         };
-    return (0, n.jsxs)('form', {
-        onSubmit: A,
+    return (0, o.jsxs)('form', {
+        onSubmit: N,
         children: [
-            (0, n.jsxs)(l.ModalHeader, {
+            (0, o.jsxs)(a.ModalHeader, {
                 separator: !1,
-                className: N.header,
+                className: u.header,
                 children: [
-                    (0, n.jsx)(l.Heading, {
-                        className: N.title,
+                    (0, o.jsx)(a.Heading, {
+                        className: u.title,
                         variant: 'heading-xl/extrabold',
-                        children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_SEND_TITLE
+                        children: c.intl.string(c.t.uFxYq6)
                     }),
-                    (0, n.jsx)(l.ModalCloseButton, {
-                        onClick: t,
-                        className: N.modalCloseButton
+                    (0, o.jsx)(a.ModalCloseButton, {
+                        onClick: n,
+                        className: u.modalCloseButton
                     })
                 ]
             }),
-            (0, n.jsx)(l.ModalContent, {
-                className: N.content,
-                children: (0, n.jsx)(l.Text, {
-                    className: N.description,
+            (0, o.jsx)(a.ModalContent, {
+                className: u.content,
+                children: (0, o.jsx)(a.Text, {
+                    className: u.description,
                     variant: 'text-md/normal',
-                    children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_SEND_DESCRIPTION_NO_LINK.format({ oldEmail: null == u ? void 0 : u.email })
+                    children: c.intl.format(c.t.oMFSgo, { oldEmail: null == m ? void 0 : m.email })
                 })
             }),
-            (0, n.jsxs)(l.ModalFooter, {
-                className: N.modalFooter,
+            (0, o.jsxs)(a.ModalFooter, {
+                className: u.modalFooter,
                 children: [
-                    (0, n.jsx)(l.Button, {
+                    (0, o.jsx)(a.Button, {
                         type: 'submit',
-                        color: l.Button.Colors.BRAND,
-                        size: l.Button.Sizes.MEDIUM,
-                        submitting: c,
-                        className: N.__invalid_submit,
-                        children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_SEND_BUTTON
+                        color: a.Button.Colors.BRAND,
+                        size: a.Button.Sizes.MEDIUM,
+                        submitting: E,
+                        className: u.__invalid_submit,
+                        children: c.intl.string(c.t.rXV81N)
                     }),
-                    (0, n.jsx)(l.Button, {
-                        className: N.__invalid_cancel,
-                        look: l.Button.Looks.LINK,
-                        color: l.Button.Colors.PRIMARY,
-                        onClick: t,
-                        children: _.Z.Messages.CANCEL
+                    (0, o.jsx)(a.Button, {
+                        className: u.__invalid_cancel,
+                        look: a.Button.Looks.LINK,
+                        color: a.Button.Colors.PRIMARY,
+                        onClick: n,
+                        children: c.intl.string(c.t['ETE/oK'])
                     })
                 ]
             })

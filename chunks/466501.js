@@ -1,74 +1,74 @@
 i.r(t),
     i.d(t, {
         default: function () {
-            return h;
+            return g;
         }
     });
 var n = i(200651),
     o = i(192379),
-    a = i(481060),
-    l = i(651711),
+    l = i(481060),
+    a = i(651711),
     r = i(434404),
     s = i(202858),
     c = i(587431),
     d = i(400842),
     u = i(271267),
     _ = i(981631),
-    E = i(689938),
+    E = i(388032),
     M = i(451399),
-    A = i(653904);
-function b() {
+    b = i(653904);
+function A() {
     return (0, n.jsxs)('div', {
         className: M.eligibilityHeader,
         children: [
-            (0, n.jsx)(a.Heading, {
+            (0, n.jsx)(l.Heading, {
                 className: M.eligibilityHeaderText,
                 variant: 'heading-lg/extrabold',
                 color: 'header-primary',
-                children: E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_NOT_ELIGIBLE_TITLE_V2
+                children: E.intl.string(E.t['3s47iI'])
             }),
             (0, n.jsx)('img', {
                 className: M.eligibilityHeaderImage,
-                src: A,
+                src: b,
                 alt: ''
             }),
-            (0, n.jsx)(a.ModalCloseButton, {
+            (0, n.jsx)(l.ModalCloseButton, {
                 className: M.eligibilityHeaderCloseButton,
                 onClick: () => {
-                    (0, a.closeModal)(u.Q);
+                    (0, l.closeModal)(u.Q);
                 }
             })
         ]
     });
 }
-function C(e) {
-    let { eligibility: t, eligibilityLoading: i, eligibilityError: E, guildId: A, onEligibilityBecameStale: b } = e,
-        C = o.useMemo(
+function h(e) {
+    let { eligibility: t, eligibilityLoading: i, eligibilityError: E, guildId: b, onEligibilityBecameStale: A } = e,
+        h = o.useMemo(
             () => ({
-                onEligibilityBecameStale: b,
+                onEligibilityBecameStale: A,
                 sortedByIneligible: !0,
                 actions: {
                     onEnableMFAClick: s.ZP.enableMFA,
                     onRequireModeratorMFAClick: () => {
-                        (0, a.closeModal)(u.Q), r.Z.open(A, _.pNK.SAFETY, void 0, _.KsC.SAFETY_PERMISSIONS);
+                        (0, l.closeModal)(u.Q), r.Z.open(b, _.pNK.SAFETY, void 0, _.KsC.SAFETY_PERMISSIONS);
                     }
                 }
             }),
-            [A, b]
+            [b, A]
         ),
-        h = (0, l.Z)(t, C);
+        g = (0, a.Z)(t, h);
     return null != E
         ? (0, n.jsx)('div', {
               className: M.paddedContainer,
               children: (0, n.jsx)(c.Z, { children: E.message })
           })
-        : null == h || i
+        : null == g || i
           ? (0, n.jsx)('div', {
                 className: M.paddedContainer,
-                children: (0, n.jsx)(a.Spinner, {})
+                children: (0, n.jsx)(l.Spinner, {})
             })
           : (0, n.jsx)('div', {
-                children: h.map((e, t) =>
+                children: g.map((e, t) =>
                     (0, n.jsxs)(
                         o.Fragment,
                         {
@@ -80,7 +80,7 @@ function C(e) {
                                     actionLabel: e.actionLabel,
                                     actionHandler: e.actionHandler
                                 }),
-                                t < h.length - 1 ? (0, n.jsx)(a.FormDivider, {}) : null
+                                t < g.length - 1 ? (0, n.jsx)(l.FormDivider, {}) : null
                             ]
                         },
                         e.checkedLabel
@@ -88,21 +88,21 @@ function C(e) {
                 )
             });
 }
-function h(e) {
-    let { eligibility: t, eligibilityLoading: i, eligibilityError: o, refreshEligibility: l, guildId: r, transitionState: s } = e;
-    return (0, n.jsxs)(a.ModalRoot, {
+function g(e) {
+    let { eligibility: t, eligibilityLoading: i, eligibilityError: o, refreshEligibility: a, guildId: r, transitionState: s } = e;
+    return (0, n.jsxs)(l.ModalRoot, {
         className: M.eligibilityModal,
-        size: a.ModalSize.MEDIUM,
+        size: l.ModalSize.MEDIUM,
         transitionState: s,
         children: [
-            (0, n.jsx)(b, {}),
-            (0, n.jsx)(a.ModalContent, {
-                children: (0, n.jsx)(C, {
+            (0, n.jsx)(A, {}),
+            (0, n.jsx)(l.ModalContent, {
+                children: (0, n.jsx)(h, {
                     eligibility: t,
                     eligibilityLoading: i,
                     eligibilityError: o,
                     guildId: r,
-                    onEligibilityBecameStale: l
+                    onEligibilityBecameStale: a
                 })
             })
         ]

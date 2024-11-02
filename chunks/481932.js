@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return m;
     }
 });
 var r = n(200651);
@@ -13,25 +13,25 @@ var i = n(442837),
     u = n(314897),
     c = n(699516),
     d = n(785717),
-    _ = n(475413),
-    E = n(228168),
-    f = n(981631),
-    h = n(689938);
-function p(e) {
-    let { user: t, friendToken: n, profileType: p, shouldShowTooltip: I } = e,
-        { newestAnalyticsLocation: m } = (0, o.ZP)(),
-        { trackUserProfileAction: T } = (0, d.KZ)(),
-        S = (0, i.e7)([u.default], () => u.default.getId() === (null == t ? void 0 : t.id)),
-        g = (0, i.e7)([c.Z], () => (null != t ? c.Z.getRelationshipType(t.id) : f.OGo.NONE)),
-        A = (0, l.Z)({
+    f = n(475413),
+    _ = n(228168),
+    h = n(981631),
+    p = n(388032);
+function m(e) {
+    let { user: t, friendToken: n, profileType: m, shouldShowTooltip: g } = e,
+        { newestAnalyticsLocation: E } = (0, o.ZP)(),
+        { trackUserProfileAction: v } = (0, d.KZ)(),
+        I = (0, i.e7)([u.default], () => u.default.getId() === (null == t ? void 0 : t.id)),
+        S = (0, i.e7)([c.Z], () => (null != t ? c.Z.getRelationshipType(t.id) : h.OGo.NONE)),
+        T = (0, l.Z)({
             user: t,
             color: 'danger',
-            location: m,
-            onAction: () => T({ action: 'REMOVE_FRIEND' })
+            location: E,
+            onAction: () => v({ action: 'REMOVE_FRIEND' })
         });
-    return null == t || t.bot || S || g === f.OGo.BLOCKED
+    return null == t || t.bot || I || S === h.OGo.BLOCKED
         ? null
-        : g === f.OGo.FRIEND
+        : S === h.OGo.FRIEND
           ? (0, r.jsx)(a.Popout, {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
@@ -39,39 +39,39 @@ function p(e) {
                         navId: 'user-profile-friend-request-buttons',
                         onSelect: void 0,
                         onClose: t,
-                        'aria-label': h.Z.Messages.FRIEND_ACTIONS_MENU_LABEL,
-                        children: A
+                        'aria-label': p.intl.string(p.t.Jszi3N),
+                        children: T
                     });
                 },
                 children: (e) =>
-                    (0, r.jsx)(_.oY, {
-                        shouldShowTooltip: I,
+                    (0, r.jsx)(f.oY, {
+                        shouldShowTooltip: g,
                         icon: a.UserCheckIcon,
-                        tooltipText: h.Z.Messages.FRIENDS,
+                        tooltipText: p.intl.string(p.t.TdEu5e),
                         ...e
                     })
             })
-          : g === f.OGo.PENDING_INCOMING || g === f.OGo.PENDING_OUTGOING
-            ? p === E.y0.FULL_SIZE
+          : S === h.OGo.PENDING_INCOMING || S === h.OGo.PENDING_OUTGOING
+            ? m === _.y0.FULL_SIZE
                 ? null
-                : (0, r.jsx)(_.oY, {
-                      shouldShowTooltip: I,
+                : (0, r.jsx)(f.oY, {
+                      shouldShowTooltip: g,
                       icon: a.UserClockIcon,
-                      tooltipText: h.Z.Messages.FRIENDS_SECTION_PENDING,
+                      tooltipText: p.intl.string(p.t.p6IHGB),
                       disabled: !0
                   })
-            : p === E.y0.FULL_SIZE
+            : m === _.y0.FULL_SIZE
               ? null
-              : (0, r.jsx)(_.oY, {
+              : (0, r.jsx)(f.oY, {
                     action: 'SEND_FRIEND_REQUEST',
                     icon: a.UserPlusIcon,
-                    tooltipText: h.Z.Messages.ADD_FRIEND,
-                    shouldShowTooltip: I,
+                    tooltipText: p.intl.string(p.t.w5uwoK),
+                    shouldShowTooltip: g,
                     onClick: () => {
                         s.Z.addRelationship({
                             userId: t.id,
                             friendToken: n,
-                            context: { location: m }
+                            context: { location: E }
                         });
                     }
                 });

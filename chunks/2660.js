@@ -1,32 +1,32 @@
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(442837),
-    i = n(481060),
-    l = n(204418),
-    r = n(594174),
-    o = n(113434),
+var s = n(442837),
+    l = n(481060),
+    r = n(204418),
+    o = n(594174),
+    a = n(113434),
     u = n(182294),
     d = n(52539);
 let c = (e) => {
     let { questConfig: t, fallback: n, isFocused: c } = e,
-        E = (0, a.e7)([r.default], () => r.default.getCurrentUser()),
-        { avatarDecoration: m, isFetching: C } = (0, o.DU)(t);
+        m = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
+        { avatarDecoration: x, isFetching: C } = (0, a.DU)(t);
     return C
-        ? (0, s.jsx)('div', {
+        ? (0, i.jsx)('div', {
               className: d.questsCollectibleReward,
-              children: (0, s.jsx)(i.Spinner, {})
+              children: (0, i.jsx)(l.Spinner, {})
           })
-        : null == E || null == m
+        : null == m || null == x
           ? n
-          : (0, s.jsx)('div', {
+          : (0, i.jsx)('div', {
                 className: d.questsCollectibleReward,
-                children: (0, s.jsx)(l.Z, {
+                children: (0, i.jsx)(r.Z, {
                     avatarSize: u.EF.SIZE_56,
-                    user: E,
+                    user: m,
                     guildId: null,
-                    avatarDecorationOverride: m,
+                    avatarDecorationOverride: x,
                     animateOnHover: !c
                 })
             });
 };
-t.Z = (e) => (0, s.jsx)(c, { ...e });
+t.Z = (e) => (0, i.jsx)(c, { ...e });

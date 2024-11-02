@@ -3,10 +3,10 @@ var r = n(200651),
     a = n(120356),
     s = n.n(a),
     o = n(38068),
-    l = n(689938),
+    l = n(388032),
     u = n(527480);
 t.Z = i.forwardRef(function (e, t) {
-    let { className: n, contentClassName: i, isUnread: a, children: c, id: d, role: _, 'aria-label': E } = e;
+    let { className: n, contentClassName: i, isUnread: a, children: c, id: d, role: f, 'aria-label': _ } = e;
     return (0, r.jsxs)('div', {
         className: s()(n, {
             [u.divider]: !0,
@@ -15,8 +15,8 @@ t.Z = i.forwardRef(function (e, t) {
         }),
         ref: t,
         id: d,
-        role: _,
-        'aria-label': E,
+        role: f,
+        'aria-label': _,
         children: [
             null != c
                 ? (0, r.jsx)('span', {
@@ -32,7 +32,7 @@ t.Z = i.forwardRef(function (e, t) {
                               foreground: u.unreadPillCapStroke,
                               className: u.unreadPillCap
                           }),
-                          l.Z.Messages.NEW
+                          l.intl.string(l.t.y2b7CA)
                       ]
                   })
                 : null

@@ -6,16 +6,16 @@ var s = n(147913),
     u = n(998502),
     c = n(425128),
     d = n(276344),
-    _ = n(981631);
-let E = 10 * l.Z.Millis.SECOND,
-    f = 15 * l.Z.Millis.MINUTE;
-function h(e) {
+    f = n(981631);
+let _ = 10 * l.Z.Millis.SECOND,
+    h = 15 * l.Z.Millis.MINUTE;
+function p(e) {
     return e.some((e) => 'League of Legends' === e.name);
 }
-function p() {
+function m() {
     if (!(0, d.JN)('LeagueOfLegendsLifecycleManager')) return null;
-    let e = o.Z.getAccount(null, _.ABu.RIOT_GAMES),
-        t = o.Z.getAccount(null, _.ABu.LEAGUE_OF_LEGENDS);
+    let e = o.Z.getAccount(null, f.ABu.RIOT_GAMES),
+        t = o.Z.getAccount(null, f.ABu.LEAGUE_OF_LEGENDS);
     return null == e || null == t
         ? null
         : {
@@ -23,7 +23,7 @@ function p() {
               lolConnection: t
           };
 }
-async function I(e) {
+async function g(e) {
     let { riotConnectionId: t, lolConnectionId: n, onlyUpdateIfStale: r } = e;
     clearTimeout(a);
     let { next_update_timestamp: i } = await (0, c._7)({
@@ -43,11 +43,11 @@ async function I(e) {
         Math.max(0, s.getTime() - o.getTime())
     );
 }
-class m extends s.Z {
+class E extends s.Z {
     handlePostConnectionOpen() {
-        let e = p();
+        let e = m();
         if (null != e)
-            I({
+            g({
                 riotConnectionId: e.riotConnection.id,
                 lolConnectionId: e.lolConnection.id,
                 onlyUpdateIfStale: !0
@@ -55,20 +55,20 @@ class m extends s.Z {
     }
     handleRunningGameChange(e) {
         let { added: t, removed: n } = e,
-            a = p();
+            a = m();
         if (null != a)
-            h(t) &&
+            p(t) &&
                 (null != i && clearInterval(i),
                 (i = setInterval(async () => {
                     let e = await u.ZP.fetchRiotGamesLiveClientData('activeplayer');
                     null != e && 200 === e.status && (r = JSON.parse(e.body).riotId);
-                }, E)),
+                }, _)),
                 setTimeout(() => {
                     clearInterval(i);
-                }, f)),
-                h(n) &&
+                }, h)),
+                p(n) &&
                     a.riotConnection.name === r &&
-                    I({
+                    g({
                         riotConnectionId: a.riotConnection.id,
                         lolConnectionId: a.lolConnection.id
                     });
@@ -92,4 +92,4 @@ class m extends s.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new m();
+t.Z = new E();

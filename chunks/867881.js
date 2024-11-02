@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     header: 'header_b81fca',
     content: 'content_b81fca',
     tabBar: 'tabBar_b81fca',

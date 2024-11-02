@@ -1,14 +1,14 @@
 n.d(t, {
     AZ: function () {
-        return a;
+        return r;
     },
     Y9: function () {
         return i;
     },
     bj: function () {
-        return s;
+        return l;
     }
 });
 let i = '#83DDC5',
-    a = '#F47FFF',
-    s = '#FFDE4D';
+    r = '#F47FFF',
+    l = '#FFDE4D';

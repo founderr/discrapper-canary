@@ -7,17 +7,17 @@ var r = n(192379),
     u = n(474527),
     c = n(372712),
     d = n(899627),
-    _ = function (e) {
+    f = function (e) {
         var t = e.width,
             n = e.onChange,
             i = e.rgb,
             a = e.hsl,
-            _ = e.hsv,
-            E = e.hex,
-            f = e.header,
-            h = e.styles,
-            p = e.className,
-            I = (0, s.default)(
+            f = e.hsv,
+            _ = e.hex,
+            h = e.header,
+            p = e.styles,
+            m = e.className,
+            g = (0, s.default)(
                 (0, o.Z)(
                     {
                         default: {
@@ -74,41 +74,41 @@ var r = n(192379),
                             Hue: { radius: '2px' }
                         }
                     },
-                    void 0 === h ? {} : h
+                    void 0 === p ? {} : p
                 )
             );
         return r.createElement(
             'div',
             {
-                style: I.picker,
-                className: 'google-picker ' + (void 0 === p ? '' : p)
+                style: g.picker,
+                className: 'google-picker ' + (void 0 === m ? '' : m)
             },
-            r.createElement('div', { style: I.head }, f),
-            r.createElement('div', { style: I.swatch }),
+            r.createElement('div', { style: g.head }, h),
+            r.createElement('div', { style: g.swatch }),
             r.createElement(
                 'div',
-                { style: I.saturation },
+                { style: g.saturation },
                 r.createElement(l.OQ, {
                     hsl: a,
-                    hsv: _,
+                    hsv: f,
                     pointer: u.C,
                     onChange: n
                 })
             ),
             r.createElement(
                 'div',
-                { style: I.body },
+                { style: g.body },
                 r.createElement(
                     'div',
                     {
-                        style: I.controls,
+                        style: g.controls,
                         className: 'flexbox-fix'
                     },
                     r.createElement(
                         'div',
-                        { style: I.hue },
+                        { style: g.hue },
                         r.createElement(l.PS, {
-                            style: I.Hue,
+                            style: g.Hue,
                             hsl: a,
                             radius: '4px',
                             pointer: c.Z,
@@ -119,21 +119,21 @@ var r = n(192379),
                 r.createElement(d.Z, {
                     rgb: i,
                     hsl: a,
-                    hex: E,
-                    hsv: _,
+                    hex: _,
+                    hsv: f,
                     onChange: n
                 })
             )
         );
     };
-(_.propTypes = {
+(f.propTypes = {
     width: a().oneOfType([a().string, a().number]),
     styles: a().object,
     header: a().string
 }),
-    (_.defaultProps = {
+    (f.defaultProps = {
         width: 652,
         styles: {},
         header: 'Color picker'
     }),
-    (0, l.t1)(_);
+    (0, l.t1)(f);

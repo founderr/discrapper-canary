@@ -14,31 +14,31 @@ function a(e, t, n) {
         e
     );
 }
-function s() {
+function o() {
     return { lastTriggered: 0 };
 }
-let o = s();
+let s = o();
 class c extends (i = l.ZP.PersistedStore) {
     initialize(e) {
-        o = {
-            ...s(),
+        s = {
+            ...o(),
             ...(null != e ? e : {})
         };
     }
     getState() {
-        return o;
+        return s;
     }
     cooldownIsActive() {
-        return o.lastTriggered >= Date.now() - 172800000;
+        return s.lastTriggered >= Date.now() - 172800000;
     }
 }
 a(c, 'displayName', 'HDStreamingViewerStore'),
     a(c, 'persistKey', 'HDStreamingViewerStore'),
     (t.Z = new c(r.Z, {
         LOGOUT: function () {
-            o = s();
+            s = o();
         },
         HD_STREAMING_VIEWER_UPDATE_LAST_TRIGGERED: function (e) {
-            o.lastTriggered = Date.now();
+            s.lastTriggered = Date.now();
         }
     }));

@@ -1,22 +1,22 @@
 var i = n(200651);
 n(192379);
-var a = n(788307),
-    s = n(51144),
-    r = n(126875);
+var r = n(788307),
+    l = n(51144),
+    a = n(126875);
 t.Z = function (e) {
-    let { hovered: t, activities: n, applicationStream: l, status: o, user: c } = e;
+    let { hovered: t, activities: n, applicationStream: s, status: o, user: c } = e;
     return n.length > 0
-        ? (0, i.jsx)(a.ZP, {
-              className: r.activity,
-              textClassName: r.text,
-              emojiClassName: r.customStatusEmoji,
+        ? (0, i.jsx)(r.ZP, {
+              className: a.activity,
+              textClassName: a.text,
+              emojiClassName: a.customStatusEmoji,
               activities: n,
-              applicationStream: l,
+              applicationStream: s,
               animate: t,
               user: c
           })
         : (0, i.jsx)('div', {
-              className: r.text,
-              children: (0, s.u5)(o)
+              className: a.text,
+              children: (0, l.u5)(o)
           });
 };

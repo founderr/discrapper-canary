@@ -7,36 +7,36 @@ var i,
     u = n.n(l),
     c = n(442837),
     d = n(433517),
-    _ = n(570140),
-    E = n(981631);
-let f = 'GameLibraryViewStore',
-    h = E.sHY.ASCENDING,
-    p = E.iEv.LAST_PLAYED,
-    I = !1,
-    m = u().debounce(() => {
-        (I = !1), S.emitChange();
+    f = n(570140),
+    _ = n(981631);
+let h = 'GameLibraryViewStore',
+    p = _.sHY.ASCENDING,
+    m = _.iEv.LAST_PLAYED,
+    g = !1,
+    E = u().debounce(() => {
+        (g = !1), I.emitChange();
     }, 200);
-class T extends (o = c.ZP.Store) {
+class v extends (o = c.ZP.Store) {
     initialize() {
         var e;
-        let t = null !== (e = d.K.get(f)) && void 0 !== e ? e : {};
-        null != t.sortDirection && null != t.sortKey && ((h = t.sortDirection), (p = t.sortKey));
+        let t = null !== (e = d.K.get(h)) && void 0 !== e ? e : {};
+        null != t.sortDirection && null != t.sortKey && ((p = t.sortDirection), (m = t.sortKey));
     }
     get sortDirection() {
-        return h;
+        return p;
     }
     get sortKey() {
-        return p;
+        return m;
     }
     get activeRowKey() {
         return r;
     }
     get isNavigatingByKeyboard() {
-        return I;
+        return g;
     }
 }
 (s = 'GameLibraryViewStore'),
-    (a = 'displayName') in (i = T)
+    (a = 'displayName') in (i = v)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -44,19 +44,19 @@ class T extends (o = c.ZP.Store) {
               writable: !0
           })
         : (i[a] = s);
-let S = new T(_.Z, {
+let I = new v(f.Z, {
     LIBRARY_TABLE_SORT_UPDATE: function (e) {
         let { direction: t, key: n } = e;
-        (h = t),
-            (p = n),
-            d.K.set(f, {
-                sortDirection: h,
-                sortKey: p
+        (p = t),
+            (m = n),
+            d.K.set(h, {
+                sortDirection: p,
+                sortKey: m
             });
     },
     LIBRARY_TABLE_ACTIVE_ROW_ID_UPDATE: function (e) {
         let { key: t, isKeyboardEvent: n } = e;
-        n && ((I = !0), m()), (r = t);
+        n && ((g = !0), E()), (r = t);
     }
 });
-t.Z = S;
+t.Z = I;

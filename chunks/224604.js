@@ -1,32 +1,32 @@
-s.r(t),
-    s.d(t, {
+i.r(e),
+    i.d(e, {
         ActivityAgeGateModal: function () {
-            return r;
+            return c;
         }
     });
-var i = s(200651);
-s(192379);
-var n = s(481060),
-    a = s(986035),
-    o = s(689938),
-    c = s(639630);
-function r(e) {
-    let { application: t, onAgree: s, onClose: r, onDisagree: l, ...d } = e;
-    return (0, i.jsx)(n.ModalRoot, {
+var n = i(200651);
+i(192379);
+var s = i(481060),
+    o = i(986035),
+    a = i(388032),
+    r = i(639630);
+function c(t) {
+    let { application: e, onAgree: i, onClose: c, onDisagree: l, ...d } = t;
+    return (0, n.jsx)(s.ModalRoot, {
         ...d,
-        children: (0, i.jsx)('div', {
-            children: (0, i.jsx)(a.Z, {
+        children: (0, n.jsx)('div', {
+            children: (0, n.jsx)(o.Z, {
                 onAgree: () => {
-                    s(), r();
+                    i(), c();
                 },
                 onDisagree: () => {
-                    l(), r();
+                    l(), c();
                 },
-                title: o.Z.Messages.EMBEDDED_ACTIVITIES_AGE_GATED_TITLE,
-                description: o.Z.Messages.EMBEDDED_ACTIVITIES_AGE_GATED_DESCRIPTION.format({ applicationName: t.name }),
-                agreement: o.Z.Messages.NSFW_ACCEPT,
-                disagreement: o.Z.Messages.NSFW_DECLINE,
-                imageClassName: c.image
+                title: a.intl.string(a.t.SSDPOD),
+                description: a.intl.formatToPlainString(a.t.OgmIq6, { applicationName: e.name }),
+                agreement: a.intl.string(a.t.wVq7ur),
+                disagreement: a.intl.string(a.t.hg1uxs),
+                imageClassName: r.image
             })
         })
     });

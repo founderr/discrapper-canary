@@ -9,9 +9,9 @@ t.d(e, {
 var l,
     i,
     r = t(626135),
-    s = t(981631);
+    o = t(981631);
 function a(n, e, t) {
-    r.default.track(s.rMx.STOREFRONT_COPY_LINK_CLICKED, {
+    r.default.track(o.rMx.STOREFRONT_COPY_LINK_CLICKED, {
         application_id: n,
         area: e,
         sku_id: t

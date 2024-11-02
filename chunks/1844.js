@@ -27,37 +27,37 @@ function l() {
 let u = l(),
     c = !1,
     d = null,
-    _ = !1,
-    E = null,
-    f = [],
-    h = null;
-function p() {
+    f = !1,
+    _ = null,
+    h = [],
+    p = null;
+function m() {
     let e = null;
-    for (let t of f) (null == e || new Date(t.startDate) > new Date(e)) && (e = t.startDate);
+    for (let t of h) (null == e || new Date(t.startDate) > new Date(e)) && (e = t.startDate);
     return e;
 }
-function I() {
+function g() {
     var e, t, n;
-    h = null !== (n = null === (t = s.Z.settings.userContent) || void 0 === t ? void 0 : null === (e = t.lastDismissedOutboundPromotionStartDate) || void 0 === e ? void 0 : e.value) && void 0 !== n ? n : null;
+    p = null !== (n = null === (t = s.Z.settings.userContent) || void 0 === t ? void 0 : null === (e = t.lastDismissedOutboundPromotionStartDate) || void 0 === e ? void 0 : e.value) && void 0 !== n ? n : null;
 }
-class m extends (r = i.ZP.PersistedStore) {
+class E extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (u = e), this.waitFor(s.Z), this.syncWith([s.Z], I);
+        null != e && (u = e), this.waitFor(s.Z), this.syncWith([s.Z], g);
     }
     get outboundPromotions() {
-        return f;
+        return h;
     }
     get lastSeenOutboundPromotionStartDate() {
         return u.lastSeenOutboundPromotionStartDate;
     }
     get lastDismissedOutboundPromotionStartDate() {
-        return h;
+        return p;
     }
     get lastFetchedActivePromotions() {
-        return E;
+        return _;
     }
     get isFetchingActiveOutboundPromotions() {
-        return _;
+        return f;
     }
     get hasFetchedConsumedInboundPromotionId() {
         return u.hasFetchedConsumedInboundPromotionId;
@@ -78,18 +78,18 @@ class m extends (r = i.ZP.PersistedStore) {
         return u;
     }
 }
-o(m, 'displayName', 'PromotionsStore'),
-    o(m, 'persistKey', 'PromotionsPersistedStore'),
-    (t.Z = new m(a.Z, {
+o(E, 'displayName', 'PromotionsStore'),
+    o(E, 'persistKey', 'PromotionsPersistedStore'),
+    (t.Z = new E(a.Z, {
         ACTIVE_OUTBOUND_PROMOTIONS_FETCH_SUCCESS: function (e) {
             let { activeOutboundPromotions: t, consumedInboundPromotionId: n } = e;
-            (f = t), (E = Date.now()), (_ = !1), !u.hasFetchedConsumedInboundPromotionId && ((u.hasFetchedConsumedInboundPromotionId = !0), (u.consumedInboundPromotionId = n));
+            (h = t), (_ = Date.now()), (f = !1), !u.hasFetchedConsumedInboundPromotionId && ((u.hasFetchedConsumedInboundPromotionId = !0), (u.consumedInboundPromotionId = n));
         },
         ACTIVE_OUTBOUND_PROMOTIONS_FETCH: function () {
-            _ = !0;
+            f = !0;
         },
         ACTIVE_OUTBOUND_PROMOTIONS_FETCH_FAIL: function () {
-            (f = []), (_ = !1);
+            (h = []), (f = !1);
         },
         ACTIVE_BOGO_PROMOTION_FETCH_SUCCESS: function (e) {
             let { activePromotion: t } = e;
@@ -102,16 +102,16 @@ o(m, 'displayName', 'PromotionsStore'),
             (u.bogoPromotion = null), (c = !1);
         },
         OUTBOUND_PROMOTION_NOTICE_DISMISS: function () {
-            if (0 === f.length) return !1;
-            let e = p();
-            null != e && (h = e);
+            if (0 === h.length) return !1;
+            let e = m();
+            null != e && (p = e);
         },
         OUTBOUND_PROMOTIONS_SEEN: function () {
-            if (0 === f.length) return !1;
-            let e = p();
-            null != e && ((h = e), (u.lastSeenOutboundPromotionStartDate = e));
+            if (0 === h.length) return !1;
+            let e = m();
+            null != e && ((p = e), (u.lastSeenOutboundPromotionStartDate = e));
         },
         LOGOUT: function () {
-            (u = l()), (_ = !1), (E = null), (c = !1), (d = null), (f = []);
+            (u = l()), (f = !1), (_ = null), (c = !1), (d = null), (h = []);
         }
     }));

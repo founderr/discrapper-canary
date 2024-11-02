@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return S;
     }
 }),
     n(789020),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    a = n(442837),
-    l = n(904245),
-    r = n(257559),
+    l = n(192379),
+    r = n(442837),
+    a = n(904245),
+    s = n(257559),
     o = n(541716),
     c = n(893718),
     u = n(314897),
@@ -17,15 +17,15 @@ var i = n(200651),
     h = n(430824),
     m = n(496675),
     p = n(585483),
-    _ = n(630388),
-    f = n(838440),
-    E = n(930282),
-    g = n(955384),
-    C = n(981631),
-    I = n(916315);
-function T(e) {
+    f = n(630388),
+    g = n(838440),
+    C = n(930282),
+    x = n(955384),
+    v = n(981631),
+    _ = n(916315);
+function I(e) {
     let { value: t, channel: n } = e;
-    return (0, f.v)({
+    return (0, g.v)({
         type: o.I.EDIT,
         content: t,
         channel: n,
@@ -33,20 +33,20 @@ function T(e) {
         respectCooldown: !1
     });
 }
-function x(e) {
+function E(e) {
     let { channel: t, message: n } = e,
         { id: o } = t,
         { id: c } = n,
         p = t.getGuildId(),
-        f = (0, a.e7)([h.Z], () => h.Z.getGuild(p), [p]),
-        E = t.type === C.d4z.GUILD_ANNOUNCEMENT,
-        x = null != f && f.hasFeature(C.oNc.NEWS),
-        v = E && x,
+        g = (0, r.e7)([h.Z], () => h.Z.getGuild(p), [p]),
+        C = t.type === v.d4z.GUILD_ANNOUNCEMENT,
+        E = null != g && g.hasFeature(v.oNc.NEWS),
+        S = C && E,
         {
-            editingMessage: N,
-            editingTextValue: A,
-            editingRichValue: Z
-        } = (0, a.cj)(
+            editingMessage: Z,
+            editingTextValue: T,
+            editingRichValue: N
+        } = (0, r.cj)(
             [d.Z],
             () => ({
                 editingMessage: d.Z.getEditingMessage(o),
@@ -55,88 +55,88 @@ function x(e) {
             }),
             [o]
         ),
-        M = (0, a.e7)([u.default], () => u.default.getId()),
-        b = s.useCallback(
+        j = (0, r.e7)([u.default], () => u.default.getId()),
+        A = l.useCallback(
             (e, n, i) => {
-                let { content: s } = i,
-                    a = m.Z.can(C.Plq.MANAGE_MESSAGES, t),
-                    o = null != N && null != N.author ? N.author.id : null;
-                return v && (o === M || a) && null != N && (0, _.yE)(N.flags, C.iLy.CROSSPOSTED) ? r.Z.confirmEdit(e, n, s) : l.Z.editMessage(e, n, { content: s }), Promise.resolve();
+                let { content: l } = i,
+                    r = m.Z.can(v.Plq.MANAGE_MESSAGES, t),
+                    o = null != Z && null != Z.author ? Z.author.id : null;
+                return S && (o === j || r) && null != Z && (0, f.yE)(Z.flags, v.iLy.CROSSPOSTED) ? s.Z.confirmEdit(e, n, l) : a.Z.editMessage(e, n, { content: l }), Promise.resolve();
             },
-            [N, v, M, t]
+            [Z, S, j, t]
         ),
-        R = s.useCallback(
+        y = l.useCallback(
             (e) =>
-                (0, s.createElement)(S, {
+                (0, l.createElement)(b, {
                     ...e,
-                    className: I.channelTextArea,
+                    className: _.channelTextArea,
                     key: c
                 }),
             [c]
         );
-    return null != A && null != Z
-        ? (0, i.jsx)(g.Z, {
+    return null != T && null != N
+        ? (0, i.jsx)(x.Z, {
               ref: void 0,
               channel: t,
               message: n,
-              textValue: A,
-              richValue: Z,
-              onCancel: l.Z.endEditMessage,
-              onChange: l.Z.updateEditMessage,
-              onConfirmDelete: r.Z.confirmDelete,
-              saveMessage: b,
-              validateEdit: T,
-              children: R
+              textValue: T,
+              richValue: N,
+              onCancel: a.Z.endEditMessage,
+              onChange: a.Z.updateEditMessage,
+              onConfirmDelete: s.Z.confirmDelete,
+              saveMessage: A,
+              validateEdit: I,
+              children: y
           })
         : null;
 }
-function S(e) {
-    let { textValue: t, richValue: n, message: a, channel: l, onChange: r, onSubmit: u, onKeyDown: d } = e,
-        [h, m] = s.useState(!0),
-        _ = s.useCallback(() => m(!0), []),
-        f = s.useCallback(() => m(!1), []);
+function b(e) {
+    let { textValue: t, richValue: n, message: r, channel: a, onChange: s, onSubmit: u, onKeyDown: d } = e,
+        [h, m] = l.useState(!0),
+        f = l.useCallback(() => m(!0), []),
+        g = l.useCallback(() => m(!1), []);
     return (
-        s.useEffect(
+        l.useEffect(
             () => (
-                p.S.subscribe(C.CkL.TEXTAREA_FOCUS, _),
-                p.S.subscribe(C.CkL.TEXTAREA_BLUR, f),
+                p.S.subscribe(v.CkL.TEXTAREA_FOCUS, f),
+                p.S.subscribe(v.CkL.TEXTAREA_BLUR, g),
                 () => {
-                    p.S.unsubscribe(C.CkL.TEXTAREA_FOCUS, _), p.S.unsubscribe(C.CkL.TEXTAREA_BLUR, f);
+                    p.S.unsubscribe(v.CkL.TEXTAREA_FOCUS, f), p.S.unsubscribe(v.CkL.TEXTAREA_BLUR, g);
                 }
             ),
-            [_, f]
+            [f, g]
         ),
         (0, i.jsx)(
             c.Z,
             {
-                className: I.channelTextArea,
+                className: _.channelTextArea,
                 textValue: t,
                 richValue: n,
-                channel: l,
+                channel: a,
                 type: o.I.EDIT,
-                onChange: r,
+                onChange: s,
                 onSubmit: (e) => {
                     let { value: t } = e;
                     return u(t);
                 },
                 onKeyDown: d,
                 focused: h,
-                onFocus: _,
-                onBlur: f
+                onFocus: f,
+                onBlur: g
             },
-            a.id
+            r.id
         )
     );
 }
-function v(e, t, n) {
-    let { message: s, channel: a } = e;
+function S(e, t, n) {
+    let { message: l, channel: r } = e;
     return n
-        ? (0, i.jsx)(x, {
-              channel: a,
-              message: s
+        ? (0, i.jsx)(E, {
+              channel: r,
+              message: l
           })
-        : (0, i.jsx)(E.ZP, {
-              message: s,
+        : (0, i.jsx)(C.ZP, {
+              message: l,
               content: t
           });
 }

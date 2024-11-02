@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return S;
     }
 }),
     n(653041),
@@ -14,51 +14,51 @@ var r = n(200651),
     u = n(904245),
     c = n(159300),
     d = n(592125),
-    _ = n(984933),
-    E = n(430824),
-    f = n(496675),
-    h = n(699516),
-    p = n(771845),
-    I = n(594174),
-    m = n(981631),
-    T = n(689938);
-function S(e, t) {
+    f = n(984933),
+    _ = n(430824),
+    h = n(496675),
+    p = n(699516),
+    m = n(771845),
+    g = n(594174),
+    E = n(981631),
+    v = n(388032);
+function I(e, t) {
     o.Z.ensurePrivateChannel(e).then((e) => {
         null != d.Z.getChannel(e) && u.Z.sendInvite(e, t, 'context_menu', null);
     });
 }
-function g(e) {
+function S(e) {
     let { user: t, guildId: n, onAction: o } = e,
-        u = (0, a.e7)([I.default], () => I.default.getCurrentUser(), []),
+        u = (0, a.e7)([g.default], () => g.default.getCurrentUser(), []),
         d = (0, a.Wu)(
-            [p.ZP, E.Z, f.Z],
+            [m.ZP, _.Z, h.Z],
             () => {
-                let e = p.ZP.getFlattenedGuildIds(),
+                let e = m.ZP.getFlattenedGuildIds(),
                     t = [];
                 return (
                     e.forEach((e) => {
-                        let r = E.Z.getGuild(e);
-                        null != r && (0, c.b)(f.Z, r) && r.id !== n && t.push(r);
+                        let r = _.Z.getGuild(e);
+                        null != r && (0, c.b)(h.Z, r) && r.id !== n && t.push(r);
                     }),
                     t
                 );
             },
             [n]
         ),
-        [g, A] = i.useState({});
-    return (null == u ? void 0 : u.id) === t.id || t.bot || 0 === d.length || h.Z.isBlocked(t.id)
+        [S, T] = i.useState({});
+    return (null == u ? void 0 : u.id) === t.id || t.bot || 0 === d.length || p.Z.isBlocked(t.id)
         ? null
         : (0, r.jsx)(s.MenuItem, {
               id: 'invite-to-server',
-              label: T.Z.Messages.INVITE_TO_SERVER,
+              label: v.intl.string(v.t.Sd8Ix8),
               children: d.map((e) =>
-                  g[e.id]
+                  S[e.id]
                       ? (0, r.jsx)(
                             s.MenuItem,
                             {
                                 id: e.id,
                                 disabled: !0,
-                                label: T.Z.Messages.INVITE_SENT
+                                label: v.intl.string(v.t.PuLLzM)
                             },
                             e.id
                         )
@@ -70,16 +70,16 @@ function g(e) {
                                 action: () => {
                                     null == o || o(),
                                         !(function (e, t) {
-                                            let n = _.ZP.getDefaultChannel(e.id, !0, m.Plq.CREATE_INSTANT_INVITE);
+                                            let n = f.ZP.getDefaultChannel(e.id, !0, E.Plq.CREATE_INSTANT_INVITE);
                                             if (null != n) {
                                                 if (
-                                                    (A({
-                                                        ...g,
+                                                    (T({
+                                                        ...S,
                                                         [e.id]: !0
                                                     }),
-                                                    !f.Z.can(m.Plq.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode)
+                                                    !h.Z.can(E.Plq.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode)
                                                 ) {
-                                                    S(t, e.vanityURLCode);
+                                                    I(t, e.vanityURLCode);
                                                     return;
                                                 }
                                                 l.Z.createInvite(
@@ -89,7 +89,7 @@ function g(e) {
                                                         unique: !0
                                                     },
                                                     'User Invite Context Menu'
-                                                ).then((e) => S(t, e.code));
+                                                ).then((e) => I(t, e.code));
                                             }
                                         })(e, t.id);
                                 }

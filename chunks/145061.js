@@ -21,9 +21,9 @@ var r = n(192379),
             a = e.hsl,
             u = e.direction,
             d = e.pointer,
-            _ = e.styles,
-            E = e.className,
-            f = (0, s.default)(
+            f = e.styles,
+            _ = e.className,
+            h = (0, s.default)(
                 (0, o.Z)(
                     {
                         default: {
@@ -35,18 +35,18 @@ var r = n(192379),
                             hue: { radius: '2px' }
                         }
                     },
-                    void 0 === _ ? {} : _
+                    void 0 === f ? {} : f
                 )
             );
         return r.createElement(
             'div',
             {
-                style: f.picker,
-                className: 'hue-picker ' + (void 0 === E ? '' : E)
+                style: h.picker,
+                className: 'hue-picker ' + (void 0 === _ ? '' : _)
             },
             r.createElement(
                 l.PS,
-                c({}, f.hue, {
+                c({}, h.hue, {
                     hsl: a,
                     pointer: d,
                     onChange: function (e) {

@@ -1,9 +1,9 @@
 n.d(t, {
     K: function () {
-        return m;
+        return E;
     },
     i: function () {
-        return I;
+        return g;
     }
 }),
     n(47120);
@@ -16,19 +16,19 @@ var r = n(933557),
     u = n(984933),
     c = n(271383),
     d = n(430824),
-    _ = n(594174),
-    E = n(483360),
-    f = n(709054),
-    h = n(752305),
-    p = n(377668);
-function I(e, t, n, _) {
-    let { allowUsers: h = !0, allowRoles: I = !0 } = null != _ ? _ : {};
+    f = n(594174),
+    _ = n(483360),
+    h = n(709054),
+    p = n(752305),
+    m = n(377668);
+function g(e, t, n, f) {
+    let { allowUsers: p = !0, allowRoles: g = !0 } = null != f ? f : {};
     switch (e[0]) {
         case '@':
             return (function (e, t, n, r, a) {
                 let [s, o] = e.slice(1).split('#', 2),
                     u = null != t ? d.Z.getGuild(t) : null,
-                    _ = (0, i.M9)(u);
+                    f = (0, i.M9)(u);
                 if (a && null == o && null != u) {
                     for (let e of Object.values(d.Z.getRoles(u.id)))
                         if (s === e.name)
@@ -43,7 +43,7 @@ function I(e, t, n, _) {
                     if (null != e) {
                         if (e.isPrivate()) {
                             for (let t of e.recipients)
-                                if (T(s, o, t))
+                                if (v(s, o, t))
                                     return {
                                         type: 'userMention',
                                         userId: t,
@@ -51,23 +51,23 @@ function I(e, t, n, _) {
                                     };
                         } else {
                             for (let { userId: e } of c.ZP.getMembers(t))
-                                if (T(s, o, e))
+                                if (v(s, o, e))
                                     return {
                                         type: 'userMention',
                                         userId: e,
                                         children: [{ text: '' }]
                                     };
-                            if (_ && T(s, o, p.fL))
+                            if (f && v(s, o, m.fL))
                                 return {
                                     type: 'userMention',
-                                    userId: p.fL,
+                                    userId: m.fL,
                                     children: [{ text: '' }]
                                 };
                         }
                     }
                 }
                 return null;
-            })(e, t, n, h, I);
+            })(e, t, n, p, g);
         case ':':
             return (function (e, t) {
                 let n = s.ZP.EMOJI_NAME_RE.exec(e);
@@ -95,14 +95,14 @@ function I(e, t, n, _) {
                 if (null == t) return null;
                 n = e.length > 3 && '"' === e[1] && '"' === e[e.length - 1] ? (0, r.mA)(e.slice(2, e.length - 1)) : e.slice(1);
                 let i = u.ZP.getTextChannelNameDisambiguations(t);
-                for (let e of f.default.keys(i))
+                for (let e of h.default.keys(i))
                     if (i[e].name === n)
                         return {
                             type: 'channelMention',
                             channelId: e,
                             children: [{ text: '' }]
                         };
-                for (let e of E.k1) {
+                for (let e of _.k1) {
                     if (e !== u.sH) {
                         for (let { channel: r } of u.ZP.getChannels(t)[e])
                             if (r.name === n)
@@ -114,8 +114,8 @@ function I(e, t, n, _) {
                     }
                 }
                 let a = o.Z.getActiveJoinedThreadsForGuild(t);
-                for (let e of f.default.keys(a))
-                    for (let t of f.default.keys(a[e])) {
+                for (let e of h.default.keys(a))
+                    for (let t of h.default.keys(a[e])) {
                         let { channel: r } = a[e][t];
                         if (r.name === n)
                             return {
@@ -129,11 +129,11 @@ function I(e, t, n, _) {
     }
     return null;
 }
-function m(e, t, n, r) {
-    let i = I(e, t, n, r);
-    return null == i ? null : (0, h.VI)(i);
+function E(e, t, n, r) {
+    let i = g(e, t, n, r);
+    return null == i ? null : (0, p.VI)(i);
 }
-function T(e, t, n) {
-    let r = _.default.getUser(n);
-    return null != r && ((n === p.fL && 'clyde' === e.toLowerCase()) || (r.username === e && r.discriminator === (null != t ? t : '0')));
+function v(e, t, n) {
+    let r = f.default.getUser(n);
+    return null != r && ((n === m.fL && 'clyde' === e.toLowerCase()) || (r.username === e && r.discriminator === (null != t ? t : '0')));
 }

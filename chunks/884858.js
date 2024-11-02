@@ -1,14 +1,14 @@
-t.d(A, {
+n.d(t, {
     Z: function () {
-        return s;
+        return l;
     }
 });
-var a = t(531643),
-    n = t(403182),
-    r = t(689938);
-function s(e) {
-    (0, a.openUploadError)({
-        title: r.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-        help: r.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({ maxSize: (0, n.Ng)(e) })
+var A = n(531643),
+    r = n(403182),
+    a = n(388032);
+function l(e) {
+    (0, A.openUploadError)({
+        title: a.intl.string(a.t['/tGlcn']),
+        help: a.intl.formatToPlainString(a.t.fxEKdX, { maxSize: (0, r.Ng)(e) })
     });
 }

@@ -9,96 +9,96 @@ var i = n(120356),
     u = n(466377),
     c = n(993365),
     d = n(481060),
-    _ = n(600164),
-    E = n(540059),
-    f = n(689938),
-    h = n(149536);
+    f = n(600164),
+    _ = n(540059),
+    h = n(388032),
+    p = n(149536);
 t.default = (e) => {
     let t,
         n,
         i,
-        { body: p, cancelText: I, className: m, confirmColor: T, confirmText: S = f.Z.Messages.OKAY, secondaryConfirmText: g, onCancel: A, onClose: N, onConfirm: R, onConfirmSecondary: O, title: v, transitionState: C, titleClassName: L } = e,
-        D = (0, E.Q)('ConfirmModal'),
-        y = D ? s.zx.Sizes.MEDIUM : s.zx.Sizes.LARGE;
+        { body: m, cancelText: g, className: E, confirmColor: v, confirmText: I = h.intl.string(h.t.BddRzc), secondaryConfirmText: S, onCancel: T, onClose: b, onConfirm: y, onConfirmSecondary: A, title: N, transitionState: C, titleClassName: R } = e,
+        O = (0, _.Q)('ConfirmModal'),
+        D = O ? s.zx.Sizes.MEDIUM : s.zx.Sizes.LARGE;
     return (
-        null != I &&
-            '' !== I &&
+        null != g &&
+            '' !== g &&
             (t = (0, r.jsx)(s.zx, {
                 type: 'button',
-                size: y,
+                size: D,
                 color: s.zx.Colors.PRIMARY,
                 onClick: () => {
-                    null == N || N(), null == A || A();
+                    null == b || b(), null == T || T();
                 },
-                className: h.secondaryButton,
-                grow: !D,
+                className: p.secondaryButton,
+                grow: !O,
+                children: g
+            })),
+        null != I &&
+            '' !== I &&
+            (n = (0, r.jsx)(s.zx, {
+                type: 'submit',
+                color: v,
+                size: D,
+                className: a()(p.primaryButton, null != t ? p.gutter : null),
+                autoFocus: !0,
+                grow: !O,
                 children: I
             })),
         null != S &&
             '' !== S &&
-            (n = (0, r.jsx)(s.zx, {
-                type: 'submit',
-                color: T,
-                size: y,
-                className: a()(h.primaryButton, null != t ? h.gutter : null),
-                autoFocus: !0,
-                grow: !D,
-                children: S
-            })),
-        null != g &&
-            '' !== g &&
             (i = (0, r.jsx)(o.P, {
                 onClick: () => {
-                    null == N || N(), null == O || O();
+                    null == b || b(), null == A || A();
                 },
-                className: h.minorContainer,
+                className: p.minorContainer,
                 children: (0, r.jsx)(c.x, {
-                    className: h.secondaryAction,
+                    className: p.secondaryAction,
                     variant: 'text-xs/normal',
-                    children: g
+                    children: S
                 })
             })),
         (0, r.jsx)(u.Y0, {
             transitionState: C,
-            className: a()(m, h.container),
-            'aria-label': v,
+            className: a()(E, p.container),
+            'aria-label': N,
             children: (0, r.jsxs)('form', {
                 onSubmit: (e) => {
-                    null != e && e.preventDefault(), null == N || N(), null == R || R();
+                    null != e && e.preventDefault(), null == b || b(), null == y || y();
                 },
-                className: h.form,
+                className: p.form,
                 children: [
                     (0, r.jsx)(u.hz, {
-                        className: h.modalContent,
-                        children: (0, r.jsxs)(_.Z, {
-                            direction: _.Z.Direction.VERTICAL,
-                            justify: D ? _.Z.Justify.START : _.Z.Justify.CENTER,
-                            className: h.content,
+                        className: p.modalContent,
+                        children: (0, r.jsxs)(f.Z, {
+                            direction: f.Z.Direction.VERTICAL,
+                            justify: O ? f.Z.Justify.START : f.Z.Justify.CENTER,
+                            className: p.content,
                             children: [
-                                null != v && D
+                                null != N && O
                                     ? (0, r.jsx)(d.Heading, {
                                           variant: 'heading-lg/semibold',
-                                          className: a()(h.title, L),
-                                          children: v
+                                          className: a()(p.title, R),
+                                          children: N
                                       })
                                     : (0, r.jsx)(l.v, {
                                           tag: 'h2',
-                                          className: a()(h.title, L),
-                                          children: v
+                                          className: a()(p.title, R),
+                                          children: N
                                       }),
-                                null != p &&
+                                null != m &&
                                     (0, r.jsx)(c.x, {
                                         variant: 'text-md/normal',
-                                        className: h.body,
-                                        color: D ? 'header-secondary' : 'text-normal',
-                                        children: p
+                                        className: p.body,
+                                        color: O ? 'header-secondary' : 'text-normal',
+                                        children: m
                                     })
                             ]
                         })
                     }),
                     (0, r.jsxs)(u.mz, {
-                        justify: D ? void 0 : _.Z.Justify.BETWEEN,
-                        wrap: _.Z.Wrap.WRAP,
+                        justify: O ? void 0 : f.Z.Justify.BETWEEN,
+                        wrap: f.Z.Wrap.WRAP,
                         children: [n, t, i]
                     })
                 ]

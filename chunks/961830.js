@@ -25,7 +25,7 @@ var r = t(853872),
     l = t(713316),
     s = t(710094),
     u = t(865921),
-    p = t(689938);
+    p = t(388032);
 let f = {
         key: null,
         renderStep: (e) => (0, o.jsx)(u.v, { ...e })
@@ -56,7 +56,7 @@ let f = {
     g = {
         key: i.h8.REVIEW,
         renderStep: (e) => (0, o.jsx)(s.l, { ...e }),
-        options: { useBreadcrumbLabel: () => p.Z.Messages.BILLING_STEP_REVIEW }
+        options: { useBreadcrumbLabel: () => p.intl.string(p.t.QBnNHh) }
     },
     x = {
         key: i.h8.CONFIRM,

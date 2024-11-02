@@ -3,13 +3,13 @@ n(192379);
 var l = n(481060),
     r = n(570140),
     a = n(468026),
-    s = n(317770),
-    o = n(689938);
+    o = n(317770),
+    s = n(388032);
 let c = 'ActivityInviteManager',
     u = () => {
         r.Z.dispatch({ type: 'ACTIVITY_INVITE_MODAL_CLOSE' });
     };
-class d extends s.Z {
+class d extends o.Z {
     _initialize() {
         r.Z.subscribe('ACTIVITY_INVITE_MODAL_OPEN', this.handleModalOpen), r.Z.subscribe('ACTIVITY_INVITE_MODAL_CLOSE', this.handleModalClose);
     }
@@ -22,9 +22,9 @@ class d extends s.Z {
             ? (0, l.openModal)(
                   (e) =>
                       (0, i.jsx)(a.default, {
-                          title: o.Z.Messages.ACTIVITY_INVITE_MODAL_HEADER.format({ name: t.name }),
-                          body: o.Z.Messages.ACTIVITY_INVITE_PRIVATE,
-                          confirmText: o.Z.Messages.OKAY,
+                          title: s.intl.formatToPlainString(s.t['2tN7io'], { name: t.name }),
+                          body: s.intl.string(s.t.MAxtkp),
+                          confirmText: s.intl.string(s.t.BddRzc),
                           ...e
                       }),
                   {

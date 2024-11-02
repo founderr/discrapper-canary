@@ -7,27 +7,27 @@ var r = n(200651),
     u = n(65029),
     c = n(430824),
     d = n(624138),
-    _ = n(926491),
-    E = n(373228),
-    f = n(378233),
-    h = n(419922),
-    p = n(689938),
-    I = n(380212);
-let m = (0, d.Mg)(a.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
-    T = (0, d.Mg)(a.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
-    S = (e) => {
+    f = n(926491),
+    _ = n(373228),
+    h = n(378233),
+    p = n(419922),
+    m = n(388032),
+    g = n(380212);
+let E = (0, d.Mg)(a.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
+    v = (0, d.Mg)(a.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
+    I = (e) => {
         let t = null,
             n = null;
-        if ((!(0, f.jl)(e) && !(0, f.J8)(e)) || (0, f.J8)(e)) {
+        if ((!(0, h.jl)(e) && !(0, h.J8)(e)) || (0, h.J8)(e)) {
             let i = c.Z.getGuild(e.guild_id);
-            null != i && ((t = p.Z.Messages.STICKER_FROM_SOURCE.format({ source: i.name })), (n = (0, r.jsx)(o.Z, { guild: i })));
-        } else if ((0, f.jl)(e)) {
-            let i = _.Z.getStickerPack(e.pack_id);
+            null != i && ((t = m.intl.format(m.t.cZOkbm, { source: i.name })), (n = (0, r.jsx)(o.Z, { guild: i })));
+        } else if ((0, h.jl)(e)) {
+            let i = f.Z.getStickerPack(e.pack_id);
             null != i &&
-                ((t = p.Z.Messages.STICKER_FROM_SOURCE.format({ source: i.name })),
-                (n = (0, r.jsx)(h.ZP, {
-                    size: T,
-                    sticker: (0, f.Zt)(i),
+                ((t = m.intl.format(m.t.cZOkbm, { source: i.name })),
+                (n = (0, r.jsx)(p.ZP, {
+                    size: v,
+                    sticker: (0, h.Zt)(i),
                     disableAnimation: !0
                 })));
         }
@@ -36,45 +36,45 @@ let m = (0, d.Mg)(a.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BA
             graphic: n
         };
     },
-    g = i.memo(function (e) {
+    S = i.memo(function (e) {
         let { stickersGrid: t } = e,
             n = l.ZN.useStore((e) => e.inspectedExpressionPosition),
             a = i.useMemo(() => {
                 var e;
                 let { rowIndex: r, columnIndex: i } = n,
                     a = null === (e = t[r]) || void 0 === e ? void 0 : e[i];
-                return (null == a ? void 0 : a.type) === E.al.CREATE_STICKER
+                return (null == a ? void 0 : a.type) === _.al.CREATE_STICKER
                     ? {
                           guild_id: a.guild_id,
                           name: a.name
                       }
-                    : (null == a ? void 0 : a.type) !== E.al.STICKER
+                    : (null == a ? void 0 : a.type) !== _.al.STICKER
                       ? null
                       : a.sticker;
             }, [t, n]);
         if (null == a) return null;
-        let { graphic: o, title: c } = S(a),
+        let { graphic: o, title: c } = I(a),
             d =
-                (0, f.jl)(a) || (0, f.J8)(a)
-                    ? (0, r.jsx)(h.ZP, {
+                (0, h.jl)(a) || (0, h.J8)(a)
+                    ? (0, r.jsx)(p.ZP, {
                           isInteracting: !0,
-                          size: m,
+                          size: E,
                           sticker: a,
                           disableAnimation: !0
                       })
                     : (0, r.jsx)('div', {
-                          className: I.iconWrapper,
+                          className: g.iconWrapper,
                           children: (0, r.jsx)(s.PlusSmallIcon, {
                               size: 'md',
                               color: 'currentColor',
-                              className: I.icon
+                              className: g.icon
                           })
                       });
         return (0, r.jsx)(u.Z, {
             graphicPrimary: d,
             graphicSecondary: o,
             titlePrimary: a.name,
-            titleSecondary: (0, f.jl)(a) || (0, f.J8)(a) ? c : null
+            titleSecondary: (0, h.jl)(a) || (0, h.J8)(a) ? c : null
         });
     });
-t.Z = g;
+t.Z = S;

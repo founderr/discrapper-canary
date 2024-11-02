@@ -4,45 +4,45 @@ n.d(t, {
     }
 }),
     n(47120);
-var s = n(200651),
-    i = n(192379),
+var i = n(200651),
+    s = n(192379),
     r = n(593473),
-    o = n(512969),
-    l = n(489863),
+    l = n(512969),
+    o = n(489863),
     a = n(787025),
     c = n(397394),
-    d = n(689938);
+    d = n(388032);
 function u() {
     let e;
-    let t = (0, o.TH)(),
-        [n, u] = i.useState(!1),
-        [h, p] = i.useState(!1);
+    let t = (0, l.TH)(),
+        [n, u] = s.useState(!1),
+        [h, p] = s.useState(!1);
     return (
-        i.useEffect(() => {
+        s.useEffect(() => {
             (async function e() {
                 let e = (0, r.parse)(t.search);
                 try {
                     var n;
-                    await (0, l.g)(null !== (n = e.token) && void 0 !== n ? n : ''), u(!0);
+                    await (0, o.g)(null !== (n = e.token) && void 0 !== n ? n : ''), u(!0);
                 } catch {
                     p(!0);
                 }
             })();
         }, [t.search]),
         (e = n
-            ? (0, s.jsx)(c.c7, {
-                  message: d.Z.Messages.WHITELISTED,
+            ? (0, i.jsx)(c.c7, {
+                  message: d.intl.string(d.t.Tqu3OT),
                   showsCloseWindowText: !0
               })
             : h
-              ? (0, s.jsx)(c.Lk, {
-                    message: d.Z.Messages.WHITELIST_FAILED,
+              ? (0, i.jsx)(c.Lk, {
+                    message: d.intl.string(d.t.J8LsCg),
                     showsCloseWindowText: !0
                 })
-              : (0, s.jsx)(c.ZP, {
-                    message: d.Z.Messages.WHITELISTING,
+              : (0, i.jsx)(c.ZP, {
+                    message: d.intl.string(d.t.BAcf6e),
                     spinner: !0
                 })),
-        (0, s.jsx)(a.G, { children: e })
+        (0, i.jsx)(a.G, { children: e })
     );
 }

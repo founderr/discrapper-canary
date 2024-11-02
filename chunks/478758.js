@@ -23,9 +23,9 @@ let c = (0, o.Z)((e) => {
 });
 t.Z = (e) => {
     let { partySize: t, members: n, minAvatarsShown: i = 1, maxAvatarsShown: s = 2, guildId: o } = e,
-        { totalSize: d, knownSize: _ } = t;
+        { totalSize: d, knownSize: f } = t;
     if (d < i) return null;
-    let E = a()(n)
+    let _ = a()(n)
             .filter(l.lm)
             .take(s)
             .map((e) =>
@@ -39,9 +39,9 @@ t.Z = (e) => {
                 )
             )
             .value(),
-        f = d - _;
-    for (let e = 0; e < f && E.length < s; e++)
-        E.push(
+        h = d - f;
+    for (let e = 0; e < h && _.length < s; e++)
+        _.push(
             (0, r.jsx)(
                 c,
                 {
@@ -51,10 +51,10 @@ t.Z = (e) => {
                 'empty-member-'.concat(e)
             )
         );
-    let h = Math.max(Math.min(d - E.length, 99), 0);
-    if (1 === h) {
+    let p = Math.max(Math.min(d - _.length, 99), 0);
+    if (1 === p) {
         let e = n[s];
-        E.push(
+        _.push(
             (0, r.jsx)(
                 c,
                 {
@@ -70,11 +70,11 @@ t.Z = (e) => {
         children: (0, r.jsxs)('div', {
             className: u.partyMembers,
             children: [
-                E,
-                h > 1
+                _,
+                p > 1
                     ? (0, r.jsxs)('div', {
                           className: u.partyMemberOverflow,
-                          children: ['+', h]
+                          children: ['+', p]
                       })
                     : null
             ]

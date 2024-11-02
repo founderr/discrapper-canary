@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return f;
     }
 });
 var r = n(200651),
@@ -10,27 +10,27 @@ var r = n(200651),
     o = n(993365),
     l = n(481060),
     u = n(422559),
-    c = n(689938),
+    c = n(388032),
     d = n(482145);
-function _(e) {
-    let { application: t, permissions: n, deniedPermissions: _, onPermissionsChange: E, guild: f } = e,
-        h = i.useMemo(() => a.U_(f.permissions), [f.permissions]);
+function f(e) {
+    let { application: t, permissions: n, deniedPermissions: f, onPermissionsChange: _, guild: h } = e,
+        p = i.useMemo(() => a.U_(h.permissions), [h.permissions]);
     i.useEffect(() => {
-        E(!1, a.hX(n, h));
-    }, [h, E, n]);
-    let p = u.VY.filter((e) => a.e$(n, e)),
-        I = p
-            .filter((e) => !a.e$(h, e))
+        _(!1, a.hX(n, p));
+    }, [p, _, n]);
+    let m = u.VY.filter((e) => a.e$(n, e)),
+        g = m
+            .filter((e) => !a.e$(p, e))
             .map((e) => {
                 let t = (0, u.wt)(e),
-                    n = !a.e$(_, e);
+                    n = !a.e$(f, e);
                 return (0, r.jsx)(
                     'li',
                     {
                         className: d.permission,
                         children: (0, r.jsx)(s.X, {
                             value: n,
-                            onChange: (t, n) => E(n, e),
+                            onChange: (t, n) => _(n, e),
                             type: s.X.Types.INVERTED,
                             children: (0, r.jsx)(o.x, {
                                 variant: 'text-md/normal',
@@ -41,8 +41,8 @@ function _(e) {
                     String(e)
                 );
             }),
-        m = p
-            .filter((e) => a.e$(h, e))
+        E = m
+            .filter((e) => a.e$(p, e))
             .map((e) => {
                 let t = (0, u.wt)(e);
                 return (0, r.jsxs)(
@@ -70,35 +70,35 @@ function _(e) {
     return (0, r.jsxs)('div', {
         className: d.botPermissions,
         children: [
-            I.length > 0
+            g.length > 0
                 ? (0, r.jsxs)('div', {
                       children: [
                           (0, r.jsx)(o.x, {
                               variant: 'text-sm/medium',
                               color: 'header-secondary',
-                              children: c.Z.Messages.OAUTH2_CONFIRM_BOT_PERMISSIONS.format({
+                              children: c.intl.format(c.t.sOaT2t, {
                                   applicationName: t.name,
-                                  guildName: f.name
+                                  guildName: h.name
                               })
                           }),
                           (0, r.jsx)('ul', {
                               className: d.permissionsList,
-                              children: I
+                              children: g
                           })
                       ]
                   })
                 : null,
-            m.length > 0
+            E.length > 0
                 ? (0, r.jsxs)('div', {
                       children: [
                           (0, r.jsx)(o.x, {
                               variant: 'text-sm/medium',
                               color: 'header-secondary',
-                              children: c.Z.Messages.OAUTH2_DISABLED_PERMISSIONS.format({ applicationName: t.name })
+                              children: c.intl.format(c.t.fsOkFx, { applicationName: t.name })
                           }),
                           (0, r.jsx)('ul', {
                               className: d.permissionsList,
-                              children: m
+                              children: E
                           })
                       ]
                   })

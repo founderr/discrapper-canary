@@ -1,74 +1,74 @@
-t.d(s, {
+n.d(t, {
     H: function () {
-        return u;
+        return m;
     },
     U: function () {
-        return S;
+        return p;
     }
 });
-var n = t(200651);
-t(192379);
-var a = t(120356),
-    i = t.n(a),
-    r = t(481060),
-    o = t(921801),
-    l = t(3957),
-    c = t(279743),
-    d = t(36968),
-    _ = t(597941);
-function u(e) {
-    let { header: s, description: t, relatedId: a, disabled: o } = e;
-    return (0, n.jsxs)('div', {
-        className: _.header,
+var i = n(200651);
+n(192379);
+var s = n(120356),
+    r = n.n(s),
+    l = n(481060),
+    a = n(921801),
+    o = n(3957),
+    c = n(279743),
+    d = n(36968),
+    u = n(597941);
+function m(e) {
+    let { header: t, description: n, relatedId: s, disabled: a } = e;
+    return (0, i.jsxs)('div', {
+        className: u.header,
         children: [
-            (0, n.jsx)(r.Heading, {
+            (0, i.jsx)(l.Heading, {
                 variant: 'text-md/medium',
                 color: 'header-primary',
-                children: (0, n.jsx)('label', {
-                    htmlFor: a,
-                    className: i()(_.title, { [_.disabled]: o }),
-                    children: s
+                children: (0, i.jsx)('label', {
+                    htmlFor: s,
+                    className: r()(u.title, { [u.disabled]: a }),
+                    children: t
                 })
             }),
-            (0, n.jsx)(r.Text, {
+            (0, i.jsx)(l.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                className: i()(_.description, { [_.disabled]: o }),
-                children: t
+                className: r()(u.description, { [u.disabled]: a }),
+                children: n
             })
         ]
     });
 }
-function E(e) {
-    let { setting: s, className: t, children: a } = e;
-    return (0, n.jsx)(o.F, {
-        setting: s,
-        children: (0, n.jsx)('div', {
-            className: i()(_.container, t),
-            children: a
+function h(e) {
+    let { setting: t, className: n, children: s } = e;
+    return (0, i.jsx)(a.F, {
+        setting: t,
+        children: (0, i.jsx)('div', {
+            className: r()(u.container, n),
+            children: s
         })
     });
 }
-function T(e) {
-    let { setting: s, className: t, children: a, scrollPosition: r, scrollHighlightDelay: u } = e,
-        E = (0, l.a)(r);
-    return (0, n.jsx)(o.F, {
-        setting: s,
-        children: (0, n.jsxs)('div', {
-            className: i()(_.container, t, { [d.settingsBackgroundFlashElement]: null != r }),
-            ref: E,
+function g(e) {
+    let { setting: t, className: n, children: s, scrollPosition: l, scrollHighlightDelay: m } = e,
+        h = (0, o.a)(l);
+    return (0, i.jsx)(a.F, {
+        setting: t,
+        children: (0, i.jsxs)('div', {
+            className: r()(u.container, n, { [d.settingsBackgroundFlashElement]: null != l }),
+            ref: h,
             children: [
-                a,
-                null != r
-                    ? (0, n.jsx)(c.Z, {
-                          animationDelay: u,
-                          scrollPosition: r
+                s,
+                null != l
+                    ? (0, i.jsx)(c.Z, {
+                          animationDelay: m,
+                          scrollPosition: l
                       })
                     : null
             ]
         })
     });
 }
-function S(e) {
-    return null != e.scrollPosition ? (0, n.jsx)(T, { ...e }) : (0, n.jsx)(E, { ...e });
+function p(e) {
+    return null != e.scrollPosition ? (0, i.jsx)(g, { ...e }) : (0, i.jsx)(h, { ...e });
 }

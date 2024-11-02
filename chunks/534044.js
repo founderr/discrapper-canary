@@ -1,84 +1,84 @@
-s.d(n, {
+t.d(n, {
     Z: function () {
-        return A;
+        return h;
     }
 });
-var a = s(200651);
-s(192379);
-var t = s(120356),
-    i = s.n(t),
-    l = s(481060),
-    o = s(600164),
-    r = s(548647),
-    c = s(696375),
-    d = s(800530),
-    _ = s(689938),
-    E = s(549476),
-    N = s(487043),
-    u = s(160557);
-function A(e) {
-    let { className: n, onNext: s, onClose: t } = e,
-        A = (0, r.n)();
-    return (0, a.jsxs)(a.Fragment, {
+var i = t(200651);
+t(192379);
+var l = t(120356),
+    a = t.n(l),
+    s = t(481060),
+    o = t(600164),
+    r = t(548647),
+    c = t(696375),
+    d = t(800530),
+    u = t(388032),
+    x = t(549476),
+    m = t(487043),
+    C = t(160557);
+function h(e) {
+    let { className: n, onNext: t, onClose: l } = e,
+        h = (0, r.n)();
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, a.jsxs)(l.ModalHeader, {
+            (0, i.jsxs)(s.ModalHeader, {
                 direction: o.Z.Direction.VERTICAL,
-                className: N.header,
+                className: m.header,
                 separator: !1,
                 children: [
-                    (0, a.jsx)('div', {
-                        className: E.iconContainer,
-                        children: (0, a.jsx)('img', {
-                            src: u,
+                    (0, i.jsx)('div', {
+                        className: x.iconContainer,
+                        children: (0, i.jsx)('img', {
+                            src: C,
                             alt: '',
-                            className: E.icon
+                            className: x.icon
                         })
                     }),
-                    (0, a.jsx)(l.Heading, {
-                        className: N.title,
+                    (0, i.jsx)(s.Heading, {
+                        className: m.title,
                         variant: 'heading-xl/semibold',
-                        children: _.Z.Messages.APPEAL_INGESTION_MODAL_REQUEST_SENT_HEADER
+                        children: u.intl.string(u.t.QMbTSk)
                     }),
-                    (0, a.jsx)(l.Heading, {
-                        className: N.subtitle,
+                    (0, i.jsx)(s.Heading, {
+                        className: m.subtitle,
                         color: 'header-secondary',
                         variant: 'text-md/normal',
-                        children: _.Z.Messages.APPEAL_INGESTION_MODAL_REQUEST_SENT_SUBHEADER
+                        children: u.intl.string(u.t.Qdx8AA)
                     }),
-                    null != t &&
-                        (0, a.jsx)(l.ModalCloseButton, {
-                            className: N.closeButton,
-                            onClick: t
+                    null != l &&
+                        (0, i.jsx)(s.ModalCloseButton, {
+                            className: m.closeButton,
+                            onClick: l
                         })
                 ]
             }),
-            (0, a.jsxs)(l.ModalContent, {
-                className: i()(E.modalContent, n),
+            (0, i.jsxs)(s.ModalContent, {
+                className: a()(x.modalContent, n),
                 paddingFix: !1,
                 children: [
-                    (0, a.jsx)(l.Heading, {
+                    (0, i.jsx)(s.Heading, {
                         variant: 'heading-md/bold',
                         color: 'header-primary',
-                        className: E.actionsHeader,
-                        children: _.Z.Messages.APPEAL_INGESTION_MODAL_REQUEST_SENT_ACTIONS_HEADER
+                        className: x.actionsHeader,
+                        children: u.intl.string(u.t['9BRc1N'])
                     }),
-                    (0, a.jsx)(c.Z, {
-                        text: _.Z.Messages.APPEAL_INGESTION_MODAL_REQUEST_SENT_GUIDELINES_LINK,
+                    (0, i.jsx)(c.Z, {
+                        text: u.intl.string(u.t.PxL38P),
                         url: d.sQ.COMMUNITY_GUIDELINES,
-                        onClick: () => A(d.n0.ClickCommunityGuidelinesLink)
+                        onClick: () => h(d.n0.ClickCommunityGuidelinesLink)
                     }),
-                    (0, a.jsx)(c.Z, {
-                        text: _.Z.Messages.APPEAL_INGESTION_MODAL_REQUEST_SENT_RULES_LINK,
+                    (0, i.jsx)(c.Z, {
+                        text: u.intl.string(u.t.qC3XKS),
                         url: d.sQ.WARNING_SYSTEM_HELPCENTER_LINK,
-                        onClick: () => A(d.n0.ClickWarningSystemHelpcenterLink)
+                        onClick: () => h(d.n0.ClickWarningSystemHelpcenterLink)
                     })
                 ]
             }),
-            (0, a.jsx)(l.ModalFooter, {
-                children: (0, a.jsx)(l.Button, {
-                    onClick: s,
-                    color: l.Button.Colors.BRAND,
-                    children: _.Z.Messages.DONE
+            (0, i.jsx)(s.ModalFooter, {
+                children: (0, i.jsx)(s.Button, {
+                    onClick: t,
+                    color: s.Button.Colors.BRAND,
+                    children: u.intl.string(u.t.i4jeWV)
                 })
             })
         ]

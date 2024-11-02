@@ -21,67 +21,67 @@ function c(e, t) {
             });
         });
     return i.forwardRef(function (t, c) {
-        let { children: d, className: _, onResize: E, contentClassName: f, onScroll: h, dir: p = 'ltr', fade: I = !1, customTheme: m = !1, style: T, ...S } = t,
-            g = i.useRef(null),
-            A = i.useRef(null),
-            [N, R] = i.useState(!1),
-            { scrollerRef: O, getScrollerState: v } = (0, l.Ke)(),
-            C = (0, l.t2)(O);
+        let { children: d, className: f, onResize: _, contentClassName: h, onScroll: p, dir: m = 'ltr', fade: g = !1, customTheme: E = !1, style: v, ...I } = t,
+            S = i.useRef(null),
+            T = i.useRef(null),
+            [b, y] = i.useState(!1),
+            { scrollerRef: A, getScrollerState: N } = (0, l.Ke)(),
+            C = (0, l.t2)(A);
         i.useImperativeHandle(
             c,
             () => ({
-                getScrollerNode: () => O.current,
-                isScrolling: () => null != g.current,
-                getScrollerState: v,
-                ...(0, l.Ue)(O, v, C)
+                getScrollerNode: () => A.current,
+                isScrolling: () => null != S.current,
+                getScrollerState: N,
+                ...(0, l.Ue)(A, N, C)
             }),
-            [O, v, C]
+            [A, N, C]
         );
-        let L = i.useCallback(
+        let R = i.useCallback(
             (e) => {
-                null == g.current ? R(!0) : clearTimeout(g.current),
-                    (g.current = setTimeout(() => {
-                        (g.current = null), R(!1);
+                null == S.current ? y(!0) : clearTimeout(S.current),
+                    (S.current = setTimeout(() => {
+                        (S.current = null), y(!1);
                     }, 200)),
-                    null != h && h(e);
+                    null != p && p(e);
             },
-            [h]
+            [p]
         );
         return (
-            i.useEffect(() => () => clearTimeout(g.current), []),
+            i.useEffect(() => () => clearTimeout(S.current), []),
             (0, l.zn)({
-                ref: O,
+                ref: A,
                 key: 'container',
-                onUpdate: E,
+                onUpdate: _,
                 resizeObserver: a,
                 listenerMap: n
             }),
             (0, l.zn)({
-                ref: A,
+                ref: T,
                 key: 'content',
-                onUpdate: E,
+                onUpdate: _,
                 resizeObserver: a,
                 listenerMap: n
             }),
             (0, r.jsx)('div', {
-                ref: O,
-                className: s()(_, {
-                    [u.fade]: I,
-                    [u.customTheme]: m,
+                ref: A,
+                className: s()(f, {
+                    [u.fade]: g,
+                    [u.customTheme]: E,
                     [e]: !0,
                     [u.managedReactiveScroller]: !0,
-                    [u.scrolling]: N && I
+                    [u.scrolling]: b && g
                 }),
-                style: T,
-                dir: p,
-                onScroll: L,
-                ...S,
+                style: v,
+                dir: m,
+                onScroll: R,
+                ...I,
                 children: (0, r.jsx)(o.J, {
-                    containerRef: A,
+                    containerRef: T,
                     children: (0, r.jsxs)('div', {
-                        ref: A,
-                        className: s()(f, u.content),
-                        children: [d, N && (0, r.jsx)('div', { className: u.pointerCover })]
+                        ref: T,
+                        className: s()(h, u.content),
+                        children: [d, b && (0, r.jsx)('div', { className: u.pointerCover })]
                     })
                 })
             })

@@ -5,36 +5,36 @@ n.d(t, {
 }),
     n(47120);
 var i = n(704215),
-    s = n(442837),
-    a = n(645041),
-    l = n(271383),
-    r = n(430824),
+    l = n(442837),
+    r = n(645041),
+    a = n(271383),
+    s = n(430824),
     o = n(594174),
     c = n(353093),
     u = n(954138),
     d = n(981631);
 function h(e, t) {
     let n = (0, u.Z)(t),
-        h = (0, s.e7)(
-            [o.default, r.Z, l.ZP],
+        h = (0, l.e7)(
+            [o.default, s.Z, a.ZP],
             () =>
                 (function (e) {
-                    let [t, n, i] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.default, r.Z, l.ZP];
+                    let [t, n, i] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.default, s.Z, a.ZP];
                     if (null == e) return !1;
-                    let s = n.getGuild(e);
-                    if (null == s || !(0, c.EJ)(s) || null == s.clan) return !1;
-                    let a = t.getCurrentUser();
-                    if (null == a) return !1;
-                    let u = i.getMember(e, a.id);
+                    let l = n.getGuild(e);
+                    if (null == l || !(0, c.EJ)(l) || null == l.clan) return !1;
+                    let r = t.getCurrentUser();
+                    if (null == r) return !1;
+                    let u = i.getMember(e, r.id);
                     if (null == u || u.isPending) return !1;
-                    if (null == a.clan) return !0;
+                    if (null == r.clan) return !0;
                     let d = null != u.joinedAt ? new Date(u.joinedAt) : null,
                         h = null != d && Date.now() - d.getTime() > 259200000,
-                        { identityGuildId: m, identityEnabled: p } = a.clan;
+                        { identityGuildId: m, identityEnabled: p } = r.clan;
                     return null != m && null == p ? e === m : null == m && null == p ? h : (m !== e || !1 !== p) && null != m && !1 === p && h;
-                })(e, [o.default, r.Z, l.ZP]),
+                })(e, [o.default, s.Z, a.ZP]),
             [e]
         ),
-        m = (0, a.FT)(i.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : d.lds);
+        m = (0, r.FT)(i.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : d.lds);
     return n && h && !m;
 }

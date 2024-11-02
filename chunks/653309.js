@@ -38,13 +38,13 @@ let c = {
 };
 function d(e, t) {
     let n;
-    let { attributes: i, children: u, leaf: d, text: _ } = t,
-        E = !1,
-        [f] = s.bN.node(e, s.C0.parent(s.bN.findPath(e, _)));
-    switch (s.bN.isEditor(f) ? 'editor' : f.type) {
+    let { attributes: i, children: u, leaf: d, text: f } = t,
+        _ = !1,
+        [h] = s.bN.node(e, s.C0.parent(s.bN.findPath(e, f)));
+    switch (s.bN.isEditor(h) ? 'editor' : h.type) {
         case 'line':
         case 'blockQuote': {
-            E = void 0;
+            _ = void 0;
             let e = Object.entries(d)
                 .filter((e) => {
                     let [t] = e;
@@ -54,7 +54,7 @@ function d(e, t) {
                     let [t, n] = e;
                     if ('hljsTypes' === t) return n;
                     if (!0 === n) {
-                        if ((('codeBlockLang' === t || 'codeBlockSyntax' === t) && (E = !1), t.startsWith('before_') || t.startsWith('after_'))) return [o[t]];
+                        if ((('codeBlockLang' === t || 'codeBlockSyntax' === t) && (_ = !1), t.startsWith('before_') || t.startsWith('after_'))) return [o[t]];
                         if (t in c) return [c[t]];
                         throw Error('Slate: Unknown decoration attribute: '.concat(t));
                     }
@@ -65,11 +65,11 @@ function d(e, t) {
         }
     }
     return (
-        (n = a()(n, { [l.emptyText]: '' === _.text })),
+        (n = a()(n, { [l.emptyText]: '' === f.text })),
         (0, r.jsx)('span', {
             ...i,
             className: n,
-            spellCheck: E,
+            spellCheck: _,
             children: u
         })
     );

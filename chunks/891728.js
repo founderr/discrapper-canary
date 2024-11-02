@@ -1,24 +1,24 @@
-t.d(s, {
+n.d(t, {
     V: function () {
         return c;
     }
 }),
-    t(47120),
-    t(192379);
-var n = t(392711),
-    a = t.n(n),
-    i = t(442837),
-    r = t(271383),
-    o = t(430824),
-    l = t(353093);
+    n(47120),
+    n(192379);
+var i = n(392711),
+    s = n.n(i),
+    r = n(442837),
+    l = n(271383),
+    a = n(430824),
+    o = n(353093);
 function c() {
-    return (0, i.Wu)([o.Z, r.ZP], () => {
-        let e = o.Z.getGuilds();
-        return a()(e)
+    return (0, r.Wu)([a.Z, l.ZP], () => {
+        let e = a.Z.getGuilds();
+        return s()(e)
             .values()
             .filter((e) => {
-                var s;
-                return (0, l.EJ)(e) && (null === (s = r.ZP.getSelfMember(e.id)) || void 0 === s ? void 0 : s.joinedAt) != null;
+                var t;
+                return (0, o.EJ)(e) && (null === (t = l.ZP.getSelfMember(e.id)) || void 0 === t ? void 0 : t.joinedAt) != null;
             })
             .value();
     });

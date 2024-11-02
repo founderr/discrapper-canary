@@ -1,21 +1,21 @@
-n.d(s, {
+t.d(n, {
     Z: function () {
         return r;
     }
 }),
-    n(47120);
-var l = n(192379),
-    t = n(442837),
-    o = n(528963),
-    i = n(237904);
-let a = 1 * n(70956).Z.Millis.HOUR;
+    t(47120);
+var s = t(192379),
+    l = t(442837),
+    i = t(528963),
+    o = t(237904);
+let a = 1 * t(70956).Z.Millis.HOUR;
 function r(e) {
-    let [s, n] = l.useState(!1),
-        r = (0, t.e7)([i.Z], () => i.Z.getFollowerStatsForChannel(e), [e]);
+    let [n, t] = s.useState(!1),
+        r = (0, l.e7)([o.Z], () => o.Z.getFollowerStatsForChannel(e), [e]);
     return (
-        l.useEffect(() => {
-            (null == r || Date.now() - r.lastFetched > a) && !s ? (n(!0), o.Z.fetchChannelFollowerStats(e)) : null != r && s && n(!1);
-        }, [e, r, s]),
-        [r, s]
+        s.useEffect(() => {
+            (null == r || Date.now() - r.lastFetched > a) && !n ? (t(!0), i.Z.fetchChannelFollowerStats(e)) : null != r && n && t(!1);
+        }, [e, r, n]),
+        [r, n]
     );
 }

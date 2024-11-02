@@ -1,17 +1,17 @@
-o.r(e),
-    o.d(e, {
+e.r(o),
+    e.d(o, {
         default: function () {
             return p;
         }
     });
-var l = o(200651),
-    n = o(192379),
-    s = o(481060),
-    a = o(782568),
-    r = o(690221),
-    i = o(557177),
-    d = o(689938),
-    u = o(661243);
+var n = e(200651),
+    l = e(192379),
+    s = e(481060),
+    a = e(782568),
+    r = e(690221),
+    i = e(557177),
+    d = e(388032),
+    u = e(661243);
 let c = [
     {
         preBold: "That's pretty...",
@@ -29,22 +29,22 @@ let c = [
     }
 ];
 function b(t) {
-    let { punConfig: e } = t;
-    return (0, l.jsxs)(l.Fragment, {
-        children: [e.preBold, (0, l.jsx)('b', { children: (0, l.jsx)('i', { children: e.bold }) }), e.postBold]
+    let { punConfig: o } = t;
+    return (0, n.jsxs)(n.Fragment, {
+        children: [o.preBold, (0, n.jsx)('b', { children: (0, n.jsx)('i', { children: o.bold }) }), o.postBold]
     });
 }
 function p(t) {
-    let { transitionState: e, onClose: o, asanaTask: p } = t;
-    n.useEffect(() => {
+    let { transitionState: o, onClose: e, asanaTask: p } = t;
+    l.useEffect(() => {
         (0, i.GN)('success', 0.1);
     }, []);
-    let m = n.useRef(c[Math.floor(Math.random() * c.length)]).current;
-    return (0, l.jsx)(s.ModalRoot, {
+    let m = l.useRef(c[Math.floor(Math.random() * c.length)]).current;
+    return (0, n.jsx)(s.ModalRoot, {
         className: u.bugReporterSubmitModalRoot,
-        transitionState: e,
-        'aria-label': d.Z.Messages.SUBMIT_BUG,
-        children: (0, l.jsxs)(s.ModalContent, {
+        transitionState: o,
+        'aria-label': d.intl.string(d.t.mCCdws),
+        children: (0, n.jsxs)(s.ModalContent, {
             style: {
                 overflow: 'hidden',
                 paddingRight: '0px'
@@ -52,24 +52,24 @@ function p(t) {
             className: u.modalContent,
             paddingFix: !1,
             children: [
-                (0, l.jsx)(s.ModalCloseButton, {
+                (0, n.jsx)(s.ModalCloseButton, {
                     onClick: () => {
-                        null == o || o();
+                        null == e || e();
                     },
                     className: u.closeButton
                 }),
-                (0, l.jsxs)(s.Text, {
+                (0, n.jsxs)(s.Text, {
                     className: u.submitText,
                     variant: 'text-sm/normal',
                     children: [
                         'Thanks for submitting a ',
-                        (0, l.jsx)(r.Z, {
+                        (0, n.jsx)(r.Z, {
                             onClick: () => (0, a.Z)(p.permalink_url),
                             children: 'bug'
                         }),
                         '!',
-                        (0, l.jsx)('br', {}),
-                        (0, l.jsx)(b, { punConfig: m })
+                        (0, n.jsx)('br', {}),
+                        (0, n.jsx)(b, { punConfig: m })
                     ]
                 })
             ]

@@ -1,52 +1,52 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return v;
     }
 });
 var i = n(200651),
     l = n(192379),
     r = n(120356),
     a = n.n(r),
-    s = n(100621),
-    o = n(442837),
+    o = n(100621),
+    s = n(442837),
     c = n(692547),
     u = n(481060),
     d = n(492162),
     h = n(237583),
     p = n(451478),
     f = n(934415),
-    _ = n(968847),
-    m = n(689938),
-    g = n(624113);
-let C = {
+    m = n(968847),
+    g = n(388032),
+    C = n(624113);
+let _ = {
     friction: 30,
     tension: 300
 };
-function I(e) {
+function x(e) {
     var t;
     let { guildChannels: n, jumpToVoiceChannels: r } = e,
-        s = n.getCategoryFromSection(n.voiceChannelsSectionNumber),
-        o = (0, d.Z)(n.id),
+        o = n.getCategoryFromSection(n.voiceChannelsSectionNumber),
+        s = (0, d.Z)(n.id),
         p = l.useCallback(
             (e) => {
                 e.preventDefault(), e.stopPropagation(), r();
             },
             [r]
         ),
-        _ = null !== (t = null == s ? void 0 : s.getChannelRecords()) && void 0 !== t ? t : [],
-        C = (0, f.c4)({
-            channels: _,
+        m = null !== (t = null == o ? void 0 : o.getChannelRecords()) && void 0 !== t ? t : [],
+        _ = (0, f.c4)({
+            channels: m,
             selectedChannelId: null,
             selectedVoiceChannelId: null,
-            voiceStates: o
+            voiceStates: s
         });
     return (0, i.jsxs)(u.Clickable, {
-        className: a()(g.bar),
+        className: a()(C.bar),
         onClick: p,
         children: [
             (0, i.jsx)(u.VoiceNormalIcon, {
                 size: 'custom',
-                className: g.voiceChannelsIcon,
+                className: C.voiceChannelsIcon,
                 width: 14,
                 height: 14,
                 color: c.Z.unsafe_rawColors.GREEN_330.css
@@ -54,13 +54,13 @@ function I(e) {
             (0, i.jsx)(u.Text, {
                 variant: 'text-xs/semibold',
                 color: 'text-positive',
-                className: g.barText,
-                children: m.Z.Messages.VOICE_CHANNEL_BAR_ACTIVE.format({ count: C.length })
+                className: C.barText,
+                children: g.intl.format(g.t['fDlr+P'], { count: _.length })
             }),
             (0, i.jsx)(h.Z, {
                 guildId: n.id,
-                className: g.voiceChannelsUsers,
-                users: C.slice(0, 4),
+                className: C.voiceChannelsUsers,
+                users: _.slice(0, 4),
                 renderMoreUsers: () => null,
                 max: 4,
                 size: u.AvatarSizes.SIZE_16
@@ -68,78 +68,78 @@ function I(e) {
         ]
     });
 }
-function E(e) {
+function v(e) {
     let { position: t, guildChannels: n, guildChannelsVersion: r, jumpToVoiceChannels: c, jumpToChannel: d } = e,
-        { bottomBar: h, topBar: f } = (0, o.cj)([_.Z], () => _.Z.getUnreadStateForGuildId(n.id)),
-        E = (0, o.e7)([p.Z], () => p.Z.isFocused()),
-        { mode: N, mentionCount: x, targetChannelId: S } = 'bottom' === t ? h : f,
-        v = N === _.x.HIDDEN,
-        Z = (0, u.useSpring)(
+        { bottomBar: h, topBar: f } = (0, s.cj)([m.Z], () => m.Z.getUnreadStateForGuildId(n.id)),
+        v = (0, s.e7)([p.Z], () => p.Z.isFocused()),
+        { mode: I, mentionCount: b, targetChannelId: N } = 'bottom' === t ? h : f,
+        E = I === m.x.HIDDEN,
+        S = (0, u.useSpring)(
             {
-                to: { transform: v ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
-                config: C
+                to: { transform: E ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
+                config: _
             },
-            E ? 'respect-motion-settings' : 'animate-never'
+            v ? 'respect-motion-settings' : 'animate-never'
         ),
-        T = l.useCallback(
+        Z = l.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), null != S && d(S);
+                e.preventDefault(), e.stopPropagation(), null != N && d(N);
             },
-            [d, S]
+            [d, N]
         );
     return (0, i.jsx)('div', {
-        className: a()(g.container, {
-            [g.top]: 'top' === t,
-            [g.bottom]: 'bottom' === t
+        className: a()(C.container, {
+            [C.top]: 'top' === t,
+            [C.bottom]: 'bottom' === t
         }),
-        children: (0, i.jsx)(s.animated.div, {
-            className: g.containerPadding,
-            style: Z,
-            'aria-hidden': v,
+        children: (0, i.jsx)(o.animated.div, {
+            className: C.containerPadding,
+            style: S,
+            'aria-hidden': E,
             children:
-                N === _.x.HIDDEN
-                    ? (0, i.jsx)('div', { className: a()(g.bar, g.emptyBar) })
-                    : N === _.x.UNREAD
+                I === m.x.HIDDEN
+                    ? (0, i.jsx)('div', { className: a()(C.bar, C.emptyBar) })
+                    : I === m.x.UNREAD
                       ? (0, i.jsxs)(u.Clickable, {
-                            className: g.bar,
-                            onClick: T,
+                            className: C.bar,
+                            onClick: Z,
                             children: [
                                 'bottom' === t
                                     ? (0, i.jsx)(u.ChevronSmallDownIcon, {
                                           size: 'custom',
                                           color: 'currentColor',
-                                          className: g.unreadIcon,
+                                          className: C.unreadIcon,
                                           height: 14,
                                           width: 14
                                       })
                                     : (0, i.jsx)(u.ChevronSmallUpIcon, {
                                           size: 'custom',
                                           color: 'currentColor',
-                                          className: g.unreadIcon,
+                                          className: C.unreadIcon,
                                           height: 14,
                                           width: 14
                                       }),
                                 (0, i.jsx)(u.Text, {
                                     variant: 'text-xs/semibold',
                                     color: 'interactive-normal',
-                                    className: g.barText,
-                                    children: m.Z.Messages.NEW_UNREADS
+                                    className: C.barText,
+                                    children: g.intl.string(g.t.FCRiT0)
                                 })
                             ]
                         })
-                      : N === _.x.MENTIONS
+                      : I === m.x.MENTIONS
                         ? (0, i.jsx)(u.Clickable, {
-                              className: a()(g.bar, g.mentionsBar),
-                              onClick: T,
+                              className: a()(C.bar, C.mentionsBar),
+                              onClick: Z,
                               children: (0, i.jsx)(u.Text, {
                                   variant: 'text-xs/semibold',
                                   color: 'status-danger-text',
-                                  className: g.barText,
-                                  children: m.Z.Messages.NEW_MENTIONS_COUNT.format({ count: x })
+                                  className: C.barText,
+                                  children: g.intl.format(g.t.EQcLys, { count: b })
                               })
                           })
-                        : N === _.x.VOICE_CHANNELS
-                          ? (0, i.jsx)(I, {
+                        : I === m.x.VOICE_CHANNELS
+                          ? (0, i.jsx)(x, {
                                 jumpToVoiceChannels: c,
                                 guildChannels: n,
                                 guildChannelsVersion: r

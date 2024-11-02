@@ -1,70 +1,70 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return g;
+        return m;
     }
 });
-var l = t(200651);
-t(192379);
-var s = t(120356),
-    a = t.n(s),
-    i = t(481060),
-    r = t(971130),
-    o = t(689938),
-    d = t(600923),
-    u = t(113207);
-let c = r.ZP.getMaxAgeOptions;
+var l = n(200651);
+n(192379);
+var i = n(120356),
+    r = n.n(i),
+    s = n(481060),
+    a = n(971130),
+    o = n(388032),
+    d = n(600923),
+    u = n(113207);
+let c = a.ZP.getMaxAgeOptions;
 function h(e) {
-    let { temporary: n, shouldHide: t, onToggleTemporary: s } = e;
-    return t
+    let { temporary: t, shouldHide: n, onToggleTemporary: i } = e;
+    return n
         ? (0, l.jsx)('div', { className: u.marginTop20 })
-        : (0, l.jsx)(i.FormItem, {
-              className: a()(u.marginTop20, d.switch),
-              children: (0, l.jsx)(i.FormSwitch, {
-                  value: n,
-                  onChange: (e) => s(e),
-                  note: o.Z.Messages.TEMPORARY_MEMBERSHIP_EXPLANATION,
+        : (0, l.jsx)(s.FormItem, {
+              className: r()(u.marginTop20, d.switch),
+              children: (0, l.jsx)(s.FormSwitch, {
+                  value: t,
+                  onChange: (e) => i(e),
+                  note: o.intl.string(o.t.UN5IRU),
                   hideBorder: !0,
-                  children: (0, l.jsx)(i.Text, {
+                  children: (0, l.jsx)(s.Text, {
                       variant: 'text-sm/normal',
-                      children: o.Z.Messages.GRANT_TEMPORARY_MEMBERSHIP
+                      children: o.intl.string(o.t['wE+9dn'])
                   })
               })
           });
 }
-let I = r.ZP.getMaxUsesOptions;
-function g(e) {
-    var n;
-    let { shouldHideTemporaryInviteToggle: t, maxAge: s, maxUses: r, temporary: g, onGenerateNewLink: E, onToggleTemporary: _, onSelectMaxAge: m, onSelectMaxUses: T } = e,
-        N = c.find((e) => e.value === s),
-        v = I.find((e) => e.value === r);
+let g = a.ZP.getMaxUsesOptions;
+function m(e) {
+    var t;
+    let { shouldHideTemporaryInviteToggle: n, maxAge: i, maxUses: a, temporary: m, onGenerateNewLink: v, onToggleTemporary: p, onSelectMaxAge: x, onSelectMaxUses: I } = e,
+        S = c.find((e) => e.value === i),
+        f = g.find((e) => e.value === a);
     return (0, l.jsx)('div', {
         className: d.settingsContent,
         children: (0, l.jsxs)('form', {
-            onSubmit: E,
+            onSubmit: v,
             children: [
-                (0, l.jsx)(i.FormItem, {
-                    title: o.Z.Messages.EXPIRE_AFTER,
+                (0, l.jsx)(s.FormItem, {
+                    title: o.intl.string(o.t['60qw29']),
                     className: u.marginTop20,
-                    children: (0, l.jsx)(i.SingleSelect, {
-                        value: null !== (n = null == N ? void 0 : N.value) && void 0 !== n ? n : c[0].value,
+                    children: (0, l.jsx)(s.SingleSelect, {
+                        value: null !== (t = null == S ? void 0 : S.value) && void 0 !== t ? t : c[0].value,
                         options: c,
-                        onChange: m,
+                        onChange: x,
                         maxVisibleItems: 8
                     })
                 }),
-                (0, l.jsx)(i.FormItem, {
-                    title: o.Z.Messages.MAX_NUMBER_OF_USES,
-                    className: a()(u.marginTop20, u.marginBottom4),
-                    children: (0, l.jsx)(i.SingleSelect, {
-                        value: null == v ? void 0 : v.value,
-                        options: I,
-                        onChange: T
+                (0, l.jsx)(s.FormItem, {
+                    title: o.intl.string(o.t.jDqWHR),
+                    className: r()(u.marginTop20, u.marginBottom4),
+                    children: (0, l.jsx)(s.SingleSelect, {
+                        value: null == f ? void 0 : f.value,
+                        options: g,
+                        onChange: I
                     })
                 }),
                 (0, l.jsx)(h, {
-                    temporary: g,
-                    shouldHide: t,
-                    onToggleTemporary: _
+                    temporary: m,
+                    shouldHide: n,
+                    onToggleTemporary: p
                 })
             ]
         })

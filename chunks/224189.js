@@ -14,13 +14,13 @@ async function u(e, t) {
     let u = r.Z.getApplication(e);
     if (c(u)) return u;
     let d = null === (n = s.Z.getChannel(t)) || void 0 === n ? void 0 : n.guild_id,
-        { activityConfigs: _, applications: E } = await (0, o.w1)({ guildId: d }),
-        f = (0, l.Z)({
+        { activityConfigs: f, applications: _ } = await (0, o.w1)({ guildId: d }),
+        h = (0, l.Z)({
             applicationId: e,
-            activityConfigs: _,
-            applications: E
+            activityConfigs: f,
+            applications: _
         });
-    if (c(null == f ? void 0 : f.application)) return null == f ? void 0 : f.application;
+    if (c(null == h ? void 0 : h.application)) return null == h ? void 0 : h.application;
     {
         let t = await (0, i.UM)(e);
         return a.Z.createFromServer(t);

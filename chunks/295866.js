@@ -1,27 +1,27 @@
-n.d(t, {
+n.d(e, {
     D0: function () {
-        return c;
-    },
-    kY: function () {
         return u;
     },
+    kY: function () {
+        return l;
+    },
     lE: function () {
-        return a;
+        return c;
     }
 });
-var s = n(570140);
-function u() {
-    s.Z.dispatch({ type: 'SPELLCHECK_TOGGLE' });
+var i = n(570140);
+function l() {
+    i.Z.dispatch({ type: 'SPELLCHECK_TOGGLE' });
 }
-function c(e) {
-    s.Z.dispatch({
+function u(t) {
+    i.Z.dispatch({
         type: 'SPELLCHECK_LEARN_WORD',
-        word: e
+        word: t
     });
 }
-function a(e) {
-    s.Z.dispatch({
+function c(t) {
+    i.Z.dispatch({
         type: 'SPELLCHECK_UNLEARN_WORD',
-        word: e
+        word: t
     });
 }

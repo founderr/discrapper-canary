@@ -1,31 +1,31 @@
 n.d(t, {
     n: function () {
-        return a;
+        return r;
     }
 });
-var s,
-    a,
-    i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    o = n.n(l),
+var i,
+    r,
+    l = n(200651),
+    s = n(192379),
+    a = n(120356),
+    o = n.n(a),
     c = n(748780),
     d = n(215569),
     u = n(976888);
-((s = a || (a = {}))[(s.RIGHT = -1)] = 'RIGHT'), (s[(s.LEFT = 1)] = 'LEFT');
-let _ = {
+((i = r || (r = {}))[(i.RIGHT = -1)] = 'RIGHT'), (i[(i.LEFT = 1)] = 'LEFT');
+let m = {
     friction: 10,
     tension: 40,
     overshootClamping: !0
 };
-class I extends r.PureComponent {
+class h extends s.PureComponent {
     componentWillEnter(e) {
         var t, n;
         null === (t = (n = this.props).onAnimationStart) || void 0 === t || t.call(n),
             this._animated.setValue(-this.props.direction),
             c.Z.spring(this._animated, {
                 toValue: 0,
-                ..._
+                ...m
             }).start(() => {
                 var t, n;
                 e(), null === (t = (n = this.props).onAnimationEnd) || void 0 === t || t.call(n);
@@ -37,7 +37,7 @@ class I extends r.PureComponent {
     componentWillLeave(e) {
         c.Z.spring(this._animated, {
             toValue: this.props.direction,
-            ..._
+            ...m
         }).start(e);
     }
     getStyle() {
@@ -53,39 +53,39 @@ class I extends r.PureComponent {
         });
     }
     render() {
-        return (0, i.jsx)(c.Z.div, {
+        return (0, l.jsx)(c.Z.div, {
             style: this.getStyle(),
             className: u.item,
             children: this.props.children
         });
     }
     constructor(e) {
-        var t, n, s;
+        var t, n, i;
         super(e),
             (t = this),
-            (s = void 0),
+            (i = void 0),
             (n = '_animated') in t
                 ? Object.defineProperty(t, n, {
-                      value: s,
+                      value: i,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[n] = s),
+                : (t[n] = i),
             (this._animated = new c.Z.Value(-1 * e.direction));
     }
 }
 t.Z = (e) => {
-    let { children: t, step: n, direction: s, className: a, onAnimationStart: r, onAnimationEnd: l } = e;
-    return (0, i.jsx)(d.W, {
+    let { children: t, step: n, direction: i, className: r, onAnimationStart: s, onAnimationEnd: a } = e;
+    return (0, l.jsx)(d.W, {
         component: 'div',
-        className: o()(u.animator, a),
-        children: (0, i.jsx)(
-            I,
+        className: o()(u.animator, r),
+        children: (0, l.jsx)(
+            h,
             {
-                direction: s,
-                onAnimationStart: r,
-                onAnimationEnd: l,
+                direction: i,
+                onAnimationStart: s,
+                onAnimationEnd: a,
                 children: t
             },
             n

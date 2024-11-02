@@ -12,8 +12,8 @@ function s(e) {
         [l, u] = r.useState(void 0),
         c = null == s ? void 0 : s.query,
         d = null == s ? void 0 : s.isVisible,
-        { renderWindow: _ } = r.useContext(i.ZP),
-        E = r.useCallback(() => {
+        { renderWindow: f } = r.useContext(i.ZP),
+        _ = r.useCallback(() => {
             var e, t, r, i;
             if (null != s && (null == c || !d)) {
                 u(void 0);
@@ -23,34 +23,34 @@ function s(e) {
                 u(null);
                 return;
             }
-            let l = _.document.getSelection(),
-                E = null != l && l.rangeCount > 0 ? l.getRangeAt(0) : null;
-            if (null == E) return;
-            let f = E.startContainer,
-                h = E.startOffset;
-            for (; null != f; ) {
-                if (f.nodeType !== Node.TEXT_NODE || null == f.nodeValue) {
+            let l = f.document.getSelection(),
+                _ = null != l && l.rangeCount > 0 ? l.getRangeAt(0) : null;
+            if (null == _) return;
+            let h = _.startContainer,
+                p = _.startOffset;
+            for (; null != h; ) {
+                if (h.nodeType !== Node.TEXT_NODE || null == h.nodeValue) {
                     u(null);
                     return;
                 }
-                if ((null === (t = f.nodeValue) || void 0 === t ? void 0 : t.length) === 0) {
-                    h = null !== (i = null == (f = f.previousSibling) ? void 0 : null === (r = f.nodeValue) || void 0 === r ? void 0 : r.length) && void 0 !== i ? i : 0;
+                if ((null === (t = h.nodeValue) || void 0 === t ? void 0 : t.length) === 0) {
+                    p = null !== (i = null == (h = h.previousSibling) ? void 0 : null === (r = h.nodeValue) || void 0 === r ? void 0 : r.length) && void 0 !== i ? i : 0;
                     continue;
                 }
-                null != c && (h >= c.queryText.length ? (h -= c.queryText.length) : (h = 0));
+                null != c && (p >= c.queryText.length ? (p -= c.queryText.length) : (p = 0));
                 break;
             }
-            if (null == f) return;
-            let p = _.document.createRange();
-            p.setStart(f, h), p.setEnd(f, h);
-            let I = p.getBoundingClientRect();
-            if ((null == I ? void 0 : I.height) !== 0) u(null != I ? I : null);
-        }, [o, _.document, s, d, c, n]);
+            if (null == h) return;
+            let m = f.document.createRange();
+            m.setStart(h, p), m.setEnd(h, p);
+            let g = m.getBoundingClientRect();
+            if ((null == g ? void 0 : g.height) !== 0) u(null != g ? g : null);
+        }, [o, f.document, s, d, c, n]);
     return (
-        r.useEffect(() => (_.document.addEventListener('selectionchange', E), () => _.document.removeEventListener('selectionchange', E)), [_.document, E]),
+        r.useEffect(() => (f.document.addEventListener('selectionchange', _), () => f.document.removeEventListener('selectionchange', _)), [f.document, _]),
         r.useEffect(() => {
-            E();
-        }, [E, t]),
+            _();
+        }, [_, t]),
         l
     );
 }

@@ -4,36 +4,36 @@ n.r(t),
             return p;
         },
         openEffectsUpsellModal: function () {
-            return _;
+            return f;
         }
     });
 var i = n(200651);
 n(192379);
-var s = n(481060),
-    a = n(70097),
-    l = n(174609),
-    r = n(98278),
+var l = n(481060),
+    r = n(70097),
+    a = n(174609),
+    s = n(98278),
     o = n(790527),
     c = n(626135),
     u = n(981631),
-    d = n(689938),
+    d = n(388032),
     h = n(517301),
     m = n(626065);
 function p(e) {
-    let { onClose: t, analytics: n, ...s } = e,
-        p = d.Z.Messages.VOICE_CHANNEL_EFFECTS_UPSELL_BODY_2.format({
+    let { onClose: t, analytics: n, ...l } = e,
+        p = d.intl.format(d.t['7aNIkZ'], {
             onPressMore: function () {
-                (0, l.Z)(),
+                (0, a.Z)(),
                     t(),
                     c.default.track(u.rMx.PREMIUM_PROMOTION_OPENED, {
                         location_section: u.jXE.VOICE_CHANNEL_EFFECTS_UPSELL_MODAL,
                         location_object: u.qAy.NAVIGATION_LINK
                     }),
-                    (0, r.z)();
+                    (0, s.z)();
             }
         });
     return (0, i.jsx)(o.Z, {
-        title: d.Z.Messages.VOICE_CHANNEL_EFFECTS_UPSELL_HEADER_2,
+        title: d.intl.string(d.t.K49fZG),
         glowUp: p,
         body: p,
         artContainerClassName: h.artContainer,
@@ -48,19 +48,19 @@ function p(e) {
             section: n.section
         },
         onClose: t,
-        onSubscribeClick: l.Z,
-        artElement: (0, i.jsx)(a.Z, {
+        onSubscribeClick: a.Z,
+        artElement: (0, i.jsx)(r.Z, {
             className: h.video,
             src: m,
             loop: !0,
             autoPlay: !0
         }),
-        ...s
+        ...l
     });
 }
-function _(e) {
+function f(e) {
     let { analytics: t } = e;
-    (0, s.openModalLazy)(async () => {
+    (0, l.openModalLazy)(async () => {
         let { default: e } = await Promise.resolve().then(n.bind(n, 310892));
         return (n) =>
             (0, i.jsx)(e, {

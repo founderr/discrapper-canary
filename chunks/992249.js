@@ -4,34 +4,34 @@ n.d(t, {
     }
 }),
     n(47120);
-var s = n(200651),
-    a = n(192379),
-    i = n(120356),
-    r = n.n(i),
-    l = n(481060),
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    s = n.n(l),
+    a = n(481060),
     o = n(717251),
     c = n(446716);
 function d(e) {
-    let { action: t, children: n, className: i, onExpandChange: d, loading: u, ..._ } = e,
-        [I, E] = a.useState(!1),
-        T = (e) => {
-            E(e), null == d || d(e);
+    let { action: t, children: n, className: l, onExpandChange: d, loading: u, ...m } = e,
+        [h, g] = r.useState(!1),
+        x = (e) => {
+            g(e), null == d || d(e);
         };
-    return (0, s.jsx)(l.Collapsible, {
-        className: r()(c.groupContainer, i),
-        isExpanded: I,
-        collapsibleContent: (0, s.jsxs)('div', {
+    return (0, i.jsx)(a.Collapsible, {
+        className: s()(c.groupContainer, l),
+        isExpanded: h,
+        collapsibleContent: (0, i.jsxs)('div', {
             className: c.groupCollapsedContainer,
-            children: [I && (0, s.jsx)('div', { className: c.pointer }), n]
+            children: [h && (0, i.jsx)('div', { className: c.pointer }), n]
         }),
         children: (e) => {
             let { onClick: n } = e;
-            return (0, s.jsx)(o.Z, {
-                ..._,
+            return (0, i.jsx)(o.Z, {
+                ...m,
                 className: c.groupHeaderRow,
-                action: u ? (0, s.jsx)(l.Spinner, { type: l.Spinner.Type.PULSING_ELLIPSIS }) : t,
+                action: u ? (0, i.jsx)(a.Spinner, { type: a.Spinner.Type.PULSING_ELLIPSIS }) : t,
                 onClick: (e) => {
-                    T(!I), n(e);
+                    x(!h), n(e);
                 }
             });
         }

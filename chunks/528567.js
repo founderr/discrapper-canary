@@ -8,25 +8,25 @@ n.d(t, {
 });
 var r = n(939639),
     i = n(99815),
-    a = n(689938);
+    a = n(388032);
 function s(e) {
     var t;
     return null !==
         (t = {
-            [i.E.LOL_TOTAL_KILLS]: a.Z.Messages.LEADERBOARD_STATISTIC_NAME_LOL_TOTAL_KILLS,
-            [i.E.LOL_TOTAL_DEATHS]: a.Z.Messages.LEADERBOARD_STATISTIC_NAME_LOL_TOTAL_DEATHS,
-            [i.E.LOL_TOTAL_ASSISTS]: a.Z.Messages.LEADERBOARD_STATISTIC_NAME_LOL_TOTAL_ASSISTS,
-            [i.E.LOL_TOTAL_DAMAGE_DEALT]: a.Z.Messages.LEADERBOARD_STATISTIC_NAME_LOL_TOTAL_DAMAGE_DEALT,
-            [i.E.LOL_TOTAL_DAMAGE_TAKEN]: a.Z.Messages.LEADERBOARD_STATISTIC_NAME_LOL_TOTAL_DAMAGE_TAKEN,
-            [i.E.LOL_TOTAL_WINS]: a.Z.Messages.LEADERBOARD_STATISTIC_NAME_LOL_TOTAL_WINS,
-            [i.E.LOL_MAX_CREEP_SCORE]: a.Z.Messages.LEADERBOARD_STATISTIC_NAME_LOL_MAX_CREEP_SCORE
+            [i.E.LOL_TOTAL_KILLS]: a.intl.string(a.t.aIbY2N),
+            [i.E.LOL_TOTAL_DEATHS]: a.intl.string(a.t.Jec90d),
+            [i.E.LOL_TOTAL_ASSISTS]: a.intl.string(a.t['8+lHWV']),
+            [i.E.LOL_TOTAL_DAMAGE_DEALT]: a.intl.string(a.t['XEmO+P']),
+            [i.E.LOL_TOTAL_DAMAGE_TAKEN]: a.intl.string(a.t['TcQ7//']),
+            [i.E.LOL_TOTAL_WINS]: a.intl.string(a.t['/QfLjI']),
+            [i.E.LOL_MAX_CREEP_SCORE]: a.intl.string(a.t.M5pp7e)
         }[e]) && void 0 !== t
         ? t
-        : a.Z.Messages.LEADERBOARD_STATISTIC_NAME_UNKNOWN;
+        : a.intl.string(a.t['IraB/v']);
 }
 function o(e) {
     let { statisticId: t, sortDesc: n, aggregationType: i } = e,
         o = s(t);
-    if (i === r.k.MAX) return n ? a.Z.Messages.LEADERBOARD_STATISTIC_NAME_MAX_VALUE.format({ statisticName: o }) : a.Z.Messages.LEADERBOARD_STATISTIC_NAME_MIN_VALUE.format({ statisticName: o });
-    return n ? a.Z.Messages.LEADERBOARD_STATISTIC_NAME_MOST_VALUE.format({ statisticName: o }) : a.Z.Messages.LEADERBOARD_STATISTIC_NAME_LEAST_VALUE.format({ statisticName: o });
+    if (i === r.k.MAX) return n ? a.intl.formatToPlainString(a.t.nJYOFx, { statisticName: o }) : a.intl.formatToPlainString(a.t.SYKIbW, { statisticName: o });
+    return n ? a.intl.formatToPlainString(a.t.M9sOp6, { statisticName: o }) : a.intl.formatToPlainString(a.t.USfwd3, { statisticName: o });
 }

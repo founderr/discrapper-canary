@@ -5,22 +5,22 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(481060),
-    r = n(13245),
-    a = n(593481),
-    o = n(312839),
+var r = n(481060),
+    s = n(13245),
+    o = n(593481),
+    a = n(312839),
     l = n(981631),
     c = n(987650),
-    d = n(689938),
+    d = n(388032),
     u = n(57266);
 function h() {
     return (0, i.jsx)('div', {
         className: u.footer,
-        children: (0, i.jsx)(s.Button, {
-            color: s.Button.Colors.GREEN,
-            size: s.Button.Sizes.SMALL,
+        children: (0, i.jsx)(r.Button, {
+            color: r.Button.Colors.GREEN,
+            size: r.Button.Sizes.SMALL,
             className: u.ctaButton,
-            children: d.Z.Messages.OVERLAY_NEWS_GO_LIVE_CTA
+            children: d.intl.string(d.t.U76Ft7)
         })
     });
 }
@@ -28,12 +28,12 @@ function p(e) {
     switch (e.type) {
         case c.nc.GO_LIVE_VOICE: {
             let { game: t, voiceGuild: u } = e,
-                { trackView: p, trackClick: f } = (0, o.R)(c.n0.GoLiveNudge, { notif_type: c.n0.GoLiveNudge });
+                { trackView: p, trackClick: f } = (0, a.R)(c.n0.GoLiveNudge, { notif_type: c.n0.GoLiveNudge });
             return {
-                colorScheme: a.IC.PRIMARY,
+                colorScheme: o.IC.PRIMARY,
                 icon: n(847881),
                 title: null,
-                body: d.Z.Messages.OVERLAY_NEWS_GO_LIVE_BODY.format({
+                body: d.intl.formatToPlainString(d.t.z9znpa, {
                     game: t.name,
                     server: u.toString()
                 }),
@@ -44,9 +44,9 @@ function p(e) {
                 },
                 onNotificationClick: (e, t) => {
                     f('unlock'),
-                        r.Z.updateNotificationStatus(t),
-                        r.Z.setInstanceLocked(!1),
-                        (0, s.openModalLazy)(async () => {
+                        s.Z.updateNotificationStatus(t),
+                        s.Z.setInstanceLocked(!1),
+                        (0, r.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([n.e('46746'), n.e('33641')]).then(n.bind(n, 60594));
                             return (t) =>
                                 (0, i.jsx)(e, {
@@ -64,12 +64,12 @@ function p(e) {
         }
         case c.nc.GO_LIVE_NON_VOICE: {
             let { game: t } = e,
-                { trackView: u, trackClick: p } = (0, o.R)(c.n0.GoLiveNonVoiceNudge, { notif_type: c.n0.GoLiveNonVoiceNudge });
+                { trackView: u, trackClick: p } = (0, a.R)(c.n0.GoLiveNonVoiceNudge, { notif_type: c.n0.GoLiveNonVoiceNudge });
             return {
-                colorScheme: a.IC.PRIMARY,
+                colorScheme: o.IC.PRIMARY,
                 icon: n(847881),
                 title: null,
-                body: d.Z.Messages.OVERLAY_NEWS_GO_LIVE_BODY_NO_VOICE_CHANNEL.format({ game: t.name }),
+                body: d.intl.formatToPlainString(d.t['0SVWgI'], { game: t.name }),
                 hint: () => (0, i.jsx)(h, {}),
                 renderFooter: () => (0, i.jsx)(h, {}),
                 onNotificationShow: () => {
@@ -77,9 +77,9 @@ function p(e) {
                 },
                 onNotificationClick: (e, t) => {
                     p('unlock'),
-                        r.Z.updateNotificationStatus(t),
-                        r.Z.setInstanceLocked(!1),
-                        (0, s.openModalLazy)(async () => {
+                        s.Z.updateNotificationStatus(t),
+                        s.Z.setInstanceLocked(!1),
+                        (0, r.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([n.e('46746'), n.e('33641')]).then(n.bind(n, 60594));
                             return (t) =>
                                 (0, i.jsx)(e, {

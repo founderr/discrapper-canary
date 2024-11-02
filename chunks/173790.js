@@ -1,12 +1,12 @@
 t.d(n, {
     Z: function () {
-        return I;
+        return b;
     }
 }),
     t(47120);
 var i = t(200651),
-    a = t(192379),
-    l = t(442837),
+    l = t(192379),
+    a = t(442837),
     o = t(218061),
     r = t(481060),
     s = t(361213),
@@ -15,93 +15,93 @@ var i = t(200651),
     u = t(835473),
     m = t(541099),
     p = t(827498),
-    _ = t(783097),
-    C = t(753972),
-    h = t(387658),
-    f = t(536650),
-    A = t(675993),
-    E = t(689079),
-    N = t(689938),
-    v = t(804978),
-    x = t(413097);
-function I(e) {
+    h = t(783097),
+    f = t(753972),
+    C = t(387658),
+    v = t(536650),
+    x = t(675993),
+    _ = t(689079),
+    N = t(388032),
+    g = t(804978),
+    A = t(413097);
+function b(e) {
     var n;
     let { channel: t, application: s, sectionName: c } = e,
-        I = (0, l.e7)([m.Z], () => m.Z.entrypoint()),
-        g = null !== (n = (0, u.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
-        T = (0, _.ye)(g) ? P : A.Z,
-        L = a.useRef(null),
-        [S, b] = a.useState(!1),
-        { iconURL: R, name: M } = a.useMemo(
+        b = (0, a.e7)([m.Z], () => m.Z.entrypoint()),
+        I = null !== (n = (0, u.q)(s.id === _.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
+        j = (0, h.ye)(I) ? E : x.Z,
+        S = l.useRef(null),
+        [y, P] = l.useState(!1),
+        { iconURL: T, name: L } = l.useMemo(
             () =>
-                (0, _.sl)(g, {
-                    fakeAppIconURL: x,
+                (0, h.sl)(I, {
+                    fakeAppIconURL: A,
                     size: 84
                 }),
-            [g]
+            [I]
         ),
-        y = (0, d.PL)(!0, !0),
-        j = (0, d.LD)(t.guild_id, !0),
-        O = a.useMemo(() => (0, d.If)(t, g.id), [y, j, t, g.id]),
-        Z = !O.isGuildInstalled && !O.isUserInstalled;
+        R = (0, d.PL)(!0, !0),
+        M = (0, d.LD)(t.guild_id, !0),
+        k = l.useMemo(() => (0, d.If)(t, I.id), [R, M, t, I.id]),
+        Z = !k.isGuildInstalled && !k.isUserInstalled;
     return (
-        a.useEffect(() => {
-            Z && d.ZP.queryInstallOnDemandApp(g.id, t.id);
-        }, [g.id, t.id, Z]),
+        l.useEffect(() => {
+            Z && d.ZP.queryInstallOnDemandApp(I.id, t.id);
+        }, [I.id, t.id, Z]),
         (0, i.jsxs)(r.ScrollerNone, {
-            className: v.container,
+            className: g.container,
             fade: !0,
-            ref: L,
+            ref: S,
             role: 'region',
-            'aria-label': N.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({ applicationName: M }),
+            'aria-label': N.intl.formatToPlainString(N.t['4OP4Ul'], { applicationName: L }),
             children: [
-                (0, i.jsx)(f.Z, {
-                    application: g,
-                    name: M,
-                    iconURL: R,
-                    scrollerRef: L,
+                (0, i.jsx)(v.Z, {
+                    application: I,
+                    name: L,
+                    iconURL: T,
+                    scrollerRef: S,
                     sectionName: c
                 }),
-                null != R &&
-                    (0, i.jsx)(C.Z, {
-                        src: R,
-                        className: v.appIcon
+                null != T &&
+                    (0, i.jsx)(f.Z, {
+                        src: T,
+                        className: g.appIcon
                     }),
                 (0, i.jsx)(o.Z, { size: 54 }),
-                (0, i.jsx)(T, {
+                (0, i.jsx)(j, {
                     channel: t,
-                    application: g,
+                    application: I,
                     sectionName: c,
-                    hasCommands: S
+                    hasCommands: y
                 }),
-                I === p._b.TEXT
-                    ? (0, i.jsx)(h.Z, {
+                b === p._b.TEXT
+                    ? (0, i.jsx)(C.Z, {
                           channel: t,
-                          application: g,
+                          application: I,
                           sectionName: c,
                           installOnDemand: Z,
-                          setHasCommands: b
+                          setHasCommands: P
                       })
                     : null
             ]
         })
     );
 }
-function P(e) {
-    let { channel: n, application: t, sectionName: a, hasCommands: l } = e,
+function E(e) {
+    let { channel: n, application: t, sectionName: l, hasCommands: a } = e,
         o = (0, c.Z)({
             applicationId: t.id,
             size: 2048,
             names: ['embedded_cover']
         }),
-        r = (0, _.yJ)(t),
+        r = (0, h.yJ)(t),
         d = null != r && null != r.activity_preview_video_asset_id ? (0, s.Z)(t.id, r.activity_preview_video_asset_id) : null;
-    return (0, i.jsx)(A.Z, {
+    return (0, i.jsx)(x.Z, {
         channel: n,
         application: t,
         imageCoverUrl: o.url,
         videoUrl: d,
-        sectionName: a,
-        hasCommands: l
+        sectionName: l,
+        hasCommands: a
     });
 }

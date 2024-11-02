@@ -6,7 +6,7 @@ n.d(t, {
         return u;
     },
     W0: function () {
-        return E;
+        return _;
     },
     tL: function () {
         return l;
@@ -50,16 +50,16 @@ function u(e) {
         };
     }
     return (function (e) {
-        let { isInvalid: t, validationState: n, name: i, value: l, builtinValidation: u, validate: E, validationBehavior: f = 'aria' } = e;
+        let { isInvalid: t, validationState: n, name: i, value: l, builtinValidation: u, validate: _, validationBehavior: h = 'aria' } = e;
         n && (t || (t = 'invalid' === n));
-        let h = t
+        let p = t
                 ? {
                       isInvalid: !0,
                       validationErrors: [],
                       validationDetails: a
                   }
                 : null,
-            p = (0, r.useMemo)(
+            m = (0, r.useMemo)(
                 () =>
                     d(
                         (function (e, t) {
@@ -68,39 +68,39 @@ function u(e) {
                                 if (n && 'boolean' != typeof n) return c(n);
                             }
                             return [];
-                        })(E, l)
+                        })(_, l)
                     ),
-                [E, l]
+                [_, l]
             );
         (null == u ? void 0 : u.validationDetails.valid) && (u = null);
-        let I = (0, r.useContext)(o),
-            m = (0, r.useMemo)(() => (i ? (Array.isArray(i) ? i.flatMap((e) => c(I[e])) : c(I[i])) : []), [I, i]),
-            [T, S] = (0, r.useState)(I),
-            [g, A] = (0, r.useState)(!1);
-        I !== T && (S(I), A(!1));
-        let N = (0, r.useMemo)(() => d(g ? [] : m), [g, m]),
-            R = (0, r.useRef)(s),
-            [O, v] = (0, r.useState)(s),
+        let g = (0, r.useContext)(o),
+            E = (0, r.useMemo)(() => (i ? (Array.isArray(i) ? i.flatMap((e) => c(g[e])) : c(g[i])) : []), [g, i]),
+            [v, I] = (0, r.useState)(g),
+            [S, T] = (0, r.useState)(!1);
+        g !== v && (I(g), T(!1));
+        let b = (0, r.useMemo)(() => d(S ? [] : E), [S, E]),
+            y = (0, r.useRef)(s),
+            [A, N] = (0, r.useState)(s),
             C = (0, r.useRef)(s),
-            [L, D] = (0, r.useState)(!1);
+            [R, O] = (0, r.useState)(!1);
         return (
             (0, r.useEffect)(() => {
-                if (!L) return;
-                D(!1);
-                let e = p || u || R.current;
-                !_(e, C.current) && ((C.current = e), v(e));
+                if (!R) return;
+                O(!1);
+                let e = m || u || y.current;
+                !f(e, C.current) && ((C.current = e), N(e));
             }),
             {
-                realtimeValidation: h || N || p || u || s,
-                displayValidation: 'native' === f ? h || N || O : h || N || p || u || O,
+                realtimeValidation: p || b || m || u || s,
+                displayValidation: 'native' === h ? p || b || A : p || b || m || u || A,
                 updateValidation(e) {
-                    'aria' !== f || _(O, e) ? (R.current = e) : v(e);
+                    'aria' !== h || f(A, e) ? (y.current = e) : N(e);
                 },
                 resetValidation() {
-                    !_(s, C.current) && ((C.current = s), v(s)), 'native' === f && D(!1), A(!0);
+                    !f(s, C.current) && ((C.current = s), N(s)), 'native' === h && O(!1), T(!0);
                 },
                 commitValidation() {
-                    'native' === f && D(!0), A(!0);
+                    'native' === h && O(!0), T(!0);
                 }
             }
         );
@@ -118,10 +118,10 @@ function d(e) {
           }
         : null;
 }
-function _(e, t) {
+function f(e, t) {
     return e === t || (e && t && e.isInvalid === t.isInvalid && e.validationErrors.length === t.validationErrors.length && e.validationErrors.every((e, n) => e === t.validationErrors[n]) && Object.entries(e.validationDetails).every(([e, n]) => t.validationDetails[e] === n));
 }
-function E(...e) {
+function _(...e) {
     let t = new Set(),
         n = !1,
         r = { ...i };

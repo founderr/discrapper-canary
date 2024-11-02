@@ -1,9 +1,9 @@
 t.d(n, {
     F: function () {
-        return a;
+        return i;
     }
 });
-let a = (0, t(818083).B)({
+let i = (0, t(818083).B)({
     kind: 'guild',
     id: '2023-09_gaming_stats_prompt_guild',
     label: 'Gaming stats prompt',

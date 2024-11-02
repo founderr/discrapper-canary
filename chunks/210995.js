@@ -1,17 +1,17 @@
-a.r(s);
-var t = a(200651);
-a(192379);
-var E = a(468026),
-    c = a(434404),
-    d = a(689938);
-s.default = (e) =>
-    (0, t.jsx)(E.default, {
-        title: d.Z.Messages.GEO_RESTRICTED_MODAL_TITLE,
-        body: d.Z.Messages.GEO_RESTRICTED_MODAL_BODY.format({ serverName: e.name }),
-        cancelText: d.Z.Messages.LEAVE_SERVER,
+e.r(i);
+var n = e(200651);
+e(192379);
+var a = e(468026),
+    r = e(434404),
+    l = e(388032);
+i.default = (t) =>
+    (0, n.jsx)(a.default, {
+        title: l.intl.string(l.t.aCAiGh),
+        body: l.intl.format(l.t['4cJV9f'], { serverName: t.name }),
+        cancelText: l.intl.string(l.t.J2TBi4),
         onCancel: () => {
-            c.Z.leaveGuild(e.guildId);
+            r.Z.leaveGuild(t.guildId);
         },
-        confirmText: d.Z.Messages.OK,
-        ...e
+        confirmText: l.intl.string(l.t.TyCVIi),
+        ...t
     });

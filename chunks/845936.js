@@ -11,36 +11,36 @@ var r = n(373793),
     l = n(981631),
     u = n(689079);
 function c(e) {
-    var t, n, c, d, _;
-    let { applicationId: E, userIndexState: f, guildIndexState: h, onSuccess: p, sectionName: I, location: m, entrypoint: T, commandIntegrationTypes: S } = e;
-    if ((null != S && !S.includes(r.Y.USER_INSTALL)) || E === u.bi.BUILT_IN || (null === (t = f.result) || void 0 === t ? void 0 : t.sections[E]) != null || (null === (n = h.result) || void 0 === n ? void 0 : n.sections[E]) != null) return null == p || p(), Promise.resolve(!0);
-    let g = null != T ? T : o.Z.lastShownEntrypoint();
+    var t, n, c, d, f;
+    let { applicationId: _, userIndexState: h, guildIndexState: p, onSuccess: m, sectionName: g, location: E, entrypoint: v, commandIntegrationTypes: I } = e;
+    if ((null != I && !I.includes(r.Y.USER_INSTALL)) || _ === u.bi.BUILT_IN || (null === (t = h.result) || void 0 === t ? void 0 : t.sections[_]) != null || (null === (n = p.result) || void 0 === n ? void 0 : n.sections[_]) != null) return null == m || m(), Promise.resolve(!0);
+    let S = null != v ? v : o.Z.lastShownEntrypoint();
     (0, i.yw)(l.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, {
-        location: m,
-        application_id: E,
-        section_name: I,
-        source: g
+        location: E,
+        application_id: _,
+        section_name: g,
+        source: S
     });
-    let A = a.Z.getApplication(E),
-        N = r.Y.USER_INSTALL,
-        R = null == A ? void 0 : null === (_ = A.integrationTypesConfig) || void 0 === _ ? void 0 : null === (d = _[N]) || void 0 === d ? void 0 : null === (c = d.oauth2InstallParams) || void 0 === c ? void 0 : c.scopes;
+    let T = a.Z.getApplication(_),
+        b = r.Y.USER_INSTALL,
+        y = null == T ? void 0 : null === (f = T.integrationTypesConfig) || void 0 === f ? void 0 : null === (d = f[b]) || void 0 === d ? void 0 : null === (c = d.oauth2InstallParams) || void 0 === c ? void 0 : c.scopes;
     return new Promise((e) => {
         (0, s.openOAuth2Modal)(
             {
-                clientId: E,
-                integrationType: N,
-                scopes: R,
+                clientId: _,
+                integrationType: b,
+                scopes: y,
                 callback: (t) => {
                     let { location: n } = t;
                     null != n &&
                         ((0, i.yw)(l.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, {
-                            location: m,
-                            application_id: E,
-                            section_name: I,
-                            source: g
+                            location: E,
+                            application_id: _,
+                            section_name: g,
+                            source: S
                         }),
                         e(!0),
-                        null == p || p());
+                        null == m || m());
                 }
             },
             () => {

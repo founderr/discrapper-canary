@@ -1,34 +1,34 @@
-n.r(s),
-    n.d(s, {
+c.r(n),
+    c.d(n, {
         default: function () {
             return d;
         }
     });
-var t = n(200651);
-n(192379);
-var a = n(98278),
-    _ = n(790527),
-    c = n(474936),
-    o = n(689938),
-    E = n(116909);
-function d(e) {
-    let { onClose: s, analyticsSource: n, analyticsLocation: d, ...P } = e;
-    return (0, t.jsx)(_.Z, {
-        artURL: E.Z,
-        type: c.cd.APP_ICON_UPSELL,
-        title: o.Z.Messages.PREMIUM_UPSEL_FEATURE_IN_APP_ICONS_TITLE,
-        body: o.Z.Messages.PREMIUM_UPSELL_FEATURE_IN_APP_ICONS_DESCRIPTION,
-        glowUp: o.Z.Messages.PREMIUM_UPSELL_FEATURE_IN_APP_ICONS_DESCRIPTION,
+var i = c(200651);
+c(192379);
+var o = c(98278),
+    e = c(790527),
+    s = c(474936),
+    a = c(388032),
+    r = c(116909);
+function d(t) {
+    let { onClose: n, analyticsSource: c, analyticsLocation: d, ...l } = t;
+    return (0, i.jsx)(e.Z, {
+        artURL: r.Z,
+        type: s.cd.APP_ICON_UPSELL,
+        title: a.intl.string(a.t.TYFwc3),
+        body: a.intl.string(a.t.HDt8io),
+        glowUp: a.intl.string(a.t.HDt8io),
         onSecondaryClick: () => {
-            (0, a.$)(s);
+            (0, o.$)(n);
         },
-        secondaryCTA: o.Z.Messages.PREMIUM_ROADBLOCK_UPSELL_SECONDARY_CTA,
-        analyticsSource: n,
+        secondaryCTA: a.intl.string(a.t.PcTCBw),
+        analyticsSource: c,
         analyticsLocation: d,
-        onClose: s,
+        onClose: n,
         enableArtBoxShadow: !1,
         hideBackButton: !0,
         showEnhancedUpsell: !0,
-        ...P
+        ...l
     });
 }

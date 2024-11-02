@@ -74,7 +74,7 @@ e.exports = function (e) {
                 ]
             }
         ],
-        _ = {
+        f = {
             className: 'function',
             relevance: 0,
             keywords: a,
@@ -124,8 +124,8 @@ e.exports = function (e) {
                 { begin: '\\(\\.\\s' + t + '\\)\\s*=>' }
             ]
         };
-    c.push(_);
-    let E = {
+    c.push(f);
+    let _ = {
             className: 'constructor',
             begin: n + '\\(',
             end: '\\)',
@@ -140,7 +140,7 @@ e.exports = function (e) {
                 }
             ]
         },
-        f = {
+        h = {
             className: 'module-access',
             keywords: a,
             returnBegin: !0,
@@ -151,7 +151,7 @@ e.exports = function (e) {
                     end: '\\)',
                     returnBegin: !0,
                     contains: [
-                        _,
+                        f,
                         {
                             begin: '\\(',
                             end: '\\)',
@@ -168,7 +168,7 @@ e.exports = function (e) {
             contains: c
         };
     return (
-        d.push(f),
+        d.push(h),
         {
             name: 'ReasonML',
             aliases: ['re'],
@@ -202,7 +202,7 @@ e.exports = function (e) {
                     relevance: 0,
                     contains: u
                 },
-                E,
+                _,
                 {
                     className: 'operator',
                     begin: '\\s+' + i + '\\s+',
@@ -219,7 +219,7 @@ e.exports = function (e) {
                     end: '=>',
                     relevance: 0,
                     contains: [
-                        E,
+                        _,
                         l,
                         {
                             relevance: 0,
@@ -228,7 +228,7 @@ e.exports = function (e) {
                         }
                     ]
                 },
-                _,
+                f,
                 {
                     className: 'module-def',
                     begin: '\\bmodule\\s+' + t + '\\s+' + n + '\\s+=\\s+\\{',
@@ -250,7 +250,7 @@ e.exports = function (e) {
                         }
                     ].concat(c)
                 },
-                f
+                h
             ]
         }
     );

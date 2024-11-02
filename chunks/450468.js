@@ -1,142 +1,142 @@
-t.r(s),
-    t.d(s, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return x;
+            return b;
         }
     }),
-    t(47120),
-    t(411104);
-var n,
-    a,
-    i = t(200651),
-    r = t(192379),
-    o = t(512722),
-    l = t.n(o),
-    c = t(442837),
-    d = t(780384),
-    _ = t(481060),
-    u = t(355467),
-    E = t(179360),
-    T = t(100527),
-    S = t(906732),
-    I = t(600164),
-    N = t(431369),
-    m = t(210887),
-    C = t(78839),
-    A = t(74538),
-    g = t(689938),
-    h = t(946839);
-async function O(e, s, t, n) {
-    await (0, E.bG)(t), await (0, u.Mg)(e, { items: (0, A.MY)(e, s) }, n);
+    n(47120),
+    n(411104);
+var i,
+    s,
+    r = n(200651),
+    l = n(192379),
+    a = n(512722),
+    o = n.n(a),
+    c = n(442837),
+    d = n(780384),
+    u = n(481060),
+    m = n(355467),
+    h = n(179360),
+    g = n(100527),
+    p = n(906732),
+    x = n(600164),
+    S = n(431369),
+    T = n(210887),
+    C = n(78839),
+    _ = n(74538),
+    E = n(388032),
+    f = n(946839);
+async function I(e, t, n, i) {
+    await (0, h.bG)(n), await (0, m.Mg)(e, { items: (0, _.MY)(e, t) }, i);
 }
-function p(e) {
-    let { premiumSubscription: s, guildBoostSlotId: t, onNext: n, onClose: a } = e,
-        [o, u] = r.useState(!1),
-        E = (0, c.e7)([m.Z], () => m.Z.theme),
-        { analyticsLocations: T } = (0, S.ZP)();
-    return (0, i.jsxs)(i.Fragment, {
+function N(e) {
+    let { premiumSubscription: t, guildBoostSlotId: n, onNext: i, onClose: s } = e,
+        [a, m] = l.useState(!1),
+        h = (0, c.e7)([T.Z], () => T.Z.theme),
+        { analyticsLocations: g } = (0, p.ZP)();
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsxs)(_.ModalHeader, {
+            (0, r.jsxs)(u.ModalHeader, {
                 separator: !1,
                 children: [
-                    (0, i.jsx)(_.FormTitle, {
-                        tag: _.FormTitleTags.H4,
-                        children: g.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_TITLE
+                    (0, r.jsx)(u.FormTitle, {
+                        tag: u.FormTitleTags.H4,
+                        children: E.intl.string(E.t.l52ih4)
                     }),
-                    (0, i.jsx)(_.ModalCloseButton, { onClick: a })
+                    (0, r.jsx)(u.ModalCloseButton, { onClick: s })
                 ]
             }),
-            (0, i.jsx)(_.ModalContent, {
-                className: h.body,
-                children: g.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_DESCRIPTION
+            (0, r.jsx)(u.ModalContent, {
+                className: f.body,
+                children: E.intl.string(E.t.DY2CXl)
             }),
-            (0, i.jsxs)(_.ModalFooter, {
-                justify: I.Z.Justify.START,
+            (0, r.jsxs)(u.ModalFooter, {
+                justify: x.Z.Justify.START,
                 children: [
-                    (0, i.jsx)(_.Button, {
+                    (0, r.jsx)(u.Button, {
                         onClick: async () => {
                             try {
-                                u(!0);
-                                let e = (0, N.g)(s, 1);
-                                l()((0, A.uV)(e) <= (0, A.uV)(s.additionalPlans), 'Uncanceling should not increase the number of guild subscriptions'), await O(s, e, t, T), n();
+                                m(!0);
+                                let e = (0, S.g)(t, 1);
+                                o()((0, _.uV)(e) <= (0, _.uV)(t.additionalPlans), 'Uncanceling should not increase the number of guild subscriptions'), await I(t, e, n, g), i();
                             } catch (e) {
-                                u(!1);
+                                m(!1);
                             }
                         },
-                        submitting: o,
-                        children: g.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_BUTTON
+                        submitting: a,
+                        children: E.intl.string(E.t.etZP4O)
                     }),
-                    (0, i.jsx)(_.Button, {
-                        look: _.Button.Looks.LINK,
-                        color: (0, d.ap)(E) ? _.Button.Colors.PRIMARY : _.Button.Colors.WHITE,
-                        onClick: a,
-                        disabled: o,
-                        children: g.Z.Messages.NEVERMIND
+                    (0, r.jsx)(u.Button, {
+                        look: u.Button.Looks.LINK,
+                        color: (0, d.ap)(h) ? u.Button.Colors.PRIMARY : u.Button.Colors.WHITE,
+                        onClick: s,
+                        disabled: a,
+                        children: E.intl.string(E.t.oEAioK)
                     })
                 ]
             })
         ]
     });
 }
-function R(e) {
-    let { onClose: s } = e;
-    return (0, i.jsxs)(i.Fragment, {
+function A(e) {
+    let { onClose: t } = e;
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsxs)(_.ModalHeader, {
+            (0, r.jsxs)(u.ModalHeader, {
                 separator: !1,
                 children: [
-                    (0, i.jsx)(_.FormTitle, {
-                        tag: _.FormTitleTags.H4,
-                        children: g.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_CONFIRM_TITLE
+                    (0, r.jsx)(u.FormTitle, {
+                        tag: u.FormTitleTags.H4,
+                        children: E.intl.string(E.t.H9QUAA)
                     }),
-                    (0, i.jsx)(_.ModalCloseButton, { onClick: s })
+                    (0, r.jsx)(u.ModalCloseButton, { onClick: t })
                 ]
             }),
-            (0, i.jsxs)(_.ModalContent, {
-                className: h.body,
-                children: [(0, i.jsx)('div', { className: h.uncancelImage }), (0, i.jsx)('div', { children: g.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_CONFIRM_DESCRIPTION })]
+            (0, r.jsxs)(u.ModalContent, {
+                className: f.body,
+                children: [(0, r.jsx)('div', { className: f.uncancelImage }), (0, r.jsx)('div', { children: E.intl.string(E.t.G27uHR) })]
             }),
-            (0, i.jsx)(_.ModalFooter, {
-                children: (0, i.jsx)(_.Button, {
-                    onClick: s,
-                    children: g.Z.Messages.OKAY
+            (0, r.jsx)(u.ModalFooter, {
+                children: (0, r.jsx)(u.Button, {
+                    onClick: t,
+                    children: E.intl.string(E.t.BddRzc)
                 })
             })
         ]
     });
 }
-function x(e) {
-    let s,
-        { guildBoostSlotId: t, transitionState: n, onClose: a } = e,
-        { analyticsLocations: o } = (0, S.ZP)(T.Z.GUILD_BOOST_UNCANCELLATION_MODAL);
-    r.useEffect(() => {
-        !C.ZP.hasFetchedSubscriptions() && (0, u.jg)();
+function b(e) {
+    let t,
+        { guildBoostSlotId: n, transitionState: i, onClose: s } = e,
+        { analyticsLocations: a } = (0, p.ZP)(g.Z.GUILD_BOOST_UNCANCELLATION_MODAL);
+    l.useEffect(() => {
+        !C.ZP.hasFetchedSubscriptions() && (0, m.jg)();
     }, []);
-    let l = (0, c.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()),
-        [d, E] = r.useState(1);
-    if (null == l) s = (0, i.jsx)(_.ModalContent, { children: (0, i.jsx)(_.Spinner, {}) });
+    let o = (0, c.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()),
+        [d, h] = l.useState(1);
+    if (null == o) t = (0, r.jsx)(u.ModalContent, { children: (0, r.jsx)(u.Spinner, {}) });
     else
         switch (d) {
             case 1:
-                s = (0, i.jsx)(p, {
-                    premiumSubscription: l,
-                    guildBoostSlotId: t,
-                    onNext: () => E(2),
-                    onClose: a
+                t = (0, r.jsx)(N, {
+                    premiumSubscription: o,
+                    guildBoostSlotId: n,
+                    onNext: () => h(2),
+                    onClose: s
                 });
                 break;
             case 2:
-                s = (0, i.jsx)(R, { onClose: a });
+                t = (0, r.jsx)(A, { onClose: s });
                 break;
             default:
                 throw Error('Unexpected step: '.concat(d));
         }
-    return (0, i.jsx)(S.Gt, {
-        value: o,
-        children: (0, i.jsx)(_.ModalRoot, {
-            transitionState: n,
-            children: s
+    return (0, r.jsx)(p.Gt, {
+        value: a,
+        children: (0, r.jsx)(u.ModalRoot, {
+            transitionState: i,
+            children: t
         })
     });
 }
-((a = n || (n = {}))[(a.START = 1)] = 'START'), (a[(a.CONFIRM = 2)] = 'CONFIRM');
+((s = i || (i = {}))[(s.START = 1)] = 'START'), (s[(s.CONFIRM = 2)] = 'CONFIRM');

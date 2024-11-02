@@ -1,145 +1,145 @@
-i.r(n),
-    i.d(n, {
+i.r(e),
+    i.d(e, {
         default: function () {
-            return T;
+            return k;
         }
     }),
     i(47120);
 var l = i(200651),
-    a = i(192379),
-    t = i(120356),
-    s = i.n(t),
-    r = i(442837),
+    t = i(192379),
+    a = i(120356),
+    r = i.n(a),
+    s = i(442837),
     c = i(481060),
     o = i(313201),
     u = i(41776),
     d = i(357156),
     h = i(513449),
     v = i(592125),
-    C = i(430824),
+    x = i(430824),
     m = i(305298),
-    x = i(405613),
-    N = i(460838),
-    E = i(765305),
-    g = i(689938),
-    _ = i(697355);
-function T(e) {
-    var n;
-    let { transitionState: i, event: t, onSuccess: T, onClose: I } = e,
-        j = (0, o.Dt)(),
-        { guild_id: p, privacy_level: A } = t,
-        k = (0, r.e7)([v.Z], () => v.Z.getChannel(t.channel_id), [t]),
-        S = (0, r.e7)([C.Z], () => C.Z.getGuild(p), [p]),
-        { canManageGuildEvent: f } = (0, d.XJ)(null != k ? k : S),
-        Z = f(t),
-        L = (0, r.e7)([u.Z], () => u.Z.isLurking(p), [p]),
-        y = t.entity_type === E.WX.STAGE_INSTANCE,
-        [w, R] = a.useState(y),
-        [b, { loading: M, error: G }] = (0, m.Z)();
-    if (!Z) return null;
-    let P = A === E.j8.PUBLIC ? g.Z.Messages.STAGE_INSTANCE_PRIVACY_TYPE_PUBLIC_LABEL : g.Z.Messages.STAGE_INSTANCE_PRIVACY_TYPE_PRIVATE_LABEL,
-        O = () => {
-            null == T || T(), I(), (0, h.Ku)(!1);
+    C = i(405613),
+    g = i(460838),
+    N = i(765305),
+    j = i(388032),
+    p = i(697355);
+function k(n) {
+    var e;
+    let { transitionState: i, event: a, onSuccess: k, onClose: f } = n,
+        I = (0, o.Dt)(),
+        { guild_id: E, privacy_level: y } = a,
+        T = (0, s.e7)([v.Z], () => v.Z.getChannel(a.channel_id), [a]),
+        Z = (0, s.e7)([x.Z], () => x.Z.getGuild(E), [E]),
+        { canManageGuildEvent: w } = (0, d.XJ)(null != T ? T : Z),
+        b = w(a),
+        _ = (0, s.e7)([u.Z], () => u.Z.isLurking(E), [E]),
+        S = a.entity_type === N.WX.STAGE_INSTANCE,
+        [A, G] = t.useState(S),
+        [L, { loading: R, error: X }] = (0, m.Z)();
+    if (!b) return null;
+    let M = y === N.j8.PUBLIC ? j.intl.string(j.t.HhlaLC) : j.intl.string(j.t.GI3xXV),
+        P = () => {
+            null == k || k(), f(), (0, h.Ku)(!1);
         },
-        V = async () => {
-            await b(t, w, { onSuccess: O });
+        W = async () => {
+            await L(a, A, { onSuccess: P });
         };
     return (0, l.jsx)(c.ModalRoot, {
         transitionState: i,
-        'aria-labelledby': j,
+        'aria-labelledby': I,
         children: (0, l.jsxs)(c.ModalContent, {
-            className: _.content,
+            className: p.content,
             children: [
                 (0, l.jsx)('div', {
-                    className: _.previewCard,
-                    children: (0, l.jsx)(N.Z, {
-                        guild: S,
-                        channel: k,
-                        name: t.name,
-                        description: null !== (n = t.description) && void 0 !== n ? n : void 0,
-                        imageSource: (0, x.Z)(t),
+                    className: p.previewCard,
+                    children: (0, l.jsx)(g.Z, {
+                        guild: Z,
+                        channel: T,
+                        name: a.name,
+                        description: null !== (e = a.description) && void 0 !== e ? e : void 0,
+                        imageSource: (0, C.Z)(a),
                         isActive: !1,
-                        isUserLurking: L,
+                        isUserLurking: _,
                         speakers: [],
                         speakerCount: 0,
                         rsvped: !0,
-                        guildEvent: t
+                        guildEvent: a
                     })
                 }),
                 (0, l.jsx)(c.Text, {
                     color: 'header-secondary',
-                    className: _.privacyLevel,
+                    className: p.privacyLevel,
                     variant: 'text-sm/normal',
-                    children: g.Z.Messages.START_EVENT_CONFIRMATION.format({
-                        privacyLevel: P,
-                        privacyLevelHook: (e, n) =>
-                            A !== E.j8.PUBLIC
+                    children: j.intl.format(j.t.UMajoq, {
+                        privacyLevel: M,
+                        privacyLevelHook: (n, e) =>
+                            y !== N.j8.PUBLIC
                                 ? null
                                 : (0, l.jsxs)(
                                       'div',
                                       {
-                                          className: _.privacyLevel,
+                                          className: p.privacyLevel,
                                           children: [
                                               (0, l.jsx)(c.GlobeEarthIcon, {
                                                   size: 'xs',
                                                   color: 'currentColor',
-                                                  className: _.publicIcon
+                                                  className: p.publicIcon
                                               }),
                                               (0, l.jsx)(c.Text, {
                                                   variant: 'text-sm/normal',
-                                                  children: e
+                                                  children: n
                                               })
                                           ]
                                       },
-                                      n
+                                      e
                                   )
                     })
                 }),
                 (0, l.jsx)(c.Heading, {
                     variant: 'heading-xl/semibold',
-                    className: _.header,
-                    children: t.name
+                    className: p.header,
+                    children: a.name
                 }),
-                y &&
+                S &&
                     (0, l.jsx)(c.Checkbox, {
-                        className: _.verticalSpacing,
+                        className: p.verticalSpacing,
                         type: c.Checkbox.Types.INVERTED,
-                        value: w,
-                        onChange: (e) => {
-                            let { currentTarget: n } = e;
-                            return R(n.checked);
+                        value: A,
+                        onChange: (n) => {
+                            let { currentTarget: e } = n;
+                            return G(e.checked);
                         },
                         children: (0, l.jsx)(c.Text, {
                             variant: 'text-sm/normal',
-                            children: g.Z.Messages.GUILD_NOTIFY_MEMBERS_DESKTOP
+                            children: j.intl.string(j.t.dGNtgI)
                         })
                     }),
                 (0, l.jsxs)('div', {
-                    className: s()(_.inline, _.buttons, _.verticalSpacing),
+                    className: r()(p.inline, p.buttons, p.verticalSpacing),
                     children: [
                         (0, l.jsx)(c.Button, {
                             color: c.Button.Colors.PRIMARY,
                             onClick: () => {
-                                I();
+                                f();
                             },
-                            className: s()(_.button, _.spacing),
-                            children: g.Z.Messages.STAGE_BLOCKED_USERS_CANCEL
+                            className: r()(p.button, p.spacing),
+                            children: j.intl.string(j.t.CZGqeX)
                         }),
                         (0, l.jsx)(c.Button, {
                             color: c.Button.Colors.GREEN,
-                            onClick: V,
-                            submitting: M,
-                            className: _.button,
-                            children: g.Z.Messages.START_EVENT
+                            onClick: W,
+                            submitting: R,
+                            className: p.button,
+                            children: j.intl.string(j.t.cK1GGR)
                         })
                     ]
                 }),
-                null != G && null != G.getAnyErrorMessage()
+                null != X && null != X.getAnyErrorMessage()
                     ? (0, l.jsx)(c.Text, {
                           color: 'text-danger',
                           variant: 'text-sm/normal',
-                          className: _.errorMessage,
-                          children: G.getAnyErrorMessage()
+                          className: p.errorMessage,
+                          children: X.getAnyErrorMessage()
                       })
                     : null
             ]

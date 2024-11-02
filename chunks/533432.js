@@ -8,19 +8,19 @@ var r = n(200651),
     u = n(461745),
     c = n(806966),
     d = n(28546),
-    _ = n(149203),
-    E = n(981631),
-    f = n(689938),
-    h = n(74353);
-let p = i.forwardRef(function (e, t) {
-    let { emojiListRef: n, gridNavigatorId: a, isFullRow: p, onKeyDown: I, onFocus: m, autoFocus: T, className: S, defaultSearchPlaceholder: g } = e,
-        A = i.useRef(null),
-        N = (0, d.Iu)((e) => e.searchQuery),
-        [R, O] = c.kJ.useStore((e) => [e.inspectedExpressionPosition, e.searchPlaceholder], o.Z),
-        v = i.useCallback(
+    f = n(149203),
+    _ = n(981631),
+    h = n(388032),
+    p = n(74353);
+let m = i.forwardRef(function (e, t) {
+    let { emojiListRef: n, gridNavigatorId: a, isFullRow: m, onKeyDown: g, onFocus: E, autoFocus: v, className: I, defaultSearchPlaceholder: S } = e,
+        T = i.useRef(null),
+        b = (0, d.Iu)((e) => e.searchQuery),
+        [y, A] = c.kJ.useStore((e) => [e.inspectedExpressionPosition, e.searchPlaceholder], o.Z),
+        N = i.useCallback(
             (e) => {
                 var t;
-                c.kJ.setActiveCategoryIndex('' === e ? 0 : _.c), c.kJ.setInspectedExpressionPosition(0, 0), c.kJ.setSearchPlaceholder(null), (0, d.ql)(e), null === (t = n.current) || void 0 === t || t.scrollTo(0);
+                c.kJ.setActiveCategoryIndex('' === e ? 0 : f.c), c.kJ.setInspectedExpressionPosition(0, 0), c.kJ.setSearchPlaceholder(null), (0, d.ql)(e), null === (t = n.current) || void 0 === t || t.scrollTo(0);
             },
             [n]
         ),
@@ -31,39 +31,39 @@ let p = i.forwardRef(function (e, t) {
         i.useImperativeHandle(t, () => ({
             focus: () => {
                 var e;
-                return null === (e = A.current) || void 0 === e ? void 0 : e.focus();
+                return null === (e = T.current) || void 0 === e ? void 0 : e.focus();
             }
         })),
         (0, r.jsx)(u.ZP, {
-            autoFocus: T,
-            query: N,
-            ref: A,
+            autoFocus: v,
+            query: b,
+            ref: T,
             size: u.ZP.Sizes.MEDIUM,
-            placeholder: null != O ? O : g,
+            placeholder: null != A ? A : S,
             onClear: C,
             onKeyDown: (e) => {
                 switch (e.keyCode) {
-                    case E.yXg.ARROW_LEFT:
-                    case E.yXg.ARROW_RIGHT:
-                    case E.yXg.ARROW_UP:
-                    case E.yXg.ARROW_DOWN:
+                    case _.yXg.ARROW_LEFT:
+                    case _.yXg.ARROW_RIGHT:
+                    case _.yXg.ARROW_UP:
+                    case _.yXg.ARROW_DOWN:
                         document.activeElement !== e.target && e.preventDefault();
                 }
-                I(e);
+                g(e);
             },
-            onFocus: m,
-            onQueryChange: v,
-            className: s()(S, { [h.searchBarFullRow]: p }),
+            onFocus: E,
+            onQueryChange: N,
+            className: s()(I, { [p.searchBarFullRow]: m }),
             preventEscapePropagation: !1,
             useKeyboardNavigation: !1,
             inputProps: {
-                'aria-label': f.Z.Messages.SEARCH_EMOJIS,
+                'aria-label': h.intl.string(h.t.tCauZW),
                 'aria-haspopup': 'grid',
                 'aria-controls': a,
                 'aria-expanded': !0,
-                'aria-activedescendant': (0, l.NE)(a, R.columnIndex, R.rowIndex)
+                'aria-activedescendant': (0, l.NE)(a, y.columnIndex, y.rowIndex)
             }
         })
     );
 });
-t.Z = i.memo(p);
+t.Z = i.memo(m);

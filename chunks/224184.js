@@ -1,8 +1,8 @@
 var i = n(200651),
-    s = n(192379),
-    a = n(120356),
-    l = n.n(a),
-    r = n(399606),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
+    s = n(399606),
     o = n(481060),
     c = n(287734),
     u = n(654904),
@@ -10,127 +10,127 @@ var i = n(200651),
     h = n(271383),
     m = n(496675),
     p = n(19780),
-    _ = n(594174),
-    f = n(626135),
-    E = n(906605),
-    g = n(574176),
-    C = n(833858),
-    I = n(866071),
-    T = n(223135),
-    x = n(625938),
-    S = n(981631),
-    v = n(689938),
-    N = n(470154);
+    f = n(594174),
+    g = n(626135),
+    C = n(906605),
+    x = n(574176),
+    v = n(833858),
+    _ = n(866071),
+    I = n(223135),
+    E = n(625938),
+    b = n(981631),
+    S = n(388032),
+    Z = n(470154);
 t.Z = (e) => {
-    let { hangStatusActivity: t, userId: a, channel: A, previewIsOpen: Z } = e,
-        { enableHangStatus: M } = g.n.useExperiment({
-            guildId: A.guild_id,
+    let { hangStatusActivity: t, userId: r, channel: T, previewIsOpen: N } = e,
+        { enableHangStatus: j } = x.n.useExperiment({
+            guildId: T.guild_id,
             location: 'HangStatusPopout'
         }),
-        b = (0, r.e7)([d.default], () => d.default.getId()),
-        R = (0, r.e7)([_.default], () => _.default.getUser(a)),
-        L = (0, r.e7)([p.Z], () => p.Z.getChannelId() === A.id),
-        P = (0, r.e7)([m.Z], () => m.Z.can(S.Plq.CONNECT, A)),
-        j = (null == t ? void 0 : t.emoji) == null || (0, I.K)(t.emoji, A),
-        O = (0, r.e7)([h.ZP], () => (null != A.guild_id && null != R ? h.ZP.getMember(A.guild_id, a) : null)),
-        y = s.useMemo(() => (null != R ? (0, u.SG)(void 0, O, R, { size: 40 }) : void 0), [O, R]);
-    return (s.useEffect(() => {
-        (0, E.UP)();
+        A = (0, s.e7)([d.default], () => d.default.getId()),
+        y = (0, s.e7)([f.default], () => f.default.getUser(r)),
+        P = (0, s.e7)([p.Z], () => p.Z.getChannelId() === T.id),
+        M = (0, s.e7)([m.Z], () => m.Z.can(b.Plq.CONNECT, T)),
+        R = (null == t ? void 0 : t.emoji) == null || (0, _.K)(t.emoji, T),
+        L = (0, s.e7)([h.ZP], () => (null != T.guild_id && null != y ? h.ZP.getMember(T.guild_id, r) : null)),
+        k = l.useMemo(() => (null != y ? (0, u.SG)(void 0, L, y, { size: 40 }) : void 0), [L, y]);
+    return (l.useEffect(() => {
+        (0, C.UP)();
     }, []),
-    s.useEffect(() => {
-        M &&
+    l.useEffect(() => {
+        j &&
             null != t &&
-            Z &&
-            null != R &&
-            b !== a &&
-            f.default.track(S.rMx.VIEW_HANG_STATUS, {
+            N &&
+            null != y &&
+            A !== r &&
+            g.default.track(b.rMx.VIEW_HANG_STATUS, {
                 source: 'HangStatusPopout',
-                guild_id: A.guild_id,
-                channel_id: A.id
+                guild_id: T.guild_id,
+                channel_id: T.id
             });
-    }, [M, t, Z, R, b, a, A]),
-    M && null != R)
-        ? b === a
+    }, [j, t, N, y, A, r, T]),
+    j && null != y)
+        ? A === r
             ? (0, i.jsx)('div', {
-                  className: l()(N.popoutWrapper, { [N.mounted]: Z }),
-                  children: (0, i.jsx)(x.y, {
+                  className: a()(Z.popoutWrapper, { [Z.mounted]: N }),
+                  children: (0, i.jsx)(E.y, {
                       currentStatus: t,
-                      channel: A
+                      channel: T
                   })
               })
             : null == t
               ? null
               : (0, i.jsx)('div', {
-                    className: l()(N.popoutWrapper, { [N.mounted]: Z }),
+                    className: a()(Z.popoutWrapper, { [Z.mounted]: N }),
                     children: (0, i.jsxs)('div', {
-                        className: N.popout,
+                        className: Z.popout,
                         children: [
                             (0, i.jsxs)('div', {
-                                className: N.contentContainer,
+                                className: Z.contentContainer,
                                 children: [
                                     (0, i.jsxs)('div', {
-                                        className: N.statusGroup,
+                                        className: Z.statusGroup,
                                         children: [
                                             (0, i.jsx)(o.Text, {
                                                 variant: 'text-xs/medium',
                                                 color: 'text-muted',
-                                                children: v.Z.Messages.STATUS_LEAD_IN_JUST
+                                                children: S.intl.string(S.t['74vS//'])
                                             }),
                                             (0, i.jsx)(o.Text, {
                                                 variant: 'text-sm/semibold',
                                                 color: 'text-normal',
-                                                className: N.statusText,
-                                                children: (0, C.O8)(t)
+                                                className: Z.statusText,
+                                                children: (0, v.O8)(t)
                                             })
                                         ]
                                     }),
                                     (0, i.jsxs)('div', {
-                                        className: N.iconGroup,
+                                        className: Z.iconGroup,
                                         children: [
-                                            (0, i.jsx)(T.Z, {
-                                                className: N.statusIcon,
+                                            (0, i.jsx)(I.Z, {
+                                                className: Z.statusIcon,
                                                 hangStatusActivity: t
                                             }),
                                             (0, i.jsxs)('div', {
-                                                className: N.avatarWrapper,
+                                                className: Z.avatarWrapper,
                                                 children: [
                                                     (0, i.jsx)(o.Avatar, {
-                                                        className: N.avatar,
+                                                        className: Z.avatar,
                                                         size: o.AvatarSizes.SIZE_40,
-                                                        src: y,
+                                                        src: k,
                                                         'aria-hidden': !0
                                                     }),
-                                                    (0, i.jsx)('div', { className: N.outline })
+                                                    (0, i.jsx)('div', { className: Z.outline })
                                                 ]
                                             })
                                         ]
                                     })
                                 ]
                             }),
-                            !L && P
+                            !P && M
                                 ? (0, i.jsx)(o.Button, {
-                                      className: N.cta,
+                                      className: Z.cta,
                                       size: o.Button.Sizes.SMALL,
                                       onClick: () => {
-                                          !L &&
-                                              P &&
-                                              (c.default.selectVoiceChannel(A.id),
-                                              f.default.track(S.rMx.HANG_STATUS_CTA_CLICKED, {
+                                          !P &&
+                                              M &&
+                                              (c.default.selectVoiceChannel(T.id),
+                                              g.default.track(b.rMx.HANG_STATUS_CTA_CLICKED, {
                                                   source: 'HangStatusPopout',
-                                                  guild_id: A.guild_id,
-                                                  channel_id: A.id
+                                                  guild_id: T.guild_id,
+                                                  channel_id: T.id
                                               }));
                                       },
-                                      children: v.Z.Messages.CUSTOM_HANG_STATUS_CTA
+                                      children: S.intl.string(S.t['B/dHXF'])
                                   })
                                 : null,
-                            L && j
+                            P && R
                                 ? (0, i.jsx)(o.Button, {
-                                      className: N.cta,
+                                      className: Z.cta,
                                       size: o.Button.Sizes.SMALL,
                                       onClick: () => {
                                           let e = t.state;
-                                          e === S.tNA.CUSTOM
+                                          e === b.tNA.CUSTOM
                                               ? (0, o.openModalLazy)(async () => {
                                                     let { default: e } = await n.e('1631').then(n.bind(n, 333541));
                                                     return (n) =>
@@ -140,14 +140,14 @@ t.Z = (e) => {
                                                             startingEmoji: t.emoji
                                                         });
                                                 })
-                                              : (0, E.Zx)(e, !0),
-                                              f.default.track(S.rMx.SWIPE_HANG_STATUS, {
-                                                  guild_id: A.guild_id,
-                                                  channel_id: A.id,
+                                              : (0, C.Zx)(e, !0),
+                                              g.default.track(b.rMx.SWIPE_HANG_STATUS, {
+                                                  guild_id: T.guild_id,
+                                                  channel_id: T.id,
                                                   media_session_id: p.Z.getMediaSessionId()
                                               });
                                       },
-                                      children: v.Z.Messages.CUSTOM_HANGS_STATUS_COPY_CTA
+                                      children: S.intl.string(S.t.xcVcFR)
                                   })
                                 : null
                         ]

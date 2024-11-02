@@ -5,29 +5,29 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(692547),
-    a = n(481060),
-    l = n(40851),
-    r = n(881824),
+var l = n(692547),
+    r = n(481060),
+    a = n(40851),
+    s = n(881824),
     o = n(688641),
-    c = n(689938);
+    c = n(388032);
 function u(e) {
     let { className: t, channel: n, highlight: u } = e,
-        d = (0, l.bp)();
+        d = (0, a.bp)();
     return (0, i.jsx)(o.Z, {
         highlight: null != u && u,
         className: t,
-        icon: (0, i.jsx)(a.StageIcon, {
+        icon: (0, i.jsx)(r.StageIcon, {
             size: 'custom',
             color: 'currentColor',
             height: 20,
             width: 20
         }),
-        color: s.Z.unsafe_rawColors.GREEN_360.css,
-        title: c.Z.Messages.STAGE_CHANNEL_START_TITLE,
-        description: c.Z.Messages.STAGE_CHANNEL_START_SUBTITLE,
+        color: l.Z.unsafe_rawColors.GREEN_360.css,
+        title: c.intl.string(c.t.OYbHfn),
+        description: c.intl.string(c.t.yXwLMT),
         onClick: function () {
-            (0, r.T)(n, d);
+            (0, s.T)(n, d);
         }
     });
 }

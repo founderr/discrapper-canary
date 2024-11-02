@@ -1,23 +1,23 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return a;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(587431),
-    i = n(539290),
-    r = n(689938);
-function l(e) {
+var r = n(587431),
+    l = n(539290),
+    s = n(388032);
+function a(e) {
     let t,
-        { resubmittingEnableRequest: n, resubmissionError: l, createEnableRequest: o, requestRejectedNoticeText: c, reapplyNoticeText: d, isApplicationPending: u } = e;
-    if (null != l) return (0, s.jsx)(a.Z, { children: l.getAnyErrorMessage() });
-    let _ = null;
+        { resubmittingEnableRequest: n, resubmissionError: a, createEnableRequest: o, requestRejectedNoticeText: c, reapplyNoticeText: d, isApplicationPending: u } = e;
+    if (null != a) return (0, i.jsx)(r.Z, { children: a.getAnyErrorMessage() });
+    let m = null;
     return (
-        u ? (_ = r.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_RECEIVED_AND_PENDING) : null != c ? (_ = c) : null != d && ((_ = d), (t = r.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SUBMIT_APPEAL_CTA)),
-        null != _
-            ? (0, s.jsx)(i.Z, {
-                  notice: _,
+        u ? (m = s.intl.string(s.t.OrkTBg)) : null != c ? (m = c) : null != d && ((m = d), (t = s.intl.string(s.t['YKw/NT']))),
+        null != m
+            ? (0, i.jsx)(l.Z, {
+                  notice: m,
                   ctaLabel: t,
                   ctaLoading: n,
                   onClick: o

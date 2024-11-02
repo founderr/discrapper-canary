@@ -1,17 +1,17 @@
 t.d(n, {
     Z: function () {
-        return l;
+        return a;
     }
 });
 var i = t(812236),
-    a = t(989573);
-function l(e) {
-    let { channel: n, applicationId: t, botUserId: l } = e,
+    l = t(989573);
+function a(e) {
+    let { channel: n, applicationId: t, botUserId: a } = e,
         o = (0, i.ms)({
             channel: n,
             applicationId: t,
-            botUserId: l
+            botUserId: a
         }),
-        r = (0, a.Z)({ channelId: n.id });
-    return o && null != l && !r;
+        r = (0, l.Z)({ channelId: n.id });
+    return o && null != a && !r;
 }

@@ -1,9 +1,9 @@
 n.d(t, {
     C: function () {
-        return m;
+        return E;
     },
     Z: function () {
-        return T;
+        return v;
     }
 });
 var r = n(200651);
@@ -16,37 +16,37 @@ var i = n(442837),
     u = n(833664),
     c = n(503438),
     d = n(579630),
-    _ = n(26033),
-    E = n(594174),
-    f = n(324745),
-    h = n(981631),
-    p = n(689938);
-let I = () => s.Z.open(h.oAB.CONNECTIONS, null);
-function m(e) {
+    f = n(26033),
+    _ = n(594174),
+    h = n(324745),
+    p = n(981631),
+    m = n(388032);
+let g = () => s.Z.open(p.oAB.CONNECTIONS, null);
+function E(e) {
     let { entry: t, onOpenGameSettings: n } = e;
-    return (0, _.aA)(t) || (0, _.y0)(t) || (0, _.dU)(t) ? I : (0, _.dX)(t) ? n : null;
+    return (0, f.aA)(t) || (0, f.y0)(t) || (0, f.dU)(t) ? g : (0, f.dX)(t) ? n : null;
 }
-function T(e) {
-    let { user: t, activity: n, entry: s, onAction: _, onClose: h } = e,
-        T = (0, f.Z)({ onClose: h });
+function v(e) {
+    let { user: t, activity: n, entry: s, onAction: f, onClose: p } = e,
+        v = (0, h.Z)({ onClose: p });
     if (
-        !(0, i.e7)([E.default], () => {
+        !(0, i.e7)([_.default], () => {
             var e;
-            return (null === (e = E.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t.id;
+            return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t.id;
         })
     )
         return null;
-    let S = (function (e) {
+    let I = (function (e) {
         let { activity: t, entry: n, onOpenGameSettings: r } = e;
         return null != n
-            ? m({
+            ? E({
                   entry: n,
                   onOpenGameSettings: r
               })
             : null != t
               ? (function (e) {
                     let { activity: t, onOpenGameSettings: n } = e;
-                    return (0, d.Z)(t) || (0, c.Z)(t) || (0, o.Z)(t) ? I : (0, u.Z)(t) && !(0, l.Z)(t) ? n : null;
+                    return (0, d.Z)(t) || (0, c.Z)(t) || (0, o.Z)(t) ? g : (0, u.Z)(t) && !(0, l.Z)(t) ? n : null;
                 })({
                     activity: t,
                     onOpenGameSettings: r
@@ -55,15 +55,15 @@ function T(e) {
     })({
         activity: n,
         entry: s,
-        onOpenGameSettings: T
+        onOpenGameSettings: v
     });
-    return null == S
+    return null == I
         ? null
         : (0, r.jsx)(a.MenuItem, {
               id: 'manage-privacy',
-              label: p.Z.Messages.USER_ACTIVITY_MANAGE_PRIVACY,
+              label: m.intl.string(m.t.anfNPT),
               action: () => {
-                  null == _ || _({ action: 'PRESS_MANAGE_PRIVACY_MENU_ITEM' }), S(), null == h || h();
+                  null == f || f({ action: 'PRESS_MANAGE_PRIVACY_MENU_ITEM' }), I(), null == p || p();
               }
           });
 }

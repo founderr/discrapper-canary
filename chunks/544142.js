@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return b;
     }
 });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    a = n.n(s),
-    l = n(442837),
-    r = n(481060),
+var l = n(120356),
+    r = n.n(l),
+    a = n(442837),
+    s = n(481060),
     o = n(239091),
     c = n(100527),
     u = n(906732),
@@ -16,85 +16,85 @@ var s = n(120356),
     h = n(184301),
     m = n(347475),
     p = n(271383),
-    _ = n(594174),
-    f = n(51144),
-    E = n(967128),
-    g = n(981631),
-    C = n(689938),
-    I = n(966319);
-function T(e) {
-    var t, s;
-    let { userId: d, channel: E } = e,
-        { analyticsLocations: g } = (0, u.ZP)(c.Z.USERNAME),
-        C = (0, l.e7)([_.default], () => _.default.getUser(d)),
-        T = (0, l.e7)([p.ZP], () => (null != d ? p.ZP.getMember(E.guild_id, d) : null));
-    function x(e) {
-        if (null == C) return null;
+    f = n(594174),
+    g = n(51144),
+    C = n(967128),
+    x = n(981631),
+    v = n(388032),
+    _ = n(966319);
+function I(e) {
+    var t, l;
+    let { userId: d, channel: C } = e,
+        { analyticsLocations: x } = (0, u.ZP)(c.Z.USERNAME),
+        v = (0, a.e7)([f.default], () => f.default.getUser(d)),
+        I = (0, a.e7)([p.ZP], () => (null != d ? p.ZP.getMember(C.guild_id, d) : null));
+    function E(e) {
+        if (null == v) return null;
         (0, o.jW)(e, async () => {
             let { default: e } = await Promise.all([n.e('79695'), n.e('70675')]).then(n.bind(n, 654663));
             return (t) =>
                 (0, i.jsx)(e, {
                     ...t,
-                    user: C,
-                    guildId: E.guild_id,
-                    channel: E
+                    user: v,
+                    guildId: C.guild_id,
+                    channel: C
                 });
         });
     }
-    let S = null !== (s = null !== (t = null == T ? void 0 : T.nick) && void 0 !== t ? t : f.ZP.getName(C)) && void 0 !== s ? s : '???',
-        v = null == T ? void 0 : T.colorString;
-    return null == C
+    let b = null !== (l = null !== (t = null == I ? void 0 : I.nick) && void 0 !== t ? t : g.ZP.getName(v)) && void 0 !== l ? l : '???',
+        S = null == I ? void 0 : I.colorString;
+    return null == v
         ? (0, i.jsx)('span', {
-              className: a()(I.threadCreatorName, I.unknownCreatorName),
-              children: S
+              className: r()(_.threadCreatorName, _.unknownCreatorName),
+              children: b
           })
         : (0, i.jsx)(u.Gt, {
-              value: g,
-              children: (0, i.jsx)(r.Popout, {
+              value: x,
+              children: (0, i.jsx)(s.Popout, {
                   preload: () =>
-                      (0, h.Z)(C, {
-                          guildId: E.guild_id,
-                          channelId: E.id
+                      (0, h.Z)(v, {
+                          guildId: C.guild_id,
+                          channelId: C.id
                       }),
                   renderPopout: (e) =>
                       (0, i.jsx)(m.Z, {
-                          userId: C.id,
-                          guildId: E.guild_id,
-                          channelId: E.id,
-                          roleId: null == T ? void 0 : T.colorRoleId,
+                          userId: v.id,
+                          guildId: C.guild_id,
+                          channelId: C.id,
+                          roleId: null == I ? void 0 : I.colorRoleId,
                           ...e
                       }),
                   position: 'right',
                   children: (e) =>
-                      (0, i.jsx)(r.Clickable, {
+                      (0, i.jsx)(s.Clickable, {
                           ...e,
                           tag: 'span',
-                          className: I.threadCreatorName,
-                          onContextMenu: x,
-                          children: (0, i.jsx)(r.NameWithRole, {
-                              name: S,
-                              color: null != v ? v : void 0
+                          className: _.threadCreatorName,
+                          onContextMenu: E,
+                          children: (0, i.jsx)(s.NameWithRole, {
+                              name: b,
+                              color: null != S ? S : void 0
                           })
                       })
               })
           });
 }
-function x(e) {
+function E(e) {
     let { channel: t } = e,
         { threadMetadata: n } = t;
     return null == n
         ? (0, i.jsx)('div', { style: { marginTop: -8 } })
         : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(r.Text, {
+                  (0, i.jsx)(s.Text, {
                       variant: 'text-md/normal',
                       color: 'header-secondary',
                       children: (0, i.jsx)('div', {
-                          className: I.subtitle,
-                          children: C.Z.Messages.THREAD_STARTED_BY.format({
+                          className: _.subtitle,
+                          children: v.intl.format(v.t.imPXd3, {
                               usernameHook: (e, n) =>
                                   (0, i.jsx)(
-                                      T,
+                                      I,
                                       {
                                           userId: t.ownerId,
                                           channel: t
@@ -104,29 +104,29 @@ function x(e) {
                           })
                       })
                   }),
-                  t.type === g.d4z.PRIVATE_THREAD
-                      ? (0, i.jsx)(r.Text, {
+                  t.type === x.d4z.PRIVATE_THREAD
+                      ? (0, i.jsx)(s.Text, {
                             variant: 'text-md/normal',
                             color: 'header-secondary',
-                            children: C.Z.Messages.EMPTY_MESSAGE_PRIVATE_THREAD_INSTRUCTIONS
+                            children: v.intl.string(v.t['1awbZG'])
                         })
                       : null
               ]
           });
 }
-function S(e) {
+function b(e) {
     var t;
     let { channel: n } = e,
-        s = null !== (t = (0, d.KS)(n)) && void 0 !== t ? t : r.ThreadIcon;
-    return (0, i.jsxs)(E.ZP, {
+        l = null !== (t = (0, d.KS)(n)) && void 0 !== t ? t : s.ThreadIcon;
+    return (0, i.jsxs)(C.ZP, {
         channelId: n.id,
         children: [
             (0, i.jsx)('div', {
-                className: I.iconWrapper,
-                children: (0, i.jsx)(s, { className: I.icon })
+                className: _.iconWrapper,
+                children: (0, i.jsx)(l, { className: _.icon })
             }),
-            (0, i.jsx)(E.Ot, { children: n.name }),
-            (0, i.jsx)(x, { channel: n })
+            (0, i.jsx)(C.Ot, { children: n.name }),
+            (0, i.jsx)(E, { channel: n })
         ]
     });
 }

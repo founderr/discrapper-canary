@@ -20,7 +20,7 @@ function u(e, t, n) {
 }
 let c = new Date(2023, 8, 25),
     d = new Date(2023, 9, 5),
-    _ = () => ({
+    f = () => ({
         categoryItemViews: {
             [i.T.FANTASY]: {
                 [a.Z.AVATAR_DECORATION]: c,
@@ -37,26 +37,26 @@ let c = new Date(2023, 8, 25),
             [i.T.DISXCORE]: { [a.Z.AVATAR_DECORATION]: c }
         }
     }),
-    E = _();
-class f extends (r = s.ZP.PersistedStore) {
+    _ = f();
+class h extends (r = s.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (E = e);
+        null != e && (_ = e);
     }
     getState() {
-        return E;
+        return _;
     }
     isItemViewed(e) {
         var t, n;
         let r = null === (t = l.Z.getProduct(e.skuId)) || void 0 === t ? void 0 : t.categorySkuId;
-        return null != r && (null === (n = E.categoryItemViews[r]) || void 0 === n ? void 0 : n[e.type]) != null;
+        return null != r && (null === (n = _.categoryItemViews[r]) || void 0 === n ? void 0 : n[e.type]) != null;
     }
     reset() {
-        E = _();
+        _ = f();
     }
 }
-u(f, 'displayName', 'CollectiblesPersistedStore'),
-    u(f, 'persistKey', 'CollectiblesPersistedStoreV2'),
-    new f(o.Z, {
+u(h, 'displayName', 'CollectiblesPersistedStore'),
+    u(h, 'persistKey', 'CollectiblesPersistedStoreV2'),
+    new h(o.Z, {
         COLLECTIBLES_CATEGORY_ITEMS_VIEWED: (e) => {
             let { categories: t, itemTypes: n } = e,
                 r = new Date();
@@ -64,7 +64,7 @@ u(f, 'displayName', 'CollectiblesPersistedStore'),
                 let { skuId: i } = t,
                     a = n.reduce((e, t) => {
                         var n;
-                        return (null === (n = E.categoryItemViews[i]) || void 0 === n ? void 0 : n[t]) != null ? e : (null == E.categoryItemViews[i] && (E.categoryItemViews[i] = {}), (E.categoryItemViews[i][t] = r), !0);
+                        return (null === (n = _.categoryItemViews[i]) || void 0 === n ? void 0 : n[t]) != null ? e : (null == _.categoryItemViews[i] && (_.categoryItemViews[i] = {}), (_.categoryItemViews[i][t] = r), !0);
                     }, !1);
                 return e || a;
             }, !1);

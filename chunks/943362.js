@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return m;
     }
 });
 var r = n(200651);
@@ -13,21 +13,21 @@ var i = n(120356),
     u = n(364640),
     c = n(124072),
     d = n(198620),
-    _ = n(746878),
-    E = n(981631),
-    f = n(940617),
-    h = n(578786);
-function p(e) {
+    f = n(746878),
+    _ = n(981631),
+    h = n(940617),
+    p = n(578786);
+function m(e) {
     return {
-        react(t, i, p) {
-            let I = p.noStyleAndInteraction
+        react(t, i, m) {
+            let g = m.noStyleAndInteraction
                     ? void 0
                     : async (n) => {
                           let r = await (0, d.B_)(t.attachmentUrl);
                           e.shouldStopPropagation && (null == n || n.stopPropagation()), u.Z.trackLinkClicked(r), e.shouldCloseDefaultModals && (0, s.closeAllModals)(), (0, l.Z)(r);
                       },
-                m = p.noStyleAndInteraction
-                    ? E.dG4
+                E = m.noStyleAndInteraction
+                    ? _.dG4
                     : (e) => {
                           (0, o.jW)(e, async () => {
                               let { default: e } = await n.e('98466').then(n.bind(n, 151578));
@@ -44,19 +44,19 @@ function p(e) {
                 {
                     role: 'link',
                     href: t.attachmentUrl,
-                    onClick: I,
-                    onContextMenu: m,
+                    onClick: g,
+                    onContextMenu: E,
                     className: 'attachmentLink',
                     children: [
                         (0, r.jsx)(s.AttachmentIcon, {
                             size: 'xs',
-                            className: a()(h.icon, f.icon),
+                            className: a()(p.icon, h.icon),
                             color: s.tokens.colors.MENTION_FOREGROUND
                         }),
-                        (0, _.S)(t, i, p)
+                        (0, f.S)(t, i, m)
                     ]
                 },
-                p.key
+                m.key
             );
         }
     };

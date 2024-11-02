@@ -1,19 +1,19 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return s;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(481060),
-    i = n(400698);
-function r(e) {
-    let { children: t, disabled: n, disabledTooltip: r, id: l, ...o } = e;
-    return (0, s.jsx)(a.TooltipContainer, {
-        text: n ? r : null,
-        children: (0, s.jsx)(a.TabBar.Item, {
-            className: i.tabBarItem,
-            id: l,
+var r = n(481060),
+    l = n(400698);
+function s(e) {
+    let { children: t, disabled: n, disabledTooltip: s, id: a, ...o } = e;
+    return (0, i.jsx)(r.TooltipContainer, {
+        text: n ? s : null,
+        children: (0, i.jsx)(r.TabBar.Item, {
+            className: l.tabBarItem,
+            id: a,
             disabled: n,
             ...o,
             children: t

@@ -1,107 +1,107 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
         return d;
     }
 });
-var n = t(200651);
-t(192379);
-var a = t(481060),
-    i = t(230711),
-    r = t(267642),
-    o = t(981631),
-    l = t(689938),
-    c = t(55733);
+var i = n(200651);
+n(192379);
+var s = n(481060),
+    r = n(230711),
+    l = n(267642),
+    a = n(981631),
+    o = n(388032),
+    c = n(55733);
 function d(e) {
-    let { guildBoostSlot: s, onClose: d, hasCancelableGuildBoostSlot: _, premiumSubscription: u, onSelect: E } = e,
-        T = {
+    let { guildBoostSlot: t, onClose: d, hasCancelableGuildBoostSlot: u, premiumSubscription: m, onSelect: h } = e,
+        g = {
             transfer: {
-                label: null != s.premiumGuildSubscription ? l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_BUTTON : l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_SELECT_SERVER_BUTTON,
-                subtext: s.isOnCooldown() ? l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_BUTTON_DISABLED_TOOLTIP : null,
-                disabled: s.isOnCooldown()
+                label: null != t.premiumGuildSubscription ? o.intl.string(o.t['PR0n//']) : o.intl.string(o.t['+fmEYG']),
+                subtext: t.isOnCooldown() ? o.intl.string(o.t.XnB8Mz) : null,
+                disabled: t.isOnCooldown()
             },
             cancel: {
-                label: l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_SLOT_CANCEL_BUTTON,
-                subtext: _ ? null : l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BUTTON_DISABLED_TOOLTIP,
-                disabled: !_
+                label: o.intl.string(o.t.twFU3d),
+                subtext: u ? null : o.intl.string(o.t.oQ9lOj),
+                disabled: !u
             },
             uncancel: {
-                label: l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_SLOT_UNCANCEL_BUTTON,
+                label: o.intl.string(o.t['2glQNj']),
                 subtext: null,
                 disabled: !1
             }
         };
-    switch (u.status) {
-        case o.O0b.PAST_DUE:
-            (T.cancel.disabled = !0), (T.cancel.subtext = l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BUTTON_DISABLED_PAST_DUE_TOOLTIP), (T.uncancel.disabled = !0);
+    switch (m.status) {
+        case a.O0b.PAST_DUE:
+            (g.cancel.disabled = !0), (g.cancel.subtext = o.intl.string(o.t.WnL6DQ)), (g.uncancel.disabled = !0);
             break;
-        case o.O0b.PAUSE_PENDING:
-        case o.O0b.PAUSED:
-            (T.transfer.disabled = !0), (T.transfer.subtext = l.Z.Messages.GUILD_BOOSTING_TRANSFER_DISABLED_FOR_PAUSED_SUBSCRIPTION), (T.cancel.disabled = !0), (T.cancel.subtext = l.Z.Messages.GUILD_BOOSTING_CANCEL_DISABLED_FOR_PAUSED_SUBSCRIPTION), (T.uncancel.disabled = !0);
+        case a.O0b.PAUSE_PENDING:
+        case a.O0b.PAUSED:
+            (g.transfer.disabled = !0), (g.transfer.subtext = o.intl.string(o.t.LiLRRU)), (g.cancel.disabled = !0), (g.cancel.subtext = o.intl.string(o.t['1ywaWF'])), (g.uncancel.disabled = !0);
     }
-    return (0, n.jsxs)(a.Menu, {
-        onSelect: E,
+    return (0, i.jsxs)(s.Menu, {
+        onSelect: h,
         navId: 'subscription-context',
         variant: 'fixed',
-        'aria-label': l.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
+        'aria-label': o.intl.string(o.t.ogxXGh),
         onClose: d,
         children: [
-            (0, n.jsx)(a.MenuItem, {
+            (0, i.jsx)(s.MenuItem, {
                 id: 'apply',
-                label: T.transfer.label,
-                subtext: T.transfer.subtext,
+                label: g.transfer.label,
+                subtext: g.transfer.subtext,
                 action: function () {
-                    (0, a.openModalLazy)(async () => {
-                        let { default: e } = await Promise.resolve().then(t.bind(t, 760558));
-                        return (t) =>
-                            (0, n.jsx)(e, {
-                                ...t,
-                                guildBoostSlots: [s],
-                                locationSection: o.jXE.SETTINGS_PREMIUM
+                    (0, s.openModalLazy)(async () => {
+                        let { default: e } = await Promise.resolve().then(n.bind(n, 760558));
+                        return (n) =>
+                            (0, i.jsx)(e, {
+                                ...n,
+                                guildBoostSlots: [t],
+                                locationSection: a.jXE.SETTINGS_PREMIUM
                             });
                     });
                 },
-                disabled: T.transfer.disabled
+                disabled: g.transfer.disabled
             }),
-            (0, r.tl)(s)
-                ? (0, n.jsx)(a.MenuItem, {
+            (0, l.tl)(t)
+                ? (0, i.jsx)(s.MenuItem, {
                       id: 'uncancel',
-                      label: T.uncancel.label,
-                      subtext: T.uncancel.subtext,
+                      label: g.uncancel.label,
+                      subtext: g.uncancel.subtext,
                       action: function () {
-                          (0, a.openModalLazy)(async () => {
-                              let { default: e } = await Promise.resolve().then(t.bind(t, 450468));
-                              return (t) =>
-                                  (0, n.jsx)(e, {
-                                      ...t,
-                                      guildBoostSlotId: s.id
+                          (0, s.openModalLazy)(async () => {
+                              let { default: e } = await Promise.resolve().then(n.bind(n, 450468));
+                              return (n) =>
+                                  (0, i.jsx)(e, {
+                                      ...n,
+                                      guildBoostSlotId: t.id
                                   });
                           });
                       },
-                      disabled: T.uncancel.disabled
+                      disabled: g.uncancel.disabled
                   })
-                : (0, n.jsx)(a.MenuItem, {
+                : (0, i.jsx)(s.MenuItem, {
                       id: 'cancel',
-                      label: T.cancel.label,
-                      subtext: T.cancel.subtext,
+                      label: g.cancel.label,
+                      subtext: g.cancel.subtext,
                       action: function () {
-                          (0, a.openModalLazy)(async () => {
-                              let { default: e } = await Promise.resolve().then(t.bind(t, 401786));
-                              return (t) =>
-                                  (0, n.jsx)(e, {
-                                      ...t,
-                                      guildBoostSlot: s
+                          (0, s.openModalLazy)(async () => {
+                              let { default: e } = await Promise.resolve().then(n.bind(n, 401786));
+                              return (n) =>
+                                  (0, i.jsx)(e, {
+                                      ...n,
+                                      guildBoostSlot: t
                                   });
                           });
                       },
-                      disabled: T.cancel.disabled,
+                      disabled: g.cancel.disabled,
                       color: 'danger'
                   }),
-            u.isPausedOrPausePending
-                ? (0, n.jsx)(a.MenuItem, {
+            m.isPausedOrPausePending
+                ? (0, i.jsx)(s.MenuItem, {
                       id: 'manage-subscription',
-                      label: l.Z.Messages.BILLING_MANAGE_SUBSCRIPTION,
-                      action: () => i.Z.open(o.oAB.SUBSCRIPTIONS),
-                      iconLeft: a.LightbulbIcon,
+                      label: o.intl.string(o.t.obRG6e),
+                      action: () => r.Z.open(a.oAB.SUBSCRIPTIONS),
+                      iconLeft: s.LightbulbIcon,
                       className: c.manageSubscription
                   })
                 : null

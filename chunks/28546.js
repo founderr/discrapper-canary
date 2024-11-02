@@ -1,24 +1,24 @@
 n.d(t, {
     Iu: function () {
-        return I;
+        return g;
     },
     PG: function () {
         return d;
     },
     RO: function () {
-        return f;
-    },
-    _Q: function () {
-        return _;
-    },
-    hr: function () {
         return h;
     },
+    _Q: function () {
+        return f;
+    },
+    hr: function () {
+        return p;
+    },
     j9: function () {
-        return E;
+        return _;
     },
     ql: function () {
-        return p;
+        return m;
     }
 });
 var r = n(97613),
@@ -53,7 +53,7 @@ let u = Object.freeze({
             })
         );
     },
-    _ = (e) => {
+    f = (e) => {
         let t = c.getState();
         if ((void 0 === e || e === t.activeViewType) && null !== t.activeView)
             (0, o.j)(() =>
@@ -64,17 +64,17 @@ let u = Object.freeze({
                 })
             );
     },
-    E = (e) => {
+    _ = (e) => {
         let t = c.getState();
         if (null == t.activeView) {
             var n;
             d(null !== (n = t.lastActiveView) && void 0 !== n ? n : l.X1.EMOJI, e);
-        } else _();
+        } else f();
     },
-    f = (e, t) => {
-        c.getState().activeView === e ? _() : d(e, t);
+    h = (e, t) => {
+        c.getState().activeView === e ? f() : d(e, t);
     },
-    h = (e) => {
+    p = (e) => {
         (0, o.j)(() =>
             c.setState({
                 activeView: e,
@@ -82,7 +82,7 @@ let u = Object.freeze({
             })
         );
     },
-    p = function (e) {
+    m = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         (0, o.j)(() =>
             c.setState({
@@ -91,4 +91,4 @@ let u = Object.freeze({
             })
         );
     },
-    I = c;
+    g = c;

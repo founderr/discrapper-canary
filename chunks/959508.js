@@ -1,118 +1,118 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return T;
     }
 }),
     n(47120);
-var s = n(200651),
-    a = n(192379),
-    i = n(120356),
-    r = n.n(i),
-    l = n(442837),
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    s = n.n(l),
+    a = n(442837),
     o = n(481060),
     c = n(659388),
     d = n(710344),
     u = n(637853),
-    _ = n(107862),
-    I = n(259580),
-    E = n(823379),
-    T = n(889369),
-    m = n(570961),
-    N = n(208665),
-    S = n(976983),
-    g = n(290511),
-    h = n(689938),
-    C = n(277767);
-let x = { optionErrors: [] };
-function p(e) {
+    m = n(107862),
+    h = n(259580),
+    g = n(823379),
+    x = n(889369),
+    p = n(570961),
+    f = n(208665),
+    C = n(976983),
+    I = n(290511),
+    _ = n(388032),
+    N = n(277767);
+let v = { optionErrors: [] };
+function T(e) {
     var t;
-    let { guild: n, prompt: i, disableAutofocus: d, promptIndex: S, dragIndex: p, includeCount: f, singleColumn: O, onPromptDragComplete: A, onPromptDragStart: M, onPromptDragReset: D } = e,
-        { dropdownsAllowed: v } = (0, _.Ug)(n.id),
-        j = (0, l.e7)([T.Z], () => T.Z.editedDefaultChannelIds),
-        Z = v ? g.qm : g.M$,
+    let { guild: n, prompt: l, disableAutofocus: d, promptIndex: C, dragIndex: T, includeCount: S, singleColumn: b, onPromptDragComplete: R, onPromptDragStart: Z, onPromptDragReset: A } = e,
+        { dropdownsAllowed: L } = (0, m.Ug)(n.id),
+        y = (0, a.e7)([x.Z], () => x.Z.editedDefaultChannelIds),
+        D = L ? I.qm : I.M$,
         {
-            drag: b,
-            dragSourcePosition: U,
-            drop: G,
-            setIsDraggable: P
+            drag: O,
+            dragSourcePosition: M,
+            drop: P,
+            setIsDraggable: k
         } = (0, c.Z)({
             type: 'ONBOARDING_PROMPT_CARD',
-            index: p,
-            optionId: i.id,
-            onDragStart: M,
-            onDragComplete: A,
-            onDragReset: D
+            index: T,
+            optionId: l.id,
+            onDragStart: Z,
+            onDragComplete: R,
+            onDragReset: A
         }),
-        B = (0, l.cj)([N.Z], () => {
+        w = (0, a.cj)([f.Z], () => {
             var e;
-            return null !== (e = N.Z.errors[S]) && void 0 !== e ? e : x;
+            return null !== (e = f.Z.errors[C]) && void 0 !== e ? e : v;
         }),
-        [y, F] = a.useState(!1),
-        [w, k] = a.useState(!1),
-        H = null !== (t = B.options) && void 0 !== t ? t : B.optionErrors.filter(E.lm)[0],
-        V = B.config,
-        Y = v && i.options.length >= g.fY,
-        W = (0, u.kl)(n.id, Array.from(j), [i]).length - j.size,
-        z = a.useRef(null);
-    return (a.useLayoutEffect(() => {
+        [B, U] = r.useState(!1),
+        [G, F] = r.useState(!1),
+        H = null !== (t = w.options) && void 0 !== t ? t : w.optionErrors.filter(g.lm)[0],
+        z = w.config,
+        V = L && l.options.length >= I.fY,
+        W = (0, u.kl)(n.id, Array.from(y), [l]).length - y.size,
+        Y = r.useRef(null);
+    return (r.useLayoutEffect(() => {
         setTimeout(() => {
-            if (0 === S && !d) {
+            if (0 === C && !d) {
                 var e;
-                null === (e = z.current) || void 0 === e || e.focus();
+                null === (e = Y.current) || void 0 === e || e.focus();
             }
         }, 0);
     }, [d]),
-    y)
-        ? (0, s.jsx)(o.FocusRing, {
-              children: (0, s.jsxs)('div', {
+    B)
+        ? (0, i.jsx)(o.FocusRing, {
+              children: (0, i.jsxs)('div', {
                   tabIndex: 0,
-                  onFocus: () => k(!0),
-                  onBlur: () => k(!1),
-                  onMouseLeave: () => k(!1),
-                  className: r()(C.container, {
-                      [C.dropIndicatorBefore]: null != U && S < U,
-                      [C.dropIndicatorAfter]: null != U && S > U,
-                      [C.containerFocused]: w
+                  onFocus: () => F(!0),
+                  onBlur: () => F(!1),
+                  onMouseLeave: () => F(!1),
+                  className: s()(N.container, {
+                      [N.dropIndicatorBefore]: null != M && C < M,
+                      [N.dropIndicatorAfter]: null != M && C > M,
+                      [N.containerFocused]: G
                   }),
-                  ref: (e) => b(G(e)),
+                  ref: (e) => O(P(e)),
                   children: [
-                      (0, s.jsx)('div', {
-                          className: C.dragContainer,
-                          onMouseEnter: () => P(!0),
-                          onMouseLeave: () => P(!1),
-                          children: (0, s.jsx)(o.DragIcon, {
+                      (0, i.jsx)('div', {
+                          className: N.dragContainer,
+                          onMouseEnter: () => k(!0),
+                          onMouseLeave: () => k(!1),
+                          children: (0, i.jsx)(o.DragIcon, {
                               size: 'xs',
                               color: 'currentColor',
-                              className: C.dragIcon
+                              className: N.dragIcon
                           })
                       }),
-                      (0, s.jsx)(o.Text, {
-                          className: C.questionNumber,
+                      (0, i.jsx)(o.Text, {
+                          className: N.questionNumber,
                           variant: 'text-xs/semibold',
                           color: 'text-muted',
-                          children: h.Z.Messages.ONBOARDING_PROMPT_OPTION_QUESTION_NUMBER.format({ index: S + 1 })
+                          children: _.intl.format(_.t.yjS3zs, { index: C + 1 })
                       }),
-                      (0, s.jsx)(o.Text, {
+                      (0, i.jsx)(o.Text, {
                           variant: 'text-lg/semibold',
                           color: 'text-normal',
-                          children: i.title
+                          children: l.title
                       }),
-                      (0, s.jsx)(o.Clickable, {
-                          className: C.collapseButton,
-                          onClick: () => F(!1),
-                          children: (0, s.jsx)(I.Z, {
-                              direction: I.Z.Directions.DOWN,
+                      (0, i.jsx)(o.Clickable, {
+                          className: N.collapseButton,
+                          onClick: () => U(!1),
+                          children: (0, i.jsx)(h.Z, {
+                              direction: h.Z.Directions.DOWN,
                               height: 16,
                               width: 16
                           })
                       }),
-                      (0, s.jsx)(o.TooltipContainer, {
-                          text: h.Z.Messages.ONBOARDING_PROMPT_DELETE,
-                          className: C.removeButton,
-                          children: (0, s.jsx)(o.Clickable, {
-                              className: C.closeIcon,
-                              onClick: () => (0, m.fi)(n, i.id),
-                              children: (0, s.jsx)(o.TrashIcon, {
+                      (0, i.jsx)(o.TooltipContainer, {
+                          text: _.intl.string(_.t['Ku+86e']),
+                          className: N.removeButton,
+                          children: (0, i.jsx)(o.Clickable, {
+                              className: N.closeIcon,
+                              onClick: () => (0, p.fi)(n, l.id),
+                              children: (0, i.jsx)(o.TrashIcon, {
                                   size: 'xs',
                                   color: 'currentColor'
                               })
@@ -121,119 +121,119 @@ function p(e) {
                   ]
               })
           })
-        : (0, s.jsx)(o.FocusRing, {
-              children: (0, s.jsxs)('div', {
+        : (0, i.jsx)(o.FocusRing, {
+              children: (0, i.jsxs)('div', {
                   tabIndex: 0,
-                  onFocus: () => k(!0),
-                  onBlur: () => k(!1),
-                  className: r()(C.container, {
-                      [C.dropIndicatorBefore]: null != U && S < U,
-                      [C.dropIndicatorAfter]: null != U && S > U,
-                      [C.containerFocused]: w
+                  onFocus: () => F(!0),
+                  onBlur: () => F(!1),
+                  className: s()(N.container, {
+                      [N.dropIndicatorBefore]: null != M && C < M,
+                      [N.dropIndicatorAfter]: null != M && C > M,
+                      [N.containerFocused]: G
                   }),
-                  ref: (e) => b(G(e)),
+                  ref: (e) => O(P(e)),
                   children: [
-                      (0, s.jsx)('div', {
-                          className: C.dragContainer,
-                          onMouseEnter: () => P(!0),
-                          onMouseLeave: () => P(!1),
-                          children: (0, s.jsx)(o.DragIcon, {
+                      (0, i.jsx)('div', {
+                          className: N.dragContainer,
+                          onMouseEnter: () => k(!0),
+                          onMouseLeave: () => k(!1),
+                          children: (0, i.jsx)(o.DragIcon, {
                               size: 'xs',
                               color: 'currentColor',
-                              className: C.dragIcon
+                              className: N.dragIcon
                           })
                       }),
-                      (0, s.jsx)(o.Text, {
-                          className: C.questionNumber,
+                      (0, i.jsx)(o.Text, {
+                          className: N.questionNumber,
                           variant: 'text-xs/semibold',
                           color: 'text-muted',
-                          children: h.Z.Messages.ONBOARDING_PROMPT_OPTION_QUESTION_NUMBER.format({ index: S + 1 })
+                          children: _.intl.format(_.t.yjS3zs, { index: C + 1 })
                       }),
-                      (0, s.jsx)(o.TextInput, {
-                          className: C.title,
-                          inputClassName: C.titleInput,
-                          inputRef: z,
-                          value: i.title,
-                          onChange: (e) => (0, m.Kk)(n, i.id, { title: e }),
-                          placeholder: h.Z.Messages.ONBOARDING_PROMPT_TITLE_PLACEHOLDER,
-                          maxLength: g.iU,
-                          error: B.title
+                      (0, i.jsx)(o.TextInput, {
+                          className: N.title,
+                          inputClassName: N.titleInput,
+                          inputRef: Y,
+                          value: l.title,
+                          onChange: (e) => (0, p.Kk)(n, l.id, { title: e }),
+                          placeholder: _.intl.string(_.t.QMCuCg),
+                          maxLength: I.iU,
+                          error: w.title
                       }),
-                      (0, s.jsx)(R, {
-                          prompt: i,
+                      (0, i.jsx)(j, {
+                          prompt: l,
                           guild: n
                       }),
-                      (0, s.jsx)(o.Text, {
-                          className: C.optionsHeader,
+                      (0, i.jsx)(o.Text, {
+                          className: N.optionsHeader,
                           variant: 'text-xs/semibold',
                           color: 'text-muted',
-                          children: Y
-                              ? h.Z.Messages.ONBOARDING_PROMPT_DROPDOWN_OPTIONS_HEADER.format({
-                                    count: i.options.length,
-                                    total: Z
+                          children: V
+                              ? _.intl.formatToPlainString(_.t.AbvhZG, {
+                                    count: l.options.length,
+                                    total: D
                                 })
-                              : h.Z.Messages.ONBOARDING_PROMPT_OPTIONS_HEADER.format({
-                                    count: i.options.length,
-                                    total: Z
+                              : _.intl.formatToPlainString(_.t.b7VxYW, {
+                                    count: l.options.length,
+                                    total: D
                                 })
                       }),
-                      (0, s.jsx)(L, {
+                      (0, i.jsx)(E, {
                           guild: n,
-                          prompt: i,
-                          promptIndex: S,
-                          errors: B,
-                          singleColumn: O
+                          prompt: l,
+                          promptIndex: C,
+                          errors: w,
+                          singleColumn: b
                       }),
-                      null != H ? (0, s.jsx)(o.InputError, { error: H }) : null,
-                      (0, s.jsxs)('div', {
-                          className: C.buttons,
+                      null != H ? (0, i.jsx)(o.InputError, { error: H }) : null,
+                      (0, i.jsxs)('div', {
+                          className: N.buttons,
                           children: [
-                              (0, s.jsxs)('div', {
-                                  className: C.checkboxes,
+                              (0, i.jsxs)('div', {
+                                  className: N.checkboxes,
                                   children: [
-                                      (0, s.jsx)(o.Checkbox, {
+                                      (0, i.jsx)(o.Checkbox, {
                                           size: 20,
                                           type: o.Checkbox.Types.INVERTED,
-                                          value: !i.singleSelect,
-                                          onChange: (e, t) => (0, m.Kk)(n, i.id, { singleSelect: !t }),
-                                          children: (0, s.jsx)(o.Text, {
+                                          value: !l.singleSelect,
+                                          onChange: (e, t) => (0, p.Kk)(n, l.id, { singleSelect: !t }),
+                                          children: (0, i.jsx)(o.Text, {
                                               variant: 'text-sm/normal',
                                               color: 'interactive-normal',
-                                              children: h.Z.Messages.ONBOARDING_PROMPT_ALLOW_MULTIPLE_LABEL
+                                              children: _.intl.string(_.t.uCebZW)
                                           })
                                       }),
-                                      i.inOnboarding
-                                          ? (0, s.jsx)(o.Checkbox, {
+                                      l.inOnboarding
+                                          ? (0, i.jsx)(o.Checkbox, {
                                                 size: 20,
                                                 type: o.Checkbox.Types.INVERTED,
-                                                value: i.inOnboarding && i.required,
-                                                onChange: (e, t) => (0, m.Kk)(n, i.id, { required: t }),
-                                                disabled: !i.inOnboarding,
-                                                children: (0, s.jsx)(o.Text, {
+                                                value: l.inOnboarding && l.required,
+                                                onChange: (e, t) => (0, p.Kk)(n, l.id, { required: t }),
+                                                disabled: !l.inOnboarding,
+                                                children: (0, i.jsx)(o.Text, {
                                                     variant: 'text-sm/normal',
                                                     color: 'interactive-normal',
-                                                    children: f ? h.Z.Messages.ONBOARDING_PROMPT_REQUIRED_LABEL_WITH_COUNT.format({ count: W }) : h.Z.Messages.ONBOARDING_PROMPT_REQUIRED_LABEL
+                                                    children: S ? _.intl.formatToPlainString(_.t['0re8T0'], { count: W }) : _.intl.string(_.t.Ur8Vrq)
                                                 })
                                             })
                                           : null
                                   ]
                               }),
-                              (0, s.jsx)(o.Clickable, {
-                                  className: C.collapseButton,
-                                  onClick: () => F(!0),
-                                  children: (0, s.jsx)(I.Z, {
-                                      direction: I.Z.Directions.UP,
+                              (0, i.jsx)(o.Clickable, {
+                                  className: N.collapseButton,
+                                  onClick: () => U(!0),
+                                  children: (0, i.jsx)(h.Z, {
+                                      direction: h.Z.Directions.UP,
                                       height: 16,
                                       width: 16
                                   })
                               }),
-                              (0, s.jsx)(o.TooltipContainer, {
-                                  text: h.Z.Messages.ONBOARDING_PROMPT_DELETE,
-                                  className: C.removeButton,
-                                  children: (0, s.jsx)(o.Clickable, {
-                                      className: C.closeIcon,
-                                      onClick: () => (0, m.fi)(n, i.id),
-                                      children: (0, s.jsx)(o.TrashIcon, {
+                              (0, i.jsx)(o.TooltipContainer, {
+                                  text: _.intl.string(_.t['Ku+86e']),
+                                  className: N.removeButton,
+                                  children: (0, i.jsx)(o.Clickable, {
+                                      className: N.closeIcon,
+                                      onClick: () => (0, p.fi)(n, l.id),
+                                      children: (0, i.jsx)(o.TrashIcon, {
                                           size: 'xs',
                                           color: 'currentColor'
                                       })
@@ -241,77 +241,77 @@ function p(e) {
                               })
                           ]
                       }),
-                      null != V ? (0, s.jsx)(o.InputError, { error: V }) : null
+                      null != z ? (0, i.jsx)(o.InputError, { error: z }) : null
                   ]
               })
           });
 }
-function R(e) {
+function j(e) {
     let { prompt: t, guild: n } = e,
-        [i, r] = a.useState(!1);
+        [l, s] = r.useState(!1);
     if (
-        (a.useEffect(() => {
-            !i && t.title.length > 0 && r(!0);
-        }, [i, t]),
-        i)
+        (r.useEffect(() => {
+            !l && t.title.length > 0 && s(!0);
+        }, [l, t]),
+        l)
     )
         return null;
-    function l(e) {
-        return (0, s.jsx)(o.Clickable, {
-            className: C.example,
-            onClick: () => (0, m.Kk)(n, t.id, { title: e }),
-            children: (0, s.jsx)(o.Text, {
+    function a(e) {
+        return (0, i.jsx)(o.Clickable, {
+            className: N.example,
+            onClick: () => (0, p.Kk)(n, t.id, { title: e }),
+            children: (0, i.jsx)(o.Text, {
                 variant: 'text-xs/normal',
                 children: e
             })
         });
     }
-    return (0, s.jsxs)('div', {
-        className: C.examplesSection,
+    return (0, i.jsxs)('div', {
+        className: N.examplesSection,
         children: [
-            (0, s.jsx)(o.Text, {
+            (0, i.jsx)(o.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-muted',
-                children: h.Z.Messages.ONBOARDING_PROMPT_EXAMPLES_HEADER
+                children: _.intl.string(_.t.ECnSLi)
             }),
-            (0, s.jsxs)('div', {
-                className: C.examples,
-                children: [l(h.Z.Messages.ONBOARDING_PROMPT_EXAMPLES_1), l(h.Z.Messages.ONBOARDING_PROMPT_EXAMPLES_2), l(h.Z.Messages.ONBOARDING_PROMPT_EXAMPLES_3), l(h.Z.Messages.ONBOARDING_PROMPT_EXAMPLES_4)]
+            (0, i.jsxs)('div', {
+                className: N.examples,
+                children: [a(_.intl.string(_.t['7GZMJS'])), a(_.intl.string(_.t.nItydn)), a(_.intl.string(_.t.evuYbm)), a(_.intl.string(_.t.XWRuOj))]
             })
         ]
     });
 }
-function L(e) {
-    let { guild: t, prompt: n, promptIndex: a, singleColumn: i, errors: r } = e,
-        { dropdownsAllowed: l } = (0, _.Ug)(t.id),
-        o = l ? g.qm : g.M$,
-        { handleDragStart: c, handleDragReset: u, handleDragComplete: I } = (0, d.Z)(n.options, (e) => (0, m.Kk)(t, n.id, { options: e }));
-    return (0, s.jsxs)('div', {
-        className: C.options,
+function E(e) {
+    let { guild: t, prompt: n, promptIndex: r, singleColumn: l, errors: s } = e,
+        { dropdownsAllowed: a } = (0, m.Ug)(t.id),
+        o = a ? I.qm : I.M$,
+        { handleDragStart: c, handleDragReset: u, handleDragComplete: h } = (0, d.Z)(n.options, (e) => (0, p.Kk)(t, n.id, { options: e }));
+    return (0, i.jsxs)('div', {
+        className: N.options,
         children: [
-            n.options.map((e, l) =>
-                (0, s.jsx)(
-                    S.Z,
+            n.options.map((e, a) =>
+                (0, i.jsx)(
+                    C.Z,
                     {
                         guild: t,
                         prompt: n,
-                        promptIndex: a,
-                        singleColumn: i,
+                        promptIndex: r,
+                        singleColumn: l,
                         option: e,
                         onDragStart: c,
-                        onDragComplete: I,
+                        onDragComplete: h,
                         onDragReset: u,
-                        hasError: null != r.optionErrors[l]
+                        hasError: null != s.optionErrors[a]
                     },
                     e.id
                 )
             ),
             n.options.length < o
-                ? (0, s.jsx)(S.B, {
+                ? (0, i.jsx)(C.B, {
                       guild: t,
                       prompt: n,
-                      promptIndex: a,
-                      singleColumn: i
+                      promptIndex: r,
+                      singleColumn: l
                   })
                 : null
         ]

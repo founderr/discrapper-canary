@@ -1,75 +1,75 @@
 n(47120);
-var s = n(200651),
-    a = n(192379),
-    i = n(120356),
-    r = n.n(i),
-    l = n(846519),
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    s = n.n(l),
+    a = n(846519),
     o = n(481060),
     c = n(259580),
     d = n(81543),
-    u = n(689938),
-    _ = n(560755);
+    u = n(388032),
+    m = n(560755);
 t.Z = function (e) {
-    let { items: t, carouselClassName: n, paginationCaretClassName: i, intervalBetweenAutomaticItemRotations: I, renderItem: E } = e,
-        T = a.useMemo(() => new l.Xp(), []),
-        [m, N] = a.useState(d.n.LEFT),
-        [S, g] = a.useState(0),
-        [h, C] = a.useState(!1),
-        [x, p] = a.useState(!1),
-        R = a.useCallback(
+    let { items: t, carouselClassName: n, paginationCaretClassName: l, intervalBetweenAutomaticItemRotations: h, renderItem: g } = e,
+        x = r.useMemo(() => new a.Xp(), []),
+        [p, f] = r.useState(d.n.LEFT),
+        [C, I] = r.useState(0),
+        [_, N] = r.useState(!1),
+        [v, T] = r.useState(!1),
+        j = r.useCallback(
             (e, t) => {
-                g((n) => {
-                    let s = n + t;
-                    return s < 0 ? (s = e.length - 1) : s > e.length - 1 && (s = 0), s;
+                I((n) => {
+                    let i = n + t;
+                    return i < 0 ? (i = e.length - 1) : i > e.length - 1 && (i = 0), i;
                 });
             },
-            [g]
+            [I]
         ),
-        L = a.useCallback(() => {
-            if (!x) R(t, 1);
-        }, [R, t, x]),
-        f = a.useCallback(() => {
-            if (!x) R(t, -1);
-        }, [R, t, x]);
+        E = r.useCallback(() => {
+            if (!v) j(t, 1);
+        }, [j, t, v]),
+        S = r.useCallback(() => {
+            if (!v) j(t, -1);
+        }, [j, t, v]);
     return (
-        a.useEffect(() => {
-            null != I && (h ? h && T.stop() : T.start(I, L));
-        }, [h, T, I, L]),
-        (0, s.jsxs)('div', {
-            className: _.root,
-            onMouseEnter: () => C(!0),
-            onMouseLeave: () => C(!1),
+        r.useEffect(() => {
+            null != h && (_ ? _ && x.stop() : x.start(h, E));
+        }, [_, x, h, E]),
+        (0, i.jsxs)('div', {
+            className: m.root,
+            onMouseEnter: () => N(!0),
+            onMouseLeave: () => N(!1),
             children: [
-                (0, s.jsx)(o.Clickable, {
-                    className: r()(_.carouselCaret, i),
-                    onClick: f,
-                    onMouseEnter: () => N(d.n.RIGHT),
-                    ignoreKeyPress: x,
-                    children: (0, s.jsx)(c.Z, {
+                (0, i.jsx)(o.Clickable, {
+                    className: s()(m.carouselCaret, l),
+                    onClick: S,
+                    onMouseEnter: () => f(d.n.RIGHT),
+                    ignoreKeyPress: v,
+                    children: (0, i.jsx)(c.Z, {
                         direction: c.Z.Directions.LEFT,
                         height: 48,
                         width: 48,
-                        'aria-label': u.Z.Messages.GUILD_ROLE_SUBSCRIPTION_OTHER_CREATOR_PREVIOUS_CARD_ARIA_LABEL
+                        'aria-label': u.intl.string(u.t.FAmEgo)
                     })
                 }),
-                (0, s.jsx)(d.Z, {
-                    step: S,
-                    direction: m,
-                    onAnimationStart: () => p(!0),
-                    onAnimationEnd: () => p(!1),
-                    className: r()(_.carousel, n),
-                    children: E(t[S])
+                (0, i.jsx)(d.Z, {
+                    step: C,
+                    direction: p,
+                    onAnimationStart: () => T(!0),
+                    onAnimationEnd: () => T(!1),
+                    className: s()(m.carousel, n),
+                    children: g(t[C])
                 }),
-                (0, s.jsx)(o.Clickable, {
-                    className: r()(_.carouselCaret, i),
-                    onClick: L,
-                    onMouseEnter: () => N(d.n.LEFT),
-                    ignoreKeyPress: x,
-                    children: (0, s.jsx)(c.Z, {
+                (0, i.jsx)(o.Clickable, {
+                    className: s()(m.carouselCaret, l),
+                    onClick: E,
+                    onMouseEnter: () => f(d.n.LEFT),
+                    ignoreKeyPress: v,
+                    children: (0, i.jsx)(c.Z, {
                         direction: c.Z.Directions.RIGHT,
                         height: 48,
                         width: 48,
-                        'aria-label': u.Z.Messages.GUILD_ROLE_SUBSCRIPTION_OTHER_CREATOR_NEXT_CARD_ARIA_LABEL
+                        'aria-label': u.intl.string(u.t.Fa8W1d)
                     })
                 })
             ]

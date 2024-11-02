@@ -1,78 +1,78 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return g;
     },
     w: function () {
-        return T;
+        return x;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(120356),
-    i = n.n(a),
-    r = n(481060),
-    l = n(259580),
+var r = n(120356),
+    l = n.n(r),
+    s = n(481060),
+    a = n(259580),
     o = n(73346),
     c = n(817460),
     d = n(723047),
     u = n(880229),
-    _ = n(689938),
-    I = n(804258);
-function E(e) {
-    let { channelBenefits: t, intangibleBenefits: n, subscriptionListings: a, onImport: l } = e,
-        E = (0, d.mY)();
-    return (0, s.jsx)('div', {
-        className: I.container,
-        children: a.map((e) =>
-            (0, s.jsxs)(
+    m = n(388032),
+    h = n(804258);
+function g(e) {
+    let { channelBenefits: t, intangibleBenefits: n, subscriptionListings: r, onImport: a } = e,
+        g = (0, d.mY)();
+    return (0, i.jsx)('div', {
+        className: h.container,
+        children: r.map((e) =>
+            (0, i.jsxs)(
                 'div',
                 {
-                    className: I.row,
+                    className: h.row,
                     children: [
-                        (0, s.jsx)('img', {
+                        (0, i.jsx)('img', {
                             alt: '',
                             src: null == e.image_asset ? void 0 : (0, o._W)(e.application_id, e.image_asset, 512),
-                            className: i()(I.rowIcon, I.listingImage)
+                            className: l()(h.rowIcon, h.listingImage)
                         }),
-                        (0, s.jsxs)('div', {
-                            className: I.rowBody,
+                        (0, i.jsxs)('div', {
+                            className: h.rowBody,
                             children: [
-                                (0, s.jsx)(r.Text, {
+                                (0, i.jsx)(s.Text, {
                                     variant: 'text-md/normal',
                                     color: 'header-primary',
-                                    className: i()(I.rowText, I.listingName),
+                                    className: l()(h.rowText, h.listingName),
                                     children: e.name
                                 }),
-                                (0, s.jsx)(r.Text, {
+                                (0, i.jsx)(s.Text, {
                                     color: 'header-secondary',
                                     variant: 'text-sm/normal',
-                                    children: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_IMPORT_NUM_BENEFITS.format({
+                                    children: m.intl.format(m.t['QMj+Ii'], {
                                         channels: e.role_benefits.benefits.filter(c.rC).length,
                                         benefits: e.role_benefits.benefits.filter(c.lL).length
                                     })
                                 })
                             ]
                         }),
-                        (0, s.jsx)(r.Button, {
-                            look: r.Button.Looks.OUTLINED,
-                            color: r.Button.Colors.PRIMARY,
+                        (0, i.jsx)(s.Button, {
+                            look: s.Button.Looks.OUTLINED,
+                            color: s.Button.Colors.PRIMARY,
                             onClick: () => {
-                                var a;
+                                var r;
                                 return (
-                                    (a = e),
-                                    void (0, r.openModal)((e) =>
-                                        (0, s.jsx)(u.K, {
+                                    (r = e),
+                                    void (0, s.openModal)((e) =>
+                                        (0, i.jsx)(u.K, {
                                             ...e,
-                                            fromSubscriptionListing: a,
+                                            fromSubscriptionListing: r,
                                             existingChannelBenefits: t,
                                             existingIntangibleBenefits: n,
-                                            onSubmit: l
+                                            onSubmit: a
                                         })
                                     )
                                 );
                             },
-                            disabled: E,
-                            children: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_IMPORT_BUTTON
+                            disabled: g,
+                            children: m.intl.string(m.t['90bIv7'])
                         })
                     ]
                 },
@@ -81,39 +81,39 @@ function E(e) {
         )
     });
 }
-function T(e) {
-    let { guildId: t, onImport: n, disabled: a = !1 } = e;
-    return (0, s.jsxs)(r.Clickable, {
-        className: i()(I.importRoleCard, { [I.disabled]: a }),
-        onClick: a
+function x(e) {
+    let { guildId: t, onImport: n, disabled: r = !1 } = e;
+    return (0, i.jsxs)(s.Clickable, {
+        className: l()(h.importRoleCard, { [h.disabled]: r }),
+        onClick: r
             ? void 0
             : function () {
-                  (0, r.openModal)((e) =>
-                      (0, s.jsx)(u.C, {
+                  (0, s.openModal)((e) =>
+                      (0, i.jsx)(u.C, {
                           ...e,
                           guildId: t,
                           onImport: n
                       })
                   );
               },
-        'aria-disabled': a,
+        'aria-disabled': r,
         children: [
-            (0, s.jsx)(r.ShieldUserIcon, {
+            (0, i.jsx)(s.ShieldUserIcon, {
                 size: 'custom',
                 width: 23,
                 height: 23,
                 color: 'currentColor',
-                className: I.rowIcon
+                className: h.rowIcon
             }),
-            (0, s.jsx)(r.Text, {
+            (0, i.jsx)(s.Text, {
                 variant: 'text-md/normal',
                 color: 'header-primary',
-                className: I.rowText,
-                children: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_IMPORT_SELECT_ROLE
+                className: h.rowText,
+                children: m.intl.string(m.t.xK9pBA)
             }),
-            (0, s.jsx)(l.Z, {
-                direction: l.Z.Directions.RIGHT,
-                className: I.caret
+            (0, i.jsx)(a.Z, {
+                direction: a.Z.Directions.RIGHT,
+                className: h.caret
             })
         ]
     });

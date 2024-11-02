@@ -1,27 +1,27 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return r;
     }
 }),
     n(47120);
 var i = n(192379),
-    s = n(846519);
-function a(e, t) {
-    let [n, a] = i.useState(!1),
-        l = i.useRef(new s.sW(t, () => a(!1))),
-        r = i.useRef(new s.sW(e, () => a(!0))),
+    l = n(846519);
+function r(e, t) {
+    let [n, r] = i.useState(!1),
+        a = i.useRef(new l.sW(t, () => r(!1))),
+        s = i.useRef(new l.sW(e, () => r(!0))),
         o = i.useCallback(() => {
-            l.current.cancel(), r.current.cancel();
+            a.current.cancel(), s.current.cancel();
         }, []);
     i.useEffect(() => o, [o]);
     let c = i.useCallback(() => {
-        o(), l.current.delay();
+        o(), a.current.delay();
     }, [o]);
     return {
         isHovered: n,
-        setIsHovered: a,
+        setIsHovered: r,
         onMouseEnter: i.useCallback(() => {
-            o(), r.current.delay();
+            o(), s.current.delay();
         }, [o]),
         onMouseLeave: c,
         cancelTimers: o

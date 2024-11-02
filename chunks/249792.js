@@ -8,29 +8,29 @@ n(192379);
 var l = n(120356),
     r = n.n(l),
     a = n(100621),
-    s = n(692547),
-    o = n(481060),
+    o = n(692547),
+    s = n(481060),
     c = n(565138),
     u = n(252686),
     d = n(115376);
 function h(e) {
     let { guild: t, show: n, active: l, onAnimationStart: h, onAnimationRest: p } = e,
         f = {},
-        _ = {};
-    (f.transform = 'translate3d(10px, 10px, 0) scale3d(3, 3, 1)'), (_.transform = 'translate3d(0, 0, 0) scale3d(1, 1, 1)');
-    let m = (0, o.useToken)(s.Z.unsafe_rawColors.BRAND_500).hex(),
-        g = (0, o.useToken)(s.Z.unsafe_rawColors.PRIMARY_630).hex();
-    l && null == t.icon && ((f.backgroundColor = m), (_.backgroundColor = g));
-    let C = (0, o.useTransition)(n, {
+        m = {};
+    (f.transform = 'translate3d(10px, 10px, 0) scale3d(3, 3, 1)'), (m.transform = 'translate3d(0, 0, 0) scale3d(1, 1, 1)');
+    let g = (0, s.useToken)(o.Z.unsafe_rawColors.BRAND_500).hex(),
+        C = (0, s.useToken)(o.Z.unsafe_rawColors.PRIMARY_630).hex();
+    l && null == t.icon && ((f.backgroundColor = g), (m.backgroundColor = C));
+    let _ = (0, s.useTransition)(n, {
         from: f,
-        enter: _,
+        enter: m,
         leave: f,
         config: { duration: 100 },
         onStart: h,
         onRest: p
     });
     return (0, i.jsx)(i.Fragment, {
-        children: C(
+        children: _(
             (e, n, l) =>
                 n &&
                 (0, i.jsx)(

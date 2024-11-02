@@ -1,21 +1,21 @@
-t.d(n, {
+e.d(t, {
     Z: function () {
-        return d;
+        return C;
     }
 });
-var o = t(200651);
-t(192379);
-var i = t(481060),
-    r = t(63063),
-    s = t(921869),
-    c = t(514161),
-    l = t(981631),
-    a = t(689938),
-    C = t(233820);
-function u() {
-    return (0, o.jsx)(c.yC, {
-        children: (0, o.jsx)(c.Ux, {
-            text: a.Z.Messages.CONNECT_CRUNCHYROLL_DISPLAY_SHOW_VALUE_PROP,
+var o = e(200651);
+e(192379);
+var i = e(481060),
+    r = e(63063),
+    c = e(921869),
+    l = e(514161),
+    s = e(981631),
+    a = e(388032),
+    u = e(233820);
+function d() {
+    return (0, o.jsx)(l.yC, {
+        children: (0, o.jsx)(l.Ux, {
+            text: a.intl.string(a.t['2TXHQU']),
             children: (0, o.jsx)(i.TvIcon, {
                 size: 'md',
                 color: 'currentColor'
@@ -23,22 +23,22 @@ function u() {
         })
     });
 }
-function d(e) {
-    let { onContinue: n, onClose: t } = e,
-        i = r.Z.getArticleURL(l.BhN.CRUNCHYROLL_CONNECTION);
-    return (0, o.jsx)(s.m, {
-        platformType: l.ABu.CRUNCHYROLL,
-        headerConnect: a.Z.Messages.CONNECT_CRUNCHYROLL_LANDING_TITLE,
-        body: a.Z.Messages.CONNECT_CRUNCHYROLL_LANDING_BODY,
+function C(n) {
+    let { onContinue: t, onClose: e } = n,
+        i = r.Z.getArticleURL(s.BhN.CRUNCHYROLL_CONNECTION);
+    return (0, o.jsx)(c.m, {
+        platformType: s.ABu.CRUNCHYROLL,
+        headerConnect: a.intl.string(a.t['Da+3ND']),
+        body: a.intl.string(a.t.MaPpPD),
         learnMoreLink: i,
-        onClose: t,
-        onContinue: n,
+        onClose: e,
+        onContinue: t,
         img: (0, o.jsx)('img', {
-            src: C,
+            src: u,
             width: 234,
             height: 152,
             alt: ''
         }),
-        valueProps: (0, o.jsx)(u, {})
+        valueProps: (0, o.jsx)(d, {})
     });
 }

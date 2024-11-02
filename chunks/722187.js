@@ -9,7 +9,7 @@ var i = n(120356),
     a = n.n(i),
     s = n(766646),
     o = n(481060),
-    l = n(689938),
+    l = n(388032),
     u = n(753328);
 function c(e) {
     let { children: t, className: n, disabled: i, required: c = !1, ...d } = e;
@@ -31,7 +31,7 @@ function c(e) {
                             'aria-hidden': !0,
                             children: '*'
                         }),
-                        (0, r.jsx)(s.n, { children: l.Z.Messages.REQUIRED })
+                        (0, r.jsx)(s.n, { children: l.intl.string(l.t.EkokLy) })
                     ]
                 })
         ]

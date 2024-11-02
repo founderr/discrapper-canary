@@ -15,9 +15,9 @@ n.d(t, {
 var s = n(525654),
     a = n.n(s),
     r = n(271579),
-    o = n(314897),
+    i = n(314897),
     l = n(981631);
-let i = 'linux';
+let o = 'linux';
 function c(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 ? arguments[2] : void 0;
@@ -30,18 +30,18 @@ function c(e) {
 function d() {
     var e;
     let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null === (e = a().os) || void 0 === e ? void 0 : e.family;
-    return null == t ? 'win' : -1 !== t.indexOf('Ubuntu') || -1 !== t.indexOf('Debian') || -1 !== t.indexOf('Fedora') || -1 !== t.indexOf('Red Hat') || -1 !== t.indexOf('SuSE') || -1 !== t.indexOf('Linux') ? i : -1 !== t.indexOf('OS X') ? 'osx' : 'win';
+    return null == t ? 'win' : -1 !== t.indexOf('Ubuntu') || -1 !== t.indexOf('Debian') || -1 !== t.indexOf('Fedora') || -1 !== t.indexOf('Red Hat') || -1 !== t.indexOf('SuSE') || -1 !== t.indexOf('Linux') ? o : -1 !== t.indexOf('OS X') ? 'osx' : 'win';
 }
 function u(e) {
     return {
         win: 'Windows',
         osx: 'Mac',
-        [i]: 'Linux'
+        [o]: 'Linux'
     }[d(e)];
 }
 function f() {
     let e = d();
-    return c(e, !1, e === i ? 'tar.gz' : null);
+    return c(e, !1, e === o ? 'tar.gz' : null);
 }
 function p(e, t, n) {
     let s = null != n ? n.toString() : null;
@@ -49,14 +49,14 @@ function p(e, t, n) {
         case 'iOS':
             return (0, r.ZP)(null != s ? s : 'https://itunes.apple.com/us/app/discord-chat-for-games/id985746746', {
                 utmSource: e,
-                fingerprint: o.default.getFingerprint(),
+                fingerprint: i.default.getFingerprint(),
                 attemptId: (0, r.WS)()
             });
         case 'Android':
             return (0, r.ZP)(null != s ? s : 'https://play.google.com/store/apps/details', {
                 utmSource: e,
                 id: 'com.discord',
-                fingerprint: o.default.getFingerprint(),
+                fingerprint: i.default.getFingerprint(),
                 attemptId: (0, r.WS)()
             });
         default:

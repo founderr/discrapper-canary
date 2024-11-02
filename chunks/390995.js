@@ -99,12 +99,12 @@ e.exports = function (e) {
             ]
         },
         d = '[0-9](_?[0-9])*',
-        _ = {
+        f = {
             className: 'number',
             relevance: 0,
             variants: [{ begin: `\\b([1-9](_?[0-9])*|0)(\\.(${d}))?([eE][+-]?(${d})|r)?i?\\b` }, { begin: '\\b0[dD][0-9](_?[0-9])*r?i?\\b' }, { begin: '\\b0[bB][0-1](_?[0-1])*r?i?\\b' }, { begin: '\\b0[oO][0-7](_?[0-7])*r?i?\\b' }, { begin: '\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*r?i?\\b' }, { begin: '\\b0(_?[0-7])+r?i?\\b' }]
         },
-        E = {
+        _ = {
             variants: [
                 { match: /\(\)/ },
                 {
@@ -117,7 +117,7 @@ e.exports = function (e) {
                 }
             ]
         },
-        f = [
+        h = [
             c,
             {
                 variants: [
@@ -160,7 +160,7 @@ e.exports = function (e) {
                     1: 'keyword',
                     3: 'title.function'
                 },
-                contains: [E]
+                contains: [_]
             },
             { begin: e.IDENT_RE + '::' },
             {
@@ -174,7 +174,7 @@ e.exports = function (e) {
                 contains: [c, { begin: n }],
                 relevance: 0
             },
-            _,
+            f,
             {
                 className: 'variable',
                 begin: "(\\$\\W)|((\\$|@@?)(\\w+))(?=[^@$?])(?![A-Za-z])(?![@$?'])"
@@ -223,13 +223,13 @@ e.exports = function (e) {
                 relevance: 0
             }
         ].concat(o, l);
-    (u.contains = f), (E.contains = f);
-    let h = [
+    (u.contains = h), (_.contains = h);
+    let p = [
         {
             begin: /^\s*=>/,
             starts: {
                 end: '$',
-                contains: f
+                contains: h
             }
         },
         {
@@ -238,7 +238,7 @@ e.exports = function (e) {
             starts: {
                 end: '$',
                 keywords: a,
-                contains: f
+                contains: h
             }
         }
     ];
@@ -249,7 +249,7 @@ e.exports = function (e) {
             aliases: ['rb', 'gemspec', 'podspec', 'thor', 'irb'],
             keywords: a,
             illegal: /\/\*/,
-            contains: [e.SHEBANG({ binary: 'ruby' })].concat(h).concat(l).concat(f)
+            contains: [e.SHEBANG({ binary: 'ruby' })].concat(p).concat(l).concat(h)
         }
     );
 };

@@ -1,23 +1,23 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return r;
+        return s;
     }
 });
-var l = t(200651);
-t(192379);
-var i = t(442837),
-    a = t(481060),
-    s = t(655922),
-    o = t(158776),
-    u = t(981631),
-    d = t(689938);
-function r(e) {
-    let n = (0, i.e7)([o.Z], () => (0, s.Z)(o.Z.findActivity(e, (e) => e.type === u.IIU.STREAMING)), [e]);
-    return null == n
+var i = n(200651);
+n(192379);
+var l = n(442837),
+    r = n(481060),
+    o = n(655922),
+    a = n(158776),
+    u = n(981631),
+    d = n(388032);
+function s(e) {
+    let t = (0, l.e7)([a.Z], () => (0, o.Z)(a.Z.findActivity(e, (e) => e.type === u.IIU.STREAMING)), [e]);
+    return null == t
         ? null
-        : (0, l.jsx)(a.MenuItem, {
+        : (0, i.jsx)(r.MenuItem, {
               id: 'watch-stream',
-              label: d.Z.Messages.WATCH_STREAM,
-              action: () => window.open(n, '_blank')
+              label: d.intl.string(d.t['7Xq/nZ']),
+              action: () => window.open(t, '_blank')
           });
 }

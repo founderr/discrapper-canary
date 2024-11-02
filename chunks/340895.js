@@ -8,71 +8,71 @@ var i,
     u = n(433517),
     c = n(570140),
     d = n(695346),
-    _ = n(581883),
-    E = n(314897),
-    f = n(592125),
-    h = n(885110),
-    p = n(451478),
-    I = n(981631);
-let m = {
+    f = n(581883),
+    _ = n(314897),
+    h = n(592125),
+    p = n(885110),
+    m = n(451478),
+    g = n(981631);
+let E = {
         width: 232,
         height: 315
     },
+    v = new Set(),
+    I = [],
+    S = new Map(),
     T = new Set(),
-    S = [],
-    g = new Map(),
-    A = new Set(),
-    N = !1;
-function R(e) {
-    if (null == e || null == g.get(e)) return !1;
-    g.delete(e), (A = new Set(A)).delete(e);
+    b = !1;
+function y(e) {
+    if (null == e || null == S.get(e)) return !1;
+    S.delete(e), (T = new Set(T)).delete(e);
 }
-function O(e) {
+function A(e) {
     let { channelId: t, ringing: n } = e,
-        i = n.includes(E.default.getId());
-    if (!A.has(t) && i) {
-        let e = f.Z.getChannel(t);
+        i = n.includes(_.default.getId());
+    if (!T.has(t) && i) {
+        let e = h.Z.getChannel(t);
         if (null == e) return !1;
-        let n = 10 * A.size,
+        let n = 10 * T.size,
             { x: i, y: a } = (function () {
-                let e = p.Z.windowSize();
-                return null != r && r.x + m.width < e.width && r.y + m.height < e.height
+                let e = m.Z.windowSize();
+                return null != r && r.x + E.width < e.width && r.y + E.height < e.height
                     ? r
                     : {
-                          x: e.width / 2 - m.width / 2,
-                          y: e.height / 2 - m.height / 2
+                          x: e.width / 2 - E.width / 2,
+                          y: e.height / 2 - E.height / 2
                       };
             })();
         return (
-            g.set(t, {
+            S.set(t, {
                 channel: e,
                 x: i + n,
                 y: a + n
             }),
-            (A = new Set(A)).add(t),
+            (T = new Set(T)).add(t),
             void 0
         );
     }
-    return !!A.has(t) && !i && R(t);
+    return !!T.has(t) && !i && y(t);
 }
-function v() {
-    N = h.Z.getStatus() === I.Skl.DND || d.QZ.getSetting();
+function N() {
+    b = p.Z.getStatus() === g.Skl.DND || d.QZ.getSetting();
 }
 class C extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(f.Z, h.Z), this.syncWith([h.Z], v), this.syncWith([_.Z], v);
+        this.waitFor(h.Z, p.Z), this.syncWith([p.Z], N), this.syncWith([f.Z], N);
     }
     getIncomingCalls() {
-        return N ? S : Array.from(g.values());
+        return b ? I : Array.from(S.values());
     }
     getIncomingCallChannelIds() {
-        return N ? T : A;
+        return b ? v : T;
     }
     getFirstIncomingCallId() {
-        return N ? null : A.values().next().value;
+        return b ? null : T.values().next().value;
     }
     hasIncomingCalls() {
-        return !N && A.size > 0;
+        return !b && T.size > 0;
     }
 }
 (o = 'IncomingCallStore'),
@@ -85,15 +85,15 @@ class C extends (i = l.ZP.Store) {
           })
         : (a[s] = o),
     (t.Z = new C(c.Z, {
-        CALL_CREATE: O,
-        CALL_UPDATE: O,
+        CALL_CREATE: A,
+        CALL_UPDATE: A,
         CALL_DELETE: function (e) {
             let { channelId: t } = e;
-            return R(t);
+            return y(t);
         },
         VOICE_CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;
-            return R(t);
+            return y(t);
         },
         INCOMING_CALL_MOVE: function (e) {
             let { x: t, y: n } = e;
@@ -108,6 +108,6 @@ class C extends (i = l.ZP.Store) {
         },
         CHANNEL_DELETE: function (e) {
             let { channel: t } = e;
-            return R(t.id);
+            return y(t.id);
         }
     }));

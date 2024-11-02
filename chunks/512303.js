@@ -1,72 +1,72 @@
 t.d(n, {
     Z: function () {
-        return M;
+        return m;
     }
 });
 var i = t(200651);
 t(192379);
-var a = t(373793),
-    s = t(481060),
-    l = t(700582),
-    r = t(592180),
-    o = t(565138),
+var l = t(373793),
+    r = t(481060),
+    a = t(700582),
+    o = t(592180),
+    s = t(565138),
     u = t(430824),
     d = t(594174),
-    c = t(689938),
-    E = t(461404);
-function M(e) {
-    var n, t, M;
-    if (!(0, r.a)(e)) return null;
-    let g = null === (n = e.interactionMetadata) || void 0 === n ? void 0 : n.authorizing_integration_owners[a.Y.USER_INSTALL],
-        f = null === (t = e.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners[a.Y.GUILD_INSTALL],
-        m = d.default.getUser(g),
-        I = u.Z.getGuild(f),
-        _ = d.default.getUser(null === (M = e.interactionMetadata) || void 0 === M ? void 0 : M.user.id),
-        Z = null;
+    c = t(388032),
+    g = t(461404);
+function m(e) {
+    var n, t, m;
+    if (!(0, o.a)(e)) return null;
+    let f = null === (n = e.interactionMetadata) || void 0 === n ? void 0 : n.authorizing_integration_owners[l.Y.USER_INSTALL],
+        h = null === (t = e.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners[l.Y.GUILD_INSTALL],
+        v = d.default.getUser(f),
+        I = u.Z.getGuild(h),
+        E = d.default.getUser(null === (m = e.interactionMetadata) || void 0 === m ? void 0 : m.user.id),
+        p = null;
     return (
         null != I
-            ? (Z = (0, i.jsx)(s.MenuItem, {
-                  className: E.interactionInfoMenuItem,
+            ? (p = (0, i.jsx)(r.MenuItem, {
+                  className: g.interactionInfoMenuItem,
                   disabled: !0,
                   iconLeft: () =>
-                      (0, i.jsx)(o.Z, {
+                      (0, i.jsx)(s.Z, {
                           guild: I,
-                          size: o.Z.Sizes.MINI
+                          size: s.Z.Sizes.MINI
                       }),
                   id: 'integration-owner',
                   label: I.name,
-                  subtext: c.Z.Messages.INTERACTION_RESPONSE_CONTEXT_INSTALLED_BY.format({ application: e.author.username })
+                  subtext: c.intl.formatToPlainString(c.t.ShLXXF, { application: e.author.username })
               }))
-            : null != m &&
-              (Z = (0, i.jsx)(s.MenuItem, {
-                  className: E.interactionInfoMenuItem,
+            : null != v &&
+              (p = (0, i.jsx)(r.MenuItem, {
+                  className: g.interactionInfoMenuItem,
                   disabled: !0,
                   iconLeft: () =>
-                      (0, i.jsx)(l.Z, {
-                          user: m,
-                          size: s.AvatarSizes.SIZE_20
+                      (0, i.jsx)(a.Z, {
+                          user: v,
+                          size: r.AvatarSizes.SIZE_20
                       }),
                   id: 'integration-owner',
-                  label: m.username,
-                  subtext: c.Z.Messages.INTERACTION_RESPONSE_CONTEXT_INSTALLED_BY.format({ application: e.author.username })
+                  label: v.username,
+                  subtext: c.intl.formatToPlainString(c.t.ShLXXF, { application: e.author.username })
               })),
-        (0, i.jsxs)(s.MenuItem, {
+        (0, i.jsxs)(r.MenuItem, {
             id: 'view-interaction-info',
-            label: c.Z.Messages.VIEW_INTERACTION_INFO,
+            label: c.intl.string(c.t.Rjezb2),
             children: [
-                Z,
-                null != _
-                    ? (0, i.jsx)(s.MenuItem, {
-                          className: E.interactionInfoMenuItem,
+                p,
+                null != E
+                    ? (0, i.jsx)(r.MenuItem, {
+                          className: g.interactionInfoMenuItem,
                           disabled: !0,
                           iconLeft: () =>
-                              (0, i.jsx)(l.Z, {
-                                  user: _,
-                                  size: s.AvatarSizes.SIZE_20
+                              (0, i.jsx)(a.Z, {
+                                  user: E,
+                                  size: r.AvatarSizes.SIZE_20
                               }),
                           id: 'interaction-user',
-                          label: _.username,
-                          subtext: c.Z.Messages.INTERACTION_RESPONSE_CONTEXT_TRIGGERED_BY
+                          label: E.username,
+                          subtext: c.intl.string(c.t['04gxNj'])
                       })
                     : null
             ]

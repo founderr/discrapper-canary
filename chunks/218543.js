@@ -108,7 +108,7 @@ class d {
         a(this, 'time_', 0);
     }
 }
-class _ {
+class f {
     constructor() {
         a(this, 'loadIndex', new u('\u2757', 'Load index.tsx')),
             a(this, 'loadFastConnectNativeModule', new u('\uD83D\uDCBE', 'Load fast_connect native module')),
@@ -155,7 +155,7 @@ class _ {
             });
     }
 }
-t.Z = new (class e extends _ {
+t.Z = new (class e extends f {
     setTTICallback(e) {
         s = () => {
             !0 === e() && (s = () => !1);

@@ -1,69 +1,69 @@
 t.d(n, {
     Z: function () {
-        return p;
+        return h;
     }
 });
 var l = t(200651),
     i = t(120356),
-    a = t.n(i),
-    r = t(481060),
+    r = t.n(i),
+    a = t(481060),
     o = t(318374),
     s = t(5192),
     c = t(192918),
     u = t(256139),
     d = t(91907),
     m = t(866040),
-    _ = t(689938),
-    f = t(756988);
-function p(e) {
+    f = t(388032),
+    p = t(756988);
+function h(e) {
     let { entry: n, channel: t, className: i } = e,
-        { displayParticipants: p, participant1: C, participant2: h, numOtherParticipants: I, orderedParticipants: x } = (0, c.Z)(n),
-        E = [C, h];
+        { displayParticipants: h, participant1: _, participant2: x, numOtherParticipants: C, orderedParticipants: v } = (0, c.Z)(n),
+        b = [_, x];
     return (0, l.jsxs)('div', {
-        className: a()(f.container, i),
+        className: r()(p.container, i),
         children: [
-            p.length > 0
+            h.length > 0
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(m.Z, {
-                              participants: x,
+                              participants: v,
                               channel: t,
                               children: (e) =>
-                                  (0, l.jsx)(r.Clickable, {
-                                      className: f.clickable,
+                                  (0, l.jsx)(a.Clickable, {
+                                      className: p.clickable,
                                       ...e,
                                       children: (0, l.jsx)(o.Z, {
                                           maxUsers: 3,
-                                          users: p,
-                                          size: r.AvatarSizes.SIZE_20,
-                                          avatarClassName: f.stackedAvatar,
+                                          users: h,
+                                          size: a.AvatarSizes.SIZE_20,
+                                          avatarClassName: p.stackedAvatar,
                                           hideOverflowCount: !0,
                                           disableUsernameTooltip: !0
                                       })
                                   })
                           }),
-                          (0, l.jsx)(r.Spacer, {
+                          (0, l.jsx)(a.Spacer, {
                               size: 6,
                               horizontal: !0
                           })
                       ]
                   })
                 : null,
-            (0, l.jsx)(r.Heading, {
+            (0, l.jsx)(a.Heading, {
                 variant: 'text-sm/semibold',
                 color: 'text-secondary',
-                className: a()(f.truncatedText, f.usersHeader),
+                className: r()(p.truncatedText, p.usersHeader),
                 scaleFontToUserSetting: !0,
-                children: _.Z.Messages.CONTENT_INVENTORY_ENTRY_USERS_V2.format({
-                    user0: s.ZP.getName(t.guild_id, t.id, E[0]),
-                    user1: s.ZP.getName(t.guild_id, t.id, E[1]),
-                    countOthers: I,
+                children: f.intl.format(f.t.rH95Gh, {
+                    user0: s.ZP.getName(t.guild_id, t.id, b[0]),
+                    user1: s.ZP.getName(t.guild_id, t.id, b[1]),
+                    countOthers: C,
                     name0Hook: (e, n) =>
                         (0, l.jsx)(
                             d.Z,
                             {
                                 text: e,
-                                user: E[0],
+                                user: b[0],
                                 channel: t
                             },
                             n
@@ -73,7 +73,7 @@ function p(e) {
                             d.Z,
                             {
                                 text: e,
-                                user: E[1],
+                                user: b[1],
                                 channel: t
                             },
                             n
@@ -82,13 +82,13 @@ function p(e) {
                         (0, l.jsx)(
                             m.Z,
                             {
-                                participants: x,
+                                participants: v,
                                 channel: t,
                                 children: (n) =>
                                     (0, l.jsx)(u.Z, {
                                         ...n,
                                         tag: 'span',
-                                        children: (0, l.jsx)(r.Text, {
+                                        children: (0, l.jsx)(a.Text, {
                                             variant: 'text-sm/semibold',
                                             color: 'text-primary',
                                             lineClamp: 1,

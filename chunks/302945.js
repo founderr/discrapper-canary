@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return f;
     }
 });
 var r = n(200651),
@@ -10,15 +10,15 @@ var r = n(200651),
     o = n(793030),
     l = n(422034),
     u = n(182294),
-    c = n(689938),
+    c = n(388032),
     d = n(391404);
-function _(e) {
+function f(e) {
     let { affinities: t, className: n } = e,
         a = (e) => (null != e.globalName ? e.globalName : e.username),
-        _ = i.useMemo(
+        f = i.useMemo(
             () =>
                 t.length > 1
-                    ? c.Z.Messages.NITRO_AFFINITY_UPSELL.format({
+                    ? c.intl.formatToPlainString(c.t.HaVk0d, {
                           username: a(t[0]),
                           numFriends: t.length - 1
                       })
@@ -26,7 +26,7 @@ function _(e) {
             [t]
         );
     if (t.length <= 1) return null;
-    let E = t.map((e, n) =>
+    let _ = t.map((e, n) =>
         (0, r.jsx)(
             l.O,
             {
@@ -42,13 +42,13 @@ function _(e) {
         children: [
             (0, r.jsx)('div', {
                 className: d.iconContainer,
-                children: E
+                children: _
             }),
             (0, r.jsx)('div', {
                 className: d.textContainer,
                 children: (0, r.jsx)(o.xv, {
                     variant: 'text-sm/medium',
-                    children: _
+                    children: f
                 })
             })
         ]

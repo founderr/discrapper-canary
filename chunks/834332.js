@@ -8,21 +8,21 @@ var r = n(275726),
     u = n(496675),
     c = n(944486),
     d = n(594174),
-    _ = n(146085),
-    E = n(96052),
-    f = n(981631);
-class h extends a.Z {
+    f = n(146085),
+    _ = n(96052),
+    h = n(981631);
+class p extends a.Z {
     handleVoiceStateUpdates(e) {
         let { voiceStates: t } = e;
         t.forEach((e) => {
-            let { channelId: t, userId: n, suppress: a, requestToSpeakTimestamp: h } = e;
+            let { channelId: t, userId: n, suppress: a, requestToSpeakTimestamp: p } = e;
             if (c.Z.getVoiceChannelId() === t && !!a && null != t && n !== s.default.getId()) {
-                if (u.Z.can(_.yP, o.Z.getChannel(t))) {
-                    if (null != h) {
+                if (u.Z.can(f.yP, o.Z.getChannel(t))) {
+                    if (null != p) {
                         let e = d.default.getUser(n);
-                        null != e && (0, E.U)(t, e, h);
+                        null != e && (0, _.U)(t, e, p);
                     } else {
-                        let e = l.Z.getMessages(t).findNewest((e) => e.type === r.u.STAGE_RAISE_HAND && e.hasFlag(f.iLy.EPHEMERAL) && e.author.id === n);
+                        let e = l.Z.getMessages(t).findNewest((e) => e.type === r.u.STAGE_RAISE_HAND && e.hasFlag(h.iLy.EPHEMERAL) && e.author.id === n);
                         null != e && i.Z.deleteMessage(t, e.id, !0);
                     }
                 }
@@ -45,4 +45,4 @@ class h extends a.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new h();
+t.Z = new p();

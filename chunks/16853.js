@@ -1,24 +1,24 @@
 var i = n(200651);
 n(192379);
-var s = n(481060),
-    a = n(643560);
+var l = n(481060),
+    r = n(643560);
 t.Z = (e) => {
-    let { entry: t, hideEditButton: n, children: l, onRequestOpen: r, onRequestClose: o } = e;
-    return (0, i.jsx)(s.Popout, {
-        onRequestOpen: r,
+    let { entry: t, hideEditButton: n, children: a, onRequestOpen: s, onRequestClose: o } = e;
+    return (0, i.jsx)(l.Popout, {
+        onRequestOpen: s,
         onRequestClose: o,
-        animation: s.Popout.Animation.NONE,
+        animation: l.Popout.Animation.NONE,
         position: 'bottom',
         spacing: 4,
         align: 'right',
         renderPopout: (e) => {
-            let { closePopout: s } = e;
-            return (0, i.jsx)(a.default, {
+            let { closePopout: l } = e;
+            return (0, i.jsx)(r.default, {
                 entry: t,
-                closePopout: s,
+                closePopout: l,
                 hideEditButton: n
             });
         },
-        children: l
+        children: a
     });
 };

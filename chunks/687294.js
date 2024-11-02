@@ -1,9 +1,9 @@
 n.d(t, {
     $: function () {
-        return f;
+        return h;
     },
     Z: function () {
-        return E;
+        return _;
     }
 }),
     n(724458),
@@ -17,9 +17,9 @@ var r = n(259443),
     l = n(865275),
     u = n(981631),
     c = n(959517),
-    d = n(689938);
-let _ = new r.Y('CloudUploaderBase.tsx');
-class E extends l.Z {
+    d = n(388032);
+let f = new r.Y('CloudUploaderBase.tsx');
+class _ extends l.Z {
     _fileSize() {
         return this.files.reduce((e, t) => {
             var n;
@@ -30,7 +30,7 @@ class E extends l.Z {
         var e, t;
         let n = (0, s.F)(null === (t = this.files[0]) || void 0 === t ? void 0 : null === (e = t.item) || void 0 === e ? void 0 : e.target);
         return this.files.length > n.getMaxAttachmentsCount()
-            ? (_.log('Too many attachments for '.concat(this.id)), this._handleError({ code: u.evJ.TOO_MANY_ATTACHMENTS }), !1)
+            ? (f.log('Too many attachments for '.concat(this.id)), this._handleError({ code: u.evJ.TOO_MANY_ATTACHMENTS }), !1)
             : !(this._fileSize() > n.getMaxTotalAttachmentSize()) ||
                   (this._handleError({
                       code: u.evJ.ENTITY_TOO_LARGE,
@@ -42,11 +42,11 @@ class E extends l.Z {
         return this.files.some((e) => e.error === u.evJ.ENTITY_TOO_LARGE);
     }
     setUploadingTextForUI() {
-        let e = 1 === this.files.length && null != this.files[0].filename ? this.files[0].filename : d.Z.Messages.UPLOADING_FILES.format({ count: this.files.length }),
+        let e = 1 === this.files.length && null != this.files[0].filename ? this.files[0].filename : d.intl.formatToPlainString(d.t.D0noUl, { count: this.files.length }),
             t = this.files.some((e) => e.isImage),
             n = this.files.some((e) => e.isVideo),
             r = this._fileSize();
-        _.log('setUploadingTextForUI - total content: '.concat(r, ' bytes and ').concat(this.files.length, ' attachments for ').concat(this.id)),
+        f.log('setUploadingTextForUI - total content: '.concat(r, ' bytes and ').concat(this.files.length, ' attachments for ').concat(this.id)),
             (this._file = {
                 ...this._file,
                 totalPostCompressionSize: r,
@@ -83,10 +83,10 @@ class E extends l.Z {
         );
     }
     cancel() {
-        if ((_.log('Cancel called for '.concat(this.id)), !this._aborted)) (this._aborted = !0), null != this._cancel && this._cancel(), this.files.forEach((e) => e.cancel()), this._handleComplete();
+        if ((f.log('Cancel called for '.concat(this.id)), !this._aborted)) (this._aborted = !0), null != this._cancel && this._cancel(), this.files.forEach((e) => e.cancel()), this._handleComplete();
     }
     async cancelItem(e) {
-        _.log('Cancel called for '.concat(this.id, ' for item ').concat(e));
+        f.log('Cancel called for '.concat(this.id, ' for item ').concat(e));
         let t = this.files.find((t) => t.id === e);
         if (null == t || t.status === a.m.CANCELED) return;
         let n = this.files.indexOf(t);
@@ -125,7 +125,7 @@ class E extends l.Z {
                 : (t[n] = r);
     }
 }
-async function f(e) {
+async function h(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 ? arguments[2] : void 0,
         r = e.map(

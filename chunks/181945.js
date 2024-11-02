@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return h;
     }
 }),
     n(390547),
@@ -15,9 +15,9 @@ var r = n(392711),
     u = n(306680),
     c = n(626135),
     d = n(709054),
-    _ = n(981631),
-    E = n(490897);
-function f(e, t, n) {
+    f = n(981631),
+    _ = n(490897);
+function h(e, t, n) {
     let r = i()
         .flatMap(e, (e) => {
             let t = l.ZP.getSelectableChannelIds(e),
@@ -32,23 +32,23 @@ function f(e, t, n) {
         })
         .map((e) => ({
             channelId: e,
-            readStateType: E.W.CHANNEL,
+            readStateType: _.W.CHANNEL,
             messageId: u.ZP.lastMessageId(e)
         }));
     return (
         e.forEach((e) => {
             r.push({
                 channelId: d.default.cast(e),
-                readStateType: E.W.GUILD_EVENT,
-                messageId: u.ZP.lastMessageId(e, E.W.GUILD_EVENT)
+                readStateType: _.W.GUILD_EVENT,
+                messageId: u.ZP.lastMessageId(e, _.W.GUILD_EVENT)
             }),
                 r.push({
                     channelId: d.default.cast(e),
-                    readStateType: E.W.GUILD_ONBOARDING_QUESTION,
+                    readStateType: _.W.GUILD_ONBOARDING_QUESTION,
                     messageId: s.Z.ackIdForGuild(e)
                 });
         }),
-        c.default.track(_.rMx.MARK_AS_READ, {
+        c.default.track(f.rMx.MARK_AS_READ, {
             source: t,
             type: 'guild'
         }),

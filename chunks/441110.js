@@ -7,30 +7,30 @@ var r = n(200651),
     u = n(592125),
     c = n(944486),
     d = n(626135),
-    _ = n(981631),
-    E = n(689938),
-    f = n(762164);
+    f = n(981631),
+    _ = n(388032),
+    h = n(762164);
 t.Z = function (e) {
-    let { guild: t, message: n, onClose: h } = e,
-        p = u.Z.getChannel(c.Z.getChannelId(t.id));
+    let { guild: t, message: n, onClose: p } = e,
+        m = u.Z.getChannel(c.Z.getChannelId(t.id));
     return (i.useEffect(() => {
-        d.default.track(_.rMx.OPEN_POPOUT, {
+        d.default.track(f.rMx.OPEN_POPOUT, {
             type: 'New Member Badge Popout',
             guild_id: t.id,
-            channel_id: null == p ? void 0 : p.id
+            channel_id: null == m ? void 0 : m.id
         });
     }, []),
-    null == p)
+    null == m)
         ? null
         : (0, r.jsx)(o.W_, {
               children: (0, r.jsxs)('div', {
-                  className: f.popoutContainer,
+                  className: h.popoutContainer,
                   children: [
                       (0, r.jsxs)('div', {
-                          className: f.mainContent,
+                          className: h.mainContent,
                           children: [
                               (0, r.jsx)('div', {
-                                  className: f.iconContainer,
+                                  className: h.iconContainer,
                                   children: (0, r.jsx)(a.NewUserIcon, {
                                       size: 'custom',
                                       color: 'currentColor',
@@ -42,12 +42,12 @@ t.Z = function (e) {
                                   children: [
                                       (0, r.jsx)(a.Heading, {
                                           variant: 'heading-md/semibold',
-                                          className: f.header,
-                                          children: E.Z.Messages.NEW_MEMBER_BADGE_TOOLTIP_TEXT
+                                          className: h.header,
+                                          children: _.intl.string(_.t['v/OYd3'])
                                       }),
                                       (0, r.jsx)(a.Text, {
                                           variant: 'text-sm/normal',
-                                          children: E.Z.Messages.NEW_MEMBER_BADGE_POPOUT_TEXT
+                                          children: _.intl.string(_.t.Z85MlJ)
                                       })
                                   ]
                               })
@@ -56,13 +56,13 @@ t.Z = function (e) {
                       (0, r.jsx)(a.Button, {
                           size: a.Button.Sizes.SMALL,
                           color: a.Button.Colors.BRAND,
-                          className: f.ctaButton,
-                          innerClassName: f.ctaButtonContent,
+                          className: h.ctaButton,
+                          innerClassName: h.ctaButtonContent,
                           fullWidth: !0,
                           onClick: () => {
-                              s.ZP.trackWithMetadata(_.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: n.author.id }), h(), (0, l.q)(n.author, p.id);
+                              s.ZP.trackWithMetadata(f.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: n.author.id }), p(), (0, l.q)(n.author, m.id);
                           },
-                          children: E.Z.Messages.MENTION_USER.format({ username: n.author.username })
+                          children: _.intl.format(_.t['+xsVS0'], { username: n.author.username })
                       })
                   ]
               })

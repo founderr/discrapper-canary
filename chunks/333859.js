@@ -1,72 +1,72 @@
-t.d(s, {
+n.d(t, {
     c: function () {
-        return h;
+        return f;
     }
 });
-var n = t(200651),
-    a = t(192379),
-    i = t(442837),
-    r = t(481060),
-    o = t(37234),
-    l = t(100527),
-    c = t(906732),
-    d = t(94795),
-    _ = t(327943),
-    u = t(539873),
-    E = t(311476),
-    T = t(197115),
-    S = t(626135),
-    I = t(981631),
-    N = t(474936),
-    m = t(689938),
-    C = t(444298),
-    A = t(113207);
-let g = () => {
-        (0, d.nJ)(), (0, o.xf)();
+var i = n(200651),
+    s = n(192379),
+    r = n(442837),
+    l = n(481060),
+    a = n(37234),
+    o = n(100527),
+    c = n(906732),
+    d = n(94795),
+    u = n(327943),
+    m = n(539873),
+    h = n(311476),
+    g = n(197115),
+    p = n(626135),
+    x = n(981631),
+    S = n(474936),
+    T = n(388032),
+    C = n(444298),
+    _ = n(113207);
+let E = () => {
+        (0, d.nJ)(), (0, a.xf)();
     },
-    h = () => {
-        let { analyticsLocations: e } = (0, c.ZP)(l.Z.USER_SETTINGS),
-            s = (0, i.e7)([_.Z], () => _.Z.isUpsellPreview),
-            { enabled: t } = E.Z.getCurrentConfig(
+    f = () => {
+        let { analyticsLocations: e } = (0, c.ZP)(o.Z.USER_SETTINGS),
+            t = (0, r.e7)([u.Z], () => u.Z.isUpsellPreview),
+            { enabled: n } = h.Z.getCurrentConfig(
                 { location: 'UserSettingsAppearanceInAppIcon' },
                 {
-                    autoTrackExposure: s,
-                    disable: !s
+                    autoTrackExposure: t,
+                    disable: !t
                 }
             );
         return (
-            a.useEffect(() => {
-                s &&
-                    S.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
-                        type: N.cd.APP_ICON_UPSELL,
+            s.useEffect(() => {
+                t &&
+                    p.default.track(x.rMx.PREMIUM_UPSELL_VIEWED, {
+                        type: S.cd.APP_ICON_UPSELL,
                         location_stack: e
                     });
             }, []),
-            (0, n.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: C.selectionGroup,
                 children: [
-                    (0, n.jsx)(u.Z, {
-                        disabled: s && !t,
+                    (0, i.jsx)(m.Z, {
+                        disabled: t && !n,
                         renderCTAButtons: () =>
-                            (0, n.jsxs)('div', {
+                            (0, i.jsxs)('div', {
                                 className: C.tryItOutButtons,
                                 children: [
-                                    (0, n.jsx)(r.Button, {
-                                        color: !t && s ? r.Button.Colors.PRIMARY : r.Button.Colors.BRAND,
-                                        onClick: () => g(),
-                                        children: t ? m.Z.Messages.PREVIEW : m.Z.Messages.APP_ICON_PREVIEW_TITLE
+                                    (0, i.jsx)(l.Button, {
+                                        color: !n && t ? l.Button.Colors.PRIMARY : l.Button.Colors.BRAND,
+                                        onClick: () => E(),
+                                        children: n ? T.intl.string(T.t.SKNnqq) : T.intl.string(T.t['hb/wEx'])
                                     }),
-                                    s
-                                        ? (0, n.jsx)(T.Z, {
-                                              showGradient: t,
-                                              subscriptionTier: N.Si.TIER_2,
-                                              buttonText: t ? m.Z.Messages.PREMIUM_UPSELL_GET_NITRO : m.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
+                                    t
+                                        ? (0, i.jsx)(g.Z, {
+                                              showGradient: n,
+                                              subscriptionTier: S.Si.TIER_2,
+                                              buttonText: n ? T.intl.string(T.t.pj0XBA) : T.intl.string(T.t.mr4K7O)
                                           })
                                         : null
                                 ]
                             })
                     }),
-                    (0, n.jsx)(r.FormDivider, { className: A.marginTop20 })
+                    (0, i.jsx)(l.FormDivider, { className: _.marginTop20 })
                 ]
             })
         );

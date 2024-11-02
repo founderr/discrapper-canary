@@ -38,7 +38,7 @@ function c(e, t) {
         });
 }
 let d = i().throttle((e) => {
-    let { enabled: t, combosEnabled: n, combosRequiredCount: r, screenshakeEnabled: i, shakeIntensity: s, screenshakeEnabledLocations: d, confettiEnabled: _, confettiSize: E, confettiCount: f, confettiEnabledLocations: h } = e;
+    let { enabled: t, combosEnabled: n, combosRequiredCount: r, screenshakeEnabled: i, shakeIntensity: s, screenshakeEnabledLocations: d, confettiEnabled: f, confettiSize: _, confettiCount: h, confettiEnabledLocations: p } = e;
     a.default.track(o.rMx.POGGERMODE_SETTINGS_UPDATED, {
         enabled: t,
         combos_enabled: n,
@@ -46,10 +46,10 @@ let d = i().throttle((e) => {
         screenshake_enabled: i,
         shake_intensity: s,
         screenshake_enabled_locations: c(d, l),
-        confetti_enabled: _,
-        confetti_size: E,
-        confetti_count: f,
-        confetti_enabled_locations: c(h, u)
+        confetti_enabled: f,
+        confetti_size: _,
+        confetti_count: h,
+        confetti_enabled_locations: c(p, u)
     });
 }, 5000);
 t.Z = d;

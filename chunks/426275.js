@@ -1,41 +1,41 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return m;
     }
 });
 var i = n(200651),
-    a = n(192379),
-    s = n(692547),
-    r = n(481060),
-    l = n(375954),
-    o = n(876338),
+    r = n(192379),
+    l = n(692547),
+    a = n(481060),
+    o = n(375954),
+    s = n(876338),
     c = n(912332),
     u = n(245216),
-    d = n(689938);
-function _(e) {
-    let { className: t, channelId: n, messageId: _, targetKind: E, embedIndex: I } = e,
-        m = a.useCallback(() => {
-            let e = l.Z.getMessage(n, _);
+    d = n(388032);
+function m(e) {
+    let { className: t, channelId: n, messageId: m, targetKind: f, embedIndex: h } = e,
+        p = r.useCallback(() => {
+            let e = o.Z.getMessage(n, m);
             if (null == e) return;
-            let t = (0, o.j)(e, {
-                targetKind: E,
-                embedIndex: I
+            let t = (0, s.j)(e, {
+                targetKind: f,
+                embedIndex: h
             });
             (0, c.l8)({
                 channelId: n,
-                messageId: _,
+                messageId: m,
                 source: 'message-actions',
                 forwardOptions: t
             });
-        }, [n, I, _, E]);
-    return (0, i.jsx)(r.CircleIconButton, {
+        }, [n, h, m, f]);
+    return (0, i.jsx)(a.CircleIconButton, {
         className: t,
-        tooltip: d.Z.Messages.MESSAGE_ACTION_FORWARD,
-        color: r.CircleIconButtonColors.SECONDARY,
+        tooltip: d.intl.string(d.t.I3ltXF),
+        color: a.CircleIconButtonColors.SECONDARY,
         icon: (0, i.jsx)(u.Z, {
             size: 'xs',
-            color: s.Z.colors.INTERACTIVE_NORMAL
+            color: l.Z.colors.INTERACTIVE_NORMAL
         }),
-        onClick: m
+        onClick: p
     });
 }

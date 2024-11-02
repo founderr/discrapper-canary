@@ -1,21 +1,21 @@
 n.d(t, {
     Z: function () {
-        return i;
+        return l;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(325767);
-function i(e) {
-    let { width: t = 24, height: n = 24, color: i = 'currentColor', ...r } = e;
-    return (0, s.jsx)('svg', {
-        ...(0, a.Z)(r),
+var r = n(325767);
+function l(e) {
+    let { width: t = 24, height: n = 24, color: l = 'currentColor', ...s } = e;
+    return (0, i.jsx)('svg', {
+        ...(0, r.Z)(s),
         width: t,
         height: n,
         viewBox: '0 0 20 20',
-        children: (0, s.jsx)('path', {
+        children: (0, i.jsx)('path', {
             d: 'M12.5 3.33334V5H17.1583L11.6667 10.4917L8.33333 7.15834L0 15.4917L1.175 16.6667L8.33333 9.50834L11.6667 12.8417L18.3333 6.175V10.8333H20V3.33334H12.5Z',
-            fill: i
+            fill: l
         })
     });
 }

@@ -7,11 +7,11 @@ var r = n(859209),
     u = i(l.append),
     c = i(l.delete),
     d = i(l.forEach),
-    _ = i([].push),
-    E = new o('a=1&a=2&b=3');
-E.delete('a', 1),
-    E.delete('b', void 0),
-    E + '' != 'a=2' &&
+    f = i([].push),
+    _ = new o('a=1&a=2&b=3');
+_.delete('a', 1),
+    _.delete('b', void 0),
+    _ + '' != 'a=2' &&
         r(
             l,
             'delete',
@@ -22,14 +22,14 @@ E.delete('a', 1),
                 if (n && void 0 === r) return c(this, e);
                 var i = [];
                 d(this, function (e, t) {
-                    _(i, {
+                    f(i, {
                         key: t,
                         value: e
                     });
                 }),
                     s(n, 1);
-                for (var o = a(e), l = a(r), E = 0, f = 0, h = !1, p = i.length; E < p; ) (t = i[E++]), h || t.key === o ? ((h = !0), c(this, t.key)) : f++;
-                for (; f < p; ) !((t = i[f++]).key === o && t.value === l) && u(this, t.key, t.value);
+                for (var o = a(e), l = a(r), _ = 0, h = 0, p = !1, m = i.length; _ < m; ) (t = i[_++]), p || t.key === o ? ((p = !0), c(this, t.key)) : h++;
+                for (; h < m; ) !((t = i[h++]).key === o && t.value === l) && u(this, t.key, t.value);
             },
             {
                 enumerable: !0,

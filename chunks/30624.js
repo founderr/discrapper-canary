@@ -1,11 +1,11 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return r;
     }
 });
-var s = n(421535);
-function a(e, t) {
-    var n, a, i;
+var i = n(421535);
+function r(e, t) {
+    var n, r, l;
     if (t.owner_user_id === e) return !0;
-    return (null === ((a = t), (i = e), (n = a.members.find((e) => e.user.id === i))) || void 0 === n ? void 0 : n.role) === s.T.ADMIN;
+    return (null === ((r = t), (l = e), (n = r.members.find((e) => e.user.id === l))) || void 0 === n ? void 0 : n.role) === i.T.ADMIN;
 }

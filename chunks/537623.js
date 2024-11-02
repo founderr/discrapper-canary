@@ -1,121 +1,121 @@
-n.r(t),
-    n.d(t, {
+n.r(e),
+    n.d(e, {
         default: function () {
-            return A;
+            return h;
         }
     }),
     n(47120);
-var a = n(200651),
+var l = n(200651),
     o = n(192379),
-    l = n(120356),
-    s = n.n(l),
+    a = n(120356),
+    i = n.n(a),
     r = n(481060),
-    i = n(367907),
-    _ = n(369994),
-    c = n(177862),
-    d = n(981631),
-    u = n(689938),
-    I = n(733609);
-function A(e) {
-    let { guildId: t, messageId: l, transitionState: A, onClose: R } = e,
-        [E, T] = o.useState([]),
-        [D, N] = o.useState(),
-        x = o.useCallback(() => {
-            let e = {
-                raid_alert_type: c.wR.JOIN_RAID,
-                raid_alert_id: l,
-                false_alarm_type: E.map((e) => e.toString()),
-                false_alarm_other_reason: D,
-                guild_id: t
+    s = n(367907),
+    c = n(369994),
+    d = n(177862),
+    u = n(981631),
+    _ = n(388032),
+    x = n(733609);
+function h(t) {
+    let { guildId: e, messageId: a, transitionState: h, onClose: f } = t,
+        [I, A] = o.useState([]),
+        [C, N] = o.useState(),
+        p = o.useCallback(() => {
+            let t = {
+                raid_alert_type: d.wR.JOIN_RAID,
+                raid_alert_id: a,
+                false_alarm_type: I.map((t) => t.toString()),
+                false_alarm_other_reason: C,
+                guild_id: e
             };
-            (0, i.yw)(d.rMx.GUILD_RAID_FEEDBACK, e),
-                (0, _.Fi)(t, l, (0, c.J$)(E)),
-                R(),
+            (0, s.yw)(u.rMx.GUILD_RAID_FEEDBACK, t),
+                (0, c.Fi)(e, a, (0, d.J$)(I)),
+                f(),
                 (0, r.openModalLazy)(async () => {
-                    let { default: e } = await n.e('37564').then(n.bind(n, 969214));
-                    return (t) => (0, a.jsx)(e, { ...t });
+                    let { default: t } = await n.e('37564').then(n.bind(n, 969214));
+                    return (e) => (0, l.jsx)(t, { ...e });
                 });
-        }, [R, l, t, D, E]),
-        C = [
+        }, [f, a, e, C, I]),
+        T = [
             {
-                text: u.Z.Messages.GUILD_ANTIRAID_RESOLVE_REASON_LEGITIMATE_ACTIVITY,
-                value: c.$l.LEGITIMATE_ACTIVITY
+                text: _.intl.string(_.t.yeaXw8),
+                value: d.$l.LEGITIMATE_ACTIVITY
             },
             {
-                text: u.Z.Messages.GUILD_ANTIRAID_RESOLVE_REASON_DM_SPAM,
-                value: c.$l.DM_SPAM
+                text: _.intl.string(_.t['o++3Bw']),
+                value: d.$l.DM_SPAM
             },
             {
-                text: u.Z.Messages.GUILD_ANTIRAID_RESOLVE_REASON_JOIN_RAID,
-                value: c.$l.JOIN_RAID
+                text: _.intl.string(_.t.UfHAwc),
+                value: d.$l.JOIN_RAID
             },
             {
-                text: u.Z.Messages.GUILD_AUTOMOD_REPORT_RAID_FEEDBACK_OTHER,
-                value: c.$l.OTHER
+                text: _.intl.string(_.t.K3UWeX),
+                value: d.$l.OTHER
             }
         ];
-    function O(e) {
-        E.includes(e) ? T((t) => t.filter((t) => t !== e)) : T((t) => [...t, e]);
+    function R(t) {
+        I.includes(t) ? A((e) => e.filter((e) => e !== t)) : A((e) => [...e, t]);
     }
-    return (0, a.jsxs)(r.ModalRoot, {
-        transitionState: A,
+    return (0, l.jsxs)(r.ModalRoot, {
+        transitionState: h,
         size: r.ModalSize.SMALL,
         children: [
-            (0, a.jsx)(r.ModalHeader, {
+            (0, l.jsx)(r.ModalHeader, {
                 separator: !1,
-                className: I.center,
-                children: (0, a.jsx)(r.Heading, {
+                className: x.center,
+                children: (0, l.jsx)(r.Heading, {
                     color: 'header-primary',
                     variant: 'heading-xl/bold',
-                    children: u.Z.Messages.GUILD_ANTIRAID_RESOLVE_TITLE
+                    children: _.intl.string(_.t['1zmw/P'])
                 })
             }),
-            (0, a.jsxs)(r.ModalContent, {
-                className: I.center,
+            (0, l.jsxs)(r.ModalContent, {
+                className: x.center,
                 children: [
-                    (0, a.jsx)(r.Text, {
+                    (0, l.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        className: I.textCenter,
-                        children: u.Z.Messages.GUILD_ANTIRAID_RESOLVE_DESCRIPTION
+                        className: x.textCenter,
+                        children: _.intl.string(_.t.nF79oK)
                     }),
-                    (0, a.jsx)('div', {
-                        className: I.options,
-                        children: C.map((e) => {
-                            let { text: t, value: n } = e;
-                            return (0, a.jsxs)(
+                    (0, l.jsx)('div', {
+                        className: x.options,
+                        children: T.map((t) => {
+                            let { text: e, value: n } = t;
+                            return (0, l.jsxs)(
                                 'div',
                                 {
-                                    className: s()(I.optionContainer, { [I.optionContainerOther]: n === c.$l.OTHER }),
+                                    className: i()(x.optionContainer, { [x.optionContainerOther]: n === d.$l.OTHER }),
                                     children: [
-                                        (0, a.jsxs)(r.Clickable, {
-                                            className: I.optionText,
-                                            onClick: () => O(n),
+                                        (0, l.jsxs)(r.Clickable, {
+                                            className: x.optionText,
+                                            onClick: () => R(n),
                                             children: [
-                                                (0, a.jsx)('div', {
-                                                    children: (0, a.jsx)(r.Checkbox, {
+                                                (0, l.jsx)('div', {
+                                                    children: (0, l.jsx)(r.Checkbox, {
                                                         type: r.Checkbox.Types.INVERTED,
                                                         size: 20,
-                                                        value: E.includes(n),
-                                                        onChange: () => O(n)
+                                                        value: I.includes(n),
+                                                        onChange: () => R(n)
                                                     })
                                                 }),
-                                                (0, a.jsx)(r.Text, {
+                                                (0, l.jsx)(r.Text, {
                                                     variant: 'text-md/semibold',
                                                     color: 'header-primary',
-                                                    children: t
+                                                    children: e
                                                 })
                                             ]
                                         }),
-                                        n === c.$l.OTHER &&
-                                            E.includes(c.$l.OTHER) &&
-                                            (0, a.jsx)('div', {
-                                                className: I.textboxContainer,
-                                                children: (0, a.jsx)(r.TextArea, {
-                                                    className: I.falseAlarmReasonText,
-                                                    placeholder: u.Z.Messages.GUILD_AUTOMOD_REPORT_RAID_FEEDBACK_MODAL_OTHER_REASON_PLACEHOLDER,
-                                                    onChange: (e) => N(e),
-                                                    value: D,
+                                        n === d.$l.OTHER &&
+                                            I.includes(d.$l.OTHER) &&
+                                            (0, l.jsx)('div', {
+                                                className: x.textboxContainer,
+                                                children: (0, l.jsx)(r.TextArea, {
+                                                    className: x.falseAlarmReasonText,
+                                                    placeholder: _.intl.string(_.t['PAM+JS']),
+                                                    onChange: (t) => N(t),
+                                                    value: C,
                                                     rows: 2,
                                                     autoFocus: !0,
                                                     flex: !0
@@ -129,23 +129,23 @@ function A(e) {
                     })
                 ]
             }),
-            (0, a.jsxs)(r.ModalFooter, {
-                className: I.__invalid_modalFooter,
+            (0, l.jsxs)(r.ModalFooter, {
+                className: x.__invalid_modalFooter,
                 children: [
-                    (0, a.jsx)('div', {
-                        className: I.button,
-                        children: (0, a.jsx)(r.Button, {
-                            onClick: x,
+                    (0, l.jsx)('div', {
+                        className: x.button,
+                        children: (0, l.jsx)(r.Button, {
+                            onClick: p,
                             color: r.Button.Colors.BRAND,
                             look: r.Button.Looks.FILLED,
-                            children: u.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_MARK_AS_RESOLVED
+                            children: _.intl.string(_.t.Gh3A0N)
                         })
                     }),
-                    (0, a.jsx)(r.Button, {
-                        onClick: R,
+                    (0, l.jsx)(r.Button, {
+                        onClick: f,
                         color: r.Button.Colors.PRIMARY,
                         look: r.Button.Looks.LINK,
-                        children: u.Z.Messages.CANCEL
+                        children: _.intl.string(_.t['ETE/oK'])
                     })
                 ]
             })

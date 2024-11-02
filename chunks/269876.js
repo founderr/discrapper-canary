@@ -1,139 +1,139 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return h;
+        return f;
     }
 }),
-    t(47120);
-var n = t(200651),
-    a = t(192379),
-    i = t(120356),
-    r = t.n(i),
-    o = t(442837),
-    l = t(46973),
-    c = t(846519),
-    d = t(692547),
-    _ = t(481060),
-    u = t(846027),
-    E = t(313201),
-    T = t(131951),
-    S = t(65154),
-    I = t(689938),
-    N = t(393752),
-    m = t(752325),
-    C = t(739017),
-    A = t(113207);
-let g = (0, E.hQ)();
-function h() {
-    let [e, s] = a.useState(-100),
-        [t, i] = a.useState(!1),
-        { threshold: h, autoThreshold: O } = (0, o.cj)([T.Z], () => T.Z.getModeOptions()),
+    n(47120);
+var i = n(200651),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(442837),
+    o = n(46973),
+    c = n(846519),
+    d = n(692547),
+    u = n(481060),
+    m = n(846027),
+    h = n(313201),
+    g = n(131951),
+    p = n(65154),
+    x = n(388032),
+    S = n(393752),
+    T = n(752325),
+    C = n(739017),
+    _ = n(113207);
+let E = (0, h.hQ)();
+function f() {
+    let [e, t] = s.useState(-100),
+        [n, r] = s.useState(!1),
+        { threshold: f, autoThreshold: I } = (0, a.cj)([g.Z], () => g.Z.getModeOptions()),
         {
-            inputMode: p,
-            automaticVADSupported: R,
-            isEnabled: x
-        } = (0, o.cj)([T.Z], () => ({
-            inputMode: T.Z.getMode(),
-            automaticVADSupported: T.Z.supports(S.AN.AUTOMATIC_VAD),
-            isEnabled: T.Z.isEnabled()
+            inputMode: N,
+            automaticVADSupported: A,
+            isEnabled: b
+        } = (0, a.cj)([g.Z], () => ({
+            inputMode: g.Z.getMode(),
+            automaticVADSupported: g.Z.supports(p.AN.AUTOMATIC_VAD),
+            isEnabled: g.Z.isEnabled()
         }));
-    function M(e, t) {
-        s(e), i((t & S.Dg.VOICE) === S.Dg.VOICE);
+    function v(e, n) {
+        t(e), r((n & p.Dg.VOICE) === p.Dg.VOICE);
     }
-    function f(e, s) {
-        u.Z.setMode(p, {
+    function j(e, t) {
+        m.Z.setMode(N, {
             threshold: e,
-            autoThreshold: s
+            autoThreshold: t
         });
     }
-    a.useEffect(() => {
+    s.useEffect(() => {
         let e = new c.V7();
         return (
             e.start(1000, () => {
-                T.Z.getMediaEngine().on(l.aB.VoiceActivity, M), e.stop();
+                g.Z.getMediaEngine().on(o.aB.VoiceActivity, v), e.stop();
             }),
             () => {
-                T.Z.getMediaEngine().removeListener(l.aB.VoiceActivity, M), e.stop();
+                g.Z.getMediaEngine().removeListener(o.aB.VoiceActivity, v), e.stop();
             }
         );
     }, []);
-    let D = (0, n.jsx)('section', {
-        className: r()(N.inputSensitivityToggle, N.manual),
-        children: (0, n.jsx)(_.Slider, {
-            initialValue: h + 100,
+    let O = (0, i.jsx)('section', {
+        className: l()(S.inputSensitivityToggle, S.manual),
+        children: (0, i.jsx)(u.Slider, {
+            initialValue: f + 100,
             onValueRender: (e) => ''.concat((-((100 - e) * 1)).toFixed(0), 'dB'),
-            onValueChange: (e) => f(-((100 - e) * 1), O),
+            onValueChange: (e) => j(-((100 - e) * 1), I),
             barStyles: { background: d.Z.unsafe_rawColors.GREEN_360.css },
             fillStyles: { background: d.Z.unsafe_rawColors.YELLOW_300.css },
-            'aria-labelledby': g,
-            children: (0, n.jsxs)('div', {
-                className: r()(N.sliderBar, N.microphone, N.inputSensitivityBar, m.bar),
+            'aria-labelledby': E,
+            children: (0, i.jsxs)('div', {
+                className: l()(S.sliderBar, S.microphone, S.inputSensitivityBar, T.bar),
                 children: [
-                    (0, n.jsx)('div', {
-                        className: r()(N.fill, N.inputSensitivityBarFill),
+                    (0, i.jsx)('div', {
+                        className: l()(S.fill, S.inputSensitivityBarFill),
                         style: { width: e + 100 + '%' }
                     }),
-                    (0, n.jsx)('div', { className: 'grow' })
+                    (0, i.jsx)('div', { className: 'grow' })
                 ]
             })
         })
     });
     return (
-        O &&
-            (D = (0, n.jsxs)('section', {
-                className: N.inputSensitivityToggle,
+        I &&
+            (O = (0, i.jsxs)('section', {
+                className: S.inputSensitivityToggle,
                 children: [
-                    (0, n.jsx)('div', {
-                        className: N.inputSensitivitySlider,
-                        children: (0, n.jsx)('div', { className: r()(N.inputSensitivityBar, N.sliderBar, { [N.speaking]: t }) })
+                    (0, i.jsx)('div', {
+                        className: S.inputSensitivitySlider,
+                        children: (0, i.jsx)('div', { className: l()(S.inputSensitivityBar, S.sliderBar, { [S.speaking]: n }) })
                     }),
-                    (0, n.jsx)(_.FormText, {
-                        type: _.FormText.Types.DESCRIPTION,
-                        className: A.marginBottom8,
-                        children: I.Z.Messages.FORM_HELP_AUTOMATIC_VAD
+                    (0, i.jsx)(u.FormText, {
+                        type: u.FormText.Types.DESCRIPTION,
+                        className: _.marginBottom8,
+                        children: x.intl.string(x.t.W3K5Ii)
                     })
                 ]
             })),
-        (0, n.jsxs)(_.FormItem, {
-            className: N.sensitivity,
+        (0, i.jsxs)(u.FormItem, {
+            className: S.sensitivity,
             children: [
-                (0, n.jsx)(_.FormTitle, {
-                    id: g,
-                    tag: _.FormTitleTags.H5,
-                    className: A.marginBottom8,
-                    children: I.Z.Messages.FORM_LABEL_INPUT_SENSITIVTY
+                (0, i.jsx)(u.FormTitle, {
+                    id: E,
+                    tag: u.FormTitleTags.H5,
+                    className: _.marginBottom8,
+                    children: x.intl.string(x.t['sqUm+v'])
                 }),
-                (0, n.jsxs)('div', {
+                (0, i.jsxs)('div', {
                     children: [
-                        R &&
-                            (0, n.jsx)(E.FG, {
+                        A &&
+                            (0, i.jsx)(h.FG, {
                                 children: (e) =>
-                                    (0, n.jsxs)('div', {
-                                        className: r()(C.horizontal, A.marginBottom4),
+                                    (0, i.jsxs)('div', {
+                                        className: l()(C.horizontal, _.marginBottom4),
                                         children: [
-                                            (0, n.jsx)(_.FormTitle, {
-                                                tag: _.FormTitleTags.H3,
-                                                className: A.marginReset,
-                                                children: (0, n.jsx)('label', {
+                                            (0, i.jsx)(u.FormTitle, {
+                                                tag: u.FormTitleTags.H3,
+                                                className: _.marginReset,
+                                                children: (0, i.jsx)('label', {
                                                     htmlFor: e,
-                                                    children: I.Z.Messages.FORM_LABEL_AUTOMATIC_VAD
+                                                    children: x.intl.string(x.t.I1Zuq6)
                                                 })
                                             }),
-                                            (0, n.jsx)(_.Switch, {
+                                            (0, i.jsx)(u.Switch, {
                                                 id: e,
-                                                checked: O,
-                                                onChange: (e) => f(h, e)
+                                                checked: I,
+                                                onChange: (e) => j(f, e)
                                             })
                                         ]
                                     })
                             }),
-                        D
+                        O
                     ]
                 }),
-                !x &&
-                    (0, n.jsx)(_.FormText, {
-                        type: _.FormText.Types.DESCRIPTION,
-                        className: r()(N.inputDisabledWarning, A.marginBottom8),
-                        children: I.Z.Messages.FORM_WARNING_INPUT_SENSITIVTY.format({ onEnableClick: () => u.Z.enable(!0) })
+                !b &&
+                    (0, i.jsx)(u.FormText, {
+                        type: u.FormText.Types.DESCRIPTION,
+                        className: l()(S.inputDisabledWarning, _.marginBottom8),
+                        children: x.intl.format(x.t['O13I+P'], { onEnableClick: () => m.Z.enable(!0) })
                     })
             ]
         })

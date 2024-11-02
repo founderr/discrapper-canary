@@ -19,14 +19,14 @@ var r = Array.prototype.slice,
                         u,
                         c,
                         d,
-                        _ = i(e),
-                        E = i(t);
+                        f = i(e),
+                        _ = i(t);
                 } catch (e) {
                     return !1;
                 }
-                if (_.length != E.length) return !1;
-                for (_.sort(), E.sort(), o = _.length - 1; o >= 0; o--) if (_[o] != E[o]) return !1;
-                for (o = _.length - 1; o >= 0; o--) if (!s(e[(u = _[o])], t[u], n)) return !1;
+                if (f.length != _.length) return !1;
+                for (f.sort(), _.sort(), o = f.length - 1; o >= 0; o--) if (f[o] != _[o]) return !1;
+                for (o = f.length - 1; o >= 0; o--) if (!s(e[(u = f[o])], t[u], n)) return !1;
                 return typeof e == typeof t;
             })(e, t, n);
     });

@@ -1,11 +1,11 @@
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(481060);
+var r = n(481060);
 t.Z = {
     open() {
-        (0, a.openModalLazy)(async () => {
+        (0, r.openModalLazy)(async () => {
             let { default: e } = await n.e('57486').then(n.bind(n, 87026));
-            return (t) => (0, s.jsx)(e, { ...t });
+            return (t) => (0, i.jsx)(e, { ...t });
         });
     }
 };

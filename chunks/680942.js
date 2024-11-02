@@ -1,6 +1,6 @@
 var r = n(200651),
-    s = n(192379),
-    a = n(481060),
+    a = n(192379),
+    s = n(481060),
     i = n(727637),
     l = n(906732),
     o = n(241553),
@@ -8,9 +8,9 @@ var r = n(200651),
     d = n(884697),
     u = n(474936),
     m = n(231338),
-    f = n(689938),
+    f = n(388032),
     p = n(65297);
-let C = {
+let h = {
     dark: [
         {
             box: '#FFF19E',
@@ -73,50 +73,50 @@ let C = {
     ]
 };
 t.Z = (e) => {
-    let { product: t, returnRef: n, onSuccess: h, tooltipDelay: g, isGiftEasterEggEnabled: _, disableCustomColor: b = !1 } = e,
-        { analyticsLocations: x } = (0, l.ZP)(),
-        E = s.useRef(null),
-        v = (0, i.Z)(E),
-        I = b ? m.BR.DARK : m.BR.LIGHT;
+    let { product: t, returnRef: n, onSuccess: g, tooltipDelay: C, isGiftEasterEggEnabled: b, disableCustomColor: x = !1 } = e,
+        { analyticsLocations: v } = (0, l.ZP)(),
+        _ = a.useRef(null),
+        k = (0, i.Z)(_),
+        j = x ? m.BR.DARK : m.BR.LIGHT;
     return (0, d.x6)(t)
         ? null
-        : (0, r.jsx)(a.Tooltip, {
-              text: f.Z.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
-              delay: g,
+        : (0, r.jsx)(s.Tooltip, {
+              text: f.intl.string(f.t['JCFN//']),
+              delay: C,
               children: (e) =>
-                  (0, r.jsx)(a.Button, {
+                  (0, r.jsx)(s.Button, {
                       ...e,
-                      buttonRef: E,
+                      buttonRef: _,
                       className: p.giftButton,
-                      color: b ? a.ButtonColors.BRAND : a.ButtonColors.CUSTOM,
-                      look: a.Button.Looks.FILLED,
-                      size: a.ButtonSizes.ICON,
+                      color: x ? s.ButtonColors.BRAND : s.ButtonColors.CUSTOM,
+                      look: s.Button.Looks.FILLED,
+                      size: s.ButtonSizes.ICON,
                       innerClassName: p.giftButtonInner,
-                      'aria-label': f.Z.Messages.PREMIUM_GIFTING_BUTTON,
+                      'aria-label': f.intl.string(f.t.PEjaCw),
                       onClick: (e) => {
                           e.stopPropagation(),
                               (0, c.Z)({
                                   skuId: t.skuId,
                                   isGift: !0,
                                   giftingOrigin: u.Wt.SHOP_PAGE,
-                                  analyticsLocations: x,
+                                  analyticsLocations: v,
                                   returnRef: n,
                                   onClose:
-                                      null != h
+                                      null != g
                                           ? (e) => {
-                                                e && h();
+                                                e && g();
                                             }
                                           : void 0
                               });
                       },
-                      children: _
+                      children: b
                           ? (0, r.jsx)(o.e, {
-                                hovered: v,
+                                hovered: k,
                                 isContentDismissed: !0,
-                                themeOverride: I,
-                                boxColors: C
+                                themeOverride: j,
+                                boxColors: h
                             })
-                          : (0, r.jsx)(a.GiftIcon, {
+                          : (0, r.jsx)(s.GiftIcon, {
                                 size: 'md',
                                 color: 'currentColor'
                             })

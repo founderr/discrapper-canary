@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return h;
     }
 }),
     n(47120);
@@ -14,19 +14,19 @@ var i = n(481060),
     u = n(626135),
     c = n(74538),
     d = n(981631),
-    _ = n(689938);
-let E = 'guild-boost-purchase-modal';
-async function f(e) {
-    let { analyticsLocations: t, analyticsLocation: f, analyticsSourceLocation: h, guildId: p, closeLayer: I, onCloseModal: m, totalNumberOfSlotsToAssign: T = 1, disablePremiumUpsell: S, onSubscriptionConfirmation: g, inPopout: A, applicationId: N } = e,
-        R = A ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT,
-        O = l.ZP.getPremiumTypeSubscription();
-    if (null != O && O.isPurchasedExternally && null != O.paymentGateway) {
-        null != I && I(),
+    f = n(388032);
+let _ = 'guild-boost-purchase-modal';
+async function h(e) {
+    let { analyticsLocations: t, analyticsLocation: h, analyticsSourceLocation: p, guildId: m, closeLayer: g, onCloseModal: E, totalNumberOfSlotsToAssign: v = 1, disablePremiumUpsell: I, onSubscriptionConfirmation: S, inPopout: T, applicationId: b } = e,
+        y = T ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT,
+        A = l.ZP.getPremiumTypeSubscription();
+    if (null != A && A.isPurchasedExternally && null != A.paymentGateway) {
+        null != g && g(),
             a.Z.show({
-                title: _.Z.Messages.BILLING_MANAGED_BY_PAYMENT_GATEWAY.format({ paymentGatewayName: d.Vzj[O.paymentGateway] }),
-                body: _.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_BUTTON_UPGRADE_TO_PREMIUM_EXTERNAL_ERROR.format({
-                    paymentGatewayName: d.Vzj[O.paymentGateway],
-                    subscriptionManagementLink: (0, c.JE)(O.paymentGateway, 'SUBSCRIPTION_MANAGEMENT')
+                title: f.intl.formatToPlainString(f.t.rTk9v7, { paymentGatewayName: d.Vzj[A.paymentGateway] }),
+                body: f.intl.format(f.t.NY03WF, {
+                    paymentGatewayName: d.Vzj[A.paymentGateway],
+                    subscriptionManagementLink: (0, c.JE)(A.paymentGateway, 'SUBSCRIPTION_MANAGEMENT')
                 })
             });
         return;
@@ -40,32 +40,32 @@ async function f(e) {
                 return (0, r.jsx)(e, {
                     transitionState: i,
                     onClose: (e) => {
-                        a(), null == m || m(e);
+                        a(), null == E || E(e);
                     },
                     analyticsLocations: t,
-                    analyticsLocation: f,
-                    analyticsSourceLocation: null != h ? h : f,
-                    guildId: p,
-                    totalNumberOfSlotsToAssign: T,
-                    closeGuildPerksModal: I,
-                    disablePremiumUpsell: S,
-                    onSubscriptionConfirmation: g,
-                    applicationId: N
+                    analyticsLocation: h,
+                    analyticsSourceLocation: null != p ? p : h,
+                    guildId: m,
+                    totalNumberOfSlotsToAssign: v,
+                    closeGuildPerksModal: g,
+                    disablePremiumUpsell: I,
+                    onSubscriptionConfirmation: S,
+                    applicationId: b
                 });
             };
         },
         {
-            modalKey: E,
+            modalKey: _,
             onCloseCallback: () => {
                 u.default.track(d.rMx.MODAL_DISMISSED, {
                     type: d.jXE.PREMIUM_GUILD_PURCHASE_MODAL,
-                    location: f
+                    location: h
                 });
             },
             onCloseRequest: () => {
-                (0, i.closeModal)(E), null == m || m(!1);
+                (0, i.closeModal)(_), null == E || E(!1);
             },
-            contextKey: R
+            contextKey: y
         }
     );
 }

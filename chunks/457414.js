@@ -3,19 +3,19 @@ n.d(t, {
         return c;
     },
     w: function () {
-        return m;
+        return p;
     }
 });
-var s = n(481060),
-    a = n(925221),
-    i = n(236413),
-    r = n(85960),
-    l = n(273504),
-    o = n(689938);
+var i = n(481060),
+    r = n(925221),
+    l = n(236413),
+    s = n(85960),
+    a = n(273504),
+    o = n(388032);
 let c = (e) => {
         switch (e) {
-            case l.fX.KEYWORD:
-            case l.fX.USER_PROFILE:
+            case a.fX.KEYWORD:
+            case a.fX.USER_PROFILE:
                 return !0;
             default:
                 return !1;
@@ -23,12 +23,12 @@ let c = (e) => {
     },
     d = (e) => {
         switch (e) {
-            case l.fX.KEYWORD:
-            case l.fX.ML_SPAM:
-            case l.fX.DEFAULT_KEYWORD_LIST:
-            case l.fX.MENTION_SPAM:
-            case l.fX.SERVER_POLICY:
-            case l.fX.USER_PROFILE:
+            case a.fX.KEYWORD:
+            case a.fX.ML_SPAM:
+            case a.fX.DEFAULT_KEYWORD_LIST:
+            case a.fX.MENTION_SPAM:
+            case a.fX.SERVER_POLICY:
+            case a.fX.USER_PROFILE:
                 return !0;
             default:
                 return !1;
@@ -36,60 +36,60 @@ let c = (e) => {
     },
     u = (e, t) => {
         var n;
-        return null !== (n = null == t ? void 0 : t.name) && void 0 !== n ? n : r.I6[e].getDefaultRuleName();
+        return null !== (n = null == t ? void 0 : t.name) && void 0 !== n ? n : s.I6[e].getDefaultRuleName();
     },
-    _ = (e, t) => {
-        if (!!(0, i.Vb)(t)) {
-            if ((0, i.DO)(t))
+    m = (e, t) => {
+        if (!!(0, l.Vb)(t)) {
+            if ((0, l.DO)(t))
                 return t.triggerMetadata.regexPatterns.length > 0
-                    ? o.Z.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_HEADER_WORD_AND_REGEX_COUNT.format({
+                    ? o.intl.formatToPlainString(o.t.xZUvxc, {
                           keywordCount: t.triggerMetadata.keywordFilter.length,
                           regexPatternCount: t.triggerMetadata.regexPatterns.length
                       })
-                    : o.Z.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_HEADER_WORD_COUNT.format({ keywordCount: t.triggerMetadata.keywordFilter.length });
+                    : o.intl.formatToPlainString(o.t.dJN7Li, { keywordCount: t.triggerMetadata.keywordFilter.length });
         }
     },
-    I = (e) => {
+    h = (e) => {
         switch (e) {
-            case l.fX.KEYWORD:
-                return o.Z.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_DESCRIPTION;
-            case l.fX.ML_SPAM:
-                return o.Z.Messages.GUILD_AUTOMOD_ML_SPAM_FILTER_DESCRIPTION;
-            case l.fX.DEFAULT_KEYWORD_LIST:
-                return o.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_DESCRIPTION_TEXT;
-            case l.fX.MENTION_SPAM:
-                return o.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_DESCRIPTION;
-            case l.fX.USER_PROFILE:
-                return o.Z.Messages.GUILD_AUTOMOD_USER_PROFILE_FILTER_DESCRIPTION;
+            case a.fX.KEYWORD:
+                return o.intl.string(o.t.TzvaeH);
+            case a.fX.ML_SPAM:
+                return o.intl.string(o.t.jBZSQk);
+            case a.fX.DEFAULT_KEYWORD_LIST:
+                return o.intl.string(o.t.Drc8fn);
+            case a.fX.MENTION_SPAM:
+                return o.intl.string(o.t.flhXOz);
+            case a.fX.USER_PROFILE:
+                return o.intl.string(o.t.A35LyM);
             default:
                 return null;
         }
     },
-    E = (e) => {
-        if (e === l.fX.KEYWORD) return o.Z.Messages.GUILD_AUTOMOD_LINK_FILTER_MATCHING_STRATEGY_DESCRIPTION.format();
+    g = (e) => {
+        if (e === a.fX.KEYWORD) return o.intl.formatToPlainString(o.t.yNec2t, {});
     },
-    T = (e) => {
+    x = (e) => {
         switch (e) {
-            case l.fX.MENTION_SPAM:
-                return s.AtIcon;
-            case l.fX.KEYWORD:
-                return s.ChannelListPlusIcon;
-            case l.fX.ML_SPAM:
-            case l.fX.USER_PROFILE:
-                return (0, s.makeIconCompat)(a.Z);
-            case l.fX.DEFAULT_KEYWORD_LIST:
-                return s.MenuIcon;
+            case a.fX.MENTION_SPAM:
+                return i.AtIcon;
+            case a.fX.KEYWORD:
+                return i.ChannelListPlusIcon;
+            case a.fX.ML_SPAM:
+            case a.fX.USER_PROFILE:
+                return (0, i.makeIconCompat)(r.Z);
+            case a.fX.DEFAULT_KEYWORD_LIST:
+                return i.MenuIcon;
         }
     };
-function m(e, t) {
-    var n, a, i, r, l;
+function p(e, t) {
+    var n, r, l, s, a;
     return null != e && d(e)
         ? {
               headerText: null !== (n = u(e, t)) && void 0 !== n ? n : '',
-              headerSubtext: null !== (a = _(e, t)) && void 0 !== a ? a : '',
-              descriptionText: null !== (i = I(e)) && void 0 !== i ? i : '',
-              descriptionSubtext: null !== (r = E(e)) && void 0 !== r ? r : '',
-              icon: null !== (l = T(e)) && void 0 !== l ? l : s.LinkIcon
+              headerSubtext: null !== (r = m(e, t)) && void 0 !== r ? r : '',
+              descriptionText: null !== (l = h(e)) && void 0 !== l ? l : '',
+              descriptionSubtext: null !== (s = g(e)) && void 0 !== s ? s : '',
+              icon: null !== (a = x(e)) && void 0 !== a ? a : i.LinkIcon
           }
         : null;
 }

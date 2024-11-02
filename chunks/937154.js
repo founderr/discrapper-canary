@@ -1,17 +1,17 @@
 n.d(t, {
     Z: function () {
-        return i;
+        return s;
     }
 }),
     n(47120);
-var s = n(192379);
+var i = n(192379);
 function r() {
     return 'undefined' == typeof document || 'visible' === document.visibilityState;
 }
-function i() {
-    let [e, t] = (0, s.useState)(r());
+function s() {
+    let [e, t] = (0, i.useState)(r());
     return (
-        (0, s.useEffect)(() => {
+        (0, i.useEffect)(() => {
             function e() {
                 t(r());
             }

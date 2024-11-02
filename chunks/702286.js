@@ -1,11 +1,11 @@
-o.d(e, {
+t.d(o, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var a = o(703656),
-    t = o(981631);
-function i() {
-    let n = (0, a.s1)();
-    n.length > 0 ? n.goBack() : (0, a.uL)(t.Z5c.ME);
+var e = t(703656),
+    i = t(981631);
+function a() {
+    let n = (0, e.s1)();
+    n.length > 0 ? n.goBack() : (0, e.uL)(i.Z5c.ME);
 }

@@ -1,9 +1,9 @@
 n.d(t, {
     AJ: function () {
-        return E;
+        return _;
     },
     te: function () {
-        return _;
+        return f;
     },
     zP: function () {
         return d;
@@ -16,7 +16,7 @@ var r = n(200651),
     s = n.n(a),
     o = n(481060),
     l = n(393903),
-    u = n(689938),
+    u = n(388032),
     c = n(516617);
 function d(e) {
     let { itemGapPx: t, items: n, maxLines: r, containerWidth: a } = e,
@@ -25,7 +25,7 @@ function d(e) {
         u = i.useRef(0),
         c = i.useRef(0),
         d = i.useRef(null),
-        _ = i.useCallback((e, t) => {
+        f = i.useCallback((e, t) => {
             l.current[e] = t;
         }, []);
     return (
@@ -42,8 +42,8 @@ function d(e) {
                     let c = r[e];
                     if (isNaN(c) || c > a) continue;
                     let d = o === n - 1,
-                        _ = e === t.length - 1;
-                    if (!(Math.round(l + c + (d && !_ ? s + i : 0)) < Math.round(a))) {
+                        f = e === t.length - 1;
+                    if (!(Math.round(l + c + (d && !f ? s + i : 0)) < Math.round(a))) {
                         if (d) break;
                         o++, (l = 0);
                     }
@@ -63,16 +63,16 @@ function d(e) {
         i.useMemo(
             () => ({
                 lastVisibleIndex: c.current,
-                onItemLayout: _,
+                onItemLayout: f,
                 overflowItemsRef: d,
                 itemWidthsRef: l,
                 version: s
             }),
-            [_, s]
+            [f, s]
         )
     );
 }
-function _(e) {
+function f(e) {
     let { items: t, renderItem: n, ...i } = e;
     return (0, r.jsx)(o.Tooltip, {
         ...i,
@@ -84,11 +84,11 @@ function _(e) {
         children: (e) =>
             (0, r.jsx)('div', {
                 ...e,
-                children: n(u.Z.Messages.CLAN_DISCOVERY_TRAIT_OVERFLOW.format({ count: t.length }))
+                children: n(u.intl.formatToPlainString(u.t.Zvfz1d, { count: t.length }))
             })
     });
 }
-function E(e) {
+function _(e) {
     let { onItemLayout: t, index: n, children: a } = e,
         s = i.useRef(null);
     return (
@@ -102,8 +102,8 @@ function E(e) {
     );
 }
 t.ZP = function (e) {
-    let { className: t, items: n, renderItem: a, itemGapPx: o = 0, maxLines: f, renderOverflow: h } = e,
-        { ref: p, width: I } = (function () {
+    let { className: t, items: n, renderItem: a, itemGapPx: o = 0, maxLines: h, renderOverflow: p } = e,
+        { ref: m, width: g } = (function () {
             let [e, t] = i.useState(0);
             return {
                 ref: (0, l.y)((e) => {
@@ -114,28 +114,28 @@ t.ZP = function (e) {
             };
         })(),
         {
-            lastVisibleIndex: m,
-            onItemLayout: T,
-            overflowItemsRef: S
+            lastVisibleIndex: E,
+            onItemLayout: v,
+            overflowItemsRef: I
         } = d({
             items: n,
             itemGapPx: o,
-            maxLines: f,
-            containerWidth: I
+            maxLines: h,
+            containerWidth: g
         }),
-        g = i.useCallback(
+        S = i.useCallback(
             (e) =>
-                (0, r.jsx)(_, {
+                (0, r.jsx)(f, {
                     items: e,
                     renderItem: a
                 }),
             [a]
         ),
-        A = i.useMemo(() => n.slice(0, m + 1), [n, m]),
-        N = i.useMemo(() => n.slice(m + 1), [n, m]);
+        T = i.useMemo(() => n.slice(0, E + 1), [n, E]),
+        b = i.useMemo(() => n.slice(E + 1), [n, E]);
     return (0, r.jsxs)('div', {
         className: s()(t, c.items),
-        ref: p,
+        ref: m,
         children: [
             (0, r.jsxs)('div', {
                 'aria-hidden': !0,
@@ -145,10 +145,10 @@ t.ZP = function (e) {
                         className: c.itemMeasurements,
                         children: n.map((e, t) =>
                             (0, r.jsx)(
-                                E,
+                                _,
                                 {
                                     index: t,
-                                    onItemLayout: T,
+                                    onItemLayout: v,
                                     children: a(e)
                                 },
                                 e
@@ -157,13 +157,13 @@ t.ZP = function (e) {
                     }),
                     (0, r.jsx)('div', {
                         className: c.overflowMeasurement,
-                        ref: S,
-                        children: a(u.Z.Messages.CLAN_DISCOVERY_TRAIT_OVERFLOW.format({ count: Number('1'.concat(n.length)) }))
+                        ref: I,
+                        children: a(u.intl.formatToPlainString(u.t.Zvfz1d, { count: Number('1'.concat(n.length)) }))
                     })
                 ]
             }),
-            A.map(a),
-            N.length > 0 && (null != h ? h : g)(N)
+            T.map(a),
+            b.length > 0 && (null != p ? p : S)(b)
         ]
     });
 };

@@ -1,48 +1,48 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
         return c;
     }
 }),
-    t(47120);
-var n = t(200651);
-t(192379);
-var a = t(442837),
-    i = t(481060),
-    r = t(536442),
-    o = t(503618);
-function l(e) {
-    let { hotspotLocation: s } = e,
-        [t, l] = (0, a.Wu)([r.qc], () => [r.qc.hasHotspot(s, !0), r.qc.getHotspotOverride(s)]);
-    return (0, n.jsxs)(n.Fragment, {
+    n(47120);
+var i = n(200651);
+n(192379);
+var s = n(442837),
+    r = n(481060),
+    l = n(536442),
+    a = n(503618);
+function o(e) {
+    let { hotspotLocation: t } = e,
+        [n, o] = (0, s.Wu)([l.qc], () => [l.qc.hasHotspot(t, !0), l.qc.getHotspotOverride(t)]);
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, n.jsxs)(i.FormItem, {
-                title: s,
-                className: o.hotspotSwitch,
+            (0, i.jsxs)(r.FormItem, {
+                title: t,
+                className: a.hotspotSwitch,
                 children: [
-                    t
-                        ? (0, n.jsx)(i.TooltipContainer, {
-                              className: o.iconContainer,
+                    n
+                        ? (0, i.jsx)(r.TooltipContainer, {
+                              className: a.iconContainer,
                               element: 'span',
                               text: 'Active',
-                              children: (0, n.jsx)(i.CheckmarkLargeIcon, {
+                              children: (0, i.jsx)(r.CheckmarkLargeIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: o.checkmark
+                                  className: a.checkmark
                               })
                           })
-                        : (0, n.jsx)(i.TooltipContainer, {
-                              className: o.iconContainer,
+                        : (0, i.jsx)(r.TooltipContainer, {
+                              className: a.iconContainer,
                               element: 'span',
                               text: 'Inactive',
-                              children: (0, n.jsx)(i.XSmallIcon, {
+                              children: (0, i.jsx)(r.XSmallIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: o.xmark
+                                  className: a.xmark
                               })
                           }),
-                    (0, n.jsx)(i.SingleSelect, {
-                        className: o.overrideSelect,
-                        value: l,
+                    (0, i.jsx)(r.SingleSelect, {
+                        className: a.overrideSelect,
+                        value: o,
                         options: [
                             {
                                 value: void 0,
@@ -57,30 +57,30 @@ function l(e) {
                                 label: 'Force Inactive'
                             }
                         ],
-                        onChange: (e) => (null != e ? (0, r.hv)(s, e) : (0, r.Po)(s))
+                        onChange: (e) => (null != e ? (0, l.hv)(t, e) : (0, l.Po)(t))
                     })
                 ]
             }),
-            (0, n.jsx)(i.FormDivider, {})
+            (0, i.jsx)(r.FormDivider, {})
         ]
     });
 }
 function c(e) {
-    let { className: s } = e;
-    return (0, n.jsxs)(i.FormSection, {
+    let { className: t } = e;
+    return (0, i.jsxs)(r.FormSection, {
         title: 'Hotspots',
-        tag: i.FormTitleTags.H1,
-        className: s,
+        tag: r.FormTitleTags.H1,
+        className: t,
         children: [
-            (0, n.jsx)(i.Text, {
-                className: o.helpText,
+            (0, i.jsx)(r.Text, {
+                className: a.helpText,
                 tag: 'p',
                 variant: 'text-sm/normal',
                 children: 'All the "hotspots" in app, and their current status. Use the select menu to override them on or off.'
             }),
-            Object.keys(r.v6)
-                .sort((e, s) => e.localeCompare(s))
-                .map((e) => (0, n.jsx)(l, { hotspotLocation: e }, e))
+            Object.keys(l.v6)
+                .sort((e, t) => e.localeCompare(t))
+                .map((e) => (0, i.jsx)(o, { hotspotLocation: e }, e))
         ]
     });
 }

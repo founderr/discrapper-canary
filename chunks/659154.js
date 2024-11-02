@@ -1,44 +1,44 @@
 n.d(e, {
     c: function () {
-        return i;
+        return l;
     }
 });
 var a = n(200651);
 n(192379);
 var r = n(481060),
-    o = n(689938),
-    s = n(715802),
-    c = n(387852);
-let i = (t) => {
+    o = n(388032),
+    i = n(715802),
+    s = n(387852);
+let l = (t) => {
     let { onTryAgain: e } = t;
     return (0, a.jsxs)('div', {
-        className: s.content,
+        className: i.content,
         children: [
             (0, a.jsx)('img', {
-                src: c,
+                src: s,
                 width: '254',
                 height: '127',
                 alt: ''
             }),
             (0, a.jsxs)('div', {
-                className: s.innerContent,
+                className: i.innerContent,
                 children: [
                     (0, a.jsx)(r.Heading, {
                         variant: 'heading-xl/extrabold',
-                        children: o.Z.Messages.ACTIVATE_DEVICE_ERROR_TITLE
+                        children: o.intl.string(o.t['3dgwPD'])
                     }),
                     (0, a.jsx)(r.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: o.Z.Messages.ACTIVATE_DEVICE_ERROR_BODY
+                        children: o.intl.string(o.t['/GAO1N'])
                     })
                 ]
             }),
             (0, a.jsx)(r.Button, {
-                className: s.footerButton,
+                className: i.footerButton,
                 color: r.Button.Colors.BRAND,
                 onClick: e,
-                children: o.Z.Messages.TRY_AGAIN
+                children: o.intl.string(o.t['7NqTJi'])
             })
         ]
     });

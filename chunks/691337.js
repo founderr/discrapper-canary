@@ -28,14 +28,14 @@ class d extends i.PureComponent {
             (n = 'renderBreadcrumb'),
             (i = (e, t) => {
                 let { activeId: n, onBreadcrumbClick: i, breadcrumbs: a, renderCustomBreadcrumb: l, separatorClassName: d } = this.props,
-                    _ = e.id === n,
-                    E = t === a.length - 1,
-                    f =
+                    f = e.id === n,
+                    _ = t === a.length - 1,
+                    h =
                         null != l
-                            ? l(e, _)
+                            ? l(e, f)
                             : (0, r.jsx)('span', {
                                   className: s()(c.breadcrumb, {
-                                      [c.activeBreadcrumb]: _,
+                                      [c.activeBreadcrumb]: f,
                                       [c.interactiveBreadcrumb]: null != i
                                   }),
                                   children: e.label
@@ -43,17 +43,17 @@ class d extends i.PureComponent {
                 return (0, r.jsxs)(
                     'div',
                     {
-                        className: s()(c.breadcrumbWrapper, { [c.breadcrumbFinalWrapper]: E }),
+                        className: s()(c.breadcrumbWrapper, { [c.breadcrumbFinalWrapper]: _ }),
                         children: [
                             null != i
                                 ? (0, r.jsx)(o.Clickable, {
                                       tag: 'span',
                                       onClick: () => this.handleClick(e),
                                       className: c.breadcrumbClickWrapper,
-                                      children: f
+                                      children: h
                                   })
-                                : f,
-                            E
+                                : h,
+                            _
                                 ? null
                                 : (0, r.jsx)(u.Z, {
                                       className: s()(c.breadcrumbArrow, d),

@@ -8,18 +8,18 @@ var r,
     u = n(786761),
     c = n(651530),
     d = n(163268);
-let _ = {};
-function E(e) {
+let f = {};
+function _(e) {
     return ''.concat(e.channel_id, ':').concat(e.id);
 }
-function f(e) {
+function h(e) {
     return (
         !!(0, c.Kh)() &&
         null != e.messages &&
-        ((_ = e.messages.reduce(
+        ((f = e.messages.reduce(
             (e, t) => (
                 t.forEach((t) => {
-                    e[E(t)] = (0, u.e5)(t);
+                    e[_(t)] = (0, u.e5)(t);
                 }),
                 e
             ),
@@ -28,13 +28,13 @@ function f(e) {
         !0)
     );
 }
-function h() {
-    _ = {};
+function p() {
+    f = {};
 }
-class p extends (r = o.ZP.Store) {
+class m extends (r = o.ZP.Store) {
     getMessage(e, t) {
-        return _[
-            E({
+        return f[
+            _({
                 id: e,
                 channel_id: t
             })
@@ -42,7 +42,7 @@ class p extends (r = o.ZP.Store) {
     }
 }
 (s = 'SearchMessageStore'),
-    (a = 'displayName') in (i = p)
+    (a = 'displayName') in (i = m)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -50,17 +50,17 @@ class p extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new p(l.Z, {
-        SEARCH_FINISH: f,
-        MOD_VIEW_SEARCH_FINISH: f,
+    (t.Z = new m(l.Z, {
+        SEARCH_FINISH: h,
+        MOD_VIEW_SEARCH_FINISH: h,
         MESSAGE_UPDATE: function (e) {
             let { message: t } = e;
             if (!(0, c.Kh)() || null == t.id || null == t.channel_id) return !1;
-            let n = E(t),
-                r = _[n];
+            let n = _(t),
+                r = f[n];
             return (
                 null != r &&
-                ((_[n] = (0, u.wi)(r, {
+                ((f[n] = (0, u.wi)(r, {
                     attachments: t.attachments,
                     embeds: t.embeds
                 })),
@@ -69,21 +69,21 @@ class p extends (r = o.ZP.Store) {
         },
         LOGOUT: function () {
             (function () {
-                _ = {};
+                f = {};
             })();
         },
         CONNECTION_OPEN: function () {
             (function () {
-                _ = {};
+                f = {};
             })();
         },
         MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function (e) {
             let { messageId: t, channelId: n } = e,
-                r = E({
+                r = _({
                     id: t,
                     channel_id: n
                 }),
-                i = _[r];
-            null != i && (_[r] = (0, d.Cm)(i));
+                i = f[r];
+            null != i && (f[r] = (0, d.Cm)(i));
         }
     }));

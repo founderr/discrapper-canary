@@ -11,23 +11,23 @@ var i = n(481060),
     o = n(785717),
     l = n(171368),
     u = n(981631),
-    c = n(689938);
+    c = n(388032);
 function d(e) {
     let { label: t, onAction: n, ...d } = e,
-        { analyticsLocations: _ } = (0, s.ZP)(),
-        { context: E } = (0, o.KZ)(),
-        f = (0, a.Aq)();
+        { analyticsLocations: f } = (0, s.ZP)(),
+        { context: _ } = (0, o.KZ)(),
+        h = (0, a.Aq)();
     return (0, r.jsx)(i.MenuItem, {
         id: 'user-profile',
-        label: null != t ? t : c.Z.Messages.PROFILE,
+        label: null != t ? t : c.intl.string(c.t.LYju5O),
         action: () => {
             null == n || n(),
                 (0, l.openUserProfileModal)({
-                    sourceAnalyticsLocations: _,
-                    ...E,
+                    sourceAnalyticsLocations: f,
+                    ..._,
                     ...d
                 }),
-                f.dispatch(u.CkL.POPOUT_CLOSE);
+                h.dispatch(u.CkL.POPOUT_CLOSE);
         }
     });
 }

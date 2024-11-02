@@ -1,88 +1,88 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return h;
     }
 }),
     n(47120),
     n(724458);
 var o = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
-    l = n(392711),
-    i = n.n(l),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    i = n(392711),
+    l = n.n(i),
     c = n(442837),
     d = n(481060),
     u = n(451478),
     p = n(302221),
     m = n(865871);
 let x = [0, 0.5, 1],
-    C = {
+    g = {
         'layers[1].shapes[1].g.k.k': [0, 0.522, 0.278, 0.776, 0.5, 0.522, 0.278, 0.776, 1, 0.522, 0.278, 0.776],
         'layers[2].shapes[1].g.k.k': [0, 0.714, 0.271, 0.757, 0.5, 0.714, 0.271, 0.757, 1, 0.714, 0.271, 0.757]
     };
-async function _(e, t) {
+async function f(e, t) {
     let o = (await n.e('30166').then(n.t.bind(n, 235630, 19))).default;
     return (
         (function (e, t, n) {
             for (let o in t) {
-                let t = i().get(e, o);
+                let t = l().get(e, o);
                 if (null == t) continue;
-                let s = t.map((e, t) => {
+                let r = t.map((e, t) => {
                     var o;
                     return null !== (o = n[t]) && void 0 !== o ? o : e;
                 });
-                i().set(e, o, s);
+                l().set(e, o, r);
             }
-        })(o, C, t),
+        })(o, g, t),
         o
     );
 }
-function g(e) {
+function h(e) {
     var t;
-    let { animationClassName: n, className: r, quest: l, useReducedMotion: i } = e,
-        C = (0, c.e7)([u.Z], () => u.Z.isFocused()),
-        g = s.useRef(null),
-        [f, h] = s.useState(!1),
-        E = s.useMemo(() => {
-            if (null == l) return null;
-            let e = (0, p.oo)(l.config.colors.primary),
+    let { animationClassName: n, className: s, quest: i, useReducedMotion: l } = e,
+        g = (0, c.e7)([u.Z], () => u.Z.isFocused()),
+        h = r.useRef(null),
+        [C, v] = r.useState(!1),
+        j = r.useMemo(() => {
+            if (null == i) return null;
+            let e = (0, p.oo)(i.config.colors.primary),
                 t = {
                     r: e.r / 255,
                     g: e.g / 255,
                     b: e.b / 255
                 },
                 n = x.reduce((e, n) => [...e, n, t.r, t.g, t.b], []);
-            return _(l.id, n);
-        }, [l]),
-        S = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        T = !i && C;
-    s.useEffect(() => {
+            return f(i.id, n);
+        }, [i]),
+        _ = (null === (t = i.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        E = !l && g;
+    r.useEffect(() => {
         var e, t, n, o;
-        C ? T && (null === (o = g.current) || void 0 === o || null === (n = o.animation) || void 0 === n || n.play()) : null === (t = g.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0);
-    }, [T, C]);
-    let v = s.useCallback(() => {
-        h(!0);
+        g ? E && (null === (o = h.current) || void 0 === o || null === (n = o.animation) || void 0 === n || n.play()) : null === (t = h.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0);
+    }, [E, g]);
+    let b = r.useCallback(() => {
+        v(!0);
     }, []);
-    return null == E || S
+    return null == j || _
         ? (0, o.jsx)('div', {
               className: m.backgroundFallback,
-              style: { backgroundImage: 'linear-gradient(90deg, '.concat(l.config.colors.primary, ', ').concat(l.config.colors.secondary, ')') }
+              style: { backgroundImage: 'linear-gradient(90deg, '.concat(i.config.colors.primary, ', ').concat(i.config.colors.secondary, ')') }
           })
         : (0, o.jsx)('div', {
-              className: a()(m.lottieAnimationBackgroundWrapper, r),
+              className: a()(m.lottieAnimationBackgroundWrapper, s),
               children: (0, o.jsx)(
                   d.LottieAnimation,
                   {
-                      ref: g,
-                      onComplete: v,
-                      importData: () => E,
-                      shouldAnimate: !f && T,
+                      ref: h,
+                      onComplete: b,
+                      importData: () => j,
+                      shouldAnimate: !C && E,
                       className: a()(m.lottieAnimation, m.lottieAnimationBackground, n),
                       loop: 0,
                       rendererSettings: { preserveAspectRatio: 'none' }
                   },
-                  l.config.colors.primary
+                  i.config.colors.primary
               )
           });
 }

@@ -1,9 +1,9 @@
-t.d(n, {
+e.d(n, {
     A: function () {
-        return i;
+        return r;
     }
 });
-var r = t(709054);
-function i(e) {
-    return !(e < r.default.extractTimestamp('1088216706570268682')) && !0;
+var i = e(709054);
+function r(t) {
+    return !(t < i.default.extractTimestamp('1088216706570268682')) && !0;
 }

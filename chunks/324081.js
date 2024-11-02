@@ -1,183 +1,183 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return T;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(120356),
-    s = n.n(a),
-    r = n(91192),
-    l = n(442837),
-    o = n(481060),
+var r = n(120356),
+    l = n.n(r),
+    a = n(91192),
+    o = n(442837),
+    s = n(481060),
     c = n(788307),
     u = n(43267),
     d = n(933557),
-    _ = n(471445),
-    E = n(790145),
-    I = n(313201),
-    m = n(565138),
-    f = n(199902),
-    T = n(592125),
-    h = n(430824),
-    N = n(158776),
-    p = n(594174),
-    C = n(689938),
-    g = n(699420);
-let S = {
+    m = n(471445),
+    f = n(790145),
+    h = n(313201),
+    p = n(565138),
+    g = n(199902),
+    _ = n(592125),
+    C = n(430824),
+    E = n(158776),
+    I = n(594174),
+    x = n(388032),
+    v = n(699420);
+let N = {
     top: 8,
     bottom: 8,
     left: -4,
     right: -4
 };
-function A(e) {
-    let { channel: t, children: n, gotoChannel: a, mentionCount: s, channelState: l, toggleCollapsed: c } = e,
-        u = (0, r.JA)('recents-header-'.concat(t.id, '-').concat((0, I.Dt)()));
-    return (0, i.jsx)(o.FocusRing, {
-        offset: S,
+function T(e) {
+    let { channel: t, children: n, gotoChannel: r, mentionCount: l, channelState: o, toggleCollapsed: c } = e,
+        u = (0, a.JA)('recents-header-'.concat(t.id, '-').concat((0, h.Dt)()));
+    return (0, i.jsx)(s.FocusRing, {
+        offset: N,
         children: (0, i.jsxs)('div', {
-            className: g.channelHeader,
+            className: v.channelHeader,
             ...u,
             tabIndex: 0,
             'data-recents-channel': t.id,
             onKeyDown: function (e) {
-                null != c && null != l && (('ArrowRight' === e.key && l.collapsed) || ('ArrowLeft' === e.key && !l.collapsed)) && (null == c || c(l));
+                null != c && null != o && (('ArrowRight' === e.key && o.collapsed) || ('ArrowLeft' === e.key && !o.collapsed)) && (null == c || c(o));
             },
             children: [
-                (0, i.jsx)(x, {
+                (0, i.jsx)(S, {
                     channel: t,
-                    gotoChannel: a
+                    gotoChannel: r
                 }),
-                (0, i.jsx)(M, {
+                (0, i.jsx)(j, {
                     channel: t,
-                    gotoChannel: a,
-                    mentionCount: s
+                    gotoChannel: r,
+                    mentionCount: l
                 }),
                 n
             ]
         })
     });
 }
-function x(e) {
+function S(e) {
     let { channel: t, gotoChannel: n } = e;
     return t.isPrivate()
-        ? (0, i.jsx)(R, {
+        ? (0, i.jsx)(b, {
               channel: t,
               gotoChannel: n
           })
-        : (0, i.jsx)(v, {
+        : (0, i.jsx)(A, {
               channel: t,
               gotoChannel: n
           });
 }
-function R(e) {
+function b(e) {
     let { channel: t, gotoChannel: n } = e,
-        a = (0, l.e7)([p.default], () => (t.isDM() ? p.default.getUser(t.getRecipientId()) : null)),
-        s = null == a ? (0, u.x)(t) : a.getAvatarURL(void 0, 40);
-    return (0, i.jsx)(o.Clickable, {
+        r = (0, o.e7)([I.default], () => (t.isDM() ? I.default.getUser(t.getRecipientId()) : null)),
+        l = null == r ? (0, u.x)(t) : r.getAvatarURL(void 0, 40);
+    return (0, i.jsx)(s.Clickable, {
         onClick: n,
         tabIndex: -1,
         children: (0, i.jsx)('img', {
-            className: g.dmIcon,
-            src: s,
+            className: v.dmIcon,
+            src: l,
             alt: '',
             'aria-hidden': !0
         })
     });
 }
-function v(e) {
+function A(e) {
     let { channel: t, gotoChannel: n } = e,
-        a = (0, l.e7)([h.Z], () => h.Z.getGuild(t.guild_id));
-    return null == a
+        r = (0, o.e7)([C.Z], () => C.Z.getGuild(t.guild_id));
+    return null == r
         ? null
-        : (0, i.jsx)(m.Z, {
+        : (0, i.jsx)(p.Z, {
               'aria-hidden': !0,
-              className: g.guildIcon,
-              guild: a,
-              size: m.Z.Sizes.MEDIUM,
+              className: v.guildIcon,
+              guild: r,
+              size: p.Z.Sizes.MEDIUM,
               active: !0,
               onClick: n,
               tabIndex: -1
           });
 }
-function M(e) {
-    let { channel: t, gotoChannel: n, mentionCount: a } = e,
-        r = (0, l.e7)([h.Z], () => h.Z.getGuild(t.guild_id)),
-        c = (0, l.e7)([T.Z], () => T.Z.getChannel(t.parent_id)),
-        u = (0, _.KS)(t, r),
-        I = (0, d.ZP)(t, !1),
-        m = null == c ? (null == r ? void 0 : r.name) : ''.concat(null == r ? void 0 : r.name, ' \u203A ').concat(c.name),
-        f = t.isMultiUserDM()
-            ? C.Z.Messages.MEMBERS_HEADER.format({ members: t.recipients.length + 1 })
+function j(e) {
+    let { channel: t, gotoChannel: n, mentionCount: r } = e,
+        a = (0, o.e7)([C.Z], () => C.Z.getGuild(t.guild_id)),
+        c = (0, o.e7)([_.Z], () => _.Z.getChannel(t.parent_id)),
+        u = (0, m.KS)(t, a),
+        h = (0, d.ZP)(t, !1),
+        p = null == c ? (null == a ? void 0 : a.name) : ''.concat(null == a ? void 0 : a.name, ' \u203A ').concat(c.name),
+        g = t.isMultiUserDM()
+            ? x.intl.formatToPlainString(x.t.CxSA5O, { members: t.recipients.length + 1 })
             : t.isPrivate()
-              ? (0, i.jsx)(O, { channel: t })
-              : (0, i.jsx)(o.Clickable, {
-                    className: s()(g.subtext, g.guildName),
+              ? (0, i.jsx)(Z, { channel: t })
+              : (0, i.jsx)(s.Clickable, {
+                    className: l()(v.subtext, v.guildName),
                     onClick: n,
-                    children: m
+                    children: p
                 });
     return (0, i.jsxs)('div', {
-        className: g.channelNameSection,
+        className: v.channelNameSection,
         children: [
-            (0, i.jsx)(o.Heading, {
+            (0, i.jsx)(s.Heading, {
                 variant: 'heading-md/semibold',
-                className: g.channelNameHeader,
-                children: (0, i.jsxs)(o.Clickable, {
-                    className: g.channelName,
+                className: v.channelNameHeader,
+                children: (0, i.jsxs)(s.Clickable, {
+                    className: v.channelName,
                     onClick: n,
                     children: [
                         t.isThread() || t.isGroupDM() || null == u
                             ? null
                             : (0, i.jsx)(u, {
-                                  className: t.isForumLikeChannel() ? g.forumIcon : void 0,
+                                  className: t.isForumLikeChannel() ? v.forumIcon : void 0,
                                   width: 18,
                                   height: 18,
                                   size: 'custom',
                                   color: 'currentColor'
                               }),
                         (0, i.jsx)('span', {
-                            className: g.channelNameSpan,
-                            children: I
+                            className: v.channelNameSpan,
+                            children: h
                         }),
-                        null != a && a > 0
-                            ? (0, i.jsx)(E.Z, {
-                                  value: a,
-                                  className: g.badge
+                        null != r && r > 0
+                            ? (0, i.jsx)(f.Z, {
+                                  value: r,
+                                  className: v.badge
                               })
                             : null
                     ]
                 })
             }),
-            (0, i.jsx)(o.Text, {
+            (0, i.jsx)(s.Text, {
                 color: 'header-secondary',
                 variant: 'text-xs/normal',
-                className: g.subtextContainer,
-                children: f
+                className: v.subtextContainer,
+                children: g
             })
         ]
     });
 }
-function O(e) {
+function Z(e) {
     let { channel: t } = e,
         {
             user: n,
-            activities: a,
-            applicationStream: s
-        } = (0, l.cj)([p.default, N.Z, f.Z], () => {
-            let e = p.default.getUser(t.getRecipientId());
+            activities: r,
+            applicationStream: l
+        } = (0, o.cj)([I.default, E.Z, g.Z], () => {
+            let e = I.default.getUser(t.getRecipientId());
             return {
                 user: e,
-                activities: null != e ? N.Z.getActivities(e.id) : null,
-                applicationStream: null != e ? f.Z.getAnyStreamForUser(e.id) : null
+                activities: null != e ? E.Z.getActivities(e.id) : null,
+                applicationStream: null != e ? g.Z.getAnyStreamForUser(e.id) : null
             };
         });
-    return null == a
+    return null == r
         ? null
         : (0, i.jsx)(c.ZP, {
-              className: g.activityStatus,
-              emojiClassName: g.activityEmoji,
-              activities: a,
-              applicationStream: s,
+              className: v.activityStatus,
+              emojiClassName: v.activityEmoji,
+              activities: r,
+              applicationStream: l,
               hideTooltip: !0,
               user: n
           });

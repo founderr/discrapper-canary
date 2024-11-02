@@ -3,7 +3,7 @@ n.d(t, {
         return i;
     },
     Z: function () {
-        return _;
+        return f;
     }
 });
 var r,
@@ -28,7 +28,7 @@ function c(e, t, n) {
 }
 let d = new a.Y('Output');
 ((r = i || (i = {})).InteractionRequired = 'interactionrequired'), (r.Speaking = 'speaking'), (r.Video = 'video');
-class _ extends s.Z {
+class f extends s.Z {
     play() {
         var e;
         null === (e = this.audioElement) || void 0 === e || e.play();

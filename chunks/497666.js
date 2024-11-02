@@ -3,16 +3,16 @@ n.d(t, {
         return o;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(442837),
-    i = n(246946),
-    r = n(999382),
-    l = n(270394);
+var r = n(442837),
+    l = n(246946),
+    s = n(999382),
+    a = n(270394);
 function o() {
-    let e = (0, a.e7)([i.Z], () => i.Z.hideInstantInvites),
-        { invites: t, guild: n } = (0, a.cj)([r.Z], () => r.Z.getProps(), []);
-    return (0, s.jsx)(l.Z, {
+    let e = (0, r.e7)([l.Z], () => l.Z.hideInstantInvites),
+        { invites: t, guild: n } = (0, r.cj)([s.Z], () => s.Z.getProps(), []);
+    return (0, i.jsx)(a.Z, {
         invites: t,
         guild: n,
         showChannel: !0,

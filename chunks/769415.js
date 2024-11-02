@@ -1,4 +1,4 @@
-let s = (0, n(818083).B)({
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2024-11_premium_q4_moment_marketing',
     label: 'Premium Q4 Moment Marketing',
@@ -11,4 +11,4 @@ let s = (0, n(818083).B)({
         }
     ]
 });
-t.Z = s;
+t.Z = i;

@@ -1,29 +1,29 @@
-a.d(n, {
+t.d(n, {
     Z: function () {
         return r;
     }
 });
-var t = a(200651);
-a(192379);
-var s = a(475413),
-    c = a(955418),
-    o = a(689938),
-    i = a(451563);
+var a = t(200651);
+t(192379);
+var i = t(475413),
+    c = t(955418),
+    o = t(388032),
+    s = t(451563);
 function r(e) {
-    let { user: n, hideMessageInput: a, hideExampleButton: r } = e;
-    return a
-        ? (0, t.jsx)('footer', {
-              className: i.footer,
+    let { user: n, hideMessageInput: t, hideExampleButton: r } = e;
+    return t
+        ? (0, a.jsx)('footer', {
+              className: s.footer,
               children:
                   !r &&
-                  (0, t.jsx)(s.tG, {
-                      text: o.Z.Messages.USER_SETTINGS_CUSTOMIZE_PROFILE_EXAMPLE_BUTTON,
+                  (0, a.jsx)(i.tG, {
+                      text: o.intl.string(o.t.hZkfwc),
                       fullWidth: !0
                   })
           })
-        : (0, t.jsx)('footer', {
+        : (0, a.jsx)('footer', {
               inert: '',
-              className: i.footer,
-              children: (0, t.jsx)(c.Z, { user: n })
+              className: s.footer,
+              children: (0, a.jsx)(c.Z, { user: n })
           });
 }

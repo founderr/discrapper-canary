@@ -1,19 +1,19 @@
-s.d(t, {
+n.d(t, {
     Z: function () {
         return l;
     }
 }),
-    s(47120);
-var n = s(200651),
-    r = s(192379),
-    o = s(748780),
-    a = s(481060),
-    i = s(532864);
+    n(47120);
+var s = n(200651),
+    r = n(192379),
+    i = n(748780),
+    o = n(481060),
+    a = n(532864);
 class l extends r.Component {
     componentWillEnter(e) {
         let { offset: t } = this.state;
         t.setValue(1),
-            o.Z.spring(t, {
+            i.Z.spring(t, {
                 toValue: 0,
                 duration: 75
             }).start(e);
@@ -22,7 +22,7 @@ class l extends r.Component {
         let { offset: t } = this.state;
         t.setValue(0),
             this.setState({ isExiting: !0 }, () => {
-                o.Z.spring(t, {
+                i.Z.spring(t, {
                     toValue: -1,
                     duration: 75
                 }).start(e);
@@ -30,8 +30,8 @@ class l extends r.Component {
     }
     render() {
         let { isExiting: e, offset: t } = this.state;
-        return (0, n.jsx)(o.Z.div, {
-            className: i.wrapper,
+        return (0, s.jsx)(i.Z.div, {
+            className: a.wrapper,
             style: {
                 left: 0,
                 position: e ? 'absolute' : 'relative',
@@ -45,29 +45,29 @@ class l extends r.Component {
                     }
                 ]
             },
-            children: (0, n.jsx)(a.ModalContent, {
-                className: i.contentWrapper,
+            children: (0, s.jsx)(o.ModalContent, {
+                className: a.contentWrapper,
                 children: this.props.children
             })
         });
     }
     constructor(...e) {
-        var t, s, n;
+        var t, n, s;
         super(...e),
             (t = this),
-            (s = 'state'),
-            (n = {
+            (n = 'state'),
+            (s = {
                 isExiting: !1,
-                offset: new o.Z.Value(0),
+                offset: new i.Z.Value(0),
                 selectedValue: null
             }),
-            s in t
-                ? Object.defineProperty(t, s, {
-                      value: n,
+            n in t
+                ? Object.defineProperty(t, n, {
+                      value: s,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[s] = n);
+                : (t[n] = s);
     }
 }

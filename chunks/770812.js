@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return S;
     }
 });
 var r = n(200651);
@@ -13,79 +13,79 @@ var i = n(990547),
     u = n(100527),
     c = n(906732),
     d = n(213609),
-    _ = n(703656),
-    E = n(430824),
-    f = n(687476),
-    h = n(761966),
-    p = n(981631),
-    I = n(176505),
-    m = n(689938),
-    T = n(799274);
-let S = () => {
+    f = n(703656),
+    _ = n(430824),
+    h = n(687476),
+    p = n(761966),
+    m = n(981631),
+    g = n(176505),
+    E = n(388032),
+    v = n(799274);
+let I = () => {
     let e = (0, l.ZP)();
     return (0, s.ap)(e) ? n(537381) : n(341048);
 };
-function g(e) {
+function S(e) {
     let { onClose: t, guildId: n, emojiId: s } = e,
-        l = S(),
-        { analyticsLocations: g } = (0, c.ZP)(u.Z.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL);
+        l = I(),
+        { analyticsLocations: S } = (0, c.ZP)(u.Z.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL);
     (0, d.Z)({
         type: i.ImpressionTypes.MODAL,
         name: i.ImpressionNames.ROLE_SUBSCRIPTION_EMOJI_UPSELL,
         properties: {
-            location_stack: g,
+            location_stack: S,
             emoji_guild_id: n,
             emoji_id: null != s ? s : null
         }
     });
-    let A = (0, a.e7)([E.Z], () => E.Z.getGuild(n)),
-        N = (0, a.e7)([f.Z], () => null != n && f.Z.getUserSubscriptionRoles(n).size > 0),
-        R = N ? m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPGRADE_UPSELL_DESCRIPTION : m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_PURCHASE_UPSELL_DESCRIPTION.format({ serverName: null == A ? void 0 : A.name }),
-        O = N ? m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_UPGRADE_CTA : m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_PURCHASE_CTA;
+    let T = (0, a.e7)([_.Z], () => _.Z.getGuild(n)),
+        b = (0, a.e7)([h.Z], () => null != n && h.Z.getUserSubscriptionRoles(n).size > 0),
+        y = b ? E.intl.string(E.t['GoLM9/']) : E.intl.formatToPlainString(E.t['h0u/Hh'], { serverName: null == T ? void 0 : T.name }),
+        A = b ? E.intl.string(E.t.PjZ7DQ) : E.intl.string(E.t.p8FG1N);
     return (0, r.jsxs)('div', {
-        className: T.container,
+        className: v.container,
         children: [
-            (0, r.jsx)('div', { className: T.background }),
+            (0, r.jsx)('div', { className: v.background }),
             (0, r.jsxs)('div', {
-                className: T.content,
+                className: v.content,
                 children: [
                     (0, r.jsx)(o.Button, {
                         look: o.Button.Looks.BLANK,
                         size: o.Button.Sizes.ICON,
-                        className: T.closeButton,
+                        className: v.closeButton,
                         onClick: t,
                         children: (0, r.jsx)(o.XSmallIcon, {
                             size: 'xs',
                             color: 'currentColor',
-                            'aria-label': m.Z.Messages.CLOSE,
-                            className: T.closeButtonIcon
+                            'aria-label': E.intl.string(E.t.cpT0Cg),
+                            className: v.closeButtonIcon
                         })
                     }),
                     (0, r.jsx)('img', {
                         alt: '',
                         src: l,
-                        className: T.upsellImage
+                        className: v.upsellImage
                     }),
                     (0, r.jsx)(o.Spacer, { size: 22 }),
                     (0, r.jsx)(o.Heading, {
                         color: 'header-primary',
                         variant: 'heading-lg/extrabold',
-                        className: T.header,
-                        children: m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_TITLE
+                        className: v.header,
+                        children: E.intl.string(E.t.cBjkc3)
                     }),
                     (0, r.jsx)(o.Spacer, { size: 4 }),
                     (0, r.jsx)(o.Text, {
                         color: 'header-secondary',
                         variant: 'text-md/normal',
-                        className: T.description,
-                        children: R
+                        className: v.description,
+                        children: y
                     }),
                     (0, r.jsx)(o.Spacer, { size: 24 }),
-                    (0, r.jsx)(h.Z, {
+                    (0, r.jsx)(p.Z, {
                         onClick: () => {
-                            (0, _.uL)(p.Z5c.CHANNEL(n, I.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: g });
+                            (0, f.uL)(m.Z5c.CHANNEL(n, g.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: S });
                         },
-                        children: O
+                        children: A
                     })
                 ]
             })

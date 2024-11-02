@@ -1,32 +1,32 @@
-t.d(s, {
+n.d(t, {
     Y: function () {
-        return _;
+        return u;
     }
 });
-var n = t(200651);
-t(192379);
-var a = t(704215),
-    i = t(231757),
-    r = t(63063),
-    o = t(249881),
-    l = t(981631),
-    c = t(689938),
-    d = t(195794);
-let _ = () => {
-    let e = r.Z.getArticleURL(l.BhN.XBOX_CONNECTION);
-    return (0, n.jsx)(o.t, {
-        title: c.Z.Messages.XBOX_TWO_WAY_UPSELL_TITLE,
-        body: c.Z.Messages.XBOX_TWO_WAY_UPSELL_BODY.format({ help_article: e }),
-        img: (0, n.jsx)('img', {
+var i = n(200651);
+n(192379);
+var s = n(704215),
+    r = n(231757),
+    l = n(63063),
+    a = n(249881),
+    o = n(981631),
+    c = n(388032),
+    d = n(195794);
+let u = () => {
+    let e = l.Z.getArticleURL(o.BhN.XBOX_CONNECTION);
+    return (0, i.jsx)(a.t, {
+        title: c.intl.string(c.t['2okkZW']),
+        body: c.intl.format(c.t.OnERSU, { help_article: e }),
+        img: (0, i.jsx)('img', {
             src: d,
             width: 'auto',
             height: '45',
             alt: ''
         }),
-        newIndicatorDismissibleContent: a.z.XBOX_ONE_WAY_RECONNECT,
+        newIndicatorDismissibleContent: s.z.XBOX_ONE_WAY_RECONNECT,
         onClick: () =>
-            (0, i.Z)({
-                platformType: l.ABu.XBOX,
+            (0, r.Z)({
+                platformType: o.ABu.XBOX,
                 location: 'Xbox two way upsell'
             })
     });

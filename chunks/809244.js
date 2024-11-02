@@ -1,20 +1,20 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return a;
     }
 });
 var i = n(687516),
-    s = n(5192),
-    a = n(689938);
-function l(e, t, n) {
-    let l = (0, i.Cf)(n),
-        r = s.ZP.getName(e.getGuildId(), e.id, t);
+    l = n(5192),
+    r = n(388032);
+function a(e, t, n) {
+    let a = (0, i.Cf)(n),
+        s = l.ZP.getName(e.getGuildId(), e.id, t);
     return null == n
-        ? r
-        : (null == l ? void 0 : l.name) != null
-          ? a.Z.Messages.GO_LIVE_USER_PLAYING.format({
-                applicationName: null == l ? void 0 : l.name,
-                username: r
+        ? s
+        : (null == a ? void 0 : a.name) != null
+          ? r.intl.formatToPlainString(r.t['9jpVOT'], {
+                applicationName: null == a ? void 0 : a.name,
+                username: s
             })
-          : a.Z.Messages.GO_LIVE_TILE_SCREEN.format({ username: r });
+          : r.intl.formatToPlainString(r.t['+h0Z5+'], { username: s });
 }

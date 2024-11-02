@@ -1,4 +1,4 @@
-let n = (0, t(818083).B)({
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2024-01_expanded_gift_entry_points_gift_inventory',
     label: 'Expanded Gift Entry Points - Gift Inventory',
@@ -11,4 +11,4 @@ let n = (0, t(818083).B)({
         }
     ]
 });
-s.Z = n;
+t.Z = i;

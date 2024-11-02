@@ -1,52 +1,52 @@
-s.r(t),
-    s.d(t, {
+n.r(e),
+    n.d(e, {
         default: function () {
             return d;
         }
     }),
-    s(47120);
-var n = s(200651),
-    u = s(192379),
-    a = s(913527),
-    i = s.n(a),
-    o = s(481060),
-    r = s(689938),
-    l = s(374636);
-function d(e) {
-    let { createReminder: t, ...s } = e,
-        [a, d] = u.useState(() => i()()),
-        [c, p] = u.useState(() => i()()),
-        h = u.useCallback(() => {
-            t(a.toDate());
-        }, [t, a]),
-        m = (e) => {
-            if (!!e.isValid()) d(e);
+    n(47120);
+var i = n(200651),
+    r = n(192379),
+    o = n(913527),
+    s = n.n(o),
+    u = n(481060),
+    l = n(388032),
+    a = n(374636);
+function d(t) {
+    let { createReminder: e, ...n } = t,
+        [o, d] = r.useState(() => s()()),
+        [c, p] = r.useState(() => s()()),
+        m = r.useCallback(() => {
+            e(o.toDate());
+        }, [e, o]),
+        h = (t) => {
+            if (!!t.isValid()) d(t);
         };
-    return (0, n.jsx)(o.ConfirmModal, {
-        header: r.Z.Messages.MESSAGE_REMINDERS_SET_CUSTOM,
-        confirmText: r.Z.Messages.SAVE,
-        cancelText: r.Z.Messages.CANCEL,
-        confirmButtonColor: o.Button.Colors.BRAND,
-        onConfirm: h,
-        ...s,
-        children: (0, n.jsxs)('div', {
-            className: l.doubleInput,
+    return (0, i.jsx)(u.ConfirmModal, {
+        header: l.intl.string(l.t.VKsXpa),
+        confirmText: l.intl.string(l.t.R3BPHx),
+        cancelText: l.intl.string(l.t['ETE/oK']),
+        confirmButtonColor: u.Button.Colors.BRAND,
+        onConfirm: m,
+        ...n,
+        children: (0, i.jsxs)('div', {
+            className: a.doubleInput,
             children: [
-                (0, n.jsx)(o.FormItem, {
-                    title: r.Z.Messages.DATE,
+                (0, i.jsx)(u.FormItem, {
+                    title: l.intl.string(l.t.pSZKvL),
                     required: !0,
-                    children: (0, n.jsx)(o.DateInput, {
-                        value: a,
-                        onSelect: m,
+                    children: (0, i.jsx)(u.DateInput, {
+                        value: o,
+                        onSelect: h,
                         minDate: c
                     })
                 }),
-                (0, n.jsx)(o.FormItem, {
-                    title: r.Z.Messages.TIME,
+                (0, i.jsx)(u.FormItem, {
+                    title: l.intl.string(l.t.GOmEb2),
                     required: !0,
-                    children: (0, n.jsx)(o.TimeInput, {
-                        value: a,
-                        onChange: m
+                    children: (0, i.jsx)(u.TimeInput, {
+                        value: o,
+                        onChange: h
                     })
                 })
             ]

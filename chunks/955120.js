@@ -1,28 +1,28 @@
-s.r(n),
-    s.d(n, {
+t.r(e),
+    t.d(e, {
         default: function () {
-            return l;
+            return c;
         }
     });
-var a = s(200651);
-s(192379);
-var u = s(481060),
-    r = s(239091),
-    c = s(299206),
-    i = s(689938);
-function l(e) {
-    let { guildId: n, shiftId: s, onSelect: l, closePopout: t, 'aria-label': d } = e,
-        o = (0, c.Z)({
-            id: n,
-            label: i.Z.Messages.COPY_ID_GUILD,
-            shiftId: s,
-            onSuccess: t
+var i = t(200651);
+t(192379);
+var l = t(481060),
+    r = t(239091),
+    u = t(299206),
+    a = t(388032);
+function c(n) {
+    let { guildId: e, shiftId: t, onSelect: c, closePopout: s, 'aria-label': o } = n,
+        d = (0, u.Z)({
+            id: e,
+            label: a.intl.string(a.t['94lLDw']),
+            shiftId: t,
+            onSuccess: s
         });
-    return (0, a.jsx)(u.Menu, {
-        onSelect: l,
+    return (0, i.jsx)(l.Menu, {
+        onSelect: c,
         navId: 'guild-discovery-context-menu',
-        'aria-label': null != d ? d : i.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
+        'aria-label': null != o ? o : a.intl.string(a.t.ogxXGh),
         onClose: r.Zy,
-        children: (0, a.jsx)(u.MenuGroup, { children: o })
+        children: (0, i.jsx)(l.MenuGroup, { children: d })
     });
 }

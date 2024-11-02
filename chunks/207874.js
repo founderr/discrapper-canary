@@ -4,26 +4,26 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(192379),
-    l = n(442837),
+    l = n(192379),
+    s = n(442837),
     r = n(461745),
     o = n(663389),
     a = n(5967),
     c = n(996733),
-    u = n(689938);
+    u = n(388032);
 function d(e) {
     let { style: t } = e,
         n = (0, c.Z7)(),
-        d = s.useCallback((e, t) => {
+        d = l.useCallback((e, t) => {
             t.stopPropagation(), t.preventDefault(), (0, c.QH)(e);
         }, []),
-        h = s.useCallback(() => {
+        h = l.useCallback(() => {
             (0, c.QH)(!1), (0, c.yN)('');
         }, []),
-        m = s.useRef(null),
-        p = (0, l.e7)([o.Z], () => o.Z.getSection());
+        m = l.useRef(null),
+        p = (0, s.e7)([o.Z], () => o.Z.getSection());
     return (
-        s.useEffect(() => {
+        l.useEffect(() => {
             let e = (e) => {
                 var t;
                 let n = m.current;
@@ -39,10 +39,10 @@ function d(e) {
                 query: n,
                 onClear: h,
                 onQueryChange: c.yN,
-                placeholder: u.Z.Messages.SEARCH,
+                placeholder: u.intl.string(u.t['5h0QOD']),
                 className: t,
                 inputProps: {
-                    'aria-label': u.Z.Messages.USER_SETTINGS_SEARCH_BAR,
+                    'aria-label': u.intl.string(u.t.pk9BWV),
                     'aria-expanded': !0,
                     onFocus: (e) => d(!0, e),
                     onBlur: (e) => d(!1, e)

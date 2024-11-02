@@ -1,119 +1,119 @@
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(780384),
-    i = n(481060),
-    r = n(410030),
-    l = n(367907),
+var r = n(780384),
+    l = n(481060),
+    s = n(410030),
+    a = n(367907),
     o = n(906732),
     c = n(91218),
     d = n(807582),
     u = n(518738),
-    _ = n(26323),
-    I = n(764260),
-    E = n(981631),
-    T = n(30513),
-    m = n(689938),
-    N = n(691440);
+    m = n(26323),
+    h = n(764260),
+    g = n(981631),
+    x = n(30513),
+    p = n(388032),
+    f = n(691440);
 t.Z = function (e) {
-    let { guild: t, disabled: S, role: g } = e,
-        h = (0, r.ZP)(),
-        C = (0, u.oC)(t.id, g),
-        { analyticsLocations: x } = (0, o.ZP)(),
-        p = () => {
-            (0, i.openModalLazy)(async () => {
+    let { guild: t, disabled: C, role: I } = e,
+        _ = (0, s.ZP)(),
+        N = (0, u.oC)(t.id, I),
+        { analyticsLocations: v } = (0, o.ZP)(),
+        T = () => {
+            (0, l.openModalLazy)(async () => {
                 let { default: e } = await n.e('22942').then(n.bind(n, 660727));
                 return (n) =>
-                    (0, s.jsx)(e, {
+                    (0, i.jsx)(e, {
                         ...n,
                         guildId: t.id,
-                        onUploadIcon: (e) => (0, I._l)(g.id, e, null),
-                        onSelectUnicodeEmoji: (e) => (0, I._l)(g.id, null, e)
+                        onUploadIcon: (e) => (0, h._l)(I.id, e, null),
+                        onSelectUnicodeEmoji: (e) => (0, h._l)(I.id, null, e)
                     });
             });
         },
-        R = t.features.has(E.oNc.ROLE_ICONS),
-        L = (e) => {
-            !R &&
-                ((0, l.yw)(E.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+        j = t.features.has(g.oNc.ROLE_ICONS),
+        E = (e) => {
+            !j &&
+                ((0, a.yw)(g.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                     location: {
                         ...e,
-                        section: E.jXE.CUSTOM_ROLE_ICONS_TOOLTIP
+                        section: g.jXE.CUSTOM_ROLE_ICONS_TOOLTIP
                     },
                     guild_id: null == t ? void 0 : t.id,
-                    location_stack: x
+                    location_stack: v
                 }),
-                (0, _.Z)({
-                    analyticsLocations: x,
+                (0, m.Z)({
+                    analyticsLocations: v,
                     analyticsSourceLocation: {
-                        page: E.ZY5.GUILD_SETTINGS,
-                        section: E.jXE.GUILD_ROLE_EDIT_UPSELL_MODAL,
-                        object: E.qAy.BADGE
+                        page: g.ZY5.GUILD_SETTINGS,
+                        section: g.jXE.GUILD_ROLE_EDIT_UPSELL_MODAL,
+                        object: g.qAy.BADGE
                     },
                     guild: t,
-                    perks: (0, T.Yp)()
+                    perks: (0, x.Yp)()
                 }));
         },
-        f = (0, s.jsx)(d.Z, {
-            className: N.availabilityIndicator,
+        S = (0, i.jsx)(d.Z, {
+            className: f.availabilityIndicator,
             guild: t,
-            guildFeature: E.oNc.ROLE_ICONS,
+            guildFeature: g.oNc.ROLE_ICONS,
             tooltipPosition: 'top',
-            hideTooltip: R,
+            hideTooltip: j,
             onClick: () =>
-                L({
-                    object: E.qAy.LEARN_MORE,
-                    objectType: E.Qqv.TIER_2
+                E({
+                    object: g.qAy.LEARN_MORE,
+                    objectType: g.Qqv.TIER_2
                 })
         });
-    return (0, s.jsxs)(i.FormItem, {
-        className: N.container,
+    return (0, i.jsxs)(l.FormItem, {
+        className: f.container,
         children: [
-            (0, s.jsxs)(i.FormTitle, {
-                className: N.formTitle,
-                children: [(0, s.jsx)('div', { children: m.Z.Messages.FORM_LABEL_ROLE_ICON }), f]
+            (0, i.jsxs)(l.FormTitle, {
+                className: f.formTitle,
+                children: [(0, i.jsx)('div', { children: p.intl.string(p.t.B9grJy) }), S]
             }),
-            (0, s.jsx)(i.FormText, {
-                className: N.description,
-                children: m.Z.Messages.ROLE_ICON_HELP
+            (0, i.jsx)(l.FormText, {
+                className: f.description,
+                children: p.intl.string(p.t.I3YQeX)
             }),
-            (0, s.jsxs)('div', {
-                className: N.rolePreviewArea,
+            (0, i.jsxs)('div', {
+                className: f.rolePreviewArea,
                 children: [
-                    (0, s.jsx)('div', {
-                        className: N.previewContainer,
+                    (0, i.jsx)('div', {
+                        className: f.previewContainer,
                         children:
-                            null != C
-                                ? (0, s.jsx)(c.Z, {
-                                      ...C,
-                                      className: N.roleIconPreview,
+                            null != N
+                                ? (0, i.jsx)(c.Z, {
+                                      ...N,
+                                      className: f.roleIconPreview,
                                       enableTooltip: !1
                                   })
-                                : (0, s.jsx)(i.ImagePlusIcon, {
+                                : (0, i.jsx)(l.ImagePlusIcon, {
                                       size: 'custom',
                                       color: 'currentColor',
                                       width: 24,
                                       height: 24,
-                                      className: N.preview
+                                      className: f.preview
                                   })
                     }),
-                    (0, s.jsx)(i.Button, {
-                        className: N.button,
-                        color: (0, a.ap)(h) ? i.Button.Colors.PRIMARY : i.Button.Colors.WHITE,
-                        look: i.Button.Looks.OUTLINED,
-                        onClick: () => (t.hasFeature(E.oNc.ROLE_ICONS) ? p() : L({ object: E.qAy.UPLOAD_IMAGE })),
-                        disabled: S,
-                        children: m.Z.Messages.ROLE_ICON_CHOOSE_IMAGE
+                    (0, i.jsx)(l.Button, {
+                        className: f.button,
+                        color: (0, r.ap)(_) ? l.Button.Colors.PRIMARY : l.Button.Colors.WHITE,
+                        look: l.Button.Looks.OUTLINED,
+                        onClick: () => (t.hasFeature(g.oNc.ROLE_ICONS) ? T() : E({ object: g.qAy.UPLOAD_IMAGE })),
+                        disabled: C,
+                        children: p.intl.string(p.t.mD1oGB)
                     }),
-                    null != C
-                        ? (0, s.jsx)(i.Button, {
-                              className: N.button,
-                              color: (0, a.ap)(h) ? i.Button.Colors.PRIMARY : i.Button.Colors.TRANSPARENT,
-                              look: i.Button.Looks.BLANK,
+                    null != N
+                        ? (0, i.jsx)(l.Button, {
+                              className: f.button,
+                              color: (0, r.ap)(_) ? l.Button.Colors.PRIMARY : l.Button.Colors.TRANSPARENT,
+                              look: l.Button.Looks.BLANK,
                               onClick: () => {
-                                  (0, I._l)(g.id, null, null);
+                                  (0, h._l)(I.id, null, null);
                               },
-                              disabled: S,
-                              children: m.Z.Messages.REMOVE_ICON
+                              disabled: C,
+                              children: p.intl.string(p.t['uY+Nk5'])
                           })
                         : null
                 ]

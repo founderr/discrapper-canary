@@ -1,96 +1,96 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return A;
+            return N;
         }
     });
 var a = n(200651),
     r = n(192379),
-    s = n(593473),
-    i = n(442837),
+    i = n(593473),
+    s = n(442837),
     o = n(893776),
-    c = n(830064),
-    l = n(388905),
+    l = n(830064),
+    c = n(388905),
     d = n(625128),
     u = n(362762),
     m = n(353926),
     p = n(571457),
-    _ = n(703656),
-    x = n(314897),
-    b = n(626135),
-    g = n(963202),
-    E = n(569234),
-    f = n(981631),
-    h = n(186901),
-    I = n(689938),
-    N = n(940956);
-function A(e) {
+    x = n(703656),
+    b = n(314897),
+    g = n(626135),
+    f = n(963202),
+    h = n(569234),
+    _ = n(981631),
+    E = n(186901),
+    v = n(388032),
+    A = n(940956);
+function N(e) {
     let { match: t, location: n } = e,
-        A = (0, i.e7)([u.Z], () => u.Z.getState('discovery')),
-        L = (0, i.e7)([x.default], () => x.default.isAuthenticated()),
-        v = (0, g.iN)('game_discovery_entry_point'),
-        D = t.params.gameId,
-        j = (0, g.io)('landing page'),
-        O = (0, i.e7)([m.Z], () => m.Z.hasLoadedExperiments);
+        N = (0, s.e7)([u.Z], () => u.Z.getState('discovery')),
+        j = (0, s.e7)([b.default], () => b.default.isAuthenticated()),
+        I = (0, f.iN)('game_discovery_entry_point'),
+        L = t.params.gameId,
+        S = (0, f.io)('landing page'),
+        C = (0, s.e7)([m.Z], () => m.Z.hasLoadedExperiments);
     if (
         (r.useEffect(() => {
-            let { utm_source: e } = s.parse(n.search);
-            (0, b.setUTMContext)({ utmSource: e }), (n.search = ''), (0, _.dL)(n);
+            let { utm_source: e } = i.parse(n.search);
+            (0, g.setUTMContext)({ utmSource: e }), (n.search = ''), (0, x.dL)(n);
         }, []),
         r.useEffect(() => {
-            O && j && (0, p.HV)({ gameId: D });
-        }, [D, O, j]),
+            C && S && (0, p.HV)({ gameId: L });
+        }, [L, C, S]),
         r.useEffect(() => {
-            !O && o.Z.getExperiments();
-        }, [O]),
+            !C && o.Z.getExperiments();
+        }, [C]),
         r.useEffect(() => {
-            if (O) {
-                if (!j) {
-                    (0, _.dL)({ pathname: f.Z5c.GLOBAL_DISCOVERY });
+            if (C) {
+                if (!S) {
+                    (0, x.dL)({ pathname: _.Z5c.GLOBAL_DISCOVERY });
                     return;
                 }
-                if (null == A)
-                    (0, p.zY)({ gameId: D }),
-                        d.Z.openNativeAppModal('discovery', f.Etm.DEEP_LINK, {
-                            type: h.jE.DISCOVERY_GAME_RESULTS,
-                            params: { gameId: D }
+                if (null == N)
+                    (0, p.zY)({ gameId: L }),
+                        d.Z.openNativeAppModal('discovery', _.Etm.DEEP_LINK, {
+                            type: E.jE.DISCOVERY_GAME_RESULTS,
+                            params: { gameId: L }
                         });
-                else if (A === f.kEZ.OPEN_FAIL) {
-                    if (!L) return;
-                    if (!v) {
-                        (0, _.dL)({ pathname: f.Z5c.GLOBAL_DISCOVERY_SERVERS });
+                else if (N === _.kEZ.OPEN_FAIL) {
+                    if (!j) return;
+                    if (!I) {
+                        (0, x.dL)({ pathname: _.Z5c.GLOBAL_DISCOVERY_SERVERS });
                         return;
                     }
-                    (0, _.dL)({
-                        pathname: f.Z5c.GLOBAL_DISCOVERY_SERVERS,
-                        search: '?game='.concat(D)
+                    (0, x.dL)({
+                        pathname: _.Z5c.GLOBAL_DISCOVERY_SERVERS,
+                        search: '?game='.concat(L)
                     });
                 }
             }
-        }, [D, O, L, v, A, j]),
-        A === f.kEZ.OPEN_FAIL && !L)
+        }, [L, C, j, I, N, S]),
+        N === _.kEZ.OPEN_FAIL && !j)
     )
-        return (0, a.jsx)(E.Z, { gameId: D });
-    let S = null == A || A === f.kEZ.OPENING;
+        return (0, a.jsx)(h.Z, { gameId: L });
+    let D = null == N || N === _.kEZ.OPENING;
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, a.jsx)(c.Z, {
-                className: N.backgroundArt,
+            (0, a.jsx)(l.Z, {
+                className: A.backgroundArt,
                 preserveAspectRatio: 'xMinYMin slice'
             }),
             (0, a.jsx)('div', {
-                className: N.container,
-                children: (0, a.jsx)(l.ZP, {
-                    children: S
+                className: A.container,
+                children: (0, a.jsx)(c.ZP, {
+                    children: D
                         ? (0, a.jsxs)(a.Fragment, {
-                              children: [(0, a.jsx)(l.Dx, { children: I.Z.Messages.APP_OPENING }), (0, a.jsx)(l.Hh, {})]
+                              children: [(0, a.jsx)(c.Dx, { children: v.intl.string(v.t['Z+hCVV']) }), (0, a.jsx)(c.Hh, {})]
                           })
                         : (0, a.jsxs)(a.Fragment, {
-                              children: [(0, a.jsx)(l.Dx, { children: I.Z.Messages.APP_OPENED_TITLE }), (0, a.jsx)(l.DK, { children: I.Z.Messages.DEEPLINK_BROWSER_APP_OPENED })]
+                              children: [(0, a.jsx)(c.Dx, { children: v.intl.string(v.t.csrAMD) }), (0, a.jsx)(c.DK, { children: v.intl.string(v.t.ghBJz8) })]
                           })
                 })
             })
         ]
     });
 }
-i.ZP.initialize();
+s.ZP.initialize();

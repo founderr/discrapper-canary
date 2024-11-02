@@ -1,73 +1,73 @@
-o.r(n),
-    o.d(n, {
+t.r(n),
+    t.d(n, {
         default: function () {
-            return _;
+            return b;
         }
     }),
-    o(47120);
-var l = o(200651),
-    t = o(192379),
-    a = o(442837),
-    i = o(481060),
-    s = o(596454),
-    u = o(313201),
-    d = o(318766),
-    r = o(907040),
-    c = o(339085),
-    m = o(984933),
-    j = o(883429),
-    C = o(981631),
-    h = o(185923),
-    v = o(689938),
-    x = o(797057);
-function _(e) {
+    t(47120);
+var o = t(200651),
+    l = t(192379),
+    i = t(442837),
+    a = t(481060),
+    u = t(596454),
+    r = t(313201),
+    d = t(318766),
+    s = t(907040),
+    c = t(339085),
+    m = t(984933),
+    j = t(883429),
+    h = t(981631),
+    v = t(185923),
+    x = t(388032),
+    C = t(797057);
+function b(e) {
     var n;
-    let { transitionState: o, onClose: _, channelId: E, guildId: b, tag: p } = e,
-        N = (0, u.Dt)(),
-        g = null != p,
-        [T, M] = t.useState(null !== (n = null == p ? void 0 : p.name) && void 0 !== n ? n : ''),
-        [B, R] = t.useState(
-            null != p
+    let { transitionState: t, onClose: b, channelId: p, guildId: g, tag: N } = e,
+        k = (0, r.Dt)(),
+        B = null != N,
+        [f, I] = l.useState(null !== (n = null == N ? void 0 : N.name) && void 0 !== n ? n : ''),
+        [_, E] = l.useState(
+            null != N
                 ? {
-                      id: p.emojiId,
-                      name: p.emojiName
+                      id: N.emojiId,
+                      name: N.emojiName
                   }
                 : null
         ),
-        [k, I] = t.useState(null == p ? void 0 : p.moderated),
-        A = (0, a.e7)([c.ZP], () => ((null == B ? void 0 : B.id) != null ? c.ZP.getUsableCustomEmojiById(B.id) : null)),
-        f = (null == p ? void 0 : p.name) !== T || (null == p ? void 0 : p.emojiId) !== (null == B ? void 0 : B.id) || (null == p ? void 0 : p.emojiName) !== (null == B ? void 0 : B.name) || k !== (null == p ? void 0 : p.moderated),
-        Z = () => {
-            if (null != T && f) {
-                if (g) {
+        [T, R] = l.useState(null == N ? void 0 : N.moderated),
+        Z = (0, i.e7)([c.ZP], () => ((null == _ ? void 0 : _.id) != null ? c.ZP.getUsableCustomEmojiById(_.id) : null)),
+        y = (null == N ? void 0 : N.name) !== f || (null == N ? void 0 : N.emojiId) !== (null == _ ? void 0 : _.id) || (null == N ? void 0 : N.emojiName) !== (null == _ ? void 0 : _.name) || T !== (null == N ? void 0 : N.moderated),
+        P = () => {
+            if (null != f && y) {
+                if (B) {
                     j.Z.updateForumTag(
                         {
-                            id: p.id,
-                            name: T,
-                            emojiId: null == B ? void 0 : B.id,
-                            emojiName: null == B ? void 0 : B.name,
-                            moderated: k
+                            id: N.id,
+                            name: f,
+                            emojiId: null == _ ? void 0 : _.id,
+                            emojiName: null == _ ? void 0 : _.name,
+                            moderated: T
                         },
-                        E
+                        p
                     ),
-                        _();
+                        b();
                     return;
                 }
                 j.Z.createForumTag(
                     {
-                        name: T,
-                        emojiId: null == B ? void 0 : B.id,
-                        emojiName: null == B ? void 0 : B.name,
-                        moderated: k
+                        name: f,
+                        emojiId: null == _ ? void 0 : _.id,
+                        emojiName: null == _ ? void 0 : _.name,
+                        moderated: T
                     },
-                    E
+                    p
                 ),
-                    _();
+                    b();
             }
         },
-        O = (e) => {
+        M = (e) => {
             null != e &&
-                R(
+                E(
                     null != e.id
                         ? {
                               id: e.id,
@@ -79,103 +79,103 @@ function _(e) {
                           }
                 );
         },
-        D = t.useCallback((e) => M(e), []),
-        F = t.createRef();
+        S = l.useCallback((e) => I(e), []),
+        D = l.createRef();
     return (
-        t.useEffect(() => {
-            null != F.current && F.current.focus();
+        l.useEffect(() => {
+            null != D.current && D.current.focus();
         }, []),
-        (0, l.jsxs)(i.ModalRoot, {
-            transitionState: o,
-            'aria-labelledby': N,
+        (0, o.jsxs)(a.ModalRoot, {
+            transitionState: t,
+            'aria-labelledby': k,
             children: [
-                (0, l.jsx)(i.ModalHeader, {
+                (0, o.jsx)(a.ModalHeader, {
                     separator: !1,
-                    children: (0, l.jsx)(i.Heading, {
+                    children: (0, o.jsx)(a.Heading, {
                         variant: 'heading-md/semibold',
-                        children: g ? v.Z.Messages.FORUM_TAG_EDIT : v.Z.Messages.FORUM_TAG_CREATE
+                        children: B ? x.intl.string(x.t.zeVg5e) : x.intl.string(x.t['/jubeH'])
                     })
                 }),
-                (0, l.jsxs)('div', {
-                    className: x.content,
+                (0, o.jsxs)('div', {
+                    className: C.content,
                     children: [
-                        (0, l.jsx)(i.Text, {
+                        (0, o.jsx)(a.Text, {
                             variant: 'text-sm/normal',
-                            children: v.Z.Messages.FORUM_TAG_CREATE_DESCRIPTION
+                            children: x.intl.string(x.t['3v8kZG'])
                         }),
-                        (0, l.jsxs)('div', {
-                            className: x.inputContainer,
+                        (0, o.jsxs)('div', {
+                            className: C.inputContainer,
                             children: [
-                                (0, l.jsx)('div', {
-                                    className: x.emojiButtonContainer,
-                                    children: (0, l.jsx)(i.Popout, {
+                                (0, o.jsx)('div', {
+                                    className: C.emojiButtonContainer,
+                                    children: (0, o.jsx)(a.Popout, {
                                         renderPopout: (e) => {
                                             let { closePopout: n } = e,
-                                                o = m.ZP.getDefaultChannel(b);
-                                            return (0, l.jsx)(r.Z, {
-                                                guildId: b,
+                                                t = m.ZP.getDefaultChannel(g);
+                                            return (0, o.jsx)(s.Z, {
+                                                guildId: g,
                                                 closePopout: n,
-                                                onSelectEmoji: (e, o) => {
-                                                    O(e), o && n();
+                                                onSelectEmoji: (e, t) => {
+                                                    M(e), t && n();
                                                 },
-                                                pickerIntention: h.Hz.COMMUNITY_CONTENT,
-                                                onNavigateAway: _,
-                                                channel: o
+                                                pickerIntention: v.Hz.COMMUNITY_CONTENT,
+                                                onNavigateAway: b,
+                                                channel: t
                                             });
                                         },
                                         position: 'left',
-                                        animation: i.Popout.Animation.NONE,
+                                        animation: a.Popout.Animation.NONE,
                                         align: 'bottom',
                                         children: (e, n) => {
-                                            let { isShown: o } = n;
-                                            return (0, l.jsx)(d.Z, {
+                                            let { isShown: t } = n;
+                                            return (0, o.jsx)(d.Z, {
                                                 ...e,
                                                 onClick: (n) => {
-                                                    var o;
-                                                    null === (o = e.onClick) || void 0 === o || o.call(e, n);
+                                                    var t;
+                                                    null === (t = e.onClick) || void 0 === t || t.call(e, n);
                                                 },
-                                                active: o,
-                                                className: x.emojiButton,
+                                                active: t,
+                                                className: C.emojiButton,
                                                 tabIndex: 0,
                                                 renderButtonContents:
-                                                    null != B && (null != B.id || null != B.name)
+                                                    null != _ && (null != _.id || null != _.name)
                                                         ? () =>
-                                                              (0, l.jsx)(s.Z, {
-                                                                  className: x.emoji,
-                                                                  emojiId: B.id,
-                                                                  emojiName: B.name,
-                                                                  animated: !!(null == A ? void 0 : A.animated)
+                                                              (0, o.jsx)(u.Z, {
+                                                                  className: C.emoji,
+                                                                  emojiId: _.id,
+                                                                  emojiName: _.name,
+                                                                  animated: !!(null == Z ? void 0 : Z.animated)
                                                               })
                                                         : null
                                             });
                                         }
                                     })
                                 }),
-                                (0, l.jsx)(i.TextInput, {
-                                    inputRef: F,
+                                (0, o.jsx)(a.TextInput, {
+                                    inputRef: D,
                                     maxLength: 20,
-                                    value: T,
-                                    inputClassName: x.input,
-                                    placeholder: v.Z.Messages.FORUM_TAG_CREATE_PLACEHOLDER,
-                                    onChange: D,
+                                    value: f,
+                                    inputClassName: C.input,
+                                    placeholder: x.intl.string(x.t['5vpeb2']),
+                                    onChange: S,
                                     autoFocus: !0,
                                     onKeyDown: (e) => {
-                                        e.keyCode === C.yXg.ENTER && T.length > 0 && (T.length > 0 && Z(), e.preventDefault());
+                                        e.keyCode === h.yXg.ENTER && f.length > 0 && (f.length > 0 && P(), e.preventDefault());
                                     }
                                 }),
-                                T.length > 0 || null != B
-                                    ? (0, l.jsx)(i.Button, {
-                                          'aria-label': v.Z.Messages.FORUM_TAG_EDIT_RESET_LABEL,
-                                          className: x.clearButton,
+                                f.length > 0 || null != _
+                                    ? (0, o.jsx)(a.Button, {
+                                          'aria-label': x.intl.string(x.t.o8lsHR),
+                                          className: C.clearButton,
                                           onClick: () => {
-                                              M(''), R(null);
+                                              I(''), E(null);
                                           },
-                                          look: i.Button.Looks.BLANK,
-                                          size: i.Button.Sizes.NONE,
-                                          children: (0, l.jsx)(i.CircleXIcon, {
+                                          look: a.Button.Looks.BLANK,
+                                          size: a.Button.Sizes.NONE,
+                                          children: (0, o.jsx)(a.CircleXIcon, {
                                               size: 'md',
                                               color: 'currentColor',
-                                              className: x.clearIcon
+                                              className: C.clearIcon
                                           })
                                       })
                                     : null
@@ -183,46 +183,46 @@ function _(e) {
                         })
                     ]
                 }),
-                (0, l.jsx)(i.Checkbox, {
-                    type: i.Checkbox.Types.INVERTED,
+                (0, o.jsx)(a.Checkbox, {
+                    type: a.Checkbox.Types.INVERTED,
                     size: 18,
-                    value: null != k && k,
-                    onChange: (e, n) => I(n || ((null == p ? void 0 : p.moderated) == null && void 0)),
-                    className: x.moderatedCheckbox,
-                    children: (0, l.jsx)(i.Text, {
+                    value: null != T && T,
+                    onChange: (e, n) => R(n || ((null == N ? void 0 : N.moderated) == null && void 0)),
+                    className: C.moderatedCheckbox,
+                    children: (0, o.jsx)(a.Text, {
                         variant: 'text-sm/normal',
-                        children: v.Z.Messages.FORUM_MODERATED_TAG_CHECKBOX
+                        children: x.intl.string(x.t['rMH+rq'])
                     })
                 }),
-                (0, l.jsxs)(i.ModalFooter, {
-                    className: x.footer,
+                (0, o.jsxs)(a.ModalFooter, {
+                    className: C.footer,
                     children: [
-                        (0, l.jsxs)('div', {
-                            className: x.buttons,
+                        (0, o.jsxs)('div', {
+                            className: C.buttons,
                             children: [
-                                (0, l.jsx)(i.Button, {
-                                    color: i.Button.Colors.PRIMARY,
+                                (0, o.jsx)(a.Button, {
+                                    color: a.Button.Colors.PRIMARY,
                                     onClick: () => {
-                                        _();
+                                        b();
                                     },
-                                    children: v.Z.Messages.CANCEL
+                                    children: x.intl.string(x.t['ETE/oK'])
                                 }),
-                                (0, l.jsx)(i.Button, {
-                                    onClick: Z,
-                                    disabled: 0 === T.length || !f,
+                                (0, o.jsx)(a.Button, {
+                                    onClick: P,
+                                    disabled: 0 === f.length || !y,
                                     autoFocus: !0,
-                                    children: v.Z.Messages.SAVE
+                                    children: x.intl.string(x.t.R3BPHx)
                                 })
                             ]
                         }),
-                        g &&
-                            (0, l.jsx)(i.Button, {
-                                color: i.Button.Colors.RED,
-                                look: i.Button.Looks.LINK,
+                        B &&
+                            (0, o.jsx)(a.Button, {
+                                color: a.Button.Colors.RED,
+                                look: a.Button.Looks.LINK,
                                 onClick: () => {
-                                    g && (j.Z.deleteForumTag(E, p.id), _());
+                                    B && (j.Z.deleteForumTag(p, N.id), b());
                                 },
-                                children: v.Z.Messages.FORUM_TAG_REMOVE
+                                children: x.intl.string(x.t.huYSMj)
                             })
                     ]
                 })

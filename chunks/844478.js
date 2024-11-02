@@ -1,4 +1,4 @@
-e.exports = {
+n.exports = {
     contentPadding: 'contentPadding_b89a4c',
     title: 'title_b89a4c',
     subtitle: 'subtitle_b89a4c',

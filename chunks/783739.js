@@ -1,79 +1,79 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return p;
+        return N;
     }
 });
-var n = t(200651),
-    a = t(192379),
-    i = t(442837),
-    r = t(89057),
-    o = t(724884),
-    l = t(290799),
-    c = t(362948),
-    d = t(899667),
-    _ = t(165630),
-    u = t(771845),
-    E = t(594174),
-    T = t(314884),
-    S = t(74538),
-    I = t(296533),
-    N = t(901750),
-    m = t(112863),
-    C = t(701157),
-    A = t(912152),
-    g = t(615603),
-    h = t(474936),
-    O = t(20154);
-function p(e) {
-    let { premiumSubscription: s } = e,
-        t = (0, i.e7)([T.Z], () => T.Z.boostSlots),
-        p = a.useMemo(() => Object.values(t), [t]),
-        R = (0, i.e7)([E.default], () => E.default.getCurrentUser()),
-        x = S.ZP.isPremium(R, h.p9.TIER_2),
-        M = (0, i.e7)([_.Z], () => _.Z.affinities),
-        f = (0, i.e7)([u.ZP], () => u.ZP.getFlattenedGuildIds()),
-        D = M.length > 0 || f.length > 0,
-        L = p.length > 0,
-        P = a.useMemo(() => p.some((e) => null != e.premiumGuildSubscription), [p]),
-        b = (0, i.e7)([d.Z], () => d.Z.getCurrentUserAppliedBoosts()),
-        Z = (null == s ? void 0 : s.isPausedOrPausePending) === !0;
-    return (0, n.jsxs)('div', {
+var i = n(200651),
+    s = n(192379),
+    r = n(442837),
+    l = n(89057),
+    a = n(724884),
+    o = n(290799),
+    c = n(362948),
+    d = n(899667),
+    u = n(165630),
+    m = n(771845),
+    h = n(594174),
+    g = n(314884),
+    p = n(74538),
+    x = n(296533),
+    S = n(901750),
+    T = n(112863),
+    C = n(701157),
+    _ = n(912152),
+    E = n(615603),
+    f = n(474936),
+    I = n(20154);
+function N(e) {
+    let { premiumSubscription: t } = e,
+        n = (0, r.e7)([g.Z], () => g.Z.boostSlots),
+        N = s.useMemo(() => Object.values(n), [n]),
+        A = (0, r.e7)([h.default], () => h.default.getCurrentUser()),
+        b = p.ZP.isPremium(A, f.p9.TIER_2),
+        v = (0, r.e7)([u.Z], () => u.Z.affinities),
+        j = (0, r.e7)([m.ZP], () => m.ZP.getFlattenedGuildIds()),
+        O = v.length > 0 || j.length > 0,
+        R = N.length > 0,
+        P = s.useMemo(() => N.some((e) => null != e.premiumGuildSubscription), [N]),
+        D = (0, r.e7)([d.Z], () => d.Z.getCurrentUserAppliedBoosts()),
+        y = (null == t ? void 0 : t.isPausedOrPausePending) === !0;
+    return (0, i.jsxs)('div', {
         children: [
-            (0, n.jsx)(r.oQ, { className: O.blockedPaymentsWarning }),
-            (0, n.jsx)(N.Z, {
-                hasGuildBoostSlots: L,
+            (0, i.jsx)(l.oQ, { className: I.blockedPaymentsWarning }),
+            (0, i.jsx)(S.Z, {
+                hasGuildBoostSlots: R,
                 hasAppliedGuildBoosts: P,
-                isUserPremiumTier2: x,
-                subscriptionIsPausedOrPausePending: Z
+                isUserPremiumTier2: b,
+                subscriptionIsPausedOrPausePending: y
             }),
-            (0, n.jsx)(A.Z, {
+            (0, i.jsx)(_.Z, {
                 hasAppliedGuildBoosts: P,
-                isUserPremiumTier2: x,
-                hasGuildAffinitiesOrInGuild: D,
-                subscriptionIsPausedOrPausePending: Z
+                isUserPremiumTier2: b,
+                hasGuildAffinitiesOrInGuild: O,
+                subscriptionIsPausedOrPausePending: y
             }),
-            !D && (0, n.jsx)(m.Z, {}),
-            (null == s ? void 0 : s.isPaused)
-                ? (0, n.jsx)(I.r, {
-                      appliedGuildBoosts: b,
-                      premiumSubscription: s
+            !O && (0, i.jsx)(T.Z, {}),
+            (null == t ? void 0 : t.isPaused)
+                ? (0, i.jsx)(x.r, {
+                      appliedGuildBoosts: D,
+                      premiumSubscription: t
                   })
-                : (0, n.jsx)(I.Z, {
-                      guildBoostSlots: t,
-                      premiumSubscription: s
+                : (0, i.jsx)(x.Z, {
+                      guildBoostSlots: n,
+                      premiumSubscription: t
                   }),
-            (0, n.jsx)(g.Z, { guildBoostSlots: p }),
-            (0, n.jsx)(C.Z, {
+            (0, i.jsx)(E.Z, { guildBoostSlots: N }),
+            (0, i.jsx)(C.Z, {
                 hasAppliedGuildBoosts: P,
-                subscriptionIsPausedOrPausePending: Z
+                subscriptionIsPausedOrPausePending: y
             }),
-            (0, n.jsx)(c.Z, {
-                className: O.tierComparisonTable,
+            (0, i.jsx)(c.Z, {
+                className: I.tierComparisonTable,
                 hideHeading: !0,
                 hideTier0: !0
             }),
-            (0, n.jsx)(o.Z, { cardClassName: O.boosterRecognitionCard }),
-            (0, n.jsx)(l.Z, { className: O.faq })
+            (0, i.jsx)(a.Z, { cardClassName: I.boosterRecognitionCard }),
+            (0, i.jsx)(o.Z, { className: I.faq })
         ]
     });
 }

@@ -4,12 +4,12 @@ n.d(t, {
     }
 });
 var i = n(314897),
-    s = n(565799),
-    a = n(501655),
-    l = n(88751),
-    r = n(427679);
+    l = n(565799),
+    r = n(501655),
+    a = n(88751),
+    s = n(427679);
 function o(e) {
-    if (!e.isGuildStageVoice() || !r.Z.isLive(e.id)) return !1;
+    if (!e.isGuildStageVoice() || !s.Z.isLive(e.id)) return !1;
     let t = i.default.getId();
-    return !!(l.ZP.isModerator(t, e.id) && l.ZP.isSpeaker(t, e.id)) && (null == s.Z.getMutableParticipants(e.id).find((n) => n.user.id !== t && l.ZP.isModerator(n.user.id, e.id)) || null == s.Z.getMutableParticipants(e.id, a.pV.SPEAKER).find((n) => n.user.id !== t && l.ZP.isModerator(n.user.id, e.id)));
+    return !!(a.ZP.isModerator(t, e.id) && a.ZP.isSpeaker(t, e.id)) && (null == l.Z.getMutableParticipants(e.id).find((n) => n.user.id !== t && a.ZP.isModerator(n.user.id, e.id)) || null == l.Z.getMutableParticipants(e.id, r.pV.SPEAKER).find((n) => n.user.id !== t && a.ZP.isModerator(n.user.id, e.id)));
 }

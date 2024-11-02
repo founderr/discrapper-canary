@@ -83,7 +83,7 @@ let c = (e) => (t) => {
         (o.blacklist || o.whitelist) && console.warn(`The ${o.blacklist ? 'blacklist' : 'whitelist'} option is deprecated and will be removed in the next version. Please use the 'partialize' option instead.`);
         let l = !1,
             d = new Set(),
-            _ = new Set();
+            f = new Set();
         try {
             a = o.getStorage();
         } catch (e) {}
@@ -96,8 +96,8 @@ let c = (e) => (t) => {
                 i
             );
         !a.removeItem && console.warn(`[zustand persist middleware] The given storage for item '${o.name}' does not contain a 'removeItem' method, which will be required in v4.`);
-        let E = c(o.serialize),
-            f = () => {
+        let _ = c(o.serialize),
+            h = () => {
                 let e;
                 let t = o.partialize(u({}, r()));
                 o.whitelist &&
@@ -106,7 +106,7 @@ let c = (e) => (t) => {
                         (null == (n = o.whitelist) ? void 0 : n.includes(e)) || delete t[e];
                     }),
                     o.blacklist && o.blacklist.forEach((e) => delete t[e]);
-                let n = E({
+                let n = _({
                     state: t,
                     version: o.version
                 })
@@ -117,18 +117,18 @@ let c = (e) => (t) => {
                 if (e) throw e;
                 return n;
             },
-            h = i.setState;
+            p = i.setState;
         i.setState = (e, t) => {
-            h(e, t), f();
+            p(e, t), h();
         };
-        let p = e(
+        let m = e(
                 (...e) => {
-                    n(...e), f();
+                    n(...e), h();
                 },
                 r,
                 i
             ),
-            I = () => {
+            g = () => {
                 var e;
                 if (!a) return;
                 (l = !1), d.forEach((e) => e(r()));
@@ -146,10 +146,10 @@ let c = (e) => (t) => {
                     })
                     .then((e) => {
                         var t;
-                        return n((s = o.merge(e, null != (t = r()) ? t : p)), !0), f();
+                        return n((s = o.merge(e, null != (t = r()) ? t : m)), !0), h();
                     })
                     .then(() => {
-                        null == t || t(s, void 0), (l = !0), _.forEach((e) => e(s));
+                        null == t || t(s, void 0), (l = !0), f.forEach((e) => e(s));
                     })
                     .catch((e) => {
                         null == t || t(void 0, e);
@@ -164,7 +164,7 @@ let c = (e) => (t) => {
                     var e;
                     null == (e = null == a ? void 0 : a.removeItem) || e.call(a, o.name);
                 },
-                rehydrate: () => I(),
+                rehydrate: () => g(),
                 hasHydrated: () => l,
                 onHydrate: (e) => (
                     d.add(e),
@@ -173,13 +173,13 @@ let c = (e) => (t) => {
                     }
                 ),
                 onFinishHydration: (e) => (
-                    _.add(e),
+                    f.add(e),
                     () => {
-                        _.delete(e);
+                        f.delete(e);
                     }
                 )
             }),
-            I(),
-            s || p
+            g(),
+            s || m
         );
     };

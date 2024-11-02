@@ -1,74 +1,74 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return E;
+        return h;
     }
 }),
-    t(47120);
-var n = t(200651),
-    a = t(192379),
-    i = t(120356),
-    r = t.n(i),
-    o = t(481060),
-    l = t(114487),
-    c = t(219039),
-    d = t(979264),
-    _ = t(308083),
-    u = t(403893);
-function E(e) {
-    let { className: s, clanTag: t, clanBadge: i, onTagClick: E, guildId: T, guildName: S, guildIcon: I, guildIconSize: N, memberCount: m } = e,
-        C = a.useRef(null),
-        [A, g] = a.useState(!1);
+    n(47120);
+var i = n(200651),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(481060),
+    o = n(114487),
+    c = n(219039),
+    d = n(979264),
+    u = n(308083),
+    m = n(403893);
+function h(e) {
+    let { className: t, clanTag: n, clanBadge: r, onTagClick: h, guildId: g, guildName: p, guildIcon: x, guildIconSize: S, memberCount: T } = e,
+        C = s.useRef(null),
+        [_, E] = s.useState(!1);
     return (
-        a.useEffect(() => {
+        s.useEffect(() => {
             let e = C.current;
-            null != e && null != e.offsetWidth && null != e.scrollWidth && g(e.offsetWidth < e.scrollWidth);
+            null != e && null != e.offsetWidth && null != e.scrollWidth && E(e.offsetWidth < e.scrollWidth);
         }, []),
-        (0, n.jsxs)('div', {
-            className: r()(u.container, s),
+        (0, i.jsxs)('div', {
+            className: l()(m.container, t),
             children: [
-                (0, n.jsxs)('div', {
-                    className: u.guildPrefixContainer,
+                (0, i.jsxs)('div', {
+                    className: m.guildPrefixContainer,
                     children: [
-                        (0, n.jsx)(l.b, {
-                            guildId: T,
-                            guildName: S,
-                            guildIcon: I,
-                            iconSize: N,
-                            className: u.guildPrefixIcon,
+                        (0, i.jsx)(o.b, {
+                            guildId: g,
+                            guildName: p,
+                            guildIcon: x,
+                            iconSize: S,
+                            className: m.guildPrefixIcon,
                             animate: !1
                         }),
-                        (0, n.jsxs)('div', {
-                            className: u.details,
+                        (0, i.jsxs)('div', {
+                            className: m.details,
                             children: [
-                                (0, n.jsx)(o.Tooltip, {
-                                    text: S,
-                                    color: o.Tooltip.Colors.PRIMARY,
-                                    shouldShow: A,
+                                (0, i.jsx)(a.Tooltip, {
+                                    text: p,
+                                    color: a.Tooltip.Colors.PRIMARY,
+                                    shouldShow: _,
                                     children: (e) =>
-                                        (0, n.jsx)('span', {
+                                        (0, i.jsx)('span', {
                                             ref: C,
                                             ...e,
-                                            className: u.guildName,
-                                            children: S
+                                            className: m.guildName,
+                                            children: p
                                         })
                                 }),
-                                null != m && (0, n.jsx)(c.Z, { count: m })
+                                null != T && (0, i.jsx)(c.Z, { count: T })
                             ]
                         })
                     ]
                 }),
-                (0, n.jsx)('div', {
-                    className: u.tagContainer,
-                    children: (0, n.jsx)(d.aG, {
-                        guildId: T,
-                        className: u.tag,
-                        clanTag: t,
-                        clanBadge: i,
-                        onClick: E,
-                        badgeSize: _.NC.SIZE_16,
+                (0, i.jsx)('div', {
+                    className: m.tagContainer,
+                    children: (0, i.jsx)(d.aG, {
+                        guildId: g,
+                        className: m.tag,
+                        clanTag: n,
+                        clanBadge: r,
+                        onClick: h,
+                        badgeSize: u.NC.SIZE_16,
                         textColor: 'interactive-normal',
                         textVariant: 'text-sm/semibold',
-                        badgeClassName: u.badge
+                        badgeClassName: m.badge
                     })
                 })
             ]

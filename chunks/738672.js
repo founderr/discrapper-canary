@@ -5,30 +5,30 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    a = n(442837),
-    l = n(481060),
-    r = n(909820),
+    l = n(192379),
+    r = n(442837),
+    a = n(481060),
+    s = n(909820),
     o = n(740492),
     c = n(937995),
     u = n(618158);
 function d(e) {
     let { buttonRef: t, dismissed: n, onDismiss: d, renderComponent: h } = e,
-        m = s.useContext(c.h9),
-        [p, _] = s.useState(''),
-        [f, E] = s.useState(!1),
-        g = (0, a.e7)([o.ZP], () => o.ZP.callHeaderHeight),
-        C = s.createRef(),
-        I = s.useRef(0);
-    s.useEffect(() => {
+        m = l.useContext(c.h9),
+        [p, f] = l.useState(''),
+        [g, C] = l.useState(!1),
+        x = (0, r.e7)([o.ZP], () => o.ZP.callHeaderHeight),
+        v = l.createRef(),
+        _ = l.useRef(0);
+    l.useEffect(() => {
         var e, t;
-        _(String(I.current)), E(void 0 !== g && g < (null !== (t = null === (e = C.current) || void 0 === e ? void 0 : e.clientHeight) && void 0 !== t ? t : 300) + 24), (I.current += 1);
-    }, [g, C]);
-    let { preventIdle: T, allowIdle: x } = (0, u.Y)('popup');
+        f(String(_.current)), C(void 0 !== x && x < (null !== (t = null === (e = v.current) || void 0 === e ? void 0 : e.clientHeight) && void 0 !== t ? t : 300) + 24), (_.current += 1);
+    }, [x, v]);
+    let { preventIdle: I, allowIdle: E } = (0, u.Y)('popup');
     return (null == t ? void 0 : t.current) == null
         ? null
-        : (0, i.jsx)(r.ZP, {
-              children: (0, i.jsx)(l.ReferencePositionLayer, {
+        : (0, i.jsx)(s.ZP, {
+              children: (0, i.jsx)(a.ReferencePositionLayer, {
                   targetRef: t,
                   position: 'top',
                   align: 'center',
@@ -37,13 +37,13 @@ function d(e) {
                   positionKey: p,
                   children: () =>
                       (0, i.jsx)('div', {
-                          ref: C,
-                          onMouseOver: T,
-                          onFocus: T,
-                          onBlur: x,
-                          onMouseLeave: x,
+                          ref: v,
+                          onMouseOver: I,
+                          onFocus: I,
+                          onBlur: E,
+                          onMouseLeave: E,
                           children: h({
-                              hidden: f || m || n,
+                              hidden: g || m || n,
                               onDismiss: d
                           })
                       })

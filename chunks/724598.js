@@ -1,30 +1,30 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return h;
     }
 });
 var r = n(200651);
 n(192379);
-var s = n(120356),
-    i = n.n(s),
+var i = n(120356),
+    s = n.n(i),
     o = n(481060),
-    a = n(367907),
-    l = n(357352),
+    l = n(367907),
+    a = n(357352),
     c = n(434404),
     d = n(626135),
     C = n(629481),
     u = n(981631),
-    _ = n(689938),
-    x = n(60303);
-function f(e) {
+    x = n(388032),
+    f = n(60303);
+function p(e) {
     let { pills: t } = e;
     return (0, r.jsx)('div', {
-        className: x.row,
+        className: f.row,
         children: t.map((e) =>
             (0, r.jsx)(
                 'div',
                 {
-                    className: x.pill,
+                    className: f.pill,
                     children: (0, r.jsx)(o.Text, {
                         variant: 'text-sm/normal',
                         children: e
@@ -35,53 +35,53 @@ function f(e) {
         )
     });
 }
-function I(e) {
-    let { guildId: t, showCTA: n, responsive: s = !0 } = e,
-        I = [
-            [_.Z.Messages.GUILD_STORE_PREVIEW_CHIP_ROLE_ACCESS, _.Z.Messages.GUILD_STORE_PREVIEW_CHIP_GAME_TUTORIALS],
-            [_.Z.Messages.GUILD_STORE_PREVIEW_CHIP_DOPE_WALLPAPERS, _.Z.Messages.GUILD_STORE_PREVIEW_CHIP_PFP_ART],
-            [_.Z.Messages.GUILD_STORE_PREVIEW_CHIP_FILTER_PRESETS, _.Z.Messages.GUILD_STORE_PREVIEW_CHIP_SONG_DROPS],
-            [_.Z.Messages.GUILD_STORE_PREVIEW_CHIP_COSPLAY_PICS, _.Z.Messages.GUILD_STORE_PREVIEW_CHIP_3D_MODELS]
+function h(e) {
+    let { guildId: t, showCTA: n, responsive: i = !0 } = e,
+        h = [
+            [x.intl.string(x.t['73h51N']), x.intl.string(x.t['gbjs//'])],
+            [x.intl.string(x.t.mCoH0d), x.intl.string(x.t['l/BuSE'])],
+            [x.intl.string(x.t.psQktr), x.intl.string(x.t.nMhIZW)],
+            [x.intl.string(x.t['0ItLmJ']), x.intl.string(x.t.yQHqsL)]
         ];
     return (0, r.jsx)('div', {
-        className: i()({ [x.responsive]: s }),
+        className: s()({ [f.responsive]: i }),
         children: (0, r.jsxs)('div', {
-            className: x.container,
+            className: f.container,
             children: [
                 (0, r.jsxs)('div', {
-                    className: x.content,
+                    className: f.content,
                     children: [
                         (0, r.jsx)('div', {
-                            className: x.pillContainer,
-                            children: I.map((e, t) => (0, r.jsx)(f, { pills: e }, 'pill-row-'.concat(t)))
+                            className: f.pillContainer,
+                            children: h.map((e, t) => (0, r.jsx)(p, { pills: e }, 'pill-row-'.concat(t)))
                         }),
                         (0, r.jsxs)('div', {
-                            className: x.ctaContent,
+                            className: f.ctaContent,
                             children: [
                                 (0, r.jsx)(o.Text, {
                                     variant: 'text-lg/medium',
                                     color: 'header-primary',
-                                    children: _.Z.Messages.GUILD_STORE_PREVIEW_MURAL_TITLE
+                                    children: x.intl.string(x.t['67arYG'])
                                 }),
                                 n &&
                                     (0, r.jsxs)(o.ShinyButton, {
                                         size: o.Button.Sizes.MEDIUM,
-                                        className: x.getStartedButton,
-                                        innerClassName: x.getStartedButtonContents,
+                                        className: f.getStartedButton,
+                                        innerClassName: f.getStartedButtonContents,
                                         shineSize: o.ShinyButton.ShineSizes.SMALL,
                                         onClick: () => {
                                             d.default.track(u.rMx.GUILD_SHOP_PREVIEW_CLICK, {
-                                                ...(0, a.hH)(t),
+                                                ...(0, l.hH)(t),
                                                 action_taken: C.mz.GET_STARTED_CLICK
                                             }),
                                                 c.Z.open(t, u.pNK.GUILD_PRODUCTS);
                                         },
                                         children: [
-                                            _.Z.Messages.GUILD_SHOP_PREVIEW_CTA_BUTTON,
+                                            x.intl.string(x.t.oyzLpK),
                                             (0, r.jsx)(o.ArrowSmallRightIcon, {
                                                 size: 'md',
                                                 color: 'currentColor',
-                                                className: x.getStartedArrow
+                                                className: f.getStartedArrow
                                             })
                                         ]
                                     })
@@ -90,17 +90,17 @@ function I(e) {
                     ]
                 }),
                 (0, r.jsxs)('div', {
-                    className: x.muralImageContainer,
+                    className: f.muralImageContainer,
                     children: [
                         (0, r.jsx)('img', {
-                            src: (0, l.b)('server_products/storefront/preview-mural.png'),
+                            src: (0, a.b)('server_products/storefront/preview-mural.png'),
                             alt: '',
-                            className: x.muralImage
+                            className: f.muralImage
                         }),
                         (0, r.jsx)('img', {
-                            src: (0, l.b)('server_products/storefront/preview-mural-reduced.png'),
+                            src: (0, a.b)('server_products/storefront/preview-mural-reduced.png'),
                             alt: '',
-                            className: x.muralImageReducedWidth
+                            className: f.muralImageReducedWidth
                         })
                     ]
                 })

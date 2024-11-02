@@ -20,9 +20,9 @@ function c(e, t, n) {
     );
 }
 let d = 1 * l.Z.Millis.SECOND,
-    _ = 30 * l.Z.Millis.SECOND,
-    E = new a.Z('RTCLatencyTestManager');
-class f extends i.Z {
+    f = 30 * l.Z.Millis.SECOND,
+    _ = new a.Z('RTCLatencyTestManager');
+class h extends i.Z {
     _terminate() {
         null != this.refetchTimeout && clearTimeout(this.refetchTimeout);
     }
@@ -36,23 +36,23 @@ class f extends i.Z {
                     ? s.Z.getMediaEngine()
                           .rankRtcRegions(e)
                           .then((e) => {
-                              E.verbose('RTC region latency test completed, ranked regions are: ', e), (0, r.o)(e, t);
+                              _.verbose('RTC region latency test completed, ranked regions are: ', e), (0, r.o)(e, t);
                           })
-                          .catch((e) => E.warn(e))
-                    : E.verbose('RTC cached ranked preferred regions are '.concat(o.Z.getPreferredRegions()));
+                          .catch((e) => _.warn(e))
+                    : _.verbose('RTC cached ranked preferred regions are '.concat(o.Z.getPreferredRegions()));
             }),
             c(this, '_fetchAndScheduleRefetch', () => {
                 (0, r.J)()
                     .then((e) => this._handleTestRegionsResponse(e.body))
-                    .catch((e) => E.warn(e)),
+                    .catch((e) => _.warn(e)),
                     (this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, 360 * l.Z.Millis.MINUTE));
             }),
             c(this, '_handleConnectionOpen', () => {
                 if (u.isPlatformEmbedded && !__OVERLAY__) {
-                    let e = Math.floor(d + Math.random() * _);
+                    let e = Math.floor(d + Math.random() * f);
                     null != this.refetchTimeout && clearTimeout(this.refetchTimeout), (this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, e));
                 }
             });
     }
 }
-t.Z = new f();
+t.Z = new h();

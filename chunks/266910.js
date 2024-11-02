@@ -7,49 +7,49 @@ var r = n(200651),
     u = n(880563),
     c = n(687158),
     d = n(484459),
-    _ = n(695346),
-    E = n(981631),
-    f = n(67996);
+    f = n(695346),
+    _ = n(981631),
+    h = n(67996);
 t.Z = function (e) {
-    let { style: t, src: n, backgroundSrc: h, userId: p, pulseSpeakingIndicator: I = !1, speaking: m = !1, ...T } = e,
-        S = null != h ? h : n,
-        g = (0, o.ZP)(S, a.Z.unsafe_rawColors.PRIMARY_800.css),
-        A = (0, l.c)(!0, 'VideoBackground-web').enabled,
-        N = (0, c.ZP)(null != p ? p : E.lds),
-        R =
-            null == N
+    let { style: t, src: n, backgroundSrc: p, userId: m, pulseSpeakingIndicator: g = !1, speaking: E = !1, ...v } = e,
+        I = null != p ? p : n,
+        S = (0, o.ZP)(I, a.Z.unsafe_rawColors.PRIMARY_800.css),
+        T = (0, l.c)(!0, 'VideoBackground-web').enabled,
+        b = (0, c.ZP)(null != m ? m : _.lds),
+        y =
+            null == b
                 ? void 0
-                : N.getBannerURL({
+                : b.getBannerURL({
                       size: 1024,
-                      canAnimate: _.QK.getSetting()
+                      canAnimate: f.QK.getSetting()
                   });
     if (
         (i.useEffect(() => {
-            null != p && A && (0, d.Z)(p, void 0, { dispatchWait: !0 });
-        }, [A, p]),
+            null != m && T && (0, d.Z)(m, void 0, { dispatchWait: !0 });
+        }, [T, m]),
         null == n)
     )
         return null;
-    let O = (0, r.jsx)(s.Avatar, {
-            className: f.avatarWrapper,
+    let A = (0, r.jsx)(s.Avatar, {
+            className: h.avatarWrapper,
             src: n,
-            ...T
+            ...v
         }),
-        v = {
+        N = {
             ...t,
-            backgroundColor: g
+            backgroundColor: S
         };
     return (
-        null != R && m && A && ((v.backgroundImage = 'url('.concat(R, ')')), (v.backgroundSize = 'cover')),
+        null != y && E && T && ((N.backgroundImage = 'url('.concat(y, ')')), (N.backgroundSize = 'cover')),
         (0, r.jsx)('div', {
-            style: v,
-            className: f.background,
-            children: I
+            style: N,
+            className: h.background,
+            children: g
                 ? (0, r.jsx)(u.Z, {
-                      shouldAnimate: m,
-                      children: O
+                      shouldAnimate: E,
+                      children: A
                   })
-                : O
+                : A
         })
     );
 };

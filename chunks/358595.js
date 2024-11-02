@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return a;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(955415),
-    s = n(689938);
-function r() {
-    return (0, i.jsxs)(a.Z, {
-        children: [(0, i.jsx)(a.Z.Header, { text: s.Z.Messages.INVITE_BUTTON_RESOLVING }), (0, i.jsx)(a.Z.Body, { resolving: !0 })]
+var r = n(955415),
+    l = n(388032);
+function a() {
+    return (0, i.jsxs)(r.Z, {
+        children: [(0, i.jsx)(r.Z.Header, { text: l.intl.string(l.t['N/g9Z2']) }), (0, i.jsx)(r.Z.Body, { resolving: !0 })]
     });
 }

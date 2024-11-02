@@ -1,26 +1,26 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return o;
     }
 });
-var l = t(200651),
-    s = t(192379),
-    a = t(780384),
-    i = t(481060),
-    r = t(689938);
+var l = n(200651),
+    i = n(192379),
+    r = n(780384),
+    s = n(481060),
+    a = n(388032);
 function o(e) {
-    let { onConfirm: n, onDismiss: t, theme: o } = e;
-    return (0, l.jsxs)(s.Fragment, {
+    let { onConfirm: t, onDismiss: n, theme: o } = e;
+    return (0, l.jsxs)(i.Fragment, {
         children: [
-            (0, l.jsx)(i.Button, {
-                onClick: n,
-                children: r.Z.Messages.GENERATE_A_NEW_LINK
-            }),
-            (0, l.jsx)(i.Button, {
-                look: i.Button.Looks.LINK,
-                color: (0, a.ap)(o) ? i.Button.Colors.PRIMARY : i.Button.Colors.WHITE,
+            (0, l.jsx)(s.Button, {
                 onClick: t,
-                children: r.Z.Messages.CANCEL
+                children: a.intl.string(a.t.pz1lRE)
+            }),
+            (0, l.jsx)(s.Button, {
+                look: s.Button.Looks.LINK,
+                color: (0, r.ap)(o) ? s.Button.Colors.PRIMARY : s.Button.Colors.WHITE,
+                onClick: n,
+                children: a.intl.string(a.t['ETE/oK'])
             })
         ]
     });

@@ -1,9 +1,9 @@
 n.d(t, {
     R: function () {
-        return f;
+        return h;
     },
     Z: function () {
-        return m;
+        return E;
     }
 }),
     n(47120);
@@ -16,7 +16,7 @@ var r = n(392711),
     u = n(19780),
     c = n(115470),
     d = n(531578);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,13 +29,13 @@ function _(e, t, n) {
         e
     );
 }
-let E = {
+let _ = {
         chance: 0.2,
         cooldown: 86400000
     },
-    f = {
+    h = {
         [d.nw.VOICE]: {
-            ...E,
+            ..._,
             hotspot: o.v6.VOICE_CALL_FEEDBACK,
             storageKey: 'lastVoiceFeedback',
             eligibilityChecks: [
@@ -45,12 +45,12 @@ let E = {
             ]
         },
         [d.nw.STREAM]: {
-            ...E,
+            ..._,
             hotspot: o.v6.REPORT_PROBLEM_POST_STREAM,
             storageKey: 'lastStreamFeedback'
         },
         [d.nw.VIDEO_BACKGROUND]: {
-            ...E,
+            ..._,
             hotspot: o.v6.VIDEO_BACKGROUND_FEEDBACK,
             storageKey: 'lastVideoBackgroundFeedback'
         },
@@ -79,28 +79,28 @@ let E = {
             storageKey: 'blockUser'
         }
     };
-function h(e) {
+function p(e) {
     return l.Z.hasHotspot(e.hotspot);
 }
-function p(e) {
+function m(e) {
     return Math.random() < e.chance;
 }
-function I(e) {
+function g(e) {
     if (null != e.storageKey) {
         let t = a.K.get(e.storageKey);
         if (null != t && Date.now() - t < e.cooldown) return !1;
     }
     return !0;
 }
-class m extends s.Z {
+class E extends s.Z {
     possiblyShowFeedbackModal(e, t) {
         if (
             !!(function (e) {
                 var t, n;
                 if (__OVERLAY__) return !1;
-                let r = null !== (t = c.Z.getFeedbackConfig(e)) && void 0 !== t ? t : f[e],
+                let r = null !== (t = c.Z.getFeedbackConfig(e)) && void 0 !== t ? t : h[e],
                     i = null !== (n = r.eligibilityChecks) && void 0 !== n ? n : [];
-                return [I, p, h].every((e) => e(r)) && i.every((e) => e(r));
+                return [g, m, p].every((e) => e(r)) && i.every((e) => e(r));
             })(e) &&
             (null == this.feedbackTypeToShow || !(d.b5[this.feedbackTypeToShow] < d.b5[e]))
         )
@@ -108,14 +108,14 @@ class m extends s.Z {
     }
     constructor(...e) {
         super(...e),
-            _(this, 'feedbackTypeToShow', null),
-            _(
+            f(this, 'feedbackTypeToShow', null),
+            f(
                 this,
                 'showFeedbackModalDebounced',
                 i().debounce((e) => {
                     null != this.feedbackTypeToShow &&
                         (!(function (e) {
-                            let t = f[e];
+                            let t = h[e];
                             null != t.storageKey && a.K.set(t.storageKey, Date.now());
                         })(this.feedbackTypeToShow),
                         (this.feedbackTypeToShow = null),

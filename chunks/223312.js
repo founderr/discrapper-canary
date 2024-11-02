@@ -1,17 +1,17 @@
-n.d(s, {
+n.d(t, {
     j: function () {
-        return i;
+        return s;
     }
 }),
     n(47120);
-var t = n(192379),
-    a = n(442837),
-    l = n(826581),
-    r = n(246364);
-function i(e) {
-    let { guildId: s, applicationStatus: n, sortOrder: i } = e,
-        o = (0, a.e7)([l.Z], () => l.Z.getRequests(s, n), [n, s]);
+var i = n(192379),
+    l = n(442837),
+    r = n(826581),
+    a = n(246364);
+function s(e) {
+    let { guildId: t, applicationStatus: n, sortOrder: s } = e,
+        o = (0, l.e7)([r.Z], () => r.Z.getRequests(t, n), [n, t]);
     return {
-        guildJoinRequests: t.useMemo(() => (i === r.Nw.TIMESTAMP_DESC ? [...o].reverse() : o), [i, o])
+        guildJoinRequests: i.useMemo(() => (s === a.Nw.TIMESTAMP_DESC ? [...o].reverse() : o), [s, o])
     };
 }

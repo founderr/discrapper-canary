@@ -10,25 +10,25 @@ function i(e, t, n, i) {
         u = (0, r.PY)(e),
         c = e.getTrack(),
         d = e.getSyncingWith(),
-        _ = e.getActivity(),
-        E = null !== (o = null !== (s = null == c ? void 0 : c.id) && void 0 !== s ? s : null == _ ? void 0 : _.sync_id) && void 0 !== o ? o : e.getLastPlayedTrackId(),
-        f = n.id === t.getId(),
-        h = l && !u,
-        p = null != E && E === (null == i ? void 0 : i.sync_id),
-        I = (null == _ ? void 0 : _.party) != null && (null == i ? void 0 : null === (a = i.party) || void 0 === a ? void 0 : a.id) === _.party.id,
-        m = (null == d ? void 0 : d.userId) != null && (null == d ? void 0 : d.userId) === n.id;
+        f = e.getActivity(),
+        _ = null !== (o = null !== (s = null == c ? void 0 : c.id) && void 0 !== s ? s : null == f ? void 0 : f.sync_id) && void 0 !== o ? o : e.getLastPlayedTrackId(),
+        h = n.id === t.getId(),
+        p = l && !u,
+        m = null != _ && _ === (null == i ? void 0 : i.sync_id),
+        g = (null == f ? void 0 : f.party) != null && (null == i ? void 0 : null === (a = i.party) || void 0 === a ? void 0 : a.id) === f.party.id,
+        E = (null == d ? void 0 : d.userId) != null && (null == d ? void 0 : d.userId) === n.id;
     return {
         user: n,
         activity: i,
         hasSpotifyAccount: l,
         canPlaySpotify: u,
-        notPlayable: h,
-        syncingWithParty: I,
-        syncingWithUser: m,
-        isCurrentUser: f,
-        currentUserTrackId: E,
-        playingSameTrack: p,
-        playDisabled: f || h || p,
-        syncDisabled: f || m || I
+        notPlayable: p,
+        syncingWithParty: g,
+        syncingWithUser: E,
+        isCurrentUser: h,
+        currentUserTrackId: _,
+        playingSameTrack: m,
+        playDisabled: h || p || m,
+        syncDisabled: h || E || g
     };
 }

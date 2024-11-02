@@ -17,7 +17,7 @@ var o,
     d = t(569619),
     u = t(481060),
     p = t(981631),
-    h = t(689938),
+    h = t(388032),
     v = t(404934);
 function b(e, r, t) {
     return (
@@ -174,8 +174,8 @@ class f extends (n = l.Component) {
     }
     render() {
         let e;
-        let { className: r, selectClassName: t, error: o, valueRenderer: n, optionRenderer: a, multiValueRenderer: l, options: s, value: p, autofocus: b, disabled: f, clearable: m, searchable: x, styleOverrides: _, isMulti: k, placeholder: C, filterOption: y, closeMenuOnSelect: O = !0, ...w } = this.props,
-            M = { ...w };
+        let { className: r, selectClassName: t, error: o, valueRenderer: n, optionRenderer: a, multiValueRenderer: l, options: s, value: p, autofocus: b, disabled: f, clearable: m, searchable: x, styleOverrides: k, isMulti: _, placeholder: C, filterOption: y, closeMenuOnSelect: w = !0, ...O } = this.props,
+            M = { ...O };
         null != b && (M.autoFocus = b), null != f && (M.isDisabled = f), null != m && (M.isClearable = m), null != x && (M.isSearchable = x);
         let S = { IndicatorSeparator: () => null };
         null != a &&
@@ -191,7 +191,7 @@ class f extends (n = l.Component) {
                         children: n(e.data)
                     })),
             null != l && (S.MultiValue = (e) => l(e.data));
-        if (k && Array.isArray(p)) {
+        if (_ && Array.isArray(p)) {
             let r = {};
             s.forEach((e) => {
                 r[String(e.value)] = e;
@@ -209,19 +209,19 @@ class f extends (n = l.Component) {
                         ...M,
                         className: t,
                         ref: this._selectRef,
-                        isMulti: k,
+                        isMulti: _,
                         components: S,
                         options: s,
-                        styles: null != _ ? _ : g,
+                        styles: null != k ? k : g,
                         onFocus: this.handleFocus,
                         onBlur: this.handleBlur,
                         onMenuOpen: this.handleMenuOpen,
                         onMenuClose: this.handleMenuClose,
-                        closeMenuOnSelect: O,
+                        closeMenuOnSelect: w,
                         value: e,
                         onKeyDown: this.handleKeyDown,
-                        placeholder: null != C ? C : h.Z.Messages.SELECT,
-                        noOptionsMessage: () => h.Z.Messages.NO_RESULTS_FOUND,
+                        placeholder: null != C ? C : h.intl.string(h.t.XqMe3N),
+                        noOptionsMessage: () => h.intl.string(h.t['Xe+fJC']),
                         filterOption: y
                     }),
                     null != o

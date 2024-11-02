@@ -5,7 +5,7 @@ var r,
     s = n(120356),
     o = n.n(s),
     l = n(481060),
-    u = n(689938),
+    u = n(388032),
     c = n(89328);
 function d(e, t, n) {
     return (
@@ -20,12 +20,12 @@ function d(e, t, n) {
         e
     );
 }
-class _ extends (r = a.PureComponent) {
+class f extends (r = a.PureComponent) {
     render() {
         var e;
-        let { title: t, actionText: n, children: r, error: s, isLoading: d, maxLength: _, transitionState: E, helpMessage: f, retryPrompt: h, retrySuccessMessage: p } = this.props,
-            { code: I, errorMessage: m, retrySuccess: T } = this.state,
-            S =
+        let { title: t, actionText: n, children: r, error: s, isLoading: d, maxLength: f, transitionState: _, helpMessage: h, retryPrompt: p, retrySuccessMessage: m } = this.props,
+            { code: g, errorMessage: E, retrySuccess: v } = this.state,
+            I =
                 a.Children.count(r) > 0
                     ? (0, i.jsx)(l.Card, {
                           type: l.Card.Types.WARNING,
@@ -36,8 +36,8 @@ class _ extends (r = a.PureComponent) {
                           })
                       })
                     : null,
-            g =
-                null != h
+            S =
+                null != p
                     ? (0, i.jsxs)(l.Text, {
                           className: o()(c.__invalid_submitText, c.spacing),
                           variant: 'text-sm/normal',
@@ -46,23 +46,23 @@ class _ extends (r = a.PureComponent) {
                               (0, i.jsx)(l.Clickable, {
                                   className: o()(c.spacing, c.__invalid_link),
                                   onClick: this.handleRetry,
-                                  children: (0, i.jsx)(l.Anchor, { children: h })
+                                  children: (0, i.jsx)(l.Anchor, { children: p })
                               })
                           ]
                       })
                     : null,
-            A = T
+            T = v
                 ? (0, i.jsx)(l.Card, {
                       type: l.Card.Types.SUCCESS,
                       className: c.card,
                       children: (0, i.jsx)(l.Text, {
                           variant: 'text-md/normal',
-                          children: p
+                          children: m
                       })
                   })
                 : null;
         return (0, i.jsx)(l.ModalRoot, {
-            transitionState: E,
+            transitionState: _,
             children: (0, i.jsxs)('form', {
                 onSubmit: this.handleSubmit,
                 children: [
@@ -75,16 +75,16 @@ class _ extends (r = a.PureComponent) {
                     }),
                     (0, i.jsxs)(l.ModalContent, {
                         children: [
-                            null != f
+                            null != h
                                 ? (0, i.jsx)(l.Text, {
                                       color: 'text-normal',
                                       variant: 'text-md/normal',
                                       className: c.spacing,
-                                      children: f
+                                      children: h
                                   })
                                 : null,
-                            S,
-                            A,
+                            I,
+                            T,
                             (0, i.jsxs)(l.FormItem, {
                                 title: this.getLabelText(),
                                 className: c.spacing,
@@ -93,8 +93,8 @@ class _ extends (r = a.PureComponent) {
                                         inputRef: this.setRef,
                                         onChange: this.handleCodeChange,
                                         placeholder: null !== (e = this.getPlaceholder()) && void 0 !== e ? e : void 0,
-                                        maxLength: null != _ ? _ : 10,
-                                        value: I,
+                                        maxLength: null != f ? f : 10,
+                                        value: g,
                                         autoComplete: 'one-time-code',
                                         autoFocus: !0
                                     }),
@@ -103,10 +103,10 @@ class _ extends (r = a.PureComponent) {
                                               color: 'text-danger',
                                               variant: 'text-xs/normal',
                                               className: c.error,
-                                              children: null != s ? s : m
+                                              children: null != s ? s : E
                                           })
                                         : null,
-                                    g
+                                    S
                                 ]
                             })
                         ]
@@ -115,15 +115,15 @@ class _ extends (r = a.PureComponent) {
                         children: [
                             (0, i.jsx)(l.Button, {
                                 type: 'submit',
-                                disabled: d || 0 === I.length,
-                                children: null != n ? n : u.Z.Messages.CONFIRM
+                                disabled: d || 0 === g.length,
+                                children: null != n ? n : u.intl.string(u.t['cY+Ooa'])
                             }),
                             (0, i.jsx)(l.Button, {
                                 onClick: this.handleCancel,
                                 disabled: d,
                                 look: l.Button.Looks.LINK,
                                 color: l.Button.Colors.PRIMARY,
-                                children: u.Z.Messages.CANCEL
+                                children: u.intl.string(u.t['ETE/oK'])
                             })
                         ]
                     })
@@ -144,9 +144,9 @@ class _ extends (r = a.PureComponent) {
             }),
             d(this, 'getLabelText', () => {
                 var e;
-                return null !== (e = this.props.label) && void 0 !== e ? e : this.props.disallowBackupCodes ? u.Z.Messages.TWO_FA_ENTER_TOKEN_NO_BACKUP_LABEL : u.Z.Messages.TWO_FA_ENTER_TOKEN_LABEL;
+                return null !== (e = this.props.label) && void 0 !== e ? e : this.props.disallowBackupCodes ? u.intl.string(u.t.HZPBOT) : u.intl.string(u.t['+NQopK']);
             }),
-            d(this, 'getSupportedCodeTypes', () => (this.props.disallowBackupCodes ? u.Z.Messages.TWO_FA_AUTH_CODE_NO_BACKUP : u.Z.Messages.TWO_FA_AUTH_CODE)),
+            d(this, 'getSupportedCodeTypes', () => (this.props.disallowBackupCodes ? u.intl.string(u.t.tARzgo) : u.intl.string(u.t.yO4lAA))),
             d(this, 'getPlaceholder', () => {
                 var e;
                 return this.props.forceNoPlaceholder ? null : null !== (e = this.props.placeholder) && void 0 !== e ? e : this.getSupportedCodeTypes();
@@ -172,11 +172,11 @@ class _ extends (r = a.PureComponent) {
             });
     }
 }
-d(_, 'defaultProps', {
+d(f, 'defaultProps', {
     btnClass: '',
     isLoading: !1,
     disallowBackupCodes: !1,
     error: null,
     forceNoPlaceholder: !1
 }),
-    (t.Z = _);
+    (t.Z = f);

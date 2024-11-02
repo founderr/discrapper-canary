@@ -1,51 +1,51 @@
-let a, n;
-s.d(t, {
+let s, a;
+n.d(t, {
     Z: function () {
-        return A;
+        return T;
     }
 }),
-    s(47120);
-var o = s(200651),
-    l = s(192379),
-    r = s(120356),
-    i = s.n(r),
-    c = s(481060),
-    d = s(447543),
-    u = s(230711),
-    _ = s(881052),
-    f = s(600164),
-    E = s(112831),
-    m = s(782605),
-    p = s(981631),
-    h = s(689938),
-    N = s(830513);
-let T = ((a = window.GLOBAL_ENV.INVITE_HOST), (n = ''), null == a && ((a = location.host), (n = p.Z5c.INVITE(''))), ''.concat(location.protocol, '//').concat(a).concat(n, '/'));
-function A(e) {
-    let { onBack: t, onComplete: s, onConnect: a, isSlideReady: n } = e,
-        [r, A] = l.useState(''),
-        [x, I] = l.useState(!1),
-        [C, b] = l.useState(null),
-        M = l.useRef(null);
-    l.useEffect(() => {
+    n(47120);
+var o = n(200651),
+    i = n(192379),
+    l = n(120356),
+    r = n.n(l),
+    c = n(481060),
+    d = n(447543),
+    u = n(230711),
+    f = n(881052),
+    _ = n(600164),
+    p = n(112831),
+    m = n(782605),
+    h = n(981631),
+    E = n(388032),
+    x = n(830513);
+let N = ((s = window.GLOBAL_ENV.INVITE_HOST), (a = ''), null == s && ((s = location.host), (a = h.Z5c.INVITE(''))), ''.concat(location.protocol, '//').concat(s).concat(a, '/'));
+function T(e) {
+    let { onBack: t, onComplete: n, onConnect: s, isSlideReady: a } = e,
+        [l, T] = i.useState(''),
+        [A, C] = i.useState(!1),
+        [b, I] = i.useState(null),
+        v = i.useRef(null);
+    i.useEffect(() => {
         var e;
-        n && (null === (e = M.current) || void 0 === e || e.focus());
-    }, [n]);
-    let v = l.useCallback(
+        a && (null === (e = v.current) || void 0 === e || e.focus());
+    }, [a]);
+    let j = i.useCallback(
             (e) => {
                 e.preventDefault();
-                let t = r.trim();
+                let t = l.trim();
                 if ('' === t) {
-                    b(h.Z.Messages.INVALID_INVITE_LINK_ERROR);
+                    I(E.intl.string(E.t.IRq5am));
                     return;
                 }
-                b(null), I(!0);
-                let a = t.split('/'),
-                    n = a[a.length - 1];
-                d.Z.resolveInvite(n, 'Join Guild', { inputValue: t }).then(
+                I(null), C(!0);
+                let s = t.split('/'),
+                    a = s[s.length - 1];
+                d.Z.resolveInvite(a, 'Join Guild', { inputValue: t }).then(
                     (e) => {
                         let { invite: t } = e;
-                        if ((I(!1), null == t)) {
-                            b(h.Z.Messages.INSTANT_INVITE_EXPIRED);
+                        if ((C(!1), null == t)) {
+                            I(E.intl.string(E.t['GEYI+f']));
                             return;
                         }
                         if (null != t.channel) {
@@ -54,72 +54,72 @@ function A(e) {
                                 inviteKey: t.code,
                                 context: e,
                                 callback: (e) => {
-                                    s(), d.Z.transitionToInvite(e);
+                                    n(), d.Z.transitionToInvite(e);
                                 }
                             }).catch((e) => {
-                                e instanceof _.yZ || e instanceof _.Hx ? b((0, m.O)(e.code)) : b(h.Z.Messages.INVITE_MODAL_ERROR_DEFAULT);
+                                e instanceof f.yZ || e instanceof f.Hx ? I((0, m.O)(e.code)) : I(E.intl.string(E.t.dDZRd3));
                             });
                         }
                     },
                     (e) => {
-                        I(!1);
-                        let t = new _.yZ(e);
-                        b((0, m.O)(t.code));
+                        C(!1);
+                        let t = new f.yZ(e);
+                        I((0, m.O)(t.code));
                     }
                 );
             },
-            [r, I, b, s]
+            [l, C, I, n]
         ),
-        G = (0, o.jsxs)(o.Fragment, {
+        g = (0, o.jsxs)(o.Fragment, {
             children: [
                 (0, o.jsxs)(c.ModalHeader, {
-                    className: N.header,
-                    direction: f.Z.Direction.VERTICAL,
+                    className: x.header,
+                    direction: _.Z.Direction.VERTICAL,
                     separator: !1,
                     children: [
-                        (0, o.jsx)(E.Z, {
-                            className: N.title,
-                            size: E.Z.Sizes.SIZE_24,
-                            color: E.Z.Colors.HEADER_PRIMARY,
-                            children: h.Z.Messages.JOIN_SERVER_TITLE
+                        (0, o.jsx)(p.Z, {
+                            className: x.title,
+                            size: p.Z.Sizes.SIZE_24,
+                            color: p.Z.Colors.HEADER_PRIMARY,
+                            children: E.intl.string(E.t.riOUtL)
                         }),
                         (0, o.jsx)(c.Text, {
                             variant: 'text-md/normal',
                             color: 'header-secondary',
-                            children: h.Z.Messages.JOIN_SERVER_DESCRIPTION_NUF
+                            children: E.intl.string(E.t['7jub2t'])
                         })
                     ]
                 }),
                 (0, o.jsxs)(c.ModalContent, {
                     children: [
                         (0, o.jsx)('form', {
-                            onSubmit: v,
-                            className: N.inputForm,
+                            onSubmit: j,
+                            className: x.inputForm,
                             children: (0, o.jsx)(c.FormItem, {
-                                title: h.Z.Messages.FORM_LABEL_INVITE_LINK,
-                                error: C,
-                                titleClassName: i()(N.formTitle, { [N.error]: null != C }),
+                                title: E.intl.string(E.t.qreV29),
+                                error: b,
+                                titleClassName: r()(x.formTitle, { [x.error]: null != b }),
                                 children: (0, o.jsx)(c.TextInput, {
-                                    value: r,
-                                    onChange: A,
-                                    className: N.input,
-                                    inputClassName: N.inputInner,
-                                    inputRef: M
+                                    value: l,
+                                    onChange: T,
+                                    className: x.input,
+                                    inputClassName: x.inputInner,
+                                    inputRef: v
                                 })
                             })
                         }),
                         (0, o.jsx)(c.Text, {
                             color: 'header-secondary',
                             variant: 'text-xs/normal',
-                            children: h.Z.Messages.JOIN_SERVER_EXAMPLES.format({ examples: ''.concat(T).concat('cool-people', ', ').concat('hTKzmak') })
+                            children: E.intl.format(E.t.lHTZl5, { examples: ''.concat(N).concat('cool-people', ', ').concat('hTKzmak') })
                         }),
                         (0, o.jsx)(c.Text, {
                             variant: 'text-xs/normal',
                             color: 'header-secondary',
-                            className: N.connectCTA,
-                            children: h.Z.Messages.JOIN_GUILD_CONNECT.format({
+                            className: x.connectCTA,
+                            children: E.intl.format(E.t['8F/who'], {
                                 onClick: () => {
-                                    a(), u.Z.open(p.oAB.CONNECTIONS);
+                                    s(), u.Z.open(h.oAB.CONNECTIONS);
                                 }
                             })
                         })
@@ -128,22 +128,22 @@ function A(e) {
             ]
         });
     return {
-        content: G,
+        content: g,
         footer: (0, o.jsxs)(o.Fragment, {
             children: [
                 (0, o.jsx)(c.Button, {
                     color: c.Button.Colors.BRAND,
-                    onClick: v,
-                    disabled: 0 === r.length,
-                    submitting: x,
-                    children: h.Z.Messages.JOIN
+                    onClick: j,
+                    disabled: 0 === l.length,
+                    submitting: A,
+                    children: E.intl.string(E.t.VJlc0d)
                 }),
                 (0, o.jsx)(c.Button, {
-                    className: N.__invalid_skipButton,
+                    className: x.__invalid_skipButton,
                     look: c.Button.Looks.BLANK,
                     size: c.Button.Sizes.MIN,
                     onClick: t,
-                    children: h.Z.Messages.BACK
+                    children: E.intl.string(E.t['13/7kZ'])
                 })
             ]
         })

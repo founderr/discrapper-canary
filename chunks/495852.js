@@ -1,6 +1,6 @@
 n.d(t, {
     C: function () {
-        return p;
+        return m;
     }
 });
 var r = n(36056),
@@ -12,11 +12,11 @@ var r = n(36056),
     u = n(349992),
     c = n(320215),
     d = n(660284),
-    _ = n(838390),
-    E = n(284267),
-    f = n(973408),
-    h = n(647943);
-class p {
+    f = n(838390),
+    _ = n(284267),
+    h = n(973408),
+    p = n(647943);
+class m {
     constructor(e, t, n) {
         (this.defaultCheckDepth = 16), (this.typeName = e), (this.fields = t.map(r.nb)), (this.options = null != n ? n : {}), (this.refTypeCheck = new i.Z(this)), (this.refJsonReader = new a.C(this)), (this.refJsonWriter = new s.k(this)), (this.refBinReader = new o.I(this)), (this.refBinWriter = new l.R(this));
     }
@@ -29,7 +29,7 @@ class p {
         return (0, c.l)(this, t, e), t;
     }
     equals(e, t) {
-        return (0, E.Y)(this, e, t);
+        return (0, _.Y)(this, e, t);
     }
     is(e, t = this.defaultCheckDepth) {
         return this.refTypeCheck.is(e, t, !1);
@@ -41,25 +41,25 @@ class p {
         (0, c.l)(this, e, t);
     }
     fromBinary(e, t) {
-        let n = (0, h.Z)(t);
+        let n = (0, p.Z)(t);
         return this.internalBinaryRead(n.readerFactory(e), e.byteLength, n);
     }
     fromJson(e, t) {
-        return this.internalJsonRead(e, (0, _.jl)(t));
+        return this.internalJsonRead(e, (0, f.jl)(t));
     }
     fromJsonString(e, t) {
         let n = JSON.parse(e);
         return this.fromJson(n, t);
     }
     toJson(e, t) {
-        return this.internalJsonWrite(e, (0, _.P2)(t));
+        return this.internalJsonWrite(e, (0, f.P2)(t));
     }
     toJsonString(e, t) {
         var n;
         return JSON.stringify(this.toJson(e, t), null, null !== (n = null == t ? void 0 : t.prettySpaces) && void 0 !== n ? n : 0);
     }
     toBinary(e, t) {
-        let n = (0, f.X)(t);
+        let n = (0, h.X)(t);
         return this.internalBinaryWrite(e, n.writerFactory(), n).finish();
     }
     internalJsonRead(e, t, n) {

@@ -5,20 +5,20 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(846027),
-    r = n(468026),
-    l = n(689938);
+var r = n(481060),
+    l = n(846027),
+    a = n(468026),
+    s = n(388032);
 function o(e, t) {
     if (e) {
-        (0, a.openModal)((e) =>
-            (0, i.jsx)(r.default, {
+        (0, r.openModal)((e) =>
+            (0, i.jsx)(a.default, {
                 ...e,
-                title: l.Z.Messages.SERVER_DEAFENED_DIALOG_TITLE,
-                body: l.Z.Messages.SERVER_DEAFENED_DIALOG_BODY
+                title: s.intl.string(s.t.QZ7WSU),
+                body: s.intl.string(s.t.Tl9JpK)
             })
         );
         return;
     }
-    s.Z.toggleSelfDeaf({ location: t });
+    l.Z.toggleSelfDeaf({ location: t });
 }

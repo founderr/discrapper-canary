@@ -6,10 +6,10 @@ n.d(t, {
         return d;
     },
     lW: function () {
-        return E;
+        return _;
     },
     sr: function () {
-        return _;
+        return f;
     },
     zP: function () {
         return c;
@@ -31,7 +31,7 @@ function d(e, t) {
     if (!__OVERLAY__) throw new i.Z({ errorCode: o.lTL.UNKNOWN_ERROR }, 'called from wrong app context');
     r.default.subscribe(o.zMe.OVERLAY, { token: t }, (t) => e((0, s.H)(t)));
 }
-function _(e, t) {
+function f(e, t) {
     if (__OVERLAY__) throw new i.Z({ errorCode: o.lTL.UNKNOWN_ERROR }, 'called from wrong app context');
     a.Z.setCommandHandler(o.Etm.OVERLAY, {
         scope: l.cE,
@@ -49,6 +49,6 @@ function _(e, t) {
             }
         });
 }
-function E(e) {
+function _(e) {
     __OVERLAY__ ? r.default.request(o.Etm.OVERLAY, (0, s.G)(e)) : a.Z.dispatchToSubscriptions(o.zMe.OVERLAY, {}, (0, s.G)(e));
 }

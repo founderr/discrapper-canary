@@ -8,26 +8,26 @@ n(192379);
 var l = n(120356),
     r = n.n(l),
     a = n(91192),
-    s = n(589440),
-    o = n(481060),
+    o = n(589440),
+    s = n(481060),
     c = n(566461),
     u = n(872356),
     d = n(206197);
 function h(e) {
     var t;
-    let { id: n, className: l, innerClassName: h, renderIcon: p, text: f, selected: _, trailing: m, showUnread: g = !1, ...C } = e,
-        I = (0, a.JA)(n),
-        E = null !== (t = (0, s.q)(f)) && void 0 !== t ? t : '';
+    let { id: n, className: l, innerClassName: h, renderIcon: p, text: f, selected: m, trailing: g, showUnread: C = !1, ..._ } = e,
+        x = (0, a.JA)(n),
+        v = null !== (t = (0, o.q)(f)) && void 0 !== t ? t : '';
     return (0, i.jsx)('li', {
-        children: (0, i.jsxs)(o.ClickableContainer, {
-            ...C,
+        children: (0, i.jsxs)(s.ClickableContainer, {
+            ..._,
             buttonProps: {
-                ...I,
+                ...x,
                 id: n,
                 role: 'button'
             },
             tag: 'div',
-            'aria-label': E,
+            'aria-label': v,
             focusProps: {
                 offset: {
                     top: 1,
@@ -36,14 +36,14 @@ function h(e) {
                 }
             },
             onContextMenu:
-                null != C.onContextMenu
-                    ? C.onContextMenu
+                null != _.onContextMenu
+                    ? _.onContextMenu
                     : (e) => {
                           e.stopPropagation();
                       },
-            className: r()(u.containerDefault, d.wrapper, { [d.modeSelected]: _ }, l),
+            className: r()(u.containerDefault, d.wrapper, { [d.modeSelected]: m }, l),
             children: [
-                g ? (0, i.jsx)('div', { className: r()(d.unread, d.unreadImportant) }) : null,
+                C ? (0, i.jsx)('div', { className: r()(d.unread, d.unreadImportant) }) : null,
                 (0, i.jsx)('div', {
                     className: r()([d.link, d.basicChannelRowLink, h]),
                     children: (0, i.jsxs)('div', {
@@ -58,7 +58,7 @@ function h(e) {
                                 'aria-hidden': !0,
                                 children: f
                             }),
-                            m
+                            g
                         ]
                     })
                 })

@@ -1,33 +1,33 @@
 n.d(t, {
     $p: function () {
-        return S;
+        return I;
     },
     FQ: function () {
-        return T;
-    },
-    Il: function () {
-        return g;
-    },
-    Jf: function () {
-        return O;
-    },
-    SA: function () {
-        return D;
-    },
-    Um: function () {
-        return N;
-    },
-    eu: function () {
         return v;
     },
+    Il: function () {
+        return S;
+    },
+    Jf: function () {
+        return A;
+    },
+    SA: function () {
+        return O;
+    },
+    Um: function () {
+        return b;
+    },
+    eu: function () {
+        return N;
+    },
     hW: function () {
-        return y;
+        return D;
     },
     lY: function () {
-        return R;
+        return y;
     },
     pk: function () {
-        return A;
+        return T;
     },
     qB: function () {
         return C;
@@ -43,15 +43,15 @@ var r = n(392711),
     u = n(706454),
     c = n(675478),
     d = n(598077),
-    _ = n(486472),
-    E = n(594174),
-    f = n(73346),
-    h = n(926491),
-    p = n(981631),
-    I = n(526761),
-    m = n(689938);
-let T = async (e, t) => {
-        let { body: n } = await (0, f.Kb)(p.ANM.STICKER_PACK(e));
+    f = n(486472),
+    _ = n(594174),
+    h = n(73346),
+    p = n(926491),
+    m = n(981631),
+    g = n(526761),
+    E = n(388032);
+let v = async (e, t) => {
+        let { body: n } = await (0, h.Kb)(m.ANM.STICKER_PACK(e));
         return (
             s.Z.dispatch({
                 type: 'STICKER_PACK_FETCH_SUCCESS',
@@ -62,16 +62,16 @@ let T = async (e, t) => {
             n
         );
     },
-    S = async function () {
+    I = async function () {
         let { locale: e = u.default.locale } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        if (h.Z.isFetchingStickerPacks || h.Z.hasLoadedStickerPacks) return;
+        if (p.Z.isFetchingStickerPacks || p.Z.hasLoadedStickerPacks) return;
         s.Z.wait(() => {
             s.Z.dispatch({ type: 'STICKER_PACKS_FETCH_START' });
         });
         let {
             body: { sticker_packs: t }
         } = await a.tn.get({
-            url: p.ANM.STICKER_PACKS,
+            url: m.ANM.STICKER_PACKS,
             query: { locale: e }
         });
         s.Z.dispatch({
@@ -79,15 +79,15 @@ let T = async (e, t) => {
             packs: t
         });
     },
-    g = async (e) => {
-        let { body: t } = await a.tn.get({ url: p.ANM.STICKER(e) });
+    S = async (e) => {
+        let { body: t } = await a.tn.get({ url: m.ANM.STICKER(e) });
         s.Z.dispatch({
             type: 'STICKER_FETCH_SUCCESS',
             sticker: t
         });
     },
-    A = async (e) => {
-        let { body: t } = await a.tn.get({ url: p.ANM.GUILD_STICKER_PACKS(e) });
+    T = async (e) => {
+        let { body: t } = await a.tn.get({ url: m.ANM.GUILD_STICKER_PACKS(e) });
         s.Z.dispatch({
             type: 'GUILD_STICKERS_FETCH_SUCCESS',
             guildId: e,
@@ -101,12 +101,12 @@ let T = async (e, t) => {
             )
         });
     },
-    N = async (e) => {
-        await a.tn.del({ url: p.ANM.GUILD_STICKER(e.guild_id, e.id) });
+    b = async (e) => {
+        await a.tn.del({ url: m.ANM.GUILD_STICKER(e.guild_id, e.id) });
     },
-    R = async (e, t) => {
+    y = async (e, t) => {
         let n = await a.tn.post({
-            url: p.ANM.GUILD_STICKER_PACKS(e),
+            url: m.ANM.GUILD_STICKER_PACKS(e),
             body: t
         });
         return (
@@ -115,20 +115,20 @@ let T = async (e, t) => {
                 guildId: e,
                 sticker: {
                     ...n.body,
-                    user: E.default.getCurrentUser()
+                    user: _.default.getCurrentUser()
                 }
             }),
             n.body
         );
     },
-    O = async (e, t, n) =>
+    A = async (e, t, n) =>
         (
             await a.tn.patch({
-                url: p.ANM.GUILD_STICKER(e, t),
+                url: m.ANM.GUILD_STICKER(e, t),
                 body: n
             })
         ).body;
-function v(e, t, n) {
+function N(e, t, n) {
     s.Z.dispatch({
         type: 'ADD_STICKER_PREVIEW',
         channelId: e,
@@ -143,29 +143,29 @@ function C(e, t) {
         draftType: t
     });
 }
-function L(e) {
-    return _.Z.totalUnavailableGuilds > 0 || !l.Z.isConnected() ? e : e.filter((e) => null != h.Z.getStickerById(e));
+function R(e) {
+    return f.Z.totalUnavailableGuilds > 0 || !l.Z.isConnected() ? e : e.filter((e) => null != p.Z.getStickerById(e));
+}
+function O(e) {
+    c.DZ.updateAsync(
+        'favoriteStickers',
+        (t) =>
+            ((t.stickerIds = R(t.stickerIds)), i().size(t.stickerIds) >= g.oX)
+                ? (o.Z.show({
+                      title: E.intl.string(E.t['+XYXtb']),
+                      body: E.intl.formatToPlainString(E.t.JaIyFh, { count: g.oX })
+                  }),
+                  !1)
+                : !t.stickerIds.includes(e) && void t.stickerIds.push(e),
+        g.fy.INFREQUENT_USER_ACTION
+    );
 }
 function D(e) {
     c.DZ.updateAsync(
         'favoriteStickers',
-        (t) =>
-            ((t.stickerIds = L(t.stickerIds)), i().size(t.stickerIds) >= I.oX)
-                ? (o.Z.show({
-                      title: m.Z.Messages.FAVORITES_LIMIT_REACHED_TITLE,
-                      body: m.Z.Messages.FAVORITES_LIMIT_REACHED_BODY.format({ count: I.oX })
-                  }),
-                  !1)
-                : !t.stickerIds.includes(e) && void t.stickerIds.push(e),
-        I.fy.INFREQUENT_USER_ACTION
-    );
-}
-function y(e) {
-    c.DZ.updateAsync(
-        'favoriteStickers',
         (t) => {
-            (t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = L(t.stickerIds));
+            (t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = R(t.stickerIds));
         },
-        I.fy.INFREQUENT_USER_ACTION
+        g.fy.INFREQUENT_USER_ACTION
     );
 }

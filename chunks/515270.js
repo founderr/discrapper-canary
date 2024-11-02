@@ -1,12 +1,12 @@
 n.d(t, {
     L6: function () {
-        return N;
+        return b;
     },
     ZP: function () {
-        return m;
+        return E;
     },
     iF: function () {
-        return A;
+        return T;
     }
 }),
     n(47120),
@@ -22,21 +22,21 @@ var r = n(920478),
     u = n(925994),
     c = n(436660),
     d = n(887490),
-    _ = n(42530);
-let E = new Set(['line']),
-    f = r.Z.listLanguages(),
-    h = new Map();
-for (let e of f) {
+    f = n(42530);
+let _ = new Set(['line']),
+    h = r.Z.listLanguages(),
+    p = new Map();
+for (let e of h) {
     e = e.toLowerCase();
     let t = r.Z.getLanguage(e);
     if (null == t) continue;
     let n = t.aliases;
-    if ((h.set(e, e), null != n)) for (let t of n) h.set(t.toLowerCase(), e);
+    if ((p.set(e, e), null != n)) for (let t of n) p.set(t.toLowerCase(), e);
 }
-let p = /^[a-z0-9_+\-.#]+$/,
-    I = /^[a-z0-9_+\-.#]+$/i;
-for (let [e, t] of h) if (null == e.match(p)) throw Error('Language name does not match regex: '.concat(e));
-function m(e) {
+let m = /^[a-z0-9_+\-.#]+$/,
+    g = /^[a-z0-9_+\-.#]+$/i;
+for (let [e, t] of p) if (null == e.match(m)) throw Error('Language name does not match regex: '.concat(e));
+function E(e) {
     let { onChange: t } = e,
         n = null;
     return (
@@ -56,7 +56,7 @@ function m(e) {
                                         let s = (function (e) {
                                                 let t;
                                                 let [n, r] = e;
-                                                if (!E.has(n.type)) return [];
+                                                if (!_.has(n.type)) return [];
                                                 let i = [],
                                                     a = /\\|```/g;
                                                 for (let e = 0; e < n.children.length; e++) {
@@ -83,21 +83,21 @@ function m(e) {
                                             u = t.text.substring(l.offset + 3);
                                         }
                                         let c = n && null != o,
-                                            _ = n && 0 === s.length,
-                                            f = r && 0 === s.length,
-                                            p = (c ? s.slice(1) : s).length % 2 == 1,
-                                            m = p && (null == u || '' === u || null != u.match(I)),
-                                            T = m && null != u && null !== (a = h.get(u.toLowerCase())) && void 0 !== a ? a : null;
+                                            f = n && 0 === s.length,
+                                            h = r && 0 === s.length,
+                                            m = (c ? s.slice(1) : s).length % 2 == 1,
+                                            E = m && (null == u || '' === u || null != u.match(g)),
+                                            v = E && null != u && null !== (a = p.get(u.toLowerCase())) && void 0 !== a ? a : null;
                                         return {
                                             blockEntry: t,
                                             wasInCodeBlock: n,
-                                            isInCodeBlock: _,
-                                            isStyledCodeBlockLine: f,
-                                            lang: p || c ? T : i,
+                                            isInCodeBlock: f,
+                                            isStyledCodeBlockLine: h,
+                                            lang: m || c ? v : i,
                                             hljsTypes: null,
                                             closesCodeBlock: c,
-                                            opensCodeBlock: p,
-                                            opensCodeBlockOnOwnLine: m
+                                            opensCodeBlock: m,
+                                            opensCodeBlockOnOwnLine: E
                                         };
                                     })(e, r, i, a, null != n && (n.opensCodeBlock || !n.closesCodeBlock) ? n.lang : null)),
                                         t.push(n);
@@ -114,12 +114,12 @@ function m(e) {
                                                 if (null != n && null != r.Z.getLanguage(n)) {
                                                     let r = (function (e, t) {
                                                         let n = ''.concat(e, '-').concat(t),
-                                                            r = g.get(n);
+                                                            r = S.get(n);
                                                         if (null != r) return r;
                                                         let i = o.default.highlight(t, e, !1);
                                                         if (null == i || i.illegal) return null;
                                                         let a = i.value.split('\n');
-                                                        return g.set(n, a), a;
+                                                        return S.set(n, a), a;
                                                     })(e, n);
                                                     if (null != r && r.length === t.length) {
                                                         let e = [];
@@ -134,7 +134,7 @@ function m(e) {
                                                                 s = [],
                                                                 o = 0,
                                                                 l = 0;
-                                                            for (; null != (i = T.exec(a)); ) {
+                                                            for (; null != (i = v.exec(a)); ) {
                                                                 let t = i.index + i[0].length,
                                                                     n = i.index - l;
                                                                 i.index > l &&
@@ -194,19 +194,19 @@ function m(e) {
         e
     );
 }
-let T = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
-    S = {
+let v = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
+    I = {
         max: 1 / 0,
         maxAge: 1 * s.Z.Millis.MINUTE,
         updateAgeOnGet: !0
     },
-    g = new (a())(S);
-function A(e, t) {
+    S = new (a())(I);
+function T(e, t) {
     let n = 0;
     for (let i of d.bN.nodes(e, {
         at: {
             anchor: {
-                path: _.u9,
+                path: f.u9,
                 offset: 0
             },
             focus: t
@@ -222,8 +222,8 @@ function A(e, t) {
     }
     return n % 2 != 0;
 }
-function N(e) {
+function b(e) {
     if (null == e.selection) return !1;
     let t = d.M8.start(e.selection);
-    return A(e, t);
+    return T(e, t);
 }

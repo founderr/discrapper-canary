@@ -1,6 +1,6 @@
 n.d(t, {
     I8: function () {
-        return i;
+        return s;
     },
     KW: function () {
         return m;
@@ -19,7 +19,7 @@ n.d(t, {
     }
 });
 var a = n(512722),
-    s = n.n(a);
+    i = n.n(a);
 function r(e, t, n) {
     return (
         t in e
@@ -34,7 +34,7 @@ function r(e, t, n) {
     );
 }
 let l = 2 / 3,
-    i = 12;
+    s = 12;
 class o {
     getWidth(e) {
         return this.getRenderOptions(e).columnWidth;
@@ -54,7 +54,7 @@ class o {
         };
     }
     constructor({ minWidth: e, maxWidth: t, gap: n }) {
-        r(this, 'minWidth', void 0), r(this, 'maxWidth', void 0), r(this, 'gap', void 0), s()(e < t, 'minWidth needs to be smaller than maxWidth'), (this.minWidth = e), (this.maxWidth = t), (this.gap = n);
+        r(this, 'minWidth', void 0), r(this, 'maxWidth', void 0), r(this, 'gap', void 0), i()(e < t, 'minWidth needs to be smaller than maxWidth'), (this.minWidth = e), (this.maxWidth = t), (this.gap = n);
     }
 }
 let c = {
@@ -67,4 +67,4 @@ let c = {
         return [t, n];
     },
     u = 12,
-    m = (e) => 60 + d(e - 2 * u)[1] + 24 + 3 * i;
+    m = (e) => 60 + d(e - 2 * u)[1] + 24 + 3 * s;

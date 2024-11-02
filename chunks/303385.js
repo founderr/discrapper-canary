@@ -1,26 +1,26 @@
 var o = n(200651);
 n(192379);
-var s = n(100621),
-    r = n(481060),
+var r = n(100621),
+    s = n(481060),
     a = n(497505),
-    l = n(302245),
-    i = n(644646),
+    i = n(302245),
+    l = n(644646),
     c = n(46140),
-    d = n(689938),
+    d = n(388032),
     u = n(437567);
 t.Z = (e) => {
     let { quest: t, expansionSpring: n, isFullyExpanded: p, partnerBranding: m, useReducedMotion: x } = e,
-        { enabled: C, variant: _ } = l.Hp.useExperiment({ location: c.dr.QUESTS_BAR });
-    if (!C) return null;
-    let g = null;
-    return (_ === l.PW.REWARD_AVAILABLE ? (g = d.Z.Messages.REWARD_AVAILABLE) : _ === l.PW.EARN_A_REWARD ? (g = d.Z.Messages.EARN_A_REWARD) : _ === l.PW.EARN_A_REWARD_EXCLAMATION && (g = d.Z.Messages.EARN_A_REWARD_EXCLAIMATION), null == g)
+        { enabled: g, variant: f } = i.Hp.useExperiment({ location: c.dr.QUESTS_BAR });
+    if (!g) return null;
+    let h = null;
+    return (f === i.PW.REWARD_AVAILABLE ? (h = d.intl.string(d.t['2BD0CQ'])) : f === i.PW.EARN_A_REWARD ? (h = d.intl.string(d.t.mETI3N)) : f === i.PW.EARN_A_REWARD_EXCLAMATION && (h = d.intl.string(d.t.LCpIZG)), null == h)
         ? null
         : (0, o.jsxs)(o.Fragment, {
               children: [
-                  (0, o.jsx)(s.animated.div, {
+                  (0, o.jsx)(r.animated.div, {
                       className: u.rewardTileSpacer,
                       style: {
-                          transform: (0, s.to)(
+                          transform: (0, r.to)(
                               [
                                   n.to({
                                       range: [0, 1],
@@ -31,10 +31,10 @@ t.Z = (e) => {
                           )
                       }
                   }),
-                  (0, o.jsx)(s.animated.div, {
+                  (0, o.jsx)(r.animated.div, {
                       className: u.rewardTileContainer,
                       style: {
-                          transform: (0, s.to)(
+                          transform: (0, r.to)(
                               [
                                   n.to({
                                       range: [0, 1],
@@ -52,7 +52,7 @@ t.Z = (e) => {
                               (e, t, n) => 'translate('.concat(e, 'px, ').concat(t, 'px) scale(').concat(n, ')')
                           )
                       },
-                      children: (0, o.jsx)(i.Z, {
+                      children: (0, o.jsx)(l.Z, {
                           learnMoreStyle: 'text',
                           quest: t,
                           questContent: a.jn.QUEST_BAR_V2,
@@ -63,14 +63,14 @@ t.Z = (e) => {
                   (0, o.jsxs)('div', {
                       className: u.rewardHighlightLogoCTA,
                       children: [
-                          (0, o.jsx)(s.animated.div, {
+                          (0, o.jsx)(r.animated.div, {
                               className: u.partnerBranding,
                               style: {
                                   opacity: n.to({
                                       range: [0, 1],
                                       output: [1, p ? 1 : 0.8]
                                   }),
-                                  transform: (0, s.to)(
+                                  transform: (0, r.to)(
                                       [
                                           n.to({
                                               range: [0, 1],
@@ -86,7 +86,7 @@ t.Z = (e) => {
                               },
                               children: m
                           }),
-                          (0, o.jsx)(s.animated.div, {
+                          (0, o.jsx)(r.animated.div, {
                               className: u.rewardHighlightCTA,
                               style: {
                                   opacity: n.to({
@@ -94,10 +94,10 @@ t.Z = (e) => {
                                       output: [0.7, 0]
                                   })
                               },
-                              children: (0, o.jsx)(r.Text, {
+                              children: (0, o.jsx)(s.Text, {
                                   color: 'always-white',
                                   variant: 'text-xs/medium',
-                                  children: g
+                                  children: h
                               })
                           })
                       ]

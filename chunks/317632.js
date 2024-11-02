@@ -1,17 +1,17 @@
 n(47120);
 var i,
-    a,
-    s,
     r,
-    l = n(442837),
-    o = n(570140),
+    l,
+    a,
+    o = n(442837),
+    s = n(570140),
     c = n(823379),
     u = n(981631);
 let d = [],
-    _ = {},
-    E = null,
-    I = 0;
-function m(e) {
+    m = {},
+    f = null,
+    h = 0;
+function p(e) {
     let t = null;
     try {
         t = JSON.parse(e.launch_parameters);
@@ -33,46 +33,46 @@ function m(e) {
     }
     return null;
 }
-class f extends (i = l.ZP.Store) {
+class g extends (i = o.ZP.Store) {
     getInvites() {
         return d;
     }
     getInviteStatuses() {
-        return _;
+        return m;
     }
     isInviteGameInstalled(e) {
         var t;
-        return null === (t = _[e.invite_id]) || void 0 === t ? void 0 : t.installed;
+        return null === (t = m[e.invite_id]) || void 0 === t ? void 0 : t.installed;
     }
     isInviteJoinable(e) {
         var t;
-        return null === (t = _[e.invite_id]) || void 0 === t ? void 0 : t.joinable;
+        return null === (t = m[e.invite_id]) || void 0 === t ? void 0 : t.joinable;
     }
     getLastUnseenInvite() {
-        return E;
+        return f;
     }
     getUnseenInviteCount() {
-        return I;
+        return h;
     }
 }
-(r = 'GameInviteStore'),
-    (s = 'displayName') in (a = f)
-        ? Object.defineProperty(a, s, {
-              value: r,
+(a = 'GameInviteStore'),
+    (l = 'displayName') in (r = g)
+        ? Object.defineProperty(r, l, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[s] = r),
-    (t.Z = new f(o.Z, {
+        : (r[l] = a),
+    (t.Z = new g(s.Z, {
         CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
             let { gameInvites: t } = e;
-            d = t.map(m).filter(c.lm);
+            d = t.map(p).filter(c.lm);
         },
         GAME_INVITE_CREATE: function (e) {
             let { gameInvite: t } = e,
-                n = m(t);
-            null != n && ((d = [n, ...d]), (E = t), (I += 1));
+                n = p(t);
+            null != n && ((d = [n, ...d]), (f = t), (h += 1));
         },
         GAME_INVITE_DELETE: function (e) {
             let { inviteId: t } = e;
@@ -83,12 +83,12 @@ class f extends (i = l.ZP.Store) {
             d = d.filter((e) => !t.includes(e.invite_id));
         },
         GAME_INVITE_UPDATE_STATUS: function (e) {
-            (_ = { ..._ })[e.inviteId] = {
+            (m = { ...m })[e.inviteId] = {
                 installed: e.installed,
                 joinable: e.joinable
             };
         },
         GAME_INVITE_CLEAR_UNSEEN: function (e) {
-            (E = null), (I = 0);
+            (f = null), (h = 0);
         }
     }));

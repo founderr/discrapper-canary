@@ -1,13 +1,13 @@
-var T = s(200651);
-s(192379);
-var o = s(120356),
-    n = s.n(o),
-    a = s(481060),
-    l = s(675586);
-t.Z = function (e) {
-    let { children: t, style: s } = e;
-    return (0, T.jsx)(a.ModalContent, {
-        className: n()(l.modalContent, s),
-        children: t
+var i = n(200651);
+n(192379);
+var o = n(120356),
+    s = n.n(o),
+    l = n(481060),
+    r = n(675586);
+e.Z = function (t) {
+    let { children: e, style: n } = t;
+    return (0, i.jsx)(l.ModalContent, {
+        className: s()(r.modalContent, n),
+        children: e
     });
 };

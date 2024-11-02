@@ -3,25 +3,25 @@ t.d(n, {
         return d;
     },
     s: function () {
-        return a;
+        return l;
     }
 });
 var i,
-    a,
-    l = t(668781),
-    s = t(63063),
+    l,
+    r = t(668781),
+    a = t(63063),
     o = t(981631),
-    r = t(689938);
+    s = t(388032);
 function d(e, n) {
     let t;
-    0 === e ? (t = r.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_SELF_DENY_MODAL_MESSAGE_REMOVE_SELF.format()) : 1 === e ? (t = r.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_SELF_DENY_MODAL_MESSAGE_REMOVE_ROLE.format({ name: n })) : 2 === e && (t = r.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_SELF_DENY_MODAL_MESSAGE_DENY_ROLE.format({ name: n })),
-        l.Z.show({
-            title: r.Z.Messages.SELF_DENY_PERMISSION_TITLE,
+    0 === e ? (t = s.intl.format(s.t['/S6f5+'], {})) : 1 === e ? (t = s.intl.format(s.t.EBhv4e, { name: n })) : 2 === e && (t = s.intl.format(s.t['59Dbw8'], { name: n })),
+        r.Z.show({
+            title: s.intl.string(s.t.vElC9f),
             body: t,
-            cancelText: r.Z.Messages.HELP_DESK,
+            cancelText: s.intl.string(s.t.psXQHB),
             onCancel() {
-                window.open(s.Z.getArticleURL(o.BhN.APPLICATION_COMMAND_PERMISSIONS_LOCKOUT));
+                window.open(a.Z.getArticleURL(o.BhN.APPLICATION_COMMAND_PERMISSIONS_LOCKOUT));
             }
         });
 }
-((i = a || (a = {}))[(i.REMOVE_SELF = 0)] = 'REMOVE_SELF'), (i[(i.REMOVE_ROLE = 1)] = 'REMOVE_ROLE'), (i[(i.DENY_ROLE = 2)] = 'DENY_ROLE');
+((i = l || (l = {}))[(i.REMOVE_SELF = 0)] = 'REMOVE_SELF'), (i[(i.REMOVE_ROLE = 1)] = 'REMOVE_ROLE'), (i[(i.DENY_ROLE = 2)] = 'DENY_ROLE');

@@ -12,39 +12,39 @@ var r = n(200651),
 function u(e, t, n) {
     let a = (0, l.G6)(e);
     return i.forwardRef(function (u, c) {
-        let { children: d, className: _, dir: E = 'ltr', orientation: f = 'vertical', fade: h = !1, customTheme: p = !1, paddingFix: I = !0, style: m, ...T } = u,
-            { scrollerRef: S, getScrollerState: g } = (0, l.Ke)(),
-            A = (0, l.t2)(S, f);
+        let { children: d, className: f, dir: _ = 'ltr', orientation: h = 'vertical', fade: p = !1, customTheme: m = !1, paddingFix: g = !0, style: E, ...v } = u,
+            { scrollerRef: I, getScrollerState: S } = (0, l.Ke)(),
+            T = (0, l.t2)(I, h);
         i.useImperativeHandle(
             c,
             () => ({
-                getScrollerNode: () => S.current,
-                getScrollerState: g,
-                ...(0, l.Ue)(S, g, A, f)
+                getScrollerNode: () => I.current,
+                getScrollerState: S,
+                ...(0, l.Ue)(I, S, T, h)
             }),
-            [S, g, f, A]
+            [I, S, h, T]
         );
-        let N = (0, l.tT)({
-            paddingFix: I,
-            orientation: f,
-            dir: E,
-            className: _,
-            scrollerRef: S,
+        let b = (0, l.tT)({
+            paddingFix: g,
+            orientation: h,
+            dir: _,
+            className: f,
+            scrollerRef: I,
             specs: a
         });
         return (0, r.jsx)('div', {
-            ref: S,
-            className: s()(_, {
+            ref: I,
+            className: s()(f, {
                 [e]: !0,
-                [t]: h,
-                [n]: p
+                [t]: p,
+                [n]: m
             }),
-            style: (0, l.uT)(m, f),
-            dir: E,
-            ...T,
+            style: (0, l.uT)(E, h),
+            dir: _,
+            ...v,
             children: (0, r.jsxs)(o.Jc, {
-                containerRef: S,
-                children: [d, N]
+                containerRef: I,
+                children: [d, b]
             })
         });
     });

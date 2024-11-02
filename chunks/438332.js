@@ -19,11 +19,11 @@ function u(e, t, n) {
 }
 let c = { lastSeenNewlyAddedEmojiIds: {} },
     d = c,
-    _ = {};
-function E() {
-    for (let e in _) d.lastSeenNewlyAddedEmojiIds[e] = _[e];
+    f = {};
+function _() {
+    for (let e in f) d.lastSeenNewlyAddedEmojiIds[e] = f[e];
 }
-class f extends (r = s.ZP.PersistedStore) {
+class h extends (r = s.ZP.PersistedStore) {
     initialize(e) {
         d = null != e ? e : c;
     }
@@ -44,9 +44,9 @@ class f extends (r = s.ZP.PersistedStore) {
         }
     }
 }
-u(f, 'displayName', 'NewlyAddedEmojiStore'),
-    u(f, 'persistKey', 'NewlyAddedEmojiStore'),
-    u(f, 'migrations', [
+u(h, 'displayName', 'NewlyAddedEmojiStore'),
+    u(h, 'persistKey', 'NewlyAddedEmojiStore'),
+    u(h, 'migrations', [
         (e) => {
             let t = e.lastSeenNewlyAddedEmojiIds,
                 n = {};
@@ -61,21 +61,21 @@ u(f, 'displayName', 'NewlyAddedEmojiStore'),
             return { lastSeenNewlyAddedEmojiIds: n };
         }
     ]),
-    (t.Z = new f(o.Z, {
+    (t.Z = new h(o.Z, {
         LOGOUT: function () {
-            (d = c), (_ = {});
+            (d = c), (f = {});
         },
         NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED: function (e) {
             var t;
             let { guildId: n, emojiId: r } = e,
-                i = null !== (t = _[n]) && void 0 !== t ? t : d.lastSeenNewlyAddedEmojiIds[n];
+                i = null !== (t = f[n]) && void 0 !== t ? t : d.lastSeenNewlyAddedEmojiIds[n];
             null == i || 0 > l.default.compare(i.id, r)
-                ? (_[n] = {
+                ? (f[n] = {
                       id: r,
                       lastSeen: Date.now(),
                       acknowledged: !0
                   })
-                : (_[n] = {
+                : (f[n] = {
                       ...i,
                       acknowledged: !0
                   });
@@ -83,17 +83,17 @@ u(f, 'displayName', 'NewlyAddedEmojiStore'),
         NEWLY_ADDED_EMOJI_SEEN_PENDING: function (e) {
             var t;
             let { guildId: n, emojiId: r } = e,
-                i = null !== (t = _[n]) && void 0 !== t ? t : d.lastSeenNewlyAddedEmojiIds[n];
+                i = null !== (t = f[n]) && void 0 !== t ? t : d.lastSeenNewlyAddedEmojiIds[n];
             (null == i || 0 > l.default.compare(i.id, r)) &&
-                (_[n] = {
+                (f[n] = {
                     id: r,
                     lastSeen: Date.now(),
                     acknowledged: !1
                 });
         },
-        NEWLY_ADDED_EMOJI_SEEN_UPDATED: E,
+        NEWLY_ADDED_EMOJI_SEEN_UPDATED: _,
         CLEAR_CACHES: function () {
-            (d = c), E();
+            (d = c), _();
         },
-        CONNECTION_CLOSED: E
+        CONNECTION_CLOSED: _
     }));

@@ -8,19 +8,19 @@ let o = /\n{2,}$/,
     u = '(?:[*-]|\\d+\\.)',
     c = '(%INDENT_CAPTURE_PATTERN%)(' + u + ') +',
     d = RegExp('^' + c.replace('%INDENT_CAPTURE_PATTERN%', ' *')),
-    _ = c + '[^\\n]*(?:\\n(?!%INDENT_CAPTURE_PATTERN%' + u + ' )[^\\n]*)*(\n|$)',
-    E = / *\n$/,
-    f = RegExp('^( *)(' + u + ') [\\s\\S]+?(?:\\n(?! )(?!\\1' + u + ' )|$)'),
-    h = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/,
-    p = (e) => e.map((e) => ('text' === e.type && null != e.content && (e.content = e.content.replace(/\n+\s*$/, '')), e)),
-    I = {
+    f = c + '[^\\n]*(?:\\n(?!%INDENT_CAPTURE_PATTERN%' + u + ' )[^\\n]*)*(\n|$)',
+    _ = / *\n$/,
+    h = RegExp('^( *)(' + u + ') [\\s\\S]+?(?:\\n(?! )(?!\\1' + u + ' )|$)'),
+    p = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/,
+    m = (e) => e.map((e) => ('text' === e.type && null != e.content && (e.content = e.content.replace(/\n+\s*$/, '')), e)),
+    g = {
         ...s().defaultRules.list,
         requiredFirstCharacters: ' *-0123456789'.split(''),
         match: (e, t) => {
             if (!t.allowList || t._listLevel >= 11) return null;
             let n = null == t.prevCapture ? '' : t.prevCapture[0],
                 r = l.exec(n);
-            return null == r || h.test(r[0]) ? null : f.exec(e);
+            return null == r || p.test(r[0]) ? null : h.exec(e);
         },
         parse: (e, t, n) => {
             let r = e[2],
@@ -29,35 +29,35 @@ let o = /\n{2,}$/,
                 l = e[0].replace(o, '\n'),
                 u = d.exec(l),
                 c = null != u ? u[0].length : 0,
-                f = null != u ? u[1].length : 0,
-                h = ' {'.concat(f, ',').concat(f + 1, '}'),
-                I = RegExp(_.replaceAll('%INDENT_CAPTURE_PATTERN%', h), 'gm'),
-                m = RegExp('^ {1,' + c + '}', 'gm'),
-                T = l.match(I);
-            i()(null != T, 'markup list items can not be parsed.');
-            let S = !1;
+                h = null != u ? u[1].length : 0,
+                p = ' {'.concat(h, ',').concat(h + 1, '}'),
+                g = RegExp(f.replaceAll('%INDENT_CAPTURE_PATTERN%', p), 'gm'),
+                E = RegExp('^ {1,' + c + '}', 'gm'),
+                v = l.match(g);
+            i()(null != v, 'markup list items can not be parsed.');
+            let I = !1;
             return {
                 ordered: a,
                 start: s,
-                items: T.map((e, r) => {
+                items: v.map((e, r) => {
                     let i;
-                    let a = e.replace(d, '').replace(m, ''),
-                        s = r === T.length - 1,
-                        o = -1 !== a.indexOf('\n\n') || (s && S);
-                    S = o;
+                    let a = e.replace(d, '').replace(E, ''),
+                        s = r === v.length - 1,
+                        o = -1 !== a.indexOf('\n\n') || (s && I);
+                    I = o;
                     let l = n.inline,
                         u = n._list,
                         c = n._listLevel;
-                    (n._list = !0), (n._listLevel = (null != c ? c : 0) + 1), o ? ((n.inline = !1), (i = a.replace(E, '\n\n'))) : ((n.inline = !0), (i = a.replace(E, '')));
-                    let _ = p(
+                    (n._list = !0), (n._listLevel = (null != c ? c : 0) + 1), o ? ((n.inline = !1), (i = a.replace(_, '\n\n'))) : ((n.inline = !0), (i = a.replace(_, '')));
+                    let f = m(
                         t(i, {
                             ...n,
                             allowHeading: !1
                         })
                     );
-                    return (n.inline = l), (n._list = u), (n._listLevel = c), _;
+                    return (n.inline = l), (n._list = u), (n._listLevel = c), f;
                 })
             };
         }
     };
-t.Z = I;
+t.Z = g;

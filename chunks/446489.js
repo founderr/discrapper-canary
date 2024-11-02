@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return f;
     },
     y: function () {
         return p;
     }
 });
 var i,
-    s,
     o,
-    a = n(200651),
+    a,
+    s = n(200651),
     l = n(192379),
     r = n(392711),
     c = n.n(r),
@@ -41,16 +41,16 @@ function p(e, t, n) {
         return null != n && n > 0 ? Math.min(i, n) * t : i * t;
     }
 }
-((i = s || (s = {}))[(i.ABOVE = 0)] = 'ABOVE'), (i[(i.VISIBLE = 1)] = 'VISIBLE'), (i[(i.BELOW = 2)] = 'BELOW');
-class g extends (o = l.PureComponent) {
+((i = o || (o = {}))[(i.ABOVE = 0)] = 'ABOVE'), (i[(i.VISIBLE = 1)] = 'VISIBLE'), (i[(i.BELOW = 2)] = 'BELOW');
+class f extends (a = l.PureComponent) {
     static getDerivedStateFromProps(e, t) {
-        let { prevValue: n, currValue: i, nextValue: s } = t;
+        let { prevValue: n, currValue: i, nextValue: o } = t;
         return null == n && i !== e.value
             ? {
                   prevValue: u.Z.isFocused() ? i : null,
                   currValue: e.value
               }
-            : null != s && s !== e.value
+            : null != o && o !== e.value
               ? { nextValue: e.value }
               : null;
     }
@@ -60,8 +60,8 @@ class g extends (o = l.PureComponent) {
     }
     animateBetween(e, t) {
         let n;
-        let { forcePosition: i, animationSpeed: s } = this.props;
-        this.prevAnimate.setValue(1), null != i ? (0 === i ? (this.currAnimate.setValue(0), (n = 2)) : 2 === i && (this.currAnimate.setValue(2), (n = 0))) : e > t ? (this.currAnimate.setValue(0), (n = 2)) : (this.currAnimate.setValue(2), (n = 0)), d.Z.parallel([d.Z.timing(this.prevAnimate, m(n, s)), d.Z.timing(this.currAnimate, m(1, s))]).start(this.animateNext);
+        let { forcePosition: i, animationSpeed: o } = this.props;
+        this.prevAnimate.setValue(1), null != i ? (0 === i ? (this.currAnimate.setValue(0), (n = 2)) : 2 === i && (this.currAnimate.setValue(2), (n = 0))) : e > t ? (this.currAnimate.setValue(0), (n = 2)) : (this.currAnimate.setValue(2), (n = 0)), d.Z.parallel([d.Z.timing(this.prevAnimate, m(n, o)), d.Z.timing(this.currAnimate, m(1, o))]).start(this.animateNext);
     }
     getAnimatedStyle(e) {
         let { animationColor: t } = this.props;
@@ -93,40 +93,40 @@ class g extends (o = l.PureComponent) {
     render() {
         let { prevValue: e, currValue: t } = this.state,
             { color: n, formatString: i } = this.props,
-            s = c().omit(this.props, ['value', 'digitWidth', 'padStartLength', 'forcePosition']);
+            o = c().omit(this.props, ['value', 'digitWidth', 'padStartLength', 'forcePosition']);
         if (null == e)
-            return (0, a.jsx)('div', {
-                ...s,
+            return (0, s.jsx)('div', {
+                ...o,
                 style: {
                     color: n,
                     minWidth: this.getMinWidth(t)
                 },
                 children: null != i ? i(this.padValue(t)) : this.padValue(t)
             });
-        let o = Math.max(e, t);
-        return (0, a.jsxs)('div', {
-            ...s,
+        let a = Math.max(e, t);
+        return (0, s.jsxs)('div', {
+            ...o,
             style: {
                 color: n,
                 position: 'relative',
                 overflow: 'hidden'
             },
             children: [
-                (0, a.jsx)('div', {
+                (0, s.jsx)('div', {
                     style: {
                         visibility: 'hidden',
-                        minWidth: this.getMinWidth(o)
+                        minWidth: this.getMinWidth(a)
                     },
-                    children: this.padValue(o)
+                    children: this.padValue(a)
                 }),
-                (0, a.jsx)(d.Z.div, {
+                (0, s.jsx)(d.Z.div, {
                     style: {
                         color: n,
                         ...this.getAnimatedStyle(this.prevAnimate)
                     },
                     children: null != i ? i(this.padValue(e)) : this.padValue(e)
                 }),
-                (0, a.jsx)(d.Z.div, {
+                (0, s.jsx)(d.Z.div, {
                     style: {
                         color: n,
                         ...this.getAnimatedStyle(this.currAnimate)
@@ -159,4 +159,4 @@ class g extends (o = l.PureComponent) {
             (this.currAnimate = new d.Z.Value(1));
     }
 }
-h(g, 'Positions', s);
+h(f, 'Positions', o);

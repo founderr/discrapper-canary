@@ -1,79 +1,79 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return h;
     }
 });
-var s = n(200651),
-    a = n(192379),
-    i = n(120356),
-    r = n.n(i),
-    l = n(481060),
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    s = n.n(l),
+    a = n(481060),
     o = n(456935),
     c = n(259580),
     d = n(981631),
-    u = n(689938),
-    _ = n(176981);
-function I(e) {
+    u = n(388032),
+    m = n(176981);
+function h(e) {
     let { guild: t } = e,
-        i = t.verificationLevel,
-        I = a.useMemo(() => (0, o.I9)(i), [i]);
-    return (0, s.jsxs)(l.Clickable, {
+        l = t.verificationLevel,
+        h = r.useMemo(() => (0, o.I9)(l), [l]);
+    return (0, i.jsxs)(a.Clickable, {
         onClick: () =>
-            (0, l.openModalLazy)(async () => {
+            (0, a.openModalLazy)(async () => {
                 let { default: e } = await n.e('27933').then(n.bind(n, 694278));
                 return (n) =>
-                    (0, s.jsx)(e, {
+                    (0, i.jsx)(e, {
                         ...n,
                         guild: t,
                         hideColors: !0
                     });
             }),
-        className: r()(_.simpleItemWrapper, _.clickable),
+        className: s()(m.simpleItemWrapper, m.clickable),
         children: [
-            (0, s.jsxs)('div', {
-                className: _.itemContent,
+            (0, i.jsxs)('div', {
+                className: m.itemContent,
                 children: [
-                    (0, s.jsx)(l.Heading, {
+                    (0, i.jsx)(a.Heading, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: u.Z.Messages.FORM_LABEL_VERIFICATION_LEVEL
+                        children: u.intl.string(u.t.DpRdYG)
                     }),
-                    (0, s.jsx)(l.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        children: u.Z.Messages.GUILD_SETTINGS_SAFETY_VERIFICATION_DESCRIPTION
+                        children: u.intl.string(u.t.mA17eH)
                     }),
-                    (0, s.jsx)('div', {
-                        className: _.__invalid_pillRow,
-                        children: (0, s.jsxs)(l.Text, {
+                    (0, i.jsx)('div', {
+                        className: m.__invalid_pillRow,
+                        children: (0, i.jsxs)(a.Text, {
                             variant: 'text-xs/medium',
                             color: 'interactive-normal',
-                            className: _.valuePill,
+                            className: m.valuePill,
                             children: [
-                                i === d.sFg.VERY_HIGH
-                                    ? (0, s.jsx)(l.MobilePhoneIcon, {
+                                l === d.sFg.VERY_HIGH
+                                    ? (0, i.jsx)(a.MobilePhoneIcon, {
                                           size: 'custom',
                                           color: 'currentColor',
                                           width: 16,
                                           height: 16
                                       })
-                                    : (0, s.jsx)(l.EnvelopeIcon, {
+                                    : (0, i.jsx)(a.EnvelopeIcon, {
                                           size: 'custom',
                                           color: 'currentColor',
                                           width: 16,
                                           height: 16
                                       }),
-                                I
+                                h
                             ]
                         })
                     })
                 ]
             }),
-            (0, s.jsx)(c.Z, {
+            (0, i.jsx)(c.Z, {
                 height: 24,
                 width: 24,
                 direction: c.Z.Directions.RIGHT,
-                className: _.caret
+                className: m.caret
             })
         ]
     });

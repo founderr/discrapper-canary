@@ -1,37 +1,37 @@
-var n = t(200651);
-t(192379);
-var a = t(481060),
-    i = t(723359),
-    r = t(231338);
-s.Z = {
+var i = n(200651);
+n(192379);
+var s = n(481060),
+    r = n(723359),
+    l = n(231338);
+t.Z = {
     openNewUserAgeGateModal: (e) => {
-        (0, a.openModalLazy)(
+        (0, s.openModalLazy)(
             async () => {
-                let { default: e } = await Promise.all([t.e('20727'), t.e('60249')]).then(t.bind(t, 298237));
-                return (s) => (0, n.jsx)(e, { ...s });
+                let { default: e } = await Promise.all([n.e('20727'), n.e('60249')]).then(n.bind(n, 298237));
+                return (t) => (0, i.jsx)(e, { ...t });
             },
             {
-                modalKey: i.$$,
-                onCloseRequest: r.dG,
+                modalKey: r.$$,
+                onCloseRequest: l.dG,
                 onCloseCallback: e
             }
         );
     },
     openClaimAccountModal: function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-            s = arguments.length > 1 ? arguments[1] : void 0;
-        (0, a.openModalLazy)(
+            t = arguments.length > 1 ? arguments[1] : void 0;
+        (0, s.openModalLazy)(
             async () => {
-                let { default: s } = await t.e('60827').then(t.bind(t, 324239));
-                return (t) =>
-                    (0, n.jsx)(s, {
+                let { default: t } = await n.e('60827').then(n.bind(n, 324239));
+                return (n) =>
+                    (0, i.jsx)(t, {
                         claimRequired: e,
-                        ...t
+                        ...n
                     });
             },
             {
-                onCloseRequest: e ? r.dG : null,
-                onCloseCallback: s
+                onCloseRequest: e ? l.dG : null,
+                onCloseCallback: t
             }
         );
     }

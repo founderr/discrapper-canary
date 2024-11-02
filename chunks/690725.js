@@ -1,24 +1,24 @@
 n.d(t, {
     f: function () {
-        return i;
+        return a;
     }
 }),
     n(411104);
-var l = n(4646),
-    a = n(665672);
-async function i(e) {
-    let { assetsToLoad: t, drawImage: i, exportConfigs: r } = e,
-        s = await (0, l.k2)(t);
-    await s.loadFonts();
+var i = n(4646),
+    l = n(665672);
+async function a(e) {
+    let { assetsToLoad: t, drawImage: a, exportConfigs: r } = e,
+        o = await (0, i.k2)(t);
+    await o.loadFonts();
     {
         let e = n(503082).Z,
             t = n(97008).Z,
-            l = document.createElement('canvas'),
-            o = new e(l, s),
+            i = document.createElement('canvas'),
+            s = new e(i, o),
             u = new t(),
-            c = new a.Z(o, u);
-        i(c.canvas);
+            c = new l.Z(s, u);
+        a(c.canvas);
         let d = await c.export(r);
-        return l.remove(), d;
+        return i.remove(), d;
     }
 }

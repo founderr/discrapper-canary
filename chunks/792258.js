@@ -1,44 +1,44 @@
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(120356),
-    r = n.n(a),
-    i = n(468194),
+var r = n(120356),
+    a = n.n(r),
+    s = n(468194),
     l = n(399606),
     o = n(481060),
     c = n(372769),
-    _ = n(914788),
-    d = n(981631),
-    E = n(689938),
-    u = n(43123);
-let T = [18, 18, 16, 16, 14, 12, 10];
+    d = n(914788),
+    u = n(981631),
+    g = n(388032),
+    m = n(43123);
+let f = [18, 18, 16, 16, 14, 12, 10];
 t.Z = (e) => {
     let { guildId: t } = e,
-        n = (0, l.e7)([_.Z], () => _.Z.getGuild(t));
+        n = (0, l.e7)([d.Z], () => d.Z.getGuild(t));
     if (void 0 === n) return null;
-    let a = n.hasFeature(d.oNc.VERIFIED) || n.hasFeature(d.oNc.PARTNERED),
-        I = n.toString(),
-        R = n.getIconURL(40, !0),
-        g = null,
-        N = T[T.length - 1];
-    if (null == n.icon && null != I) {
-        var m;
-        N = null !== (m = T[(g = (0, i.Zg)(I)).length - 1]) && void 0 !== m ? m : T[T.length - 1];
+    let r = n.hasFeature(u.oNc.VERIFIED) || n.hasFeature(u.oNc.PARTNERED),
+        p = n.toString(),
+        _ = n.getIconURL(40, !0),
+        h = null,
+        x = f[f.length - 1];
+    if (null == n.icon && null != p) {
+        var E;
+        x = null !== (E = f[(h = (0, s.Zg)(p)).length - 1]) && void 0 !== E ? E : f[f.length - 1];
     }
-    return (0, s.jsxs)('div', {
-        className: u.container,
+    return (0, i.jsxs)('div', {
+        className: m.container,
         children: [
-            (0, s.jsxs)('div', {
-                style: { fontSize: N },
+            (0, i.jsxs)('div', {
+                style: { fontSize: x },
                 children: [
-                    null != g
-                        ? (0, s.jsx)('div', {
-                              className: r()(u.childWrapper, u.acronym),
+                    null != h
+                        ? (0, i.jsx)('div', {
+                              className: a()(m.childWrapper, m.acronym),
                               'aria-hidden': !0,
-                              children: g
+                              children: h
                           })
                         : null,
-                    null != R
-                        ? (0, s.jsx)(o.Avatar, {
+                    null != _
+                        ? (0, i.jsx)(o.Avatar, {
                               src: n.getIconURL(40, !0),
                               size: o.AvatarSizes.SIZE_40,
                               'aria-hidden': !0
@@ -46,31 +46,31 @@ t.Z = (e) => {
                         : null
                 ]
             }),
-            (0, s.jsxs)('div', {
-                className: u.descriptors,
+            (0, i.jsxs)('div', {
+                className: m.descriptors,
                 children: [
-                    (0, s.jsxs)('div', {
-                        className: u.header,
+                    (0, i.jsxs)('div', {
+                        className: m.header,
                         children: [
-                            a
-                                ? (0, s.jsx)(c.Z, {
+                            r
+                                ? (0, i.jsx)(c.Z, {
                                       guild: n,
                                       tooltipPosition: 'bottom',
                                       tooltipColor: o.Tooltip.Colors.PRIMARY,
-                                      className: u.guildBadge
+                                      className: m.guildBadge
                                   })
                                 : null,
-                            (0, s.jsx)(o.Text, {
+                            (0, i.jsx)(o.Text, {
                                 variant: 'text-md/semibold',
                                 children: n.toString()
                             })
                         ]
                     }),
                     void 0 !== n.approximateMemberCount
-                        ? (0, s.jsx)(o.Text, {
+                        ? (0, i.jsx)(o.Text, {
                               variant: 'text-xs/medium',
                               color: 'text-muted',
-                              children: E.Z.Messages.FAMILY_CENTER_ACTIVITY_GUILD_ROW_MEMBER_COUNT.format({ members: n.approximateMemberCount })
+                              children: g.intl.format(g.t['5JmNgo'], { members: n.approximateMemberCount })
                           })
                         : null
                 ]

@@ -1,24 +1,24 @@
 n.d(t, {
     Ff: function () {
-        return E;
+        return _;
     },
     GS: function () {
-        return I;
+        return g;
     },
     KH: function () {
-        return f;
-    },
-    Nm: function () {
-        return m;
-    },
-    RI: function () {
-        return p;
-    },
-    Up: function () {
         return h;
     },
+    Nm: function () {
+        return E;
+    },
+    RI: function () {
+        return m;
+    },
+    Up: function () {
+        return p;
+    },
     XV: function () {
-        return _;
+        return f;
     }
 });
 var r = n(544891),
@@ -30,7 +30,7 @@ var r = n(544891),
     u = n(647177),
     c = n(901757),
     d = n(981631);
-async function _() {
+async function f() {
     let e = await r.tn.get(d.ANM.VIDEO_FILTER_ASSETS);
     return (
         i.Z.dispatch({
@@ -40,7 +40,7 @@ async function _() {
         e
     );
 }
-async function E(e, t, n) {
+async function _(e, t, n) {
     try {
         let a = await r.tn.post({
             url: d.ANM.VIDEO_FILTER_ASSETS,
@@ -61,16 +61,16 @@ async function E(e, t, n) {
         throw new c.Z(e);
     }
 }
-async function f(e) {
+async function h(e) {
     await r.tn.del(d.ANM.VIDEO_FILTER_ASSET(e.id));
     let t = (0, l.P)(o.default.getCurrentUser());
-    (0, u.rD)(t) && t.id === e.id && h(null),
+    (0, u.rD)(t) && t.id === e.id && p(null),
         i.Z.dispatch({
             type: 'VIDEO_FILTER_ASSET_DELETE_SUCCESS',
             videoFilterAsset: e
         });
 }
-async function h(e) {
+async function p(e) {
     if (
         (await a.hW.updateAsync(
             'voiceAndVideo',
@@ -92,16 +92,16 @@ async function h(e) {
             backgroundOption: e
         });
 }
-function p(e) {
+function m(e) {
     if (!!s.Z.isSupported())
         i.Z.dispatch({
             type: 'MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS',
             settings: e
         });
 }
-function I() {
+function g() {
     if (!!s.Z.isSupported()) i.Z.dispatch({ type: 'MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START' });
 }
-function m() {
+function E() {
     i.Z.dispatch({ type: 'MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR' });
 }

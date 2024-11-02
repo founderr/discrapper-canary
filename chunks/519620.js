@@ -1,34 +1,34 @@
-d.r(n),
-    d.d(n, {
+i.r(n),
+    i.d(n, {
         default: function () {
-            return _;
+            return o;
         }
     });
-var a = d(200651);
-d(192379);
-var s = d(481060),
-    i = d(239091),
-    l = d(592125),
-    t = d(626135),
-    r = d(479313),
-    u = d(981631),
-    c = d(689938);
-function _(e) {
-    let { summary: n, onSelect: d } = e;
-    return (0, a.jsx)(s.Menu, {
-        onSelect: d,
+var t = i(200651);
+i(192379);
+var d = i(481060),
+    a = i(239091),
+    l = i(592125),
+    r = i(626135),
+    s = i(479313),
+    u = i(981631),
+    c = i(388032);
+function o(e) {
+    let { summary: n, onSelect: i } = e;
+    return (0, t.jsx)(d.Menu, {
+        onSelect: i,
         navId: 'channel-summaries-context-menu',
-        'aria-label': c.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
-        onClose: i.Zy,
-        children: (0, a.jsx)(s.MenuGroup, {
-            children: (0, a.jsx)(s.MenuItem, {
+        'aria-label': c.intl.string(c.t.ogxXGh),
+        onClose: a.Zy,
+        children: (0, t.jsx)(d.MenuGroup, {
+            children: (0, t.jsx)(d.MenuItem, {
                 id: 'delete-summary',
                 color: 'danger',
-                label: c.Z.Messages.SUMMARIES_DELETE_SUMMARY,
+                label: c.intl.string(c.t['5AwUIi']),
                 action: () => {
-                    (0, r.$l)(n);
+                    (0, s.$l)(n);
                     let e = l.Z.getChannel(n.channelId);
-                    t.default.track(u.rMx.SUMMARY_DELETED, {
+                    r.default.track(u.rMx.SUMMARY_DELETED, {
                         guild_id: null == e ? void 0 : e.guild_id,
                         channel_id: null == e ? void 0 : e.id,
                         summary_id: n.id,

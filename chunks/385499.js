@@ -5,43 +5,43 @@ var i = n(120356),
     s = n(981729),
     o = n(481060),
     l = n(674563),
-    u = n(689938),
+    u = n(388032),
     c = n(936485);
 let d = (e) => {
     let t,
-        { invertColor: n = !1, type: i = l.Hb.BOT, className: d, verified: _, hideIcon: E = !1, useRemSizes: f = !1, children: h = [] } = e,
-        p = null,
-        I = u.Z.Messages.VERIFIED_BOT_TOOLTIP;
+        { invertColor: n = !1, type: i = l.Hb.BOT, className: d, verified: f, hideIcon: _ = !1, useRemSizes: h = !1, children: p = [] } = e,
+        m = null,
+        g = u.intl.string(u.t.g76OcH);
     switch (i) {
         case l.Hb.SYSTEM_DM:
         case l.Hb.OFFICIAL:
-            (_ = !0), (I = u.Z.Messages.DISCORD_SYSTEM_MESSAGE_BOT_TAG_TOOLTIP_OFFICIAL), (p = u.Z.Messages.SYSTEM_DM_TAG_OFFICIAL);
+            (f = !0), (g = u.intl.string(u.t['7s687u'])), (m = u.intl.string(u.t.lKQ7Wl));
             break;
         case l.Hb.SERVER:
-            p = u.Z.Messages.BOT_TAG_SERVER;
+            m = u.intl.string(u.t.PuJGuL);
             break;
         case l.Hb.ORIGINAL_POSTER:
-            p = u.Z.Messages.BOT_TAG_FORUM_ORIGINAL_POSTER;
+            m = u.intl.string(u.t.fyE8sL);
             break;
         case l.Hb.STAFF_ONLY_DM:
-            p = u.Z.Messages.STAFF_BADGE_TOOLTIP;
+            m = u.intl.string(u.t.oMx98P);
             break;
         case l.Hb.AI:
-            (_ = !0), (I = u.Z.Messages.AI_GENERATED_TOOLTIP), (p = u.Z.Messages.AI_TAG);
+            (f = !0), (g = u.intl.string(u.t.d5YwQE)), (m = u.intl.string(u.t.pLTJZG));
             break;
         case l.Hb.REMIX:
-            (_ = !1), (p = u.Z.Messages.REMIXING_TAG);
+            (f = !1), (m = u.intl.string(u.t.uXDG39));
             break;
         case l.Hb.BOT:
         default:
-            p = u.Z.Messages.APP_TAG;
+            m = u.intl.string(u.t['9RNkeH']);
     }
-    let m = i === l.Hb.ORIGINAL_POSTER,
-        T = i === l.Hb.REMIX,
-        S = null;
-    _ &&
-        (S = (0, r.jsx)(s.u, {
-            text: I,
+    let E = i === l.Hb.ORIGINAL_POSTER,
+        v = i === l.Hb.REMIX,
+        I = null;
+    f &&
+        (I = (0, r.jsx)(s.u, {
+            text: g,
             align: 'center',
             position: 'top',
             children: (e) =>
@@ -52,37 +52,37 @@ let d = (e) => {
                 })
         })),
         (t = i === l.Hb.AI ? c.botTagAI : n ? c.botTagInvert : c.botTagRegular);
-    let g = (e) =>
+    let S = (e) =>
         (0, r.jsxs)('span', {
             ...e,
-            className: a()(d, t, f ? c.rem : c.px, {
-                [c.botTagOP]: m,
-                [c.botTagRemix]: T
+            className: a()(d, t, h ? c.rem : c.px, {
+                [c.botTagOP]: E,
+                [c.botTagRemix]: v
             }),
             children: [
-                E ? null : S,
-                h,
+                _ ? null : I,
+                p,
                 (0, r.jsx)('span', {
                     className: c.botText,
-                    children: p
+                    children: m
                 })
             ]
         });
     switch (i) {
         case l.Hb.REMIX:
             return (0, r.jsx)(s.u, {
-                text: u.Z.Messages.REMIXING_DOWNLOAD_APP,
+                text: u.intl.string(u.t.xb0str),
                 position: 'top',
-                children: (e) => g(e)
+                children: (e) => S(e)
             });
         case l.Hb.ORIGINAL_POSTER:
             return (0, r.jsx)(s.u, {
-                text: u.Z.Messages.BOT_TAG_FORUM_ORIGINAL_POSTER_TOOLTIP,
+                text: u.intl.string(u.t.uN6Emp),
                 position: 'top',
-                children: (e) => g(e)
+                children: (e) => S(e)
             });
         default:
-            return g();
+            return S();
     }
 };
 (d.Types = l.Hb), (t.Z = d);

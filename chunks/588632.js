@@ -1,37 +1,37 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return g;
+        return x;
     }
 }),
-    t(47120);
-var l = t(200651),
-    a = t(192379),
-    o = t(658722),
-    r = t.n(o),
-    i = t(692547),
-    s = t(481060),
-    c = t(596454),
-    d = t(285888),
-    u = t(689938),
-    m = t(481455);
+    n(47120);
+var l = n(200651),
+    o = n(192379),
+    a = n(658722),
+    r = n.n(a),
+    i = n(692547),
+    s = n(481060),
+    c = n(596454),
+    d = n(285888),
+    u = n(388032),
+    m = n(481455);
 function h(e) {
     return null != e && (null != e.id || null != e.name);
 }
 let v = {
     ...d.v,
-    control: (e, n) => {
-        let { isDisabled: t, menuIsOpen: l } = n;
+    control: (e, t) => {
+        let { isDisabled: n, menuIsOpen: l } = t;
         return {
             ...e,
             backgroundColor: 'var(--input-background)',
             borderColor: 'var(--input-background)',
-            opacity: t ? 0.6 : 1,
+            opacity: n ? 0.6 : 1,
             boxShadow: void 0,
             borderRadius: l ? '8px 8px 0 0' : '8px',
             minHeight: 40,
             transition: 'border 0.15s ease',
-            cursor: t ? 'not-allowed' : void 0,
-            pointerEvents: t ? 'none' : void 0,
+            cursor: n ? 'not-allowed' : void 0,
+            pointerEvents: n ? 'none' : void 0,
             '&:hover': { borderColor: 'var(--input-background)' }
         };
     },
@@ -48,11 +48,11 @@ let v = {
         alignItems: 'flex-start',
         paddingTop: 4
     }),
-    option: (e, n) => {
-        let { isSelected: t, isFocused: l } = n;
+    option: (e, t) => {
+        let { isSelected: n, isFocused: l } = t;
         return {
             ...e,
-            ...(t
+            ...(n
                 ? {
                       backgroundColor: 'var(--background-modifier-selected)',
                       color: 'var(--interactive-active)'
@@ -79,21 +79,21 @@ let v = {
         };
     }
 };
-function g(e) {
-    let { options: n, value: t, onChange: o, canBeNew: g, memberCounts: x } = e,
+function x(e) {
+    let { options: t, value: n, onChange: a, canBeNew: x, memberCounts: g } = e,
         p = (e) => {
             e.preventDefault(), e.stopPropagation();
         },
-        C = a.useCallback(
+        f = o.useCallback(
             (e) => {
-                var a, r, i, d;
+                var o, r, i, d;
                 return (0, l.jsxs)('div', {
                     className: m.selectValuePill,
                     onMouseDown: p,
                     children: [
                         h(e.emoji) &&
                             (0, l.jsx)(c.Z, {
-                                emojiId: null === (a = e.emoji) || void 0 === a ? void 0 : a.id,
+                                emojiId: null === (o = e.emoji) || void 0 === o ? void 0 : o.id,
                                 emojiName: null === (r = e.emoji) || void 0 === r ? void 0 : r.name,
                                 animated: null !== (d = null === (i = e.emoji) || void 0 === i ? void 0 : i.animated) && void 0 !== d && d
                             }),
@@ -104,7 +104,7 @@ function g(e) {
                         (0, l.jsx)(s.Clickable, {
                             className: m.selectValuePillClose,
                             onClick: () => {
-                                o(n.filter((n) => t.includes(n.id) && n.id !== e.id));
+                                a(t.filter((t) => n.includes(t.id) && t.id !== e.id));
                             },
                             children: (0, l.jsx)(s.XSmallIcon, {
                                 size: 'md',
@@ -115,13 +115,13 @@ function g(e) {
                     ]
                 });
             },
-            [o, n, t]
+            [a, t, n]
         ),
-        f = a.useCallback(
+        j = o.useCallback(
             (e) => {
-                var n, t, a, o;
-                let r = null == x || null == e.roleIds ? 0 : Math.max(...e.roleIds.map((e) => x[e])),
-                    d = null != x && r > 0;
+                var t, n, o, a;
+                let r = null == g || null == e.roleIds ? 0 : Math.max(...e.roleIds.map((e) => g[e])),
+                    d = null != g && r > 0;
                 return (0, l.jsxs)('div', {
                     className: m.selectOption,
                     children: [
@@ -130,9 +130,9 @@ function g(e) {
                             children: [
                                 h(e.emoji) &&
                                     (0, l.jsx)(c.Z, {
-                                        emojiId: null === (n = e.emoji) || void 0 === n ? void 0 : n.id,
-                                        emojiName: null === (t = e.emoji) || void 0 === t ? void 0 : t.name,
-                                        animated: null !== (o = null === (a = e.emoji) || void 0 === a ? void 0 : a.animated) && void 0 !== o && o
+                                        emojiId: null === (t = e.emoji) || void 0 === t ? void 0 : t.id,
+                                        emojiName: null === (n = e.emoji) || void 0 === n ? void 0 : n.name,
+                                        animated: null !== (a = null === (o = e.emoji) || void 0 === o ? void 0 : o.animated) && void 0 !== a && a
                                     }),
                                 (0, l.jsx)(s.Text, {
                                     variant: 'text-sm/normal',
@@ -140,11 +140,11 @@ function g(e) {
                                 })
                             ]
                         }),
-                        g &&
+                        x &&
                             e.isUnseen &&
                             (0, l.jsx)(s.TextBadge, {
                                 color: i.Z.unsafe_rawColors.BRAND_260.css,
-                                text: u.Z.Messages.NEW,
+                                text: u.intl.string(u.t.y2b7CA),
                                 className: m.optionNewBadge
                             }),
                         d &&
@@ -154,28 +154,28 @@ function g(e) {
                                 children: (0, l.jsx)(s.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'always-white',
-                                    children: u.Z.Messages.ONBOARDING_OPTION_ROLE_COUNTS.format({ memberCount: r })
+                                    children: u.intl.format(u.t.EgKsZG, { memberCount: r })
                                 })
                             })
                     ]
                 });
             },
-            [g, x]
+            [x, g]
         ),
-        N = a.useCallback((e, n) => {
-            let { data: t } = e;
-            return 0 === n.length || r()(n.toLowerCase(), t.title.toLowerCase());
+        C = o.useCallback((e, t) => {
+            let { data: n } = e;
+            return 0 === t.length || r()(t.toLowerCase(), n.title.toLowerCase());
         }, []);
     return (0, l.jsx)(d.Z, {
         styleOverrides: v,
         clearable: !1,
         isMulti: !0,
-        options: n,
-        onChange: o,
-        value: t,
+        options: t,
+        onChange: a,
+        value: n,
         closeMenuOnSelect: !1,
-        multiValueRenderer: C,
-        optionRenderer: f,
-        filterOption: N
+        multiValueRenderer: f,
+        optionRenderer: j,
+        filterOption: C
     });
 }

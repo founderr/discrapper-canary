@@ -19,65 +19,65 @@ let o = Object.freeze({
     isSidebarVisible: !1
 });
 function l(e) {
-    let { sections: t, sectionHeight: n, rowHeight: l, footerHeight: u, sidebarHeight: c, listHeaderHeight: d, chunkSize: _ = 256, paddingTop: E = 0, paddingBottom: f = 0, getScrollerState: h, getAnchorId: p } = e,
-        I = (0, a.Z)(),
-        m = (0, r.useRef)(o),
-        [T] = (0, r.useState)(() => new i.Z()),
+    let { sections: t, sectionHeight: n, rowHeight: l, footerHeight: u, sidebarHeight: c, listHeaderHeight: d, chunkSize: f = 256, paddingTop: _ = 0, paddingBottom: h = 0, getScrollerState: p, getAnchorId: m } = e,
+        g = (0, a.Z)(),
+        E = (0, r.useRef)(o),
+        [v] = (0, r.useState)(() => new i.Z()),
         {
-            dirty: S,
-            chunkStart: g,
-            chunkEnd: A,
-            forceUpdateOnChunkChange: N
+            dirty: I,
+            chunkStart: S,
+            chunkEnd: T,
+            forceUpdateOnChunkChange: b
         } = (0, s.Z)({
-            chunkSize: _,
-            getScrollerState: h,
-            forceUpdate: I
+            chunkSize: f,
+            getScrollerState: p,
+            forceUpdate: g
         }),
-        { items: R } = m.current,
-        O = null,
-        { scrollTop: v } = h();
-    for (let e of R) {
-        if (0 === v) break;
+        { items: y } = E.current,
+        A = null,
+        { scrollTop: N } = p();
+    for (let e of y) {
+        if (0 === N) break;
         if ('footer' === e.type || 'header' === e.type || null == e.anchorId) continue;
         let t = 'row' === e.type ? e.row : void 0;
-        if (e.offsetTop >= v) {
-            O = {
+        if (e.offsetTop >= N) {
+            A = {
                 id: e.anchorId,
                 section: e.section,
                 row: t,
-                scrollOffset: e.offsetTop - v
+                scrollOffset: e.offsetTop - N
             };
             break;
         }
     }
     let C = (0, r.useMemo)(() => {
-            let e = Math.max(0, g * _);
+            let e = Math.max(0, S * f);
             return null != c && e < c;
-        }, [_, g, c]),
-        L = (0, r.useMemo)(
+        }, [f, S, c]),
+        R = (0, r.useMemo)(
             () =>
-                S > 0
-                    ? m.current
-                    : (T.mergeProps({
+                I > 0
+                    ? E.current
+                    : (v.mergeProps({
                           sectionHeight: n,
                           rowHeight: l,
                           footerHeight: u,
                           listHeaderHeight: d,
-                          paddingBottom: f,
-                          paddingTop: E,
+                          paddingBottom: h,
+                          paddingTop: _,
                           sections: t,
-                          getAnchorId: p
+                          getAnchorId: m
                       }),
-                      T.compute(Math.max(0, g * _), A * _)),
-            [S, g, A, n, l, u, d, f, E, t, T, _, p]
+                      v.compute(Math.max(0, S * f), T * f)),
+            [I, S, T, n, l, u, d, h, _, t, v, f, m]
         );
     return (
-        (0, r.useLayoutEffect)(() => void (m.current = L)),
+        (0, r.useLayoutEffect)(() => void (E.current = R)),
         {
-            ...L,
-            listComputer: T,
-            forceUpdateOnChunkChange: N,
-            anchor: O,
+            ...R,
+            listComputer: v,
+            forceUpdateOnChunkChange: b,
+            anchor: A,
             isSidebarVisible: C
         }
     );

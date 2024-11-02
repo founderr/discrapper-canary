@@ -1,9 +1,9 @@
 n.d(t, {
     IX: function () {
-        return _;
+        return f;
     },
     Rt: function () {
-        return E;
+        return _;
     },
     UM: function () {
         return d;
@@ -155,14 +155,14 @@ t.ZP = {
     },
     fetchApplication: d
 };
-let _ = (0, r.Kb)(u.Z, {
+let f = (0, r.Kb)(u.Z, {
     queryId: (e) => (null != e ? ['applications', e] : null),
     get: (e) => (null != e ? u.Z.getApplication(e) : null),
     load: (e, t) => (null != t ? d(t, !1, e).then(c.dG4) : Promise.resolve()),
     useStateHook: r.e7
 });
-function E(e) {
-    let { data: t, isLoading: n, error: i } = _(e);
+function _(e) {
+    let { data: t, isLoading: n, error: i } = f(e);
     return {
         app: (0, r.e7)(
             [s.Z],

@@ -1,33 +1,33 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return m;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(512722),
-    s = n.n(a),
-    r = n(83474),
-    l = n(245315),
-    o = n(556041),
+var r = n(512722),
+    l = n.n(r),
+    a = n(83474),
+    o = n(245315),
+    s = n(556041),
     c = n(347475),
     u = n(592125),
     d = n(368859);
-function _(e, t) {
-    if ((0, l.cp)(t)) return (0, i.jsx)(o.Z, {});
+function m(e, t) {
+    if ((0, o.cp)(t)) return (0, i.jsx)(s.Z, {});
     if ((0, d.Z)(t)) {
-        let { guild_id: e, channel_id: n, message_id: a } = t.messageReference;
+        let { guild_id: e, channel_id: n, message_id: r } = t.messageReference;
         if (null != e)
-            return (0, i.jsx)(r.ZP, {
+            return (0, i.jsx)(a.ZP, {
                 guildId: e,
                 channelId: n,
-                messageId: a
+                messageId: r
             });
     }
     if (null != t.interaction && 'SENDING' === t.state) return (0, i.jsx)(i.Fragment, {});
     let n = u.Z.getChannel(t.channel_id);
     return (
-        s()(null != n, 'renderUserGuildPopout: channel should never be null'),
+        l()(null != n, 'renderUserGuildPopout: channel should never be null'),
         (0, i.jsx)(c.Z, {
             ...e,
             channelId: t.channel_id,

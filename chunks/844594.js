@@ -1,79 +1,79 @@
-t.r(s),
-    t.d(s, {
+e.r(i),
+    e.d(i, {
         default: function () {
-            return I;
+            return b;
         }
     });
-var o = t(200651),
-    i = t(192379),
-    n = t(481060),
-    a = t(313201),
-    r = t(197115),
-    u = t(921813),
-    l = t(687158),
-    d = t(576635),
-    c = t(626135),
-    A = t(981631),
-    E = t(486324),
-    _ = t(474936),
-    p = t(689938),
-    R = t(614883);
-function I(e) {
-    let { user: s, guildId: t, transitionState: I, imageSrc: M, uploadType: T, onSubscribe: m, onClose: S } = e,
-        b = (0, a.Dt)(),
-        P = (0, l.ZP)(s.id, t),
-        { primaryColor: N, secondaryColor: x } = (0, d.Z)({
-            user: s,
-            displayProfile: P,
-            pendingAvatar: T === E.pC.AVATAR ? M : void 0,
+var n = e(200651),
+    o = e(192379),
+    s = e(481060),
+    r = e(313201),
+    a = e(197115),
+    l = e(921813),
+    u = e(687158),
+    c = e(576635),
+    d = e(626135),
+    p = e(981631),
+    A = e(486324),
+    m = e(474936),
+    S = e(388032),
+    T = e(614883);
+function b(t) {
+    let { user: i, guildId: e, transitionState: b, imageSrc: _, uploadType: x, onSubscribe: E, onClose: L } = t,
+        R = (0, r.Dt)(),
+        M = (0, u.ZP)(i.id, e),
+        { primaryColor: f, secondaryColor: I } = (0, c.Z)({
+            user: i,
+            displayProfile: M,
+            pendingAvatar: x === A.pC.AVATAR ? _ : void 0,
             isPreview: !0
         });
     return (
-        i.useEffect(() => {
-            c.default.track(A.rMx.PREMIUM_UPSELL_VIEWED, { type: _.cd.ANIMATED_AVATAR_PREVIEW_GIF_MODAL });
+        o.useEffect(() => {
+            d.default.track(p.rMx.PREMIUM_UPSELL_VIEWED, { type: m.cd.ANIMATED_AVATAR_PREVIEW_GIF_MODAL });
         }, []),
-        (0, o.jsxs)(n.ModalRoot, {
-            className: R.modalRoot,
-            transitionState: I,
-            size: n.ModalSize.SMALL,
-            'aria-labelledby': b,
+        (0, n.jsxs)(s.ModalRoot, {
+            className: T.modalRoot,
+            transitionState: b,
+            size: s.ModalSize.SMALL,
+            'aria-labelledby': R,
             hideShadow: !0,
             children: [
-                (0, o.jsx)(u.Z, {
-                    user: s,
+                (0, n.jsx)(l.Z, {
+                    user: i,
                     canUsePremiumCustomization: !0,
                     disabledInputs: !0,
-                    pendingAvatar: T === E.pC.AVATAR ? M : void 0,
-                    pendingBanner: T === E.pC.BANNER ? M : void 0,
-                    pendingThemeColors: [N, x]
+                    pendingAvatar: x === A.pC.AVATAR ? _ : void 0,
+                    pendingBanner: x === A.pC.BANNER ? _ : void 0,
+                    pendingThemeColors: [f, I]
                 }),
-                (0, o.jsxs)('div', {
-                    className: R.upsellSection,
+                (0, n.jsxs)('div', {
+                    className: T.upsellSection,
                     children: [
-                        (0, o.jsx)(n.Text, {
-                            className: R.joinText,
+                        (0, n.jsx)(s.Text, {
+                            className: T.joinText,
                             variant: 'text-sm/normal',
-                            children: T === E.pC.AVATAR ? p.Z.Messages.PREMIUM_PREVIEW_JOIN_AVATAR : p.Z.Messages.PREMIUM_PREVIEW_JOIN_BANNER
+                            children: x === A.pC.AVATAR ? S.intl.string(S.t.Mcp8fH) : S.intl.string(S.t.Px9zLS)
                         }),
-                        (0, o.jsx)(r.Z, {
-                            buttonText: p.Z.Messages.PREMIUM_PREVIEW_JOIN_NITRO,
-                            subscriptionTier: _.Si.TIER_2,
-                            className: R.premiumSubscribeButton,
-                            size: n.Button.Sizes.SMALL,
+                        (0, n.jsx)(a.Z, {
+                            buttonText: S.intl.string(S.t['6I0ceH']),
+                            subscriptionTier: m.Si.TIER_2,
+                            className: T.premiumSubscribeButton,
+                            size: s.Button.Sizes.SMALL,
                             premiumModalAnalyticsLocation: {
-                                section: A.jXE.SETTINGS_EDIT_PROFILE,
-                                object: A.qAy.BUTTON_CTA
+                                section: p.jXE.SETTINGS_EDIT_PROFILE,
+                                object: p.qAy.BUTTON_CTA
                             },
-                            onSubscribeModalClose: (e) => {
-                                e && (null == m || m(), S());
+                            onSubscribeModalClose: (t) => {
+                                t && (null == E || E(), L());
                             }
                         }),
-                        (0, o.jsx)(n.Button, {
-                            onClick: S,
-                            size: n.Button.Sizes.SMALL,
-                            color: n.Button.Colors.PRIMARY,
-                            look: n.Button.Looks.FILLED,
-                            children: p.Z.Messages.PREMIUM_PREVIEW_EXIT
+                        (0, n.jsx)(s.Button, {
+                            onClick: L,
+                            size: s.Button.Sizes.SMALL,
+                            color: s.Button.Colors.PRIMARY,
+                            look: s.Button.Looks.FILLED,
+                            children: S.intl.string(S.t.V3S9WV)
                         })
                     ]
                 })

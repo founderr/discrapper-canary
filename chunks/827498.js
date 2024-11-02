@@ -1,7 +1,7 @@
 var r, i, a, s, o, l, u, c;
 n.d(t, {
     G0: function () {
-        return _;
+        return f;
     },
     L3: function () {
         return d;
@@ -32,7 +32,7 @@ let d = {
         NEW_TO_APPS: 'new_to_apps',
         APPS_IN_THIS_SERVER: 'apps_in_this_server'
     },
-    _ = {
+    f = {
         HOME: 'home',
         APP_DETAIL: 'app_detail'
     };

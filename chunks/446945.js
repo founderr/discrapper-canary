@@ -1,38 +1,38 @@
-var a = t(200651);
+var r = t(200651);
 t(192379);
-var r = t(481060),
+var a = t(481060),
     i = t(239091),
     s = t(838221),
     o = t(246364),
     l = t(700833),
-    c = t(689938),
+    c = t(388032),
     d = t(207029);
 function u(e) {
     let { addFormField: n, onSelect: t, guild: u } = e;
-    return (0, a.jsx)(r.Menu, {
+    return (0, r.jsx)(a.Menu, {
         navId: 'add-questions',
         className: d.menu,
         onClose: i.Zy,
-        'aria-label': c.Z.Messages.USER_ACTIONS_MENU_LABEL,
+        'aria-label': c.intl.string(c.t.liqwPD),
         onSelect: t,
-        children: (0, a.jsxs)(r.MenuGroup, {
+        children: (0, r.jsxs)(a.MenuGroup, {
             children: [
-                (0, a.jsx)(r.MenuItem, {
+                (0, r.jsx)(a.MenuItem, {
                     id: 'text-input',
-                    icon: (0, r.makeIconCompat)(s.Z),
-                    label: c.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_TEXT_INPUT,
+                    icon: (0, a.makeIconCompat)(s.Z),
+                    label: c.intl.string(c.t.w6Q9w8),
                     action: () => (0, l.Md)(o.QJ.TEXT_INPUT, n, u)
                 }),
-                (0, a.jsx)(r.MenuItem, {
+                (0, r.jsx)(a.MenuItem, {
                     id: 'paragraph',
-                    icon: r.ChannelListIcon,
-                    label: c.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_PARAGRAPH,
+                    icon: a.ChannelListIcon,
+                    label: c.intl.string(c.t.gG0JBA),
                     action: () => (0, l.Md)(o.QJ.PARAGRAPH, n, u)
                 }),
-                (0, a.jsx)(r.MenuItem, {
+                (0, r.jsx)(a.MenuItem, {
                     id: 'multiple-choice',
-                    icon: r.ListBulletsIcon,
-                    label: c.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_MULTIPLE_CHOICE,
+                    icon: a.ListBulletsIcon,
+                    label: c.intl.string(c.t.ooKh3t),
                     action: () => (0, l.Md)(o.QJ.MULTIPLE_CHOICE, n, u)
                 })
             ]
@@ -45,7 +45,7 @@ n.Z = function (e) {
             (0, i.vq)(
                 e,
                 (e) =>
-                    (0, a.jsx)(u, {
+                    (0, r.jsx)(u, {
                         ...e,
                         addFormField: n,
                         guild: t
@@ -56,23 +56,23 @@ n.Z = function (e) {
                 }
             );
         };
-    return (0, a.jsx)(r.Tooltip, {
-        text: c.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_QUESTION_LIMIT,
+    return (0, r.jsx)(a.Tooltip, {
+        text: c.intl.string(c.t.nsI4dX),
         children: (e) =>
-            (0, a.jsxs)(r.Clickable, {
+            (0, r.jsxs)(a.Clickable, {
                 ...e,
                 className: d.container,
                 onClick: s,
                 children: [
-                    (0, a.jsx)(r.PlusSmallIcon, {
+                    (0, r.jsx)(a.PlusSmallIcon, {
                         size: 'md',
                         color: 'currentColor',
                         className: d.icon
                     }),
-                    (0, a.jsx)(r.Text, {
+                    (0, r.jsx)(a.Text, {
                         color: 'interactive-active',
                         variant: 'text-md/semibold',
-                        children: c.Z.Messages.MEMBER_VERIFICATION_ADD_QUESTION
+                        children: c.intl.string(c.t.CoHdoK)
                     })
                 ]
             })

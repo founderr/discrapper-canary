@@ -1,4 +1,4 @@
-let a = (0, t(818083).B)({
+let i = (0, t(818083).B)({
     kind: 'user',
     id: '2024-09_friends_in_server',
     label: 'Friends in Server',
@@ -11,4 +11,4 @@ let a = (0, t(818083).B)({
         }
     ]
 });
-n.Z = a;
+n.Z = i;

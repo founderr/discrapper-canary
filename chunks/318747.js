@@ -1,28 +1,28 @@
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(120356),
-    r = n.n(a),
-    i = n(780384),
+var r = n(120356),
+    a = n.n(r),
+    s = n(780384),
     l = n(481060),
     o = n(410030),
     c = n(197115),
-    _ = n(474936),
-    d = n(689938),
-    E = n(983712);
+    d = n(474936),
+    u = n(388032),
+    g = n(983712);
 t.Z = (e) => {
-    let { className: t, forceWhite: n, giftMessage: a, subscriptionTier: u, ...T } = e,
-        I = (0, o.ZP)(),
-        R = (0, i.wj)(I) || n,
-        g = R ? l.ButtonColors.WHITE : l.ButtonColors.BRAND,
-        N = u === _.Si.TIER_0 ? d.Z.Messages.GIFT_NITRO_TIER_0 : d.Z.Messages.GIFT_NITRO;
-    return (0, s.jsx)(c.Z, {
+    let { className: t, forceWhite: n, giftMessage: r, subscriptionTier: m, ...f } = e,
+        p = (0, o.ZP)(),
+        _ = (0, s.wj)(p) || n,
+        h = _ ? l.ButtonColors.WHITE : l.ButtonColors.BRAND,
+        x = m === d.Si.TIER_0 ? u.intl.string(u.t.rk4Uu7) : u.intl.string(u.t.Ve9Ge3);
+    return (0, i.jsx)(c.Z, {
         isGift: !0,
-        color: g,
+        color: h,
         look: l.ButtonLooks.OUTLINED,
-        buttonText: N,
-        giftMessage: a,
-        className: r()(t, E.giftButton, R ? E.buttonWhite : E.buttonBrand),
-        subscriptionTier: u,
-        ...T
+        buttonText: x,
+        giftMessage: r,
+        className: a()(t, g.giftButton, _ ? g.buttonWhite : g.buttonBrand),
+        subscriptionTier: m,
+        ...f
     });
 };

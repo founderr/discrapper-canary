@@ -1,25 +1,25 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return s;
     }
 });
 var i = n(200651),
-    a = n(481060),
-    s = n(410030),
-    r = n(689938);
-function l(e) {
+    r = n(481060),
+    l = n(410030),
+    a = n(388032);
+function s(e) {
     let { onClick: t } = e,
-        l = (0, s.ZP)();
-    return (0, i.jsxs)(a.EmptyState, {
-        theme: l,
+        s = (0, l.ZP)();
+    return (0, i.jsxs)(r.EmptyState, {
+        theme: s,
         children: [
-            (0, i.jsx)(a.EmptyStateImage, {
+            (0, i.jsx)(r.EmptyStateImage, {
                 lightSrc: n(979770),
                 darkSrc: n(138715),
                 width: 415,
                 height: 200
             }),
-            (0, i.jsx)(a.EmptyStateText, { note: r.Z.Messages.QUESTS_CLAIMED_QUEST_EMPTY_STATE.format({ onClick: t }) })
+            (0, i.jsx)(r.EmptyStateText, { note: a.intl.format(a.t.Pv8u2t, { onClick: t }) })
         ]
     });
 }

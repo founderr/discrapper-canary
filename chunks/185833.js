@@ -12,13 +12,13 @@ n.d(t, {
         return l;
     },
     g7: function () {
-        return _;
+        return f;
     },
     m4: function () {
         return o;
     },
     sA: function () {
-        return E;
+        return _;
     },
     wb: function () {
         return c;
@@ -36,5 +36,5 @@ var s = RegExp('rgb' + a(r, r, r)),
     u = RegExp('hsla' + a(r, i, i, r)),
     c = /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
     d = /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
-    _ = /^#([0-9a-fA-F]{6})$/,
-    E = /^#([0-9a-fA-F]{8})$/;
+    f = /^#([0-9a-fA-F]{6})$/,
+    _ = /^#([0-9a-fA-F]{8})$/;

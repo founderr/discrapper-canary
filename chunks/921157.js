@@ -1,10 +1,10 @@
-t.d(s, {
+n.d(t, {
     s: function () {
-        return i;
+        return r;
     }
 });
-var n = t(442837),
-    a = t(651941);
-function i() {
-    return (0, n.Wu)([a.Z], () => a.Z.getUserIds());
+var i = n(442837),
+    s = n(651941);
+function r() {
+    return (0, i.Wu)([s.Z], () => s.Z.getUserIds());
 }

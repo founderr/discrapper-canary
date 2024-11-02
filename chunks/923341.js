@@ -3,7 +3,7 @@ n.d(t, {
         return d;
     },
     t: function () {
-        return _;
+        return f;
     }
 });
 var r = n(697171),
@@ -78,6 +78,6 @@ var r = n(697171),
             e
         );
     })())(),
-    _ = function (e) {
+    f = function (e) {
         !s && e > 0 && d.start(), (s += e) || d.stop();
     };

@@ -6,10 +6,10 @@ var s = n(120356),
     o = n.n(s),
     l = n(873546),
     u = n(481060),
-    c = n(689938),
+    c = n(388032),
     d = n(619558);
 ((r = i || (i = {})).DEFAULT = ''), (r.BOLD = 'Bold'), (r.SOLID = 'Solid');
-let _ = (e) => {
+let f = (e) => {
     let { closeAction: t, variant: n, keybind: r, className: i } = e;
     return (0, a.jsxs)('div', {
         className: o()(d.container, i),
@@ -20,7 +20,7 @@ let _ = (e) => {
                     [d.closeButtonSolid]: 'Solid' === n
                 }),
                 onClick: t,
-                'aria-label': c.Z.Messages.CLOSE,
+                'aria-label': c.intl.string(c.t.cpT0Cg),
                 children:
                     'Solid' === n
                         ? (0, a.jsx)(u.CircleXIcon, {
@@ -44,4 +44,4 @@ let _ = (e) => {
         ]
     });
 };
-(_.defaultProps = { variant: '' }), (_.Variants = i), (t.Z = _);
+(f.defaultProps = { variant: '' }), (f.Variants = i), (t.Z = f);

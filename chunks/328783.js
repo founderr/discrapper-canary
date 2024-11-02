@@ -1,91 +1,91 @@
-t(47120), t(724458), t(653041);
-var n = t(200651),
-    a = t(192379),
-    i = t(442837),
-    r = t(481060),
-    o = t(313201),
-    l = t(993413),
-    c = t(594174),
-    d = t(931240),
-    _ = t(353093),
-    u = t(732783),
-    E = t(981631),
-    T = t(689938),
-    S = t(695341);
-let I = (0, o.hQ)();
-s.Z = a.memo(function (e) {
-    let { availableClans: s } = e,
-        t = a.useMemo(() => new Map(s.map((e) => [e.id, e])), [s]),
-        o = (0, i.e7)([c.default], () => {
+n(47120), n(724458), n(653041);
+var i = n(200651),
+    s = n(192379),
+    r = n(442837),
+    l = n(481060),
+    a = n(313201),
+    o = n(993413),
+    c = n(594174),
+    d = n(931240),
+    u = n(353093),
+    m = n(732783),
+    h = n(981631),
+    g = n(388032),
+    p = n(695341);
+let x = (0, a.hQ)();
+t.Z = s.memo(function (e) {
+    let { availableClans: t } = e,
+        n = s.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
+        a = (0, r.e7)([c.default], () => {
             var e;
-            return (0, _.vh)(null === (e = c.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan).guildId;
+            return (0, u.vh)(null === (e = c.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan).guildId;
         }),
-        N = a.useMemo(
+        S = s.useMemo(
             () =>
-                s.reduce((e, s) => {
-                    var t;
+                t.reduce((e, t) => {
+                    var n;
                     return (
-                        (null === (t = s.clan) || void 0 === t ? void 0 : t.tag) != null &&
+                        (null === (n = t.clan) || void 0 === n ? void 0 : n.tag) != null &&
                             e.push({
-                                label: s.name,
-                                value: s.id
+                                label: t.name,
+                                value: t.id
                             }),
                         e
                     );
                 }, []),
-            [s]
+            [t]
         ),
-        m = a.useCallback(
+        T = s.useCallback(
             (e) => {
-                var s, a;
+                var t, s;
                 if (null == e) return null;
-                let i = t.get(e.value);
-                if (null == i) return null;
-                let r = null === (s = i.clan) || void 0 === s ? void 0 : s.tag;
-                return null == r
+                let r = n.get(e.value);
+                if (null == r) return null;
+                let l = null === (t = r.clan) || void 0 === t ? void 0 : t.tag;
+                return null == l
                     ? null
-                    : (0, n.jsx)(u.Z, {
-                          clanTag: r,
-                          clanBadge: null === (a = i.clan) || void 0 === a ? void 0 : a.badge,
-                          guildId: i.id,
+                    : (0, i.jsx)(m.Z, {
+                          clanTag: l,
+                          clanBadge: null === (s = r.clan) || void 0 === s ? void 0 : s.badge,
+                          guildId: r.id,
                           guildName: e.label,
-                          guildIcon: i.icon,
+                          guildIcon: r.icon,
                           guildIconSize: 32
                       });
             },
-            [t]
+            [n]
         ),
-        C = a.useCallback(
+        C = s.useCallback(
             (e) => {
-                let s = e[0];
-                return null == s ? null : (0, n.jsx)(n.Fragment, { children: m(s) });
+                let t = e[0];
+                return null == t ? null : (0, i.jsx)(i.Fragment, { children: T(t) });
             },
-            [m]
+            [T]
         ),
-        A = a.useCallback((e) => (0, d.nE)(e, !0, E.Sbl.USER_SETTINGS), []),
-        g = a.useCallback((e) => e === o, [o]),
-        h = a.useCallback((e) => e, []),
-        O = a.useCallback(() => (0, d.nE)(null, !1), []);
-    return (0, n.jsxs)(l.Z, {
-        title: T.Z.Messages.CLANS,
-        titleId: I,
+        _ = s.useCallback((e) => (0, d.nE)(e, !0, h.Sbl.USER_SETTINGS), []),
+        E = s.useCallback((e) => e === a, [a]),
+        f = s.useCallback((e) => e, []),
+        I = s.useCallback(() => (0, d.nE)(null, !1), []);
+    return (0, i.jsxs)(o.Z, {
+        title: g.intl.string(g.t.umdfaG),
+        titleId: x,
         children: [
-            (0, n.jsx)(r.Text, {
-                className: S.subtitle,
+            (0, i.jsx)(l.Text, {
+                className: p.subtitle,
                 variant: 'text-sm/normal',
-                children: T.Z.Messages.CLAN_USER_PROFILE_PRIMARY_CLAN_SUBTITLE
+                children: g.intl.string(g.t.Mrf7fX)
             }),
-            (0, n.jsx)(r.Select, {
-                className: S.select,
-                optionClassName: S.selectPopout,
-                isSelected: g,
-                options: N,
-                select: A,
+            (0, i.jsx)(l.Select, {
+                className: p.select,
+                optionClassName: p.selectPopout,
+                isSelected: E,
+                options: S,
+                select: _,
                 renderOptionValue: C,
-                renderOptionLabel: m,
-                serialize: h,
-                clear: O,
-                clearable: null != o
+                renderOptionLabel: T,
+                serialize: f,
+                clear: I,
+                clearable: null != a
             })
         ]
     });

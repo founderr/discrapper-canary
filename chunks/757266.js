@@ -8,7 +8,7 @@ var r,
     u = n(442837),
     c = n(570140);
 let d = {};
-class _ extends (r = u.ZP.Store) {
+class f extends (r = u.ZP.Store) {
     isConnected(e) {
         return null != d[e];
     }
@@ -23,7 +23,7 @@ class _ extends (r = u.ZP.Store) {
     }
 }
 (s = 'ConnectedAppsStore'),
-    (a = 'displayName') in (i = _)
+    (a = 'displayName') in (i = f)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -31,7 +31,7 @@ class _ extends (r = u.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new _(c.Z, {
+    (t.Z = new f(c.Z, {
         OVERLAY_INITIALIZE: function (e) {
             let { connectedApps: t } = e;
             d = { ...t };

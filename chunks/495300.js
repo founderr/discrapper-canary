@@ -1,185 +1,185 @@
 n.d(t, {
     Z: function () {
-        return M;
+        return Z;
     }
 });
-var s = n(200651),
-    a = n(192379),
-    i = n(120356),
-    r = n.n(i),
-    l = n(442837),
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    s = n.n(l),
+    a = n(442837),
     o = n(704215),
     c = n(481060),
     d = n(605236),
     u = n(621923),
-    _ = n(768762),
-    I = n(999382),
-    E = n(743475),
-    T = n(983135),
-    m = n(570961),
-    N = n(208665),
-    S = n(359191),
-    g = n(84658),
-    h = n(142961),
-    C = n(729311),
-    x = n(850864),
-    p = n(729995),
-    R = n(966301),
-    L = n(707076),
-    f = n(213956),
-    O = n(689938),
-    A = n(930261);
-function M() {
-    let e = (0, l.e7)([I.Z], () => I.Z.getGuildId());
-    return null == e ? null : (0, s.jsx)(D, { guildId: e });
+    m = n(768762),
+    h = n(999382),
+    g = n(743475),
+    x = n(983135),
+    p = n(570961),
+    f = n(208665),
+    C = n(359191),
+    I = n(84658),
+    _ = n(142961),
+    N = n(729311),
+    v = n(850864),
+    T = n(729995),
+    j = n(966301),
+    E = n(707076),
+    S = n(213956),
+    b = n(388032),
+    R = n(930261);
+function Z() {
+    let e = (0, a.e7)([h.Z], () => h.Z.getGuildId());
+    return null == e ? null : (0, i.jsx)(A, { guildId: e });
 }
-function D(e) {
+function A(e) {
     let t,
         { guildId: n } = e,
-        i = (0, l.e7)([S.Z], () => S.Z.getCurrentPage()),
-        I = (0, l.e7)([S.Z], () => {
-            let e = (0, g.lg)(i);
-            return null != e && !S.Z.isEducationUpsellDismissed(e);
+        l = (0, a.e7)([C.Z], () => C.Z.getCurrentPage()),
+        h = (0, a.e7)([C.Z], () => {
+            let e = (0, I.lg)(l);
+            return null != e && !C.Z.isEducationUpsellDismissed(e);
         }),
-        N = (0, h.Z)(n),
-        M = !N && I,
-        { homeSettingsEnabled: D } = (0, u.kZ)(n);
+        f = (0, _.Z)(n),
+        Z = !f && h,
+        { homeSettingsEnabled: A } = (0, u.kZ)(n);
     switch (
-        (a.useEffect(() => {
+        (r.useEffect(() => {
             (0, d.EW)(o.z.COMMUNITY_ONBOARDING_NEW_BADGE);
         }, []),
-        i)
+        l)
     ) {
-        case g.PG.LANDING:
-            t = N
-                ? (0, s.jsx)(p.Z, {
+        case I.PG.LANDING:
+            t = f
+                ? (0, i.jsx)(T.Z, {
                       completed: !0,
                       guildId: n
                   })
-                : (0, s.jsx)(L.Z, {});
+                : (0, i.jsx)(E.Z, {});
             break;
-        case g.PG.SAFETY_CHECK:
-            t = (0, s.jsx)(f.Z, { hideChangelog: !0 });
+        case I.PG.SAFETY_CHECK:
+            t = (0, i.jsx)(S.Z, { hideChangelog: !0 });
             break;
-        case g.PG.DEFAULT_CHANNELS:
-            t = (0, s.jsx)(C.Z, { saveOnClose: !N });
+        case I.PG.DEFAULT_CHANNELS:
+            t = (0, i.jsx)(N.Z, { saveOnClose: !f });
             break;
-        case g.PG.CUSTOMIZATION_QUESTIONS:
-            t = (0, s.jsx)(R.ZP, { saveOnClose: !N });
+        case I.PG.CUSTOMIZATION_QUESTIONS:
+            t = (0, i.jsx)(j.ZP, { saveOnClose: !f });
             break;
-        case g.PG.HOME_SETTINGS:
-            t = (0, s.jsx)(x.Z, { saveOnClose: !N });
+        case I.PG.HOME_SETTINGS:
+            t = (0, i.jsx)(v.Z, { saveOnClose: !f });
             break;
-        case g.PG.REVIEW:
-            t = (0, s.jsx)(p.Z, {
-                completed: N,
+        case I.PG.REVIEW:
+            t = (0, i.jsx)(T.Z, {
+                completed: f,
                 guildId: n
             });
     }
-    return (0, s.jsxs)('div', {
-        className: r()(A.onboardingContainer, { [A.upsellOnTop]: M }),
+    return (0, i.jsxs)('div', {
+        className: s()(R.onboardingContainer, { [R.upsellOnTop]: Z }),
         children: [
-            !N &&
-                i !== g.PG.LANDING &&
-                (0, s.jsx)(v, {
-                    setOnboardingStep: T.$K,
-                    page: i,
-                    homeSettingsEnabled: D
+            !f &&
+                l !== I.PG.LANDING &&
+                (0, i.jsx)(L, {
+                    setOnboardingStep: x.$K,
+                    page: l,
+                    homeSettingsEnabled: A
                 }),
-            N &&
-                i !== g.PG.LANDING &&
-                (0, s.jsx)('div', {
-                    children: (0, s.jsxs)(c.Button, {
-                        innerClassName: A.backButton,
+            f &&
+                l !== I.PG.LANDING &&
+                (0, i.jsx)('div', {
+                    children: (0, i.jsxs)(c.Button, {
+                        innerClassName: R.backButton,
                         look: c.Button.Looks.BLANK,
                         size: c.Button.Sizes.MIN,
                         onClick: () => {
-                            (0, m.NB)(), (0, E.BG)(), (0, T.$K)(g.PG.LANDING);
+                            (0, p.NB)(), (0, g.BG)(), (0, x.$K)(I.PG.LANDING);
                         },
                         children: [
-                            (0, s.jsx)(_.Z, {
-                                className: A.arrow,
-                                direction: _.Z.Directions.LEFT
+                            (0, i.jsx)(m.Z, {
+                                className: R.arrow,
+                                direction: m.Z.Directions.LEFT
                             }),
-                            (0, s.jsx)(c.Text, {
+                            (0, i.jsx)(c.Text, {
                                 variant: 'text-sm/semibold',
                                 color: 'interactive-normal',
-                                children: O.Z.Messages.BACK
+                                children: b.intl.string(b.t['13/7kZ'])
                             })
                         ]
                     })
                 }),
-            (0, s.jsx)('div', { children: t })
+            (0, i.jsx)('div', { children: t })
         ]
     });
 }
-function v(e) {
-    let { page: t, setOnboardingStep: n, homeSettingsEnabled: a } = e,
-        i = (0, l.e7)([S.Z], () => S.Z.hasErrors()),
+function L(e) {
+    let { page: t, setOnboardingStep: n, homeSettingsEnabled: r } = e,
+        l = (0, a.e7)([C.Z], () => C.Z.hasErrors()),
         o = (e) => {
-            if (!i) return () => n(e);
+            if (!l) return () => n(e);
         },
-        d = (0, l.e7)([N.Z], () => N.Z.advancedMode);
-    return (0, s.jsxs)('div', {
-        className: A.progressContainer,
+        d = (0, a.e7)([f.Z], () => f.Z.advancedMode);
+    return (0, i.jsxs)('div', {
+        className: R.progressContainer,
         children: [
-            (0, s.jsxs)(c.Clickable, {
-                className: r()(A.progressBarContainer, A.clickableProgressBar),
-                onClick: o(g.PG.SAFETY_CHECK),
+            (0, i.jsxs)(c.Clickable, {
+                className: s()(R.progressBarContainer, R.clickableProgressBar),
+                onClick: o(I.PG.SAFETY_CHECK),
                 children: [
-                    (0, s.jsx)('div', { className: r()(A.progressBar, { [A.progressBarCurrent]: t === g.PG.SAFETY_CHECK }) }),
-                    (0, s.jsx)(c.Text, {
-                        color: t === g.PG.SAFETY_CHECK ? 'text-brand' : 'text-muted',
+                    (0, i.jsx)('div', { className: s()(R.progressBar, { [R.progressBarCurrent]: t === I.PG.SAFETY_CHECK }) }),
+                    (0, i.jsx)(c.Text, {
+                        color: t === I.PG.SAFETY_CHECK ? 'text-brand' : 'text-muted',
                         variant: 'text-xs/medium',
-                        children: O.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_SAFETY.format({ stepNumber: 1 })
+                        children: b.intl.format(b.t.Me5MmZ, { stepNumber: 1 })
                     })
                 ]
             }),
-            (0, s.jsxs)(c.Clickable, {
-                className: r()(A.progressBarContainer, A.clickableProgressBar),
-                onClick: o(g.PG.DEFAULT_CHANNELS),
+            (0, i.jsxs)(c.Clickable, {
+                className: s()(R.progressBarContainer, R.clickableProgressBar),
+                onClick: o(I.PG.DEFAULT_CHANNELS),
                 children: [
-                    (0, s.jsx)('div', { className: r()(A.progressBar, { [A.progressBarCurrent]: t === g.PG.DEFAULT_CHANNELS }) }),
-                    (0, s.jsx)(c.Text, {
-                        color: t === g.PG.DEFAULT_CHANNELS ? 'text-brand' : 'text-muted',
+                    (0, i.jsx)('div', { className: s()(R.progressBar, { [R.progressBarCurrent]: t === I.PG.DEFAULT_CHANNELS }) }),
+                    (0, i.jsx)(c.Text, {
+                        color: t === I.PG.DEFAULT_CHANNELS ? 'text-brand' : 'text-muted',
                         variant: 'text-xs/medium',
-                        children: d ? O.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_CHANNELS_ADVANCED.format({ stepNumber: 2 }) : O.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_CHANNELS.format({ stepNumber: 2 })
+                        children: d ? b.intl.formatToPlainString(b.t['8mGhOz'], { stepNumber: 2 }) : b.intl.formatToPlainString(b.t.vxpuTU, { stepNumber: 2 })
                     })
                 ]
             }),
-            (0, s.jsxs)(c.Clickable, {
-                className: r()(A.progressBarContainer, A.clickableProgressBar),
-                onClick: o(g.PG.CUSTOMIZATION_QUESTIONS),
+            (0, i.jsxs)(c.Clickable, {
+                className: s()(R.progressBarContainer, R.clickableProgressBar),
+                onClick: o(I.PG.CUSTOMIZATION_QUESTIONS),
                 children: [
-                    (0, s.jsx)('div', { className: r()(A.progressBar, { [A.progressBarCurrent]: t === g.PG.CUSTOMIZATION_QUESTIONS }) }),
-                    (0, s.jsx)(c.Text, {
-                        color: t === g.PG.CUSTOMIZATION_QUESTIONS ? 'text-brand' : 'text-muted',
+                    (0, i.jsx)('div', { className: s()(R.progressBar, { [R.progressBarCurrent]: t === I.PG.CUSTOMIZATION_QUESTIONS }) }),
+                    (0, i.jsx)(c.Text, {
+                        color: t === I.PG.CUSTOMIZATION_QUESTIONS ? 'text-brand' : 'text-muted',
                         variant: 'text-xs/medium',
-                        children: d ? O.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_PROMPTS_ADVANCED.format({ stepNumber: 3 }) : O.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_PROMPTS.format({ stepNumber: 3 })
+                        children: d ? b.intl.formatToPlainString(b.t.vb6J5u, { stepNumber: 3 }) : b.intl.formatToPlainString(b.t.ZpdQqK, { stepNumber: 3 })
                     })
                 ]
             }),
-            a &&
-                (0, s.jsxs)(c.Clickable, {
-                    className: r()(A.progressBarContainer, A.clickableProgressBar),
-                    onClick: o(g.PG.HOME_SETTINGS),
+            r &&
+                (0, i.jsxs)(c.Clickable, {
+                    className: s()(R.progressBarContainer, R.clickableProgressBar),
+                    onClick: o(I.PG.HOME_SETTINGS),
                     children: [
-                        (0, s.jsx)('div', { className: r()(A.progressBar, { [A.progressBarCurrent]: t === g.PG.HOME_SETTINGS }) }),
-                        (0, s.jsx)(c.Text, {
-                            color: t === g.PG.HOME_SETTINGS ? 'text-brand' : 'text-muted',
+                        (0, i.jsx)('div', { className: s()(R.progressBar, { [R.progressBarCurrent]: t === I.PG.HOME_SETTINGS }) }),
+                        (0, i.jsx)(c.Text, {
+                            color: t === I.PG.HOME_SETTINGS ? 'text-brand' : 'text-muted',
                             variant: 'text-xs/medium',
-                            children: O.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_HOME.format({ stepNumber: 4 })
+                            children: b.intl.format(b.t.KVOukp, { stepNumber: 4 })
                         })
                     ]
                 }),
-            (0, s.jsxs)('div', {
-                className: A.progressBarContainer,
+            (0, i.jsxs)('div', {
+                className: R.progressBarContainer,
                 children: [
-                    (0, s.jsx)('div', { className: r()(A.progressBar, { [A.progressBarCurrent]: t === g.PG.REVIEW }) }),
-                    (0, s.jsx)(c.Text, {
-                        color: t === g.PG.REVIEW ? 'text-brand' : 'text-muted',
+                    (0, i.jsx)('div', { className: s()(R.progressBar, { [R.progressBarCurrent]: t === I.PG.REVIEW }) }),
+                    (0, i.jsx)(c.Text, {
+                        color: t === I.PG.REVIEW ? 'text-brand' : 'text-muted',
                         variant: 'text-xs/medium',
-                        children: O.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_REVIEW.format({ stepNumber: 3 + (a ? 1 : 0) + 1 })
+                        children: b.intl.format(b.t.oVzkiI, { stepNumber: 3 + (r ? 1 : 0) + 1 })
                     })
                 ]
             })

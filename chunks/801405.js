@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return _;
     }
 });
 var i = n(200651),
-    s = n(192379),
-    a = n(442837),
-    l = n(570140),
-    r = n(475179),
+    l = n(192379),
+    r = n(442837),
+    a = n(570140),
+    s = n(475179),
     o = n(367907),
     c = n(358221),
     u = n(788983),
@@ -15,109 +15,109 @@ var i = n(200651),
     h = n(944486),
     m = n(626135),
     p = n(585483),
-    _ = n(358085),
-    f = n(228488),
-    E = n(981631),
-    g = n(336496);
-let C = () => {
-    l.Z.wait(() => u.xv(E.KJ3.CHANNEL_CALL_POPOUT));
+    f = n(358085),
+    g = n(228488),
+    C = n(981631),
+    x = n(336496);
+let v = () => {
+    a.Z.wait(() => u.xv(C.KJ3.CHANNEL_CALL_POPOUT));
 };
-function I(e) {
-    let { channel: t, appContext: n, popoutOpen: l, popoutWindow: u, currentWindow: I } = e,
-        T = n === E.IlC.POPOUT,
-        x = s.useRef(null),
-        { currentLayout: S, mode: v } = (0, a.cj)(
+function _(e) {
+    let { channel: t, appContext: n, popoutOpen: a, popoutWindow: u, currentWindow: _ } = e,
+        I = n === C.IlC.POPOUT,
+        E = l.useRef(null),
+        { currentLayout: b, mode: S } = (0, r.cj)(
             [c.Z],
             () => {
                 let e = c.Z.getMode(t.id),
-                    i = n === E.IlC.POPOUT;
-                i && (e = E.WtW.VIDEO);
-                let s = e === E.WtW.VIDEO ? c.Z.getLayout(t.id, n) : E.AEg.MINIMUM;
+                    i = n === C.IlC.POPOUT;
+                i && (e = C.WtW.VIDEO);
+                let l = e === C.WtW.VIDEO ? c.Z.getLayout(t.id, n) : C.AEg.MINIMUM;
                 return (
-                    i && s !== E.AEg.FULL_SCREEN && (s = E.AEg.NO_CHAT),
+                    i && l !== C.AEg.FULL_SCREEN && (l = C.AEg.NO_CHAT),
                     {
-                        currentLayout: s,
+                        currentLayout: l,
                         mode: e
                     }
                 );
             },
             [t, n]
         ),
-        N = (0, a.e7)([h.Z], () => h.Z.getVoiceChannelId() === t.id, [t.id]);
-    s.useEffect(() => {
-        x.current = v;
+        Z = (0, r.e7)([h.Z], () => h.Z.getVoiceChannelId() === t.id, [t.id]);
+    l.useEffect(() => {
+        E.current = S;
     });
-    let A = s.useRef(S),
-        { currentDocument: Z, rootNode: M } = s.useMemo(() => {
-            let e = null != u && T ? u.document : document,
-                t = I.document.getElementById('app-mount');
+    let T = l.useRef(b),
+        { currentDocument: N, rootNode: j } = l.useMemo(() => {
+            let e = null != u && I ? u.document : document,
+                t = _.document.getElementById('app-mount');
             return {
-                currentWindow: I,
+                currentWindow: _,
                 currentDocument: e,
                 rootNode: t
             };
-        }, [u, T, I]),
-        b = l && !T,
-        R = v === E.WtW.VIDEO && N && !b,
-        L = s.useCallback(
+        }, [u, I, _]),
+        A = a && !I,
+        y = S === C.WtW.VIDEO && Z && !A,
+        P = l.useCallback(
             (e, i) => {
-                i !== e && (r.Z.updateLayout(t.id, i, n), i === E.AEg.FULL_SCREEN && t.isPrivate() && p.S.dispatch(E.CkL.TEXTAREA_BLUR));
+                i !== e && (s.Z.updateLayout(t.id, i, n), i === C.AEg.FULL_SCREEN && t.isPrivate() && p.S.dispatch(C.CkL.TEXTAREA_BLUR));
             },
             [n, t]
         ),
-        P = s.useCallback(
+        M = l.useCallback(
             (e) => {
-                if (null != M)
-                    e === E.AEg.FULL_SCREEN &&
-                        (L(e, A.current),
-                        (0, f.Pr)((e) => {
-                            A.current = e;
-                        }, Z));
+                if (null != j)
+                    e === C.AEg.FULL_SCREEN &&
+                        (P(e, T.current),
+                        (0, g.Pr)((e) => {
+                            T.current = e;
+                        }, N));
             },
-            [Z, L, M]
+            [N, P, j]
         ),
-        j = s.useCallback(
+        R = l.useCallback(
             (e) => () => {
-                null != M && (e !== E.AEg.FULL_SCREEN ? ((A.current = e), L(e, E.AEg.FULL_SCREEN), (0, f.Dj)(M)) : P(e));
+                null != j && (e !== C.AEg.FULL_SCREEN ? ((T.current = e), P(e, C.AEg.FULL_SCREEN), (0, g.Dj)(j)) : M(e));
             },
-            [L, P, M]
+            [P, M, j]
         );
-    return (s.useEffect(() => {
+    return (l.useEffect(() => {
         let e = () => {
-            null != M && !(0, f.rB)(M, Z) && S === E.AEg.FULL_SCREEN && j(S)();
+            null != j && !(0, g.rB)(j, N) && b === C.AEg.FULL_SCREEN && R(b)();
         };
         return (
-            Z.addEventListener(f.NO, e),
+            N.addEventListener(g.NO, e),
             () => {
-                Z.removeEventListener(f.NO, e);
+                N.removeEventListener(g.NO, e);
             }
         );
-    }, [Z, S, j, M]),
-    s.useEffect(
+    }, [N, b, R, j]),
+    l.useEffect(
         () => (
-            m.default.track(E.rMx.VIDEO_LAYOUT_TOGGLED, {
-                video_layout: T ? 'popout' : S,
+            m.default.track(C.rMx.VIDEO_LAYOUT_TOGGLED, {
+                video_layout: I ? 'popout' : b,
                 ...(0, o.AB)(t.id)
             }),
             () => {
-                !(T && (0, _.isMac)()) && P(S);
+                !(I && (0, f.isMac)()) && M(b);
             }
         ),
-        [S, T]
+        [b, I]
     ),
-    s.useEffect(() => {
-        null != M && x.current === E.WtW.VIDEO && v === E.WtW.VOICE && (0, f.Pr)(M, Z);
-    }, [Z, v, x, M]),
-    s.useEffect(() => {
-        !N && T && C();
-    }, [N, T]),
-    R)
+    l.useEffect(() => {
+        null != j && E.current === C.WtW.VIDEO && S === C.WtW.VOICE && (0, g.Pr)(j, N);
+    }, [N, S, E, j]),
+    l.useEffect(() => {
+        !Z && I && v();
+    }, [Z, I]),
+    y)
         ? (0, i.jsx)(d.Z, {
               themeable: !1,
-              node: M,
+              node: j,
               guestWindow: u,
-              className: g.rightTrayIcon,
-              onClick: j(S)
+              className: x.rightTrayIcon,
+              onClick: R(b)
           })
         : null;
 }

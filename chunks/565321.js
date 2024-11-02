@@ -1,59 +1,59 @@
 t(47120);
-var a = t(200651),
-    r = t(192379),
+var r = t(200651),
+    a = t(192379),
     i = t(481060),
     s = t(881052),
     o = t(484455),
     l = t(592286),
-    c = t(689938),
+    c = t(388032),
     d = t(631403);
 n.Z = function (e) {
     let { guildId: n, onSave: t, formDescription: u, disable: m } = e,
-        [_, f] = r.useState(null),
-        [C, h] = r.useState(u),
-        x = r.useRef(!1),
-        p = r.useRef(!1);
-    r.useEffect(
+        [f, h] = a.useState(null),
+        [x, p] = a.useState(u),
+        g = a.useRef(!1),
+        C = a.useRef(!1);
+    a.useEffect(
         () => () => {
-            p.current = !0;
+            C.current = !0;
         },
         []
     );
-    let g = r.useCallback(async () => {
-        if (!x.current) {
-            f(null);
+    let b = a.useCallback(async () => {
+        if (!g.current) {
+            h(null);
             try {
-                await t(n, C);
+                await t(n, x);
             } catch (e) {
-                if (p.current) return;
-                f(new s.Hx(e).getAnyErrorMessage());
+                if (C.current) return;
+                h(new s.Hx(e).getAnyErrorMessage());
             } finally {
-                if (p.current) return;
-                x.current = !1;
+                if (C.current) return;
+                g.current = !1;
             }
         }
-    }, [C, n, t]);
-    return (0, a.jsxs)(o.Z, {
-        title: c.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_TITLE,
+    }, [x, n, t]);
+    return (0, r.jsxs)(o.Z, {
+        title: c.intl.string(c.t.aDJAfn),
         children: [
-            (0, a.jsx)(i.TextArea, {
+            (0, r.jsx)(i.TextArea, {
                 className: d.fieldBackground,
                 maxLength: l.Us,
-                value: null != C ? C : '',
-                placeholder: c.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_PLACEHOLDER,
+                value: null != x ? x : '',
+                placeholder: c.intl.string(c.t.AJfv3d),
                 onChange: (e) => {
-                    h(e);
+                    p(e);
                 },
-                onBlur: g,
+                onBlur: b,
                 autosize: !0,
                 disabled: m
             }),
-            null != _ && '' !== _
-                ? (0, a.jsx)(i.Text, {
+            null != f && '' !== f
+                ? (0, r.jsx)(i.Text, {
                       className: d.errorText,
                       variant: 'text-xs/normal',
                       color: 'text-danger',
-                      children: _
+                      children: f
                   })
                 : null
         ]

@@ -1,18 +1,18 @@
 n.d(t, {
     KV: function () {
-        return f;
-    },
-    PY: function () {
-        return E;
-    },
-    Wo: function () {
         return h;
     },
+    PY: function () {
+        return _;
+    },
+    Wo: function () {
+        return p;
+    },
     iy: function () {
-        return m;
+        return E;
     },
     yp: function () {
-        return p;
+        return m;
     }
 }),
     n(411104),
@@ -27,11 +27,11 @@ var r = n(763472),
     u = n(768419),
     c = n(616922),
     d = n(981631);
-let _ = 30 * s.Z.Millis.SECOND;
-function E(e) {
+let f = 30 * s.Z.Millis.SECOND;
+function _(e) {
     return null != e.getActiveSocketAndDevice() || l.Z.isProtocolRegistered();
 }
-function f() {
+function h() {
     let e = u.Z.getActiveSocketAndDevice();
     if (null != e) return Promise.resolve(e);
     if (!l.Z.isProtocolRegistered()) return Promise.reject(Error('protocol is not registered'));
@@ -49,7 +49,7 @@ function f() {
     return new Promise((e, n) => {
         let r = setTimeout(() => {
                 u.Z.removeChangeListener(i), n(Error('timeout launching spotify'));
-            }, _),
+            }, f),
             i = () => {
                 for (let { socket: n, device: a } of u.Z.getPlayableComputerDevices())
                     null == t.find((e) => e.device.id === a.id) &&
@@ -66,13 +66,13 @@ function f() {
         u.Z.addChangeListener(i), window.open(''.concat(c.M5, ':'));
     });
 }
-function h() {
+function p() {
     let e = u.Z.getActiveSocketAndDevice();
     if (null == e) return null;
     let { socket: t } = e;
     return t.isPremium;
 }
-function p() {
+function m() {
     let e = u.Z.getActiveSocketAndDevice();
     if (null == e) return Promise.reject(Error('no active profile'));
     let { socket: t } = e;
@@ -82,20 +82,20 @@ function p() {
               if (!t.isPremium) return Promise.reject(Error('spotify account is not premium'));
           });
 }
-function I(e) {
+function g(e) {
     if ('string' == typeof e) return e;
     throw Error('value is not a string');
 }
-async function m(e, t) {
+async function E(e, t) {
     var n;
     let i = await (0, r.sd)(e, t),
-        a = (0, c.c8)(I(null !== (n = i.type) && void 0 !== n ? n : c.Hw.TRACK));
+        a = (0, c.c8)(g(null !== (n = i.type) && void 0 !== n ? n : c.Hw.TRACK));
     if (null === a) throw Error('invalid type '.concat(i.type));
     return {
         context_uri: 'string' == typeof i.context_uri ? i.context_uri : void 0,
-        album_id: I(i.album_id),
-        artist_ids: Array.isArray(i.artist_ids) ? i.artist_ids.map(I) : [],
+        album_id: g(i.album_id),
+        artist_ids: Array.isArray(i.artist_ids) ? i.artist_ids.map(g) : [],
         type: a,
-        button_urls: Array.isArray(i.button_urls) ? i.button_urls.map(I) : []
+        button_urls: Array.isArray(i.button_urls) ? i.button_urls.map(g) : []
     };
 }

@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return C;
     }
 });
 var i,
-    s,
-    a,
     l,
-    r = n(200651),
+    r,
+    a,
+    s = n(200651),
     o = n(192379),
     c = n(995295),
     u = n(374470),
@@ -15,8 +15,8 @@ var i,
     h = n(260300),
     m = n(451478),
     p = n(5560),
-    _ = n(10401);
-class f extends (l = o.Component) {
+    f = n(10401);
+class g extends (a = o.Component) {
     componentDidMount() {
         let { visible: e, inlineSpecs: t } = this.props;
         null == t && this.show(e);
@@ -26,45 +26,45 @@ class f extends (l = o.Component) {
         null == e && this.show(!1);
     }
     componentDidUpdate(e) {
-        let { position: t, offsetX: n, offsetY: i, tutorialId: s, visible: a, windowSize: l } = e;
-        s !== this.props.tutorialId ? h.Z.hide(s) : (a !== this.props.visible || t !== this.props.position || n !== this.props.offsetX || i !== this.props.offsetY || l !== this.props.windowSize) && this.show(this.props.visible);
+        let { position: t, offsetX: n, offsetY: i, tutorialId: l, visible: r, windowSize: a } = e;
+        l !== this.props.tutorialId ? h.Z.hide(l) : (r !== this.props.visible || t !== this.props.position || n !== this.props.offsetX || i !== this.props.offsetY || a !== this.props.windowSize) && this.show(this.props.visible);
     }
     show(e) {
-        let { tutorialId: t, position: n, offsetX: i, offsetY: s, visible: a, inlineSpecs: l, autoInvert: r } = this.props;
-        if (e && null == l) {
+        let { tutorialId: t, position: n, offsetX: i, offsetY: l, visible: r, inlineSpecs: a, autoInvert: s } = this.props;
+        if (e && null == a) {
             let e = (0, c.findDOMNode)(this);
             if (!(0, u.k)(e)) return;
-            let { top: a, left: l, right: o, bottom: d } = e.getBoundingClientRect();
+            let { top: r, left: a, right: o, bottom: d } = e.getBoundingClientRect();
             h.Z.show(t, {
                 position: n,
-                targetWidth: o - l,
-                targetHeight: d - a,
-                autoInvert: r,
+                targetWidth: o - a,
+                targetHeight: d - r,
+                autoInvert: s,
                 origin: {
-                    x: l,
-                    y: a
+                    x: a,
+                    y: r
                 },
                 offset: {
                     x: i,
-                    y: s
+                    y: l
                 }
             });
-        } else a && h.Z.hide(t);
+        } else r && h.Z.hide(t);
     }
     render() {
-        let { inlineSpecs: e, tutorialId: t, children: n, visible: i, windowFocused: s, position: a, autoInvert: l } = this.props,
-            c = _.Z.getData()[t];
+        let { inlineSpecs: e, tutorialId: t, children: n, visible: i, windowFocused: l, position: r, autoInvert: a } = this.props,
+            c = f.Z.getData()[t];
         return null != e && null != c
-            ? (0, r.jsxs)(r.Fragment, {
+            ? (0, s.jsxs)(s.Fragment, {
                   children: [
                       n,
                       i &&
-                          (0, r.jsx)(p.V, {
-                              autoInvert: l,
-                              position: a,
+                          (0, s.jsx)(p.V, {
+                              autoInvert: a,
+                              position: r,
                               tutorialId: t,
                               tutorialDefinition: c,
-                              focused: s,
+                              focused: l,
                               ...e
                           })
                   ]
@@ -72,29 +72,29 @@ class f extends (l = o.Component) {
             : o.Children.only(n);
     }
 }
-function E(e) {
+function C(e) {
     let { tutorialId: t } = e,
-        n = (0, d.e7)([_.Z], () => _.Z.shouldShow(t), [t]),
+        n = (0, d.e7)([f.Z], () => f.Z.shouldShow(t), [t]),
         i = (0, d.e7)([m.Z], () => m.Z.isFocused()),
-        s = (0, d.e7)([m.Z], () => m.Z.windowSize(), []);
-    return (0, r.jsx)(f, {
+        l = (0, d.e7)([m.Z], () => m.Z.windowSize(), []);
+    return (0, s.jsx)(g, {
         ...e,
         visible: n,
         windowFocused: i,
-        windowSize: s
+        windowSize: l
     });
 }
-(a = {
+(r = {
     position: 'top',
     offsetX: 0,
     offsetY: 0,
     autoInvert: !0
 }),
-    (s = 'defaultProps') in (i = f)
-        ? Object.defineProperty(i, s, {
-              value: a,
+    (l = 'defaultProps') in (i = g)
+        ? Object.defineProperty(i, l, {
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[s] = a);
+        : (i[l] = r);

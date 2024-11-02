@@ -1,9 +1,9 @@
-var n = s(757009)(
-    function (e, t, s) {
-        e[s ? 0 : 1].push(t);
+var i = n(757009)(
+    function (e, t, n) {
+        e[n ? 0 : 1].push(t);
     },
     function () {
         return [[], []];
     }
 );
-e.exports = n;
+e.exports = i;

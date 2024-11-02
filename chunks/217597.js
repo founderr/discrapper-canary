@@ -1,41 +1,41 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return s;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(481060),
-    i = n(967790);
-function r(e) {
-    let { label: t, sublabel: n, value: r, additionalContent: l, tooltip: o } = e;
-    return (0, s.jsxs)('div', {
-        className: i.metricCard,
+var r = n(481060),
+    l = n(967790);
+function s(e) {
+    let { label: t, sublabel: n, value: s, additionalContent: a, tooltip: o } = e;
+    return (0, i.jsxs)('div', {
+        className: l.metricCard,
         'aria-label': t,
         children: [
-            (0, s.jsxs)('div', {
-                className: i.metricCardLabelContainer,
+            (0, i.jsxs)('div', {
+                className: l.metricCardLabelContainer,
                 children: [
-                    (0, s.jsx)(a.Text, {
-                        className: i.metricCardLabel,
+                    (0, i.jsx)(r.Text, {
+                        className: l.metricCardLabel,
                         variant: 'text-xs/medium',
                         color: 'interactive-normal',
                         'aria-hidden': !0,
                         children: t
                     }),
                     null != o &&
-                        (0, s.jsx)(a.Tooltip, {
+                        (0, i.jsx)(r.Tooltip, {
                             text: o,
                             children: (e) =>
-                                (0, s.jsx)(a.CircleInformationIcon, {
+                                (0, i.jsx)(r.CircleInformationIcon, {
                                     size: 'xs',
                                     color: 'currentColor',
-                                    className: i.__invalid_labelTooltipIcon,
+                                    className: l.__invalid_labelTooltipIcon,
                                     ...e
                                 })
                         }),
                     null != n
-                        ? (0, s.jsx)(a.Text, {
+                        ? (0, i.jsx)(r.Text, {
                               variant: 'text-xs/normal',
                               color: 'text-muted',
                               children: n
@@ -43,13 +43,13 @@ function r(e) {
                         : null
                 ]
             }),
-            (0, s.jsx)(a.Text, {
+            (0, i.jsx)(r.Text, {
                 tag: 'span',
                 variant: 'heading-xl/medium',
                 color: 'header-primary',
-                children: r
+                children: s
             }),
-            l
+            a
         ]
     });
 }

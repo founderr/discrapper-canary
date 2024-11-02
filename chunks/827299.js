@@ -1,6 +1,6 @@
 n.d(t, {
     K: function () {
-        return E;
+        return _;
     }
 }),
     n(47120),
@@ -97,7 +97,7 @@ class c {
     }
 }
 let d = new c();
-class _ extends Error {
+class f extends Error {
     setStatus(e) {
         this.status = e;
     }
@@ -105,38 +105,38 @@ class _ extends Error {
         super(...e), o(this, 'name', 'HTTPResponseError'), o(this, 'status', 0);
     }
 }
-function E(e, t) {
+function _(e, t) {
     let { dangerousAbortOnCleanup: n = !1, get: a, load: s, maxNumFetchErrors: o = 5, queryId: l, useStateHook: u } = t;
     return function () {
-        for (var t = arguments.length, c = Array(t), E = 0; E < t; E++) c[E] = arguments[E];
-        let f = (0, r.useMemo)(() => l(...c), c),
-            h = u(Array.isArray(e) ? e : [e], () => a(...c), c),
-            p = d.getState(f),
-            I = p.error,
-            m = !0 === p.isLoading,
-            T = (0, r.useRef)(c),
-            S = (0, r.useCallback)(() => {
-                if (null == f || !0 === m) return;
+        for (var t = arguments.length, c = Array(t), _ = 0; _ < t; _++) c[_] = arguments[_];
+        let h = (0, r.useMemo)(() => l(...c), c),
+            p = u(Array.isArray(e) ? e : [e], () => a(...c), c),
+            m = d.getState(h),
+            g = m.error,
+            E = !0 === m.isLoading,
+            v = (0, r.useRef)(c),
+            I = (0, r.useCallback)(() => {
+                if (null == h || !0 === E) return;
                 let e = !1;
-                u === i.Wu ? h.length > 0 && (e = !0) : null != h && (e = !0);
-                let t = d.doesDataNeedValidation(f),
-                    r = null != I;
+                u === i.Wu ? p.length > 0 && (e = !0) : null != p && (e = !0);
+                let t = d.doesDataNeedValidation(h),
+                    r = null != g;
                 if ((e || r) && !t) return;
-                d.loadingStart(f);
+                d.loadingStart(h);
                 let a = new AbortController();
                 return (
-                    s(a.signal, ...T.current)
-                        .then((e) => (d.loadingDone(f, !0), e))
+                    s(a.signal, ...v.current)
+                        .then((e) => (d.loadingDone(h, !0), e))
                         .catch((e) => {
-                            if ((d.loadingDone(f), a.signal.aborted)) return;
+                            if ((d.loadingDone(h), a.signal.aborted)) return;
                             let t = (function (e) {
                                 if (e instanceof Error) return e;
                                 if ('object' == typeof e) {
                                     if ('body' in e && null != e.body && 'message' in e.body) {
-                                        let t = new _(String(e.body.message));
+                                        let t = new f(String(e.body.message));
                                         return t.setStatus(e.status), t;
                                     }
-                                    let t = new _(
+                                    let t = new f(
                                         Object.entries(e)
                                             .map((e, t) => ''.concat(e, ': [').concat(String(t), ']'))
                                             .join(',')
@@ -145,28 +145,28 @@ function E(e, t) {
                                 }
                                 return Error(String(e));
                             })(e);
-                            if (!!(p.fetchFailCounter >= o) || !(t instanceof _) || (!(t.status >= 500) && 429 !== t.status)) d.setError(f, t);
+                            if (!!(m.fetchFailCounter >= o) || !(t instanceof f) || (!(t.status >= 500) && 429 !== t.status)) d.setError(h, t);
                         }),
                     () => {
                         n && a.abort();
                     }
                 );
-            }, [h, p.fetchFailCounter, I, f, m]);
+            }, [p, m.fetchFailCounter, g, h, E]);
         return (
             (0, r.useEffect)(
                 () => (
-                    S(),
-                    d.subscribe(f, S),
+                    I(),
+                    d.subscribe(h, I),
                     () => {
-                        d.subscribe(f, void 0);
+                        d.subscribe(h, void 0);
                     }
                 ),
-                [f, S]
+                [h, I]
             ),
             {
-                data: h,
-                error: I,
-                isLoading: m
+                data: p,
+                error: g,
+                isLoading: E
             }
         );
     };

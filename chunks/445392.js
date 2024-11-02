@@ -1,6 +1,6 @@
 var i,
-    a = t(442837),
-    l = t(570140);
+    l = t(442837),
+    a = t(570140);
 function o(e, n, t) {
     return (
         n in e
@@ -19,7 +19,7 @@ let r = 10 * t(70956).Z.Millis.MINUTE,
         lastUsedCommandId: null,
         lastUsedTimeMs: null
     };
-class c extends (i = a.ZP.PersistedStore) {
+class c extends (i = l.ZP.PersistedStore) {
     initialize(e) {
         null != e && ((s.lastUsedCommandId = e.lastUsedCommandId), (s.lastUsedTimeMs = e.lastUsedTimeMs));
     }
@@ -33,7 +33,7 @@ class c extends (i = a.ZP.PersistedStore) {
 }
 o(c, 'displayName', 'AppLauncherLastUsedCommandStore'),
     o(c, 'persistKey', 'AppLauncherLastUsedCommandStore'),
-    new c(l.Z, {
+    new c(a.Z, {
         APPLICATION_COMMAND_USED: function (e) {
             let { command: n } = e;
             (s.lastUsedCommandId = n.id), (s.lastUsedTimeMs = Date.now());

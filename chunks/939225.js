@@ -5,25 +5,25 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(230711),
-    r = n(931547),
-    l = n(981631),
+var r = n(481060),
+    l = n(230711),
+    a = n(931547),
+    s = n(981631),
     o = n(526761),
-    c = n(689938);
+    c = n(388032);
 function d(e) {
     let { subscription: t } = e;
     return null == t
         ? null
-        : t.status === l.O0b.PAST_DUE
+        : t.status === s.O0b.PAST_DUE
           ? (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(a.Spacer, { size: 16 }),
-                    (0, i.jsx)(r.Z, {
-                        message: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_USER_SUBSCRIPTION_PAST_DUE_WARNING,
-                        ctaMessage: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_USER_SUBSCRIPTION_PAST_DUE_CTA,
+                    (0, i.jsx)(r.Spacer, { size: 16 }),
+                    (0, i.jsx)(a.Z, {
+                        message: c.intl.string(c.t.eSuJEx),
+                        ctaMessage: c.intl.string(c.t.RXsxqa),
                         onClick: () => {
-                            s.Z.open(l.oAB.SUBSCRIPTIONS, o.cP);
+                            l.Z.open(s.oAB.SUBSCRIPTIONS, o.cP);
                         }
                     })
                 ]

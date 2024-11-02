@@ -3,69 +3,69 @@ n.d(t, {
         return c;
     },
     oc: function () {
-        return d;
+        return u;
     },
     pR: function () {
-        return _;
+        return d;
     }
 }),
     n(724458);
-var s = n(990547),
-    a = n(283693),
-    r = n(570140),
-    i = n(573261),
+var i = n(990547),
+    r = n(283693),
+    a = n(570140),
+    s = n(573261),
     l = n(930441),
     o = n(981631);
 async function c() {
     try {
-        let e = await i.Z.get({
+        let e = await s.Z.get({
             url: o.ANM.EMAIL_SETTINGS,
             trackedActionData: {
-                event: s.NetworkActionNames.EMAIL_SETTINGS_FETCH,
+                event: i.NetworkActionNames.EMAIL_SETTINGS_FETCH,
                 properties: (e) => {
                     var t;
                     let n = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.initialized;
-                    return (0, a.iG)({ initialized: n });
+                    return (0, r.iG)({ initialized: n });
                 }
             }
         });
         return (
-            r.Z.dispatch({
+            a.Z.dispatch({
                 type: 'EMAIL_SETTINGS_FETCH_SUCCESS',
                 settings: e.body
             }),
             e.body
         );
     } catch {
-        r.Z.dispatch({ type: 'EMAIL_SETTINGS_FETCH_FAILURE' });
+        a.Z.dispatch({ type: 'EMAIL_SETTINGS_FETCH_FAILURE' });
     }
 }
-async function _(e, t) {
-    r.Z.dispatch({
+async function d(e, t) {
+    a.Z.dispatch({
         type: 'EMAIL_SETTINGS_UPDATE',
         updates: { [e]: t }
     });
     try {
-        let n = await i.Z.patch({
+        let n = await s.Z.patch({
             url: o.ANM.EMAIL_SETTINGS,
             body: { settings: { categories: { [e]: t } } },
             trackedActionData: {
-                event: s.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
+                event: i.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
                 properties: {
                     category: e,
                     value: t
                 }
             }
         });
-        r.Z.dispatch({
+        a.Z.dispatch({
             type: 'EMAIL_SETTINGS_UPDATE_SUCCESS',
             settings: n.body
         });
     } catch (e) {
-        r.Z.dispatch({ type: 'EMAIL_SETTINGS_UPDATE_FAILURE' });
+        a.Z.dispatch({ type: 'EMAIL_SETTINGS_UPDATE_FAILURE' });
     }
 }
-async function d() {
+async function u() {
     let e = l.M0.reduce(
         (e, t) => ({
             ...e,
@@ -73,27 +73,27 @@ async function d() {
         }),
         {}
     );
-    r.Z.dispatch({
+    a.Z.dispatch({
         type: 'EMAIL_SETTINGS_UPDATE',
         updates: e
     });
     try {
-        let t = await i.Z.patch({
+        let t = await s.Z.patch({
             url: o.ANM.EMAIL_SETTINGS,
             body: { settings: { categories: e } },
             trackedActionData: {
-                event: s.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
+                event: i.NetworkActionNames.EMAIL_SETTINGS_UPDATE,
                 properties: {
                     category: 'marketing',
                     value: !1
                 }
             }
         });
-        r.Z.dispatch({
+        a.Z.dispatch({
             type: 'EMAIL_SETTINGS_UPDATE_SUCCESS',
             settings: t.body
         });
     } catch (e) {
-        r.Z.dispatch({ type: 'EMAIL_SETTINGS_UPDATE_FAILURE' });
+        a.Z.dispatch({ type: 'EMAIL_SETTINGS_UPDATE_FAILURE' });
     }
 }

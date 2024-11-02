@@ -1,55 +1,55 @@
-t.r(a),
-    t.d(a, {
+n.r(e),
+    n.d(e, {
         default: function () {
-            return l;
+            return d;
         }
     });
-var n = t(200651);
-t(192379);
-var s = t(481060),
-    o = t(313201),
-    r = t(468706),
-    i = t(689938),
-    d = t(994890);
-function l(e) {
-    let { channelId: a, messageId: t, onClose: l, transitionState: c } = e,
-        _ = (0, o.Dt)();
-    return (0, n.jsx)(s.ModalRoot, {
+var a = n(200651);
+n(192379);
+var i = n(481060),
+    r = n(313201),
+    o = n(468706),
+    s = n(388032),
+    l = n(994890);
+function d(t) {
+    let { channelId: e, messageId: n, onClose: d, transitionState: c } = t,
+        u = (0, r.Dt)();
+    return (0, a.jsx)(i.ModalRoot, {
         transitionState: c,
-        'aria-labelledby': _,
-        size: s.ModalSize.SMALL,
-        children: (0, n.jsxs)(s.ModalContent, {
-            className: d.container,
+        'aria-labelledby': u,
+        size: i.ModalSize.SMALL,
+        children: (0, a.jsxs)(i.ModalContent, {
+            className: l.container,
             children: [
-                (0, n.jsx)(s.Heading, {
-                    id: _,
+                (0, a.jsx)(i.Heading, {
+                    id: u,
                     variant: 'heading-lg/bold',
                     color: 'header-primary',
-                    className: d.header,
-                    children: i.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE
+                    className: l.header,
+                    children: s.intl.string(s.t.B3vFdX)
                 }),
-                (0, n.jsx)(s.Text, {
+                (0, a.jsx)(i.Text, {
                     variant: 'text-md/normal',
                     color: 'header-secondary',
-                    className: d.__invalid_subheader,
-                    children: i.Z.Messages.SENDER_BLOCKED_MEDIA_BOT_GUILD_MESSAGE
+                    className: l.__invalid_subheader,
+                    children: s.intl.string(s.t.bNMQVF)
                 }),
-                (0, n.jsxs)('div', {
-                    className: d.buttonContainer,
+                (0, a.jsxs)('div', {
+                    className: l.buttonContainer,
                     children: [
-                        (0, n.jsx)(s.Button, {
-                            className: d.button,
-                            size: s.Button.Sizes.MEDIUM,
-                            color: s.Button.Colors.BRAND,
-                            onClick: l,
-                            children: i.Z.Messages.DISMISS
+                        (0, a.jsx)(i.Button, {
+                            className: l.button,
+                            size: i.Button.Sizes.MEDIUM,
+                            color: i.Button.Colors.BRAND,
+                            onClick: d,
+                            children: s.intl.string(s.t.WAI6xs)
                         }),
-                        (0, n.jsx)(s.Text, {
+                        (0, a.jsx)(i.Text, {
                             variant: 'text-sm/medium',
                             color: 'header-secondary',
-                            children: i.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE.format({
+                            children: s.intl.format(s.t.Ge0HUl, {
                                 handleFalsePositiveHook: () => {
-                                    l(), (0, r.e)(a, t);
+                                    d(), (0, o.e)(e, n);
                                 }
                             })
                         })

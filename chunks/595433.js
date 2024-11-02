@@ -5,11 +5,11 @@ n.d(t, {
 }),
     n(47120);
 var a = n(192379),
-    s = n(481060);
+    i = n(481060);
 function r() {
     let [e, t] = a.useState(!0);
     return {
-        transitions: (0, s.useTransition)(e, {
+        transitions: (0, i.useTransition)(e, {
             keys: (e) => (e ? 'shown' : 'hidden'),
             config: l,
             from: { opacity: 0 },

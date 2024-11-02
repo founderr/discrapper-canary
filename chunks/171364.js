@@ -1,19 +1,19 @@
 n.d(t, {
     E: function () {
-        return r;
+        return a;
     },
     I: function () {
-        return s;
+        return l;
     }
 });
 var i = n(818083),
-    a = n(987338);
-let s = (0, i.B)({
+    r = n(987338);
+let l = (0, i.B)({
         kind: 'user',
         id: '2024-09_app_oauth2_link_embed',
         label: 'app oauth2 link embed',
         defaultConfig: { enabled: !1 },
-        commonTriggerPoint: a.$P.CONNECTION_OPEN,
+        commonTriggerPoint: r.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
@@ -22,12 +22,12 @@ let s = (0, i.B)({
             }
         ]
     }),
-    r = (0, i.B)({
+    a = (0, i.B)({
         kind: 'user',
         id: '2024-10_app_oauth2_link_embed_mobile',
         label: 'app oauth2 link embed',
         defaultConfig: { enabled: !1 },
-        commonTriggerPoint: a.$P.CONNECTION_OPEN,
+        commonTriggerPoint: r.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,

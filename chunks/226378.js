@@ -4,64 +4,64 @@ n.d(t, {
     }
 });
 var i,
-    a,
-    s = n(192379),
-    r = n(595519),
-    l = n(527805),
-    o = n(689938);
+    r,
+    l = n(192379),
+    a = n(595519),
+    o = n(527805),
+    s = n(388032);
 function c(e) {
-    let { embeddedActivity: t, joinability: n, currentEmbeddedActivity: i, channel: a } = e;
-    return s.useMemo(
+    let { embeddedActivity: t, joinability: n, currentEmbeddedActivity: i, channel: r } = e;
+    return l.useMemo(
         () =>
             (function (e) {
-                let { embeddedActivity: t, joinability: n, currentEmbeddedActivity: i, channel: a } = e,
-                    s = null == t,
+                let { embeddedActivity: t, joinability: n, currentEmbeddedActivity: i, channel: r } = e,
+                    l = null == t,
                     c = {
                         disabled: !1,
-                        isJoinAction: !s,
-                        text: s ? o.Z.Messages.START : o.Z.Messages.EMBEDDED_ACTIVITIES_JOIN,
+                        isJoinAction: !l,
+                        text: l ? s.intl.string(s.t.I0v0Qk) : s.intl.string(s.t.sqe0ho),
                         tooltip: void 0
                     },
-                    u = (0, r.WS)(a);
+                    u = (0, a.WS)(r);
                 if (null != t && null != i && t.launchId === i.launchId)
                     return {
                         ...c,
                         disabled: !0,
-                        text: o.Z.Messages.EMBEDDED_ACTIVITIES_JOINED,
-                        tooltip: o.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY
+                        text: s.intl.string(s.t.DPfdsr),
+                        tooltip: s.intl.string(s.t.wJNK8P)
                     };
-                if (s)
+                if (l)
                     return {
                         ...c,
                         disabled: !u,
-                        tooltip: u ? void 0 : o.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_DISABLED_START
+                        tooltip: u ? void 0 : s.intl.string(s.t.f41E1t)
                     };
-                if (null != n && n !== l.Fw.CAN_JOIN) {
+                if (null != n && n !== o.Fw.CAN_JOIN) {
                     let e;
                     switch (n) {
-                        case l.Fw.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
-                            e = o.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS;
+                        case o.Fw.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
+                            e = s.intl.string(s.t.hHGrW1);
                             break;
-                        case l.Fw.ACTIVITY_AGE_GATED:
-                            e = o.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_AGE_GATE;
+                        case o.Fw.ACTIVITY_AGE_GATED:
+                            e = s.intl.string(s.t['4WuFRE']);
                             break;
-                        case l.Fw.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
-                            e = o.Z.Messages.EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS;
+                        case o.Fw.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
+                            e = s.intl.string(s.t.uGDCc3);
                             break;
-                        case l.Fw.ACTIVITY_NOT_SUPPORTED_ON_OS:
-                            e = o.Z.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS;
+                        case o.Fw.ACTIVITY_NOT_SUPPORTED_ON_OS:
+                            e = s.intl.string(s.t.UXoQTk);
                             break;
-                        case l.Fw.CHANNEL_FULL:
-                            e = o.Z.Messages.UNABLE_TO_JOIN_CHANNEL_FULL;
+                        case o.Fw.CHANNEL_FULL:
+                            e = s.intl.string(s.t.rZfiNj);
                             break;
-                        case l.Fw.NO_CHANNEL_CONNECT_PERMISSION:
-                            e = o.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_VOICE_PERMISSION;
+                        case o.Fw.NO_CHANNEL_CONNECT_PERMISSION:
+                            e = s.intl.string(s.t.w5SApq);
                             break;
-                        case l.Fw.NO_CHANNEL:
-                        case l.Fw.NO_GUILD:
-                        case l.Fw.NO_USER:
-                        case l.Fw.IS_AFK_CHANNEL:
-                            e = o.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL;
+                        case o.Fw.NO_CHANNEL:
+                        case o.Fw.NO_GUILD:
+                        case o.Fw.NO_USER:
+                        case o.Fw.IS_AFK_CHANNEL:
+                            e = s.intl.string(s.t.Etp6uL);
                     }
                     return {
                         ...c,
@@ -74,9 +74,9 @@ function c(e) {
                 embeddedActivity: t,
                 joinability: n,
                 currentEmbeddedActivity: i,
-                channel: a
+                channel: r
             }),
-        [t, n, i, a]
+        [t, n, i, r]
     );
 }
-((i = a || (a = {}))[(i.ACTIVE = 0)] = 'ACTIVE'), (i[(i.ENDED = 1)] = 'ENDED');
+((i = r || (r = {}))[(i.ACTIVE = 0)] = 'ACTIVE'), (i[(i.ENDED = 1)] = 'ENDED');

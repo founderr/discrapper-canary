@@ -9,11 +9,11 @@ var i = n(120356),
     a = n.n(i),
     s = n(481060),
     o = n(871499),
-    l = n(689938),
+    l = n(388032),
     u = n(41447);
 function c(e) {
     let { popoutOpen: t, onClosePopout: n, onOpenPopout: i, ...c } = e,
-        d = t ? l.Z.Messages.POPOUT_RETURN : l.Z.Messages.POPOUT_PLAYER;
+        d = t ? l.intl.string(l.t['7Dwcnp']) : l.intl.string(l.t.JzWez8);
     return (0, r.jsx)(o.Z, {
         label: d,
         onClick: t ? n : i,

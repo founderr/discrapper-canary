@@ -100,11 +100,11 @@ var r;
             u,
             c,
             d,
-            _,
-            E = { exports: {} };
-        E.exports = (function () {
-            if (_) return d;
-            _ = 1;
+            f,
+            _ = { exports: {} };
+        _.exports = (function () {
+            if (f) return d;
+            f = 1;
             var e = c ? u : ((c = 1), (u = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED'));
             function t() {}
             function n() {}
@@ -147,8 +147,8 @@ var r;
                 })
             );
         })()();
-        var f = (l = E.exports) && l.__esModule && Object.prototype.hasOwnProperty.call(l, 'default') ? l.default : l,
-            h = function (e, n, r) {
+        var h = (l = _.exports) && l.__esModule && Object.prototype.hasOwnProperty.call(l, 'default') ? l.default : l,
+            p = function (e, n, r) {
                 var i = !!r,
                     a = t.useRef(r);
                 t.useEffect(
@@ -173,7 +173,7 @@ var r;
                         [i, n, e, a]
                     );
             },
-            p = function (e) {
+            m = function (e) {
                 var n = t.useRef(e);
                 return (
                     t.useEffect(
@@ -185,16 +185,16 @@ var r;
                     n.current
                 );
             },
-            I = function (e) {
+            g = function (e) {
                 return null !== e && 'object' === i(e);
             },
-            m = '[object Object]',
-            T = function e(t, n) {
-                if (!I(t) || !I(n)) return t === n;
+            E = '[object Object]',
+            v = function e(t, n) {
+                if (!g(t) || !g(n)) return t === n;
                 var r = Array.isArray(t);
                 if (r !== Array.isArray(n)) return !1;
-                var i = Object.prototype.toString.call(t) === m;
-                if (i !== (Object.prototype.toString.call(n) === m)) return !1;
+                var i = Object.prototype.toString.call(t) === E;
+                if (i !== (Object.prototype.toString.call(n) === E)) return !1;
                 if (!i && !r) return t === n;
                 var a = Object.keys(t),
                     s = Object.keys(n);
@@ -209,32 +209,32 @@ var r;
                     })
                 );
             },
-            S = function (e, t, n) {
-                return I(e)
+            I = function (e, t, n) {
+                return g(e)
                     ? Object.keys(e).reduce(function (i, s) {
-                          var o = !I(t) || !T(e[s], t[s]);
+                          var o = !g(t) || !v(e[s], t[s]);
                           return n.includes(s) ? (o && console.warn('Unsupported prop change: options.'.concat(s, ' is not a mutable property.')), i) : o ? r(r({}, i || {}), {}, a({}, s, e[s])) : i;
                       }, null)
                     : null;
             },
-            g = 'Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.',
-            A = function (e) {
+            S = 'Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.',
+            T = function (e) {
                 var t,
-                    n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : g;
-                if (null === e || (I((t = e)) && 'function' == typeof t.elements && 'function' == typeof t.createToken && 'function' == typeof t.createPaymentMethod && 'function' == typeof t.confirmCardPayment)) return e;
+                    n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S;
+                if (null === e || (g((t = e)) && 'function' == typeof t.elements && 'function' == typeof t.createToken && 'function' == typeof t.createPaymentMethod && 'function' == typeof t.confirmCardPayment)) return e;
                 throw Error(n);
             },
-            N = function (e) {
+            b = function (e) {
                 var t,
-                    n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : g;
-                if (I((t = e)) && 'function' == typeof t.then)
+                    n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S;
+                if (g((t = e)) && 'function' == typeof t.then)
                     return {
                         tag: 'async',
                         stripePromise: Promise.resolve(e).then(function (e) {
-                            return A(e, n);
+                            return T(e, n);
                         })
                     };
-                var r = A(e, n);
+                var r = T(e, n);
                 return null === r
                     ? { tag: 'empty' }
                     : {
@@ -242,7 +242,7 @@ var r;
                           stripe: r
                       };
             },
-            R = function (e) {
+            y = function (e) {
                 if (!!e && !!e._registerWrapper && !!e.registerAppInfo)
                     e._registerWrapper({
                         name: 'react-stripe-js',
@@ -254,9 +254,9 @@ var r;
                             url: 'https://stripe.com/docs/stripe-js/react'
                         });
             },
-            O = t.createContext(null);
-        O.displayName = 'ElementsContext';
-        var v = function (e, t) {
+            A = t.createContext(null);
+        A.displayName = 'ElementsContext';
+        var N = function (e, t) {
                 if (!e) throw Error('Could not find Elements context; You need to wrap the part of your app that '.concat(t, ' in an <Elements> provider.'));
                 return e;
             },
@@ -266,7 +266,7 @@ var r;
                     i = e.children,
                     a = t.useMemo(
                         function () {
-                            return N(n);
+                            return b(n);
                         },
                         [n]
                     ),
@@ -307,19 +307,19 @@ var r;
                     },
                     [a, l, r]
                 );
-                var c = p(n);
+                var c = m(n);
                 t.useEffect(
                     function () {
                         null !== c && c !== n && console.warn('Unsupported prop change on Elements: You cannot change the `stripe` prop after setting it.');
                     },
                     [c, n]
                 );
-                var d = p(r);
+                var d = m(r);
                 return (
                     t.useEffect(
                         function () {
                             if (!!l.elements) {
-                                var e = S(r, d, ['clientSecret', 'fonts']);
+                                var e = I(r, d, ['clientSecret', 'fonts']);
                                 e && l.elements.update(e);
                             }
                         },
@@ -327,34 +327,34 @@ var r;
                     ),
                     t.useEffect(
                         function () {
-                            R(l.stripe);
+                            y(l.stripe);
                         },
                         [l.stripe]
                     ),
-                    t.createElement(O.Provider, { value: l }, i)
+                    t.createElement(A.Provider, { value: l }, i)
                 );
             };
         C.propTypes = {
-            stripe: f.any,
-            options: f.object
+            stripe: h.any,
+            options: h.object
         };
-        var L = function (e) {
-                return v(t.useContext(O), e);
+        var R = function (e) {
+                return N(t.useContext(A), e);
             },
-            D = function (e) {
-                return (0, e.children)(L('mounts <ElementsConsumer>'));
+            O = function (e) {
+                return (0, e.children)(R('mounts <ElementsConsumer>'));
             };
-        D.propTypes = { children: f.func.isRequired };
-        var y = ['on', 'session'],
-            b = t.createContext(null);
-        b.displayName = 'CustomCheckoutSdkContext';
-        var M = function (e, t) {
+        O.propTypes = { children: h.func.isRequired };
+        var D = ['on', 'session'],
+            L = t.createContext(null);
+        L.displayName = 'CustomCheckoutSdkContext';
+        var x = function (e, t) {
                 if (!e) throw Error('Could not find CustomCheckoutProvider context; You need to wrap the part of your app that '.concat(t, ' in an <CustomCheckoutProvider> provider.'));
                 return e;
             },
-            P = t.createContext(null);
-        P.displayName = 'CustomCheckoutContext';
-        var U = function (e, t) {
+            w = t.createContext(null);
+        w.displayName = 'CustomCheckoutContext';
+        var M = function (e, t) {
                 if (!e) return null;
                 e.on, e.session;
                 var n = (function (e, t) {
@@ -377,16 +377,16 @@ var r;
                         }
                     }
                     return i;
-                })(e, y);
+                })(e, D);
                 return t ? r(r({}, n), t) : r(r({}, n), e.session());
             },
-            w = function (e) {
+            P = function (e) {
                 var n = e.stripe,
                     r = e.options,
                     i = e.children,
                     a = t.useMemo(
                         function () {
-                            return N(n, 'Invalid prop `stripe` supplied to `CustomCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.');
+                            return b(n, 'Invalid prop `stripe` supplied to `CustomCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.');
                         },
                         [n]
                     ),
@@ -403,9 +403,9 @@ var r;
                         2
                     ),
                     d = c[0],
-                    _ = c[1],
-                    E = function (e, t) {
-                        _(function (n) {
+                    f = c[1],
+                    _ = function (e, t) {
+                        f(function (n) {
                             return n.stripe && n.customCheckoutSdk
                                 ? n
                                 : {
@@ -414,7 +414,7 @@ var r;
                                   };
                         });
                     },
-                    f = t.useRef(!1);
+                    h = t.useRef(!1);
                 t.useEffect(
                     function () {
                         var e = !0;
@@ -422,18 +422,18 @@ var r;
                             'async' !== a.tag || d.stripe
                                 ? 'sync' === a.tag &&
                                   a.stripe &&
-                                  !f.current &&
-                                  ((f.current = !0),
+                                  !h.current &&
+                                  ((h.current = !0),
                                   a.stripe.initCustomCheckout(r).then(function (e) {
-                                      e && (E(a.stripe, e), e.on('change', u));
+                                      e && (_(a.stripe, e), e.on('change', u));
                                   }))
                                 : a.stripePromise.then(function (t) {
                                       t &&
                                           e &&
-                                          !f.current &&
-                                          ((f.current = !0),
+                                          !h.current &&
+                                          ((h.current = !0),
                                           t.initCustomCheckout(r).then(function (e) {
-                                              e && (E(t, e), e.on('change', u));
+                                              e && (_(t, e), e.on('change', u));
                                           }));
                                   }),
                             function () {
@@ -443,60 +443,60 @@ var r;
                     },
                     [a, d, r, u]
                 );
-                var h = p(n);
+                var p = m(n);
                 t.useEffect(
                     function () {
-                        null !== h && h !== n && console.warn('Unsupported prop change on CustomCheckoutProvider: You cannot change the `stripe` prop after setting it.');
+                        null !== p && p !== n && console.warn('Unsupported prop change on CustomCheckoutProvider: You cannot change the `stripe` prop after setting it.');
                     },
-                    [h, n]
+                    [p, n]
                 );
-                var m = p(r);
+                var E = m(r);
                 t.useEffect(
                     function () {
                         if (!!d.customCheckoutSdk) {
-                            r.clientSecret && !I(m) && !T(r.clientSecret, m.clientSecret) && console.warn('Unsupported prop change: options.client_secret is not a mutable property.');
+                            r.clientSecret && !g(E) && !v(r.clientSecret, E.clientSecret) && console.warn('Unsupported prop change: options.client_secret is not a mutable property.');
                             var e,
                                 t,
-                                n = null == m ? void 0 : null === (e = m.elementsOptions) || void 0 === e ? void 0 : e.appearance,
+                                n = null == E ? void 0 : null === (e = E.elementsOptions) || void 0 === e ? void 0 : e.appearance,
                                 i = null == r ? void 0 : null === (t = r.elementsOptions) || void 0 === t ? void 0 : t.appearance;
-                            i && !T(i, n) && d.customCheckoutSdk.changeAppearance(i);
+                            i && !v(i, n) && d.customCheckoutSdk.changeAppearance(i);
                         }
                     },
-                    [r, m, d.customCheckoutSdk]
+                    [r, E, d.customCheckoutSdk]
                 ),
                     t.useEffect(
                         function () {
-                            R(d.stripe);
+                            y(d.stripe);
                         },
                         [d.stripe]
                     );
-                var S = t.useMemo(
+                var I = t.useMemo(
                     function () {
-                        return U(d.customCheckoutSdk, l);
+                        return M(d.customCheckoutSdk, l);
                     },
                     [d.customCheckoutSdk, l]
                 );
-                return d.customCheckoutSdk ? t.createElement(b.Provider, { value: d }, t.createElement(P.Provider, { value: S }, i)) : null;
+                return d.customCheckoutSdk ? t.createElement(L.Provider, { value: d }, t.createElement(w.Provider, { value: I }, i)) : null;
             };
-        w.propTypes = {
-            stripe: f.any,
-            options: f.shape({
-                clientSecret: f.string.isRequired,
-                elementsOptions: f.object
+        P.propTypes = {
+            stripe: h.any,
+            options: h.shape({
+                clientSecret: h.string.isRequired,
+                elementsOptions: h.object
             }).isRequired
         };
-        var x = function (e) {
-                var n = t.useContext(b),
-                    r = t.useContext(O);
+        var k = function (e) {
+                var n = t.useContext(L),
+                    r = t.useContext(A);
                 if (n && r) throw Error('You cannot wrap the part of your app that '.concat(e, ' in both <CustomCheckoutProvider> and <Elements> providers.'));
-                return n ? M(n, e) : v(r, e);
+                return n ? x(n, e) : N(r, e);
             },
-            G = function (e, n) {
+            U = function (e, n) {
                 var r,
                     i = ''.concat((r = e).charAt(0).toUpperCase() + r.slice(1), 'Element'),
                     a = n
                         ? function (e) {
-                              x('mounts <'.concat(i, '>'));
+                              k('mounts <'.concat(i, '>'));
                               var n = e.id,
                                   r = e.className;
                               return t.createElement('div', {
@@ -512,118 +512,118 @@ var r;
                                   u = void 0 === l ? {} : l,
                                   c = n.onBlur,
                                   d = n.onFocus,
-                                  _ = n.onReady,
-                                  E = n.onChange,
-                                  f = n.onEscape,
-                                  I = n.onClick,
-                                  m = n.onLoadError,
-                                  T = n.onLoaderStart,
-                                  g = n.onNetworksChange,
-                                  A = n.onConfirm,
-                                  N = n.onCancel,
-                                  R = n.onShippingAddressChange,
-                                  O = n.onShippingRateChange,
-                                  v = x('mounts <'.concat(i, '>')),
-                                  C = 'elements' in v ? v.elements : null,
-                                  L = 'customCheckoutSdk' in v ? v.customCheckoutSdk : null,
-                                  D = s(t.useState(null), 2),
-                                  y = D[0],
-                                  b = D[1],
-                                  M = t.useRef(null),
-                                  P = t.useRef(null);
-                              h(y, 'blur', c),
-                                  h(y, 'focus', d),
-                                  h(y, 'escape', f),
-                                  h(y, 'click', I),
-                                  h(y, 'loaderror', m),
-                                  h(y, 'loaderstart', T),
-                                  h(y, 'networkschange', g),
-                                  h(y, 'confirm', A),
-                                  h(y, 'cancel', N),
-                                  h(y, 'shippingaddresschange', R),
-                                  h(y, 'shippingratechange', O),
-                                  h(y, 'change', E),
-                                  _ &&
+                                  f = n.onReady,
+                                  _ = n.onChange,
+                                  h = n.onEscape,
+                                  g = n.onClick,
+                                  E = n.onLoadError,
+                                  v = n.onLoaderStart,
+                                  S = n.onNetworksChange,
+                                  T = n.onConfirm,
+                                  b = n.onCancel,
+                                  y = n.onShippingAddressChange,
+                                  A = n.onShippingRateChange,
+                                  N = k('mounts <'.concat(i, '>')),
+                                  C = 'elements' in N ? N.elements : null,
+                                  R = 'customCheckoutSdk' in N ? N.customCheckoutSdk : null,
+                                  O = s(t.useState(null), 2),
+                                  D = O[0],
+                                  L = O[1],
+                                  x = t.useRef(null),
+                                  w = t.useRef(null);
+                              p(D, 'blur', c),
+                                  p(D, 'focus', d),
+                                  p(D, 'escape', h),
+                                  p(D, 'click', g),
+                                  p(D, 'loaderror', E),
+                                  p(D, 'loaderstart', v),
+                                  p(D, 'networkschange', S),
+                                  p(D, 'confirm', T),
+                                  p(D, 'cancel', b),
+                                  p(D, 'shippingaddresschange', y),
+                                  p(D, 'shippingratechange', A),
+                                  p(D, 'change', _),
+                                  f &&
                                       (r =
                                           'expressCheckout' === e
-                                              ? _
+                                              ? f
                                               : function () {
-                                                    _(y);
+                                                    f(D);
                                                 }),
-                                  h(y, 'ready', r),
+                                  p(D, 'ready', r),
                                   t.useLayoutEffect(
                                       function () {
-                                          if (null === M.current && null !== P.current && (C || L)) {
+                                          if (null === x.current && null !== w.current && (C || R)) {
                                               var t = null;
-                                              L ? (t = L.createElement(e, u)) : C && (t = C.create(e, u)), (M.current = t), b(t), t && t.mount(P.current);
+                                              R ? (t = R.createElement(e, u)) : C && (t = C.create(e, u)), (x.current = t), L(t), t && t.mount(w.current);
                                           }
                                       },
-                                      [C, L, u]
+                                      [C, R, u]
                                   );
-                              var U = p(u);
+                              var M = m(u);
                               return (
                                   t.useEffect(
                                       function () {
-                                          if (!!M.current) {
-                                              var e = S(u, U, ['paymentRequest']);
-                                              e && M.current.update(e);
+                                          if (!!x.current) {
+                                              var e = I(u, M, ['paymentRequest']);
+                                              e && x.current.update(e);
                                           }
                                       },
-                                      [u, U]
+                                      [u, M]
                                   ),
                                   t.useLayoutEffect(function () {
                                       return function () {
-                                          if (M.current && 'function' == typeof M.current.destroy)
+                                          if (x.current && 'function' == typeof x.current.destroy)
                                               try {
-                                                  M.current.destroy(), (M.current = null);
+                                                  x.current.destroy(), (x.current = null);
                                               } catch (e) {}
                                       };
                                   }, []),
                                   t.createElement('div', {
                                       id: a,
                                       className: o,
-                                      ref: P
+                                      ref: w
                                   })
                               );
                           };
                 return (
                     (a.propTypes = {
-                        id: f.string,
-                        className: f.string,
-                        onChange: f.func,
-                        onBlur: f.func,
-                        onFocus: f.func,
-                        onReady: f.func,
-                        onEscape: f.func,
-                        onClick: f.func,
-                        onLoadError: f.func,
-                        onLoaderStart: f.func,
-                        onNetworksChange: f.func,
-                        onConfirm: f.func,
-                        onCancel: f.func,
-                        onShippingAddressChange: f.func,
-                        onShippingRateChange: f.func,
-                        options: f.object
+                        id: h.string,
+                        className: h.string,
+                        onChange: h.func,
+                        onBlur: h.func,
+                        onFocus: h.func,
+                        onReady: h.func,
+                        onEscape: h.func,
+                        onClick: h.func,
+                        onLoadError: h.func,
+                        onLoaderStart: h.func,
+                        onNetworksChange: h.func,
+                        onConfirm: h.func,
+                        onCancel: h.func,
+                        onShippingAddressChange: h.func,
+                        onShippingRateChange: h.func,
+                        options: h.object
                     }),
                     (a.displayName = i),
                     (a.__elementType = e),
                     a
                 );
             },
-            k = 'undefined' == typeof window,
+            G = 'undefined' == typeof window,
             B = t.createContext(null);
         B.displayName = 'EmbeddedCheckoutProviderContext';
-        var F = function () {
+        var Z = function () {
                 var e = t.useContext(B);
                 if (!e) throw Error('<EmbeddedCheckout> must be used within <EmbeddedCheckoutProvider>');
                 return e;
             },
-            V = k
+            F = G
                 ? function (e) {
                       var n = e.id,
                           r = e.className;
                       return (
-                          F(),
+                          Z(),
                           t.createElement('div', {
                               id: n,
                               className: r
@@ -633,7 +633,7 @@ var r;
                 : function (e) {
                       var n = e.id,
                           r = e.className,
-                          i = F().embeddedCheckout,
+                          i = Z().embeddedCheckout,
                           a = t.useRef(!1),
                           s = t.useRef(null);
                       return (
@@ -658,44 +658,44 @@ var r;
                           })
                       );
                   },
-            H = G('auBankAccount', k),
-            Z = G('card', k),
-            Y = G('cardNumber', k),
-            j = G('cardExpiry', k),
-            W = G('cardCvc', k),
-            K = G('fpxBank', k),
-            z = G('iban', k),
-            q = G('idealBank', k),
-            Q = G('p24Bank', k),
-            X = G('epsBank', k),
-            $ = G('payment', k),
-            J = G('expressCheckout', k),
-            ee = G('paymentRequestButton', k),
-            et = G('linkAuthentication', k),
-            en = G('address', k),
-            er = G('shippingAddress', k),
-            ei = G('paymentMethodMessaging', k),
-            ea = G('affirmMessage', k),
-            es = G('afterpayClearpayMessage', k);
+            V = U('auBankAccount', G),
+            j = U('card', G),
+            H = U('cardNumber', G),
+            Y = U('cardExpiry', G),
+            W = U('cardCvc', G),
+            K = U('fpxBank', G),
+            z = U('iban', G),
+            q = U('idealBank', G),
+            Q = U('p24Bank', G),
+            X = U('epsBank', G),
+            J = U('payment', G),
+            $ = U('expressCheckout', G),
+            ee = U('paymentRequestButton', G),
+            et = U('linkAuthentication', G),
+            en = U('address', G),
+            er = U('shippingAddress', G),
+            ei = U('paymentMethodMessaging', G),
+            ea = U('affirmMessage', G),
+            es = U('afterpayClearpayMessage', G);
         (e.AddressElement = en),
             (e.AffirmMessageElement = ea),
             (e.AfterpayClearpayMessageElement = es),
-            (e.AuBankAccountElement = H),
+            (e.AuBankAccountElement = V),
             (e.CardCvcElement = W),
-            (e.CardElement = Z),
-            (e.CardExpiryElement = j),
-            (e.CardNumberElement = Y),
-            (e.CustomCheckoutProvider = w),
+            (e.CardElement = j),
+            (e.CardExpiryElement = Y),
+            (e.CardNumberElement = H),
+            (e.CustomCheckoutProvider = P),
             (e.Elements = C),
-            (e.ElementsConsumer = D),
-            (e.EmbeddedCheckout = V),
+            (e.ElementsConsumer = O),
+            (e.EmbeddedCheckout = F),
             (e.EmbeddedCheckoutProvider = function (e) {
                 var n = e.stripe,
                     r = e.options,
                     i = e.children,
                     a = t.useMemo(
                         function () {
-                            return N(n, 'Invalid prop `stripe` supplied to `EmbeddedCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.');
+                            return b(n, 'Invalid prop `stripe` supplied to `EmbeddedCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.');
                         },
                         [n]
                     ),
@@ -739,56 +739,56 @@ var r;
                     ),
                     t.useEffect(
                         function () {
-                            R(l);
+                            y(l);
                         },
                         [l]
                     );
-                var _ = p(n);
+                var f = m(n);
                 t.useEffect(
                     function () {
-                        null !== _ && _ !== n && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the `stripe` prop after setting it.');
+                        null !== f && f !== n && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the `stripe` prop after setting it.');
                     },
-                    [_, n]
+                    [f, n]
                 );
-                var E = p(r);
+                var _ = m(r);
                 return (
                     t.useEffect(
                         function () {
-                            if (null != E) {
+                            if (null != _) {
                                 if (null == r) {
                                     console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot unset options after setting them.');
                                     return;
                                 }
-                                void 0 === r.clientSecret && void 0 === r.fetchClientSecret && console.warn('Invalid props passed to EmbeddedCheckoutProvider: You must provide one of either `options.fetchClientSecret` or `options.clientSecret`.'), null != E.clientSecret && r.clientSecret !== E.clientSecret && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the client secret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.'), null != E.fetchClientSecret && r.fetchClientSecret !== E.fetchClientSecret && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change fetchClientSecret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.'), null != E.onComplete && r.onComplete !== E.onComplete && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onComplete option after setting it.');
+                                void 0 === r.clientSecret && void 0 === r.fetchClientSecret && console.warn('Invalid props passed to EmbeddedCheckoutProvider: You must provide one of either `options.fetchClientSecret` or `options.clientSecret`.'), null != _.clientSecret && r.clientSecret !== _.clientSecret && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the client secret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.'), null != _.fetchClientSecret && r.fetchClientSecret !== _.fetchClientSecret && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change fetchClientSecret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.'), null != _.onComplete && r.onComplete !== _.onComplete && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onComplete option after setting it.');
                             }
                         },
-                        [E, r]
+                        [_, r]
                     ),
                     t.createElement(B.Provider, { value: c }, i)
                 );
             }),
             (e.EpsBankElement = X),
-            (e.ExpressCheckoutElement = J),
+            (e.ExpressCheckoutElement = $),
             (e.FpxBankElement = K),
             (e.IbanElement = z),
             (e.IdealBankElement = q),
             (e.LinkAuthenticationElement = et),
             (e.P24BankElement = Q),
-            (e.PaymentElement = $),
+            (e.PaymentElement = J),
             (e.PaymentMethodMessagingElement = ei),
             (e.PaymentRequestButtonElement = ee),
             (e.ShippingAddressElement = er),
             (e.useCustomCheckout = function () {
-                (e = 'calls useCustomCheckout()'), M(t.useContext(b), e);
+                (e = 'calls useCustomCheckout()'), x(t.useContext(L), e);
                 var e,
-                    n = t.useContext(P);
+                    n = t.useContext(w);
                 if (!n) throw Error('Could not find CustomCheckout Context; You need to wrap the part of your app that calls useCustomCheckout() in an <CustomCheckoutProvider> provider.');
                 return n;
             }),
             (e.useElements = function () {
-                return L('calls useElements()').elements;
+                return R('calls useElements()').elements;
             }),
             (e.useStripe = function () {
-                return x('calls useStripe()').stripe;
+                return k('calls useStripe()').stripe;
             });
     })(t, n(192379));

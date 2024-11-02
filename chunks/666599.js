@@ -1,30 +1,30 @@
-s.r(a);
-var r = s(200651);
-s(192379);
-var n = s(100621),
-    l = s(692547),
-    t = s(481060),
-    i = s(112831),
-    c = s(313201),
-    o = s(731455),
-    d = s(689938),
-    _ = s(267021);
-let I = (e) => {
-    let { currentNumber: a, thresholdNumber: s, currentLabel: c, isPercent: o = !1 } = e,
-        I = null != s ? Math.floor((a / s) * 100) : 0,
-        T = d.Z.Messages.NUMBERS_ONLY.format({ count: a }),
-        m = null != s ? d.Z.Messages.NUMBERS_ONLY.format({ count: s }) : '--',
-        S = (0, t.useToken)(l.Z.unsafe_rawColors.RED_400).hex(),
-        E = (0, t.useToken)(l.Z.unsafe_rawColors.YELLOW_300).hex();
-    return (0, r.jsxs)(r.Fragment, {
+a.r(r);
+var s = a(200651);
+a(192379);
+var t = a(100621),
+    n = a(692547),
+    i = a(481060),
+    l = a(112831),
+    c = a(313201),
+    o = a(731455),
+    d = a(388032),
+    m = a(267021);
+let h = (e) => {
+    let { currentNumber: r, thresholdNumber: a, currentLabel: c, isPercent: o = !1 } = e,
+        h = null != a ? Math.floor((r / a) * 100) : 0,
+        x = d.intl.formatToPlainString(d.t.YMor7u, { count: r }),
+        u = null != a ? d.intl.formatToPlainString(d.t.YMor7u, { count: a }) : '--',
+        g = (0, i.useToken)(n.Z.unsafe_rawColors.RED_400).hex(),
+        p = (0, i.useToken)(n.Z.unsafe_rawColors.YELLOW_300).hex();
+    return (0, s.jsxs)(s.Fragment, {
         children: [
-            (0, r.jsxs)('div', {
-                className: _.progressWrapper,
+            (0, s.jsxs)('div', {
+                className: m.progressWrapper,
                 children: [
-                    (0, r.jsx)('div', { className: _.progressBackground }),
-                    (0, r.jsx)(t.Spring, {
+                    (0, s.jsx)('div', { className: m.progressBackground }),
+                    (0, s.jsx)(i.Spring, {
                         from: { width: 0 },
-                        to: { width: I },
+                        to: { width: h },
                         config: {
                             tension: 200,
                             friction: 20,
@@ -33,36 +33,36 @@ let I = (e) => {
                         },
                         shouldAnimate: 'animate-always',
                         children: (e) => {
-                            let { width: a } = e;
-                            return (0, r.jsx)(n.animated.div, {
-                                className: _.progressBar,
+                            let { width: r } = e;
+                            return (0, s.jsx)(t.animated.div, {
+                                className: m.progressBar,
                                 style: {
-                                    width: a.interpolate((e) => ''.concat(e, '%')),
-                                    backgroundColor: a.interpolate((e) => (e < 33 ? S : E))
+                                    width: r.interpolate((e) => ''.concat(e, '%')),
+                                    backgroundColor: r.interpolate((e) => (e < 33 ? g : p))
                                 }
                             });
                         }
                     })
                 ]
             }),
-            (0, r.jsxs)('div', {
-                className: _.labelWrapper,
+            (0, s.jsxs)('div', {
+                className: m.labelWrapper,
                 children: [
-                    (0, r.jsxs)('div', {
-                        className: _.__invalid_current,
+                    (0, s.jsxs)('div', {
+                        className: m.__invalid_current,
                         children: [
-                            (0, r.jsx)(i.Z, {
-                                color: I < 33 ? i.Z.Colors.ERROR : i.Z.Colors.STATUS_YELLOW,
-                                className: _.bold,
-                                children: o ? ''.concat(T, '%') : T
+                            (0, s.jsx)(l.Z, {
+                                color: h < 33 ? l.Z.Colors.ERROR : l.Z.Colors.STATUS_YELLOW,
+                                className: m.bold,
+                                children: o ? ''.concat(x, '%') : x
                             }),
-                            (0, r.jsxs)(t.Text, {
+                            (0, s.jsxs)(i.Text, {
                                 'aria-describedby': 'health-score-details-score-explain',
                                 variant: 'text-xs/normal',
                                 color: 'header-secondary',
                                 children: [
                                     c,
-                                    (0, r.jsx)('sup', {
+                                    (0, s.jsx)('sup', {
                                         'aria-hidden': !0,
                                         children: '1'
                                     })
@@ -70,19 +70,19 @@ let I = (e) => {
                             })
                         ]
                     }),
-                    (0, r.jsxs)('div', {
-                        className: _.requirement,
+                    (0, s.jsxs)('div', {
+                        className: m.requirement,
                         children: [
-                            (0, r.jsx)(t.Text, {
-                                className: _.bold,
+                            (0, s.jsx)(i.Text, {
+                                className: m.bold,
                                 variant: 'text-sm/semibold',
-                                children: o ? ''.concat(m, '%') : m
+                                children: o ? ''.concat(u, '%') : u
                             }),
-                            (0, r.jsx)(t.Text, {
+                            (0, s.jsx)(i.Text, {
                                 'aria-describedby': 'health-score-details-requirement-explain',
                                 variant: 'text-xs/normal',
                                 color: 'header-secondary',
-                                children: d.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_PROGRESS_REQUIREMENT_LABEL
+                                children: d.intl.string(d.t['A+mTPj'])
                             })
                         ]
                     })
@@ -91,126 +91,126 @@ let I = (e) => {
         ]
     });
 };
-a.default = (e) => {
-    let a,
-        s,
-        n,
-        { guildChecklist: l, transitionState: i, onClose: T } = e,
-        m = (0, c.Dt)(),
-        { retentionHealthy: S, engagementHealthy: E, healthScore: N } = l,
-        { avg_nonnew_participators: C, avg_nonnew_communicators: h, perc_ret_w1_intentful: x } = N;
+r.default = (e) => {
+    let r,
+        a,
+        t,
+        { guildChecklist: n, transitionState: l, onClose: x } = e,
+        u = (0, c.Dt)(),
+        { retentionHealthy: g, engagementHealthy: p, healthScore: b } = n,
+        { avg_nonnew_participators: j, avg_nonnew_communicators: _, perc_ret_w1_intentful: N } = b;
     if (
-        (!E &&
-            null != C &&
-            C < o.b0 &&
-            (s = (0, r.jsxs)('div', {
-                className: _.failingBlock,
+        (!p &&
+            null != j &&
+            j < o.b0 &&
+            (a = (0, s.jsxs)('div', {
+                className: m.failingBlock,
                 children: [
-                    (0, r.jsx)(t.Heading, {
-                        className: _.marginAfter,
+                    (0, s.jsx)(i.Heading, {
+                        className: m.marginAfter,
                         variant: 'heading-md/semibold',
-                        children: d.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_VISITOR_FAILING_ACTION
+                        children: d.intl.string(d.t.sEzDIS)
                     }),
-                    (0, r.jsx)(t.Text, {
+                    (0, s.jsx)(i.Text, {
                         variant: 'text-sm/normal',
-                        children: d.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_VISITOR_FAILING_ACTION_DETAILS
+                        children: d.intl.string(d.t.zNp3Ki)
                     }),
-                    (0, r.jsx)(I, {
-                        currentNumber: C,
+                    (0, s.jsx)(h, {
+                        currentNumber: j,
                         thresholdNumber: 40,
-                        currentLabel: d.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_VISITOR_PROGRESS_LABEL
+                        currentLabel: d.intl.string(d.t.BtTX9P)
                     })
                 ]
             })),
-        !E &&
-            null != h &&
-            h < o.md &&
-            (n = (0, r.jsxs)('div', {
-                className: _.failingBlock,
+        !p &&
+            null != _ &&
+            _ < o.md &&
+            (t = (0, s.jsxs)('div', {
+                className: m.failingBlock,
                 children: [
-                    (0, r.jsx)(t.Heading, {
-                        className: _.marginAfter,
+                    (0, s.jsx)(i.Heading, {
+                        className: m.marginAfter,
                         variant: 'heading-md/semibold',
-                        children: d.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_COMMUNICATOR_FAILING_ACTION
+                        children: d.intl.string(d.t.fWQTbm)
                     }),
-                    (0, r.jsx)(t.Text, {
+                    (0, s.jsx)(i.Text, {
                         variant: 'text-sm/normal',
-                        children: d.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_COMMUNICATOR_FAILING_ACTION_DETAILS
+                        children: d.intl.string(d.t.Tl8MR0)
                     }),
-                    (0, r.jsx)(I, {
-                        currentNumber: h,
+                    (0, s.jsx)(h, {
+                        currentNumber: _,
                         thresholdNumber: 20,
-                        currentLabel: d.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_COMMUNICATOR_PROGRESS_LABEL
+                        currentLabel: d.intl.string(d.t.PFQI7u)
                     })
                 ]
             })),
-        !S && null != x)
+        !g && null != N)
     ) {
-        let e = Math.floor(100 * x);
-        a = (0, r.jsxs)('div', {
-            className: _.failingBlock,
+        let e = Math.floor(100 * N);
+        r = (0, s.jsxs)('div', {
+            className: m.failingBlock,
             children: [
-                (0, r.jsx)(t.Heading, {
-                    className: _.marginAfter,
+                (0, s.jsx)(i.Heading, {
+                    className: m.marginAfter,
                     variant: 'heading-md/semibold',
-                    children: d.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_RETENTION_FAILING_ACTION
+                    children: d.intl.string(d.t.YF6x29)
                 }),
-                (0, r.jsx)(t.Text, {
+                (0, s.jsx)(i.Text, {
                     variant: 'text-sm/normal',
-                    children: d.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_RETENTION_FAILING_ACTION_DETAILS_UPDATED.format()
+                    children: d.intl.format(d.t.kMBzFh, {})
                 }),
-                (0, r.jsx)(I, {
+                (0, s.jsx)(h, {
                     currentNumber: e,
                     thresholdNumber: 10,
-                    currentLabel: d.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_RETENTION_PROGRESS_LABEL,
+                    currentLabel: d.intl.string(d.t.WpwyIi),
                     isPercent: !0
                 })
             ]
         });
     }
-    return (0, r.jsxs)(t.ModalRoot, {
-        transitionState: i,
-        size: t.ModalSize.MEDIUM,
-        className: _.__invalid_modal,
-        'aria-labelledby': m,
+    return (0, s.jsxs)(i.ModalRoot, {
+        transitionState: l,
+        size: i.ModalSize.MEDIUM,
+        className: m.__invalid_modal,
+        'aria-labelledby': u,
         children: [
-            (0, r.jsxs)(t.ModalContent, {
-                className: _.content,
+            (0, s.jsxs)(i.ModalContent, {
+                className: m.content,
                 children: [
-                    (0, r.jsx)(t.Heading, {
+                    (0, s.jsx)(i.Heading, {
                         variant: 'heading-xl/semibold',
-                        className: _.modalHeader,
-                        id: m,
-                        children: d.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_HEALTHY_FAILING
+                        className: m.modalHeader,
+                        id: u,
+                        children: d.intl.string(d.t['+GHxPz'])
                     }),
-                    (0, r.jsx)(t.Text, {
-                        className: _.marginAfter,
+                    (0, s.jsx)(i.Text, {
+                        className: m.marginAfter,
                         variant: 'text-sm/normal',
-                        children: d.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_HEALTH_DEFINITIONS_INTRO
+                        children: d.intl.string(d.t.QOs3XF)
                     }),
-                    (0, r.jsx)('div', { className: _.separator }),
-                    s,
-                    n,
+                    (0, s.jsx)('div', { className: m.separator }),
                     a,
-                    (0, r.jsx)('div', { className: _.separator }),
-                    (0, r.jsxs)(t.Text, {
-                        className: _.marginAfter,
+                    t,
+                    r,
+                    (0, s.jsx)('div', { className: m.separator }),
+                    (0, s.jsxs)(i.Text, {
+                        className: m.marginAfter,
                         color: 'header-secondary',
                         id: 'health-score-details-score-explain',
                         variant: 'text-sm/normal',
                         children: [
-                            (0, r.jsx)('sup', {
+                            (0, s.jsx)('sup', {
                                 'aria-hidden': !0,
                                 children: '1 '
                             }),
-                            d.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SCORE_EXPLAIN
+                            d.intl.string(d.t.tN5kb2)
                         ]
                     })
                 ]
             }),
-            (0, r.jsx)(t.ModalCloseButton, {
-                onClick: T,
-                className: _.closeButton
+            (0, s.jsx)(i.ModalCloseButton, {
+                onClick: x,
+                className: m.closeButton
             })
         ]
     });

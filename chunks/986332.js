@@ -1,6 +1,6 @@
 n.d(t, {
     o: function () {
-        return a;
+        return r;
     }
 });
 let i = (0, n(818083).B)({
@@ -38,7 +38,7 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function a() {
+function r() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         { showRedesignedChannelNotice: t, showRedesignedLiveChannelNotice: n } = i.useExperiment({ location: 'c0d6eb_1' }, { autoTrackExposure: e });
     return {

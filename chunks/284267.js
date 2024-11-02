@@ -21,8 +21,8 @@ function i(e, t, n) {
                 if (!('message' == i.V.kind ? l(i.V.T(), a(u), a(c)) : o('enum' == i.V.kind ? r.wx.INT32 : i.V.T, a(u), a(c)))) return !1;
                 break;
             case 'message':
-                let _ = i.T();
-                if (!(i.repeat ? l(_, u, c) : _.equals(u, c))) return !1;
+                let f = i.T();
+                if (!(i.repeat ? l(f, u, c) : f.equals(u, c))) return !1;
         }
     }
     return !0;

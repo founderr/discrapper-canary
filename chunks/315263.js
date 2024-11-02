@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return G;
+            return U;
         }
     }),
     n(47120);
@@ -14,73 +14,73 @@ var r = n(729594),
     u = n(367907),
     c = n(581364),
     d = n(132871),
-    _ = n(963202),
-    E = n(960904),
-    f = n(830121),
-    h = n(15274),
-    p = n(924301),
-    I = n(543842),
-    m = n(754688),
-    T = n(336197),
-    S = n(977156),
-    g = n(341907),
-    A = n(540709),
-    N = n(881706),
-    R = n(701190),
-    O = n(944486),
-    v = n(914010),
+    f = n(963202),
+    _ = n(960904),
+    h = n(830121),
+    p = n(15274),
+    m = n(924301),
+    g = n(543842),
+    E = n(754688),
+    v = n(336197),
+    I = n(977156),
+    S = n(341907),
+    T = n(540709),
+    b = n(881706),
+    y = n(701190),
+    A = n(944486),
+    N = n(914010),
     C = n(771845),
-    L = n(626135),
-    D = n(591759);
+    R = n(626135),
+    O = n(591759);
 n(782568);
-var y = n(981631),
-    b = n(49898),
-    M = n(128449),
-    P = n(46140);
-async function U(e, t) {
+var D = n(981631),
+    L = n(49898),
+    x = n(128449),
+    w = n(46140);
+async function M(e, t) {
     await s.Z.dispatch({
         type: 'INVITE_MODAL_OPEN',
         invite: e,
         code: t,
-        context: y.IlC.APP
+        context: D.IlC.APP
     });
 }
-async function w(e) {
+async function P(e) {
     var t;
-    let n = R.Z.getInvite(e.code);
+    let n = y.Z.getInvite(e.code);
     if (null == n) {
         let { invite: t } = await o.Z.resolveInvite(e.code, 'Markdown Link');
         n = t;
     }
     if (null == n) return;
-    if (n.state === y.r2o.EXPIRED || n.state === y.r2o.BANNED || n.state === y.r2o.ERROR) {
-        await U(n, e.code);
+    if (n.state === D.r2o.EXPIRED || n.state === D.r2o.BANNED || n.state === D.r2o.ERROR) {
+        await M(n, e.code);
         return;
     }
     let r = C.ZP.getFlattenedGuildIds(),
         i = null == n ? void 0 : null === (t = n.guild) || void 0 === t ? void 0 : t.id;
-    null != i && r.includes(i) ? o.Z.transitionToInviteSync(n) : await U(n, e.code);
+    null != i && r.includes(i) ? o.Z.transitionToInviteSync(n) : await M(n, e.code);
 }
-let x = {
+let k = {
     skipExtensionCheck: void 0,
     analyticsLocations: []
 };
-function G(e) {
-    let { skipExtensionCheck: t, analyticsLocations: s } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : x,
-        o = (0, f.zO)(e);
-    if (null != o && (o.type === E.g.INVITE || o.type === E.g.EMBEDDED_ACTIVITY_INVITE)) return (e) => (null == e || e.preventDefault(), w(o), !0);
-    if (null != o && o.type === E.g.APP_DIRECTORY_PROFILE)
+function U(e) {
+    let { skipExtensionCheck: t, analyticsLocations: s } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : k,
+        o = (0, h.zO)(e);
+    if (null != o && (o.type === _.g.INVITE || o.type === _.g.EMBEDDED_ACTIVITY_INVITE)) return (e) => (null == e || e.preventDefault(), P(o), !0);
+    if (null != o && o.type === _.g.APP_DIRECTORY_PROFILE)
         return (e) => {
             var t;
             null == e || e.preventDefault();
             let { code: r } = o,
-                a = null !== (t = v.Z.getGuildId()) && void 0 !== t ? t : void 0;
+                a = null !== (t = N.Z.getGuildId()) && void 0 !== t ? t : void 0;
             return (
-                L.default.track(y.rMx.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
+                R.default.track(D.rMx.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
                     application_id: r,
                     device_platform: i.tq ? 'mobile_web' : 'desktop_web',
                     guild_id: a,
-                    channel_id: O.Z.getChannelId()
+                    channel_id: A.Z.getChannelId()
                 }),
                 n
                     .e('56630')
@@ -98,7 +98,7 @@ function G(e) {
                 !0
             );
         };
-    if (null != o && o.type === E.g.GUILD_PRODUCT)
+    if (null != o && o.type === _.g.GUILD_PRODUCT)
         return (e) => {
             null == e || e.preventDefault();
             let [t, r] = o.code.split('-');
@@ -113,18 +113,18 @@ function G(e) {
                 !0
             );
         };
-    if (null != o && o.type === E.g.QUESTS_EMBED && (0, S.cB)({ location: P.dr.EMBED_MOBILE }))
+    if (null != o && o.type === _.g.QUESTS_EMBED && (0, I.cB)({ location: w.dr.EMBED_MOBILE }))
         return (e) => (
             null == e || e.preventDefault(),
             Promise.resolve()
                 .then(n.bind(n, 341907))
                 .then((e) => {
                     let { navigateToQuestHome: t } = e;
-                    t(P.dr.CODED_LINK, a.j.QUEST_SHARE_LINK, o.code);
+                    t(w.dr.CODED_LINK, a.j.QUEST_SHARE_LINK, o.code);
                 }),
             !0
         );
-    if (null != o && o.type === E.g.DISCOVERY_GAME && (0, _.rx)('discovery_coded_link'))
+    if (null != o && o.type === _.g.DISCOVERY_GAME && (0, f.rx)('discovery_coded_link'))
         return (e) => (
             null == e || e.preventDefault(),
             Promise.resolve()
@@ -132,19 +132,19 @@ function G(e) {
                 .then((e) => {
                     let { transitionToGlobalDiscovery: t } = e;
                     t({
-                        tab: b.F$.SERVERS,
-                        selectedServersTab: M.vf.GUILDS,
-                        entrypoint: M.Qq.GAME_LINK,
+                        tab: L.F$.SERVERS,
+                        selectedServersTab: x.vf.GUILDS,
+                        entrypoint: x.Qq.GAME_LINK,
                         extra: { search: '?game='.concat(o.code) }
                     });
                 }),
             !0
         );
-    let { path: R, hostname: C = '', host: U, query: G, hash: k } = r.parse(e),
-        B = D.Z.isDiscordHostname(C) || D.Z.isDiscordLocalhost(U, C);
-    if (B && (null == R ? void 0 : R.startsWith('/application-directory'))) {
+    let { path: y, hostname: C = '', host: M, query: U, hash: G } = r.parse(e),
+        B = O.Z.isDiscordHostname(C) || O.Z.isDiscordLocalhost(M, C);
+    if (B && (null == y ? void 0 : y.startsWith('/application-directory'))) {
         let e;
-        let t = R.split('/'),
+        let t = y.split('/'),
             [, , r, a] = t;
         5 === t.length && (e = t[4]);
         let s = null != r && (0, c.BH)(r) ? r : void 0;
@@ -153,17 +153,17 @@ function G(e) {
             null == t || t.preventDefault();
             let { ApplicationDirectoryProfileSections: l } = n(272242),
                 { ApplicationDirectoryViews: u } = n(132871),
-                c = null !== (o = v.Z.getGuildId()) && void 0 !== o ? o : void 0,
-                _ = u.HOME;
+                c = null !== (o = N.Z.getGuildId()) && void 0 !== o ? o : void 0,
+                f = u.HOME;
             return (
-                'search' === r && (_ = u.SEARCH),
+                'search' === r && (f = u.SEARCH),
                 null != s &&
-                    ((_ = u.APPLICATION),
-                    L.default.track(y.rMx.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
+                    ((f = u.APPLICATION),
+                    R.default.track(D.rMx.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
                         application_id: s,
                         device_platform: i.tq ? 'mobile_web' : 'desktop_web',
                         guild_id: c,
-                        channel_id: O.Z.getChannelId()
+                        channel_id: A.Z.getChannelId()
                     })),
                 n
                     .e('56630')
@@ -171,10 +171,10 @@ function G(e) {
                     .then((t) => {
                         let { goToAppDirectory: n } = t;
                         n({
-                            view: _,
+                            view: f,
                             applicationId: s,
                             guildId: c,
-                            applicationSection: (0, I.Z)(l, a),
+                            applicationSection: (0, g.Z)(l, a),
                             entrypoint: { name: d.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_URL },
                             skuId: e
                         });
@@ -183,30 +183,30 @@ function G(e) {
             );
         };
     }
-    if (null != R && B && D.Z.isAppRoute(R)) {
+    if (null != y && B && O.Z.isAppRoute(y)) {
         let e = {
             navigationReplace: !1,
             openChannel: !0
         };
-        return null != G && (e.search = G), null != k && (e.hash = k), (t) => (null == t || t.preventDefault(), (0, T.Z)(R, e), !0);
+        return null != U && (e.search = U), null != G && (e.hash = G), (t) => (null == t || t.preventDefault(), (0, v.Z)(y, e), !0);
     }
-    if (null != R && B) {
+    if (null != y && B) {
         let { getOAuth2AuthorizeProps: t, openOAuth2ModalWithCreateGuildModal: r } = n(69580),
             i = t(e);
-        if (null != i) return (e) => (null == e || e.preventDefault(), null != o && o.type === E.g.APP_OAUTH2_LINK && u.ZP.trackWithMetadata(y.rMx.APP_OAUTH2_LINK_EMBED_URL_CLICKED, { application_id: i.clientId }), r(i), !0);
+        if (null != i) return (e) => (null == e || e.preventDefault(), null != o && o.type === _.g.APP_OAUTH2_LINK && u.ZP.trackWithMetadata(D.rMx.APP_OAUTH2_LINK_EMBED_URL_CLICKED, { application_id: i.clientId }), r(i), !0);
     }
-    let F = (0, m.Ao)(R);
-    if (null != R && B && null != F)
+    let Z = (0, E.Ao)(y);
+    if (null != y && B && null != Z)
         return (e) => {
             null == e || e.preventDefault();
-            let t = v.Z.getGuildId();
-            null != F.guildId && '' !== F.guildId && F.guildId !== t && (0, T.Z)(y.Z5c.CHANNEL(F.guildId));
-            let n = p.ZP.getGuildScheduledEvent(F.guildEventId);
-            return null != n && (0, h.bO)({ eventId: n.id }), !0;
+            let t = N.Z.getGuildId();
+            null != Z.guildId && '' !== Z.guildId && Z.guildId !== t && (0, v.Z)(D.Z5c.CHANNEL(Z.guildId));
+            let n = m.ZP.getGuildScheduledEvent(Z.guildEventId);
+            return null != n && (0, p.bO)({ eventId: n.id }), !0;
         };
-    if (B && (null == R ? void 0 : R.startsWith('/settings/'))) {
+    if (B && (null == y ? void 0 : y.startsWith('/settings/'))) {
         let { default: e } = n(357269),
-            t = e(R);
+            t = e(y);
         if (null != t)
             return (e) => (
                 null == e || e.preventDefault(),
@@ -218,5 +218,5 @@ function G(e) {
                 !0
             );
     }
-    return B && (null == R ? void 0 : R.startsWith('/discovery/quests')) ? (e) => (null == e || e.preventDefault(), (0, g.navigateToQuestHome)(P.dr.BADGE, a.j.QUEST_BADGE), !0) : t || null == (0, N.v)(e) ? void 0 : (t) => (null == t || t.preventDefault(), A.Z.show(e), !0);
+    return B && (null == y ? void 0 : y.startsWith('/discovery/quests')) ? (e) => (null == e || e.preventDefault(), (0, S.navigateToQuestHome)(w.dr.BADGE, a.j.QUEST_BADGE), !0) : t || null == (0, b.v)(e) ? void 0 : (t) => (null == t || t.preventDefault(), T.Z.show(e), !0);
 }

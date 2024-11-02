@@ -1,66 +1,66 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return m;
+        return T;
     }
 }),
-    t(47120);
-var n = t(200651),
-    a = t(192379),
-    i = t(481060),
-    r = t(541716),
-    o = t(752305),
-    l = t(893718),
-    c = t(313201),
-    d = t(131704),
-    _ = t(993413),
-    u = t(981631),
-    E = t(689938),
-    T = t(264188);
-let S = (0, c.hQ)(),
-    I = (0, d.kt)({
+    n(47120);
+var i = n(200651),
+    s = n(192379),
+    r = n(481060),
+    l = n(541716),
+    a = n(752305),
+    o = n(893718),
+    c = n(313201),
+    d = n(131704),
+    u = n(993413),
+    m = n(981631),
+    h = n(388032),
+    g = n(264188);
+let p = (0, c.hQ)(),
+    x = (0, d.kt)({
         id: '1',
-        type: u.d4z.DM
+        type: m.d4z.DM
     }),
-    N = (0, c.hQ)();
-function m(e) {
-    let { sectionTitle: s, errors: t, onBioChange: c, pendingBio: d, placeholder: m, currentBio: C, disabled: A = !1 } = e,
-        [g, h] = a.useState(null != d ? d : C),
-        [O, p] = a.useState((0, o.JM)(g)),
-        R = a.useRef(!1);
+    S = (0, c.hQ)();
+function T(e) {
+    let { sectionTitle: t, errors: n, onBioChange: c, pendingBio: d, placeholder: T, currentBio: C, disabled: _ = !1 } = e,
+        [E, f] = s.useState(null != d ? d : C),
+        [I, N] = s.useState((0, a.JM)(E)),
+        A = s.useRef(!1);
     return (
-        a.useEffect(() => {
+        s.useEffect(() => {
             if (void 0 === d) {
-                let e = (0, o.JM)(C);
-                h(C), p(e);
+                let e = (0, a.JM)(C);
+                f(C), N(e);
             }
         }, [d, C]),
-        (0, n.jsxs)(_.Z, {
-            title: s,
-            titleId: S,
-            description: E.Z.Messages.USER_SETTINGS_ABOUT_ME_DETAILS,
-            errors: t,
-            disabled: A,
+        (0, i.jsxs)(u.Z, {
+            title: t,
+            titleId: p,
+            description: h.intl.string(h.t.Bbw6AQ),
+            errors: n,
+            disabled: _,
             children: [
-                (0, n.jsx)(l.Z, {
-                    'aria-describedby': N,
-                    'aria-labelledby': S,
-                    innerClassName: T.bioTextArea,
-                    maxCharacterCount: u.tPV,
-                    onChange: function (e, s, t) {
-                        s !== g && (h(s), p(t), c(s));
+                (0, i.jsx)(o.Z, {
+                    'aria-describedby': S,
+                    'aria-labelledby': p,
+                    innerClassName: g.bioTextArea,
+                    maxCharacterCount: m.tPV,
+                    onChange: function (e, t, n) {
+                        t !== E && (f(t), N(n), c(t));
                     },
-                    placeholder: m,
-                    channel: I,
-                    textValue: g,
-                    richValue: O,
-                    type: r.I.PROFILE_BIO_INPUT,
+                    placeholder: T,
+                    channel: x,
+                    textValue: E,
+                    richValue: I,
+                    type: l.I.PROFILE_BIO_INPUT,
                     onBlur: () => {
-                        R.current = !1;
+                        A.current = !1;
                     },
                     onFocus: () => {
-                        R.current = !0;
+                        A.current = !0;
                     },
-                    focused: R.current,
+                    focused: A.current,
                     onSubmit: function () {
                         return new Promise((e) => {
                             e({
@@ -70,9 +70,9 @@ function m(e) {
                         });
                     }
                 }),
-                (0, n.jsx)(i.HiddenVisually, {
-                    id: N,
-                    children: E.Z.Messages.MAXIMUM_LENGTH.format({ maxLength: u.tPV })
+                (0, i.jsx)(r.HiddenVisually, {
+                    id: S,
+                    children: h.intl.format(h.t['+DFxLS'], { maxLength: m.tPV })
                 })
             ]
         })

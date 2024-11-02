@@ -1,104 +1,104 @@
 n(47120);
-var s = n(200651),
+var i = n(200651),
     r = n(192379),
-    i = n(120356),
-    a = n.n(i),
+    s = n(120356),
+    a = n.n(s),
     l = n(442837),
     o = n(481060),
     c = n(144114),
     u = n(742458),
     d = n(541692),
-    _ = n(952802),
-    h = n(388905),
-    E = n(815660),
-    g = n(689938),
+    h = n(952802),
+    g = n(388905),
+    m = n(815660),
+    f = n(388032),
     p = n(739017),
-    m = n(113207);
+    _ = n(113207);
 t.Z = () => {
     let [e, t] = r.useState(''),
-        [i, I] = r.useState(''),
-        [f, N] = r.useState(!1),
-        [T, A] = r.useState(!1),
-        [x, C] = r.useState(null),
-        [R, S] = r.useState(null),
-        O = (0, l.e7)([d.Z], () => d.Z.getCountryCode()),
-        Z = O.code.split(' ')[0],
-        v = async () => {
+        [s, x] = r.useState(''),
+        [E, v] = r.useState(!1),
+        [I, b] = r.useState(!1),
+        [N, C] = r.useState(null),
+        [S, T] = r.useState(null),
+        A = (0, l.e7)([d.Z], () => d.Z.getCountryCode()),
+        Z = A.code.split(' ')[0],
+        j = async () => {
             try {
                 await c.Z.resendCode(e);
             } catch (e) {
-                S(e.body.message);
+                T(e.body.message);
             }
         },
-        b = async () => {
-            N(!0);
+        R = async () => {
+            v(!0);
             try {
-                let { token: t } = await c.Z.verifyPhone(Z + e, i);
-                C(null), S(null), A(!0), c.Z.validatePhoneForSupport(t);
+                let { token: t } = await c.Z.verifyPhone(Z + e, s);
+                C(null), T(null), b(!0), c.Z.validatePhoneForSupport(t);
             } catch (e) {
-                e.body.message ? (C(null), S(e.body.message)) : (C(e.body.phone), S(e.body.code));
+                e.body.message ? (C(null), T(e.body.message)) : (C(e.body.phone), T(e.body.code));
             } finally {
-                N(!1);
+                v(!1);
             }
         },
-        L = (0, s.jsxs)(h.ZP, {
+        O = (0, i.jsxs)(g.ZP, {
             children: [
-                (0, s.jsx)(h.Ee, { src: n(292824) }),
-                (0, s.jsxs)(h.Dx, {
-                    className: a()(m.marginTop20, p.flex, p.justifyCenter, p.alignCenter),
+                (0, i.jsx)(g.Ee, { src: n(292824) }),
+                (0, i.jsxs)(g.Dx, {
+                    className: a()(_.marginTop20, p.flex, p.justifyCenter, p.alignCenter),
                     children: [
-                        g.Z.Messages.MEMBER_VERIFICATION_PHONE_VERIFIED,
-                        (0, s.jsx)(o.CircleCheckIcon, {
+                        f.intl.string(f.t.WWzQtb),
+                        (0, i.jsx)(o.CircleCheckIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: m.marginLeft8
+                            className: _.marginLeft8
                         })
                     ]
                 })
             ]
         });
-    return T
-        ? L
-        : (0, s.jsxs)(h.ZP, {
+    return I
+        ? O
+        : (0, i.jsxs)(g.ZP, {
               children: [
-                  (0, s.jsx)(h.Dx, { children: g.Z.Messages.ENTER_CODE }),
-                  (0, s.jsx)(h.DK, {
-                      className: m.marginTop8,
-                      children: g.Z.Messages.VERIFY_PHONE_FOR_SUPPORT
+                  (0, i.jsx)(g.Dx, { children: f.intl.string(f.t.o4JNrK) }),
+                  (0, i.jsx)(g.DK, {
+                      className: _.marginTop8,
+                      children: f.intl.string(f.t.y0tVbm)
                   }),
-                  (0, s.jsxs)(h.gO, {
-                      className: m.marginTop20,
+                  (0, i.jsxs)(g.gO, {
+                      className: _.marginTop20,
                       children: [
-                          (0, s.jsx)(_.Z, {
-                              label: g.Z.Messages.FORM_LABEL_PHONE_NUMBER,
-                              alpha2: O.alpha2,
+                          (0, i.jsx)(h.Z, {
+                              label: f.intl.string(f.t.eJnn09),
+                              alpha2: A.alpha2,
                               countryCode: Z,
                               value: e,
                               autoComplete: 'off',
                               spellCheck: 'false',
                               onChange: t,
                               forceMode: u.Nz.PHONE,
-                              error: x
+                              error: N
                           }),
-                          (0, s.jsx)(h.II, {
-                              className: m.marginTop20,
-                              label: g.Z.Messages.CONFIRMATION_CODE,
-                              value: i,
-                              onChange: I,
-                              maxLength: E.z,
-                              error: R
+                          (0, i.jsx)(g.II, {
+                              className: _.marginTop20,
+                              label: f.intl.string(f.t.OdzNbm),
+                              value: s,
+                              onChange: x,
+                              maxLength: m.z,
+                              error: S
                           }),
-                          (0, s.jsx)(h.zx, {
-                              size: h.zx.Sizes.SMALL,
-                              look: h.zx.Looks.LINK,
-                              onClick: v,
-                              children: g.Z.Messages.RESEND_CODE
+                          (0, i.jsx)(g.zx, {
+                              size: g.zx.Sizes.SMALL,
+                              look: g.zx.Looks.LINK,
+                              onClick: j,
+                              children: f.intl.string(f.t['5b60go'])
                           }),
-                          (0, s.jsx)(h.zx, {
-                              className: m.marginTop20,
-                              onClick: b,
-                              submitting: f,
-                              children: g.Z.Messages.DONE
+                          (0, i.jsx)(g.zx, {
+                              className: _.marginTop20,
+                              onClick: R,
+                              submitting: E,
+                              children: f.intl.string(f.t.i4jeWV)
                           })
                       ]
                   })

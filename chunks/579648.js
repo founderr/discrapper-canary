@@ -1,122 +1,122 @@
 n(47120);
-var s,
-    a,
-    i = n(200651),
-    r = n(192379),
-    l = n(442837),
+var i,
+    r,
+    l = n(200651),
+    s = n(192379),
+    a = n(442837),
     o = n(481060),
     c = n(570140),
     d = n(596454),
     u = n(524329),
-    _ = n(823379),
-    I = n(999382),
-    E = n(413584),
-    T = n(689938),
-    m = n(469466),
-    N = n(84011);
-((a = s || (s = {}))[(a.LOADING = 0)] = 'LOADING'), (a[(a.INTRO = 1)] = 'INTRO'), (a[(a.SETTINGS = 2)] = 'SETTINGS');
-let S = (e) => {
-    let { setWelcomeView: t, setShowCreateModal: s } = e,
-        a = [
+    m = n(823379),
+    h = n(999382),
+    g = n(413584),
+    x = n(388032),
+    p = n(469466),
+    f = n(84011);
+((r = i || (i = {}))[(r.LOADING = 0)] = 'LOADING'), (r[(r.INTRO = 1)] = 'INTRO'), (r[(r.SETTINGS = 2)] = 'SETTINGS');
+let C = (e) => {
+    let { setWelcomeView: t, setShowCreateModal: i } = e,
+        r = [
             {
                 emoji: '\uD83D\uDCAC',
-                description: T.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_DESCRIPTION_1,
-                name: T.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_NAME_1
+                description: x.intl.string(x.t['s/ent7']),
+                name: x.intl.string(x.t['v/gQ4e'])
             },
             {
                 emoji: '\uD83C\uDFF9',
-                description: T.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_DESCRIPTION_2,
-                name: T.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_NAME_2
+                description: x.intl.string(x.t.Y9So0N),
+                name: x.intl.string(x.t['7mUf0d'])
             },
             {
                 emoji: '\uD83D\uDDDE',
-                description: T.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_DESCRIPTION_3,
-                name: T.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_NAME_3
+                description: x.intl.string(x.t.wsJcws),
+                name: x.intl.string(x.t.vrGLjo)
             }
         ];
-    return (0, i.jsxs)(o.FormSection, {
-        title: T.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME,
+    return (0, l.jsxs)(o.FormSection, {
+        title: x.intl.string(x.t['2rkmDg']),
         tag: 'h1',
         children: [
-            (0, i.jsxs)('div', {
-                className: m.welcomeDescription,
+            (0, l.jsxs)('div', {
+                className: p.welcomeDescription,
                 children: [
-                    (0, i.jsx)(o.Text, {
+                    (0, l.jsx)(o.Text, {
                         variant: 'text-sm/normal',
-                        children: T.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_INTRO_TEXT.format()
+                        children: x.intl.format(x.t.a59UeH, {})
                     }),
-                    (0, i.jsx)(o.Button, {
+                    (0, l.jsx)(o.Button, {
                         onClick: () => {
-                            s(!0), t(2);
+                            i(!0), t(2);
                         },
-                        children: T.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_INTRO_BUTTON
+                        children: x.intl.string(x.t.RWdjPz)
                     })
                 ]
             }),
-            (0, i.jsxs)('div', {
-                className: m.exampleContainer,
+            (0, l.jsxs)('div', {
+                className: p.exampleContainer,
                 children: [
-                    (0, i.jsxs)('div', {
-                        className: m.exampleWumpus,
+                    (0, l.jsxs)('div', {
+                        className: p.exampleWumpus,
                         children: [
-                            (0, i.jsx)('img', {
-                                className: m.wumpus,
+                            (0, l.jsx)('img', {
+                                className: p.wumpus,
                                 alt: '',
                                 src: n(663346)
                             }),
-                            (0, i.jsx)('div', { className: m.tooltipPointer }),
-                            (0, i.jsx)('div', {
-                                className: m.tooltip,
-                                children: T.Z.Messages.GUILD_SETTINGS_EXAMPLE_TOOLTIP
+                            (0, l.jsx)('div', { className: p.tooltipPointer }),
+                            (0, l.jsx)('div', {
+                                className: p.tooltip,
+                                children: x.intl.string(x.t.aHNFSE)
                             })
                         ]
                     }),
-                    (0, i.jsxs)('div', {
-                        className: m.exampleModal,
+                    (0, l.jsxs)('div', {
+                        className: p.exampleModal,
                         children: [
-                            (0, i.jsx)('img', {
+                            (0, l.jsx)('img', {
                                 alt: '',
-                                className: N.guildIcon,
+                                className: f.guildIcon,
                                 src: n(691466),
                                 width: 64,
                                 height: 64
                             }),
-                            (0, i.jsx)(o.Heading, {
+                            (0, l.jsx)(o.Heading, {
                                 variant: 'heading-xl/semibold',
-                                className: m.header,
-                                children: T.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_TITLE.format()
+                                className: p.header,
+                                children: x.intl.format(x.t['5NJlXl'], {})
                             }),
-                            (0, i.jsx)(o.Text, {
+                            (0, l.jsx)(o.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                className: N.guildDescription,
-                                children: T.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_DESCRIPTION
+                                className: f.guildDescription,
+                                children: x.intl.string(x.t.Xvsuk5)
                             }),
-                            (0, i.jsx)(o.FormTitle, {
-                                className: N.choiceHeader,
-                                children: T.Z.Messages.WELCOME_SCREEN_CHOICE_HEADER
+                            (0, l.jsx)(o.FormTitle, {
+                                className: f.choiceHeader,
+                                children: x.intl.string(x.t['haj5+v'])
                             }),
-                            (0, i.jsx)('div', {
-                                className: N.options,
-                                children: a.map((e) =>
-                                    (0, i.jsxs)(
+                            (0, l.jsx)('div', {
+                                className: f.options,
+                                children: r.map((e) =>
+                                    (0, l.jsxs)(
                                         'div',
                                         {
-                                            className: m.optionContainer,
+                                            className: p.optionContainer,
                                             children: [
-                                                (0, i.jsx)(d.Z, {
+                                                (0, l.jsx)(d.Z, {
                                                     emojiName: e.emoji,
-                                                    className: N.optionEmoji
+                                                    className: f.optionEmoji
                                                 }),
-                                                (0, i.jsxs)('div', {
-                                                    className: N.optionTextContainer,
+                                                (0, l.jsxs)('div', {
+                                                    className: f.optionTextContainer,
                                                     children: [
-                                                        (0, i.jsx)(o.Text, {
+                                                        (0, l.jsx)(o.Text, {
                                                             variant: 'text-md/semibold',
-                                                            className: N.channelDescription,
+                                                            className: f.channelDescription,
                                                             children: e.description
                                                         }),
-                                                        (0, i.jsx)(o.Text, {
+                                                        (0, l.jsx)(o.Text, {
                                                             variant: 'text-xs/normal',
                                                             color: 'header-secondary',
                                                             children: '#'.concat(e.name)
@@ -137,11 +137,11 @@ let S = (e) => {
     });
 };
 t.Z = () => {
-    let { guild: e } = (0, l.e7)([I.Z], () => I.Z.getProps()),
-        [t, n] = r.useState(0),
-        [s, a] = r.useState(!1);
+    let { guild: e } = (0, a.e7)([h.Z], () => h.Z.getProps()),
+        [t, n] = s.useState(0),
+        [i, r] = s.useState(!1);
     switch (
-        (r.useEffect(() => {
+        (s.useEffect(() => {
             null != e &&
                 c.Z.wait(() => {
                     (0, u.RM)(e.id).then((e) => {
@@ -152,18 +152,18 @@ t.Z = () => {
         t)
     ) {
         case 0:
-            return (0, i.jsx)(o.Spinner, { type: o.Spinner.Type.SPINNING_CIRCLE });
+            return (0, l.jsx)(o.Spinner, { type: o.Spinner.Type.SPINNING_CIRCLE });
         case 1:
-            return (0, i.jsx)(S, {
+            return (0, l.jsx)(C, {
                 setWelcomeView: n,
-                setShowCreateModal: a
+                setShowCreateModal: r
             });
         case 2:
-            return (0, i.jsx)(E.Z, {
+            return (0, l.jsx)(g.Z, {
                 guild: e,
-                showCreateModal: s
+                showCreateModal: i
             });
         default:
-            return (0, _.vE)(t);
+            return (0, m.vE)(t);
     }
 };

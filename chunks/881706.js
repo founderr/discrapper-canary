@@ -37,8 +37,8 @@ function s(e) {
         }
     }
     if (null == c) return null;
-    let _ = c.split('.');
-    if (_.length < 2) return null;
-    let E = null === (t = _.pop()) || void 0 === t ? void 0 : t.toLowerCase();
-    return null != E && i.has(E) ? E : null;
+    let f = c.split('.');
+    if (f.length < 2) return null;
+    let _ = null === (t = f.pop()) || void 0 === t ? void 0 : t.toLowerCase();
+    return null != _ && i.has(_) ? _ : null;
 }

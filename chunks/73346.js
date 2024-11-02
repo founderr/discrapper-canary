@@ -3,19 +3,19 @@ n.d(t, {
         return C;
     },
     Kb: function () {
-        return R;
+        return y;
     },
     Ww: function () {
-        return D;
+        return O;
     },
     ZI: function () {
-        return A;
+        return T;
     },
     _W: function () {
-        return N;
+        return b;
     },
     uF: function () {
-        return O;
+        return A;
     }
 }),
     n(653041),
@@ -32,22 +32,22 @@ var r = n(392711),
     u = n(873546),
     c = n(544891),
     d = n(355467),
-    _ = n(134432),
-    E = n(351402),
-    f = n(853872),
-    h = n(78839),
-    p = n(526167),
-    I = n(630388),
-    m = n(823379);
+    f = n(134432),
+    _ = n(351402),
+    h = n(853872),
+    p = n(78839),
+    m = n(526167),
+    g = n(630388),
+    E = n(823379);
 n(358085);
-var T = n(709054),
-    S = n(981631);
-n(689938), l().shim();
-let g = !u.tq && !u.Em && -1 !== (0, p.vu)();
-function A(e, t) {
+var v = n(709054),
+    I = n(981631);
+n(388032), l().shim();
+let S = !u.tq && !u.Em && -1 !== (0, m.vu)();
+function T(e, t) {
     let { analyticsSource: n, analyticsProperties: r, storeListingId: i, slug: a, channelId: s, guildId: o } = t;
     return {
-        pathname: null != s && null != o ? S.Z5c.CHANNEL(o, s, e) : S.Z5c.APPLICATION_STORE_LISTING_SKU(e, a),
+        pathname: null != s && null != o ? I.Z5c.CHANNEL(o, s, e) : I.Z5c.APPLICATION_STORE_LISTING_SKU(e, a),
         state: {
             analyticsSource: n,
             analyticsProperties: r
@@ -55,7 +55,7 @@ function A(e, t) {
         search: null != i ? '?store_listing_id='.concat(i) : ''
     };
 }
-function N(e, t, n, r) {
+function b(e, t, n, r) {
     var i;
     let a;
     let s = window.GLOBAL_ENV.CDN_HOST;
@@ -71,7 +71,7 @@ function N(e, t, n, r) {
             default:
                 r = 'webp';
         }
-    'webp' === r && !g && (r = 'png');
+    'webp' === r && !S && (r = 'png');
     let o = 'string' == typeof t ? t : t.id,
         l = ((i = 'https:'), 'https:');
     return (
@@ -81,24 +81,24 @@ function N(e, t, n, r) {
                 : ''
                       .concat(l)
                       .concat(window.GLOBAL_ENV.API_ENDPOINT)
-                      .concat(S.ANM.STORE_ASSET(e, o, r))),
-        null != n && (a += '?size='.concat((0, _.oO)(n * (0, _.x_)()))),
+                      .concat(I.ANM.STORE_ASSET(e, o, r))),
+        null != n && (a += '?size='.concat((0, f.oO)(n * (0, f.x_)()))),
         a
     );
 }
-async function R(e) {
+async function y(e) {
     var t, n, r, i;
     let a = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     if (a) {
         let e = [];
-        !f.Z.hasFetchedPaymentSources && e.push(null !== (n = E.Z.paymentSourcesFetchRequest) && void 0 !== n ? n : (0, d.tZ)()),
-            !E.Z.ipCountryCodeLoaded && e.push((0, d.GE)()),
+        !h.Z.hasFetchedPaymentSources && e.push(null !== (n = _.Z.paymentSourcesFetchRequest) && void 0 !== n ? n : (0, d.tZ)()),
+            !_.Z.ipCountryCodeLoaded && e.push((0, d.GE)()),
             e.push(
                 new Promise(async (e) => {
-                    if (h.ZP.hasFetchedSubscriptions()) e();
-                    else if (E.Z.isSubscriptionFetching) {
+                    if (p.ZP.hasFetchedSubscriptions()) e();
+                    else if (_.Z.isSubscriptionFetching) {
                         let t = () => {
-                            E.Z.isSubscriptionFetching ? setTimeout(t, 50) : e();
+                            _.Z.isSubscriptionFetching ? setTimeout(t, 50) : e();
                         };
                         t();
                     } else await (0, d.jg)(), e();
@@ -106,10 +106,10 @@ async function R(e) {
             ),
             await Promise.allSettled(e);
     }
-    let s = f.Z.getDefaultBillingCountryCode(),
-        o = null !== (r = null === (t = f.Z.defaultPaymentSource) || void 0 === t ? void 0 : t.id) && void 0 !== r ? r : null,
-        l = h.ZP.getPremiumTypeSubscription();
-    null != l && null != l.paymentSourceId && (o = l.paymentSourceId), null === s && (s = null !== (i = E.Z.ipCountryCode) && void 0 !== i ? i : null);
+    let s = h.Z.getDefaultBillingCountryCode(),
+        o = null !== (r = null === (t = h.Z.defaultPaymentSource) || void 0 === t ? void 0 : t.id) && void 0 !== r ? r : null,
+        l = p.ZP.getPremiumTypeSubscription();
+    null != l && null != l.paymentSourceId && (o = l.paymentSourceId), null === s && (s = null !== (i = _.Z.ipCountryCode) && void 0 !== i ? i : null);
     let u = {};
     if ((null != s && (u.country_code = s), null != o && (u.payment_source_id = o), null != s || null != o)) {
         if (
@@ -128,21 +128,21 @@ async function R(e) {
     }
     return c.tn.get(e);
 }
-function O(e, t, n) {
+function A(e, t, n) {
     let r = t.getApplication(e);
     return null == r || null == r.primarySkuId ? null : n.get(r.primarySkuId);
 }
-let v = [];
+let N = [];
 function C(e, t, n, r, a) {
     let s = t.get(e);
-    if (null == s) return v;
+    if (null == s) return N;
     let o = s.applicationId,
         l = [],
         u = [],
         c = (function (e, t, n) {
             var r;
             let i = null !== (r = n.getNowPlaying(e)) && void 0 !== r ? r : {},
-                a = T.default
+                a = v.default
                     .keys(i)
                     .map((e) => {
                         let n = t.getUser(e);
@@ -153,12 +153,12 @@ function C(e, t, n, r, a) {
                                   startTime: i[n.id].startedPlaying
                               };
                     })
-                    .filter(m.lm)
+                    .filter(E.lm)
                     .sort((e, t) => t.startTime - e.startTime);
             return 0 === a.length
                 ? null
                 : {
-                      type: S.AzA.NOW_PLAYING,
+                      type: I.AzA.NOW_PLAYING,
                       userInfo: a
                   };
         })(o, n, r);
@@ -185,12 +185,12 @@ function C(e, t, n, r, a) {
                                   endTime: Date.parse(e.last_played_at)
                               };
                     })
-                    .filter(m.lm)
+                    .filter(E.lm)
                     .sort((e, t) => t.endTime - e.endTime);
                 return 0 === i.length
                     ? null
                     : {
-                          type: S.AzA.EVER_PLAYED,
+                          type: I.AzA.EVER_PLAYED,
                           userInfo: i
                       };
             })(o, n, a);
@@ -199,29 +199,29 @@ function C(e, t, n, r, a) {
     }
     return l;
 }
-let L = [];
-function D(e, t, n) {
+let R = [];
+function O(e, t, n) {
     let r = t.get(e),
         i = n.getForSKU(e);
-    if (null == r || null == i) return L;
+    if (null == r || null == i) return R;
     let a = [];
-    (0, I.yE)(r.flags, S.l4R.HAS_FREE_PREMIUM_CONTENT) && a.push({ type: S.AzA.HAS_FREE_PREMIUM_CONTENT });
+    (0, g.yE)(r.flags, I.l4R.HAS_FREE_PREMIUM_CONTENT) && a.push({ type: I.AzA.HAS_FREE_PREMIUM_CONTENT });
     let o = r.releaseDate;
     return (
         null != o &&
             3 > s()().diff(o, 'months') &&
-            (r.accessType === S.kGb.EARLY_ACCESS
+            (r.accessType === I.kGb.EARLY_ACCESS
                 ? a.push({
-                      type: S.AzA.EARLY_ACCESS,
+                      type: I.AzA.EARLY_ACCESS,
                       releaseDate: o
                   })
                 : a.push({
-                      type: S.AzA.RECENT_RELEASE_DATE,
+                      type: I.AzA.RECENT_RELEASE_DATE,
                       releaseDate: o
                   })),
         null != i.flavorText &&
             a.push({
-                type: S.AzA.FLAVOR_TEXT,
+                type: I.AzA.FLAVOR_TEXT,
                 flavorText: i.flavorText
             }),
         a

@@ -12,10 +12,10 @@ var r = n(192379),
             i = e.hex,
             a = e.colors,
             d = e.width,
-            _ = e.triangle,
-            E = e.styles,
-            f = e.className,
-            h = (0, s.default)(
+            f = e.triangle,
+            _ = e.styles,
+            h = e.className,
+            p = (0, s.default)(
                 (0, l.Z)(
                     {
                         default: {
@@ -106,15 +106,15 @@ var r = n(192379),
                             }
                         }
                     },
-                    void 0 === E ? {} : E
+                    void 0 === _ ? {} : _
                 ),
                 {
-                    'hide-triangle': 'hide' === _,
-                    'top-left-triangle': 'top-left' === _,
-                    'top-right-triangle': 'top-right' === _
+                    'hide-triangle': 'hide' === f,
+                    'top-left-triangle': 'top-left' === f,
+                    'top-right-triangle': 'top-right' === f
                 }
             ),
-            p = function (e, n) {
+            m = function (e, n) {
                 u.FX(e) &&
                     t(
                         {
@@ -127,33 +127,33 @@ var r = n(192379),
         return r.createElement(
             'div',
             {
-                style: h.card,
-                className: 'twitter-picker ' + (void 0 === f ? '' : f)
+                style: p.card,
+                className: 'twitter-picker ' + (void 0 === h ? '' : h)
             },
-            r.createElement('div', { style: h.triangleShadow }),
-            r.createElement('div', { style: h.triangle }),
+            r.createElement('div', { style: p.triangleShadow }),
+            r.createElement('div', { style: p.triangle }),
             r.createElement(
                 'div',
-                { style: h.body },
+                { style: p.body },
                 (0, o.Z)(a, function (e, t) {
                     return r.createElement(c.m4, {
                         key: t,
                         color: e,
                         hex: e,
-                        style: h.swatch,
-                        onClick: p,
+                        style: p.swatch,
+                        onClick: m,
                         onHover: n,
                         focusStyle: { boxShadow: '0 0 4px ' + e }
                     });
                 }),
-                r.createElement('div', { style: h.hash }, '#'),
+                r.createElement('div', { style: p.hash }, '#'),
                 r.createElement(c.Vm, {
                     label: null,
-                    style: { input: h.input },
+                    style: { input: p.input },
                     value: i.replace('#', ''),
-                    onChange: p
+                    onChange: m
                 }),
-                r.createElement('div', { style: h.clear })
+                r.createElement('div', { style: p.clear })
             )
         );
     };

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return f;
     }
 }),
     n(47120),
@@ -15,19 +15,19 @@ var i = n(442837),
     u = n(594174),
     c = n(231338),
     d = n(952188);
-function _() {
+function f() {
     var e;
     let t = (0, i.e7)([o.default], () => o.default.isIdleStatusIndicatorEnabled),
         n = (0, i.e7)([u.default], () => {
             var e, t;
             return null !== (t = null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t;
         }),
-        [_, E] = (0, i.Wu)([l.Z], () => [l.Z.isIdle(), l.Z.isAFK()]),
-        f = [];
+        [f, _] = (0, i.Wu)([l.Z], () => [l.Z.isIdle(), l.Z.isAFK()]),
+        h = [];
     return (
-        !_ && !E && f.push('ACTIVE'),
-        _ && f.push('IDLE'),
-        E && f.push('AFK'),
+        !f && !_ && h.push('ACTIVE'),
+        f && h.push('IDLE'),
+        _ && h.push('AFK'),
         n && t
             ? (0, r.jsx)(s.ZP, {
                   children: (0, r.jsxs)('div', {
@@ -37,7 +37,7 @@ function _() {
                               className: d.status,
                               children: [
                                   (0, r.jsx)(a.Status, {
-                                      status: f.includes('ACTIVE') ? c.Sk.ONLINE : c.Sk.IDLE,
+                                      status: h.includes('ACTIVE') ? c.Sk.ONLINE : c.Sk.IDLE,
                                       className: d.statusIndicator
                                   }),
                                   (0, r.jsx)(a.Text, {
@@ -48,12 +48,12 @@ function _() {
                                       className: d.statusText,
                                       children: (0, r.jsx)(a.Text, {
                                           variant: 'text-md/bold',
-                                          children: f.join(' + ')
+                                          children: h.join(' + ')
                                       })
                                   })
                               ]
                           }),
-                          _ &&
+                          f &&
                               (0, r.jsxs)(a.Text, {
                                   variant: 'text-md/normal',
                                   children: [

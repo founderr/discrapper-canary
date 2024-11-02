@@ -1,134 +1,134 @@
 t.d(n, {
     K: function () {
-        return M;
+        return A;
     },
     Z: function () {
-        return R;
+        return g;
     }
 }),
     t(789020);
-var a = t(200651);
+var r = t(200651);
 t(192379);
-var s = t(512722),
-    r = t.n(s),
-    i = t(481060),
-    l = t(115130),
+var i = t(512722),
+    a = t.n(i),
+    l = t(481060),
+    s = t(115130),
     o = t(906732),
     c = t(598),
     u = t(630388),
     d = t(74538),
-    _ = t(296848),
-    I = t(244923),
-    E = t(981631),
-    T = t(231338),
-    A = t(689938),
-    N = t(423654),
+    p = t(296848),
+    f = t(244923),
+    m = t(981631),
+    b = t(231338),
+    v = t(388032),
+    h = t(423654),
     P = t(74316);
-function M(e) {
-    let { purchaseType: n, plan: t, premiumSubscription: a, isGift: s, planGroup: i, isPrepaidPaymentSource: l, inReverseTrial: o } = e;
-    if (n === T.GZ.ONE_TIME) return s ? A.Z.Messages.PAYMENT_MODAL_BUTTON_PREMIUM_GIFT : A.Z.Messages.GUILD_PRODUCT_PURCHASE_MODAL_CTA;
-    if ((r()(null != t, 'Subscription plan must be selected to render SubscriptionReviewButton'), s)) return A.Z.Messages.PAYMENT_MODAL_BUTTON_PREMIUM_GIFT;
-    if (o) return A.Z.Messages.BILLING_SELECT_PLAN_PREMIUM_MONTH_TIER_2;
+function A(e) {
+    let { purchaseType: n, plan: t, premiumSubscription: r, isGift: i, planGroup: l, isPrepaidPaymentSource: s, inReverseTrial: o } = e;
+    if (n === b.GZ.ONE_TIME) return i ? v.intl.string(v.t.ouo4FB) : v.intl.string(v.t.ExD0Nj);
+    if ((a()(null != t, 'Subscription plan must be selected to render SubscriptionReviewButton'), i)) return v.intl.string(v.t.ouo4FB);
+    if (o) return v.intl.string(v.t.LQVQIi);
     if ((0, d.PV)(t.id)) {
-        if (l) return A.Z.Messages.BILLING_SELECT_PLAN;
-        if (null != a) return a.isPaused ? A.Z.Messages.RESUME : (0, _.R4)(a, t.id, i) ? A.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE : A.Z.Messages.BILLING_SWITCH_PLAN_CHANGE;
+        if (s) return v.intl.string(v.t.cRCCJy);
+        if (null != r) return r.isPaused ? v.intl.string(v.t.zpi5pq) : (0, p.R4)(r, t.id, l) ? v.intl.string(v.t.IJI7ys) : v.intl.string(v.t.VPuTc3);
         return (0, d.W_)(null, t);
     }
-    return A.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN;
+    return v.intl.string(v.t.YScQSE);
 }
-function p(e, n) {
+function T(e, n) {
     null != e.current && (e.current.scrollIntoView({ behavior: 'smooth' }), n());
 }
-function R(e) {
+function g(e) {
     var n;
-    let { legalTermsNodeRef: t, invoiceError: s, planError: r, disablePurchase: d, flashLegalTerms: _, isSubmitting: T, premiumSubscription: R, isGift: L, planGroup: f, isPrepaid: S, isTrial: C, makePurchase: m, needsPaymentSource: b, inReverseTrial: v, onNext: g } = e,
-        { application: O, selectedPlan: h, hasAcceptedTerms: U, purchaseType: y, paymentSourceId: B, activeSubscription: x, devShelfFetchState: Z } = (0, c.usePaymentContext)(),
-        G = M({
-            purchaseType: y,
-            plan: h,
-            premiumSubscription: R,
-            isGift: L,
-            planGroup: f,
-            isPrepaidPaymentSource: S,
-            inReverseTrial: v
+    let { legalTermsNodeRef: t, invoiceError: i, planError: a, disablePurchase: d, flashLegalTerms: p, isSubmitting: b, premiumSubscription: g, isGift: y, planGroup: E, isPrepaid: I, isTrial: x, makePurchase: N, needsPaymentSource: _, inReverseTrial: C, onNext: R } = e,
+        { application: S, selectedPlan: M, hasAcceptedTerms: j, purchaseType: L, paymentSourceId: k, activeSubscription: O, devShelfFetchState: U } = (0, c.usePaymentContext)(),
+        B = A({
+            purchaseType: L,
+            plan: M,
+            premiumSubscription: g,
+            isGift: y,
+            planGroup: E,
+            isPrepaidPaymentSource: I,
+            inReverseTrial: C
         }),
-        { analyticsLocations: D } = (0, o.ZP)();
-    if (null != s || null != r || d)
-        return (0, a.jsx)(i.Button, {
-            color: i.Button.Colors.GREEN,
+        { analyticsLocations: Z } = (0, o.ZP)();
+    if (null != i || null != a || d)
+        return (0, r.jsx)(l.Button, {
+            color: l.Button.Colors.GREEN,
             disabled: !0,
-            children: G
+            children: B
         });
-    if (b)
-        return (0, a.jsx)(i.Tooltip, {
-            text: A.Z.Messages.BILLING_SELECT_PAYMENT_SOURCE_TOOLTIP,
+    if (_)
+        return (0, r.jsx)(l.Tooltip, {
+            text: v.intl.string(v.t.L7jbQU),
             children: (e) =>
-                (0, a.jsx)(i.Button, {
+                (0, r.jsx)(l.Button, {
                     ...e,
-                    color: i.Button.Colors.GREEN,
+                    color: l.Button.Colors.GREEN,
                     type: 'submit',
                     'data-testid': 'submitButton',
                     disabled: !0,
-                    children: G
+                    children: B
                 })
         });
-    if ((0, u.yE)(null !== (n = null == O ? void 0 : O.flags) && void 0 !== n ? n : 0, E.udG.EMBEDDED) && Z === l.O.LOADING)
-        return (0, a.jsx)(i.Tooltip, {
-            text: A.Z.Messages.BILLING_LOADING_DEVELOPER_ACTIVITY_SHELF,
+    if ((0, u.yE)(null !== (n = null == S ? void 0 : S.flags) && void 0 !== n ? n : 0, m.udG.EMBEDDED) && U === s.O.LOADING)
+        return (0, r.jsx)(l.Tooltip, {
+            text: v.intl.string(v.t.cjA5tr),
             children: (e) =>
-                (0, a.jsx)(i.Button, {
+                (0, r.jsx)(l.Button, {
                     ...e,
-                    color: i.Button.Colors.GREEN,
+                    color: l.Button.Colors.GREEN,
                     type: 'submit',
                     'data-testid': 'submitButton',
                     disabled: !0,
-                    children: G
+                    children: B
                 })
         });
-    else if (C)
-        return (0, a.jsxs)(i.ShinyButton, {
-            innerClassName: N.innerButton,
-            'data-testid': U ? 'purchase' : 'submitButton',
-            onClick: U ? m : () => p(t, _),
-            color: i.Button.Colors.GREEN,
-            submitting: T,
+    else if (x)
+        return (0, r.jsxs)(l.ShinyButton, {
+            innerClassName: h.innerButton,
+            'data-testid': j ? 'purchase' : 'submitButton',
+            onClick: j ? N : () => T(t, p),
+            color: l.Button.Colors.GREEN,
+            submitting: b,
             children: [
-                (0, a.jsx)('img', {
+                (0, r.jsx)('img', {
                     alt: '',
-                    className: N.nitroIcon,
+                    className: h.nitroIcon,
                     src: P
                 }),
-                G
+                B
             ]
         });
-    else if (!U)
-        return (0, a.jsx)(i.Tooltip, {
-            text: A.Z.Messages.BILLING_ACCEPT_TERMS_PAID_SERVICES_TOOLTIP,
+    else if (!j)
+        return (0, r.jsx)(l.Tooltip, {
+            text: v.intl.string(v.t.XdvBLS),
             children: (e) =>
-                (0, a.jsx)(i.Button, {
+                (0, r.jsx)(l.Button, {
                     ...e,
-                    color: i.Button.Colors.GREEN,
+                    color: l.Button.Colors.GREEN,
                     type: 'submit',
-                    onClick: () => p(t, _),
+                    onClick: () => T(t, p),
                     'data-testid': 'submitButton',
-                    children: G
+                    children: B
                 })
         });
-    else if (v && null != x && null != B)
-        return (0, a.jsx)(I.Z, {
-            activeSubscription: x,
-            onNext: g,
-            isSubmitting: T,
-            paymentSourceId: B,
-            buttonLabel: G,
-            analyticsLocations: D
+    else if (C && null != O && null != k)
+        return (0, r.jsx)(f.Z, {
+            activeSubscription: O,
+            onNext: R,
+            isSubmitting: b,
+            paymentSourceId: k,
+            buttonLabel: B,
+            analyticsLocations: Z
         });
     else
-        return (0, a.jsx)(i.Button, {
+        return (0, r.jsx)(l.Button, {
             'data-testid': 'purchase',
-            onClick: m,
-            color: i.Button.Colors.GREEN,
-            submitting: T,
-            children: G
+            onClick: N,
+            color: l.Button.Colors.GREEN,
+            submitting: b,
+            children: B
         });
 }

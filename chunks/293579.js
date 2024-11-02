@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     header: 'header_aa7dff',
     closeButton: 'closeButton_aa7dff',
     closeIcon: 'closeIcon_aa7dff',

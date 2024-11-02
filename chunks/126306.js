@@ -1,6 +1,6 @@
 n.d(t, {
     l: function () {
-        return f;
+        return h;
     }
 }),
     n(47120);
@@ -14,12 +14,12 @@ var r,
     c = n(186325),
     d = n(647338);
 ((i = r || (r = {}))[(i.TRANSLATE = 1)] = 'TRANSLATE'), (i[(i.SCALE = 2)] = 'SCALE'), (i[(i.FADE = 3)] = 'FADE');
-let _ = Object.freeze({
+let f = Object.freeze({
         1: d.translate,
         2: d.scale,
         3: d.fade
     }),
-    E = Object.freeze({
+    _ = Object.freeze({
         top: d.animatorTop,
         bottom: d.animatorBottom,
         left: d.animatorLeft,
@@ -27,38 +27,38 @@ let _ = Object.freeze({
         center: d.animatorCenter,
         window_center: d.animatorCenter
     });
-function f(e) {
+function h(e) {
     let { position: t, type: n, children: r } = e,
         { reducedMotion: i } = s.useContext(c.S),
         o = i.enabled ? 3 : n,
-        [f, h] = s.useState(null != t),
-        [p] = s.useState(() => new u.V7()),
-        [I, m] = s.useState(!0),
-        T = s.useRef(null);
+        [h, p] = s.useState(null != t),
+        [m] = s.useState(() => new u.V7()),
+        [g, E] = s.useState(!0),
+        v = s.useRef(null);
     return (
         s.useLayoutEffect(() => {
             var e;
-            null === (e = T.current) ||
+            null === (e = v.current) ||
                 void 0 === e ||
                 e.addEventListener('transitionend', () => {
-                    m(!1);
+                    E(!1);
                 }),
                 setTimeout(() => {
-                    m(!1);
+                    E(!1);
                 }, 200);
         }, []),
-        s.useEffect(() => () => p.stop(), [p]),
+        s.useEffect(() => () => m.stop(), [m]),
         s.useEffect(() => {
-            null != t && p.start(10, () => h(!0));
-        }, [t, p]),
+            null != t && m.start(10, () => p(!0));
+        }, [t, m]),
         (0, a.jsx)('div', {
-            'data-popout-animating': I,
-            className: l()(null != t ? E[t] : null, {
-                [_[o]]: null != t,
-                [d.didRender]: f
+            'data-popout-animating': g,
+            className: l()(null != t ? _[t] : null, {
+                [f[o]]: null != t,
+                [d.didRender]: h
             }),
             children: r
         })
     );
 }
-f.Types = r;
+h.Types = r;

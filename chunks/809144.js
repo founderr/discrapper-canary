@@ -1,26 +1,26 @@
-s.d(n, {
+t.d(n, {
     P: function () {
         return u;
     }
 });
-var t = s(200651);
-s(192379);
-var l = s(481060),
-    i = s(609194),
-    r = s(669079),
-    a = s(987209),
-    c = s(689938),
-    o = s(473156);
+var i = t(200651);
+t(192379);
+var l = t(481060),
+    r = t(609194),
+    s = t(669079),
+    a = t(987209),
+    c = t(388032),
+    o = t(473156);
 function u(e) {
-    let { giftMessage: n = c.Z.Messages.PREMIUM_PAYMENT_IS_GIFT } = e,
-        { isGift: s, giftRecipient: u } = (0, a.wD)();
-    return !s || (0, r.pO)(u)
+    let { giftMessage: n = c.intl.string(c.t.DrgnS0) } = e,
+        { isGift: t, giftRecipient: u } = (0, a.wD)();
+    return !t || (0, s.pO)(u)
         ? null
-        : (0, t.jsx)(i.Z, {
+        : (0, i.jsx)(r.Z, {
               className: o.paymentNote,
-              iconSize: i.Z.Sizes.SMALL,
+              iconSize: r.Z.Sizes.SMALL,
               icon: l.GiftIcon,
-              color: null == n ? i.Z.Colors.PRIMARY : i.Z.Colors.SECONDARY,
+              color: null == n ? r.Z.Colors.PRIMARY : r.Z.Colors.SECONDARY,
               children: n
           });
 }

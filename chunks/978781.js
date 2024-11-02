@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return w;
+        return P;
     },
     _: function () {
         return r;
@@ -17,64 +17,64 @@ var r,
     u = n(278074),
     c = n(442837),
     d = n(481060),
-    _ = n(230711),
-    E = n(351773),
-    f = n(100527),
-    h = n(94795),
-    p = n(327943),
-    I = n(539873),
-    m = n(207164),
-    T = n(238302),
-    S = n(514361),
-    g = n(572397),
-    A = n(705262),
-    N = n(436774),
-    R = n(768762),
-    O = n(197115),
-    v = n(727939),
+    f = n(230711),
+    _ = n(351773),
+    h = n(100527),
+    p = n(94795),
+    m = n(327943),
+    g = n(539873),
+    E = n(207164),
+    v = n(238302),
+    I = n(514361),
+    S = n(572397),
+    T = n(705262),
+    b = n(436774),
+    y = n(768762),
+    A = n(197115),
+    N = n(727939),
     C = n(981631),
-    L = n(921944),
-    D = n(474936),
-    y = n(689938),
-    b = n(556120);
-function M() {
-    let e = (0, g.q)();
+    R = n(921944),
+    O = n(474936),
+    D = n(388032),
+    L = n(556120);
+function x() {
+    let e = (0, S.q)();
     return (
-        s.useEffect(() => ((0, T.Kq)(), e(C.rMx.CLIENT_THEME_PREVIEW_VIEWED), () => e(C.rMx.CLIENT_THEME_PREVIEW_CLOSED)), [e]),
-        (0, a.jsx)(A.ZP, {
-            type: A.yH.EDITOR,
-            children: (0, a.jsx)(A.ZP.BasicAndGradient, { isEditor: !0 })
+        s.useEffect(() => ((0, v.Kq)(), e(C.rMx.CLIENT_THEME_PREVIEW_VIEWED), () => e(C.rMx.CLIENT_THEME_PREVIEW_CLOSED)), [e]),
+        (0, a.jsx)(T.ZP, {
+            type: T.yH.EDITOR,
+            children: (0, a.jsx)(T.ZP.BasicAndGradient, { isEditor: !0 })
         })
     );
 }
-function P() {
-    let e = (0, m.Z)();
+function w() {
+    let e = (0, E.Z)();
     return (
         s.useEffect(() => {
-            (0, h.nJ)(), e();
+            (0, p.nJ)(), e();
         }, [e]),
-        (0, a.jsx)(I.Z, { isEditor: !0 })
+        (0, a.jsx)(g.Z, { isEditor: !0 })
     );
 }
-function U(e) {
+function M(e) {
     let { tab: t, isPreview: r, isCoachmark: i, onClose: o } = e,
         c = s.useCallback(() => {
-            o(), !i && _.Z.open();
+            o(), !i && f.Z.open();
         }, [o, i]),
-        E = (0, u.EQ)({
+        _ = (0, u.EQ)({
             isPreview: r,
             isCoachmark: i
         })
-            .with({ isCoachmark: !0 }, () => y.Z.Messages.CLOSE)
-            .with({ isPreview: !0 }, () => y.Z.Messages.CLIENT_THEMES_EDITOR_EXIT_PREVIEW)
-            .otherwise(() => y.Z.Messages.CLIENT_THEMES_EDITOR_RETURN_TO_SETTINGS),
-        h = s.useCallback(() => {
+            .with({ isCoachmark: !0 }, () => D.intl.string(D.t.cpT0Cg))
+            .with({ isPreview: !0 }, () => D.intl.string(D.t['dqH+qq']))
+            .otherwise(() => D.intl.string(D.t.Olc2Ky)),
+        p = s.useCallback(() => {
             if (1 === t) {
                 (0, d.openModalLazy)(async () => {
                     let { default: e } = await n.e('69052').then(n.bind(n, 184250));
                     return (t) =>
                         (0, a.jsx)(e, {
-                            analyticsSource: f.Z.APP_ICON_EDITOR,
+                            analyticsSource: h.Z.APP_ICON_EDITOR,
                             analyticsLocation: { section: C.jXE.SETTINGS_APP_ICONS },
                             ...t
                         });
@@ -86,7 +86,7 @@ function U(e) {
                     let { default: e } = await n.e('68192').then(n.bind(n, 742234));
                     return (t) =>
                         (0, a.jsx)(e, {
-                            analyticsSource: f.Z.CLIENT_THEMES_EDITOR,
+                            analyticsSource: h.Z.CLIENT_THEMES_EDITOR,
                             analyticsLocation: { section: C.jXE.SETTINGS_CLIENT_THEMES },
                             ...t
                         });
@@ -95,98 +95,98 @@ function U(e) {
             }
         }, [t]);
     return (0, a.jsxs)('div', {
-        className: b.footerContainer,
+        className: L.footerContainer,
         children: [
             r &&
                 (0, a.jsxs)('div', {
-                    className: b.footerLabelContainer,
+                    className: L.footerLabelContainer,
                     children: [
                         (0, a.jsx)(d.NitroWheelIcon, {
-                            className: b.footerNitro,
+                            className: L.footerNitro,
                             size: 'xs',
-                            color: N.JX.PREMIUM_TIER_2
+                            color: b.JX.PREMIUM_TIER_2
                         }),
                         (0, a.jsx)(d.Text, {
-                            className: b.footerText,
+                            className: L.footerText,
                             variant: 'text-sm/medium',
-                            children: y.Z.Messages.PREMIUM_UPSELL_MAKE_DISCORD_YOURS.format({ onClick: h })
+                            children: D.intl.format(D.t.x2dQxM, { onClick: p })
                         })
                     ]
                 }),
             (0, a.jsxs)('div', {
-                className: b.footerButtonContainer,
+                className: L.footerButtonContainer,
                 children: [
                     (0, a.jsx)('div', {
                         children: (0, a.jsx)(d.Button, {
-                            className: l()(b.footerButton, b.footerButtonBack),
+                            className: l()(L.footerButton, L.footerButtonBack),
                             color: d.ButtonColors.PRIMARY,
                             size: d.Button.Sizes.NONE,
                             onClick: c,
-                            'aria-label': E,
-                            children: (0, a.jsx)(R.Z, { direction: R.Z.Directions.LEFT })
+                            'aria-label': _,
+                            children: (0, a.jsx)(y.Z, { direction: y.Z.Directions.LEFT })
                         })
                     }),
                     r &&
-                        (0, a.jsx)(O.Z, {
-                            className: b.footerButton,
-                            subscriptionTier: D.Si.TIER_2,
+                        (0, a.jsx)(A.Z, {
+                            className: L.footerButton,
+                            subscriptionTier: O.Si.TIER_2,
                             showGradient: !0,
                             fullWidth: !0,
-                            buttonText: y.Z.Messages.PREMIUM_UPSELL_GET_NITRO
+                            buttonText: D.intl.string(D.t.pj0XBA)
                         })
                 ]
             })
         ]
     });
 }
-function w(e) {
+function P(e) {
     let { initialTab: t, markAsDismissed: n } = e,
         [r, i] = s.useState(t),
         o = s.useMemo(
             () => [
                 {
-                    name: y.Z.Messages.THEME,
+                    name: D.intl.string(D.t.Ksh3io),
                     value: 0
                 },
                 {
-                    name: y.Z.Messages.USER_SETTINGS_APPEARANCE_IN_APP_ICON_TITLE,
+                    name: D.intl.string(D.t.RPh2oq),
                     value: 1
                 }
             ],
             []
         ),
-        l = (0, c.e7)([S.Z], () => S.Z.isPreview),
-        u = (0, c.e7)([p.Z], () => p.Z.isUpsellPreview),
-        _ = l || u,
-        f = (0, g.J)(),
-        I = s.useCallback(() => {
-            l && f(), u && (0, h.O7)();
-        }, [l, u, f]),
-        m = (0, E.Z)(null, _ ? I : C.dG4),
-        A = s.useCallback(() => {
-            (0, h.G8)(), (0, T.Mo)(), I(), null == n || n(L.L.DISMISS);
-        }, [I, n]);
-    return (0, a.jsx)(v.Z, {
-        className: b.draggableContainer,
+        l = (0, c.e7)([I.Z], () => I.Z.isPreview),
+        u = (0, c.e7)([m.Z], () => m.Z.isUpsellPreview),
+        f = l || u,
+        h = (0, S.J)(),
+        g = s.useCallback(() => {
+            l && h(), u && (0, p.O7)();
+        }, [l, u, h]),
+        E = (0, _.Z)(null, f ? g : C.dG4),
+        T = s.useCallback(() => {
+            (0, p.G8)(), (0, v.Mo)(), g(), null == n || n(R.L.DISMISS);
+        }, [g, n]);
+    return (0, a.jsx)(N.Z, {
+        className: L.draggableContainer,
         children: (0, a.jsxs)('div', {
-            ref: m,
-            className: b.container,
+            ref: E,
+            className: L.container,
             children: [
                 (0, a.jsxs)('div', {
-                    className: b.headerParentContainer,
+                    className: L.headerParentContainer,
                     children: [
                         (0, a.jsxs)('div', {
-                            className: b.headerContainer,
+                            className: L.headerContainer,
                             children: [
                                 (0, a.jsx)(d.Heading, {
                                     variant: 'heading-lg/extrabold',
-                                    children: y.Z.Messages.PREMIUM_UPSELL_FEATURE_CLIENT_THEMES_APP_ICONS_PREVIEW_TITLE
+                                    children: D.intl.string(D.t.viGN6e)
                                 }),
                                 (0, a.jsx)(d.ModalCloseButton, {
-                                    className: b.closeContainer,
-                                    innerClassName: b.closeInner,
+                                    className: L.closeContainer,
+                                    innerClassName: L.closeInner,
                                     withCircleBackground: !0,
-                                    onClick: A
+                                    onClick: T
                                 })
                             ]
                         }),
@@ -202,13 +202,13 @@ function w(e) {
                     ]
                 }),
                 (0, a.jsxs)(d.Scroller, {
-                    className: b.scrollContainer,
-                    children: [0 === r && (0, a.jsx)(M, {}), 1 === r && (0, a.jsx)(P, {})]
+                    className: L.scrollContainer,
+                    children: [0 === r && (0, a.jsx)(x, {}), 1 === r && (0, a.jsx)(w, {})]
                 }),
-                (0, a.jsx)(U, {
+                (0, a.jsx)(M, {
                     tab: r,
-                    isPreview: _,
-                    onClose: A,
+                    isPreview: f,
+                    onClose: T,
                     isCoachmark: !1
                 })
             ]

@@ -1,58 +1,58 @@
-t.d(n, {
+t.d(e, {
     Z: function () {
-        return o;
+        return d;
     }
 }),
     t(653041),
     t(47120);
 var i = t(200651);
 t(192379);
-var a = t(481060),
-    l = t(117984),
-    r = t(593214),
-    u = t(362658),
-    s = t(689938);
-function o(e) {
-    let n = (0, r.Mt)(),
-        t = (0, r.s4)(e.id),
-        o = (0, r.zv)(),
-        { isFavoritesPerk: d } = (0, u.z)('useChannelMoveToCategory');
-    if (__OVERLAY__ || !n || null == t || !d) return null;
-    let [c, _] = (function (e) {
-        let n = [],
+var l = t(481060),
+    r = t(117984),
+    u = t(593214),
+    a = t(362658),
+    o = t(388032);
+function d(n) {
+    let e = (0, u.Mt)(),
+        t = (0, u.s4)(n.id),
+        d = (0, u.zv)(),
+        { isFavoritesPerk: s } = (0, a.z)('useChannelMoveToCategory');
+    if (__OVERLAY__ || !e || null == t || !s) return null;
+    let [c, f] = (function (n) {
+        let e = [],
             t = null;
-        for (let i of e) null == i.id ? (t = i) : n.push(i);
-        return [t, n];
-    })(o.filter((e) => e.id !== (null == t ? void 0 : t.parentId)));
-    function I(e) {
-        null != t && (0, l.uA)(t.id, e);
+        for (let i of n) null == i.id ? (t = i) : e.push(i);
+        return [t, e];
+    })(d.filter((n) => n.id !== (null == t ? void 0 : t.parentId)));
+    function I(n) {
+        null != t && (0, r.uA)(t.id, n);
     }
-    return null == c && 0 === _.length
+    return null == c && 0 === f.length
         ? null
-        : (0, i.jsxs)(a.MenuItem, {
+        : (0, i.jsxs)(l.MenuItem, {
               id: 'move-to-category',
-              label: s.Z.Messages.MOVE_TO,
+              label: o.intl.string(o.t.FAplmp),
               children: [
                   null != c &&
-                      (0, i.jsx)(a.MenuGroup, {
-                          children: (0, i.jsx)(a.MenuItem, {
+                      (0, i.jsx)(l.MenuGroup, {
+                          children: (0, i.jsx)(l.MenuItem, {
                               id: 'favorite-uncategorized',
                               label: c.name,
                               action: () => I(c.id)
                           })
                       }),
-                  _.length > 0 &&
-                      (0, i.jsx)(a.MenuGroup, {
-                          children: _.map((e) => {
-                              let { id: n, name: t } = e;
+                  f.length > 0 &&
+                      (0, i.jsx)(l.MenuGroup, {
+                          children: f.map((n) => {
+                              let { id: e, name: t } = n;
                               return (0, i.jsx)(
-                                  a.MenuItem,
+                                  l.MenuItem,
                                   {
-                                      id: 'favorite-'.concat(n),
+                                      id: 'favorite-'.concat(e),
                                       label: t,
-                                      action: () => I(n)
+                                      action: () => I(e)
                                   },
-                                  n
+                                  e
                               );
                           })
                       })

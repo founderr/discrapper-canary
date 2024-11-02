@@ -1,38 +1,38 @@
-t.d(s, {
+n.d(t, {
     h: function () {
         return d;
     },
     p: function () {
-        return _;
+        return u;
     }
 }),
-    t(47120);
-var n = t(192379),
-    a = t(913527),
-    i = t.n(a),
-    r = t(442837),
-    o = t(314897),
-    l = t(673096),
-    c = t(689938);
+    n(47120);
+var i = n(192379),
+    s = n(913527),
+    r = n.n(s),
+    l = n(442837),
+    a = n(314897),
+    o = n(673096),
+    c = n(388032);
 function d() {
-    let e = (0, r.cj)([l.Z], () => l.Z.getSessions());
-    return n.useMemo(() => {
-        let s = [...e],
-            t = null,
-            n = o.default.getAuthSessionIdHash();
-        if (null != n) {
-            let e = s.findIndex((e) => e.id_hash === n);
-            e >= 0 && (t = s.splice(e, 1)[0]);
+    let e = (0, l.cj)([o.Z], () => o.Z.getSessions());
+    return i.useMemo(() => {
+        let t = [...e],
+            n = null,
+            i = a.default.getAuthSessionIdHash();
+        if (null != i) {
+            let e = t.findIndex((e) => e.id_hash === i);
+            e >= 0 && (n = t.splice(e, 1)[0]);
         }
         return (
-            s.sort((e, s) => s.approx_last_used_time.valueOf() - e.approx_last_used_time.valueOf()),
+            t.sort((e, t) => t.approx_last_used_time.valueOf() - e.approx_last_used_time.valueOf()),
             {
-                currentSession: t,
-                otherSessions: s
+                currentSession: n,
+                otherSessions: t
             }
         );
     }, [e]);
 }
-function _(e) {
-    return (Date.now() - e.valueOf()) / 1000 / 60 / 60 < 1 ? c.Z.Messages.AUTH_SESSIONS_ACTIVE_RECENTLY : i()(e).fromNow();
+function u(e) {
+    return (Date.now() - e.valueOf()) / 1000 / 60 / 60 < 1 ? c.intl.string(c.t.TXCmfH) : r()(e).fromNow();
 }

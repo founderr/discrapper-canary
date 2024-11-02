@@ -9,7 +9,7 @@ n.d(t, {
         return o;
     },
     jx: function () {
-        return _;
+        return f;
     },
     nv: function () {
         return s;
@@ -68,9 +68,9 @@ function c(e) {
     });
 }
 function d(e) {
-    _([e]);
+    f([e]);
 }
-function _(e) {
+function f(e) {
     r.Z.dispatch({
         type: 'LAYOUT_CREATE_WIDGETS',
         widgetConfigs: e

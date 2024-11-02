@@ -3,28 +3,28 @@ n.d(t, {
         return c;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(481060),
-    i = n(449226),
-    r = n(231338),
-    l = n(689938),
+var r = n(481060),
+    l = n(449226),
+    s = n(231338),
+    a = n(388032),
     o = n(176981);
 function c(e) {
     let { title: t, details: n } = e;
-    return (0, s.jsxs)('div', {
+    return (0, i.jsxs)('div', {
         className: o.simpleItemWrapper,
         children: [
-            (0, s.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: o.itemContent,
                 children: [
-                    (0, s.jsx)(a.Heading, {
+                    (0, i.jsx)(r.Heading, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
                         children: t
                     }),
                     'string' == typeof n
-                        ? (0, s.jsx)(a.Text, {
+                        ? (0, i.jsx)(r.Text, {
                               variant: 'text-sm/medium',
                               color: 'header-secondary',
                               children: n
@@ -32,14 +32,14 @@ function c(e) {
                         : n
                 ]
             }),
-            (0, s.jsx)(a.Tooltip, {
+            (0, i.jsx)(r.Tooltip, {
                 tooltipContentClassName: o.tooltip,
-                text: l.Z.Messages.GUILD_SETTINGS_SAFETY_ON_BY_DEFAULT,
+                text: a.intl.string(a.t.NQ4nCg),
                 children: (e) =>
-                    (0, s.jsx)(i.Z, {
+                    (0, i.jsx)(l.Z, {
                         checked: !0,
                         disabled: !0,
-                        onChange: r.dG,
+                        onChange: s.dG,
                         className: o.bringToFront,
                         tooltipProps: e
                     })

@@ -8,7 +8,7 @@ var r,
 let u = {},
     c = {},
     d = new Set();
-class _ extends (r = o.ZP.Store) {
+class f extends (r = o.ZP.Store) {
     getCompletedActions(e) {
         return null == e ? null : c[e];
     }
@@ -26,7 +26,7 @@ class _ extends (r = o.ZP.Store) {
     }
 }
 (s = 'GuildOnboardingMemberActionStore'),
-    (a = 'displayName') in (i = _)
+    (a = 'displayName') in (i = f)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -34,7 +34,7 @@ class _ extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new _(l.Z, {
+    (t.Z = new f(l.Z, {
         GUILD_NEW_MEMBER_ACTIONS_FETCH_START: function (e) {
             let { guildId: t } = e;
             d.add(t);

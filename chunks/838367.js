@@ -1,16 +1,16 @@
 var a,
-    i,
     t,
+    i,
     n,
+    r,
     c,
-    d,
-    r = s(442837),
+    d = s(442837),
     o = s(570140),
     u = s(314897),
     h = s(900849);
-((a = c || (c = {})).UNSET = 'unset'), (a.FETCHING = 'fetching'), (a.FAILED = 'failed'), (a.SUCCEEDED = 'succeeded');
+((a = r || (r = {})).UNSET = 'unset'), (a.FETCHING = 'fetching'), (a.FAILED = 'failed'), (a.SUCCEEDED = 'succeeded');
 let m = {};
-class x extends (d = r.ZP.Store) {
+class x extends (c = d.ZP.Store) {
     initialize() {
         this.waitFor(u.default);
     }
@@ -28,14 +28,14 @@ class x extends (d = r.ZP.Store) {
     }
 }
 (n = 'GuildPopoutStore'),
-    (t = 'displayName') in (i = x)
-        ? Object.defineProperty(i, t, {
+    (i = 'displayName') in (t = x)
+        ? Object.defineProperty(t, i, {
               value: n,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[t] = n),
+        : (t[i] = n),
     (l.Z = new x(o.Z, {
         GUILD_POPOUT_FETCH_START: function (e) {
             let { guildId: l } = e;

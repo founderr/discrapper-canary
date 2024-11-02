@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return g;
     }
 });
 var i = n(200651),
-    s = n(192379),
-    a = n(481060),
-    l = n(100527),
-    r = n(367907),
+    l = n(192379),
+    r = n(481060),
+    a = n(100527),
+    s = n(367907),
     o = n(450936),
     c = n(368478),
     u = n(499254),
@@ -15,67 +15,67 @@ var i = n(200651),
     h = n(541716),
     m = n(61356),
     p = n(981631),
-    _ = n(589858);
-function f(e) {
-    let { channel: t, entryPointCommandButtonRef: n, type: a } = e,
-        { isInitialLoading: c, application: m, primaryEntryPointCommand: _ } = (0, o.Z)({ channel: t }),
-        f = null == m ? void 0 : m.id,
-        g = s.useCallback(() => {
-            u.__(d._b.TEXT, h.I.NORMAL, { applicationId: f }),
-                (0, r.yw)(p.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
-                    application_id: f,
-                    location: l.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
+    f = n(589858);
+function g(e) {
+    let { channel: t, entryPointCommandButtonRef: n, type: r } = e,
+        { isInitialLoading: c, application: m, primaryEntryPointCommand: f } = (0, o.Z)({ channel: t }),
+        g = null == m ? void 0 : m.id,
+        x = l.useCallback(() => {
+            u.__(d._b.TEXT, h.I.NORMAL, { applicationId: g }),
+                (0, s.yw)(p.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
+                    application_id: g,
+                    location: a.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
                     source: d._b.TEXT
                 });
-        }, [f]);
+        }, [g]);
     return c || null == m
         ? null
-        : (0, i.jsx)(E, {
+        : (0, i.jsx)(C, {
               channel: t,
               application: m,
-              primaryEntryPointCommand: _,
-              onOpenButtonPress: g,
+              primaryEntryPointCommand: f,
+              onOpenButtonPress: x,
               entryPointCommandButtonRef: n,
-              type: a
+              type: r
           });
 }
-function E(e) {
-    let { channel: t, application: n, primaryEntryPointCommand: s, onOpenButtonPress: l, entryPointCommandButtonRef: r, type: o } = e,
+function C(e) {
+    let { channel: t, application: n, primaryEntryPointCommand: l, onOpenButtonPress: a, entryPointCommandButtonRef: s, type: o } = e,
         {
             isExecutingLaunchInteraction: u,
             buttonText: d,
             hasActiveMatchingEmbeddedActivity: h,
             isEmbeddedApp: p,
-            currentEmbeddedActivity: f,
-            channelRecipientUserId: E,
-            setIsExecutingLaunchInteraction: g,
-            analyticsLocations: C
+            currentEmbeddedActivity: g,
+            channelRecipientUserId: C,
+            setIsExecutingLaunchInteraction: x,
+            analyticsLocations: v
         } = (0, c.Z)({
             channel: t,
-            primaryEntryPointCommand: s,
+            primaryEntryPointCommand: l,
             application: n
         }),
-        I = (0, c.J)({
+        _ = (0, c.J)({
             channel: t,
             application: n,
             isEmbeddedApp: p,
             hasActiveMatchingEmbeddedActivity: h,
-            currentEmbeddedActivity: f,
-            onOpenButtonPress: l,
-            channelRecipientUserId: E,
-            setIsExecutingLaunchInteraction: g,
-            analyticsLocations: C
+            currentEmbeddedActivity: g,
+            onOpenButtonPress: a,
+            channelRecipientUserId: C,
+            setIsExecutingLaunchInteraction: x,
+            analyticsLocations: v
         }),
-        T = h ? a.Button.Colors.RED : a.Button.Colors.BRAND,
-        x = (0, m.Z)({ type: o });
-    return (0, i.jsx)(a.Button, {
-        className: _.entryPointAppCommandButton,
-        size: a.Button.Sizes.LARGE,
-        color: T,
+        I = h ? r.Button.Colors.RED : r.Button.Colors.BRAND,
+        E = (0, m.Z)({ type: o });
+    return (0, i.jsx)(r.Button, {
+        className: f.entryPointAppCommandButton,
+        size: r.Button.Sizes.LARGE,
+        color: I,
         submitting: u,
-        onClick: I,
-        buttonRef: r,
-        disabled: x,
+        onClick: _,
+        buttonRef: s,
+        disabled: E,
         children: d
     });
 }

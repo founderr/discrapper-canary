@@ -1,258 +1,258 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return k;
     }
 }),
     n(47120),
     n(724458);
-var s = n(200651),
-    a = n(192379),
-    i = n(120356),
-    r = n.n(i),
-    l = n(525654),
-    o = n.n(l),
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    s = n.n(l),
+    a = n(525654),
+    o = n.n(a),
     c = n(442837),
     d = n(846519),
     u = n(481060),
-    _ = n(232567),
-    I = n(596454),
-    E = n(410030),
-    T = n(623624),
-    m = n(357156),
-    N = n(208049),
-    S = n(763296),
-    g = n(22382),
-    h = n(747071),
-    C = n(286654),
-    x = n(171368),
-    p = n(430824),
-    R = n(594174),
-    L = n(15385),
-    f = n(768581),
-    O = n(267642),
-    A = n(358085),
-    M = n(51144),
-    D = n(999382),
-    v = n(70409),
-    j = n(981631),
-    Z = n(710111),
-    b = n(689938),
-    U = n(275715);
-let G = A.isPlatformEmbedded || ('Safari' !== o().name && 'Firefox' !== o().name);
-function P() {
-    let e = (0, c.e7)([D.Z], () => D.Z.getProps().guild);
+    m = n(232567),
+    h = n(596454),
+    g = n(410030),
+    x = n(623624),
+    p = n(357156),
+    f = n(208049),
+    C = n(763296),
+    I = n(22382),
+    _ = n(747071),
+    N = n(286654),
+    v = n(171368),
+    T = n(430824),
+    j = n(594174),
+    E = n(15385),
+    S = n(768581),
+    b = n(267642),
+    R = n(358085),
+    Z = n(51144),
+    A = n(999382),
+    L = n(70409),
+    y = n(981631),
+    D = n(710111),
+    O = n(388032),
+    M = n(275715);
+let P = R.isPlatformEmbedded || ('Safari' !== o().name && 'Firefox' !== o().name);
+function k() {
+    let e = (0, c.e7)([A.Z], () => A.Z.getProps().guild);
     return null == e
         ? null
-        : (0, s.jsx)(u.FormSection, {
+        : (0, i.jsx)(u.FormSection, {
               tag: u.FormTitleTags.H1,
-              title: b.Z.Messages.GUILD_SETTINGS_SOUNDBOARD,
-              children: (0, s.jsx)(k, { guild: e })
+              title: O.intl.string(O.t.OWQNYm),
+              children: (0, i.jsx)(F, { guild: e })
           });
 }
-function B(e) {
+function w(e) {
     let { children: t } = e;
-    return (0, s.jsx)(u.Heading, {
-        className: U.tableHeader,
+    return (0, i.jsx)(u.Heading, {
+        className: M.tableHeader,
         variant: 'heading-sm/semibold',
         color: 'header-secondary',
         children: t
     });
 }
-function y(e) {
-    let { currentTier: t, availableSounds: n, guildId: a } = e,
-        i = p.Z.getGuild(a),
-        r = (0, O.U2)(t, i);
+function B(e) {
+    let { currentTier: t, availableSounds: n, guildId: r } = e,
+        l = T.Z.getGuild(r),
+        s = (0, b.U2)(t, l);
     return 0 === t
-        ? (0, s.jsx)(s.Fragment, {
-              children: b.Z.Messages.GUILD_SETTINGS_SOUND_LIST_SOUNDS_AVAILABLE.format({
+        ? (0, i.jsx)(i.Fragment, {
+              children: O.intl.format(O.t['7E9Hd3'], {
                   slots: n,
-                  totalSlots: r
+                  totalSlots: s
               })
           })
-        : (0, s.jsxs)(s.Fragment, {
+        : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, s.jsx)(u.Tooltip, {
-                      text: b.Z.Messages.GUILD_SETTINGS_SOUNDBOARD_BOOST_LEVEL.format({ currentBoostLevel: t }),
+                  (0, i.jsx)(u.Tooltip, {
+                      text: O.intl.formatToPlainString(O.t.tuuJJS, { currentBoostLevel: t }),
                       children: (e) =>
-                          (0, s.jsx)(u.Clickable, {
-                              className: U.boostingIconWrapper,
+                          (0, i.jsx)(u.Clickable, {
+                              className: M.boostingIconWrapper,
                               onClick: () => {
                                   var e;
                                   return (
-                                      (e = a),
-                                      void (0, T.f)({
+                                      (e = r),
+                                      void (0, x.f)({
                                           guildId: e,
                                           location: {
-                                              section: j.jXE.GUILD_SETTINGS_SOUNDBOARD,
-                                              object: j.qAy.BOOST_GEM_ICON
+                                              section: y.jXE.GUILD_SETTINGS_SOUNDBOARD,
+                                              object: y.qAy.BOOST_GEM_ICON
                                           }
                                       })
                                   );
                               },
                               tabIndex: -1,
-                              children: (0, s.jsx)(L.Z, { ...e })
+                              children: (0, i.jsx)(E.Z, { ...e })
                           })
                   }),
-                  b.Z.Messages.GUILD_SETTINGS_SOUND_LIST_SOUNDS_AVAILABLE_BOOST_LEVEL.format({
+                  O.intl.format(O.t.HHCdvb, {
                       slots: n,
-                      totalSlots: r,
+                      totalSlots: s,
                       boostLevel: t
                   })
               ]
           });
 }
-let F = (e) => {
-        let { renderPopoutBody: t, renderPopoutChildren: n, ...i } = e,
-            [r, l] = a.useState(!1),
-            o = a.useMemo(() => new d.V7(), []),
-            c = a.useCallback(() => {
-                o.stop(), l(!0);
+let U = (e) => {
+        let { renderPopoutBody: t, renderPopoutChildren: n, ...l } = e,
+            [s, a] = r.useState(!1),
+            o = r.useMemo(() => new d.V7(), []),
+            c = r.useCallback(() => {
+                o.stop(), a(!0);
             }, [o]),
-            _ = a.useCallback(() => {
-                o.start(200, () => l(!1));
+            m = r.useCallback(() => {
+                o.start(200, () => a(!1));
             }, [o]);
-        return (0, s.jsx)(u.Popout, {
-            shouldShow: r,
+        return (0, i.jsx)(u.Popout, {
+            shouldShow: s,
             renderPopout: (e) =>
-                (0, s.jsx)(u.Dialog, {
-                    className: U.browserUnsupportedDialog,
+                (0, i.jsx)(u.Dialog, {
+                    className: M.browserUnsupportedDialog,
                     onMouseEnter: c,
-                    onMouseLeave: _,
+                    onMouseLeave: m,
                     children: t(e)
                 }),
-            ...i,
+            ...l,
             children: (e) => n(e)
         });
     },
-    w = () =>
-        (0, s.jsx)(F, {
+    G = () =>
+        (0, i.jsx)(U, {
             renderPopoutBody: () =>
-                (0, s.jsx)(u.Text, {
+                (0, i.jsx)(u.Text, {
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
-                    children: b.Z.Messages.GUILD_SETTINGS_SOUNDBOARD_UPLOAD_SOUND_NOT_SUPPORTED.format()
+                    children: O.intl.format(O.t.bGXPVl, {})
                 }),
             renderPopoutChildren: (e) =>
-                (0, s.jsx)(u.Button, {
+                (0, i.jsx)(u.Button, {
                     ...e,
                     disabled: !0,
-                    children: b.Z.Messages.GUILD_SETTINGS_SOUNDBOARD_UPLOAD_SOUND
+                    children: O.intl.string(O.t['/uNYPD'])
                 })
         });
-function k(e) {
+function F(e) {
     let { guild: t } = e,
-        [i, r] = (0, c.Wu)([S.Z], () => {
+        [l, s] = (0, c.Wu)([C.Z], () => {
             var e;
-            return [null !== (e = S.Z.getSoundsForGuild(t.id)) && void 0 !== e ? e : Z.Hy, S.Z.isFetchingSounds() || S.Z.isFetchingDefaultSounds()];
+            return [null !== (e = C.Z.getSoundsForGuild(t.id)) && void 0 !== e ? e : D.Hy, C.Z.isFetchingSounds() || C.Z.isFetchingDefaultSounds()];
         }),
-        { canCreateExpressions: l } = (0, m.XJ)(t),
-        o = a.useRef(null),
-        d = (0, E.ZP)(),
-        _ = t.premiumTier,
-        I = (0, O.yw)(t, i, _);
-    a.useEffect(() => {
-        (0, N.w)();
+        { canCreateExpressions: a } = (0, p.XJ)(t),
+        o = r.useRef(null),
+        d = (0, g.ZP)(),
+        m = t.premiumTier,
+        h = (0, b.yw)(t, l, m);
+    r.useEffect(() => {
+        (0, f.w)();
     }, []);
-    let T = a.useMemo(() => i.reduce((e, t) => ((e[t.soundId] = new Audio((0, g.Z)(t.soundId))), e), {}), [i]),
-        C = 0 === i.length && !r;
-    function x(e) {
+    let x = r.useMemo(() => l.reduce((e, t) => ((e[t.soundId] = new Audio((0, I.Z)(t.soundId))), e), {}), [l]),
+        N = 0 === l.length && !s;
+    function v(e) {
         var t;
         null === (t = o.current) || void 0 === t || t.pause();
-        let n = T[e.soundId];
-        null != n && ((o.current = n), (n.currentTime = 0), (n.volume = (0, h.Z)(e.volume)), n.play());
+        let n = x[e.soundId];
+        null != n && ((o.current = n), (n.currentTime = 0), (n.volume = (0, _.Z)(e.volume)), n.play());
     }
-    a.useEffect(
+    r.useEffect(
         () => () => {
             var e;
             null === (e = o.current) || void 0 === e || e.pause();
         },
         []
     );
-    if (r) return (0, s.jsx)(u.Spinner, {});
-    let p = G
-        ? (0, s.jsx)(u.Button, {
+    if (s) return (0, i.jsx)(u.Spinner, {});
+    let T = P
+        ? (0, i.jsx)(u.Button, {
               onClick: function () {
                   (0, u.openModalLazy)(async () => {
                       let { default: e } = await Promise.all([n.e('56035'), n.e('56184')]).then(n.bind(n, 758961));
                       return (n) =>
-                          (0, s.jsx)(e, {
+                          (0, i.jsx)(e, {
                               ...n,
                               guildId: t.id
                           });
                   });
               },
-              disabled: I <= 0 || !l,
-              children: b.Z.Messages.GUILD_SETTINGS_SOUNDBOARD_UPLOAD_SOUND
+              disabled: h <= 0 || !a,
+              children: O.intl.string(O.t['/uNYPD'])
           })
-        : (0, s.jsx)(w, {});
-    return (0, s.jsxs)(s.Fragment, {
+        : (0, i.jsx)(G, {});
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, s.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 children: [
-                    (0, s.jsx)(u.Text, {
-                        className: U.helpText,
+                    (0, i.jsx)(u.Text, {
+                        className: M.helpText,
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: b.Z.Messages.GUILD_SETTINGS_SOUNDBOARD_DESCRIPTION
+                        children: O.intl.string(O.t.BohnsL)
                     }),
-                    (0, s.jsx)('div', {
-                        className: U.buttons,
-                        children: !C && p
+                    (0, i.jsx)('div', {
+                        className: M.buttons,
+                        children: !N && T
                     })
                 ]
             }),
-            C
-                ? (0, s.jsxs)(u.EmptyState, {
+            N
+                ? (0, i.jsxs)(u.EmptyState, {
                       theme: d,
-                      className: U.empty,
+                      className: M.empty,
                       children: [
-                          (0, s.jsx)(u.EmptyStateImage, {
+                          (0, i.jsx)(u.EmptyStateImage, {
                               darkSrc: n(458601),
                               lightSrc: n(673557),
                               width: 272,
                               height: 212
                           }),
-                          (0, s.jsx)(u.EmptyStateText, {
-                              note: b.Z.Messages.NO_SOUNDS,
-                              noteClassName: U.emptyText,
-                              children: b.Z.Messages.NO_SOUNDS_TITLE
+                          (0, i.jsx)(u.EmptyStateText, {
+                              note: O.intl.string(O.t.ZhoSBA),
+                              noteClassName: M.emptyText,
+                              children: O.intl.string(O.t.I6P1p6)
                           }),
-                          p
+                          T
                       ]
                   })
-                : (0, s.jsxs)(s.Fragment, {
+                : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, s.jsx)(u.FormDivider, { className: U.divider }),
-                          (0, s.jsx)(u.Heading, {
-                              className: U.tableTitle,
+                          (0, i.jsx)(u.FormDivider, { className: M.divider }),
+                          (0, i.jsx)(u.Heading, {
+                              className: M.tableTitle,
                               variant: 'heading-md/bold',
                               color: 'header-primary',
-                              children: (0, s.jsx)(y, {
+                              children: (0, i.jsx)(B, {
                                   guildId: t.id,
-                                  currentTier: _,
-                                  availableSounds: I
+                                  currentTier: m,
+                                  availableSounds: h
                               })
                           }),
-                          (0, s.jsx)(v.Z, {
+                          (0, i.jsx)(L.Z, {
                               guild: t,
-                              numSounds: i.length,
-                              isOutOfSlots: 0 === I
+                              numSounds: l.length,
+                              isOutOfSlots: 0 === h
                           }),
-                          (0, s.jsxs)('div', {
-                              className: U.soundTable,
+                          (0, i.jsxs)('div', {
+                              className: M.soundTable,
                               children: [
-                                  (0, s.jsxs)('div', {
-                                      className: U.tableHeaders,
-                                      children: [(0, s.jsx)(B, { children: b.Z.Messages.EMOJI }), (0, s.jsx)(B, { children: b.Z.Messages.GUILD_SETTINGS_SOUND_NAME_COLUMN }), (0, s.jsx)(B, { children: b.Z.Messages.GUILD_SETTINGS_SOUND_UPLOADER_COLUMN })]
+                                  (0, i.jsxs)('div', {
+                                      className: M.tableHeaders,
+                                      children: [(0, i.jsx)(w, { children: O.intl.string(O.t.sMOuub) }), (0, i.jsx)(w, { children: O.intl.string(O.t.lLFvlZ) }), (0, i.jsx)(w, { children: O.intl.string(O.t['85qMS0']) })]
                                   }),
-                                  i.map((e) =>
-                                      (0, s.jsx)(
+                                  l.map((e) =>
+                                      (0, i.jsx)(
                                           H,
                                           {
                                               sound: e,
                                               isPlaying: !1,
                                               guild: t,
-                                              onPlaySound: x
+                                              onPlaySound: v
                                           },
                                           e.soundId
                                       )
@@ -265,139 +265,139 @@ function k(e) {
     });
 }
 function H(e) {
-    let { sound: t, isPlaying: i, onPlaySound: l, guild: o } = e,
-        { soundId: d, name: E, user: T, userId: S, emojiId: g, emojiName: h } = t,
-        p = (0, c.e7)([R.default], () => (null != T ? T : R.default.getUser(S)), [S, T]),
-        { canManageGuildExpression: L } = (0, m.XJ)(o),
-        O = a.useMemo(() => L(t), [t, L]),
-        A = null != g || null != h,
-        [D, v] = a.useState(!1),
-        Z = (0, C.z)(t, o.id);
-    async function G() {
-        if (!D) {
-            v(!0);
+    let { sound: t, isPlaying: l, onPlaySound: a, guild: o } = e,
+        { soundId: d, name: g, user: x, userId: C, emojiId: I, emojiName: _ } = t,
+        T = (0, c.e7)([j.default], () => (null != x ? x : j.default.getUser(C)), [C, x]),
+        { canManageGuildExpression: E } = (0, p.XJ)(o),
+        b = r.useMemo(() => E(t), [t, E]),
+        R = null != I || null != _,
+        [A, L] = r.useState(!1),
+        D = (0, N.z)(t, o.id);
+    async function P() {
+        if (!A) {
+            L(!0);
             try {
-                await (0, N.AA)(o.id, d);
+                await (0, f.AA)(o.id, d);
             } catch {
-                v(!1);
+                L(!1);
             }
         }
     }
-    a.useEffect(() => {
-        null == p && e();
+    r.useEffect(() => {
+        null == T && e();
         async function e() {
-            await (0, _.PR)(S);
+            await (0, m.PR)(C);
         }
-    }, [p, S]);
-    let P = a.useCallback(() => {
-            null != p &&
-                (0, x.openUserProfileModal)({
-                    userId: p.id,
+    }, [T, C]);
+    let k = r.useCallback(() => {
+            null != T &&
+                (0, v.openUserProfileModal)({
+                    userId: T.id,
                     guildId: o.id,
-                    analyticsLocation: { section: j.jXE.GUILD_SETTINGS_SOUNDBOARD }
+                    analyticsLocation: { section: y.jXE.GUILD_SETTINGS_SOUNDBOARD }
                 });
-        }, [p, o.id]),
-        B = M.ZP.useUserTag(p);
-    return (0, s.jsxs)('div', {
-        className: r()(U.row, { [U.active]: i }),
+        }, [T, o.id]),
+        w = Z.ZP.useUserTag(T);
+    return (0, i.jsxs)('div', {
+        className: s()(M.row, { [M.active]: l }),
         children: [
-            A
-                ? (0, s.jsx)(I.Z, {
-                      emojiId: g,
-                      emojiName: h,
-                      className: U.emoji
+            R
+                ? (0, i.jsx)(h.Z, {
+                      emojiId: I,
+                      emojiName: _,
+                      className: M.emoji
                   })
-                : (0, s.jsx)(u.ImageIcon, {
+                : (0, i.jsx)(u.ImageIcon, {
                       size: 'md',
                       color: 'currentColor',
-                      className: U.emoji
+                      className: M.emoji
                   }),
-            (0, s.jsx)(u.Clickable, {
+            (0, i.jsx)(u.Clickable, {
                 onClick: () => {
-                    !D && l(t);
+                    !A && a(t);
                 },
-                onContextMenu: Z,
-                className: U.soundName,
-                children: (0, s.jsxs)(u.Text, {
+                onContextMenu: D,
+                className: M.soundName,
+                children: (0, i.jsxs)(u.Text, {
                     variant: 'text-sm/normal',
-                    className: U.soundName,
+                    className: M.soundName,
                     children: [
-                        E,
+                        g,
                         ' ',
-                        (0, s.jsx)(u.VoiceNormalIcon, {
+                        (0, i.jsx)(u.VoiceNormalIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: U.soundPreviewIcon
+                            className: M.soundPreviewIcon
                         })
                     ]
                 })
             }),
-            null != p &&
-                (0, s.jsxs)(u.Clickable, {
-                    className: U.uploader,
-                    onClick: P,
+            null != T &&
+                (0, i.jsxs)(u.Clickable, {
+                    className: M.uploader,
+                    onClick: k,
                     children: [
-                        (0, s.jsx)(u.Avatar, {
-                            'aria-label': B,
+                        (0, i.jsx)(u.Avatar, {
+                            'aria-label': w,
                             size: u.AvatarSizes.SIZE_24,
-                            className: U.uploaderAvatar,
-                            src: (0, f.ov)(p, !1, 24)
+                            className: M.uploaderAvatar,
+                            src: (0, S.ov)(T, !1, 24)
                         }),
-                        (0, s.jsx)(u.Text, {
+                        (0, i.jsx)(u.Text, {
                             variant: 'text-sm/normal',
                             lineClamp: 1,
-                            children: B
+                            children: w
                         })
                     ]
                 }),
-            O
-                ? (0, s.jsxs)('div', {
-                      className: U.soundEditContainer,
+            b
+                ? (0, i.jsxs)('div', {
+                      className: M.soundEditContainer,
                       children: [
-                          (0, s.jsx)(u.Clickable, {
-                              className: U.soundUpdate,
+                          (0, i.jsx)(u.Clickable, {
+                              className: M.soundUpdate,
                               onClick: function (e) {
                                   e.stopPropagation(),
                                       (0, u.openModalLazy)(async () => {
                                           let { default: e } = await Promise.all([n.e('56035'), n.e('56184')]).then(n.bind(n, 758961));
                                           return (n) =>
-                                              (0, s.jsx)(e, {
+                                              (0, i.jsx)(e, {
                                                   ...n,
                                                   guildId: o.id,
                                                   existingSound: t
                                               });
                                       });
                               },
-                              'aria-label': b.Z.Messages.EDIT,
-                              children: (0, s.jsx)(u.PencilIcon, {
+                              'aria-label': O.intl.string(O.t.bt75u7),
+                              children: (0, i.jsx)(u.PencilIcon, {
                                   size: 'xs',
                                   color: 'currentColor',
-                                  className: U.soundEditIcon
+                                  className: M.soundEditIcon
                               })
                           }),
-                          (0, s.jsx)(u.Clickable, {
-                              className: U.soundRemove,
+                          (0, i.jsx)(u.Clickable, {
+                              className: M.soundRemove,
                               onClick: function (e) {
                                   e.stopPropagation(),
                                       (0, u.openModal)((e) =>
-                                          (0, s.jsx)(u.ConfirmModal, {
-                                              header: b.Z.Messages.GUILD_SETTINGS_SOUNDBOARD_DELETE_SOUND_TITLE.format({ soundName: E }),
-                                              confirmText: b.Z.Messages.DELETE,
-                                              cancelText: b.Z.Messages.CANCEL,
-                                              onConfirm: G,
+                                          (0, i.jsx)(u.ConfirmModal, {
+                                              header: O.intl.formatToPlainString(O.t['PR/VbG'], { soundName: g }),
+                                              confirmText: O.intl.string(O.t.oyYWHB),
+                                              cancelText: O.intl.string(O.t['ETE/oK']),
+                                              onConfirm: P,
                                               ...e,
-                                              children: (0, s.jsx)(u.Text, {
+                                              children: (0, i.jsx)(u.Text, {
                                                   variant: 'text-md/normal',
-                                                  children: b.Z.Messages.GUILD_SETTINGS_SOUNDBOARD_DELETE_SOUND_BODY.format({ soundName: E })
+                                                  children: O.intl.format(O.t['u6+CmJ'], { soundName: g })
                                               })
                                           })
                                       );
                               },
-                              'aria-label': b.Z.Messages.REMOVE,
-                              children: (0, s.jsx)(u.XSmallIcon, {
+                              'aria-label': O.intl.string(O.t.N86XcH),
+                              children: (0, i.jsx)(u.XSmallIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: U.soundEditIcon
+                                  className: M.soundEditIcon
                               })
                           })
                       ]

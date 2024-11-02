@@ -3,22 +3,22 @@ n.d(t, {
         return o;
     }
 });
-var a = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(481060),
+var a = n(481060),
     l = n(542094),
-    s = n(689938),
-    r = n(87694);
+    r = n(388032),
+    s = n(87694);
 function o(e) {
     let { action: t, onClick: n } = e,
-        o = t === l.JS.JOIN ? s.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY : s.Z.Messages.EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY,
-        c = t === l.JS.JOIN ? i.Button.Colors.PRIMARY : i.Button.Colors.RED;
-    return (0, a.jsx)('div', {
-        className: r.activityOverlay,
-        children: (0, a.jsx)(i.Button, {
-            className: r.actionButton,
+        o = t === l.JS.JOIN ? r.intl.string(r.t['4i2vj4']) : r.intl.string(r.t['R/FK4O']),
+        c = t === l.JS.JOIN ? a.Button.Colors.PRIMARY : a.Button.Colors.RED;
+    return (0, i.jsx)('div', {
+        className: s.activityOverlay,
+        children: (0, i.jsx)(a.Button, {
+            className: s.actionButton,
             onClick: n,
-            size: i.Button.Sizes.MEDIUM,
+            size: a.Button.Sizes.MEDIUM,
             color: c,
             children: o
         })

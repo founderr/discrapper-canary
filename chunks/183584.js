@@ -1,9 +1,9 @@
 n.d(t, {
     IN: function () {
-        return s;
+        return o;
     },
     oZ: function () {
-        return o;
+        return s;
     }
 }),
     n(200651),
@@ -13,7 +13,7 @@ n(238246), n(788983), n(592125), n(19780);
 var l = n(808506);
 n(998502), n(487029);
 var r = n(710111);
-n(981631), n(689938);
+n(981631), n(388032);
 let a = {
     width: r.FW.width,
     height: r.FW.height,
@@ -28,7 +28,7 @@ let a = {
     backgroundColor: '#00000000',
     titleBarStyle: null
 };
-function s(e, t) {
+function o(e, t) {
     i.Z.dispatch({
         type: 'OVERLAY_SET_INPUT_LOCKED',
         locked: !1,
@@ -41,7 +41,7 @@ function s(e, t) {
             keepOpen: e
         });
 }
-function o(e) {
+function s(e) {
     i.Z.dispatch({
         type: 'SOUNDBOARD_SET_OVERLAY_ENABLED',
         pid: e,

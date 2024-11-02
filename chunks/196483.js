@@ -7,7 +7,7 @@ var r = n(53529),
     i = n(887490);
 function a(e, t) {
     let { apply: n, deleteBackward: a, deleteForward: o, deleteFragment: l, insertData: u, insertText: c, onChange: d } = e;
-    function _(n) {
+    function f(n) {
         let i = r.T.currentEntry(e);
         if ((null != i && (i.mergeable = !1), n >= e.history.stack.length)) return;
         e.history.index = n;
@@ -23,23 +23,23 @@ function a(e, t) {
     }),
         (e.onChange = () => {
             let { history: t } = e;
-            0 === t.stack.length && ((t.stack = [s(e)]), (t.index = 0)), null != e.selection && (r.T.currentEntry(e).selection = e.selection), (f = null), d();
+            0 === t.stack.length && ((t.stack = [s(e)]), (t.index = 0)), null != e.selection && (r.T.currentEntry(e).selection = e.selection), (h = null), d();
         }),
         (e.undo = () => {
-            e.history.index > 0 && _(e.history.index - 1);
+            e.history.index > 0 && f(e.history.index - 1);
         }),
         (e.redo = () => {
-            e.history.index < e.history.stack.length - 1 && _(e.history.index + 1);
+            e.history.index < e.history.stack.length - 1 && f(e.history.index + 1);
         });
-    let E = null,
-        f = null,
-        h = null;
+    let _ = null,
+        h = null,
+        p = null;
     return (
         (e.apply = (t) => {
             let { history: a } = e;
             n(t);
             let o = i.bN.richValue(e);
-            if (o !== h)
+            if (o !== p)
                 0 === a.stack.length && ((a.stack = [s(e)]), (a.index = 0)),
                     r.T.isSaving(e) &&
                         ((function (e, t, n) {
@@ -58,10 +58,10 @@ function a(e, t) {
                             })(s, i)
                                 ? r.T.insertOrMergeEntry(e, i, l)
                                 : r.T.insertEntry(e, i, l);
-                        })(e, t, E),
-                        (E = t)),
-                    (f = t),
-                    (h = o);
+                        })(e, t, _),
+                        (_ = t)),
+                    (h = t),
+                    (p = o);
         }),
         (e.deleteBackward = (t) => {
             r.T.withSingleEntry(e, () => a(t));
@@ -73,10 +73,10 @@ function a(e, t) {
             r.T.withSingleEntry(e, () => l(t));
         }),
         (e.insertText = (t) => {
-            1 === t.length && (null == f ? void 0 : f.type) === 'remove_text' ? r.T.withMergedEntry(e, () => c(t)) : null != e.selection && i.M8.isExpanded(e.selection) ? r.T.withSingleEntry(e, () => c(t)) : c(t);
+            1 === t.length && (null == h ? void 0 : h.type) === 'remove_text' ? r.T.withMergedEntry(e, () => c(t)) : null != e.selection && i.M8.isExpanded(e.selection) ? r.T.withSingleEntry(e, () => c(t)) : c(t);
         }),
         (e.insertData = (t) => {
-            (null == f ? void 0 : f.type) === 'remove_text' ? r.T.withMergedEntry(e, () => u(t)) : r.T.withSingleEntry(e, () => u(t));
+            (null == h ? void 0 : h.type) === 'remove_text' ? r.T.withMergedEntry(e, () => u(t)) : r.T.withSingleEntry(e, () => u(t));
         }),
         e
     );

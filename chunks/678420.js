@@ -1,20 +1,20 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return x;
+            return p;
         }
     }),
     n(47120);
 var l = n(200651),
     r = n(192379),
-    a = n(481060),
-    o = n(661111),
-    s = n(766411),
-    i = n(626135),
+    o = n(481060),
+    a = n(661111),
+    i = n(766411),
+    s = n(626135),
     c = n(388080),
     d = n(981631),
     h = n(596401),
-    u = n(689938),
+    u = n(388032),
     g = n(583459);
 function m(e, t, n) {
     return (
@@ -29,7 +29,7 @@ function m(e, t, n) {
         e
     );
 }
-class p extends r.PureComponent {
+class x extends r.PureComponent {
     componentDidMount() {
         (this.mountedAt = Date.now()), (this.maxScrolledPercentage = 0), this.track(d.rMx.CHANGE_LOG_OPENED, {}, !0);
     }
@@ -51,7 +51,7 @@ class p extends r.PureComponent {
             m(this, 'maxScrolledPercentage', 0),
             m(this, 'mountedAt', 0),
             m(this, 'close', () => {
-                (0, a.closeModal)(h.Xd);
+                (0, o.closeModal)(h.Xd);
             }),
             m(this, 'handleScroll', (e) => {
                 let { offsetHeight: t, scrollHeight: n, scrollTop: l } = e.getScrollerState();
@@ -61,60 +61,60 @@ class p extends r.PureComponent {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                     l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                     { changeLog: r } = t.props,
-                    { date: a, revision: o } = r,
-                    s = {
-                        change_log_id: ''.concat(a, ':').concat(o),
+                    { date: o, revision: a } = r,
+                    i = {
+                        change_log_id: ''.concat(o, ':').concat(a),
                         ...n
                     };
                 !l &&
-                    (s = {
+                    (i = {
                         seconds_open: Math.round((Date.now() - t.mountedAt) / 1000),
                         max_scrolled_percentage: 100 * parseInt(t.maxScrolledPercentage.toPrecision(4), 10),
-                        ...s
+                        ...i
                     }),
-                    i.default.track(e, s);
+                    s.default.track(e, i);
             });
     }
 }
-function x(e) {
-    let { changelog: t, loaded: n, clientTooOld: i } = (0, s.E)();
+function p(e) {
+    let { changelog: t, loaded: n, clientTooOld: s } = (0, i.E)();
     if (
         (r.useEffect(() => {
-            if (n && null != t) return () => o.Z.markChangelogAsSeen(t.id, t.date);
+            if (n && null != t) return () => a.Z.markChangelogAsSeen(t.id, t.date);
         }, [n, t]),
-        i)
+        s)
     )
-        return (0, l.jsx)(a.ModalRoot, {
+        return (0, l.jsx)(o.ModalRoot, {
             transitionState: e.transitionState,
             children: (0, l.jsx)('div', {
                 className: g.empty,
-                children: (0, l.jsx)(a.Heading, {
+                children: (0, l.jsx)(o.Heading, {
                     variant: 'heading-lg/medium',
-                    children: u.Z.Messages.CHANGE_LOG_CLIENT_OLD
+                    children: u.intl.string(u.t.V9ospq)
                 })
             })
         });
     if (null == t)
         return n
-            ? (0, l.jsx)(a.ModalRoot, {
+            ? (0, l.jsx)(o.ModalRoot, {
                   transitionState: e.transitionState,
                   children: (0, l.jsx)('div', {
                       className: g.empty,
-                      children: (0, l.jsx)(a.Text, {
+                      children: (0, l.jsx)(o.Text, {
                           variant: 'text-md/semibold',
-                          children: u.Z.Messages.CHANGE_LOG_FAILED_TO_LOAD
+                          children: u.intl.string(u.t.O1iRT0)
                       })
                   })
               })
-            : (0, l.jsx)(a.ModalRoot, {
+            : (0, l.jsx)(o.ModalRoot, {
                   transitionState: e.transitionState,
                   children: (0, l.jsx)('div', {
                       className: g.empty,
-                      children: (0, l.jsx)(a.Spinner, { type: a.Spinner.Type.WANDERING_CUBES })
+                      children: (0, l.jsx)(o.Spinner, { type: o.Spinner.Type.WANDERING_CUBES })
                   })
               });
-    return (0, l.jsx)(a.ModalRoot, {
+    return (0, l.jsx)(o.ModalRoot, {
         transitionState: e.transitionState,
-        children: (0, l.jsx)(p, { changeLog: t })
+        children: (0, l.jsx)(x, { changeLog: t })
     });
 }

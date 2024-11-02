@@ -1,21 +1,21 @@
-a.d(n, {
+t.d(n, {
     Z: function () {
-        return r;
+        return o;
     }
 });
-var t = a(200651);
-a(192379);
-var l = a(442837),
-    i = a(481060),
-    u = a(5036),
-    s = a(9156),
-    d = a(689938);
-function r(e) {
-    let n = (0, l.e7)([s.ZP], () => s.ZP.isGuildCollapsed(e), [e]);
-    return (0, t.jsx)(i.MenuCheckboxItem, {
+var l = t(200651);
+t(192379);
+var a = t(442837),
+    i = t(481060),
+    r = t(5036),
+    u = t(9156),
+    d = t(388032);
+function o(e) {
+    let n = (0, a.e7)([u.ZP], () => u.ZP.isGuildCollapsed(e), [e]);
+    return (0, l.jsx)(i.MenuCheckboxItem, {
         id: 'hide-muted-channels',
-        label: d.Z.Messages.HIDE_MUTED_CHANNELS,
-        action: () => u.Z.toggleCollapseGuild(e),
+        label: d.intl.string(d.t.UwOLJC),
+        action: () => r.Z.toggleCollapseGuild(e),
         checked: n
     });
 }

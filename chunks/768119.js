@@ -8,18 +8,18 @@ var r,
     u = n(442837),
     c = n(433517),
     d = n(570140),
-    _ = n(840877),
-    E = n(952537),
-    f = n(592125),
-    h = n(430824),
-    p = n(981631);
-let I = {};
-function m(e) {
+    f = n(840877),
+    _ = n(952537),
+    h = n(592125),
+    p = n(430824),
+    m = n(981631);
+let g = {};
+function E(e) {
     return (
-        null == I[e] &&
-            (I[e] = {
+        null == g[e] &&
+            (g[e] = {
                 searchId: e,
-                searchType: T(e),
+                searchType: v(e),
                 isIndexing: !1,
                 isHistoricalIndexing: !1,
                 isSearching: !1,
@@ -36,121 +36,121 @@ function m(e) {
                 showBlockedResults: !1,
                 showNoResultsAlt: !1
             }),
-        I[e]
+        g[e]
     );
 }
-function T(e) {
-    return e === p.aib.DMS ? p.aib.DMS : e === p.I_8 ? p.aib.FAVORITES : null != h.Z.getGuild(e) ? p.aib.GUILD : null != f.Z.getChannel(e) ? p.aib.CHANNEL : null;
+function v(e) {
+    return e === m.aib.DMS ? m.aib.DMS : e === m.I_8 ? m.aib.FAVORITES : null != p.Z.getGuild(e) ? m.aib.GUILD : null != h.Z.getChannel(e) ? m.aib.CHANNEL : null;
 }
-function S(e, t) {
+function I(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
     if (null == e) return n;
-    let r = I[e];
+    let r = g[e];
     return null == r ? n : t(r);
 }
-let g = 'SearchStore',
-    A = !1,
-    N = {},
-    R = null;
-function O(e) {
+let S = 'SearchStore',
+    T = !1,
+    b = {},
+    y = null;
+function A(e) {
     var t;
     let { searchId: n, query: r } = e;
     if ('string' != typeof r || '' === (r = r.trim())) return;
-    let i = (N[n] = null !== (t = N[n]) && void 0 !== t ? t : []),
+    let i = (b[n] = null !== (t = b[n]) && void 0 !== t ? t : []),
         a = i.indexOf(r);
-    -1 !== a ? (i.splice(a, 1), i.unshift(r)) : null != i[0] && '' !== i[0] && r.startsWith(i[0]) ? (i[0] = r) : a < 0 && i.unshift(r), i.length > 5 && i.splice(5, i.length), c.K.set(g, { history: N });
+    -1 !== a ? (i.splice(a, 1), i.unshift(r)) : null != i[0] && '' !== i[0] && r.startsWith(i[0]) ? (i[0] = r) : a < 0 && i.unshift(r), i.length > 5 && i.splice(5, i.length), c.K.set(S, { history: b });
 }
-function v(e) {
+function N(e) {
     let { searchId: t } = e,
-        n = I[t];
+        n = g[t];
     if (null == n) return !1;
-    null != n.searchFetcher && n.searchFetcher.cancel(), delete I[t];
+    null != n.searchFetcher && n.searchFetcher.cancel(), delete g[t];
 }
 function C(e) {
-    if (e === R) return !1;
-    null != e && null == I[e] && m(e), (R = e);
+    if (e === y) return !1;
+    null != e && null == g[e] && E(e), (y = e);
 }
-class L extends (r = u.ZP.Store) {
+class R extends (r = u.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z, f.Z);
-        let e = c.K.get(g);
+        this.waitFor(p.Z, h.Z);
+        let e = c.K.get(S);
         if ((null == e ? void 0 : e.history) != null) {
             var t;
             Object.keys((t = e.history)).forEach((e) => {
                 Array.isArray(t[e]) && (t[e] = t[e].filter((e) => 'string' == typeof e && e.trim())), (!Array.isArray(t[e]) || 0 === t[e].length) && delete t[e];
             }),
-                (N = t);
+                (b = t);
         }
-        A = !!c.K.get('tokenized');
+        T = !!c.K.get('tokenized');
     }
     getCurrentSearchId() {
-        return R;
+        return y;
     }
     isActive() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : R;
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : y;
         return null != e && (this.isIndexing(e) || this.isSearching(e) || this.hasResults(e));
     }
     isTokenized() {
-        return A;
+        return T;
     }
     getSearchType(e) {
-        return S(null != e ? e : R, (e) => e.searchType);
+        return I(null != e ? e : y, (e) => e.searchType);
     }
     getRawResults(e) {
-        return S(e, (e) => e.rawResults);
+        return I(e, (e) => e.rawResults);
     }
     hasResults(e) {
-        return null != S(e, (e) => e.rawResults);
+        return null != I(e, (e) => e.rawResults);
     }
     isIndexing(e) {
-        return S(e, (e) => e.isIndexing) || !1;
+        return I(e, (e) => e.isIndexing) || !1;
     }
     isHistoricalIndexing(e) {
-        return S(e, (e) => e.isHistoricalIndexing) || !1;
+        return I(e, (e) => e.isHistoricalIndexing) || !1;
     }
     isSearching(e) {
-        return S(e, (e) => e.isSearching) || !1;
+        return I(e, (e) => e.isSearching) || !1;
     }
     getAnalyticsId(e) {
-        return S(e, (e) => e.analyticsId);
+        return I(e, (e) => e.analyticsId);
     }
     getResultsBlocked(e) {
-        return S(e, (e) => e.resultsBlocked);
+        return I(e, (e) => e.resultsBlocked);
     }
     getDocumentsIndexedCount(e) {
-        return S(e, (e) => e.documentsIndexed);
+        return I(e, (e) => e.documentsIndexed);
     }
     getSearchFetcher(e) {
-        return S(e, (e) => e.searchFetcher);
+        return I(e, (e) => e.searchFetcher);
     }
     getTotalResults(e) {
         var t;
-        return null !== (t = S(e, (e) => e.totalResults)) && void 0 !== t ? t : 0;
+        return null !== (t = I(e, (e) => e.totalResults)) && void 0 !== t ? t : 0;
     }
     getEditorState(e) {
-        return S(e, (e) => e.editorState);
+        return I(e, (e) => e.editorState);
     }
     getHistory(e) {
-        return N[e];
+        return b[e];
     }
     getOffset(e) {
         var t;
-        return null !== (t = S(e, (e) => e.offset)) && void 0 !== t ? t : 0;
+        return null !== (t = I(e, (e) => e.offset)) && void 0 !== t ? t : 0;
     }
     getQuery(e) {
-        return S(e, (e) => e.query);
+        return I(e, (e) => e.query);
     }
     hasError(e) {
         var t;
-        return null !== (t = S(e, (e) => e.hasError)) && void 0 !== t && t;
+        return null !== (t = I(e, (e) => e.hasError)) && void 0 !== t && t;
     }
     shouldShowBlockedResults(e) {
         var t;
-        return null !== (t = S(e, (e) => e.showBlockedResults, !1)) && void 0 !== t && t;
+        return null !== (t = I(e, (e) => e.showBlockedResults, !1)) && void 0 !== t && t;
     }
     shouldShowNoResultsAlt(e) {
         var t;
-        return null !== (t = S(e, (e) => e.showNoResultsAlt, !1)) && void 0 !== t && t;
+        return null !== (t = I(e, (e) => e.showNoResultsAlt, !1)) && void 0 !== t && t;
     }
     getResultsState(e) {
         return {
@@ -167,7 +167,7 @@ class L extends (r = u.ZP.Store) {
     }
 }
 (s = 'SearchStore'),
-    (a = 'displayName') in (i = L)
+    (a = 'displayName') in (i = R)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -175,14 +175,14 @@ class L extends (r = u.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new L(d.Z, {
+    (t.Z = new R(d.Z, {
         SEARCH_START: function (e) {
             var t, n;
             let { queryString: r, searchId: i, query: a } = e,
-                s = m(i);
+                s = E(i);
             null != s.searchFetcher && (s.searchFetcher.cancel(), (s.searchFetcher = null));
             let o = s.searchType,
-                u = new _.ZP(i, o, a);
+                u = new f.ZP(i, o, a);
             (s.searchFetcher = u),
                 (s.isSearching = !0),
                 (s.rawResults = null),
@@ -190,12 +190,12 @@ class L extends (r = u.ZP.Store) {
                 (s.query = l().omit(a, 'type')),
                 (s.offset = null !== (n = a.offset) && void 0 !== n ? n : 0),
                 (s.showBlockedResults = !1),
-                O({
+                A({
                     type: 'SEARCH_ADD_HISTORY',
                     searchId: i,
                     query: r
                 });
-            let c = i === p.I_8 ? (null === (t = f.Z.getChannel(i)) || void 0 === t ? void 0 : t.guild_id) : o === p.aib.GUILD ? i : null;
+            let c = i === m.I_8 ? (null === (t = h.Z.getChannel(i)) || void 0 === t ? void 0 : t.guild_id) : o === m.aib.GUILD ? i : null;
             u.fetch(
                 (e) => {
                     var t, n;
@@ -207,7 +207,7 @@ class L extends (r = u.ZP.Store) {
                         totalResults: e.body.total_results,
                         messages: e.body.messages,
                         threads: null !== (t = e.body.threads) && void 0 !== t ? t : [],
-                        members: (null !== (n = e.body.members) && void 0 !== n ? n : []).map((e) => (0, E.Z)(e)),
+                        members: (null !== (n = e.body.members) && void 0 !== n ? n : []).map((e) => (0, _.Z)(e)),
                         hasError: !1,
                         doingHistoricalIndex: e.body.doing_deep_historical_index,
                         documentsIndexed: e.body.documents_indexed
@@ -238,26 +238,26 @@ class L extends (r = u.ZP.Store) {
         },
         SEARCH_INDEXING: function (e) {
             let { searchId: t } = e,
-                n = m(t);
+                n = E(t);
             (n.isIndexing = !0), (n.isHistoricalIndexing = !0), (n.isSearching = !1);
         },
         SEARCH_FINISH: function (e) {
             let { searchId: t } = e,
-                n = m(t);
+                n = E(t);
             (n.isSearching = !1), (n.isIndexing = !1), (n.isHistoricalIndexing = e.doingHistoricalIndex || !1), (n.searchFetcher = null), (n.totalResults = e.totalResults), (n.hasError = e.hasError), (n.analyticsId = e.analyticsId), (n.documentsIndexed = null != e.documentsIndexed ? e.documentsIndexed : 0), (n.showNoResultsAlt = 0.05 > Math.random()), (n.rawResults = e.messages), null == n.query && (n.hasError = !0);
         },
-        SEARCH_EDITOR_STATE_CLEAR: v,
+        SEARCH_EDITOR_STATE_CLEAR: N,
         SEARCH_ENSURE_SEARCH_STATE: function (e) {
             let { searchId: t } = e;
-            null != t && m(t);
+            null != t && E(t);
         },
         SEARCH_EDITOR_STATE_CHANGE: function (e) {
             let { searchId: t, editorState: n } = e;
-            m(t).editorState = n;
+            E(t).editorState = n;
         },
         SEARCH_SET_SHOW_BLOCKED_RESULTS: function (e) {
             let { searchId: t, showBlocked: n } = e;
-            m(t).showBlockedResults = n;
+            E(t).showBlockedResults = n;
         },
         SEARCH_SCREEN_OPEN: function (e) {
             let { searchId: t } = e;
@@ -268,23 +268,23 @@ class L extends (r = u.ZP.Store) {
             C(null != t ? t : n);
         },
         CHANNEL_TOGGLE_MEMBERS_SECTION: function () {
-            return null != R && v({ searchId: R });
+            return null != y && N({ searchId: y });
         },
         SEARCH_CLEAR_HISTORY: function (e) {
             let { searchId: t } = e;
-            null == t ? (c.K.remove(g), (N = {})) : (delete N[t], c.K.set(g, { history: N }));
+            null == t ? (c.K.remove(S), (b = {})) : (delete b[t], c.K.set(S, { history: b }));
         },
         SEARCH_REMOVE_HISTORY: function (e) {
             let { searchId: t, query: n } = e;
-            null != N[t] && ((N[t] = N[t].filter((e) => e !== n)), c.K.set(g, { history: N }));
+            null != b[t] && ((b[t] = b[t].filter((e) => e !== n)), c.K.set(S, { history: b }));
         },
-        SEARCH_ADD_HISTORY: O,
+        SEARCH_ADD_HISTORY: A,
         LOGOUT: function () {
-            c.K.remove(g), (N = {});
+            c.K.remove(S), (b = {});
         },
         CONNECTION_OPEN: function () {
-            Object.keys(I).forEach((e) => {
-                null != I[e] && (I[e].searchType = T(e));
+            Object.keys(g).forEach((e) => {
+                null != g[e] && (g[e].searchType = v(e));
             });
         }
     }));

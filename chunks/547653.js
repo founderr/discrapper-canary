@@ -1,36 +1,36 @@
-a.r(s), a(47120);
-var t = a(200651),
-    N = a(192379),
-    o = a(481060),
-    n = a(668781),
-    C = a(787014),
-    r = a(689938);
-s.default = function (e) {
-    let { channelId: s, application: a, onClose: _, ...i } = e,
-        [c, l] = N.useState(!1),
-        S = async () => {
+i.r(n), i(47120);
+var o = i(200651),
+    r = i(192379),
+    a = i(481060),
+    e = i(668781),
+    s = i(787014),
+    l = i(388032);
+n.default = function (t) {
+    let { channelId: n, application: i, onClose: c, ...d } = t,
+        [m, u] = r.useState(!1),
+        h = async () => {
             try {
-                l(!0), await C.ZP.removeLinkedLobby(s), _();
-            } catch (e) {
-                l(!1),
-                    n.Z.show({
-                        title: r.Z.Messages.CHANNEL_SYNCING_STOP_SYNCING_ERROR_TITLE,
-                        body: r.Z.Messages.CHANNEL_SYNCING_STOP_SYNCING_ERROR
+                u(!0), await s.ZP.removeLinkedLobby(n), c();
+            } catch (t) {
+                u(!1),
+                    e.Z.show({
+                        title: l.intl.string(l.t['43yFy8']),
+                        body: l.intl.string(l.t['WR3p/f'])
                     });
             }
         };
-    return (0, t.jsx)(o.ConfirmModal, {
-        header: r.Z.Messages.CHANNEL_SYNCING_STOP_SYNCING_ALERT_TITLE,
-        confirmText: r.Z.Messages.CONFIRM,
-        cancelText: r.Z.Messages.CANCEL,
-        confirmButtonColor: o.Button.Colors.BRAND,
-        onConfirm: S,
-        loading: c,
-        onClose: _,
-        ...i,
-        children: (0, t.jsx)(o.Text, {
+    return (0, o.jsx)(a.ConfirmModal, {
+        header: l.intl.string(l.t.XImiS0),
+        confirmText: l.intl.string(l.t['cY+Ooa']),
+        cancelText: l.intl.string(l.t['ETE/oK']),
+        confirmButtonColor: a.Button.Colors.BRAND,
+        onConfirm: h,
+        loading: m,
+        onClose: c,
+        ...d,
+        children: (0, o.jsx)(a.Text, {
             variant: 'text-sm/normal',
-            children: r.Z.Messages.CHANNEL_SYNCING_STOP_SYNCING_ALERT_BODY.format({ applicationName: a.name })
+            children: l.intl.format(l.t.JKCMYW, { applicationName: i.name })
         })
     });
 };

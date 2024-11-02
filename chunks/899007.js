@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return A;
     }
 }),
     n(47120);
@@ -13,81 +13,81 @@ var r = n(200651),
     u = n(420660),
     c = n(100527),
     d = n(906732),
-    _ = n(140701),
-    E = n(158776),
-    f = n(74538),
-    h = n(998502),
-    p = n(785717),
-    I = n(369566),
-    m = n(518950),
-    T = n(652853),
-    S = n(228168),
-    g = n(981631),
-    A = n(474936),
-    N = n(8621);
-let R = h.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
-function O(e) {
-    let { user: t, displayProfile: n, guildId: a, channelId: h, profileType: O, animateOnHover: v, onOpenProfile: C, className: L } = e,
-        { theme: D } = (0, T.z)(),
-        { analyticsLocations: y } = (0, d.ZP)(c.Z.AVATAR),
-        { trackUserProfileAction: b } = (0, p.KZ)(),
-        M = f.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, A.p9.TIER_2),
-        P = i.useMemo(() => t.isNonUserBot() || (0, _.W)(t, h), [t, h]),
-        { live: U } = (0, I.Z)(t.id),
-        [w] = U,
-        { status: x, isMobileOnline: G } = (0, o.cj)([E.Z], () => ({
-            status: (0, u.Z)(w) ? g.Skl.STREAMING : E.Z.getStatus(t.id),
-            isMobileOnline: E.Z.isMobileOnline(t.id)
+    f = n(140701),
+    _ = n(158776),
+    h = n(74538),
+    p = n(998502),
+    m = n(785717),
+    g = n(369566),
+    E = n(518950),
+    v = n(652853),
+    I = n(228168),
+    S = n(981631),
+    T = n(474936),
+    b = n(8621);
+let y = p.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
+function A(e) {
+    let { user: t, displayProfile: n, guildId: a, channelId: p, profileType: A, animateOnHover: N, onOpenProfile: C, className: R } = e,
+        { theme: O } = (0, v.z)(),
+        { analyticsLocations: D } = (0, d.ZP)(c.Z.AVATAR),
+        { trackUserProfileAction: L } = (0, m.KZ)(),
+        x = h.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, T.p9.TIER_2),
+        w = i.useMemo(() => t.isNonUserBot() || (0, f.W)(t, p), [t, p]),
+        { live: M } = (0, g.Z)(t.id),
+        [P] = M,
+        { status: k, isMobileOnline: U } = (0, o.cj)([_.Z], () => ({
+            status: (0, u.Z)(P) ? S.Skl.STREAMING : _.Z.getStatus(t.id),
+            isMobileOnline: _.Z.isMobileOnline(t.id)
         })),
-        k = O === S.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80,
+        G = A === I.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80,
         B = s()(
-            N.avatar,
+            b.avatar,
             {
-                [N.biteSize]: O === S.y0.BITE_SIZE,
-                [N.fullSize]: O === S.y0.FULL_SIZE,
-                [N.panel]: O === S.y0.PANEL
+                [b.biteSize]: A === I.y0.BITE_SIZE,
+                [b.fullSize]: A === I.y0.FULL_SIZE,
+                [b.panel]: A === I.y0.PANEL
             },
-            L
+            R
         ),
         {
-            avatarDecorationSrc: F,
-            avatarSrc: V,
-            eventHandlers: H
-        } = (0, m.Z)({
+            avatarDecorationSrc: Z,
+            avatarSrc: F,
+            eventHandlers: V
+        } = (0, E.Z)({
             user: t,
             guildId: null != n ? n.guildId : a,
-            size: k,
-            animateOnHover: v
+            size: G,
+            animateOnHover: N
         }),
-        Z = (0, r.jsx)(R, {
-            src: V,
-            avatarDecoration: F,
-            size: k,
+        j = (0, r.jsx)(y, {
+            src: F,
+            avatarDecoration: Z,
+            size: G,
             'aria-label': t.username,
-            imageClassName: null != C ? N.overlay : void 0,
-            status: P ? g.Skl.UNKNOWN : x,
-            statusBackdropColor: M && !P ? (0, l.getStatusBackdropColor)(D) : void 0,
-            isMobile: G,
+            imageClassName: null != C ? b.overlay : void 0,
+            status: w ? S.Skl.UNKNOWN : k,
+            statusBackdropColor: x && !w ? (0, l.getStatusBackdropColor)(O) : void 0,
+            isMobile: U,
             statusTooltip: !0,
-            statusTooltipDelay: S.vB
+            statusTooltipDelay: I.vB
         });
     return null == C
         ? (0, r.jsx)('div', {
-              ...H,
+              ...V,
               className: B,
-              children: Z
+              children: j
           })
         : (0, r.jsx)(l.Clickable, {
-              ...H,
-              className: s()(B, N.clickable),
-              focusProps: { ringClassName: N.focusRing },
+              ...V,
+              className: s()(B, b.clickable),
+              focusProps: { ringClassName: b.focusRing },
               onClick: () => {
-                  b({
+                  L({
                       action: 'PRESS_VIEW_PROFILE',
-                      analyticsLocations: y
+                      analyticsLocations: D
                   }),
                       null == C || C();
               },
-              children: Z
+              children: j
           });
 }

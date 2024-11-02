@@ -36,7 +36,7 @@ function d(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-var _ = (t.Alpha = (function (e) {
+var f = (t.Alpha = (function (e) {
     function t() {
         !(function (e, t) {
             if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
@@ -161,4 +161,4 @@ var _ = (t.Alpha = (function (e) {
         t
     );
 })(a.PureComponent || a.Component));
-t.default = _;
+t.default = f;

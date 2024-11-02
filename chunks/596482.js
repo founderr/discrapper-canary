@@ -1,99 +1,99 @@
-l.d(t, {
+n.d(t, {
     Z: function () {
-        return L;
+        return j;
     }
 });
-var n,
-    a,
-    o = l(200651),
-    s = l(192379),
-    i = l(722770),
-    r = l(481060),
-    C = l(100527),
-    c = l(666657),
-    d = l(533244),
-    u = l(664452),
-    m = l(226192),
-    _ = l(223606),
-    E = l(689938),
-    h = l(18804);
-function M(e) {
+var l,
+    o,
+    a = n(200651),
+    i = n(192379),
+    r = n(722770),
+    s = n(481060),
+    c = n(100527),
+    C = n(666657),
+    d = n(533244),
+    u = n(664452),
+    m = n(226192),
+    h = n(223606),
+    x = n(388032),
+    b = n(18804);
+function f(e) {
     var t;
     if (null == (null !== (t = e.dmsDisabledUntil) && void 0 !== t ? t : e.invitesDisabledUntil)) return '';
-    let l = null != e.dmsDisabledUntil,
-        n = null != e.invitesDisabledUntil;
+    let n = null != e.dmsDisabledUntil,
+        l = null != e.invitesDisabledUntil;
     switch (!0) {
-        case l && n:
-            return E.Z.Messages.MEMBER_SAFETY_DM_AND_INVITES_PAUSED_HEADER;
-        case l:
-            return E.Z.Messages.MEMBER_SAFETY_DM_PAUSED_HEADER;
+        case n && l:
+            return x.intl.string(x.t.CEygFx);
         case n:
-            return E.Z.Messages.MEMBER_SAFETY_INVITES_PAUSED_HEADER;
+            return x.intl.string(x.t.Wmbjc3);
+        case l:
+            return x.intl.string(x.t.Q1QrAg);
         default:
             return '';
     }
 }
-function x(e) {
+function g(e) {
     var t;
-    let { onHandleEnableLockdown: l, onHandleReportFalseAlarm: n, incidentData: a } = e,
-        s = null !== (t = a.raidDetectedAt) && void 0 !== t ? t : a.dmSpamDetectedAt;
-    return (0, o.jsxs)('div', {
-        className: h.subheaderContainer,
+    let { onHandleEnableLockdown: n, onHandleReportFalseAlarm: l, incidentData: o } = e,
+        i = null !== (t = o.raidDetectedAt) && void 0 !== t ? t : o.dmSpamDetectedAt;
+    return (0, a.jsxs)('div', {
+        className: b.subheaderContainer,
         children: [
-            (0, o.jsxs)('div', {
-                className: h.subHeaderTextContainer,
+            (0, a.jsxs)('div', {
+                className: b.subHeaderTextContainer,
                 children: [
-                    (0, o.jsx)(r.ShieldIcon, {
+                    (0, a.jsx)(s.ShieldIcon, {
                         size: 'md',
-                        className: h.shieldIcon,
-                        color: i.Z.RED_345
+                        className: b.shieldIcon,
+                        color: r.Z.RED_345
                     }),
-                    (0, o.jsxs)('div', {
-                        className: h.subHeaderText,
+                    (0, a.jsxs)('div', {
+                        className: b.subHeaderText,
                         children: [
-                            (0, o.jsx)(r.Heading, {
-                                className: h.heading,
+                            (0, a.jsx)(s.Heading, {
+                                className: b.heading,
                                 variant: 'heading-lg/semibold',
                                 color: 'text-danger',
-                                children: (0, d.kk)(a) ? E.Z.Messages.MEMBER_SAFETY_DM_RAID_ALERT_HEADER : E.Z.Messages.MEMBER_SAFETY_JOIN_RAID_ALERT_HEADER
+                                children: (0, d.kk)(o) ? x.intl.string(x.t.raRxxc) : x.intl.string(x.t['4nbAtb'])
                             }),
-                            (0, o.jsx)(r.Text, {
-                                className: h.tagLine,
+                            (0, a.jsx)(s.Text, {
+                                className: b.tagLine,
                                 variant: 'text-sm/medium',
-                                children: E.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_ACTION_DESCRIPTION.format({ dateTime: new Date(null != s ? s : '').toLocaleString(E.Z.getLocale(), d.pQ) })
+                                children: x.intl.format(x.t['4QIIZm'], { dateTime: new Date(null != i ? i : '').toLocaleString(x.intl.currentLocale, d.pQ) })
                             })
                         ]
                     })
                 ]
             }),
-            (0, o.jsxs)('div', {
-                className: h.buttonContainer,
+            (0, a.jsxs)('div', {
+                className: b.buttonContainer,
                 children: [
-                    (0, o.jsx)(r.Button, {
-                        className: h.reportButton,
-                        color: r.Button.Colors.TRANSPARENT,
-                        onClick: n,
-                        children: (0, o.jsx)(r.Text, {
+                    (0, a.jsx)(s.Button, {
+                        className: b.reportButton,
+                        color: s.Button.Colors.TRANSPARENT,
+                        onClick: l,
+                        children: (0, a.jsx)(s.Text, {
                             variant: 'text-sm/semibold',
-                            children: E.Z.Messages.MEMBER_SAFETY_RESOLVE_RAID_ALERT_BUTTON
+                            children: x.intl.string(x.t.ISiXbW)
                         })
                     }),
-                    (0, o.jsx)(r.ShinyButton, {
-                        className: h.__invalid_lockdownButton,
-                        color: r.Button.Colors.RED,
-                        onClick: l,
-                        children: (0, o.jsxs)('div', {
-                            className: h.lockdownButtonInnerRaidDetected,
+                    (0, a.jsx)(s.ShinyButton, {
+                        className: b.__invalid_lockdownButton,
+                        color: s.Button.Colors.RED,
+                        onClick: n,
+                        children: (0, a.jsxs)('div', {
+                            className: b.lockdownButtonInnerRaidDetected,
                             children: [
-                                (0, o.jsx)(r.LockIcon, {
+                                (0, a.jsx)(s.LockIcon, {
                                     size: 'xs',
                                     color: 'currentColor',
-                                    className: h.lockIcon
+                                    className: b.lockIcon
                                 }),
-                                (0, o.jsx)(r.Text, {
-                                    className: h.lockdownButtonText,
+                                (0, a.jsx)(s.Text, {
+                                    className: b.lockdownButtonText,
                                     variant: 'text-sm/semibold',
-                                    children: E.Z.Messages.GUILD_ANTIRAID_NAGBAR_ACTION
+                                    children: x.intl.string(x.t.UgXhdn)
                                 })
                             ]
                         })
@@ -103,53 +103,53 @@ function x(e) {
         ]
     });
 }
-function b(e) {
-    let { onHandleEnableLockdown: t, incidentData: l, guildName: n } = e;
-    return (0, o.jsxs)('div', {
-        className: h.subheaderContainer,
+function p(e) {
+    let { onHandleEnableLockdown: t, incidentData: n, guildName: l } = e;
+    return (0, a.jsxs)('div', {
+        className: b.subheaderContainer,
         children: [
-            (0, o.jsxs)('div', {
-                className: h.subHeaderTextContainer,
+            (0, a.jsxs)('div', {
+                className: b.subHeaderTextContainer,
                 children: [
-                    (0, o.jsx)(r.ShieldIcon, {
+                    (0, a.jsx)(s.ShieldIcon, {
                         size: 'md',
-                        className: h.shieldIcon,
-                        color: i.Z.BRAND_360
+                        className: b.shieldIcon,
+                        color: r.Z.BRAND_360
                     }),
-                    (0, o.jsxs)('div', {
-                        className: h.subHeaderText,
+                    (0, a.jsxs)('div', {
+                        className: b.subHeaderText,
                         children: [
-                            (0, o.jsx)(r.Heading, {
-                                className: h.heading,
+                            (0, a.jsx)(s.Heading, {
+                                className: b.heading,
                                 variant: 'heading-lg/semibold',
                                 color: 'text-brand',
-                                children: M(l)
+                                children: f(n)
                             }),
-                            (0, o.jsx)(r.Text, {
-                                className: h.tagLine,
+                            (0, a.jsx)(s.Text, {
+                                className: b.tagLine,
                                 variant: 'text-sm/medium',
-                                children: (0, d.OY)(l, n)
+                                children: (0, d.OY)(n, l)
                             })
                         ]
                     })
                 ]
             }),
-            (0, o.jsx)(r.Button, {
-                className: h.lockdownNoticeButton,
-                color: r.Button.Colors.BRAND,
+            (0, a.jsx)(s.Button, {
+                className: b.lockdownNoticeButton,
+                color: s.Button.Colors.BRAND,
                 onClick: t,
-                children: (0, o.jsxs)('div', {
-                    className: h.lockdownButtonInner,
+                children: (0, a.jsxs)('div', {
+                    className: b.lockdownButtonInner,
                     children: [
-                        (0, o.jsx)(r.LockIcon, {
+                        (0, a.jsx)(s.LockIcon, {
                             size: 'xs',
                             color: 'currentColor',
-                            className: h.lockIcon
+                            className: b.lockIcon
                         }),
-                        (0, o.jsx)(r.Text, {
-                            className: h.lockdownButtonText,
+                        (0, a.jsx)(s.Text, {
+                            className: b.lockdownButtonText,
                             variant: 'text-sm/semibold',
-                            children: E.Z.Messages.GUILD_ANTIRAID_NAGBAR_EDIT_ACTION
+                            children: x.intl.string(x.t.e1bMNT)
                         })
                     ]
                 })
@@ -157,65 +157,65 @@ function b(e) {
         ]
     });
 }
-function T(e) {
-    let { onHandleEnableLockdown: t, onHandleReportFalseAlarm: l, incidentData: n, guildName: a } = e;
-    return (0, o.jsxs)('div', {
-        className: h.subheaderContainer,
+function H(e) {
+    let { onHandleEnableLockdown: t, onHandleReportFalseAlarm: n, incidentData: l, guildName: o } = e;
+    return (0, a.jsxs)('div', {
+        className: b.subheaderContainer,
         children: [
-            (0, o.jsxs)('div', {
-                className: h.subHeaderTextContainer,
+            (0, a.jsxs)('div', {
+                className: b.subHeaderTextContainer,
                 children: [
-                    (0, o.jsx)(r.ShieldIcon, {
+                    (0, a.jsx)(s.ShieldIcon, {
                         size: 'md',
-                        className: h.shieldIcon,
-                        color: i.Z.BRAND_360
+                        className: b.shieldIcon,
+                        color: r.Z.BRAND_360
                     }),
-                    (0, o.jsxs)('div', {
-                        className: h.subHeaderText,
+                    (0, a.jsxs)('div', {
+                        className: b.subHeaderText,
                         children: [
-                            (0, o.jsx)(r.Heading, {
-                                className: h.heading,
+                            (0, a.jsx)(s.Heading, {
+                                className: b.heading,
                                 variant: 'heading-lg/semibold',
                                 color: 'text-brand',
-                                children: M(n)
+                                children: f(l)
                             }),
-                            (0, o.jsx)(r.Text, {
-                                className: h.tagLine,
+                            (0, a.jsx)(s.Text, {
+                                className: b.tagLine,
                                 variant: 'text-sm/medium',
-                                children: (0, d.OY)(n, a)
+                                children: (0, d.OY)(l, o)
                             })
                         ]
                     })
                 ]
             }),
-            (0, o.jsxs)('div', {
-                className: h.buttonContainer,
+            (0, a.jsxs)('div', {
+                className: b.buttonContainer,
                 children: [
-                    (0, o.jsx)(r.Button, {
-                        className: h.reportButton,
-                        color: r.Button.Colors.TRANSPARENT,
-                        onClick: l,
-                        children: (0, o.jsx)(r.Text, {
+                    (0, a.jsx)(s.Button, {
+                        className: b.reportButton,
+                        color: s.Button.Colors.TRANSPARENT,
+                        onClick: n,
+                        children: (0, a.jsx)(s.Text, {
                             variant: 'text-sm/semibold',
-                            children: E.Z.Messages.MEMBER_SAFETY_RESOLVE_RAID_ALERT_BUTTON
+                            children: x.intl.string(x.t.ISiXbW)
                         })
                     }),
-                    (0, o.jsx)(r.Button, {
-                        className: h.__invalid_lockdownButton,
-                        color: r.Button.Colors.BRAND,
+                    (0, a.jsx)(s.Button, {
+                        className: b.__invalid_lockdownButton,
+                        color: s.Button.Colors.BRAND,
                         onClick: t,
-                        children: (0, o.jsxs)('div', {
-                            className: h.lockdownButtonInnerRaidDetected,
+                        children: (0, a.jsxs)('div', {
+                            className: b.lockdownButtonInnerRaidDetected,
                             children: [
-                                (0, o.jsx)(r.LockIcon, {
+                                (0, a.jsx)(s.LockIcon, {
                                     size: 'xs',
                                     color: 'currentColor',
-                                    className: h.lockIcon
+                                    className: b.lockIcon
                                 }),
-                                (0, o.jsx)(r.Text, {
-                                    className: h.lockdownButtonText,
+                                (0, a.jsx)(s.Text, {
+                                    className: b.lockdownButtonText,
                                     variant: 'text-sm/semibold',
-                                    children: E.Z.Messages.GUILD_ANTIRAID_NAGBAR_EDIT_ACTION
+                                    children: x.intl.string(x.t.e1bMNT)
                                 })
                             ]
                         })
@@ -225,62 +225,62 @@ function T(e) {
         ]
     });
 }
-function L(e) {
-    let { guild: t, incidentData: l, isUnderLockdown: n, isRaidDetected: a } = e,
-        i = s.useCallback(() => {
-            (0, r.openModalLazy)(async () => {
+function j(e) {
+    let { guild: t, incidentData: n, isUnderLockdown: l, isRaidDetected: o } = e,
+        r = i.useCallback(() => {
+            (0, s.openModalLazy)(async () => {
                 let e = {
-                    source: c.Zu.MEMBER_SAFETY_PAGE,
-                    location: C.Z.MEMBER_SAFETY_PAGE,
-                    alertType: (0, d.T1)(l)
+                    source: C.Zu.MEMBER_SAFETY_PAGE,
+                    location: c.Z.MEMBER_SAFETY_PAGE,
+                    alertType: (0, d.T1)(n)
                 };
-                return (l) =>
-                    (0, o.jsx)(u.default, {
-                        ...l,
+                return (n) =>
+                    (0, a.jsx)(u.default, {
+                        ...n,
                         guildId: t.id,
                         analyticsData: e
                     });
             });
-        }, [t.id, l]),
-        E = s.useCallback(() => {
-            let e = _.Z.getLastIncidentAlertMessage(t.id);
+        }, [t.id, n]),
+        x = i.useCallback(() => {
+            let e = h.Z.getLastIncidentAlertMessage(t.id);
             (0, m.kW)(e, t.id);
         }, [t.id]),
-        h = (() => {
+        b = (() => {
             switch (!0) {
-                case a && n:
+                case o && l:
                     return 3;
-                case a:
+                case o:
                     return 1;
-                case n:
+                case l:
                     return 2;
                 default:
                     return 0;
             }
         })();
-    if (null == t || null == l) return null;
-    switch (h) {
+    if (null == t || null == n) return null;
+    switch (b) {
         case 1:
-            return (0, o.jsx)(x, {
-                onHandleEnableLockdown: i,
-                onHandleReportFalseAlarm: E,
-                incidentData: l
+            return (0, a.jsx)(g, {
+                onHandleEnableLockdown: r,
+                onHandleReportFalseAlarm: x,
+                incidentData: n
             });
         case 2:
-            return (0, o.jsx)(b, {
-                onHandleEnableLockdown: i,
-                incidentData: l,
+            return (0, a.jsx)(p, {
+                onHandleEnableLockdown: r,
+                incidentData: n,
                 guildName: t.name
             });
         case 3:
-            return (0, o.jsx)(T, {
-                onHandleEnableLockdown: i,
-                onHandleReportFalseAlarm: E,
-                incidentData: l,
+            return (0, a.jsx)(H, {
+                onHandleEnableLockdown: r,
+                onHandleReportFalseAlarm: x,
+                incidentData: n,
                 guildName: t.name
             });
         default:
             return null;
     }
 }
-((n = a || (a = {}))[(n.DEFAULT = 0)] = 'DEFAULT'), (n[(n.RAID_DETECTED = 1)] = 'RAID_DETECTED'), (n[(n.LOCKDOWN_ENABLED = 2)] = 'LOCKDOWN_ENABLED'), (n[(n.RAID_DETECTED_LOCKDOWN_ENABLED = 3)] = 'RAID_DETECTED_LOCKDOWN_ENABLED');
+((l = o || (o = {}))[(l.DEFAULT = 0)] = 'DEFAULT'), (l[(l.RAID_DETECTED = 1)] = 'RAID_DETECTED'), (l[(l.LOCKDOWN_ENABLED = 2)] = 'LOCKDOWN_ENABLED'), (l[(l.RAID_DETECTED_LOCKDOWN_ENABLED = 3)] = 'RAID_DETECTED_LOCKDOWN_ENABLED');

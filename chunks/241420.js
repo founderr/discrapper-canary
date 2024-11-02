@@ -1,214 +1,214 @@
-t.r(s),
-    t.d(s, {
+n.r(t),
+    n.d(t, {
         ConnectedPrivacySettings: function () {
-            return A;
+            return _;
         },
         PrivacySettingSurfaces: function () {
-            return n;
+            return i;
         },
         PrivacySettings: function () {
-            return m;
+            return T;
         },
         default: function () {
             return C;
         }
     }),
-    t(47120);
-var n,
-    a,
-    i = t(200651),
-    r = t(192379),
-    o = t(481060),
-    l = t(921801),
-    c = t(695346),
-    d = t(626135),
-    _ = t(63063),
-    u = t(88658),
-    E = t(981631),
-    T = t(703115),
-    S = t(726985),
-    I = t(689938),
-    N = t(566701);
-function m(e) {
-    let { isGuildRestricted: s, handleRestrictedGuildChange: t, isGuildActivityRestricted: n, handleActivityRestrictedGuildChange: a, isGuildActivityJoiningRestricted: r, handleActivityJoiningRestrictedGuildChange: c, isGuildMessageRequestRestricted: d, handleMessageRequestRestrictedGuildChange: u, guild: T } = e,
-        m = T.hasFeature(E.oNc.HUB);
-    return (0, i.jsxs)(i.Fragment, {
+    n(47120);
+var i,
+    s,
+    r = n(200651),
+    l = n(192379),
+    a = n(481060),
+    o = n(921801),
+    c = n(695346),
+    d = n(626135),
+    u = n(63063),
+    m = n(88658),
+    h = n(981631),
+    g = n(703115),
+    p = n(726985),
+    x = n(388032),
+    S = n(566701);
+function T(e) {
+    let { isGuildRestricted: t, handleRestrictedGuildChange: n, isGuildActivityRestricted: i, handleActivityRestrictedGuildChange: s, isGuildActivityJoiningRestricted: l, handleActivityJoiningRestrictedGuildChange: c, isGuildMessageRequestRestricted: d, handleMessageRequestRestrictedGuildChange: m, guild: g } = e,
+        T = g.hasFeature(h.oNc.HUB);
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsxs)(l.F, {
-                setting: S.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_DMS,
+            (0, r.jsxs)(o.F, {
+                setting: p.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_DMS,
                 children: [
-                    (0, i.jsx)(o.FormItem, {
-                        children: (0, i.jsx)(o.FormSwitch, {
-                            value: !s,
-                            note: m ? I.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC_HUB : I.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC,
-                            onChange: t,
+                    (0, r.jsx)(a.FormItem, {
+                        children: (0, r.jsx)(a.FormSwitch, {
+                            value: !t,
+                            note: T ? x.intl.string(x.t['kZ+urq']) : x.intl.string(x.t.AZjdKS),
+                            onChange: n,
                             hideBorder: !0,
-                            children: I.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES
+                            children: x.intl.string(x.t.LoKBGB)
                         })
                     }),
-                    (0, i.jsx)(o.FormDivider, { className: N.divider })
+                    (0, r.jsx)(a.FormDivider, { className: S.divider })
                 ]
             }),
-            (0, i.jsx)(l.F, {
-                setting: S.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_MESSAGE_REQUESTS,
-                children: (0, i.jsxs)(i.Fragment, {
+            (0, r.jsx)(o.F, {
+                setting: p.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_MESSAGE_REQUESTS,
+                children: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, i.jsx)(o.FormItem, {
-                            children: (0, i.jsx)(o.FormSwitch, {
+                        (0, r.jsx)(a.FormItem, {
+                            children: (0, r.jsx)(a.FormSwitch, {
                                 value: !d,
-                                note: m ? I.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC_HUB.format({ helpdeskArticle: _.Z.getArticleURL(E.BhN.MESSAGE_REQUESTS) }) : I.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC.format({ helpdeskArticle: _.Z.getArticleURL(E.BhN.MESSAGE_REQUESTS) }),
-                                onChange: u,
-                                disabled: s,
+                                note: T ? x.intl.format(x.t.qTey8v, { helpdeskArticle: u.Z.getArticleURL(h.BhN.MESSAGE_REQUESTS) }) : x.intl.format(x.t['+Jjgi4'], { helpdeskArticle: u.Z.getArticleURL(h.BhN.MESSAGE_REQUESTS) }),
+                                onChange: m,
+                                disabled: t,
                                 hideBorder: !0,
-                                children: I.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS
+                                children: x.intl.string(x.t['5IN9wc'])
                             })
                         }),
-                        (0, i.jsx)(o.FormDivider, { className: N.divider })
+                        (0, r.jsx)(a.FormDivider, { className: S.divider })
                     ]
                 })
             }),
-            (0, i.jsx)(l.F, {
-                setting: S.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_STATUS,
-                children: (0, i.jsxs)(i.Fragment, {
+            (0, r.jsx)(o.F, {
+                setting: p.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_STATUS,
+                children: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, i.jsx)(o.FormItem, {
-                            children: (0, i.jsx)(o.FormSwitch, {
-                                value: !n,
-                                onChange: a,
+                        (0, r.jsx)(a.FormItem, {
+                            children: (0, r.jsx)(a.FormSwitch, {
+                                value: !i,
+                                onChange: s,
                                 hideBorder: !0,
-                                note: I.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_STATUS_DESC.format({ helpdeskArticle: _.Z.getArticleURL(E.BhN.ACTIVITY_STATUS_SETTINGS) }),
-                                children: I.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_STATUS
+                                note: x.intl.format(x.t['+Tbfen'], { helpdeskArticle: u.Z.getArticleURL(h.BhN.ACTIVITY_STATUS_SETTINGS) }),
+                                children: x.intl.string(x.t.OLwZDQ)
                             })
                         }),
-                        (0, i.jsx)(o.FormDivider, { className: N.divider })
+                        (0, r.jsx)(a.FormDivider, { className: S.divider })
                     ]
                 })
             }),
-            (0, i.jsxs)(l.F, {
-                setting: S.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_JOINING,
+            (0, r.jsxs)(o.F, {
+                setting: p.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_JOINING,
                 children: [
-                    (0, i.jsx)(o.FormItem, {
-                        children: (0, i.jsx)(o.FormSwitch, {
-                            value: !r,
+                    (0, r.jsx)(a.FormItem, {
+                        children: (0, r.jsx)(a.FormSwitch, {
+                            value: !l,
                             onChange: c,
                             hideBorder: !0,
-                            note: I.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_JOINING_DESC.format({ helpdeskArticle: _.Z.getArticleURL(E.BhN.ACTIVITY_STATUS_SETTINGS) }),
-                            children: I.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_JOINING
+                            note: x.intl.format(x.t.vZmjuL, { helpdeskArticle: u.Z.getArticleURL(h.BhN.ACTIVITY_STATUS_SETTINGS) }),
+                            children: x.intl.string(x.t.wBkwu7)
                         })
                     }),
-                    (0, i.jsx)(o.FormDivider, { className: N.divider })
+                    (0, r.jsx)(a.FormDivider, { className: S.divider })
                 ]
             }),
-            (0, i.jsx)(o.FormItem, {
-                className: N.disclaimer,
-                children: (0, i.jsx)(o.Text, {
+            (0, r.jsx)(a.FormItem, {
+                className: S.disclaimer,
+                children: (0, r.jsx)(a.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
-                    children: I.Z.Messages.PRIVACY_SETTINGS_COMMUNITY_GUILDS_DISCLAIMER.format({ policyLink: 'https://discord.com/safety/360043709612-our-policies' })
+                    children: x.intl.format(x.t.LNsV09, { policyLink: 'https://discord.com/safety/360043709612-our-policies' })
                 })
             })
         ]
     });
 }
 function C(e) {
-    let { guild: s, transitionState: t, onClose: n } = e,
-        a = ''.concat(I.Z.Messages.PRIVACY_SETTINGS, '\u2014').concat(null != s ? s.toString() : '??');
-    return (0, i.jsxs)(o.ModalRoot, {
-        transitionState: t,
-        size: o.ModalSize.SMALL,
-        'aria-label': a,
+    let { guild: t, transitionState: n, onClose: i } = e,
+        s = ''.concat(x.intl.string(x.t.BayiAg), '\u2014').concat(null != t ? t.toString() : '??');
+    return (0, r.jsxs)(a.ModalRoot, {
+        transitionState: n,
+        size: a.ModalSize.SMALL,
+        'aria-label': s,
         children: [
-            (0, i.jsx)(o.ModalHeader, {
-                children: (0, i.jsx)(o.Heading, {
+            (0, r.jsx)(a.ModalHeader, {
+                children: (0, r.jsx)(a.Heading, {
                     variant: 'heading-lg/semibold',
-                    children: a
+                    children: s
                 })
             }),
-            (0, i.jsx)(o.ModalContent, {
-                className: N.content,
-                children: (0, i.jsx)(A, {
-                    guild: s,
+            (0, r.jsx)(a.ModalContent, {
+                className: S.content,
+                children: (0, r.jsx)(_, {
+                    guild: t,
                     ingress: 'server_privacy_modal'
                 })
             }),
-            (0, i.jsx)(o.ModalFooter, {
-                children: (0, i.jsx)(o.Button, {
-                    onClick: () => n(),
-                    children: I.Z.Messages.DONE
+            (0, r.jsx)(a.ModalFooter, {
+                children: (0, r.jsx)(a.Button, {
+                    onClick: () => i(),
+                    children: x.intl.string(x.t.i4jeWV)
                 })
             })
         ]
     });
 }
-function A(e) {
-    let { guild: s, ingress: t = 'server_privacy_modal' } = e,
-        n = s.id,
-        a = c.h2.useSetting().includes(n),
-        o = c.zA.useSetting().includes(n),
-        l = c.SE.useSetting().includes(n),
-        _ = c.iH.useSetting().includes(n),
-        S = r.useCallback(
+function _(e) {
+    let { guild: t, ingress: n = 'server_privacy_modal' } = e,
+        i = t.id,
+        s = c.h2.useSetting().includes(i),
+        a = c.zA.useSetting().includes(i),
+        o = c.SE.useSetting().includes(i),
+        u = c.iH.useSetting().includes(i),
+        p = l.useCallback(
             (e) => {
-                let s = new Set((0, u.YK)());
-                e ? s.delete(n) : s.add(n),
-                    c.h2.updateSetting(Array.from(s)),
-                    d.default.track(E.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
-                        action: T.Y.DIRECT_MESSAGES_TOGGLE,
-                        ingress: t,
-                        guild_id: n
+                let t = new Set((0, m.YK)());
+                e ? t.delete(i) : t.add(i),
+                    c.h2.updateSetting(Array.from(t)),
+                    d.default.track(h.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+                        action: g.Y.DIRECT_MESSAGES_TOGGLE,
+                        ingress: n,
+                        guild_id: i
                     });
             },
-            [n, t]
+            [i, n]
         ),
-        I = r.useCallback(
+        x = l.useCallback(
             (e) => {
-                let s = new Set((0, u._o)());
-                e ? s.delete(n) : s.add(n),
-                    c.SE.updateSetting([...s]),
-                    d.default.track(E.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
-                        action: T.Y.RESTRICT_GUILD_ACTIVITY_STATUS_TOGGLE,
-                        ingress: t,
-                        guild_id: n
+                let t = new Set((0, m._o)());
+                e ? t.delete(i) : t.add(i),
+                    c.SE.updateSetting([...t]),
+                    d.default.track(h.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+                        action: g.Y.RESTRICT_GUILD_ACTIVITY_STATUS_TOGGLE,
+                        ingress: n,
+                        guild_id: i
                     });
             },
-            [n, t]
+            [i, n]
         ),
-        N = r.useCallback(
+        S = l.useCallback(
             (e) => {
-                let s = new Set((0, u.rr)());
-                e ? s.delete(n) : s.add(n),
-                    c.iH.updateSetting([...s]),
-                    d.default.track(E.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
-                        action: T.Y.RESTRICT_GUILD_ACTIVITY_JOIN_TOGGLE,
-                        ingress: t,
-                        guild_id: n
+                let t = new Set((0, m.rr)());
+                e ? t.delete(i) : t.add(i),
+                    c.iH.updateSetting([...t]),
+                    d.default.track(h.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+                        action: g.Y.RESTRICT_GUILD_ACTIVITY_JOIN_TOGGLE,
+                        ingress: n,
+                        guild_id: i
                     });
             },
-            [n, t]
+            [i, n]
         ),
-        C = r.useCallback(
+        C = l.useCallback(
             (e) => {
-                let s = new Set((0, u.gl)());
-                e ? s.delete(n) : s.add(n),
-                    c.zA.updateSetting(Array.from(s)),
-                    d.default.track(E.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
-                        action: T.Y.RESTRICT_GUILD_MESSAGE_REQUEST_TOGGLE,
-                        ingress: t,
-                        guild_id: n
+                let t = new Set((0, m.gl)());
+                e ? t.delete(i) : t.add(i),
+                    c.zA.updateSetting(Array.from(t)),
+                    d.default.track(h.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+                        action: g.Y.RESTRICT_GUILD_MESSAGE_REQUEST_TOGGLE,
+                        ingress: n,
+                        guild_id: i
                     });
             },
-            [n, t]
+            [i, n]
         );
-    return (0, i.jsx)(m, {
-        isGuildRestricted: a,
-        handleRestrictedGuildChange: S,
-        isGuildActivityRestricted: l,
-        handleActivityRestrictedGuildChange: I,
-        isGuildActivityJoiningRestricted: _,
-        handleActivityJoiningRestrictedGuildChange: N,
-        isGuildMessageRequestRestricted: o,
+    return (0, r.jsx)(T, {
+        isGuildRestricted: s,
+        handleRestrictedGuildChange: p,
+        isGuildActivityRestricted: o,
+        handleActivityRestrictedGuildChange: x,
+        isGuildActivityJoiningRestricted: u,
+        handleActivityJoiningRestrictedGuildChange: S,
+        isGuildMessageRequestRestricted: a,
         handleMessageRequestRestrictedGuildChange: C,
-        guild: s
+        guild: t
     });
 }
-((a = n || (n = {})).USER_SETTINGS_PRIVACY_SAFETY = 'user_settings_privacy_safety'), (a.SERVER_PRIVACY_MODAL = 'server_privacy_modal');
+((s = i || (i = {})).USER_SETTINGS_PRIVACY_SAFETY = 'user_settings_privacy_safety'), (s.SERVER_PRIVACY_MODAL = 'server_privacy_modal');

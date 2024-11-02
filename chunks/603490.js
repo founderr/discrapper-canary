@@ -5,28 +5,28 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(873546),
-    a = n(481060),
-    l = n(373662),
-    r = n(689938);
+var l = n(873546),
+    r = n(481060),
+    a = n(373662),
+    s = n(388032);
 function o(e) {
     let { channel: t, message: n, togglePopout: o, renderEmojiPicker: c, shouldShow: u } = e;
-    return (0, i.jsx)(a.Popout, {
-        animation: a.Popout.Animation.FADE,
+    return (0, i.jsx)(r.Popout, {
+        animation: r.Popout.Animation.FADE,
         renderPopout: (e) => {
             let { closePopout: i } = e;
             return c(t, n, i, !1);
         },
         shouldShow: u,
         onRequestClose: o,
-        position: s.tq ? 'top' : 'left',
-        align: s.tq ? 'center' : 'top',
+        position: l.tq ? 'top' : 'left',
+        align: l.tq ? 'center' : 'top',
         children: () =>
             (0, i.jsx)(
-                l.sF,
+                a.sF,
                 {
-                    label: r.Z.Messages.ADD_REACTION,
-                    icon: a.ReactionIcon,
+                    label: s.intl.string(s.t.lfIHs7),
+                    icon: r.ReactionIcon,
                     onClick: o
                 },
                 'add-reaction'

@@ -1,10 +1,10 @@
-t.d(n, {
+e.d(t, {
     w: function () {
         return o;
     }
 });
-var i = t(481060),
-    l = t(423932);
+var i = e(481060),
+    l = e(423932);
 let o = {
     binds: ['mod+alt+shift+w'],
     comboKeysBindGlobal: !0,

@@ -1,75 +1,75 @@
-var s,
-    a,
-    i,
+var i,
     r,
-    l = n(877921),
-    o = n.n(l),
+    l,
+    s,
+    a = n(877921),
+    o = n.n(a),
     c = n(442837),
     d = n(570140);
 let u = ['pct_retained', 'new_members', 'visitors', 'communicators'],
-    _ = {},
-    I = {},
-    E = null;
-function T(e) {
+    m = {},
+    h = {},
+    g = null;
+function x(e) {
     let { guildId: t, stats: n } = e;
-    E = null;
-    let s = {},
-        a = {},
-        i = n[0],
-        r = n[1];
-    null != i &&
+    g = null;
+    let i = {},
+        r = {},
+        l = n[0],
+        s = n[1];
+    null != l &&
         u.forEach((e) => {
-            if (null != i[e]) {
+            if (null != l[e]) {
                 let t = o()(e);
-                null != r && 0 !== r[e] && (s[''.concat(t, 'Change')] = ((i[e] - r[e]) * 100) / r[e]), (a[t] = i[e]);
+                null != s && 0 !== s[e] && (i[''.concat(t, 'Change')] = ((l[e] - s[e]) * 100) / s[e]), (r[t] = l[e]);
             }
         }),
-        (_[t] = {
-            ...a,
-            ...s,
-            ..._[t]
+        (m[t] = {
+            ...r,
+            ...i,
+            ...m[t]
         });
 }
-function m(e) {
+function p(e) {
     let { error: t } = e;
-    E = t.code;
+    g = t.code;
 }
-class N extends (r = c.ZP.Store) {
+class f extends (s = c.ZP.Store) {
     getOverviewAnalytics(e) {
-        return _[e];
+        return m[e];
     }
     getMemberInsights(e) {
         var t;
-        return null !== (t = I[e]) && void 0 !== t ? t : {};
+        return null !== (t = h[e]) && void 0 !== t ? t : {};
     }
     shouldFetchMemberInsights(e) {
         var t;
-        let n = null === (t = I[e]) || void 0 === t ? void 0 : t.fetchedAt;
+        let n = null === (t = h[e]) || void 0 === t ? void 0 : t.fetchedAt;
         return null == n || Date.now() - n > 43200000;
     }
     getError() {
-        return E;
+        return g;
     }
 }
-(i = 'GuildSettingsAnalyticsStore'),
-    (a = 'displayName') in (s = N)
-        ? Object.defineProperty(s, a, {
-              value: i,
+(l = 'GuildSettingsAnalyticsStore'),
+    (r = 'displayName') in (i = f)
+        ? Object.defineProperty(i, r, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (s[a] = i),
-    (t.Z = new N(d.Z, {
-        GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_SUCCESS: T,
-        GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_SUCCESS: T,
-        GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_SUCCESS: T,
-        GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_FAILURE: m,
-        GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_FAILURE: m,
-        GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_FAILURE: m,
+        : (i[r] = l),
+    (t.Z = new f(d.Z, {
+        GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_SUCCESS: x,
+        GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_SUCCESS: x,
+        GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_SUCCESS: x,
+        GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_FAILURE: p,
+        GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_FAILURE: p,
+        GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_FAILURE: p,
         GUILD_ANALYTICS_MEMBER_INSIGHTS_FETCH_SUCCESS: function (e) {
             let { guildId: t, ...n } = e;
-            I[t] = {
+            h[t] = {
                 ...n,
                 fetchedAt: Date.now()
             };

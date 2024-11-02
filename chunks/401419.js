@@ -11,7 +11,7 @@ t(192379);
 var i = t(120356),
     r = t.n(i),
     a = t(729594),
-    s = t(689938),
+    s = t(388032),
     o = t(413224);
 let d = ['sessionshare.sp-int.playstation.com', 'session-share.playstation.com'],
     u = (e, l, t) => 'https://'.concat(e, '/embed/').concat(l, '?locale=').concat(t),
@@ -23,7 +23,7 @@ let d = ['sessionshare.sp-int.playstation.com', 'session-share.playstation.com']
             case 'PlayStation':
                 if (null == t || !d.includes(t) || 2 !== i.length) break;
                 return {
-                    embedUrl: u(t, i[1], s.Z.getLocale()),
+                    embedUrl: u(t, i[1], s.intl.currentLocale),
                     style: {
                         width: 400,
                         height: 300,

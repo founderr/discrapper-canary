@@ -1,216 +1,216 @@
-n.r(t), n(47120);
-var l = n(200651),
-    r = n(192379),
-    i = n(442837),
-    u = n(481060),
-    d = n(933557),
-    s = n(156699),
-    a = n(734893),
-    E = n(693196),
-    o = n(66999),
-    c = n(575830),
-    _ = n(554747),
-    N = n(434404),
+n.r(e), n(47120);
+var i = n(200651),
+    l = n(192379),
+    r = n(442837),
+    d = n(481060),
+    a = n(933557),
+    u = n(156699),
+    s = n(734893),
+    o = n(693196),
+    _ = n(66999),
+    E = n(575830),
+    c = n(554747),
+    I = n(434404),
     T = n(144140),
-    f = n(314897),
-    C = n(430824),
-    g = n(496675),
-    Z = n(981631),
-    D = n(689938),
-    h = n(276799);
-t.default = (e) => {
-    let { channel: t, onClose: n, onConfirm: I, transitionState: v } = e,
-        L = (0, d.ZP)(t, !0),
-        O = t.id,
-        m = t.isForumPost(),
-        M = (0, i.e7)([C.Z], () => C.Z.getGuild(t.getGuildId())),
-        A = (0, _.u1)(O),
-        { isSubscriptionGated: S } = (0, o.Z)(t.id),
-        P = (0, c.Z)(M, t),
-        [G, x] = r.useState(),
-        U = (0, i.e7)([f.default], () => t.isOwner(f.default.getId()), [t]),
-        p = (0, i.e7)([g.Z], () => g.Z.can(t.isThread() ? Z.Plq.MANAGE_THREADS : Z.Plq.MANAGE_CHANNELS, t), [t]),
-        H = (0, i.e7)(
+    g = n(314897),
+    p = n(430824),
+    m = n(496675),
+    U = n(981631),
+    C = n(388032),
+    D = n(276799);
+e.default = (t) => {
+    let { channel: e, onClose: n, onConfirm: G, transitionState: L } = t,
+        f = (0, a.ZP)(e, !0),
+        N = e.id,
+        S = e.isForumPost(),
+        y = (0, r.e7)([p.Z], () => p.Z.getGuild(e.getGuildId())),
+        O = (0, c.u1)(N),
+        { isSubscriptionGated: v } = (0, _.Z)(e.id),
+        h = (0, E.Z)(y, e),
+        [A, Z] = l.useState(),
+        z = (0, r.e7)([g.default], () => e.isOwner(g.default.getId()), [e]),
+        M = (0, r.e7)([m.Z], () => m.Z.can(e.isThread() ? U.Plq.MANAGE_THREADS : U.Plq.MANAGE_CHANNELS, e), [e]),
+        P = (0, r.e7)(
             [T.Z],
             () => {
-                var e;
-                return null !== (e = T.Z.getCount(t.id)) && void 0 !== e ? e : 0;
+                var t;
+                return null !== (t = T.Z.getCount(e.id)) && void 0 !== t ? t : 0;
             },
-            [t.id]
+            [e.id]
         ),
-        R = m && (p || (U && H < 1)),
-        B = A.length > 0 && (t.type === Z.d4z.GUILD_VOICE || t.type === Z.d4z.GUILD_STAGE_VOICE);
+        H = S && (M || (z && P < 1)),
+        R = O.length > 0 && (e.type === U.d4z.GUILD_VOICE || e.type === U.d4z.GUILD_STAGE_VOICE);
     if (
-        (r.useEffect(() => {
+        (l.useEffect(() => {
             (async () => {
-                if (!(await (0, s.C)(t.getGuildId(), O))) {
-                    x(a.j.DEFAULT);
+                if (!(await (0, u.C)(e.getGuildId(), N))) {
+                    Z(s.j.DEFAULT);
                     return;
                 }
-                let e = await (0, E.T)(t.getGuildId(), O);
-                if (null != e) {
-                    x(e);
+                let t = await (0, o.T)(e.getGuildId(), N);
+                if (null != t) {
+                    Z(t);
                     return;
                 }
             })();
-        }, [t, O]),
-        null != G)
+        }, [e, N]),
+        null != A)
     ) {
-        let e;
-        let t = D.Z.Messages.DELETE_DEFAULT_CHANNEL_BODY;
+        let t;
+        let e = C.intl.string(C.t.iWlB6u);
         return (
-            (e = G === a.j.TODO ? D.Z.Messages.DESIGNATE_OTHER_CHANNEL_GUIDE_TODO : G === a.j.RESOURCE ? D.Z.Messages.DESIGNATE_OTHER_CHANNEL_GUIDE_RESOURCE : D.Z.Messages.DESIGNATE_OTHER_CHANNEL_ONBOARDING),
-            (0, l.jsxs)(u.ModalRoot, {
-                transitionState: v,
-                'aria-label': D.Z.Messages.CANNOT_DELETE_CHANNEL,
+            (t = A === s.j.TODO ? C.t['/rjozM'] : A === s.j.RESOURCE ? C.t.Nf5pt7 : C.t.ajiBwM),
+            (0, i.jsxs)(d.ModalRoot, {
+                transitionState: L,
+                'aria-label': C.intl.string(C.t['TY/V+P']),
                 children: [
-                    (0, l.jsx)(u.ModalHeader, {
+                    (0, i.jsx)(d.ModalHeader, {
                         separator: !1,
-                        children: (0, l.jsx)(u.Heading, {
+                        children: (0, i.jsx)(d.Heading, {
                             variant: 'heading-lg/semibold',
-                            children: D.Z.Messages.CANNOT_DELETE_CHANNEL
+                            children: C.intl.string(C.t['TY/V+P'])
                         })
                     }),
-                    (0, l.jsxs)(u.ModalContent, {
-                        className: h.modalContent,
+                    (0, i.jsxs)(d.ModalContent, {
+                        className: D.modalContent,
                         children: [
-                            (0, l.jsx)(u.Text, {
+                            (0, i.jsx)(d.Text, {
                                 variant: 'text-md/normal',
-                                children: t
+                                children: e
                             }),
-                            (0, l.jsx)(u.Text, {
+                            (0, i.jsx)(d.Text, {
                                 variant: 'text-md/normal',
-                                children: e.format({
+                                children: C.intl.format(t, {
                                     onClick: () => {
-                                        null != M && (N.Z.open(M.id, Z.pNK.ONBOARDING), null == n || n());
+                                        null != y && (I.Z.open(y.id, U.pNK.ONBOARDING), null == n || n());
                                     }
                                 })
                             })
                         ]
                     }),
-                    (0, l.jsx)(u.ModalFooter, {
-                        children: (0, l.jsx)(u.Button, {
+                    (0, i.jsx)(d.ModalFooter, {
+                        children: (0, i.jsx)(d.Button, {
                             onClick: n,
-                            children: D.Z.Messages.OKAY
+                            children: C.intl.string(C.t.BddRzc)
                         })
                     })
                 ]
             })
         );
     }
-    if (null == M) return null;
-    if (M.hasFeature(Z.oNc.COMMUNITY) && (M.rulesChannelId === O || M.publicUpdatesChannelId === O)) {
-        let e = M.rulesChannelId === O,
-            t = e ? D.Z.Messages.DELETE_RULES_CHANNEL_BODY : D.Z.Messages.DELETE_UPDATES_CHANNEL_BODY;
-        return (0, l.jsxs)(u.ModalRoot, {
-            transitionState: v,
-            'aria-label': D.Z.Messages.CANNOT_DELETE_CHANNEL,
+    if (null == y) return null;
+    if (y.hasFeature(U.oNc.COMMUNITY) && (y.rulesChannelId === N || y.publicUpdatesChannelId === N)) {
+        let t = y.rulesChannelId === N,
+            e = t ? C.intl.string(C.t.yjrZPj) : C.intl.string(C.t['1B1/ND']);
+        return (0, i.jsxs)(d.ModalRoot, {
+            transitionState: L,
+            'aria-label': C.intl.string(C.t['TY/V+P']),
             children: [
-                (0, l.jsx)(u.ModalHeader, {
+                (0, i.jsx)(d.ModalHeader, {
                     separator: !1,
-                    children: (0, l.jsx)(u.Heading, {
+                    children: (0, i.jsx)(d.Heading, {
                         variant: 'heading-lg/semibold',
-                        children: D.Z.Messages.CANNOT_DELETE_CHANNEL
+                        children: C.intl.string(C.t['TY/V+P'])
                     })
                 }),
-                (0, l.jsxs)(u.ModalContent, {
+                (0, i.jsxs)(d.ModalContent, {
                     children: [
-                        (0, l.jsx)(u.Text, {
+                        (0, i.jsx)(d.Text, {
                             variant: 'text-md/normal',
-                            className: h.__invalid_modalText,
-                            children: t
+                            className: D.__invalid_modalText,
+                            children: e
                         }),
-                        (0, l.jsx)(u.Text, {
+                        (0, i.jsx)(d.Text, {
                             variant: 'text-md/normal',
-                            className: h.__invalid_modalText,
-                            children: D.Z.Messages.DESIGNATE_OTHER_CHANNEL.format({
+                            className: D.__invalid_modalText,
+                            children: C.intl.format(C.t['cg6U//'], {
                                 onClick: () => {
-                                    N.Z.open(M.id, Z.pNK.COMMUNITY), null == n || n();
+                                    I.Z.open(y.id, U.pNK.COMMUNITY), null == n || n();
                                 }
                             })
                         })
                     ]
                 }),
-                (0, l.jsx)(u.ModalFooter, {
-                    children: (0, l.jsx)(u.Button, {
+                (0, i.jsx)(d.ModalFooter, {
+                    children: (0, i.jsx)(d.Button, {
                         onClick: n,
-                        children: D.Z.Messages.OKAY
+                        children: C.intl.string(C.t.BddRzc)
                     })
                 })
             ]
         });
     }
     {
-        let { deleteText: e, deleteBody: r } = (() => {
-            if (t.type === Z.d4z.GUILD_CATEGORY)
+        let { deleteText: t, deleteBody: l } = (() => {
+            if (e.type === U.d4z.GUILD_CATEGORY)
                 return {
-                    deleteText: D.Z.Messages.DELETE_CATEGORY,
-                    deleteBody: D.Z.Messages.DELETE_CHANNEL_BODY.format({ channelName: L })
+                    deleteText: C.intl.string(C.t.ifbXnJ),
+                    deleteBody: C.intl.format(C.t.a6Gz9P, { channelName: f })
                 };
-            if (t.isForumPost())
+            if (e.isForumPost())
                 return {
-                    deleteText: R ? D.Z.Messages.DELETE_FORUM_POST : D.Z.Messages.DELETE_MESSAGE,
-                    deleteBody: R && U && !p ? D.Z.Messages.DELETE_FORUM_POST_OP_CONFIRM_BODY.format({ postName: L }) : R ? D.Z.Messages.DELETE_FORUM_POST_CONFIRM_BODY.format({ postName: L }) : D.Z.Messages.DELETE_FORUM_POST_OP_WITH_REPLIES_CONFIRM_BODY
+                    deleteText: H ? C.intl.string(C.t.nEOg1N) : C.intl.string(C.t.xwMqDw),
+                    deleteBody: H && z && !M ? C.intl.format(C.t['6/pY29'], { postName: f }) : H ? C.intl.format(C.t.su3voK, { postName: f }) : C.intl.string(C.t.RUHcys)
                 };
-            if (t.isThread())
+            if (e.isThread())
                 return {
-                    deleteText: D.Z.Messages.DELETE_THREAD,
-                    deleteBody: D.Z.Messages.DELETE_CHANNEL_BODY.format({ channelName: L })
+                    deleteText: C.intl.string(C.t.H7vTe3),
+                    deleteBody: C.intl.format(C.t.a6Gz9P, { channelName: f })
                 };
-            else if (S && P > 0)
+            else if (v && h > 0)
                 return {
-                    deleteText: D.Z.Messages.DELETE_CHANNEL,
-                    deleteBody: D.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_DELETE_CHANNEL_BODY.format({
-                        channelName: L,
-                        numGuildRoleSubscriptionMembers: P
+                    deleteText: C.intl.string(C.t['8D8Rsb']),
+                    deleteBody: C.intl.format(C.t['+qkiT0'], {
+                        channelName: f,
+                        numGuildRoleSubscriptionMembers: h
                     })
                 };
             return {
-                deleteText: D.Z.Messages.DELETE_CHANNEL,
-                deleteBody: D.Z.Messages.DELETE_CHANNEL_BODY.format({ channelName: L })
+                deleteText: C.intl.string(C.t['8D8Rsb']),
+                deleteBody: C.intl.format(C.t.a6Gz9P, { channelName: f })
             };
         })();
-        return (0, l.jsxs)(u.ModalRoot, {
-            transitionState: v,
-            'aria-label': e,
+        return (0, i.jsxs)(d.ModalRoot, {
+            transitionState: L,
+            'aria-label': t,
             children: [
-                (0, l.jsx)(u.ModalHeader, {
+                (0, i.jsx)(d.ModalHeader, {
                     separator: !1,
-                    children: (0, l.jsx)(u.Heading, {
+                    children: (0, i.jsx)(d.Heading, {
                         variant: 'heading-lg/semibold',
-                        children: e
+                        children: t
                     })
                 }),
-                (0, l.jsxs)(u.ModalContent, {
-                    className: h.modalContent,
+                (0, i.jsxs)(d.ModalContent, {
+                    className: D.modalContent,
                     children: [
-                        (0, l.jsx)(u.Text, {
+                        (0, i.jsx)(d.Text, {
                             variant: 'text-md/normal',
                             color: 'header-primary',
-                            children: r
+                            children: l
                         }),
-                        B
-                            ? (0, l.jsx)(u.Text, {
+                        R
+                            ? (0, i.jsx)(d.Text, {
                                   variant: 'text-md/normal',
                                   color: 'header-secondary',
-                                  className: h.warningText,
-                                  children: D.Z.Messages.GUILD_EVENT_CHANNEL_DELETE_GUILD_EVENTS.format({ count: A.length })
+                                  className: D.warningText,
+                                  children: C.intl.format(C.t.Ze005O, { count: O.length })
                               })
                             : null
                     ]
                 }),
-                (0, l.jsxs)(u.ModalFooter, {
+                (0, i.jsxs)(d.ModalFooter, {
                     children: [
-                        (0, l.jsx)(u.Button, {
-                            onClick: I,
-                            color: u.Button.Colors.RED,
-                            children: e
+                        (0, i.jsx)(d.Button, {
+                            onClick: G,
+                            color: d.Button.Colors.RED,
+                            children: t
                         }),
-                        (0, l.jsx)(u.Button, {
+                        (0, i.jsx)(d.Button, {
                             onClick: n,
-                            look: u.Button.Looks.LINK,
-                            color: u.Button.Colors.PRIMARY,
-                            children: D.Z.Messages.CANCEL
+                            look: d.Button.Looks.LINK,
+                            color: d.Button.Colors.PRIMARY,
+                            children: C.intl.string(C.t['ETE/oK'])
                         })
                     ]
                 })

@@ -1,40 +1,40 @@
 n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(481060),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    s = n(481060),
     o = n(951394),
     c = n(455839),
-    d = n(689938),
+    d = n(388032),
     u = n(271183);
 t.Z = function (e) {
     let { guild: t, className: n } = e,
-        [s, _] = a.useState(!1),
-        E = a.useCallback(() => _(!0), [_]),
-        h = a.useCallback(() => _(!0), [_]);
+        [l, h] = r.useState(!1),
+        m = r.useCallback(() => h(!0), [h]),
+        p = r.useCallback(() => h(!0), [h]);
     return (0, i.jsx)('div', {
-        className: r()(u.actionButtonsContainer, n, { [u.forceButtonsShow]: s }),
+        className: a()(u.actionButtonsContainer, n, { [u.forceButtonsShow]: l }),
         children: (0, i.jsx)(o.ZP, {
             children: (0, i.jsx)(c.GuildDiscoveryMenuPopout, {
-                onRequestOpen: E,
-                onRequestClose: h,
+                onRequestOpen: m,
+                onRequestClose: p,
                 guild: t,
                 children: (e) => {
                     let { onClick: t, ...n } = e;
-                    return (0, i.jsx)(l.Tooltip, {
-                        text: d.Z.Messages.MORE,
+                    return (0, i.jsx)(s.Tooltip, {
+                        text: d.intl.string(d.t.UKOtz8),
                         hideOnClick: !0,
                         children: (e) => {
-                            let { onClick: a, ...s } = e;
+                            let { onClick: r, ...l } = e;
                             return (0, i.jsx)(o.zx, {
                                 ...n,
-                                ...s,
+                                ...l,
                                 onClick: (e) => {
-                                    e.stopPropagation(), null == a || a(), t(e);
+                                    e.stopPropagation(), null == r || r(), t(e);
                                 },
-                                'aria-label': d.Z.Messages.MORE,
-                                children: (0, i.jsx)(l.MoreHorizontalIcon, {
+                                'aria-label': d.intl.string(d.t.UKOtz8),
+                                children: (0, i.jsx)(s.MoreHorizontalIcon, {
                                     size: 'md',
                                     color: 'currentColor',
                                     className: u.overflowIcon

@@ -1,6 +1,6 @@
 n.d(t, {
     Mt: function () {
-        return f;
+        return h;
     },
     Sh: function () {
         return u.S;
@@ -18,7 +18,7 @@ n.d(t, {
         return c.a;
     },
     jj: function () {
-        return E;
+        return _;
     },
     zZ: function () {
         return o;
@@ -33,7 +33,7 @@ var r,
     u = n(839548),
     c = n(946695),
     d = n(65154);
-function _(e) {
+function f(e) {
     switch (e) {
         case d.AS.NATIVE:
             return n(743426).Z;
@@ -44,11 +44,11 @@ function _(e) {
             return n(135670).Z;
     }
 }
-function E() {
+function _() {
     var e;
-    return null !== (e = [d.AS.NATIVE, d.AS.WEBRTC].find((e) => _(e).supported())) && void 0 !== e ? e : d.AS.DUMMY;
+    return null !== (e = [d.AS.NATIVE, d.AS.WEBRTC].find((e) => f(e).supported())) && void 0 !== e ? e : d.AS.DUMMY;
 }
-function f(e) {
-    return new (_(e))();
+function h(e) {
+    return new (f(e))();
 }
 ((r = s || (s = {})).INPUT_DEVICE = 'input_device'), (r.STREAM = 'stream'), ((i = o || (o = {})).NONE = ''), (i.BACKGROUND_BLUR = 'background_blur'), (i.BACKGROUND_REPLACEMENT = 'background_replacement'), ((a = l || (l = {})).CAMERA_BACKGROUND_PREVIEW = 'cameraBackgroundPreview'), (a.CAMERA_BACKGROUND_LIVE = 'cameraBackgroundLive');

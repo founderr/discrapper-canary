@@ -10,18 +10,18 @@ var r = n(200651),
     l = n(120356),
     i = n.n(l),
     o = n(481060),
-    s = n(424625),
-    c = n(823379),
+    c = n(424625),
+    s = n(823379),
     d = n(246992),
     u = n(219299);
 let h = a.forwardRef(function (e, t) {
-    let { id: n, selected: a, onClick: l, children: s } = e;
+    let { id: n, selected: a, onClick: l, children: c } = e;
     return (0, r.jsx)(o.Clickable, {
         className: i()(u.tabItem, { [u.selected]: a }),
         'data-tab-id': n,
         innerRef: t,
         onClick: l,
-        children: s
+        children: c
     });
 });
 function m(e) {
@@ -34,10 +34,10 @@ function m(e) {
             var e, r, a, l;
             if (null == i.current) return;
             let o = [],
-                s = i.current.getBoundingClientRect().width;
-            if (s !== m.current) {
-                for (let i of ((m.current = s), (s -= null !== (r = null === (e = x.current.get(n)) || void 0 === e ? void 0 : e.width) && void 0 !== r ? r : 0), t)) {
-                    if (i.id !== n) (s -= null !== (l = null === (a = x.current.get(i.id)) || void 0 === a ? void 0 : a.width) && void 0 !== l ? l : 0) < 0 && o.push(i.id);
+                c = i.current.getBoundingClientRect().width;
+            if (c !== m.current) {
+                for (let i of ((m.current = c), (c -= null !== (r = null === (e = x.current.get(n)) || void 0 === e ? void 0 : e.width) && void 0 !== r ? r : 0), t)) {
+                    if (i.id !== n) (c -= null !== (l = null === (a = x.current.get(i.id)) || void 0 === a ? void 0 : a.width) && void 0 !== l ? l : 0) < 0 && o.push(i.id);
                 }
                 p(o);
             }
@@ -78,7 +78,7 @@ function m(e) {
                               )
                             : null;
                     })
-                    .filter(c.lm)
+                    .filter(s.lm)
             });
         },
         [t, f, l, n]
@@ -110,7 +110,7 @@ function m(e) {
                             t
                         );
                 })
-                .filter(c.lm),
+                .filter(s.lm),
             f.length > 0 &&
                 (0, r.jsx)(r.Fragment, {
                     children: (0, r.jsx)(o.Popout, {
@@ -125,7 +125,7 @@ function m(e) {
                                 className: u.overflowChevron,
                                 size: o.Button.Sizes.ICON,
                                 look: o.Button.Looks.BLANK,
-                                children: (0, r.jsx)(s.Z, {
+                                children: (0, r.jsx)(c.Z, {
                                     className: u.__invalid_overflowIcon,
                                     width: 16,
                                     height: 16
@@ -138,18 +138,18 @@ function m(e) {
 }
 function x(e, t) {
     var n, l, i;
-    let { tabs: o, initialSelectedTabId: s, onChangeTab: c } = e,
-        [d, u] = a.useState(null != s ? s : null === (n = o[0]) || void 0 === n ? void 0 : n.id),
+    let { tabs: o, initialSelectedTabId: c, onChangeTab: s } = e,
+        [d, u] = a.useState(null != c ? c : null === (n = o[0]) || void 0 === n ? void 0 : n.id),
         h = a.useCallback(
             () =>
                 (0, r.jsx)(m, {
                     tabs: o,
                     selectedTabId: d,
                     onSelectTab: (e) => {
-                        u(e), null == c || c(e);
+                        u(e), null == s || s(e);
                     }
                 }),
-            [d, u, c, ...t]
+            [d, u, s, ...t]
         );
     return {
         TabBar: h,

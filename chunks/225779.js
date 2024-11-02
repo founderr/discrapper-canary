@@ -1,21 +1,21 @@
 n.d(t, {
     DM: function () {
-        return _;
-    },
-    Ey: function () {
-        return E;
-    },
-    No: function () {
         return f;
     },
+    Ey: function () {
+        return _;
+    },
+    No: function () {
+        return h;
+    },
     Ry: function () {
-        return p;
+        return m;
     },
     qX: function () {
-        return I;
+        return g;
     },
     u3: function () {
-        return h;
+        return p;
     }
 });
 var r = n(200651);
@@ -26,9 +26,9 @@ var i = n(120356),
     o = n(481060),
     l = n(626135),
     u = n(981631),
-    c = n(689938),
+    c = n(388032),
     d = n(250812);
-let _ = Object.freeze({
+let f = Object.freeze({
     DEFAULT: d.colorDefault,
     NEUTRAL: d.colorNeutral,
     BRAND: d.colorBrand,
@@ -43,7 +43,7 @@ let _ = Object.freeze({
     PREMIUM_TIER_1: d.colorPremiumTier1,
     PREMIUM_TIER_2: d.colorPremiumTier2
 });
-function E(e) {
+function _(e) {
     let { children: t, className: n, minor: i = !1, ...s } = e;
     return (0, r.jsx)(o.FocusRing, {
         children: (0, r.jsx)('button', {
@@ -53,9 +53,9 @@ function E(e) {
         })
     });
 }
-function f(e) {
+function h(e) {
     let { children: t, noticeType: n, additionalTrackingProps: i, ...a } = e;
-    return (0, r.jsx)(E, {
+    return (0, r.jsx)(_, {
         ...a,
         onClick: (e) => {
             var t, r;
@@ -71,7 +71,7 @@ function f(e) {
         children: t
     });
 }
-function h(e) {
+function p(e) {
     let { children: t, href: n, ...i } = e;
     return (0, r.jsx)(o.Anchor, {
         ...i,
@@ -80,7 +80,7 @@ function h(e) {
         children: t
     });
 }
-function p(e) {
+function m(e) {
     let { onClick: t, noticeType: n } = e;
     return (0, r.jsx)(o.Clickable, {
         focusProps: { offset: 6 },
@@ -89,7 +89,7 @@ function p(e) {
             var e;
             t(), null != (e = n) && l.default.track(u.rMx.APP_NOTICE_CLOSED, { notice_type: e });
         },
-        'aria-label': c.Z.Messages.DISMISS,
+        'aria-label': c.intl.string(c.t.WAI6xs),
         children: (0, r.jsx)(o.XSmallIcon, {
             size: 'sm',
             color: 'currentColor',
@@ -97,8 +97,8 @@ function p(e) {
         })
     });
 }
-function I(e) {
-    let { color: t = _.DEFAULT, className: n, style: i, children: o } = e;
+function g(e) {
+    let { color: t = f.DEFAULT, className: n, style: i, children: o } = e;
     return (0, r.jsx)('div', {
         className: a()(d.notice, { [d.isMobile]: s.tq }, n, t),
         style: null != i ? i : void 0,

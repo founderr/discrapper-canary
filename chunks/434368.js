@@ -1,131 +1,131 @@
-l.d(t, {
+n.d(t, {
     Z: function () {
-        return h;
+        return b;
     }
 });
-var n = l(200651),
-    a = l(192379),
-    o = l(498607),
-    s = l.n(o),
-    i = l(399606),
-    r = l(481060),
-    C = l(203893),
-    c = l(910693),
-    d = l(893966),
-    u = l(527379),
-    m = l(981631),
-    _ = l(689938),
-    E = l(579135);
-function h(e) {
-    let { guildId: t, onClose: l } = e,
-        o = (0, i.e7)([d.Z], () => d.Z.getSearchStateByGuildId(t), [t], s()),
-        h = (0, c.dW)(t),
-        M = a.useCallback(() => {
-            !o.requireUnusualDmActivity && h(c.aY.UNUSUAL_DM_ACTIVITY),
+var l = n(200651),
+    o = n(192379),
+    a = n(498607),
+    i = n.n(a),
+    r = n(399606),
+    s = n(481060),
+    c = n(203893),
+    C = n(910693),
+    d = n(893966),
+    u = n(527379),
+    m = n(981631),
+    h = n(388032),
+    x = n(579135);
+function b(e) {
+    let { guildId: t, onClose: n } = e,
+        a = (0, r.e7)([d.Z], () => d.Z.getSearchStateByGuildId(t), [t], i()),
+        b = (0, C.dW)(t),
+        f = o.useCallback(() => {
+            !a.requireUnusualDmActivity && b(C.aY.UNUSUAL_DM_ACTIVITY),
                 (0, u.Dr)(t, {
-                    ...o,
-                    requireUnusualDmActivity: !o.requireUnusualDmActivity
+                    ...a,
+                    requireUnusualDmActivity: !a.requireUnusualDmActivity
                 });
-        }, [t, o, h]),
-        x = a.useCallback(() => {
-            !o.requireCommunicationDisabled && h(c.aY.COMMUNICATION_DISABLED),
+        }, [t, a, b]),
+        g = o.useCallback(() => {
+            !a.requireCommunicationDisabled && b(C.aY.COMMUNICATION_DISABLED),
                 (0, u.Dr)(t, {
-                    ...o,
-                    requireCommunicationDisabled: !o.requireCommunicationDisabled
+                    ...a,
+                    requireCommunicationDisabled: !a.requireCommunicationDisabled
                 });
-        }, [t, o, h]),
-        b = a.useCallback(() => {
-            !o.requireUnusualAccountActivity && h(c.aY.UNUSUAL_ACCOUNT_ACTIVITY),
+        }, [t, a, b]),
+        p = o.useCallback(() => {
+            !a.requireUnusualAccountActivity && b(C.aY.UNUSUAL_ACCOUNT_ACTIVITY),
                 (0, u.Dr)(t, {
-                    ...o,
-                    requireUnusualAccountActivity: !o.requireUnusualAccountActivity
+                    ...a,
+                    requireUnusualAccountActivity: !a.requireUnusualAccountActivity
                 });
-        }, [t, o, h]),
-        T = a.useCallback(() => {
-            !o.requireUsernameQuarantined && h(c.aY.USERNAME_QUARANTINED),
+        }, [t, a, b]),
+        H = o.useCallback(() => {
+            !a.requireUsernameQuarantined && b(C.aY.USERNAME_QUARANTINED),
                 (0, u.Dr)(t, {
-                    ...o,
-                    requireUsernameQuarantined: !o.requireUsernameQuarantined
+                    ...a,
+                    requireUsernameQuarantined: !a.requireUsernameQuarantined
                 });
-        }, [t, o, h]);
-    return (0, n.jsx)(r.Menu, {
+        }, [t, a, b]);
+    return (0, l.jsx)(s.Menu, {
         navId: 'member-safety-flags',
-        onClose: l,
-        'aria-label': _.Z.Messages.MEMBER_SAFETY_TABLE_FLAGS_POPOUT_TITLE,
+        onClose: n,
+        'aria-label': h.intl.string(h.t.k9m8Rk),
         onSelect: m.dG4,
-        children: (0, n.jsxs)(r.MenuGroup, {
+        children: (0, l.jsxs)(s.MenuGroup, {
             children: [
-                (0, n.jsx)(r.MenuCheckboxItem, {
+                (0, l.jsx)(s.MenuCheckboxItem, {
                     id: 'toggle-require-unusual-dm-activity',
-                    label: (0, n.jsxs)('div', {
-                        className: E.checkboxLabel,
+                    label: (0, l.jsxs)('div', {
+                        className: x.checkboxLabel,
                         children: [
-                            (0, n.jsx)(r.ChatWarningIcon, {
+                            (0, l.jsx)(s.ChatWarningIcon, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 16,
                                 height: 16,
-                                className: E.unusualDMLabelIcon
+                                className: x.unusualDMLabelIcon
                             }),
-                            _.Z.Messages.MEMBER_SAFETY_UNUSUAL_DM_ACTIVITY
+                            h.intl.string(h.t.ZRnONz)
                         ]
                     }),
-                    action: M,
-                    checked: o.requireUnusualDmActivity
+                    action: f,
+                    checked: a.requireUnusualDmActivity
                 }),
-                (0, n.jsx)(r.MenuCheckboxItem, {
+                (0, l.jsx)(s.MenuCheckboxItem, {
                     id: 'toggle-require-communication-disabled',
-                    label: (0, n.jsxs)('div', {
-                        className: E.checkboxLabel,
+                    label: (0, l.jsxs)('div', {
+                        className: x.checkboxLabel,
                         children: [
-                            (0, n.jsx)(r.ClockWarningIcon, {
+                            (0, l.jsx)(s.ClockWarningIcon, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 16,
                                 height: 16,
-                                className: E.timeoutLabelIcon
+                                className: x.timeoutLabelIcon
                             }),
-                            _.Z.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED
+                            h.intl.string(h.t.z3wbj4)
                         ]
                     }),
-                    action: x,
-                    checked: o.requireCommunicationDisabled
+                    action: g,
+                    checked: a.requireCommunicationDisabled
                 }),
-                (0, n.jsxs)(n.Fragment, {
+                (0, l.jsxs)(l.Fragment, {
                     children: [
-                        (0, n.jsx)(r.MenuCheckboxItem, {
+                        (0, l.jsx)(s.MenuCheckboxItem, {
                             id: 'toggle-require-unusual-account-activity',
-                            label: (0, n.jsxs)('div', {
-                                className: E.checkboxLabel,
+                            label: (0, l.jsxs)('div', {
+                                className: x.checkboxLabel,
                                 children: [
-                                    (0, n.jsx)(C.Z, {
+                                    (0, l.jsx)(c.Z, {
                                         width: 16,
                                         height: 16,
-                                        className: E.unusualAccountActivityLabelIcon
+                                        className: x.unusualAccountActivityLabelIcon
                                     }),
-                                    _.Z.Messages.MEMBER_SAFETY_UNUSUAL_ACCOUNT_ACTIVITY
+                                    h.intl.string(h.t.DIQsDw)
                                 ]
                             }),
-                            action: b,
-                            checked: o.requireUnusualAccountActivity
+                            action: p,
+                            checked: a.requireUnusualAccountActivity
                         }),
-                        (0, n.jsx)(r.MenuCheckboxItem, {
+                        (0, l.jsx)(s.MenuCheckboxItem, {
                             id: 'toggle-require-username-quarantined',
-                            label: (0, n.jsxs)('div', {
-                                className: E.checkboxLabel,
+                            label: (0, l.jsxs)('div', {
+                                className: x.checkboxLabel,
                                 children: [
-                                    (0, n.jsx)(r.ChatXIcon, {
+                                    (0, l.jsx)(s.ChatXIcon, {
                                         size: 'custom',
                                         color: 'currentColor',
                                         width: 16,
                                         height: 16,
-                                        className: E.quarantinedLabelIcon
+                                        className: x.quarantinedLabelIcon
                                     }),
-                                    _.Z.Messages.MEMBER_SAFETY_USERNAME_QUARANTINED
+                                    h.intl.string(h.t.Jloklp)
                                 ]
                             }),
-                            action: T,
-                            checked: o.requireUsernameQuarantined
+                            action: H,
+                            checked: a.requireUsernameQuarantined
                         })
                     ]
                 })

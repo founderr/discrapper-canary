@@ -3,10 +3,10 @@ n.d(t, {
         return d;
     },
     E8: function () {
-        return _;
+        return f;
     },
     L_: function () {
-        return E;
+        return _;
     }
 });
 var r = n(192379),
@@ -86,12 +86,12 @@ let u = {},
 function d(e) {
     return c((t) => (null != e ? t.clans[e] : null));
 }
-function _(e) {
+function f(e) {
     return c((t) => null != e && t.isFetchingGuild(e));
 }
-function E(e) {
+function _(e) {
     let t = c((e) => e.fetchClanInfo, a.Z),
-        n = _(e);
+        n = f(e);
     return [
         n,
         r.useCallback(async () => {

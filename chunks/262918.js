@@ -1,124 +1,124 @@
-t.r(s),
-    t.d(s, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return m;
+            return f;
         }
     }),
-    t(47120),
-    t(653041);
-var n = t(200651),
-    a = t(192379),
-    r = t(512722),
-    i = t.n(r),
-    o = t(902704),
-    l = t(481060),
-    d = t(935369),
-    c = t(707515),
-    u = t(528567),
-    _ = t(873128),
-    h = t(647529),
-    g = t(689938),
-    x = t(48439);
-function m(e) {
-    let { guildId: s, leaderboardId: t, ...r } = e,
-        m = (0, _.Z)({
-            guildId: s,
-            leaderboardId: t
+    n(47120),
+    n(653041);
+var i = n(200651),
+    s = n(192379),
+    r = n(512722),
+    a = n.n(r),
+    o = n(902704),
+    l = n(481060),
+    d = n(935369),
+    c = n(707515),
+    u = n(528567),
+    h = n(873128),
+    g = n(647529),
+    x = n(388032),
+    m = n(48439);
+function f(e) {
+    let { guildId: t, leaderboardId: n, ...r } = e,
+        f = (0, h.Z)({
+            guildId: t,
+            leaderboardId: n
         });
-    i()(null != m, 'Leaderboard must be loaded before opening the settings modal');
-    let S = m.guild_settings,
-        [f, E] = a.useState(S.sort_by_statistic_id),
-        [L, T] = a.useState(S.sort_desc),
-        [I, C] = a.useState(S.show_winner_crown),
-        [A, { loading: b }] = (0, d.Z)(c._),
-        j = f !== S.sort_by_statistic_id || L !== S.sort_desc || I !== S.show_winner_crown,
-        N = async () => {
-            await A({
-                guildId: s,
-                leaderboardId: t,
-                sortByStatisticId: f,
-                sortDesc: L,
-                showWinnerCrown: I
+    a()(null != f, 'Leaderboard must be loaded before opening the settings modal');
+    let _ = f.guild_settings,
+        [b, j] = s.useState(_.sort_by_statistic_id),
+        [p, w] = s.useState(_.sort_desc),
+        [v, S] = s.useState(_.show_winner_crown),
+        [C, { loading: y }] = (0, d.Z)(c._),
+        N = b !== _.sort_by_statistic_id || p !== _.sort_desc || v !== _.show_winner_crown,
+        I = async () => {
+            await C({
+                guildId: t,
+                leaderboardId: n,
+                sortByStatisticId: b,
+                sortDesc: p,
+                showWinnerCrown: v
             }),
                 r.onClose();
         },
-        p = a.useMemo(() => {
-            let e = Object.values(m.settings.statistics).filter((e) => e.selectable_for_competition),
-                s = [];
-            for (let t of e)
+        B = s.useMemo(() => {
+            let e = Object.values(f.settings.statistics).filter((e) => e.selectable_for_competition),
+                t = [];
+            for (let n of e)
                 for (let e of [!0, !1])
-                    s.push({
+                    t.push({
                         value: {
-                            sortByStatisticId: t.id,
+                            sortByStatisticId: n.id,
                             sortDesc: e
                         },
                         label: (0, u.s)({
-                            statisticId: t.id,
+                            statisticId: n.id,
                             sortDesc: e,
-                            aggregationType: t.aggregation_type
+                            aggregationType: n.aggregation_type
                         })
                     });
-            return s;
-        }, [m]),
-        w = p.find((e) =>
+            return t;
+        }, [f]),
+        Z = B.find((e) =>
             (0, o.Z)(e.value, {
-                sortByStatisticId: f,
-                sortDesc: L
+                sortByStatisticId: b,
+                sortDesc: p
             })
         );
-    return (0, n.jsx)(h.Z, {
+    return (0, i.jsx)(g.Z, {
         ...r,
-        guildId: s,
-        title: g.Z.Messages.LEADERBOARD_GUILD_SETTINGS_MODAL_TITLE,
-        buttons: (0, n.jsx)(l.Button, {
-            onClick: N,
-            submitting: b,
-            disabled: !j,
-            children: g.Z.Messages.SAVE
+        guildId: t,
+        title: x.intl.string(x.t.rv9GUV),
+        buttons: (0, i.jsx)(l.Button, {
+            onClick: I,
+            submitting: y,
+            disabled: !N,
+            children: x.intl.string(x.t.R3BPHx)
         }),
-        children: (0, n.jsxs)(l.ModalContent, {
-            className: x.content,
+        children: (0, i.jsxs)(l.ModalContent, {
+            className: m.content,
             children: [
-                (0, n.jsx)(l.Spacer, { size: 32 }),
-                (0, n.jsx)(l.FormTitle, { children: g.Z.Messages.LEADERBOARD_GUILD_SETTINGS_MODAL_COMPETITION_SECTION_TITLE }),
-                (0, n.jsx)(l.Text, {
+                (0, i.jsx)(l.Spacer, { size: 32 }),
+                (0, i.jsx)(l.FormTitle, { children: x.intl.string(x.t.R0X60t) }),
+                (0, i.jsx)(l.Text, {
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
-                    children: g.Z.Messages.LEADERBOARD_GUILD_SETTINGS_MODAL_COMPETITION_SECTION_LABEL
+                    children: x.intl.string(x.t.vcisKS)
                 }),
-                (0, n.jsx)(l.Spacer, { size: 18 }),
-                (0, n.jsx)(l.Text, {
+                (0, i.jsx)(l.Spacer, { size: 18 }),
+                (0, i.jsx)(l.Text, {
                     variant: 'text-md/medium',
                     color: 'header-primary',
-                    children: g.Z.Messages.LEADERBOARD_GUILD_SETTINGS_MODAL_STATISTIC_LABEL
+                    children: x.intl.string(x.t.IQO9Fx)
                 }),
-                (0, n.jsx)(l.Spacer, { size: 8 }),
-                (0, n.jsx)(l.SingleSelect, {
-                    placeholder: g.Z.Messages.CREATE_CHANNEL_MODAL_CATEGORY_PLACEHOLDER,
-                    value: null == w ? void 0 : w.value,
-                    options: p,
+                (0, i.jsx)(l.Spacer, { size: 8 }),
+                (0, i.jsx)(l.SingleSelect, {
+                    placeholder: x.intl.string(x.t['g/Rr2d']),
+                    value: null == Z ? void 0 : Z.value,
+                    options: B,
                     onChange: (e) => {
-                        let { sortByStatisticId: s, sortDesc: t } = e;
-                        E(s), T(t);
+                        let { sortByStatisticId: t, sortDesc: n } = e;
+                        j(t), w(n);
                     }
                 }),
-                (0, n.jsx)('div', { className: x.divider }),
-                (0, n.jsx)(l.FormTitle, { children: g.Z.Messages.LEADERBOARD_GUILD_SETTINGS_MODAL_REWARD_SECTION_TITLE }),
-                (0, n.jsx)(l.Spacer, { size: 8 }),
-                (0, n.jsx)(l.FormSwitch, {
+                (0, i.jsx)('div', { className: m.divider }),
+                (0, i.jsx)(l.FormTitle, { children: x.intl.string(x.t.HU4EKC) }),
+                (0, i.jsx)(l.Spacer, { size: 8 }),
+                (0, i.jsx)(l.FormSwitch, {
                     hideBorder: !0,
-                    onChange: () => C((e) => !e),
-                    value: I,
-                    className: x.showWinnerCrownSwitch,
-                    children: (0, n.jsxs)('div', {
-                        className: x.showWinnerCrownTextContainer,
+                    onChange: () => S((e) => !e),
+                    value: v,
+                    className: m.showWinnerCrownSwitch,
+                    children: (0, i.jsxs)('div', {
+                        className: m.showWinnerCrownTextContainer,
                         children: [
-                            (0, n.jsx)(l.Text, {
+                            (0, i.jsx)(l.Text, {
                                 variant: 'text-md/medium',
                                 color: 'header-primary',
-                                children: g.Z.Messages.LEADERBOARD_GUILD_SETTINGS_MODAL_ENABLE_CROWN_LABEL
+                                children: x.intl.string(x.t.cH7QEx)
                             }),
-                            (0, n.jsx)(l.LeagueOfLegendsBrandIcon, { size: 'xs' })
+                            (0, i.jsx)(l.LeagueOfLegendsBrandIcon, { size: 'xs' })
                         ]
                     })
                 })

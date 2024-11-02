@@ -1,6 +1,6 @@
 n.d(t, {
     x: function () {
-        return E;
+        return _;
     }
 });
 var r = n(717029),
@@ -41,7 +41,7 @@ function d(e) {
               return e.__proto__ || Object.getPrototypeOf(e);
           })(e);
 }
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -54,7 +54,7 @@ function _(e, t, n) {
         e
     );
 }
-var E = (function (e) {
+var _ = (function (e) {
     !(function (e, t) {
         if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function');
         (e.prototype = Object.create(t && t.prototype, {
@@ -65,14 +65,14 @@ var E = (function (e) {
             }
         })),
             t && u(e, t);
-    })(p, e);
+    })(m, e);
     var t,
         n,
         r,
-        E,
-        f,
-        h =
-            ((t = p),
+        _,
+        h,
+        p =
+            ((t = m),
             (n = (function () {
                 if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
                 if ('function' == typeof Proxy) return !0;
@@ -92,17 +92,17 @@ var E = (function (e) {
                     })(this, e)
                 );
             });
-    function p() {
+    function m() {
         var e;
         !(function (e, t) {
             if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-        })(this, p);
+        })(this, m);
         for (var t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-        return _(c((e = h.call.apply(h, [this].concat(n)))), 'priority', 130), _(c(e), 'incompatibleTokens', ['y', 'R', 'u', 'Q', 'q', 'M', 'L', 'I', 'd', 'D', 'i', 't', 'T']), e;
+        return f(c((e = p.call.apply(p, [this].concat(n)))), 'priority', 130), f(c(e), 'incompatibleTokens', ['y', 'R', 'u', 'Q', 'q', 'M', 'L', 'I', 'd', 'D', 'i', 't', 'T']), e;
     }
     return (
-        (r = p),
-        (E = [
+        (r = m),
+        (_ = [
             {
                 key: 'parse',
                 value: function (e, t, n) {
@@ -141,7 +141,7 @@ var E = (function (e) {
                 }
             }
         ]),
-        l(r.prototype, E),
-        p
+        l(r.prototype, _),
+        m
     );
 })(r._);

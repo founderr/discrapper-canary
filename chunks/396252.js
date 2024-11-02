@@ -1,73 +1,73 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return _;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(120356),
-    s = n.n(a),
-    r = n(442837),
-    l = n(481060),
-    o = n(385499),
+var r = n(120356),
+    l = n.n(r),
+    a = n(442837),
+    o = n(481060),
+    s = n(385499),
     c = n(430824),
     u = n(739566),
     d = n(464891),
-    _ = n(83561),
-    E = n(834129),
-    I = n(674563),
-    m = n(689938),
-    f = n(38814);
-function T(e) {
+    m = n(83561),
+    f = n(834129),
+    h = n(674563),
+    p = n(388032),
+    g = n(38814);
+function _(e) {
     var t;
-    let { message: n, compact: a, usernameHook: T, channel: h } = e,
-        N = (0, r.e7)([c.Z], () => c.Z.getGuild(h.guild_id)),
-        p = (0, u.ZP)(n),
-        C = T(p),
+    let { message: n, compact: r, usernameHook: _, channel: C } = e,
+        E = (0, a.e7)([c.Z], () => c.Z.getGuild(C.guild_id)),
+        I = (0, u.ZP)(n),
+        x = _(I),
         {
-            avatarSrc: g,
-            eventHandlers: { onMouseEnter: S, onMouseLeave: A }
-        } = (0, _.m)(!0);
+            avatarSrc: v,
+            eventHandlers: { onMouseEnter: N, onMouseLeave: T }
+        } = (0, m.m)(!0);
     return (0, i.jsx)('div', {
-        onMouseEnter: S,
-        onMouseLeave: A,
-        children: (0, i.jsx)(E.Z, {
-            className: s()(f.mainContainer, { [f.compact]: a }),
-            iconNode: a ? null : (0, i.jsx)(_.S, { src: g }),
-            iconContainerClassName: f.iconContainer,
-            compact: a,
+        onMouseEnter: N,
+        onMouseLeave: T,
+        children: (0, i.jsx)(f.Z, {
+            className: l()(g.mainContainer, { [g.compact]: r }),
+            iconNode: r ? null : (0, i.jsx)(m.S, { src: v }),
+            iconContainerClassName: g.iconContainer,
+            compact: r,
             children: (0, i.jsxs)('div', {
-                className: s()(f.content, { [f.compact]: a }),
+                className: l()(g.content, { [g.compact]: r }),
                 children: [
                     (0, i.jsx)(d.nD, {
                         message: n,
-                        messageClassname: f.spanCorrection,
-                        className: s()(f.usernameContainer, f.spanCorrection, { [f.compact]: a }),
+                        messageClassname: g.spanCorrection,
+                        className: l()(g.usernameContainer, g.spanCorrection, { [g.compact]: r }),
                         username: (0, i.jsxs)('div', {
-                            className: f.spanCorrection,
+                            className: g.spanCorrection,
                             children: [
-                                (0, i.jsx)(l.Text, {
+                                (0, i.jsx)(o.Text, {
                                     variant: 'text-md/normal',
                                     color: 'text-brand',
                                     tag: 'span',
-                                    className: f.username,
-                                    children: m.Z.Messages.GUILD_AUTOMOD_USERNAME
+                                    className: g.username,
+                                    children: p.intl.string(p.t.hG1StL)
                                 }),
-                                (0, i.jsx)(o.Z, {
-                                    type: I.Hb.SYSTEM_DM,
-                                    className: f.systemTag
+                                (0, i.jsx)(s.Z, {
+                                    type: h.Hb.SYSTEM_DM,
+                                    className: g.systemTag
                                 })
                             ]
                         }),
-                        compact: a,
+                        compact: r,
                         showTimestamp: !0
                     }),
                     (0, i.jsx)('div', {
-                        className: s()(f.__invalid_messageContent, { [f.compact]: a }),
-                        children: m.Z.Messages.GUILD_RAID_REPORT_SYSTEM_MESSAGE.format({
-                            username: p.nick,
-                            usernameHook: C,
-                            guildName: null !== (t = null == N ? void 0 : N.name) && void 0 !== t ? t : ''
+                        className: l()(g.__invalid_messageContent, { [g.compact]: r }),
+                        children: p.intl.format(p.t.W0UBIy, {
+                            username: I.nick,
+                            usernameHook: x,
+                            guildName: null !== (t = null == E ? void 0 : E.name) && void 0 !== t ? t : ''
                         })
                     })
                 ]

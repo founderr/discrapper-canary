@@ -1,9 +1,9 @@
 n.d(t, {
     Ej: function () {
-        return f;
+        return h;
     },
     Jf: function () {
-        return _;
+        return f;
     },
     KK: function () {
         return u;
@@ -38,13 +38,13 @@ function c(e) {
 function d(e) {
     return !1 === e.available;
 }
-function _(e, t) {
+function f(e, t) {
     var n;
     let r = null !== (n = null == t ? void 0 : t.deleted) && void 0 !== n && n,
         i = null != t && d(t);
     return e.status === o.O0b.CANCELED || r || i;
 }
-function E(e, t) {
+function _(e, t) {
     var n, r;
     if (e.type === o.epS.SUBSCRIPTION) {
         let n = t.getForSKU(e.id);
@@ -55,11 +55,11 @@ function E(e, t) {
     }
     return null !== (r = null === (n = e.price) || void 0 === n ? void 0 : n.amount) && void 0 !== r ? r : 0;
 }
-function f(e, t, n) {
+function h(e, t, n) {
     return e.slice().sort((e, r) => {
         let i = t.get(e.skuId),
-            a = null != i ? E(i, n) : 0,
+            a = null != i ? _(i, n) : 0,
             s = t.get(r.skuId);
-        return a - (null != s ? E(s, n) : 0);
+        return a - (null != s ? _(s, n) : 0);
     });
 }

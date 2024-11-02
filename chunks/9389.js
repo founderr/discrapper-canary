@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return l;
     }
 });
 var i = n(610697);
-function s() {
+function l() {
     return (0, i.Z)();
 }

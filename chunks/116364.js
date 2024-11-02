@@ -8,50 +8,50 @@ var i = n(392711),
     u = n(998698),
     c = n(667204),
     d = n(588468),
-    _ = n(483360),
-    E = n(877565),
-    f = n(590921),
-    h = n(689079),
-    p = n(689938),
-    I = n(481476),
-    m = n(239840);
-let T = { results: { choices: [] } },
-    S = {
+    f = n(483360),
+    _ = n(877565),
+    h = n(590921),
+    p = n(689079),
+    m = n(388032),
+    g = n(481476),
+    E = n(239840);
+let v = { results: { choices: [] } },
+    I = {
         results: {
             choices: [],
             isLoading: !0
         }
     },
-    g = Array.from({ length: 5 }, () => ({
+    S = Array.from({ length: 5 }, () => ({
         name: '',
         displayName: '',
         value: ''
     })),
-    A = {
+    T = {
         results: {
             choices: [],
             isError: !0
         }
     },
-    N = a().debounce(c.Z, h.Fu, {
+    b = a().debounce(c.Z, p.Fu, {
         leading: !0,
         trailing: !0
     }),
-    R = {
+    y = {
         stores: [u.Z, l.Z],
         showEmpty: !0,
         matches(e, t, n, r, i) {
             let a = u.Z.getActiveOption(e.id);
-            return i.commands !== f.L8.DISABLED && null != a && (a.type === o.jw.BOOLEAN || !!(null == a ? void 0 : a.autocomplete) || ((null == a ? void 0 : a.choices) != null && a.choices.length > 0));
+            return i.commands !== h.L8.DISABLED && null != a && (a.type === o.jw.BOOLEAN || !!(null == a ? void 0 : a.autocomplete) || ((null == a ? void 0 : a.choices) != null && a.choices.length > 0));
         },
         queryResults(e, t, n, r, i) {
             var a;
             let s = u.Z.getActiveOption(e.id);
-            if (null == s) return T;
+            if (null == s) return v;
             if (s.autocomplete) {
                 if (i) {
                     let i = u.Z.getActiveCommand(e.id);
-                    N({
+                    b({
                         command: i,
                         optionValues: r.getCommandOptionValues(),
                         context: {
@@ -64,14 +64,14 @@ let T = { results: { choices: [] } },
                         }
                     });
                 }
-                if (l.Z.getLastErrored(e.id)) return A;
+                if (l.Z.getLastErrored(e.id)) return T;
                 let a = l.Z.getAutocompleteChoices(e.id, s.name, n);
-                return null == a ? S : { results: { choices: a } };
+                return null == a ? I : { results: { choices: a } };
             }
             return {
-                results: _.ZP.queryChoiceResults({
+                results: f.ZP.queryChoiceResults({
                     query: n,
-                    choices: s.type === o.jw.BOOLEAN ? h.ak : null !== (a = s.choices) && void 0 !== a ? a : []
+                    choices: s.type === o.jw.BOOLEAN ? p.ak : null !== (a = s.choices) && void 0 !== a ? a : []
                 })
             };
         },
@@ -85,19 +85,19 @@ let T = { results: { choices: [] } },
             } = e;
             return i
                 ? (0, r.jsx)(s.Z, {
-                      message: p.Z.Messages.APPLICATION_COMMAND_AUTOCOMPLETE_FAILED,
-                      noResultsImageURL: m,
-                      className: I.noAutocompleteResults
+                      message: m.intl.string(m.t.rTAbPj),
+                      noResultsImageURL: E,
+                      className: g.noAutocompleteResults
                   })
                 : 0 !== t.length || n
-                  ? (0, E.HI)({
+                  ? (0, _.HI)({
                         query: o,
                         selectedIndex: a,
-                        autocompletes: n ? g : t,
+                        autocompletes: n ? S : t,
                         onHover: l,
                         onClick: u,
-                        titleWithQuery: p.Z.Messages.OPTIONS_MATCHING,
-                        titleWithoutQuery: p.Z.Messages.OPTIONS,
+                        titleWithQuery: m.t.pg0anJ,
+                        titleWithoutQuery: m.intl.string(m.t['+1H47u']),
                         Component: n ? d.ZP.Loading : d.ZP.Generic,
                         getProps: (e, t) => ({
                             key: t.toString(),
@@ -107,9 +107,9 @@ let T = { results: { choices: [] } },
                         key: 'choice'
                     })
                   : (0, r.jsx)(s.Z, {
-                        message: p.Z.Messages.APPLICATION_COMMAND_AUTOCOMPLETE_NO_OPTIONS,
-                        noResultsImageURL: m,
-                        className: I.noAutocompleteResults
+                        message: m.intl.string(m.t['41014u']),
+                        noResultsImageURL: E,
+                        className: g.noAutocompleteResults
                     });
         },
         onSelect(e) {
@@ -125,8 +125,8 @@ let T = { results: { choices: [] } },
                         return e.displayName;
                     })(i)
                 ),
-                { type: f.z2.CHOICE }
+                { type: h.z2.CHOICE }
             );
         }
     };
-t.Z = R;
+t.Z = y;

@@ -20,12 +20,12 @@ function d(e, t, n) {
         e
     );
 }
-let _ = i.Z.Millis.DAY,
-    E = 30 * i.Z.Millis.MINUTE,
-    f = 5 * i.Z.Millis.SECOND,
-    h = 5 * i.Z.Millis.MINUTE,
-    p = 12 * i.Z.Millis.HOUR;
-class I extends r.Z {
+let f = i.Z.Millis.DAY,
+    _ = 30 * i.Z.Millis.MINUTE,
+    h = 5 * i.Z.Millis.SECOND,
+    p = 5 * i.Z.Millis.MINUTE,
+    m = 12 * i.Z.Millis.HOUR;
+class g extends r.Z {
     _fetch() {
         if (!!(0, l.cB)({ location: c.dr.QUESTS_MANAGER }) && !s.Z.isFetchingCurrentQuests) (0, a.xw)(), (0, u.Z)({ location: c.dr.QUESTS_MANAGER }) && (0, a.w)(o.Ok.DESKTOP_ACCOUNT_PANEL_AREA);
     }
@@ -43,21 +43,21 @@ class I extends r.Z {
                 window.clearTimeout(this.initialFetchTimerId),
                     window.clearTimeout(this.recurringFetchTimerId),
                     (this.recurringFetchTimerId = window.setInterval(() => {
-                        Date.now() - this.lastFetchAttemptedAt > _ && ((this.lastFetchAttemptedAt = Date.now()), this._fetch());
-                    }, E)),
+                        Date.now() - this.lastFetchAttemptedAt > f && ((this.lastFetchAttemptedAt = Date.now()), this._fetch());
+                    }, _)),
                     (this.initialFetchTimerId = window.setTimeout(
                         () => {
                             0 === s.Z.lastFetchedCurrentQuests && this._fetch();
                         },
-                        Math.floor(Math.random() * f)
+                        Math.floor(Math.random() * h)
                     ));
             }),
             d(this, 'handleRunningGamesChange', () => {
-                if (!(this.instantiatedAt + p > Date.now() || s.Z.lastFetchedCurrentQuests + p > Date.now())) this._fetch();
+                if (!(this.instantiatedAt + m > Date.now() || s.Z.lastFetchedCurrentQuests + m > Date.now())) this._fetch();
             }),
             d(this, 'handleUserSettingsProtoUpdate', (e) => {
                 let { partial: t, settings: n, wasSaved: r } = e;
-                if (!(!('localization' in n.proto) || !t || r || Date.now() - this.lastFetchedQuestForLocaleChangeAt <= h)) (this.lastFetchedQuestForLocaleChangeAt = Date.now()), this._fetch();
+                if (!(!('localization' in n.proto) || !t || r || Date.now() - this.lastFetchedQuestForLocaleChangeAt <= p)) (this.lastFetchedQuestForLocaleChangeAt = Date.now()), this._fetch();
             }),
             d(this, 'handleLogout', () => {
                 window.clearTimeout(this.initialFetchTimerId), window.clearTimeout(this.recurringFetchTimerId), (this.lastFetchAttemptedAt = 0), (this.lastFetchedQuestForLocaleChangeAt = 0);
@@ -71,4 +71,4 @@ class I extends r.Z {
             });
     }
 }
-t.Z = new I();
+t.Z = new g();

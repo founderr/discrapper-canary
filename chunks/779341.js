@@ -1,22 +1,22 @@
-t.d(n, {
+e.d(t, {
     Z: function () {
-        return c;
+        return l;
     }
 });
-var o = t(200651);
-t(192379);
-var i = t(585183),
-    r = t(728151),
-    s = t(981631);
-function c(e) {
-    let { authToken: n, onContinue: t, onError: c, onClose: l } = e;
+var o = e(200651);
+e(192379);
+var i = e(585183),
+    r = e(728151),
+    c = e(981631);
+function l(n) {
+    let { authToken: t, onContinue: e, onError: l, onClose: s } = n;
     return (0, o.jsx)(i.h, {
-        platformType: s.ABu.CRUNCHYROLL,
+        platformType: c.ABu.CRUNCHYROLL,
         clientId: r.sp,
         scopes: r.Ii,
-        authToken: n,
-        onContinue: t,
-        onError: c,
-        onClose: l
+        authToken: t,
+        onContinue: e,
+        onError: l,
+        onClose: s
     });
 }

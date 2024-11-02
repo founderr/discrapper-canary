@@ -1,69 +1,69 @@
 n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(442837),
-    o = n(481060),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    o = n(442837),
+    s = n(481060),
     c = n(749210),
     u = n(703656),
     d = n(430824),
-    _ = n(914010),
-    E = n(900849),
-    I = n(41776),
-    m = n(981631),
-    f = n(689938),
-    T = n(331781),
-    h = n(250812);
+    m = n(914010),
+    f = n(900849),
+    h = n(41776),
+    p = n(981631),
+    g = n(388032),
+    _ = n(331781),
+    C = n(250812);
 t.Z = () => {
-    let e = (0, l.e7)([_.Z], () => _.Z.getGuildId(), []),
-        t = (0, l.e7)([d.Z], () => d.Z.getGuild(e), [e]),
-        n = (0, l.e7)([I.Z], () => I.Z.getHistorySnapshot(), []),
-        [s, N] = a.useState(!1);
+    let e = (0, o.e7)([m.Z], () => m.Z.getGuildId(), []),
+        t = (0, o.e7)([d.Z], () => d.Z.getGuild(e), [e]),
+        n = (0, o.e7)([h.Z], () => h.Z.getHistorySnapshot(), []),
+        [l, E] = r.useState(!1);
     if (null == t) return null;
-    let p = async () => {
-        N(!0);
+    let I = async () => {
+        E(!0);
         try {
-            E.mT(t.id), await c.Z.joinGuild(t.id, { source: m.vtS.NOTICE_BAR });
+            f.mT(t.id), await c.Z.joinGuild(t.id, { source: p.vtS.NOTICE_BAR });
         } catch {
-            N(!1);
+            E(!1);
         }
     };
     return (0, i.jsxs)('div', {
-        className: r()(T.notice, h.notice),
+        className: a()(_.notice, C.notice),
         children: [
-            (0, i.jsxs)(o.Button, {
-                look: o.Button.Looks.OUTLINED,
-                color: o.Button.Colors.WHITE,
-                size: o.Button.Sizes.NONE,
-                className: r()(T.button, T.back),
-                innerClassName: T.iconButton,
+            (0, i.jsxs)(s.Button, {
+                look: s.Button.Looks.OUTLINED,
+                color: s.Button.Colors.WHITE,
+                size: s.Button.Sizes.NONE,
+                className: a()(_.button, _.back),
+                innerClassName: _.iconButton,
                 onClick: () => {
                     let e = (0, u.s1)();
                     null != n && null != n.location ? (0, u.dL)({ ...n.location }) : e.goBack();
                 },
                 children: [
-                    (0, i.jsx)(o.ArrowSmallLeftIcon, {
+                    (0, i.jsx)(s.ArrowSmallLeftIcon, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: T.arrow
+                        className: _.arrow
                     }),
-                    f.Z.Messages.BACK
+                    g.intl.string(g.t['13/7kZ'])
                 ]
             }),
-            (0, i.jsx)(o.Text, {
-                className: T.header,
+            (0, i.jsx)(s.Text, {
+                className: _.header,
                 variant: 'text-sm/normal',
-                children: f.Z.Messages.LURKER_MODE_NAG_BAR_HEADER
+                children: g.intl.string(g.t['N/y2WF'])
             }),
-            (0, i.jsx)(o.Button, {
-                className: T.button,
-                look: o.Button.Looks.OUTLINED,
-                color: o.Button.Colors.WHITE,
-                size: o.Button.Sizes.NONE,
-                submitting: s,
-                onClick: p,
-                children: f.Z.Messages.LURKER_MODE_NAG_BAR_BUTTON.format({ guild: t.name })
+            (0, i.jsx)(s.Button, {
+                className: _.button,
+                look: s.Button.Looks.OUTLINED,
+                color: s.Button.Colors.WHITE,
+                size: s.Button.Sizes.NONE,
+                submitting: l,
+                onClick: I,
+                children: g.intl.format(g.t.uHN7n5, { guild: t.name })
             })
         ]
     });

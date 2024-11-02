@@ -25,7 +25,7 @@ n.d(t, {
         return o;
     },
     u$: function () {
-        return _;
+        return f;
     }
 }),
     ((i = r || (r = {}))[(i.POPULAR = 0)] = 'POPULAR'),
@@ -37,7 +37,7 @@ let a = 'app-launcher-element',
     u = 500,
     c = 670,
     d = 'min(100vh, '.concat(c, 'px)'),
-    _ = {
+    f = {
         '--custom-app-launcher-width': ''.concat(u, 'px'),
         '--custom-app-launcher-height': d
     };

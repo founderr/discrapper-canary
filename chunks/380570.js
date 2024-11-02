@@ -1,9 +1,9 @@
 n(47120);
 var i = n(748780),
-    a = n(570140),
-    s = n(317770),
-    r = n(716578),
-    l = n(928518);
+    r = n(570140),
+    l = n(317770),
+    a = n(716578),
+    s = n(928518);
 function o(e, t, n) {
     return (
         t in e
@@ -17,17 +17,17 @@ function o(e, t, n) {
         e
     );
 }
-class c extends s.Z {
+class c extends l.Z {
     _initialize() {
-        l.Z.addChangeListener(this.handlePopoutWindowChange), a.Z.subscribe('WINDOW_FOCUS', this.handleMainWindowFocus);
+        s.Z.addChangeListener(this.handlePopoutWindowChange), r.Z.subscribe('WINDOW_FOCUS', this.handleMainWindowFocus);
     }
     _terminate() {
-        l.Z.removeChangeListener(this.handlePopoutWindowChange), a.Z.unsubscribe('WINDOW_FOCUS', this.handleMainWindowFocus), this.injectWindowAnimationFrame(window);
+        s.Z.removeChangeListener(this.handlePopoutWindowChange), r.Z.unsubscribe('WINDOW_FOCUS', this.handleMainWindowFocus), this.injectWindowAnimationFrame(window);
     }
     injectWindowAnimationFrame(e) {
         let t = (t) => e.requestAnimationFrame(t),
             n = (t) => e.cancelAnimationFrame(t);
-        i.Z.inject.RequestAnimationFrame(t), i.Z.inject.CancelAnimationFrame(n), r.f.setRAF(t, n);
+        i.Z.inject.RequestAnimationFrame(t), i.Z.inject.CancelAnimationFrame(n), a.f.setRAF(t, n);
     }
     constructor(...e) {
         super(...e),
@@ -35,9 +35,9 @@ class c extends s.Z {
                 e.focused && e.windowId === window.__DISCORD_WINDOW_ID && this.injectWindowAnimationFrame(window);
             }),
             o(this, 'handlePopoutWindowChange', () => {
-                let e = l.Z.getWindowKeys().find((e) => l.Z.getWindowFocused(e));
+                let e = s.Z.getWindowKeys().find((e) => s.Z.getWindowFocused(e));
                 if (null == e) return this.injectWindowAnimationFrame(window);
-                let t = l.Z.getWindow(e);
+                let t = s.Z.getWindow(e);
                 if (null == t || t.closed) return this.injectWindowAnimationFrame(window);
                 this.injectWindowAnimationFrame(t);
             });

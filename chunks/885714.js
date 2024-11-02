@@ -1,23 +1,23 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return a;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(430824);
-function r(e) {
-    let { onCloseCallback: t, analyticsLocations: r, ...l } = e;
-    (0, a.openModalLazy)(
+var r = n(481060),
+    l = n(430824);
+function a(e) {
+    let { onCloseCallback: t, analyticsLocations: a, ...o } = e;
+    (0, r.openModalLazy)(
         async () => {
             let { default: e } = await n.e('11166').then(n.bind(n, 971949));
             return (t) =>
                 (0, i.jsx)(e, {
                     ...t,
-                    ...l,
-                    analyticsLocations: r,
-                    guildCount: s.Z.getGuildCount(),
+                    ...o,
+                    analyticsLocations: a,
+                    guildCount: l.Z.getGuildCount(),
                     'aria-labelledby': 'nitro-guild-cap-upsell'
                 });
         },

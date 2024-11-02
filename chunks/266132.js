@@ -1,32 +1,32 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return _;
+        return u;
     }
 });
-var n = t(200651);
-t(192379);
-var a = t(630759),
-    i = t(921157),
-    r = t(76793),
-    o = t(838436),
-    l = t(726985),
-    c = t(689938),
-    d = t(605017);
-function _() {
-    let e = (0, i.s)();
-    return (0, n.jsxs)(o.U, {
-        setting: l.s6.PRIVACY_ENCRYPTION_VERIFIED_DEVICES_V2,
+var i = n(200651);
+n(192379);
+var s = n(630759),
+    r = n(921157),
+    l = n(76793),
+    a = n(838436),
+    o = n(726985),
+    c = n(388032),
+    d = n(605017);
+function u() {
+    let e = (0, r.s)();
+    return (0, i.jsxs)(a.U, {
+        setting: o.s6.PRIVACY_ENCRYPTION_VERIFIED_DEVICES_V2,
         children: [
-            (0, n.jsx)(o.H, {
-                header: c.Z.Messages.E2EE_VERIFIED_DEVICES,
-                description: c.Z.Messages.E2EE_VERIFIED_DEVICES_DESCRIPTION_V2.format({ helpArticle: (0, a.pL)() })
+            (0, i.jsx)(a.H, {
+                header: c.intl.string(c.t['5b3FND']),
+                description: c.intl.format(c.t.jrTSWV, { helpArticle: (0, s.pL)() })
             }),
             e.map((e) =>
-                (0, n.jsx)(
+                (0, i.jsx)(
                     'div',
                     {
                         className: d.item,
-                        children: (0, n.jsx)(r.q, { userId: e })
+                        children: (0, i.jsx)(l.q, { userId: e })
                     },
                     e
                 )

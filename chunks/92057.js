@@ -33,12 +33,12 @@ function c(e) {
 function d() {
     var e = this;
     'function' != typeof this._flush || this._readableState.destroyed
-        ? _(this, null, null)
+        ? f(this, null, null)
         : this._flush(function (t, n) {
-              _(e, t, n);
+              f(e, t, n);
           });
 }
-function _(e, t, n) {
+function f(e, t, n) {
     if (t) return e.emit('error', t);
     if ((null != n && e.push(n), e._writableState.length)) throw new o();
     if (e._transformState.transforming) throw new s();

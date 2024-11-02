@@ -1,99 +1,99 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return E;
     }
 }),
     n(47120),
     n(536091);
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(442837),
-    o = n(481060),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    o = n(442837),
+    s = n(481060),
     c = n(834129),
     u = n(623292),
     d = n(926491),
-    _ = n(419922),
-    E = n(626135),
-    I = n(585483),
-    m = n(115610),
-    f = n(981631),
-    T = n(689938),
-    h = n(809858);
-function N(e) {
-    let { message: t, channel: s, compact: N } = e,
-        p = (0, l.Wu)([d.Z], () => Array.from(d.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
-        [C, g] = a.useState(null);
-    return (a.useEffect(() => {
+    m = n(419922),
+    f = n(626135),
+    h = n(585483),
+    p = n(115610),
+    g = n(981631),
+    _ = n(388032),
+    C = n(809858);
+function E(e) {
+    let { message: t, channel: l, compact: E } = e,
+        I = (0, o.Wu)([d.Z], () => Array.from(d.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
+        [x, v] = r.useState(null);
+    return (r.useEffect(() => {
         let e = setInterval(() => {
-            p.length > 0 && g(p[Math.floor(Math.random() * p.length)]);
+            I.length > 0 && v(I[Math.floor(Math.random() * I.length)]);
         }, 500);
         return () => clearInterval(e);
-    }, [p]),
-    null == s.guild_id)
+    }, [I]),
+    null == l.guild_id)
         ? null
         : (0, i.jsxs)('div', {
               children: [
                   (0, i.jsx)(c.Z, {
-                      className: r()(h.mainContainer, { [h.compact]: N }),
+                      className: a()(C.mainContainer, { [C.compact]: E }),
                       icon: n(570111),
-                      compact: N,
+                      compact: E,
                       children: (0, i.jsx)('div', {
-                          className: r()(h.__invalid_content, { [h.compact]: N }),
+                          className: a()(C.__invalid_content, { [C.compact]: E }),
                           children: (0, i.jsx)('div', {
-                              className: r()(h.__invalid_messageContent, { [h.compact]: N }),
-                              children: '' !== t.content ? t.content : T.Z.Messages.DEADCHAT_PROMPT_1
+                              className: a()(C.__invalid_messageContent, { [C.compact]: E }),
+                              children: '' !== t.content ? t.content : _.intl.string(_.t.wnn1DQ)
                           })
                       })
                   }),
                   (0, i.jsxs)('div', {
-                      className: h.actions,
+                      className: C.actions,
                       children: [
-                          (0, i.jsx)(o.TooltipContainer, {
-                              text: T.Z.Messages.CHANNEL_PROMPT_UPLOAD_IMAGE_CTA,
-                              children: (0, i.jsx)(o.Button, {
-                                  color: o.Button.Colors.PRIMARY,
+                          (0, i.jsx)(s.TooltipContainer, {
+                              text: _.intl.string(_.t.ASZTf3),
+                              children: (0, i.jsx)(s.Button, {
+                                  color: s.Button.Colors.PRIMARY,
                                   onClick: () => {
-                                      E.default.track(f.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
+                                      f.default.track(g.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
                                           message_id: t.id,
-                                          channel_id: s.id,
-                                          guild_id: s.guild_id,
+                                          channel_id: l.id,
+                                          guild_id: l.guild_id,
                                           action_type: 'upload_file'
                                       }),
-                                          I.S.dispatch(f.CkL.UPLOAD_FILE),
+                                          h.S.dispatch(g.CkL.UPLOAD_FILE),
                                           (0, u.fE)({
                                               message: t,
-                                              channel: s,
+                                              channel: l,
                                               shouldMention: !0
                                           });
                                   },
-                                  children: (0, i.jsx)(o.ImagePlusIcon, {
+                                  children: (0, i.jsx)(s.ImagePlusIcon, {
                                       size: 'md',
                                       color: 'currentColor'
                                   })
                               })
                           }),
-                          (0, i.jsx)(o.TooltipContainer, {
-                              text: T.Z.Messages.CHANNEL_PROMPT_RANDOM_STICKER_CTA,
-                              children: (0, i.jsx)(o.Button, {
-                                  color: o.Button.Colors.PRIMARY,
+                          (0, i.jsx)(s.TooltipContainer, {
+                              text: _.intl.string(_.t.gbrrAw),
+                              children: (0, i.jsx)(s.Button, {
+                                  color: s.Button.Colors.PRIMARY,
                                   onClick: () => {
-                                      E.default.track(f.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
+                                      f.default.track(g.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
                                           message_id: t.id,
-                                          channel_id: s.id,
-                                          guild_id: s.guild_id,
+                                          channel_id: l.id,
+                                          guild_id: l.guild_id,
                                           action_type: 'sticker'
                                       }),
-                                          (0, m.O)(t.id, s);
+                                          (0, p.O)(t.id, l);
                                   },
                                   children:
-                                      null != C
-                                          ? (0, i.jsx)(_.ZP, {
+                                      null != x
+                                          ? (0, i.jsx)(m.ZP, {
                                                 size: 32,
-                                                sticker: C
+                                                sticker: x
                                             })
-                                          : (0, i.jsx)(o.ReactionIcon, {
+                                          : (0, i.jsx)(s.ReactionIcon, {
                                                 size: 'md',
                                                 color: 'currentColor'
                                             })

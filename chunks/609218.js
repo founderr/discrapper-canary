@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return A;
     },
     p: function () {
         return i;
@@ -15,107 +15,107 @@ var r,
     u = n(442837),
     c = n(481060),
     d = n(355467),
-    _ = n(37234),
-    E = n(174609),
-    f = n(703656),
-    h = n(626135),
-    p = n(74538),
-    I = n(357355),
-    m = n(639119),
-    T = n(197115),
-    S = n(302945),
-    g = n(474936),
-    A = n(981631),
-    N = n(689938),
-    R = n(739626);
-function O(e) {
-    let { containerContext: t, image: n, title: r, description: i, enableSocialProof: o, analyticsLocationSection: O, upsellViewedTrackingData: v, onClose: C, onDisplay: L, onLearnMore: D } = e,
-        y = (0, u.e7)([I.Z], () => I.Z.affinities),
-        b = (0, u.e7)([I.Z], () => I.Z.hasFetched);
+    f = n(37234),
+    _ = n(174609),
+    h = n(703656),
+    p = n(626135),
+    m = n(74538),
+    g = n(357355),
+    E = n(639119),
+    v = n(197115),
+    I = n(302945),
+    S = n(474936),
+    T = n(981631),
+    b = n(388032),
+    y = n(739626);
+function A(e) {
+    let { containerContext: t, image: n, title: r, description: i, enableSocialProof: o, analyticsLocationSection: A, upsellViewedTrackingData: N, onClose: C, onDisplay: R, onLearnMore: O } = e,
+        D = (0, u.e7)([g.Z], () => g.Z.affinities),
+        L = (0, u.e7)([g.Z], () => g.Z.hasFetched);
     s.useEffect(() => {
-        !b && o && d.MH();
-    }, [b, o]),
+        !L && o && d.MH();
+    }, [L, o]),
         s.useEffect(() => {
-            h.default.track(A.rMx.PREMIUM_UPSELL_VIEWED, v), null == L || L();
-        }, [L, v]);
-    let M = y.length > 1 && o,
-        P = (0, m.N)(),
-        U = s.useCallback(() => {
+            p.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, N), null == R || R();
+        }, [R, N]);
+    let x = D.length > 1 && o,
+        w = (0, E.N)(),
+        M = s.useCallback(() => {
             var e;
-            return null !== (e = (0, p.fr)(P)) && void 0 !== e ? e : N.Z.Messages.PREMIUM_UPSELL_GET_NITRO;
-        }, [P]);
+            return null !== (e = (0, m.fr)(w)) && void 0 !== e ? e : b.intl.string(b.t.pj0XBA);
+        }, [w]);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(c.Backdrop, {
                 backdropStyle: c.BackdropStyles.DARK,
                 onClose: C,
-                'aria-label': N.Z.Messages.CLOSE,
+                'aria-label': b.intl.string(b.t.cpT0Cg),
                 isVisible: !0
             }),
             (0, a.jsxs)('div', {
-                className: l()(R.container, 2 === t ? R.hasTabParentContainer : 1 === t ? R.hasParentContainer : R.noParentContainer),
+                className: l()(y.container, 2 === t ? y.hasTabParentContainer : 1 === t ? y.hasParentContainer : y.noParentContainer),
                 children: [
                     (0, a.jsx)(c.ModalCloseButton, {
                         onClick: C,
-                        className: R.closeButton
+                        className: y.closeButton
                     }),
                     (0, a.jsxs)('div', {
-                        className: R.contentContainer,
+                        className: y.contentContainer,
                         children: [
                             (0, a.jsx)('img', {
-                                className: R.image,
+                                className: y.image,
                                 width: n.width,
                                 height: n.height,
                                 src: n.url,
                                 alt: 'Nitro Perk'
                             }),
                             (0, a.jsx)(c.Heading, {
-                                className: l()(R.title, { [R.titleNoSocialProof]: !M }),
+                                className: l()(y.title, { [y.titleNoSocialProof]: !x }),
                                 variant: 'heading-xl/bold',
                                 children: r
                             }),
-                            M && (0, a.jsx)(S.Z, { affinities: y }),
+                            x && (0, a.jsx)(I.Z, { affinities: D }),
                             (0, a.jsx)(c.Text, {
                                 variant: 'text-sm/medium',
-                                className: R.body,
+                                className: y.body,
                                 children: i
                             })
                         ]
                     }),
                     (0, a.jsxs)('div', {
-                        className: R.ctaContainer,
+                        className: y.ctaContainer,
                         children: [
                             (0, a.jsx)(c.Button, {
-                                className: R.secondaryCTA,
+                                className: y.secondaryCTA,
                                 size: c.Button.Sizes.SMALL,
                                 color: c.Button.Colors.CUSTOM,
                                 look: c.Button.Looks.LINK,
                                 onClick: () => {
-                                    h.default.track(A.rMx.PREMIUM_PROMOTION_OPENED, {
-                                        location_section: O,
-                                        location_object: A.qAy.NAVIGATION_LINK
+                                    p.default.track(T.rMx.PREMIUM_PROMOTION_OPENED, {
+                                        location_section: A,
+                                        location_object: T.qAy.NAVIGATION_LINK
                                     }),
-                                        null == D || D(),
-                                        (0, E.Z)(),
+                                        null == O || O(),
+                                        (0, _.Z)(),
                                         C(),
-                                        (0, _.xf)(),
-                                        (0, f.uL)(A.Z5c.APPLICATION_STORE);
+                                        (0, f.xf)(),
+                                        (0, h.uL)(T.Z5c.APPLICATION_STORE);
                                 },
-                                children: N.Z.Messages.STREAM_PREMIUM_UPSELL_SECONDARY_CTA
+                                children: b.intl.string(b.t.ZnqyZ2)
                             }),
-                            (0, a.jsx)(T.Z, {
+                            (0, a.jsx)(v.Z, {
                                 showGradient: !0,
                                 premiumModalAnalyticsLocation: {
-                                    section: O,
-                                    object: A.qAy.BUTTON_CTA
+                                    section: A,
+                                    object: T.qAy.BUTTON_CTA
                                 },
-                                subscriptionTier: g.Si.TIER_2,
+                                subscriptionTier: S.Si.TIER_2,
                                 size: c.Button.Sizes.SMALL,
                                 color: c.Button.Colors.CUSTOM,
                                 onClick: () => {
                                     C();
                                 },
-                                buttonText: U()
+                                buttonText: M()
                             })
                         ]
                     })

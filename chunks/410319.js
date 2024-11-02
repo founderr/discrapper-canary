@@ -1,6 +1,6 @@
 n.d(t, {
     i: function () {
-        return s.i;
+        return i.i;
     }
 });
-var s = n(587693);
+var i = n(587693);

@@ -4,62 +4,62 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(192379),
-    a = n(481060),
-    l = n(670044),
-    r = n(28391),
+    l = n(192379),
+    r = n(481060),
+    a = n(670044),
+    s = n(28391),
     o = n(526761),
-    c = n(689938),
+    c = n(388032),
     u = n(915383);
 function d(e) {
     return (
-        s.useEffect(() => e.onChannelChange(), [e.channel.id]),
+        l.useEffect(() => e.onChannelChange(), [e.channel.id]),
         (0, i.jsxs)('div', {
             className: u.notice,
             children: [
-                (0, i.jsx)(l.Z, { id: e.channel.id }),
+                (0, i.jsx)(a.Z, { id: e.channel.id }),
                 (0, i.jsx)('div', {
                     className: u.info,
-                    children: (0, i.jsx)(a.Text, {
+                    children: (0, i.jsx)(r.Text, {
                         variant: 'text-sm/medium',
-                        children: c.Z.Messages.UNREAD_NOTIFICATION_SETTING_NOTICE
+                        children: c.intl.string(c.t.abvB5O)
                     })
                 }),
                 (0, i.jsxs)('div', {
                     className: u.buttons,
                     children: [
-                        (0, i.jsxs)(a.Button, {
-                            size: a.Button.Sizes.TINY,
-                            look: a.Button.Looks.FILLED,
-                            color: a.Button.Colors.PRIMARY,
+                        (0, i.jsxs)(r.Button, {
+                            size: r.Button.Sizes.TINY,
+                            look: r.Button.Looks.FILLED,
+                            color: r.Button.Colors.PRIMARY,
                             className: u.button,
                             innerClassName: u.buttonInner,
-                            onClick: () => (0, r.Z)(e.channel.guild_id, e.channel.id, o.ic.UNREADS_ALL_MESSAGES),
+                            onClick: () => (0, s.Z)(e.channel.guild_id, e.channel.id, o.ic.UNREADS_ALL_MESSAGES),
                             children: [
-                                (0, i.jsx)(a.CheckmarkLargeIcon, {
+                                (0, i.jsx)(r.CheckmarkLargeIcon, {
                                     size: 'xs',
                                     color: 'currentColor',
                                     style: { marginRight: 4 }
                                 }),
-                                c.Z.Messages.YES_TEXT
+                                c.intl.string(c.t.p89ACg)
                             ]
                         }),
-                        (0, i.jsx)(a.Button, {
+                        (0, i.jsx)(r.Button, {
                             style: { marginLeft: 8 },
-                            size: a.Button.Sizes.TINY,
-                            look: a.Button.Looks.FILLED,
-                            color: a.Button.Colors.PRIMARY,
+                            size: r.Button.Sizes.TINY,
+                            look: r.Button.Looks.FILLED,
+                            color: r.Button.Colors.PRIMARY,
                             className: u.button,
                             innerClassName: u.buttonInner,
-                            onClick: () => (0, r.Z)(e.channel.guild_id, e.channel.id, o.ic.UNREADS_ONLY_MENTIONS),
+                            onClick: () => (0, s.Z)(e.channel.guild_id, e.channel.id, o.ic.UNREADS_ONLY_MENTIONS),
                             children: (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    (0, i.jsx)(a.XSmallIcon, {
+                                    (0, i.jsx)(r.XSmallIcon, {
                                         size: 'xs',
                                         color: 'currentColor',
                                         style: { marginRight: 4 }
                                     }),
-                                    c.Z.Messages.NO_TEXT
+                                    c.intl.string(c.t.gm1Ven)
                                 ]
                             })
                         })

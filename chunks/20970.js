@@ -1,11 +1,11 @@
 n.d(t, {
     j: function () {
-        return f;
+        return h;
     }
 });
 var r = n(302454);
-let { newline: i, paragraph: a, url: s, link: o, strong: l, u, br: c, em: d, image: _, text: E } = r.defaultRules,
-    f = {
+let { newline: i, paragraph: a, url: s, link: o, strong: l, u, br: c, em: d, image: f, text: _ } = r.defaultRules,
+    h = {
         newline: i,
         paragraph: a,
         url: s,
@@ -20,9 +20,9 @@ let { newline: i, paragraph: a, url: s, link: o, strong: l, u, br: c, em: d, ima
         u,
         br: c,
         em: d,
-        image: _,
+        image: f,
         hook: {
-            order: E.order,
+            order: _.order,
             match: (0, r.inlineRegex)(/^\$\[(.*?)\]\((\w+)\)/),
             parse(e, t, n) {
                 let { context: r } = n;
@@ -34,7 +34,7 @@ let { newline: i, paragraph: a, url: s, link: o, strong: l, u, br: c, em: d, ima
             react: (e, t, n) => e.render(t(e.content, n), n.key)
         },
         noparse: {
-            order: E.order,
+            order: _.order,
             match: (0, r.inlineRegex)(/^!!(\d+?)!!/),
             parse(e, t, n) {
                 let { unsafeContext: r } = n,
@@ -49,5 +49,5 @@ let { newline: i, paragraph: a, url: s, link: o, strong: l, u, br: c, em: d, ima
             },
             react: (e) => e.content
         },
-        text: E
+        text: _
     };

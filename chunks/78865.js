@@ -1,56 +1,56 @@
-t.r(e),
-    t.d(e, {
+a.r(n),
+    a.d(n, {
         default: function () {
-            return l;
+            return u;
         }
     });
-var n = t(200651);
-t(192379);
-var r = t(174609),
-    s = t(790527),
-    o = t(703656),
-    c = t(626135),
-    i = t(981631),
-    _ = t(474936),
-    E = t(689938),
-    d = t(188535);
-function l(a) {
-    let { onClose: e, onCloseParent: t, analyticsSource: l, ...M } = a,
-        A = (0, n.jsx)('img', {
-            className: d.art,
+var e = a(200651);
+a(192379);
+var r = a(174609),
+    o = a(790527),
+    c = a(703656),
+    i = a(626135),
+    s = a(981631),
+    l = a(474936),
+    d = a(388032),
+    _ = a(188535);
+function u(t) {
+    let { onClose: n, onCloseParent: a, analyticsSource: u, ...p } = t,
+        A = (0, e.jsx)('img', {
+            className: _.art,
             alt: 'HD Streaming Nitro Perk',
             src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png'
         }),
-        L = E.Z.Messages.STREAM_PREMIUM_UPSELL_TITLE,
-        S = E.Z.Messages.STREAM_PREMIUM_UPSELL_DESCRIPTION;
-    return (0, n.jsx)(s.Z, {
-        title: L,
-        glowUp: S,
-        body: S,
+        C = d.intl.string(d.t.ewxv3N),
+        h = d.intl.string(d.t.qlsCDA);
+    return (0, e.jsx)(o.Z, {
+        title: C,
+        glowUp: h,
+        body: h,
         artElement: A,
-        artContainerClassName: d.artContainer,
-        type: _.cd.STREAM_QUALITY_UPSELL,
+        artContainerClassName: _.artContainer,
+        type: l.cd.STREAM_QUALITY_UPSELL,
         analyticsLocation: {
-            section: i.jXE.STREAM_UPSELL_MODAL,
-            object: i.qAy.BUTTON_CTA
+            section: s.jXE.STREAM_UPSELL_MODAL,
+            object: s.qAy.BUTTON_CTA
         },
-        analyticsSource: l,
-        onClose: e,
+        analyticsSource: u,
+        onClose: n,
         onSubscribeClick: r.Z,
-        secondaryCTA: E.Z.Messages.STREAM_PREMIUM_UPSELL_SECONDARY_CTA,
+        secondaryCTA: d.intl.string(d.t.ZnqyZ2),
         onSecondaryClick: function () {
             (0, r.Z)(),
-                e(),
-                null == t || t(),
-                c.default.track(i.rMx.PREMIUM_PROMOTION_OPENED, {
-                    location_section: i.jXE.STREAM_UPSELL_MODAL,
-                    location_object: i.qAy.NAVIGATION_LINK
+                n(),
+                null == a || a(),
+                i.default.track(s.rMx.PREMIUM_PROMOTION_OPENED, {
+                    location_section: s.jXE.STREAM_UPSELL_MODAL,
+                    location_object: s.qAy.NAVIGATION_LINK
                 }),
-                (0, o.uL)(i.Z5c.APPLICATION_STORE);
+                (0, c.uL)(s.Z5c.APPLICATION_STORE);
         },
         showEnhancedUpsell: !0,
         enableArtBoxShadow: !1,
-        headerClassName: d.header,
-        ...M
+        headerClassName: _.header,
+        ...p
     });
 }

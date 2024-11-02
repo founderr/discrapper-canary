@@ -1,21 +1,21 @@
 n.d(e, {
     B: function () {
-        return l;
+        return c;
     }
 });
 var a = n(200651),
     r = n(192379),
     o = n(481060),
-    s = n(69580),
-    c = n(787025),
-    i = n(944844);
-function l(t) {
-    let { data: e, onDenied: n, onError: l, onSuccess: u } = t,
-        d = (0, i.t)(n, l, u),
+    i = n(69580),
+    s = n(787025),
+    l = n(944844);
+function c(t) {
+    let { data: e, onDenied: n, onError: c, onSuccess: u } = t,
+        d = (0, l.t)(n, c, u),
         f = r.useCallback((t) => d(e, t), [e, d]);
-    return (0, a.jsx)(c.G, {
+    return (0, a.jsx)(s.G, {
         removeChildWrapper: !0,
-        children: (0, a.jsx)(s.OAuth2AuthorizeModal, {
+        children: (0, a.jsx)(i.OAuth2AuthorizeModal, {
             transitionState: o.ModalTransitionState.ENTERED,
             clientId: e.clientId,
             scopes: e.scopes,

@@ -26,7 +26,7 @@ t.Z = function (e, t, n) {
               return (n) => {
                   var c;
                   let d = 'FluxContainer('.concat(l(n), ')');
-                  class _ extends (c = i.Component) {
+                  class f extends (c = i.Component) {
                       componentDidMount() {
                           this.listener.attach(d);
                       }
@@ -55,21 +55,21 @@ t.Z = function (e, t, n) {
                               );
                       }
                   }
-                  o(_, 'displayName', d);
-                  let E = i.forwardRef((e, t) =>
-                      (0, r.jsx)(_, {
+                  o(f, 'displayName', d);
+                  let _ = i.forwardRef((e, t) =>
+                      (0, r.jsx)(f, {
                           childProps: e,
                           forwardedConnectStoresRef: t
                       })
                   );
-                  return (E.displayName = 'ForwardRef('.concat(d, ')')), E;
+                  return (_.displayName = 'ForwardRef('.concat(d, ')')), _;
               };
           })(e, t)
         : (function (e, t) {
               return (n) => {
                   var c;
                   let d = 'FluxContainer('.concat(l(n), ')');
-                  class _ extends (c = i.Component) {
+                  class f extends (c = i.Component) {
                       componentDidMount() {
                           this.listener.attach(d);
                       }
@@ -96,7 +96,7 @@ t.Z = function (e, t, n) {
                               );
                       }
                   }
-                  return o(_, 'displayName', d), _;
+                  return o(f, 'displayName', d), f;
               };
           })(e, t);
 };

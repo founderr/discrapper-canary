@@ -8,16 +8,16 @@ var r = n(200651),
     u = n(138201),
     c = n(699516),
     d = n(981631),
-    _ = n(689938);
+    f = n(388032);
 t.Z = (e) => {
     let { user: t, reportId: n } = e,
-        [E, f] = i.useState(!1),
-        h = (0, a.e7)([c.Z], () => c.Z.getRelationshipType(t.id), [t.id]) === d.OGo.BLOCKED;
+        [_, h] = i.useState(!1),
+        p = (0, a.e7)([c.Z], () => c.Z.getRelationshipType(t.id), [t.id]) === d.OGo.BLOCKED;
     i.useEffect(() => {
-        f(h);
-    }, [h]);
-    let p = i.useCallback(() => {
-        f(!0),
+        h(p);
+    }, [p]);
+    let m = i.useCallback(() => {
+        h(!0),
             l.ZP.trackWithMetadata(d.rMx.IAR_BLOCK_USER_BUTTON_CLICKED, {
                 other_user_id: t.id,
                 report_id: n
@@ -29,11 +29,11 @@ t.Z = (e) => {
             });
     }, [t, n]);
     return (0, r.jsx)(u.Z, {
-        title: _.Z.Messages.IAR_UPSELLS_BLOCK_TITLE.format({ username: t.username }),
-        description: _.Z.Messages.IAR_UPSELLS_BLOCK_DESCRIPTION,
-        buttonText: E ? _.Z.Messages.IAR_UPSELLS_BLOCKED_BUTTON : _.Z.Messages.IAR_UPSELLS_BLOCK_BUTTON,
-        buttonDisabled: E,
-        onButtonPress: p,
+        title: f.intl.formatToPlainString(f.t['Q1o/f3'], { username: t.username }),
+        description: f.intl.string(f.t.G08MKi),
+        buttonText: _ ? f.intl.string(f.t.ot2tSk) : f.intl.string(f.t['l+7PZW']),
+        buttonDisabled: _,
+        onButtonPress: m,
         buttonColor: s.Button.Colors.RED
     });
 };

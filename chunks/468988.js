@@ -1,20 +1,20 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return o;
     }
 });
-var i = n(689938);
-let a = ['a', 'b', 'c', 'd'],
-    s = (e) => e;
-function r(e, t) {
+var i = n(388032);
+let r = ['a', 'b', 'c', 'd'],
+    l = (e) => e;
+function a(e, t) {
     let n = {},
-        i = Math.min(e.length, a.length);
-    for (let s = 0; s < i; ++s) n[a[s]] = (n, i) => t(e[s], i);
+        i = Math.min(e.length, r.length);
+    for (let l = 0; l < i; ++l) n[r[l]] = (n, i) => t(e[l], i);
     return n;
 }
-class l {
+class o {
     asString() {
-        return this.transformed(s);
+        return this.transformed(l);
     }
     isEmpty() {
         return 0 === this.items.length;
@@ -26,11 +26,11 @@ class l {
             case 1:
                 return e(this.items[0], '');
             case 2:
-                return i.Z.Messages.GENERIC_FORMATTED_LIST_TWO.format(r(this.items, e));
+                return i.intl.format(i.t.PSaOdX, a(this.items, e));
             case 3:
-                return i.Z.Messages.GENERIC_FORMATTED_LIST_THREE.format(r(this.items, e));
+                return i.intl.format(i.t.zmkz7O, a(this.items, e));
             default:
-                return i.Z.Messages.GENERIC_FORMATTED_LIST_FOUR.format(r(this.items, e));
+                return i.intl.format(i.t.Lyyt09, a(this.items, e));
         }
     }
     constructor(e) {

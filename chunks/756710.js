@@ -12,25 +12,25 @@ var r = n(200651),
     u = n(939350),
     c = n(667947);
 function d(e) {
-    let { children: t, color: n = 'default', isFocused: a = !1, disabled: d = !1, keepItemStyles: _ = !1, menuItemProps: E, action: f, dontCloseOnActionIfHoldingShiftKey: h, dontCloseOnAction: p, onClose: I } = e,
-        m = i.useRef(null);
+    let { children: t, color: n = 'default', isFocused: a = !1, disabled: d = !1, keepItemStyles: f = !1, menuItemProps: _, action: h, dontCloseOnActionIfHoldingShiftKey: p, dontCloseOnAction: m, onClose: g } = e,
+        E = i.useRef(null);
     i.useEffect(() => {
-        a && (0, l.F)(m);
+        a && (0, l.F)(E);
     }, [a]);
-    let T = i.useCallback(
+    let v = i.useCallback(
             (e) => {
-                if (null == f) return !1;
-                !(e.shiftKey && h) && !p && I(), e.persist(), requestAnimationFrame(() => f(e));
+                if (null == h) return !1;
+                !(e.shiftKey && p) && !m && g(), e.persist(), requestAnimationFrame(() => h(e));
             },
-            [f, I, h, p]
+            [h, g, p, m]
         ),
-        S = _ ? s()(c.item, u._[n], { [c.focused]: a }) : c.customItem;
+        I = f ? s()(c.item, u._[n], { [c.focused]: a }) : c.customItem;
     return (0, r.jsx)(o.P, {
-        innerRef: m,
-        className: S,
-        onClick: d ? void 0 : T,
+        innerRef: E,
+        className: I,
+        onClick: d ? void 0 : v,
         'aria-disabled': d,
-        ...E,
+        ..._,
         children: t({
             color: n,
             disabled: d,

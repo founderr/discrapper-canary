@@ -1,30 +1,30 @@
-a.d(t, {
+n.d(t, {
     B: function () {
         return u;
     }
 });
-var n = a(913527),
-    s = a.n(n),
-    r = a(689938);
+var a = n(913527),
+    r = n.n(a),
+    i = n(388032);
 let u = [
     {
-        getDueAt: () => s()().add(30, 'minutes').toDate(),
-        getLabel: () => r.Z.Messages.MESSAGE_REMINDERS_IN_THIRTY_MIN
+        getDueAt: () => r()().add(30, 'minutes').toDate(),
+        getLabel: () => i.intl.string(i.t['OV8l/P'])
     },
     {
-        getDueAt: () => s()().add(1, 'hour').toDate(),
-        getLabel: () => r.Z.Messages.MESSAGE_REMINDERS_IN_ONE_HOUR
+        getDueAt: () => r()().add(1, 'hour').toDate(),
+        getLabel: () => i.intl.string(i.t['zf0R+/'])
     },
     {
-        getDueAt: () => s()().add(4, 'hour').toDate(),
-        getLabel: () => r.Z.Messages.MESSAGE_REMINDERS_IN_FOUR_HOURS
+        getDueAt: () => r()().add(4, 'hour').toDate(),
+        getLabel: () => i.intl.string(i.t['5gztZG'])
     },
     {
-        getDueAt: () => s()().add(1, 'day').startOf('day').add(9, 'hours').toDate(),
-        getLabel: () => r.Z.Messages.MESSAGE_REMINDERS_TOMORROW_MORNING
+        getDueAt: () => r()().add(1, 'day').startOf('day').add(9, 'hours').toDate(),
+        getLabel: () => i.intl.string(i.t['7MKr2N'])
     },
     {
-        getDueAt: () => s()().day(8).startOf('day').add(9, 'hours').toDate(),
-        getLabel: () => r.Z.Messages.MESSAGE_REMINDERS_NEXT_WEEK
+        getDueAt: () => r()().day(8).startOf('day').add(9, 'hours').toDate(),
+        getLabel: () => i.intl.string(i.t['q+Ls09'])
     }
 ];

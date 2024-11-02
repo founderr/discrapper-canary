@@ -1,62 +1,62 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return _;
     }
 }),
     n(47120);
-var s = n(200651),
-    a = n(192379),
-    i = n(481060),
-    r = n(313201),
-    l = n(723047),
+var i = n(200651),
+    r = n(192379),
+    l = n(481060),
+    s = n(313201),
+    a = n(723047),
     o = n(727843),
     c = n(290348),
     d = n(164000),
     u = n(783454),
-    _ = n(862319),
-    I = n(140285),
-    E = n(390583),
-    T = n(641249),
-    m = n(574085),
-    N = n(293810),
-    S = n(689938),
-    g = n(517194);
-function h(e) {
+    m = n(862319),
+    h = n(140285),
+    g = n(390583),
+    x = n(641249),
+    p = n(574085),
+    f = n(293810),
+    C = n(388032),
+    I = n(517194);
+function _(e) {
     let { allSubscriptionListings: t } = e,
-        { editStateId: n, guildId: h } = (0, o.N)(),
-        [C, x] = c.UE(n),
-        [p, R] = c.R7(n),
-        L = a.useMemo(() => t.filter((e) => e.id !== n), [t, n]),
-        { isFullServerGating: f } = (0, d.Z)(h),
-        O = (0, r.Dt)(),
-        A = (0, l.mY)();
-    return (0, s.jsxs)(u.Z, {
-        title: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_BENEFITS_HEADER_TITLE,
-        description: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_BENEFITS_HEADER_SUBTITLE,
+        { editStateId: n, guildId: _ } = (0, o.N)(),
+        [N, v] = c.UE(n),
+        [T, j] = c.R7(n),
+        E = r.useMemo(() => t.filter((e) => e.id !== n), [t, n]),
+        { isFullServerGating: S } = (0, d.Z)(_),
+        b = (0, s.Dt)(),
+        R = (0, a.mY)();
+    return (0, i.jsxs)(u.Z, {
+        title: C.intl.string(C.t.YNw2Sk),
+        description: C.intl.string(C.t.zMW5r6),
         children: [
-            (0, s.jsxs)(i.FormSection, {
-                title: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_IMPORT_HEADER_TITLE,
-                disabled: A,
+            (0, i.jsxs)(l.FormSection, {
+                title: C.intl.string(C.t.DFlDaG),
+                disabled: R,
                 children: [
-                    (0, s.jsx)(i.FormText, {
-                        type: i.FormText.Types.DESCRIPTION,
-                        className: g.formDescription,
-                        disabled: A,
-                        children: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_IMPORT_HEADER_SUBTITLE
+                    (0, i.jsx)(l.FormText, {
+                        type: l.FormText.Types.DESCRIPTION,
+                        className: I.formDescription,
+                        disabled: R,
+                        children: C.intl.string(C.t.kHalVF)
                     }),
-                    (0, s.jsx)(_.Z, {
-                        channelBenefits: C,
-                        intangibleBenefits: p,
-                        subscriptionListings: L,
+                    (0, i.jsx)(m.Z, {
+                        channelBenefits: N,
+                        intangibleBenefits: T,
+                        subscriptionListings: E,
                         onImport: function (e, t) {
-                            x((t) => t.concat(e)), R((e) => e.concat(t));
+                            v((t) => t.concat(e)), j((e) => e.concat(t));
                         }
                     }),
-                    (0, s.jsx)(i.Spacer, { size: 8 }),
-                    (0, s.jsx)(_.w, {
-                        guildId: h,
+                    (0, i.jsx)(l.Spacer, { size: 8 }),
+                    (0, i.jsx)(m.w, {
+                        guildId: _,
                         onImport: function (e) {
-                            x((t) => {
+                            v((t) => {
                                 let n = new Set(
                                     t.map((e) => {
                                         let { ref_id: t } = e;
@@ -69,56 +69,56 @@ function h(e) {
                                         .filter((e) => !n.has(e))
                                         .map((e) => ({
                                             ref_id: e,
-                                            ref_type: N.Qs.CHANNEL
+                                            ref_type: f.Qs.CHANNEL
                                         }))
                                 ];
                             });
                         },
-                        disabled: A
+                        disabled: R
                     })
                 ]
             }),
-            (0, s.jsx)(i.Spacer, { size: 24 }),
-            (0, s.jsxs)(i.FormSection, {
-                title: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_CHANNEL_BENEFITS_CHANNELS_TITLE,
-                titleId: O,
-                disabled: A,
+            (0, i.jsx)(l.Spacer, { size: 24 }),
+            (0, i.jsxs)(l.FormSection, {
+                title: C.intl.string(C.t.S2kKzM),
+                titleId: b,
+                disabled: R,
                 children: [
-                    (0, s.jsx)(i.FormText, {
-                        type: i.FormText.Types.DESCRIPTION,
-                        className: g.formDescription,
-                        disabled: A,
-                        children: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_CHANNEL_BENEFITS_CHANNELS_DESCRIPTION
+                    (0, i.jsx)(l.FormText, {
+                        type: l.FormText.Types.DESCRIPTION,
+                        className: I.formDescription,
+                        disabled: R,
+                        children: C.intl.string(C.t['5a4Axc'])
                     }),
-                    f &&
-                        (0, s.jsxs)(s.Fragment, {
+                    S &&
+                        (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, s.jsx)(I.Z, {
-                                    'aria-labelledby': O,
-                                    disabled: A
+                                (0, i.jsx)(h.Z, {
+                                    'aria-labelledby': b,
+                                    disabled: R
                                 }),
-                                (0, s.jsx)(i.Spacer, { size: 8 })
+                                (0, i.jsx)(l.Spacer, { size: 8 })
                             ]
                         }),
-                    (0, s.jsx)(E.Z, {})
+                    (0, i.jsx)(g.Z, {})
                 ]
             }),
-            (0, s.jsx)(i.Spacer, { size: 24 }),
-            (0, s.jsxs)(i.FormSection, {
-                title: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INTANGIBLE_BENEFITS_TITLE,
-                disabled: A,
+            (0, i.jsx)(l.Spacer, { size: 24 }),
+            (0, i.jsxs)(l.FormSection, {
+                title: C.intl.string(C.t.RdwKw8),
+                disabled: R,
                 children: [
-                    (0, s.jsx)(i.FormText, {
-                        type: i.FormText.Types.DESCRIPTION,
-                        className: g.formDescription,
-                        disabled: A,
-                        children: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INTANGIBLE_BENEFITS_DESCRIPTION
+                    (0, i.jsx)(l.FormText, {
+                        type: l.FormText.Types.DESCRIPTION,
+                        className: I.formDescription,
+                        disabled: R,
+                        children: C.intl.string(C.t.zAww7e)
                     }),
-                    (0, s.jsx)(m.Z, {})
+                    (0, i.jsx)(p.Z, {})
                 ]
             }),
-            (0, s.jsx)(i.Spacer, { size: 24 }),
-            (0, s.jsx)(T.Z, {})
+            (0, i.jsx)(l.Spacer, { size: 24 }),
+            (0, i.jsx)(x.Z, {})
         ]
     });
 }

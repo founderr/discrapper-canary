@@ -1,88 +1,88 @@
-a(47120);
-var t = a(200651),
-    n = a(192379),
-    l = a(120356),
-    i = a.n(l),
-    r = a(481060),
-    o = a(231239),
-    c = a(881052),
-    d = a(313201),
-    N = a(888592),
-    u = a(981631),
-    _ = a(689938),
-    m = a(459501);
-let E = (0, d.hQ)();
-s.Z = (e) => {
-    let { email: s, setStep: a, onBack: l, school: d, setSchool: I } = e,
-        [x, h] = n.useState(null),
-        [C, T] = n.useState(!1),
-        g = async () => {
-            h(null), T(!0);
+n(47120);
+var i = n(200651),
+    s = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    r = n(481060),
+    o = n(231239),
+    c = n(881052),
+    d = n(313201),
+    u = n(888592),
+    m = n(981631),
+    x = n(388032),
+    h = n(459501);
+let g = (0, d.hQ)();
+t.Z = (e) => {
+    let { email: t, setStep: n, onBack: l, school: d, setSchool: v } = e,
+        [N, j] = s.useState(null),
+        [f, C] = s.useState(!1),
+        I = async () => {
+            j(null), C(!0);
             try {
-                await o.Z.signup(s, d), a(N.tF.EMAIL_WAITLIST);
+                await o.Z.signup(t, d), n(u.tF.EMAIL_WAITLIST);
             } catch (e) {
-                h(new c.Hx(e));
+                j(new c.Hx(e));
             } finally {
-                T(!1);
+                C(!1);
             }
         },
-        O = async (e) => {
-            null != d && '' !== d && e.charCode === u.yXg.ENTER && (await g());
+        p = async (e) => {
+            null != d && '' !== d && e.charCode === m.yXg.ENTER && (await I());
         };
-    return (0, t.jsxs)('div', {
-        className: m.container,
+    return (0, i.jsxs)('div', {
+        className: h.container,
         children: [
-            (0, t.jsx)('div', { className: m.__invalid_topImage }),
-            (0, t.jsx)(r.Heading, {
-                className: i()(m.centerText, m.header),
+            (0, i.jsx)('div', { className: h.__invalid_topImage }),
+            (0, i.jsx)(r.Heading, {
+                className: a()(h.centerText, h.header),
                 variant: 'heading-xl/semibold',
-                children: _.Z.Messages.HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_HEADER
+                children: x.intl.string(x.t['2FNWBA'])
             }),
-            (0, t.jsx)('div', {
-                className: m.descriptionWidth,
-                children: (0, t.jsx)(r.Text, {
-                    className: m.centerText,
+            (0, i.jsx)('div', {
+                className: h.descriptionWidth,
+                children: (0, i.jsx)(r.Text, {
+                    className: h.centerText,
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
-                    children: _.Z.Messages.HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_DESCRIPTION
+                    children: x.intl.string(x.t['/4y6o6'])
                 })
             }),
-            (0, t.jsxs)(r.FormItem, {
-                className: m.formItem,
+            (0, i.jsxs)(r.FormItem, {
+                className: h.formItem,
                 children: [
-                    (0, t.jsx)(r.FormTitle, {
-                        id: E,
-                        children: _.Z.Messages.HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_INPUT_HEADER
+                    (0, i.jsx)(r.FormTitle, {
+                        id: g,
+                        children: x.intl.string(x.t['L+AfJi'])
                     }),
-                    (0, t.jsx)(r.TextInput, {
-                        onKeyPress: O,
-                        placeholder: _.Z.Messages.HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_INPUT_PLACEHOLDER,
+                    (0, i.jsx)(r.TextInput, {
+                        onKeyPress: p,
+                        placeholder: x.intl.string(x.t.Y1btJS),
                         onChange: (e) => {
-                            I(e);
+                            v(e);
                         },
-                        error: null == x ? void 0 : x.getAnyErrorMessage(),
-                        'aria-labelledby': E
+                        error: null == N ? void 0 : N.getAnyErrorMessage(),
+                        'aria-labelledby': g
                     })
                 ]
             }),
-            (0, t.jsxs)('div', {
-                className: m.footer,
+            (0, i.jsxs)('div', {
+                className: h.footer,
                 children: [
-                    (0, t.jsx)(r.Button, {
-                        className: m.backButton,
+                    (0, i.jsx)(r.Button, {
+                        className: h.backButton,
                         onClick: l,
                         look: r.Button.Looks.LINK,
                         size: r.Button.Sizes.NONE,
                         color: r.Button.Colors.PRIMARY,
-                        children: _.Z.Messages.BACK
+                        children: x.intl.string(x.t['13/7kZ'])
                     }),
-                    (0, t.jsx)(r.Button, {
-                        onClick: g,
+                    (0, i.jsx)(r.Button, {
+                        onClick: I,
                         size: r.Button.Sizes.MEDIUM,
                         color: r.Button.Colors.BRAND,
-                        className: m.__invalid_submitButton,
-                        submitting: C,
-                        children: _.Z.Messages.JOIN_WAITLIST
+                        className: h.__invalid_submitButton,
+                        submitting: f,
+                        children: x.intl.string(x.t.PDsYAg)
                     })
                 ]
             })

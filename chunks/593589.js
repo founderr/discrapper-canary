@@ -4,9 +4,9 @@ t.d(n, {
     }
 });
 var l = t(200651),
-    a = t(192379),
+    i = t(192379),
     r = t(481060),
-    i = t(372900),
+    a = t(372900),
     s = t(238246),
     o = t(788983),
     u = t(207035),
@@ -21,7 +21,7 @@ function m(e) {
         title: t.name,
         channelId: t.id,
         contentClassName: p.popoutContent,
-        children: (0, l.jsx)(i.Z.Provider, {
+        children: (0, l.jsx)(a.Z.Provider, {
             value: t.guild_id,
             children: (0, l.jsx)(c.Z, { providedChannel: t })
         })
@@ -29,7 +29,7 @@ function m(e) {
 }
 function x(e, n) {
     let t = (0, u.P)(n),
-        i = a.useCallback(() => {
+        a = i.useCallback(() => {
             o.bA(
                 ''.concat(d.KJ3.CHANNEL_POPOUT, '-').concat(e.id),
                 (n) =>
@@ -47,7 +47,7 @@ function x(e, n) {
         ? (0, l.jsx)(r.MenuItem, {
               id: 'channel-pop-out',
               label: 'Open in Popout',
-              action: () => i()
+              action: () => a()
           })
         : null;
 }

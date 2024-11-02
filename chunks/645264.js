@@ -10,50 +10,50 @@ var o = t(200651),
     d = t(266395),
     f = t(200305),
     m = t(592286),
-    _ = t(689938),
-    b = t(27471);
-let h = () =>
+    b = t(388032),
+    h = t(27471);
+let _ = () =>
     (0, o.jsx)(l.Z, {
         submitting: !1,
-        message: _.Z.Messages.MEMBER_VERIFICATION_PROGRESS_LOST_TITLE,
+        message: b.intl.string(b.t['8g514e']),
         onReset: () => {
             (0, d.PE)(!1);
         },
-        onResetText: _.Z.Messages.CANCEL,
+        onResetText: b.intl.string(b.t['ETE/oK']),
         onSave: () => {
             (0, d.PE)(!1), (0, s.closeModal)(m.Pn);
         },
-        onSaveText: _.Z.Messages.MEMBER_VERIFICATION_PROGRESS_LOST_CONTINUE,
+        onSaveText: b.intl.string(b.t['Xt+UaW']),
         onSaveButtonColor: s.ButtonColors.RED
     });
 n.default = (e) => {
-    let { guildId: n, transitionState: t, onClose: l, onComplete: m, isPreview: _ = !1 } = e,
+    let { guildId: n, transitionState: t, onClose: l, onComplete: m, isPreview: b = !1 } = e,
         p = (0, d.rb)((e) => e.shouldShowWarning),
-        C = (0, i.e7)([u.Z], () => u.Z.get(n)),
-        E = (0, c.Dt)();
+        x = (0, i.e7)([u.Z], () => u.Z.get(n)),
+        C = (0, c.Dt)();
     return (r.useEffect(() => {
-        C === u.t && l();
-    }, [l, C]),
-    C === u.t)
+        x === u.t && l();
+    }, [l, x]),
+    x === u.t)
         ? null
         : (0, o.jsxs)(o.Fragment, {
               children: [
                   (0, o.jsxs)(s.ModalRoot, {
                       size: s.ModalSize.MEDIUM,
-                      className: b.container,
+                      className: h.container,
                       transitionState: t,
-                      'aria-labelledby': E,
+                      'aria-labelledby': C,
                       children: [
                           (0, o.jsx)(s.ModalCloseButton, {
                               onClick: () => l(!1),
-                              className: b.closeButton
+                              className: h.closeButton
                           }),
                           (0, o.jsx)(f.Z, {
-                              headerId: E,
+                              headerId: C,
                               guildId: n,
                               onClose: l,
                               onComplete: m,
-                              isPreview: _
+                              isPreview: b
                           })
                       ]
                   }),
@@ -61,8 +61,8 @@ n.default = (e) => {
                       children:
                           !0 === p &&
                           (0, o.jsx)(s.SlideIn, {
-                              className: b.notice,
-                              children: (0, o.jsx)(h, {})
+                              className: h.notice,
+                              children: (0, o.jsx)(_, {})
                           })
                   })
               ]

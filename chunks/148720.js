@@ -1,6 +1,6 @@
 n.d(t, {
     k: function () {
-        return I;
+        return g;
     }
 });
 var r = n(668781),
@@ -12,85 +12,85 @@ var r = n(668781),
     u = n(496675),
     c = n(594174),
     d = n(979651),
-    _ = n(317381),
-    E = n(638880),
-    f = n(782769),
-    h = n(527805),
-    p = n(689938);
-async function I(e) {
-    let { channelId: t, applicationId: n, launchId: I, inputApplication: m, analyticsLocations: T, launchingComponentId: S, sectionName: g } = e,
-        A = _.ZP.getEmbeddedActivitiesForChannel(t).find((e) => e.applicationId === n && (null == I || e.launchId === I)),
-        N = m;
-    if (null == N) {
+    f = n(317381),
+    _ = n(638880),
+    h = n(782769),
+    p = n(527805),
+    m = n(388032);
+async function g(e) {
+    let { channelId: t, applicationId: n, launchId: g, inputApplication: E, analyticsLocations: v, launchingComponentId: I, sectionName: S } = e,
+        T = f.ZP.getEmbeddedActivitiesForChannel(t).find((e) => e.applicationId === n && (null == g || e.launchId === g)),
+        b = E;
+    if (null == b) {
         let e = await i.ZP.fetchApplication(n);
-        N = s.Z.createFromServer(e);
+        b = s.Z.createFromServer(e);
     }
-    if (null == A || null == N) return;
-    let R = c.default.getCurrentUser(),
-        O = o.Z.getChannel(t);
-    async function v() {
-        if (null != A)
-            await (0, E.Z)({
-                applicationId: A.applicationId,
+    if (null == T || null == b) return;
+    let y = c.default.getCurrentUser(),
+        A = o.Z.getChannel(t);
+    async function N() {
+        if (null != T)
+            await (0, _.Z)({
+                applicationId: T.applicationId,
                 activityChannelId: t,
                 locationObject: {},
-                analyticsLocations: T,
-                componentId: S,
-                sectionName: g
+                analyticsLocations: v,
+                componentId: I,
+                sectionName: S
             });
     }
     !(function (e) {
         let { embeddedActivityJoinability: t, handleCanJoin: n } = e;
         switch (t) {
-            case h.Fw.CAN_JOIN:
+            case p.Fw.CAN_JOIN:
                 null == n || n();
                 break;
-            case h.Fw.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
+            case p.Fw.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
                 (0, a.w)();
                 break;
-            case h.Fw.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
+            case p.Fw.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
                 r.Z.show({
-                    title: p.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
-                    body: p.Z.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
+                    title: m.intl.string(m.t.PtobXV),
+                    body: m.intl.string(m.t.UXoQTk),
                     hideActionSheet: !1
                 });
                 break;
-            case h.Fw.ACTIVITY_NOT_SUPPORTED_ON_OS:
+            case p.Fw.ACTIVITY_NOT_SUPPORTED_ON_OS:
                 r.Z.show({
-                    title: p.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
-                    body: p.Z.Messages.EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS,
+                    title: m.intl.string(m.t.PtobXV),
+                    body: m.intl.string(m.t.uGDCc3),
                     hideActionSheet: !1
                 });
                 break;
-            case h.Fw.ACTIVITY_AGE_GATED:
+            case p.Fw.ACTIVITY_AGE_GATED:
                 r.Z.show({
-                    title: p.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
-                    body: p.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_AGE_GATE,
+                    title: m.intl.string(m.t.PtobXV),
+                    body: m.intl.string(m.t['4WuFRE']),
                     hideActionSheet: !1
                 });
                 break;
-            case h.Fw.NO_CHANNEL_CONNECT_PERMISSION:
-            case h.Fw.CHANNEL_FULL:
-            case h.Fw.NO_CHANNEL:
-            case h.Fw.NO_USER:
+            case p.Fw.NO_CHANNEL_CONNECT_PERMISSION:
+            case p.Fw.CHANNEL_FULL:
+            case p.Fw.NO_CHANNEL:
+            case p.Fw.NO_USER:
                 r.Z.show({
-                    title: p.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
-                    body: p.Z.Messages.ACTIVITIES_GENERIC_LAUNCH_FAILURE_DIALOG_BODY,
+                    title: m.intl.string(m.t.PtobXV),
+                    body: m.intl.string(m.t.FUCQcn),
                     hideActionSheet: !1
                 });
         }
     })({
-        embeddedActivityJoinability: (0, h.ZP)({
-            userId: null == R ? void 0 : R.id,
-            application: N,
+        embeddedActivityJoinability: (0, p.ZP)({
+            userId: null == y ? void 0 : y.id,
+            application: b,
             channelId: t,
-            currentUser: R,
-            isActivitiesEnabledForCurrentPlatform: (0, f.a)(O),
+            currentUser: y,
+            isActivitiesEnabledForCurrentPlatform: (0, h.a)(A),
             ChannelStore: o.Z,
             VoiceStateStore: d.Z,
             PermissionStore: u.Z,
             GuildStore: l.Z
         }),
-        handleCanJoin: v
+        handleCanJoin: N
     });
 }

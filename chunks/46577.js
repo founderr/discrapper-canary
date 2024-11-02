@@ -1,99 +1,99 @@
-s.r(t),
-    s.d(t, {
+e.r(n),
+    e.d(n, {
         default: function () {
-            return I;
+            return j;
         }
     }),
-    s(47120);
-var n = s(200651),
-    a = s(192379),
-    l = s(442837),
-    o = s(481060),
-    i = s(239091),
-    r = s(410575),
-    u = s(881052),
-    d = s(299206),
-    _ = s(430824),
-    M = s(236413),
-    c = s(727072),
-    E = s(36459),
-    O = s(65912),
-    T = s(572456),
-    R = s(273504),
-    D = s(981631),
-    U = s(689938);
-function I(e) {
-    let { rule: t, analyticsContext: s, onSelect: I } = e,
-        g = (0, M.Vb)(t),
-        A = (function (e) {
-            let { editingRule: t, setEditingRule: s } = (0, O.V)();
-            return (0, n.jsx)(o.MenuItem, {
+    e(47120);
+var i = e(200651),
+    l = e(192379),
+    r = e(442837),
+    o = e(481060),
+    d = e(239091),
+    u = e(410575),
+    a = e(881052),
+    s = e(299206),
+    c = e(430824),
+    g = e(236413),
+    h = e(727072),
+    M = e(36459),
+    f = e(65912),
+    m = e(572456),
+    p = e(273504),
+    x = e(981631),
+    T = e(388032);
+function j(t) {
+    let { rule: n, analyticsContext: e, onSelect: j } = t,
+        I = (0, g.Vb)(n),
+        b = (function (t) {
+            let { editingRule: n, setEditingRule: e } = (0, f.V)();
+            return (0, i.jsx)(o.MenuItem, {
                 id: 'edit-automod-rule',
-                label: U.Z.Messages.GUILD_AUTOMOD_EDIT_RULE,
+                label: T.intl.string(T.t.uQq6Pz),
                 action: () => {
-                    s(e);
+                    e(t);
                 },
-                disabled: null != t
+                disabled: null != n
             });
-        })(t),
-        L = (function (e) {
-            let { setEditingRule: t } = (0, O.V)(),
-                [s, i] = a.useState(!1),
-                { removeRule: r } = (0, c.pH)(e.guildId),
-                d = (0, l.e7)([_.Z], () => _.Z.getGuild(e.guildId)),
-                M = async () => {
-                    if (!s && !!(await (0, T.gK)(e.name))) {
-                        i(!0);
+        })(n),
+        y = (function (t) {
+            let { setEditingRule: n } = (0, f.V)(),
+                [e, d] = l.useState(!1),
+                { removeRule: u } = (0, h.pH)(t.guildId),
+                s = (0, r.e7)([c.Z], () => c.Z.getGuild(t.guildId)),
+                g = async () => {
+                    if (!e && !!(await (0, m.gK)(t.name))) {
+                        d(!0);
                         try {
-                            await (0, E.mm)(e.id, e.guildId), t(null), r(e.id, e.guildId);
-                        } catch (t) {
-                            var n;
-                            let e = new u.Hx(t);
-                            (0, o.showToast)((0, o.createToast)(null !== (n = e.getAnyErrorMessage()) && void 0 !== n ? n : U.Z.Messages.ERROR_OCCURRED_TRY_AGAIN, o.ToastType.FAILURE));
+                            await (0, M.mm)(t.id, t.guildId), n(null), u(t.id, t.guildId);
+                        } catch (n) {
+                            var i;
+                            let t = new a.Hx(n);
+                            (0, o.showToast)((0, o.createToast)(null !== (i = t.getAnyErrorMessage()) && void 0 !== i ? i : T.intl.string(T.t.fEptJC), o.ToastType.FAILURE));
                         } finally {
-                            i(!1);
+                            d(!1);
                         }
                     }
                 },
-                I = e.triggerType === R.fX.MENTION_SPAM && (null == d ? void 0 : d.features) != null && d.features.has(D.oNc.COMMUNITY);
-            return (0, n.jsx)(o.MenuItem, {
+                j = t.triggerType === p.fX.MENTION_SPAM && (null == s ? void 0 : s.features) != null && s.features.has(x.oNc.COMMUNITY);
+            return (0, i.jsx)(o.MenuItem, {
                 id: 'delete-automod-rule',
-                label: U.Z.Messages.GUILD_AUTOMOD_DELETE_RULE,
-                action: I
+                label: T.intl.string(T.t['92m/09']),
+                action: j
                     ? () => {
-                          (0, o.openModal)((e) =>
-                              (0, n.jsx)(o.ConfirmModal, {
-                                  header: U.Z.Messages.GUILD_AUTOMOD_RULE_DELETE_ERROR_CONFIRM_MODAL_HEADER,
-                                  confirmText: U.Z.Messages.OKAY,
+                          (0, o.openModal)((t) =>
+                              (0, i.jsx)(o.ConfirmModal, {
+                                  header: T.intl.string(T.t.MmpqMD),
+                                  confirmText: T.intl.string(T.t.BddRzc),
                                   confirmButtonColor: o.Button.Colors.BRAND,
-                                  ...e,
-                                  children: (0, n.jsx)(o.Text, {
+                                  ...t,
+                                  children: (0, i.jsx)(o.Text, {
                                       variant: 'text-md/normal',
-                                      children: U.Z.Messages.GUILD_AUTOMOD_RULE_DELETE_ERROR_CONFIRM_MODAL_BODY
+                                      children: T.intl.string(T.t.XMdBLy)
                                   })
                               })
                           );
                       }
-                    : M
+                    : g
             });
-        })(t),
-        h = (0, d.Z)({
-            id: t.id,
-            label: U.Z.Messages.COPY_ID_AUTOMOD_RULE
+        })(n),
+        C = (0, s.Z)({
+            id: n.id,
+            label: T.intl.string(T.t.F64hjo)
         });
-    return (0, n.jsx)(r.Z, {
-        context: s,
-        object: D.qAy.CONTEXT_MENU,
-        children: (0, n.jsxs)(o.Menu, {
+    return (0, i.jsx)(u.Z, {
+        context: e,
+        object: x.qAy.CONTEXT_MENU,
+        children: (0, i.jsxs)(o.Menu, {
             navId: 'automod-rule-context',
-            onClose: i.Zy,
-            'aria-label': U.Z.Messages.GUILD_AUTOMOD_RULE_CONTEXT_MENU,
-            onSelect: I,
+            onClose: d.Zy,
+            'aria-label': T.intl.string(T.t.uT36Sk),
+            onSelect: j,
             children: [
-                (0, n.jsxs)(o.MenuGroup, {
-                    children: [A, g && L]
+                (0, i.jsxs)(o.MenuGroup, {
+                    children: [b, I && y]
                 }),
-                g && (0, n.jsx)(o.MenuGroup, { children: h })
+                I && (0, i.jsx)(o.MenuGroup, { children: C })
             ]
         })
     });

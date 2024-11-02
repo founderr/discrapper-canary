@@ -1,40 +1,40 @@
-c.r(a),
-    c.d(a, {
+c.r(n),
+    c.d(n, {
         default: function () {
-            return _;
+            return p;
         }
     });
-var n = c(200651);
+var a = c(200651);
 c(192379);
-var e = c(98278),
-    o = c(790527),
-    s = c(474936),
-    r = c(981631),
-    i = c(689938),
+var o = c(98278),
+    i = c(790527),
+    r = c(474936),
+    e = c(981631),
+    s = c(388032),
     d = c(350770),
     u = c(954696);
-function _(t) {
-    let { onClose: a, analyticsSource: c, onLearnMore: _, ...p } = t,
-        L = s.Si.TIER_2,
-        O = i.Z.Messages.VIDEO_BACKGROUND_UPSELL_BODY.format({
+function p(t) {
+    let { onClose: n, analyticsSource: c, onLearnMore: p, ...l } = t,
+        f = r.Si.TIER_2,
+        _ = s.intl.format(s.t.hDMlqK, {
             onLearnMore: function () {
-                null == _ || _(), a(), (0, e.z)();
+                null == p || p(), n(), (0, o.z)();
             }
         });
-    return (0, n.jsx)(o.Z, {
+    return (0, a.jsx)(i.Z, {
         artURL: u.Z,
         artContainerClassName: d.videoBackgroundArt,
-        type: s.cd.VIDEO_BACKGROUNDS_MODAL,
-        title: i.Z.Messages.VIDEO_BACKGROUND_UPSELL_TITLE,
-        body: O,
-        glowUp: O,
+        type: r.cd.VIDEO_BACKGROUNDS_MODAL,
+        title: s.intl.string(s.t.fHqiDQ),
+        body: _,
+        glowUp: _,
         analyticsSource: c,
         analyticsLocation: {
-            page: r.ZY5.PREMIUM_UPSELL_MODAL_VIDEO_BACKGROUNDS,
-            object: r.qAy.BUTTON_CTA
+            page: e.ZY5.PREMIUM_UPSELL_MODAL_VIDEO_BACKGROUNDS,
+            object: e.qAy.BUTTON_CTA
         },
-        onClose: a,
-        subscriptionTier: L,
-        ...p
+        onClose: n,
+        subscriptionTier: f,
+        ...l
     });
 }

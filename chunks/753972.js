@@ -8,11 +8,11 @@ var r = n(200651),
     a = n(120356),
     s = n.n(a),
     o = n(768581),
-    l = n(689938),
+    l = n(388032),
     u = n(90043);
 function c(e) {
-    let { application: t, src: n, className: a, size: c, botIconFirst: d, fallbackAvatar: _, rendersPlaceholder: E = !1 } = e,
-        f = i.useMemo(
+    let { application: t, src: n, className: a, size: c, botIconFirst: d, fallbackAvatar: f, rendersPlaceholder: _ = !1 } = e,
+        h = i.useMemo(
             () =>
                 null != t
                     ? o.ZP.getApplicationIconURL({
@@ -21,16 +21,16 @@ function c(e) {
                           bot: t.bot,
                           size: c,
                           botIconFirst: d,
-                          fallbackAvatar: _
+                          fallbackAvatar: f
                       })
                     : n,
-            [t, n, c, d, _]
+            [t, n, c, d, f]
         );
-    if (null == f) return E ? (0, r.jsx)('div', { className: s()(u.icon, u.placeholder, a) }) : null;
+    if (null == h) return _ ? (0, r.jsx)('div', { className: s()(u.icon, u.placeholder, a) }) : null;
     return (0, r.jsx)('img', {
         className: s()(u.icon, a),
-        alt: l.Z.Messages.IMAGE,
-        src: f,
+        alt: l.intl.string(l.t.X4IxWF),
+        src: h,
         'aria-hidden': !0,
         draggable: !1
     });

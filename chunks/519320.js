@@ -1,9 +1,9 @@
 n.d(i, {
     EW: function () {
-        return s;
+        return l;
     },
     Np: function () {
-        return l;
+        return s;
     },
     tb: function () {
         return r;
@@ -21,7 +21,7 @@ function r(e, i, n, t) {
         sender_user_id: t
     });
 }
-function s(e, i, n, t, o) {
+function l(e, i, n, t, o) {
     a.default.track(c.rMx.VOICE_MESSAGE_PLAYBACK_ENDED, {
         message_id: e,
         total_duration_secs: i,
@@ -30,7 +30,7 @@ function s(e, i, n, t, o) {
         duration_listening_secs: o
     });
 }
-function l(e, i) {
+function s(e, i) {
     a.default.track(c.rMx.VOICE_MESSAGE_PLAYBACK_FAILED, {
         message_id: e,
         error_message: i

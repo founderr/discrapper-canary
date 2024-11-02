@@ -4,84 +4,84 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(192379),
-    a = n(442837),
-    l = n(911969),
-    r = n(581364),
+    l = n(192379),
+    r = n(442837),
+    a = n(911969),
+    s = n(581364),
     o = n(869765),
     c = n(699516),
     u = n(697451),
     d = n(348238),
     h = n(614584);
-let m = s.memo(function (e) {
+let m = l.memo(function (e) {
     var t, n;
-    let { message: m, channel: p, compact: _ = !1, interactionUsernameProfile: f, interactionAvatarProfile: E, interactionData: g, referencedUsernameProfile: C, referencedAvatarProfile: I, setPopout: T } = e,
-        x = (0, a.e7)([c.Z], () => c.Z.isBlockedForMessage(m), [m]),
-        S = (0, a.e7)([o.Z], () => o.Z.getMessageByReference(null == m ? void 0 : m.messageReference)),
-        v = (0, d.wq)(null === (t = m.interaction) || void 0 === t ? void 0 : t.user.id, p.id),
-        N = (0, d.Nk)(m.interaction, p, f, T),
-        A = (0, d.NU)(E, T),
-        Z = (0, r.t0)(m),
-        M = (null == Z ? void 0 : Z.type) === l.B8.APPLICATION_COMMAND ? (null === (n = Z.target_user) || void 0 === n ? void 0 : n.id) : void 0,
-        b = (0, d.wq)(M, p.id),
-        R = (0, d.JC)(M, p, C, T),
-        L = (0, d.rY)(I, T),
-        P = (0, d.Xn)(g, T),
-        j = s.useCallback(
+    let { message: m, channel: p, compact: f = !1, interactionUsernameProfile: g, interactionAvatarProfile: C, interactionData: x, referencedUsernameProfile: v, referencedAvatarProfile: _, setPopout: I } = e,
+        E = (0, r.e7)([c.Z], () => c.Z.isBlockedForMessage(m), [m]),
+        b = (0, r.e7)([o.Z], () => o.Z.getMessageByReference(null == m ? void 0 : m.messageReference)),
+        S = (0, d.wq)(null === (t = m.interaction) || void 0 === t ? void 0 : t.user.id, p.id),
+        Z = (0, d.Nk)(m.interaction, p, g, I),
+        T = (0, d.NU)(C, I),
+        N = (0, s.t0)(m),
+        j = (null == N ? void 0 : N.type) === a.B8.APPLICATION_COMMAND ? (null === (n = N.target_user) || void 0 === n ? void 0 : n.id) : void 0,
+        A = (0, d.wq)(j, p.id),
+        y = (0, d.JC)(j, p, v, I),
+        P = (0, d.rY)(_, I),
+        M = (0, d.Xn)(x, I),
+        R = l.useCallback(
             () =>
-                T({
+                I({
                     interactionUsernameProfile: !1,
                     interactionAvatarProfile: !1,
                     interactionData: !1,
                     referencedUsernameProfile: !1,
                     referencedAvatarProfile: !1
                 }),
-            [T]
+            [I]
         ),
-        O = s.useCallback(
+        L = l.useCallback(
             () =>
                 (0, h.Z)({
                     message: m,
                     channel: p,
-                    compact: _,
-                    setPopout: T,
-                    referencedAvatarProfile: I,
-                    referencedUsernameProfile: C,
+                    compact: f,
+                    setPopout: I,
+                    referencedAvatarProfile: _,
+                    referencedUsernameProfile: v,
                     replyReference: m.messageReference,
-                    replyMessage: S,
+                    replyMessage: b,
                     isReplySpineClickable: !1,
                     showReplySpine: !1
                 }),
-            [p, _, m, I, S, C, T]
+            [p, f, m, _, b, v, I]
         );
     return (0, i.jsx)(u.Z, {
         message: m,
         channel: p,
-        compact: _,
-        isInteractionUserBlocked: x,
-        showAvatarPopout: E,
-        showUsernamePopout: f,
-        showDataPopout: g,
-        showTargetAvatarPopout: I,
-        showTargetUsernamePopout: C,
-        onClickAvatar: A,
-        onClickUsername: N,
-        onClickCommand: P,
-        onUserContextMenu: v,
-        onClickTargetAvatar: L,
-        onClickTargetUsername: R,
-        onTargetUserContextMenu: b,
-        onPopoutRequestClose: j,
-        renderTargetMessage: O
+        compact: f,
+        isInteractionUserBlocked: E,
+        showAvatarPopout: C,
+        showUsernamePopout: g,
+        showDataPopout: x,
+        showTargetAvatarPopout: _,
+        showTargetUsernamePopout: v,
+        onClickAvatar: T,
+        onClickUsername: Z,
+        onClickCommand: M,
+        onUserContextMenu: S,
+        onClickTargetAvatar: P,
+        onClickTargetUsername: y,
+        onTargetUserContextMenu: A,
+        onPopoutRequestClose: R,
+        renderTargetMessage: L
     });
 });
 function p(e, t, n) {
-    let { message: s, channel: a, compact: l } = e;
-    return null != s.interaction && '' !== s.interaction.displayName
+    let { message: l, channel: r, compact: a } = e;
+    return null != l.interaction && '' !== l.interaction.displayName
         ? (0, i.jsx)(m, {
-              message: s,
-              channel: a,
-              compact: l,
+              message: l,
+              channel: r,
+              compact: a,
               setPopout: t,
               ...n
           })

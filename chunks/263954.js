@@ -1,27 +1,27 @@
 n.d(r, {
     Z: function () {
-        return a;
+        return c;
     }
 });
 var l = n(200651);
 n(192379);
 var o = n(120356),
-    s = n.n(o),
-    t = n(524994);
-function a(e) {
-    let { icon: r, iconClassName: n, description: o, color: a } = e;
+    t = n.n(o),
+    s = n(524994);
+function c(e) {
+    let { icon: r, iconClassName: n, description: o, color: c } = e;
     return (0, l.jsxs)('div', {
-        className: t.perkRow,
+        className: s.perkRow,
         children: [
             (0, l.jsx)('div', {
-                className: t.perkIconContainer,
+                className: s.perkIconContainer,
                 children: (0, l.jsx)(r, {
-                    color: null != a ? a : 'currentColor',
-                    className: s()(t.perkIcon, n)
+                    color: null != c ? c : 'currentColor',
+                    className: t()(s.perkIcon, n)
                 })
             }),
             (0, l.jsx)('div', {
-                className: t.perkDescription,
+                className: s.perkDescription,
                 children: o
             })
         ]

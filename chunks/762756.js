@@ -1,20 +1,20 @@
 n(47120);
 var i,
-    a = n(200651),
-    s = n(192379),
-    r = n(120356),
-    l = n.n(r),
+    r = n(200651),
+    l = n(192379),
+    a = n(120356),
+    s = n.n(a),
     o = n(873546),
     c = n(481060),
     d = n(599857),
     u = n(600164),
-    _ = n(63063),
-    E = n(1964),
-    h = n(981631),
-    m = n(689938),
-    I = n(311501),
-    p = n(113207);
-function g(e, t, n) {
+    h = n(63063),
+    m = n(1964),
+    p = n(981631),
+    g = n(388032),
+    f = n(311501),
+    _ = n(113207);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,14 +27,14 @@ function g(e, t, n) {
         e
     );
 }
-let T = _.Z.getArticleURL(h.BhN.VERIFICATION_FAQ);
-class S extends (i = s.PureComponent) {
+let I = h.Z.getArticleURL(p.BhN.VERIFICATION_FAQ);
+class C extends (i = l.PureComponent) {
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: i } = this.props;
-        return (0, a.jsx)(a.Fragment, {
+        return (0, r.jsx)(r.Fragment, {
             children: e.map((e) =>
-                e === h.PUi.CAPTCHA
-                    ? (0, a.jsx)(
+                e === p.PUi.CAPTCHA
+                    ? (0, r.jsx)(
                           d.Z,
                           {
                               onVerify: i,
@@ -42,12 +42,12 @@ class S extends (i = s.PureComponent) {
                           },
                           t
                       )
-                    : (0, a.jsx)(
+                    : (0, r.jsx)(
                           c.Button,
                           {
-                              className: l()(p.marginBottom20),
+                              className: s()(_.marginBottom20),
                               onClick: () => this.handleClick(e),
-                              children: E.Z.getButtonTitle(e)
+                              children: m.Z.getButtonTitle(e)
                           },
                           e
                       )
@@ -55,27 +55,27 @@ class S extends (i = s.PureComponent) {
         });
     }
     render() {
-        return (0, a.jsxs)(u.Z, {
-            className: I.verification,
+        return (0, r.jsxs)(u.Z, {
+            className: f.verification,
             align: u.Z.Align.CENTER,
             direction: u.Z.Direction.VERTICAL,
             children: [
-                (0, a.jsxs)(u.Z, {
-                    className: l()(I.container, { [I.isMobile]: o.tq }),
+                (0, r.jsxs)(u.Z, {
+                    className: s()(f.container, { [f.isMobile]: o.tq }),
                     direction: u.Z.Direction.VERTICAL,
                     align: u.Z.Align.CENTER,
                     justify: u.Z.Justify.CENTER,
                     children: [
-                        (0, a.jsx)('div', { className: I.image }),
-                        (0, a.jsx)('div', {
-                            className: l()(I.title, p.marginTop20),
-                            children: m.Z.Messages.VERIFICATION_TITLE
+                        (0, r.jsx)('div', { className: f.image }),
+                        (0, r.jsx)('div', {
+                            className: s()(f.title, _.marginTop20),
+                            children: g.intl.string(g.t.Iz0kDg)
                         }),
-                        (0, a.jsx)('div', {
-                            className: l()(I.body, p.marginTop4, p.marginBottom20),
-                            children: m.Z.Messages.VERIFICATION_BODY_WITH_HELP_LINK.format({ helpCenterURL: T })
+                        (0, r.jsx)('div', {
+                            className: s()(f.body, _.marginTop4, _.marginBottom20),
+                            children: g.intl.format(g.t['//ppOD'], { helpCenterURL: I })
                         }),
-                        (0, a.jsx)(u.Z, {
+                        (0, r.jsx)(u.Z, {
                             grow: 0,
                             direction: u.Z.Direction.VERTICAL,
                             justify: u.Z.Justify.CENTER,
@@ -83,25 +83,25 @@ class S extends (i = s.PureComponent) {
                         })
                     ]
                 }),
-                (0, a.jsx)('div', {
-                    className: l()(I.footer, p.marginTop20),
-                    children: m.Z.Messages.VERIFICATION_FOOTER
+                (0, r.jsx)('div', {
+                    className: s()(f.footer, _.marginTop20),
+                    children: g.intl.string(g.t.qqYun5)
                 }),
-                (0, a.jsxs)(u.Z, {
-                    className: l()(p.marginTop4, p.marginBottom20),
+                (0, r.jsxs)(u.Z, {
+                    className: s()(_.marginTop4, _.marginBottom20),
                     grow: 0,
                     children: [
-                        (0, a.jsx)('div', {
-                            className: l()(I.footer, I.footerAction),
-                            children: m.Z.Messages.VERIFICATION_FOOTER_SUPPORT.format({ supportURL: _.Z.getSubmitRequestURL() })
+                        (0, r.jsx)('div', {
+                            className: s()(f.footer, f.footerAction),
+                            children: g.intl.format(g.t.WL51ZW, { supportURL: h.Z.getSubmitRequestURL() })
                         }),
-                        (0, a.jsx)('div', {
-                            className: l()(I.footer, I.footerBullet),
+                        (0, r.jsx)('div', {
+                            className: s()(f.footer, f.footerBullet),
                             children: '\u2022'
                         }),
-                        (0, a.jsx)('div', {
-                            className: l()(I.footer, I.footerAction),
-                            children: m.Z.Messages.VERIFICATION_FOOTER_LOGOUT.format({ logoutOnClick: this.props.onLogout })
+                        (0, r.jsx)('div', {
+                            className: s()(f.footer, f.footerAction),
+                            children: g.intl.format(g.t.Hv7ztb, { logoutOnClick: this.props.onLogout })
                         })
                     ]
                 })
@@ -110,15 +110,15 @@ class S extends (i = s.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            g(this, 'handleClick', (e) => {
+            E(this, 'handleClick', (e) => {
                 let { onClick: t } = this.props;
                 null == t || t(e);
             });
     }
 }
-g(S, 'defaultProps', {
-    types: [h.PUi.CAPTCHA],
-    onCaptchaVerify: h.dG4,
-    onLogout: h.dG4
+E(C, 'defaultProps', {
+    types: [p.PUi.CAPTCHA],
+    onCaptchaVerify: p.dG4,
+    onLogout: p.dG4
 }),
-    (t.Z = S);
+    (t.Z = C);

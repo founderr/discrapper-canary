@@ -1,37 +1,37 @@
 n.d(t, {
     G7: function () {
-        return l;
+        return a;
     },
     LG: function () {
         return d;
     },
     Pg: function () {
-        return r;
+        return s;
     },
     ZI: function () {
-        return a;
+        return r;
     },
     _0: function () {
         return o;
     }
 });
-var s,
-    a,
-    i = n(689938);
-let r = 5,
-    l = 10,
+var i,
+    r,
+    l = n(388032);
+let s = 5,
+    a = 10,
     o = 30;
-((s = a || (a = {}))[(s.DISPLAY = 0)] = 'DISPLAY'), (s[(s.PERMISSIONS = 1)] = 'PERMISSIONS'), (s[(s.MEMBERS = 2)] = 'MEMBERS'), (s[(s.VERIFICATIONS = 3)] = 'VERIFICATIONS');
+((i = r || (r = {}))[(i.DISPLAY = 0)] = 'DISPLAY'), (i[(i.PERMISSIONS = 1)] = 'PERMISSIONS'), (i[(i.MEMBERS = 2)] = 'MEMBERS'), (i[(i.VERIFICATIONS = 3)] = 'VERIFICATIONS');
 let c = {
-    afk_channel_id: () => i.Z.Messages.FORM_LABEL_AFK_CHANNEL,
-    public_updates_channel_id: () => i.Z.Messages.GUILD_SETTINGS_COMMUNITY_MOD_CHANNEL_TITLE,
-    safety_alerts_channel_id: () => i.Z.Messages.GUILD_ANTIRAID_SAFETY_CHANNEL_TITLE,
-    system_channel_id: () => i.Z.Messages.FORM_LABEL_SYSTEM_CHANNEL
+    afk_channel_id: () => l.intl.string(l.t.KuYcnZ),
+    public_updates_channel_id: () => l.intl.string(l.t.vAyDGR),
+    safety_alerts_channel_id: () => l.intl.string(l.t.sMkYEx),
+    system_channel_id: () => l.intl.string(l.t.NASFnp)
 };
 function d(e) {
     var t;
     if (0 === Object.keys(e).length) return null;
     let n = Object.keys(e)[0],
-        s = null === (t = c[n]) || void 0 === t ? void 0 : t.call(c);
-    return null != s ? '('.concat(s, ') ').concat(e[n]) : e[n];
+        i = null === (t = c[n]) || void 0 === t ? void 0 : t.call(c);
+    return null != i ? '('.concat(i, ') ').concat(e[n]) : e[n];
 }

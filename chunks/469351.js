@@ -1,140 +1,140 @@
 n.d(t, {
     t: function () {
-        return D;
+        return A;
     }
 }),
     n(47120),
     n(627341);
-var s,
-    a,
-    i = n(200651),
-    r = n(192379),
-    l = n(278074),
+var i,
+    r,
+    l = n(200651),
+    s = n(192379),
+    a = n(278074),
     o = n(399606),
     c = n(481060),
     d = n(76535),
     u = n(395586),
-    _ = n(204875),
-    I = n(715796),
-    E = n(411667),
-    T = n(434404),
-    m = n(962086),
-    N = n(225675),
-    S = n(703656),
-    g = n(430824),
-    h = n(594174),
-    C = n(63063),
-    x = n(267101),
-    p = n(294294),
-    R = n(310800),
-    L = n(833695),
-    f = n(981631),
-    O = n(176505),
-    A = n(689938),
-    M = n(85490);
-function D(e) {
+    m = n(204875),
+    h = n(715796),
+    g = n(411667),
+    x = n(434404),
+    p = n(962086),
+    f = n(225675),
+    C = n(703656),
+    I = n(430824),
+    _ = n(594174),
+    N = n(63063),
+    v = n(267101),
+    T = n(294294),
+    j = n(310800),
+    E = n(833695),
+    S = n(981631),
+    b = n(176505),
+    R = n(388032),
+    Z = n(85490);
+function A(e) {
     let { guildId: t, hasValidApplication: n } = e,
-        { listingsLoaded: s } = (0, x.eD)(t),
-        a = (0, o.e7)([g.Z], () => g.Z.getGuild(t)),
-        D = (0, o.e7)([h.default], () => h.default.getCurrentUser()),
-        v = (null == a ? void 0 : a.isOwner(D)) === !0,
-        { loading: j } = (0, d.H)(t),
-        [Z, b] = r.useState(n ? 'manage_listings' : 'payment');
-    (0, I.P)(a);
-    let U = r.useCallback(() => {
-        if (null == a) return;
-        let e = g.Z.getRole(a.id, a.getEveryoneRoleId());
+        { listingsLoaded: i } = (0, v.eD)(t),
+        r = (0, o.e7)([I.Z], () => I.Z.getGuild(t)),
+        A = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
+        L = (null == r ? void 0 : r.isOwner(A)) === !0,
+        { loading: y } = (0, d.H)(t),
+        [D, O] = s.useState(n ? 'manage_listings' : 'payment');
+    (0, h.P)(r);
+    let M = s.useCallback(() => {
+        if (null == r) return;
+        let e = I.Z.getRole(r.id, r.getEveryoneRoleId());
         if (null == e) return;
-        T.Z.close();
+        x.Z.close();
         let t = { [e.id]: e };
-        (0, m.iD)(a.id, {
-            type: N.z.SERVER_SHOP,
+        (0, p.iD)(r.id, {
+            type: f.z.SERVER_SHOP,
             roles: t,
             initialTab: 'guild_products',
-            returnToSection: f.pNK.GUILD_PRODUCTS
+            returnToSection: S.pNK.GUILD_PRODUCTS
         }),
-            (0, S.uL)(f.Z5c.CHANNEL(a.id, O.oC.GUILD_SHOP));
-    }, [a]);
-    if (!s || j) return (0, i.jsx)(c.Spinner, {});
-    if (null == a) return null;
-    let G = (0, i.jsxs)(i.Fragment, {
+            (0, C.uL)(S.Z5c.CHANNEL(r.id, b.oC.GUILD_SHOP));
+    }, [r]);
+    if (!i || y) return (0, l.jsx)(c.Spinner, {});
+    if (null == r) return null;
+    let P = (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, i.jsx)(c.FormTitle, {
+                (0, l.jsx)(c.FormTitle, {
                     tag: c.FormTitleTags.H1,
-                    children: A.Z.Messages.GUILD_PRODUCTS_TITLE
+                    children: R.intl.string(R.t.X6h2g4)
                 }),
-                (0, i.jsx)(c.FormText, {
+                (0, l.jsx)(c.FormText, {
                     type: c.FormText.Types.DESCRIPTION,
-                    children: A.Z.Messages.GUILD_PRODUCTS_SETTINGS_DESCRIPTION.format({
-                        monetizationPolicyLink: C.Z.getArticleURL(f.BhN.CREATOR_POLICY),
-                        serverProductsSupportLink: C.Z.getCreatorSupportArticleURL(f.BhN.SERVER_PRODUCTS)
+                    children: R.intl.format(R.t.xiYuDg, {
+                        monetizationPolicyLink: N.Z.getArticleURL(S.BhN.CREATOR_POLICY),
+                        serverProductsSupportLink: N.Z.getCreatorSupportArticleURL(S.BhN.SERVER_PRODUCTS)
                     })
                 })
             ]
         }),
-        P = (0, i.jsxs)(c.TabBar, {
+        k = (0, l.jsxs)(c.TabBar, {
             type: 'top',
             look: 'brand',
-            className: M.tabBar,
-            'aria-label': A.Z.Messages.GUILD_PRODUCTS_TITLE,
-            selectedItem: Z,
-            onItemSelect: b,
+            className: Z.tabBar,
+            'aria-label': R.intl.string(R.t.X6h2g4),
+            selectedItem: D,
+            onItemSelect: O,
             children: [
-                (0, i.jsx)(_.Z, {
+                (0, l.jsx)(m.Z, {
                     id: 'basic_info',
-                    disabledTooltip: A.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
+                    disabledTooltip: R.intl.string(R.t.NVDuUV),
                     disabled: !n,
-                    children: A.Z.Messages.GUILD_PRODUCTS_BASIC_INFO_SECTION
+                    children: R.intl.string(R.t.w27QAQ)
                 }),
-                (0, i.jsx)(_.Z, {
+                (0, l.jsx)(m.Z, {
                     id: 'manage_listings',
-                    disabledTooltip: A.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
+                    disabledTooltip: R.intl.string(R.t.NVDuUV),
                     disabled: !n,
-                    children: A.Z.Messages.GUILD_PRODUCTS_LISTINGS_SECTION
+                    children: R.intl.string(R.t.wlZ1mp)
                 }),
-                v
-                    ? (0, i.jsx)(c.TabBar.Item, {
+                L
+                    ? (0, l.jsx)(c.TabBar.Item, {
                           id: 'payment',
-                          className: M.tabBarItem,
-                          children: A.Z.Messages.GUILD_PRODUCTS_PAYMENT_SECTION
+                          className: Z.tabBarItem,
+                          children: R.intl.string(R.t.YBrFe3)
                       })
                     : null,
                 n
-                    ? (0, i.jsx)('div', {
-                          className: M.previewButton,
-                          children: (0, i.jsx)(c.Button, {
-                              onClick: U,
+                    ? (0, l.jsx)('div', {
+                          className: Z.previewButton,
+                          children: (0, l.jsx)(c.Button, {
+                              onClick: M,
                               color: c.Button.Colors.PRIMARY,
                               size: c.Button.Sizes.SMALL,
                               look: c.Button.Looks.OUTLINED,
-                              children: A.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_PREVIEW
+                              children: R.intl.string(R.t.vM81yc)
                           })
                       })
                     : null
             ]
         }),
-        B = (0, l.EQ)(Z)
-            .with('basic_info', () => (0, i.jsx)(p.Z, { guildId: t }))
-            .with('manage_listings', () => (0, i.jsx)(R.Z, { guildId: t }))
-            .with('payment', () => (0, i.jsx)(L.Z, { guildId: t }))
+        w = (0, a.EQ)(D)
+            .with('basic_info', () => (0, l.jsx)(T.Z, { guildId: t }))
+            .with('manage_listings', () => (0, l.jsx)(j.Z, { guildId: t }))
+            .with('payment', () => (0, l.jsx)(E.Z, { guildId: t }))
             .exhaustive(),
-        y = s
-            ? (0, i.jsx)(c.TabBar.Panel, {
-                  id: Z,
-                  children: B
+        B = i
+            ? (0, l.jsx)(c.TabBar.Panel, {
+                  id: D,
+                  children: w
               })
-            : (0, i.jsx)(c.Spinner, {});
-    return (0, i.jsxs)(u.AL, {
+            : (0, l.jsx)(c.Spinner, {});
+    return (0, l.jsxs)(u.AL, {
         guildId: t,
         children: [
-            G,
-            (0, i.jsx)(E.Z, { guild: a }),
-            (0, i.jsx)('div', {
-                className: M.tabBarContainer,
-                children: P
+            P,
+            (0, l.jsx)(g.Z, { guild: r }),
+            (0, l.jsx)('div', {
+                className: Z.tabBarContainer,
+                children: k
             }),
-            y
+            B
         ]
     });
 }
-((a = s || (s = {})).MANAGE_LISTINGS = 'manage_listings'), (a.PAYMENT = 'payment'), (a.BASIC_INFO = 'basic_info');
+((r = i || (i = {})).MANAGE_LISTINGS = 'manage_listings'), (r.PAYMENT = 'payment'), (r.BASIC_INFO = 'basic_info');

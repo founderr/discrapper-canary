@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return l;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(325767);
-function s(e) {
-    let { color: t = 'currentColor', foreground: n, ...s } = e;
+var r = n(325767);
+function l(e) {
+    let { color: t = 'currentColor', foreground: n, ...l } = e;
     return (0, i.jsx)('svg', {
-        ...(0, a.Z)(s),
+        ...(0, r.Z)(l),
         viewBox: '0 0 136 56',
         fill: 'none',
         xmlns: 'http://www.w3.org/2000/svg',

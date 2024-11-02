@@ -10,9 +10,9 @@ n(192379);
 var a = n(392711),
     i = n.n(a),
     o = n(481060),
-    s = n(481250),
-    l = n(513547),
-    c = n(689938),
+    l = n(481250),
+    s = n(513547),
+    c = n(388032),
     d = n(701491),
     u = n(113207);
 let m = {
@@ -33,7 +33,7 @@ function p(e) {
     let n = i().map(t, (e, t) => {
         if (void 0 !== e && 'buffers' !== t)
             return (0, r.jsx)(
-                l.ck,
+                s.ck,
                 {
                     label: t,
                     value: e
@@ -44,7 +44,7 @@ function p(e) {
     return (
         n.push(
             (0, r.jsx)(
-                l.ck,
+                s.ck,
                 {
                     label: 'Frames Per Second',
                     value: t.recentEncodedFrames / (t.recentDurationMs / 1000)
@@ -54,9 +54,9 @@ function p(e) {
         ),
         (0, r.jsxs)(o.FormSection, {
             tag: o.FormTitleTags.H2,
-            title: c.Z.Messages.RTC_DEBUG_CLIPS,
+            title: c.intl.string(c.t.MKrFKC),
             children: [
-                (0, s.a)(n),
+                (0, l.a)(n),
                 (function (e) {
                     if (null != e.buffers)
                         return e.buffers.map((e) => {
@@ -71,7 +71,7 @@ function p(e) {
                                 if (null !== a && 'key' !== n)
                                     t.push(
                                         (0, r.jsx)(
-                                            l.ck,
+                                            s.ck,
                                             {
                                                 label: n,
                                                 value: a
@@ -86,7 +86,7 @@ function p(e) {
                                     className: u.marginBottom40,
                                     title: 'Buffer: '.concat(e.key),
                                     titleClassName: d.title,
-                                    children: (0, s.a)(t)
+                                    children: (0, l.a)(t)
                                 },
                                 'Buffer: '.concat(e.key)
                             );

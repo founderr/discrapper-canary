@@ -6,24 +6,24 @@ var r = n(200651),
     o = n(481060),
     l = n(63063),
     u = n(981631),
-    c = n(689938),
+    c = n(388032),
     d = n(326954);
-let _ = [
+let f = [
     {
-        getQuestion: () => c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_QUESTION_1,
-        getAnswer: () => c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_ANSWER_1
+        getQuestion: () => c.intl.string(c.t.C4J8UF),
+        getAnswer: () => c.intl.string(c.t.nhkk6u)
     },
     {
-        getQuestion: () => c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_QUESTION_2,
-        getAnswer: () => c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_ANSWER_2.format({ helpCenterUrl: l.Z.getArticleURL(u.BhN.GUILD_BOOSTING_FAQ) })
+        getQuestion: () => c.intl.string(c.t.ai4ym5),
+        getAnswer: () => c.intl.format(c.t['8zlqlJ'], { helpCenterUrl: l.Z.getArticleURL(u.BhN.GUILD_BOOSTING_FAQ) })
     },
     {
-        getQuestion: () => c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_QUESTION_3,
-        getAnswer: () => c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_ANSWER_3
+        getQuestion: () => c.intl.string(c.t.kMVGsL),
+        getAnswer: () => c.intl.string(c.t['Vz/SCQ'])
     },
     {
-        getQuestion: () => c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_QUESTION_4,
-        getAnswer: () => c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_ANSWER_4
+        getQuestion: () => c.intl.string(c.t.kYmXWF),
+        getAnswer: () => c.intl.string(c.t['+OURPj'])
     }
 ];
 t.Z = function (e) {
@@ -35,11 +35,11 @@ t.Z = function (e) {
             (0, r.jsx)(o.Heading, {
                 className: d.heading,
                 variant: 'heading-xxl/bold',
-                children: c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_HEADING
+                children: c.intl.string(c.t.HPJ6Nj)
             }),
             (0, r.jsx)('ul', {
                 className: d.list,
-                children: _.map((e, t) => {
+                children: f.map((e, t) => {
                     let i = n === t;
                     return (0, r.jsxs)(
                         'div',

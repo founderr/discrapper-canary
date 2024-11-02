@@ -1,41 +1,41 @@
-var n = t(200651);
-t(192379);
-var a = t(481060),
-    i = t(689938),
-    r = t(251529);
-s.Z = function (e) {
-    let { hasGuildBoostSlots: s, hasAppliedGuildBoosts: o, isUserPremiumTier2: l, subscriptionIsPausedOrPausePending: c } = e;
-    return (0, n.jsxs)('div', {
-        className: r.wrapper,
+var i = n(200651);
+n(192379);
+var s = n(481060),
+    r = n(388032),
+    l = n(251529);
+t.Z = function (e) {
+    let { hasGuildBoostSlots: t, hasAppliedGuildBoosts: a, isUserPremiumTier2: o, subscriptionIsPausedOrPausePending: c } = e;
+    return (0, i.jsxs)('div', {
+        className: l.wrapper,
         children: [
-            (0, n.jsx)('div', {
-                className: r.guildBoostGemWrapper,
-                children: (0, n.jsx)('img', {
+            (0, i.jsx)('div', {
+                className: l.guildBoostGemWrapper,
+                children: (0, i.jsx)('img', {
                     alt: '',
-                    className: r.guildBoostGem,
-                    src: t(908635)
+                    className: l.guildBoostGem,
+                    src: n(908635)
                 })
             }),
-            (0, n.jsxs)('div', {
-                className: r.gradient,
+            (0, i.jsxs)('div', {
+                className: l.gradient,
                 children: [
-                    (0, n.jsx)(a.Heading, {
+                    (0, i.jsx)(s.Heading, {
                         variant: 'display-md',
-                        className: r.heading,
+                        className: l.heading,
                         children: (function (e) {
-                            let { hasGuildBoostSlots: s, hasAppliedGuildBoosts: t, isUserPremiumTier2: n, subscriptionIsPausedOrPausePending: a } = e;
-                            return a ? i.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_YOUR_GUILD_BOOSTS.format() : s ? (n && !t ? i.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_HAS_UNAPPLIED_FREE_GUILD_BOOSTS.format() : i.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_YOUR_GUILD_BOOSTS.format()) : i.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_NO_GUILD_BOOSTS;
+                            let { hasGuildBoostSlots: t, hasAppliedGuildBoosts: n, isUserPremiumTier2: i, subscriptionIsPausedOrPausePending: s } = e;
+                            return s ? r.intl.format(r.t.Rb8Jho, {}) : t ? (i && !n ? r.intl.format(r.t.s9zQyM, {}) : r.intl.format(r.t.Rb8Jho, {})) : r.intl.string(r.t['2rh0b2']);
                         })({
-                            hasGuildBoostSlots: s,
-                            isUserPremiumTier2: l,
-                            hasAppliedGuildBoosts: o,
+                            hasGuildBoostSlots: t,
+                            isUserPremiumTier2: o,
+                            hasAppliedGuildBoosts: a,
                             subscriptionIsPausedOrPausePending: c
                         })
                     }),
-                    (0, n.jsx)('svg', {
+                    (0, i.jsx)('svg', {
                         viewBox: '0 0 660 210',
-                        className: r.wave,
-                        children: (0, n.jsx)('path', { d: 'M101.3,45.5C57.5,45.9,15.9,82.2,0,99.5V210h660V53.5c-164-137-265.2,32.4-385.8,33.6  C177.7,88.1,158.1,45,101.3,45.5z' })
+                        className: l.wave,
+                        children: (0, i.jsx)('path', { d: 'M101.3,45.5C57.5,45.9,15.9,82.2,0,99.5V210h660V53.5c-164-137-265.2,32.4-385.8,33.6  C177.7,88.1,158.1,45,101.3,45.5z' })
                     })
                 ]
             })

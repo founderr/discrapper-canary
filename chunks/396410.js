@@ -1,95 +1,95 @@
-s.r(t),
-    s.d(t, {
+n.r(e),
+    n.d(e, {
         default: function () {
             return h;
         }
     }),
-    s(47120);
-var n = s(200651),
-    l = s(192379),
-    o = s(990547),
-    a = s(481060),
-    r = s(479531),
-    i = s(213609),
-    u = s(689938),
-    d = s(404927);
+    n(47120);
+var l = n(200651),
+    o = n(192379),
+    s = n(990547),
+    i = n(481060),
+    r = n(479531),
+    a = n(213609),
+    u = n(388032),
+    d = n(404927);
 let c = RegExp('(^[-!#$%&\'*+/=?^_`{}|~0-9A-Z]+(\\.[-!#$%&\'*+/=?^_`{}|~0-9A-Z]+)*|^"([\\001-\\010\\013\\014\\016-\\037!#-\\[\\]-\\177]|\\\\[\\001-011\\013\\014\\016-\\177])*")@(?:[A-Z0-9](?:[A-Z0-9-]{0,2000}[A-Z0-9])?\\.)+[A-Z]{2,63}\\.?$', 'i');
-function h(e) {
-    let { transitionState: t, onFormSubmit: s, onSuccess: h, onClose: p, headerText: M, confirmButtonText: m, confirmButtonColor: f, impressionName: x } = e,
-        [A, C] = l.useState(!1),
-        [R, _] = l.useState(''),
-        [g, j] = l.useState(null),
-        B = l.useRef(null);
-    (0, i.Z)({
-        type: o.ImpressionTypes.MODAL,
-        name: x
+function h(t) {
+    let { transitionState: e, onFormSubmit: n, onSuccess: h, onClose: p, headerText: m, confirmButtonText: f, confirmButtonColor: x, impressionName: C } = t,
+        [g, j] = o.useState(!1),
+        [B, M] = o.useState(''),
+        [A, k] = o.useState(null),
+        Z = o.useRef(null);
+    (0, a.Z)({
+        type: s.ImpressionTypes.MODAL,
+        name: C
     });
-    let Z = async (e) => {
-        if ((e.preventDefault(), j(null), C(!0), !1 === c.test(R))) {
-            j(u.Z.Messages.EMAIL_ENTER_MODAL_INPUT_ERROR), C(!1);
+    let y = async (t) => {
+        if ((t.preventDefault(), k(null), j(!0), !1 === c.test(B))) {
+            k(u.intl.string(u.t.hML7Gx)), j(!1);
             return;
         }
         try {
-            let e = null != s ? await s(R) : void 0;
+            let t = null != n ? await n(B) : void 0;
             null != h &&
-                (null != e
+                (null != t
                     ? h({
-                          response: e,
-                          email: R
+                          response: t,
+                          email: B
                       })
-                    : h(R)),
+                    : h(B)),
                 p();
-        } catch (e) {
-            j(new r.Z(e).getAnyErrorMessage());
+        } catch (t) {
+            k(new r.Z(t).getAnyErrorMessage());
         } finally {
-            C(!1);
+            j(!1);
         }
     };
-    return (0, n.jsx)(a.ModalRoot, {
-        transitionState: t,
-        children: (0, n.jsxs)('form', {
-            onSubmit: Z,
+    return (0, l.jsx)(i.ModalRoot, {
+        transitionState: e,
+        children: (0, l.jsxs)('form', {
+            onSubmit: y,
             children: [
-                (0, n.jsxs)(a.ModalHeader, {
+                (0, l.jsxs)(i.ModalHeader, {
                     separator: !1,
                     className: d.header,
                     children: [
-                        (0, n.jsx)(a.Heading, {
+                        (0, l.jsx)(i.Heading, {
                             variant: 'heading-lg/semibold',
                             className: d.title,
-                            children: M
+                            children: m
                         }),
-                        (0, n.jsx)(a.ModalCloseButton, {
+                        (0, l.jsx)(i.ModalCloseButton, {
                             onClick: p,
                             className: d.modalCloseButton
                         })
                     ]
                 }),
-                (0, n.jsx)(a.ModalContent, {
-                    children: (0, n.jsx)(a.FormItem, {
-                        title: u.Z.Messages.YOUR_EMAIL,
-                        error: g,
-                        children: (0, n.jsx)(a.TextInput, {
-                            value: R,
-                            onChange: _,
-                            inputRef: B
+                (0, l.jsx)(i.ModalContent, {
+                    children: (0, l.jsx)(i.FormItem, {
+                        title: u.intl.string(u.t.hvOfmJ),
+                        error: A,
+                        children: (0, l.jsx)(i.TextInput, {
+                            value: B,
+                            onChange: M,
+                            inputRef: Z
                         })
                     })
                 }),
-                (0, n.jsxs)(a.ModalFooter, {
+                (0, l.jsxs)(i.ModalFooter, {
                     children: [
-                        (0, n.jsx)(a.Button, {
+                        (0, l.jsx)(i.Button, {
                             type: 'submit',
-                            color: null != f ? f : a.Button.Colors.BRAND,
-                            size: a.Button.Sizes.MEDIUM,
-                            submitting: A,
-                            children: m
+                            color: null != x ? x : i.Button.Colors.BRAND,
+                            size: i.Button.Sizes.MEDIUM,
+                            submitting: g,
+                            children: f
                         }),
-                        (0, n.jsx)(a.Button, {
-                            look: a.Button.Looks.LINK,
-                            color: a.Button.Colors.PRIMARY,
+                        (0, l.jsx)(i.Button, {
+                            look: i.Button.Looks.LINK,
+                            color: i.Button.Colors.PRIMARY,
                             onClick: p,
-                            children: u.Z.Messages.CANCEL
+                            children: u.intl.string(u.t['ETE/oK'])
                         })
                     ]
                 })

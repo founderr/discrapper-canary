@@ -1,27 +1,27 @@
 n.d(t, {
     DH: function () {
-        return L;
+        return R;
     },
     Ks: function () {
         return C;
     },
     Ws: function () {
-        return y;
-    },
-    g2: function () {
-        return O;
-    },
-    hf: function () {
-        return N;
-    },
-    k3: function () {
-        return v;
-    },
-    qN: function () {
         return D;
     },
+    g2: function () {
+        return A;
+    },
+    hf: function () {
+        return b;
+    },
+    k3: function () {
+        return N;
+    },
+    qN: function () {
+        return O;
+    },
     tP: function () {
-        return R;
+        return y;
     }
 }),
     n(47120);
@@ -34,18 +34,18 @@ var r = n(200651),
     u = n(594174),
     c = n(617136),
     d = n(272008),
-    _ = n(113434),
-    E = n(569984),
-    f = n(497505),
-    h = n(918701),
-    p = n(977156),
-    I = n(920916),
-    m = n(669041),
-    T = n(341907),
-    S = n(604162),
-    g = n(46140),
-    A = n(689938);
-function N(e) {
+    f = n(113434),
+    _ = n(569984),
+    h = n(497505),
+    p = n(918701),
+    m = n(977156),
+    g = n(920916),
+    E = n(669041),
+    v = n(341907),
+    I = n(604162),
+    S = n(46140),
+    T = n(388032);
+function b(e) {
     let { quest: t, location: n, questContentPosition: r, questContentRowIndex: a } = e,
         o = (0, s.e7)([u.default], () => {
             var e;
@@ -61,28 +61,28 @@ function N(e) {
                 questContentRowIndex: a
             }),
             o
-                ? (0, h.zK)(t, g.S7.FRACTIONS_QUEST)
-                    ? (0, T.openQuestsNitroRewardModal)(t, n)
-                    : (0, h.Xv)(t.config)
-                      ? (0, I.openCollectibleRewardModal)(t, n)
-                      : (0, h.vQ)(t.config)
-                        ? (0, T.openQuestInGameRewardModal)(t, n)
-                        : (0, T.openQuestsRewardCodeModal)({
+                ? (0, p.zK)(t, S.S7.FRACTIONS_QUEST)
+                    ? (0, v.openQuestsNitroRewardModal)(t, n)
+                    : (0, p.Xv)(t.config)
+                      ? (0, g.openCollectibleRewardModal)(t, n)
+                      : (0, p.vQ)(t.config)
+                        ? (0, v.openQuestInGameRewardModal)(t, n)
+                        : (0, v.openQuestsRewardCodeModal)({
                               questId: t.id,
                               location: n,
                               questContentPosition: r
                           })
-                : (0, m.openRewardModalUnverified)());
+                : (0, E.openRewardModalUnverified)());
     }, [t, n, r, o, a]);
 }
-function R(e) {
+function y(e) {
     var t;
     let n = (0, s.Wu)([l.ZP], () => l.ZP.getGamesSeen(!1)).find((t) => (null == t ? void 0 : t.id) === e);
     if (null == n) return !1;
     let r = Date.now() - 25920000000;
     return r <= (null !== (t = n.lastLaunched) && void 0 !== t ? t : 0);
 }
-let O = (e) => {
+let A = (e) => {
         let { useReducedMotion: t, className: n } = e,
             [s, l] = (0, o.useSpring)(() => ({})),
             u = i.useRef(!1),
@@ -114,8 +114,8 @@ let O = (e) => {
             }
         };
     },
-    v = (e, t) => {
-        let { message: n, xboxURL: i } = (0, _.KX)();
+    N = (e, t) => {
+        let { message: n, xboxURL: i } = (0, f.KX)();
         return (0, r.jsx)('span', {
             onClick: (n) => {
                 var r;
@@ -132,23 +132,23 @@ let O = (e) => {
         });
     };
 function C(e) {
-    let { quest: t, progressState: n, isCollectibleQuest: r, location: a, questContentPosition: s, questContentRowIndex: o, isInHouseQuest: l, inGiftInventory: u, isVideoQuest: E } = e,
-        f = N({
+    let { quest: t, progressState: n, isCollectibleQuest: r, location: a, questContentPosition: s, questContentRowIndex: o, isInHouseQuest: l, inGiftInventory: u, isVideoQuest: _ } = e,
+        h = b({
             quest: t,
             location: a,
             questContentPosition: s,
             questContentRowIndex: o
         }),
-        p = (0, _._s)({ quest: t }),
-        I = (0, _.Rf)(t);
+        m = (0, f._s)({ quest: t }),
+        g = (0, f.Rf)(t);
     return i.useMemo(() => {
         switch (n) {
-            case _.OH.UNACCEPTED:
-                let e = E ? A.Z.Messages.QUESTS_START_VIDEO_QUEST : A.Z.Messages.QUESTS_ACCEPT,
-                    i = E ? c.jZ.START_QUEST : c.jZ.ACCEPT_QUEST;
+            case f.OH.UNACCEPTED:
+                let e = _ ? T.intl.string(T.t.umdNio) : T.intl.string(T.t.kUQLMD),
+                    i = _ ? c.jZ.START_QUEST : c.jZ.ACCEPT_QUEST;
                 return {
                     text: e,
-                    tooltipText: A.Z.Messages.QUESTS_ACCEPT_TOOLTIP,
+                    tooltipText: T.intl.string(T.t['+MW4lJ']),
                     onClick: () => {
                         (0, d.AH)(t.id, {
                             questContent: a,
@@ -156,17 +156,17 @@ function C(e) {
                             questContentPosition: s,
                             questContentRowIndex: o
                         }),
-                            E && (0, T.openVideoQuestModal)(t);
+                            _ && (0, v.openVideoQuestModal)(t);
                     }
                 };
-            case _.OH.ACCEPTED:
-            case _.OH.IN_PROGRESS:
-                if (p && u)
+            case f.OH.ACCEPTED:
+            case f.OH.IN_PROGRESS:
+                if (m && u)
                     return {
-                        text: A.Z.Messages.QUESTS_CONNECT_CONSOLE,
+                        text: T.intl.string(T.t.Cfye4u),
                         tooltipText: null,
                         onClick: () =>
-                            (0, h.gI)(
+                            (0, p.gI)(
                                 { quest: t },
                                 {
                                     content: a,
@@ -176,71 +176,71 @@ function C(e) {
                                 }
                             )
                     };
-                if (E)
+                if (_)
                     return {
-                        text: (0, S.F9)(I),
-                        tooltipText: A.Z.Messages.QUESTS_IN_PROGRESS_TOOLTIP,
-                        onClick: () => (0, T.openVideoQuestModal)(t)
+                        text: (0, I.F9)(g),
+                        tooltipText: T.intl.string(T.t.hsbwjo),
+                        onClick: () => (0, v.openVideoQuestModal)(t)
                     };
                 return {
-                    text: A.Z.Messages.QUESTS_CLAIM_REWARD,
-                    tooltipText: A.Z.Messages.QUESTS_IN_PROGRESS_TOOLTIP,
+                    text: T.intl.string(T.t.cfY4PD),
+                    tooltipText: T.intl.string(T.t.hsbwjo),
                     onClick: null
                 };
-            case _.OH.COMPLETED:
+            case f.OH.COMPLETED:
                 return {
-                    text: A.Z.Messages.QUESTS_CLAIM_REWARD,
-                    tooltipText: l ? A.Z.Messages.QUESTS_IN_HOUSE_REWARD_TOOLTIP : null,
-                    onClick: f
+                    text: T.intl.string(T.t.cfY4PD),
+                    tooltipText: l ? T.intl.string(T.t.pqVOa2) : null,
+                    onClick: h
                 };
-            case _.OH.CLAIMED:
-                let m = {
+            case f.OH.CLAIMED:
+                let E = {
                     tooltipText: null,
-                    onClick: f
+                    onClick: h
                 };
                 if (l)
                     return {
-                        ...m,
-                        text: A.Z.Messages.QUESTS_MOBILE_HOME_VIEW_REWARD
+                        ...E,
+                        text: T.intl.string(T.t.vTgCW1)
                     };
                 if (r)
                     return {
-                        ...m,
-                        text: A.Z.Messages.COLLECTIBLES_USE_NOW
+                        ...E,
+                        text: T.intl.string(T.t.MAS7uL)
                     };
-                else if ((0, h.vQ)(t.config))
+                else if ((0, p.vQ)(t.config))
                     return {
-                        ...m,
-                        text: A.Z.Messages.QUESTS_MOBILE_HOME_VIEW_REWARD
+                        ...E,
+                        text: T.intl.string(T.t.vTgCW1)
                     };
                 return {
-                    ...m,
-                    text: A.Z.Messages.QUESTS_SEE_CODE
+                    ...E,
+                    text: T.intl.string(T.t.bAGFz8)
                 };
         }
-    }, [t, r, E, l, a, f, n, s, o, p, u, I]);
+    }, [t, r, _, l, a, h, n, s, o, m, u, g]);
 }
-function L() {
-    return (0, s.e7)([E.Z], () => {
+function R() {
+    return (0, s.e7)([_.Z], () => {
         var e, t;
-        return null !== (t = null !== (e = E.Z.questDeliveryOverride) && void 0 !== e ? e : (0, h.PM)(E.Z.quests, E.Z.questToDeliverForPlacement, f.Ok.DESKTOP_ACCOUNT_PANEL_AREA)) && void 0 !== t ? t : (0, h._)(E.Z.quests, f.jn.QUEST_BAR);
+        return null !== (t = null !== (e = _.Z.questDeliveryOverride) && void 0 !== e ? e : (0, p.PM)(_.Z.quests, _.Z.questToDeliverForPlacement, h.Ok.DESKTOP_ACCOUNT_PANEL_AREA)) && void 0 !== t ? t : (0, p._)(_.Z.quests, h.jn.QUEST_BAR);
     });
 }
-function D(e) {
+function O(e) {
     var t;
     let { location: n, quest: r } = e,
-        i = (0, p.Zy)({ location: n }),
-        a = (0, _.tP)(r);
+        i = (0, m.Zy)({ location: n }),
+        a = (0, f.tP)(r);
     if (null == r) return !1;
     let s = (null === (t = r.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
-        o = null != r.userStatus && (0, h.zE)(r.userStatus, f.jn.QUEST_BAR);
+        o = null != r.userStatus && (0, p.zE)(r.userStatus, h.jn.QUEST_BAR);
     return i && !o && !s && !a;
 }
-function y(e) {
+function D(e) {
     let { location: t } = e,
-        n = D({
+        n = O({
             location: t,
-            quest: L()
+            quest: R()
         });
-    return 0 !== (0, s.e7)([E.Z], () => E.Z.lastFetchedCurrentQuests) && !n;
+    return 0 !== (0, s.e7)([_.Z], () => _.Z.lastFetchedCurrentQuests) && !n;
 }

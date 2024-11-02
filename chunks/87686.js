@@ -2,8 +2,8 @@ t(47120);
 var l = t(200651),
     a = t(192379),
     i = t(120356),
-    s = t.n(i),
-    r = t(481060),
+    r = t.n(i),
+    s = t(481060),
     u = t(70956),
     o = t(747071),
     c = t(586826),
@@ -18,60 +18,60 @@ let g = {
 };
 n.Z = a.memo(function (e) {
     var n;
-    let { className: t, volume: i, disabled: p = !1, onChange: N } = e,
-        { audio: _ } = (0, c.p)(),
-        [v, D] = a.useState(!1),
-        [O, S] = a.useState(g),
-        { playheadPositionMs: x, endPositionMs: y, startPositionMs: E } = O,
-        A = null != _,
-        b = y - E,
-        M = b > m.YW * u.Z.Millis.SECOND;
+    let { className: t, volume: i, disabled: p = !1, onChange: v } = e,
+        { audio: x } = (0, c.p)(),
+        [N, y] = a.useState(!1),
+        [b, j] = a.useState(g),
+        { playheadPositionMs: C, endPositionMs: w, startPositionMs: S } = b,
+        I = null != x,
+        E = w - S,
+        M = E > m.YW * u.Z.Millis.SECOND;
     a.useEffect(() => {
-        null != _ &&
-            S({
+        null != x &&
+            j({
                 playheadPositionMs: 0,
-                endPositionMs: _.duration * u.Z.Millis.SECOND,
+                endPositionMs: x.duration * u.Z.Millis.SECOND,
                 startPositionMs: 0
             });
-    }, [_]);
-    let j = a.useCallback(
+    }, [x]);
+    let Z = a.useCallback(
             (e) => {
-                null != _ && (_.pause(), null != e && (_.currentTime = e), D(!1));
+                null != x && (x.pause(), null != e && (x.currentTime = e), y(!1));
             },
-            [_]
+            [x]
         ),
-        C = a.useCallback(() => {
-            if (null != _) {
-                if (v) {
-                    j();
+        T = a.useCallback(() => {
+            if (null != x) {
+                if (N) {
+                    Z();
                     return;
                 }
-                x >= y ? (_.currentTime = (0, f.my)(E)) : (_.currentTime = (0, f.my)(x)), (_.volume = (0, o.Z)(i)), _.play(), D(!0);
+                C >= w ? (x.currentTime = (0, f.my)(S)) : (x.currentTime = (0, f.my)(C)), (x.volume = (0, o.Z)(i)), x.play(), y(!0);
             }
-        }, [_, y, j, x, v, E, i]),
-        I = a.useCallback(
+        }, [x, w, Z, C, N, S, i]),
+        _ = a.useCallback(
             (e) => {
-                S(e),
-                    null == N ||
-                        N({
+                j(e),
+                    null == v ||
+                        v({
                             startMs: e.startPositionMs,
                             endMs: e.endPositionMs
                         });
             },
-            [N]
+            [v]
         ),
-        w = a.useCallback(
+        k = a.useCallback(
             (e) => {
-                null != _ && (_.currentTime = e);
+                null != x && (x.currentTime = e);
             },
-            [_]
+            [x]
         );
     return (0, l.jsxs)('div', {
-        className: s()(
+        className: r()(
             h.container,
             {
-                [h.initialized]: A,
-                [h.disabled]: !A || p
+                [h.initialized]: I,
+                [h.disabled]: !I || p
             },
             t
         ),
@@ -79,16 +79,16 @@ n.Z = a.memo(function (e) {
             (0, l.jsxs)('div', {
                 className: h.playButtonContainer,
                 children: [
-                    (0, l.jsx)(r.Clickable, {
+                    (0, l.jsx)(s.Clickable, {
                         className: h.playButton,
-                        onClick: A ? C : void 0,
-                        children: v
-                            ? (0, l.jsx)(r.StopIcon, {
+                        onClick: I ? T : void 0,
+                        children: N
+                            ? (0, l.jsx)(s.StopIcon, {
                                   size: 'xs',
                                   color: 'currentColor',
                                   className: h.playButtonIcon
                               })
-                            : (0, l.jsx)(r.PlayIcon, {
+                            : (0, l.jsx)(s.PlayIcon, {
                                   size: 'xs',
                                   color: 'currentColor',
                                   className: h.playButtonIcon
@@ -96,20 +96,20 @@ n.Z = a.memo(function (e) {
                     }),
                     (0, l.jsx)('div', {
                         className: h.durationContainer,
-                        children: (0, l.jsx)(r.Text, {
+                        children: (0, l.jsx)(s.Text, {
                             className: h.__invalid_duration,
                             variant: 'text-xs/normal',
                             color: M ? 'text-warning' : 'text-positive',
-                            children: ((n = b), ''.concat((0, f.my)(n).toFixed(2), 's'))
+                            children: ((n = E), ''.concat((0, f.my)(n).toFixed(2), 's'))
                         })
                     })
                 ]
             }),
             (0, l.jsx)(d.Z, {
-                playing: v,
-                onPlaybackChange: w,
-                onPausePlayback: j,
-                onChangePosition: I,
+                playing: N,
+                onPlaybackChange: k,
+                onPausePlayback: Z,
+                onChangePosition: _,
                 disabled: p
             })
         ]

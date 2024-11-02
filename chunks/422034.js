@@ -1,9 +1,9 @@
 n.d(t, {
     O: function () {
-        return h;
+        return p;
     },
     Z: function () {
-        return f;
+        return h;
     }
 });
 var r = n(200651),
@@ -15,14 +15,14 @@ var r = n(200651),
     u = n(518950),
     c = n(357355),
     d = n(182294),
-    _ = n(689938),
-    E = n(314188);
-function f(e) {
+    f = n(388032),
+    _ = n(314188);
+function h(e) {
     let { smallerText: t, className: n, textColor: a } = e,
         u = (0, o.e7)([c.Z], () => c.Z.affinities.slice(0, 3).reverse()),
-        f = u.map((e, t) =>
+        h = u.map((e, t) =>
             (0, r.jsx)(
-                h,
+                p,
                 {
                     affinity: e,
                     applyMask: t !== u.length - 1,
@@ -31,50 +31,50 @@ function f(e) {
                 e.id
             )
         ),
-        p = (e) => (null != e.globalName ? e.globalName : e.username),
-        I = i.useMemo(
+        m = (e) => (null != e.globalName ? e.globalName : e.username),
+        g = i.useMemo(
             () =>
                 3 === u.length
-                    ? _.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_3.format({ username: p(u[2]) })
+                    ? f.intl.formatToPlainString(f.t.c7ETJC, { username: m(u[2]) })
                     : 2 === u.length
-                      ? _.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_2.format({
-                            username: p(u[1]),
-                            otherUsername: p(u[0])
+                      ? f.intl.formatToPlainString(f.t.st8Rh4, {
+                            username: m(u[1]),
+                            otherUsername: m(u[0])
                         })
                       : 1 === u.length
-                        ? _.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_1.format({ username: p(u[0]) })
+                        ? f.intl.formatToPlainString(f.t.dpjXPD, { username: m(u[0]) })
                         : '',
             [u]
         );
     return 0 === u.length
         ? null
         : (0, r.jsxs)('div', {
-              className: s()(E.container, n),
+              className: s()(_.container, n),
               children: [
                   (0, r.jsx)('div', {
-                      className: E.iconContainer,
-                      children: f
+                      className: _.iconContainer,
+                      children: h
                   }),
                   (0, r.jsx)('div', {
-                      className: E.textContainer,
+                      className: _.textContainer,
                       children: (0, r.jsx)(function () {
                           return t
                               ? (0, r.jsx)(l.Text, {
                                     variant: 'text-lg/medium',
                                     color: a,
-                                    children: I
+                                    children: g
                                 })
                               : (0, r.jsx)(l.Heading, {
                                     variant: 'heading-xl/medium',
                                     color: a,
-                                    children: I
+                                    children: g
                                 });
                       }, {})
                   })
               ]
           });
 }
-function h(e) {
+function p(e) {
     let { affinity: t, applyMask: n, size: i } = e,
         { avatarSrc: a, eventHandlers: o } = (0, u.Z)({
             user: t,
@@ -82,7 +82,7 @@ function h(e) {
             animateOnHover: !0
         });
     return (0, r.jsx)(l.Avatar, {
-        className: s()(E.icon, { [E.mask]: n }),
+        className: s()(_.icon, { [_.mask]: n }),
         src: a,
         'aria-label': t.username,
         size: i,

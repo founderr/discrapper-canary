@@ -3,35 +3,35 @@ n.d(t, {
         return d;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(346163),
-    i = n(587431),
-    r = n(539290),
-    l = n(981631),
-    o = n(689938),
+var r = n(346163),
+    l = n(587431),
+    s = n(539290),
+    a = n(981631),
+    o = n(388032),
     c = n(729761);
 function d(e) {
     let t,
         { guild: n } = e,
-        { resubmittingEnableRequest: d, resubmissionError: u, createEnableRequest: _, resubmittedRequest: I, requestRejectedNoticeText: E, reapplyNoticeText: T } = (0, a.Z)(n),
-        m = n.hasFeature(l.oNc.CREATOR_MONETIZABLE_RESTRICTED),
-        N = n.hasFeature(l.oNc.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING);
+        { resubmittingEnableRequest: d, resubmissionError: u, createEnableRequest: m, resubmittedRequest: h, requestRejectedNoticeText: g, reapplyNoticeText: x } = (0, r.Z)(n),
+        p = n.hasFeature(a.oNc.CREATOR_MONETIZABLE_RESTRICTED),
+        f = n.hasFeature(a.oNc.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING);
     if (null != u)
-        return (0, s.jsx)(i.Z, {
+        return (0, i.jsx)(l.Z, {
             className: c.noticeContainer,
             children: u.getAnyErrorMessage()
         });
-    let S = null;
+    let C = null;
     return (
-        null != E ? (S = E) : I ? (S = o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_PENDING) : null != T ? ((S = T), (t = o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SUBMIT_APPEAL_CTA)) : N ? (S = o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_READ_ONLY_FOR_PENDING_NEW_OWNER_PENDING_NOTICE) : m && (S = o.Z.Messages.CREATOR_MONETIZATION_SETTINGS_RESTRICTED_NOTICE),
-        null != S
-            ? (0, s.jsx)(r.Z, {
+        null != g ? (C = g) : h ? (C = o.intl.string(o.t.MyJpJS)) : null != x ? ((C = x), (t = o.intl.string(o.t['YKw/NT']))) : f ? (C = o.intl.string(o.t.e2g9sb)) : p && (C = o.intl.string(o.t.rxI9sr)),
+        null != C
+            ? (0, i.jsx)(s.Z, {
                   className: c.noticeContainer,
-                  notice: S,
+                  notice: C,
                   ctaLabel: t,
                   ctaLoading: d,
-                  onClick: _
+                  onClick: m
               })
             : null
     );

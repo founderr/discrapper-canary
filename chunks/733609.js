@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     center: 'center_b9c76f',
     textCenter: 'textCenter_b9c76f',
     button: 'button_b9c76f',

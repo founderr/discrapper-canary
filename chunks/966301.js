@@ -1,106 +1,106 @@
 n.d(t, {
     ZP: function () {
-        return p;
+        return T;
     },
     Zm: function () {
-        return L;
+        return E;
     }
 }),
     n(47120);
-var s = n(200651),
-    a = n(192379),
-    i = n(442837),
-    r = n(481060),
-    l = n(852860),
+var i = n(200651),
+    r = n(192379),
+    l = n(442837),
+    s = n(481060),
+    a = n(852860),
     o = n(471445),
     c = n(45966),
     d = n(637853),
     u = n(999382),
-    _ = n(889369),
-    I = n(983135),
-    E = n(570961),
-    T = n(208665),
-    m = n(974513),
-    N = n(716130),
-    S = n(981631),
-    g = n(290511),
-    h = n(689938),
-    C = n(84877);
-function x(e) {
+    m = n(889369),
+    h = n(983135),
+    g = n(570961),
+    x = n(208665),
+    p = n(974513),
+    f = n(716130),
+    C = n(981631),
+    I = n(290511),
+    _ = n(388032),
+    N = n(84877);
+function v(e) {
     let { guildId: t, prompts: n } = e,
-        l = (0, i.e7)([_.Z], () => _.Z.editedDefaultChannelIds),
-        [c, u] = (0, d.dF)(t, n, [...l]),
-        I = c.length,
-        E = c.length + u.length,
-        T = (I / E) * 100,
-        m = Math.max(Math.ceil((85 * E) / 100) - I, 0),
-        [N, S] = a.useState(!1),
-        g = N ? r.ChevronSmallDownIcon : r.ChevronSmallUpIcon;
-    return (0, s.jsxs)('div', {
-        className: C.channelCoverage,
+        a = (0, l.e7)([m.Z], () => m.Z.editedDefaultChannelIds),
+        [c, u] = (0, d.dF)(t, n, [...a]),
+        h = c.length,
+        g = c.length + u.length,
+        x = (h / g) * 100,
+        p = Math.max(Math.ceil((85 * g) / 100) - h, 0),
+        [f, C] = r.useState(!1),
+        I = f ? s.ChevronSmallDownIcon : s.ChevronSmallUpIcon;
+    return (0, i.jsxs)('div', {
+        className: N.channelCoverage,
         children: [
-            (0, s.jsxs)(r.Clickable, {
-                className: C.coverageHeader,
-                onClick: () => S(!N),
+            (0, i.jsxs)(s.Clickable, {
+                className: N.coverageHeader,
+                onClick: () => C(!f),
                 children: [
-                    (0, s.jsxs)('div', {
-                        className: C.warningTextContainer,
+                    (0, i.jsxs)('div', {
+                        className: N.warningTextContainer,
                         children: [
-                            T <= 85 &&
-                                (0, s.jsx)(r.CircleWarningIcon, {
+                            x <= 85 &&
+                                (0, i.jsx)(s.CircleWarningIcon, {
                                     size: 'xs',
                                     color: 'currentColor',
-                                    className: C.warning
+                                    className: N.warning
                                 }),
-                            (0, s.jsx)(r.Text, {
-                                className: C.coverageTitle,
+                            (0, i.jsx)(s.Text, {
+                                className: N.coverageTitle,
                                 variant: 'text-xs/medium',
                                 color: 'text-muted',
-                                children: h.Z.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE_MISSING_CHANNELS.format({ numChannelsMissing: E - I })
+                                children: _.intl.format(_.t.nMVKCQ, { numChannelsMissing: g - h })
                             })
                         ]
                     }),
-                    (0, s.jsxs)('div', {
-                        className: C.progressContainer,
+                    (0, i.jsxs)('div', {
+                        className: N.progressContainer,
                         children: [
-                            (0, s.jsx)(r.Progress, {
-                                className: C.coverageProgress,
-                                foregroundColor: T > 85 ? 'var(--status-positive)' : 'var(--status-warning)',
-                                percent: T
+                            (0, i.jsx)(s.Progress, {
+                                className: N.coverageProgress,
+                                foregroundColor: x > 85 ? 'var(--status-positive)' : 'var(--status-warning)',
+                                percent: x
                             }),
-                            (0, s.jsx)(g, {
+                            (0, i.jsx)(I, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: C.caret
+                                className: N.caret
                             })
                         ]
                     })
                 ]
             }),
-            N
-                ? (0, s.jsxs)('div', {
-                      className: C.channelCoverageDetails,
+            f
+                ? (0, i.jsxs)('div', {
+                      className: N.channelCoverageDetails,
                       children: [
-                          (0, s.jsx)(r.Text, {
+                          (0, i.jsx)(s.Text, {
                               variant: 'text-xs/semibold',
                               color: 'text-muted',
-                              children: h.Z.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE_CHANNELS
+                              children: _.intl.string(_.t['0FM4i4'])
                           }),
-                          (0, s.jsx)('div', {
-                              className: C.channels,
+                          (0, i.jsx)('div', {
+                              className: N.channels,
                               children: u.map((e) => {
                                   var t;
-                                  let n = null !== (t = (0, o.KS)(e)) && void 0 !== t ? t : r.TextIcon;
-                                  return (0, s.jsx)(
+                                  let n = null !== (t = (0, o.KS)(e)) && void 0 !== t ? t : s.TextIcon;
+                                  return (0, i.jsx)(
                                       'div',
                                       {
-                                          className: C.channelPill,
-                                          children: (0, s.jsxs)(r.Text, {
-                                              className: C.channel,
+                                          className: N.channelPill,
+                                          children: (0, i.jsxs)(s.Text, {
+                                              className: N.channel,
                                               variant: 'text-xs/normal',
                                               color: 'interactive-active',
                                               children: [
-                                                  (0, s.jsx)(n, {
+                                                  (0, i.jsx)(n, {
                                                       size: 'xxs',
                                                       color: 'currentColor'
                                                   }),
@@ -112,27 +112,27 @@ function x(e) {
                                   );
                               })
                           }),
-                          (0, s.jsx)('div', {
-                              className: C.channelCoverageHint,
+                          (0, i.jsx)('div', {
+                              className: N.channelCoverageHint,
                               children:
-                                  m > 0
-                                      ? (0, s.jsxs)(s.Fragment, {
+                                  p > 0
+                                      ? (0, i.jsxs)(i.Fragment, {
                                             children: [
-                                                (0, s.jsx)(r.CircleWarningIcon, {
+                                                (0, i.jsx)(s.CircleWarningIcon, {
                                                     size: 'xs',
                                                     color: 'currentColor'
                                                 }),
-                                                (0, s.jsx)(r.Text, {
+                                                (0, i.jsx)(s.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'text-muted',
-                                                    children: h.Z.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE_ADD_HELP.format({ numChannels: m })
+                                                    children: _.intl.format(_.t['sX889/'], { numChannels: p })
                                                 })
                                             ]
                                         })
-                                      : (0, s.jsx)(r.Text, {
+                                      : (0, i.jsx)(s.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'text-muted',
-                                            children: h.Z.Messages.GUILD_NO_CHANNELS_HEADER
+                                            children: _.intl.string(_.t.o4s29v)
                                         })
                           })
                       ]
@@ -141,86 +141,86 @@ function x(e) {
         ]
     });
 }
-function p(e) {
+function T(e) {
     let { saveOnClose: t } = e,
-        n = (0, i.e7)([u.Z], () => u.Z.getGuild());
+        n = (0, l.e7)([u.Z], () => u.Z.getGuild());
     return null == n
         ? null
-        : (0, s.jsx)(R, {
+        : (0, i.jsx)(j, {
               guild: n,
               saveOnClose: t
           });
 }
-function R(e) {
+function j(e) {
     let { guild: t, saveOnClose: n } = e,
-        l = (0, i.e7)([c.Z], () => c.Z.isLoading()),
-        o = (0, i.e7)([T.Z], () => T.Z.editedOnboardingPrompts),
-        d = (0, i.e7)([T.Z], () => T.Z.advancedMode),
-        u = a.useRef(!1);
+        a = (0, l.e7)([c.Z], () => c.Z.isLoading()),
+        o = (0, l.e7)([x.Z], () => x.Z.editedOnboardingPrompts),
+        d = (0, l.e7)([x.Z], () => x.Z.advancedMode),
+        u = r.useRef(!1);
     if (
-        (a.useEffect(() => {
-            !l && !u.current && 0 === o.length && ((u.current = !0), !d && (0, E.tS)(t, [(0, g.ae)()], !1));
+        (r.useEffect(() => {
+            !a && !u.current && 0 === o.length && ((u.current = !0), !d && (0, g.tS)(t, [(0, I.ae)()], !1));
         }),
-        a.useEffect(() => {
+        r.useEffect(() => {
             if (n)
                 return () => {
-                    (0, E.rS)(t, { ignoreDefaultPrompt: !0 }).catch(() => {});
+                    (0, g.rS)(t, { ignoreDefaultPrompt: !0 }).catch(() => {});
                 };
         }, [n]),
         null == t)
     )
         return null;
-    let _ = async () => {
+    let m = async () => {
         try {
-            await (0, E.rS)(t), await (0, I.di)(t.id);
+            await (0, g.rS)(t), await (0, h.di)(t.id);
         } catch {}
     };
-    return (0, s.jsxs)(s.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, s.jsx)(r.Heading, {
-                className: C.header,
+            (0, i.jsx)(s.Heading, {
+                className: N.header,
                 variant: 'heading-lg/extrabold',
-                children: d ? h.Z.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER_ADVANCED : h.Z.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER
+                children: d ? _.intl.string(_.t.AGjtFh) : _.intl.string(_.t.dqCzoa)
             }),
-            (0, s.jsx)(r.Text, {
+            (0, i.jsx)(s.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: h.Z.Messages.ONBOARDING_PROMPT_SETTINGS_SUBHEADER
+                children: _.intl.string(_.t['q/6MLC'])
             }),
-            (0, s.jsxs)('div', {
-                className: C.links,
+            (0, i.jsxs)('div', {
+                className: N.links,
                 children: [
-                    (0, s.jsx)(r.Anchor, {
+                    (0, i.jsx)(s.Anchor, {
                         target: '_blank',
-                        href: S.EYA.GUILD_ONBOARDING_EXAMPLES,
-                        children: (0, s.jsx)(r.Text, {
+                        href: C.EYA.GUILD_ONBOARDING_EXAMPLES,
+                        children: (0, i.jsx)(s.Text, {
                             variant: 'text-sm/medium',
                             color: 'text-link',
-                            children: h.Z.Messages.GUILD_ONBOARDING_OVERVIEW_SEE_EXAMPLES
+                            children: _.intl.string(_.t.Ok55Ki)
                         })
                     }),
-                    (0, s.jsx)('div', { className: C.dot }),
-                    (0, s.jsx)(r.Anchor, {
-                        onClick: _,
-                        children: (0, s.jsx)(r.Text, {
+                    (0, i.jsx)('div', { className: N.dot }),
+                    (0, i.jsx)(s.Anchor, {
+                        onClick: m,
+                        children: (0, i.jsx)(s.Text, {
                             variant: 'text-sm/medium',
                             color: 'text-link',
-                            children: h.Z.Messages.GUILD_ONBOARDING_SETUP_PREVIEW
+                            children: _.intl.string(_.t['6gsjdH'])
                         })
                     }),
-                    (0, s.jsx)('div', { className: C.dot }),
-                    (0, s.jsx)(m.Wu, { guildId: t.id })
+                    (0, i.jsx)('div', { className: N.dot }),
+                    (0, i.jsx)(p.Wu, { guildId: t.id })
                 ]
             }),
-            (0, s.jsx)(x, {
+            (0, i.jsx)(v, {
                 guildId: t.id,
                 prompts: o
             }),
-            (0, s.jsx)('div', {
-                className: C.prompts,
-                children: l
-                    ? (0, s.jsx)(r.Spinner, {})
-                    : (0, s.jsx)(N.Z, {
+            (0, i.jsx)('div', {
+                className: N.prompts,
+                children: a
+                    ? (0, i.jsx)(s.Spinner, {})
+                    : (0, i.jsx)(f.Z, {
                           postjoinOnly: d,
                           guildId: t.id
                       })
@@ -228,19 +228,19 @@ function R(e) {
         ]
     });
 }
-function L() {
-    let e = (0, i.e7)([u.Z], () => u.Z.getGuild()),
-        t = (0, i.e7)([T.Z], () => T.Z.submitting);
+function E() {
+    let e = (0, l.e7)([u.Z], () => u.Z.getGuild()),
+        t = (0, l.e7)([x.Z], () => x.Z.submitting);
     return null == e
         ? null
-        : (0, s.jsx)(l.Z, {
+        : (0, i.jsx)(a.Z, {
               onSave: () => {
                   try {
-                      (0, E.rS)(e);
+                      (0, g.rS)(e);
                   } catch {}
               },
-              onReset: E.NB,
+              onReset: g.NB,
               submitting: t,
-              onSaveText: h.Z.Messages.SAVE
+              onSaveText: _.intl.string(_.t.R3BPHx)
           });
 }

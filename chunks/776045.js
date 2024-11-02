@@ -1,46 +1,46 @@
-t.r(A),
-    t.d(A, {
+n.r(t),
+    n.d(t, {
         IconVariant: function () {
-            return a;
+            return A;
         },
         default: function () {
             return d;
         }
     }),
-    t(47120);
-var a,
-    n,
-    r = t(200651),
-    s = t(192379),
-    o = t(481060),
-    l = t(689938),
-    i = t(784950);
-((n = a || (a = {})).DANGER = 'danger'), (n.WARNING = 'warning');
+    n(47120);
+var A,
+    r,
+    a = n(200651),
+    l = n(192379),
+    i = n(481060),
+    o = n(388032),
+    s = n(784950);
+((r = A || (A = {})).DANGER = 'danger'), (r.WARNING = 'warning');
 function d(e) {
-    let { transitionState: A, onClose: t, title: a, body: n, cta: d, closeLabel: c, onConfirm: u, iconVariant: C = 'warning' } = e,
-        [g, h] = s.useState(!1),
-        T = async () => {
-            h(!0);
+    let { transitionState: t, onClose: n, title: A, body: r, cta: d, closeLabel: c, onConfirm: u, iconVariant: g = 'warning' } = e,
+        [h, p] = l.useState(!1),
+        m = async () => {
+            p(!0);
             try {
-                await u(), t();
+                await u(), n();
             } finally {
-                h(!1);
+                p(!1);
             }
         },
-        p = null != a ? a : l.Z.Messages.GUILD_PRODUCT_SETTINGS_WARNING_MODAL_TITLE;
-    return (0, r.jsxs)(o.ModalRoot, {
-        className: i.__invalid_container,
-        size: o.ModalSize.DYNAMIC,
-        transitionState: A,
-        'aria-label': p,
+        f = null != A ? A : o.intl.string(o.t.D94rwc);
+    return (0, a.jsxs)(i.ModalRoot, {
+        className: s.__invalid_container,
+        size: i.ModalSize.DYNAMIC,
+        transitionState: t,
+        'aria-label': f,
         children: [
-            (0, r.jsxs)(o.ModalContent, {
-                className: i.content,
+            (0, a.jsxs)(i.ModalContent, {
+                className: s.content,
                 children: [
-                    (0, r.jsxs)('div', {
-                        className: i.header,
+                    (0, a.jsxs)('div', {
+                        className: s.header,
                         children: [
-                            (0, r.jsx)(o.CircleWarningIcon, {
+                            (0, a.jsx)(i.CircleWarningIcon, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 20,
@@ -48,49 +48,49 @@ function d(e) {
                                 className: (function (e) {
                                     switch (e) {
                                         case 'danger':
-                                            return i.dangerIcon;
+                                            return s.dangerIcon;
                                         case 'warning':
-                                            return i.warningIcon;
+                                            return s.warningIcon;
                                     }
-                                })(C)
+                                })(g)
                             }),
-                            (0, r.jsx)(o.Spacer, {
+                            (0, a.jsx)(i.Spacer, {
                                 size: 8,
                                 horizontal: !0
                             }),
-                            (0, r.jsx)(o.Heading, {
+                            (0, a.jsx)(i.Heading, {
                                 variant: 'heading-xl/semibold',
                                 color: 'header-primary',
-                                children: p
+                                children: f
                             })
                         ]
                     }),
-                    (0, r.jsx)(o.Spacer, { size: 12 }),
-                    (0, r.jsx)(o.Text, {
+                    (0, a.jsx)(i.Spacer, { size: 12 }),
+                    (0, a.jsx)(i.Text, {
                         variant: 'text-md/normal',
                         color: 'text-muted',
-                        className: i.__invalid_body,
-                        children: n
+                        className: s.__invalid_body,
+                        children: r
                     })
                 ]
             }),
-            (0, r.jsxs)(o.ModalFooter, {
+            (0, a.jsxs)(i.ModalFooter, {
                 children: [
-                    (0, r.jsx)(o.Button, {
-                        color: o.Button.Colors.BRAND,
-                        onClick: T,
-                        submitting: g,
+                    (0, a.jsx)(i.Button, {
+                        color: i.Button.Colors.BRAND,
+                        onClick: m,
+                        submitting: h,
                         children: d
                     }),
-                    (0, r.jsx)(o.Spacer, {
+                    (0, a.jsx)(i.Spacer, {
                         size: 12,
                         horizontal: !0
                     }),
                     null != c &&
-                        (0, r.jsx)(o.Button, {
-                            color: o.Button.Colors.PRIMARY,
-                            look: o.Button.Looks.OUTLINED,
-                            onClick: t,
+                        (0, a.jsx)(i.Button, {
+                            color: i.Button.Colors.PRIMARY,
+                            look: i.Button.Looks.OUTLINED,
+                            onClick: n,
                             children: c
                         })
                 ]

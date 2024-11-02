@@ -6,22 +6,22 @@ n.d(t, {
         return u;
     },
     aL: function () {
-        return o;
+        return s;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(120356),
-    s = n.n(a),
-    r = n(345898),
-    l = n(289659);
-let o = 660,
+var r = n(120356),
+    l = n.n(r),
+    a = n(345898),
+    o = n(289659);
+let s = 660,
     c = (e) =>
-        (0, i.jsx)(r.Z, {
+        (0, i.jsx)(a.Z, {
             ...e,
-            className: s()(e.className, {
-                [l.embedVertical]: !e.isHorizontal,
-                [l.embedHorizontal]: e.isHorizontal
+            className: l()(e.className, {
+                [o.embedVertical]: !e.isHorizontal,
+                [o.embedHorizontal]: e.isHorizontal
             })
         }),
     u = (e) => {
@@ -30,12 +30,12 @@ let o = 660,
             ...e,
             media: () =>
                 (0, i.jsx)('div', {
-                    className: s()(l.loadingDescription),
+                    className: l()(o.loadingDescription),
                     children: (0, i.jsx)('div', {
-                        className: s()(l.loadingBackgroundWrapper, { [l.loadingBackgroundWrapperHorizontal]: t }),
-                        children: (0, i.jsx)('div', { className: l.loadingBackground })
+                        className: l()(o.loadingBackgroundWrapper, { [o.loadingBackgroundWrapperHorizontal]: t }),
+                        children: (0, i.jsx)('div', { className: o.loadingBackground })
                     })
                 }),
-            title: () => (0, i.jsx)('div', { className: s()(l.loadingImage, { [l.loadingImageHorizontal]: t }) })
+            title: () => (0, i.jsx)('div', { className: l()(o.loadingImage, { [o.loadingImageHorizontal]: t }) })
         });
     };

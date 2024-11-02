@@ -7,10 +7,10 @@ var t = l(200651),
     i = l(192379),
     r = l(379357),
     a = l(442550),
-    s = l(297781),
-    d = l(443487),
+    d = l(297781),
+    s = l(443487),
     u = l(494399);
-let c = [s.OV, s.EE, s.Af, s.U9, s.wO, s.f, s.n8, s.v1, s.pQ];
+let c = [d.OV, d.EE, d.Af, d.U9, d.wO, d.f, d.n8, d.v1, d.pQ];
 n.Z = i.memo((e) => {
     var n;
     let { entry: l, channel: i, selected: o, hovered: h } = e,
@@ -18,19 +18,19 @@ n.Z = i.memo((e) => {
             entry: l,
             showCoverImage: !1
         });
-    return (0, t.jsxs)(d.Zb, {
+    return (0, t.jsxs)(s.Zb, {
         selected: o,
         children: [
-            (0, t.jsxs)(d.e$, {
+            (0, t.jsxs)(s.e$, {
                 children: [
-                    (0, t.jsx)(d.F9, {
+                    (0, t.jsx)(s.F9, {
                         entry: l,
                         channelId: i.id,
                         guildId: i.guild_id
                     }),
-                    (0, t.jsx)(d.ll, { children: l.extra.game_name }),
-                    (0, t.jsx)(s.Gk, {
-                        location: s.Gt.CARD,
+                    (0, t.jsx)(s.ll, { children: l.extra.game_name }),
+                    (0, t.jsx)(d.Gk, {
+                        location: d.Gt.CARD,
                         children: c.map((e, n) =>
                             (0, t.jsx)(
                                 e,

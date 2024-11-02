@@ -1,4 +1,4 @@
-n.r(t), n(47120), n(411104);
+n.r(e), n(47120), n(411104);
 var r = n(200651),
     i = n(192379),
     a = n(392711),
@@ -9,310 +9,310 @@ var r = n(200651),
     c = n(488499),
     h = n(81245),
     d = n(530329),
-    A = n(626135),
-    p = n(197712),
-    E = n(511004),
-    g = n(486324),
+    p = n(626135),
+    g = n(197712),
+    A = n(511004),
+    E = n(486324),
     C = n(981631),
     m = n(678916),
-    w = n(689938),
-    R = n(57739);
-t.default = (e) => {
-    let { file: t, imgURI: n, transitionState: f, allowSkip: M = !1, onCrop: _, onClose: N, uploadType: L = g.pC.AVATAR, showUpsellHeader: v = !1, analyticsPage: I } = e,
-        [x, D] = i.useState({
+    w = n(388032),
+    f = n(57739);
+e.default = (t) => {
+    let { file: e, imgURI: n, transitionState: R, allowSkip: M = !1, onCrop: N, onClose: v, uploadType: x = E.pC.AVATAR, showUpsellHeader: _ = !1, analyticsPage: y } = t,
+        [I, D] = i.useState({
             width: 0,
             height: 0
         }),
-        [O, y] = i.useState({
+        [L, B] = i.useState({
             top: 0,
             bottom: 0,
             left: 0,
             right: 0
         }),
-        [T, B] = i.useState(!1),
-        [b, S] = i.useState(1),
-        [V, j] = i.useState({
+        [O, b] = i.useState(!1),
+        [S, T] = i.useState(1),
+        [j, G] = i.useState({
             x: 0,
             y: 0
         }),
-        [P, G] = i.useState(null),
-        [U, k] = i.useState(!1),
-        { analyticsLocations: F } = (0, o.ZP)(u.Z.IMAGE_CROPPING_MODAL),
-        H = i.useRef({
+        [k, V] = i.useState(null),
+        [U, P] = i.useState(!1),
+        { analyticsLocations: H } = (0, o.ZP)(u.Z.IMAGE_CROPPING_MODAL),
+        F = i.useRef({
             x: 0,
             y: 0
         }),
         z = i.useRef(null),
-        Z = i.useRef(null),
-        Y = 'image/gif' === t.type;
+        Y = i.useRef(null),
+        J = 'image/gif' === e.type;
     i.useEffect(() => {
-        (0, E.Z)();
+        (0, A.Z)();
     }, []),
         i.useEffect(() => {
-            Y &&
-                v &&
-                A.default.track(C.rMx.OPEN_MODAL, {
+            J &&
+                _ &&
+                p.default.track(C.rMx.OPEN_MODAL, {
                     type: C.jXE.CROP_GIF_MODAL,
-                    location: { page: I }
+                    location: { page: y }
                 });
-        }, [v, I, Y]);
-    let J = () => {
-            switch (L) {
-                case g.pC.BANNER:
+        }, [_, y, J]);
+    let K = () => {
+            switch (x) {
+                case E.pC.BANNER:
                     return {
-                        height: g.f,
-                        width: g.L0
+                        height: E.f,
+                        width: E.L0
                     };
-                case g.pC.VIDEO_BACKGROUND:
+                case E.pC.VIDEO_BACKGROUND:
                     return m.HE;
-                case g.pC.AVATAR:
-                case g.pC.AVATAR_DECORATION:
+                case E.pC.AVATAR:
+                case E.pC.AVATAR_DECORATION:
                     return {
                         height: C.dGM,
                         width: C.dGM
                     };
-                case g.pC.GUILD_BANNER:
+                case E.pC.GUILD_BANNER:
                     return {
-                        height: g._T,
-                        width: g.X_
+                        height: E._T,
+                        width: E.X_
                     };
-                case g.pC.SCHEDULED_EVENT_IMAGE:
+                case E.pC.SCHEDULED_EVENT_IMAGE:
                     return {
-                        height: g.xT,
-                        width: g.d6
+                        height: E.xT,
+                        width: E.d6
                     };
-                case g.pC.HOME_HEADER:
+                case E.pC.HOME_HEADER:
                     return {
-                        height: g.Uo,
-                        width: g.N8
+                        height: E.Uo,
+                        width: E.N8
                     };
             }
         },
-        K = i.useCallback(
-            (e, t, n) => {
-                (H.current = (0, p.U$)(e, t, n)), null != z.current && (z.current.style.transform = 'translate3d('.concat(H.current.x, 'px, ').concat(H.current.y, 'px, 0)'));
+        X = i.useCallback(
+            (t, e, n) => {
+                (F.current = (0, g.U$)(t, e, n)), null != z.current && (z.current.style.transform = 'translate3d('.concat(F.current.x, 'px, ').concat(F.current.y, 'px, 0)'));
             },
             [z]
         ),
-        X = i.useCallback(() => {
-            if (null == z.current || b > 1) return;
-            let { width: e, height: t } = z.current.getBoundingClientRect(),
-                { width: n, height: r } = (0, p.Es)(L, e, t),
-                i = (0, p.AK)(L, n, r, t);
-            G({
+        Z = i.useCallback(() => {
+            if (null == z.current || S > 1) return;
+            let { width: t, height: e } = z.current.getBoundingClientRect(),
+                { width: n, height: r } = (0, g.Es)(x, t, e),
+                i = (0, g.AK)(x, n, r, e);
+            V({
                 width: n,
                 height: r
             }),
                 D(i),
-                y((0, p.kH)(n, r, i));
-        }, [L, b]),
+                B((0, g.kH)(n, r, i));
+        }, [x, S]),
         W = i.useCallback(
-            (e) => {
-                let { x: t, y: n } = H.current;
-                if (!T || (e.clientX === t && e.clientY === n)) return;
-                let r = e.clientX - V.x;
-                K(r, e.clientY - V.y, O);
+            (t) => {
+                let { x: e, y: n } = F.current;
+                if (!O || (t.clientX === e && t.clientY === n)) return;
+                let r = t.clientX - j.x;
+                X(r, t.clientY - j.y, L);
             },
-            [O, T, V, K]
+            [L, O, j, X]
         ),
         $ = () => {
-            B(!1);
+            b(!1);
         },
         q = () => {
-            let e = J();
-            return e.width !== e.height;
+            let t = K();
+            return t.width !== t.height;
         },
         Q = async () => {
-            let e;
+            let t;
             if (null == z.current) return;
-            k(!0);
+            P(!0);
             let n = z.current,
-                r = J();
-            if (Y)
+                r = K();
+            if (J)
                 try {
-                    let { result: i, cancelFn: a } = await (0, p.$p)(t, n, x, H.current, r);
-                    (Z.current = a), (e = await i), (Z.current = null);
-                } catch (e) {
+                    let { result: i, cancelFn: a } = await (0, g.$p)(e, n, I, F.current, r);
+                    (Y.current = a), (t = await i), (Y.current = null);
+                } catch (t) {
                     var i;
-                    throw (null === (i = Z.current) || void 0 === i || i.call(Z), (Z.current = null), Error('Error cropping GIF'));
+                    throw (null === (i = Y.current) || void 0 === i || i.call(Y), (Y.current = null), Error('Error cropping GIF'));
                 }
-            else e = (0, s.PT)(n, x, H.current, r);
-            await _(e, t), k(!1), N();
+            else t = (0, s.PT)(n, I, F.current, r);
+            await N(t, e), P(!1), v();
         };
     i.useEffect(
         () => (
             window.addEventListener('mouseup', $),
-            window.addEventListener('resize', X),
+            window.addEventListener('resize', Z),
             () => {
-                window.removeEventListener('mouseup', $), window.removeEventListener('resize', X);
+                window.removeEventListener('mouseup', $), window.removeEventListener('resize', Z);
             }
         ),
-        [X]
+        [Z]
     ),
         i.useEffect(
             () => () => {
-                null != Z.current && Z.current();
+                null != Y.current && Y.current();
             },
             []
         ),
         i.useEffect(() => {
-            if (T) return window.addEventListener('mousemove', W), () => window.removeEventListener('mousemove', W);
-        }, [W, T]);
-    let ee = L === g.pC.AVATAR || L === g.pC.BANNER,
-        et = (0, h.Mu)('ImageCroppingModal', !ee);
+            if (O) return window.addEventListener('mousemove', W), () => window.removeEventListener('mousemove', W);
+        }, [W, O]);
+    let tt = x === E.pC.AVATAR || x === E.pC.BANNER,
+        te = (0, h.Mu)('ImageCroppingModal', !tt);
     return (0, r.jsx)(o.Gt, {
-        value: F,
+        value: H,
         children: (0, r.jsxs)(l.ModalRoot, {
-            onAnimationEnd: X,
-            transitionState: f,
+            onAnimationEnd: Z,
+            transitionState: R,
             size: l.ModalSize.MEDIUM,
             children: [
-                v &&
-                    !et &&
+                _ &&
+                    !te &&
                     (0, r.jsx)(c.Z, {
-                        type: L,
-                        analyticsPage: I,
+                        type: x,
+                        analyticsPage: y,
                         analyticsSection: C.jXE.CROP_GIF_MODAL,
-                        isGIF: Y,
+                        isGIF: J,
                         banner: n
                     }),
                 (0, r.jsx)(l.ModalHeader, {
                     separator: !1,
                     children: (0, r.jsx)(l.FormTitle, {
-                        className: R.titleCase,
+                        className: f.titleCase,
                         tag: l.FormTitleTags.H1,
-                        children: w.Z.Messages.AVATAR_UPLOAD_EDIT_MEDIA
+                        children: w.intl.string(w.t.DxAYCA)
                     })
                 }),
                 (0, r.jsxs)(l.ModalContent, {
-                    className: R.modalContent,
+                    className: f.modalContent,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: R.editingContainer,
+                            className: f.editingContainer,
                             children: [
                                 (0, r.jsx)('img', {
                                     style: {
-                                        opacity: null == P ? 0 : 1,
-                                        transform: 'translate3d('.concat(H.current.x, 'px, ').concat(H.current.y, 'px, 0px)'),
+                                        opacity: null == k ? 0 : 1,
+                                        transform: 'translate3d('.concat(F.current.x, 'px, ').concat(F.current.y, 'px, 0px)'),
                                         ...(() => {
-                                            if (null == P) return {};
-                                            let e = P.width / P.height,
-                                                t = q() && e > g.MY ? x.height / P.height : 1;
+                                            if (null == k) return {};
+                                            let t = k.width / k.height,
+                                                e = q() && t > E.MY ? I.height / k.height : 1;
                                             return {
-                                                width: P.width * b * t,
-                                                minWidth: P.width * b * t,
-                                                height: P.height * b * t
+                                                width: k.width * S * e,
+                                                minWidth: k.width * S * e,
+                                                height: k.height * S * e
                                             };
                                         })()
                                     },
-                                    className: U ? R.imageDisabled : R.imageEnabled,
+                                    className: U ? f.imageDisabled : f.imageEnabled,
                                     src: n,
                                     alt: 'avatar',
                                     ref: z,
-                                    onMouseDown: (e) => {
-                                        let t = e.clientX - H.current.x;
-                                        j({
-                                            x: t,
-                                            y: e.clientY - H.current.y
+                                    onMouseDown: (t) => {
+                                        let e = t.clientX - F.current.x;
+                                        G({
+                                            x: e,
+                                            y: t.clientY - F.current.y
                                         }),
-                                            B(!0);
+                                            b(!0);
                                     },
                                     draggable: !1
                                 }),
                                 (0, r.jsx)('div', {
-                                    className: L === g.pC.AVATAR ? R.overlayAvatar : R.overlayBanner,
+                                    className: x === E.pC.AVATAR ? f.overlayAvatar : f.overlayBanner,
                                     style: {
-                                        opacity: null == P ? 0 : 1,
-                                        width: x.width,
-                                        height: x.height
+                                        opacity: null == k ? 0 : 1,
+                                        width: I.width,
+                                        height: I.height
                                     }
                                 })
                             ]
                         }),
                         (0, r.jsxs)('div', {
-                            className: R.sliderContainer,
+                            className: f.sliderContainer,
                             children: [
                                 (0, r.jsx)(l.ImageIcon, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: R.icon
+                                    className: f.icon
                                 }),
                                 (0, r.jsx)(l.Slider, {
                                     initialValue: 1,
                                     minValue: 1,
                                     maxValue: 2,
                                     keyboardStep: 0.025,
-                                    asValueChanges: (e) => {
-                                        if (null == P) return;
-                                        let { width: t, height: n } = P,
-                                            r = (0, p.kH)(t * e, n * e, x),
-                                            { x: i, y: s } = H.current;
-                                        (!(0, a.inRange)(i, r.right, r.left) || !(0, a.inRange)(s, r.top, r.bottom)) && K(i, s, r), S(e), y(r);
+                                    asValueChanges: (t) => {
+                                        if (null == k) return;
+                                        let { width: e, height: n } = k,
+                                            r = (0, g.kH)(e * t, n * t, I),
+                                            { x: i, y: s } = F.current;
+                                        (!(0, a.inRange)(i, r.right, r.left) || !(0, a.inRange)(s, r.top, r.bottom)) && X(i, s, r), T(t), B(r);
                                     },
                                     disabled: U,
                                     equidistant: !0,
                                     hideBubble: !0,
-                                    'aria-label': w.Z.Messages.FORM_LABEL_AVATAR_SIZE
+                                    'aria-label': w.intl.string(w.t.dnvZSk)
                                 }),
                                 (0, r.jsx)(l.ImageIcon, {
                                     size: 'custom',
                                     color: 'currentColor',
-                                    className: R.icon,
+                                    className: f.icon,
                                     width: 48,
                                     height: 48
                                 })
                             ]
                         }),
-                        v &&
-                            et &&
+                        _ &&
+                            te &&
                             (0, r.jsx)('div', {
                                 children: (0, r.jsx)(d.Z, {
-                                    uploadType: L,
+                                    uploadType: x,
                                     showUpsell: !0,
                                     position: 'inline',
-                                    className: R.nitroUpsell,
+                                    className: f.nitroUpsell,
                                     showShadow: !1
                                 })
                             })
                     ]
                 }),
                 (0, r.jsxs)(l.ModalFooter, {
-                    className: R.modalFooter,
+                    className: f.modalFooter,
                     children: [
                         M
                             ? (0, r.jsx)(l.Button, {
-                                  className: R.cancelButton,
+                                  className: f.cancelButton,
                                   look: l.Button.Looks.LINK,
                                   color: l.Button.Colors.PRIMARY,
                                   size: l.ButtonSizes.SMALL,
                                   onClick: () => {
-                                      M && (_(n, t), N());
+                                      M && (N(n, e), v());
                                   },
-                                  children: w.Z.Messages.AVATAR_UPLOAD_SKIP
+                                  children: w.intl.string(w.t.B944ys)
                               })
                             : null,
                         (0, r.jsxs)('div', {
-                            className: R.buttonsRight,
+                            className: f.buttonsRight,
                             children: [
                                 (0, r.jsx)(l.Button, {
-                                    className: R.cancelButton,
+                                    className: f.cancelButton,
                                     look: l.Button.Looks.LINK,
                                     color: l.Button.Colors.PRIMARY,
                                     size: l.ButtonSizes.SMALL,
                                     onClick: () => {
-                                        if (null != Z.current) {
-                                            Z.current(), (Z.current = null), k(!1);
+                                        if (null != Y.current) {
+                                            Y.current(), (Y.current = null), P(!1);
                                             return;
                                         }
-                                        N();
+                                        v();
                                     },
-                                    children: w.Z.Messages.AVATAR_UPLOAD_CANCEL
+                                    children: w.intl.string(w.t['9TG40t'])
                                 }),
                                 (0, r.jsx)(l.Button, {
                                     submitting: U,
                                     size: l.ButtonSizes.SMALL,
                                     onClick: Q,
-                                    children: w.Z.Messages.AVATAR_UPLOAD_APPLY
+                                    children: w.intl.string(w.t.ZSHmKC)
                                 })
                             ]
                         })

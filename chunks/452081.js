@@ -1,24 +1,24 @@
 n.d(t, {
     z: function () {
-        return l;
+        return s;
     }
 }),
     n(47120);
 var i = n(192379),
-    a = n(703656),
-    s = n(113434),
-    r = n(689938);
-function l() {
-    let [e, t] = i.useState(s.e5.ALL),
+    r = n(703656),
+    l = n(113434),
+    a = n(388032);
+function s() {
+    let [e, t] = i.useState(l.e5.ALL),
         n = i.useMemo(
             () => [
                 {
-                    id: s.e5.ALL,
-                    label: r.Z.Messages.QUESTS_ALL
+                    id: l.e5.ALL,
+                    label: a.intl.string(a.t['0SzXmp'])
                 },
                 {
-                    id: s.e5.CLAIMED,
-                    label: r.Z.Messages.QUESTS_CLAIMED
+                    id: l.e5.CLAIMED,
+                    label: a.intl.string(a.t.zyNYND)
                 }
             ],
             []
@@ -27,7 +27,7 @@ function l() {
         tabs: n,
         selectedTab: e,
         onSelectTab: i.useCallback((e) => {
-            (0, a.dL)('#'), t(e);
+            (0, r.dL)('#'), t(e);
         }, [])
     };
 }

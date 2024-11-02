@@ -1,37 +1,37 @@
 t.d(n, {
     Z: function () {
-        return M;
+        return m;
     }
 });
 var i = t(200651);
 t(192379);
-var a = t(442837),
-    s = t(481060),
-    l = t(668781),
-    r = t(79390),
-    o = t(222677),
+var l = t(442837),
+    r = t(481060),
+    a = t(668781),
+    o = t(79390),
+    s = t(222677),
     u = t(665906),
     d = t(496675),
     c = t(981631),
-    E = t(689938);
-function M(e, n) {
+    g = t(388032);
+function m(e, n) {
     let t = (0, u.$R)(n),
-        M = (0, a.e7)([d.Z], () => d.Z.can(c.Plq.MANAGE_MESSAGES, n) && t, [n, t]);
-    return !M || null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, r.eQ)(e))
+        m = (0, l.e7)([d.Z], () => d.Z.can(c.Plq.MANAGE_MESSAGES, n) && t, [n, t]);
+    return !m || null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, o.eQ)(e))
         ? null
-        : (0, i.jsx)(s.MenuItem, {
+        : (0, i.jsx)(r.MenuItem, {
               id: 'remove-reactions',
-              label: E.Z.Messages.REMOVE_ALL_REACTIONS,
+              label: g.intl.string(g.t.ZbtGBg),
               action: function (t) {
                   t.shiftKey
-                      ? (0, o.wX)(n.id, e.id)
-                      : l.Z.show({
-                            title: E.Z.Messages.REMOVE_ALL_REACTIONS_CONFIRM_TITLE,
-                            body: E.Z.Messages.REMOVE_ALL_REACTIONS_CONFIRM_BODY,
-                            confirmText: E.Z.Messages.YES_TEXT,
-                            cancelText: E.Z.Messages.NO_TEXT,
+                      ? (0, s.wX)(n.id, e.id)
+                      : a.Z.show({
+                            title: g.intl.string(g.t.iz3vYW),
+                            body: g.intl.string(g.t.VpjOCg),
+                            confirmText: g.intl.string(g.t.p89ACg),
+                            cancelText: g.intl.string(g.t.gm1Ven),
                             onConfirm: () => {
-                                (0, o.wX)(n.id, e.id);
+                                (0, s.wX)(n.id, e.id);
                             }
                         });
               },

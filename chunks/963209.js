@@ -1,36 +1,36 @@
-s.d(t, {
+n.d(t, {
     Z: function () {
         return d;
     }
 });
-var a = s(200651);
-s(192379);
-var n = s(120356),
-    o = s.n(n),
-    l = s(481060),
-    r = s(112831),
-    i = s(689938),
-    c = s(763443);
+var s = n(200651);
+n(192379);
+var a = n(120356),
+    o = n.n(a),
+    i = n(481060),
+    l = n(112831),
+    r = n(388032),
+    c = n(763443);
 function d(e) {
     let { onComplete: t } = e;
-    return (0, a.jsxs)(l.Clickable, {
+    return (0, s.jsxs)(i.Clickable, {
         className: c.container,
         onClick: t,
         children: [
-            (0, a.jsx)(r.Z, {
-                size: r.Z.Sizes.SIZE_24,
+            (0, s.jsx)(l.Z, {
+                size: l.Z.Sizes.SIZE_24,
                 className: c.title,
-                children: i.Z.Messages.NUF_COMPLETE_TITLE
+                children: r.intl.string(r.t['Deps4+'])
             }),
-            (0, a.jsx)(r.Z, {
-                size: r.Z.Sizes.SIZE_24,
+            (0, s.jsx)(l.Z, {
+                size: l.Z.Sizes.SIZE_24,
                 className: o()(c.title, c.subtitle),
-                children: i.Z.Messages.NUF_COMPLETE_SUBTITLE
+                children: r.intl.string(r.t.xv5g7O)
             }),
-            (0, a.jsx)(l.Button, {
-                color: l.Button.Colors.WHITE,
+            (0, s.jsx)(i.Button, {
+                color: i.Button.Colors.WHITE,
                 onClick: t,
-                children: i.Z.Messages.NUF_COMPLETE_CTA
+                children: r.intl.string(r.t['6X9YKC'])
             })
         ]
     });

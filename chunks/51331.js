@@ -1,49 +1,49 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
         return d;
     }
 });
-var n = t(200651),
-    a = t(192379),
-    i = t(120356),
-    r = t.n(i),
-    o = t(481060),
-    l = t(838436),
-    c = t(57281);
+var i = n(200651),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(481060),
+    o = n(838436),
+    c = n(57281);
 function d(e) {
-    let { value: s, onChange: t, className: i, note: d, title: _, disabled: u } = e,
-        E = a.useRef(null),
-        T = a.useRef(null),
-        S = a.useId(),
-        I = (0, n.jsx)(o.Switch, {
-            id: S,
-            checked: s,
-            onChange: t,
+    let { value: t, onChange: n, className: r, note: d, title: u, disabled: m } = e,
+        h = s.useRef(null),
+        g = s.useRef(null),
+        p = s.useId(),
+        x = (0, i.jsx)(a.Switch, {
+            id: p,
+            checked: t,
+            onChange: n,
             focusProps: { enabled: !1 },
-            innerRef: E,
-            disabled: u
+            innerRef: h,
+            disabled: m
         });
-    return (0, n.jsx)('div', {
-        className: r()(c.container, i, { [c.disabled]: u }),
-        children: (0, n.jsx)(o.FocusRing, {
+    return (0, i.jsx)('div', {
+        className: l()(c.container, r, { [c.disabled]: m }),
+        children: (0, i.jsx)(a.FocusRing, {
             within: !0,
             offset: -4,
-            focusTarget: E,
-            ringTarget: T,
-            children: (0, n.jsxs)(n.Fragment, {
+            focusTarget: h,
+            ringTarget: g,
+            children: (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, n.jsx)('div', {
+                    (0, i.jsx)('div', {
                         className: c.text,
-                        children: (0, n.jsx)(l.H, {
-                            header: _,
+                        children: (0, i.jsx)(o.H, {
+                            header: u,
                             description: d,
-                            relatedId: S,
-                            disabled: u
+                            relatedId: p,
+                            disabled: m
                         })
                     }),
-                    (0, n.jsx)('div', {
+                    (0, i.jsx)('div', {
                         className: c.control,
-                        children: I
+                        children: x
                     })
                 ]
             })

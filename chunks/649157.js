@@ -1,42 +1,42 @@
-t(47120);
-var n = t(200651),
-    a = t(192379),
-    i = t(442837),
-    r = t(481060),
-    o = t(153867),
-    l = t(706454),
-    c = t(689938),
-    d = t(807005),
-    _ = t(444675);
-s.Z = i.ZP.connectStores([l.default], () => ({ currentLocale: l.default.locale }))(function (e) {
-    let [s, i] = a.useState(e.currentLocale),
-        [l] = a.useState(() =>
-            c.Z.getAvailableLocales().map((e) => {
-                let s;
+n(47120);
+var i = n(200651),
+    s = n(192379),
+    r = n(442837),
+    l = n(481060),
+    a = n(153867),
+    o = n(706454),
+    c = n(388032),
+    d = n(807005),
+    u = n(444675);
+t.Z = r.ZP.connectStores([o.default], () => ({ currentLocale: o.default.locale }))(function (e) {
+    let [t, r] = s.useState(e.currentLocale),
+        [o] = s.useState(() =>
+            (0, c.getAvailableLocales)().map((e) => {
+                let t;
                 try {
-                    s = t(621287)('./'.concat(e.value, '.png'));
+                    t = n(621287)('./'.concat(e.value, '.png'));
                 } catch (e) {
-                    s = t(1474);
+                    t = n(1474);
                 }
                 return {
                     ...e,
-                    name: (0, n.jsxs)('div', {
+                    name: (0, i.jsxs)('div', {
                         className: d.option,
                         children: [
-                            (0, n.jsx)('span', {
+                            (0, i.jsx)('span', {
                                 className: d.localeName,
                                 children: e.name
                             }),
-                            (0, n.jsx)('span', {
+                            (0, i.jsx)('span', {
                                 className: d.localizedName,
-                                children: e.localizedName
+                                children: c.intl.string(e.localizedName)
                             }),
-                            (0, n.jsx)('div', {
+                            (0, i.jsx)('div', {
                                 className: d.flag,
                                 'aria-hidden': !0,
-                                children: (0, n.jsx)('img', {
+                                children: (0, i.jsx)('img', {
                                     alt: '',
-                                    src: s,
+                                    src: t,
                                     className: d.flagImage
                                 })
                             })
@@ -45,20 +45,20 @@ s.Z = i.ZP.connectStores([l.default], () => ({ currentLocale: l.default.locale }
                 };
             })
         ),
-        u = a.useCallback((e) => {
-            let { value: s } = e;
-            i(s), _.nextTick(() => o.ZP.updateLocale(s));
+        m = s.useCallback((e) => {
+            let { value: t } = e;
+            r(t), u.nextTick(() => a.ZP.updateLocale(t));
         }, []);
-    return (0, n.jsx)(r.FormSection, {
-        tag: r.FormTitleTags.H1,
-        title: c.Z.Messages.LANGUAGE,
-        children: (0, n.jsx)(r.FormSection, {
-            children: (0, n.jsx)(r.FormItem, {
-                title: c.Z.Messages.LANGUAGE_SELECT,
-                children: (0, n.jsx)(r.RadioGroup, {
-                    onChange: u,
-                    options: l,
-                    value: s
+    return (0, i.jsx)(l.FormSection, {
+        tag: l.FormTitleTags.H1,
+        title: c.intl.string(c.t.IHMsPj),
+        children: (0, i.jsx)(l.FormSection, {
+            children: (0, i.jsx)(l.FormItem, {
+                title: c.intl.string(c.t['mx+sp6']),
+                children: (0, i.jsx)(l.RadioGroup, {
+                    onChange: m,
+                    options: o,
+                    value: t
                 })
             })
         })

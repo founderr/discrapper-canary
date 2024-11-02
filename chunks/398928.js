@@ -18,25 +18,25 @@ function o(e) {
     let { selectionMode: t = 'none', disallowEmptySelection: n, allowDuplicateSelectionEvents: a, selectionBehavior: o = 'toggle', disabledBehavior: u = 'all' } = e,
         c = (0, i.useRef)(!1),
         [, d] = (0, i.useState)(!1),
+        f = (0, i.useRef)(null),
         _ = (0, i.useRef)(null),
-        E = (0, i.useRef)(null),
-        [, f] = (0, i.useState)(null),
-        h = (0, i.useMemo)(() => l(e.selectedKeys), [e.selectedKeys]),
-        p = (0, i.useMemo)(() => l(e.defaultSelectedKeys, new s()), [e.defaultSelectedKeys]),
-        [I, m] = (0, r.zk)(h, p, e.onSelectionChange),
-        T = (0, i.useMemo)(() => (e.disabledKeys ? new Set(e.disabledKeys) : new Set()), [e.disabledKeys]),
-        [S, g] = (0, i.useState)(o);
-    'replace' === o && 'toggle' === S && 'object' == typeof I && 0 === I.size && g('replace');
-    let A = (0, i.useRef)(o);
+        [, h] = (0, i.useState)(null),
+        p = (0, i.useMemo)(() => l(e.selectedKeys), [e.selectedKeys]),
+        m = (0, i.useMemo)(() => l(e.defaultSelectedKeys, new s()), [e.defaultSelectedKeys]),
+        [g, E] = (0, r.zk)(p, m, e.onSelectionChange),
+        v = (0, i.useMemo)(() => (e.disabledKeys ? new Set(e.disabledKeys) : new Set()), [e.disabledKeys]),
+        [I, S] = (0, i.useState)(o);
+    'replace' === o && 'toggle' === I && 'object' == typeof g && 0 === g.size && S('replace');
+    let T = (0, i.useRef)(o);
     return (
         (0, i.useEffect)(() => {
-            o !== A.current && (g(o), (A.current = o));
+            o !== T.current && (S(o), (T.current = o));
         }, [o]),
         {
             selectionMode: t,
             disallowEmptySelection: n,
-            selectionBehavior: S,
-            setSelectionBehavior: g,
+            selectionBehavior: I,
+            setSelectionBehavior: S,
             get isFocused() {
                 return c.current;
             },
@@ -44,25 +44,25 @@ function o(e) {
                 (c.current = e), d(e);
             },
             get focusedKey() {
-                return _.current;
+                return f.current;
             },
             get childFocusStrategy() {
-                return E.current;
+                return _.current;
             },
             setFocusedKey(e, t = 'first') {
-                (_.current = e), (E.current = t), f(e);
+                (f.current = e), (_.current = t), h(e);
             },
-            selectedKeys: I,
+            selectedKeys: g,
             setSelectedKeys(e) {
                 (a ||
                     !(function (e, t) {
                         if (e.size !== t.size) return !1;
                         for (let n of e) if (!t.has(n)) return !1;
                         return !0;
-                    })(e, I)) &&
-                    m(e);
+                    })(e, g)) &&
+                    E(e);
             },
-            disabledKeys: T,
+            disabledKeys: v,
             disabledBehavior: u
         }
     );

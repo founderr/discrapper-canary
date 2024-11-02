@@ -1,5 +1,5 @@
-var l, a, i, s;
-function r(e, n, t) {
+var l, a, i, r;
+function s(e, n, t) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -63,10 +63,10 @@ class u {
         this.appendBytes([79, 103, 103, 83, 0, a, 255 & e.granulePosition, (e.granulePosition >> 8) & 255, (e.granulePosition >> 16) & 255, (e.granulePosition >> 24) & 255, 0, 0, 0, 0, 0, 0, 0, 1, 255 & this._pageSequenceNumber, (this._pageSequenceNumber >> 8) & 255, (this._pageSequenceNumber >> 16) & 255, (this._pageSequenceNumber >> 24) & 255]);
         let i = this._offset;
         for (let n of (this.appendBytes([0, 0, 0, 0, e.segments.length]), this.appendBytes(e.segments.map((e) => e.length)), e.segments)) this.appendBytes(n);
-        let s = (function (e) {
+        let r = (function (e) {
             return e.reduce((e, n) => ((e << 8) >>> 0) ^ c[(e >>> 24) ^ n], 0) >>> 0;
         })(this._buffer.subarray(l, this._offset));
-        this._buffer.set([255 & s, (s >> 8) & 255, (s >> 16) & 255, (s >> 24) & 255], i), this._pageSequenceNumber++;
+        this._buffer.set([255 & r, (r >> 8) & 255, (r >> 16) & 255, (r >> 24) & 255], i), this._pageSequenceNumber++;
     }
     finalize(e) {
         this.addPage({
@@ -79,7 +79,7 @@ class u {
         return (this._buffer = new Uint8Array(4096)), (this._offset = 0), (this._pageSequenceNumber = 0), n.subarray(0, t);
     }
     constructor() {
-        r(this, '_buffer', new Uint8Array(4096)), r(this, '_pageSequenceNumber', 0), r(this, '_offset', 0);
+        s(this, '_buffer', new Uint8Array(4096)), s(this, '_pageSequenceNumber', 0), s(this, '_offset', 0);
     }
 }
 function o(e, n) {
@@ -117,7 +117,7 @@ function o(e, n) {
     }
     return a.finalize(i);
 }
-(s = a || (a = {}))[(s.ZERO = 0)] = 'ZERO';
+(r = a || (a = {}))[(r.ZERO = 0)] = 'ZERO';
 let c = (function () {
     let e = new Uint32Array(256);
     for (let n = 256; n > 0; n--) {

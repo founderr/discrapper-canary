@@ -7,24 +7,24 @@ var r = n(200651),
     u = n(906732),
     c = n(49012);
 t.Z = i.memo(function (e) {
-    let { onClick: t, trusted: n, title: a, href: d, children: _, messageId: E, channelId: f, ...h } = e,
-        { analyticsLocations: p } = (0, u.ZP)(l.Z.MASKED_LINK),
-        I = i.useCallback((t) => (0, c.q)(e, t, p), [p, e]),
-        m = i.useCallback(
+    let { onClick: t, trusted: n, title: a, href: d, children: f, messageId: _, channelId: h, ...p } = e,
+        { analyticsLocations: m } = (0, u.ZP)(l.Z.MASKED_LINK),
+        g = i.useCallback((t) => (0, c.q)(e, t, m), [m, e]),
+        E = i.useCallback(
             (e) => {
-                1 === e.button && I(e);
+                1 === e.button && g(e);
             },
-            [I]
+            [g]
         ),
-        T = s().sanitizeUrl(d);
+        v = s().sanitizeUrl(d);
     return (0, r.jsx)(o.Anchor, {
-        ...h,
+        ...p,
         title: a,
         target: '_blank',
         rel: 'noreferrer noopener',
-        href: T,
-        onClick: I,
-        onAuxClick: m,
-        children: null != _ ? _ : a
+        href: v,
+        onClick: g,
+        onAuxClick: E,
+        children: null != f ? f : a
     });
 });

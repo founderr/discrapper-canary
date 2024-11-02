@@ -3,16 +3,16 @@ n.d(t, {
         return c;
     },
     ie: function () {
-        return o;
+        return s;
     }
 });
 var i = n(680089),
     l = n(496675),
     r = n(540126),
     a = n(443063),
-    s = n(981631);
-function o(e, t, n) {
-    var i, l, s, o, c;
+    o = n(981631);
+function s(e, t, n) {
+    var i, l, o, s, c;
     return {
         hasDivider:
             ((i = e),
@@ -23,9 +23,9 @@ function o(e, t, n) {
                     return (1 === t.length && t[0] === a.z.GUILD_PREMIUM_PROGRESS_BAR) || e.getGuildActionSection().isEmpty();
                 }
                 return 0 === e.getSections(!1)[t];
-            })(i, (s = n)) &&
-                (s === r.wZ || (!!l && (s === r.p2 || (s !== r.wd && (s === i.recentsSectionNumber || (i.voiceChannelsSectionNumber, !1))))))),
-        canHaveVoiceSummary: ((o = e), !((c = n) === r.wZ || c === r.p2 || c === r.wd || c === o.recentsSectionNumber || c === o.voiceChannelsSectionNumber))
+            })(i, (o = n)) &&
+                (o === r.wZ || (!!l && (o === r.p2 || (o !== r.wd && (o === i.recentsSectionNumber || (i.voiceChannelsSectionNumber, !1))))))),
+        canHaveVoiceSummary: ((s = e), !((c = n) === r.wZ || c === r.p2 || c === r.wd || c === s.recentsSectionNumber || c === s.voiceChannelsSectionNumber))
     };
 }
 function c(e) {
@@ -37,7 +37,7 @@ function c(e) {
                 ? []
                 : t.getChannelRecords().filter((e) => {
                       var t;
-                      if (!l.Z.can(s.Plq.VIEW_CHANNEL, e)) return !1;
+                      if (!l.Z.can(o.Plq.VIEW_CHANNEL, e)) return !1;
                       let i = null !== (t = n[e.id]) && void 0 !== t ? t : [];
                       return e.id !== a && e.id !== r && i.length > 0;
                   });

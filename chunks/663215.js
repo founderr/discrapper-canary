@@ -1,9 +1,9 @@
 n.d(t, {
     FS: function () {
-        return N;
+        return b;
     },
     ZP: function () {
-        return A;
+        return T;
     }
 }),
     n(47120),
@@ -17,25 +17,25 @@ var r = n(192379),
     u = n(594174),
     c = n(74538),
     d = n(709054),
-    _ = n(164878),
-    E = n(178106),
-    f = n(763296),
-    h = n(697426),
-    p = n(549771),
-    I = n(710111),
-    m = n(474936);
-function T(e) {
+    f = n(164878),
+    _ = n(178106),
+    h = n(763296),
+    p = n(697426),
+    m = n(549771),
+    g = n(710111),
+    E = n(474936);
+function v(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = e.map((e) => ({
-            type: h.vB.SOUND,
+            type: p.vB.SOUND,
             sound: e
         }));
     return t ? n.sort((e, t) => d.default.compare(e.sound.soundId, t.sound.soundId)) : n;
 }
-function S(e) {
+function I(e) {
     let { sections: t, guildIds: n, allSounds: r, potentialSoundIdsForSection: i, sectionType: a, sortById: s } = e,
         o = {};
-    for (let e of [...n, I.X8]) {
+    for (let e of [...n, g.X8]) {
         var l;
         for (let t of null !== (l = r.get(e)) && void 0 !== l ? l : []) null != i.find((e) => e === t.soundId) && (o[t.soundId] = t);
     }
@@ -44,7 +44,7 @@ function S(e) {
         let t = o[e];
         null != t && u.push(t);
     }
-    let c = T(u, s);
+    let c = v(u, s);
     c.length > 0 &&
         t.push({
             key: a,
@@ -52,26 +52,26 @@ function S(e) {
             items: c
         });
 }
-function g(e, t) {
+function S(e, t) {
     var n;
-    let r = null !== (n = t.get(I.X8)) && void 0 !== n ? n : I.Hy;
+    let r = null !== (n = t.get(g.X8)) && void 0 !== n ? n : g.Hy;
     e.push({
-        key: h.bg.DEFAULTS,
-        categoryInfo: { type: h.bg.DEFAULTS },
-        items: T(r)
+        key: p.bg.DEFAULTS,
+        categoryInfo: { type: p.bg.DEFAULTS },
+        items: v(r)
     });
 }
-function A(e) {
+function T(e) {
     let { filterOutEmptyCurrentGuild: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         d = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
-        I = c.ZP.isPremium(d, m.p9.TIER_2),
-        [A, N, R] = (0, i.Wu)([f.Z], () => [f.Z.getSounds(), f.Z.getFavorites(), f.Z.isFetching()]),
-        O = (0, p.h)(e, !1),
-        v = (0, i.Wu)([o.Z], () => {
+        g = c.ZP.isPremium(d, E.p9.TIER_2),
+        [T, b, y] = (0, i.Wu)([h.Z], () => [h.Z.getSounds(), h.Z.getFavorites(), h.Z.isFetching()]),
+        A = (0, m.h)(e, !1),
+        N = (0, i.Wu)([o.Z], () => {
             let e = [];
             return (
-                O.forEach((t) => {
+                A.forEach((t) => {
                     let n = o.Z.getGuild(t);
                     null != n && e.push(n);
                 }),
@@ -79,96 +79,96 @@ function A(e) {
             );
         }),
         C = c.ZP.canUseSoundboardEverywhere(d),
-        L = (0, i.e7)([o.Z], () => o.Z.getGuild(null == e ? void 0 : e.guild_id)),
-        D = (0, i.e7)(
+        R = (0, i.e7)([o.Z], () => o.Z.getGuild(null == e ? void 0 : e.guild_id)),
+        O = (0, i.e7)(
             [l.Z],
             () => {
-                let { canCreateExpressions: e } = (0, a.Gw)(L);
+                let { canCreateExpressions: e } = (0, a.Gw)(R);
                 return e;
             },
-            [L]
+            [R]
         ),
-        { canSeeRecentlyHeard: y, canSeeFrequentlyPlayed: b } = (0, _.k)({
+        { canSeeRecentlyHeard: D, canSeeFrequentlyPlayed: L } = (0, f.k)({
             location: 'soundboard-useSoundGrid',
             autoTrackExposure: !0
         }),
-        M = (function () {
+        x = (function () {
             return (
                 r.useEffect(() => {
                     s.DZ.loadIfNecessary();
                 }, []),
-                (0, i.e7)([E.Z], () => E.Z.frecentlyPlayedSounds)
+                (0, i.e7)([_.Z], () => _.Z.frecentlyPlayedSounds)
             );
         })(),
-        P = (0, i.Wu)([E.Z], () => E.Z.recentlyHeardSoundIds);
+        w = (0, i.Wu)([_.Z], () => _.Z.recentlyHeardSoundIds);
     return r.useMemo(() => {
         let e = [];
         return n
-            ? (g(e, A),
+            ? (S(e, T),
               {
                   categories: e,
-                  isFetching: R
+                  isFetching: y
               })
-            : (S({
+            : (I({
                   sections: e,
-                  guildIds: O,
-                  allSounds: A,
-                  potentialSoundIdsForSection: Array.from(N),
-                  sectionType: h.bg.FAVORITES,
+                  guildIds: A,
+                  allSounds: T,
+                  potentialSoundIdsForSection: Array.from(b),
+                  sectionType: p.bg.FAVORITES,
                   sortById: !0
               }),
-              y &&
-                  S({
+              D &&
+                  I({
                       sections: e,
-                      guildIds: O,
-                      allSounds: A,
-                      potentialSoundIdsForSection: P,
-                      sectionType: h.bg.RECENTLY_HEARD,
+                      guildIds: A,
+                      allSounds: T,
+                      potentialSoundIdsForSection: w,
+                      sectionType: p.bg.RECENTLY_HEARD,
                       sortById: !1
                   }),
-              b &&
-                  S({
+              L &&
+                  I({
                       sections: e,
-                      guildIds: O,
-                      allSounds: A,
-                      potentialSoundIdsForSection: M.map((e) => e.soundId),
-                      sectionType: h.bg.FREQUENTLY_USED,
+                      guildIds: A,
+                      allSounds: T,
+                      potentialSoundIdsForSection: x.map((e) => e.soundId),
+                      sectionType: p.bg.FREQUENTLY_USED,
                       sortById: !1
                   }),
               !(function (e, t, n, r, i) {
                   var a;
                   if (null == t) return;
                   let s = null !== (a = r.get(t.id)) && void 0 !== a ? a : [],
-                      o = T(s),
+                      o = v(s),
                       l = s.length < t.getMaxSoundboardSlots() && n,
                       u = 0 === o.length;
                   (l || u) &&
                       !i &&
                       o.push({
-                          type: h.vB.ADD_SOUND,
+                          type: p.vB.ADD_SOUND,
                           guild: t
                       });
                   !(i && u) &&
                       e.push({
                           categoryInfo: {
-                              type: h.bg.GUILD,
+                              type: p.bg.GUILD,
                               guild: t,
                               isNitroLocked: !1
                           },
                           key: t.id,
                           items: o
                       });
-              })(e, L, D, A, t),
-              !C && g(e, A),
+              })(e, R, O, T, t),
+              !C && S(e, T),
               !(function (e, t, n, r, i) {
                   for (let s of t) {
                       var a;
                       if (s.id === n) continue;
-                      let t = T(null !== (a = r.get(s.id)) && void 0 !== a ? a : []);
+                      let t = v(null !== (a = r.get(s.id)) && void 0 !== a ? a : []);
                       t.length > 0 &&
                           e.push({
                               categoryInfo: {
-                                  type: h.bg.GUILD,
+                                  type: p.bg.GUILD,
                                   guild: s,
                                   isNitroLocked: !i
                               },
@@ -176,23 +176,23 @@ function A(e) {
                               items: t
                           });
                   }
-              })(e, v, null == L ? void 0 : L.id, A, I),
-              C && g(e, A),
+              })(e, N, null == R ? void 0 : R.id, T, g),
+              C && S(e, T),
               {
                   categories: e,
-                  isFetching: R
+                  isFetching: y
               });
-    }, [O, A, N, P, M, b, y, L, D, t, C, v, n, R, I]);
+    }, [A, T, b, w, x, L, D, R, O, t, C, N, n, y, g]);
 }
-function N(e, t, n) {
+function b(e, t, n) {
     return r.useMemo(
         () =>
             n.length > 0
                 ? [
                       {
-                          key: h.bg.SEARCH,
-                          categoryInfo: { type: h.bg.SEARCH },
-                          items: T(t, !1)
+                          key: p.bg.SEARCH,
+                          categoryInfo: { type: p.bg.SEARCH },
+                          items: v(t, !1)
                       }
                   ]
                 : e,

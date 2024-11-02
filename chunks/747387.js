@@ -13,10 +13,10 @@ var r = n(200651),
     f = n(599857),
     v = n(981631);
 t.Z = (e) => {
-    let { captchaService: t = p.hP.RECAPTCHA, sitekey: n, rqdata: m, onRender: y, onVerify: C, onError: E, onOpen: _, onClose: b, onChalExpired: R, size: x, userflow: g, ...S } = e,
+    let { captchaService: t = p.hP.RECAPTCHA, sitekey: n, rqdata: m, onRender: y, onVerify: C, onError: E, onOpen: b, onClose: _, onChalExpired: R, size: x, userflow: g, ...S } = e,
         w = i.useRef(null),
-        A = (0, u.H)('captcha'),
-        k = (0, o.Z)(),
+        k = (0, u.H)('captcha'),
+        A = (0, o.Z)(),
         [I, j] = i.useState(!1),
         O = i.useCallback(
             (e) => {
@@ -24,12 +24,12 @@ t.Z = (e) => {
                     captcha_event_name: e,
                     captcha_service: t,
                     sitekey: n,
-                    captcha_flow_key: k
+                    captcha_flow_key: A
                 });
             },
-            [k, t, n]
+            [A, t, n]
         ),
-        T = i.useCallback(
+        L = i.useCallback(
             (e) => {
                 d.Z.increment({
                     name: s.V.CAPTCHA_EVENT,
@@ -38,37 +38,37 @@ t.Z = (e) => {
             },
             [t]
         ),
-        L = i.useCallback(() => {
+        T = i.useCallback(() => {
             var e, t;
             null != m && '' !== m && null != w.current && (null === (e = w.current) || void 0 === e || e.setData({ rqdata: m })), 'invisible' === x && (null === (t = w.current) || void 0 === t || t.execute());
         }, [m, w, x]),
         P = i.useCallback(() => {
-            !I && (O('initial-load'), T('initial-load'), j(!0)), L();
-        }, [T, I, O, L]);
+            !I && (O('initial-load'), L('initial-load'), j(!0)), T();
+        }, [L, I, O, T]);
     i.useEffect(() => {
-        L();
-    }, [L]),
+        T();
+    }, [T]),
         i.useEffect(() => {
             P();
         }, [P]);
-    let N = i.useCallback(() => {
-            O('error'), T('error'), L(), null == E || E();
-        }, [O, T, L, E]),
-        V = i.useCallback(
+    let V = i.useCallback(() => {
+            O('error'), L('error'), T(), null == E || E();
+        }, [O, L, T, E]),
+        N = i.useCallback(
             (e) => {
-                O('verify'), T('verify'), C(e);
+                O('verify'), L('verify'), C(e);
             },
-            [T, C, O]
+            [L, C, O]
         ),
         Z = i.useCallback(() => {
-            O('render'), (0, h.emitCaptchaDistributionMetric)(A, g), null == y || y();
-        }, [A, y, O, g]),
+            O('render'), (0, h.emitCaptchaDistributionMetric)(k, g), null == y || y();
+        }, [k, y, O, g]),
         D = i.useCallback(() => {
-            O('open'), T('open'), (0, h.emitCaptchaDistributionMetric)(A, g), null == _ || _();
-        }, [T, A, _, O, g]),
+            O('open'), L('open'), (0, h.emitCaptchaDistributionMetric)(k, g), null == b || b();
+        }, [L, k, b, O, g]),
         M = i.useCallback(() => {
-            O('close'), null == b || b(), L();
-        }, [b, O, L]),
+            O('close'), null == _ || _(), T();
+        }, [_, O, T]),
         K = i.useCallback(() => {
             O('chal-expire'), null == R || R();
         }, [R, O]);
@@ -77,8 +77,8 @@ t.Z = (e) => {
               ...S,
               onLoad: P,
               onRender: Z,
-              onVerify: V,
-              onError: N,
+              onVerify: N,
+              onError: V,
               sitekey: n
           })
         : t === p.hP.RECAPTCHA_ENTERPRISE
@@ -86,8 +86,8 @@ t.Z = (e) => {
                 ...S,
                 onLoad: P,
                 onRender: Z,
-                onVerify: V,
-                onError: N,
+                onVerify: N,
+                onError: V,
                 sitekey: n,
                 action: g
             })
@@ -97,8 +97,8 @@ t.Z = (e) => {
                   ...S,
                   sitekey: n,
                   onLoad: P,
-                  onError: N,
-                  onVerify: V,
+                  onError: V,
+                  onVerify: N,
                   onChalExpired: K,
                   onOpen: D,
                   onClose: M,
@@ -109,7 +109,7 @@ t.Z = (e) => {
                   sitekey: n,
                   onLoad: P,
                   onRender: Z,
-                  onVerify: V,
-                  onError: N
+                  onVerify: N,
+                  onError: V
               });
 };

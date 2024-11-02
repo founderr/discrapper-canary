@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return r;
     }
 });
 var i = n(927923),
-    s = n(689938);
-function a(e) {
+    l = n(388032);
+function r(e) {
     switch (e) {
         case i.YE.XBOX:
-            return s.Z.Messages.XBOX_REMOTE_CONNECTED_RAW;
+            return l.intl.string(l.t.T0uYKy);
         case i.YE.PLAYSTATION:
-            return s.Z.Messages.PLAYSTATION_REMOTE_CONNECTED_RAW;
+            return l.intl.string(l.t.FWAzS0);
     }
 }

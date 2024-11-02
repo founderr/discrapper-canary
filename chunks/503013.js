@@ -4,7 +4,7 @@ n.d(t, {
     }
 });
 var r = n(81825),
-    i = n(689938);
+    i = n(388032);
 function a(e, t, n) {
     return (
         t in e
@@ -27,7 +27,7 @@ class s extends r.Z {
         });
     }
     getName(e) {
-        return null != this.name ? this.name : this.id === e ? i.Z.Messages.APPLICATION_BRANCH_NAME_MASTER : i.Z.Messages.APPLICATION_BRANCH_NAME_UNKNOWN;
+        return null != this.name ? this.name : this.id === e ? i.intl.string(i.t.AHqj6e) : i.intl.string(i.t['62f4nJ']);
     }
     constructor(e) {
         super(), a(this, 'id', void 0), a(this, 'liveBuildId', void 0), a(this, 'name', void 0), (this.id = e.id), (this.liveBuildId = e.liveBuildId), (this.name = e.name);

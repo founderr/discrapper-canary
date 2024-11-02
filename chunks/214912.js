@@ -1,78 +1,78 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return C;
+        return b;
     }
 });
-var i = t(200651);
-t(192379);
-var a = t(120356),
-    r = t.n(a),
-    o = t(481060),
-    s = t(410030),
-    l = t(686546),
-    c = t(565138),
-    d = t(372769),
-    u = t(134432),
-    _ = t(601964),
-    p = t(768581),
-    m = t(981631),
-    I = t(689938),
-    f = t(660857),
-    h = t(129512),
-    g = t(330065);
-function C(e) {
-    let { guild: n, className: t, onClick: a } = e,
-        C = (0, s.ZP)(),
-        b = new _.ZP({
-            name: n.name,
-            icon: n.icon
+var i = n(200651);
+n(192379);
+var a = n(120356),
+    r = n.n(a),
+    o = n(481060),
+    l = n(410030),
+    s = n(686546),
+    c = n(565138),
+    d = n(372769),
+    u = n(134432),
+    p = n(601964),
+    m = n(768581),
+    _ = n(981631),
+    f = n(388032),
+    h = n(660857),
+    g = n(129512),
+    I = n(330065);
+function b(e) {
+    let { guild: t, className: n, onClick: a } = e,
+        b = (0, l.ZP)(),
+        x = new p.ZP({
+            name: t.name,
+            icon: t.icon
         }),
-        x = p.ZP.getGuildDiscoverySplashURL({
-            id: n.id,
-            splash: n.discovery_splash,
+        v = m.ZP.getGuildDiscoverySplashURL({
+            id: t.id,
+            splash: t.discovery_splash,
             size: 192 * (0, u.x_)()
         }),
-        v =
-            null != x
-                ? x
+        C =
+            null != v
+                ? v
                 : (function (e) {
                       switch (e) {
-                          case m.BRd.DARK:
-                              return h;
-                          case m.BRd.LIGHT:
+                          case _.BRd.DARK:
                               return g;
+                          case _.BRd.LIGHT:
+                              return I;
                       }
-                  })(C),
-        P = p.ZP.getGuildIconURL({
-            id: n.id,
-            icon: n.icon,
+                  })(b),
+        N = m.ZP.getGuildIconURL({
+            id: t.id,
+            icon: t.icon,
             size: 50
         });
     return (0, i.jsxs)(o.Clickable, {
-        className: r()(f.card, t),
+        className: r()(h.card, n),
         onClick: a,
-        'aria-label': I.Z.Messages.APP_DIRECTORY_JOIN_SERVER_LABEL,
+        'aria-label': f.intl.string(f.t.RB4L29),
         children: [
             (0, i.jsxs)('div', {
-                className: f.cardHeader,
+                className: h.cardHeader,
                 children: [
                     (0, i.jsx)('img', {
-                        src: v,
+                        src: C,
                         alt: '',
-                        className: f.splashImage
+                        className: h.splashImage
                     }),
                     (0, i.jsx)('div', {
-                        className: f.guildIcon,
-                        children: (0, i.jsx)(l.ZP, {
-                            mask: l.ZP.Masks.AVATAR_DEFAULT,
+                        className: h.guildIcon,
+                        children: (0, i.jsx)(s.ZP, {
+                            mask: s.ZP.Masks.AVATAR_DEFAULT,
                             width: 58,
                             height: 58,
                             children: (0, i.jsx)('div', {
-                                className: f.iconMask,
+                                className: h.iconMask,
                                 children: (0, i.jsx)(c.Z, {
-                                    className: f.__invalid_icon,
-                                    iconSrc: P,
-                                    guild: b,
+                                    className: h.__invalid_icon,
+                                    iconSrc: N,
+                                    guild: x,
                                     size: c.Z.Sizes.LARGE
                                 })
                             })
@@ -81,44 +81,44 @@ function C(e) {
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: f.cardDetails,
+                className: h.cardDetails,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: f.guildNameWrapper,
+                        className: h.guildNameWrapper,
                         children: [
                             (0, i.jsx)(d.Z, {
-                                className: f.guildBadge,
-                                guild: n,
+                                className: h.guildBadge,
+                                guild: t,
                                 tooltipColor: o.Tooltip.Colors.PRIMARY
                             }),
                             (0, i.jsx)(o.Heading, {
                                 variant: 'heading-md/semibold',
-                                className: f.guildName,
-                                children: n.name
+                                className: h.guildName,
+                                children: t.name
                             })
                         ]
                     }),
                     (0, i.jsx)(o.Text, {
-                        className: f.guildDescription,
+                        className: h.guildDescription,
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
                         lineClamp: 2,
-                        children: n.description
+                        children: t.description
                     }),
                     (0, i.jsx)('div', {
-                        className: f.memberInfo,
+                        className: h.memberInfo,
                         children: (0, i.jsxs)('div', {
-                            className: f.memberCountWrapper,
+                            className: h.memberCountWrapper,
                             children: [
                                 (0, i.jsx)(o.UserIcon, {
                                     color: 'currentColor',
-                                    className: f.memberCountIcon,
+                                    className: h.memberCountIcon,
                                     size: 'xs'
                                 }),
                                 (0, i.jsx)(o.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'header-secondary',
-                                    children: I.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: n.approximate_member_count })
+                                    children: f.intl.format(f.t.zRl6XV, { count: t.approximate_member_count })
                                 })
                             ]
                         })

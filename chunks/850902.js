@@ -1,36 +1,36 @@
-o.r(n),
-    o.d(n, {
+t.r(e),
+    t.d(e, {
         default: function () {
-            return a;
+            return c;
         }
     });
-var r = o(200651);
-o(192379);
-var s = o(481060),
-    c = o(239091),
-    t = o(689938);
-function a(e) {
-    let { roleId: n, onLeaveRole: o, onSelect: a } = e;
-    return (0, r.jsx)(
-        s.Menu,
+var i = t(200651);
+t(192379);
+var r = t(481060),
+    o = t(239091),
+    l = t(388032);
+function c(n) {
+    let { roleId: e, onLeaveRole: t, onSelect: c } = n;
+    return (0, i.jsx)(
+        r.Menu,
         {
             navId: 'guild-role-connections-context',
-            'aria-label': t.Z.Messages.CONNECTIONS_ROLES_CHANNEL_LEAVE_VERIFIED_ROLE,
-            onClose: c.Zy,
-            onSelect: a,
-            children: (0, r.jsx)(s.MenuGroup, {
-                children: (0, r.jsx)(
-                    s.MenuItem,
+            'aria-label': l.intl.string(l.t.vytvJC),
+            onClose: o.Zy,
+            onSelect: c,
+            children: (0, i.jsx)(r.MenuGroup, {
+                children: (0, i.jsx)(
+                    r.MenuItem,
                     {
                         id: 'guild-role-connections-leave-role',
-                        label: t.Z.Messages.CONNECTIONS_ROLES_CHANNEL_LEAVE_VERIFIED_ROLE,
-                        action: o,
+                        label: l.intl.string(l.t.vytvJC),
+                        action: t,
                         color: 'danger'
                     },
-                    n
+                    e
                 )
             })
         },
-        n
+        e
     );
 }

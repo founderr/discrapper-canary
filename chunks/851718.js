@@ -1,47 +1,47 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
         return d;
     }
 }),
-    t(47120);
-var n = t(200651),
-    a = t(192379),
-    i = t(823379),
-    r = t(130991),
-    o = t(630656),
-    l = t(10970),
-    c = t(689938);
+    n(47120);
+var i = n(200651),
+    s = n(192379),
+    r = n(823379),
+    l = n(130991),
+    a = n(630656),
+    o = n(10970),
+    c = n(388032);
 function d(e) {
-    let { subscriptions: s, updateHeader: t } = e,
-        [d, _] = a.useState({ route: o.j.HOME }),
-        { route: u } = d,
-        E = (e) => {
-            _({
-                route: o.j.SWITCH_APP_PLANS,
+    let { subscriptions: t, updateHeader: n } = e,
+        [d, u] = s.useState({ route: a.j.HOME }),
+        { route: m } = d,
+        h = (e) => {
+            u({
+                route: a.j.SWITCH_APP_PLANS,
                 ...e
             }),
-                t(c.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CHOOSE_A_SUBSCRIPTION_PLAN, () => {
-                    _({ route: o.j.HOME });
+                n(c.intl.string(c.t.VFqtkJ), () => {
+                    u({ route: a.j.HOME });
                 });
         };
-    switch (u) {
-        case o.j.HOME:
-            return (0, n.jsx)(n.Fragment, {
-                children: s.map((e) =>
-                    (0, n.jsx)(
-                        r.Z,
+    switch (m) {
+        case a.j.HOME:
+            return (0, i.jsx)(i.Fragment, {
+                children: t.map((e) =>
+                    (0, i.jsx)(
+                        l.Z,
                         {
                             subscription: e,
-                            navigateToSwitchPlan: E
+                            navigateToSwitchPlan: h
                         },
                         e.id
                     )
                 )
             });
-        case o.j.SWITCH_APP_PLANS:
-            let { route: T, ...S } = d;
-            return (0, n.jsx)(l.Z, { ...S });
+        case a.j.SWITCH_APP_PLANS:
+            let { route: g, ...p } = d;
+            return (0, i.jsx)(o.Z, { ...p });
         default:
-            (0, i.vE)(u);
+            (0, r.vE)(m);
     }
 }

@@ -1,22 +1,22 @@
 t.d(n, {
     Z: function () {
-        return r;
+        return o;
     }
 });
 var i = t(200651);
 t(192379);
-var a = t(481060),
-    s = t(79390),
-    l = t(689938);
-function r(e) {
-    return null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, s.eQ)(e))
+var l = t(481060),
+    r = t(79390),
+    a = t(388032);
+function o(e) {
+    return null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, r.eQ)(e))
         ? null
-        : (0, i.jsx)(a.MenuItem, {
+        : (0, i.jsx)(l.MenuItem, {
               id: 'reactions',
-              label: l.Z.Messages.VIEW_REACTIONS,
-              icon: a.ReactionIcon,
+              label: a.intl.string(a.t.wikODg),
+              icon: l.ReactionIcon,
               action: () =>
-                  (0, a.openModalLazy)(async () => {
+                  (0, l.openModalLazy)(async () => {
                       let { default: n } = await Promise.resolve().then(t.bind(t, 785388));
                       return (t) =>
                           (0, i.jsx)(n, {

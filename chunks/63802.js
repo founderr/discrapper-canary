@@ -1,15 +1,15 @@
 n.d(t, {
     Qi: function () {
-        return _;
+        return f;
     },
     R9: function () {
-        return f;
+        return h;
     },
     l_: function () {
         return d;
     },
     t: function () {
-        return E;
+        return _;
     }
 });
 var r = n(200651);
@@ -22,8 +22,8 @@ var i = n(120356),
     u = n(474936),
     c = n(984459);
 let d = 'premium_new_tier_2_gradient',
-    _ = 'premium_old_tier_2_gradient';
-function E(e) {
+    f = 'premium_old_tier_2_gradient';
+function _(e) {
     let { tier: t = u.p9.TIER_2 } = e,
         n = (0, o.ZP)(),
         i = (0, s.ap)(n);
@@ -38,17 +38,17 @@ function E(e) {
                                 [c.rimGlowVerticalTier2]: t === u.p9.TIER_2
                             })
                         }),
-                        (0, r.jsx)(f, { foreground: c.buttonSparkleStar1 })
+                        (0, r.jsx)(h, { foreground: c.buttonSparkleStar1 })
                     ]
                 }),
-            (0, r.jsx)(f, { foreground: c.buttonSparkleStar2 }),
-            (0, r.jsx)(f, { foreground: c.buttonSparkleStar3 }),
-            (0, r.jsx)(f, { foreground: c.buttonSparkleStar4 }),
-            (0, r.jsx)(f, { foreground: c.buttonSparkleStar5 })
+            (0, r.jsx)(h, { foreground: c.buttonSparkleStar2 }),
+            (0, r.jsx)(h, { foreground: c.buttonSparkleStar3 }),
+            (0, r.jsx)(h, { foreground: c.buttonSparkleStar4 }),
+            (0, r.jsx)(h, { foreground: c.buttonSparkleStar5 })
         ]
     });
 }
-function f(e) {
+function h(e) {
     let { width: t = 14, height: n = 13, color: i = 'white', foreground: a, ...s } = e;
     return (0, r.jsxs)('svg', {
         ...(0, l.Z)({ ...s }),
@@ -83,7 +83,7 @@ function f(e) {
                         ]
                     }),
                     (0, r.jsxs)('linearGradient', {
-                        id: _,
+                        id: f,
                         x1: '0%',
                         y1: '0%',
                         x2: '100%',

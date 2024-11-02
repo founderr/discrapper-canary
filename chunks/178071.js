@@ -1,17 +1,17 @@
 n.d(t, {
     y: function () {
-        return _;
+        return h;
     }
 }),
     n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(442837),
-    r = n(481060),
-    l = n(239091),
+    r = n(192379),
+    l = n(442837),
+    a = n(481060),
+    s = n(239091),
     o = n(585237),
     c = n(551428),
-    d = n(689938);
+    d = n(388032);
 function u(e, t, n) {
     return (
         t in e
@@ -25,58 +25,58 @@ function u(e, t, n) {
         e
     );
 }
-let _ = {
+let h = {
     DropdownSizes: o.Z.DropdownSizes,
     Sizes: o.Z.Sizes,
     Colors: o.Z.Colors,
     Looks: o.Z.Looks
 };
-class E extends a.PureComponent {
+class m extends r.PureComponent {
     render() {
-        let { storeListings: e, primaryStoreListing: t, skuId: n, onStoreListingSelect: a, currentStoreListingId: s, ...r } = this.props,
-            l = null != t ? 1 : 0;
-        return (l += e.length) < 2
+        let { storeListings: e, primaryStoreListing: t, skuId: n, onStoreListingSelect: r, currentStoreListingId: l, ...a } = this.props,
+            s = null != t ? 1 : 0;
+        return (s += e.length) < 2
             ? null
             : (0, i.jsx)(o.Z, {
                   onClick: this.handleContextMenu,
                   onDropdownClick: this.handleContextMenu,
                   onContextMenu: this.handleContextMenu,
-                  ...r,
-                  children: d.Z.Messages.APPLICATION_TEST_MODE_VIEW_OTHER_LISTINGS
+                  ...a,
+                  children: d.intl.string(d.t.hElye3)
               });
     }
     constructor(...e) {
         super(...e),
             u(this, 'renderContextMenu', () => {
-                let { storeListings: e, onStoreListingSelect: t, currentStoreListingId: n, onMenuSelect: a } = this.props,
-                    s = e.map((e) =>
+                let { storeListings: e, onStoreListingSelect: t, currentStoreListingId: n, onMenuSelect: r } = this.props,
+                    l = e.map((e) =>
                         e.id !== n
-                            ? (0, i.jsx)(r.MenuItem, {
+                            ? (0, i.jsx)(a.MenuItem, {
                                   id: ''.concat(e.id),
                                   label: e.id,
                                   action: () => {
-                                      l.Zy(), null == t || t(e);
+                                      s.Zy(), null == t || t(e);
                                   }
                               })
                             : null
                     );
-                return (0, i.jsx)(r.Menu, {
-                    onSelect: a,
+                return (0, i.jsx)(a.Menu, {
+                    onSelect: r,
                     navId: 'test-store-listing',
-                    'aria-label': d.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
-                    onClose: l.Zy,
-                    children: s
+                    'aria-label': d.intl.string(d.t.ogxXGh),
+                    onClose: s.Zy,
+                    children: l
                 });
             }),
             u(this, 'handleContextMenu', (e) => {
-                e.stopPropagation(), l.vq(e, this.renderContextMenu);
+                e.stopPropagation(), s.vq(e, this.renderContextMenu);
             });
     }
 }
-t.Z = s.ZP.connectStores([c.Z], (e) => {
+t.Z = l.ZP.connectStores([c.Z], (e) => {
     let { skuId: t } = e;
     return {
         storeListings: c.Z.getUnpublishedForSKU(t),
         primaryStoreListing: c.Z.getForSKU(t)
     };
-})(E);
+})(m);

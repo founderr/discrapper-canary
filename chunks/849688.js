@@ -1,77 +1,77 @@
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(481060),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    s = n(481060),
     o = n(442837),
     c = n(547280),
     d = n(678513),
     u = n(981631),
-    _ = n(689938),
-    E = n(224719);
+    h = n(388032),
+    m = n(224719);
 t.Z = function (e) {
     let { guild: t } = e,
-        s = (0, o.e7)([d.Z], () => d.Z.getActiveGuildSignUp(t.id)),
-        h = a.useCallback(() => {
-            null != s &&
-                (0, l.openModalLazy)(async () => {
+        l = (0, o.e7)([d.Z], () => d.Z.getActiveGuildSignUp(t.id)),
+        p = r.useCallback(() => {
+            null != l &&
+                (0, s.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([n.e('22862'), n.e('53596')]).then(n.bind(n, 646202));
                     return (n) =>
                         (0, i.jsx)(e, {
                             ...n,
-                            target: s,
+                            target: l,
                             guildId: t.id
                         });
                 });
-        }, [s, t.id]),
-        m = a.useCallback(() => {
-            null != s && (0, c.b)(s.key, s.dismissibleContent);
-        }, [s]);
-    if (null == s) return null;
-    let I = 'url('.concat(s.backgroundAssetUrl, ') black top / cover no-repeat');
-    return (0, i.jsx)(l.ThemeProvider, {
+        }, [l, t.id]),
+        g = r.useCallback(() => {
+            null != l && (0, c.b)(l.key, l.dismissibleContent);
+        }, [l]);
+    if (null == l) return null;
+    let f = 'url('.concat(l.backgroundAssetUrl, ') black top / cover no-repeat');
+    return (0, i.jsx)(s.ThemeProvider, {
         theme: u.BRd.DARK,
         children: (e) =>
             (0, i.jsx)('div', {
-                className: r()(E.container, e),
+                className: a()(m.container, e),
                 children: (0, i.jsxs)('div', {
-                    className: E.card,
-                    style: { background: I },
+                    className: m.card,
+                    style: { background: f },
                     children: [
                         (0, i.jsxs)('div', {
-                            className: E.eyebrow,
+                            className: m.eyebrow,
                             children: [
-                                (0, i.jsx)(l.EnvelopeIcon, {
+                                (0, i.jsx)(s.EnvelopeIcon, {
                                     size: 'xxs',
                                     color: 'currentColor'
                                 }),
-                                (0, i.jsx)(l.Text, {
+                                (0, i.jsx)(s.Text, {
                                     variant: 'text-xs/semibold',
                                     color: 'none',
-                                    children: _.Z.Messages.SIGNUP_NOTICE_EYEBROW
+                                    children: h.intl.string(h.t.hhKpxs)
                                 })
                             ]
                         }),
-                        (0, i.jsx)(l.Heading, {
+                        (0, i.jsx)(s.Heading, {
                             variant: 'heading-sm/medium',
-                            children: s.noticeHeader
+                            children: l.noticeHeader
                         }),
-                        (0, i.jsx)(l.Button, {
-                            className: E.button,
+                        (0, i.jsx)(s.Button, {
+                            className: m.button,
                             color: 'none',
-                            onClick: h,
-                            children: (0, i.jsx)(l.Text, {
+                            onClick: p,
+                            children: (0, i.jsx)(s.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'none',
-                                children: _.Z.Messages.SIGNUP_NOTICE_CTA
+                                children: h.intl.string(h.t.vv0Nsb)
                             })
                         }),
                         (0, i.jsx)('div', {
-                            className: E.dismiss,
-                            children: (0, i.jsx)(l.Clickable, {
-                                onClick: m,
-                                'aria-label': _.Z.Messages.CLOSE,
-                                children: (0, i.jsx)(l.XSmallIcon, {
+                            className: m.dismiss,
+                            children: (0, i.jsx)(s.Clickable, {
+                                onClick: g,
+                                'aria-label': h.intl.string(h.t.cpT0Cg),
+                                children: (0, i.jsx)(s.XSmallIcon, {
                                     size: 'xs',
                                     color: 'currentColor'
                                 })

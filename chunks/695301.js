@@ -2,58 +2,58 @@ var i = n(200651),
     l = n(192379),
     r = n(442837),
     a = n(481060),
-    s = n(746916),
-    o = n(965638),
+    o = n(746916),
+    s = n(965638),
     c = n(905423),
     u = n(486472),
     d = n(888369),
     h = n(430824),
     p = n(451478),
     f = n(61634),
-    _ = n(325257),
-    m = n(941823);
+    m = n(325257),
+    g = n(941823);
 t.Z = l.memo(function (e) {
     let { guildNode: t, lowerBadge: n } = e,
-        g = t.id,
-        C = (0, r.e7)([h.Z], () => h.Z.getGuild(g)),
-        I = (0, s.E)(C),
-        E = (0, r.e7)([p.Z], () => p.Z.isFocused()),
-        N = (0, r.e7)([u.Z], () => u.Z.isUnavailable(g)),
-        x = (0, c.Z)((e) => e.guildId),
-        S = (0, f.Z)(g),
-        { badge: v, unread: Z } = (0, r.cj)([d.default], () => ({
-            badge: d.default.getMentionCount(g),
-            unread: d.default.hasUnread(g)
+        C = t.id,
+        _ = (0, r.e7)([h.Z], () => h.Z.getGuild(C)),
+        x = (0, o.E)(_),
+        v = (0, r.e7)([p.Z], () => p.Z.isFocused()),
+        I = (0, r.e7)([u.Z], () => u.Z.isUnavailable(C)),
+        b = (0, c.Z)((e) => e.guildId),
+        N = (0, f.Z)(C),
+        { badge: E, unread: S } = (0, r.cj)([d.default], () => ({
+            badge: d.default.getMentionCount(C),
+            unread: d.default.hasUnread(C)
         })),
-        T = (0, o.I)(C) && 0 === v,
-        b = l.useMemo(
+        Z = (0, s.I)(_) && 0 === E,
+        y = l.useMemo(
             () =>
                 null != n
                     ? n
-                    : T
+                    : Z
                       ? (0, i.jsx)('div', {
-                            className: m.pauseBackground,
+                            className: g.pauseBackground,
                             children: (0, i.jsx)(a.PauseIcon, {
                                 size: 'custom',
                                 color: 'currentColor',
-                                className: m.pause,
+                                className: g.pause,
                                 width: 10,
                                 height: 10
                             })
                         })
                       : null,
-            [n, T]
+            [n, Z]
         );
-    return (0, i.jsx)(_.Z, {
+    return (0, i.jsx)(m.Z, {
         ...e,
-        guild: C,
-        unavailable: N,
-        animatable: E,
-        selected: x === g,
-        badge: v,
-        lowerBadge: b,
-        unread: Z,
-        mediaState: S,
-        guildJoinRequestStatus: I
+        guild: _,
+        unavailable: I,
+        animatable: v,
+        selected: b === C,
+        badge: E,
+        lowerBadge: y,
+        unread: S,
+        mediaState: N,
+        guildJoinRequestStatus: x
     });
 });

@@ -3,7 +3,7 @@ n.d(t, {
         return c;
     },
     j: function () {
-        return E;
+        return _;
     }
 }),
     n(47120);
@@ -50,10 +50,10 @@ function c() {
     };
 }
 let d = Object.freeze(c());
-function _(e, t) {
+function f(e, t) {
     return null != e && (!!e.toLowerCase().includes(t.toLowerCase()) || !1);
 }
-class E {
+class _ {
     get requiresUsernameMatch() {
         return this._searchState.query.trim().length > 0;
     }
@@ -77,27 +77,27 @@ class E {
         return this._searchState;
     }
     isMemberIncludedInSearchResults(e) {
-        let { query: t, requireUnusualDmActivity: n, requireCommunicationDisabled: r, requireUnusualAccountActivity: i, requireUsernameQuarantined: u, selectedRoleIds: c, selectedJoinDateOption: d, selectedAccountAgeOption: E, selectedSourceInviteCode: f, selectedJoinSourceType: h } = this._searchState;
+        let { query: t, requireUnusualDmActivity: n, requireCommunicationDisabled: r, requireUnusualAccountActivity: i, requireUsernameQuarantined: u, selectedRoleIds: c, selectedJoinDateOption: d, selectedAccountAgeOption: _, selectedSourceInviteCode: h, selectedJoinSourceType: p } = this._searchState;
         if (
             t.length > 0 &&
             !(function (e, t) {
                 if ('' === t.trim()) return !1;
                 let [n, r] = (0, l.C)(t);
                 for (let t of r) if (e.userId === t) return !0;
-                for (let t of n) if (_(e.nick, t)) return !0;
+                for (let t of n) if (f(e.nick, t)) return !0;
                 if (null == e.user) return !1;
                 let { globalName: i, username: a } = e.user;
-                for (let e of n) if (_(a, e)) return !0;
-                for (let e of n) if (_(i, e)) return !0;
+                for (let e of n) if (f(a, e)) return !0;
+                for (let e of n) if (f(i, e)) return !0;
                 return !1;
             })(e, t)
         )
             return !1;
         if (c.size > 0) {
-            var p, I;
-            if (((p = e), !(0 !== (I = c).size && Array.from(I).every((e) => p.roles.includes(e))))) return !1;
+            var m, g;
+            if (((m = e), !(0 !== (g = c).size && Array.from(g).every((e) => m.roles.includes(e))))) return !1;
         }
-        if ((null != d.afterDate && e.joinedAtTimestamp < d.afterDate) || (null != d.beforeDate && e.joinedAtTimestamp > d.beforeDate) || (null != E.afterDate && o.default.extractTimestamp(e.userId) < E.afterDate) || (null != E.beforeDate && o.default.extractTimestamp(e.userId) > E.beforeDate) || (null != f && e.sourceInviteCode !== f) || (null != h && e.joinSourceType !== h)) return !1;
+        if ((null != d.afterDate && e.joinedAtTimestamp < d.afterDate) || (null != d.beforeDate && e.joinedAtTimestamp > d.beforeDate) || (null != _.afterDate && o.default.extractTimestamp(e.userId) < _.afterDate) || (null != _.beforeDate && o.default.extractTimestamp(e.userId) > _.beforeDate) || (null != h && e.sourceInviteCode !== h) || (null != p && e.joinSourceType !== p)) return !1;
         if (n || r || i || u) return !!((n && e.hasUnusualDmActivity) || (r && (0, s.b)(e)) || (i && e.hasUnusualAccountActivity) || (u && (0, a.EY)(e))) || !1;
         return !0;
     }

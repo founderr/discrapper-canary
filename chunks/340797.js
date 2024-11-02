@@ -8,7 +8,7 @@ n(192379);
 var i = n(481060),
     a = n(946273),
     s = n(441110),
-    o = n(689938),
+    o = n(388032),
     l = n(779377);
 function u(e) {
     let { guild: t, message: n } = e;
@@ -33,7 +33,7 @@ function u(e) {
                       onClick: t,
                       tag: 'span',
                       children: (0, r.jsx)(i.Tooltip, {
-                          text: o.Z.Messages.NEW_MEMBER_BADGE_TOOLTIP_TEXT,
+                          text: o.intl.string(o.t['v/OYd3']),
                           children: (e) =>
                               (0, r.jsx)('div', {
                                   className: l.newMemberBadge,

@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return m;
+        return x;
     }
 }),
     t(789020);
@@ -8,53 +8,53 @@ var i = t(200651),
     r = t(192379),
     o = t(442837),
     a = t(131388),
-    s = t(171246),
-    l = t(689011),
-    c = t(931905),
+    l = t(171246),
+    c = t(689011),
+    s = t(931905),
     d = t(430824),
     u = t(598),
-    _ = t(409813),
-    p = t(586585),
-    f = t(614277),
-    I = t(750143),
-    C = t(689938);
-function m(e) {
+    p = t(409813),
+    f = t(586585),
+    b = t(614277),
+    m = t(750143),
+    h = t(388032);
+function x(e) {
     let { handleStepChange: n, handleClose: t } = e,
-        { subscriptionMetadataRequest: m, selectedSku: b, selectedStoreListing: S, application: h } = (0, u.usePaymentContext)(),
-        T = (0, a.Z)(I.i),
-        g = (0, o.e7)([d.Z], () => d.Z.getGuild(null == m ? void 0 : m.guild_id)),
-        x = r.useCallback(() => n(_.h8.REVIEW), [n]);
-    if (null == b) return null;
-    let O = (0, s.KW)(b.flags);
+        { subscriptionMetadataRequest: x, selectedSku: g, selectedStoreListing: _, application: v } = (0, u.usePaymentContext)(),
+        C = (0, a.Z)(m.i),
+        S = (0, o.e7)([d.Z], () => d.Z.getGuild(null == x ? void 0 : x.guild_id)),
+        k = r.useCallback(() => n(p.h8.REVIEW), [n]);
+    if (null == g) return null;
+    let y = (0, l.KW)(g.flags);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(f.C3, {
-                children: T
-                    ? (0, i.jsx)(c.h, {
-                          confirmCta: C.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_CONTINUE_BUTTON,
-                          onConfirm: x,
+            (0, i.jsx)(b.C3, {
+                children: C
+                    ? (0, i.jsx)(s.h, {
+                          confirmCta: h.intl.string(h.t.PBHFSk),
+                          onConfirm: k,
                           onCancel: t,
-                          title: C.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_LITE_TITLE_V2.format({ tier: b.name }),
-                          subtitle: O ? C.Z.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_LITE_SUBTITLE : C.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_LITE_SUBTITLE.format({ guildName: null == g ? void 0 : g.name }),
+                          title: h.intl.format(h.t['6n6oXF'], { tier: g.name }),
+                          subtitle: y ? h.intl.string(h.t.lzAoKC) : h.intl.formatToPlainString(h.t['GqaY/v'], { guildName: null == S ? void 0 : S.name }),
                           showOpenDiscord: !1
                       })
-                    : (0, i.jsx)(l.Oc, {
-                          icon: null == S ? void 0 : S.thumbnail,
-                          storeListingBenefits: null == S ? void 0 : S.benefits,
-                          application: null != h ? h : void 0,
-                          title: C.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_TITLE_V2.format({ tier: b.name }),
-                          subtitle: O ? C.Z.Messages.APPLICATION_USER_SUBSCRIPTION_LISTING_HEADER : C.Z.Messages.APPLICATION_GUILD_SUBSCRIPTION_LISTING_HEADER,
-                          description: O ? C.Z.Messages.APPLICATION_USER_SUBSCRIPTION_LISTING_DETAILS.format({ applicationName: null == h ? void 0 : h.name }) : C.Z.Messages.APPLICATION_GUILD_SUBSCRIPTION_LISTING_DETAILS
+                    : (0, i.jsx)(c.Oc, {
+                          icon: null == _ ? void 0 : _.thumbnail,
+                          storeListingBenefits: null == _ ? void 0 : _.benefits,
+                          application: null != v ? v : void 0,
+                          title: h.intl.format(h.t.haiCxc, { tier: g.name }),
+                          subtitle: y ? h.intl.string(h.t.RvtbPz) : h.intl.string(h.t.zY39Zm),
+                          description: y ? h.intl.formatToPlainString(h.t.QCe4ra, { applicationName: null == v ? void 0 : v.name }) : h.intl.string(h.t.n1Pu8P)
                       })
             }),
-            !T &&
-                (0, i.jsx)(f.O3, {
-                    children: (0, i.jsx)(p.Z, {
+            !C &&
+                (0, i.jsx)(b.O3, {
+                    children: (0, i.jsx)(f.Z, {
                         onBack: t,
-                        backText: C.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_CANCEL_BUTTON,
-                        onPrimary: x,
-                        primaryCTA: p.g.CONTINUE,
-                        primaryText: C.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_CONTINUE_BUTTON
+                        backText: h.intl.string(h.t.TQBY1N),
+                        onPrimary: k,
+                        primaryCTA: f.g.CONTINUE,
+                        primaryText: h.intl.string(h.t['gZhF+/'])
                     })
                 })
         ]

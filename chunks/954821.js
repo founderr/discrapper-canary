@@ -1,126 +1,126 @@
-t.d(s, {
+n.d(t, {
     h: function () {
-        return A;
+        return _;
     }
 }),
-    t(47120);
-var n = t(200651),
-    a = t(192379),
-    i = t(913527),
-    r = t.n(i),
-    o = t(481060),
-    l = t(355467),
-    c = t(100527),
-    d = t(906732),
-    _ = t(313201),
-    u = t(73346),
-    E = t(584825),
-    T = t(305342),
-    S = t(293810),
-    I = t(689938),
-    N = t(154371);
-let m = (e) => {
-        let [s, t] = a.useState(!1),
-            [n, i] = a.useState(null);
+    n(47120);
+var i = n(200651),
+    s = n(192379),
+    r = n(913527),
+    l = n.n(r),
+    a = n(481060),
+    o = n(355467),
+    c = n(100527),
+    d = n(906732),
+    u = n(313201),
+    m = n(73346),
+    h = n(584825),
+    g = n(305342),
+    p = n(293810),
+    x = n(388032),
+    S = n(154371);
+let T = (e) => {
+        let [t, n] = s.useState(!1),
+            [i, r] = s.useState(null);
         return {
-            cancelSubscription: async (s) => {
+            cancelSubscription: async (t) => {
                 try {
-                    return t(!0), await l.EO(s, e), !0;
+                    return n(!0), await o.EO(t, e), !0;
                 } catch (e) {
-                    i(e);
+                    r(e);
                 } finally {
-                    t(!1);
+                    n(!1);
                 }
             },
-            error: n,
-            submitting: s
+            error: i,
+            submitting: t
         };
     },
     C = (e) => {
-        var s;
-        let { transitionState: t, groupListing: a, guildId: i, listing: l, subscription: C, onClose: A } = e,
-            g = (0, _.Dt)(),
-            h = (0, E.YB)(i),
-            O = (null == h ? void 0 : null === (s = h.cover_image_asset) || void 0 === s ? void 0 : s.application_id) != null ? (0, u._W)(h.cover_image_asset.application_id, h.cover_image_asset, 440) : void 0,
-            { analyticsLocations: p } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
-            { cancelSubscription: R, error: x, submitting: M } = m(p),
-            f = async () => {
-                (await R(C.id)) && A();
+        var t;
+        let { transitionState: n, groupListing: s, guildId: r, listing: o, subscription: C, onClose: _ } = e,
+            E = (0, u.Dt)(),
+            f = (0, h.YB)(r),
+            I = (null == f ? void 0 : null === (t = f.cover_image_asset) || void 0 === t ? void 0 : t.application_id) != null ? (0, m._W)(f.cover_image_asset.application_id, f.cover_image_asset, 440) : void 0,
+            { analyticsLocations: N } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
+            { cancelSubscription: A, error: b, submitting: v } = T(N),
+            j = async () => {
+                (await A(C.id)) && _();
             },
-            D = l.role_benefits.benefits.filter((e) => e.ref_type === S.Qs.CHANNEL),
-            L = l.role_benefits.benefits.filter((e) => e.ref_type === S.Qs.INTANGIBLE),
-            P = r()(C.currentPeriodEnd).format('MMMM Do, YYYY'),
-            b = I.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_DESCRIPTION.format({
-                numChannels: D.length,
-                numAdditionalBenefits: L.length,
+            O = o.role_benefits.benefits.filter((e) => e.ref_type === p.Qs.CHANNEL),
+            R = o.role_benefits.benefits.filter((e) => e.ref_type === p.Qs.INTANGIBLE),
+            P = l()(C.currentPeriodEnd).format('MMMM Do, YYYY'),
+            D = x.intl.formatToPlainString(x.t.KsMRPz, {
+                numChannels: O.length,
+                numAdditionalBenefits: R.length,
                 subscriptionEndDate: P
             });
-        return (0, n.jsxs)(o.ModalRoot, {
-            transitionState: t,
-            className: N.__invalid_modal,
-            'aria-labelledby': g,
+        return (0, i.jsxs)(a.ModalRoot, {
+            transitionState: n,
+            className: S.__invalid_modal,
+            'aria-labelledby': E,
             children: [
-                (0, n.jsxs)('div', {
+                (0, i.jsxs)('div', {
                     children: [
-                        (0, n.jsx)('img', {
-                            src: O,
+                        (0, i.jsx)('img', {
+                            src: I,
                             alt: '',
-                            className: N.headerImage
+                            className: S.headerImage
                         }),
-                        (0, n.jsx)(o.ModalCloseButton, {
+                        (0, i.jsx)(a.ModalCloseButton, {
                             withCircleBackground: !0,
-                            className: N.closeButton,
-                            onClick: A
+                            className: S.closeButton,
+                            onClick: _
                         })
                     ]
                 }),
-                null != x ? (0, n.jsx)(o.FormErrorBlock, { children: x.message }) : null,
-                (0, n.jsxs)(o.ModalContent, {
-                    className: N.content,
+                null != b ? (0, i.jsx)(a.FormErrorBlock, { children: b.message }) : null,
+                (0, i.jsxs)(a.ModalContent, {
+                    className: S.content,
                     children: [
-                        (0, n.jsx)(o.Heading, {
-                            id: g,
+                        (0, i.jsx)(a.Heading, {
+                            id: E,
                             variant: 'text-md/medium',
-                            className: N.title,
-                            children: I.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_TITLE
+                            className: S.title,
+                            children: x.intl.string(x.t.O6l5tL)
                         }),
-                        (0, n.jsx)(o.Text, {
-                            className: N.description,
+                        (0, i.jsx)(a.Text, {
+                            className: S.description,
                             variant: 'text-sm/normal',
-                            children: b
+                            children: D
                         }),
-                        (0, n.jsx)(T.c, {
-                            listingId: l.id,
-                            guildId: a.guild_id,
-                            className: N.benefits
+                        (0, i.jsx)(g.c, {
+                            listingId: o.id,
+                            guildId: s.guild_id,
+                            className: S.benefits
                         })
                     ]
                 }),
-                (0, n.jsxs)(o.ModalFooter, {
-                    className: N.footer,
+                (0, i.jsxs)(a.ModalFooter, {
+                    className: S.footer,
                     children: [
-                        (0, n.jsx)(o.Button, {
-                            color: o.Button.Colors.RED,
-                            onClick: f,
-                            submitting: M,
-                            children: I.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_CANCEL_CTA
+                        (0, i.jsx)(a.Button, {
+                            color: a.Button.Colors.RED,
+                            onClick: j,
+                            submitting: v,
+                            children: x.intl.string(x.t.F6lUDA)
                         }),
-                        (0, n.jsx)(o.Button, {
-                            look: o.Button.Looks.LINK,
-                            color: o.Button.Colors.WHITE,
-                            className: N.goBackButton,
-                            onClick: A,
-                            children: I.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_NEVERMIND_CTA
+                        (0, i.jsx)(a.Button, {
+                            look: a.Button.Looks.LINK,
+                            color: a.Button.Colors.WHITE,
+                            className: S.goBackButton,
+                            onClick: _,
+                            children: x.intl.string(x.t.EP6EPT)
                         })
                     ]
                 })
             ]
         });
     },
-    A = (e) => {
-        (0, o.openModal)((s) =>
-            (0, n.jsx)(C, {
-                ...s,
+    _ = (e) => {
+        (0, a.openModal)((t) =>
+            (0, i.jsx)(C, {
+                ...t,
                 ...e
             })
         );

@@ -4,21 +4,21 @@ n.d(t, {
     }
 }),
     n(653041);
-var s,
-    a,
-    i = n(626135),
-    r = n(946314),
-    l = n(981631);
+var i,
+    r,
+    l = n(626135),
+    s = n(946314),
+    a = n(981631);
 function o(e) {
-    let t = r.ZP.getDiscoveryChecklist(e),
+    let t = s.ZP.getDiscoveryChecklist(e),
         n = [];
     if (!(null == t ? void 0 : t.sufficient)) {
-        var s;
-        !(null == t ? void 0 : t.safeEnvironment) && n.push('TNS'), (!(null == t ? void 0 : t.healthy) || (null == t ? void 0 : t.healthScorePending)) && n.push('HEALTH'), !(null == t ? void 0 : t.size) && n.push('MEMBER_COUNT'), Object.keys(null !== (s = null == t ? void 0 : t.nsfwProperties) && void 0 !== s ? s : {}).length > 0 && n.push('BAD_WORDS'), !(null == t ? void 0 : t.protected) && n.push('2FA');
+        var i;
+        !(null == t ? void 0 : t.safeEnvironment) && n.push('TNS'), (!(null == t ? void 0 : t.healthy) || (null == t ? void 0 : t.healthScorePending)) && n.push('HEALTH'), !(null == t ? void 0 : t.size) && n.push('MEMBER_COUNT'), Object.keys(null !== (i = null == t ? void 0 : t.nsfwProperties) && void 0 !== i ? i : {}).length > 0 && n.push('BAD_WORDS'), !(null == t ? void 0 : t.protected) && n.push('2FA');
     }
-    i.default.track(l.rMx.GUILD_SETTINGS_DISCOVERY_VIEWED, {
+    l.default.track(a.rMx.GUILD_SETTINGS_DISCOVERY_VIEWED, {
         guild_id: e,
         failed_reasons: n
     });
 }
-((a = s || (s = {})).SAFE_ENVIRONMENT = 'TNS'), (a.HEALTHY = 'HEALTH'), (a.SIZE = 'MEMBER_COUNT'), (a.NSFW = 'BAD_WORDS'), (a.PROTECTED = '2FA');
+((r = i || (i = {})).SAFE_ENVIRONMENT = 'TNS'), (r.HEALTHY = 'HEALTH'), (r.SIZE = 'MEMBER_COUNT'), (r.NSFW = 'BAD_WORDS'), (r.PROTECTED = '2FA');

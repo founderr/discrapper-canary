@@ -1,41 +1,41 @@
-var i = t(392711),
-    r = t.n(i),
-    o = t(544891),
-    a = t(570140),
-    u = t(981631);
-let s = ['Spidey Bot', 'Captain Hook'];
+var i = e(392711),
+    r = e.n(i),
+    o = e(544891),
+    a = e(570140),
+    u = e(981631);
+let l = ['Spidey Bot', 'Captain Hook'];
 n.Z = {
-    fetchForGuild(e) {
+    fetchForGuild(t) {
         a.Z.dispatch({
             type: 'WEBHOOKS_FETCHING',
-            guildId: e
+            guildId: t
         }),
             o.tn
                 .get({
-                    url: u.ANM.GUILD_WEBHOOKS(e),
+                    url: u.ANM.GUILD_WEBHOOKS(t),
                     oldFormErrors: !0
                 })
                 .then((n) => {
-                    let { body: t } = n;
+                    let { body: e } = n;
                     return a.Z.dispatch({
                         type: 'WEBHOOKS_UPDATE',
-                        guildId: e,
-                        webhooks: t
+                        guildId: t,
+                        webhooks: e
                     });
                 })
                 .catch((n) => {
-                    let { body: t } = n;
+                    let { body: e } = n;
                     a.Z.dispatch({
                         type: 'WEBHOOKS_UPDATE',
-                        guildId: e,
-                        error: t.message
+                        guildId: t,
+                        error: e.message
                     });
                 });
     },
-    fetchForChannel(e, n) {
+    fetchForChannel(t, n) {
         a.Z.dispatch({
             type: 'WEBHOOKS_FETCHING',
-            guildId: e,
+            guildId: t,
             channelId: n
         }),
             o.tn
@@ -43,37 +43,37 @@ n.Z = {
                     url: u.ANM.CHANNEL_WEBHOOKS(n),
                     oldFormErrors: !0
                 })
-                .then((t) => {
-                    let { body: i } = t;
+                .then((e) => {
+                    let { body: i } = e;
                     return a.Z.dispatch({
                         type: 'WEBHOOKS_UPDATE',
-                        guildId: e,
+                        guildId: t,
                         channelId: n,
                         webhooks: i
                     });
                 });
     },
-    create: (e, n, t) => (
-        null == t && (t = s[r().random(0, s.length - 1)]),
+    create: (t, n, e) => (
+        null == e && (e = l[r().random(0, l.length - 1)]),
         o.tn
             .post({
                 url: u.ANM.CHANNEL_WEBHOOKS(n),
-                body: { name: t },
+                body: { name: e },
                 oldFormErrors: !0
             })
             .then((n) => {
-                let { body: t } = n;
+                let { body: e } = n;
                 return (
                     a.Z.dispatch({
                         type: 'WEBHOOK_CREATE',
-                        guildId: e,
-                        webhook: t
+                        guildId: t,
+                        webhook: e
                     }),
-                    t
+                    e
                 );
             })
     ),
-    delete: (e, n) =>
+    delete: (t, n) =>
         o.tn
             .del({
                 url: u.ANM.WEBHOOK(n),
@@ -82,26 +82,26 @@ n.Z = {
             .then(() => {
                 a.Z.dispatch({
                     type: 'WEBHOOK_DELETE',
-                    guildId: e,
+                    guildId: t,
                     webhookId: n
                 });
             }),
-    update: (e, n, t) =>
+    update: (t, n, e) =>
         o.tn
             .patch({
                 url: u.ANM.WEBHOOK(n),
-                body: t,
+                body: e,
                 oldFormErrors: !0
             })
             .then((n) => {
-                let { body: t } = n;
+                let { body: e } = n;
                 return (
                     a.Z.dispatch({
                         type: 'WEBHOOK_UPDATE',
-                        guildId: e,
-                        webhook: t
+                        guildId: t,
+                        webhook: e
                     }),
-                    t
+                    e
                 );
             })
 };

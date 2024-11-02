@@ -8,7 +8,7 @@ var r = n(846519),
     u = n(581567),
     c = n(594190),
     d = n(981631);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,13 +21,13 @@ function _(e, t, n) {
         e
     );
 }
-let E = 5 * l.Z.Millis.MINUTE;
-class f extends i.Z {
+let _ = 5 * l.Z.Millis.MINUTE;
+class h extends i.Z {
     _terminate() {
         this.stopHeartbeat();
     }
     maybeStartHeartbeat() {
-        !this.heartbeatInterval.isStarted() && (this.logRunningGameHeartbeats(), this.heartbeatInterval.start(E, this.logRunningGameHeartbeats));
+        !this.heartbeatInterval.isStarted() && (this.logRunningGameHeartbeats(), this.heartbeatInterval.start(_, this.logRunningGameHeartbeats));
     }
     stopHeartbeat() {
         this.heartbeatInterval.stop(), this.runningGameKeys.clear();
@@ -37,15 +37,15 @@ class f extends i.Z {
     }
     constructor(...e) {
         super(...e),
-            _(this, 'heartbeatInterval', new r.Xp()),
-            _(this, 'runningGameKeys', new Set()),
-            _(this, 'actions', {
+            f(this, 'heartbeatInterval', new r.Xp()),
+            f(this, 'runningGameKeys', new Set()),
+            f(this, 'actions', {
                 RUNNING_GAMES_CHANGE: (e) => this.handleRunningGamesChanged(e),
                 LOGOUT: () => this.stopHeartbeat(),
                 CONNECTION_CLOSED: () => this.stopHeartbeat(),
                 POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen()
             }),
-            _(this, 'handleRunningGamesChanged', (e) => {
+            f(this, 'handleRunningGamesChanged', (e) => {
                 let { games: t } = e;
                 if (0 === t.length) {
                     this.stopHeartbeat();
@@ -53,7 +53,7 @@ class f extends i.Z {
                 }
                 this.maybeStartHeartbeat();
             }),
-            _(this, 'logRunningGameHeartbeats', () => {
+            f(this, 'logRunningGameHeartbeats', () => {
                 let e = c.ZP.getRunningGames(),
                     t = {
                         rtc_connection_id: s.Z.getRTCConnectionId(),
@@ -64,9 +64,9 @@ class f extends i.Z {
                     var r, i;
                     let s = (0, c.rH)(e),
                         l = !this.runningGameKeys.has(s),
-                        _ = null !== (i = e.id) && void 0 !== i ? i : null === (r = a.Z.getGameByName(e.name)) || void 0 === r ? void 0 : r.id;
+                        f = null !== (i = e.id) && void 0 !== i ? i : null === (r = a.Z.getGameByName(e.name)) || void 0 === r ? void 0 : r.id;
                     o.default.track(d.rMx.RUNNING_GAME_HEARTBEAT, {
-                        game_id: _,
+                        game_id: f,
                         game_name: e.name,
                         game_distributor: e.distributor,
                         game_executable: (0, u.N6)(e.exePath),
@@ -80,4 +80,4 @@ class f extends i.Z {
             });
     }
 }
-t.Z = new f();
+t.Z = new h();

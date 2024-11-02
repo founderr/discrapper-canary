@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return x;
     }
 }),
     n(47120);
 var i = n(200651);
 n(192379);
-var s = n(442837),
-    a = n(481060),
-    l = n(572691),
-    r = n(287734),
+var l = n(442837),
+    r = n(481060),
+    a = n(572691),
+    s = n(287734),
     o = n(872810),
     c = n(40851),
     u = n(382182),
@@ -17,71 +17,71 @@ var s = n(442837),
     h = n(592125),
     m = n(585483),
     p = n(915863),
-    _ = n(981631),
-    f = n(689938),
-    E = n(511292);
-function g(e) {
-    let { isCurrentUser: t, color: n, look: g, applicationStream: C, onAction: I } = e,
-        { activeStream: T, watchingOtherStream: x } = (0, s.cj)([d.Z], () => ({
-            activeStream: d.Z.getActiveStreamForApplicationStream(C),
+    f = n(981631),
+    g = n(388032),
+    C = n(511292);
+function x(e) {
+    let { isCurrentUser: t, color: n, look: x, applicationStream: v, onAction: _ } = e,
+        { activeStream: I, watchingOtherStream: E } = (0, l.cj)([d.Z], () => ({
+            activeStream: d.Z.getActiveStreamForApplicationStream(v),
             watchingOtherStream:
-                null != C &&
-                d.Z.getAllActiveStreamsForChannel(C.channelId).filter((e) => {
+                null != v &&
+                d.Z.getAllActiveStreamsForChannel(v.channelId).filter((e) => {
                     let { ownerId: t } = e;
-                    return t !== C.ownerId;
+                    return t !== v.ownerId;
                 }).length > 0
         })),
-        S = (0, s.e7)([h.Z], () => h.Z.getChannel(null == C ? void 0 : C.channelId)),
-        [v, N] = (0, u.wq)(S),
-        A = (0, c.Aq)(),
-        Z = null != T && null != C && T.state !== _.jm8.ENDED && T.ownerId === C.ownerId,
-        M = (e) => {
-            if (null != C) null == I || I(), r.default.selectVoiceChannel(C.channelId), !Z && (0, o.iV)(C, { forceMultiple: e }), A.dispatch(_.CkL.POPOUT_CLOSE), m.S.dispatch(_.CkL.MODAL_CLOSE), l.Z.popAll();
+        b = (0, l.e7)([h.Z], () => h.Z.getChannel(null == v ? void 0 : v.channelId)),
+        [S, Z] = (0, u.wq)(b),
+        T = (0, c.Aq)(),
+        N = null != I && null != v && I.state !== f.jm8.ENDED && I.ownerId === v.ownerId,
+        j = (e) => {
+            if (null != v) null == _ || _(), s.default.selectVoiceChannel(v.channelId), !N && (0, o.iV)(v, { forceMultiple: e }), T.dispatch(f.CkL.POPOUT_CLOSE), m.S.dispatch(f.CkL.MODAL_CLOSE), a.Z.popAll();
         };
-    if (null == C) return null;
-    let b = (0, u.P9)(N);
-    t ? (b = f.Z.Messages.WATCH_STREAM_STREAMING) : Z && (b = f.Z.Messages.WATCH_STREAM_WATCHING);
-    let R = {
+    if (null == v) return null;
+    let A = (0, u.P9)(Z);
+    t ? (A = g.intl.string(g.t.XvBdeX)) : N && (A = g.intl.string(g.t.JH1SJy));
+    let y = {
         color: n,
-        look: g
+        look: x
     };
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(
                 p.Z,
                 {
-                    disabled: t || Z || !v,
-                    onClick: () => M(!1),
-                    ...R,
+                    disabled: t || N || !S,
+                    onClick: () => j(!1),
+                    ...y,
                     fullWidth: !0,
                     children: [
-                        (0, i.jsx)(a.ScreenArrowIcon, {
+                        (0, i.jsx)(r.ScreenArrowIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: E.streamIcon
+                            className: C.streamIcon
                         }),
-                        b
+                        A
                     ]
                 },
                 'play'
             ),
-            x && !Z
-                ? (0, i.jsx)(a.Tooltip, {
-                      text: f.Z.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
+            E && !N
+                ? (0, i.jsx)(r.Tooltip, {
+                      text: g.intl.string(g.t.wCrzur),
                       children: (e) =>
                           (0, i.jsx)(p.Z, {
                               ...e,
                               onClick: () => {
                                   var t;
-                                  null === (t = e.onClick) || void 0 === t || t.call(e), M(!0);
+                                  null === (t = e.onClick) || void 0 === t || t.call(e), j(!0);
                               },
-                              ...R,
-                              className: E.iconButton,
-                              size: E.iconButtonSize,
-                              children: (0, i.jsx)(a.EyePlusIcon, {
+                              ...y,
+                              className: C.iconButton,
+                              size: C.iconButtonSize,
+                              children: (0, i.jsx)(r.EyePlusIcon, {
                                   size: 'xs',
                                   color: 'currentColor',
-                                  className: E.iconSize
+                                  className: C.iconSize
                               })
                           })
                   })

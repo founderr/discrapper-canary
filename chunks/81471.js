@@ -1,91 +1,91 @@
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(442837),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    s = n(442837),
     o = n(481060),
     c = n(95398),
     d = n(905405),
     u = n(255269),
-    _ = n(937889),
-    E = n(267128),
-    h = n(695346),
-    m = n(496675),
-    I = n(699516),
-    p = n(868807),
-    g = n(981631),
-    T = n(217702),
-    S = n(689938),
-    C = n(877148),
-    f = n(554034);
-let N = a.memo(function (e) {
+    h = n(937889),
+    m = n(267128),
+    p = n(695346),
+    g = n(496675),
+    f = n(699516),
+    _ = n(868807),
+    E = n(981631),
+    I = n(217702),
+    C = n(388032),
+    v = n(877148),
+    S = n(554034);
+let N = r.memo(function (e) {
     let { channel: t } = e,
-        { loaded: n, error: s, message: N } = (0, p.a)(t),
-        A = (0, d.p)(),
-        v = (0, l.e7)([I.Z], () => null != N && I.Z.isBlockedForMessage(N), [N]),
-        Z = (0, l.e7)([m.Z], () => m.Z.can(g.Plq.MANAGE_MESSAGES, t)),
-        L = h.cC.useSetting(),
-        { content: R } = a.useMemo(
+        { loaded: n, error: l, message: N } = (0, _.a)(t),
+        T = (0, d.p)(),
+        x = (0, s.e7)([f.Z], () => null != N && f.Z.isBlockedForMessage(N), [N]),
+        b = (0, s.e7)([g.Z], () => g.Z.can(E.Plq.MANAGE_MESSAGES, t)),
+        A = p.cC.useSetting(),
+        { content: Z } = r.useMemo(
             () =>
                 (null == N ? void 0 : N.content) != null && '' !== N.content
-                    ? (0, _.ZP)(N, {
+                    ? (0, h.ZP)(N, {
                           formatInline: !0,
                           noStyleAndInteraction: !0,
-                          shouldFilterKeywords: A
+                          shouldFilterKeywords: T
                       })
                     : { content: null },
-            [N, A]
+            [N, T]
         ),
-        O = null;
-    if (s)
-        O = (0, i.jsx)(o.Text, {
-            className: C.messageReplacement,
+        y = null;
+    if (l)
+        y = (0, i.jsx)(o.Text, {
+            className: v.messageReplacement,
             variant: 'text-sm/normal',
             color: 'text-muted',
-            children: S.Z.Messages.MESSAGE_REQUESTS_ERROR_LOADING_PREVIEW
+            children: C.intl.string(C.t.BZHld3)
         });
     else if (n) {
-        if (null != N && v)
-            O = (0, i.jsx)(o.Text, {
-                className: C.messageReplacement,
+        if (null != N && x)
+            y = (0, i.jsx)(o.Text, {
+                className: v.messageReplacement,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
-                children: S.Z.Messages.MESSAGE_REQUESTS_BLOCKED_MESSAGE
+                children: C.intl.string(C.t['WPe+xM'])
             });
         else if (null != N) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, E.f)(N, R, v, r()(C.messageContent, f.inlineFormat), {
-                leadingIconClass: C.messageContentIcon,
-                trailingIconClass: C.messageContentIcon,
-                iconSize: T.WW
+            let { contentPlaceholder: e, renderedContent: t } = (0, m.f)(N, Z, x, a()(v.messageContent, S.inlineFormat), {
+                leadingIconClass: v.messageContentIcon,
+                trailingIconClass: v.messageContentIcon,
+                iconSize: I.WW
             });
-            O =
+            y =
                 null != t
                     ? (0, i.jsx)(o.Text, {
                           variant: 'text-sm/normal',
                           color: 'text-muted',
-                          className: C.messageContent,
+                          className: v.messageContent,
                           children: t
                       })
                     : (0, i.jsx)(o.Text, {
                           tag: 'span',
                           variant: 'text-sm/normal',
                           color: 'text-muted',
-                          className: C.messageReplacement,
+                          className: v.messageReplacement,
                           children: e
                       });
         } else
-            O = (0, i.jsx)(o.Text, {
-                className: C.messageReplacement,
+            y = (0, i.jsx)(o.Text, {
+                className: v.messageReplacement,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
-                children: S.Z.Messages.MESSAGE_REQUESTS_DELETED_MESSAGE
+                children: C.intl.string(C.t['0KfDxM'])
             });
-    } else O = null;
+    } else y = null;
     return (0, i.jsx)(c.a.Provider, {
-        value: (0, u.Z)(L, Z),
+        value: (0, u.Z)(A, b),
         children: (0, i.jsx)(o.FocusBlock, {
-            className: C.messageFocusBlock,
-            children: O
+            className: v.messageFocusBlock,
+            children: y
         })
     });
 });

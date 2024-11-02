@@ -1,8 +1,8 @@
-var r, i;
+var i, r;
 t.d(n, {
     T: function () {
-        return r;
+        return i;
     }
 }),
-    ((i = r || (r = {}))[(i.STORE_ASSET = 1)] = 'STORE_ASSET'),
-    (i[(i.EMOJI = 2)] = 'EMOJI');
+    ((r = i || (i = {}))[(r.STORE_ASSET = 1)] = 'STORE_ASSET'),
+    (r[(r.EMOJI = 2)] = 'EMOJI');

@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return l;
     }
 });
 var i = n(192379),
-    a = n(192720);
-function s() {
+    r = n(192720);
+function l() {
     i.useEffect(() => {
-        (0, a.sE)();
+        (0, r.sE)();
     }, []);
 }

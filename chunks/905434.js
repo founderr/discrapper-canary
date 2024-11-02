@@ -3,7 +3,7 @@ n(192379);
 var i = n(481060),
     a = n(565138),
     s = n(430824),
-    o = n(689938),
+    o = n(388032),
     l = n(78883);
 t.Z = (e) => {
     let { stageInstance: t } = e,
@@ -16,7 +16,7 @@ t.Z = (e) => {
                   (0, r.jsx)(i.Heading, {
                       className: l.header,
                       variant: 'heading-sm/semibold',
-                      children: o.Z.Messages.MOBILE_REPORTS_STAGE_CHANNEL_PREVIEW_TITLE
+                      children: o.intl.string(o.t['InbJ8/'])
                   }),
                   (0, r.jsxs)('div', {
                       className: l.guildContainer,

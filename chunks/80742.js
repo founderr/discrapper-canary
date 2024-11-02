@@ -1,29 +1,29 @@
-t.r(n);
-var r = t(200651);
-t(192379);
-var o = t(481060),
-    u = t(239091),
-    c = t(883385),
-    i = t(108843),
-    s = t(100527),
-    a = t(299206),
-    l = t(981631),
-    d = t(689938);
-n.default = (0, i.Z)(
-    (0, c.Z)(
-        function (e) {
-            let { userId: n, onSelect: t } = e,
-                c = (0, a.Z)({
-                    id: n,
-                    label: d.Z.Messages.COPY_ID_USER,
+e.r(t);
+var r = e(200651);
+e(192379);
+var i = e(481060),
+    o = e(239091),
+    u = e(883385),
+    c = e(108843),
+    s = e(100527),
+    a = e(299206),
+    l = e(981631),
+    d = e(388032);
+t.default = (0, c.Z)(
+    (0, u.Z)(
+        function (n) {
+            let { userId: t, onSelect: e } = n,
+                u = (0, a.Z)({
+                    id: t,
+                    label: d.intl.string(d.t['/AXYnJ']),
                     showWithoutDeveloperMode: !0
                 });
-            return (0, r.jsx)(o.Menu, {
+            return (0, r.jsx)(i.Menu, {
                 navId: 'unknown-user-context',
-                onClose: u.Zy,
-                'aria-label': d.Z.Messages.USER_ACTIONS_MENU_LABEL,
-                onSelect: t,
-                children: (0, r.jsx)(o.MenuGroup, { children: c })
+                onClose: o.Zy,
+                'aria-label': d.intl.string(d.t.liqwPD),
+                onSelect: e,
+                children: (0, r.jsx)(i.MenuGroup, { children: u })
             });
         },
         { object: l.qAy.CONTEXT_MENU }

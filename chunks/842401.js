@@ -2,7 +2,7 @@ var r = n(200651);
 n(192379);
 var i = n(481060),
     a = n(99690),
-    s = n(689938),
+    s = n(388032),
     o = n(686374);
 t.Z = (e) => {
     let { user: t } = e;
@@ -12,7 +12,7 @@ t.Z = (e) => {
             (0, r.jsx)(i.Heading, {
                 className: o.header,
                 variant: 'heading-sm/semibold',
-                children: s.Z.Messages.REPORTS_USER_PREVIEW_TITLE
+                children: s.intl.string(s.t['Rsth7+'])
             }),
             (0, r.jsx)('div', {
                 className: o.userContainer,

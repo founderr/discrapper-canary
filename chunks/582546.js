@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 }),
     n(47120);
@@ -14,35 +14,35 @@ var i = n(442837),
     u = n(180335),
     c = n(768419),
     d = n(594174),
-    _ = n(981631),
-    E = n(616922),
-    f = n(689938);
-function h(e) {
+    f = n(981631),
+    _ = n(616922),
+    h = n(388032);
+function p(e) {
     var t;
-    let { user: n, entry: h, display: p, onAction: I, onClose: m } = e,
-        T = (0, i.e7)([d.default], () => {
+    let { user: n, entry: p, display: m, onAction: g, onClose: E } = e,
+        v = (0, i.e7)([d.default], () => {
             var e;
             return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === n.id;
         }),
-        S = (0, i.e7)([c.Z], () => c.Z.hasConnectedAccount());
-    if ('live' === p || !(0, u.AZ)(h)) return null;
-    if (!S)
+        I = (0, i.e7)([c.Z], () => c.Z.hasConnectedAccount());
+    if ('live' === m || !(0, u.AZ)(p)) return null;
+    if (!I)
         return (0, r.jsx)(a.MenuItem, {
             id: 'connect-spotify',
-            label: f.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({ platform: E.ai }),
+            label: h.intl.formatToPlainString(h.t.XWSHTU, { platform: _.ai }),
             action: () => {
-                null == I || I({ action: 'PRESS_CONNECT_SPOTIFY_MENU_ITEM' }), s.Z.open(_.oAB.CONNECTIONS), null == m || m();
+                null == g || g({ action: 'PRESS_CONNECT_SPOTIFY_MENU_ITEM' }), s.Z.open(f.oAB.CONNECTIONS), null == E || E();
             }
         });
-    if (T) return null;
-    let g = (0, o.dU)(h) ? (null === (t = h.extra.entries[0]) || void 0 === t ? void 0 : t.media) : h.extra.media;
-    return null == g
+    if (v) return null;
+    let S = (0, o.dU)(p) ? (null === (t = p.extra.entries[0]) || void 0 === t ? void 0 : t.media) : p.extra.media;
+    return null == S
         ? null
         : (0, r.jsx)(a.MenuItem, {
               id: 'play-on-spotify',
-              label: f.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_PLAY_ON_SPOTIFY,
+              label: h.intl.string(h.t.rRffNz),
               action: () => {
-                  null == I || I({ action: 'PRESS_PLAY_ON_SPOTIFY_MENU_ITEM' }), (0, l.o)(E.Hw.TRACK, g.external_id);
+                  null == g || g({ action: 'PRESS_PLAY_ON_SPOTIFY_MENU_ITEM' }), (0, l.o)(_.Hw.TRACK, S.external_id);
               }
           });
 }

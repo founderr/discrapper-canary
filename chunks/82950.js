@@ -1,88 +1,88 @@
 var i = n(200651),
-    a = n(192379),
-    s = n(392711),
-    r = n.n(s),
-    l = n(481060),
+    r = n(192379),
+    l = n(392711),
+    a = n.n(l),
+    s = n(481060),
     o = n(367907),
     c = n(626135),
     d = n(986332),
     u = n(428695),
-    _ = n(981631),
-    E = n(689938),
-    h = n(768336);
-let m = r().debounce(o.ZP.trackWithMetadata, 500),
-    I = (e) => {
-        let { guild: t, title: n, message: s, image: r, type: d, imageMarginX: u, imageMarginTop: I, trackingSource: p, undismissable: g, onDismissed: T, onClick: S, cta: C, ctaColor: f } = e;
-        a.useEffect(() => {
-            m(_.rMx.CHANNEL_NOTICE_VIEWED, {
+    h = n(981631),
+    m = n(388032),
+    p = n(768336);
+let g = a().debounce(o.ZP.trackWithMetadata, 500),
+    f = (e) => {
+        let { guild: t, title: n, message: l, image: a, type: d, imageMarginX: u, imageMarginTop: f, trackingSource: _, undismissable: E, onDismissed: I, onClick: C, cta: v, ctaColor: S } = e;
+        r.useEffect(() => {
+            g(h.rMx.CHANNEL_NOTICE_VIEWED, {
                 notice_type: d,
                 guild_id: t.id
             });
         }, [t.id, d]);
         let N = null;
-        'function' == typeof C
-            ? (N = C())
-            : null != C &&
-              (N = (0, i.jsx)(l.Button, {
-                  className: h.btn,
-                  size: l.Button.Sizes.SMALL,
+        'function' == typeof v
+            ? (N = v())
+            : null != v &&
+              (N = (0, i.jsx)(s.Button, {
+                  className: p.btn,
+                  size: s.Button.Sizes.SMALL,
                   onClick: () => {
                       null != d &&
-                          c.default.track(_.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
-                              source: p,
+                          c.default.track(h.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
+                              source: _,
                               guild_id: t.id,
                               notice_type: d
                           }),
-                          null == S || S();
+                          null == C || C();
                   },
                   fullWidth: !0,
-                  color: f,
-                  children: C
+                  color: S,
+                  children: v
               }));
-        let A = null != u ? ''.concat(u, 'px') : '16px';
+        let T = null != u ? ''.concat(u, 'px') : '16px';
         return (0, i.jsxs)('div', {
-            className: h.channelNotice,
+            className: p.channelNotice,
             children: [
-                !0 === g
+                !0 === E
                     ? null
-                    : (0, i.jsx)(l.Clickable, {
+                    : (0, i.jsx)(s.Clickable, {
                           onClick: () => {
-                              o.ZP.trackWithMetadata(_.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: d }), null == T || T();
+                              o.ZP.trackWithMetadata(h.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: d }), null == I || I();
                           },
-                          className: h.close,
-                          'aria-label': E.Z.Messages.DISMISS,
-                          children: (0, i.jsx)(l.XSmallIcon, {
+                          className: p.close,
+                          'aria-label': m.intl.string(m.t.WAI6xs),
+                          children: (0, i.jsx)(s.XSmallIcon, {
                               size: 'md',
                               color: 'currentColor',
-                              className: h.closeIcon
+                              className: p.closeIcon
                           })
                       }),
                 (0, i.jsx)('div', {
-                    className: h.imageContainer,
+                    className: p.imageContainer,
                     style: {
-                        marginTop: ''.concat(I, 'px'),
-                        marginLeft: A,
-                        marginRight: A
+                        marginTop: ''.concat(f, 'px'),
+                        marginLeft: T,
+                        marginRight: T
                     },
                     children: (0, i.jsx)('img', {
-                        className: h.image,
-                        src: r,
+                        className: p.image,
+                        src: a,
                         alt: ''
                     })
                 }),
                 (0, i.jsxs)('div', {
-                    className: h.message,
+                    className: p.message,
                     children: [
                         null != n
-                            ? (0, i.jsx)(l.Heading, {
+                            ? (0, i.jsx)(s.Heading, {
                                   variant: 'heading-md/semibold',
-                                  className: h.title,
+                                  className: p.title,
                                   children: n
                               })
                             : null,
-                        (0, i.jsx)(l.Text, {
+                        (0, i.jsx)(s.Text, {
                             variant: 'text-sm/normal',
-                            children: s
+                            children: l
                         }),
                         N
                     ]
@@ -92,5 +92,5 @@ let m = r().debounce(o.ZP.trackWithMetadata, 500),
     };
 t.Z = function (e) {
     let { showRedesignedChannelNotice: t } = (0, d.o)(!0);
-    return t ? (0, i.jsx)(u.Z, { ...e }) : (0, i.jsx)(I, { ...e });
+    return t ? (0, i.jsx)(u.Z, { ...e }) : (0, i.jsx)(f, { ...e });
 };

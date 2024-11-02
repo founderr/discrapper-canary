@@ -1,112 +1,112 @@
-let i, a;
+let i, l;
 t(653041), t(47120);
-var l,
-    s,
+var r,
+    a,
     o,
-    r,
+    s,
     d = t(392711),
     c = t.n(d),
     u = t(442837),
-    I = t(570140),
-    m = t(308063),
-    _ = t(496675),
-    N = t(855674),
-    E = t(999382),
-    T = t(981631);
-let h = [],
-    g = [],
-    p = null,
-    f = null,
+    m = t(570140),
+    h = t(308063),
+    p = t(496675),
+    g = t(855674),
+    f = t(999382),
+    x = t(981631);
+let b = [],
+    v = [],
     C = null,
-    x = !1,
-    O = !1,
-    S = T.QZA.CLOSED,
-    A = {},
-    R = !1,
-    b = null;
-function Z(e) {
+    I = null,
+    N = null,
+    T = !1,
+    _ = !1,
+    j = x.QZA.CLOSED,
+    S = {},
+    E = !1,
+    Z = null;
+function A(e) {
     let { section: n } = e;
-    if (n !== T.pNK.INTEGRATIONS) return !1;
-    if (((a = T.b4C.OVERVIEW), null == i)) {
-        let e = E.Z.getGuildId();
-        null != e && m.Z.fetchForGuild(e), v(!1);
+    if (n !== x.pNK.INTEGRATIONS) return !1;
+    if (((l = x.b4C.OVERVIEW), null == i)) {
+        let e = f.Z.getGuildId();
+        null != e && h.Z.fetchForGuild(e), y(!1);
     }
 }
-function v(e) {
-    if (null != (i = E.Z.getProps().guild) && _.Z.can(T.Plq.MANAGE_GUILD, i)) {
-        let e = E.Z.getProps().integrations;
-        null == e && (O = !0), (h = null != e ? e : []);
-    } else h = [];
-    if (((g = null != i && _.Z.can(T.Plq.MANAGE_WEBHOOKS, i) ? N.Z.getWebhooksForGuild(i.id) : []), !e && null != f)) {
-        let e = L(f.id);
-        null != e && (f = e);
+function y(e) {
+    if (null != (i = f.Z.getProps().guild) && p.Z.can(x.Plq.MANAGE_GUILD, i)) {
+        let e = f.Z.getProps().integrations;
+        null == e && (_ = !0), (b = null != e ? e : []);
+    } else b = [];
+    if (((v = null != i && p.Z.can(x.Plq.MANAGE_WEBHOOKS, i) ? g.Z.getWebhooksForGuild(i.id) : []), !e && null != I)) {
+        let e = O(I.id);
+        null != e && (I = e);
     }
-    if (null != C) {
-        let e = j(C.id);
-        null != e && (C = e);
+    if (null != N) {
+        let e = L(N.id);
+        null != e && (N = e);
     }
-    (p = null), (S = T.QZA.OPEN), (A = {}), (R = !1);
+    (C = null), (j = x.QZA.OPEN), (S = {}), (E = !1);
 }
-let M = c().debounce(() => {
-    R && (null != f ? c().isEqual(f, L(f.id)) && (R = !1) : null != C && c().isEqual(C, j(C.id)) && (R = !1), !R && P.emitChange());
+let R = c().debounce(() => {
+    E && (null != I ? c().isEqual(I, O(I.id)) && (E = !1) : null != N && c().isEqual(N, L(N.id)) && (E = !1), !E && w.emitChange());
 }, 500);
+function O(e) {
+    return b.find((n) => {
+        let { id: t } = n;
+        return t === e;
+    });
+}
 function L(e) {
-    return h.find((n) => {
+    return v.find((n) => {
         let { id: t } = n;
         return t === e;
     });
 }
-function j(e) {
-    return g.find((n) => {
-        let { id: t } = n;
-        return t === e;
-    });
-}
-class D extends (l = u.ZP.Store) {
+class k extends (r = u.ZP.Store) {
     initialize() {
-        this.waitFor(E.Z, N.Z, _.Z);
+        this.waitFor(f.Z, g.Z, p.Z);
     }
     hasChanges() {
-        return R;
+        return E;
     }
     get guild() {
         return i;
     }
     get integrations() {
-        return h;
-    }
-    get webhooks() {
-        return g;
-    }
-    get editedCommandId() {
-        return p;
-    }
-    get editedIntegration() {
-        return f;
-    }
-    get editedWebhook() {
-        return C;
-    }
-    get formState() {
-        return S;
-    }
-    getErrors() {
-        return A;
-    }
-    getSection() {
-        return a;
-    }
-    getSectionId() {
         return b;
     }
+    get webhooks() {
+        return v;
+    }
+    get editedCommandId() {
+        return C;
+    }
+    get editedIntegration() {
+        return I;
+    }
+    get editedWebhook() {
+        return N;
+    }
+    get formState() {
+        return j;
+    }
+    getErrors() {
+        return S;
+    }
+    getSection() {
+        return l;
+    }
+    getSectionId() {
+        return Z;
+    }
     getIntegration(e) {
-        return L(e);
+        return O(e);
     }
     getWebhook(e) {
-        return j(e);
+        return L(e);
     }
     isFetching() {
-        return O || x;
+        return _ || T;
     }
     showNotice() {
         return this.hasChanges();
@@ -114,7 +114,7 @@ class D extends (l = u.ZP.Store) {
     getApplication(e) {
         var n;
         return null ===
-            (n = h.find((n) => {
+            (n = b.find((n) => {
                 var t;
                 return (null === (t = n.application) || void 0 === t ? void 0 : t.id) === e;
             })) || void 0 === n
@@ -122,88 +122,88 @@ class D extends (l = u.ZP.Store) {
             : n.application;
     }
 }
-(r = 'GuildSettingsIntegrationsStore'),
-    (o = 'displayName') in (s = D)
-        ? Object.defineProperty(s, o, {
-              value: r,
+(s = 'GuildSettingsIntegrationsStore'),
+    (o = 'displayName') in (a = k)
+        ? Object.defineProperty(a, o, {
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (s[o] = r);
-let P = new D(
-    I.Z,
+        : (a[o] = s);
+let w = new k(
+    m.Z,
     __OVERLAY__
         ? {}
         : {
               INTEGRATION_SETTINGS_INIT: function () {
-                  return v(!1);
+                  return y(!1);
               },
               INTEGRATION_SETTINGS_SAVE_SUCCESS: function () {
-                  return v(!0);
+                  return y(!0);
               },
-              GUILD_SETTINGS_INIT: Z,
-              GUILD_SETTINGS_SET_SECTION: Z,
+              GUILD_SETTINGS_INIT: A,
+              GUILD_SETTINGS_SET_SECTION: A,
               INTEGRATION_SETTINGS_SET_SECTION: function (e) {
                   let { section: n, sectionId: t } = e;
-                  (a = n), (b = t);
+                  (l = n), (Z = t);
               },
               INTEGRATION_SETTINGS_START_EDITING_COMMAND: function (e) {
                   let { commandId: n } = e;
-                  (p = n), (f = null), (C = null), (A = {}), (R = !0);
+                  (C = n), (I = null), (N = null), (S = {}), (E = !0);
               },
               INTEGRATION_SETTINGS_STOP_EDITING_COMMAND: function (e) {
                   let { commandId: n } = e;
-                  if (null == p || p !== n) return !1;
-                  (p = null), (A = {}), (R = !1);
+                  if (null == C || C !== n) return !1;
+                  (C = null), (S = {}), (E = !1);
               },
               INTEGRATION_SETTINGS_START_EDITING_INTEGRATION: function (e) {
                   let { integrationId: n } = e,
-                      t = L(n);
+                      t = O(n);
                   if (null == t) return !1;
-                  (f = t), (p = null), (C = null), (A = {}), (R = !1);
+                  (I = t), (C = null), (N = null), (S = {}), (E = !1);
               },
               INTEGRATION_SETTINGS_STOP_EDITING_INTEGRATION: function () {
-                  (f = null), (A = {}), (R = !1);
+                  (I = null), (S = {}), (E = !1);
               },
               INTEGRATION_SETTINGS_UPDATE_INTEGRATION: function (e) {
                   let { settings: n } = e;
-                  if (null == f) return !1;
-                  (f = { ...f }), null != n.enableEmoticons && f.enable_emoticons !== n.enableEmoticons && ((f.enable_emoticons = n.enableEmoticons), (R = !0)), null != n.expireBehavior && f.expire_behavior !== n.expireBehavior && ((f.expire_behavior = n.expireBehavior), (R = !0)), null != n.expireGracePeriod && f.expire_grace_period !== n.expireGracePeriod && ((f.expire_grace_period = n.expireGracePeriod), (R = !0)), R && M();
+                  if (null == I) return !1;
+                  (I = { ...I }), null != n.enableEmoticons && I.enable_emoticons !== n.enableEmoticons && ((I.enable_emoticons = n.enableEmoticons), (E = !0)), null != n.expireBehavior && I.expire_behavior !== n.expireBehavior && ((I.expire_behavior = n.expireBehavior), (E = !0)), null != n.expireGracePeriod && I.expire_grace_period !== n.expireGracePeriod && ((I.expire_grace_period = n.expireGracePeriod), (E = !0)), E && R();
               },
               INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function (e) {
                   let { settings: n } = e;
-                  if (null == C) return !1;
-                  (C = { ...C }), null != n.name && C.name !== n.name && ((C.name = n.name), (R = !0)), void 0 !== n.avatar && C.avatar !== n.avatar && ((C.avatar = n.avatar), (R = !0)), null != n.channelId && C.channel_id !== n.channelId && ((C.channel_id = n.channelId), (R = !0)), R && M();
+                  if (null == N) return !1;
+                  (N = { ...N }), null != n.name && N.name !== n.name && ((N.name = n.name), (E = !0)), void 0 !== n.avatar && N.avatar !== n.avatar && ((N.avatar = n.avatar), (E = !0)), null != n.channelId && N.channel_id !== n.channelId && ((N.channel_id = n.channelId), (E = !0)), E && R();
               },
               INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function (e) {
                   let { webhookId: n } = e,
-                      t = j(n);
+                      t = L(n);
                   if (null == t) return !1;
-                  (C = t), (p = null), (f = null), (A = {}), (R = !1);
+                  (N = t), (C = null), (I = null), (S = {}), (E = !1);
               },
               INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: function () {
-                  (C = null), (A = {}), (R = !1);
+                  (N = null), (S = {}), (E = !1);
               },
               GUILD_SETTINGS_CLOSE: function () {
-                  (i = null), (h = []), (g = []), (p = null), (f = null), (C = null), (S = T.QZA.CLOSED), (R = !1);
+                  (i = null), (b = []), (v = []), (C = null), (I = null), (N = null), (j = x.QZA.CLOSED), (E = !1);
               },
               GUILD_SETTINGS_LOADED_INTEGRATIONS: function (e) {
                   let { guildId: n, integrations: t } = e;
-                  if (null == i || n !== i.id || S === T.QZA.SUBMITTING) return !1;
-                  for (let e of ((O = !1), t))
+                  if (null == i || n !== i.id || j === x.QZA.SUBMITTING) return !1;
+                  for (let e of ((_ = !1), t))
                       if (
                           null ==
-                          h.find((n) => {
+                          b.find((n) => {
                               let { id: t } = n;
                               if (t === e.id) return !0;
                           })
                       ) {
-                          var a, l;
-                          h.push(e), e.type === (null == f ? void 0 : f.type) && (null === (a = e.account) || void 0 === a ? void 0 : a.id) === (null === (l = f.account) || void 0 === l ? void 0 : l.id) && (f = e);
+                          var l, r;
+                          b.push(e), e.type === (null == I ? void 0 : I.type) && (null === (l = e.account) || void 0 === l ? void 0 : l.id) === (null === (r = I.account) || void 0 === r ? void 0 : r.id) && (I = e);
                       }
-                  for (let e = h.length - 1; e >= 0; e--) {
-                      let n = h[e],
+                  for (let e = b.length - 1; e >= 0; e--) {
+                      let n = b[e],
                           i = t.find((e) => {
                               let { id: t } = e;
                               if (t === n.id) return !0;
@@ -213,19 +213,19 @@ let P = new D(
                               ...n,
                               ...i
                           };
-                          (null == f ? void 0 : f.id) === t.id && (!1 === t.enabled ? (f = null) : !R && (f = t)), (h[e] = t);
-                      } else (null == f ? void 0 : f.id) === n.id && (f = null), h.splice(e, 1);
+                          (null == I ? void 0 : I.id) === t.id && (!1 === t.enabled ? (I = null) : !E && (I = t)), (b[e] = t);
+                      } else (null == I ? void 0 : I.id) === n.id && (I = null), b.splice(e, 1);
                   }
-                  (h = [...h]), M();
+                  (b = [...b]), R();
               },
               WEBHOOKS_UPDATE: function (e) {
-                  let { guildId: n, channelId: t, webhooks: a } = e;
-                  if (null == i || n !== i.id || null == a || S === T.QZA.SUBMITTING) return !1;
-                  x = !1;
-                  for (let e = g.length - 1; e >= 0; e--) {
-                      let n = g[e];
+                  let { guildId: n, channelId: t, webhooks: l } = e;
+                  if (null == i || n !== i.id || null == l || j === x.QZA.SUBMITTING) return !1;
+                  T = !1;
+                  for (let e = v.length - 1; e >= 0; e--) {
+                      let n = v[e];
                       if (null != t && (null == n ? void 0 : n.channel_id) !== t) continue;
-                      let i = a.find((e) => {
+                      let i = l.find((e) => {
                           let { id: t } = e;
                           if (t === n.id) return !0;
                       });
@@ -234,25 +234,25 @@ let P = new D(
                               ...n,
                               ...i
                           };
-                          (g[e] = t), !R && (null == C ? void 0 : C.id) === t.id && (C = t);
-                      } else (null == C ? void 0 : C.id) === n.id && (C = null), g.splice(e, 1);
+                          (v[e] = t), !E && (null == N ? void 0 : N.id) === t.id && (N = t);
+                      } else (null == N ? void 0 : N.id) === n.id && (N = null), v.splice(e, 1);
                   }
-                  for (let e of a)
+                  for (let e of l)
                       null ==
-                          g.find((n) => {
+                          v.find((n) => {
                               let { id: t } = n;
                               if (t === e.id) return !0;
-                          }) && g.push(e);
-                  (g = [...g]), M();
+                          }) && v.push(e);
+                  (v = [...v]), R();
               },
               INTEGRATION_SETTINGS_SUBMITTING: function () {
-                  (S = T.QZA.SUBMITTING), (A = {});
+                  (j = x.QZA.SUBMITTING), (S = {});
               },
               INTEGRATION_SETTINGS_SAVE_FAILURE: function (e) {
                   var n;
-                  if (S !== T.QZA.SUBMITTING) return !1;
-                  (S = T.QZA.OPEN), (A = null !== (n = e.errors) && void 0 !== n ? n : {});
+                  if (j !== x.QZA.SUBMITTING) return !1;
+                  (j = x.QZA.OPEN), (S = null !== (n = e.errors) && void 0 !== n ? n : {});
               }
           }
 );
-n.Z = P;
+n.Z = w;

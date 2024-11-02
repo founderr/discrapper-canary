@@ -1,16 +1,16 @@
 n.d(t, {
     L_: function () {
-        return s;
+        return l;
     },
     _6: function () {
-        return r;
+        return a;
     },
     ji: function () {
-        return a;
+        return r;
     }
 });
 var i = n(570140);
-function a(e) {
+function r(e) {
     let { eventId: t, stageId: n } = e;
     (null != t || null != n) &&
         i.Z.dispatch({
@@ -19,13 +19,13 @@ function a(e) {
             stageId: n
         });
 }
-function s(e) {
+function l(e) {
     i.Z.dispatch({
         type: 'UPCOMING_GUILD_EVENT_NOTICE_HIDE',
         eventId: e
     });
 }
-function r(e) {
+function a(e) {
     i.Z.dispatch({
         type: 'UPCOMING_GUILD_EVENT_NOTICE_SEEN',
         guildEventId: e

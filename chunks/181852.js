@@ -1,5 +1,5 @@
-var l = t(818083);
-n.Z = (0, l.B)({
+var l = n(818083);
+t.Z = (0, l.B)({
     kind: 'guild',
     id: '2022-05_vanity_url_target',
     label: 'Vanity URL Targeting',

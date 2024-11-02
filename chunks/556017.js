@@ -1,12 +1,12 @@
 n.d(t, {
     N: function () {
-        return a;
+        return r;
     }
 }),
     n(192379);
 var i = n(818083);
 n(695346);
-let a = (0, i.B)({
+let r = (0, i.B)({
     kind: 'user',
     id: '2022-01_discovery_iar',
     label: 'Ability to report servers in Server Discovery',

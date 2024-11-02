@@ -26,13 +26,13 @@ function a(e) {
         for (var u = e.shrn(l), c = o.toRed(a); t > 0; t--) {
             var d = this._randrange(new r(2), o);
             n && n(d);
-            var _ = d.toRed(a).redPow(u);
-            if (0 !== _.cmp(s) && 0 !== _.cmp(c)) {
-                for (var E = 1; E < l; E++) {
-                    if (0 === (_ = _.redSqr()).cmp(s)) return !1;
-                    if (0 === _.cmp(c)) break;
+            var f = d.toRed(a).redPow(u);
+            if (0 !== f.cmp(s) && 0 !== f.cmp(c)) {
+                for (var _ = 1; _ < l; _++) {
+                    if (0 === (f = f.redSqr()).cmp(s)) return !1;
+                    if (0 === f.cmp(c)) break;
                 }
-                if (E === l) return !1;
+                if (_ === l) return !1;
             }
         }
         return !0;
@@ -47,13 +47,13 @@ function a(e) {
             var c = this._randrange(new r(2), s),
                 d = e.gcd(c);
             if (0 !== d.cmpn(1)) return d;
-            var _ = c.toRed(i).redPow(l);
-            if (0 !== _.cmp(a) && 0 !== _.cmp(u)) {
-                for (var E = 1; E < o; E++) {
-                    if (0 === (_ = _.redSqr()).cmp(a)) return _.fromRed().subn(1).gcd(e);
-                    if (0 === _.cmp(u)) break;
+            var f = c.toRed(i).redPow(l);
+            if (0 !== f.cmp(a) && 0 !== f.cmp(u)) {
+                for (var _ = 1; _ < o; _++) {
+                    if (0 === (f = f.redSqr()).cmp(a)) return f.fromRed().subn(1).gcd(e);
+                    if (0 === f.cmp(u)) break;
                 }
-                if (E === o) return (_ = _.redSqr()).fromRed().subn(1).gcd(e);
+                if (_ === o) return (f = f.redSqr()).fromRed().subn(1).gcd(e);
             }
         }
         return !1;

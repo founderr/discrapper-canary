@@ -3,7 +3,7 @@ n.d(t, {
         return c;
     },
     rU: function () {
-        return p;
+        return m;
     }
 });
 var r = n(512969),
@@ -34,15 +34,15 @@ a.Component;
 var d = function (e, t) {
         return 'function' == typeof e ? e(t) : e;
     },
-    _ = function (e, t) {
+    f = function (e, t) {
         return 'string' == typeof e ? (0, s.ob)(e, null, null, t) : e;
     },
-    E = function (e) {
+    _ = function (e) {
         return e;
     },
-    f = a.forwardRef;
-void 0 === f && (f = E);
-var h = f(function (e, t) {
+    h = a.forwardRef;
+void 0 === h && (h = _);
+var p = h(function (e, t) {
         var n = e.innerRef,
             r = e.navigate,
             i = e.onClick,
@@ -59,67 +59,67 @@ var h = f(function (e, t) {
                     if (!e.defaultPrevented && 0 === e.button && (!u || '_self' === u) && !((t = e).metaKey || t.altKey || t.ctrlKey || t.shiftKey)) e.preventDefault(), r();
                 }
             });
-        return E !== f ? (c.ref = t || n) : (c.ref = n), a.createElement('a', c);
+        return _ !== h ? (c.ref = t || n) : (c.ref = n), a.createElement('a', c);
     }),
-    p = f(function (e, t) {
+    m = h(function (e, t) {
         var n = e.component,
-            i = void 0 === n ? h : n,
+            i = void 0 === n ? p : n,
             s = e.replace,
             c = e.to,
-            p = e.innerRef,
-            I = (0, l.Z)(e, ['component', 'replace', 'to', 'innerRef']);
+            m = e.innerRef,
+            g = (0, l.Z)(e, ['component', 'replace', 'to', 'innerRef']);
         return a.createElement(r.s6.Consumer, null, function (e) {
             e || (0, u.Z)(!1);
             var n = e.history,
-                r = _(d(c, e.location), e.location),
+                r = f(d(c, e.location), e.location),
                 l = r ? n.createHref(r) : '',
-                h = (0, o.Z)({}, I, {
+                p = (0, o.Z)({}, g, {
                     href: l,
                     navigate: function () {
                         var t = d(c, e.location);
                         (s ? n.replace : n.push)(t);
                     }
                 });
-            return E !== f ? (h.ref = t || p) : (h.innerRef = p), a.createElement(i, h);
+            return _ !== h ? (p.ref = t || m) : (p.innerRef = m), a.createElement(i, p);
         });
     }),
-    I = function (e) {
+    g = function (e) {
         return e;
     },
-    m = a.forwardRef;
-void 0 === m && (m = I);
-m(function (e, t) {
+    E = a.forwardRef;
+void 0 === E && (E = g);
+E(function (e, t) {
     var n = e['aria-current'],
         i = void 0 === n ? 'page' : n,
         s = e.activeClassName,
         c = void 0 === s ? 'active' : s,
-        E = e.activeStyle,
-        f = e.className,
-        h = e.exact,
-        T = e.isActive,
-        S = e.location,
-        g = e.sensitive,
-        A = e.strict,
-        N = e.style,
-        R = e.to,
-        O = e.innerRef,
-        v = (0, l.Z)(e, ['aria-current', 'activeClassName', 'activeStyle', 'className', 'exact', 'isActive', 'location', 'sensitive', 'strict', 'style', 'to', 'innerRef']);
+        _ = e.activeStyle,
+        h = e.className,
+        p = e.exact,
+        v = e.isActive,
+        I = e.location,
+        S = e.sensitive,
+        T = e.strict,
+        b = e.style,
+        y = e.to,
+        A = e.innerRef,
+        N = (0, l.Z)(e, ['aria-current', 'activeClassName', 'activeStyle', 'className', 'exact', 'isActive', 'location', 'sensitive', 'strict', 'style', 'to', 'innerRef']);
     return a.createElement(r.s6.Consumer, null, function (e) {
         e || (0, u.Z)(!1);
-        var n = S || e.location,
-            s = _(d(R, n), n),
+        var n = I || e.location,
+            s = f(d(y, n), n),
             l = s.pathname,
             C = l && l.replace(/([.+*?=^!:${}()[\]|/\\])/g, '\\$1'),
-            L = C
+            R = C
                 ? (0, r.LX)(n.pathname, {
                       path: C,
-                      exact: h,
-                      sensitive: g,
-                      strict: A
+                      exact: p,
+                      sensitive: S,
+                      strict: T
                   })
                 : null,
-            D = !!(T ? T(L, n) : L),
-            y = D
+            O = !!(v ? v(R, n) : R),
+            D = O
                 ? (function () {
                       for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                       return t
@@ -127,18 +127,18 @@ m(function (e, t) {
                               return e;
                           })
                           .join(' ');
-                  })(f, c)
-                : f,
-            b = D ? (0, o.Z)({}, N, {}, E) : N,
-            M = (0, o.Z)(
+                  })(h, c)
+                : h,
+            L = O ? (0, o.Z)({}, b, {}, _) : b,
+            x = (0, o.Z)(
                 {
-                    'aria-current': (D && i) || null,
-                    className: y,
-                    style: b,
+                    'aria-current': (O && i) || null,
+                    className: D,
+                    style: L,
                     to: s
                 },
-                v
+                N
             );
-        return I !== m ? (M.ref = t || O) : (M.innerRef = O), a.createElement(p, M);
+        return g !== E ? (x.ref = t || A) : (x.innerRef = A), a.createElement(m, x);
     });
 });

@@ -1,86 +1,86 @@
 t.d(n, {
     Z: function () {
-        return x;
+        return v;
     }
 });
 var i = t(200651),
-    s = t(192379),
+    l = t(192379),
     o = t(704215),
-    l = t(481060),
+    s = t(481060),
     r = t(605236),
     c = t(63063),
     a = t(369566),
     d = t(678738),
     u = t(151545),
-    _ = t(527790),
-    I = t(304042),
-    E = t(981631),
-    f = t(921944),
-    m = t(689938),
-    p = t(505865);
-function x(e) {
-    let { user: n, currentUser: t, onClose: x, profileGuildId: Z } = e,
-        { live: h, recent: S, stream: v } = (0, a.Z)(n.id),
-        T = n.id === t.id,
-        g = (0, r.wE)(o.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
+    f = t(527790),
+    m = t(304042),
+    p = t(981631),
+    x = t(921944),
+    I = t(388032),
+    h = t(505865);
+function v(e) {
+    let { user: n, currentUser: t, onClose: v, profileGuildId: g } = e,
+        { live: Z, recent: _, stream: b } = (0, a.Z)(n.id),
+        j = n.id === t.id,
+        E = (0, r.wE)(o.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
     return (
-        s.useEffect(() => {
-            if (!!T && !g)
+        l.useEffect(() => {
+            if (!!j && !E)
                 (0, r.EW)(o.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP, {
-                    dismissAction: f.L.AUTO_DISMISS,
+                    dismissAction: x.L.AUTO_DISMISS,
                     forceTrack: !0
                 });
-        }, [T, g]),
-        (0, i.jsxs)(l.ScrollerThin, {
-            className: p.scroller,
+        }, [j, E]),
+        (0, i.jsxs)(s.ScrollerThin, {
+            className: h.scroller,
             fade: !0,
             children: [
                 (0, i.jsxs)(d.Z, {
                     children: [
-                        null != v &&
-                            (0, i.jsx)(I.Z, {
+                        null != b &&
+                            (0, i.jsx)(m.Z, {
                                 user: n,
                                 currentUser: t,
-                                stream: v,
-                                onClose: x
+                                stream: b,
+                                onClose: v
                             }),
-                        h.map((e, s) =>
+                        Z.map((e, l) =>
                             (0, i.jsx)(
                                 u.Z,
                                 {
                                     user: n,
                                     currentUser: t,
                                     activity: e,
-                                    onClose: x,
-                                    profileGuildId: Z
+                                    onClose: v,
+                                    profileGuildId: g
                                 },
-                                'live-'.concat(s)
+                                'live-'.concat(l)
                             )
                         )
                     ]
                 }),
-                T &&
-                    S.length > 0 &&
+                j &&
+                    _.length > 0 &&
                     (0, i.jsx)(d.Z, {
-                        heading: m.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
-                        subheading: m.Z.Messages.USER_RECENT_ACTIVITY_LEARN_MORE.format({
+                        heading: I.intl.string(I.t.M0zgnZ),
+                        subheading: I.intl.format(I.t['4bk9Ag'], {
                             learnMoreHook: (e, n) =>
                                 (0, i.jsx)(
-                                    l.Anchor,
+                                    s.Anchor,
                                     {
-                                        href: c.Z.getArticleURL(E.BhN.ACTIVITY_STATUS_SETTINGS),
+                                        href: c.Z.getArticleURL(p.BhN.ACTIVITY_STATUS_SETTINGS),
                                         children: e
                                     },
                                     n
                                 )
                         }),
-                        children: S.map((e) =>
+                        children: _.map((e) =>
                             (0, i.jsx)(
-                                _.Z,
+                                f.Z,
                                 {
                                     user: n,
                                     entry: e,
-                                    onClose: x,
+                                    onClose: v,
                                     hideHeader: !0
                                 },
                                 e.id

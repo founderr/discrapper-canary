@@ -1,9 +1,9 @@
 n.d(t, {
     W: function () {
-        return h;
+        return p;
     },
     Z: function () {
-        return p;
+        return m;
     }
 });
 var r = n(200651);
@@ -16,63 +16,63 @@ var i = n(442837),
     u = n(565138),
     c = n(769654),
     d = n(938475),
-    _ = n(652853),
-    E = n(228168),
-    f = n(676411);
-let h = 3;
-function p(e) {
-    let { user: t, guild: n, channel: p, onAction: I, onClose: m } = e,
-        { profileType: T } = (0, _.z)(),
-        S = (0, i.Wu)([d.ZP], () =>
-            d.ZP.getVoiceStatesForChannel(p).map((e) => {
+    f = n(652853),
+    _ = n(228168),
+    h = n(676411);
+let p = 3;
+function m(e) {
+    let { user: t, guild: n, channel: m, onAction: g, onClose: E } = e,
+        { profileType: v } = (0, f.z)(),
+        I = (0, i.Wu)([d.ZP], () =>
+            d.ZP.getVoiceStatesForChannel(m).map((e) => {
                 let { user: t } = e;
                 return t;
             })
         ),
-        g = p.isGuildStageVoice() ? a.StageIcon : a.VoiceNormalIcon;
+        S = m.isGuildStageVoice() ? a.StageIcon : a.VoiceNormalIcon;
     return (0, r.jsxs)('div', {
-        className: f.voiceChannel,
+        className: h.voiceChannel,
         children: [
             (0, r.jsx)(u.Z, {
                 showTooltip: !0,
                 guild: n,
                 size: u.Z.Sizes.SMOL,
-                className: f.guildIcon
+                className: h.guildIcon
             }),
             (0, r.jsx)(a.ChevronSmallRightIcon, {
                 size: 'xxs',
                 color: a.tokens.colors.INTERACTIVE_NORMAL
             }),
             (0, r.jsxs)('div', {
-                className: f.voiceChannelText,
+                className: h.voiceChannelText,
                 children: [
-                    (0, r.jsx)(g, {
+                    (0, r.jsx)(S, {
                         size: 'xxs',
                         color: a.tokens.colors.INTERACTIVE_NORMAL,
-                        className: f.voiceIcon
+                        className: h.voiceIcon
                     }),
                     (0, r.jsx)(a.Clickable, {
                         onClick: () => {
-                            s.default.selectVoiceChannel(p.id), (0, c.X)(n.id), null == I || I({ action: 'OPEN_VOICE_CHANNEL' }), null == m || m();
+                            s.default.selectVoiceChannel(m.id), (0, c.X)(n.id), null == g || g({ action: 'OPEN_VOICE_CHANNEL' }), null == E || E();
                         },
-                        className: f.clickable,
+                        className: h.clickable,
                         children: (0, r.jsx)(a.Text, {
                             variant: 'text-xs/normal',
                             color: 'interactive-normal',
                             lineClamp: 1,
-                            children: (0, r.jsx)(o.Z, { children: p.name })
+                            children: (0, r.jsx)(o.Z, { children: m.name })
                         })
                     })
                 ]
             }),
             (0, r.jsx)(l.Z, {
-                users: S,
+                users: I,
                 guildId: n.id,
-                channelId: p.id,
-                maxUsers: h,
+                channelId: m.id,
+                maxUsers: p,
                 size: a.AvatarSizes.SIZE_16,
-                onClick: () => (null == I ? void 0 : I({ action: 'PRESS_VOICE_CHANNEL_AVATARS' })),
-                disableUserPopout: T !== E.y0.FULL_SIZE || ((e) => e === t.id),
+                onClick: () => (null == g ? void 0 : g({ action: 'PRESS_VOICE_CHANNEL_AVATARS' })),
+                disableUserPopout: v !== _.y0.FULL_SIZE || ((e) => e === t.id),
                 overflowCountVariant: 'text-xs/normal'
             })
         ]

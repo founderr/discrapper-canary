@@ -1,9 +1,9 @@
 n.d(t, {
     V: function () {
-        return D;
+        return v;
     },
     a: function () {
-        return y;
+        return b;
     }
 }),
     n(653041),
@@ -13,8 +13,8 @@ n(192379);
 var a = n(120356),
     i = n.n(a),
     o = n(481060),
-    s = n(304680),
-    l = n(763520),
+    l = n(304680),
+    s = n(763520),
     c = n(600164),
     d = n(352978),
     u = n(131951),
@@ -23,12 +23,12 @@ var a = n(120356),
     h = n(65154),
     g = n(701491),
     f = n(113207);
-let C = {
+let y = {
     [h.Z.NO_OVERRIDE]: 'None',
     [h.Z.LOW]: 'Low Quality Stream',
     [h.Z.HIGH]: 'High Quality Stream'
 };
-function y(e) {
+function b(e) {
     let t = [],
         n = 0;
     for (
@@ -59,23 +59,23 @@ function y(e) {
         );
     return t;
 }
-let R = {
+let S = {
     ssrc: 1,
     codec: 2
 };
-function D(e, t, n, a, D) {
-    return e.map((S, b) => {
-        var E, v;
-        let F = [];
-        for (let e of Object.keys(S).sort((e, t) => {
-            let n = R[e],
-                r = R[t];
+function v(e, t, n, a, v) {
+    return e.map((C, D) => {
+        var F, R;
+        let E = [];
+        for (let e of Object.keys(C).sort((e, t) => {
+            let n = S[e],
+                r = S[t];
             if (n !== r) return void 0 === n ? 1 : void 0 === r ? -1 : n - r;
             return m.Pz[e] !== m.Pz[t] ? (m.Pz[e] ? 1 : -1) : e > t ? 1 : -1;
         })) {
-            let t = S[e];
+            let t = C[e];
             if (!p.al[e] && void 0 !== t)
-                F.push(
+                E.push(
                     (0, r.jsx)(
                         p.ck,
                         {
@@ -91,13 +91,13 @@ function D(e, t, n, a, D) {
             o.FormSection,
             {
                 className: f.marginBottom40,
-                title: S.type,
+                title: C.type,
                 titleClassName: g.sectionHeader,
                 children: [
-                    'video' === S.type &&
+                    'video' === C.type &&
                         null != n &&
                         null != a &&
-                        null != D &&
+                        null != v &&
                         (function (e, t, n, a) {
                             let o = a.get(t, n, e.ssrc);
                             return null != o
@@ -107,20 +107,20 @@ function D(e, t, n, a, D) {
                                           streamId: o,
                                           videoComponent: u.Z.getMediaEngine().Video,
                                           paused: !1,
-                                          videoSpinnerContext: l.m.REPLAY_VIDEO_STREAM,
+                                          videoSpinnerContext: s.m.REPLAY_VIDEO_STREAM,
                                           userId: n
                                       })
                                   })
                                 : null;
-                        })(S, n, a, D),
-                    y(F),
-                    'video' === S.type &&
-                        b === e.length - 1 &&
+                        })(C, n, a, v),
+                    b(E),
+                    'video' === C.type &&
+                        D === e.length - 1 &&
                         null != n &&
                         null != a &&
-                        null != D &&
-                        ((E = a),
-                        (v = t),
+                        null != v &&
+                        ((F = a),
+                        (R = t),
                         (0, r.jsx)(c.Z, {
                             className: f.marginBottom20,
                             children: (0, r.jsxs)(c.Z.Child, {
@@ -132,13 +132,13 @@ function D(e, t, n, a, D) {
                                         children: 'Simulcast Override'
                                     }),
                                     (0, r.jsx)(o.SingleSelect, {
-                                        value: m.ZP.getSimulcastDebugOverride(E, v),
+                                        value: m.ZP.getSimulcastDebugOverride(F, R),
                                         onChange: (e) => {
-                                            s.MS(E, v, e);
+                                            l.MS(F, R, e);
                                         },
                                         options: Object.values(h.Z).map((e) => ({
                                             value: e,
-                                            label: C[e]
+                                            label: y[e]
                                         }))
                                     })
                                 ]
@@ -146,7 +146,7 @@ function D(e, t, n, a, D) {
                         }))
                 ]
             },
-            ''.concat(S.type, ' + ').concat(S.ssrc)
+            ''.concat(C.type, ' + ').concat(C.ssrc)
         );
     });
 }

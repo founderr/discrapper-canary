@@ -10,45 +10,45 @@ var r = n(192379),
     o = n(590921);
 function l(e) {
     var t, n, l;
-    let { navId: u, scrollerRef: c, state: d, onFocus: _ } = e,
-        { renderWindow: E } = r.useContext(s.ZP),
-        f = (e, t) => {
+    let { navId: u, scrollerRef: c, state: d, onFocus: f } = e,
+        { renderWindow: _ } = r.useContext(s.ZP),
+        h = (e, t) => {
             var n;
             if ((null === (n = c.current) || void 0 === n || n.scrollToTop(), e && null != d.query)) {
                 let e = d.query.typeInfo.focusMode,
                     n = !(e === o.QZ.MANUAL || (e === o.QZ.AUTO_WHEN_FILTERED && 0 === d.query.queryText.length));
-                d.isVisible && (!0 !== t || !1 !== n) ? (p.setFocus('0'), null == _ || _(0)) : (p.setFocus(null), null == _ || _(null));
+                d.isVisible && (!0 !== t || !1 !== n) ? (m.setFocus('0'), null == f || f(0)) : (m.setFocus(null), null == f || f(null));
             }
         },
-        h = (e) => {
+        p = (e) => {
             var t;
             if ((null === (t = c.current) || void 0 === t || t.scrollToBottom(), e && null != d.query && d.query.resultCount > 0)) {
                 let e = d.query.resultCount - 1;
-                p.setFocus(e.toString()), null == _ || _(e);
+                m.setFocus(e.toString()), null == f || f(e);
             }
         },
-        p = (0, i.ZP)({
+        m = (0, i.ZP)({
             id: u,
             isEnabled: d.isVisible,
             orientation: a.hy.VERTICAL,
             useVirtualFocus: !0,
             setFocus: (e, t) => {
-                let n = E.document.querySelector(e);
+                let n = _.document.querySelector(e);
                 if (null != n) {
                     var r;
                     null === (r = c.current) || void 0 === r || r.scrollIntoViewNode({ node: n });
                 }
-                null == _ || _(+t);
+                null == f || f(+t);
             },
-            onNavigateNextAtEnd: () => f(!0),
-            onNavigatePreviousAtStart: () => h(!0),
-            scrollToStart: () => (f(!1, !1), Promise.resolve()),
-            scrollToEnd: () => (h(!1), Promise.resolve())
+            onNavigateNextAtEnd: () => h(!0),
+            onNavigatePreviousAtStart: () => p(!0),
+            scrollToStart: () => (h(!1, !1), Promise.resolve()),
+            scrollToEnd: () => (p(!1), Promise.resolve())
         });
     return (
         r.useEffect(() => {
-            f(!0, !0);
+            h(!0, !0);
         }, [null === (t = d.query) || void 0 === t ? void 0 : t.type, null === (n = d.query) || void 0 === n ? void 0 : n.queryText, null === (l = d.query) || void 0 === l ? void 0 : l.isLoading, d.isVisible]),
-        p
+        m
     );
 }

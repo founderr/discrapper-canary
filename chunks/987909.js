@@ -1,64 +1,64 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return x;
     }
 }),
     n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(442837),
-    r = n(481060),
-    l = n(904245),
-    o = n(541716),
+    r = n(192379),
+    l = n(442837),
+    a = n(481060),
+    o = n(904245),
+    s = n(541716),
     c = n(419922),
     u = n(665906),
     d = n(271383),
-    _ = n(496675),
-    E = n(594174),
-    I = n(626135),
-    m = n(709054),
-    f = n(838440),
-    T = n(981631),
-    h = n(385920);
-function N(e) {
+    m = n(496675),
+    f = n(594174),
+    h = n(626135),
+    p = n(709054),
+    g = n(838440),
+    _ = n(981631),
+    C = n(385920);
+function E(e) {
     let { assets: t, currentUser: n, message: i } = e,
-        a = (m.default.extractTimestamp(n.id) + m.default.extractTimestamp(i.id)) % t.length;
-    return t[a];
+        r = (p.default.extractTimestamp(n.id) + p.default.extractTimestamp(i.id)) % t.length;
+    return t[r];
 }
-function p(e) {
-    let { currentUser: t, channel: n, message: s, buttonLabels: u, stickers: d, event: _, eventProperties: E } = e,
-        [m, T] = a.useState(!1),
-        p = a.useMemo(
+function I(e) {
+    let { currentUser: t, channel: n, message: l, buttonLabels: u, stickers: d, event: m, eventProperties: f } = e,
+        [p, _] = r.useState(!1),
+        I = r.useMemo(
             () =>
-                N({
+                E({
                     assets: d,
                     currentUser: t,
-                    message: s
+                    message: l
                 }),
-            [d, t, s]
+            [d, t, l]
         ),
-        C = a.useMemo(
+        x = r.useMemo(
             () =>
-                N({
+                E({
                     assets: u,
                     currentUser: t,
-                    message: s
+                    message: l
                 }),
-            [u, t, s]
+            [u, t, l]
         ),
-        g = a.useCallback(async () => {
-            let { valid: e } = await (0, f.v)({
-                type: o.I.FORM,
+        v = r.useCallback(async () => {
+            let { valid: e } = await (0, g.v)({
+                type: s.I.FORM,
                 content: '',
                 channel: n
             });
             e &&
                 (!(function (e) {
                     let { channel: t, message: n, sticker: i } = e;
-                    l.Z.sendGreetMessage(
+                    o.Z.sendGreetMessage(
                         t.id,
                         i.id,
-                        l.Z.getSendMessageOptionsForReply({
+                        o.Z.getSendMessageOptionsForReply({
                             channel: t,
                             message: n,
                             shouldMention: !0,
@@ -67,71 +67,71 @@ function p(e) {
                     );
                 })({
                     channel: n,
-                    message: s,
-                    sticker: p
+                    message: l,
+                    sticker: I
                 }),
                 !(function (e) {
                     let { sticker: t, event: n, eventProperties: i } = e;
                     null != n &&
-                        I.default.track(n, {
+                        h.default.track(n, {
                             ...i,
                             sticker_id: t.id
                         });
                 })({
-                    sticker: p,
-                    event: _,
-                    eventProperties: E
+                    sticker: I,
+                    event: m,
+                    eventProperties: f
                 }));
-        }, [n, s, p, _, E]);
-    return (0, i.jsxs)(r.Button, {
-        className: h.CTAMessageButtonOuter,
-        innerClassName: h.CTAMessageButton,
-        color: r.ButtonColors.PRIMARY,
-        onMouseEnter: () => T(!0),
-        onMouseLeave: () => T(!1),
-        onClick: g,
+        }, [n, l, I, m, f]);
+    return (0, i.jsxs)(a.Button, {
+        className: C.CTAMessageButtonOuter,
+        innerClassName: C.CTAMessageButton,
+        color: a.ButtonColors.PRIMARY,
+        onMouseEnter: () => _(!0),
+        onMouseLeave: () => _(!1),
+        onClick: v,
         children: [
             (0, i.jsx)(c.ZP, {
-                className: h.CTAMessageSticker,
-                isInteracting: m,
-                sticker: p,
+                className: C.CTAMessageSticker,
+                isInteracting: p,
+                sticker: I,
                 size: 28
             }),
-            C
+            x
         ]
     });
 }
-function C(e) {
-    let { channel: t, message: n, buttonLabels: a, stickers: r, event: l, eventProperties: o } = e,
-        c = E.default.getCurrentUser(),
-        I = (function (e) {
+function x(e) {
+    let { channel: t, message: n, buttonLabels: r, stickers: a, event: o, eventProperties: s } = e,
+        c = f.default.getCurrentUser(),
+        h = (function (e) {
             let { channel: t, message: n, currentUser: i } = e;
-            return (0, s.e7)([_.Z, d.ZP], () => {
+            return (0, l.e7)([m.Z, d.ZP], () => {
                 var e;
-                let a = t.guild_id;
-                if (null == i || null == a) return !1;
-                let s = (0, u.xl)(t),
-                    r = _.Z.can(T.Plq.SEND_MESSAGES, t),
-                    l = null === (e = d.ZP.getMember(a, i.id)) || void 0 === e ? void 0 : e.isPending,
-                    o = n.author.bot;
-                return r && !s && !l && !o;
+                let r = t.guild_id;
+                if (null == i || null == r) return !1;
+                let l = (0, u.xl)(t),
+                    a = m.Z.can(_.Plq.SEND_MESSAGES, t),
+                    o = null === (e = d.ZP.getMember(r, i.id)) || void 0 === e ? void 0 : e.isPending,
+                    s = n.author.bot;
+                return a && !l && !o && !s;
             });
         })({
             channel: t,
             message: n,
             currentUser: c
         });
-    return null != c && I
+    return null != c && h
         ? (0, i.jsx)('div', {
-              className: h.CTAMessage,
-              children: (0, i.jsx)(p, {
+              className: C.CTAMessage,
+              children: (0, i.jsx)(I, {
                   currentUser: c,
                   channel: t,
                   message: n,
-                  buttonLabels: a,
-                  stickers: r,
-                  event: l,
-                  eventProperties: o
+                  buttonLabels: r,
+                  stickers: a,
+                  event: o,
+                  eventProperties: s
               })
           })
         : null;

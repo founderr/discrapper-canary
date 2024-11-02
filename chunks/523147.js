@@ -1,6 +1,6 @@
-var i = t(585483),
-    l = t(981631);
-n.Z = {
+var i = e(585483),
+    l = e(981631);
+t.Z = {
     binds: ['mod+shift+b'],
     comboKeysBindGlobal: !0,
     action: () => (i.S.dispatch(l.CkL.TOGGLE_SOUNDBOARD), !1)

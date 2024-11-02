@@ -1,23 +1,23 @@
 n(47120);
 var i = n(570140),
-    a = n(996106),
-    s = n(452426),
-    r = n(701488),
-    l = n(231338);
+    r = n(996106),
+    l = n(452426),
+    a = n(701488),
+    s = n(231338);
 t.Z = {
-    [l.Et.SET_ORIENTATION_LOCK_STATE]: {
+    [s.Et.SET_ORIENTATION_LOCK_STATE]: {
         validation: (e) =>
-            (0, s.Z)(e)
+            (0, l.Z)(e)
                 .required()
                 .keys({
-                    lock_state: e.number().valid(r.xK.UNLOCKED, r.xK.PORTRAIT, r.xK.LANDSCAPE).required(),
-                    picture_in_picture_lock_state: e.number().valid(r.xK.UNLOCKED, r.xK.PORTRAIT, r.xK.LANDSCAPE).allow(null).optional(),
-                    grid_lock_state: e.number().valid(r.xK.UNLOCKED, r.xK.PORTRAIT, r.xK.LANDSCAPE).allow(null).optional()
+                    lock_state: e.number().valid(a.xK.UNLOCKED, a.xK.PORTRAIT, a.xK.LANDSCAPE).required(),
+                    picture_in_picture_lock_state: e.number().valid(a.xK.UNLOCKED, a.xK.PORTRAIT, a.xK.LANDSCAPE).allow(null).optional(),
+                    grid_lock_state: e.number().valid(a.xK.UNLOCKED, a.xK.PORTRAIT, a.xK.LANDSCAPE).allow(null).optional()
                 }),
         handler(e) {
             let {
                     socket: t,
-                    args: { lock_state: n, picture_in_picture_lock_state: s, grid_lock_state: r }
+                    args: { lock_state: n, picture_in_picture_lock_state: l, grid_lock_state: a }
                 } = e,
                 o = t.application.id;
             if (null != o)
@@ -25,10 +25,10 @@ t.Z = {
                     type: 'EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE',
                     applicationId: o,
                     lockState: n,
-                    pictureInPictureLockState: s,
-                    gridLockState: r
+                    pictureInPictureLockState: l,
+                    gridLockState: a
                 });
-            else throw new a.Z({ errorCode: l.lT.INVALID_COMMAND }, 'No application.');
+            else throw new r.Z({ errorCode: s.lT.INVALID_COMMAND }, 'No application.');
         }
     }
 };

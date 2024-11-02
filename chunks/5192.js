@@ -11,7 +11,7 @@ var r = n(442837),
     a = n(271383),
     s = n(699516),
     o = n(51144),
-    l = n(689938);
+    l = n(388032);
 function u(e, t, n) {
     if (null == n) return null;
     if (null != e) return a.ZP.getNick(e, n.id);
@@ -23,7 +23,7 @@ function u(e, t, n) {
 }
 function c(e, t, n) {
     var r;
-    return null == n ? l.Z.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER : null !== (r = u(e, t, n)) && void 0 !== r ? r : o.ZP.getName(n);
+    return null == n ? l.intl.string(l.t.sKdZ6e) : null !== (r = u(e, t, n)) && void 0 !== r ? r : o.ZP.getName(n);
 }
 function d(e, t, n) {
     return (0, r.e7)([a.ZP, i.Z, s.Z], () => c(e, t, n));

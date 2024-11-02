@@ -1,18 +1,18 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var a = n(192379),
-    o = n(252618),
-    s = n(358085),
-    l = n(689938);
-function r() {
+var o = n(192379),
+    l = n(252618),
+    a = n(358085),
+    r = n(388032);
+function i() {
     return (
-        a.useEffect(() => {
-            !s.isPlatformEmbedded &&
-                (0, o.EM)({
-                    messages: [l.Z.Messages.GO_LIVE_HEY, l.Z.Messages.GO_LIVE_LOOK, l.Z.Messages.GO_LIVE_LISTEN],
+        o.useEffect(() => {
+            !a.isPlatformEmbedded &&
+                (0, l.EM)({
+                    messages: [r.intl.string(r.t.KIX3cn), r.intl.string(r.t['UbO+8v']), r.intl.string(r.t.MbySu7)],
                     interval: 600,
                     count: 20,
                     onlyWhenBlurred: !0

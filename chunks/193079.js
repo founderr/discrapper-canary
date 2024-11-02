@@ -6,7 +6,7 @@ var r = n(548015),
     l = n(396379),
     u = r.Z ? r.Z.prototype : void 0,
     c = u ? u.valueOf : void 0;
-t.Z = function (e, t, n, r, u, d, _) {
+t.Z = function (e, t, n, r, u, d, f) {
     switch (n) {
         case '[object DataView]':
             if (e.byteLength != t.byteLength || e.byteOffset != t.byteOffset) break;
@@ -24,15 +24,15 @@ t.Z = function (e, t, n, r, u, d, _) {
         case '[object String]':
             return e == t + '';
         case '[object Map]':
-            var E = o.Z;
+            var _ = o.Z;
         case '[object Set]':
-            var f = 1 & r;
-            if ((E || (E = l.Z), e.size != t.size && !f)) break;
-            var h = _.get(e);
-            if (h) return h == t;
-            (r |= 2), _.set(e, t);
-            var p = (0, s.Z)(E(e), E(t), r, u, d, _);
-            return _.delete(e), p;
+            var h = 1 & r;
+            if ((_ || (_ = l.Z), e.size != t.size && !h)) break;
+            var p = f.get(e);
+            if (p) return p == t;
+            (r |= 2), f.set(e, t);
+            var m = (0, s.Z)(_(e), _(t), r, u, d, f);
+            return f.delete(e), m;
         case '[object Symbol]':
             if (c) return c.call(e) == c.call(t);
     }

@@ -1,29 +1,29 @@
-t.d(s, {
+n.d(t, {
     E: function () {
-        return l;
+        return o;
     }
 }),
-    t(47120);
-var n = t(192379),
-    a = t(170401),
-    i = t(996733),
-    r = t(394644),
-    o = t(726985);
-function l() {
-    let e = (0, i.Z7)(),
-        s = (0, r.Pt)(),
-        t = n.useRef(new a.Z((0, r.ji)(s))),
-        [l, c] = n.useState(!1),
-        [d, _] = n.useState(o.QF),
-        u = n.useCallback(async (e) => {
-            _(await t.current.search(e.trim())), c(!0);
+    n(47120);
+var i = n(192379),
+    s = n(170401),
+    r = n(996733),
+    l = n(394644),
+    a = n(726985);
+function o() {
+    let e = (0, r.Z7)(),
+        t = (0, l.Pt)(),
+        n = i.useRef(new s.Z((0, l.ji)(t))),
+        [o, c] = i.useState(!1),
+        [d, u] = i.useState(a.QF),
+        m = i.useCallback(async (e) => {
+            u(await n.current.search(e.trim())), c(!0);
         }, []);
     return (
-        n.useEffect(() => {
-            '' === e || e.length < 2 ? (_(o.QF), c(!1)) : u(e);
-        }, [e, u]),
+        i.useEffect(() => {
+            '' === e || e.length < 2 ? (u(a.QF), c(!1)) : m(e);
+        }, [e, m]),
         {
-            hasSearchResults: l,
+            hasSearchResults: o,
             searchResults: d
         }
     );

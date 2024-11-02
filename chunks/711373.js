@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return o;
+        return d;
     }
 }),
     t(724458),
@@ -10,21 +10,21 @@ var i = t(192379),
     a = t(442837),
     l = t(924301),
     r = t(765305);
-function o(e, n) {
+function d(e, n) {
     let t = (0, a.Wu)([l.ZP], () => Object.values(l.ZP.getUsersForGuildEvent(e, null)), [e]),
-        o = (0, a.Wu)([l.ZP], () => Object.values(l.ZP.getUsersForGuildEvent(e, n)), [e, n]);
+        d = (0, a.Wu)([l.ZP], () => Object.values(l.ZP.getUsersForGuildEvent(e, n)), [e, n]);
     return (0, i.useMemo)(() => {
-        let e = o.reduce((e, n) => ((e[n.user_id] = n), e), {}),
+        let e = d.reduce((e, n) => ((e[n.user_id] = n), e), {}),
             n = t.filter((n) => {
                 let t = e[n.user_id];
                 return null == t || t.response === r.gv.INTERESTED;
             }),
-            i = o.filter((e) => e.response === r.gv.INTERESTED),
+            i = d.filter((e) => e.response === r.gv.INTERESTED),
             a = new Set(),
             l = [],
-            c = (e) => {
+            o = (e) => {
                 !a.has(e.user_id) && (l.push(e), a.add(e.user_id));
             };
-        return n.forEach(c), i.forEach(c), l;
-    }, [t, o]);
+        return n.forEach(o), i.forEach(o), l;
+    }, [t, d]);
 }

@@ -1,11 +1,11 @@
-var s,
-    a = n(442837),
-    r = n(570140),
-    i = n(314897),
+var i,
+    r = n(442837),
+    a = n(570140),
+    s = n(314897),
     l = n(57562),
     o = n(351780),
     c = n(843693);
-function _(e, t, n) {
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,36 +18,36 @@ function _(e, t, n) {
         e
     );
 }
-let d = { unlockedAchievements: {} },
-    E = { ...d };
-class u extends (s = a.ZP.PersistedStore) {
+let u = { unlockedAchievements: {} },
+    g = { ...u };
+class m extends (i = r.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(i.default, c.ZP);
-        let t = null != e ? e : { ...d };
-        for (let e in t) E[e] = t[e];
+        this.waitFor(s.default, c.ZP);
+        let t = null != e ? e : { ...u };
+        for (let e in t) g[e] = t[e];
     }
     getState() {
-        return E;
+        return g;
     }
     getAllUnlockedAchievements() {
-        return E.unlockedAchievements;
+        return g.unlockedAchievements;
     }
     getUnlocked(e) {
         var t;
-        return null !== (t = E.unlockedAchievements[e]) && void 0 !== t ? t : null;
+        return null !== (t = g.unlockedAchievements[e]) && void 0 !== t ? t : null;
     }
 }
-_(u, 'displayName', 'PoggermodeAchievementStore'),
-    _(u, 'persistKey', 'PoggermodeAchievementStore'),
-    (t.Z = new u(r.Z, {
+d(m, 'displayName', 'PoggermodeAchievementStore'),
+    d(m, 'persistKey', 'PoggermodeAchievementStore'),
+    (t.Z = new m(a.Z, {
         POGGERMODE_ACHIEVEMENT_UNLOCK: function (e) {
             var t;
             let { achievementId: n } = e;
             if (!o.Z.isEnabled()) return !1;
             (t = n),
-                null != E.unlockedAchievements[t] ||
-                    ((E.unlockedAchievements = {
-                        ...E.unlockedAchievements,
+                null != g.unlockedAchievements[t] ||
+                    ((g.unlockedAchievements = {
+                        ...g.unlockedAchievements,
                         [t]: {
                             achievementId: t,
                             dateUnlocked: Date.now()

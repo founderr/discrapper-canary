@@ -12,124 +12,124 @@ n.d(t, {
         return o;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(481060),
-    i = n(983135),
-    r = n(689938),
-    l = n(878443);
+var r = n(481060),
+    l = n(983135),
+    s = n(388032),
+    a = n(878443);
 function o() {
-    return (0, s.jsxs)('div', {
-        className: l.container,
+    return (0, i.jsxs)('div', {
+        className: a.container,
         children: [
-            (0, s.jsx)(a.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: 'text-xs/semibold',
                 color: 'header-secondary',
-                className: l.stepHeader,
-                children: r.Z.Messages.STEP_NUMBER.format({ number: 1 })
+                className: a.stepHeader,
+                children: s.intl.format(s.t.tCQ3Hx, { number: 1 })
             }),
-            (0, s.jsx)(a.Heading, {
+            (0, i.jsx)(r.Heading, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
-                className: l.header,
-                children: r.Z.Messages.GUILD_ONBOARDING_UPSELL_SAFETY_TITLE
+                className: a.header,
+                children: s.intl.string(s.t.e6spZm)
             }),
-            (0, s.jsx)(a.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: r.Z.Messages.GUILD_ONBOARDING_UPSELL_SAFETY_TITLE_TOOLTIP
+                children: s.intl.string(s.t['8ega19'])
             }),
-            (0, s.jsx)(a.Button, {
-                className: l.button,
-                onClick: () => (0, i.Nb)('Safety Check'),
-                children: r.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_OVERVIEW_CTA
+            (0, i.jsx)(r.Button, {
+                className: a.button,
+                onClick: () => (0, l.Nb)('Safety Check'),
+                children: s.intl.string(s.t.TbzK39)
             })
         ]
     });
 }
 function c() {
-    return (0, s.jsxs)('div', {
-        className: l.container,
+    return (0, i.jsxs)('div', {
+        className: a.container,
         children: [
-            (0, s.jsx)(a.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: 'text-xs/semibold',
                 color: 'header-secondary',
-                className: l.stepHeader,
-                children: r.Z.Messages.STEP_NUMBER.format({ number: 2 })
+                className: a.stepHeader,
+                children: s.intl.format(s.t.tCQ3Hx, { number: 2 })
             }),
-            (0, s.jsx)(a.Heading, {
+            (0, i.jsx)(r.Heading, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
-                className: l.header,
-                children: r.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_DEFAULT_CHANNELS_TITLE
+                className: a.header,
+                children: s.intl.string(s.t.nRE3tb)
             }),
-            (0, s.jsx)(a.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: r.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_DEFAULT_CHANNELS_SUBTITLE
+                children: s.intl.string(s.t.y08PCA)
             }),
-            (0, s.jsx)(a.Button, {
-                className: l.button,
-                onClick: () => (0, i.Nb)('Default Channels'),
-                children: r.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_OVERVIEW_CTA
+            (0, i.jsx)(r.Button, {
+                className: a.button,
+                onClick: () => (0, l.Nb)('Default Channels'),
+                children: s.intl.string(s.t.TbzK39)
             })
         ]
     });
 }
 function d() {
-    return (0, s.jsxs)('div', {
-        className: l.container,
+    return (0, i.jsxs)('div', {
+        className: a.container,
         children: [
-            (0, s.jsx)(a.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: 'text-xs/semibold',
                 color: 'header-secondary',
-                className: l.stepHeader,
-                children: r.Z.Messages.STEP_NUMBER.format({ number: 3 })
+                className: a.stepHeader,
+                children: s.intl.format(s.t.tCQ3Hx, { number: 3 })
             }),
-            (0, s.jsx)(a.Heading, {
+            (0, i.jsx)(r.Heading, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
-                className: l.header,
-                children: r.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_CUSTOMIZATION_QUESTIONS_TITLE
+                className: a.header,
+                children: s.intl.string(s.t.VkaI6u)
             }),
-            (0, s.jsx)(a.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: r.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_CUSTOMIZATION_QUESTIONS_SUBTITLE
+                children: s.intl.string(s.t.TVGk1d)
             }),
-            (0, s.jsx)(a.Button, {
-                className: l.button,
-                onClick: () => (0, i.Nb)('Customization Questions'),
-                children: r.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_OVERVIEW_CTA
+            (0, i.jsx)(r.Button, {
+                className: a.button,
+                onClick: () => (0, l.Nb)('Customization Questions'),
+                children: s.intl.string(s.t.TbzK39)
             })
         ]
     });
 }
 function u() {
-    return (0, s.jsxs)('div', {
-        className: l.container,
+    return (0, i.jsxs)('div', {
+        className: a.container,
         children: [
-            (0, s.jsx)(a.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: 'text-xs/semibold',
                 color: 'header-secondary',
-                className: l.stepHeader,
-                children: r.Z.Messages.STEP_NUMBER.format({ number: 4 })
+                className: a.stepHeader,
+                children: s.intl.format(s.t.tCQ3Hx, { number: 4 })
             }),
-            (0, s.jsx)(a.Heading, {
+            (0, i.jsx)(r.Heading, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
-                className: l.header,
-                children: r.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_HOME_TITLE
+                className: a.header,
+                children: s.intl.string(s.t['3SM68P'])
             }),
-            (0, s.jsx)(a.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: r.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_HOME_SUBTITLE
+                children: s.intl.string(s.t.eamP29)
             }),
-            (0, s.jsx)(a.Button, {
-                className: l.button,
-                onClick: () => (0, i.Nb)('Home Settings'),
-                children: r.Z.Messages.GUILD_ONBOARDING_SETUP_EDUCATION_OVERVIEW_CTA
+            (0, i.jsx)(r.Button, {
+                className: a.button,
+                onClick: () => (0, l.Nb)('Home Settings'),
+                children: s.intl.string(s.t.TbzK39)
             })
         ]
     });

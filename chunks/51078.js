@@ -1,36 +1,36 @@
-n.d(t, {
+n.d(e, {
     Z: function () {
-        return O;
+        return p;
     }
 });
-var o = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(442837),
+var o = n(442837),
     i = n(481060),
     a = n(906732),
-    s = n(313201),
-    u = n(594174),
-    c = n(74538),
-    d = n(242291),
-    l = n(710111),
-    f = n(689938);
-function O(e, t) {
+    u = n(313201),
+    c = n(594174),
+    s = n(74538),
+    l = n(242291),
+    d = n(710111),
+    f = n(388032);
+function p(t, e) {
     let { analyticsLocations: n } = (0, a.ZP)(),
-        O = (0, r.e7)([u.default], () => u.default.getCurrentUser()),
-        p = (0, s.Dt)(),
-        N = (0, s.Dt)();
-    return null != t && c.ZP.canUseCustomCallSounds(O)
-        ? (0, o.jsxs)(o.Fragment, {
+        p = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
+        w = (0, u.Dt)(),
+        b = (0, u.Dt)();
+    return null != e && s.ZP.canUseCustomCallSounds(p)
+        ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, o.jsx)(i.MenuItem, {
-                      id: p,
-                      label: f.Z.Messages.CALL_SOUNDS_CONTEXT_MENU_GUILD,
-                      action: () => (0, d.SZ)(t, e, n)
+                  (0, r.jsx)(i.MenuItem, {
+                      id: w,
+                      label: f.intl.string(f.t.p2hUt7),
+                      action: () => (0, l.SZ)(e, t, n)
                   }),
-                  (0, o.jsx)(i.MenuItem, {
-                      id: N,
-                      label: f.Z.Messages.CALL_SOUNDS_CONTEXT_MENU_GLOBAL,
-                      action: () => (0, d.SZ)(l.hY, e, n)
+                  (0, r.jsx)(i.MenuItem, {
+                      id: b,
+                      label: f.intl.string(f.t['/yA6QU']),
+                      action: () => (0, l.SZ)(d.hY, t, n)
                   })
               ]
           })

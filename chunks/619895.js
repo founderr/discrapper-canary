@@ -3,19 +3,19 @@ t.d(n, {
         return E;
     },
     hR: function () {
-        return _;
+        return p;
     },
     yJ: function () {
         return s;
     }
 });
 var i = t(192379),
-    a = t(892814),
-    l = t(442837),
+    l = t(892814),
+    a = t(442837),
     o = t(895924),
-    c = t(581364),
-    d = t(823379),
-    r = t(399654),
+    r = t(581364),
+    c = t(823379),
+    d = t(399654),
     u = t(844439);
 let s = {
         '1181475143340539995': {
@@ -49,11 +49,11 @@ function E(e) {
             return '';
     }
 }
-function _(e) {
+function p(e) {
     let { channelId: n } = e,
         { fetchState: t, recommendationsSections: E } = (function (e) {
             let { channelId: n } = e,
-                t = a.I.CONTEXTUAL_IMAGE,
+                t = l.I.CONTEXTUAL_IMAGE,
                 o = i.useMemo(
                     () => ({
                         channelId: n,
@@ -63,15 +63,15 @@ function _(e) {
                     [n, t]
                 );
             i.useEffect(() => {
-                (0, r.a)(o);
+                (0, d.a)(o);
             }, [o]);
-            let { fetchState: c, recommendationsSections: d } = (0, l.cj)([u.ZP], () => ({
+            let { fetchState: r, recommendationsSections: c } = (0, a.cj)([u.ZP], () => ({
                 fetchState: u.ZP.getFetchState(o),
                 recommendationsSections: u.ZP.getRecommendations(o)
             }));
             return {
-                fetchState: c,
-                recommendationsSections: d
+                fetchState: r,
+                recommendationsSections: c
             };
         })({ channelId: n });
     return {
@@ -82,25 +82,25 @@ function _(e) {
                 ? []
                 : m
                       .map((n) => {
-                          var t, i, a, l;
-                          let d, r;
+                          var t, i, l, a;
+                          let c, d;
                           let u = e.find((e) => {
                               var t;
-                              return null != (d = null === (t = e.commands) || void 0 === t ? void 0 : t.find((e) => e.id === n));
+                              return null != (c = null === (t = e.commands) || void 0 === t ? void 0 : t.find((e) => e.id === n));
                           });
                           if (null == u) return null;
                           let { application: m } = u;
-                          if (null == d) return null;
-                          let E = (0, c.Z8)({
-                                  rootCommand: d,
-                                  command: d,
+                          if (null == c) return null;
+                          let E = (0, r.Z8)({
+                                  rootCommand: c,
+                                  command: c,
                                   applicationId: m.id
                               }),
-                              _ = null === (t = s[n].overrideSendCommandInfo) || void 0 === t ? void 0 : t.commandId;
-                          if (null != _) {
-                              let e = null != _ ? (null === (a = u.commands) || void 0 === a ? void 0 : a.find((e) => e.id === _)) : void 0;
+                              p = null === (t = s[n].overrideSendCommandInfo) || void 0 === t ? void 0 : t.commandId;
+                          if (null != p) {
+                              let e = null != p ? (null === (l = u.commands) || void 0 === l ? void 0 : l.find((e) => e.id === p)) : void 0;
                               null != e &&
-                                  (r = (0, c.Z8)({
+                                  (d = (0, r.Z8)({
                                       rootCommand: e,
                                       command: e,
                                       applicationId: m.id
@@ -114,17 +114,17 @@ function _(e) {
                                       .map((e) => e.charAt(0).toUpperCase() + e.slice(1))
                                       .join(' ')
                               },
-                              overrideSendCommand: r,
+                              overrideSendCommand: d,
                               section: {
                                   type: o.Qi.APPLICATION,
                                   id: m.id,
                                   icon: m.icon,
-                                  name: null !== (l = null == m ? void 0 : null === (i = m.bot) || void 0 === i ? void 0 : i.username) && void 0 !== l ? l : m.name,
+                                  name: null !== (a = null == m ? void 0 : null === (i = m.bot) || void 0 === i ? void 0 : i.username) && void 0 !== a ? a : m.name,
                                   application: m
                               }
                           };
                       })
-                      .filter(d.lm);
+                      .filter(c.lm);
         }, [E])
     };
 }

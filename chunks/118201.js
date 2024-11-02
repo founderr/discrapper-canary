@@ -27,7 +27,7 @@ var l = (function () {
         var u,
             c,
             d,
-            _ = this;
+            f = this;
         if (
             ((this.formatterCache = {
                 number: {},
@@ -35,7 +35,7 @@ var l = (function () {
                 pluralRules: {}
             }),
             (this.format = function (e) {
-                var t = _.formatToParts(e);
+                var t = f.formatToParts(e);
                 if (1 === t.length) return t[0].value;
                 var n = t.reduce(function (e, t) {
                     return e.length && t.type === s.du.literal && 'string' == typeof e[e.length - 1] ? (e[e.length - 1] += t.value) : e.push(t.value), e;
@@ -43,23 +43,23 @@ var l = (function () {
                 return n.length <= 1 ? n[0] || '' : n;
             }),
             (this.formatToParts = function (e) {
-                return (0, s.FK)(_.ast, _.locales, _.formatters, _.formats, e, void 0, _.message);
+                return (0, s.FK)(f.ast, f.locales, f.formatters, f.formats, e, void 0, f.message);
             }),
             (this.resolvedOptions = function () {
                 var e;
-                return { locale: (null === (e = _.resolvedLocale) || void 0 === e ? void 0 : e.toString()) || Intl.NumberFormat.supportedLocalesOf(_.locales)[0] };
+                return { locale: (null === (e = f.resolvedLocale) || void 0 === e ? void 0 : e.toString()) || Intl.NumberFormat.supportedLocalesOf(f.locales)[0] };
             }),
             (this.getAst = function () {
-                return _.ast;
+                return f.ast;
             }),
             (this.locales = n),
             (this.resolvedLocale = e.resolveLocale(n)),
             'string' == typeof t)
         ) {
             if (((this.message = t), !e.__parse)) throw TypeError('IntlMessageFormat.__parse must be set to process `message` of type `string`');
-            var E = l || {},
-                f = (E.formatters, (0, r._T)(E, ['formatters']));
-            this.ast = e.__parse(t, (0, r.pi)((0, r.pi)({}, f), { locale: this.resolvedLocale }));
+            var _ = l || {},
+                h = (_.formatters, (0, r._T)(_, ['formatters']));
+            this.ast = e.__parse(t, (0, r.pi)((0, r.pi)({}, h), { locale: this.resolvedLocale }));
         } else this.ast = t;
         if (!Array.isArray(this.ast)) throw TypeError('A message must be provided as a String or AST.');
         (this.formats =

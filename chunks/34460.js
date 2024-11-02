@@ -1,239 +1,239 @@
-a.r(t),
-    a.d(t, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return v;
+            return L;
         }
     }),
-    a(47120);
-var n = a(200651),
-    s = a(192379),
-    l = a(120356),
-    i = a.n(l),
-    r = a(990547),
-    c = a(399606),
-    o = a(780384),
-    d = a(481060),
-    _ = a(935369),
-    m = a(367907),
-    T = a(213609),
-    x = a(44315),
-    I = a(210887),
-    E = a(626135),
-    u = a(923726),
-    h = a(570849),
-    R = a(853439),
-    C = a(303737),
-    p = a(587431),
-    L = a(862239),
-    N = a(847004),
-    g = a(981631),
-    S = a(689938),
-    j = a(82736);
-function O(e) {
-    let { name: t, imageUrl: a, selected: s, onTap: l } = e;
-    return (0, n.jsxs)(d.Clickable, {
-        onClick: l,
-        className: j.templateCard,
+    n(47120);
+var a = n(200651),
+    l = n(192379),
+    i = n(120356),
+    s = n.n(i),
+    r = n(990547),
+    c = n(399606),
+    o = n(780384),
+    d = n(481060),
+    m = n(935369),
+    x = n(367907),
+    u = n(213609),
+    h = n(44315),
+    _ = n(210887),
+    p = n(626135),
+    T = n(923726),
+    g = n(570849),
+    I = n(853439),
+    C = n(303737),
+    N = n(587431),
+    j = n(862239),
+    f = n(847004),
+    v = n(981631),
+    b = n(388032),
+    R = n(82736);
+function S(e) {
+    let { name: t, imageUrl: n, selected: l, onTap: i } = e;
+    return (0, a.jsxs)(d.Clickable, {
+        onClick: i,
+        className: R.templateCard,
         children: [
-            (0, n.jsx)('img', {
-                src: a,
+            (0, a.jsx)('img', {
+                src: n,
                 alt: '',
-                className: j.templateCardImage
+                className: R.templateCardImage
             }),
-            (0, n.jsxs)('div', {
-                className: j.templateNameRow,
+            (0, a.jsxs)('div', {
+                className: R.templateNameRow,
                 children: [
-                    (0, n.jsx)(d.Heading, {
+                    (0, a.jsx)(d.Heading, {
                         variant: 'heading-md/normal',
-                        className: i()({ [j.unselectedTemplateName]: !s }),
+                        className: s()({ [R.unselectedTemplateName]: !l }),
                         children: t
                     }),
-                    s &&
-                        (0, n.jsx)(d.CircleCheckIcon, {
+                    l &&
+                        (0, a.jsx)(d.CircleCheckIcon, {
                             size: 'md',
-                            secondaryColor: (0, x.Lq)(g.Ilk.WHITE_500),
-                            color: (0, x.Lq)(g.Ilk.BRAND_500)
+                            secondaryColor: (0, h.Lq)(v.Ilk.WHITE_500),
+                            color: (0, h.Lq)(v.Ilk.BRAND_500)
                         })
                 ]
             })
         ]
     });
 }
-function f(e) {
-    let { loading: t, error: a, templates: s, selectedTemplateIndex: l, handleTapTemplate: i } = e,
-        r = (0, c.e7)([I.Z], () => I.Z.theme);
+function B(e) {
+    let { loading: t, error: n, templates: l, selectedTemplateIndex: i, handleTapTemplate: s } = e,
+        r = (0, c.e7)([_.Z], () => _.Z.theme);
     return t
-        ? (0, n.jsx)(d.Spinner, {})
-        : null != a
-          ? (0, n.jsx)(p.Z, { children: a.message })
-          : null == s || 0 === s.length
+        ? (0, a.jsx)(d.Spinner, {})
+        : null != n
+          ? (0, a.jsx)(N.Z, { children: n.message })
+          : null == l || 0 === l.length
             ? null
-            : (0, n.jsx)('div', {
-                  className: j.templateCardList,
-                  children: s.map((e, t) =>
-                      (0, n.jsx)(
-                          O,
+            : (0, a.jsx)('div', {
+                  className: R.templateCardList,
+                  children: l.map((e, t) =>
+                      (0, a.jsx)(
+                          S,
                           {
-                              imageUrl: t === l ? e.category_image : (0, o.ap)(r) ? e.unselected_light_theme_category_image : e.unselected_dark_theme_category_image,
+                              imageUrl: t === i ? e.category_image : (0, o.ap)(r) ? e.unselected_light_theme_category_image : e.unselected_dark_theme_category_image,
                               name: e.category,
-                              selected: t === l,
-                              onTap: () => i(t)
+                              selected: t === i,
+                              onTap: () => s(t)
                           },
                           t
                       )
                   )
               });
 }
-function B(e) {
-    var t, a;
-    let { guildId: l, templates: i, selectedTemplateIndex: r, priceTiers: c, showPriceReselection: o, setShowPriceReselection: d, handleCreateTierFromTemplate: _ } = e,
-        m = (0, C.g4)(l, c, null != i ? (null === (a = i[r]) || void 0 === a ? void 0 : null === (t = a.listings[0]) || void 0 === t ? void 0 : t.price_tier) : void 0),
-        T = null != m && m.length > 0,
-        x = s.useCallback(
+function E(e) {
+    var t, n;
+    let { guildId: i, templates: s, selectedTemplateIndex: r, priceTiers: c, showPriceReselection: o, setShowPriceReselection: d, handleCreateTierFromTemplate: m } = e,
+        x = (0, C.g4)(i, c, null != s ? (null === (n = s[r]) || void 0 === n ? void 0 : null === (t = n.listings[0]) || void 0 === t ? void 0 : t.price_tier) : void 0),
+        u = null != x && x.length > 0,
+        h = l.useCallback(
             (e) => {
-                T ? d(!0) : _(e);
+                u ? d(!0) : m(e);
             },
-            [_, T, d]
+            [m, u, d]
         );
-    return null == i || 0 === i.length
+    return null == s || 0 === s.length
         ? null
-        : o && T
-          ? (0, n.jsx)(N.Z, {
-                selectedTemplate: i[r],
-                handleSelectTemplate: _,
-                newPricesToPick: m
+        : o && u
+          ? (0, a.jsx)(f.Z, {
+                selectedTemplate: s[r],
+                handleSelectTemplate: m,
+                newPricesToPick: x
             })
-          : (0, n.jsx)(L.Z, {
-                selectedTemplate: i[r],
-                handleSelectTemplate: x
+          : (0, a.jsx)(j.Z, {
+                selectedTemplate: s[r],
+                handleSelectTemplate: h
             });
 }
-function v(e) {
-    let { transitionState: t, onClose: a, guildId: l, addNewEditStateFromTemplate: i, addNewEditStateFromScratch: o, priceTiers: x } = e,
-        I = (0, c.e7)([R.Z], () => R.Z.getTemplates(l)),
-        [C, { loading: p, error: L }] = (0, _.Z)(h.u),
-        N = s.useRef('voluntarily_exit');
-    s.useEffect(() => {
-        (null == I || 0 === I.length) && C(l);
-    }, [C, l, I]),
-        s.useEffect(() => {
+function L(e) {
+    let { transitionState: t, onClose: n, guildId: i, addNewEditStateFromTemplate: s, addNewEditStateFromScratch: o, priceTiers: h } = e,
+        _ = (0, c.e7)([I.Z], () => I.Z.getTemplates(i)),
+        [C, { loading: N, error: j }] = (0, m.Z)(g.u),
+        f = l.useRef('voluntarily_exit');
+    l.useEffect(() => {
+        (null == _ || 0 === _.length) && C(i);
+    }, [C, i, _]),
+        l.useEffect(() => {
             t === d.ModalTransitionState.EXITING &&
-                E.default.track(g.rMx.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, {
-                    exit_reason: N.current,
-                    ...(0, m.hH)(l)
+                p.default.track(v.rMx.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, {
+                    exit_reason: f.current,
+                    ...(0, x.hH)(i)
                 });
-        }, [t, l, N]);
-    let [O, v] = s.useState(0),
-        [M, A] = s.useState(!1),
-        D = s.useCallback(
+        }, [t, i, f]);
+    let [S, L] = l.useState(0),
+        [k, y] = l.useState(!1),
+        w = l.useCallback(
             (e) => {
-                (N.current = 'template_selected'), (0, h.l)(e, l), i(e), a();
+                (f.current = 'template_selected'), (0, g.l)(e, i), s(e), n();
             },
-            [l, i, a]
+            [i, s, n]
         ),
-        U = s.useCallback(() => {
-            M ? A(!1) : a();
-        }, [M, a]),
-        b = (0, u.yi)(l);
+        U = l.useCallback(() => {
+            k ? y(!1) : n();
+        }, [k, n]),
+        D = (0, T.yi)(i);
     return (
-        (0, T.Z)({
+        (0, u.Z)({
             type: r.ImpressionTypes.MODAL,
             name: r.ImpressionNames.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR,
-            properties: { guild_id: l }
+            properties: { guild_id: i }
         }),
-        (0, n.jsxs)(d.ModalRoot, {
+        (0, a.jsxs)(d.ModalRoot, {
             transitionState: t,
             size: d.ModalSize.DYNAMIC,
-            className: j.modalRoot,
+            className: R.modalRoot,
             children: [
-                (0, n.jsx)(d.Clickable, {
+                (0, a.jsx)(d.Clickable, {
                     onClick: U,
-                    className: j.closeButton,
-                    children: (0, n.jsx)(d.XSmallIcon, {
+                    className: R.closeButton,
+                    children: (0, a.jsx)(d.XSmallIcon, {
                         size: 'xxs',
                         color: 'currentColor'
                     })
                 }),
-                (0, n.jsxs)(d.ModalContent, {
-                    className: j.modalContent,
+                (0, a.jsxs)(d.ModalContent, {
+                    className: R.modalContent,
                     children: [
-                        (0, n.jsxs)('div', {
-                            className: j.templatesContainer,
+                        (0, a.jsxs)('div', {
+                            className: R.templatesContainer,
                             children: [
-                                M &&
-                                    (0, n.jsx)(d.Clickable, {
-                                        className: j.blackoutOverlay,
+                                k &&
+                                    (0, a.jsx)(d.Clickable, {
+                                        className: R.blackoutOverlay,
                                         onClick: () => {
-                                            M && A(!1);
+                                            k && y(!1);
                                         },
                                         'aria-label': 'overlay'
                                     }),
-                                (0, n.jsxs)(d.ScrollerThin, {
-                                    className: j.templatesContainerBody,
+                                (0, a.jsxs)(d.ScrollerThin, {
+                                    className: R.templatesContainerBody,
                                     children: [
-                                        (0, n.jsx)(d.Heading, {
+                                        (0, a.jsx)(d.Heading, {
                                             variant: 'heading-xl/semibold',
-                                            children: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_MODAL_HEADER
+                                            children: b.intl.string(b.t['9QQ+i4'])
                                         }),
-                                        (0, n.jsx)(d.Text, {
+                                        (0, a.jsx)(d.Text, {
                                             variant: 'text-sm/normal',
-                                            className: j.modalBodyText,
-                                            children: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_MODAL_BODY
+                                            className: R.modalBodyText,
+                                            children: b.intl.string(b.t.CvFFOj)
                                         }),
-                                        b &&
-                                            (0, n.jsx)(d.Text, {
+                                        D &&
+                                            (0, a.jsx)(d.Text, {
                                                 variant: 'text-sm/normal',
-                                                className: j.creatorPortalText,
-                                                children: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_MODAL_CREATOR_PORTAL_LINK.format({ creatorPortalUrl: 'https://discord.com/creator-portal/learn-from-creators?tab=lightning-lessons' })
+                                                className: R.creatorPortalText,
+                                                children: b.intl.format(b.t.iQML2t, { creatorPortalUrl: 'https://discord.com/creator-portal/learn-from-creators?tab=lightning-lessons' })
                                             }),
-                                        (0, n.jsx)('div', {
-                                            className: j.templatesContentContainer,
-                                            children: (0, n.jsx)(f, {
-                                                loading: p,
-                                                error: L,
-                                                templates: I,
-                                                selectedTemplateIndex: O,
+                                        (0, a.jsx)('div', {
+                                            className: R.templatesContentContainer,
+                                            children: (0, a.jsx)(B, {
+                                                loading: N,
+                                                error: j,
+                                                templates: _,
+                                                selectedTemplateIndex: S,
                                                 handleTapTemplate: (e) => {
-                                                    v(e);
+                                                    L(e);
                                                 }
                                             })
                                         })
                                     ]
                                 }),
-                                (0, n.jsx)(d.Text, {
+                                (0, a.jsx)(d.Text, {
                                     variant: 'text-sm/normal',
-                                    children: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_MODAL_CREATE_FROM_SCRATCH_PROMPT
+                                    children: b.intl.string(b.t.jymUTE)
                                 }),
-                                (0, n.jsxs)(d.Button, {
+                                (0, a.jsxs)(d.Button, {
                                     size: d.Button.Sizes.MEDIUM,
                                     onClick: () => {
-                                        (N.current = 'create_from_scratch'), o(), a();
+                                        (f.current = 'create_from_scratch'), o(), n();
                                     },
                                     look: d.Button.Looks.OUTLINED,
                                     color: d.Button.Colors.PRIMARY,
-                                    className: j.createFromStratchButton,
-                                    innerClassName: j.createFromStratchButtonInner,
+                                    className: R.createFromStratchButton,
+                                    innerClassName: R.createFromStratchButtonInner,
                                     children: [
-                                        (0, n.jsx)(d.PencilIcon, {
+                                        (0, a.jsx)(d.PencilIcon, {
                                             size: 'custom',
                                             color: 'currentColor',
                                             width: 14,
                                             height: 14,
-                                            className: j.editIcon
+                                            className: R.editIcon
                                         }),
-                                        S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_MODAL_CREATE_FROM_SCRATCH_BUTTON
+                                        b.intl.string(b.t.a3ycUV)
                                     ]
                                 })
                             ]
                         }),
-                        (0, n.jsx)(B, {
-                            guildId: l,
-                            templates: I,
-                            selectedTemplateIndex: O,
-                            priceTiers: x,
-                            showPriceReselection: M,
-                            setShowPriceReselection: A,
-                            handleCreateTierFromTemplate: D
+                        (0, a.jsx)(E, {
+                            guildId: i,
+                            templates: _,
+                            selectedTemplateIndex: S,
+                            priceTiers: h,
+                            showPriceReselection: k,
+                            setShowPriceReselection: y,
+                            handleCreateTierFromTemplate: w
                         })
                     ]
                 })

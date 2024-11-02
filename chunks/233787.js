@@ -1,11 +1,11 @@
-var n,
-    t,
-    c = a(200651);
-a(192379);
-var i = a(481060),
-    l = a(600164),
-    o = a(476582);
-((n = t || (t = {})).UPGRADE = 'UPGRADE'), (n.CANCEL = 'CANCEL'), (n.UNVERIFIED = 'UNVERIFIED'), (n.UNCLAIMED = 'UNCLAIMED'), (n.GRANDFATHERED = 'GRANDFATHERED');
+var s,
+    a,
+    i = n(200651);
+n(192379);
+var c = n(481060),
+    l = n(600164),
+    o = n(476582);
+((s = a || (a = {})).UPGRADE = 'UPGRADE'), (s.CANCEL = 'CANCEL'), (s.UNVERIFIED = 'UNVERIFIED'), (s.UNCLAIMED = 'UNCLAIMED'), (s.GRANDFATHERED = 'GRANDFATHERED');
 let r = {
         UPGRADE: 'imageUpgrade',
         CANCEL: 'imageCancel',
@@ -14,67 +14,67 @@ let r = {
         GRANDFATHERED: 'imageCancel'
     },
     d = (e) => {
-        let { children: s, ...a } = e;
-        return (0, c.jsx)(i.ModalRoot, {
-            ...a,
-            children: s
+        let { children: t, ...n } = e;
+        return (0, i.jsx)(c.ModalRoot, {
+            ...n,
+            children: t
         });
     };
 (d.Header = (e) => {
-    let { children: s, onClose: a } = e;
-    return (0, c.jsxs)(i.ModalHeader, {
+    let { children: t, onClose: n } = e;
+    return (0, i.jsxs)(c.ModalHeader, {
         justify: l.Z.Justify.BETWEEN,
         separator: !1,
         children: [
-            (0, c.jsx)(i.FormTitle, {
-                tag: i.FormTitleTags.H4,
-                children: s
+            (0, i.jsx)(c.FormTitle, {
+                tag: c.FormTitleTags.H4,
+                children: t
             }),
-            null != a
-                ? (0, c.jsx)(i.ModalCloseButton, {
+            null != n
+                ? (0, i.jsx)(c.ModalCloseButton, {
                       className: o.__invalid_closeIcon,
-                      onClick: a
+                      onClick: n
                   })
                 : null
         ]
     });
 }),
     (d.Content = (e) => {
-        let { children: s, type: a } = e;
-        return (0, c.jsxs)(i.ModalContent, {
+        let { children: t, type: n } = e;
+        return (0, i.jsxs)(c.ModalContent, {
             children: [
-                (0, c.jsx)('div', { className: o[r[a]] }),
-                (0, c.jsx)('div', {
+                (0, i.jsx)('div', { className: o[r[n]] }),
+                (0, i.jsx)('div', {
                     className: o.message,
-                    children: s
+                    children: t
                 })
             ]
         });
     }),
     (d.Footer = (e) => {
-        let { primary: s, primaryRenderer: a, secondary: n } = e;
-        return (0, c.jsx)(i.ModalFooter, {
-            children: (0, c.jsxs)(l.Z, {
+        let { primary: t, primaryRenderer: n, secondary: s } = e;
+        return (0, i.jsx)(c.ModalFooter, {
+            children: (0, i.jsxs)(l.Z, {
                 justify: l.Z.Justify.END,
                 children: [
-                    null != n
-                        ? (0, c.jsx)(i.Button, {
-                              onClick: n.onClick,
-                              look: i.Button.Looks.LINK,
-                              innerClassName: o.secondaryButton,
-                              children: n.label
-                          })
-                        : null,
                     null != s
-                        ? (0, c.jsx)(i.Button, {
+                        ? (0, i.jsx)(c.Button, {
                               onClick: s.onClick,
-                              color: i.Button.Colors.BRAND,
+                              look: c.Button.Looks.LINK,
+                              innerClassName: o.secondaryButton,
                               children: s.label
                           })
-                        : a
+                        : null,
+                    null != t
+                        ? (0, i.jsx)(c.Button, {
+                              onClick: t.onClick,
+                              color: c.Button.Colors.BRAND,
+                              children: t.label
+                          })
+                        : n
                 ]
             })
         });
     }),
-    (d.Types = t),
-    (s.Z = d);
+    (d.Types = a),
+    (t.Z = d);

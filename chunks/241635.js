@@ -1,58 +1,58 @@
 t.d(n, {
     Z: function () {
-        return _;
+        return p;
     }
 }),
     t(653041);
 var i = t(200651);
 t(192379);
-var a = t(442837),
-    l = t(481060),
-    s = t(749210),
+var l = t(442837),
+    r = t(481060),
+    a = t(749210),
     o = t(240872),
-    r = t(605436),
+    s = t(605436),
     d = t(228643),
     c = t(299206),
     u = t(496675),
-    I = t(867108),
-    m = t(689938);
-function _(e, n) {
+    m = t(867108),
+    h = t(388032);
+function p(e, n) {
     var t;
-    let _ = (0, a.e7)([u.Z], () => {
+    let p = (0, l.e7)([u.Z], () => {
             let t = u.Z.getHighestRole(e);
             return !u.Z.isRoleHigher(e, t, n);
         }),
-        N = [],
-        E = (0, I.Z)(e, n);
-    null != E && N.push(E);
-    let T = (0, c.Z)({
+        g = [],
+        f = (0, m.Z)(e, n);
+    null != f && g.push(f);
+    let x = (0, c.Z)({
         id: n.id,
-        label: m.Z.Messages.COPY_ID_ROLE
+        label: h.intl.string(h.t.sMsaLi)
     });
-    null != T && N.push(T);
-    let h = (null === (t = n.tags) || void 0 === t ? void 0 : t.guild_connections) === null,
-        g = n.managed && !h,
-        p = null != n && (0, r.pM)(e.id, n.id);
+    null != x && g.push(x);
+    let b = (null === (t = n.tags) || void 0 === t ? void 0 : t.guild_connections) === null,
+        v = n.managed && !b,
+        C = null != n && (0, s.pM)(e.id, n.id);
     return (
-        !_ &&
-            !g &&
-            !p &&
-            N.push(
+        !p &&
+            !v &&
+            !C &&
+            g.push(
                 (0, i.jsx)(
-                    l.MenuGroup,
+                    r.MenuGroup,
                     {
-                        children: (0, i.jsx)(l.MenuItem, {
+                        children: (0, i.jsx)(r.MenuItem, {
                             id: 'delete-role',
-                            label: m.Z.Messages.DELETE,
+                            label: h.intl.string(h.t.oyYWHB),
                             color: 'danger',
-                            icon: l.TrashIcon,
+                            icon: r.TrashIcon,
                             action: () => {
                                 o.Z.show({
-                                    title: m.Z.Messages.SETTINGS_ROLES_DELETE_TITLE,
-                                    body: m.Z.Messages.SETTINGS_ROLES_DELETE_BODY.format({ name: n.name }),
-                                    cancelText: m.Z.Messages.CANCEL,
+                                    title: h.intl.string(h.t.YWISbW),
+                                    body: h.intl.format(h.t['9+nrUV'], { name: n.name }),
+                                    cancelText: h.intl.string(h.t['ETE/oK']),
                                     onConfirm: async () => {
-                                        h && (await (0, d.L_)(e.id, n.id, [])), s.Z.deleteRole(e.id, n.id);
+                                        b && (await (0, d.L_)(e.id, n.id, [])), a.Z.deleteRole(e.id, n.id);
                                     }
                                 });
                             }
@@ -61,6 +61,6 @@ function _(e, n) {
                     'delete-role'
                 )
             ),
-        N
+        g
     );
 }

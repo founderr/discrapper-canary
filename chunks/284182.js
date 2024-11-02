@@ -5,18 +5,18 @@ n.d(t, {
 });
 var a = n(200651);
 n(192379);
-var s = n(399606),
+var i = n(399606),
     r = n(481060),
     l = n(541716),
-    i = n(859235),
+    s = n(859235),
     o = n(898463),
     c = n(76451),
     d = n(117530),
-    u = n(689938),
+    u = n(388032),
     m = n(67809);
 function h(e) {
     let { parentChannel: t } = e,
-        n = (0, s.Wu)([d.Z], () => {
+        n = (0, i.Wu)([d.Z], () => {
             let e = d.Z.getUploads(t.id, l.I.CREATE_FORUM_POST.drafts.type);
             return null == e ? void 0 : e.filter((e) => !0 !== e.isThumbnail);
         });
@@ -26,12 +26,12 @@ function h(e) {
             (0, a.jsx)(r.Text, {
                 variant: 'text-md/semibold',
                 color: 'text-muted',
-                children: u.Z.Messages.MEDIA_CHANNEL_ATTACHMENTS_SECTION_TITLE
+                children: u.intl.string(u.t.omKGKi)
             }),
             (0, a.jsx)(r.Text, {
                 variant: 'text-sm/normal',
                 color: 'text-muted',
-                children: u.Z.Messages.MEDIA_CHANNEL_ATTACHMENTS_SECTION_DESCRIPTION
+                children: u.intl.string(u.t.zUjLl5)
             }),
             (0, a.jsx)('div', {
                 children: (0, a.jsx)(r.ScrollerThin, {
@@ -51,7 +51,7 @@ function h(e) {
                                         upload: e,
                                         keyboardModeEnabled: !0,
                                         hideFileName: !0,
-                                        size: i.q.SMALL
+                                        size: s.q.SMALL
                                     },
                                     e.id
                                 )

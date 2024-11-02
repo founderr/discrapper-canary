@@ -8,18 +8,18 @@ var i = n(302454),
 let u = a().defaultRules.lheading,
     c = a().defaultRules.heading,
     d = a().defaultRules.link,
-    _ = a().defaultRules.image,
-    E = a().defaultRules.list,
-    f = a().defaultRules.blockQuote,
-    h = a().defaultRules.paragraph,
-    p = /\{(.+?)}/,
-    I = /^\$(\w+?)\$/;
+    f = a().defaultRules.image,
+    _ = a().defaultRules.list,
+    h = a().defaultRules.blockQuote,
+    p = a().defaultRules.paragraph,
+    m = /\{(.+?)}/,
+    g = /^\$(\w+?)\$/;
 r = n(235375);
-let m = (e) => {
+let E = (e) => {
         let { transformUpperCase: t = !1 } = e;
         return (e, n, r) => {
-            let i = p.exec(e[1]),
-                s = e[1].replace(p, '');
+            let i = m.exec(e[1]),
+                s = e[1].replace(m, '');
             return (
                 t && (s = s.toUpperCase()),
                 {
@@ -30,10 +30,10 @@ let m = (e) => {
             );
         };
     },
-    T = (e) => ({
+    v = (e) => ({
         ...r.baseRules,
         image: {
-            ..._,
+            ...f,
             ...('function' == typeof r.customRules.image ? r.customRules.image(e) : r.customRules.image)
         },
         link: {
@@ -41,12 +41,12 @@ let m = (e) => {
             ...('function' == typeof r.customRules.link ? r.customRules.link(e) : r.customRules.link)
         },
         list: {
-            ...E,
+            ..._,
             ...('function' == typeof r.customRules.list ? r.customRules.list(e) : r.customRules.list)
         },
         interpolation: {
             order: l.ZP.order,
-            match: (e) => I.exec(e),
+            match: (e) => g.exec(e),
             parse(e, t, n) {
                 let r = n.interpolations[e[1]];
                 return null == r
@@ -63,7 +63,7 @@ let m = (e) => {
         },
         lheading: {
             ...u,
-            parse: m({ transformUpperCase: !0 }),
+            parse: E({ transformUpperCase: !0 }),
             ...('function' == typeof r.customRules.lheading ? r.customRules.lheading(e) : r.customRules.lheading)
         },
         heading: {
@@ -71,33 +71,33 @@ let m = (e) => {
             ...('function' == typeof r.customRules.heading ? r.customRules.heading(e) : r.customRules.heading)
         },
         blockQuote: {
-            ...f,
+            ...h,
             ...('function' == typeof r.customRules.blockQuote ? r.customRules.blockQuote(e) : r.customRules.blockQuote)
         },
         paragraph: {
-            ...h,
+            ...p,
             ...('function' == typeof r.customRules.paragraph ? r.customRules.paragraph(e) : r.customRules.paragraph)
         }
     }),
-    S = (e) => ({
+    I = (e) => ({
         lheading: {
             ...u,
-            parse: m({ transformUpperCase: !1 }),
+            parse: E({ transformUpperCase: !1 }),
             ...('function' == typeof r.customRules.lheading ? r.customRules.lheading(e) : r.customRules.lheading)
         }
     }),
-    g = (e) => ({
-        ...T(e),
+    S = (e) => ({
+        ...v(e),
         newline: { ...a().defaultRules.newline },
         text: l.ZP,
         list: s.Z,
         subtext: o.Z
     });
 t.Z = {
-    getDefaultRules: (e) => ({ ...T(e) }),
+    getDefaultRules: (e) => ({ ...v(e) }),
     getSpecialRules: (e) => ({
-        ...T(e),
-        ...S(e)
+        ...v(e),
+        ...I(e)
     }),
-    getMessageRules: (e) => ({ ...g(e) })
+    getMessageRules: (e) => ({ ...S(e) })
 };

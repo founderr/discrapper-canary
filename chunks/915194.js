@@ -1,62 +1,62 @@
-e.r(n);
-var o = e(200651);
-e(192379);
-var i = e(442837),
-    a = e(481060),
-    s = e(812206),
-    r = e(600164),
-    d = e(922156),
-    t = e(63063),
-    c = e(689938),
-    u = e(236774);
+i.r(n);
+var o = i(200651);
+i(192379);
+var t = i(442837),
+    r = i(481060),
+    a = i(812206),
+    e = i(600164),
+    d = i(922156),
+    s = i(63063),
+    c = i(388032),
+    u = i(236774);
 n.default = (l) => {
-    let { onClose: n, transitionState: e } = l,
-        { error: p, applicationName: h } = (0, i.cj)([d.Z, s.Z], () => {
+    let { onClose: n, transitionState: i } = l,
+        { error: p, applicationName: h } = (0, t.cj)([d.Z, a.Z], () => {
             let l = d.Z.getLastError(),
                 n = null;
             if (null != l && null != l.applicationId) {
-                let e = s.Z.getApplication(l.applicationId);
-                null != e && (n = e.name);
+                let i = a.Z.getApplication(l.applicationId);
+                null != i && (n = i.name);
             }
             return {
                 error: l,
                 applicationName: n
             };
         });
-    return (0, o.jsxs)(a.ModalRoot, {
-        transitionState: e,
-        size: a.ModalSize.SMALL,
-        'aria-label': c.Z.Messages.DISPATCH_ERROR_MODAL_HEADER,
+    return (0, o.jsxs)(r.ModalRoot, {
+        transitionState: i,
+        size: r.ModalSize.SMALL,
+        'aria-label': c.intl.string(c.t['6kHRYG']),
         children: [
-            (0, o.jsxs)(a.ModalHeader, {
-                justify: r.Z.Justify.BETWEEN,
+            (0, o.jsxs)(r.ModalHeader, {
+                justify: e.Z.Justify.BETWEEN,
                 separator: !1,
                 children: [
-                    (0, o.jsx)(r.Z.Child, {
+                    (0, o.jsx)(e.Z.Child, {
                         grow: 1,
-                        children: (0, o.jsx)(a.Heading, {
+                        children: (0, o.jsx)(r.Heading, {
                             variant: 'heading-lg/semibold',
-                            children: c.Z.Messages.DISPATCH_ERROR_MODAL_HEADER
+                            children: c.intl.string(c.t['6kHRYG'])
                         })
                     }),
-                    (0, o.jsx)(r.Z.Child, {
+                    (0, o.jsx)(e.Z.Child, {
                         grow: 0,
-                        children: (0, o.jsx)(a.ModalCloseButton, { onClick: n })
+                        children: (0, o.jsx)(r.ModalCloseButton, { onClick: n })
                     })
                 ]
             }),
-            (0, o.jsx)(a.ModalContent, {
+            (0, o.jsx)(r.ModalContent, {
                 children: (0, o.jsxs)('div', {
                     className: u.body,
                     children: [
-                        (0, o.jsx)('div', { children: c.Z.Messages.DISPATCH_ERROR_MODAL_DESCRIPTION.format({ link: 'https://dis.gd/dispatch-error' }) }),
+                        (0, o.jsx)('div', { children: c.intl.format(c.t['NnE/6O'], { link: 'https://dis.gd/dispatch-error' }) }),
                         (0, o.jsx)('div', {
                             className: u.supportCallToAction,
-                            children: c.Z.Messages.DISPATCH_ERROR_MODAL_BODY
+                            children: c.intl.string(c.t['o+efY2'])
                         }),
                         (0, o.jsx)('div', {
                             className: u.errorLabel,
-                            children: c.Z.Messages.DISPATCH_ERROR_MODAL_ERROR_LABEL
+                            children: c.intl.string(c.t.BiSnZ2)
                         }),
                         (0, o.jsx)('div', {
                             className: u.errorDetails,
@@ -67,19 +67,19 @@ n.default = (l) => {
                     ]
                 })
             }),
-            (0, o.jsxs)(a.ModalFooter, {
+            (0, o.jsxs)(r.ModalFooter, {
                 children: [
-                    (0, o.jsx)(a.Button, {
+                    (0, o.jsx)(r.Button, {
                         onClick: () => {
-                            window.open(t.Z.getSubmitRequestURL());
+                            window.open(s.Z.getSubmitRequestURL());
                         },
-                        children: c.Z.Messages.DISPATCH_ERROR_MODAL_OPEN_TICKET
+                        children: c.intl.string(c.t.VdyWmJ)
                     }),
-                    (0, o.jsx)(a.Button, {
-                        look: a.Button.Looks.LINK,
+                    (0, o.jsx)(r.Button, {
+                        look: r.Button.Looks.LINK,
                         onClick: n,
                         color: u.closeLink,
-                        children: c.Z.Messages.CLOSE
+                        children: c.intl.string(c.t.cpT0Cg)
                     })
                 ]
             })

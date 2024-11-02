@@ -8,10 +8,10 @@ n(192379);
 var l = n(120356),
     r = n.n(l),
     o = n(399606),
-    a = n(481060),
-    u = n(337682),
+    u = n(481060),
+    a = n(337682),
     c = n(115130),
-    d = n(689938),
+    d = n(388032),
     s = n(828018);
 function f(e) {
     let { hideSearch: t, className: n } = e,
@@ -31,22 +31,22 @@ function f(e) {
     return (0, i.jsxs)('div', {
         className: r()(s.container, n),
         children: [
-            (0, i.jsx)(a.Checkbox, {
-                type: a.Checkbox.Types.INVERTED,
+            (0, i.jsx)(u.Checkbox, {
+                type: u.Checkbox.Types.INVERTED,
                 value: f,
-                onClick: u.Y$,
-                children: (0, i.jsx)(a.Text, {
+                onClick: a.Y$,
+                children: (0, i.jsx)(u.Text, {
                     variant: 'text-md/semibold',
-                    children: d.Z.Messages.EMBEDDED_ACTIVITIES_USE_ACTIVITY_URL_OVERRIDE
+                    children: d.intl.string(d.t['3TSGuL'])
                 })
             }),
             f
-                ? (0, i.jsx)(a.FormItem, {
-                      title: d.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_URL_OVERRIDE,
-                      children: (0, i.jsx)(a.TextInput, {
+                ? (0, i.jsx)(u.FormItem, {
+                      title: d.intl.string(d.t['9rnmen']),
+                      children: (0, i.jsx)(u.TextInput, {
                           disabled: !f,
                           value: null != l ? l : void 0,
-                          onChange: u.jS,
+                          onChange: a.jS,
                           placeholder: 'https://localhost:3000'
                       })
                   })
@@ -54,12 +54,12 @@ function f(e) {
             !0 === t
                 ? null
                 : (0, i.jsx)('div', {
-                      children: (0, i.jsx)(a.SearchBar, {
+                      children: (0, i.jsx)(u.SearchBar, {
                           className: s.searchBar,
                           query: p,
-                          onChange: u.a8,
+                          onChange: a.a8,
                           onClear: function () {
-                              u.a8('');
+                              a.a8('');
                           }
                       })
                   })

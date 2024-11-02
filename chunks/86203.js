@@ -5,31 +5,31 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(481060),
-    a = n(493683),
-    l = n(726521),
-    r = n(718538),
+var l = n(481060),
+    r = n(493683),
+    a = n(726521),
+    s = n(718538),
     o = n(868807),
-    c = n(689938);
+    c = n(388032);
 function u(e) {
-    let { channel: t, buttonSize: n = s.ButtonSizes.TINY, className: u, onReportClick: d, onReportSubmit: h, onMouseEnter: m, onMouseLeave: p } = e,
-        { error: _, loaded: f } = (0, o.a)(t),
-        E = t.isDM() ? t.getRecipientId() : null,
-        g = (0, r.V)(t.id, E);
-    if (null == g && (f || _)) return null;
-    let C = () => {
-        null == h || h(), a.Z.closePrivateChannel(t.id);
+    let { channel: t, buttonSize: n = l.ButtonSizes.TINY, className: u, onReportClick: d, onReportSubmit: h, onMouseEnter: m, onMouseLeave: p } = e,
+        { error: f, loaded: g } = (0, o.a)(t),
+        C = t.isDM() ? t.getRecipientId() : null,
+        x = (0, s.V)(t.id, C);
+    if (null == x && (g || f)) return null;
+    let v = () => {
+        null == h || h(), r.Z.closePrivateChannel(t.id);
     };
-    return (0, i.jsx)(s.Button, {
+    return (0, i.jsx)(l.Button, {
         className: u,
         size: n,
-        color: s.Button.Colors.RED,
-        disabled: null == g,
+        color: l.Button.Colors.RED,
+        disabled: null == x,
         onClick: (e) => {
-            e.stopPropagation(), null == d || d(), null != g && (0, l.WL)(g, C);
+            e.stopPropagation(), null == d || d(), null != x && (0, a.WL)(x, v);
         },
         onMouseEnter: m,
         onMouseLeave: p,
-        children: c.Z.Messages.REPORT
+        children: c.intl.string(c.t['+78Pfn'])
     });
 }

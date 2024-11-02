@@ -1,13 +1,13 @@
 n.d(t, {
     o: function () {
-        return l;
+        return a;
     }
 });
 var i = n(442837),
-    s = n(359119),
-    a = n(444957);
-function l(e) {
-    let t = (0, a.h)(e),
-        n = (0, i.e7)([s.ZP], () => s.ZP.hasShownInitialTooltipForChannel(e));
+    l = n(359119),
+    r = n(444957);
+function a(e) {
+    let t = (0, r.h)(e),
+        n = (0, i.e7)([l.ZP], () => l.ZP.hasShownInitialTooltipForChannel(e));
     return null != t && !n;
 }

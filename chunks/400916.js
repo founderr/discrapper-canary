@@ -1,61 +1,61 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return h;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(512722),
-    s = n.n(a),
-    r = n(399606),
-    l = n(481060),
-    o = n(671533),
+var r = n(512722),
+    l = n.n(r),
+    a = n(399606),
+    o = n(481060),
+    s = n(671533),
     c = n(240864),
     u = n(613810),
     d = n(596211),
-    _ = n(689938),
-    E = n(467051);
-function I(e) {
-    var t, n, a, I;
-    let { guildId: m, productId: f } = e,
-        T = (0, r.e7)([c.Z], () => c.Z.getGuildProduct(f)),
-        h = (null !== (I = null == T ? void 0 : null === (t = T.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== I ? I : 0) > 1,
-        N = null == T ? void 0 : null === (a = T.attachments) || void 0 === a ? void 0 : null === (n = a[0]) || void 0 === n ? void 0 : n.id;
-    return h
-        ? (0, i.jsxs)(l.Button, {
+    m = n(388032),
+    f = n(467051);
+function h(e) {
+    var t, n, r, h;
+    let { guildId: p, productId: g } = e,
+        _ = (0, a.e7)([c.Z], () => c.Z.getGuildProduct(g)),
+        C = (null !== (h = null == _ ? void 0 : null === (t = _.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== h ? h : 0) > 1,
+        E = null == _ ? void 0 : null === (r = _.attachments) || void 0 === r ? void 0 : null === (n = r[0]) || void 0 === n ? void 0 : n.id;
+    return C
+        ? (0, i.jsxs)(o.Button, {
               onClick: function () {
                   u.Z.open({
-                      guildId: m,
-                      productId: f
+                      guildId: p,
+                      productId: g
                   });
               },
-              innerClassName: E.textWithIcon,
+              innerClassName: f.textWithIcon,
               children: [
-                  (0, i.jsx)('div', { children: _.Z.Messages.GUILD_PRODUCT_DOWNLOAD_BUTTON_MULTIPLE_FILES }),
-                  (0, i.jsx)(l.Spacer, {
+                  (0, i.jsx)('div', { children: m.intl.string(m.t.UyuiUF) }),
+                  (0, i.jsx)(o.Spacer, {
                       size: 8,
                       horizontal: !0
                   }),
-                  (0, i.jsx)(o.Z, {
+                  (0, i.jsx)(s.Z, {
                       width: 16,
                       height: 16,
-                      direction: o.Z.Directions.RIGHT
+                      direction: s.Z.Directions.RIGHT
                   })
               ]
           })
-        : (s()(null != N, 'No attachment'),
+        : (l()(null != E, 'No attachment'),
           (0, i.jsxs)(d.Z, {
-              guildId: m,
-              productId: f,
-              attachmentId: N,
-              innerClassName: E.textWithIcon,
+              guildId: p,
+              productId: g,
+              attachmentId: E,
+              innerClassName: f.textWithIcon,
               children: [
-                  (0, i.jsx)('div', { children: _.Z.Messages.GUILD_PRODUCT_DOWNLOAD_BUTTON_SINGLE_FILE }),
-                  (0, i.jsx)(l.Spacer, {
+                  (0, i.jsx)('div', { children: m.intl.string(m.t.t9bE9f) }),
+                  (0, i.jsx)(o.Spacer, {
                       size: 8,
                       horizontal: !0
                   }),
-                  (0, i.jsx)(l.DownloadIcon, {
+                  (0, i.jsx)(o.DownloadIcon, {
                       size: 'xs',
                       color: 'currentColor'
                   })

@@ -1,43 +1,43 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return f;
     }
 }),
     n(47120);
-var s = n(200651),
-    a = n(192379),
-    r = n(913527),
-    i = n.n(r),
+var i = n(200651),
+    r = n(192379),
+    a = n(913527),
+    s = n.n(a),
     l = n(355467),
     o = n(100527),
     c = n(906732),
-    _ = n(584825),
-    d = n(931547),
-    E = n(689938);
-let u = (e) => {
-    let [t, n] = a.useState(!1),
-        [s, r] = a.useState(null);
+    d = n(584825),
+    u = n(931547),
+    g = n(388032);
+let m = (e) => {
+    let [t, n] = r.useState(!1),
+        [i, a] = r.useState(null);
     return {
         resetRenewalMutation: async (t) => {
-            n(!0), r(null);
+            n(!0), a(null);
             try {
                 await (0, l.qu)(t, e);
             } catch (e) {
-                r(e);
+                a(e);
             } finally {
                 n(!1);
             }
         },
         submitting: t,
-        error: s
+        error: i
     };
 };
-function T(e) {
-    let { groupListingId: t, subscription: n, className: r } = e,
+function f(e) {
+    let { groupListingId: t, subscription: n, className: a } = e,
         { analyticsLocations: l } = (0, c.ZP)(o.Z.PENDING_PLAN_CHANGE_NOTICE),
-        { resetRenewalMutation: T, submitting: I, error: R } = u(l),
-        g = (0, _._k)(t, { includeSoftDeleted: !0 }),
-        { currentListing: N, nextListing: m } = a.useMemo(() => {
+        { resetRenewalMutation: f, submitting: p, error: _ } = m(l),
+        h = (0, d._k)(t, { includeSoftDeleted: !0 }),
+        { currentListing: x, nextListing: E } = r.useMemo(() => {
             if ((null == n ? void 0 : n.renewalMutations) == null)
                 return {
                     currentListing: void 0,
@@ -45,24 +45,24 @@ function T(e) {
                 };
             let e = n.items[0].planId,
                 t = n.renewalMutations.items[0].planId,
-                s = g.find((t) => t.subscription_plans[0].id === e);
+                i = h.find((t) => t.subscription_plans[0].id === e);
             return {
-                currentListing: s,
-                nextListing: g.find((e) => e.subscription_plans[0].id === t)
+                currentListing: i,
+                nextListing: h.find((e) => e.subscription_plans[0].id === t)
             };
-        }, [n, g]);
-    if (null == n || null == N || null == m) return null;
-    let C = i()(n.currentPeriodEnd).format('MMM DD, YYYY');
-    return (0, s.jsx)(d.Z, {
-        message: E.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_DELETE_MUTATION_DESCRIPTION.format({
-            currentListing: N.name,
-            nextListing: m.name,
-            changeDate: C
+        }, [n, h]);
+    if (null == n || null == x || null == E) return null;
+    let b = s()(n.currentPeriodEnd).format('MMM DD, YYYY');
+    return (0, i.jsx)(u.Z, {
+        message: g.intl.format(g.t.chw89f, {
+            currentListing: x.name,
+            nextListing: E.name,
+            changeDate: b
         }),
-        error: null == R ? void 0 : R.message,
-        onClick: () => T(n),
-        submitting: I,
-        ctaMessage: E.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_DELETE_MUTATION_CTA,
-        className: r
+        error: null == _ ? void 0 : _.message,
+        onClick: () => f(n),
+        submitting: p,
+        ctaMessage: g.intl.string(g.t.De4wIy),
+        className: a
     });
 }

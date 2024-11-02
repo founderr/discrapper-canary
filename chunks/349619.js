@@ -9,7 +9,7 @@ var i = n(481060),
     a = n(153867),
     s = n(468026),
     o = n(740492),
-    l = n(689938);
+    l = n(388032);
 function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => {},
         n = () => {
@@ -19,14 +19,14 @@ function u(e) {
         ? e()
         : (0, i.openModal)((i) =>
               (0, r.jsx)(s.default, {
-                  confirmText: l.Z.Messages.EMBEDDED_ACTIVITIES_YEP,
-                  secondaryConfirmText: l.Z.Messages.DONT_ASK_AGAIN,
-                  title: l.Z.Messages.EMBEDDED_ACTIVITIES_CAREFUL,
-                  cancelText: l.Z.Messages.EMBEDDED_ACTIVITIES_NVM,
+                  confirmText: l.intl.string(l.t.efSOLC),
+                  secondaryConfirmText: l.intl.string(l.t['JdIQ/f']),
+                  title: l.intl.string(l.t.pVr7Cg),
+                  cancelText: l.intl.string(l.t.EwoEOT),
                   onConfirm: e,
                   onConfirmSecondary: n,
                   onCancel: t,
-                  body: l.Z.Messages.EMBEDDED_ACTIVITIES_POP_OUT_WARNING,
+                  body: l.intl.string(l.t.Tfj539),
                   ...i
               })
           );

@@ -1,16 +1,16 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return s;
     }
 });
 var i = n(200651);
 n(192379);
-var s = n(310807),
-    a = n(192029),
-    l = n(527119);
-function r() {
+var l = n(310807),
+    r = n(192029),
+    a = n(527119);
+function s() {
     return (0, i.jsx)('div', {
-        className: s.container,
+        className: l.container,
         children: (0, i.jsxs)('svg', {
             width: '224',
             height: '148',
@@ -80,7 +80,7 @@ function r() {
                                 y: '0',
                                 height: '32',
                                 width: '32',
-                                href: a
+                                href: r
                             })
                         }),
                         (0, i.jsx)('pattern', {
@@ -95,7 +95,7 @@ function r() {
                                 y: '0',
                                 height: '32',
                                 width: '32',
-                                href: l
+                                href: a
                             })
                         })
                     ]

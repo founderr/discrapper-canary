@@ -2,7 +2,7 @@ var r = n(200651);
 n(192379);
 var i = n(481060),
     a = n(921944),
-    s = n(689938),
+    s = n(388032),
     o = n(359325);
 t.Z = (e) => {
     let { markAsDismissed: t } = e;
@@ -18,7 +18,7 @@ t.Z = (e) => {
                 className: o.content,
                 children: (0, r.jsx)(i.Text, {
                     variant: 'text-xs/normal',
-                    children: s.Z.Messages.EMOJI_PICKER_FAVORITES_TIP
+                    children: s.intl.string(s.t['xdRf6+'])
                 })
             }),
             (0, r.jsx)(i.Clickable, {

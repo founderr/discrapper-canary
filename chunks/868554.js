@@ -1,49 +1,49 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return C;
     }
 });
 var i = n(200651),
-    s = n(192379),
-    a = n(120356),
-    l = n.n(a),
-    r = n(442837),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
+    s = n(442837),
     o = n(481060),
     c = n(909820),
     u = n(518950),
     d = n(594174),
     h = n(63063),
     m = n(981631),
-    p = n(689938),
-    _ = n(277865),
-    f = n(454120);
-function E(e) {
-    let { buttonRef: t, userId: a, streaming: E, onClose: g } = e,
-        C = (0, r.e7)([d.default], () => d.default.getUser(a)),
-        I = (0, r.e7)([d.default], () => d.default.getCurrentUser()),
-        { avatarSrc: T, eventHandlers: x } = (0, u.Z)({
-            user: C,
+    p = n(388032),
+    f = n(277865),
+    g = n(454120);
+function C(e) {
+    let { buttonRef: t, userId: r, streaming: C, onClose: x } = e,
+        v = (0, s.e7)([d.default], () => d.default.getUser(r)),
+        _ = (0, s.e7)([d.default], () => d.default.getCurrentUser()),
+        { avatarSrc: I, eventHandlers: E } = (0, u.Z)({
+            user: v,
             size: o.AvatarSizes.SIZE_48,
             animateOnHover: !0
         }),
-        S = s.useMemo(
+        b = l.useMemo(
             () =>
-                null == C || null == I
+                null == v || null == _
                     ? ''
-                    : C.id === I.id
-                      ? p.Z.Messages.CONSUMABLE_HD_STREAMING_BANNER_SELF_COPY
-                      : !0 === E
-                        ? p.Z.Messages.CONSUMABLE_HD_STREAMING_BANNER_COPY_STREAMERS.format({
-                              username: C.username,
+                    : v.id === _.id
+                      ? p.intl.string(p.t.IjKvNT)
+                      : !0 === C
+                        ? p.intl.format(p.t.JkWoqK, {
+                              username: v.username,
                               helpCenterLink: h.Z.getArticleURL(m.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
                           })
-                        : p.Z.Messages.CONSUMABLE_HD_STREAMING_BANNER_COPY.format({ username: C.username }),
-            [C, I, E]
+                        : p.intl.formatToPlainString(p.t.vNbVXF, { username: v.username }),
+            [v, _, C]
         );
-    if (null == C || null == I) return null;
-    let v = () => {
-        if (!0 === E && I.id === C.id) {
-            g();
+    if (null == v || null == _) return null;
+    let S = () => {
+        if (!0 === C && _.id === v.id) {
+            x();
             return;
         }
         (0, o.openModalLazy)(async () => {
@@ -63,39 +63,39 @@ function E(e) {
             spacing: 30,
             children: () =>
                 (0, i.jsxs)('div', {
-                    className: _.banner,
+                    className: f.banner,
                     children: [
                         (0, i.jsxs)('div', {
                             children: [
                                 (0, i.jsx)(o.Avatar, {
-                                    src: T,
-                                    'aria-label': C.username,
+                                    src: I,
+                                    'aria-label': v.username,
                                     size: o.AvatarSizes.SIZE_48,
-                                    ...x
+                                    ...E
                                 }),
                                 (0, i.jsx)('img', {
-                                    className: _.potion,
-                                    src: f,
+                                    className: f.potion,
+                                    src: g,
                                     alt: ''
                                 })
                             ]
                         }),
                         (0, i.jsx)(o.Heading, {
                             variant: 'heading-sm/medium',
-                            children: S
+                            children: b
                         }),
                         (0, i.jsxs)('div', {
-                            className: _.subsection,
+                            className: f.subsection,
                             children: [
                                 (0, i.jsx)(o.Button, {
-                                    onClick: v,
-                                    className: l()({ [_.actionButton]: !0 !== E }),
-                                    children: !0 === E && I.id === C.id ? p.Z.Messages.CONSUMABLE_HD_STREAMING_BANNER_DISMISS_BUTTON_COPY : p.Z.Messages.CONSUMABLE_HD_STREAMING_BANNER_BUTTON_COPY
+                                    onClick: S,
+                                    className: a()({ [f.actionButton]: !0 !== C }),
+                                    children: !0 === C && _.id === v.id ? p.intl.string(p.t.r6xhBw) : p.intl.string(p.t.yKw8Dg)
                                 }),
-                                !0 !== E &&
+                                !0 !== C &&
                                     (0, i.jsx)(o.Clickable, {
-                                        className: _.x,
-                                        onClick: g,
+                                        className: f.x,
+                                        onClick: x,
                                         children: (0, i.jsx)(o.XSmallIcon, { name: 'close' })
                                     })
                             ]

@@ -1,15 +1,15 @@
 n.d(t, {
     O: function () {
-        return r;
+        return a;
     }
 }),
     n(47120);
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(906732);
-function r(e) {
-    let { analyticsLocations: t } = (0, a.ZP)(...e.newLocations);
-    return (0, s.jsx)(a.LZ.Provider, {
+var r = n(906732);
+function a(e) {
+    let { analyticsLocations: t } = (0, r.ZP)(...e.newLocations);
+    return (0, i.jsx)(r.LZ.Provider, {
         value: t,
         children: e.children
     });

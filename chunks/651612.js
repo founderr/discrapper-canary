@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return v;
     }
 }),
     n(653041);
 var i = n(200651),
-    s = n(192379),
-    a = n(392711),
-    l = n(442837),
-    r = n(481060),
+    l = n(192379),
+    r = n(392711),
+    a = n(442837),
+    s = n(481060),
     o = n(481051),
     c = n(871499),
     u = n(306680),
@@ -16,21 +16,21 @@ var i = n(200651),
     h = n(459273),
     m = n(566620),
     p = n(317381),
-    _ = n(918559),
-    f = n(981631),
-    E = n(689938),
-    g = n(657918);
-function C(e) {
-    let { channelId: t, className: n, ...C } = e,
-        I = s.useRef(null),
-        T = (0, l.e7)([p.ZP], () => p.ZP.getFocusedLayout() === _.MI.RESIZABLE),
-        x = s.useCallback(() => {
-            let e = T ? _.MI.NO_CHAT : _.MI.RESIZABLE;
+    f = n(918559),
+    g = n(981631),
+    C = n(388032),
+    x = n(657918);
+function v(e) {
+    let { channelId: t, className: n, ...v } = e,
+        _ = l.useRef(null),
+        I = (0, a.e7)([p.ZP], () => p.ZP.getFocusedLayout() === f.MI.RESIZABLE),
+        E = l.useCallback(() => {
+            let e = I ? f.MI.NO_CHAT : f.MI.RESIZABLE;
             (0, m.gC)(e);
-        }, [T]),
-        { unreadCount: S, mentionCount: v } = (function (e) {
-            let t = (0, l.e7)([d.Z], () => !(0, a.isEmpty)(d.Z.getTypingUsers(e)), [e]),
-                { unreadCount: n, mentionCount: i } = (0, l.cj)(
+        }, [I]),
+        { unreadCount: b, mentionCount: S } = (function (e) {
+            let t = (0, a.e7)([d.Z], () => !(0, r.isEmpty)(d.Z.getTypingUsers(e)), [e]),
+                { unreadCount: n, mentionCount: i } = (0, a.cj)(
                     [u.ZP],
                     () => ({
                         unreadCount: u.ZP.getUnreadCount(e),
@@ -44,39 +44,39 @@ function C(e) {
                 isTyping: t
             };
         })(t),
-        N = s.useCallback(() => {
+        Z = l.useCallback(() => {
             var e;
-            null === (e = I.current) || void 0 === e || e.focus();
+            null === (e = _.current) || void 0 === e || e.focus();
         }, []);
     (0, h.yp)({
-        event: f.CkL.FOCUS_CHAT_BUTTON,
-        handler: N
+        event: g.CkL.FOCUS_CHAT_BUTTON,
+        handler: Z
     });
-    let A = T ? E.Z.Messages.HIDE_CHAT : E.Z.Messages.SHOW_CHAT,
-        Z = [A];
-    v > 0 && Z.push(E.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({ mentionCount: v })), S > 0 && Z.push(E.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
-    let M = (0, l.e7)([p.ZP], () => p.ZP.getFocusedLayout()),
-        b = v > 0 ? v : S,
-        R = b > 0;
+    let T = I ? C.intl.string(C.t['5MstTk']) : C.intl.string(C.t.kkKapK),
+        N = [T];
+    S > 0 && N.push(C.intl.formatToPlainString(C.t['3l1GOz'], { mentionCount: S })), b > 0 && N.push(C.intl.string(C.t.x5zAGR));
+    let j = (0, a.e7)([p.ZP], () => p.ZP.getFocusedLayout()),
+        A = S > 0 ? S : b,
+        y = A > 0;
     return (0, i.jsxs)('div', {
-        className: g.wrapper,
+        className: x.wrapper,
         children: [
             (0, i.jsx)(c.d, {
-                buttonRef: I,
-                onClick: x,
-                label: A,
-                'aria-label': Z.join(', '),
+                buttonRef: _,
+                onClick: E,
+                label: T,
+                'aria-label': N.join(', '),
                 tooltipPosition: 'top',
-                iconComponent: M === _.MI.NO_CHAT ? r.ChevronLargeUpIcon : r.ChevronLargeDownIcon,
+                iconComponent: j === f.MI.NO_CHAT ? s.ChevronLargeUpIcon : s.ChevronLargeDownIcon,
                 themeable: !0,
                 className: n,
-                ...C
+                ...v
             }),
-            R
+            y
                 ? (0, i.jsx)(o.Z, {
-                      hasMentions: v > 0,
-                      truncatedCount: b > 99 ? '99+' : b,
-                      className: g.badge
+                      hasMentions: S > 0,
+                      truncatedCount: A > 99 ? '99+' : A,
+                      className: x.badge
                   })
                 : null
         ]

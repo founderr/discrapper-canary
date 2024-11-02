@@ -1,61 +1,61 @@
 n.r(a),
     n.d(a, {
         default: function () {
-            return _;
+            return C;
         }
     });
-var s = n(200651),
-    t = n(192379),
+var t = n(200651),
+    r = n(192379),
     o = n(120356),
-    r = n.n(o),
-    d = n(481060),
-    c = n(313201),
-    i = n(454585),
+    d = n.n(o),
+    i = n(481060),
+    s = n(313201),
+    c = n(454585),
     l = n(585483),
     h = n(981631),
-    u = n(689938),
+    u = n(388032),
     p = n(736891),
     x = n(554034);
-function _(e) {
-    let { channel: a, isFromComposer: n, transitionState: o, onClose: _ } = e,
-        I = (0, c.Dt)();
+function C(e) {
+    let { channel: a, isFromComposer: n, transitionState: o, onClose: C } = e,
+        j = (0, s.Dt)();
     return (
-        t.useEffect(
+        r.useEffect(
             () => () => {
                 n && l.S.dispatch(h.CkL.FOCUS_COMPOSER_TITLE);
             },
             [n]
         ),
-        (0, s.jsxs)(d.ModalRoot, {
+        (0, t.jsxs)(i.ModalRoot, {
             transitionState: o,
-            'aria-labelledby': I,
-            size: d.ModalSize.DYNAMIC,
+            'aria-labelledby': j,
+            size: i.ModalSize.DYNAMIC,
             className: p.container,
             children: [
-                (0, s.jsxs)(d.ModalHeader, {
+                (0, t.jsxs)(i.ModalHeader, {
                     className: p.header,
                     separator: !1,
                     children: [
-                        (0, s.jsx)(d.BookCheckIcon, {
+                        (0, t.jsx)(i.BookCheckIcon, {
                             size: 'custom',
                             color: 'currentColor',
                             className: p.rulesIcon,
                             width: 24,
                             height: 24
                         }),
-                        (0, s.jsx)(d.Heading, {
+                        (0, t.jsx)(i.Heading, {
                             variant: 'heading-lg/extrabold',
-                            children: u.Z.Messages.FORUM_POST_GUIDELINES_TITLE
+                            children: u.intl.string(u.t['4d4T4u'])
                         })
                     ]
                 }),
-                (0, s.jsx)(d.ModalContent, {
-                    children: (0, s.jsx)(d.Text, {
-                        className: r()(p.content, x.markup),
+                (0, t.jsx)(i.ModalContent, {
+                    children: (0, t.jsx)(i.Text, {
+                        className: d()(p.content, x.markup),
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: (0, s.jsx)('div', {
-                            children: i.Z.parseForumPostGuidelines(a.topic, !0, {
+                        children: (0, t.jsx)('div', {
+                            children: c.Z.parseForumPostGuidelines(a.topic, !0, {
                                 channelId: a.id,
                                 allowHeading: !0,
                                 allowList: !0
@@ -63,10 +63,10 @@ function _(e) {
                         })
                     })
                 }),
-                (0, s.jsx)(d.ModalFooter, {
-                    children: (0, s.jsx)(d.Button, {
-                        onClick: _,
-                        children: u.Z.Messages.GOT_IT
+                (0, t.jsx)(i.ModalFooter, {
+                    children: (0, t.jsx)(i.Button, {
+                        onClick: C,
+                        children: u.intl.string(u.t['NX+WJC'])
                     })
                 })
             ]

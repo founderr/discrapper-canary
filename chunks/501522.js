@@ -1,8 +1,8 @@
 a(47120);
 var n = a(200651),
     s = a(192379),
-    r = a(332009);
-function i(e, t, a) {
+    i = a(332009);
+function r(e, t, a) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,11 +33,11 @@ class l extends s.Component {
     }
     constructor(...e) {
         super(...e),
-            i(this, 'scrollRef', s.createRef()),
-            i(this, 'scrollTo', (e) => {
+            r(this, 'scrollRef', s.createRef()),
+            r(this, 'scrollTo', (e) => {
                 null != this.scrollRef.current && (this.scrollRef.current.scrollTop = e);
             }),
-            i(this, 'getScrollTop', () => (null == this.scrollRef.current ? 0 : this.scrollRef.current.scrollTop));
+            r(this, 'getScrollTop', () => (null == this.scrollRef.current ? 0 : this.scrollRef.current.scrollTop));
     }
 }
-t.Z = (0, r.EN)(l);
+t.Z = (0, i.EN)(l);

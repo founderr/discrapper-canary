@@ -3,29 +3,29 @@ n.d(t, {
         return u;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(120356),
-    i = n.n(a),
-    r = n(442837),
-    l = n(481060),
+var r = n(120356),
+    l = n.n(r),
+    s = n(442837),
+    a = n(481060),
     o = n(607070),
     c = n(307537),
     d = n(776362);
 function u(e) {
-    let { className: t, shouldShine: n = !0, size: a = 14 } = e,
-        u = (0, r.e7)([o.Z], () => o.Z.useReducedMotion);
-    return (0, s.jsxs)('div', {
-        className: i()([d.guildProductRoleIcon, t]),
+    let { className: t, shouldShine: n = !0, size: r = 14 } = e,
+        u = (0, s.e7)([o.Z], () => o.Z.useReducedMotion);
+    return (0, i.jsxs)('div', {
+        className: l()([d.guildProductRoleIcon, t]),
         children: [
-            (0, s.jsx)(c.Z, {
-                height: a,
-                width: a
+            (0, i.jsx)(c.Z, {
+                height: r,
+                width: r
             }),
-            (0, s.jsx)(l.Shine, {
+            (0, i.jsx)(a.Shine, {
                 className: d.shine,
                 shinePaused: u || !n,
-                shineSize: l.ShinyButton.ShineSizes.SMALL
+                shineSize: a.ShinyButton.ShineSizes.SMALL
             })
         ]
     });

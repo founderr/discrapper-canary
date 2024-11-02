@@ -1,10 +1,10 @@
 n.d(l, {
     S: function () {
-        return i;
+        return a;
     },
     _: function () {
-        return a;
+        return i;
     }
 });
-let a = 'Guild Welcome Screen',
-    i = 'hasClickedWelcomeEmojiPicker';
+let i = 'Guild Welcome Screen',
+    a = 'hasClickedWelcomeEmojiPicker';

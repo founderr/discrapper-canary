@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return f;
     }
 }),
     n(724458),
@@ -27,16 +27,16 @@ function d(e, t, n) {
         e
     );
 }
-class _ extends l.Z {
+class f extends l.Z {
     static fromServer(e) {
-        let { type: t, premium_type: n, category_sku_id: l, prices: d, bundled_products: E, ...f } = e;
-        return new _({
-            ...super.fromServer(f),
+        let { type: t, premium_type: n, category_sku_id: l, prices: d, bundled_products: _, ...h } = e;
+        return new f({
+            ...super.fromServer(h),
             type: t,
             premiumType: n === c.WND ? null : n,
             categorySkuId: l,
             prices: (0, o.l)(d),
-            items: f.items.reduce(
+            items: h.items.reduce(
                 (e, t) =>
                     (0, r.EQ)(t)
                         .with({ type: i.Z.AVATAR_DECORATION }, (t) => (e.push(a.Z.fromServer(t)), e))
@@ -44,8 +44,8 @@ class _ extends l.Z {
                         .otherwise(() => e),
                 []
             ),
-            bundledProducts: null == E ? void 0 : E.map(s.Z.fromServer),
-            googleSkuIds: f.google_sku_ids
+            bundledProducts: null == _ ? void 0 : _.map(s.Z.fromServer),
+            googleSkuIds: h.google_sku_ids
         });
     }
     constructor(e) {

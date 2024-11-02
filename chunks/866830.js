@@ -1,17 +1,17 @@
-n.d(t, {
+n.d(e, {
     U5: function () {
-        return i;
+        return l;
     },
     qR: function () {
-        return a;
+        return i;
     }
 });
 var r = n(273504);
-function a(e) {
-    let t = i();
-    return Array.from(e.defaultActionTypes).map((e) => t[e]);
+function i(t) {
+    let e = l();
+    return Array.from(t.defaultActionTypes).map((t) => e[t]);
 }
-function i() {
+function l() {
     return {
         [r.jj.BLOCK_MESSAGE]: {
             type: r.jj.BLOCK_MESSAGE,

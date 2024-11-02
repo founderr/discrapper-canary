@@ -1,64 +1,64 @@
-s.r(e),
-    s.d(e, {
+e.r(n),
+    e.d(n, {
         default: function () {
-            return d;
+            return c;
         }
     });
-var o = s(200651);
-s(192379);
-var n = s(481060),
-    a = s(782568),
-    i = s(313201),
-    l = s(689938),
-    r = s(309284);
-function d(t) {
-    let { url: e, onClose: d, transitionState: c } = t,
-        N = (0, i.Dt)();
-    return (0, o.jsxs)(n.ModalRoot, {
-        transitionState: c,
-        'aria-labelledby': N,
+var o = e(200651);
+e(192379);
+var i = e(481060),
+    s = e(782568),
+    l = e(313201),
+    a = e(388032),
+    r = e(309284);
+function c(t) {
+    let { url: n, onClose: c, transitionState: d } = t,
+        u = (0, l.Dt)();
+    return (0, o.jsxs)(i.ModalRoot, {
+        transitionState: d,
+        'aria-labelledby': u,
         children: [
             (0, o.jsx)('img', {
                 className: r.art,
-                src: s(902623),
+                src: e(902623),
                 alt: ''
             }),
-            (0, o.jsx)(n.ModalContent, {
+            (0, o.jsx)(i.ModalContent, {
                 children: (0, o.jsxs)('div', {
                     className: r.modalContent,
                     children: [
-                        (0, o.jsx)(n.Heading, {
-                            id: N,
+                        (0, o.jsx)(i.Heading, {
+                            id: u,
                             variant: 'heading-lg/semibold',
                             className: r.title,
-                            children: l.Z.Messages.LINK_NOT_DISCORD_WARNING_TITLE
+                            children: a.intl.string(a.t.biy1X1)
                         }),
-                        (0, o.jsx)(n.Text, {
+                        (0, o.jsx)(i.Text, {
                             variant: 'text-md/normal',
                             className: r.body,
-                            children: l.Z.Messages.LINK_NOT_DISCORD_WARNING_BODY.format({ url: e })
+                            children: a.intl.format(a.t.J86cyc, { url: n })
                         })
                     ]
                 })
             }),
-            (0, o.jsxs)(n.ModalFooter, {
+            (0, o.jsxs)(i.ModalFooter, {
                 children: [
-                    (0, o.jsx)(n.Button, {
+                    (0, o.jsx)(i.Button, {
                         type: 'button',
-                        size: n.Button.Sizes.MEDIUM,
-                        color: n.Button.Colors.BRAND,
-                        onClick: d,
-                        children: l.Z.Messages.LINK_NOT_DISCORD_WARNING_CANCEL
+                        size: i.Button.Sizes.MEDIUM,
+                        color: i.Button.Colors.BRAND,
+                        onClick: c,
+                        children: a.intl.string(a.t['xl8R+/'])
                     }),
-                    (0, o.jsx)(n.Button, {
+                    (0, o.jsx)(i.Button, {
                         type: 'button',
-                        size: n.Button.Sizes.MEDIUM,
-                        color: n.Button.Colors.TRANSPARENT,
-                        look: n.Button.Looks.LINK,
+                        size: i.Button.Sizes.MEDIUM,
+                        color: i.Button.Colors.TRANSPARENT,
+                        look: i.Button.Looks.LINK,
                         onClick: () => {
-                            (0, a.Z)(e, !0);
+                            (0, s.Z)(n, !0);
                         },
-                        children: l.Z.Messages.LINK_NOT_DISCORD_WARNING_CONTINUE
+                        children: a.intl.string(a.t.gQrLtr)
                     })
                 ]
             })

@@ -1,222 +1,222 @@
 n.d(t, {
     A7: function () {
-        return O;
+        return y;
     },
     CI: function () {
-        return x;
+        return L;
     },
     dX: function () {
-        return D;
+        return j;
     },
     j$: function () {
-        return a;
+        return r;
     },
     lH: function () {
-        return b;
+        return R;
     }
 });
 var i,
-    a,
-    s = n(200651),
-    r = n(192379),
-    l = n(704215),
+    r,
+    l = n(200651),
+    a = n(192379),
+    s = n(704215),
     o = n(481060),
     c = n(774078),
     d = n(605236),
     u = n(765585),
-    _ = n(703656),
-    E = n(706454),
-    h = n(74538),
-    m = n(924540),
-    I = n(119269),
-    p = n(938736),
-    g = n(227140),
-    T = n(981631),
-    S = n(921944),
-    C = n(689938),
-    f = n(938923),
+    h = n(703656),
+    m = n(706454),
+    p = n(74538),
+    g = n(924540),
+    f = n(119269),
+    _ = n(938736),
+    E = n(227140),
+    I = n(981631),
+    C = n(921944),
+    v = n(388032),
+    S = n(938923),
     N = n(203302);
-let A = 'url(#dark-purple-gradient)';
-function v(e) {
-    return e.toLocaleString(E.default.locale, {
+let T = 'url(#dark-purple-gradient)';
+function x(e) {
+    return e.toLocaleString(m.default.locale, {
         minimumIntegerDigits: 2,
         useGrouping: !1
     });
 }
-((i = a || (a = {})).REFERRAL_PROGRAM = 'referral_program'), (i.TRIAL_FOR_ALL = 'trial_for_all');
-let Z = () =>
-        (0, s.jsxs)('div', {
-            className: f.coachtipContent,
+((i = r || (r = {})).REFERRAL_PROGRAM = 'referral_program'), (i.TRIAL_FOR_ALL = 'trial_for_all');
+let b = () =>
+        (0, l.jsxs)('div', {
+            className: S.coachtipContent,
             children: [
-                (0, s.jsx)(o.Heading, {
+                (0, l.jsx)(o.Heading, {
                     variant: 'heading-sm/bold',
-                    children: C.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS
+                    children: v.intl.string(v.t.USo4s7)
                 }),
-                (0, s.jsx)(o.Text, {
+                (0, l.jsx)(o.Text, {
                     variant: 'text-xs/normal',
-                    children: C.Z.Messages.REFERRAL_PROGRAM_HOME_BADGE_SUBHEADER.format({ numReferrals: 3 })
+                    children: v.intl.format(v.t.AGKQq6, { numReferrals: 3 })
                 })
             ]
         }),
-    L = () =>
-        (0, s.jsx)('svg', {
+    A = () =>
+        (0, l.jsx)('svg', {
             width: '15',
             height: '15',
             viewBox: '0 0 15 15',
             fill: 'none',
             xmlns: 'http://www.w3.org/2000/svg',
-            children: (0, s.jsx)('path', {
+            children: (0, l.jsx)('path', {
                 d: 'M10.8079 11.6918C11.052 11.9359 11.4477 11.9359 11.6918 11.6918C11.9359 11.4477 11.9359 11.052 11.6918 10.8079L8.38384 7.49996L11.6918 4.19201C11.9359 3.94793 11.9359 3.5522 11.6918 3.30813C11.4477 3.06405 11.052 3.06405 10.8079 3.30813L7.49996 6.61607L4.19194 3.30806C3.94786 3.06398 3.55214 3.06398 3.30806 3.30806C3.06398 3.55214 3.06398 3.94786 3.30806 4.19194L6.61608 7.49996L3.30806 10.808C3.06398 11.0521 3.06398 11.4478 3.30806 11.6919C3.55214 11.9359 3.94786 11.9359 4.19194 11.6919L7.49996 8.38384L10.8079 11.6918Z',
                 fill: 'white'
             })
         }),
-    R = () => (0, d.EW)(l.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: S.L.TAKE_ACTION }),
-    O = (e) => {
+    Z = () => (0, d.EW)(s.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: C.L.TAKE_ACTION }),
+    y = (e) => {
         let { children: t } = e;
-        return (0, s.jsx)(o.Popout, {
+        return (0, l.jsx)(o.Popout, {
             shouldShow: !0,
             renderPopout: () =>
-                (0, s.jsx)(u.Z, {
-                    artClassName: f.coachmarkArt,
-                    dismissIconClassName: f.exitIcon,
-                    onDismissIconClick: R,
-                    dismissIcon: (0, s.jsx)(L, {}),
-                    headerClassName: f.incentiveCoachtipContent,
-                    contentClassName: f.incentiveCoachtipContainer,
-                    pointerClassName: f.incentiveTooltipPointer,
+                (0, l.jsx)(u.Z, {
+                    artClassName: S.coachmarkArt,
+                    dismissIconClassName: S.exitIcon,
+                    onDismissIconClick: Z,
+                    dismissIcon: (0, l.jsx)(A, {}),
+                    headerClassName: S.incentiveCoachtipContent,
+                    contentClassName: S.incentiveCoachtipContainer,
+                    pointerClassName: S.incentiveTooltipPointer,
                     onTryFeature: () => {
-                        (0, _.uL)(T.Z5c.NITRO_HOME), R();
+                        (0, h.uL)(I.Z5c.NITRO_HOME), Z();
                     },
-                    art: (0, s.jsx)(s.Fragment, {
-                        children: (0, s.jsx)(I.Z, {
+                    art: (0, l.jsx)(l.Fragment, {
+                        children: (0, l.jsx)(f.Z, {
                             staticPercentage: 100,
-                            iconClassName: f.incentiveIcon,
+                            iconClassName: S.incentiveIcon,
                             showAnimations: !1,
-                            progressCircleVariation: I.Q.NITRO_LOGO,
+                            progressCircleVariation: f.Q.NITRO_LOGO,
                             ellipseOpacity: 1,
-                            circleColor: A,
-                            circleStroke: A,
+                            circleColor: T,
+                            circleStroke: T,
                             progressCircleStrokeSize: 4
                         })
                     }),
                     position: 'right',
                     align: 'top',
-                    tryItText: C.Z.Messages.CHECK_IT_OUT,
-                    header: C.Z.Messages.REFERRAL_INCENTIVE_SHARE_NITRO_GET_DISCOUNT.format({ discountRate: p.Nq }),
+                    tryItText: v.intl.string(v.t.RzWDqa),
+                    header: v.intl.formatToPlainString(v.t.md2GU1, { discountRate: _.Nq }),
                     hideDismissButton: !0,
-                    body: C.Z.Messages.REFERRAL_INCENTIVE_GET_DISCOUNT_OFF_YOUR_NEXT_MONTH.format({ discountRate: p.Nq }),
-                    dismissibleContent: l.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR,
+                    body: v.intl.formatToPlainString(v.t.mxPPxc, { discountRate: _.Nq }),
+                    dismissibleContent: s.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR,
                     maxWidth: 320
                 }),
             children: t
         });
     },
-    x = (e) => {
+    L = (e) => {
         let t,
-            { children: n, variant: i, trialOffer: a } = e,
-            r = 'referral_program' === i;
+            { children: n, variant: i, trialOffer: r } = e,
+            a = 'referral_program' === i;
         return (
-            (t = r
-                ? (0, s.jsxs)('div', {
-                      className: f.coachTipContainer,
+            (t = a
+                ? (0, l.jsxs)('div', {
+                      className: S.coachTipContainer,
                       children: [
-                          (0, s.jsx)('div', {
-                              className: f.iconContainer,
-                              children: (0, s.jsx)(I.Z, {
+                          (0, l.jsx)('div', {
+                              className: S.iconContainer,
+                              children: (0, l.jsx)(f.Z, {
                                   staticPercentage: 100,
-                                  iconClassName: f.icon,
+                                  iconClassName: S.icon,
                                   showAnimations: !0,
-                                  progressCircleVariation: I.Q.NITRO_LOGO,
+                                  progressCircleVariation: f.Q.NITRO_LOGO,
                                   ellipseOpacity: 1,
-                                  customAnimationClassName: f.customCircleAnimation,
+                                  customAnimationClassName: S.customCircleAnimation,
                                   circleColor: 'url(#purple-gradient)'
                               })
                           }),
-                          (0, s.jsx)(Z, {})
+                          (0, l.jsx)(b, {})
                       ]
                   })
-                : (0, s.jsxs)('div', {
-                      className: f.t4ACoachTipContainer,
+                : (0, l.jsxs)('div', {
+                      className: S.t4ACoachTipContainer,
                       children: [
-                          (0, s.jsx)('div', {
-                              className: f.t4ACoachtipArtOuterContainer,
-                              children: (0, s.jsx)(M, {})
+                          (0, l.jsx)('div', {
+                              className: S.t4ACoachtipArtOuterContainer,
+                              children: (0, l.jsx)(P, {})
                           }),
-                          (null == a ? void 0 : a.expires_at) != null && (0, s.jsx)(P, { trialExpiration: Date.parse(a.expires_at) })
+                          (null == r ? void 0 : r.expires_at) != null && (0, l.jsx)(O, { trialExpiration: Date.parse(r.expires_at) })
                       ]
                   })),
-            (0, s.jsx)(o.Tooltip, {
+            (0, l.jsx)(o.Tooltip, {
                 text: t,
                 position: 'right',
-                'aria-label': r ? C.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS : C.Z.Messages.TRIAL_FOR_ALL_NITRO_MARKETING_HEADER,
-                tooltipClassName: r ? f.marketingBadgeTooltip : f.t4AMarketingBadgeTooltip,
+                'aria-label': a ? v.intl.string(v.t.USo4s7) : v.intl.string(v.t.Kkcmj4),
+                tooltipClassName: a ? S.marketingBadgeTooltip : S.t4AMarketingBadgeTooltip,
                 allowOverflow: !0,
-                tooltipContentClassName: f.tooltipContent,
+                tooltipContentClassName: S.tooltipContent,
                 children: (e) =>
-                    (0, s.jsx)('div', {
+                    (0, l.jsx)('div', {
                         ...e,
                         children: n
                     })
             })
         );
     },
-    b = (e) => {
+    R = (e) => {
         let { isSelected: t, onSelect: n } = e;
         return (
-            r.useEffect(() => {
+            a.useEffect(() => {
                 t && n();
             }, [t, n]),
-            (0, s.jsx)(g.Z, { copy: C.Z.Messages.NEW })
+            (0, l.jsx)(E.Z, { copy: v.intl.string(v.t.y2b7CA) })
         );
     },
-    M = () =>
-        (0, s.jsx)('div', {
-            className: f.t4ACoachtipArtInnerContainer,
-            children: (0, s.jsx)('img', {
+    P = () =>
+        (0, l.jsx)('div', {
+            className: S.t4ACoachtipArtInnerContainer,
+            children: (0, l.jsx)('img', {
                 src: N,
                 alt: ''
             })
         }),
-    P = (e) => {
+    O = (e) => {
         let { trialExpiration: t } = e,
             n = (0, c.Z)(t, 1000);
-        return (0, s.jsxs)('div', {
+        return (0, l.jsxs)('div', {
             children: [
-                (0, s.jsx)(o.Heading, {
+                (0, l.jsx)(o.Heading, {
                     variant: 'heading-sm/bold',
-                    children: C.Z.Messages.TRIAL_FOR_ALL_NITRO_MARKETING_HEADER
+                    children: v.intl.string(v.t.Kkcmj4)
                 }),
-                (0, s.jsx)(o.Text, {
+                (0, l.jsx)(o.Text, {
                     variant: 'text-xs/normal',
                     children:
                         n.days > 0
-                            ? C.Z.Messages.TRIAL_FOR_ALL_OFFER_TOOLTIP_DAYS.format({ days: n.days })
-                            : C.Z.Messages.TRIAL_FOR_ALL_OFFER_TOOLTIP.format({
-                                  hours: v(n.hours),
-                                  minutes: v(n.minutes),
-                                  seconds: v(n.seconds)
+                            ? v.intl.formatToPlainString(v.t.G1Ldn5, { days: n.days })
+                            : v.intl.formatToPlainString(v.t.h982oq, {
+                                  hours: x(n.hours),
+                                  minutes: x(n.minutes),
+                                  seconds: x(n.seconds)
                               })
                 })
             ]
         });
     },
-    D = (e) => {
+    j = (e) => {
         var t, n;
-        let { isSelected: i, trialOffer: a, q4MarketingEnabled: o } = e,
-            c = (0, d.wE)(l.z.TRIAL_FOR_ALL_MARKETING_PAGE_BADGE),
-            u = (0, h.a5)({
-                intervalType: null === (t = a.subscription_trial) || void 0 === t ? void 0 : t.interval,
-                intervalCount: null === (n = a.subscription_trial) || void 0 === n ? void 0 : n.interval_count
+        let { isSelected: i, trialOffer: r, q4MarketingEnabled: o } = e,
+            c = (0, d.wE)(s.z.TRIAL_FOR_ALL_MARKETING_PAGE_BADGE),
+            u = (0, p.a5)({
+                intervalType: null === (t = r.subscription_trial) || void 0 === t ? void 0 : t.interval,
+                intervalCount: null === (n = r.subscription_trial) || void 0 === n ? void 0 : n.interval_count
             });
         return (
-            r.useEffect(() => {
-                i && !c && (0, d.EW)(l.z.TRIAL_FOR_ALL_MARKETING_PAGE_BADGE, { dismissAction: S.L.TAKE_ACTION });
+            a.useEffect(() => {
+                i && !c && (0, d.EW)(s.z.TRIAL_FOR_ALL_MARKETING_PAGE_BADGE, { dismissAction: C.L.TAKE_ACTION });
             }, [i, c]),
-            (0, s.jsx)(m._y, {
-                className: f.trialBadgeBackground,
+            (0, l.jsx)(g._y, {
+                className: S.trialBadgeBackground,
                 isTabSelected: i,
-                badgeCopy: o ? C.Z.Messages.NITRO_BADGE_TEXT : u,
-                offerExpiresAt: c ? a.expires_at : void 0
+                badgeCopy: o ? v.intl.string(v.t.OS9KPj) : u,
+                offerExpiresAt: c ? r.expires_at : void 0
             })
         );
     };

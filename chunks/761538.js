@@ -1,18 +1,18 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return o;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(689938),
-    r = n(128037);
-function l(e) {
+var r = n(481060),
+    l = n(388032),
+    a = n(128037);
+function o(e) {
     let { message: t } = e;
-    return (0, i.jsxs)(a.Clickable, {
+    return (0, i.jsxs)(r.Clickable, {
         onClick: () => {
-            (0, a.openModalLazy)(async () => {
+            (0, r.openModalLazy)(async () => {
                 let { default: e } = await n.e('14021').then(n.bind(n, 910673));
                 return (n) =>
                     (0, i.jsx)(e, {
@@ -22,16 +22,16 @@ function l(e) {
                     });
             });
         },
-        className: r.accessory,
+        className: a.accessory,
         children: [
-            (0, i.jsx)(a.CircleInformationIcon, {
+            (0, i.jsx)(r.CircleInformationIcon, {
                 size: 'xs',
                 color: 'currentColor'
             }),
-            (0, i.jsx)(a.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: 'text-xs/normal',
-                className: r.accessoryText,
-                children: s.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_MESSAGE_LABEL
+                className: a.accessoryText,
+                children: l.intl.string(l.t['2aXnfX'])
             })
         ]
     });

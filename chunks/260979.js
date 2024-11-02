@@ -1,28 +1,28 @@
 n(653041);
 var i = n(200651),
-    s = n(192379),
-    a = n(965288),
-    l = n(793954);
-t.Z = s.memo(function (e) {
-    let { channel: t, participants: n, maxTiles: s } = e;
+    l = n(192379),
+    r = n(965288),
+    a = n(793954);
+t.Z = l.memo(function (e) {
+    let { channel: t, participants: n, maxTiles: l } = e;
     if (0 === n.length) return null;
-    let r = [];
-    for (let e = 0; e < s; e++)
+    let s = [];
+    for (let e = 0; e < l; e++)
         if (e < n.length) {
-            let s = n[e];
-            r.push(
+            let l = n[e];
+            s.push(
                 (0, i.jsx)(
-                    a.Z,
+                    r.Z,
                     {
                         channel: t,
-                        participant: s
+                        participant: l
                     },
-                    s.id
+                    l.id
                 )
             );
-        } else r.push((0, i.jsx)(a.y, {}, e));
+        } else s.push((0, i.jsx)(r.y, {}, e));
     return (0, i.jsx)('div', {
-        className: l.participants,
-        children: r
+        className: a.participants,
+        children: s
     });
 });

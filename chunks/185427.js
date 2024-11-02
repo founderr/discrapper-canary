@@ -12,7 +12,7 @@ t.Z = {
             s = n.offset,
             o = void 0 === s ? [0, 0] : s,
             l = i.Ct.reduce(function (e, n) {
-                var a, s, l, u, c, d, _, E;
+                var a, s, l, u, c, d, f, _;
                 return (
                     (e[n] =
                         ((a = n),
@@ -20,18 +20,18 @@ t.Z = {
                         (l = o),
                         (u = (0, r.Z)(a)),
                         (c = [i.t$, i.we].indexOf(u) >= 0 ? -1 : 1),
-                        (_ = (d = 'function' == typeof l ? l(Object.assign({}, s, { placement: a })) : l)[0]),
-                        (E = d[1]),
-                        (_ = _ || 0),
-                        (E = (E || 0) * c),
+                        (f = (d = 'function' == typeof l ? l(Object.assign({}, s, { placement: a })) : l)[0]),
+                        (_ = d[1]),
+                        (f = f || 0),
+                        (_ = (_ || 0) * c),
                         [i.t$, i.F2].indexOf(u) >= 0
                             ? {
-                                  x: E,
-                                  y: _
+                                  x: _,
+                                  y: f
                               }
                             : {
-                                  x: _,
-                                  y: E
+                                  x: f,
+                                  y: _
                               })),
                     e
                 );

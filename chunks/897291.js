@@ -7,43 +7,43 @@ var r = n(200651),
     u = n(963249),
     c = n(51144),
     d = n(443603),
-    _ = n(981631),
-    E = n(689938),
-    f = n(703130);
+    f = n(981631),
+    _ = n(388032),
+    h = n(703130);
 t.Z = i.memo(function (e) {
     let { disabled: t, channel: n } = e,
         { analyticsLocations: i } = (0, l.ZP)(o.Z.GIFT_BUTTON),
-        h = (0, c.Ft)(n),
-        { Component: p, events: I, play: m } = (0, a.$)();
+        p = (0, c.Ft)(n),
+        { Component: m, events: g, play: E } = (0, a.$)();
     if (t) return null;
-    let T = () => {
+    let v = () => {
         (0, u.Z)({
             isGift: !0,
-            giftRecipient: null === h ? void 0 : h,
+            giftRecipient: null === p ? void 0 : p,
             initialPlanId: null,
             analyticsLocations: i,
             analyticsObject: {
-                page: n.isPrivate() ? _.ZY5.DM_CHANNEL : _.ZY5.GUILD_CHANNEL,
-                section: _.jXE.CHANNEL_TEXT_AREA,
-                object: _.qAy.BUTTON_ICON,
-                objectType: _.Qqv.GIFT
+                page: n.isPrivate() ? f.ZY5.DM_CHANNEL : f.ZY5.GUILD_CHANNEL,
+                section: f.jXE.CHANNEL_TEXT_AREA,
+                object: f.qAy.BUTTON_ICON,
+                objectType: f.Qqv.GIFT
             }
         });
     };
     return (0, r.jsx)(s.Tooltip, {
-        text: E.Z.Messages.PREMIUM_GIFT_BUTTON_TOOLTIP,
+        text: _.intl.string(_.t.sWtWDQ),
         children: (e) =>
             (0, r.jsx)(d.Z, {
                 ...e,
-                innerClassName: f.button,
+                innerClassName: h.button,
                 isActive: !1,
-                'aria-label': E.Z.Messages.PREMIUM_GIFT_BUTTON_LABEL,
+                'aria-label': _.intl.string(_.t.Z1RnTk),
                 'aria-haspopup': 'dialog',
                 onClick: () => {
-                    T(), m();
+                    v(), E();
                 },
-                ...I,
-                children: (0, r.jsx)(p, { color: 'currentColor' })
+                ...g,
+                children: (0, r.jsx)(m, { color: 'currentColor' })
             })
     });
 });

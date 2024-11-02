@@ -6,7 +6,7 @@ n.d(t, {
         return l;
     },
     I9: function () {
-        return _;
+        return f;
     },
     jR: function () {
         return d;
@@ -18,10 +18,10 @@ n.d(t, {
         return s;
     },
     nz: function () {
-        return E;
+        return _;
     },
     tB: function () {
-        return f;
+        return h;
     },
     yG: function () {
         return c;
@@ -37,7 +37,7 @@ let l = '>=19.0.0',
     u = '>=22.0.0',
     c = '>=22.0.0',
     d = '>=24.0.0',
-    _ = '>=10.0.17763',
-    E = '>=10.0.22000';
+    f = '>=10.0.17763',
+    _ = '>=10.0.22000';
 ((i = s || (s = {})).GUILD = 'guild'), (i.CALL = 'call');
-let f = o.T.StreamNotificationsGuildMaxSize;
+let h = o.T.StreamNotificationsGuildMaxSize;

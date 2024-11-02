@@ -67,8 +67,8 @@ function c(e) {
         return l.push([e, t]), t + 1;
     }
     let d = o(0.5 * a),
-        _ = o(r, -d),
-        E = o(r + a, d);
-    for (_ > 0 && (_ = Math.max(c(0), _)), _ = Math.floor(_ / i.dj) * i.dj; _ <= E; ) _ = c(_);
+        f = o(r, -d),
+        _ = o(r + a, d);
+    for (f > 0 && (f = Math.max(c(0), f)), f = Math.floor(f / i.dj) * i.dj; f <= _; ) f = c(f);
     u(t, n, l);
 }

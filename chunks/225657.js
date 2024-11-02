@@ -1,38 +1,38 @@
 var i = n(200651);
 n(192379);
-var a = n(442837),
-    s = n(481060),
-    r = n(700582),
-    l = n(987209),
-    o = n(699516),
+var r = n(442837),
+    l = n(481060),
+    a = n(700582),
+    o = n(987209),
+    s = n(699516),
     c = n(594174),
     u = n(51144),
-    d = n(689938);
+    d = n(388032);
 t.Z = (e) => {
-    let { selectedSkuId: t, validateSelectedGift: n, className: _ } = e,
-        E = (0, a.Wu)([o.Z], () => o.Z.getFriendIDs()),
-        I = (0, a.Wu)([c.default], () => c.default.filter((e) => E.includes(e.id) && !e.bot), [E]),
-        { giftRecipient: m, setGiftRecipient: f } = (0, l.wD)();
+    let { selectedSkuId: t, validateSelectedGift: n, className: m } = e,
+        f = (0, r.Wu)([s.Z], () => s.Z.getFriendIDs()),
+        h = (0, r.Wu)([c.default], () => c.default.filter((e) => f.includes(e.id) && !e.bot), [f]),
+        { giftRecipient: p, setGiftRecipient: g } = (0, o.wD)();
     return null == t
         ? null
         : (0, i.jsxs)('div', {
-              className: _,
+              className: m,
               children: [
-                  (0, i.jsx)(s.FormTitle, { children: d.Z.Messages.FORM_LABEL_SEND_TO }),
-                  (0, i.jsx)(s.SearchableSelect, {
-                      placeholder: d.Z.Messages.COLLECTIBLES_GIFT_RECIPIENT_PLACEHOLDER,
+                  (0, i.jsx)(l.FormTitle, { children: d.intl.string(d.t.xFn72t) }),
+                  (0, i.jsx)(l.SearchableSelect, {
+                      placeholder: d.intl.string(d.t.R0vK0N),
                       renderOptionPrefix: (e) =>
                           (null == e ? void 0 : e.value) == null
                               ? null
-                              : (0, i.jsx)(r.Z, {
+                              : (0, i.jsx)(a.Z, {
                                     user: e.value,
-                                    size: s.AvatarSizes.SIZE_20
+                                    size: l.AvatarSizes.SIZE_20
                                 }),
-                      value: m,
+                      value: p,
                       onChange: (e) => {
-                          n(e, t), f(e);
+                          n(e, t), g(e);
                       },
-                      options: I.map((e) => ({
+                      options: h.map((e) => ({
                           value: e,
                           label: ''.concat(u.ZP.getUserTag(e))
                       }))

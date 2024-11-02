@@ -1,9 +1,9 @@
 n.d(t, {
     Hx: function () {
-        return f;
+        return h;
     },
     pi: function () {
-        return E;
+        return _;
     }
 }),
     n(789020),
@@ -18,7 +18,7 @@ var r = n(373793),
     u = n(630388),
     c = n(358085),
     d = n(981631);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,21 +31,21 @@ function _(e, t, n) {
         e
     );
 }
-class E extends i.Z {
+class _ extends i.Z {
     hasFlag(e) {
         return (0, u.yE)(this.flags, e);
     }
     constructor(e) {
-        var t, n, r, i, a, s, o, l, u, c, E, f;
-        super(), _(this, 'type', void 0), _(this, 'content', void 0), _(this, 'attachments', void 0), _(this, 'embeds', void 0), _(this, 'timestamp', void 0), _(this, 'editedTimestamp', void 0), _(this, 'flags', void 0), _(this, 'components', void 0), _(this, 'codedLinks', void 0), _(this, 'stickers', void 0), _(this, 'stickerItems', void 0), (this.type = null !== (t = e.type) && void 0 !== t ? t : d.uaV.DEFAULT), (this.content = null !== (n = e.content) && void 0 !== n ? n : ''), (this.attachments = null !== (r = e.attachments) && void 0 !== r ? r : []), (this.embeds = null !== (i = e.embeds) && void 0 !== i ? i : []), (this.timestamp = null !== (a = e.timestamp) && void 0 !== a ? a : new Date()), (this.editedTimestamp = null !== (s = e.editedTimestamp) && void 0 !== s ? s : null), (this.flags = null !== (o = e.flags) && void 0 !== o ? o : 0), (this.components = null !== (l = e.components) && void 0 !== l ? l : []), (this.codedLinks = null !== (u = e.codedLinks) && void 0 !== u ? u : []), (this.stickers = null !== (c = e.stickers) && void 0 !== c ? c : []), (this.stickerItems = null !== (f = null !== (E = e.sticker_items) && void 0 !== E ? E : e.stickerItems) && void 0 !== f ? f : []);
+        var t, n, r, i, a, s, o, l, u, c, _, h;
+        super(), f(this, 'type', void 0), f(this, 'content', void 0), f(this, 'attachments', void 0), f(this, 'embeds', void 0), f(this, 'timestamp', void 0), f(this, 'editedTimestamp', void 0), f(this, 'flags', void 0), f(this, 'components', void 0), f(this, 'codedLinks', void 0), f(this, 'stickers', void 0), f(this, 'stickerItems', void 0), (this.type = null !== (t = e.type) && void 0 !== t ? t : d.uaV.DEFAULT), (this.content = null !== (n = e.content) && void 0 !== n ? n : ''), (this.attachments = null !== (r = e.attachments) && void 0 !== r ? r : []), (this.embeds = null !== (i = e.embeds) && void 0 !== i ? i : []), (this.timestamp = null !== (a = e.timestamp) && void 0 !== a ? a : new Date()), (this.editedTimestamp = null !== (s = e.editedTimestamp) && void 0 !== s ? s : null), (this.flags = null !== (o = e.flags) && void 0 !== o ? o : 0), (this.components = null !== (l = e.components) && void 0 !== l ? l : []), (this.codedLinks = null !== (u = e.codedLinks) && void 0 !== u ? u : []), (this.stickers = null !== (c = e.stickers) && void 0 !== c ? c : []), (this.stickerItems = null !== (h = null !== (_ = e.sticker_items) && void 0 !== _ ? _ : e.stickerItems) && void 0 !== h ? h : []);
     }
 }
-class f extends i.Z {
+class h extends i.Z {
     constructor(e) {
-        super(), _(this, 'message', void 0), (this.message = new E(e.message));
+        super(), f(this, 'message', void 0), (this.message = new _(e.message));
     }
 }
-t.ZP = class e extends E {
+t.ZP = class e extends _ {
     isEdited() {
         return null != this.editedTimestamp;
     }
@@ -93,8 +93,8 @@ t.ZP = class e extends E {
                             })
                         };
                     } else if (r === o.O.VOTE) {
-                        var d, _;
-                        let e = null !== (_ = null === (d = s.count_details) || void 0 === d ? void 0 : d.vote) && void 0 !== _ ? _ : 0,
+                        var d, f;
+                        let e = null !== (f = null === (d = s.count_details) || void 0 === d ? void 0 : d.vote) && void 0 !== f ? f : 0,
                             n = t && s.me_vote ? e : e + 1;
                         s = {
                             ...s,
@@ -221,11 +221,11 @@ t.ZP = class e extends E {
                 }
                 return t;
             }),
-            { count: d, burst_count: _, count_details: E } = null !== (t = c[u]) && void 0 !== t ? t : {},
-            f = null !== (n = null == E ? void 0 : E.normal) && void 0 !== n ? n : 0,
-            h = null !== (r = null == E ? void 0 : E.burst) && void 0 !== r ? r : 0,
-            p = null !== (i = null == E ? void 0 : E.vote) && void 0 !== i ? i : 0;
-        return -1 !== u && d <= 0 && _ <= 0 && f <= 0 && h <= 0 && p <= 0 && c.splice(u, 1), this.set('reactions', c);
+            { count: d, burst_count: f, count_details: _ } = null !== (t = c[u]) && void 0 !== t ? t : {},
+            h = null !== (n = null == _ ? void 0 : _.normal) && void 0 !== n ? n : 0,
+            p = null !== (r = null == _ ? void 0 : _.burst) && void 0 !== r ? r : 0,
+            m = null !== (i = null == _ ? void 0 : _.vote) && void 0 !== i ? i : 0;
+        return -1 !== u && d <= 0 && f <= 0 && h <= 0 && p <= 0 && m <= 0 && c.splice(u, 1), this.set('reactions', c);
     }
     removeReactionsForEmoji(e) {
         return this.set(
@@ -267,6 +267,6 @@ t.ZP = class e extends E {
     }
     constructor(e) {
         var t, n;
-        super(e), _(this, 'id', void 0), _(this, 'channel_id', void 0), _(this, 'author', void 0), _(this, 'bot', void 0), _(this, 'customRenderedContent', void 0), _(this, 'pinned', void 0), _(this, 'mentions', void 0), _(this, 'mentionRoles', void 0), _(this, 'mentionChannels', void 0), _(this, 'mentionEveryone', void 0), _(this, 'mentioned', void 0), _(this, 'tts', void 0), _(this, 'giftCodes', void 0), _(this, 'state', void 0), _(this, 'nonce', void 0), _(this, 'blocked', void 0), _(this, 'call', void 0), _(this, 'webhookId', void 0), _(this, 'reactions', void 0), _(this, 'applicationId', void 0), _(this, 'application', void 0), _(this, 'activity', void 0), _(this, 'activityInstance', void 0), _(this, 'interaction', void 0), _(this, 'interactionData', void 0), _(this, 'interactionMetadata', void 0), _(this, 'interactionError', void 0), _(this, 'messageReference', void 0), _(this, 'isSearchHit', void 0), _(this, 'roleSubscriptionData', void 0), _(this, 'purchaseNotification', void 0), _(this, 'poll', void 0), _(this, 'loggingName', void 0), _(this, 'referralTrialOfferId', void 0), _(this, 'giftInfo', void 0), _(this, 'giftingPrompt', void 0), _(this, 'messageSnapshots', void 0), _(this, 'isUnsupported', void 0), _(this, 'changelogId', void 0), _(this, 'colorString', void 0), _(this, 'nick', void 0), (this.id = e.id), (this.channel_id = e.channel_id), (this.author = e.author), (this.customRenderedContent = e.customRenderedContent), (this.mentions = e.mentions || []), (this.mentionRoles = e.mentionRoles || []), (this.mentionChannels = e.mentionChannels || []), (this.mentioned = e.mentioned || !1), (this.pinned = e.pinned || !1), (this.mentionEveryone = e.mentionEveryone || !1), (this.tts = e.tts || !1), (this.giftCodes = e.giftCodes || []), (this.state = e.state || d.yb.SENT), (this.nonce = e.nonce || null), (this.blocked = e.blocked || !1), (this.call = e.call || null), (this.bot = e.bot || !1), (this.webhookId = e.webhookId || null), (this.reactions = e.reactions || []), (this.applicationId = e.application_id || e.applicationId || null), (this.application = e.application || null), (this.activity = e.activity || null), (this.activityInstance = e.activity_instance || e.activityInstance || null), (this.messageReference = e.messageReference || null), (this.isSearchHit = e.hit || e.isSearchHit || !1), (this.loggingName = e.loggingName || null), (this.colorString = e.colorString), (this.nick = e.nick), (this.interaction = e.interaction || null), (this.interactionData = e.interactionData || null), (this.interactionMetadata = e.interactionMetadata || null), (this.interactionError = e.interactionError || null), (this.roleSubscriptionData = e.roleSubscriptionData), (this.purchaseNotification = e.purchaseNotification), (this.poll = e.poll), (this.referralTrialOfferId = e.referralTrialOfferId || null), (this.giftInfo = null !== (t = e.gift_info) && void 0 !== t ? t : e.giftInfo), (this.giftingPrompt = e.giftingPrompt || null), (this.messageSnapshots = e.messageSnapshots || []), (this.isUnsupported = e.isUnsupported || !1), (this.changelogId = null !== (n = e.changelog_id) && void 0 !== n ? n : e.changelogId || null);
+        super(e), f(this, 'id', void 0), f(this, 'channel_id', void 0), f(this, 'author', void 0), f(this, 'bot', void 0), f(this, 'customRenderedContent', void 0), f(this, 'pinned', void 0), f(this, 'mentions', void 0), f(this, 'mentionRoles', void 0), f(this, 'mentionChannels', void 0), f(this, 'mentionEveryone', void 0), f(this, 'mentioned', void 0), f(this, 'tts', void 0), f(this, 'giftCodes', void 0), f(this, 'state', void 0), f(this, 'nonce', void 0), f(this, 'blocked', void 0), f(this, 'call', void 0), f(this, 'webhookId', void 0), f(this, 'reactions', void 0), f(this, 'applicationId', void 0), f(this, 'application', void 0), f(this, 'activity', void 0), f(this, 'activityInstance', void 0), f(this, 'interaction', void 0), f(this, 'interactionData', void 0), f(this, 'interactionMetadata', void 0), f(this, 'interactionError', void 0), f(this, 'messageReference', void 0), f(this, 'isSearchHit', void 0), f(this, 'roleSubscriptionData', void 0), f(this, 'purchaseNotification', void 0), f(this, 'poll', void 0), f(this, 'loggingName', void 0), f(this, 'referralTrialOfferId', void 0), f(this, 'giftInfo', void 0), f(this, 'giftingPrompt', void 0), f(this, 'messageSnapshots', void 0), f(this, 'isUnsupported', void 0), f(this, 'changelogId', void 0), f(this, 'colorString', void 0), f(this, 'nick', void 0), (this.id = e.id), (this.channel_id = e.channel_id), (this.author = e.author), (this.customRenderedContent = e.customRenderedContent), (this.mentions = e.mentions || []), (this.mentionRoles = e.mentionRoles || []), (this.mentionChannels = e.mentionChannels || []), (this.mentioned = e.mentioned || !1), (this.pinned = e.pinned || !1), (this.mentionEveryone = e.mentionEveryone || !1), (this.tts = e.tts || !1), (this.giftCodes = e.giftCodes || []), (this.state = e.state || d.yb.SENT), (this.nonce = e.nonce || null), (this.blocked = e.blocked || !1), (this.call = e.call || null), (this.bot = e.bot || !1), (this.webhookId = e.webhookId || null), (this.reactions = e.reactions || []), (this.applicationId = e.application_id || e.applicationId || null), (this.application = e.application || null), (this.activity = e.activity || null), (this.activityInstance = e.activity_instance || e.activityInstance || null), (this.messageReference = e.messageReference || null), (this.isSearchHit = e.hit || e.isSearchHit || !1), (this.loggingName = e.loggingName || null), (this.colorString = e.colorString), (this.nick = e.nick), (this.interaction = e.interaction || null), (this.interactionData = e.interactionData || null), (this.interactionMetadata = e.interactionMetadata || null), (this.interactionError = e.interactionError || null), (this.roleSubscriptionData = e.roleSubscriptionData), (this.purchaseNotification = e.purchaseNotification), (this.poll = e.poll), (this.referralTrialOfferId = e.referralTrialOfferId || null), (this.giftInfo = null !== (t = e.gift_info) && void 0 !== t ? t : e.giftInfo), (this.giftingPrompt = e.giftingPrompt || null), (this.messageSnapshots = e.messageSnapshots || []), (this.isUnsupported = e.isUnsupported || !1), (this.changelogId = null !== (n = e.changelog_id) && void 0 !== n ? n : e.changelogId || null);
     }
 };

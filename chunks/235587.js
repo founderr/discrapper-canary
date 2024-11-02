@@ -25,7 +25,7 @@ let c = () => ({
         prevLeaderboardRanks: {}
     }),
     d = c();
-class _ extends (r = i.ZP.PersistedStore) {
+class f extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         return (
             (d = {
@@ -55,9 +55,9 @@ class _ extends (r = i.ZP.PersistedStore) {
         d = c();
     }
 }
-l(_, 'displayName', 'GuildLeaderboardRanksStore'),
-    l(_, 'persistKey', 'GuildLeaderboardRanksStore'),
-    (t.Z = new _(s.Z, {
+l(f, 'displayName', 'GuildLeaderboardRanksStore'),
+    l(f, 'persistKey', 'GuildLeaderboardRanksStore'),
+    (t.Z = new f(s.Z, {
         SET_GUILD_LEADERBOARD: function (e) {
             var t;
             let { leaderboardResponse: n, intervalOffset: r } = e;

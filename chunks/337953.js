@@ -1,15 +1,15 @@
-a.d(t, {
+n.d(e, {
     Z: function () {
-        return o;
+        return i;
     }
 });
-var s = a(512722),
-    n = a.n(s),
-    l = a(875425);
-function o(e) {
-    if (e !== l.F.TODAY) return n()('number' == typeof e, 'Invalid custom status clear timeout'), e;
+var a = n(512722),
+    s = n.n(a),
+    l = n(875425);
+function i(t) {
+    if (t !== l.F.TODAY) return s()('number' == typeof t, 'Invalid custom status clear timeout'), t;
     {
-        let e = new Date();
-        return new Date(e.getFullYear(), e.getMonth(), e.getDate() + 1).getTime() - e.getTime();
+        let t = new Date();
+        return new Date(t.getFullYear(), t.getMonth(), t.getDate() + 1).getTime() - t.getTime();
     }
 }

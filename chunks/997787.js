@@ -1,6 +1,6 @@
-let a;
+let r;
 t(47120), t(653041);
-var r,
+var a,
     i = t(442837),
     s = t(570140);
 function o(e, n, t) {
@@ -19,17 +19,17 @@ function o(e, n, t) {
 let l = { guildNoticeDismissed: [] },
     c = new Map(),
     d = new Set();
-class u extends (r = i.ZP.PersistedStore) {
+class u extends (a = i.ZP.PersistedStore) {
     initialize() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l;
-        a = e;
+        r = e;
     }
     getState() {
-        return a;
+        return r;
     }
     shouldShowChannelNotice(e) {
         var n, t;
-        return !a.guildNoticeDismissed.includes(e) && (null !== (t = null === (n = c.get(e)) || void 0 === n ? void 0 : n.size) && void 0 !== t ? t : 0) > 0;
+        return !r.guildNoticeDismissed.includes(e) && (null !== (t = null === (n = c.get(e)) || void 0 === n ? void 0 : n.size) && void 0 !== t ? t : 0) > 0;
     }
     canShowOverviewTooltip(e, n) {
         var t;
@@ -48,12 +48,12 @@ o(u, 'displayName', 'CommandsMigrationStore'),
         },
         COMMANDS_MIGRATION_NOTICE_DISMISSED: function (e) {
             let { guildId: n } = e;
-            a.guildNoticeDismissed.push(n);
+            r.guildNoticeDismissed.push(n);
         },
         COMMANDS_MIGRATION_OVERVIEW_TOOLTIP_DISMISSED: function (e) {
             var n;
-            let { guildId: t, integrationId: a } = e;
-            null === (n = c.get(t)) || void 0 === n || n.clear(), d.add(a);
+            let { guildId: t, integrationId: r } = e;
+            null === (n = c.get(t)) || void 0 === n || n.clear(), d.add(r);
         },
         COMMANDS_MIGRATION_TOGGLE_TOOLTIP_DISMISSED: function (e) {
             let { integrationId: n } = e;

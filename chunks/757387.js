@@ -1,141 +1,141 @@
 l.r(n);
 var i = l(200651);
 l(192379);
-var a = l(442837),
+var t = l(442837),
     r = l(481060),
-    s = l(239091),
+    a = l(239091),
     d = l(883385),
     u = l(108843),
-    t = l(911969),
+    s = l(911969),
     c = l(947440),
     o = l(100527),
     Z = l(441061),
-    E = l(167675),
-    M = l(737013),
-    _ = l(607783),
-    N = l(299206),
+    M = l(167675),
+    h = l(737013),
+    p = l(607783),
+    g = l(299206),
     C = l(976192),
-    h = l(819403),
-    p = l(286694),
-    I = l(592125),
-    U = l(777658),
-    A = l(858488),
-    g = l(185457),
-    G = l(933409),
-    x = l(570870),
-    T = l(389052),
-    f = l(24311),
-    b = l(332576),
-    j = l(710631),
-    P = l(297047),
-    O = l(88966),
-    S = l(712301),
-    L = l(991307),
-    v = l(725119),
-    R = l(931617),
-    m = l(700994),
-    H = l(332031),
-    y = l(981631),
-    D = l(689938);
+    E = l(819403),
+    N = l(286694),
+    x = l(592125),
+    _ = l(777658),
+    f = l(858488),
+    I = l(185457),
+    U = l(933409),
+    G = l(570870),
+    P = l(389052),
+    b = l(24311),
+    j = l(332576),
+    A = l(710631),
+    v = l(297047),
+    T = l(88966),
+    m = l(712301),
+    y = l(991307),
+    L = l(725119),
+    O = l(931617),
+    S = l(700994),
+    k = l(332031),
+    q = l(981631),
+    w = l(388032);
 n.default = (0, u.Z)(
     (0, d.Z)(
         function (e) {
-            let { user: n, guildId: l, channel: d, showMediaItems: u = !1, showChatItems: o = !0, showChannelCallItems: k = !1, showModalItems: q = !0, showStageChannelItems: w = !1, context: B, onSelect: F, onHeightUpdate: K, viewingChannelId: W } = e,
-                X = {
-                    page: y.ZY5.GUILD_CHANNEL,
-                    section: y.jXE.CHAT_USERNAME,
-                    object: y.qAy.CONTEXT_MENU_ITEM
+            let { user: n, guildId: l, channel: d, showMediaItems: u = !1, showChatItems: o = !0, showChannelCallItems: R = !1, showModalItems: W = !0, showStageChannelItems: B = !1, context: D, onSelect: H, onHeightUpdate: K, viewingChannelId: X } = e,
+                F = {
+                    page: q.ZY5.GUILD_CHANNEL,
+                    section: q.jXE.CHAT_USERNAME,
+                    object: q.qAy.CONTEXT_MENU_ITEM
                 },
-                V = (0, v.Z)({
+                z = (0, L.Z)({
                     userId: n.id,
                     guildId: l,
                     channelId: d.id
                 }),
-                Y = (0, P.Z)(n, l, B),
-                z = (0, O.Z)(n.id, B),
-                $ = (0, H.Z)(n.id),
-                J = (0, f.Z)({
+                J = (0, v.Z)(n, l, D),
+                Q = (0, T.Z)(n.id, D),
+                V = (0, k.Z)(n.id),
+                Y = (0, b.Z)({
                     user: n,
-                    context: B
+                    context: D
                 }),
-                Q = (0, g.Z)({
+                $ = (0, I.Z)({
                     user: n,
                     guildId: l,
                     channelId: d.id,
-                    context: B
+                    context: D
                 }),
-                ee = (0, A.Z)({ user: n }),
-                en = (0, m.Z)(n.id),
-                el = (0, L.Z)(n.id),
-                ei = (0, _.B)({
+                ee = (0, f.Z)({ user: n }),
+                en = (0, S.Z)(n.id),
+                el = (0, y.Z)(n.id),
+                ei = (0, p.B)({
                     userId: n.id,
                     channelId: d.id,
                     guildId: d.getGuildId(),
                     location: 'GuildChannelUserContextMenu'
                 }),
-                ea = (0, C.Z)({
+                et = (0, C.Z)({
                     guildId: l,
                     userId: n.id,
-                    analyticsLocation: X,
-                    context: B
+                    analyticsLocation: F,
+                    context: D
                 }),
-                er = (0, j.Z)({
+                er = (0, A.Z)({
                     user: n,
                     guildId: l
                 }),
-                es = (0, c.Z)(null, n),
-                ed = (0, U.Z)(n),
-                eu = (0, T.Z)({ user: n }),
-                et = (0, G.Z)(n, l, d.id),
-                ec = (0, R.Z)(n.id, l),
-                eo = (0, S.Z)(n, l),
-                eZ = (0, N.Z)({
+                ea = (0, c.Z)(null, n),
+                ed = (0, _.Z)(n),
+                eu = (0, P.Z)({ user: n }),
+                es = (0, U.Z)(n, l, d.id),
+                ec = (0, O.Z)(n.id, l),
+                eo = (0, m.Z)(n, l),
+                eZ = (0, g.Z)({
                     id: n.id,
-                    label: D.Z.Messages.COPY_ID_USER
+                    label: w.intl.string(w.t['/AXYnJ'])
                 }),
-                eE = (0, b.Z)(n.id, d.id),
-                eM = (0, E.Z)(n.id),
-                e_ = (0, Z.Z)(d.id),
-                eN = (0, h.Z)(n),
-                eC = (0, p.Z)(n, l, d.id),
-                eh = (0, a.e7)([I.Z], () => (null != W ? I.Z.getChannel(W) : null)),
-                ep = (0, x.Z)({
-                    commandType: t.yU.USER,
+                eM = (0, j.Z)(n.id, d.id),
+                eh = (0, M.Z)(n.id),
+                ep = (0, Z.Z)(d.id),
+                eg = (0, E.Z)(n),
+                eC = (0, N.Z)(n, l, d.id),
+                eE = (0, t.e7)([x.Z], () => (null != X ? x.Z.getChannel(X) : null)),
+                eN = (0, G.Z)({
+                    commandType: s.yU.USER,
                     commandTargetId: n.id,
-                    channel: null != eh ? eh : d,
+                    channel: null != eE ? eE : d,
                     guildId: l,
                     onHeightUpdate: K,
-                    context: B
+                    context: D
                 }),
-                eI = (0, M.Z)(n.id),
-                eU = n.isNonUserBot();
+                ex = (0, h.Z)(n.id),
+                e_ = n.isNonUserBot();
             return (0, i.jsxs)(r.Menu, {
                 navId: 'user-context',
-                onClose: s.Zy,
-                'aria-label': D.Z.Messages.USER_ACTIONS_MENU_LABEL,
-                onSelect: F,
+                onClose: a.Zy,
+                'aria-label': w.intl.string(w.t.liqwPD),
+                onSelect: H,
                 children: [
-                    !eU &&
+                    !e_ &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsxs)(r.MenuGroup, {
-                                    children: [eN, w && eC]
+                                    children: [eg, B && eC]
                                 }),
                                 (0, i.jsxs)(r.MenuGroup, {
-                                    children: [q && V, o && Y, z, J, q && Q, q && ee, $]
+                                    children: [W && z, o && J, Q, Y, W && $, W && ee, V]
                                 }),
                                 u && (0, i.jsx)(r.MenuGroup, { children: en }),
-                                (0, i.jsx)(r.MenuGroup, { children: q && es }),
+                                (0, i.jsx)(r.MenuGroup, { children: W && ea }),
                                 (0, i.jsxs)(r.MenuGroup, {
-                                    children: [u && el, u && ei, u && eE, q && ea, ep, q && er, ed, q && eu, k && eI]
+                                    children: [u && el, u && ei, u && eM, W && et, eN, W && er, ed, W && eu, R && ex]
                                 }),
-                                (0, i.jsx)(r.MenuGroup, { children: et }),
+                                (0, i.jsx)(r.MenuGroup, { children: es }),
                                 (0, i.jsxs)(r.MenuGroup, {
                                     children: [ec, eo]
                                 }),
-                                k &&
+                                R &&
                                     (0, i.jsxs)(r.MenuGroup, {
-                                        children: [e_, eM]
+                                        children: [ep, eh]
                                     })
                             ]
                         }),
@@ -143,7 +143,7 @@ n.default = (0, u.Z)(
                 ]
             });
         },
-        { object: y.qAy.CONTEXT_MENU }
+        { object: q.qAy.CONTEXT_MENU }
     ),
     [o.Z.CONTEXT_MENU, o.Z.GUILD_CHANNEL_USER_MENU]
 );

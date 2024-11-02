@@ -1,54 +1,54 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return u;
+            return A;
         }
     });
-var E = n(200651);
+var i = n(200651);
 n(192379);
-var _ = n(442837),
-    i = n(481060),
-    r = n(703656),
+var r = n(442837),
+    E = n(481060),
+    _ = n(703656),
     I = n(314897),
-    N = n(518560),
-    S = n(800530),
-    a = n(981631),
-    o = n(689938),
-    A = n(561306);
-function s() {
-    return (0, E.jsxs)(i.Notice, {
-        color: i.NoticeColors.DANGER,
-        className: A.nagbar,
+    o = n(518560),
+    a = n(800530),
+    S = n(981631),
+    c = n(388032),
+    N = n(561306);
+function u() {
+    return (0, i.jsxs)(E.Notice, {
+        color: E.NoticeColors.DANGER,
+        className: N.nagbar,
         children: [
-            (0, E.jsx)(i.Text, {
+            (0, i.jsx)(E.Text, {
                 tag: 'span',
                 color: 'always-white',
                 variant: 'text-md/normal',
-                children: o.Z.Messages.SAFETY_HUB_STANDALONE_PAGE_NAGBAR
+                children: c.intl.string(c.t['MG+Bzc'])
             }),
-            (0, E.jsx)(i.NoticeButtonAnchor, {
-                href: S.sQ.WARNING_SYSTEM_HELPCENTER_LINK,
-                children: (0, E.jsx)(i.Text, {
+            (0, i.jsx)(E.NoticeButtonAnchor, {
+                href: a.sQ.WARNING_SYSTEM_HELPCENTER_LINK,
+                children: (0, i.jsx)(E.Text, {
                     variant: 'text-md/normal',
                     color: 'always-white',
-                    children: o.Z.Messages.SAFETY_HUB_STANDALONE_PAGE_NAGBAR_CTA
+                    children: c.intl.string(c.t['9JceHB'])
                 })
             })
         ]
     });
 }
-function c() {
-    return (0, E.jsx)('div', {
-        className: A.pageContainer,
-        children: (0, E.jsx)(N.Z, {})
+function s() {
+    return (0, i.jsx)('div', {
+        className: N.pageContainer,
+        children: (0, i.jsx)(o.Z, {})
     });
 }
-function u() {
+function A() {
     return (
-        null == (0, _.e7)([I.default], () => I.default.getSuspendedUserToken()) && (0, r.uL)(a.Z5c.LOGIN),
-        (0, E.jsxs)('div', {
-            className: A.container,
-            children: [(0, E.jsx)(s, {}), (0, E.jsx)(c, {})]
+        null == (0, r.e7)([I.default], () => I.default.getSuspendedUserToken()) && (0, _.uL)(S.Z5c.LOGIN),
+        (0, i.jsxs)('div', {
+            className: N.container,
+            children: [(0, i.jsx)(u, {}), (0, i.jsx)(s, {})]
         })
     );
 }

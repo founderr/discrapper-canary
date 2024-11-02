@@ -1,9 +1,9 @@
 var i,
-    a,
-    s = n(442837),
-    r = n(570140),
-    l = n(749210);
-((i = a || (a = {}))[(i.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (i[(i.FETCHING = 1)] = 'FETCHING'), (i[(i.FETCHED = 2)] = 'FETCHED');
+    r,
+    l = n(442837),
+    a = n(570140),
+    s = n(749210);
+((i = r || (r = {}))[(i.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (i[(i.FETCHING = 1)] = 'FETCHING'), (i[(i.FETCHED = 2)] = 'FETCHED');
 let o = {},
     c = 0;
 function d(e) {
@@ -13,7 +13,7 @@ function d(e) {
 function u() {
     o = {};
 }
-class _ extends s.ZP.Store {
+class h extends l.ZP.Store {
     isFetchingFriendsForGuild(e) {
         return 1 === d(e);
     }
@@ -25,10 +25,10 @@ class _ extends s.ZP.Store {
                 notFoundMembers: 0
             }),
             (c = t.length),
-            l.Z.requestMembersById(e, t, !1));
+            s.Z.requestMembersById(e, t, !1));
     }
 }
-t.Z = new _(r.Z, {
+t.Z = new h(a.Z, {
     CONNECTION_OPEN: u,
     LOGOUT: u,
     RELATIONSHIP_ADD: u,
@@ -36,7 +36,7 @@ t.Z = new _(r.Z, {
     GUILD_MEMBERS_CHUNK_BATCH: function (e) {
         var t, n;
         let i = e.chunks[0],
-            { guildId: a } = i;
-        1 === d(a) && ((o[a].foundMembers += i.members.length), (o[a].notFoundMembers += null !== (n = null === (t = i.notFound) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0), o[a].foundMembers + o[a].notFoundMembers >= c && (o[a].fetchState = 2));
+            { guildId: r } = i;
+        1 === d(r) && ((o[r].foundMembers += i.members.length), (o[r].notFoundMembers += null !== (n = null === (t = i.notFound) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0), o[r].foundMembers + o[r].notFoundMembers >= c && (o[r].fetchState = 2));
     }
 });

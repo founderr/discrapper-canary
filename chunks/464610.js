@@ -1,97 +1,97 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return f;
     }
 }),
     n(536091);
-var s = n(200651),
-    a = n(192379),
-    i = n(481060),
-    r = n(727072),
-    l = n(85960),
+var i = n(200651),
+    r = n(192379),
+    l = n(481060),
+    s = n(727072),
+    a = n(85960),
     o = n(676317),
     c = n(823379),
     d = n(84613),
     u = n(740903),
-    _ = n(598622),
-    I = n(689938),
-    E = n(579524);
-function T() {
+    m = n(598622),
+    h = n(388032),
+    g = n(579524);
+function x() {
     let e = '\u2022 ';
-    return (0, s.jsxs)('div', {
-        className: E.changelog,
+    return (0, i.jsxs)('div', {
+        className: g.changelog,
         children: [
-            (0, s.jsx)('img', {
-                className: E.changelogImage,
+            (0, i.jsx)('img', {
+                className: g.changelogImage,
                 src: n(531945),
                 alt: 'changelog'
             }),
-            (0, s.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 children: [
-                    (0, s.jsx)(i.Heading, {
+                    (0, i.jsx)(l.Heading, {
                         variant: 'heading-md/semibold',
                         color: 'header-primary',
-                        className: E.updatesHeader,
-                        children: I.Z.Messages.GUILD_SETTINGS_SAFETY_UPDATES_HEADER
+                        className: g.updatesHeader,
+                        children: h.intl.string(h.t['4mGq0t'])
                     }),
-                    (0, s.jsx)(i.Text, {
+                    (0, i.jsx)(l.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        className: E.updatesDescription,
-                        children: I.Z.Messages.GUILD_SETTINGS_SAFETY_UPDATES_LINE_1
+                        className: g.updatesDescription,
+                        children: h.intl.string(h.t['783jaG'])
                     }),
-                    (0, s.jsx)(i.Text, {
+                    (0, i.jsx)(l.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        className: E.updatesDescription,
-                        children: I.Z.Messages.GUILD_SETTINGS_SAFETY_UPDATES_LINE_2
+                        className: g.updatesDescription,
+                        children: h.intl.string(h.t.Ilf4Zm)
                     }),
-                    (0, s.jsxs)(i.Text, {
+                    (0, i.jsxs)(l.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        children: [e, I.Z.Messages.GUILD_SETTINGS_SAFETY_UPDATES_ITEM_1]
+                        children: [e, h.intl.string(h.t.yHVqKy)]
                     }),
-                    (0, s.jsxs)(i.Text, {
+                    (0, i.jsxs)(l.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        children: [e, I.Z.Messages.GUILD_SETTINGS_SAFETY_UPDATES_ITEM_2]
+                        children: [e, h.intl.string(h.t.bxESra)]
                     }),
-                    (0, s.jsxs)(i.Text, {
+                    (0, i.jsxs)(l.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        children: [e, I.Z.Messages.GUILD_SETTINGS_SAFETY_UPDATES_ITEM_3]
+                        children: [e, h.intl.string(h.t.YPJ8Fx)]
                     }),
-                    (0, s.jsxs)(i.Text, {
+                    (0, i.jsxs)(l.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        children: [e, I.Z.Messages.GUILD_SETTINGS_SAFETY_UPDATES_ITEM_4]
+                        children: [e, h.intl.string(h.t['8C2EfX'])]
                     })
                 ]
             })
         ]
     });
 }
-function m(e) {
-    let { title: t, subtitle: n, icon: a, page: r } = e;
-    return (0, s.jsxs)('div', {
-        className: E.safetyStepRow,
+function p(e) {
+    let { title: t, subtitle: n, icon: r, page: s } = e;
+    return (0, i.jsxs)('div', {
+        className: g.safetyStepRow,
         children: [
-            (0, s.jsxs)('div', {
-                className: E.safetyStepContent,
+            (0, i.jsxs)('div', {
+                className: g.safetyStepContent,
                 children: [
-                    (0, s.jsx)(i.Avatar, {
-                        src: a,
-                        size: i.AvatarSizes.SIZE_40,
+                    (0, i.jsx)(l.Avatar, {
+                        src: r,
+                        size: l.AvatarSizes.SIZE_40,
                         'aria-label': t
                     }),
-                    (0, s.jsxs)('div', {
+                    (0, i.jsxs)('div', {
                         children: [
-                            (0, s.jsx)(i.Heading, {
+                            (0, i.jsx)(l.Heading, {
                                 variant: 'heading-md/semibold',
                                 color: 'header-primary',
                                 children: t
                             }),
-                            (0, s.jsx)(i.Text, {
+                            (0, i.jsx)(l.Text, {
                                 variant: 'text-xs/medium',
                                 color: 'header-secondary',
                                 children: n
@@ -100,40 +100,40 @@ function m(e) {
                     })
                 ]
             }),
-            (0, s.jsx)(i.Button, {
-                className: E.__invalid_editButton,
-                size: i.Button.Sizes.SMALL,
-                color: i.Button.Colors.PRIMARY,
-                look: i.Button.Looks.OUTLINED,
-                onClick: () => (0, d.K)(r),
-                children: I.Z.Messages.EDIT
+            (0, i.jsx)(l.Button, {
+                className: g.__invalid_editButton,
+                size: l.Button.Sizes.SMALL,
+                color: l.Button.Colors.PRIMARY,
+                look: l.Button.Looks.OUTLINED,
+                onClick: () => (0, d.K)(s),
+                children: h.intl.string(h.t.bt75u7)
             })
         ]
     });
 }
-function N(e) {
+function f(e) {
     let { guild: t, hideChangelog: d } = e;
-    (0, r.RD)(t.id);
-    let N = (0, l.Z6)(t.id),
-        { rulesByTriggerType: S } = (0, r.pH)(t.id),
-        { numEnabledRules: g, numRules: h } = a.useMemo(() => {
+    (0, s.RD)(t.id);
+    let f = (0, a.Z6)(t.id),
+        { rulesByTriggerType: C } = (0, s.pH)(t.id),
+        { numEnabledRules: I, numRules: _ } = r.useMemo(() => {
             let e = 0,
                 t = 0;
-            return null == S
+            return null == C
                 ? {
                       numEnabledRules: e,
                       numRules: t
                   }
-                : (Object.values(N)
+                : (Object.values(f)
                       .flat()
                       .forEach((n) => {
-                          var s;
-                          let a = null === (s = S[n]) || void 0 === s ? void 0 : s.filter(c.lm);
-                          if (null == a || 0 === a.length) {
+                          var i;
+                          let r = null === (i = C[n]) || void 0 === i ? void 0 : i.filter(c.lm);
+                          if (null == r || 0 === r.length) {
                               t++;
                               return;
                           }
-                          a.forEach((n) => {
+                          r.forEach((n) => {
                               n.enabled && e++, t++;
                           });
                       }),
@@ -141,65 +141,65 @@ function N(e) {
                       numEnabledRules: e,
                       numRules: t
                   });
-        }, [N, S]),
-        C = (0, _.Q)(t),
-        x = C[u.u.CAPTCHA_AND_RAID_PROTECTION],
-        p = C[u.u.DM_AND_SPAM_PROTECTION],
-        R = C[u.u.PERMISSIONS],
-        L = (0, o.pr)(t.id);
-    return (0, s.jsxs)('div', {
+        }, [f, C]),
+        N = (0, m.Q)(t),
+        v = N[u.u.CAPTCHA_AND_RAID_PROTECTION],
+        T = N[u.u.DM_AND_SPAM_PROTECTION],
+        j = N[u.u.PERMISSIONS],
+        E = (0, o.pr)(t.id);
+    return (0, i.jsxs)('div', {
         children: [
-            (0, s.jsx)(i.Heading, {
+            (0, i.jsx)(l.Heading, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
-                className: E.header,
-                children: I.Z.Messages.GUILD_SETTINGS_SAFETY_SETUP_HEADER
+                className: g.header,
+                children: h.intl.string(h.t['0A+VSE'])
             }),
-            !d && (0, s.jsx)(T, {}),
-            (0, s.jsxs)('div', {
-                className: E.safetyChecklist,
+            !d && (0, i.jsx)(x, {}),
+            (0, i.jsxs)('div', {
+                className: g.safetyChecklist,
                 children: [
-                    (0, s.jsx)(m, {
+                    (0, i.jsx)(p, {
                         icon: n(14215),
-                        title: I.Z.Messages.GUILD_SETTINGS_SAFETY_CAPTCHA_RAID_PROTECTION,
-                        subtitle: I.Z.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
-                            enabled: x.filter((e) => e.enabled).length,
-                            total: x.length
+                        title: h.intl.string(h.t['53eF5u']),
+                        subtitle: h.intl.formatToPlainString(h.t.TG7NYG, {
+                            enabled: v.filter((e) => e.enabled).length,
+                            total: v.length
                         }),
                         page: u.u.CAPTCHA_AND_RAID_PROTECTION
                     }),
-                    (0, s.jsx)('div', { className: E.divider }),
-                    (0, s.jsx)(m, {
+                    (0, i.jsx)('div', { className: g.divider }),
+                    (0, i.jsx)(p, {
                         icon: n(128724),
-                        title: I.Z.Messages.GUILD_SETTINGS_SAFETY_DM_SPAM_PROTECTION,
-                        subtitle: I.Z.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
-                            enabled: p.filter((e) => e.enabled).length,
-                            total: p.length
+                        title: h.intl.string(h.t.O0SfFx),
+                        subtitle: h.intl.formatToPlainString(h.t.TG7NYG, {
+                            enabled: T.filter((e) => e.enabled).length,
+                            total: T.length
                         }),
                         page: u.u.DM_AND_SPAM_PROTECTION
                     }),
-                    (0, s.jsx)('div', { className: E.divider }),
-                    L &&
-                        (0, s.jsxs)(s.Fragment, {
+                    (0, i.jsx)('div', { className: g.divider }),
+                    E &&
+                        (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, s.jsx)(m, {
+                                (0, i.jsx)(p, {
                                     icon: n(145136),
-                                    title: I.Z.Messages.GUILD_SETTINGS_AUTOMOD_TITLE,
-                                    subtitle: I.Z.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
-                                        enabled: g,
-                                        total: h
+                                    title: h.intl.string(h.t.uRelg4),
+                                    subtitle: h.intl.formatToPlainString(h.t.TG7NYG, {
+                                        enabled: I,
+                                        total: _
                                     }),
                                     page: u.u.AUTOMOD
                                 }),
-                                (0, s.jsx)('div', { className: E.divider })
+                                (0, i.jsx)('div', { className: g.divider })
                             ]
                         }),
-                    (0, s.jsx)(m, {
+                    (0, i.jsx)(p, {
                         icon: n(913414),
-                        title: I.Z.Messages.PERMISSIONS,
-                        subtitle: I.Z.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
-                            enabled: R.filter((e) => e.enabled).length,
-                            total: R.length
+                        title: h.intl.string(h.t.xrmhRU),
+                        subtitle: h.intl.formatToPlainString(h.t.TG7NYG, {
+                            enabled: j.filter((e) => e.enabled).length,
+                            total: j.length
                         }),
                         page: u.u.PERMISSIONS
                     })

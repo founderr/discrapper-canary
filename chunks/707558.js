@@ -1,43 +1,43 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
         return c;
     }
 });
-var n = t(200651);
-t(192379);
-var a = t(120356),
-    i = t.n(a),
-    r = t(600164),
-    o = t(291968),
-    l = t(113207);
+var i = n(200651);
+n(192379);
+var s = n(120356),
+    r = n.n(s),
+    l = n(600164),
+    a = n(291968),
+    o = n(113207);
 function c(e) {
-    let { features: s } = e;
-    return (0, n.jsx)(n.Fragment, {
-        children: s.map((e, s) =>
-            (0, n.jsxs)(
-                r.Z,
+    let { features: t } = e;
+    return (0, i.jsx)(i.Fragment, {
+        children: t.map((e, t) =>
+            (0, i.jsxs)(
+                l.Z,
                 {
-                    align: r.Z.Align.CENTER,
-                    className: i()(l.marginTop20, o.feature, { [o.featureBorder]: 0 !== s }),
+                    align: l.Z.Align.CENTER,
+                    className: r()(o.marginTop20, a.feature, { [a.featureBorder]: 0 !== t }),
                     children: [
-                        null != e.icon ? (0, n.jsx)('div', { className: i()(o.icon, e.icon) }) : null,
-                        (0, n.jsxs)('div', {
+                        null != e.icon ? (0, i.jsx)('div', { className: r()(a.icon, e.icon) }) : null,
+                        (0, i.jsxs)('div', {
                             children: [
                                 null != e.title
-                                    ? (0, n.jsx)('div', {
-                                          className: i()(l.marginBottom8, o.title),
+                                    ? (0, i.jsx)('div', {
+                                          className: r()(o.marginBottom8, a.title),
                                           children: e.title
                                       })
                                     : null,
-                                (0, n.jsx)('div', {
-                                    className: o.description,
+                                (0, i.jsx)('div', {
+                                    className: a.description,
                                     children: e.description
                                 })
                             ]
                         })
                     ]
                 },
-                s
+                t
             )
         )
     });

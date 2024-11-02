@@ -7,7 +7,7 @@ var r,
     u = n(981631);
 let c = {},
     d = null;
-class _ extends (s = o.ZP.Store) {
+class f extends (s = o.ZP.Store) {
     get applicationStatistics() {
         return c;
     }
@@ -41,7 +41,7 @@ class _ extends (s = o.ZP.Store) {
     }
 }
 (a = 'LibraryApplicationStatisticsStore'),
-    (i = 'displayName') in (r = _)
+    (i = 'displayName') in (r = f)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -49,7 +49,7 @@ class _ extends (s = o.ZP.Store) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = new _(l.Z, {
+    (t.Z = new f(l.Z, {
         USER_ACTIVITY_STATISTICS_FETCH_SUCCESS: function (e) {
             let { statistics: t } = e;
             t.forEach((e) => {

@@ -1,59 +1,59 @@
-s.r(t), s(47120);
-var i = s(200651),
-    n = s(192379),
-    a = s(442837),
-    o = s(481060),
-    l = s(893776),
-    r = s(809206),
-    h = s(704903),
-    d = s(155433),
-    u = s(23434),
-    c = s(25990),
-    m = s(594174),
-    f = s(1964),
-    g = s(981631),
-    p = s(689938);
-t.default = (e) => {
-    let { transitionState: t, onClose: s } = e,
-        E = (0, a.e7)([c.Z], () => c.Z.getErrors()),
-        _ = (0, a.e7)([c.Z], () => c.Z.getFormState()),
-        C = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
+i.r(e), i(47120);
+var n = i(200651),
+    s = i(192379),
+    a = i(442837),
+    l = i(481060),
+    o = i(893776),
+    r = i(809206),
+    h = i(704903),
+    d = i(155433),
+    u = i(23434),
+    c = i(25990),
+    m = i(594174),
+    g = i(1964),
+    f = i(981631),
+    p = i(388032);
+e.default = (t) => {
+    let { transitionState: e, onClose: i } = t,
+        C = (0, a.e7)([c.Z], () => c.Z.getErrors()),
+        v = (0, a.e7)([c.Z], () => c.Z.getFormState()),
+        y = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
         I = (0, a.e7)([u.Z], () => u.Z.getAction()),
-        R = !f.Z.isEmailReverification(I),
-        [v, M] = n.useState(!0),
-        y = _ === g.QZA.SUBMITTING;
-    function A(e) {
-        var t, s;
-        return null !== (s = null == E ? void 0 : null === (t = E[e]) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : '';
+        R = !g.Z.isEmailReverification(I),
+        [b, _] = s.useState(!0),
+        E = v === f.QZA.SUBMITTING;
+    function x(t) {
+        var e, i;
+        return null !== (i = null == C ? void 0 : null === (e = C[t]) || void 0 === e ? void 0 : e[0]) && void 0 !== i ? i : '';
     }
-    let T = A('email'),
-        Z = A('password');
-    return (0, i.jsx)(h.Z, {
-        transitionState: t,
-        email: null == C ? void 0 : C.email,
-        emailError: T,
-        passwordError: Z,
-        submitting: y,
-        canResend: v && !y && (null == C ? void 0 : C.email) != null && 0 === T.length && 0 === Z.length,
+    let P = x('email'),
+        j = x('password');
+    return (0, n.jsx)(h.Z, {
+        transitionState: e,
+        email: null == y ? void 0 : y.email,
+        emailError: P,
+        passwordError: j,
+        submitting: E,
+        canResend: b && !E && (null == y ? void 0 : y.email) != null && 0 === P.length && 0 === j.length,
         canChange: R,
         onChangeEmailClick: function () {
-            M(!1);
+            _(!1);
         },
-        onVerify: function (e, t) {
+        onVerify: function (t, e) {
             (0, r.Mn)({
-                email: e,
-                password: t
-            }).then((e) => {
-                if (!(null == e ? void 0 : e.ok)) {
-                    var t;
-                    (null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.username) != null ? (0, d.P)() : 0 === Z.length && 0 === T.length && (0, o.showToast)((0, o.createToast)(p.Z.Messages.ERROR_GENERIC_TITLE, o.ToastType.FAILURE));
+                email: t,
+                password: e
+            }).then((t) => {
+                if (!(null == t ? void 0 : t.ok)) {
+                    var e;
+                    (null == t ? void 0 : null === (e = t.body) || void 0 === e ? void 0 : e.username) != null ? (0, d.P)() : 0 === j.length && 0 === P.length && (0, l.showToast)((0, l.createToast)(p.intl.string(p.t.R0RpRU), l.ToastType.FAILURE));
                 }
             }),
-                M(!0);
+                _(!0);
         },
         onResend: function () {
-            l.Z.verifyResend();
+            o.Z.verifyResend();
         },
-        onClose: s
+        onClose: i
     });
 };

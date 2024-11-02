@@ -7,69 +7,69 @@ var r = n(200651),
     l = n(436599);
 let u = i.memo(
     i.forwardRef((e, t) => {
-        let { onScroll: n, onResize: a, listPadding: u = [0, 0, 0, 0], renderRow: c, renderSection: d, renderSectionHeader: _, renderSectionFooter: E, renderListHeader: f, rowCount: h, rowCountBySection: p, rowHeight: I, sectionMarginBottom: m, sectionHeaderHeight: T, sectionFooterHeight: S, listHeaderHeight: g, stickyHeaders: A = !1, className: N, hideScrollbar: R = !1, fade: O = !1, initialScrollTop: v = 0, role: C = 'list' } = e,
-            [L, D] = i.useState(-1),
-            [y, b] = i.useState(-1),
-            M = i.useRef(null),
-            P = i.useRef(0),
-            U = i.useRef(-1);
+        let { onScroll: n, onResize: a, listPadding: u = [0, 0, 0, 0], renderRow: c, renderSection: d, renderSectionHeader: f, renderSectionFooter: _, renderListHeader: h, rowCount: p, rowCountBySection: m, rowHeight: g, sectionMarginBottom: E, sectionHeaderHeight: v, sectionFooterHeight: I, listHeaderHeight: S, stickyHeaders: T = !1, className: b, hideScrollbar: y = !1, fade: A = !1, initialScrollTop: N = 0, role: C = 'list' } = e,
+            [R, O] = i.useState(-1),
+            [D, L] = i.useState(-1),
+            x = i.useRef(null),
+            w = i.useRef(0),
+            M = i.useRef(-1);
         i.useLayoutEffect(() => {
             var e;
-            let t = null === (e = M.current) || void 0 === e ? void 0 : e.getScrollerNode();
-            null != t && (t.scrollTop = v);
+            let t = null === (e = x.current) || void 0 === e ? void 0 : e.getScrollerNode();
+            null != t && (t.scrollTop = N);
         }, []);
-        let w = i.useCallback(() => {
-                let e = 'function' == typeof g ? g() : g;
+        let P = i.useCallback(() => {
+                let e = 'function' == typeof S ? S() : S;
                 return null == e ? 0 : e;
-            }, [g]),
-            x = i.useCallback(
+            }, [S]),
+            k = i.useCallback(
                 (e, t, n) =>
-                    'function' == typeof I
-                        ? I(n, {
+                    'function' == typeof g
+                        ? g(n, {
                               sectionIndex: e,
                               sectionRowIndex: t
                           })
-                        : I,
-                [I]
+                        : g,
+                [g]
+            ),
+            U = i.useCallback(
+                (e) => {
+                    let t = 'function' == typeof v ? v(e) : v;
+                    return null == t ? 0 : t;
+                },
+                [v]
             ),
             G = i.useCallback(
                 (e) => {
-                    let t = 'function' == typeof T ? T(e) : T;
+                    let t = 'function' == typeof I ? I(e) : I;
                     return null == t ? 0 : t;
                 },
-                [T]
-            ),
-            k = i.useCallback(
-                (e) => {
-                    let t = 'function' == typeof S ? S(e) : S;
-                    return null == t ? 0 : t;
-                },
-                [S]
+                [I]
             ),
             B = i.useCallback(
                 (e) => {
-                    let t = 'function' == typeof m ? m(e) : m;
+                    let t = 'function' == typeof E ? E(e) : E;
                     return null == t ? 0 : t;
                 },
-                [m]
+                [E]
             ),
+            Z = i.useRef([]),
             F = i.useRef([]),
-            V = i.useRef([]),
             {
-                totalHeight: H,
-                rowDescriptors: Z,
-                sectionDescriptors: Y
+                totalHeight: V,
+                rowDescriptors: j,
+                sectionDescriptors: H
             } = i.useMemo(() => {
                 let e = 0,
-                    t = null != p,
-                    n = t ? p.length : 1,
+                    t = null != m,
+                    n = t ? m.length : 1,
                     r = u[0],
                     i = [],
                     a = [];
-                r += w();
+                r += P();
                 for (let s = 0; s < n; s++) {
-                    let n = t ? p[s] : h,
-                        o = (null == p ? void 0 : p[s]) !== 0;
+                    let n = t ? m[s] : p,
+                        o = (null == m ? void 0 : m[s]) !== 0;
                     (a[s] = {
                         firstRowIndex: e,
                         offset: {
@@ -77,9 +77,9 @@ let u = i.memo(
                             bottom: -1
                         }
                     }),
-                        (r += G(s));
+                        (r += U(s));
                     for (let t = 0; t < n; t++) {
-                        let n = r + (o ? x(s, t, e) : 0),
+                        let n = r + (o ? k(s, t, e) : 0),
                             a = {
                                 top: r,
                                 bottom: n
@@ -91,22 +91,22 @@ let u = i.memo(
                             (r = n),
                             e++;
                     }
-                    (r += k(s) + B(s)), (a[s].offset.bottom = r);
+                    (r += G(s) + B(s)), (a[s].offset.bottom = r);
                 }
                 return {
                     totalHeight: (r += u[2]),
                     rowDescriptors: i,
                     sectionDescriptors: a
                 };
-            }, [x, k, G, B, u, h, p, w]);
-        (F.current = Y), (V.current = Z);
-        let j = i.useCallback(() => {
+            }, [k, G, U, B, u, p, m, P]);
+        (Z.current = H), (F.current = j);
+        let Y = i.useCallback(() => {
             var e;
-            let t = null === (e = M.current) || void 0 === e ? void 0 : e.getScrollerNode();
+            let t = null === (e = x.current) || void 0 === e ? void 0 : e.getScrollerNode();
             if (null == t) return;
             let { offsetWidth: n, offsetHeight: r, scrollTop: i } = t;
-            b(r),
-                D(i),
+            L(r),
+                O(i),
                 null == a ||
                     a({
                         width: n,
@@ -114,24 +114,24 @@ let u = i.memo(
                     });
         }, [a]);
         i.useLayoutEffect(() => {
-            -1 === y && j();
-        }, [y, j]),
+            -1 === D && Y();
+        }, [D, Y]),
             i.useEffect(() => {
                 var e;
-                let t = null === (e = M.current) || void 0 === e ? void 0 : e.getScrollerNode(),
+                let t = null === (e = x.current) || void 0 === e ? void 0 : e.getScrollerNode(),
                     n = null == t ? void 0 : t.ownerDocument.defaultView;
                 if (null == t || null == n) return;
-                let r = new n.ResizeObserver(j);
+                let r = new n.ResizeObserver(Y);
                 return r.observe(t), () => r.disconnect();
-            }, [j]);
+            }, [Y]);
         let W = i.useCallback(() => {
             var e;
-            let t = null === (e = M.current) || void 0 === e ? void 0 : e.getScrollerNode();
+            let t = null === (e = x.current) || void 0 === e ? void 0 : e.getScrollerNode();
             null != t &&
-                (window.cancelAnimationFrame(U.current),
-                (U.current = window.requestAnimationFrame(() => {
+                (window.cancelAnimationFrame(M.current),
+                (M.current = window.requestAnimationFrame(() => {
                     let { scrollTop: e } = t;
-                    (P.current = e), null == n || n(e), D(e);
+                    (w.current = e), null == n || n(e), O(e);
                 })));
         }, [n]);
         i.useImperativeHandle(
@@ -141,7 +141,7 @@ let u = i.memo(
                     var t;
                     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                         { animate: r = !1 } = n;
-                    null === (t = M.current) ||
+                    null === (t = x.current) ||
                         void 0 === t ||
                         t.scrollTo({
                             to: e,
@@ -151,7 +151,7 @@ let u = i.memo(
                 scrollRowIntoView: function (e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                         { animate: n = !1, offset: r = 0 } = t,
-                        i = V.current[e];
+                        i = F.current[e];
                     null != i &&
                         window.requestAnimationFrame(() => {
                             var t, a;
@@ -159,24 +159,24 @@ let u = i.memo(
                                     sectionIndex: s,
                                     offset: { top: o, bottom: l }
                                 } = i,
-                                u = G(s),
-                                c = o - (A ? u : 0) - r <= P.current,
-                                d = l + r >= P.current + y;
+                                u = U(s),
+                                c = o - (T ? u : 0) - r <= w.current,
+                                d = l + r >= w.current + D;
                             if (c) {
-                                let i = P.current + u - o,
-                                    a = A ? P.current - i : o;
-                                null === (t = M.current) ||
+                                let i = w.current + u - o,
+                                    a = T ? w.current - i : o;
+                                null === (t = x.current) ||
                                     void 0 === t ||
                                     t.scrollTo({
                                         to: 0 === e ? 0 : a - r,
                                         animate: n
                                     });
                             } else if (d) {
-                                let e = l - (P.current + y);
-                                null === (a = M.current) ||
+                                let e = l - (w.current + D);
+                                null === (a = x.current) ||
                                     void 0 === a ||
                                     a.scrollTo({
-                                        to: P.current + e + r,
+                                        to: w.current + e + r,
                                         animate: n
                                     });
                             }
@@ -185,11 +185,11 @@ let u = i.memo(
                 scrollToSectionTop: function (e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                         { animate: n = !1, offset: r = 0 } = t,
-                        i = F.current[e];
+                        i = Z.current[e];
                     null != i &&
                         window.requestAnimationFrame(() => {
                             var t;
-                            null === (t = M.current) ||
+                            null === (t = x.current) ||
                                 void 0 === t ||
                                 t.scrollTo({
                                     to: (0 === e ? 0 : i.offset.top) + r,
@@ -198,76 +198,76 @@ let u = i.memo(
                         });
                 },
                 getListDimensions: () => ({
-                    height: y,
-                    totalHeight: H
+                    height: D,
+                    totalHeight: V
                 }),
-                getSectionDescriptors: () => F.current,
-                getRowDescriptors: () => V.current,
+                getSectionDescriptors: () => Z.current,
+                getRowDescriptors: () => F.current,
                 getScrollerNode: () => {
                     var e;
-                    return null === (e = M.current) || void 0 === e ? void 0 : e.getScrollerNode();
+                    return null === (e = x.current) || void 0 === e ? void 0 : e.getScrollerNode();
                 },
                 scrollIntoViewNode: (e) => {
                     var t;
-                    return null === (t = M.current) || void 0 === t ? void 0 : t.scrollIntoViewNode({ node: e });
+                    return null === (t = x.current) || void 0 === t ? void 0 : t.scrollIntoViewNode({ node: e });
                 }
             }),
-            [G, A, H, y]
+            [U, T, V, D]
         );
         let { visibleItems: K, listOffset: z } = i.useMemo(() => {
-                if (-1 === y || -1 === L)
+                if (-1 === D || -1 === R)
                     return {
                         visibleItems: null,
                         listOffset: 0
                     };
-                let e = L + y,
+                let e = R + D,
                     t = 0,
                     n = u[0],
                     r = [],
-                    i = w();
-                null != f && L < i ? r.push(f()) : (n += i);
-                for (let i = 0; i < Y.length; i++) {
+                    i = P();
+                null != h && R < i ? r.push(h()) : (n += i);
+                for (let i = 0; i < H.length; i++) {
                     let {
                             firstRowIndex: a,
                             offset: { top: s, bottom: o }
-                        } = Y[i],
+                        } = H[i],
                         l = o - s;
                     if (0 === l) continue;
-                    let u = G(i),
-                        f = k(i),
-                        h = B(i);
-                    if (o <= L) n = o;
-                    else if (o > L && s < e) {
+                    let u = U(i),
+                        h = G(i),
+                        p = B(i);
+                    if (o <= R) n = o;
+                    else if (o > R && s < e) {
                         t = a;
                         let o = [],
-                            p = 0,
-                            I = 0,
-                            m = s + u >= L && s <= e;
-                        for (null != _ && (A || m) && o.push(_(i)), !m && !A && (n += u); p + u + f < l - h; ) {
-                            let r = x(i, I, t),
-                                a = s + p + u,
+                            m = 0,
+                            g = 0,
+                            E = s + u >= R && s <= e;
+                        for (null != f && (T || E) && o.push(f(i)), !E && !T && (n += u); m + u + h < l - p; ) {
+                            let r = k(i, g, t),
+                                a = s + m + u,
                                 l = a + r;
-                            if (l <= L) n = l - (A ? u : 0);
-                            else if (l > L && a < e)
+                            if (l <= R) n = l - (T ? u : 0);
+                            else if (l > R && a < e)
                                 o.push(
                                     c(t, {
                                         sectionIndex: i,
-                                        sectionRowIndex: I
+                                        sectionRowIndex: g
                                     })
                                 );
                             else break;
-                            (p += r), I++, t++;
+                            (m += r), g++, t++;
                         }
-                        let T = s + u + p,
-                            S = T + f >= L && T <= e;
-                        null != E && S && o.push(E(i)), null != d ? r.push(d(i, o)) : (r = [...r, ...o]);
+                        let v = s + u + m,
+                            I = v + h >= R && v <= e;
+                        null != _ && I && o.push(_(i)), null != d ? r.push(d(i, o)) : (r = [...r, ...o]);
                     } else break;
                 }
                 return {
                     visibleItems: r,
                     listOffset: n
                 };
-            }, [x, k, G, B, u, c, d, E, _, L, Y, A, f, w, y]),
+            }, [k, G, U, B, u, c, d, _, f, R, H, T, h, P, D]),
             q = i.useMemo(() => {
                 var e, t, n;
                 return {
@@ -277,12 +277,12 @@ let u = i.memo(
                     left: null !== (n = null == u ? void 0 : u[3]) && void 0 !== n ? n : 0
                 };
             }, [z, u]),
-            Q = i.useMemo(() => ({ height: H }), [H]),
-            X = R ? o.xV : o.h2;
+            Q = i.useMemo(() => ({ height: V }), [V]),
+            X = y ? o.xV : o.h2;
         return (0, r.jsxs)(X, {
-            fade: O,
-            className: s()(l.scroller, N),
-            ref: M,
+            fade: A,
+            className: s()(l.scroller, b),
+            ref: x,
             onScroll: W,
             children: [
                 (0, r.jsx)('div', {

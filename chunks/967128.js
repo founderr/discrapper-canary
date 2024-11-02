@@ -11,29 +11,29 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    a = n.n(s),
-    l = n(481060),
-    r = n(534091),
+var l = n(120356),
+    r = n.n(l),
+    a = n(481060),
+    s = n(534091),
     o = n(981631),
     c = n(83700);
 function u(e) {
     let { locked: t = !1, channelType: n } = e,
-        s = (0, l.useRedesignIconContext)().enabled,
-        r = n === o.d4z.GUILD_VOICE || n === o.d4z.GUILD_STAGE_VOICE;
-    if (!s)
+        l = (0, a.useRedesignIconContext)().enabled,
+        s = n === o.d4z.GUILD_VOICE || n === o.d4z.GUILD_STAGE_VOICE;
+    if (!l)
         return (0, i.jsx)('div', {
-            className: a()(c.emptyChannelIcon, c.emptyChannelIconSvg, {
+            className: r()(c.emptyChannelIcon, c.emptyChannelIconSvg, {
                 [c.locked]: t,
-                [c.voiceChat]: r
+                [c.voiceChat]: s
             })
         });
     {
-        let e = r ? l.ChatIcon : t ? l.TextLockIcon : l.TextIcon;
+        let e = s ? a.ChatIcon : t ? a.TextLockIcon : a.TextIcon;
         return (0, i.jsx)('div', {
-            className: a()(c.emptyChannelIcon, c.emptyChannelIconComponent),
+            className: r()(c.emptyChannelIcon, c.emptyChannelIconComponent),
             children: (0, i.jsx)(e, {
-                color: l.tokens.colors.WHITE,
+                color: a.tokens.colors.WHITE,
                 size: 'custom',
                 width: 42,
                 height: 42
@@ -43,16 +43,16 @@ function u(e) {
 }
 function d(e) {
     let { children: t, className: n } = e;
-    return (0, i.jsx)(l.Heading, {
+    return (0, i.jsx)(a.Heading, {
         'aria-hidden': 'true',
-        className: a()(n, c.header),
+        className: r()(n, c.header),
         variant: 'heading-xxl/extrabold',
         children: t
     });
 }
 function h(e) {
     let { children: t } = e;
-    return (0, i.jsx)(l.Text, {
+    return (0, i.jsx)(a.Text, {
         variant: 'text-md/normal',
         color: 'none',
         className: c.description,
@@ -60,11 +60,11 @@ function h(e) {
     });
 }
 t.ZP = function (e) {
-    let { className: t, channelId: n, children: s, ...l } = e;
+    let { className: t, channelId: n, children: l, ...a } = e;
     return (0, i.jsx)('div', {
-        className: a()(t, c.container),
-        id: (0, r.p)(n, n),
-        ...l,
-        children: s
+        className: r()(t, c.container),
+        id: (0, s.p)(n, n),
+        ...a,
+        children: l
     });
 };

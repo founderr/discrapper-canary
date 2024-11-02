@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return b;
     }
 }),
     n(47120);
-var s = n(200651),
-    r = n(192379),
-    l = n(399606),
-    o = n(780384),
-    i = n(481060),
+var r = n(200651),
+    l = n(192379),
+    o = n(399606),
+    i = n(780384),
+    s = n(481060),
     a = n(410030),
     d = n(367907),
     c = n(863249),
@@ -16,92 +16,92 @@ var s = n(200651),
     m = n(768762),
     p = n(454585),
     h = n(626135),
-    g = n(981631),
-    x = n(689938),
-    _ = n(275211);
-function f(e) {
+    x = n(981631),
+    g = n(388032),
+    f = n(275211);
+function b(e) {
     var t;
-    let { guild: n, prompts: f, completeOnboarding: N, setCurrentStep: I, disableTracking: C, previousPromptIndex: E } = e,
-        b = r.useRef(null),
-        v = (0, l.e7)([u.Z], () => u.Z.getRulesPrompt(n.id)),
-        [j, O] = r.useState(null !== (t = null == v ? void 0 : v.response) && void 0 !== t && t),
-        Z = (0, l.e7)([u.Z], () => u.Z.get(n.id)),
-        B = (0, a.ZP)(),
-        R = r.useRef(null),
-        T = r.useRef(null),
-        D = (0, o.wj)(B) ? 'linear-gradient(to top, rgba(54, 57, 63, 1), rgba(54, 57, 63, 0))' : 'linear-gradient(to top, rgba(242, 243, 245, 1), rgba(242, 243, 245, 0))',
-        M = r.useCallback(async () => {
-            if (null != Z && null != v) {
+    let { guild: n, prompts: b, completeOnboarding: _, setCurrentStep: v, disableTracking: C, previousPromptIndex: N } = e,
+        j = l.useRef(null),
+        I = (0, o.e7)([u.Z], () => u.Z.getRulesPrompt(n.id)),
+        [E, B] = l.useState(null !== (t = null == I ? void 0 : I.response) && void 0 !== t && t),
+        Z = (0, o.e7)([u.Z], () => u.Z.get(n.id)),
+        T = (0, a.ZP)(),
+        k = l.useRef(null),
+        D = l.useRef(null),
+        P = (0, i.wj)(T) ? 'linear-gradient(to top, rgba(54, 57, 63, 1), rgba(54, 57, 63, 0))' : 'linear-gradient(to top, rgba(242, 243, 245, 1), rgba(242, 243, 245, 0))',
+        O = l.useCallback(async () => {
+            if (null != Z && null != I) {
                 try {
                     await c.ZP.submitVerificationForm(n.id, {
                         ...Z,
                         formFields: [
                             {
-                                ...v,
-                                response: j
+                                ...I,
+                                response: E
                             }
                         ]
                     });
                 } catch {}
-                N();
+                _();
             }
-        }, [n.id, Z, v, j, N]);
-    function P(e) {
+        }, [n.id, Z, I, E, _]);
+    function w(e) {
         let [t] = e;
-        t.isIntersecting && O(!0);
+        t.isIntersecting && B(!0);
     }
-    return (r.useEffect(() => {
-        let e = new IntersectionObserver(P, {
-                root: R.current,
+    return (l.useEffect(() => {
+        let e = new IntersectionObserver(w, {
+                root: k.current,
                 rootMargin: '0px',
                 threshold: 0
             }),
-            t = T.current;
+            t = D.current;
         return (
             null != t && null != t.lastElementChild && e.observe(t.lastElementChild),
             () => {
                 null != t && null != t.lastElementChild && e.unobserve(t.lastElementChild);
             }
         );
-    }, [T, R]),
-    null == v)
+    }, [D, k]),
+    null == I)
         ? null
-        : (0, s.jsx)('div', {
-              className: _.prompt,
-              children: (0, s.jsxs)('div', {
-                  className: _.promptContent,
-                  ref: R,
+        : (0, r.jsx)('div', {
+              className: f.prompt,
+              children: (0, r.jsxs)('div', {
+                  className: f.promptContent,
+                  ref: k,
                   children: [
-                      (0, s.jsxs)(i.AdvancedScrollerThin, {
-                          className: _.scrollerContent,
-                          ref: b,
+                      (0, r.jsxs)(s.AdvancedScrollerThin, {
+                          className: f.scrollerContent,
+                          ref: j,
                           children: [
-                              (0, s.jsx)(i.Text, {
+                              (0, r.jsx)(s.Text, {
                                   variant: 'text-sm/medium',
                                   color: 'text-muted',
-                                  children: x.Z.Messages.ONBOARDING_RULES_STEP
+                                  children: g.intl.string(g.t['b1JC+v'])
                               }),
-                              (0, s.jsx)(i.Heading, {
+                              (0, r.jsx)(s.Heading, {
                                   variant: 'heading-xl/semibold',
-                                  children: x.Z.Messages.ONBOARDING_RULES_TITLE
+                                  children: g.intl.string(g.t.prJqwc)
                               }),
-                              (0, s.jsx)('div', {
-                                  className: _.termsFieldBody,
-                                  ref: T,
-                                  children: v.values.map((e, t) =>
-                                      (0, s.jsxs)(
+                              (0, r.jsx)('div', {
+                                  className: f.termsFieldBody,
+                                  ref: D,
+                                  children: I.values.map((e, t) =>
+                                      (0, r.jsxs)(
                                           'div',
                                           {
-                                              className: _.termsRow,
+                                              className: f.termsRow,
                                               children: [
-                                                  (0, s.jsx)(i.Text, {
+                                                  (0, r.jsx)(s.Text, {
                                                       variant: 'text-sm/normal',
                                                       color: 'text-muted',
                                                       children: ''.concat(t + 1, '.')
                                                   }),
-                                                  (0, s.jsx)(i.Text, {
+                                                  (0, r.jsx)(s.Text, {
                                                       variant: 'text-sm/normal',
-                                                      className: _.termsRowContent,
+                                                      className: f.termsRowContent,
                                                       children: p.Z.parseGuildVerificationFormRule(e, !0, { channelId: n.rulesChannelId })
                                                   })
                                               ]
@@ -112,22 +112,22 @@ function f(e) {
                               })
                           ]
                       }),
-                      (0, s.jsx)('div', {
-                          className: _.overlay,
-                          style: { background: D }
+                      (0, r.jsx)('div', {
+                          className: f.overlay,
+                          style: { background: P }
                       }),
-                      (0, s.jsxs)('div', {
-                          className: _.navButtons,
+                      (0, r.jsxs)('div', {
+                          className: f.navButtons,
                           children: [
-                              (0, s.jsx)('div', {
-                                  className: _.leftButtons,
+                              (0, r.jsx)('div', {
+                                  className: f.leftButtons,
                                   children:
-                                      -1 !== E &&
-                                      (0, s.jsxs)(i.Button, {
-                                          innerClassName: _.buttonInner,
+                                      -1 !== N &&
+                                      (0, r.jsxs)(s.Button, {
+                                          innerClassName: f.buttonInner,
                                           onClick: () => {
                                               !C &&
-                                                  (h.default.track(g.rMx.GUILD_ONBOARDING_STEP_COMPLETED, {
+                                                  (h.default.track(x.rMx.GUILD_ONBOARDING_STEP_COMPLETED, {
                                                       ...(0, d.hH)(n.id),
                                                       step: -1,
                                                       skipped: !1,
@@ -136,48 +136,48 @@ function f(e) {
                                                       in_onboarding: !0,
                                                       is_final_step: !1
                                                   }),
-                                                  E >= 0 &&
-                                                      h.default.track(g.rMx.GUILD_ONBOARDING_STEP_VIEWED, {
+                                                  N >= 0 &&
+                                                      h.default.track(x.rMx.GUILD_ONBOARDING_STEP_VIEWED, {
                                                           ...(0, d.hH)(n.id),
-                                                          step: E,
-                                                          required: f[E].required
+                                                          step: N,
+                                                          required: b[N].required
                                                       })),
-                                                  I(E);
+                                                  v(N);
                                           },
-                                          size: i.Button.Sizes.MEDIUM,
-                                          look: i.Button.Looks.OUTLINED,
+                                          size: s.Button.Sizes.MEDIUM,
+                                          look: s.Button.Looks.OUTLINED,
                                           grow: !1,
-                                          color: i.Button.Colors.PRIMARY,
+                                          color: s.Button.Colors.PRIMARY,
                                           children: [
-                                              (0, s.jsx)(m.Z, {
-                                                  className: _.arrow,
+                                              (0, r.jsx)(m.Z, {
+                                                  className: f.arrow,
                                                   direction: m.Z.Directions.LEFT
                                               }),
-                                              x.Z.Messages.BACK
+                                              g.intl.string(g.t['13/7kZ'])
                                           ]
                                       })
                               }),
-                              (0, s.jsxs)('div', {
-                                  className: _.rightButtons,
+                              (0, r.jsxs)('div', {
+                                  className: f.rightButtons,
                                   children: [
-                                      (0, s.jsx)(i.Text, {
-                                          className: _.helpText,
+                                      (0, r.jsx)(s.Text, {
+                                          className: f.helpText,
                                           variant: 'text-xs/normal',
                                           color: 'text-muted',
-                                          children: j ? x.Z.Messages.MEMBER_VERIFICATION_READ_AGREE_RULES : x.Z.Messages.MEMBER_VERIFICATION_MUST_READ_RULES
+                                          children: E ? g.intl.string(g.t.arAe3N) : g.intl.string(g.t.D0CVAQ)
                                       }),
-                                      (0, s.jsxs)(i.Button, {
-                                          innerClassName: _.buttonInner,
-                                          onClick: M,
-                                          disabled: !j,
-                                          size: i.Button.Sizes.MEDIUM,
-                                          look: i.Button.Looks.FILLED,
+                                      (0, r.jsxs)(s.Button, {
+                                          innerClassName: f.buttonInner,
+                                          onClick: O,
+                                          disabled: !E,
+                                          size: s.Button.Sizes.MEDIUM,
+                                          look: s.Button.Looks.FILLED,
                                           grow: !1,
-                                          color: i.Button.Colors.BRAND,
+                                          color: s.Button.Colors.BRAND,
                                           children: [
-                                              x.Z.Messages.FINISH,
-                                              (0, s.jsx)('span', {
-                                                  className: _.finishEmoji,
+                                              g.intl.string(g.t['8SuVoK']),
+                                              (0, r.jsx)('span', {
+                                                  className: f.finishEmoji,
                                                   role: 'img',
                                                   'aria-hidden': !0,
                                                   children: '\uD83C\uDF89'

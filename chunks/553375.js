@@ -1,12 +1,12 @@
 n.d(t, {
     ZP: function () {
-        return E;
+        return _;
     },
     nK: function () {
         return d;
     },
     uj: function () {
-        return _;
+        return f;
     }
 });
 var r = n(200651);
@@ -17,7 +17,7 @@ var i = n(481060),
     o = n(168524),
     l = n(858042),
     u = n(981631),
-    c = n(689938);
+    c = n(388032);
 function d(e) {
     let { user: t, activity: n, entry: r } = e;
     return null != r
@@ -35,7 +35,7 @@ function d(e) {
                 sourceUserId: void 0
             };
 }
-function _(e) {
+function f(e) {
     let { user: t, activity: n, entry: r } = e,
         { applicationId: i } = d({
             activity: n,
@@ -47,27 +47,27 @@ function _(e) {
         showOutdatedInfoOption: !1
     });
 }
-function E(e) {
+function _(e) {
     let { user: t, activity: n, entry: a, onAction: l, isMenuOpen: u } = e,
-        { applicationId: _, sourceUserId: E } = d({
+        { applicationId: f, sourceUserId: _ } = d({
             activity: n,
             entry: a,
             user: t
         }),
-        f = (0, o.Z)({
+        h = (0, o.Z)({
             location: 'UserProfileActivityContextMenu',
             source: s.m1.UserProfileCardContextMenu,
             trackEntryPointImpression: u,
-            applicationId: _,
-            sourceUserId: E
+            applicationId: f,
+            sourceUserId: _
         });
-    return null == f
+    return null == h
         ? null
         : (0, r.jsx)(i.MenuItem, {
               id: 'game-profile',
-              label: c.Z.Messages.VIEW_GAME_PROFILE,
+              label: c.intl.string(c.t.ajHoOj),
               action: (e) => {
-                  null == l || l({ action: 'PRESS_VIEW_GAME_PROFILE_MENU_ITEM' }), f(e);
+                  null == l || l({ action: 'PRESS_VIEW_GAME_PROFILE_MENU_ITEM' }), h(e);
               }
           });
 }

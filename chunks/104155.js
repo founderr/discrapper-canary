@@ -3,7 +3,7 @@ t.d(n, {
         return I;
     },
     Z: function () {
-        return E;
+        return N;
     }
 }),
     t(47120);
@@ -11,41 +11,41 @@ var l = t(200651),
     a = t(192379),
     i = t(442837),
     r = t(481060),
-    s = t(325708),
-    o = t(213557),
+    o = t(325708),
+    s = t(213557),
     c = t(433355),
     d = t(324067),
     u = t(984933),
     h = t(430824),
     m = t(496675),
-    _ = t(626135),
-    f = t(216306),
-    C = t(775028),
-    p = t(981631),
-    x = t(176505),
-    g = t(689938),
-    N = t(921213);
+    f = t(626135),
+    p = t(216306),
+    x = t(775028),
+    C = t(981631),
+    g = t(176505),
+    _ = t(388032),
+    b = t(921213);
 function I(e) {
     let { channelId: n } = e;
-    return (0, l.jsx)(s.Z, {
-        sidebarType: s.y.ThreadSidebar,
+    return (0, l.jsx)(o.Z, {
+        sidebarType: o.y.ThreadSidebar,
         maxWidth: 600,
-        children: (0, l.jsx)(o.Z, {
+        children: (0, l.jsx)(s.Z, {
             channelId: n,
-            baseChannelId: x.oC.CHANNEL_BROWSER
+            baseChannelId: g.oC.CHANNEL_BROWSER
         })
     });
 }
-function E(e) {
+function N(e) {
     let { guildId: n } = e,
-        [s, o] = a.useState(''),
+        [o, s] = a.useState(''),
         I = (0, i.e7)([h.Z], () => h.Z.getGuild(n)),
-        E = (0, i.e7)([u.ZP], () => u.ZP.getChannels(n)),
-        b = (0, i.e7)([d.Z], () => d.Z.getCategories(n)),
-        Z = (0, f.Fo)(n, b, E, s),
-        v = (0, i.e7)([m.Z], () => m.Z.canWithPartialContext(p.Plq.MANAGE_CHANNELS, { guildId: n })),
-        T = (0, i.e7)([c.ZP], () => null != c.ZP.getCurrentSidebarChannelId(x.oC.CHANNEL_BROWSER)),
-        j = a.useCallback(() => o(''), [o]),
+        N = (0, i.e7)([u.ZP], () => u.ZP.getChannels(n)),
+        v = (0, i.e7)([d.Z], () => d.Z.getCategories(n)),
+        Z = (0, p.Fo)(n, v, N, o),
+        j = (0, i.e7)([m.Z], () => m.Z.canWithPartialContext(C.Plq.MANAGE_CHANNELS, { guildId: n })),
+        E = (0, i.e7)([c.ZP], () => null != c.ZP.getCurrentSidebarChannelId(g.oC.CHANNEL_BROWSER)),
+        B = a.useCallback(() => s(''), [s]),
         S = a.useCallback(() => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([t.e('45094'), t.e('5324')]).then(t.bind(t, 218613));
@@ -60,44 +60,44 @@ function E(e) {
     return null == I
         ? null
         : (0, l.jsxs)('div', {
-              className: N.pageBody,
+              className: b.pageBody,
               children: [
                   (0, l.jsxs)('div', {
-                      className: N.header,
+                      className: b.header,
                       children: [
                           (0, l.jsx)(r.SearchBar, {
-                              className: N.search,
+                              className: b.search,
                               size: r.SearchBar.Sizes.MEDIUM,
-                              query: s,
+                              query: o,
                               onChange: (e) => {
-                                  '' === s && '' !== e && _.default.track(p.rMx.SEARCH_STARTED, { search_type: 'channel browser' }), o(e.toLowerCase());
+                                  '' === o && '' !== e && f.default.track(C.rMx.SEARCH_STARTED, { search_type: 'channel browser' }), s(e.toLowerCase());
                               },
-                              onClear: j,
-                              placeholder: g.Z.Messages.CHANNEL_BROWSER_SEARCH_PLACEHOLDER
+                              onClear: B,
+                              placeholder: _.intl.string(_.t.s5MnmJ)
                           }),
-                          v
+                          j
                               ? (0, l.jsxs)(r.Button, {
-                                    className: N.createButton,
-                                    innerClassName: N.createButtonInner,
+                                    className: b.createButton,
+                                    innerClassName: b.createButtonInner,
                                     onClick: S,
                                     children: [
                                         (0, l.jsx)(r.PlusSmallIcon, {
                                             size: 'sm',
                                             color: 'currentColor',
-                                            className: N.createIcon
+                                            className: b.createIcon
                                         }),
-                                        g.Z.Messages.CREATE
+                                        _.intl.string(_.t.CumH4u)
                                     ]
                                 })
                               : null
                       ]
                   }),
-                  (0, l.jsx)(C.Z, {
-                      className: N.browser,
-                      channels: E,
+                  (0, l.jsx)(x.Z, {
+                      className: b.browser,
+                      channels: N,
                       categories: Z,
                       guild: I,
-                      hasSidebar: T
+                      hasSidebar: E
                   })
               ]
           });

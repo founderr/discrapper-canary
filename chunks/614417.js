@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return I;
     }
 }),
     n(47120);
@@ -13,84 +13,84 @@ var r = n(200651),
     u = n(271383),
     c = n(785717),
     d = n(221292),
-    _ = n(687158),
-    E = n(471879),
-    f = n(502762),
-    h = n(475413),
-    p = n(228168),
-    I = n(689938),
-    m = n(572046),
-    T = n(609440);
-function S(e) {
-    let { user: t, guildId: n, setPopoutRef: S, channelId: g, messageId: A, roleId: N, onViewBlockedProfileClick: R, newAnalyticsLocations: O = [] } = e,
-        { analyticsLocations: v } = (0, l.ZP)([...O, o.Z.BLOCKED_PROFILE_POPOUT]),
+    f = n(687158),
+    _ = n(471879),
+    h = n(502762),
+    p = n(475413),
+    m = n(228168),
+    g = n(388032),
+    E = n(572046),
+    v = n(609440);
+function I(e) {
+    let { user: t, guildId: n, setPopoutRef: I, channelId: S, messageId: T, roleId: b, onViewBlockedProfileClick: y, newAnalyticsLocations: A = [] } = e,
+        { analyticsLocations: N } = (0, l.ZP)([...A, o.Z.BLOCKED_PROFILE_POPOUT]),
         C = (0, c.ZB)({
             layout: 'BLOCKED_PROFILE_POPOUT',
             userId: t.id,
             guildId: n,
-            channelId: g,
-            messageId: A,
-            roleId: N
+            channelId: S,
+            messageId: T,
+            roleId: b
         }),
-        L = i.useRef(null),
-        D = (0, _.ZP)(t.id, n),
-        y = (0, a.e7)([u.ZP], () => (null != n ? u.ZP.getMember(n, t.id) : null));
+        R = i.useRef(null),
+        O = (0, f.ZP)(t.id, n),
+        D = (0, a.e7)([u.ZP], () => (null != n ? u.ZP.getMember(n, t.id) : null));
     return (
         i.useEffect(() => {
-            null == S || S(null == L ? void 0 : L.current);
-        }, [L, S]),
+            null == I || I(null == R ? void 0 : R.current);
+        }, [R, I]),
         (0, r.jsx)(l.Gt, {
-            value: v,
+            value: N,
             children: (0, r.jsx)(c.Mt, {
                 value: C,
-                shouldTrackViewOnMount: null == y || null != y.fullProfileLoadedTimestamp,
+                shouldTrackViewOnMount: null == D || null != D.fullProfileLoadedTimestamp,
                 children: (0, r.jsx)(s.Dialog, {
-                    ref: L,
+                    ref: R,
                     'aria-label': t.username,
-                    children: (0, r.jsx)(f.Z, {
+                    children: (0, r.jsx)(h.Z, {
                         user: t,
-                        displayProfile: D,
-                        profileType: p.y0.BITE_SIZE,
+                        displayProfile: O,
+                        profileType: m.y0.BITE_SIZE,
                         children: (0, r.jsxs)('div', {
-                            className: m.container,
+                            className: E.container,
                             children: [
                                 (0, r.jsx)('img', {
                                     alt: '',
-                                    src: T,
-                                    className: m.previewForCollected,
+                                    src: v,
+                                    className: E.previewForCollected,
                                     'aria-hidden': !0
                                 }),
                                 (0, r.jsxs)('div', {
-                                    className: m.body,
+                                    className: E.body,
                                     children: [
-                                        (0, r.jsx)(E.Z, {
+                                        (0, r.jsx)(_.Z, {
                                             user: t,
                                             guildId: n
                                         }),
                                         (0, r.jsx)(s.Heading, {
                                             variant: 'heading-lg/bold',
-                                            className: m.header,
-                                            children: I.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_TITLE
+                                            className: E.header,
+                                            children: g.intl.string(g.t.VNJ7UF)
                                         }),
                                         (0, r.jsx)(s.Text, {
                                             variant: 'text-sm/medium',
-                                            children: I.Z.Messages.USER_PROFILE_BLOCKED_PANEL_BODY_USERNAME.format({ username: t.username })
+                                            children: g.intl.format(g.t.LXbngo, { username: t.username })
                                         }),
                                         (0, r.jsx)(s.Text, {
                                             variant: 'text-sm/medium',
-                                            children: I.Z.Messages.USER_PROFILE_BLOCKED_PANEL_BODY_CONFIRMATION
+                                            children: g.intl.string(g.t['20WzZ2'])
                                         }),
-                                        (0, r.jsx)(h.tG, {
-                                            className: m.centeredButton,
+                                        (0, r.jsx)(p.tG, {
+                                            className: E.centeredButton,
                                             action: 'VIEW_BLOCKED_PROFILE',
-                                            text: I.Z.Messages.VIEW_PROFILE,
+                                            text: g.intl.string(g.t.iXAna2),
                                             autoFocus: !0,
                                             fullWidth: !1,
                                             onClick: () => {
-                                                null == R || R(),
+                                                null == y || y(),
                                                     (0, d.pQ)({
                                                         action: 'VIEW_BLOCKED_PROFILE',
-                                                        analyticsLocations: v,
+                                                        analyticsLocations: N,
                                                         ...C
                                                     });
                                             }

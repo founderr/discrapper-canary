@@ -1,71 +1,71 @@
-var s = n(200651),
+var i = n(200651),
     r = n(192379),
-    i = n(120356),
-    a = n.n(i),
+    s = n(120356),
+    a = n.n(s),
     l = n(442837),
     o = n(481060),
     c = n(812206),
     u = n(388905),
     d = n(925329),
-    _ = n(479446),
-    h = n(981632),
-    E = n(594174),
-    g = n(509545),
+    h = n(479446),
+    g = n(981632),
+    m = n(594174),
+    f = n(509545),
     p = n(55563),
-    m = n(296848),
-    I = n(981631),
-    f = n(474936),
-    N = n(689938),
-    T = n(295242),
-    A = n(739017),
-    x = n(113207);
-t.Z = l.ZP.connectStores([p.Z, c.Z, g.Z, E.default], (e) => {
+    _ = n(296848),
+    x = n(981631),
+    E = n(474936),
+    v = n(388032),
+    I = n(295242),
+    b = n(739017),
+    N = n(113207);
+t.Z = l.ZP.connectStores([p.Z, c.Z, f.Z, m.default], (e) => {
     let { giftCode: t } = e,
         n = p.Z.get(t.skuId),
-        { subscriptionPlanId: s } = t;
+        { subscriptionPlanId: i } = t;
     return {
         sku: n,
-        subscriptionPlan: null != s ? (0, m.oE)(s) : null,
+        subscriptionPlan: null != i ? (0, _.oE)(i) : null,
         application: c.Z.getApplication(n.applicationId),
-        gifter: E.default.getUser(t.userId)
+        gifter: m.default.getUser(t.userId)
     };
 })((e) => {
-    let { error: t, giftCode: n, gifter: i, sku: l, application: c, subscriptionPlan: E } = e,
-        g = null == i ? N.Z.Messages.GIFT_CODE_AUTH_GIFTED : N.Z.Messages.GIFT_CODE_AUTH_GIFTED_BY.format({ username: i.username }),
+    let { error: t, giftCode: n, gifter: s, sku: l, application: c, subscriptionPlan: m } = e,
+        f = null == s ? v.intl.string(v.t.lTGZAg) : v.intl.formatToPlainString(v.t.TjWdPT, { username: s.username }),
         p = l.name;
     return (
-        null != E &&
-            (p = (E.interval === f.rV.MONTH ? N.Z.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_MONTHLY : N.Z.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_YEARLY).format({
+        null != m &&
+            (p = v.intl.formatToPlainString(m.interval === E.rV.MONTH ? v.t.CTpcCQ : v.t.rgPWGx, {
                 skuName: l.name,
-                intervalCount: E.intervalCount
+                intervalCount: m.intervalCount
             })),
-        (0, s.jsxs)(r.Fragment, {
+        (0, i.jsxs)(r.Fragment, {
             children: [
                 null != n.giftStyle
-                    ? (0, s.jsx)(h.Z, {
-                          defaultAnimationState: _.SR.LOOP,
+                    ? (0, i.jsx)(g.Z, {
+                          defaultAnimationState: h.SR.LOOP,
                           giftStyle: n.giftStyle,
-                          className: T.seasonalIcon
+                          className: I.seasonalIcon
                       })
-                    : (0, s.jsx)(u.qE, {
-                          src: null != i ? i.getAvatarURL(void 0, 100) : null,
+                    : (0, i.jsx)(u.qE, {
+                          src: null != s ? s.getAvatarURL(void 0, 100) : null,
                           size: o.AvatarSizes.DEPRECATED_SIZE_100,
-                          className: x.marginBottom20
+                          className: N.marginBottom20
                       }),
                 null != t
-                    ? (0, s.jsxs)(r.Fragment, {
-                          children: [(0, s.jsx)(u.DK, { children: N.Z.Messages.INVITE_MODAL_ERROR_TITLE }), (0, s.jsx)(u.Dx, { children: t })]
+                    ? (0, i.jsxs)(r.Fragment, {
+                          children: [(0, i.jsx)(u.DK, { children: v.intl.string(v.t.mDFGFh) }), (0, i.jsx)(u.Dx, { children: t })]
                       })
-                    : (0, s.jsxs)(r.Fragment, {
+                    : (0, i.jsxs)(r.Fragment, {
                           children: [
-                              (0, s.jsx)(u.DK, { children: g }),
-                              (0, s.jsxs)(u.Dx, {
-                                  className: a()(x.marginTop8, A.flexCenter),
+                              (0, i.jsx)(u.DK, { children: f }),
+                              (0, i.jsxs)(u.Dx, {
+                                  className: a()(N.marginTop8, b.flexCenter),
                                   children: [
-                                      l.productLine !== I.POd.COLLECTIBLES &&
-                                          (0, s.jsx)(d.Z, {
+                                      l.productLine !== x.POd.COLLECTIBLES &&
+                                          (0, i.jsx)(d.Z, {
                                               size: d.Z.Sizes.MEDIUM,
-                                              className: T.applicationIcon,
+                                              className: I.applicationIcon,
                                               game: c,
                                               skuId: l.id
                                           }),

@@ -1,76 +1,76 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
         return C;
     }
 });
-var n = t(200651),
-    a = t(192379),
-    i = t(120356),
-    r = t.n(i),
-    o = t(481060),
-    l = t(906732),
-    c = t(642619),
-    d = t(626135),
-    _ = t(74538),
-    u = t(150039),
-    E = t(993413),
-    T = t(504983),
-    S = t(981631),
-    I = t(474936),
-    N = t(689938),
-    m = t(492004);
+var i = n(200651),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(481060),
+    o = n(906732),
+    c = n(642619),
+    d = n(626135),
+    u = n(74538),
+    m = n(150039),
+    h = n(993413),
+    g = n(504983),
+    p = n(981631),
+    x = n(474936),
+    S = n(388032),
+    T = n(492004);
 function C(e) {
-    let { user: s, guild: t, className: i, sectionTitle: C, forcedDivider: A = !1, withTutorial: g = !1, showBorder: h = !1, isTryItOutFlow: O = !1, initialSelectedEffectId: p } = e,
-        R = (0, u.Kg)(s, t),
-        x = _.ZP.canUsePremiumProfileCustomization(s),
-        { analyticsLocations: M } = (0, l.ZP)(),
-        { pendingProfileEffectId: f, errors: D } = (0, u.bd)(t),
-        L = a.useCallback(
+    let { user: t, guild: n, className: r, sectionTitle: C, forcedDivider: _ = !1, withTutorial: E = !1, showBorder: f = !1, isTryItOutFlow: I = !1, initialSelectedEffectId: N } = e,
+        A = (0, m.Kg)(t, n),
+        b = u.ZP.canUsePremiumProfileCustomization(t),
+        { analyticsLocations: v } = (0, o.ZP)(),
+        { pendingProfileEffectId: j, errors: O } = (0, m.bd)(n),
+        R = s.useCallback(
             () =>
                 (0, c.H)({
-                    analyticsLocations: M,
-                    initialSelectedEffectId: p,
-                    guild: t
+                    analyticsLocations: v,
+                    initialSelectedEffectId: N,
+                    guild: n
                 }),
-            [M, p, t]
+            [v, N, n]
         );
-    a.useEffect(() => {
-        x &&
-            d.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: I.cd.PROFILE_EFFECTS_INLINE_SETTINGS,
-                location_stack: M
+    s.useEffect(() => {
+        b &&
+            d.default.track(p.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: x.cd.PROFILE_EFFECTS_INLINE_SETTINGS,
+                location_stack: v
             });
-    }, [x, M]);
-    let P = null != t,
-        b = O || void 0 !== f ? null != f : null != R,
-        Z = g ? o.ShinyButton : o.Button;
-    return (0, n.jsx)(E.Z, {
-        forcedDivider: A,
-        borderType: T.Y.PREMIUM,
+    }, [b, v]);
+    let P = null != n,
+        D = I || void 0 !== j ? null != j : null != A,
+        y = E ? a.ShinyButton : a.Button;
+    return (0, i.jsx)(h.Z, {
+        forcedDivider: _,
+        borderType: g.Y.PREMIUM,
         hasBackground: !0,
         title: C,
-        showBorder: h,
-        errors: D,
-        className: i,
-        children: (0, n.jsxs)('div', {
-            className: m.buttonsContainer,
+        showBorder: f,
+        errors: O,
+        className: r,
+        children: (0, i.jsxs)('div', {
+            className: T.buttonsContainer,
             children: [
-                (0, n.jsx)(Z, {
-                    size: o.Button.Sizes.SMALL,
-                    onClick: L,
-                    className: r()({ [m.buttonHighlighted]: g }),
-                    children: N.Z.Messages.USER_SETTINGS_CHANGE_PROFILE_EFFECT
+                (0, i.jsx)(y, {
+                    size: a.Button.Sizes.SMALL,
+                    onClick: R,
+                    className: l()({ [T.buttonHighlighted]: E }),
+                    children: S.intl.string(S.t['0nEVoK'])
                 }),
-                b &&
-                    (0, n.jsx)(o.Button, {
-                        className: m.removeButton,
-                        color: o.Button.Colors.PRIMARY,
-                        look: o.Button.Looks.LINK,
-                        size: o.Button.Sizes.SMALL,
+                D &&
+                    (0, i.jsx)(a.Button, {
+                        className: T.removeButton,
+                        color: a.Button.Colors.PRIMARY,
+                        look: a.Button.Looks.LINK,
+                        size: a.Button.Sizes.SMALL,
                         onClick: function () {
-                            (0, u.s6)(null, R, null == t ? void 0 : t.id);
+                            (0, m.s6)(null, A, null == n ? void 0 : n.id);
                         },
-                        children: P ? N.Z.Messages.USER_SETTINGS_USE_DEFAULT_PROFILE_EFFECT : N.Z.Messages.USER_SETTINGS_REMOVE_PROFILE_EFFECT
+                        children: P ? S.intl.string(S.t.GJ3Fcn) : S.intl.string(S.t['Ld+f5e'])
                     })
             ]
         })

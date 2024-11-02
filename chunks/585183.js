@@ -1,93 +1,93 @@
 n.d(t, {
     h: function () {
-        return m;
+        return C;
     }
 }),
     n(47120);
 var a = n(200651),
     r = n(192379),
-    s = n(512722),
-    o = n.n(s),
-    l = n(481060),
-    c = n(457330),
-    i = n(600164),
+    l = n(512722),
+    o = n.n(l),
+    s = n(481060),
+    i = n(457330),
+    c = n(600164),
     d = n(710845),
     u = n(69580),
     x = n(424071),
-    N = n(689938),
-    h = n(879137);
-let C = new d.Z('TwoWayLinkDiscordConsentWeb');
-function m(e) {
-    let { platformType: t, clientId: n, scopes: s, authToken: d, onContinue: m, onError: j, onClose: E, redirectUri: f } = e,
-        [v, p] = r.useState(!1),
+    h = n(388032),
+    m = n(879137);
+let N = new d.Z('TwoWayLinkDiscordConsentWeb');
+function C(e) {
+    let { platformType: t, clientId: n, scopes: l, authToken: d, onContinue: C, onError: j, onClose: f, redirectUri: v } = e,
+        [p, b] = r.useState(!1),
         T = r.useCallback(
             async (e) => {
                 let n,
                     a,
                     { location: r } = e,
-                    { callbackCode: s, callbackState: o } = d;
+                    { callbackCode: l, callbackState: o } = d;
                 try {
-                    n = await c.Z.completeTwoWayLink(t, r, s, o);
+                    n = await i.Z.completeTwoWayLink(t, r, l, o);
                 } catch (e) {
-                    var l;
-                    C.error(''.concat(t, ' link error:'), e), (a = null === (l = e.body) || void 0 === l ? void 0 : l.code);
+                    var s;
+                    N.error(''.concat(t, ' link error:'), e), (a = null === (s = e.body) || void 0 === s ? void 0 : s.code);
                 }
-                null != n ? m() : j(a);
+                null != n ? C() : j(a);
             },
-            [t, d, m, j]
+            [t, d, C, j]
         ),
         {
-            header: O,
-            body: b,
-            appDetails: R,
-            sendAuthorize: I
+            header: E,
+            body: k,
+            appDetails: g,
+            sendAuthorize: B
         } = (0, u.useOAuth2AuthorizeForm)({
             clientId: n,
-            scopes: s,
+            scopes: l,
             responseType: 'code',
             callback: T,
             isTrustedName: !0,
             isEmbeddedFlow: !0,
-            redirectUri: f
+            redirectUri: v
         }),
-        g = r.useCallback(() => {
-            o()(null != I, 'sendAuthorize not available'), p(!0), I(!0);
-        }, [I]);
+        O = r.useCallback(() => {
+            o()(null != B, 'sendAuthorize not available'), b(!0), B(!0);
+        }, [B]);
     return (0, a.jsxs)(x.Z, {
         children: [
-            (0, a.jsxs)(l.ModalHeader, {
-                direction: i.Z.Direction.VERTICAL,
-                className: h.header,
+            (0, a.jsxs)(s.ModalHeader, {
+                direction: c.Z.Direction.VERTICAL,
+                className: m.header,
                 separator: !1,
                 children: [
-                    (0, a.jsx)(l.Text, {
-                        className: h.stepHeader,
+                    (0, a.jsx)(s.Text, {
+                        className: m.stepHeader,
                         variant: 'text-xs/bold',
                         color: 'header-secondary',
-                        children: N.Z.Messages.BIDIRECTIONAL_STEP_HEADER.format({
+                        children: h.intl.format(h.t.fHz6eX, {
                             number: 2,
                             total: 2
                         })
                     }),
-                    null != E &&
-                        (0, a.jsx)(l.ModalCloseButton, {
-                            className: h.closeButton,
-                            onClick: E
+                    null != f &&
+                        (0, a.jsx)(s.ModalCloseButton, {
+                            className: m.closeButton,
+                            onClick: f
                         })
                 ]
             }),
-            (0, a.jsxs)(l.ModalContent, {
+            (0, a.jsxs)(s.ModalContent, {
                 paddingFix: !1,
-                children: [O, b, R]
+                children: [E, k, g]
             }),
-            (0, a.jsx)(l.ModalFooter, {
-                className: h.footer,
-                children: (0, a.jsx)(l.Button, {
-                    className: h.footerButton,
-                    color: l.Button.Colors.BRAND,
-                    submitting: v,
-                    onClick: g,
-                    children: N.Z.Messages.AUTHORIZE_AND_CONTINUE
+            (0, a.jsx)(s.ModalFooter, {
+                className: m.footer,
+                children: (0, a.jsx)(s.Button, {
+                    className: m.footerButton,
+                    color: s.Button.Colors.BRAND,
+                    submitting: p,
+                    onClick: O,
+                    children: h.intl.string(h.t.ZN4hkZ)
                 })
             })
         ]

@@ -1,12 +1,12 @@
 n(47120);
-var s = n(200651),
-    a = n(192379),
-    r = n(780384),
-    i = n(410030),
+var i = n(200651),
+    r = n(192379),
+    a = n(780384),
+    s = n(410030),
     l = n(119269),
     o = n(315566);
 let c = 'url(#gradient)',
-    _ = (e, t) => {
+    d = (e, t) => {
         switch (e) {
             case l.Q.NITRO_LOGO:
                 return t ? '0.3' : '0.2';
@@ -15,7 +15,7 @@ let c = 'url(#gradient)',
                 return;
         }
     },
-    d = (e) => {
+    u = (e) => {
         switch (e) {
             case l.Q.NITRO_GEM:
                 return 'var(--background-primary)';
@@ -25,7 +25,7 @@ let c = 'url(#gradient)',
                 return;
         }
     },
-    E = (e, t) => {
+    g = (e, t) => {
         switch (t) {
             case l.Q.NITRO_GEM:
                 return c;
@@ -36,73 +36,73 @@ let c = 'url(#gradient)',
         }
     };
 t.Z = (e) => {
-    let { percentage: t = 0, children: n, animationClassName: c, initialPercentage: u = 0, progressCircleStrokeSize: T = 2, progressCircleVariation: I, progressCircleStroke: R } = e,
-        g = 43 + T / 2,
-        N = 2 * Math.PI * g,
-        [m, C] = a.useState(u);
-    a.useEffect(() => {
+    let { percentage: t = 0, children: n, animationClassName: c, initialPercentage: m = 0, progressCircleStrokeSize: f = 2, progressCircleVariation: p, progressCircleStroke: _ } = e,
+        h = 43 + f / 2,
+        x = 2 * Math.PI * h,
+        [E, b] = r.useState(m);
+    r.useEffect(() => {
         let e = setTimeout(() => {
-            C(t);
+            b(t);
         }, 200);
         return () => clearTimeout(e);
     }, [t]);
-    let A = (0, i.ZP)(),
-        p = (0, r.ap)(A),
-        f = d(I),
-        M = _(I, p),
-        S = null != R ? R : E(p, I);
-    return (0, s.jsxs)('div', {
+    let C = (0, s.ZP)(),
+        v = (0, a.ap)(C),
+        T = u(p),
+        N = d(p, v),
+        I = null != _ ? _ : g(v, p);
+    return (0, i.jsxs)('div', {
         className: o.circleContainer,
         children: [
-            (0, s.jsxs)('svg', {
+            (0, i.jsxs)('svg', {
                 viewBox: '0 0 100 100',
                 className: o.circleSVG,
                 children: [
-                    (0, s.jsx)('circle', {
-                        className: I === l.Q.NITRO_GEM ? o.baseProgressCircle : void 0,
+                    (0, i.jsx)('circle', {
+                        className: p === l.Q.NITRO_GEM ? o.baseProgressCircle : void 0,
                         fill: 'transparent',
-                        strokeWidth: T,
-                        r: ''.concat(g),
+                        strokeWidth: f,
+                        r: ''.concat(h),
                         cx: '50%',
                         cy: '50%',
-                        stroke: f,
-                        strokeOpacity: M
+                        stroke: T,
+                        strokeOpacity: N
                     }),
-                    (0, s.jsx)('circle', {
-                        stroke: S,
-                        strokeWidth: T,
+                    (0, i.jsx)('circle', {
+                        stroke: I,
+                        strokeWidth: f,
                         strokeLinecap: 'round',
-                        strokeDasharray: ''.concat(N, ' ').concat(N),
+                        strokeDasharray: ''.concat(x, ' ').concat(x),
                         className: c,
-                        style: { strokeDashoffset: (1 - m / 100) * N },
-                        r: ''.concat(g),
+                        style: { strokeDashoffset: (1 - E / 100) * x },
+                        r: ''.concat(h),
                         cx: '50%',
                         cy: '50%'
                     })
                 ]
             }),
-            (0, s.jsxs)('svg', {
+            (0, i.jsxs)('svg', {
                 width: '0',
                 height: '0',
                 children: [
-                    (0, s.jsxs)('linearGradient', {
+                    (0, i.jsxs)('linearGradient', {
                         id: 'gradient',
                         x1: '0%',
                         y1: '0%',
                         x2: '100%',
                         y2: '100%',
                         children: [
-                            (0, s.jsx)('stop', {
+                            (0, i.jsx)('stop', {
                                 offset: '0%',
                                 style: { stopColor: '#FFBDF2' }
                             }),
-                            (0, s.jsx)('stop', {
+                            (0, i.jsx)('stop', {
                                 offset: '100%',
                                 style: { stopColor: '#E742E1' }
                             })
                         ]
                     }),
-                    (0, s.jsxs)('linearGradient', {
+                    (0, i.jsxs)('linearGradient', {
                         id: 'gradient_nitro_logo',
                         x1: '2.99995',
                         y1: '67.6298',
@@ -110,28 +110,28 @@ t.Z = (e) => {
                         y2: '67.6298',
                         gradientUnits: 'userSpaceOnUse',
                         children: [
-                            (0, s.jsx)('stop', { stopColor: '#F9A0E8' }),
-                            (0, s.jsx)('stop', {
+                            (0, i.jsx)('stop', { stopColor: '#F9A0E8' }),
+                            (0, i.jsx)('stop', {
                                 offset: '1',
                                 stopColor: '#E742E1'
                             })
                         ]
                     }),
-                    (0, s.jsxs)('linearGradient', {
+                    (0, i.jsxs)('linearGradient', {
                         id: 'dark-purple-gradient',
                         x1: '0%',
                         y1: '0%',
                         x2: '100%',
                         y2: '0%',
                         children: [
-                            (0, s.jsx)('stop', {
+                            (0, i.jsx)('stop', {
                                 offset: '0%',
                                 style: {
                                     stopColor: '#241731',
                                     stopOpacity: 1
                                 }
                             }),
-                            (0, s.jsx)('stop', {
+                            (0, i.jsx)('stop', {
                                 offset: '100%',
                                 style: {
                                     stopColor: '#241731',
@@ -142,7 +142,7 @@ t.Z = (e) => {
                     })
                 ]
             }),
-            (0, s.jsx)('div', {
+            (0, i.jsx)('div', {
                 className: o.childrenContainer,
                 children: n
             })

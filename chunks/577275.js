@@ -1,27 +1,27 @@
 n(47120);
-var s = n(192379),
-    a = n(586739);
+var i = n(192379),
+    r = n(586739);
 t.Z = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { refreshOnDepChange: t } = e,
-        [n, i] = s.useState([]),
-        [r, l] = s.useState(!0),
+        [n, l] = i.useState([]),
+        [s, a] = i.useState(!0),
         o = async () => {
-            l(!0);
+            a(!0);
             try {
-                let e = await a.Z.fetchTeams(!0);
-                i(e.body);
+                let e = await r.Z.fetchTeams(!0);
+                l(e.body);
             } catch (e) {}
-            l(!1);
+            a(!1);
         },
-        c = s.useRef(!0);
+        c = i.useRef(!0);
     return (
-        s.useEffect(() => {
+        i.useEffect(() => {
             (c.current || t) && ((c.current = !1), o());
         }, [t]),
         {
             teams: n,
-            loading: r,
+            loading: s,
             refresh: o
         }
     );

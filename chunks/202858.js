@@ -1,102 +1,102 @@
-t.d(s, {
+n.d(t, {
     Yn: function () {
-        return E;
+        return h;
     }
 }),
-    t(411104),
-    t(47120);
-var n = t(200651),
-    a = t(192379),
-    i = t(283693),
-    r = t(481060),
-    o = t(816814),
-    l = t(200483),
-    c = t(981631),
-    d = t(689938);
-function _(e) {
-    let { onError: s, onSuccess: t, PasswordConfirm: r, ...l } = e,
-        [_, u] = a.useState('');
-    return (0, n.jsx)(r, {
-        ...l,
-        handleSubmit: (e) => o.Z.enableMFAStart(e),
+    n(411104),
+    n(47120);
+var i = n(200651),
+    s = n(192379),
+    r = n(283693),
+    l = n(481060),
+    a = n(816814),
+    o = n(200483),
+    c = n(981631),
+    d = n(388032);
+function u(e) {
+    let { onError: t, onSuccess: n, PasswordConfirm: l, ...o } = e,
+        [u, m] = s.useState('');
+    return (0, i.jsx)(l, {
+        ...o,
+        handleSubmit: (e) => a.Z.enableMFAStart(e),
         onError: (e) => {
-            var n;
-            if (('object' == typeof (n = e) && null != n && (0, i.nr)(n, 'code') && 'number' == typeof n.code ? n.code : 0) === c.evJ.MFA_INVALID_SECRET) t(_), l.onClose();
-            else s(e);
+            var i;
+            if (('object' == typeof (i = e) && null != i && (0, r.nr)(i, 'code') && 'number' == typeof i.code ? i.code : 0) === c.evJ.MFA_INVALID_SECRET) n(u), o.onClose();
+            else t(e);
         },
-        onPasswordChange: u,
-        title: d.Z.Messages.TWO_FA_ENABLE,
-        actionText: d.Z.Messages.CONTINUE,
+        onPasswordChange: m,
+        title: d.intl.string(d.t.cDgKtb),
+        actionText: d.intl.string(d.t['3PatS0']),
         skipErrorMsgAbortCode: c.evJ.MFA_INVALID_SECRET
     });
 }
-function u(e, s) {
-    return new Promise((a) => {
-        (0, r.openModalLazy)(async () => {
-            let { default: i } = await Promise.all([t.e('15812'), t.e('23746')]).then(t.bind(t, 837651));
-            return (t) =>
-                (0, n.jsx)(i, {
-                    ...t,
+function m(e, t) {
+    return new Promise((s) => {
+        (0, l.openModalLazy)(async () => {
+            let { default: r } = await Promise.all([n.e('15812'), n.e('23746')]).then(n.bind(n, 837651));
+            return (n) =>
+                (0, i.jsx)(r, {
+                    ...n,
                     password: e,
-                    emailToken: s,
-                    handleEnableMFASuccess: a
+                    emailToken: t,
+                    handleEnableMFASuccess: s
                 });
         });
     });
 }
-function E() {
+function h() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return new Promise((s) => {
-        (0, r.openModalLazy)(
+    return new Promise((t) => {
+        (0, l.openModalLazy)(
             async () => {
-                let { default: s } = await Promise.all([t.e('76540'), t.e('17663')]).then(t.bind(t, 628908));
-                return (t) =>
-                    (0, n.jsx)(s, {
-                        ...t,
+                let { default: t } = await Promise.all([n.e('76540'), n.e('17663')]).then(n.bind(n, 628908));
+                return (n) =>
+                    (0, i.jsx)(t, {
+                        ...n,
                         isTotp: e
                     });
             },
             {
-                onCloseCallback: s,
+                onCloseCallback: t,
                 onCloseRequest: c.VqG
             }
         );
     });
 }
-async function T() {
-    let e = await new Promise((e, s) => {
-        (0, r.openModalLazy)(async () => {
-            let { default: a } = await t.e('24642').then(t.bind(t, 279837));
-            return (t) =>
-                (0, n.jsx)(_, {
-                    ...t,
+async function g() {
+    let e = await new Promise((e, t) => {
+        (0, l.openModalLazy)(async () => {
+            let { default: s } = await n.e('24642').then(n.bind(n, 279837));
+            return (n) =>
+                (0, i.jsx)(u, {
+                    ...n,
                     onSuccess: e,
-                    onError: s,
-                    PasswordConfirm: a
+                    onError: t,
+                    PasswordConfirm: s
                 });
         });
     });
-    if ((0, l.j)()) {
-        var s;
-        let a = await ((s = e),
+    if ((0, o.j)()) {
+        var t;
+        let s = await ((t = e),
         new Promise((e) => {
-            (0, r.openModalLazy)(async () => {
-                let { default: a } = await t.e('94566').then(t.bind(t, 965072));
-                return (t) =>
-                    (0, n.jsx)(a, {
-                        ...t,
-                        onFormSubmit: async (e) => await o.Z.verifyEmailCode(e),
+            (0, l.openModalLazy)(async () => {
+                let { default: s } = await n.e('94566').then(n.bind(n, 965072));
+                return (n) =>
+                    (0, i.jsx)(s, {
+                        ...n,
+                        onFormSubmit: async (e) => await a.Z.verifyEmailCode(e),
                         onResend: async () => {
-                            await o.Z.resendEmailCode(s);
+                            await a.Z.resendEmailCode(t);
                         },
                         onSuccess: e,
-                        headerText: d.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_TITLE_DESKTOP,
-                        confirmButtonText: d.Z.Messages.NEXT
+                        headerText: d.intl.string(d.t.jMGc4O),
+                        confirmButtonText: d.intl.string(d.t.PDTjLC)
                     });
             });
         }));
-        await u(e, null == a ? void 0 : a.token);
-    } else await u(e);
-    await E();
+        await m(e, null == s ? void 0 : s.token);
+    } else await m(e);
+    await h();
 }
-s.ZP = { enableMFA: T };
+t.ZP = { enableMFA: g };

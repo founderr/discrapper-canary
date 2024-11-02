@@ -1,129 +1,129 @@
-s.r(t),
-    s.d(t, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return L;
+            return T;
         }
     }),
-    s(47120);
-var a,
-    n,
-    C = s(200651),
-    i = s(192379),
-    _ = s(481060),
-    o = s(355467),
-    l = s(100527),
-    r = s(906732),
-    I = s(313201),
-    N = s(740492),
-    c = s(626135),
-    A = s(171246),
-    d = s(225715),
-    S = s(635840),
-    O = s(981631),
-    E = s(689938),
-    T = s(122843);
-let u = (e) => {
-    let [t, s] = i.useState(!1),
-        [a, n] = i.useState(null);
+    n(47120);
+var i,
+    a,
+    l = n(200651),
+    s = n(192379),
+    o = n(481060),
+    r = n(355467),
+    c = n(100527),
+    d = n(906732),
+    C = n(313201),
+    u = n(740492),
+    _ = n(626135),
+    N = n(171246),
+    S = n(225715),
+    h = n(635840),
+    I = n(981631),
+    m = n(388032),
+    E = n(122843);
+let x = (e) => {
+    let [t, n] = s.useState(!1),
+        [i, a] = s.useState(null);
     return {
         cancelSubscription: async (t) => {
             try {
-                return s(!0), await o.EO(t, e), !0;
+                return n(!0), await r.EO(t, e), !0;
             } catch (e) {
-                n(e);
+                a(e);
             } finally {
-                s(!1);
+                n(!1);
             }
         },
-        error: a,
+        error: i,
         submitting: t
     };
 };
-function L(e) {
-    let { transitionState: t, application: s, storeListing: a, subscription: n, guild: o, onClose: L } = e,
-        P = (0, I.Dt)(),
-        { analyticsLocations: R } = (0, r.ZP)(l.Z.APPLICATION_SUBSCRIPTION_CANCELLATION_MODAL),
-        { cancelSubscription: U, error: h, submitting: m } = u(R),
-        [x, B] = i.useState(0),
-        p = async () => {
-            (await U(n.id)) && (N.ZP.disableApplicationSubscriptionCancellationSurvey ? L() : B(1));
+function T(e) {
+    let { transitionState: t, application: n, storeListing: i, subscription: a, guild: r, onClose: T } = e,
+        A = (0, C.Dt)(),
+        { analyticsLocations: O } = (0, d.ZP)(c.Z.APPLICATION_SUBSCRIPTION_CANCELLATION_MODAL),
+        { cancelSubscription: p, error: g, submitting: j } = x(O),
+        [P, R] = s.useState(0),
+        f = async () => {
+            (await p(a.id)) && (u.ZP.disableApplicationSubscriptionCancellationSurvey ? T() : R(1));
         };
-    i.useEffect(() => {
-        c.default.track(O.rMx.CANCELLATION_FLOW_STARTED, { location_stack: R });
-    }, [R]);
-    let M = (0, A.KW)(a.skuFlags);
-    return (0, C.jsx)(_.ModalRoot, {
+    s.useEffect(() => {
+        _.default.track(I.rMx.CANCELLATION_FLOW_STARTED, { location_stack: O });
+    }, [O]);
+    let L = (0, N.KW)(i.skuFlags);
+    return (0, l.jsx)(o.ModalRoot, {
         transitionState: t,
-        className: T.modal,
-        'aria-labelledby': P,
-        children: (0, C.jsxs)(_.Slides, {
-            activeSlide: x,
+        className: E.modal,
+        'aria-labelledby': A,
+        children: (0, l.jsxs)(o.Slides, {
+            activeSlide: P,
             width: 440,
             children: [
-                (0, C.jsx)(_.Slide, {
+                (0, l.jsx)(o.Slide, {
                     id: 0,
-                    children: (0, C.jsxs)('div', {
-                        className: T.slideContainer,
+                    children: (0, l.jsxs)('div', {
+                        className: E.slideContainer,
                         children: [
-                            null != h ? (0, C.jsx)(_.FormErrorBlock, { children: h.message }) : null,
-                            (0, C.jsxs)(_.ModalContent, {
-                                className: T.content,
+                            null != g ? (0, l.jsx)(o.FormErrorBlock, { children: g.message }) : null,
+                            (0, l.jsxs)(o.ModalContent, {
+                                className: E.content,
                                 children: [
-                                    (0, C.jsx)(_.Spacer, { size: 16 }),
-                                    (0, C.jsxs)(d.q$, {
+                                    (0, l.jsx)(o.Spacer, { size: 16 }),
+                                    (0, l.jsxs)(S.q$, {
                                         children: [
-                                            (0, C.jsx)(d.CW, { application: s }),
-                                            (0, C.jsx)(d.r0, {
-                                                id: P,
-                                                children: E.Z.Messages.APPLICATION_CANCEL_SUBSCRIPTION_MODAL_TITLE_V2.format({ tier: a.summary })
+                                            (0, l.jsx)(S.CW, { application: n }),
+                                            (0, l.jsx)(S.r0, {
+                                                id: A,
+                                                children: m.intl.format(m.t.irka9v, { tier: i.summary })
                                             }),
-                                            (0, C.jsx)(d.s$, {}),
-                                            (0, C.jsx)(d.K9, {
-                                                title: E.Z.Messages.APPLICATION_CANCEL_SUBSCRIPTION_MODAL_HEADER,
-                                                description: M
-                                                    ? E.Z.Messages.APPLICATION_CANCEL_USER_SUBSCRIPTION_MODAL_DESCRIPTION.format({ timestamp: n.currentPeriodEnd.getTime() })
-                                                    : E.Z.Messages.APPLICATION_CANCEL_GUILD_SUBSCRIPTION_MODAL_DESCRIPTION.format({
-                                                          timestamp: n.currentPeriodEnd.getTime(),
-                                                          guildName: null == o ? void 0 : o.name
+                                            (0, l.jsx)(S.s$, {}),
+                                            (0, l.jsx)(S.K9, {
+                                                title: m.intl.string(m.t.LZunzc),
+                                                description: L
+                                                    ? m.intl.formatToPlainString(m.t['+HdfBw'], { timestamp: a.currentPeriodEnd.getTime() })
+                                                    : m.intl.formatToPlainString(m.t.qxiBnZ, {
+                                                          timestamp: a.currentPeriodEnd.getTime(),
+                                                          guildName: null == r ? void 0 : r.name
                                                       })
                                             }),
-                                            (0, C.jsx)(d.G9, {
-                                                applicationId: a.applicationId,
-                                                storeListingBenefits: a.benefits
+                                            (0, l.jsx)(S.G9, {
+                                                applicationId: i.applicationId,
+                                                storeListingBenefits: i.benefits
                                             })
                                         ]
                                     })
                                 ]
                             }),
-                            (0, C.jsxs)(_.ModalFooter, {
-                                className: T.footer,
+                            (0, l.jsxs)(o.ModalFooter, {
+                                className: E.footer,
                                 children: [
-                                    (0, C.jsx)(_.Button, {
-                                        color: _.Button.Colors.RED,
-                                        onClick: p,
-                                        submitting: m,
-                                        children: E.Z.Messages.APPLICATION_CANCEL_SUBSCRIPTION_MODAL_CANCEL_CTA
+                                    (0, l.jsx)(o.Button, {
+                                        color: o.Button.Colors.RED,
+                                        onClick: f,
+                                        submitting: j,
+                                        children: m.intl.string(m.t.KSqyfX)
                                     }),
-                                    (0, C.jsx)(_.Button, {
-                                        look: _.Button.Looks.LINK,
-                                        color: _.Button.Colors.PRIMARY,
-                                        className: T.goBackButton,
-                                        onClick: L,
-                                        children: E.Z.Messages.APPLICATION_CANCEL_SUBSCRIPTION_MODAL_NEVERMIND_CTA
+                                    (0, l.jsx)(o.Button, {
+                                        look: o.Button.Looks.LINK,
+                                        color: o.Button.Colors.PRIMARY,
+                                        className: E.goBackButton,
+                                        onClick: T,
+                                        children: m.intl.string(m.t['05jDxs'])
                                     })
                                 ]
                             })
                         ]
                     })
                 }),
-                (0, C.jsx)(_.Slide, {
+                (0, l.jsx)(o.Slide, {
                     id: 1,
-                    children: (0, C.jsx)('div', {
-                        className: T.slideContainer,
-                        children: (0, C.jsx)(S.Z, {
-                            application: s,
-                            subscriptionId: n.id,
-                            onClose: L
+                    children: (0, l.jsx)('div', {
+                        className: E.slideContainer,
+                        children: (0, l.jsx)(h.Z, {
+                            application: n,
+                            subscriptionId: a.id,
+                            onClose: T
                         })
                     })
                 })
@@ -131,4 +131,4 @@ function L(e) {
         })
     });
 }
-((n = a || (a = {}))[(n.CANCEL = 0)] = 'CANCEL'), (n[(n.SURVEY = 1)] = 'SURVEY');
+((a = i || (i = {}))[(a.CANCEL = 0)] = 'CANCEL'), (a[(a.SURVEY = 1)] = 'SURVEY');

@@ -1,10 +1,10 @@
 n.r(t),
     n.d(t, {
         closeUserProfileModal: function () {
-            return h;
+            return p;
         },
         openUserProfileModal: function () {
-            return f;
+            return h;
         }
     });
 var r = n(259443),
@@ -16,33 +16,33 @@ var r = n(259443),
     u = n(594174),
     c = n(484459);
 let d = (0, i.getAvatarSize)(i.AvatarSizes.SIZE_120),
-    _ = new r.Y('UserProfileModalActionCreators'),
-    E = async (e) => {
+    f = new r.Y('UserProfileModalActionCreators'),
+    _ = async (e) => {
         if (l.default.getId() === e)
             try {
                 await (0, o.Z)(e);
             } catch (t) {
-                _.log('Failed to fetch content inventory outbox for '.concat(e, ':'), t);
+                f.log('Failed to fetch content inventory outbox for '.concat(e, ':'), t);
             }
     };
-async function f(e) {
-    let { userId: t, guildId: n, channelId: r, messageId: i, roleId: o, sessionId: l, joinRequestId: _, section: f, subsection: h, friendToken: p, showGuildProfile: I, analyticsLocation: m, sourceAnalyticsLocations: T } = e,
-        S = u.default.getUser(t);
-    E(t),
-        null == S
+async function h(e) {
+    let { userId: t, guildId: n, channelId: r, messageId: i, roleId: o, sessionId: l, joinRequestId: f, section: h, subsection: p, friendToken: m, showGuildProfile: g, analyticsLocation: E, sourceAnalyticsLocations: v } = e,
+        I = u.default.getUser(t);
+    _(t),
+        null == I
             ? await (0, s.In)(t, {
-                  guildId: I && null != n ? n : void 0,
+                  guildId: g && null != n ? n : void 0,
                   withMutualGuilds: !0,
                   withMutualFriends: !0,
-                  friendToken: p,
-                  joinRequestId: _
+                  friendToken: m,
+                  joinRequestId: f
               })
-            : (0, c.Z)(S.id, S.getAvatarURL(void 0, d), {
-                  guildId: I && null != n ? n : void 0,
+            : (0, c.Z)(I.id, I.getAvatarURL(void 0, d), {
+                  guildId: g && null != n ? n : void 0,
                   withMutualGuilds: !0,
                   withMutualFriends: !0,
-                  friendToken: p,
-                  joinRequestId: _
+                  friendToken: m,
+                  joinRequestId: f
               }),
         a.Z.dispatch({
             type: 'USER_PROFILE_MODAL_OPEN',
@@ -52,14 +52,14 @@ async function f(e) {
             messageId: null != i ? i : void 0,
             roleId: null != o ? o : void 0,
             sessionId: null != l ? l : void 0,
-            section: f,
-            subsection: h,
-            friendToken: p,
-            showGuildProfile: I,
-            analyticsLocation: m,
-            sourceAnalyticsLocations: T
+            section: h,
+            subsection: p,
+            friendToken: m,
+            showGuildProfile: g,
+            analyticsLocation: E,
+            sourceAnalyticsLocations: v
         });
 }
-function h() {
+function p() {
     a.Z.dispatch({ type: 'USER_PROFILE_MODAL_CLOSE' });
 }

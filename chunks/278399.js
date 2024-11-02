@@ -10,8 +10,8 @@ var t = l(200651),
     i = l(192379),
     r = l(317261),
     a = l(823379),
-    s = l(379357),
-    d = l(442550),
+    d = l(379357),
+    s = l(442550),
     u = l(561308),
     c = l(297781),
     o = l(443487),
@@ -20,7 +20,7 @@ let m = [c.An],
     x = [r._.WEEK];
 n.ZP = i.memo((e) => {
     let { entry: n, channel: l, selected: i } = e,
-        { largeImage: r } = (0, s.rv)({ entry: n }),
+        { largeImage: r } = (0, d.rv)({ entry: n }),
         v = (0, u.Nq)(n);
     return null != v && (0, a.Hi)(v, x)
         ? (0, t.jsxs)(o.Zb, {
@@ -40,7 +40,7 @@ n.ZP = i.memo((e) => {
                           })
                       ]
                   }),
-                  (0, t.jsx)(d.f, {
+                  (0, t.jsx)(s.f, {
                       src: null == r ? void 0 : r.src,
                       size: 48,
                       className: h.thumbnail

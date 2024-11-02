@@ -7,16 +7,16 @@ var r,
     u = n(585483),
     c = n(981631);
 let d = null,
-    _ = 0;
-function E() {
+    f = 0;
+function _() {
     d = null;
 }
-class f extends (s = o.ZP.Store) {
+class h extends (s = o.ZP.Store) {
     isOpen() {
         return null != d;
     }
     get version() {
-        return _;
+        return f;
     }
     getContextMenu() {
         return d;
@@ -26,7 +26,7 @@ class f extends (s = o.ZP.Store) {
     }
 }
 (a = 'ContextMenuStore'),
-    (i = 'displayName') in (r = f)
+    (i = 'displayName') in (r = h)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -34,13 +34,13 @@ class f extends (s = o.ZP.Store) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = new f(l.Z, {
+    (t.Z = new h(l.Z, {
         CONTEXT_MENU_OPEN: function (e) {
             let { contextMenu: t } = e;
-            _++, (d = t);
+            f++, (d = t);
         },
-        LAYER_PUSH: E,
-        CONTEXT_MENU_CLOSE: E,
-        OVERLAY_SET_UI_LOCKED: E,
-        OVERLAY_DEACTIVATE_ALL_REGIONS: E
+        LAYER_PUSH: _,
+        CONTEXT_MENU_CLOSE: _,
+        OVERLAY_SET_UI_LOCKED: _,
+        OVERLAY_DEACTIVATE_ALL_REGIONS: _
     }));

@@ -1,94 +1,94 @@
-s.d(n, {
+t.d(n, {
     Z: function () {
-        return C;
+        return N;
     }
 }),
-    s(47120);
-var a = s(200651),
-    t = s(192379),
-    o = s(442837),
-    l = s(481060),
-    i = s(2052),
-    c = s(594174),
-    r = s(74538),
-    d = s(716161),
-    u = s(634041),
-    _ = s(647177),
-    E = s(672339),
-    O = s(898531),
-    g = s(636188),
-    m = s(678916),
-    I = s(981631),
-    p = s(869783),
-    A = s(689938),
-    x = s(266129);
-function C(e) {
-    let { onLearnMore: n, selectedBackgroundOption: C, onSelectBackgroundOption: N, currentDeviceId: M, smallerBackgroundOptions: R } = e,
-        k = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
-        [D, j] = t.useState(null),
-        T = (0, O.Z)(),
-        h = r.ZP.canUseCustomBackgrounds(k),
-        U = (0, o.cj)([u.Z], () => (h ? u.Z.videoFilterAssets : {})),
-        B = t.useMemo(() => Object.values(U).filter((e) => e.type === m.xV.BACKGROUND), [U]),
-        v = (0, i.O)();
-    t.useEffect(() => {
-        T ? (0, E.FU)(C, M, { track: !1 }).catch(() => N(null)) : null != C && N(null);
-    }, [M]);
-    let f = (e) => {
-        N(e),
-            (0, E.FU)(e, M, { location: v.location })
-                .then(() => j(null))
+    t(47120);
+var l = t(200651),
+    s = t(192379),
+    o = t(442837),
+    i = t(481060),
+    a = t(2052),
+    r = t(594174),
+    c = t(74538),
+    d = t(716161),
+    u = t(634041),
+    g = t(647177),
+    m = t(672339),
+    p = t(898531),
+    x = t(636188),
+    O = t(678916),
+    k = t(981631),
+    j = t(869783),
+    h = t(388032),
+    I = t(266129);
+function N(e) {
+    let { onLearnMore: n, selectedBackgroundOption: N, onSelectBackgroundOption: f, currentDeviceId: v, smallerBackgroundOptions: b } = e,
+        T = (0, o.e7)([r.default], () => r.default.getCurrentUser()),
+        [_, C] = s.useState(null),
+        E = (0, p.Z)(),
+        B = c.ZP.canUseCustomBackgrounds(T),
+        S = (0, o.cj)([u.Z], () => (B ? u.Z.videoFilterAssets : {})),
+        U = s.useMemo(() => Object.values(S).filter((e) => e.type === O.xV.BACKGROUND), [S]),
+        y = (0, a.O)();
+    s.useEffect(() => {
+        E ? (0, m.FU)(N, v, { track: !1 }).catch(() => f(null)) : null != N && f(null);
+    }, [v]);
+    let D = (e) => {
+        f(e),
+            (0, m.FU)(e, v, { location: y.location })
+                .then(() => C(null))
                 .catch(() => {
-                    j(A.Z.Messages.VIDEO_BACKGROUND_ERROR_APPLY), (0, E.FU)(null, M, { location: v.location });
+                    C(h.intl.string(h.t.ejrSLS)), (0, m.FU)(null, v, { location: y.location });
                 });
     };
-    return T
-        ? (0, a.jsxs)(a.Fragment, {
+    return E
+        ? (0, l.jsxs)(l.Fragment, {
               children: [
-                  (0, a.jsx)(l.Heading, {
-                      className: x.spacingTop24,
+                  (0, l.jsx)(i.Heading, {
+                      className: I.spacingTop24,
                       variant: 'eyebrow',
                       color: 'header-secondary',
-                      children: A.Z.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND
+                      children: h.intl.string(h.t.lZTUPj)
                   }),
-                  null != D
-                      ? (0, a.jsx)(l.FormErrorBlock, {
-                            className: x.videoBackgroundError,
-                            children: D
+                  null != _
+                      ? (0, l.jsx)(i.FormErrorBlock, {
+                            className: I.videoBackgroundError,
+                            children: _
                         })
                       : null,
-                  (0, a.jsx)(g.Z, {
-                      canUseCustomBackgrounds: h,
-                      customBackgroundOptions: B,
-                      selectedOption: C,
-                      onSelectOption: f,
+                  (0, l.jsx)(x.Z, {
+                      canUseCustomBackgrounds: B,
+                      customBackgroundOptions: U,
+                      selectedOption: N,
+                      onSelectOption: D,
                       onUpsellClick: () => {
-                          (0, l.openModalLazy)(async () => {
-                              let { default: e } = await s.e('87200').then(s.bind(s, 592163));
-                              return (s) =>
-                                  (0, a.jsx)(e, {
-                                      ...s,
+                          (0, i.openModalLazy)(async () => {
+                              let { default: e } = await t.e('87200').then(t.bind(t, 592163));
+                              return (t) =>
+                                  (0, l.jsx)(e, {
+                                      ...t,
                                       onLearnMore: n,
                                       analyticsSource: {
-                                          ...v.location,
-                                          object: I.qAy.BUTTON_CTA
+                                          ...y.location,
+                                          object: k.qAy.BUTTON_CTA
                                       }
                                   });
                           });
                       },
                       onAddBackgroundImage: function (e, n) {
-                          let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                          return new Promise(async (a) => {
+                          let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                          return new Promise(async (l) => {
                               try {
-                                  let a = await (0, d.Ff)(e, m.xV.BACKGROUND);
-                                  f(a), (0, _.g5)(a, n.type === p.m.MP4, s), j(null);
+                                  let l = await (0, d.Ff)(e, O.xV.BACKGROUND);
+                                  D(l), (0, g.g5)(l, n.type === j.m.MP4, t), C(null);
                               } catch (e) {
-                                  j(e.message);
+                                  C(e.message);
                               }
-                              a();
+                              l();
                           });
                       },
-                      smallerOptions: R
+                      smallerOptions: b
                   })
               ]
           })

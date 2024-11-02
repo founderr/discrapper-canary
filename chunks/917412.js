@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     modalRoot: 'modalRoot_c34046',
     birbContainer: 'birbContainer_c34046',
     announcementBirb: 'announcementBirb_c34046',

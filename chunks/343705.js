@@ -9,10 +9,10 @@ t.Z = function (e, t) {
     var n = (0, a.Z)(e),
         c = !n && (0, i.Z)(e),
         d = !n && !c && (0, s.Z)(e),
-        _ = !n && !c && !d && (0, l.Z)(e),
-        E = n || c || d || _,
-        f = E ? (0, r.Z)(e.length, String) : [],
-        h = f.length;
-    for (var p in e) (t || u.call(e, p)) && !(E && ('length' == p || (d && ('offset' == p || 'parent' == p)) || (_ && ('buffer' == p || 'byteLength' == p || 'byteOffset' == p)) || (0, o.Z)(p, h))) && f.push(p);
-    return f;
+        f = !n && !c && !d && (0, l.Z)(e),
+        _ = n || c || d || f,
+        h = _ ? (0, r.Z)(e.length, String) : [],
+        p = h.length;
+    for (var m in e) (t || u.call(e, m)) && !(_ && ('length' == m || (d && ('offset' == m || 'parent' == m)) || (f && ('buffer' == m || 'byteLength' == m || 'byteOffset' == m)) || (0, o.Z)(m, p))) && h.push(m);
+    return h;
 };

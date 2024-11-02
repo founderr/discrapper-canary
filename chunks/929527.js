@@ -10,9 +10,9 @@ var i = r(n(449686)),
     u = n(857967),
     c = n(698091),
     d = r(n(624482)),
-    _ = /^--/,
-    E = {},
-    f = {
+    f = /^--/,
+    _ = {},
+    h = {
         animationIterationCount: !0,
         borderImageOutset: !0,
         borderImageSlice: !0,
@@ -55,23 +55,23 @@ var i = r(n(449686)),
         strokeOpacity: !0,
         strokeWidth: !0
     },
-    h = ['Webkit', 'Ms', 'Moz', 'O'];
-f = Object.keys(f).reduce(function (e, t) {
+    p = ['Webkit', 'Ms', 'Moz', 'O'];
+h = Object.keys(h).reduce(function (e, t) {
     return (
-        h.forEach(function (n) {
+        p.forEach(function (n) {
             var r;
             return (e[n + (r = t).charAt(0).toUpperCase() + r.substring(1)] = e[t]);
         }),
         e
     );
-}, f);
-var p = /^(matrix|translate|scale|rotate|skew)/,
-    I = /^(translate)/,
-    m = /^(rotate|skew)/,
-    T = function (e, t) {
+}, h);
+var m = /^(matrix|translate|scale|rotate|skew)/,
+    g = /^(translate)/,
+    E = /^(rotate|skew)/,
+    v = function (e, t) {
         return c.is.num(e) && 0 !== e ? e + t : e;
     },
-    S = function e(t, n) {
+    I = function e(t, n) {
         return c.is.arr(t)
             ? t.every(function (t) {
                   return e(t, n);
@@ -80,7 +80,7 @@ var p = /^(matrix|translate|scale|rotate|skew)/,
               ? t === n
               : parseFloat(t) === n;
     },
-    g = (function (e) {
+    S = (function (e) {
         function t(t) {
             var n = t.x,
                 r = t.y,
@@ -96,11 +96,11 @@ var p = /^(matrix|translate|scale|rotate|skew)/,
                             'translate3d(' +
                                 e
                                     .map(function (e) {
-                                        return T(e, 'px');
+                                        return v(e, 'px');
                                     })
                                     .join(',') +
                                 ')',
-                            S(e, 0)
+                            I(e, 0)
                         ];
                     })),
                 c.each(s, function (e, t) {
@@ -109,9 +109,9 @@ var p = /^(matrix|translate|scale|rotate|skew)/,
                             l.push(function (e) {
                                 return [e, '' === e];
                             });
-                    else if (p.test(t)) {
+                    else if (m.test(t)) {
                         if ((delete s[t], c.is.und(e))) return;
-                        var n = I.test(t) ? 'px' : m.test(t) ? 'deg' : '';
+                        var n = g.test(t) ? 'px' : E.test(t) ? 'deg' : '';
                         o.push(c.toArray(e)),
                             l.push(
                                 'rotate3d' === t
@@ -120,7 +120,7 @@ var p = /^(matrix|translate|scale|rotate|skew)/,
                                               r = e[1],
                                               i = e[2],
                                               a = e[3];
-                                          return ['rotate3d(' + t + ',' + r + ',' + i + ',' + T(a, n) + ')', S(a, 0)];
+                                          return ['rotate3d(' + t + ',' + r + ',' + i + ',' + v(a, n) + ')', I(a, 0)];
                                       }
                                     : function (e) {
                                           return [
@@ -128,23 +128,23 @@ var p = /^(matrix|translate|scale|rotate|skew)/,
                                                   '(' +
                                                   e
                                                       .map(function (e) {
-                                                          return T(e, n);
+                                                          return v(e, n);
                                                       })
                                                       .join(',') +
                                                   ')',
-                                              S(e, t.startsWith('scale') ? 1 : 0)
+                                              I(e, t.startsWith('scale') ? 1 : 0)
                                           ];
                                       }
                             );
                     }
                 }),
-                o.length && (s.transform = new A(o, l)),
+                o.length && (s.transform = new T(o, l)),
                 e.call(this, s) || this
             );
         }
         return d(t, e), t;
     })(u.AnimatedObject),
-    A = (function (e) {
+    T = (function (e) {
         function t(t, n) {
             var r;
             return ((r = e.call(this) || this).inputs = t), (r.transforms = n), (r._value = null), (r._children = new Set()), r;
@@ -206,7 +206,7 @@ a.Globals.assign({
     createStringInterpolator: o.createStringInterpolator,
     batchedUpdates: s.unstable_batchedUpdates
 });
-var N = u.createHost(['a', 'abbr', 'address', 'area', 'article', 'aside', 'audio', 'b', 'base', 'bdi', 'bdo', 'big', 'blockquote', 'body', 'br', 'button', 'canvas', 'caption', 'cite', 'code', 'col', 'colgroup', 'data', 'datalist', 'dd', 'del', 'details', 'dfn', 'dialog', 'div', 'dl', 'dt', 'em', 'embed', 'fieldset', 'figcaption', 'figure', 'footer', 'form', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'head', 'header', 'hgroup', 'hr', 'html', 'i', 'iframe', 'img', 'input', 'ins', 'kbd', 'keygen', 'label', 'legend', 'li', 'link', 'main', 'map', 'mark', 'menu', 'menuitem', 'meta', 'meter', 'nav', 'noscript', 'object', 'ol', 'optgroup', 'option', 'output', 'p', 'param', 'picture', 'pre', 'progress', 'q', 'rp', 'rt', 'ruby', 's', 'samp', 'script', 'section', 'select', 'small', 'source', 'span', 'strong', 'style', 'sub', 'summary', 'sup', 'table', 'tbody', 'td', 'textarea', 'tfoot', 'th', 'thead', 'time', 'title', 'tr', 'track', 'u', 'ul', 'var', 'video', 'wbr', 'circle', 'clipPath', 'defs', 'ellipse', 'foreignObject', 'g', 'image', 'line', 'linearGradient', 'mask', 'path', 'pattern', 'polygon', 'polyline', 'radialGradient', 'rect', 'stop', 'svg', 'text', 'tspan'], {
+var b = u.createHost(['a', 'abbr', 'address', 'area', 'article', 'aside', 'audio', 'b', 'base', 'bdi', 'bdo', 'big', 'blockquote', 'body', 'br', 'button', 'canvas', 'caption', 'cite', 'code', 'col', 'colgroup', 'data', 'datalist', 'dd', 'del', 'details', 'dfn', 'dialog', 'div', 'dl', 'dt', 'em', 'embed', 'fieldset', 'figcaption', 'figure', 'footer', 'form', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'head', 'header', 'hgroup', 'hr', 'html', 'i', 'iframe', 'img', 'input', 'ins', 'kbd', 'keygen', 'label', 'legend', 'li', 'link', 'main', 'map', 'mark', 'menu', 'menuitem', 'meta', 'meter', 'nav', 'noscript', 'object', 'ol', 'optgroup', 'option', 'output', 'p', 'param', 'picture', 'pre', 'progress', 'q', 'rp', 'rt', 'ruby', 's', 'samp', 'script', 'section', 'select', 'small', 'source', 'span', 'strong', 'style', 'sub', 'summary', 'sup', 'table', 'tbody', 'td', 'textarea', 'tfoot', 'th', 'thead', 'time', 'title', 'tr', 'track', 'u', 'ul', 'var', 'video', 'wbr', 'circle', 'clipPath', 'defs', 'ellipse', 'foreignObject', 'g', 'image', 'line', 'linearGradient', 'mask', 'path', 'pattern', 'polygon', 'polyline', 'radialGradient', 'rect', 'stop', 'svg', 'text', 'tspan'], {
     applyAnimatedValues: function (e, t) {
         if (!e.nodeType || !e.setAttribute) return !1;
         var n = 'filter' === e.nodeName || (e.parentNode && 'filter' === e.parentNode.nodeName),
@@ -219,8 +219,8 @@ var N = u.createHost(['a', 'abbr', 'address', 'area', 'article', 'aside', 'audio
             d = Object.keys(l).map(function (t) {
                 return n || e.hasAttribute(t)
                     ? t
-                    : E[t] ||
-                          (E[t] = t.replace(/([A-Z])/g, function (e) {
+                    : _[t] ||
+                          (_[t] = t.replace(/([A-Z])/g, function (e) {
                               return '-' + e.toLowerCase();
                           }));
             });
@@ -229,8 +229,8 @@ var N = u.createHost(['a', 'abbr', 'address', 'area', 'article', 'aside', 'audio
                 if (r.hasOwnProperty(t)) {
                     var n,
                         i,
-                        l = ((n = t), null == (i = r[t]) || 'boolean' == typeof i || '' === i ? '' : 'number' != typeof i || 0 === i || _.test(n) || (f.hasOwnProperty(n) && f[n]) ? ('' + i).trim() : i + 'px');
-                    'float' === t ? (t = 'cssFloat') : _.test(t) ? e.style.setProperty(t, l) : (e.style[t] = l);
+                        l = ((n = t), null == (i = r[t]) || 'boolean' == typeof i || '' === i ? '' : 'number' != typeof i || 0 === i || f.test(n) || (h.hasOwnProperty(n) && h[n]) ? ('' + i).trim() : i + 'px');
+                    'float' === t ? (t = 'cssFloat') : f.test(t) ? e.style.setProperty(t, l) : (e.style[t] = l);
                 }
             d.forEach(function (t, n) {
                 e.setAttribute(t, u[n]);
@@ -240,7 +240,7 @@ var N = u.createHost(['a', 'abbr', 'address', 'area', 'article', 'aside', 'audio
         });
     },
     createAnimatedStyle: function (e) {
-        return new g(e);
+        return new S(e);
     },
     getComponentProps: function (e) {
         return e.scrollTop, e.scrollLeft, i(e, ['scrollTop', 'scrollLeft']);
@@ -255,5 +255,5 @@ Object.keys(a).forEach(function (e) {
             }
         });
 }),
-    (t.a = N),
-    (t.animated = N);
+    (t.a = b),
+    (t.animated = b);

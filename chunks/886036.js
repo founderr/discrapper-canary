@@ -1,30 +1,30 @@
-n.d(t, {
+n.d(e, {
     Z: function () {
         return o;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var u = n(481060),
-    c = n(906732),
-    a = n(695346),
-    l = n(626135),
-    i = n(981631),
-    r = n(689938);
+var l = n(481060),
+    u = n(906732),
+    c = n(695346),
+    r = n(626135),
+    a = n(981631),
+    s = n(388032);
 function o() {
-    let e = a.up.useSetting(),
-        { analyticsLocations: t } = (0, c.ZP)();
-    return (0, s.jsx)(u.MenuCheckboxItem, {
+    let t = c.up.useSetting(),
+        { analyticsLocations: e } = (0, u.ZP)();
+    return (0, i.jsx)(l.MenuCheckboxItem, {
         id: 'sticker-suggestions',
-        label: r.Z.Messages.SUGGEST_STICKERS,
-        checked: e,
+        label: s.intl.string(s.t.rIzKh4),
+        checked: t,
         action: () => {
-            l.default.track(i.rMx.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
-                enabled: !e,
-                location: { object: i.qAy.CONTEXT_MENU },
-                location_stack: t
+            r.default.track(a.rMx.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
+                enabled: !t,
+                location: { object: a.qAy.CONTEXT_MENU },
+                location_stack: e
             }),
-                a.up.updateSetting(!e);
+                c.up.updateSetting(!t);
         }
     });
 }

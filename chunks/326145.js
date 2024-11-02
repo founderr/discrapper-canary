@@ -4,18 +4,18 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    a = n(192379),
-    s = n(481060),
-    r = n(745752),
-    l = n(17181),
-    o = n(689938),
+    r = n(192379),
+    l = n(481060),
+    a = n(745752),
+    s = n(17181),
+    o = n(388032),
     c = n(894710);
 function d(e) {
     let { guildId: t, channelId: n } = e,
-        d = a.useCallback(() => {
+        d = r.useCallback(() => {
             if (null != t && null != n)
-                (0, r.I1)(t),
-                    (0, l.default)({
+                (0, a.I1)(t),
+                    (0, s.default)({
                         guildId: t,
                         returnChannelId: n
                     });
@@ -25,15 +25,15 @@ function d(e) {
         children: (0, i.jsxs)('div', {
             className: c.explainerContainer,
             children: [
-                (0, i.jsx)(s.Text, {
+                (0, i.jsx)(l.Text, {
                     variant: 'text-md/normal',
-                    children: o.Z.Messages.ONBOARDING_ERROR_PAGE_TEXT
+                    children: o.intl.string(o.t.FWtdQk)
                 }),
-                (0, i.jsx)(s.Button, {
+                (0, i.jsx)(l.Button, {
                     onClick: d,
-                    children: (0, i.jsx)(s.Text, {
+                    children: (0, i.jsx)(l.Text, {
                         variant: 'text-md/medium',
-                        children: o.Z.Messages.START_ONBOARDING
+                        children: o.intl.string(o.t.VVFjAA)
                     })
                 })
             ]

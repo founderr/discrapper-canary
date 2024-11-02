@@ -1,9 +1,9 @@
 n.d(t, {
     HR: function () {
-        return I;
+        return g;
     },
     L5: function () {
-        return p;
+        return m;
     }
 });
 var r = n(200651),
@@ -15,14 +15,14 @@ var r = n(200651),
     u = n(902704),
     c = n(453687),
     d = n(318713),
-    _ = n(981631),
-    E = n(689938),
-    f = n(825193),
-    h = n(554034);
-function p(e, t) {
-    return e.type === _.uaV.VOICE_HANGOUT_INVITE ? '' : e.hasFlag(_.iLy.SOURCE_MESSAGE_DELETED) ? E.Z.Messages.SOURCE_MESSAGE_DELETED : t;
+    f = n(981631),
+    _ = n(388032),
+    h = n(825193),
+    p = n(554034);
+function m(e, t) {
+    return e.type === f.uaV.VOICE_HANGOUT_INVITE ? '' : e.hasFlag(f.iLy.SOURCE_MESSAGE_DELETED) ? _.intl.string(_.t.JOtgS0) : t;
 }
-function I(e, t) {
+function g(e, t) {
     var n, r;
     let { message: i } = t,
         { message: a } = e;
@@ -30,30 +30,30 @@ function I(e, t) {
 }
 t.ZP = i.memo(function (e) {
     var t;
-    let { className: n, message: a, children: o, content: u, onUpdate: I, contentRef: m } = e,
-        T = a.isEdited(),
-        S = a.state === _.yb.SEND_FAILED,
-        g = a.state === _.yb.SENDING,
-        A = a.isCommandType(),
-        N = null === (t = a.editedTimestamp) || void 0 === t ? void 0 : t.toString(),
-        R = i.useRef(!1);
+    let { className: n, message: a, children: o, content: u, onUpdate: g, contentRef: E } = e,
+        v = a.isEdited(),
+        I = a.state === f.yb.SEND_FAILED,
+        S = a.state === f.yb.SENDING,
+        T = a.isCommandType(),
+        b = null === (t = a.editedTimestamp) || void 0 === t ? void 0 : t.toString(),
+        y = i.useRef(!1);
     return (
         i.useLayoutEffect(() => {
-            R.current ? null != I && I() : (R.current = !0);
-        }, [I, a.content, u, N, o]),
+            y.current ? null != g && g() : (y.current = !0);
+        }, [g, a.content, u, b, o]),
         (0, r.jsxs)('div', {
             id: (0, c.ut)(a),
-            ref: m,
-            className: s()(n, h.markup, {
-                [f.messageContent]: !0,
-                [f.isSending]: g && !A,
-                [f.markupRtl]: 'rtl' === l()(a.content),
-                [f.isFailed]: S,
-                [f.isUnsupported]: a.isUnsupported
+            ref: E,
+            className: s()(n, p.markup, {
+                [h.messageContent]: !0,
+                [h.isSending]: S && !T,
+                [h.markupRtl]: 'rtl' === l()(a.content),
+                [h.isFailed]: I,
+                [h.isUnsupported]: a.isUnsupported
             }),
             children: [
-                null != o ? o : p(a, u),
-                T &&
+                null != o ? o : m(a, u),
+                v &&
                     null != a.editedTimestamp &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
@@ -63,8 +63,8 @@ t.ZP = i.memo(function (e) {
                                 isEdited: !0,
                                 isInline: !1,
                                 children: (0, r.jsxs)('span', {
-                                    className: f.edited,
-                                    children: ['(', E.Z.Messages.MESSAGE_EDITED, ')']
+                                    className: h.edited,
+                                    children: ['(', _.intl.string(_.t.C8sXIC), ')']
                                 })
                             })
                         ]
@@ -72,4 +72,4 @@ t.ZP = i.memo(function (e) {
             ]
         })
     );
-}, I);
+}, g);

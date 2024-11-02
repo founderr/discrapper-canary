@@ -7,8 +7,8 @@ var r,
     u = n(131704),
     c = n(592125);
 let d = {},
-    _ = {};
-class E extends (s = o.ZP.Store) {
+    f = {};
+class _ extends (s = o.ZP.Store) {
     getTemplates(e) {
         return d[e];
     }
@@ -17,11 +17,11 @@ class E extends (s = o.ZP.Store) {
         return null === (n = d[e]) || void 0 === n ? void 0 : n.find((e) => e.category === t);
     }
     getChannel(e) {
-        return _[e];
+        return f[e];
     }
 }
 (a = 'GuildRoleSubscriptionTierTemplatesStore'),
-    (i = 'displayName') in (r = E)
+    (i = 'displayName') in (r = _)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -29,7 +29,7 @@ class E extends (s = o.ZP.Store) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = new E(l.Z, {
+    (t.Z = new _(l.Z, {
         GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS: function (e) {
             let { selectedTemplate: t, guildId: n } = e,
                 r = Object.values(c.Z.getMutableGuildChannelsForGuild(n));
@@ -37,9 +37,9 @@ class E extends (s = o.ZP.Store) {
                 e.channels.forEach((e) => {
                     let t = r.find((t) => t.name === e.name);
                     if (void 0 !== t) e.id = t.id;
-                    else if (!(e.id in _)) {
+                    else if (!(e.id in f)) {
                         let t = (0, u.kt)(e);
-                        _[e.id] = t;
+                        f[e.id] = t;
                     }
                 });
             });

@@ -1,33 +1,33 @@
 var i = n(200651),
-    s = n(192379),
-    a = n(120356),
-    l = n.n(a),
-    r = n(481060),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
+    s = n(481060),
     o = n(194082),
     c = n(14338),
     u = n(7459);
-t.Z = s.memo(function (e) {
-    let { label: t, participantCount: n, onClick: s, className: a, collapsed: d, speakers: h, channel: m, isStreamLive: p } = e;
-    return (0, i.jsxs)(r.Clickable, {
-        onClick: s,
-        className: l()(u.container, a),
+t.Z = l.memo(function (e) {
+    let { label: t, participantCount: n, onClick: l, className: r, collapsed: d, speakers: h, channel: m, isStreamLive: p } = e;
+    return (0, i.jsxs)(s.Clickable, {
+        onClick: l,
+        className: a()(u.container, r),
         children: [
             null == h
-                ? (0, i.jsx)(r.GroupIcon, {
+                ? (0, i.jsx)(s.GroupIcon, {
                       size: 'custom',
                       color: 'currentColor',
                       width: 20,
                       height: 20,
                       className: u.micIcon
                   })
-                : (0, i.jsx)(r.MicrophoneIcon, {
+                : (0, i.jsx)(s.MicrophoneIcon, {
                       size: 'custom',
                       color: 'currentColor',
                       width: 20,
                       height: 20,
                       className: u.micIcon
                   }),
-            (0, i.jsxs)(r.Text, {
+            (0, i.jsxs)(s.Text, {
                 color: 'header-primary',
                 variant: 'text-md/semibold',
                 className: u.text,
@@ -46,12 +46,12 @@ t.Z = s.memo(function (e) {
                         p && (0, i.jsx)(o.ZP, {})
                     ]
                 }),
-            (0, i.jsx)(r.ChevronSmallDownIcon, {
+            (0, i.jsx)(s.ChevronSmallDownIcon, {
                 size: 'custom',
                 color: 'currentColor',
                 width: 20,
                 height: 20,
-                className: l()(u.downIcon, { [u.upIcon]: d })
+                className: a()(u.downIcon, { [u.upIcon]: d })
             })
         ]
     });

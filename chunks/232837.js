@@ -1,71 +1,71 @@
-n.r(s),
-    n.d(s, {
+t.r(e),
+    t.d(e, {
         default: function () {
-            return C;
+            return h;
         }
     });
-var t = n(200651);
-n(192379);
-var a = n(990547),
-    o = n(481060),
-    r = n(287734),
-    i = n(594174),
-    _ = n(626135),
-    c = n(33194),
-    d = n(807031),
-    l = n(343544),
-    E = n(110223),
-    N = n(981631),
-    u = n(689938);
-function C(e) {
-    let { channelId: s, blockedUserId: n, transitionState: C, onClose: A } = e;
+var i = t(200651);
+t(192379);
+var s = t(990547),
+    r = t(481060),
+    a = t(287734),
+    o = t(594174),
+    l = t(626135),
+    c = t(33194),
+    d = t(807031),
+    u = t(343544),
+    _ = t(110223),
+    m = t(981631),
+    x = t(388032);
+function h(n) {
+    let { channelId: e, blockedUserId: t, transitionState: h, onClose: f } = n;
     if (!(0, d.KR)({ location: 'warning_modal' })) return null;
-    let x = i.default.getUser(n),
-        I = [
+    let N = o.default.getUser(t),
+        p = [
             {
-                icon: (0, t.jsx)(o.UserIcon, {}),
-                text: u.Z.Messages.VOICE_CHANNEL_BLOCKED_USER_WARNING_PRESENCE.format({ userName: null == x ? void 0 : x.username })
+                icon: (0, i.jsx)(r.UserIcon, {}),
+                text: x.intl.formatToPlainString(x.t.w0YvUl, { userName: null == N ? void 0 : N.username })
             },
             {
-                icon: (0, t.jsx)(o.MicrophoneIcon, {}),
-                text: u.Z.Messages.VOICE_CHANNEL_BLOCKED_USER_AUDIBLE
+                icon: (0, i.jsx)(r.MicrophoneIcon, {}),
+                text: x.intl.string(x.t['+4O9nZ'])
             }
         ];
-    return (0, t.jsx)(l.Z, {
-        headerText: u.Z.Messages.VOICE_CHANNEL_BLOCKED_USER_WARNING_ALERT_V2,
-        secondaryHeaderText: u.Z.Messages.VOICE_CHANNEL_BLOCKED_USER_WARNING_LEAVE_MODAL,
-        descriptionText: u.Z.Messages.VOICE_CHANNEL_BLOCKED_USER_WARNING_DESCRIPTION,
-        infoRows: I,
+    return (0, i.jsx)(u.Z, {
+        headerText: x.intl.string(x.t.LGnmpa),
+        secondaryHeaderText: x.intl.string(x.t['1/gpFh']),
+        descriptionText: x.intl.string(x.t.K8YIgY),
+        infoRows: p,
         onDismissAndStay: () => {
-            A(),
-                (0, c.g6)(s),
-                _.default.track(N.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                    action: E.q.CLICK_TO_STAY,
-                    channel_id: s,
-                    blocked_user_ids: [n],
-                    warning_surface: E.fz.POST_JOIN_MODAL
+            f(),
+                (0, c.g6)(e),
+                l.default.track(m.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                    action: _.q.CLICK_TO_STAY,
+                    channel_id: e,
+                    blocked_user_ids: [t],
+                    warning_surface: _.fz.POST_JOIN_MODAL
                 });
         },
         onDismissAndLeave: () => {
-            A(),
-                r.default.disconnect(),
-                _.default.track(N.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                    action: E.q.CLICK_TO_LEAVE,
-                    channel_id: s,
-                    blocked_user_ids: [n],
-                    warning_surface: E.fz.POST_JOIN_MODAL
+            f(),
+                a.default.disconnect(),
+                l.default.track(m.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                    action: _.q.CLICK_TO_LEAVE,
+                    channel_id: e,
+                    blocked_user_ids: [t],
+                    warning_surface: _.fz.POST_JOIN_MODAL
                 });
         },
-        leaveButtonText: u.Z.Messages.VOICE_CHANNEL_BLOCKED_USER_WARNING_LEAVE,
-        stayButtonText: u.Z.Messages.VOICE_CHANNEL_BLOCKED_USER_WARNING_STAY,
-        transitionState: C,
-        onClose: A,
+        leaveButtonText: x.intl.string(x.t['Y56/oK']),
+        stayButtonText: x.intl.string(x.t['Z+/hfX']),
+        transitionState: h,
+        onClose: f,
         impression: {
-            impressionName: a.ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING,
+            impressionName: s.ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING,
             impressionProperties: {
-                channel_id: s,
-                blocked_user_ids: [n],
-                warning_surface: E.fz.POST_JOIN_MODAL
+                channel_id: e,
+                blocked_user_ids: [t],
+                warning_surface: _.fz.POST_JOIN_MODAL
             }
         }
     });

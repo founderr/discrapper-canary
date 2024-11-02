@@ -6,8 +6,8 @@ n.d(t, {
     n(757143);
 var r = n(200651);
 n(192379);
-var s = n(120356),
-    a = n.n(s),
+var a = n(120356),
+    s = n.n(a),
     i = n(481060),
     l = n(937615),
     o = n(884697),
@@ -16,33 +16,33 @@ let d = (e) => (e.length > 5 ? e.replace(/\.00$/, '') : e),
     u = (e) => {
         var t;
         let {
-                price: { amount: n, currency: s },
+                price: { amount: n, currency: a },
                 renderPrice: u,
                 icon: m,
                 className: f,
                 discount: p = o.f_,
-                variant: C = 'heading-md/semibold'
+                variant: h = 'heading-md/semibold'
             } = e,
-            h = d((0, l.T4)(n, s)),
-            g =
+            g = d((0, l.T4)(n, a)),
+            C =
                 p !== o.f_ && p.discountPercentage >= 5
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              h,
+                              g,
                               (0, r.jsx)(i.Heading, {
-                                  variant: C,
+                                  variant: h,
                                   color: 'text-positive',
                                   className: c.discount,
                                   children: ' (-'.concat(p.discountPercentage, '%)')
                               })
                           ]
                       })
-                    : h;
+                    : g;
         return (0, r.jsx)(r.Fragment, {
             children: (0, r.jsxs)(i.Heading, {
-                variant: C,
-                className: a()(c.container, f),
-                children: [m, null !== (t = null == u ? void 0 : u(g)) && void 0 !== t ? t : g]
+                variant: h,
+                className: s()(c.container, f),
+                children: [m, null !== (t = null == u ? void 0 : u(C)) && void 0 !== t ? t : C]
             })
         });
     };

@@ -1,19 +1,19 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return i;
     }
 });
 var o = n(200651),
-    s = n(192379),
-    r = n(100621),
+    r = n(192379),
+    s = n(100621),
     a = n(613087);
-function l(e) {
+function i(e) {
     let { expansionSpring: t, isExpanded: n } = e,
-        { animatedComponentProps: l, recalculateAnimationPositions: i, mountPoints: c } = s.useContext(a.B$);
+        { animatedComponentProps: i, recalculateAnimationPositions: l, mountPoints: c } = r.useContext(a.B$);
     return (
-        s.useEffect(() => {
-            i();
-        }, [i, n]),
+        r.useEffect(() => {
+            l();
+        }, [l, n]),
         (0, o.jsx)('div', {
             style: {
                 overflow: 'hidden',
@@ -25,11 +25,11 @@ function l(e) {
                 height: '100%',
                 zIndex: 5
             },
-            children: l.map((e) => {
-                let { id: n, collapsedLeft: s, expandedLeft: a, collapsedTop: l, expandedTop: i, width: d } = e,
+            children: i.map((e) => {
+                let { id: n, collapsedLeft: r, expandedLeft: a, collapsedTop: i, expandedTop: l, width: d } = e,
                     u = c.get(n);
                 return (0, o.jsx)(
-                    r.animated.div,
+                    s.animated.div,
                     {
                         ref: u,
                         style: {
@@ -38,15 +38,15 @@ function l(e) {
                             top: 0,
                             left: 0,
                             width: d,
-                            transform: (0, r.to)(
+                            transform: (0, s.to)(
                                 [
                                     t.to({
                                         range: [0, 1],
-                                        output: [s, a]
+                                        output: [r, a]
                                     }),
                                     t.to({
                                         range: [0, 1],
-                                        output: [l, i]
+                                        output: [i, l]
                                     })
                                 ],
                                 (e, t) => 'translate('.concat(e, 'px, ').concat(t, 'px)')

@@ -1,51 +1,51 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return p;
     }
 });
-var s = n(200651),
-    a = n(192379),
-    i = n(120356),
-    r = n.n(i),
-    l = n(477690),
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    s = n.n(l),
+    a = n(477690),
     o = n(481060),
     c = n(91218),
     d = n(518738),
     u = n(208567),
-    _ = n(624138),
-    I = n(689938),
-    E = n(819793);
-let T = (0, _.Mg)(l.Z.ROLE_ICON_UPLOADER_ICON_SIZE);
-function m(e) {
-    let { role: t, 'aria-label': n = I.Z.Messages.UPLOAD_IMAGE, className: i, onClick: l, disabled: _ = !1 } = e,
-        m = a.useRef(null),
-        N = a.useMemo(() => (null != t ? (0, d.Kz)(t, T) : null), [t]),
-        S =
-            null != N
-                ? (0, s.jsx)(c.Z, {
+    m = n(624138),
+    h = n(388032),
+    g = n(819793);
+let x = (0, m.Mg)(a.Z.ROLE_ICON_UPLOADER_ICON_SIZE);
+function p(e) {
+    let { role: t, 'aria-label': n = h.intl.string(h.t['MsUY/f']), className: l, onClick: a, disabled: m = !1 } = e,
+        p = r.useRef(null),
+        f = r.useMemo(() => (null != t ? (0, d.Kz)(t, x) : null), [t]),
+        C =
+            null != f
+                ? (0, i.jsx)(c.Z, {
                       enableTooltip: !1,
-                      className: E.icon,
-                      ...N
+                      className: g.icon,
+                      ...f
                   })
-                : (0, s.jsx)(o.ImagePlusIcon, {
+                : (0, i.jsx)(o.ImagePlusIcon, {
                       size: 'md',
                       color: 'currentColor',
-                      className: E.icon
+                      className: g.icon
                   });
-    return (0, s.jsx)(o.FocusRing, {
-        ringTarget: m,
-        children: (0, s.jsxs)(o.Clickable, {
+    return (0, i.jsx)(o.FocusRing, {
+        ringTarget: p,
+        children: (0, i.jsxs)(o.Clickable, {
             'aria-label': n,
-            className: r()(E.container, i, { [E.disabled]: _ }),
-            onClick: _ ? void 0 : l,
-            'aria-disabled': _,
+            className: s()(g.container, l, { [g.disabled]: m }),
+            onClick: m ? void 0 : a,
+            'aria-disabled': m,
             children: [
-                (0, s.jsx)('div', {
-                    ref: m,
-                    className: E.preview,
-                    children: S
+                (0, i.jsx)('div', {
+                    ref: p,
+                    className: g.preview,
+                    children: C
                 }),
-                null != N ? (0, s.jsx)(u.S, { className: E.uploaderIcon }) : null
+                null != f ? (0, i.jsx)(u.S, { className: g.uploaderIcon }) : null
             ]
         })
     });

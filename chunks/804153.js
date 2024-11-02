@@ -1,25 +1,25 @@
 n(47120), n(733860);
-var s = n(200651),
-    a = n(192379),
-    i = n(392711),
-    r = n.n(i),
-    l = n(149765),
+var i = n(200651),
+    r = n(192379),
+    l = n(392711),
+    s = n.n(l),
+    a = n(149765),
     o = n(442837),
     c = n(481060),
     d = n(497321),
     u = n(484614),
-    _ = n(933557),
-    I = n(984933),
-    E = n(496675),
-    T = n(699516),
-    m = n(246946),
-    N = n(594174),
-    S = n(434404),
-    g = n(999382),
-    h = n(981631),
-    C = n(689938),
-    x = n(991680);
-function p(e, t, n) {
+    m = n(933557),
+    h = n(984933),
+    g = n(496675),
+    x = n(699516),
+    p = n(246946),
+    f = n(594174),
+    C = n(434404),
+    I = n(999382),
+    _ = n(981631),
+    N = n(388032),
+    v = n(991680);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,13 +32,13 @@ function p(e, t, n) {
         e
     );
 }
-let R = 'NO_INSTANT_INVITE',
-    L = l.$e(h.Plq.VIEW_CHANNEL, h.Plq.CREATE_INSTANT_INVITE);
-class f extends a.PureComponent {
+let j = 'NO_INSTANT_INVITE',
+    E = a.$e(_.Plq.VIEW_CHANNEL, _.Plq.CREATE_INSTANT_INVITE);
+class S extends r.PureComponent {
     static getDerivedStateFromProps(e, t) {
         let { widgetEnabled: n } = e,
-            { widgetEnabledProp: s } = t;
-        return n !== s
+            { widgetEnabledProp: i } = t;
+        return n !== i
             ? {
                   internalEnabled: n,
                   widgetEnabledProp: n
@@ -47,41 +47,41 @@ class f extends a.PureComponent {
     }
     renderChannelSelect(e) {
         let { widgetChannelId: t } = this.props,
-            n = I.ZP.getChannels(e.id),
-            a = r()([...n[I.sH], ...n[I.Zb]])
+            n = h.ZP.getChannels(e.id),
+            r = s()([...n[h.sH], ...n[h.Zb]])
                 .filter((t) => {
                     let { channel: n } = t;
                     return n.guild_id === e.id;
                 })
                 .filter((e) => {
                     let { channel: n } = e;
-                    return n.id === t || E.Z.can(L, n);
+                    return n.id === t || g.Z.can(E, n);
                 })
                 .map((e) => {
                     let { channel: t } = e;
                     return {
                         value: t.id,
-                        label: (0, _.F6)(t, N.default, T.Z, !0)
+                        label: (0, m.F6)(t, f.default, x.Z, !0)
                     };
                 })
                 .value();
         return (
-            a.unshift({
-                value: R,
-                label: C.Z.Messages.NO_INSTANT_INVITE
+            r.unshift({
+                value: j,
+                label: N.intl.string(N.t.u197b2)
             }),
-            (0, s.jsxs)(c.FormItem, {
-                title: C.Z.Messages.FORM_LABEL_INSTANT_INVITE_CHANNEL,
+            (0, i.jsxs)(c.FormItem, {
+                title: N.intl.string(N.t.LUo0Q0),
                 children: [
-                    (0, s.jsx)(c.SingleSelect, {
-                        className: x.spacing,
-                        options: a,
+                    (0, i.jsx)(c.SingleSelect, {
+                        className: v.spacing,
+                        options: r,
                         value: t,
                         onChange: this.handleChannelSelect
                     }),
-                    (0, s.jsx)(c.FormText, {
+                    (0, i.jsx)(c.FormText, {
                         type: c.FormTextTypes.DESCRIPTION,
-                        children: C.Z.Messages.FORM_HELP_INSTANT_INVITE_CHANNEL
+                        children: N.intl.string(N.t.LxVR9P)
                     })
                 ]
             })
@@ -89,41 +89,41 @@ class f extends a.PureComponent {
     }
     renderAPIInfo(e) {
         let t = ''.concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT, '/guilds/').concat(e.id, '/widget.json');
-        return (0, s.jsxs)('div', {
-            className: x.infoWrapper,
+        return (0, i.jsxs)('div', {
+            className: v.infoWrapper,
             children: [
-                (0, s.jsx)(c.FormItem, {
-                    title: C.Z.Messages.FORM_LABEL_SERVER_ID,
-                    className: x.infoItem,
-                    children: (0, s.jsx)(u.Z, { value: e.id })
+                (0, i.jsx)(c.FormItem, {
+                    title: N.intl.string(N.t.TRyLUl),
+                    className: v.infoItem,
+                    children: (0, i.jsx)(u.Z, { value: e.id })
                 }),
-                (0, s.jsx)(c.FormItem, {
-                    title: C.Z.Messages.FORM_LABEL_JSON_API,
-                    className: x.infoItem,
-                    children: (0, s.jsx)(u.Z, { value: t })
+                (0, i.jsx)(c.FormItem, {
+                    title: N.intl.string(N.t.VECJcH),
+                    className: v.infoItem,
+                    children: (0, i.jsx)(u.Z, { value: t })
                 })
             ]
         });
     }
     renderWidget(e) {
         let t = ''.concat(location.protocol).concat(window.GLOBAL_ENV.WIDGET_ENDPOINT, '?id=').concat(e.id, '&theme=dark');
-        return (0, s.jsx)('div', {
-            children: (0, s.jsxs)('div', {
-                className: x.infoWrapper,
+        return (0, i.jsx)('div', {
+            children: (0, i.jsxs)('div', {
+                className: v.infoWrapper,
                 children: [
-                    (0, s.jsxs)(c.FormItem, {
-                        className: x.infoItem,
-                        title: C.Z.Messages.FORM_LABEL_PREMADE_WIDGET,
+                    (0, i.jsxs)(c.FormItem, {
+                        className: v.infoItem,
+                        title: N.intl.string(N.t.XVGbn5),
                         children: [
-                            (0, s.jsx)(u.Z, { value: '<iframe src="'.concat(t, '" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>') }),
-                            (0, s.jsx)(c.FormText, {
+                            (0, i.jsx)(u.Z, { value: '<iframe src="'.concat(t, '" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>') }),
+                            (0, i.jsx)(c.FormText, {
                                 type: c.FormTextTypes.DESCRIPTION,
-                                children: C.Z.Messages.GUILD_SETTINGS_WIDGET_EMBED_HELP.format()
+                                children: N.intl.format(N.t['+baN19'], {})
                             })
                         ]
                     }),
-                    (0, s.jsx)('img', {
-                        className: x.infoItem,
+                    (0, i.jsx)('img', {
+                        className: v.infoItem,
                         'data-accessibility': 'desaturate',
                         alt: '',
                         src: n(329488)
@@ -137,43 +137,43 @@ class f extends a.PureComponent {
         return null == e
             ? null
             : this.props.hide
-              ? (0, s.jsx)(d.Z, {})
-              : (0, s.jsxs)(c.FormSection, {
+              ? (0, i.jsx)(d.Z, {})
+              : (0, i.jsxs)(c.FormSection, {
                     tag: c.FormTitleTags.H1,
-                    title: C.Z.Messages.GUILD_SETTINGS_TITLE_SERVER_WIDGET,
-                    children: [this.renderToggle(), this.renderChannelSelect(e), (0, s.jsx)(c.FormDivider, { className: x.divider }), this.renderAPIInfo(e), (0, s.jsx)(c.FormDivider, { className: x.divider }), this.renderWidget(e)]
+                    title: N.intl.string(N.t.qlhNb2),
+                    children: [this.renderToggle(), this.renderChannelSelect(e), (0, i.jsx)(c.FormDivider, { className: v.divider }), this.renderAPIInfo(e), (0, i.jsx)(c.FormDivider, { className: v.divider }), this.renderWidget(e)]
                 });
     }
     constructor(...e) {
         super(...e),
-            p(this, 'state', {
+            T(this, 'state', {
                 internalEnabled: this.props.widgetEnabled,
                 widgetEnabledProp: this.props.widgetEnabled
             }),
-            p(this, 'renderToggle', () =>
-                (0, s.jsx)(c.FormSwitch, {
-                    className: x.spacing,
+            T(this, 'renderToggle', () =>
+                (0, i.jsx)(c.FormSwitch, {
+                    className: v.spacing,
                     value: this.state.internalEnabled,
                     onChange: this.handleToggleWidget,
-                    children: C.Z.Messages.GUILD_SETTINGS_WIDGET_ENABLE_WIDGET
+                    children: N.intl.string(N.t.NR6hub)
                 })
             ),
-            p(this, 'handleToggleWidget', (e) => {
+            T(this, 'handleToggleWidget', (e) => {
                 let { guild: t, widgetChannelId: n } = this.props;
-                if (null != t) this.setState({ internalEnabled: e }), S.Z.updateEmbed(t.id, e, n);
+                if (null != t) this.setState({ internalEnabled: e }), C.Z.updateEmbed(t.id, e, n);
             }),
-            p(this, 'handleChannelSelect', (e) => {
+            T(this, 'handleChannelSelect', (e) => {
                 let { guild: t, widgetEnabled: n } = this.props;
-                if (null != t) S.Z.updateEmbed(t.id, n, e !== R ? e : null);
+                if (null != t) C.Z.updateEmbed(t.id, n, e !== j ? e : null);
             });
     }
 }
-t.Z = o.ZP.connectStores([g.Z, m.Z], () => {
-    let { guild: e, embedChannelId: t, embedEnabled: n } = g.Z.getProps();
+t.Z = o.ZP.connectStores([I.Z, p.Z], () => {
+    let { guild: e, embedChannelId: t, embedEnabled: n } = I.Z.getProps();
     return {
         guild: e,
         widgetChannelId: t,
         widgetEnabled: n,
-        hide: m.Z.enabled
+        hide: p.Z.enabled
     };
-})(f);
+})(S);

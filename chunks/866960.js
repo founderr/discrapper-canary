@@ -7,28 +7,28 @@ var r,
     u = n(931619),
     c = n(981631);
 let d = c.IWh.UNKNOWN,
-    _ = c.IyS.UNKNOWN,
-    E = null;
-function f(e) {
+    f = c.IyS.UNKNOWN,
+    _ = null;
+function h(e) {
     var t;
-    (d = null != e.type ? e.type : c.IWh.UNKNOWN), (_ = null !== (t = e.effectiveSpeed) && void 0 !== t ? t : c.IyS.UNKNOWN), (E = e.serviceProvider), p.emitChange();
+    (d = null != e.type ? e.type : c.IWh.UNKNOWN), (f = null !== (t = e.effectiveSpeed) && void 0 !== t ? t : c.IyS.UNKNOWN), (_ = e.serviceProvider), m.emitChange();
 }
-class h extends (s = o.ZP.Store) {
+class p extends (s = o.ZP.Store) {
     initialize() {
-        u.Z.getNetworkInformation().then(f), u.Z.addChangeCallback(f);
+        u.Z.getNetworkInformation().then(h), u.Z.addChangeCallback(h);
     }
     getType() {
         return d;
     }
     getEffectiveConnectionSpeed() {
-        return _;
+        return f;
     }
     getServiceProvider() {
-        return E;
+        return _;
     }
 }
 (a = 'NetworkStore'),
-    (i = 'displayName') in (r = h)
+    (i = 'displayName') in (r = p)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -36,5 +36,5 @@ class h extends (s = o.ZP.Store) {
               writable: !0
           })
         : (r[i] = a);
-let p = new h(l.Z, {});
-t.Z = p;
+let m = new p(l.Z, {});
+t.Z = m;

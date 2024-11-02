@@ -1,51 +1,51 @@
-s.r(a),
-    s.d(a, {
+e.r(n),
+    e.d(n, {
         default: function () {
-            return c;
+            return g;
         }
     }),
-    s(47120);
-var _ = s(200651),
-    E = s(192379),
-    t = s(481060),
-    n = s(881052),
-    r = s(434404),
-    I = s(78451),
-    o = s(915509),
-    l = s(981631),
-    N = s(689938),
-    i = s(113207);
-function c(e) {
-    let { guild: a, onClose: s, hideColors: c } = e,
-        [R, u] = E.useState(a.verificationLevel),
-        [T, L] = E.useState(null),
-        d = a.hasFeature(l.oNc.COMMUNITY),
-        M = (0, I.IF)(d, c).filter((e) => !e.disabled),
-        C = E.useCallback(async () => {
-            null != T && L(null);
+    e(47120);
+var r = e(200651),
+    a = e(192379),
+    i = e(481060),
+    l = e(881052),
+    o = e(434404),
+    s = e(78451),
+    u = e(915509),
+    c = e(981631),
+    d = e(388032),
+    f = e(113207);
+function g(t) {
+    let { guild: n, onClose: e, hideColors: g } = t,
+        [m, E] = a.useState(n.verificationLevel),
+        [_, p] = a.useState(null),
+        N = n.hasFeature(c.oNc.COMMUNITY),
+        I = (0, s.IF)(N, g).filter((t) => !t.disabled),
+        R = a.useCallback(async () => {
+            null != _ && p(null);
             try {
-                await r.Z.saveGuild(a.id, { verificationLevel: R }), r.Z.updateGuild({ verificationLevel: R }), s();
-            } catch (e) {
-                L(new n.Hx(e).getAnyErrorMessage());
+                await o.Z.saveGuild(n.id, { verificationLevel: m }), o.Z.updateGuild({ verificationLevel: m }), e();
+            } catch (t) {
+                p(new l.Hx(t).getAnyErrorMessage());
             }
-        }, [T, a.id, R, s]);
-    return (0, _.jsx)(o.Z, {
-        ...e,
-        title: N.Z.Messages.FORM_LABEL_VERIFICATION_LEVEL,
-        errorText: T,
-        onConfirm: C,
-        onCancel: s,
-        children: (0, _.jsxs)(t.FormSection, {
+        }, [_, n.id, m, e]);
+    return (0, r.jsx)(u.Z, {
+        ...t,
+        title: d.intl.string(d.t.DpRdYG),
+        errorText: _,
+        onConfirm: R,
+        onCancel: e,
+        children: (0, r.jsxs)(i.FormSection, {
             children: [
-                (0, _.jsx)(t.FormText, {
-                    type: t.FormText.Types.DESCRIPTION,
-                    className: i.marginBottom20,
-                    children: N.Z.Messages.FORM_HELP_VERIFICATION_LEVEL.format()
+                (0, r.jsx)(i.FormText, {
+                    type: i.FormText.Types.DESCRIPTION,
+                    className: f.marginBottom20,
+                    children: d.intl.format(d.t.iuRk2t, {})
                 }),
-                (0, _.jsx)(t.RadioGroup, {
-                    value: R,
-                    options: M,
-                    onChange: (e) => u(e.value)
+                (0, r.jsx)(i.RadioGroup, {
+                    value: m,
+                    options: I,
+                    onChange: (t) => E(t.value)
                 })
             ]
         })

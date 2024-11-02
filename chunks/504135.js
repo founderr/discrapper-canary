@@ -1,6 +1,6 @@
 n.d(t, {
     s: function () {
-        return f;
+        return h;
     }
 });
 var r = n(200651),
@@ -12,83 +12,83 @@ var r = n(200651),
     u = n(898560),
     c = n(743236),
     d = n(481060),
-    _ = n(939350),
-    E = n(667947);
-function f(e) {
-    let { color: t = 'default', label: n, icon: a, iconLeft: f, iconLeftSize: h = 'md', hint: p, subtext: I, subtextLineClamp: m, hasSubmenu: T, disabled: S, isFocused: g, menuItemProps: A, action: N, onClose: R, onFocus: O, className: v, focusedClassName: C, subMenuIconClassName: L, dontCloseOnActionIfHoldingShiftKey: D, dontCloseOnAction: y, iconProps: b, sparkle: M } = e,
-        P = i.useContext(u.r),
-        U = i.useRef(null),
-        w = i.useCallback(
+    f = n(939350),
+    _ = n(667947);
+function h(e) {
+    let { color: t = 'default', label: n, icon: a, iconLeft: h, iconLeftSize: p = 'md', hint: m, subtext: g, subtextLineClamp: E, hasSubmenu: v, disabled: I, isFocused: S, menuItemProps: T, action: b, onClose: y, onFocus: A, className: N, focusedClassName: C, subMenuIconClassName: R, dontCloseOnActionIfHoldingShiftKey: O, dontCloseOnAction: D, iconProps: L, sparkle: x } = e,
+        w = i.useContext(u.r),
+        M = i.useRef(null),
+        P = i.useCallback(
             (e) => {
-                if (null == N) return !1;
-                !(e.shiftKey && D) && !y && R(), e.persist(), null == P || P(), requestAnimationFrame(() => N(e));
+                if (null == b) return !1;
+                !(e.shiftKey && O) && !D && y(), e.persist(), null == w || w(), requestAnimationFrame(() => b(e));
             },
-            [N, R, P, D, y]
+            [b, y, w, O, D]
         );
     return (
         i.useEffect(() => {
-            g && ((0, c.F)(U), null == O || O());
-        }, [g, O]),
+            S && ((0, c.F)(M), null == A || A());
+        }, [S, A]),
         (0, r.jsxs)(o.P, {
-            innerRef: U,
-            className: s()(E.item, E.labelContainer, _._[t], v, {
-                [E.disabled]: S,
-                [E.focused]: g,
-                [null != C ? C : '']: g
+            innerRef: M,
+            className: s()(_.item, _.labelContainer, f._[t], N, {
+                [_.disabled]: I,
+                [_.focused]: S,
+                [null != C ? C : '']: S
             }),
-            onClick: S ? void 0 : w,
-            'aria-disabled': S,
-            ...A,
+            onClick: I ? void 0 : P,
+            'aria-disabled': I,
+            ...T,
             'data-menu-item': 'true',
             children: [
-                null != f &&
+                null != h &&
                     (0, r.jsx)('div', {
-                        className: s()(E.iconContainerLeft, { [E.iconContainerLarge]: 'lg' === h }),
-                        children: (0, r.jsx)(f, {
+                        className: s()(_.iconContainerLeft, { [_.iconContainerLarge]: 'lg' === p }),
+                        children: (0, r.jsx)(h, {
                             color: 'currentColor',
-                            ...b,
-                            className: s()(E.icon, null == b ? void 0 : b.className),
-                            isFocused: g
+                            ...L,
+                            className: s()(_.icon, null == L ? void 0 : L.className),
+                            isFocused: S
                         })
                     }),
                 (0, r.jsxs)('div', {
-                    className: E.label,
+                    className: _.label,
                     children: [
                         (0, l.I)(n, e),
-                        null != I &&
+                        null != g &&
                             (0, r.jsx)(d.Text, {
                                 variant: 'text-xs/normal',
-                                className: s()(E.subtext, { [E.subtextLineClamp]: null != m }),
-                                lineClamp: m,
-                                children: I
+                                className: s()(_.subtext, { [_.subtextLineClamp]: null != E }),
+                                lineClamp: E,
+                                children: g
                             })
                     ]
                 }),
-                null != p &&
+                null != m &&
                     (0, r.jsx)('div', {
-                        className: E.hintContainer,
-                        children: (0, l.I)(p, e)
+                        className: _.hintContainer,
+                        children: (0, l.I)(m, e)
                     }),
                 null != a &&
                     (0, r.jsx)('div', {
-                        className: E.iconContainer,
+                        className: _.iconContainer,
                         children: (0, r.jsx)(a, {
                             color: 'currentColor',
-                            ...b,
-                            className: s()(E.icon, null == b ? void 0 : b.className),
-                            isFocused: g
+                            ...L,
+                            className: s()(_.icon, null == L ? void 0 : L.className),
+                            isFocused: S
                         })
                     }),
-                T &&
+                v &&
                     (0, r.jsxs)('div', {
-                        className: E.iconContainer,
+                        className: _.iconContainer,
                         children: [
                             (0, r.jsx)(d.ChevronSmallRightIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: s()(E.caret, L)
+                                className: s()(_.caret, R)
                             }),
-                            M && (0, r.jsx)(d.LottieSparkle, { className: E.sparkles })
+                            x && (0, r.jsx)(d.LottieSparkle, { className: _.sparkles })
                         ]
                     })
             ]

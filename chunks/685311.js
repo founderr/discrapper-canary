@@ -1,81 +1,81 @@
 n(47120);
-var s,
+var i,
     r,
-    i = n(200651),
+    s = n(200651),
     a = n(192379),
     l = n(120356),
     o = n.n(l),
     c = n(536285),
     u = n(857458),
     d = n(388905),
-    _ = n(703656),
-    h = n(689938),
-    E = n(113207);
-((r = s || (s = {}))[(r.INITIAL = 0)] = 'INITIAL'), (r[(r.RPC_CONNECTED = 1)] = 'RPC_CONNECTED'), (r[(r.APP_OPENING = 2)] = 'APP_OPENING'), (r[(r.APP_OPENED = 3)] = 'APP_OPENED');
+    h = n(703656),
+    g = n(388032),
+    m = n(113207);
+((r = i || (i = {}))[(r.INITIAL = 0)] = 'INITIAL'), (r[(r.RPC_CONNECTED = 1)] = 'RPC_CONNECTED'), (r[(r.APP_OPENING = 2)] = 'APP_OPENING'), (r[(r.APP_OPENED = 3)] = 'APP_OPENED');
 t.Z = function (e) {
-    let { match: t, location: n, attemptDeepLink: s } = e,
+    let { match: t, location: n, attemptDeepLink: i } = e,
         [r, l] = a.useState(0);
     a.useEffect(() => {
         c.default.once('connected', () => {
             l(1);
         }),
             c.default.once('disconnected', () => {
-                (0, _.uL)((0, u.M)());
+                (0, h.uL)((0, u.M)());
             }),
             c.default.connect();
     }, []),
         a.useEffect(() => {
             if (0 !== r) return;
-            let e = setTimeout(() => (0, _.uL)((0, u.M)()), 3000);
+            let e = setTimeout(() => (0, h.uL)((0, u.M)()), 3000);
             return () => clearTimeout(e);
         }, [r]);
-    let g = a.useCallback(
+    let f = a.useCallback(
         async (e, t) => {
             try {
-                l(2), await s(e, t), l(3);
+                l(2), await i(e, t), l(3);
             } catch (e) {
                 console.error('Error opening deeplink', e);
             }
         },
-        [s]
+        [i]
     );
-    if ((0, _.DB)()) return null;
+    if ((0, h.DB)()) return null;
     switch (r) {
         case 1:
-            return (0, i.jsxs)(d.ZP, {
+            return (0, s.jsxs)(d.ZP, {
                 children: [
-                    (0, i.jsx)(d.Dx, {
-                        className: E.marginBottom8,
-                        children: h.Z.Messages.DEEPLINK_BROWSER_TITLE
+                    (0, s.jsx)(d.Dx, {
+                        className: m.marginBottom8,
+                        children: g.intl.string(g.t.qllnGh)
                     }),
-                    (0, i.jsx)(d.DK, { children: h.Z.Messages.DEEPLINK_BROWSER_PROMPT }),
-                    (0, i.jsx)(d.zx, {
-                        className: E.marginTop40,
-                        onClick: () => g(t, n),
-                        children: h.Z.Messages.OPEN_IN_APP
+                    (0, s.jsx)(d.DK, { children: g.intl.string(g.t.SXCxyc) }),
+                    (0, s.jsx)(d.zx, {
+                        className: m.marginTop40,
+                        onClick: () => f(t, n),
+                        children: g.intl.string(g.t.UQvCf3)
                     }),
-                    (0, i.jsx)(d.zx, {
-                        className: o()(E.marginTop8, E.marginCenterHorz),
+                    (0, s.jsx)(d.zx, {
+                        className: o()(m.marginTop8, m.marginCenterHorz),
                         color: d.zx.Colors.LINK,
                         look: d.zx.Looks.LINK,
-                        onClick: () => (0, _.uL)((0, u.M)()),
-                        children: h.Z.Messages.CONTINUE_IN_BROWSER
+                        onClick: () => (0, h.uL)((0, u.M)()),
+                        children: g.intl.string(g.t['2ixEBg'])
                     })
                 ]
             });
         case 0:
         case 2:
-            return (0, i.jsxs)(d.ZP, {
-                children: [(0, i.jsx)(d.Dx, { children: h.Z.Messages.APP_OPENING }), (0, i.jsx)(d.Hh, {})]
+            return (0, s.jsxs)(d.ZP, {
+                children: [(0, s.jsx)(d.Dx, { children: g.intl.string(g.t['Z+hCVV']) }), (0, s.jsx)(d.Hh, {})]
             });
         case 3:
-            return (0, i.jsxs)(d.ZP, {
+            return (0, s.jsxs)(d.ZP, {
                 children: [
-                    (0, i.jsx)(d.Dx, {
-                        className: E.marginBottom8,
-                        children: h.Z.Messages.APP_OPENED_TITLE
+                    (0, s.jsx)(d.Dx, {
+                        className: m.marginBottom8,
+                        children: g.intl.string(g.t.csrAMD)
                     }),
-                    (0, i.jsx)(d.DK, { children: h.Z.Messages.DEEPLINK_BROWSER_APP_OPENED })
+                    (0, s.jsx)(d.DK, { children: g.intl.string(g.t.ghBJz8) })
                 ]
             });
     }

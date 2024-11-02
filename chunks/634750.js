@@ -1,48 +1,48 @@
 n.d(t, {
     G: function () {
-        return _;
+        return f;
     }
 });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    a = n.n(s),
-    l = n(990547),
-    r = n(481060),
+var l = n(120356),
+    r = n.n(l),
+    a = n(990547),
+    s = n(481060),
     o = n(213609),
     c = n(626135),
     u = n(738672),
     d = n(981631),
-    h = n(689938),
+    h = n(388032),
     m = n(500725);
 function p(e) {
     let { hidden: t, onDismiss: n } = e;
     return (
         (0, o.Z)(
             {
-                type: l.ImpressionTypes.VIEW,
-                name: l.ImpressionNames.HD_STREAMING_POPOUT
+                type: a.ImpressionTypes.VIEW,
+                name: a.ImpressionNames.HD_STREAMING_POPOUT
             },
             { disableTrack: t },
             [t]
         ),
         (0, i.jsxs)('div', {
-            className: a()(m.popoutContainer, { [m.hidden]: t }),
+            className: r()(m.popoutContainer, { [m.hidden]: t }),
             children: [
                 (0, i.jsx)('img', {
                     className: m.image,
                     src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png',
                     alt: 'HD Streaming Nitro Perk'
                 }),
-                (0, i.jsx)(r.Button, {
+                (0, i.jsx)(s.Button, {
                     className: m.closeButton,
-                    'aria-label': h.Z.Messages.CLOSE,
-                    look: r.Button.Looks.BLANK,
-                    size: r.Button.Sizes.NONE,
+                    'aria-label': h.intl.string(h.t.cpT0Cg),
+                    look: s.Button.Looks.BLANK,
+                    size: s.Button.Sizes.NONE,
                     onClick: () => {
                         n(), c.default.track(d.rMx.HD_STREAMING_POPOUT_DISMISSED);
                     },
-                    children: (0, i.jsx)(r.XSmallIcon, {
+                    children: (0, i.jsx)(s.XSmallIcon, {
                         size: 'xs',
                         className: m.closeIcon,
                         color: 'white'
@@ -53,19 +53,19 @@ function p(e) {
                     children: (0, i.jsxs)('div', {
                         className: m.infoContainer,
                         children: [
-                            (0, i.jsx)(r.Text, {
+                            (0, i.jsx)(s.Text, {
                                 className: m.infoText,
                                 variant: 'text-sm/medium',
-                                children: h.Z.Messages.PREMIUM_REVERSE_TRIAL_HD_STREAMING_POPOUT_BODY.format()
+                                children: h.intl.format(h.t.ruvD7u, {})
                             }),
                             (0, i.jsxs)('div', {
                                 className: m.poweredByNitroContainer,
                                 children: [
-                                    (0, i.jsx)(r.NitroWheelIcon, { size: 'xs' }),
-                                    (0, i.jsx)(r.Text, {
+                                    (0, i.jsx)(s.NitroWheelIcon, { size: 'xs' }),
+                                    (0, i.jsx)(s.Text, {
                                         className: m.infoText,
                                         variant: 'text-sm/medium',
-                                        children: h.Z.Messages.POWERED_BY_NITRO
+                                        children: h.intl.string(h.t['BMw+7O'])
                                     })
                                 ]
                             })
@@ -76,7 +76,7 @@ function p(e) {
         })
     );
 }
-function _(e) {
+function f(e) {
     let { ...t } = e;
     return (0, i.jsx)(u.h, {
         ...t,

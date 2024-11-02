@@ -19,12 +19,12 @@ function o(e, t) {
         u = new i(e).mul(o.blinder).umod(t.modulus),
         c = u.toRed(i.mont(t.prime1)),
         d = u.toRed(i.mont(t.prime2)),
-        _ = t.coefficient,
-        E = t.prime1,
-        f = t.prime2,
-        h = c.redPow(t.exponent1).fromRed(),
-        p = d.redPow(t.exponent2).fromRed(),
-        I = h.isub(p).imul(_).umod(E).imul(f);
-    return p.iadd(I).imul(o.unblinder).umod(t.modulus).toArrayLike(r, 'be', l);
+        f = t.coefficient,
+        _ = t.prime1,
+        h = t.prime2,
+        p = c.redPow(t.exponent1).fromRed(),
+        m = d.redPow(t.exponent2).fromRed(),
+        g = p.isub(m).imul(f).umod(_).imul(h);
+    return m.iadd(g).imul(o.unblinder).umod(t.modulus).toArrayLike(r, 'be', l);
 }
 (o.getr = s), (e.exports = o);

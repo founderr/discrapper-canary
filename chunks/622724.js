@@ -1,9 +1,9 @@
 n.d(t, {
     T: function () {
-        return h;
+        return p;
     },
     Z: function () {
-        return f;
+        return h;
     }
 });
 var r = n(200651);
@@ -16,31 +16,31 @@ var i = n(442837),
     u = n(87620),
     c = n(314897),
     d = n(594174),
-    _ = n(981631),
-    E = n(689938);
-function f(e) {
-    let { user: t, guildId: n, color: o, onAction: d, location: f = s.Z.CONTEXT_MENU } = e,
-        h = (0, u.oV)(f),
-        p = (0, i.e7)([c.default], () => c.default.getId() === t.id);
-    return !h || p || t.isNonUserBot()
+    f = n(981631),
+    _ = n(388032);
+function h(e) {
+    let { user: t, guildId: n, color: o, onAction: d, location: h = s.Z.CONTEXT_MENU } = e,
+        p = (0, u.oV)(h),
+        m = (0, i.e7)([c.default], () => c.default.getId() === t.id);
+    return !p || m || t.isNonUserBot()
         ? null
         : (0, r.jsx)(a.MenuItem, {
               id: 'report-user',
               color: o,
-              label: E.Z.Messages.REPORTS_USER_BUTTON_TITLE,
-              action: () => (0, l.pX)(t, n === _.ME ? void 0 : n, d)
+              label: _.intl.string(_.t.A1MM3N),
+              action: () => (0, l.pX)(t, n === f.ME ? void 0 : n, d)
           });
 }
-function h(e) {
+function p(e) {
     let { user: t, guildId: n, color: s, onAction: u } = e,
         c = (0, i.e7)([o.ZP], () => o.ZP.get('iar_testing')),
-        E = (0, i.e7)([d.default], () => d.default.getCurrentUser());
-    return null != E && (t.id === E.id || t.isNonUserBot() || !E.isStaff() || !c)
+        _ = (0, i.e7)([d.default], () => d.default.getCurrentUser());
+    return null != _ && (t.id === _.id || t.isNonUserBot() || !_.isStaff() || !c)
         ? null
         : (0, r.jsx)(a.MenuItem, {
               id: 'staff-test-report-user',
               color: s,
               label: '[STAFF] Test Profile Report',
-              action: () => (0, l.I6)(t, n === _.ME ? void 0 : n, u)
+              action: () => (0, l.I6)(t, n === f.ME ? void 0 : n, u)
           });
 }

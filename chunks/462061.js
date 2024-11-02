@@ -1,16 +1,16 @@
 n.d(t, {
     T: function () {
-        return R;
+        return y;
     },
     Z: function () {
-        return L;
+        return P;
     }
 });
 var i = n(200651),
-    s = n(192379),
-    a = n(120356),
-    l = n.n(a),
-    r = n(442837),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
+    s = n(442837),
     o = n(481060),
     c = n(475179),
     u = n(763520),
@@ -18,89 +18,89 @@ var i = n(200651),
     h = n(414910),
     m = n(266910),
     p = n(352978),
-    _ = n(928518),
-    f = n(518950),
-    E = n(470956),
-    g = n(314897),
-    C = n(271383),
-    I = n(131951),
-    T = n(451478),
-    x = n(5192),
-    S = n(44136),
-    v = n(981631),
-    N = n(65154),
-    A = n(689938),
-    Z = n(810190);
-let M = o.AvatarSizes.SIZE_80,
-    b = o.AvatarSizes.SIZE_40;
-function R(e) {
+    f = n(928518),
+    g = n(518950),
+    C = n(470956),
+    x = n(314897),
+    v = n(271383),
+    _ = n(131951),
+    I = n(451478),
+    E = n(5192),
+    b = n(44136),
+    S = n(981631),
+    Z = n(65154),
+    T = n(388032),
+    N = n(810190);
+let j = o.AvatarSizes.SIZE_80,
+    A = o.AvatarSizes.SIZE_40;
+function y(e) {
     let { channelId: t, userId: n } = e;
-    return (0, E.Eu)(t, n)
+    return (0, C.Eu)(t, n)
         ? (0, i.jsx)(o.Tooltip, {
-              text: A.Z.Messages.NOTICE_USER_DISCONNECTED,
+              text: T.intl.string(T.t.HFwRpq),
               position: 'bottom',
               color: o.TooltipColors.GREY,
               children: (e) =>
                   (0, i.jsx)('div', {
                       ...e,
-                      className: Z.interactive,
+                      className: N.interactive,
                       children: (0, i.jsx)(o.CircleWarningIcon, { color: o.tokens.colors.STATUS_WARNING_BACKGROUND })
                   })
           })
         : null;
 }
-function L(e) {
-    let { participant: t, channel: n, inCall: a, width: o, paused: E, selected: R, fit: L, onVideoResize: P, blocked: j, noVideoRender: O = !1, pulseSpeakingIndicator: y = !1 } = e,
-        D = I.Z.getVideoComponent(),
-        U = (0, r.e7)([g.default], () => g.default.getId()),
-        { user: k, streamId: w, speaking: B } = t,
-        H = k.id === U,
-        G = (0, S.ZP)(t),
-        V = (0, r.e7)([T.Z], () => T.Z.isFocused()),
-        F = (0, r.e7)([_.Z], () => _.Z.getWindowFocused(v.KJ3.CHANNEL_CALL_POPOUT)),
-        W = (0, r.e7)([I.Z], () => null != k.id && I.Z.isLocalVideoDisabled(k.id, (0, h.Z)(t.type)), [k.id, t.type]),
-        z = (0, r.e7)([C.ZP], () => C.ZP.isGuestOrLurker(n.guild_id, k.id)),
-        Y = x.ZP.getName(n.getGuildId(), n.id, k) + (z ? ' '.concat(A.Z.Messages.GUEST_NAME_SUFFIX) : ''),
-        K = B && (F || V),
-        q = o < 124 ? b : M,
-        { avatarSrc: X, avatarDecorationSrc: J } = (0, f.Z)({
-            user: k,
+function P(e) {
+    let { participant: t, channel: n, inCall: r, width: o, paused: C, selected: y, fit: P, onVideoResize: M, blocked: R, noVideoRender: L = !1, pulseSpeakingIndicator: k = !1 } = e,
+        O = _.Z.getVideoComponent(),
+        w = (0, s.e7)([x.default], () => x.default.getId()),
+        { user: D, streamId: U, speaking: B } = t,
+        H = D.id === w,
+        F = (0, b.ZP)(t),
+        G = (0, s.e7)([I.Z], () => I.Z.isFocused()),
+        V = (0, s.e7)([f.Z], () => f.Z.getWindowFocused(S.KJ3.CHANNEL_CALL_POPOUT)),
+        z = (0, s.e7)([_.Z], () => null != D.id && _.Z.isLocalVideoDisabled(D.id, (0, h.Z)(t.type)), [D.id, t.type]),
+        W = (0, s.e7)([v.ZP], () => v.ZP.isGuestOrLurker(n.guild_id, D.id)),
+        Y = E.ZP.getName(n.getGuildId(), n.id, D) + (W ? ' '.concat(T.intl.string(T.t['pFO/Pj'])) : ''),
+        K = B && (V || G),
+        q = o < 124 ? A : j,
+        { avatarSrc: X, avatarDecorationSrc: J } = (0, g.Z)({
+            user: D,
             guildId: n.guild_id,
             size: q,
             animateOnHover: !K
         }),
-        Q = (0, r.e7)([d.Z], () => d.Z.getSelectedParticipant(n.id));
-    return (s.useEffect(() => {
-        n.isGuildStageVoice() && !G && (null == Q ? void 0 : Q.id) === k.id && c.Z.selectParticipant(n.id, null);
-    }, [G]),
-    a && !W && !O && G && !R && null != D && I.Z.supports(N.AN.VIDEO))
+        Q = (0, s.e7)([d.Z], () => d.Z.getSelectedParticipant(n.id));
+    return (l.useEffect(() => {
+        n.isGuildStageVoice() && !F && (null == Q ? void 0 : Q.id) === D.id && c.Z.selectParticipant(n.id, null);
+    }, [F]),
+    r && !z && !L && F && !y && null != O && _.Z.supports(Z.AN.VIDEO))
         ? (0, i.jsx)(
               p.Z,
               {
-                  onResize: P,
-                  wrapperClassName: Z.videoWrapper,
-                  className: Z.content,
+                  onResize: M,
+                  wrapperClassName: N.videoWrapper,
+                  className: N.content,
                   mirror: H,
-                  streamId: w,
-                  videoComponent: D,
-                  fit: L,
-                  paused: E,
-                  videoSpinnerContext: k.id === U ? u.m.SELF_VIDEO : u.m.REMOTE_VIDEO,
-                  userId: k.id
+                  streamId: U,
+                  videoComponent: O,
+                  fit: P,
+                  paused: C,
+                  videoSpinnerContext: D.id === w ? u.m.SELF_VIDEO : u.m.REMOTE_VIDEO,
+                  userId: D.id
               },
-              w
+              U
           )
         : (0, i.jsx)('div', {
-              className: l()(Z.content, { [Z.blockedAvatar]: j }),
+              className: a()(N.content, { [N.blockedAvatar]: R }),
               children: (0, i.jsx)(m.Z, {
                   'aria-label': Y,
                   src: X,
                   avatarDecoration: J,
-                  backgroundSrc: k.getAvatarURL(n.guild_id, 80),
+                  backgroundSrc: D.getAvatarURL(n.guild_id, 80),
                   size: q,
-                  pulseSpeakingIndicator: y,
+                  pulseSpeakingIndicator: k,
                   speaking: B,
-                  userId: k.id
+                  userId: D.id
               })
           });
 }

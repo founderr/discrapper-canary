@@ -1,34 +1,34 @@
 t.d(n, {
     Z: function () {
-        return f;
+        return p;
     }
 });
 var l = t(200651),
     i = t(192379),
-    a = t(481060),
-    r = t(471445),
+    r = t(481060),
+    a = t(471445),
     o = t(592125),
     s = t(430824),
     c = t(970184),
     u = t(811654),
     d = t(344991),
     m = t(981631),
-    _ = t(967831);
-function f(e) {
+    f = t(967831);
+function p(e) {
     var n;
     let { channelTypes: t } = e,
-        f = (0, c.CJ)(),
-        p = null == f ? void 0 : null === (n = f.message) || void 0 === n ? void 0 : n.getChannelId(),
-        C = o.Z.getChannel(p),
-        h = s.Z.getGuild(null == C ? void 0 : C.getGuildId()),
-        I = i.useMemo(() => (0, u.tx)(e.defaultValues, null == h ? void 0 : h.id, t), [e.defaultValues, h, t]);
+        p = (0, c.CJ)(),
+        h = null == p ? void 0 : null === (n = p.message) || void 0 === n ? void 0 : n.getChannelId(),
+        _ = o.Z.getChannel(h),
+        x = s.Z.getGuild(null == _ ? void 0 : _.getGuildId()),
+        C = i.useMemo(() => (0, u.tx)(e.defaultValues, null == x ? void 0 : x.id, t), [e.defaultValues, x, t]);
     return (0, l.jsx)(d.ZP, {
         selectActionComponent: e,
-        queryOptions: (e) => (0, u.af)(e, p, t),
+        queryOptions: (e) => (0, u.af)(e, h, t),
         renderIcon: (e, n) => {
             let t = o.Z.getChannel(null == e ? void 0 : e.value);
             if (null == t) return null;
-            let i = t.type === m.d4z.GUILD_CATEGORY ? a.FolderIcon : (0, r.KS)(t);
+            let i = t.type === m.d4z.GUILD_CATEGORY ? r.FolderIcon : (0, a.KS)(t);
             return null != i
                 ? (0, l.jsx)(i, {
                       size: 'custom',
@@ -40,9 +40,9 @@ function f(e) {
         },
         renderOptionLabel: (e) =>
             (0, l.jsx)('span', {
-                className: _.label,
+                className: f.label,
                 children: e.label
             }),
-        defaultValues: I
+        defaultValues: C
     });
 }

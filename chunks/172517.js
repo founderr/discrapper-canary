@@ -1,12 +1,12 @@
 n.d(t, {
     FW: function () {
-        return h;
+        return g;
     },
     Pk: function () {
         return o;
     },
     Rq: function () {
-        return g;
+        return f;
     },
     W_: function () {
         return a;
@@ -15,7 +15,7 @@ n.d(t, {
         return l;
     },
     qd: function () {
-        return E;
+        return m;
     }
 }),
     n(518263),
@@ -33,9 +33,9 @@ n.d(t, {
     n(757143),
     n(863942),
     n(411104);
-var s = n(512722),
-    r = n.n(s),
-    i = n(598077);
+var i = n(512722),
+    r = n.n(i),
+    s = n(598077);
 function a() {
     return window.crypto.subtle.generateKey(
         {
@@ -66,7 +66,7 @@ function u(e) {
 async function d(e) {
     return c(await window.crypto.subtle.digest({ name: 'SHA-256' }, e));
 }
-function _(e, t) {
+function h(e, t) {
     return (
         r()(null != e.privateKey, 'private key cannot be null'),
         window.crypto.subtle.decrypt(
@@ -79,21 +79,21 @@ function _(e, t) {
         )
     );
 }
-async function h(e, t) {
-    let n = new TextDecoder(),
-        s = await _(e, u(t));
-    return n.decode(s);
-}
-async function E(e, t) {
-    return c(await _(e, u(t)));
-}
 async function g(e, t) {
-    t = await h(e, t);
+    let n = new TextDecoder(),
+        i = await h(e, u(t));
+    return n.decode(i);
+}
+async function m(e, t) {
+    return c(await h(e, u(t)));
+}
+async function f(e, t) {
+    t = await g(e, t);
     let n = t.match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
     if (null == n) throw Error('Invalid encoded user record.');
-    let [, s, r, a, l] = n;
-    return new i.Z({
-        id: s,
+    let [, i, r, a, l] = n;
+    return new s.Z({
+        id: i,
         discriminator: r,
         avatar: '0' === a ? null : a,
         username: l

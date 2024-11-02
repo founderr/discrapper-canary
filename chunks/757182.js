@@ -1,28 +1,28 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return s;
     }
 });
-var l = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(655922),
-    i = n(420660),
+var l = n(655922),
+    a = n(420660),
     r = n(915863),
-    s = n(689938);
-function o(e) {
-    let { activity: t, onAction: n, ButtonComponent: o = r.Z, ...u } = e;
-    return (0, i.Z)(t)
-        ? (0, l.jsx)(
-              o,
+    o = n(388032);
+function s(e) {
+    let { activity: t, onAction: n, ButtonComponent: s = r.Z, ...u } = e;
+    return (0, a.Z)(t)
+        ? (0, i.jsx)(
+              s,
               {
                   onClick: () => {
                       null == n || n();
-                      let e = (0, a.Z)(t);
+                      let e = (0, l.Z)(t);
                       return window.open(null != e ? e : void 0);
                   },
                   fullWidth: !0,
                   ...u,
-                  children: s.Z.Messages.WATCH
+                  children: o.intl.string(o.t['I6JG4+'])
               },
               'play-activity'
           )

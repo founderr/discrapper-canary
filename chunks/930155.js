@@ -8,23 +8,23 @@ t.d(e, {
 var l = t(192379),
     i = t(442837),
     r = t(821849),
-    s = t(509545);
+    o = t(509545);
 function a(n) {
     let [e, t] = l.useState(!1),
-        { plans: a, isFetching: o } = (0, i.cj)(
-            [s.Z],
+        { plans: a, isFetching: s } = (0, i.cj)(
+            [o.Z],
             () => {
-                let e = s.Z.getForSKU(n);
+                let e = o.Z.getForSKU(n);
                 return {
                     plans: e,
-                    isFetching: s.Z.isFetchingForSKU(n)
+                    isFetching: o.Z.isFetchingForSKU(n)
                 };
             },
             [n]
         );
     return (
         l.useEffect(() => {
-            !o &&
+            !s &&
                 (t(!1),
                 (0, r.GZ)(n)
                     .then(() => {
@@ -36,7 +36,7 @@ function a(n) {
         }, [n]),
         {
             data: a,
-            isLoading: o,
+            isLoading: s,
             error: e ? Error('SubscriptionPlans failed to fetch') : void 0
         }
     );

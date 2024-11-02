@@ -1,6 +1,6 @@
 n.d(t, {
     _: function () {
-        return _;
+        return f;
     }
 });
 var r = n(200651);
@@ -39,20 +39,20 @@ let s = ['#be0351', '#ff2c52', '#f0f0f0'],
             tint: 1
         }
     ],
-    _ = (e) => {
-        let { width: t = 24, height: n = 24, primaryTintColor: _, secondaryTintColor: E, ...f } = e,
-            { primaryColorsTransformed: h, secondaryColorsTransformed: p } = (0, a.s)({
+    f = (e) => {
+        let { width: t = 24, height: n = 24, primaryTintColor: f, secondaryTintColor: _, ...h } = e,
+            { primaryColorsTransformed: p, secondaryColorsTransformed: m } = (0, a.s)({
                 primaryBaseColors: s,
-                primaryTintColor: _,
+                primaryTintColor: f,
                 primaryTintLuminances: l,
                 primaryLuminanceWeights: u,
                 secondaryBaseColors: o,
-                secondaryTintColor: E,
+                secondaryTintColor: _,
                 secondaryTintLuminances: c,
                 secondaryLuminanceWeights: d
             });
         return (0, r.jsxs)('svg', {
-            ...(0, i.Z)(f),
+            ...(0, i.Z)(h),
             width: t,
             height: n,
             viewBox: '0 0 16 16',
@@ -61,11 +61,11 @@ let s = ['#be0351', '#ff2c52', '#f0f0f0'],
             children: [
                 (0, r.jsx)('path', {
                     d: 'M10 4V3H9V1H7v2H6v1H5v1h1v1h1v1h2V6h1V5h1V4h-1Z',
-                    fill: p[1]
+                    fill: m[1]
                 }),
                 (0, r.jsx)('path', {
                     d: 'M10 12v1H9v2H7v-2H6v-1H5v-1h1v-1h1V9h2v1h1v1h1v1h-1Z',
-                    fill: h[1]
+                    fill: p[1]
                 }),
                 (0, r.jsx)('path', {
                     d: 'M7 0v1h2V0H7Z',
@@ -73,11 +73,11 @@ let s = ['#be0351', '#ff2c52', '#f0f0f0'],
                 }),
                 (0, r.jsx)('path', {
                     d: 'M7 1v1h2V1H7Z',
-                    fill: p[2]
+                    fill: m[2]
                 }),
                 (0, r.jsx)('path', {
                     d: 'M7 6v1h2V6H7Z',
-                    fill: p[0]
+                    fill: m[0]
                 }),
                 (0, r.jsx)('path', {
                     d: 'M7 1H6v2h1V1ZM1 7H0v2h1V7ZM3 7V6H1v1h2ZM6 3H5v1h1V3Z',
@@ -85,31 +85,31 @@ let s = ['#be0351', '#ff2c52', '#f0f0f0'],
                 }),
                 (0, r.jsx)('path', {
                     d: 'M6 4H5v1h1V4ZM7 3H6v1h1V3Z',
-                    fill: p[2]
+                    fill: m[2]
                 }),
                 (0, r.jsx)('path', {
                     d: 'M7 9v1h2V9H7Z',
-                    fill: p[2]
+                    fill: m[2]
                 }),
                 (0, r.jsx)('path', {
                     d: 'M7 14v1h2v-1H7ZM7 12H6v1h1v-1ZM6 11H5v1h1v-1Z',
-                    fill: h[0]
+                    fill: p[0]
                 }),
                 (0, r.jsx)('path', {
                     d: 'M7 10H6v1h1v-1Z',
-                    fill: p[2]
+                    fill: m[2]
                 }),
                 (0, r.jsx)('path', {
                     d: 'M9 13h1v-1H9v1ZM10 12h1v-1h-1v1ZM9 11h1v-1H9v1Z',
-                    fill: h[0]
+                    fill: p[0]
                 }),
                 (0, r.jsx)('path', {
                     d: 'M8 4H7v1h1V4Z',
-                    fill: p[2]
+                    fill: m[2]
                 }),
                 (0, r.jsx)('path', {
                     d: 'M10 5H9v1h1V5ZM11 4h-1v1h1V4Z',
-                    fill: p[0]
+                    fill: m[0]
                 }),
                 (0, r.jsx)('path', {
                     d: 'M12 10h1V9h2V7h-2V6h-1V5h-1v1h-1v1H9v2h1v1h1v1h1v-1Z',

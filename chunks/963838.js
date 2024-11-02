@@ -3,19 +3,19 @@ n.d(t, {
         return B;
     },
     Jw: function () {
-        return G;
+        return U;
     },
     _r: function () {
-        return F;
+        return Z;
     },
     cX: function () {
-        return H;
+        return V;
     },
     lv: function () {
-        return k;
+        return G;
     },
     v: function () {
-        return U;
+        return M;
     }
 });
 var r = n(392711),
@@ -27,46 +27,46 @@ var r = n(392711),
     u = n(624833),
     c = n(944314),
     d = n(399358),
-    _ = n(945835),
-    E = n(912931),
-    f = n(966552),
-    h = n(561763),
-    p = n(529306),
-    I = n(90075),
-    m = n(862666),
-    T = n(252611),
-    S = n(136144),
-    g = n(316137),
-    A = n(654123),
-    N = n(660020),
-    R = n(980084),
-    O = n(24688),
-    v = n(200997),
+    f = n(945835),
+    _ = n(912931),
+    h = n(966552),
+    p = n(561763),
+    m = n(529306),
+    g = n(90075),
+    E = n(862666),
+    v = n(252611),
+    I = n(136144),
+    S = n(316137),
+    T = n(654123),
+    b = n(660020),
+    y = n(980084),
+    A = n(24688),
+    N = n(200997),
     C = n(633302),
-    L = n(134432),
-    D = n(594174),
-    y = n(768581),
-    b = n(176354),
-    M = n(353368),
-    P = n(689938);
-let U = {
+    R = n(134432),
+    O = n(594174),
+    D = n(768581),
+    L = n(176354),
+    x = n(353368),
+    w = n(388032);
+let M = {
         start: 10,
         end: 15
     },
-    w = [a],
-    x = [s, o, l, u, c, d, _, E, f, h, p, I, m, T, S, g, A, N, R, O, v],
-    G = {
-        [M.q.BASIC]: w,
-        [M.q.PREMIUM]: x
+    P = [a],
+    k = [s, o, l, u, c, d, f, _, h, p, m, g, E, v, I, S, T, b, y, A, N],
+    U = {
+        [x.q.BASIC]: P,
+        [x.q.PREMIUM]: k
     },
-    k = i().memoize(
+    G = i().memoize(
         (e) =>
             new Promise((t) => {
                 let n = new Image();
                 (n.src = e),
                     (n.crossOrigin = 'Anonymous'),
                     (n.onload = () => {
-                        let r = M.v * (0, L.x_)();
+                        let r = x.v * (0, R.x_)();
                         if (n.width === r && n.height === r) t(e);
                         else {
                             var i;
@@ -77,18 +77,18 @@ let U = {
             })
     ),
     B = (e, t) => {
-        let n = G[e];
-        if (null != t && e === M.q.PREMIUM) {
+        let n = U[e];
+        if (null != t && e === x.q.PREMIUM) {
             let e = t.end + 1;
             return Math.floor(Math.random() * (t.start - e) + e);
         }
         return Math.floor(Math.random() * n.length);
     };
-function F(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : M.v;
+function Z(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : x.v;
     if (null != e.id) {
         var n;
-        return y.ZP.getEmojiURL({
+        return D.ZP.getEmojiURL({
             id: e.id,
             animated: null !== (n = e.animated) && void 0 !== n && n,
             size: t
@@ -96,9 +96,9 @@ function F(e) {
     }
     let r = C.ZP.convertSurrogateToName(e.name, !1),
         i = C.ZP.getByName(r);
-    return null != i ? b.ZP.getURL(i.surrogates) : '';
+    return null != i ? L.ZP.getURL(i.surrogates) : '';
 }
-function V(e, t) {
+function F(e, t) {
     return i()(e)
         .map((e) => {
             var n;
@@ -108,28 +108,28 @@ function V(e, t) {
         .uniq()
         .value();
 }
-function H(e) {
+function V(e) {
     var t, n, r, i, a, s;
     if (e.length < 1) return '';
-    let o = V(e, 'userId'),
-        l = V(e, 'emojiName'),
+    let o = F(e, 'userId'),
+        l = F(e, 'emojiName'),
         u = l.length < 2 ? (null !== (t = null == l ? void 0 : l[0]) && void 0 !== t ? t : '') : l.join(', ');
     if (o.length < 1) return '';
     if (1 === o.length)
-        return P.Z.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_SINGLE.format({
-            firstUsername: null === (n = D.default.getUser(o[0])) || void 0 === n ? void 0 : n.username,
+        return w.intl.formatToPlainString(w.t.yZYxzM, {
+            firstUsername: null === (n = O.default.getUser(o[0])) || void 0 === n ? void 0 : n.username,
             emojiNames: u
         });
     if (2 === o.length)
-        return P.Z.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_DOUBLE.format({
-            firstUsername: null === (r = D.default.getUser(o[0])) || void 0 === r ? void 0 : r.username,
-            secondUsername: null === (i = D.default.getUser(o[1])) || void 0 === i ? void 0 : i.username,
+        return w.intl.formatToPlainString(w.t['8rmtbW'], {
+            firstUsername: null === (r = O.default.getUser(o[0])) || void 0 === r ? void 0 : r.username,
+            secondUsername: null === (i = O.default.getUser(o[1])) || void 0 === i ? void 0 : i.username,
             emojiNames: u
         });
     else
-        return P.Z.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_MULTIPLE.format({
-            firstUsername: null === (a = D.default.getUser(o[0])) || void 0 === a ? void 0 : a.username,
-            secondUsername: null === (s = D.default.getUser(o[1])) || void 0 === s ? void 0 : s.username,
+        return w.intl.formatToPlainString(w.t['/okjv7'], {
+            firstUsername: null === (a = O.default.getUser(o[0])) || void 0 === a ? void 0 : a.username,
+            secondUsername: null === (s = O.default.getUser(o[1])) || void 0 === s ? void 0 : s.username,
             count: o.length - 2,
             emojiNames: u
         });

@@ -1,22 +1,22 @@
 n.d(t, {
     AF: function () {
-        return f;
+        return g;
     },
     NU: function () {
-        return _;
+        return v;
     },
     oL: function () {
         return p;
     },
     xH: function () {
-        return g;
+        return f;
     }
 }),
     n(47120);
 var i = n(903797),
-    s = n(905642),
-    o = n(731965),
-    a = n(430742),
+    o = n(905642),
+    a = n(731965),
+    s = n(430742),
     l = n(752305),
     r = n(592125),
     c = n(703558),
@@ -37,7 +37,7 @@ function h(e, t, n) {
 }
 class m {
     constructor(e, t, n) {
-        var i, s, m;
+        var i, o, m;
         h(this, 'channelId', void 0),
             h(this, '_set', void 0),
             h(this, 'get', void 0),
@@ -101,7 +101,7 @@ class m {
             (this.titleFocused = !1),
             (this.bodyFocused = !1),
             (this.set = (e) => {
-                (0, o.j)(() => this._set(e));
+                (0, a.j)(() => this._set(e));
             }),
             (this.setEditorHeight = (e) => {
                 this.set({ editorHeight: e });
@@ -121,7 +121,7 @@ class m {
             }),
             (this.toggleAppliedTag = (e) => {
                 let { appliedTags: t } = this.get();
-                (t = new Set(t)).has(e) ? t.delete(e) : t.add(e), this.set({ appliedTags: t }), a.Z.changeThreadSettings(this.channelId, { appliedTags: t });
+                (t = new Set(t)).has(e) ? t.delete(e) : t.add(e), this.set({ appliedTags: t }), s.Z.changeThreadSettings(this.channelId, { appliedTags: t });
             }),
             (this.setPopoutOpen = (e) => {
                 this.set({ popoutOpen: e });
@@ -148,10 +148,10 @@ class m {
                 this.set({ bodyFocused: e });
             }),
             (this.setName = (e) => {
-                this.set({ name: e }), a.Z.changeThreadSettings(this.channelId, { name: e });
+                this.set({ name: e }), s.Z.changeThreadSettings(this.channelId, { name: e });
             }),
             (this.setTextAreaState = (e) => {
-                this.set({ textAreaState: e }), a.Z.saveDraft(this.channelId, e.textValue, c.d.FirstThreadMessage);
+                this.set({ textAreaState: e }), s.Z.saveDraft(this.channelId, e.textValue, c.d.FirstThreadMessage);
             }),
             (this.setHasClickedForm = (e) => {
                 this.set({ hasClickedForm: e });
@@ -183,14 +183,14 @@ class m {
             });
         let p = r.Z.getChannel(e);
         if (null == p) return;
-        let g = null !== (i = c.Z.getThreadSettings(p.id)) && void 0 !== i ? i : {},
-            f = null == p.template ? '' : p.template.trim(),
-            _ = c.Z.getDraft(p.id, c.d.FirstThreadMessage),
-            T = (0, l.eK)(null != _ && '' !== _.trim() ? _ : f);
-        (this.name = null !== (s = g.name) && void 0 !== s ? s : ''), (m = new Set(g.appliedTags)), (this.appliedTags = void 0 !== m ? m : new Set()), (this.formOpen = this.name.length > 0), (this.textAreaState = T);
+        let f = null !== (i = c.Z.getThreadSettings(p.id)) && void 0 !== i ? i : {},
+            g = null == p.template ? '' : p.template.trim(),
+            v = c.Z.getDraft(p.id, c.d.FirstThreadMessage),
+            b = (0, l.eK)(null != v && '' !== v.trim() ? v : g);
+        (this.name = null !== (o = f.name) && void 0 !== o ? o : ''), (m = new Set(f.appliedTags)), (this.appliedTags = void 0 !== m ? m : new Set()), (this.formOpen = this.name.length > 0), (this.textAreaState = b);
     }
 }
-let { Provider: p, useStore: g, useStoreApi: f } = (0, s.Z)();
-function _(e) {
+let { Provider: p, useStore: f, useStoreApi: g } = (0, o.Z)();
+function v(e) {
     return (0, i.Z)((t, n) => new m(e.id, t, n));
 }

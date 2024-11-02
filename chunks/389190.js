@@ -1,35 +1,35 @@
 n.d(t, {
     T: function () {
-        return E;
+        return C;
     },
     Z: function () {
-        return g;
+        return x;
     }
 });
 var i = n(200651);
 n(192379);
-var s = n(442837),
-    a = n(481060),
-    l = n(239091),
-    r = n(129861),
+var l = n(442837),
+    r = n(481060),
+    a = n(239091),
+    s = n(129861),
     o = n(906732),
     c = n(158776),
     u = n(785717),
     d = n(697927),
     h = n(171368),
     m = n(981631),
-    p = n(689938),
-    _ = n(519294);
-let f = (0, a.getAvatarSize)(a.AvatarSizes.SIZE_40);
-function E(e) {
+    p = n(388032),
+    f = n(519294);
+let g = (0, r.getAvatarSize)(r.AvatarSizes.SIZE_40);
+function C(e) {
     let { user: t, status: o, onSelect: u } = e,
-        d = (0, s.e7)([c.Z], () => c.Z.isMobileOnline(t.id));
-    return (0, i.jsxs)(a.Clickable, {
+        d = (0, l.e7)([c.Z], () => c.Z.isMobileOnline(t.id));
+    return (0, i.jsxs)(r.Clickable, {
         focusProps: { offset: { right: 8 } },
-        className: _.listRow,
+        className: f.listRow,
         onClick: u,
         onContextMenu: (e) => {
-            (0, l.jW)(e, async () => {
+            (0, a.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('50261')]).then(n.bind(n, 881351));
                 return (n) =>
                     (0, i.jsx)(e, {
@@ -39,65 +39,65 @@ function E(e) {
             });
         },
         children: [
-            (0, i.jsx)(a.Avatar, {
-                src: t.getAvatarURL(void 0, f),
+            (0, i.jsx)(r.Avatar, {
+                src: t.getAvatarURL(void 0, g),
                 'aria-label': t.username,
-                size: a.AvatarSizes.SIZE_40,
+                size: r.AvatarSizes.SIZE_40,
                 status: o,
                 isMobile: d,
-                className: _.listAvatar
+                className: f.listAvatar
             }),
-            (0, i.jsx)(r.Z, {
+            (0, i.jsx)(s.Z, {
                 user: t,
-                className: _.listName,
-                discriminatorClass: _.listDiscriminator
+                className: f.listName,
+                discriminatorClass: f.listDiscriminator
             })
         ]
     });
 }
-function g(e) {
+function x(e) {
     let { user: t, onClose: n } = e,
-        { mutualFriends: s } = (0, d.Z)(t.id),
-        { analyticsLocations: l } = (0, o.ZP)(),
-        { context: r, trackUserProfileAction: c } = (0, u.KZ)(),
-        f = (e) => {
+        { mutualFriends: l } = (0, d.Z)(t.id),
+        { analyticsLocations: a } = (0, o.ZP)(),
+        { context: s, trackUserProfileAction: c } = (0, u.KZ)(),
+        g = (e) => {
             n(),
                 (0, h.openUserProfileModal)({
-                    ...r,
+                    ...s,
                     userId: e,
-                    sourceAnalyticsLocations: l,
+                    sourceAnalyticsLocations: a,
                     analyticsLocation: { section: m.jXE.USER_PROFILE_MUTUAL_FRIENDS }
                 });
         };
-    return (0, i.jsx)(a.ScrollerThin, {
-        className: _.listScroller,
+    return (0, i.jsx)(r.ScrollerThin, {
+        className: f.listScroller,
         fade: !0,
         children:
-            null == s
+            null == l
                 ? (0, i.jsx)('div', {
-                      className: _.empty,
-                      children: (0, i.jsx)(a.Spinner, {})
+                      className: f.empty,
+                      children: (0, i.jsx)(r.Spinner, {})
                   })
-                : 0 === s.length
+                : 0 === l.length
                   ? (0, i.jsxs)('div', {
-                        className: _.empty,
+                        className: f.empty,
                         children: [
-                            (0, i.jsx)('div', { className: _.emptyIconFriends }),
+                            (0, i.jsx)('div', { className: f.emptyIconFriends }),
                             (0, i.jsx)('div', {
-                                className: _.emptyText,
-                                children: p.Z.Messages.NO_MUTUAL_FRIENDS
+                                className: f.emptyText,
+                                children: p.intl.string(p.t['/5p4g4'])
                             })
                         ]
                     })
-                  : s.map((e) => {
-                        let { key: t, user: n, status: s } = e;
+                  : l.map((e) => {
+                        let { key: t, user: n, status: l } = e;
                         return (0, i.jsx)(
-                            E,
+                            C,
                             {
                                 user: n,
-                                status: s,
+                                status: l,
                                 onSelect: () => {
-                                    c({ action: 'PRESS_MUTUAL_FRIEND' }), f(n.id);
+                                    c({ action: 'PRESS_MUTUAL_FRIEND' }), g(n.id);
                                 }
                             },
                             t

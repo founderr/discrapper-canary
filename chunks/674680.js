@@ -1,90 +1,90 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return f;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(780384),
-    r = n(481060),
-    i = n(410030),
+var r = n(780384),
+    a = n(481060),
+    s = n(410030),
     l = n(44315),
     o = n(889901),
     c = n(955204),
-    _ = n(231338),
-    d = n(694954);
-let E = {
-        trophy: _.Il.PRIMARY_400,
-        locked: _.Il.PRIMARY_400,
-        unlocked: _.Il.GREEN_330
+    d = n(231338),
+    u = n(694954);
+let g = {
+        trophy: d.Il.PRIMARY_400,
+        locked: d.Il.PRIMARY_400,
+        unlocked: d.Il.GREEN_330
     },
-    u = {
-        trophy: _.Il.PRIMARY_400,
-        locked: _.Il.PRIMARY_400,
-        unlocked: _.Il.GREEN_330
+    m = {
+        trophy: d.Il.PRIMARY_400,
+        locked: d.Il.PRIMARY_400,
+        unlocked: d.Il.GREEN_330
     };
-function T(e) {
+function f(e) {
     var t;
-    let { achievementId: n, unlocked: _, size: T = r.AvatarSizes.SIZE_40 } = e,
-        I = (0, i.ZP)(),
-        R = (0, c.oX)(n);
-    if (null == R) return null;
-    let g = (0, r.getAvatarSpecs)(T),
-        { name: N, rarity: m } = R,
-        { color: C } = (0, c.F7)(m),
-        A = (0, a.wj)(I) ? E : u,
-        p = (g.size - g.offset - 2 * g.stroke) * 0.8,
-        f = g.size - g.stroke,
-        M = {
-            width: 0.4 * p,
-            height: 0.4 * p
+    let { achievementId: n, unlocked: d, size: f = a.AvatarSizes.SIZE_40 } = e,
+        p = (0, s.ZP)(),
+        _ = (0, c.oX)(n);
+    if (null == _) return null;
+    let h = (0, a.getAvatarSpecs)(f),
+        { name: x, rarity: E } = _,
+        { color: b } = (0, c.F7)(E),
+        C = (0, r.wj)(p) ? g : m,
+        v = (h.size - h.offset - 2 * h.stroke) * 0.8,
+        T = h.size - h.stroke,
+        N = {
+            width: 0.4 * v,
+            height: 0.4 * v
         },
-        S = {
-            width: M.width + 1,
-            height: M.height + 1,
-            right: g.stroke + 1,
-            bottom: g.stroke + 1,
+        I = {
+            width: N.width + 1,
+            height: N.height + 1,
+            right: h.stroke + 1,
+            bottom: h.stroke + 1,
             padding: 0
         };
-    return (0, s.jsxs)('div', {
-        className: d.container,
+    return (0, i.jsxs)('div', {
+        className: u.container,
         style: {
-            width: f,
-            height: f,
-            padding: g.stroke
+            width: T,
+            height: T,
+            padding: h.stroke
         },
-        'aria-label': ''.concat(null !== (t = N()) && void 0 !== t ? t : ''),
+        'aria-label': ''.concat(null !== (t = x()) && void 0 !== t ? t : ''),
         children: [
-            (0, s.jsx)('div', {
-                className: d.trophyIconContainer,
-                children: (0, s.jsx)(r.TrophyIcon, {
+            (0, i.jsx)('div', {
+                className: u.trophyIconContainer,
+                children: (0, i.jsx)(a.TrophyIcon, {
                     size: 'custom',
-                    color: _ ? C : (0, l.Lq)(A.trophy),
-                    width: p,
-                    height: p
+                    color: d ? b : (0, l.Lq)(C.trophy),
+                    width: v,
+                    height: v
                 })
             }),
-            !_ &&
-                (0, s.jsx)('div', {
-                    className: d.lockContainer,
-                    style: S,
-                    children: (0, s.jsx)(r.LockIcon, {
+            !d &&
+                (0, i.jsx)('div', {
+                    className: u.lockContainer,
+                    style: I,
+                    children: (0, i.jsx)(a.LockIcon, {
                         size: 'custom',
-                        color: (0, l.Lq)(A.locked),
-                        ...M
+                        color: (0, l.Lq)(C.locked),
+                        ...N
                     })
                 }),
-            _ &&
-                m === c.EP.LEGENDARY &&
-                (0, s.jsx)('div', {
-                    className: d.lockContainer,
-                    style: S,
-                    children: (0, s.jsx)(o.Z, {
-                        className: d.confettiIcon,
-                        ...M
+            d &&
+                E === c.EP.LEGENDARY &&
+                (0, i.jsx)('div', {
+                    className: u.lockContainer,
+                    style: I,
+                    children: (0, i.jsx)(o.Z, {
+                        className: u.confettiIcon,
+                        ...N
                     })
                 })
         ]
     });
 }
-T.Sizes = r.AvatarSizes;
+f.Sizes = a.AvatarSizes;

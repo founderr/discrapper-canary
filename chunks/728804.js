@@ -7,18 +7,18 @@ var r = n(690244),
     u = i('WeakMap.prototype.get', !0),
     c = i('WeakMap.prototype.set', !0),
     d = i('WeakMap.prototype.has', !0),
-    _ = i('Map.prototype.get', !0),
-    E = i('Map.prototype.set', !0),
-    f = i('Map.prototype.has', !0),
-    h = function (e, t) {
+    f = i('Map.prototype.get', !0),
+    _ = i('Map.prototype.set', !0),
+    h = i('Map.prototype.has', !0),
+    p = function (e, t) {
         for (var n, r = e; null !== (n = r.next); r = n) if (n.key === t) return (r.next = n.next), (n.next = e.next), (e.next = n), n;
     },
-    p = function (e, t) {
-        var n = h(e, t);
+    m = function (e, t) {
+        var n = p(e, t);
         return n && n.value;
     },
-    I = function (e, t, n) {
-        var r = h(e, t);
+    g = function (e, t, n) {
+        var r = p(e, t);
         r
             ? (r.value = n)
             : (e.next = {
@@ -39,28 +39,28 @@ e.exports = function () {
                 if (o && r && ('object' == typeof r || 'function' == typeof r)) {
                     if (e) return u(e, r);
                 } else if (l) {
-                    if (t) return _(t, r);
-                } else if (n) return p(n, r);
+                    if (t) return f(t, r);
+                } else if (n) return m(n, r);
             },
             has: function (r) {
                 if (o && r && ('object' == typeof r || 'function' == typeof r)) {
                     if (e) return d(e, r);
                 } else if (l) {
-                    if (t) return f(t, r);
-                } else if (n) return !!h(n, r);
+                    if (t) return h(t, r);
+                } else if (n) return !!p(n, r);
                 return !1;
             },
             set: function (r, i) {
                 o && r && ('object' == typeof r || 'function' == typeof r)
                     ? (!e && (e = new o()), c(e, r, i))
                     : l
-                      ? (!t && (t = new l()), E(t, r, i))
+                      ? (!t && (t = new l()), _(t, r, i))
                       : (!n &&
                             (n = {
                                 key: {},
                                 next: null
                             }),
-                        I(n, r, i));
+                        g(n, r, i));
             }
         };
     return r;

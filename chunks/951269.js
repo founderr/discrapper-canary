@@ -1,59 +1,59 @@
-s.r(t),
-    s.d(t, {
+s.r(e),
+    s.d(e, {
         default: function () {
             return u;
         }
     });
-var o = s(200651);
+var n = s(200651);
 s(192379);
-var a = s(481060),
-    n = s(112831),
+var o = s(481060),
+    i = s(112831),
     l = s(313201),
-    i = s(689938),
+    a = s(388032),
     c = s(220882),
     r = s(462991);
-function u(e) {
-    let { onClose: t, transitionState: s, kind: u } = e,
+function u(t) {
+    let { onClose: e, transitionState: s, kind: u } = t,
         d = (0, l.Dt)();
-    return (0, o.jsxs)(a.ModalRoot, {
+    return (0, n.jsxs)(o.ModalRoot, {
         transitionState: s,
         'aria-labelledby': d,
-        size: a.ModalSize.SMALL,
+        size: o.ModalSize.SMALL,
         children: [
-            (0, o.jsxs)(a.ModalContent, {
+            (0, n.jsxs)(o.ModalContent, {
                 className: c.content,
                 children: [
-                    (0, o.jsx)(a.ModalCloseButton, {
+                    (0, n.jsx)(o.ModalCloseButton, {
                         className: c.closeButton,
-                        onClick: t
+                        onClick: e
                     }),
-                    (0, o.jsx)('img', {
+                    (0, n.jsx)('img', {
                         className: c.image,
                         src: r,
                         alt: ''
                     }),
-                    (0, o.jsx)(n.Z, {
+                    (0, n.jsx)(i.Z, {
                         className: c.title,
                         id: d,
-                        size: n.Z.Sizes.SIZE_24,
-                        color: n.Z.Colors.HEADER_PRIMARY,
-                        children: i.Z.Messages.INACCESSIBLE_CHANNEL_LINK_TITLE
+                        size: i.Z.Sizes.SIZE_24,
+                        color: i.Z.Colors.HEADER_PRIMARY,
+                        children: a.intl.string(a.t.r0DLNj)
                     }),
-                    (0, o.jsx)(a.Text, {
+                    (0, n.jsx)(o.Text, {
                         className: c.subtitle,
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: 'user' === u ? i.Z.Messages.INACCESSIBLE_USER_LINK_SUBTITLE : i.Z.Messages.INACCESSIBLE_CHANNEL_LINK_SUBTITLE
+                        children: 'user' === u ? a.intl.string(a.t.Fqqbho) : a.intl.string(a.t['6Y0JlJ'])
                     })
                 ]
             }),
-            (0, o.jsx)(a.ModalFooter, {
-                children: (0, o.jsx)(a.Button, {
+            (0, n.jsx)(o.ModalFooter, {
+                children: (0, n.jsx)(o.Button, {
                     className: c.button,
-                    color: a.Button.Colors.BRAND,
-                    onClick: t,
-                    size: a.Button.Sizes.LARGE,
-                    children: i.Z.Messages.OKAY
+                    color: o.Button.Colors.BRAND,
+                    onClick: e,
+                    size: o.Button.Sizes.LARGE,
+                    children: a.intl.string(a.t.BddRzc)
                 })
             })
         ]

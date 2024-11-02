@@ -13,17 +13,17 @@ var t,
     a = r(200651),
     i = r(192379),
     c = r(481060),
-    s = r(689938),
+    s = r(388032),
     l = r(187152);
 ((o = t || (t = {})).DANGER = 'danger'), (o.WARNING = 'warning');
 function d(n) {
     let { transitionState: e, onClose: r, title: t, body: o, cta: d, closeLabel: u, onConfirm: h, iconVariant: g = 'warning' } = n,
-        [x, I] = i.useState(!1),
-        f = null != t ? t : s.Z.Messages.CREATE_POLL_MODAL_WARNING_MODAL_TITLE;
+        [x, f] = i.useState(!1),
+        j = null != t ? t : s.intl.string(s.t.HMrgcn);
     return (0, a.jsxs)(c.ModalRoot, {
         size: c.ModalSize.DYNAMIC,
         transitionState: e,
-        'aria-label': f,
+        'aria-label': j,
         children: [
             (0, a.jsxs)(c.ModalContent, {
                 className: l.content,
@@ -52,7 +52,7 @@ function d(n) {
                             (0, a.jsx)(c.Heading, {
                                 variant: 'heading-xl/semibold',
                                 color: 'header-primary',
-                                children: f
+                                children: j
                             })
                         ]
                     }),
@@ -69,11 +69,11 @@ function d(n) {
                     (0, a.jsx)(c.Button, {
                         color: c.Button.Colors.BRAND,
                         onClick: () => {
-                            I(!0);
+                            f(!0);
                             try {
                                 h(), r();
                             } finally {
-                                I(!1);
+                                f(!1);
                             }
                         },
                         submitting: x,

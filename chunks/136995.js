@@ -10,27 +10,27 @@ var r = n(200651),
     o = n(585483),
     l = n(871499),
     u = n(981631),
-    c = n(689938);
+    c = n(388032);
 function d(e) {
     let { channel: t, centerButton: n = !1, ...d } = e,
-        _ = n ? l.d : l.Z,
-        E = t.isManaged() || !t.isPrivate() ? c.Z.Messages.CONNECT : c.Z.Messages.JOIN_CALL,
-        f = i.useCallback(() => s.default.selectVoiceChannel(t.id), [t.id]);
+        f = n ? l.d : l.Z,
+        _ = t.isManaged() || !t.isPrivate() ? c.intl.string(c.t.S0W8Z2) : c.intl.string(c.t['0D/6R0']),
+        h = i.useCallback(() => s.default.selectVoiceChannel(t.id), [t.id]);
     return (
         i.useEffect(
             () => (
-                o.S.subscribe(u.CkL.CALL_ACCEPT, f),
+                o.S.subscribe(u.CkL.CALL_ACCEPT, h),
                 () => {
-                    o.S.unsubscribe(u.CkL.CALL_ACCEPT, f);
+                    o.S.unsubscribe(u.CkL.CALL_ACCEPT, h);
                 }
             ),
-            [f]
+            [h]
         ),
-        (0, r.jsx)(_, {
+        (0, r.jsx)(f, {
             ...d,
             iconComponent: a.PhoneCallIcon,
-            label: E,
-            onClick: f
+            label: _,
+            onClick: h
         })
     );
 }

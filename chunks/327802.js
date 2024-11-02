@@ -1,16 +1,16 @@
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(205822),
-    i = n(731994),
-    r = n(689938);
+var r = n(205822),
+    l = n(731994),
+    s = n(388032);
 t.Z = function (e) {
-    let { className: t, style: n, onDrop: l } = e;
-    return (0, s.jsx)(a.Z, {
+    let { className: t, style: n, onDrop: a } = e;
+    return (0, i.jsx)(r.Z, {
         className: t,
         style: n,
-        title: r.Z.Messages.UPLOAD_EMOJI,
-        description: r.Z.Messages.UPLOAD_EMOJI_INSTRUCTIONS,
-        icons: i.pA,
-        onDrop: l
+        title: s.intl.string(s.t.DU0dy8),
+        description: s.intl.string(s.t.bpycfH),
+        icons: l.pA,
+        onDrop: a
     });
 };

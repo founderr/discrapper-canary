@@ -7,8 +7,8 @@ var r = n(544891),
     u = n(985518),
     c = n(228392),
     d = n(981631),
-    _ = n(689938);
-async function E(e, t, n) {
+    f = n(388032);
+async function _(e, t, n) {
     try {
         return await e();
     } catch (e) {
@@ -47,11 +47,11 @@ t.Z = {
                 moderated: e.moderated
             }
         });
-        E(() => n, _.Z.Messages.FORUM_TAG_EDIT_ERROR, _.Z.Messages.FORUM_POST_NON_MODERATED_TAG_REQUIRED);
+        _(() => n, f.intl.string(f.t.T8sBLC), f.intl.string(f.t.imcb5u));
     },
     deleteForumTag(e, t) {
         let n = r.tn.del({ url: d.ANM.FORUM_TAG(e, t) });
-        E(() => n, _.Z.Messages.FORUM_TAG_REMOVE_ERROR, _.Z.Messages.FORUM_POST_NON_MODERATED_TAG_REQUIRED);
+        _(() => n, f.intl.string(f.t['0ZkNDQ']), f.intl.string(f.t.imcb5u));
     },
     updateForumPostTags: async (e, t) => (
         await s.Z.unarchiveThreadIfNecessary(e),

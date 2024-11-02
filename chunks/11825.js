@@ -4,44 +4,44 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    a = n(192379),
-    s = n(481060),
-    r = n(833592),
-    l = n(689938);
-let o = (e) => {
+    r = n(192379),
+    l = n(481060),
+    a = n(833592),
+    o = n(388032);
+let s = (e) => {
         let { item: t, closePopout: n } = e;
-        return (0, i.jsx)(s.Menu, {
+        return (0, i.jsx)(l.Menu, {
             navId: 'notification-actions',
             onClose: n,
             onSelect: n,
-            'aria-label': l.Z.Messages.RECENTS_NOTIFICATIONS_MENU_LABEL,
-            children: (0, i.jsx)(s.MenuItem, {
+            'aria-label': o.intl.string(o.t.ljs3OT),
+            children: (0, i.jsx)(l.MenuItem, {
                 id: 'delete',
-                label: l.Z.Messages.DELETE,
-                icon: s.TrashIcon,
+                label: o.intl.string(o.t.oyYWHB),
+                icon: l.TrashIcon,
                 action: async () => {
-                    await (0, r.g3)(t);
+                    await (0, a.g3)(t);
                 }
             })
         });
     },
-    c = a.memo(function (e) {
+    c = r.memo(function (e) {
         let { item: t } = e;
-        return (0, i.jsx)(s.Popout, {
+        return (0, i.jsx)(l.Popout, {
             renderPopout: (e) =>
-                (0, i.jsx)(o, {
+                (0, i.jsx)(s, {
                     ...e,
                     item: t
                 }),
             position: 'bottom',
             align: 'right',
-            animation: s.Popout.Animation.NONE,
+            animation: l.Popout.Animation.NONE,
             children: (e) => {
                 let { onClick: t } = e;
-                return (0, i.jsx)(s.CircleIconButton, {
-                    tooltip: l.Z.Messages.MORE,
-                    color: s.CircleIconButtonColors.TERTIARY,
-                    icon: (0, i.jsx)(s.MoreHorizontalIcon, {
+                return (0, i.jsx)(l.CircleIconButton, {
+                    tooltip: o.intl.string(o.t.UKOtz8),
+                    color: l.CircleIconButtonColors.TERTIARY,
+                    icon: (0, i.jsx)(l.MoreHorizontalIcon, {
                         size: 'xs',
                         color: 'currentColor'
                     }),

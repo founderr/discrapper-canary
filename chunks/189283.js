@@ -11,8 +11,8 @@ var r = n(200651),
     l = n(993365),
     u = n(593270);
 function c(e) {
-    let { option: t, selected: n, onClick: a, look: c, className: d, selectedClassName: _ } = e,
-        E = {
+    let { option: t, selected: n, onClick: a, look: c, className: d, selectedClassName: f } = e,
+        _ = {
             [(function (e) {
                 switch (e) {
                     case 'tab':
@@ -23,8 +23,8 @@ function c(e) {
                 }
             })(c)]: n
         };
-    null != _ && (E[_] = n);
-    let f = i.useCallback((e) => a(t, e), [a, t]);
+    null != f && (_[f] = n);
+    let h = i.useCallback((e) => a(t, e), [a, t]);
     return (0, r.jsx)(o.P, {
         className: s()(
             (function (e) {
@@ -37,9 +37,9 @@ function c(e) {
                 }
             })(c),
             d,
-            E
+            _
         ),
-        onClick: f,
+        onClick: h,
         children: (0, r.jsx)(l.x, {
             variant: 'text-sm/medium',
             color: 'none',
@@ -48,8 +48,8 @@ function c(e) {
     });
 }
 function d(e) {
-    let { options: t, value: n, onChange: a, look: o = 'tab', className: l, optionClassName: d, selectedOptionClassName: _ } = e,
-        E = i.useCallback(
+    let { options: t, value: n, onChange: a, look: o = 'tab', className: l, optionClassName: d, selectedOptionClassName: f } = e,
+        _ = i.useCallback(
             (e) => {
                 var t;
                 let i = n === e.value;
@@ -61,12 +61,12 @@ function d(e) {
                         look: o,
                         onClick: a,
                         className: d,
-                        selectedClassName: _
+                        selectedClassName: f
                     },
                     null !== (t = e.key) && void 0 !== t ? t : String(e.value)
                 );
             },
-            [n, o, a, d, _]
+            [n, o, a, d, f]
         );
     return (0, r.jsx)('div', {
         className: s()(
@@ -81,6 +81,6 @@ function d(e) {
             })(o),
             l
         ),
-        children: t.map(E)
+        children: t.map(_)
     });
 }

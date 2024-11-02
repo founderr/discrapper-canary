@@ -16,11 +16,11 @@ let u = (e, t) => {
             var n, r;
             return (0, o.yE)(null !== (r = null === (n = i.ZP.getMember(e, t)) || void 0 === n ? void 0 : n.flags) && void 0 !== r ? r : 0, l.q.DID_REJOIN);
         }),
-        _ = (0, r.e7)([a.Z], () => {
+        f = (0, r.e7)([a.Z], () => {
             var t;
             return null === (t = a.Z.getGuild(e)) || void 0 === t ? void 0 : t.isNew();
         }),
-        E = (0, r.e7)([s.default], () => {
+        _ = (0, r.e7)([s.default], () => {
             var e;
             return null === (e = s.default.getUser(t)) || void 0 === e ? void 0 : e.bot;
         });
@@ -45,8 +45,8 @@ let u = (e, t) => {
                 })(n, u, c),
             [u, n, c]
         ) &&
+            !f &&
             !_ &&
-            !E &&
             !d
     );
 };

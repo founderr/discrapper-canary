@@ -8,62 +8,62 @@ var r = n(200651),
     u = n(906732),
     c = n(626135),
     d = n(724884),
-    _ = n(355045),
-    E = n(290799),
-    f = n(394769),
-    h = n(555932),
-    p = n(808189),
-    I = n(362948),
-    m = n(245004),
-    T = n(383881),
-    S = n(981631),
-    g = n(689938),
-    A = n(429905);
+    f = n(355045),
+    _ = n(290799),
+    h = n(394769),
+    p = n(555932),
+    m = n(808189),
+    g = n(362948),
+    E = n(245004),
+    v = n(383881),
+    I = n(981631),
+    S = n(388032),
+    T = n(429905);
 t.Z = function (e) {
-    let { analyticsLocation: t, guild: n, onClose: N } = e,
-        [R, O] = i.useState(!0),
-        v = i.useRef(!1),
+    let { analyticsLocation: t, guild: n, onClose: b } = e,
+        [y, A] = i.useState(!0),
+        N = i.useRef(!1),
         C = (0, a.Z)(() => Date.now()),
-        { analyticsLocations: L } = (0, u.ZP)(),
-        D = i.useCallback(() => {
-            N(),
-                c.default.track(S.rMx.MODAL_DISMISSED, {
-                    type: S.ZY5.PREMIUM_GUILD_USER_MODAL,
-                    location_stack: L,
+        { analyticsLocations: R } = (0, u.ZP)(),
+        O = i.useCallback(() => {
+            b(),
+                c.default.track(I.rMx.MODAL_DISMISSED, {
+                    type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
+                    location_stack: R,
                     location_section: t.section,
                     location_object: t.object,
                     guild_id: n.id,
                     duration_open_ms: Date.now() - C
                 });
-        }, [N, t, L, C, n.id]),
-        y = i.useCallback(
+        }, [b, t, R, C, n.id]),
+        D = i.useCallback(
             (e) => {
                 e &&
-                    !v.current &&
-                    (c.default.track(S.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-                        type: S.ZY5.PREMIUM_GUILD_USER_MODAL,
-                        location_stack: L,
+                    !N.current &&
+                    (c.default.track(I.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                        type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
+                        location_stack: R,
                         location_section: t.section,
                         location_object: t.object,
                         guild_id: n.id
                     }),
-                    (v.current = !0));
+                    (N.current = !0));
             },
-            [t, L, n.id]
+            [t, R, n.id]
         );
     return (
         i.useEffect(() => {
-            c.default.track(S.rMx.OPEN_MODAL, {
-                type: S.ZY5.PREMIUM_GUILD_USER_MODAL,
-                location_stack: L,
+            c.default.track(I.rMx.OPEN_MODAL, {
+                type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
+                location_stack: R,
                 location_section: t.section,
                 location_object: t.object,
                 guild_id: n.id
             });
-        }, [n.id, t, L]),
+        }, [n.id, t, R]),
         i.useEffect(() => {
             function e(e) {
-                'Escape' === e.key && D();
+                'Escape' === e.key && O();
             }
             return (
                 window.addEventListener('keydown', e),
@@ -71,77 +71,77 @@ t.Z = function (e) {
                     window.removeEventListener('keydown', e);
                 }
             );
-        }, [D]),
+        }, [O]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)('div', {
-                    className: A.closeIconWrapper,
+                    className: T.closeIconWrapper,
                     children: (0, r.jsx)(l.Z, {
-                        className: A.closeIcon,
-                        closeAction: D,
+                        className: T.closeIcon,
+                        closeAction: O,
                         keybind: 'ESC',
                         variant: l.Z.Variants.SOLID
                     })
                 }),
                 (0, r.jsxs)(o.AdvancedScrollerAuto, {
-                    className: A.scroller,
+                    className: T.scroller,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: A.header,
+                            className: T.header,
                             children: [
                                 (0, r.jsxs)('div', {
-                                    className: A.headerContentWrapper,
+                                    className: T.headerContentWrapper,
                                     children: [
                                         (0, r.jsx)(o.Heading, {
-                                            className: A.heading,
+                                            className: T.heading,
                                             color: 'always-white',
                                             variant: 'display-lg',
-                                            children: g.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_HEADING
+                                            children: S.intl.string(S.t.N4sqzM)
                                         }),
-                                        (0, r.jsx)(_.Z, {
+                                        (0, r.jsx)(f.Z, {
                                             guild: n,
-                                            closeLayer: D,
-                                            onCtaVisibilityChange: O
+                                            closeLayer: O,
+                                            onCtaVisibilityChange: A
                                         }),
-                                        (0, r.jsx)(h.Z, { guild: n }),
-                                        (0, r.jsx)(p.Z, { guild: n })
+                                        (0, r.jsx)(p.Z, { guild: n }),
+                                        (0, r.jsx)(m.Z, { guild: n })
                                     ]
                                 }),
-                                (0, r.jsx)(T.O, {})
+                                (0, r.jsx)(v.O, {})
                             ]
                         }),
                         (0, r.jsx)('div', {
-                            className: A.middleBodyContentWrapper,
-                            children: (0, r.jsx)(m.Z, {})
+                            className: T.middleBodyContentWrapper,
+                            children: (0, r.jsx)(E.Z, {})
                         }),
                         (0, r.jsxs)('div', {
-                            className: A.lowerBody,
+                            className: T.lowerBody,
                             children: [
                                 (0, r.jsxs)('div', {
-                                    className: A.lowerBodyContentWrapper,
+                                    className: T.lowerBodyContentWrapper,
                                     children: [
-                                        (0, r.jsx)(I.Z, {
-                                            className: A.tierComparisonTable,
+                                        (0, r.jsx)(g.Z, {
+                                            className: T.tierComparisonTable,
                                             guild: n
                                         }),
                                         (0, r.jsx)(d.Z, {}),
-                                        (0, r.jsx)(E.Z, {})
+                                        (0, r.jsx)(_.Z, {})
                                     ]
                                 }),
-                                (0, r.jsx)(T.A, {}),
-                                (0, r.jsx)('div', { className: A.lowerBodyBackgroundImage })
+                                (0, r.jsx)(v.A, {}),
+                                (0, r.jsx)('div', { className: T.lowerBodyBackgroundImage })
                             ]
                         }),
                         (0, r.jsx)(s.$, {
-                            onChange: y,
-                            children: (0, r.jsx)('div', { className: A.persistentCtaSpacer })
+                            onChange: D,
+                            children: (0, r.jsx)('div', { className: T.persistentCtaSpacer })
                         })
                     ]
                 }),
-                (0, r.jsx)(f.Z, {
+                (0, r.jsx)(h.Z, {
                     guild: n,
-                    isVisible: !R,
-                    closeLayer: D
+                    isVisible: !y,
+                    closeLayer: O
                 })
             ]
         })

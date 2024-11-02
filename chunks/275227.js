@@ -16,7 +16,7 @@ var r = n(877024),
         rmd160: 20,
         ripemd160: 20
     };
-function _(e, t, n) {
+function f(e, t, n) {
     var o = (function (e) {
             return 'rmd160' === e || 'ripemd160' === e
                 ? function (e) {
@@ -30,26 +30,26 @@ function _(e, t, n) {
         })(e),
         l = 'sha512' === e || 'sha384' === e ? 128 : 64;
     t.length > l ? (t = o(t)) : t.length < l && (t = s.concat([t, c], l));
-    for (var u = s.allocUnsafe(l + d[e]), _ = s.allocUnsafe(l + d[e]), E = 0; E < l; E++) (u[E] = 54 ^ t[E]), (_[E] = 92 ^ t[E]);
-    var f = s.allocUnsafe(l + n + 4);
-    u.copy(f, 0, 0, l), (this.ipad1 = f), (this.ipad2 = u), (this.opad = _), (this.alg = e), (this.blocksize = l), (this.hash = o), (this.size = d[e]);
+    for (var u = s.allocUnsafe(l + d[e]), f = s.allocUnsafe(l + d[e]), _ = 0; _ < l; _++) (u[_] = 54 ^ t[_]), (f[_] = 92 ^ t[_]);
+    var h = s.allocUnsafe(l + n + 4);
+    u.copy(h, 0, 0, l), (this.ipad1 = h), (this.ipad2 = u), (this.opad = f), (this.alg = e), (this.blocksize = l), (this.hash = o), (this.size = d[e]);
 }
-_.prototype.run = function (e, t) {
+f.prototype.run = function (e, t) {
     return e.copy(t, this.blocksize), this.hash(t).copy(this.opad, this.blocksize), this.hash(this.opad);
 };
 e.exports = function (e, t, n, r, i) {
     o(n, r), (e = u(e, l, 'Password')), (t = u(t, l, 'Salt'));
-    var a = new _((i = i || 'sha1'), e, t.length),
+    var a = new f((i = i || 'sha1'), e, t.length),
         c = s.allocUnsafe(r),
-        E = s.allocUnsafe(t.length + 4);
-    t.copy(E, 0, 0, t.length);
-    for (var f = 0, h = d[i], p = Math.ceil(r / h), I = 1; I <= p; I++) {
-        E.writeUInt32BE(I, t.length);
-        for (var m = a.run(E, a.ipad1), T = m, S = 1; S < n; S++) {
-            T = a.run(T, a.ipad2);
-            for (var g = 0; g < h; g++) m[g] ^= T[g];
+        _ = s.allocUnsafe(t.length + 4);
+    t.copy(_, 0, 0, t.length);
+    for (var h = 0, p = d[i], m = Math.ceil(r / p), g = 1; g <= m; g++) {
+        _.writeUInt32BE(g, t.length);
+        for (var E = a.run(_, a.ipad1), v = E, I = 1; I < n; I++) {
+            v = a.run(v, a.ipad2);
+            for (var S = 0; S < p; S++) E[S] ^= v[S];
         }
-        m.copy(c, f), (f += h);
+        E.copy(c, h), (h += p);
     }
     return c;
 };

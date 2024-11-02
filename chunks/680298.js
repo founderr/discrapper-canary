@@ -4,81 +4,81 @@ t.d(n, {
     }
 });
 var i = t(200651),
-    a = t(192379),
-    l = t(481060),
-    s = t(239091),
+    l = t(192379),
+    r = t(481060),
+    a = t(239091),
     o = t(911969),
-    r = t(399860),
-    d = t(689938),
+    s = t(399860),
+    d = t(388032),
     c = t(83956);
 function u(e) {
-    let { applicationIcon: n, applicationName: u, canNavigate: I, command: m, guildId: _ } = e,
-        N = a.useMemo(() => {
+    let { applicationIcon: n, applicationName: u, canNavigate: m, command: h, guildId: p } = e,
+        g = l.useMemo(() => {
             var e;
-            return 0 !== Object.keys(null !== (e = m.permissions) && void 0 !== e ? e : {}).length;
-        }, [m.permissions]),
-        E = a.useCallback(() => {
-            null != m &&
-                I() &&
-                (0, l.openModalLazy)(async () => {
+            return 0 !== Object.keys(null !== (e = h.permissions) && void 0 !== e ? e : {}).length;
+        }, [h.permissions]),
+        f = l.useCallback(() => {
+            null != h &&
+                m() &&
+                (0, r.openModalLazy)(async () => {
                     let { default: e } = await t.e('78786').then(t.bind(t, 50474));
                     return (t) =>
                         (0, i.jsx)(e, {
                             applicationIcon: n,
-                            applicationId: m.applicationId,
+                            applicationId: h.applicationId,
                             applicationName: u,
-                            command: m,
-                            guildId: _,
+                            command: h,
+                            guildId: p,
                             ...t
                         });
                 });
-        }, [n, u, I, m, _]),
-        T = a.useCallback(
+        }, [n, u, m, h, p]),
+        x = l.useCallback(
             (e) => {
-                (0, s.jW)(e, async () => {
+                (0, a.jW)(e, async () => {
                     let { default: e } = await t.e('5396').then(t.bind(t, 731646));
                     return (n) =>
                         (0, i.jsx)(e, {
                             ...n,
-                            id: m.id,
-                            label: d.Z.Messages.COPY_ID_COMMAND
+                            id: h.id,
+                            label: d.intl.string(d.t.oJ1Mu7)
                         });
                 });
             },
-            [m]
+            [h]
         ),
-        h = m.type === o.yU.CHAT ? l.SlashBoxIcon : l.PaperIcon,
-        g = (0, r.gw)(m.type, m.displayName);
-    return (0, i.jsxs)(l.Clickable, {
-        onClick: E,
+        b = h.type === o.yU.CHAT ? r.SlashBoxIcon : r.PaperIcon,
+        v = (0, s.gw)(h.type, h.displayName);
+    return (0, i.jsxs)(r.Clickable, {
+        onClick: f,
         className: c.item,
-        onContextMenu: T,
+        onContextMenu: x,
         children: [
             (0, i.jsxs)('div', {
                 className: c.identifier,
                 children: [
-                    (0, i.jsx)(h, {
+                    (0, i.jsx)(b, {
                         className: c.icon,
                         size: 'md',
                         color: 'currentColor'
                     }),
-                    (0, i.jsx)(l.Text, {
+                    (0, i.jsx)(r.Text, {
                         variant: 'text-md/normal',
-                        children: g
+                        children: v
                     })
                 ]
             }),
             (0, i.jsx)('div', {
                 className: c.statusContainer,
-                children: N
+                children: g
                     ? (0, i.jsxs)('div', {
                           className: c.statusLine,
                           children: [
-                              (0, i.jsx)(l.Text, {
+                              (0, i.jsx)(r.Text, {
                                   variant: 'text-md/normal',
-                                  children: d.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_STATUS_HAS_OVERRIDES
+                                  children: d.intl.string(d.t.jH4B9P)
                               }),
-                              (0, i.jsx)(l.CircleInformationIcon, {
+                              (0, i.jsx)(r.CircleInformationIcon, {
                                   size: 'sm',
                                   color: 'currentColor',
                                   className: c.statusIcon

@@ -7,75 +7,75 @@ var a,
     u = n(512722),
     c = n.n(u),
     d = n(392711),
-    _ = n.n(d),
-    E = n(442837),
-    f = n(46973),
-    h = n(570140),
-    p = n(594190),
-    I = n(444852),
-    m = n(569545),
-    T = n(687516),
-    S = n(139656),
-    g = n(358085),
-    A = n(199902),
-    N = n(314897),
-    R = n(131951),
-    O = n(158776),
-    v = n(19780),
+    f = n.n(d),
+    _ = n(442837),
+    h = n(46973),
+    p = n(570140),
+    m = n(594190),
+    g = n(444852),
+    E = n(569545),
+    v = n(687516),
+    I = n(139656),
+    S = n(358085),
+    T = n(199902),
+    b = n(314897),
+    y = n(131951),
+    A = n(158776),
+    N = n(19780),
     C = n(981631),
-    L = n(65154);
-let D = {},
-    y = {},
-    b = {},
+    R = n(65154);
+let O = {},
+    D = {},
+    L = {},
+    x = {},
+    w = C.hVg.THEATRE,
     M = {},
-    P = C.hVg.THEATRE,
-    U = {},
-    w = [];
-function x() {
-    _().forEach(U, (e, t) => {
-        e.destroy(e.isOwner ? 'sender-disconnect' : 'receiver-disconnect'), delete U[t];
+    P = [];
+function k() {
+    f().forEach(M, (e, t) => {
+        e.destroy(e.isOwner ? 'sender-disconnect' : 'receiver-disconnect'), delete M[t];
     });
 }
-function G(e) {
-    _().forEach(U, (t, n) => {
+function U(e) {
+    f().forEach(M, (t, n) => {
         t.updateStats(e);
     }),
         e
             .filter((e) => {
                 let { connection: t } = e;
-                return t.context === L.Yn.STREAM;
+                return t.context === R.Yn.STREAM;
             })
             .forEach((e) => {
                 let { stats: t } = e;
-                h.Z.dispatch({
+                p.Z.dispatch({
                     type: 'STREAM_STATS_UPDATE',
                     stats: t
                 });
             });
 }
-function k() {
+function G() {
     return !0;
 }
-class B extends (a = E.ZP.Store) {
+class B extends (a = _.ZP.Store) {
     getActiveStreamKey() {
-        return (0, S.Z)(R.Z) ? i : null;
+        return (0, I.Z)(y.Z) ? i : null;
     }
     getRTCConnections() {
-        return U;
+        return M;
     }
     getAllActiveStreamKeys() {
-        return Object.keys(U);
+        return Object.keys(M);
     }
     getRTCConnection(e) {
-        return U[e];
+        return M[e];
     }
     getStatsHistory(e, t, n) {
-        if (!(0, S.Z)(R.Z) || null == t) return null;
+        if (!(0, I.Z)(y.Z) || null == t) return null;
         if (n) {
-            let n = A.Z.getActiveStreamForUser(t, e);
-            if (null == n || 0 === A.Z.getViewerIds(n).length) return null;
+            let n = T.Z.getActiveStreamForUser(t, e);
+            if (null == n || 0 === T.Z.getViewerIds(n).length) return null;
         }
-        return w.map((e) =>
+        return P.map((e) =>
             n
                 ? (function (e) {
                       var t, n, r, i, a;
@@ -109,58 +109,58 @@ class B extends (a = E.ZP.Store) {
         );
     }
     getQuality() {
-        if (!(0, S.Z)(R.Z)) return C.IE4.UNKNOWN;
+        if (!(0, I.Z)(y.Z)) return C.IE4.UNKNOWN;
         let e = this.getActiveStreamKey(),
-            t = null != e ? U[e] : null;
+            t = null != e ? M[e] : null;
         return null != t ? t.quality : C.IE4.UNKNOWN;
     }
     getMediaSessionId(e) {
         if (null == e) return null;
-        let t = U[e];
+        let t = M[e];
         if (null != t) return null != t ? t.getMediaSessionId() : null;
     }
     getRtcConnectionId(e) {
         if (null == e) return null;
-        let t = U[e];
+        let t = M[e];
         if (null != t) return null != t ? t.getRTCConnectionId() : null;
     }
     getVideoStats(e) {
         if (null == e) return null;
-        let t = U[e];
+        let t = M[e];
         return null != t ? t.getVideoStats() : null;
     }
     getHostname(e) {
         if (null == e) return '';
-        let t = U[e];
+        let t = M[e];
         return null != t ? (null != t.hostname ? t.hostname : '') : '';
     }
     getRegion(e) {
         if (null == e) return null;
-        let t = U[e];
+        let t = M[e];
         return null != t ? t.getRegion() : null;
     }
     getMaxViewers(e) {
         if (null == e) return null;
-        let t = U[e];
+        let t = M[e];
         return null != t ? t.getMaxViewers() : null;
     }
     getStreamSourceId(e) {
-        return M[e];
+        return x[e];
     }
     getUserIds(e) {
-        let t = U[e];
+        let t = M[e];
         return null == t ? void 0 : t.getUserIds();
     }
     isUserConnected(e, t) {
-        let n = U[e];
+        let n = M[e];
         return null == n ? void 0 : n.getIsUserConnected(t);
     }
     getSecureFramesState(e) {
-        let t = U[e];
+        let t = M[e];
         return null == t ? void 0 : t.getSecureFramesState();
     }
     getSecureFramesRosterMapEntry(e, t) {
-        let n = U[e],
+        let n = M[e],
             r = null == n ? void 0 : n.getSecureFramesRosterMap();
         return null == r ? void 0 : r.get(t);
     }
@@ -175,44 +175,44 @@ class B extends (a = E.ZP.Store) {
           })
         : (s[o] = l),
     (t.Z = new B(
-        h.Z,
-        !R.Z.isSupported() || __OVERLAY__
+        p.Z,
+        !y.Z.isSupported() || __OVERLAY__
             ? {}
             : {
                   CONNECTION_OPEN: function (e) {
-                      (r = e.sessionId), (i = null), x();
+                      (r = e.sessionId), (i = null), k();
                   },
                   CONNECTION_CLOSED: function () {
-                      (r = null), (i = null), x();
+                      (r = null), (i = null), k();
                   },
-                  RTC_CONNECTION_STATE: k,
-                  RTC_CONNECTION_PING: k,
-                  RTC_CONNECTION_LOSS_RATE: k,
+                  RTC_CONNECTION_STATE: G,
+                  RTC_CONNECTION_PING: G,
+                  RTC_CONNECTION_LOSS_RATE: G,
                   RTC_CONNECTION_UPDATE_ID: function (e) {
-                      return _().some(U, (t) => t === e.connection);
+                      return f().some(M, (t) => t === e.connection);
                   },
-                  RTC_CONNECTION_SECURE_FRAMES_UPDATE: k,
+                  RTC_CONNECTION_SECURE_FRAMES_UPDATE: G,
                   STREAM_START: function (e) {
                       let { streamType: t, guildId: n, channelId: r, appContext: i, pid: a, sourceId: s } = e,
-                          o = (0, m.V9)({
+                          o = (0, E.V9)({
                               streamType: t,
                               guildId: n,
                               channelId: r,
-                              ownerId: N.default.getId()
+                              ownerId: b.default.getId()
                           });
                       if (
-                          ((D[o] = i),
-                          _().forEach(U, (e) => {
+                          ((O[o] = i),
+                          f().forEach(M, (e) => {
                               let { analyticsContext: t } = e;
                               t.setActionContext(i);
                           }),
-                          (M[o] = s),
-                          (b[o] = a),
+                          (x[o] = s),
+                          (L[o] = a),
                           null != a)
                       ) {
-                          let e = p.ZP.getGameForPID(a);
+                          let e = m.ZP.getGameForPID(a);
                           null != e &&
-                              (y[o] = {
+                              (D[o] = {
                                   name: e.name,
                                   id: e.id,
                                   exe: e.exeName,
@@ -222,86 +222,86 @@ class B extends (a = E.ZP.Store) {
                   },
                   STREAM_STOP: function (e) {
                       let { appContext: t, streamKey: n } = e;
-                      (D[n] = t),
-                          _().forEach(U, (e) => {
+                      (O[n] = t),
+                          f().forEach(M, (e) => {
                               let { analyticsContext: n } = e;
                               n.setActionContext(t);
                           }),
-                          (M[n] = null),
-                          (b[n] = null);
+                          (x[n] = null),
+                          (L[n] = null);
                   },
                   STREAM_CREATE: function (e) {
                       let { streamKey: t, rtcServerId: n, region: a, viewerIds: s } = e;
                       i = t;
-                      let o = U[t];
+                      let o = M[t];
                       if (null == o && null != n) {
                           var l, u, d;
-                          null == b[t] && (y[t] = null);
-                          let e = (0, m.my)(t);
-                          null == y[t] && null == M[t] && (y[t] = (0, T.L2)(e, O.Z));
-                          let i = new I.A({
+                          null == L[t] && (D[t] = null);
+                          let e = (0, E.my)(t);
+                          null == D[t] && null == x[t] && (D[t] = (0, v.L2)(e, A.Z));
+                          let i = new g.A({
                               streamRegion: a,
-                              streamApplication: y[t],
+                              streamApplication: D[t],
                               streamSourceType: (function (e) {
                                   var t, n, r;
                                   if (null == e) return 'unknown';
-                                  if (g.isPlatformEmbedded || (null === (t = platform) || void 0 === t ? void 0 : t.name) === 'Chrome') {
+                                  if (S.isPlatformEmbedded || (null === (t = platform) || void 0 === t ? void 0 : t.name) === 'Chrome') {
                                       if (e.startsWith('web-contents-media-stream:')) return 'tab';
                                       if (e.startsWith('window:')) return 'window';
                                       else if (e.startsWith('screen:')) return 'screen';
                                   } else if ((null === (n = platform) || void 0 === n ? void 0 : n.name) === 'Firefox') return '' !== e ? 'window' : 'screen';
                                   else if ((null === (r = platform) || void 0 === r ? void 0 : r.name) === 'Safari') return 'window';
                                   return 'unknown';
-                              })(M[t]),
-                              actionContext: D[t],
+                              })(x[t]),
+                              actionContext: O[t],
                               numViewers: null != s ? s.length : 0
                           });
                           (l = t),
                               (u = n),
                               (d = i),
                               c()(null != r, 'Creating RTCConnection without session.'),
-                              (o = new I.Z({
+                              (o = new g.Z({
                                   sessionId: r,
                                   streamKey: l,
                                   serverId: u,
-                                  initialLayout: P,
+                                  initialLayout: w,
                                   analyticsContext: d,
-                                  isStreamer: null != y[l],
-                                  parentMediaSessionId: v.Z.getMediaSessionId()
+                                  isStreamer: null != D[l],
+                                  parentMediaSessionId: N.Z.getMediaSessionId()
                               })),
-                              (U[t] = o);
+                              (M[t] = o);
                       }
-                      (w = []), R.Z.getMediaEngine().on(f.aB.ConnectionStats, G);
+                      (P = []), y.Z.getMediaEngine().on(h.aB.ConnectionStats, U);
                   },
                   STREAM_SERVER_UPDATE: function (e) {
-                      let t = U[e.streamKey];
+                      let t = M[e.streamKey];
                       if (null == t) return !1;
                       t.connect(e.endpoint, e.token);
                   },
                   STREAM_UPDATE: function (e) {
                       let { streamKey: t, viewerIds: n, paused: r } = e,
-                          i = U[t];
+                          i = M[t];
                       if (null == i) return !1;
                       null != n && i.analyticsContext.trackViewerCount(n.length), i.streamUpdate(r);
                   },
                   STREAM_DELETE: function (e) {
                       let { streamKey: t } = e,
-                          n = U[t];
+                          n = M[t];
                       if (null == n) return !1;
-                      t === i && ((i = null), R.Z.getMediaEngine().off(f.aB.ConnectionStats, G)), n.destroy('stream-end'), delete U[t];
+                      t === i && ((i = null), y.Z.getMediaEngine().off(h.aB.ConnectionStats, U)), n.destroy('stream-end'), delete M[t];
                   },
                   STREAM_STATS_UPDATE: function (e) {
                       let { stats: t } = e;
                       if (null == t) return !1;
-                      w.push(t), w.length > 30 && w.shift();
+                      P.push(t), P.length > 30 && P.shift();
                   },
                   STREAM_LAYOUT_UPDATE: function (e) {
                       let { layout: t } = e;
-                      (P = t), Object.values(U).forEach((e) => e.layoutChange(t));
+                      (w = t), Object.values(M).forEach((e) => e.layoutChange(t));
                   },
                   RTC_DEBUG_SET_SIMULCAST_OVERRIDE: function (e) {
                       let { userId: t, context: n, quality: r } = e;
-                      _().forEach(U, (e) => {
+                      f().forEach(M, (e) => {
                           e.setSimulcastDebugOverride(t, n, r);
                       });
                   }

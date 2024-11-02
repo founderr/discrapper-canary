@@ -1,108 +1,108 @@
 n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(481060),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    s = n(481060),
     o = n(770146),
     c = n(600164),
     d = n(424218),
     u = n(823379),
-    _ = n(358085),
-    E = n(843445),
-    h = n(981631),
-    m = n(689938),
-    I = n(803215);
-let p = {
-    [h.TaA.WINDOWS]: _.PlatformTypes.WINDOWS,
-    [h.TaA.MACOS]: _.PlatformTypes.OSX,
-    [h.TaA.LINUX]: _.PlatformTypes.LINUX
+    h = n(358085),
+    m = n(843445),
+    p = n(981631),
+    g = n(388032),
+    f = n(803215);
+let _ = {
+    [p.TaA.WINDOWS]: h.PlatformTypes.WINDOWS,
+    [p.TaA.MACOS]: h.PlatformTypes.OSX,
+    [p.TaA.LINUX]: h.PlatformTypes.LINUX
 };
-class g extends a.PureComponent {
+class E extends r.PureComponent {
     render() {
-        let { active: e, children: t, pageSize: n, onClick: a } = this.props,
-            s = n === E.b.LARGE;
-        return (0, i.jsx)(l.Button, {
-            size: s ? l.Button.Sizes.MIN : l.Button.Sizes.LARGE,
-            fullWidth: !s,
-            color: e ? I.tabSelectedColor : I.tabNotSelectedColor,
-            className: r()({
-                [I.tabPageLarge]: s,
-                [I.tabPageSmall]: !s,
-                [I.tabSelected]: e,
-                [I.tabNotSelected]: !e
+        let { active: e, children: t, pageSize: n, onClick: r } = this.props,
+            l = n === m.b.LARGE;
+        return (0, i.jsx)(s.Button, {
+            size: l ? s.Button.Sizes.MIN : s.Button.Sizes.LARGE,
+            fullWidth: !l,
+            color: e ? f.tabSelectedColor : f.tabNotSelectedColor,
+            className: a()({
+                [f.tabPageLarge]: l,
+                [f.tabPageSmall]: !l,
+                [f.tabSelected]: e,
+                [f.tabNotSelected]: !e
             }),
-            onClick: a,
+            onClick: r,
             children: t
         });
     }
 }
-let T = (e) => [
+let I = (e) => [
     {
-        key: m.Z.Messages.APPLICATION_STORE_SPECS_OS,
+        key: g.intl.string(g.t['0TcHzs']),
         value: e.operating_system_version
     },
     {
-        key: m.Z.Messages.APPLICATION_STORE_SPECS_CPU,
+        key: g.intl.string(g.t.eOX6Hh),
         value: e.cpu
     },
     {
-        key: m.Z.Messages.APPLICATION_STORE_SPECS_MEMORY,
-        value: null != e.ram ? m.Z.Messages.APPLICATION_STORE_SPECS_MEMORY_VALUE.format({ size: (0, d.BU)(1000 * e.ram, { showDecimalForGB: !1 }) }) : null
+        key: g.intl.string(g.t['+WJ5XV']),
+        value: null != e.ram ? g.intl.formatToPlainString(g.t.RNRSl5, { size: (0, d.BU)(1000 * e.ram, { showDecimalForGB: !1 }) }) : null
     },
     {
-        key: m.Z.Messages.APPLICATION_STORE_SPECS_VIDEO,
+        key: g.intl.string(g.t['+3s/V1']),
         value: e.gpu
     },
     {
-        key: m.Z.Messages.APPLICATION_STORE_SPECS_STORAGE,
+        key: g.intl.string(g.t['L+x5wM']),
         value: null != e.disk ? (0, d.BU)(1000 * e.disk, { showDecimalForGB: !1 }) : null
     },
     {
-        key: m.Z.Messages.APPLICATION_STORE_SPECS_SOUND,
+        key: g.intl.string(g.t['Ghp2/P']),
         value: e.sound_card
     },
     {
-        key: m.Z.Messages.APPLICATION_STORE_SPECS_NETWORK,
+        key: g.intl.string(g.t['+w6nJi']),
         value: e.network
     },
     {
-        key: m.Z.Messages.APPLICATION_STORE_SPECS_NOTES,
+        key: g.intl.string(g.t.Au3Vbm),
         value: e.notes
     }
 ];
-class S extends a.PureComponent {
+class C extends r.PureComponent {
     static getDerivedStateFromProps(e, t) {
         let { systemRequirements: n } = e,
             { selectedOperatingSystem: i } = t,
-            a = Object.keys(n);
-        return a.includes(i) ? null : { selectedOperatingSystem: a[0] };
+            r = Object.keys(n);
+        return r.includes(i) ? null : { selectedOperatingSystem: r[0] };
     }
     renderTabs() {
         let { pageSize: e, systemRequirements: t } = this.props,
             { selectedOperatingSystem: n } = this.state,
-            a = Object.keys(t);
-        return 1 === a.length
+            r = Object.keys(t);
+        return 1 === r.length
             ? null
             : (0, i.jsxs)(c.Z, {
-                  className: I.tabs,
+                  className: f.tabs,
                   children: [
-                      (0, i.jsx)('div', { className: I.separator }),
-                      a.map((t) =>
+                      (0, i.jsx)('div', { className: f.separator }),
+                      r.map((t) =>
                           (0, i.jsx)(
-                              g,
+                              E,
                               {
                                   active: t === n,
                                   onClick: () => this.handleSelectOperatingSystem(t),
                                   pageSize: e,
                                   children: (function (e) {
                                       switch (e) {
-                                          case h.TaA.WINDOWS:
-                                              return m.Z.Messages.WINDOWS;
-                                          case h.TaA.MACOS:
-                                              return m.Z.Messages.MACOS;
-                                          case h.TaA.LINUX:
-                                              return m.Z.Messages.LINUX;
+                                          case p.TaA.WINDOWS:
+                                              return g.intl.string(g.t['0/xHFB']);
+                                          case p.TaA.MACOS:
+                                              return g.intl.string(g.t.E4u4n5);
+                                          case p.TaA.LINUX:
+                                              return g.intl.string(g.t.tcawo6);
                                       }
                                   })(t)
                               },
@@ -114,7 +114,7 @@ class S extends a.PureComponent {
     }
     renderRequirementsSection(e, t) {
         if (null == e) return null;
-        let n = T(e)
+        let n = I(e)
             .map((e, t) => {
                 let n = null != e.value ? e.value.trim() : null;
                 return null == n || 0 === n.length
@@ -122,10 +122,10 @@ class S extends a.PureComponent {
                     : (0, i.jsxs)(
                           'div',
                           {
-                              className: I.requirement,
+                              className: f.requirement,
                               children: [
                                   (0, i.jsxs)('span', {
-                                      className: I.requirementKey,
+                                      className: f.requirementKey,
                                       children: [e.key, ':']
                                   }),
                                   n
@@ -136,7 +136,7 @@ class S extends a.PureComponent {
             })
             .filter(u.lm);
         return (0, i.jsxs)('div', {
-            className: I.requirements,
+            className: f.requirements,
             children: [
                 (0, i.jsx)(o.Z, {
                     tag: 'h4',
@@ -149,14 +149,14 @@ class S extends a.PureComponent {
     renderBody() {
         let { minimum: e, recommended: t } = this.props.systemRequirements[this.state.selectedOperatingSystem];
         return (0, i.jsxs)('div', {
-            className: I.requirementsContainer,
-            children: [this.renderRequirementsSection(e, m.Z.Messages.APPLICATION_STORE_SPECS_MINIMUM), this.renderRequirementsSection(t, m.Z.Messages.APPLICATION_STORE_SPECS_RECOMMENDED)]
+            className: f.requirementsContainer,
+            children: [this.renderRequirementsSection(e, g.intl.string(g.t.QCCMXF)), this.renderRequirementsSection(t, g.intl.string(g.t.He39ws))]
         });
     }
     render() {
         return (0, i.jsxs)('div', {
             className: this.props.className,
-            children: [(0, i.jsx)(o.Z, { children: m.Z.Messages.APPLICATION_STORE_SECTION_TITLE_SYSTEM_REQUIREMENTS }), this.renderTabs(), this.renderBody()]
+            children: [(0, i.jsx)(o.Z, { children: g.intl.string(g.t.IkOAoq) }), this.renderTabs(), this.renderBody()]
         });
     }
     constructor(e) {
@@ -175,11 +175,11 @@ class S extends a.PureComponent {
                       writable: !0
                   })
                 : (t[n] = i);
-        let a = (0, _.getPlatform)(),
-            s = Object.keys(e.systemRequirements),
-            r = s[0];
-        for (let e of s) p[e] === a && (r = e);
-        this.state = { selectedOperatingSystem: r };
+        let r = (0, h.getPlatform)(),
+            l = Object.keys(e.systemRequirements),
+            a = l[0];
+        for (let e of l) _[e] === r && (a = e);
+        this.state = { selectedOperatingSystem: a };
     }
 }
-t.Z = S;
+t.Z = C;

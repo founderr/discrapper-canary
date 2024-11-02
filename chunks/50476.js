@@ -1,10 +1,10 @@
 var o = n(200651),
-    s = n(481060),
-    r = n(689938),
+    r = n(481060),
+    s = n(388032),
     a = n(597916);
-function l(e) {
+function i(e) {
     let { onClick: t, children: n } = e;
-    return (0, o.jsx)(s.Button, {
+    return (0, o.jsx)(r.Button, {
         onClick: t,
         className: a.button,
         innerClassName: a.buttonInner,
@@ -17,13 +17,13 @@ t.Z = function (e) {
     return (0, o.jsxs)('div', {
         className: a.buttons,
         children: [
-            (0, o.jsxs)(l, {
+            (0, o.jsxs)(i, {
                 onClick: t,
-                children: [r.Z.Messages.QUEST_MULTIPLATFORM_SELECT_DESKTOP, (0, o.jsx)(s.ScreenIcon, { size: 'sm' })]
+                children: [s.intl.string(s.t.QXc019), (0, o.jsx)(r.ScreenIcon, { size: 'sm' })]
             }),
-            (0, o.jsxs)(l, {
+            (0, o.jsxs)(i, {
                 onClick: n,
-                children: [r.Z.Messages.QUEST_MULTIPLATFORM_SELECT_CONSOLE, (0, o.jsx)(s.GameControllerIcon, { size: 'sm' })]
+                children: [s.intl.string(s.t['8lAfuL']), (0, o.jsx)(r.GameControllerIcon, { size: 'sm' })]
             })
         ]
     });

@@ -1,76 +1,76 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return x;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(990547),
-    i = n(481060),
-    r = n(213609),
-    l = n(787051),
+var r = n(990547),
+    l = n(481060),
+    s = n(213609),
+    a = n(787051),
     o = n(696936),
     c = n(539290),
     d = n(975464),
-    u = n(689938),
-    _ = n(702792),
-    I = n(270395);
-function E(e) {
+    u = n(388032),
+    m = n(702792),
+    h = n(270395);
+function g(e) {
     let { config: t } = e,
-        { noticeText: n, ctaLabel: a, ctaClickable: r, onCtaClicked: l } = t;
-    return (0, s.jsxs)('div', {
-        className: _.__invalid_ctaContainer,
+        { noticeText: n, ctaLabel: r, ctaClickable: s, onCtaClicked: a } = t;
+    return (0, i.jsxs)('div', {
+        className: m.__invalid_ctaContainer,
         children: [
-            (0, s.jsx)('img', {
-                className: _.__invalid_heroBanner,
-                src: I,
-                alt: u.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_HERO_BANNER_ALT
+            (0, i.jsx)('img', {
+                className: m.__invalid_heroBanner,
+                src: h,
+                alt: u.intl.string(u.t.Af4klJ)
             }),
-            (0, s.jsxs)('div', {
-                className: _.__invalid_ctaContent,
+            (0, i.jsxs)('div', {
+                className: m.__invalid_ctaContent,
                 children: [
-                    (0, s.jsx)(i.Heading, {
+                    (0, i.jsx)(l.Heading, {
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
-                        children: u.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_DESKTOP_V2_TITLE
+                        children: u.intl.string(u.t.PqYfh4)
                     }),
-                    (0, s.jsx)(i.Spacer, { size: 12 }),
-                    (0, s.jsx)(i.Text, {
+                    (0, i.jsx)(l.Spacer, { size: 12 }),
+                    (0, i.jsx)(l.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: u.Z.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_V2_SUBTITLE
+                        children: u.intl.string(u.t['41wkMT'])
                     }),
-                    (0, s.jsx)(i.Spacer, { size: 24 }),
-                    (0, s.jsx)(c.Z, {
-                        className: _.waitlist,
+                    (0, i.jsx)(l.Spacer, { size: 24 }),
+                    (0, i.jsx)(c.Z, {
+                        className: m.waitlist,
                         color: o.W.BROWN,
                         buttonPosition: c.E.RIGHT,
                         notice: n,
-                        ctaLabel: a,
-                        ctaDisabled: !r,
-                        ctaClassName: _.waitlistCtaButton,
-                        onClick: l
+                        ctaLabel: r,
+                        ctaDisabled: !s,
+                        ctaClassName: m.waitlistCtaButton,
+                        onClick: a
                     })
                 ]
             })
         ]
     });
 }
-function T(e) {
+function x(e) {
     let { guild: t, config: n } = e,
-        { isLoading: o, error: c, creatorMonetizationOnboardingMarketing: u } = (0, l.Z)(t.id);
-    return ((0, r.Z)({
-        type: a.ImpressionTypes.PANE,
-        name: a.ImpressionNames.ENABLE_CREATOR_MONETIZATION_WAITLIST_LANDING,
+        { isLoading: o, error: c, creatorMonetizationOnboardingMarketing: u } = (0, a.Z)(t.id);
+    return ((0, s.Z)({
+        type: r.ImpressionTypes.PANE,
+        name: r.ImpressionNames.ENABLE_CREATOR_MONETIZATION_WAITLIST_LANDING,
         properties: { guild_id: t.id }
     }),
     o)
-        ? (0, s.jsx)(i.Spinner, {})
-        : (0, s.jsxs)('div', {
-              className: _.__invalid_container,
+        ? (0, i.jsx)(l.Spinner, {})
+        : (0, i.jsxs)('div', {
+              className: m.__invalid_container,
               children: [
-                  (0, s.jsx)(E, { config: n }),
-                  (0, s.jsx)(d.C, {
+                  (0, i.jsx)(g, { config: n }),
+                  (0, i.jsx)(d.C, {
                       onboardingMarketing: u,
                       onboardingMarketingError: c
                   })

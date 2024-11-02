@@ -12,11 +12,11 @@ var r,
     u = n(100621),
     c = n(481060),
     d = n(110924),
-    _ = n(247224);
+    f = n(247224);
 ((r = i || (i = {})).SUBTLE = 'SUBTLE'), (r.DARK = 'DARK'), (r.BLUR = 'BLUR');
-let E = s.forwardRef(function (e, t) {
-    let { backdropStyle: n = 'SUBTLE', backdropInstant: r = !1, zIndexBoost: i = 0, LayerComponent: s, isVisible: o, onClose: E } = e,
-        f = (function () {
+let _ = s.forwardRef(function (e, t) {
+    let { backdropStyle: n = 'SUBTLE', backdropInstant: r = !1, zIndexBoost: i = 0, LayerComponent: s, isVisible: o, onClose: _ } = e,
+        h = (function () {
             let e = (0, c.useToken)(c.tokens.colors.BG_BACKDROP_NO_OPACITY).spring({ opacity: 0.25 }),
                 t = (0, c.useToken)(c.tokens.colors.BG_BACKDROP).spring();
             return {
@@ -25,51 +25,51 @@ let E = s.forwardRef(function (e, t) {
                 BLUR: t
             };
         })()[n],
-        h = (0, c.useToken)(c.tokens.colors.BG_BACKDROP_NO_OPACITY).spring({ opacity: 0 }),
-        p = {
-            background: h,
+        p = (0, c.useToken)(c.tokens.colors.BG_BACKDROP_NO_OPACITY).spring({ opacity: 0 }),
+        m = {
+            background: p,
             backdropFilter: 'blur(0px)'
         },
-        I = (0, d.Z)(r),
-        m = (0, c.useTransition)(
+        g = (0, d.Z)(r),
+        E = (0, c.useTransition)(
             o,
             {
                 keys: (e) => (e ? 'backdrop' : 'empty'),
-                config: { duration: r || I ? 0 : 300 },
-                from: p,
+                config: { duration: r || g ? 0 : 300 },
+                from: m,
                 enter: {
-                    background: f,
+                    background: h,
                     backdropFilter: 'blur('.concat('BLUR' === n ? 8 : 0, 'px)')
                 },
-                leave: p
+                leave: m
             },
             'animate-always'
         );
     if (null == s) {
         let e = { zIndex: 1000 + i };
-        return m((t, n) =>
+        return E((t, n) =>
             n
                 ? (0, a.jsx)(u.animated.div, {
-                      className: _.backdrop,
+                      className: f.backdrop,
                       style: {
                           ...t,
                           ...e
                       },
-                      onClick: E
+                      onClick: _
                   })
                 : null
         );
     }
     return (0, a.jsx)(s, {
-        children: m((e, t) =>
+        children: E((e, t) =>
             t
                 ? (0, a.jsx)(u.animated.div, {
-                      className: l()(_.backdrop, _.withLayer),
+                      className: l()(f.backdrop, f.withLayer),
                       style: e,
-                      onClick: E
+                      onClick: _
                   })
                 : null
         )
     });
 });
-t.Z = E;
+t.Z = _;

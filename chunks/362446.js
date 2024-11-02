@@ -3,8 +3,8 @@ var i,
     l,
     r,
     a,
-    s = n(442837),
-    o = n(570140),
+    o = n(442837),
+    s = n(570140),
     c = n(981631);
 let u = {};
 function d(e) {
@@ -26,7 +26,7 @@ function h(e, t, n) {
     let i = u[(e = null != e ? e : 'null')];
     return null != i ? t(i) : n;
 }
-class p extends (i = s.ZP.Store) {
+class p extends (i = o.ZP.Store) {
     getConnectionState(e) {
         return h(
             e,
@@ -97,7 +97,7 @@ class p extends (i = s.ZP.Store) {
               writable: !0
           })
         : (l[r] = a),
-    (t.Z = new p(o.Z, {
+    (t.Z = new p(s.Z, {
         OVERLAY_INITIALIZE: function (e) {
             u = e.rtcConnectionStates;
         },

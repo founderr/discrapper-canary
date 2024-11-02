@@ -8,59 +8,59 @@ var i,
     r = n(200651);
 n(192379);
 var a = n(442837),
-    s = n(481060),
-    o = n(893776),
+    o = n(481060),
+    s = n(893776),
     c = n(391650),
     u = n(313201),
     d = n(144114),
     h = n(607744),
     p = n(594174),
     f = n(981631),
-    _ = n(815660),
-    m = n(689938),
-    g = n(816614);
+    m = n(815660),
+    g = n(388032),
+    C = n(816614);
 (i = l || (l = {}))[(i.VOICE = 0)] = 'VOICE';
 t.Z = (e) => {
     let { type: t, guildId: i, closePopout: l } = e,
-        C = (0, u.Dt)(),
-        { notClaimed: I, notEmailVerified: E, notPhoneVerified: N, newAccount: x, newMember: S } = (0, a.e7)([h.Z], () => h.Z.getCheck(i), [i]),
-        v = 0 === t ? m.Z.Messages.GUILD_VERIFICATION_VOICE_HEADER : null,
-        Z = null,
-        T = null;
-    return (0 === t && (I ? ((Z = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_CLAIMED), (T = m.Z.Messages.CLAIM_ACCOUNT)) : N ? ((Z = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_PHONE_VERIFIED), (T = m.Z.Messages.VERIFY_PHONE)) : E ? ((Z = m.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_VERIFIED), (T = m.Z.Messages.RESEND_VERIFICATION_EMAIL)) : S ? ((Z = m.Z.Messages.GUILD_VERIFICATION_VOICE_MEMBER_AGE.format({ min: f.YeM.MEMBER_AGE })), (T = m.Z.Messages.OKAY)) : x && ((Z = m.Z.Messages.GUILD_VERIFICATION_VOICE_ACCOUNT_AGE.format({ min: f.YeM.ACCOUNT_AGE })), (T = m.Z.Messages.OKAY))), null == v || null == Z)
+        _ = (0, u.Dt)(),
+        { notClaimed: x, notEmailVerified: v, notPhoneVerified: I, newAccount: b, newMember: N } = (0, a.e7)([h.Z], () => h.Z.getCheck(i), [i]),
+        E = 0 === t ? g.intl.string(g.t['6zY8BA']) : null,
+        S = null,
+        Z = null;
+    return (0 === t && (x ? ((S = g.intl.string(g.t.IRxUlJ)), (Z = g.intl.string(g.t.fiNVio))) : I ? ((S = g.intl.string(g.t.vW8iUF)), (Z = g.intl.string(g.t['50gfOj']))) : v ? ((S = g.intl.string(g.t.vdSOp6)), (Z = g.intl.string(g.t.lm1UKi))) : N ? ((S = g.intl.formatToPlainString(g.t.v1ktYW, { min: f.YeM.MEMBER_AGE })), (Z = g.intl.string(g.t.BddRzc))) : b && ((S = g.intl.formatToPlainString(g.t['sncw4+'], { min: f.YeM.ACCOUNT_AGE })), (Z = g.intl.string(g.t.BddRzc)))), null == E || null == S)
         ? null
-        : (0, r.jsxs)(s.Dialog, {
-              className: g.container,
-              'aria-labelledby': C,
+        : (0, r.jsxs)(o.Dialog, {
+              className: C.container,
+              'aria-labelledby': _,
               children: [
                   (0, r.jsx)('img', {
                       alt: '',
-                      className: g.image,
+                      className: C.image,
                       src: n(64395)
                   }),
                   (0, r.jsxs)('div', {
-                      className: g.content,
+                      className: C.content,
                       children: [
-                          (0, r.jsx)(s.Heading, {
+                          (0, r.jsx)(o.Heading, {
                               variant: 'heading-md/semibold',
-                              id: C,
-                              children: v
+                              id: _,
+                              children: E
                           }),
-                          (0, r.jsx)(s.Text, {
+                          (0, r.jsx)(o.Text, {
                               color: 'header-secondary',
                               variant: 'text-sm/normal',
-                              children: Z
+                              children: S
                           }),
                           (0, r.jsxs)('div', {
-                              className: g.buttonContainer,
+                              className: C.buttonContainer,
                               children: [
-                                  null != T
-                                      ? (0, r.jsx)(s.Button, {
+                                  null != Z
+                                      ? (0, r.jsx)(o.Button, {
                                             onClick: () => {
-                                                I
+                                                x
                                                     ? c.j()
-                                                    : N
-                                                      ? (0, s.openModalLazy)(
+                                                    : I
+                                                      ? (0, o.openModalLazy)(
                                                             async () => {
                                                                 let { default: e } = await Promise.all([n.e('76540'), n.e('63461')]).then(n.bind(n, 607018));
                                                                 return (t) =>
@@ -69,35 +69,35 @@ t.Z = (e) => {
                                                                         ...t
                                                                     });
                                                             },
-                                                            { modalKey: _.M }
+                                                            { modalKey: m.M }
                                                         )
-                                                      : E &&
-                                                        (o.Z.verifyResend(),
-                                                        (0, s.openModal)((e) => {
+                                                      : v &&
+                                                        (s.Z.verifyResend(),
+                                                        (0, o.openModal)((e) => {
                                                             var t;
-                                                            return (0, r.jsx)(s.ConfirmModal, {
-                                                                header: m.Z.Messages.VERIFICATION_EMAIL_TITLE,
-                                                                confirmText: m.Z.Messages.OKAY,
-                                                                confirmButtonColor: s.Button.Colors.BRAND,
+                                                            return (0, r.jsx)(o.ConfirmModal, {
+                                                                header: g.intl.string(g.t.LykQYm),
+                                                                confirmText: g.intl.string(g.t.BddRzc),
+                                                                confirmButtonColor: o.Button.Colors.BRAND,
                                                                 ...e,
-                                                                children: (0, r.jsx)(s.Text, {
+                                                                children: (0, r.jsx)(o.Text, {
                                                                     variant: 'text-md/normal',
-                                                                    children: m.Z.Messages.VERIFICATION_EMAIL_BODY.format({ email: null === (t = p.default.getCurrentUser()) || void 0 === t ? void 0 : t.email })
+                                                                    children: g.intl.format(g.t.azKEPz, { email: null === (t = p.default.getCurrentUser()) || void 0 === t ? void 0 : t.email })
                                                                 })
                                                             });
                                                         })),
                                                     l();
                                             },
-                                            className: g.primaryButton,
-                                            children: T
+                                            className: C.primaryButton,
+                                            children: Z
                                         })
                                       : null,
-                                  I || N || E
-                                      ? (0, r.jsx)(s.Button, {
+                                  x || I || v
+                                      ? (0, r.jsx)(o.Button, {
                                             onClick: l,
-                                            look: s.Button.Looks.BLANK,
-                                            className: g.cancel,
-                                            children: m.Z.Messages.NEVERMIND
+                                            look: o.Button.Looks.BLANK,
+                                            className: C.cancel,
+                                            children: g.intl.string(g.t.oEAioK)
                                         })
                                       : null
                               ]

@@ -8,32 +8,32 @@ var r,
     u = n(392711),
     c = n.n(u),
     d = n(442837),
-    _ = n(570140);
+    f = n(570140);
 ((a = r || (r = {}))[(a.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (a[(a.FETCHING = 1)] = 'FETCHING'), (a[(a.FETCH_SUCCESS = 2)] = 'FETCH_SUCCESS');
-let E = {},
-    f = {};
-function h(e) {
+let _ = {},
+    h = {};
+function p(e) {
     let { assets: t } = e,
-        n = { ...E };
+        n = { ..._ };
     for (let e in t) {
         var r;
         let i = t[e];
         (n[e] = 2),
-            (f[e] = {
+            (h[e] = {
                 assets: null !== (r = c().keyBy(i, 'name')) && void 0 !== r ? r : {},
                 lastUpdated: Date.now()
             });
     }
-    E = n;
+    _ = n;
 }
-class p extends (i = d.ZP.Store) {
+class m extends (i = d.ZP.Store) {
     getApplicationAssetFetchState(e) {
         var t;
-        return null !== (t = E[e]) && void 0 !== t ? t : 0;
+        return null !== (t = _[e]) && void 0 !== t ? t : 0;
     }
     getFetchingIds() {
         return [
-            ...Object.entries(E)
+            ...Object.entries(_)
                 .filter((e) => {
                     let [, t] = e;
                     return 1 === t;
@@ -45,11 +45,11 @@ class p extends (i = d.ZP.Store) {
         ];
     }
     getApplicationAssets(e) {
-        return f[e];
+        return h[e];
     }
 }
 (l = 'ApplicationAssetsStore'),
-    (o = 'displayName') in (s = p)
+    (o = 'displayName') in (s = m)
         ? Object.defineProperty(s, o, {
               value: l,
               enumerable: !0,
@@ -57,18 +57,18 @@ class p extends (i = d.ZP.Store) {
               writable: !0
           })
         : (s[o] = l),
-    (t.Z = new p(_.Z, {
+    (t.Z = new m(f.Z, {
         APPLICATION_ASSETS_FETCH: function (e) {
             let { applicationId: t } = e;
-            E = {
-                ...E,
+            _ = {
+                ..._,
                 [t]: 1
             };
         },
         APPLICATION_ASSETS_FETCH_SUCCESS: function (e) {
             let { applicationId: t } = e;
-            E = {
-                ...E,
+            _ = {
+                ..._,
                 [t]: 2
             };
         },
@@ -76,12 +76,12 @@ class p extends (i = d.ZP.Store) {
             let { applicationId: t, assets: n } = e;
             if (null != n) {
                 var r;
-                f[t] = {
+                h[t] = {
                     assets: null !== (r = c().keyBy(n, 'name')) && void 0 !== r ? r : {},
                     lastUpdated: Date.now()
                 };
-            } else delete f[t];
+            } else delete h[t];
         },
-        EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS: h,
-        DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: h
+        EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS: p,
+        DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: p
     }));

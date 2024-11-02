@@ -8,14 +8,14 @@ var r = n(423650),
     i = n.n(r),
     a = n(754700),
     s = n(628665),
-    o = n(689938);
+    o = n(388032);
 function l(e) {
     let { gameName: t } = e;
     return {
         id: '1290718710658629658',
-        title: o.Z.Messages.QUESTS_DISMISSAL_SURVEY_VIDEO_TITLE,
-        subtitle: o.Z.Messages.QUESTS_DISMISSAL_SURVEY_VIDEO_SUBTITLE,
-        choices: [...i()([o.Z.Messages.QUESTS_DISMISSAL_SURVEY_CHOICE_DONT_PLAY_GAME.format({ gameName: t }), o.Z.Messages.QUESTS_DISMISSAL_SURVEY_CHOICE_INVALUABLE, o.Z.Messages.QUESTS_DISMISSAL_SURVEY_CHOICE_TOO_LONG, o.Z.Messages.QUESTS_DISMISSAL_SURVEY_CHOICE_UNSURE_HOW]), o.Z.Messages.QUESTS_DISMISSAL_SURVEY_CHOICE_OTHER],
+        title: o.intl.string(o.t.ugbhDQ),
+        subtitle: o.intl.string(o.t.FIYcpK),
+        choices: [...i()([o.intl.formatToPlainString(o.t.O0JX4e, { gameName: t }), o.intl.string(o.t.ETU4NT), o.intl.string(o.t.uRIIpK), o.intl.string(o.t['5dxvxs'])]), o.intl.string(o.t.RFasgo)],
         taskType: a.X.WATCH_VIDEO,
         experiment: s.Y
     };

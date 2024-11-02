@@ -1,93 +1,93 @@
-o.r(a),
-    o.d(a, {
+i.r(t),
+    i.d(t, {
         default: function () {
-            return E;
+            return x;
         }
     }),
-    o(47120);
-var i = o(200651),
-    s = o(192379),
-    t = o(120356),
-    n = o.n(t),
-    l = o(481060),
-    d = o(313201),
-    r = o(309081),
-    m = o(35463),
-    u = o(489887),
-    c = o(689938),
-    h = o(669875);
-let j = (0, d.hQ)();
-function E(e) {
-    var a;
-    let { channelId: o, answer: t, onSave: d, transitionState: E, onClose: _ } = e,
+    i(47120);
+var a = i(200651),
+    o = i(192379),
+    n = i(120356),
+    s = i.n(n),
+    l = i(481060),
+    r = i(313201),
+    d = i(309081),
+    m = i(35463),
+    u = i(489887),
+    c = i(388032),
+    h = i(669875);
+let j = (0, r.hQ)();
+function x(e) {
+    var t;
+    let { channelId: i, answer: n, onSave: r, transitionState: x, onClose: g } = e,
         {
-            emoji: g,
-            hasUpload: x,
-            upload: C,
-            mediaUrl: I,
-            mediaFilename: L
+            emoji: p,
+            hasUpload: b,
+            upload: v,
+            mediaUrl: C,
+            mediaFilename: I
         } = (0, m.Z)({
-            channelId: o,
-            localCreationAnswerId: t.localCreationAnswerId,
-            image: t.image
+            channelId: i,
+            localCreationAnswerId: n.localCreationAnswerId,
+            image: n.image
         }),
-        [p, M] = s.useState(null !== (a = null == C ? void 0 : C.description) && void 0 !== a ? a : '');
-    return (0, i.jsxs)(l.ModalRoot, {
+        [k, w] = o.useState(null !== (t = null == v ? void 0 : v.description) && void 0 !== t ? t : '');
+    return (0, a.jsxs)(l.ModalRoot, {
         size: l.ModalSize.DYNAMIC,
-        className: n()(h.modal, {
-            [h.hasImage]: x,
-            [h.hasEmoji]: null != g
+        className: s()(h.modal, {
+            [h.hasImage]: b,
+            [h.hasEmoji]: null != p
         }),
-        transitionState: E,
-        'aria-label': c.Z.Messages.CREATE_POLL_EDIT_IMAGE_DESCRIPTION,
+        transitionState: x,
+        'aria-label': c.intl.string(c.t.QbhHBQ),
         children: [
-            (0, i.jsx)(r.I, {
-                hasUpload: x,
-                mediaUrl: I,
-                mediaFilename: L,
+            (0, a.jsx)(d.I, {
+                hasUpload: b,
+                mediaUrl: C,
+                mediaFilename: I,
                 imageClassName: h.imagePreview,
-                emoji: g,
+                emoji: p,
                 emojiClassName: h.emojiPreview
             }),
-            (0, i.jsxs)(l.ModalContent, {
+            (0, a.jsxs)(l.ModalContent, {
                 className: h.content,
                 children: [
-                    (0, i.jsx)(l.FormTitle, {
+                    (0, a.jsx)(l.FormTitle, {
                         tag: l.FormTitleTags.LABEL,
                         htmlFor: j,
-                        children: c.Z.Messages.CREATE_POLL_ALT_TEXT_LABEL
+                        children: c.intl.string(c.t['/2Gnoa'])
                     }),
-                    (0, i.jsx)(l.TextInput, {
+                    (0, a.jsx)(l.TextInput, {
                         id: j,
-                        value: p,
+                        value: k,
                         inputClassName: h.input,
-                        onChange: M,
+                        onChange: w,
                         maxLength: u.WA,
                         autoFocus: !0
                     })
                 ]
             }),
-            (0, i.jsxs)(l.ModalFooter, {
+            (0, a.jsxs)(l.ModalFooter, {
                 className: h.footer,
                 children: [
-                    (0, i.jsx)(l.Button, {
+                    (0, a.jsx)(l.Button, {
                         look: l.ButtonLooks.FILLED,
                         size: l.Button.Sizes.MEDIUM,
                         onClick: () => {
-                            null != p && d(p), _();
+                            null != k && r(k), g();
                         },
-                        children: (0, i.jsx)(l.Text, {
+                        children: (0, a.jsx)(l.Text, {
                             variant: 'text-md/semibold',
-                            children: c.Z.Messages.SAVE
+                            children: c.intl.string(c.t.R3BPHx)
                         })
                     }),
-                    (0, i.jsx)(l.Button, {
+                    (0, a.jsx)(l.Button, {
                         look: l.ButtonLooks.LINK,
                         size: l.Button.Sizes.MEDIUM,
-                        onClick: _,
-                        children: (0, i.jsx)(l.Text, {
+                        onClick: g,
+                        children: (0, a.jsx)(l.Text, {
                             variant: 'text-md/semibold',
-                            children: c.Z.Messages.CANCEL
+                            children: c.intl.string(c.t['ETE/oK'])
                         })
                     })
                 ]

@@ -1,43 +1,43 @@
-a.d(n, {
+t.d(e, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var t = a(200651);
-a(192379);
-var l = a(442837),
-    r = a(481060),
-    u = a(496675),
-    c = a(981631),
-    i = a(689938);
-function s(e, n) {
-    let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : e.type,
-        o = (0, l.e7)([u.Z], () => u.Z.can(c.Plq.MANAGE_CHANNELS, e), [e]);
-    if (__OVERLAY__ || !o) return null;
-    let d = () => {
-        (0, r.openModalLazy)(async () => {
-            let { default: n } = await Promise.all([a.e('7590'), a.e('45094'), a.e('5769')]).then(a.bind(a, 218613));
-            return (a) =>
-                (0, t.jsx)(n, {
-                    ...a,
-                    channelType: s,
-                    guildId: e.guild_id,
-                    categoryId: e.parent_id
+var l = t(200651);
+t(192379);
+var a = t(442837),
+    i = t(481060),
+    r = t(496675),
+    u = t(981631),
+    c = t(388032);
+function o(n, e) {
+    let o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : n.type,
+        d = (0, a.e7)([r.Z], () => r.Z.can(u.Plq.MANAGE_CHANNELS, n), [n]);
+    if (__OVERLAY__ || !d) return null;
+    let s = () => {
+        (0, i.openModalLazy)(async () => {
+            let { default: e } = await Promise.all([t.e('7590'), t.e('45094'), t.e('5769')]).then(t.bind(t, 218613));
+            return (t) =>
+                (0, l.jsx)(e, {
+                    ...t,
+                    channelType: o,
+                    guildId: n.guild_id,
+                    categoryId: n.parent_id
                 });
         });
     };
-    switch (s) {
-        case c.d4z.GUILD_TEXT:
-            return (0, t.jsx)(r.MenuItem, {
+    switch (o) {
+        case u.d4z.GUILD_TEXT:
+            return (0, l.jsx)(i.MenuItem, {
                 id: 'create-text-channel',
-                label: i.Z.Messages.CREATE_TEXT_CHANNEL,
-                action: d
+                label: c.intl.string(c.t.HHkTJC),
+                action: s
             });
-        case c.d4z.GUILD_VOICE:
-            return (0, t.jsx)(r.MenuItem, {
+        case u.d4z.GUILD_VOICE:
+            return (0, l.jsx)(i.MenuItem, {
                 id: 'create-voice-channel',
-                label: i.Z.Messages.CREATE_VOICE_CHANNEL,
-                action: d
+                label: c.intl.string(c.t.AlbZaG),
+                action: s
             });
         default:
             return null;

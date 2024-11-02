@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return f;
     }
 });
 var r = n(200651),
@@ -12,18 +12,18 @@ var r = n(200651),
     u = n(872635),
     c = n(185923),
     d = n(3066);
-function _(e) {
+function f(e) {
     var t;
-    let { editorRef: n, options: _, channel: E } = e,
-        f = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor(),
-        h = i.useCallback(
+    let { editorRef: n, options: f, channel: _ } = e,
+        h = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor(),
+        p = i.useCallback(
             (e, t) => {
                 let r = n.current;
                 null != e && null != r && r.insertEmoji(e, t, !1), t && (0, l._Q)();
             },
             [n]
         );
-    return null == f
+    return null == h
         ? null
         : (0, r.jsxs)('div', {
               id: 'slate-toolbar',
@@ -33,7 +33,7 @@ function _(e) {
                       className: d.staticButtons,
                       children: (0, r.jsx)(u.I, {
                           editorRef: n,
-                          options: _,
+                          options: f,
                           iconClassName: d.staticIcon,
                           dividerClassName: d.staticDivider
                       })
@@ -43,10 +43,10 @@ function _(e) {
                           let { closePopout: t } = e;
                           return (0, r.jsx)(o.Z, {
                               persistSearch: !0,
-                              channel: E,
+                              channel: _,
                               closePopout: t,
                               onSelectEmoji: (e, n) => {
-                                  h(e, n), n && t();
+                                  p(e, n), n && t();
                               },
                               pickerIntention: c.Hz.COMMUNITY_CONTENT
                           });

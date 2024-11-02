@@ -1,21 +1,21 @@
 t.d(n, {
     Z: function () {
-        return _;
+        return f;
     }
 });
 var l = t(200651),
     i = t(192379),
-    a = t(120356),
-    r = t.n(a),
+    r = t(120356),
+    a = t.n(r),
     o = t(454585),
     s = t(937889),
     c = t(970184),
     u = t(870456),
     d = t(662762),
     m = t(554034);
-function _(e) {
+function f(e) {
     let { content: n, className: t } = e,
-        a = (function (e) {
+        r = (function (e) {
             let n = (0, c.CJ)();
             return (0, i.useMemo)(() => {
                 let t;
@@ -32,7 +32,7 @@ function _(e) {
             }, [e, n]);
         })(n);
     return (0, l.jsx)('div', {
-        className: r()([t, m.markup, d.markdownContainer]),
-        children: a
+        className: a()([t, m.markup, d.markdownContainer]),
+        children: r
     });
 }

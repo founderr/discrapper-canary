@@ -1,20 +1,20 @@
 n.d(t, {
     C4: function () {
-        return C;
+        return g;
     }
 }),
     n(653041),
     n(627494),
     n(757143),
     n(512722);
-var l = n(913527),
-    a = n.n(l),
-    i = n(705512);
+var i = n(913527),
+    l = n.n(i),
+    a = n(705512);
 n(812206);
 var r = n(55000);
 n(220082);
-var s = n(693824),
-    o = n(690725);
+var o = n(693824),
+    s = n(690725);
 n(706454), n(594174);
 var u = n(70956);
 n(5192);
@@ -23,44 +23,44 @@ var c = n(709054),
 n(206295);
 var h = n(737583),
     m = n(169040),
-    x = n(689938);
-let E = (e, t) => ({
+    x = n(388032);
+let v = (e, t) => ({
         AvatarImage1: e[0],
         ...(null != e[1] && { AvatarImage2: e[1] }),
         ...(null != e[2] && { AvatarImage3: e[2] }),
         ...(null != t && { ApplicationImage: t })
     }),
-    _ = (e, t) => {
+    f = (e, t) => {
         let n = [
                 {
                     iconPath: m.NM,
                     text: t
                 }
             ],
-            l = c.default.extractTimestamp(e.extra.application_id);
+            i = c.default.extractTimestamp(e.extra.application_id);
         if (
-            (7 >= a()().diff(a()(l), 'days') &&
+            (7 >= l()().diff(l()(i), 'days') &&
                 n.push({
                     iconPath: m.As,
-                    text: x.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_RELEASE
+                    text: x.intl.string(x.t.vYuyWV)
                 }),
             (0, d.Ol)(e) &&
                 n.push({
                     iconPath: m.fO,
-                    text: x.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER
+                    text: x.intl.string(x.t.keY6mZ)
                 }),
             (0, d.q_)(e))
         ) {
             let t = (0, d.vU)(e);
             n.push({
                 iconPath: m.t1,
-                text: x.Z.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({ days: t })
+                text: x.intl.formatToPlainString(x.t['Klie/P'], { days: t })
             });
         }
-        (0, d.ig)(e) === i.o.GLOBAL &&
+        (0, d.ig)(e) === a.o.GLOBAL &&
             n.push({
                 iconPath: m.Op,
-                text: x.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
+                text: x.intl.string(x.t.kAlUs7)
             });
         let r = (0, d.dw)(e);
         if (
@@ -81,20 +81,20 @@ let E = (e, t) => ({
         if ((0, d.Jd)(e)) {
             let t = (0, d.yA)(e);
             if (null != t) {
-                let e = x.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK.format({ hours: Math.round(t / u.Z.Seconds.HOUR) });
+                let e = x.intl.formatToPlainString(x.t.C0Axoa, { hours: Math.round(t / u.Z.Seconds.HOUR) });
                 return [
                     {
                         iconPath: m.eF,
-                        text: ''.concat(x.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, ' \u2014 ').concat(e)
+                        text: ''.concat(x.intl.string(x.t['/50eHh']), ' \u2014 ').concat(e)
                     }
                 ];
             }
         }
         return n;
     },
-    v = (e, t) => {
-        let { timestamp: n, colors: l, description: a, entry: i, numAvatars: o } = t,
-            u = l.map((e, t) => ({
+    p = (e, t) => {
+        let { timestamp: n, colors: i, description: l, entry: a, numAvatars: s } = t,
+            u = i.map((e, t) => ({
                 color: e,
                 stop: t
             }));
@@ -135,7 +135,7 @@ let E = (e, t) => ({
                     h: m.Pu
                 },
                 8
-            ) === s.vP.Failure &&
+            ) === o.vP.Failure &&
                 e.drawPath(
                     r.Cv,
                     {
@@ -147,7 +147,7 @@ let E = (e, t) => ({
                 );
         (0, h.l)({
             canvas: e,
-            avatarSrcs: ['AvatarImage1', 'AvatarImage2', 'AvatarImage3'].slice(0, o),
+            avatarSrcs: ['AvatarImage1', 'AvatarImage2', 'AvatarImage3'].slice(0, s),
             position: {
                 x: m.Iq,
                 y: m.sB
@@ -159,10 +159,10 @@ let E = (e, t) => ({
                 size: 16,
                 family: m.I8,
                 weight: m.Ue,
-                truncate: s.GX.Wrap
+                truncate: o.GX.Wrap
             }),
             e.drawText(
-                a,
+                l,
                 {
                     x: m.Iq,
                     y: 64,
@@ -171,7 +171,7 @@ let E = (e, t) => ({
                 },
                 !0
             );
-        let c = _(i, n);
+        let c = f(a, n);
         (0, h.J)({
             canvas: e,
             badges: c,
@@ -179,22 +179,22 @@ let E = (e, t) => ({
             maxWidth: m.kC
         });
     },
-    C = async (e) => {
-        let { applicationImageSrc: t, entry: n, avatarSrcs: l, description: a, timestamp: i, colors: r, channelId: u } = e,
+    g = async (e) => {
+        let { applicationImageSrc: t, entry: n, avatarSrcs: i, description: l, timestamp: a, colors: r, channelId: u } = e,
             c = n.extra.activity_name,
-            d = E(l, t);
-        return await (0, o.f)({
+            d = v(i, t);
+        return await (0, s.f)({
             assetsToLoad: d,
             drawImage: (e) =>
-                v(e, {
-                    timestamp: i,
+                p(e, {
+                    timestamp: a,
                     colors: r,
-                    description: a,
+                    description: l,
                     entry: n,
-                    numAvatars: l.length
+                    numAvatars: i.length
                 }),
             exportConfigs: {
-                format: s.kH.CloudUpload,
+                format: o.kH.CloudUpload,
                 quality: 1,
                 fileName: 'user-reacting-to-'.concat(c, '.png').toLowerCase(),
                 fileType: 'png',

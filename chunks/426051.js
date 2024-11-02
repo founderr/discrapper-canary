@@ -1,73 +1,73 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return _;
     }
 });
 var i = n(200651),
-    a = n(192379),
-    s = n(286379),
-    r = n(481060),
-    l = n(797614),
+    r = n(192379),
+    l = n(286379),
+    a = n(481060),
+    s = n(797614),
     o = n(359110),
     c = n(6025),
     d = n(433355),
     u = n(26373),
-    _ = n(486622),
-    E = n(376191),
-    h = n(86203),
-    m = n(689938),
-    I = n(894639);
-function p(e) {
-    let { active: t, user: n, channel: p } = e,
-        g = (0, u.V)(),
-        T = a.useCallback(() => {
-            (0, r.showToast)((0, r.createToast)(m.Z.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, r.ToastType.FAILURE)), l.Z.increment({ name: s.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
+    h = n(486622),
+    m = n(376191),
+    p = n(86203),
+    g = n(388032),
+    f = n(894639);
+function _(e) {
+    let { active: t, user: n, channel: _ } = e,
+        E = (0, u.V)(),
+        I = r.useCallback(() => {
+            (0, a.showToast)((0, a.createToast)(g.intl.string(g.t.pIQ3h4), a.ToastType.FAILURE)), s.Z.increment({ name: l.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
         }, []),
-        S = a.useCallback(() => {
+        C = r.useCallback(() => {
             c.Z.closeChannelSidebar(d.uZ);
         }, []),
-        C = a.useCallback(() => {
-            c.Z.closeChannelSidebar(d.uZ), g && (0, o.Kh)(p.id);
-        }, [p.id, g]),
+        v = r.useCallback(() => {
+            c.Z.closeChannelSidebar(d.uZ), E && (0, o.Kh)(_.id);
+        }, [_.id, E]),
         {
-            acceptMessageRequest: f,
+            acceptMessageRequest: S,
             isAcceptLoading: N,
-            isUserProfileLoading: A,
-            isOptimisticAccepted: v
-        } = (0, _.m)({
+            isUserProfileLoading: T,
+            isOptimisticAccepted: x
+        } = (0, h.m)({
             user: n,
-            onAcceptSuccess: C,
-            onRejectSuccess: S,
-            onError: T
+            onAcceptSuccess: v,
+            onRejectSuccess: C,
+            onError: I
         }),
-        Z = N || A,
-        L = Z || v;
+        b = N || T,
+        A = b || x;
     return (0, i.jsxs)('div', {
-        className: I.container,
+        className: f.container,
         children: [
-            (0, i.jsx)(E.Z, {
+            (0, i.jsx)(m.Z, {
                 otherUser: n,
-                channel: p,
+                channel: _,
                 active: t
             }),
             (0, i.jsxs)('div', {
-                className: I.actions,
+                className: f.actions,
                 children: [
-                    (0, i.jsx)(r.Button, {
-                        className: I.button,
-                        color: r.ButtonColors.PRIMARY,
-                        size: r.Button.Sizes.SMALL,
+                    (0, i.jsx)(a.Button, {
+                        className: f.button,
+                        color: a.ButtonColors.PRIMARY,
+                        size: a.Button.Sizes.SMALL,
                         onClick: (e) => {
-                            f(p.id), e.stopPropagation();
+                            S(_.id), e.stopPropagation();
                         },
-                        disabled: L,
-                        submitting: Z,
-                        children: m.Z.Messages.MESSAGE_REQUESTS_SPAM_ACCEPT
+                        disabled: A,
+                        submitting: b,
+                        children: g.intl.string(g.t.vicfl5)
                     }),
-                    (0, i.jsx)(h.Z, {
-                        className: I.button,
-                        channel: p,
-                        buttonSize: r.Button.Sizes.SMALL
+                    (0, i.jsx)(p.Z, {
+                        className: f.button,
+                        channel: _,
+                        buttonSize: a.Button.Sizes.SMALL
                     })
                 ]
             })

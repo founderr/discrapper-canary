@@ -1,6 +1,6 @@
 n.d(t, {
     F: function () {
-        return _;
+        return f;
     },
     Y: function () {
         return d;
@@ -28,7 +28,7 @@ function d(e, t) {
         }
     };
 }
-let _ = i.memo(function (e) {
+let f = i.memo(function (e) {
     let { message: t, type: n, id: i, options: { component: a = u.si.component } = u.si } = e;
     return null != a
         ? (0, r.jsx)(r.Fragment, { children: a })

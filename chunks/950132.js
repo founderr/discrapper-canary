@@ -5,8 +5,8 @@ a.d(t, {
 });
 var n,
     s,
-    r,
     i,
+    r,
     l = a(200651),
     o = a(192379),
     c = a(476400),
@@ -17,10 +17,10 @@ var n,
     m = a(231338),
     p = a(913835);
 let I = m.j_.MAIN_NAVIGATION_MENU;
-class _ extends (i = o.PureComponent) {
+class _ extends (r = o.PureComponent) {
     render() {
         let e = (0, u.fQ)(this.context.router),
-            { isOpen: t, dropdownLinks: a, TrackClick: n, avoidRouter: s, id: r, 'aria-label': i } = this.props,
+            { isOpen: t, dropdownLinks: a, TrackClick: n, avoidRouter: s, id: i, 'aria-label': r } = this.props,
             o = a.map((t, a) =>
                 t.divider
                     ? (0, l.jsx)('hr', { className: p.divider }, 'divider-'.concat(a))
@@ -66,21 +66,21 @@ class _ extends (i = o.PureComponent) {
                         )
             );
         return (0, l.jsx)('ul', {
-            id: r,
+            id: i,
             className: (0, N.l)(p, 'moreList', t ? 'Open' : 'Closed'),
-            'aria-label': i,
+            'aria-label': r,
             children: o
         });
     }
 }
 (n = _),
     (s = 'contextTypes'),
-    (r = { router: d().object.isRequired }),
+    (i = { router: d().object.isRequired }),
     s in n
         ? Object.defineProperty(n, s, {
-              value: r,
+              value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (n[s] = r);
+        : (n[s] = i);

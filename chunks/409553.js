@@ -1,30 +1,30 @@
-o.d(n, {
+n.d(t, {
     Z: function () {
-        return _;
+        return x;
     }
 });
-var t = o(200651);
-o(192379);
-var s = o(481060),
-    r = o(63063),
-    i = o(921869),
-    c = o(514161),
-    l = o(981631),
-    a = o(689938),
-    d = o(932508);
+var o = n(200651);
+n(192379);
+var r = n(481060),
+    i = n(63063),
+    c = n(921869),
+    s = n(514161),
+    l = n(981631),
+    a = n(388032),
+    d = n(932508);
 function u() {
-    return (0, t.jsxs)(c.yC, {
+    return (0, o.jsxs)(s.yC, {
         children: [
-            (0, t.jsx)(c.Ux, {
-                text: a.Z.Messages.CONNECT_XBOX_TRANSFER_VOICE_VALUE_PROP,
-                children: (0, t.jsx)(s.VoiceNormalIcon, {
+            (0, o.jsx)(s.Ux, {
+                text: a.intl.string(a.t['VU+McX']),
+                children: (0, o.jsx)(r.VoiceNormalIcon, {
                     size: 'md',
                     color: 'currentColor'
                 })
             }),
-            (0, t.jsx)(c.Ux, {
-                text: a.Z.Messages.CONNECT_XBOX_DISPLAY_GAME_VALUE_PROP,
-                children: (0, t.jsx)(s.GameControllerIcon, {
+            (0, o.jsx)(s.Ux, {
+                text: a.intl.string(a.t.zMpLER),
+                children: (0, o.jsx)(r.GameControllerIcon, {
                     size: 'md',
                     color: 'currentColor'
                 })
@@ -32,23 +32,23 @@ function u() {
         ]
     });
 }
-function _(e) {
-    let { onContinue: n, onClose: o } = e,
-        s = r.Z.getArticleURL(l.BhN.XBOX_CONNECTION);
-    return (0, t.jsx)(i.m, {
+function x(e) {
+    let { onContinue: t, onClose: n } = e,
+        r = i.Z.getArticleURL(l.BhN.XBOX_CONNECTION);
+    return (0, o.jsx)(c.m, {
         platformType: l.ABu.XBOX,
-        headerConnect: a.Z.Messages.CONNECT_XBOX_LANDING_TITLE,
-        headerReconnect: a.Z.Messages.RECONNECT_XBOX_LANDING_TITLE,
-        body: a.Z.Messages.CONNECT_XBOX_LANDING_BODY,
-        learnMoreLink: s,
-        onClose: o,
-        onContinue: n,
-        img: (0, t.jsx)('img', {
+        headerConnect: a.intl.string(a.t['7FGNVF']),
+        headerReconnect: a.intl.string(a.t.z3rAho),
+        body: a.intl.string(a.t.oJquQU),
+        learnMoreLink: r,
+        onClose: n,
+        onContinue: t,
+        img: (0, o.jsx)('img', {
             src: d,
             width: 234,
             height: 152,
             alt: ''
         }),
-        valueProps: (0, t.jsx)(u, {})
+        valueProps: (0, o.jsx)(u, {})
     });
 }

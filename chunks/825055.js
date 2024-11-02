@@ -1,28 +1,28 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return s;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(481060),
-    i = n(371412);
-function r(e) {
+var r = n(481060),
+    l = n(371412);
+function s(e) {
     let { children: t } = e;
-    return (0, s.jsx)('div', {
-        className: i.container,
-        children: (0, s.jsx)(a.Text, {
+    return (0, i.jsx)('div', {
+        className: l.container,
+        children: (0, i.jsx)(r.Text, {
             variant: 'text-sm/normal',
             color: 'text-normal',
-            className: i.text,
-            children: (0, s.jsxs)(s.Fragment, {
+            className: l.text,
+            children: (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, s.jsx)(a.CircleWarningIcon, {
+                    (0, i.jsx)(r.CircleWarningIcon, {
                         size: 'custom',
                         width: 20,
                         height: 20,
                         color: 'currentColor',
-                        className: i.noticeIcon,
+                        className: l.noticeIcon,
                         'aria-hidden': !0
                     }),
                     t

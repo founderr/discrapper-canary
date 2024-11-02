@@ -1,50 +1,50 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return a;
     }
 });
 var i = n(192379),
-    a = n(246364),
-    s = n(308083);
-function r(e) {
+    r = n(246364),
+    l = n(308083);
+function a(e) {
     let { progress: t, updateCurrentStep: n } = e,
-        { currentStep: r, gameApplicationIds: l, playstyle: o, interests: c, description: d, tag: u, verificationForm: _ } = t,
-        E = i.useMemo(() => null != _ && _.formFields.some((e) => !(0, a.J)(e)), [_]),
-        h = i.useMemo(() => Array.from(c).filter((e) => !s.WZ.has(e) && !s.gh.has(e)), [c]),
-        m = i.useCallback(() => {
-            n(r + 1);
-        }, [r, n]),
-        I = i.useCallback(() => {
-            n(r - 1);
-        }, [r, n]),
-        p = i.useCallback((e) => n(e), [n]),
-        g = i.useMemo(() => {
-            switch (r) {
-                case s.Wy.GAMES:
-                    return 0 === l.size;
-                case s.Wy.PLAYSTYLE:
-                    return o === s.zv.NONE;
-                case s.Wy.INTERESTS:
-                    return h.length < 3;
-                case s.Wy.DESCRIPTION:
+        { currentStep: a, gameApplicationIds: s, playstyle: o, interests: c, description: d, tag: u, verificationForm: h } = t,
+        m = i.useMemo(() => null != h && h.formFields.some((e) => !(0, r.J)(e)), [h]),
+        p = i.useMemo(() => Array.from(c).filter((e) => !l.WZ.has(e) && !l.gh.has(e)), [c]),
+        g = i.useCallback(() => {
+            n(a + 1);
+        }, [a, n]),
+        f = i.useCallback(() => {
+            n(a - 1);
+        }, [a, n]),
+        _ = i.useCallback((e) => n(e), [n]),
+        E = i.useMemo(() => {
+            switch (a) {
+                case l.Wy.GAMES:
+                    return 0 === s.size;
+                case l.Wy.PLAYSTYLE:
+                    return o === l.zv.NONE;
+                case l.Wy.INTERESTS:
+                    return p.length < 3;
+                case l.Wy.DESCRIPTION:
                     return 0 === d.length;
-                case s.Wy.CUSTOMIZE_TAG_BADGE:
+                case l.Wy.CUSTOMIZE_TAG_BADGE:
                     return u.length < 2;
-                case s.Wy.MEMBER_APPLICATION:
-                    return !E;
+                case l.Wy.MEMBER_APPLICATION:
+                    return !m;
                 default:
                     return !1;
             }
-        }, [r, d.length, l.size, E, h.length, o, u.length]),
-        T = 0 === r;
+        }, [a, d.length, s.size, m, p.length, o, u.length]),
+        I = 0 === a;
     return i.useMemo(
         () => ({
-            onStepClick: p,
-            onNextClick: m,
-            onBackClick: I,
-            isNextDisabled: g,
-            isBackDisabled: T
+            onStepClick: _,
+            onNextClick: g,
+            onBackClick: f,
+            isNextDisabled: E,
+            isBackDisabled: I
         }),
-        [T, g, I, m, p]
+        [I, E, f, g, _]
     );
 }

@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
     y: function () {
-        return E;
+        return _;
     }
 }),
     n(177593),
@@ -28,12 +28,12 @@ function u(e, t, n) {
 }
 let c = [],
     d = !1,
-    _ = new Promise((e) => {
+    f = new Promise((e) => {
         r = () => {
             e(), (r = null);
         };
     });
-class E {
+class _ {
     static initialize() {
         (d = !0), c.forEach((e) => e.initializeIfNeeded()), null != r && r();
     }
@@ -125,4 +125,4 @@ class E {
         d && this.initializeIfNeeded();
     }
 }
-u(E, 'displayName', void 0), u(E, 'initialized', _);
+u(_, 'displayName', void 0), u(_, 'initialized', f);

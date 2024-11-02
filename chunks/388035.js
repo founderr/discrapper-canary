@@ -1,55 +1,55 @@
 n.d(t, {
     U: function () {
-        return f;
+        return g;
     }
 }),
     n(47120);
 var i = n(200651),
-    a = n(704215),
-    s = n(481060),
-    r = n(243778),
-    l = n(970731),
-    o = n(2818),
+    r = n(704215),
+    l = n(481060),
+    a = n(243778),
+    o = n(970731),
+    s = n(2818),
     c = n(921944),
-    u = n(689938),
+    u = n(388032),
     d = n(413859),
-    _ = n(235810);
-let E = a.z.FOR_LATER_POPOUT_COACHMARK,
-    I = () =>
+    m = n(235810);
+let f = r.z.FOR_LATER_POPOUT_COACHMARK,
+    h = () =>
         (0, i.jsx)('div', {
             className: d.imageContainer,
             children: (0, i.jsx)('img', {
                 className: d.image,
-                src: _,
+                src: m,
                 alt: ''
             })
         }),
-    m = (e) =>
-        (0, i.jsx)(l.ZP, {
+    p = (e) =>
+        (0, i.jsx)(o.ZP, {
             className: d.container,
-            asset: (0, i.jsx)(I, {}),
-            header: u.Z.Messages.FOR_LATER_COACHMARK_TITLE,
-            content: u.Z.Messages.FOR_LATER_COACHMARK_BODY,
-            buttonCTA: u.Z.Messages.GOT_IT,
+            asset: (0, i.jsx)(h, {}),
+            header: u.intl.string(u.t.qPbFKy),
+            content: u.intl.string(u.t.URrJq6),
+            buttonCTA: u.intl.string(u.t['NX+WJC']),
             buttonProps: {
-                color: s.ButtonColors.WHITE,
+                color: l.ButtonColors.WHITE,
                 innerClassName: d.primaryButton
             },
             onClick: () => e(c.L.USER_DISMISS),
             markAsDismissed: e,
-            caretPosition: l.DF.TOP_RIGHT
+            caretPosition: o.DF.TOP_RIGHT
         });
-function f(e) {
+function g(e) {
     let { location: t, children: n } = e,
-        { enabled: a, inInbox: l } = o.Z.useExperiment({ location: 'ForLaterCoachmarkWeb' }, { autoTrackExposure: !1 }),
-        [c, u] = (0, r.US)(a && t === (l ? 'inbox-button' : 'bookmarks-button') ? [E] : [], void 0);
-    return c !== E
+        { enabled: r, inInbox: o } = s.Z.useExperiment({ location: 'ForLaterCoachmarkWeb' }, { autoTrackExposure: !1 }),
+        [c, u] = (0, a.US)(r && t === (o ? 'inbox-button' : 'bookmarks-button') ? [f] : [], void 0);
+    return c !== f
         ? (0, i.jsx)(i.Fragment, { children: n })
-        : (0, i.jsx)(s.Popout, {
-              renderPopout: () => m(u),
+        : (0, i.jsx)(l.Popout, {
+              renderPopout: () => p(u),
               position: 'bottom',
               align: 'right',
-              animation: s.Popout.Animation.TRANSLATE,
+              animation: l.Popout.Animation.TRANSLATE,
               shouldShow: !0,
               children: () => n
           });

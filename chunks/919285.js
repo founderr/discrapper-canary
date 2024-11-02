@@ -5,24 +5,24 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(82950),
-    s = n(434404),
-    r = n(929507),
-    l = n(981631),
-    o = n(689938),
+var r = n(82950),
+    l = n(434404),
+    a = n(929507),
+    s = n(981631),
+    o = n(388032),
     c = n(943935);
 function d(e) {
     let { guild: t } = e,
-        n = () => r.Z.dismissNotice(t.id);
-    return (0, i.jsx)(a.Z, {
+        n = () => a.Z.dismissNotice(t.id);
+    return (0, i.jsx)(r.Z, {
         guild: t,
         onDismissed: n,
-        cta: o.Z.Messages.CHECK_IT_OUT,
-        message: o.Z.Messages.COMMANDS_SCOPE_MIGRATION_ADMIN_NOTICE.format(),
-        type: l.vID.COMMANDS_MIGRATION,
+        cta: o.intl.string(o.t.RzWDqa),
+        message: o.intl.format(o.t['kQ/MDg'], {}),
+        type: s.vID.COMMANDS_MIGRATION,
         image: c,
         onClick: () => {
-            n(), s.Z.open(t.id, l.pNK.INTEGRATIONS);
+            n(), l.Z.open(t.id, s.pNK.INTEGRATIONS);
         },
         imageMarginTop: 15,
         imageMarginX: 22

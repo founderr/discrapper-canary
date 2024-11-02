@@ -1,22 +1,22 @@
-n.d(t, {
+n.d(e, {
     Z: function () {
-        return i;
+        return u;
     }
 }),
     n(47120);
-var E = n(192379),
-    r = n(122289),
-    u = n(622999);
-function i() {
-    let [e, t] = E.useState(null);
+var r = n(192379),
+    E = n(122289),
+    i = n(622999);
+function u() {
+    let [t, e] = r.useState(null);
     return (
-        E.useEffect(() => {
-            (0, u.d2)()
-                .then((e) => t(e))
-                .catch((e) => {
-                    (0, r.q2)(e);
+        r.useEffect(() => {
+            (0, i.d2)()
+                .then((t) => e(t))
+                .catch((t) => {
+                    (0, E.q2)(t);
                 });
         }, []),
-        e
+        t
     );
 }

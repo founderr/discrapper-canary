@@ -1,41 +1,41 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return h;
     }
 });
-var a = t(200651),
-    s = t(192379),
-    l = t(120356),
-    r = t.n(l),
-    i = t(481060),
-    o = t(487894),
-    c = t(300234),
-    d = t(689938),
-    u = t(77300);
+var a = n(200651),
+    l = n(192379),
+    r = n(120356),
+    s = n.n(r),
+    i = n(481060),
+    o = n(487894),
+    c = n(300234),
+    d = n(388032),
+    u = n(77300);
 function h(e) {
-    let { channel: n, threadIds: t, startThread: l, goToThread: h } = e,
-        m = s.useCallback(
+    let { channel: t, threadIds: n, startThread: r, goToThread: h } = e,
+        m = l.useCallback(
             (e) =>
                 (0, a.jsx)(
                     c.Z,
                     {
-                        threadId: t[e.row],
+                        threadId: n[e.row],
                         goToThread: h
                     },
                     ''.concat(e.section, '-').concat(e.row)
                 ),
-            [t, h]
+            [n, h]
         );
-    return 0 === t.length
+    return 0 === n.length
         ? (0, a.jsx)(o.Z, {
-              channel: n,
-              header: d.Z.Messages.THREAD_BROWSER_EMPTY_STATE_HEADER,
-              startThread: l
+              channel: t,
+              header: d.intl.string(d.t.HgTQ8v),
+              startThread: r
           })
         : (0, a.jsx)(i.List, {
-              className: r()(u.list, u.activeThreadsList),
+              className: s()(u.list, u.activeThreadsList),
               fade: !0,
-              sections: [t.length],
+              sections: [n.length],
               sectionHeight: 0,
               rowHeight: 80,
               renderRow: m,

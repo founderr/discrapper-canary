@@ -8,22 +8,22 @@ e.exports = function (e, t, n) {
     var u = -1,
         c = i,
         d = e.length,
-        _ = !0,
-        E = [],
-        f = E;
-    if (n) (_ = !1), (c = a);
+        f = !0,
+        _ = [],
+        h = _;
+    if (n) (f = !1), (c = a);
     else if (d >= 200) {
-        var h = t ? null : o(e);
-        if (h) return l(h);
-        (_ = !1), (c = s), (f = new r());
-    } else f = t ? [] : E;
+        var p = t ? null : o(e);
+        if (p) return l(p);
+        (f = !1), (c = s), (h = new r());
+    } else h = t ? [] : _;
     t: for (; ++u < d; ) {
-        var p = e[u],
-            I = t ? t(p) : p;
-        if (((p = n || 0 !== p ? p : 0), _ && I == I)) {
-            for (var m = f.length; m--; ) if (f[m] === I) continue t;
-            t && f.push(I), E.push(p);
-        } else !c(f, I, n) && (f !== E && f.push(I), E.push(p));
+        var m = e[u],
+            g = t ? t(m) : m;
+        if (((m = n || 0 !== m ? m : 0), f && g == g)) {
+            for (var E = h.length; E--; ) if (h[E] === g) continue t;
+            t && h.push(g), _.push(m);
+        } else !c(h, g, n) && (h !== _ && h.push(g), _.push(m));
     }
-    return E;
+    return _;
 };

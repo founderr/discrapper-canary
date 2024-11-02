@@ -5,42 +5,42 @@ n.d(t, {
 }),
     n(47120);
 var i = n(192379),
-    a = n(49898),
-    s = n(25912);
-let r = 20 + a.U1 - a.Kl,
-    l = 20 + a.U1 + a.Kl;
+    r = n(49898),
+    l = n(25912);
+let a = 20 + r.U1 - r.Kl,
+    s = 20 + r.U1 + r.Kl;
 function o(e) {
     let { isSearchBarVisible: t, isSearchBarEmpty: n } = e,
-        [o, c] = i.useState(a.WB.DEFAULT),
+        [o, c] = i.useState(r.WB.DEFAULT),
         d = i.useCallback(
             (e) => {
                 if (!t) return;
                 let i = Math.round(e);
                 switch (o) {
-                    case a.WB.DEFAULT:
-                        i < 20 && c(n ? a.WB.COLLAPSED : a.WB.FLOATING);
+                    case r.WB.DEFAULT:
+                        i < 20 && c(n ? r.WB.COLLAPSED : r.WB.FLOATING);
                         break;
-                    case a.WB.COLLAPSED:
-                        i > r && c(a.WB.DEFAULT);
+                    case r.WB.COLLAPSED:
+                        i > a && c(r.WB.DEFAULT);
                         break;
-                    case a.WB.FLOATING:
-                        i > l && c(a.WB.DEFAULT);
+                    case r.WB.FLOATING:
+                        i > s && c(r.WB.DEFAULT);
                 }
             },
             [n, t, o]
         ),
         u = i.useCallback(() => {
-            c(a.WB.FLOATING);
+            c(r.WB.FLOATING);
         }, []),
-        _ = i.useCallback(() => {
-            o === a.WB.FLOATING && n && c(a.WB.COLLAPSED);
+        h = i.useCallback(() => {
+            o === r.WB.FLOATING && n && c(r.WB.COLLAPSED);
         }, [n, o]),
-        E = o === a.WB.FLOATING ? s.floatingSearchTabsMask : void 0;
+        m = o === r.WB.FLOATING ? l.floatingSearchTabsMask : void 0;
     return {
         searchBarState: o,
         onTabsAvailableWidthChange: d,
-        tabsClassName: E,
+        tabsClassName: m,
         onCollapsedSearchBarClick: u,
-        onSearchBarBlur: _
+        onSearchBarBlur: h
     };
 }

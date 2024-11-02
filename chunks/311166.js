@@ -1,36 +1,36 @@
-l.d(n, {
+t.d(n, {
     Z: function () {
         return o;
     }
 });
-var s = l(200651);
-l(192379);
-var a = l(481060),
-    t = l(195367),
-    i = l(689938),
-    r = l(759704);
+var l = t(200651);
+t(192379);
+var i = t(481060),
+    r = t(195367),
+    a = t(388032),
+    s = t(759704);
 function o(e) {
-    let { isSlideReady: n, ...l } = e;
-    return (0, s.jsxs)('div', {
-        className: r.__invalid_slideContainer,
+    let { isSlideReady: n, ...t } = e;
+    return (0, l.jsxs)('div', {
+        className: s.__invalid_slideContainer,
         children: [
-            (0, s.jsxs)('div', {
-                className: r.header,
+            (0, l.jsxs)('div', {
+                className: s.header,
                 children: [
-                    (0, s.jsx)(a.Heading, {
+                    (0, l.jsx)(i.Heading, {
                         variant: 'heading-xl/semibold',
-                        children: i.Z.Messages.GUILD_EVENT_CREATE_HEADER
+                        children: a.intl.string(a.t.GG6vbm)
                     }),
-                    (0, s.jsx)(a.Text, {
+                    (0, l.jsx)(i.Text, {
                         color: 'header-secondary',
-                        className: r.text,
+                        className: s.text,
                         variant: 'text-sm/normal',
-                        children: i.Z.Messages.GUILD_EVENT_CREATE_BODY
+                        children: a.intl.string(a.t.q5lgwc)
                     })
                 ]
             }),
-            (0, s.jsx)(t.Z, {
-                ...l,
+            (0, l.jsx)(r.Z, {
+                ...t,
                 canSetFocus: n
             })
         ]

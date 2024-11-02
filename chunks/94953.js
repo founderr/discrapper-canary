@@ -1,64 +1,64 @@
 t.d(n, {
     Z: function () {
-        return g;
+        return f;
     }
 }),
     t(47120);
-var s = t(200651),
-    i = t(192379),
+var i = t(200651),
+    l = t(192379),
     a = t(442837),
-    l = t(481060),
+    s = t(481060),
     u = t(58540),
-    o = t(100527),
-    r = t(931240),
+    r = t(100527),
+    o = t(931240),
     d = t(353093),
     c = t(314897),
-    E = t(271383),
-    _ = t(430824),
-    M = t(496675),
-    N = t(594174),
-    I = t(981631),
-    S = t(689938);
-function g(e) {
-    let { guildId: n, userId: t, analyticsLocation: g, analyticsLocations: L, context: T, icon: A } = e,
-        h = (0, a.e7)([_.Z], () => _.Z.getGuild(n), [n]),
-        f = (0, a.e7)([c.default], () => c.default.getId()),
-        O = (0, a.e7)([N.default], () => N.default.getUser(t)),
-        Z = (0, a.e7)([E.ZP], () => E.ZP.isGuestOrLurker(n, t), [n, t]),
-        p = i.useMemo(() => ({ [n]: [t] }), [n, t]),
-        C = (0, d.EJ)(h);
-    (0, u.$)(p);
-    let m = T === I.IlC.POPOUT,
-        x = f === t,
-        [G, b] = (0, a.Wu)(
-            [M.Z],
+    g = t(271383),
+    E = t(430824),
+    h = t(496675),
+    M = t(594174),
+    _ = t(981631),
+    N = t(388032);
+function f(e) {
+    let { guildId: n, userId: t, analyticsLocation: f, analyticsLocations: S, context: I, icon: p } = e,
+        m = (0, a.e7)([E.Z], () => E.Z.getGuild(n), [n]),
+        x = (0, a.e7)([c.default], () => c.default.getId()),
+        L = (0, a.e7)([M.default], () => M.default.getUser(t)),
+        b = (0, a.e7)([g.ZP], () => g.ZP.isGuestOrLurker(n, t), [n, t]),
+        A = l.useMemo(() => ({ [n]: [t] }), [n, t]),
+        Z = (0, d.EJ)(m);
+    (0, u.$)(A);
+    let v = I === _.IlC.POPOUT,
+        C = x === t,
+        [G, j] = (0, a.Wu)(
+            [h.Z],
             () => {
-                if (null == h) return [!1, !1];
-                let e = f === t && (M.Z.can(I.Plq.CHANGE_NICKNAME, h) || M.Z.can(I.Plq.MANAGE_NICKNAMES, h));
-                return [e, M.Z.canManageUser(I.Plq.MANAGE_NICKNAMES, t, h)];
+                if (null == m) return [!1, !1];
+                let e = x === t && (h.Z.can(_.Plq.CHANGE_NICKNAME, m) || h.Z.can(_.Plq.MANAGE_NICKNAMES, m));
+                return [e, h.Z.canManageUser(_.Plq.MANAGE_NICKNAMES, t, m)];
             },
-            [f, t, h]
+            [x, t, m]
         ),
-        U = i.useCallback(
+        T = l.useCallback(
             (e, n) => () => {
-                (0, r.nE)(e, n, o.Z.CONTEXT_MENU);
+                (0, o.nE)(e, n, r.Z.CONTEXT_MENU);
             },
             []
         );
-    return null != h && !m && (G || b || x) && null != O && !Z && C && O.isStaff()
-        ? (0, s.jsxs)(s.Fragment, {
+    return null != m && !v && (G || j || C) && null != L && !b && Z && L.isStaff()
+        ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, s.jsx)(l.MenuItem, {
+                  (0, i.jsx)(s.MenuItem, {
                       id: 'adopt-clan-identity',
-                      label: S.Z.Messages.CLAN_ADOPT_CLAN_IDENTITY,
-                      icon: A,
-                      action: U(n, !0)
+                      label: N.intl.string(N.t.A2gzRU),
+                      icon: p,
+                      action: T(n, !0)
                   }),
-                  (0, s.jsx)(l.MenuItem, {
+                  (0, i.jsx)(s.MenuItem, {
                       id: 'deadopt-clan-identity',
-                      label: S.Z.Messages.CLAN_CLEAR_CLAN_IDENTITY,
-                      icon: A,
-                      action: U(null, null)
+                      label: N.intl.string(N.t.RFfO9v),
+                      icon: p,
+                      action: T(null, null)
                   })
               ]
           })

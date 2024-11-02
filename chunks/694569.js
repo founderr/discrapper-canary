@@ -1,46 +1,46 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return T;
+        return g;
     }
 });
-var n = t(200651),
-    a = t(192379),
-    i = t(630388),
-    r = t(88658),
-    o = t(695346),
-    l = t(546957),
-    c = t(838436),
-    d = t(51331),
-    _ = t(726985),
-    u = t(981631),
-    E = t(689938);
-function T() {
-    let e = o.xq.useSetting(),
-        s = a.useMemo(() => (0, r.bL)(e), [e]);
-    return (0, n.jsxs)(l.Z, {
+var i = n(200651),
+    s = n(192379),
+    r = n(630388),
+    l = n(88658),
+    a = n(695346),
+    o = n(546957),
+    c = n(838436),
+    d = n(51331),
+    u = n(726985),
+    m = n(981631),
+    h = n(388032);
+function g() {
+    let e = a.xq.useSetting(),
+        t = s.useMemo(() => (0, l.bL)(e), [e]);
+    return (0, i.jsxs)(o.Z, {
         children: [
-            (0, n.jsx)(c.U, {
-                setting: _.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS,
-                children: (0, n.jsx)(d.Z, {
-                    title: E.Z.Messages.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_SOURCE_ALL,
-                    value: s.all,
-                    onChange: (e) => o.xq.updateSetting(e ? u.HGf : u.HGf & ~u.SOq.NO_RELATION)
+            (0, i.jsx)(c.U, {
+                setting: u.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS,
+                children: (0, i.jsx)(d.Z, {
+                    title: h.intl.string(h.t['7x9dyM']),
+                    value: t.all,
+                    onChange: (e) => a.xq.updateSetting(e ? m.HGf : m.HGf & ~m.SOq.NO_RELATION)
                 })
             }),
-            (0, n.jsx)(c.U, {
-                setting: _.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS,
-                children: (0, n.jsx)(d.Z, {
-                    title: E.Z.Messages.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_SOURCE_MUTUAL_FRIENDS,
-                    value: s.all || s.mutualFriends,
-                    onChange: (s) => o.xq.updateSetting(s ? i.pj(e, u.SOq.MUTUAL_FRIENDS) : i.M1(e, u.SOq.MUTUAL_FRIENDS, u.SOq.NO_RELATION))
+            (0, i.jsx)(c.U, {
+                setting: u.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS,
+                children: (0, i.jsx)(d.Z, {
+                    title: h.intl.string(h.t.NfeuZ2),
+                    value: t.all || t.mutualFriends,
+                    onChange: (t) => a.xq.updateSetting(t ? r.pj(e, m.SOq.MUTUAL_FRIENDS) : r.M1(e, m.SOq.MUTUAL_FRIENDS, m.SOq.NO_RELATION))
                 })
             }),
-            (0, n.jsx)(c.U, {
-                setting: _.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS,
-                children: (0, n.jsx)(d.Z, {
-                    title: E.Z.Messages.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_SOURCE_MUTUAL_GUILDS,
-                    value: s.all || s.mutualGuilds,
-                    onChange: (s) => o.xq.updateSetting(s ? i.pj(e, u.SOq.MUTUAL_GUILDS) : i.M1(e, u.SOq.MUTUAL_GUILDS, u.SOq.NO_RELATION))
+            (0, i.jsx)(c.U, {
+                setting: u.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS,
+                children: (0, i.jsx)(d.Z, {
+                    title: h.intl.string(h.t.qsMfsL),
+                    value: t.all || t.mutualGuilds,
+                    onChange: (t) => a.xq.updateSetting(t ? r.pj(e, m.SOq.MUTUAL_GUILDS) : r.M1(e, m.SOq.MUTUAL_GUILDS, m.SOq.NO_RELATION))
                 })
             })
         ]

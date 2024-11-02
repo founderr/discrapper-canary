@@ -1,36 +1,36 @@
 var i = n(200651);
 n(192379);
-var s = n(481060),
-    a = n(671533),
-    l = n(400251),
-    r = n(689938),
+var l = n(481060),
+    r = n(671533),
+    a = n(400251),
+    s = n(388032),
     o = n(904151),
     c = n(249684),
     u = n(176480);
 t.Z = (e) => {
     let t,
-        { searchQuery: n, setSearchQuery: d, mostRecentQuery: h, handleClearSearch: m, handleSearchKeyPress: p, handleCreateOrAddGuild: _, searchResults: f, searchFetching: E } = e;
-    if (E)
+        { searchQuery: n, setSearchQuery: d, mostRecentQuery: h, handleClearSearch: m, handleSearchKeyPress: p, handleCreateOrAddGuild: f, searchResults: g, searchFetching: C } = e;
+    if (C)
         t = (0, i.jsx)('div', {
             className: o.pageContainer,
-            children: (0, i.jsx)(s.Spinner, { className: o.spinner })
+            children: (0, i.jsx)(l.Spinner, { className: o.spinner })
         });
-    else if (0 === f.length) {
+    else if (0 === g.length) {
         let e =
-            null != _
-                ? r.Z.Messages.DIRECTORY_SEARCH_NO_RESULTS_SUBTITLE.format({
+            null != f
+                ? s.intl.format(s.t.qWFupq, {
                       addServerHook: function (e, t) {
                           return (0, i.jsx)(
-                              s.Anchor,
+                              l.Anchor,
                               {
-                                  onClick: _,
+                                  onClick: f,
                                   children: e
                               },
                               t
                           );
                       }
                   })
-                : r.Z.Messages.DIRECTORY_SEARCH_NO_RESULTS_NO_ADD;
+                : s.intl.string(s.t.vYyEnp);
         t = (0, i.jsxs)('div', {
             className: c.emptySearchWrapper,
             children: [
@@ -39,13 +39,13 @@ t.Z = (e) => {
                     alt: '',
                     src: u
                 }),
-                (0, i.jsx)(s.Heading, {
+                (0, i.jsx)(l.Heading, {
                     variant: 'heading-xl/semibold',
                     color: 'header-primary',
                     className: c.emptySearchTitle,
-                    children: r.Z.Messages.DIRECTORY_SEARCH_NO_RESULTS_TITLE
+                    children: s.intl.string(s.t['6HXiuL'])
                 }),
-                (0, i.jsx)(s.Text, {
+                (0, i.jsx)(l.Text, {
                     variant: 'text-md/normal',
                     color: 'header-secondary',
                     className: c.emptySearchSubtitle,
@@ -56,11 +56,11 @@ t.Z = (e) => {
     } else
         t = (0, i.jsx)('div', {
             className: o.cardsContainer,
-            children: f.map((e) => (0, i.jsx)(l.Z, { entry: e }, e.guildId))
+            children: g.map((e) => (0, i.jsx)(a.Z, { entry: e }, e.guildId))
         });
     return (0, i.jsx)('div', {
         className: o.pageContainer,
-        children: (0, i.jsxs)(s.ScrollerAuto, {
+        children: (0, i.jsxs)(l.ScrollerAuto, {
             className: o.scroller,
             children: [
                 (0, i.jsxs)('div', {
@@ -69,31 +69,31 @@ t.Z = (e) => {
                         (0, i.jsxs)('div', {
                             className: c.headerTitleWrapper,
                             children: [
-                                (0, i.jsx)(s.Clickable, {
+                                (0, i.jsx)(l.Clickable, {
                                     onClick: m,
                                     className: c.arrow,
-                                    children: (0, i.jsx)(a.Z, { direction: a.Z.Directions.LEFT })
+                                    children: (0, i.jsx)(r.Z, { direction: r.Z.Directions.LEFT })
                                 }),
-                                (0, i.jsx)(s.Heading, {
+                                (0, i.jsx)(l.Heading, {
                                     variant: 'heading-xl/semibold',
                                     className: c.searchPageTitle,
-                                    children: r.Z.Messages.DIRECTORY_SEARCH_RESULTS_HEADER.format({
-                                        numResults: f.length,
+                                    children: s.intl.format(s.t.UkOHRU, {
+                                        numResults: g.length,
                                         query: h
                                     })
                                 })
                             ]
                         }),
-                        (0, i.jsx)(s.SearchBox, {
+                        (0, i.jsx)(l.SearchBox, {
                             searchTerm: n,
                             className: c.searchPageBox,
                             inputClassName: c.searchPageInput,
-                            label: r.Z.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
-                            placeholder: r.Z.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
+                            label: s.intl.string(s.t.nL2wKC),
+                            placeholder: s.intl.string(s.t.nL2wKC),
                             onChange: d,
                             onClear: m,
                             onKeyPress: p,
-                            cta: null != n && n.length > 0 ? r.Z.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
+                            cta: null != n && n.length > 0 ? s.intl.string(s.t['CU+6oK']) : null
                         })
                     ]
                 }),

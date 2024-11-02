@@ -1,26 +1,26 @@
-t.d(e, {
+i.d(t, {
     Z: function () {
-        return I;
+        return s;
     }
 }),
-    t(47120);
-var i = t(200651);
-t(192379);
-var a = t(442837),
-    l = t(481060),
-    r = t(594190),
-    d = t(417363),
-    s = t(346329),
-    u = t(981631),
-    c = t(689938);
-function I(n) {
-    let e = (0, a.e7)([r.ZP], () => r.ZP.getRunningVerifiedApplicationIds().includes(n.id), [n.id]),
-        [t, I] = (0, a.Wu)([d.Z], () => [d.Z.isUpToDate(n.id, n.branchId), d.Z.shouldPatch(n.id, n.branchId)], [n.branchId, n.id]);
-    return t && !e && I
-        ? (0, i.jsx)(l.MenuItem, {
+    i(47120);
+var e = i(200651);
+i(192379);
+var l = i(442837),
+    a = i(481060),
+    r = i(594190),
+    d = i(417363),
+    u = i(346329),
+    c = i(981631),
+    o = i(388032);
+function s(n) {
+    let t = (0, l.e7)([r.ZP], () => r.ZP.getRunningVerifiedApplicationIds().includes(n.id), [n.id]),
+        [i, s] = (0, l.Wu)([d.Z], () => [d.Z.isUpToDate(n.id, n.branchId), d.Z.shouldPatch(n.id, n.branchId)], [n.branchId, n.id]);
+    return i && !t && s
+        ? (0, e.jsx)(a.MenuItem, {
               id: 'repair',
-              label: c.Z.Messages.APPLICATION_CONTEXT_MENU_REPAIR,
-              action: () => s.repairApplication(n.id, n.branchId, u.Sbl.APPLICATION_CONTEXT_MENU_TOGGLE_INSTALL)
+              label: o.intl.string(o.t.CKCcd3),
+              action: () => u.repairApplication(n.id, n.branchId, c.Sbl.APPLICATION_CONTEXT_MENU_TOGGLE_INSTALL)
           })
         : null;
 }

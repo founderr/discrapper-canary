@@ -1,107 +1,107 @@
 n.d(t, {
     X: function () {
-        return E;
+        return m;
     },
     Z: function () {
-        return g;
+        return f;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
 var r = n(481060),
-    i = n(565138),
+    s = n(565138),
     a = n(372769),
     l = n(742593),
     o = n(390072),
     c = n(601964),
     u = n(230224),
-    d = n(689938),
-    _ = n(262854);
-function h(e) {
+    d = n(388032),
+    h = n(262854);
+function g(e) {
     var t;
-    let { guildScheduledEvent: n, channel: i, onAcceptInvite: a, isSubmitting: c } = e;
-    return (0, s.jsxs)('div', {
-        className: _.guildEventCard,
+    let { guildScheduledEvent: n, channel: s, onAcceptInvite: a, isSubmitting: c } = e;
+    return (0, i.jsxs)('div', {
+        className: h.guildEventCard,
         children: [
-            (0, s.jsx)(l.ZP, {
+            (0, i.jsx)(l.ZP, {
                 name: n.name,
                 description: null !== (t = n.description) && void 0 !== t ? t : void 0,
                 headerVariant: 'heading-md/medium',
-                descriptionClassName: _.__invalid_channelDescription,
+                descriptionClassName: h.__invalid_channelDescription,
                 guildId: n.guild_id,
                 guildEvent: n,
                 eventPreview: n
             }),
-            null != i &&
-                (0, s.jsx)('div', {
-                    className: _.channelInfo,
-                    children: (0, s.jsx)(o.Z, {
+            null != s &&
+                (0, i.jsx)('div', {
+                    className: h.channelInfo,
+                    children: (0, i.jsx)(o.Z, {
                         guildScheduledEvent: n,
-                        channel: i
+                        channel: s
                     })
                 }),
-            (0, s.jsx)(r.Button, {
-                className: _.acceptButton,
+            (0, i.jsx)(r.Button, {
+                className: h.acceptButton,
                 color: r.Button.Colors.GREEN,
                 onClick: a,
                 submitting: c,
-                children: d.Z.Messages.GUILD_PROFILE_JOIN_SERVER_BUTTON
+                children: d.intl.string(d.t.riu2R0)
             })
         ]
     });
 }
-function E(e) {
+function m(e) {
     var t;
     let { invite: n } = e,
         l = null != n.guild ? new c.ZP(n.guild) : null;
     if (null == l) return null;
     let o = null !== (t = l.description) && void 0 !== t ? t : '';
-    return (0, s.jsxs)('div', {
-        className: _.guildInfoCard,
+    return (0, i.jsxs)('div', {
+        className: h.guildInfoCard,
         children: [
-            (0, s.jsx)(r.Heading, {
-                className: _.presentedBy,
+            (0, i.jsx)(r.Heading, {
+                className: h.presentedBy,
                 variant: 'text-sm/medium',
-                children: d.Z.Messages.STAGE_INVITE_GUILD_HEADER
+                children: d.intl.string(d.t.Eabu19)
             }),
-            (0, s.jsxs)('div', {
-                className: _.guildContainer,
+            (0, i.jsxs)('div', {
+                className: h.guildContainer,
                 children: [
-                    (0, s.jsx)(i.Z, {
+                    (0, i.jsx)(s.Z, {
                         guild: l,
                         active: !0,
-                        size: i.Z.Sizes.MEDIUM
+                        size: s.Z.Sizes.MEDIUM
                     }),
-                    (0, s.jsxs)('div', {
-                        className: _.guildDetailsContanier,
+                    (0, i.jsxs)('div', {
+                        className: h.guildDetailsContanier,
                         children: [
-                            (0, s.jsxs)(r.Text, {
-                                className: _.guildName,
+                            (0, i.jsxs)(r.Text, {
+                                className: h.guildName,
                                 color: 'header-primary',
                                 variant: 'text-sm/medium',
                                 tag: 'span',
                                 children: [
                                     l.name,
-                                    (0, s.jsx)(a.Z, {
+                                    (0, i.jsx)(a.Z, {
                                         guild: l,
-                                        className: _.guildBadge,
+                                        className: h.guildBadge,
                                         tooltipPosition: 'left'
                                     })
                                 ]
                             }),
-                            (0, s.jsx)(u.V6, {
+                            (0, i.jsx)(u.V6, {
                                 invite: n,
-                                textClassName: _.guildInfoMemberCountText,
-                                className: _.guildInfoMemberCount
+                                textClassName: h.guildInfoMemberCountText,
+                                className: h.guildInfoMemberCount
                             })
                         ]
                     })
                 ]
             }),
             o.length > 0 &&
-                (0, s.jsx)('details', {
-                    className: _.guildDescriptionContainer,
-                    children: (0, s.jsx)(r.Text, {
+                (0, i.jsx)('details', {
+                    className: h.guildDescriptionContainer,
+                    children: (0, i.jsx)(r.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
                         children: o
@@ -110,15 +110,15 @@ function E(e) {
         ]
     });
 }
-function g(e) {
-    let { invite: t, channel: n, isSubmitting: r, onAcceptInvite: i } = e,
+function f(e) {
+    let { invite: t, channel: n, isSubmitting: r, onAcceptInvite: s } = e,
         { guild_scheduled_event: a } = t;
     return null != a
-        ? (0, s.jsx)(h, {
+        ? (0, i.jsx)(g, {
               guildScheduledEvent: a,
               channel: n,
               isSubmitting: r,
-              onAcceptInvite: i
+              onAcceptInvite: s
           })
         : null;
 }

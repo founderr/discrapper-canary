@@ -1,9 +1,9 @@
 n.d(t, {
     G: function () {
-        return _;
+        return f;
     },
     j: function () {
-        return E;
+        return _;
     }
 });
 var r = n(200651);
@@ -14,12 +14,12 @@ var i = n(120356),
     o = n(481060),
     l = n(252618),
     u = n(981631),
-    c = n(689938),
+    c = n(388032),
     d = n(208320);
-function _(e) {
+function f(e) {
     let { children: t, removeChildWrapper: n, wrapperClassName: i } = e;
     return (
-        (0, l.Tt)({ location: c.Z.Messages.OAUTH2_TITLE }),
+        (0, l.Tt)({ location: c.intl.string(c.t['3S249/']) }),
         (0, r.jsx)(o.ThemeProvider, {
             theme: u.BRd.DARK,
             children: (e) =>
@@ -36,7 +36,7 @@ function _(e) {
         })
     );
 }
-function E(e) {
+function _(e) {
     let { children: t, footer: n, transitionState: i, ...a } = e;
     return (0, r.jsxs)(s.Y0, {
         size: s.Cg.DYNAMIC,

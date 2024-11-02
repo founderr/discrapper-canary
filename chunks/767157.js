@@ -1,13 +1,13 @@
-t.d(n, {
+t.d(e, {
     Z: function () {
-        return l;
+        return r;
     }
 });
 var i = t(626135),
-    a = t(981631);
-function l(e, n) {
-    i.default.track(a.rMx.CUSTOM_NOTIFICATION_SOUND_OPTION_PLAYED, {
-        location: n,
-        soundpack: e
+    l = t(981631);
+function r(n, e) {
+    i.default.track(l.rMx.CUSTOM_NOTIFICATION_SOUND_OPTION_PLAYED, {
+        location: e,
+        soundpack: n
     });
 }

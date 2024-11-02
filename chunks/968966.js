@@ -94,7 +94,7 @@ e.exports = function (e) {
                 }
             ]
         },
-        _ = {
+        f = {
             className: 'string',
             contains: [e.BACKSLASH_ESCAPE, i],
             variants: [
@@ -136,7 +136,7 @@ e.exports = function (e) {
                 }
             ]
         },
-        E = {
+        _ = {
             className: 'function',
             beginKeywords: 'def defp defmacro defmacrop',
             end: /\B\b/,
@@ -147,24 +147,24 @@ e.exports = function (e) {
                 })
             ]
         },
-        f = e.inherit(E, {
+        h = e.inherit(_, {
             className: 'class',
             beginKeywords: 'defimpl defmodule defprotocol defrecord',
             end: /\bdo\b|$|;/
         }),
-        h = [
-            _,
+        p = [
+            f,
             d,
             c,
             u,
             e.HASH_COMMENT_MODE,
-            f,
-            E,
+            h,
+            _,
             { begin: '::' },
             {
                 className: 'symbol',
                 begin: ':(?![\\s:])',
-                contains: [_, { begin: '[a-zA-Z_]\\w*[!?=]?|[-+~]@|<<|>>|=~|===?|<=>|[<>]=?|\\*\\*|[-/+%^&*~`|]|\\[\\]=?' }],
+                contains: [f, { begin: '[a-zA-Z_]\\w*[!?=]?|[-+~]@|<<|>>|=~|===?|<=>|[<>]=?|\\*\\*|[-/+%^&*~`|]|\\[\\]=?' }],
                 relevance: 0
             },
             {
@@ -188,12 +188,12 @@ e.exports = function (e) {
             }
         ];
     return (
-        (i.contains = h),
+        (i.contains = p),
         {
             name: 'Elixir',
             aliases: ['ex', 'exs'],
             keywords: r,
-            contains: h
+            contains: p
         }
     );
 };

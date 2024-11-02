@@ -1,31 +1,31 @@
 n(47120);
 var i = n(243814),
-    a = n(120960),
-    s = n(996106),
-    r = n(452426),
-    l = n(186901),
+    r = n(120960),
+    l = n(996106),
+    a = n(452426),
+    s = n(186901),
     o = n(981631),
     c = n(65154);
 t.Z = {
     [o.Etm.SET_CERTIFIED_DEVICES]: {
         scope: {
-            [l.Gp.ANY]: [i.x.RPC, l.lH]
+            [s.Gp.ANY]: [i.x.RPC, s.lH]
         },
         validation: (e) =>
-            (0, r.Z)(e)
+            (0, a.Z)(e)
                 .required()
                 .keys({
                     devices: e.array().items(
-                        (0, r.Z)(e).keys({
+                        (0, a.Z)(e).keys({
                             type: e.string().required().valid([c.h7.AUDIO_INPUT, c.h7.AUDIO_OUTPUT, c.h7.VIDEO_INPUT]),
                             id: e.string().required().min(1),
-                            vendor: (0, r.Z)(e)
+                            vendor: (0, a.Z)(e)
                                 .required()
                                 .keys({
                                     name: e.string().min(1),
                                     url: e.string().min(1)
                                 }),
-                            model: (0, r.Z)(e)
+                            model: (0, a.Z)(e)
                                 .required()
                                 .keys({
                                     name: e.string().min(1),
@@ -44,8 +44,8 @@ t.Z = {
                 socket: t,
                 args: { devices: n }
             } = e;
-            if (null == t.application.id) throw new s.Z({ errorCode: o.lTL.INVALID_COMMAND }, 'No application.');
-            (0, a.N)(
+            if (null == t.application.id) throw new l.Z({ errorCode: o.lTL.INVALID_COMMAND }, 'No application.');
+            (0, r.N)(
                 t.application.id,
                 n.map((e) => ({
                     type: e.type,

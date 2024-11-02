@@ -5,18 +5,18 @@ n.d(t, {
 });
 var r = n(668781),
     i = n(624138),
-    a = n(689938);
+    a = n(388032);
 function s(e, t, n, s) {
     var o;
     r.Z.show({
-        title: a.Z.Messages.EMBEDDED_ACTIVITY_CHANGE_CONFIRM_TITLE,
-        cancelText: a.Z.Messages.CANCEL,
-        confirmText: a.Z.Messages.CONFIRM,
+        title: a.intl.string(a.t.XkIWkp),
+        cancelText: a.intl.string(a.t['ETE/oK']),
+        confirmText: a.intl.string(a.t['cY+Ooa']),
         onConfirm: n,
         onCancel: s,
-        body: a.Z.Messages.EMBEDDED_ACTIVITY_CHANGE_ACTIVITY_CONFIRM_BODY.format({
-            currentApplicationName: null !== (o = null == e ? void 0 : e.name) && void 0 !== o ? o : a.Z.Messages.EMBEDDED_ACTIVITY_CURRENT_APPLICATION_DEFAULT,
-            currentApplicationChannelName: (0, i.Ew)(null == t ? void 0 : t.name) ? a.Z.Messages.EMBEDDED_ACTIVITY_CURRENT_APPLICATION_CHANNEL_DEFAULT : null == t ? void 0 : t.name
+        body: a.intl.format(a.t['5/Xorq'], {
+            currentApplicationName: null !== (o = null == e ? void 0 : e.name) && void 0 !== o ? o : a.intl.string(a.t.G99XFh),
+            currentApplicationChannelName: (0, i.Ew)(null == t ? void 0 : t.name) ? a.intl.string(a.t.OGUjmp) : null == t ? void 0 : t.name
         })
     });
 }

@@ -3,26 +3,26 @@ n.d(t, {
         return o;
     }
 });
-var s = n(200651),
-    a = n(192379),
-    i = n(690221),
-    r = n(431516);
-function l(e) {
+var i = n(200651),
+    r = n(192379),
+    l = n(690221),
+    s = n(431516);
+function a(e) {
     return e;
 }
 function o(e) {
     let { onEnableMFAClick: t, onMFAEnabled: n } = e,
-        { isUserMFAEnabled: o, isModerationMFAEnabled: c } = (0, r.N)(),
-        d = a.useCallback(async () => {
+        { isUserMFAEnabled: o, isModerationMFAEnabled: c } = (0, s.N)(),
+        d = r.useCallback(async () => {
             await t(), null == n || n();
         }, [t, n]),
-        u = a.useCallback(
+        u = r.useCallback(
             (e) =>
-                (0, s.jsx)(i.Z, {
+                (0, i.jsx)(l.Z, {
                     onClick: d,
                     children: e
                 }),
             [d]
         );
-    return o && c ? l : u;
+    return o && c ? a : u;
 }

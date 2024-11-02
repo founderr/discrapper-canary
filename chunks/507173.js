@@ -1,6 +1,6 @@
 n.d(t, {
     y: function () {
-        return _;
+        return f;
     }
 }),
     n(47120);
@@ -14,9 +14,9 @@ var s = n(120356),
     u = n.n(l),
     c = n(692547),
     d = n(276500);
-function _(e) {
+function f(e) {
     let { className: t, percents: n, size: r = 'small', foregroundColors: i = [c.Z.unsafe_rawColors.BRAND_500.css], backgroundColor: s = 'var(--background-modifier-active)', animate: l = !0 } = e,
-        _ = u()
+        f = u()
             .zip(n, i)
             .map((e, t) => {
                 let n,
@@ -40,7 +40,7 @@ function _(e) {
     return (0, a.jsx)('div', {
         className: o()(t, d.progress, d[r]),
         style: { backgroundColor: s },
-        children: _
+        children: f
     });
 }
-((i = r || (r = {})).XSMALL = 'xsmall'), (i.SMALL = 'small'), (i.LARGE = 'large'), (_.Sizes = r);
+((i = r || (r = {})).XSMALL = 'xsmall'), (i.SMALL = 'small'), (i.LARGE = 'large'), (f.Sizes = r);

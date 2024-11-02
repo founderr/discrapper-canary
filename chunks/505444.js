@@ -147,12 +147,12 @@ e.exports = {
                     l,
                     c,
                     d = 0 === a.indexOf('--');
-                var _ = ((o = a), (l = t[a]), (c = d), null == l || 'boolean' == typeof l || '' === l ? '' : c || 'number' != typeof l || 0 === l || (s.hasOwnProperty(o) && s[o]) ? ('' + l).trim() : l + 'px');
-                if (('float' === a && (a = 'cssFloat'), d)) i.setProperty(a, _);
-                else if (_) i[a] = _;
+                var f = ((o = a), (l = t[a]), (c = d), null == l || 'boolean' == typeof l || '' === l ? '' : c || 'number' != typeof l || 0 === l || (s.hasOwnProperty(o) && s[o]) ? ('' + l).trim() : l + 'px');
+                if (('float' === a && (a = 'cssFloat'), d)) i.setProperty(a, f);
+                else if (f) i[a] = f;
                 else {
-                    var E = u && r.shorthandPropertyExpansions[a];
-                    if (E) for (var f in E) i[f] = '';
+                    var _ = u && r.shorthandPropertyExpansions[a];
+                    if (_) for (var h in _) i[h] = '';
                     else i[a] = '';
                 }
             }

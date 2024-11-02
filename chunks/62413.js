@@ -1,6 +1,6 @@
 i.d(t, {
     Z: function () {
-        return C;
+        return x;
     }
 }),
     i(411104);
@@ -8,43 +8,43 @@ var n = i(200651),
     a = i(192379),
     r = i(120356),
     o = i.n(r),
-    s = i(873199),
-    l = i(442837),
+    l = i(873199),
+    s = i(442837),
     c = i(857192),
     d = i(674588),
     u = i(368862),
     h = i(927356),
-    _ = i(125909),
-    p = i(185156),
-    m = i(87528),
+    p = i(125909),
+    m = i(185156),
+    _ = i(87528),
     f = i(57348),
     g = i(354775);
-function C() {
-    let e = (0, l.e7)([c.default], () => c.default.appDirectoryIncludesInactiveCollections),
-        t = (0, l.e7)([u.Z], () => u.Z.getFetchState({ includesInactive: e })),
-        i = (0, l.e7)([u.Z], () => u.Z.getCollections({ includesInactive: e }));
+function x() {
+    let e = (0, s.e7)([c.default], () => c.default.appDirectoryIncludesInactiveCollections),
+        t = (0, s.e7)([u.Z], () => u.Z.getFetchState({ includesInactive: e })),
+        i = (0, s.e7)([u.Z], () => u.Z.getCollections({ includesInactive: e }));
     return (a.useEffect(() => {
         d.bG({ includesInactive: e });
     }, [e]),
     t === u.M.ERROR)
         ? (0, n.jsx)(h.Z, {})
-        : (0, n.jsx)(_.Z, {
+        : (0, n.jsx)(p.Z, {
               loading: t === u.M.FETCHING,
               children:
                   null == i
                       ? void 0
                       : i.map((e, t) => {
                             let a;
-                            let r = t > 0 && i[t - 1].type !== s.o.GALLERY;
+                            let r = t > 0 && i[t - 1].type !== l.o.GALLERY;
                             switch (e.type) {
-                                case s.o.LIST:
-                                    a = (0, n.jsx)(m.Z, { collection: e });
+                                case l.o.LIST:
+                                    a = (0, n.jsx)(_.Z, { collection: e });
                                     break;
-                                case s.o.LIST_WITH_IMAGE:
+                                case l.o.LIST_WITH_IMAGE:
                                     a = (0, n.jsx)(f.Z, { collection: e });
                                     break;
-                                case s.o.GALLERY:
-                                    a = (0, n.jsx)(p.Z, { collection: e });
+                                case l.o.GALLERY:
+                                    a = (0, n.jsx)(m.Z, { collection: e });
                                     break;
                                 default:
                                     return null;

@@ -1,77 +1,77 @@
-s.r(t), s(47120);
-var n = s(200651),
-    o = s(192379),
-    r = s(481060),
-    i = s(689938),
-    l = s(114379);
-function a(e, t, s) {
+n.r(e), n(47120);
+var s = n(200651),
+    o = n(192379),
+    i = n(481060),
+    r = n(388032),
+    l = n(114379);
+function a(t, e, n) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: s,
+        e in t
+            ? Object.defineProperty(t, e, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = s),
-        e
+            : (t[e] = n),
+        t
     );
 }
 class c extends o.PureComponent {
     render() {
-        let { transitionState: e, header: t, body: o, confirmText: a } = this.props;
-        return (0, n.jsxs)(r.ModalRoot, {
-            transitionState: e,
-            'aria-label': t,
+        let { transitionState: t, header: e, body: o, confirmText: a } = this.props;
+        return (0, s.jsxs)(i.ModalRoot, {
+            transitionState: t,
+            'aria-label': e,
             children: [
-                (0, n.jsxs)(r.ModalContent, {
+                (0, s.jsxs)(i.ModalContent, {
                     className: l.content,
                     children: [
-                        (0, n.jsx)('img', {
-                            src: s(568533),
-                            alt: t
+                        (0, s.jsx)('img', {
+                            src: n(568533),
+                            alt: e
                         }),
-                        (0, n.jsx)(r.Heading, {
+                        (0, s.jsx)(i.Heading, {
                             variant: 'heading-xl/semibold',
                             className: l.header,
-                            children: t
+                            children: e
                         }),
-                        (0, n.jsx)(r.Text, {
+                        (0, s.jsx)(i.Text, {
                             variant: 'text-md/normal',
                             children: o
                         })
                     ]
                 }),
-                (0, n.jsxs)(r.ModalFooter, {
+                (0, s.jsxs)(i.ModalFooter, {
                     className: l.footer,
                     children: [
-                        (0, n.jsx)(r.Button, {
-                            size: r.Button.Sizes.SMALL,
+                        (0, s.jsx)(i.Button, {
+                            size: i.Button.Sizes.SMALL,
                             onClick: this.handleConfirm,
                             children: a
                         }),
-                        (0, n.jsx)(r.Button, {
-                            size: r.Button.Sizes.SMALL,
-                            look: r.Button.Looks.LINK,
-                            color: r.Button.Colors.PRIMARY,
+                        (0, s.jsx)(i.Button, {
+                            size: i.Button.Sizes.SMALL,
+                            look: i.Button.Looks.LINK,
+                            color: i.Button.Colors.PRIMARY,
                             onClick: this.handleDismiss,
-                            children: i.Z.Messages.CLOSE
+                            children: r.intl.string(r.t.cpT0Cg)
                         })
                     ]
                 })
             ]
         });
     }
-    constructor(...e) {
-        super(...e),
+    constructor(...t) {
+        super(...t),
             a(this, 'handleConfirm', () => {
-                let { onConfirm: e, onClose: t } = this.props;
-                null == t || t(), null == e || e();
+                let { onConfirm: t, onClose: e } = this.props;
+                null == e || e(), null == t || t();
             }),
             a(this, 'handleDismiss', () => {
-                let { onDismiss: e, onClose: t } = this.props;
-                null == t || t(), null == e || e();
+                let { onDismiss: t, onClose: e } = this.props;
+                null == e || e(), null == t || t();
             });
     }
 }
-t.default = c;
+e.default = c;

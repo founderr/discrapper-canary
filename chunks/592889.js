@@ -1,127 +1,127 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return p;
+        return N;
     }
 }),
-    t(47120);
-var n = t(200651),
-    a = t(192379),
-    i = t(120356),
-    r = t.n(i),
-    o = t(512722),
-    l = t.n(o),
-    c = t(442837),
-    d = t(780384),
-    _ = t(481060),
-    u = t(355467),
-    E = t(100527),
-    T = t(906732),
-    S = t(600164),
-    I = t(210887),
-    N = t(301766),
-    m = t(509545),
-    C = t(74538),
-    A = t(937615),
-    g = t(689938),
-    h = t(569884);
-function O(e) {
-    let { subscription: s, renewalMutations: t, transitionState: a, onClose: i, analyticsLocation: r } = e,
-        o = (0, c.e7)([I.Z], () => I.Z.theme),
-        { analyticsLocations: O } = (0, T.ZP)(E.Z.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL);
-    async function p() {
-        await (0, u.dP)(s, s.planId, O, r), i();
+    n(47120);
+var i = n(200651),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(512722),
+    o = n.n(a),
+    c = n(442837),
+    d = n(780384),
+    u = n(481060),
+    m = n(355467),
+    h = n(100527),
+    g = n(906732),
+    p = n(600164),
+    x = n(210887),
+    S = n(301766),
+    T = n(509545),
+    C = n(74538),
+    _ = n(937615),
+    E = n(388032),
+    f = n(569884);
+function I(e) {
+    let { subscription: t, renewalMutations: n, transitionState: s, onClose: r, analyticsLocation: l } = e,
+        a = (0, c.e7)([x.Z], () => x.Z.theme),
+        { analyticsLocations: I } = (0, g.ZP)(h.Z.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL);
+    async function N() {
+        await (0, m.dP)(t, t.planId, I, l), r();
     }
-    let R = m.Z.get(s.planId);
-    l()(null != R, 'Missing subscriptionPlan');
-    let x = (0, C.aS)(s.planId, !1, !1, {
-            paymentSourceId: s.paymentSourceId,
-            currency: s.currency
+    let A = T.Z.get(t.planId);
+    o()(null != A, 'Missing subscriptionPlan');
+    let b = (0, C.aS)(t.planId, !1, !1, {
+            paymentSourceId: t.paymentSourceId,
+            currency: t.currency
         }),
-        M = (0, A.og)((0, A.T4)(x.amount, x.currency), R.interval, R.intervalCount);
-    return (0, n.jsxs)(_.ModalRoot, {
-        transitionState: a,
-        'aria-label': g.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER,
+        v = (0, _.og)((0, _.T4)(b.amount, b.currency), A.interval, A.intervalCount);
+    return (0, i.jsxs)(u.ModalRoot, {
+        transitionState: s,
+        'aria-label': E.intl.string(E.t['E9kB4+']),
         children: [
-            (0, n.jsxs)(_.ModalHeader, {
-                justify: S.Z.Justify.BETWEEN,
+            (0, i.jsxs)(u.ModalHeader, {
+                justify: p.Z.Justify.BETWEEN,
                 separator: !1,
                 children: [
-                    (0, n.jsx)(_.FormTitle, {
-                        tag: _.FormTitleTags.H4,
-                        children: g.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER
+                    (0, i.jsx)(u.FormTitle, {
+                        tag: u.FormTitleTags.H4,
+                        children: E.intl.string(E.t['E9kB4+'])
                     }),
-                    (0, n.jsx)(_.ModalCloseButton, { onClick: i })
+                    (0, i.jsx)(u.ModalCloseButton, { onClick: r })
                 ]
             }),
-            (0, n.jsx)(_.ModalContent, {
-                className: h.modalBody,
-                children: (0, N.Q0)(s.planId)
-                    ? g.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY_NO_EXISTING_PLAN.format({
-                          downgradedPlan: C.ZP.getDisplayName(t.planId),
-                          existingRate: M
+            (0, i.jsx)(u.ModalContent, {
+                className: f.modalBody,
+                children: (0, S.Q0)(t.planId)
+                    ? E.intl.format(E.t.GMp54O, {
+                          downgradedPlan: C.ZP.getDisplayName(n.planId),
+                          existingRate: v
                       })
-                    : g.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY.format({
-                          existingPlan: C.ZP.getDisplayName(s.planId),
-                          downgradedPlan: C.ZP.getDisplayName(t.planId),
-                          existingRate: M
+                    : E.intl.format(E.t['vx/NZ2'], {
+                          existingPlan: C.ZP.getDisplayName(t.planId),
+                          downgradedPlan: C.ZP.getDisplayName(n.planId),
+                          existingRate: v
                       })
             }),
-            (0, n.jsxs)(_.ModalFooter, {
+            (0, i.jsxs)(u.ModalFooter, {
                 children: [
-                    (0, n.jsx)(_.Button, {
-                        onClick: p,
-                        children: g.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BUTTON
+                    (0, i.jsx)(u.Button, {
+                        onClick: N,
+                        children: E.intl.string(E.t.frE8KC)
                     }),
-                    (0, n.jsx)(_.Button, {
-                        look: _.Button.Looks.LINK,
-                        color: (0, d.ap)(o) ? _.Button.Colors.PRIMARY : _.Button.Colors.WHITE,
-                        onClick: i,
-                        children: g.Z.Messages.NEVERMIND
+                    (0, i.jsx)(u.Button, {
+                        look: u.Button.Looks.LINK,
+                        color: (0, d.ap)(a) ? u.Button.Colors.PRIMARY : u.Button.Colors.WHITE,
+                        onClick: r,
+                        children: E.intl.string(E.t.oEAioK)
                     })
                 ]
             })
         ]
     });
 }
-function p(e) {
-    let { subscription: s, renewalMutations: t, className: i, analyticsLocation: o } = e,
-        [l, c] = a.useState(!1);
-    return (0, n.jsxs)('div', {
-        className: r()(h.root, i),
+function N(e) {
+    let { subscription: t, renewalMutations: n, className: r, analyticsLocation: a } = e,
+        [o, c] = s.useState(!1);
+    return (0, i.jsxs)('div', {
+        className: l()(f.root, r),
         children: [
-            (0, n.jsx)(_.CircleWarningIcon, {
+            (0, i.jsx)(u.CircleWarningIcon, {
                 size: 'custom',
                 width: 20,
                 height: 20,
                 color: 'currentColor',
-                className: h.infoIcon
+                className: f.infoIcon
             }),
-            (0, n.jsx)('div', {
-                className: h.text,
-                children: g.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_NOTICE.format({
-                    planName: s.hasExternalPlanChange ? (0, C.zL)(t) : C.ZP.getDisplayName(t.planId),
-                    date: s.currentPeriodEnd
+            (0, i.jsx)('div', {
+                className: f.text,
+                children: E.intl.format(E.t.ar1cPj, {
+                    planName: t.hasExternalPlanChange ? (0, C.zL)(n) : C.ZP.getDisplayName(n.planId),
+                    date: t.currentPeriodEnd
                 })
             }),
-            s.isPurchasedExternally
+            t.isPurchasedExternally
                 ? null
-                : (0, n.jsx)(_.Anchor, {
+                : (0, i.jsx)(u.Anchor, {
                       onClick: (e) => {
                           c(!0), e.preventDefault();
                       },
-                      className: h.cancelLink,
-                      children: g.Z.Messages.CANCEL
+                      className: f.cancelLink,
+                      children: E.intl.string(E.t['ETE/oK'])
                   }),
-            l
-                ? (0, n.jsx)(_.Modal, {
+            o
+                ? (0, i.jsx)(u.Modal, {
                       renderModal: (e) => {
-                          let { transitionState: a } = e;
-                          return (0, n.jsx)(O, {
-                              subscription: s,
-                              renewalMutations: t,
-                              transitionState: a,
+                          let { transitionState: s } = e;
+                          return (0, i.jsx)(I, {
+                              subscription: t,
+                              renewalMutations: n,
+                              transitionState: s,
                               onClose: () => c(!1),
-                              analyticsLocation: o
+                              analyticsLocation: a
                           });
                       },
                       onCloseRequest: () => c(!1)

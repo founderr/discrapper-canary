@@ -1,6 +1,6 @@
 n.d(t, {
     j: function () {
-        return y;
+        return D;
     }
 });
 var r = n(526167),
@@ -12,38 +12,38 @@ var r = n(526167),
     u = n(926425),
     c = n(844049),
     d = n(712386),
-    _ = n(602722),
-    E = n(534109),
-    f = n(859500),
-    h = n(484542),
-    p = n(881500),
-    I = n(910826),
-    m = n(307244),
-    T = n(669730),
-    S = n(666828),
-    g = n(131999),
-    A = n(649272),
-    N = n(241372),
-    R = n(538387),
-    O = n(213921),
-    v = n(34721),
+    f = n(602722),
+    _ = n(534109),
+    h = n(859500),
+    p = n(484542),
+    m = n(881500),
+    g = n(910826),
+    E = n(307244),
+    v = n(669730),
+    I = n(666828),
+    S = n(131999),
+    T = n(649272),
+    b = n(241372),
+    y = n(538387),
+    A = n(213921),
+    N = n(34721),
     C = n(410693),
-    L = n(185672),
-    D = n(235731);
-function y() {
+    R = n(185672),
+    O = n(235731);
+function D() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    return e ? D : i;
+    return e ? O : i;
 }
 t.Z = {
     DEFAULT_AVATARS: [a, s, o, l, u, c],
-    DEFAULT_PROVISIONAL_AVATARS: [A, N, R, O, v, C],
-    DEFAULT_GROUP_DM_AVATARS: [d, _, E, f, h, p, I, m],
+    DEFAULT_PROVISIONAL_AVATARS: [T, b, y, A, N, C],
+    DEFAULT_GROUP_DM_AVATARS: [d, f, _, h, p, m, g, E],
     BOT_AVATARS: {
-        clyde: L,
-        nitro: S,
-        nitro_wumpus: g
+        clyde: R,
+        nitro: I,
+        nitro_wumpus: S
     },
-    DEFAULT_CHANNEL_ICON: T,
+    DEFAULT_CHANNEL_ICON: v,
     canUseWebp: function () {
         return r.og();
     }

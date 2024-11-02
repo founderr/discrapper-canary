@@ -1,9 +1,9 @@
-var t, r;
-n.d(a, {
+var a, l;
+n.d(t, {
     _: function () {
-        return t;
+        return a;
     }
 }),
-    ((r = t || (t = {})).PREPARING = 'PREPARING'),
-    (r.READY_TO_UPLOAD = 'READY_TO_UPLOAD'),
-    (r.ERROR = 'ERROR');
+    ((l = a || (a = {})).PREPARING = 'PREPARING'),
+    (l.READY_TO_UPLOAD = 'READY_TO_UPLOAD'),
+    (l.ERROR = 'ERROR');

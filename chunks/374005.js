@@ -1,24 +1,24 @@
 n.d(t, {
     b: function () {
-        return g;
+        return E;
     }
 });
 var i = n(200651),
-    a = n(192379),
-    s = n(393238),
-    r = n(540059),
-    l = n(720734),
+    r = n(192379),
+    l = n(393238),
+    a = n(540059),
+    s = n(720734),
     o = n(840780),
     c = n(235555),
     d = n(746508),
     u = n(210724),
-    _ = n(905423),
-    E = n(410575),
-    h = n(981631),
-    m = n(689938),
-    I = n(530921);
-function p(e) {
-    let t = (0, _.Z)((e) => {
+    h = n(905423),
+    m = n(410575),
+    p = n(981631),
+    g = n(388032),
+    f = n(530921);
+function _(e) {
+    let t = (0, h.Z)((e) => {
         let { guildId: t } = e;
         return t;
     });
@@ -27,11 +27,11 @@ function p(e) {
         guildId: t
     });
 }
-function g() {
-    let e = (0, r.Q)('AppPanels'),
-        t = a.useRef(null);
+function E() {
+    let e = (0, a.Q)('AppPanels'),
+        t = r.useRef(null);
     return (
-        (0, s.P)(
+        (0, l.P)(
             t,
             (t) => {
                 let { height: n } = t;
@@ -41,22 +41,22 @@ function g() {
         ),
         (0, i.jsxs)('section', {
             ref: t,
-            className: I.panels,
-            'aria-label': m.Z.Messages.ACCOUNT_A11Y_LABEL,
+            className: f.panels,
+            'aria-label': g.intl.string(g.t.StREWF),
             children: [
                 (0, i.jsx)(u.Z, {}),
                 (0, i.jsx)(c.Z, {}),
-                (0, i.jsx)(E.Z, {
-                    section: h.jXE.ACTIVITY_PANEL,
-                    children: (0, i.jsx)(p, { className: I.activityPanel })
+                (0, i.jsx)(m.Z, {
+                    section: p.jXE.ACTIVITY_PANEL,
+                    children: (0, i.jsx)(_, { className: f.activityPanel })
                 }),
-                (0, i.jsx)(E.Z, {
-                    section: h.jXE.RTC_CONNECTION_PANEL,
+                (0, i.jsx)(m.Z, {
+                    section: p.jXE.RTC_CONNECTION_PANEL,
                     children: (0, i.jsx)(d.Z, {})
                 }),
-                (0, i.jsx)(E.Z, {
-                    section: h.jXE.ACCOUNT_PANEL,
-                    children: (0, i.jsx)(l.Z, {})
+                (0, i.jsx)(m.Z, {
+                    section: p.jXE.ACCOUNT_PANEL,
+                    children: (0, i.jsx)(s.Z, {})
                 })
             ]
         })

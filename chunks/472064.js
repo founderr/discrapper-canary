@@ -1,194 +1,194 @@
-s.r(t), s(47120), s(411104);
-var a = s(200651),
-    l = s(192379),
-    n = s(442837),
-    i = s(481060),
-    r = s(570140),
-    o = s(57513),
-    c = s(689241),
-    h = s(447273),
-    d = s(51025),
-    u = s(672971),
-    p = s(812206),
-    I = s(600164),
-    A = s(925329),
-    L = s(703656),
-    _ = s(173747),
-    T = s(850840),
-    N = s(391690),
-    m = s(424218),
-    f = s(94692),
-    E = s(981631),
-    P = s(689938),
-    C = s(522222);
-function g(e, t, s) {
+n.r(e), n(47120), n(411104);
+var l = n(200651),
+    i = n(192379),
+    s = n(442837),
+    a = n(481060),
+    r = n(570140),
+    o = n(57513),
+    c = n(689241),
+    h = n(447273),
+    d = n(51025),
+    u = n(672971),
+    p = n(812206),
+    m = n(600164),
+    f = n(925329),
+    A = n(703656),
+    I = n(173747),
+    g = n(850840),
+    T = n(391690),
+    v = n(424218),
+    b = n(94692),
+    P = n(981631),
+    N = n(388032),
+    x = n(522222);
+function L(t, e, n) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: s,
+        e in t
+            ? Object.defineProperty(t, e, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = s),
-        e
+            : (t[e] = n),
+        t
     );
 }
-class S extends l.Component {
+class C extends i.Component {
     fetchInstallSize() {
-        let { applicationId: e, branchId: t, buildId: s, manifestIds: a, buildSizeKB: l } = this.props;
-        null != s &&
-            null != a &&
-            null == l &&
+        let { applicationId: t, branchId: e, buildId: n, manifestIds: l, buildSizeKB: i } = this.props;
+        null != n &&
+            null != l &&
+            null == i &&
             r.Z.wait(() => {
-                (0, c.q)(e, t, s, a);
+                (0, c.q)(t, e, n, l);
             });
     }
     componentDidMount() {
-        let { applicationId: e, branchId: t, buildId: s, manifestIds: a } = this.props;
-        null == s || null == a ? (0, o.l)(e, t) : this.fetchInstallSize();
+        let { applicationId: t, branchId: e, buildId: n, manifestIds: l } = this.props;
+        null == n || null == l ? (0, o.l)(t, e) : this.fetchInstallSize();
     }
-    componentDidUpdate(e) {
-        (this.props.buildId !== e.buildId || this.props.manifestIds !== e.manifestIds) && this.fetchInstallSize();
+    componentDidUpdate(t) {
+        (this.props.buildId !== t.buildId || this.props.manifestIds !== t.manifestIds) && this.fetchInstallSize();
     }
     componentWillUnmount() {
         this.isUnmounted = !0;
     }
     renderButton() {
-        let { buildId: e } = this.props,
-            { hasError: t, hasAcceptedNeccessaryTerms: s } = this.state;
-        return (0, a.jsx)(i.Button, {
-            disabled: t || null == e || !s,
-            color: i.Button.Colors.GREEN,
+        let { buildId: t } = this.props,
+            { hasError: e, hasAcceptedNeccessaryTerms: n } = this.state;
+        return (0, l.jsx)(a.Button, {
+            disabled: e || null == t || !n,
+            color: a.Button.Colors.GREEN,
             onClick: this.handleInstall,
-            children: P.Z.Messages.GAME_ACTION_BUTTON_INSTALL
+            children: N.intl.string(N.t.nL0WvL)
         });
     }
     render() {
-        let { application: e, buildSizeKB: t, transitionState: s } = this.props,
-            { selectedInstallationPath: l, isInstalling: n } = this.state,
-            r = null != e && e.getSplashURL(440);
-        return (0, a.jsxs)(i.ModalRoot, {
-            transitionState: s,
-            size: i.ModalSize.SMALL,
-            'aria-label': P.Z.Messages.APPLICATION_INSTALLATION_MODAL_TITLE,
+        let { application: t, buildSizeKB: e, transitionState: n } = this.props,
+            { selectedInstallationPath: i, isInstalling: s } = this.state,
+            r = null != t && t.getSplashURL(440);
+        return (0, l.jsxs)(a.ModalRoot, {
+            transitionState: n,
+            size: a.ModalSize.SMALL,
+            'aria-label': N.intl.string(N.t.PphjtL),
             children: [
                 null != r
-                    ? (0, a.jsx)('div', {
-                          className: C.splash,
+                    ? (0, l.jsx)('div', {
+                          className: x.splash,
                           style: { backgroundImage: 'url('.concat(r, ')') }
                       })
                     : null,
-                (0, a.jsxs)(i.ModalHeader, {
-                    justify: I.Z.Justify.BETWEEN,
+                (0, l.jsxs)(a.ModalHeader, {
+                    justify: m.Z.Justify.BETWEEN,
                     children: [
-                        (0, a.jsx)(I.Z.Child, {
+                        (0, l.jsx)(m.Z.Child, {
                             grow: 1,
-                            children: (0, a.jsx)(i.Heading, {
+                            children: (0, l.jsx)(a.Heading, {
                                 variant: 'heading-lg/semibold',
-                                children: P.Z.Messages.APPLICATION_INSTALLATION_MODAL_TITLE
+                                children: N.intl.string(N.t.PphjtL)
                             })
                         }),
-                        (0, a.jsx)(I.Z.Child, {
+                        (0, l.jsx)(m.Z.Child, {
                             grow: 0,
-                            children: (0, a.jsx)(i.ModalCloseButton, { onClick: this.close })
+                            children: (0, l.jsx)(a.ModalCloseButton, { onClick: this.close })
                         })
                     ]
                 }),
-                (0, a.jsxs)(i.ModalContent, {
+                (0, l.jsxs)(a.ModalContent, {
                     children: [
-                        (0, a.jsxs)(I.Z, {
-                            align: I.Z.Align.CENTER,
+                        (0, l.jsxs)(m.Z, {
+                            align: m.Z.Align.CENTER,
                             children: [
-                                (0, a.jsx)(A.Z, {
-                                    game: e,
-                                    size: A.Z.Sizes.MEDIUM,
-                                    className: C.gameIcon
+                                (0, l.jsx)(f.Z, {
+                                    game: t,
+                                    size: f.Z.Sizes.MEDIUM,
+                                    className: x.gameIcon
                                 }),
-                                (0, a.jsx)('div', {
-                                    className: C.gameName,
-                                    children: null != e && e.name
+                                (0, l.jsx)('div', {
+                                    className: x.gameName,
+                                    children: null != t && t.name
                                 }),
-                                null != t
-                                    ? (0, a.jsx)('div', {
-                                          className: C.installSize,
-                                          children: (0, m.BU)(t, { useKibibytes: !0 })
+                                null != e
+                                    ? (0, l.jsx)('div', {
+                                          className: x.installSize,
+                                          children: (0, v.BU)(e, { useKibibytes: !0 })
                                       })
                                     : null
                             ]
                         }),
-                        (0, a.jsx)('div', { className: C.divider }),
-                        (0, a.jsx)(f.Z, {
+                        (0, l.jsx)('div', { className: x.divider }),
+                        (0, l.jsx)(b.Z, {
                             autoFocus: !0,
-                            className: C.selector,
-                            value: l,
-                            requiredDiskKB: t,
+                            className: x.selector,
+                            value: i,
+                            requiredDiskKB: e,
                             onChange: this.handleChangePath
                         }),
-                        (0, a.jsx)(u.Z, {
-                            eulaId: e.eulaId,
-                            applicationName: e.name,
-                            disabled: n,
+                        (0, l.jsx)(u.Z, {
+                            eulaId: t.eulaId,
+                            applicationName: t.name,
+                            disabled: s,
                             onChange: this.handlePurchaseTermsChange,
-                            className: C.terms
+                            className: x.terms
                         })
                     ]
                 }),
-                (0, a.jsx)(i.ModalFooter, { children: this.renderButton() })
+                (0, l.jsx)(a.ModalFooter, { children: this.renderButton() })
             ]
         });
     }
-    constructor(...e) {
-        super(...e),
-            g(this, 'state', {
+    constructor(...t) {
+        super(...t),
+            L(this, 'state', {
                 selectedInstallationPath: this.props.defaultInstallationPath,
                 hasError: !1,
                 isInstalling: !1,
                 hasAcceptedNeccessaryTerms: !1
             }),
-            g(this, 'isUnmounted', !1),
-            g(this, 'handleChangePath', (e, t) => {
+            L(this, 'isUnmounted', !1),
+            L(this, 'handleChangePath', (t, e) => {
                 this.setState({
-                    selectedInstallationPath: e,
-                    hasError: t
+                    selectedInstallationPath: t,
+                    hasError: e
                 });
             }),
-            g(this, 'install', (e, t) => {
-                let { application: s, branchId: a, analyticsLocation: l } = this.props;
-                if (null == s) return null;
+            L(this, 'install', (t, e) => {
+                let { application: n, branchId: l, analyticsLocation: i } = this.props;
+                if (null == n) return null;
                 (0, d.LO)({
-                    application: s,
-                    branchId: a,
-                    buildId: e,
-                    manifestIds: t,
+                    application: n,
+                    branchId: l,
+                    buildId: t,
+                    manifestIds: e,
                     installationPath: this.state.selectedInstallationPath,
-                    analyticsLocation: l
+                    analyticsLocation: i
                 }),
-                    (0, L.uL)(E.Z5c.APPLICATION_LIBRARY),
+                    (0, A.uL)(P.Z5c.APPLICATION_LIBRARY),
                     this.close();
             }),
-            g(this, 'handleInstall', () => {
-                let { application: e, buildId: t, manifestIds: s, hasPreviouslyAcceptedStoreTerms: a } = this.props;
-                if (null != t && null != s) !a && (0, h.B)(), null != e && null != e.eulaId && (0, h.D)(e.eulaId), this.install(t, s);
+            L(this, 'handleInstall', () => {
+                let { application: t, buildId: e, manifestIds: n, hasPreviouslyAcceptedStoreTerms: l } = this.props;
+                if (null != e && null != n) !l && (0, h.B)(), null != t && null != t.eulaId && (0, h.D)(t.eulaId), this.install(e, n);
                 else throw Error('Unexpected missing build info for non-premium product');
             }),
-            g(this, 'handlePurchaseTermsChange', (e) => {
-                this.setState({ hasAcceptedNeccessaryTerms: e });
+            L(this, 'handlePurchaseTermsChange', (t) => {
+                this.setState({ hasAcceptedNeccessaryTerms: t });
             }),
-            g(this, 'close', () => {
+            L(this, 'close', () => {
                 this.props.onClose();
             });
     }
 }
-t.default = n.ZP.connectStores([_.Z, N.Z, T.Z, p.Z], (e) => {
-    let { applicationId: t, branchId: s } = e,
-        a = _.Z.getTargetBuildId(t, s);
+e.default = s.ZP.connectStores([I.Z, T.Z, g.Z, p.Z], (t) => {
+    let { applicationId: e, branchId: n } = t,
+        l = I.Z.getTargetBuildId(e, n);
     return {
-        application: p.Z.getApplication(t),
-        defaultInstallationPath: N.Z.defaultInstallationPath,
-        buildId: a,
-        manifestIds: _.Z.getTargetManifests(t, s),
-        buildSizeKB: null != a ? _.Z.getBuildSize(a) : null,
-        hasPreviouslyAcceptedStoreTerms: T.Z.hasAcceptedStoreTerms
+        application: p.Z.getApplication(e),
+        defaultInstallationPath: T.Z.defaultInstallationPath,
+        buildId: l,
+        manifestIds: I.Z.getTargetManifests(e, n),
+        buildSizeKB: null != l ? I.Z.getBuildSize(l) : null,
+        hasPreviouslyAcceptedStoreTerms: g.Z.hasAcceptedStoreTerms
     };
-})(S);
+})(C);

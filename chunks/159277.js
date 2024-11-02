@@ -1,17 +1,17 @@
-var n, a;
-t.d(s, {
+var i, s;
+n.d(t, {
     M: function () {
-        return i;
+        return r;
     },
     t: function () {
-        return n;
+        return i;
     }
 }),
-    t(47120),
-    ((a = n || (n = {})).XBOX_APPLICATION_ID = '622174530214821906'),
-    (a.PLAYSTATION_APPLICATION_ID = '1008890872156405890'),
-    (a.PLAYSTATION_STAGING_APPLICATION_ID = '984193235868065795');
-let i = {
+    n(47120),
+    ((s = i || (i = {})).XBOX_APPLICATION_ID = '622174530214821906'),
+    (s.PLAYSTATION_APPLICATION_ID = '1008890872156405890'),
+    (s.PLAYSTATION_STAGING_APPLICATION_ID = '984193235868065795');
+let r = {
     PLAYSTATION_APPLICATION_IDS: new Set(['984193235868065795', '1008890872156405890']),
     ALL: new Set(['622174530214821906', '984193235868065795', '1008890872156405890'])
 };

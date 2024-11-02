@@ -12,30 +12,30 @@ var r = n(192379),
     l = n(451478),
     u = n(369111);
 function c(e) {
-    let { user: t, guildId: n, size: c, showPending: d = !1, animateOnHover: _ = !1, avatarOverride: E } = e,
-        [f, h] = r.useState(!1),
-        p = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
-        I = (0, i.e7)([l.Z], () => l.Z.isFocused()) && (f || (!p && !_)),
-        { pendingAvatar: m } = (0, u.Z)({}),
-        T = void 0 !== E ? E : d ? m : void 0,
-        S = (0, i.e7)([o.ZP], () => (null != n && null != t ? o.ZP.getMember(n, t.id) : null)),
-        g = r.useMemo(
+    let { user: t, guildId: n, size: c, showPending: d = !1, animateOnHover: f = !1, avatarOverride: _ } = e,
+        [h, p] = r.useState(!1),
+        m = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
+        g = (0, i.e7)([l.Z], () => l.Z.isFocused()) && (h || (!m && !f)),
+        { pendingAvatar: E } = (0, u.Z)({}),
+        v = void 0 !== _ ? _ : d ? E : void 0,
+        I = (0, i.e7)([o.ZP], () => (null != n && null != t ? o.ZP.getMember(n, t.id) : null)),
+        S = r.useMemo(
             () =>
                 null != t
-                    ? (0, s.SG)(T, S, t, {
-                          canAnimate: I,
+                    ? (0, s.SG)(v, I, t, {
+                          canAnimate: g,
                           size: c
                       })
                     : void 0,
-            [T, S, t, I, c]
+            [v, I, t, g, c]
         ),
-        A = r.useCallback(() => h(!0), []);
+        T = r.useCallback(() => p(!0), []);
     return {
-        avatarSrc: g,
-        isAvatarAnimating: I,
+        avatarSrc: S,
+        isAvatarAnimating: g,
         eventHandlers: {
-            onMouseEnter: A,
-            onMouseLeave: r.useCallback(() => h(!1), [])
+            onMouseEnter: T,
+            onMouseLeave: r.useCallback(() => p(!1), [])
         }
     };
 }

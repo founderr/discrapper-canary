@@ -5,15 +5,15 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(442837),
-    a = n(231757),
-    l = n(553795),
-    r = n(915863),
-    o = n(689938),
+var l = n(442837),
+    r = n(231757),
+    a = n(553795),
+    s = n(915863),
+    o = n(388032),
     c = n(814803);
 function u(e) {
     let { platform: t, color: n, look: u, onAction: d, Icon: h } = e;
-    if ((0, s.e7)([l.Z], () => l.Z.getAccounts().some((e) => e.type === t.type))) return null;
+    if ((0, l.e7)([a.Z], () => a.Z.getAccounts().some((e) => e.type === t.type))) return null;
     let m =
         null != h
             ? (0, i.jsx)(h, { className: c.platformIcon })
@@ -23,11 +23,11 @@ function u(e) {
                   src: t.icon.whiteSVG
               });
     return (0, i.jsx)(
-        r.Z,
+        s.Z,
         {
             onClick: () => {
                 null == d || d(),
-                    (0, a.Z)({
+                    (0, r.Z)({
                         platformType: t.type,
                         location: 'Activity Action'
                     });
@@ -37,7 +37,7 @@ function u(e) {
             fullWidth: !0,
             children: (0, i.jsxs)('div', {
                 className: c.flex,
-                children: [m, o.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({ platform: t.name })]
+                children: [m, o.intl.format(o.t.XWSHTU, { platform: t.name })]
             })
         },
         'connect-platform-activity'

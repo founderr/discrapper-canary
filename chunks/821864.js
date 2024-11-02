@@ -1,51 +1,51 @@
-t.d(n, {
+e.d(n, {
     I4: function () {
-        return c;
+        return E;
     },
     Sn: function () {
-        return d;
+        return s;
     },
     U3: function () {
         return I;
     },
     Ui: function () {
-        return _;
+        return f;
     },
     W4: function () {
-        return l;
+        return d;
     },
     gq: function () {
-        return E;
+        return c;
     },
     kZ: function () {
-        return s;
+        return l;
     }
 });
-var i = t(544891),
-    r = t(570140),
-    o = t(555573),
-    a = t(581364),
-    u = t(981631);
-function s() {
+var i = e(544891),
+    r = e(570140),
+    o = e(555573),
+    a = e(581364),
+    u = e(981631);
+function l() {
     r.Z.dispatch({ type: 'INTEGRATION_PERMISSION_SETTINGS_CLEAR' });
 }
-function l(e, n, t) {
+function d(t, n, e) {
     r.Z.dispatch({
-        applicationId: e,
+        applicationId: t,
         commandId: n,
-        permissions: t,
+        permissions: e,
         type: 'INTEGRATION_PERMISSION_SETTINGS_EDIT'
     });
 }
-function d(e, n) {
-    i.tn.get(u.ANM.GUILD_COMMANDS_FOR_APPLICATION(e, n)).then(
-        (t) => {
+function s(t, n) {
+    i.tn.get(u.ANM.GUILD_COMMANDS_FOR_APPLICATION(t, n)).then(
+        (e) => {
             r.Z.dispatch({
                 type: 'INTEGRATION_PERMISSION_SETTINGS_COMMANDS_FETCH_SUCCESS',
                 applicationId: n,
-                commands: t.body.application_commands,
-                guildId: e,
-                permissions: t.body.permissions
+                commands: e.body.application_commands,
+                guildId: t,
+                permissions: e.body.permissions
             });
         },
         () => {
@@ -56,17 +56,17 @@ function d(e, n) {
         }
     );
 }
-async function E(e, n, t) {
+async function c(t, n, e) {
     let o = [];
     try {
-        let r = await i.tn.get(u.ANM.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(e, n, t));
+        let r = await i.tn.get(u.ANM.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(t, n, e));
         r.ok && (o = r.body.permissions);
     } catch (i) {
         if (404 !== i.status) {
             r.Z.dispatch({
                 type: 'INTEGRATION_PERMISSION_SETTINGS_APPLICATION_PERMISSIONS_FETCH_FAILURE',
-                applicationId: e,
-                commandId: t,
+                applicationId: t,
+                commandId: e,
                 guildId: n
             });
             return;
@@ -74,47 +74,47 @@ async function E(e, n, t) {
     }
     r.Z.dispatch({
         type: 'INTEGRATION_PERMISSION_SETTINGS_COMMAND_UPDATE',
-        applicationId: e,
-        commandId: t,
+        applicationId: t,
+        commandId: e,
         guildId: n,
         permissions: o
     });
 }
-function c(e) {
+function E(t) {
     r.Z.dispatch({
-        applicationId: e,
+        applicationId: t,
         type: 'INTEGRATION_PERMISSION_SETTINGS_INIT'
     });
 }
-function _(e) {
+function f(t) {
     r.Z.dispatch({
-        commandId: e,
+        commandId: t,
         type: 'INTEGRATION_PERMISSION_SETTINGS_RESET'
     });
 }
-async function I(e) {
-    let { applicationId: n, commandId: t, defaultEveryoneValue: i, defaultEverywhereValue: u, guildId: s, permissions: l } = e,
-        d =
-            t === n
-                ? (function (e, n, t, i) {
-                      if (!t || !i) return n;
+async function I(t) {
+    let { applicationId: n, commandId: e, defaultEveryoneValue: i, defaultEverywhereValue: u, guildId: l, permissions: d } = t,
+        s =
+            e === n
+                ? (function (t, n, e, i) {
+                      if (!e || !i) return n;
                       let r = {
-                          [e]: t,
-                          [(0, a.bD)(e)]: i
+                          [t]: e,
+                          [(0, a.bD)(t)]: i
                       };
-                      return n.filter((e) => {
-                          let n = r[e.id];
-                          return null == n || e.permission !== n;
+                      return n.filter((t) => {
+                          let n = r[t.id];
+                          return null == n || t.permission !== n;
                       });
-                  })(s, l, i, u)
-                : l,
-        E = await o.dh(n, s, t, d);
-    E.ok &&
+                  })(l, d, i, u)
+                : d,
+        c = await o.dh(n, l, e, s);
+    c.ok &&
         r.Z.dispatch({
             type: 'INTEGRATION_PERMISSION_SETTINGS_COMMAND_UPDATE',
             applicationId: n,
-            commandId: t,
-            guildId: s,
-            permissions: E.body.permissions
+            commandId: e,
+            guildId: l,
+            permissions: c.body.permissions
         });
 }

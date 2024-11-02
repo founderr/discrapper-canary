@@ -5,23 +5,23 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    a = n.n(s),
-    l = n(481060),
-    r = n(871499),
-    o = n(689938),
+var l = n(120356),
+    r = n.n(l),
+    a = n(481060),
+    s = n(871499),
+    o = n(388032),
     c = n(723134);
 function u(e) {
     let { className: t, count: n } = e;
     return (0, i.jsxs)('div', {
-        className: a()(c.root, c.comboIcon, t),
+        className: r()(c.root, c.comboIcon, t),
         children: [
-            (0, i.jsx)(l.GroupIcon, {
+            (0, i.jsx)(a.GroupIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: c.icon
             }),
-            (0, i.jsx)(l.Text, {
+            (0, i.jsx)(a.Text, {
                 color: 'none',
                 className: c.count,
                 variant: 'text-md/normal',
@@ -32,8 +32,8 @@ function u(e) {
 }
 function d(e) {
     let { count: t, ...n } = e;
-    return (0, i.jsx)(r.Z, {
-        label: o.Z.Messages.CHANNEL_CALL_PARTICIPANTS,
+    return (0, i.jsx)(s.Z, {
+        label: o.intl.string(o.t.jNqDh4),
         iconComponent: (e) => {
             let { className: n } = e;
             return (0, i.jsx)(u, {

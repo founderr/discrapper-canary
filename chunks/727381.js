@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return _;
     }
 });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    a = n.n(s),
-    l = n(399606),
-    r = n(481060),
+var l = n(120356),
+    r = n.n(l),
+    a = n(399606),
+    s = n(481060),
     o = n(271383),
     c = n(594174),
     u = n(777288),
@@ -16,62 +16,62 @@ var s = n(120356),
     h = n(787469),
     m = n(477718),
     p = n(791176),
-    _ = n(908474),
-    f = n(467014),
-    E = n(689938),
-    g = n(194898);
-function C() {
+    f = n(908474),
+    g = n(467014),
+    C = n(388032),
+    x = n(194898);
+function v() {
     return (0, i.jsxs)('div', {
-        className: g.header,
+        className: x.header,
         children: [
             (0, i.jsxs)('div', {
-                className: g.headerTitle,
+                className: x.headerTitle,
                 children: [
                     (0, i.jsx)(u.Z, {
                         width: 16,
                         height: 16
                     }),
-                    (0, i.jsx)(r.Heading, {
+                    (0, i.jsx)(s.Heading, {
                         variant: 'heading-md/semibold',
-                        children: E.Z.Messages.GUILD_MEMBER_MOD_VIEW_TITLE
+                        children: C.intl.string(C.t.kj3tz8)
                     })
                 ]
             }),
             (0, i.jsx)('div', {
-                children: (0, i.jsx)(r.KeyCombo, {
+                children: (0, i.jsx)(s.KeyCombo, {
                     shortcut: 'esc',
-                    keyClassName: g.keyComboInner,
-                    className: g.keyComboContainer
+                    keyClassName: x.keyComboInner,
+                    className: x.keyComboContainer
                 })
             })
         ]
     });
 }
-function I(e) {
-    let { userId: t, guildId: n, location: s, className: u, onNavigate: E } = e,
-        I = (0, l.e7)([c.default], () => c.default.getUser(t), [t]),
-        T = (0, l.e7)([o.ZP], () => o.ZP.getMember(n, t), [n, t]);
-    return null == I || null == T
+function _(e) {
+    let { userId: t, guildId: n, location: l, className: u, onNavigate: C } = e,
+        _ = (0, a.e7)([c.default], () => c.default.getUser(t), [t]),
+        I = (0, a.e7)([o.ZP], () => o.ZP.getMember(n, t), [n, t]);
+    return null == _ || null == I
         ? null
         : (0, i.jsxs)('div', {
-              className: a()(g.container, u),
+              className: r()(x.container, u),
               children: [
-                  (0, i.jsx)(C, {}),
-                  (0, i.jsxs)(r.Scroller, {
-                      className: g.innerContainer,
+                  (0, i.jsx)(v, {}),
+                  (0, i.jsxs)(s.Scroller, {
+                      className: x.innerContainer,
                       children: [
-                          (0, i.jsx)(_.Z, { member: T }),
-                          (0, i.jsx)(f.Z, {
+                          (0, i.jsx)(f.Z, { member: I }),
+                          (0, i.jsx)(g.Z, {
                               userId: t,
                               guildId: n
                           }),
                           (0, i.jsx)(p.Z, {
-                              member: T,
-                              onNavigate: E
+                              member: I,
+                              onNavigate: C
                           }),
-                          (0, i.jsx)(h.Z, { member: T }),
-                          (0, i.jsx)(d.Z, { member: T }),
-                          (0, i.jsx)(m.Z, { member: T })
+                          (0, i.jsx)(h.Z, { member: I }),
+                          (0, i.jsx)(d.Z, { member: I }),
+                          (0, i.jsx)(m.Z, { member: I })
                       ]
                   })
               ]

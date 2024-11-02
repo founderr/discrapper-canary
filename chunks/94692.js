@@ -1,147 +1,147 @@
-s(653041), s(47120);
-var a = s(200651),
-    l = s(192379),
-    n = s(442837),
-    i = s(481060),
-    r = s(325432),
-    o = s(391690),
-    c = s(424218),
-    h = s(998502),
-    d = s(689938),
-    u = s(346438);
-function p(e, t, s) {
+n(653041), n(47120);
+var l = n(200651),
+    i = n(192379),
+    s = n(442837),
+    a = n(481060),
+    r = n(325432),
+    o = n(391690),
+    c = n(424218),
+    h = n(998502),
+    d = n(388032),
+    u = n(346438);
+function p(t, e, n) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: s,
+        e in t
+            ? Object.defineProperty(t, e, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = s),
-        e
+            : (t[e] = n),
+        t
     );
 }
-let I = 'select';
-class A extends l.PureComponent {
+let m = 'select';
+class f extends i.PureComponent {
     fetchAllDirectoryMetadata() {
-        let { installationPaths: e } = this.props,
-            t = e.map((e) => {
-                let { path: t } = e;
-                return t;
+        let { installationPaths: t } = this.props,
+            e = t.map((t) => {
+                let { path: e } = t;
+                return e;
             }),
-            { newInstallationPath: s } = this.state;
-        for (let e of (null != s && t.push(s), (t = t.filter((e) => !this.fetchedMetadataPaths.has(e))), (0, r.ec)(t), t)) this.fetchedMetadataPaths.add(e);
+            { newInstallationPath: n } = this.state;
+        for (let t of (null != n && e.push(n), (e = e.filter((t) => !this.fetchedMetadataPaths.has(t))), (0, r.ec)(e), e)) this.fetchedMetadataPaths.add(t);
     }
     componentDidMount() {
         this.fetchAllDirectoryMetadata();
     }
-    componentDidUpdate(e) {
-        this.fetchAllDirectoryMetadata(), (this.props.requiredDiskKB !== e.requiredDiskKB || this.props.installationPathsMetadata !== e.installationPathsMetadata) && this.sendChange(this.props.value);
+    componentDidUpdate(t) {
+        this.fetchAllDirectoryMetadata(), (this.props.requiredDiskKB !== t.requiredDiskKB || this.props.installationPathsMetadata !== t.installationPathsMetadata) && this.sendChange(this.props.value);
     }
     getOptions() {
-        let { installationPaths: e } = this.props,
-            { newInstallationPath: t } = this.state,
-            s = e.map((e) => {
-                let { path: t, label: s } = e;
+        let { installationPaths: t } = this.props,
+            { newInstallationPath: e } = this.state,
+            n = t.map((t) => {
+                let { path: e, label: n } = t;
                 return {
-                    value: t,
-                    label: this.renderLabel(t, s)
+                    value: e,
+                    label: this.renderLabel(e, n)
                 };
             });
         return (
-            null != t &&
-                s.push({
-                    value: t,
-                    label: this.renderLabel(t)
+            null != e &&
+                n.push({
+                    value: e,
+                    label: this.renderLabel(e)
                 }),
-            s.push({
-                value: I,
-                label: d.Z.Messages.APPLICATION_INSTALLATION_MODAL_SELECT_DIRECTORY
+            n.push({
+                value: m,
+                label: d.intl.string(d.t['cL/rrq'])
             }),
-            s
+            n
         );
     }
-    hasEnoughDiskSpace(e) {
-        let { requiredDiskKB: t, installationPathsMetadata: s } = this.props,
-            a = null != s[e] ? s[e].availableKB : null;
-        return null == t || null == a || t < a;
+    hasEnoughDiskSpace(t) {
+        let { requiredDiskKB: e, installationPathsMetadata: n } = this.props,
+            l = null != n[t] ? n[t].availableKB : null;
+        return null == e || null == l || e < l;
     }
-    sendChange(e) {
-        let { installationPathsMetadata: t, onChange: s } = this.props,
-            a = null != t[e] && !1 === t[e].hasPermission;
-        s(e, a || !this.hasEnoughDiskSpace(e));
+    sendChange(t) {
+        let { installationPathsMetadata: e, onChange: n } = this.props,
+            l = null != e[t] && !1 === e[t].hasPermission;
+        n(t, l || !this.hasEnoughDiskSpace(t));
     }
     renderError() {
-        let { value: e, installationPathsMetadata: t } = this.props;
-        return null != t[e] && !1 === t[e].hasPermission
-            ? (0, a.jsx)('div', {
+        let { value: t, installationPathsMetadata: e } = this.props;
+        return null != e[t] && !1 === e[t].hasPermission
+            ? (0, l.jsx)('div', {
                   className: u.error,
-                  children: d.Z.Messages.APPLICATION_INSTALLATION_MODAL_NO_PERMISSION
+                  children: d.intl.string(d.t.cEUT8P)
               })
-            : this.hasEnoughDiskSpace(e)
+            : this.hasEnoughDiskSpace(t)
               ? null
-              : (0, a.jsx)('div', {
+              : (0, l.jsx)('div', {
                     className: u.error,
-                    children: d.Z.Messages.APPLICATION_INSTALLATION_MODAL_NOT_ENOUGH_SPACE
+                    children: d.intl.string(d.t.duXbEx)
                 });
     }
-    renderLabel(e, t) {
-        let { installationPathsMetadata: s } = this.props,
-            a = null != t ? t : e;
-        return null != s[e] && null != s[e].availableKB
-            ? d.Z.Messages.APPLICATION_INSTALLATION_MODAL_DIRECTORY_WITH_SPACE.format({
-                  path: a,
-                  size: (0, c.BU)(s[e].availableKB, { useKibibytes: !0 })
+    renderLabel(t, e) {
+        let { installationPathsMetadata: n } = this.props,
+            l = null != e ? e : t;
+        return null != n[t] && null != n[t].availableKB
+            ? d.intl.formatToPlainString(d.t['Y+M3rq'], {
+                  path: l,
+                  size: (0, c.BU)(n[t].availableKB, { useKibibytes: !0 })
               })
-            : a;
+            : l;
     }
     render() {
-        let { value: e, className: t, autoFocus: s } = this.props;
-        return (0, a.jsxs)('div', {
-            className: t,
+        let { value: t, className: e, autoFocus: n } = this.props;
+        return (0, l.jsxs)('div', {
+            className: e,
             children: [
-                (0, a.jsx)(i.FormTitle, {
+                (0, l.jsx)(a.FormTitle, {
                     tag: 'h5',
-                    children: d.Z.Messages.APPLICATION_INSTALLATION_MODAL_LOCATION
+                    children: d.intl.string(d.t.WTJuNj)
                 }),
-                (0, a.jsx)(i.SingleSelect, {
-                    autoFocus: s,
+                (0, l.jsx)(a.SingleSelect, {
+                    autoFocus: n,
                     options: this.getOptions(),
-                    value: e,
+                    value: t,
                     onChange: this.handleChange
                 }),
                 this.renderError()
             ]
         });
     }
-    constructor(...e) {
-        super(...e),
+    constructor(...t) {
+        super(...t),
             p(this, 'state', { newInstallationPath: null }),
             p(this, 'fetchedMetadataPaths', new Set()),
-            p(this, 'handleChange', (e) => {
-                e === I
-                    ? h.ZP.showOpenDialog(['openDirectory']).then((e) => {
-                          if (null != e && e.length > 0) {
-                              let t = e[0];
+            p(this, 'handleChange', (t) => {
+                t === m
+                    ? h.ZP.showOpenDialog(['openDirectory']).then((t) => {
+                          if (null != t && t.length > 0) {
+                              let e = t[0];
                               this.setState({
                                   newInstallationPath:
                                       null !=
-                                      this.props.installationPaths.find((e) => {
-                                          let { path: s } = e;
-                                          return s === t;
+                                      this.props.installationPaths.find((t) => {
+                                          let { path: n } = t;
+                                          return n === e;
                                       })
                                           ? null
-                                          : t
+                                          : e
                               }),
-                                  this.sendChange(t);
+                                  this.sendChange(e);
                           }
                       })
-                    : this.sendChange(e);
+                    : this.sendChange(t);
             });
     }
 }
-t.Z = n.ZP.connectStores([o.Z], () => ({
+e.Z = s.ZP.connectStores([o.Z], () => ({
     installationPaths: o.Z.installationPaths,
     installationPathsMetadata: o.Z.installationPathsMetadata
-}))(A);
+}))(f);

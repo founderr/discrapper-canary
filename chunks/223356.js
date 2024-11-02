@@ -6,24 +6,24 @@ n.d(t, {
         return u;
     },
     ZD: function () {
-        return _;
+        return h;
     },
     pD: function () {
         return m;
     }
 }),
     n(653041);
-var a = n(990547);
+var i = n(990547);
 n(804098);
 var r = n(544891),
-    i = n(729345),
+    a = n(729345),
     o = n(210887);
 n(358085);
-var s = n(573261),
-    l = n(981631),
-    c = n(689938);
+var l = n(573261),
+    s = n(981631),
+    c = n(388032);
 async function u() {
-    return (await r.tn.get({ url: l.ANM.BUG_REPORTS })).body;
+    return (await r.tn.get({ url: s.ANM.BUG_REPORTS })).body;
 }
 function m(e) {
     var t, n;
@@ -32,32 +32,32 @@ function m(e) {
 function d() {
     return [
         {
-            title: c.Z.Messages.BUG_REPORT_PRIORITY_CRITICAL_TITLE,
-            description: c.Z.Messages.BUG_REPORT_PRIORITY_CRITICAL_DESCRIPTION.format(),
+            title: c.intl.string(c.t.VwIij4),
+            description: c.intl.format(c.t.DOP8yc, {}),
             emoji: '801497159479722084',
             value: 0
         },
         {
-            title: c.Z.Messages.BUG_REPORT_PRIORITY_HIGH_TITLE,
-            description: c.Z.Messages.BUG_REPORT_PRIORITY_HIGH_DESCRIPTION.format(),
+            title: c.intl.string(c.t.rYfJoq),
+            description: c.intl.format(c.t['+LEfDA'], {}),
             emoji: '410336837563973632',
             value: 1
         },
         {
-            title: c.Z.Messages.BUG_REPORT_PRIORITY_LOW_TITLE,
-            description: c.Z.Messages.BUG_REPORT_PRIORITY_LOW_DESCRIPTION.format(),
+            title: c.intl.string(c.t.Ia0skZ),
+            description: c.intl.format(c.t.D4rbgY, {}),
             emoji: '841420679643529296',
             value: 2
         },
         {
-            title: c.Z.Messages.BUG_REPORT_PRIORITY_VERY_LOW_TITLE,
-            description: c.Z.Messages.BUG_REPORT_PRIORITY_VERY_LOW_DESCRIPTION.format(),
+            title: c.intl.string(c.t.KGsyFx),
+            description: c.intl.format(c.t.Kmg64O, {}),
             emoji: '827645852352512021',
             value: 3
         }
     ];
 }
-async function _(e, t, n) {
+async function h(e, t, n) {
     var r, c;
     let u = [
         {
@@ -130,14 +130,14 @@ async function _(e, t, n) {
                 name: 'locale',
                 value: t.locale
             })),
-        (0, i.E)(l.GU0.WEB_APP);
+        (0, a.E)(s.GU0.WEB_APP);
     try {
-        return await s.Z.post({
-            url: l.ANM.BUG_REPORTS,
+        return await l.Z.post({
+            url: s.ANM.BUG_REPORTS,
             attachments: n,
             fields: u,
             trackedActionData: {
-                event: a.NetworkActionNames.BUG_REPORT_SUBMIT,
+                event: i.NetworkActionNames.BUG_REPORT_SUBMIT,
                 properties: {
                     priority: e.priority,
                     asana_inbox_id: m

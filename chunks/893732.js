@@ -1,44 +1,44 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return s;
     }
 });
 var i = n(200651);
 n(192379);
-var s = n(481060),
-    a = n(689938),
-    l = n(541584);
-function r(e) {
+var l = n(481060),
+    r = n(388032),
+    a = n(541584);
+function s(e) {
     let { onClose: t, guildName: n } = e;
     return (0, i.jsxs)('div', {
-        className: l.container,
+        className: a.container,
         children: [
             (0, i.jsx)('div', {
-                className: l.iconContainer,
-                children: (0, i.jsx)(s.ClockWarningIcon, {
+                className: a.iconContainer,
+                children: (0, i.jsx)(l.ClockWarningIcon, {
                     size: 'custom',
                     color: 'currentColor',
-                    className: l.icon,
+                    className: a.icon,
                     width: 20,
                     height: 20
                 })
             }),
             (0, i.jsxs)('div', {
-                className: l.header,
+                className: a.header,
                 children: [
-                    (0, i.jsx)(s.Heading, {
+                    (0, i.jsx)(l.Heading, {
                         variant: 'heading-md/semibold',
-                        className: l.headerText,
-                        children: a.Z.Messages.GUILD_COMMUNICATION_DISABLED_POPOUT_HEADER
+                        className: a.headerText,
+                        children: r.intl.string(r.t.LIIyeH)
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, i.jsx)(l.Text, {
                         variant: 'text-sm/normal',
-                        children: a.Z.Messages.GUILD_COMMUNICATION_DISABLED_POPOUT_SUBHEADER.format({ guildName: n })
+                        children: r.intl.format(r.t['4/6vQk'], { guildName: n })
                     }),
-                    (0, i.jsx)(s.Button, {
+                    (0, i.jsx)(l.Button, {
                         onClick: t,
-                        className: l.button,
-                        children: a.Z.Messages.OKAY
+                        className: a.button,
+                        children: r.intl.string(r.t.BddRzc)
                     })
                 ]
             })

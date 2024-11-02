@@ -20,35 +20,35 @@ function l(e) {
         null == l || l();
         return;
     }
-    let c = r(f, d, s);
+    let c = r(h, d, s);
     function d() {
         null == l || l();
     }
-    function _(e) {
+    function f(e) {
         i(c), n(e);
     }
-    function E(e) {
+    function _(e) {
         i(c), a(e);
     }
-    function f(e) {
+    function h(e) {
         return (
-            o(c, f, d, {
+            o(c, h, d, {
                 ...s,
                 isLoading: !0
             }),
             u({
                 promiseFn: t,
-                resolve: _,
-                reject: E,
+                resolve: f,
+                reject: _,
                 code: e,
-                mfaCodeHandler: h,
+                mfaCodeHandler: p,
                 isModalOpen: !0
             })
         );
     }
-    function h(e) {
+    function p(e) {
         let { res: t } = e;
-        o(c, f, d, {
+        o(c, h, d, {
             ...s,
             error: t.body.message
         });

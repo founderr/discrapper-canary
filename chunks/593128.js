@@ -1,169 +1,169 @@
 n(47120);
-var s = n(200651),
-    a = n(192379),
-    i = n(100621),
-    r = n(442837),
-    l = n(215569),
+var i = n(200651),
+    r = n(192379),
+    l = n(100621),
+    s = n(442837),
+    a = n(215569),
     o = n(481060),
     c = n(224706),
     d = n(425493),
     u = n(852860),
-    _ = n(493544),
-    I = n(585483),
-    E = n(931240),
-    T = n(970606),
-    m = n(389134),
-    N = n(35313),
-    S = n(94963),
-    g = n(745628),
-    h = n(950279),
-    C = n(796918),
-    x = n(513532),
-    p = n(741595),
-    R = n(974842),
-    L = n(359380),
-    f = n(308083),
-    O = n(981631),
-    A = n(231338),
-    M = n(689938),
-    D = n(766064);
-let v = (e) => [
+    m = n(493544),
+    h = n(585483),
+    g = n(931240),
+    x = n(970606),
+    p = n(389134),
+    f = n(35313),
+    C = n(94963),
+    I = n(745628),
+    _ = n(950279),
+    N = n(796918),
+    v = n(513532),
+    T = n(741595),
+    j = n(974842),
+    E = n(359380),
+    S = n(308083),
+    b = n(981631),
+    R = n(231338),
+    Z = n(388032),
+    A = n(766064);
+let L = (e) => [
         {
-            section: _.ID.HEADER,
-            label: M.Z.Messages.CLAN_SETTINGS_BASIC_INFO
+            section: m.ID.HEADER,
+            label: Z.intl.string(Z.t['7r0U+/'])
         },
         {
-            section: f.Wy.GAMES,
-            label: M.Z.Messages.CLAN_SETTTINGS_SELECT_GAMES,
+            section: S.Wy.GAMES,
+            label: Z.intl.string(Z.t['6umL+/']),
             hasError: (null == e ? void 0 : e.gameApplicationIds) != null
         },
         {
-            section: f.Wy.PLAYSTYLE,
-            label: M.Z.Messages.CLAN_SETTTINGS_SELECT_PLAYSTYLE,
+            section: S.Wy.PLAYSTYLE,
+            label: Z.intl.string(Z.t.SWXqQE),
             hasError: (null == e ? void 0 : e.playstyle) != null
         },
-        { section: _.ID.DIVIDER },
+        { section: m.ID.DIVIDER },
         {
-            section: _.ID.HEADER,
-            label: M.Z.Messages.CLAN_SETTINGS_PERSONALITY_INFO
+            section: m.ID.HEADER,
+            label: Z.intl.string(Z.t['eNC+OT'])
         },
         {
-            section: f.Wy.UTILITY_TRAITS,
-            label: M.Z.Messages.CLAN_SETTINGS_SELECT_TRAITS
+            section: S.Wy.UTILITY_TRAITS,
+            label: Z.intl.string(Z.t.oBixMj)
         },
         {
-            section: f.Wy.INTERESTS,
-            label: M.Z.Messages.CLAN_SETTINGS_SELECT_INTERESTS,
+            section: S.Wy.INTERESTS,
+            label: Z.intl.string(Z.t.WqEH5O),
             hasError: (null == e ? void 0 : e.interests) != null
         },
         {
-            section: f.Wy.DESCRIPTION,
-            label: M.Z.Messages.CLAN_SETTINGS_WRITE_DESCRIPTION,
+            section: S.Wy.DESCRIPTION,
+            label: Z.intl.string(Z.t.SnIjAQ),
             hasError: (null == e ? void 0 : e.description) != null || (null == e ? void 0 : e.wildcardDescriptors) != null
         },
-        { section: _.ID.DIVIDER },
+        { section: m.ID.DIVIDER },
         {
-            section: _.ID.HEADER,
-            label: M.Z.Messages.CLAN_SETTINGS_CUSTOMIZE_IDENTITY
+            section: m.ID.HEADER,
+            label: Z.intl.string(Z.t.qEgjwM)
         },
         {
-            section: f.Wy.CUSTOMIZE_TAG_BADGE,
-            label: M.Z.Messages.CLAN_SETTINGS_CLAN_BADGE,
+            section: S.Wy.CUSTOMIZE_TAG_BADGE,
+            label: Z.intl.string(Z.t.MuFv4e),
             hasError: (null == e ? void 0 : e.tag) != null || (null == e ? void 0 : e.badgeKind) != null || (null == e ? void 0 : e.badgePrimaryColor) != null || (null == e ? void 0 : e.badgeSecondaryColor) != null
         },
         {
-            section: f.Wy.CUSTOMIZE_BANNER,
-            label: M.Z.Messages.CLAN_SETTINGS_CLAN_PROFILE,
+            section: S.Wy.CUSTOMIZE_BANNER,
+            label: Z.intl.string(Z.t['/A+uVF']),
             hasError: (null == e ? void 0 : e.banner) != null || (null == e ? void 0 : e.brandPrimaryColor) != null || (null == e ? void 0 : e.brandSecondaryColor) != null
         },
-        { section: _.ID.DIVIDER },
+        { section: m.ID.DIVIDER },
         {
-            section: f.Wy.MEMBER_APPLICATION,
-            label: M.Z.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATION_SETUP,
+            section: S.Wy.MEMBER_APPLICATION,
+            label: Z.intl.string(Z.t.aOQWKi),
             hasError: (null == e ? void 0 : e.verificationForm) != null
         },
-        { section: _.ID.DIVIDER },
+        { section: m.ID.DIVIDER },
         {
-            section: _.ID.CUSTOM,
-            label: M.Z.Messages.CLAN_SETTINGS_DISABLE_CLAN,
-            element: j
+            section: m.ID.CUSTOM,
+            label: Z.intl.string(Z.t.vc5h39),
+            element: y
         }
     ],
-    j = (e) => {
-        let { guildId: t, onClose: i, dirty: r } = e,
-            [l, c] = a.useState(!1),
+    y = (e) => {
+        let { guildId: t, onClose: l, dirty: s } = e,
+            [a, c] = r.useState(!1),
             d = async () => {
                 c(!0);
                 try {
-                    await (0, E.nr)(t), i();
+                    await (0, g.nr)(t), l();
                 } catch (e) {
                     throw (c(!1), e);
                 }
             };
-        return (0, s.jsxs)(o.TabBar.Item, {
+        return (0, i.jsxs)(o.TabBar.Item, {
             selectedItem: !1,
-            className: D.deleteItem,
-            'aria-label': M.Z.Messages.CLAN_SETTINGS_DISABLE_CLAN,
+            className: A.deleteItem,
+            'aria-label': Z.intl.string(Z.t.vc5h39),
             onClick: () => {
-                if (r) {
-                    I.S.dispatch(O.CkL.EMPHASIZE_NOTICE);
+                if (s) {
+                    h.S.dispatch(b.CkL.EMPHASIZE_NOTICE);
                     return;
                 }
                 (0, o.openModalLazy)(async () => {
                     let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 481060));
                     return (t) =>
-                        (0, s.jsx)(e, {
+                        (0, i.jsx)(e, {
                             ...t,
-                            header: M.Z.Messages.CLAN_SETTINGS_DISABLE_CONFIRM_TITLE,
-                            confirmText: M.Z.Messages.CONFIRM,
-                            cancelText: M.Z.Messages.CANCEL,
-                            loading: l,
+                            header: Z.intl.string(Z.t.EXskgI),
+                            confirmText: Z.intl.string(Z.t['cY+Ooa']),
+                            cancelText: Z.intl.string(Z.t['ETE/oK']),
+                            loading: a,
                             onConfirm: d,
-                            children: (0, s.jsx)(o.Text, {
+                            children: (0, i.jsx)(o.Text, {
                                 variant: 'text-md/normal',
-                                children: M.Z.Messages.CLAN_SETTINGS_DISABLE_CONFIRM_BODY
+                                children: Z.intl.string(Z.t.OsRkMz)
                             })
                         });
                 });
             },
             children: [
-                (0, s.jsx)(o.TrashIcon, {
+                (0, i.jsx)(o.TrashIcon, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: D.statusDanger
+                    className: A.statusDanger
                 }),
-                (0, s.jsx)(o.Text, {
+                (0, i.jsx)(o.Text, {
                     variant: 'text-md/medium',
                     color: 'status-danger',
-                    children: M.Z.Messages.CLAN_SETTINGS_DISABLE_CLAN
+                    children: Z.intl.string(Z.t.vc5h39)
                 })
             ]
         });
     },
-    Z = (e) => {
+    D = (e) => {
         let { isErrorVisible: t } = e,
-            n = (0, o.useToken)(o.tokens.colors.HEADER_PRIMARY, A.BR.DARK),
-            a = (0, o.useToken)(o.tokens.colors.TEXT_MUTED, A.BR.DARK);
+            n = (0, o.useToken)(o.tokens.colors.HEADER_PRIMARY, R.BR.DARK),
+            r = (0, o.useToken)(o.tokens.colors.TEXT_MUTED, R.BR.DARK);
         return t
-            ? (0, s.jsxs)('div', {
-                  className: D.tooltipContents,
+            ? (0, i.jsxs)('div', {
+                  className: A.tooltipContents,
                   children: [
-                      (0, s.jsx)(o.WarningIcon, {
+                      (0, i.jsx)(o.WarningIcon, {
                           size: 'xs',
                           color: 'currentColor',
-                          className: D.errorIconTooltip
+                          className: A.errorIconTooltip
                       }),
-                      (0, s.jsxs)('div', {
+                      (0, i.jsxs)('div', {
                           children: [
-                              (0, s.jsx)(o.Text, {
+                              (0, i.jsx)(o.Text, {
                                   variant: 'text-sm/medium',
                                   style: { color: n.hex() },
-                                  children: M.Z.Messages.CLAN_SUBMIT_ERROR_TITLE
+                                  children: Z.intl.string(Z.t.M6w76e)
                               }),
-                              (0, s.jsx)(o.Text, {
+                              (0, i.jsx)(o.Text, {
                                   variant: 'text-xs/normal',
-                                  style: { color: a.hex() },
-                                  children: M.Z.Messages.CLAN_SUBMIT_ERROR_SUBTITLE
+                                  style: { color: r.hex() },
+                                  children: Z.intl.string(Z.t.pNtCgo)
                               })
                           ]
                       })
@@ -173,16 +173,16 @@ let v = (e) => [
     };
 t.Z = (e) => {
     let { guildId: t, onClose: n } = e,
-        [A, j] = a.useState(f.Wy.GAMES),
+        [R, y] = r.useState(S.Wy.GAMES),
         {
-            initialSettings: b,
-            settings: U,
-            errors: G,
-            submitting: P,
-            dirty: B
-        } = (0, r.cj)([m.Z], () => {
+            initialSettings: O,
+            settings: M,
+            errors: P,
+            submitting: k,
+            dirty: w
+        } = (0, s.cj)([p.Z], () => {
             var e;
-            let t = m.Z.getState();
+            let t = p.Z.getState();
             return {
                 initialSettings: t.initialSettings,
                 settings: t.settings,
@@ -191,118 +191,118 @@ t.Z = (e) => {
                 dirty: t.dirty
             };
         }),
-        y = a.useCallback(
+        B = r.useCallback(
             (e) => {
-                B ? I.S.dispatch(O.CkL.EMPHASIZE_NOTICE) : j(e);
+                w ? h.S.dispatch(b.CkL.EMPHASIZE_NOTICE) : y(e);
             },
-            [B]
+            [w]
         ),
-        F = (0, N.f)(),
-        w = a.useCallback(
+        U = (0, f.f)(),
+        G = r.useCallback(
             (e) => {
                 'Escape' === e.key && (e.stopPropagation(), n());
             },
             [n]
         );
-    a.useEffect(() => {
-        (0, T.GO)(t, (0, T.Qh)(A));
-    }, [t, A]),
-        a.useEffect(
+    r.useEffect(() => {
+        (0, x.GO)(t, (0, x.Qh)(R));
+    }, [t, R]),
+        r.useEffect(
             () => (
-                window.addEventListener('keydown', w),
+                window.addEventListener('keydown', G),
                 () => {
-                    window.removeEventListener('keydown', w);
+                    window.removeEventListener('keydown', G);
                 }
             ),
-            [w]
+            [G]
         ),
-        a.useEffect(() => {
+        r.useEffect(() => {
             c.Z.getDetectableGames();
         }, []),
-        a.useEffect(() => {
-            (0, E.aH)(t);
+        r.useEffect(() => {
+            (0, g.aH)(t);
         }, [t]);
-    let k = a.useCallback((e) => (0, E.mf)(t, { gameApplicationIds: e }), [t]),
-        H = a.useCallback((e) => (0, E.mf)(t, { playstyle: e }), [t]),
-        V = a.useCallback((e) => (0, E.mf)(t, { interests: e }), [t]),
-        Y = a.useCallback((e) => (0, E.mf)(t, e), [t]),
-        W = a.useCallback(() => {
-            B ? I.S.dispatch(O.CkL.EMPHASIZE_NOTICE) : n();
-        }, [B, n]),
-        z = async () => {
-            await (0, E.Ii)(t, U), (0, T.Af)(t);
+    let F = r.useCallback((e) => (0, g.mf)(t, { gameApplicationIds: e }), [t]),
+        H = r.useCallback((e) => (0, g.mf)(t, { playstyle: e }), [t]),
+        z = r.useCallback((e) => (0, g.mf)(t, { interests: e }), [t]),
+        V = r.useCallback((e) => (0, g.mf)(t, e), [t]),
+        W = r.useCallback(() => {
+            w ? h.S.dispatch(b.CkL.EMPHASIZE_NOTICE) : n();
+        }, [w, n]),
+        Y = async () => {
+            await (0, g.Ii)(t, M), (0, x.Af)(t);
         },
-        K = a.useMemo(() => null != G && Object.values(G).some((e) => null != e), [G]);
-    if (null == U) return null;
-    let q = v(G);
-    return (0, s.jsxs)(i.animated.div, {
-        style: F,
-        className: D.modal,
+        K = r.useMemo(() => null != P && Object.values(P).some((e) => null != e), [P]);
+    if (null == M) return null;
+    let q = L(P);
+    return (0, i.jsxs)(l.animated.div, {
+        style: U,
+        className: A.modal,
         children: [
-            (0, s.jsx)(o.Tooltip, {
+            (0, i.jsx)(o.Tooltip, {
                 color: o.Tooltip.Colors.GREY,
-                tooltipClassName: D.tooltip,
-                text: (0, s.jsx)(Z, { isErrorVisible: K }),
+                tooltipClassName: A.tooltip,
+                text: (0, i.jsx)(D, { isErrorVisible: K }),
                 position: 'left',
-                'aria-label': null != K ? M.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : void 0,
+                'aria-label': null != K ? Z.intl.string(Z.t.M6w76e) : void 0,
                 shouldShow: K,
                 forceOpen: K,
                 children: (e) =>
-                    (0, s.jsx)(d.Z, {
+                    (0, i.jsx)(d.Z, {
                         ...e,
-                        className: D.closeButton,
+                        className: A.closeButton,
                         closeAction: W,
                         keybind: 'ESC'
                     })
             }),
-            (0, s.jsxs)('div', {
-                className: D.modalContents,
+            (0, i.jsxs)('div', {
+                className: A.modalContents,
                 children: [
-                    (0, s.jsx)('div', {
-                        className: D.sidebarWrapper,
-                        children: (0, s.jsx)(o.TabBar, {
-                            className: D.sidebar,
-                            selectedItem: A,
-                            onItemSelect: y,
+                    (0, i.jsx)('div', {
+                        className: A.sidebarWrapper,
+                        children: (0, i.jsx)(o.TabBar, {
+                            className: A.sidebar,
+                            selectedItem: R,
+                            onItemSelect: B,
                             orientation: 'vertical',
-                            children: q.map((e, a) => {
+                            children: q.map((e, r) => {
                                 switch (e.section) {
-                                    case _.ID.HEADER:
-                                        return (0, s.jsx)(o.TabBar.Header, { children: e.label }, 'header-'.concat(a));
-                                    case _.ID.DIVIDER:
-                                        return (0, s.jsx)(o.TabBar.Separator, {}, 'divider-'.concat(a));
-                                    case _.ID.CUSTOM:
-                                        let i = e.element;
-                                        return (0, s.jsx)(
-                                            i,
+                                    case m.ID.HEADER:
+                                        return (0, i.jsx)(o.TabBar.Header, { children: e.label }, 'header-'.concat(r));
+                                    case m.ID.DIVIDER:
+                                        return (0, i.jsx)(o.TabBar.Separator, {}, 'divider-'.concat(r));
+                                    case m.ID.CUSTOM:
+                                        let l = e.element;
+                                        return (0, i.jsx)(
+                                            l,
                                             {
-                                                dirty: B,
+                                                dirty: w,
                                                 guildId: t,
                                                 onClose: n
                                             },
                                             e.label
                                         );
                                     default:
-                                        return (0, s.jsx)(
+                                        return (0, i.jsx)(
                                             o.TabBar.Item,
                                             {
-                                                className: D.settingsTab,
+                                                className: A.settingsTab,
                                                 'aria-label': e.label,
                                                 id: e.section,
-                                                children: (0, s.jsxs)(s.Fragment, {
+                                                children: (0, i.jsxs)(i.Fragment, {
                                                     children: [
                                                         e.label,
                                                         e.hasError &&
-                                                            (0, s.jsx)(o.Tooltip, {
+                                                            (0, i.jsx)(o.Tooltip, {
                                                                 color: o.Tooltip.Colors.GREY,
                                                                 position: 'right',
-                                                                text: M.Z.Messages.CLAN_SUBMIT_ERROR_TITLE,
+                                                                text: Z.intl.string(Z.t.M6w76e),
                                                                 children: (e) =>
-                                                                    (0, s.jsx)(o.WarningIcon, {
+                                                                    (0, i.jsx)(o.WarningIcon, {
                                                                         size: 'xs',
                                                                         color: 'currentColor',
                                                                         ...e,
-                                                                        className: D.errorIcon
+                                                                        className: A.errorIcon
                                                                     })
                                                             })
                                                     ]
@@ -314,94 +314,94 @@ t.Z = (e) => {
                             })
                         })
                     }),
-                    (0, s.jsxs)('div', {
-                        className: D.mainContent,
+                    (0, i.jsxs)('div', {
+                        className: A.mainContent,
                         children: [
-                            (0, s.jsx)(o.ScrollerThin, {
+                            (0, i.jsx)(o.ScrollerThin, {
                                 children: (() => {
-                                    switch (A) {
-                                        case f.Wy.GAMES:
+                                    switch (R) {
+                                        case S.Wy.GAMES:
                                             var e;
-                                            return (0, s.jsx)(h.Z, {
-                                                title: M.Z.Messages.CLAN_SETUP_GAMES_TITLE,
-                                                description: M.Z.Messages.CLAN_SETUP_GAMES_SUBTITLE,
-                                                onUpdateGames: k,
-                                                gameApplicationIds: null !== (e = U.gameApplicationIds) && void 0 !== e ? e : new Set(),
-                                                error: G.gameApplicationIds,
+                                            return (0, i.jsx)(_.Z, {
+                                                title: Z.intl.string(Z.t.t6Mbq6),
+                                                description: Z.intl.string(Z.t.E7Ymwc),
+                                                onUpdateGames: F,
+                                                gameApplicationIds: null !== (e = M.gameApplicationIds) && void 0 !== e ? e : new Set(),
+                                                error: P.gameApplicationIds,
                                                 guildId: t,
                                                 includeSuggestedGames: !0
                                             });
-                                        case f.Wy.PLAYSTYLE:
-                                            return (0, s.jsx)(p.Z, {
-                                                title: M.Z.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
-                                                description: M.Z.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
+                                        case S.Wy.PLAYSTYLE:
+                                            return (0, i.jsx)(T.Z, {
+                                                title: Z.intl.string(Z.t.W0h7pa),
+                                                description: Z.intl.string(Z.t.JHYekZ),
                                                 onUpdatePlaystyle: H,
-                                                playstyle: U.playstyle,
-                                                error: G.playstyle
+                                                playstyle: M.playstyle,
+                                                error: P.playstyle
                                             });
-                                        case f.Wy.UTILITY_TRAITS:
-                                            return (0, s.jsx)(L.Z, {
+                                        case S.Wy.UTILITY_TRAITS:
+                                            return (0, i.jsx)(E.Z, {
                                                 guildId: t,
-                                                title: M.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
-                                                description: M.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
-                                                onUpdateTraits: V,
-                                                progress: U
+                                                title: Z.intl.string(Z.t.G4tP09),
+                                                description: Z.intl.string(Z.t['6Eos19']),
+                                                onUpdateTraits: z,
+                                                progress: M
                                             });
-                                        case f.Wy.INTERESTS:
-                                            return (0, s.jsx)(C.Z, {
+                                        case S.Wy.INTERESTS:
+                                            return (0, i.jsx)(N.Z, {
                                                 guildId: t,
-                                                handleUpdate: Y,
-                                                progress: U,
-                                                error: G.interests
+                                                handleUpdate: V,
+                                                progress: M,
+                                                error: P.interests
                                             });
-                                        case f.Wy.DESCRIPTION:
-                                            return (0, s.jsx)(g.Z, {
+                                        case S.Wy.DESCRIPTION:
+                                            return (0, i.jsx)(I.Z, {
                                                 guildId: t,
-                                                handleUpdate: Y,
-                                                progress: U,
-                                                errors: G
+                                                handleUpdate: V,
+                                                progress: M,
+                                                errors: P
                                             });
-                                        case f.Wy.CUSTOMIZE_TAG_BADGE:
-                                            return (0, s.jsx)(R.Z, {
-                                                handleUpdate: Y,
-                                                tag: U.tag,
-                                                error: G.tag,
-                                                badge: U.badgeKind,
-                                                primaryColor: U.badgePrimaryColor,
-                                                secondaryColor: U.badgeSecondaryColor,
-                                                furthestStep: f.Wy.CUSTOMIZE_TAG_BADGE,
+                                        case S.Wy.CUSTOMIZE_TAG_BADGE:
+                                            return (0, i.jsx)(j.Z, {
+                                                handleUpdate: V,
+                                                tag: M.tag,
+                                                error: P.tag,
+                                                badge: M.badgeKind,
+                                                primaryColor: M.badgePrimaryColor,
+                                                secondaryColor: M.badgeSecondaryColor,
+                                                furthestStep: S.Wy.CUSTOMIZE_TAG_BADGE,
                                                 inSettings: !0
                                             });
-                                        case f.Wy.MEMBER_APPLICATION:
-                                            return (0, s.jsx)(x.Z, {
+                                        case S.Wy.MEMBER_APPLICATION:
+                                            return (0, i.jsx)(v.Z, {
                                                 guildId: t,
                                                 inSettings: !0,
-                                                error: G.verificationForm
+                                                error: P.verificationForm
                                             });
-                                        case f.Wy.CUSTOMIZE_BANNER:
-                                            return (0, s.jsx)(S.Z, {
+                                        case S.Wy.CUSTOMIZE_BANNER:
+                                            return (0, i.jsx)(C.Z, {
                                                 guildId: t,
-                                                handleUpdate: Y,
-                                                progress: U
+                                                handleUpdate: V,
+                                                progress: M
                                             });
                                         default:
                                             return null;
                                     }
                                 })()
                             }),
-                            (0, s.jsx)(l.W, {
+                            (0, i.jsx)(a.W, {
                                 component: 'div',
                                 children:
-                                    B &&
-                                    (0, s.jsx)(o.SlideIn, {
-                                        className: D.noticeRegion,
-                                        children: (0, s.jsx)(u.Z, {
-                                            onSave: z,
-                                            submitting: P,
+                                    w &&
+                                    (0, i.jsx)(o.SlideIn, {
+                                        className: A.noticeRegion,
+                                        children: (0, i.jsx)(u.Z, {
+                                            onSave: Y,
+                                            submitting: k,
                                             onReset: () => {
-                                                (0, E.mf)(t, b);
+                                                (0, g.mf)(t, O);
                                             },
-                                            errorMessage: Object.values(G).find((e) => null != e)
+                                            errorMessage: Object.values(P).find((e) => null != e)
                                         })
                                     })
                             })

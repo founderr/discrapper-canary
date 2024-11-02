@@ -1,97 +1,97 @@
-var i = t(570140),
-    r = t(434404),
-    o = t(821864),
-    a = t(308063);
+var i = e(570140),
+    r = e(434404),
+    o = e(821864),
+    a = e(308063);
 n.Z = {
     init() {
         i.Z.dispatch({ type: 'INTEGRATION_SETTINGS_INIT' });
     },
-    setSection(e) {
+    setSection(t) {
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
         i.Z.dispatch({
             type: 'INTEGRATION_SETTINGS_SET_SECTION',
-            section: e,
+            section: t,
             sectionId: n
         });
     },
-    startEditingCommandPermissions(e) {
+    startEditingCommandPermissions(t) {
         i.Z.dispatch({
             type: 'INTEGRATION_SETTINGS_START_EDITING_COMMAND',
-            commandId: e
+            commandId: t
         });
     },
-    stopEditingCommandPermissions(e) {
+    stopEditingCommandPermissions(t) {
         i.Z.dispatch({
             type: 'INTEGRATION_SETTINGS_STOP_EDITING_COMMAND',
-            commandId: e
+            commandId: t
         });
     },
-    startEditingIntegration(e) {
+    startEditingIntegration(t) {
         i.Z.dispatch({
             type: 'INTEGRATION_SETTINGS_START_EDITING_INTEGRATION',
-            integrationId: e
+            integrationId: t
         });
     },
     stopEditingIntegration() {
         i.Z.dispatch({ type: 'INTEGRATION_SETTINGS_STOP_EDITING_INTEGRATION' });
     },
-    updateIntegration(e) {
+    updateIntegration(t) {
         i.Z.dispatch({
             type: 'INTEGRATION_SETTINGS_UPDATE_INTEGRATION',
-            settings: e
+            settings: t
         });
     },
-    startEditingWebhook(e) {
+    startEditingWebhook(t) {
         i.Z.dispatch({
             type: 'INTEGRATION_SETTINGS_START_EDITING_WEBHOOK',
-            webhookId: e
+            webhookId: t
         });
     },
     stopEditingWebhook() {
         i.Z.dispatch({ type: 'INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK' });
     },
-    updateWebhook(e) {
+    updateWebhook(t) {
         i.Z.dispatch({
             type: 'INTEGRATION_SETTINGS_UPDATE_WEBHOOK',
-            settings: e
+            settings: t
         });
     },
-    async saveApplicationPermissions(e, n, t) {
+    async saveApplicationPermissions(t, n, e) {
         try {
             i.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SUBMITTING' }),
                 await o.U3({
-                    applicationId: e,
-                    commandId: e,
+                    applicationId: t,
+                    commandId: t,
                     defaultEveryoneValue: !0,
                     defaultEverywhereValue: !0,
                     guildId: n,
-                    permissions: t
+                    permissions: e
                 }),
                 i.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SAVE_SUCCESS' });
-        } catch (e) {
+        } catch (t) {
             i.Z.dispatch({
                 type: 'INTEGRATION_SETTINGS_SAVE_FAILURE',
-                errors: e.body
+                errors: t.body
             });
         }
     },
-    async saveIntegration(e, n) {
+    async saveIntegration(t, n) {
         try {
-            i.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SUBMITTING' }), await r.Z.updateIntegration(e, n.id, n.expire_behavior, n.expire_grace_period, n.enable_emoticons), i.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SAVE_SUCCESS' });
-        } catch (e) {
+            i.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SUBMITTING' }), await r.Z.updateIntegration(t, n.id, n.expire_behavior, n.expire_grace_period, n.enable_emoticons), i.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SAVE_SUCCESS' });
+        } catch (t) {
             i.Z.dispatch({
                 type: 'INTEGRATION_SETTINGS_SAVE_FAILURE',
-                errors: e.body
+                errors: t.body
             });
         }
     },
-    async saveWebhook(e, n) {
+    async saveWebhook(t, n) {
         try {
-            i.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SUBMITTING' }), await a.Z.update(e, n.id, n), i.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SAVE_SUCCESS' });
-        } catch (e) {
+            i.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SUBMITTING' }), await a.Z.update(t, n.id, n), i.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SAVE_SUCCESS' });
+        } catch (t) {
             i.Z.dispatch({
                 type: 'INTEGRATION_SETTINGS_SAVE_FAILURE',
-                errors: e.body
+                errors: t.body
             });
         }
     }

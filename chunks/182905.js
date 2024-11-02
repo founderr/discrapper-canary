@@ -1,36 +1,36 @@
-var n = s(200651);
-s(192379);
-var l = s(120356),
-    i = s.n(l),
-    a = s(692547),
-    r = s(481060),
-    o = s(600164),
-    c = s(670494);
+var i = n(200651);
+n(192379);
+var l = n(120356),
+    s = n.n(l),
+    r = n(692547),
+    a = n(481060),
+    o = n(600164),
+    c = n(670494);
 t.Z = (e) => {
-    let { className: t, icon: s, noticeText: l, buttonText: d, onClick: u, canSync: h } = e;
-    return (0, n.jsx)(r.Card, {
-        className: i()(t, c.card),
-        children: (0, n.jsxs)(o.Z, {
+    let { className: t, icon: n, noticeText: l, buttonText: d, onClick: u, canSync: h } = e;
+    return (0, i.jsx)(a.Card, {
+        className: s()(t, c.card),
+        children: (0, i.jsxs)(o.Z, {
             justify: o.Z.Justify.BETWEEN,
             align: o.Z.Align.CENTER,
             children: [
-                (0, n.jsx)(s, {
+                (0, i.jsx)(n, {
                     width: 20,
                     height: 20,
                     size: 'custom',
-                    color: a.Z.unsafe_rawColors.YELLOW_300.css
+                    color: r.Z.unsafe_rawColors.YELLOW_300.css
                 }),
-                (0, n.jsx)('div', {
+                (0, i.jsx)('div', {
                     className: c.label,
-                    children: (0, n.jsx)(r.Text, {
+                    children: (0, i.jsx)(a.Text, {
                         variant: 'text-md/normal',
                         children: l
                     })
                 }),
                 h &&
-                    (0, n.jsx)(r.Button, {
-                        size: r.Button.Sizes.SMALL,
-                        color: r.Button.Colors.PRIMARY,
+                    (0, i.jsx)(a.Button, {
+                        size: a.Button.Sizes.SMALL,
+                        color: a.Button.Colors.PRIMARY,
                         onClick: u,
                         children: d
                     })

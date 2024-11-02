@@ -9,7 +9,7 @@ var r = n(200651),
     a = n(241601),
     s = n(406128),
     o = n(706454),
-    l = n(689938),
+    l = n(388032),
     u = n(88719);
 function c(e) {
     let { children: t } = e,
@@ -17,7 +17,7 @@ function c(e) {
         [c, d] = (0, a.R_)((e) => [e.isLoading, e.error]);
     return null != d
         ? (0, r.jsx)(s.Z, {
-              title: l.Z.Messages.I18N_LOCALE_LOADING_ERROR.format({ locale: n }),
+              title: l.intl.formatToPlainString(l.t['7basa2'], { locale: n }),
               note: (0, r.jsx)('span', { children: d.message })
           })
         : c

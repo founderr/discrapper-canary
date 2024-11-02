@@ -1,18 +1,18 @@
 n.d(t, {
     Nx: function () {
-        return f;
+        return h;
     },
     UV: function () {
-        return T;
+        return v;
     },
     WR: function () {
-        return m;
+        return E;
     },
     lr: function () {
-        return p;
+        return m;
     },
     t7: function () {
-        return h;
+        return p;
     }
 }),
     n(47120);
@@ -25,54 +25,54 @@ var r = n(192379),
     u = n(775412),
     c = n(104494),
     d = n(639119),
-    _ = n(474936),
-    E = n(981631);
-function f() {
+    f = n(474936),
+    _ = n(981631);
+function h() {
     let e = (0, d.N)(),
         t = (0, u._O)(),
         n = (0, c.Ng)(),
-        r = h();
+        r = p();
     return null != e || t || null != n || r;
 }
-let h = () => {
+let p = () => {
         var e;
         let t = (0, s.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
             n = null == t ? void 0 : null === (e = t.metadata) || void 0 === e ? void 0 : e.active_discount_expires_at;
         return null != n && a()(Date.now()) <= a()(n);
     },
-    p = () => {
+    m = () => {
         var e;
         let t = (0, s.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription());
         switch (null == t ? void 0 : null === (e = t.metadata) || void 0 === e ? void 0 : e.active_discount_id) {
-            case _.dT:
-            case _.rB:
+            case f.dT:
+            case f.rB:
                 return {
                     duration: 1,
                     percentage: 30
                 };
-            case _.dB:
-            case _.hs:
-            case _.RU:
+            case f.dB:
+            case f.hs:
+            case f.RU:
                 return {
                     duration: 3,
                     percentage: 30
                 };
-            case _.ih:
+            case f.ih:
                 return {
                     duration: 1,
                     percentage: 40
                 };
-            case _.gW:
+            case f.gW:
                 return {
                     duration: 1,
                     percentage: 20
                 };
-            case _.Nl:
+            case f.Nl:
                 return {
                     duration: 1,
                     percentage: 25
                 };
-            case _.n5:
+            case f.n5:
                 return {
                     duration: 1,
                     percentage: 40
@@ -81,16 +81,16 @@ let h = () => {
                 return;
         }
     },
-    I = async () => {
+    g = async () => {
         let e = null;
         try {
             var t;
-            let n = await o.tn.post({ url: E.ANM.CHURN_USER_OFFER });
+            let n = await o.tn.post({ url: _.ANM.CHURN_USER_OFFER });
             e = null !== (t = n.body.offer) && void 0 !== t ? t : null;
         } catch (e) {}
         return e;
     },
-    m = (e) => {
+    E = (e) => {
         let [t, n] = r.useState(!1),
             [i, a] = r.useState(!1),
             [s, o] = r.useState(null);
@@ -106,7 +106,7 @@ let h = () => {
             !i &&
                 !t &&
                 (a(!0),
-                I()
+                g()
                     .then((e) => {
                         o(e), l();
                     })
@@ -119,9 +119,9 @@ let h = () => {
             }
         );
     },
-    T = () => {
+    v = () => {
         let e = (0, s.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
-            t = h(),
+            t = p(),
             n = null !== e && e.hasPremiumNitroMonthly,
             r = null != e && null != e.trialId;
         return n && !r && !t;

@@ -1,15 +1,15 @@
 n.d(t, {
     Cf: function () {
-        return p;
+        return m;
     },
     SR: function () {
-        return _;
+        return f;
     },
     ZP: function () {
-        return h;
+        return p;
     },
     vM: function () {
-        return E;
+        return _;
     }
 }),
     n(47120);
@@ -22,18 +22,18 @@ var r = n(192379),
     u = n(607070),
     c = n(302221),
     d = n(956664);
-let _ = (0, s.Z)(() => ({
+let f = (0, s.Z)(() => ({
     palette: {},
     fetching: {}
 }));
-async function E(e) {
+async function _(e) {
     var t;
-    if (((t = e), null == _.getState().palette[t])) await f(e);
+    if (((t = e), null == f.getState().palette[t])) await h(e);
 }
-async function f(e) {
-    if (!_.getState().fetching[e]) {
+async function h(e) {
+    if (!f.getState().fetching[e]) {
         (0, o.j)(() =>
-            _.setState((t) => ({
+            f.setState((t) => ({
                 fetching: {
                     ...t.fetching,
                     [e]: !0
@@ -44,7 +44,7 @@ async function f(e) {
             let t = await (0, d.OF)(e),
                 n = (0, c.WY)(t[0]);
             (0, o.j)(() => {
-                _.setState((r) => ({
+                f.setState((r) => ({
                     fetching: {
                         ...r.fetching,
                         [e]: !1
@@ -57,7 +57,7 @@ async function f(e) {
             });
         } catch (t) {
             (0, o.j)(() =>
-                _.setState((t) => ({
+                f.setState((t) => ({
                     fetching: {
                         ...t.fetching,
                         [e]: !1
@@ -67,17 +67,17 @@ async function f(e) {
         }
     }
 }
-function h(e, t) {
-    let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        [r] = p(e, t, n);
-    return r;
-}
 function p(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        i = _((t) => (null == e ? void 0 : t.palette[e])),
+        [r] = m(e, t, n);
+    return r;
+}
+function m(e, t) {
+    let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+        i = f((t) => (null == e ? void 0 : t.palette[e])),
         s = (0, l.e7)([u.Z], () => (n && u.Z.desaturateUserColors ? u.Z.saturation : 1));
     r.useEffect(() => {
-        if (null != e && null == i) f(e);
+        if (null != e && null == i) h(e);
     }, [e, i]);
     let o = r.useMemo(
         () =>

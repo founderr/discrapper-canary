@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return _;
     }
 });
 var r = n(200651),
@@ -12,22 +12,22 @@ var r = n(200651),
     u = n(592125),
     c = n(944486),
     d = n(701488),
-    _ = n(689938);
-function E(e) {
-    let { display: t, entry: n, onAction: E } = e,
-        { analyticsLocations: f } = (0, o.ZP)(),
-        h = (0, i.e7)([u.Z, c.Z], () => u.Z.getChannel(c.Z.getChannelId()));
+    f = n(388032);
+function _(e) {
+    let { display: t, entry: n, onAction: _ } = e,
+        { analyticsLocations: h } = (0, o.ZP)(),
+        p = (0, i.e7)([u.Z, c.Z], () => u.Z.getChannel(c.Z.getChannelId()));
     return 'live' !== t && (0, l.Mq)(n)
         ? (0, r.jsx)(a.MenuItem, {
               id: 'view-activity',
-              label: _.Z.Messages.CONTENT_INVENTORY_VIEW_ACTIVITY,
+              label: f.intl.string(f.t.GDWYR0),
               action: () => {
                   var e;
-                  null == E || E({ action: 'PRESS_VIEW_ACTIVITY_MENU_ITEM' }),
+                  null == _ || _({ action: 'PRESS_VIEW_ACTIVITY_MENU_ITEM' }),
                       (0, s.Z)({
-                          channel: h,
-                          guildId: null !== (e = null == h ? void 0 : h.getGuildId()) && void 0 !== e ? e : void 0,
-                          analyticsLocations: f,
+                          channel: p,
+                          guildId: null !== (e = null == p ? void 0 : p.getGuildId()) && void 0 !== e ? e : void 0,
+                          analyticsLocations: h,
                           locationObject: {},
                           openInPopout: !1,
                           initialSelectedApplicationId: n.extra.application_id,

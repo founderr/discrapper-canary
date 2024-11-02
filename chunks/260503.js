@@ -4,17 +4,17 @@ n.d(t, {
     }
 });
 var a = n(192379),
-    s = n(924826);
+    i = n(924826);
 function r(e) {
     let { listRef: t, padding: n, channel: r, isEnabled: l } = e,
-        i = a.useCallback(
+        s = a.useCallback(
             (e) => {
                 let a = t.current,
-                    s = document.querySelector(e);
-                null != s &&
+                    i = document.querySelector(e);
+                null != i &&
                     (null == a ||
                         a.scrollIntoViewNode({
-                            node: s,
+                            node: i,
                             padding: n,
                             callback: () => {
                                 var t;
@@ -40,11 +40,11 @@ function r(e) {
                 }),
             []
         );
-    return (0, s.ZP)({
+    return (0, i.ZP)({
         id: 'forum-channel-list-'.concat(r.id),
         isEnabled: l,
         scrollToStart: o,
         scrollToEnd: c,
-        setFocus: i
+        setFocus: s
     });
 }

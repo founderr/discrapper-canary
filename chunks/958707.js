@@ -5,10 +5,10 @@ n.d(t, {
 });
 var l = n(200651);
 n(192379);
-var s = n(120356),
-    i = n.n(s),
-    r = n(263846);
+var i = n(120356),
+    r = n.n(i),
+    s = n(263846);
 function a(e) {
     let { separator: t = !1 } = e;
-    return (0, l.jsx)('div', { className: i()(r.divider, { [r.separator]: t }) });
+    return (0, l.jsx)('div', { className: r()(s.divider, { [s.separator]: t }) });
 }

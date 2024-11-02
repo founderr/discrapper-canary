@@ -3,42 +3,42 @@ t.d(n, {
         return c;
     }
 });
-var a = t(200651),
-    r = t(192379),
+var r = t(200651),
+    a = t(192379),
     i = t(481060),
-    s = t(689938),
+    s = t(388032),
     o = t(242047);
 function l(e) {
     let { showSecondaryColor: n, palette: t, onPrimaryColorChange: l, onSecondaryColorChange: c } = e,
-        d = r.useRef(null);
+        d = a.useRef(null);
     return (
         (0, i.useFocusLock)(d),
-        (0, a.jsxs)('div', {
+        (0, r.jsxs)('div', {
             className: o.popoutContainer,
             children: [
-                (0, a.jsx)(i.Text, {
+                (0, r.jsx)(i.Text, {
                     variant: 'text-xs/semibold',
                     color: 'header-secondary',
                     className: o.customColorsHeader,
-                    children: s.Z.Messages.CLAN_PALETTE_PICKER_CUSTOM_COLORS
+                    children: s.intl.string(s.t.lfYWW1)
                 }),
-                (0, a.jsxs)('div', {
+                (0, r.jsxs)('div', {
                     ref: d,
                     className: o.colorPickersContainer,
                     children: [
-                        (0, a.jsxs)('div', {
+                        (0, r.jsxs)('div', {
                             className: o.colorColumn,
                             children: [
-                                (0, a.jsx)('div', {
+                                (0, r.jsx)('div', {
                                     className: o.colorSwatch,
                                     style: { backgroundColor: t.primary }
                                 }),
-                                (0, a.jsx)(i.Text, {
+                                (0, r.jsx)(i.Text, {
                                     variant: 'text-xs/medium',
                                     color: 'text-normal',
-                                    children: s.Z.Messages.USER_SETTINGS_PROFILE_THEME_PRIMARY
+                                    children: s.intl.string(s.t.C3KTQk)
                                 }),
-                                (0, a.jsx)(i.CustomColorPicker, {
+                                (0, r.jsx)(i.CustomColorPicker, {
                                     className: o.colorPicker,
                                     value: t.primary,
                                     eagerUpdate: !0,
@@ -49,19 +49,19 @@ function l(e) {
                             ]
                         }),
                         n &&
-                            (0, a.jsxs)('div', {
+                            (0, r.jsxs)('div', {
                                 className: o.colorColumn,
                                 children: [
-                                    (0, a.jsx)('div', {
+                                    (0, r.jsx)('div', {
                                         className: o.colorSwatch,
                                         style: { backgroundColor: t.secondary }
                                     }),
-                                    (0, a.jsx)(i.Text, {
+                                    (0, r.jsx)(i.Text, {
                                         variant: 'text-xs/medium',
                                         color: 'text-normal',
-                                        children: s.Z.Messages.USER_SETTINGS_PROFILE_THEME_ACCENT
+                                        children: s.intl.string(s.t['8elvy8'])
                                     }),
-                                    (0, a.jsx)(i.CustomColorPicker, {
+                                    (0, r.jsx)(i.CustomColorPicker, {
                                         className: o.colorPicker,
                                         value: t.secondary,
                                         eagerUpdate: !0,
@@ -78,10 +78,10 @@ function l(e) {
     );
 }
 function c(e) {
-    let { shouldShow: n, showSecondaryColor: t, onRequestClose: r, children: s, palette: o, onPrimaryColorChange: c, onSecondaryColorChange: d } = e;
-    return (0, a.jsx)(i.Popout, {
+    let { shouldShow: n, showSecondaryColor: t, onRequestClose: a, children: s, palette: o, onPrimaryColorChange: c, onSecondaryColorChange: d } = e;
+    return (0, r.jsx)(i.Popout, {
         renderPopout: () =>
-            (0, a.jsx)(l, {
+            (0, r.jsx)(l, {
                 showSecondaryColor: t,
                 palette: o,
                 onPrimaryColorChange: c,
@@ -89,7 +89,7 @@ function c(e) {
             }),
         position: 'left',
         shouldShow: n,
-        onRequestClose: r,
+        onRequestClose: a,
         animation: i.Popout.Animation.TRANSLATE,
         animationPosition: 'right',
         children: s

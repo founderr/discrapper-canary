@@ -1,70 +1,70 @@
-t(47120);
-var n,
-    a = t(200651),
-    i = t(192379),
-    r = t(512722),
-    o = t.n(r),
-    l = t(442837),
-    c = t(481060),
-    d = t(893776),
-    _ = t(468026),
-    u = t(594174),
-    E = t(689938);
-function T(e, s, t) {
+n(47120);
+var i,
+    s = n(200651),
+    r = n(192379),
+    l = n(512722),
+    a = n.n(l),
+    o = n(442837),
+    c = n(481060),
+    d = n(893776),
+    u = n(468026),
+    m = n(594174),
+    h = n(388032);
+function g(e, t, n) {
     return (
-        s in e
-            ? Object.defineProperty(e, s, {
-                  value: t,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[s] = t),
+            : (e[t] = n),
         e
     );
 }
-class S extends (n = i.Component) {
+class p extends (i = r.Component) {
     render() {
-        let { color: e, look: s, size: t } = this.props;
-        return (0, a.jsx)(c.Button, {
-            look: s,
-            size: t,
+        let { color: e, look: t, size: n } = this.props;
+        return (0, s.jsx)(c.Button, {
+            look: t,
+            size: n,
             color: e,
             disabled: this.state.isSendingVerificationEmail,
             onClick: this.handleResendVerification,
-            children: E.Z.Messages.RESEND_VERIFICATION_EMAIL
+            children: h.intl.string(h.t.lm1UKi)
         });
     }
     constructor(...e) {
         super(...e),
-            T(this, 'state', { isSendingVerificationEmail: !1 }),
-            T(this, 'handleResendVerification', () => {
-                let { currentUser: e, onClick: s } = this.props;
-                null == s || s(),
+            g(this, 'state', { isSendingVerificationEmail: !1 }),
+            g(this, 'handleResendVerification', () => {
+                let { currentUser: e, onClick: t } = this.props;
+                null == t || t(),
                     this.setState({ isSendingVerificationEmail: !0 }, () => {
                         d.Z.verifyResend()
                             .then(() =>
-                                (0, c.openModal)((s) =>
-                                    (0, a.jsx)(c.ConfirmModal, {
-                                        header: E.Z.Messages.VERIFICATION_EMAIL_TITLE,
-                                        confirmText: E.Z.Messages.OKAY,
+                                (0, c.openModal)((t) =>
+                                    (0, s.jsx)(c.ConfirmModal, {
+                                        header: h.intl.string(h.t.LykQYm),
+                                        confirmText: h.intl.string(h.t.BddRzc),
                                         confirmButtonColor: c.Button.Colors.BRAND,
-                                        ...s,
-                                        children: (0, a.jsx)(c.Text, {
+                                        ...t,
+                                        children: (0, s.jsx)(c.Text, {
                                             variant: 'text-md/normal',
-                                            children: E.Z.Messages.VERIFICATION_EMAIL_BODY.format({ email: e.email })
+                                            children: h.intl.format(h.t.azKEPz, { email: e.email })
                                         })
                                     })
                                 )
                             )
                             .catch((e) => {
-                                let { body: s } = e,
-                                    t = E.Z.Messages.VERIFICATION_EMAIL_ERROR_BODY;
-                                null != s && s.email && (t = s.email),
+                                let { body: t } = e,
+                                    n = h.intl.string(h.t.XcrQNz);
+                                null != t && t.email && (n = t.email),
                                     (0, c.openModal)((e) =>
-                                        (0, a.jsx)(_.default, {
-                                            title: E.Z.Messages.VERIFICATION_EMAIL_ERROR_TITLE,
-                                            body: t,
+                                        (0, s.jsx)(u.default, {
+                                            title: h.intl.string(h.t.VbTh0N),
+                                            body: n,
                                             ...e
                                         })
                                     );
@@ -74,11 +74,11 @@ class S extends (n = i.Component) {
             });
     }
 }
-T(S, 'defaultProps', {
+g(p, 'defaultProps', {
     size: c.Button.Sizes.MEDIUM,
     color: c.Button.Colors.BRAND
 }),
-    (s.Z = l.ZP.connectStores([u.default], () => {
-        let e = u.default.getCurrentUser();
-        return o()(null != e, 'ResendEmailVerificationButton: currentUser cannot be undefined'), { currentUser: e };
-    })(S));
+    (t.Z = o.ZP.connectStores([m.default], () => {
+        let e = m.default.getCurrentUser();
+        return a()(null != e, 'ResendEmailVerificationButton: currentUser cannot be undefined'), { currentUser: e };
+    })(p));

@@ -12,11 +12,11 @@ var r = n(192379),
             i = e.hex,
             a = e.colors,
             d = e.width,
-            _ = e.triangle,
-            E = e.styles,
-            f = e.className,
-            h = 'transparent' === i,
-            p = function (e, n) {
+            f = e.triangle,
+            _ = e.styles,
+            h = e.className,
+            p = 'transparent' === i,
+            m = function (e, n) {
                 l.FX(e) &&
                     t(
                         {
@@ -26,7 +26,7 @@ var r = n(192379),
                         n
                     );
             },
-            I = (0, s.default)(
+            g = (0, s.default)(
                 (0, o.Z)(
                     {
                         default: {
@@ -78,30 +78,30 @@ var r = n(192379),
                         },
                         'hide-triangle': { triangle: { display: 'none' } }
                     },
-                    void 0 === E ? {} : E
+                    void 0 === _ ? {} : _
                 ),
-                { 'hide-triangle': 'hide' === _ }
+                { 'hide-triangle': 'hide' === f }
             );
         return r.createElement(
             'div',
             {
-                style: I.card,
-                className: 'block-picker ' + (void 0 === f ? '' : f)
+                style: g.card,
+                className: 'block-picker ' + (void 0 === h ? '' : h)
             },
-            r.createElement('div', { style: I.triangle }),
-            r.createElement('div', { style: I.head }, h && r.createElement(u.QN, { borderRadius: '6px 6px 0 0' }), r.createElement('div', { style: I.label }, i)),
+            r.createElement('div', { style: g.triangle }),
+            r.createElement('div', { style: g.head }, p && r.createElement(u.QN, { borderRadius: '6px 6px 0 0' }), r.createElement('div', { style: g.label }, i)),
             r.createElement(
                 'div',
-                { style: I.body },
+                { style: g.body },
                 r.createElement(c.Z, {
                     colors: a,
-                    onClick: p,
+                    onClick: m,
                     onSwatchHover: n
                 }),
                 r.createElement(u.Vm, {
-                    style: { input: I.input },
+                    style: { input: g.input },
                     value: i,
-                    onChange: p
+                    onChange: m
                 })
             )
         );

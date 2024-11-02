@@ -1,18 +1,18 @@
-var s = n(200651),
-    a = n(192379),
-    i = n(481060),
-    r = n(941524),
-    l = n(563115),
-    o = n(689938),
+var i = n(200651),
+    r = n(192379),
+    l = n(481060),
+    s = n(941524),
+    a = n(563115),
+    o = n(388032),
     c = n(419704);
-t.Z = a.memo(function (e) {
-    let { rule: t, onlyRoles: n = !1, onChangeRule: a } = e,
-        d = (0, s.jsx)(r.Z, {
+t.Z = r.memo(function (e) {
+    let { rule: t, onlyRoles: n = !1, onChangeRule: r } = e,
+        d = (0, i.jsx)(s.Z, {
             guildId: t.guildId,
             selectedChannelIds: t.exemptChannels,
             selectedRoleIds: t.exemptRoles,
             onChange: (e, n) =>
-                a({
+                r({
                     ...t,
                     exemptChannels: e,
                     exemptRoles: n
@@ -22,25 +22,25 @@ t.Z = a.memo(function (e) {
         });
     return (
         n &&
-            (d = (0, s.jsx)(l.Z, {
+            (d = (0, i.jsx)(a.Z, {
                 guildId: t.guildId,
                 selectedRoleIds: t.exemptRoles,
                 onChange: (e) =>
-                    a({
+                    r({
                         ...t,
                         exemptRoles: e
                     }),
-                placeholder: o.Z.Messages.GUILD_AUTOMOD_EXEMPTION_SEARCH_ROLE_PLACEHOLDER,
+                placeholder: o.intl.string(o.t.aFO1Iy),
                 disableEveryoneRole: !0
             })),
-        (0, s.jsxs)(i.FormItem, {
+        (0, i.jsxs)(l.FormItem, {
             children: [
                 d,
-                (0, s.jsx)(i.Text, {
+                (0, i.jsx)(l.Text, {
                     color: 'header-secondary',
                     variant: 'text-xs/normal',
                     className: c.exemptionHint,
-                    children: o.Z.Messages.GUILD_AUTOMOD_EXEMPTION_HINT
+                    children: o.intl.string(o.t.GKlYaW)
                 })
             ]
         })

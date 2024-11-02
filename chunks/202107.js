@@ -16,27 +16,27 @@ let l = null,
     },
     c = (e, t) => {
         var n, i, l, u, c, d;
-        let _ = a.ZP.getMember(e, t),
-            E = s.default.getUser(t);
-        if (null == _ || null == E || (0, o.b)(_)) return;
-        let f = {
-            ..._,
+        let f = a.ZP.getMember(e, t),
+            _ = s.default.getUser(t);
+        if (null == f || null == _ || (0, o.b)(f)) return;
+        let h = {
+            ...f,
             guildId: e,
-            nick: null !== (n = _.nick) && void 0 !== n ? n : E.username,
-            avatar: null !== (i = _.avatar) && void 0 !== i ? i : void 0,
-            avatarDecoration: null != _.avatarDecoration ? { ..._.avatarDecoration } : void 0,
-            premiumSince: null !== (l = _.premiumSince) && void 0 !== l ? l : void 0,
-            isPending: null !== (u = _.isPending) && void 0 !== u && u,
+            nick: null !== (n = f.nick) && void 0 !== n ? n : _.username,
+            avatar: null !== (i = f.avatar) && void 0 !== i ? i : void 0,
+            avatarDecoration: null != f.avatarDecoration ? { ...f.avatarDecoration } : void 0,
+            premiumSince: null !== (l = f.premiumSince) && void 0 !== l ? l : void 0,
+            isPending: null !== (u = f.isPending) && void 0 !== u && u,
             user: {
-                ...E,
-                email: null !== (c = E.email) && void 0 !== c ? c : void 0,
-                phone: null !== (d = E.phone) && void 0 !== d ? d : void 0
+                ..._,
+                email: null !== (c = _.email) && void 0 !== c ? c : void 0,
+                phone: null !== (d = _.phone) && void 0 !== d ? d : void 0
             },
             communicationDisabledUntil: null
         };
         r.Z.dispatch({
             type: 'GUILD_MEMBER_UPDATE',
-            ...f
+            ...h
         });
     };
 class d extends i.Z {

@@ -18,7 +18,7 @@ function d(e) {
     var t;
     o.ZP.setCrashInformation(c(e.context), null !== (t = e.mediaSessionId) && void 0 !== t ? t : null);
 }
-function _(e) {
+function f(e) {
     var t;
     let n = (null !== (t = e.channelId) && void 0 !== t ? t : 'unknown') + e.context;
     switch (e.state) {
@@ -34,7 +34,7 @@ function _(e) {
                     })();
     }
 }
-function E(e) {
+function _(e) {
     let t = e.userId === s.default.getId(),
         n = null != e.streamId,
         a = null;
@@ -47,15 +47,15 @@ function E(e) {
     }
     o.ZP.setCrashInformation(a, n ? 1 : 0);
 }
-class f extends a.Z {
+class h extends a.Z {
     constructor(...e) {
         var t, n, r;
         super(...e),
             (t = this),
             (n = 'actions'),
             (r = {
-                RTC_CONNECTION_STATE: _,
-                RTC_CONNECTION_VIDEO: E,
+                RTC_CONNECTION_STATE: f,
+                RTC_CONNECTION_VIDEO: _,
                 MEDIA_SESSION_JOINED: d
             }),
             n in t
@@ -68,4 +68,4 @@ class f extends a.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new f();
+t.Z = new h();

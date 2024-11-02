@@ -1,12 +1,12 @@
 n(571269), n(298267);
 var o = n(200651);
 n(192379);
-var s = n(481060),
-    r = n(113434),
+var r = n(481060),
+    s = n(113434),
     a = n(665430),
-    l = n(26650),
-    i = n(46140),
-    c = n(689938),
+    i = n(26650),
+    l = n(46140),
+    c = n(388032),
     d = n(587311);
 function u(e) {
     let { header: t, children: n } = e;
@@ -16,21 +16,21 @@ function u(e) {
             (0, o.jsxs)('div', {
                 className: d.header,
                 children: [
-                    (0, o.jsx)(s.CircleWarningIcon, {
+                    (0, o.jsx)(r.CircleWarningIcon, {
                         size: 'custom',
                         color: 'currentColor',
                         className: d.icon,
                         width: 16,
                         height: 16
                     }),
-                    (0, o.jsx)(s.Heading, {
+                    (0, o.jsx)(r.Heading, {
                         color: 'text-normal',
                         variant: 'heading-sm/medium',
                         children: t
                     })
                 ]
             }),
-            (0, o.jsx)(s.Text, {
+            (0, o.jsx)(r.Text, {
                 color: 'text-muted',
                 variant: 'text-xs/normal',
                 className: d.warningBody,
@@ -41,21 +41,21 @@ function u(e) {
 }
 t.Z = function (e) {
     let { quest: t } = e,
-        n = (0, a.pF)({ location: i.dr.QUESTS_BAR }),
-        s = (0, r.qb)(t);
-    if (0 === s.length) return null;
-    let d = s.at(0);
+        n = (0, a.pF)({ location: l.dr.QUESTS_BAR }),
+        r = (0, s.qb)(t);
+    if (0 === r.length) return null;
+    let d = r.at(0);
     return n
-        ? d === c.Z.Messages.QUESTS_PROGRESS_WEB_TIP
+        ? d === c.intl.string(c.t.BV6xDg)
             ? (0, o.jsx)(u, {
-                  header: c.Z.Messages.QUEST_BAR_WEB_WARNING_HEADER,
-                  children: c.Z.Messages.QUEST_BAR_WEB_WARNING_BODY
+                  header: c.intl.string(c.t.onh6cn),
+                  children: c.intl.string(c.t.arVHRE)
               })
-            : d === c.Z.Messages.QUESTS_PROGRESS_MAC_STREAMING_TIP
+            : d === c.intl.string(c.t.MFGxFB)
               ? (0, o.jsx)(u, {
-                    header: c.Z.Messages.QUEST_BAR_MAC_WARNING_HEADER_WINDOWS,
-                    children: c.Z.Messages.QUESTS_PROGRESS_MAC_STREAMING_TIP
+                    header: c.intl.string(c.t.JPihZG),
+                    children: c.intl.string(c.t.MFGxFB)
                 })
               : null
-        : (0, o.jsx)(l.Z, { children: d });
+        : (0, o.jsx)(i.Z, { children: d });
 };

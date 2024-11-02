@@ -7,19 +7,19 @@ n.d(t, {
     }
 });
 var i = n(904245),
-    a = n(594174),
-    s = n(626135),
-    r = n(709054),
-    l = n(8532),
-    o = n(981631);
+    r = n(594174),
+    l = n(626135),
+    a = n(709054),
+    o = n(8532),
+    s = n(981631);
 let c = (e) => {
         var t;
-        let n = null === (t = a.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
-            i = ((null != n ? r.default.extractTimestamp(n) : 0) + r.default.extractTimestamp(e)) % l.m.length;
-        return l.m[i];
+        let n = null === (t = r.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
+            i = ((null != n ? a.default.extractTimestamp(n) : 0) + a.default.extractTimestamp(e)) % o.m.length;
+        return o.m[i];
     },
     u = (e, t, n) => {
-        var r;
+        var a;
         i.Z.sendGreetMessage(
             e.id,
             n,
@@ -30,10 +30,10 @@ let c = (e) => {
                 showMentionToggle: !0
             })
         ),
-            s.default.track(o.rMx.WELCOME_CTA_CLICKED, {
+            l.default.track(s.rMx.WELCOME_CTA_CLICKED, {
                 is_reply: !0,
                 sticker_id: n,
                 target_user: t.author.id,
-                sender: null === (r = a.default.getCurrentUser()) || void 0 === r ? void 0 : r.id
+                sender: null === (a = r.default.getCurrentUser()) || void 0 === a ? void 0 : a.id
             });
     };

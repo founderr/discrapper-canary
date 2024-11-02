@@ -1,121 +1,121 @@
-n.r(t),
-    n.d(t, {
+e.r(n),
+    e.d(n, {
         InappropriateConversationModalSlideKeys: function () {
-            return s;
+            return i;
         }
     }),
-    n(47120);
-var s,
+    e(47120);
+var i,
     o,
-    r = n(200651),
-    a = n(192379),
-    i = n(481060),
-    c = n(378298),
-    E = n(473092),
-    u = n(684471),
-    N = n(745982),
-    T = n(463439),
-    I = n(689938),
-    _ = n(70119);
-((o = s || (s = {}))[(o.INTRO = 0)] = 'INTRO'), (o[(o.SAFETY_TIPS = 1)] = 'SAFETY_TIPS'), (o[(o.TAKE_ACTION = 2)] = 'TAKE_ACTION');
-t.default = (e) => {
-    let { warningId: t, warningType: n, senderId: s, modalProps: o, channelId: l } = e,
-        [A, d] = a.useState(0),
-        R = a.useMemo(
+    s = e(200651),
+    r = e(192379),
+    a = e(481060),
+    c = e(378298),
+    l = e(473092),
+    u = e(684471),
+    d = e(745982),
+    E = e(463439),
+    N = e(388032),
+    I = e(70119);
+((o = i || (i = {}))[(o.INTRO = 0)] = 'INTRO'), (o[(o.SAFETY_TIPS = 1)] = 'SAFETY_TIPS'), (o[(o.TAKE_ACTION = 2)] = 'TAKE_ACTION');
+n.default = (t) => {
+    let { warningId: n, warningType: e, senderId: i, modalProps: o, channelId: h } = t,
+        [_, f] = r.useState(0),
+        T = r.useMemo(
             () => ({
-                channelId: l,
-                senderId: s,
-                warningId: t,
-                warningType: n,
+                channelId: h,
+                senderId: i,
+                warningId: n,
+                warningType: e,
                 isNudgeWarning: !1
             }),
-            [l, s, t, n]
+            [h, i, n, e]
         );
-    a.useEffect(() => {
-        (0, E.KQ)({
-            ...R,
-            viewName: E.pb.SAFETY_TAKEOVER_MODAL
+    r.useEffect(() => {
+        (0, l.KQ)({
+            ...T,
+            viewName: l.pb.SAFETY_TAKEOVER_MODAL
         });
-    }, [R]);
-    let O = a.useCallback(
-            (e) => {
-                (0, E.qc)({
-                    ...R,
-                    cta: e
+    }, [T]);
+    let C = r.useCallback(
+            (t) => {
+                (0, l.qc)({
+                    ...T,
+                    cta: t
                 });
             },
-            [R]
+            [T]
         ),
-        [C, S] = a.useState(!1);
-    function P(e) {
-        d(e);
+        [g, p] = r.useState(!1);
+    function A(t) {
+        f(t);
     }
-    return (0, r.jsxs)(i.ModalRoot, {
+    return (0, s.jsxs)(a.ModalRoot, {
         transitionState: o.transitionState,
         children: [
-            (0, r.jsx)('div', {
-                className: _.container,
-                children: (0, r.jsxs)(i.Slides, {
+            (0, s.jsx)('div', {
+                className: I.container,
+                children: (0, s.jsxs)(a.Slides, {
                     width: 440,
-                    activeSlide: A,
+                    activeSlide: _,
                     centered: !1,
                     overflow: 'visible',
                     contentDisplay: 'flex',
                     children: [
-                        (0, r.jsx)(i.Slide, {
+                        (0, s.jsx)(a.Slide, {
                             id: 0,
-                            children: (0, r.jsx)(u.Z, {
-                                warningId: t,
-                                senderId: s,
-                                trackAnalyticsEvent: O,
-                                onNavigate: P
+                            children: (0, s.jsx)(u.Z, {
+                                warningId: n,
+                                senderId: i,
+                                trackAnalyticsEvent: C,
+                                onNavigate: A
                             })
                         }),
-                        (0, r.jsx)(i.Slide, {
+                        (0, s.jsx)(a.Slide, {
                             id: 1,
-                            children: (0, r.jsx)(N.Z, {
-                                warningId: t,
-                                senderId: s,
-                                trackAnalyticsEvent: O
+                            children: (0, s.jsx)(d.Z, {
+                                warningId: n,
+                                senderId: i,
+                                trackAnalyticsEvent: C
                             })
                         }),
-                        (0, r.jsx)(i.Slide, {
+                        (0, s.jsx)(a.Slide, {
                             id: 2,
-                            children: (0, r.jsx)(T.Z, {
-                                warningId: t,
-                                senderId: s,
-                                trackAnalyticsEvent: O,
-                                channelId: l,
-                                hasReported: C,
+                            children: (0, s.jsx)(E.Z, {
+                                warningId: n,
+                                senderId: i,
+                                trackAnalyticsEvent: C,
+                                channelId: h,
+                                hasReported: g,
                                 onReport: function () {
-                                    S(!0);
+                                    p(!0);
                                 }
                             })
                         })
                     ]
                 })
             }),
-            (0, r.jsxs)(i.ModalFooter, {
-                className: _.footer,
+            (0, s.jsxs)(a.ModalFooter, {
+                className: I.footer,
                 children: [
-                    (0, r.jsx)(i.Button, {
-                        className: _.footerButton,
-                        look: i.Button.Looks.LINK,
-                        color: i.Button.Colors.CUSTOM,
-                        size: i.Button.Sizes.MIN,
+                    (0, s.jsx)(a.Button, {
+                        className: I.footerButton,
+                        look: a.Button.Looks.LINK,
+                        color: a.Button.Colors.CUSTOM,
+                        size: a.Button.Sizes.MIN,
                         onClick: function () {
-                            o.onClose(), (0, c.T)(l, [t]), O(E.NM.USER_TAKEOVER_MODAL_DISMISS);
+                            o.onClose(), (0, c.T)(h, [n]), C(l.NM.USER_TAKEOVER_MODAL_DISMISS);
                         },
-                        children: I.Z.Messages.CLOSE
+                        children: N.intl.string(N.t.cpT0Cg)
                     }),
-                    0 !== A &&
-                        (0, r.jsx)(i.Button, {
-                            className: _.footerButton,
-                            look: i.Button.Looks.LINK,
-                            color: i.Button.Colors.CUSTOM,
-                            size: i.Button.Sizes.MIN,
-                            onClick: () => P(0),
-                            children: I.Z.Messages.BACK
+                    0 !== _ &&
+                        (0, s.jsx)(a.Button, {
+                            className: I.footerButton,
+                            look: a.Button.Looks.LINK,
+                            color: a.Button.Colors.CUSTOM,
+                            size: a.Button.Sizes.MIN,
+                            onClick: () => A(0),
+                            children: N.intl.string(N.t['13/7kZ'])
                         })
                 ]
             })

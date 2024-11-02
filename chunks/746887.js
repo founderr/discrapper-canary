@@ -1,26 +1,26 @@
-t.d(n, {
+e.d(t, {
     u: function () {
         return a;
     }
 });
-var i = t(211739),
-    l = t(680089),
-    o = t(984933),
-    E = t(914010),
-    r = t(981631);
+var i = e(211739),
+    l = e(680089),
+    o = e(984933),
+    r = e(914010),
+    u = e(981631);
 let a = {
     binds: ['mod+shift+a'],
     comboKeysBindGlobal: !0,
     action() {
-        let e = E.Z.getGuildId();
+        let n = r.Z.getGuildId();
         return (
-            null != e &&
-            (o.ZP.getChannels(e)[r.d4z.GUILD_CATEGORY].some((e) => {
-                let { channel: n } = e;
-                return 'null' !== n.id && !l.Z.isCollapsed(n.id);
+            null != n &&
+            (o.ZP.getChannels(n)[u.d4z.GUILD_CATEGORY].some((n) => {
+                let { channel: t } = n;
+                return 'null' !== t.id && !l.Z.isCollapsed(t.id);
             })
-                ? (0, i.N5)(e)
-                : (0, i.lc)(e),
+                ? (0, i.N5)(n)
+                : (0, i.lc)(n),
             !1)
         );
     }

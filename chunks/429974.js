@@ -1,6 +1,6 @@
 n.d(t, {
     z: function () {
-        return I;
+        return g;
     }
 });
 var r = n(200651);
@@ -13,74 +13,74 @@ var i = n(481060),
     u = n(158776),
     c = n(699516),
     d = n(594174),
-    _ = n(626135),
-    E = n(621853),
-    f = n(981631),
-    h = n(616922);
-let p = null;
-function I(e, t) {
+    f = n(626135),
+    _ = n(621853),
+    h = n(981631),
+    p = n(616922);
+let m = null;
+function g(e, t) {
     return 'USER_PROFILE_MODAL_KEY:'.concat(e, ':').concat(null == t ? '' : t);
 }
-async function m(e) {
-    var t, a, s, m;
-    let { userId: T, section: S, subsection: g, guildId: A, channelId: N, friendToken: R, analyticsLocation: O, showGuildProfile: v = !0, ...C } = e,
-        L = d.default.getUser(T);
-    if (null == L) return;
-    let D = E.Z.getUserProfile(T),
-        y = u.Z.getPrimaryActivity(T),
-        b = u.Z.getStatus(T),
-        M = u.Z.isMobileOnline(T),
-        { party: P, assets: U, application_id: w } = null != y ? y : {},
-        x = null != w ? l.Z.getApplication(w) : null,
-        G = M ? f.j28.ONLINE_MOBILE : f.j28.ONLINE_DESKTOP,
-        k = b === f.Skl.ONLINE ? G : b;
-    (p = await (0, i.openModalLazy)(
+async function E(e) {
+    var t, a, s, E;
+    let { userId: v, section: I, subsection: S, guildId: T, channelId: b, friendToken: y, analyticsLocation: A, showGuildProfile: N = !0, ...C } = e,
+        R = d.default.getUser(v);
+    if (null == R) return;
+    let O = _.Z.getUserProfile(v),
+        D = u.Z.getPrimaryActivity(v),
+        L = u.Z.getStatus(v),
+        x = u.Z.isMobileOnline(v),
+        { party: w, assets: M, application_id: P } = null != D ? D : {},
+        k = null != P ? l.Z.getApplication(P) : null,
+        U = x ? h.j28.ONLINE_MOBILE : h.j28.ONLINE_DESKTOP,
+        G = L === h.Skl.ONLINE ? U : L;
+    (m = await (0, i.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([n.e('89943'), n.e('62880'), n.e('82412'), n.e('8576')]).then(n.bind(n, 533835));
             return (t) =>
                 (0, r.jsx)(e, {
-                    user: L,
-                    guildId: A,
-                    friendToken: R,
-                    initialSection: S,
-                    initialSubsection: g,
-                    channelId: N,
-                    showGuildProfile: v,
+                    user: R,
+                    guildId: T,
+                    friendToken: y,
+                    initialSection: I,
+                    initialSubsection: S,
+                    channelId: b,
+                    showGuildProfile: N,
                     ...t,
                     ...C
                 });
         },
-        { modalKey: I(T, v ? A : void 0) }
+        { modalKey: g(v, N ? T : void 0) }
     )),
-        _.default.track(f.rMx.OPEN_MODAL, {
+        f.default.track(h.rMx.OPEN_MODAL, {
             type: 'Profile Modal',
-            guild_id: A,
-            channel_id: N,
-            other_user_id: T,
-            application_id: null !== (a = null == y ? void 0 : y.application_id) && void 0 !== a ? a : null,
-            application_name: null == y ? void 0 : y.name,
-            sku_id: null !== (s = null == x ? void 0 : x.primarySkuId) && void 0 !== s ? s : null,
-            is_friend: c.Z.isFriend(T),
-            has_images: !!(null !== (m = null == U ? void 0 : U.large_image) && void 0 !== m ? m : null == U ? void 0 : U.small_image),
-            party_max: null == P ? void 0 : null === (t = P.size) || void 0 === t ? void 0 : t[1],
-            party_id: null == P ? void 0 : P.id,
-            party_platform: (0, h.Ps)(null == P ? void 0 : P.id) ? f.ABu.SPOTIFY : null,
-            game_platform: (0, o.Z)(y),
-            profile_user_status: k,
-            profile_has_nitro_customization: (null == D ? void 0 : D.banner) != null,
-            profile_has_profile_effect: (null == D ? void 0 : D.profileEffectId) != null,
-            ...(null == O ? null : (0, _.expandLocation)(O))
+            guild_id: T,
+            channel_id: b,
+            other_user_id: v,
+            application_id: null !== (a = null == D ? void 0 : D.application_id) && void 0 !== a ? a : null,
+            application_name: null == D ? void 0 : D.name,
+            sku_id: null !== (s = null == k ? void 0 : k.primarySkuId) && void 0 !== s ? s : null,
+            is_friend: c.Z.isFriend(v),
+            has_images: !!(null !== (E = null == M ? void 0 : M.large_image) && void 0 !== E ? E : null == M ? void 0 : M.small_image),
+            party_max: null == w ? void 0 : null === (t = w.size) || void 0 === t ? void 0 : t[1],
+            party_id: null == w ? void 0 : w.id,
+            party_platform: (0, p.Ps)(null == w ? void 0 : w.id) ? h.ABu.SPOTIFY : null,
+            game_platform: (0, o.Z)(D),
+            profile_user_status: G,
+            profile_has_nitro_customization: (null == O ? void 0 : O.banner) != null,
+            profile_has_profile_effect: (null == O ? void 0 : O.profileEffectId) != null,
+            ...(null == A ? null : (0, f.expandLocation)(A))
         });
 }
-function T() {
-    null != p && (0, i.closeModal)(p), (p = null);
+function v() {
+    null != m && (0, i.closeModal)(m), (m = null);
 }
-class S extends s.Z {
+class I extends s.Z {
     _initialize() {
-        a.Z.subscribe('USER_PROFILE_MODAL_OPEN', m), a.Z.subscribe('USER_PROFILE_MODAL_CLOSE', T);
+        a.Z.subscribe('USER_PROFILE_MODAL_OPEN', E), a.Z.subscribe('USER_PROFILE_MODAL_CLOSE', v);
     }
     _terminate() {
-        a.Z.unsubscribe('USER_PROFILE_MODAL_OPEN', m), a.Z.unsubscribe('USER_PROFILE_MODAL_CLOSE', T);
+        a.Z.unsubscribe('USER_PROFILE_MODAL_OPEN', E), a.Z.unsubscribe('USER_PROFILE_MODAL_CLOSE', v);
     }
 }
-t.Z = new S();
+t.Z = new I();

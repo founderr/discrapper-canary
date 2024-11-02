@@ -7,9 +7,9 @@ t.Z = (e) => {
     let { src: t, alt: n, size: a, 'aria-label': l, className: u } = e,
         c = i.useRef(null),
         d = i.useRef(!1),
-        _ = d.current ? o.image : o.imageLoading;
+        f = d.current ? o.image : o.imageLoading;
     return (0, r.jsx)('img', {
-        className: s()(_, u),
+        className: s()(f, u),
         alt: n,
         src: t,
         ref: c,

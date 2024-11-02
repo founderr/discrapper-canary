@@ -1,24 +1,24 @@
 n.d(t, {
     $w: function () {
-        return I;
+        return g;
     },
     Bh: function () {
-        return h;
-    },
-    Gx: function () {
-        return T;
-    },
-    TA: function () {
-        return E;
-    },
-    V$: function () {
-        return f;
-    },
-    g5: function () {
         return p;
     },
-    i7: function () {
+    Gx: function () {
+        return v;
+    },
+    TA: function () {
+        return _;
+    },
+    V$: function () {
+        return h;
+    },
+    g5: function () {
         return m;
+    },
+    i7: function () {
+        return E;
     },
     rD: function () {
         return c;
@@ -40,13 +40,13 @@ function c(e) {
 function d(e) {
     return 'number' == typeof e && e in l.dp;
 }
-function _(e) {
+function f(e) {
     return d(e) ? l.X7.includes(e) : !!c(e) && ((0, o.xR)(e.asset) || (0, o.ay)(e.asset));
 }
-function E(e) {
+function _(e) {
     return null != e ? 'Video Background' : 'None';
 }
-function f(e) {
+function h(e) {
     if (null == e) return 'None';
     if (c(e)) return 'Custom';
     if ('blur' === e) return 'Blur';
@@ -74,15 +74,15 @@ function f(e) {
             })(e)
         );
 }
-function h(e, t, n) {
+function p(e, t, n) {
     let o = a.Z.getGuildId(),
         l = a.Z.getChannelId(),
         c = i.Z.getChannel(l),
         d = (0, r.kO)(o, l, !0);
     s.default.track(u.rMx.VIDEO_EFFECT_UPDATED, {
         location: t,
-        effect_type: E(e),
-        effect_detail: f(e),
+        effect_type: _(e),
+        effect_detail: h(e),
         effect_state: n,
         channel_id: l,
         channel_type: null == c ? void 0 : c.type,
@@ -91,20 +91,20 @@ function h(e, t, n) {
         video_stream_count: d.video_stream_count,
         media_session_id: a.Z.getMediaSessionId(),
         rtc_connection_id: a.Z.getRTCConnectionId(),
-        is_animated: _(e)
+        is_animated: f(e)
     });
 }
-function p(e, t, n) {
+function m(e, t, n) {
     s.default.track(u.rMx.VIDEO_BACKGROUND_ADDED, {
-        is_animated: _(e),
+        is_animated: f(e),
         is_video: t,
         is_from_tenor: n
     });
 }
-function I(e) {
-    s.default.track(u.rMx.VIDEO_BACKGROUND_DELETED, { is_animated: _(e) });
+function g(e) {
+    s.default.track(u.rMx.VIDEO_BACKGROUND_DELETED, { is_animated: f(e) });
 }
-function m(e) {
+function E(e) {
     if (null == e) return { oneofKind: void 0 };
     if (c(e))
         return {
@@ -125,7 +125,7 @@ function m(e) {
             presetOption: e
         };
 }
-function T(e, t) {
+function v(e, t) {
     if (null == e || void 0 === e.oneofKind) return null;
     switch (e.oneofKind) {
         case 'customAsset':

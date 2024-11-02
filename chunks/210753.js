@@ -1,6 +1,6 @@
 n.d(t, {
     $: function () {
-        return _;
+        return f;
     }
 }),
     n(653041),
@@ -44,7 +44,7 @@ let d = new (class e {
         c(this, '_fetched', new Set()), c(this, '_pending', new Set()), c(this, '_flushHandler', new o.sW(0, () => this._flush()));
     }
 })();
-function _(e, t) {
+function f(e, t) {
     r.useEffect(() => {
         null != e && d.request(e);
     }, [e]);

@@ -1,18 +1,18 @@
 n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(512969),
-    r = n(442837),
-    l = n(493683),
+    r = n(192379),
+    l = n(512969),
+    a = n(442837),
+    s = n(493683),
     o = n(112724),
     c = n(108427),
     d = n(184107),
     u = n(410575),
-    _ = n(613311),
-    E = n(601564),
-    h = n(981631),
-    m = n(256109);
-function I(e, t, n) {
+    h = n(613311),
+    m = n(601564),
+    p = n(981631),
+    g = n(256109);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,18 +25,18 @@ function I(e, t, n) {
         e
     );
 }
-class p extends a.Component {
+class _ extends r.Component {
     componentDidMount() {
         this.fetchStoreListing(), (0, c.e)('channel_store_listing');
     }
     render() {
         return null != this.props.skuId
             ? (0, i.jsx)(u.Z, {
-                  page: h.ZY5.CHANNEL_STORE_LISTING,
+                  page: p.ZY5.CHANNEL_STORE_LISTING,
                   root: !0,
                   children: (0, i.jsx)('div', {
-                      className: m.applicationStore,
-                      children: (0, i.jsx)(s.AW, {
+                      className: g.applicationStore,
+                      children: (0, i.jsx)(l.AW, {
                           path: '*',
                           render: this.renderApplicationListing
                       })
@@ -46,26 +46,26 @@ class p extends a.Component {
     }
     constructor(...e) {
         super(...e),
-            I(this, 'fetchStoreListing', (e) => {
+            f(this, 'fetchStoreListing', (e) => {
                 let { channel: t, inputSkuId: n } = this.props;
-                return null != e ? l.Z.fetchChannelStoreListing(t.id, e) : null != n ? l.Z.fetchChannelStoreListing(t.id, n) : l.Z.fetchChannelStoreListing(t.id);
+                return null != e ? s.Z.fetchChannelStoreListing(t.id, e) : null != n ? s.Z.fetchChannelStoreListing(t.id, n) : s.Z.fetchChannelStoreListing(t.id);
             }),
-            I(this, 'renderApplicationListing', (e) => {
+            f(this, 'renderApplicationListing', (e) => {
                 let { location: t } = e,
-                    { channel: n, skuId: a, width: s } = this.props;
-                return (0, i.jsx)(_.Z, {
+                    { channel: n, skuId: r, width: l } = this.props;
+                return (0, i.jsx)(h.Z, {
                     channel: n,
-                    inputSkuId: a,
+                    inputSkuId: r,
                     fetchStoreListing: this.fetchStoreListing,
                     location: t,
-                    pageSize: (0, E.getPageSize)(s)
+                    pageSize: (0, m.getPageSize)(l)
                 });
             });
     }
 }
 t.Z = (0, o.Z)(
-    r.ZP.connectStores([d.Z], (e) => {
+    a.ZP.connectStores([d.Z], (e) => {
         let { channel: t, inputSkuId: n } = e;
         return { skuId: null != n ? n : d.Z.getSkuIdForChannel(t.id) };
-    })(p)
+    })(_)
 );

@@ -1,135 +1,135 @@
 var i = n(200651),
-    a = n(192379),
-    s = n(481060),
-    r = n(770146),
-    l = n(863969),
+    r = n(192379),
+    l = n(481060),
+    a = n(770146),
+    s = n(863969),
     o = n(38761),
     c = n(6074),
     d = n(39377),
     u = n(981631),
-    _ = n(689938),
-    E = n(947441);
-let h = [
+    h = n(388032),
+    m = n(947441);
+let p = [
         {
             feature: u.Qa3.SINGLE_PLAYER,
-            getText: () => _.Z.Messages.APPLICATION_STORE_SINGLE_PLAYER,
-            getTooltip: () => _.Z.Messages.APPLICATION_STORE_SINGLE_PLAYER_TOOLTIP,
-            IconComponent: s.UserIcon
+            getText: () => h.intl.string(h.t['V+/FjI']),
+            getTooltip: () => h.intl.string(h.t['w+X9sb']),
+            IconComponent: l.UserIcon
         },
         {
             feature: u.Qa3.LOCAL_MULTIPLAYER,
-            getText: () => _.Z.Messages.APPLICATION_STORE_LOCAL_MULTIPLAYER,
-            getTooltip: () => _.Z.Messages.APPLICATION_STORE_LOCAL_MULTIPLAYER_TOOLTIP,
-            IconComponent: s.GroupIcon
+            getText: () => h.intl.string(h.t.srnWrq),
+            getTooltip: () => h.intl.string(h.t.sDdLWF),
+            IconComponent: l.GroupIcon
         },
         {
             feature: u.Qa3.ONLINE_MULTIPLAYER,
-            getText: () => _.Z.Messages.APPLICATION_STORE_ONLINE_MULTIPLAYER,
-            getTooltip: () => _.Z.Messages.APPLICATION_STORE_ONLINE_MULTIPLAYER_TOOLTIP,
-            IconComponent: s.GroupIcon
+            getText: () => h.intl.string(h.t.xPHbgI),
+            getTooltip: () => h.intl.string(h.t.g6kR4O),
+            IconComponent: l.GroupIcon
         },
         {
             feature: u.Qa3.PVP,
-            getText: () => _.Z.Messages.APPLICATION_STORE_PVP,
-            getTooltip: () => _.Z.Messages.APPLICATION_STORE_PVP_TOOLTIP,
-            IconComponent: s.ModerationIcon
+            getText: () => h.intl.string(h.t.qhgwx8),
+            getTooltip: () => h.intl.string(h.t['5jGrhI']),
+            IconComponent: l.ModerationIcon
         },
         {
             feature: u.Qa3.LOCAL_COOP,
-            getText: () => _.Z.Messages.APPLICATION_STORE_LOCAL_COOP,
-            getTooltip: () => _.Z.Messages.APPLICATION_STORE_LOCAL_COOP_TOOLTIP,
-            IconComponent: s.GroupIcon
+            getText: () => h.intl.string(h.t.FqbalJ),
+            getTooltip: () => h.intl.string(h.t.vIgDgY),
+            IconComponent: l.GroupIcon
         },
         {
             feature: u.Qa3.ONLINE_COOP,
-            getText: () => _.Z.Messages.APPLICATION_STORE_ONLINE_COOP,
-            getTooltip: () => _.Z.Messages.APPLICATION_STORE_ONLINE_COOP_TOOLTIP,
-            IconComponent: s.GroupIcon
+            getText: () => h.intl.string(h.t.lDHO4e),
+            getTooltip: () => h.intl.string(h.t.VXDpho),
+            IconComponent: l.GroupIcon
         },
         {
             feature: u.Qa3.CROSS_PLATFORM,
-            getText: () => _.Z.Messages.APPLICATION_STORE_CROSS_PLATFORM,
-            getTooltip: () => _.Z.Messages.APPLICATION_STORE_CROSS_PLATFORM_TOOLTIP,
-            IconComponent: s.RefreshIcon
+            getText: () => h.intl.string(h.t.SWo2HR),
+            getTooltip: () => h.intl.string(h.t.ll2wzc),
+            IconComponent: l.RefreshIcon
         },
         {
             feature: u.Qa3.RICH_PRESENCE,
-            getText: () => _.Z.Messages.APPLICATION_STORE_RICH_PRESENCE,
-            getTooltip: () => _.Z.Messages.APPLICATION_STORE_RICH_PRESENCE_TOOLTIP,
+            getText: () => h.intl.string(h.t.PVSVtL),
+            getTooltip: () => h.intl.string(h.t.O6Yp4e),
             IconComponent: c.Z
         },
         {
             feature: u.Qa3.DISCORD_GAME_INVITES,
-            getText: () => _.Z.Messages.APPLICATION_STORE_DISCORD_GAME_INVITES,
-            getTooltip: () => _.Z.Messages.APPLICATION_STORE_DISCORD_GAME_INVITES_TOOLTIP,
+            getText: () => h.intl.string(h.t.agm68P),
+            getTooltip: () => h.intl.string(h.t.kS2vFB),
             IconComponent: o.Z
         },
         {
             feature: u.Qa3.SPECTATOR_MODE,
-            getText: () => _.Z.Messages.APPLICATION_STORE_SPECTATOR_MODE,
-            getTooltip: () => _.Z.Messages.APPLICATION_STORE_SPECTATOR_MODE_TOOLTIP,
-            IconComponent: s.VideoIcon
+            getText: () => h.intl.string(h.t['ZtiU7+']),
+            getTooltip: () => h.intl.string(h.t.kUtiKS),
+            IconComponent: l.VideoIcon
         },
         {
             feature: u.Qa3.CONTROLLER_SUPPORT,
-            getText: () => _.Z.Messages.APPLICATION_STORE_CONTROLLER_SUPPORT,
-            getTooltip: () => _.Z.Messages.APPLICATION_STORE_CONTROLLER_SUPPORT_TOOLTIP,
-            IconComponent: s.DpadIcon
+            getText: () => h.intl.string(h.t.UlBQ8P),
+            getTooltip: () => h.intl.string(h.t.iG00jI),
+            IconComponent: l.DpadIcon
         },
         {
             feature: u.Qa3.CLOUD_SAVES,
-            getText: () => _.Z.Messages.APPLICATION_STORE_CLOUD_SAVES,
-            getTooltip: () => _.Z.Messages.APPLICATION_STORE_CLOUD_SAVES_TOOLTIP,
-            IconComponent: l.Z
+            getText: () => h.intl.string(h.t.rOcNrK),
+            getTooltip: () => h.intl.string(h.t.kvw18P),
+            IconComponent: s.Z
         },
         {
             feature: u.Qa3.SECURE_NETWORKING,
-            getText: () => _.Z.Messages.APPLICATION_STORE_SECURE_NETWORKING,
-            getTooltip: () => _.Z.Messages.APPLICATION_STORE_SECURE_NETWORKING_TOOLTIP,
+            getText: () => h.intl.string(h.t.GKFWLy),
+            getTooltip: () => h.intl.string(h.t.VudViI),
             IconComponent: d.Z
         }
     ],
-    m = (e) => {
-        let { IconComponent: t, text: n, tooltip: a } = e;
+    g = (e) => {
+        let { IconComponent: t, text: n, tooltip: r } = e;
         return (0, i.jsxs)('div', {
-            className: E.row,
+            className: m.row,
             children: [
-                (0, i.jsx)(s.Tooltip, {
-                    text: a,
+                (0, i.jsx)(l.Tooltip, {
+                    text: r,
                     children: (e) =>
                         (0, i.jsx)(t, {
-                            className: E.featureIcon,
+                            className: m.featureIcon,
                             ...e
                         })
                 }),
                 (0, i.jsx)('span', {
-                    className: E.featureText,
+                    className: m.featureText,
                     children: n
                 }),
-                (0, i.jsx)(s.CheckmarkLargeIcon, {
+                (0, i.jsx)(l.CheckmarkLargeIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: E.checkmarkIcon
+                    className: m.checkmarkIcon
                 })
             ]
         });
     };
-class I extends a.PureComponent {
+class f extends r.PureComponent {
     render() {
         let { sku: e } = this.props,
-            t = h
+            t = p
                 .filter((t) => {
                     let { feature: n } = t;
                     return e.features.has(n);
                 })
                 .map((e) => {
-                    let { feature: t, IconComponent: n, getText: a, getTooltip: s } = e;
+                    let { feature: t, IconComponent: n, getText: r, getTooltip: l } = e;
                     return (0, i.jsx)(
-                        m,
+                        g,
                         {
                             IconComponent: n,
-                            text: a(),
-                            tooltip: s()
+                            text: r(),
+                            tooltip: l()
                         },
                         t
                     );
@@ -137,9 +137,9 @@ class I extends a.PureComponent {
         return 0 === t.length
             ? null
             : (0, i.jsxs)('div', {
-                  className: E.features,
-                  children: [(0, i.jsx)(r.Z, { children: _.Z.Messages.APPLICATION_STORE_SECTION_TITLE_FEATURES }), t]
+                  className: m.features,
+                  children: [(0, i.jsx)(a.Z, { children: h.intl.string(h.t.XXENra) }), t]
               });
     }
 }
-t.Z = I;
+t.Z = f;

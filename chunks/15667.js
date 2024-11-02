@@ -3,7 +3,7 @@ var r = n(200651);
 n(192379);
 var i = n(392711),
     a = n(481060),
-    s = n(689938),
+    s = n(388032),
     o = n(508483);
 t.Z = (e) => {
     let t = (0, i.flatMap)(e.history, (e) => {
@@ -25,7 +25,7 @@ t.Z = (e) => {
                       className: o.breadcrumbsHeader,
                       color: 'header-secondary',
                       variant: 'heading-sm/semibold',
-                      children: s.Z.Messages.MOBILE_REPORTS_BREADCRUMBS_TITLE
+                      children: s.intl.string(s.t['+3V9Tk'])
                   }),
                   t.map((e, t) =>
                       (0, r.jsxs)(

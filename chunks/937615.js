@@ -17,17 +17,17 @@ var r = n(221513),
     i = n(706454),
     a = n(74538),
     s = n(474936),
-    o = n(689938);
+    o = n(388032);
 function l(e, t, n) {
     var a;
     let s = null !== (a = null == n ? void 0 : n.localeOverride) && void 0 !== a ? a : i.default.locale;
     return (0, r.T4)(e, t, s, n);
 }
 function u(e, t, n) {
-    if (t === s.rV.YEAR) return o.Z.Messages.BILLING_PRICE_PER_YEAR.format({ price: e });
-    if (t === s.rV.MONTH && 1 === n) return o.Z.Messages.BILLING_PRICE_PER_MONTH.format({ price: e });
+    if (t === s.rV.YEAR) return o.intl.formatToPlainString(o.t.rS8FAw, { price: e });
+    if (t === s.rV.MONTH && 1 === n) return o.intl.formatToPlainString(o.t.AbOLNj, { price: e });
     if (t === s.rV.MONTH && n > 1)
-        return o.Z.Messages.BILLING_PRICE_PER_MULTI_MONTHS.format({
+        return o.intl.formatToPlainString(o.t['Qc+9w8'], {
             price: e,
             intervalCount: n
         });

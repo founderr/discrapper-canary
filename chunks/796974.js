@@ -7,20 +7,20 @@ var r,
     u = n(570140);
 let c = {},
     d = {},
-    _ = { scrollTop: 0 };
-function E(e) {
+    f = { scrollTop: 0 };
+function _(e) {
     return {
         guildId: e,
         scrollTop: null,
         scrollTo: null
     };
 }
-function f(e) {
+function h(e) {
     if (null == c[e]) return;
     let { scrollTop: t, scrollHeight: n, offsetHeight: r } = c[e];
     return t === n - r;
 }
-class h extends (s = o.ZP.Store) {
+class p extends (s = o.ZP.Store) {
     percentageScrolled(e) {
         if (null != c[e]) {
             let { scrollTop: t, scrollHeight: n } = c[e];
@@ -33,17 +33,17 @@ class h extends (s = o.ZP.Store) {
     }
     getGuildDimensions(e) {
         var t;
-        return null !== (t = d[e]) && void 0 !== t ? t : E(e);
+        return null !== (t = d[e]) && void 0 !== t ? t : _(e);
     }
     getGuildListDimensions() {
-        return _;
+        return f;
     }
     isAtBottom(e) {
-        return f(e);
+        return h(e);
     }
 }
 (a = 'DimensionStore'),
-    (i = 'displayName') in (r = h)
+    (i = 'displayName') in (r = p)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -51,7 +51,7 @@ class h extends (s = o.ZP.Store) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = new h(u.Z, {
+    (t.Z = new p(u.Z, {
         UPDATE_CHANNEL_DIMENSIONS: function (e) {
             let { channelId: t, scrollTop: n, scrollHeight: r, offsetHeight: i } = e,
                 a = c[t];
@@ -71,16 +71,16 @@ class h extends (s = o.ZP.Store) {
         },
         UPDATE_CHANNEL_LIST_DIMENSIONS: function (e) {
             let { guildId: t, scrollTop: n, scrollTo: r } = e;
-            null == d[t] && (d[t] = E(t)), void 0 !== n && (d[t].scrollTop = n);
+            null == d[t] && (d[t] = _(t)), void 0 !== n && (d[t].scrollTop = n);
             let i = !1;
             return void 0 !== r && ((i = d[t].scrollTo !== r), (d[t].scrollTo = r)), null != r || i;
         },
         UPDATE_GUILD_LIST_DIMENSIONS: function (e) {
             let { scrollTop: t } = e;
-            _.scrollTop = t;
+            f.scrollTop = t;
         },
         CALL_CREATE: function (e) {
             let { channelId: t } = e;
-            f(t) && delete c[t];
+            h(t) && delete c[t];
         }
     }));

@@ -1,4 +1,4 @@
-t.d(n, {
+e.d(n, {
     C: function () {
         return o;
     },
@@ -6,23 +6,23 @@ t.d(n, {
         return u;
     }
 });
-var r = t(192379),
-    i = t(937615),
-    l = t(689938);
-function o(e) {
-    return r.useMemo(() => {
-        if (null == e) return;
-        let n = null != e.role_id,
-            t = e.attachments_count > 0;
-        if (n && t) return l.Z.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE;
-        if (n) return l.Z.Messages.GUILD_PRODUCT_CARD_TYPE_ROLE;
-        if (t) return l.Z.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE;
-    }, [e]);
+var i = e(192379),
+    r = e(937615),
+    l = e(388032);
+function o(t) {
+    return i.useMemo(() => {
+        if (null == t) return;
+        let n = null != t.role_id,
+            e = t.attachments_count > 0;
+        if (n && e) return l.intl.string(l.t.ih4QMT);
+        if (n) return l.intl.string(l.t.o9xphY);
+        if (e) return l.intl.string(l.t.DWYJub);
+    }, [t]);
 }
-function u(e) {
-    return r.useMemo(() => {
-        if ((null == e ? void 0 : e.price) == null) return;
-        let { amount: n, currency: t } = e.price;
-        return (0, i.T4)(n, t);
-    }, [e]);
+function u(t) {
+    return i.useMemo(() => {
+        if ((null == t ? void 0 : t.price) == null) return;
+        let { amount: n, currency: e } = t.price;
+        return (0, r.T4)(n, e);
+    }, [t]);
 }

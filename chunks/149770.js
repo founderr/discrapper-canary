@@ -8,7 +8,7 @@ var r = n(570140),
     u = n(944486),
     c = n(914010),
     d = n(981631);
-class _ extends a.Z {
+class f extends a.Z {
     handleGuildCreate(e) {
         let { guild: t } = e,
             n = u.Z.getChannelId(d.ME),
@@ -51,4 +51,4 @@ class _ extends a.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new _();
+t.Z = new f();

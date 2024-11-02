@@ -1,66 +1,66 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return E;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(442837),
-    s = n(481060),
-    r = n(475179),
-    l = n(287734),
-    o = n(933557),
+var r = n(442837),
+    l = n(481060),
+    a = n(475179),
+    o = n(287734),
+    s = n(933557),
     c = n(124072),
     u = n(703656),
     d = n(131704),
-    _ = n(592125),
-    E = n(430824),
-    I = n(699516),
-    m = n(594174),
-    f = n(934415),
-    T = n(900849),
-    h = n(981631);
-function N(e) {
-    let { channel: t, onClick: n, beforeTransition: N, className: p, openChatWithoutConnecting: C } = e,
-        g = (0, a.e7)([m.default, I.Z], () => (null == t ? '' : (0, o.F6)(t, m.default, I.Z)), [t]);
-    return (0, i.jsx)(s.Tooltip, {
-        text: g,
+    m = n(592125),
+    f = n(430824),
+    h = n(699516),
+    p = n(594174),
+    g = n(934415),
+    _ = n(900849),
+    C = n(981631);
+function E(e) {
+    let { channel: t, onClick: n, beforeTransition: E, className: I, openChatWithoutConnecting: x } = e,
+        v = (0, r.e7)([p.default, h.Z], () => (null == t ? '' : (0, s.F6)(t, p.default, h.Z)), [t]);
+    return (0, i.jsx)(l.Tooltip, {
+        text: v,
         position: 'top',
         children: (e) => {
-            let { onMouseEnter: a, onMouseLeave: o } = e;
+            let { onMouseEnter: r, onMouseLeave: s } = e;
             return (0, i.jsx)(c.Z, {
                 role: 'link',
-                className: p,
+                className: I,
                 onClick: (e) => {
                     e.stopPropagation(),
                         null != n
                             ? n()
-                            : (null != N && N(),
-                              (0, s.closeAllModals)(),
+                            : (null != E && E(),
+                              (0, l.closeAllModals)(),
                               !(function (e, t) {
                                   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                                   if (null == e || null == t) return;
-                                  let i = E.Z.getGuild(e);
+                                  let i = f.Z.getGuild(e);
                                   if ((null == i ? void 0 : i.joinedAt) == null) {
-                                      T.Ub(e, {}, { channelId: t });
+                                      _.Ub(e, {}, { channelId: t });
                                       return;
                                   }
-                                  let a = _.Z.getChannel(t);
-                                  if (null != a && (0, d.bw)(a.type)) {
+                                  let r = m.Z.getChannel(t);
+                                  if (null != r && (0, d.bw)(r.type)) {
                                       if (n) {
-                                          r.Z.updateChatOpen(a.id, !0), (0, u.uL)(h.Z5c.CHANNEL(e, t));
+                                          a.Z.updateChatOpen(r.id, !0), (0, u.uL)(C.Z5c.CHANNEL(e, t));
                                           return;
                                       }
-                                      l.default.selectVoiceChannel(a.id);
+                                      o.default.selectVoiceChannel(r.id);
                                       return;
                                   }
-                                  (0, u.uL)(h.Z5c.CHANNEL(e, t));
-                              })(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, C));
+                                  (0, u.uL)(C.Z5c.CHANNEL(e, t));
+                              })(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, x));
                 },
-                onMouseEnter: a,
-                onMouseLeave: o,
-                iconType: (0, f.wl)(t),
-                children: g
+                onMouseEnter: r,
+                onMouseLeave: s,
+                iconType: (0, g.wl)(t),
+                children: v
             });
         }
     });

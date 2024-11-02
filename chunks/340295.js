@@ -1,35 +1,35 @@
 var i = n(200651),
-    s = n(192379),
-    a = n(481060),
-    l = n(287734),
-    r = n(305325),
+    l = n(192379),
+    r = n(481060),
+    a = n(287734),
+    s = n(305325),
     o = n(281956),
     c = n(584729),
     u = n(27457),
     d = n(354459),
-    h = n(689938),
+    h = n(388032),
     m = n(754833);
 t.Z = function (e) {
     var t, n;
-    let { participants: p, channel: _, hasConnectPermission: f } = e,
-        E = p.filter(d.Io),
-        g = (0, o.J)(_.guild_id),
-        C = s.useCallback(() => {
-            g ? (0, r.hk)(_.guild_id, () => l.default.selectVoiceChannel(_.id)) : l.default.selectVoiceChannel(_.id);
-        }, [_.id, _.guild_id, g]),
-        I = 4 === E.length ? 2 : 3;
+    let { participants: p, channel: f, hasConnectPermission: g } = e,
+        C = p.filter(d.Io),
+        x = (0, o.J)(f.guild_id),
+        v = l.useCallback(() => {
+            x ? (0, s.hk)(f.guild_id, () => a.default.selectVoiceChannel(f.id)) : a.default.selectVoiceChannel(f.id);
+        }, [f.id, f.guild_id, x]),
+        _ = 4 === C.length ? 2 : 3;
     return (0, i.jsxs)('div', {
         className: m.container,
         children: [
             (0, i.jsx)('div', {
                 className: m.tiles,
-                style: { maxWidth: 168 * I },
-                children: E.slice(0, 5).map((e) =>
+                style: { maxWidth: 168 * _ },
+                children: C.slice(0, 5).map((e) =>
                     (0, i.jsx)(
                         u.ZP,
                         {
                             participant: e,
-                            channel: _,
+                            channel: f,
                             className: m.tile,
                             paused: !0,
                             inCall: !0,
@@ -41,29 +41,29 @@ t.Z = function (e) {
                     )
                 )
             }),
-            (0, i.jsx)(a.Heading, {
+            (0, i.jsx)(r.Heading, {
                 className: m.channelName,
                 variant: 'heading-xxl/semibold',
-                children: _.name
+                children: f.name
             }),
             (0, i.jsx)('div', {
                 className: m.participantsRow,
-                children: (0, i.jsx)(a.Text, {
+                children: (0, i.jsx)(r.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
                     children:
-                        ((t = _),
-                        0 === (n = E).length
-                            ? h.Z.Messages.CURRENTLY_IN_VOICE_EMPTY
+                        ((t = f),
+                        0 === (n = C).length
+                            ? h.intl.string(h.t.zSqdra)
                             : 1 === n.length
-                              ? h.Z.Messages.CURRENTLY_IN_VOICE_1.format({ a: (0, c.Z)(t, n[0]) })
+                              ? h.intl.formatToPlainString(h.t.BUyJIC, { a: (0, c.Z)(t, n[0]) })
                               : 2 === n.length
-                                ? h.Z.Messages.CURRENTLY_IN_VOICE_2.format({
+                                ? h.intl.formatToPlainString(h.t.dcyZf3, {
                                       a: (0, c.Z)(t, n[0]),
                                       b: (0, c.Z)(t, n[1])
                                   })
                                 : n.length > 2
-                                  ? h.Z.Messages.CURRENTLY_IN_VOICE_2_N.format({
+                                  ? h.intl.formatToPlainString(h.t['44/Obm'], {
                                         a: (0, c.Z)(t, n[0]),
                                         b: (0, c.Z)(t, n[1]),
                                         n: n.length - 2
@@ -71,13 +71,13 @@ t.Z = function (e) {
                                   : void 0)
                 })
             }),
-            (0, i.jsx)(a.Button, {
-                disabled: !f,
+            (0, i.jsx)(r.Button, {
+                disabled: !g,
                 className: m.joinButton,
-                color: f ? a.Button.Colors.GREEN : a.Button.Colors.PRIMARY,
-                onClick: C,
-                size: a.Button.Sizes.MEDIUM,
-                children: f ? h.Z.Messages.JOIN_VOICE : h.Z.Messages.CHANNEL_LOCKED_SHORT
+                color: g ? r.Button.Colors.GREEN : r.Button.Colors.PRIMARY,
+                onClick: v,
+                size: r.Button.Sizes.MEDIUM,
+                children: g ? h.intl.string(h.t['96ANUF']) : h.intl.string(h.t.TVBCKS)
             })
         ]
     });

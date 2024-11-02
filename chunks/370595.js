@@ -5,38 +5,38 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(481060),
-    a = n(50493),
-    l = n(689938),
-    r = n(659367),
+var l = n(481060),
+    r = n(50493),
+    a = n(388032),
+    s = n(659367),
     o = n(194898);
 function c(e) {
-    let { onNavigate: t, backPanel: n = a.k.INFO } = e;
+    let { onNavigate: t, backPanel: n = r.k.INFO } = e;
     return (0, i.jsxs)('div', {
         className: o.header,
         children: [
             (0, i.jsx)('div', {
                 className: o.headerTitle,
-                children: (0, i.jsxs)(s.Clickable, {
-                    className: r.backButton,
+                children: (0, i.jsxs)(l.Clickable, {
+                    className: s.backButton,
                     onClick: () => (null == t ? void 0 : t(n)),
                     children: [
-                        (0, i.jsx)(s.ArrowSmallLeftIcon, {
+                        (0, i.jsx)(l.ArrowSmallLeftIcon, {
                             size: 'custom',
                             width: 20,
                             height: 20
                         }),
-                        (0, i.jsx)(s.Heading, {
+                        (0, i.jsx)(l.Heading, {
                             variant: 'heading-md/semibold',
-                            children: l.Z.Messages.BACK
+                            children: a.intl.string(a.t['13/7kZ'])
                         })
                     ]
                 })
             }),
-            (0, i.jsx)(s.KeyCombo, {
+            (0, i.jsx)(l.KeyCombo, {
                 shortcut: 'esc',
-                keyClassName: r.keyComboInner,
-                className: r.keyComboContainer
+                keyClassName: s.keyComboInner,
+                className: s.keyComboContainer
             })
         ]
     });

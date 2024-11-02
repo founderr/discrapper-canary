@@ -1,152 +1,152 @@
-l.d(n, {
+t.d(n, {
     I: function () {
-        return Z;
+        return y;
     },
     S: function () {
-        return A;
+        return T;
     }
 }),
-    l(47120);
-var s = l(200651),
-    a = l(192379),
-    t = l(120356),
-    i = l.n(t),
-    r = l(533800),
-    o = l(442837),
-    d = l(846519),
-    c = l(481060),
-    u = l(914010),
-    E = l(246946),
-    _ = l(626135),
-    x = l(572004),
-    I = l(630388),
-    m = l(971130),
-    N = l(530436),
-    T = l(245335),
-    h = l(981631),
-    g = l(689938),
-    v = l(871820),
-    S = l(803636),
-    C = l(739017),
-    L = l(113207);
-let A = o.ZP.connectStores([E.Z], () => ({ hideValue: E.Z.hideInstantInvites }))((e) => {
-        let { value: n, autoFocus: l, hideValue: t, onCopy: r, disabled: o } = e,
-            [u, E] = a.useState(!1),
-            [_, I] = a.useState(!1),
-            m = a.useMemo(() => new d.sW(1000, () => I(!1)), [I]);
+    t(47120);
+var l = t(200651),
+    i = t(192379),
+    r = t(120356),
+    a = t.n(r),
+    s = t(533800),
+    o = t(442837),
+    d = t(846519),
+    c = t(481060),
+    u = t(914010),
+    m = t(246946),
+    x = t(626135),
+    h = t(572004),
+    g = t(630388),
+    v = t(971130),
+    f = t(530436),
+    N = t(245335),
+    j = t(981631),
+    I = t(388032),
+    p = t(871820),
+    C = t(803636),
+    E = t(739017),
+    S = t(113207);
+let T = o.ZP.connectStores([m.Z], () => ({ hideValue: m.Z.hideInstantInvites }))((e) => {
+        let { value: n, autoFocus: t, hideValue: r, onCopy: s, disabled: o } = e,
+            [u, m] = i.useState(!1),
+            [x, g] = i.useState(!1),
+            v = i.useMemo(() => new d.sW(1000, () => g(!1)), [g]);
         return (
-            a.useEffect(
+            i.useEffect(
                 () => () => {
-                    m.cancel();
+                    v.cancel();
                 },
-                [m]
+                [v]
             ),
-            (0, s.jsxs)('div', {
-                className: i()(S.input, C.__invalid_flexJustifyBetween, C.flexCenter, {
-                    [S.success]: _,
-                    [S.focused]: u
+            (0, l.jsxs)('div', {
+                className: a()(C.input, E.__invalid_flexJustifyBetween, E.flexCenter, {
+                    [C.success]: x,
+                    [C.focused]: u
                 }),
                 children: [
-                    (0, s.jsx)(c.TextInput, {
-                        className: v.copyInput,
+                    (0, l.jsx)(c.TextInput, {
+                        className: p.copyInput,
                         name: 'invite',
-                        value: t ? g.Z.Messages.INSTANT_INVITE_HIDDEN : n,
+                        value: r ? I.intl.string(I.t['6HzNgY']) : n,
                         editable: !1,
-                        inputClassName: v.input,
-                        autoFocus: l,
-                        onFocus: () => (l ? E(!0) : null),
-                        onBlur: () => (l ? E(!1) : null),
+                        inputClassName: p.input,
+                        autoFocus: t,
+                        onFocus: () => (t ? m(!0) : null),
+                        onBlur: () => (t ? m(!1) : null),
                         spellCheck: 'false',
                         onClick: (e) => e.currentTarget.select(),
-                        'aria-label': g.Z.Messages.FORM_LABEL_INVITE_LINK,
+                        'aria-label': I.intl.string(I.t.qreV29),
                         disabled: o
                     }),
-                    x.wS
-                        ? (0, s.jsx)(c.Button, {
+                    h.wS
+                        ? (0, l.jsx)(c.Button, {
                               size: c.Button.Sizes.SMALL,
-                              color: _ ? c.Button.Colors.GREEN : c.Button.Colors.BRAND,
-                              className: v.copyButton,
+                              color: x ? c.Button.Colors.GREEN : c.Button.Colors.BRAND,
+                              className: p.copyButton,
                               onClick: () => {
-                                  I(!0), m.delay(), r(n);
+                                  g(!0), v.delay(), s(n);
                               },
                               disabled: o,
-                              children: _ ? g.Z.Messages.INVITE_COPIED : g.Z.Messages.COPY
+                              children: x ? I.intl.string(I.t.q30c5u) : I.intl.string(I.t.OpuAlJ)
                           })
                         : null
                 ]
             })
         );
     }),
-    Z = (e) => {
-        let { guild: n, noInvitesAvailable: l, showFriends: t, onClose: o, modalState: d, isGuestInviteCreationToggleEnabled: E, inviteFlags: S, setInviteFlags: C, showGuestInviteToggleForCurrentVoiceChannel: Z, copyValue: f, changePage: j, inviteChannel: M, source: D, code: R, guildScheduledEvent: p, disabled: V } = e,
-            { maxAge: G, maxUses: O, networkError: U, showVanityURL: y } = d,
-            b = a.useCallback(() => {
-                (0, x.JG)(f),
-                    _.default.track(h.rMx.COPY_INSTANT_INVITE, {
+    y = (e) => {
+        let { guild: n, noInvitesAvailable: t, showFriends: r, onClose: o, modalState: d, isGuestInviteCreationToggleEnabled: m, inviteFlags: C, setInviteFlags: E, showGuestInviteToggleForCurrentVoiceChannel: y, copyValue: Z, changePage: b, inviteChannel: _, source: R, code: k, guildScheduledEvent: A, disabled: L } = e,
+            { maxAge: D, maxUses: z, networkError: B, showVanityURL: M } = d,
+            G = i.useCallback(() => {
+                (0, h.JG)(Z),
+                    x.default.track(j.rMx.COPY_INSTANT_INVITE, {
                         server: u.Z.getGuildId(),
-                        channel: null == M ? void 0 : M.id,
-                        channel_type: null == M ? void 0 : M.type,
-                        location: D,
-                        code: R,
-                        guild_scheduled_event_id: null == p ? void 0 : p.id
+                        channel: null == _ ? void 0 : _.id,
+                        channel_type: null == _ ? void 0 : _.type,
+                        location: R,
+                        code: k,
+                        guild_scheduled_event_id: null == A ? void 0 : A.id
                     });
-            }, [f, M, D, R, p]);
-        return (0, s.jsxs)(s.Fragment, {
+            }, [Z, _, R, k, A]);
+        return (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, s.jsx)(A, {
-                    value: f,
-                    autoFocus: t,
-                    onCopy: b,
-                    disabled: V
+                (0, l.jsx)(T, {
+                    value: Z,
+                    autoFocus: r,
+                    onCopy: G,
+                    disabled: L
                 }),
-                E
-                    ? (0, s.jsx)('div', {
-                          className: v.temporaryMembershipContainerBackground,
-                          children: (0, s.jsx)(c.FormSwitch, {
-                              className: v.temporaryMembershipContainer,
-                              value: (0, I.yE)(S, r.$.IS_GUEST_INVITE),
-                              onChange: (e) => C((0, I.mB)(S, r.$.IS_GUEST_INVITE, e)),
-                              note: g.Z.Messages.GUEST_MEMBERSHIP_EXPLANATION,
-                              disabled: V,
+                m
+                    ? (0, l.jsx)('div', {
+                          className: p.temporaryMembershipContainerBackground,
+                          children: (0, l.jsx)(c.FormSwitch, {
+                              className: p.temporaryMembershipContainer,
+                              value: (0, g.yE)(C, s.$.IS_GUEST_INVITE),
+                              onChange: (e) => E((0, g.mB)(C, s.$.IS_GUEST_INVITE, e)),
+                              note: I.intl.string(I.t['/FeTKy']),
+                              disabled: L,
                               hideBorder: !0,
-                              children: Z ? g.Z.Messages.GRANT_GUEST_MEMBERSHIP_VOICE_ONLY : g.Z.Messages.GRANT_GUEST_MEMBERSHIP
+                              children: y ? I.intl.string(I.t.BPL98f) : I.intl.string(I.t['2snqsL'])
                           })
                       })
                     : null,
-                l || y
+                t || M
                     ? null
-                    : (0, s.jsxs)(c.Text, {
+                    : (0, l.jsxs)(c.Text, {
                           variant: 'text-xs/normal',
-                          className: i()(L.marginTop8, v.footerText),
+                          className: a()(S.marginTop8, p.footerText),
                           children: [
-                              (0, m.Vg)(G, O),
+                              (0, v.Vg)(D, z),
                               ' ',
-                              t
-                                  ? (0, s.jsx)(c.Anchor, {
-                                        onClick: () => j(T.RV.SETTINGS),
-                                        children: g.Z.Messages.INVITE_EDIT_LINK
+                              r
+                                  ? (0, l.jsx)(c.Anchor, {
+                                        onClick: () => b(N.RV.SETTINGS),
+                                        children: I.intl.string(I.t.VNe8Pz)
                                     })
                                   : null
                           ]
                       }),
-                !l && t && y
-                    ? (0, s.jsxs)(c.Text, {
+                !t && r && M
+                    ? (0, l.jsxs)(c.Text, {
                           variant: 'text-xs/normal',
-                          className: i()(L.marginTop8, v.footerText),
+                          className: a()(S.marginTop8, p.footerText),
                           children: [
-                              g.Z.Messages.INVITE_VANITY_USED,
+                              I.intl.string(I.t['0M2U9/']),
                               ' ',
-                              (0, s.jsx)(c.Anchor, {
-                                  onClick: () => j(T.RV.SETTINGS),
-                                  children: g.Z.Messages.INVITE_EDIT_LINK
+                              (0, l.jsx)(c.Anchor, {
+                                  onClick: () => b(N.RV.SETTINGS),
+                                  children: I.intl.string(I.t.VNe8Pz)
                               })
                           ]
                       })
                     : null,
-                null != U
-                    ? (0, s.jsx)(N.W, {
+                null != B
+                    ? (0, l.jsx)(f.W, {
                           guild: n,
-                          error: U,
+                          error: B,
                           onClose: o
                       })
                     : null

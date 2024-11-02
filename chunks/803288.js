@@ -1,40 +1,40 @@
 n.d(t, {
     T: function () {
-        return D;
+        return A;
     },
     Z: function () {
-        return j;
+        return y;
     }
 }),
     n(757143),
     n(47120);
-var s = n(200651),
-    a = n(192379),
-    i = n(120356),
-    r = n.n(i),
-    l = n(442837),
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    s = n.n(l),
+    a = n(442837),
     o = n(481060),
     c = n(497321),
     d = n(852860),
     u = n(100527),
-    _ = n(367907),
-    I = n(906732),
-    E = n(263145),
-    T = n(807582),
-    m = n(26323),
-    N = n(366980),
-    S = n(246946),
-    g = n(709586),
-    h = n(267642),
-    C = n(999382),
-    x = n(621319),
-    p = n(44550),
-    R = n(770270),
-    L = n(981631),
-    f = n(30513),
-    O = n(689938),
-    A = n(279404);
-function M(e, t, n) {
+    m = n(367907),
+    h = n(906732),
+    g = n(263145),
+    x = n(807582),
+    p = n(26323),
+    f = n(366980),
+    C = n(246946),
+    I = n(709586),
+    _ = n(267642),
+    N = n(999382),
+    v = n(621319),
+    T = n(44550),
+    j = n(770270),
+    E = n(981631),
+    S = n(30513),
+    b = n(388032),
+    R = n(279404);
+function Z(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -47,98 +47,98 @@ function M(e, t, n) {
         e
     );
 }
-let D = l.ZP.connectStores([C.Z, p.Z], () => {
-    let e = p.Z.vanityURLCode,
-        t = C.Z.getGuildId();
+let A = a.ZP.connectStores([N.Z, T.Z], () => {
+    let e = T.Z.vanityURLCode,
+        t = N.Z.getGuildId();
     return {
         vanityURLCode: e,
         guildId: t,
         onReset() {
-            (0, x.H7)();
+            (0, v.H7)();
         },
         onSave() {
-            null != t && (0, x.en)(t, e);
+            null != t && (0, v.en)(t, e);
         }
     };
 })(d.Z);
-class v extends a.PureComponent {
+class L extends r.PureComponent {
     componentWillUnmount() {
-        (0, x.xv)();
+        (0, v.xv)();
     }
     renderEditCard() {
         let { isRemoving: e } = this.state,
-            { hasError: t, originalVanityURLCode: n, vanityURLCode: a, vanityURLUses: i, guild: r } = this.props;
-        if (null == a) return (0, s.jsx)(o.Spinner, {});
-        let l = (null == r ? void 0 : r.hasFeature(L.oNc.VANITY_URL)) === !0;
-        return (0, s.jsxs)(o.Card, {
+            { hasError: t, originalVanityURLCode: n, vanityURLCode: r, vanityURLUses: l, guild: s } = this.props;
+        if (null == r) return (0, i.jsx)(o.Spinner, {});
+        let a = (null == s ? void 0 : s.hasFeature(E.oNc.VANITY_URL)) === !0;
+        return (0, i.jsxs)(o.Card, {
             editable: !0,
-            className: A.editVanityUrlCard,
+            className: R.editVanityUrlCard,
             children: [
-                (0, s.jsxs)(o.FormTitle, {
-                    className: A.__invalid_formTitle,
+                (0, i.jsxs)(o.FormTitle, {
+                    className: R.__invalid_formTitle,
                     children: [
-                        (0, s.jsx)('div', {
-                            className: A.formTitleField,
-                            children: O.Z.Messages.INVITE_URL
+                        (0, i.jsx)('div', {
+                            className: R.formTitleField,
+                            children: b.intl.string(b.t['6oJyq6'])
                         }),
-                        a.length > 0 ? (0, s.jsx)('div', { children: O.Z.Messages.VANITY_URL_USES.format({ uses: i }) }) : null
+                        r.length > 0 ? (0, i.jsx)('div', { children: b.intl.format(b.t.MVWOUV, { uses: l }) }) : null
                     ]
                 }),
-                (0, s.jsx)(E.Z, {
+                (0, i.jsx)(g.Z, {
                     prefix: ''.concat('https://discord.gg', '/'),
-                    value: a,
+                    value: r,
                     onChange: this.handleInviteCodeChange,
                     maxLength: 25,
                     autoFocus: !0,
                     error: t,
-                    disabled: !l
+                    disabled: !a
                 }),
                 null != n && n.length > 0
-                    ? (0, s.jsx)(o.Button, {
-                          className: A.removeVanityUrlButton,
+                    ? (0, i.jsx)(o.Button, {
+                          className: R.removeVanityUrlButton,
                           onClick: this.handleRemoveVanityURL,
                           submitting: e,
                           look: o.Button.Looks.LINK,
                           size: o.Button.Sizes.MIN,
                           color: o.Button.Colors.RED,
-                          children: O.Z.Messages.REMOVE_VANITY_URL
+                          children: b.intl.string(b.t['3ggb6O'])
                       })
                     : null
             ]
         });
     }
     renderUpsellButton() {
-        return (0, s.jsxs)(o.ShinyButton, {
+        return (0, i.jsxs)(o.ShinyButton, {
             color: o.Button.Colors.GREEN,
-            className: r()(A.marginTop16),
-            innerClassName: A.upsellButton,
+            className: s()(R.marginTop16),
+            innerClassName: R.upsellButton,
             onClick: this.handleVanityUrlUpsellButton,
             children: [
-                (0, s.jsx)(g.Z, {
+                (0, i.jsx)(I.Z, {
                     height: 16,
                     width: 16,
-                    className: A.premiumUpsellBadge
+                    className: R.premiumUpsellBadge
                 }),
                 ' ',
-                O.Z.Messages.PREMIUM_GUILD_UNLOCK_WTH_BOOSTING_CTA
+                b.intl.string(b.t['+7XY39'])
             ]
         });
     }
     renderInfo() {
         let { hasError: e, errorDetails: t, originalVanityURLCode: n } = this.props;
         if (e)
-            return (0, s.jsx)(o.Text, {
+            return (0, i.jsx)(o.Text, {
                 variant: 'text-md/normal',
                 color: 'text-danger',
-                className: A.__invalid_marginTop20,
-                children: (0, R.i)(null == t ? void 0 : t.code)
+                className: R.__invalid_marginTop20,
+                children: (0, j.i)(null == t ? void 0 : t.code)
             });
         if (null != n && n.length > 0) {
-            let e = (0, N.Z)(n);
-            return (0, s.jsx)(o.FormText, {
-                className: A.__invalid_marginTop20,
+            let e = (0, f.Z)(n);
+            return (0, i.jsx)(o.FormText, {
+                className: R.__invalid_marginTop20,
                 type: o.FormTextTypes.LABEL_DESCRIPTOR,
-                children: O.Z.Messages.VANITY_URL_HELP_EXTENDED_LINK.format({
+                children: b.intl.format(b.t['1qTOvr'], {
                     urlText: e,
                     urlValue: e
                 })
@@ -146,105 +146,105 @@ class v extends a.PureComponent {
         }
     }
     handleRemoveVanityURL() {
-        (0, x.Gy)('');
+        (0, v.Gy)('');
     }
     handleInviteCodeChange(e) {
-        (0, x.Gy)(e.replace(/ /g, '-'));
+        (0, v.Gy)(e.replace(/ /g, '-'));
     }
     render() {
         let { hide: e, guild: t } = this.props;
         return null == t
             ? null
             : e
-              ? (0, s.jsx)(c.Z, {})
-              : (0, s.jsxs)(o.FormSection, {
+              ? (0, i.jsx)(c.Z, {})
+              : (0, i.jsxs)(o.FormSection, {
                     children: [
-                        (0, s.jsxs)(o.FormTitle, {
+                        (0, i.jsxs)(o.FormTitle, {
                             tag: o.FormTitleTags.H1,
-                            className: A.flexFormTitle,
+                            className: R.flexFormTitle,
                             children: [
-                                (0, s.jsx)('div', { children: O.Z.Messages.VANITY_URL }),
-                                (0, s.jsx)(T.Z, {
+                                (0, i.jsx)('div', { children: b.intl.string(b.t['5XZKy8']) }),
+                                (0, i.jsx)(x.Z, {
                                     guild: t,
-                                    guildFeature: L.oNc.VANITY_URL,
-                                    className: A.guildFeatureAvailabilityIndicator,
+                                    guildFeature: E.oNc.VANITY_URL,
+                                    className: R.guildFeatureAvailabilityIndicator,
                                     onClick: this.handleVanityUrlUpsellIndicator
                                 })
                             ]
                         }),
-                        (0, s.jsx)(o.FormText, {
+                        (0, i.jsx)(o.FormText, {
                             type: o.FormTextTypes.DESCRIPTION,
-                            className: A.__invalid_marginBottom8,
-                            children: O.Z.Messages.VANITY_URL_HELP
+                            className: R.__invalid_marginBottom8,
+                            children: b.intl.string(b.t.IhWDcn)
                         }),
-                        (0, s.jsx)(o.FormText, {
+                        (0, i.jsx)(o.FormText, {
                             type: o.FormTextTypes.DESCRIPTION,
-                            className: A.__invalid_marginBottom20,
-                            children: O.Z.Messages.VANITY_URL_HELP_CONFLICT
+                            className: R.__invalid_marginBottom20,
+                            children: b.intl.string(b.t['1mRkFh'])
                         }),
-                        (0, s.jsx)(o.FormText, {
+                        (0, i.jsx)(o.FormText, {
                             type: o.FormTextTypes.DESCRIPTION,
-                            className: A.__invalid_marginBottom20,
-                            children: O.Z.Messages.VANITY_URL_DEFAULT_CHANNEL
+                            className: R.__invalid_marginBottom20,
+                            children: b.intl.string(b.t['eH/HMz'])
                         }),
-                        (0, R.p)(t) ? this.renderEditCard() : this.renderUpsellButton(),
+                        (0, j.p)(t) ? this.renderEditCard() : this.renderUpsellButton(),
                         this.renderInfo()
                     ]
                 });
     }
     constructor(...e) {
         super(...e),
-            M(this, 'state', { isRemoving: !1 }),
-            M(this, 'handleShowModalUpsell', (e, t, n, s, a) => {
+            Z(this, 'state', { isRemoving: !1 }),
+            Z(this, 'handleShowModalUpsell', (e, t, n, i, r) => {
                 e.preventDefault(), e.stopPropagation();
-                let { guild: i, analyticsLocations: r } = this.props;
-                null != i &&
-                    ((0, _.yw)(L.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                let { guild: l, analyticsLocations: s } = this.props;
+                null != l &&
+                    ((0, m.yw)(E.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                         location: {
                             section: n,
-                            object: L.qAy.LEARN_MORE,
-                            objectType: (0, h.ge)(t),
-                            location_stack: r
+                            object: E.qAy.LEARN_MORE,
+                            objectType: (0, _.ge)(t),
+                            location_stack: s
                         },
-                        guild_id: null == i ? void 0 : i.id
+                        guild_id: null == l ? void 0 : l.id
                     }),
-                    (0, m.Z)({
-                        analyticsLocations: r,
+                    (0, p.Z)({
+                        analyticsLocations: s,
                         analyticsSourceLocation: {
                             section: n,
-                            object: s,
-                            page: L.ZY5.GUILD_SETTINGS
+                            object: i,
+                            page: E.ZY5.GUILD_SETTINGS
                         },
-                        guild: i,
-                        perks: a
+                        guild: l,
+                        perks: r
                     }));
             }),
-            M(this, 'handleVanityUrlUpsellIndicator', (e) => {
-                this.handleShowModalUpsell(e, L.Eu4.TIER_3, L.jXE.GUILD_SETTINGS_VANITY_URL, L.qAy.BADGE, (0, f.WW)());
+            Z(this, 'handleVanityUrlUpsellIndicator', (e) => {
+                this.handleShowModalUpsell(e, E.Eu4.TIER_3, E.jXE.GUILD_SETTINGS_VANITY_URL, E.qAy.BADGE, (0, S.WW)());
             }),
-            M(this, 'handleVanityUrlUpsellButton', (e) => {
-                this.handleShowModalUpsell(e, L.Eu4.TIER_3, L.jXE.GUILD_SETTINGS_VANITY_URL, L.qAy.BUTTON_CTA, (0, f.WW)());
+            Z(this, 'handleVanityUrlUpsellButton', (e) => {
+                this.handleShowModalUpsell(e, E.Eu4.TIER_3, E.jXE.GUILD_SETTINGS_VANITY_URL, E.qAy.BUTTON_CTA, (0, S.WW)());
             });
     }
 }
-function j() {
-    let e = (0, l.e7)([C.Z], () => C.Z.getGuild()),
-        t = (0, l.cj)([p.Z], () => ({
-            vanityURLCode: p.Z.vanityURLCode,
-            vanityURLUses: p.Z.vanityURLUses,
-            originalVanityURLCode: p.Z.originalVanityURLCode,
-            hasError: p.Z.hasError(),
-            errorDetails: p.Z.errorDetails
+function y() {
+    let e = (0, a.e7)([N.Z], () => N.Z.getGuild()),
+        t = (0, a.cj)([T.Z], () => ({
+            vanityURLCode: T.Z.vanityURLCode,
+            vanityURLUses: T.Z.vanityURLUses,
+            originalVanityURLCode: T.Z.originalVanityURLCode,
+            hasError: T.Z.hasError(),
+            errorDetails: T.Z.errorDetails
         })),
-        n = (0, l.e7)([S.Z], () => S.Z.hideInstantInvites),
-        { analyticsLocations: a } = (0, I.ZP)(u.Z.VANITY_URL);
-    return (0, s.jsx)(I.Gt, {
-        value: a,
-        children: (0, s.jsx)(v, {
+        n = (0, a.e7)([C.Z], () => C.Z.hideInstantInvites),
+        { analyticsLocations: r } = (0, h.ZP)(u.Z.VANITY_URL);
+    return (0, i.jsx)(h.Gt, {
+        value: r,
+        children: (0, i.jsx)(L, {
             guild: e,
             ...t,
             hide: n,
-            analyticsLocations: a
+            analyticsLocations: r
         })
     });
 }

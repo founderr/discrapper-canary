@@ -7,7 +7,7 @@ var r = n(200651);
 n(192379);
 var i = n(481060),
     a = n(499033),
-    s = n(689938),
+    s = n(388032),
     o = n(69813);
 function l() {
     return (0, r.jsxs)('div', {
@@ -32,13 +32,13 @@ function l() {
             (0, r.jsx)(i.Heading, {
                 className: o.header,
                 variant: 'heading-xl/semibold',
-                children: s.Z.Messages.SUMMARY_EMPTY_STATE_TITLE
+                children: s.intl.string(s.t.yJHJen)
             }),
             (0, r.jsx)(i.Text, {
                 className: o.text,
                 color: 'header-secondary',
                 variant: 'text-md/normal',
-                children: s.Z.Messages.SUMMARY_EMPTY_STATE_TEXT
+                children: s.intl.string(s.t.p2dIh4)
             })
         ]
     });

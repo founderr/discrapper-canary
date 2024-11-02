@@ -8,11 +8,11 @@ var r = n(106351),
     u = n(483360),
     c = n(877565),
     d = n(590921),
-    _ = n(665692),
-    E = n(176505),
-    f = n(689938);
-let h = {
-    sentinel: _.zy,
+    f = n(665692),
+    _ = n(176505),
+    h = n(388032);
+let p = {
+    sentinel: f.zy,
     matches: (e, t, n, r, i) => i.mentions.channel !== d.nS.DENY && !e.isPrivate(),
     queryResults(e, t, n, r, a) {
         let s,
@@ -52,17 +52,17 @@ let h = {
                 query: l,
                 options: u,
                 onHover: d,
-                onClick: E
+                onClick: _
             } = e,
-            h = l.charAt(0) === i.xQ.VOICE_CHANNEL;
+            p = l.charAt(0) === i.xQ.VOICE_CHANNEL;
         return (
-            h ? ((t = f.Z.Messages.VOICE_CHANNELS_MATCHING), (n = f.Z.Messages.VOICE_CHANNELS), (l = l.substring(1))) : u.forNonStringCommandOption ? ((t = f.Z.Messages.CHANNELS_MATCHING), (n = f.Z.Messages.CHANNELS)) : ((t = f.Z.Messages.TEXT_CHANNELS_MATCHING), (n = f.Z.Messages.TEXT_CHANNELS)),
+            p ? ((t = h.t.rMUL39), (n = h.intl.string(h.t.CYnO4u)), (l = l.substring(1))) : u.forNonStringCommandOption ? ((t = h.t.upNFT0), (n = h.intl.string(h.t.OGiMXF))) : ((t = h.t.UhnmJC), (n = h.intl.string(h.t.nIfr0d))),
             (0, c.HI)({
                 query: l,
                 selectedIndex: s,
                 autocompletes: r,
                 onHover: d,
-                onClick: E,
+                onClick: _,
                 titleWithQuery: t,
                 titleWithoutQuery: n,
                 Component: a.ZP.Channel,
@@ -71,7 +71,7 @@ let h = {
                     key: e.id,
                     category: o.Z.getChannel(e.parent_id)
                 }),
-                getQuery: (e) => (h ? ''.concat(_.zy).concat(i.xQ.VOICE_CHANNEL).concat(e) : ''.concat(_.zy).concat(e)),
+                getQuery: (e) => (p ? ''.concat(f.zy).concat(i.xQ.VOICE_CHANNEL).concat(e) : ''.concat(f.zy).concat(e)),
                 key: 'channels'
             })
         );
@@ -100,11 +100,11 @@ let h = {
                     }
                 })(a),
                 (function (e) {
-                    return E.EC.has(e.id) ? '<id:'.concat(e.id, '>') : '<#'.concat(e.id, '>');
+                    return _.EC.has(e.id) ? '<id:'.concat(e.id, '>') : '<#'.concat(e.id, '>');
                 })(a)
             ),
             { type: d.z2.CHANNEL }
         );
     }
 };
-t.Z = h;
+t.Z = p;

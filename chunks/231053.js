@@ -1,9 +1,9 @@
 n.d(t, {
     Fi: function () {
-        return _;
+        return f;
     },
     JO: function () {
-        return E;
+        return _;
     },
     w6: function () {
         return r;
@@ -32,7 +32,7 @@ function d(e, t, n) {
     );
 }
 ((i = r || (r = {})).GUILD = 'GUILD'), (i.APPLICATION = 'APPLICATION');
-let _ = async (e) => {
+let f = async (e) => {
     let t = null;
     try {
         let n = (
@@ -44,18 +44,18 @@ let _ = async (e) => {
         ).body;
         (null == n ? void 0 : n.type) === 'GUILD'
             ? (t = {
-                  guild: E.createFromServer(n.guild),
+                  guild: _.createFromServer(n.guild),
                   type: n.type
               })
             : (null == n ? void 0 : n.type) === 'APPLICATION' &&
               (t = {
-                  application: f.createFromServer(n.application),
+                  application: h.createFromServer(n.application),
                   type: n.type
               });
     } catch {}
     return t;
 };
-class E extends s.Z {
+class _ extends s.Z {
     getIconURL(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         return l.ZP.getGuildIconURL({
@@ -86,7 +86,7 @@ class E extends s.Z {
         return (0, u.Zg)(this.name);
     }
     static async getGuildFromEmojiId(e) {
-        let t = await _(e);
+        let t = await f(e);
         return null != t && (null == t ? void 0 : t.type) === 'GUILD' ? t.guild : null;
     }
     static _mapCommon(e) {
@@ -100,8 +100,8 @@ class E extends s.Z {
         };
     }
     static createFromGuildRecord(e) {
-        return new E({
-            ...E._mapCommon(e),
+        return new _({
+            ..._._mapCommon(e),
             premiumTier: e.premiumTier,
             premiumSubscriberCount: e.premiumSubscriberCount,
             presenceCount: null,
@@ -110,8 +110,8 @@ class E extends s.Z {
         });
     }
     static createFromDiscoverableGuild(e) {
-        return new E({
-            ...E._mapCommon(e),
+        return new _({
+            ..._._mapCommon(e),
             premiumTier: null,
             premiumSubscriberCount: e.premiumSubscriptionCount,
             presenceCount: e.presenceCount,
@@ -120,8 +120,8 @@ class E extends s.Z {
         });
     }
     static createFromServer(e) {
-        return new E({
-            ...E._mapCommon(e),
+        return new _({
+            ..._._mapCommon(e),
             premiumTier: e.premium_tier,
             premiumSubscriberCount: e.premium_subscription_count,
             presenceCount: e.approximate_presence_count,
@@ -130,15 +130,15 @@ class E extends s.Z {
         });
     }
     static createFromGuildType(e) {
-        return e instanceof E ? e : e instanceof o.ZP ? E.createFromGuildRecord(e) : E.createFromDiscoverableGuild(e);
+        return e instanceof _ ? e : e instanceof o.ZP ? _.createFromGuildRecord(e) : _.createFromDiscoverableGuild(e);
     }
     constructor(e) {
         super(), d(this, 'id', void 0), d(this, 'name', void 0), d(this, 'icon', void 0), d(this, 'description', void 0), d(this, 'features', void 0), d(this, 'premiumTier', void 0), d(this, 'premiumSubscriberCount', void 0), d(this, 'presenceCount', void 0), d(this, 'memberCount', void 0), d(this, 'emojis', void 0), (this.id = e.id), (this.name = e.name), (this.icon = e.icon), (this.description = e.description), (this.features = e.features), (this.premiumTier = e.premiumTier), (this.premiumSubscriberCount = e.premiumSubscriberCount), (this.presenceCount = e.presenceCount), (this.memberCount = e.memberCount), (this.emojis = e.emojis);
     }
 }
-class f extends s.Z {
+class h extends s.Z {
     static createFromServer(e) {
-        return new f({
+        return new h({
             id: e.id,
             name: e.name
         });

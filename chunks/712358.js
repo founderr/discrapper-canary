@@ -1,9 +1,9 @@
-t.d(s, {
+n.d(t, {
     U: function () {
-        return a;
+        return s;
     }
 });
-let n = (0, t(818083).B)({
+let i = (0, n(818083).B)({
     id: '2021-08_user_initiated_refunds',
     label: 'User Initiated Refunds',
     kind: 'user',
@@ -21,7 +21,7 @@ let n = (0, t(818083).B)({
         }
     ]
 });
-function a() {
-    let { enabled: e } = n.getCurrentConfig({ location: '70b634_1' }, { autoTrackExposure: !1 });
-    return n.trackExposure({ location: '70b634_2' }), e;
+function s() {
+    let { enabled: e } = i.getCurrentConfig({ location: '70b634_1' }, { autoTrackExposure: !1 });
+    return i.trackExposure({ location: '70b634_2' }), e;
 }

@@ -1,18 +1,18 @@
 var i = n(570140),
-    a = n(317770),
-    s = n(117984);
-function r(e) {
+    r = n(317770),
+    l = n(117984);
+function a(e) {
     let {
         channel: { id: t }
     } = e;
-    (0, s.oC)(t);
+    (0, l.oC)(t);
 }
-class l extends a.Z {
+class s extends r.Z {
     _initialize() {
-        i.Z.subscribe('CHANNEL_DELETE', r);
+        i.Z.subscribe('CHANNEL_DELETE', a);
     }
     _terminate() {
-        i.Z.unsubscribe('CHANNEL_DELETE', r);
+        i.Z.unsubscribe('CHANNEL_DELETE', a);
     }
 }
-t.Z = new l();
+t.Z = new s();

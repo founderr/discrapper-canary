@@ -1,12 +1,12 @@
-t.d(n, {
+n.d(t, {
     P: function () {
         return r;
     }
 });
-var i = t(192379),
-    a = t(135431);
-function r(e, n) {
-    let t = i.useMemo(
+var i = n(192379),
+    a = n(135431);
+function r(e, t) {
+    let n = i.useMemo(
         () =>
             null != e &&
             (0, a.Eb)({
@@ -17,20 +17,20 @@ function r(e, n) {
         [e]
     );
     return {
-        canInstall: t,
+        canInstall: n,
         install: i.useCallback(
-            (t) => {
+            (n) => {
                 if (null != e)
                     (0, a.LO)({
                         applicationId: e.id,
                         customInstallUrl: e.custom_install_url,
                         installParams: e.install_params,
                         integrationTypesConfig: e.integration_types_config,
-                        guildId: null != n ? n : void 0,
-                        source: t
+                        guildId: null != t ? t : void 0,
+                        source: n
                     });
             },
-            [e, n]
+            [e, t]
         )
     };
 }

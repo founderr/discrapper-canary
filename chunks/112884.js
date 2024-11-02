@@ -1,39 +1,39 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return c;
     }
 });
-var a = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(481060),
-    l = n(689938),
+var a = n(481060),
+    l = n(388032),
     r = n(977993);
-function s(e) {
+function c(e) {
     let {} = e;
-    return (0, a.jsxs)('div', {
+    return (0, i.jsxs)('div', {
         className: r.container,
         children: [
-            (0, a.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: r.content,
                 children: [
-                    (0, a.jsx)(i.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-sm/semibold',
                         className: r.title,
-                        children: l.Z.Messages.APP_DIRECTORY_MUSIC_BANNER_TITLE
+                        children: l.intl.string(l.t['83ymX1'])
                     }),
-                    (0, a.jsx)(i.Heading, {
+                    (0, i.jsx)(a.Heading, {
                         variant: 'heading-xxl/medium',
-                        children: l.Z.Messages.APP_DIRECTORY_MUSIC_BANNER_HEADER
+                        children: l.intl.string(l.t.Wim6am)
                     }),
-                    (0, a.jsx)(i.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-md/normal',
-                        children: l.Z.Messages.APP_DIRECTORY_MUSIC_BANNER_CONTENT
+                        children: l.intl.string(l.t.W0LV1N)
                     })
                 ]
             }),
-            (0, a.jsx)('div', {
+            (0, i.jsx)('div', {
                 className: r.imageContainer,
-                children: (0, a.jsx)('img', {
+                children: (0, i.jsx)('img', {
                     className: r.image,
                     src: n(723067),
                     alt: ''

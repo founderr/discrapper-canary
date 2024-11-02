@@ -1,9 +1,9 @@
 n.d(t, {
     z: function () {
-        return s;
+        return i;
     }
 });
-let s = {
+let i = {
     authorIds: [],
     message: ''
 };

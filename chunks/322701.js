@@ -1,29 +1,29 @@
 var i = n(200651);
 n(192379);
-var a = n(924826),
-    s = n(91192),
-    r = n(442837),
-    l = n(215569),
+var r = n(924826),
+    l = n(91192),
+    a = n(442837),
+    s = n(215569),
     o = n(481060),
     c = n(607070),
     d = n(981631),
     u = n(522756);
 t.Z = function (e) {
-    let { statusSections: t, renderRow: n, searchQuery: _, sectionFilter: E, useReducedMotion: h, footer: m } = e,
-        I = (0, r.e7)([c.Z], () => c.Z.keyboardModeEnabled),
-        p = (0, a.ZP)({
+    let { statusSections: t, renderRow: n, searchQuery: h, sectionFilter: m, useReducedMotion: p, footer: g } = e,
+        f = (0, a.e7)([c.Z], () => c.Z.keyboardModeEnabled),
+        _ = (0, r.ZP)({
             id: 'people',
-            isEnabled: I,
+            isEnabled: f,
             async scrollToStart() {},
             async scrollToEnd() {}
         }),
-        g = E !== d.pJs.ONLINE && E !== d.pJs.ALL,
-        T = h || '' !== _ || g,
-        S = t.map((e, t) =>
-            T
+        E = m !== d.pJs.ONLINE && m !== d.pJs.ALL,
+        I = p || '' !== h || E,
+        C = t.map((e, t) =>
+            I
                 ? (0, i.jsx)('div', { children: e.map(n) }, t)
                 : (0, i.jsx)(
-                      l.W,
+                      s.W,
                       {
                           transitionAppear: !1,
                           component: 'div',
@@ -32,16 +32,16 @@ t.Z = function (e) {
                       t
                   )
         );
-    return (0, i.jsx)(s.bG, {
-        navigator: p,
-        children: (0, i.jsx)(s.SJ, {
+    return (0, i.jsx)(l.bG, {
+        navigator: _,
+        children: (0, i.jsx)(l.SJ, {
             children: (e) => {
                 let { ref: t, ...n } = e;
                 return (0, i.jsxs)(o.ScrollerAuto, {
                     ref: t,
                     className: u.peopleList,
                     ...n,
-                    children: [S, m]
+                    children: [C, g]
                 });
             }
         })

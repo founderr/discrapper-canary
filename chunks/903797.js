@@ -48,29 +48,29 @@ function a(e) {
                 u = (0, r.useRef)(e),
                 c = (0, r.useRef)(n),
                 d = (0, r.useRef)(!1),
-                _ = (0, r.useRef)();
-            void 0 === _.current && (_.current = e(o));
-            let E = !1;
-            (l.current !== o || u.current !== e || c.current !== n || d.current) && ((a = e(o)), (E = !n(_.current, a))),
+                f = (0, r.useRef)();
+            void 0 === f.current && (f.current = e(o));
+            let _ = !1;
+            (l.current !== o || u.current !== e || c.current !== n || d.current) && ((a = e(o)), (_ = !n(f.current, a))),
                 i(() => {
-                    E && (_.current = a), (l.current = o), (u.current = e), (c.current = n), (d.current = !1);
+                    _ && (f.current = a), (l.current = o), (u.current = e), (c.current = n), (d.current = !1);
                 });
-            let f = (0, r.useRef)(o);
+            let h = (0, r.useRef)(o);
             i(() => {
                 let e = () => {
                         try {
                             let e = t.getState(),
                                 n = u.current(e);
-                            !c.current(_.current, n) && ((l.current = e), (_.current = n), s());
+                            !c.current(f.current, n) && ((l.current = e), (f.current = n), s());
                         } catch (e) {
                             (d.current = !0), s();
                         }
                     },
                     n = t.subscribe(e);
-                return t.getState() !== f.current && e(), n;
+                return t.getState() !== h.current && e(), n;
             }, []);
-            let h = E ? a : _.current;
-            return (0, r.useDebugValue)(h), h;
+            let p = _ ? a : f.current;
+            return (0, r.useDebugValue)(p), p;
         };
     return (
         Object.assign(n, t),

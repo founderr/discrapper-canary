@@ -1,26 +1,26 @@
 n.d(t, {
     $: function () {
-        return l;
+        return s;
     }
 });
 var i = n(544891),
-    a = n(570140),
-    s = n(34756),
-    r = n(981631);
-async function l(e) {
-    a.Z.dispatch({
+    r = n(570140),
+    l = n(34756),
+    a = n(981631);
+async function s(e) {
+    r.Z.dispatch({
         type: 'APPLICATION_ACTIVITY_STATISTICS_FETCH_START',
         applicationId: e
     });
     try {
         let t = (
             await i.tn.get({
-                url: r.ANM.APPLICATION_ACTIVITY_STATISTICS(e),
+                url: a.ANM.APPLICATION_ACTIVITY_STATISTICS(e),
                 oldFormErrors: !0
             })
         ).body;
         return (
-            a.Z.dispatch({
+            r.Z.dispatch({
                 type: 'APPLICATION_ACTIVITY_STATISTICS_FETCH_SUCCESS',
                 statistics: t,
                 applicationId: e
@@ -29,11 +29,11 @@ async function l(e) {
         );
     } catch (t) {
         throw (
-            (a.Z.dispatch({
+            (r.Z.dispatch({
                 type: 'APPLICATION_ACTIVITY_STATISTICS_FETCH_FAIL',
                 applicationId: e
             }),
-            new s.Z(t))
+            new l.Z(t))
         );
     }
 }

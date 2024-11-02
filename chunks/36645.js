@@ -3,11 +3,11 @@ n.d(t, {
         return i;
     },
     W: function () {
-        return s;
+        return l;
     }
 });
 let i = 450,
-    s = (e) => {
+    l = (e) => {
         let { maxWidth: t } = e;
         return t <= i;
     };

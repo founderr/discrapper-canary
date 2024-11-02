@@ -12,30 +12,30 @@ var i = n(866442),
     o = n(481060),
     l = n(607070),
     u = n(297700),
-    c = n(689938);
+    c = n(388032);
 function d(e) {
     let t,
-        { color: n, size: d, forcedIconColor: _, className: E, iconClassName: f, tooltipText: h } = e,
-        [p, I] = (0, a.Wu)([l.Z], () => [l.Z.desaturateUserColors, l.Z.saturation]),
-        m = (0, o.useToken)(s.Z.unsafe_rawColors.PRIMARY_300).hex(),
-        T = (0, i._i)(null != n ? n : m),
-        S = (0, i.ho)(T, !1, p ? I : null);
+        { color: n, size: d, forcedIconColor: f, className: _, iconClassName: h, tooltipText: p } = e,
+        [m, g] = (0, a.Wu)([l.Z], () => [l.Z.desaturateUserColors, l.Z.saturation]),
+        E = (0, o.useToken)(s.Z.unsafe_rawColors.PRIMARY_300).hex(),
+        v = (0, i._i)(null != n ? n : E),
+        I = (0, i.ho)(v, !1, m ? g : null);
     return (
-        (t = null != _ ? _ : 0.3 > (0, i.Bd)(T) ? s.Z.unsafe_rawColors.PRIMARY_630.css : s.Z.unsafe_rawColors.WHITE_500.css),
+        (t = null != f ? f : 0.3 > (0, i.Bd)(v) ? s.Z.unsafe_rawColors.PRIMARY_630.css : s.Z.unsafe_rawColors.WHITE_500.css),
         (0, r.jsx)(o.Tooltip, {
-            text: null != h ? h : c.Z.Messages.CONNECTIONS_ROLE_OFFICIAL_ICON_TOOLTIP,
+            text: null != p ? p : c.intl.string(c.t.T3PvV1),
             children: (e) =>
                 (0, r.jsx)(u.Z, {
                     ...e,
-                    className: E,
-                    color: S,
+                    className: _,
+                    color: I,
                     size: d,
                     children: (0, r.jsx)(o.CheckmarkSmallIcon, {
                         size: 'custom',
                         color: t,
                         height: d,
                         width: d,
-                        className: f
+                        className: h
                     })
                 })
         })

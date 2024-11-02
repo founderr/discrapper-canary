@@ -87,7 +87,7 @@ var l = (0, r.createContext)(null),
                     (function () {
                         throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
                     })()),
-            _ = d[0],
-            E = d[1];
-        return r.createElement(l.Provider, { value: null != u ? u : _ }, r.createElement(i.W, s({ backend: a.Q }, c)), u ? null : r.createElement('div', { ref: E }));
+            f = d[0],
+            _ = d[1];
+        return r.createElement(l.Provider, { value: null != u ? u : f }, r.createElement(i.W, s({ backend: a.Q }, c)), u ? null : r.createElement('div', { ref: _ }));
     };

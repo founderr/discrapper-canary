@@ -1,35 +1,35 @@
-t.d(s, {
+n.d(t, {
     l: function () {
-        return l;
+        return o;
     }
 });
-var n = t(200651),
-    a = t(192379),
-    i = t(557533),
-    r = t.n(i),
-    o = t(329363);
-function l(e) {
-    let { className: s, header: t, children: i } = e,
-        l = a.useMemo(() => {
+var i = n(200651),
+    s = n(192379),
+    r = n(557533),
+    l = n.n(r),
+    a = n(329363);
+function o(e) {
+    let { className: t, header: n, children: r } = e,
+        o = s.useMemo(() => {
             let e = !1;
             return (
-                a.Children.forEach(i, (s) => {
-                    null != s && (e = !0);
+                s.Children.forEach(r, (t) => {
+                    null != t && (e = !0);
                 }),
                 e
             );
-        }, [i]);
-    return (0, n.jsxs)('div', {
-        className: r()(o.wrapper, s),
+        }, [r]);
+    return (0, i.jsxs)('div', {
+        className: l()(a.wrapper, t),
         children: [
-            (0, n.jsx)('div', {
-                className: o.header,
-                children: t
+            (0, i.jsx)('div', {
+                className: a.header,
+                children: n
             }),
-            l &&
-                (0, n.jsx)('div', {
-                    className: o.content,
-                    children: i
+            o &&
+                (0, i.jsx)('div', {
+                    className: a.content,
+                    children: r
                 })
         ]
     });

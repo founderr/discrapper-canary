@@ -9,7 +9,7 @@ var r = n(626135),
     a = n(281058),
     s = n(761274),
     o = n(981631),
-    l = n(689938);
+    l = n(388032);
 class u {
     async requestAuthorization(e, t, n) {
         if ('function' != typeof t) throw Error('requestAuthorization: Was provided with not a function for '.concat(e, '.'));
@@ -28,19 +28,19 @@ class u {
     }
     showAlert(e) {
         let t = {
-            [s.Eu.CAMERA]: ''.concat(l.Z.Messages.NO_CAMERA_ACCESS, '. ').concat(l.Z.Messages.ENABLE_PRIVACY_ACCESS),
-            [s.Eu.AUDIO]: ''.concat(l.Z.Messages.NO_MICRPHONE_ACCESS, '. ').concat(l.Z.Messages.ENABLE_PRIVACY_ACCESS),
-            [s.Eu.PHOTOS]: ''.concat(l.Z.Messages.NO_PHOTOS_ACCESS, '. ').concat(l.Z.Messages.ENABLE_PRIVACY_ACCESS),
-            [s.Eu.INPUT_MONITORING]: ''.concat(l.Z.Messages.NO_INPUT_MONITORING_ACCESS, '. ').concat(l.Z.Messages.ENABLE_PRIVACY_ACCESS),
-            [s.Eu.CONTACTS]: ''.concat(l.Z.Messages.NO_CONTACTS_ACCESS, '. ').concat(l.Z.Messages.ENABLE_PRIVACY_ACCESS)
+            [s.Eu.CAMERA]: ''.concat(l.intl.string(l.t['68G7fH']), '. ').concat(l.intl.string(l.t['5Jvu1d'])),
+            [s.Eu.AUDIO]: ''.concat(l.intl.string(l.t.xisTfX), '. ').concat(l.intl.string(l.t['5Jvu1d'])),
+            [s.Eu.PHOTOS]: ''.concat(l.intl.string(l.t.jQHU4O), '. ').concat(l.intl.string(l.t['5Jvu1d'])),
+            [s.Eu.INPUT_MONITORING]: ''.concat(l.intl.string(l.t.UIBqsb), '. ').concat(l.intl.string(l.t['5Jvu1d'])),
+            [s.Eu.CONTACTS]: ''.concat(l.intl.string(l.t.kTtf7u), '. ').concat(l.intl.string(l.t['5Jvu1d']))
         }[e];
         if (null != t)
             this.openAlertModal({
-                title: l.Z.Messages.SYSTEM_PERMISSION_GRANT,
+                title: l.intl.string(l.t.u1Gxpq),
                 body: t,
                 onConfirm: () => this.openSettings(e),
-                cancelText: l.Z.Messages.CANCEL,
-                confirmText: l.Z.Messages.DEVICE_SETTINGS
+                cancelText: l.intl.string(l.t['ETE/oK']),
+                confirmText: l.intl.string(l.t['XgZk+v'])
             });
     }
     static defaultNativePermissionsRequestOptions(e) {

@@ -1,10 +1,10 @@
 let r;
 n.d(t, {
     F: function () {
-        return E;
+        return _;
     },
     Z: function () {
-        return f;
+        return h;
     }
 }),
     n(757143),
@@ -19,10 +19,10 @@ let c = [];
 function d(e) {
     return (e = e.toLowerCase()), (0, l.isWindows)() && (e = (e = e.replace(/^[a-z]:/, '')).replace(/\\/g, '/')), e;
 }
-function _(e) {
+function f(e) {
     null != e && '' !== e && (!(e = d(e)).endsWith('/') && (e += '/'), c.push(e));
 }
-function E(e) {
+function _(e) {
     e = d(e);
     let t = !1;
     return (c.forEach((n) => {
@@ -32,7 +32,7 @@ function E(e) {
         ? (e = e.includes('dosbox.exe') ? e.split('/').slice(-3).join('/') : e.split('/').slice(-2).join('/'))
         : null;
 }
-async function f() {
+async function h() {
     if (null != r) return r;
     try {
         await u.ZP.ensureModule('discord_game_utils'), (r = await u.ZP.requireModule('discord_game_utils'));
@@ -41,8 +41,8 @@ async function f() {
     }
     if ((0, l.isWindows)()) {
         let e = s.Z.process.env;
-        _(e.LOCALAPPDATA), _(e['PROGRAMFILES(X86)']), _(e.PROGRAMFILES), _(e.PROGRAMW6432), _(e.PROGRAMDATA), _('/games/'), _('/steamlibrary/steamapps/common/');
+        f(e.LOCALAPPDATA), f(e['PROGRAMFILES(X86)']), f(e.PROGRAMFILES), f(e.PROGRAMW6432), f(e.PROGRAMDATA), f('/games/'), f('/steamlibrary/steamapps/common/');
     }
     let e = s.Z.remoteApp.getPath;
-    return _(await e('home')), _(await e('appData')), _(await e('desktop')), _(await e('documents')), _(await e('downloads')), (c = a().uniq(c)).sort((e, t) => t.length - e.length), r;
+    return f(await e('home')), f(await e('appData')), f(await e('desktop')), f(await e('documents')), f(await e('downloads')), (c = a().uniq(c)).sort((e, t) => t.length - e.length), r;
 }

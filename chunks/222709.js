@@ -1,67 +1,67 @@
 var i = n(200651),
-    a = n(192379),
-    s = n(442837),
-    r = n(481060),
-    l = n(528963),
-    o = n(143740),
+    r = n(192379),
+    l = n(442837),
+    a = n(481060),
+    o = n(528963),
+    s = n(143740),
     c = n(528144),
     u = n(212342),
-    d = n(689938),
-    _ = n(196273);
+    d = n(388032),
+    m = n(196273);
 t.Z = (e) => {
     let { channelId: t, messageId: n } = e,
-        E = (0, s.e7)([u.Z], () => u.Z.shouldShowBump(n), [n]),
-        I = a.useCallback(() => {
-            l.Z.dismissPublishBump(n), (0, o.Z)(t, n);
+        f = (0, l.e7)([u.Z], () => u.Z.shouldShowBump(n), [n]),
+        h = r.useCallback(() => {
+            o.Z.dismissPublishBump(n), (0, s.Z)(t, n);
         }, [t, n]),
-        m = a.useCallback(() => {
-            l.Z.dismissPublishBump(n);
+        p = r.useCallback(() => {
+            o.Z.dismissPublishBump(n);
         }, [n]),
-        f = a.useCallback(() => {
-            l.Z.permanentlyHidePublishBump(t);
+        g = r.useCallback(() => {
+            o.Z.permanentlyHidePublishBump(t);
         }, [t]);
-    return E
+    return f
         ? (0, i.jsxs)('div', {
-              className: _.container,
+              className: m.container,
               children: [
                   (0, i.jsxs)('div', {
-                      className: _.bumpBox,
+                      className: m.bumpBox,
                       children: [
-                          (0, i.jsx)(r.AnnouncementsIcon, {
+                          (0, i.jsx)(a.AnnouncementsIcon, {
                               size: 'xs',
                               color: 'currentColor',
-                              className: _.icon
+                              className: m.icon
                           }),
                           (0, i.jsx)(c.Z, {
-                              className: _.tagline,
+                              className: m.tagline,
                               size: c.Z.Sizes.SIZE_14,
-                              children: d.Z.Messages.NEWS_CHANNEL_PUBLISH_BUMP
+                              children: d.intl.string(d.t.hasZoa)
                           }),
-                          (0, i.jsx)(r.Button, {
-                              color: r.Button.Colors.LINK,
-                              look: r.Button.Looks.LINK,
-                              size: r.Button.Sizes.MIN,
-                              className: _.publish,
-                              onClick: I,
-                              children: d.Z.Messages.NEWS_CHANNEL_PUBLISH
+                          (0, i.jsx)(a.Button, {
+                              color: a.Button.Colors.LINK,
+                              look: a.Button.Looks.LINK,
+                              size: a.Button.Sizes.MIN,
+                              className: m.publish,
+                              onClick: h,
+                              children: d.intl.string(d.t['MFGE5+'])
                           }),
-                          (0, i.jsx)(r.Clickable, {
-                              onClick: m,
-                              children: (0, i.jsx)(r.CircleXIcon, {
+                          (0, i.jsx)(a.Clickable, {
+                              onClick: p,
+                              children: (0, i.jsx)(a.CircleXIcon, {
                                   size: 'xs',
                                   color: 'currentColor',
-                                  className: _.closeIcon
+                                  className: m.closeIcon
                               })
                           })
                       ]
                   }),
-                  (0, i.jsx)(r.Text, {
+                  (0, i.jsx)(a.Text, {
                       color: 'text-muted',
-                      className: _.hidePermanently,
+                      className: m.hidePermanently,
                       variant: 'text-sm/normal',
-                      children: (0, i.jsx)(r.Clickable, {
-                          onClick: f,
-                          children: d.Z.Messages.NEWS_CHANNEL_PUBLISH_BUMP_HIDE_PERMANENTLY
+                      children: (0, i.jsx)(a.Clickable, {
+                          onClick: g,
+                          children: d.intl.string(d.t.efSkDg)
                       })
                   })
               ]

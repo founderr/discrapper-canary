@@ -1,11 +1,11 @@
 n(47120);
 var i,
-    a = n(442837),
-    s = n(570140);
+    r = n(442837),
+    l = n(570140);
 n(57132);
-var r = n(455199),
-    l = n(70956),
-    o = n(709054),
+var a = n(455199),
+    o = n(70956),
+    s = n(709054),
     c = n(497089);
 function u(e, t, n) {
     return (
@@ -20,78 +20,78 @@ function u(e, t, n) {
         e
     );
 }
-let d = 90 * l.Z.Millis.DAY,
-    _ = {
+let d = 90 * o.Z.Millis.DAY,
+    m = {
         tab: null,
         localItemAcks: {},
         hasNewMentions: !1,
         isDataStale: !1,
         isRefreshing: !1
     };
-class E extends (i = a.ZP.PersistedStore) {
+class f extends (i = r.ZP.PersistedStore) {
     initialize(e) {
-        if ((this.waitFor(r.Z), null != e)) {
+        if ((this.waitFor(a.Z), null != e)) {
             var t;
-            ((_ = e).localItemAcks = (function (e) {
+            ((m = e).localItemAcks = (function (e) {
                 let t = {};
                 for (let [n, i] of Object.entries(e)) Date.now() - i < d && (t[n] = i);
                 return t;
-            })(null !== (t = _.localItemAcks) && void 0 !== t ? t : {})),
-                (_.isDataStale = !0);
+            })(null !== (t = m.localItemAcks) && void 0 !== t ? t : {})),
+                (m.isDataStale = !0);
         }
     }
     getState() {
-        return _;
+        return m;
     }
     getTab() {
         var e;
-        return null !== (e = _.tab) && void 0 !== e ? e : c.b1.ForYou;
+        return null !== (e = m.tab) && void 0 !== e ? e : c.b1.ForYou;
     }
     isLocalItemAcked(e) {
-        return null != e.local_id && (null != _.localItemAcks[e.local_id] || o.default.age(e.id) > d);
+        return null != e.local_id && (null != m.localItemAcks[e.local_id] || s.default.age(e.id) > d);
     }
     hasNewMentions() {
-        return _.hasNewMentions;
+        return m.hasNewMentions;
     }
     isDataStale() {
-        return _.isDataStale;
+        return m.isDataStale;
     }
     isRefreshing() {
-        return _.isRefreshing;
+        return m.isRefreshing;
     }
     shouldReload() {
-        return _.hasNewMentions || _.isDataStale || _.isRefreshing;
+        return m.hasNewMentions || m.isDataStale || m.isRefreshing;
     }
 }
-u(E, 'displayName', 'NotificationCenterStore'), u(E, 'persistKey', 'NotificationCenterStore');
-function I() {
-    (_.hasNewMentions = !1), (_.isDataStale = !1), (_.isRefreshing = !1);
+u(f, 'displayName', 'NotificationCenterStore'), u(f, 'persistKey', 'NotificationCenterStore');
+function h() {
+    (m.hasNewMentions = !1), (m.isDataStale = !1), (m.isRefreshing = !1);
 }
-t.Z = new E(s.Z, {
+t.Z = new f(l.Z, {
     MESSAGE_CREATE: function (e) {
         let { message: t } = e;
     },
     NOTIFICATION_CENTER_SET_TAB: function (e) {
-        _ = {
-            ..._,
+        m = {
+            ...m,
             tab: e.tab
         };
     },
     NOTIFICATION_CENTER_ITEMS_LOCAL_ACK: function (e) {
         let { localIds: t } = e;
         t.forEach((e) => {
-            _ = {
-                ..._,
+            m = {
+                ...m,
                 localItemAcks: {
-                    ..._.localItemAcks,
+                    ...m.localItemAcks,
                     [e]: Date.now()
                 }
             };
         });
     },
     NOTIFICATION_CENTER_REFRESH: function () {
-        _.isRefreshing = !0;
+        m.isRefreshing = !0;
     },
-    LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: I,
-    LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: I
+    LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: h,
+    LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: h
 });

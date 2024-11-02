@@ -16,7 +16,7 @@ n.d(t, {
     }
 });
 var r = n(313201),
-    i = n(689938);
+    i = n(388032);
 let a = (0, r.hQ)(),
     s = (0, r.hQ)(),
     o = (0, r.hQ)(),
@@ -33,11 +33,11 @@ function u() {
         },
         {
             id: o,
-            text: i.Z.Messages.REACTIONS
+            text: i.intl.string(i.t.gHp0Cw)
         },
         {
             id: l,
-            text: i.Z.Messages.OPEN_ORIGIANL_IMAGE_BUTTON_A11Y_DESCRIPTION
+            text: i.intl.string(i.t.SO93ur)
         }
     ].forEach((e) => {
         let { id: t, text: n } = e,

@@ -1,37 +1,37 @@
 n.d(t, {
     h: function () {
-        return o;
+        return s;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(671533),
-    r = n(981631),
-    l = n(279096);
-function o(e) {
-    let { buttonText: t, onGoBack: n, onDismiss: o, showCloseButton: c } = e;
-    return (0, i.jsxs)(a.Notice, {
-        className: l.backNotice,
+var r = n(481060),
+    l = n(671533),
+    a = n(981631),
+    o = n(279096);
+function s(e) {
+    let { buttonText: t, onGoBack: n, onDismiss: s, showCloseButton: c } = e;
+    return (0, i.jsxs)(r.Notice, {
+        className: o.backNotice,
         children: [
             c &&
-                (0, i.jsx)(a.NoticeCloseButton, {
-                    onClick: o,
-                    noticeType: r.kVF.BACK_TO_PREVIOUS_SCREEN
+                (0, i.jsx)(r.NoticeCloseButton, {
+                    onClick: s,
+                    noticeType: a.kVF.BACK_TO_PREVIOUS_SCREEN
                 }),
-            (0, i.jsxs)(a.Button, {
-                className: l.backButton,
-                innerClassName: l.backButtonInner,
-                look: a.Button.Looks.OUTLINED,
-                color: a.Button.Colors.WHITE,
-                size: a.Button.Sizes.NONE,
+            (0, i.jsxs)(r.Button, {
+                className: o.backButton,
+                innerClassName: o.backButtonInner,
+                look: r.Button.Looks.OUTLINED,
+                color: r.Button.Colors.WHITE,
+                size: r.Button.Sizes.NONE,
                 onClick: n,
                 children: [
-                    (0, i.jsx)(s.Z, {
+                    (0, i.jsx)(l.Z, {
                         width: 16,
                         height: 16,
-                        direction: s.Z.Directions.LEFT,
-                        className: l.__invalid_backArrow
+                        direction: l.Z.Directions.LEFT,
+                        className: o.__invalid_backArrow
                     }),
                     t
                 ]

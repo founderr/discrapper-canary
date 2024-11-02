@@ -4,31 +4,31 @@ t.d(n, {
     }
 });
 var i = t(200651),
-    a = t(192379),
-    l = t(120356),
-    s = t.n(l),
+    l = t(192379),
+    r = t(120356),
+    a = t.n(r),
     o = t(481060),
-    r = t(689938),
+    s = t(388032),
     d = t(471951);
 let c = [!1, !0];
 function u(e) {
-    let { isDisabled: n, currentValue: t, onChange: l } = e,
-        r = (0, o.useRadioGroup)({
+    let { isDisabled: n, currentValue: t, onChange: r } = e,
+        s = (0, o.useRadioGroup)({
             orientation: 'horizontal',
             isDisabled: n
         }),
-        u = a.useCallback(
+        u = l.useCallback(
             (e) => {
-                !n && e !== t && l(e);
+                !n && e !== t && r(e);
             },
-            [n, t, l]
+            [n, t, r]
         );
     return (0, i.jsx)('div', {
-        className: s()(d.group, { [d.disabled]: n }),
-        ...r,
+        className: a()(d.group, { [d.disabled]: n }),
+        ...s,
         children: c.map((e) =>
             (0, i.jsx)(
-                I,
+                m,
                 {
                     isSelected: t === e,
                     itemValue: e,
@@ -39,19 +39,19 @@ function u(e) {
         )
     });
 }
-function I(e) {
-    let { isSelected: n, itemValue: t, onClick: a } = e,
-        l = t ? d.allow : d.deny,
+function m(e) {
+    let { isSelected: n, itemValue: t, onClick: l } = e,
+        r = t ? d.allow : d.deny,
         c = t ? o.CheckmarkLargeIcon : o.XSmallIcon,
-        u = t ? r.Z.Messages.PERMISSION_OVERRIDE_ALLOW : r.Z.Messages.PERMISSION_OVERRIDE_DENY,
-        I = (0, o.useRadioItem)({
+        u = t ? s.intl.string(s.t.RzDfSk) : s.intl.string(s.t['6639Oz']),
+        m = (0, o.useRadioItem)({
             isSelected: n,
             label: u
         });
     return (0, i.jsx)(o.Clickable, {
-        className: s()(d.item, l, { [d.selected]: n }),
-        onClick: a,
-        ...I,
+        className: a()(d.item, r, { [d.selected]: n }),
+        onClick: l,
+        ...m,
         children: (0, i.jsx)(c, {
             size: 'xs',
             color: 'currentColor'

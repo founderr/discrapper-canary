@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return g;
     }
 });
 var r = n(200651),
@@ -12,108 +12,108 @@ var r = n(200651),
     u = n(906732),
     c = n(970854),
     d = n(385499),
-    _ = n(954138),
-    E = n(979264),
-    f = n(228168),
-    h = n(689938),
-    p = n(543337);
-function I(e) {
-    let { user: t, profileType: n, usernameIcon: a, tags: I, nickname: m, nicknameIcons: T, pronouns: S, className: g, isTryItOut: A, onOpenProfile: N, nicknameVariant: R = 'heading-lg/bold', pronounsVariant: O = 'text-sm/medium' } = e,
-        { newestAnalyticsLocation: v } = (0, u.ZP)(),
+    f = n(954138),
+    _ = n(979264),
+    h = n(228168),
+    p = n(388032),
+    m = n(543337);
+function g(e) {
+    let { user: t, profileType: n, usernameIcon: a, tags: g, nickname: E, nicknameIcons: v, pronouns: I, className: S, isTryItOut: T, onOpenProfile: b, nicknameVariant: y = 'heading-lg/bold', pronounsVariant: A = 'text-sm/medium' } = e,
+        { newestAnalyticsLocation: N } = (0, u.ZP)(),
         C = {
-            [p.biteSize]: n === f.y0.BITE_SIZE,
-            [p.fullSize]: n === f.y0.FULL_SIZE,
-            [p.panel]: n === f.y0.PANEL
+            [m.biteSize]: n === h.y0.BITE_SIZE,
+            [m.fullSize]: n === h.y0.FULL_SIZE,
+            [m.panel]: n === h.y0.PANEL
         },
-        L = (e) =>
-            null == N
+        R = (e) =>
+            null == b
                 ? e
                 : (0, r.jsx)(o.Clickable, {
-                      onClick: N,
-                      className: p.clickableUsername,
+                      onClick: b,
+                      className: m.clickableUsername,
                       children: e
                   }),
-        D = null != S && S.length > 0,
-        y = (0, c.D)(t),
-        b = (0, _.Z)('UserProfileUsername'),
-        M = i.useMemo(
+        O = null != I && I.length > 0,
+        D = (0, c.D)(t),
+        L = (0, f.Z)('UserProfileUsername'),
+        x = i.useMemo(
             () => ({
-                source: v,
+                source: N,
                 tagUserId: t.id
             }),
-            [v, t.id]
+            [N, t.id]
         );
     return (0, r.jsxs)('div', {
-        className: s()(p.container, { [p.bot]: null != y }, g),
+        className: s()(m.container, { [m.bot]: null != D }, S),
         children: [
             (0, r.jsxs)('div', {
-                className: p.usernameRow,
+                className: m.usernameRow,
                 children: [
-                    L(
+                    R(
                         (0, r.jsx)(o.Heading, {
-                            className: s()(p.nickname, C),
-                            variant: R,
-                            children: m
+                            className: s()(m.nickname, C),
+                            variant: y,
+                            children: E
                         })
                     ),
-                    null != y &&
+                    null != D &&
                         (0, r.jsx)(d.Z, {
-                            type: y,
+                            type: D,
                             verified: t.isVerifiedBot()
                         }),
-                    null != T &&
+                    null != v &&
                         (0, r.jsx)('div', {
-                            className: s()(p.nicknameIcons, C),
-                            children: T
+                            className: s()(m.nicknameIcons, C),
+                            children: v
                         })
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: s()(p.tags, C, {
-                    [p.pronouns]: D,
-                    [p.bot]: null != y
+                className: s()(m.tags, C, {
+                    [m.pronouns]: O,
+                    [m.bot]: null != D
                 }),
                 children: [
-                    L(
+                    R(
                         (0, r.jsx)(l.Z, {
                             user: t,
                             usernameIcon: a,
                             forceUsername: !0,
-                            forcePomelo: A,
-                            className: p.userTag,
-                            usernameClass: p.userTagUsername,
-                            discriminatorClass: p.userTagDiscriminator,
+                            forcePomelo: T,
+                            className: m.userTag,
+                            usernameClass: m.userTagUsername,
+                            discriminatorClass: m.userTagDiscriminator,
                             hideBotTag: !0
                         })
                     ),
-                    D &&
+                    O &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)('div', {
                                     'aria-hidden': 'true',
-                                    className: p.dotSpacer
+                                    className: m.dotSpacer
                                 }),
                                 (0, r.jsx)(o.TooltipContainer, {
-                                    className: p.pronounsTooltip,
-                                    text: h.Z.Messages.USER_PROFILE_PRONOUNS,
-                                    delay: f.vB,
+                                    className: m.pronounsTooltip,
+                                    text: p.intl.string(p.t.GI2A8P),
+                                    delay: h.vB,
                                     children: (0, r.jsx)(o.Text, {
-                                        variant: O,
-                                        className: p.pronounsText,
+                                        variant: A,
+                                        className: m.pronounsText,
                                         color: 'header-primary',
-                                        children: S
+                                        children: I
                                     })
                                 })
                             ]
                         }),
-                    b &&
-                        (0, r.jsx)(E.ZP, {
+                    L &&
+                        (0, r.jsx)(_.ZP, {
                             userId: t.id,
-                            profileViewedAnalytics: M,
-                            containerClassName: p.clanTagContainer,
-                            className: p.clanTag
+                            profileViewedAnalytics: x,
+                            containerClassName: m.clanTagContainer,
+                            className: m.clanTag
                         }),
-                    I
+                    g
                 ]
             })
         ]

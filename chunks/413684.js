@@ -1,55 +1,55 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
         return h;
     }
 });
-var n = t(200651);
-t(192379);
-var i = t(442837),
-    l = t(481060),
-    a = t(87051),
-    r = t(9156),
-    o = t(621600),
-    d = t(981631),
-    c = t(689938),
-    u = t(202370);
+var i = n(200651);
+n(192379);
+var s = n(442837),
+    l = n(481060),
+    r = n(87051),
+    a = n(9156),
+    o = n(621600),
+    d = n(981631),
+    c = n(388032),
+    u = n(202370);
 function h(e) {
-    let { guildId: s } = e,
-        t = (0, i.cj)([r.ZP], () => ({
-            highligths: r.ZP.getNotifyHighlights(s),
-            mobilePush: r.ZP.isMobilePushEnabled(s),
-            suppressRoles: r.ZP.isSuppressRolesEnabled(s),
-            suppressEveryone: r.ZP.isSuppressEveryoneEnabled(s),
-            muteScheduledEvents: r.ZP.isMuteScheduledEventsEnabled(s)
+    let { guildId: t } = e,
+        n = (0, s.cj)([a.ZP], () => ({
+            highligths: a.ZP.getNotifyHighlights(t),
+            mobilePush: a.ZP.isMobilePushEnabled(t),
+            suppressRoles: a.ZP.isSuppressRolesEnabled(t),
+            suppressEveryone: a.ZP.isSuppressEveryoneEnabled(t),
+            muteScheduledEvents: a.ZP.isMuteScheduledEventsEnabled(t)
         })),
-        h = a.Z.updateGuildNotificationSettings;
-    return (0, n.jsxs)('div', {
+        h = r.Z.updateGuildNotificationSettings;
+    return (0, i.jsxs)('div', {
         children: [
-            (0, n.jsx)(N, {
-                value: t.suppressEveryone,
-                title: c.Z.Messages.FORM_LABEL_SUPPRESS_EVERYONE.format(),
-                onChange: (e) => h(s, { suppress_everyone: e }, o.UE.suppressEveryone(e))
+            (0, i.jsx)(m, {
+                value: n.suppressEveryone,
+                title: c.intl.format(c.t.OWiWAg, {}),
+                onChange: (e) => h(t, { suppress_everyone: e }, o.UE.suppressEveryone(e))
             }),
-            (0, n.jsx)(N, {
-                value: t.suppressRoles,
-                title: c.Z.Messages.FORM_LABEL_SUPPRESS_ROLES,
-                onChange: (e) => h(s, { suppress_roles: e }, o.UE.suppressRoles(e))
+            (0, i.jsx)(m, {
+                value: n.suppressRoles,
+                title: c.intl.string(c.t['O/QdoK']),
+                onChange: (e) => h(t, { suppress_roles: e }, o.UE.suppressRoles(e))
             }),
-            (0, n.jsx)(N, {
-                title: (0, n.jsxs)('div', {
+            (0, i.jsx)(m, {
+                title: (0, i.jsxs)('div', {
                     className: u.advanceSettingTitle,
                     children: [
-                        c.Z.Messages.FORM_LABEL_SUPPRESS_HIGHLIGHTS,
-                        (0, n.jsx)(l.Tooltip, {
-                            text: c.Z.Messages.HIGHLIGHTS_NOTE_SUBTEXT,
+                        c.intl.string(c.t.gPuteH),
+                        (0, i.jsx)(l.Tooltip, {
+                            text: c.intl.string(c.t['Vw/Xn5']),
                             children: (e) => {
-                                let { onMouseEnter: s, onMouseLeave: t } = e;
-                                return (0, n.jsx)(l.CircleInformationIcon, {
+                                let { onMouseEnter: t, onMouseLeave: n } = e;
+                                return (0, i.jsx)(l.CircleInformationIcon, {
                                     size: 'custom',
                                     width: 14,
                                     height: 14,
-                                    onMouseEnter: s,
-                                    onMouseLeave: t,
+                                    onMouseEnter: t,
+                                    onMouseLeave: n,
                                     color: l.tokens.colors.ICON_MUTED,
                                     className: u.settingTitleIcon
                                 });
@@ -57,24 +57,24 @@ function h(e) {
                         })
                     ]
                 }),
-                value: t.highligths === d.gLR.ENABLED,
-                onChange: (e) => h(s, { notify_highlights: e ? d.gLR.ENABLED : d.gLR.DISABLED }, o.UE.highlights(e))
+                value: n.highligths === d.gLR.ENABLED,
+                onChange: (e) => h(t, { notify_highlights: e ? d.gLR.ENABLED : d.gLR.DISABLED }, o.UE.highlights(e))
             }),
-            (0, n.jsx)(N, {
-                value: t.muteScheduledEvents,
-                title: c.Z.Messages.FORM_LABEL_MUTE_SCHEDULED_EVENTS,
-                onChange: (e) => h(s, { mute_scheduled_events: e }, o.UE.mutedEvents(e))
+            (0, i.jsx)(m, {
+                value: n.muteScheduledEvents,
+                title: c.intl.string(c.t.ONG3Y2),
+                onChange: (e) => h(t, { mute_scheduled_events: e }, o.UE.mutedEvents(e))
             }),
-            (0, n.jsx)(N, {
-                value: t.mobilePush,
-                title: c.Z.Messages.FORM_LABEL_MOBILE_PUSH_NOTIFICATIONS,
-                onChange: (e) => h(s, { mobile_push: e }, o.UE.mobilePush(e))
+            (0, i.jsx)(m, {
+                value: n.mobilePush,
+                title: c.intl.string(c.t['h1DL6+']),
+                onChange: (e) => h(t, { mobile_push: e }, o.UE.mobilePush(e))
             })
         ]
     });
 }
-function N(e) {
-    return (0, n.jsx)(l.FormSwitch, {
+function m(e) {
+    return (0, i.jsx)(l.FormSwitch, {
         hideBorder: !0,
         className: u.advanceSetting,
         value: e.value,

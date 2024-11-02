@@ -1,9 +1,9 @@
 n.d(t, {
     g: function () {
-        return a;
+        return r;
     }
 });
-let s = (0, n(818083).B)({
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2024-09_best_of_nitro_v2_experiment',
     label: 'Best of Nitro bento boxes',
@@ -21,7 +21,7 @@ let s = (0, n(818083).B)({
         }
     ]
 });
-function a(e) {
-    let { enabled: t } = s.useExperiment({ location: e }, { autoTrackExposure: !0 });
+function r(e) {
+    let { enabled: t } = i.useExperiment({ location: e }, { autoTrackExposure: !0 });
     return t;
 }

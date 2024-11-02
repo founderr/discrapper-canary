@@ -1,27 +1,27 @@
-s.r(t);
-var r = s(200651);
-s(192379);
-var a = s(120356),
-    n = s.n(a),
-    o = s(481060),
-    i = s(923928),
-    c = s(600164),
-    l = s(689938),
-    m = s(658128),
-    d = s(337667);
-t.default = (e) => {
-    let { onClose: t, transitionState: s, showHideSuppressWarning: a = !1 } = e;
-    return (0, r.jsx)(o.ModalRoot, {
-        transitionState: s,
+n.r(e);
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    a = n.n(i),
+    s = n(481060),
+    o = n(923928),
+    c = n(600164),
+    l = n(388032),
+    m = n(658128),
+    d = n(337667);
+e.default = (t) => {
+    let { onClose: e, transitionState: n, showHideSuppressWarning: i = !1 } = t;
+    return (0, r.jsx)(s.ModalRoot, {
+        transitionState: n,
         className: m.container,
-        'aria-label': l.Z.Messages.HUB_STUDY_ROOM_NOTICE_TITLE,
+        'aria-label': l.intl.string(l.t['4Y2AS0']),
         children: (0, r.jsxs)('form', {
-            onSubmit: (e) => {
-                null == e || e.preventDefault(), i.Z.clearSuppressWarning(), null == t || t();
+            onSubmit: (t) => {
+                null == t || t.preventDefault(), o.Z.clearSuppressWarning(), null == e || e();
             },
             className: m.form,
             children: [
-                (0, r.jsxs)(o.ModalContent, {
+                (0, r.jsxs)(s.ModalContent, {
                     className: m.modalContent,
                     children: [
                         (0, r.jsx)('img', {
@@ -29,39 +29,39 @@ t.default = (e) => {
                             alt: '',
                             className: m.hero
                         }),
-                        (0, r.jsx)(o.Text, {
+                        (0, r.jsx)(s.Text, {
                             className: m.title,
                             color: 'header-primary',
                             variant: 'text-md/semibold',
-                            children: l.Z.Messages.HUB_STUDY_ROOM_SUPPRESS_TITLE
+                            children: l.intl.string(l.t.sDvH0d)
                         }),
-                        (0, r.jsx)(o.Text, {
+                        (0, r.jsx)(s.Text, {
                             className: m.description,
                             color: 'header-secondary',
                             variant: 'text-sm/normal',
-                            children: l.Z.Messages.HUB_STUDY_ROOM_SUPPRESS_DESCRIPTION
+                            children: l.intl.string(l.t['CLpr//'])
                         })
                     ]
                 }),
-                (0, r.jsxs)(o.ModalFooter, {
+                (0, r.jsxs)(s.ModalFooter, {
                     justify: c.Z.Justify.BETWEEN,
                     wrap: c.Z.Wrap.WRAP,
                     children: [
-                        (0, r.jsx)(o.Button, {
+                        (0, r.jsx)(s.Button, {
                             type: 'submit',
-                            size: o.Button.Sizes.LARGE,
-                            className: n()(m.primaryButton, m.gutter),
+                            size: s.Button.Sizes.LARGE,
+                            className: a()(m.primaryButton, m.gutter),
                             autoFocus: !0,
-                            children: l.Z.Messages.GOT_IT
+                            children: l.intl.string(l.t['NX+WJC'])
                         }),
-                        a &&
-                            (0, r.jsx)(o.Clickable, {
-                                onClick: () => i.Z.clearSuppressWarning(!0),
+                        i &&
+                            (0, r.jsx)(s.Clickable, {
+                                onClick: () => o.Z.clearSuppressWarning(!0),
                                 className: m.minorContainer,
-                                children: (0, r.jsx)(o.Text, {
+                                children: (0, r.jsx)(s.Text, {
                                     className: m.minorAction,
                                     variant: 'text-xs/normal',
-                                    children: l.Z.Messages.DONT_SHOW_AGAIN
+                                    children: l.intl.string(l.t['5E9SBw'])
                                 })
                             })
                     ]

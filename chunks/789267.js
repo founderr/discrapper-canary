@@ -1,58 +1,58 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return o;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(739566),
-    s = n(834129),
-    r = n(689938);
-function l(e) {
-    let { message: t, compact: l, missed: o, joinable: c, usernameHook: u, onClickJoinCall: d } = e,
-        _ = (0, a.ZP)(t),
-        E = _.nick,
-        I = u(_),
-        m = (function (e) {
+var r = n(739566),
+    l = n(834129),
+    a = n(388032);
+function o(e) {
+    let { message: t, compact: o, missed: s, joinable: c, usernameHook: u, onClickJoinCall: d } = e,
+        m = (0, r.ZP)(t),
+        f = m.nick,
+        h = u(m),
+        p = (function (e) {
             let t = null != e.call ? e.call.duration : null;
             return null != t ? t.humanize() : null;
         })(t);
-    return o
-        ? (0, i.jsx)(s.Z, {
+    return s
+        ? (0, i.jsx)(l.Z, {
               icon: n(154239),
               timestamp: t.timestamp,
-              compact: l,
+              compact: o,
               children:
-                  null != m
-                      ? r.Z.Messages.SYSTEM_MESSAGE_CALL_MISSED_WITH_DURATION_HOOK.format({
-                            username: E,
-                            usernameHook: I,
-                            callDuration: m
+                  null != p
+                      ? a.intl.format(a.t.AcqBmJ, {
+                            username: f,
+                            usernameHook: h,
+                            callDuration: p
                         })
-                      : r.Z.Messages.SYSTEM_MESSAGE_CALL_MISSED_HOOK.format({
-                            username: E,
-                            usernameHook: I
+                      : a.intl.format(a.t['43phHx'], {
+                            username: f,
+                            usernameHook: h
                         })
           })
-        : (0, i.jsxs)(s.Z, {
+        : (0, i.jsxs)(l.Z, {
               icon: n(344163),
               timestamp: t.timestamp,
-              compact: l,
+              compact: o,
               children: [
-                  null != m
-                      ? r.Z.Messages.SYSTEM_MESSAGE_CALL_STARTED_WITH_DURATION_HOOK.format({
-                            username: E,
-                            usernameHook: I,
-                            callDuration: m
+                  null != p
+                      ? a.intl.format(a.t['7TeC1N'], {
+                            username: f,
+                            usernameHook: h,
+                            callDuration: p
                         })
-                      : r.Z.Messages.SYSTEM_MESSAGE_CALL_STARTED_HOOK.format({
-                            username: E,
-                            usernameHook: I
+                      : a.intl.format(a.t.LuB5RE, {
+                            username: f,
+                            usernameHook: h
                         }),
                   c
-                      ? (0, i.jsx)(s.Z.Action, {
+                      ? (0, i.jsx)(l.Z.Action, {
                             onClick: d,
-                            children: r.Z.Messages.SYSTEM_MESSAGE_JOIN_CALL
+                            children: a.intl.string(a.t.oa9mvb)
                         })
                       : null
               ]

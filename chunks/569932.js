@@ -1,56 +1,56 @@
-t.d(n, {
+e.d(t, {
     A: function () {
-        return _;
+        return f;
     }
 });
-var o = t(200651);
-t(192379);
-var i = t(362470),
-    s = t(961842),
-    r = t(63063),
-    l = t(921869),
-    c = t(514161),
-    a = t(981631),
-    C = t(689938),
-    u = t(913045);
-function d() {
-    let e = [C.Z.Messages.PS_VALUE_PROP_VOICE, C.Z.Messages.PS_VALUE_PROP_GAME],
-        n = [C.Z.Messages.PS_VALUE_PROP_GAME];
-    return (0, o.jsxs)(o.Fragment, {
+var i = e(200651);
+e(192379);
+var o = e(362470),
+    r = e(961842),
+    l = e(63063),
+    c = e(921869),
+    s = e(514161),
+    a = e(981631),
+    d = e(388032),
+    u = e(913045);
+function C() {
+    let n = [d.intl.string(d.t.xBZGTE), d.intl.string(d.t.z8Ude3)],
+        t = [d.intl.string(d.t.z8Ude3)];
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, o.jsx)(c.yC, {
-                children: (0, o.jsx)(c.pT, {
-                    icon: (0, o.jsx)(s.Z, {}),
-                    title: C.Z.Messages.PS5,
-                    bulletPoints: e
+            (0, i.jsx)(s.yC, {
+                children: (0, i.jsx)(s.pT, {
+                    icon: (0, i.jsx)(r.Z, {}),
+                    title: d.intl.string(d.t.oElqNz),
+                    bulletPoints: n
                 })
             }),
-            (0, o.jsx)(c.yC, {
-                children: (0, o.jsx)(c.pT, {
-                    icon: (0, o.jsx)(i.Z, {}),
-                    title: C.Z.Messages.PS4,
-                    bulletPoints: n
+            (0, i.jsx)(s.yC, {
+                children: (0, i.jsx)(s.pT, {
+                    icon: (0, i.jsx)(o.Z, {}),
+                    title: d.intl.string(d.t.fJyyQk),
+                    bulletPoints: t
                 })
             })
         ]
     });
 }
-function _(e) {
-    let { platformType: n, onContinue: t, onClose: i } = e;
-    return (0, o.jsx)(l.m, {
-        platformType: n,
-        headerConnect: C.Z.Messages.CONNECT_PS_LANDING_TITLE,
-        headerReconnect: C.Z.Messages.RECONNECT_PS_LANDING_TITLE,
-        body: C.Z.Messages.CONNECT_PS_LANDING_BODY,
-        onClose: i,
-        onContinue: t,
-        img: (0, o.jsx)('img', {
+function f(n) {
+    let { platformType: t, onContinue: e, onClose: o } = n;
+    return (0, i.jsx)(c.m, {
+        platformType: t,
+        headerConnect: d.intl.string(d.t.n2I5mJ),
+        headerReconnect: d.intl.string(d.t['ZJ/vBg']),
+        body: d.intl.string(d.t.EVyQLS),
+        onClose: o,
+        onContinue: e,
+        img: (0, i.jsx)('img', {
             src: u,
             width: 230,
             height: 138,
             alt: ''
         }),
-        valueProps: (0, o.jsx)(d, {}),
-        learnMoreLink: r.Z.getArticleURL(a.BhN.PS_CONNECTION)
+        valueProps: (0, i.jsx)(C, {}),
+        learnMoreLink: l.Z.getArticleURL(a.BhN.PS_CONNECTION)
     });
 }

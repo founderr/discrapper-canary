@@ -9,11 +9,11 @@ var r = n(200651),
     s = n(481060),
     o = n(436774),
     l = n(981631),
-    u = n(689938),
+    u = n(388032),
     c = n(320663);
 function d(e) {
     let { product: t, onSecondaryClick: d } = e,
-        _ = i.useCallback(() => {
+        f = i.useCallback(() => {
             if (null != t)
                 (0, s.openModalLazy)(async () => {
                     let { default: e } = await n.e('43360').then(n.bind(n, 73415));
@@ -30,14 +30,14 @@ function d(e) {
                         });
                 });
         }, [t, d]),
-        E = i.useMemo(() => {
+        _ = i.useMemo(() => {
             switch (null == t ? void 0 : t.type) {
                 case a.Z.AVATAR_DECORATION:
-                    return u.Z.Messages.PREMIUM_UPSELL_PROFILE_AVATAR_DECO_INLINE_UPSELL.format({ onClick: _ });
+                    return u.intl.format(u.t['aFR/EB'], { onClick: f });
                 case a.Z.PROFILE_EFFECT:
-                    return u.Z.Messages.PREMIUM_UPSELL_PROFILE_EFFECT_INLINE_UPSELL.format({ onClick: _ });
+                    return u.intl.format(u.t.eWNOND, { onClick: f });
             }
-        }, [null == t ? void 0 : t.type, _]);
+        }, [null == t ? void 0 : t.type, f]);
     return (0, r.jsxs)('div', {
         className: c.nitroUpsellContainer,
         children: [
@@ -49,7 +49,7 @@ function d(e) {
             (0, r.jsx)(s.Text, {
                 className: c.nitroText,
                 variant: 'text-md/medium',
-                children: E
+                children: _
             })
         ]
     });

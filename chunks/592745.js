@@ -11,11 +11,11 @@ function d(e) {
     let { applicationId: t } = e;
     u.add(t);
 }
-function _(e) {
+function f(e) {
     let { applicationId: t } = e;
     u.delete(t);
 }
-class E extends (r = o.ZP.Store) {
+class _ extends (r = o.ZP.Store) {
     get launchingGames() {
         return u;
     }
@@ -34,7 +34,7 @@ class E extends (r = o.ZP.Store) {
     }
 }
 (s = 'LaunchableGameStore'),
-    (a = 'displayName') in (i = E)
+    (a = 'displayName') in (i = _)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -42,16 +42,16 @@ class E extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new E(l.Z, {
+    (t.Z = new _(l.Z, {
         GAME_LAUNCHABLE_UPDATE: function (e) {
             let { gameId: t, isLaunchable: n } = e;
             c[t] = n;
         },
         GAME_CLOUD_SYNC_START: d,
         GAME_LAUNCH_START: d,
-        GAME_LAUNCH_SUCCESS: _,
-        GAME_LAUNCH_FAIL: _,
-        GAME_CLOUD_SYNC_CONFLICT: _,
-        GAME_CLOUD_SYNC_ERROR: _,
-        GAME_CLOUD_SYNC_COMPLETE: _
+        GAME_LAUNCH_SUCCESS: f,
+        GAME_LAUNCH_FAIL: f,
+        GAME_CLOUD_SYNC_CONFLICT: f,
+        GAME_CLOUD_SYNC_ERROR: f,
+        GAME_CLOUD_SYNC_COMPLETE: f
     }));

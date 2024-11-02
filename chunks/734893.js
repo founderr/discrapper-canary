@@ -1,66 +1,66 @@
 n.d(t, {
     HH: function () {
-        return N;
+        return b;
     },
     O9: function () {
-        return h;
+        return p;
     },
     Vu: function () {
-        return m;
-    },
-    W4: function () {
-        return _;
-    },
-    Wz: function () {
         return E;
     },
-    Z3: function () {
+    W4: function () {
         return f;
+    },
+    Wz: function () {
+        return _;
+    },
+    Z3: function () {
+        return h;
     },
     ZR: function () {
         return d;
     },
     am: function () {
-        return I;
+        return g;
     },
     av: function () {
-        return v;
+        return N;
     },
     cq: function () {
-        return S;
+        return I;
     },
     j: function () {
         return s;
     },
     k3: function () {
-        return L;
+        return R;
     },
     kb: function () {
-        return D;
+        return O;
     },
     n: function () {
-        return p;
+        return m;
     },
     oi: function () {
         return a;
     },
     pw: function () {
-        return O;
+        return A;
     },
     rk: function () {
-        return R;
+        return y;
     },
     tB: function () {
-        return A;
+        return T;
     },
     uo: function () {
         return C;
     },
     vD: function () {
-        return g;
+        return S;
     },
     x3: function () {
-        return T;
+        return v;
     }
 });
 var r,
@@ -72,15 +72,15 @@ var r,
     u = n(700785),
     c = n(981631);
 let d = 7,
-    _ = 300,
-    E = 7,
-    f = 60,
-    h = 5,
-    p = 1,
-    I = 30,
-    m = 200,
-    T = 7;
-function S(e) {
+    f = 300,
+    _ = 7,
+    h = 60,
+    p = 5,
+    m = 1,
+    g = 30,
+    E = 200,
+    v = 7;
+function I(e) {
     var t;
     return {
         channelId: e.channel_id,
@@ -98,7 +98,7 @@ function S(e) {
         icon: null !== (t = e.icon) && void 0 !== t ? t : null
     };
 }
-function g(e) {
+function S(e) {
     var t, n;
     return {
         channelId: e.channel_id,
@@ -115,22 +115,22 @@ function g(e) {
         icon: null !== (n = e.icon) && void 0 !== n ? n : null
     };
 }
-function A(e) {
+function T(e) {
     if (null == e) return null;
     let { welcome_message: t, new_member_actions: n, resource_channels: r, enabled: i } = e,
         a = {
             authorIds: t.author_ids,
             message: t.message
         },
-        s = n.filter((e) => (0, l.lm)(o.Z.getChannel(e.channel_id))).map(S);
+        s = n.filter((e) => (0, l.lm)(o.Z.getChannel(e.channel_id))).map(I);
     return {
         welcomeMessage: a,
         newMemberActions: s,
-        resourceChannels: r.filter((e) => (0, l.lm)(o.Z.getChannel(e.channel_id))).map(g),
+        resourceChannels: r.filter((e) => (0, l.lm)(o.Z.getChannel(e.channel_id))).map(S),
         enabled: i
     };
 }
-function N(e, t) {
+function b(e, t) {
     var n, r;
     if (null == t) return null;
     let { welcomeMessage: i, newMemberActions: a, resourceChannels: s, enabled: u } = t,
@@ -179,26 +179,26 @@ function N(e, t) {
     };
 }
 ((r = a || (a = {}))[(r.VIEW = 0)] = 'VIEW'), (r[(r.CHAT = 1)] = 'CHAT');
-let R = (e) => {
+let y = (e) => {
     if (null == e) return null;
     let t = {};
     for (let n in e.channel_actions) t[n] = e.channel_actions[n].completed;
     return t;
 };
-function O(e) {
+function A(e) {
     return null == e || ((null == e.message || !(e.message.length > 0)) && (null == e.authorIds || !(e.authorIds.length > 0)) && !0);
 }
-function v(e) {
-    return null == e || (!!O(e.welcomeMessage) && (null == e.newMemberActions || !(e.newMemberActions.length > 0)) && (null == e.resourceChannels || !(e.resourceChannels.length > 0)) && !0);
+function N(e) {
+    return null == e || (!!A(e.welcomeMessage) && (null == e.newMemberActions || !(e.newMemberActions.length > 0)) && (null == e.resourceChannels || !(e.resourceChannels.length > 0)) && !0);
 }
 function C(e) {
     var t, n;
-    return null != e && (!!v(e) || ((null === (t = e.welcomeMessage) || void 0 === t ? void 0 : t.message) != null && !(e.welcomeMessage.message.length < d) && (null === (n = e.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) != null && 0 !== e.welcomeMessage.authorIds.length && null != e.newMemberActions && !(e.newMemberActions.length < 3) && !0));
+    return null != e && (!!N(e) || ((null === (t = e.welcomeMessage) || void 0 === t ? void 0 : t.message) != null && !(e.welcomeMessage.message.length < d) && (null === (n = e.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) != null && 0 !== e.welcomeMessage.authorIds.length && null != e.newMemberActions && !(e.newMemberActions.length < 3) && !0));
 }
-function L(e) {
+function R(e) {
     return e.type === c.d4z.GUILD_TEXT && !u.Uu(c.Plq.SEND_MESSAGES, e) && u.Uu(c.Plq.VIEW_CHANNEL, e);
 }
-function D(e) {
+function O(e) {
     switch (e.type) {
         case c.d4z.GUILD_TEXT:
         case c.d4z.GUILD_ANNOUNCEMENT:

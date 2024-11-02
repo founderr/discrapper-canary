@@ -1,85 +1,85 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return d;
+        return _;
     }
 });
-var n = t(200651);
-t(192379);
-var o = t(481060),
-    a = t(488889),
-    l = t(226186),
-    r = t(626135),
-    i = t(981631),
-    E = t(259076),
-    _ = t(689938),
-    N = t(810452),
-    c = t(859565);
-function d(e) {
-    let { onNext: s, onClose: t, reason: d, onReasonChange: u, freeTextResponse: A, setFreeTextResponse: C } = e,
-        M = E.zf.map((e) => ({
+var o = n(200651);
+n(192379);
+var s = n(481060),
+    l = n(488889),
+    a = n(226186),
+    i = n(626135),
+    r = n(981631),
+    d = n(259076),
+    c = n(388032),
+    u = n(810452),
+    E = n(859565);
+function _(e) {
+    let { onNext: t, onClose: n, reason: _, onReasonChange: m, freeTextResponse: N, setFreeTextResponse: x } = e,
+        A = d.zf.map((e) => ({
             value: e,
-            name: (0, a.S)(e)
+            name: (0, l.S)(e)
         })),
-        S = (0, l.u)('change_email_collect_reasons_slide');
-    return (0, n.jsxs)('form', {
-        onSubmit: s,
+        C = (0, a.u)('change_email_collect_reasons_slide');
+    return (0, o.jsxs)('form', {
+        onSubmit: t,
         children: [
-            (0, n.jsxs)(o.ModalHeader, {
+            (0, o.jsxs)(s.ModalHeader, {
                 separator: !1,
-                className: c.header,
+                className: E.header,
                 children: [
-                    (0, n.jsx)(o.Heading, {
+                    (0, o.jsx)(s.Heading, {
                         variant: 'heading-xl/extrabold',
-                        children: _.Z.Messages.EMAIL_CHANGE_REASONING_HEADER
+                        children: c.intl.string(c.t['41NIIi'])
                     }),
-                    (0, n.jsx)(o.ModalCloseButton, {
-                        onClick: t,
-                        className: c.modalCloseButton
+                    (0, o.jsx)(s.ModalCloseButton, {
+                        onClick: n,
+                        className: E.modalCloseButton
                     })
                 ]
             }),
-            (0, n.jsxs)(o.ModalContent, {
-                className: N.content,
+            (0, o.jsxs)(s.ModalContent, {
+                className: u.content,
                 children: [
-                    (0, n.jsx)(o.RadioGroup, {
+                    (0, o.jsx)(s.RadioGroup, {
                         radioPosition: 'right',
-                        radioItemClassName: N.radioItem,
-                        size: o.RadioGroup.Sizes.NOT_SET,
-                        value: d,
-                        options: M,
+                        radioItemClassName: u.radioItem,
+                        size: s.RadioGroup.Sizes.NOT_SET,
+                        value: _,
+                        options: A,
                         onChange: (e) => {
-                            let { value: s } = e;
-                            r.default.track(i.rMx.USER_ACCOUNT_EMAIL_CHANGE_REASON_SELECTED, { change_email_reason_enum: s }), u(s), C(''), s === E.pw.SOMETHING_ELSE && l.Z.trackExposure({ location: 'change_email_collect_reasons_slide' });
+                            let { value: t } = e;
+                            i.default.track(r.rMx.USER_ACCOUNT_EMAIL_CHANGE_REASON_SELECTED, { change_email_reason_enum: t }), m(t), x(''), t === d.pw.SOMETHING_ELSE && a.Z.trackExposure({ location: 'change_email_collect_reasons_slide' });
                         }
                     }),
-                    S &&
-                        d === E.pw.SOMETHING_ELSE &&
-                        (0, n.jsx)(o.FormItem, {
-                            children: (0, n.jsx)(o.TextArea, {
-                                value: A,
-                                maxLength: E.mF,
-                                onChange: C,
-                                className: N.textArea,
-                                placeholder: _.Z.Messages.EMAIL_CHANGE_REASONING_SOMETHING_ELSE_TEXTAREA_HINT
+                    C &&
+                        _ === d.pw.SOMETHING_ELSE &&
+                        (0, o.jsx)(s.FormItem, {
+                            children: (0, o.jsx)(s.TextArea, {
+                                value: N,
+                                maxLength: d.mF,
+                                onChange: x,
+                                className: u.textArea,
+                                placeholder: c.intl.string(c.t.Q8Rk7O)
                             })
                         })
                 ]
             }),
-            (0, n.jsxs)(o.ModalFooter, {
-                className: c.modalFooter,
+            (0, o.jsxs)(s.ModalFooter, {
+                className: E.modalFooter,
                 children: [
-                    (0, n.jsx)(o.Button, {
-                        color: o.Button.Colors.BRAND,
-                        disabled: null == d,
-                        size: o.Button.Sizes.MEDIUM,
-                        onClick: s,
-                        children: _.Z.Messages.CONTINUE
-                    }),
-                    (0, n.jsx)(o.Button, {
-                        look: o.Button.Looks.LINK,
-                        color: o.Button.Colors.PRIMARY,
+                    (0, o.jsx)(s.Button, {
+                        color: s.Button.Colors.BRAND,
+                        disabled: null == _,
+                        size: s.Button.Sizes.MEDIUM,
                         onClick: t,
-                        children: _.Z.Messages.CANCEL
+                        children: c.intl.string(c.t['3PatS0'])
+                    }),
+                    (0, o.jsx)(s.Button, {
+                        look: s.Button.Looks.LINK,
+                        color: s.Button.Colors.PRIMARY,
+                        onClick: n,
+                        children: c.intl.string(c.t['ETE/oK'])
                     })
                 ]
             })

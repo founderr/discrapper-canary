@@ -1,15 +1,15 @@
-n.d(s, {
+t.d(n, {
     g: function () {
         return l;
     },
     p: function () {
-        return t;
+        return s;
     }
 });
 var r,
-    t,
-    i = n(818083);
-((r = t || (t = {}))[(r.VARIANT_1 = 0)] = 'VARIANT_1'), (r[(r.VARIANT_2 = 1)] = 'VARIANT_2');
+    s,
+    i = t(818083);
+((r = s || (s = {}))[(r.VARIANT_1 = 0)] = 'VARIANT_1'), (r[(r.VARIANT_2 = 1)] = 'VARIANT_2');
 let l = (0, i.B)({
     kind: 'user',
     id: '2024-03_referral_program_sender',

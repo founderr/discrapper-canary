@@ -10,17 +10,17 @@ var i = n(120356),
     s = n(481060),
     o = n(9636);
 function l(e) {
-    let { icon: t, title: n, titleVariant: i = 'text-md/semibold', description: l, descriptionVariant: u = 'text-xs/medium', iconClassName: c, color: d, buttonText: _, buttonColor: E = s.Button.Colors.PRIMARY, buttonSize: f = s.Button.Sizes.SMALL, buttonDisabled: h, onButtonPress: p } = e,
-        I =
-            null != _
+    let { icon: t, title: n, titleVariant: i = 'text-md/semibold', description: l, descriptionVariant: u = 'text-xs/medium', iconClassName: c, color: d, buttonText: f, buttonColor: _ = s.Button.Colors.PRIMARY, buttonSize: h = s.Button.Sizes.SMALL, buttonDisabled: p, onButtonPress: m } = e,
+        g =
+            null != f
                 ? (0, r.jsx)(s.Button, {
                       className: o.button,
-                      size: f,
-                      color: E,
-                      disabled: h,
-                      'aria-label': _,
-                      onClick: p,
-                      children: _
+                      size: h,
+                      color: _,
+                      disabled: p,
+                      'aria-label': f,
+                      onClick: m,
+                      children: f
                   })
                 : void 0;
     return (0, r.jsxs)('div', {
@@ -50,7 +50,7 @@ function l(e) {
                         })
                 ]
             }),
-            null != I && I
+            null != g && g
         ]
     });
 }

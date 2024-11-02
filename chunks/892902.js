@@ -6,34 +6,34 @@ var l,
     a = n(442837),
     o = n(570140),
     d = n(69004);
-let s = new d.Z(196606),
-    c = 0,
+let c = new d.Z(196606),
+    s = 0,
     E = new d.Z(196606),
     T = new d.Z(196606);
-function _(e, t, n) {
+function I(e, t, n) {
     var l;
-    let u = null !== (l = s.get(e)) && void 0 !== l ? l : new Map();
-    u.set(t, n), s.set(e, u), c++;
+    let u = null !== (l = c.get(e)) && void 0 !== l ? l : new Map();
+    u.set(t, n), c.set(e, u), s++;
 }
-function I(e) {
+function f(e) {
     let t = E.get(e);
-    null != t && T.delete(t), E.delete(e), s.delete(e), c++;
+    null != t && T.delete(t), E.delete(e), c.delete(e), s++;
 }
-class S extends (l = a.ZP.Store) {
+class p extends (l = a.ZP.Store) {
     getInteractionComponentStates() {
-        return s;
+        return c;
     }
     getInteractionComponentStateVersion() {
-        return c;
+        return s;
     }
     getInteractionComponentState(e, t) {
         var n;
-        let l = s.get(e);
+        let l = c.get(e);
         return null == l ? null : null !== (n = l.get(t)) && void 0 !== n ? n : null;
     }
 }
 (r = 'LocalInteractionComponentStateStore'),
-    (i = 'displayName') in (u = S)
+    (i = 'displayName') in (u = p)
         ? Object.defineProperty(u, i, {
               value: r,
               enumerable: !0,
@@ -41,9 +41,9 @@ class S extends (l = a.ZP.Store) {
               writable: !0
           })
         : (u[i] = r),
-    (t.Z = new S(o.Z, {
+    (t.Z = new p(o.Z, {
         LOGOUT: function () {
-            s.clear(), E.clear(), T.clear(), c++;
+            c.clear(), E.clear(), T.clear(), s++;
         },
         QUEUE_INTERACTION_COMPONENT_STATE: function (e) {
             let { messageId: t, nonce: n, componentId: l, state: u } = e;
@@ -52,28 +52,28 @@ class S extends (l = a.ZP.Store) {
                     messageId: t,
                     componentId: l
                 }),
-                _(t, l, u);
+                I(t, l, u);
         },
         SET_INTERACTION_COMPONENT_STATE: function (e) {
             let { rootContainerId: t, componentId: n, state: l } = e;
-            _(t, n, l);
+            I(t, n, l);
         },
         MESSAGE_DELETE: function (e) {
             let { id: t } = e;
-            if (!s.has(t)) return !1;
-            I(t);
+            if (!c.has(t)) return !1;
+            f(t);
         },
         MESSAGE_UPDATE: function (e) {
             let { message: t } = e;
-            if (null == t.id || !s.has(t.id)) return !1;
-            I(t.id);
+            if (null == t.id || !c.has(t.id)) return !1;
+            f(t.id);
         },
         INTERACTION_SUCCESS: function (e) {
             let { nonce: t } = e;
             if (null == t) return !1;
             let n = T.get(t);
             if (null == n) return !1;
-            E.delete(n.messageId), T.delete(t), c++;
+            E.delete(n.messageId), T.delete(t), s++;
         },
         INTERACTION_FAILURE: function (e) {
             let { nonce: t } = e;
@@ -82,13 +82,13 @@ class S extends (l = a.ZP.Store) {
             if (null == n) return !1;
             !(function (e) {
                 let { componentId: t, messageId: n } = e,
-                    l = s.get(n);
+                    l = c.get(n);
                 if (null == l || !l.has(t)) return;
-                l.delete(t), 0 === l.size && s.delete(n), c++;
+                l.delete(t), 0 === l.size && c.delete(n), s++;
             })(n);
         },
         CLEAR_INTERACTION_MODAL_STATE: function (e) {
             let { customId: t } = e;
-            s.delete(t), c++;
+            c.delete(t), s++;
         }
     }));

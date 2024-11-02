@@ -1,32 +1,32 @@
 n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(100621),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    s = n(100621),
     o = n(782690),
     c = n(442837),
     d = n(481060),
     u = n(607070),
-    _ = n(364083),
-    E = n(766219),
-    h = n(931515),
-    m = n(207796),
-    I = n(308083),
-    p = n(689938),
-    g = n(593741);
-let T = 70,
-    S = () => {
-        let [e, t] = a.useState(!1),
-            n = (0, m.GN)((e) => e.selectedGames, o.Z),
-            { options: s, matchSorterOptions: l } = (0, _.P)(),
-            c = a.useCallback((e) => {
-                m.GN.getState().setSelectedGames(e), (0, E.Og)();
+    h = n(364083),
+    m = n(766219),
+    p = n(931515),
+    g = n(207796),
+    f = n(308083),
+    _ = n(388032),
+    E = n(593741);
+let I = 70,
+    C = () => {
+        let [e, t] = r.useState(!1),
+            n = (0, g.GN)((e) => e.selectedGames, o.Z),
+            { options: l, matchSorterOptions: s } = (0, h.P)(),
+            c = r.useCallback((e) => {
+                g.GN.getState().setSelectedGames(e), (0, m.Og)();
             }, []);
         return (0, i.jsxs)('div', {
-            className: r()(g.searchBarArea, { [g.popoutOpen]: e }),
+            className: a()(E.searchBarArea, { [E.popoutOpen]: e }),
             children: [
-                (0, i.jsx)(d.MagnifyingGlassIcon, { className: g.searchIcon }),
+                (0, i.jsx)(d.MagnifyingGlassIcon, { className: E.searchIcon }),
                 (0, i.jsx)(d.SearchableSelect, {
                     popoutPosition: 'bottom',
                     onOpen: () => t(!0),
@@ -34,58 +34,58 @@ let T = 70,
                     multi: !0,
                     autoFocus: !0,
                     look: d.SelectLooks.CUSTOM,
-                    wrapperClassName: g.inputWrapper,
-                    className: g.searchBar,
-                    options: s,
+                    wrapperClassName: E.inputWrapper,
+                    className: E.searchBar,
+                    options: l,
                     value: n,
-                    placeholder: p.Z.Messages.DISCOVERY_PLUS_HEADER_SEARCH_PLACEHOLDER,
+                    placeholder: _.intl.string(_.t.wkM6xs),
                     onChange: c,
-                    isDisabled: n.length === I.cm,
-                    matchSorterOptions: l
+                    isDisabled: n.length === f.cm,
+                    matchSorterOptions: s
                 })
             ]
         });
     },
-    C = (e) => {
+    v = (e) => {
         var t;
-        let { game: n, index: a, currentIndex: s, gamesCount: r } = e,
-            o = a - s,
+        let { game: n, index: r, currentIndex: l, gamesCount: a } = e,
+            o = r - l,
             c = Math.abs(o),
-            u = Math.min(c, r - c),
-            _ = (0, d.useSpring)({
+            u = Math.min(c, a - c),
+            h = (0, d.useSpring)({
                 position: 'absolute',
                 display: u <= 4 ? 'flex' : 'none',
-                opacity: a === s ? 1 : 0.5,
-                transform: a === s ? 'translateX(0px)' : 'translateX('.concat(((u <= 5 && c > r / 2 ? o < 0 : o > 0) ? 1 : -1) * (180 * u + T), 'px)'),
-                width: a === s ? ''.concat(280, 'px') : ''.concat(140, 'px'),
-                boxShadow: a === s ? '0px 10px 60px 0px '.concat(n.primaryColor.toHexString()) : 'none'
+                opacity: r === l ? 1 : 0.5,
+                transform: r === l ? 'translateX(0px)' : 'translateX('.concat(((u <= 5 && c > a / 2 ? o < 0 : o > 0) ? 1 : -1) * (180 * u + I), 'px)'),
+                width: r === l ? ''.concat(280, 'px') : ''.concat(140, 'px'),
+                boxShadow: r === l ? '0px 10px 60px 0px '.concat(n.primaryColor.toHexString()) : 'none'
             });
-        return (0, i.jsx)(l.animated.div, {
-            className: g.carouselCard,
-            style: _,
+        return (0, i.jsx)(s.animated.div, {
+            className: E.carouselCard,
+            style: h,
             children: (0, i.jsx)('img', {
-                className: g.carouselImage,
+                className: E.carouselImage,
                 src: null !== (t = n.backgroundImageUrl) && void 0 !== t ? t : '',
                 alt: n.name
             })
         });
     };
 t.Z = () => {
-    let { games: e } = (0, h.I9)(8, !0),
-        t = a.useMemo(() => [...e, ...e], [e]),
-        [n, s] = a.useState(Math.floor(t.length / 2)),
-        [r, o] = a.useState(I.$N[Math.floor(Math.random() * I.$N.length)]),
-        _ = (0, c.e7)([u.Z], () => u.Z.useReducedMotion);
-    a.useEffect(() => {
-        if (_) return;
+    let { games: e } = (0, p.I9)(8, !0),
+        t = r.useMemo(() => [...e, ...e], [e]),
+        [n, l] = r.useState(Math.floor(t.length / 2)),
+        [a, o] = r.useState(f.$N[Math.floor(Math.random() * f.$N.length)]),
+        h = (0, c.e7)([u.Z], () => u.Z.useReducedMotion);
+    r.useEffect(() => {
+        if (h) return;
         let e = setInterval(() => {
-            s((n + 1) % t.length), o(I.$N[Math.floor(Math.random() * I.$N.length)]);
+            l((n + 1) % t.length), o(f.$N[Math.floor(Math.random() * f.$N.length)]);
         }, 3000);
         return () => {
             clearInterval(e);
         };
-    }, [n, t.length, _]);
-    let E = (0, d.useTransition)(n, {
+    }, [n, t.length, h]);
+    let m = (0, d.useTransition)(n, {
         key: n,
         from: { opacity: 0 },
         enter: { opacity: 1 },
@@ -93,55 +93,55 @@ t.Z = () => {
         expires: !0
     });
     return (0, i.jsxs)('div', {
-        className: g.container,
+        className: E.container,
         children: [
             (0, i.jsxs)('div', {
-                className: g.carouselBackground,
+                className: E.carouselBackground,
                 children: [
-                    (0, i.jsx)('div', { className: g.carouselRadialGradient }),
-                    (0, i.jsx)('div', { className: g.carouselLinearGradient }),
+                    (0, i.jsx)('div', { className: E.carouselRadialGradient }),
+                    (0, i.jsx)('div', { className: E.carouselLinearGradient }),
                     (0, i.jsx)('div', {
-                        className: g.cardCarousel,
-                        children: t.map((e, a) =>
+                        className: E.cardCarousel,
+                        children: t.map((e, r) =>
                             (0, i.jsx)(
-                                C,
+                                v,
                                 {
                                     game: e,
-                                    index: a,
+                                    index: r,
                                     currentIndex: n,
                                     gamesCount: t.length
                                 },
-                                ''.concat(e.id, '-').concat(a)
+                                ''.concat(e.id, '-').concat(r)
                             )
                         )
                     })
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: g.content,
+                className: E.content,
                 children: [
                     (0, i.jsx)('div', {
-                        className: g.animatedTitleContainer,
-                        children: E((e, n) =>
-                            (0, i.jsx)(l.animated.div, {
-                                className: g.animatedTitle,
+                        className: E.animatedTitleContainer,
+                        children: m((e, n) =>
+                            (0, i.jsx)(s.animated.div, {
+                                className: E.animatedTitle,
                                 style: e,
                                 children: (0, i.jsx)(d.Heading, {
-                                    className: g.titleText,
+                                    className: E.titleText,
                                     variant: 'display-lg',
                                     color: 'header-primary',
-                                    children: p.Z.Messages.DISCOVERY_PLUS_HEADER_TITLE_GENERIC.format({
-                                        descriptor: r,
+                                    children: _.intl.format(_.t['82YH1N'], {
+                                        descriptor: a,
                                         gameName: t[n].name,
-                                        gameNameHook: (e, a) =>
+                                        gameNameHook: (e, r) =>
                                             (0, i.jsx)(
                                                 'div',
                                                 {
-                                                    className: g.animatedGameTitle,
+                                                    className: E.animatedGameTitle,
                                                     style: { color: t[n].primaryColor.toHexString() },
                                                     children: e
                                                 },
-                                                a
+                                                r
                                             )
                                     })
                                 })
@@ -151,9 +151,9 @@ t.Z = () => {
                     (0, i.jsx)(d.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: p.Z.Messages.DISCOVERY_PLUS_HEADER_SUBTITLE
+                        children: _.intl.string(_.t.MlmAQk)
                     }),
-                    (0, i.jsx)(S, {})
+                    (0, i.jsx)(C, {})
                 ]
             })
         ]

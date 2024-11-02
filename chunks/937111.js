@@ -1,6 +1,6 @@
 n.d(t, {
     j: function () {
-        return I;
+        return g;
     }
 });
 var r,
@@ -12,12 +12,12 @@ var r,
     u = n(601964),
     c = n(594174),
     d = n(881952);
-let _ = !1,
-    E = {},
-    f = !1,
-    h = {},
-    p = {};
-function I(e) {
+let f = !1,
+    _ = {},
+    h = !1,
+    p = {},
+    m = {};
+function g(e) {
     return {
         joinRequestId: e.join_request_id,
         guildId: e.guild_id,
@@ -33,38 +33,38 @@ function I(e) {
         interviewChannelId: e.interview_channel_id
     };
 }
-function m(e) {
+function E(e) {
     let { guildId: t, request: n } = e;
     if (null == n) return;
-    let r = I(n),
+    let r = g(n),
         i = c.default.getCurrentUser();
     if (null != i && r.userId !== i.id) return !1;
-    (0, d.d3)(r) ? delete E[t] : (E[t] = r);
+    (0, d.d3)(r) ? delete _[t] : (_[t] = r);
 }
-class T extends (s = o.ZP.Store) {
+class v extends (s = o.ZP.Store) {
     getRequest(e) {
-        return E[e];
+        return _[e];
     }
     computeGuildIds() {
-        return Object.values(E)
+        return Object.values(_)
             .map((e) => (null == e ? void 0 : e.guildId))
             .filter((e) => null != e);
     }
     getJoinRequestGuild(e) {
-        return null != h[e] ? new u.ZP(h[e]) : null;
+        return null != p[e] ? new u.ZP(p[e]) : null;
     }
     get hasFetchedRequestToJoinGuilds() {
-        return f;
+        return h;
     }
     hasJoinRequestCoackmark() {
-        return _;
+        return f;
     }
     getCooldown(e) {
-        return p[e];
+        return m[e];
     }
 }
 (a = 'UserGuildJoinRequestStore'),
-    (i = 'displayName') in (r = T)
+    (i = 'displayName') in (r = v)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -72,38 +72,38 @@ class T extends (s = o.ZP.Store) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = new T(l.Z, {
+    (t.Z = new v(l.Z, {
         CONNECTION_OPEN: function (e) {
             let { guildJoinRequests: t } = e;
-            (f = !1),
-                (h = {}),
-                (E = {}),
+            (h = !1),
+                (p = {}),
+                (_ = {}),
                 t.forEach((e) => {
                     let { guild_id: t } = e;
-                    null != t && (E[t] = I(e));
+                    null != t && (_[t] = g(e));
                 });
         },
-        GUILD_JOIN_REQUEST_UPDATE: m,
-        GUILD_JOIN_REQUEST_CREATE: m,
+        GUILD_JOIN_REQUEST_UPDATE: E,
+        GUILD_JOIN_REQUEST_CREATE: E,
         USER_GUILD_JOIN_REQUEST_UPDATE: function (e) {
             let { request: t, guildId: n } = e;
             if (null == t) {
-                delete E[n];
+                delete _[n];
                 return;
             }
-            let r = I(t);
-            (0, d.d3)(r) ? delete E[n] : (E[n] = r);
+            let r = g(t);
+            (0, d.d3)(r) ? delete _[n] : (_[n] = r);
         },
         GUILD_DELETE: function (e) {
             let { guild: t } = e;
-            delete E[t.id];
+            delete _[t.id];
         },
         USER_JOIN_REQUEST_GUILDS_FETCH: function (e) {
             let { guilds: t } = e;
-            (f = !0),
+            (h = !0),
                 t.forEach((e) => {
                     let { id: t, name: n, features: r, icon: i } = e;
-                    h[t] = {
+                    p[t] = {
                         id: t,
                         name: n,
                         features: r,
@@ -115,7 +115,7 @@ class T extends (s = o.ZP.Store) {
             let { form: t, guildId: n } = e;
             if ((null == t ? void 0 : t.guild) != null) {
                 let { id: e, name: r, icon: i, features: a } = t.guild;
-                h[n] = {
+                p[n] = {
                     id: e,
                     name: r,
                     icon: i,
@@ -128,9 +128,9 @@ class T extends (s = o.ZP.Store) {
                 { guild: n, join_request: r } = t;
             if (null != n && null != r) {
                 let { guild_id: e } = r;
-                E[e] = I(r);
+                _[e] = g(r);
                 let { id: t, name: i, icon: a, features: s } = n;
-                h[t] = {
+                p[t] = {
                     id: t,
                     name: i,
                     icon: a,
@@ -140,16 +140,16 @@ class T extends (s = o.ZP.Store) {
         },
         ACK_APPROVED_GUILD_JOIN_REQUEST: function (e) {
             let { guildId: t } = e;
-            delete E[t];
+            delete _[t];
         },
         USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW: function () {
-            _ = !0;
+            f = !0;
         },
         USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR: function () {
-            _ = !1;
+            f = !1;
         },
         USER_GUILD_JOIN_REQUEST_COOLDOWN_FETCH: function (e) {
             let { guildId: t, cooldown: n } = e;
-            p[t] = null != n ? n : 0;
+            m[t] = null != n ? n : 0;
         }
     }));

@@ -4,41 +4,41 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(442837),
-    a = n(481060),
-    l = n(384275),
-    r = n(468026),
+    l = n(442837),
+    r = n(481060),
+    a = n(384275),
+    s = n(468026),
     o = n(317381),
     c = n(513202),
     u = n(626135),
     d = n(981631),
-    h = n(689938);
+    h = n(388032);
 let m = (e) => {
-    let { className: t, channel: n, user: m, application: p, oauth2Token: _ } = e,
-        f = (0, s.e7)([o.ZP], () => o.ZP.getSelfEmbeddedActivities());
+    let { className: t, channel: n, user: m, application: p, oauth2Token: f } = e,
+        g = (0, l.e7)([o.ZP], () => o.ZP.getSelfEmbeddedActivities());
     if (!m.bot || null == p) return null;
-    function E() {
-        l.Z.delete(_.id);
-        let e = f.get(p.id);
+    function C() {
+        a.Z.delete(f.id);
+        let e = g.get(p.id);
         null != e &&
             c.Z.leaveActivity({
                 channelId: e.channelId,
                 applicationId: p.id
             });
     }
-    return (0, i.jsx)(a.Button, {
+    return (0, i.jsx)(r.Button, {
         className: t,
-        size: a.ButtonSizes.SMALL,
-        color: a.Button.Colors.PRIMARY,
+        size: r.ButtonSizes.SMALL,
+        color: r.Button.Colors.PRIMARY,
         onClick: () =>
             (function (e, t, n) {
-                let s = h.Z.Messages.DELETE_APP_CONFIRM_MSG_V2.format({ applicationName: e.name });
-                (0, a.openModal)((e) =>
-                    (0, i.jsx)(r.default, {
-                        title: h.Z.Messages.DEAUTHORIZE_APP,
-                        body: s,
-                        confirmText: h.Z.Messages.DEAUTHORIZE,
-                        cancelText: h.Z.Messages.CANCEL,
+                let l = h.intl.formatToPlainString(h.t.QWGvxM, { applicationName: e.name });
+                (0, r.openModal)((e) =>
+                    (0, i.jsx)(s.default, {
+                        title: h.intl.string(h.t.DT39Aw),
+                        body: l,
+                        confirmText: h.intl.string(h.t.xUqheH),
+                        cancelText: h.intl.string(h.t['ETE/oK']),
                         onConfirm: t,
                         ...e
                     })
@@ -48,7 +48,7 @@ let m = (e) => {
                         channel_id: n.id,
                         channel_type: n.type
                     });
-            })(p, E, n),
-        children: h.Z.Messages.MANAGE_APP
+            })(p, C, n),
+        children: h.intl.string(h.t['5S3sQE'])
     });
 };

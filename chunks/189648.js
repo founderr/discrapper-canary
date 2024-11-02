@@ -8,16 +8,16 @@ n(192379);
 var a = n(392711),
     i = n.n(a),
     o = n(481060),
-    s = n(481250),
-    l = n(513547),
-    c = n(689938);
+    l = n(481250),
+    s = n(513547),
+    c = n(388032);
 function d(e) {
     let { camera: t } = e;
     if (null == t) return (0, r.jsx)(o.Spinner, { type: o.Spinner.Type.SPINNING_CIRCLE });
     let n = i().map(t, (e, t) => {
-        if (!(l.al[t] || void 0 === e))
+        if (!(s.al[t] || void 0 === e))
             return (0, r.jsx)(
-                l.ck,
+                s.ck,
                 {
                     label: t,
                     value: e
@@ -27,7 +27,7 @@ function d(e) {
     });
     return (0, r.jsx)(o.FormSection, {
         tag: o.FormTitleTags.H2,
-        title: c.Z.Messages.RTC_DEBUG_CAMERA,
-        children: (0, s.a)(n)
+        title: c.intl.string(c.t['2AGBWF']),
+        children: (0, l.a)(n)
     });
 }

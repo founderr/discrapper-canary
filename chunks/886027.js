@@ -76,13 +76,13 @@ function l(e) {
                                     continue;
                                 }
                                 if ('blockQuote' === u.type || a.bN.areStylesDisabled(e)) continue;
-                                let _ = u.children[0];
-                                if (!a.LC.isText(_)) continue;
-                                let E = _.text.match(/^\s*>>> /),
-                                    f = _.text.match(/^\s*> /);
-                                if ((null != f || null != E || t) && (i.Q.setNodes(e, { type: 'blockQuote' }, { at: c }), !t)) {
+                                let f = u.children[0];
+                                if (!a.LC.isText(f)) continue;
+                                let _ = f.text.match(/^\s*>>> /),
+                                    h = f.text.match(/^\s*> /);
+                                if ((null != h || null != _ || t) && (i.Q.setNodes(e, { type: 'blockQuote' }, { at: c }), !t)) {
                                     var n, r;
-                                    let s = null !== (r = null !== (n = null == f ? void 0 : f[0].length) && void 0 !== n ? n : null == E ? void 0 : E[0].length) && void 0 !== r ? r : 0,
+                                    let s = null !== (r = null !== (n = null == h ? void 0 : h[0].length) && void 0 !== n ? n : null == _ ? void 0 : _[0].length) && void 0 !== r ? r : 0,
                                         o = a.C0.child(c, 0);
                                     i.Q.delete(e, {
                                         at: {
@@ -96,7 +96,7 @@ function l(e) {
                                             }
                                         }
                                     }),
-                                        (t = null != E);
+                                        (t = null != _);
                                 }
                             }
                         })(e)

@@ -1,84 +1,84 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return m;
     }
 }),
     n(789020);
 var i = n(200651),
-    a = n(192379),
-    s = n(481060),
-    r = n(860719),
-    l = n(63063),
+    r = n(192379),
+    l = n(481060),
+    a = n(860719),
+    s = n(63063),
     o = n(49012),
     c = n(981631),
-    d = n(689938),
+    d = n(388032),
     u = n(915817);
-let _ = l.Z.getArticleURL(c.BhN.BOT_DATA_ACCESS);
-function E(e) {
+let h = s.Z.getArticleURL(c.BhN.BOT_DATA_ACCESS);
+function m(e) {
     let { application: t } = e,
-        { hasMessageContent: n, hasGuildPresences: l, hasGuildMembers: c, hasIntents: E } = (0, r.w)({ flags: null == t ? void 0 : t.flags }),
-        m = a.useCallback(() => {
+        { hasMessageContent: n, hasGuildPresences: s, hasGuildMembers: c, hasIntents: m } = (0, a.w)({ flags: null == t ? void 0 : t.flags }),
+        g = r.useCallback(() => {
             null != t.privacy_policy_url && (0, o.q)({ href: t.privacy_policy_url });
         }, [t.privacy_policy_url]);
     return (0, i.jsxs)('div', {
         className: u.sectionContainer,
         children: [
-            (0, i.jsx)(s.Heading, {
+            (0, i.jsx)(l.Heading, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
-                children: d.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_HEADING
+                children: d.intl.string(d.t.QzDgMj)
             }),
             (0, i.jsxs)('div', {
                 className: u.contentContainer,
                 children: [
-                    E &&
+                    m &&
                         (0, i.jsxs)('ul', {
                             className: u.intentsList,
                             children: [
-                                (0, i.jsx)(s.Heading, {
+                                (0, i.jsx)(l.Heading, {
                                     variant: 'heading-md/semibold',
                                     color: 'header-secondary',
-                                    children: d.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_INTENTS_LIST_HEADING
+                                    children: d.intl.string(d.t.U6KH5e)
                                 }),
                                 n &&
-                                    (0, i.jsx)(h, {
-                                        icon: s.ChatIcon,
-                                        heading: d.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_MESSAGE_CONTENT_HEADING,
-                                        body: d.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_MESSAGE_CONTENT_BODY
+                                    (0, i.jsx)(p, {
+                                        icon: l.ChatIcon,
+                                        heading: d.intl.string(d.t.gJpBOz),
+                                        body: d.intl.string(d.t['L+QVbm'])
                                     }),
-                                l &&
-                                    (0, i.jsx)(h, {
-                                        icon: s.UserCircleStatusIcon,
-                                        heading: d.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_PRESENCES_HEADING,
-                                        body: d.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_PRESENCES_BODY
+                                s &&
+                                    (0, i.jsx)(p, {
+                                        icon: l.UserCircleStatusIcon,
+                                        heading: d.intl.string(d.t.jo0oj4),
+                                        body: d.intl.string(d.t.Dm0jq6)
                                     }),
                                 c &&
-                                    (0, i.jsx)(h, {
-                                        icon: s.GroupIcon,
-                                        heading: d.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_MEMBERS_HEADING,
-                                        body: d.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_MEMBERS_BODY
+                                    (0, i.jsx)(p, {
+                                        icon: l.GroupIcon,
+                                        heading: d.intl.string(d.t.QZql7O),
+                                        body: d.intl.string(d.t['ez/N/f'])
                                     })
                             ]
                         }),
-                    (0, i.jsx)(s.Text, {
+                    (0, i.jsx)(l.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: d.Z.Messages.BOTS_DATA_ACCESS_BASELINE.format({ helpCenterUrl: _ })
+                        children: d.intl.format(d.t.b6nqk5, { helpCenterUrl: h })
                     }),
                     null != t.privacy_policy_url &&
-                        (0, i.jsx)(s.Text, {
+                        (0, i.jsx)(l.Text, {
                             variant: 'text-md/normal',
                             color: 'header-secondary',
                             className: u.privacyPolicy,
-                            children: d.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_PRIVACY_POLICY_V2.format({ onClick: m })
+                            children: d.intl.format(d.t.agYVY2, { onClick: g })
                         })
                 ]
             })
         ]
     });
 }
-function h(e) {
-    let { icon: t, heading: n, body: a } = e;
+function p(e) {
+    let { icon: t, heading: n, body: r } = e;
     return (0, i.jsxs)('li', {
         className: u.intentContainer,
         children: [
@@ -89,15 +89,15 @@ function h(e) {
             (0, i.jsxs)('div', {
                 className: u.intentTextContainer,
                 children: [
-                    (0, i.jsx)(s.Heading, {
+                    (0, i.jsx)(l.Heading, {
                         variant: 'heading-md/semibold',
                         color: 'header-secondary',
                         children: n
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, i.jsx)(l.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: a
+                        children: r
                     })
                 ]
             })

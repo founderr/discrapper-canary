@@ -25,7 +25,7 @@ function d(e) {
     let { user: t } = e;
     u = t.id;
 }
-class _ extends (r = i.ZP.PersistedStore) {
+class f extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         null != e && (o = e);
     }
@@ -44,9 +44,9 @@ class _ extends (r = i.ZP.PersistedStore) {
         return o;
     }
 }
-s(_, 'displayName', 'LoginRequiredActionStore'),
-    s(_, 'persistKey', 'LoginRequiredActionStore'),
-    (t.Z = new _(a.Z, {
+s(f, 'displayName', 'LoginRequiredActionStore'),
+    s(f, 'persistKey', 'LoginRequiredActionStore'),
+    (t.Z = new f(a.Z, {
         LOGIN_ATTEMPTED: function (e) {
             let { required_actions: t, user_id: n } = e;
             c((l = n), t);

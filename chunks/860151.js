@@ -1,35 +1,35 @@
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(120356),
-    i = n.n(a),
-    l = n(481060),
-    r = n(585500),
-    o = n(644646),
+var s = n(120356),
+    l = n.n(s),
+    r = n(481060),
+    o = n(585500),
+    a = n(644646),
     u = n(489066);
 t.Z = function (e) {
-    let { className: t, autoplay: n, quest: a, questContent: d, taskDetails: c, location: E } = e,
-        m = (0, r.D)({
-            quest: a,
+    let { className: t, autoplay: n, quest: s, questContent: d, taskDetails: c, location: m } = e,
+        x = (0, o.D)({
+            quest: s,
             taskDetails: c,
-            location: E,
+            location: m,
             questContent: d
         });
-    return (0, s.jsxs)('div', {
-        className: i()(u.wrapper, t),
-        style: { color: a.config.colors.primary },
+    return (0, i.jsxs)('div', {
+        className: l()(u.wrapper, t),
+        style: { color: s.config.colors.primary },
         children: [
-            (0, s.jsx)(o.Z, {
+            (0, i.jsx)(a.Z, {
                 autoplay: n,
                 className: u.rewardTile,
-                quest: a,
+                quest: s,
                 questContent: d,
-                location: E
+                location: m
             }),
-            (0, s.jsx)(l.Text, {
+            (0, i.jsx)(r.Text, {
                 className: u.instructions,
                 variant: 'text-sm/normal',
                 color: 'text-normal',
-                children: m
+                children: x
             })
         ]
     });

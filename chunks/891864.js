@@ -1,4 +1,4 @@
-function s(e) {
+function i(e) {
     return {
         id: e.id,
         name: e.name,
@@ -17,7 +17,7 @@ function s(e) {
 }
 n.d(t, {
     Z: function () {
-        return s;
+        return i;
     }
 }),
     n(47120);

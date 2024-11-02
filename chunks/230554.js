@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return g;
     }
 }),
     n(47120),
@@ -14,9 +14,9 @@ var r = n(192379),
     u = n(436660),
     c = n(887490),
     d = n(515270),
-    _ = n(847302),
-    E = n(42530);
-let f = (e, t, n) => ({
+    f = n(847302),
+    _ = n(42530);
+let h = (e, t, n) => ({
     getSlateEditor: () => e,
     submit(e) {
         e.preventDefault(), n();
@@ -57,7 +57,7 @@ let f = (e, t, n) => ({
             }
             if (!c.LC.isText(i)) break;
             let t = i.text[s];
-            if (E.i$.test(t)) break;
+            if (_.i$.test(t)) break;
             o = t + o;
         }
         return {
@@ -90,12 +90,12 @@ let f = (e, t, n) => ({
             i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         l.T.withSingleEntry(e, () => {
             let a = o.HZ(e),
-                s = null != a && h(t, a[0]);
-            if ((null != r && s && (u.Q.removeInlineChildren(e, a), (i = !1)), p(e, n, r, i), null != r && s)) {
+                s = null != a && p(t, a[0]);
+            if ((null != r && s && (u.Q.removeInlineChildren(e, a), (i = !1)), m(e, n, r, i), null != r && s)) {
                 let n = o.cr(e);
                 if (((a = c.q.updateElement(e, a)), null != n)) {
                     let r = c.q.markdown(n[0], t.guild_id);
-                    (0, _.Gg)(e, a, t.id, r) && (a = c.q.updateElement(e, a));
+                    (0, f.Gg)(e, a, t.id, r) && (a = c.q.updateElement(e, a));
                 }
                 o.xi(e, t.guild_id, t.id, c.q.updateElement(e, a), !1), u.Q.selectNextCommandOption(e);
             }
@@ -106,7 +106,7 @@ let f = (e, t, n) => ({
             i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
         l.T.withSingleEntry(e, () => {
             let a = o.HZ(e),
-                s = null != a && h(t, a[0]);
+                s = null != a && p(t, a[0]);
             if (s) u.Q.removeInlineChildren(e, a), (i = !1);
             else {
                 let { word: t } = this.getCurrentWord();
@@ -118,7 +118,7 @@ let f = (e, t, n) => ({
                         reverse: !0
                     });
             }
-            p(e, n, r, i), s && u.Q.selectNextCommandOption(e);
+            m(e, n, r, i), s && u.Q.selectNextCommandOption(e);
         });
     },
     insertEmoji(t) {
@@ -128,22 +128,22 @@ let f = (e, t, n) => ({
             let a = t.animated ? 'a' : '',
                 s = null !== (i = null !== (r = t.originalName) && void 0 !== r ? r : t.name) && void 0 !== i ? i : '',
                 o = ':'.concat(t.name, ':');
-            p(e, o, null != t.id ? '<'.concat(a, ':').concat(s.replace(/:/g, ''), ':').concat(t.id, '>') : null, n);
+            m(e, o, null != t.id ? '<'.concat(a, ':').concat(s.replace(/:/g, ''), ':').concat(t.id, '>') : null, n);
         });
     }
 });
-function h(e, t) {
+function p(e, t) {
     var n;
     let r = s.Z.getActiveCommand(e.id),
         i = null == r ? void 0 : null === (n = r.options) || void 0 === n ? void 0 : n.find((e) => e.name === t.optionName);
     return null != i && (i.type !== a.jw.STRING || (null == i ? void 0 : i.choices) != null || (null == i ? void 0 : i.autocomplete));
 }
-function p(e, t, n, r) {
+function m(e, t, n, r) {
     let i = c.bN.areStylesDisabled(e) || null == n ? t : n;
     l.T.withSingleEntry(e, () => {
         u.Q.insertText(e, r ? i + ' ' : i);
     });
 }
-function I(e, t, n, i) {
-    r.useImperativeHandle(e, () => f(t, n, i), [t, n, i]);
+function g(e, t, n, i) {
+    r.useImperativeHandle(e, () => h(t, n, i), [t, n, i]);
 }

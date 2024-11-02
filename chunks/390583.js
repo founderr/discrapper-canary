@@ -1,80 +1,80 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return h;
     }
 }),
     n(47120),
     n(653041);
-var s = n(200651),
-    a = n(192379),
-    i = n(481060);
+var i = n(200651),
+    r = n(192379),
+    l = n(481060);
 n(674180);
-var r = n(723047),
-    l = n(727843),
+var s = n(723047),
+    a = n(727843),
     o = n(290348),
     c = n(764163),
     d = n(155758),
     u = n(293810),
-    _ = n(689938);
-function I() {
-    let { editStateId: e, guildId: t } = (0, l.N)(),
-        [n, I] = o.UE(e),
-        E = a.useMemo(() => new Set(n.map((e) => e.ref_id)), [n]);
-    function T(e, t) {
-        let { channelId: s, description: a, emojiId: i, emojiName: r } = e,
-            l = [...n],
+    m = n(388032);
+function h() {
+    let { editStateId: e, guildId: t } = (0, a.N)(),
+        [n, h] = o.UE(e),
+        g = r.useMemo(() => new Set(n.map((e) => e.ref_id)), [n]);
+    function x(e, t) {
+        let { channelId: i, description: r, emojiId: l, emojiName: s } = e,
+            a = [...n],
             o = {
                 name: '',
-                description: a,
-                emoji_id: i,
-                emoji_name: r,
+                description: r,
+                emoji_id: l,
+                emoji_name: s,
                 ref_type: u.Qs.CHANNEL,
-                ref_id: s
+                ref_id: i
             };
-        null != t ? (l[t] = o) : l.push(o), I(l);
+        null != t ? (a[t] = o) : a.push(o), h(a);
     }
-    let m = (0, r.mY)();
-    return (0, s.jsxs)(s.Fragment, {
+    let p = (0, s.mY)();
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, s.jsx)(d.p, {
+            (0, i.jsx)(d.p, {
                 benefits: n,
                 onEdit: function (e) {
-                    (0, i.openModal)((a) =>
-                        (0, s.jsx)(c.x3, {
-                            ...a,
+                    (0, l.openModal)((r) =>
+                        (0, i.jsx)(c.x3, {
+                            ...r,
                             guildId: t,
-                            omitChannelIds: E,
+                            omitChannelIds: g,
                             initialData: n[e],
-                            onSave: (t) => T(t, e),
+                            onSave: (t) => x(t, e),
                             onDelete: () =>
                                 (function (e) {
                                     let t = [...n];
-                                    t.splice(e, 1), I(t);
+                                    t.splice(e, 1), h(t);
                                 })(e)
                         })
                     );
                 },
                 onMove: function (e, t) {
-                    let s = [...n],
-                        [a] = s.splice(e, 1);
-                    s.splice(t, 0, a), I(s);
+                    let i = [...n],
+                        [r] = i.splice(e, 1);
+                    i.splice(t, 0, r), h(i);
                 },
                 guildId: t
             }),
-            n.length > 0 && (0, s.jsx)(i.Spacer, { size: 8 }),
-            (0, s.jsx)(d.s, {
+            n.length > 0 && (0, i.jsx)(l.Spacer, { size: 8 }),
+            (0, i.jsx)(d.s, {
                 onClick: function () {
-                    (0, i.openModal)((e) =>
-                        (0, s.jsx)(c.x3, {
+                    (0, l.openModal)((e) =>
+                        (0, i.jsx)(c.x3, {
                             ...e,
                             guildId: t,
-                            omitChannelIds: E,
-                            onSave: (e) => T(e)
+                            omitChannelIds: g,
+                            onSave: (e) => x(e)
                         })
                     );
                 },
-                disabled: m,
-                children: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_CHANNEL_BENEFITS_ADD_BUTTON_TEXT
+                disabled: p,
+                children: m.intl.string(m.t.PLSCUl)
             })
         ]
     });

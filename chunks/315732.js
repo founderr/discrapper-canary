@@ -1,19 +1,19 @@
-t.d(n, {
+e.d(t, {
     Z: function () {
-        return o;
+        return u;
     }
 });
-var a = t(200651);
-t(192379);
-var i = t(481060),
-    l = t(572004),
-    u = t(689938);
-function o(e) {
-    return l.wS
-        ? (0, a.jsx)(i.MenuItem, {
+var i = e(200651);
+e(192379);
+var l = e(481060),
+    a = e(572004),
+    r = e(388032);
+function u(n) {
+    return a.wS
+        ? (0, i.jsx)(l.MenuItem, {
               id: 'copy-channel-topic',
-              label: u.Z.Messages.COPY_CHANNEL_TOPIC,
-              action: () => (0, l.JG)(e.topic)
+              label: r.intl.string(r.t.Tb3Vsr),
+              action: () => (0, a.JG)(n.topic)
           })
         : null;
 }

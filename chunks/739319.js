@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return f;
     }
 }),
     n(47120);
@@ -11,17 +11,17 @@ var r = n(200651),
     o = n(481060),
     l = n(454585),
     u = n(572004),
-    c = n(689938),
+    c = n(388032),
     d = n(207839);
-function _(e) {
+function f(e) {
     let {
             element: {
-                data: { title: t, body: n, sms: a, is_localized: _ }
+                data: { title: t, body: n, sms: a, is_localized: f }
             }
         } = e,
-        [E, f] = i.useState(!1),
-        h = i.useRef(l.Z.reactParserFor(l.Z.defaultRules));
-    return _
+        [_, h] = i.useState(!1),
+        p = i.useRef(l.Z.reactParserFor(l.Z.defaultRules));
+    return f
         ? (0, r.jsxs)('div', {
               className: d.container,
               children: [
@@ -34,12 +34,12 @@ function _(e) {
                   (0, r.jsx)(o.Text, {
                       variant: 'text-sm/normal',
                       className: d.bodyText,
-                      children: h.current(n)
+                      children: p.current(n)
                   }),
                   (0, r.jsx)('div', {
                       className: d.__invalid_smsInfoContainer,
                       children: (0, r.jsxs)('div', {
-                          className: s()(d.smsNumberContainer, { [d.copied]: E }),
+                          className: s()(d.smsNumberContainer, { [d.copied]: _ }),
                           children: [
                               (0, r.jsx)(o.Text, {
                                   variant: 'text-md/normal',
@@ -51,10 +51,10 @@ function _(e) {
                                   size: o.Button.Sizes.SMALL,
                                   className: d.__invalid_trailingButton,
                                   onClick: () => {
-                                      (0, u.JG)(a) && f(!0);
+                                      (0, u.JG)(a) && h(!0);
                                   },
                                   color: o.Button.Colors.PRIMARY,
-                                  children: E ? c.Z.Messages.COPIED : c.Z.Messages.COPY
+                                  children: _ ? c.intl.string(c.t['t5VZ8/']) : c.intl.string(c.t.OpuAlJ)
                               })
                           ]
                       })

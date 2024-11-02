@@ -1,293 +1,293 @@
-t.d(s, {
+n.d(t, {
     Gj: function () {
-        return G;
+        return M;
     },
     Pt: function () {
-        return U;
+        return F;
     },
     VO: function () {
-        return y;
+        return w;
     },
     ji: function () {
-        return k;
+        return G;
     },
     q8: function () {
-        return V;
+        return U;
     }
 }),
-    t(639576),
-    t(536091),
-    t(47120),
-    t(653041);
-var n = t(192379),
-    a = t(442837),
-    i = t(704215),
-    r = t(493544),
-    o = t(634894),
-    l = t(211242),
-    c = t(924557),
-    d = t(706140),
-    _ = t(319828),
-    u = t(592204),
-    E = t(610697),
-    T = t(880257),
-    S = t(631885),
-    I = t(223639),
-    N = t(160913),
-    m = t(725727),
-    C = t(977156),
-    A = t(921157),
-    g = t(237292),
-    h = t(314897),
-    O = t(283595),
-    p = t(663389),
-    R = t(594174),
-    x = t(202527),
-    M = t(187819),
-    f = t(695346),
-    D = t(620163),
-    L = t(295545),
-    P = t(168308),
-    b = t(839469),
-    Z = t(726985),
-    v = t(46140),
-    j = t(689938);
-function B(e) {
-    let { shouldMergeGameSettings: s } = e,
-        t = [
+    n(639576),
+    n(536091),
+    n(47120),
+    n(653041);
+var i = n(192379),
+    s = n(442837),
+    r = n(704215),
+    l = n(493544),
+    a = n(634894),
+    o = n(211242),
+    c = n(924557),
+    d = n(706140),
+    u = n(319828),
+    m = n(592204),
+    h = n(610697),
+    g = n(880257),
+    p = n(631885),
+    x = n(223639),
+    S = n(160913),
+    T = n(725727),
+    C = n(977156),
+    _ = n(921157),
+    E = n(237292),
+    f = n(314897),
+    I = n(283595),
+    N = n(663389),
+    A = n(594174),
+    b = n(202527),
+    v = n(187819),
+    j = n(695346),
+    O = n(620163),
+    R = n(295545),
+    P = n(168308),
+    D = n(839469),
+    y = n(726985),
+    B = n(46140),
+    L = n(388032);
+function Z(e) {
+    let { shouldMergeGameSettings: t } = e,
+        n = [
             {
-                header: j.Z.Messages.USER_SETTINGS,
-                settings: [Z.s6.ACCOUNT, Z.s6.GAMES, Z.s6.PROFILE_CUSTOMIZATION, Z.s6.PRIVACY_AND_SAFETY, Z.s6.CONTENT_SOCIAL, Z.s6.DATA_PRIVACY, Z.s6.PRIVACY_FAMILY_CENTER, Z.s6.AUTHORIZED_APPS, Z.s6.SESSIONS, Z.s6.CONNECTIONS, Z.s6.CLIPS, Z.s6.FRIEND_REQUESTS]
+                header: L.intl.string(L.t.cduTBA),
+                settings: [y.s6.ACCOUNT, y.s6.GAMES, y.s6.PROFILE_CUSTOMIZATION, y.s6.PRIVACY_AND_SAFETY, y.s6.CONTENT_SOCIAL, y.s6.DATA_PRIVACY, y.s6.PRIVACY_FAMILY_CENTER, y.s6.AUTHORIZED_APPS, y.s6.SESSIONS, y.s6.CONNECTIONS, y.s6.CLIPS, y.s6.FRIEND_REQUESTS]
             },
             {
-                header: j.Z.Messages.BILLING_SETTINGS,
+                header: L.intl.string(L.t['4uOdGh']),
                 divider: !0,
-                settings: [Z.s6.PREMIUM, Z.s6.GUILD_BOOSTING, Z.s6.SUBSCRIPTIONS, Z.s6.GIFT_INVENTORY, Z.s6.BILLING]
+                settings: [y.s6.PREMIUM, y.s6.GUILD_BOOSTING, y.s6.SUBSCRIPTIONS, y.s6.GIFT_INVENTORY, y.s6.BILLING]
             },
             {
-                header: j.Z.Messages.APP_SETTINGS,
+                header: L.intl.string(L.t.f2n1TE),
                 divider: !0,
-                settings: [Z.s6.APPEARANCE, Z.s6.ACCESSIBILITY, Z.s6.VOICE_AND_VIDEO, Z.s6.POGGERMODE, Z.s6.CHAT, Z.s6.NOTIFICATIONS, Z.s6.KEYBINDS, Z.s6.LANGUAGE, Z.s6.WINDOW_SETTINGS, Z.s6.LINUX_SETTINGS, Z.s6.STREAMER_MODE, Z.s6.SETTINGS_ADVANCED]
-            },
-            {
-                divider: !0,
-                settings: [Z.s6.CHANGELOG, Z.s6.MERCHANDISE, Z.s6.HYPESQUAD, Z.s6.TOWNHALL, Z.s6.EXPERIMENTS, Z.s6.DEVELOPER_OPTIONS, Z.s6.HOTSPOT_OPTIONS, Z.s6.DISMISSIBLE_CONTENT_OPTIONS, Z.s6.PAYMENT_FLOW_MODALS, Z.s6.DESIGN_SYSTEMS, Z.s6.TEXT_PLAYGROUND, Z.s6.TEXT_COMPONENTS, Z.s6.INTL_TESTING, Z.s6.PROFILE_EFFECTS_PREVIEW_TOOL, Z.s6.WEB_SETTING_TREE_TOOL, Z.s6.QUEST_PREVIEW_TOOL]
+                settings: [y.s6.APPEARANCE, y.s6.ACCESSIBILITY, y.s6.VOICE_AND_VIDEO, y.s6.POGGERMODE, y.s6.CHAT, y.s6.NOTIFICATIONS, y.s6.KEYBINDS, y.s6.LANGUAGE, y.s6.WINDOW_SETTINGS, y.s6.LINUX_SETTINGS, y.s6.STREAMER_MODE, y.s6.SETTINGS_ADVANCED]
             },
             {
                 divider: !0,
-                settings: [Z.s6.LOGOUT]
+                settings: [y.s6.CHANGELOG, y.s6.MERCHANDISE, y.s6.HYPESQUAD, y.s6.TOWNHALL, y.s6.EXPERIMENTS, y.s6.DEVELOPER_OPTIONS, y.s6.HOTSPOT_OPTIONS, y.s6.DISMISSIBLE_CONTENT_OPTIONS, y.s6.PAYMENT_FLOW_MODALS, y.s6.DESIGN_SYSTEMS, y.s6.TEXT_PLAYGROUND, y.s6.TEXT_COMPONENTS, y.s6.INTL_TESTING, y.s6.PROFILE_EFFECTS_PREVIEW_TOOL, y.s6.WEB_SETTING_TREE_TOOL, y.s6.QUEST_PREVIEW_TOOL]
             },
             {
                 divider: !0,
-                settings: [Z.s6.SOCIAL_LINKS, Z.s6.CLIENT_DEBUG_INFO]
+                settings: [y.s6.LOGOUT]
+            },
+            {
+                divider: !0,
+                settings: [y.s6.SOCIAL_LINKS, y.s6.CLIENT_DEBUG_INFO]
             }
         ],
-        n = {
-            header: j.Z.Messages.ACTIVITY_SETTINGS,
+        i = {
+            header: L.intl.string(L.t.SmHCFR),
             divider: !0,
-            settings: [Z.s6.ACTIVITY_PRIVACY, Z.s6.REGISTERED_GAMES, Z.s6.OVERLAY]
+            settings: [y.s6.ACTIVITY_PRIVACY, y.s6.REGISTERED_GAMES, y.s6.OVERLAY]
         };
-    return s ? t : t.toSpliced(3, 0, n);
+    return t ? n : n.toSpliced(3, 0, i);
 }
-function U() {
-    var e, s, t, n;
-    let r = (0, m.YO)().length,
-        b = (0, N.U)(),
-        Z = (0, a.e7)([p.Z], () => p.Z.getProps().impressionSource),
-        j = (0, S.gU)(),
-        B = (0, P.bC)(),
-        U = (0, c.Go)(),
-        [G] = (0, d.cv)(U ? [i.z.CLIPS_SETTINGS_BETA_TAG] : []),
-        F = 'useGenerateUserSettingsSections';
-    (0, o.j)({
-        location: F + ' auto on',
+function F() {
+    var e, t, n, i;
+    let l = (0, T.YO)().length,
+        D = (0, S.U)(),
+        y = (0, s.e7)([N.Z], () => N.Z.getProps().impressionSource),
+        L = (0, p.gU)(),
+        Z = (0, P.bC)(),
+        F = (0, c.Go)(),
+        [M] = (0, d.cv)(F ? [r.z.CLIPS_SETTINGS_BETA_TAG] : []),
+        k = 'useGenerateUserSettingsSections';
+    (0, a.j)({
+        location: k + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, o.j)({
-            location: F + ' auto off',
+        (0, a.j)({
+            location: k + ' auto off',
             autoTrackExposure: !1
         });
-    let { shouldMergeGameSettings: y } = x.b.useExperiment({ location: 'settings' }),
-        V = (0, L.eA)({ location: 'settings' }),
-        Y = (0, u.Xo)({ location: 'settings' }),
-        k = null !== (t = null === (e = R.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t,
-        w = (0, g.y0)({ location: 'settings' }),
-        H = (0, l.Q)(),
-        W = (0, C.Zy)({ location: v.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
-        { enabled: K } = I.Z.useExperiment({ location: 'UserSettingsInventory' }, { autoTrackExposure: !0 }),
-        z = (0, a.e7)([O.Z], () => O.Z.hasLibraryApplication()),
-        Q = (0, a.e7)([h.default], () => h.default.hasTOTPEnabled()),
-        X = f.Sb.useSetting(),
-        q = (0, E.Z)(),
-        J = (0, M._p)({ location: 'settings-renderer-utils-web' }),
-        { hypeSquadRemoved: $ } = _.Z.useExperiment({ location: 'settings' }),
-        ee = null === (n = (0, T.Z)()) || void 0 === n || n,
-        es = (null === (s = (0, A.s)()) || void 0 === s ? void 0 : s.length) > 0;
-    return (0, D.i)({
-        unseenGiftCount: r,
-        showPrepaidPaymentPastDueWarning: b,
-        impressionSource: Z,
-        numOfPendingFamilyRequests: j,
-        isOverlaySupported: B,
-        isClipsBetaTagShowing: G === i.z.CLIPS_SETTINGS_BETA_TAG,
-        shouldMergeGameSettings: y,
-        isUserSettingsSearchEnabled: V,
-        isKeywordFilteringEnabled: Y,
-        isStaff: k,
-        isInappropriateConversationWarningEnabled: w,
+    let { shouldMergeGameSettings: w } = b.b.useExperiment({ location: 'settings' }),
+        U = (0, R.eA)({ location: 'settings' }),
+        V = (0, m.Xo)({ location: 'settings' }),
+        G = null !== (n = null === (e = A.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== n && n,
+        Y = (0, E.y0)({ location: 'settings' }),
+        H = (0, o.Q)(),
+        z = (0, C.Zy)({ location: B.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
+        { enabled: W } = x.Z.useExperiment({ location: 'UserSettingsInventory' }, { autoTrackExposure: !0 }),
+        K = (0, s.e7)([I.Z], () => I.Z.hasLibraryApplication()),
+        q = (0, s.e7)([f.default], () => f.default.hasTOTPEnabled()),
+        Q = j.Sb.useSetting(),
+        X = (0, h.Z)(),
+        J = (0, v._p)({ location: 'settings-renderer-utils-web' }),
+        { hypeSquadRemoved: $ } = u.Z.useExperiment({ location: 'settings' }),
+        ee = null === (i = (0, g.Z)()) || void 0 === i || i,
+        et = (null === (t = (0, _.s)()) || void 0 === t ? void 0 : t.length) > 0;
+    return (0, O.i)({
+        unseenGiftCount: l,
+        showPrepaidPaymentPastDueWarning: D,
+        impressionSource: y,
+        numOfPendingFamilyRequests: L,
+        isOverlaySupported: Z,
+        isClipsBetaTagShowing: M === r.z.CLIPS_SETTINGS_BETA_TAG,
+        shouldMergeGameSettings: w,
+        isUserSettingsSearchEnabled: U,
+        isKeywordFilteringEnabled: V,
+        isStaff: G,
+        isInappropriateConversationWarningEnabled: Y,
         paymentsBlocked: H,
-        isEligibleForQuests: W,
-        showGiftNitro: K,
-        isStricterMessageRequestsEnabled: q,
-        hasLibraryApplication: z,
-        hasTOTPEnabled: Q,
-        developerMode: X,
+        isEligibleForQuests: z,
+        showGiftNitro: W,
+        isStricterMessageRequestsEnabled: X,
+        hasLibraryApplication: K,
+        hasTOTPEnabled: q,
+        developerMode: Q,
         isSafetySettingsV2Enabled: J,
         isAdultUser: ee,
-        hasSecureFramesVerifiedUserIds: es,
+        hasSecureFramesVerifiedUserIds: et,
         hypeSquadRemoved: $
     });
 }
-function G(e) {
-    let { searchResults: s } = (0, b.E)(),
-        t = U();
-    if (!(0, L.eA)({ location: 'settings' })) return new Set();
-    let n = t[e],
-        a = Object.fromEntries(
-            Object.entries(t).filter((e) => {
-                let [s, t] = e;
-                return t.section === n.section;
+function M(e) {
+    let { searchResults: t } = (0, D.E)(),
+        n = F();
+    if (!(0, R.eA)({ location: 'settings' })) return new Set();
+    let i = n[e],
+        s = Object.fromEntries(
+            Object.entries(n).filter((e) => {
+                let [t, n] = e;
+                return n.section === i.section;
             })
         ),
-        i = Object.fromEntries(
-            Object.entries(a)
+        r = Object.fromEntries(
+            Object.entries(s)
                 .filter((e) => {
-                    let [s, { parent: t, section: a }] = e;
-                    return null != t && a === n.section;
+                    let [t, { parent: n, section: s }] = e;
+                    return null != n && s === i.section;
                 })
                 .map((e) => {
-                    let [s, { parent: t }] = e;
-                    return [s, t];
+                    let [t, { parent: n }] = e;
+                    return [t, n];
                 })
         ),
-        r = new Set(),
-        o = (e) => {
-            let s = a[e];
-            if (null == s) return;
-            r.add(e);
-            let t = s.parent;
-            null != t && o(t);
+        l = new Set(),
+        a = (e) => {
+            let t = s[e];
+            if (null == t) return;
+            l.add(e);
+            let n = t.parent;
+            null != n && a(n);
         },
-        l = (e) => {
-            for (let s of (r.add(e),
-            Object.entries(i)
-                .filter((s) => {
-                    let [t, n] = s;
-                    return n === e;
+        o = (e) => {
+            for (let t of (l.add(e),
+            Object.entries(r)
+                .filter((t) => {
+                    let [n, i] = t;
+                    return i === e;
                 })
                 .map((e) => {
-                    let [s] = e;
-                    return s;
+                    let [t] = e;
+                    return t;
                 })))
-                l(s);
+                o(t);
         };
-    for (let e of s.filter((e) => e in a))
-        if (!r.has(e)) {
-            if (null != a[e].element && null == a[e].parent) {
-                r.clear();
+    for (let e of t.filter((e) => e in s))
+        if (!l.has(e)) {
+            if (null != s[e].element && null == s[e].parent) {
+                l.clear();
                 break;
             }
-            Object.values(i).includes(e) && l(e), o(e);
+            Object.values(r).includes(e) && o(e), a(e);
         }
-    return r;
+    return l;
 }
-function F(e, s) {
-    let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        n = arguments.length > 3 ? arguments[3] : void 0,
-        a = [],
-        i = Y(s),
-        o = (function (e, s) {
-            let t = new Map();
+function k(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        i = arguments.length > 3 ? arguments[3] : void 0,
+        s = [],
+        r = V(t),
+        a = (function (e, t) {
+            let n = new Map();
             return (
-                null != s &&
-                    s.forEach((s) => {
-                        let n = e[s].parent;
-                        for (; null != n && null != e[n].parent; ) n = e[n].parent;
-                        if (null != n) {
-                            var a;
-                            let e = null !== (a = t.get(n)) && void 0 !== a ? a : 0;
-                            t.set(n, e + 1);
+                null != t &&
+                    t.forEach((t) => {
+                        let i = e[t].parent;
+                        for (; null != i && null != e[i].parent; ) i = e[i].parent;
+                        if (null != i) {
+                            var s;
+                            let e = null !== (s = n.get(i)) && void 0 !== s ? s : 0;
+                            n.set(i, e + 1);
                         }
                     }),
-                t
+                n
             );
-        })(s, new Set(Array.from(null != n ? n : []).filter((e) => i.has(e))));
+        })(t, new Set(Array.from(null != i ? i : []).filter((e) => r.has(e))));
     return (
         e.forEach((e) => {
             0 !== e.settings.length &&
-                (!0 === e.divider && a.push({ section: r.ID.DIVIDER }),
+                (!0 === e.divider && s.push({ section: l.ID.DIVIDER }),
                 null != e.header &&
-                    a.push({
-                        section: r.ID.HEADER,
+                    s.push({
+                        section: l.ID.HEADER,
                         label: e.header
                     }),
                 e.settings.forEach((e) => {
-                    a.push({
-                        ...s[e],
+                    s.push({
+                        ...t[e],
                         tabPredicate: () => {
-                            var s, t, a;
-                            return null == n || ((s = e), (t = n), (a = o), (s === Z.s6.SEARCH_NO_RESULTS && 0 === t.size) || a.has(s) || t.has(s));
+                            var t, n, s;
+                            return null == i || ((t = e), (n = i), (s = a), (t === y.s6.SEARCH_NO_RESULTS && 0 === n.size) || s.has(t) || n.has(t));
                         },
-                        searchFilterCount: !t || (null == n ? void 0 : n.has(e)) ? void 0 : o.get(e)
+                        searchFilterCount: !n || (null == i ? void 0 : i.has(e)) ? void 0 : a.get(e)
                     });
                 }));
         }),
-        a
+        s
     );
 }
-function y() {
-    let e = U(),
-        { shouldMergeGameSettings: s } = x.b.useExperiment({ location: 'settings' }),
-        t = n.useMemo(() => B({ shouldMergeGameSettings: s }), [s]);
-    return n.useMemo(() => F(t, e), [t, e]);
+function w() {
+    let e = F(),
+        { shouldMergeGameSettings: t } = b.b.useExperiment({ location: 'settings' }),
+        n = i.useMemo(() => Z({ shouldMergeGameSettings: t }), [t]);
+    return i.useMemo(() => k(n, e), [n, e]);
 }
-function V(e) {
-    let s = U(),
-        t = (function () {
-            let { shouldMergeGameSettings: e } = x.b.useExperiment({ location: 'settings' }),
-                s = B({ shouldMergeGameSettings: e });
-            return n.useMemo(
+function U(e) {
+    let t = F(),
+        n = (function () {
+            let { shouldMergeGameSettings: e } = b.b.useExperiment({ location: 'settings' }),
+                t = Z({ shouldMergeGameSettings: e });
+            return i.useMemo(
                 () => [
                     {
-                        header: j.Z.Messages.SEARCH_RESULTS_SECTION_LABEL,
+                        header: L.intl.string(L.t.zkoeq6),
                         settings: [
-                            ...s
+                            ...t
                                 .map((e) => {
-                                    let { settings: s } = e;
-                                    return s;
+                                    let { settings: t } = e;
+                                    return t;
                                 })
                                 .flat(1),
-                            Z.s6.SEARCH_NO_RESULTS
+                            y.s6.SEARCH_NO_RESULTS
                         ]
                     }
                 ],
-                [s]
+                [t]
             );
         })(),
-        a = (0, L.c3)({ location: 'settings' });
-    return n.useMemo(() => F(t, s, a, new Set(e)), [t, s, a, e]);
+        s = (0, R.c3)({ location: 'settings' });
+    return i.useMemo(() => k(n, t, s, new Set(e)), [n, t, s, e]);
 }
-function Y(e) {
+function V(e) {
     return new Map(
         Object.entries(e).filter((e) => {
-            let [s, t] = e;
-            return t.section !== r.ID.CUSTOM && null != t.searchableTitles && (null == t.predicate || t.predicate());
+            let [t, n] = e;
+            return n.section !== l.ID.CUSTOM && null != n.searchableTitles && (null == n.predicate || n.predicate());
         })
     );
 }
-function k(e) {
-    return Array.from(Y(e).entries()).map((e) => {
-        let [s, t] = e;
-        return [s, t.searchableTitles];
+function G(e) {
+    return Array.from(V(e).entries()).map((e) => {
+        let [t, n] = e;
+        return [t, n.searchableTitles];
     });
 }

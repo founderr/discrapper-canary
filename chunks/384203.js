@@ -6,19 +6,19 @@ n.d(t, {
     n(47120);
 var i = n(200651);
 n(192379);
-var a = n(592125),
-    s = n(430824),
-    r = n(496675),
-    l = n(983436),
-    o = n(981631);
+var r = n(592125),
+    l = n(430824),
+    a = n(496675),
+    o = n(983436),
+    s = n(981631);
 function c(e) {
     let { code: t, messageData: n } = e,
         [c, u] = t.split('/'),
-        d = a.Z.getChannel(u),
-        _ = s.Z.getGuild(c);
-    return null != d && d.isGuildVocal() && null != _ && r.Z.can(o.Plq.VIEW_CHANNEL, d) && r.Z.can(o.Plq.CONNECT, d)
-        ? (0, i.jsx)(l.Z, {
-              guild: _,
+        d = r.Z.getChannel(u),
+        m = l.Z.getGuild(c);
+    return null != d && d.isGuildVocal() && null != m && a.Z.can(s.Plq.VIEW_CHANNEL, d) && a.Z.can(s.Plq.CONNECT, d)
+        ? (0, i.jsx)(o.Z, {
+              guild: m,
               channel: d,
               messageData: n
           })

@@ -1,14 +1,14 @@
-var r = t(442837),
-    i = t(339085);
-n.Z = function (e, n) {
-    return (0, r.e7)(
-        [i.ZP],
+var i = e(442837),
+    r = e(339085);
+n.Z = function (t, n) {
+    return (0, i.e7)(
+        [r.ZP],
         () => {
-            var t;
+            var e;
             if (null == n) return null;
-            let r = i.ZP.getDisambiguatedEmojiContext(e);
-            return null !== (t = r.getById(n)) && void 0 !== t ? t : r.getByName(n);
+            let i = r.ZP.getDisambiguatedEmojiContext(t);
+            return null !== (e = i.getById(n)) && void 0 !== e ? e : i.getByName(n);
         },
-        [e, n]
+        [t, n]
     );
 };

@@ -9,7 +9,7 @@ n.d(t, {
         return c;
     },
     qQ: function () {
-        return _;
+        return f;
     }
 }),
     n(47120),
@@ -144,7 +144,7 @@ function d(e, t) {
         unavailable: !1
     };
 }
-function _(e, t, n) {
+function f(e, t, n) {
     var r, i, a;
     return {
         type: 'folder',

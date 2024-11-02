@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return v;
     }
 }),
     n(47120),
@@ -9,66 +9,66 @@ var i = n(200651),
     l = n(192379),
     r = n(442837),
     a = n(481060),
-    s = n(110924),
-    o = n(693546),
+    o = n(110924),
+    s = n(693546),
     c = n(863249),
     u = n(937111),
     d = n(914010),
     h = n(289090),
     p = n(727258),
     f = n(234383),
-    _ = n(179809),
-    m = n(773182),
-    g = n(588275),
-    C = n(689938),
-    I = n(496657);
-function E(e) {
+    m = n(179809),
+    g = n(773182),
+    C = n(588275),
+    _ = n(388032),
+    x = n(496657);
+function v(e) {
     let { onActivate: t } = e,
-        [n, E] = l.useState(!1),
-        N = (0, r.e7)([d.Z], () => d.Z.getGuildId()),
-        x = (0, r.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
-        S = (0, f.Z)(),
-        v = (0, s.Z)(N),
-        Z = l.useMemo(() => {
+        [n, v] = l.useState(!1),
+        I = (0, r.e7)([d.Z], () => d.Z.getGuildId()),
+        b = (0, r.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
+        N = (0, f.Z)(),
+        E = (0, o.Z)(I),
+        S = l.useMemo(() => {
             let e = (0, p.qQ)({
                 folderId: h.S.PENDING_JOIN_REQUESTS_FOLDER,
-                folderName: C.Z.Messages.MEMBER_VERIFICATION_FOLDER_NAME,
+                folderName: _.intl.string(_.t['scsU+v']),
                 expanded: n,
                 guildIds: []
             });
-            for (let t of S) e.children.push((0, p.Mg)(t, e.id));
+            for (let t of N) e.children.push((0, p.Mg)(t, e.id));
             return e;
-        }, [S, n]);
+        }, [N, n]);
     l.useEffect(() => {
-        n && !x && o.Z.fetchRequestToJoinGuilds();
-    }, [n, x]);
-    let T = null != N && S.includes(N);
+        n && !b && s.Z.fetchRequestToJoinGuilds();
+    }, [n, b]);
+    let Z = null != I && N.includes(I);
     return (l.useEffect(() => {
-        !n && T && v !== N && E(!0);
-    }, [n, T, v, N]),
-    0 === S.length)
+        !n && Z && E !== I && v(!0);
+    }, [n, Z, E, I]),
+    0 === N.length)
         ? null
-        : (0, i.jsx)(m.TH, {
+        : (0, i.jsx)(g.TH, {
               onActivate: t,
-              children: (0, i.jsx)(_.Z, {
-                  folderNode: Z,
+              children: (0, i.jsx)(m.Z, {
+                  folderNode: S,
                   expanded: n,
-                  useCircleMask: !n && !T,
-                  selected: T,
+                  useCircleMask: !n && !Z,
+                  selected: Z,
                   draggable: !1,
                   sorting: !1,
                   onExpandCollapse: () => {
-                      E(!n), c.ZP.clearCoachmark();
+                      v(!n), c.ZP.clearCoachmark();
                   },
                   folderIconContent: (0, i.jsx)(a.HourglassIcon, {
                       size: 'custom',
                       color: 'currentColor',
                       width: 24,
                       height: 24,
-                      className: I.pendingIcon
+                      className: x.pendingIcon
                   }),
                   renderChildNode: function (e) {
-                      return e.type !== p.eD.GUILD ? null : (0, i.jsx)(g.Z, { guildNode: e }, e.id);
+                      return e.type !== p.eD.GUILD ? null : (0, i.jsx)(C.Z, { guildNode: e }, e.id);
                   }
               })
           });

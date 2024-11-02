@@ -1,12 +1,12 @@
 n.d(t, {
     FU: function () {
-        return S;
+        return I;
     },
     eH: function () {
-        return g;
+        return S;
     },
     wG: function () {
-        return T;
+        return v;
     }
 }),
     n(66153),
@@ -28,16 +28,16 @@ var r = n(512722),
     u = n(716161),
     c = n(634041),
     d = n(647177),
-    _ = n(63985),
-    E = n(638457),
-    f = n(678916),
-    h = n(981631);
-async function p(e) {
+    f = n(63985),
+    _ = n(638457),
+    h = n(678916),
+    p = n(981631);
+async function m(e) {
     let t = await fetch(e),
         n = await t.blob();
     return new Uint8ClampedArray(await n.arrayBuffer());
 }
-function I(e, t, n, r, i) {
+function g(e, t, n, r, i) {
     (0, u.RI)({
         [e]: {
             graph: n,
@@ -47,14 +47,14 @@ function I(e, t, n, r, i) {
         }
     });
 }
-async function m(e, t, n) {
+async function E(e, t, n) {
     var r, s;
     let l,
         c = !1;
-    if (null == n) return I(e, t, a.zZ.NONE);
-    if (n === f.f7) return I(e, t, a.zZ.BACKGROUND_BLUR);
+    if (null == n) return g(e, t, a.zZ.NONE);
+    if (n === h.f7) return g(e, t, a.zZ.BACKGROUND_BLUR);
     if ('string' == typeof n || 'number' == typeof n) {
-        let e = (0, _.Z)()[n];
+        let e = (0, f.Z)()[n];
         (c = null !== (r = e.isVideo) && void 0 !== r && r), (l = e.source);
     } else {
         let e = n.asset;
@@ -63,7 +63,7 @@ async function m(e, t, n) {
                 userId: n.user_id,
                 assetId: n.id,
                 assetHash: e,
-                size: f.HE.width
+                size: h.HE.width
             }));
     }
     if (null != l)
@@ -76,12 +76,12 @@ async function m(e, t, n) {
                           (n.crossOrigin = 'anonymous'),
                               (n.onload = () => {
                                   let t = document.createElement('canvas');
-                                  (t.width = f.HE.width), (t.height = f.HE.height);
+                                  (t.width = h.HE.width), (t.height = h.HE.height);
                                   let r = t.getContext('2d');
                                   i()(null != r, 'Canvas context is missing');
                                   let a = n.height / n.width,
-                                      s = f.HE.height,
-                                      o = f.HE.height / a,
+                                      s = h.HE.height,
+                                      o = h.HE.height / a,
                                       l = (t.width - o) / 2,
                                       u = (t.height - s) / 2;
                                   r.drawImage(n, l, u, o, s);
@@ -96,20 +96,20 @@ async function m(e, t, n) {
                               (n.onerror = (e) => t(e)),
                               (n.src = s);
                       })),
-                r = c ? await p(l) : void 0;
-            I(e, t, a.zZ.BACKGROUND_REPLACEMENT, n, r);
+                r = c ? await m(l) : void 0;
+            g(e, t, a.zZ.BACKGROUND_REPLACEMENT, n, r);
         } catch (e) {
             (0, u.Nm)();
         }
 }
-async function T(e, t) {
+async function v(e, t) {
     let { track: n = !0, location: r } = t;
-    await m(a.TO.CAMERA_BACKGROUND_LIVE, { type: a.W$.INPUT_DEVICE }, e), n && (0, d.Bh)(e, r, 'Enabled');
+    await E(a.TO.CAMERA_BACKGROUND_LIVE, { type: a.W$.INPUT_DEVICE }, e), n && (0, d.Bh)(e, r, 'Enabled');
 }
-async function S(e, t, n) {
+async function I(e, t, n) {
     let { track: r = !0, location: i } = n;
     (0, u.GS)(),
-        await m(
+        await E(
             a.TO.CAMERA_BACKGROUND_PREVIEW,
             {
                 type: a.W$.STREAM,
@@ -119,9 +119,9 @@ async function S(e, t, n) {
         ),
         r && (0, d.Bh)(e, i, 'Preview');
 }
-function g() {
+function S() {
     let e = s.default.getCurrentUser();
     if (null == e) return;
     let t = (0, l.P)(e);
-    (0, E.Z)() && !c.Z.hasBeenApplied && null != t && T(t, { track: !1 }).catch(h.dG4);
+    (0, _.Z)() && !c.Z.hasBeenApplied && null != t && v(t, { track: !1 }).catch(p.dG4);
 }

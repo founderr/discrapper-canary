@@ -14,27 +14,27 @@ var r = n(200651),
 function c(e) {
     let { guild: t, message: n } = e,
         [c, d] = i.useState(!1),
-        _ = i.useRef(!1),
-        E = (0, s.Z)({
+        f = i.useRef(!1),
+        _ = (0, s.Z)({
             guildId: t.id,
             leaderboardId: l._,
             intervalOffset: 0
         });
     return i.useMemo(() => {
         var e;
-        if ((null == E ? void 0 : null === (e = E.guild_settings) || void 0 === e ? void 0 : e.show_winner_crown) !== !0) return !1;
-        let t = E.users[0];
+        if ((null == _ ? void 0 : null === (e = _.guild_settings) || void 0 === e ? void 0 : e.show_winner_crown) !== !0) return !1;
+        let t = _.users[0];
         return n.author.id === (null == t ? void 0 : t.user_id);
-    }, [E, n])
+    }, [_, n])
         ? (0, r.jsx)('div', {
               className: u.badge,
               onMouseEnter: () => {
-                  (_.current = !0), d(!0);
+                  (f.current = !0), d(!0);
               },
               onMouseLeave: () => {
-                  (_.current = !1),
+                  (f.current = !1),
                       setTimeout(() => {
-                          !_.current && d(!1);
+                          !f.current && d(!1);
                       }, 100);
               },
               children: (0, r.jsx)(a.Popout, {

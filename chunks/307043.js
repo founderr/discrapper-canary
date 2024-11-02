@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var r = n(818083),
-    s = n(987338);
-let a = (0, r.B)({
+    a = n(987338);
+let s = (0, r.B)({
         kind: 'user',
         id: '2024-08_shop_browse',
         label: 'Collectibles Shop Browse Experiment',
@@ -17,6 +17,6 @@ let a = (0, r.B)({
                 config: { enabled: !0 }
             }
         ],
-        commonTriggerPoint: s.$P.COLLECTIBLES_SHOP_OPEN
+        commonTriggerPoint: a.$P.COLLECTIBLES_SHOP_OPEN
     }),
-    i = (e) => a.useExperiment({ location: e }).enabled;
+    i = (e) => s.useExperiment({ location: e }).enabled;

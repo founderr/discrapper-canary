@@ -1,9 +1,9 @@
 n(47120), n(653041);
 var i,
-    a = n(442837),
-    s = n(570140),
-    r = n(314897),
-    l = n(592125),
+    r = n(442837),
+    l = n(570140),
+    a = n(314897),
+    s = n(592125),
     o = n(430824),
     c = n(709054),
     d = n(231873);
@@ -20,54 +20,54 @@ function u(e, t, n) {
         e
     );
 }
-let _ = {};
-function E(e, t) {
-    let n = _[e];
-    return !(null == n || n.has(t)) && ((_[e] = new Set(n.add(t))), !0);
+let h = {};
+function m(e, t) {
+    let n = h[e];
+    return !(null == n || n.has(t)) && ((h[e] = new Set(n.add(t))), !0);
 }
-class h extends (i = a.ZP.PersistedStore) {
+class p extends (i = r.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(r.default, o.Z),
-            (_ = {}),
+        this.waitFor(a.default, o.Z),
+            (h = {}),
             null != e &&
                 c.default.keys(e).forEach((t) => {
                     let n = e[t];
-                    null != n && 'function' == typeof n[Symbol.iterator] && (_[t] = new Set(n));
+                    null != n && 'function' == typeof n[Symbol.iterator] && (h[t] = new Set(n));
                 });
     }
     getProgress(e) {
-        return _[e];
+        return h[e];
     }
     hasProgress(e) {
-        let t = _[e];
+        let t = h[e];
         return null != t && !t.has(d.Rg.DISMISSED);
     }
     getState() {
-        return _;
+        return h;
     }
 }
-u(h, 'displayName', 'GuildProgressStore'),
-    u(h, 'persistKey', 'GuildProgressStore'),
-    new h(s.Z, {
+u(p, 'displayName', 'GuildProgressStore'),
+    u(p, 'persistKey', 'GuildProgressStore'),
+    new p(l.Z, {
         CONNECTION_OPEN: function () {
             let e = [];
-            c.default.keys(_).forEach((t) => {
-                _[t].has(d.Rg.COMPLETED) && e.push(t);
+            c.default.keys(h).forEach((t) => {
+                h[t].has(d.Rg.COMPLETED) && e.push(t);
             }),
-                e.forEach((e) => E(e, d.Rg.DISMISSED));
+                e.forEach((e) => m(e, d.Rg.DISMISSED));
         },
         GUILD_PROGRESS_INITIALIZE: function (e) {
             let { guildId: t } = e;
-            null == _[t] && (_[t] = new Set()), !_[t].has(d.Rg.COMPLETED) && _[t].delete(d.Rg.DISMISSED);
+            null == h[t] && (h[t] = new Set()), !h[t].has(d.Rg.COMPLETED) && h[t].delete(d.Rg.DISMISSED);
         },
         GUILD_PROGRESS_COMPLETED_SEEN: function (e) {
             let { guildId: t } = e;
-            if (null == _[t]) return !1;
-            _[t] = new Set(_[t].add(d.Rg.COMPLETED));
+            if (null == h[t]) return !1;
+            h[t] = new Set(h[t].add(d.Rg.COMPLETED));
         },
         GUILD_PROGRESS_DISMISS: function (e) {
             let { guildId: t } = e;
-            return E(t, d.Rg.DISMISSED);
+            return m(t, d.Rg.DISMISSED);
         },
         GUILD_CREATE: function (e) {
             let {
@@ -75,30 +75,30 @@ u(h, 'displayName', 'GuildProgressStore'),
                 } = e,
                 i = o.Z.getGuild(t);
             if (null == i) return !1;
-            i.ownerId === r.default.getId() && null != _[i.id] && (null != i.icon && _[i.id].add(d.Rg.AVATAR), n > 1 && _[i.id].add(d.Rg.INVITE));
+            i.ownerId === a.default.getId() && null != h[i.id] && (null != i.icon && h[i.id].add(d.Rg.AVATAR), n > 1 && h[i.id].add(d.Rg.INVITE));
         },
         CHANNEL_CREATE: function (e) {
             let { channel: t } = e;
-            return null != t && null != t.guild_id && null != _[t.guild_id] && E(t.guild_id, d.Rg.CHANNEL);
+            return null != t && null != t.guild_id && null != h[t.guild_id] && m(t.guild_id, d.Rg.CHANNEL);
         },
         CHANNEL_UPDATES: function (e) {
             let { channels: t } = e,
                 n = !1;
-            for (let e of t) null != e && null != e.guild_id && null != _[e.guild_id] && !1 !== E(e.guild_id, d.Rg.CHANNEL) && (n = !0);
+            for (let e of t) null != e && null != e.guild_id && null != h[e.guild_id] && !1 !== m(e.guild_id, d.Rg.CHANNEL) && (n = !0);
             return n;
         },
         GUILD_SETTINGS_SUBMIT_SUCCESS: function (e) {
             let { guild: t } = e;
-            return null != t && null != t.id && null != _[t.id] && null != t.icon && E(t.id, d.Rg.AVATAR);
+            return null != t && null != t.id && null != h[t.id] && null != t.icon && m(t.id, d.Rg.AVATAR);
         },
         MESSAGE_CREATE: function (e) {
             var t;
             let { channelId: n, message: i } = e,
-                a = l.Z.getChannel(n);
-            return (null === (t = i.author) || void 0 === t ? void 0 : t.id) === r.default.getId() && null != a && null != _[a.guild_id] && E(a.guild_id, d.Rg.MESSAGE);
+                r = s.Z.getChannel(n);
+            return (null === (t = i.author) || void 0 === t ? void 0 : t.id) === a.default.getId() && null != r && null != h[r.guild_id] && m(r.guild_id, d.Rg.MESSAGE);
         },
         GUILD_MEMBER_LIST_UPDATE: function (e) {
             let { guildId: t, memberCount: n } = e;
-            return null != _[t] && !!(n > 1) && E(t, d.Rg.INVITE);
+            return null != h[t] && !!(n > 1) && m(t, d.Rg.INVITE);
         }
     });

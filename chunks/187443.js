@@ -1,30 +1,30 @@
-t.d(n, {
+e.d(n, {
     Z: function () {
         return u;
     }
 });
-var l = t(200651);
-t(192379);
-var s = t(481060),
-    o = t(285784),
-    i = t(689938),
-    r = t(494545);
-function u(e) {
-    let { isActive: n, isUserLurking: t, rsvped: u, onContextMenu: a, onRsvpClick: c, onGoToGuildClick: d, isDetailsView: E = !1, isMember: _, onJoinGuildClick: C, guildName: N, onInviteClick: h, canInvite: m, isChannelPublic: I } = e;
+var l = e(200651);
+e(192379);
+var i = e(481060),
+    o = e(285784),
+    s = e(388032),
+    r = e(494545);
+function u(t) {
+    let { isActive: n, isUserLurking: e, rsvped: u, onContextMenu: c, onRsvpClick: a, onGoToGuildClick: d, isDetailsView: h = !1, isMember: m, onJoinGuildClick: C, guildName: g, onInviteClick: x, canInvite: v, isChannelPublic: k } = t;
     return (0, l.jsxs)('div', {
         className: r.container,
         children: [
-            null != a
-                ? (0, l.jsx)(s.Tooltip, {
-                      text: i.Z.Messages.MORE,
+            null != c
+                ? (0, l.jsx)(i.Tooltip, {
+                      text: s.intl.string(s.t.UKOtz8),
                       position: 'top',
-                      'aria-label': i.Z.Messages.EDIT,
-                      children: (e) =>
-                          (0, l.jsx)(s.Clickable, {
-                              ...e,
-                              onClick: a,
+                      'aria-label': s.intl.string(s.t.bt75u7),
+                      children: (t) =>
+                          (0, l.jsx)(i.Clickable, {
+                              ...t,
+                              onClick: c,
                               className: r.iconButton,
-                              children: (0, l.jsx)(s.MoreHorizontalIcon, {
+                              children: (0, l.jsx)(i.MoreHorizontalIcon, {
                                   size: 'custom',
                                   color: 'currentColor',
                                   width: 20,
@@ -34,46 +34,46 @@ function u(e) {
                           })
                   })
                 : null,
-            _ &&
+            m &&
                 (0, l.jsx)(o.ku, {
-                    onInviteClick: h,
-                    canInvite: m,
-                    isChannelPublic: I
+                    onInviteClick: x,
+                    canInvite: v,
+                    isChannelPublic: k
                 }),
-            t &&
+            e &&
                 !n &&
                 (0, l.jsx)(o.Lh, {
                     isUserRsvped: u,
-                    isUserLurking: t
+                    isUserLurking: e
                 }),
-            _ &&
-                !t &&
+            m &&
+                !e &&
                 !n &&
-                null != c &&
+                null != a &&
                 (0, l.jsx)(o.S0, {
                     isUserRsvped: u,
-                    isUserLurking: t,
-                    onRsvpClick: c
+                    isUserLurking: e,
+                    onRsvpClick: a
                 }),
-            _ && !t && (!E || n)
-                ? (0, l.jsx)(s.Button, {
+            m && !e && (!h || n)
+                ? (0, l.jsx)(i.Button, {
                       className: r.button,
                       innerClassName: r.innerButton,
-                      size: s.Button.Sizes.SMALL,
+                      size: i.Button.Sizes.SMALL,
                       onClick: d,
-                      color: s.Button.Colors.GREEN,
-                      children: i.Z.Messages.HUB_EVENTS_GO_TO_GUILD
+                      color: i.Button.Colors.GREEN,
+                      children: s.intl.string(s.t['N+TB5u'])
                   })
                 : null,
-            _
+            m
                 ? null
-                : (0, l.jsx)(s.Button, {
+                : (0, l.jsx)(i.Button, {
                       className: r.button,
                       innerClassName: r.innerButton,
-                      size: s.Button.Sizes.SMALL,
+                      size: i.Button.Sizes.SMALL,
                       onClick: C,
-                      color: s.Button.Colors.GREEN,
-                      children: i.Z.Messages.HUB_EVENTS_JOIN_GUILD.format({ guildName: N })
+                      color: i.Button.Colors.GREEN,
+                      children: s.intl.format(s.t['4BiO8f'], { guildName: g })
                   })
         ]
     });

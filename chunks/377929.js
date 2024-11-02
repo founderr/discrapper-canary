@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return Z;
     }
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    a = n(392711),
-    l = n.n(a),
-    r = n(442837),
+    l = n(192379),
+    r = n(392711),
+    a = n.n(r),
+    s = n(442837),
     o = n(481060),
     c = n(32750),
     u = n(109764),
@@ -16,97 +16,97 @@ var i = n(200651),
     h = n(438536),
     m = n(251746),
     p = n(193987),
-    _ = n(933793),
-    f = n(13736),
-    E = n(732393),
-    g = n(137591),
-    C = n(299206),
-    I = n(665149),
-    T = n(695346),
-    x = n(979651),
-    S = n(488131),
-    v = n(689938);
-function N(e) {
+    f = n(933793),
+    g = n(13736),
+    C = n(732393),
+    x = n(137591),
+    v = n(299206),
+    _ = n(665149),
+    I = n(695346),
+    E = n(979651),
+    b = n(488131),
+    S = n(388032);
+function Z(e) {
     let { channel: t } = e,
-        [n, a] = s.useState(!1);
-    function l() {
-        a((e) => !e);
+        [n, r] = l.useState(!1);
+    function a() {
+        r((e) => !e);
     }
-    let r = v.Z.Messages.MORE;
+    let s = S.intl.string(S.t.UKOtz8);
     return (0, i.jsx)(o.Popout, {
         shouldShow: n,
         animation: o.Popout.Animation.NONE,
         position: 'bottom',
         align: 'right',
         autoInvert: !1,
-        onRequestClose: () => a(!1),
+        onRequestClose: () => r(!1),
         renderPopout: function (e) {
-            return (0, i.jsx)(A, {
+            return (0, i.jsx)(T, {
                 ...e,
                 channel: t
             });
         },
         children: (e, t) => {
             let { isShown: n } = t;
-            return (0, i.jsx)(I.ZP.Icon, {
+            return (0, i.jsx)(_.ZP.Icon, {
                 ...e,
-                onClick: l,
-                tooltip: n ? null : r,
+                onClick: a,
+                tooltip: n ? null : s,
                 icon: o.MoreHorizontalIcon,
-                'aria-label': r,
+                'aria-label': s,
                 selected: n
             });
         }
     });
 }
-function A(e) {
-    let { channel: t, closePopout: n, onSelect: s } = e,
-        a = (0, c.Z)(t),
-        I = (0, p.Z)(t),
-        N = (0, E.Z)(t.id),
-        A = (0, f.Z)(t),
-        Z = (0, C.Z)({
+function T(e) {
+    let { channel: t, closePopout: n, onSelect: l } = e,
+        r = (0, c.Z)(t),
+        _ = (0, p.Z)(t),
+        Z = (0, C.Z)(t.id),
+        T = (0, g.Z)(t),
+        N = (0, v.Z)({
             id: t.id,
-            label: v.Z.Messages.COPY_ID_THREAD
+            label: S.intl.string(S.t.DQ797u)
         }),
-        M = (0, u.Z)(t),
-        b = (0, d.Z)(t),
-        R = (0, h.Z)(t, 'Toolbar Overflow'),
-        L = (0, _.Z)(t),
-        P = (0, m.Z)(t),
-        j = (0, g.Z)(t),
-        O = T.vF.useSetting(),
-        y = (0, r.e7)([x.Z], () => !l().isEmpty(x.Z.getVoiceStatesForChannel(t.id)));
+        j = (0, u.Z)(t),
+        A = (0, d.Z)(t),
+        y = (0, h.Z)(t, 'Toolbar Overflow'),
+        P = (0, f.Z)(t),
+        M = (0, m.Z)(t),
+        R = (0, x.Z)(t),
+        L = I.vF.useSetting(),
+        k = (0, s.e7)([E.Z], () => !a().isEmpty(E.Z.getVoiceStatesForChannel(t.id)));
     return (0, i.jsxs)(o.Menu, {
         navId: 'thread-context',
         onClose: n,
-        'aria-label': v.Z.Messages.THREAD_ACTIONS_MENU_LABEL,
-        onSelect: s,
+        'aria-label': S.intl.string(S.t['1NBjqa']),
+        onSelect: l,
         children: [
             (0, i.jsxs)(o.MenuGroup, {
-                children: [R, P]
+                children: [y, M]
             }),
             (0, i.jsxs)(o.MenuGroup, {
                 children: [
-                    A,
-                    L,
-                    N,
-                    O && !y
+                    T,
+                    P,
+                    Z,
+                    L && !k
                         ? (0, i.jsx)(o.MenuItem, {
                               id: 'open',
-                              label: v.Z.Messages.OPEN_IN_SPLIT_VIEW,
+                              label: S.intl.string(S.t.bX7EaG),
                               action: function () {
-                                  (0, S.ok)(t);
+                                  (0, b.ok)(t);
                               }
                           })
                         : null
                 ]
             }),
             (0, i.jsxs)(o.MenuGroup, {
-                children: [j, a, I, b]
+                children: [R, r, _, A]
             }),
             (0, i.jsxs)(o.MenuGroup, {
-                children: [M, Z]
+                children: [j, N]
             })
         ]
     });

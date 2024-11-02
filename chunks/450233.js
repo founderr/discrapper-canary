@@ -1,40 +1,40 @@
 n.d(t, {
     G: function () {
-        return l;
+        return s;
     }
 });
 var i,
-    a,
-    s,
     r,
     l,
+    a,
+    s,
     o,
     c = n(200651),
     d = n(192379),
     u = n(442837),
-    _ = n(570140),
-    E = n(16084),
-    h = n(855775),
-    m = n(689938);
-((i = l || (l = {})).SHORT = 'SHORT'), (i.LONG = 'LONG');
-class I extends (o = d.PureComponent) {
+    h = n(570140),
+    m = n(16084),
+    p = n(855775),
+    g = n(388032);
+((i = s || (s = {})).SHORT = 'SHORT'), (i.LONG = 'LONG');
+class f extends (o = d.PureComponent) {
     getText(e, t) {
         if (429 === e.status)
             switch (t) {
                 case 'SHORT':
-                    return m.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_RATE_LIMIT_ERROR_SHORT;
+                    return g.intl.string(g.t.T15lqq);
                 case 'LONG':
-                    return m.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_RATE_LIMIT_ERROR;
+                    return g.intl.string(g.t.XFShdH);
             }
         switch (t) {
             case 'SHORT':
-                return m.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR_SHORT;
+                return g.intl.string(g.t['+XstBw']);
             case 'LONG':
-                return m.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR;
+                return g.intl.string(g.t.epyCur);
         }
     }
     componentWillUnmount() {
-        null != this.props.purchaseError && _.Z.wait(() => E.pB());
+        null != this.props.purchaseError && h.Z.wait(() => m.pB());
     }
     render() {
         let { className: e, purchaseError: t, messageStyle: n } = this.props;
@@ -46,13 +46,13 @@ class I extends (o = d.PureComponent) {
               });
     }
 }
-(r = { messageStyle: 'LONG' }),
-    (s = 'defaultProps') in (a = I)
-        ? Object.defineProperty(a, s, {
-              value: r,
+(a = { messageStyle: 'LONG' }),
+    (l = 'defaultProps') in (r = f)
+        ? Object.defineProperty(r, l, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[s] = r),
-    (t.Z = u.ZP.connectStores([h.Z], () => ({ purchaseError: h.Z.error }))(I));
+        : (r[l] = a),
+    (t.Z = u.ZP.connectStores([p.Z], () => ({ purchaseError: p.Z.error }))(f));

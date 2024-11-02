@@ -1,117 +1,117 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return _;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(399606),
-    s = n(524437),
-    r = n(481060),
-    l = n(494404),
-    o = n(377171),
+var r = n(399606),
+    l = n(524437),
+    a = n(481060),
+    o = n(494404),
+    s = n(377171),
     c = n(317632),
     u = n(602478),
     d = n(2818),
-    _ = n(768943),
-    E = n(742989),
-    I = n(818186),
-    m = n(689938),
-    f = n(811304);
-function T(e) {
-    let { tab: t, setTab: n, children: T, badgeState: h, closePopout: N } = e,
-        { showReminders: p } = E.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
-        { enabled: C, inInbox: g } = d.Z.useExperiment({ location: 'RecentsPopout' }),
-        { enabled: S } = u.Z.useExperiment({ location: 'RecentsHeader' }),
-        A = (0, a.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
-        x = (0, a.e7)([_.Z], () => _.Z.getOverdueMessageReminderCount());
-    return (0, i.jsxs)(l.h4, {
-        className: f.header,
+    m = n(768943),
+    f = n(742989),
+    h = n(818186),
+    p = n(388032),
+    g = n(811304);
+function _(e) {
+    let { tab: t, setTab: n, children: _, badgeState: C, closePopout: E } = e,
+        { showReminders: I } = f.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
+        { enabled: x, inInbox: v } = d.Z.useExperiment({ location: 'RecentsPopout' }),
+        { enabled: N } = u.Z.useExperiment({ location: 'RecentsHeader' }),
+        T = (0, r.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
+        S = (0, r.e7)([m.Z], () => m.Z.getOverdueMessageReminderCount());
+    return (0, i.jsxs)(o.h4, {
+        className: g.header,
         children: [
             (0, i.jsxs)('div', {
-                className: f.headerTitle,
+                className: g.headerTitle,
                 children: [
-                    (0, i.jsx)(r.InboxIcon, {
+                    (0, i.jsx)(a.InboxIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: f.inboxIcon
+                        className: g.inboxIcon
                     }),
-                    (0, i.jsx)(r.Text, {
-                        className: f.inboxTitle,
+                    (0, i.jsx)(a.Text, {
+                        className: g.inboxTitle,
                         variant: 'text-lg/semibold',
                         color: 'interactive-active',
-                        children: m.Z.Messages.INBOX
+                        children: p.intl.string(p.t.GSmTKC)
                     }),
                     (0, i.jsxs)('div', {
-                        className: f.controls,
-                        children: [T, (0, i.jsx)(I.Z, { closePopout: N })]
+                        className: g.controls,
+                        children: [_, (0, i.jsx)(h.Z, { closePopout: E })]
                     })
                 ]
             }),
             (0, i.jsx)('div', {
-                className: f.headerTabs,
-                children: (0, i.jsxs)(r.TabBar, {
+                className: g.headerTabs,
+                children: (0, i.jsxs)(a.TabBar, {
                     selectedItem: t,
                     type: 'top',
                     look: 'brand',
                     onItemSelect: n,
-                    className: f.tabBar,
+                    className: g.tabBar,
                     children: [
-                        (0, i.jsxs)(r.TabBar.Item, {
-                            id: s.X.FOR_YOU,
-                            'aria-label': m.Z.Messages.FOR_YOU,
-                            className: f.tab,
+                        (0, i.jsxs)(a.TabBar.Item, {
+                            id: l.X.FOR_YOU,
+                            'aria-label': p.intl.string(p.t['En+D+v']),
+                            className: g.tab,
                             children: [
-                                m.Z.Messages.FOR_YOU,
-                                (null == h ? void 0 : h.badgeForYou)
-                                    ? (0, i.jsx)(r.CircleBadge, {
-                                          color: o.Z.STATUS_DANGER,
-                                          className: f.iconBadge
+                                p.intl.string(p.t['En+D+v']),
+                                (null == C ? void 0 : C.badgeForYou)
+                                    ? (0, i.jsx)(a.CircleBadge, {
+                                          color: s.Z.STATUS_DANGER,
+                                          className: g.iconBadge
                                       })
                                     : null
                             ]
                         }),
-                        (0, i.jsx)(r.TabBar.Item, {
-                            id: s.X.UNREADS,
-                            className: f.tab,
-                            children: m.Z.Messages.UNREADS_TAB_LABEL
+                        (0, i.jsx)(a.TabBar.Item, {
+                            id: l.X.UNREADS,
+                            className: g.tab,
+                            children: p.intl.string(p.t.sRUdBw)
                         }),
-                        (0, i.jsx)(r.TabBar.Item, {
-                            'aria-label': m.Z.Messages.MENTIONS,
-                            id: s.X.MENTIONS,
-                            className: f.tab,
-                            children: m.Z.Messages.MENTIONS
+                        (0, i.jsx)(a.TabBar.Item, {
+                            'aria-label': p.intl.string(p.t['GRZF9/']),
+                            id: l.X.MENTIONS,
+                            className: g.tab,
+                            children: p.intl.string(p.t['GRZF9/'])
                         }),
-                        S
-                            ? (0, i.jsxs)(r.TabBar.Item, {
+                        N
+                            ? (0, i.jsxs)(a.TabBar.Item, {
                                   'aria-label': 'game_invites',
-                                  id: s.X.GAME_INVITES,
-                                  className: f.tab,
+                                  id: l.X.GAME_INVITES,
+                                  className: g.tab,
                                   children: [
-                                      m.Z.Messages.GAME_INVITES,
-                                      A > 0
-                                          ? (0, i.jsx)(r.CircleBadge, {
-                                                color: o.Z.STATUS_DANGER,
-                                                className: f.iconBadge
+                                      p.intl.string(p.t.apq3cX),
+                                      T > 0
+                                          ? (0, i.jsx)(a.CircleBadge, {
+                                                color: s.Z.STATUS_DANGER,
+                                                className: g.iconBadge
                                             })
                                           : null
                                   ]
                               })
                             : null,
-                        C && g
-                            ? (0, i.jsx)(r.TabBar.Item, {
-                                  'aria-label': m.Z.Messages.FOR_LATER,
-                                  id: s.X.BOOKMARKS,
-                                  className: f.tab,
-                                  children: 0 === x ? m.Z.Messages.FOR_LATER : m.Z.Messages.FOR_LATER_COUNT.format({ count: x })
+                        x && v
+                            ? (0, i.jsx)(a.TabBar.Item, {
+                                  'aria-label': p.intl.string(p.t['2pAkDA']),
+                                  id: l.X.BOOKMARKS,
+                                  className: g.tab,
+                                  children: 0 === S ? p.intl.string(p.t['2pAkDA']) : p.intl.formatToPlainString(p.t.I4fryM, { count: S })
                               })
                             : null,
-                        p && !C
-                            ? (0, i.jsx)(r.TabBar.Item, {
+                        I && !x
+                            ? (0, i.jsx)(a.TabBar.Item, {
                                   'aria-label': 'todos',
-                                  id: s.X.TODOS,
-                                  className: f.tab,
-                                  children: 0 === x ? m.Z.Messages.FOR_LATER_TAB_REMINDERS : m.Z.Messages.FOR_LATER_TAB_REMINDERS_COUNT.format({ count: x })
+                                  id: l.X.TODOS,
+                                  className: g.tab,
+                                  children: 0 === S ? p.intl.string(p.t.aUXxzc) : p.intl.formatToPlainString(p.t['5en8yc'], { count: S })
                               })
                             : null
                     ]

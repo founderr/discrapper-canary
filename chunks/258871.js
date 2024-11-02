@@ -2,16 +2,16 @@ var i = n(200651),
     l = n(192379),
     r = n(442837),
     a = n(481060),
-    s = n(554747),
-    o = n(434479),
+    o = n(554747),
+    s = n(434479),
     c = n(593364),
     u = n(703656),
     d = n(944486),
     h = n(147754),
     p = n(688438),
     f = n(981631),
-    _ = n(689938);
-let m = [
+    m = n(388032);
+let g = [
     {
         key: 'EVENTS',
         renderIcon: (e) =>
@@ -22,7 +22,7 @@ let m = [
             }),
         getName: (e) => {
             let { numEvents: t } = e;
-            return t > 0 ? _.Z.Messages.GUILD_EVENTS_PLURAL.format({ number: t }) : _.Z.Messages.GUILD_EVENTS;
+            return t > 0 ? m.intl.formatToPlainString(m.t.IBdqSk, { number: t }) : m.intl.string(m.t.tlopTE);
         },
         handler: (e) =>
             (0, a.openModalLazy)(async () => {
@@ -42,7 +42,7 @@ let m = [
                 color: 'currentColor',
                 className: e
             }),
-        getName: () => _.Z.Messages.HUB_SIDEBAR_JOIN_SERVERS,
+        getName: () => m.intl.string(m.t.K50GHR),
         handler: (e, t) => (0, u.XU)(e.id, t.id)
     },
     {
@@ -53,7 +53,7 @@ let m = [
                 color: 'currentColor',
                 className: e
             }),
-        getName: () => _.Z.Messages.HUB_SIDEBAR_ADD_SERVERS,
+        getName: () => m.intl.string(m.t.emRpdX),
         handler: (e, t) =>
             (0, a.openModalLazy)(async () => {
                 let { default: l } = await n.e('79764').then(n.bind(n, 533202));
@@ -69,7 +69,7 @@ let m = [
     {
         key: 'INVITE_MEMBERS',
         renderIcon: (e) => (0, i.jsx)(a.GroupPlusIcon, { className: e }),
-        getName: () => _.Z.Messages.HUB_SIDEBAR_INVITE_MEMBERS,
+        getName: () => m.intl.string(m.t.MJQOuL),
         handler: (e, t) =>
             (0, a.openModalLazy)(async () => {
                 let { default: l } = await Promise.all([n.e('7654'), n.e('85683')]).then(n.bind(n, 560114));
@@ -85,7 +85,7 @@ let m = [
 ];
 t.Z = (e) => {
     let { guild: t, channel: n } = e,
-        a = (0, s.ZP)(t.id);
+        a = (0, o.ZP)(t.id);
     l.useEffect(() => {
         h.Z.trackExposure({
             guildId: t.id,
@@ -100,22 +100,22 @@ t.Z = (e) => {
             { autoTrackExposure: !1 }
         ),
         f = (0, r.e7)([d.Z], () => null != n && d.Z.getChannelId() === n.id),
-        _ = l.useMemo(() => ({ numEvents: a.length }), [a.length]),
-        g = (0, p.t)(n);
+        m = l.useMemo(() => ({ numEvents: a.length }), [a.length]),
+        C = (0, p.t)(n);
     return (0, i.jsx)(i.Fragment, {
-        children: m.map((e) => {
-            let { key: l, getName: r, handler: a, renderIcon: s } = e;
+        children: g.map((e) => {
+            let { key: l, getName: r, handler: a, renderIcon: o } = e;
             if (!u && 'EVENTS' === l) return null;
             let d = ''.concat(l, '-').concat(t.id);
             return (0, i.jsx)(
-                o.m,
+                s.m,
                 {
                     id: d,
-                    renderIcon: s,
-                    text: r(_),
+                    renderIcon: o,
+                    text: r(m),
                     selected: f && 'JOIN_SERVERS' === l,
                     onClick: null != n ? () => a(t, n) : void 0,
-                    trailing: 'JOIN_SERVERS' === l && g > 0 ? (0, c.N)(g) : null
+                    trailing: 'JOIN_SERVERS' === l && C > 0 ? (0, c.N)(C) : null
                 },
                 d
             );

@@ -1,7 +1,7 @@
 t.r(n),
     t.d(n, {
         getApplicationPaymentSteps: function () {
-            return _;
+            return p;
         }
     }),
     t(47120);
@@ -10,18 +10,18 @@ t(192379);
 var r = t(409813),
     o = t(276442),
     a = t(961830),
-    s = t(721165),
-    l = t(519801),
-    c = t(589771),
+    l = t(721165),
+    c = t(519801),
+    s = t(589771),
     d = t(883419),
-    u = t(689938);
-function _(e) {
+    u = t(388032);
+function p(e) {
     let { guildId: n, showBenefitsFirst: t } = e;
     return [
         {
             key: null,
             renderStep: (e) =>
-                (0, i.jsx)(c.Z, {
+                (0, i.jsx)(s.Z, {
                     initialStep: t ? r.h8.BENEFITS : r.h8.REVIEW,
                     guildId: n,
                     ...e
@@ -29,8 +29,8 @@ function _(e) {
         },
         {
             key: r.h8.BENEFITS,
-            renderStep: (e) => (0, i.jsx)(s.Z, { ...e }),
-            options: { useBreadcrumbLabel: () => u.Z.Messages.APPLICATION_SUBSCRIPTION_BILLING_STEP_SUBSCRIPTION_DETAILS }
+            renderStep: (e) => (0, i.jsx)(l.Z, { ...e }),
+            options: { useBreadcrumbLabel: () => u.intl.string(u.t['5LD2+P']) }
         },
         {
             key: r.h8.ADD_PAYMENT_STEPS,
@@ -54,13 +54,13 @@ function _(e) {
                 }),
             options: {
                 renderHeader: !0,
-                useBreadcrumbLabel: () => u.Z.Messages.BILLING_STEP_REVIEW
+                useBreadcrumbLabel: () => u.intl.string(u.t.QBnNHh)
             }
         },
         {
             key: r.h8.CONFIRM,
             renderStep: (e) =>
-                (0, i.jsx)(l.Z, {
+                (0, i.jsx)(c.Z, {
                     showBenefits: !t,
                     ...e
                 })

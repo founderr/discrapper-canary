@@ -3,13 +3,13 @@ n.d(t, {
         return o;
     },
     NU: function () {
-        return E;
+        return _;
     },
     X2: function () {
-        return f;
+        return h;
     },
     cb: function () {
-        return _;
+        return f;
     },
     d$: function () {
         return c;
@@ -37,6 +37,6 @@ let i = (e, t) => {
     c = (e) => i(e, u);
 (0, r.isIOS)() || (0, r.isAndroid)();
 let d = (0, r.isIOS)() ? /\.(mp4|mov)$/i : ((0, r.isAndroid)(), /\.(mp4|webm|mov)$/i),
-    _ = (e) => i(e, d),
-    E = (e) => null != e && d.test(e),
-    f = (e) => a(e, 'video');
+    f = (e) => i(e, d),
+    _ = (e) => null != e && d.test(e),
+    h = (e) => a(e, 'video');

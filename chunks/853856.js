@@ -7,17 +7,17 @@ var r,
     u = n(570140),
     c = n(581883),
     d = n(131704),
-    _ = n(981631);
-let E = {},
-    f = !1;
-function h() {
+    f = n(981631);
+let _ = {},
+    h = !1;
+function p() {
     var e, t, n;
-    (f = null !== (n = null === (e = c.Z.settings.favorites) || void 0 === e ? void 0 : e.muted) && void 0 !== n && n), (E = {});
+    (h = null !== (n = null === (e = c.Z.settings.favorites) || void 0 === e ? void 0 : e.muted) && void 0 !== n && n), (_ = {});
     let r = null === (t = c.Z.settings.favorites) || void 0 === t ? void 0 : t.favoriteChannels;
     if (null == r) return !1;
     for (let e in r) {
         let t = r[e];
-        E[e] = {
+        _[e] = {
             id: e,
             nickname: '' !== t.nickname ? t.nickname : null,
             type: t.type,
@@ -26,33 +26,33 @@ function h() {
         };
     }
 }
-class p extends (s = o.ZP.Store) {
+class m extends (s = o.ZP.Store) {
     initialize() {
-        this.waitFor(c.Z), h(), this.syncWith([c.Z], h);
+        this.waitFor(c.Z), p(), this.syncWith([c.Z], p);
     }
     getFavoriteChannels() {
-        return E;
+        return _;
     }
     get favoriteServerMuted() {
-        return f;
+        return h;
     }
     isFavorite(e) {
-        return null != e && null != E[e];
+        return null != e && null != _[e];
     }
     getFavorite(e) {
-        if (null != e) return E[e];
+        if (null != e) return _[e];
     }
     getCategoryRecord(e) {
-        if (e in E && E[e].type === l.Dd.CATEGORY) {
+        if (e in _ && _[e].type === l.Dd.CATEGORY) {
             var t, n;
             return (
-                (t = E[e]),
+                (t = _[e]),
                 (0, d.kt)({
                     id: t.id,
                     name: null !== (n = t.nickname) && void 0 !== n ? n : '',
-                    type: _.d4z.GUILD_CATEGORY,
+                    type: f.d4z.GUILD_CATEGORY,
                     position: t.order,
-                    guild_id: _.I_8
+                    guild_id: f.I_8
                 })
             );
         }
@@ -65,7 +65,7 @@ class p extends (s = o.ZP.Store) {
     }
 }
 (a = 'FavoriteStore'),
-    (i = 'displayName') in (r = p)
+    (i = 'displayName') in (r = m)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -73,4 +73,4 @@ class p extends (s = o.ZP.Store) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = new p(u.Z, {}));
+    (t.Z = new m(u.Z, {}));

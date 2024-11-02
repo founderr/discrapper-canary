@@ -1,88 +1,88 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return g;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(442837),
-    i = n(481060),
-    r = n(430824),
-    l = n(496675),
+var r = n(442837),
+    l = n(481060),
+    s = n(430824),
+    a = n(496675),
     o = n(556012),
     c = n(273504),
     d = n(981631),
     u = n(590433),
-    _ = n(689938),
-    I = n(794078);
-function E(e) {
+    m = n(388032),
+    h = n(794078);
+function g(e) {
     var t;
-    let { action: n, triggerType: E, guildId: T, toggled: m, onToggleAction: N } = e,
-        S = (e) => () => N(e),
-        g = (0, o.c)(n.type, n, E),
-        h = null === (t = n.metadata) || void 0 === t ? void 0 : t.durationSeconds,
-        C = null != h ? (0, u.L9)(h) : null,
-        x = (0, a.e7)([l.Z, r.Z], () => l.Z.can(d.Plq.MODERATE_MEMBERS, r.Z.getGuild(T)), [T]);
-    if (null == g) return null;
-    let { headerText: p, descriptionText: R, icon: L } = g;
-    return (0, s.jsxs)('div', {
-        className: I.actionContainer,
+    let { action: n, triggerType: g, guildId: x, toggled: p, onToggleAction: f } = e,
+        C = (e) => () => f(e),
+        I = (0, o.c)(n.type, n, g),
+        _ = null === (t = n.metadata) || void 0 === t ? void 0 : t.durationSeconds,
+        N = null != _ ? (0, u.L9)(_) : null,
+        v = (0, r.e7)([a.Z, s.Z], () => a.Z.can(d.Plq.MODERATE_MEMBERS, s.Z.getGuild(x)), [x]);
+    if (null == I) return null;
+    let { headerText: T, descriptionText: j, icon: E } = I;
+    return (0, i.jsxs)('div', {
+        className: h.actionContainer,
         children: [
-            (0, s.jsx)('div', {
-                className: I.actionIconContainer,
-                children: (0, s.jsx)(L, {
+            (0, i.jsx)('div', {
+                className: h.actionIconContainer,
+                children: (0, i.jsx)(E, {
                     size: 'md',
                     color: 'currentColor',
-                    className: I.actionIcon
+                    className: h.actionIcon
                 })
             }),
-            (0, s.jsxs)('div', {
-                className: I.actionTextContainer,
+            (0, i.jsxs)('div', {
+                className: h.actionTextContainer,
                 children: [
-                    (0, s.jsx)(i.Heading, {
+                    (0, i.jsx)(l.Heading, {
                         variant: 'heading-sm/semibold',
-                        children: p
+                        children: T
                     }),
-                    (0, s.jsx)(i.Text, {
+                    (0, i.jsx)(l.Text, {
                         color: 'interactive-normal',
                         variant: 'text-xs/medium',
-                        children: R
+                        children: j
                     }),
-                    m &&
-                        (0, s.jsxs)(i.Text, {
+                    p &&
+                        (0, i.jsxs)(l.Text, {
                             color: 'interactive-normal',
                             variant: 'text-xs/medium',
                             children: [
                                 (function (e, t) {
                                     if (null === t) return null;
-                                    if (e === c.fX.MENTION_SPAM) return _.Z.Messages.GUILD_AUTOMOD_ACTIONS_TIMEOUT_EDIT_HELPER_MENTION_SPAM.format({ friendlyDurationString: t });
-                                    return _.Z.Messages.GUILD_AUTOMOD_ACTIONS_TIMEOUT_EDIT_HELPER.format({ friendlyDurationString: t });
-                                })(E, C),
-                                x &&
-                                    (0, s.jsx)(i.Clickable, {
-                                        onClick: S(!0),
-                                        className: I.editChannel,
+                                    if (e === c.fX.MENTION_SPAM) return m.intl.format(m.t.i3lsKC, { friendlyDurationString: t });
+                                    return m.intl.format(m.t.mvHxzc, { friendlyDurationString: t });
+                                })(g, N),
+                                v &&
+                                    (0, i.jsx)(l.Clickable, {
+                                        onClick: C(!0),
+                                        className: h.editChannel,
                                         tag: 'span',
                                         role: 'link',
-                                        children: _.Z.Messages.GUILD_AUTOMOD_ACTIONS_TIMEOUT_UPDATE_DURATION
+                                        children: m.intl.string(m.t['0B95RE'])
                                     })
                             ]
                         })
                 ]
             }),
-            (0, s.jsx)(i.Tooltip, {
-                text: _.Z.Messages.GUILD_AUTOMOD_MISSING_TIMEOUT_PERMISSIONS.format(),
-                'aria-label': _.Z.Messages.GUILD_AUTOMOD_MISSING_TIMEOUT_PERMISSIONS.plainFormat(),
-                shouldShow: !x,
+            (0, i.jsx)(l.Tooltip, {
+                text: m.intl.format(m.t.wx6Vb2, {}),
+                'aria-label': m.intl.formatToMarkdownString(m.t.wx6Vb2, {}),
+                shouldShow: !v,
                 children: (e) =>
-                    (0, s.jsx)('div', {
+                    (0, i.jsx)('div', {
                         ...e,
-                        children: (0, s.jsx)(i.Checkbox, {
-                            type: i.Checkbox.Types.INVERTED,
-                            value: m,
-                            onChange: S(!1),
-                            disabled: !x,
-                            className: I.__invalid_actionCheckbox
+                        children: (0, i.jsx)(l.Checkbox, {
+                            type: l.Checkbox.Types.INVERTED,
+                            value: p,
+                            onChange: C(!1),
+                            disabled: !v,
+                            className: h.__invalid_actionCheckbox
                         })
                     })
             })

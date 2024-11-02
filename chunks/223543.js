@@ -1,16 +1,16 @@
-var s = n(200651),
+var i = n(200651),
     r = n(192379),
-    i = n(442837),
+    s = n(442837),
     a = n(893776),
     l = n(129293),
     o = n(388905),
     c = n(108427),
     u = n(314897),
-    d = n(689938),
-    _ = n(113207);
+    d = n(388032),
+    h = n(113207);
 t.Z = (e) => {
     let { location: t } = e,
-        { verifyFailed: h, verifySucceeded: E } = (0, i.cj)([u.default], () => ({
+        { verifyFailed: g, verifySucceeded: m } = (0, s.cj)([u.default], () => ({
             verifyFailed: u.default.didVerifyFail(),
             verifySucceeded: u.default.didVerifySucceed()
         }));
@@ -18,43 +18,43 @@ t.Z = (e) => {
         let e = (0, l.Z)(t);
         null != e && a.Z.authorizePayment(e), (0, c.e)('authorize_payment');
     }, [t]),
-    h)
-        ? (0, s.jsxs)(o.ZP, {
+    g)
+        ? (0, i.jsxs)(o.ZP, {
               children: [
-                  (0, s.jsx)('img', {
+                  (0, i.jsx)('img', {
                       alt: '',
                       src: n(375673),
-                      className: _.marginBottom20
+                      className: h.marginBottom20
                   }),
-                  (0, s.jsx)(o.Dx, {
-                      className: _.marginBottom8,
-                      children: d.Z.Messages.PAYMENT_AUTHORIZATION_EXPIRED
+                  (0, i.jsx)(o.Dx, {
+                      className: h.marginBottom8,
+                      children: d.intl.string(d.t.GHRpub)
                   }),
-                  (0, s.jsx)(o.DK, {
-                      className: _.marginBottom40,
-                      children: d.Z.Messages.PAYMENT_AUTH_EXPIRED_SUGGESTION
+                  (0, i.jsx)(o.DK, {
+                      className: h.marginBottom40,
+                      children: d.intl.string(d.t['1nO55u'])
                   })
               ]
           })
-        : E
-          ? (0, s.jsxs)(o.ZP, {
+        : m
+          ? (0, i.jsxs)(o.ZP, {
                 children: [
-                    (0, s.jsx)('img', {
+                    (0, i.jsx)('img', {
                         alt: '',
                         src: n(73962),
-                        className: _.marginBottom20
+                        className: h.marginBottom20
                     }),
-                    (0, s.jsx)(o.Dx, {
-                        className: _.marginBottom8,
-                        children: d.Z.Messages.PAYMENT_AUTHORIZATION_SUCCEEDED
+                    (0, i.jsx)(o.Dx, {
+                        className: h.marginBottom8,
+                        children: d.intl.string(d.t['ihHX5+'])
                     }),
-                    (0, s.jsx)(o.DK, {
-                        className: _.marginBottom40,
-                        children: d.Z.Messages.PAYMENT_AUTHORIZED_SUCCEEDED_SUGGESTION
+                    (0, i.jsx)(o.DK, {
+                        className: h.marginBottom40,
+                        children: d.intl.string(d.t.pGPCv7)
                     })
                 ]
             })
-          : (0, s.jsxs)(o.ZP, {
-                children: [(0, s.jsx)(o.Hh, {}), (0, s.jsx)(o.Dx, { children: d.Z.Messages.PAYMENT_AUTHORIZING })]
+          : (0, i.jsxs)(o.ZP, {
+                children: [(0, i.jsx)(o.Hh, {}), (0, i.jsx)(o.Dx, { children: d.intl.string(d.t.T3vC7u) })]
             });
 };

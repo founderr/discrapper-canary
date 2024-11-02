@@ -1,6 +1,6 @@
 n.d(t, {
     I: function () {
-        return E;
+        return _;
     },
     O: function () {
         return a;
@@ -73,11 +73,11 @@ function d(e) {
             return { signDisplay: 'never' };
     }
 }
-function _(e) {
+function f(e) {
     var t = d(e);
     return t ? t : {};
 }
-function E(e) {
+function _(e) {
     for (var t = {}, n = 0; n < e.length; n++) {
         var i = e[n];
         switch (i.stem) {
@@ -115,7 +115,7 @@ function E(e) {
                 t = (0, r.pi)(
                     (0, r.pi)((0, r.pi)({}, t), { notation: 'scientific' }),
                     i.options.reduce(function (e, t) {
-                        return (0, r.pi)((0, r.pi)({}, e), _(t));
+                        return (0, r.pi)((0, r.pi)({}, e), f(t));
                     }, {})
                 );
                 continue;
@@ -123,7 +123,7 @@ function E(e) {
                 t = (0, r.pi)(
                     (0, r.pi)((0, r.pi)({}, t), { notation: 'engineering' }),
                     i.options.reduce(function (e, t) {
-                        return (0, r.pi)((0, r.pi)({}, e), _(t));
+                        return (0, r.pi)((0, r.pi)({}, e), f(t));
                     }, {})
                 );
                 continue;
@@ -193,9 +193,9 @@ function E(e) {
             t = (0, r.pi)((0, r.pi)({}, t), c(i.stem));
             continue;
         }
-        var E = d(i.stem);
-        E && (t = (0, r.pi)((0, r.pi)({}, t), E));
-        var f = (function (e) {
+        var _ = d(i.stem);
+        _ && (t = (0, r.pi)((0, r.pi)({}, t), _));
+        var h = (function (e) {
             var t;
             if (('E' === e[0] && 'E' === e[1] ? ((t = { notation: 'engineering' }), (e = e.slice(2))) : 'E' === e[0] && ((t = { notation: 'scientific' }), (e = e.slice(1))), t)) {
                 var n = e.slice(0, 2);
@@ -204,7 +204,7 @@ function E(e) {
             }
             return t;
         })(i.stem);
-        f && (t = (0, r.pi)((0, r.pi)({}, t), f));
+        h && (t = (0, r.pi)((0, r.pi)({}, t), h));
     }
     return t;
 }

@@ -12,36 +12,36 @@ n.d(t, {
         return a;
     }
 });
-var s,
+var i,
     r,
-    i = n(689938);
+    s = n(388032);
 let a = 'emails';
-((s = r || (r = {})).COMMUNICATION = 'communication'), (s.SOCIAL = 'social'), (s.TIPS = 'tips'), (s.RECOMMENDATIONS_AND_EVENTS = 'recommendations_and_events'), (s.UPDATES_AND_ANNOUNCEMENTS = 'updates_and_announcements'), (s.FAMILY_CENTER_DIGEST = 'family_center_digest');
+((i = r || (r = {})).COMMUNICATION = 'communication'), (i.SOCIAL = 'social'), (i.TIPS = 'tips'), (i.RECOMMENDATIONS_AND_EVENTS = 'recommendations_and_events'), (i.UPDATES_AND_ANNOUNCEMENTS = 'updates_and_announcements'), (i.FAMILY_CENTER_DIGEST = 'family_center_digest');
 let l = ['tips', 'recommendations_and_events', 'updates_and_announcements'],
     o = [
         {
             category: 'communication',
-            label: () => i.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_COMMUNICATION,
-            subLabel: () => i.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_COMMUNICATION_SUBLABEL
+            label: () => s.intl.string(s.t['B75+xc']),
+            subLabel: () => s.intl.string(s.t.ZHg9TU)
         },
         {
             category: 'social',
-            label: () => i.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_SOCIAL,
-            subLabel: () => i.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_SOCIAL_SUBLABEL
+            label: () => s.intl.string(s.t.sxn7lZ),
+            subLabel: () => s.intl.string(s.t.l7sdzM)
         },
         {
             category: 'updates_and_announcements',
-            label: () => i.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_UPDATES_AND_ANNOUNCEMENTS,
-            subLabel: () => i.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_UPDATES_AND_ANNOUNCEMENTS_SUBLABEL
+            label: () => s.intl.string(s.t.EkxXhY),
+            subLabel: () => s.intl.string(s.t['8ba9Q0'])
         },
         {
             category: 'tips',
-            label: () => i.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_TIPS,
-            subLabel: () => i.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_TIPS_SUBLABEL
+            label: () => s.intl.string(s.t.jNrkrK),
+            subLabel: () => s.intl.string(s.t['FF6/+P'])
         },
         {
             category: 'recommendations_and_events',
-            label: () => i.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_RECOMMENDATIONS_AND_EVENTS,
-            subLabel: () => i.Z.Messages.USER_SETTINGS_EMAIL_CATEGORY_RECOMMENDATIONS_AND_EVENTS_SUBLABEL
+            label: () => s.intl.string(s.t.E8g1l5),
+            subLabel: () => s.intl.string(s.t.X4JMt7)
         }
     ];

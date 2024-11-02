@@ -27,21 +27,21 @@ let u = {
         SIZE_36: l.size36
     };
 function d(e) {
-    let { className: t, tooltip: n, color: i, size: u = c.SIZE_32, icon: d, onClick: _, disabled: E, focusProps: f } = e;
+    let { className: t, tooltip: n, color: i, size: u = c.SIZE_32, icon: d, onClick: f, disabled: _, focusProps: h } = e;
     return (0, r.jsx)(o.u, {
         text: n,
-        shouldShow: !E,
+        shouldShow: !_,
         children: (e) => {
             let { onClick: o, ...c } = e;
             return (0, r.jsx)(s.P, {
                 ...c,
                 'aria-label': n,
-                'aria-disabled': E,
-                className: a()(t, l.button, i, u, { [l.disabled]: E }),
+                'aria-disabled': _,
+                className: a()(t, l.button, i, u, { [l.disabled]: _ }),
                 onClick: (e) => {
-                    null == o || o(), _(e);
+                    null == o || o(), f(e);
                 },
-                focusProps: f,
+                focusProps: h,
                 children: d
             });
         }

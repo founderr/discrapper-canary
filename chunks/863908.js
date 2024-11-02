@@ -5,27 +5,27 @@ n.d(t, {
 });
 var r = n(5192),
     i = n(981631),
-    a = n(689938);
+    a = n(388032);
 function s(e, t, n, s) {
     if (e.state === i.jm8.RECONNECTING)
         return {
-            mainText: a.Z.Messages.STREAM_RECONNECTING_ERROR,
-            supportingText: a.Z.Messages.STREAM_RECONNECTING_ERROR_SUBTEXT
+            mainText: a.intl.string(a.t.pdFFKy),
+            supportingText: a.intl.string(a.t['+PuO2N'])
         };
     if (e.state === i.jm8.PAUSED)
         return n
             ? {
-                  mainText: a.Z.Messages.STREAM_CAPTURE_PAUSED,
-                  supportingText: a.Z.Messages.STREAM_CAPTURE_PAUSED_DETAILS
+                  mainText: a.intl.string(a.t['5q17w8']),
+                  supportingText: a.intl.string(a.t.LV1NSE)
               }
             : {
-                  mainText: a.Z.Messages.STREAM_CAPTURE_PAUSED,
-                  supportingText: a.Z.Messages.STREAM_CAPTURE_PAUSED_DETAILS_VIEWER.format({ username: r.ZP.getName(e.guildId, e.channelId, t) })
+                  mainText: a.intl.string(a.t['5q17w8']),
+                  supportingText: a.intl.formatToPlainString(a.t.meVVlZ, { username: r.ZP.getName(e.guildId, e.channelId, t) })
               };
     return s
         ? {
-              mainText: a.Z.Messages.STREAM_PREVIEW_PAUSED,
-              supportingText: a.Z.Messages.STREAM_PREVIEW_PAUSED_SUBTEXT
+              mainText: a.intl.string(a.t.JmaKtL),
+              supportingText: a.intl.string(a.t['hC3+BA'])
           }
         : null;
 }

@@ -3,7 +3,7 @@ n.d(t, {
         return i;
     }
 });
-var r = n(689938);
+var r = n(388032);
 function i(e) {
-    return null != e && '' !== e ? e : r.Z.Messages.EMBEDDED_ACTIVITIES_IN_ACTIVITY;
+    return null != e && '' !== e ? e : r.intl.string(r.t['2YCamp']);
 }

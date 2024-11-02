@@ -1,71 +1,71 @@
-t.r(n),
-    t.d(n, {
+e.r(n),
+    e.d(n, {
         default: function () {
             return r;
         }
     });
-var s = t(200651);
-t(192379);
-var o = t(481060),
-    a = t(536442),
-    i = t(13140),
-    d = t(487029),
-    c = t(689938),
-    l = t(243984);
-function r(e) {
-    let { guildId: n, channel: r, keybind: _, transitionState: u, onClose: h } = e;
-    function D() {
-        (0, a.Kw)(a.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL), h();
+var o = e(200651);
+e(192379);
+var i = e(481060),
+    s = e(536442),
+    l = e(13140),
+    a = e(487029),
+    d = e(388032),
+    c = e(243984);
+function r(t) {
+    let { guildId: n, channel: r, keybind: u, transitionState: h, onClose: k } = t;
+    function b() {
+        (0, s.Kw)(s.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL), k();
     }
-    function O() {
-        D(),
-            (0, o.openModalLazy)(async () => {
-                let { default: e } = await t.e('58120').then(t.bind(t, 355453));
-                return (n) => (0, s.jsx)(e, { ...n });
+    function x() {
+        b(),
+            (0, i.openModalLazy)(async () => {
+                let { default: t } = await e.e('58120').then(e.bind(e, 355453));
+                return (n) => (0, o.jsx)(t, { ...n });
             });
     }
-    return (0, s.jsxs)(o.ModalRoot, {
-        transitionState: u,
-        'aria-label': c.Z.Messages.SOUNDBOARD_SOUND_WHEEL_EDUCATION_MODAL_HEADER,
+    return (0, o.jsxs)(i.ModalRoot, {
+        transitionState: h,
+        'aria-label': d.intl.string(d.t['yJeV5+']),
         children: [
-            (0, s.jsxs)(o.ModalContent, {
-                className: l.content,
+            (0, o.jsxs)(i.ModalContent, {
+                className: c.content,
                 children: [
-                    (0, s.jsx)(o.Heading, {
+                    (0, o.jsx)(i.Heading, {
                         variant: 'heading-xl/extrabold',
-                        className: l.header,
-                        children: c.Z.Messages.SOUNDBOARD_SOUND_WHEEL_EDUCATION_MODAL_HEADER
+                        className: c.header,
+                        children: d.intl.string(d.t['yJeV5+'])
                     }),
-                    (0, s.jsx)(o.Text, {
+                    (0, o.jsx)(i.Text, {
                         variant: 'text-md/normal',
-                        children: c.Z.Messages.SOUNDBOARD_SOUND_WHEEL_EDUCATION_MODAL_BODY.format({
-                            keybind: (0, i.BB)(_.shortcut, !0).split(' + '),
-                            keybindHook: (e, n) =>
-                                (0, s.jsx)(
+                        children: d.intl.format(d.t.fq3Sw8, {
+                            keybind: (0, l.BB)(u.shortcut, !0).split(' + '),
+                            keybindHook: (t, n) =>
+                                (0, o.jsx)(
                                     'span',
                                     {
-                                        className: l.keybindHintKeys,
-                                        children: (0, s.jsx)(o.KeyCombo, {
-                                            className: l.keybindShortcut,
-                                            shortcut: (0, i.BB)(_.shortcut, !1)
+                                        className: c.keybindHintKeys,
+                                        children: (0, o.jsx)(i.KeyCombo, {
+                                            className: c.keybindShortcut,
+                                            shortcut: (0, l.BB)(u.shortcut, !1)
                                         })
                                     },
                                     n
                                 ),
-                            openSettingsHook: (e, n) =>
-                                (0, s.jsx)(
-                                    o.Anchor,
+                            openSettingsHook: (t, n) =>
+                                (0, o.jsx)(
+                                    i.Anchor,
                                     {
-                                        onClick: O,
-                                        children: e
+                                        onClick: x,
+                                        children: t
                                     },
                                     n
                                 )
                         })
                     }),
-                    (0, s.jsx)('div', {
-                        className: l.soundWheel,
-                        children: (0, s.jsx)(d.Z, {
+                    (0, o.jsx)('div', {
+                        className: c.soundWheel,
+                        children: (0, o.jsx)(a.Z, {
                             width: 372,
                             height: 316,
                             guildId: n,
@@ -78,23 +78,23 @@ function r(e) {
                     })
                 ]
             }),
-            (0, s.jsxs)(o.ModalFooter, {
+            (0, o.jsxs)(i.ModalFooter, {
                 children: [
-                    (0, s.jsx)(o.Button, {
-                        onClick: D,
-                        children: c.Z.Messages.SOUNDBOARD_SOUND_WHEEL_EDUCATION_MODAL_CONFIRM
+                    (0, o.jsx)(i.Button, {
+                        onClick: b,
+                        children: d.intl.string(d.t.ZwRzIC)
                     }),
-                    (0, s.jsx)(o.Button, {
-                        look: o.Button.Looks.LINK,
-                        color: o.Button.Colors.PRIMARY,
-                        onClick: O,
-                        children: c.Z.Messages.SOUNDBOARD_SOUND_WHEEL_EDUCATION_MODAL_EDIT_KEYBIND
+                    (0, o.jsx)(i.Button, {
+                        look: i.Button.Looks.LINK,
+                        color: i.Button.Colors.PRIMARY,
+                        onClick: x,
+                        children: d.intl.string(d.t['TJ0N9/'])
                     })
                 ]
             }),
-            (0, s.jsx)(o.ModalCloseButton, {
-                className: l.closeButton,
-                onClick: D
+            (0, o.jsx)(i.ModalCloseButton, {
+                className: c.closeButton,
+                onClick: b
             })
         ]
     });

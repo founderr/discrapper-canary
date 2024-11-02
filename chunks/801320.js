@@ -1,85 +1,85 @@
 n.r(t),
     n.d(t, {
         VideoBackgroundIssue: function () {
-            return s;
+            return a;
         },
         default: function () {
-            return C;
+            return x;
         }
     });
-var a,
-    s,
-    l = n(200651),
+var l,
+    a,
+    i = n(200651),
     o = n(192379),
     r = n(481060),
-    i = n(332664),
+    s = n(332664),
     c = n(142497),
     u = n(626135),
     d = n(981631),
-    _ = n(190378),
-    E = n(689938);
-((a = s || (s = {})).BAD_OUTLINE = 'BAD_OUTLINE'), (a.BACKGROUND_DETECTION_ACCURACY = 'BACKGROUND_DETECTION_ACCURACY'), (a.FLICKERING = 'FLICKERING'), (a.BACKGROUND_DETECTION_LAG = 'BACKGROUND_DETECTION_LAG'), (a.OTHER = 'OTHER');
-let b = ['OTHER'];
-function C(e) {
-    let { analyticsData: t, transitionState: a, onClose: s } = e;
+    b = n(190378),
+    m = n(388032);
+((l = a || (a = {})).BAD_OUTLINE = 'BAD_OUTLINE'), (l.BACKGROUND_DETECTION_ACCURACY = 'BACKGROUND_DETECTION_ACCURACY'), (l.FLICKERING = 'FLICKERING'), (l.BACKGROUND_DETECTION_LAG = 'BACKGROUND_DETECTION_LAG'), (l.OTHER = 'OTHER');
+let f = ['OTHER'];
+function x(e) {
+    let { analyticsData: t, transitionState: l, onClose: a } = e;
     return (
         o.useEffect(() => {
             u.default.track(d.rMx.OPEN_MODAL, { type: 'Video Background Feedback' });
         }, []),
-        (0, l.jsx)(i.Z, {
+        (0, i.jsx)(s.Z, {
             modalType: 'video_background',
-            header: E.Z.Messages.VIDEO_BACKGROUND_FEEDBACK_HEADER,
-            body: E.Z.Messages.VIDEO_BACKGROUND_FEEDBACK_BODY,
-            problemTitle: E.Z.Messages.VIDEO_BACKGROUND_FEEDBACK_PROBLEM_TITLE,
+            header: m.intl.string(m.t.Wl8qXl),
+            body: m.intl.string(m.t.vPw6j4),
+            problemTitle: m.intl.string(m.t['UNFF8/']),
             problems: [
                 {
                     value: 'BAD_OUTLINE',
-                    label: E.Z.Messages.VIDEO_BACKGROUND_FEEDBACK_OPTION_BAD_OUTLINE
+                    label: m.intl.string(m.t.pyhS3t)
                 },
                 {
                     value: 'BACKGROUND_DETECTION_ACCURACY',
-                    label: E.Z.Messages.VIDEO_BACKGROUND_FEEDBACK_OPTION_BACKGROUND_DETECTION_ACCURACY
+                    label: m.intl.string(m.t.cymRTU)
                 },
                 {
                     value: 'FLICKERING',
-                    label: E.Z.Messages.VIDEO_BACKGROUND_FEEDBACK_OPTION_FLICKERING
+                    label: m.intl.string(m.t.xZ60CA)
                 },
                 {
                     value: 'BACKGROUND_DETECTION_LAG',
-                    label: E.Z.Messages.VIDEO_BACKGROUND_FEEDBACK_OPTION_BACKGROUND_DETECTION_LAG
+                    label: m.intl.string(m.t.DweTcX)
                 },
                 {
                     value: 'OTHER',
-                    label: E.Z.Messages.CALL_FEEDBACK_OPTION_OTHER
+                    label: m.intl.string(m.t['emlT9/'])
                 }
             ],
-            feedbackProblems: b,
+            feedbackProblems: f,
             onSubmit: function (e) {
-                var a, s, o, i;
-                let { rating: b, problem: C, dontShowAgain: O, feedback: N } = e;
-                if ((O && (0, c.Kw)(_.v.VIDEO_BACKGROUND_FEEDBACK), null != b))
-                    (a = b),
-                        (s = C),
-                        (o = N),
-                        (i = t),
+                var l, a, o, s;
+                let { rating: f, problem: x, dontShowAgain: C, feedback: h } = e;
+                if ((C && (0, c.Kw)(b.v.VIDEO_BACKGROUND_FEEDBACK), null != f))
+                    (l = f),
+                        (a = x),
+                        (o = h),
+                        (s = t),
                         u.default.track(d.rMx.VIDEO_BACKGROUND_FEEDBACK, {
-                            ...i,
-                            reason: s,
-                            rating: a,
+                            ...s,
+                            reason: a,
+                            rating: l,
                             feedback: o
                         }),
-                        null != C &&
+                        null != x &&
                             (0, r.openModalLazy)(async () => {
                                 let { default: e } = await n.e('14466').then(n.bind(n, 729328));
                                 return (t) =>
-                                    (0, l.jsx)(e, {
-                                        body: E.Z.Messages.VIDEO_BACKGROUND_ISSUE_REPORTED_BODY,
+                                    (0, i.jsx)(e, {
+                                        body: m.intl.string(m.t.aHB11d),
                                         ...t
                                     });
                             });
             },
-            onClose: s,
-            transitionState: a,
+            onClose: a,
+            transitionState: l,
             otherKey: 'OTHER'
         })
     );

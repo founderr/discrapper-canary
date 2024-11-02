@@ -7,16 +7,16 @@ var r = n(192379),
     u = n(705513),
     c = n(877837),
     d = n(214811),
-    _ = function (e) {
+    f = function (e) {
         var t = e.width,
             n = e.height,
             i = e.onChange,
             a = e.onSwatchHover,
             u = e.colors,
-            _ = e.hex,
-            E = e.styles,
-            f = e.className,
-            h = (0, s.default)(
+            f = e.hex,
+            _ = e.styles,
+            h = e.className,
+            p = (0, s.default)(
                 (0, l.Z)(
                     {
                         default: {
@@ -32,10 +32,10 @@ var r = n(192379),
                             clear: { clear: 'both' }
                         }
                     },
-                    void 0 === E ? {} : E
+                    void 0 === _ ? {} : _
                 )
             ),
-            p = function (e, t) {
+            m = function (e, t) {
                 return i(
                     {
                         hex: e,
@@ -47,40 +47,40 @@ var r = n(192379),
         return r.createElement(
             'div',
             {
-                style: h.picker,
-                className: 'swatches-picker ' + (void 0 === f ? '' : f)
+                style: p.picker,
+                className: 'swatches-picker ' + (void 0 === h ? '' : h)
             },
             r.createElement(
                 c.xZ,
                 null,
                 r.createElement(
                     'div',
-                    { style: h.overflow },
+                    { style: p.overflow },
                     r.createElement(
                         'div',
-                        { style: h.body },
+                        { style: p.body },
                         (0, o.Z)(u, function (e) {
                             return r.createElement(d.Z, {
                                 key: e.toString(),
                                 group: e,
-                                active: _,
-                                onClick: p,
+                                active: f,
+                                onClick: m,
                                 onSwatchHover: a
                             });
                         }),
-                        r.createElement('div', { style: h.clear })
+                        r.createElement('div', { style: p.clear })
                     )
                 )
             )
         );
     };
-(_.propTypes = {
+(f.propTypes = {
     width: a().oneOfType([a().string, a().number]),
     height: a().oneOfType([a().string, a().number]),
     colors: a().arrayOf(a().arrayOf(a().string)),
     styles: a().object
 }),
-    (_.defaultProps = {
+    (f.defaultProps = {
         width: 320,
         height: 240,
         colors: [
@@ -106,4 +106,4 @@ var r = n(192379),
         ],
         styles: {}
     }),
-    (0, c.t1)(_);
+    (0, c.t1)(f);

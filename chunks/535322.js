@@ -3,7 +3,7 @@ n.d(t, {
         return d;
     },
     Z: function () {
-        return _;
+        return f;
     }
 });
 var r = n(200651);
@@ -13,7 +13,7 @@ var i = n(120356),
     s = n(481060),
     o = n(325767),
     l = n(645652),
-    u = n(689938),
+    u = n(388032),
     c = n(156758);
 function d(e) {
     return (0, r.jsx)('svg', {
@@ -29,7 +29,7 @@ function d(e) {
         })
     });
 }
-function _(e) {
+function f(e) {
     let { className: t, forceUseColorForSparkles: n = !1, shouldInheritTextColor: i = !1, shouldInheritBackgroundColor: o = !1 } = e;
     return (0, r.jsx)(l.Z, {
         className: t,
@@ -40,7 +40,7 @@ function _(e) {
                 [c.inheritTextColor]: i,
                 [c.inheritBackgroundColor]: o
             }),
-            text: u.Z.Messages.NEW
+            text: u.intl.string(u.t.y2b7CA)
         })
     });
 }

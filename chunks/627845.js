@@ -1,6 +1,6 @@
 n.d(t, {
     b: function () {
-        return T;
+        return v;
     }
 });
 var r = n(200651);
@@ -13,19 +13,19 @@ var i = n(481060),
     u = n(857595),
     c = n(607070),
     d = n(981631);
-let _ = window.matchMedia('(prefers-reduced-motion: reduce)'),
-    E = window.matchMedia('(prefers-contrast: more)'),
-    f = window.matchMedia('(prefers-contrast: less)'),
-    h = window.matchMedia('(prefers-color-scheme: dark)'),
-    p = window.matchMedia('(prefers-color-scheme: light)'),
-    I = window.matchMedia('(forced-colors: active)'),
-    m = 5;
-function T() {
+let f = window.matchMedia('(prefers-reduced-motion: reduce)'),
+    _ = window.matchMedia('(prefers-contrast: more)'),
+    h = window.matchMedia('(prefers-contrast: less)'),
+    p = window.matchMedia('(prefers-color-scheme: dark)'),
+    m = window.matchMedia('(prefers-color-scheme: light)'),
+    g = window.matchMedia('(forced-colors: active)'),
+    E = 5;
+function v() {
     return 'windows' === (0, l.getOS)();
 }
 t.Z = {
     initBasic() {
-        _.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(_), h.addListener(this.handleSystemColorPreferencesChanged), p.addListener(this.handleSystemColorPreferencesChanged), I.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), E.addListener(this.handleSystemPrefersContrastChanged), f.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged();
+        f.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(f), p.addListener(this.handleSystemColorPreferencesChanged), m.addListener(this.handleSystemColorPreferencesChanged), g.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), _.addListener(this.handleSystemPrefersContrastChanged), h.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged();
     },
     init() {
         this.initBasic(),
@@ -37,13 +37,13 @@ t.Z = {
             });
     },
     maybeShowKeyboardNavigationExplainerModal() {
-        (m = Math.max(m - 1, 0)),
+        (E = Math.max(E - 1, 0)),
             !(function () {
                 let e = s.default.getCurrentUser();
                 return null == e || Date.now() - +e.createdAt < 86400000;
             })() &&
                 !c.Z.keyboardNavigationExplainerModalSeen &&
-                0 === m &&
+                0 === E &&
                 (0, i.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([n.e('6380'), n.e('22583')]).then(n.bind(n, 461964));
                     return (t) => (0, r.jsx)(e, { ...t });
@@ -56,15 +56,15 @@ t.Z = {
     },
     handleSystemColorPreferencesChanged() {
         let e;
-        h.matches ? (e = d.BRd.DARK) : p.matches && (e = d.BRd.LIGHT);
-        let t = (!l.isPlatformEmbedded || T()) && I.matches ? 'active' : 'none';
+        p.matches ? (e = d.BRd.DARK) : m.matches && (e = d.BRd.LIGHT);
+        let t = (!l.isPlatformEmbedded || v()) && g.matches ? 'active' : 'none';
         a.Z.wait(() => {
             u.Ej(e, t);
         });
     },
     handleSystemPrefersContrastChanged() {
         let e = 'no-preference';
-        E.matches ? (e = 'more') : f.matches && (e = 'less'),
+        _.matches ? (e = 'more') : h.matches && (e = 'less'),
             a.Z.wait(() => {
                 u.TX(e);
             });

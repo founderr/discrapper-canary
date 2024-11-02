@@ -7,19 +7,19 @@ n.d(t, {
     }
 });
 var i = n(192379),
-    a = n(442837),
-    s = n(355298),
-    r = n(333984),
-    l = n(899740),
+    r = n(442837),
+    l = n(355298),
+    a = n(333984),
+    s = n(899740),
     o = n(355350);
 function c() {
-    let e = (0, l.q)(),
+    let e = (0, s.q)(),
         t = i.useRef(e),
-        n = (0, a.e7)([s.Z], () => s.Z.isReady()),
-        r = i.useRef(n);
+        n = (0, r.e7)([l.Z], () => l.Z.isReady()),
+        a = i.useRef(n);
     return (
         i.useEffect(() => {
-            n && !r.current && ((r.current = !0), (t.current = e));
+            n && !a.current && ((a.current = !0), (t.current = e));
         }, [n, e]),
         t.current <= 1 && 1 === e
     );
@@ -27,11 +27,11 @@ function c() {
 function d() {
     let e = (0, o.w)(),
         t = i.useRef(e),
-        n = (0, a.e7)([r.Z], () => r.Z.isReady()),
-        s = i.useRef(n);
+        n = (0, r.e7)([a.Z], () => a.Z.isReady()),
+        l = i.useRef(n);
     return (
         i.useEffect(() => {
-            n && !s.current && ((s.current = !0), (t.current = e));
+            n && !l.current && ((l.current = !0), (t.current = e));
         }, [n, e]),
         t.current <= 1 && 1 === e
     );

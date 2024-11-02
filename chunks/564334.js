@@ -95,28 +95,28 @@ class s {
                 u = Math.min(a, s, o),
                 c = l - u,
                 d = (l + u) / 2,
-                _ = c > 0 ? c / (1 - Math.abs(2 * d - 1)) : 0;
+                f = c > 0 ? c / (1 - Math.abs(2 * d - 1)) : 0;
             if (0 === c)
                 return {
                     hue: 0,
-                    saturation: _,
+                    saturation: f,
                     lightness: d,
                     alpha: i
                 };
-            let E = 0;
+            let _ = 0;
             switch (l) {
                 case a:
-                    E = ((s - o) / c) % 6;
+                    _ = ((s - o) / c) % 6;
                     break;
                 case s:
-                    E = (o - a) / c + 2;
+                    _ = (o - a) / c + 2;
                     break;
                 case o:
-                    E = (s - o) / c + 4;
+                    _ = (s - o) / c + 4;
             }
             return {
-                hue: 60 * E,
-                saturation: _,
+                hue: 60 * _,
+                saturation: f,
                 lightness: d,
                 alpha: i
             };

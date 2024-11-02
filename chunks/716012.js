@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     animation: 'animation_d6730d',
     modalContent: 'modalContent_d6730d',
     subheader: 'subheader_d6730d',

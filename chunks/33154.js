@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(47120);
 var i,
-    s,
-    o = n(200651),
-    a = n(192379),
+    o,
+    a = n(200651),
+    s = n(192379),
     l = n(442837),
     r = n(481060),
     c = n(749210),
@@ -15,74 +15,74 @@ var i,
     u = n(823379),
     h = n(41776),
     m = n(981631),
-    p = n(689938),
-    g = n(583694);
-((s = i || (i = {}))[(s.CHAT = 0)] = 'CHAT'), (s[(s.REACTIONS = 1)] = 'REACTIONS');
+    p = n(388032),
+    f = n(583694);
+((o = i || (i = {}))[(o.CHAT = 0)] = 'CHAT'), (o[(o.REACTIONS = 1)] = 'REACTIONS');
 t.Z = (e) => {
-    let { type: t, guild: i, closePopout: s, ctaRef: f } = e,
-        _ = (0, d.Dt)(),
-        [T, v] = a.useState(!1),
-        E = (0, l.e7)([h.Z], () => h.Z.isLurking(i.id), [i.id]);
-    a.useEffect(() => {
-        T && !E && s();
-    }, [T, E, s]);
-    let b = null,
-        I = p.Z.Messages.LURKER_MODE_POPOUT_UPSELL_BODY;
+    let { type: t, guild: i, closePopout: o, ctaRef: g } = e,
+        v = (0, d.Dt)(),
+        [b, T] = s.useState(!1),
+        x = (0, l.e7)([h.Z], () => h.Z.isLurking(i.id), [i.id]);
+    s.useEffect(() => {
+        b && !x && o();
+    }, [b, x, o]);
+    let _ = null,
+        S = p.intl.string(p.t.d7b1p6);
     switch (t) {
         case 0:
-            b = p.Z.Messages.LURKER_MODE_POPOUT_CHAT_HEADER;
+            _ = p.intl.string(p.t.Xiwf1d);
             break;
         case 1:
-            b = p.Z.Messages.LURKER_MODE_POPOUT_REACTIONS_HEADER;
+            _ = p.intl.string(p.t.GXvlU1);
             break;
         default:
             return (0, u.vE)(t);
     }
-    if (null == b) return null;
-    let R = async () => {
-        v(!0);
+    if (null == _) return null;
+    let C = async () => {
+        T(!0);
         try {
-            await c.Z.joinGuild(i.id, { source: m.vtS.CHAT_INPUT_BLOCKER }), s();
+            await c.Z.joinGuild(i.id, { source: m.vtS.CHAT_INPUT_BLOCKER }), o();
         } catch {
-            v(!1);
+            T(!1);
         }
     };
-    return (0, o.jsxs)(r.Dialog, {
-        className: g.container,
-        'aria-labelledby': _,
+    return (0, a.jsxs)(r.Dialog, {
+        className: f.container,
+        'aria-labelledby': v,
         children: [
-            (0, o.jsx)('img', {
+            (0, a.jsx)('img', {
                 alt: '',
-                className: g.image,
+                className: f.image,
                 src: n(64395)
             }),
-            (0, o.jsxs)('div', {
-                className: g.content,
+            (0, a.jsxs)('div', {
+                className: f.content,
                 children: [
-                    (0, o.jsx)(r.Heading, {
+                    (0, a.jsx)(r.Heading, {
                         variant: 'heading-md/semibold',
-                        id: _,
-                        children: b
+                        id: v,
+                        children: _
                     }),
-                    (0, o.jsx)(r.Text, {
+                    (0, a.jsx)(r.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: I
+                        children: S
                     }),
-                    (0, o.jsxs)('div', {
-                        className: g.buttonContainer,
+                    (0, a.jsxs)('div', {
+                        className: f.buttonContainer,
                         children: [
-                            (0, o.jsx)(r.Button, {
-                                buttonRef: f,
-                                onClick: R,
-                                submitting: T,
-                                children: p.Z.Messages.LURKER_MODE_POPOUT_JOIN
+                            (0, a.jsx)(r.Button, {
+                                buttonRef: g,
+                                onClick: C,
+                                submitting: b,
+                                children: p.intl.string(p.t['9VLmlZ'])
                             }),
-                            (0, o.jsx)(r.Button, {
-                                onClick: s,
+                            (0, a.jsx)(r.Button, {
+                                onClick: o,
                                 look: r.Button.Looks.BLANK,
-                                className: g.cancel,
-                                children: p.Z.Messages.LURKER_MODE_POPOUT_CANCEL
+                                className: f.cancel,
+                                children: p.intl.string(p.t['2m+Sqq'])
                             })
                         ]
                     })

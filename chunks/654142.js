@@ -3,22 +3,22 @@ var i = n(200651),
     l = n(192379),
     r = n(442837),
     a = n(239091),
-    s = n(749210),
-    o = n(905423),
+    o = n(749210),
+    s = n(905423),
     c = n(664915),
     u = n(888369),
     d = n(430824),
     h = n(823379),
     p = n(179809),
     f = n(652376),
-    _ = n(981631);
+    m = n(981631);
 t.Z = l.memo(function (e) {
-    let { folderNode: t, ...m } = e,
-        { id: g, name: C, color: I, children: E } = t,
-        N = E.map((e) => e.id),
-        x = (0, o.Z)((e) => e.guildId),
-        S = (0, r.e7)([c.Z], () => c.Z.isFolderExpanded(g)),
-        v = (function (e) {
+    let { folderNode: t, ...g } = e,
+        { id: C, name: _, color: x, children: v } = t,
+        I = v.map((e) => e.id),
+        b = (0, s.Z)((e) => e.guildId),
+        N = (0, r.e7)([c.Z], () => c.Z.isFolderExpanded(C)),
+        E = (function (e) {
             let t = e.children
                     .map((e) => {
                         let t = e.id,
@@ -26,45 +26,45 @@ t.Z = l.memo(function (e) {
                         return null != n ? n.name : null;
                     })
                     .filter(h.lm),
-                n = 2 * _.dYL,
+                n = 2 * m.dYL,
                 i = [];
             for (let e of t) (e.length < n || 0 === i.length) && (i.push(e), (n -= e.length));
             return ''.concat(i.join(', ')).concat(i.length < t.length ? ', ...' : '');
         })(t),
-        Z = (0, f.Z)(t),
-        { mentionCount: T, unread: b } = (0, r.cj)([u.default], () => ({
-            mentionCount: N.map((e) => u.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
-            unread: N.some((e) => u.default.hasUnread(e))
+        S = (0, f.Z)(t),
+        { mentionCount: Z, unread: y } = (0, r.cj)([u.default], () => ({
+            mentionCount: I.map((e) => u.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
+            unread: I.some((e) => u.default.hasUnread(e))
         })),
-        A = l.useCallback(() => {
-            s.Z.toggleGuildFolderExpand(g);
-        }, [g]),
-        M = l.useCallback(
+        T = l.useCallback(() => {
+            o.Z.toggleGuildFolderExpand(C);
+        }, [C]),
+        j = l.useCallback(
             (e) => {
                 (0, a.jW)(e, async () => {
                     let { default: e } = await n.e('52590').then(n.bind(n, 205784));
                     return (t) =>
                         (0, i.jsx)(e, {
                             ...t,
-                            folderId: g,
-                            folderName: C,
-                            folderColor: I,
-                            unread: b || T > 0
+                            folderId: C,
+                            folderName: _,
+                            folderColor: x,
+                            unread: y || Z > 0
                         });
                 });
             },
-            [g, C, I, b, T]
+            [C, _, x, y, Z]
         );
     return (0, i.jsx)(p.Z, {
-        ...m,
+        ...g,
         folderNode: t,
-        expanded: S,
-        selected: null != x && N.includes(x),
-        mentionCount: T,
-        unread: b,
-        mediaState: Z,
-        defaultFolderName: v,
-        onExpandCollapse: A,
-        onContextMenu: M
+        expanded: N,
+        selected: null != b && I.includes(b),
+        mentionCount: Z,
+        unread: y,
+        mediaState: S,
+        defaultFolderName: E,
+        onExpandCollapse: T,
+        onContextMenu: j
     });
 });

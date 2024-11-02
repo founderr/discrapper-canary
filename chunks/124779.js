@@ -1,35 +1,35 @@
-t.r(e),
-    t.d(e, {
+e.r(t),
+    e.d(t, {
         default: function () {
             return d;
         }
     });
-var i = t(200651);
-t(192379);
-var s = t(481060),
-    l = t(287734),
-    a = t(313201),
-    r = t(471253),
-    c = t(939863),
-    o = t(689938),
-    u = t(101957);
+var i = e(200651);
+e(192379);
+var l = e(481060),
+    r = e(287734),
+    c = e(313201),
+    o = e(471253),
+    a = e(939863),
+    s = e(388032),
+    u = e(101957);
 function d(n) {
-    let { channel: e, transitionState: t, onClose: d } = n,
-        _ = (0, a.Dt)();
-    function E() {
-        l.default.disconnect(), d();
+    let { channel: t, transitionState: e, onClose: d } = n,
+        _ = (0, c.Dt)();
+    function f() {
+        r.default.disconnect(), d();
     }
-    return (0, i.jsxs)(s.ModalRoot, {
-        transitionState: t,
+    return (0, i.jsxs)(l.ModalRoot, {
+        transitionState: e,
         'aria-labelledby': _,
         children: [
-            (0, i.jsxs)(s.ModalContent, {
+            (0, i.jsxs)(l.ModalContent, {
                 className: u.content,
                 children: [
-                    (0, i.jsx)(c.Z, {
+                    (0, i.jsx)(a.Z, {
                         children: (0, i.jsx)('div', {
                             className: u.iconBackground,
-                            children: (0, i.jsx)(s.StageXIcon, {
+                            children: (0, i.jsx)(l.StageXIcon, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 40,
@@ -38,35 +38,35 @@ function d(n) {
                             })
                         })
                     }),
-                    (0, i.jsx)(s.Heading, {
+                    (0, i.jsx)(l.Heading, {
                         id: _,
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
                         className: u.title,
-                        children: o.Z.Messages.EXPLICIT_END_STAGE_TITLE
+                        children: s.intl.string(s.t.pADdJi)
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, i.jsx)(l.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
                         className: u.subtitle,
-                        children: o.Z.Messages.EXPLICIT_END_STAGE_SUBTITLE
+                        children: s.intl.string(s.t.mT7jwM)
                     })
                 ]
             }),
-            (0, i.jsxs)(s.ModalFooter, {
+            (0, i.jsxs)(l.ModalFooter, {
                 children: [
-                    (0, i.jsx)(s.Button, {
-                        color: s.Button.Colors.RED,
+                    (0, i.jsx)(l.Button, {
+                        color: l.Button.Colors.RED,
                         onClick: function () {
-                            (0, r.NZ)(e), E();
+                            (0, o.NZ)(t), f();
                         },
-                        children: o.Z.Messages.EXPLICIT_END_STAGE_CONFIRM
+                        children: s.intl.string(s.t['sBP/1t'])
                     }),
-                    (0, i.jsx)(s.Button, {
-                        color: s.Button.Colors.PRIMARY,
+                    (0, i.jsx)(l.Button, {
+                        color: l.Button.Colors.PRIMARY,
                         className: u.cancelButton,
-                        onClick: E,
-                        children: o.Z.Messages.EXPLICIT_END_STAGE_CANCEL
+                        onClick: f,
+                        children: s.intl.string(s.t.xTwqz8)
                     })
                 ]
             })

@@ -1,101 +1,101 @@
 t(47120);
-var a = t(200651);
+var r = t(200651);
 t(192379);
-var r = t(120356),
-    i = t.n(r),
+var a = t(120356),
+    i = t.n(a),
     s = t(481060),
     o = t(18100),
     l = t(308083),
-    c = t(689938),
+    c = t(388032),
     d = t(602075);
 n.Z = (e) => {
-    var n, t, r;
-    let { guildId: u, handleUpdate: m, progress: _, errors: f } = e,
-        { wildcardDescriptors: C, description: h } = _,
-        x = (e, n) => {
-            let t = [...C];
+    var n, t, a;
+    let { guildId: u, handleUpdate: m, progress: f, errors: h } = e,
+        { wildcardDescriptors: x, description: p } = f,
+        g = (e, n) => {
+            let t = [...x];
             (t[n] = e), m({ wildcardDescriptors: t });
         };
-    return (0, a.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: d.slideContent,
         children: [
-            (0, a.jsx)(s.Heading, {
+            (0, r.jsx)(s.Heading, {
                 variant: 'heading-xxl/medium',
                 className: d.title,
-                children: c.Z.Messages.CLAN_SETUP_DESCRIPTION_TITLE
+                children: c.intl.string(c.t.pdVsBA)
             }),
-            (0, a.jsx)(s.Text, {
+            (0, r.jsx)(s.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
                 className: d.subtitle,
-                children: c.Z.Messages.CLAN_SETUP_DESCRIPTION_SUBTITLE
+                children: c.intl.string(c.t.E1L1o6)
             }),
-            (null == f ? void 0 : f.description) != null &&
-                (0, a.jsx)(s.Text, {
+            (null == h ? void 0 : h.description) != null &&
+                (0, r.jsx)(s.Text, {
                     variant: 'text-sm/normal',
                     color: 'status-danger',
                     className: d.errorText,
-                    children: f.description
+                    children: h.description
                 }),
-            (0, a.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: d.content,
                 children: [
-                    (0, a.jsxs)('div', {
+                    (0, r.jsxs)('div', {
                         className: d.mainPanelContainer,
                         children: [
-                            (0, a.jsx)('div', {
+                            (0, r.jsx)('div', {
                                 className: d.maxWidthContainer,
-                                children: (0, a.jsx)(s.TextArea, {
+                                children: (0, r.jsx)(s.TextArea, {
                                     className: d.input,
                                     maxLength: l.Us,
                                     onChange: (e) => m({ description: e }),
-                                    value: null != h ? h : '',
+                                    value: null != p ? p : '',
                                     rows: 5,
                                     autoFocus: !0,
                                     autosize: !0,
-                                    placeholder: c.Z.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER
+                                    placeholder: c.intl.string(c.t['/pfXKi'])
                                 })
                             }),
-                            (0, a.jsx)(s.Text, {
+                            (0, r.jsx)(s.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
                                 className: d.optionalTag,
-                                children: c.Z.Messages.CLAN_SETUP_OPTIONAL
+                                children: c.intl.string(c.t['vWEL6+'])
                             }),
-                            (0, a.jsx)(s.Text, {
+                            (0, r.jsx)(s.Text, {
                                 variant: 'text-md/normal',
                                 color: 'header-secondary',
                                 className: d.title,
-                                children: c.Z.Messages.CLAN_SETUP_WILDCARDS_SUBTITLE
+                                children: c.intl.string(c.t['2g9zfX'])
                             }),
-                            (null == f ? void 0 : f.wildcardDescriptors) != null &&
-                                (0, a.jsx)(s.Text, {
+                            (null == h ? void 0 : h.wildcardDescriptors) != null &&
+                                (0, r.jsx)(s.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'status-danger',
                                     className: d.errorText,
-                                    children: f.wildcardDescriptors
+                                    children: h.wildcardDescriptors
                                 }),
-                            (0, a.jsxs)('div', {
+                            (0, r.jsxs)('div', {
                                 className: d.wildcardRow,
                                 children: [
-                                    (0, a.jsx)(s.TextInput, {
+                                    (0, r.jsx)(s.TextInput, {
                                         inputClassName: i()(d.input, d.wildcardInput),
-                                        value: null !== (n = C[0]) && void 0 !== n ? n : '',
-                                        onChange: (e) => x(e, 0),
+                                        value: null !== (n = x[0]) && void 0 !== n ? n : '',
+                                        onChange: (e) => g(e, 0),
                                         maxLength: l.TY,
                                         placeholder: l.LK['0']
                                     }),
-                                    (0, a.jsx)(s.TextInput, {
+                                    (0, r.jsx)(s.TextInput, {
                                         inputClassName: i()(d.input, d.wildcardInput),
-                                        value: null !== (t = C[1]) && void 0 !== t ? t : '',
-                                        onChange: (e) => x(e, 1),
+                                        value: null !== (t = x[1]) && void 0 !== t ? t : '',
+                                        onChange: (e) => g(e, 1),
                                         maxLength: l.TY,
                                         placeholder: l.LK['1']
                                     }),
-                                    (0, a.jsx)(s.TextInput, {
+                                    (0, r.jsx)(s.TextInput, {
                                         inputClassName: i()(d.input, d.wildcardInput),
-                                        value: null !== (r = C[2]) && void 0 !== r ? r : '',
-                                        onChange: (e) => x(e, 2),
+                                        value: null !== (a = x[2]) && void 0 !== a ? a : '',
+                                        onChange: (e) => g(e, 2),
                                         maxLength: l.TY,
                                         placeholder: l.LK['2']
                                     })
@@ -103,11 +103,11 @@ n.Z = (e) => {
                             })
                         ]
                     }),
-                    (0, a.jsx)('div', {
+                    (0, r.jsx)('div', {
                         className: d.fixedWidthSidebar,
-                        children: (0, a.jsx)(o.Z, {
+                        children: (0, r.jsx)(o.Z, {
                             guildId: u,
-                            progress: _,
+                            progress: f,
                             maskTraits: !0
                         })
                     })

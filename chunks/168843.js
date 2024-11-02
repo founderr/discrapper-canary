@@ -5,30 +5,30 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(442837),
-    a = n(481060),
-    l = n(816782),
-    r = n(367907),
+var l = n(442837),
+    r = n(481060),
+    a = n(816782),
+    s = n(367907),
     o = n(433355),
     c = n(914010),
     u = n(665149),
     d = n(981631),
-    h = n(689938);
+    h = n(388032);
 function m(e) {
     let { channelId: t } = e,
-        n = (0, s.e7)([o.ZP], () => o.ZP.getSection(t)),
-        m = (0, s.e7)([c.Z], () => c.Z.getGuildId()),
+        n = (0, l.e7)([o.ZP], () => o.ZP.getSection(t)),
+        m = (0, l.e7)([c.Z], () => c.Z.getGuildId()),
         p = n === d.ULH.MEMBERS;
     return (0, i.jsx)(u.JO, {
-        tooltip: p ? h.Z.Messages.MEMBER_LIST_SHOWN : h.Z.Messages.MEMBER_LIST_HIDDEN,
-        icon: a.GroupIcon,
+        tooltip: p ? h.intl.string(h.t.Axvx8f) : h.intl.string(h.t.gxChDw),
+        icon: r.GroupIcon,
         onClick: () => {
-            r.ZP.trackWithMetadata(d.rMx.MEMBER_LIST_TOGGLED, {
+            s.ZP.trackWithMetadata(d.rMx.MEMBER_LIST_TOGGLED, {
                 channel_id: t,
                 guild_id: m,
                 member_list_open: !p
             }),
-                l.Z.toggleMembersSection();
+                a.Z.toggleMembersSection();
         },
         selected: p
     });

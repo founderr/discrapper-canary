@@ -9,8 +9,8 @@ var a = n(120356),
     l = n.n(a),
     i = n(481060),
     o = n(110478),
-    s = n(423932),
-    c = n(601948),
+    c = n(423932),
+    s = n(601948),
     d = n(594174),
     u = n(820756),
     h = n(113207);
@@ -47,7 +47,7 @@ function x() {
         children: [
             (0, r.jsx)('div', {
                 className: l()(u.buttonsContainer, h.marginBottom20),
-                children: (0, r.jsx)(c.S, { isDevTools: !0 })
+                children: (0, r.jsx)(s.S, { isDevTools: !0 })
             }),
             (0, r.jsx)('div', {
                 className: l()(u.buttonsContainer, h.marginBottom20),
@@ -59,7 +59,7 @@ function x() {
             (0, r.jsx)('div', {
                 className: l()(u.buttonsContainer, h.marginBottom20),
                 children: (0, r.jsx)(i.Button, {
-                    onClick: () => (0, s.Z)(),
+                    onClick: () => (0, c.Z)(),
                     children: 'Launch Vibing Wumpus'
                 })
             }),

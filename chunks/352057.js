@@ -1,6 +1,6 @@
 n.d(t, {
     h: function () {
-        return a;
+        return r;
     }
 });
 let i = (0, n(818083).B)({
@@ -16,8 +16,8 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function a(e) {
+function r(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        { enabled: a } = i.useExperiment({ location: t }, { autoTrackExposure: n });
-    return a;
+        { enabled: r } = i.useExperiment({ location: t }, { autoTrackExposure: n });
+    return r;
 }

@@ -1,18 +1,18 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return a;
     }
 }),
     n(47120);
-var s = n(192379),
-    a = n(768581),
-    i = n(776155),
-    r = n(981631);
-function l(e, t, n) {
-    var l, o;
-    let { isLoading: c, error: d, highlightedCreatorDetails: u } = (0, i.Z)(e),
-        _ = null == u ? void 0 : u.store_page,
-        I = s.useMemo(() => {
+var i = n(192379),
+    r = n(768581),
+    l = n(776155),
+    s = n(981631);
+function a(e, t, n) {
+    var a, o;
+    let { isLoading: c, error: d, highlightedCreatorDetails: u } = (0, l.Z)(e),
+        m = null == u ? void 0 : u.store_page,
+        h = i.useMemo(() => {
             var e, t;
             let n = (function (e) {
                     let t = new Set();
@@ -28,39 +28,39 @@ function l(e, t, n) {
                             }),
                         t
                     );
-                })(null == _ ? void 0 : null === (e = _.role_subscription) || void 0 === e ? void 0 : e.group_listings),
-                s = null == _ ? void 0 : null === (t = _.role_subscription) || void 0 === t ? void 0 : t.benefit_emojis;
-            return null == s ? void 0 : s.filter((e) => e.roles.some((e) => n.has(e)));
-        }, [null == _ ? void 0 : _.role_subscription]),
-        E = null == _ ? void 0 : _.guild.icon_hash,
-        T = a.ZP.getGuildIconURL({
+                })(null == m ? void 0 : null === (e = m.role_subscription) || void 0 === e ? void 0 : e.group_listings),
+                i = null == m ? void 0 : null === (t = m.role_subscription) || void 0 === t ? void 0 : t.benefit_emojis;
+            return null == i ? void 0 : i.filter((e) => e.roles.some((e) => n.has(e)));
+        }, [null == m ? void 0 : m.role_subscription]),
+        g = null == m ? void 0 : m.guild.icon_hash,
+        x = r.ZP.getGuildIconURL({
             id: e,
-            icon: E,
+            icon: g,
             size: n
         }),
-        m = s.useMemo(() => (null != I && I.length > t ? I.slice(0, t) : I), [I, t]),
-        N = null != I && I.length > t ? I.length - t : null,
-        S = null == u ? void 0 : u.slug,
-        g = null != S ? r.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(S) : void 0,
-        h = null == _ ? void 0 : null === (l = _.guild) || void 0 === l ? void 0 : l.name,
-        C = null == _ ? void 0 : null === (o = _.role_subscription) || void 0 === o ? void 0 : o.subscriber_count,
-        x = !c && null != h && null != E && null != T;
-    return x
+        p = i.useMemo(() => (null != h && h.length > t ? h.slice(0, t) : h), [h, t]),
+        f = null != h && h.length > t ? h.length - t : null,
+        C = null == u ? void 0 : u.slug,
+        I = null != C ? s.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(C) : void 0,
+        _ = null == m ? void 0 : null === (a = m.guild) || void 0 === a ? void 0 : a.name,
+        N = null == m ? void 0 : null === (o = m.role_subscription) || void 0 === o ? void 0 : o.subscriber_count,
+        v = !c && null != _ && null != g && null != x;
+    return v
         ? {
-              hasAllImperativeDetails: x,
+              hasAllImperativeDetails: v,
               isLoading: c,
               details: {
-                  guildName: h,
-                  guildIcon: E,
-                  guildAvatarUrl: T,
-                  storePageUrl: g,
-                  subscriberCount: C,
-                  emojisToShow: m,
-                  notShownEmojiCount: N
+                  guildName: _,
+                  guildIcon: g,
+                  guildAvatarUrl: x,
+                  storePageUrl: I,
+                  subscriberCount: N,
+                  emojisToShow: p,
+                  notShownEmojiCount: f
               }
           }
         : {
-              hasAllImperativeDetails: x,
+              hasAllImperativeDetails: v,
               isLoading: c,
               error: d
           };

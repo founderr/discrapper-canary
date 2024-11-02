@@ -1,32 +1,32 @@
-a.d(n, {
+t.d(e, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var t = a(200651);
-a(192379);
-var l = a(442837),
-    r = a(481060),
-    u = a(496675),
-    c = a(981631),
-    i = a(689938);
-function s(e, n) {
-    let s = (0, l.e7)([u.Z], () => u.Z.can(c.Plq.MANAGE_CHANNELS, e), [e]);
-    return __OVERLAY__ || !s
+var l = t(200651);
+t(192379);
+var a = t(442837),
+    i = t(481060),
+    r = t(496675),
+    u = t(981631),
+    c = t(388032);
+function o(n, e) {
+    let o = (0, a.e7)([r.Z], () => r.Z.can(u.Plq.MANAGE_CHANNELS, n), [n]);
+    return __OVERLAY__ || !o
         ? null
-        : (0, t.jsx)(r.MenuItem, {
+        : (0, l.jsx)(i.MenuItem, {
               id: 'clone-channel',
-              label: i.Z.Messages.CLONE_CHANNEL,
+              label: c.intl.string(c.t.dEaPc3),
               action: () =>
-                  (0, r.openModalLazy)(async () => {
-                      let { default: l } = await Promise.all([a.e('7590'), a.e('45094'), a.e('5769')]).then(a.bind(a, 218613));
-                      return (a) =>
-                          (0, t.jsx)(l, {
-                              ...a,
-                              channelType: e.type,
-                              guildId: n.id,
-                              categoryId: e.parent_id,
-                              cloneChannelId: e.id
+                  (0, i.openModalLazy)(async () => {
+                      let { default: a } = await Promise.all([t.e('7590'), t.e('45094'), t.e('5769')]).then(t.bind(t, 218613));
+                      return (t) =>
+                          (0, l.jsx)(a, {
+                              ...t,
+                              channelType: n.type,
+                              guildId: e.id,
+                              categoryId: n.parent_id,
+                              cloneChannelId: n.id
                           });
                   })
           });

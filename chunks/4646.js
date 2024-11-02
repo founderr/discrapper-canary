@@ -1,4 +1,4 @@
-function l(e, t, n) {
+function i(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -13,16 +13,16 @@ function l(e, t, n) {
 }
 n.d(t, {
     k2: function () {
-        return i;
+        return a;
     }
 }),
     n(47120);
-let a = new (n(259443).Y)('AssetMap');
-async function i(e) {
+let l = new (n(259443).Y)('AssetMap');
+async function a(e) {
     let t = new r(),
         n = Object.entries(e).map((e) => {
-            let [n, l] = e;
-            return t.loadRemoteImage(n, l).catch((e) => a.warn('Failed to load canvas asset', e, n, l));
+            let [n, i] = e;
+            return t.loadRemoteImage(n, i).catch((e) => l.warn('Failed to load canvas asset', e, n, i));
         });
     return await Promise.all(n), t;
 }
@@ -41,6 +41,6 @@ class r {
         return null != this.assets[e];
     }
     constructor() {
-        l(this, 'assets', {}), l(this, 'fontManager', void 0);
+        i(this, 'assets', {}), i(this, 'fontManager', void 0);
     }
 }

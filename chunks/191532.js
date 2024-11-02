@@ -37,10 +37,10 @@ function a(e, t, n) {
         },
         o = (e) => {
             let { start: n, end: r, shouldScrollToStart: o = !1, padding: l = 0, animate: u, callback: c } = e,
-                { scrollPosition: d, offsetSize: _ } = i(t(), a);
+                { scrollPosition: d, offsetSize: f } = i(t(), a);
             (n -= l),
                 (r += l),
-                n >= d && r <= d + _
+                n >= d && r <= d + f
                     ? null != c && c()
                     : n < d || o
                       ? s({
@@ -49,7 +49,7 @@ function a(e, t, n) {
                             callback: c
                         })
                       : s({
-                            to: r - _,
+                            to: r - f,
                             animate: u,
                             callback: c
                         });
@@ -63,7 +63,7 @@ function a(e, t, n) {
             let { node: n, shouldScrollToStart: i = !1, padding: s = 0, animate: l = !1, callback: u } = t,
                 { current: c } = e;
             if (null == c) return;
-            let { offset: d, offsetSize: _ } = (function (e, t, n) {
+            let { offset: d, offsetSize: f } = (function (e, t, n) {
                 let i = 'horizontal' === t ? e.offsetWidth : e.offsetHeight,
                     a = 'horizontal' === t ? e.offsetLeft : e.offsetTop,
                     s = e.offsetParent;
@@ -75,7 +75,7 @@ function a(e, t, n) {
             })(n, a, c);
             o({
                 start: d,
-                end: d + _,
+                end: d + f,
                 shouldScrollToStart: i,
                 padding: s,
                 animate: l,

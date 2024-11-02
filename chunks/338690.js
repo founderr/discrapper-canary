@@ -1,12 +1,12 @@
-s.d(t, {
+e.d(n, {
     Z: function () {
-        return o;
+        return a;
     }
 });
-var n = s(287734),
-    a = s(592125),
-    r = s(894257);
-function o() {
-    let e = a.Z.getDMFromUserId(r.I);
-    null != e && n.default.selectPrivateChannel(e);
+var r = e(287734),
+    s = e(592125),
+    i = e(894257);
+function a() {
+    let t = s.Z.getDMFromUserId(i.I);
+    null != t && r.default.selectPrivateChannel(t);
 }

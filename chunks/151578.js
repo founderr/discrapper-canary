@@ -1,40 +1,40 @@
-t.r(e),
-    t.d(e, {
+a.r(t),
+    a.d(t, {
         default: function () {
-            return o;
+            return u;
         }
     });
-var a = t(200651);
-t(192379);
-var s = t(852229),
-    c = t(481060),
-    i = t(239091),
-    l = t(198620),
-    u = t(689938);
-function o(n) {
-    let { attachmentUrl: e, attachmentName: t, onSelect: o } = n;
-    return (0, a.jsx)(c.Menu, {
+var e = a(200651);
+a(192379);
+var i = a(852229),
+    l = a(481060),
+    c = a(239091),
+    r = a(198620),
+    s = a(388032);
+function u(n) {
+    let { attachmentUrl: t, attachmentName: a, onSelect: u } = n;
+    return (0, e.jsx)(l.Menu, {
         navId: 'attachment-link-context',
-        onClose: i.Zy,
-        onSelect: o,
-        'aria-label': u.Z.Messages.LINK_OPTIONS,
-        children: (0, a.jsxs)(
-            c.MenuGroup,
+        onClose: c.Zy,
+        onSelect: u,
+        'aria-label': s.intl.string(s.t['5oIOLS']),
+        children: (0, e.jsxs)(
+            l.MenuGroup,
             {
                 children: [
-                    (0, a.jsx)(c.MenuItem, {
+                    (0, e.jsx)(l.MenuItem, {
                         id: 'attachment-link-copy-link',
-                        label: u.Z.Messages.COPY_LINK,
+                        label: s.intl.string(s.t.WqhZsr),
                         action: async () => {
-                            let n = await (0, l.B_)(e);
-                            (0, s.J)(null != n ? n : '');
+                            let n = await (0, r.B_)(t);
+                            (0, i.J)(null != n ? n : '');
                         }
                     }),
-                    (0, a.jsx)(c.MenuItem, {
+                    (0, e.jsx)(l.MenuItem, {
                         id: 'attachment-link-copy-name',
-                        label: u.Z.Messages.COPY_TEXT,
+                        label: s.intl.string(s.t.JrGD7O),
                         action: () => {
-                            (0, s.J)(null != t ? t : '');
+                            (0, i.J)(null != a ? a : '');
                         }
                     })
                 ]

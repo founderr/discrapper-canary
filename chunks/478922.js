@@ -15,27 +15,27 @@ var r = n(200651),
 function d(e, t, n) {
     let a = (0, u.G6)(e),
         d = new Map(),
-        _ = new n((e) => {
+        f = new n((e) => {
             e.forEach((e) => {
                 var t;
                 let { target: n } = e;
                 null === (t = d.get(n)) || void 0 === t || t(e);
             });
         });
-    return (0, i.forwardRef)(function (n, E) {
-        var f;
-        let { onScroll: h, dir: p = 'ltr', sections: I, columns: m, getItemKey: T, getItemHeight: S, getSectionHeight: g, chunkSize: A, renderSection: N, renderItem: R, getSectionProps: O, itemGutter: v, removeEdgeItemGutters: C, sectionGutter: L, padding: D, paddingVertical: y, paddingHorizontal: b, fade: M = !1, className: P, style: U, maxContentWidth: w, renderAccessory: x, onItemVisibilityChange: G, ...k } = n,
+    return (0, i.forwardRef)(function (n, _) {
+        var h;
+        let { onScroll: p, dir: m = 'ltr', sections: g, columns: E, getItemKey: v, getItemHeight: I, getSectionHeight: S, chunkSize: T, renderSection: b, renderItem: y, getSectionProps: A, itemGutter: N, removeEdgeItemGutters: C, sectionGutter: R, padding: O, paddingVertical: D, paddingHorizontal: L, fade: x = !1, className: w, style: M, maxContentWidth: P, renderAccessory: k, onItemVisibilityChange: U, ...G } = n,
             B = i.useRef(null),
-            F = i.useRef(null),
-            V = i.useRef({}),
-            [H, Z] = i.useState(!1),
-            { scrollerRef: Y, scrollerState: j, getScrollerState: W } = (0, u.T4)();
+            Z = i.useRef(null),
+            F = i.useRef({}),
+            [V, j] = i.useState(!1),
+            { scrollerRef: H, scrollerState: Y, getScrollerState: W } = (0, u.T4)();
         (0, u.tT)({
-            scrollerRef: Y,
-            className: P,
+            scrollerRef: H,
+            className: w,
             specs: a,
             orientation: 'vertical',
-            dir: p
+            dir: m
         });
         let {
             forceUpdateOnChunkChange: K,
@@ -43,99 +43,99 @@ function d(e, t, n) {
             gridData: q,
             visibleSections: Q,
             totalHeight: X,
-            forceUpdate: $,
-            masonryComputer: J
+            forceUpdate: J,
+            masonryComputer: $
         } = (0, u.QB)({
-            sections: I,
-            columns: m,
-            getItemKey: T,
-            getItemHeight: S,
-            getSectionHeight: g,
-            chunkSize: A,
-            itemGutter: v,
+            sections: g,
+            columns: E,
+            getItemKey: v,
+            getItemHeight: I,
+            getSectionHeight: S,
+            chunkSize: T,
+            itemGutter: N,
             removeEdgeItemGutters: C,
-            sectionGutter: L,
-            padding: D,
-            paddingVertical: y,
-            paddingHorizontal: b,
+            sectionGutter: R,
+            padding: O,
+            paddingVertical: D,
+            paddingHorizontal: L,
             getScrollerState: W,
-            dir: p,
-            maxBufferWidth: w
+            dir: m,
+            maxBufferWidth: P
         });
         i.useEffect(() => {
-            null != G && (0, o.ZI)(Q, V.current, G), (V.current = Q);
-        }, [Q, G]);
+            null != U && (0, o.ZI)(Q, F.current, U), (F.current = Q);
+        }, [Q, U]);
         let ee = (0, i.useCallback)(
                 function () {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
-                    e > j.current.dirty && (j.current.dirty = e), 2 === e ? $() : K(1);
+                    e > Y.current.dirty && (Y.current.dirty = e), 2 === e ? J() : K(1);
                 },
-                [K, j, $]
+                [K, Y, J]
             ),
-            et = (0, u.t2)(Y),
-            en = (0, i.useCallback)(() => J.itemGrid, [J]),
-            er = (0, i.useCallback)(() => J.coordsMap, [J]),
+            et = (0, u.t2)(H),
+            en = (0, i.useCallback)(() => $.itemGrid, [$]),
+            er = (0, i.useCallback)(() => $.coordsMap, [$]),
             ei = i.useCallback(() => ee(), [ee]);
         (0, u.zn)({
-            ref: Y,
+            ref: H,
             key: 'container',
             onUpdate: ei,
-            resizeObserver: _,
+            resizeObserver: f,
             listenerMap: d
         }),
             (0, i.useImperativeHandle)(
-                E,
+                _,
                 () => ({
-                    getScrollerNode: () => Y.current,
+                    getScrollerNode: () => H.current,
                     getItemGrid: en,
                     getCoordsMap: er,
                     getScrollerState: W,
-                    ...(0, u.Ue)(Y, W, et)
+                    ...(0, u.Ue)(H, W, et)
                 }),
-                [Y, W, en, et, er]
+                [H, W, en, et, er]
             );
         let ea = (0, i.useCallback)(
             (e) => {
                 ee(1),
-                    null == B.current ? Z(!0) : clearTimeout(B.current),
+                    null == B.current ? j(!0) : clearTimeout(B.current),
                     (B.current = setTimeout(() => {
-                        (B.current = null), Z(!1);
+                        (B.current = null), j(!1);
                     }, 200)),
-                    null != h && h(e);
+                    null != p && p(e);
             },
-            [h, ee]
+            [p, ee]
         );
         return (
             i.useLayoutEffect(() => {
-                2 !== j.current.dirty && (j.current.dirty = 2);
-            }, [X, j]),
+                2 !== Y.current.dirty && (Y.current.dirty = 2);
+            }, [X, Y]),
             (0, r.jsxs)('div', {
-                ref: Y,
+                ref: H,
                 onScroll: ea,
-                className: s()(P, {
+                className: s()(w, {
                     [e]: !0,
-                    [t]: M,
-                    [c.scrolling]: H
+                    [t]: x,
+                    [c.scrolling]: V
                 }),
-                style: (0, u.uT)(U),
-                ...k,
+                style: (0, u.uT)(M),
+                ...G,
                 children: [
-                    null !== (f = null == x ? void 0 : x(X)) && void 0 !== f ? f : null,
+                    null !== (h = null == k ? void 0 : k(X)) && void 0 !== h ? h : null,
                     (0, i.useMemo)(
                         () =>
                             (0, r.jsx)(l.J, {
-                                containerRef: F,
+                                containerRef: Z,
                                 children: (0, r.jsx)('div', {
                                     style: { height: X },
                                     className: c.content,
-                                    ref: F,
+                                    ref: Z,
                                     children: Object.keys(Q).map((e) => {
                                         var t;
                                         let n = (0, u.t$)(e),
                                             i = z[e],
                                             a = Q[e],
                                             s = z[(0, u.DP)(n)],
-                                            o = null == O ? void 0 : O(n);
+                                            o = null == A ? void 0 : A(n);
                                         return null != i && null != a
                                             ? (0, r.jsxs)(
                                                   'div',
@@ -146,11 +146,11 @@ function d(e, t, n) {
                                                           ...(null !== (t = null == o ? void 0 : o.style) && void 0 !== t ? t : {})
                                                       },
                                                       children: [
-                                                          null != N && null != s && N(n, s, e),
+                                                          null != b && null != s && b(n, s, e),
                                                           a.map((e) => {
                                                               let [t, n, r] = e,
                                                                   i = z[t];
-                                                              return null != i ? R(n, r, i, t, q) : null;
+                                                              return null != i ? y(n, r, i, t, q) : null;
                                                           })
                                                       ]
                                                   },
@@ -160,7 +160,7 @@ function d(e, t, n) {
                                     })
                                 })
                             }),
-                        [Q, R, N, z, X, O, q]
+                        [Q, y, b, z, X, A, q]
                     )
                 ]
             })

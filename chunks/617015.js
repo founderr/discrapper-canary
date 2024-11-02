@@ -1,14 +1,14 @@
 n.d(t, {
     NV: function () {
-        return a;
+        return r;
     },
     nG: function () {
         return i;
     },
     yf: function () {
-        return s;
+        return l;
     }
 });
 let i = 64,
-    a = 62,
-    s = 5;
+    r = 62,
+    l = 5;

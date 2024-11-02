@@ -1,29 +1,29 @@
-n.r(s),
-    n.d(s, {
+r.r(t),
+    r.d(t, {
         default: function () {
-            return i;
+            return c;
         }
     });
-var a = n(200651);
-n(192379);
-var r = n(481060),
-    t = n(65912),
-    _ = n(689938);
-function i(e) {
-    let { ruleName: s, onConfirm: n, ...i } = e,
-        { setEditingRule: l } = (0, t.V)(),
-        u = null != s ? s : _.Z.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_NAME;
-    return (0, a.jsx)(r.ConfirmModal, {
-        ...i,
-        header: _.Z.Messages.GUILD_AUTOMOD_WARNING_UNSAVED_CHANGES_TITLE,
-        cancelText: _.Z.Messages.CANCEL,
-        confirmText: _.Z.Messages.CONFIRM,
+var i = r(200651);
+r(192379);
+var l = r(481060),
+    e = r(65912),
+    a = r(388032);
+function c(n) {
+    let { ruleName: t, onConfirm: r, ...c } = n,
+        { setEditingRule: o } = (0, e.V)(),
+        u = null != t ? t : a.intl.string(a.t.ffR2cH);
+    return (0, i.jsx)(l.ConfirmModal, {
+        ...c,
+        header: a.intl.string(a.t.kknTmJ),
+        cancelText: a.intl.string(a.t['ETE/oK']),
+        confirmText: a.intl.string(a.t['cY+Ooa']),
         onConfirm: () => {
-            l(null), null == n || n();
+            o(null), null == r || r();
         },
-        children: (0, a.jsx)(r.Text, {
+        children: (0, i.jsx)(l.Text, {
             variant: 'text-md/normal',
-            children: _.Z.Messages.GUILD_AUTOMOD_WARNING_UNSAVED_CHANGES_DESCRIPTION.format({ ruleName: u })
+            children: a.intl.format(a.t['ff/gx8'], { ruleName: u })
         })
     });
 }

@@ -1,45 +1,45 @@
-s.r(t),
-    s.d(t, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return T;
+            return P;
         }
     }),
-    s(627341),
-    s(47120);
-var a = s(200651),
-    n = s(192379),
-    l = s(120356),
-    i = s.n(l),
-    o = s(512722),
-    r = s.n(o),
-    u = s(954955),
-    c = s.n(u),
-    d = s(278074),
-    m = s(442837),
-    _ = s(481060),
-    E = s(809206),
-    p = s(112831),
-    x = s(219496),
-    b = s(575681),
-    h = s(807369),
-    I = s(180529),
-    N = s(25990),
-    R = s(594174),
-    S = s(74538),
-    f = s(981631),
-    M = s(689938),
-    C = s(853487),
-    g = s(803636);
-let v = (e) => {
-    let { usernameStatus: t, showHint: s } = e;
-    return (0, d.EQ)(t)
+    n(627341),
+    n(47120);
+var i = n(200651),
+    a = n(192379),
+    o = n(120356),
+    s = n.n(o),
+    r = n(512722),
+    l = n.n(r),
+    u = n(954955),
+    d = n.n(u),
+    c = n(278074),
+    g = n(442837),
+    m = n(481060),
+    f = n(809206),
+    E = n(112831),
+    h = n(219496),
+    p = n(575681),
+    v = n(807369),
+    _ = n(180529),
+    S = n(25990),
+    b = n(594174),
+    T = n(74538),
+    O = n(981631),
+    x = n(388032),
+    M = n(853487),
+    y = n(803636);
+let C = (e) => {
+    let { usernameStatus: t, showHint: n } = e;
+    return (0, c.EQ)(t)
         .with(
             {
-                type: x.K.ERROR,
-                message: d.P.select()
+                type: h.K.ERROR,
+                message: c.P.select()
             },
             (e) =>
-                (0, a.jsx)(_.Text, {
+                (0, i.jsx)(m.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-danger',
                     children: e
@@ -47,180 +47,180 @@ let v = (e) => {
         )
         .with(
             {
-                type: x.K.AVAILABLE,
-                message: d.P.select()
+                type: h.K.AVAILABLE,
+                message: c.P.select()
             },
             (e) =>
-                (0, a.jsx)(_.Text, {
+                (0, i.jsx)(m.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-positive',
                     children: e
                 })
         )
         .otherwise(() =>
-            s
-                ? (0, a.jsx)(_.Text, {
+            n
+                ? (0, i.jsx)(m.Text, {
                       variant: 'text-sm/normal',
                       color: 'text-normal',
-                      children: M.Z.Messages.POMELO_EXISTING_FLOW_ERROR_INVALID
+                      children: x.intl.string(x.t.z7c4bG)
                   })
                 : null
         );
 };
-function T(e) {
+function P(e) {
     var t;
-    let { transitionState: s, onClose: l } = e,
-        o = (0, m.e7)([R.default], () => {
-            let e = R.default.getCurrentUser();
-            return r()(null != e, 'ChangeUsernameModal: currentUser cannot be undefined'), e;
+    let { transitionState: n, onClose: o } = e,
+        r = (0, g.e7)([b.default], () => {
+            let e = b.default.getCurrentUser();
+            return l()(null != e, 'ChangeUsernameModal: currentUser cannot be undefined'), e;
         }),
-        u = n.useMemo(() => S.ZP.canEditDiscriminator(o) && !o.isPomelo(), [o]),
-        [d, T] = n.useState(!1),
-        [A, L] = n.useState(o.username),
-        [j, B] = n.useState(o.discriminator),
-        [U, P] = n.useState(''),
-        [Z, w] = n.useState(!1),
-        O = (0, m.e7)([N.Z], () => N.Z.getErrors()),
-        k = (0, b.n)(),
-        F = o.isPomelo() && k,
-        D = (0, h.a)(A, F, !1, o.username),
-        G = n.useRef(null),
-        y = n.useMemo(() => {
-            var e, t, s;
-            return null !== (s = null == O ? void 0 : null === (e = O.username) || void 0 === e ? void 0 : e[0]) && void 0 !== s ? s : null == O ? void 0 : null === (t = O.discriminator) || void 0 === t ? void 0 : t[0];
-        }, [O]);
-    n.useEffect(() => {
-        if (s === _.ModalTransitionState.ENTERED) {
+        u = a.useMemo(() => T.ZP.canEditDiscriminator(r) && !r.isPomelo(), [r]),
+        [c, P] = a.useState(!1),
+        [L, R] = a.useState(r.username),
+        [k, U] = a.useState(r.discriminator),
+        [I, N] = a.useState(''),
+        [A, w] = a.useState(!1),
+        Z = (0, g.e7)([S.Z], () => S.Z.getErrors()),
+        G = (0, p.n)(),
+        j = r.isPomelo() && G,
+        B = (0, v.a)(L, j, !1, r.username),
+        F = a.useRef(null),
+        D = a.useMemo(() => {
+            var e, t, n;
+            return null !== (n = null == Z ? void 0 : null === (e = Z.username) || void 0 === e ? void 0 : e[0]) && void 0 !== n ? n : null == Z ? void 0 : null === (t = Z.discriminator) || void 0 === t ? void 0 : t[0];
+        }, [Z]);
+    a.useEffect(() => {
+        if (n === m.ModalTransitionState.ENTERED) {
             var e;
-            null === (e = G.current) || void 0 === e || e.focus();
+            null === (e = F.current) || void 0 === e || e.focus();
         }
-    }, [s]);
-    let H = j !== o.discriminator;
-    async function K(e) {
+    }, [n]);
+    let q = k !== r.discriminator;
+    async function z(e) {
         e.preventDefault(), w(!0);
-        let t = await (0, E.Mn)({
-            username: A,
-            discriminator: u ? j : void 0,
-            password: U
+        let t = await (0, f.Mn)({
+            username: L,
+            discriminator: u ? k : void 0,
+            password: I
         });
-        w(!1), (null == t ? void 0 : t.ok) && l();
+        w(!1), (null == t ? void 0 : t.ok) && o();
     }
-    let W = n.useMemo(() => c()(T, 50), []);
-    return (0, a.jsxs)(_.ModalRoot, {
-        transitionState: s,
+    let H = a.useMemo(() => d()(P, 50), []);
+    return (0, i.jsxs)(m.ModalRoot, {
+        transitionState: n,
         children: [
-            (0, a.jsxs)(_.ModalHeader, {
+            (0, i.jsxs)(m.ModalHeader, {
                 separator: !1,
-                className: C.header,
+                className: M.header,
                 children: [
-                    (0, a.jsx)(p.Z, {
-                        color: p.Z.Colors.HEADER_PRIMARY,
-                        size: p.Z.Sizes.SIZE_24,
-                        className: C.title,
-                        children: M.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_USERNAME_TITLE_DESKTOP
+                    (0, i.jsx)(E.Z, {
+                        color: E.Z.Colors.HEADER_PRIMARY,
+                        size: E.Z.Sizes.SIZE_24,
+                        className: M.title,
+                        children: x.intl.string(x.t['m5or5+'])
                     }),
-                    (0, a.jsx)(_.Text, {
+                    (0, i.jsx)(m.Text, {
                         color: 'header-secondary',
                         variant: 'text-md/normal',
-                        className: C.subtitle,
-                        children: M.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_USERNAME_PROMPT_DESKTOP
+                        className: M.subtitle,
+                        children: x.intl.string(x.t.SLJvy8)
                     }),
-                    (0, a.jsx)(_.ModalCloseButton, {
-                        onClick: l,
-                        className: C.modalCloseButton
+                    (0, i.jsx)(m.ModalCloseButton, {
+                        onClick: o,
+                        className: M.modalCloseButton
                     })
                 ]
             }),
-            (0, a.jsxs)('form', {
-                onSubmit: K,
+            (0, i.jsxs)('form', {
+                onSubmit: z,
                 children: [
-                    (0, a.jsxs)(_.ModalContent, {
-                        className: C.content,
+                    (0, i.jsxs)(m.ModalContent, {
+                        className: M.content,
                         children: [
-                            (0, a.jsx)(_.FormItem, {
-                                title: M.Z.Messages.FORM_LABEL_USERNAME,
-                                error: y,
-                                children: (0, a.jsxs)('div', {
-                                    className: i()(g.input, C.multiInput, {
-                                        [g.error]: null != y,
-                                        [g.focused]: d
+                            (0, i.jsx)(m.FormItem, {
+                                title: x.intl.string(x.t.TWzdWl),
+                                error: D,
+                                children: (0, i.jsxs)('div', {
+                                    className: s()(y.input, M.multiInput, {
+                                        [y.error]: null != D,
+                                        [y.focused]: c
                                     }),
                                     children: [
-                                        (0, a.jsx)(_.TextInput, {
+                                        (0, i.jsx)(m.TextInput, {
                                             name: 'username',
-                                            'aria-label': M.Z.Messages.USER_SETTINGS_LABEL_USERNAME,
-                                            value: A,
-                                            maxLength: f.l$U,
-                                            onChange: L,
-                                            onFocus: () => W(!0),
-                                            onBlur: () => W(!1),
-                                            inputRef: G,
-                                            className: C.multiInputFirst,
-                                            inputClassName: i()(C.multiInputField, { [C.lowercase]: o.isPomelo() })
+                                            'aria-label': x.intl.string(x.t.qqhR3N),
+                                            value: L,
+                                            maxLength: O.l$U,
+                                            onChange: R,
+                                            onFocus: () => H(!0),
+                                            onBlur: () => H(!1),
+                                            inputRef: F,
+                                            className: M.multiInputFirst,
+                                            inputClassName: s()(M.multiInputField, { [M.lowercase]: r.isPomelo() })
                                         }),
-                                        !o.isPomelo() &&
-                                            (0, a.jsx)(_.TextInput, {
+                                        !r.isPomelo() &&
+                                            (0, i.jsx)(m.TextInput, {
                                                 name: 'discriminator',
-                                                'aria-label': M.Z.Messages.USER_SETTINGS_LABEL_DISCRIMINATOR,
+                                                'aria-label': x.intl.string(x.t.ozumaG),
                                                 maxLength: 4,
-                                                value: j,
-                                                onChange: B,
-                                                onFocus: () => W(!0),
-                                                onBlur: () => W(!1),
+                                                value: k,
+                                                onChange: U,
+                                                onFocus: () => H(!0),
+                                                onBlur: () => H(!1),
                                                 inputPrefix: '#',
                                                 disabled: !u,
-                                                className: C.multiInputLast,
-                                                inputClassName: C.multiInputField
+                                                className: M.multiInputLast,
+                                                inputClassName: M.multiInputField
                                             })
                                     ]
                                 })
                             }),
-                            H
-                                ? (0, a.jsx)(_.Text, {
+                            q
+                                ? (0, i.jsx)(m.Text, {
                                       variant: 'text-xs/normal',
                                       color: 'header-secondary',
-                                      className: C.discriminatorChangeWarning,
-                                      children: M.Z.Messages.PREMIUM_CHANGE_DISCRIMINATOR_WARNING
+                                      className: M.discriminatorChangeWarning,
+                                      children: x.intl.string(x.t.mConUV)
                                   })
                                 : null,
-                            F
-                                ? (0, a.jsx)(I.Z, {
-                                      show: (null == D ? void 0 : D.type) === x.K.ERROR || d,
+                            j
+                                ? (0, i.jsx)(_.Z, {
+                                      show: (null == B ? void 0 : B.type) === h.K.ERROR || c,
                                       top: 8,
                                       bottom: 4,
-                                      children: (0, a.jsx)(v, {
-                                          usernameStatus: D,
-                                          showHint: o.isPomelo()
+                                      children: (0, i.jsx)(C, {
+                                          usernameStatus: B,
+                                          showHint: r.isPomelo()
                                       })
                                   })
                                 : null,
-                            (0, a.jsx)(_.FormItem, {
-                                className: C.password,
-                                title: M.Z.Messages.USER_SETTINGS_LABEL_CURRENT_PASSWORD,
-                                error: null == O ? void 0 : null === (t = O.password) || void 0 === t ? void 0 : t[0],
-                                children: (0, a.jsx)(_.TextInput, {
+                            (0, i.jsx)(m.FormItem, {
+                                className: M.password,
+                                title: x.intl.string(x.t.TmdnJy),
+                                error: null == Z ? void 0 : null === (t = Z.password) || void 0 === t ? void 0 : t[0],
+                                children: (0, i.jsx)(m.TextInput, {
                                     type: 'password',
-                                    value: U,
-                                    onChange: P
+                                    value: I,
+                                    onChange: N
                                 })
                             })
                         ]
                     }),
-                    (0, a.jsxs)(_.ModalFooter, {
+                    (0, i.jsxs)(m.ModalFooter, {
                         children: [
-                            (0, a.jsx)(_.Button, {
+                            (0, i.jsx)(m.Button, {
                                 type: 'submit',
-                                color: _.Button.Colors.BRAND,
-                                size: _.Button.Sizes.MEDIUM,
-                                submitting: Z,
-                                children: M.Z.Messages.DONE
+                                color: m.Button.Colors.BRAND,
+                                size: m.Button.Sizes.MEDIUM,
+                                submitting: A,
+                                children: x.intl.string(x.t.i4jeWV)
                             }),
-                            (0, a.jsx)(_.Button, {
-                                className: C.cancel,
-                                look: _.Button.Looks.LINK,
-                                color: _.Button.Colors.PRIMARY,
-                                onClick: l,
-                                children: M.Z.Messages.CANCEL
+                            (0, i.jsx)(m.Button, {
+                                className: M.cancel,
+                                look: m.Button.Looks.LINK,
+                                color: m.Button.Colors.PRIMARY,
+                                onClick: o,
+                                children: x.intl.string(x.t['ETE/oK'])
                             })
                         ]
                     })

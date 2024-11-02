@@ -5,8 +5,8 @@ a.d(t, {
     }
 });
 var s,
-    r = a(200651),
-    i = a(192379),
+    i = a(200651),
+    r = a(192379),
     l = a(557533),
     o = a.n(l),
     c = a(622535),
@@ -191,14 +191,14 @@ let A = 'Footer Navigation',
     ],
     O = (e) => {
         let { colorVariant: t, animate: a } = e;
-        return (0, r.jsx)('svg', {
+        return (0, i.jsx)('svg', {
             className: (0, u.l)(_, 'footerBackground', t),
             preserveAspectRatio: 'none',
             width: '1920',
             height: '100%',
             viewBox: '0 0 1920 330',
             version: '1.1',
-            children: (0, r.jsx)('path', {
+            children: (0, i.jsx)('path', {
                 className: (0, u.l)(_, 'footerBackground', a ? 'Play' : 'Paused'),
                 fill: '#1a1c1e',
                 fillOpacity: '0.3',
@@ -206,7 +206,7 @@ let A = 'Footer Navigation',
             })
         });
     };
-class b extends (s = i.PureComponent) {
+class b extends (s = r.PureComponent) {
     componentDidMount() {
         this.setState({
             token: (0, d.getToken)(),
@@ -215,13 +215,13 @@ class b extends (s = i.PureComponent) {
     }
     renderAppButton(e) {
         if ('STATIC_RENDERER' === this.props.platform) return null;
-        let { downloadLink: t, isMobile: a, mobileDownloadText: s, platform: i, variant: l, authRedirectTo: o } = this.props,
+        let { downloadLink: t, isMobile: a, mobileDownloadText: s, platform: r, variant: l, authRedirectTo: o } = this.props,
             { isAppCompatible: c } = this.state;
         if (a)
-            return (0, r.jsx)(n, {
+            return (0, i.jsx)(n, {
                 eventName: 'Download App',
                 data: {
-                    Platform: i,
+                    Platform: r,
                     PTB: !1,
                     Released: !0,
                     'Referring Location': 'Footer'
@@ -233,10 +233,10 @@ class b extends (s = i.PureComponent) {
                 children: s
             });
         if (!c)
-            return (0, r.jsx)(n, {
+            return (0, i.jsx)(n, {
                 eventName: 'Download App',
                 data: {
-                    Platform: i,
+                    Platform: r,
                     PTB: !1,
                     Released: !0,
                     'Referring Location': 'Footer'
@@ -250,7 +250,7 @@ class b extends (s = i.PureComponent) {
             N = I.Z.Messages.COMMON_SIGN_UP_NOW;
         return (
             e && ((d = m.$w.ME), (N = I.Z.Messages.COMMON_OPEN_DISCORD)),
-            (0, r.jsx)(n, {
+            (0, i.jsx)(n, {
                 eventName: A,
                 className: (0, u.l)(_, 'button', this.props.variant),
                 data: {
@@ -263,12 +263,12 @@ class b extends (s = i.PureComponent) {
         );
     }
     render() {
-        let { variant: e, style: t, className: s, avoidRouter: i, showWave: l } = this.props,
+        let { variant: e, style: t, className: s, avoidRouter: r, showWave: l } = this.props,
             { animateBackground: d, token: N } = this.state,
             p = f().map((e) => {
                 let t = e.routes.map((e, t) =>
                     e.external
-                        ? (0, r.jsx)(
+                        ? (0, i.jsx)(
                               n,
                               {
                                   className: _.route,
@@ -279,14 +279,14 @@ class b extends (s = i.PureComponent) {
                               },
                               e.link || t
                           )
-                        : (0, r.jsx)(
+                        : (0, i.jsx)(
                               h.Z,
                               {
-                                  avoidRouter: i,
+                                  avoidRouter: r,
                                   to: e.link,
                                   from: 'footer_navigation',
                                   className: _.route,
-                                  children: (0, r.jsx)(n, {
+                                  children: (0, i.jsx)(n, {
                                       tag: 'span',
                                       eventName: A,
                                       data: { linkClicked: e.tracking },
@@ -296,12 +296,12 @@ class b extends (s = i.PureComponent) {
                               e.link
                           )
                 );
-                return (0, r.jsxs)(
+                return (0, i.jsxs)(
                     'div',
                     {
                         className: _.navigationSection,
                         children: [
-                            (0, r.jsx)('h3', {
+                            (0, i.jsx)('h3', {
                                 className: _.navigationHeader,
                                 children: e.title
                             }),
@@ -311,32 +311,32 @@ class b extends (s = i.PureComponent) {
                     e.title
                 );
             });
-        return (0, r.jsx)(c.$, {
+        return (0, i.jsx)(c.$, {
             onChange: this.handleVisibility,
-            children: (0, r.jsxs)('footer', {
+            children: (0, i.jsxs)('footer', {
                 className: o()((0, u.l)(_, 'footer', e), s),
                 style: t,
                 children: [
                     l
-                        ? (0, r.jsx)(O, {
+                        ? (0, i.jsx)(O, {
                               colorVariant: e,
                               animate: d
                           })
                         : null,
-                    (0, r.jsxs)('div', {
+                    (0, i.jsxs)('div', {
                         className: _.footerContent,
                         children: [
-                            (0, r.jsxs)('div', {
+                            (0, i.jsxs)('div', {
                                 className: _.navigation,
                                 children: [
-                                    (0, r.jsx)('div', {
+                                    (0, i.jsx)('div', {
                                         className: _.logoWrap,
-                                        children: (0, r.jsx)(n, {
+                                        children: (0, i.jsx)(n, {
                                             className: _.logo,
                                             href: m.am.INDEX,
                                             eventName: A,
                                             data: { linkClicked: 'logo' },
-                                            children: (0, r.jsx)('img', {
+                                            children: (0, i.jsx)('img', {
                                                 alt: I.Z.Messages.NAVIGATION_HOME,
                                                 src: a(131529)
                                             })
@@ -345,18 +345,18 @@ class b extends (s = i.PureComponent) {
                                     p
                                 ]
                             }),
-                            (0, r.jsx)('div', { className: _.separator }),
-                            (0, r.jsxs)('div', {
+                            (0, i.jsx)('div', { className: _.separator }),
+                            (0, i.jsxs)('div', {
                                 className: _.joinDiscord,
                                 children: [
-                                    (0, r.jsxs)('div', {
+                                    (0, i.jsxs)('div', {
                                         className: _.stats,
                                         children: [
-                                            (0, r.jsx)('h2', {
+                                            (0, i.jsx)('h2', {
                                                 className: _.readyToJoin,
                                                 children: I.Z.Messages.FOOTER_READY_TO_TRY_DISCORD
                                             }),
-                                            (0, r.jsx)('h3', {
+                                            (0, i.jsx)('h3', {
                                                 className: _.joinOtherPlayers,
                                                 children: I.Z.Messages.FOOTER_JOIN_OVER_PLAYERS_TODAY.format({ num: m.vS })
                                             })
@@ -384,7 +384,7 @@ class b extends (s = i.PureComponent) {
             }),
             null != e.locale && I.Z.setLocale(e.locale),
             (n = (t) =>
-                (0, r.jsx)(N.Z, {
+                (0, i.jsx)(N.Z, {
                     track: e.track,
                     trackOutboundLink: e.trackOutboundLink,
                     ...t

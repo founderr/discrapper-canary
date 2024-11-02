@@ -5,40 +5,40 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(120356),
-    s = n.n(a),
-    r = n(481060),
-    l = n(528027),
-    o = n(686807),
+var r = n(120356),
+    l = n.n(r),
+    a = n(481060),
+    o = n(528027),
+    s = n(686807),
     c = n(113318),
     u = n(495347);
 function d(e) {
     let { benefit: t, guildId: n } = e,
-        a = (0, c.Z)(n, t.ref_id),
-        d = (0, i.jsx)(l.Z, {
+        r = (0, c.Z)(n, t.ref_id),
+        d = (0, i.jsx)(o.Z, {
             guildId: n,
             emojiId: t.emoji_id,
             emojiName: t.emoji_name
         }),
-        _ =
-            null != a
-                ? (0, i.jsx)(r.Clickable, {
+        m =
+            null != r
+                ? (0, i.jsx)(a.Clickable, {
                       className: u.__invalid_channelLink,
-                      onClick: a.navigateToChannel,
-                      'aria-label': a.ariaLabel,
+                      onClick: r.navigateToChannel,
+                      'aria-label': r.ariaLabel,
                       role: 'link',
-                      children: (0, i.jsx)(r.Text, {
+                      children: (0, i.jsx)(a.Text, {
                           variant: 'text-md/medium',
                           color: 'header-primary',
-                          className: s()(u.name, u.linkedName),
-                          children: (0, o.Z)(t)
+                          className: l()(u.name, u.linkedName),
+                          children: (0, s.Z)(t)
                       })
                   })
-                : (0, i.jsx)(r.Text, {
+                : (0, i.jsx)(a.Text, {
                       variant: 'text-md/medium',
                       color: 'header-primary',
                       className: u.name,
-                      children: (0, o.Z)(t)
+                      children: (0, s.Z)(t)
                   });
     return (0, i.jsxs)('div', {
         className: u.container,
@@ -46,8 +46,8 @@ function d(e) {
             (0, i.jsxs)('div', {
                 className: u.infoContainer,
                 children: [
-                    _,
-                    (0, i.jsx)(r.Text, {
+                    m,
+                    (0, i.jsx)(a.Text, {
                         color: 'interactive-normal',
                         variant: 'text-sm/normal',
                         children: t.description

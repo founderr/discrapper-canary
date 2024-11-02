@@ -19,12 +19,12 @@ function a(e, t, n, a, s, o) {
     if ((0, i.cS)(u)) return l;
     l.nwdaymask = (0, i.rx)(0, n);
     for (var c = 0; c < u.length; c++) {
-        for (var d = u[c], _ = d[0], E = d[1] - 1, f = 0; f < o.bynweekday.length; f++) {
-            var h = void 0,
-                p = o.bynweekday[f],
-                I = p[0],
-                m = p[1];
-            m < 0 ? ((h = E + (m + 1) * 7), (h -= (0, i.Vy)(s[h] - I, 7))) : ((h = _ + (m - 1) * 7), (h += (0, i.Vy)(7 - s[h] + I, 7))), _ <= h && h <= E && (l.nwdaymask[h] = 1);
+        for (var d = u[c], f = d[0], _ = d[1] - 1, h = 0; h < o.bynweekday.length; h++) {
+            var p = void 0,
+                m = o.bynweekday[h],
+                g = m[0],
+                E = m[1];
+            E < 0 ? ((p = _ + (E + 1) * 7), (p -= (0, i.Vy)(s[p] - g, 7))) : ((p = f + (E - 1) * 7), (p += (0, i.Vy)(7 - s[p] + g, 7))), f <= p && p <= _ && (l.nwdaymask[p] = 1);
         }
     }
     return l;

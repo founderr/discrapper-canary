@@ -1,28 +1,28 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return m;
     }
 });
 var i = n(200651),
-    a = n(192379),
-    s = n(34674),
-    r = n(823379),
-    l = n(448021),
+    r = n(192379),
+    l = n(34674),
+    a = n(823379),
+    s = n(448021),
     o = n(405411),
     c = n(215453),
     d = n(24746),
     u = n(669401),
-    _ = n(829499);
-function E(e) {
+    h = n(829499);
+function m(e) {
     let { application: t } = e,
-        n = a.useMemo(() => {
+        n = r.useMemo(() => {
             var e, n, i;
-            return null !== (i = (null !== (n = null === (e = t.directory_entry) || void 0 === e ? void 0 : e.carousel_items) && void 0 !== n ? n : []).map(s.RF).filter(r.lm)) && void 0 !== i ? i : [];
+            return null !== (i = (null !== (n = null === (e = t.directory_entry) || void 0 === e ? void 0 : e.carousel_items) && void 0 !== n ? n : []).map(l.RF).filter(a.lm)) && void 0 !== i ? i : [];
         }, [t]);
     return (0, i.jsxs)('div', {
-        className: _.aboutContainer,
+        className: h.aboutContainer,
         children: [
-            (0, i.jsx)(l.Z, {
+            (0, i.jsx)(s.Z, {
                 application: t,
                 carouselItems: n
             }),

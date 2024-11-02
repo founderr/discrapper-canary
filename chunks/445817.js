@@ -1,75 +1,75 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return A;
+        return _;
     }
 }),
-    t(47120);
-var n = t(200651),
-    a = t(192379),
-    i = t(442837),
-    r = t(481060),
-    o = t(570140),
-    l = t(2052),
-    c = t(932724),
-    d = t(716161),
-    _ = t(672339),
-    u = t(747545),
-    E = t(131951),
-    T = t(594174),
-    S = t(981631),
-    I = t(689938),
-    N = t(205058);
-let m = 387,
+    n(47120);
+var i = n(200651),
+    s = n(192379),
+    r = n(442837),
+    l = n(481060),
+    a = n(570140),
+    o = n(2052),
+    c = n(932724),
+    d = n(716161),
+    u = n(672339),
+    m = n(747545),
+    h = n(131951),
+    g = n(594174),
+    p = n(981631),
+    x = n(388032),
+    S = n(205058);
+let T = 387,
     C = 218;
-function A(e) {
-    let { previewEnabled: s, onEnablePreview: t } = e,
-        A = E.Z.getCameraComponent(),
-        [g, h] = a.useState((0, c.P)(T.default.getCurrentUser())),
-        O = a.useRef(!1),
-        p = a.useRef(g),
-        R = (0, l.O)(),
-        x = (0, i.e7)([E.Z], () => Object.values(E.Z.getVideoDevices()).length > 0);
+function _(e) {
+    let { previewEnabled: t, onEnablePreview: n } = e,
+        _ = h.Z.getCameraComponent(),
+        [E, f] = s.useState((0, c.P)(g.default.getCurrentUser())),
+        I = s.useRef(!1),
+        N = s.useRef(E),
+        A = (0, o.O)(),
+        b = (0, r.e7)([h.Z], () => Object.values(h.Z.getVideoDevices()).length > 0);
     return (
-        a.useEffect(
+        s.useEffect(
             () => () => {
-                O.current && o.Z.wait(() => (0, d.Up)(p.current));
+                I.current && a.Z.wait(() => (0, d.Up)(N.current));
             },
             []
         ),
-        (0, n.jsx)(u.Z, {
-            selectedBackgroundOption: g,
+        (0, i.jsx)(m.Z, {
+            selectedBackgroundOption: E,
             onSelectBackgroundOption: (e) => {
-                (O.current = !0), (p.current = e), h(e), (0, _.wG)(e, { location: R.location }).catch(S.dG4);
+                (I.current = !0), (N.current = e), f(e), (0, u.wG)(e, { location: A.location }).catch(p.dG4);
             },
             renderCamera: (e) =>
-                s
-                    ? (0, n.jsx)('div', {
-                          className: N.cameraWrapper,
-                          children: (0, n.jsxs)('div', {
-                              className: N.camera,
+                t
+                    ? (0, i.jsx)('div', {
+                          className: S.cameraWrapper,
+                          children: (0, i.jsxs)('div', {
+                              className: S.camera,
                               children: [
-                                  (0, n.jsx)(A, {
+                                  (0, i.jsx)(_, {
                                       deviceId: e,
-                                      width: m,
+                                      width: T,
                                       height: C,
-                                      disabled: !s
+                                      disabled: !t
                                   }),
-                                  (0, n.jsx)(u.S, {})
+                                  (0, i.jsx)(m.S, {})
                               ]
                           })
                       })
-                    : (0, n.jsxs)('div', {
-                          className: N.cameraWrapper,
+                    : (0, i.jsxs)('div', {
+                          className: S.cameraWrapper,
                           children: [
-                              (0, n.jsx)('div', { className: N.previewImage }),
-                              (0, n.jsx)(r.Tooltip, {
-                                  text: x ? null : I.Z.Messages.CAMERA_UNAVAILABLE,
+                              (0, i.jsx)('div', { className: S.previewImage }),
+                              (0, i.jsx)(l.Tooltip, {
+                                  text: b ? null : x.intl.string(x.t['8jSzSU']),
                                   children: (e) =>
-                                      (0, n.jsx)(r.Button, {
+                                      (0, i.jsx)(l.Button, {
                                           ...e,
-                                          onClick: t,
-                                          disabled: !x,
-                                          children: I.Z.Messages.TEST_VIDEO
+                                          onClick: n,
+                                          disabled: !b,
+                                          children: x.intl.string(x.t.JIf4v7)
                                       })
                               })
                           ]

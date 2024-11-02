@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return g;
     }
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    a = n(772848),
-    l = n(442837),
-    r = n(570140),
+    l = n(192379),
+    r = n(772848),
+    a = n(442837),
+    s = n(570140),
     o = n(607070),
     c = n(367907),
     u = n(37091),
@@ -16,30 +16,30 @@ var i = n(200651),
     h = n(963838),
     m = n(39127),
     p = n(981631),
-    _ = n(776042);
-function f(e) {
-    let { channelId: t, guildId: n, userId: f, containerDimensions: E } = e,
-        g = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
-        [C, I] = s.useState([]),
-        T = C.length < 50;
-    s.useEffect(() => {
+    f = n(776042);
+function g(e) {
+    let { channelId: t, guildId: n, userId: g, containerDimensions: C } = e,
+        x = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
+        [v, _] = l.useState([]),
+        I = v.length < 50;
+    l.useEffect(() => {
         function e(e) {
             var i;
-            let { channelId: s, userId: l, emoji: r, animationType: o, animationId: m } = e;
-            if ((null != f && f !== l) || (u.Z.getEnabled() && (0, d.Z)(null !== (i = null == r ? void 0 : r.name) && void 0 !== i ? i : ''))) return;
-            let _ = null != r && null != o && null != m;
-            if (s === t && !g && T && _) {
-                let e = (0, h._r)(r),
-                    i = null != r.id && !r.animated,
-                    s = {
-                        id: (0, a.Z)(),
+            let { channelId: l, userId: a, emoji: s, animationType: o, animationId: m } = e;
+            if ((null != g && g !== a) || (u.Z.getEnabled() && (0, d.Z)(null !== (i = null == s ? void 0 : s.name) && void 0 !== i ? i : ''))) return;
+            let f = null != s && null != o && null != m;
+            if (l === t && !x && I && f) {
+                let e = (0, h._r)(s),
+                    i = null != s.id && !s.animated,
+                    l = {
+                        id: (0, r.Z)(),
                         animationType: o,
                         animationId: m,
                         shouldResize: i,
                         url: e,
-                        userId: l
+                        userId: a
                     };
-                I((e) => [...e, s]),
+                _((e) => [...e, l]),
                     c.ZP.trackWithMetadata(p.rMx.VOICE_CHANNEL_EFFECT_VIEWED, {
                         channel_id: t,
                         guild_id: n
@@ -47,33 +47,33 @@ function f(e) {
             }
         }
         return (
-            r.Z.subscribe('VOICE_CHANNEL_EFFECT_SEND', e),
+            s.Z.subscribe('VOICE_CHANNEL_EFFECT_SEND', e),
             () => {
-                r.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
+                s.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
             }
         );
-    }, [t, n, f, g, T]);
-    let x = s.useCallback((e) => {
-        I((t) => {
+    }, [t, n, g, x, I]);
+    let E = l.useCallback((e) => {
+        _((t) => {
             let n = [...t],
                 i = n.findIndex((t) => t.id === e);
             return n.splice(i, 1), n;
         });
     }, []);
-    return g
+    return x
         ? null
         : (0, i.jsx)('div', {
-              className: _.effectsWrapper,
-              style: { width: E.width },
+              className: f.effectsWrapper,
+              style: { width: C.width },
               children: (0, i.jsx)('div', {
-                  className: _.effects,
-                  children: C.map((e) =>
+                  className: f.effects,
+                  children: v.map((e) =>
                       (0, i.jsx)(
                           m.Z,
                           {
-                              containerDimensions: E,
+                              containerDimensions: C,
                               effect: e,
-                              onComplete: x
+                              onComplete: E
                           },
                           e.id
                       )

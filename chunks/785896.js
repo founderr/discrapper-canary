@@ -26,43 +26,43 @@ let c = (e, t, n) => {
     d = (e) => {
         let { emojiId: t, refreshPositionKey: n } = e,
             { joinedEmojiSourceGuildRecord: o, emoji: d } = (0, i.cj)([s.ZP, a.Z], () => c(s.ZP, a.Z, t)),
-            _ = null != o,
-            E = null != o && o.hasFeature(u.oNc.DISCOVERABLE),
-            f = (!_ || E) && null != t,
-            [h, p] = r.useState(f),
-            [I, m] = r.useState(null),
-            T = null != o ? l.JO.createFromGuildRecord(o) : null,
-            [S, g] = r.useState(T),
-            [A, N] = r.useState(null);
+            f = null != o,
+            _ = null != o && o.hasFeature(u.oNc.DISCOVERABLE),
+            h = (!f || _) && null != t,
+            [p, m] = r.useState(h),
+            [g, E] = r.useState(null),
+            v = null != o ? l.JO.createFromGuildRecord(o) : null,
+            [I, S] = r.useState(v),
+            [T, b] = r.useState(null);
         return (
             r.useEffect(() => {
                 null == n || n();
                 let e = async () => {
                     let e = null != t ? await (0, l.Fi)(t) : null;
                     if (null != e)
-                        switch ((m(e.type), e.type)) {
+                        switch ((E(e.type), e.type)) {
                             case l.w6.APPLICATION:
-                                N(e.application);
+                                b(e.application);
                                 break;
                             case l.w6.GUILD:
-                                g(e.guild);
+                                S(e.guild);
                         }
-                    p(!1), null == n || n();
+                    m(!1), null == n || n();
                 };
-                if (f) {
+                if (h) {
                     e();
                     return;
                 }
                 null == n || n();
-            }, [t, f]),
+            }, [t, h]),
             {
-                expressionSourceGuild: S,
-                expressionSourceApplication: A,
-                sourceType: I,
+                expressionSourceGuild: I,
+                expressionSourceApplication: T,
+                sourceType: g,
                 joinedEmojiSourceGuildRecord: o,
-                hasJoinedEmojiSourceGuild: _,
+                hasJoinedEmojiSourceGuild: f,
                 emoji: d,
-                isFetching: h
+                isFetching: p
             }
         );
     };

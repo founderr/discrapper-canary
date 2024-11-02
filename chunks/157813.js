@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return h;
     }
 });
 var r = n(200651),
@@ -10,9 +10,9 @@ var r = n(200651),
     o = n(481060),
     l = n(475179),
     u = n(871499),
-    c = n(689938),
+    c = n(388032),
     d = n(900140);
-function _(e) {
+function f(e) {
     let { className: t, isVertical: n } = e;
     return (0, r.jsxs)('div', {
         className: d.iconContainer,
@@ -30,7 +30,7 @@ function _(e) {
         ]
     });
 }
-function E(e) {
+function _(e) {
     let { className: t, isVertical: n } = e;
     return (0, r.jsxs)('div', {
         className: d.iconContainer,
@@ -49,17 +49,17 @@ function E(e) {
         ]
     });
 }
-function f(e) {
-    let { channelId: t, className: n, isParticipantsOpen: a, isVertical: o = !1, hideTooltip: f = !1 } = e,
-        h = i.useCallback(
+function h(e) {
+    let { channelId: t, className: n, isParticipantsOpen: a, isVertical: o = !1, hideTooltip: h = !1 } = e,
+        p = i.useCallback(
             (e) => {
                 let { className: t } = e;
                 return a
-                    ? (0, r.jsx)(E, {
+                    ? (0, r.jsx)(_, {
                           className: t,
                           isVertical: o
                       })
-                    : (0, r.jsx)(_, {
+                    : (0, r.jsx)(f, {
                           className: t,
                           isVertical: o
                       });
@@ -67,12 +67,12 @@ function f(e) {
             [a, o]
         );
     return (0, r.jsx)(u.Z, {
-        label: a ? c.Z.Messages.VIDEO_CALL_HIDE_MEMBERS : c.Z.Messages.VIDEO_CALL_SHOW_MEMBERS,
+        label: a ? c.intl.string(c.t.QJMRUF) : c.intl.string(c.t.vZiwmJ),
         className: s()(d.participantsButton, n),
         onClick: function () {
             l.Z.toggleParticipants(t, !a);
         },
-        iconComponent: h,
-        shouldShowTooltip: !f
+        iconComponent: p,
+        shouldShowTooltip: !h
     });
 }

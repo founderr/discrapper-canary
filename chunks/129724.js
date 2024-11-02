@@ -1,18 +1,18 @@
-s.d(t, {
+n.d(t, {
     A: function () {
-        return a;
+        return r;
     }
 });
-var n = s(913527),
-    l = s.n(n),
-    i = s(689938);
-function a(e) {
+var i = n(913527),
+    l = n.n(i),
+    s = n(388032);
+function r(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i.Z.Messages.FORM_LABEL_OFF,
-        n = l().duration(e, 'seconds');
-    if (n.days() > 0) return (t ? i.Z.Messages.DURATION_DAYS_SHORT : i.Z.Messages.DURATION_DAYS).format({ days: n.days() });
-    if (n.hours() > 0) return (t ? i.Z.Messages.DURATION_HOURS_SHORT : i.Z.Messages.DURATION_HOURS).format({ hours: n.hours() });
-    if (n.minutes() > 0) return (t ? i.Z.Messages.DURATION_MINUTES_SHORT : i.Z.Messages.DURATION_MINUTES).format({ minutes: n.minutes() });
-    else if (e > 0) return (t ? i.Z.Messages.DURATION_SECONDS_SHORT : i.Z.Messages.DURATION_SECONDS).format({ seconds: n.seconds() });
-    else return t ? i.Z.Messages.FORM_LABEL_OFF : s;
+        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.intl.string(s.t['Yl1D8/']),
+        i = l().duration(e, 'seconds');
+    if (i.days() > 0) return s.intl.formatToPlainString(t ? s.t.GBLpQ0 : s.t.k2UNz8, { days: i.days() });
+    if (i.hours() > 0) return s.intl.formatToPlainString(t ? s.t.rhY1Rk : s.t.xCjYxM, { hours: i.hours() });
+    if (i.minutes() > 0) return s.intl.formatToPlainString(t ? s.t['XIGt+f'] : s.t.iXLF9f, { minutes: i.minutes() });
+    else if (e > 0) return s.intl.formatToPlainString(t ? s.t.pyvjRk : s.t.geSp4O, { seconds: i.seconds() });
+    else return t ? s.intl.string(s.t['Yl1D8/']) : n;
 }

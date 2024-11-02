@@ -1,15 +1,15 @@
 n.d(t, {
     Sc: function () {
-        return E;
+        return _;
     },
     UP: function () {
-        return f;
+        return h;
     },
     Zx: function () {
         return d;
     },
     _s: function () {
-        return _;
+        return f;
     }
 }),
     n(47120);
@@ -24,7 +24,7 @@ var r = n(570140),
 function d(e, t) {
     var n;
     if (null == e) {
-        E(t);
+        _(t);
         return;
     }
     r.Z.dispatch({
@@ -39,10 +39,10 @@ function d(e, t) {
             media_session_id: s.Z.getMediaSessionId()
         });
 }
-function _(e, t, n) {
+function f(e, t, n) {
     var i;
     if ('' === e || null == t) {
-        E(n);
+        _(n);
         return;
     }
     r.Z.dispatch({
@@ -58,7 +58,7 @@ function _(e, t, n) {
             media_session_id: s.Z.getMediaSessionId()
         });
 }
-function E(e) {
+function _(e) {
     var t;
     r.Z.dispatch({
         type: 'CLEAR_HANG_STATUS',
@@ -70,7 +70,7 @@ function E(e) {
             media_session_id: s.Z.getMediaSessionId()
         });
 }
-function f() {
+function h() {
     let e = [u.Z.getCustomHangStatus(), ...u.Z.getRecentCustomStatuses()].filter((e) => {
         var t;
         return null != e && null != e.emoji && (null === (t = e.emoji) || void 0 === t ? void 0 : t.id) != null && null == i.ZP.getCustomEmojiById(e.emoji.id);

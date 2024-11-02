@@ -6,42 +6,42 @@ n.d(t, {
         return o;
     },
     TL: function () {
-        return i;
+        return s;
     },
     YA: function () {
-        return l;
+        return i;
     }
 });
-var a,
-    s,
-    l,
+var l,
+    a,
+    i,
     o,
-    r = n(689938);
-function i() {
+    r = n(388032);
+function s() {
     return [
         {
             value: 'too_many_notifications',
-            label: r.Z.Messages.MUTE_FEEDBACK_TOO_MANY_NOTIFICATIONS
+            label: r.intl.string(r.t.bQHhT0)
         },
         {
             value: 'temporary_break',
-            label: r.Z.Messages.MUTE_FEEDBACK_TEMPORARY_BREAK
+            label: r.intl.string(r.t.OuPkvL)
         },
         {
             value: 'annoying',
-            label: r.Z.Messages.MUTE_FEEDBACK_ANNOYING
+            label: r.intl.string(r.t['3kmAMD'])
         },
         {
             value: 'unsafe',
-            label: r.Z.Messages.MUTE_FEEDBACK_UNSAFE
+            label: r.intl.string(r.t.nmW7jI)
         },
         {
             value: 'spam',
-            label: r.Z.Messages.MUTE_FEEDBACK_SPAM
+            label: r.intl.string(r.t.cCPYjo)
         },
         {
             value: 'other',
-            label: r.Z.Messages.MUTE_FEEDBACK_OTHER
+            label: r.intl.string(r.t['7ZIIJy'])
         }
     ];
 }
@@ -49,20 +49,20 @@ function c() {
     return [
         {
             value: 'confusion',
-            label: r.Z.Messages.BLOCK_USER_FEEDBACK_OPTION_CONFUSION
+            label: r.intl.string(r.t['64Oph4'])
         },
         {
             value: 'does_not_achieve_wants',
-            label: r.Z.Messages.BLOCK_USER_FEEDBACK_OPTION_DOES_NOT_ACHIEVE_WANTS
+            label: r.intl.string(r.t['wH5R/v'])
         },
         {
             value: 'hard_to_access',
-            label: r.Z.Messages.BLOCK_USER_FEEDBACK_OPTION_HARD_TO_ACCESS
+            label: r.intl.string(r.t['4uZBRk'])
         },
         {
             value: 'something_else',
-            label: r.Z.Messages.BLOCK_USER_FEEDBACK_OPTION_SOMETHING_ELSE
+            label: r.intl.string(r.t.YicFbG)
         }
     ];
 }
-((a = l || (l = {})).TOO_MANY_NOTIFICATIONS = 'too_many_notifications'), (a.TEMPORARY_BREAK = 'temporary_break'), (a.ANNOYING = 'annoying'), (a.UNSAFE = 'unsafe'), (a.SPAM = 'spam'), (a.OTHER = 'other'), ((s = o || (o = {})).CONFUSION = 'confusion'), (s.DOES_NOT_ACHIEVE_WANTS = 'does_not_achieve_wants'), (s.HARD_TO_ACCESS = 'hard_to_access'), (s.SOMETHING_ELSE = 'something_else');
+((l = i || (i = {})).TOO_MANY_NOTIFICATIONS = 'too_many_notifications'), (l.TEMPORARY_BREAK = 'temporary_break'), (l.ANNOYING = 'annoying'), (l.UNSAFE = 'unsafe'), (l.SPAM = 'spam'), (l.OTHER = 'other'), ((a = o || (o = {})).CONFUSION = 'confusion'), (a.DOES_NOT_ACHIEVE_WANTS = 'does_not_achieve_wants'), (a.HARD_TO_ACCESS = 'hard_to_access'), (a.SOMETHING_ELSE = 'something_else');

@@ -1,121 +1,121 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return b;
     }
 });
-var s = n(200651),
-    a = n(192379),
-    i = n(120356),
-    r = n.n(i),
-    l = n(399606),
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    s = n.n(l),
+    a = n(399606),
     o = n(481060),
     c = n(100527),
     d = n(906732),
     u = n(434404),
-    _ = n(171368),
-    I = n(430824),
-    E = n(893966),
-    T = n(527379),
-    m = n(305473),
-    N = n(113679),
-    S = n(440857),
-    g = n(472596),
-    h = n(598948),
-    C = n(428936),
-    x = n(41586),
-    p = n(918192),
-    R = n(981631),
-    L = n(689938),
-    f = n(444383);
-function O(e) {
+    m = n(171368),
+    h = n(430824),
+    g = n(893966),
+    x = n(527379),
+    p = n(305473),
+    f = n(113679),
+    C = n(440857),
+    I = n(472596),
+    _ = n(598948),
+    N = n(428936),
+    v = n(41586),
+    T = n(918192),
+    j = n(981631),
+    E = n(388032),
+    S = n(444383);
+function b(e) {
     let { guildId: t } = e,
-        n = (0, l.e7)([I.Z], () => I.Z.getGuild(t)),
-        { analyticsLocations: i } = (0, d.ZP)(c.Z.GUILD_SETTINGS_MEMBERS_PAGE),
-        O = !1 == !!(null == n ? void 0 : n.hasFeature(R.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
-        A = (0, l.e7)([E.Z], () => E.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
-        M = a.useCallback(
+        n = (0, a.e7)([h.Z], () => h.Z.getGuild(t)),
+        { analyticsLocations: l } = (0, d.ZP)(c.Z.GUILD_SETTINGS_MEMBERS_PAGE),
+        b = !1 == !!(null == n ? void 0 : n.hasFeature(j.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
+        R = (0, a.e7)([g.Z], () => g.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
+        Z = r.useCallback(
             (e) => {
                 if (null != e)
-                    (0, _.openUserProfileModal)({
+                    (0, m.openUserProfileModal)({
                         userId: e.userId,
                         guildId: e.guildId,
-                        sourceAnalyticsLocations: i,
-                        analyticsLocation: { section: R.jXE.GUILD_SETTINGS_MEMBERS }
+                        sourceAnalyticsLocations: l,
+                        analyticsLocation: { section: j.jXE.GUILD_SETTINGS_MEMBERS }
                     });
             },
-            [i]
+            [l]
         ),
-        D = a.useRef(null),
-        v = a.useCallback(() => {
+        A = r.useRef(null),
+        L = r.useCallback(() => {
             var e;
-            null === (e = D.current) || void 0 === e || e.resetSearchText();
+            null === (e = A.current) || void 0 === e || e.resetSearchText();
         }, []);
     if (null == n) return null;
-    let j = (0, g.xb)(!1, !1, A);
-    return (0, s.jsx)(d.Gt, {
-        value: i,
-        children: (0, s.jsx)('div', {
-            className: f.settingsColumn,
-            children: (0, s.jsx)('div', {
-                className: f.settingsContainer,
-                children: (0, s.jsx)(o.ScrollerAuto, {
-                    className: f.settingsScroller,
+    let y = (0, I.xb)(!1, !1, R);
+    return (0, i.jsx)(d.Gt, {
+        value: l,
+        children: (0, i.jsx)('div', {
+            className: S.settingsColumn,
+            children: (0, i.jsx)('div', {
+                className: S.settingsContainer,
+                children: (0, i.jsx)(o.ScrollerAuto, {
+                    className: S.settingsScroller,
                     orientation: 'auto',
-                    children: (0, s.jsxs)('main', {
-                        className: f.settingsContent,
+                    children: (0, i.jsxs)('main', {
+                        className: S.settingsContent,
                         children: [
-                            (0, s.jsx)(
+                            (0, i.jsx)(
                                 o.FormSection,
                                 {
-                                    className: r()(f.header),
-                                    children: (0, s.jsx)(o.FormTitle, {
+                                    className: s()(S.header),
+                                    children: (0, i.jsx)(o.FormTitle, {
                                         tag: o.FormTitleTags.H1,
-                                        children: L.Z.Messages.GUILD_SETTINGS_MEMBERS_SERVER_MEMBERS
+                                        children: E.intl.string(E.t['S40K6+'])
                                     })
                                 },
                                 'header'
                             ),
-                            (0, s.jsx)(
+                            (0, i.jsx)(
                                 o.FormSection,
                                 {
-                                    children: (0, s.jsxs)('div', {
-                                        className: r()(f.tableContainer),
+                                    children: (0, i.jsxs)('div', {
+                                        className: s()(S.tableContainer),
                                         children: [
-                                            (0, s.jsx)(N.Z, { guild: n }),
-                                            (0, s.jsx)(m.Z, { guild: n }),
-                                            O
-                                                ? (0, s.jsxs)('div', {
-                                                      className: r()(f.mainTableContainer),
+                                            (0, i.jsx)(f.Z, { guild: n }),
+                                            (0, i.jsx)(p.Z, { guild: n }),
+                                            b
+                                                ? (0, i.jsxs)('div', {
+                                                      className: s()(S.mainTableContainer),
                                                       children: [
-                                                          (0, s.jsx)(x.Z, {
+                                                          (0, i.jsx)(v.Z, {
                                                               guild: n,
-                                                              ref: D
+                                                              ref: A
                                                           }),
-                                                          (0, s.jsx)(h.Z, {
+                                                          (0, i.jsx)(_.Z, {
                                                               guild: n,
-                                                              searchState: j,
+                                                              searchState: y,
                                                               compact: !0,
-                                                              onSelectRow: M,
-                                                              onResetForNewMembers: v
+                                                              onSelectRow: Z,
+                                                              onResetForNewMembers: L
                                                           }),
-                                                          j !== g.po.SUCCESS_STILL_INDEXING && (0, s.jsx)(C.Z, { guildId: n.id })
+                                                          y !== I.po.SUCCESS_STILL_INDEXING && (0, i.jsx)(N.Z, { guildId: n.id })
                                                       ]
                                                   })
-                                                : (0, s.jsx)('div', {
-                                                      className: r()(f.movedTable),
-                                                      children: (0, s.jsxs)('div', {
-                                                          className: r()(f.noResultsContainer),
+                                                : (0, i.jsx)('div', {
+                                                      className: s()(S.movedTable),
+                                                      children: (0, i.jsxs)('div', {
+                                                          className: s()(S.noResultsContainer),
                                                           children: [
-                                                              (0, s.jsx)('div', {
-                                                                  className: r()(f.__invalid_noResultsIconContainer),
-                                                                  children: (0, s.jsx)(p.Z, {})
+                                                              (0, i.jsx)('div', {
+                                                                  className: s()(S.__invalid_noResultsIconContainer),
+                                                                  children: (0, i.jsx)(T.Z, {})
                                                               }),
-                                                              (0, s.jsx)(o.Text, {
+                                                              (0, i.jsx)(o.Text, {
                                                                   variant: 'text-md/normal',
                                                                   color: 'text-muted',
-                                                                  children: L.Z.Messages.GUILD_SETTINGS_SAFETY_MODERATION_EXPERIENCE_ENABLED.format({
+                                                                  children: E.intl.format(E.t.Bf6yxM, {
                                                                       onClick: (e) => {
-                                                                          if (null != n) e.preventDefault(), u.Z.close(), (0, T._X)(n.id);
+                                                                          if (null != n) e.preventDefault(), u.Z.close(), (0, x._X)(n.id);
                                                                       }
                                                                   })
                                                               })
@@ -127,7 +127,7 @@ function O(e) {
                                 },
                                 'body'
                             ),
-                            (0, s.jsx)(S.Z, { guildId: n.id })
+                            (0, i.jsx)(C.Z, { guildId: n.id })
                         ]
                     })
                 })

@@ -1,93 +1,93 @@
-l.d(t, {
+n.d(t, {
     Z: function () {
-        return x;
+        return g;
     }
 });
-var n = l(200651),
-    a = l(192379),
-    o = l(120356),
-    s = l.n(o),
-    i = l(913527),
-    r = l.n(i),
-    C = l(399606),
-    c = l(481060),
-    d = l(740900),
-    u = l(241559),
-    m = l(893966),
-    _ = l(527379),
-    E = l(689938),
-    h = l(352533),
-    M = l(232021);
-function x(e) {
-    let { guild: t, onSubmit: o } = e,
-        i = (0, C.e7)([m.Z], () => m.Z.getMembersCountByGuildId(t.id, d.R_.NEW_GUILD_MEMBER), [t.id]),
-        x = (0, C.e7)(
+var l = n(200651),
+    o = n(192379),
+    a = n(120356),
+    i = n.n(a),
+    r = n(913527),
+    s = n.n(r),
+    c = n(399606),
+    C = n(481060),
+    d = n(740900),
+    u = n(241559),
+    m = n(893966),
+    h = n(527379),
+    x = n(388032),
+    b = n(352533),
+    f = n(232021);
+function g(e) {
+    let { guild: t, onSubmit: a } = e,
+        r = (0, c.e7)([m.Z], () => m.Z.getMembersCountByGuildId(t.id, d.R_.NEW_GUILD_MEMBER), [t.id]),
+        g = (0, c.e7)(
             [m.Z],
             () => {
                 let e = m.Z.getNewMemberTimestamp(t.id);
-                return r()(e).format('h:mm A');
+                return s()(e).format('h:mm A');
             },
             [t.id]
         ),
-        b = (0, C.e7)([m.Z], () => m.Z.hasDefaultSearchStateByGuildId(t.id), [t.id]),
-        T = a.useCallback(() => {
-            (0, _.YO)(t.id), null == o || o();
-        }, [t.id, o]),
-        L = a.useCallback(() => {
-            b
-                ? T()
-                : (0, c.openModalLazy)(async () => {
-                      let { default: e } = await l.e('24478').then(l.bind(l, 319481));
+        p = (0, c.e7)([m.Z], () => m.Z.hasDefaultSearchStateByGuildId(t.id), [t.id]),
+        H = o.useCallback(() => {
+            (0, h.YO)(t.id), null == a || a();
+        }, [t.id, a]),
+        j = o.useCallback(() => {
+            p
+                ? H()
+                : (0, C.openModalLazy)(async () => {
+                      let { default: e } = await n.e('24478').then(n.bind(n, 319481));
                       return (t) =>
-                          (0, n.jsx)(e, {
+                          (0, l.jsx)(e, {
                               ...t,
-                              onConfirm: T
+                              onConfirm: H
                           });
                   });
-        }, [T, b]),
-        g = new Intl.NumberFormat(E.Z.getLocale()).format(i),
-        H = (0, u.nX)(t.id),
-        I = (0, u.xC)(t.id),
-        f = a.useMemo(() => 1 + (H ? 1 : 0) + (I ? 1 : 0), [H, I]);
-    return 0 === i
+        }, [H, p]),
+        v = new Intl.NumberFormat(x.intl.currentLocale).format(r),
+        N = (0, u.nX)(t.id),
+        L = (0, u.xC)(t.id),
+        I = o.useMemo(() => 1 + (N ? 1 : 0) + (L ? 1 : 0), [N, L]);
+    return 0 === r
         ? null
-        : (0, n.jsxs)('tr', {
-              className: s()(M.newMembersNotice),
-              onClick: L,
+        : (0, l.jsxs)('tr', {
+              className: i()(f.newMembersNotice),
+              onClick: j,
               children: [
-                  (0, n.jsx)('td', {
+                  (0, l.jsx)('td', {
                       colSpan: 3,
-                      children: (0, n.jsx)(c.Text, {
+                      children: (0, l.jsx)(C.Text, {
                           variant: 'text-sm/normal',
                           color: 'always-white',
-                          children: E.Z.Messages.MEMBER_SAFETY_TABLE_NEW_MEMBER_NOTICE_LABEL.format({
-                              count: g,
-                              date: x
+                          children: x.intl.format(x.t['/i5uJy'], {
+                              count: v,
+                              date: g
                           })
                       })
                   }),
-                  (0, n.jsx)('td', { colSpan: f }),
-                  (0, n.jsx)('td', {
+                  (0, l.jsx)('td', { colSpan: I }),
+                  (0, l.jsx)('td', {
                       colSpan: 2,
-                      children: (0, n.jsx)('div', {
-                          className: s()(h.actionCell),
-                          children: (0, n.jsx)(c.Button, {
-                              size: c.Button.Sizes.SMALL,
-                              color: c.Button.Colors.TRANSPARENT,
-                              look: c.Button.Looks.LINK,
-                              className: s()(M.memberNoticeActionButton),
-                              children: (0, n.jsxs)(c.Text, {
+                      children: (0, l.jsx)('div', {
+                          className: i()(b.actionCell),
+                          children: (0, l.jsx)(C.Button, {
+                              size: C.Button.Sizes.SMALL,
+                              color: C.Button.Colors.TRANSPARENT,
+                              look: C.Button.Looks.LINK,
+                              className: i()(f.memberNoticeActionButton),
+                              children: (0, l.jsxs)(C.Text, {
                                   variant: 'text-sm/normal',
                                   color: 'always-white',
-                                  className: s()(M.memberNoticeAction),
+                                  className: i()(f.memberNoticeAction),
                                   children: [
-                                      (0, n.jsx)('div', { children: E.Z.Messages.MEMBER_SAFETY_TABLE_NEW_MEMBER_NOTICE_ACTION }),
-                                      (0, n.jsx)(c.UserIcon, {
+                                      (0, l.jsx)('div', { children: x.intl.string(x.t.rkyOzM) }),
+                                      (0, l.jsx)(C.UserIcon, {
                                           size: 'custom',
                                           color: 'currentColor',
                                           width: 20,
                                           height: 20,
-                                          className: s()(M.memberNoticeActionIcon)
+                                          className: i()(f.memberNoticeActionIcon)
                                       })
                                   ]
                               })

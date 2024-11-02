@@ -1,14 +1,14 @@
-var o, i, r, a;
+var i, o, r, a;
 e.d(n, {
     G: function () {
-        return o;
+        return i;
     },
     I: function () {
-        return i;
+        return o;
     }
 }),
-    ((r = o || (o = {})).PLAY = 'play'),
+    ((r = i || (i = {})).PLAY = 'play'),
     (r.PAUSE = 'pause'),
     (r.BACK_TO_CONVERSATION = 'back_to_conversation'),
-    ((a = i || (i = {})).INAPPROPRIATE_CONVERSATION = 'inappropriate_conversation'),
+    ((a = o || (o = {})).INAPPROPRIATE_CONVERSATION = 'inappropriate_conversation'),
     (a.KEYBIND = 'keybind');

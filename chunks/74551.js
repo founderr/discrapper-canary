@@ -1,35 +1,35 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return o;
     }
 });
 var i = n(200651),
-    a = n(481060),
-    s = n(575016),
-    r = n(533043);
-function l(e) {
+    r = n(481060),
+    l = n(575016),
+    a = n(533043);
+function o(e) {
     let { reminder: t, throttledNow: n } = e,
-        { dueInText: l, isOverdue: o } = (0, s.AT)({
+        { dueInText: o, isOverdue: s } = (0, l.AT)({
             dueAt: null == t ? void 0 : t.saveData.dueAt,
             now: n,
-            type: s.hQ.SHORT
+            type: l.hQ.SHORT
         });
     if (null == t.saveData.dueAt) return null;
-    let c = o ? 'text-danger' : 'text-normal';
+    let c = s ? 'text-danger' : 'text-normal';
     return (0, i.jsxs)('div', {
-        className: r.container,
+        className: a.container,
         children: [
             (0, i.jsx)('div', {
-                className: r.icon,
-                children: (0, i.jsx)(a.ClockIcon, {
+                className: a.icon,
+                children: (0, i.jsx)(r.ClockIcon, {
                     size: 'xxs',
-                    color: 'text-danger' === c ? a.tokens.colors.TEXT_DANGER : a.tokens.colors.INTERACTIVE_ACTIVE
+                    color: 'text-danger' === c ? r.tokens.colors.TEXT_DANGER : r.tokens.colors.INTERACTIVE_ACTIVE
                 })
             }),
-            (0, i.jsx)(a.Heading, {
+            (0, i.jsx)(r.Heading, {
                 variant: 'text-md/semibold',
                 color: c,
-                children: l
+                children: o
             })
         ]
     });

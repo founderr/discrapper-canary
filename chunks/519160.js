@@ -36,7 +36,7 @@ let c = {
 function g(e, t) {
     return ((e % t) + t) % t;
 }
-class I extends (s = a.Component) {
+class C extends (s = a.Component) {
     componentDidMount() {
         this.animatedIndex.setValue(this.props.currentIndex);
     }
@@ -111,7 +111,7 @@ class I extends (s = a.Component) {
             { margin: c, width: p } = l,
             m = this.getCarouselTranslate(),
             g = this.getItemStyle(),
-            I = (e = h > 0 ? [...r.slice(-h), ...r, ...r.slice(0, h)] : r).map((e, t) =>
+            C = (e = h > 0 ? [...r.slice(-h), ...r, ...r.slice(0, h)] : r).map((e, t) =>
                 (0, i.jsx)(
                     'div',
                     {
@@ -134,7 +134,7 @@ class I extends (s = a.Component) {
                     n
                 )
             },
-            children: I
+            children: C
         });
     }
     render() {
@@ -173,11 +173,11 @@ class I extends (s = a.Component) {
             );
     }
 }
-d(I, 'defaultProps', {
+d(C, 'defaultProps', {
     animate: !0,
     edgeItems: 2,
     align: p,
     gutter: 0,
     hideOverflow: !0
 }),
-    (t.ZP = (0, h.Z)(I));
+    (t.ZP = (0, h.Z)(C));

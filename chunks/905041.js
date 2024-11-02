@@ -1,12 +1,12 @@
-l.d(e, {
+l.d(t, {
     Z: function () {
-        return p;
+        return _;
     }
 });
-var t = l(200651);
+var e = l(200651);
 l(192379);
-var u = l(481060),
-    i = l(829883),
+var i = l(481060),
+    u = l(829883),
     r = l(976853),
     a = l(378233),
     o = l(902676),
@@ -14,49 +14,49 @@ var u = l(481060),
     c = l(49012),
     s = l(358085),
     v = l(998502),
-    _ = l(36998),
-    f = l(981631),
-    h = l(689938);
-function p(n, e, l, p) {
-    let E = (0, r.Z)(null == l ? void 0 : l.getChannelId());
-    if (!s.isPlatformEmbedded || null == n || '' === n || E || (null == p ? void 0 : p.shouldHideMediaOptions) === !0 || (null != n && null != (0, a.B0)(n)) || (null != n && (0, i.zt)(n))) return null;
-    let I = (0, o.F)(n),
-        M = (l) => {
-            d.default.track(f.rMx.CONTEXT_MENU_LINK_OPENED, {
-                hostname: I,
-                ...(0, _.v)()
+    f = l(36998),
+    h = l(981631),
+    p = l(388032);
+function _(n, t, l, _) {
+    let Z = (0, r.Z)(null == l ? void 0 : l.getChannelId());
+    if (!s.isPlatformEmbedded || null == n || '' === n || Z || (null == _ ? void 0 : _.shouldHideMediaOptions) === !0 || (null != n && null != (0, a.B0)(n)) || (null != n && (0, u.zt)(n))) return null;
+    let C = (0, o.F)(n),
+        E = (l) => {
+            d.default.track(h.rMx.CONTEXT_MENU_LINK_OPENED, {
+                hostname: C,
+                ...(0, f.v)()
             }),
                 (0, c.q)(
                     {
                         href: n,
-                        trusted: (0, c.r)(n, e),
+                        trusted: (0, c.r)(n, t),
                         shouldConfirm: !0
                     },
                     l
                 );
         };
     return [
-        (0, t.jsx)(
-            u.MenuItem,
+        (0, e.jsx)(
+            i.MenuItem,
             {
                 id: 'copy-native-link',
-                label: h.Z.Messages.COPY_LINK,
+                label: p.intl.string(p.t.WqhZsr),
                 action: () => {
-                    d.default.track(f.rMx.CONTEXT_MENU_LINK_COPIED, {
-                        hostname: I,
-                        ...(0, _.v)()
+                    d.default.track(h.rMx.CONTEXT_MENU_LINK_COPIED, {
+                        hostname: C,
+                        ...(0, f.v)()
                     }),
                         v.ZP.copy(n);
                 }
             },
             'copy-native-link'
         ),
-        (0, t.jsx)(
-            u.MenuItem,
+        (0, e.jsx)(
+            i.MenuItem,
             {
                 id: 'open-native-link',
-                label: h.Z.Messages.OPEN_LINK,
-                action: (n) => M(n)
+                label: p.intl.string(p.t.wuRE8P),
+                action: (n) => E(n)
             },
             'open-native-link'
         )

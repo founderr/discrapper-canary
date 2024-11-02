@@ -20,9 +20,9 @@ function c(e, t, n) {
     );
 }
 let d = new r.V7(),
-    _ = new r.V7(),
-    E = new r.V7();
-class f extends i.Z {
+    f = new r.V7(),
+    _ = new r.V7();
+class h extends i.Z {
     constructor(...e) {
         super(...e),
             c(this, 'actions', {
@@ -31,19 +31,19 @@ class f extends i.Z {
             }),
             c(this, 'handleUpdateProto', () => {
                 let e = o.Ok.getSetting();
-                if (null == e) E.stop();
+                if (null == e) _.stop();
                 else if (null != e.expiresAtMs && '0' !== e.expiresAtMs) {
                     let t = new Date(Number(e.expiresAtMs)).getTime() - new Date().getTime();
                     t > 0
-                        ? E.start(
+                        ? _.start(
                               t,
                               () => {
                                   o.Ok.updateSetting(void 0);
                               },
                               !0
                           )
-                        : (o.Ok.updateSetting(void 0), E.stop());
-                } else null != E && E.stop();
+                        : (o.Ok.updateSetting(void 0), _.stop());
+                } else null != _ && _.stop();
                 let t = o.Cr.getSetting();
                 if (null != t && '0' !== t && l.Z.getStatus() !== u.Skl.ONLINE) {
                     let e = new Date(Number(t)).getTime() - new Date().getTime();
@@ -61,16 +61,16 @@ class f extends i.Z {
                 if (null != n && '0' !== n) {
                     let e = new Date(Number(n)).getTime() - new Date().getTime();
                     e > 0
-                        ? _.start(
+                        ? f.start(
                               e,
                               () => {
                                   (0, s.oW)(!1);
                               },
                               !0
                           )
-                        : ((0, s.oW)(!1), _.stop());
-                } else null != _ && _.stop();
+                        : ((0, s.oW)(!1), f.stop());
+                } else null != f && f.stop();
             });
     }
 }
-t.Z = new f();
+t.Z = new h();

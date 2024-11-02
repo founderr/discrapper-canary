@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return R;
     },
     r: function () {
         return C;
@@ -21,53 +21,53 @@ var r = n(200651),
     u = n(166459),
     c = n(95152),
     d = n(476326),
-    _ = n(543651),
-    E = n(377171),
-    f = n(95398),
-    h = n(70097),
-    p = n(592125),
-    I = n(956664),
-    m = n(709054),
-    T = n(273031),
-    S = n(859235),
-    g = n(689938),
-    A = n(671292);
-let N = ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'video/quicktime', 'video/mp4'];
-function R(e) {
+    f = n(543651),
+    _ = n(377171),
+    h = n(95398),
+    p = n(70097),
+    m = n(592125),
+    g = n(956664),
+    E = n(709054),
+    v = n(273031),
+    I = n(859235),
+    S = n(388032),
+    T = n(671292);
+let b = ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'video/quicktime', 'video/mp4'];
+function y(e) {
     let { alt: t, spoiler: n, renderContent: a, size: s } = e,
         [o, l] = i.useState(!1);
-    return (0, r.jsx)(f.a.Provider, {
+    return (0, r.jsx)(h.a.Provider, {
         value: !n,
-        children: (0, r.jsx)(f.Z, {
+        children: (0, r.jsx)(h.Z, {
             containerStyles:
-                s === S.q.CLIP
+                s === I.q.CLIP
                     ? {
                           borderBottomLeftRadius: 0,
                           borderBottomRightRadius: 0,
                           boxShadow: 'none'
                       }
                     : void 0,
-            type: f.Z.Types.ATTACHMENT,
+            type: h.Z.Types.ATTACHMENT,
             onReveal: () => l(!0),
-            className: A.spoilerContainer,
+            className: T.spoilerContainer,
             children: (e) =>
                 (0, r.jsxs)('div', {
-                    className: A.spoilerWrapper,
+                    className: T.spoilerWrapper,
                     children: [
                         a(e),
                         (0, r.jsxs)('div', {
-                            className: A.tags,
+                            className: T.tags,
                             children: [
                                 null != t && '' !== t
                                     ? (0, r.jsx)('span', {
-                                          className: A.altTag,
-                                          children: g.Z.Messages.IMAGE_ALT
+                                          className: T.altTag,
+                                          children: S.intl.string(S.t.QEW819)
                                       })
                                     : null,
                                 o && n
                                     ? (0, r.jsx)('span', {
-                                          className: A.altTag,
-                                          children: g.Z.Messages.SPOILER
+                                          className: T.altTag,
+                                          children: S.intl.string(S.t['F+x38P'])
                                       })
                                     : null
                             ]
@@ -77,23 +77,23 @@ function R(e) {
         })
     });
 }
-function O(e) {
-    let { file: t, alt: n, spoiler: a, size: o = S.q.MEDIUM, onMouseEnter: u } = e,
+function A(e) {
+    let { file: t, alt: n, spoiler: a, size: o = I.q.MEDIUM, onMouseEnter: u } = e,
         [c, d] = i.useState(),
-        [_, E] = i.useState({
+        [f, _] = i.useState({
             width: 0,
             height: 0
         }),
-        f = o === S.q.SMALL;
+        h = o === I.q.SMALL;
     i.useEffect(() => {
-        if (null == t || !1 === N.includes(t.type)) return;
+        if (null == t || !1 === b.includes(t.type)) return;
         let e = URL.createObjectURL(t);
         d(e);
         let n = new Image();
         return (
             (n.onload = () => {
-                let { width: e, height: t } = (0, I.zp)(n.width, n.height);
-                E({
+                let { width: e, height: t } = (0, g.zp)(n.width, n.height);
+                _({
                     width: e,
                     height: t
                 });
@@ -101,7 +101,7 @@ function O(e) {
             (n.src = e),
             () => {
                 d(void 0),
-                    E({
+                    _({
                         width: 0,
                         height: 0
                     }),
@@ -109,55 +109,55 @@ function O(e) {
             }
         );
     }, [t]);
-    let h = i.useCallback(
+    let p = i.useCallback(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                 return null == c
                     ? (0, r.jsx)(r.Fragment, {})
                     : (0, r.jsx)('img', {
                           src: c,
-                          className: s()(A.media, {
-                              [A.spoiler]: e,
-                              [A.imageSmall]: f
+                          className: s()(T.media, {
+                              [T.spoiler]: e,
+                              [T.imageSmall]: h
                           }),
                           'aria-hidden': !0,
                           alt: null != n ? n : '',
-                          style: t ? _ : {}
+                          style: t ? f : {}
                       });
             },
-            [c, f, n, _]
+            [c, h, n, f]
         ),
-        p = i.useCallback(() => {
+        m = i.useCallback(() => {
             if (null != c)
                 (0, l.openModal)((e) =>
                     (0, r.jsx)(l.ModalRoot, {
-                        className: A.__invalid_modal,
+                        className: T.__invalid_modal,
                         ...e,
                         size: l.ModalSize.DYNAMIC,
-                        'aria-label': g.Z.Messages.IMAGE,
-                        children: h(!1, !0)
+                        'aria-label': S.intl.string(S.t.X4IxWF),
+                        children: p(!1, !0)
                     })
                 );
-        }, [c, h]);
+        }, [c, p]);
     return (0, r.jsx)('div', {
         onMouseEnter: u,
-        className: s()(A.mediaContainer, { [A.imageSmall]: f }),
+        className: s()(T.mediaContainer, { [T.imageSmall]: h }),
         children: (0, r.jsx)(l.Clickable, {
-            onClick: p,
-            className: A.clickableMedia,
-            children: (0, r.jsx)(R, {
+            onClick: m,
+            className: T.clickableMedia,
+            children: (0, r.jsx)(y, {
                 size: o,
                 alt: n,
                 spoiler: a,
-                renderContent: h
+                renderContent: p
             })
         })
     });
 }
-function v(e) {
-    let { file: t, alt: n, spoiler: a, size: o = S.q.MEDIUM, onMouseEnter: l, onVideoLoadError: u } = e,
+function N(e) {
+    let { file: t, alt: n, spoiler: a, size: o = I.q.MEDIUM, onMouseEnter: l, onVideoLoadError: u } = e,
         [c, d] = i.useState(),
-        _ = i.useRef(null);
+        f = i.useRef(null);
     return (
         i.useEffect(() => {
             if (null == t) return;
@@ -171,18 +171,18 @@ function v(e) {
         }, [t]),
         (0, r.jsx)('div', {
             onMouseEnter: l,
-            className: A.mediaContainer,
-            children: (0, r.jsx)(R, {
+            className: T.mediaContainer,
+            children: (0, r.jsx)(y, {
                 size: o,
                 alt: n,
                 spoiler: a,
                 renderContent: (e) =>
-                    (0, r.jsx)(h.Z, {
-                        ref: _,
+                    (0, r.jsx)(p.Z, {
+                        ref: f,
                         src: c,
-                        className: s()(A.media, {
-                            [A.spoiler]: e,
-                            [A.sizeClip]: o === S.q.CLIP
+                        className: s()(T.media, {
+                            [T.spoiler]: e,
+                            [T.sizeClip]: o === I.q.CLIP
                         }),
                         onError: u,
                         preload: 'none',
@@ -194,11 +194,11 @@ function v(e) {
 }
 function C(e) {
     var t;
-    let { upload: n, size: a = S.q.MEDIUM, onMouseEnter: o } = e,
+    let { upload: n, size: a = I.q.MEDIUM, onMouseEnter: o } = e,
         [l, u] = i.useState(!1),
-        c = a === S.q.SMALL;
+        c = a === I.q.SMALL;
     return n.isImage && n.item.platform === d.ow.WEB
-        ? (0, r.jsx)(O, {
+        ? (0, r.jsx)(A, {
               file: n.item.file,
               alt: n.description,
               spoiler: n.spoiler,
@@ -206,7 +206,7 @@ function C(e) {
               onMouseEnter: o
           })
         : !l && n.isVideo && n.item.platform === d.ow.WEB
-          ? (0, r.jsx)(v, {
+          ? (0, r.jsx)(N, {
                 file: n.item.file,
                 size: a,
                 alt: n.description,
@@ -216,30 +216,30 @@ function C(e) {
             })
           : (0, r.jsx)('div', {
                 onMouseEnter: o,
-                className: s()(A.icon, A.__invalid_imageContainer, {
-                    [A[null !== (t = n.classification) && void 0 !== t ? t : '']]: !0,
-                    [A.imageSmall]: c
+                className: s()(T.icon, T.__invalid_imageContainer, {
+                    [T[null !== (t = n.classification) && void 0 !== t ? t : '']]: !0,
+                    [T.imageSmall]: c
                 }),
                 children: (0, r.jsx)('div', {
-                    className: A.tags,
+                    className: T.tags,
                     children: n.spoiler
                         ? (0, r.jsx)('span', {
-                              className: A.altTag,
-                              children: g.Z.Messages.SPOILER
+                              className: T.altTag,
+                              children: S.intl.string(S.t['F+x38P'])
                           })
                         : null
                 })
             });
 }
-function L(e) {
-    let { channelId: t, draftType: n, upload: a, keyboardModeEnabled: d, label: f, size: h = S.q.MEDIUM, canEdit: I = !0, hideFileName: N = !1, clip: R } = e,
-        O = null != R,
-        v = (h = O ? S.q.CLIP : h) === S.q.SMALL,
-        L = (0, o.e7)([p.Z], () => {
+function R(e) {
+    let { channelId: t, draftType: n, upload: a, keyboardModeEnabled: d, label: h, size: p = I.q.MEDIUM, canEdit: g = !0, hideFileName: b = !1, clip: y } = e,
+        A = null != y,
+        N = (p = A ? I.q.CLIP : p) === I.q.SMALL,
+        R = (0, o.e7)([m.Z], () => {
             var e;
-            return null === (e = p.Z.getChannel(t)) || void 0 === e ? void 0 : e.guild_id;
+            return null === (e = m.Z.getChannel(t)) || void 0 === e ? void 0 : e.guild_id;
         }),
-        D = (e) => {
+        O = (e) => {
             e.stopPropagation(),
                 (0, l.openModal)((e) =>
                     (0, r.jsx)(c.default, {
@@ -258,48 +258,48 @@ function L(e) {
                     })
                 );
         };
-    return (0, r.jsxs)(S.Z, {
+    return (0, r.jsxs)(I.Z, {
         actions: (0, r.jsxs)(i.Fragment, {
             children: [
-                I
-                    ? (0, r.jsx)(T.Z, {
-                          className: s()({ [A.action]: v }),
-                          tooltip: O ? g.Z.Messages.CLIPS_ATTACHMENT_UTILITIES_SPOILER : g.Z.Messages.ATTACHMENT_UTILITIES_SPOILER,
+                g
+                    ? (0, r.jsx)(v.Z, {
+                          className: s()({ [T.action]: N }),
+                          tooltip: A ? S.intl.string(S.t.MYgdY2) : S.intl.string(S.t.cuurzM),
                           onClick: () => u.Z.update(t, a.id, n, { spoiler: !a.spoiler }),
                           children: a.spoiler
                               ? (0, r.jsx)(l.EyeSlashIcon, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: s()({ [A.actionBarIcon]: v })
+                                    className: s()({ [T.actionBarIcon]: N })
                                 })
                               : (0, r.jsx)(l.EyeIcon, {
                                     size: 'xs',
                                     color: 'currentColor',
-                                    className: s()({ [A.actionBarIcon]: v })
+                                    className: s()({ [T.actionBarIcon]: N })
                                 })
                       })
                     : null,
-                I && !O
-                    ? (0, r.jsx)(T.Z, {
-                          className: s()({ [A.action]: v }),
-                          tooltip: g.Z.Messages.ATTACHMENT_UTILITIES_MODIFY,
-                          onClick: D,
+                g && !A
+                    ? (0, r.jsx)(v.Z, {
+                          className: s()({ [T.action]: N }),
+                          tooltip: S.intl.string(S.t.Y8ujqq),
+                          onClick: O,
                           children: (0, r.jsx)(l.PencilIcon, {
                               size: 'xs',
                               color: 'currentColor',
-                              className: s()({ [A.actionBarIcon]: v })
+                              className: s()({ [T.actionBarIcon]: N })
                           })
                       })
                     : null,
-                (0, r.jsx)(T.Z, {
-                    className: s()({ [A.action]: v }),
-                    tooltip: O ? g.Z.Messages.CLIPS_ATTACHMENT_UTILITIES_REMOVE : g.Z.Messages.ATTACHMENT_UTILITIES_REMOVE,
+                (0, r.jsx)(v.Z, {
+                    className: s()({ [T.action]: N }),
+                    tooltip: A ? S.intl.string(S.t.MskAXV) : S.intl.string(S.t.vN7REx),
                     onClick: () => u.Z.remove(t, a.id, n),
                     dangerous: !0,
                     children: (0, r.jsx)(l.TrashIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: s()({ [A.actionBarIcon]: v })
+                        className: s()({ [T.actionBarIcon]: N })
                     })
                 })
             ]
@@ -307,40 +307,40 @@ function L(e) {
         draftType: n,
         id: a.id,
         channelId: t,
-        handleEditModal: D,
+        handleEditModal: O,
         keyboardModeEnabled: d,
-        size: h,
-        className: s()({ [A.attachmentItemSmall]: v }),
+        size: p,
+        className: s()({ [T.attachmentItemSmall]: N }),
         children: [
             (0, r.jsx)(C, {
                 upload: a,
-                size: h
+                size: p
             }),
-            !N &&
-                !O &&
+            !b &&
+                !A &&
                 (0, r.jsx)('div', {
-                    className: A.filenameContainer,
+                    className: T.filenameContainer,
                     children: (0, r.jsx)(l.Text, {
-                        className: A.filename,
+                        className: T.filename,
                         variant: 'text-sm/normal',
-                        children: null != f ? f : a.filename
+                        children: null != h ? h : a.filename
                     })
                 }),
-            O &&
+            A &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(_.Z, {
-                            className: A.clipsFooter,
-                            createdAt: m.default.extractTimestamp(R.id),
-                            participantIds: R.users,
-                            applicationId: R.applicationId,
-                            title: R.name,
-                            guildId: L
+                        (0, r.jsx)(f.Z, {
+                            className: T.clipsFooter,
+                            createdAt: E.default.extractTimestamp(y.id),
+                            participantIds: y.users,
+                            applicationId: y.applicationId,
+                            title: y.name,
+                            guildId: R
                         }),
                         (0, r.jsx)(l.TextBadge, {
-                            color: E.Z.BG_BRAND,
-                            className: A.clipsBadge,
-                            text: g.Z.Messages.CLIP_TAG
+                            color: _.Z.BG_BRAND,
+                            className: T.clipsBadge,
+                            text: S.intl.string(S.t.oA4afH)
                         })
                     ]
                 })

@@ -4,34 +4,34 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(481060),
-    o = n(689938),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    s = n(481060),
+    o = n(388032),
     c = n(405787),
     d = n(902294);
 function u(e) {
-    let { heading: t = o.Z.Messages.APP_DIRECTORY_ERROR_HEADING, body: n = o.Z.Messages.APP_DIRECTORY_ERROR_BODY, className: s } = e;
+    let { heading: t = o.intl.string(o.t.NGw8v7), body: n = o.intl.string(o.t['1XZRY2']), className: l } = e;
     return (0, i.jsxs)('div', {
-        className: r()(c.container, s),
+        className: a()(c.container, l),
         children: [
             (0, i.jsx)('div', {
                 className: c.imageContainer,
                 children: (0, i.jsx)('img', {
                     className: c.image,
                     src: d,
-                    alt: o.Z.Messages.APP_DIRECTORY_CONFUSED_CLYDE_IMAGE_ALT
+                    alt: o.intl.string(o.t['/UJaIy'])
                 })
             }),
-            (0, i.jsxs)(a.Fragment, {
+            (0, i.jsxs)(r.Fragment, {
                 children: [
-                    (0, i.jsx)(l.Heading, {
+                    (0, i.jsx)(s.Heading, {
                         variant: 'heading-xl/semibold',
                         className: c.header,
                         children: t
                     }),
-                    (0, i.jsx)(l.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
                         children: n

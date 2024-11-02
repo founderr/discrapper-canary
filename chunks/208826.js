@@ -22,7 +22,7 @@ function c() {
         t = (0, i.e7)([l.Z], () => l.Z.isOpen()),
         n = (0, i.e7)([o.Z], () => o.Z.hasLayers()),
         [c, d] = r.useState(!1),
-        _ = (0, s.Aq)();
+        f = (0, s.Aq)();
     return (
         r.useEffect(() => {
             function e() {
@@ -32,13 +32,13 @@ function c() {
                 d(!1);
             }
             return (
-                _.subscribe(u.CkL.POPOUT_SHOW, e),
-                _.subscribe(u.CkL.POPOUT_HIDE, t),
+                f.subscribe(u.CkL.POPOUT_SHOW, e),
+                f.subscribe(u.CkL.POPOUT_HIDE, t),
                 () => {
-                    _.unsubscribe(u.CkL.POPOUT_SHOW, e), _.unsubscribe(u.CkL.POPOUT_HIDE, t);
+                    f.unsubscribe(u.CkL.POPOUT_SHOW, e), f.unsubscribe(u.CkL.POPOUT_HIDE, t);
                 }
             );
-        }, [_]),
+        }, [f]),
         e || t || c || n
     );
 }

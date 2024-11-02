@@ -1,41 +1,41 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return S;
+        return p;
     }
 });
-var n = t(200651);
-t(192379);
-var a = t(524437),
-    i = t(481060),
-    r = t(63063),
-    o = t(78451),
-    l = t(695346),
-    c = t(838436),
-    d = t(973005),
-    _ = t(726985),
-    u = t(981631),
-    E = t(689938),
-    T = t(477060);
-function S() {
-    var e, s, t;
-    let S = l.Xr.useSetting(),
-        I = l.UP.useSetting();
-    let N = ((e = S), (s = I), e !== a.Xr.DEFAULT_UNSET ? e : null !== (t = d.O7.get(s)) && void 0 !== t ? t : a.Xr.NON_FRIENDS);
-    return (0, n.jsxs)(c.U, {
-        setting: _.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER_V2,
+var i = n(200651);
+n(192379);
+var s = n(524437),
+    r = n(481060),
+    l = n(63063),
+    a = n(78451),
+    o = n(695346),
+    c = n(838436),
+    d = n(973005),
+    u = n(726985),
+    m = n(981631),
+    h = n(388032),
+    g = n(477060);
+function p() {
+    var e, t, n;
+    let p = o.Xr.useSetting(),
+        x = o.UP.useSetting();
+    let S = ((e = p), (t = x), e !== s.Xr.DEFAULT_UNSET ? e : null !== (n = d.O7.get(t)) && void 0 !== n ? n : s.Xr.NON_FRIENDS);
+    return (0, i.jsxs)(c.U, {
+        setting: u.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER_V2,
         children: [
-            (0, n.jsx)(c.H, {
-                header: E.Z.Messages.USER_DM_SPAM_FILTER_V2,
-                description: E.Z.Messages.USER_DM_SPAM_FILTER_HELP_V2.format({ appealLink: r.Z.getArticleURL(u.BhN.SAFE_DIRECT_MESSAGING) })
+            (0, i.jsx)(c.H, {
+                header: h.intl.string(h.t.tiCXaG),
+                description: h.intl.format(h.t.RvjRRE, { appealLink: l.Z.getArticleURL(m.BhN.SAFE_DIRECT_MESSAGING) })
             }),
-            (0, n.jsx)(i.RadioGroup, {
-                className: T.radioGroup,
-                radioItemClassName: T.radioGroupItem,
-                value: N,
-                options: (0, o.c7)(),
+            (0, i.jsx)(r.RadioGroup, {
+                className: g.radioGroup,
+                radioItemClassName: g.radioGroupItem,
+                value: S,
+                options: (0, a.c7)(),
                 onChange: (e) => {
-                    let { value: s } = e;
-                    return l.Xr.updateSetting(s);
+                    let { value: t } = e;
+                    return o.Xr.updateSetting(t);
                 }
             })
         ]

@@ -1,17 +1,17 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return u;
     }
 });
-var l = t(192379),
-    s = t(106351),
-    a = t(399606),
-    i = t(447003),
-    r = t(592125),
-    o = t(984933),
-    d = t(823379);
+var l = n(192379),
+    i = n(106351),
+    r = n(399606),
+    s = n(447003),
+    a = n(592125),
+    o = n(984933),
+    d = n(823379);
 function u(e) {
-    let n = (0, a.Wu)([o.ZP], () => o.ZP.getVocalChannelIds(e)),
-        t = (0, a.Wu)([r.Z], () => n.map((e) => r.Z.getChannel(e)).filter(d.lm), [n]);
-    return l.useMemo(() => t.filter((e) => !(0, i.Z)(e) && e.type === s.d.GUILD_VOICE), [t]);
+    let t = (0, r.Wu)([o.ZP], () => o.ZP.getVocalChannelIds(e)),
+        n = (0, r.Wu)([a.Z], () => t.map((e) => a.Z.getChannel(e)).filter(d.lm), [t]);
+    return l.useMemo(() => n.filter((e) => !(0, s.Z)(e) && e.type === i.d.GUILD_VOICE), [n]);
 }

@@ -1,9 +1,9 @@
 var i = n(200651);
 n(192379);
-var s = n(481060),
-    a = n(313201),
-    l = n(689938),
-    r = n(780735);
+var l = n(481060),
+    r = n(313201),
+    a = n(388032),
+    s = n(780735);
 let o = () =>
     n
         .e('39248')
@@ -13,40 +13,40 @@ let o = () =>
             return t;
         });
 t.Z = (e) => {
-    let t = (0, a.Dt)();
-    return (0, i.jsxs)(s.ModalRoot, {
+    let t = (0, r.Dt)();
+    return (0, i.jsxs)(l.ModalRoot, {
         ...e,
         transitionState: e.transitionState,
         'aria-labelledby': t,
         children: [
             (0, i.jsx)('div', {
-                className: r.animationContainer,
-                children: (0, i.jsx)(s.LottieAnimation, {
+                className: s.animationContainer,
+                children: (0, i.jsx)(l.LottieAnimation, {
                     importData: o,
-                    className: r.animationMiddle
+                    className: s.animationMiddle
                 })
             }),
-            (0, i.jsx)(s.ModalContent, {
+            (0, i.jsx)(l.ModalContent, {
                 children: (0, i.jsxs)('div', {
-                    className: r.container,
+                    className: s.container,
                     children: [
-                        (0, i.jsx)(s.Heading, {
+                        (0, i.jsx)(l.Heading, {
                             variant: 'heading-xl/semibold',
-                            className: r.header,
+                            className: s.header,
                             id: t,
-                            children: l.Z.Messages.MEMBER_VERIFICATION_APPROVED_APPLICATION_MODAL_TITLE.format({ guildName: e.guildName })
+                            children: a.intl.format(a.t.z9qozM, { guildName: e.guildName })
                         }),
-                        (0, i.jsx)(s.Text, {
+                        (0, i.jsx)(l.Text, {
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
-                            children: l.Z.Messages.MEMBER_VERIFICATION_APPROVED_APPLICATION_MODAL_DESC
+                            children: a.intl.string(a.t.nwpqyc)
                         }),
-                        (0, i.jsx)(s.Button, {
-                            className: r.button,
+                        (0, i.jsx)(l.Button, {
+                            className: s.button,
                             onClick: () => {
                                 e.onAccept(), e.onClose();
                             },
-                            children: l.Z.Messages.MEMBER_VERIFICATION_APPROVED_APPLICATION_MODAL_CONFIRM
+                            children: a.intl.string(a.t.NuzmOD)
                         })
                     ]
                 })

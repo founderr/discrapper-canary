@@ -1,47 +1,47 @@
 n.d(t, {
     Q: function () {
-        return a;
+        return r;
     }
 });
-var s,
-    a,
-    r = n(200651);
+var i,
+    r,
+    a = n(200651);
 n(192379);
-var i = n(120356),
-    l = n.n(i),
+var s = n(120356),
+    l = n.n(s),
     o = n(442837),
     c = n(607070),
-    _ = n(967538),
-    d = n(885302),
-    E = n(914677),
-    u = n(226705);
-((s = a || (a = {}))[(s.NITRO_GEM = 0)] = 'NITRO_GEM'), (s[(s.NITRO_LOGO = 1)] = 'NITRO_LOGO');
+    d = n(967538),
+    u = n(885302),
+    g = n(914677),
+    m = n(226705);
+((i = r || (r = {}))[(i.NITRO_GEM = 0)] = 'NITRO_GEM'), (i[(i.NITRO_LOGO = 1)] = 'NITRO_LOGO');
 t.Z = (e) => {
-    let { showAnimations: t = !0, iconClassName: n, staticPercentage: s, innerCircleClassName: a, progressCircleStrokeSize: i, backgroundCircleSize: T, percentage: I, initialPercentage: R, progressCircleVariation: g = 0, ellipseOpacity: N, customAnimationClassName: m, circleColor: C, circleStroke: A } = e,
-        p = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
-        f = t && !p;
-    return (0, r.jsx)('div', {
-        className: l()(u.progressCircle, n, { [u.progressCricleBottomMargin]: 0 === g }),
-        children: (0, r.jsx)(E.Z, {
-            animationClassName: l()(u.activeProgressCircle, {
-                [u.activeProgressCircleAnimation]: f,
-                [null != m ? m : '']: f
+    let { showAnimations: t = !0, iconClassName: n, staticPercentage: i, innerCircleClassName: r, progressCircleStrokeSize: s, backgroundCircleSize: f, percentage: p, initialPercentage: _, progressCircleVariation: h = 0, ellipseOpacity: x, customAnimationClassName: E, circleColor: b, circleStroke: C } = e,
+        v = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
+        T = t && !v;
+    return (0, a.jsx)('div', {
+        className: l()(m.progressCircle, n, { [m.progressCricleBottomMargin]: 0 === h }),
+        children: (0, a.jsx)(g.Z, {
+            animationClassName: l()(m.activeProgressCircle, {
+                [m.activeProgressCircleAnimation]: T,
+                [null != E ? E : '']: T
             }),
-            progressCircleStroke: A,
-            progressCircleStrokeSize: i,
-            percentage: null != s ? s : I,
-            initialPercentage: null != s ? s : R,
-            progressCircleVariation: g,
+            progressCircleStroke: C,
+            progressCircleStrokeSize: s,
+            percentage: null != i ? i : p,
+            initialPercentage: null != i ? i : _,
+            progressCircleVariation: h,
             children:
-                0 === g
-                    ? (0, r.jsx)(_.Z, {
-                          className: f ? u.nitroGemAnimation : void 0,
-                          backgroundColor: l()(u.gemBackgroundFill, a),
-                          backgroundCircleSize: T
+                0 === h
+                    ? (0, a.jsx)(d.Z, {
+                          className: T ? m.nitroGemAnimation : void 0,
+                          backgroundColor: l()(m.gemBackgroundFill, r),
+                          backgroundCircleSize: f
                       })
-                    : (0, r.jsx)(d.Z, {
-                          circleColor: C,
-                          ellipseOpacity: N
+                    : (0, a.jsx)(u.Z, {
+                          circleColor: b,
+                          ellipseOpacity: x
                       })
         })
     });

@@ -8,67 +8,67 @@ var r = n(200651),
     u = n(873546),
     c = n(442837),
     d = n(316792),
-    _ = n(481060),
-    E = n(168551),
-    f = n(540059),
-    h = n(19759),
-    p = n(706454),
-    I = n(451478),
-    m = n(597952),
-    T = n(252618),
-    S = n(80006),
-    g = n(587061),
-    A = n(392358),
-    N = n(981631);
+    f = n(481060),
+    _ = n(168551),
+    h = n(540059),
+    p = n(19759),
+    m = n(706454),
+    g = n(451478),
+    E = n(597952),
+    v = n(252618),
+    I = n(80006),
+    S = n(587061),
+    T = n(392358),
+    b = n(981631);
 n(81693);
-let R = new Set([N.Z5c.LOGIN, N.Z5c.REGISTER]);
+let y = new Set([b.Z5c.LOGIN, b.Z5c.REGISTER]);
 t.Z = i.memo(function (e) {
     let { children: t, skipsSettingDefaultPageTitle: a } = e;
-    (0, T.ZD)({ skipsSettingDefaultPageTitle: a });
-    let { clientThemesClassName: N, clientThemesCSS: O } = (0, E.ZP)(),
-        v = i.createElement('style', { [E.PQ]: !0 }, O);
+    (0, v.ZD)({ skipsSettingDefaultPageTitle: a });
+    let { clientThemesClassName: b, clientThemesCSS: A } = (0, _.ZP)(),
+        N = i.createElement('style', { [_.PQ]: !0 }, A);
     return (0, r.jsxs)(o.ql, {
         children: [
             (function (e) {
-                let t = (0, c.e7)([p.default], () => p.default.locale),
-                    n = (0, c.e7)([I.Z], () => I.Z.isFocused(), []),
-                    { theme: a, density: o } = (0, _.useThemeContext)(),
-                    { reducedMotion: d } = i.useContext(_.AccessibilityPreferencesContext),
-                    { accessibilitySettings: E, appWrapperClassName: T } = (0, S.I)(),
-                    { fontScale: N, fontScaleClass: O, saturation: v, desaturateUserColors: C, useForcedColors: L, systemForcedColors: D } = E,
-                    y = (0, l.TH)(),
-                    b = i.useMemo(() => R.has(y.pathname), [y.pathname]);
-                (0, g.Z)(window, b);
-                let M = (0, A.Z)(window, __OVERLAY__ || n),
-                    P = (0, c.e7)([h.Z], () => h.Z.sidebarWidth),
-                    U = (0, _.useRedesignIconContext)().enabled,
-                    w = (0, f.Q)('AppHelmet');
+                let t = (0, c.e7)([m.default], () => m.default.locale),
+                    n = (0, c.e7)([g.Z], () => g.Z.isFocused(), []),
+                    { theme: a, density: o } = (0, f.useThemeContext)(),
+                    { reducedMotion: d } = i.useContext(f.AccessibilityPreferencesContext),
+                    { accessibilitySettings: _, appWrapperClassName: v } = (0, I.I)(),
+                    { fontScale: b, fontScaleClass: A, saturation: N, desaturateUserColors: C, useForcedColors: R, systemForcedColors: O } = _,
+                    D = (0, l.TH)(),
+                    L = i.useMemo(() => y.has(D.pathname), [D.pathname]);
+                (0, S.Z)(window, L);
+                let x = (0, T.Z)(window, __OVERLAY__ || n),
+                    w = (0, c.e7)([p.Z], () => p.Z.sidebarWidth),
+                    M = (0, f.useRedesignIconContext)().enabled,
+                    P = (0, h.Q)('AppHelmet');
                 return (0, r.jsx)('html', {
                     lang: t,
-                    style: 'font-size: '.concat(N, '%; --saturation-factor: ').concat(v, '; --devtools-sidebar-width: ').concat(P, 'px;'),
+                    style: 'font-size: '.concat(b, '%; --saturation-factor: ').concat(N, '; --devtools-sidebar-width: ').concat(w, 'px;'),
                     className: s()(
                         e,
-                        T,
+                        v,
                         {
                             overlay: __OVERLAY__,
-                            'mouse-mode': M,
+                            'mouse-mode': x,
                             'reduce-motion': d.enabled,
                             'full-motion': !d.enabled,
                             'is-mobile': u.tq,
                             'app-focused': n,
                             'desaturate-user-colors': C,
-                            'disable-forced-colors': !L && 'active' === D,
-                            'enable-forced-colors': L,
-                            'show-redesigned-icons': U,
-                            'visual-refresh': w
+                            'disable-forced-colors': !R && 'active' === O,
+                            'enable-forced-colors': R,
+                            'show-redesigned-icons': M,
+                            'visual-refresh': P
                         },
-                        (0, _.getThemeClass)(a),
+                        (0, f.getThemeClass)(a),
                         'density-'.concat(o),
-                        (0, m.Z)(),
-                        O
+                        (0, E.Z)(),
+                        A
                     )
                 });
-            })(N),
+            })(b),
             (function () {
                 let [e, t] = i.useState([]);
                 return (
@@ -99,7 +99,7 @@ t.Z = i.memo(function (e) {
                     })
                 );
             })(),
-            v,
+            N,
             t
         ]
     });

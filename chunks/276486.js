@@ -1,4 +1,4 @@
-n.d(s, {
+n.d(t, {
     l: function () {
         return d;
     },
@@ -6,58 +6,58 @@ n.d(s, {
         return u;
     }
 });
-var t = n(200651);
+var l = n(200651);
 n(192379);
-var l = n(481060),
-    i = n(144114),
-    a = n(489813),
-    r = n(815660),
-    o = n(689938);
+var i = n(481060),
+    s = n(144114),
+    r = n(489813),
+    a = n(815660),
+    o = n(388032);
 function d() {
-    return (0, t.jsx)(t.Fragment, {
-        children: (0, t.jsx)(a.PU, {
-            icon: l.MobilePhoneIcon,
-            text: o.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_LABEL,
-            footnote: o.Z.Messages.MEMBER_VERIFICATION_MODAL_PRIVACY_DESCRIPTION,
+    return (0, l.jsx)(l.Fragment, {
+        children: (0, l.jsx)(r.PU, {
+            icon: i.MobilePhoneIcon,
+            text: o.intl.string(o.t.woMjLS),
+            footnote: o.intl.string(o.t['jMh+TU']),
             meetsRequirement: !1,
-            children: (0, t.jsx)(l.Tooltip, {
-                text: o.Z.Messages.MEMBER_VERIFICATION_VERIFICATION_FIELD_SETTINGS_TOOLTIP,
+            children: (0, l.jsx)(i.Tooltip, {
+                text: o.intl.string(o.t.mGlP39),
                 children: (e) =>
-                    (0, t.jsx)(l.Button, {
+                    (0, l.jsx)(i.Button, {
                         ...e,
-                        size: l.Button.Sizes.SMALL,
+                        size: i.Button.Sizes.SMALL,
                         disabled: !0,
-                        children: o.Z.Messages.VERIFY
+                        children: o.intl.string(o.t['13ofGh'])
                     })
             })
         })
     });
 }
 function u(e) {
-    let { isUserVerified: s } = e,
-        d = s ? o.Z.Messages.MEMBER_VERIFICATION_PHONE_VERIFIED : o.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_LABEL;
-    return (0, t.jsx)(t.Fragment, {
-        children: (0, t.jsx)(a.PU, {
-            icon: l.MobilePhoneIcon,
+    let { isUserVerified: t } = e,
+        d = t ? o.intl.string(o.t.WWzQtb) : o.intl.string(o.t.woMjLS);
+    return (0, l.jsx)(l.Fragment, {
+        children: (0, l.jsx)(r.PU, {
+            icon: i.MobilePhoneIcon,
             text: d,
-            footnote: o.Z.Messages.MEMBER_VERIFICATION_MODAL_PRIVACY_DESCRIPTION,
-            meetsRequirement: s,
-            children: (0, t.jsx)(l.Button, {
-                size: l.Button.Sizes.SMALL,
+            footnote: o.intl.string(o.t['jMh+TU']),
+            meetsRequirement: t,
+            children: (0, l.jsx)(i.Button, {
+                size: i.Button.Sizes.SMALL,
                 onClick: () => {
-                    (0, l.openModalLazy)(
+                    (0, i.openModalLazy)(
                         async () => {
                             let { default: e } = await Promise.all([n.e('76540'), n.e('92886')]).then(n.bind(n, 607018));
-                            return (s) =>
-                                (0, t.jsx)(e, {
-                                    reason: i.L.GUILD_PHONE_REQUIRED,
-                                    ...s
+                            return (t) =>
+                                (0, l.jsx)(e, {
+                                    reason: s.L.GUILD_PHONE_REQUIRED,
+                                    ...t
                                 });
                         },
-                        { modalKey: r.M }
+                        { modalKey: a.M }
                     );
                 },
-                children: o.Z.Messages.VERIFY
+                children: o.intl.string(o.t['13ofGh'])
             })
         })
     });

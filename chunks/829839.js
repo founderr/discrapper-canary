@@ -1,12 +1,12 @@
 n.d(t, {
     AQ: function () {
-        return I;
+        return g;
     },
     DY: function () {
-        return f;
+        return h;
     },
     yQ: function () {
-        return h;
+        return p;
     }
 }),
     n(653041),
@@ -20,7 +20,7 @@ var r,
     u = n(553813),
     c = n.n(u),
     d = n(65154);
-let _ = [
+let f = [
     {
         name: 'H265',
         encode: (null === (i = window) || void 0 === i ? void 0 : null === (r = i.DiscordNative) || void 0 === r ? void 0 : r.process.platform) !== 'darwin' || ((null === (s = window) || void 0 === s ? void 0 : null === (a = s.DiscordNative) || void 0 === a ? void 0 : a.os.arch) === 'arm64' && c().satisfies(null === (l = window) || void 0 === l ? void 0 : null === (o = l.DiscordNative) || void 0 === o ? void 0 : o.os.release, d.n4)),
@@ -42,8 +42,8 @@ let _ = [
         decode: !0
     }
 ];
-function E(e, t) {
-    let n = t.concat(_),
+function _(e, t) {
+    let n = t.concat(f),
         r = [];
     return (
         n.forEach((t) => {
@@ -58,7 +58,7 @@ function E(e, t) {
         r
     );
 }
-function f(e) {
+function h(e) {
     let t = [];
     return (
         e.has(d.V8.SIGNAL_AV1_DECODE)
@@ -76,28 +76,28 @@ function f(e) {
         t
     );
 }
-function h(e, t) {
+function p(e, t) {
     return 'string' == typeof e
-        ? E(
+        ? _(
               JSON.parse(e).map((e) => ({
-                  codec: p(e.codec),
+                  codec: m(e.codec),
                   encode: e.encode,
                   decode: e.decode
               })),
               t
           )
-        : E(
+        : _(
               e.map((e) => ({
-                  codec: p(e),
+                  codec: m(e),
                   encode: !0,
                   decode: !0
               })),
               t
           );
 }
-function p(e) {
+function m(e) {
     return 'AV1X' === e ? 'AV1' : e;
 }
-function I(e) {
+function g(e) {
     return 'AV1' === e ? 'AV1X' : e;
 }

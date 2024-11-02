@@ -1,49 +1,49 @@
-r.d(s, {
+r.d(t, {
     Z: function () {
-        return o;
+        return C;
     }
 });
-var t = r(200651);
+var i = r(200651);
 r(192379);
-var a = r(120356),
-    i = r.n(a),
+var s = r(120356),
+    a = r.n(s),
     n = r(481060),
     l = r(518950),
-    C = r(67871);
-function o(e) {
-    var s;
-    let { user: r, checked: a, onChange: o, disabled: d } = e,
-        { avatarSrc: c, eventHandlers: _ } = (0, l.Z)({
+    o = r(67871);
+function C(e) {
+    var t;
+    let { user: r, checked: s, onChange: C, disabled: d } = e,
+        { avatarSrc: c, eventHandlers: x } = (0, l.Z)({
             user: r,
             size: n.AvatarSizes.SIZE_32
         }),
-        x = null !== (s = r.globalName) && void 0 !== s ? s : r.username;
-    return (0, t.jsxs)('div', {
-        className: C.container,
+        p = null !== (t = r.globalName) && void 0 !== t ? t : r.username;
+    return (0, i.jsxs)('div', {
+        className: o.container,
         children: [
-            (0, t.jsxs)('div', {
-                className: C.user,
+            (0, i.jsxs)('div', {
+                className: o.user,
                 children: [
-                    (0, t.jsx)(n.Avatar, {
-                        className: i()({ [C.muted]: d }),
+                    (0, i.jsx)(n.Avatar, {
+                        className: a()({ [o.muted]: d }),
                         src: c,
-                        'aria-label': x,
+                        'aria-label': p,
                         size: n.AvatarSizes.SIZE_32,
-                        ..._
+                        ...x
                     }),
-                    (0, t.jsx)(n.Text, {
+                    (0, i.jsx)(n.Text, {
                         color: d ? 'text-muted' : 'text-normal',
                         variant: 'text-md/semibold',
-                        children: x
+                        children: p
                     })
                 ]
             }),
-            (0, t.jsx)('div', {
-                className: C.checkbox,
-                children: (0, t.jsx)(n.Checkbox, {
+            (0, i.jsx)('div', {
+                className: o.checkbox,
+                children: (0, i.jsx)(n.Checkbox, {
                     disabled: d,
-                    value: a,
-                    onChange: (e, s) => o(r, s)
+                    value: s,
+                    onChange: (e, t) => C(r, t)
                 })
             })
         ]

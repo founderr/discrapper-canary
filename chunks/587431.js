@@ -1,16 +1,16 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return s;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(481060),
-    i = n(696936);
-function r(e) {
-    return (0, s.jsx)(i.Z, {
-        color: i.W.RED,
-        icon: a.CircleXIcon,
+var r = n(481060),
+    l = n(696936);
+function s(e) {
+    return (0, i.jsx)(l.Z, {
+        color: l.W.RED,
+        icon: r.CircleXIcon,
         ...e
     });
 }

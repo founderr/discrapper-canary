@@ -1,9 +1,9 @@
 n.d(t, {
     r: function () {
-        return s;
+        return i;
     }
 });
-let s = (0, n(818083).B)({
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2024-05_discount_model_data_collection',
     label: 'Discount Model Data Collection',

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return y;
     }
 });
 var r = n(200651),
@@ -12,40 +12,40 @@ var r = n(200651),
     u = n(2052),
     c = n(451467),
     d = n(386542),
-    _ = n(933843),
-    E = n(746599),
-    f = n(361291),
-    h = n(592125),
-    p = n(430824),
-    I = n(131951),
-    m = n(944486),
-    T = n(594174),
-    S = n(981631),
-    g = n(37113),
-    A = n(65154),
-    N = n(689938);
-function R(e, t) {
-    let { preset: R, resolution: O, fps: v } = (0, s.cj)([f.Z], () => f.Z.getState()),
-        C = (0, s.e7)([I.Z], () => I.Z.getGoLiveSource()),
-        L = (0, s.e7)([T.default], () => T.default.getCurrentUser()),
-        D = (0, s.e7)([p.Z], () => {
+    f = n(933843),
+    _ = n(746599),
+    h = n(361291),
+    p = n(592125),
+    m = n(430824),
+    g = n(131951),
+    E = n(944486),
+    v = n(594174),
+    I = n(981631),
+    S = n(37113),
+    T = n(65154),
+    b = n(388032);
+function y(e, t) {
+    let { preset: y, resolution: A, fps: N } = (0, s.cj)([h.Z], () => h.Z.getState()),
+        C = (0, s.e7)([g.Z], () => g.Z.getGoLiveSource()),
+        R = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
+        O = (0, s.e7)([m.Z], () => {
             var t;
-            return null === (t = p.Z.getGuild(null == e ? void 0 : e.guildId)) || void 0 === t ? void 0 : t.premiumTier;
+            return null === (t = m.Z.getGuild(null == e ? void 0 : e.guildId)) || void 0 === t ? void 0 : t.premiumTier;
         }),
-        { location: y } = (0, u.O)(),
-        { available: b, activated: M } = (0, d.k)(a.q.STREAM_HIGH_QUALITY),
-        P = (0, s.e7)([m.Z, h.Z], () => h.Z.getChannel(m.Z.getVoiceChannelId())),
-        U = i.useCallback(
+        { location: D } = (0, u.O)(),
+        { available: L, activated: x } = (0, d.k)(a.q.STREAM_HIGH_QUALITY),
+        w = (0, s.e7)([E.Z, p.Z], () => p.Z.getChannel(E.Z.getVoiceChannelId())),
+        M = i.useCallback(
             (e, i, a, s) => {
                 if (e) {
                     if (null != C) {
                         let e = {
                             qualityOptions: {
-                                preset: g.tI.PRESET_CUSTOM,
+                                preset: S.tI.PRESET_CUSTOM,
                                 resolution: i,
                                 frameRate: a
                             },
-                            context: A.Yn.STREAM
+                            context: T.Yn.STREAM
                         };
                         null != C.desktopSource
                             ? (e.desktopSettings = {
@@ -57,15 +57,15 @@ function R(e, t) {
                                   videoDeviceGuid: C.cameraSource.videoDeviceGuid,
                                   audioDeviceGuid: C.cameraSource.audioDeviceGuid
                               }),
-                            b && (0, E.J1)(!(0, _.mc)(i, a)),
+                            L && (0, _.J1)(!(0, f.mc)(i, a)),
                             l.Z.setGoLiveSource(e);
                     }
                 } else {
                     var u, c;
                     (u = t),
                         (c = {
-                            ...y,
-                            object: S.qAy.RADIO_ITEM,
+                            ...D,
+                            object: I.qAy.RADIO_ITEM,
                             objectType: s
                         }),
                         (0, o.openModalLazy)(
@@ -77,42 +77,42 @@ function R(e, t) {
                                         analyticsSource: c
                                     });
                             },
-                            { contextKey: u === S.IlC.POPOUT ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT }
+                            { contextKey: u === I.IlC.POPOUT ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT }
                         );
                 }
             },
-            [t, y, C, b]
+            [t, D, C, L]
         );
     if (null == e) return null;
-    let w = R === g.tI.PRESET_DOCUMENTS ? g.ws.FPS_30 : v,
-        x = g.af.map((e) => {
+    let P = y === S.tI.PRESET_DOCUMENTS ? S.ws.FPS_30 : N,
+        k = S.af.map((e) => {
             let { value: t, label: n } = e,
-                i = (0, c.Z)(g.tI.PRESET_CUSTOM, O, t, L, D, P);
+                i = (0, c.Z)(S.tI.PRESET_CUSTOM, A, t, R, O, w);
             return (0, r.jsx)(
                 o.MenuRadioItem,
                 {
                     group: 'stream-settings-fps',
                     id: 'stream-settings-fps-'.concat(t),
                     label: n,
-                    checked: t === v,
-                    action: () => U(i, O, t, S.Qqv.RESOLUTION)
+                    checked: t === N,
+                    action: () => M(i, A, t, I.Qqv.RESOLUTION)
                 },
                 'stream-settings-fps-'.concat(t)
             );
         }),
-        G = g.km.map((e) => {
+        U = S.km.map((e) => {
             let { value: t, label: n } = e,
-                i = (0, c.Z)(g.tI.PRESET_CUSTOM, t, w, L, D, P);
+                i = (0, c.Z)(S.tI.PRESET_CUSTOM, t, P, R, O, w);
             return (
-                b && !M && (i = !1),
+                L && !x && (i = !1),
                 (0, r.jsx)(
                     o.MenuRadioItem,
                     {
                         group: 'stream-settings-resolution',
                         id: 'stream-settings-resolution-'.concat(t),
                         label: n,
-                        checked: t === O,
-                        action: () => U(i, t, w, S.Qqv.RESOLUTION)
+                        checked: t === A,
+                        action: () => M(i, t, P, I.Qqv.RESOLUTION)
                     },
                     'stream-settings-resolution-'.concat(t)
                 )
@@ -121,12 +121,12 @@ function R(e, t) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(o.MenuGroup, {
-                label: N.Z.Messages.SCREENSHARE_FRAME_RATE,
-                children: x
+                label: b.intl.string(b.t.SkkeIi),
+                children: k
             }),
             (0, r.jsx)(o.MenuGroup, {
-                label: N.Z.Messages.STREAM_RESOLUTION,
-                children: G
+                label: b.intl.string(b.t.rHyPXl),
+                children: U
             })
         ]
     });

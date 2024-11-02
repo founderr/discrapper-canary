@@ -1,166 +1,166 @@
-n.r(t),
-    n.d(t, {
+e.r(n),
+    e.d(n, {
         default: function () {
-            return C;
+            return S;
         }
     }),
-    n(47120);
-var o = n(200651),
-    l = n(192379),
-    s = n(442837),
-    a = n(481060),
-    i = n(596454),
-    d = n(318766),
-    u = n(907040),
-    r = n(339085),
-    m = n(592125),
-    c = n(944486),
-    j = n(594174),
-    x = n(74538),
-    S = n(906605),
-    _ = n(106301),
-    T = n(505905),
-    p = n(185923),
-    v = n(689938),
-    I = n(472088);
-function h(e) {
-    let { customStatusEmoji: t, setCustomStatusEmoji: n, onClose: l } = e,
-        r = (0, s.e7)([c.Z, m.Z], () => m.Z.getChannel(c.Z.getVoiceChannelId())),
-        j = (e) => {
-            var t;
-            if (null == e) {
-                n(null);
+    e(47120);
+var o = e(200651),
+    l = e(192379),
+    i = e(442837),
+    s = e(481060),
+    a = e(596454),
+    d = e(318766),
+    u = e(907040),
+    r = e(339085),
+    c = e(592125),
+    m = e(944486),
+    j = e(594174),
+    x = e(74538),
+    p = e(906605),
+    v = e(106301),
+    h = e(505905),
+    g = e(185923),
+    C = e(388032),
+    I = e(472088);
+function N(t) {
+    let { customStatusEmoji: n, setCustomStatusEmoji: e, onClose: l } = t,
+        r = (0, i.e7)([m.Z, c.Z], () => c.Z.getChannel(m.Z.getVoiceChannelId())),
+        j = (t) => {
+            var n;
+            if (null == t) {
+                e(null);
                 return;
             }
-            n(
-                null != e.id
+            e(
+                null != t.id
                     ? {
-                          id: e.id,
-                          name: e.name,
-                          animated: e.animated
+                          id: t.id,
+                          name: t.name,
+                          animated: t.animated
                       }
                     : {
                           id: null,
-                          name: null !== (t = e.optionallyDiverseSequence) && void 0 !== t ? t : '',
+                          name: null !== (n = t.optionallyDiverseSequence) && void 0 !== n ? n : '',
                           animated: !1
                       }
             );
         };
-    return (0, o.jsx)(a.Popout, {
-        renderPopout: (e) => {
-            var t;
-            let { closePopout: n } = e;
+    return (0, o.jsx)(s.Popout, {
+        renderPopout: (t) => {
+            var n;
+            let { closePopout: e } = t;
             return (0, o.jsx)(u.Z, {
                 channel: r,
-                guildId: null !== (t = null == r ? void 0 : r.guild_id) && void 0 !== t ? t : void 0,
-                closePopout: n,
-                onSelectEmoji: (e, t) => {
-                    j(e), t && n();
+                guildId: null !== (n = null == r ? void 0 : r.guild_id) && void 0 !== n ? n : void 0,
+                closePopout: e,
+                onSelectEmoji: (t, n) => {
+                    j(t), n && e();
                 },
-                pickerIntention: p.Hz.STATUS,
+                pickerIntention: g.Hz.STATUS,
                 onNavigateAway: l
             });
         },
         position: 'left',
-        animation: a.Popout.Animation.NONE,
+        animation: s.Popout.Animation.NONE,
         align: 'top',
-        children: (e, n) => {
-            let { isShown: l } = n;
+        children: (t, e) => {
+            let { isShown: l } = e;
             return (0, o.jsx)(d.Z, {
-                ...e,
+                ...t,
                 active: l,
                 className: I.emojiButton,
                 tabIndex: 0,
                 renderButtonContents:
-                    null == t
+                    null == n
                         ? null
                         : () =>
-                              (0, o.jsx)(i.Z, {
+                              (0, o.jsx)(a.Z, {
                                   className: I.emoji,
-                                  emojiId: t.id,
-                                  emojiName: t.name,
-                                  animated: !!t.animated
+                                  emojiId: n.id,
+                                  emojiName: n.name,
+                                  animated: !!n.animated
                               })
             });
         }
     });
 }
-function C(e) {
-    var t, n;
-    let { transitionState: s, onClose: i, startingText: d, startingEmoji: u } = e,
-        m = _.Z.getCustomHangStatus(),
-        c = null != d ? d : null !== (t = null == m ? void 0 : m.status) && void 0 !== t ? t : '',
-        p = null !== (n = null == m ? void 0 : m.emoji) && void 0 !== n ? n : null;
-    (null == u ? void 0 : u.id) != null ? (p = x.ZP.canUseEmojisEverywhere(j.default.getCurrentUser()) && null != r.ZP.getUsableCustomEmojiById(u.id) ? u : null) : (null == u ? void 0 : u.name) != null && (p = u);
-    let [C, g] = l.useState(c),
-        [N, A] = l.useState(p);
-    return (0, o.jsxs)(a.ModalRoot, {
+function S(t) {
+    var n, e;
+    let { transitionState: i, onClose: a, startingText: d, startingEmoji: u } = t,
+        c = v.Z.getCustomHangStatus(),
+        m = null != d ? d : null !== (n = null == c ? void 0 : c.status) && void 0 !== n ? n : '',
+        g = null !== (e = null == c ? void 0 : c.emoji) && void 0 !== e ? e : null;
+    (null == u ? void 0 : u.id) != null ? (g = x.ZP.canUseEmojisEverywhere(j.default.getCurrentUser()) && null != r.ZP.getUsableCustomEmojiById(u.id) ? u : null) : (null == u ? void 0 : u.name) != null && (g = u);
+    let [S, _] = l.useState(m),
+        [B, f] = l.useState(g);
+    return (0, o.jsxs)(s.ModalRoot, {
         className: I.modal,
-        transitionState: s,
-        size: a.ModalSize.DYNAMIC,
+        transitionState: i,
+        size: s.ModalSize.DYNAMIC,
         children: [
-            (0, o.jsxs)(a.ModalContent, {
+            (0, o.jsxs)(s.ModalContent, {
                 className: I.modalContent,
                 children: [
-                    (0, o.jsx)(a.Button, {
-                        'aria-label': v.Z.Messages.CLOSE,
-                        look: a.Button.Looks.BLANK,
-                        size: a.Button.Sizes.NONE,
-                        onClick: i,
+                    (0, o.jsx)(s.Button, {
+                        'aria-label': C.intl.string(C.t.cpT0Cg),
+                        look: s.Button.Looks.BLANK,
+                        size: s.Button.Sizes.NONE,
+                        onClick: a,
                         className: I.closeButton,
-                        children: (0, o.jsx)(a.XSmallIcon, {
+                        children: (0, o.jsx)(s.XSmallIcon, {
                             size: 'xs',
                             color: 'currentColor',
                             className: I.closeIcon
                         })
                     }),
-                    (0, o.jsx)(h, {
-                        customStatusEmoji: N,
-                        setCustomStatusEmoji: A,
-                        onClose: i
+                    (0, o.jsx)(N, {
+                        customStatusEmoji: B,
+                        setCustomStatusEmoji: f,
+                        onClose: a
                     }),
                     (0, o.jsxs)('div', {
                         className: I.customInputGroup,
                         children: [
-                            (0, o.jsx)(a.Text, {
+                            (0, o.jsx)(s.Text, {
                                 className: I.leadInText,
                                 variant: 'text-xs/semibold',
                                 color: 'text-muted',
-                                children: v.Z.Messages.STATUS_LEAD_IN_JUST
+                                children: C.intl.string(C.t['74vS//'])
                             }),
-                            (0, o.jsx)(a.TextInput, {
+                            (0, o.jsx)(s.TextInput, {
                                 className: I.customInput,
-                                value: C,
-                                onChange: (e) => g(e.substring(0, T.s)),
-                                placeholder: v.Z.Messages.CUSTOM_HANG_STATUS_PLACEHOLDER
+                                value: S,
+                                onChange: (t) => _(t.substring(0, h.s)),
+                                placeholder: C.intl.string(C.t.k6lfDg)
                             })
                         ]
                     })
                 ]
             }),
-            (0, o.jsxs)(a.ModalFooter, {
+            (0, o.jsxs)(s.ModalFooter, {
                 className: I.modalFooter,
                 children: [
                     (0, o.jsxs)('div', {
                         children: [
-                            (0, o.jsx)(a.Heading, {
+                            (0, o.jsx)(s.Heading, {
                                 variant: 'heading-md/semibold',
-                                children: v.Z.Messages.SET_STATUS_MODAL_TITLE
+                                children: C.intl.string(C.t.DD4vJC)
                             }),
-                            (0, o.jsx)(a.Text, {
+                            (0, o.jsx)(s.Text, {
                                 color: 'text-muted',
                                 variant: 'text-sm/normal',
-                                children: v.Z.Messages.SET_STATUS_MODAL_SUBTITLE
+                                children: C.intl.string(C.t.YVM22t)
                             })
                         ]
                     }),
-                    (0, o.jsx)(a.Button, {
+                    (0, o.jsx)(s.Button, {
                         onClick: () => {
-                            let e = C.trim();
-                            '' !== e && null != N && ((0, S._s)(e, N, !0), i());
+                            let t = S.trim();
+                            '' !== t && null != B && ((0, p._s)(t, B, !0), a());
                         },
-                        disabled: '' === C.trim() || null == N,
-                        children: v.Z.Messages.SET_STATUS_MODAL_CTA
+                        disabled: '' === S.trim() || null == B,
+                        children: C.intl.string(C.t.S0ajKC)
                     })
                 ]
             })

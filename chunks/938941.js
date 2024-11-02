@@ -3,19 +3,19 @@ n.d(t, {
         return c;
     },
     RM: function () {
-        return _;
+        return f;
     },
     SC: function () {
         return d;
     },
     iA: function () {
-        return f;
+        return h;
     },
     pj: function () {
         return u;
     },
     xD: function () {
-        return E;
+        return _;
     }
 });
 var r = n(200651),
@@ -48,19 +48,19 @@ function d(e) {
         className: l.row
     });
 }
-function _(e) {
+function f(e) {
     return (0, r.jsx)(a.RM, {
         ...e,
         className: l.body
     });
 }
-function E(e) {
+function _(e) {
     return (0, r.jsx)(a.xD, {
         ...e,
         className: l.header
     });
 }
-function f(e) {
+function h(e) {
     let { title: t, header: n, footer: s, ...u } = e,
         c = i.useId();
     return (0, r.jsxs)('div', {

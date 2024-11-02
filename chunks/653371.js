@@ -7,8 +7,8 @@ a.d(t, {
     a(653041);
 var n = a(200651),
     s = a(192379),
-    r = a(557533),
-    i = a.n(r),
+    i = a(557533),
+    r = a.n(i),
     l = a(771950),
     o = a(860911),
     c = a(66037),
@@ -59,9 +59,9 @@ class f extends s.PureComponent {
         this.setState({ isAppCompatible: m.KO });
     }
     render() {
-        let { className: e, mainContentId: t, skipToContentLabel: a, onChangeLocale: s, TrackClick: r, avoidRouter: l } = this.props;
+        let { className: e, mainContentId: t, skipToContentLabel: a, onChangeLocale: s, TrackClick: i, avoidRouter: l } = this.props;
         return (0, n.jsxs)('header', {
-            className: i()(_.header, e),
+            className: r()(_.header, e),
             children: [
                 (0, n.jsxs)('nav', {
                     className: _.headerInner,
@@ -69,7 +69,7 @@ class f extends s.PureComponent {
                         (0, n.jsxs)('div', {
                             className: _.headerLogo,
                             children: [
-                                (0, n.jsx)(r, {
+                                (0, n.jsx)(i, {
                                     tag: 'div',
                                     eventName: A,
                                     data: { linkClicked: 'logo' },
@@ -93,7 +93,7 @@ class f extends s.PureComponent {
                             className: _.headerNav,
                             children: (0, n.jsx)(N.o, {
                                 avoidRouter: l,
-                                TrackClick: r,
+                                TrackClick: i,
                                 styles: _
                             })
                         }),
@@ -117,10 +117,10 @@ class f extends s.PureComponent {
             k(this, 'getAppButton', () => {
                 let { token: e, TrackClick: t, authRedirectTo: a } = this.props,
                     { isAppCompatible: s } = this.state,
-                    r = (0, o.Ui)(a),
-                    i = I.Z.Messages.NAVIGATION_LOGIN;
+                    i = (0, o.Ui)(a),
+                    r = I.Z.Messages.NAVIGATION_LOGIN;
                 return (
-                    null != e && ((r = h.$w.ME), (i = I.Z.Messages.NAVIGATION_OPEN)),
+                    null != e && ((i = h.$w.ME), (r = I.Z.Messages.NAVIGATION_OPEN)),
                     s
                         ? (0, n.jsx)(
                               'li',
@@ -133,8 +133,8 @@ class f extends s.PureComponent {
                                           linkClicked: e ? 'open' : 'login',
                                           googleAnalytics: !0
                                       },
-                                      href: r,
-                                      children: i
+                                      href: i,
+                                      children: r
                                   })
                               },
                               'app-button'
@@ -148,7 +148,7 @@ class f extends s.PureComponent {
                         (0, n.jsx)(
                             'li',
                             {
-                                className: i()(_.listItemInactive, _.listItemSocialMedia),
+                                className: r()(_.listItemInactive, _.listItemSocialMedia),
                                 children: (0, n.jsx)(e, {
                                     eventName: A,
                                     className: _.rightNavLink,

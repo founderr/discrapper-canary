@@ -1,34 +1,34 @@
-t.d(s, {
+n.d(t, {
     S: function () {
-        return o;
+        return a;
     },
     V: function () {
-        return r;
+        return l;
     }
 });
-var n = t(200651),
-    a = t(481060),
-    i = t(689938);
-function r(e) {
-    let { body: s, ...i } = e;
-    (0, a.openModalLazy)(async () => {
-        let { ConfirmModal: e } = await Promise.resolve().then(t.bind(t, 481060));
-        return (t) =>
-            (0, n.jsx)(e, {
-                ...t,
-                ...i,
-                children: (0, n.jsx)(a.Text, {
+var i = n(200651),
+    s = n(481060),
+    r = n(388032);
+function l(e) {
+    let { body: t, ...r } = e;
+    (0, s.openModalLazy)(async () => {
+        let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 481060));
+        return (n) =>
+            (0, i.jsx)(e, {
+                ...n,
+                ...r,
+                children: (0, i.jsx)(s.Text, {
                     variant: 'text-md/normal',
-                    children: s
+                    children: t
                 })
             });
     });
 }
-function o(e) {
-    let { message: s } = e;
-    r({
-        header: i.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_TITLE,
-        confirmText: i.Z.Messages.OKAY,
-        body: s
+function a(e) {
+    let { message: t } = e;
+    l({
+        header: r.intl.string(r.t.OjbtDg),
+        confirmText: r.intl.string(r.t.BddRzc),
+        body: t
     });
 }

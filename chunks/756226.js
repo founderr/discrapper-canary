@@ -1,41 +1,41 @@
-o.r(t), o(47120);
-var n = o(200651);
-o(192379);
-var r = o(435935),
-    i = o(481060),
-    s = o(259756),
-    a = o(785681),
-    c = o(880257),
-    l = o(863552),
-    d = o(292352),
-    h = o(689938),
-    C = o(62436),
-    _ = o(128216);
-let x = {
-        [d.MY.USER_INTERACTION]: (0, n.jsx)(l.Z, {
+n.r(e), n(47120);
+var r = n(200651);
+n(192379);
+var o = n(435935),
+    i = n(481060),
+    a = n(259756),
+    c = n(785681),
+    s = n(880257),
+    l = n(863552),
+    d = n(292352),
+    h = n(388032),
+    C = n(62436),
+    x = n(128216);
+let u = {
+        [d.MY.USER_INTERACTION]: (0, r.jsx)(l.Z, {
             width: 18,
             height: 18
         }),
-        [d.MY.USER_CALLED]: (0, n.jsx)(i.PhoneCallIcon, {
+        [d.MY.USER_CALLED]: (0, r.jsx)(i.PhoneCallIcon, {
             size: 'custom',
             color: 'currentColor',
             width: 22,
             height: 22
         }),
-        [d.MY.USER_ADD]: (0, n.jsx)(i.FriendsIcon, {
+        [d.MY.USER_ADD]: (0, r.jsx)(i.FriendsIcon, {
             size: 'custom',
             color: 'currentColor',
             className: C.personWavingIcon,
             width: 22,
             height: 22
         }),
-        [d.MY.GUILD_ADD]: (0, n.jsx)(i.ServerGridIcon, {
+        [d.MY.GUILD_ADD]: (0, r.jsx)(i.ServerGridIcon, {
             size: 'custom',
             color: 'currentColor',
             width: 22,
             height: 22
         }),
-        [d.MY.GUILD_INTERACTION]: (0, n.jsx)(i.TextIcon, {
+        [d.MY.GUILD_INTERACTION]: (0, r.jsx)(i.TextIcon, {
             size: 'custom',
             color: 'currentColor',
             className: C.threadIcon,
@@ -43,81 +43,81 @@ let x = {
             height: 22
         })
     },
-    u = (e) => {
-        let { header: t, description: o, icon: s } = e;
-        return (0, n.jsxs)(r.k, {
+    m = (t) => {
+        let { header: e, description: n, icon: a } = t;
+        return (0, r.jsxs)(o.k, {
             className: C.row,
             grow: 0,
             children: [
-                (0, n.jsx)('div', {
+                (0, r.jsx)('div', {
                     className: C.iconContainer,
-                    children: s
+                    children: a
                 }),
-                (0, n.jsxs)('div', {
+                (0, r.jsxs)('div', {
                     className: C.rowContent,
                     children: [
-                        (0, n.jsx)(i.Text, {
+                        (0, r.jsx)(i.Text, {
                             className: C.__invalid_rowHeader,
                             variant: 'text-sm/bold',
-                            children: t
+                            children: e
                         }),
-                        (0, n.jsx)(i.Text, {
+                        (0, r.jsx)(i.Text, {
                             variant: 'text-xs/medium',
-                            children: o
+                            children: n
                         })
                     ]
                 })
             ]
         });
     };
-t.default = (e) => {
-    let { transitionState: t, onClose: o } = e,
-        l = (0, a.o)(h.Z.Messages.FAMILY_CENTER_TOOLTIP_MODAL_HEADER_TEEN, h.Z.Messages.FAMILY_CENTER_TOOLTIP_MODAL_HEADER_PARENT),
-        I = (0, c.Z)(),
-        m = Array.from(d.tx.entries()),
-        E = (0, s.Xi)({ location: 'family_center_tooltip_modal_web' });
-    return (0, n.jsxs)(i.ModalRoot, {
-        transitionState: t,
+e.default = (t) => {
+    let { transitionState: e, onClose: n } = t,
+        l = (0, c.o)(h.intl.string(h.t.q3IRam), h.intl.string(h.t.JNLpDQ)),
+        _ = (0, s.Z)(),
+        g = Array.from(d.tx.entries()),
+        j = (0, a.Xi)({ location: 'family_center_tooltip_modal_web' });
+    return (0, r.jsxs)(i.ModalRoot, {
+        transitionState: e,
         children: [
-            (0, n.jsx)('img', {
+            (0, r.jsx)('img', {
                 className: C.art,
-                src: _,
-                alt: h.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_IMAGE_ALT
+                src: x,
+                alt: h.intl.string(h.t.ffg6xc)
             }),
-            (0, n.jsx)(i.ModalContent, {
+            (0, r.jsx)(i.ModalContent, {
                 className: C.content,
-                children: (0, n.jsxs)(r.k, {
-                    direction: r.k.Direction.VERTICAL,
-                    align: r.k.Align.CENTER,
+                children: (0, r.jsxs)(o.k, {
+                    direction: o.k.Direction.VERTICAL,
+                    align: o.k.Align.CENTER,
                     children: [
-                        (0, n.jsx)(i.Heading, {
+                        (0, r.jsx)(i.Heading, {
                             className: C.header,
                             color: 'header-primary',
                             variant: 'heading-lg/semibold',
-                            children: (0, n.jsx)(i.HeadingLevel, { children: l })
+                            children: (0, r.jsx)(i.HeadingLevel, { children: l })
                         }),
-                        m.map((e) => {
-                            let [t, o] = e;
-                            return (0, n.jsx)(
-                                u,
+                        g.map((t) => {
+                            let [e, n] = t;
+                            return (0, r.jsx)(
+                                m,
                                 {
-                                    icon: x[t],
-                                    header: o.tooltipHeader(),
-                                    description: o.tooltipDescription(null != I ? I : void 0, E)
+                                    icon: u[e],
+                                    header: n.tooltipHeader(),
+                                    description: n.tooltipDescription(null != _ ? _ : void 0, j)
                                 },
-                                t
+                                e
                             );
                         })
                     ]
                 })
             }),
-            (0, n.jsx)(i.ModalFooter, {
-                children: (0, n.jsx)(i.Button, {
+            (0, r.jsx)(i.ModalFooter, {
+                children: (0, r.jsx)(i.Button, {
                     className: C.__invalid_button,
                     type: 'button',
                     color: i.Button.Colors.BRAND,
-                    onClick: o,
-                    children: h.Z.Messages.GOT_IT
+                    onClick: n,
+                    children: h.intl.string(h.t['NX+WJC'])
                 })
             })
         ]

@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     header: 'header_c862ac',
     closeButton: 'closeButton_c862ac',
     description: 'description_c862ac',

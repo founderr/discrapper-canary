@@ -1,9 +1,9 @@
 n(47120), n(653041);
 var i,
-    s,
     r,
-    a,
+    s,
     o,
+    a,
     l,
     c,
     d,
@@ -11,74 +11,74 @@ var i,
     h = n.n(u),
     p = n(772848),
     f = n(442837),
-    _ = n(570140),
-    E = n(13245),
-    g = n(836932),
-    m = n(175553),
-    I = n(158979),
+    g = n(570140),
+    m = n(13245),
+    v = n(836932),
+    _ = n(175553),
+    E = n(158979),
     Z = n(181912),
-    v = n(791288),
-    S = n(194295),
+    x = n(791288),
+    I = n(194295),
     C = n(998033),
-    x = n(181364),
-    T = n(435064),
+    S = n(181364),
+    y = n(435064),
     N = n(668761),
-    O = n(86071),
-    A = n(358446),
-    y = n(695346),
+    T = n(86071),
+    b = n(358446),
+    O = n(695346),
     R = n(314897),
-    L = n(592125),
-    M = n(292959),
-    b = n(158776),
-    P = n(944486),
-    D = n(885110),
-    w = n(246946),
-    j = n(594174),
+    A = n(592125),
+    P = n(292959),
+    w = n(158776),
+    j = n(944486),
+    M = n(885110),
+    L = n(246946),
+    D = n(594174),
     k = n(974180),
-    V = n(237997),
-    U = n(70956),
-    B = n(150097),
-    z = n(129724),
+    z = n(237997),
+    B = n(70956),
+    U = n(150097),
+    V = n(129724),
     G = n(449224),
-    Y = n(981631),
-    W = n(987650),
-    F = n(689938);
-((a = i || (i = {}))[(a.GENERIC = 0)] = 'GENERIC'), (a[(a.TEXT = 1)] = 'TEXT'), (a[(a.INCOMING_CALL = 2)] = 'INCOMING_CALL'), ((o = s || (s = {}))[(o.NORMAL = 0)] = 'NORMAL'), (o[(o.HIGH = 1)] = 'HIGH'), (o[(o.URGENT = 2)] = 'URGENT');
-let H = 5 * U.Z.Millis.SECOND,
-    K = 8 * U.Z.Millis.SECOND,
-    X = 30 * U.Z.Millis.SECOND,
+    W = n(981631),
+    F = n(987650),
+    H = n(388032);
+((o = i || (i = {}))[(o.GENERIC = 0)] = 'GENERIC'), (o[(o.TEXT = 1)] = 'TEXT'), (o[(o.INCOMING_CALL = 2)] = 'INCOMING_CALL'), ((a = r || (r = {}))[(a.NORMAL = 0)] = 'NORMAL'), (a[(a.HIGH = 1)] = 'HIGH'), (a[(a.URGENT = 2)] = 'URGENT');
+let Y = 5 * B.Z.Millis.SECOND,
+    K = 8 * B.Z.Millis.SECOND,
+    X = 30 * B.Z.Millis.SECOND,
     Q = Object.freeze({
         priority: 0,
-        duration: H,
+        duration: Y,
         expirationExternallyManaged: !1,
         type: 0
     }),
-    J = [],
-    q = (e, t, n) => {
-        let i = t ? Y._1z.TIMED_OUT : Y._1z.DISMISSED;
-        return setTimeout(() => E.Z.updateNotificationStatus(e, i), null != n ? n : H);
+    q = [],
+    J = (e, t, n) => {
+        let i = t ? W._1z.TIMED_OUT : W._1z.DISMISSED;
+        return setTimeout(() => m.Z.updateNotificationStatus(e, i), null != n ? n : Y);
     };
 function $(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Y._1z.DISMISSED;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : W._1z.DISMISSED;
     if (null == e) return !1;
-    let n = J.findIndex((t) => t.id === e);
+    let n = q.findIndex((t) => t.id === e);
     if (-1 === n) return !1;
-    let i = J[n];
+    let i = q[n];
     clearTimeout(i.timerId),
-        (J = [...J]),
-        t === Y._1z.DISMISSED
-            ? J.splice(n, 1)
-            : (J[n] = {
+        (q = [...q]),
+        t === W._1z.DISMISSED
+            ? q.splice(n, 1)
+            : (q[n] = {
                   ...i,
                   status: t
               });
 }
 function ee(e) {
-    let t = J.length;
-    return (J = J.filter((t) => 1 !== t.type || t.channelId !== e || !1)).length !== t;
+    let t = q.length;
+    return (q = q.filter((t) => 1 !== t.type || t.channelId !== e || !1)).length !== t;
 }
 function et(e) {
-    let t = J.find((t) => 2 === t.type && t.channelId === e);
+    let t = q.find((t) => 2 === t.type && t.channelId === e);
     return null != t ? t.id : null;
 }
 function en(e, t) {
@@ -86,44 +86,44 @@ function en(e, t) {
         ...Q,
         ...t
     };
-    if (2 !== n.priority && !V.Z.isInstanceFocused()) return null;
+    if (2 !== n.priority && !z.Z.isInstanceFocused()) return null;
     let i = (0, p.Z)(),
-        s = {
+        r = {
             id: i,
-            status: Y._1z.ACTIVE,
-            timerId: q(i, n.expirationExternallyManaged, n.duration),
+            status: W._1z.ACTIVE,
+            timerId: J(i, n.expirationExternallyManaged, n.duration),
             props: e,
             ...n
         },
-        r = (J = [...J]).findIndex((e) => e.priority <= n.priority);
-    return -1 === r ? J.push(s) : J.splice(r, 0, s), J.length > 10 && clearTimeout(J.pop().timerId), i;
+        s = (q = [...q]).findIndex((e) => e.priority <= n.priority);
+    return -1 === s ? q.push(r) : q.splice(s, 0, r), q.length > 10 && clearTimeout(q.pop().timerId), i;
 }
 function ei(e) {
     let { channelId: t, ringing: n } = e,
         i = et(t);
     if (!n.includes(R.default.getId())) return $(i);
     if (null != i) return !1;
-    let s = L.Z.getChannel(t);
-    if (null == s || !s.isPrivate() || D.Z.getStatus() === Y.Skl.DND || y.QZ.getSetting()) return !1;
-    let r = J.find((e) => 1 === e.type && e.channelId === t && e.messageType === Y.uaV.CALL);
-    null != r && $(r.id),
-        en((0, Z.Z)(s), {
+    let r = A.Z.getChannel(t);
+    if (null == r || !r.isPrivate() || M.Z.getStatus() === W.Skl.DND || O.QZ.getSetting()) return !1;
+    let s = q.find((e) => 1 === e.type && e.channelId === t && e.messageType === W.uaV.CALL);
+    null != s && $(s.id),
+        en((0, Z.Z)(r), {
             priority: 1,
             expirationExternallyManaged: !0,
             type: 2,
-            channelId: s.id
+            channelId: r.id
         });
 }
-class es extends (r = f.ZP.Store) {
+class er extends (s = f.ZP.Store) {
     initialize() {
-        this.waitFor(L.Z, j.default);
+        this.waitFor(A.Z, D.default);
     }
     getNotifications() {
-        return J;
+        return q;
     }
 }
 (d = 'OverlayNotificationsStore'),
-    (c = 'displayName') in (l = es)
+    (c = 'displayName') in (l = er)
         ? Object.defineProperty(l, c, {
               value: d,
               enumerable: !0,
@@ -131,8 +131,8 @@ class es extends (r = f.ZP.Store) {
               writable: !0
           })
         : (l[c] = d),
-    (t.Z = new es(
-        _.Z,
+    (t.Z = new er(
+        g.Z,
         __OVERLAY__
             ? {
                   OVERLAY_UPDATE_NOTIFICATION_STATUS: function (e) {
@@ -143,14 +143,14 @@ class es extends (r = f.ZP.Store) {
                       let { nudge: t } = e,
                           n = (function (e) {
                               switch (e.type) {
-                                  case W.nc.GO_LIVE_VOICE:
-                                  case W.nc.GO_LIVE_NON_VOICE:
-                                      return (0, I.Z)(e);
-                                  case W.nc.KEYBIND_INDICATORS:
-                                      return (0, A.Z)(e);
-                                  case W.nc.NEWS:
+                                  case F.nc.GO_LIVE_VOICE:
+                                  case F.nc.GO_LIVE_NON_VOICE:
+                                      return (0, E.Z)(e);
+                                  case F.nc.KEYBIND_INDICATORS:
+                                      return (0, b.Z)(e);
+                                  case F.nc.NEWS:
                                   default:
-                                      return (0, x.Z)(e);
+                                      return (0, S.Z)(e);
                               }
                           })(t);
                       null != n &&
@@ -162,54 +162,54 @@ class es extends (r = f.ZP.Store) {
                   OVERLAY_SET_INPUT_LOCKED: function (e) {
                       let { locked: t } = e;
                       if (t) return !1;
-                      J = J.map((e) =>
-                          e.status === Y._1z.ACTIVE
+                      q = q.map((e) =>
+                          e.status === W._1z.ACTIVE
                               ? (clearTimeout(e.timerId),
                                 {
                                     ...e,
-                                    timerId: q(e.id, e.expirationExternallyManaged)
+                                    timerId: J(e.id, e.expirationExternallyManaged)
                                 })
                               : e
                       );
                   },
                   MESSAGE_CREATE: function (e) {
                       var t, n, i;
-                      let { channelId: s, message: r } = e,
-                          a = L.Z.getChannel(s),
-                          o = j.default.getUser(null === (t = r.author) || void 0 === t ? void 0 : t.id);
-                      if (null == a || null == o) return !1;
-                      if ((null === (n = r.activity) || void 0 === n ? void 0 : n.type) === Y.mFx.JOIN || (null === (i = r.activity) || void 0 === i ? void 0 : i.type) === Y.mFx.JOIN_REQUEST) {
-                          if (!(0, B.eF)(r, s, !0, !0)) return !1;
+                      let { channelId: r, message: s } = e,
+                          o = A.Z.getChannel(r),
+                          a = D.default.getUser(null === (t = s.author) || void 0 === t ? void 0 : t.id);
+                      if (null == o || null == a) return !1;
+                      if ((null === (n = s.activity) || void 0 === n ? void 0 : n.type) === W.mFx.JOIN || (null === (i = s.activity) || void 0 === i ? void 0 : i.type) === W.mFx.JOIN_REQUEST) {
+                          if (!(0, U.eF)(s, r, !0, !0)) return !1;
                           let e = (function (e, t, n) {
-                              let i, s;
+                              let i, r;
                               if ((h()(null != t.activity, 'received null message activity'), n.id === R.default.getId())) return !1;
-                              let r = G.Z.getGame();
-                              if (null == r) return !1;
-                              switch (t.activity.type) {
-                                  case Y.mFx.JOIN:
-                                      if (null == (i = b.Z.getApplicationActivity(n.id, r.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
-                                      s = (0, g.Z)(e, t, n, r, i);
-                                      break;
-                                  case Y.mFx.JOIN_REQUEST:
-                                      if (null == (i = D.Z.getApplicationActivity(r.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
-                                      s = (0, S.Z)(e, n, r, i);
-                              }
+                              let s = G.Z.getGame();
                               if (null == s) return !1;
-                              let a = en(s, {
+                              switch (t.activity.type) {
+                                  case W.mFx.JOIN:
+                                      if (null == (i = w.Z.getApplicationActivity(n.id, s.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
+                                      r = (0, v.Z)(e, t, n, s, i);
+                                      break;
+                                  case W.mFx.JOIN_REQUEST:
+                                      if (null == (i = M.Z.getApplicationActivity(s.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
+                                      r = (0, I.Z)(e, n, s, i);
+                              }
+                              if (null == r) return !1;
+                              let o = en(r, {
                                   priority: 2,
                                   expirationExternallyManaged: !0,
                                   channelId: e.id
                               });
-                              return null != a && q(a, !1, X), !0;
-                          })(a, r, o);
+                              return null != o && J(o, !1, X), !0;
+                          })(o, s, a);
                           if (!1 !== e) return e;
                       }
-                      if (((!V.Z.isInstanceUILocked() || V.Z.isPinned(Y.Odu.TEXT)) && s === P.Z.getChannelId()) || V.Z.getTextChatNotificationMode() === Y.Ypu.DISABLED || w.Z.disableNotifications || !(0, B.eF)(r, s)) return !1;
-                      let l = !M.Z.isSoundDisabled(k.Ay);
-                      en((0, C.Z)(a, r, o, l), {
+                      if (((!z.Z.isInstanceUILocked() || z.Z.isPinned(W.Odu.TEXT)) && r === j.Z.getChannelId()) || z.Z.getTextChatNotificationMode() === W.Ypu.DISABLED || L.Z.disableNotifications || !(0, U.eF)(s, r)) return !1;
+                      let l = !P.Z.isSoundDisabled(k.Ay);
+                      en((0, C.Z)(o, s, a, l), {
                           type: 1,
-                          channelId: a.id,
-                          messageType: r.type
+                          channelId: o.id,
+                          messageType: s.type
                       });
                   },
                   CHANNEL_SELECT: function (e) {
@@ -228,10 +228,10 @@ class es extends (r = f.ZP.Store) {
                   },
                   ACTIVITY_USER_ACTION: function (e) {
                       let t,
-                          { actionType: n, user: i, applicationId: s } = e,
-                          r = G.Z.getGame();
-                      if (null == r || r.id !== s) return !1;
-                      if (n === Y.mFx.JOIN) t = (0, m.Z)(i, r);
+                          { actionType: n, user: i, applicationId: r } = e,
+                          s = G.Z.getGame();
+                      if (null == s || s.id !== r) return !1;
+                      if (n === W.mFx.JOIN) t = (0, _.Z)(i, s);
                       if (null == t) return !1;
                       en(t, {
                           priority: 2,
@@ -239,13 +239,13 @@ class es extends (r = f.ZP.Store) {
                       });
                   },
                   CLIPS_SAVE_CLIP_START: function () {
-                      en((0, N.f)(F.Z.Messages.CLIPS_SAVE_START_NOTIFICATION_TITLE));
+                      en((0, N.f)(H.intl.string(H.t.NBMK9v)));
                   },
                   CLIPS_SAVE_CLIP: function () {
-                      en((0, N.f)(F.Z.Messages.CLIPS_NOTIFICATION_TITLE.format({ duration: (0, z.A)(T.Z.getSettings().clipsLength / 1000, !0) })));
+                      en((0, N.f)(H.intl.formatToPlainString(H.t.KLhk6u, { duration: (0, V.A)(y.Z.getSettings().clipsLength / 1000, !0) })));
                   },
                   CLIPS_SAVE_CLIP_ERROR: function () {
-                      en((0, N.f)(F.Z.Messages.CLIPS_SAVE_ERROR_NOTIFICATION_TITLE));
+                      en((0, N.f)(H.intl.string(H.t['1ZbZur'])));
                   },
                   STREAM_START: function (e) {
                       let t = (0, N.y)();
@@ -256,13 +256,13 @@ class es extends (r = f.ZP.Store) {
                       if (0 === t.length) return;
                       let n = G.Z.getGame();
                       if (null == n) return;
-                      let { enabled: i } = O.Z.getCurrentConfig({ location: 'OverlayNotificationsStore' }, { autoTrackExposure: !0 });
+                      let { enabled: i } = T.Z.getCurrentConfig({ location: 'OverlayNotificationsStore' }, { autoTrackExposure: !0 });
                       i &&
-                          en((0, v.Z)(n, t), {
+                          en((0, x.Z)(n, t), {
                               priority: 2,
                               type: 0,
                               expirationExternallyManaged: !0,
-                              duration: 30 * U.Z.Millis.SECOND
+                              duration: 30 * B.Z.Millis.SECOND
                           });
                   }
               }

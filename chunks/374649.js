@@ -1,18 +1,18 @@
 n.d(t, {
     ED: function () {
-        return m;
-    },
-    Ox: function () {
-        return T;
-    },
-    hz: function () {
         return E;
     },
+    Ox: function () {
+        return v;
+    },
+    hz: function () {
+        return _;
+    },
     o5: function () {
-        return I;
+        return g;
     },
     pV: function () {
-        return S;
+        return I;
     }
 }),
     n(47120);
@@ -25,9 +25,9 @@ var r = n(192379),
     u = n(74538),
     c = n(73346),
     d = n(981631);
-async function _(e) {
-    let { items: t, paymentSourceId: n, trialId: r, code: i, applyEntitlements: a = !1, currency: c, renewal: _, metadata: E } = e,
-        f = {
+async function f(e) {
+    let { items: t, paymentSourceId: n, trialId: r, code: i, applyEntitlements: a = !1, currency: c, renewal: f, metadata: _ } = e,
+        h = {
             items: (t = (0, u.gB)(t)).map((e) => {
                 let { planId: t, ...n } = e;
                 return {
@@ -40,13 +40,13 @@ async function _(e) {
             code: i,
             apply_entitlements: a,
             currency: c,
-            renewal: _,
-            metadata: E
+            renewal: f,
+            metadata: _
         };
     try {
         let e = await s.tn.post({
             url: d.ANM.BILLING_SUBSCRIPTIONS_PREVIEW,
-            body: f,
+            body: h,
             oldFormErrors: !0
         });
         return l.Z.createInvoiceFromServer(e.body);
@@ -54,10 +54,10 @@ async function _(e) {
         throw new o.HF(e);
     }
 }
-async function E(e) {
-    let { subscriptionId: t, items: n, paymentSourceId: r, renewal: i, currency: a, applyEntitlements: c = !1, analyticsLocations: _, analyticsLocation: E, userDiscountOfferId: f } = e;
+async function _(e) {
+    let { subscriptionId: t, items: n, paymentSourceId: r, renewal: i, currency: a, applyEntitlements: c = !1, analyticsLocations: f, analyticsLocation: _, userDiscountOfferId: h } = e;
     null != n && (n = (0, u.gB)(n));
-    let h = {
+    let p = {
         items:
             null == n
                 ? void 0
@@ -72,16 +72,16 @@ async function E(e) {
         renewal: i,
         apply_entitlements: c,
         currency: a,
-        user_discount_offer_id: f
+        user_discount_offer_id: h
     };
     try {
         let e = await s.tn.patch({
             url: d.ANM.BILLING_SUBSCRIPTION_PREVIEW(t),
             query: {
-                location: E,
-                location_stack: _
+                location: _,
+                location_stack: f
             },
-            body: h,
+            body: p,
             oldFormErrors: !0
         });
         return l.Z.createInvoiceFromServer(e.body);
@@ -89,7 +89,7 @@ async function E(e) {
         throw new o.HF(e);
     }
 }
-async function f(e) {
+async function h(e) {
     let { paymentSourceId: t, skuId: n, subscriptionPlanId: r, currency: i, loadId: s } = e;
     a()(n, 'SKU ID is missing for one time purchase gift invoice preview');
     try {
@@ -109,7 +109,7 @@ async function f(e) {
         throw new o.HF(e);
     }
 }
-async function h(e) {
+async function p(e) {
     let { subscriptionId: t, preventFetch: n } = e;
     if (n) return null;
     let r = await s.tn.get({
@@ -118,7 +118,7 @@ async function h(e) {
     });
     return l.Z.createInvoiceFromServer(r.body);
 }
-function p(e, t) {
+function m(e, t) {
     let { preventFetch: n = !1 } = e,
         [i, a] = (0, r.useState)(null),
         [s, o] = (0, r.useState)(null);
@@ -144,23 +144,23 @@ function p(e, t) {
         [i, s]
     );
 }
-function I(e) {
-    let t = (0, r.useCallback)(() => f(e), [JSON.stringify(e)]);
-    return p(e, t);
+function g(e) {
+    let t = (0, r.useCallback)(() => h(e), [JSON.stringify(e)]);
+    return m(e, t);
 }
-function m(e) {
+function E(e) {
     if ('subscriptionId' in e && null == e.subscriptionId) {
         let { subscriptionId: t, ...n } = e;
         e = n;
     }
-    let t = (0, r.useCallback)(() => ('subscriptionId' in e ? E(e) : 'items' in e ? _(e) : null), [JSON.stringify(e)]);
-    return p(e, t);
+    let t = (0, r.useCallback)(() => ('subscriptionId' in e ? _(e) : 'items' in e ? f(e) : null), [JSON.stringify(e)]);
+    return m(e, t);
 }
-function T(e) {
-    let t = (0, r.useCallback)(() => h(e), [JSON.stringify(e)]);
-    return p(e, t);
+function v(e) {
+    let t = (0, r.useCallback)(() => p(e), [JSON.stringify(e)]);
+    return m(e, t);
 }
-function S(e) {
+function I(e) {
     let t = e.subscriptionPlanPrice;
     return (
         e.discounts.forEach((n) => {

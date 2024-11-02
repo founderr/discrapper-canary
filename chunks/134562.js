@@ -1,61 +1,61 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return i;
+        return r;
     }
 });
-var n = t(200651);
-t(192379);
-var o = t(481060),
-    a = t(259076),
-    l = t(689938),
-    r = t(859565);
-function i(e) {
-    let { onNext: s, onClose: t } = e;
-    return (0, n.jsxs)('form', {
-        onSubmit: s,
+var o = n(200651);
+n(192379);
+var s = n(481060),
+    l = n(259076),
+    a = n(388032),
+    i = n(859565);
+function r(e) {
+    let { onNext: t, onClose: n } = e;
+    return (0, o.jsxs)('form', {
+        onSubmit: t,
         children: [
-            (0, n.jsxs)(o.ModalHeader, {
+            (0, o.jsxs)(s.ModalHeader, {
                 separator: !1,
-                className: r.header,
+                className: i.header,
                 children: [
-                    (0, n.jsx)(o.Heading, {
+                    (0, o.jsx)(s.Heading, {
                         variant: 'heading-xl/extrabold',
-                        children: l.Z.Messages.EMAIL_CHANGE_REASONING_WARNING_HEADER
+                        children: a.intl.string(a.t.hhR7gY)
                     }),
-                    (0, n.jsx)(o.ModalCloseButton, {
-                        onClick: t,
-                        className: r.modalCloseButton
+                    (0, o.jsx)(s.ModalCloseButton, {
+                        onClick: n,
+                        className: i.modalCloseButton
                     })
                 ]
             }),
-            (0, n.jsxs)(o.ModalContent, {
-                className: r.content,
+            (0, o.jsxs)(s.ModalContent, {
+                className: i.content,
                 children: [
-                    (0, n.jsx)(o.Text, {
-                        className: r.description,
+                    (0, o.jsx)(s.Text, {
+                        className: i.description,
                         variant: 'text-md/normal',
-                        children: l.Z.Messages.EMAIL_CHANGE_REASONING_IMPERSONATION_EDUCATION.format({ hcArticle: a.j1 })
+                        children: a.intl.format(a.t.rqWXUV, { hcArticle: l.j1 })
                     }),
-                    (0, n.jsx)(o.Text, {
-                        className: r.description,
+                    (0, o.jsx)(s.Text, {
+                        className: i.description,
                         variant: 'text-md/normal',
-                        children: l.Z.Messages.EMAIL_CHANGE_REASONING_DISCORD_NEVER_ASKS_FOR_EMAIL_CHANGE
+                        children: a.intl.string(a.t['3LW10N'])
                     })
                 ]
             }),
-            (0, n.jsxs)(o.ModalFooter, {
-                className: r.modalFooter,
+            (0, o.jsxs)(s.ModalFooter, {
+                className: i.modalFooter,
                 children: [
-                    (0, n.jsx)(o.Button, {
-                        color: o.Button.Colors.BRAND,
-                        onClick: t,
-                        children: l.Z.Messages.CANCEL
+                    (0, o.jsx)(s.Button, {
+                        color: s.Button.Colors.BRAND,
+                        onClick: n,
+                        children: a.intl.string(a.t['ETE/oK'])
                     }),
-                    (0, n.jsx)(o.Button, {
-                        color: o.Button.Colors.PRIMARY,
-                        look: o.Button.Looks.LINK,
-                        onClick: s,
-                        children: l.Z.Messages.EMAIL_CHANGE_REASONING_CONTINUE
+                    (0, o.jsx)(s.Button, {
+                        color: s.Button.Colors.PRIMARY,
+                        look: s.Button.Looks.LINK,
+                        onClick: t,
+                        children: a.intl.string(a.t.rwTBFh)
                     })
                 ]
             })

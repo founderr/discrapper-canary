@@ -1,107 +1,107 @@
-s.d(t, {
+n.d(t, {
     Z: function () {
-        return N;
+        return x;
     }
 }),
-    s(47120);
-var a = s(200651),
-    n = s(192379),
-    o = s(512722),
-    l = s.n(o),
-    r = s(442837),
-    i = s(692547),
-    c = s(481060),
-    d = s(771308),
-    u = s(13430),
-    _ = s(594174),
-    f = s(63063),
-    E = s(981631),
-    m = s(723359),
-    p = s(689938),
-    h = s(738871);
-function N(e) {
-    let { onComplete: t, onClose: s } = e,
-        [o, N] = n.useState(null),
-        [T, A] = n.useState(null),
-        [x, I] = n.useState(!1),
-        C = (0, r.e7)([_.default], () => _.default.getCurrentUser()),
-        b = n.createRef();
-    async function M(e) {
-        e.preventDefault(), l()(null != o, 'Cannot submit null birthday.'), I(!0);
+    n(47120);
+var s = n(200651),
+    a = n(192379),
+    o = n(512722),
+    i = n.n(o),
+    l = n(442837),
+    r = n(692547),
+    c = n(481060),
+    d = n(771308),
+    u = n(13430),
+    f = n(594174),
+    _ = n(63063),
+    p = n(981631),
+    m = n(723359),
+    h = n(388032),
+    E = n(738871);
+function x(e) {
+    let { onComplete: t, onClose: n } = e,
+        [o, x] = a.useState(null),
+        [N, T] = a.useState(null),
+        [A, C] = a.useState(!1),
+        b = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
+        I = a.createRef();
+    async function v(e) {
+        e.preventDefault(), i()(null != o, 'Cannot submit null birthday.'), C(!0);
         try {
             await d.Av(o, m.L0.NEW_USER_FLOW), t();
         } catch (e) {
-            if (null != e.body && null != e.body.date_of_birth) d.wE(m.L0.NEW_USER_FLOW), d.hp(m.L0.NEW_USER_FLOW), s();
+            if (null != e.body && null != e.body.date_of_birth) d.wE(m.L0.NEW_USER_FLOW), d.hp(m.L0.NEW_USER_FLOW), n();
             else {
-                var a;
-                (null == e ? void 0 : null === (a = e.body) || void 0 === a ? void 0 : a.username) != null ? A(p.Z.Messages.USER_SETTINGS_UPDATE_FAILURE) : A(null == e ? void 0 : e.body.message);
+                var s;
+                (null == e ? void 0 : null === (s = e.body) || void 0 === s ? void 0 : s.username) != null ? T(h.intl.string(h.t['TGg/2t'])) : T(null == e ? void 0 : e.body.message);
             }
         }
-        I(!1);
+        C(!1);
     }
-    n.useEffect(() => {
-        null != C && null != C.nsfwAllowed && t();
-    }, [C, t]);
-    let v = n.useCallback(
+    a.useEffect(() => {
+        null != b && null != b.nsfwAllowed && t();
+    }, [b, t]);
+    let j = a.useCallback(
             (e) => {
-                N(e);
+                x(e);
             },
-            [N]
+            [x]
         ),
-        G = n.useCallback(() => {
+        g = a.useCallback(() => {
             var e;
-            null === (e = b.current) || void 0 === e || e.focus();
-        }, [b]);
-    return null == C
+            null === (e = I.current) || void 0 === e || e.focus();
+        }, [I]);
+    return null == b
         ? null
-        : (0, a.jsxs)('form', {
-              className: h.content,
-              onSubmit: M,
+        : (0, s.jsxs)('form', {
+              className: E.content,
+              onSubmit: v,
               children: [
-                  (0, a.jsx)(c.ClydeIcon, {
+                  (0, s.jsx)(c.ClydeIcon, {
                       size: 'custom',
                       width: 56,
                       height: 40,
-                      className: h.logo,
-                      color: i.Z.unsafe_rawColors.BRAND_500.css
+                      className: E.logo,
+                      color: r.Z.unsafe_rawColors.BRAND_500.css
                   }),
-                  (0, a.jsx)(c.Heading, {
-                      className: h.title,
+                  (0, s.jsx)(c.Heading, {
+                      className: E.title,
                       variant: 'heading-xl/semibold',
-                      children: p.Z.Messages.NUF_JOIN_SERVER_TITLE_2
+                      children: h.intl.string(h.t.n7i7sr)
                   }),
-                  (0, a.jsx)(c.Text, {
+                  (0, s.jsx)(c.Text, {
                       color: 'text-normal',
-                      className: h.description,
+                      className: E.description,
                       variant: 'text-md/normal',
-                      children: p.Z.Messages.NUF_AGE_GATE_BODY.format({ helpURL: f.Z.getArticleURL(E.BhN.AGE_GATE) })
+                      children: h.intl.format(h.t.fa8kW1, { helpURL: _.Z.getArticleURL(p.BhN.AGE_GATE) })
                   }),
-                  (0, a.jsx)(c.ThemeContextProvider, {
-                      theme: E.BRd.LIGHT,
-                      children: (0, a.jsx)(u.Z, {
+                  (0, s.jsx)(c.ThemeContextProvider, {
+                      theme: p.BRd.LIGHT,
+                      children: (0, s.jsx)(u.Z, {
                           required: !0,
                           autoFocus: !0,
-                          wrapperClassName: h.formItem,
-                          label: p.Z.Messages.AGE_GATE_YOUR_BIRTHDAY,
+                          wrapperClassName: E.formItem,
+                          label: h.intl.string(h.t.rhBeKS),
                           name: 'birthday',
-                          onChange: v,
-                          onPopulated: G,
-                          error: T,
+                          onChange: j,
+                          onPopulated: g,
+                          error: N,
                           value: o
                       })
                   }),
-                  (0, a.jsx)('div', {
-                      className: h.footer,
-                      children: (0, a.jsx)('div', {
-                          className: h.buttonWrapper,
-                          children: (0, a.jsx)(c.Button, {
-                              buttonRef: b,
+                  (0, s.jsx)('div', {
+                      className: E.footer,
+                      children: (0, s.jsx)('div', {
+                          className: E.buttonWrapper,
+                          children: (0, s.jsx)(c.Button, {
+                              buttonRef: I,
                               type: 'submit',
                               size: c.Button.Sizes.LARGE,
-                              submitting: x,
+                              submitting: A,
                               disabled: null == o,
                               fullWidth: !0,
-                              children: p.Z.Messages.NEXT
+                              children: h.intl.string(h.t.PDTjLC)
                           })
                       })
                   })

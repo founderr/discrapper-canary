@@ -1,41 +1,41 @@
-t.d(n, {
+e.d(n, {
     Z: function () {
-        return I;
+        return u;
     }
 });
-var a = t(200651);
-t(192379);
-var o = t(120356),
-    s = t.n(o),
-    i = t(793030),
-    c = t(481060),
-    r = t(759198),
-    l = t(552958),
-    _ = t(767157),
-    C = t(689938),
-    O = t(618900);
-function I(e) {
-    let { label: n, className: t, description: o, soundpack: I, location: p } = e,
-        { playSound: M, isPlaying: T } = (0, l.Z)();
-    return (0, a.jsxs)(c.Clickable, {
-        'aria-label': C.Z.Messages.PLAY,
-        className: s()(O.container, t, { [O.containerActive]: T }),
+var i = e(200651);
+e(192379);
+var o = e(120356),
+    a = e.n(o),
+    r = e(793030),
+    c = e(481060),
+    s = e(759198),
+    l = e(552958),
+    p = e(767157),
+    C = e(388032),
+    d = e(618900);
+function u(t) {
+    let { label: n, className: e, description: o, soundpack: u, location: _ } = t,
+        { playSound: f, isPlaying: I } = (0, l.Z)();
+    return (0, i.jsxs)(c.Clickable, {
+        'aria-label': C.intl.string(C.t.RscU7O),
+        className: a()(d.container, e, { [d.containerActive]: I }),
         onClick: () => {
-            (0, _.Z)(I, p), M(I);
+            (0, p.Z)(u, _), f(u);
         },
         children: [
-            (0, a.jsx)(c.CirclePlayIcon, {
-                className: O.playButton,
-                color: T ? c.tokens.colors.INTERACTIVE_ACTIVE : c.tokens.colors.INTERACTIVE_NORMAL
+            (0, i.jsx)(c.CirclePlayIcon, {
+                className: d.playButton,
+                color: I ? c.tokens.colors.INTERACTIVE_ACTIVE : c.tokens.colors.INTERACTIVE_NORMAL
             }),
-            (0, a.jsxs)('div', {
-                className: O.textContainer,
+            (0, i.jsxs)('div', {
+                className: d.textContainer,
                 children: [
-                    (0, a.jsx)(r.Z, {
+                    (0, i.jsx)(s.Z, {
                         variant: 'text-md/medium',
                         children: n
                     }),
-                    (0, a.jsx)(i.xv, {
+                    (0, i.jsx)(r.xv, {
                         variant: 'text-sm/normal',
                         children: o
                     })

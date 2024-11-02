@@ -28,25 +28,25 @@ function d() {
     }
     (c = new o.B()).addWords(e);
 }
+function f() {
+    d();
+}
 function _() {
     d();
 }
-function E() {
-    d();
-}
-function f(e) {
+function h(e) {
     let { local: t, settings: n } = e;
     if (!t || n.type !== l.yP.PRELOADED_USER_SETTINGS) return !1;
     null != c && c.clear(), d();
 }
-class h extends r.Z {
+class p extends r.Z {
     loadCache() {
-        let e = this.readSnapshot(h.LATEST_SNAPSHOT_VERSION);
+        let e = this.readSnapshot(p.LATEST_SNAPSHOT_VERSION);
         null != e && (c = null != e.keywordTrie ? o.B.fromSnapshot(e.keywordTrie) : null);
     }
     takeSnapshot() {
         return {
-            version: h.LATEST_SNAPSHOT_VERSION,
+            version: p.LATEST_SNAPSHOT_VERSION,
             data: { keywordTrie: c }
         };
     }
@@ -62,12 +62,12 @@ class h extends r.Z {
     }
     constructor() {
         super({
-            CONNECTION_OPEN: _,
-            CONNECTION_OPEN_SUPPLEMENTAL: _,
+            CONNECTION_OPEN: f,
+            CONNECTION_OPEN_SUPPLEMENTAL: f,
             CACHE_LOADED: () => this.loadCache(),
-            OVERLAY_INITIALIZE: E,
-            USER_SETTINGS_PROTO_UPDATE: f
+            OVERLAY_INITIALIZE: _,
+            USER_SETTINGS_PROTO_UPDATE: h
         });
     }
 }
-u(h, 'displayName', 'KeywordFilterStore'), u(h, 'LATEST_SNAPSHOT_VERSION', 2), (t.Z = new h());
+u(p, 'displayName', 'KeywordFilterStore'), u(p, 'LATEST_SNAPSHOT_VERSION', 2), (t.Z = new p());

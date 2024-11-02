@@ -5,10 +5,10 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(442837),
-    a = n(481060),
-    l = n(607070),
-    r = n(43267),
+var l = n(442837),
+    r = n(481060),
+    a = n(607070),
+    s = n(43267),
     o = n(933557),
     c = n(266076),
     u = n(518950),
@@ -16,39 +16,39 @@ var s = n(442837),
 function h(e) {
     var t;
     let { channel: n, children: h, user: m } = e,
-        p = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
-        _ = null !== (t = (0, o.ZP)(n)) && void 0 !== t ? t : '',
+        p = (0, l.e7)([a.Z], () => a.Z.useReducedMotion),
+        f = null !== (t = (0, o.ZP)(n)) && void 0 !== t ? t : '',
         {
-            avatarDecorationSrc: f,
-            eventHandlers: E,
-            isAnimating: g
+            avatarDecorationSrc: g,
+            eventHandlers: C,
+            isAnimating: x
         } = (0, u.Z)({
             user: m,
-            size: a.AvatarSizes.SIZE_80,
+            size: r.AvatarSizes.SIZE_80,
             animateOnHover: !0
         });
     return (0, i.jsxs)(d.ZP, {
         channelId: n.id,
-        ...E,
+        ...C,
         children: [
             (() => {
-                let e = !p && g;
+                let e = !p && x;
                 return n.isMultiUserDM()
                     ? (0, i.jsx)(c.Z, {
                           channel: n,
-                          size: a.AvatarSizes.SIZE_80,
+                          size: r.AvatarSizes.SIZE_80,
                           experimentLocation: 'empty_messages',
                           animated: e,
-                          'aria-label': _
+                          'aria-label': f
                       })
-                    : (0, i.jsx)(a.Avatar, {
-                          'aria-label': _,
-                          size: a.AvatarSizes.SIZE_80,
-                          src: (0, r.x)(n, 80, e),
-                          avatarDecoration: f
+                    : (0, i.jsx)(r.Avatar, {
+                          'aria-label': f,
+                          size: r.AvatarSizes.SIZE_80,
+                          src: (0, s.x)(n, 80, e),
+                          avatarDecoration: g
                       });
             })(),
-            (0, i.jsx)(d.Ot, { children: _ }),
+            (0, i.jsx)(d.Ot, { children: f }),
             (0, i.jsx)(d.jz, { children: h })
         ]
     });

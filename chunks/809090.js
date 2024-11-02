@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return f;
     }
 }),
     n(47120);
@@ -13,21 +13,21 @@ var r = n(200651),
     u = n(895924),
     c = n(696967),
     d = n(970952);
-function _(e) {
-    let { section: t, isSelected: n, width: a, height: _, className: E, selectable: f = !1, isSquircle: h, onFocus: p, onBlur: I, onMouseOver: m, onMouseLeave: T, ...S } = e,
-        [g, A] = i.useState(!1),
-        N = i.useCallback(() => {
-            A(!0), null == p || p();
-        }, [p]),
-        R = i.useCallback(() => {
-            A(!1), null == I || I();
-        }, [I]),
-        O = i.useCallback(() => {
-            A(!0), null == m || m();
+function f(e) {
+    let { section: t, isSelected: n, width: a, height: f, className: _, selectable: h = !1, isSquircle: p, onFocus: m, onBlur: g, onMouseOver: E, onMouseLeave: v, ...I } = e,
+        [S, T] = i.useState(!1),
+        b = i.useCallback(() => {
+            T(!0), null == m || m();
         }, [m]),
-        v = i.useCallback(() => {
-            A(!1), null == T || T();
-        }, [T]),
+        y = i.useCallback(() => {
+            T(!1), null == g || g();
+        }, [g]),
+        A = i.useCallback(() => {
+            T(!0), null == E || E();
+        }, [E]),
+        N = i.useCallback(() => {
+            T(!1), null == v || v();
+        }, [v]),
         C = i.useMemo(() => {
             if (t.type === u.Qi.APPLICATION) {
                 var e;
@@ -42,26 +42,26 @@ function _(e) {
             return d;
         }, [t, a]);
     return (0, r.jsx)('div', {
-        ...S,
-        className: s()(c.wrapper, E, {
-            [c.selectable]: f,
-            [c.selected]: f && n
+        ...I,
+        className: s()(c.wrapper, _, {
+            [c.selectable]: h,
+            [c.selected]: h && n
         }),
-        onFocus: N,
-        onBlur: R,
-        onMouseOver: O,
-        onMouseLeave: v,
+        onFocus: b,
+        onBlur: y,
+        onMouseOver: A,
+        onMouseLeave: N,
         children: (0, r.jsx)(o.ZP, {
             className: c.mask,
-            mask: h || (f && (n || g)) ? o.QS.SQUIRCLE : o.QS.AVATAR_DEFAULT,
+            mask: p || (h && (n || S)) ? o.QS.SQUIRCLE : o.QS.AVATAR_DEFAULT,
             width: a,
-            height: _,
+            height: f,
             children: (0, r.jsx)('img', {
                 alt: '',
                 className: c.icon,
                 style: {
                     width: a,
-                    height: _
+                    height: f
                 },
                 src: C
             })

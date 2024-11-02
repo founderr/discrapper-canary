@@ -11,8 +11,8 @@ var r = n(200651),
     l = n(120356),
     i = n.n(l),
     o = n(990547),
-    s = n(442837),
-    c = n(481060),
+    c = n(442837),
+    s = n(481060),
     d = n(347469),
     u = n(213609),
     h = n(213713),
@@ -24,31 +24,31 @@ var r = n(200651),
     b = n(432877);
 n(381996);
 var v = n(392750),
-    _ = n(926976),
-    j = n(592197),
-    C = n(860337),
+    j = n(926976),
+    C = n(592197),
+    _ = n(860337),
     T = n(789654),
     S = n(691867),
     N = n(916790),
     y = n(645973),
     I = n(903502),
     w = n(912072),
-    E = n(272193),
-    k = n(735959),
+    k = n(272193),
+    E = n(735959),
     Z = n(246992),
     R = n(496025),
     O = n(442954),
-    A = n(702904),
+    B = n(702904),
     L = n(178821),
-    B = n(248526),
+    A = n(248526),
     P = n(958328),
-    M = n(514866),
-    D = n(678639),
+    D = n(514866),
+    M = n(678639),
     F = n(351930),
     H = n(771751),
     U = n(596768),
     G = n(621060),
-    z = n(689938),
+    z = n(388032),
     V = n(622331),
     W = n(219299);
 function Y(e) {
@@ -72,7 +72,7 @@ function K() {
                 {
                     id: 'analytics',
                     name: 'Analytics',
-                    render: () => (0, r.jsx)(_.Z, {})
+                    render: () => (0, r.jsx)(j.Z, {})
                 },
                 {
                     id: 'triggers',
@@ -82,7 +82,7 @@ function K() {
                 {
                     id: 'stores',
                     name: 'Stores',
-                    render: () => (0, r.jsx)(D.Z, {})
+                    render: () => (0, r.jsx)(M.Z, {})
                 },
                 {
                     id: 'dispatcher',
@@ -95,12 +95,12 @@ function K() {
                     (e.push({
                         id: 'quick_actions',
                         name: 'Quick Actions',
-                        render: () => (0, r.jsx)(M.Z, {})
+                        render: () => (0, r.jsx)(D.Z, {})
                     }),
                     e.push({
                         id: 'perks_demos',
                         name: 'Perks Demos',
-                        render: () => (0, r.jsx)(B.Z, {})
+                        render: () => (0, r.jsx)(A.Z, {})
                     })),
                 x.Z.isDeveloper &&
                     (e.push({
@@ -111,7 +111,7 @@ function K() {
                     e.push({
                         id: 'clans',
                         name: 'Clans',
-                        render: () => (0, r.jsx)(C.Z, {})
+                        render: () => (0, r.jsx)(_.Z, {})
                     }),
                     e.push({
                         id: 'performance',
@@ -126,7 +126,7 @@ function K() {
                 e.push({
                     id: 'intl',
                     name: 'Intl',
-                    render: () => (0, r.jsx)(k.Z, {})
+                    render: () => (0, r.jsx)(E.Z, {})
                 }),
                 e.push({
                     id: 'colors',
@@ -183,7 +183,7 @@ function K() {
                     e.push({
                         id: 'payments',
                         name: 'Payments',
-                        render: () => (0, r.jsx)(A.Z, {})
+                        render: () => (0, r.jsx)(B.Z, {})
                     }),
                     e.push({
                         id: 'subscriptions',
@@ -193,12 +193,12 @@ function K() {
                     e.push({
                         id: 'billing',
                         name: 'Billing',
-                        render: () => (0, r.jsx)(j.Z, {})
+                        render: () => (0, r.jsx)(C.Z, {})
                     })),
                 e.push({
                     id: 'gifting_intent',
                     name: 'Gifting Intent',
-                    render: () => (0, r.jsx)(E.Z, {})
+                    render: () => (0, r.jsx)(k.Z, {})
                 }),
                 e
             );
@@ -228,13 +228,13 @@ function K() {
                 (0, r.jsxs)(m.ZP, {
                     className: W.headerBar,
                     toolbar: (0, r.jsx)(m.ZP.Icon, {
-                        icon: c.XSmallIcon,
-                        tooltip: z.Z.Messages.CLOSE,
+                        icon: s.XSmallIcon,
+                        tooltip: z.intl.string(z.t.cpT0Cg),
                         onClick: p.SO
                     }),
                     children: [
                         (0, r.jsx)(m.ZP.Icon, {
-                            icon: c.StaffBadgeIcon,
+                            icon: s.StaffBadgeIcon,
                             tooltip: 'DevTools'
                         }),
                         (0, r.jsx)(m.ZP.Title, { children: 'DevTools' })
@@ -247,9 +247,9 @@ function K() {
         })
     );
 }
-function q() {
+function X() {
     let e = a.useRef(null),
-        t = (0, s.e7)([g.Z], () => g.Z.sidebarWidth),
+        t = (0, c.e7)([g.Z], () => g.Z.sidebarWidth),
         [n, l] = a.useState(null),
         o = a.useCallback((e) => (0, p.Qh)({ sidebarWidth: e }), []);
     return (a.useEffect(() => {
@@ -277,8 +277,8 @@ function q() {
               ]
           });
 }
-function X() {
-    let e = (0, s.e7)([g.Z], () => g.Z.displayTools);
+function q() {
+    let e = (0, c.e7)([g.Z], () => g.Z.displayTools);
     return e
         ? (0, r.jsx)('div', {
               className: i()(V.container, V.mobileContainerExpanded),
@@ -289,14 +289,14 @@ function X() {
           })
         : (0, r.jsx)('div', {
               className: V.container,
-              children: (0, r.jsx)(c.Clickable, {
+              children: (0, r.jsx)(s.Clickable, {
                   onClick: p.SO,
                   children: (0, r.jsxs)(m.ZP, {
                       className: i()(W.headerBar, V.mobileHeaderCollapsed),
                       toolbar: (0, r.jsx)(f.Z, { direction: f.Z.Directions.UP }),
                       children: [
                           (0, r.jsx)(m.ZP.Icon, {
-                              icon: c.StaffBadgeIcon,
+                              icon: s.StaffBadgeIcon,
                               tooltip: 'DevTools'
                           }),
                           (0, r.jsx)(m.ZP.Title, { children: 'DevTools' })
@@ -307,5 +307,5 @@ function X() {
 }
 function $(e) {
     let { mobile: t } = e;
-    return t ? (0, r.jsx)(X, {}) : (0, r.jsx)(q, {});
+    return t ? (0, r.jsx)(q, {}) : (0, r.jsx)(X, {});
 }

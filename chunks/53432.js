@@ -1,77 +1,77 @@
 t.d(n, {
     Z: function () {
-        return T;
+        return h;
     }
 });
-var o = t(200651);
+var r = t(200651);
 t(192379);
-var r = t(442837),
-    a = t(481060),
-    i = t(153867),
-    l = t(857595),
+var o = t(442837),
+    i = t(481060),
+    l = t(153867),
+    a = t(857595),
     c = t(607070),
     u = t(906732),
-    s = t(705262),
-    d = t(540059),
-    _ = t(210887),
-    S = t(740492),
-    g = t(695346),
-    E = t(874893),
-    m = t(981631),
-    I = t(689938);
-function T() {
-    let e = g.jU.useSetting(),
+    d = t(705262),
+    s = t(540059),
+    g = t(210887),
+    m = t(740492),
+    b = t(695346),
+    f = t(874893),
+    p = t(981631),
+    _ = t(388032);
+function h() {
+    let e = b.jU.useSetting(),
         { analyticsLocations: n } = (0, u.ZP)(),
         {
             theme: t,
-            useSystemTheme: T,
-            useForcedColors: b
-        } = (0, r.cj)([_.Z, S.ZP, c.Z], () => ({
-            theme: _.Z.theme,
-            useSystemTheme: S.ZP.useSystemTheme,
+            useSystemTheme: h,
+            useForcedColors: S
+        } = (0, o.cj)([g.Z, m.ZP, c.Z], () => ({
+            theme: g.Z.theme,
+            useSystemTheme: m.ZP.useSystemTheme,
             useForcedColors: c.Z.useForcedColors
         })),
-        f = (0, d.Q)('appearance_settings'),
-        M = (e, r) =>
-            (0, o.jsx)(a.MenuRadioItem, {
+        x = (0, s.Q)('appearance_settings'),
+        C = (e, o) =>
+            (0, r.jsx)(i.MenuRadioItem, {
                 id: e,
                 group: 'input-modes',
-                label: r,
-                disabled: b,
-                checked: T === E.K.ON ? 'system' === e : e === t,
+                label: o,
+                disabled: S,
+                checked: h === f.K.ON ? 'system' === e : e === t,
                 action: () => {
-                    (0, s.Yk)({
+                    (0, d.Yk)({
                         isPersisted: !0,
                         analyticsLocations: n,
                         themeName: 'default '.concat(e)
                     }),
-                        (0, i.ZI)({ theme: e });
+                        (0, l.ZI)({ theme: e });
                 }
             });
     return [
-        (0, o.jsxs)(
-            a.MenuGroup,
+        (0, r.jsxs)(
+            i.MenuGroup,
             {
                 children: [
-                    M(m.BRd.DARK, I.Z.Messages.THEME_DARK),
-                    M(m.BRd.LIGHT, I.Z.Messages.THEME_LIGHT),
-                    f &&
-                        (0, o.jsxs)(o.Fragment, {
-                            children: [M(m.BRd.DARKER, 'Darker'), M(m.BRd.MIDNIGHT, I.Z.Messages.THEME_MIDNIGHT)]
+                    C(p.BRd.DARK, _.intl.string(_.t.b8Cei4)),
+                    C(p.BRd.LIGHT, _.intl.string(_.t.K2sFfn)),
+                    x &&
+                        (0, r.jsxs)(r.Fragment, {
+                            children: [C(p.BRd.DARKER, 'Darker'), C(p.BRd.MIDNIGHT, _.intl.string(_.t.pQwSpa))]
                         }),
-                    M('system', I.Z.Messages.THEME_SYSTEM)
+                    C('system', _.intl.string(_.t['7rOU6u']))
                 ]
             },
             'theme-items'
         ),
-        (0, o.jsx)(
-            a.MenuGroup,
+        (0, r.jsx)(
+            i.MenuGroup,
             {
-                children: (0, o.jsx)(a.MenuItem, {
+                children: (0, r.jsx)(i.MenuItem, {
                     id: 'compact-mode',
-                    label: e ? I.Z.Messages.SWITCH_TO_COZY_MODE : I.Z.Messages.SWITCH_TO_COMPACT_MODE,
+                    label: e ? _.intl.string(_.t.CTpwDw) : _.intl.string(_.t['J/FISU']),
                     action: () => {
-                        g.jU.updateSetting(!e), (0, l.ZZ)();
+                        b.jU.updateSetting(!e), (0, a.ZZ)();
                     }
                 })
             },

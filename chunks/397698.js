@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return f;
     }
 });
 var r = n(200651);
@@ -13,19 +13,19 @@ var i = n(481060),
     u = n(827498),
     c = n(314734),
     d = n(981631);
-function _(e) {
-    let { channel: t, openInPopout: _, analyticsLocation: E } = e;
-    _ && (0, a.Z)(d.KJ3.CHANNEL_CALL_POPOUT);
-    let f = _ ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
+function f(e) {
+    let { channel: t, openInPopout: f, analyticsLocation: _ } = e;
+    f && (0, a.Z)(d.KJ3.CHANNEL_CALL_POPOUT);
+    let h = f ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
     (0, l.yT)(u.ti.DISMISSED), (0, l.__)(u._b.VOICE);
-    let h = t.id,
-        p = s.ZP.hasUnread(h) || s.ZP.getMentionCount(h) > 0;
+    let p = t.id,
+        m = s.ZP.hasUnread(p) || s.ZP.getMentionCount(p) > 0;
     return (
         o.default.track(d.rMx.VOICE_PANEL_TAB_OPENED, {
             tab: 'activities',
-            location: E,
+            location: _,
             source: u._b.VOICE,
-            is_chat_badged: p
+            is_chat_badged: m
         }),
         (0, i.openModalLazy)(
             async () => {
@@ -38,7 +38,7 @@ function _(e) {
             },
             {
                 modalKey: c.e9,
-                contextKey: f
+                contextKey: h
             }
         )
     );

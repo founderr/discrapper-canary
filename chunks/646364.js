@@ -1,53 +1,53 @@
-t.r(a), t(47120);
-var s = t(200651),
-    o = t(192379),
-    d = t(442837),
-    r = t(481060),
-    n = t(367907),
-    l = t(313201),
-    i = t(434404),
-    C = t(650774),
-    c = t(816817),
-    _ = t(981631),
-    E = t(689938),
-    u = t(25476);
-a.default = (e) => {
-    let { transitionState: a, onClose: t, guild: m } = e,
-        h = (0, l.Dt)();
-    o.useEffect(() => {
-        n.ZP.trackWithMetadata(_.rMx.OPEN_MODAL, { type: _.jXE.DISCOVERY_SETUP_SUCCESS_MODAL });
+a.r(t), a(47120);
+var o = a(200651),
+    n = a(192379),
+    r = a(442837),
+    d = a(481060),
+    s = a(367907),
+    i = a(313201),
+    l = a(434404),
+    c = a(650774),
+    C = a(816817),
+    u = a(981631),
+    m = a(388032),
+    h = a(25476);
+t.default = (e) => {
+    let { transitionState: t, onClose: a, guild: p } = e,
+        _ = (0, i.Dt)();
+    n.useEffect(() => {
+        s.ZP.trackWithMetadata(u.rMx.OPEN_MODAL, { type: u.jXE.DISCOVERY_SETUP_SUCCESS_MODAL });
     }, []);
-    let [S, p] = (0, d.Wu)([C.Z], () => [C.Z.getOnlineCount(m.id), C.Z.getMemberCount(m.id)], [m.id]);
-    return (0, s.jsxs)(r.ModalRoot, {
-        transitionState: a,
-        'aria-labelledby': h,
-        className: u.root,
+    let [b, x] = (0, r.Wu)([c.Z], () => [c.Z.getOnlineCount(p.id), c.Z.getMemberCount(p.id)], [p.id]);
+    return (0, o.jsxs)(d.ModalRoot, {
+        transitionState: t,
+        'aria-labelledby': _,
+        className: h.root,
         children: [
-            (0, s.jsx)(r.ModalHeader, {
-                className: u.modalHeader,
+            (0, o.jsx)(d.ModalHeader, {
+                className: h.modalHeader,
                 separator: !1,
-                children: (0, s.jsx)(r.ModalCloseButton, {
-                    onClick: t,
-                    className: u.modalCloseButton
+                children: (0, o.jsx)(d.ModalCloseButton, {
+                    onClick: a,
+                    className: h.modalCloseButton
                 })
             }),
-            (0, s.jsx)(r.Heading, {
+            (0, o.jsx)(d.Heading, {
                 variant: 'heading-xl/semibold',
-                id: h,
-                className: u.header,
-                children: E.Z.Messages.SERVER_DISCOVERY_SETUP_CONFIRMATION_PAGE_HEADER
+                id: _,
+                className: h.header,
+                children: m.intl.string(m.t['2ocCIi'])
             }),
-            (0, s.jsxs)(r.ModalContent, {
-                className: u.modalContent,
+            (0, o.jsxs)(d.ModalContent, {
+                className: h.modalContent,
                 children: [
-                    (0, s.jsx)(r.Text, {
+                    (0, o.jsx)(d.Text, {
                         variant: 'text-md/normal',
-                        className: u.subheader,
-                        children: E.Z.Messages.SERVER_DISCOVERY_SETUP_CONFIRMATION_PAGE_SUBHEADING.format({
+                        className: h.subheader,
+                        children: m.intl.format(m.t.TRh6a2, {
                             onServerSettingsClick: () => {
-                                t(),
-                                    i.Z.setSection(_.pNK.DISCOVERY),
-                                    n.ZP.trackWithMetadata(_.rMx.SETTINGS_PANE_VIEWED, {
+                                a(),
+                                    l.Z.setSection(u.pNK.DISCOVERY),
+                                    s.ZP.trackWithMetadata(u.rMx.SETTINGS_PANE_VIEWED, {
                                         settings_type: 'guild',
                                         origin_pane: 'DISCOVERY',
                                         destination_pane: 'DISCOVERY'
@@ -55,18 +55,18 @@ a.default = (e) => {
                             }
                         })
                     }),
-                    (0, s.jsx)(c.Z, {
-                        className: u.previewCard,
-                        guild: m,
-                        presenceCount: S,
-                        memberCount: p
+                    (0, o.jsx)(C.Z, {
+                        className: h.previewCard,
+                        guild: p,
+                        presenceCount: b,
+                        memberCount: x
                     })
                 ]
             }),
-            (0, s.jsx)(r.ModalFooter, {
-                children: (0, s.jsx)(r.Button, {
-                    onClick: t,
-                    children: E.Z.Messages.GOT_IT
+            (0, o.jsx)(d.ModalFooter, {
+                children: (0, o.jsx)(d.Button, {
+                    onClick: a,
+                    children: m.intl.string(m.t['NX+WJC'])
                 })
             })
         ]

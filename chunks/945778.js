@@ -1,20 +1,20 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return s;
+            return l;
         }
     });
 var r = n(200651);
 n(192379);
 var a = n(238246),
     i = n(153731),
-    o = n(689938);
-function s(e) {
+    o = n(388032);
+function l(e) {
     let { windowKey: t } = e;
     return (0, r.jsx)(a.Z, {
         withTitleBar: !0,
         windowKey: t,
-        title: o.Z.Messages.RTC_DEBUG_POPOUT_WINDOW_TITLE,
+        title: o.intl.string(o.t['5I/1fn']),
         children: (0, r.jsx)(i.Z, {})
     });
 }

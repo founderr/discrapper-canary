@@ -1,32 +1,32 @@
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(120356),
-    r = n.n(a),
-    i = n(481060),
+var r = n(120356),
+    a = n.n(r),
+    s = n(481060),
     l = n(290891);
 t.Z = (e) => {
-    let { icon: t, iconClassName: n, header: a, description: o } = e;
-    return (0, s.jsxs)('div', {
+    let { icon: t, iconClassName: n, header: r, description: o } = e;
+    return (0, i.jsxs)('div', {
         className: l.container,
         children: [
-            (0, s.jsx)('div', {
+            (0, i.jsx)('div', {
                 className: l.circle,
-                children: (0, s.jsx)(t, {
-                    className: r()(l.icon, n),
+                children: (0, i.jsx)(t, {
+                    className: a()(l.icon, n),
                     size: 'custom',
                     width: 20,
                     height: 20,
                     color: 'currentColor'
                 })
             }),
-            (0, s.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 children: [
-                    (0, s.jsx)(i.Heading, {
+                    (0, i.jsx)(s.Heading, {
                         variant: 'heading-md/bold',
                         className: l.header,
-                        children: (0, s.jsx)(i.HeadingLevel, { children: a })
+                        children: (0, i.jsx)(s.HeadingLevel, { children: r })
                     }),
-                    (0, s.jsx)(i.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-muted',
                         children: o

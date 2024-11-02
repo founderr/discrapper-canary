@@ -7,34 +7,34 @@ var r = n(512969),
     u = n(592125),
     c = n(944486),
     d = n(981631),
-    _ = n(176505);
-let E = {},
-    f = !1;
-function h(e) {
-    if (null == e || e === _.V || (0, _.AB)(e) || null != u.Z.getChannel(e)) return Promise.resolve();
+    f = n(176505);
+let _ = {},
+    h = !1;
+function p(e) {
+    if (null == e || e === f.V || (0, f.AB)(e) || null != u.Z.getChannel(e)) return Promise.resolve();
     if (
-        (f ||
-            ((f = !0),
+        (h ||
+            ((h = !0),
             a.Z.subscribe('CONNECTION_OPEN', () => {
-                E = {};
+                _ = {};
                 let e = c.Z.getChannelId(),
                     t = u.Z.getChannel(e);
-                null != e && null == t && h(e);
+                null != e && null == t && p(e);
             })),
         !s.Z.isConnected())
     )
         return Promise.resolve();
-    let t = E[e];
+    let t = _[e];
     if (null != t) return 'LOADING' === t.type ? t.promise : Promise.resolve();
     let n = (0, r.LX)(location.pathname, {
             path: d.Z5c.CHANNEL(o.Hw.guildId(), o.Hw.channelId(), ':messageId'),
             exact: !0
         }),
-        p = i.tn
+        m = i.tn
             .get(d.ANM.CHANNEL(e))
             .then((t) => {
                 let { body: r } = t;
-                if (((E[e] = { type: 'LOADED' }), l.Ec.has(r.type))) {
+                if (((_[e] = { type: 'LOADED' }), l.Ec.has(r.type))) {
                     var i;
                     a.Z.dispatch({
                         type: 'THREAD_CREATE',
@@ -45,7 +45,7 @@ function h(e) {
             })
             .catch(() => {
                 var t;
-                (E[e] = { type: 'NOT_FOUND' }),
+                (_[e] = { type: 'NOT_FOUND' }),
                     a.Z.dispatch({
                         type: 'CHANNEL_DELETE',
                         channel: {
@@ -56,11 +56,11 @@ function h(e) {
                     });
             });
     return (
-        (E[e] = {
+        (_[e] = {
             type: 'LOADING',
-            promise: p
+            promise: m
         }),
-        p
+        m
     );
 }
-t.Z = { loadThread: h };
+t.Z = { loadThread: p };

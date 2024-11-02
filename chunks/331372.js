@@ -1,21 +1,21 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return l;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(325767);
-function s(e) {
-    let { width: t = 440, height: n = 200, avatar: s, ...r } = e;
+var r = n(325767);
+function l(e) {
+    let { width: t = 440, height: n = 200, avatar: l, ...a } = e;
     return (0, i.jsxs)('svg', {
-        ...(0, a.Z)(r),
+        ...(0, r.Z)(a),
         width: t,
         height: n,
         viewBox: '0 0 '.concat(t, ' ').concat(n),
         fill: 'none',
         xmlns: 'http://www.w3.org/2000/svg',
-        ...r,
+        ...a,
         children: [
             (0, i.jsx)('rect', {
                 y: '12',
@@ -88,7 +88,7 @@ function s(e) {
                 y: '100',
                 width: '56',
                 height: '56',
-                children: s
+                children: l
             })
         ]
     });

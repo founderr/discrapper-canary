@@ -11,13 +11,13 @@ var l,
     g = t(300429),
     m = t(981631),
     Z = t(176505);
-let E = 10 * s.Z.Millis.SECOND,
-    v = 1.5 * s.Z.Millis.SECOND,
-    h = {},
+let v = 10 * s.Z.Millis.SECOND,
+    h = 1.5 * s.Z.Millis.SECOND,
+    E = {},
     T = Object.freeze({});
 function _(e) {
     var n;
-    return null !== (n = h[e]) && void 0 !== n ? n : T;
+    return null !== (n = E[e]) && void 0 !== n ? n : T;
 }
 function S(e) {
     var n, t;
@@ -33,20 +33,20 @@ function S(e) {
                     channelId: n,
                     userId: t
                 });
-            }, E))),
-        (h[u] = r);
+            }, v))),
+        (E[u] = r);
 }
 function I(e) {
     let { channelId: n, userId: t } = e,
-        u = h[n];
+        u = E[n];
     if (null == u || null == u[t]) return !1;
     let l = { ...u };
-    clearTimeout(l[t]), delete l[t], (h[n] = l);
+    clearTimeout(l[t]), delete l[t], (E[n] = l);
 }
-function M() {
-    h = {};
+function p() {
+    E = {};
 }
-class p extends (o = a.ZP.Store) {
+class M extends (o = a.ZP.Store) {
     getTypingUsers(e) {
         return _(e);
     }
@@ -55,7 +55,7 @@ class p extends (o = a.ZP.Store) {
     }
 }
 (i = 'TypingStore'),
-    (r = 'displayName') in (l = p)
+    (r = 'displayName') in (l = M)
         ? Object.defineProperty(l, r, {
               value: i,
               enumerable: !0,
@@ -63,7 +63,7 @@ class p extends (o = a.ZP.Store) {
               writable: !0
           })
         : (l[r] = i),
-    (n.Z = new p(c.Z, {
+    (n.Z = new M(c.Z, {
         TYPING_START: S,
         TYPING_STOP: I,
         TYPING_START_LOCAL: function (e) {
@@ -72,7 +72,7 @@ class p extends (o = a.ZP.Store) {
             if (null == t || n === Z.V) return !1;
             null != u && u.channelId !== n && (null != u.timeout && clearTimeout(u.timeout), (u = null));
             let l = Date.now(),
-                r = 0.8 * E;
+                r = 0.8 * v;
             if (null != u && (null != u.timeout || u.prevSend + r > l)) return !1;
             let i = setTimeout(
                 () => {
@@ -113,7 +113,7 @@ class p extends (o = a.ZP.Store) {
                                 }
                             });
                 },
-                null == u || u.prevSend > l - 2 * r ? v : 0
+                null == u || u.prevSend > l - 2 * r ? h : 0
             );
             return (
                 (u = {
@@ -143,8 +143,8 @@ class p extends (o = a.ZP.Store) {
                 }))
             );
         },
-        CONNECTION_OPEN: M,
-        OVERLAY_INITIALIZE: M,
+        CONNECTION_OPEN: p,
+        OVERLAY_INITIALIZE: p,
         MESSAGE_CREATE: function (e) {
             let {
                 channelId: n,

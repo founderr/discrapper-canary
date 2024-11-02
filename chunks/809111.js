@@ -29,21 +29,21 @@ function s(e, t, n, s, o, l) {
                 var t = Number(e);
                 return !!u[t] || ((u[t] = !0), c.call(this, e));
             }));
-    for (var _ = 0; _ < s.length; _++) {
-        var E = new r.M(s[_], l).rezonedDate();
-        if (!e.accept(new Date(E.getTime()))) break;
+    for (var f = 0; f < s.length; f++) {
+        var _ = new r.M(s[f], l).rezonedDate();
+        if (!e.accept(new Date(_.getTime()))) break;
     }
     t.forEach(function (t) {
         (0, i.h)(e, t.options);
     });
-    var f = e._result;
-    switch (((0, a.DY)(f), e.method)) {
+    var h = e._result;
+    switch (((0, a.DY)(h), e.method)) {
         case 'all':
         case 'between':
-            return f;
+            return h;
         case 'before':
-            return (f.length && f[f.length - 1]) || null;
+            return (h.length && h[h.length - 1]) || null;
         default:
-            return (f.length && f[0]) || null;
+            return (h.length && h[0]) || null;
     }
 }

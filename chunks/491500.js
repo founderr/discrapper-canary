@@ -1,53 +1,53 @@
 t.d(n, {
     Z: function () {
-        return h;
+        return b;
     }
 });
 var i = t(200651),
-    a = t(192379),
-    l = t(392711),
-    s = t.n(l),
+    l = t(192379),
+    r = t(392711),
+    a = t.n(r),
     o = t(481060),
-    r = t(139387),
+    s = t(139387),
     d = t(835473),
     c = t(471445),
     u = t(925329),
-    I = t(163400),
-    m = t(327934),
-    _ = t(981631),
-    N = t(689938),
-    E = t(778429);
-function T(e) {
+    m = t(163400),
+    h = t(327934),
+    p = t(981631),
+    g = t(388032),
+    f = t(778429);
+function x(e) {
     let { applicationId: n, channels: t } = e,
-        a = (0, d.q)(n);
-    return 0 === t.length || null == a
+        l = (0, d.q)(n);
+    return 0 === t.length || null == l
         ? null
         : (0, i.jsxs)('div', {
-              className: E.applicationGroup,
+              className: f.applicationGroup,
               children: [
                   (0, i.jsxs)('div', {
-                      className: E.header,
+                      className: f.header,
                       children: [
                           (0, i.jsx)(u.Z, {
-                              game: a,
+                              game: l,
                               size: u.Z.Sizes.XSMALL
                           }),
                           (0, i.jsx)(o.Heading, {
                               variant: 'heading-md/semibold',
-                              children: null == a ? void 0 : a.name
+                              children: null == l ? void 0 : l.name
                           })
                       ]
                   }),
                   t.map((e) => {
                       var n;
                       return (0, i.jsx)(
-                          m.I,
+                          h.I,
                           {
                               channel: e,
-                              application: a,
+                              application: l,
                               name: e.name,
                               icon: null !== (n = (0, c.KS)(e)) && void 0 !== n ? n : void 0,
-                              iconWrapperClassName: E.iconwrapper,
+                              iconWrapperClassName: f.iconwrapper,
                               hasNextSection: !0,
                               trailing: (0, i.jsx)(o.PencilIcon, { size: 'xs' })
                           },
@@ -57,31 +57,31 @@ function T(e) {
               ]
           });
 }
-function h(e) {
+function b(e) {
     let { guild: n } = e,
-        t = (0, I.F)(n.id),
-        l = s().groupBy(t, (e) => {
+        t = (0, m.F)(n.id),
+        r = a().groupBy(t, (e) => {
             var n;
             return null === (n = e.linkedLobby) || void 0 === n ? void 0 : n.application_id;
         }),
-        d = Object.keys(l);
+        d = Object.keys(r);
     return (
-        a.useEffect(() => {
-            0 === t.length && r.Z.setSection(_.b4C.OVERVIEW);
+        l.useEffect(() => {
+            0 === t.length && s.Z.setSection(p.b4C.OVERVIEW);
         }, [t]),
         (0, i.jsxs)(o.FormSection, {
             children: [
                 (0, i.jsx)(o.FormText, {
                     type: o.FormTextTypes.DESCRIPTION,
-                    children: N.Z.Messages.INTEGRATIONS_LINKED_LOBBY_CHANNELS_SYNCING_INFO.format({ helpdeskArticle: '#' })
+                    children: g.intl.format(g.t['9gsSLi'], { helpdeskArticle: '#' })
                 }),
-                (0, i.jsx)(o.FormDivider, { className: E.headerDivider }),
+                (0, i.jsx)(o.FormDivider, { className: f.headerDivider }),
                 d.map((e) =>
                     (0, i.jsx)(
-                        T,
+                        x,
                         {
                             applicationId: e,
-                            channels: l[e]
+                            channels: r[e]
                         },
                         e
                     )

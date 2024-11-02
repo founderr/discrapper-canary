@@ -11,7 +11,7 @@ if (!Object.keys) {
             var t = e.constructor;
             return t && t.prototype === e;
         },
-        _ = {
+        f = {
             $applicationCache: !0,
             $console: !0,
             $external: !0,
@@ -36,11 +36,11 @@ if (!Object.keys) {
             $webkitStorageInfo: !0,
             $window: !0
         },
-        E = (function () {
+        _ = (function () {
             if ('undefined' == typeof window) return !1;
             for (var e in window)
                 try {
-                    if (!_['$' + e] && i.call(window, e) && null !== window[e] && 'object' == typeof window[e])
+                    if (!f['$' + e] && i.call(window, e) && null !== window[e] && 'object' == typeof window[e])
                         try {
                             d(window[e]);
                         } catch (e) {
@@ -51,8 +51,8 @@ if (!Object.keys) {
                 }
             return !1;
         })(),
-        f = function (e) {
-            if ('undefined' == typeof window || !E) return d(e);
+        h = function (e) {
+            if ('undefined' == typeof window || !_) return d(e);
             try {
                 return d(e);
             } catch (e) {
@@ -66,12 +66,12 @@ if (!Object.keys) {
             o = t && '[object String]' === a.call(e),
             d = [];
         if (!t && !n && !r) throw TypeError('Object.keys called on a non-object');
-        var _ = u && n;
-        if (o && e.length > 0 && !i.call(e, 0)) for (var E = 0; E < e.length; ++E) d.push(String(E));
-        if (r && e.length > 0) for (var h = 0; h < e.length; ++h) d.push(String(h));
-        else for (var p in e) !(_ && 'prototype' === p) && i.call(e, p) && d.push(String(p));
+        var f = u && n;
+        if (o && e.length > 0 && !i.call(e, 0)) for (var _ = 0; _ < e.length; ++_) d.push(String(_));
+        if (r && e.length > 0) for (var p = 0; p < e.length; ++p) d.push(String(p));
+        else for (var m in e) !(f && 'prototype' === m) && i.call(e, m) && d.push(String(m));
         if (l) {
-            for (var I = f(e), m = 0; m < c.length; ++m) !(I && 'constructor' === c[m]) && i.call(e, c[m]) && d.push(c[m]);
+            for (var g = h(e), E = 0; E < c.length; ++E) !(g && 'constructor' === c[E]) && i.call(e, c[E]) && d.push(c[E]);
         }
         return d;
     };

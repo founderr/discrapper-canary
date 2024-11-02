@@ -8,38 +8,38 @@ var r = n(456007),
     i = n(895924),
     a = n(351133),
     s = n(689079),
-    o = n(689938);
+    o = n(388032);
 function l(e) {
     let { option: t, content: n, guildId: l, channelId: u, allowEmptyValues: c, commandOrigin: d = i.bB.CHAT } = e,
-        _ = null != n ? (0, r.KF)({ content: n }, 'content').trim() : '',
-        E = t.required,
-        f = '' === _;
+        f = null != n ? (0, r.KF)({ content: n }, 'content').trim() : '',
+        _ = t.required,
+        h = '' === f;
     if (!(null != n))
-        return E
+        return _
             ? {
                   success: !1,
-                  error: o.Z.Messages.COMMAND_VALIDATION_REQUIRED_ERROR
+                  error: o.intl.string(o.t.JZJQLy)
               }
             : { success: !0 };
-    if (f)
+    if (h)
         return c
             ? { success: !0 }
-            : E
+            : _
               ? {
                     success: !1,
-                    error: o.Z.Messages.COMMAND_VALIDATION_REQUIRED_ERROR
+                    error: o.intl.string(o.t.JZJQLy)
                 }
               : {
                     success: !1,
                     error: (0, s.al)(t)
                 };
-    let h =
+    let p =
             n.length > 1
                 ? {
                       type: 'text',
-                      text: _
+                      text: f
                   }
                 : n[0],
-        p = a.Z[t.type](h, t, u, l, d);
-    return !p.success && null == p.error && (p.error = (0, s.al)(t)), p;
+        m = a.Z[t.type](p, t, u, l, d);
+    return !m.success && null == m.error && (m.error = (0, s.al)(t)), m;
 }

@@ -1,23 +1,23 @@
-_.d(E, {
+e.d(n, {
     J: function () {
-        return T;
+        return r;
     }
 });
-var t = _(601964);
-class T extends t.ZP {
-    constructor(e) {
-        var E, _, t;
-        super(e),
-            (E = this),
-            (t = void 0),
-            (_ = 'approximateMemberCount') in E
-                ? Object.defineProperty(E, _, {
-                      value: t,
+var i = e(601964);
+class r extends i.ZP {
+    constructor(t) {
+        var n, e, i;
+        super(t),
+            (n = this),
+            (i = void 0),
+            (e = 'approximateMemberCount') in n
+                ? Object.defineProperty(n, e, {
+                      value: i,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (E[_] = t),
-            (this.approximateMemberCount = e.approximate_member_count);
+                : (n[e] = i),
+            (this.approximateMemberCount = t.approximate_member_count);
     }
 }

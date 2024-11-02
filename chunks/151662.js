@@ -1,37 +1,37 @@
-var s,
-    a,
+var i,
     r,
-    i,
+    a,
+    s,
     l = n(442837),
     o = n(570140);
 let c = {},
-    _ = null;
-function d() {
-    (c = {}), (_ = null);
+    d = null;
+function u() {
+    (c = {}), (d = null);
 }
-class E extends (i = l.ZP.Store) {
+class g extends (s = l.ZP.Store) {
     getEmailSettings() {
         return {
             categories: c,
-            initialized: _
+            initialized: d
         };
     }
 }
-(r = 'EmailSettingsStore'),
-    (a = 'displayName') in (s = E)
-        ? Object.defineProperty(s, a, {
-              value: r,
+(a = 'EmailSettingsStore'),
+    (r = 'displayName') in (i = g)
+        ? Object.defineProperty(i, r, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (s[a] = r),
-    (t.Z = new E(o.Z, {
-        CONNECTION_OPEN: d,
-        LOGOUT: d,
+        : (i[r] = a),
+    (t.Z = new g(o.Z, {
+        CONNECTION_OPEN: u,
+        LOGOUT: u,
         EMAIL_SETTINGS_FETCH_SUCCESS: function (e) {
             let { settings: t } = e;
-            (c = t.categories), (_ = t.initialized);
+            (c = t.categories), (d = t.initialized);
         },
         EMAIL_SETTINGS_UPDATE_SUCCESS: function (e) {
             let { settings: t } = e;

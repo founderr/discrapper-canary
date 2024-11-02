@@ -1,50 +1,50 @@
-s.r(n);
-var t = s(200651);
-s(192379);
-var o = s(442837),
-    a = s(481060),
-    l = s(87051),
-    i = s(9156),
-    d = s(621600),
-    c = s(689938),
-    r = s(898944);
-n.default = (e) => {
-    let { onClose: n, channelId: s, transitionState: u } = e,
-        I = (0, o.e7)([i.ZP], () => i.ZP.isChannelMuted(null, s));
-    return (0, t.jsxs)(a.ModalRoot, {
+e.r(n);
+var i = e(200651);
+e(192379);
+var o = e(442837),
+    l = e(481060),
+    s = e(87051),
+    a = e(9156),
+    r = e(621600),
+    d = e(388032),
+    c = e(898944);
+n.default = (t) => {
+    let { onClose: n, channelId: e, transitionState: u } = t,
+        h = (0, o.e7)([a.ZP], () => a.ZP.isChannelMuted(null, e));
+    return (0, i.jsxs)(l.ModalRoot, {
         transitionState: u,
-        size: a.ModalSize.SMALL,
-        'aria-label': c.Z.Messages.MUTE_APP_NOTIFICATIONS,
+        size: l.ModalSize.SMALL,
+        'aria-label': d.intl.string(d.t.uAmAiI),
         children: [
-            (0, t.jsx)(a.ModalCloseButton, {
-                className: r.closeButton,
+            (0, i.jsx)(l.ModalCloseButton, {
+                className: c.closeButton,
                 onClick: n
             }),
-            (0, t.jsxs)(a.ModalContent, {
-                className: r.content,
+            (0, i.jsxs)(l.ModalContent, {
+                className: c.content,
                 children: [
-                    (0, t.jsx)('div', {
-                        className: r.iconContainer,
-                        children: I ? (0, t.jsx)(a.BellSlashIcon, { size: 'md' }) : (0, t.jsx)(a.BellIcon, { size: 'md' })
+                    (0, i.jsx)('div', {
+                        className: c.iconContainer,
+                        children: h ? (0, i.jsx)(l.BellSlashIcon, { size: 'md' }) : (0, i.jsx)(l.BellIcon, { size: 'md' })
                     }),
-                    (0, t.jsx)(a.Heading, {
-                        className: r.heading,
+                    (0, i.jsx)(l.Heading, {
+                        className: c.heading,
                         variant: 'heading-xl/bold',
-                        children: I ? c.Z.Messages.UNMUTE_APP_NOTIFICATIONS : c.Z.Messages.MUTE_APP_NOTIFICATIONS
+                        children: h ? d.intl.string(d.t['4rg7cH']) : d.intl.string(d.t.uAmAiI)
                     }),
-                    (0, t.jsx)(a.Text, {
-                        className: r.infoText,
+                    (0, i.jsx)(l.Text, {
+                        className: c.infoText,
                         variant: 'text-md/normal',
                         color: 'text-normal',
-                        children: I ? c.Z.Messages.UNMUTE_APP_NOTIFICIATIONS_INFO : c.Z.Messages.MUTE_APP_NOTIFICIATIONS_INFO
+                        children: h ? d.intl.string(d.t['5vton5']) : d.intl.string(d.t.mscFJS)
                     }),
-                    (0, t.jsx)(a.Button, {
-                        className: r.button,
-                        color: I ? a.Button.Colors.PRIMARY : a.Button.Colors.RED,
+                    (0, i.jsx)(l.Button, {
+                        className: c.button,
+                        color: h ? l.Button.Colors.PRIMARY : l.Button.Colors.RED,
                         onClick: () => {
-                            l.Z.updateChannelOverrideSettings(null, s, { muted: !I }, I ? d.ZB.Unmuted : d.ZB.Muted), n();
+                            s.Z.updateChannelOverrideSettings(null, e, { muted: !h }, h ? r.ZB.Unmuted : r.ZB.Muted), n();
                         },
-                        children: I ? c.Z.Messages.UNMUTE : c.Z.Messages.MUTE
+                        children: h ? d.intl.string(d.t.YqAjX1) : d.intl.string(d.t['w4m94+'])
                     })
                 ]
             })

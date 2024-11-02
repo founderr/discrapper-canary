@@ -1,15 +1,15 @@
 n.d(t, {
     N4: function () {
-        return p;
+        return m;
     },
     Pn: function () {
-        return I;
+        return g;
     },
     RS: function () {
-        return f;
+        return h;
     },
     Us: function () {
-        return h;
+        return p;
     },
     X2: function () {
         return l;
@@ -18,7 +18,7 @@ n.d(t, {
         return c;
     },
     au: function () {
-        return _;
+        return f;
     },
     fn: function () {
         return u;
@@ -36,7 +36,7 @@ n.d(t, {
         return o;
     },
     tL: function () {
-        return E;
+        return _;
     }
 }),
     n(47120);
@@ -50,10 +50,10 @@ let a = new Set([i.QJ.TERMS]),
     u = 300,
     c = 300,
     d = 8,
+    f = 150,
     _ = 150,
-    E = 150,
-    f = 1000,
-    h = 300,
-    p = 'Membership Gating',
-    I = 'in-app-member-verification';
+    h = 1000,
+    p = 300,
+    m = 'Membership Gating',
+    g = 'in-app-member-verification';
 (r || (r = {})).VERIFICATION_INFO = 'VERIFICATION_INFO';

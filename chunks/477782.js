@@ -1,67 +1,67 @@
-t.r(s),
-    t.d(s, {
+e.r(n),
+    e.d(n, {
         default: function () {
-            return r;
+            return d;
         }
     }),
-    t(47120);
-var n = t(200651),
-    a = t(192379),
-    o = t(481060),
-    l = t(313201),
-    i = t(117984),
-    c = t(689938),
-    d = t(775539);
-function r(e) {
-    let { onClose: s, transitionState: t } = e,
-        r = (0, l.Dt)(),
-        [u, h] = a.useState('');
-    return (0, n.jsx)('form', {
-        onSubmit: function (e) {
-            e.preventDefault(), (0, i.CM)(u), s();
+    e(47120);
+var o = e(200651),
+    s = e(192379),
+    i = e(481060),
+    l = e(313201),
+    a = e(117984),
+    r = e(388032),
+    c = e(775539);
+function d(t) {
+    let { onClose: n, transitionState: e } = t,
+        d = (0, l.Dt)(),
+        [u, h] = s.useState('');
+    return (0, o.jsx)('form', {
+        onSubmit: function (t) {
+            t.preventDefault(), (0, a.CM)(u), n();
         },
-        children: (0, n.jsxs)(o.ModalRoot, {
-            transitionState: t,
-            'aria-labelledby': r,
+        children: (0, o.jsxs)(i.ModalRoot, {
+            transitionState: e,
+            'aria-labelledby': d,
             children: [
-                (0, n.jsxs)(o.ModalContent, {
+                (0, o.jsxs)(i.ModalContent, {
                     children: [
-                        (0, n.jsx)(o.Heading, {
-                            id: r,
-                            className: d.header,
+                        (0, o.jsx)(i.Heading, {
+                            id: d,
+                            className: c.header,
                             variant: 'heading-xl/semibold',
-                            children: c.Z.Messages.CREATE_CATEGORY
+                            children: r.intl.string(r.t['ISN+ND'])
                         }),
-                        (0, n.jsx)(o.ModalCloseButton, {
-                            onClick: s,
-                            className: d.closeButton
+                        (0, o.jsx)(i.ModalCloseButton, {
+                            onClick: n,
+                            className: c.closeButton
                         }),
-                        (0, n.jsx)(o.FormItem, {
-                            title: c.Z.Messages.CATEGORY_NAME,
-                            className: d.name,
-                            children: (0, n.jsx)(o.TextInput, {
+                        (0, o.jsx)(i.FormItem, {
+                            title: r.intl.string(r.t.OCAkGB),
+                            className: c.name,
+                            children: (0, o.jsx)(i.TextInput, {
                                 value: u,
                                 onChange: h,
                                 maxLength: 100,
-                                placeholder: c.Z.Messages.CATEGORY_NAME_PLACEHOLDER,
-                                className: d.__invalid_inputWrapper,
+                                placeholder: r.intl.string(r.t.eTVbt7),
+                                className: c.__invalid_inputWrapper,
                                 autoFocus: !0
                             })
                         })
                     ]
                 }),
-                (0, n.jsxs)(o.ModalFooter, {
+                (0, o.jsxs)(i.ModalFooter, {
                     children: [
-                        (0, n.jsx)(o.Button, {
+                        (0, o.jsx)(i.Button, {
                             type: 'submit',
                             disabled: '' === u,
-                            children: c.Z.Messages.CREATE_CATEGORY
+                            children: r.intl.string(r.t['ISN+ND'])
                         }),
-                        (0, n.jsx)(o.Button, {
-                            onClick: s,
-                            look: o.Button.Looks.LINK,
-                            color: o.Button.Colors.PRIMARY,
-                            children: c.Z.Messages.CANCEL
+                        (0, o.jsx)(i.Button, {
+                            onClick: n,
+                            look: i.Button.Looks.LINK,
+                            color: i.Button.Colors.PRIMARY,
+                            children: r.intl.string(r.t['ETE/oK'])
                         })
                     ]
                 })

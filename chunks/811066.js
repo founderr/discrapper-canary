@@ -1,16 +1,16 @@
 n(411104);
 var i,
-    a,
-    s,
     r,
     l,
+    a,
+    s,
     o,
     c,
     d,
     u,
-    _ = n(200651),
-    E = n(192379);
-function h(e, t, n) {
+    h = n(200651),
+    m = n(192379);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function h(e, t, n) {
     );
 }
 ((o = i || (i = {})).THING = 'Thing'), (o.PERSON = 'Person'), (o.PRODUCT = 'Product'), (o.OFFER = 'Offer'), (o.AGGREGATE_OFFER = 'AggregateOffer'), (o.RATING = 'Rating'), (o.AGGREGATE_RATING = 'AggregateRating'), (o.ORGANIZATION = 'Organization'), (o.ITEM_PAGE = 'ItemPage'), (o.UNIT_PRICE_SPECIFICATION = 'UnitPriceSpecification'), (o.QUANTITATIVE_VALUE = 'QuantitativeValue');
-function m(e, t) {
+function g(e, t) {
     return {
         '@type': e,
         ...(function e(t) {
@@ -47,61 +47,61 @@ function m(e, t) {
         )
     };
 }
-function I(e) {
-    return m('Thing', e);
+function f(e) {
+    return g('Thing', e);
 }
-function p(e) {
-    return m('Product', e);
+function _(e) {
+    return g('Product', e);
 }
-p.Image = function (e) {
+_.Image = function (e) {
     if (null == e) return null;
     let t = e.filter((e) => null != e && '' !== e);
     return 0 === t.length ? null : 1 === t.length ? t[0] : t;
 };
-function g(e) {
-    return m('Offer', e);
+function E(e) {
+    return g('Offer', e);
 }
-function T(e) {
-    return m('QuantitativeValue', e);
+function I(e) {
+    return g('QuantitativeValue', e);
 }
-((c = a || (a = {})).DAMAGED = 'http://schema.org/DamagedCondition'), (c.NEW = 'http://schema.org/NewCondition'), (c.REFURBISHED = 'http://schema.org/RefurbishedCondition'), (c.USED = 'http://schema.org/UsedCondition'), ((d = s || (s = {})).DISCONTINUED = 'http://schema.org/Discontinued'), (d.IN_STOCK = 'http://schema.org/InStock'), (d.IN_STORE_ONLY = 'http://schema.org/InStoreOnly'), (d.LIMITED_AVAILABILITY = 'http://schema.org/LimitedAvailability'), (d.ONLINE_ONLY = 'http://schema.org/OnlineOnly'), (d.OUT_OF_STOCK = 'http://schema.org/OutOfStock'), (d.PREORDER = 'http://schema.org/PreOrder'), (d.PRESALE = 'http://schema.org/PreSale'), (d.SOLD_OUT = 'http://schema.org/SoldOut'), (g.ItemConditions = a), (g.ItemAvailability = s), ((u = r || (r = {})).YEARLY = 'ANN'), (u.MONTHLY = 'MON'), (T.UnitCodes = r);
-class S extends (l = E.Component) {
+((c = r || (r = {})).DAMAGED = 'http://schema.org/DamagedCondition'), (c.NEW = 'http://schema.org/NewCondition'), (c.REFURBISHED = 'http://schema.org/RefurbishedCondition'), (c.USED = 'http://schema.org/UsedCondition'), ((d = l || (l = {})).DISCONTINUED = 'http://schema.org/Discontinued'), (d.IN_STOCK = 'http://schema.org/InStock'), (d.IN_STORE_ONLY = 'http://schema.org/InStoreOnly'), (d.LIMITED_AVAILABILITY = 'http://schema.org/LimitedAvailability'), (d.ONLINE_ONLY = 'http://schema.org/OnlineOnly'), (d.OUT_OF_STOCK = 'http://schema.org/OutOfStock'), (d.PREORDER = 'http://schema.org/PreOrder'), (d.PRESALE = 'http://schema.org/PreSale'), (d.SOLD_OUT = 'http://schema.org/SoldOut'), (E.ItemConditions = r), (E.ItemAvailability = l), ((u = a || (a = {})).YEARLY = 'ANN'), (u.MONTHLY = 'MON'), (I.UnitCodes = a);
+class C extends (s = m.Component) {
     render() {
         let { debug: e, data: t } = this.props,
             n = JSON.stringify({
                 '@context': 'http://schema.org',
                 ...t
             });
-        return (0, _.jsx)('script', {
+        return (0, h.jsx)('script', {
             type: 'application/ld+json',
             children: n
         });
     }
 }
-h(S, 'Thing', I),
-    h(S, 'Brand', I),
-    h(S, 'Person', function (e) {
-        return m('Person', e);
+p(C, 'Thing', f),
+    p(C, 'Brand', f),
+    p(C, 'Person', function (e) {
+        return g('Person', e);
     }),
-    h(S, 'Organization', function (e) {
-        return m('Organization', e);
+    p(C, 'Organization', function (e) {
+        return g('Organization', e);
     }),
-    h(S, 'ItemPage', function (e) {
-        return m('ItemPage', e);
+    p(C, 'ItemPage', function (e) {
+        return g('ItemPage', e);
     }),
-    h(S, 'Product', p),
-    h(S, 'Offer', g),
-    h(S, 'Rating', function (e) {
-        return m('Rating', e);
+    p(C, 'Product', _),
+    p(C, 'Offer', E),
+    p(C, 'Rating', function (e) {
+        return g('Rating', e);
     }),
-    h(S, 'AggregateRating', function (e) {
-        return m('AggregateRating', e);
+    p(C, 'AggregateRating', function (e) {
+        return g('AggregateRating', e);
     }),
-    h(S, 'AggregateOffer', function (e) {
-        return m('AggregateOffer', e);
+    p(C, 'AggregateOffer', function (e) {
+        return g('AggregateOffer', e);
     }),
-    h(S, 'QuantitativeValue', T),
-    h(S, 'UnitPriceSpecification', function (e) {
-        return m('UnitPriceSpecification', e);
+    p(C, 'QuantitativeValue', I),
+    p(C, 'UnitPriceSpecification', function (e) {
+        return g('UnitPriceSpecification', e);
     }),
-    (t.Z = S);
+    (t.Z = C);

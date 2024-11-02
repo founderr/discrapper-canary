@@ -1,63 +1,63 @@
-l.r(n),
-    l.d(n, {
+t.r(e),
+    t.d(e, {
         default: function () {
-            return _;
+            return M;
         }
     });
-var r = l(200651);
-l(192379);
-var s = l(374470),
-    t = l(481060),
-    u = l(239091),
-    i = l(299206),
-    c = l(26737),
-    o = l(905041),
-    a = l(89013),
-    d = l(449751),
-    h = l(601184),
-    M = l(168405),
-    p = l(536639),
-    Z = l(689938);
-function _(e) {
-    var n;
-    let l,
-        _,
-        f,
-        { channel: E, message: S, target: g, attachment: k, onSelect: x } = e,
-        C = g;
-    if (null != k) _ = l = k.url;
-    else for (; (0, s.k)(C); ) (0, s.k)(C, HTMLImageElement) && null != C.src && (_ = C.src), (0, s.k)(C, HTMLAnchorElement) && null != C.href && ((l = C.href), (f = C.textContent)), (C = C.parentNode);
-    let G = null === (n = document.getSelection()) || void 0 === n ? void 0 : n.toString(),
-        j = (0, c.Z)(G),
-        v = (0, a.Z)(G),
-        A = (0, p.Z)(S, E),
-        I = (0, M.Z)(S, E),
-        b = (0, d.Z)(S, E),
-        m = (0, h.Z)(S, E),
-        L = (0, o.Z)(null != l ? l : _, f),
-        O = (0, i.Z)({
-            id: S.id,
-            label: Z.Z.Messages.COPY_ID_MESSAGE,
-            shiftId: ''.concat(S.channel_id, '-').concat(S.id)
+var l = t(200651);
+t(192379);
+var r = t(374470),
+    i = t(481060),
+    u = t(239091),
+    s = t(299206),
+    o = t(26737),
+    c = t(905041),
+    d = t(89013),
+    a = t(449751),
+    h = t(601184),
+    p = t(168405),
+    Z = t(536639),
+    f = t(388032);
+function M(n) {
+    var e;
+    let t,
+        M,
+        k,
+        { channel: g, message: x, target: j, attachment: v, onSelect: b } = n,
+        m = j;
+    if (null != v) M = t = v.url;
+    else for (; (0, r.k)(m); ) (0, r.k)(m, HTMLImageElement) && null != m.src && (M = m.src), (0, r.k)(m, HTMLAnchorElement) && null != m.href && ((t = m.href), (k = m.textContent)), (m = m.parentNode);
+    let C = null === (e = document.getSelection()) || void 0 === e ? void 0 : e.toString(),
+        G = (0, o.Z)(C),
+        w = (0, d.Z)(C),
+        H = (0, Z.Z)(x, g),
+        I = (0, p.Z)(x, g),
+        S = (0, a.Z)(x, g),
+        _ = (0, h.Z)(x, g),
+        E = (0, c.Z)(null != t ? t : M, k),
+        L = (0, s.Z)({
+            id: x.id,
+            label: f.intl.string(f.t.zBoHlZ),
+            shiftId: ''.concat(x.channel_id, '-').concat(x.id)
         }),
-        T = (0, i.Z)({
-            id: S.author.id,
-            label: Z.Z.Messages.COPY_ID_AUTHOR
+        N = (0, s.Z)({
+            id: x.author.id,
+            label: f.intl.string(f.t.Muw4ws)
         });
-    return (0, r.jsxs)(t.Menu, {
+    return (0, l.jsxs)(i.Menu, {
         navId: 'message',
         onClose: u.Zy,
-        'aria-label': Z.Z.Messages.MESSAGE_ACTIONS_MENU_LABEL,
-        onSelect: x,
+        'aria-label': f.intl.string(f.t.ChPNkJ),
+        onSelect: b,
         children: [
-            (0, r.jsx)(t.MenuGroup, { children: j }),
-            (0, r.jsx)(t.MenuGroup, { children: v }),
-            (0, r.jsxs)(t.MenuGroup, {
-                children: [A, I, b, m]
+            (0, l.jsx)(i.MenuGroup, { children: G }),
+            (0, l.jsx)(i.MenuGroup, { children: w }),
+            (0, l.jsxs)(i.MenuGroup, {
+                children: [H, I, S, _]
             }),
-            (0, r.jsx)(t.MenuGroup, { children: L }),
-            (0, r.jsxs)(t.MenuGroup, {
-                children: [O, T]
+            (0, l.jsx)(i.MenuGroup, { children: E }),
+            (0, l.jsxs)(i.MenuGroup, {
+                children: [L, N]
             })
         ]
     });

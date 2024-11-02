@@ -1,9 +1,9 @@
 n(47120);
 var i = n(200651),
-    s = n(192379),
-    a = n(399606),
-    l = n(704215),
-    r = n(952265),
+    l = n(192379),
+    r = n(399606),
+    a = n(704215),
+    s = n(952265),
     o = n(481060),
     c = n(243778),
     u = n(38618),
@@ -12,46 +12,46 @@ var i = n(200651),
 function m(e) {
     return 'dismissible_content_'.concat(h.R.GUILD_TAKEOVER_MODAL, '-').concat(e);
 }
-t.Z = s.memo(function () {
+t.Z = l.memo(function () {
     return (
         !(function () {
-            let e = (0, a.e7)([u.Z], () => u.Z.isConnected()) ? [] : [],
+            let e = (0, r.e7)([u.Z], () => u.Z.isConnected()) ? [] : [],
                 [t, p] = (0, c.US)(e, h.R.GUILD_TAKEOVER_MODAL),
-                _ = (0, r.f9)(),
-                f = s.useRef(null);
-            s.useEffect(() => {
+                f = (0, s.f9)(),
+                g = l.useRef(null);
+            l.useEffect(() => {
                 if (null == t) {
-                    f.current = null;
+                    g.current = null;
                     return;
                 }
-                if (!_ && f.current !== t)
+                if (!f && g.current !== t)
                     !(function (e) {
-                        let { dismissibleContent: t, markAsDismissed: s } = e,
-                            a = {
-                                onCloseCallback: (e) => s(null != e ? e : h.L.UNKNOWN),
+                        let { dismissibleContent: t, markAsDismissed: l } = e,
+                            r = {
+                                onCloseCallback: (e) => l(null != e ? e : h.L.UNKNOWN),
                                 modalKey: m(t)
                             },
-                            r = d.Z.getGuildId();
-                        if (t === l.z.SERVER_SHOP_UPSELL)
-                            null != r &&
+                            s = d.Z.getGuildId();
+                        if (t === a.z.SERVER_SHOP_UPSELL)
+                            null != s &&
                                 (0, o.openModalLazy)(async () => {
                                     let { default: e } = await n.e('7302').then(n.bind(n, 756779));
                                     return (t) =>
                                         (0, i.jsx)(e, {
                                             ...t,
-                                            guildId: r,
-                                            markAsDismissed: s
+                                            guildId: s,
+                                            markAsDismissed: l
                                         });
-                                }, a);
+                                }, r);
                     })({
                         dismissibleContent: t,
                         markAsDismissed: p
                     }),
-                        (f.current = t);
-            }, [t, _, p]),
-                s.useEffect(
+                        (g.current = t);
+            }, [t, f, p]),
+                l.useEffect(
                     () => () => {
-                        null != t && (0, r.Mr)(m(t));
+                        null != t && (0, s.Mr)(m(t));
                     },
                     [t]
                 );

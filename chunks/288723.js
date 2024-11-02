@@ -16,98 +16,98 @@ t.Z = {
         if (!t.modifiersData[c]._skip) {
             for (
                 var d = n.mainAxis,
-                    _ = void 0 === d || d,
-                    E = n.altAxis,
-                    f = void 0 === E || E,
-                    h = n.fallbackPlacements,
-                    p = n.padding,
-                    I = n.boundary,
-                    m = n.rootBoundary,
-                    T = n.altBoundary,
-                    S = n.flipVariations,
-                    g = void 0 === S || S,
-                    A = n.allowedAutoPlacements,
-                    N = t.options.placement,
-                    R = (0, i.Z)(N) === N,
-                    O =
-                        h ||
-                        (R || !g
-                            ? [(0, r.Z)(N)]
+                    f = void 0 === d || d,
+                    _ = n.altAxis,
+                    h = void 0 === _ || _,
+                    p = n.fallbackPlacements,
+                    m = n.padding,
+                    g = n.boundary,
+                    E = n.rootBoundary,
+                    v = n.altBoundary,
+                    I = n.flipVariations,
+                    S = void 0 === I || I,
+                    T = n.allowedAutoPlacements,
+                    b = t.options.placement,
+                    y = (0, i.Z)(b) === b,
+                    A =
+                        p ||
+                        (y || !S
+                            ? [(0, r.Z)(b)]
                             : (function (e) {
                                   if ((0, i.Z)(e) === l.d7) return [];
                                   var t = (0, r.Z)(e);
                                   return [(0, a.Z)(e), t, (0, a.Z)(t)];
-                              })(N)),
-                    v = [N].concat(O).reduce(function (e, n) {
+                              })(b)),
+                    N = [b].concat(A).reduce(function (e, n) {
                         return e.concat(
                             (0, i.Z)(n) === l.d7
                                 ? (0, o.Z)(t, {
                                       placement: n,
-                                      boundary: I,
-                                      rootBoundary: m,
-                                      padding: p,
-                                      flipVariations: g,
-                                      allowedAutoPlacements: A
+                                      boundary: g,
+                                      rootBoundary: E,
+                                      padding: m,
+                                      flipVariations: S,
+                                      allowedAutoPlacements: T
                                   })
                                 : n
                         );
                     }, []),
                     C = t.rects.reference,
-                    L = t.rects.popper,
-                    D = new Map(),
-                    y = !0,
-                    b = v[0],
-                    M = 0;
-                M < v.length;
-                M++
+                    R = t.rects.popper,
+                    O = new Map(),
+                    D = !0,
+                    L = N[0],
+                    x = 0;
+                x < N.length;
+                x++
             ) {
-                var P = v[M],
-                    U = (0, i.Z)(P),
-                    w = (0, u.Z)(P) === l.BL,
-                    x = [l.we, l.I].indexOf(U) >= 0,
-                    G = x ? 'width' : 'height',
-                    k = (0, s.Z)(t, {
-                        placement: P,
-                        boundary: I,
-                        rootBoundary: m,
-                        altBoundary: T,
-                        padding: p
+                var w = N[x],
+                    M = (0, i.Z)(w),
+                    P = (0, u.Z)(w) === l.BL,
+                    k = [l.we, l.I].indexOf(M) >= 0,
+                    U = k ? 'width' : 'height',
+                    G = (0, s.Z)(t, {
+                        placement: w,
+                        boundary: g,
+                        rootBoundary: E,
+                        altBoundary: v,
+                        padding: m
                     }),
-                    B = x ? (w ? l.F2 : l.t$) : w ? l.I : l.we;
-                C[G] > L[G] && (B = (0, r.Z)(B));
-                var F = (0, r.Z)(B),
-                    V = [];
+                    B = k ? (P ? l.F2 : l.t$) : P ? l.I : l.we;
+                C[U] > R[U] && (B = (0, r.Z)(B));
+                var Z = (0, r.Z)(B),
+                    F = [];
                 if (
-                    (_ && V.push(k[U] <= 0),
-                    f && V.push(k[B] <= 0, k[F] <= 0),
-                    V.every(function (e) {
+                    (f && F.push(G[M] <= 0),
+                    h && F.push(G[B] <= 0, G[Z] <= 0),
+                    F.every(function (e) {
                         return e;
                     }))
                 ) {
-                    (b = P), (y = !1);
+                    (L = w), (D = !1);
                     break;
                 }
-                D.set(P, V);
+                O.set(w, F);
             }
-            if (y) {
+            if (D) {
                 for (
-                    var H = g ? 3 : 1,
-                        Z = function (e) {
-                            var t = v.find(function (t) {
-                                var n = D.get(t);
+                    var V = S ? 3 : 1,
+                        j = function (e) {
+                            var t = N.find(function (t) {
+                                var n = O.get(t);
                                 if (n)
                                     return n.slice(0, e).every(function (e) {
                                         return e;
                                     });
                             });
-                            if (t) return (b = t), 'break';
+                            if (t) return (L = t), 'break';
                         },
-                        Y = H;
-                    Y > 0 && 'break' !== Z(Y);
-                    Y--
+                        H = V;
+                    H > 0 && 'break' !== j(H);
+                    H--
                 );
             }
-            t.placement !== b && ((t.modifiersData[c]._skip = !0), (t.placement = b), (t.reset = !0));
+            t.placement !== L && ((t.modifiersData[c]._skip = !0), (t.placement = L), (t.reset = !0));
         }
     },
     requiresIfExists: ['offset'],

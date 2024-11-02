@@ -1,28 +1,28 @@
-u.r(n),
-    u.d(n, {
+e.r(t),
+    e.d(t, {
         default: function () {
-            return i;
+            return s;
         }
     });
-var a = u(200651);
-u(192379);
-var l = u(481060),
-    r = u(239091),
-    t = u(714447),
-    s = u(439827),
-    o = u(689938);
-function i(e) {
-    let { guildId: n, onSelect: u, onPickerClose: i } = e,
-        c = (0, s.Z)(n, i),
-        S = (0, t.Z)();
-    return (0, a.jsx)(l.Menu, {
+var l = e(200651);
+e(192379);
+var r = e(481060),
+    u = e(239091),
+    i = e(714447),
+    a = e(439827),
+    o = e(388032);
+function s(n) {
+    let { guildId: t, onSelect: e, onPickerClose: s } = n,
+        c = (0, a.Z)(t, s),
+        d = (0, i.Z)();
+    return (0, l.jsx)(r.Menu, {
         navId: 'user-context',
-        onClose: r.Zy,
-        'aria-label': o.Z.Messages.USER_ACTIONS_MENU_LABEL,
+        onClose: u.Zy,
+        'aria-label': o.intl.string(o.t.liqwPD),
         className: 'context-menu',
-        onSelect: u,
-        children: (0, a.jsxs)(l.MenuGroup, {
-            children: [S, c]
+        onSelect: e,
+        children: (0, l.jsxs)(r.MenuGroup, {
+            children: [d, c]
         })
     });
 }

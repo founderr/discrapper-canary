@@ -1,71 +1,71 @@
 n.d(e, {
     v: function () {
-        return C;
+        return x;
     }
 }),
     n(47120);
 var a = n(200651),
     r = n(192379),
     o = n(120356),
-    s = n.n(o),
-    c = n(593473),
-    i = n(512969),
-    l = n(481060),
+    i = n.n(o),
+    s = n(593473),
+    l = n(512969),
+    c = n(481060),
     u = n(489863),
     d = n(511540),
     f = n(828878),
-    _ = n(689938),
-    p = n(74939);
-function C(t) {
+    p = n(388032),
+    h = n(74939);
+function x(t) {
     let { onUserCodeAccepted: e, usePrefilledCode: n } = t,
-        [o, C] = r.useState(() => {
-            let { user_code: t } = c.parse(window.location.search);
+        [o, x] = r.useState(() => {
+            let { user_code: t } = s.parse(window.location.search);
             return n && null != t ? t : '';
         }),
-        E = (0, i.TH)(),
-        I = r.useCallback(() => {
-            (0, u.c$)(E);
-        }, [E]),
-        { manualSubmit: A, error: h, submitting: T } = (0, d.c)(o, e, I);
+        C = (0, l.TH)(),
+        _ = r.useCallback(() => {
+            (0, u.c$)(C);
+        }, [C]),
+        { manualSubmit: m, error: v, submitting: I } = (0, d.c)(o, e, _);
     return (0, a.jsxs)('div', {
-        className: p.content,
+        className: h.content,
         children: [
             (0, a.jsxs)('div', {
-                className: p.innerContent,
+                className: h.innerContent,
                 children: [
-                    (0, a.jsx)(l.Heading, {
+                    (0, a.jsx)(c.Heading, {
                         variant: 'heading-xl/extrabold',
-                        className: p.text,
-                        children: _.Z.Messages.ACTIVATE_DEVICE_TITLE
+                        className: h.text,
+                        children: p.intl.string(p.t.KYPNUl)
                     }),
-                    (0, a.jsx)(l.Text, {
+                    (0, a.jsx)(c.Text, {
                         variant: 'text-md/medium',
                         color: 'header-secondary',
-                        className: p.text,
-                        children: _.Z.Messages.ACTIVATE_DEVICE_BODY
+                        className: h.text,
+                        children: p.intl.string(p.t.xRHk7e)
                     }),
-                    (0, a.jsx)(l.TextInput, {
-                        placeholder: _.Z.Messages.ACTIVATE_DEVICE_INPUT_PLACEHOLDER.format({ number: f.A.USER_CODE_LENGTH }),
+                    (0, a.jsx)(c.TextInput, {
+                        placeholder: p.intl.formatToPlainString(p.t['0tbz6+'], { number: f.A.USER_CODE_LENGTH }),
                         maxLength: f.A.USER_CODE_LENGTH,
-                        className: p.textInputContainer,
-                        inputClassName: s()(p.textInput, { [p.textInputError]: null != h }),
+                        className: h.textInputContainer,
+                        inputClassName: i()(h.textInput, { [h.textInputError]: null != v }),
                         autoComplete: 'off',
                         autoFocus: !0,
                         value: o,
-                        onChange: C,
-                        error: h
+                        onChange: x,
+                        error: v
                     })
                 ]
             }),
-            (0, a.jsx)(l.Button, {
+            (0, a.jsx)(c.Button, {
                 fullWidth: !0,
-                color: l.Button.Colors.BRAND,
-                onClick: A,
-                submitting: T,
+                color: c.Button.Colors.BRAND,
+                onClick: m,
+                submitting: I,
                 disabled: o.length !== f.A.USER_CODE_LENGTH,
-                children: (0, a.jsx)(l.Text, {
+                children: (0, a.jsx)(c.Text, {
                     variant: 'text-md/medium',
-                    children: _.Z.Messages.CONTINUE
+                    children: p.intl.string(p.t['3PatS0'])
                 })
             })
         ]

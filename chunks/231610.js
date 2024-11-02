@@ -1,112 +1,112 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return x;
     }
 }),
     n(47120);
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(481060),
-    i = n(723047),
-    r = n(727843),
-    l = n(290348),
+var r = n(481060),
+    l = n(723047),
+    s = n(727843),
+    a = n(290348),
     o = n(783454),
     c = n(893729),
     d = n(619326),
     u = n(553204),
-    _ = n(689938),
-    I = n(517194),
-    E = n(252218);
-function T() {
-    let { editStateId: e, guildId: t } = (0, r.N)(),
-        [, T] = l.p9(e, t),
-        [m, N] = l.Ek(e, t),
-        S = l.qs(e, t);
-    function g() {
-        (0, a.openModalLazy)(async () => {
+    m = n(388032),
+    h = n(517194),
+    g = n(252218);
+function x() {
+    let { editStateId: e, guildId: t } = (0, s.N)(),
+        [, x] = a.p9(e, t),
+        [p, f] = a.Ek(e, t),
+        C = a.qs(e, t);
+    function I() {
+        (0, r.openModalLazy)(async () => {
             let { default: e } = await n.e('22942').then(n.bind(n, 660727));
             return (n) =>
-                (0, s.jsx)(e, {
+                (0, i.jsx)(e, {
                     ...n,
                     guildId: t,
                     onUploadIcon: (e) =>
-                        T({
+                        x({
                             icon: e,
                             unicodeEmoji: null
                         }),
                     onSelectUnicodeEmoji: (e) =>
-                        T({
+                        x({
                             icon: null,
                             unicodeEmoji: e
                         })
                 });
         });
     }
-    let h = (0, i.mY)();
-    return (0, s.jsxs)(o.Z, {
-        title: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_FLAIR_HEADER_TITLE,
-        description: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_FLAIR_HEADER_SUBTITLE,
+    let _ = (0, l.mY)();
+    return (0, i.jsxs)(o.Z, {
+        title: m.intl.string(m.t['Ah+sQ0']),
+        description: m.intl.string(m.t.ixbWiI),
         children: [
-            (0, s.jsx)(a.FormSection, {
-                title: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_COLOR_TITLE,
-                disabled: h,
-                children: (0, s.jsx)(d.Z, {
-                    value: m,
-                    onChange: N,
-                    disabled: h
+            (0, i.jsx)(r.FormSection, {
+                title: m.intl.string(m.t['6OUqDQ']),
+                disabled: _,
+                children: (0, i.jsx)(d.Z, {
+                    value: p,
+                    onChange: f,
+                    disabled: _
                 })
             }),
-            (0, s.jsx)(a.Spacer, { size: 24 }),
-            (0, s.jsx)('div', {
-                className: I.__invalid_iconSection,
-                children: (0, s.jsxs)(a.FormSection, {
-                    title: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_BADGE_TITLE,
-                    disabled: h,
+            (0, i.jsx)(r.Spacer, { size: 24 }),
+            (0, i.jsx)('div', {
+                className: h.__invalid_iconSection,
+                children: (0, i.jsxs)(r.FormSection, {
+                    title: m.intl.string(m.t['zn8/AQ']),
+                    disabled: _,
                     children: [
-                        (0, s.jsx)(a.FormText, {
-                            type: a.FormText.Types.DESCRIPTION,
-                            className: I.formDescription,
-                            disabled: h,
-                            children: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_BADGE_DESCRIPTION
+                        (0, i.jsx)(r.FormText, {
+                            type: r.FormText.Types.DESCRIPTION,
+                            className: h.formDescription,
+                            disabled: _,
+                            children: m.intl.string(m.t.AqHUra)
                         }),
-                        (0, s.jsxs)('div', {
-                            className: E.iconUploaderContainer,
+                        (0, i.jsxs)('div', {
+                            className: g.iconUploaderContainer,
                             children: [
-                                (0, s.jsx)(u.Z, {
-                                    role: S,
-                                    'aria-label': _.Z.Messages.ROLE_ICON_CHOOSE_IMAGE,
-                                    onClick: g,
-                                    disabled: h
+                                (0, i.jsx)(u.Z, {
+                                    role: C,
+                                    'aria-label': m.intl.string(m.t.mD1oGB),
+                                    onClick: I,
+                                    disabled: _
                                 }),
-                                (0, s.jsx)(a.Button, {
-                                    look: a.Button.Looks.OUTLINED,
-                                    color: a.Button.Colors.PRIMARY,
-                                    className: I.__invalid_imageUploadButtonCTA,
-                                    onClick: g,
-                                    disabled: h,
-                                    children: _.Z.Messages.ROLE_ICON_CHOOSE_IMAGE
+                                (0, i.jsx)(r.Button, {
+                                    look: r.Button.Looks.OUTLINED,
+                                    color: r.Button.Colors.PRIMARY,
+                                    className: h.__invalid_imageUploadButtonCTA,
+                                    onClick: I,
+                                    disabled: _,
+                                    children: m.intl.string(m.t.mD1oGB)
                                 })
                             ]
                         })
                     ]
                 })
             }),
-            (0, s.jsx)(a.Spacer, { size: 24 }),
-            (0, s.jsx)(a.FocusBlock, {
-                children: (0, s.jsxs)('div', {
-                    className: E.previewContainer,
+            (0, i.jsx)(r.Spacer, { size: 24 }),
+            (0, i.jsx)(r.FocusBlock, {
+                children: (0, i.jsxs)('div', {
+                    className: g.previewContainer,
                     'aria-hidden': !0,
                     children: [
-                        (0, s.jsx)(c.Z, {
+                        (0, i.jsx)(c.Z, {
                             guildId: t,
-                            role: S,
-                            className: E.messageContainer,
+                            role: C,
+                            className: g.messageContainer,
                             theme: 'light'
                         }),
-                        (0, s.jsx)(c.Z, {
+                        (0, i.jsx)(c.Z, {
                             guildId: t,
-                            role: S,
-                            className: E.messageContainer,
+                            role: C,
+                            className: g.messageContainer,
                             theme: 'dark'
                         })
                     ]

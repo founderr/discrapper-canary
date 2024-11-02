@@ -1,25 +1,25 @@
-n.r(s);
-var a = n(200651);
-n(192379);
-var t = n(153867),
-    C = n(468026),
-    r = n(933557),
-    c = n(689938);
-s.default = (e) => {
-    let { onConfirm: s, channel: n, ...i } = e,
-        o = (0, r.ZP)(n);
-    return null == o
+e.r(t);
+var i = e(200651);
+e(192379);
+var r = e(153867),
+    a = e(468026),
+    l = e(933557),
+    o = e(388032);
+t.default = (n) => {
+    let { onConfirm: t, channel: e, ...s } = n,
+        c = (0, l.ZP)(e);
+    return null == c
         ? null
-        : (0, a.jsx)(C.default, {
-              confirmText: c.Z.Messages.CONFIRM,
-              secondaryConfirmText: c.Z.Messages.DONT_ASK_AGAIN,
-              title: c.Z.Messages.VOICE_CHANNEL_CHANGE_CONFIRMATION_HEADER,
-              cancelText: c.Z.Messages.CANCEL,
-              onConfirm: s,
+        : (0, i.jsx)(a.default, {
+              confirmText: o.intl.string(o.t['cY+Ooa']),
+              secondaryConfirmText: o.intl.string(o.t['JdIQ/f']),
+              title: o.intl.string(o.t['0LZN5O']),
+              cancelText: o.intl.string(o.t['ETE/oK']),
+              onConfirm: t,
               onConfirmSecondary: () => {
-                  t.ZP.updatedUnsyncedSettings({ disableVoiceChannelChangeAlert: !0 }), s();
+                  r.ZP.updatedUnsyncedSettings({ disableVoiceChannelChangeAlert: !0 }), t();
               },
-              body: c.Z.Messages.VOICE_CHANNEL_CHANGE_CONFIRMATION_BODY.format({ channel: o }),
-              ...i
+              body: o.intl.format(o.t['vA+uEh'], { channel: c }),
+              ...s
           });
 };

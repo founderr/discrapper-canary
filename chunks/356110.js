@@ -11,8 +11,8 @@ let l = (e) => {
         c(null != l ? l : '');
     }, [l]);
     let d = t.name,
-        { title: _, options: E } = t.data,
-        f = i.useCallback(
+        { title: f, options: _ } = t.data,
+        h = i.useCallback(
             (e) => {
                 null != e && (c(e), n(e));
             },
@@ -23,13 +23,13 @@ let l = (e) => {
         {
             className: o.marginBottom8,
             children: [
-                null != _ &&
+                null != f &&
                     (0, r.jsx)('div', {
                         className: o.marginBottom8,
                         children: (0, r.jsxs)(a.Text, {
                             variant: 'text-sm/bold',
                             children: [
-                                _,
+                                f,
                                 t.should_submit_data &&
                                     (0, r.jsx)('span', {
                                         className: s.required,
@@ -40,8 +40,8 @@ let l = (e) => {
                     }),
                 (0, r.jsx)(a.SingleSelect, {
                     value: u,
-                    onChange: f,
-                    options: E
+                    onChange: h,
+                    options: _
                 })
             ]
         },

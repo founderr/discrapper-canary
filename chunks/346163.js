@@ -1,72 +1,72 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return x;
     }
 });
-var s = n(192379),
-    a = n(399606),
-    i = n(674180),
-    r = n(594174),
-    l = n(63063),
+var i = n(192379),
+    r = n(399606),
+    l = n(674180),
+    s = n(594174),
+    a = n(63063),
     o = n(223892),
     c = n(747988),
     d = n(158992),
     u = n(159361),
-    _ = n(377176),
-    I = n(981631),
-    E = n(689938);
-function T(e) {
+    m = n(377176),
+    h = n(981631),
+    g = n(388032);
+function x(e) {
     let t;
     let n = (0, o.Ob)(e),
-        T = null == e ? void 0 : e.hasFeature(I.oNc.CREATOR_MONETIZABLE_PROVISIONAL),
-        m = null == e ? void 0 : e.hasFeature(I.oNc.CREATOR_MONETIZABLE),
-        N = (0, a.e7)([r.default], () => {
-            let t = r.default.getCurrentUser();
+        x = null == e ? void 0 : e.hasFeature(h.oNc.CREATOR_MONETIZABLE_PROVISIONAL),
+        p = null == e ? void 0 : e.hasFeature(h.oNc.CREATOR_MONETIZABLE),
+        f = (0, r.e7)([s.default], () => {
+            let t = s.default.getCurrentUser();
             return (null == e ? void 0 : e.isOwner(t)) === !0;
         }),
-        { error: S, loading: g, createEnableRequest: h, submittedRequest: C } = (0, c.Z)(null == e ? void 0 : e.id),
-        { loading: x, error: p, refresh: R, eligibility: L } = (0, d.Z)(null == e ? void 0 : e.id),
-        { isApplicationRejected: f, requestCooldownDuration: O } = (0, u.Z)(L),
-        A = (null == e ? void 0 : e.hasFeature(I.oNc.CREATOR_MONETIZABLE_RESTRICTED)) === !0 || (null == e ? void 0 : e.hasFeature(I.oNc.CREATOR_MONETIZABLE_DISABLED)) === !0,
-        { isMonetizationReapplicationDisabled: M } = (0, i.eC)(null == e ? void 0 : e.id),
-        D = C || (null == L ? void 0 : L.isApplicationPending) === !0,
-        v = (null == L ? void 0 : L.canApply) === !0,
-        j = E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUIREMENTS_DESCRIPTION.format({ faqUrl: l.Z.getArticleURL(I.BhN.CREATOR_FAQ) });
-    f && M
-        ? (t = !0 === T ? E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_HIGH_HARM.format({ communityGuidelineUrl: I.EYA.GUIDELINES }) : E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_HIGH_HARM_ALT.format({ communityGuidelineUrl: I.EYA.GUIDELINES }))
-        : f &&
-          null != O &&
-          (t = E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_V2.format({
-              requestCooldownDuration: O,
-              creatorRevenuePolicyUrl: l.Z.getArticleURL(I.BhN.CREATOR_POLICY)
+        { error: C, loading: I, createEnableRequest: _, submittedRequest: N } = (0, c.Z)(null == e ? void 0 : e.id),
+        { loading: v, error: T, refresh: j, eligibility: E } = (0, d.Z)(null == e ? void 0 : e.id),
+        { isApplicationRejected: S, requestCooldownDuration: b } = (0, u.Z)(E),
+        R = (null == e ? void 0 : e.hasFeature(h.oNc.CREATOR_MONETIZABLE_RESTRICTED)) === !0 || (null == e ? void 0 : e.hasFeature(h.oNc.CREATOR_MONETIZABLE_DISABLED)) === !0,
+        { isMonetizationReapplicationDisabled: Z } = (0, l.eC)(null == e ? void 0 : e.id),
+        A = N || (null == E ? void 0 : E.isApplicationPending) === !0,
+        L = (null == E ? void 0 : E.canApply) === !0,
+        y = g.intl.format(g.t.aJUdOj, { faqUrl: a.Z.getArticleURL(h.BhN.CREATOR_FAQ) });
+    S && Z
+        ? (t = !0 === x ? g.intl.format(g.t['0o1Q+v'], { communityGuidelineUrl: h.EYA.GUIDELINES }) : g.intl.format(g.t.b6h59v, { communityGuidelineUrl: h.EYA.GUIDELINES }))
+        : S &&
+          null != b &&
+          (t = g.intl.format(g.t.TvX209, {
+              requestCooldownDuration: b,
+              creatorRevenuePolicyUrl: a.Z.getArticleURL(h.BhN.CREATOR_POLICY)
           }));
-    let Z = n && N && !1 === m,
-        b = n && !1 === T,
-        U = (0, _.f)(),
-        G = f && v && N ? E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_RESUBMIT_V2.format() : void 0;
+    let D = n && f && !1 === p,
+        O = n && !1 === x,
+        M = (0, m.f)(),
+        P = S && L && f ? g.intl.format(g.t.wbVIUF, {}) : void 0;
     return (
-        s.useEffect(() => {
-            Z && R();
-        }, [R, Z]),
+        i.useEffect(() => {
+            D && j();
+        }, [j, D]),
         {
-            resubmittingEnableRequest: g,
-            resubmissionError: S,
-            isGuildOwner: N,
-            createEnableRequest: h,
-            resubmittedRequest: C,
-            eligibilityLoading: x,
-            eligibilityError: p,
-            refreshEligibility: R,
-            eligibility: L,
-            eligibleForMonetization: v,
-            isApplicationPending: D,
-            hasPreviousApplicationRejection: f,
+            resubmittingEnableRequest: I,
+            resubmissionError: C,
+            isGuildOwner: f,
+            createEnableRequest: _,
+            resubmittedRequest: N,
+            eligibilityLoading: v,
+            eligibilityError: T,
+            refreshEligibility: j,
+            eligibility: E,
+            eligibleForMonetization: L,
+            isApplicationPending: A,
+            hasPreviousApplicationRejection: S,
             requestRejectedNoticeText: t,
-            reapplyNoticeText: G,
-            showAcceptTermsFlow: b,
-            wasRejectedInV1: b && (A || f),
-            requirementsFinePrintText: j,
-            acceptTermsCheckboxText: U
+            reapplyNoticeText: P,
+            showAcceptTermsFlow: O,
+            wasRejectedInV1: O && (R || S),
+            requirementsFinePrintText: y,
+            acceptTermsCheckboxText: M
         }
     );
 }

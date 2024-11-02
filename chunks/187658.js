@@ -1,30 +1,30 @@
-a.r(s),
-    a.d(s, {
+i.r(n),
+    i.d(n, {
         default: function () {
-            return o;
+            return s;
         }
     });
-var n = a(200651);
-a(192379);
-var r = a(481060),
-    E = a(239091),
-    t = a(716161),
-    _ = a(647177),
-    i = a(689938);
-function o(e) {
-    let { onSelect: s, backgroundOption: a, optionIsInUse: o } = e;
-    return (0, n.jsx)(r.Menu, {
+var r = i(200651);
+i(192379);
+var e = i(481060),
+    a = i(239091),
+    o = i(716161),
+    c = i(647177),
+    l = i(388032);
+function s(t) {
+    let { onSelect: n, backgroundOption: i, optionIsInUse: s } = t;
+    return (0, r.jsx)(e.Menu, {
         navId: 'video-background-context',
-        onClose: E.Zy,
-        onSelect: s,
-        'aria-label': i.Z.Messages.VIDEO_BACKGROUND_CONTEXT_MENU_LABEL,
-        children: (0, n.jsx)(r.MenuItem, {
+        onClose: a.Zy,
+        onSelect: n,
+        'aria-label': l.intl.string(l.t.ptxALC),
+        children: (0, r.jsx)(e.MenuItem, {
             id: 'remove',
             action: () => {
-                if (!!(0, _.rD)(a)) (0, t.KH)(a), (0, _.$w)(a);
+                if (!!(0, c.rD)(i)) (0, o.KH)(i), (0, c.$w)(i);
             },
-            label: (0, _.rD)(a) ? (o ? i.Z.Messages.VIDEO_BACKGROUND_CANNOT_REMOVE_SELECTED : i.Z.Messages.VIDEO_BACKGROUND_REMOVE) : i.Z.Messages.VIDEO_BACKGROUND_CANNOT_REMOVE_DEFAULT,
-            disabled: !(0, _.rD)(a) || o,
+            label: (0, c.rD)(i) ? (s ? l.intl.string(l.t['xh/P//']) : l.intl.string(l.t.oKuPwc)) : l.intl.string(l.t.hFYUDA),
+            disabled: !(0, c.rD)(i) || s,
             color: 'danger'
         })
     });

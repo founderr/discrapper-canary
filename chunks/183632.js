@@ -1,37 +1,37 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return E;
+        return h;
     }
 });
-var n = t(200651);
-t(192379);
-var a = t(442837),
-    i = t(481060),
-    r = t(579806),
-    o = t(435064),
-    l = t(39604),
-    c = t(442334),
-    d = t(689938),
-    _ = t(595362),
-    u = t(193788);
-function E() {
-    let e = (0, a.e7)([o.Z], () => o.Z.getSettings().storageLocation),
-        s = async () => {
-            let e = await r.Z.fileManager.showOpenDialog({
+var i = n(200651);
+n(192379);
+var s = n(442837),
+    r = n(481060),
+    l = n(579806),
+    a = n(435064),
+    o = n(39604),
+    c = n(442334),
+    d = n(388032),
+    u = n(595362),
+    m = n(193788);
+function h() {
+    let e = (0, s.e7)([a.Z], () => a.Z.getSettings().storageLocation),
+        t = async () => {
+            let e = await l.Z.fileManager.showOpenDialog({
                 properties: ['openDirectory', 'createDirectory']
             });
-            e.length > 0 && l.T1(e[0]);
+            e.length > 0 && o.T1(e[0]);
         };
-    return (0, n.jsx)(i.FormSection, {
-        children: (0, n.jsx)(c.O, {
-            title: d.Z.Messages.CLIPS_SETTINGS_STORAGE_LOCATION,
-            note: d.Z.Messages.CLIPS_SETTINGS_STORAGE_LOCATION_HELP,
-            className: _.formItem,
-            children: (0, n.jsx)(i.Clickable, {
-                className: u.selectControl,
-                'aria-label': d.Z.Messages.CLIPS_SETTINGS_STORAGE_LOCATION_LABEL.format({ storageLocation: e }),
-                onClick: s,
-                children: (0, n.jsx)(i.TextInput, {
+    return (0, i.jsx)(r.FormSection, {
+        children: (0, i.jsx)(c.O, {
+            title: d.intl.string(d.t.s4773N),
+            note: d.intl.string(d.t.svjwGh),
+            className: u.formItem,
+            children: (0, i.jsx)(r.Clickable, {
+                className: m.selectControl,
+                'aria-label': d.intl.formatToPlainString(d.t.iMONTk, { storageLocation: e }),
+                onClick: t,
+                children: (0, i.jsx)(r.TextInput, {
                     tabIndex: -1,
                     value: e,
                     editable: !1,

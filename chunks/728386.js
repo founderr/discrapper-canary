@@ -8,58 +8,58 @@ var r = n(200651),
     u = n(570220),
     c = n(28546),
     d = n(443603),
-    _ = n(957825),
-    E = n(689938),
-    f = n(703130);
+    f = n(957825),
+    _ = n(388032),
+    h = n(703130);
 t.Z = i.memo(
     i.forwardRef(function (e, t) {
         let { disabled: n, type: a } = e,
-            [h, p] = (0, c.Iu)((e) => [e.activeView, e.pickerId], o.Z),
-            I = i.useContext(u.ZP),
-            [m, T] = i.useState(!1),
-            S = h === _.X1.STICKER,
-            g = i.useCallback(() => {
-                (0, c.RO)(_.X1.STICKER, a);
+            [p, m] = (0, c.Iu)((e) => [e.activeView, e.pickerId], o.Z),
+            g = i.useContext(u.ZP),
+            [E, v] = i.useState(!1),
+            I = p === f.X1.STICKER,
+            S = i.useCallback(() => {
+                (0, c.RO)(f.X1.STICKER, a);
             }, [a]);
         i.useEffect(() => {
             let e = () => {
                     requestAnimationFrame(() => {
-                        T(!0);
+                        v(!0);
                     });
                 },
                 t = () => {
                     requestAnimationFrame(() => {
-                        T(!1);
+                        v(!1);
                     });
                 };
             return (
-                I.addListener('sticker-suggestions-shown', e),
-                I.addListener('sticker-suggestions-hidden', t),
+                g.addListener('sticker-suggestions-shown', e),
+                g.addListener('sticker-suggestions-hidden', t),
                 () => {
-                    I.removeListener('sticker-suggestions-shown', e), I.removeListener('sticker-suggestions-hidden', t);
+                    g.removeListener('sticker-suggestions-shown', e), g.removeListener('sticker-suggestions-hidden', t);
                 }
             );
-        }, [I]);
-        let { Component: A, events: N, play: R } = (0, l.z)();
+        }, [g]);
+        let { Component: T, events: b, play: y } = (0, l.z)();
         return n
             ? null
             : (0, r.jsx)('div', {
-                  className: s()(_.CT, f.buttonContainer),
+                  className: s()(f.CT, h.buttonContainer),
                   ref: t,
                   children: (0, r.jsx)(d.Z, {
-                      innerClassName: s()(f.button, f.stickerButton, { [f.stickerButtonTilted]: m && !S }),
-                      ...N,
+                      innerClassName: s()(h.button, h.stickerButton, { [h.stickerButtonTilted]: E && !I }),
+                      ...b,
                       onClick: () => {
-                          g(), R();
+                          S(), y();
                       },
-                      isActive: S,
-                      'aria-label': E.Z.Messages.STICKER_BUTTON_LABEL,
-                      'aria-expanded': S,
+                      isActive: I,
+                      'aria-label': _.intl.string(_.t.rZpidX),
+                      'aria-expanded': I,
                       'aria-haspopup': 'dialog',
-                      'aria-controls': p,
+                      'aria-controls': m,
                       sparkle: !1,
                       notification: null,
-                      children: (0, r.jsx)(A, { color: 'currentColor' })
+                      children: (0, r.jsx)(T, { color: 'currentColor' })
                   })
               });
     })

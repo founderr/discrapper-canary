@@ -12,8 +12,8 @@ t.d(n, {
     t(411104);
 var o,
     r,
-    l = t(512722),
-    i = t.n(l),
+    i = t(512722),
+    l = t.n(i),
     a = t(493683),
     s = t(904245),
     c = t(957730),
@@ -25,7 +25,7 @@ let p = async (e, n) => {
         if (null == e) throw Error('Recipient must be defined');
         let t = await a.Z.openPrivateChannel(e.id).then((e) => {
                 let n = u.Z.getChannel(e);
-                if ((i()(null != n, 'PrivateChannel is null'), null == n)) throw Error('Channel must be defined');
+                if ((l()(null != n, 'PrivateChannel is null'), null == n)) throw Error('Channel must be defined');
                 return n;
             }),
             o = (0, d.Nz)(n);

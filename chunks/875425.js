@@ -1,13 +1,13 @@
-a.d(t, {
+n.d(e, {
     F: function () {
         return l;
     },
     s: function () {
-        return n;
+        return s;
     }
 });
-let s = 3600000,
-    n = 128,
+let a = 3600000,
+    s = 128,
     l = Object.freeze({
         MINUTES_30: 1800000,
         HOURS_1: 3600000,

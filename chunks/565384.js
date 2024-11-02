@@ -1,6 +1,6 @@
 n.d(t, {
     Ez: function () {
-        return E;
+        return _;
     },
     Ps: function () {
         return l;
@@ -15,7 +15,7 @@ n.d(t, {
         return u;
     },
     k$: function () {
-        return _;
+        return f;
     }
 }),
     n(47120);
@@ -50,7 +50,7 @@ let s = Object.freeze({
         });
     },
     d = o;
-function _() {
+function f() {
     let e = {};
     return (
         o.getState().impressions.forEach((t) => {
@@ -59,6 +59,6 @@ function _() {
         e
     );
 }
-function E() {
+function _() {
     return o.getState().impressions;
 }

@@ -85,12 +85,12 @@ e.exports = function (e) {
         u = '[0-9](_?[0-9])*',
         c = `(\\b(${u}))?\\.(${u})|\\b(${u})\\.`,
         d = `\\b|${r.join('|')}`,
-        _ = {
+        f = {
             className: 'number',
             relevance: 0,
             variants: [{ begin: `(\\b(${u})|(${c}))[eE][+-]?(${u})[jJ]?(?=${d})` }, { begin: `(${c})[jJ]?` }, { begin: `\\b([1-9](_?[0-9])*|0+(_?0)*)[lLjJ]?(?=${d})` }, { begin: `\\b0[bB](_?[01])+[lL]?(?=${d})` }, { begin: `\\b0[oO](_?[0-7])+[lL]?(?=${d})` }, { begin: `\\b0[xX](_?[0-9a-fA-F])+[lL]?(?=${d})` }, { begin: `\\b(${u})[jJ](?=${d})` }]
         },
-        E = {
+        _ = {
             className: 'comment',
             begin: t.lookahead(/# type:/),
             end: /$/,
@@ -104,7 +104,7 @@ e.exports = function (e) {
                 }
             ]
         },
-        f = {
+        h = {
             className: 'params',
             variants: [
                 {
@@ -118,12 +118,12 @@ e.exports = function (e) {
                     excludeBegin: !0,
                     excludeEnd: !0,
                     keywords: i,
-                    contains: ['self', a, _, l, e.HASH_COMMENT_MODE]
+                    contains: ['self', a, f, l, e.HASH_COMMENT_MODE]
                 }
             ]
         };
     return (
-        (s.contains = [l, _, a]),
+        (s.contains = [l, f, a]),
         {
             name: 'Python',
             aliases: ['py', 'gyp', 'ipython'],
@@ -132,14 +132,14 @@ e.exports = function (e) {
             illegal: /(<\/|->|\?)|=>/,
             contains: [
                 a,
-                _,
+                f,
                 { begin: /\bself\b/ },
                 {
                     beginKeywords: 'if',
                     relevance: 0
                 },
                 l,
-                E,
+                _,
                 e.HASH_COMMENT_MODE,
                 {
                     match: [/\bdef/, /\s+/, n],
@@ -147,7 +147,7 @@ e.exports = function (e) {
                         1: 'keyword',
                         3: 'title.function'
                     },
-                    contains: [f]
+                    contains: [h]
                 },
                 {
                     variants: [
@@ -168,7 +168,7 @@ e.exports = function (e) {
                     className: 'meta',
                     begin: /^[\t ]*@/,
                     end: /(?=#)|$/,
-                    contains: [_, f, l]
+                    contains: [f, h, l]
                 }
             ]
         }

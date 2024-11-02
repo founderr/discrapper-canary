@@ -1,27 +1,27 @@
 n.d(t, {
     Hq: function () {
-        return f;
-    },
-    M9: function () {
-        return p;
-    },
-    Oj: function () {
-        return I;
-    },
-    cj: function () {
         return h;
     },
+    M9: function () {
+        return m;
+    },
+    Oj: function () {
+        return g;
+    },
+    cj: function () {
+        return p;
+    },
     km: function () {
-        return _;
+        return f;
     },
     oJ: function () {
         return d;
     },
     rV: function () {
-        return E;
+        return _;
     },
     yt: function () {
-        return m;
+        return E;
     }
 });
 var r = n(544891),
@@ -52,7 +52,7 @@ function d(e) {
         )
     );
 }
-function _(e) {
+function f(e) {
     let t = o.Z.get(e),
         n = null != t && (l.Z.inTestModeForApplication(t.applicationId) || a.Z.inDevModeForApplication(t.applicationId));
     return (
@@ -80,7 +80,7 @@ function _(e) {
             })
     );
 }
-function E(e) {
+function _(e) {
     return (0, u.Kb)(c.ANM.STORE_LISTING(e)).then((e) => {
         i.Z.dispatch({
             type: 'STORE_LISTING_FETCH_SUCCESS',
@@ -88,7 +88,7 @@ function E(e) {
         });
     });
 }
-function f(e) {
+function h(e) {
     return (0, u.Kb)(c.ANM.STORE_PUBLISHED_LISTINGS_APPLICATION(e)).then((e) => {
         i.Z.dispatch({
             type: 'STORE_LISTING_FETCH_SUCCESS',
@@ -96,19 +96,19 @@ function f(e) {
         });
     });
 }
-function h() {
+function p() {
     i.Z.dispatch({ type: 'APPLICATION_STORE_MATURE_AGREE' });
 }
-function p() {
+function m() {
     (0, s.uL)(c.Z5c.APPLICATION_STORE);
 }
-function I(e) {
+function g(e) {
     return r.tn.post({
         url: c.ANM.STORE_PUBLISHED_LISTINGS_SKU_JOIN_GUILD(e),
         oldFormErrors: !0
     });
 }
-function m(e, t) {
+function E(e, t) {
     let { pathname: n, ...r } = (0, u.ZI)(e, t);
     (0, s.uL)(n, r);
 }

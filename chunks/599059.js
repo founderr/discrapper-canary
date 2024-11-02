@@ -5,10 +5,10 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    a = n(120356),
-    l = n.n(a),
-    r = n(981631),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
+    s = n(981631),
     o = n(89448);
 function c(e, t, n) {
     return (
@@ -23,7 +23,7 @@ function c(e, t, n) {
         e
     );
 }
-class u extends s.Component {
+class u extends l.Component {
     componentDidUpdate(e, t) {
         if (t.focused !== this.state.focused && this.state.focused) {
             var n;
@@ -33,8 +33,8 @@ class u extends s.Component {
     }
     render() {
         let e;
-        let { className: t, name: n, autoComplete: s, maxLen: a } = this.props,
-            r = {
+        let { className: t, name: n, autoComplete: l, maxLen: r } = this.props,
+            s = {
                 position: 'absolute',
                 left: 0,
                 width: '100%',
@@ -46,9 +46,9 @@ class u extends s.Component {
                       visibility: 'hidden',
                       pointerEvents: 'none'
                   })
-                : (r.opacity = 0),
+                : (s.opacity = 0),
             (0, i.jsx)('div', {
-                className: l()(o.outer, t),
+                className: a()(o.outer, t),
                 children: (0, i.jsxs)('div', {
                     className: o.container,
                     children: [
@@ -56,11 +56,11 @@ class u extends s.Component {
                             type: 'text',
                             className: o.input,
                             ref: this.inputRef,
-                            style: r,
+                            style: s,
                             value: this.state.value,
                             name: n,
-                            maxLength: a,
-                            autoComplete: s,
+                            maxLength: r,
+                            autoComplete: l,
                             onKeyPress: this.handleKeyPress,
                             onChange: this.handleChange,
                             onFocus: this.handleFocus,
@@ -78,7 +78,7 @@ class u extends s.Component {
     }
     constructor(...e) {
         super(...e),
-            c(this, 'inputRef', s.createRef()),
+            c(this, 'inputRef', l.createRef()),
             c(this, 'state', {
                 focused: !1,
                 lastGoodValue: this.props.value,
@@ -108,7 +108,7 @@ class u extends s.Component {
                     });
             }),
             c(this, 'handleKeyPress', (e) => {
-                if (e.which === r.yXg.ENTER) {
+                if (e.which === s.yXg.ENTER) {
                     var t;
                     null === (t = this.inputRef.current) || void 0 === t || t.blur();
                 }

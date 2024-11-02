@@ -1,55 +1,55 @@
-n.r(s);
-var t = n(200651),
-    a = n(192379),
-    l = n(442837),
-    r = n(100527),
-    i = n(906732),
+n.r(t);
+var i = n(200651),
+    l = n(192379),
+    r = n(442837),
+    a = n(100527),
+    s = n(906732),
     o = n(252618),
     c = n(598077),
     d = n(430824),
     u = n(693546),
-    I = n(863249),
-    E = n(328977),
-    _ = n(208257),
-    T = n(853486),
-    m = n(689938),
-    R = n(271648);
-s.default = function (e) {
-    let { guildId: s } = e,
-        { analyticsLocations: n } = (0, i.ZP)(r.Z.GUILD_MEMBER_APPLICATION_REVIEW),
-        M = (0, E.L)({ guildId: s }),
-        { user: N } = null != M ? M : {},
-        C = a.useMemo(() => (null != N ? new c.Z(N) : null), [N]),
-        x = (0, l.e7)([d.Z], () => d.Z.getGuild(s), [s]);
+    m = n(863249),
+    h = n(328977),
+    x = n(208257),
+    b = n(853486),
+    j = n(388032),
+    p = n(271648);
+t.default = function (e) {
+    let { guildId: t } = e,
+        { analyticsLocations: n } = (0, s.ZP)(a.Z.GUILD_MEMBER_APPLICATION_REVIEW),
+        g = (0, h.L)({ guildId: t }),
+        { user: v } = null != g ? g : {},
+        f = l.useMemo(() => (null != v ? new c.Z(v) : null), [v]),
+        C = (0, r.e7)([d.Z], () => d.Z.getGuild(t), [t]);
     (0, o.Tt)({
-        subsection: m.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REQUIREMENTS,
-        location: null == x ? void 0 : x.name
+        subsection: j.intl.string(j.t.nqrK8f),
+        location: null == C ? void 0 : C.name
     }),
-        a.useEffect(() => {
-            I.ZP.fetchVerificationForm(s);
-        }, [s]);
-    let h = null != M && null != x && null != C;
-    return (0, t.jsxs)(i.Gt, {
+        l.useEffect(() => {
+            m.ZP.fetchVerificationForm(t);
+        }, [t]);
+    let I = null != g && null != C && null != f;
+    return (0, i.jsxs)(s.Gt, {
         value: n,
         children: [
-            (0, t.jsx)('div', {
-                className: R.content,
-                children: (0, t.jsx)(_.Z, {
-                    guildId: s,
-                    isSidebarOpen: h
+            (0, i.jsx)('div', {
+                className: p.content,
+                children: (0, i.jsx)(x.Z, {
+                    guildId: t,
+                    isSidebarOpen: I
                 })
             }),
-            h &&
-                (0, t.jsxs)(t.Fragment, {
+            I &&
+                (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, t.jsx)('div', { className: R.sidebarSeparator }),
-                        (0, t.jsx)('section', {
-                            className: R.sidebar,
-                            children: (0, t.jsx)(T.Z, {
-                                guild: x,
-                                guildJoinRequest: M,
-                                guildJoinRequestUser: C,
-                                onClose: () => u.Z.setSelectedGuildJoinRequest(s, null)
+                        (0, i.jsx)('div', { className: p.sidebarSeparator }),
+                        (0, i.jsx)('section', {
+                            className: p.sidebar,
+                            children: (0, i.jsx)(b.Z, {
+                                guild: C,
+                                guildJoinRequest: g,
+                                guildJoinRequestUser: f,
+                                onClose: () => u.Z.setSelectedGuildJoinRequest(t, null)
                             })
                         })
                     ]

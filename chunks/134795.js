@@ -1,45 +1,45 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return u;
+        return m;
     }
 });
-var n = t(200651);
-t(192379);
-var a = t(120356),
-    i = t.n(a),
-    r = t(481060),
-    o = t(654904),
-    l = t(993413),
-    c = t(486324),
-    d = t(689938),
-    _ = t(850691);
-function u(e) {
-    let { showRemoveBannerButton: s, errors: t, onBannerChange: a, guildId: u, className: E, disabled: T = !1, showPremiumIcon: S = !0, isTryItOutFlow: I = !1, forcedDivider: N, withHighlight: m = !1 } = e,
-        C = m ? r.ShinyButton : r.Button;
-    return (0, n.jsx)(l.Z, {
-        className: E,
-        title: d.Z.Messages.USER_SETTINGS_PROFILE_BANNER,
-        showPremiumIcon: S,
-        errors: t,
-        disabled: T,
-        forcedDivider: N,
-        children: (0, n.jsxs)('div', {
-            className: _.buttonsContainer,
+var i = n(200651);
+n(192379);
+var s = n(120356),
+    r = n.n(s),
+    l = n(481060),
+    a = n(654904),
+    o = n(993413),
+    c = n(486324),
+    d = n(388032),
+    u = n(850691);
+function m(e) {
+    let { showRemoveBannerButton: t, errors: n, onBannerChange: s, guildId: m, className: h, disabled: g = !1, showPremiumIcon: p = !0, isTryItOutFlow: x = !1, forcedDivider: S, withHighlight: T = !1 } = e,
+        C = T ? l.ShinyButton : l.Button;
+    return (0, i.jsx)(o.Z, {
+        className: h,
+        title: d.intl.string(d.t.Vgdusr),
+        showPremiumIcon: p,
+        errors: n,
+        disabled: g,
+        forcedDivider: S,
+        children: (0, i.jsxs)('div', {
+            className: u.buttonsContainer,
             children: [
-                (0, n.jsx)(C, {
-                    className: i()({ [_.buttonHighlighted]: m }),
-                    size: r.Button.Sizes.SMALL,
-                    onClick: () => (0, o.$r)(c.pC.BANNER, u, I, void 0),
-                    children: d.Z.Messages.CHANGE_BANNER
+                (0, i.jsx)(C, {
+                    className: r()({ [u.buttonHighlighted]: T }),
+                    size: l.Button.Sizes.SMALL,
+                    onClick: () => (0, a.$r)(c.pC.BANNER, m, x, void 0),
+                    children: d.intl.string(d.t.N0bC3N)
                 }),
-                s &&
-                    (0, n.jsx)(r.Button, {
-                        className: _.removeButton,
-                        color: r.Button.Colors.PRIMARY,
-                        look: r.Button.Looks.LINK,
-                        size: r.Button.Sizes.SMALL,
-                        onClick: () => a(null),
-                        children: null != u ? d.Z.Messages.USER_SETTINGS_RESET_BANNER : d.Z.Messages.USER_SETTINGS_REMOVE_BANNER
+                t &&
+                    (0, i.jsx)(l.Button, {
+                        className: u.removeButton,
+                        color: l.Button.Colors.PRIMARY,
+                        look: l.Button.Looks.LINK,
+                        size: l.Button.Sizes.SMALL,
+                        onClick: () => s(null),
+                        children: null != m ? d.intl.string(d.t.jHlJNT) : d.intl.string(d.t.tT9n7O)
                     })
             ]
         })

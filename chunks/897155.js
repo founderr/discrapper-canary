@@ -19,11 +19,11 @@ t.Z = (0, a.I)(function (e) {
         u = e.onHover,
         c = e.title,
         d = void 0 === c ? t : c,
-        _ = e.children,
-        E = e.focus,
-        f = e.focusStyle,
-        h = 'transparent' === t,
-        p = (0, i.default)({
+        f = e.children,
+        _ = e.focus,
+        h = e.focusStyle,
+        p = 'transparent' === t,
+        m = (0, i.default)({
             default: {
                 swatch: o(
                     {
@@ -35,21 +35,21 @@ t.Z = (0, a.I)(function (e) {
                         outline: 'none'
                     },
                     n,
-                    E ? (void 0 === f ? {} : f) : {}
+                    _ ? (void 0 === h ? {} : h) : {}
                 )
             }
         }),
-        I = {};
+        g = {};
     return (
         u &&
-            (I.onMouseOver = function (e) {
+            (g.onMouseOver = function (e) {
                 return u(t, e);
             }),
         r.createElement(
             'div',
             o(
                 {
-                    style: p.swatch,
+                    style: m.swatch,
                     onClick: function (e) {
                         return l(t, e);
                     },
@@ -59,12 +59,12 @@ t.Z = (0, a.I)(function (e) {
                         return 13 === e.keyCode && l(t, e);
                     }
                 },
-                I
+                g
             ),
-            _,
-            h &&
+            f,
+            p &&
                 r.createElement(s.Z, {
-                    borderRadius: p.swatch.borderRadius,
+                    borderRadius: m.swatch.borderRadius,
                     boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.1)'
                 })
         )

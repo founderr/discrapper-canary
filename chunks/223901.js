@@ -9,7 +9,7 @@ var n = t(200651),
     r = t(481060),
     o = t(91159),
     s = t(593130),
-    i = t(689938),
+    i = t(388032),
     b = t(159191);
 function d(e) {
     let { channel: a, onClose: t, transitionState: d } = e;
@@ -20,7 +20,7 @@ function d(e) {
         (0, n.jsx)(r.ModalRoot, {
             className: b.modal,
             transitionState: d,
-            'aria-label': i.Z.Messages.THREADS,
+            'aria-label': i.intl.string(i.t.B2panJ),
             size: r.ModalSize.DYNAMIC,
             children: (0, n.jsx)(s.Z, {
                 className: b.browser,

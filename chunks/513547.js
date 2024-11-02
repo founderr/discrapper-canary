@@ -1,9 +1,9 @@
 n.d(t, {
     al: function () {
-        return R;
+        return S;
     },
     ck: function () {
-        return E;
+        return F;
     }
 }),
     n(47120),
@@ -14,8 +14,8 @@ var r = n(200651),
     a = n(192379),
     i = n(112456),
     o = n.n(i),
-    s = n(226961),
-    l = n(706619),
+    l = n(226961),
+    s = n(706619),
     c = n(206314);
 let d = {
     accelerateRate: 'Accelerate Rate',
@@ -155,14 +155,14 @@ function g(e) {
 function f(e) {
     return e ? 'Yes' : 'No';
 }
-function C(e) {
+function y(e) {
     return ''.concat(Math.max(e, 0).toFixed(2), ' dB');
 }
-function y(e) {
+function b(e) {
     let { last: t } = e;
     return ''.concat(t, ' ms');
 }
-let R = {
+let S = {
         audioJitterBuffer: !0,
         audioJitterDelay: !0,
         audioJitterTarget: !0,
@@ -188,10 +188,10 @@ let R = {
         videoJitterTarget: !0,
         voiceActivityDetectorProcessTime: !0
     },
-    D = {
+    v = {
         accelerateRate: g,
         audioDetected: f,
-        audioLevel: C,
+        audioLevel: y,
         availableOutgoingBitrate: u,
         averageDecodeTime: h,
         averageEncodeTime: h,
@@ -210,7 +210,7 @@ let R = {
         decoderImplementationName: p,
         delayEstimate: h,
         encoderImplementationName: p,
-        encoderQualityPsnr: C,
+        encoderQualityPsnr: y,
         encoderQualityVmaf: (e) => ''.concat(e.toFixed(2)),
         encodeUsage: g,
         expandRate: g,
@@ -227,8 +227,8 @@ let R = {
         ping: h,
         preemptiveExpandRate: g,
         receiverBitrateEstimate: u,
-        relativePlayoutDelay: y,
-        relativeReceptionDelay: y,
+        relativePlayoutDelay: b,
+        relativeReceptionDelay: b,
         renderDelay: h,
         resolution: (e) => {
             let { width: t, height: n } = e;
@@ -245,8 +245,8 @@ let R = {
             return e < t.length ? t[e] : 'Unknown';
         }
     },
-    S = (e) => e,
-    b = (e) => {
+    C = (e) => e,
+    D = (e) => {
         let [t] = a.useState([]);
         return (
             t.push({
@@ -254,27 +254,27 @@ let R = {
                 time: Date.now()
             }),
             t.length > 600 && t.shift(),
-            (0, r.jsx)(l.Z, {
+            (0, r.jsx)(s.Z, {
                 dataPoints: t,
                 width: e.width,
                 height: e.height
             })
         );
     };
-function E(e) {
+function F(e) {
     var t, n, a, i;
     let { label: o, value: u, section: m } = e,
-        p = null !== (n = D[o]) && void 0 !== n ? n : S;
+        p = null !== (n = v[o]) && void 0 !== n ? n : C;
     let h =
-            s.Pz[o] &&
+            l.Pz[o] &&
             (Array.isArray((i = u)) && i.length > 0 && 'number' == typeof i[0].value
-                ? (0, r.jsx)(l.Z, {
+                ? (0, r.jsx)(s.Z, {
                       dataPoints: i,
                       width: 300,
                       height: 100
                   })
                 : 'number' == typeof i
-                  ? (0, r.jsx)(b, {
+                  ? (0, r.jsx)(D, {
                         value: i,
                         width: 300,
                         height: 100

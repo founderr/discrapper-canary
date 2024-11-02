@@ -5,14 +5,14 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    a = n.n(s),
-    l = n(481060),
-    r = n(537583);
+var l = n(120356),
+    r = n.n(l),
+    a = n(481060),
+    s = n(537583);
 function o(e) {
-    let { hasMentions: t, truncatedCount: n, className: s } = e;
-    return (0, i.jsx)(l.Text, {
-        className: a()(r.unreadCount, s, { [r.mention]: t }),
+    let { hasMentions: t, truncatedCount: n, className: l } = e;
+    return (0, i.jsx)(a.Text, {
+        className: r()(s.unreadCount, l, { [s.mention]: t }),
         variant: 'text-xs/normal',
         children: n
     });

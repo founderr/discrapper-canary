@@ -2,28 +2,28 @@ n.r(e), n(47120);
 var a = n(200651),
     r = n(192379),
     o = n(702493),
-    s = n(77987),
-    c = n(133853),
-    i = n(703656),
-    l = n(643366),
+    i = n(77987),
+    s = n(133853),
+    l = n(703656),
+    c = n(643366),
     u = n(94628),
     d = n(659154),
     f = n(902928),
-    _ = n(240479),
-    p = n(981631),
-    C = n(621727);
-let E = n(575703);
-e.default = (0, s.e)(function () {
+    p = n(240479),
+    h = n(981631),
+    x = n(621727);
+let C = n(575703);
+e.default = (0, i.e)(function () {
     let t;
     let [e, n] = r.useState({
         type: 'user-code-input',
         usePrefilledCode: !0
     });
-    (0, o.Z)(), (0, l.Y)(e);
-    let s = r.useCallback(() => {
+    (0, o.Z)(), (0, c.Y)(e);
+    let i = r.useCallback(() => {
             n({ type: 'user-code-input' });
         }, [n]),
-        I = r.useCallback(
+        _ = r.useCallback(
             (t) => {
                 n({
                     type: 'authorization',
@@ -32,7 +32,7 @@ e.default = (0, s.e)(function () {
             },
             [n]
         ),
-        A = r.useCallback(
+        m = r.useCallback(
             (t) => {
                 n({
                     type: 'success',
@@ -41,7 +41,7 @@ e.default = (0, s.e)(function () {
             },
             [n]
         ),
-        h = r.useCallback(
+        v = r.useCallback(
             (t) => {
                 n({
                     type: 'error',
@@ -50,50 +50,50 @@ e.default = (0, s.e)(function () {
             },
             [n]
         ),
-        T = !0;
+        I = !0;
     switch (e.type) {
         case 'user-code-input':
-            t = (0, a.jsx)(_.v, {
+            t = (0, a.jsx)(p.v, {
                 usePrefilledCode: e.usePrefilledCode || !1,
-                onUserCodeAccepted: I
+                onUserCodeAccepted: _
             });
             break;
         case 'authorization':
             (t = (0, a.jsx)(u.B, {
                 data: e.userCodeData,
-                onDenied: s,
-                onError: h,
-                onSuccess: A
+                onDenied: i,
+                onError: v,
+                onSuccess: m
             })),
-                (T = !1);
+                (I = !1);
             break;
         case 'success':
             t = (0, a.jsx)(f.u, {
-                onComplete: () => (0, i.uL)(p.Z5c.ME),
+                onComplete: () => (0, l.uL)(h.Z5c.ME),
                 data: e.userCodeData
             });
             break;
         case 'error':
-            t = (0, a.jsx)(d.c, { onTryAgain: s });
+            t = (0, a.jsx)(d.c, { onTryAgain: i });
             break;
         default:
             t = null;
     }
     return (0, a.jsxs)('div', {
-        className: C.activatePage,
+        className: x.activatePage,
         children: [
             (0, a.jsx)('img', {
-                className: C.artwork,
-                src: E,
+                className: x.artwork,
+                src: C,
                 alt: ''
             }),
-            (0, a.jsx)(c.Z, {
+            (0, a.jsx)(s.Z, {
                 show: !0,
-                className: C.logo
+                className: x.logo
             }),
-            T
+            I
                 ? (0, a.jsx)('div', {
-                      className: C.content,
+                      className: x.content,
                       children: t
                   })
                 : t

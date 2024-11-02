@@ -1,48 +1,48 @@
-s.d(t, {
+n.d(e, {
     Z: function () {
-        return _;
+        return a;
     }
 });
-var T = s(200651);
-s(192379);
-var o = s(120356),
-    n = s.n(o),
-    a = s(481060),
-    l = s(32501);
-function _(e) {
-    let { tips: t, className: s, headerText: o } = e;
-    return (0, T.jsxs)('div', {
-        className: n()(l.tipsSection, s),
+var i = n(200651);
+n(192379);
+var o = n(120356),
+    s = n.n(o),
+    l = n(481060),
+    r = n(32501);
+function a(t) {
+    let { tips: e, className: n, headerText: o } = t;
+    return (0, i.jsxs)('div', {
+        className: s()(r.tipsSection, n),
         children: [
-            (0, T.jsx)('div', {
-                className: l.tipsHeader,
-                children: (0, T.jsx)(a.Heading, {
+            (0, i.jsx)('div', {
+                className: r.tipsHeader,
+                children: (0, i.jsx)(l.Heading, {
                     variant: 'heading-lg/bold',
-                    className: l.headerText,
+                    className: r.headerText,
                     children: o
                 })
             }),
-            (0, T.jsx)('ul', {
-                className: l.tipsList,
-                children: t.map((e, t) =>
-                    (0, T.jsxs)(
+            (0, i.jsx)('ul', {
+                className: r.tipsList,
+                children: e.map((t, e) =>
+                    (0, i.jsxs)(
                         'li',
                         {
-                            className: l.tipRow,
+                            className: r.tipRow,
                             children: [
-                                (0, T.jsx)(a.Heading, {
+                                (0, i.jsx)(l.Heading, {
                                     variant: 'heading-md/semibold',
                                     color: 'text-brand',
-                                    className: l.tipNumber,
-                                    children: t + 1
+                                    className: r.tipNumber,
+                                    children: e + 1
                                 }),
-                                (0, T.jsx)(a.Text, {
+                                (0, i.jsx)(l.Text, {
                                     variant: 'text-sm/medium',
-                                    children: e
+                                    children: t
                                 })
                             ]
                         },
-                        'safety-tips-'.concat(t)
+                        'safety-tips-'.concat(e)
                     )
                 )
             })

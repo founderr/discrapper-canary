@@ -1,41 +1,41 @@
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(120356),
-    r = n.n(a),
-    i = n(481060),
-    l = n(689938),
+var r = n(120356),
+    a = n.n(r),
+    s = n(481060),
+    l = n(388032),
     o = n(686549),
     c = n(505944);
 t.Z = (e) => {
     let { className: t, onBackClick: n } = e;
-    return (0, s.jsxs)('div', {
-        className: r()(o.container, t),
+    return (0, i.jsxs)('div', {
+        className: a()(o.container, t),
         'data-testid': 'all-perks-hero-header',
         children: [
-            (0, s.jsx)('img', {
+            (0, i.jsx)('img', {
                 src: c,
                 alt: '',
                 className: o.headerArt
             }),
-            (0, s.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: o.containerInner,
                 children: [
-                    (0, s.jsx)('div', {
+                    (0, i.jsx)('div', {
                         className: o.backButtonContainer,
-                        children: (0, s.jsxs)(i.Clickable, {
+                        children: (0, i.jsxs)(s.Clickable, {
                             onClick: n,
                             className: o.backButton,
-                            children: [(0, s.jsx)(i.ChevronSmallLeftIcon, { color: 'currentColor' }), l.Z.Messages.BACK]
+                            children: [(0, i.jsx)(s.ChevronSmallLeftIcon, { color: 'currentColor' }), l.intl.string(l.t['13/7kZ'])]
                         })
                     }),
-                    (0, s.jsx)('div', {
+                    (0, i.jsx)('div', {
                         className: o.__invalid_contentContainer,
-                        children: (0, s.jsx)('div', {
+                        children: (0, i.jsx)('div', {
                             className: o.content,
-                            children: (0, s.jsx)(i.Heading, {
+                            children: (0, i.jsx)(s.Heading, {
                                 variant: 'display-lg',
                                 color: 'always-white',
-                                children: l.Z.Messages.NITRO_HOME_ALL_YOUR_NITRO_PERKS
+                                children: l.intl.string(l.t.hqjDX1)
                             })
                         })
                     })

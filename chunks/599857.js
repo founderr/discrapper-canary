@@ -4,15 +4,15 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    a = n(192379),
-    s = n(29978),
-    r = n(780384),
-    l = n(481060),
+    r = n(192379),
+    l = n(29978),
+    a = n(780384),
+    s = n(481060),
     o = n(756148),
     c = n(981631);
 function d(e) {
     return (
-        a.useEffect(
+        r.useEffect(
             () => (
                 o.I.loadRecaptchaScript(e.sitekey, () => {
                     var t, n, i;
@@ -32,16 +32,16 @@ function d(e) {
             ),
             [e]
         ),
-        (0, i.jsx)(l.Spinner, {})
+        (0, i.jsx)(s.Spinner, {})
     );
 }
 let u = (e) => {
     let { theme: t, ...n } = e,
-        a = (0, r.wj)(t) ? 'dark' : 'light';
-    return (0, i.jsx)(s.Z, {
+        r = (0, a.wj)(t) ? 'dark' : 'light';
+    return (0, i.jsx)(l.Z, {
         sitekey: c.OL7,
         ...n,
-        theme: a
+        theme: r
     });
 };
 (u.Themes = {

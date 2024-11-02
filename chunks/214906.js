@@ -1,64 +1,64 @@
-t.d(n, {
+e.d(t, {
     Z: function () {
-        return _;
+        return Z;
     }
 }),
-    t(47120);
-var i = t(200651);
-t(192379);
-var a = t(913527),
-    s = t.n(a),
-    u = t(442837),
-    r = t(481060),
-    l = t(777861),
-    d = t(569471),
-    o = t(346479),
-    c = t(776568),
-    M = t(689938);
-function _(e) {
-    let [n, t, a] = (0, u.Wu)([d.Z], () => [d.Z.isMuted(e.id), d.Z.getMuteConfig(e.id), d.Z.hasJoined(e.id)]),
-        _ = (0, l.U)(t);
-    function E(n) {
-        o.Z.setNotificationSettings(e, { muted: n });
+    e(47120);
+var i = e(200651);
+e(192379);
+var r = e(913527),
+    l = e.n(r),
+    u = e(442837),
+    a = e(481060),
+    d = e(777861),
+    o = e(569471),
+    s = e(346479),
+    c = e(776568),
+    f = e(388032);
+function Z(n) {
+    let [t, e, r] = (0, u.Wu)([o.Z], () => [o.Z.isMuted(n.id), o.Z.getMuteConfig(n.id), o.Z.hasJoined(n.id)]),
+        Z = (0, d.U)(e);
+    function h(t) {
+        s.Z.setNotificationSettings(n, { muted: t });
     }
-    return a
-        ? n
-            ? (0, i.jsx)(r.MenuItem, {
+    return r
+        ? t
+            ? (0, i.jsx)(a.MenuItem, {
                   id: 'unmute-channel',
-                  label: e.isForumPost() ? M.Z.Messages.UNMUTE_FORUM_POST : M.Z.Messages.UNMUTE_THREAD,
-                  subtext: _,
-                  action: () => E(!1)
+                  label: n.isForumPost() ? f.intl.string(f.t['0JQfsL']) : f.intl.string(f.t['Cq/TzM']),
+                  subtext: Z,
+                  action: () => h(!1)
               })
-            : (0, i.jsx)(r.MenuItem, {
+            : (0, i.jsx)(a.MenuItem, {
                   id: 'mute-channel',
-                  label: e.isForumPost() ? M.Z.Messages.MUTE_FORUM_POST : M.Z.Messages.MUTE_THREAD,
-                  action: () => E(!0),
-                  children: (0, c.k)().map((n) => {
-                      let { value: t, label: a } = n;
+                  label: n.isForumPost() ? f.intl.string(f.t['nP+YkZ']) : f.intl.string(f.t.bUUd8v),
+                  action: () => h(!0),
+                  children: (0, c.k)().map((t) => {
+                      let { value: e, label: r } = t;
                       return (0, i.jsx)(
-                          r.MenuItem,
+                          a.MenuItem,
                           {
-                              id: ''.concat(t),
-                              label: a,
+                              id: ''.concat(e),
+                              label: r,
                               action: () =>
-                                  (function (n) {
-                                      let t = n > 0 ? s()().add(n, 'second').toISOString() : null;
-                                      o.Z.setNotificationSettings(e, {
+                                  (function (t) {
+                                      let e = t > 0 ? l()().add(t, 'second').toISOString() : null;
+                                      s.Z.setNotificationSettings(n, {
                                           muted: !0,
                                           mute_config: {
-                                              selected_time_window: n,
-                                              end_time: t
+                                              selected_time_window: t,
+                                              end_time: e
                                           }
                                       });
-                                  })(t)
+                                  })(e)
                           },
-                          t
+                          e
                       );
                   })
               })
-        : (0, i.jsx)(r.MenuItem, {
+        : (0, i.jsx)(a.MenuItem, {
               id: 'mute-disabled',
-              label: e.isForumPost() ? M.Z.Messages.MUTE_FORUM_POST : M.Z.Messages.MUTE_THREAD,
+              label: n.isForumPost() ? f.intl.string(f.t['nP+YkZ']) : f.intl.string(f.t.bUUd8v),
               disabled: !0
           });
 }

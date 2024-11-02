@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return y;
     }
 }),
     n(47120);
@@ -13,30 +13,30 @@ var r = n(200651),
     u = n(206295),
     c = n(706454),
     d = n(314897),
-    _ = n(158776),
-    E = n(594174),
-    f = n(5192),
-    h = n(528567),
-    p = n(371583),
-    I = n(246627),
-    m = n(249268),
-    T = n(864138),
-    S = n(473188),
-    g = n(463031),
-    A = n(689938),
-    N = n(881894);
-function R(e) {
+    f = n(158776),
+    _ = n(594174),
+    h = n(5192),
+    p = n(528567),
+    m = n(371583),
+    g = n(246627),
+    E = n(249268),
+    v = n(864138),
+    I = n(473188),
+    S = n(463031),
+    T = n(388032),
+    b = n(881894);
+function y(e) {
     let { leaderboard: t, previewMode: n = !1 } = e,
         a = (0, o.e7)([d.default], () => d.default.getId()),
         s = (0, o.e7)([c.default], () => c.default.locale),
-        { rankChanges: _ } = (0, I.Z)({
+        { rankChanges: f } = (0, g.Z)({
             guildId: t.guild_id,
             leaderboardId: t.leaderboard_id,
             intervalStart: t.interval_start
         }),
-        E = i.useMemo(() => {
+        _ = i.useMemo(() => {
             let e = new Map();
-            _.forEach((t) => {
+            f.forEach((t) => {
                 let { userId: n, previousRank: r } = t;
                 e.set(n, r);
             });
@@ -50,19 +50,19 @@ function R(e) {
                     previousRank: e.get(t.user_id)
                 };
             });
-        }, [t, _]),
-        f = (0, p.K)(t),
-        { primaryColor: T } = (0, u.Z)(f),
-        S = i.useMemo(() => null == E.find((e) => e.userId === a) && E.length <= 10, [E, a]);
-    if (0 === t.users.length) return (0, r.jsx)(O, { leaderboard: t });
-    let { sort_by_statistic_id: g, sort_desc: R } = t.guild_settings,
-        L = t.settings.statistics[g];
+        }, [t, f]),
+        h = (0, m.K)(t),
+        { primaryColor: v } = (0, u.Z)(h),
+        I = i.useMemo(() => null == _.find((e) => e.userId === a) && _.length <= 10, [_, a]);
+    if (0 === t.users.length) return (0, r.jsx)(A, { leaderboard: t });
+    let { sort_by_statistic_id: S, sort_desc: y } = t.guild_settings,
+        R = t.settings.statistics[S];
     return (0, r.jsxs)('div', {
-        className: N.container,
-        style: { background: T },
+        className: b.container,
+        style: { background: v },
         children: [
-            (0, r.jsx)(m.Z, {
-                userId: E[0].userId,
+            (0, r.jsx)(E.Z, {
+                userId: _[0].userId,
                 leaderboard: t
             }),
             n
@@ -71,41 +71,41 @@ function R(e) {
                       children: (0, r.jsxs)('div', {
                           children: [
                               (0, r.jsxs)('div', {
-                                  className: N.headerRow,
+                                  className: b.headerRow,
                                   children: [
                                       (0, r.jsx)(l.Text, {
                                           variant: 'text-xxs/medium',
-                                          className: N.headerRank,
+                                          className: b.headerRank,
                                           children: '#'
                                       }),
                                       (0, r.jsx)(l.Text, {
                                           variant: 'text-xxs/medium',
-                                          className: N.headerPlayer,
-                                          children: A.Z.Messages.LEADERBOARD_TABLE_HEADER_PLAYER
+                                          className: b.headerPlayer,
+                                          children: T.intl.string(T.t['6ii1+/'])
                                       }),
                                       (0, r.jsx)(l.Text, {
                                           variant: 'text-xxs/medium',
-                                          className: N.headerValue,
-                                          children: (0, h.s)({
-                                              statisticId: g,
-                                              sortDesc: R,
-                                              aggregationType: null == L ? void 0 : L.aggregation_type
+                                          className: b.headerValue,
+                                          children: (0, p.s)({
+                                              statisticId: S,
+                                              sortDesc: y,
+                                              aggregationType: null == R ? void 0 : R.aggregation_type
                                           })
                                       })
                                   ]
                               }),
                               (0, r.jsxs)(l.ScrollerNone, {
-                                  className: N.rows,
+                                  className: b.rows,
                                   children: [
-                                      E.map((e) =>
-                                          (0, i.createElement)(v, {
+                                      _.map((e) =>
+                                          (0, i.createElement)(N, {
                                               ...e,
                                               key: e.userId,
                                               guildId: t.guild_id,
                                               locale: s
                                           })
                                       ),
-                                      S ? (0, r.jsx)(C, {}) : null
+                                      I ? (0, r.jsx)(C, {}) : null
                                   ]
                               })
                           ]
@@ -114,48 +114,48 @@ function R(e) {
         ]
     });
 }
-function O(e) {
+function A(e) {
     let { leaderboard: t } = e,
-        n = (0, p.K)(t);
-    return (0, r.jsx)(T.z, {
+        n = (0, m.K)(t);
+    return (0, r.jsx)(v.z, {
         imageUrl: n,
         children: (0, r.jsxs)('span', {
-            className: N.emptyTitleContainer,
+            className: b.emptyTitleContainer,
             children: [
                 (0, r.jsx)(l.Text, {
                     tag: 'span',
                     variant: 'text-lg/normal',
-                    className: N.emptyTitle,
-                    children: A.Z.Messages.LEADERBOARD_START_PLAYING_CTA
+                    className: b.emptyTitle,
+                    children: T.intl.string(T.t.BfRGk5)
                 }),
                 (0, r.jsx)(l.LeagueOfLegendsBrandIcon, {
                     size: 'custom',
                     width: 16,
                     height: 16,
-                    className: s()(N.leagueIcon, N.emptyCrownIcon)
+                    className: s()(b.leagueIcon, b.emptyCrownIcon)
                 })
             ]
         })
     });
 }
-function v(e) {
+function N(e) {
     let { userId: t, rank: n, value: i, guildId: a, previousRank: s, locale: u } = e,
-        c = (0, o.e7)([E.default], () => E.default.getUser(t)),
-        d = f.ZP.getName(a, void 0, c),
-        h = null != s && s > n,
-        p = (0, o.e7)([_.Z], () => {
-            let e = _.Z.getPrimaryActivity(t);
-            return (null == e ? void 0 : e.application_id) != null && g.T.includes(e.application_id);
+        c = (0, o.e7)([_.default], () => _.default.getUser(t)),
+        d = h.ZP.getName(a, void 0, c),
+        p = null != s && s > n,
+        m = (0, o.e7)([f.Z], () => {
+            let e = f.Z.getPrimaryActivity(t);
+            return (null == e ? void 0 : e.application_id) != null && S.T.includes(e.application_id);
         });
     return (0, r.jsxs)('div', {
-        className: N.userRow,
+        className: b.userRow,
         children: [
-            h ? (0, r.jsx)('div', { className: N.rankChangeIndicator }) : null,
+            p ? (0, r.jsx)('div', { className: b.rankChangeIndicator }) : null,
             (0, r.jsx)('div', {
-                className: N.userRank,
+                className: b.userRank,
                 children:
                     n <= 3
-                        ? (0, r.jsx)(S._, { rank: n })
+                        ? (0, r.jsx)(I._, { rank: n })
                         : (0, r.jsx)(l.Text, {
                               tabularNumbers: !0,
                               color: 'text-muted',
@@ -164,7 +164,7 @@ function v(e) {
                           })
             }),
             (0, r.jsxs)('div', {
-                className: N.userPlayer,
+                className: b.userPlayer,
                 children: [
                     (0, r.jsx)(l.Avatar, {
                         src: null == c ? void 0 : c.getAvatarURL(a, 16),
@@ -195,10 +195,10 @@ function v(e) {
                               ]
                           })
                         : null,
-                    h ? (0, r.jsx)(L, { rankChange: s - n }) : null
+                    p ? (0, r.jsx)(R, { rankChange: s - n }) : null
                 ]
             }),
-            p &&
+            m &&
                 (0, r.jsx)(l.GameControllerIcon, {
                     size: 'xs',
                     color: l.tokens.colors.TEXT_POSITIVE
@@ -214,26 +214,26 @@ function v(e) {
 }
 function C() {
     return (0, r.jsxs)('div', {
-        className: N.joinLeaderboardCTAContainer,
+        className: b.joinLeaderboardCTAContainer,
         children: [
             (0, r.jsx)(l.Text, {
                 variant: 'text-xs/normal',
-                className: N.joinLeaderboardCTA,
-                children: A.Z.Messages.LEADERBOARD_START_PLAYING_CTA
+                className: b.joinLeaderboardCTA,
+                children: T.intl.string(T.t.BfRGk5)
             }),
             (0, r.jsx)(l.LeagueOfLegendsBrandIcon, {
                 size: 'custom',
                 width: 14,
                 height: 14,
-                className: N.leagueIcon
+                className: b.leagueIcon
             })
         ]
     });
 }
-function L(e) {
+function R(e) {
     let { rankChange: t } = e;
     return (0, r.jsxs)('div', {
-        className: N.rankChangeBadge,
+        className: b.rankChangeBadge,
         children: [
             (0, r.jsx)(l.ArrowSmallUpIcon, {
                 size: 'xxs',

@@ -1,8 +1,8 @@
 var i = n(200651),
-    s = n(192379),
-    a = n(442837),
-    l = n(481060),
-    r = n(287734),
+    l = n(192379),
+    r = n(442837),
+    a = n(481060),
+    s = n(287734),
     o = n(358221),
     c = n(305325),
     u = n(281956),
@@ -10,32 +10,32 @@ var i = n(200651),
     h = n(823379),
     m = n(5192),
     p = n(501655),
-    _ = n(689938),
-    f = n(754833);
-let E = (e, t) => m.ZP.getName(e.getGuildId(), e.id, t.user);
+    f = n(388032),
+    g = n(754833);
+let C = (e, t) => m.ZP.getName(e.getGuildId(), e.id, t.user);
 t.Z = function (e) {
     var t, n;
-    let { participants: m, channel: g, hasConnectPermission: C } = e,
-        I = (0, u.J)(g.guild_id),
-        T = s.useCallback(() => {
-            I ? (0, c.hk)(g.guild_id, () => r.default.selectVoiceChannel(g.id)) : r.default.selectVoiceChannel(g.id);
-        }, [g.id, g.guild_id, I]),
-        x = m.filter((e) => e.type === p.Ui.VOICE),
-        S = 4 === x.length ? 2 : 3,
-        v = (0, a.Wu)([o.Z], () => x.map((e) => o.Z.getParticipant(g.id, e.id)).filter(h.lm), [g.id, x]);
+    let { participants: m, channel: x, hasConnectPermission: v } = e,
+        _ = (0, u.J)(x.guild_id),
+        I = l.useCallback(() => {
+            _ ? (0, c.hk)(x.guild_id, () => s.default.selectVoiceChannel(x.id)) : s.default.selectVoiceChannel(x.id);
+        }, [x.id, x.guild_id, _]),
+        E = m.filter((e) => e.type === p.Ui.VOICE),
+        b = 4 === E.length ? 2 : 3,
+        S = (0, r.Wu)([o.Z], () => E.map((e) => o.Z.getParticipant(x.id, e.id)).filter(h.lm), [x.id, E]);
     return (0, i.jsxs)('div', {
-        className: f.container,
+        className: g.container,
         children: [
             (0, i.jsx)('div', {
-                className: f.tiles,
-                style: { maxWidth: 168 * S },
-                children: v.slice(0, 5).map((e) =>
+                className: g.tiles,
+                style: { maxWidth: 168 * b },
+                children: S.slice(0, 5).map((e) =>
                     (0, i.jsx)(
                         d.ZP,
                         {
                             participant: e,
-                            channel: g,
-                            className: f.tile,
+                            channel: x,
+                            className: g.tile,
                             paused: !0,
                             inCall: !0,
                             noVideoRender: !0,
@@ -46,43 +46,43 @@ t.Z = function (e) {
                     )
                 )
             }),
-            (0, i.jsx)(l.Heading, {
-                className: f.channelName,
+            (0, i.jsx)(a.Heading, {
+                className: g.channelName,
                 variant: 'heading-xxl/semibold',
-                children: g.name
+                children: x.name
             }),
             (0, i.jsx)('div', {
-                className: f.participantsRow,
-                children: (0, i.jsx)(l.Text, {
+                className: g.participantsRow,
+                children: (0, i.jsx)(a.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
                     children:
-                        ((t = g),
-                        0 === (n = x).length
-                            ? _.Z.Messages.CURRENTLY_IN_STAGE_EMPTY
+                        ((t = x),
+                        0 === (n = E).length
+                            ? f.intl.string(f.t.FUVhyM)
                             : 1 === n.length
-                              ? _.Z.Messages.CURRENTLY_IN_STAGE_1.format({ a: E(t, n[0]) })
+                              ? f.intl.formatToPlainString(f.t.EQwZlJ, { a: C(t, n[0]) })
                               : 2 === n.length
-                                ? _.Z.Messages.CURRENTLY_IN_STAGE_2.format({
-                                      a: E(t, n[0]),
-                                      b: E(t, n[1])
+                                ? f.intl.formatToPlainString(f.t.zBcKoK, {
+                                      a: C(t, n[0]),
+                                      b: C(t, n[1])
                                   })
                                 : n.length > 2
-                                  ? _.Z.Messages.CURRENTLY_IN_STAGE_2_N.format({
-                                        a: E(t, n[0]),
-                                        b: E(t, n[1]),
+                                  ? f.intl.formatToPlainString(f.t['3AqFaG'], {
+                                        a: C(t, n[0]),
+                                        b: C(t, n[1]),
                                         n: n.length - 2
                                     })
                                   : void 0)
                 })
             }),
-            (0, i.jsx)(l.Button, {
-                disabled: !C,
-                className: f.joinButton,
-                color: C ? l.Button.Colors.GREEN : l.Button.Colors.PRIMARY,
-                onClick: T,
-                size: l.Button.Sizes.MEDIUM,
-                children: C ? _.Z.Messages.STAGE_CHANNEL_JOIN : _.Z.Messages.CHANNEL_LOCKED_SHORT
+            (0, i.jsx)(a.Button, {
+                disabled: !v,
+                className: g.joinButton,
+                color: v ? a.Button.Colors.GREEN : a.Button.Colors.PRIMARY,
+                onClick: I,
+                size: a.Button.Sizes.MEDIUM,
+                children: v ? f.intl.string(f.t['7vb2cX']) : f.intl.string(f.t.TVBCKS)
             })
         ]
     });

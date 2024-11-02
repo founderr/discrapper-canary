@@ -5,30 +5,30 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(692547),
-    s = n(481060),
-    r = n(739566),
-    l = n(834129),
-    o = n(689938),
+var r = n(692547),
+    l = n(481060),
+    a = n(739566),
+    o = n(834129),
+    s = n(388032),
     c = n(437814);
 function u(e) {
     let { message: t, compact: n, usernameHook: u } = e,
-        d = (0, r.ZP)(t),
-        _ = u(d),
-        E = o.Z.Messages.SYSTEM_MESSAGE_STAGE_START_HOOK.format({
+        d = (0, a.ZP)(t),
+        m = u(d),
+        f = s.intl.format(s.t['Rv+TSE'], {
             username: d.nick,
-            usernameHook: _,
+            usernameHook: m,
             topic: t.content
         });
-    return (0, i.jsx)(l.Z, {
+    return (0, i.jsx)(o.Z, {
         className: c.stageSystemMessage,
-        iconNode: (0, i.jsx)(s.StageIcon, {
+        iconNode: (0, i.jsx)(l.StageIcon, {
             size: 'md',
-            color: a.Z.unsafe_rawColors.GREEN_360.css
+            color: r.Z.unsafe_rawColors.GREEN_360.css
         }),
         iconContainerClassName: c.iconContainer,
         timestamp: t.timestamp,
         compact: n,
-        children: E
+        children: f
     });
 }

@@ -1,19 +1,19 @@
-s.d(t, {
+n.d(t, {
     M: function () {
         return r;
     }
 });
-var a = s(43236),
-    n = s(103714),
-    l = s(940328),
-    o = s(888395),
-    i = s(389028);
+var i = n(43236),
+    l = n(103714),
+    s = n(940328),
+    a = n(888395),
+    o = n(389028);
 let r = {
-    CREATE: l,
-    HUB_SCHOOL_CLUB: s(142390),
-    HUB_STUDY: o,
-    HUB_CLASS: s(425506),
-    HUB_SOCIAL: i,
-    HUB_MAJOR: n,
-    HUB_DORM: a
+    CREATE: s,
+    HUB_SCHOOL_CLUB: n(142390),
+    HUB_STUDY: a,
+    HUB_CLASS: n(425506),
+    HUB_SOCIAL: o,
+    HUB_MAJOR: l,
+    HUB_DORM: i
 };

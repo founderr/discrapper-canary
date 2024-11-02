@@ -1,18 +1,18 @@
-t.d(n, {
+e.d(t, {
     Z: function () {
-        return d;
+        return C;
     }
 });
-var o = t(200651);
-t(192379);
-var i = t(481060),
-    r = t(63063),
-    s = t(376340),
-    c = t(981631),
-    l = t(689938),
-    a = t(623022),
-    C = t(38920);
-function u() {
+var o = e(200651);
+e(192379);
+var i = e(481060),
+    r = e(63063),
+    c = e(376340),
+    l = e(981631),
+    s = e(388032),
+    a = e(623022),
+    u = e(38920);
+function d() {
     return (0, o.jsx)('div', {
         className: a.__invalid_getCrunchyrollApp,
         children: (0, o.jsx)('div', {
@@ -21,25 +21,25 @@ function u() {
                 variant: 'text-sm/medium',
                 color: 'header-secondary',
                 children: (0, o.jsx)(i.Anchor, {
-                    href: r.Z.getArticleURL(c.BhN.CRUNCHYROLL_CONNECTION),
-                    children: l.Z.Messages.LEARN_MORE
+                    href: r.Z.getArticleURL(l.BhN.CRUNCHYROLL_CONNECTION),
+                    children: s.intl.string(s.t.hvVgAQ)
                 })
             })
         })
     });
 }
-function d(e) {
-    let { onClose: n } = e;
-    return (0, o.jsx)(s.L, {
+function C(n) {
+    let { onClose: t } = n;
+    return (0, o.jsx)(c.L, {
         img: (0, o.jsx)('img', {
-            src: C,
+            src: u,
             width: '224',
             height: '104',
             alt: ''
         }),
-        title: l.Z.Messages.CONNECT_CRUNCHYROLL_SUCCESS_TITLE,
-        body: l.Z.Messages.CONNECT_CRUNCHYROLL_SUCCESS_BODY,
-        content: (0, o.jsx)(u, {}),
-        onClose: n
+        title: s.intl.string(s.t.Fnvxvr),
+        body: s.intl.string(s.t.YwXcen),
+        content: (0, o.jsx)(d, {}),
+        onClose: t
     });
 }

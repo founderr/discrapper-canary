@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return A;
     }
 }),
     n(47120);
@@ -13,80 +13,80 @@ var r = n(200651),
     u = n(100527),
     c = n(906732),
     d = n(617136),
-    _ = n(497505),
-    E = n(626135),
-    f = n(291175),
-    h = n(785717),
-    p = n(221292),
-    I = n(485341),
-    m = n(797321),
-    T = n(228168),
-    S = n(981631),
-    g = n(474936),
-    A = n(689938),
-    N = n(961653);
-let R = (e) => {
+    f = n(497505),
+    _ = n(626135),
+    h = n(291175),
+    p = n(785717),
+    m = n(221292),
+    g = n(485341),
+    E = n(797321),
+    v = n(228168),
+    I = n(981631),
+    S = n(474936),
+    T = n(388032),
+    b = n(961653);
+let y = (e) => {
     if (null != e)
         switch (e) {
-            case g.VU.PREMIUM_TENURE_1_MONTH:
-                return N.tieredTenureBadgeBronzeGlow;
-            case g.VU.PREMIUM_TENURE_3_MONTH:
-                return N.tieredTenureBadgeSilverGlow;
-            case g.VU.PREMIUM_TENURE_6_MONTH:
-                return N.tieredTenureBadgeGoldGlow;
-            case g.VU.PREMIUM_TENURE_12_MONTH:
-                return N.tieredTenureBadgePlatinumGlow;
-            case g.VU.PREMIUM_TENURE_24_MONTH:
-                return N.tieredTenureBadgeDiamondGlow;
-            case g.VU.PREMIUM_TENURE_36_MONTH:
-                return N.tieredTenureBadgeEmeraldGlow;
-            case g.VU.PREMIUM_TENURE_60_MONTH:
-                return N.tieredTenureBadgeRubyGlow;
-            case g.VU.PREMIUM_TENURE_72_MONTH:
-                return N.tieredTenureBadgeFireGlow;
+            case S.VU.PREMIUM_TENURE_1_MONTH:
+                return b.tieredTenureBadgeBronzeGlow;
+            case S.VU.PREMIUM_TENURE_3_MONTH:
+                return b.tieredTenureBadgeSilverGlow;
+            case S.VU.PREMIUM_TENURE_6_MONTH:
+                return b.tieredTenureBadgeGoldGlow;
+            case S.VU.PREMIUM_TENURE_12_MONTH:
+                return b.tieredTenureBadgePlatinumGlow;
+            case S.VU.PREMIUM_TENURE_24_MONTH:
+                return b.tieredTenureBadgeDiamondGlow;
+            case S.VU.PREMIUM_TENURE_36_MONTH:
+                return b.tieredTenureBadgeEmeraldGlow;
+            case S.VU.PREMIUM_TENURE_60_MONTH:
+                return b.tieredTenureBadgeRubyGlow;
+            case S.VU.PREMIUM_TENURE_72_MONTH:
+                return b.tieredTenureBadgeFireGlow;
             default:
                 return;
         }
 };
-function O(e) {
-    let { badges: t, className: n, badgeClassName: a, onClose: g } = e,
-        { analyticsLocations: O } = (0, c.ZP)(u.Z.BADGE),
-        { context: v, trackUserProfileAction: C } = (0, h.KZ)(),
-        [L, D] = i.useState(!1);
+function A(e) {
+    let { badges: t, className: n, badgeClassName: a, onClose: S } = e,
+        { analyticsLocations: A } = (0, c.ZP)(u.Z.BADGE),
+        { context: N, trackUserProfileAction: C } = (0, p.KZ)(),
+        [R, O] = i.useState(!1);
     return (0, r.jsx)('div', {
-        className: s()(N.container, n),
-        'aria-label': A.Z.Messages.PROFILE_USER_BADGES,
+        className: s()(b.container, n),
+        'aria-label': T.intl.string(T.t.VWV0y8),
         role: 'group',
         children: t.map((e) => {
-            let t = (0, f.gn)(e.id),
-                n = R(t),
-                i = null != t && L;
+            let t = (0, h.gn)(e.id),
+                n = y(t),
+                i = null != t && R;
             return (0, r.jsx)(
                 o.TooltipContainer,
                 {
                     text: e.description,
-                    delay: T.vB,
+                    delay: v.vB,
                     tooltipClassName: n,
-                    onTooltipShow: () => D(null != t),
-                    onTooltipHide: () => D(!1),
+                    onTooltipShow: () => O(null != t),
+                    onTooltipHide: () => O(!1),
                     children: (0, r.jsxs)(o.Anchor, {
                         onClick: (t) => {
                             C({ action: 'PRESS_BADGE' }),
-                                (0, p.NE)({
+                                (0, m.NE)({
                                     badge: e.id,
-                                    analyticsLocations: O,
-                                    ...v
+                                    analyticsLocations: A,
+                                    ...N
                                 });
-                            let n = null != e.link ? (0, l.default)(e.link, { analyticsLocations: O }) : null;
-                            if (null != n) return null == g || g(), n(t);
+                            let n = null != e.link ? (0, l.default)(e.link, { analyticsLocations: A }) : null;
+                            if (null != n) return null == S || S(), n(t);
                         },
                         onMouseEnter: () => {
-                            e.id === I.i && E.default.track(S.rMx.QUEST_CONTENT_VIEWED, { ...(0, d.mH)(_.jn.QUEST_BADGE) }),
+                            e.id === g.i && _.default.track(I.rMx.QUEST_CONTENT_VIEWED, { ...(0, d.mH)(f.jn.QUEST_BADGE) }),
                                 C({ action: 'HOVER_BADGE' }),
-                                (0, p.Qf)({
+                                (0, m.Qf)({
                                     badge: e.id,
-                                    analyticsLocations: O,
-                                    ...v
+                                    analyticsLocations: A,
+                                    ...N
                                 });
                         },
                         href: e.link,
@@ -94,13 +94,13 @@ function O(e) {
                             (0, r.jsx)('img', {
                                 alt: ' ',
                                 'aria-hidden': !0,
-                                src: (0, T.jC)(e.icon),
-                                className: s()(N.badge, a)
+                                src: (0, v.jC)(e.icon),
+                                className: s()(b.badge, a)
                             }),
                             i &&
                                 (0, r.jsxs)('div', {
-                                    className: N.starContainer,
-                                    children: [(0, r.jsx)(m.Z, { className: N.topLeftStar }), (0, r.jsx)(m.Z, { className: N.bottomRightStar })]
+                                    className: b.starContainer,
+                                    children: [(0, r.jsx)(E.Z, { className: b.topLeftStar }), (0, r.jsx)(E.Z, { className: b.bottomRightStar })]
                                 })
                         ]
                     })

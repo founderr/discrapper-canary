@@ -1,44 +1,44 @@
-o.d(n, {
+n.d(t, {
     Z: function () {
         return d;
     }
 });
-var t = o(200651);
-o(192379);
-var s = o(212598),
-    r = o(981631),
-    i = o(927923),
-    c = o(689938),
-    l = o(397995),
-    a = o(848499);
+var o = n(200651);
+n(192379);
+var r = n(212598),
+    i = n(981631),
+    c = n(927923),
+    s = n(388032),
+    l = n(397995),
+    a = n(848499);
 function d(e) {
-    let { isWaitingForConnection: n, onWaitingForConnection: o, expectedCallbackState: d, onAuthToken: u, onError: _, onClose: C } = e,
-        x = n
-            ? (0, t.jsx)('img', {
+    let { isWaitingForConnection: t, onWaitingForConnection: n, expectedCallbackState: d, onAuthToken: u, onError: x, onClose: p } = e,
+        f = t
+            ? (0, o.jsx)('img', {
                   src: a,
                   width: '168',
                   height: '124',
                   alt: ''
               })
-            : (0, t.jsx)('img', {
+            : (0, o.jsx)('img', {
                   src: l,
                   width: '152',
                   height: '124',
                   alt: ''
               }),
-        p = n ? c.Z.Messages.XBOX_DETAILS_TITLE_WAITING : c.Z.Messages.XBOX_DETAILS_TITLE,
-        O = n ? c.Z.Messages.XBOX_DETAILS_BODY_WAITING : c.Z.Messages.XBOX_DETAILS_BODY;
-    return (0, t.jsx)(s.t, {
-        platformType: r.ABu.XBOX,
-        isWaitingForConnection: n,
-        onWaitingForConnection: o,
+        C = t ? s.intl.string(s.t.EuwcxM) : s.intl.string(s.t.a3MfQU),
+        g = t ? s.intl.string(s.t['1GjS/f']) : s.intl.string(s.t['Y+UQDg']);
+    return (0, o.jsx)(r.t, {
+        platformType: i.ABu.XBOX,
+        isWaitingForConnection: t,
+        onWaitingForConnection: n,
         expectedCallbackState: d,
         onAuthToken: u,
-        onError: _,
-        onClose: C,
-        img: x,
-        title: p,
-        body: O,
-        redirectDestination: i.zM
+        onError: x,
+        onClose: p,
+        img: f,
+        title: C,
+        body: g,
+        redirectDestination: c.zM
     });
 }

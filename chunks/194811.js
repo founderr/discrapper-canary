@@ -14,7 +14,7 @@ var i = n(120356),
     c = n(676411);
 function d(e) {
     let { text: t, tags: n, platformIcon: i, contextMenu: d } = e,
-        { profileType: _ } = (0, l.z)();
+        { profileType: f } = (0, l.z)();
     return (null == t || '' === t) && null == d
         ? null
         : null == t || '' === t
@@ -27,7 +27,7 @@ function d(e) {
                 children: [
                     (0, r.jsxs)(s.Heading, {
                         className: c.headerText,
-                        variant: _ === u.y0.PANEL ? 'text-xs/semibold' : 'text-xs/medium',
+                        variant: f === u.y0.PANEL ? 'text-xs/semibold' : 'text-xs/medium',
                         color: 'header-primary',
                         children: [
                             (0, r.jsx)(o.Z, { children: t }),

@@ -11,7 +11,7 @@ function c(e) {
     return ''.concat(t, '(').concat(e[t], ')');
 }
 let d = /rgba\(([\d.]+), ([\d.]+), ([\d.]+), ([\d.]+)\)/;
-function _(e) {
+function f(e) {
     let t = e.match(d);
     return (
         null != t &&
@@ -29,12 +29,12 @@ r.inject.ApplyAnimatedValues(
         else {
             if (!e.nodeType || void 0 === e.setAttribute) return !1;
             var r;
-            u().setValueForStyles(e, ((r = t.style) && (r.transform && (r.transform = r.WebkitTransform = r.MozTransform = r.transform.map(c).join(' ')), r.color && (r.color = _(r.color)), r.backgroundColor && (r.backgroundColor = _(r.backgroundColor))), r), n._reactInternalInstance);
+            u().setValueForStyles(e, ((r = t.style) && (r.transform && (r.transform = r.WebkitTransform = r.MozTransform = r.transform.map(c).join(' ')), r.color && (r.color = f(r.color)), r.backgroundColor && (r.backgroundColor = f(r.backgroundColor))), r), n._reactInternalInstance);
         }
     },
     (e) => e
 );
-function E(e, t, n) {
+function _(e, t, n) {
     return void 0 !== t && void 0 != n ? o()(t, n) : e;
 }
 t.Z = {
@@ -45,34 +45,34 @@ t.Z = {
     },
     animate: function e(t, n) {
         let i;
-        let { toValueMin: a, toValueMax: s, tension: o = 0, friction: l = 0, loop: u, reverse: c, invert: d, callback: _, type: f = 'spring', shouldLoop: h, durationMin: p, durationMax: I, ...m } = n,
-            T = t._value,
-            S = E(n.duration, p, I),
-            g = E(n.toValue, a, s),
-            A = r[f](t, {
-                ...m,
-                toValue: g,
+        let { toValueMin: a, toValueMax: s, tension: o = 0, friction: l = 0, loop: u, reverse: c, invert: d, callback: f, type: h = 'spring', shouldLoop: p, durationMin: m, durationMax: g, ...E } = n,
+            v = t._value,
+            I = _(n.duration, m, g),
+            S = _(n.toValue, a, s),
+            T = r[h](t, {
+                ...E,
+                toValue: S,
                 tension: o,
                 friction: l,
-                duration: S
+                duration: I
             }),
-            N = A;
+            b = T;
         if (c || d) {
-            let e = E(n.duration, p, I);
-            (i = r[f](t, {
-                ...m,
-                toValue: c ? T : -g,
+            let e = _(n.duration, m, g);
+            (i = r[h](t, {
+                ...E,
+                toValue: c ? v : -S,
                 tension: o,
                 friction: l,
                 duration: e
             })),
-                (N = r.sequence([A, i]));
+                (b = r.sequence([T, i]));
         }
         u
-            ? N.start(() => {
-                  (!h || (h && h())) && (_ ? _(e.bind(null, t, n)) : e(t, n));
+            ? b.start(() => {
+                  (!p || (p && p())) && (f ? f(e.bind(null, t, n)) : e(t, n));
               })
-            : N.start(_);
+            : b.start(f);
     },
     interpolate: function (e) {
         for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];

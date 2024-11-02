@@ -4,7 +4,7 @@ var r = n(200651),
     s = n.n(a),
     o = n(481060),
     l = n(443603),
-    u = n(689938),
+    u = n(388032),
     c = n(115791);
 t.Z = i.memo(function (e) {
     let { onClick: t, disabled: n = !1 } = e;
@@ -22,7 +22,7 @@ t.Z = i.memo(function (e) {
                 onClick: t,
                 disabled: n,
                 isActive: !1,
-                'aria-label': u.Z.Messages.SEND_MESSAGE,
+                'aria-label': u.intl.string(u.t.oeb1vr),
                 children: (0, r.jsx)(o.SendMessageIcon, {
                     size: 'xs',
                     color: 'currentColor',

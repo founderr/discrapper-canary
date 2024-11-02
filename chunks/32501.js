@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     tipRow: 'tipRow_a1cdc0',
     tipNumber: 'tipNumber_a1cdc0',
     tipsList: 'tipsList_a1cdc0',

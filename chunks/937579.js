@@ -21,21 +21,21 @@ async function c(e) {
             var n, c, d;
             null != e && l.default.track(u.rMx.FETCH_USER_OFFER_STARTED, { call_location: e });
             let t = await r.tn.post({ url: u.ANM.USER_OFFER }),
-                _ = null !== (n = t.body.user_trial_offer) && void 0 !== n ? n : null,
-                E = null !== (c = t.body.user_discount) && void 0 !== c ? c : null,
-                f = null !== (d = t.body.user_discount_offer) && void 0 !== d ? d : null;
+                f = null !== (n = t.body.user_trial_offer) && void 0 !== n ? n : null,
+                _ = null !== (c = t.body.user_discount) && void 0 !== c ? c : null,
+                h = null !== (d = t.body.user_discount_offer) && void 0 !== d ? d : null;
             return (
-                null == _ && (0, s.un)(i.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (0, o.w9)(i.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING),
+                null == f && (0, s.un)(i.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (0, o.w9)(i.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING),
                 a.Z.dispatch({
                     type: 'BILLING_USER_OFFER_FETCH_SUCCESS',
-                    userTrialOffer: _,
-                    userDiscount: E,
-                    userDiscountOffer: f
+                    userTrialOffer: f,
+                    userDiscount: _,
+                    userDiscountOffer: h
                 }),
                 {
-                    userTrialOffer: _,
-                    userDiscount: E,
-                    userDiscountOffer: f
+                    userTrialOffer: f,
+                    userDiscount: _,
+                    userDiscountOffer: h
                 }
             );
         } catch (e) {

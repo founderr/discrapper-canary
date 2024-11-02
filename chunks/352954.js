@@ -1,56 +1,56 @@
-t(411104);
-var r = t(200651);
-t(192379);
-var i = t(481060),
-    E = t(981631),
-    u = t(689938);
+e(411104);
+var r = e(200651);
+e(192379);
+var i = e(481060),
+    u = e(981631),
+    o = e(388032);
 n.Z = {
-    openSecureFramesStreamVerification: function (e, n) {
+    openSecureFramesStreamVerification: function (t, n) {
         (0, i.openModalLazy)(async () => {
-            let i = (await t.e('94904').then(t.bind(t, 660250))).default;
-            return (t) =>
+            let i = (await e.e('94904').then(e.bind(e, 660250))).default;
+            return (e) =>
                 (0, r.jsx)(i, {
-                    streamKey: e,
+                    streamKey: t,
                     channelId: n,
-                    ...t
+                    ...e
                 });
         });
     },
-    openSecureFramesUserVerificationModal: function (e, n, u, a) {
-        u() &&
+    openSecureFramesUserVerificationModal: function (t, n, o, a) {
+        o() &&
             (0, i.openModalLazy)(
                 async () => {
-                    let i = (await t.e('33397').then(t.bind(t, 963410))).default;
-                    return (t) =>
+                    let i = (await e.e('33397').then(e.bind(e, 963410))).default;
+                    return (e) =>
                         (0, r.jsx)(i, {
-                            userId: e,
+                            userId: t,
                             channelId: n,
-                            ...t
+                            ...e
                         });
                 },
-                { contextKey: a === E.IlC.POPOUT ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT }
+                { contextKey: a === u.IlC.POPOUT ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT }
             );
     },
-    openSecureFramesUpdateConfirmation: function (e) {
-        let { title: n, subtitle: E, confirmText: a = u.Z.Messages.CONFIRM, onConfirm: o } = e;
+    openSecureFramesUpdateConfirmation: function (t) {
+        let { title: n, subtitle: u, confirmText: a = o.intl.string(o.t['cY+Ooa']), onConfirm: l } = t;
         (0, i.openModalLazy)(async () => {
-            let { ConfirmModal: e } = await Promise.resolve().then(t.bind(t, 481060));
-            return (t) =>
-                (0, r.jsx)(e, {
+            let { ConfirmModal: t } = await Promise.resolve().then(e.bind(e, 481060));
+            return (e) =>
+                (0, r.jsx)(t, {
                     header: n,
                     confirmText: a,
-                    cancelText: u.Z.Messages.CANCEL,
-                    onConfirm: o,
-                    ...t,
+                    cancelText: o.intl.string(o.t['ETE/oK']),
+                    onConfirm: l,
+                    ...e,
                     children: (0, r.jsx)(i.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: E
+                        children: u
                     })
                 });
         });
     },
-    handleSecureFramesUserVerificationLink: function (e) {
+    handleSecureFramesUserVerificationLink: function (t) {
         throw Error('handleSecureFramesUserVerificationLink not implemented');
     }
 };

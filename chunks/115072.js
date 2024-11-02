@@ -1,51 +1,51 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return O;
+            return N;
         }
     }),
     n(47120);
-var a = n(200651),
+var i = n(200651),
     r = n(192379),
-    i = n(772848),
+    a = n(772848),
     o = n(442837),
-    s = n(780384),
-    l = n(481060),
+    l = n(780384),
+    s = n(481060),
     c = n(53281),
     u = n(476326),
     m = n(273031),
     d = n(898463),
-    _ = n(112831),
-    h = n(951394),
-    p = n(210887),
-    f = n(594174),
+    h = n(112831),
+    p = n(951394),
+    f = n(210887),
+    x = n(594174),
     v = n(768581),
-    I = n(358085),
-    R = n(223356),
-    x = n(225452),
-    T = n(689938),
-    g = n(549667),
-    E = n(289575),
-    j = n(371411);
-let C = ['Android', 'iOS', 'Windows Mobile', 'Windows', 'Linux', 'Mac OS X'].map((e) => ({
+    g = n(358085),
+    j = n(223356),
+    I = n(225452),
+    C = n(388032),
+    _ = n(549667),
+    y = n(289575),
+    b = n(371411);
+let S = ['Android', 'iOS', 'Windows Mobile', 'Windows', 'Linux', 'Mac OS X'].map((e) => ({
     label: e,
     value: e
 }));
-function O(e) {
-    var t, O, P, N, S;
-    let { transitionState: B, onClose: M } = e,
-        b = r.useRef(null),
-        Z = r.useRef(null),
-        [y, G] = r.useState(''),
-        [U, L] = r.useState(''),
-        [A, D] = r.useState(),
-        [w, F] = r.useState(''),
-        [k, V] = r.useState([]),
-        [Y, W] = r.useState(),
-        [H, z] = r.useState(),
-        [X, Q] = r.useState(!1),
-        [q, K] = r.useState(''),
-        [J, $] = r.useState(
+function N(e) {
+    var t, N, T, w, P;
+    let { transitionState: k, onClose: B } = e,
+        E = r.useRef(null),
+        L = r.useRef(null),
+        [D, O] = r.useState(''),
+        [R, F] = r.useState(''),
+        [Z, A] = r.useState(),
+        [G, M] = r.useState(''),
+        [V, H] = r.useState([]),
+        [W, z] = r.useState(),
+        [q, U] = r.useState(),
+        [K, X] = r.useState(!1),
+        [Y, J] = r.useState(''),
+        [Q, $] = r.useState(
             (function (e) {
                 switch (e) {
                     case 'windows':
@@ -56,335 +56,335 @@ function O(e) {
                         return 'Linux';
                 }
                 return '';
-            })((0, I.getOS)())
+            })((0, g.getOS)())
         ),
         [ee, et] = r.useState(''),
-        [en, ea] = r.useState(''),
-        [er, ei] = r.useState(''),
-        [eo, es] = r.useState(''),
-        [el, ec] = r.useState(!1),
+        [en, ei] = r.useState(''),
+        [er, ea] = r.useState(''),
+        [eo, el] = r.useState(''),
+        [es, ec] = r.useState(!1),
         [eu, em] = r.useState(!1),
-        [ed, e_] = r.useState(!1),
-        eh = (0, o.e7)([p.Z], () => p.Z.theme),
-        ep = (0, o.e7)([f.default], () => {
-            let e = f.default.getCurrentUser();
+        [ed, eh] = r.useState(!1),
+        ep = (0, o.e7)([f.Z], () => f.Z.theme),
+        ef = (0, o.e7)([x.default], () => {
+            let e = x.default.getCurrentUser();
             return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
         }),
-        ef = () => {
-            null == M || M();
+        ex = () => {
+            null == B || B();
         },
         ev = (e) => {
-            V(k.filter((t) => t.id !== e));
+            H(V.filter((t) => t.id !== e));
         };
-    async function eI() {
+    async function eg() {
         var e;
-        if ((e_(!1), '' === y || null == A)) {
+        if ((eh(!1), '' === D || null == Z)) {
             ec(!0);
             return;
         }
-        let t = null == Y ? void 0 : null === (e = Y.features) || void 0 === e ? void 0 : e.find((e) => (0, R.pD)(e) === H);
+        let t = null == W ? void 0 : null === (e = W.features) || void 0 === e ? void 0 : e.find((e) => (0, j.pD)(e) === q);
         em(!0), ec(!1);
-        let r = (0, x.D)(
-                k.map((e) => {
+        let r = (0, I.D)(
+                V.map((e) => {
                     let { item: t } = e;
                     return t;
                 })
             ),
-            i =
-                !0 === X
+            a =
+                !0 === K
                     ? {
-                          overridePlatformInformation: X,
-                          device: q,
-                          operatingSystem: J,
+                          overridePlatformInformation: K,
+                          device: Y,
+                          operatingSystem: Q,
                           operatingSystemVersion: ee,
                           clientVersion: en,
                           clientBuildNumber: er,
                           locale: eo
                       }
-                    : { overridePlatformInformation: X },
-            o = await (0, R.ZD)(
+                    : { overridePlatformInformation: K },
+            o = await (0, j.ZD)(
                 {
-                    name: y,
-                    description: U,
-                    priority: A,
+                    name: D,
+                    description: R,
+                    priority: Z,
                     feature: t,
-                    url: w
+                    url: G
                 },
-                i,
+                a,
                 r
-            ).catch(() => e_(!0));
+            ).catch(() => eh(!0));
         em(!1),
             null != o && o.ok
-                ? (ep && window.open(o.body.permalink_url, '_blank'),
-                  ef(),
-                  (0, l.openModalLazy)(async () => {
+                ? (ef && window.open(o.body.permalink_url, '_blank'),
+                  ex(),
+                  (0, s.openModalLazy)(async () => {
                       let { default: e } = await n.e('64648').then(n.bind(n, 81155));
                       return (t) =>
-                          (0, a.jsx)(e, {
+                          (0, i.jsx)(e, {
                               ...t,
                               asanaTask: o.body
                           });
                   }))
-                : e_(!0);
+                : eh(!0);
     }
     r.useEffect(() => {
         async function e() {
-            W(await (0, R.WG)());
+            z(await (0, j.WG)());
         }
-        ep && e();
-    }, [ep]),
+        ef && e();
+    }, [ef]),
         r.useEffect(() => {
-            if (k.length > 0) {
+            if (V.length > 0) {
                 var e;
-                null === (e = Z.current) ||
+                null === (e = L.current) ||
                     void 0 === e ||
                     e.scrollIntoView({
                         behavior: 'smooth',
                         block: 'end'
                     });
             }
-        }, [k]);
-    let eR = (0, s.wj)(eh) ? E : j;
-    return (0, a.jsx)(l.ModalRoot, {
-        className: g.modalRoot,
-        transitionState: B,
-        'aria-label': T.Z.Messages.SUBMIT_BUG,
-        children: (0, a.jsx)(l.ModalContent, {
-            className: g.modalContent,
+        }, [V]);
+    let ej = (0, l.wj)(ep) ? y : b;
+    return (0, i.jsx)(s.ModalRoot, {
+        className: _.modalRoot,
+        transitionState: k,
+        'aria-label': C.intl.string(C.t.mCCdws),
+        children: (0, i.jsx)(s.ModalContent, {
+            className: _.modalContent,
             paddingFix: !1,
-            children: (0, a.jsx)('div', {
-                className: g.container,
-                children: (0, a.jsx)(l.HeadingLevel, {
+            children: (0, i.jsx)('div', {
+                className: _.container,
+                children: (0, i.jsx)(s.HeadingLevel, {
                     forceLevel: 1,
-                    component: (0, a.jsx)('div', {
-                        className: g.sidebarContainer,
-                        children: (0, a.jsx)(_.Z, {
+                    component: (0, i.jsx)('div', {
+                        className: _.sidebarContainer,
+                        children: (0, i.jsx)(h.Z, {
                             strong: !0,
-                            color: _.Z.Colors.HEADER_PRIMARY,
-                            size: _.Z.Sizes.SIZE_24,
-                            children: (0, a.jsx)(l.H, { children: T.Z.Messages.BUG_REPORT_TITLE })
+                            color: h.Z.Colors.HEADER_PRIMARY,
+                            size: h.Z.Sizes.SIZE_24,
+                            children: (0, i.jsx)(s.H, { children: C.intl.string(C.t['5Lqopa']) })
                         })
                     }),
-                    children: (0, a.jsxs)('div', {
-                        className: g.contentContainer,
+                    children: (0, i.jsxs)('div', {
+                        className: _.contentContainer,
                         children: [
-                            (0, a.jsx)('img', {
-                                className: g.contentIcon,
+                            (0, i.jsx)('img', {
+                                className: _.contentIcon,
                                 alt: '',
-                                src: eR
+                                src: ej
                             }),
-                            (0, a.jsxs)('form', {
-                                className: g.form,
-                                onSubmit: eI,
+                            (0, i.jsxs)('form', {
+                                className: _.form,
+                                onSubmit: eg,
                                 children: [
-                                    (0, a.jsx)(l.FormItem, {
-                                        error: el && '' === y ? T.Z.Messages.REQUIRED : null,
-                                        title: T.Z.Messages.BUG_REPORT_NAME,
-                                        className: g.formInput,
-                                        children: (0, a.jsx)(l.TextInput, {
+                                    (0, i.jsx)(s.FormItem, {
+                                        error: es && '' === D ? C.intl.string(C.t.EkokLy) : null,
+                                        title: C.intl.string(C.t.OZRgj4),
+                                        className: _.formInput,
+                                        children: (0, i.jsx)(s.TextInput, {
                                             placeholder: 'Something is broken on this screen.',
                                             type: 'text',
-                                            value: y,
+                                            value: D,
                                             maxLength: 100,
-                                            onChange: G
+                                            onChange: O
                                         })
                                     }),
-                                    (0, a.jsxs)(l.FormItem, {
-                                        title: T.Z.Messages.BUG_REPORT_DESCRIPTION,
-                                        className: g.formInput,
+                                    (0, i.jsxs)(s.FormItem, {
+                                        title: C.intl.string(C.t['1SplHx']),
+                                        className: _.formInput,
                                         children: [
-                                            (0, a.jsx)(l.TextArea, {
+                                            (0, i.jsx)(s.TextArea, {
                                                 placeholder: 'What did you expect to see?',
-                                                value: U,
-                                                onChange: L
+                                                value: R,
+                                                onChange: F
                                             }),
-                                            (0, a.jsx)(l.Text, {
+                                            (0, i.jsx)(s.Text, {
                                                 variant: 'text-sm/normal',
                                                 color: 'info-help-text',
                                                 children: 'You can add additional information/media on the ticket after submitting'
                                             })
                                         ]
                                     }),
-                                    (0, a.jsx)(l.FormItem, {
-                                        error: el && void 0 === A ? T.Z.Messages.REQUIRED : null,
-                                        title: T.Z.Messages.BUG_REPORT_PRIORITY,
-                                        className: g.formInput,
-                                        children: (0, a.jsx)(l.SingleSelect, {
+                                    (0, i.jsx)(s.FormItem, {
+                                        error: es && void 0 === Z ? C.intl.string(C.t.EkokLy) : null,
+                                        title: C.intl.string(C.t.xMXLdX),
+                                        className: _.formInput,
+                                        children: (0, i.jsx)(s.SingleSelect, {
                                             renderOptionLabel: (e) =>
                                                 (function (e) {
                                                     let t = e.priority;
-                                                    return (0, a.jsxs)('div', {
-                                                        className: g.formPriorityImageContainer,
+                                                    return (0, i.jsxs)('div', {
+                                                        className: _.formPriorityImageContainer,
                                                         children: [
-                                                            (0, a.jsxs)('div', {
-                                                                className: g.formPriorityTitleContainer,
+                                                            (0, i.jsxs)('div', {
+                                                                className: _.formPriorityTitleContainer,
                                                                 children: [
-                                                                    (0, a.jsx)('img', {
+                                                                    (0, i.jsx)('img', {
                                                                         alt: '',
-                                                                        className: g.formPriorityImage,
+                                                                        className: _.formPriorityImage,
                                                                         src: (0, v.gT)({
                                                                             id: t.emoji,
                                                                             animated: !0,
                                                                             size: 48
                                                                         })
                                                                     }),
-                                                                    (0, a.jsx)(l.Text, {
+                                                                    (0, i.jsx)(s.Text, {
                                                                         color: 'header-primary',
                                                                         variant: 'text-sm/semibold',
-                                                                        className: g.formPriorityTitle,
+                                                                        className: _.formPriorityTitle,
                                                                         children: t.title
                                                                     })
                                                                 ]
                                                             }),
-                                                            (0, a.jsx)(l.Text, {
+                                                            (0, i.jsx)(s.Text, {
                                                                 color: 'header-secondary',
                                                                 variant: 'text-xs/normal',
-                                                                className: g.formPriorityDescription,
+                                                                className: _.formPriorityDescription,
                                                                 children: t.description
                                                             })
                                                         ]
                                                     });
                                                 })(e),
-                                            onChange: D,
-                                            options: (0, R.Tj)().map((e) => ({
+                                            onChange: A,
+                                            options: (0, j.Tj)().map((e) => ({
                                                 priority: e,
                                                 value: e.value,
                                                 label: e.title
                                             })),
-                                            value: A,
+                                            value: Z,
                                             maxVisibleItems: 3,
                                             closeOnSelect: !0
                                         })
                                     }),
-                                    ep &&
-                                        (0, a.jsx)(l.FormItem, {
-                                            title: T.Z.Messages.BUG_REPORT_FEATURE_AREA,
-                                            className: g.formInput,
-                                            children: (0, a.jsx)(l.SearchableSelect, {
-                                                value: H,
+                                    ef &&
+                                        (0, i.jsx)(s.FormItem, {
+                                            title: C.intl.string(C.t['77VVd3']),
+                                            className: _.formInput,
+                                            children: (0, i.jsx)(s.SearchableSelect, {
+                                                value: q,
                                                 options:
                                                     null !==
-                                                        (S =
-                                                            null == (t = Y)
+                                                        (P =
+                                                            null == (t = W)
                                                                 ? void 0
-                                                                : null === (N = t.features) || void 0 === N
+                                                                : null === (w = t.features) || void 0 === w
                                                                   ? void 0
-                                                                  : null === (P = N.filter((e) => '' !== (0, R.pD)(e))) || void 0 === P
+                                                                  : null === (T = w.filter((e) => '' !== (0, j.pD)(e))) || void 0 === T
                                                                     ? void 0
                                                                     : null ===
-                                                                            (O = P.map((e) => {
+                                                                            (N = T.map((e) => {
                                                                                 var t;
                                                                                 return {
                                                                                     label: null !== (t = e.name) && void 0 !== t ? t : '',
-                                                                                    value: (0, R.pD)(e)
+                                                                                    value: (0, j.pD)(e)
                                                                                 };
-                                                                            })) || void 0 === O
+                                                                            })) || void 0 === N
                                                                       ? void 0
-                                                                      : O.sort((e, t) => e.label.localeCompare(t.label))) && void 0 !== S
-                                                        ? S
+                                                                      : N.sort((e, t) => e.label.localeCompare(t.label))) && void 0 !== P
+                                                        ? P
                                                         : [],
-                                                isDisabled: null == Y,
-                                                onChange: (e) => z(e)
+                                                isDisabled: null == W,
+                                                onChange: (e) => U(e)
                                             })
                                         }),
-                                    (0, a.jsx)(l.FormItem, {
-                                        title: T.Z.Messages.BUG_REPORT_URL,
-                                        className: g.formInput,
-                                        children: (0, a.jsx)(l.TextInput, {
-                                            placeholder: T.Z.Messages.BUG_REPORT_EXTERNAL_SOURCE,
+                                    (0, i.jsx)(s.FormItem, {
+                                        title: C.intl.string(C.t['7p5pqq']),
+                                        className: _.formInput,
+                                        children: (0, i.jsx)(s.TextInput, {
+                                            placeholder: C.intl.string(C.t.HewMzs),
                                             type: 'text',
-                                            value: w,
+                                            value: G,
                                             maxLength: 5000,
-                                            onChange: F
+                                            onChange: M
                                         })
                                     }),
-                                    (0, a.jsx)(l.FormItem, {
-                                        className: g.formInput,
-                                        children: (0, a.jsx)(l.Checkbox, {
-                                            value: X,
-                                            onChange: (e, t) => Q(t),
-                                            children: (0, a.jsx)(l.Text, {
+                                    (0, i.jsx)(s.FormItem, {
+                                        className: _.formInput,
+                                        children: (0, i.jsx)(s.Checkbox, {
+                                            value: K,
+                                            onChange: (e, t) => X(t),
+                                            children: (0, i.jsx)(s.Text, {
                                                 variant: 'text-sm/normal',
                                                 color: 'info-help-text',
-                                                children: T.Z.Messages.BUG_REPORT_OVERRIDE_PLATFORM_INFORMATION
+                                                children: C.intl.string(C.t.ayhqiI)
                                             })
                                         })
                                     }),
-                                    X
-                                        ? (0, a.jsxs)(a.Fragment, {
+                                    K
+                                        ? (0, i.jsxs)(i.Fragment, {
                                               children: [
-                                                  (0, a.jsx)(l.FormItem, {
-                                                      title: T.Z.Messages.BUG_REPORT_DEVICE,
-                                                      className: g.formInput,
-                                                      children: (0, a.jsx)(l.TextInput, {
+                                                  (0, i.jsx)(s.FormItem, {
+                                                      title: C.intl.string(C.t.rrI4Tk),
+                                                      className: _.formInput,
+                                                      children: (0, i.jsx)(s.TextInput, {
                                                           placeholder: 'Device',
-                                                          value: q,
-                                                          onChange: (e) => K(e)
+                                                          value: Y,
+                                                          onChange: (e) => J(e)
                                                       })
                                                   }),
-                                                  (0, a.jsx)(l.FormItem, {
-                                                      title: T.Z.Messages.BUG_REPORT_OS,
-                                                      className: g.formInput,
-                                                      children: (0, a.jsx)(l.SingleSelect, {
-                                                          value: J,
-                                                          options: C,
+                                                  (0, i.jsx)(s.FormItem, {
+                                                      title: C.intl.string(C.t.kcHxi4),
+                                                      className: _.formInput,
+                                                      children: (0, i.jsx)(s.SingleSelect, {
+                                                          value: Q,
+                                                          options: S,
                                                           onChange: (e) => $(e)
                                                       })
                                                   }),
-                                                  (0, a.jsx)(l.FormItem, {
-                                                      title: T.Z.Messages.BUG_REPORT_OS_VERSION,
-                                                      className: g.formInput,
-                                                      children: (0, a.jsx)(l.TextInput, {
+                                                  (0, i.jsx)(s.FormItem, {
+                                                      title: C.intl.string(C.t.rEtxdn),
+                                                      className: _.formInput,
+                                                      children: (0, i.jsx)(s.TextInput, {
                                                           placeholder: 'Operating System Version',
                                                           value: ee,
                                                           onChange: (e) => et(e)
                                                       })
                                                   }),
-                                                  (0, a.jsx)(l.FormItem, {
-                                                      title: T.Z.Messages.BUG_REPORT_CLIENT_VERSION,
-                                                      className: g.formInput,
-                                                      children: (0, a.jsx)(l.TextInput, {
+                                                  (0, i.jsx)(s.FormItem, {
+                                                      title: C.intl.string(C.t['wy1M/v']),
+                                                      className: _.formInput,
+                                                      children: (0, i.jsx)(s.TextInput, {
                                                           placeholder: 'Client Version',
                                                           value: en,
-                                                          onChange: (e) => ea(e)
-                                                      })
-                                                  }),
-                                                  (0, a.jsx)(l.FormItem, {
-                                                      title: T.Z.Messages.BUG_REPORT_CLIENT_BUILD_NUMBER,
-                                                      className: g.formInput,
-                                                      children: (0, a.jsx)(l.TextInput, {
-                                                          placeholder: 'Client Build Number',
-                                                          value: er,
                                                           onChange: (e) => ei(e)
                                                       })
                                                   }),
-                                                  (0, a.jsx)(l.FormItem, {
-                                                      title: T.Z.Messages.BUG_REPORT_LOCALE,
-                                                      className: g.formInput,
-                                                      children: (0, a.jsx)(l.TextInput, {
+                                                  (0, i.jsx)(s.FormItem, {
+                                                      title: C.intl.string(C.t.f7kbVl),
+                                                      className: _.formInput,
+                                                      children: (0, i.jsx)(s.TextInput, {
+                                                          placeholder: 'Client Build Number',
+                                                          value: er,
+                                                          onChange: (e) => ea(e)
+                                                      })
+                                                  }),
+                                                  (0, i.jsx)(s.FormItem, {
+                                                      title: C.intl.string(C.t['4Z5+zs']),
+                                                      className: _.formInput,
+                                                      children: (0, i.jsx)(s.TextInput, {
                                                           placeholder: 'Locale',
                                                           value: eo,
-                                                          onChange: (e) => es(e)
+                                                          onChange: (e) => el(e)
                                                       })
                                                   })
                                               ]
                                           })
                                         : null,
-                                    (0, a.jsxs)(l.Button, {
-                                        className: g.uploadButton,
+                                    (0, i.jsxs)(s.Button, {
+                                        className: _.uploadButton,
                                         children: [
-                                            T.Z.Messages.BUG_REPORT_ADD_ATTACHMENTS,
-                                            (0, a.jsx)(c.Z, {
-                                                ref: b,
+                                            C.intl.string(C.t.HVxmOD),
+                                            (0, i.jsx)(c.Z, {
+                                                ref: E,
                                                 onChange: (e) => {
                                                     var t, n;
                                                     (null === (n = e.currentTarget) || void 0 === n ? void 0 : null === (t = n.files) || void 0 === t ? void 0 : t[0]) != null &&
-                                                        V([
-                                                            ...k,
+                                                        H([
+                                                            ...V,
                                                             ...Array.from(e.currentTarget.files).map(
                                                                 (e) =>
                                                                     new u.ZP({
-                                                                        id: (0, i.Z)(),
+                                                                        id: (0, a.Z)(),
                                                                         file: e,
                                                                         platform: u.ow.WEB
                                                                     })
@@ -395,40 +395,40 @@ function O(e) {
                                             })
                                         ]
                                     }),
-                                    k.length > 0
-                                        ? (0, a.jsxs)(a.Fragment, {
+                                    V.length > 0
+                                        ? (0, i.jsxs)(i.Fragment, {
                                               children: [
-                                                  (0, a.jsx)('div', {
-                                                      className: g.imageOptionsContainer,
-                                                      children: (0, a.jsx)(l.FormTitle, { children: 'Preview' })
+                                                  (0, i.jsx)('div', {
+                                                      className: _.imageOptionsContainer,
+                                                      children: (0, i.jsx)(s.FormTitle, { children: 'Preview' })
                                                   }),
-                                                  (0, a.jsx)('div', {
-                                                      ref: Z,
-                                                      className: g.attachmentsGrid,
+                                                  (0, i.jsx)('div', {
+                                                      ref: L,
+                                                      className: _.attachmentsGrid,
                                                       children:
-                                                          k.length > 0 &&
-                                                          k.map((e) =>
-                                                              (0, a.jsxs)(
+                                                          V.length > 0 &&
+                                                          V.map((e) =>
+                                                              (0, i.jsxs)(
                                                                   'div',
                                                                   {
-                                                                      className: g.attachmentsGridItem,
+                                                                      className: _.attachmentsGridItem,
                                                                       children: [
-                                                                          (0, a.jsx)(l.Text, {
+                                                                          (0, i.jsx)(s.Text, {
                                                                               variant: 'text-sm/normal',
                                                                               children: e.filename
                                                                           }),
-                                                                          (0, a.jsxs)('div', {
-                                                                              className: g.attachmentContainer,
+                                                                          (0, i.jsxs)('div', {
+                                                                              className: _.attachmentContainer,
                                                                               children: [
-                                                                                  (0, a.jsx)(d.r, { upload: e }),
-                                                                                  (0, a.jsx)('div', {
-                                                                                      className: g.toolBar,
-                                                                                      children: (0, a.jsx)(h.ZP, {
-                                                                                          children: (0, a.jsx)(m.Z, {
-                                                                                              tooltip: T.Z.Messages.ATTACHMENT_UTILITIES_REMOVE,
+                                                                                  (0, i.jsx)(d.r, { upload: e }),
+                                                                                  (0, i.jsx)('div', {
+                                                                                      className: _.toolBar,
+                                                                                      children: (0, i.jsx)(p.ZP, {
+                                                                                          children: (0, i.jsx)(m.Z, {
+                                                                                              tooltip: C.intl.string(C.t.vN7REx),
                                                                                               onClick: () => ev(e.id),
                                                                                               dangerous: !0,
-                                                                                              children: (0, a.jsx)(l.TrashIcon, {
+                                                                                              children: (0, i.jsx)(s.TrashIcon, {
                                                                                                   size: 'md',
                                                                                                   color: 'currentColor'
                                                                                               })
@@ -447,7 +447,7 @@ function O(e) {
                                           })
                                         : null,
                                     ed
-                                        ? (0, a.jsx)(l.Text, {
+                                        ? (0, i.jsx)(s.Text, {
                                               color: 'text-danger',
                                               variant: 'text-sm/normal',
                                               children: 'Something went wrong, try again!'
@@ -455,22 +455,22 @@ function O(e) {
                                         : null
                                 ]
                             }),
-                            (0, a.jsxs)(l.ModalFooter, {
-                                className: g.submitContainer,
+                            (0, i.jsxs)(s.ModalFooter, {
+                                className: _.submitContainer,
                                 children: [
-                                    (0, a.jsx)(l.Button, {
-                                        className: g.formButton,
-                                        look: l.ButtonLooks.BLANK,
-                                        onClick: ef,
-                                        children: (0, a.jsx)(l.Text, {
+                                    (0, i.jsx)(s.Button, {
+                                        className: _.formButton,
+                                        look: s.ButtonLooks.BLANK,
+                                        onClick: ex,
+                                        children: (0, i.jsx)(s.Text, {
                                             variant: 'text-sm/normal',
-                                            children: T.Z.Messages.CANCEL
+                                            children: C.intl.string(C.t['ETE/oK'])
                                         })
                                     }),
-                                    (0, a.jsx)(l.Button, {
+                                    (0, i.jsx)(s.Button, {
                                         submitting: eu,
-                                        className: g.formButton,
-                                        onClick: eI,
+                                        className: _.formButton,
+                                        onClick: eg,
                                         children: 'Submit and Open Report'
                                     })
                                 ]

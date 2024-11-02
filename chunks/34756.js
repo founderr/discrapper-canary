@@ -5,18 +5,18 @@ n.d(t, {
 });
 var r = n(544891),
     i = n(981631),
-    a = n(689938);
+    a = n(388032);
 class s extends r.yZ {
     constructor(e, t) {
         super(
             e,
             t,
             null != t
-                ? a.Z.Messages.FORM_ERROR_GENERIC_WITH_DETAILS.format({
+                ? a.intl.formatToPlainString(a.t.aKRa0d, {
                       statusPageURL: i.yXt.STATUS,
                       details: ''.concat(t)
                   })
-                : a.Z.Messages.FORM_ERROR_GENERIC.format({ statusPageURL: i.yXt.STATUS })
+                : a.intl.formatToPlainString(a.t.aTVNen, { statusPageURL: i.yXt.STATUS })
         );
     }
 }

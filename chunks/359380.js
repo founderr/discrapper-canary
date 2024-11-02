@@ -5,24 +5,24 @@ t.d(n, {
 }),
     t(47120),
     t(653041);
-var a = t(200651),
-    r = t(192379),
+var r = t(200651),
+    a = t(192379),
     i = t(481060),
     s = t(214715),
     o = t(18100),
     l = t(308083),
-    c = t(689938),
+    c = t(388032),
     d = t(602075);
 let u = (e) => {
     let { title: n, icon: t, availableTraits: o, selectedTraits: c, onUpdateTraits: u } = e,
-        m = r.useCallback(
+        m = a.useCallback(
             (e) => {
                 let n = new Set(c);
                 n.delete(e), u(n);
             },
             [u, c]
         ),
-        _ = r.useCallback(
+        f = a.useCallback(
             (e) => {
                 if (c.size === l.c4) return;
                 let n = new Set(c);
@@ -30,19 +30,19 @@ let u = (e) => {
             },
             [u, c]
         );
-    return (0, a.jsxs)(a.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, a.jsx)(i.Text, {
+            (0, r.jsx)(i.Text, {
                 className: d.interestsCategoryTitle,
                 variant: 'text-xs/semibold',
                 color: 'text-muted',
                 children: n
             }),
-            (0, a.jsx)('div', {
+            (0, r.jsx)('div', {
                 className: d.utilityTraits,
                 children: o.map((e) => {
                     let n = c.has(e);
-                    return (0, a.jsx)(
+                    return (0, r.jsx)(
                         s.Z,
                         {
                             variant: 'text-xs/semibold',
@@ -50,7 +50,7 @@ let u = (e) => {
                             icon: t,
                             text: e,
                             selected: n,
-                            onClick: n ? m : _
+                            onClick: n ? m : f
                         },
                         e
                     );
@@ -60,8 +60,8 @@ let u = (e) => {
     });
 };
 function m(e) {
-    let { guildId: n, onUpdateTraits: t, progress: s, availableTraits: m, hidePreview: _ = !1 } = e,
-        f = r.useMemo(() => {
+    let { guildId: n, onUpdateTraits: t, progress: s, availableTraits: m, hidePreview: f = !1 } = e,
+        h = a.useMemo(() => {
             let e = [];
             return (
                 l.gh.forEach((n) =>
@@ -73,111 +73,111 @@ function m(e) {
                 e
             );
         }, []),
-        C = r.useMemo(() => {
+        x = a.useMemo(() => {
             var e;
             return null !== (e = null != m ? m : null == s ? void 0 : s.interests) && void 0 !== e ? e : new Set();
         }, [m, null == s ? void 0 : s.interests]),
-        h = r.useMemo(() => Array.from(C), [C]),
-        x = r.useMemo(() => h.filter((e) => l.gh.has(e)), [h]),
-        p = r.useCallback(
+        p = a.useMemo(() => Array.from(x), [x]),
+        g = a.useMemo(() => p.filter((e) => l.gh.has(e)), [p]),
+        C = a.useCallback(
             (e) => {
-                t(new Set([...h.filter((e) => !l.gh.has(e)), ...e]));
+                t(new Set([...p.filter((e) => !l.gh.has(e)), ...e]));
             },
-            [t, h]
+            [t, p]
         ),
-        g = r.useMemo(() => h.filter((e) => l.WZ.has(e) || l.gh.has(e)), [h]),
-        T = r.useCallback(
+        b = a.useMemo(() => p.filter((e) => l.WZ.has(e) || l.gh.has(e)), [p]),
+        v = a.useCallback(
             (e) => {
-                let n = new Set(C);
+                let n = new Set(x);
                 n.delete(e), t(n);
             },
-            [t, C]
+            [t, x]
         );
-    return (0, a.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: d.content,
         children: [
-            (0, a.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: d.mainPanelContainer,
                 children: [
-                    (0, a.jsx)(u, {
-                        title: c.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_AGE,
+                    (0, r.jsx)(u, {
+                        title: c.intl.string(c.t.SXqVqq),
                         icon: i.UserIcon,
                         availableTraits: l.jK,
-                        selectedTraits: C,
+                        selectedTraits: x,
                         onUpdateTraits: t
                     }),
-                    (0, a.jsx)(u, {
-                        title: c.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_IDENTITY,
+                    (0, r.jsx)(u, {
+                        title: c.intl.string(c.t['7uZoaG']),
                         icon: i.UserIcon,
                         availableTraits: l.CT,
-                        selectedTraits: C,
+                        selectedTraits: x,
                         onUpdateTraits: t
                     }),
-                    (0, a.jsx)(i.Text, {
+                    (0, r.jsx)(i.Text, {
                         className: d.interestsCategoryTitle,
                         variant: 'text-xs/semibold',
                         color: 'text-muted',
-                        children: c.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_CATEGORY_LANGUAGE
+                        children: c.intl.string(c.t.rU5dUV)
                     }),
-                    (0, a.jsx)('div', {
+                    (0, r.jsx)('div', {
                         className: d.languageSelect,
-                        children: (0, a.jsx)(i.SearchableSelect, {
+                        children: (0, r.jsx)(i.SearchableSelect, {
                             wrapperClassName: d.input,
-                            options: f,
-                            value: x,
-                            onChange: p,
-                            placeholder: c.Z.Messages.CLAN_SETUP_LANGUAGE_PLACEHOLDER,
+                            options: h,
+                            value: g,
+                            onChange: C,
+                            placeholder: c.intl.string(c.t.GA91en),
                             multi: !0
                         })
                     })
                 ]
             }),
-            (0, a.jsx)('div', {
+            (0, r.jsx)('div', {
                 className: d.fixedWidthSidebar,
                 children:
                     null != s &&
-                    h.length > 0 &&
-                    !_ &&
-                    (0, a.jsx)(o.Z, {
+                    p.length > 0 &&
+                    !f &&
+                    (0, r.jsx)(o.Z, {
                         guildId: n,
                         progress: s,
-                        traitsToHighlight: g,
+                        traitsToHighlight: b,
                         maskDescription: !0,
-                        onTraitClick: T
+                        onTraitClick: v
                     })
             })
         ]
     });
 }
 n.Z = (e) => {
-    let { guildId: n, title: t, description: r, onUpdateTraits: s, progress: o, traits: l, optional: u = !1, hidePreview: _ = !1 } = e;
-    return (0, a.jsxs)('div', {
+    let { guildId: n, title: t, description: a, onUpdateTraits: s, progress: o, traits: l, optional: u = !1, hidePreview: f = !1 } = e;
+    return (0, r.jsxs)('div', {
         className: d.slideContent,
         children: [
             u &&
-                (0, a.jsx)(i.Text, {
+                (0, r.jsx)(i.Text, {
                     variant: 'text-sm/medium',
                     color: 'header-secondary',
                     className: d.optionalTag,
-                    children: c.Z.Messages.CLAN_SETUP_OPTIONAL
+                    children: c.intl.string(c.t['vWEL6+'])
                 }),
-            (0, a.jsx)(i.Heading, {
+            (0, r.jsx)(i.Heading, {
                 variant: 'heading-xxl/medium',
                 className: d.title,
                 children: t
             }),
-            (0, a.jsx)(i.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
                 className: d.subtitle,
-                children: r
+                children: a
             }),
-            (0, a.jsx)(m, {
+            (0, r.jsx)(m, {
                 guildId: n,
                 onUpdateTraits: s,
                 progress: o,
                 availableTraits: l,
-                hidePreview: _
+                hidePreview: f
             })
         ]
     });

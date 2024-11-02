@@ -1,15 +1,15 @@
 n.d(t, {
     M: function () {
-        return s;
+        return o;
     },
     Z: function () {
-        return T;
+        return b;
     }
 });
 var i,
-    s,
-    o = n(200651),
-    a = n(192379),
+    o,
+    a = n(200651),
+    s = n(192379),
     l = n(120356),
     r = n.n(l),
     c = n(500923),
@@ -18,29 +18,29 @@ var i,
     h = n(960020),
     m = n(831244),
     p = n(815605),
-    g = n(981631),
-    f = n(153190);
-((i = s || (s = {}))[(i.NORMAL = 16)] = 'NORMAL'), (i[(i.NORMAL_NEW = 20)] = 'NORMAL_NEW'), (i[(i.LARGE = 32)] = 'LARGE');
-let _ = async (e) => {
+    f = n(981631),
+    g = n(153190);
+((i = o || (o = {}))[(i.NORMAL = 16)] = 'NORMAL'), (i[(i.NORMAL_NEW = 20)] = 'NORMAL_NEW'), (i[(i.LARGE = 32)] = 'LARGE');
+let v = async (e) => {
     var t;
     let { effect: n } = e,
-        i = await (0, m.T)(n.channelId, null !== (t = n.messageId) && void 0 !== t ? t : g.lds, n.emoji.name),
-        s = await (0, p.aB)(''.concat(n.channelId, ':').concat(n.messageId, ':').concat(n.emoji.name), n.url, i, n.color);
-    return (s.assets[0].p = n.url), s;
+        i = await (0, m.T)(n.channelId, null !== (t = n.messageId) && void 0 !== t ? t : f.lds, n.emoji.name),
+        o = await (0, p.aB)(''.concat(n.channelId, ':').concat(n.messageId, ':').concat(n.emoji.name), n.url, i, n.color);
+    return (o.assets[0].p = n.url), o;
 };
-function T(e) {
-    let { className: t, effect: n, onComplete: i, emojiSize: s = 16 } = e,
-        l = a.useRef(null),
-        c = s * p.Vz,
-        m = (c + s) / 2;
+function b(e) {
+    let { className: t, effect: n, onComplete: i, emojiSize: o = 16 } = e,
+        l = s.useRef(null),
+        c = o * p.Vz,
+        m = (c + o) / 2;
     return (
-        a.useEffect(() => {
+        s.useEffect(() => {
             let e;
             if (null != n)
                 return (
                     !(async function () {
                         if (null != l.current) {
-                            let t = await _({ effect: n });
+                            let t = await v({ effect: n });
                             (e = d().loadAnimation({
                                 container: l.current,
                                 renderer: 'svg',
@@ -67,11 +67,11 @@ function T(e) {
                         null != e && e.destroy();
                     }
                 );
-        }, [i, n, s]),
-        (0, o.jsx)('div', {
-            className: f.effectsWrapper,
-            children: (0, o.jsx)('div', {
-                className: r()(f.effect, t),
+        }, [i, n, o]),
+        (0, a.jsx)('div', {
+            className: g.effectsWrapper,
+            children: (0, a.jsx)('div', {
+                className: r()(g.effect, t),
                 style: {
                     transform: 'translateY('.concat(m, 'px)'),
                     height: c,

@@ -1,16 +1,16 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return w;
+            return L;
         }
     }),
     n(47120),
     n(653041),
     n(411104);
-var a = n(200651),
-    s = n(192379),
-    l = n(120356),
-    r = n.n(l),
+var l = n(200651),
+    a = n(192379),
+    r = n(120356),
+    s = n.n(r),
     i = n(442837),
     o = n(481060),
     d = n(129861),
@@ -20,154 +20,154 @@ var a = n(200651),
     f = n(566006),
     b = n(222677),
     v = n(592125),
-    _ = n(594174),
-    h = n(768581),
-    x = n(176354),
-    p = n(5192),
-    j = n(91047),
-    g = n(79390),
-    T = n(918088),
-    S = n(22864),
-    L = n(981631),
-    M = n(689938),
-    E = n(89451),
-    N = n(144452);
-let C = f.O.VOTE;
-function O() {
+    h = n(594174),
+    x = n(768581),
+    p = n(176354),
+    j = n(5192),
+    g = n(91047),
+    _ = n(79390),
+    S = n(918088),
+    C = n(22864),
+    N = n(981631),
+    T = n(388032),
+    M = n(89451),
+    w = n(144452);
+let y = f.O.VOTE;
+function k() {
     let e = (0, u.ZP)();
-    return (0, a.jsxs)(o.EmptyState, {
+    return (0, l.jsxs)(o.EmptyState, {
         theme: e,
         children: [
-            (0, a.jsx)(o.EmptyStateImage, {
-                darkSrc: N,
-                lightSrc: N,
+            (0, l.jsx)(o.EmptyStateImage, {
+                darkSrc: w,
+                lightSrc: w,
                 width: 106,
                 height: 100,
                 style: { marginBottom: 10 }
             }),
-            (0, a.jsx)(o.EmptyStateText, {
-                note: M.Z.Messages.POLL_VOTES_NO_RESULTS_SUBTITLE,
-                noteClassName: E.emptyText,
-                className: E.emptyTitle,
-                children: M.Z.Messages.POLL_VOTES_NO_RESULTS_TITLE
+            (0, l.jsx)(o.EmptyStateText, {
+                note: T.intl.string(T.t.bwytdn),
+                noteClassName: M.emptyText,
+                className: M.emptyTitle,
+                children: T.intl.string(T.t.vhQK3t)
             })
         ]
     });
 }
 function Z(e) {
     var t;
-    let { emoji: n, emojiSize: s, imageClassNames: l, textClassNames: r } = e,
+    let { emoji: n, emojiSize: a, imageClassNames: r, textClassNames: s } = e,
         i =
             null == n.id
-                ? x.ZP.getURL(n.name)
-                : h.ZP.getEmojiURL({
+                ? p.ZP.getURL(n.name)
+                : x.ZP.getEmojiURL({
                       id: n.id,
                       animated: null !== (t = n.animated) && void 0 !== t && t,
-                      size: s
+                      size: a
                   });
     return null != i && '' !== i
-        ? (0, a.jsx)('img', {
-              className: l,
+        ? (0, l.jsx)('img', {
+              className: r,
               src: i,
               alt: n.name
           })
-        : (0, a.jsx)('span', {
-              className: r,
+        : (0, l.jsx)('span', {
+              className: s,
               children: n.name
           });
 }
-function A(e) {
-    let { poll: t, reactionVoteCounts: n, selectedAnswerId: s, onSelectAnswer: l } = e;
-    return (0, a.jsx)(o.TabBar, {
+function I(e) {
+    let { poll: t, reactionVoteCounts: n, selectedAnswerId: a, onSelectAnswer: r } = e;
+    return (0, l.jsx)(o.TabBar, {
         look: 'custom',
         orientation: 'vertical',
-        'aria-label': M.Z.Messages.POLL_ANSWER_VOTES_MODAL_TAB_GROUP_LABEL,
-        selectedItem: s,
-        onItemSelect: l,
+        'aria-label': T.intl.string(T.t['qbir+/']),
+        selectedItem: a,
+        onItemSelect: r,
         children: t.answers.map((e) => {
             var t;
-            let l = String(e.answer_id),
-                i = null !== (t = n[l]) && void 0 !== t ? t : 0,
+            let r = String(e.answer_id),
+                i = null !== (t = n[r]) && void 0 !== t ? t : 0,
                 { emoji: d, text: c } = e.poll_media,
-                u = M.Z.Messages.POLL_ANSWER_VOTES_MODAL_VOTE_TAB.format({
+                u = T.intl.formatToPlainString(T.t.wqBc7O, {
                     numVotes: i,
                     option: c
                 }),
-                f = s === l;
-            return (0, a.jsxs)(
+                f = a === r;
+            return (0, l.jsxs)(
                 o.TabBar.Item,
                 {
-                    id: l,
-                    className: r()({
-                        [E.voteDefault]: !f,
-                        [E.voteSelected]: f
+                    id: r,
+                    className: s()({
+                        [M.voteDefault]: !f,
+                        [M.voteSelected]: f
                     }),
                     'aria-label': u,
-                    selectedItem: s,
+                    selectedItem: a,
                     children: [
                         null != d
-                            ? (0, a.jsx)(Z, {
+                            ? (0, l.jsx)(Z, {
                                   emoji: d,
                                   emojiSize: 16,
-                                  imageClassNames: E.emoji,
-                                  textClassNames: r()(E.emoji, E.emojiText),
+                                  imageClassNames: M.emoji,
+                                  textClassNames: s()(M.emoji, M.emojiText),
                                   'aria-hidden': !0
                               })
                             : null,
-                        (0, a.jsx)(o.Text, {
+                        (0, l.jsx)(o.Text, {
                             variant: 'text-sm/semibold',
                             color: 'text-secondary',
                             lineClamp: 1,
-                            children: (0, a.jsx)(m.Z, {
+                            children: (0, l.jsx)(m.Z, {
                                 position: 'left',
                                 'aria-hidden': !0,
                                 children: c
                             })
                         }),
-                        (0, a.jsxs)(o.Text, {
+                        (0, l.jsxs)(o.Text, {
                             variant: 'text-sm/semibold',
                             color: 'text-secondary',
-                            className: E.voteCount,
+                            className: M.voteCount,
                             children: ['(', i.toLocaleString(), ')']
                         })
                     ]
                 },
-                l
+                r
             );
         })
     });
 }
-function I(e) {
+function E(e) {
     let { user: t, channel: n } = e,
-        s = (0, i.e7)([_.default], () => _.default.getUser(t.id), [t]),
-        l = p.ZP.useName(n.guild_id, n.id, t);
-    return (0, a.jsxs)('div', {
-        className: E.voterDefault,
-        onContextMenu: (e) => (0, j.Pv)(e, t, n),
+        a = (0, i.e7)([h.default], () => h.default.getUser(t.id), [t]),
+        r = j.ZP.useName(n.guild_id, n.id, t);
+    return (0, l.jsxs)('div', {
+        className: M.voterDefault,
+        onContextMenu: (e) => (0, g.Pv)(e, t, n),
         children: [
-            (0, a.jsx)('div', {
-                className: E.voterAvatarContainer,
-                children: (0, a.jsx)(c.Z, {
-                    user: null != s ? s : t,
+            (0, l.jsx)('div', {
+                className: M.voterAvatarContainer,
+                children: (0, l.jsx)(c.Z, {
+                    user: null != a ? a : t,
                     size: o.AvatarSizes.SIZE_24,
                     'aria-hidden': !0
                 })
             }),
-            (0, a.jsxs)(o.Text, {
+            (0, l.jsxs)(o.Text, {
                 tag: 'span',
                 variant: 'text-md/normal',
-                className: E.name,
-                'aria-label': l,
+                className: M.name,
+                'aria-label': r,
                 children: [
-                    (0, a.jsx)('span', {
-                        className: t.isPomelo() ? '' : E.nickname,
-                        children: l
+                    (0, l.jsx)('span', {
+                        className: t.isPomelo() ? '' : M.nickname,
+                        children: r
                     }),
-                    (0, a.jsx)(d.Z, {
+                    (0, l.jsx)(d.Z, {
                         user: t,
-                        className: E.tagFaded,
-                        usernameClass: E.username,
-                        discriminatorClass: E.discriminator,
+                        className: M.tagFaded,
+                        usernameClass: M.username,
+                        discriminatorClass: M.discriminator,
                         forceUsername: !0
                     })
                 ]
@@ -176,110 +176,110 @@ function I(e) {
     });
 }
 function P(e) {
-    let { message: t, reaction: n, channel: l } = e,
-        { reactors: r, hasMore: i } = (0, S.Z)({
-            channelId: l.id,
+    let { message: t, reaction: n, channel: r } = e,
+        { reactors: s, hasMore: i } = (0, C.Z)({
+            channelId: r.id,
             messageId: t.id,
             reaction: n
         }),
-        d = s.useRef(null),
-        c = s.useRef(null),
-        [u, m] = s.useState(!1),
-        f = s.useCallback(async () => {
+        d = a.useRef(null),
+        c = a.useRef(null),
+        [u, m] = a.useState(!1),
+        f = a.useCallback(async () => {
             let e = c.current;
             m(!0);
-            let a = await b.U0({
-                channelId: l.id,
+            let l = await b.U0({
+                channelId: r.id,
                 messageId: t.id,
                 emoji: n.emoji,
-                limit: L.pTL,
+                limit: N.pTL,
                 after: e,
-                type: C
+                type: y
             });
-            (c.current = a[a.length - 1].id), m(!1);
-        }, [l.id, t.id, n.emoji]);
-    s.useEffect(() => {
+            (c.current = l[l.length - 1].id), m(!1);
+        }, [r.id, t.id, n.emoji]);
+    a.useEffect(() => {
         f();
     }, []);
-    let v = s.useCallback(() => {
+    let v = a.useCallback(() => {
             let { current: e } = d;
             if (null == e) return;
             let t = e.getScrollerState();
             t.scrollTop + t.offsetHeight >= t.scrollHeight - 44 && i && !u && f();
         }, [d, i, u, f]),
-        _ = s.useCallback(
+        h = a.useCallback(
             (e, t) => {
                 if (1 === e) return 0 === t ? 44 : 0;
                 if (0 === e) {
-                    if (0 === t && 0 === r.length) return 440;
-                    if (null != r[t]) return 44;
+                    if (0 === t && 0 === s.length) return 440;
+                    if (null != s[t]) return 44;
                 }
                 return 0;
             },
-            [r]
+            [s]
         ),
-        h = s.useCallback(
+        x = a.useCallback(
             (e) => {
                 let { section: t, row: n } = e,
-                    s = r[n];
-                if (1 === t) return 0 === n ? (0, a.jsx)(o.Spinner, { className: E.spinnerMore }, 'hasMore') : null;
-                return 0 === r.length && u
-                    ? (0, a.jsx)(o.Spinner, { className: E.spinner }, 'loadingMore')
-                    : null != s &&
-                          (0, a.jsx)(
-                              I,
+                    a = s[n];
+                if (1 === t) return 0 === n ? (0, l.jsx)(o.Spinner, { className: M.spinnerMore }, 'hasMore') : null;
+                return 0 === s.length && u
+                    ? (0, l.jsx)(o.Spinner, { className: M.spinner }, 'loadingMore')
+                    : null != a &&
+                          (0, l.jsx)(
+                              E,
                               {
-                                  channel: l,
-                                  user: s
+                                  channel: r,
+                                  user: a
                               },
-                              s.id
+                              a.id
                           );
             },
-            [l, u, r]
+            [r, u, s]
         ),
-        x = s.useMemo(() => {
+        p = a.useMemo(() => {
             let e = [];
-            return 0 === r.length && u ? e.push(0) : (e.push(r.length), i && e.push(1)), e;
-        }, [i, u, r.length]);
-    return (0, a.jsx)('div', {
-        className: E.votersListContainer,
-        children: (0, a.jsx)(o.List, {
-            className: E.voters,
+            return 0 === s.length && u ? e.push(0) : (e.push(s.length), i && e.push(1)), e;
+        }, [i, u, s.length]);
+    return (0, l.jsx)('div', {
+        className: M.votersListContainer,
+        children: (0, l.jsx)(o.List, {
+            className: M.voters,
             fade: !0,
             ref: d,
-            sections: x,
+            sections: p,
             sectionHeight: 0,
-            rowHeight: _,
-            renderRow: h,
+            rowHeight: h,
+            renderRow: x,
             onScroll: i ? v : void 0
         })
     });
 }
-function w(e) {
+function L(e) {
     var t;
-    let { message: n, initialAnswerId: l, onClose: r, transitionState: d } = e,
+    let { message: n, initialAnswerId: r, onClose: s, transitionState: d } = e,
         c = (0, i.e7)([v.Z], () => v.Z.getChannel(n.getChannelId())),
-        [u, m] = s.useState(l),
-        f = s.useMemo(() => {
-            if (null != n.reactions) return (0, T.ef)(n.reactions, u);
+        [u, m] = a.useState(r),
+        f = a.useMemo(() => {
+            if (null != n.reactions) return (0, S.ef)(n.reactions, u);
         }, [n.reactions, u]),
-        b = s.useMemo(() => (0, g.cZ)(n.reactions), [n.reactions]),
-        _ = s.useMemo(
+        b = a.useMemo(() => (0, _.cZ)(n.reactions), [n.reactions]),
+        h = a.useMemo(
             () =>
                 (function (e) {
                     let t = {};
-                    for (let s of e) {
-                        var n, a;
-                        let e = null !== (a = null === (n = s.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== a ? a : 0,
-                            l = s.emoji.id;
-                        null != l && (t[l] = e);
+                    for (let a of e) {
+                        var n, l;
+                        let e = null !== (l = null === (n = a.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== l ? l : 0,
+                            r = a.emoji.id;
+                        null != r && (t[r] = e);
                     }
                     return t;
                 })(n.reactions),
             [n.reactions]
         ),
-        h = _[u],
-        x = s.useMemo(() => {
+        x = h[u],
+        p = a.useMemo(() => {
             var e;
             let t = {};
             return (
@@ -292,66 +292,66 @@ function w(e) {
                 t
             );
         }, [null === (t = n.poll) || void 0 === t ? void 0 : t.answers]),
-        p = M.Z.Messages.POLL_ANSWER_VOTES_MODAL_VOTE_TAB.format({
-            numVotes: h,
-            option: x[u]
+        j = T.intl.formatToPlainString(T.t.wqBc7O, {
+            numVotes: x,
+            option: p[u]
         });
     if (null == c) throw Error('PollVotesModal.render: Message does not have a channelId');
     if (null == n.poll) throw Error('PollVotesModal.render: Message does not have a poll');
-    return (0, a.jsxs)(o.ModalRoot, {
-        'aria-label': M.Z.Messages.POLL_ANSWER_VOTES_MODAL_TITLE,
+    return (0, l.jsxs)(o.ModalRoot, {
+        'aria-label': T.intl.string(T.t.H0lNmp),
         transitionState: d,
         size: o.ModalSize.MEDIUM,
         children: [
-            (0, a.jsxs)(o.ModalHeader, {
-                className: E.header,
+            (0, l.jsxs)(o.ModalHeader, {
+                className: M.header,
                 children: [
-                    (0, a.jsxs)('div', {
+                    (0, l.jsxs)('div', {
                         children: [
-                            (0, a.jsx)(o.Text, {
+                            (0, l.jsx)(o.Text, {
                                 color: 'header-primary',
                                 variant: 'text-md/semibold',
-                                className: E.question,
+                                className: M.question,
                                 children: n.poll.question.text
                             }),
-                            (0, a.jsx)(o.Text, {
+                            (0, l.jsx)(o.Text, {
                                 variant: 'text-md/medium',
                                 color: 'text-normal',
-                                children: M.Z.Messages.POLL_VOTES_COUNT.format({ count: b.toLocaleString() })
+                                children: T.intl.format(T.t.XRkuoa, { count: b.toLocaleString() })
                             })
                         ]
                     }),
-                    (0, a.jsx)(o.ModalCloseButton, {
-                        onClick: r,
-                        className: E.close
+                    (0, l.jsx)(o.ModalCloseButton, {
+                        onClick: s,
+                        className: M.close
                     })
                 ]
             }),
-            (0, a.jsxs)('div', {
-                className: E.content,
+            (0, l.jsxs)('div', {
+                className: M.content,
                 children: [
-                    (0, a.jsx)(o.Scroller, {
-                        className: E.scroller,
+                    (0, l.jsx)(o.Scroller, {
+                        className: M.scroller,
                         fade: !0,
-                        children: (0, a.jsx)(A, {
+                        children: (0, l.jsx)(I, {
                             poll: n.poll,
                             selectedAnswerId: u,
                             onSelectAnswer: m,
-                            reactionVoteCounts: _
+                            reactionVoteCounts: h
                         })
                     }),
-                    (0, a.jsx)(o.TabBar.Panel, {
+                    (0, l.jsx)(o.TabBar.Panel, {
                         id: u,
-                        'aria-label': p,
-                        className: E.panel,
+                        'aria-label': j,
+                        className: M.panel,
                         children:
-                            null != f && h > 0
-                                ? (0, a.jsx)(P, {
+                            null != f && x > 0
+                                ? (0, l.jsx)(P, {
                                       message: n,
                                       reaction: f,
                                       channel: c
                                   })
-                                : (0, a.jsx)(O, {})
+                                : (0, l.jsx)(k, {})
                     })
                 ]
             })

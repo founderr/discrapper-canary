@@ -6,8 +6,8 @@ a.d(t, {
     a(47120);
 var n = a(200651),
     s = a(192379),
-    r = a(557533),
-    i = a.n(r),
+    i = a(557533),
+    r = a.n(i),
     l = a(39383),
     o = a.n(l),
     c = a(608863),
@@ -39,10 +39,10 @@ class k extends s.PureComponent {
         window.removeEventListener('keydown', this.handleKeyDown);
     }
     render() {
-        let { className: e, TrackClick: t, onChangeLocale: a, avoidRouter: s, openNavAriaLabel: r, hideNavAriaLabel: l } = this.props,
+        let { className: e, TrackClick: t, onChangeLocale: a, avoidRouter: s, openNavAriaLabel: i, hideNavAriaLabel: l } = this.props,
             { menuOpen: o } = this.state;
         return (0, n.jsx)('header', {
-            className: i()(p.header, e),
+            className: r()(p.header, e),
             children: (0, n.jsxs)('nav', {
                 className: p.headerInner,
                 children: [
@@ -72,7 +72,7 @@ class k extends s.PureComponent {
                         children: (0, n.jsx)(c.r, {
                             open: o,
                             'aria-haspopup': 'true',
-                            'aria-label': o ? l : r,
+                            'aria-label': o ? l : i,
                             'aria-expanded': o,
                             'aria-controls': this._mainNavId,
                             onClick: this.toggleMenu

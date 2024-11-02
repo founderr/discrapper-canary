@@ -5,40 +5,40 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(763472),
-    a = n(49012),
-    l = n(591759),
-    r = n(915863);
+var l = n(763472),
+    r = n(49012),
+    a = n(591759),
+    s = n(915863);
 function o(e) {
     let { activity: t, color: n, user: o, look: c, onAction: u } = e;
     if ((null == t ? void 0 : t.buttons) == null || t.buttons.length < 1) return null;
     async function d(e, t, n) {
         try {
-            let i = await (0, s.sd)(e, t);
+            let i = await (0, l.sd)(e, t);
             if (i.button_urls.length <= n) return;
-            let r = i.button_urls[n];
-            if ('string' != typeof r) return;
-            let o = l.Z.safeParseWithQuery(r);
+            let s = i.button_urls[n];
+            if ('string' != typeof s) return;
+            let o = a.Z.safeParseWithQuery(s);
             if (null == o || null == o.protocol || null == o.hostname) return;
-            (0, a.q)({
-                href: l.Z.format(o),
+            (0, r.q)({
+                href: a.Z.format(o),
                 trusted: !1
             });
         } catch (e) {}
     }
     return (0, i.jsx)(i.Fragment, {
-        children: t.buttons.map((e, s) =>
+        children: t.buttons.map((e, l) =>
             (0, i.jsx)(
-                r.Z,
+                s.Z,
                 {
                     color: n,
                     look: c,
                     onClick: () => {
-                        null == u || u(), d(t, o.id, s);
+                        null == u || u(), d(t, o.id, l);
                     },
                     children: e
                 },
-                'customButton-'.concat(s)
+                'customButton-'.concat(l)
             )
         )
     });

@@ -4,30 +4,30 @@ n.d(t, {
     }
 });
 var i = n(442837),
-    a = n(201895),
-    s = n(557135),
-    r = n(703656),
-    l = n(592125),
-    o = n(979651),
+    r = n(201895),
+    l = n(557135),
+    a = n(703656),
+    o = n(592125),
+    s = n(979651),
     c = n(66999),
     u = n(981631);
 function d(e, t) {
-    let n = (0, i.e7)([l.Z], () => l.Z.getChannel(t)),
+    let n = (0, i.e7)([o.Z], () => o.Z.getChannel(t)),
         { needSubscriptionToAccess: d } = (0, c.Z)(null == n ? void 0 : n.id);
     if (null == n || d) return null;
-    let _ = n.isGuildVocal(),
-        E = (0, a.ZP)({ channel: n });
+    let m = n.isGuildVocal(),
+        f = (0, r.ZP)({ channel: n });
     return {
         navigateToChannel: () => {
-            _
-                ? s.Z.handleVoiceConnect({
+            m
+                ? l.Z.handleVoiceConnect({
                       channel: n,
-                      connected: o.Z.isInChannel(n.id),
+                      connected: s.Z.isInChannel(n.id),
                       needSubscriptionToAccess: !1,
                       routeDirectlyToChannel: !0
                   })
-                : (0, r.uL)(u.Z5c.CHANNEL(e, n.id));
+                : (0, a.uL)(u.Z5c.CHANNEL(e, n.id));
         },
-        ariaLabel: E
+        ariaLabel: f
     };
 }

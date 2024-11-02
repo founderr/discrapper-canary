@@ -1,30 +1,30 @@
 n.d(t, {
     Ng: function () {
-        return S;
+        return I;
     },
     OC: function () {
-        return R;
+        return y;
     },
     dg: function () {
-        return g;
+        return S;
     },
     dp: function () {
-        return p;
-    },
-    f3: function () {
         return m;
     },
+    f3: function () {
+        return E;
+    },
     nA: function () {
-        return A;
-    },
-    qF: function () {
-        return h;
-    },
-    uV: function () {
         return T;
     },
+    qF: function () {
+        return p;
+    },
+    uV: function () {
+        return v;
+    },
     vY: function () {
-        return N;
+        return b;
     }
 }),
     n(47120);
@@ -37,13 +37,13 @@ var r = n(112456),
     u = n(430824),
     c = n(594174),
     d = n(380684),
-    _ = n(74538),
-    E = n(981631),
-    f = n(474936);
-function h(e, t) {
-    return e instanceof File ? e : p(e.data, e.filename, t);
+    f = n(74538),
+    _ = n(981631),
+    h = n(474936);
+function p(e, t) {
+    return e instanceof File ? e : m(e.data, e.filename, t);
 }
-function p(e, t, r) {
+function m(e, t, r) {
     let i = n(643907);
     if (null == t && ((t = 'unknown'), 'type' in e)) {
         let n = i.extension(e.type);
@@ -51,7 +51,7 @@ function p(e, t, r) {
     }
     return null == r && ('type' in e && (r = e.type), (r = null != r ? r : i.lookup(t))), new File([e], t, { type: r });
 }
-let I = [
+let g = [
     {
         reType: /^image\/vnd.adobe.photoshop/,
         klass: 'photoshop'
@@ -109,41 +109,41 @@ let I = [
         klass: 'audio'
     }
 ];
-function m(e) {
-    return T(e.name, e.type);
+function E(e) {
+    return v(e.name, e.type);
 }
-function T(e, t) {
+function v(e, t) {
     var n;
     e = null !== (n = null == e ? void 0 : e.toLowerCase()) && void 0 !== n ? n : '';
-    let r = s().find(I, (n) => (null != n.reType && null != t ? n.reType.test(t) : null != n.reName && '' !== e && n.reName.test(e)));
+    let r = s().find(g, (n) => (null != n.reType && null != t ? n.reType.test(t) : null != n.reName && '' !== e && n.reName.test(e)));
     return null != r ? r.klass : 'unknown';
 }
-function S(e) {
+function I(e) {
     return i().filesize(e);
 }
-function g(e) {
+function S(e) {
     let t = c.default.getCurrentUser();
     o.Z.trackExposure({ location: 'de18ec_1' }), l.Z.trackExposure({ location: 'de18ec_2' });
-    let n = _.ZP.getUserMaxFileSize(t);
+    let n = f.ZP.getUserMaxFileSize(t);
     if (null == e) return n;
     let r = u.Z.getGuild(e),
-        i = null != r ? f.HO[r.premiumTier].limits.fileSize : E.mBz;
+        i = null != r ? h.HO[r.premiumTier].limits.fileSize : _.mBz;
     return (0, d.XS)() && null != r && r.premiumTier < 2 && n < i ? n : Math.max(i, n);
 }
-function A(e, t) {
-    let n = g(t);
+function T(e, t) {
+    let n = S(t);
     return Array.from(e).some((e) => e.size > n);
 }
-function N(e) {
+function b(e) {
     return (
         (function (e) {
             let t = 0;
             for (let n of e) t += n.size;
             return t;
-        })(e) > R()
+        })(e) > y()
     );
 }
-function R() {
+function y() {
     let e = c.default.getCurrentUser();
     return null != e && e.isStaff() ? 524288000 : 524288000;
 }

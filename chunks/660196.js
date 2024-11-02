@@ -4,10 +4,10 @@ n.d(t, {
     }
 });
 var i = n(192379),
-    s = n(442837),
-    a = n(367907),
-    l = n(906732),
-    r = n(703656),
+    l = n(442837),
+    r = n(367907),
+    a = n(906732),
+    s = n(703656),
     o = n(626135),
     c = n(730647),
     u = n(289393),
@@ -15,34 +15,34 @@ var i = n(192379),
     h = n(981631);
 function m(e) {
     var t;
-    let { guildId: n, groupListingId: m, location: p, relevantSubscriptionListingIds: _ } = e,
-        f = (0, c.f)('useTrackRoleSubscriptionUpsellAnalytics'),
-        { activeSubscription: E } = (0, d.Z)(m),
-        g = null != E,
-        C = (0, s.Wu)(
+    let { guildId: n, groupListingId: m, location: p, relevantSubscriptionListingIds: f } = e,
+        g = (0, c.f)('useTrackRoleSubscriptionUpsellAnalytics'),
+        { activeSubscription: C } = (0, d.Z)(m),
+        x = null != C,
+        v = (0, l.Wu)(
             [u.Z],
             () =>
-                (null != _ ? _ : []).filter((e) => {
+                (null != f ? f : []).filter((e) => {
                     var t;
                     return (null === (t = u.Z.getSubscriptionListing(e)) || void 0 === t ? void 0 : t.published) === !0;
                 }),
-            [_]
+            [f]
         ),
-        { analyticsLocations: I } = (0, l.ZP)(null !== (t = (0, r.DR)()) && void 0 !== t ? t : []),
-        T = i.useRef(!1);
+        { analyticsLocations: _ } = (0, a.ZP)(null !== (t = (0, s.DR)()) && void 0 !== t ? t : []),
+        I = i.useRef(!1);
     i.useEffect(() => {
-        f &&
+        g &&
             null != m &&
-            null != C &&
-            !T.current &&
-            ((T.current = !0),
+            null != v &&
+            !I.current &&
+            ((I.current = !0),
             o.default.track(h.rMx.ROLE_SUBSCRIPTION_LISTING_UPSELL_PAGE_VIEWED, {
                 role_subscription_group_listing_id: m,
-                role_subscription_listing_ids: C,
-                is_premium_member: g,
-                location_stack: I,
+                role_subscription_listing_ids: v,
+                is_premium_member: x,
+                location_stack: _,
                 location: p,
-                ...(0, a.hH)(n)
+                ...(0, r.hH)(n)
             }));
-    }, [n, m, f, p, C, g, I]);
+    }, [n, m, g, p, v, x, _]);
 }

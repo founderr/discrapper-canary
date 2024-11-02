@@ -12,12 +12,12 @@ var r,
     u = n(100621),
     c = n(481060),
     d = n(686546),
-    _ = n(540059),
-    E = n(855981),
-    f = n(55543),
-    h = n(364677);
+    f = n(540059),
+    _ = n(855981),
+    h = n(55543),
+    p = n(364677);
 ((r = i || (i = {}))[(r.UPDATE = 0)] = 'UPDATE'), (r[(r.NEW = 1)] = 'NEW');
-let p = {
+let m = {
     config: {
         friction: 26,
         tension: 700,
@@ -41,26 +41,26 @@ let p = {
     }
 };
 t.Z = s.memo(function (e) {
-    let { className: t, disabled: n = !1, innerClassName: r, childClassName: i, iconClassName: s, icon: o, children: I, onClick: m, isActive: T, onMouseEnter: S, onMouseLeave: g, onFocus: A, onBlur: N, pulse: R, sparkle: O, notification: v, 'aria-label': C, 'aria-expanded': L, 'aria-haspopup': D, 'aria-controls': y } = e,
-        b = (0, _.Q)('ChannelTextAreaButton'),
-        M = (0, c.useTransition)(null != I, {
-            ...p,
+    let { className: t, disabled: n = !1, innerClassName: r, childClassName: i, iconClassName: s, icon: o, children: g, onClick: E, isActive: v, onMouseEnter: I, onMouseLeave: S, onFocus: T, onBlur: b, pulse: y, sparkle: A, notification: N, 'aria-label': C, 'aria-expanded': R, 'aria-haspopup': O, 'aria-controls': D } = e,
+        L = (0, f.Q)('ChannelTextAreaButton'),
+        x = (0, c.useTransition)(null != g, {
+            ...m,
             keys: (e) => (e ? 'children' : 'icon')
         }),
-        P = (e) => {
+        w = (e) => {
             let { component: t } = e;
-            return null != v
+            return null != N
                 ? (0, a.jsxs)('div', {
-                      className: h.buttonContent,
+                      className: p.buttonContent,
                       children: [
                           (0, a.jsx)(d.ZP, {
-                              className: h.iconMask,
+                              className: p.iconMask,
                               mask: d.QS.CHAT_INPUT_BUTTON_NOTIFICATION,
-                              width: b ? 20 : 24,
-                              height: b ? 20 : 24,
+                              width: L ? 20 : 24,
+                              height: L ? 20 : 24,
                               children: t
                           }),
-                          (0, a.jsx)('span', { className: h.notificationDot })
+                          (0, a.jsx)('span', { className: p.notificationDot })
                       ]
                   })
                 : t;
@@ -69,17 +69,17 @@ t.Z = s.memo(function (e) {
         look: c.Button.Looks.BLANK,
         size: c.Button.Sizes.NONE,
         'aria-label': C,
-        'aria-expanded': L,
-        'aria-haspopup': D,
-        'aria-controls': y,
+        'aria-expanded': R,
+        'aria-haspopup': O,
+        'aria-controls': D,
         disabled: n,
-        className: l()(t, { [h.active]: T }),
-        innerClassName: l()(h.button, r, { [h.pulseButton]: R }),
-        onClick: m,
-        onMouseEnter: S,
-        onMouseLeave: g,
-        onFocus: A,
-        onBlur: N,
+        className: l()(t, { [p.active]: v }),
+        innerClassName: l()(p.button, r, { [p.pulseButton]: y }),
+        onClick: E,
+        onMouseEnter: I,
+        onMouseLeave: S,
+        onFocus: T,
+        onBlur: b,
         focusProps: {
             offset: {
                 top: 4,
@@ -87,15 +87,15 @@ t.Z = s.memo(function (e) {
             }
         },
         children: [
-            M((e, t, n) => {
+            x((e, t, n) => {
                 let { key: r } = n;
                 return t
                     ? (0, a.jsx)(
                           u.animated.div,
                           {
                               style: e,
-                              className: l()(h.buttonWrapper, i),
-                              children: P({ component: I })
+                              className: l()(p.buttonWrapper, i),
+                              children: w({ component: g })
                           },
                           r
                       )
@@ -104,10 +104,10 @@ t.Z = s.memo(function (e) {
                             u.animated.div,
                             {
                                 style: e,
-                                className: l()(h.buttonWrapper, i),
-                                children: P({
+                                className: l()(p.buttonWrapper, i),
+                                children: w({
                                     component: (0, a.jsx)(o, {
-                                        className: l()(h.icon, s, { [h.pulseIcon]: R }),
+                                        className: l()(p.icon, s, { [p.pulseIcon]: y }),
                                         color: 'currentColor'
                                     })
                                 })
@@ -116,10 +116,10 @@ t.Z = s.memo(function (e) {
                         )
                       : void 0;
             }),
-            O &&
+            A &&
                 (0, a.jsxs)('div', {
-                    className: h.sparkleContainer,
-                    children: [(0, a.jsx)(f.Z, { className: h.sparkleStar }), (0, a.jsx)(E.Z, { className: h.sparklePlus })]
+                    className: p.sparkleContainer,
+                    children: [(0, a.jsx)(h.Z, { className: p.sparkleStar }), (0, a.jsx)(_.Z, { className: p.sparklePlus })]
                 })
         ]
     });

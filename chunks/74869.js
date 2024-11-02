@@ -1,51 +1,51 @@
 t.d(n, {
     Z: function () {
-        return m;
+        return p;
     }
 }),
     t(47120);
-var o = t(200651),
-    r = t(192379),
-    a = t(348327),
-    i = t.n(a),
-    l = t(658722),
-    c = t.n(l),
+var r = t(200651),
+    o = t(192379),
+    i = t(348327),
+    l = t.n(i),
+    a = t(658722),
+    c = t.n(a),
     u = t(442837),
-    s = t(481060),
-    d = t(492435),
-    _ = t(353926),
-    S = t(499533),
-    g = t(689938);
-function E(e) {
-    let { id: n, experiment: t, currentBucket: r } = e;
-    return (0, o.jsxs)(
-        s.MenuItem,
+    d = t(481060),
+    s = t(492435),
+    g = t(353926),
+    m = t(499533),
+    b = t(388032);
+function f(e) {
+    let { id: n, experiment: t, currentBucket: o } = e;
+    return (0, r.jsxs)(
+        d.MenuItem,
         {
             id: n,
             label: t.title,
-            action: () => (0, d.rX)(n, null),
+            action: () => (0, s.rX)(n, null),
             children: [
                 t.buckets.map((e) =>
-                    (0, o.jsx)(
-                        s.MenuCheckboxItem,
+                    (0, r.jsx)(
+                        d.MenuCheckboxItem,
                         {
                             id: ''.concat(e),
-                            label: S.Z.getExperimentBucketName(e),
-                            checked: e === r,
-                            action: () => (0, d.rX)(n, e)
+                            label: m.Z.getExperimentBucketName(e),
+                            checked: e === o,
+                            action: () => (0, s.rX)(n, e)
                         },
                         ''.concat(e)
                     )
                 ),
-                (0, o.jsx)(s.MenuGroup, {
+                (0, r.jsx)(d.MenuGroup, {
                     children:
-                        -1 !== r &&
-                        (0, o.jsx)(s.MenuItem, {
+                        -1 !== o &&
+                        (0, r.jsx)(d.MenuItem, {
                             id: 'clear-override',
                             label: 'Clear Override',
                             color: 'danger',
-                            icon: s.TrashIcon,
-                            action: () => (0, d.rX)(n, null)
+                            icon: d.TrashIcon,
+                            action: () => (0, s.rX)(n, null)
                         })
                 })
             ]
@@ -53,70 +53,70 @@ function E(e) {
         n
     );
 }
-function m() {
+function p() {
     let e = (0, u.e7)(
-            [_.Z, _.Z],
+            [g.Z, g.Z],
             () => {
-                let e = _.Z.getRegisteredExperiments();
+                let e = g.Z.getRegisteredExperiments();
                 return Object.keys(e).map((n) => {
                     let t = e[n],
-                        o = _.Z.getExperimentOverrideDescriptor(n);
+                        r = g.Z.getExperimentOverrideDescriptor(n);
                     return {
                         id: n,
                         experiment: t,
-                        currentBucket: null != o ? o.bucket : -1
+                        currentBucket: null != r ? r.bucket : -1
                     };
                 });
             },
             [],
-            i()
+            l()
         ),
-        [n, t] = r.useState(''),
-        [a, l] = r.useState([]);
-    r.useEffect(() => {
+        [n, t] = o.useState(''),
+        [i, a] = o.useState([]);
+    o.useEffect(() => {
         if (0 === n.trim().length) {
-            l(e);
+            a(e);
             return;
         }
-        l(e.filter((e) => c()(n, e.experiment.title.toLowerCase())));
+        a(e.filter((e) => c()(n, e.experiment.title.toLowerCase())));
     }, [e, n]);
-    let d = r.useMemo(
+    let s = o.useMemo(
             () =>
-                a.filter((e) => {
+                i.filter((e) => {
                     let { currentBucket: n } = e;
                     return -1 !== n;
                 }),
-            [a]
+            [i]
         ),
-        S = r.useMemo(
+        m = o.useMemo(
             () =>
-                a.filter((e) => {
+                i.filter((e) => {
                     let { currentBucket: n } = e;
                     return -1 === n;
                 }),
-            [a]
+            [i]
         ),
-        m = r.useMemo(() => d.map(E), [d]),
-        I = r.useMemo(() => S.map(E), [S]);
+        p = o.useMemo(() => s.map(f), [s]),
+        _ = o.useMemo(() => m.map(f), [m]);
     return [
-        (0, o.jsx)(
-            s.MenuControlItem,
+        (0, r.jsx)(
+            d.MenuControlItem,
             {
                 id: 'experiments-search',
-                control: (e, r) =>
-                    (0, o.jsx)(s.MenuSearchControl, {
+                control: (e, o) =>
+                    (0, r.jsx)(d.MenuSearchControl, {
                         ...e,
                         query: n,
                         onChange: t,
-                        ref: r,
-                        placeholder: g.Z.Messages.SEARCH
+                        ref: o,
+                        placeholder: b.intl.string(b.t['5h0QOD'])
                     })
             },
             'experiments-search'
         ),
-        (0, o.jsx)(s.MenuSeparator, {}, 'separator'),
-        ...m,
-        m.length > 0 ? (0, o.jsx)(s.MenuSeparator, {}, 'separator-2') : null,
-        ...I
+        (0, r.jsx)(d.MenuSeparator, {}, 'separator'),
+        ...p,
+        p.length > 0 ? (0, r.jsx)(d.MenuSeparator, {}, 'separator-2') : null,
+        ..._
     ];
 }

@@ -1,73 +1,73 @@
-s.r(t);
-var n = s(200651);
-s(192379);
-var i = s(442837),
-    o = s(481060),
-    a = s(600164),
-    r = s(418632),
-    l = s(594174),
-    c = s(689938),
-    d = s(936404);
-function u(e) {
-    let { onClose: t } = e,
-        a = (0, i.e7)([l.default], () => l.default.getCurrentUser());
+n.r(e);
+var i = n(200651);
+n(192379);
+var o = n(442837),
+    s = n(481060),
+    r = n(600164),
+    l = n(418632),
+    a = n(594174),
+    c = n(388032),
+    d = n(936404);
+function u(t) {
+    let { onClose: e } = t,
+        r = (0, o.e7)([a.default], () => a.default.getCurrentUser());
     function d() {
-        null == t || t();
+        null == e || e();
     }
     function u() {
         d(),
-            (0, o.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([s.e('9343'), s.e('64031')]).then(s.bind(s, 642298));
-                return (t) => (0, n.jsx)(e, { ...t });
+            (0, s.openModalLazy)(async () => {
+                let { default: t } = await Promise.all([n.e('9343'), n.e('64031')]).then(n.bind(n, 642298));
+                return (e) => (0, i.jsx)(t, { ...e });
             });
     }
-    return (null == a ? void 0 : a.email) == null
-        ? (0, n.jsx)(o.Button, {
+    return (null == r ? void 0 : r.email) == null
+        ? (0, i.jsx)(s.Button, {
               onClick: u,
-              color: o.Button.Colors.BRAND,
-              look: o.Button.Looks.FILLED,
-              children: c.Z.Messages.ADD_EMAIL_SHORT
+              color: s.Button.Colors.BRAND,
+              look: s.Button.Looks.FILLED,
+              children: c.intl.string(c.t.ydw5nZ)
           })
-        : (0, n.jsxs)(n.Fragment, {
+        : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, n.jsx)(o.Button, {
+                  (0, i.jsx)(s.Button, {
                       onClick: u,
-                      color: o.Button.Colors.PRIMARY,
-                      look: o.Button.Looks.LINK,
-                      children: c.Z.Messages.CHANGE_EMAIL_SHORT
+                      color: s.Button.Colors.PRIMARY,
+                      look: s.Button.Looks.LINK,
+                      children: c.intl.string(c.t.Vm8akJ)
                   }),
-                  (0, n.jsx)(r.Z, {
-                      color: o.Button.Colors.BRAND,
+                  (0, i.jsx)(l.Z, {
+                      color: s.Button.Colors.BRAND,
                       onClick: d
                   })
               ]
           });
 }
-t.default = function (e) {
-    let { onClose: t, transitionState: s } = e;
-    return (0, n.jsxs)(o.ModalRoot, {
-        transitionState: s,
+e.default = function (t) {
+    let { onClose: e, transitionState: n } = t;
+    return (0, i.jsxs)(s.ModalRoot, {
+        transitionState: n,
         children: [
-            (0, n.jsx)(o.ModalHeader, {
-                children: (0, n.jsx)(o.FormTitle, {
-                    tag: o.FormTitleTags.H4,
-                    children: c.Z.Messages.PREMIUM_NOT_VERIFIED
+            (0, i.jsx)(s.ModalHeader, {
+                children: (0, i.jsx)(s.FormTitle, {
+                    tag: s.FormTitleTags.H4,
+                    children: c.intl.string(c.t.UZLrY2)
                 })
             }),
-            (0, n.jsxs)(o.ModalContent, {
+            (0, i.jsxs)(s.ModalContent, {
                 children: [
-                    (0, n.jsx)('div', { className: d.imageUnverified }),
-                    (0, n.jsx)(o.Text, {
+                    (0, i.jsx)('div', { className: d.imageUnverified }),
+                    (0, i.jsx)(s.Text, {
                         variant: 'text-md/normal',
                         className: d.message,
-                        children: c.Z.Messages.PREMIUM_NOT_VERIFIED_BODY
+                        children: c.intl.string(c.t['0LgOKC'])
                     })
                 ]
             }),
-            (0, n.jsx)(o.ModalFooter, {
-                children: (0, n.jsx)(a.Z, {
-                    justify: a.Z.Justify.END,
-                    children: (0, n.jsx)(u, { onClose: t })
+            (0, i.jsx)(s.ModalFooter, {
+                children: (0, i.jsx)(r.Z, {
+                    justify: r.Z.Justify.END,
+                    children: (0, i.jsx)(u, { onClose: e })
                 })
             })
         ]

@@ -6,7 +6,7 @@ n.d(t, {
         return o;
     },
     Gx: function () {
-        return E;
+        return _;
     },
     XX: function () {
         return l;
@@ -18,7 +18,7 @@ n.d(t, {
         return c;
     },
     iG: function () {
-        return _;
+        return f;
     },
     ut: function () {
         return s;
@@ -46,36 +46,36 @@ function c(e) {
 function d(e) {
     return 'message-accessories-'.concat(e.id);
 }
-function _(e, t, n) {
+function f(e, t, n) {
     let c = e.type === a.uaV.REPLY && null != e.messageReference,
-        _ = e.embeds.length > 0,
-        E = e.attachments.length > 0,
-        f = e.stickerItems.length > 0,
-        h = e.codedLinks.length > 0,
-        p = e.hasFlag(a.iLy.HAS_THREAD),
-        I = _ || E || f || h || p || e.type === a.uaV.THREAD_CREATED,
-        m = _ && e.content === e.embeds[0].url && e.embeds[0].type === a.hBH.GIFV,
-        T = e.type !== a.uaV.DEFAULT || (!m && '' !== e.content),
-        S = (0, i.Z)(e),
-        g = !S && (null == n ? void 0 : n.hasTimestamp) !== !1,
-        A = l(e, t),
-        N = o(e),
-        R = S ? '' : ''.concat(c ? N : A, ' ').concat(r.Z0);
-    if (T) {
+        f = e.embeds.length > 0,
+        _ = e.attachments.length > 0,
+        h = e.stickerItems.length > 0,
+        p = e.codedLinks.length > 0,
+        m = e.hasFlag(a.iLy.HAS_THREAD),
+        g = f || _ || h || p || m || e.type === a.uaV.THREAD_CREATED,
+        E = f && e.content === e.embeds[0].url && e.embeds[0].type === a.hBH.GIFV,
+        v = e.type !== a.uaV.DEFAULT || (!E && '' !== e.content),
+        I = (0, i.Z)(e),
+        S = !I && (null == n ? void 0 : n.hasTimestamp) !== !1,
+        T = l(e, t),
+        b = o(e),
+        y = I ? '' : ''.concat(c ? b : T, ' ').concat(r.Z0);
+    if (v) {
         let t = s(e);
-        R += ' '.concat(t);
-    }
-    if (I) {
-        let t = d(e);
-        R += ' '.concat(t);
+        y += ' '.concat(t);
     }
     if (g) {
-        let t = u(e);
-        R += ' '.concat(r.fy, ' ').concat(t);
+        let t = d(e);
+        y += ' '.concat(t);
     }
-    return R.trim();
+    if (S) {
+        let t = u(e);
+        y += ' '.concat(r.fy, ' ').concat(t);
+    }
+    return y.trim();
 }
-function E(e) {
+function _(e) {
     if (0 === e.reactions.length) return;
     let t = c(e);
     return ''.concat(r.Mb, ' ').concat(t);

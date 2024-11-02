@@ -1,62 +1,62 @@
-var a = i(200651);
+var t = i(200651);
 i(192379);
 var o = i(120356),
-    t = i.n(o),
+    a = i.n(o),
     l = i(481060),
     s = i(709586),
     r = i(267642),
-    c = i(689938),
+    c = i(388032),
     d = i(844396);
 n.Z = (e) => {
     let n,
         i,
         o,
-        { guildFeature: f, guild: u, className: p, hideTooltip: x = !1, tooltipPosition: _ = 'left', onClick: m } = e,
-        g = u.hasFeature(f),
-        C = (0, r._p)(f);
-    return (g
-        ? (null != C && (o = c.Z.Messages.PREMIUM_GUILD_INCLUDED),
-          (n = (0, a.jsxs)(a.Fragment, {
+        { guildFeature: f, guild: u, className: p, hideTooltip: x = !1, tooltipPosition: m = 'left', onClick: g } = e,
+        b = u.hasFeature(f),
+        h = (0, r._p)(f);
+    return (b
+        ? (null != h && (o = c.intl.string(c.t.hUgjyM)),
+          (n = (0, t.jsxs)(t.Fragment, {
               children: [
-                  (0, a.jsx)(s.Z, { className: d.unlockedIcon }),
-                  (0, a.jsx)(l.Heading, {
+                  (0, t.jsx)(s.Z, { className: d.unlockedIcon }),
+                  (0, t.jsx)(l.Heading, {
                       variant: 'eyebrow',
                       className: d.description,
-                      children: c.Z.Messages.PREMIUM_GUILD_TIER_UNLOCKED
+                      children: c.intl.string(c.t['0O+87u'])
                   })
               ]
           })))
-        : (null != C && (o = c.Z.Messages.CLICK_TO_LEARN_MORE),
-          (n = (0, a.jsxs)(a.Fragment, {
+        : (null != h && (o = c.intl.string(c.t.L2wYYm)),
+          (n = (0, t.jsxs)(t.Fragment, {
               children: [
-                  (0, a.jsx)(s.Z, { className: d.icon }),
-                  (0, a.jsx)(l.Heading, {
+                  (0, t.jsx)(s.Z, { className: d.icon }),
+                  (0, t.jsx)(l.Heading, {
                       variant: 'eyebrow',
                       className: d.description,
-                      children: null != C && (0, r.e9)(C)
+                      children: null != h && (0, r.e9)(h)
                   })
               ]
           }))),
     (i =
         x || null == o
-            ? (0, a.jsx)('div', {
-                  className: t()(d.availabilityIndicator, p),
+            ? (0, t.jsx)('div', {
+                  className: a()(d.availabilityIndicator, p),
                   children: n
               })
-            : (0, a.jsx)(l.Tooltip, {
-                  position: _,
+            : (0, t.jsx)(l.Tooltip, {
+                  position: m,
                   text: o,
                   children: (e) =>
-                      (0, a.jsx)('div', {
+                      (0, t.jsx)('div', {
                           ...e,
-                          className: t()(d.availabilityIndicator, p),
+                          className: a()(d.availabilityIndicator, p),
                           children: n
                       })
               })),
-    null == m || g)
+    null == g || b)
         ? i
-        : (0, a.jsx)(l.Clickable, {
-              onClick: m,
+        : (0, t.jsx)(l.Clickable, {
+              onClick: g,
               className: d.clickable,
               children: i
           });

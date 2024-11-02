@@ -1,29 +1,29 @@
-var n = t(200651);
-t(192379);
-var a = t(481060),
-    i = t(93560);
-s.Z = (e) => {
-    let { label: s, onClick: t, submitting: r } = e;
-    return (0, n.jsx)(a.Clickable, {
-        onClick: r ? void 0 : t,
-        className: i.button,
-        children: (0, n.jsxs)('div', {
-            className: i.contentContainer,
+var i = n(200651);
+n(192379);
+var s = n(481060),
+    r = n(93560);
+t.Z = (e) => {
+    let { label: t, onClick: n, submitting: l } = e;
+    return (0, i.jsx)(s.Clickable, {
+        onClick: l ? void 0 : n,
+        className: r.button,
+        children: (0, i.jsxs)('div', {
+            className: r.contentContainer,
             children: [
-                r
-                    ? (0, n.jsx)(a.Spinner, {
-                          type: a.Spinner.Type.PULSING_ELLIPSIS,
-                          className: i.__invalid_spinner
+                l
+                    ? (0, i.jsx)(s.Spinner, {
+                          type: s.Spinner.Type.PULSING_ELLIPSIS,
+                          className: r.__invalid_spinner
                       })
-                    : (0, n.jsx)(a.Text, {
+                    : (0, i.jsx)(s.Text, {
                           variant: 'text-md/medium',
-                          className: i.label,
-                          children: s
+                          className: r.label,
+                          children: t
                       }),
-                (0, n.jsx)(a.ChevronSmallDownIcon, {
+                (0, i.jsx)(s.ChevronSmallDownIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: i.arrow
+                    className: r.arrow
                 })
             ]
         })

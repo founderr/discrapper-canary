@@ -1,6 +1,6 @@
 n.d(t, {
     k: function () {
-        return f;
+        return h;
     }
 }),
     n(47120);
@@ -13,7 +13,7 @@ var r,
     u = n(607070),
     c = n(451478),
     d = n(188539);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function _(e, t, n) {
         e
     );
 }
-class E extends (r = a.PureComponent) {
+class _ extends (r = a.PureComponent) {
     async componentDidMount() {
         let { importData: e, nextScene: t, pauseWhileUnfocused: r, pause: i, isWindowFocused: a, useReducedMotion: s } = this.props,
             [o, { default: l }] = await Promise.all([e(), n.e('23755').then(n.t.bind(n, 500923, 23))]);
@@ -74,38 +74,38 @@ class E extends (r = a.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            _(this, 'animationRef', null),
-            _(this, 'animation', void 0),
-            _(this, 'currentScene', this.props.nextScene),
-            _(this, 'isUnmounted', !1),
-            _(this, 'handleLoopComplete', () => {
+            f(this, 'animationRef', null),
+            f(this, 'animation', void 0),
+            f(this, 'currentScene', this.props.nextScene),
+            f(this, 'isUnmounted', !1),
+            f(this, 'handleLoopComplete', () => {
                 let { onSceneComplete: e, nextScene: t } = this.props;
                 null != e && e(this.currentScene), this.playScene(t);
             }),
-            _(this, 'handleComplete', () => {
+            f(this, 'handleComplete', () => {
                 let { onSceneComplete: e } = this.props;
                 null != e && e(this.currentScene);
             }),
-            _(this, 'handleEnterFrame', (e) => {
+            f(this, 'handleEnterFrame', (e) => {
                 let { onEnterFrame: t } = this.props;
                 null == t || t(this.currentScene, e);
             }),
-            _(this, 'handleSetRef', (e) => {
+            f(this, 'handleSetRef', (e) => {
                 this.animationRef = e;
                 let { animationRef: t } = this.props;
                 null != t && t(e);
             });
     }
 }
-_(E, 'defaultProps', {
+f(_, 'defaultProps', {
     pauseWhileUnfocused: !0,
     pause: !1
 });
-let f = (e) => {
+let h = (e) => {
     let { componentRef: t, ignoreReducedMotion: n = !1, ...r } = e,
         a = (0, l.e7)([c.Z], () => c.Z.isFocused()),
         s = (0, l.e7)([u.Z], () => u.Z.useReducedMotion);
-    return (0, i.jsx)(E, {
+    return (0, i.jsx)(_, {
         ...r,
         isWindowFocused: a,
         useReducedMotion: s && !n,

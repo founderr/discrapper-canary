@@ -12,18 +12,18 @@ if (n(322499)() || n(882171)()) {
         u = n(690244),
         c = u('%Map%', !0),
         d = u('%Set%', !0),
-        _ = n(192853),
-        E = _('Array.prototype.push'),
-        f = _('String.prototype.charCodeAt'),
-        h = _('String.prototype.slice'),
-        p = function (e, t) {
+        f = n(192853),
+        _ = f('Array.prototype.push'),
+        h = f('String.prototype.charCodeAt'),
+        p = f('String.prototype.slice'),
+        m = function (e, t) {
             if (t + 1 >= e.length) return t + 1;
-            var n = f(e, t);
+            var n = h(e, t);
             if (n < 55296 || n > 56319) return t + 1;
-            var r = f(e, t + 1);
+            var r = h(e, t + 1);
             return r < 56320 || r > 57343 ? t + 1 : t + 2;
         },
-        I = function (e) {
+        g = function (e) {
             var t = 0;
             return {
                 next: function () {
@@ -39,14 +39,14 @@ if (n(322499)() || n(882171)()) {
                 }
             };
         },
-        m = function (e, t) {
-            if (o(e) || i(e)) return I(e);
+        E = function (e, t) {
+            if (o(e) || i(e)) return g(e);
             if (l(e)) {
                 var n = 0;
                 return {
                     next: function () {
-                        var t = p(e, n),
-                            r = h(e, n, t);
+                        var t = m(e, n),
+                            r = p(e, n, t);
                         return (
                             (n = t),
                             {
@@ -60,49 +60,49 @@ if (n(322499)() || n(882171)()) {
             if (t && void 0 !== e['_es6-shim iterator_']) return e['_es6-shim iterator_']();
         };
     if (c || d) {
-        var T = n(403006),
-            S = n(72859),
-            g = _('Map.prototype.forEach', !0),
-            A = _('Set.prototype.forEach', !0);
+        var v = n(403006),
+            I = n(72859),
+            S = f('Map.prototype.forEach', !0),
+            T = f('Set.prototype.forEach', !0);
         if (void 0 === r || !r.versions || !r.versions.node) {
-            var N = _('Map.prototype.iterator', !0),
-                R = _('Set.prototype.iterator', !0);
+            var b = f('Map.prototype.iterator', !0),
+                y = f('Set.prototype.iterator', !0);
         }
-        var O = _('Map.prototype.@@iterator', !0) || _('Map.prototype._es6-shim iterator_', !0),
-            v = _('Set.prototype.@@iterator', !0) || _('Set.prototype._es6-shim iterator_', !0),
+        var A = f('Map.prototype.@@iterator', !0) || f('Map.prototype._es6-shim iterator_', !0),
+            N = f('Set.prototype.@@iterator', !0) || f('Set.prototype._es6-shim iterator_', !0),
             C = function (e) {
-                if (T(e)) {
-                    if (N) return a(N(e));
-                    if (O) return O(e);
-                    if (g) {
+                if (v(e)) {
+                    if (b) return a(b(e));
+                    if (A) return A(e);
+                    if (S) {
                         var t = [];
                         return (
-                            g(e, function (e, n) {
-                                E(t, [n, e]);
+                            S(e, function (e, n) {
+                                _(t, [n, e]);
                             }),
-                            I(t)
+                            g(t)
                         );
                     }
                 }
-                if (S(e)) {
-                    if (R) return a(R(e));
-                    if (v) return v(e);
-                    if (A) {
+                if (I(e)) {
+                    if (y) return a(y(e));
+                    if (N) return N(e);
+                    if (T) {
                         var n = [];
                         return (
-                            A(e, function (e) {
-                                E(n, e);
+                            T(e, function (e) {
+                                _(n, e);
                             }),
-                            I(n)
+                            g(n)
                         );
                     }
                 }
             };
         e.exports = function (e) {
-            return C(e) || m(e);
+            return C(e) || E(e);
         };
     } else
         e.exports = function (e) {
-            if (null != e) return m(e, !0);
+            if (null != e) return E(e, !0);
         };
 }

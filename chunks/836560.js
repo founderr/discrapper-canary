@@ -33,10 +33,10 @@ function a() {
             function a() {
                 'function' == typeof e.removeListener && e.removeListener('error', i), n([].slice.call(arguments));
             }
-            h(e, t, a, { once: !0 }),
+            p(e, t, a, { once: !0 }),
                 'error' !== t &&
                     (function (e, t, n) {
-                        'function' == typeof e.on && h(e, 'error', t, n);
+                        'function' == typeof e.on && p(e, 'error', t, n);
                     })(e, i, { once: !0 });
         });
     }),
@@ -78,7 +78,7 @@ function d(e, t, n) {
         i = c.bind(r);
     return (i.listener = n), (r.wrapFn = i), i;
 }
-function _(e, t, n) {
+function f(e, t, n) {
     var r = e._events;
     if (void 0 === r) return [];
     var i = r[t];
@@ -93,9 +93,9 @@ function _(e, t, n) {
                   for (var t = Array(e.length), n = 0; n < t.length; ++n) t[n] = e[n].listener || e[n];
                   return t;
               })(i)
-            : f(i, i.length);
+            : h(i, i.length);
 }
-function E(e) {
+function _(e) {
     var t = this._events;
     if (void 0 !== t) {
         var n = t[e];
@@ -104,7 +104,7 @@ function E(e) {
     }
     return 0;
 }
-function f(e, t) {
+function h(e, t) {
     for (var n = Array(t), r = 0; r < t; ++r) n[r] = e[r];
     return n;
 }
@@ -144,7 +144,7 @@ Object.defineProperty(a, 'defaultMaxListeners', {
         if (void 0 === l) return !1;
         if ('function' == typeof l) r(l, this, t);
         else {
-            for (var u = l.length, c = f(l, u), n = 0; n < u; ++n) r(c[n], this, t);
+            for (var u = l.length, c = h(l, u), n = 0; n < u; ++n) r(c[n], this, t);
         }
         return !0;
     }),
@@ -199,19 +199,19 @@ Object.defineProperty(a, 'defaultMaxListeners', {
         return this;
     }),
     (a.prototype.listeners = function (e) {
-        return _(this, e, !0);
+        return f(this, e, !0);
     }),
     (a.prototype.rawListeners = function (e) {
-        return _(this, e, !1);
+        return f(this, e, !1);
     }),
     (a.listenerCount = function (e, t) {
-        return 'function' == typeof e.listenerCount ? e.listenerCount(t) : E.call(e, t);
+        return 'function' == typeof e.listenerCount ? e.listenerCount(t) : _.call(e, t);
     }),
-    (a.prototype.listenerCount = E),
+    (a.prototype.listenerCount = _),
     (a.prototype.eventNames = function () {
         return this._eventsCount > 0 ? t(this._events) : [];
     });
-function h(e, t, n, r) {
+function p(e, t, n, r) {
     if ('function' == typeof e.on) r.once ? e.once(t, n) : e.on(t, n);
     else if ('function' == typeof e.addEventListener)
         e.addEventListener(t, function i(a) {

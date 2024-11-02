@@ -10,18 +10,18 @@ n.d(t, {
     }
 });
 var i = n(903797),
-    s = n(731965);
-let l = (0, i.Z)(() => ({
+    l = n(731965);
+let s = (0, i.Z)(() => ({
     query: '',
     isActive: !1,
     selected: null
 }));
 function r(e) {
-    (0, s.j)(() => l.setState({ query: e }));
+    (0, l.j)(() => s.setState({ query: e }));
 }
 function o(e) {
-    (0, s.j)(() => l.setState({ isActive: e }));
+    (0, l.j)(() => s.setState({ isActive: e }));
 }
 function a() {
-    return l().query;
+    return s().query;
 }

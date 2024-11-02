@@ -1,12 +1,12 @@
 n.d(t, {
     OZ: function () {
-        return p;
+        return m;
     },
     ox: function () {
-        return h;
+        return p;
     },
     ub: function () {
-        return I;
+        return g;
     }
 });
 var r = n(200651),
@@ -18,29 +18,29 @@ var r = n(200651),
     u = n(600164),
     c = n(981631),
     d = n(530535),
-    _ = n(113207);
-let { Provider: E, Consumer: f } = i.createContext(c.BRd.DARK);
-class h extends i.PureComponent {
+    f = n(113207);
+let { Provider: _, Consumer: h } = i.createContext(c.BRd.DARK);
+class p extends i.PureComponent {
     render() {
         let { lightSrc: e, darkSrc: t, width: n, height: i, offsetX: a, offsetY: l, style: c } = this.props;
-        return (0, r.jsx)(f, {
-            children: (E) =>
+        return (0, r.jsx)(h, {
+            children: (_) =>
                 (0, r.jsx)(u.Z.Child, {
                     grow: 0,
-                    className: s()(d.image, _.marginBottom40),
+                    className: s()(d.image, f.marginBottom40),
                     style: {
                         ...c,
                         width: n,
                         height: i,
                         marginLeft: a,
                         marginTop: l,
-                        backgroundImage: 'url('.concat((0, o.wj)(E) ? t : e, ')')
+                        backgroundImage: 'url('.concat((0, o.wj)(_) ? t : e, ')')
                     }
                 })
         });
     }
 }
-let p = (e) => {
+let m = (e) => {
     let { children: t, className: n, noteClassName: i, note: a, style: o } = e;
     return (0, r.jsxs)(u.Z.Child, {
         grow: 0,
@@ -54,17 +54,17 @@ let p = (e) => {
                 }),
             null != a
                 ? (0, r.jsx)('div', {
-                      className: s()(i, d.text, _.marginTop8),
+                      className: s()(i, d.text, f.marginTop8),
                       children: a
                   })
                 : null
         ]
     });
 };
-class I extends i.PureComponent {
+class g extends i.PureComponent {
     render() {
         let { children: e, theme: t, className: n, style: i } = this.props;
-        return (0, r.jsx)(E, {
+        return (0, r.jsx)(_, {
             value: t,
             children: (0, r.jsx)(u.Z, {
                 direction: u.Z.Direction.VERTICAL,

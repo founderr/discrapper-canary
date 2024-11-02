@@ -46,7 +46,7 @@ e.exports = function (e) {
             match: t.concat(/\b_/, n),
             scope: 'variable'
         },
-        _ = {
+        f = {
             relevance: 0,
             match: /\b[A-Z]+[a-z]+([A-Z]+[a-z]+)*/,
             scope: 'title.class',
@@ -54,8 +54,8 @@ e.exports = function (e) {
                 _: ['Bool', 'Class', 'Fiber', 'Fn', 'List', 'Map', 'Null', 'Num', 'Object', 'Range', 'Sequence', 'String', 'System']
             }
         },
-        E = e.C_NUMBER_MODE,
-        f = e.COMMENT(/\/\*\*/, /\*\//, {
+        _ = e.C_NUMBER_MODE,
+        h = e.COMMENT(/\/\*\*/, /\*\//, {
             contains: [
                 {
                     match: /@[a-z]+/,
@@ -64,29 +64,29 @@ e.exports = function (e) {
                 'self'
             ]
         }),
-        h = {
+        p = {
             scope: 'subst',
             begin: /%\(/,
             end: /\)/,
-            contains: [E, _, o, d, u]
+            contains: [_, f, o, d, u]
         },
-        p = {
+        m = {
             scope: 'string',
             begin: /"/,
             end: /"/,
             contains: [
-                h,
+                p,
                 {
                     scope: 'char.escape',
                     variants: [{ match: /\\\\|\\["0%abefnrtv]/ }, { match: /\\x[0-9A-F]{2}/ }, { match: /\\u[0-9A-F]{4}/ }, { match: /\\U[0-9A-F]{8}/ }]
                 }
             ]
         };
-    h.contains.push(p);
-    let I = [...r, ...a, ...i],
-        m = {
+    p.contains.push(m);
+    let g = [...r, ...a, ...i],
+        E = {
             relevance: 0,
-            match: t.concat('\\b(?!', I.join('|'), '\\b)', /[a-zA-Z_]\w*(?:[?!]|\b)/),
+            match: t.concat('\\b(?!', g.join('|'), '\\b)', /[a-zA-Z_]\w*(?:[?!]|\b)/),
             className: 'variable'
         };
     return {
@@ -114,17 +114,17 @@ e.exports = function (e) {
                     }
                 ]
             },
-            E,
-            p,
+            _,
+            m,
             {
                 className: 'string',
                 begin: /"""/,
                 end: /"""/
             },
-            f,
+            h,
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
-            _,
+            f,
             {
                 variants: [
                     {
@@ -153,7 +153,7 @@ e.exports = function (e) {
             u,
             d,
             c,
-            m
+            E
         ]
     };
 };

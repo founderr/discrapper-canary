@@ -1,123 +1,123 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return x;
     }
 }),
     n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(392711),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    s = n(392711),
     o = n(100621),
     c = n(442837),
     d = n(481060),
     u = n(207796),
-    _ = n(889711),
-    E = n(931240),
-    h = n(970606),
-    m = n(650461),
-    I = n(35313),
-    p = n(284019),
-    g = n(672775),
-    T = n(601463),
-    S = n(192565),
-    C = n(641037),
-    f = n(689938),
+    h = n(889711),
+    m = n(931240),
+    p = n(970606),
+    g = n(650461),
+    f = n(35313),
+    _ = n(284019),
+    E = n(672775),
+    I = n(601463),
+    C = n(192565),
+    v = n(641037),
+    S = n(388032),
     N = n(837275);
-let A = {
+let T = {
     mass: 1,
     tension: 600,
     friction: 60,
     clamp: !0
 };
-function v(e) {
+function x(e) {
     let { guildId: t, onClose: n } = e,
-        s = (0, m.Wg)(),
+        l = (0, g.Wg)(),
         {
-            progress: v,
-            errors: Z,
-            submitting: L
-        } = (0, c.cj)([m.ZP], () => {
-            var e, n, i, a;
+            progress: x,
+            errors: b,
+            submitting: A
+        } = (0, c.cj)([g.ZP], () => {
+            var e, n, i, r;
             return {
-                progress: null !== (a = null === (e = m.ZP.getStateForGuild(t)) || void 0 === e ? void 0 : e.progress) && void 0 !== a ? a : s,
-                errors: null === (n = m.ZP.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
-                submitting: null === (i = m.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : i.submitting
+                progress: null !== (r = null === (e = g.ZP.getStateForGuild(t)) || void 0 === e ? void 0 : e.progress) && void 0 !== r ? r : l,
+                errors: null === (n = g.ZP.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
+                submitting: null === (i = g.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : i.submitting
             };
         }),
-        R = a.useMemo(() => (0, C.G)(Z), [Z]),
-        [O, x] = a.useState(!1),
-        [b, M] = a.useState(window.innerWidth),
-        [P, D] = a.useState(1),
-        [y, j] = a.useState(!0),
-        U = (0, I.f)(),
-        G = (0, d.useSpring)({
-            opacity: P,
-            config: A,
-            onStart: () => j(!0),
-            onRest: () => j(1 === P)
+        Z = r.useMemo(() => (0, v.G)(b), [b]),
+        [y, L] = r.useState(!1),
+        [R, P] = r.useState(window.innerWidth),
+        [O, j] = r.useState(1),
+        [D, M] = r.useState(!0),
+        w = (0, f.f)(),
+        k = (0, d.useSpring)({
+            opacity: O,
+            config: T,
+            onStart: () => M(!0),
+            onRest: () => M(1 === O)
         }),
-        w = (0, d.useSpring)(
+        U = (0, d.useSpring)(
             {
-                transform: 'translateX('.concat(1 === P ? 0 : (-1 * (b - 380)) / 2 + 47.5, 'px)'),
-                config: A
+                transform: 'translateX('.concat(1 === O ? 0 : (-1 * (R - 380)) / 2 + 47.5, 'px)'),
+                config: T
             },
             'respect-motion-settings'
         ),
-        k = (0, d.useTransition)(0 === P, {
+        G = (0, d.useTransition)(0 === O, {
             from: { opacity: 0 },
             enter: {
                 opacity: 1,
                 delay: 500
             },
-            config: A
+            config: T
         }),
-        B = (0, d.useTransition)(0 === P, {
+        B = (0, d.useTransition)(0 === O, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
-            config: A
+            config: T
         }),
-        H = a.useCallback(
+        H = r.useCallback(
             (e) => {
-                if (e === R.length) D(0), (0, h.Lp)(t, 'signature');
-                else if (0 === P) D(1);
+                if (e === Z.length) j(0), (0, p.Lp)(t, 'signature');
+                else if (0 === O) j(1);
                 else {
                     var n;
-                    E._9(t, {
+                    m._9(t, {
                         currentStep: e,
-                        furthestStep: Math.max(null !== (n = v.furthestStep) && void 0 !== n ? n : 0, e)
+                        furthestStep: Math.max(null !== (n = x.furthestStep) && void 0 !== n ? n : 0, e)
                     });
                 }
             },
-            [P, t, v.furthestStep, R.length]
+            [O, t, x.furthestStep, Z.length]
         );
-    a.useEffect(() => {
-        (0, h.Lp)(t, (0, h.Qh)(v.currentStep));
-    }, [t, v.currentStep]),
-        a.useEffect(() => {
-            let e = (0, _.pP)((0, l.debounce)(() => M(window.innerWidth), 250));
-            return (0, _.YP)(e, document.body), () => (0, _.UC)(e, document.body);
-        }, [P, y]);
-    let V = a.useMemo(() => null != Z && Object.values(Z).some((e) => null != e), [Z]),
-        F = a.useMemo(() => (null != Z && Object.values(Z).length > 0 ? (0, C.G)(Z).find((e) => e.hasError) : null), [Z]),
-        Y = a.useCallback(() => {
-            D(1), E._9(t, { currentStep: null == F ? void 0 : F.index });
+    r.useEffect(() => {
+        (0, p.Lp)(t, (0, p.Qh)(x.currentStep));
+    }, [t, x.currentStep]),
+        r.useEffect(() => {
+            let e = (0, h.pP)((0, s.debounce)(() => P(window.innerWidth), 250));
+            return (0, h.YP)(e, document.body), () => (0, h.UC)(e, document.body);
+        }, [O, D]);
+    let V = r.useMemo(() => null != b && Object.values(b).some((e) => null != e), [b]),
+        F = r.useMemo(() => (null != b && Object.values(b).length > 0 ? (0, v.G)(b).find((e) => e.hasError) : null), [b]),
+        z = r.useCallback(() => {
+            j(1), m._9(t, { currentStep: null == F ? void 0 : F.index });
         }, [null == F ? void 0 : F.index, t]),
-        z = a.useCallback(() => {
+        Y = r.useCallback(() => {
             (0, u.fH)(u.v0.ADMIN_UPSELL);
         }, []),
-        W = a.useCallback(() => {
-            (0, C.V)({
+        W = r.useCallback(() => {
+            (0, v.V)({
                 guildId: t,
                 onSuccess: () => {
-                    z(), n();
+                    Y(), n();
                 },
-                progress: v
+                progress: x
             });
-        }, [t, v, z, n]),
-        K = a.useRef(null),
+        }, [t, x, Y, n]),
+        K = r.useRef(null),
         q =
             null != F
                 ? (0, i.jsxs)('div', {
@@ -133,18 +133,18 @@ function v(e) {
                                   (0, i.jsx)(d.Text, {
                                       variant: 'text-sm/medium',
                                       color: 'header-primary',
-                                      children: f.Z.Messages.CLAN_SUBMIT_ERROR_TITLE
+                                      children: S.intl.string(S.t.M6w76e)
                                   }),
                                   (0, i.jsx)(d.Text, {
                                       variant: 'text-xs/normal',
                                       color: 'text-muted',
-                                      children: f.Z.Messages.CLAN_SUBMIT_ERROR_TEXT.format({
+                                      children: S.intl.format(S.t.nftD29, {
                                           backHook: (e, t) =>
                                               (0, i.jsx)(
                                                   d.Anchor,
                                                   {
                                                       className: N.errorLink,
-                                                      onClick: Y,
+                                                      onClick: z,
                                                       children: e
                                                   },
                                                   t
@@ -158,7 +158,7 @@ function v(e) {
                 : null;
     return (0, i.jsx)(o.animated.div, {
         ref: K,
-        style: U,
+        style: w,
         className: N.modal,
         children: (0, i.jsxs)(d.FocusRingScope, {
             containerRef: K,
@@ -169,7 +169,7 @@ function v(e) {
                     size: d.Button.Sizes.MEDIUM,
                     color: d.Button.Colors.PRIMARY,
                     onClick: n,
-                    children: f.Z.Messages.CLAN_SETUP_MODAL_SAVE_AND_QUIT
+                    children: S.intl.string(S.t.TZftPD)
                 }),
                 (0, i.jsxs)('div', {
                     className: N.content,
@@ -178,40 +178,40 @@ function v(e) {
                             className: N.panel,
                             children: [
                                 (0, i.jsx)(o.animated.div, {
-                                    style: G,
-                                    className: r()(N.stepsContainer, { [N.hidden]: !y }),
-                                    children: (0, i.jsx)(S.Z, { guildId: t })
+                                    style: k,
+                                    className: a()(N.stepsContainer, { [N.hidden]: !D }),
+                                    children: (0, i.jsx)(C.Z, { guildId: t })
                                 }),
                                 (0, i.jsx)('div', {
-                                    className: r()(N.navigationContainer, { [N.elevatedNavigationContainer]: !y }),
-                                    children: (0, i.jsx)(g.Z, {
-                                        steps: R,
-                                        progress: v,
+                                    className: a()(N.navigationContainer, { [N.elevatedNavigationContainer]: !D }),
+                                    children: (0, i.jsx)(E.Z, {
+                                        steps: Z,
+                                        progress: x,
                                         updateCurrentStep: H,
-                                        animationStyle: G,
-                                        animationClassName: r()({ [N.hidden]: !y })
+                                        animationStyle: k,
+                                        animationClassName: a()({ [N.hidden]: !D })
                                     })
                                 })
                             ]
                         }),
                         (0, i.jsx)(o.animated.div, {
-                            style: G,
-                            className: r()(N.divider, {
-                                [N.hidden]: !y,
-                                [N.dividerResponsive]: y
+                            style: k,
+                            className: a()(N.divider, {
+                                [N.hidden]: !D,
+                                [N.dividerResponsive]: D
                             })
                         }),
                         (0, i.jsx)(o.animated.div, {
-                            style: w,
-                            className: r()(N.sidebar, { [N.sidebarResponsive]: y }),
-                            children: (0, i.jsx)(T.Z, {
+                            style: U,
+                            className: a()(N.sidebar, { [N.sidebarResponsive]: D }),
+                            children: (0, i.jsx)(I.Z, {
                                 guildId: t,
-                                signed: O,
-                                setSigned: y ? void 0 : x,
+                                signed: y,
+                                setSigned: D ? void 0 : L,
                                 sidebarWidth: 380,
-                                windowWidth: b,
-                                transition: k,
-                                brandPrimaryColor: v.brandPrimaryColor
+                                windowWidth: R,
+                                transition: G,
+                                brandPrimaryColor: x.brandPrimaryColor
                             })
                         })
                     ]
@@ -226,20 +226,20 @@ function v(e) {
                                 color: d.Tooltip.Colors.GREY,
                                 tooltipClassName: N.tooltip,
                                 text: q,
-                                'aria-label': null != F ? f.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : void 0,
+                                'aria-label': null != F ? S.intl.string(S.t.M6w76e) : void 0,
                                 shouldShow: null != F,
                                 forceOpen: null != F,
                                 children: (e) =>
-                                    (0, i.jsx)(p.Z, {
+                                    (0, i.jsx)(_.Z, {
                                         ...e,
-                                        themeColor: v.brandPrimaryColor,
-                                        disabled: !O || V,
-                                        submitting: L,
+                                        themeColor: x.brandPrimaryColor,
+                                        disabled: !y || V,
+                                        submitting: A,
                                         look: d.Button.Looks.FILLED,
                                         size: d.Button.Sizes.MEDIUM,
                                         color: d.Button.Colors.BRAND,
                                         onClick: W,
-                                        children: f.Z.Messages.FINISH
+                                        children: S.intl.string(S.t['8SuVoK'])
                                     })
                             })
                         })

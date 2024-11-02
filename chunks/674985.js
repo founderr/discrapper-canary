@@ -1,35 +1,35 @@
-var s,
-    a,
+var i,
     r,
-    i,
+    a,
+    s,
     l = n(442837),
     o = n(570140),
     c = n(594174),
-    _ = n(981631);
-let d = null;
-class E extends (i = l.ZP.Store) {
+    d = n(981631);
+let u = null;
+class g extends (s = l.ZP.Store) {
     getHouseMembership() {
-        return d;
+        return u;
     }
 }
-(r = 'HypeSquadStore'),
-    (a = 'displayName') in (s = E)
-        ? Object.defineProperty(s, a, {
-              value: r,
+(a = 'HypeSquadStore'),
+    (r = 'displayName') in (i = g)
+        ? Object.defineProperty(i, r, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (s[a] = r),
-    (t.Z = new E(o.Z, {
+        : (i[r] = a),
+    (t.Z = new g(o.Z, {
         CONNECTION_OPEN: function () {
             let e = c.default.getCurrentUser();
-            null != e && (e.hasFlag(_.xW$.HYPESQUAD_ONLINE_HOUSE_1) ? (d = _.gkr.HOUSE_1) : e.hasFlag(_.xW$.HYPESQUAD_ONLINE_HOUSE_2) ? (d = _.gkr.HOUSE_2) : e.hasFlag(_.xW$.HYPESQUAD_ONLINE_HOUSE_3) && (d = _.gkr.HOUSE_3));
+            null != e && (e.hasFlag(d.xW$.HYPESQUAD_ONLINE_HOUSE_1) ? (u = d.gkr.HOUSE_1) : e.hasFlag(d.xW$.HYPESQUAD_ONLINE_HOUSE_2) ? (u = d.gkr.HOUSE_2) : e.hasFlag(d.xW$.HYPESQUAD_ONLINE_HOUSE_3) && (u = d.gkr.HOUSE_3));
         },
         HYPESQUAD_ONLINE_MEMBERSHIP_LEAVE_SUCCESS: function () {
-            d = null;
+            u = null;
         },
         HYPESQUAD_ONLINE_MEMBERSHIP_JOIN_SUCCESS: function (e) {
-            d = e.houseID;
+            u = e.houseID;
         }
     }));

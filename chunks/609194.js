@@ -1,53 +1,53 @@
-var n,
-    s,
+var a,
     r,
     l,
-    o,
-    i = t(200651),
-    c = t(192379),
-    u = t(120356),
-    d = t.n(u),
-    E = t(600164),
-    _ = t(865857);
-function A(e, a, t) {
+    i,
+    s,
+    o = n(200651),
+    c = n(192379),
+    u = n(120356),
+    d = n.n(u),
+    m = n(600164),
+    p = n(865857);
+function h(e, t, n) {
     return (
-        a in e
-            ? Object.defineProperty(e, a, {
-                  value: t,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[a] = t),
+            : (e[t] = n),
         e
     );
 }
-((n = r || (r = {})).PRIMARY = 'primary'), (n.SECONDARY = 'secondary'), (n.WARNING = 'warning'), (n.ERROR = 'error'), ((s = l || (l = {})).SMALL = 'small'), (s.LARGE = 'large'), (s.NONE = 'none');
-let m = {
-        primary: _.colorPrimary,
-        secondary: _.colorSecondary,
-        warning: _.colorWarning,
-        error: _.colorError
+((a = l || (l = {})).PRIMARY = 'primary'), (a.SECONDARY = 'secondary'), (a.WARNING = 'warning'), (a.ERROR = 'error'), ((r = i || (i = {})).SMALL = 'small'), (r.LARGE = 'large'), (r.NONE = 'none');
+let A = {
+        primary: p.colorPrimary,
+        secondary: p.colorSecondary,
+        warning: p.colorWarning,
+        error: p.colorError
     },
-    N = {
-        small: _.small,
-        large: _.large,
+    E = {
+        small: p.small,
+        large: p.large,
         none: null
     };
-class p extends (o = c.PureComponent) {
+class N extends (s = c.PureComponent) {
     render() {
-        let { icon: e, color: a, children: t, iconSize: n, className: s, iconClassName: r } = this.props;
-        return (0, i.jsxs)(E.Z, {
-            className: d()(_.note, m[a], s),
-            align: E.Z.Align.CENTER,
+        let { icon: e, color: t, children: n, iconSize: a, className: r, iconClassName: l } = this.props;
+        return (0, o.jsxs)(m.Z, {
+            className: d()(p.note, A[t], r),
+            align: m.Z.Align.CENTER,
             children: [
-                (0, i.jsx)(e, {
-                    className: d()(_.icon, N[n], r),
+                (0, o.jsx)(e, {
+                    className: d()(p.icon, E[a], l),
                     color: 'currentColor'
                 }),
-                (0, i.jsx)('div', { children: t })
+                (0, o.jsx)('div', { children: n })
             ]
         });
     }
 }
-A(p, 'Colors', r), A(p, 'Sizes', l), (a.Z = p);
+h(N, 'Colors', l), h(N, 'Sizes', i), (t.Z = N);

@@ -1,19 +1,19 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return s;
     }
 });
-var l = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(120356),
-    i = n.n(a),
+var l = n(120356),
+    a = n.n(l),
     r = n(481060),
-    s = n(968333);
-function o(e) {
-    let { className: t, size: n, ...a } = e;
-    return (0, l.jsx)(r.Button, {
-        className: i()(s.button, t),
-        size: i()(s.buttonSize, n),
-        ...a
+    o = n(968333);
+function s(e) {
+    let { className: t, size: n, ...l } = e;
+    return (0, i.jsx)(r.Button, {
+        className: a()(o.button, t),
+        size: a()(o.buttonSize, n),
+        ...l
     });
 }

@@ -1,36 +1,36 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return R;
     }
 }),
     n(724458),
     n(653041),
     n(47120);
-var s = n(200651),
-    a = n(192379),
-    i = n(392711),
-    r = n(481060),
-    l = n(239091),
+var i = n(200651),
+    r = n(192379),
+    l = n(392711),
+    s = n(481060),
+    a = n(239091),
     o = n(132580),
     c = n(688465),
     d = n(236413),
     u = n(727072),
-    _ = n(85960),
-    I = n(65912),
-    E = n(457414),
-    T = n(154502),
-    m = n(295708),
-    N = n(273504),
-    S = n(689938),
-    g = n(15327);
-function h(e) {
+    m = n(85960),
+    h = n(65912),
+    g = n(457414),
+    x = n(154502),
+    p = n(295708),
+    f = n(273504),
+    C = n(388032),
+    I = n(15327);
+function _(e) {
     let { rule: t, triggerType: n } = e,
-        i = a.useMemo(
+        l = r.useMemo(
             () =>
                 null == t
-                    ? (0, _.V9)(n).map((e) =>
-                          (0, s.jsx)(
-                              T.Z,
+                    ? (0, m.V9)(n).map((e) =>
+                          (0, i.jsx)(
+                              x.Z,
                               {
                                   actionType: e,
                                   triggerType: n
@@ -38,92 +38,92 @@ function h(e) {
                               e
                           )
                       )
-                    : (0, _.V9)(n).reduce((e, a) => {
-                          var i;
-                          let r = t.actions.find((e) => {
+                    : (0, m.V9)(n).reduce((e, r) => {
+                          var l;
+                          let s = t.actions.find((e) => {
                               let { type: t } = e;
-                              return a === t;
+                              return r === t;
                           });
-                          return null == r
+                          return null == s
                               ? e
                               : (e.push(
-                                    (0, s.jsx)(
-                                        T.Z,
+                                    (0, i.jsx)(
+                                        x.Z,
                                         {
-                                            actionType: a,
-                                            action: r,
-                                            triggerType: null !== (i = null == t ? void 0 : t.triggerType) && void 0 !== i ? i : n
+                                            actionType: r,
+                                            action: s,
+                                            triggerType: null !== (l = null == t ? void 0 : t.triggerType) && void 0 !== l ? l : n
                                         },
-                                        a
+                                        r
                                     )
                                 ),
                                 e);
                       }, []),
             [t, n]
         );
-    return 0 === i.length
+    return 0 === l.length
         ? null
-        : (0, s.jsx)('div', {
-              className: g.actionRuleListContainer,
-              children: i
+        : (0, i.jsx)('div', {
+              className: I.actionRuleListContainer,
+              children: l
           });
 }
-let C = (e, t) => () =>
+let N = (e, t) => () =>
         t({
             ...e,
             enabled: !e.enabled
         }),
-    x = (e) => {
+    v = (e) => {
         e.stopPropagation(), e.preventDefault();
     },
-    p = (e) => {
-        let { className: t, children: n, ...a } = e;
-        return (0, s.jsx)(r.Clickable, {
+    T = (e) => {
+        let { className: t, children: n, ...r } = e;
+        return (0, i.jsx)(s.Clickable, {
             className: t,
-            onClick: x,
-            onMouseDown: x,
-            onMouseUp: x,
-            ...a,
+            onClick: v,
+            onMouseDown: v,
+            onMouseUp: v,
+            ...r,
             children: n
         });
     };
-function R(e) {
+function j(e) {
     var t;
-    let { rule: n, onChangeRule: a, onContextMenu: i } = e,
-        l = C(n, a),
+    let { rule: n, onChangeRule: r, onContextMenu: l } = e,
+        a = N(n, r),
         o = (e) => {
-            x(e), i(e);
+            v(e), l(e);
         };
-    return (0, s.jsxs)(s.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, s.jsx)('div', {
-                className: g.ruleTextContainer,
-                children: (0, s.jsx)(m.Z, {
+            (0, i.jsx)('div', {
+                className: I.ruleTextContainer,
+                children: (0, i.jsx)(p.Z, {
                     rule: n,
-                    onChangeRule: a
+                    onChangeRule: r
                 })
             }),
-            (0, s.jsxs)(p, {
-                className: g.actionContainer,
+            (0, i.jsxs)(T, {
+                className: I.actionContainer,
                 children: [
-                    (0, s.jsx)(r.Switch, {
-                        className: g.toggle,
-                        onChange: l,
+                    (0, i.jsx)(s.Switch, {
+                        className: I.toggle,
+                        onChange: a,
                         checked: null !== (t = null == n ? void 0 : n.enabled) && void 0 !== t && t
                     }),
-                    (0, s.jsx)(r.Tooltip, {
-                        text: S.Z.Messages.MORE,
+                    (0, i.jsx)(s.Tooltip, {
+                        text: C.intl.string(C.t.UKOtz8),
                         position: 'top',
-                        'aria-label': S.Z.Messages.MORE_OPTIONS,
+                        'aria-label': C.intl.string(C.t.PdRCRk),
                         children: (e) =>
-                            (0, s.jsx)(r.Clickable, {
+                            (0, i.jsx)(s.Clickable, {
                                 ...e,
                                 onClick: o,
-                                className: g.menuIconButton,
-                                children: (0, s.jsx)(r.MoreVerticalIcon, {
+                                className: I.menuIconButton,
+                                children: (0, i.jsx)(s.MoreVerticalIcon, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: g.menuIcon
+                                    className: I.menuIcon
                                 })
                             })
                     })
@@ -132,95 +132,95 @@ function R(e) {
         ]
     });
 }
-function L(e) {
-    return (0, _.r5)(e, _.vT.ALPHA) ? (0, s.jsx)(o.Z, { className: g.alphaBetaTag }) : (0, _.r5)(e, _.vT.BETA) ? (0, s.jsx)(c.Z, { className: g.alphaBetaTag }) : null;
+function E(e) {
+    return (0, m.r5)(e, m.vT.ALPHA) ? (0, i.jsx)(o.Z, { className: I.alphaBetaTag }) : (0, m.r5)(e, m.vT.BETA) ? (0, i.jsx)(c.Z, { className: I.alphaBetaTag }) : null;
 }
-function f(e) {
-    let { rule: t, isDefaultRule: n, onContextMenu: l } = e,
-        o = (0, E.w)(t.triggerType, t),
-        { isLoading: c, saveRule: _ } = (0, I.w)(),
-        { updateRule: T } = (0, u.pH)(t.guildId),
-        [m, N] = a.useState(t.enabled),
-        C = (0, i.throttle)(async (e, n) => {
+function S(e) {
+    let { rule: t, isDefaultRule: n, onContextMenu: a } = e,
+        o = (0, g.w)(t.triggerType, t),
+        { isLoading: c, saveRule: m } = (0, h.w)(),
+        { updateRule: x } = (0, u.pH)(t.guildId),
+        [p, f] = r.useState(t.enabled),
+        N = (0, l.throttle)(async (e, n) => {
             if ((n.preventDefault(), n.stopPropagation(), !c)) {
                 let e = {
                     ...t,
-                    enabled: !m
+                    enabled: !p
                 };
-                N(!m);
-                let n = await _(e, []);
-                if (null != n) T(n), N(n.enabled);
+                f(!p);
+                let n = await m(e, []);
+                if (null != n) x(n), f(n.enabled);
             }
         }, 300),
-        R = (e) => {
-            x(e), l(e);
+        j = (e) => {
+            v(e), a(e);
         };
     if (null == o) return null;
-    let { headerText: f, headerSubtext: O, descriptionText: A, icon: M } = o,
-        D = !(0, d.Vb)(t);
-    return (0, s.jsxs)(s.Fragment, {
+    let { headerText: S, headerSubtext: b, descriptionText: R, icon: Z } = o,
+        A = !(0, d.Vb)(t);
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, s.jsx)('div', {
-                className: g.ruleIconContainer,
-                children: (0, s.jsx)(M, {
+            (0, i.jsx)('div', {
+                className: I.ruleIconContainer,
+                children: (0, i.jsx)(Z, {
                     size: 'md',
                     color: 'currentColor',
-                    className: g.ruleIcon
+                    className: I.ruleIcon
                 })
             }),
-            (0, s.jsxs)('div', {
-                className: g.ruleTextContainer,
+            (0, i.jsxs)('div', {
+                className: I.ruleTextContainer,
                 children: [
-                    (0, s.jsxs)(r.Heading, {
+                    (0, i.jsxs)(s.Heading, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        className: g.ruleTextHeaderContainer,
+                        className: I.ruleTextHeaderContainer,
                         children: [
-                            (0, s.jsxs)('div', {
-                                className: g.ruleTextHeader,
-                                children: [f, L(t.triggerType)]
+                            (0, i.jsxs)('div', {
+                                className: I.ruleTextHeader,
+                                children: [S, E(t.triggerType)]
                             }),
-                            (0, s.jsx)(r.Text, {
-                                className: g.ruleSubtextHeader,
+                            (0, i.jsx)(s.Text, {
+                                className: I.ruleSubtextHeader,
                                 variant: 'text-sm/normal',
-                                children: O
+                                children: b
                             })
                         ]
                     }),
-                    D &&
-                        (0, s.jsx)(r.Text, {
-                            className: g.ruleTextDescription,
+                    A &&
+                        (0, i.jsx)(s.Text, {
+                            className: I.ruleTextDescription,
                             variant: 'text-sm/normal',
-                            children: A
+                            children: R
                         }),
-                    (0, s.jsx)(h, {
+                    (0, i.jsx)(_, {
                         rule: t,
                         triggerType: t.triggerType
                     })
                 ]
             }),
-            (0, s.jsxs)(p, {
-                className: g.actionContainer,
+            (0, i.jsxs)(T, {
+                className: I.actionContainer,
                 children: [
-                    (0, s.jsx)(r.Switch, {
-                        className: g.toggle,
-                        onChange: C,
-                        checked: null != m && m
+                    (0, i.jsx)(s.Switch, {
+                        className: I.toggle,
+                        onChange: N,
+                        checked: null != p && p
                     }),
                     !n &&
-                        (0, s.jsx)(r.Tooltip, {
-                            text: S.Z.Messages.MORE,
+                        (0, i.jsx)(s.Tooltip, {
+                            text: C.intl.string(C.t.UKOtz8),
                             position: 'top',
-                            'aria-label': S.Z.Messages.MORE_OPTIONS,
+                            'aria-label': C.intl.string(C.t.PdRCRk),
                             children: (e) =>
-                                (0, s.jsx)(r.Clickable, {
+                                (0, i.jsx)(s.Clickable, {
                                     ...e,
-                                    onClick: R,
-                                    className: g.menuIconButton,
-                                    children: (0, s.jsx)(r.MoreVerticalIcon, {
+                                    onClick: j,
+                                    className: I.menuIconButton,
+                                    children: (0, i.jsx)(s.MoreVerticalIcon, {
                                         size: 'md',
                                         color: 'currentColor',
-                                        className: g.menuIcon
+                                        className: I.menuIcon
                                     })
                                 })
                         })
@@ -229,89 +229,89 @@ function f(e) {
         ]
     });
 }
-function O(e) {
+function b(e) {
     let { triggerType: t, onSetupRule: n } = e,
-        i = a.useMemo(() => (0, E.w)(t), [t]);
-    if (null == i) return null;
-    let { headerText: l, descriptionText: o, icon: c } = i;
-    return (0, s.jsxs)(s.Fragment, {
+        l = r.useMemo(() => (0, g.w)(t), [t]);
+    if (null == l) return null;
+    let { headerText: a, descriptionText: o, icon: c } = l;
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, s.jsx)('div', {
-                className: g.ruleIconContainer,
-                children: (0, s.jsx)(c, {
+            (0, i.jsx)('div', {
+                className: I.ruleIconContainer,
+                children: (0, i.jsx)(c, {
                     color: 'currentColor',
                     size: 'md',
-                    className: g.ruleIcon
+                    className: I.ruleIcon
                 })
             }),
-            (0, s.jsxs)('div', {
-                className: g.ruleTextContainer,
+            (0, i.jsxs)('div', {
+                className: I.ruleTextContainer,
                 children: [
-                    (0, s.jsx)(r.Heading, {
-                        className: g.ruleTextHeader,
+                    (0, i.jsx)(s.Heading, {
+                        className: I.ruleTextHeader,
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: (0, s.jsxs)('div', {
-                            className: g.ruleTextHeader,
-                            children: [l, L(t)]
+                        children: (0, i.jsxs)('div', {
+                            className: I.ruleTextHeader,
+                            children: [a, E(t)]
                         })
                     }),
-                    (0, s.jsx)(r.Text, {
-                        className: g.ruleTextDescription,
+                    (0, i.jsx)(s.Text, {
+                        className: I.ruleTextDescription,
                         variant: 'text-sm/normal',
                         children: o
                     }),
-                    (0, s.jsx)(h, { triggerType: t })
+                    (0, i.jsx)(_, { triggerType: t })
                 ]
             }),
-            (0, s.jsx)(p, {
-                className: g.actionContainer,
-                children: (0, s.jsx)(r.Button, {
-                    size: r.Button.Sizes.SMALL,
+            (0, i.jsx)(T, {
+                className: I.actionContainer,
+                children: (0, i.jsx)(s.Button, {
+                    size: s.Button.Sizes.SMALL,
                     onClick: n,
-                    children: t === N.fX.KEYWORD ? S.Z.Messages.CREATE : S.Z.Messages.GUILD_AUTOMOD_RULE_SETUP_BUTTON
+                    children: t === f.fX.KEYWORD ? C.intl.string(C.t.CumH4u) : C.intl.string(C.t.oRs6mJ)
                 })
             })
         ]
     });
 }
-function A(e) {
-    let { rule: t, triggerType: a, isEditMode: i, isDefaultRule: o, forceSetup: c, onSetupRule: d, onChangeRule: u } = e,
-        _ = (e) => {
+function R(e) {
+    let { rule: t, triggerType: r, isEditMode: l, isDefaultRule: o, forceSetup: c, onSetupRule: d, onChangeRule: u } = e,
+        m = (e) => {
             if (null != t)
                 e.preventDefault(),
                     e.stopPropagation(),
-                    (0, l.jW)(e, async () => {
+                    (0, a.jW)(e, async () => {
                         let { default: e } = await n.e('25443').then(n.bind(n, 46577));
                         return (n) =>
-                            (0, s.jsx)(e, {
+                            (0, i.jsx)(e, {
                                 rule: t,
                                 ...n
                             });
                     });
         },
-        I = (0, s.jsx)(O, {
-            triggerType: a,
+        h = (0, i.jsx)(b, {
+            triggerType: r,
             onSetupRule: d
         });
     return (
         null != t &&
             !c &&
-            (I = i
-                ? (0, s.jsx)(R, {
+            (h = l
+                ? (0, i.jsx)(j, {
                       rule: t,
                       onChangeRule: u,
-                      onContextMenu: _
+                      onContextMenu: m
                   })
-                : (0, s.jsx)(f, {
+                : (0, i.jsx)(S, {
                       rule: t,
                       isDefaultRule: o,
-                      onContextMenu: _
+                      onContextMenu: m
                   })),
-        (0, s.jsx)(r.Clickable, {
-            className: g.mainContainer,
-            onContextMenu: _,
-            children: I
+        (0, i.jsx)(s.Clickable, {
+            className: I.mainContainer,
+            onContextMenu: m,
+            children: h
         })
     );
 }

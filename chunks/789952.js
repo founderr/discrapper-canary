@@ -31,20 +31,20 @@ let i = !1;
             if (d) return null;
             throw Error('Cannot resolve a Slate range from DOM range');
         }
-        let _ = r.F3.toSlatePoint(e, [i, a], {
+        let f = r.F3.toSlatePoint(e, [i, a], {
                 exactMatch: u,
                 suppressThrow: d
             }),
-            E = l
-                ? _
+            _ = l
+                ? f
                 : r.F3.toSlatePoint(e, [s, o], {
                       exactMatch: u,
                       suppressThrow: d
                   });
-        return null != _ && null != E
+        return null != f && null != _
             ? {
-                  anchor: _,
-                  focus: E
+                  anchor: f,
+                  focus: _
               }
             : null;
     };

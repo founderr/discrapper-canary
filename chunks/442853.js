@@ -6,10 +6,10 @@ n.d(t, {
     n(47120),
     n(653041);
 var i = n(192379),
-    s = n(149765),
-    a = n(442837),
-    l = n(902704),
-    r = n(592125),
+    l = n(149765),
+    r = n(442837),
+    a = n(902704),
+    s = n(592125),
     o = n(720202),
     c = n(271383),
     u = n(700785),
@@ -18,40 +18,40 @@ let h = [],
     m = new Set();
 function p(e) {
     let { entries: t, channelId: n } = e,
-        p = (0, a.e7)([r.Z], () => r.Z.getChannel(n)),
-        _ = null == p ? void 0 : p.guild_id,
-        f = i.useRef(new Set()),
-        E = i.useMemo(() => {
+        p = (0, r.e7)([s.Z], () => s.Z.getChannel(n)),
+        f = null == p ? void 0 : p.guild_id,
+        g = i.useRef(new Set()),
+        C = i.useMemo(() => {
             let e = new Set(null == t ? void 0 : t.map((e) => e.author_id));
-            return !(0, l.E)([...f.current], [...e]) && (f.current = e), f.current;
+            return !(0, a.E)([...g.current], [...e]) && (g.current = e), g.current;
         }, [t]);
     i.useEffect(() => {
-        if (null != _)
-            Array.from(E).forEach((e) => {
-                o.Z.requestMember(_, e);
+        if (null != f)
+            Array.from(C).forEach((e) => {
+                o.Z.requestMember(f, e);
             });
-    }, [E, _]);
-    let g = (0, a.Wu)(
+    }, [C, f]);
+    let x = (0, r.Wu)(
             [c.ZP],
             () => {
-                if (null == _) return h;
+                if (null == f) return h;
                 let e = [];
-                for (let t of E) c.ZP.isMember(_, t) && e.push(t);
+                for (let t of C) c.ZP.isMember(f, t) && e.push(t);
                 return e;
             },
-            [E, _]
+            [C, f]
         ),
-        C = i.useMemo(() => {
-            if (null == p || 0 === g.length) return m;
+        v = i.useMemo(() => {
+            if (null == p || 0 === x.length) return m;
             let e = new Set();
-            for (let t of g) {
+            for (let t of x) {
                 let n = u.uB({
                     user: t,
                     context: p
                 });
-                s.e$(n, d.Pl.VIEW_CHANNEL) && e.add(t);
+                l.e$(n, d.Pl.VIEW_CHANNEL) && e.add(t);
             }
             return e;
-        }, [g, p]);
-    return i.useMemo(() => (null == t ? void 0 : t.filter((e) => C.has(e.author_id))), [t, C]);
+        }, [x, p]);
+    return i.useMemo(() => (null == t ? void 0 : t.filter((e) => v.has(e.author_id))), [t, v]);
 }

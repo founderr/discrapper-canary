@@ -1,47 +1,47 @@
-s.r(t),
-    s.d(t, {
+n.r(e),
+    n.d(e, {
         default: function () {
-            return c;
+            return r;
         }
     });
-var a = s(200651);
-s(192379);
-var o = s(481060),
-    n = s(689938),
-    r = s(568647);
-function c(e) {
-    let { transitionState: t, onClose: c } = e;
-    return (0, a.jsxs)(o.ModalRoot, {
-        className: r.modal,
-        transitionState: t,
-        size: o.ModalSize.SMALL,
+var o = n(200651);
+n(192379);
+var a = n(481060),
+    s = n(388032),
+    i = n(568647);
+function r(t) {
+    let { transitionState: e, onClose: r } = t;
+    return (0, o.jsxs)(a.ModalRoot, {
+        className: i.modal,
+        transitionState: e,
+        size: a.ModalSize.SMALL,
         children: [
-            (0, a.jsx)('img', {
+            (0, o.jsx)('img', {
                 'aria-hidden': !0,
                 alt: '',
-                src: s(762528),
-                className: r.image
+                src: n(762528),
+                className: i.image
             }),
-            (0, a.jsxs)(o.ModalContent, {
-                className: r.content,
+            (0, o.jsxs)(a.ModalContent, {
+                className: i.content,
                 children: [
-                    (0, a.jsx)(o.Heading, {
+                    (0, o.jsx)(a.Heading, {
                         variant: 'heading-xl/bold',
                         color: 'header-primary',
-                        className: r.text,
-                        children: n.Z.Messages.GUILD_AUTOMOD_REPORT_RAID_FEEDBACK_CONFIRM_TITLE
+                        className: i.text,
+                        children: s.intl.string(s.t.pAzfrq)
                     }),
-                    (0, a.jsx)(o.Text, {
+                    (0, o.jsx)(a.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        className: r.text,
-                        children: n.Z.Messages.GUILD_AUTOMOD_REPORT_RAID_FEEDBACK_CONFIRM_SUBTITLE
+                        className: i.text,
+                        children: s.intl.string(s.t.oxowND)
                     }),
-                    (0, a.jsx)(o.Button, {
-                        onClick: c,
-                        color: o.Button.Colors.BRAND,
-                        look: o.Button.Looks.FILLED,
-                        children: n.Z.Messages.GUILD_AUTOMOD_REPORT_RAID_FEEDBACK_CONFIRM_CTA
+                    (0, o.jsx)(a.Button, {
+                        onClick: r,
+                        color: a.Button.Colors.BRAND,
+                        look: a.Button.Looks.FILLED,
+                        children: s.intl.string(s.t.o3ZlOD)
                     })
                 ]
             })

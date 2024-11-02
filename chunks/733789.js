@@ -1,19 +1,19 @@
 n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(481060),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    s = n(481060),
     o = n(100527),
     c = n(707409),
     d = n(184301),
     u = n(347475),
-    _ = n(237583),
-    E = n(51144),
-    h = n(981631),
-    m = n(689938),
-    I = n(31848);
-function p(e, t, n) {
+    h = n(237583),
+    m = n(51144),
+    p = n(981631),
+    g = n(388032),
+    f = n(31848);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,61 +26,61 @@ function p(e, t, n) {
         e
     );
 }
-let g = {
-    [h.AzA.NOW_PLAYING]: {
+let E = {
+    [p.AzA.NOW_PLAYING]: {
         single: (e, t) =>
-            m.Z.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_SINGLE.format({
+            g.intl.format(g.t.NEckzc, {
                 user1: e.username,
                 user1Hook: () => t(e)
             }),
         double: (e, t, n) =>
-            m.Z.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_DOUBLE.format({
+            g.intl.format(g.t['6uWulZ'], {
                 user1: e.username,
                 user1Hook: () => n(e),
                 user2: t.username,
                 user2Hook: () => n(t)
             }),
-        other: (e) => m.Z.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_OTHER.format({ count: e })
+        other: (e) => g.intl.format(g.t['8fMgRU'], { count: e })
     },
-    [h.AzA.RECENTLY_PLAYED]: {
+    [p.AzA.RECENTLY_PLAYED]: {
         single: (e, t) =>
-            m.Z.Messages.APPLICATION_STORE_RECOMMENDATION_RECENTLY_PLAYED_SINGLE.format({
+            g.intl.format(g.t['nB/JND'], {
                 user1: e.username,
                 user1Hook: () => t(e)
             }),
         double: (e, t, n) =>
-            m.Z.Messages.APPLICATION_STORE_RECOMMENDATION_RECENTLY_PLAYED_DOUBLE.format({
+            g.intl.format(g.t.AZCcHR, {
                 user1: e.username,
                 user1Hook: () => n(e),
                 user2: t.username,
                 user2Hook: () => n(t)
             }),
-        other: (e) => m.Z.Messages.APPLICATION_STORE_RECOMMENDATION_RECENTLY_PLAYED_OTHER.format({ count: e })
+        other: (e) => g.intl.format(g.t.yNuaTU, { count: e })
     },
-    [h.AzA.EVER_PLAYED]: {
+    [p.AzA.EVER_PLAYED]: {
         single: (e, t) =>
-            m.Z.Messages.APPLICATION_STORE_RECOMMENDATION_EVER_PLAYED_SINGLE.format({
+            g.intl.format(g.t.Fecf3N, {
                 user1: e.username,
                 user1Hook: () => t(e)
             }),
         double: (e, t, n) =>
-            m.Z.Messages.APPLICATION_STORE_RECOMMENDATION_EVER_PLAYED_DOUBLE.format({
+            g.intl.format(g.t['0LiGbG'], {
                 user1: e.username,
                 user1Hook: () => n(e),
                 user2: t.username,
                 user2Hook: () => n(t)
             }),
-        other: (e) => m.Z.Messages.APPLICATION_STORE_RECOMMENDATION_EVER_PLAYED_OTHER.format({ count: e })
+        other: (e) => g.intl.format(g.t.Yx1rjY, { count: e })
     }
 };
-class T extends a.PureComponent {
+class I extends r.PureComponent {
     renderDescription(e, t) {
-        let n = g[e];
+        let n = E[e];
         return 1 === t.length ? n.single(t[0].user, (e) => this.renderActivityDiscordTag(e)) : 2 === t.length ? n.double(t[0].user, t[1].user, (e) => this.renderActivityDiscordTag(e)) : n.other(t.length);
     }
     renderActivityDiscordTag(e) {
         return (0, i.jsx)(
-            l.Popout,
+            s.Popout,
             {
                 preload: () => (0, d.Z)(e),
                 renderPopout: (t) =>
@@ -92,7 +92,7 @@ class T extends a.PureComponent {
                 position: 'right',
                 children: (t) =>
                     (0, i.jsx)('span', {
-                        className: I.username,
+                        className: f.username,
                         ...t,
                         children: e.username
                     })
@@ -102,15 +102,15 @@ class T extends a.PureComponent {
     }
     render() {
         let { reason: e, className: t } = this.props,
-            { type: n, userInfo: a } = e;
-        return 0 === a.length
+            { type: n, userInfo: r } = e;
+        return 0 === r.length
             ? null
             : (0, i.jsxs)('div', {
-                  className: r()(I.recommendationActivity, t),
+                  className: a()(f.recommendationActivity, t),
                   children: [
-                      (0, i.jsx)(_.Z, {
-                          className: I.players,
-                          users: a.map((e) => {
+                      (0, i.jsx)(h.Z, {
+                          className: f.players,
+                          users: r.map((e) => {
                               let { user: t } = e;
                               return t;
                           }),
@@ -119,21 +119,21 @@ class T extends a.PureComponent {
                           renderMoreUsers: this.renderPlayerOverflow
                       }),
                       (0, i.jsx)('div', {
-                          className: I.description,
-                          children: this.renderDescription(n, a)
+                          className: f.description,
+                          children: this.renderDescription(n, r)
                       })
                   ]
               });
     }
     constructor(...e) {
         super(...e),
-            p(this, 'renderUserTooltip', (e, t, n) =>
+            _(this, 'renderUserTooltip', (e, t, n) =>
                 (0, i.jsxs)('div', {
-                    className: I.tooltip,
+                    className: f.tooltip,
                     children: [
-                        (0, i.jsx)('div', { children: E.ZP.getUserTag(e) }),
+                        (0, i.jsx)('div', { children: m.ZP.getUserTag(e) }),
                         (0, i.jsx)(c.ZP, {
-                            className: I.tooltipTimestamp,
+                            className: f.tooltipTimestamp,
                             start: t,
                             end: n,
                             location: c.ZP.Locations.ACTIVITY_FEED
@@ -141,13 +141,13 @@ class T extends a.PureComponent {
                     ]
                 })
             ),
-            p(this, 'renderPlayer', (e, t, n, a) => {
+            _(this, 'renderPlayer', (e, t, n, r) => {
                 if (null == e) return null;
-                let s = this.props.reason.userInfo.find((t) => t.user === e);
-                return null == s
+                let l = this.props.reason.userInfo.find((t) => t.user === e);
+                return null == l
                     ? null
                     : (0, i.jsx)(
-                          l.Popout,
+                          s.Popout,
                           {
                               preload: () => (0, d.Z)(e),
                               renderPopout: (t) =>
@@ -158,15 +158,15 @@ class T extends a.PureComponent {
                                   }),
                               position: 'right',
                               children: (t) =>
-                                  (0, i.jsx)(l.Tooltip, {
-                                      text: this.renderUserTooltip(e, s.startTime, s.endTime),
-                                      'aria-label': (0, E.W5)(e, { decoration: 'never' }),
+                                  (0, i.jsx)(s.Tooltip, {
+                                      text: this.renderUserTooltip(e, l.startTime, l.endTime),
+                                      'aria-label': (0, m.W5)(e, { decoration: 'never' }),
                                       children: (n) =>
-                                          (0, i.jsx)(l.Avatar, {
-                                              className: r()(I.playerAvatar, { [I.avatarMasked]: !a }),
+                                          (0, i.jsx)(s.Avatar, {
+                                              className: a()(f.playerAvatar, { [f.avatarMasked]: !r }),
                                               src: e.getAvatarURL(void 0, 32),
                                               'aria-label': e.username,
-                                              size: l.AvatarSizes.SIZE_32,
+                                              size: s.AvatarSizes.SIZE_32,
                                               ...n,
                                               ...t
                                           })
@@ -175,11 +175,11 @@ class T extends a.PureComponent {
                           e.id
                       );
             }),
-            p(this, 'renderPlayerOverflow', (e, t, n) =>
+            _(this, 'renderPlayerOverflow', (e, t, n) =>
                 (0, i.jsx)(
                     'div',
                     {
-                        className: I.playerOverflow,
+                        className: f.playerOverflow,
                         children: e
                     },
                     n
@@ -187,4 +187,4 @@ class T extends a.PureComponent {
             );
     }
 }
-t.Z = T;
+t.Z = I;

@@ -1,58 +1,58 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return f;
     }
 });
 var i = n(200651),
-    a = n(192379),
-    s = n(990547),
-    r = n(91192),
-    l = n(481060),
-    o = n(724757),
+    r = n(192379),
+    l = n(990547),
+    a = n(91192),
+    o = n(481060),
+    s = n(724757),
     c = n(213609),
     u = n(441358),
     d = n(426521),
-    _ = n(783891);
-function E(e) {
-    let { initialized: t, items: n, loading: E, loadMore: I } = e,
-        m = a.useRef(null),
-        f = (0, o.Z)('for-you', m);
+    m = n(783891);
+function f(e) {
+    let { initialized: t, items: n, loading: f, loadMore: h } = e,
+        p = r.useRef(null),
+        g = (0, s.Z)('for-you', p);
     (0, c.Z)(
         {
-            type: s.ImpressionTypes.VIEW,
-            name: s.ImpressionNames.NOTIFICATION_CENTER_LANDING,
+            type: l.ImpressionTypes.VIEW,
+            name: l.ImpressionNames.NOTIFICATION_CENTER_LANDING,
             properties: { empty: 0 === n.length }
         },
         { disableTrack: !t },
         [t]
     );
-    let T = () => {
+    let _ = () => {
         var e;
-        let t = null === (e = m.current) || void 0 === e ? void 0 : e.getScrollerState();
-        if (null != t) t.scrollHeight - t.scrollTop - t.offsetHeight < 1500 && I();
+        let t = null === (e = p.current) || void 0 === e ? void 0 : e.getScrollerState();
+        if (null != t) t.scrollHeight - t.scrollTop - t.offsetHeight < 1500 && h();
     };
     return t
         ? 0 === n.length
             ? (0, i.jsx)(u.v, {})
             : (0, i.jsx)(i.Fragment, {
-                  children: (0, i.jsx)(r.bG, {
-                      navigator: f,
-                      children: (0, i.jsx)(r.SJ, {
+                  children: (0, i.jsx)(a.bG, {
+                      navigator: g,
+                      children: (0, i.jsx)(a.SJ, {
                           children: (e) => {
-                              let { ref: t, ...a } = e;
-                              return (0, i.jsxs)(l.AdvancedScroller, {
-                                  className: _.container,
+                              let { ref: t, ...r } = e;
+                              return (0, i.jsxs)(o.AdvancedScroller, {
+                                  className: m.container,
                                   ref: (e) => {
                                       var n;
-                                      (m.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
+                                      (p.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
                                   },
-                                  ...a,
-                                  onScroll: T,
-                                  children: [(0, i.jsx)(d.U, { items: n }), E ? (0, i.jsx)(l.Spinner, { className: _.spinner }) : null]
+                                  ...r,
+                                  onScroll: _,
+                                  children: [(0, i.jsx)(d.U, { items: n }), f ? (0, i.jsx)(o.Spinner, { className: m.spinner }) : null]
                               });
                           }
                       })
                   })
               })
-        : (0, i.jsx)(l.Spinner, { className: _.loadingPlaceholder });
+        : (0, i.jsx)(o.Spinner, { className: m.loadingPlaceholder });
 }

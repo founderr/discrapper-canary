@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return I;
     }
 }),
     n(47120);
@@ -13,45 +13,45 @@ var r = n(200651),
     u = n(481060),
     c = n(583901),
     d = n(997945),
-    _ = n(630117),
-    E = n(441319),
-    f = n(981631),
-    h = n(689938),
-    p = n(453251);
-let I = () => [h.Z.Messages.APP_ICON_PIRATE, h.Z.Messages.APP_ICON_PIRATE_1, h.Z.Messages.APP_ICON_PIRATE_2, h.Z.Messages.APP_ICON_PIRATE_3, h.Z.Messages.APP_ICON_PIRATE_4],
-    m = () => {
+    f = n(630117),
+    _ = n(441319),
+    h = n(981631),
+    p = n(388032),
+    m = n(453251);
+let g = () => [p.intl.string(p.t.EgWTY2), p.intl.string(p.t.umBn5e), p.intl.string(p.t.dG1wDw), p.intl.string(p.t.SesI4e), p.intl.string(p.t.RnMLvr)],
+    E = () => {
         var e;
-        return null !== (e = l().sample(I())) && void 0 !== e ? e : h.Z.Messages.APP_ICON_PIRATE;
+        return null !== (e = l().sample(g())) && void 0 !== e ? e : p.intl.string(p.t.EgWTY2);
     };
-function T(e) {
-    let { id: t, className: n, onSelect: a, isSelected: o = !1, tabIndex: l, children: _, locked: h = !1 } = e,
-        [I, T] = i.useState((0, E.aW)(t).name),
-        S = t === d.Ru.PIRATE,
-        g = (0, u.useRadioItem)({
-            label: I,
+function v(e) {
+    let { id: t, className: n, onSelect: a, isSelected: o = !1, tabIndex: l, children: f, locked: p = !1 } = e,
+        [g, v] = i.useState((0, _.aW)(t).name),
+        I = t === d.Ru.PIRATE,
+        S = (0, u.useRadioItem)({
+            label: g,
             isSelected: o
         });
     return (0, r.jsx)(u.Tooltip, {
-        text: I,
-        onTooltipShow: () => S && T(m()),
+        text: g,
+        onTooltipShow: () => I && v(E()),
         children: (e) =>
             (0, r.jsxs)('div', {
-                className: p.appIconSelectionContainer,
+                className: m.appIconSelectionContainer,
                 children: [
                     (0, r.jsx)(u.Clickable, {
                         ...e,
-                        ...g,
-                        tabIndex: null != l ? l : g.tabIndex,
-                        className: s()(p.appIconSelection, { [p.selected]: o }, n),
-                        onClick: o ? f.dG4 : () => (null == a ? void 0 : a(t)),
-                        children: _
+                        ...S,
+                        tabIndex: null != l ? l : S.tabIndex,
+                        className: s()(m.appIconSelection, { [m.selected]: o }, n),
+                        onClick: o ? h.dG4 : () => (null == a ? void 0 : a(t)),
+                        children: f
                     }),
                     o && (0, r.jsx)(c.oK, {}),
-                    h &&
+                    p &&
                         (0, r.jsx)('div', {
-                            className: p.lockedBadgeContainer,
+                            className: m.lockedBadgeContainer,
                             children: (0, r.jsx)(u.LockIcon, {
-                                className: p.lockedBadge,
+                                className: m.lockedBadge,
                                 color: 'currentColor'
                             })
                         })
@@ -59,18 +59,18 @@ function T(e) {
             })
     });
 }
-function S(e) {
+function I(e) {
     let { icon: t, isSelected: n, disabled: i, tabIndex: a, onSelect: s, locked: o } = e;
-    return (0, r.jsx)(T, {
+    return (0, r.jsx)(v, {
         onSelect: i ? void 0 : s,
         isSelected: n,
         id: t.id,
-        className: i ? p.disabled : void 0,
+        className: i ? m.disabled : void 0,
         tabIndex: a,
         locked: o,
-        children: (0, r.jsx)(_.Z, {
+        children: (0, r.jsx)(f.Z, {
             id: t.id,
-            width: E.M9
+            width: _.M9
         })
     });
 }

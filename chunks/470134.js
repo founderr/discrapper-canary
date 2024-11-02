@@ -5,21 +5,21 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    a = n(120356),
-    l = n.n(a),
-    r = n(481060),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
+    s = n(481060),
     o = n(923726),
-    c = n(689938),
+    c = n(388032),
     u = n(315353);
 function d(e) {
     let { text: t, hasScrolled: n } = e;
     return (0, i.jsxs)('div', {
-        className: l()(u.container, { [u.containerHide]: n }),
+        className: a()(u.container, { [u.containerHide]: n }),
         children: [
             (0, i.jsx)('div', {
                 className: u.notice,
-                children: (0, i.jsx)(r.Text, {
+                children: (0, i.jsx)(s.Text, {
                     className: u.__invalid_label,
                     variant: 'text-md/medium',
                     color: 'header-primary',
@@ -31,30 +31,30 @@ function d(e) {
     });
 }
 function h(e) {
-    let [t, n] = s.useState(),
-        [a, l] = s.useState(),
-        [r, u] = s.useState(!1),
-        [h, m] = s.useState(!1),
+    let [t, n] = l.useState(),
+        [r, a] = l.useState(),
+        [s, u] = l.useState(!1),
+        [h, m] = l.useState(!1),
         { enabled: p } = (0, o.s1)(e);
     return (
-        s.useEffect(() => {
-            p && null != t && null != a ? u(t < a) : u(!1);
-        }, [p, t, a]),
+        l.useEffect(() => {
+            p && null != t && null != r ? u(t < r) : u(!1);
+        }, [p, t, r]),
         {
-            horizontalScrollNotice: s.useMemo(
+            horizontalScrollNotice: l.useMemo(
                 () =>
-                    r
+                    s
                         ? (0, i.jsx)(d, {
-                              text: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_LISTINGS_SCROLLABLE_NOTICE,
+                              text: c.intl.string(c.t.RfAAHx),
                               hasScrolled: h
                           })
                         : null,
-                [r, h]
+                [s, h]
             ),
             handleScroll: () => m(!0),
             handleSetScrollerRef: (e) => {
                 var t;
-                return l(null == e ? void 0 : null === (t = e.getScrollerState()) || void 0 === t ? void 0 : t.scrollWidth);
+                return a(null == e ? void 0 : null === (t = e.getScrollerState()) || void 0 === t ? void 0 : t.scrollWidth);
             },
             handleSetContainerRef: (e) => n(null == e ? void 0 : e.clientWidth)
         }

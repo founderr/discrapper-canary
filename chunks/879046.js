@@ -5,28 +5,28 @@ t.d(n, {
 });
 var l = t(499254),
     i = t(827498),
-    a = t(835473),
-    r = t(541716),
+    r = t(835473),
+    a = t(541716),
     o = t(561308),
     s = t(701488),
-    c = t(689938);
+    c = t(388032);
 function u(e) {
     let { entry: n } = e,
-        t = (0, a.q)(n.extra.application_id),
+        t = (0, r.q)(n.extra.application_id),
         u = null == t ? void 0 : t.getIconURL(s.Si.LARGE),
         d = n.extra.activity_name,
-        m = (0, o.Jg)(n) ? c.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : c.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
-        _ = {
+        m = (0, o.Jg)(n) ? c.t.vPg1JS : c.t.rPqqtr,
+        f = {
             onClick: () => {
-                l.__(i._b.TEXT, r.I.NORMAL, { applicationId: n.extra.application_id });
+                l.__(i._b.TEXT, a.I.NORMAL, { applicationId: n.extra.application_id });
             },
-            ariaDescription: c.Z.Messages.CONTENT_INVENTORY_OPEN_ACTIVITY_A11Y_DESCRIPTION.format({ title: d })
+            ariaDescription: c.intl.formatToPlainString(c.t.NTHttL, { title: d })
         };
     return {
         thumbnailUrl: u,
         title: d,
-        titleClickable: _,
-        thumbnailClickable: _,
+        titleClickable: f,
+        thumbnailClickable: f,
         userDescription: m
     };
 }

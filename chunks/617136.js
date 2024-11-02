@@ -1,24 +1,24 @@
 n.d(t, {
     Ic: function () {
-        return T;
+        return v;
     },
     _3: function () {
-        return m;
-    },
-    _b: function () {
         return E;
     },
+    _b: function () {
+        return _;
+    },
     dA: function () {
-        return I;
+        return g;
     },
     jZ: function () {
         return i;
     },
     mH: function () {
-        return p;
+        return m;
     },
     uk: function () {
-        return f;
+        return h;
     }
 });
 var r,
@@ -30,16 +30,16 @@ var r,
     u = n(497505),
     c = n(566078),
     d = n(981631);
-let _ = Object.keys(u.jn);
-function E(e) {
+let f = Object.keys(u.jn);
+function _(e) {
     var t;
-    return null !== (t = _.find((t) => u.jn[t] === e)) && void 0 !== t ? t : '';
+    return null !== (t = f.find((t) => u.jn[t] === e)) && void 0 !== t ? t : '';
 }
-function f(e) {
+function h(e) {
     var t, n, r;
     return (null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null ? 'COMPLETED_CLAIMED' : (null === (n = e.userStatus) || void 0 === n ? void 0 : n.completedAt) != null ? 'COMPLETED' : (null === (r = e.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null ? 'ENROLLED' : 'NONE';
 }
-function h(e) {
+function p(e) {
     let t = c.r.build(e.config);
     return {
         quest_id: e.id,
@@ -47,22 +47,22 @@ function h(e) {
         game_name: t.application.name
     };
 }
-function p(e, t, n) {
+function m(e, t, n) {
     return {
         content_id: e,
-        content_name: E(e),
+        content_name: _(e),
         content_position: t,
         row_index: n
     };
 }
-function I(e) {
+function g(e) {
     let { questId: t, event: n, properties: r, trackGuildAndChannelMetadata: i = !1 } = e,
         u = l.Z.quests.get(t);
     if (null != u) {
         if (
             (s.default.isLoggingAnalyticsEvents &&
                 console.info('[Quest] AnalyticsUtils.track', n, {
-                    ...h(u),
+                    ...p(u),
                     ...r
                 }),
             u.preview)
@@ -70,34 +70,34 @@ function I(e) {
             return;
         if (i)
             return a.ZP.trackWithMetadata(n, {
-                ...h(u),
+                ...p(u),
                 ...r
             });
         o.default.track(n, {
-            ...h(u),
+            ...p(u),
             ...r
         });
     }
 }
-function m(e) {
+function E(e) {
     let { questId: t, questContent: n, questContentCTA: r, questContentPosition: i, questContentRowIndex: a, trackGuildAndChannelMetadata: s = !1 } = e;
-    I({
+    g({
         questId: t,
         event: d.rMx.QUEST_CONTENT_CLICKED,
         properties: {
-            ...p(n, i, a),
+            ...m(n, i, a),
             cta_name: r
         },
         trackGuildAndChannelMetadata: s
     });
 }
-function T(e) {
+function v(e) {
     let { questContent: t, questId: n, mode: r, prevMode: i } = e;
-    I({
+    g({
         questId: n,
         event: d.rMx.QUEST_BAR_MODE_CHANGED,
         properties: {
-            ...p(t),
+            ...m(t),
             mode: r,
             previous_mode: i
         }

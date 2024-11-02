@@ -15,7 +15,7 @@ function o(e) {
         [o, a] = r.useState(!0),
         [c, d] = r.useState(!1),
         [f, E] = r.useState(!1),
-        _ = r.useCallback(async (e, t) => {
+        S = r.useCallback(async (e, t) => {
             a(!0);
             try {
                 let n = s.GB,
@@ -30,8 +30,8 @@ function o(e) {
         }, []);
     return (
         r.useEffect(() => {
-            null == n ? (d(!1), E(!1), a(!1)) : _(t, n);
-        }, [n, _, t]),
+            null == n ? (d(!1), E(!1), a(!1)) : S(t, n);
+        }, [n, S, t]),
         {
             loading: o,
             isCurrentUserKeyPersistent: c,

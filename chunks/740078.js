@@ -3,7 +3,7 @@ n.d(t, {
         return u;
     },
     Ct: function () {
-        return p;
+        return m;
     },
     F2: function () {
         return a;
@@ -12,19 +12,19 @@ n.d(t, {
         return i;
     },
     Pj: function () {
-        return _;
-    },
-    YP: function () {
         return f;
     },
-    bw: function () {
+    YP: function () {
         return h;
+    },
+    bw: function () {
+        return p;
     },
     d7: function () {
         return o;
     },
     k5: function () {
-        return E;
+        return _;
     },
     mv: function () {
         return l;
@@ -39,7 +39,7 @@ n.d(t, {
         return r;
     },
     xs: function () {
-        return I;
+        return g;
     },
     zV: function () {
         return d;
@@ -54,13 +54,13 @@ var r = 'top',
     u = 'start',
     c = 'end',
     d = 'clippingParents',
-    _ = 'viewport',
-    E = 'popper',
-    f = 'reference',
-    h = l.reduce(function (e, t) {
+    f = 'viewport',
+    _ = 'popper',
+    h = 'reference',
+    p = l.reduce(function (e, t) {
         return e.concat([t + '-' + u, t + '-' + c]);
     }, []),
-    p = [].concat(l, [o]).reduce(function (e, t) {
+    m = [].concat(l, [o]).reduce(function (e, t) {
         return e.concat([t, t + '-' + u, t + '-' + c]);
     }, []),
-    I = ['beforeRead', 'read', 'afterRead', 'beforeMain', 'main', 'afterMain', 'beforeWrite', 'write', 'afterWrite'];
+    g = ['beforeRead', 'read', 'afterRead', 'beforeMain', 'main', 'afterMain', 'beforeWrite', 'write', 'afterWrite'];

@@ -1,92 +1,92 @@
 n(47120);
 var i,
-    a,
-    s = n(200651),
-    r = n(192379),
-    l = n(120356),
-    o = n.n(l),
+    r,
+    l = n(200651),
+    a = n(192379),
+    s = n(120356),
+    o = n.n(s),
     c = n(442837),
     d = n(674588),
     u = n(264043),
-    _ = n(125909),
-    E = n(374939),
-    h = n(233374),
-    m = n(283293),
-    I = n(292191),
-    p = n(680474),
-    g = n(571737),
-    T = n(101400),
-    S = n(689938),
-    C = n(850258);
-((a = i || (i = {})).ABOUT = 'about'), (a.STORE = 'store');
+    h = n(125909),
+    m = n(374939),
+    p = n(233374),
+    g = n(283293),
+    f = n(292191),
+    _ = n(680474),
+    E = n(571737),
+    I = n(101400),
+    C = n(388032),
+    v = n(850258);
+((r = i || (i = {})).ABOUT = 'about'), (r.STORE = 'store');
 t.Z = function (e) {
     let { applicationId: t, onScroll: n } = e,
         i = (0, c.e7)([u.Z], () => u.Z.getApplication(t)),
-        a = (0, c.e7)([u.Z], () => u.Z.getApplicationFetchState(t));
-    r.useEffect(() => {
+        r = (0, c.e7)([u.Z], () => u.Z.getApplicationFetchState(t));
+    a.useEffect(() => {
         null != t && null == i && d.i6(t);
     }, [t, i]);
-    let l = null == i ? void 0 : i.storefront_available,
-        [f, N] = r.useState('about'),
-        A = r.useMemo(
+    let s = null == i ? void 0 : i.storefront_available,
+        [S, N] = a.useState('about'),
+        T = a.useMemo(
             () => [
                 {
                     id: 'about',
-                    label: S.Z.Messages.APP_DIRECTORY_ABOUT
+                    label: C.intl.string(C.t.JkjJBQ)
                 },
                 {
                     id: 'store',
-                    label: S.Z.Messages.APP_DIRECTORY_STORE
+                    label: C.intl.string(C.t.NfuihY)
                 }
             ],
             []
         ),
-        v = r.useMemo(() => {
+        x = a.useMemo(() => {
             if (null == i) return null;
-            switch (f) {
+            switch (S) {
                 case 'about':
-                    return (0, s.jsx)(p.Z, { application: i });
+                    return (0, l.jsx)(_.Z, { application: i });
                 case 'store':
                     return null;
             }
-        }, [f, i]);
+        }, [S, i]);
     if (null == i)
-        return a === u.M.FETCHING
-            ? (0, s.jsx)('div', {
-                  className: C.centerContainer,
-                  children: (0, s.jsx)(_.Z, { loading: !0 })
+        return r === u.M.FETCHING
+            ? (0, l.jsx)('div', {
+                  className: v.centerContainer,
+                  children: (0, l.jsx)(h.Z, { loading: !0 })
               })
-            : (0, s.jsx)('div', {
-                  className: C.centerContainer,
-                  children: (0, s.jsx)(I.Z, { className: C.error })
+            : (0, l.jsx)('div', {
+                  className: v.centerContainer,
+                  children: (0, l.jsx)(f.Z, { className: v.error })
               });
-    let Z = 'about' === f;
-    return (0, s.jsx)(m.Z, {
+    let b = 'about' === S;
+    return (0, l.jsx)(g.Z, {
         onScroll: n,
-        children: (0, s.jsxs)(E.Z, {
+        children: (0, l.jsxs)(m.Z, {
             children: [
-                (0, s.jsx)(g.Z, { application: i }),
-                (0, s.jsxs)('div', {
-                    className: C.contentContainer,
+                (0, l.jsx)(E.Z, { application: i }),
+                (0, l.jsxs)('div', {
+                    className: v.contentContainer,
                     children: [
-                        (0, s.jsxs)('div', {
-                            className: o()(C.contentTabsContainer, { [C.contentTabsContainerWithSidebar]: Z }),
+                        (0, l.jsxs)('div', {
+                            className: o()(v.contentTabsContainer, { [v.contentTabsContainerWithSidebar]: b }),
                             children: [
-                                l &&
-                                    (0, s.jsx)('div', {
-                                        className: C.contentTabs,
-                                        children: (0, s.jsx)(h.Z, {
-                                            tabs: A,
+                                s &&
+                                    (0, l.jsx)('div', {
+                                        className: v.contentTabs,
+                                        children: (0, l.jsx)(p.Z, {
+                                            tabs: T,
                                             onTabSelect: N,
-                                            selectedTab: f
+                                            selectedTab: S
                                         })
                                     }),
-                                v
+                                x
                             ]
                         }),
-                        Z &&
-                            (0, s.jsx)(T.Z, {
-                                className: C.sidebar,
+                        b &&
+                            (0, l.jsx)(I.Z, {
+                                className: v.sidebar,
                                 application: i
                             })
                     ]

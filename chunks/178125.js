@@ -1,50 +1,50 @@
 t.r(n),
     t.d(n, {
         default: function () {
-            return _;
+            return p;
         }
     }),
     t(47120);
-var r = t(200651),
-    i = t(192379),
+var i = t(200651),
+    r = t(192379),
     o = t(106351),
     l = t(442837),
     a = t(481060),
     d = t(471445),
     c = t(856768),
-    s = t(324067),
-    u = t(771845),
+    u = t(324067),
+    s = t(771845),
     m = t(9156),
     h = t(117984),
     f = t(593214),
     g = t(378337),
-    v = t(689938),
+    v = t(388032),
     x = t(421372);
-function _(e) {
+function p(e) {
     let { transitionState: n, onClose: t, parentId: o } = e,
-        d = (0, l.e7)([u.ZP], () => u.ZP.getFlattenedGuildIds()[0]),
-        [s, m] = i.useState(d),
-        [h, f] = i.useState(!1);
-    return (0, r.jsxs)(a.ModalRoot, {
+        d = (0, l.e7)([s.ZP], () => s.ZP.getFlattenedGuildIds()[0]),
+        [u, m] = r.useState(d),
+        [h, f] = r.useState(!1);
+    return (0, i.jsxs)(a.ModalRoot, {
         transitionState: n,
         children: [
-            (0, r.jsxs)(a.ModalHeader, {
+            (0, i.jsxs)(a.ModalHeader, {
                 className: x.modalHeader,
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, i.jsxs)('div', {
                         className: x.modalHeaderTitle,
                         children: [
-                            (0, r.jsx)(a.Heading, {
+                            (0, i.jsx)(a.Heading, {
                                 variant: 'text-lg/semibold',
-                                children: v.Z.Messages.FAVORITE_CHANNEL
+                                children: v.intl.string(v.t['4wcdEx'])
                             }),
-                            (0, r.jsx)(a.ModalCloseButton, { onClick: t })
+                            (0, i.jsx)(a.ModalCloseButton, { onClick: t })
                         ]
                     }),
-                    (0, r.jsx)('div', {
+                    (0, i.jsx)('div', {
                         className: x.guildSelector,
-                        children: (0, r.jsx)(c.q, {
-                            guildId: s,
+                        children: (0, i.jsx)(c.q, {
+                            guildId: u,
                             onChange: function (e) {
                                 null != e && m(e.id);
                             }
@@ -52,34 +52,34 @@ function _(e) {
                     })
                 ]
             }),
-            (0, r.jsx)(a.ModalContent, {
+            (0, i.jsx)(a.ModalContent, {
                 className: x.modalContent,
-                children: (0, r.jsx)(p, {
-                    guildId: s,
+                children: (0, i.jsx)(j, {
+                    guildId: u,
                     hideMutedChannels: h,
                     parentId: o
                 })
             }),
-            (0, r.jsxs)(a.ModalFooter, {
+            (0, i.jsxs)(a.ModalFooter, {
                 className: x.modalFooter,
                 children: [
-                    (0, r.jsx)(a.Button, {
+                    (0, i.jsx)(a.Button, {
                         className: x.goBackButton,
                         look: a.ButtonLooks.BLANK,
                         color: a.ButtonColors.PRIMARY,
                         size: a.ButtonSizes.SMALL,
                         onClick: t,
-                        children: v.Z.Messages.GO_BACK
+                        children: v.intl.string(v.t['/g10LC'])
                     }),
-                    (0, r.jsx)('div', {
-                        children: (0, r.jsx)(a.Checkbox, {
+                    (0, i.jsx)('div', {
+                        children: (0, i.jsx)(a.Checkbox, {
                             type: a.Checkbox.Types.INVERTED,
                             value: h,
                             onChange: (e, n) => f(n),
-                            children: (0, r.jsx)(a.Text, {
+                            children: (0, i.jsx)(a.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'interactive-normal',
-                                children: v.Z.Messages.HIDE_MUTED_CHANNELS
+                                children: v.intl.string(v.t.UwOLJC)
                             })
                         })
                     })
@@ -88,23 +88,23 @@ function _(e) {
         ]
     });
 }
-function p(e) {
+function j(e) {
     let { guildId: n, hideMutedChannels: t, parentId: a } = e,
-        d = (0, l.e7)([s.Z], () => s.Z.getCategories(n)),
+        d = (0, l.e7)([u.Z], () => u.Z.getCategories(n)),
         c = (0, g.Z)(d),
-        u = i.useRef(null);
+        s = r.useRef(null);
     return (
-        i.useEffect(() => {
+        r.useEffect(() => {
             var e;
-            null == u || null === (e = u.current) || void 0 === e || e.scroll({ top: 0 });
+            null == s || null === (e = s.current) || void 0 === e || e.scroll({ top: 0 });
         }, [n]),
-        (0, r.jsx)('div', {
-            ref: u,
+        (0, i.jsx)('div', {
+            ref: s,
             children: c.map((e) =>
                 e.type === o.d.GUILD_CATEGORY
-                    ? (0, r.jsx)(C, { name: e.name }, e.id)
-                    : (0, r.jsx)(
-                          B,
+                    ? (0, i.jsx)(B, { name: e.name }, e.id)
+                    : (0, i.jsx)(
+                          _,
                           {
                               channel: e,
                               hideMutedChannels: t,
@@ -116,32 +116,32 @@ function p(e) {
         })
     );
 }
-function C(e) {
+function B(e) {
     let { name: n } = e;
-    return (0, r.jsx)(a.Text, {
+    return (0, i.jsx)(a.Text, {
         className: x.categoryRow,
         variant: 'eyebrow',
         color: 'interactive-normal',
         children: n
     });
 }
-function B(e) {
-    let { channel: n, hideMutedChannels: t, parentId: i } = e,
+function _(e) {
+    let { channel: n, hideMutedChannels: t, parentId: r } = e,
         o = (0, f.s4)(n.id);
     if ((0, l.e7)([m.ZP], () => m.ZP.isChannelMuted(n.guild_id, n.id)) && t) return null;
     let c = (0, d.KS)(n);
-    return (0, r.jsxs)(
+    return (0, i.jsxs)(
         'div',
         {
             className: x.channelRow,
             children: [
-                (0, r.jsxs)('div', {
+                (0, i.jsxs)('div', {
                     className: x.channelName,
                     children: [
                         null != c &&
-                            (0, r.jsx)('div', {
+                            (0, i.jsx)('div', {
                                 className: x.channelIconContainer,
-                                children: (0, r.jsx)(c, {
+                                children: (0, i.jsx)(c, {
                                     className: x.channelIcon,
                                     size: 'custom',
                                     color: 'currentColor',
@@ -149,7 +149,7 @@ function B(e) {
                                     width: 20
                                 })
                             }),
-                        (0, r.jsx)(a.Text, {
+                        (0, i.jsx)(a.Text, {
                             variant: 'text-md/medium',
                             color: 'interactive-normal',
                             children: n.name
@@ -157,37 +157,37 @@ function B(e) {
                     ]
                 }),
                 null != o
-                    ? (0, r.jsx)(j, { channelId: n.id })
-                    : (0, r.jsx)(I, {
+                    ? (0, i.jsx)(C, { channelId: n.id })
+                    : (0, i.jsx)(k, {
                           channelId: n.id,
-                          parentId: i
+                          parentId: r
                       })
             ]
         },
         n.id
     );
 }
-function I(e) {
+function k(e) {
     let { channelId: n, parentId: t } = e;
-    return (0, r.jsx)(a.Button, {
+    return (0, i.jsx)(a.Button, {
         look: a.ButtonLooks.OUTLINED,
         size: a.ButtonSizes.SMALL,
         color: a.ButtonColors.BRAND,
         onClick: function () {
             (0, h.kj)(n, t);
         },
-        children: v.Z.Messages.ADD
+        children: v.intl.string(v.t.OYkgVl)
     });
 }
-function j(e) {
+function C(e) {
     let { channelId: n } = e;
-    return (0, r.jsx)(a.Button, {
+    return (0, i.jsx)(a.Button, {
         look: a.ButtonLooks.FILLED,
         size: a.ButtonSizes.SMALL,
         color: a.ButtonColors.PRIMARY,
         onClick: function () {
             (0, h.oC)(n);
         },
-        children: v.Z.Messages.REMOVE
+        children: v.intl.string(v.t.N86XcH)
     });
 }

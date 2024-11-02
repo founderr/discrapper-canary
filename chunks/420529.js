@@ -1,85 +1,85 @@
-t.d(n, {
+e.d(n, {
     Z: function () {
-        return S;
+        return p;
     }
 });
-var l = t(200651);
-t(192379);
-var i = t(399606),
-    u = t(481060),
-    r = t(231757),
-    a = t(397639),
-    o = t(19780),
-    s = t(979651),
-    d = t(951206),
-    c = t(446226),
-    E = t(937393),
-    _ = t(721351),
-    N = t(981631),
-    f = t(689938);
-function S(e) {
-    let n = (0, i.e7)([o.Z], () => o.Z.getChannelId() === e.id),
-        S = (0, c.Z)(),
-        T = (null == S ? void 0 : S.channelId) === e.id,
-        Z = (0, a.V)(e) && !e.isPrivate(),
-        I = (0, a.Z)(e),
-        g = (!(0, i.e7)([s.Z], () => s.Z.isInChannel(e.id)) && I) || Z,
-        A = (0, E.Z)();
-    if (!T && 0 === A.length) return null;
-    let C = (n) => {
+var i = e(200651);
+e(192379);
+var l = e(399606),
+    r = e(481060),
+    d = e(231757),
+    a = e(397639),
+    u = e(19780),
+    s = e(979651),
+    o = e(951206),
+    _ = e(446226),
+    c = e(937393),
+    E = e(721351),
+    I = e(981631),
+    g = e(388032);
+function p(t) {
+    let n = (0, l.e7)([u.Z], () => u.Z.getChannelId() === t.id),
+        p = (0, _.Z)(),
+        T = (null == p ? void 0 : p.channelId) === t.id,
+        f = (0, a.V)(t) && !t.isPrivate(),
+        S = (0, a.Z)(t),
+        L = (!(0, l.e7)([s.Z], () => s.Z.isInChannel(t.id)) && S) || f,
+        m = (0, c.Z)();
+    if (!T && 0 === m.length) return null;
+    let U = (n) => {
         if (!n.twoWayLink || n.revoked) {
-            (0, r.Z)({
+            (0, d.Z)({
                 platformType: n.type,
                 location: 'Console Transfer Item'
             });
             return;
         }
-        n.type === N.ABu.XBOX
-            ? (0, u.openModalLazy)(async () => {
-                  let { default: n } = await Promise.all([t.e('15812'), t.e('522')]).then(t.bind(t, 200623));
-                  return (t) =>
-                      (0, l.jsx)(n, {
-                          ...t,
-                          channel: e
+        n.type === I.ABu.XBOX
+            ? (0, r.openModalLazy)(async () => {
+                  let { default: n } = await Promise.all([e.e('15812'), e.e('522')]).then(e.bind(e, 200623));
+                  return (e) =>
+                      (0, i.jsx)(n, {
+                          ...e,
+                          channel: t
                       });
               })
-            : (n.type === N.ABu.PLAYSTATION || n.type === N.ABu.PLAYSTATION_STAGING) &&
-              (0, u.openModalLazy)(async () => {
-                  let { default: i } = await t.e('638').then(t.bind(t, 543974));
-                  return (t) =>
-                      (0, l.jsx)(i, {
-                          ...t,
+            : (n.type === I.ABu.PLAYSTATION || n.type === I.ABu.PLAYSTATION_STAGING) &&
+              (0, r.openModalLazy)(async () => {
+                  let { default: l } = await e.e('638').then(e.bind(e, 543974));
+                  return (e) =>
+                      (0, i.jsx)(l, {
+                          ...e,
                           platform: n.type,
-                          channel: e
+                          channel: t
                       });
               });
     };
-    return (0, l.jsx)(l.Fragment, {
+    return (0, i.jsx)(i.Fragment, {
         children: T
-            ? (0, l.jsx)(u.MenuItem, {
-                  label: f.Z.Messages.TRANSFER_VOICE_TO_DEVICE,
+            ? (0, i.jsx)(r.MenuItem, {
+                  label: g.intl.string(g.t.PlwgdX),
                   id: 'handoff',
                   action: () => {
-                      (0, d.F)(S);
+                      (0, o.F)(p);
                   },
-                  icon: (0, _.Z)(void 0),
-                  disabled: g
+                  icon: (0, E.Z)(void 0),
+                  disabled: L
               })
-            : A.map((e) =>
-                  (0, l.jsx)(
-                      u.MenuItem,
+            : m.map((t) =>
+                  (0, i.jsx)(
+                      r.MenuItem,
                       {
-                          id: 'transfer-'.concat(e.type, '-').concat(e.id),
-                          label: (function (e, n) {
-                              if (e === N.ABu.XBOX) return n ? f.Z.Messages.TRANSFER_VOICE_TO_XBOX : f.Z.Messages.JOIN_ON_XBOX;
-                              if (e === N.ABu.PLAYSTATION) return n ? f.Z.Messages.CONSOLE_PLAYSTATION_TRANSFER_VOICE : f.Z.Messages.CONSOLE_PLAYSTATION_JOIN_VOICE;
-                              if (e === N.ABu.PLAYSTATION_STAGING) return n ? f.Z.Messages.CONSOLE_PLAYSTATION_STAGING_TRANSFER_VOICE : f.Z.Messages.CONSOLE_PLAYSTATION_STAGING_JOIN_VOICE;
-                          })(e.type, n),
-                          action: () => C(e),
-                          icon: (0, _.Z)(e.type),
-                          disabled: g
+                          id: 'transfer-'.concat(t.type, '-').concat(t.id),
+                          label: (function (t, n) {
+                              if (t === I.ABu.XBOX) return n ? g.intl.string(g.t['f+Aijo']) : g.intl.string(g.t.E8euSk);
+                              if (t === I.ABu.PLAYSTATION) return n ? g.intl.string(g.t.vzfxmZ) : g.intl.string(g.t.QxEYDg);
+                              if (t === I.ABu.PLAYSTATION_STAGING) return n ? g.intl.string(g.t.BDiXtb) : g.intl.string(g.t['bhdB9/']);
+                          })(t.type, n),
+                          action: () => U(t),
+                          icon: (0, E.Z)(t.type),
+                          disabled: L
                       },
-                      e.id
+                      t.id
                   )
               )
     });

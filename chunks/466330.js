@@ -1,52 +1,52 @@
-a.d(e, {
+t.d(e, {
     Z: function () {
-        return E;
+        return d;
     }
 });
-var t = a(200651);
-a(192379);
-var l = a(442837),
-    u = a(481060),
-    r = a(159300),
-    c = a(984933),
-    s = a(496675),
-    i = a(981631),
-    o = a(689938);
-function E(n) {
-    let { source: e, guild: a, channel: t, stageInstance: u } = n,
-        o = (0, l.e7)([c.ZP], () => c.ZP.getDefaultChannel(a.id, !0, i.Plq.CREATE_INSTANT_INVITE)),
-        E = (0, l.e7)([s.Z], () => (0, r.b)(s.Z, a, t, u)),
-        Z = d(e, a, E && null != t ? t : o),
-        N = _(e);
-    return null == t && e === i.t4x.GUILD_CONTEXT_MENU ? null : E || null != o ? Z : N;
+var l = t(200651);
+t(192379);
+var i = t(442837),
+    a = t(481060),
+    r = t(159300),
+    u = t(984933),
+    c = t(496675),
+    o = t(981631),
+    s = t(388032);
+function d(n) {
+    let { source: e, guild: t, channel: l, stageInstance: a } = n,
+        s = (0, i.e7)([u.ZP], () => u.ZP.getDefaultChannel(t.id, !0, o.Plq.CREATE_INSTANT_INVITE)),
+        d = (0, i.e7)([c.Z], () => (0, r.b)(c.Z, t, l, a)),
+        _ = E(e, t, d && null != l ? l : s),
+        p = Z(e);
+    return null == l && e === o.t4x.GUILD_CONTEXT_MENU ? null : d || null != s ? _ : p;
 }
-let d = (n, e, l) =>
-        (0, t.jsx)(u.MenuItem, {
+let E = (n, e, i) =>
+        (0, l.jsx)(a.MenuItem, {
             id: 'invite-people',
-            label: o.Z.Messages.INVITE_PEOPLE,
+            label: s.intl.string(s.t.BN75l5),
             color: 'brand',
-            icon: n === i.t4x.GUILD_HEADER ? u.GroupPlusIcon : void 0,
+            icon: n === o.t4x.GUILD_HEADER ? a.GroupPlusIcon : void 0,
             action: () =>
-                (0, u.openModalLazy)(async () => {
-                    let { default: u } = await Promise.all([a.e('7654'), a.e('85683')]).then(a.bind(a, 560114));
-                    return (a) =>
-                        (0, t.jsx)(u, {
-                            ...a,
+                (0, a.openModalLazy)(async () => {
+                    let { default: a } = await Promise.all([t.e('7654'), t.e('85683')]).then(t.bind(t, 560114));
+                    return (t) =>
+                        (0, l.jsx)(a, {
+                            ...t,
                             guild: e,
-                            channel: l,
+                            channel: i,
                             source: n
                         });
                 })
         }),
-    _ = (n) =>
-        (0, t.jsx)(u.MenuItem, {
+    Z = (n) =>
+        (0, l.jsx)(a.MenuItem, {
             id: 'invite-people',
-            label: o.Z.Messages.INVITE_PEOPLE,
+            label: s.intl.string(s.t.BN75l5),
             color: 'brand',
-            icon: n === i.t4x.GUILD_HEADER ? u.GroupPlusIcon : void 0,
+            icon: n === o.t4x.GUILD_HEADER ? a.GroupPlusIcon : void 0,
             action: () =>
-                (0, u.openModalLazy)(async () => {
-                    let { default: n } = await a.e('88358').then(a.bind(a, 598402));
-                    return (e) => (0, t.jsx)(n, { ...e });
+                (0, a.openModalLazy)(async () => {
+                    let { default: n } = await t.e('88358').then(t.bind(t, 598402));
+                    return (e) => (0, l.jsx)(n, { ...e });
                 })
         });

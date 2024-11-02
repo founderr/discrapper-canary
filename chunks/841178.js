@@ -1,59 +1,59 @@
-t.r(e),
-    t.d(e, {
+i.r(n),
+    i.d(n, {
         default: function () {
-            return l;
+            return c;
         }
     });
-var a = t(200651);
-t(192379);
-var n = t(481060),
-    i = t(600164),
-    o = t(313201),
-    d = t(952164),
-    r = t(689938),
-    c = t(326249);
-function l(s) {
-    let { transitionState: e, onClose: t } = s,
-        l = (0, o.Dt)();
-    return (0, a.jsxs)(n.ModalRoot, {
-        'aria-labelledby': l,
-        transitionState: e,
-        size: n.ModalSize.SMALL,
+var s = i(200651);
+i(192379);
+var e = i(481060),
+    a = i(600164),
+    o = i(313201),
+    r = i(952164),
+    d = i(388032),
+    l = i(326249);
+function c(t) {
+    let { transitionState: n, onClose: i } = t,
+        c = (0, o.Dt)();
+    return (0, s.jsxs)(e.ModalRoot, {
+        'aria-labelledby': c,
+        transitionState: n,
+        size: e.ModalSize.SMALL,
         children: [
-            (0, a.jsx)(n.ModalHeader, {
+            (0, s.jsx)(e.ModalHeader, {
                 separator: !1,
-                children: (0, a.jsx)(n.Heading, {
-                    id: l,
+                children: (0, s.jsx)(e.Heading, {
+                    id: c,
                     variant: 'heading-lg/semibold',
-                    children: r.Z.Messages.SPOTIFY_PREMIUM_UPGRADE_HEADER
+                    children: d.intl.formatToMarkdownString(d.t.DQsSGh, {})
                 })
             }),
-            (0, a.jsxs)(n.ModalContent, {
+            (0, s.jsxs)(e.ModalContent, {
                 children: [
-                    (0, a.jsx)(i.Z, {
-                        justify: i.Z.Justify.CENTER,
-                        children: (0, a.jsx)('div', { className: c.image })
+                    (0, s.jsx)(a.Z, {
+                        justify: a.Z.Justify.CENTER,
+                        children: (0, s.jsx)('div', { className: l.image })
                     }),
-                    (0, a.jsx)(n.Text, {
-                        className: c.text,
+                    (0, s.jsx)(e.Text, {
+                        className: l.text,
                         variant: 'text-sm/normal',
-                        children: r.Z.Messages.SPOTIFY_PREMIUM_UPGRADE_BODY
+                        children: d.intl.string(d.t.xGMwi4)
                     })
                 ]
             }),
-            (0, a.jsxs)(n.ModalFooter, {
+            (0, s.jsxs)(e.ModalFooter, {
                 children: [
-                    (0, a.jsx)(n.Button, {
+                    (0, s.jsx)(e.Button, {
                         onClick: function () {
-                            (0, d.KK)(), t();
+                            (0, r.KK)(), i();
                         },
-                        children: r.Z.Messages.SPOTIFY_PREMIUM_UPGRADE_BUTTON
+                        children: d.intl.string(d.t.n8U5jY)
                     }),
-                    (0, a.jsx)(n.Button, {
-                        look: n.Button.Looks.LINK,
-                        color: n.Button.Colors.PRIMARY,
-                        onClick: t,
-                        children: r.Z.Messages.CANCEL
+                    (0, s.jsx)(e.Button, {
+                        look: e.Button.Looks.LINK,
+                        color: e.Button.Colors.PRIMARY,
+                        onClick: i,
+                        children: d.intl.string(d.t['ETE/oK'])
                     })
                 ]
             })

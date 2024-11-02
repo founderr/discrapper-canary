@@ -1,6 +1,6 @@
 n.d(t, {
     m: function () {
-        return E;
+        return _;
     }
 }),
     n(47120);
@@ -13,16 +13,16 @@ var r,
     u = n(481060),
     c = n(607070),
     d = n(745510),
-    _ = n(762817);
-function E(e) {
+    f = n(762817);
+function _(e) {
     let { children: t, confettiTriggerRef: n, setConfettiCount: r, setShouldFireConfetti: i, tooltipProps: d } = e,
-        [E, f] = s.useState(0),
-        h = s.useRef(-1),
-        p = s.useRef(!0),
-        I = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
-        { scaleFactor: m } = (0, u.useSpring)({
+        [_, h] = s.useState(0),
+        p = s.useRef(-1),
+        m = s.useRef(!0),
+        g = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
+        { scaleFactor: E } = (0, u.useSpring)({
             from: { scaleFactor: 1 },
-            to: { scaleFactor: 1 === E ? 0.9 : 2 === E ? 1.2 : 1 },
+            to: { scaleFactor: 1 === _ ? 0.9 : 2 === _ ? 1.2 : 1 },
             config: {
                 tension: 380,
                 friction: 7
@@ -30,36 +30,36 @@ function E(e) {
         });
     return (s.useEffect(
         () => () => {
-            p.current = !1;
+            m.current = !1;
         },
         []
     ),
-    I)
+    g)
         ? (0, a.jsx)(a.Fragment, { children: t })
         : (0, a.jsx)(o.animated.div, {
-              className: _.confettiTriggerWrapper,
-              style: { transform: m.to((e) => 'scale('.concat(e, ')')) },
+              className: f.confettiTriggerWrapper,
+              style: { transform: E.to((e) => 'scale('.concat(e, ')')) },
               children: (0, a.jsx)(u.Clickable, {
-                  className: _.confettiTrigger,
+                  className: f.confettiTrigger,
                   onMouseDown: () => {
-                      f(1),
+                      h(1),
                           i(!0),
                           r((e) => Math.min(e + 2, 200)),
-                          window.clearTimeout(h.current),
-                          (h.current = window.setTimeout(() => {
-                              p.current && r(0);
+                          window.clearTimeout(p.current),
+                          (p.current = window.setTimeout(() => {
+                              m.current && r(0);
                           }, 200));
                   },
                   onMouseUp: () => {
-                      f(0), i(!1);
+                      h(0), i(!1);
                   },
                   onMouseEnter: () => {
                       var e;
-                      f(2), null == d || null === (e = d.onMouseEnter) || void 0 === e || e.call(d);
+                      h(2), null == d || null === (e = d.onMouseEnter) || void 0 === e || e.call(d);
                   },
                   onMouseLeave: () => {
                       var e;
-                      f(0), null == d || null === (e = d.onMouseLeave) || void 0 === e || e.call(d);
+                      h(0), null == d || null === (e = d.onMouseLeave) || void 0 === e || e.call(d);
                   },
                   innerRef: n,
                   children: t

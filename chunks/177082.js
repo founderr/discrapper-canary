@@ -8,8 +8,8 @@ var r = n(355467),
     u = n(580130),
     c = n(630388),
     d = n(74538),
-    _ = n(474936);
-function E(e, t, n) {
+    f = n(474936);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,33 +22,33 @@ function E(e, t, n) {
         e
     );
 }
-class f extends a.Z {
+class h extends a.Z {
     constructor(...e) {
         super(...e),
-            E(this, 'actions', {
+            _(this, 'actions', {
                 POST_CONNECTION_OPEN: () => {
                     this.maybeFetchSubscriptions(), this.maybeFetchCountryCode(), this.maybeFetchMostRecentSubscription();
                 }
             }),
-            E(this, 'maybeFetchSubscriptions', async () => {
+            _(this, 'maybeFetchSubscriptions', async () => {
                 let e = s.default.getCurrentUser();
                 if (d.ZP.isPremium(e)) {
                     !l.ZP.hasFetchedSubscriptions() && (await (0, r.jg)());
                     let e = l.ZP.getPremiumSubscription();
-                    (null == e ? void 0 : e.paymentSourceId) == null && !u.Z.applicationIdsFetched.has(_.CL) && (await (0, i.yD)(_.CL));
+                    (null == e ? void 0 : e.paymentSourceId) == null && !u.Z.applicationIdsFetched.has(f.CL) && (await (0, i.yD)(f.CL));
                 }
             }),
-            E(this, 'maybeFetchMostRecentSubscription', () => {
+            _(this, 'maybeFetchMostRecentSubscription', () => {
                 let e = s.default.getCurrentUser();
-                null != e && !d.ZP.isPremium(e) && null != e.purchasedFlags && ((0, c.yE)(e.purchasedFlags, _.in.PREMIUM_TIER_1) || (0, c.yE)(e.purchasedFlags, _.in.PREMIUM_TIER_2)) && (0, r.ou)();
+                null != e && !d.ZP.isPremium(e) && null != e.purchasedFlags && ((0, c.yE)(e.purchasedFlags, f.in.PREMIUM_TIER_1) || (0, c.yE)(e.purchasedFlags, f.in.PREMIUM_TIER_2)) && (0, r.ou)();
             }),
-            E(this, 'maybeFetchCountryCode', async () => {
+            _(this, 'maybeFetchCountryCode', async () => {
                 let e = s.default.getCurrentUser();
                 d.ZP.isPremium(e) && !o.Z.ipCountryCodeLoaded && (await this.fetchCountryCode());
             }),
-            E(this, 'fetchCountryCode', async () => {
+            _(this, 'fetchCountryCode', async () => {
                 await (0, r.GE)(), null != o.Z.ipCountryCode && (await (0, r.tZ)());
             });
     }
 }
-t.Z = new f();
+t.Z = new h();

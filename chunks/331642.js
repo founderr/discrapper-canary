@@ -1,147 +1,147 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return A;
+        return _;
     }
 }),
-    t(47120);
-var n = t(200651),
-    a = t(192379),
-    i = t(442837),
-    r = t(692547),
-    o = t(481060),
-    l = t(596454),
-    c = t(594174),
-    d = t(74538),
-    _ = t(242291),
-    u = t(706667),
-    E = t(792165),
-    T = t(409673),
-    S = t(603074),
-    I = t(689938),
-    N = t(995235);
-function m(e) {
-    let { onSelect: s } = e,
-        [t, r] = a.useState(!1),
-        l = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
-        _ = d.ZP.canUseCustomCallSounds(l);
-    function u(e) {
-        _ && (r(!1), null == s || s(e));
+    n(47120);
+var i = n(200651),
+    s = n(192379),
+    r = n(442837),
+    l = n(692547),
+    a = n(481060),
+    o = n(596454),
+    c = n(594174),
+    d = n(74538),
+    u = n(242291),
+    m = n(706667),
+    h = n(792165),
+    g = n(409673),
+    p = n(603074),
+    x = n(388032),
+    S = n(995235);
+function T(e) {
+    let { onSelect: t } = e,
+        [n, l] = s.useState(!1),
+        o = (0, r.e7)([c.default], () => c.default.getCurrentUser()),
+        u = d.ZP.canUseCustomCallSounds(o);
+    function m(e) {
+        u && (l(!1), null == t || t(e));
     }
-    return (0, n.jsx)(o.Popout, {
-        shouldShow: t,
+    return (0, i.jsx)(a.Popout, {
+        shouldShow: n,
         position: 'left',
-        onRequestClose: () => r(!1),
+        onRequestClose: () => l(!1),
         renderPopout: (e) => {
-            let { closePopout: s } = e;
-            return (0, n.jsx)(o.Dialog, {
-                children: (0, n.jsx)(S.Z, {
+            let { closePopout: t } = e;
+            return (0, i.jsx)(a.Dialog, {
+                children: (0, i.jsx)(p.Z, {
                     suppressPlaySound: !0,
                     shouldShowUpsell: !1,
                     guildId: null,
                     channel: null,
-                    onClose: s,
-                    onSelect: u,
-                    gridNotice: _ ? null : (0, n.jsx)(E.o, {}),
+                    onClose: t,
+                    onSelect: m,
+                    gridNotice: u ? null : (0, i.jsx)(h.o, {}),
                     analyticsSource: 'call sounds edit setting'
                 })
             });
         },
         children: (e) =>
-            (0, n.jsx)(T.hU, {
+            (0, i.jsx)(g.hU, {
                 ...e,
                 onClick: () => {
-                    r(!t);
+                    l(!n);
                 },
-                text: I.Z.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND_CHANGE,
-                children: (0, n.jsx)(o.PencilIcon, {
+                text: x.intl.string(x.t.uOe0Aw),
+                children: (0, i.jsx)(a.PencilIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: N.secondaryIcon
+                    className: S.secondaryIcon
                 })
             })
     });
 }
 function C(e) {
-    let { sound: s } = e,
-        { previewSound: t } = (0, u.Z)(s, null),
-        a =
-            0 === (0, _.pI)()
-                ? I.Z.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND_LOW_VOLUME
-                : I.Z.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND.format({
-                      emojiName: s.emojiName,
-                      soundName: s.name
+    let { sound: t } = e,
+        { previewSound: n } = (0, m.Z)(t, null),
+        s =
+            0 === (0, u.pI)()
+                ? x.intl.string(x.t.OASXjo)
+                : x.intl.formatToPlainString(x.t['/8fYOz'], {
+                      emojiName: t.emojiName,
+                      soundName: t.name
                   });
-    return (0, n.jsx)(T.hU, {
-        onClick: t,
-        text: a,
-        children: (0, n.jsx)(o.VoiceNormalIcon, {
+    return (0, i.jsx)(g.hU, {
+        onClick: n,
+        text: s,
+        children: (0, i.jsx)(a.VoiceNormalIcon, {
             size: 'md',
             color: 'currentColor',
-            className: N.secondaryIconActive
+            className: S.secondaryIconActive
         })
     });
 }
-function A(e) {
-    let { sound: s, isGlobal: t, onSelect: a } = e,
-        i = null != s,
-        c = null == s ? void 0 : s.emojiId,
-        d = null == s ? void 0 : s.emojiName,
-        _ = i && (null != d || null != c),
-        u = (e) =>
-            (0, n.jsx)(o.Text, {
+function _(e) {
+    let { sound: t, isGlobal: n, onSelect: s } = e,
+        r = null != t,
+        c = null == t ? void 0 : t.emojiId,
+        d = null == t ? void 0 : t.emojiName,
+        u = r && (null != d || null != c),
+        m = (e) =>
+            (0, i.jsx)(a.Text, {
                 variant: 'text-xs/medium',
                 color: 'header-secondary',
                 tag: 'span',
                 children: e
             });
-    return (0, n.jsxs)('div', {
-        className: N.soundButtonSettingContainer,
+    return (0, i.jsxs)('div', {
+        className: S.soundButtonSettingContainer,
         children: [
-            (0, n.jsxs)('div', {
-                className: N.container,
+            (0, i.jsxs)('div', {
+                className: S.container,
                 children: [
-                    _ &&
-                        (0, n.jsx)(l.Z, {
+                    u &&
+                        (0, i.jsx)(o.Z, {
                             emojiId: c,
                             emojiName: d,
-                            className: N.emoji
+                            className: S.emoji
                         }),
-                    (0, n.jsx)(o.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-xs/medium',
                         color: 'header-primary',
-                        className: N.soundText,
+                        className: S.soundText,
                         children:
-                            null == s
-                                ? I.Z.Messages.NONE
-                                : t
-                                  ? I.Z.Messages.CALL_SOUNDS_SETTINGS_ALL_SERVERS.format({
-                                        soundName: s.name,
-                                        subtextHook: u
+                            null == t
+                                ? x.intl.string(x.t.PoWNfX)
+                                : n
+                                  ? x.intl.format(x.t.B6HU6O, {
+                                        soundName: t.name,
+                                        subtextHook: m
                                     })
-                                  : s.name
+                                  : t.name
                     }),
-                    i
-                        ? (0, n.jsx)(C, { sound: s })
-                        : (0, n.jsx)(o.VoiceNormalIcon, {
+                    r
+                        ? (0, i.jsx)(C, { sound: t })
+                        : (0, i.jsx)(a.VoiceNormalIcon, {
                               size: 'md',
                               color: 'currentColor',
-                              className: N.secondaryIconDisabled
+                              className: S.secondaryIconDisabled
                           })
                 ]
             }),
-            (0, n.jsxs)('div', {
-                className: N.container,
+            (0, i.jsxs)('div', {
+                className: S.container,
                 children: [
-                    (0, n.jsx)(m, { onSelect: a }),
-                    i &&
-                        !t &&
-                        (0, n.jsx)(T.hU, {
-                            onClick: () => a(null),
-                            text: I.Z.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND_REMOVE,
-                            children: (0, n.jsx)(o.TrashIcon, {
+                    (0, i.jsx)(T, { onSelect: s }),
+                    r &&
+                        !n &&
+                        (0, i.jsx)(g.hU, {
+                            onClick: () => s(null),
+                            text: x.intl.string(x.t.jmtcGB),
+                            children: (0, i.jsx)(a.TrashIcon, {
                                 size: 'md',
-                                color: r.Z.unsafe_rawColors.RED_400.css,
-                                className: N.secondaryIcon
+                                color: l.Z.unsafe_rawColors.RED_400.css,
+                                className: S.secondaryIcon
                             })
                         })
                 ]

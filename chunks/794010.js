@@ -6,8 +6,8 @@ a.d(t, {
     a(47120);
 var n,
     s = a(200651),
-    r = a(192379);
-function i(e, t, a) {
+    i = a(192379);
+function r(e, t, a) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,9 +20,9 @@ function i(e, t, a) {
         e
     );
 }
-class l extends (n = r.PureComponent) {
+class l extends (n = i.PureComponent) {
     render() {
-        let { tag: e, children: t, eventName: a, data: n, track: r, trackOutboundLink: i, ...l } = this.props;
+        let { tag: e, children: t, eventName: a, data: n, track: i, trackOutboundLink: r, ...l } = this.props;
         return null == e
             ? null
             : (0, s.jsx)(e, {
@@ -33,14 +33,14 @@ class l extends (n = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            i(this, 'handleClick', (e) => {
-                let { eventName: t, data: a, href: n, onClick: s, trackOutboundLink: r, track: i } = this.props;
-                if ((a.googleAnalytics && r && (null != n ? r(n) : console.warn('TrackClick.handleClick: No href provided when using data.googleAnalytics')), s && s(e), !t)) return !1;
-                i(t, a);
+            r(this, 'handleClick', (e) => {
+                let { eventName: t, data: a, href: n, onClick: s, trackOutboundLink: i, track: r } = this.props;
+                if ((a.googleAnalytics && i && (null != n ? i(n) : console.warn('TrackClick.handleClick: No href provided when using data.googleAnalytics')), s && s(e), !t)) return !1;
+                r(t, a);
             });
     }
 }
-i(l, 'defaultProps', {
+r(l, 'defaultProps', {
     tag: 'a',
     data: {}
 });

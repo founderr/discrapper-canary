@@ -1,28 +1,28 @@
-n.r(t),
-    n.d(t, {
+n.r(e),
+    n.d(e, {
         default: function () {
-            return d;
+            return s;
         }
     });
-var a = n(200651);
+var l = n(200651);
 n(192379);
-var l = n(481060),
-    r = n(239091),
-    i = n(358085),
-    s = n(29264),
-    u = n(905041),
-    o = n(689938);
-function d(e) {
-    let { src: t, onSelect: n } = e,
-        d = (0, s.Z)(t),
-        c = (0, u.Z)(t, null);
-    return i.isPlatformEmbedded
-        ? (0, a.jsxs)(l.Menu, {
+var i = n(481060),
+    a = n(239091),
+    r = n(358085),
+    u = n(29264),
+    o = n(905041),
+    d = n(388032);
+function s(t) {
+    let { src: e, onSelect: n } = t,
+        s = (0, u.Z)(e),
+        c = (0, o.Z)(e, null);
+    return r.isPlatformEmbedded
+        ? (0, l.jsxs)(i.Menu, {
               navId: 'image-context',
-              onClose: r.Zy,
-              'aria-label': o.Z.Messages.IMAGE_ACTIONS_MENU_LABEL,
+              onClose: a.Zy,
+              'aria-label': d.intl.string(d.t.Zow2V1),
               onSelect: n,
-              children: [(0, a.jsx)(l.MenuGroup, { children: d }), (0, a.jsx)(l.MenuGroup, { children: c })]
+              children: [(0, l.jsx)(i.MenuGroup, { children: s }), (0, l.jsx)(i.MenuGroup, { children: c })]
           })
         : null;
 }

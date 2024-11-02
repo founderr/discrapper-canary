@@ -32,7 +32,7 @@ e.exports = function (e) {
                 }
             }
         },
-        _ = {
+        f = {
             contains: [
                 e.NUMBER_MODE,
                 e.QUOTE_STRING_MODE,
@@ -49,25 +49,25 @@ e.exports = function (e) {
             ],
             returnEnd: !0
         },
-        E = e.inherit(l, {
+        _ = e.inherit(l, {
             className: 'name',
             keywords: n,
-            starts: e.inherit(_, { end: /\)/ })
+            starts: e.inherit(f, { end: /\)/ })
         });
-    c.contains = [E];
-    let f = e.inherit(l, {
+    c.contains = [_];
+    let h = e.inherit(l, {
             keywords: n,
             className: 'name',
-            starts: e.inherit(_, { end: /\}\}/ })
+            starts: e.inherit(f, { end: /\}\}/ })
         }),
-        h = e.inherit(l, {
+        p = e.inherit(l, {
             keywords: n,
             className: 'name'
         }),
-        p = e.inherit(l, {
+        m = e.inherit(l, {
             className: 'name',
             keywords: n,
-            starts: e.inherit(_, { end: /\}\}/ })
+            starts: e.inherit(f, { end: /\}\}/ })
         });
     return {
         name: 'Handlebars',
@@ -89,7 +89,7 @@ e.exports = function (e) {
                 className: 'template-tag',
                 begin: /\{\{\{\{(?!\/)/,
                 end: /\}\}\}\}/,
-                contains: [f],
+                contains: [h],
                 starts: {
                     end: /\{\{\{\{\//,
                     returnEnd: !0,
@@ -100,13 +100,13 @@ e.exports = function (e) {
                 className: 'template-tag',
                 begin: /\{\{\{\{\//,
                 end: /\}\}\}\}/,
-                contains: [h]
+                contains: [p]
             },
             {
                 className: 'template-tag',
                 begin: /\{\{#/,
                 end: /\}\}/,
-                contains: [f]
+                contains: [h]
             },
             {
                 className: 'template-tag',
@@ -124,19 +124,19 @@ e.exports = function (e) {
                 className: 'template-tag',
                 begin: /\{\{\//,
                 end: /\}\}/,
-                contains: [h]
+                contains: [p]
             },
             {
                 className: 'template-variable',
                 begin: /\{\{\{/,
                 end: /\}\}\}/,
-                contains: [p]
+                contains: [m]
             },
             {
                 className: 'template-variable',
                 begin: /\{\{/,
                 end: /\}\}/,
-                contains: [p]
+                contains: [m]
             }
         ]
     };

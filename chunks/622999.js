@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
     az: function () {
-        return _;
+        return f;
     },
     d2: function () {
         return d;
@@ -10,7 +10,7 @@ n.d(t, {
         return c;
     },
     oe: function () {
-        return E;
+        return _;
     }
 }),
     n(47120);
@@ -45,7 +45,7 @@ let u = (e) => {
 function d() {
     return null != r ? Promise.resolve(r) : (0, s.loadStripe)(l.Ai1.STRIPE.KEY).then((e) => ((r = e), e));
 }
-function _(e) {
+function f(e) {
     var t, n, r, i, a, s, o, l;
     let { billing_details: u } = e,
         c = null !== (t = u.address) && void 0 !== t ? t : {},
@@ -63,7 +63,7 @@ function _(e) {
         billingAddressInfo: d
     };
 }
-async function E(e) {
+async function _(e) {
     try {
         let { stripe_payment_intent_client_secret: t } = (
                 await o.tn.get({

@@ -3,16 +3,16 @@ n.d(t, {
         return o;
     },
     RD: function () {
-        return h;
+        return p;
     },
     Rs: function () {
-        return E;
-    },
-    WA: function () {
         return _;
     },
-    _2: function () {
+    WA: function () {
         return f;
+    },
+    _2: function () {
+        return h;
     },
     f5: function () {
         return d;
@@ -47,21 +47,21 @@ async function d(e) {
         n = await l;
     return null != n && n.isMisspelled(e, t);
 }
-async function _(e) {
+async function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 5,
         r = await l;
     return null == r ? [] : r.getCorrectionsForMisspelling(e, t).slice(0, n);
 }
-async function E(e) {
+async function _(e) {
     let t = await l;
     if (null != t) t.replaceMisspelling(e);
 }
-async function f(e) {
+async function h(e) {
     let t = await l;
     if (null != t) t.setAppLocale(e);
 }
-function h(e) {
+function p(e) {
     if (!s()) return () => {};
     let t = r.Z.spellCheck.on('spellcheck-result', e);
     return null != t ? t : () => {};

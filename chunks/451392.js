@@ -1,91 +1,91 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return m;
+        return T;
     }
 });
-var n = t(200651);
-t(192379);
-var a = t(120356),
-    i = t.n(a),
-    r = t(498607),
-    o = t.n(r),
-    l = t(692547),
-    c = t(481060),
-    d = t(220082),
-    _ = t(687158),
-    u = t(576635),
-    E = t(74538),
-    T = t(193528),
-    S = t(993413),
-    I = t(689938),
-    N = t(96923);
-function m(e) {
-    let { user: s, pendingAvatar: t, pendingColors: a, onThemeColorsChange: r, preventDisabled: m, guildId: C, className: A, showPremiumIcon: g = !0, showResetThemeButton: h = !1, forcedDivider: O } = e,
-        p = (0, _.ZP)(s.id, C),
-        { primaryColor: R, secondaryColor: x } = (0, u.Z)({
-            user: s,
-            displayProfile: p,
-            pendingThemeColors: a,
+var i = n(200651);
+n(192379);
+var s = n(120356),
+    r = n.n(s),
+    l = n(498607),
+    a = n.n(l),
+    o = n(692547),
+    c = n(481060),
+    d = n(220082),
+    u = n(687158),
+    m = n(576635),
+    h = n(74538),
+    g = n(193528),
+    p = n(993413),
+    x = n(388032),
+    S = n(96923);
+function T(e) {
+    let { user: t, pendingAvatar: n, pendingColors: s, onThemeColorsChange: l, preventDisabled: T, guildId: C, className: _, showPremiumIcon: E = !0, showResetThemeButton: f = !1, forcedDivider: I } = e,
+        N = (0, u.ZP)(t.id, C),
+        { primaryColor: A, secondaryColor: b } = (0, m.Z)({
+            user: t,
+            displayProfile: N,
+            pendingThemeColors: s,
             isPreview: !0
         }),
-        M = E.ZP.canUsePremiumProfileCustomization(s),
-        f = null != t ? t : s.getAvatarURL(C, 80),
-        D = (0, c.useToken)(l.Z.unsafe_rawColors.PRIMARY_530).hex(),
-        L = (0, d.Cf)(f, D, !1);
-    if (null == R || null == x) return null;
+        v = h.ZP.canUsePremiumProfileCustomization(t),
+        j = null != n ? n : t.getAvatarURL(C, 80),
+        O = (0, c.useToken)(o.Z.unsafe_rawColors.PRIMARY_530).hex(),
+        R = (0, d.Cf)(j, O, !1);
+    if (null == A || null == b) return null;
     let P = (e) => {
-        r(o()(e, null == p ? void 0 : p.themeColors) ? void 0 : e);
+        l(a()(e, null == N ? void 0 : N.themeColors) ? void 0 : e);
     };
-    return (0, n.jsx)(S.Z, {
-        title: I.Z.Messages.USER_SETTINGS_PROFILE_THEME,
-        disabled: !M && !m,
-        className: i()(N.__invalid_profileThemesSection, A),
-        showPremiumIcon: g,
-        forcedDivider: O,
-        children: (0, n.jsxs)('div', {
-            className: N.sectionContainer,
+    return (0, i.jsx)(p.Z, {
+        title: x.intl.string(x.t.DMeO2d),
+        disabled: !v && !T,
+        className: r()(S.__invalid_profileThemesSection, _),
+        showPremiumIcon: E,
+        forcedDivider: I,
+        children: (0, i.jsxs)('div', {
+            className: S.sectionContainer,
             children: [
-                (0, n.jsx)('div', {
-                    className: N.sparkleContainer,
-                    children: (0, n.jsx)(T.Z, {
-                        onChange: (e) => P([e, x]),
-                        color: R,
-                        suggestedColors: L,
+                (0, i.jsx)('div', {
+                    className: S.sparkleContainer,
+                    children: (0, i.jsx)(g.Z, {
+                        onChange: (e) => P([e, b]),
+                        color: A,
+                        suggestedColors: R,
                         showEyeDropper: !0,
-                        label: (0, n.jsx)(c.Text, {
-                            className: N.colorSwatchLabel,
+                        label: (0, i.jsx)(c.Text, {
+                            className: S.colorSwatchLabel,
                             color: 'header-secondary',
                             variant: 'text-xs/normal',
                             'aria-hidden': !0,
-                            children: I.Z.Messages.USER_SETTINGS_PROFILE_THEME_PRIMARY
+                            children: x.intl.string(x.t.C3KTQk)
                         })
                     })
                 }),
-                (0, n.jsx)('div', {
-                    className: N.sparkleContainer,
-                    children: (0, n.jsx)(T.Z, {
-                        onChange: (e) => P([R, e]),
-                        color: x,
-                        suggestedColors: L,
+                (0, i.jsx)('div', {
+                    className: S.sparkleContainer,
+                    children: (0, i.jsx)(g.Z, {
+                        onChange: (e) => P([A, e]),
+                        color: b,
+                        suggestedColors: R,
                         showEyeDropper: !0,
-                        label: (0, n.jsx)(c.Text, {
-                            className: N.colorSwatchLabel,
+                        label: (0, i.jsx)(c.Text, {
+                            className: S.colorSwatchLabel,
                             color: 'header-secondary',
                             variant: 'text-xs/normal',
                             'aria-hidden': !0,
-                            children: I.Z.Messages.USER_SETTINGS_PROFILE_THEME_ACCENT
+                            children: x.intl.string(x.t['8elvy8'])
                         })
                     })
                 }),
-                h &&
+                f &&
                     null != C &&
-                    (0, n.jsx)(c.Button, {
-                        className: N.resetButton,
+                    (0, i.jsx)(c.Button, {
+                        className: S.resetButton,
                         color: c.Button.Colors.PRIMARY,
                         look: c.Button.Looks.LINK,
                         size: c.Button.Sizes.SMALL,
                         onClick: () => P([null, null]),
-                        children: I.Z.Messages.USER_SETTINGS_RESET_PROFILE_THEME
+                        children: x.intl.string(x.t['L+Gmoa'])
                     })
             ]
         })

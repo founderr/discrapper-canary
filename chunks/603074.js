@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return S;
     }
 });
 var r = n(200651),
@@ -12,59 +12,59 @@ var r = n(200651),
     u = n(481060),
     c = n(100527),
     d = n(906732),
-    _ = n(213609),
-    E = n(28546),
-    f = n(675478),
-    h = n(19780),
-    p = n(208049),
-    I = n(522811),
-    m = n(763296),
-    T = n(526617),
-    S = n(126857);
-function g(e) {
-    let { guildId: t, channel: n, containerWidth: a, onClose: g, onSelect: A, analyticsSource: N, suppressPlaySound: R, shouldValidateSelectedSound: O, shouldShowUpsell: v = !0, gridNotice: C, inExpressionPicker: L, soundButtonOverlay: D, listPadding: y, renderHeader: b, defaultSoundsOnly: M } = e,
-        P = (0, l.e7)([m.Z], () => m.Z.isFetchingSounds() || m.Z.isFetchingDefaultSounds()),
-        U = (0, l.e7)([h.Z], () => h.Z.getMediaSessionId()),
-        { analyticsLocations: w } = (0, d.ZP)(c.Z.SOUNDBOARD_POPOUT);
-    (0, _.Z)({
+    f = n(213609),
+    _ = n(28546),
+    h = n(675478),
+    p = n(19780),
+    m = n(208049),
+    g = n(522811),
+    E = n(763296),
+    v = n(526617),
+    I = n(126857);
+function S(e) {
+    let { guildId: t, channel: n, containerWidth: a, onClose: S, onSelect: T, analyticsSource: b, suppressPlaySound: y, shouldValidateSelectedSound: A, shouldShowUpsell: N = !0, gridNotice: C, inExpressionPicker: R, soundButtonOverlay: O, listPadding: D, renderHeader: L, defaultSoundsOnly: x } = e,
+        w = (0, l.e7)([E.Z], () => E.Z.isFetchingSounds() || E.Z.isFetchingDefaultSounds()),
+        M = (0, l.e7)([p.Z], () => p.Z.getMediaSessionId()),
+        { analyticsLocations: P } = (0, d.ZP)(c.Z.SOUNDBOARD_POPOUT);
+    (0, f.Z)({
         type: o.ImpressionTypes.POPOUT,
         name: o.ImpressionNames.SOUNDBOARD_POPOUT,
         properties: {
-            source: N,
+            source: b,
             guild_id: t,
-            media_session_id: U
+            media_session_id: M
         }
     }),
         i.useEffect(() => {
-            p.w(), f.DZ.loadIfNecessary(), (0, E.ql)('');
+            m.w(), h.DZ.loadIfNecessary(), (0, _.ql)('');
         }, []);
-    let { refreshEnabled: x } = (0, I.Z)({ location: 'SoundboardSoundPicker' });
+    let { refreshEnabled: k } = (0, g.Z)({ location: 'SoundboardSoundPicker' });
     return (0, r.jsx)(d.Gt, {
-        value: w,
+        value: P,
         children: (0, r.jsx)(u.Dialog, {
-            className: s()(S.picker, {
-                [S.fetching]: P,
-                [S.inExpressionPicker]: L,
-                [S.refresh]: x
+            className: s()(I.picker, {
+                [I.fetching]: w,
+                [I.inExpressionPicker]: R,
+                [I.refresh]: k
             }),
-            children: P
+            children: w
                 ? (0, r.jsx)(u.Spinner, {})
-                : (0, r.jsx)(T.Z, {
+                : (0, r.jsx)(v.Z, {
                       guildId: t,
                       channel: n,
-                      onClose: g,
-                      onSelect: A,
-                      shouldValidateSelectedSound: O,
+                      onClose: S,
+                      onSelect: T,
+                      shouldValidateSelectedSound: A,
                       containerWidth: a,
-                      suppressPlaySound: R,
-                      shouldShowUpsell: v,
+                      suppressPlaySound: y,
+                      shouldShowUpsell: N,
                       gridNotice: C,
-                      soundButtonOverlay: D,
-                      listPadding: y,
-                      renderHeader: b,
-                      defaultSoundsOnly: M,
-                      inExpressionPicker: L,
-                      refreshEnabled: x
+                      soundButtonOverlay: O,
+                      listPadding: D,
+                      renderHeader: L,
+                      defaultSoundsOnly: x,
+                      inExpressionPicker: R,
+                      refreshEnabled: k
                   })
         })
     });

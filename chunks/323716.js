@@ -9,10 +9,10 @@ n(358085);
 var u = n(960048),
     c = n(591759),
     d = n(303850),
-    _ = n(981631);
-let E = ['https://cdn.discordapp.com/bad-domains/updated_hashes.json', 'https://cdn.discordapp.com/bad-domains/hashes.json'],
-    f = new d.R(),
-    h = /\/api(\/v\d+)?\/science/;
+    f = n(981631);
+let _ = ['https://cdn.discordapp.com/bad-domains/updated_hashes.json', 'https://cdn.discordapp.com/bad-domains/hashes.json'],
+    h = new d.R(),
+    p = /\/api(\/v\d+)?\/science/;
 (0, r.lg)({
     prepareRequest(e) {
         let { default: t } = n(314897),
@@ -22,7 +22,7 @@ let E = ['https://cdn.discordapp.com/bad-domains/updated_hashes.json', 'https://
             { default: l } = n(626135),
             { isPlatformEmbedded: d } = n(358085);
         if ('/' === e.url[0]) {
-            var _, p;
+            var f, m;
             (e.url = (0, r.K0)() + e.url), !('Authorization' in e.header) && !('authorization' in e.header) && e.set('Authorization', t.getToken());
             let n = l.getSuperPropertiesBase64();
             null != n && e.set('X-Super-Properties', n);
@@ -30,7 +30,7 @@ let E = ['https://cdn.discordapp.com/bad-domains/updated_hashes.json', 'https://
             if ((null != i && '' !== i && e.set('X-Fingerprint', i), d)) {
                 let t,
                     n = [];
-                null != navigator && (n = ((_ = [...navigator.languages]), _));
+                null != navigator && (n = ((f = [...navigator.languages]), f));
                 let r = ((t = 10), n.reduce((e, n) => (10 === t ? e.push(n) : e.push(''.concat(n, ';q=0.').concat(t)), (t = Math.max(t - 1, 1)), e), []).join(','));
                 e.set('Accept-Language', r);
             }
@@ -41,14 +41,14 @@ let E = ['https://cdn.discordapp.com/bad-domains/updated_hashes.json', 'https://
                 return null == e.resolvedOptions ? null : e.resolvedOptions().timeZone;
             })();
             null != u && e.set('X-Discord-Timezone', u);
-            let E = a.getDebugOptionsHeaderValue();
-            if ((null != E && '' !== E && e.set('X-Debug-Options', E), a.isTracingRequests)) {
+            let _ = a.getDebugOptionsHeaderValue();
+            if ((null != _ && '' !== _ && e.set('X-Debug-Options', _), a.isTracingRequests)) {
                 let t = o.getCurrentUser(),
-                    n = f.generate(null !== (p = null == t ? void 0 : t.id) && void 0 !== p ? p : '0');
+                    n = h.generate(null !== (m = null == t ? void 0 : t.id) && void 0 !== m ? m : '0');
                 e.set('x-client-trace-id', n);
                 try {
                     let t = new URL(e.url).pathname;
-                    if (!h.test(t)) {
+                    if (!p.test(t)) {
                         let r = (function (e) {
                             let t = new URLSearchParams();
                             t.append('query', '@http.x_client_trace_id:"'.concat(e, '"')), t.append('showAllSpans', 'true');
@@ -87,7 +87,7 @@ let E = ['https://cdn.discordapp.com/bad-domains/updated_hashes.json', 'https://
                     null != t && 'parse' in t && t.parse)
                 ) {
                     let n = '[FILTERED]';
-                    if (E.includes(e.url)) {
+                    if (_.includes(e.url)) {
                         var r, a;
                         n = null === (a = e.xhr) || void 0 === a ? void 0 : null === (r = a.responseText) || void 0 === r ? void 0 : r.slice(0, 1000);
                     }
@@ -119,7 +119,7 @@ let E = ['https://cdn.discordapp.com/bad-domains/updated_hashes.json', 'https://
                   })
                   .catch(r),
               !0)
-            : 401 === e.statusCode && (null === (l = e.body) || void 0 === l ? void 0 : l.code) === _.evJ.MFA_REQUIRED && (null === (u = e.body) || void 0 === u ? void 0 : u.mfa)
+            : 401 === e.statusCode && (null === (l = e.body) || void 0 === l ? void 0 : l.code) === f.evJ.MFA_REQUIRED && (null === (u = e.body) || void 0 === u ? void 0 : u.mfa)
               ? (Promise.all([n.e('52030'), n.e('78030')])
                     .then(n.bind(n, 24031))
                     .then((n) => {

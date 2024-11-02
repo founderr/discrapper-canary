@@ -1,32 +1,32 @@
-s.r(e),
-    s.d(e, {
+e.r(n),
+    e.d(n, {
         default: function () {
             return l;
         }
     });
-var n = s(200651);
-s(192379);
-var a = s(481060),
-    o = s(689938),
-    c = s(505203),
-    i = s(134519);
+var s = e(200651);
+e(192379);
+var a = e(481060),
+    o = e(388032),
+    c = e(505203),
+    i = e(134519);
 function l(t) {
-    let { transitionState: e, onClose: s } = t;
-    return (0, n.jsxs)(a.ModalRoot, {
-        transitionState: e,
+    let { transitionState: n, onClose: e } = t;
+    return (0, s.jsxs)(a.ModalRoot, {
+        transitionState: n,
         className: c.root,
         children: [
-            (0, n.jsxs)(a.ModalHeader, {
+            (0, s.jsxs)(a.ModalHeader, {
                 separator: !1,
                 className: c.noScroll,
                 children: [
-                    (0, n.jsx)(a.ModalCloseButton, {
+                    (0, s.jsx)(a.ModalCloseButton, {
                         className: c.closeButton,
-                        onClick: s
+                        onClick: e
                     }),
-                    (0, n.jsx)('div', {
+                    (0, s.jsx)('div', {
                         className: c.imageContainer,
-                        children: (0, n.jsx)('img', {
+                        children: (0, s.jsx)('img', {
                             src: i,
                             className: c.image,
                             alt: ''
@@ -34,24 +34,24 @@ function l(t) {
                     })
                 ]
             }),
-            (0, n.jsx)(a.ModalContent, {
-                children: (0, n.jsxs)('div', {
+            (0, s.jsx)(a.ModalContent, {
+                children: (0, s.jsxs)('div', {
                     className: c.content,
                     children: [
-                        (0, n.jsx)(a.Heading, {
+                        (0, s.jsx)(a.Heading, {
                             variant: 'heading-xl/semibold',
                             className: c.title,
-                            children: o.Z.Messages.INVITE_PERMISSION_MODAL_TITLE
+                            children: o.intl.string(o.t.xSV3nZ)
                         }),
-                        (0, n.jsx)(a.Text, {
+                        (0, s.jsx)(a.Text, {
                             variant: 'text-md/normal',
                             className: c.text,
-                            children: o.Z.Messages.INVITE_PERMISSION_MODAL_TEXT
+                            children: o.intl.string(o.t.jPMGbG)
                         }),
-                        (0, n.jsx)(a.Button, {
+                        (0, s.jsx)(a.Button, {
                             className: c.button,
-                            onClick: s,
-                            children: o.Z.Messages.GOT_IT
+                            onClick: e,
+                            children: o.intl.string(o.t['NX+WJC'])
                         })
                     ]
                 })

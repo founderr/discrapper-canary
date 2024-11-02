@@ -1,4 +1,4 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return m;
     },
@@ -6,111 +6,111 @@ t.d(n, {
         return h;
     }
 });
-var l = t(442837),
-    a = t(933557),
-    o = t(592125),
-    r = t(430824),
-    i = t(699516),
-    s = t(594174),
-    c = t(823379),
-    d = t(689938);
-function u(e, n, t) {
+var l = n(442837),
+    o = n(933557),
+    a = n(592125),
+    r = n(430824),
+    i = n(699516),
+    s = n(594174),
+    c = n(823379),
+    d = n(388032);
+function u(e, t, n) {
     return 0 === e.length
         ? ''
-        : (t ? d.Z.Messages.ONBOARDING_HELP_TEXT_ADD_ROLES_ALSO : d.Z.Messages.ONBOARDING_HELP_TEXT_ADD_ROLES).format({
+        : d.intl.format(n ? d.t.cJZxWV : d.t.Kj5GIS, {
               count: e.length,
               extraCount: Math.max(e.length - 2, 0),
               role1: e[0],
               role2: e[1],
-              itemHook: n
+              itemHook: t
           });
 }
 function m(e) {
-    let { guild: n, prompt: t, selectedRoleIds: m, selectedChannelIds: h, itemHook: v } = e,
-        g = (0, l.e7)([r.Z], () => (null != n ? r.Z.getRoles(n.id) : void 0)),
-        x = (0, l.Wu)([o.Z, s.default, i.Z], () =>
+    let { guild: t, prompt: n, selectedRoleIds: m, selectedChannelIds: h, itemHook: v } = e,
+        x = (0, l.e7)([r.Z], () => (null != t ? r.Z.getRoles(t.id) : void 0)),
+        g = (0, l.Wu)([a.Z, s.default, i.Z], () =>
             Array.from(h)
-                .map((e) => o.Z.getChannel(e))
+                .map((e) => a.Z.getChannel(e))
                 .filter(c.lm)
-                .map((e) => (0, a.F6)(e, s.default, i.Z, !0))
+                .map((e) => (0, o.F6)(e, s.default, i.Z, !0))
         ),
         p = Array.from(m)
             .map((e) => {
-                var n;
-                return null === (n = (null != g ? g : {})[e]) || void 0 === n ? void 0 : n.name;
+                var t;
+                return null === (t = (null != x ? x : {})[e]) || void 0 === t ? void 0 : t.name;
             })
             .filter(c.lm)
             .map((e) => '@'.concat(e)),
-        C = (null == t ? void 0 : t.singleSelect) ? '' : d.Z.Messages.ONBOARDING_CHOOSE_ALL_OPTIONS,
-        f = '';
-    if (0 === x.length && p.length > 0) C = u(p, v);
-    else if (x.length > 0) {
-        var N, j;
-        (N = x),
-            (j = v),
-            (C =
-                0 === N.length
+        f = (null == n ? void 0 : n.singleSelect) ? '' : d.intl.string(d.t.JshhEh),
+        j = '';
+    if (0 === g.length && p.length > 0) f = u(p, v);
+    else if (g.length > 0) {
+        var C, b;
+        (C = g),
+            (b = v),
+            (f =
+                0 === C.length
                     ? ''
-                    : d.Z.Messages.ONBOARDING_HELP_TEXT_ADD_CHANNELS.format({
-                          count: N.length,
-                          extraCount: Math.max(N.length - 2, 0),
-                          channel1: N[0],
-                          channel2: N[1],
-                          itemHook: j
+                    : d.intl.format(d.t.Rj841d, {
+                          count: C.length,
+                          extraCount: Math.max(C.length - 2, 0),
+                          channel1: C[0],
+                          channel2: C[1],
+                          itemHook: b
                       })),
-            p.length > 0 && (f = u(p, v, !0));
+            p.length > 0 && (j = u(p, v, !0));
     }
     return {
-        helpText: C,
-        helpTextAdditional: f
+        helpText: f,
+        helpTextAdditional: j
     };
 }
 function h(e) {
-    let { guild: n, prompt: t, selectedRoleIds: u, selectedChannelIds: m, itemHook: h } = e,
-        v = (0, l.e7)([r.Z], () => (null != n ? r.Z.getRoles(n.id) : void 0)),
-        g = (0, l.Wu)([o.Z, s.default, i.Z], () =>
+    let { guild: t, prompt: n, selectedRoleIds: u, selectedChannelIds: m, itemHook: h } = e,
+        v = (0, l.e7)([r.Z], () => (null != t ? r.Z.getRoles(t.id) : void 0)),
+        x = (0, l.Wu)([a.Z, s.default, i.Z], () =>
             Array.from(m)
-                .map((e) => o.Z.getChannel(e))
+                .map((e) => a.Z.getChannel(e))
                 .filter(c.lm)
-                .map((e) => (0, a.F6)(e, s.default, i.Z, !0))
+                .map((e) => (0, o.F6)(e, s.default, i.Z, !0))
         ),
-        x = Array.from(u)
+        g = Array.from(u)
             .map((e) => {
-                var n;
-                return null === (n = (null != v ? v : {})[e]) || void 0 === n ? void 0 : n.name;
+                var t;
+                return null === (t = (null != v ? v : {})[e]) || void 0 === t ? void 0 : t.name;
             })
             .filter(c.lm)
             .map((e) => '@'.concat(e)),
-        p = (null == t ? void 0 : t.singleSelect) ? '' : d.Z.Messages.ONBOARDING_CHOOSE_ALL_OPTIONS;
+        p = (null == n ? void 0 : n.singleSelect) ? '' : d.intl.string(d.t.JshhEh);
     return (
-        0 === g.length && x.length > 0
-            ? (p = d.Z.Messages.CUSTOMIZE_COMMUNITY_ADD_ROLES.format({
-                  count: x.length,
-                  extraCount: Math.max(x.length - 2, 0),
-                  role1: x[0],
-                  role2: x[1],
+        0 === x.length && g.length > 0
+            ? (p = d.intl.format(d.t.vdtNYW, {
+                  count: g.length,
+                  extraCount: Math.max(g.length - 2, 0),
+                  role1: g[0],
+                  role2: g[1],
                   itemHook: h
               }))
-            : g.length > 0 && 0 === x.length
-              ? (p = d.Z.Messages.CUSTOMIZE_COMMUNITY_ADD_CHANNELS.format({
-                    count: g.length,
-                    extraCount: Math.max(g.length - 2, 0),
-                    channel1: g[0],
-                    channel2: g[1],
+            : x.length > 0 && 0 === g.length
+              ? (p = d.intl.format(d.t.ZKywGR, {
+                    count: x.length,
+                    extraCount: Math.max(x.length - 2, 0),
+                    channel1: x[0],
+                    channel2: x[1],
                     itemHook: h
                 }))
-              : g.length > 0 &&
-                x.length > 0 &&
-                (p = d.Z.Messages.CUSTOMIZE_COMMUNITY_ADD_CHANNELS_AND_ROLES.format({
-                    channelCount: g.length,
-                    extraChannelCount: Math.max(g.length - 2, 0),
-                    channel1: g[0],
-                    channel2: g[1],
+              : x.length > 0 &&
+                g.length > 0 &&
+                (p = d.intl.format(d.t.WewRHB, {
+                    channelCount: x.length,
+                    extraChannelCount: Math.max(x.length - 2, 0),
+                    channel1: x[0],
+                    channel2: x[1],
                     itemHook: h,
-                    roleCount: x.length,
-                    extraRoleCount: Math.max(x.length - 2, 0),
-                    role1: x[0],
-                    role2: x[1]
+                    roleCount: g.length,
+                    extraRoleCount: Math.max(g.length - 2, 0),
+                    role1: g[0],
+                    role2: g[1]
                 })),
         {
             helpText: p,

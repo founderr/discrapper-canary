@@ -12,31 +12,31 @@ var r,
     u = n(392711),
     c = n.n(u),
     d = n(442837),
-    _ = n(570140);
+    f = n(570140);
 ((r = o || (o = {}))[(r.FETCHING = 0)] = 'FETCHING'), (r[(r.FETCHED = 1)] = 'FETCHED'), (r[(r.ERROR = 2)] = 'ERROR');
-let E = {},
-    f = {},
-    h = {};
-function p(e) {
+let _ = {},
+    h = {},
+    p = {};
+function m(e) {
     let { includesInactive: t } = e;
     return 'includes_inactive:'.concat(t);
 }
-class I extends (l = d.ZP.Store) {
+class g extends (l = d.ZP.Store) {
     getLastFetchTimeMs(e) {
         let { includesInactive: t } = e;
-        return h[p({ includesInactive: t })];
+        return p[m({ includesInactive: t })];
     }
     getFetchState(e) {
         let { includesInactive: t } = e;
-        return f[p({ includesInactive: t })];
+        return h[m({ includesInactive: t })];
     }
     getCollections(e) {
         let { includesInactive: t } = e;
-        return E[p({ includesInactive: t })];
+        return _[m({ includesInactive: t })];
     }
 }
 (s = void 0),
-    (a = 'displayName') in (i = I)
+    (a = 'displayName') in (i = g)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -44,43 +44,43 @@ class I extends (l = d.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new I(_.Z, {
+    (t.Z = new g(f.Z, {
         APPLICATION_DIRECTORY_FETCH_COLLECTIONS: function (e) {
             let { includesInactive: t } = e;
-            f = {
-                ...f,
-                [p({ includesInactive: t })]: 0
+            h = {
+                ...h,
+                [m({ includesInactive: t })]: 0
             };
         },
         APPLICATION_DIRECTORY_FETCH_COLLECTIONS_SUCCESS: function (e) {
             var t;
             let { collections: n, includesInactive: r } = e,
-                i = p({ includesInactive: r });
+                i = m({ includesInactive: r });
             let a =
                 ((t = n.map((e) => {
                     var t;
                     return (e.application_directory_collection_items = ((t = e.application_directory_collection_items), c().sortBy(t, ['position', 'id']))), e;
                 })),
                 c().sortBy(t, ['position', 'id']));
-            (E = {
-                ...E,
+            (_ = {
+                ..._,
                 [i]: a
             }),
-                (f = {
-                    ...f,
+                (h = {
+                    ...h,
                     [i]: 1
                 });
             let s = Date.now();
-            h = {
-                ...h,
+            p = {
+                ...p,
                 [i]: s
             };
         },
         APPLICATION_DIRECTORY_FETCH_COLLECTIONS_FAILURE: function (e) {
             let { includesInactive: t } = e;
-            f = {
-                ...f,
-                [p({ includesInactive: t })]: 2
+            h = {
+                ...h,
+                [m({ includesInactive: t })]: 2
             };
         }
     }));

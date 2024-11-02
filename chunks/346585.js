@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     },
     K9: function () {
-        return I;
+        return g;
     },
     NX: function () {
         return f;
@@ -15,7 +15,7 @@ n.d(t, {
         return E;
     },
     ti: function () {
-        return g;
+        return I;
     },
     zV: function () {
         return _;
@@ -32,7 +32,7 @@ var i = n(913527),
     a = n(624138),
     d = n(219496),
     u = n(801461),
-    c = n(689938);
+    c = n(388032);
 function _(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return l.ZP.getUserAvatarURL(
@@ -73,18 +73,18 @@ function f(e) {
 function S(e) {
     return e.toLowerCase().replace(/\s/g, '').replace('@', '');
 }
-function I(e) {
+function g(e) {
     let t = o.default.extractTimestamp(e);
     try {
         return s()(new Date(t)).format('MMM DD, YYYY');
     } catch (e) {}
     return null;
 }
-function g(e) {
+function I(e) {
     return (0, r.EQ)(e)
         .with({ rateLimited: !0 }, () => ({
             type: d.K.RATE_LIMIT,
-            message: c.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_RATE_LIMIT_ERROR_SHORT
+            message: c.intl.string(c.t.T15lqq)
         }))
         .with({ error: r.P.not(r.P.nullish) }, (e) => {
             let { error: t } = e;
@@ -95,11 +95,11 @@ function g(e) {
         })
         .with({ taken: !1 }, () => ({
             type: d.K.AVAILABLE,
-            message: c.Z.Messages.POMELO_EXISTING_FLOW_AVAILABLE
+            message: c.intl.string(c.t.PgfBS0)
         }))
         .with({ taken: !0 }, () => ({
             type: d.K.ERROR,
-            message: c.Z.Messages.POMELO_EXISTING_FLOW_ERROR_UNAVAILABLE
+            message: c.intl.string(c.t.mCrAUV)
         }))
         .with({ error: r.P.nullish }, () => ({
             type: d.K.INTERNAL_ERROR,

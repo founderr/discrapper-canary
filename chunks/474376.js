@@ -1,58 +1,58 @@
 n.d(t, {
     g: function () {
-        return T;
+        return I;
     }
 }),
     n(653041);
 var i = n(200651);
 n(192379);
-var a = n(442837),
-    s = n(481060),
-    r = n(44315),
-    l = n(598077),
+var r = n(442837),
+    l = n(481060),
+    a = n(44315),
+    s = n(598077),
     o = n(246946),
     c = n(594174),
     d = n(626135),
     u = n(51144),
-    _ = n(480387),
-    E = n(726745),
-    h = n(251423),
-    m = n(383832),
-    I = n(981631),
-    p = n(689938),
-    g = n(703864);
-function T(e) {
-    let t = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
-        n = (0, a.e7)([o.Z], () => o.Z.hidePersonalInformation),
-        { multiAccountUsers: T } = (0, h.L)(),
-        S = (e) => {
-            if (e !== (null == t ? void 0 : t.id)) d.default.track(I.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: I.jXE.USER_PROFILE } }), _.yD(e);
+    h = n(480387),
+    m = n(726745),
+    p = n(251423),
+    g = n(383832),
+    f = n(981631),
+    _ = n(388032),
+    E = n(703864);
+function I(e) {
+    let t = (0, r.e7)([c.default], () => c.default.getCurrentUser()),
+        n = (0, r.e7)([o.Z], () => o.Z.hidePersonalInformation),
+        { multiAccountUsers: I } = (0, p.L)(),
+        C = (e) => {
+            if (e !== (null == t ? void 0 : t.id)) d.default.track(f.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: f.jXE.USER_PROFILE } }), h.yD(e);
         },
-        C = T.map((a) => {
-            let o = new l.Z(a),
+        v = I.map((r) => {
+            let o = new s.Z(r),
                 c = o.id === (null == t ? void 0 : t.id),
-                d = a.tokenStatus === E.q.INVALID,
-                _ = n ? null : '#'.concat(o.discriminator);
+                d = r.tokenStatus === m.q.INVALID,
+                h = n ? null : '#'.concat(o.discriminator);
             return (0, i.jsx)(
-                s.MenuItem,
+                l.MenuItem,
                 {
                     id: o.id,
-                    focusedClassName: g.focused,
+                    focusedClassName: E.focused,
                     label: (e) => {
                         let { isFocused: t } = e;
                         return (0, i.jsxs)('div', {
-                            className: g.userMenuItem,
+                            className: E.userMenuItem,
                             children: [
-                                (0, i.jsx)(s.Avatar, {
+                                (0, i.jsx)(l.Avatar, {
                                     src: o.getAvatarURL(void 0, 40),
-                                    size: s.AvatarSizes.SIZE_24,
-                                    'aria-label': a.username
+                                    size: l.AvatarSizes.SIZE_24,
+                                    'aria-label': r.username
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: g.userMenuUsername,
+                                    className: E.userMenuUsername,
                                     children: [
-                                        (0, i.jsx)(s.Text, {
-                                            className: g.userMenuText,
+                                        (0, i.jsx)(l.Text, {
+                                            className: E.userMenuText,
                                             variant: 'text-sm/normal',
                                             children: u.ZP.getUserTag(o, {
                                                 mode: 'username',
@@ -60,52 +60,52 @@ function T(e) {
                                             })
                                         }),
                                         !o.isPomelo() &&
-                                            (0, i.jsx)(s.Text, {
-                                                className: g.userMenuDiscriminator,
+                                            (0, i.jsx)(l.Text, {
+                                                className: E.userMenuDiscriminator,
                                                 variant: 'text-sm/normal',
-                                                children: _
+                                                children: h
                                             })
                                     ]
                                 }),
                                 c &&
-                                    (0, i.jsx)(s.CircleCheckIcon, {
+                                    (0, i.jsx)(l.CircleCheckIcon, {
                                         size: 'sm',
-                                        color: (0, r.Lq)(t ? I.Ilk.WHITE_500 : I.Ilk.BRAND_500),
-                                        secondaryColor: (0, r.Lq)(t ? I.Ilk.BRAND_500 : I.Ilk.WHITE_500),
-                                        className: g.activeIcon
+                                        color: (0, a.Lq)(t ? f.Ilk.WHITE_500 : f.Ilk.BRAND_500),
+                                        secondaryColor: (0, a.Lq)(t ? f.Ilk.BRAND_500 : f.Ilk.WHITE_500),
+                                        className: E.activeIcon
                                     }),
                                 d &&
-                                    (0, i.jsx)(s.CircleWarningIcon, {
-                                        color: (0, r.Lq)(I.Ilk.RED_400),
-                                        secondaryColor: (0, r.Lq)(I.Ilk.WHITE_500),
+                                    (0, i.jsx)(l.CircleWarningIcon, {
+                                        color: (0, a.Lq)(f.Ilk.RED_400),
+                                        secondaryColor: (0, a.Lq)(f.Ilk.WHITE_500),
                                         size: 'xs',
-                                        className: g.activeIcon
+                                        className: E.activeIcon
                                     })
                             ]
                         });
                     },
                     action: () => {
-                        null == e || e(), d ? (0, m.Z)() : S(o.id);
+                        null == e || e(), d ? (0, g.Z)() : C(o.id);
                     }
                 },
                 o.id
             );
         });
     return (
-        C.push(
+        v.push(
             (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(s.MenuSeparator, {}),
-                    (0, i.jsx)(s.MenuItem, {
+                    (0, i.jsx)(l.MenuSeparator, {}),
+                    (0, i.jsx)(l.MenuItem, {
                         id: 'manage-accounts',
-                        label: p.Z.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
+                        label: _.intl.string(_.t.WbFpq6),
                         action: () => {
-                            null == e || e(), (0, m.Z)();
+                            null == e || e(), (0, g.Z)();
                         }
                     })
                 ]
             })
         ),
-        C
+        v
     );
 }

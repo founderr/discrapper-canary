@@ -8,18 +8,18 @@ n(192379);
 var l = n(120356),
     r = n.n(l),
     a = n(481060),
-    s = n(925329),
-    o = n(810568),
+    o = n(925329),
+    s = n(810568),
     c = n(168524),
     u = n(115530),
-    d = n(689938),
+    d = n(388032),
     h = n(24705);
 function p(e) {
     let { name: t, applicationId: n } = e,
         l = (0, c.Z)({
             location: 'ActivityPanelGameCard',
             applicationId: n,
-            source: o.m1.RtcPanel,
+            source: s.m1.RtcPanel,
             trackEntryPointImpression: !0
         });
     return (0, i.jsx)(a.Clickable, {
@@ -33,18 +33,18 @@ function p(e) {
 }
 function f(e) {
     var t, n;
-    let { isStreaming: l, application: r, game: o } = e;
-    let c = ((t = r), (n = o), null != t ? t.name : null != n ? n.name : d.Z.Messages.STATUS_UNKNOWN);
+    let { isStreaming: l, application: r, game: s } = e;
+    let c = ((t = r), (n = s), null != t ? t.name : null != n ? n.name : d.intl.string(d.t['UQMV/P']));
     return (0, i.jsxs)('div', {
         className: h.gameWrapper,
         children: [
             (0, i.jsxs)('div', {
                 className: h.gameIconWrapper,
                 children: [
-                    (0, i.jsx)(s.Z, {
+                    (0, i.jsx)(o.Z, {
                         className: h.gameIcon,
                         game: r,
-                        pid: null == o ? void 0 : o.pid
+                        pid: null == s ? void 0 : s.pid
                     }),
                     l
                         ? (0, i.jsx)(a.VideoIcon, {

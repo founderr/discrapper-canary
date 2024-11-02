@@ -8,28 +8,28 @@ var i = n(120356),
     u = n(481060),
     c = n(835473),
     d = n(318374),
-    _ = n(925329),
-    E = n(594174),
-    f = n(823379),
-    h = n(689938),
-    p = n(789909);
+    f = n(925329),
+    _ = n(594174),
+    h = n(823379),
+    p = n(388032),
+    m = n(789909);
 t.Z = function (e) {
-    let { createdAt: t, participantIds: n, applicationId: i, title: s, guildId: I, className: m } = e,
-        T = (0, c.q)(i),
-        S = (0, l.Wu)([E.default], () => {
+    let { createdAt: t, participantIds: n, applicationId: i, title: s, guildId: g, className: E } = e,
+        v = (0, c.q)(i),
+        I = (0, l.Wu)([_.default], () => {
             var e;
-            return null !== (e = n.map((e) => E.default.getUser(e)).filter(f.lm)) && void 0 !== e ? e : [];
+            return null !== (e = n.map((e) => _.default.getUser(e)).filter(h.lm)) && void 0 !== e ? e : [];
         }),
-        g = null == T ? void 0 : T.name,
-        A = o()(t).fromNow();
+        S = null == v ? void 0 : v.name,
+        T = o()(t).fromNow();
     return null == t
         ? null
         : (0, r.jsxs)('div', {
-              className: a()(m, p.container),
+              className: a()(E, m.container),
               children: [
-                  (0, r.jsx)(_.Z, { game: T }),
+                  (0, r.jsx)(f.Z, { game: v }),
                   (0, r.jsxs)('div', {
-                      className: p.textSection,
+                      className: m.textSection,
                       children: [
                           null != s && '' !== s
                               ? (0, r.jsx)(u.Text, {
@@ -40,28 +40,28 @@ t.Z = function (e) {
                               : (0, r.jsx)(u.Text, {
                                     variant: 'text-md/semibold',
                                     color: 'text-muted',
-                                    children: h.Z.Messages.CLIPS_UNTITLED
+                                    children: p.intl.string(p.t.Cyxddn)
                                 }),
                           (0, r.jsxs)(u.Text, {
                               variant: 'text-xs/medium',
                               color: 'text-muted',
-                              className: p.__invalid_subtitle,
-                              children: [null != g ? ''.concat(g, ' \u2022 ') : null, A]
+                              className: m.__invalid_subtitle,
+                              children: [null != S ? ''.concat(S, ' \u2022 ') : null, T]
                           }),
                           (0, r.jsx)(u.Text, {
                               variant: 'text-xs/medium',
                               color: 'text-muted',
-                              className: p.__invalid_subtitle
+                              className: m.__invalid_subtitle
                           })
                       ]
                   }),
-                  null != S &&
-                      S.length > 0 &&
+                  null != I &&
+                      I.length > 0 &&
                       (0, r.jsx)(d.Z, {
                           maxUsers: 4,
-                          users: S,
-                          className: p.__invalid_facePile,
-                          guildId: I
+                          users: I,
+                          className: m.__invalid_facePile,
+                          guildId: g
                       })
               ]
           });

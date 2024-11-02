@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: function () {
-        return _;
+        return h;
     },
     aV: function () {
         return u;
@@ -11,15 +11,15 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(100621),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    s = n(100621),
     o = n(481060),
     c = n(25912);
 function d(e) {
     let { scrollPosition: t, minOpacity: n = 0 } = e;
-    return (0, i.jsx)(l.animated.div, {
+    return (0, i.jsx)(s.animated.div, {
         className: c.backdrop,
         style: {
             opacity: null == t ? void 0 : t.to([0, 100], [n, 1])
@@ -28,17 +28,17 @@ function d(e) {
 }
 function u(e) {
     let { onClick: t, icon: n } = e,
-        [s, l] = a.useState(!1),
-        d = a.useCallback(() => l(!0), []),
-        u = a.useCallback(() => l(!1), []);
+        [l, s] = r.useState(!1),
+        d = r.useCallback(() => s(!0), []),
+        u = r.useCallback(() => s(!1), []);
     return null != t
         ? (0, i.jsx)(o.Clickable, {
-              className: r()(c.clickable, c.icon),
+              className: a()(c.clickable, c.icon),
               onClick: t,
               onMouseEnter: d,
               onMouseLeave: u,
               children: (0, i.jsx)(n, {
-                  color: s ? o.tokens.colors.INTERACTIVE_HOVER : o.tokens.colors.INTERACTIVE_NORMAL,
+                  color: l ? o.tokens.colors.INTERACTIVE_HOVER : o.tokens.colors.INTERACTIVE_NORMAL,
                   size: 'md'
               })
           })
@@ -48,10 +48,10 @@ function u(e) {
               size: 'md'
           });
 }
-function _(e) {
+function h(e) {
     let { className: t, children: n } = e;
     return (0, i.jsx)('div', {
-        className: r()(c.headerBar, t),
+        className: a()(c.headerBar, t),
         children: n
     });
 }

@@ -1,56 +1,56 @@
-s.r(a),
-    s.d(a, {
+a.r(n),
+    a.d(n, {
         default: function () {
             return d;
         }
     });
-var n = s(200651);
-s(192379);
-var c = s(481060),
-    o = s(918125),
-    r = s(488131),
-    i = s(124368),
-    t = s(689938),
-    l = s(453100);
+var r = a(200651);
+a(192379);
+var s = a(481060),
+    c = a(918125),
+    t = a(488131),
+    o = a(124368),
+    i = a(388032),
+    l = a(453100);
 function d(e) {
-    let { guildId: a, onClose: s, transitionState: d } = e;
-    return (0, n.jsx)(c.ModalRoot, {
+    let { guildId: n, onClose: a, transitionState: d } = e;
+    return (0, r.jsx)(s.ModalRoot, {
         className: l.modal,
         transitionState: d,
-        'aria-label': t.Z.Messages.THREADS,
-        size: c.ModalSize.DYNAMIC,
-        children: (0, n.jsxs)('div', {
+        'aria-label': i.intl.string(i.t.B2panJ),
+        size: s.ModalSize.DYNAMIC,
+        children: (0, r.jsxs)('div', {
             className: l.container,
             children: [
-                (0, n.jsxs)('div', {
+                (0, r.jsxs)('div', {
                     className: l.header,
                     children: [
-                        (0, n.jsx)(c.ThreadIcon, {
+                        (0, r.jsx)(s.ThreadIcon, {
                             size: 'md',
                             color: 'currentColor',
                             className: l.threadIcon
                         }),
-                        (0, n.jsx)(c.Heading, {
+                        (0, r.jsx)(s.Heading, {
                             variant: 'heading-md/semibold',
                             className: l.__invalid_title,
-                            children: t.Z.Messages.ALL_ACTIVE_THREADS
+                            children: i.intl.string(i.t['dOWb+f'])
                         }),
-                        (0, n.jsx)('div', { className: l.spacer }),
-                        (0, n.jsx)(c.Clickable, {
+                        (0, r.jsx)('div', { className: l.spacer }),
+                        (0, r.jsx)(s.Clickable, {
                             className: l.closeIcon,
-                            onClick: s,
-                            'aria-label': t.Z.Messages.CLOSE,
-                            children: (0, n.jsx)(c.XSmallIcon, {
+                            onClick: a,
+                            'aria-label': i.intl.string(i.t.cpT0Cg),
+                            children: (0, r.jsx)(s.XSmallIcon, {
                                 size: 'md',
                                 color: 'currentColor'
                             })
                         })
                     ]
                 }),
-                (0, n.jsx)(o.Z, {
-                    guildId: a,
-                    goToThread: (e, a) => {
-                        s(), (0, r.ok)(e, !a, i.on.GUILD_ACTIVE_THREADS_MODAL);
+                (0, r.jsx)(c.Z, {
+                    guildId: n,
+                    goToThread: (e, n) => {
+                        a(), (0, t.ok)(e, !n, o.on.GUILD_ACTIVE_THREADS_MODAL);
                     }
                 })
             ]

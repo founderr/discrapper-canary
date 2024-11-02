@@ -1,36 +1,36 @@
 n.d(t, {
     H: function () {
-        return S;
+        return N;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(120356),
-    s = n.n(a),
-    r = n(442837),
-    l = n(481060),
-    o = n(904245),
+var r = n(120356),
+    l = n.n(r),
+    a = n(442837),
+    o = n(481060),
+    s = n(904245),
     c = n(287734),
     u = n(957730),
     d = n(739566),
-    _ = n(779125),
-    E = n(599706),
-    I = n(703656),
-    m = n(592125),
-    f = n(430824),
-    T = n(594174),
-    h = n(938475),
-    N = n(5192),
-    p = n(981631),
-    C = n(689938),
-    g = n(64182);
-function S(e) {
-    var t, n, a, S, A, x, R, v, M, O;
-    let { message: L, channel: Z } = e,
-        b =
-            null === (a = L.embeds[0]) || void 0 === a
+    m = n(779125),
+    f = n(599706),
+    h = n(703656),
+    p = n(592125),
+    g = n(430824),
+    _ = n(594174),
+    C = n(938475),
+    E = n(5192),
+    I = n(981631),
+    x = n(388032),
+    v = n(64182);
+function N(e) {
+    var t, n, r, N, T, S, b, A, j, Z;
+    let { message: R, channel: P } = e,
+        y =
+            null === (r = R.embeds[0]) || void 0 === r
                 ? void 0
-                : null === (n = a.fields) || void 0 === n
+                : null === (n = r.fields) || void 0 === n
                   ? void 0
                   : null ===
                           (t = n.find((e) => {
@@ -39,84 +39,84 @@ function S(e) {
                           })) || void 0 === t
                     ? void 0
                     : t.rawValue,
-        P =
-            null === (x = L.embeds[0]) || void 0 === x
+        L =
+            null === (S = R.embeds[0]) || void 0 === S
                 ? void 0
-                : null === (A = x.fields) || void 0 === A
+                : null === (T = S.fields) || void 0 === T
                   ? void 0
                   : null ===
-                          (S = A.find((e) => {
+                          (N = T.find((e) => {
                               let { rawName: t } = e;
                               return 'channel_id' === t;
-                          })) || void 0 === S
+                          })) || void 0 === N
                     ? void 0
-                    : S.rawValue,
-        D = (0, r.e7)([f.Z], () => f.Z.getGuild(b)),
-        j = (0, r.e7)([m.Z], () => m.Z.getChannel(P)),
-        U = (0, r.e7)([T.default], () => T.default.getCurrentUser()),
-        y = (0, r.e7)([], () => L.author.id === (null == U ? void 0 : U.id)),
-        B = null === (R = Z.recipients) || void 0 === R ? void 0 : R.find((e) => e !== L.author.id),
-        k = (0, r.e7)([T.default], () => (null != B ? T.default.getUser(B) : null)),
-        G = (0, d.ZP)(L),
-        F = (0, N._T)(Z.getGuildId(), Z.id, k),
-        w = (0, r.Wu)([h.ZP], () => (null != j ? h.ZP.getVoiceStatesForChannel(j) : []), [j]),
-        V = w.some((e) => e.user.id === (null == U ? void 0 : U.id)),
+                    : N.rawValue,
+        O = (0, a.e7)([g.Z], () => g.Z.getGuild(y)),
+        M = (0, a.e7)([p.Z], () => p.Z.getChannel(L)),
+        k = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
+        D = (0, a.e7)([], () => R.author.id === (null == k ? void 0 : k.id)),
+        B = null === (b = P.recipients) || void 0 === b ? void 0 : b.find((e) => e !== R.author.id),
+        w = (0, a.e7)([_.default], () => (null != B ? _.default.getUser(B) : null)),
+        U = (0, d.ZP)(R),
+        F = (0, E._T)(P.getGuildId(), P.id, w),
+        G = (0, a.Wu)([C.ZP], () => (null != M ? C.ZP.getVoiceStatesForChannel(M) : []), [M]),
+        V = G.some((e) => e.user.id === (null == k ? void 0 : k.id)),
         H =
-            null === (O = L.embeds[0]) || void 0 === O
+            null === (Z = R.embeds[0]) || void 0 === Z
                 ? void 0
-                : null === (M = O.fields) || void 0 === M
+                : null === (j = Z.fields) || void 0 === j
                   ? void 0
                   : null ===
-                          (v = M.find((e) => {
+                          (A = j.find((e) => {
                               let { rawName: t } = e;
                               return 'voice_user_ids' === t;
-                          })) || void 0 === v
+                          })) || void 0 === A
                     ? void 0
-                    : v.rawValue,
-        Y = null != H ? H.split(',') : [],
-        W = (0, r.Wu)([T.default], () => Y.map((e) => T.default.getUser(e)).filter(Boolean)),
-        K = y && null != k ? C.Z.Messages.WAVED_AT_USER.format({ username: F }) : C.Z.Messages.WAVED_AT_YOU.format({ username: G.nick }),
-        z = null != D && null != j,
+                    : A.rawValue,
+        z = null != H ? H.split(',') : [],
+        W = (0, a.Wu)([_.default], () => z.map((e) => _.default.getUser(e)).filter(Boolean)),
+        K = D && null != w ? x.intl.formatToPlainString(x.t['er/cHx'], { username: F }) : x.intl.formatToPlainString(x.t.noNjkZ, { username: U.nick }),
+        Y = null != O && null != M,
         X = null;
-    (X = z ? (y || V ? C.Z.Messages.YOU_ARE_IN_CHANNEL.format({ channelHook: (e, t) => (0, i.jsx)(_.Z, { channel: null != j ? j : void 0 }, t) }) : C.Z.Messages.THEY_ARE_IN_CHANNEL.format({ channelHook: (e, t) => (0, i.jsx)(_.Z, { channel: null != j ? j : void 0 }, t) })) : C.Z.Messages.CANNOT_ACCESS_HANGOUT), 0 === w.length && (X = y ? C.Z.Messages.HANGOUT_OVER_SENDER : C.Z.Messages.HANGOUT_OVER_RECEIVER);
-    let Q = y ? C.Z.Messages.WAVE_AGAIN : C.Z.Messages.WAVE_BACK;
+    (X = Y ? (D || V ? x.intl.format(x.t.CaLQqK, { channelHook: (e, t) => (0, i.jsx)(m.Z, { channel: null != M ? M : void 0 }, t) }) : x.intl.format(x.t.VugXpK, { channelHook: (e, t) => (0, i.jsx)(m.Z, { channel: null != M ? M : void 0 }, t) })) : x.intl.string(x.t['tHT/Vl'])), 0 === G.length && (X = D ? x.intl.string(x.t.IE2uZW) : x.intl.string(x.t.QVhmGx));
+    let Q = D ? x.intl.string(x.t['00XIbm']) : x.intl.string(x.t['7CrE9/']);
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsxs)('div', {
-                className: g.card,
+                className: v.card,
                 children: [
-                    (0, i.jsx)(l.Text, {
+                    (0, i.jsx)(o.Text, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
                         children: K
                     }),
-                    (0, i.jsx)(l.Text, {
+                    (0, i.jsx)(o.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
                         children: X
                     }),
-                    w.length > 0
+                    G.length > 0
                         ? (0, i.jsx)('div', {
-                              className: g.participants,
-                              children: (0, i.jsx)(E.Z, {
-                                  guildId: b,
+                              className: v.participants,
+                              children: (0, i.jsx)(f.Z, {
+                                  guildId: y,
                                   partySize: {
-                                      knownSize: w.length,
+                                      knownSize: G.length,
                                       unknownSize: 0,
-                                      totalSize: w.length
+                                      totalSize: G.length
                                   },
-                                  members: w.map((e) => e.user),
+                                  members: G.map((e) => e.user),
                                   maxAvatarsShown: 5
                               })
                           })
                         : (0, i.jsx)('div', {
-                              className: s()(g.participants, g.disabled),
-                              children: (0, i.jsx)(E.Z, {
-                                  guildId: b,
+                              className: l()(v.participants, v.disabled),
+                              children: (0, i.jsx)(f.Z, {
+                                  guildId: y,
                                   partySize: {
                                       knownSize: W.length,
-                                      unknownSize: Y.length - W.length,
-                                      totalSize: Y.length
+                                      unknownSize: z.length - W.length,
+                                      totalSize: z.length
                                   },
                                   members: W,
                                   maxAvatarsShown: 5
@@ -125,30 +125,30 @@ function S(e) {
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: g.actions,
+                className: v.actions,
                 children: [
-                    (0, i.jsxs)(l.Button, {
-                        color: l.Button.Colors.BRAND,
+                    (0, i.jsxs)(o.Button, {
+                        color: o.Button.Colors.BRAND,
                         onClick: () => {
-                            null != P && null != b && ((0, I.uL)(p.Z5c.CHANNEL(b, P)), c.default.selectVoiceChannel(P));
+                            null != L && null != y && ((0, h.uL)(I.Z5c.CHANNEL(y, L)), c.default.selectVoiceChannel(L));
                         },
-                        className: g.button,
-                        innerClassName: g.buttonInner,
-                        disabled: V || !z,
+                        className: v.button,
+                        innerClassName: v.buttonInner,
+                        disabled: V || !Y,
                         children: [
-                            (0, i.jsx)(l.VoiceNormalIcon, {
+                            (0, i.jsx)(o.VoiceNormalIcon, {
                                 size: 'md',
                                 color: 'currentColor'
                             }),
-                            C.Z.Messages.JOIN_HANGOUT
+                            x.intl.string(x.t.zIeJq6)
                         ]
                     }),
-                    (0, i.jsx)(l.Button, {
-                        color: l.Button.Colors.PRIMARY,
+                    (0, i.jsx)(o.Button, {
+                        color: o.Button.Colors.PRIMARY,
                         onClick: () => {
-                            o.Z.sendMessage(Z.id, u.ZP.parse(Z, '\uD83D\uDC4B'));
+                            s.Z.sendMessage(P.id, u.ZP.parse(P, '\uD83D\uDC4B'));
                         },
-                        className: g.button,
+                        className: v.button,
                         children: Q
                     })
                 ]

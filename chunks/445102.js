@@ -1,27 +1,27 @@
-o.d(t, {
+n.d(t, {
     Z: function () {
-        return l;
+        return a;
     }
 });
-var n = o(131951),
-    a = o(626135),
-    s = o(981631);
-function l(e, t, o, l, i) {
-    let r = n.Z.getSettings(),
-        u = n.Z.getInputDeviceId(),
-        c = n.Z.getInputDevices()[u],
-        d = n.Z.getOutputDeviceId(),
-        _ = n.Z.getOutputDevices()[d],
-        b = n.Z.getVideoDeviceId(),
-        m = n.Z.getVideoDevices()[b],
-        E = n.Z.getNoiseCancellation(),
-        h = n.Z.getMediaEngine().getAudioSubsystem(),
-        O = n.Z.getMediaEngine().getAudioLayer();
-    a.default.track(s.rMx.CALL_REPORT_PROBLEM, {
+var o = n(131951),
+    i = n(626135),
+    l = n(981631);
+function a(e, t, n, a, s) {
+    let r = o.Z.getSettings(),
+        u = o.Z.getInputDeviceId(),
+        c = o.Z.getInputDevices()[u],
+        d = o.Z.getOutputDeviceId(),
+        b = o.Z.getOutputDevices()[d],
+        m = o.Z.getVideoDeviceId(),
+        h = o.Z.getVideoDevices()[m],
+        _ = o.Z.getNoiseCancellation(),
+        p = o.Z.getMediaEngine().getAudioSubsystem(),
+        g = o.Z.getMediaEngine().getAudioLayer();
+    i.default.track(l.rMx.CALL_REPORT_PROBLEM, {
         rating: null != e ? e : 'no response',
         reason_code: t,
-        reason_description: o,
-        feedback: l,
+        reason_description: n,
+        feedback: a,
         audio_input_mode: r.mode,
         automatic_audio_input_sensitivity_enabled: r.modeOptions.autoThreshold,
         audio_input_sensitivity: r.modeOptions.threshold,
@@ -29,13 +29,13 @@ function l(e, t, o, l, i) {
         noise_suppression_enabled: r.noiseSuppression,
         automatic_gain_control_enabled: r.automaticGainControl,
         voice_output_volume: r.outputVolume,
-        noise_cancellation_enabled: E,
+        noise_cancellation_enabled: _,
         input_device_name: null == c ? void 0 : c.name,
-        output_device_name: null == _ ? void 0 : _.name,
-        video_device_name: null == m ? void 0 : m.name,
-        audio_subsystem: h,
-        audio_layer: O,
+        output_device_name: null == b ? void 0 : b.name,
+        video_device_name: null == h ? void 0 : h.name,
+        audio_subsystem: p,
+        audio_layer: g,
         automatic_audio_subsystem: r.automaticAudioSubsystem,
-        ...i
+        ...s
     });
 }

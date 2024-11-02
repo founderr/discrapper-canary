@@ -1,44 +1,44 @@
 t.d(n, {
     Z: function () {
-        return N;
+        return g;
     }
 });
 var i = t(200651),
-    a = t(192379),
-    l = t(442837),
-    s = t(481060),
+    l = t(192379),
+    r = t(442837),
+    a = t(481060),
     o = t(366598),
-    r = t(821864),
+    s = t(821864),
     d = t(905753),
     c = t(995390),
     u = t(469880),
-    I = t(665578),
-    m = t(689938),
-    _ = t(121080);
-function N(e) {
+    m = t(665578),
+    h = t(388032),
+    p = t(121080);
+function g(e) {
     let { application: n, canNavigate: t, guildId: c } = e,
-        I = (0, l.e7)([d.Z], () => d.Z.isUnavailable());
-    return (a.useEffect(() => (r.I4(n.id), r.kZ), [n.id]),
-    a.useEffect(() => {
-        r.gq(n.id, c, n.id), r.Sn(c, n.id);
+        m = (0, r.e7)([d.Z], () => d.Z.isUnavailable());
+    return (l.useEffect(() => (s.I4(n.id), s.kZ), [n.id]),
+    l.useEffect(() => {
+        s.gq(n.id, c, n.id), s.Sn(c, n.id);
     }, [n.id, c]),
-    I)
+    m)
         ? null
-        : (0, i.jsxs)(a.Fragment, {
+        : (0, i.jsxs)(l.Fragment, {
               children: [
                   (0, i.jsx)(o.Z, {
-                      icon: (0, i.jsx)(s.SlashBoxIcon, {
+                      icon: (0, i.jsx)(a.SlashBoxIcon, {
                           size: 'md',
                           color: 'currentColor'
                       }),
-                      title: m.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_PERMISSIONS
+                      title: h.intl.string(h.t.RGoJND)
                   }),
-                  (0, i.jsx)(s.Text, {
+                  (0, i.jsx)(a.Text, {
                       color: 'text-muted',
                       variant: 'text-sm/normal',
-                      children: m.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_PERMISSIONS_DESCRIPTION
+                      children: h.intl.string(h.t.sCkD3d)
                   }),
-                  (0, i.jsx)(E, {
+                  (0, i.jsx)(f, {
                       guildId: c,
                       applicationId: n.id
                   }),
@@ -51,18 +51,18 @@ function N(e) {
               ]
           });
 }
-function E(e) {
+function f(e) {
     let { applicationId: n, guildId: t } = e,
-        { originalApplicationPermissions: a, editedTargetPermissions: l, selectedPermissionCount: s } = (0, c.Z)(t, n);
+        { originalApplicationPermissions: l, editedTargetPermissions: r, selectedPermissionCount: a } = (0, c.Z)(t, n);
     return (0, i.jsx)('div', {
-        className: _.applicationPermissions,
-        children: (0, i.jsx)(I.Z, {
+        className: p.applicationPermissions,
+        children: (0, i.jsx)(m.Z, {
             applicationId: n,
             guildId: t,
             inModal: !1,
-            editedTargetPermissions: l,
-            originalApplicationPermissions: a,
-            selectedPermissionCount: s
+            editedTargetPermissions: r,
+            originalApplicationPermissions: l,
+            selectedPermissionCount: a
         })
     });
 }

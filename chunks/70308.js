@@ -1,6 +1,6 @@
 n.d(t, {
     I: function () {
-        return E;
+        return _;
     }
 });
 var r = n(200651),
@@ -16,7 +16,7 @@ let d = {
         friction: 24,
         tension: 280
     },
-    _ = {
+    f = {
         [u.az.TOP]: {
             styles: c.containerTop,
             transition: {
@@ -68,38 +68,38 @@ let d = {
             }
         }
     };
-function E() {
+function _() {
     var e, t, n, c;
     let d = (0, l.Es)((e) => e.currentToast),
-        E = i.useRef(null !== (n = null == d ? void 0 : null === (e = d.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : u.si.position),
-        f = i.useRef(null !== (c = null == d ? void 0 : null === (t = d.options) || void 0 === t ? void 0 : t.duration) && void 0 !== c ? c : u.si.duration);
+        _ = i.useRef(null !== (n = null == d ? void 0 : null === (e = d.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : u.si.position),
+        h = i.useRef(null !== (c = null == d ? void 0 : null === (t = d.options) || void 0 === t ? void 0 : t.duration) && void 0 !== c ? c : u.si.duration);
     i.useEffect(() => {
         if (null != d) {
             var e, t, n, r;
-            (E.current = null !== (n = null === (e = d.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : u.si.position), (f.current = null !== (r = null === (t = d.options) || void 0 === t ? void 0 : t.duration) && void 0 !== r ? r : u.si.duration);
+            (_.current = null !== (n = null === (e = d.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : u.si.position), (h.current = null !== (r = null === (t = d.options) || void 0 === t ? void 0 : t.duration) && void 0 !== r ? r : u.si.duration);
         }
     }, [d]);
-    let h = i.useMemo(() => {
+    let p = i.useMemo(() => {
             var e, t;
-            return _[null !== (t = null == d ? void 0 : null === (e = d.options) || void 0 === e ? void 0 : e.position) && void 0 !== t ? t : E.current];
+            return f[null !== (t = null == d ? void 0 : null === (e = d.options) || void 0 === e ? void 0 : e.position) && void 0 !== t ? t : _.current];
         }, [d]),
-        p = (0, s.useTransition)(d, {
+        m = (0, s.useTransition)(d, {
             keys: (e) => {
                 var t;
                 return null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : '';
             },
-            ...h.transition
+            ...p.transition
         });
     return (
         i.useEffect(() => {
             null != d &&
                 setTimeout(() => {
                     (0, l.z5)();
-                }, f.current);
+                }, h.current);
         }, [d]),
         (0, r.jsx)('div', {
-            className: h.styles,
-            children: p((e, t) =>
+            className: p.styles,
+            children: m((e, t) =>
                 null === t
                     ? null
                     : (0, r.jsx)(

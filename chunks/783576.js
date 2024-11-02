@@ -1,64 +1,64 @@
-s.r(e),
-    s.d(e, {
+o.r(n),
+    o.d(n, {
         default: function () {
             return d;
         }
     });
-var o = s(200651);
-s(192379);
-var n = s(481060),
-    a = s(782568),
-    i = s(313201),
-    l = s(689938),
-    r = s(181758);
+var e = o(200651);
+o(192379);
+var i = o(481060),
+    s = o(782568),
+    a = o(313201),
+    l = o(388032),
+    r = o(181758);
 function d(t) {
-    let { href: e, onClose: d, transitionState: c } = t,
-        N = (0, i.Dt)();
-    return (0, o.jsxs)(n.ModalRoot, {
+    let { href: n, onClose: d, transitionState: c } = t,
+        u = (0, a.Dt)();
+    return (0, e.jsxs)(i.ModalRoot, {
         transitionState: c,
-        'aria-labelledby': N,
+        'aria-labelledby': u,
         children: [
-            (0, o.jsx)('img', {
+            (0, e.jsx)('img', {
                 className: r.art,
-                src: s(902623),
+                src: o(902623),
                 alt: ''
             }),
-            (0, o.jsx)(n.ModalContent, {
-                children: (0, o.jsxs)('div', {
+            (0, e.jsx)(i.ModalContent, {
+                children: (0, e.jsxs)('div', {
                     className: r.modalContent,
                     children: [
-                        (0, o.jsx)(n.Heading, {
-                            id: N,
+                        (0, e.jsx)(i.Heading, {
+                            id: u,
                             variant: 'heading-lg/semibold',
                             className: r.title,
-                            children: l.Z.Messages.SUSPICIOUS_DOWNLOAD_WARNING_TITLE
+                            children: l.intl.string(l.t.XtDo9f)
                         }),
-                        (0, o.jsx)(n.Text, {
+                        (0, e.jsx)(i.Text, {
                             variant: 'text-md/normal',
                             className: r.body,
-                            children: l.Z.Messages.SUSPICIOUS_DOWNLOAD_WARNING_BODY
+                            children: l.intl.string(l.t.L9yFkp)
                         })
                     ]
                 })
             }),
-            (0, o.jsxs)(n.ModalFooter, {
+            (0, e.jsxs)(i.ModalFooter, {
                 children: [
-                    (0, o.jsx)(n.Button, {
+                    (0, e.jsx)(i.Button, {
                         type: 'button',
-                        size: n.Button.Sizes.MEDIUM,
-                        color: n.Button.Colors.BRAND,
+                        size: i.Button.Sizes.MEDIUM,
+                        color: i.Button.Colors.BRAND,
                         onClick: d,
-                        children: l.Z.Messages.SUSPICIOUS_DOWNLOAD_WARNING_CANCEL
+                        children: l.intl.string(l.t.j7Vi2t)
                     }),
-                    (0, o.jsx)(n.Button, {
+                    (0, e.jsx)(i.Button, {
                         type: 'button',
-                        size: n.Button.Sizes.MEDIUM,
-                        color: n.Button.Colors.TRANSPARENT,
-                        look: n.Button.Looks.LINK,
+                        size: i.Button.Sizes.MEDIUM,
+                        color: i.Button.Colors.TRANSPARENT,
+                        look: i.Button.Looks.LINK,
                         onClick: () => {
-                            d(), (0, a.Z)(e, !0);
+                            d(), (0, s.Z)(n, !0);
                         },
-                        children: l.Z.Messages.SUSPICIOUS_DOWNLOAD_WARNING_DOWNLOAD
+                        children: l.intl.string(l.t['/bHu8/'])
                     })
                 ]
             })

@@ -1,29 +1,29 @@
-n.d(t, {
+n.d(e, {
     Z: function () {
         return o;
     }
 });
-var s = n(200651),
-    a = n(192379),
-    l = n(120356),
-    r = n.n(l),
-    i = n(725436),
+var l = n(200651),
+    r = n(192379),
+    i = n(120356),
+    a = n.n(i),
+    s = n(725436),
     u = n(737602),
     c = n(554034);
-function o(e) {
-    let { description: t, className: n, guildId: l, truncate: o = !0 } = e,
-        E = a.useMemo(
+function o(t) {
+    let { description: e, className: n, guildId: i, truncate: o = !0 } = t,
+        d = r.useMemo(
             () =>
-                (0, i.m)(t, !0, {
-                    guildId: l,
+                (0, s.m)(e, !0, {
+                    guildId: i,
                     allowLinks: !0,
                     allowHeading: !0,
                     allowList: !0
                 }),
-            [t, l]
+            [e, i]
         );
-    return (0, s.jsx)('div', {
-        className: r()(u.descriptionText, n, c.markup, { [u.truncate]: o }),
-        children: E
+    return (0, l.jsx)('div', {
+        className: a()(u.descriptionText, n, c.markup, { [u.truncate]: o }),
+        children: d
     });
 }

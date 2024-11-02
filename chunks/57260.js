@@ -14,43 +14,43 @@ var r = n(200651),
     c = n(761115);
 function d(e) {
     let { children: t, className: n, collapsibleContent: a, isExpanded: d } = e,
-        [_, E] = i.useState(!1),
-        [f, h] = i.useState(!0),
-        [p, I] = i.useState(!1),
-        m = null != d ? d : _,
-        { ref: T, height: S = 0 } = (0, u.Z)(),
-        { ref: g, height: A = 0 } = (0, u.Z)(),
-        N = (0, l.useSpring)(
+        [f, _] = i.useState(!1),
+        [h, p] = i.useState(!0),
+        [m, g] = i.useState(!1),
+        E = null != d ? d : f,
+        { ref: v, height: I = 0 } = (0, u.Z)(),
+        { ref: S, height: T = 0 } = (0, u.Z)(),
+        b = (0, l.useSpring)(
             {
-                height: m ? S + A : A,
+                height: E ? I + T : T,
                 config: o.config.stiff,
-                onRest: () => I(!0)
+                onRest: () => g(!0)
             },
-            f ? 'animate-never' : 'respect-motion-settings'
+            h ? 'animate-never' : 'respect-motion-settings'
         ),
-        R = i.useCallback(() => {
-            E(!_);
-        }, [_, E]);
+        y = i.useCallback(() => {
+            _(!f);
+        }, [f, _]);
     return (
         i.useLayoutEffect(() => {
             let e = setTimeout(() => {
-                h(!1);
+                p(!1);
             }, 100);
             return () => clearTimeout(e);
         }, []),
         (0, r.jsx)('div', {
-            className: s()(c.collapseable, { [c.toggled]: m }, n),
+            className: s()(c.collapseable, { [c.toggled]: E }, n),
             children: (0, r.jsxs)(o.animated.div, {
-                className: s()(c.contentExpandContainer, { [c.showOverflow]: m && p }),
-                style: N,
+                className: s()(c.contentExpandContainer, { [c.showOverflow]: E && m }),
+                style: b,
                 children: [
                     (0, r.jsx)('div', {
-                        ref: g,
-                        className: s()(c.header, { [c.toggled]: m }),
-                        children: t({ onClick: R })
+                        ref: S,
+                        className: s()(c.header, { [c.toggled]: E }),
+                        children: t({ onClick: y })
                     }),
                     (0, r.jsx)('div', {
-                        ref: T,
+                        ref: v,
                         children: a
                     })
                 ]

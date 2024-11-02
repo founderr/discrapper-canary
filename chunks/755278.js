@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return m;
     }
 }),
     n(789020);
@@ -13,11 +13,11 @@ var r = n(928801),
     u = n(695346),
     c = n(199902),
     d = n(592125),
-    _ = n(131951),
-    E = n(936349),
-    f = n(630388),
-    h = n(981631);
-class p extends r.Z {
+    f = n(131951),
+    _ = n(936349),
+    h = n(630388),
+    p = n(981631);
+class m extends r.Z {
     get guildId() {
         return this.getState().guildId;
     }
@@ -28,23 +28,23 @@ class p extends r.Z {
         var e, t, n;
         let r = 0,
             d = u.tU.getSetting();
-        r = (0, f.mB)(r, h.BVn.ALLOW_VOICE_RECORDING, d);
-        let E = (0, s.Z)(_.Z),
-            p = (0, i.ln)() && a.Z.getSettings().clipsEnabled && ((null === (e = c.Z.getCurrentUserActiveStream()) || void 0 === e ? void 0 : e.state) === h.jm8.ACTIVE || (null === (t = c.Z.getCurrentUserActiveStream()) || void 0 === t ? void 0 : t.state) === h.jm8.PAUSED),
-            I = a.Z.isDecoupledGameClippingEnabled(),
-            m = E && a.Z.getSettings().decoupledClipsEnabled && (null === (n = o.ZP.getVisibleGame()) || void 0 === n ? void 0 : n.windowHandle) != null && I;
-        r = (0, f.mB)(r, h.BVn.CLIPS_ENABLED, p || m);
-        let { enableViewerClipping: T } = l.Z.getCurrentConfig({ location: 'computeVoiceFlags' }, { autoTrackExposure: !1 }),
-            S = T && E && a.Z.getSettings().viewerClipsEnabled;
-        return (r = (0, f.mB)(r, h.BVn.ALLOW_ANY_VIEWER_CLIPS, S));
+        r = (0, h.mB)(r, p.BVn.ALLOW_VOICE_RECORDING, d);
+        let _ = (0, s.Z)(f.Z),
+            m = (0, i.ln)() && a.Z.getSettings().clipsEnabled && ((null === (e = c.Z.getCurrentUserActiveStream()) || void 0 === e ? void 0 : e.state) === p.jm8.ACTIVE || (null === (t = c.Z.getCurrentUserActiveStream()) || void 0 === t ? void 0 : t.state) === p.jm8.PAUSED),
+            g = a.Z.isDecoupledGameClippingEnabled(),
+            E = _ && a.Z.getSettings().decoupledClipsEnabled && (null === (n = o.ZP.getVisibleGame()) || void 0 === n ? void 0 : n.windowHandle) != null && g;
+        r = (0, h.mB)(r, p.BVn.CLIPS_ENABLED, m || E);
+        let { enableViewerClipping: v } = l.Z.getCurrentConfig({ location: 'computeVoiceFlags' }, { autoTrackExposure: !1 }),
+            I = v && _ && a.Z.getSettings().viewerClipsEnabled;
+        return (r = (0, h.mB)(r, p.BVn.ALLOW_ANY_VIEWER_CLIPS, I));
     }
     getInitialState() {
         return {
             guildId: null,
             channelId: null,
-            selfMute: _.Z.isSelfMute(),
-            selfDeaf: _.Z.isSelfDeaf(),
-            selfVideo: _.Z.isVideoEnabled(),
+            selfMute: f.Z.isSelfMute(),
+            selfDeaf: f.Z.isSelfDeaf(),
+            selfVideo: f.Z.isVideoEnabled(),
             preferredRegion: null,
             preferredRegions: null,
             videoStreamParameters: null,
@@ -56,12 +56,12 @@ class p extends r.Z {
         return {
             guildId: t,
             channelId: n,
-            selfMute: _.Z.isSelfMute(),
-            selfDeaf: _.Z.isSelfDeaf(),
-            selfVideo: _.Z.isVideoEnabled(),
-            preferredRegion: E.Z.getPreferredRegion(),
-            preferredRegions: E.Z.getPreferredRegions(),
-            videoStreamParameters: _.Z.getVideoStreamParameters(),
+            selfMute: f.Z.isSelfMute(),
+            selfDeaf: f.Z.isSelfDeaf(),
+            selfVideo: f.Z.isVideoEnabled(),
+            preferredRegion: _.Z.getPreferredRegion(),
+            preferredRegions: _.Z.getPreferredRegions(),
+            videoStreamParameters: f.Z.getVideoStreamParameters(),
             flags: this.computeVoiceFlags()
         };
     }
@@ -71,7 +71,7 @@ class p extends r.Z {
     didCommit(e) {
         var t;
         let { guildId: n, channelId: r, selfMute: i, selfDeaf: a, selfVideo: s, preferredRegion: o, preferredRegions: l, videoStreamParameters: u, flags: c = 0 } = e;
-        s && (null === (t = d.Z.getChannel(r)) || void 0 === t ? void 0 : t.type) === h.d4z.GUILD_STAGE_VOICE
+        s && (null === (t = d.Z.getChannel(r)) || void 0 === t ? void 0 : t.type) === p.d4z.GUILD_STAGE_VOICE
             ? this.socket.voiceStateUpdate({
                   guildId: n,
                   channelId: r,

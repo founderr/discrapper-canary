@@ -22,9 +22,9 @@ function a(e, t, n) {
 }
 class s extends i.Z {
     static fromServer(e) {
-        let { products: t, logo: n, hero_ranking: i, pdp_bg: a, mobile_bg: o, success_modal_bg: l, mobile_banner: u, hero_banner: c, featured_block: d, ..._ } = e;
+        let { products: t, logo: n, hero_ranking: i, pdp_bg: a, mobile_bg: o, success_modal_bg: l, mobile_banner: u, hero_banner: c, featured_block: d, ...f } = e;
         return new s({
-            ...super.fromServer(_),
+            ...super.fromServer(f),
             products: t.reduce((e, t) => {
                 let n = r.Z.fromServer(t);
                 return 0 === n.items.length ? e : (e.push(n), e);

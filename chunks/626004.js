@@ -1,45 +1,45 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return f;
+        return h;
     }
 }),
-    t(789020);
-var i = t(200651),
-    a = t(192379),
-    r = t(120356),
-    o = t.n(r),
-    s = t(481060),
-    l = t(860719),
-    c = t(63063),
-    d = t(49012),
-    u = t(981631),
-    _ = t(689938),
-    p = t(568161);
-let m = c.Z.getArticleURL(u.BhN.BOT_DATA_ACCESS);
-function I(e) {
-    let { icon: n, heading: t, body: a } = e;
+    n(789020);
+var i = n(200651),
+    a = n(192379),
+    r = n(120356),
+    o = n.n(r),
+    l = n(481060),
+    s = n(860719),
+    c = n(63063),
+    d = n(49012),
+    u = n(981631),
+    p = n(388032),
+    m = n(568161);
+let _ = c.Z.getArticleURL(u.BhN.BOT_DATA_ACCESS);
+function f(e) {
+    let { icon: t, heading: n, body: a } = e;
     return (0, i.jsxs)('li', {
-        className: p.intentContainer,
+        className: m.intentContainer,
         children: [
             (0, i.jsx)('div', {
-                children: (0, i.jsx)(n, {
+                children: (0, i.jsx)(t, {
                     color: 'currentColor',
                     size: 'md'
                 })
             }),
             (0, i.jsxs)('div', {
-                className: p.intentTextContainer,
+                className: m.intentTextContainer,
                 children: [
                     (0, i.jsx)('div', {
-                        children: (0, i.jsx)(s.Heading, {
+                        children: (0, i.jsx)(l.Heading, {
                             variant: 'eyebrow',
                             color: 'header-secondary',
-                            children: t
+                            children: n
                         })
                     }),
                     (0, i.jsx)('div', {
-                        className: p.intentBody,
-                        children: (0, i.jsx)(s.Text, {
+                        className: m.intentBody,
+                        children: (0, i.jsx)(l.Text, {
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
                             children: a
@@ -50,63 +50,63 @@ function I(e) {
         ]
     });
 }
-function f(e) {
-    let { application: n } = e,
-        { hasMessageContent: t, hasGuildPresences: r, hasGuildMembers: c, hasIntents: u } = (0, l.w)({ flags: null == n ? void 0 : n.flags }),
-        f = a.useCallback(() => {
-            (null == n ? void 0 : n.privacy_policy_url) != null && (0, d.q)({ href: n.privacy_policy_url });
-        }, [null == n ? void 0 : n.privacy_policy_url]);
+function h(e) {
+    let { application: t } = e,
+        { hasMessageContent: n, hasGuildPresences: r, hasGuildMembers: c, hasIntents: u } = (0, s.w)({ flags: null == t ? void 0 : t.flags }),
+        h = a.useCallback(() => {
+            (null == t ? void 0 : t.privacy_policy_url) != null && (0, d.q)({ href: t.privacy_policy_url });
+        }, [null == t ? void 0 : t.privacy_policy_url]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             u &&
                 (0, i.jsx)('div', {
-                    className: p.intentsListHeading,
-                    children: (0, i.jsx)(s.Text, {
+                    className: m.intentsListHeading,
+                    children: (0, i.jsx)(l.Text, {
                         variant: 'text-md/normal',
-                        children: _.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_INTENTS_LIST_HEADING
+                        children: p.intl.string(p.t.U6KH5e)
                     })
                 }),
             (0, i.jsxs)('div', {
-                className: p.intentsContainer,
+                className: m.intentsContainer,
                 children: [
                     u &&
                         (0, i.jsxs)('ul', {
-                            className: p.intentsList,
+                            className: m.intentsList,
                             children: [
-                                t &&
-                                    (0, i.jsx)(I, {
-                                        icon: s.ChatIcon,
-                                        heading: _.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_MESSAGE_CONTENT_HEADING,
-                                        body: _.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_MESSAGE_CONTENT_BODY
+                                n &&
+                                    (0, i.jsx)(f, {
+                                        icon: l.ChatIcon,
+                                        heading: p.intl.string(p.t.gJpBOz),
+                                        body: p.intl.string(p.t['L+QVbm'])
                                     }),
                                 r &&
-                                    (0, i.jsx)(I, {
-                                        icon: s.UserCircleStatusIcon,
-                                        heading: _.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_PRESENCES_HEADING,
-                                        body: _.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_PRESENCES_BODY
+                                    (0, i.jsx)(f, {
+                                        icon: l.UserCircleStatusIcon,
+                                        heading: p.intl.string(p.t.jo0oj4),
+                                        body: p.intl.string(p.t.Dm0jq6)
                                     }),
                                 c &&
-                                    (0, i.jsx)(I, {
-                                        icon: s.GroupIcon,
-                                        heading: _.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_MEMBERS_HEADING,
-                                        body: _.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_MEMBERS_BODY
+                                    (0, i.jsx)(f, {
+                                        icon: l.GroupIcon,
+                                        heading: p.intl.string(p.t.QZql7O),
+                                        body: p.intl.string(p.t['ez/N/f'])
                                     })
                             ]
                         }),
                     (0, i.jsxs)('div', {
-                        className: o()({ [p.hasSeparator]: u }),
+                        className: o()({ [m.hasSeparator]: u }),
                         children: [
-                            (0, i.jsx)(s.Text, {
+                            (0, i.jsx)(l.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                children: _.Z.Messages.BOTS_DATA_ACCESS_BASELINE.format({ helpCenterUrl: m })
+                                children: p.intl.format(p.t.b6nqk5, { helpCenterUrl: _ })
                             }),
-                            (null == n ? void 0 : n.privacy_policy_url) != null &&
-                                (0, i.jsx)(s.Text, {
+                            (null == t ? void 0 : t.privacy_policy_url) != null &&
+                                (0, i.jsx)(l.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'header-secondary',
-                                    className: p.privacyPolicy,
-                                    children: _.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_PRIVACY_POLICY_V2.format({ onClick: f })
+                                    className: m.privacyPolicy,
+                                    children: p.intl.format(p.t.agYVY2, { onClick: h })
                                 })
                         ]
                     })

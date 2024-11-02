@@ -7,8 +7,8 @@ n.d(t, {
                 u = l === (null == (o = t.ownerDocument) ? void 0 : o.body),
                 c = (0, a.Z)(l),
                 d = u ? [c].concat(c.visualViewport || [], (0, s.Z)(l) ? l : []) : l,
-                _ = n.concat(d);
-            return u ? _ : _.concat(e((0, i.Z)(d)));
+                f = n.concat(d);
+            return u ? f : f.concat(e((0, i.Z)(d)));
         };
     }
 });

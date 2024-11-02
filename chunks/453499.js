@@ -12,14 +12,14 @@ var s,
     p = n(846519),
     m = n(481060),
     g = n(570140),
-    I = n(578361),
-    C = n(768762),
+    C = n(578361),
+    I = n(768762),
     x = n(259580),
     f = n(585483),
     v = n(981631),
-    E = n(689938),
-    N = n(665923);
-function b(e, t, n) {
+    b = n(388032),
+    E = n(665923);
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -47,28 +47,28 @@ class S extends (i = o.PureComponent) {
     }
     render() {
         let { current: e, count: t, includeHitboxPadding: n, arrowClassName: s, paginationDotClassName: i, paginationDotSelectedClassName: a, paginationArrowIconType: r = 'arrow' } = this.props,
-            o = u()(N.arrowHitbox, { [N.arrowHitboxPadding]: n }, s);
+            o = u()(E.arrowHitbox, { [E.arrowHitboxPadding]: n }, s);
         return (0, l.jsxs)('div', {
-            className: u()(N.controls, this.props.className),
+            className: u()(E.controls, this.props.className),
             children: [
                 (0, l.jsx)(m.Button, {
                     look: m.Button.Looks.BLANK,
                     className: o,
                     onClick: this.handlePrevious,
-                    'aria-label': E.Z.Messages.PAGINATION_PREVIOUS,
+                    'aria-label': b.intl.string(b.t.vgfxaG),
                     children:
                         'caret' === r
                             ? (0, l.jsx)(x.Z, {
-                                  className: N.arrow,
+                                  className: E.arrow,
                                   direction: x.Z.Directions.LEFT
                               })
-                            : (0, l.jsx)(C.Z, {
-                                  className: N.arrow,
-                                  direction: C.Z.Directions.LEFT
+                            : (0, l.jsx)(I.Z, {
+                                  className: E.arrow,
+                                  direction: I.Z.Directions.LEFT
                               })
                 }),
                 (0, l.jsx)('div', {
-                    className: N.dots,
+                    className: E.dots,
                     children: c().times(t, (t) =>
                         (0, l.jsx)(
                             m.Button,
@@ -76,8 +76,8 @@ class S extends (i = o.PureComponent) {
                                 look: m.Button.Looks.BLANK,
                                 size: m.Button.Sizes.NONE,
                                 onClick: () => this.handleDotClick(t),
-                                className: t === e ? u()(N.dotSelected, a) : u()(N.dotNormal, i),
-                                'aria-label': E.Z.Messages.PAGINATION_SLIDE_LABEL.format({ pageNumber: t + 1 })
+                                className: t === e ? u()(E.dotSelected, a) : u()(E.dotNormal, i),
+                                'aria-label': b.intl.formatToPlainString(b.t['2SXOrK'], { pageNumber: t + 1 })
                             },
                             'dot-'.concat(t)
                         )
@@ -87,16 +87,16 @@ class S extends (i = o.PureComponent) {
                     look: m.Button.Looks.BLANK,
                     className: o,
                     onClick: this.handleNext,
-                    'aria-label': E.Z.Messages.PAGINATION_NEXT,
+                    'aria-label': b.intl.string(b.t.XiOHRU),
                     children:
                         'caret' === r
                             ? (0, l.jsx)(x.Z, {
-                                  className: N.arrow,
+                                  className: E.arrow,
                                   direction: x.Z.Directions.RIGHT
                               })
-                            : (0, l.jsx)(C.Z, {
-                                  className: N.arrow,
-                                  direction: C.Z.Directions.RIGHT
+                            : (0, l.jsx)(I.Z, {
+                                  className: E.arrow,
+                                  direction: I.Z.Directions.RIGHT
                               })
                 })
             ]
@@ -104,23 +104,23 @@ class S extends (i = o.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            b(this, 'handleDotClick', (e) => {
+            N(this, 'handleDotClick', (e) => {
                 let { onSetItem: t, onIntentionalChange: n, current: s } = this.props;
                 null == n || n(s, e, P.JUMP), t(e);
             }),
-            b(this, 'handleNext', () => {
+            N(this, 'handleNext', () => {
                 let { onIntentionalChange: e, current: t, onChangePage: n } = this.props,
                     s = n(1);
                 null == e || e(t, s, P.NEXT);
             }),
-            b(this, 'handlePrevious', () => {
+            N(this, 'handlePrevious', () => {
                 let { onIntentionalChange: e, current: t, onChangePage: n } = this.props,
                     s = n(-1);
                 null == e || e(t, s, P.PREVIOUS);
             });
     }
 }
-b(S, 'defaultProps', { includeHitboxPadding: !0 });
+N(S, 'defaultProps', { includeHitboxPadding: !0 });
 class L extends (a = o.PureComponent) {
     componentDidMount() {
         g.Z.subscribe('WINDOW_FOCUS', this.handleWindowFocusChange), !this.props.initialPaused && !this.state.paused && this.startTimer();
@@ -148,7 +148,7 @@ class L extends (a = o.PureComponent) {
         n < 0 ? (n = e.length - 1) : n > e.length - 1 && (n = 0);
         let { onChangeItem: s } = this.props;
         null == s || s(e[n], this.state.visibleIndex, n);
-        let i = t > 0 ? I.n.LEFT : I.n.RIGHT;
+        let i = t > 0 ? C.n.LEFT : C.n.RIGHT;
         return (
             this.setState({
                 visibleIndex: n,
@@ -158,21 +158,21 @@ class L extends (a = o.PureComponent) {
         );
     }
     render() {
-        let { items: e, renderItem: t, className: n, slideAnimatorClassName: s, slideAnimatorSpringSettings: i, slideAnimatorFadeInOut: a, paginationClassName: r, paginationArrowClassName: o, paginationArrowIconType: h, paginationDotClassName: d, paginationDotSelectedClassName: c, themedPagination: p, includeHitboxPadding: m, style: g, aspectRatio: C, children: x } = this.props,
+        let { items: e, renderItem: t, className: n, slideAnimatorClassName: s, slideAnimatorSpringSettings: i, slideAnimatorFadeInOut: a, paginationClassName: r, paginationArrowClassName: o, paginationArrowIconType: h, paginationDotClassName: d, paginationDotSelectedClassName: c, themedPagination: p, includeHitboxPadding: m, style: g, aspectRatio: I, children: x } = this.props,
             { visibleIndex: f } = this.state;
         return (0, l.jsxs)('div', {
-            className: N.root,
+            className: E.root,
             children: [
                 (0, l.jsxs)('div', {
-                    className: u()(N.carouselContainer, n),
+                    className: u()(E.carouselContainer, n),
                     style: g,
                     onMouseEnter: this.handleMouseEnter,
                     onMouseLeave: this.handleMouseLeave,
                     children: [
                         (0, l.jsx)('div', {
-                            style: { aspectRatio: C },
-                            children: (0, l.jsx)(I.Z, {
-                                className: u()(N.carousel, s),
+                            style: { aspectRatio: I },
+                            children: (0, l.jsx)(C.Z, {
+                                className: u()(E.carousel, s),
                                 step: f,
                                 direction: this.getCurrentDirection(),
                                 springSettings: i,
@@ -182,7 +182,7 @@ class L extends (a = o.PureComponent) {
                         }),
                         e.length > 1 &&
                             (0, l.jsx)(S, {
-                                className: u()(r, p ? N.themedPagination : N.pagination),
+                                className: u()(r, p ? E.themedPagination : E.pagination),
                                 arrowClassName: o,
                                 includeHitboxPadding: m,
                                 current: f,
@@ -206,40 +206,40 @@ class L extends (a = o.PureComponent) {
     }
     constructor(e) {
         super(e),
-            b(this, 'timer', new p.Xp()),
-            b(this, 'handleWindowFocusChange', (e) => {
+            N(this, 'timer', new p.Xp()),
+            N(this, 'handleWindowFocusChange', (e) => {
                 let { focused: t } = e;
                 this.setState({ paused: !t });
             }),
-            b(this, 'getCurrentDirection', () => this.state.direction),
-            b(this, 'nextItem', () => {
+            N(this, 'getCurrentDirection', () => this.state.direction),
+            N(this, 'nextItem', () => {
                 let { items: e } = this.props;
                 this.changeItem(e, 1);
             }),
-            b(this, 'previousItem', () => {
+            N(this, 'previousItem', () => {
                 let { items: e } = this.props;
                 this.changeItem(e, -1);
             }),
-            b(this, 'handleSetItem', (e) => {
+            N(this, 'handleSetItem', (e) => {
                 let { visibleIndex: t } = this.state,
                     { items: n } = this.props;
                 this.changeItem(n, e - t);
             }),
-            b(this, 'handleMouseEnter', () => {
+            N(this, 'handleMouseEnter', () => {
                 this.setState({ paused: !0 });
             }),
-            b(this, 'handleMouseLeave', () => {
+            N(this, 'handleMouseLeave', () => {
                 this.setState({ paused: !1 });
             }),
-            b(this, 'handleIntentionalChange', (e, t, n) => {
+            N(this, 'handleIntentionalChange', (e, t, n) => {
                 let { items: s, onIntentionalChange: i } = this.props;
                 return null == i ? void 0 : i(s[t], e, t, n);
             }),
             (this.state = {
                 visibleIndex: !0 === e.randomize ? c().random(0, e.items.length - 1) : 0,
-                direction: I.n.LEFT,
+                direction: C.n.LEFT,
                 paused: !1
             });
     }
 }
-b(L, 'defaultProps', { aspectRatio: 16 / 9 }), (t.Z = L);
+N(L, 'defaultProps', { aspectRatio: 16 / 9 }), (t.Z = L);

@@ -6,7 +6,7 @@ n.d(t, {
         return d;
     },
     g0: function () {
-        return _;
+        return f;
     },
     gJ: function () {
         return c;
@@ -64,13 +64,13 @@ function c(e, t) {
 }
 function d(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return E(e, t) !== a.P.None;
+    return _(e, t) !== a.P.None;
+}
+function f(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    return _(e, t) === a.P.ClydeProfiles;
 }
 function _(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return E(e, t) === a.P.ClydeProfiles;
-}
-function E(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (null == e) return !1;
     let n = e.id;

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return M;
+        return x;
     }
 }),
     n(653041),
@@ -14,29 +14,29 @@ var r = n(200651),
     u = n(666188),
     c = n(372769),
     d = n(523751),
-    _ = n(549817),
-    E = n(819553),
-    f = n(17181),
-    h = n(303737),
-    p = n(965638),
-    I = n(434404),
-    m = n(962086),
-    T = n(160404),
-    S = n(703656),
-    g = n(814443),
-    A = n(592125),
-    N = n(626135),
-    R = n(912787),
-    O = n(272709),
-    v = n(718582),
+    f = n(549817),
+    _ = n(819553),
+    h = n(17181),
+    p = n(303737),
+    m = n(965638),
+    g = n(434404),
+    E = n(962086),
+    v = n(160404),
+    I = n(703656),
+    S = n(814443),
+    T = n(592125),
+    b = n(626135),
+    y = n(912787),
+    A = n(272709),
+    N = n(718582),
     C = n(126134),
-    L = n(981631),
-    D = n(689938),
-    y = n(206248);
-function b(e) {
+    R = n(981631),
+    O = n(388032),
+    D = n(206248);
+function L(e) {
     let { guild: t } = e,
         n = -1,
-        a = (0, v.V1)(t),
+        a = (0, N.V1)(t),
         s = i.useMemo(
             () =>
                 a.map((e) => {
@@ -46,7 +46,7 @@ function b(e) {
                             e.category === C.L.EMBEDDED_ACTIVITY ? (i = e.embeddedActivities[0].channelId) : e.category === C.L.HANGOUT || e.category === C.L.GAMING ? (i = e.channelId) : e.category === C.L.EVENT && (i = e.event.channel_id),
                             n++,
                             (0, r.jsx)(
-                                O.Z,
+                                A.Z,
                                 {
                                     cardData: e,
                                     guildId: t.id,
@@ -68,21 +68,21 @@ function b(e) {
             l = [],
             u = {};
         for (let o of a) {
-            var c, d, _, E, f;
+            var c, d, f, _, h;
             if (3 === e.length) break;
-            let a = null !== (_ = (0, R.i)(o)) && void 0 !== _ ? _ : '',
-                h = (0, v.bA)(a, t.id),
-                p = e.length;
+            let a = null !== (f = (0, y.i)(o)) && void 0 !== f ? f : '',
+                p = (0, N.bA)(a, t.id),
+                m = e.length;
             e.push(o.category),
-                r.push(h.length),
-                i.push(h.length > 0 ? h[0].id : '0'),
-                s.push(h.length > 0 && null !== (E = null === (c = g.Z.getUserAffinity(h[0].id)) || void 0 === c ? void 0 : c.affinity) && void 0 !== E ? E : 0),
-                n.push(Math.min(h.length, 6)),
-                l.push(null !== (f = null === (d = A.Z.getChannel(a)) || void 0 === d ? void 0 : d.type) && void 0 !== f ? f : L.d4z.UNKNOWN),
-                (u['position_'.concat(p + 1, '_affinity_user_ids')] = h.slice(0, 6).map((e) => e.id)),
-                (u['position_'.concat(p + 1, '_user_affinity_scores')] = h.slice(0, 6).map((e) => {
+                r.push(p.length),
+                i.push(p.length > 0 ? p[0].id : '0'),
+                s.push(p.length > 0 && null !== (_ = null === (c = S.Z.getUserAffinity(p[0].id)) || void 0 === c ? void 0 : c.affinity) && void 0 !== _ ? _ : 0),
+                n.push(Math.min(p.length, 6)),
+                l.push(null !== (h = null === (d = T.Z.getChannel(a)) || void 0 === d ? void 0 : d.type) && void 0 !== h ? h : R.d4z.UNKNOWN),
+                (u['position_'.concat(m + 1, '_affinity_user_ids')] = p.slice(0, 6).map((e) => e.id)),
+                (u['position_'.concat(m + 1, '_user_affinity_scores')] = p.slice(0, 6).map((e) => {
                     var t, n;
-                    return null !== (n = null === (t = g.Z.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0;
+                    return null !== (n = null === (t = S.Z.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0;
                 }));
         }
         0 !== e.length &&
@@ -93,7 +93,7 @@ function b(e) {
             (u.max_affinity_user_scores = s),
             (u.channel_types = l),
             (u.guild_id = t.id),
-            N.default.track(L.rMx.GUILD_TOOLTIP_SHOWN, {
+            b.default.track(R.rMx.GUILD_TOOLTIP_SHOWN, {
                 ...u,
                 ...(0, o.hH)(t.id)
             }));
@@ -101,48 +101,48 @@ function b(e) {
     0 === a.length)
         ? null
         : (0, r.jsx)('div', {
-              className: y.cards,
+              className: D.cards,
               children: s
           });
 }
-function M(e) {
+function x(e) {
     var t;
-    let { guild: n, closePopout: o, nudge: g } = e,
-        A = i.useRef(null),
-        N = (0, u.Z)(n),
-        R = (0, p.I)(n),
-        { isViewingRoles: O, backNavigationSection: v } = (0, a.cj)([T.Z], () => ({
-            isViewingRoles: T.Z.isViewingRoles(n.id),
-            backNavigationSection: T.Z.getBackNavigationSection(n.id)
+    let { guild: n, closePopout: o, nudge: S } = e,
+        T = i.useRef(null),
+        b = (0, u.Z)(n),
+        y = (0, m.I)(n),
+        { isViewingRoles: A, backNavigationSection: N } = (0, a.cj)([v.Z], () => ({
+            isViewingRoles: v.Z.isViewingRoles(n.id),
+            backNavigationSection: v.Z.getBackNavigationSection(n.id)
         })),
         C = () => {
-            T.Z.isFullServerPreview(n.id) && (0, S.uL)(L.Z5c.CHANNEL(n.id)), E.ZP.shouldShowOnboarding(n.id) && (_.Z.finishOnboarding(n.id), (0, f.discardOnboardingPromise)(n.id)), (0, m.mL)(n.id), I.Z.open(n.id, v), v === L.pNK.ROLE_SUBSCRIPTIONS && (0, h.GN)(n.id);
+            v.Z.isFullServerPreview(n.id) && (0, I.uL)(R.Z5c.CHANNEL(n.id)), _.ZP.shouldShowOnboarding(n.id) && (f.Z.finishOnboarding(n.id), (0, h.discardOnboardingPromise)(n.id)), (0, E.mL)(n.id), g.Z.open(n.id, N), N === R.pNK.ROLE_SUBSCRIPTIONS && (0, p.GN)(n.id);
         },
-        M = null === (t = A.current) || void 0 === t ? void 0 : t.clientHeight,
-        P = g + 14;
+        x = null === (t = T.current) || void 0 === t ? void 0 : t.clientHeight,
+        w = S + 14;
     return (0, r.jsx)(l.Z.Provider, {
         value: n.id,
         children: (0, r.jsxs)('div', {
-            className: y.container,
-            ref: A,
+            className: D.container,
+            ref: T,
             children: [
                 (0, r.jsx)('div', {
-                    className: y.tooltipPointer,
-                    style: { top: Math.min(P, null != M ? M - 22 : P) }
+                    className: D.tooltipPointer,
+                    style: { top: Math.min(w, null != x ? x - 22 : w) }
                 }),
                 (0, r.jsxs)('div', {
-                    className: y.header,
+                    className: D.header,
                     children: [
-                        N
+                        b
                             ? (0, r.jsx)(d.Z, {
                                   guild: n,
-                                  className: y.rowIconV2,
+                                  className: D.rowIconV2,
                                   tooltipColor: s.Tooltip.Colors.PRIMARY
                               })
                             : (0, r.jsx)(c.Z, {
                                   guild: n,
                                   size: 20,
-                                  className: y.rowIcon
+                                  className: D.rowIcon
                               }),
                         (0, r.jsx)(s.Text, {
                             variant: 'text-md/semibold',
@@ -151,45 +151,45 @@ function M(e) {
                         })
                     ]
                 }),
-                (0, r.jsx)(b, { guild: n }),
-                R
+                (0, r.jsx)(L, { guild: n }),
+                y
                     ? (0, r.jsxs)('div', {
-                          className: y.footer,
+                          className: D.footer,
                           children: [
                               (0, r.jsx)(s.CircleInformationIcon, {
                                   size: 'custom',
                                   color: 'currentColor',
                                   width: 12,
                                   height: 12,
-                                  className: y.infoIcon
+                                  className: D.infoIcon
                               }),
                               (0, r.jsx)(s.Text, {
                                   color: 'text-muted',
                                   variant: 'text-xs/medium',
-                                  children: D.Z.Messages.GUILD_POPOUT_INVITES_PAUSED.format({
+                                  children: O.intl.format(O.t['3YedRU'], {
                                       onClick: () => {
-                                          o(), I.Z.open(n.id, L.pNK.INSTANT_INVITES);
+                                          o(), g.Z.open(n.id, R.pNK.INSTANT_INVITES);
                                       }
                                   })
                               })
                           ]
                       })
                     : null,
-                O
+                A
                     ? (0, r.jsxs)('div', {
-                          className: y.footer,
+                          className: D.footer,
                           children: [
                               (0, r.jsx)(s.CircleInformationIcon, {
                                   size: 'custom',
                                   color: 'currentColor',
                                   width: 12,
                                   height: 12,
-                                  className: y.infoIcon
+                                  className: D.infoIcon
                               }),
                               (0, r.jsx)(s.Text, {
                                   color: 'text-muted',
                                   variant: 'text-xs/medium',
-                                  children: D.Z.Messages.GUILD_POPOUT_VIEWING_AS_ROLES.format({
+                                  children: O.intl.format(O.t['+W8njI'], {
                                       onClick: () => {
                                           o(), C();
                                       }

@@ -1,6 +1,6 @@
 n.d(t, {
     P: function () {
-        return f;
+        return h;
     }
 }),
     n(47120),
@@ -15,7 +15,7 @@ var r = n(392711),
     u = n(823596),
     c = n(993374),
     d = n(331551);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,8 +28,8 @@ function _(e, t, n) {
         e
     );
 }
-let E = 3 * s.Z.Millis.SECOND;
-class f {
+let _ = 3 * s.Z.Millis.SECOND;
+class h {
     getSearchIndex() {
         return null == this._search || this._search.hasDefaultQuery ? l.R_.CURRENT_GUILD_MEMBER : l.R_.INCLUDED_IN_SEARCH_RESULTS;
     }
@@ -213,7 +213,7 @@ class f {
             null != this._lastRefreshTimer && clearTimeout(this._lastRefreshTimer),
             (this._lastRefreshTimer = setTimeout(() => {
                 (this._lastRefreshTimer = null), (this.lastRefreshTimestamp = 0);
-            }, E));
+            }, _));
     }
     refreshNewMembersAndSearchResults() {
         if (null == this._search || null == this._members || !this._initialized) return !1;
@@ -287,6 +287,6 @@ class f {
         return t.delete(e), this.updateSearchState({ selectedRoleIds: t });
     }
     constructor(e) {
-        _(this, 'guildId', void 0), _(this, 'lastRefreshTimestamp', 0), _(this, 'lastCursorTimestamp', Date.now()), _(this, '_initialized', void 0), _(this, '_pagination', void 0), _(this, '_search', void 0), _(this, '_members', void 0), _(this, '_lastRefreshTimer', null), _(this, '_defaultSearchTotalResultsCount', void 0), (this.guildId = e), (this._initialized = !1), (this._members = null), (this._pagination = null), (this._search = null);
+        f(this, 'guildId', void 0), f(this, 'lastRefreshTimestamp', 0), f(this, 'lastCursorTimestamp', Date.now()), f(this, '_initialized', void 0), f(this, '_pagination', void 0), f(this, '_search', void 0), f(this, '_members', void 0), f(this, '_lastRefreshTimer', null), f(this, '_defaultSearchTotalResultsCount', void 0), (this.guildId = e), (this._initialized = !1), (this._members = null), (this._pagination = null), (this._search = null);
     }
 }

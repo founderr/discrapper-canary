@@ -1,36 +1,36 @@
 e.r(n),
     e.d(n, {
         default: function () {
-            return E;
+            return r;
         }
     });
 var a = e(200651);
 e(192379);
-var o = e(98278),
-    c = e(790527),
-    s = e(474936),
+var i = e(98278),
+    o = e(790527),
+    c = e(474936),
     d = e(981631),
-    i = e(689938);
-function E(t) {
+    l = e(388032);
+function r(t) {
     var n;
-    let { channel: E, onClose: u, ...L } = t,
-        r = i.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_MODAL_BODY.format({
+    let { channel: r, onClose: s, ...u } = t,
+        p = l.intl.format(l.t.AVVUsb, {
             onLearnMore: function () {
-                u(), (0, o.z)(!0);
+                s(), (0, i.z)(!0);
             }
         });
-    return (0, a.jsx)(c.Z, {
+    return (0, a.jsx)(o.Z, {
         artURL: e(330226),
-        type: s.cd.MESSAGE_LENGTH_UPSELL,
-        title: i.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_MODAL_HEADER,
-        body: r,
-        glowUp: r,
-        analyticsSource: { page: (null == (n = E) ? void 0 : n.getGuildId()) != null ? d.ZY5.GUILD_CHANNEL : (null == n ? void 0 : n.isGroupDM()) || (null == n ? void 0 : n.isPrivate()) ? d.ZY5.DM_CHANNEL : null },
+        type: c.cd.MESSAGE_LENGTH_UPSELL,
+        title: l.intl.string(l.t.SeL3eX),
+        body: p,
+        glowUp: p,
+        analyticsSource: { page: (null == (n = r) ? void 0 : n.getGuildId()) != null ? d.ZY5.GUILD_CHANNEL : (null == n ? void 0 : n.isGroupDM()) || (null == n ? void 0 : n.isPrivate()) ? d.ZY5.DM_CHANNEL : null },
         analyticsLocation: {
             section: d.jXE.MESSAGE_LENGTH_UPSELL_MODAL,
             object: d.qAy.BUTTON_CTA
         },
-        onClose: u,
-        ...L
+        onClose: s,
+        ...u
     });
 }

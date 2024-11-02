@@ -11,8 +11,8 @@ var s,
     p = n(772096),
     m = n(428595),
     g = n(532901),
-    I = n(207533),
-    C = n(112864);
+    C = n(207533),
+    I = n(112864);
 function x(e, t, n) {
     return (
         t in e
@@ -28,9 +28,9 @@ function x(e, t, n) {
 }
 let f = new RegExp('https?://'.concat(null !== (s = window.GLOBAL_ENV.CDN_HOST) && void 0 !== s ? s : ''));
 function v(e) {
-    return 'string' == typeof e.content ? e.content : b(e.content);
+    return 'string' == typeof e.content ? e.content : N(e.content);
 }
-let E = {
+let b = {
         ...u().defaultRules,
         heading: {
             ...u().defaultRules.heading,
@@ -52,7 +52,7 @@ let E = {
                 (0, a.jsx)(
                     'div',
                     {
-                        className: I.paragraph,
+                        className: C.paragraph,
                         children: t(e.content, n)
                     },
                     n.key
@@ -85,7 +85,7 @@ let E = {
                 (0, a.jsx)(
                     'blockquote',
                     {
-                        className: I.blockquote,
+                        className: C.blockquote,
                         children: v(e)
                     },
                     n.key
@@ -112,7 +112,7 @@ let E = {
                 (0, a.jsx)(
                     'code',
                     {
-                        className: I.codeInline,
+                        className: C.codeInline,
                         children: v(e)
                     },
                     n.key
@@ -126,7 +126,7 @@ let E = {
                         'pre',
                         {
                             children: (0, a.jsx)('code', {
-                                className: o()(C.scrollbarGhostHairline, 'hljs'),
+                                className: o()(I.scrollbarGhostHairline, 'hljs'),
                                 children: v(e)
                             })
                         },
@@ -148,7 +148,7 @@ let E = {
                                           'pre',
                                           {
                                               children: (0, a.jsx)('code', {
-                                                  className: o()(C.scrollbarGhostHairline, 'hljs', n.language),
+                                                  className: o()(I.scrollbarGhostHairline, 'hljs', n.language),
                                                   dangerouslySetInnerHTML: { __html: n.value }
                                               })
                                           },
@@ -162,8 +162,8 @@ let E = {
             }
         }
     },
-    N = u().parserFor(E),
-    b = u().reactFor(u().ruleOutput(E, 'react'));
+    E = u().parserFor(b),
+    N = u().reactFor(u().ruleOutput(b, 'react'));
 class P extends (i = r.PureComponent) {
     render() {
         let { className: e, children: t, state: n, parser: s, output: i } = this.props,
@@ -174,14 +174,14 @@ class P extends (i = r.PureComponent) {
                 })
             );
         return (0, a.jsx)('div', {
-            className: o()(I.markdown, e),
+            className: o()(C.markdown, e),
             children: r
         });
     }
 }
-x(P, 'rules', E),
+x(P, 'rules', b),
     x(P, 'defaultProps', {
-        parser: N,
-        output: b
+        parser: E,
+        output: N
     }),
     (t.Z = P);

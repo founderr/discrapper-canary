@@ -4,46 +4,46 @@ n.d(t, {
     }
 }),
     n(47120);
-var s = n(200651),
-    a = n(192379),
-    i = n(481060),
-    r = n(428760),
-    l = n(689938),
+var i = n(200651),
+    r = n(192379),
+    l = n(481060),
+    s = n(428760),
+    a = n(388032),
     o = n(359540);
 function c(e) {
     let { onChange: t, initialValue: n, maxWordCount: c, collapsed: d = !1 } = e,
-        [u, _] = a.useState(!d);
-    return (0, s.jsx)(i.Collapsible, {
+        [u, m] = r.useState(!d);
+    return (0, i.jsx)(l.Collapsible, {
         isExpanded: u,
-        collapsibleContent: (0, s.jsx)(r.Z, {
+        collapsibleContent: (0, i.jsx)(s.Z, {
             onChangeText: t,
             maxWordCount: c,
             className: o.keywordTextAreaContainer,
             textAreaClassName: o.keywordTextArea,
-            subtitleText: l.Z.Messages.GUILD_AUTOMOD_ALLOW_LIST_SUBTITLE,
+            subtitleText: a.intl.formatToMarkdownString(a.t.qm7UZ2, {}),
             initialValue: n
         }),
         className: o.collapseable,
         children: (e) => {
             let { onClick: t } = e;
-            return (0, s.jsx)(i.Clickable, {
+            return (0, i.jsx)(l.Clickable, {
                 onClick: (e) => {
-                    _(!u), t(e);
+                    m(!u), t(e);
                 },
-                children: (0, s.jsxs)('div', {
+                children: (0, i.jsxs)('div', {
                     className: o.header,
                     children: [
-                        (0, s.jsx)(i.Heading, {
+                        (0, i.jsx)(l.Heading, {
                             variant: 'text-sm/medium',
-                            children: l.Z.Messages.GUILD_AUTOMOD_ALLOW_LIST_TITLE
+                            children: a.intl.string(a.t.lbE2Nj)
                         }),
                         u
-                            ? (0, s.jsx)(i.ChevronSmallUpIcon, {
+                            ? (0, i.jsx)(l.ChevronSmallUpIcon, {
                                   size: 'md',
                                   color: 'currentColor',
                                   className: o.arrow
                               })
-                            : (0, s.jsx)(i.ChevronSmallDownIcon, {
+                            : (0, i.jsx)(l.ChevronSmallDownIcon, {
                                   size: 'md',
                                   color: 'currentColor',
                                   className: o.arrow

@@ -1,9 +1,9 @@
 n.d(t, {
     S: function () {
-        return E;
+        return _;
     },
     z: function () {
-        return _;
+        return f;
     }
 });
 var r = n(913527),
@@ -15,7 +15,7 @@ var r = n(913527),
     u = n(114064),
     c = n(1163),
     d = n(981631);
-async function _() {
+async function f() {
     let e = l.default.getCurrentUser();
     try {
         let { body: t } = await a.tn.get({ url: d.ANM.USER_PERKS_DEMOS });
@@ -40,7 +40,7 @@ async function _() {
         s.Z.dispatch({ type: 'PREMIUM_PERKS_DEMOS_FETCH_FAILURE' });
     }
 }
-async function E(e) {
+async function _(e) {
     if (u.Z.hasActivated(e)) return !0;
     let t = l.default.getCurrentUser();
     try {
@@ -50,7 +50,7 @@ async function E(e) {
             })(e);
             if ((null == t ? void 0 : t.activateSuccess) === !0)
                 return (
-                    f(e, {
+                    h(e, {
                         start_time: i()().toISOString(),
                         end_time: (c.Z.getCurrentConfig({ location: 'activatePerkDemo' }, { autoTrackExposure: !1 }).extendedDemoDuration ? i()().add(t.demoDuration, 'days') : i()().add(1, 'hour')).toISOString()
                     }),
@@ -58,7 +58,7 @@ async function E(e) {
                 );
         }
         let { body: n } = await a.tn.post({ url: d.ANM.USER_PERKS_DEMOS_ACTIVATE(e) });
-        return f(e, n), !0;
+        return h(e, n), !0;
     } catch {
         return (
             s.Z.dispatch({
@@ -69,7 +69,7 @@ async function E(e) {
         );
     }
 }
-function f(e, t) {
+function h(e, t) {
     s.Z.dispatch({
         type: 'PREMIUM_PERKS_DEMO_ACTIVATE_SUCCESS',
         perkType: e,

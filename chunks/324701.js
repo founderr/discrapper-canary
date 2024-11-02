@@ -1,30 +1,30 @@
 n.d(t, {
     x: function () {
-        return m;
+        return p;
     },
     z: function () {
-        return I;
+        return h;
     }
 });
 var i = n(200651),
-    a = n(481060),
-    s = n(668781),
-    r = n(100527),
-    l = n(585483),
-    o = n(192720),
+    r = n(481060),
+    l = n(668781),
+    a = n(100527),
+    o = n(585483),
+    s = n(192720),
     c = n(768943),
     u = n(175006),
     d = n(981631),
-    _ = n(989925),
-    E = n(689938);
-async function I(e) {
-    let { displayToast: t = !1, ...I } = e;
-    if (null == c.Z.getSavedMessage(I.channelId, I.messageId) && !(0, u.Z)()) {
-        (0, a.openModalLazy)(async () => {
+    m = n(989925),
+    f = n(388032);
+async function h(e) {
+    let { displayToast: t = !1, ...h } = e;
+    if (null == c.Z.getSavedMessage(h.channelId, h.messageId) && !(0, u.Z)()) {
+        (0, r.openModalLazy)(async () => {
             let { default: e } = await n.e('34906').then(n.bind(n, 639565));
             return (t) =>
                 (0, i.jsx)(e, {
-                    source: r.Z.FOR_LATER_HELPERS,
+                    source: a.Z.FOR_LATER_HELPERS,
                     ...t
                 });
         });
@@ -32,40 +32,40 @@ async function I(e) {
     }
     if (
         null !=
-        (await (0, o.XA)(I).catch((e) => {
+        (await (0, s.XA)(h).catch((e) => {
             var t, n, i;
             return (null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.code) === d.evJ.TOO_MANY_SAVED_MESSAGES
-                ? (s.Z.show({
-                      title: E.Z.Messages.FOR_LATER_TOO_MANY_TITLE,
-                      body: E.Z.Messages.FOR_LATER_TOO_MANY_BODY.format({ max: _.D }),
-                      cancelText: E.Z.Messages.OKAY,
-                      confirmText: E.Z.Messages.FOR_LATER_MANAGE_MESSAGES,
-                      onConfirm: () => l.S.dispatch(d.CkL.TOGGLE_FOR_LATER)
+                ? (l.Z.show({
+                      title: f.intl.string(f.t.mlbiZW),
+                      body: f.intl.formatToPlainString(f.t['1zVbEB'], { max: m.D }),
+                      cancelText: f.intl.string(f.t.BddRzc),
+                      confirmText: f.intl.string(f.t.ZGbTc3),
+                      onConfirm: () => o.S.dispatch(d.CkL.TOGGLE_FOR_LATER)
                   }),
                   null)
-                : ((0, a.showToast)((0, a.createToast)(null !== (i = null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.message) && void 0 !== i ? i : E.Z.Messages.ERROR_GENERIC_TITLE, a.ToastType.FAILURE)), null);
+                : ((0, r.showToast)((0, r.createToast)(null !== (i = null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.message) && void 0 !== i ? i : f.intl.string(f.t.R0RpRU), r.ToastType.FAILURE)), null);
         }))
     ) {
         if (t) {
-            let e = null != I.dueAt ? E.Z.Messages.MESSAGE_REMINDERS_CREATE_SUCCESS : E.Z.Messages.MESSAGE_BOOKMARKS_CREATE_SUCCESS_LONG,
-                t = null != I.dueAt ? a.ToastType.CLOCK : a.ToastType.BOOKMARK;
-            (0, a.showToast)((0, a.createToast)(e, t));
+            let e = null != h.dueAt ? f.intl.string(f.t.i1IsOz) : f.intl.string(f.t['WQdL//']),
+                t = null != h.dueAt ? r.ToastType.CLOCK : r.ToastType.BOOKMARK;
+            (0, r.showToast)((0, r.createToast)(e, t));
         }
     }
 }
-async function m(e) {
+async function p(e) {
     let { displayToast: t = !1, ...n } = e;
     if (
         null !=
-        (await (0, o.ep)(n).catch((e) => {
+        (await (0, s.ep)(n).catch((e) => {
             var t, n;
-            return (0, a.showToast)((0, a.createToast)(null !== (n = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.message) && void 0 !== n ? n : E.Z.Messages.ERROR_GENERIC_TITLE, a.ToastType.FAILURE)), null;
+            return (0, r.showToast)((0, r.createToast)(null !== (n = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.message) && void 0 !== n ? n : f.intl.string(f.t.R0RpRU), r.ToastType.FAILURE)), null;
         }))
     ) {
         if (t) {
-            let e = null != n.dueAt ? E.Z.Messages.MESSAGE_REMINDERS_DELETE_SUCCESS : E.Z.Messages.MESSAGE_BOOKMARKS_DELETE_SUCCESS,
-                t = null != n.dueAt ? a.ToastType.CLOCK : a.ToastType.BOOKMARK;
-            (0, a.showToast)((0, a.createToast)(e, t));
+            let e = null != n.dueAt ? f.intl.string(f.t.D0tS09) : f.intl.string(f.t['5KOMiY']),
+                t = null != n.dueAt ? r.ToastType.CLOCK : r.ToastType.BOOKMARK;
+            (0, r.showToast)((0, r.createToast)(e, t));
         }
     }
 }

@@ -1,43 +1,43 @@
 n.d(t, {
     T: function () {
-        return l;
+        return a;
     },
     h: function () {
-        return r;
+        return s;
     }
 }),
     n(47120);
 var i = n(192379),
-    s = n(392711);
-let a = (e) => e,
-    l = function (e, t) {
+    l = n(392711);
+let r = (e) => e,
+    a = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-            s = arguments.length > 3 ? arguments[3] : void 0,
-            l = r(a, t, n, s),
+            l = arguments.length > 3 ? arguments[3] : void 0,
+            a = s(r, t, n, l),
             o = i.useRef(e);
         return (
             i.useEffect(() => {
-                let t = l(e);
+                let t = a(e);
                 o.current = t;
-            }, [e, l]),
+            }, [e, a]),
             0 === t ? e : o.current
         );
     },
-    r = function (e, t) {
+    s = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-            a = arguments.length > 3 ? arguments[3] : void 0,
-            l = i.useRef((0, s.throttle)(e, t, a));
+            r = arguments.length > 3 ? arguments[3] : void 0,
+            a = i.useRef((0, l.throttle)(e, t, r));
         return (
             i.useEffect(
                 () => (
-                    (l.current = (0, s.throttle)(e, t, a)),
+                    (a.current = (0, l.throttle)(e, t, r)),
                     () => {
                         var e;
-                        null === (e = l.current) || void 0 === e || e.cancel();
+                        null === (e = a.current) || void 0 === e || e.cancel();
                     }
                 ),
-                [e, t, a, ...n]
+                [e, t, r, ...n]
             ),
-            l.current
+            a.current
         );
     };

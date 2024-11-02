@@ -26,19 +26,19 @@ function c(e, t) {
                 s,
                 u,
                 c,
-                E,
-                f,
+                _,
                 h,
                 p,
-                I =
+                m,
+                g =
                     ((n = e),
                     (r = t),
                     (s = []),
                     (u = []),
                     (c = []),
-                    (E = []),
-                    (h = (f = (0, l.o)(n)).dtstart),
-                    (p = f.tzid),
+                    (_ = []),
+                    (p = (h = (0, l.o)(n)).dtstart),
+                    (m = h.tzid),
                     (function (e, t) {
                         if ((void 0 === t && (t = !1), !(e = e && e.trim()))) throw Error('Invalid empty string');
                         if (!t) return e.split(/\s/);
@@ -83,14 +83,14 @@ function c(e, t) {
                                     break;
                                 case 'RDATE':
                                     var d = (null !== (t = /RDATE(?:;TZID=([^:=]+))?/i.exec(e)) && void 0 !== t ? t : [])[1];
-                                    d && !p && (p = d), (u = u.concat(_(a, i)));
+                                    d && !m && (m = d), (u = u.concat(f(a, i)));
                                     break;
                                 case 'EXRULE':
                                     if (i.length) throw Error('unsupported EXRULE parm: '.concat(i.join(',')));
                                     c.push((0, l.B)(a));
                                     break;
                                 case 'EXDATE':
-                                    E = E.concat(_(a, i));
+                                    _ = _.concat(f(a, i));
                                     break;
                                 case 'DTSTART':
                                     break;
@@ -100,43 +100,43 @@ function c(e, t) {
                         }
                     }),
                     {
-                        dtstart: h,
-                        tzid: p,
+                        dtstart: p,
+                        tzid: m,
                         rrulevals: s,
                         rdatevals: u,
                         exrulevals: c,
-                        exdatevals: E
+                        exdatevals: _
                     }),
-                m = I.rrulevals,
-                T = I.rdatevals,
-                S = I.exrulevals,
-                g = I.exdatevals,
-                A = I.dtstart,
-                N = I.tzid,
-                R = !1 === t.cache;
-            if ((t.compatible && ((t.forceset = !0), (t.unfold = !0)), t.forceset || m.length > 1 || T.length || S.length || g.length)) {
-                var O = new a.p(R);
+                E = g.rrulevals,
+                v = g.rdatevals,
+                I = g.exrulevals,
+                S = g.exdatevals,
+                T = g.dtstart,
+                b = g.tzid,
+                y = !1 === t.cache;
+            if ((t.compatible && ((t.forceset = !0), (t.unfold = !0)), t.forceset || E.length > 1 || v.length || I.length || S.length)) {
+                var A = new a.p(y);
                 return (
-                    O.dtstart(A),
-                    O.tzid(N || void 0),
-                    m.forEach(function (e) {
-                        O.rrule(new i.Ci(d(e, A, N), R));
+                    A.dtstart(T),
+                    A.tzid(b || void 0),
+                    E.forEach(function (e) {
+                        A.rrule(new i.Ci(d(e, T, b), y));
                     }),
-                    T.forEach(function (e) {
-                        O.rdate(e);
+                    v.forEach(function (e) {
+                        A.rdate(e);
+                    }),
+                    I.forEach(function (e) {
+                        A.exrule(new i.Ci(d(e, T, b), y));
                     }),
                     S.forEach(function (e) {
-                        O.exrule(new i.Ci(d(e, A, N), R));
+                        A.exdate(e);
                     }),
-                    g.forEach(function (e) {
-                        O.exdate(e);
-                    }),
-                    t.compatible && t.dtstart && O.rdate(A),
-                    O
+                    t.compatible && t.dtstart && A.rdate(T),
+                    A
                 );
             }
-            var v = m[0] || {};
-            return new i.Ci(d(v, v.dtstart || t.dtstart || A, v.tzid || t.tzid || N), R);
+            var N = E[0] || {};
+            return new i.Ci(d(N, N.dtstart || t.dtstart || T, N.tzid || t.tzid || b), y);
         })(
             e,
             (function (e) {
@@ -161,7 +161,7 @@ function d(e, t, n) {
         tzid: n
     });
 }
-function _(e, t) {
+function f(e, t) {
     return (
         !(function (e) {
             e.forEach(function (e) {

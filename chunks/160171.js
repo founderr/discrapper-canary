@@ -12,7 +12,7 @@ e.exports = function (e) {
     var t = u(r, l, arguments);
     return a(t, 1 + d(0, e.length - (arguments.length - 1)), !0);
 };
-var _ = function () {
+var f = function () {
     return u(r, o, arguments);
 };
-c ? c(e.exports, 'apply', { value: _ }) : (e.exports.apply = _);
+c ? c(e.exports, 'apply', { value: f }) : (e.exports.apply = f);

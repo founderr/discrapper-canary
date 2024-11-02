@@ -1,80 +1,80 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return m;
+            return h;
         }
     });
-var a = n(200651),
-    s = n(192379),
-    l = n(481060),
-    i = n(332664),
-    o = n(142497),
-    r = n(626135),
+var i = n(200651),
+    l = n(192379),
+    a = n(481060),
+    o = n(332664),
+    r = n(142497),
+    s = n(626135),
     c = n(672655),
     d = n(768015),
     u = n(701488),
-    _ = n(981631),
-    T = n(190378),
-    I = n(689938);
-let b = [u.K8.OTHER, u.K8.ADS, u.K8.NOT_FUN];
-function m(e) {
+    b = n(981631),
+    m = n(190378),
+    f = n(388032);
+let p = [u.K8.OTHER, u.K8.ADS, u.K8.NOT_FUN];
+function h(e) {
     var t;
-    let { channel: m, activityApplication: f, onClose: p, transitionState: A, analyticsData: C } = e;
-    s.useEffect(() => {
-        r.default.track(_.rMx.OPEN_MODAL, {
+    let { channel: h, activityApplication: x, onClose: g, transitionState: _, analyticsData: j } = e;
+    l.useEffect(() => {
+        s.default.track(b.rMx.OPEN_MODAL, {
             type: 'Activity Feedback Modal',
-            application_id: f.id,
-            application_name: f.name,
-            game_id: f.id,
+            application_id: x.id,
+            application_name: x.name,
+            game_id: x.id,
             source: 'Activity End'
         });
-    }, [f]);
-    let E = (null === (t = f.embeddedActivityConfig) || void 0 === t ? void 0 : t.displays_advertisements) === !0;
-    return (0, a.jsx)(i.Z, {
+    }, [x]);
+    let v = (null === (t = x.embeddedActivityConfig) || void 0 === t ? void 0 : t.displays_advertisements) === !0;
+    return (0, i.jsx)(o.Z, {
         modalType: 'activity',
-        header: I.Z.Messages.ACTIVITY_REPORT_POST_ACTIVITY_HEADER.format({ applicationName: f.name }),
-        body: I.Z.Messages.ACTIVITY_REPORT_ACTIVITY_BODY,
-        problemTitle: I.Z.Messages.ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE,
-        problems: (0, c.Z)(!0, E),
-        feedbackProblems: b,
+        header: f.intl.formatToPlainString(f.t.QXYwoK, { applicationName: x.name }),
+        body: f.intl.string(f.t['9hk2KC']),
+        problemTitle: f.intl.string(f.t.g1q5fn),
+        problems: (0, c.Z)(!0, v),
+        feedbackProblems: p,
         onSubmit: function (e) {
-            let { rating: t, problem: s, dontShowAgain: i, feedback: c } = e;
+            let { rating: t, problem: l, dontShowAgain: o, feedback: c } = e;
             if (
-                (i &&
+                (o &&
                     !(function (e) {
                         let { applicationId: t, rating: n } = e;
-                        r.default.track(_.rMx.ACTIVITY_REPORT_DONT_SHOW, {
+                        s.default.track(b.rMx.ACTIVITY_REPORT_DONT_SHOW, {
                             application_id: t,
                             rating: n
                         }),
-                            (0, o.Kw)(T.v.POST_ACTIVITY_FEEDBACK);
+                            (0, r.Kw)(m.v.POST_ACTIVITY_FEEDBACK);
                     })({
                         rating: t,
-                        applicationId: f.id
+                        applicationId: x.id
                     }),
                 null != t)
             )
                 (0, d.Z)({
-                    problem: s,
-                    channel: m,
+                    problem: l,
+                    channel: h,
                     feedback: c,
-                    activityApplication: f,
-                    analyticsData: C,
+                    activityApplication: x,
+                    analyticsData: j,
                     location: 'Activity End',
                     rating: t
                 }),
-                    null != s &&
-                        (0, l.openModalLazy)(async () => {
+                    null != l &&
+                        (0, a.openModalLazy)(async () => {
                             let { default: e } = await n.e('14466').then(n.bind(n, 729328));
                             return (t) =>
-                                (0, a.jsx)(e, {
-                                    body: I.Z.Messages.ACTIVITY_REPORTED_BODY,
+                                (0, i.jsx)(e, {
+                                    body: f.intl.string(f.t['zuHR+/']),
                                     ...t
                                 });
                         });
         },
-        onClose: p,
-        transitionState: A,
+        onClose: g,
+        transitionState: _,
         otherKey: u.K8.OTHER
     });
 }

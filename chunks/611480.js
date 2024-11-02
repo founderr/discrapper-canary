@@ -4,13 +4,13 @@ n.d(t, {
         return s;
     },
     Ht: function () {
-        return _;
+        return f;
     },
     Ks: function () {
         return c;
     },
     OC: function () {
-        return E;
+        return _;
     },
     Vr: function () {
         return o;
@@ -38,6 +38,6 @@ let a = 'sticker-picker-tab-panel',
     u = 160,
     c = '710982414301790216',
     d = ['781323769960202280', '809209266556764241', '818597810047680532', '819129296374595614'],
-    _ = 524288,
-    E = 1572864;
+    f = 524288,
+    _ = 1572864;
 ((i = r || (r = {}))[(i.ALWAYS_ANIMATE = 0)] = 'ALWAYS_ANIMATE'), (i[(i.ANIMATE_ON_INTERACTION = 1)] = 'ANIMATE_ON_INTERACTION'), (i[(i.NEVER_ANIMATE = 2)] = 'NEVER_ANIMATE');

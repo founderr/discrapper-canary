@@ -1,119 +1,136 @@
 n.d(t, {
     Z: function () {
-        return M;
+        return j;
     }
 });
 var i = n(200651),
-    s = n(192379),
-    a = n(120356),
-    l = n.n(a),
-    r = n(913527),
-    o = n.n(r),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
+    s = n(913527),
+    o = n.n(s),
     c = n(399606),
     u = n(481060),
     d = n(480137),
     h = n(906732),
     m = n(376923),
     p = n(472596),
-    _ = n(987707),
-    f = n(909746),
-    E = n(501801),
-    g = n(271383),
-    C = n(430824),
-    I = n(5192),
-    T = n(776767),
-    x = n(981631),
-    S = n(689938),
-    v = n(759486),
-    N = n(722029),
-    A = n(194898);
-function Z(e) {
+    f = n(987707),
+    g = n(909746),
+    C = n(501801),
+    x = n(271383),
+    v = n(430824),
+    _ = n(5192),
+    I = n(776767),
+    E = n(981631),
+    b = n(388032),
+    S = n(759486),
+    Z = n(722029),
+    T = n(194898);
+function N(e) {
     var t;
-    let { log: n, member: a, guild: r } = e,
+    let { log: n, member: r, guild: s } = e,
         { analyticsLocations: d } = (0, h.ZP)(),
-        _ = f.nm(n),
-        C = f.QM(n),
-        T = null === (t = f.V$(x.zUn.REASON, n)) || void 0 === t ? void 0 : t.newValue,
-        A = f.J5(n),
-        Z = (0, m.LJ)(n.id),
-        M = (0, c.e7)([g.ZP], () => (null != n.userId ? g.ZP.getMember(a.guildId, n.userId) : null), [a.guildId, n.userId]),
-        b = s.useCallback(
+        f = g.nm(n),
+        v = g.QM(n),
+        I = null === (t = g.V$(E.zUn.REASON, n)) || void 0 === t ? void 0 : t.newValue,
+        T = g.J5(n),
+        N = (0, m.LJ)(n.id),
+        j = (0, c.e7)([x.ZP], () => (null != n.userId ? x.ZP.getMember(r.guildId, n.userId) : null), [r.guildId, n.userId]),
+        A = l.useCallback(
             (e) => (t) => {
                 t.preventDefault(), t.stopPropagation(), null != e && (0, p.RE)(e, d);
             },
             [d]
         ),
-        R = s.useCallback(
+        y = l.useCallback(
             () =>
                 null == n.user
                     ? null
                     : (0, i.jsx)(u.Tooltip, {
-                          text: S.Z.Messages.GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER,
+                          text: b.intl.string(b.t.mvsi9v),
                           children: (e) => {
                               var t;
-                              let { onMouseEnter: s, onMouseLeave: l } = e;
+                              let { onMouseEnter: l, onMouseLeave: a } = e;
                               return (0, i.jsx)(u.Clickable, {
                                   tag: 'span',
-                                  className: v.username,
-                                  onClick: b(M),
-                                  onMouseEnter: s,
-                                  onMouseLeave: l,
+                                  className: S.username,
+                                  onClick: A(j),
+                                  onMouseEnter: l,
+                                  onMouseLeave: a,
                                   children: (0, i.jsxs)(u.Text, {
                                       variant: 'text-sm/medium',
                                       tag: 'span',
                                       children: [
                                           '@',
                                           (0, i.jsx)(u.NameWithRole, {
-                                              name: I.ZP.getName(a.guildId, null, n.user),
-                                              color: null !== (t = null == M ? void 0 : M.colorString) && void 0 !== t ? t : void 0
+                                              name: _.ZP.getName(r.guildId, null, n.user),
+                                              color: null !== (t = null == j ? void 0 : j.colorString) && void 0 !== t ? t : void 0
                                           })
                                       ]
                                   })
                               });
                           }
                       }),
-            [b, n.user, a.guildId, M]
+            [A, n.user, r.guildId, j]
         )();
     return (0, i.jsxs)('div', {
-        className: l()(N.modInfoItem, v.auditLogItem),
+        className: a()(Z.modInfoItem, S.auditLogItem),
         children: [
             (0, i.jsxs)('div', {
-                className: v.auditLogItemTitleContainer,
+                className: S.auditLogItemTitleContainer,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: v.auditLogItemTitle,
+                        className: S.auditLogItemTitle,
                         children: [
-                            null != _ &&
+                            null != f &&
                                 (0, i.jsx)(u.Text, {
                                     variant: 'text-sm/semibold',
                                     color: 'header-primary',
-                                    children: _
+                                    children: f
                                 }),
-                            null != C &&
+                            null != v &&
                                 (0, i.jsxs)(u.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'header-secondary',
-                                    children: ['(', 'string' == typeof C ? C : o()(C).fromNow(), ')']
+                                    children: ['(', 'string' == typeof v ? v : o()(v).fromNow(), ')']
                                 })
                         ]
                     }),
                     (0, i.jsx)('div', {
-                        className: v.auditLogItemDate,
+                        className: S.auditLogItemDate,
                         children: (0, i.jsx)(u.Text, {
                             variant: 'text-sm/medium',
                             color: 'header-primary',
-                            children: Z
+                            children: N
                         })
                     })
                 ]
             }),
-            null != T &&
+            null != I &&
                 (0, i.jsx)('div', {
-                    className: v.auditLogSecondaryContainer,
+                    className: S.auditLogSecondaryContainer,
                     children: (0, i.jsxs)('div', {
-                        className: v.auditLogReason,
+                        className: S.auditLogReason,
                         children: [
-                            R,
+                            y,
+                            (0, i.jsx)(u.Text, {
+                                variant: 'text-sm/normal',
+                                color: 'text-muted',
+                                tag: 'span',
+                                children: I
+                            })
+                        ]
+                    })
+                }),
+            null == I &&
+                null != T &&
+                (0, i.jsx)('div', {
+                    className: S.auditLogSecondaryContainer,
+                    children: (0, i.jsxs)('div', {
+                        className: S.auditLogSecondary,
+                        children: [
+                            y,
                             (0, i.jsx)(u.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-muted',
@@ -123,38 +140,21 @@ function Z(e) {
                         ]
                     })
                 }),
-            null == T &&
-                null != A &&
+            null == I &&
+                null == T &&
                 (0, i.jsx)('div', {
-                    className: v.auditLogSecondaryContainer,
-                    children: (0, i.jsxs)('div', {
-                        className: v.auditLogSecondary,
-                        children: [
-                            R,
-                            (0, i.jsx)(u.Text, {
-                                variant: 'text-sm/normal',
-                                color: 'text-muted',
-                                tag: 'span',
-                                children: A
-                            })
-                        ]
-                    })
-                }),
-            null == T &&
-                null == A &&
-                (0, i.jsx)('div', {
-                    className: v.auditLogSecondaryContainer,
+                    className: S.auditLogSecondaryContainer,
                     children: (0, i.jsx)('div', {
-                        className: v.auditLogSecondary,
+                        className: S.auditLogSecondary,
                         children: (0, i.jsx)(u.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-muted',
                             tag: 'span',
-                            children: (0, i.jsx)(E.tP, {
+                            children: (0, i.jsx)(C.tP, {
                                 log: n,
-                                guild: r,
+                                guild: s,
                                 onContentClick: () => {},
-                                className: v.auditLogExpandedChangeDetails
+                                className: S.auditLogExpandedChangeDetails
                             })
                         })
                     })
@@ -162,33 +162,33 @@ function Z(e) {
         ]
     });
 }
-function M(e) {
+function j(e) {
     let { member: t } = e,
-        n = (0, c.e7)([C.Z], () => C.Z.getGuild(t.guildId), [t.guildId]),
-        a = (0, c.e7)(
-            [_.Z],
+        n = (0, c.e7)([v.Z], () => v.Z.getGuild(t.guildId), [t.guildId]),
+        r = (0, c.e7)(
+            [f.Z],
             () => {
-                let e = _.Z.logs;
-                return null == e || null == n ? [] : f._$(e, n);
+                let e = f.Z.logs;
+                return null == e || null == n ? [] : g._$(e, n);
             },
             [n]
         );
-    return (s.useEffect(() => {
+    return (l.useEffect(() => {
         (async function e(e, t) {
             await d.gV(t, e);
         })(t.guildId, t.userId);
     }, [t.guildId, t.userId]),
-    null == n || 0 === a.length)
+    null == n || 0 === r.length)
         ? null
         : (0, i.jsx)(u.FormItem, {
-              title: S.Z.Messages.GUILD_MEMBER_MOD_VIEW_RECENT_AUDIT_LOG,
-              titleClassName: A.infoTitle,
+              title: b.intl.string(b.t.flCxLi),
+              titleClassName: T.infoTitle,
               children:
-                  a.length > 0
-                      ? (0, i.jsx)(T.WM, {
-                            children: a.map((e) =>
+                  r.length > 0
+                      ? (0, i.jsx)(I.WM, {
+                            children: r.map((e) =>
                                 (0, i.jsx)(
-                                    Z,
+                                    N,
                                     {
                                         log: e,
                                         member: t,

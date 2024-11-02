@@ -1,71 +1,71 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return _;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(704215),
-    s = n(481060),
-    r = n(230711),
-    l = n(100527),
+var r = n(704215),
+    l = n(481060),
+    a = n(230711),
+    s = n(100527),
     o = n(906732),
     c = n(605236),
     d = n(314910),
     u = n(197344),
-    _ = n(226625),
-    E = n(981631),
-    h = n(921944),
-    m = n(689938),
-    I = n(338634);
-function p() {
+    h = n(226625),
+    m = n(981631),
+    p = n(921944),
+    g = n(388032),
+    f = n(338634);
+function _() {
     let e = u.Z.useIsEligible(),
-        t = (0, c.wE)(a.z.HOLIDAY_COACHMARK_HALLOWEEN_2024),
-        { analyticsLocations: n } = (0, o.ZP)(l.Z.HOLIDAY_COACHMARK),
-        p = (e) => {
-            (0, c.EW)(a.z.HOLIDAY_COACHMARK_HALLOWEEN_2024, { dismissAction: e });
+        t = (0, c.wE)(r.z.HOLIDAY_COACHMARK_HALLOWEEN_2024),
+        { analyticsLocations: n } = (0, o.ZP)(s.Z.HOLIDAY_COACHMARK),
+        _ = (e) => {
+            (0, c.EW)(r.z.HOLIDAY_COACHMARK_HALLOWEEN_2024, { dismissAction: e });
         },
-        g = () => {
-            r.Z.open(E.oAB.NOTIFICATIONS, null, { analyticsLocations: n }), p(h.L.SECONDARY);
+        E = () => {
+            a.Z.open(m.oAB.NOTIFICATIONS, null, { analyticsLocations: n }), _(p.L.SECONDARY);
         };
     return e && !t
         ? (0, i.jsx)(d.ZP, {
               children: (0, i.jsxs)('div', {
-                  className: I.wrapper,
+                  className: f.wrapper,
                   children: [
                       (0, i.jsxs)('div', {
-                          className: I.backgroundWrapper,
+                          className: f.backgroundWrapper,
                           children: [
-                              (0, i.jsx)(_.Z, {
-                                  className: I.backgroundImage,
+                              (0, i.jsx)(h.Z, {
+                                  className: f.backgroundImage,
                                   pageMultiplier: 5
                               }),
-                              (0, i.jsx)('div', { className: I.backgroundOverlay })
+                              (0, i.jsx)('div', { className: f.backgroundOverlay })
                           ]
                       }),
-                      (0, i.jsx)('div', { className: I.heroImage }),
+                      (0, i.jsx)('div', { className: f.heroImage }),
                       (0, i.jsxs)('div', {
-                          className: I.content,
+                          className: f.content,
                           children: [
                               (0, i.jsxs)('div', {
                                   children: [
-                                      (0, i.jsx)(s.Heading, {
+                                      (0, i.jsx)(l.Heading, {
                                           variant: 'heading-md/bold',
                                           color: void 0,
-                                          className: I.specialText,
-                                          children: m.Z.Messages.HALLOWEEN_COACHMARK_HEADER
+                                          className: f.specialText,
+                                          children: g.intl.string(g.t.zUhr3N)
                                       }),
-                                      (0, i.jsx)(s.Text, {
+                                      (0, i.jsx)(l.Text, {
                                           variant: 'text-xs/normal',
                                           color: 'always-white',
-                                          children: m.Z.Messages.HALLOWEEN_COACHMARK_BODY.format({
+                                          children: g.intl.format(g.t.Xw2XUV, {
                                               settingsHook: (e, t) =>
                                                   (0, i.jsx)(
-                                                      s.Clickable,
+                                                      l.Clickable,
                                                       {
                                                           tag: 'span',
-                                                          className: I.specialTextLink,
-                                                          onClick: g,
+                                                          className: f.specialTextLink,
+                                                          onClick: E,
                                                           children: e
                                                       },
                                                       t
@@ -74,10 +74,10 @@ function p() {
                                       })
                                   ]
                               }),
-                              (0, i.jsx)(s.Clickable, {
-                                  className: I.closeClickable,
-                                  onClick: () => p(h.L.USER_DISMISS),
-                                  children: (0, i.jsx)(s.XSmallIcon, {
+                              (0, i.jsx)(l.Clickable, {
+                                  className: f.closeClickable,
+                                  onClick: () => _(p.L.USER_DISMISS),
+                                  children: (0, i.jsx)(l.XSmallIcon, {
                                       color: 'currentColor',
                                       size: 'xs'
                                   })

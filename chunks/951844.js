@@ -1,34 +1,34 @@
 var i,
-    a,
-    s,
     r,
-    l = n(200651),
-    o = n(192379),
+    l,
+    a,
+    o = n(200651),
+    s = n(192379),
     c = n(120356),
     u = n.n(c),
     d = n(481060),
-    _ = n(689938),
-    E = n(720670);
-let I = {
-    BLOCK: E.block,
-    INLINE: E.inline
+    m = n(388032),
+    f = n(720670);
+let h = {
+    BLOCK: f.block,
+    INLINE: f.inline
 };
-class m extends (r = o.PureComponent) {
+class p extends (a = s.PureComponent) {
     render() {
-        let { children: e, className: t, textClassName: n, type: i = I.BLOCK, style: a } = this.props;
-        return (0, l.jsxs)('div', {
+        let { children: e, className: t, textClassName: n, type: i = h.BLOCK, style: r } = this.props;
+        return (0, o.jsxs)('div', {
             className: u()(t, i),
-            style: a,
+            style: r,
             children: [
-                (0, l.jsxs)(d.Text, {
+                (0, o.jsxs)(d.Text, {
                     variant: 'text-sm/bold',
                     tag: 'div',
                     color: 'text-positive',
-                    className: E.pro,
-                    children: [_.Z.Messages.FORM_LABEL_ROLES_PRO_TIP, ':']
+                    className: f.pro,
+                    children: [m.intl.string(m.t['8tvIiI']), ':']
                 }),
-                (0, l.jsx)(d.Text, {
-                    className: u()(E.tip, n),
+                (0, o.jsx)(d.Text, {
+                    className: u()(f.tip, n),
                     variant: 'text-sm/normal',
                     children: e
                 })
@@ -36,15 +36,15 @@ class m extends (r = o.PureComponent) {
         });
     }
 }
-(i = m),
-    (a = 'Types'),
-    (s = I),
-    a in i
-        ? Object.defineProperty(i, a, {
-              value: s,
+(i = p),
+    (r = 'Types'),
+    (l = h),
+    r in i
+        ? Object.defineProperty(i, r, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[a] = s),
-    (t.Z = m);
+        : (i[r] = l),
+    (t.Z = p);

@@ -10,11 +10,11 @@ var r = n(444675);
             u = {},
             c = !1,
             d = e.document;
-        var _ = Object.getPrototypeOf && Object.getPrototypeOf(e);
-        if (((_ = _ && _.setTimeout ? _ : e), '[object process]' === {}.toString.call(e.process)))
+        var f = Object.getPrototypeOf && Object.getPrototypeOf(e);
+        if (((f = f && f.setTimeout ? f : e), '[object process]' === {}.toString.call(e.process)))
             o = function (e) {
                 r.nextTick(function () {
-                    f(e);
+                    h(e);
                 });
             };
         else if (
@@ -35,7 +35,7 @@ var r = n(444675);
         ) {
             (n = 'setImmediate$' + Math.random() + '$'),
                 (i = function (t) {
-                    t.source === e && 'string' == typeof t.data && 0 === t.data.indexOf(n) && f(+t.data.slice(n.length));
+                    t.source === e && 'string' == typeof t.data && 0 === t.data.indexOf(n) && h(+t.data.slice(n.length));
                 }),
                 e.addEventListener ? e.addEventListener('message', i, !1) : e.attachEvent('onmessage', i),
                 (o = function (t) {
@@ -43,7 +43,7 @@ var r = n(444675);
                 });
         } else if (e.MessageChannel) {
             ((a = new MessageChannel()).port1.onmessage = function (e) {
-                f(e.data);
+                h(e.data);
             }),
                 (o = function (e) {
                     a.port2.postMessage(e);
@@ -53,15 +53,15 @@ var r = n(444675);
                 (o = function (e) {
                     var t = d.createElement('script');
                     (t.onreadystatechange = function () {
-                        f(e), (t.onreadystatechange = null), s.removeChild(t), (t = null);
+                        h(e), (t.onreadystatechange = null), s.removeChild(t), (t = null);
                     }),
                         s.appendChild(t);
                 });
         } else
             o = function (e) {
-                setTimeout(f, 0, e);
+                setTimeout(h, 0, e);
             };
-        (_.setImmediate = function (e) {
+        (f.setImmediate = function (e) {
             'function' != typeof e && (e = Function('' + e));
             for (var t = Array(arguments.length - 1), n = 0; n < t.length; n++) t[n] = arguments[n + 1];
             var r = {
@@ -70,13 +70,13 @@ var r = n(444675);
             };
             return (u[l] = r), o(l), l++;
         }),
-            (_.clearImmediate = E);
+            (f.clearImmediate = _);
     }
-    function E(e) {
+    function _(e) {
         delete u[e];
     }
-    function f(e) {
-        if (c) setTimeout(f, 0, e);
+    function h(e) {
+        if (c) setTimeout(h, 0, e);
         else {
             var n = u[e];
             if (n) {
@@ -103,7 +103,7 @@ var r = n(444675);
                         }
                     })(n);
                 } finally {
-                    E(e), (c = !1);
+                    _(e), (c = !1);
                 }
             }
         }

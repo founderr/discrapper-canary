@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return L;
     }
 });
 var r = n(200651),
@@ -12,44 +12,44 @@ var r = n(200651),
     u = n(230711),
     c = n(351773),
     d = n(607070),
-    _ = n(100527),
-    E = n(906732),
-    f = n(639119),
-    h = n(197115),
-    p = n(587446),
-    I = n(594174),
-    m = n(626135),
-    T = n(74538),
-    S = n(94795),
-    g = n(327943),
-    A = n(539873),
-    N = n(981631),
-    R = n(921944),
-    O = n(474936),
-    v = n(689938),
+    f = n(100527),
+    _ = n(906732),
+    h = n(639119),
+    p = n(197115),
+    m = n(587446),
+    g = n(594174),
+    E = n(626135),
+    v = n(74538),
+    I = n(94795),
+    S = n(327943),
+    T = n(539873),
+    b = n(981631),
+    y = n(921944),
+    A = n(474936),
+    N = n(388032),
     C = n(891304);
-let L = () => {
+let R = () => {
         var e, t, n;
-        let i = (0, o.e7)([I.default], () => T.ZP.isPremium(I.default.getCurrentUser())),
-            a = (0, f.N)(),
-            s = (null == a ? void 0 : null === (e = a.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === O.Si.TIER_2;
-        return (0, r.jsx)(h.Z, {
+        let i = (0, o.e7)([g.default], () => v.ZP.isPremium(g.default.getCurrentUser())),
+            a = (0, h.N)(),
+            s = (null == a ? void 0 : null === (e = a.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === A.Si.TIER_2;
+        return (0, r.jsx)(p.Z, {
             size: l.Button.Sizes.MEDIUM,
             buttonText: i
-                ? v.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE
+                ? N.intl.string(N.t.IJI7ys)
                 : s
-                  ? (0, T.Rt)({
+                  ? (0, v.Rt)({
                         intervalType: null == a ? void 0 : null === (t = a.subscription_trial) || void 0 === t ? void 0 : t.interval,
                         intervalCount: null == a ? void 0 : null === (n = a.subscription_trial) || void 0 === n ? void 0 : n.interval_count
                     })
-                  : v.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
-            subscriptionTier: O.Si.TIER_2
+                  : N.intl.string(N.t.mr4K7O),
+            subscriptionTier: A.Si.TIER_2
         });
     },
-    D = (e) => {
+    O = (e) => {
         let { markAsDismissed: t } = e,
             n = () => {
-                null == t || t(R.L.DISMISS), (0, S.G8)();
+                null == t || t(y.L.DISMISS), (0, I.G8)();
             };
         return (0, r.jsxs)('div', {
             className: C.editorHeader,
@@ -68,75 +68,75 @@ let L = () => {
                     children: [
                         (0, r.jsx)(l.Heading, {
                             variant: 'heading-lg/extrabold',
-                            children: v.Z.Messages.APP_ICON_PREVIEW_TITLE
+                            children: N.intl.string(N.t['hb/wEx'])
                         }),
-                        (0, r.jsx)(p.Z, { className: C.premiumIcon })
+                        (0, r.jsx)(m.Z, { className: C.premiumIcon })
                     ]
                 })
             ]
         });
     },
-    y = (e) => {
+    D = (e) => {
         let { isCoachmark: t, markAsDismissed: n } = e,
-            i = (0, o.e7)([g.Z], () => g.Z.isUpsellPreview);
+            i = (0, o.e7)([S.Z], () => S.Z.isUpsellPreview);
         return (0, r.jsxs)('div', {
             className: C.editorFooter,
             children: [
-                i && (0, r.jsx)(L, {}),
+                i && (0, r.jsx)(R, {}),
                 (0, r.jsx)(l.Button, {
                     className: C.footerButton,
                     onClick: () => {
-                        null == n || n(R.L.DISMISS), (0, S.G8)(), !t && u.Z.open();
+                        null == n || n(y.L.DISMISS), (0, I.G8)(), !t && u.Z.open();
                     },
                     color: l.Button.Colors.PRIMARY,
                     size: l.Button.Sizes.MEDIUM,
-                    children: i || t ? v.Z.Messages.CLIENT_THEMES_EDITOR_EXIT_PREVIEW : v.Z.Messages.CLIENT_THEMES_EDITOR_RETURN_TO_SETTINGS
+                    children: i || t ? N.intl.string(N.t['dqH+qq']) : N.intl.string(N.t.Olc2Ky)
                 })
             ]
         });
     };
-function b(e) {
+function L(e) {
     let { isCoachmark: t, markAsDismissed: n } = e,
-        { analyticsLocations: a } = (0, E.ZP)(_.Z.APP_ICON_EDITOR),
-        u = (0, o.e7)([I.default], () => I.default.getCurrentUser()),
+        { analyticsLocations: a } = (0, _.ZP)(f.Z.APP_ICON_EDITOR),
+        u = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
         {
-            isUpsellPreview: f,
-            isEditorOpen: h,
-            shouldEditorAnimate: p
-        } = (0, o.cj)([g.Z, d.Z], () => ({
-            isUpsellPreview: g.Z.isUpsellPreview,
-            isEditorOpen: g.Z.isEditorOpen,
+            isUpsellPreview: h,
+            isEditorOpen: p,
+            shouldEditorAnimate: m
+        } = (0, o.cj)([S.Z, d.Z], () => ({
+            isUpsellPreview: S.Z.isUpsellPreview,
+            isEditorOpen: S.Z.isEditorOpen,
             shouldEditorAnimate: t && !d.Z.useReducedMotion
         }));
     i.useEffect(() => {
-        if (!!f)
-            m.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: O.cd.APP_ICON_UPSELL,
+        if (!!h)
+            E.default.track(b.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: A.cd.APP_ICON_UPSELL,
                 location_stack: a
             });
-    }, [f, a]);
-    let T = (0, c.Z)(null, f ? S.O7 : N.dG4);
+    }, [h, a]);
+    let v = (0, c.Z)(null, h ? I.O7 : b.dG4);
     return (i.useEffect(() => {
-        if (!!f && !h) return S.O7;
-    }, [f, h]),
+        if (!!h && !p) return I.O7;
+    }, [h, p]),
     null == u)
         ? null
-        : (0, r.jsx)(E.Gt, {
+        : (0, r.jsx)(_.Gt, {
               value: a,
               children: (0, r.jsx)('div', {
-                  ref: T,
-                  className: s()(C.editor, p ? C.editorAnimate : null),
+                  ref: v,
+                  className: s()(C.editor, m ? C.editorAnimate : null),
                   children: (0, r.jsxs)(l.HeadingLevel, {
                       children: [
-                          (0, r.jsx)(D, { markAsDismissed: n }),
+                          (0, r.jsx)(O, { markAsDismissed: n }),
                           (0, r.jsx)(l.Scroller, {
                               className: C.editorBody,
-                              children: (0, r.jsx)(A.Z, {
+                              children: (0, r.jsx)(T.Z, {
                                   className: C.selectionGroup,
                                   isEditor: !0
                               })
                           }),
-                          (0, r.jsx)(y, {
+                          (0, r.jsx)(D, {
                               markAsDismissed: n,
                               isCoachmark: t
                           })

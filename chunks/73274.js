@@ -4,10 +4,10 @@ n.d(t, {
     }
 });
 var i = n(192379),
-    s = n(924826),
-    a = n(459273),
-    l = n(585483),
-    r = n(534091),
+    l = n(924826),
+    r = n(459273),
+    a = n(585483),
+    s = n(534091),
     o = n(959517),
     c = n(981631);
 function u(e) {
@@ -30,26 +30,26 @@ function u(e) {
         }, []),
         h = i.useCallback(
             (e) => {
-                var i, s, a;
+                var i, l, r;
                 if (!n.keyboardModeEnabled) return;
-                let l = null === (s = t.current) || void 0 === s ? void 0 : null === (i = s.getScrollerNode()) || void 0 === i ? void 0 : i.ownerDocument,
-                    r = null == l ? void 0 : l.querySelector(e);
-                null != r &&
-                    (null === (a = t.current) ||
-                        void 0 === a ||
-                        a.scrollIntoViewNode({
-                            node: r,
+                let a = null === (l = t.current) || void 0 === l ? void 0 : null === (i = l.getScrollerNode()) || void 0 === i ? void 0 : i.ownerDocument,
+                    s = null == a ? void 0 : a.querySelector(e);
+                null != s &&
+                    (null === (r = t.current) ||
+                        void 0 === r ||
+                        r.scrollIntoViewNode({
+                            node: s,
                             padding: 4 * o.kQ,
-                            callback: () => (null == r ? void 0 : r.focus())
+                            callback: () => (null == s ? void 0 : s.focus())
                         }));
             },
             [n.keyboardModeEnabled]
         ),
         m = i.useCallback(() => {
-            !n.hasMoreAfter && l.S.dispatchToLastSubscribed(c.CkL.TEXTAREA_FOCUS);
+            !n.hasMoreAfter && a.S.dispatchToLastSubscribed(c.CkL.TEXTAREA_FOCUS);
         }, [n.hasMoreAfter]),
-        p = (0, s.ZP)({
-            id: r.W,
+        p = (0, l.ZP)({
+            id: s.W,
             preserveFocusPosition: !1,
             setFocus: h,
             isEnabled: n.keyboardModeEnabled && !n.isEditing,
@@ -57,7 +57,7 @@ function u(e) {
             scrollToEnd: u,
             onNavigateNextAtEnd: m
         }),
-        _ = i.useCallback(
+        f = i.useCallback(
             (e) => {
                 let { atEnd: t = !1 } = e;
                 t ? p.focusLastVisibleItem() : p.focusFirstVisibleItem();
@@ -65,9 +65,9 @@ function u(e) {
             [p]
         );
     return (
-        (0, a.yp)({
+        (0, r.yp)({
             event: c.CkL.FOCUS_MESSAGES,
-            handler: _
+            handler: f
         }),
         p
     );

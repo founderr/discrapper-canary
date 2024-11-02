@@ -5,26 +5,26 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(442837),
-    a = n(481060),
-    l = n(846027),
-    r = n(131951);
+var l = n(442837),
+    r = n(481060),
+    a = n(846027),
+    s = n(131951);
 function o(e) {
-    let t = (0, s.e7)([r.Z], () => Object.values(r.Z.getOutputDevices())),
-        n = (0, s.e7)([r.Z], () => r.Z.getOutputDeviceId());
+    let t = (0, l.e7)([s.Z], () => Object.values(s.Z.getOutputDevices())),
+        n = (0, l.e7)([s.Z], () => s.Z.getOutputDeviceId());
     return t.map((t) => {
-        let { id: s, disabled: r, name: o } = t;
+        let { id: l, disabled: s, name: o } = t;
         return (0, i.jsx)(
-            a.MenuRadioItem,
+            r.MenuRadioItem,
             {
                 group: 'output-devices',
-                id: 'output-'.concat(s),
-                disabled: r,
+                id: 'output-'.concat(l),
+                disabled: s,
                 label: o,
-                checked: s === n,
-                action: () => l.Z.setOutputDevice(s, { analyticsLocations: e })
+                checked: l === n,
+                action: () => a.Z.setOutputDevice(l, { analyticsLocations: e })
             },
-            'output-'.concat(s)
+            'output-'.concat(l)
         );
     });
 }

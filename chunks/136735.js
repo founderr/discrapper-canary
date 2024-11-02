@@ -1,366 +1,366 @@
-s.r(l),
-    s.d(l, {
+t.r(l),
+    t.d(l, {
         default: function () {
-            return B;
+            return F;
         }
     }),
-    s(47120);
-var t = s(200651),
-    n = s(192379),
-    i = s(120356),
-    a = s.n(i),
-    o = s(772848),
-    r = s(36793),
-    u = s(442837),
-    d = s(780384),
-    c = s(481060),
-    I = s(600164),
-    m = s(339085),
-    _ = s(349709),
-    E = s(763610),
-    f = s(210887),
-    g = s(430824),
-    L = s(594174),
-    T = s(626135),
-    v = s(424218),
-    D = s(63063),
-    x = s(956664),
-    p = s(268350),
-    C = s(373228),
-    R = s(378233),
-    S = s(419922),
-    j = s(611480),
-    h = s(981631),
-    P = s(689938),
-    N = s(32857),
-    U = s(434227),
-    Z = s(600126);
-let O = new Set(['application/json', 'image/png', 'image/apng', 'image/gif']),
-    M = [
+    t(47120);
+var n = t(200651),
+    i = t(192379),
+    s = t(120356),
+    a = t.n(s),
+    o = t(772848),
+    r = t(36793),
+    u = t(442837),
+    d = t(780384),
+    c = t(481060),
+    m = t(600164),
+    f = t(339085),
+    g = t(349709),
+    v = t(763610),
+    x = t(210887),
+    p = t(430824),
+    j = t(594174),
+    h = t(626135),
+    I = t(424218),
+    N = t(63063),
+    C = t(956664),
+    E = t(268350),
+    S = t(373228),
+    T = t(378233),
+    Z = t(419922),
+    k = t(611480),
+    b = t(981631),
+    y = t(388032),
+    B = t(32857),
+    R = t(434227),
+    _ = t(600126);
+let A = new Set(['application/json', 'image/png', 'image/apng', 'image/gif']),
+    D = [
         {
             name: 'Sticker file',
             extensions: ['json', 'png', 'apng', 'gif']
         }
     ];
-function A(e, l) {
-    T.default.track(h.rMx.STICKER_UPLOAD_COMPLETED, {
+function w(e, l) {
+    h.default.track(b.rMx.STICKER_UPLOAD_COMPLETED, {
         successful: e,
         error: null != l ? l : ''
     });
 }
-let K = (e) => {
+let P = (e) => {
         let { stickerPreview: l } = e;
-        return (0, t.jsxs)('div', {
-            className: N.preview,
+        return (0, n.jsxs)('div', {
+            className: B.preview,
             children: [
-                (0, t.jsx)('div', {
-                    className: N.previewDark,
+                (0, n.jsx)('div', {
+                    className: B.previewDark,
                     children:
                         null != l
                             ? l
-                            : (0, t.jsx)('img', {
-                                  src: U,
-                                  alt: P.Z.Messages.GUILD_STICKER_PREVIEW_IMG_ALT_DARK
+                            : (0, n.jsx)('img', {
+                                  src: R,
+                                  alt: y.intl.string(y.t.qOsjZm)
                               })
                 }),
-                (0, t.jsx)('div', {
-                    className: N.previewLight,
+                (0, n.jsx)('div', {
+                    className: B.previewLight,
                     children:
                         null != l
                             ? l
-                            : (0, t.jsx)('img', {
-                                  src: Z,
-                                  alt: P.Z.Messages.GUILD_STICKER_PREVIEW_IMG_ALT_LIGHT
+                            : (0, n.jsx)('img', {
+                                  src: _,
+                                  alt: y.intl.string(y.t.YC5NAA)
                               })
                 })
             ]
         });
     },
-    k = (e) => {
-        let { sticker: l, previewData: s, onStickerError: n } = e;
+    z = (e) => {
+        let { sticker: l, previewData: t, onStickerError: i } = e;
         if (null != l)
-            return (0, t.jsx)(S.ZP, {
+            return (0, n.jsx)(Z.ZP, {
                 size: 160,
                 sticker: l
             });
-        if (null == s) return null;
-        let { id: i, formatType: a, content: o } = s;
-        return (0, t.jsx)(
-            S.ZP,
+        if (null == t) return null;
+        let { id: s, formatType: a, content: o } = t;
+        return (0, n.jsx)(
+            Z.ZP,
             {
                 assetData: o,
                 fileUri: o,
                 size: 160,
                 sticker: {
-                    name: i,
+                    name: s,
                     description: '',
-                    id: i,
+                    id: s,
                     pack_id: '',
                     format_type: a
                 },
-                onError: n
+                onError: i
             },
-            i
+            s
         );
     };
-async function b(e) {
-    let l = await (0, x.fD)(e),
-        s = new Image();
-    (s.src = l), await s.decode();
-    let t = (0, r.Ae)(s, 320, 320);
-    return (0, x.Bo)(t, e.name, e.type);
+async function L(e) {
+    let l = await (0, C.fD)(e),
+        t = new Image();
+    (t.src = l), await t.decode();
+    let n = (0, r.Ae)(t, 320, 320);
+    return (0, C.Bo)(n, e.name, e.type);
 }
-function B(e) {
-    var l, s, i, r, S, U, Z, B;
-    let { transitionState: G, onClose: y, guildId: w, sticker: F } = e,
-        z = (0, u.e7)([f.Z], () => f.Z.theme),
-        H = (0, u.e7)([m.ZP], () => ((null == F ? void 0 : F.tags) != null ? m.ZP.getCustomEmojiById(F.tags) : null)),
-        V = null !== (s = null === (l = L.default.getCurrentUser()) || void 0 === l ? void 0 : l.isStaff()) && void 0 !== s && s ? j.OC : j.Ht,
-        [W, q] = n.useState(null),
-        [Y, J] = n.useState(null !== (i = null == F ? void 0 : F.name) && void 0 !== i ? i : ''),
-        [X, Q] = n.useState({
+function F(e) {
+    var l, t, s, r, Z, R, _, F;
+    let { transitionState: U, onClose: M, guildId: O, sticker: K } = e,
+        H = (0, u.e7)([x.Z], () => x.Z.theme),
+        V = (0, u.e7)([f.ZP], () => ((null == K ? void 0 : K.tags) != null ? f.ZP.getCustomEmojiById(K.tags) : null)),
+        Y = null !== (t = null === (l = j.default.getCurrentUser()) || void 0 === l ? void 0 : l.isStaff()) && void 0 !== t && t ? k.OC : k.Ht,
+        [q, G] = i.useState(null),
+        [W, X] = i.useState(null !== (s = null == K ? void 0 : K.name) && void 0 !== s ? s : ''),
+        [J, Q] = i.useState({
             file: null,
-            filename: null !== (r = (0, R._V)(F)) && void 0 !== r ? r : ''
+            filename: null !== (r = (0, T._V)(K)) && void 0 !== r ? r : ''
         }),
-        [$, ee] = n.useState(null == H ? void 0 : H.id),
-        [el, es] = n.useState(null !== (S = null == H ? void 0 : H.name) && void 0 !== S ? S : null == F ? void 0 : F.tags),
-        [et, en] = n.useState(null !== (U = null == F ? void 0 : F.description) && void 0 !== U ? U : ''),
-        [ei, ea] = n.useState(!1),
-        [eo, er] = n.useState(null),
-        eu = (0, u.e7)([g.Z], () => g.Z.getGuild(w)),
-        ed = (null == eu ? void 0 : eu.hasFeature(h.oNc.PARTNERED)) || (null == eu ? void 0 : eu.hasFeature(h.oNc.VERIFIED)),
-        ec = null != F,
-        eI = ec || (null == X ? void 0 : X.file) != null,
-        em = 0 === et.length || (et.length >= 2 && et.length <= 100),
-        e_ = !ei && (null == eo ? void 0 : eo.isBlocking) !== !0 && Y.length >= 2 && (null != $ || null != el || ((null == F ? void 0 : F.tags) != null && (null == F ? void 0 : F.tags) !== '')) && eI && em,
-        eE = async (e) => {
+        [$, ee] = i.useState(null == V ? void 0 : V.id),
+        [el, et] = i.useState(null !== (Z = null == V ? void 0 : V.name) && void 0 !== Z ? Z : null == K ? void 0 : K.tags),
+        [en, ei] = i.useState(null !== (R = null == K ? void 0 : K.description) && void 0 !== R ? R : ''),
+        [es, ea] = i.useState(!1),
+        [eo, er] = i.useState(null),
+        eu = (0, u.e7)([p.Z], () => p.Z.getGuild(O)),
+        ed = (null == eu ? void 0 : eu.hasFeature(b.oNc.PARTNERED)) || (null == eu ? void 0 : eu.hasFeature(b.oNc.VERIFIED)),
+        ec = null != K,
+        em = ec || (null == J ? void 0 : J.file) != null,
+        ef = 0 === en.length || (en.length >= 2 && en.length <= 100),
+        eg = !es && (null == eo ? void 0 : eo.isBlocking) !== !0 && W.length >= 2 && (null != $ || null != el || ((null == K ? void 0 : K.tags) != null && (null == K ? void 0 : K.tags) !== '')) && em && ef,
+        ev = async (e) => {
             var l;
             if (null == e) return;
-            let s = null === (l = e.type) || void 0 === l ? void 0 : l.split(';')[0];
-            if (!O.has(s)) {
+            let t = null === (l = e.type) || void 0 === l ? void 0 : l.split(';')[0];
+            if (!A.has(t)) {
                 er({
-                    message: P.Z.Messages.GUILD_STICKER_UNKNOWN_MIME_TYPE,
+                    message: y.intl.string(y.t.B2hGAA),
                     isBlocking: !0
                 });
                 return;
             }
-            let t = e;
-            if ('image/png' === s && e.size > V && !(await (0, x.c0)(e))) {
-                let l = (t = await b(e)).size > V;
-                T.default.track(h.rMx.STICKER_FILE_RESIZED, {
+            let n = e;
+            if ('image/png' === t && e.size > Y && !(await (0, C.c0)(e))) {
+                let l = (n = await L(e)).size > Y;
+                h.default.track(b.rMx.STICKER_FILE_RESIZED, {
                     original_file_size_bytes: e.size,
-                    resized_file_size_bytes: t.size,
+                    resized_file_size_bytes: n.size,
                     resized_file_too_big: l
                 });
             }
-            if (t.size > V) {
+            if (n.size > Y) {
                 er({
-                    message: P.Z.Messages.GUILD_STICKER_FILE_TOO_BIG.format({ maxSize: (0, v.IC)(V, { useKibibytes: !0 }) }),
-                    isBlocking: null == X.file
+                    message: y.intl.formatToPlainString(y.t['3eK7Rk'], { maxSize: (0, I.IC)(Y, { useKibibytes: !0 }) }),
+                    isBlocking: null == J.file
                 }),
-                    T.default.track(h.rMx.STICKER_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, {
-                        size: t.size,
-                        filetype: s
+                    h.default.track(b.rMx.STICKER_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, {
+                        size: n.size,
+                        filetype: t
                     });
                 return;
             }
-            let n = (0, R.Zv)(t.type);
-            if (n === C.u3.LOTTIE) {
+            let i = (0, T.Zv)(n.type);
+            if (i === S.u3.LOTTIE) {
                 if (!ed) {
                     er({
-                        message: P.Z.Messages.GUILD_STICKER_UNSUPPORTED_MIME_TYPE.format({ articleURL: D.Z.getArticleURL(h.BhN.STICKERS_UPLOAD) }),
+                        message: y.intl.format(y.t.RNNjy8, { articleURL: N.Z.getArticleURL(b.BhN.STICKERS_UPLOAD) }),
                         isBlocking: !0
                     });
                     return;
                 }
                 let e = new FileReader();
                 e.addEventListener('load', () => {
-                    q({
+                    G({
                         id: (0, o.Z)(),
-                        formatType: n,
+                        formatType: i,
                         content: e.result
                     }),
                         er(null);
                 }),
-                    e.readAsText(t);
+                    e.readAsText(n);
             } else {
-                let e = await (0, x.fD)(t);
-                q({
+                let e = await (0, C.fD)(n);
+                G({
                     id: (0, o.Z)(),
-                    formatType: n,
+                    formatType: i,
                     content: e
                 }),
                     er(null);
             }
             Q({
-                file: t,
-                filename: t.name
+                file: n,
+                filename: n.name
             });
         },
-        ef = async (e) => {
-            var l, s, t, n, i, a;
+        ex = async (e) => {
+            var l, t, n, i, s, a;
             e.preventDefault();
-            let o = null !== (s = null !== (l = null != $ ? $ : el) && void 0 !== l ? l : null == F ? void 0 : F.tags) && void 0 !== s ? s : '';
+            let o = null !== (t = null !== (l = null != $ ? $ : el) && void 0 !== l ? l : null == K ? void 0 : K.tags) && void 0 !== t ? t : '';
             try {
                 if ((ea(!0), ec))
-                    await (0, p.Jf)(w, null !== (t = null == F ? void 0 : F.id) && void 0 !== t ? t : '', {
-                        name: Y,
+                    await (0, E.Jf)(O, null !== (n = null == K ? void 0 : K.id) && void 0 !== n ? n : '', {
+                        name: W,
                         tags: o,
-                        description: et
+                        description: en
                     });
                 else {
                     let e = new FormData();
-                    e.append('name', Y), e.append('tags', o), e.append('description', et), (null == X ? void 0 : X.file) != null && e.append('file', X.file), (a = null !== (i = null === (n = X.file) || void 0 === n ? void 0 : n.type) && void 0 !== i ? i : ''), T.default.track(h.rMx.STICKER_UPLOAD_STARTED, { filetype: a }), await (0, p.lY)(w, e), A(!0);
+                    e.append('name', W), e.append('tags', o), e.append('description', en), (null == J ? void 0 : J.file) != null && e.append('file', J.file), (a = null !== (s = null === (i = J.file) || void 0 === i ? void 0 : i.type) && void 0 !== s ? s : ''), h.default.track(b.rMx.STICKER_UPLOAD_STARTED, { filetype: a }), await (0, E.lY)(O, e), w(!0);
                 }
-                y();
+                M();
             } catch (e) {
                 er({
                     message: e.body.message,
                     isBlocking: !1
                 }),
-                    A(!1, e.body.message);
+                    w(!1, e.body.message);
             } finally {
                 ea(!1);
             }
         },
-        eg = k({
-            sticker: F,
-            previewData: W,
-            onStickerError: n.useCallback(() => {
+        ep = z({
+            sticker: K,
+            previewData: q,
+            onStickerError: i.useCallback(() => {
                 er({
-                    message: P.Z.Messages.GUILD_STICKER_INVALID_STICKER,
+                    message: y.intl.string(y.t['/WIYNT']),
                     isBlocking: !0
                 });
             }, [])
         }),
-        eL = ed ? P.Z.Messages.GUILD_STICKER_UPLOAD_DESCRIPTION : P.Z.Messages.GUILD_STICKER_UPLOAD_DESCRIPTION_NO_LOTTIE;
-    return (0, t.jsxs)(c.ModalRoot, {
-        transitionState: G,
+        ej = ed ? y.t.alYXBA : y.t.kpcMfn;
+    return (0, n.jsxs)(c.ModalRoot, {
+        transitionState: U,
         'aria-labelledby': 'STICKER_UPLOAD_MODAL',
-        className: N.modal,
+        className: B.modal,
         children: [
-            (0, t.jsx)(c.ModalCloseButton, {
-                onClick: y,
-                className: N.modalClose
+            (0, n.jsx)(c.ModalCloseButton, {
+                onClick: M,
+                className: B.modalClose
             }),
-            (0, t.jsxs)('form', {
-                onSubmit: ef,
-                className: N.form,
+            (0, n.jsxs)('form', {
+                onSubmit: ex,
+                className: B.form,
                 children: [
-                    (0, t.jsxs)(c.ModalContent, {
-                        className: N.modalContent,
+                    (0, n.jsxs)(c.ModalContent, {
+                        className: B.modalContent,
                         children: [
-                            (0, t.jsxs)(c.ModalHeader, {
-                                direction: I.Z.Direction.VERTICAL,
+                            (0, n.jsxs)(c.ModalHeader, {
+                                direction: m.Z.Direction.VERTICAL,
                                 separator: !1,
-                                className: N.modalHeader,
+                                className: B.modalHeader,
                                 children: [
-                                    (0, t.jsx)(c.Heading, {
+                                    (0, n.jsx)(c.Heading, {
                                         variant: 'heading-xl/semibold',
-                                        className: N.modalHeaderTitle,
-                                        children: P.Z.Messages.GUILD_STICKER_UPLOAD_TITLE
+                                        className: B.modalHeaderTitle,
+                                        children: y.intl.string(y.t.yxVsBA)
                                     }),
-                                    (0, t.jsx)(c.Text, {
+                                    (0, n.jsx)(c.Text, {
                                         variant: 'text-md/normal',
-                                        children: eL.format({ fileSize: (0, v.IC)(j.Ht, { useKibibytes: !0 }) })
+                                        children: y.intl.format(ej, { fileSize: (0, I.IC)(k.Ht, { useKibibytes: !0 }) })
                                     })
                                 ]
                             }),
-                            (0, t.jsx)(c.FormSection, {
-                                title: P.Z.Messages.GUILD_STICKER_UPLOAD_PREVIEW_TITLE,
-                                className: N.formItem,
-                                children: (0, t.jsx)(K, { stickerPreview: eg })
+                            (0, n.jsx)(c.FormSection, {
+                                title: y.intl.string(y.t.gjdiKC),
+                                className: B.formItem,
+                                children: (0, n.jsx)(P, { stickerPreview: ep })
                             }),
-                            (0, t.jsxs)(c.FormSection, {
-                                className: a()(N.formItem, N.formItemRow),
+                            (0, n.jsxs)(c.FormSection, {
+                                className: a()(B.formItem, B.formItemRow),
                                 children: [
-                                    (0, t.jsx)(c.FormItem, {
-                                        title: ec ? P.Z.Messages.GUILD_STICKER_UPLOAD_FILE_TITLE_BLOCKED : P.Z.Messages.GUILD_STICKER_UPLOAD_FILE_TITLE,
+                                    (0, n.jsx)(c.FormItem, {
+                                        title: ec ? y.intl.string(y.t.wp36s7) : y.intl.string(y.t.AM3mzc),
                                         required: !0,
-                                        className: N.formItemRowChild,
+                                        className: B.formItemRowChild,
                                         children: ec
-                                            ? (0, t.jsx)(c.TextInput, {
+                                            ? (0, n.jsx)(c.TextInput, {
                                                   disabled: !0,
-                                                  value: null !== (Z = null == X ? void 0 : X.filename) && void 0 !== Z ? Z : ''
+                                                  value: null !== (_ = null == J ? void 0 : J.filename) && void 0 !== _ ? _ : ''
                                               })
-                                            : (0, t.jsx)(E.Z, {
-                                                  buttonText: P.Z.Messages.GUILD_STICKER_UPLOAD_FILE_BUTTON,
-                                                  filters: M,
-                                                  filename: null !== (B = null == X ? void 0 : X.filename) && void 0 !== B ? B : '',
-                                                  placeholder: P.Z.Messages.GUILD_STICKER_UPLOAD_FILE_PLACEHOLDER,
-                                                  onFileSelect: eE
+                                            : (0, n.jsx)(v.Z, {
+                                                  buttonText: y.intl.string(y.t.xEnDUV),
+                                                  filters: D,
+                                                  filename: null !== (F = null == J ? void 0 : J.filename) && void 0 !== F ? F : '',
+                                                  placeholder: y.intl.string(y.t.rUYLJy),
+                                                  onFileSelect: ev
                                               })
                                     }),
-                                    (0, t.jsx)(_.Z, {
-                                        className: N.formItemRowChild,
-                                        guildId: w,
+                                    (0, n.jsx)(g.Z, {
+                                        className: B.formItemRowChild,
+                                        guildId: O,
                                         emojiId: $,
                                         emojiName: el,
                                         setEmojiId: ee,
-                                        setEmojiName: es,
+                                        setEmojiName: et,
                                         shouldUpdateBothEmojiFields: !0
                                     })
                                 ]
                             }),
-                            (0, t.jsx)(c.FormItem, {
-                                title: P.Z.Messages.GUILD_STICKER_UPLOAD_NAME_TITLE,
+                            (0, n.jsx)(c.FormItem, {
+                                title: y.intl.string(y.t['0VRh6u']),
                                 required: !0,
-                                className: N.formItem,
-                                children: (0, t.jsx)(c.TextInput, {
-                                    value: Y,
-                                    onChange: J,
-                                    placeholder: P.Z.Messages.GUILD_STICKER_UPLOAD_NAME_PLACEHOLDER,
+                                className: B.formItem,
+                                children: (0, n.jsx)(c.TextInput, {
+                                    value: W,
+                                    onChange: X,
+                                    placeholder: y.intl.string(y.t['3fGttb']),
                                     maxLength: 30
                                 })
                             }),
-                            (0, t.jsxs)('div', {
-                                className: N.formItem,
+                            (0, n.jsxs)('div', {
+                                className: B.formItem,
                                 children: [
-                                    (0, t.jsxs)(c.FormTitle, {
+                                    (0, n.jsxs)(c.FormTitle, {
                                         children: [
-                                            P.Z.Messages.GUILD_STICKER_UPLOAD_DESCRIPTION_TITLE,
-                                            (0, t.jsx)(c.Tooltip, {
-                                                text: P.Z.Messages.GUILD_STICKER_UPLOAD_DESCRIPTION_TOOLTIP,
+                                            y.intl.string(y.t.uGccen),
+                                            (0, n.jsx)(c.Tooltip, {
+                                                text: y.intl.string(y.t.S6jlDg),
                                                 children: (e) =>
-                                                    (0, t.jsx)(c.CircleInformationIcon, {
+                                                    (0, n.jsx)(c.CircleInformationIcon, {
                                                         size: 'xs',
                                                         color: 'currentColor',
-                                                        className: N.infoIcon,
+                                                        className: B.infoIcon,
                                                         ...e
                                                     })
                                             })
                                         ]
                                     }),
-                                    (0, t.jsx)(c.TextArea, {
-                                        value: et,
-                                        onChange: en,
-                                        placeholder: P.Z.Messages.GUILD_STICKER_UPLOAD_DESCRIPTION_PLACEHOLDER,
+                                    (0, n.jsx)(c.TextArea, {
+                                        value: en,
+                                        onChange: ei,
+                                        placeholder: y.intl.string(y.t.zwR0fX),
                                         maxLength: 100
                                     })
                                 ]
                             }),
                             null != eo &&
-                                (0, t.jsx)(c.Text, {
-                                    className: N.formItem,
+                                (0, n.jsx)(c.Text, {
+                                    className: B.formItem,
                                     variant: 'text-sm/normal',
                                     color: 'text-danger',
                                     children: eo.message
                                 })
                         ]
                     }),
-                    (0, t.jsxs)(c.ModalFooter, {
-                        className: N.modalFooter,
+                    (0, n.jsxs)(c.ModalFooter, {
+                        className: B.modalFooter,
                         children: [
-                            (0, t.jsx)(c.Button, {
+                            (0, n.jsx)(c.Button, {
                                 type: 'submit',
-                                disabled: !e_,
-                                children: ec ? P.Z.Messages.GUILD_STICKERS_UPDATE : P.Z.Messages.UPLOAD
+                                disabled: !eg,
+                                children: ec ? y.intl.string(y.t.Arwnen) : y.intl.string(y.t['3UB9aW'])
                             }),
-                            (0, t.jsx)(c.Button, {
+                            (0, n.jsx)(c.Button, {
                                 look: c.Button.Looks.LINK,
-                                color: (0, d.ap)(z) ? c.Button.Colors.PRIMARY : c.Button.Colors.WHITE,
-                                onClick: y,
-                                children: P.Z.Messages.NEVERMIND
+                                color: (0, d.ap)(H) ? c.Button.Colors.PRIMARY : c.Button.Colors.WHITE,
+                                onClick: M,
+                                children: y.intl.string(y.t.oEAioK)
                             })
                         ]
                     })

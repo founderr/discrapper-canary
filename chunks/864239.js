@@ -1,28 +1,28 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
         return d;
     }
 });
-var n = t(200651);
-t(192379);
-var a = t(695346),
-    i = t(682578),
-    r = t(838436),
-    o = t(51331),
-    l = t(726985),
-    c = t(689938);
+var i = n(200651);
+n(192379);
+var s = n(695346),
+    r = n(682578),
+    l = n(838436),
+    a = n(51331),
+    o = n(726985),
+    c = n(388032);
 function d() {
     var e;
-    let s = null === (e = (0, i.J)()) || void 0 === e || e,
-        t = a.DC.useSetting();
-    return (0, n.jsx)(r.U, {
-        setting: l.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_IOS_V2,
-        children: (0, n.jsx)(o.Z, {
-            title: c.Z.Messages.NSFW_GUILDS_TOGGLE_HEADER,
-            value: t,
-            onChange: a.DC.updateSetting,
-            disabled: !s,
-            note: c.Z.Messages.NSFW_GUILDS_TOGGLE_CAPTION_V2
+    let t = null === (e = (0, r.J)()) || void 0 === e || e,
+        n = s.DC.useSetting();
+    return (0, i.jsx)(l.U, {
+        setting: o.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_IOS_V2,
+        children: (0, i.jsx)(a.Z, {
+            title: c.intl.string(c.t['L+yTsb']),
+            value: n,
+            onChange: s.DC.updateSetting,
+            disabled: !t,
+            note: c.intl.string(c.t.hiM8pa)
         })
     });
 }

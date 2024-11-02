@@ -1,29 +1,29 @@
-var s = n(200651),
-    a = n(192379),
-    i = n(481060),
-    l = n(377171),
-    r = n(1494);
-t.Z = a.forwardRef(function (e, t) {
-    let { isInventory: n, style: a, children: o } = e;
-    return (0, s.jsxs)('div', {
+var i = n(200651),
+    s = n(192379),
+    l = n(481060),
+    r = n(377171),
+    o = n(1494);
+t.Z = s.forwardRef(function (e, t) {
+    let { isInventory: n, style: s, children: a } = e;
+    return (0, i.jsxs)('div', {
         ref: t,
-        className: r.desktopTooltip,
+        className: o.desktopTooltip,
         style: {
             marginTop: n ? 8 : 0,
-            ...a
+            ...s
         },
         children: [
-            (0, s.jsx)(i.CircleInformationIcon, {
+            (0, i.jsx)(l.CircleInformationIcon, {
                 size: 'custom',
-                className: r.infoIcon,
+                className: o.infoIcon,
                 height: n ? 16 : 12,
                 width: n ? 16 : 12,
-                color: n ? l.Z.TEXT_MUTED : l.Z.WHITE
+                color: n ? r.Z.TEXT_MUTED : r.Z.WHITE
             }),
-            (0, s.jsx)(i.Text, {
+            (0, i.jsx)(l.Text, {
                 color: n ? 'text-muted' : 'always-white',
                 variant: n ? 'text-xs/normal' : 'text-xxs/normal',
-                children: o
+                children: a
             })
         ]
     });

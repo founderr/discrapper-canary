@@ -6,24 +6,24 @@ n.d(t, {
     n(47120),
     n(653041);
 var a = n(192379),
-    s = n(392711),
+    i = n(392711),
     r = n(591759),
     l = n(158222),
-    i = n(154135);
+    s = n(154135);
 function o(e, t, n) {
     let o = a.useRef(new Map()),
         [, c] = a.useState(null),
         [d, u] = a.useState(null),
         m = a.useMemo(
             () =>
-                s.debounce((e, n) => {
+                i.debounce((e, n) => {
                     if (null == n || e || 0 === t) return;
                     let a = n.match(r.Z.URL_REGEX);
                     if (null == a || 0 === a.length) {
                         (o.current = new Map()), u(null);
                         return;
                     }
-                    u(s.uniq(a).slice(0, i.Yh));
+                    u(i.uniq(a).slice(0, s.Yh));
                 }, 1000),
             [t, o]
         );
@@ -35,10 +35,10 @@ function o(e, t, n) {
                 if (null == t) return;
                 let n = e.current,
                     a = new Set(n.keys()),
-                    s = t.filter((e) => !(null == a ? void 0 : a.has(e)));
-                if (0 !== s.length)
+                    i = t.filter((e) => !(null == a ? void 0 : a.has(e)));
+                if (0 !== i.length)
                     try {
-                        let t = await l.V6(s);
+                        let t = await l.V6(i);
                         (e.current = (function (e, t, n) {
                             return (
                                 null == n ||
@@ -47,18 +47,18 @@ function o(e, t, n) {
                                             return e.find((e) => (null == t ? void 0 : t.url) != null && e.startsWith(t.url));
                                         })(t, n);
                                         if (null == a) return;
-                                        let s = e.get(a);
-                                        null == s ? e.set(a, [n]) : s.push(n);
+                                        let i = e.get(a);
+                                        null == i ? e.set(a, [n]) : i.push(n);
                                     }),
                                 e
                             );
-                        })(new Map(n), s, null == t ? void 0 : t.embeds)),
+                        })(new Map(n), i, null == t ? void 0 : t.embeds)),
                             c({});
                     } catch (e) {}
             })(o, d);
         }, [d]);
     let h = o.current,
-        _ = a.useMemo(() => {
+        g = a.useMemo(() => {
             let e = [];
             return (
                 null == d ||
@@ -69,5 +69,5 @@ function o(e, t, n) {
                 e.length > 0 ? e : null
             );
         }, [d, h]);
-    return { embeds: e ? null : _ };
+    return { embeds: e ? null : g };
 }

@@ -5,167 +5,167 @@ n.d(t, {
 }),
     n(47120);
 var i,
-    a,
-    s = n(200651);
+    r,
+    l = n(200651);
 n(192379);
-var r = n(91192),
-    l = n(442837),
+var a = n(91192),
+    s = n(442837),
     o = n(704215),
     c = n(481060),
     d = n(515753),
     u = n(774078),
-    _ = n(927359),
-    E = n(975298),
-    h = n(605236),
-    m = n(243778),
-    I = n(819640),
-    p = n(594174),
-    g = n(351402),
-    T = n(78839),
-    S = n(626135),
-    C = n(74538),
-    f = n(502087),
+    h = n(927359),
+    m = n(975298),
+    p = n(605236),
+    g = n(243778),
+    f = n(819640),
+    _ = n(594174),
+    E = n(351402),
+    I = n(78839),
+    C = n(626135),
+    v = n(74538),
+    S = n(502087),
     N = n(657041),
-    A = n(769415),
-    v = n(650032),
-    Z = n(767870),
-    L = n(104494),
-    R = n(639119),
-    O = n(655525),
-    x = n(314684),
-    b = n(52188),
-    M = n(248042),
-    P = n(924540),
-    D = n(474486),
-    y = n(565626),
-    j = n(976465),
-    U = n(701910),
-    G = n(938736),
-    w = n(227140),
-    k = n(474936),
+    T = n(769415),
+    x = n(650032),
+    b = n(767870),
+    A = n(104494),
+    Z = n(639119),
+    y = n(655525),
+    L = n(314684),
+    R = n(52188),
+    P = n(248042),
+    O = n(924540),
+    j = n(474486),
+    D = n(565626),
+    M = n(976465),
+    w = n(701910),
+    k = n(938736),
+    U = n(227140),
+    G = n(474936),
     B = n(981631),
     H = n(921944),
-    V = n(689938),
+    V = n(388032),
     F = n(618226);
-let Y = 'NitroTabButton',
-    z = 1209600000;
-((a = i || (i = {}))[(a.BOGO_PROMOTION = 0)] = 'BOGO_PROMOTION'), (a[(a.TENURE_REWARD = 1)] = 'TENURE_REWARD'), (a[(a.NEW_PERKS_BADGE = 2)] = 'NEW_PERKS_BADGE'), (a[(a.DISCOUNT_OFFER = 3)] = 'DISCOUNT_OFFER'), (a[(a.TRIAL_OFFER = 4)] = 'TRIAL_OFFER'), (a[(a.LOCALIZED_PRICING = 5)] = 'LOCALIZED_PRICING'), (a[(a.REFERRAL_PROGRAM = 6)] = 'REFERRAL_PROGRAM'), (a[(a.REFERRAL_PROGRAM_INCENTIVE_FIRST_DISCOVERY = 7)] = 'REFERRAL_PROGRAM_INCENTIVE_FIRST_DISCOVERY'), (a[(a.REFERRAL_PROGRAM_INCENTIVE_AWARD = 8)] = 'REFERRAL_PROGRAM_INCENTIVE_AWARD'), (a[(a.FRACTIONAL_PREMIUM_COUNTDOWN_TIMER = 9)] = 'FRACTIONAL_PREMIUM_COUNTDOWN_TIMER'), (a[(a.TRIAL_FOR_ALL_OFFER = 10)] = 'TRIAL_FOR_ALL_OFFER');
+let z = 'NitroTabButton',
+    Y = 1209600000;
+((r = i || (i = {}))[(r.BOGO_PROMOTION = 0)] = 'BOGO_PROMOTION'), (r[(r.TENURE_REWARD = 1)] = 'TENURE_REWARD'), (r[(r.NEW_PERKS_BADGE = 2)] = 'NEW_PERKS_BADGE'), (r[(r.DISCOUNT_OFFER = 3)] = 'DISCOUNT_OFFER'), (r[(r.TRIAL_OFFER = 4)] = 'TRIAL_OFFER'), (r[(r.LOCALIZED_PRICING = 5)] = 'LOCALIZED_PRICING'), (r[(r.REFERRAL_PROGRAM = 6)] = 'REFERRAL_PROGRAM'), (r[(r.REFERRAL_PROGRAM_INCENTIVE_FIRST_DISCOVERY = 7)] = 'REFERRAL_PROGRAM_INCENTIVE_FIRST_DISCOVERY'), (r[(r.REFERRAL_PROGRAM_INCENTIVE_AWARD = 8)] = 'REFERRAL_PROGRAM_INCENTIVE_AWARD'), (r[(r.FRACTIONAL_PREMIUM_COUNTDOWN_TIMER = 9)] = 'FRACTIONAL_PREMIUM_COUNTDOWN_TIMER'), (r[(r.TRIAL_FOR_ALL_OFFER = 10)] = 'TRIAL_FOR_ALL_OFFER');
 let W = (e) => {
     let t,
         n,
         i,
-        { selected: a, route: W, locationState: K, ...q } = e,
-        Q = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
-        X = (0, l.e7)([T.ZP], () => T.ZP.getPremiumTypeSubscription()),
-        J = (0, C.Qo)(Q, X),
-        $ = (0, r.JA)('nitro'),
-        ee = (0, R.N)(),
-        et = (0, L.Ng)(),
-        en = (0, l.e7)([T.ZP], () => T.ZP.inReverseTrial()),
-        ei = (null == ee ? void 0 : ee.trial_id) === k.jz,
-        ea = (0, l.e7)([g.Z], () => g.Z.isLocalizedPromoEnabled) && null == ee,
-        es = (0, M.Vi)(),
-        { enabled: er } = (0, N.Z)();
-    (0, u.Z)(new Date(2024, 10, 21), 1000, void 0, !er);
-    let el = (0, y.ZP)(),
-        eo = (0, x.$_)(),
-        ec = (0, j.V6)(),
-        ed = (0, G.Kn)(Y),
-        eu = (0, G.vx)(Y),
-        e_ = (0, G.wG)(Y),
-        eE = (0, l.e7)([f.Z], () => f.Z.getCreatedAtOverride()),
-        eh = (0, l.e7)([I.Z], () => I.Z.hasLayers()),
-        { fractionalState: em, endsAt: eI } = (0, E.Z)({ forceFetch: !0 }),
-        ep = null != eE ? eE : null == Q ? void 0 : Q.createdAt,
-        eg = a || null != ee || null != et || es || eu || e_ || el || null != eo || null != ec || J,
-        { enabled: eT } = v._.useExperiment({ location: Y }, { autoTrackExposure: !1 }),
-        { enabled: eS } = A.Z.useExperiment({ location: Y }, { autoTrackExposure: !1 }),
-        eC = eT && (null == ee ? void 0 : ee.trial_id) === k.a7,
-        [ef, eN] = (0, m.US)(en ? [o.z.REVERSE_TRIAL_NITRO_TAB_BADGE] : [], void 0, !0);
-    if (!(eg = eg || (null != Q && null != ep && Date.now() - ep.getTime() > z))) return null;
-    em !== k.a$.NONE &&
+        { selected: r, route: W, locationState: K, ...q } = e,
+        X = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
+        Q = (0, s.e7)([I.ZP], () => I.ZP.getPremiumTypeSubscription()),
+        J = (0, v.Qo)(X, Q),
+        $ = (0, a.JA)('nitro'),
+        ee = (0, Z.N)(),
+        et = (0, A.Ng)(),
+        en = (0, s.e7)([I.ZP], () => I.ZP.inReverseTrial()),
+        ei = (null == ee ? void 0 : ee.trial_id) === G.jz,
+        er = (0, s.e7)([E.Z], () => E.Z.isLocalizedPromoEnabled) && null == ee,
+        el = (0, P.Vi)(),
+        { enabled: ea } = (0, N.Z)();
+    (0, u.Z)(new Date(2024, 10, 21), 1000, void 0, !ea);
+    let es = (0, D.ZP)(),
+        eo = (0, L.$_)(),
+        ec = (0, M.V6)(),
+        ed = (0, k.Kn)(z),
+        eu = (0, k.vx)(z),
+        eh = (0, k.wG)(z),
+        em = (0, s.e7)([S.Z], () => S.Z.getCreatedAtOverride()),
+        ep = (0, s.e7)([f.Z], () => f.Z.hasLayers()),
+        { fractionalState: eg, endsAt: ef } = (0, m.Z)({ forceFetch: !0 }),
+        e_ = null != em ? em : null == X ? void 0 : X.createdAt,
+        eE = r || null != ee || null != et || el || eu || eh || es || null != eo || null != ec || J,
+        { enabled: eI } = x._.useExperiment({ location: z }, { autoTrackExposure: !1 }),
+        { enabled: eC } = T.Z.useExperiment({ location: z }, { autoTrackExposure: !1 }),
+        ev = eI && (null == ee ? void 0 : ee.trial_id) === G.a7,
+        [eS, eN] = (0, g.US)(en ? [o.z.REVERSE_TRIAL_NITRO_TAB_BADGE] : [], void 0, !0);
+    if (!(eE = eE || (null != X && null != e_ && Date.now() - e_.getTime() > Y))) return null;
+    eg !== G.a$.NONE &&
         ((i = 9),
-        (n = (0, s.jsx)(Z.Z, {
+        (n = (0, l.jsx)(b.Z, {
             className: '',
-            endsAt: eI,
-            messageStyle: _.a.SHORT_TIME,
+            endsAt: ef,
+            messageStyle: h.a.SHORT_TIME,
             upperCase: !0
         }))),
         ei
             ? ((i = 10),
-              (n = (0, s.jsx)(D.dX, {
-                  isSelected: a,
+              (n = (0, l.jsx)(j.dX, {
+                  isSelected: r,
                   trialOffer: ee,
-                  q4MarketingEnabled: eS
+                  q4MarketingEnabled: eC
               })))
             : eu
               ? ((t = F.referralIncentive), (i = 7))
-              : e_
-                ? ((n = (0, s.jsx)(U.Z, { copy: V.Z.Messages.REWARD })), (i = 8))
-                : es
-                  ? ((n = (0, s.jsx)(O.Z, {})), (i = 0))
-                  : null != ef && ef === o.z.REVERSE_TRIAL_NITRO_TAB_BADGE
-                    ? ((n = (0, s.jsx)(w.Z, {
-                          copy: V.Z.Messages.PREMIUM_REVERSE_TRIAL_BADGE,
+              : eh
+                ? ((n = (0, l.jsx)(w.Z, { copy: V.intl.string(V.t.jyYgZ2) })), (i = 8))
+                : el
+                  ? ((n = (0, l.jsx)(y.Z, {})), (i = 0))
+                  : null != eS && eS === o.z.REVERSE_TRIAL_NITRO_TAB_BADGE
+                    ? ((n = (0, l.jsx)(U.Z, {
+                          copy: V.intl.string(V.t.HwUCnp),
                           showStars: !1
                       })),
                       (i = 4))
                     : null != eo
-                      ? ((n = (0, s.jsx)(U.Z, { copy: eo })), (i = 1))
+                      ? ((n = (0, l.jsx)(w.Z, { copy: eo })), (i = 1))
                       : null != ec
-                        ? ((n = (0, s.jsx)(U.Z, { copy: ec })), (i = 1))
-                        : el
-                          ? ((n = (0, s.jsx)(U.Z, {})), (i = 2))
+                        ? ((n = (0, l.jsx)(w.Z, { copy: ec })), (i = 1))
+                        : es
+                          ? ((n = (0, l.jsx)(w.Z, {})), (i = 2))
                           : null != et
-                            ? ((n = (0, s.jsx)(P.GN, {
+                            ? ((n = (0, l.jsx)(O.GN, {
                                   userDiscount: et,
-                                  isTabSelected: a,
+                                  isTabSelected: r,
                                   includesAmountOff: !1
                               })),
                               (i = 3))
-                            : null == ee || eC
+                            : null == ee || ev
                               ? ed
-                                  ? ((n = (0, s.jsx)(D.lH, {
-                                        isSelected: a,
-                                        onSelect: () => (0, h.EW)(o.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, { dismissAction: H.L.TAKE_ACTION })
+                                  ? ((n = (0, l.jsx)(j.lH, {
+                                        isSelected: r,
+                                        onSelect: () => (0, p.EW)(o.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, { dismissAction: H.L.TAKE_ACTION })
                                     })),
                                     (i = 6))
-                                  : ea && ((n = (0, s.jsx)(b.k, { entryPoint: b.U.PrivateMessages })), !a && (t = F.localizeBadge), (i = 5))
-                              : ((n = (0, s.jsx)(P.$H, {
+                                  : er && ((n = (0, l.jsx)(R.k, { entryPoint: R.U.PrivateMessages })), !r && (t = F.localizeBadge), (i = 5))
+                              : ((n = (0, l.jsx)(O.$H, {
                                     trialOffer: ee,
-                                    isTabSelected: a
+                                    isTabSelected: r
                                 })),
                                 (i = 4));
-    let eA = (0, s.jsx)(d.Qj, {
-        selected: a,
+    let eT = (0, l.jsx)(d.Qj, {
+        selected: r,
         route: W,
         icon: c.NitroWheelIcon,
-        text: V.Z.Messages.PREMIUM,
+        text: V.intl.string(V.t.Ipxkoq),
         locationState: K,
         onClick: () => {
-            S.default.track(B.rMx.NITRO_TAB_VISITED, {
+            C.default.track(B.rMx.NITRO_TAB_VISITED, {
                 badge_decorator: i,
                 has_premium: J
             }),
-                eu || e_ ? ((0, h.EW)(o.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: H.L.TAKE_ACTION }), e_ && (0, h.EW)(o.z.REFERRAL_INCENTIVE_AWARDED_INFO, { dismissAction: H.L.TAKE_ACTION })) : null != ef && eN(H.L.USER_DISMISS);
+                eu || eh ? ((0, p.EW)(o.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: H.L.TAKE_ACTION }), eh && (0, p.EW)(o.z.REFERRAL_INCENTIVE_AWARDED_INFO, { dismissAction: H.L.TAKE_ACTION })) : null != eS && eN(H.L.USER_DISMISS);
         },
         ...q,
         ...$,
         className: t,
         children: n
     });
-    return ei && eS
-        ? (0, s.jsx)(D.CI, {
-              variant: D.j$.TRIAL_FOR_ALL,
+    return ei && eC
+        ? (0, l.jsx)(j.CI, {
+              variant: j.j$.TRIAL_FOR_ALL,
               trialOffer: ee,
-              children: eA
+              children: eT
           })
         : ed
-          ? (0, s.jsx)(D.CI, {
-                variant: D.j$.REFERRAL_PROGRAM,
-                children: eA
+          ? (0, l.jsx)(j.CI, {
+                variant: j.j$.REFERRAL_PROGRAM,
+                children: eT
             })
-          : eu && !eh
-            ? (0, s.jsx)(D.A7, { children: () => eA })
-            : eA;
+          : eu && !ep
+            ? (0, l.jsx)(j.A7, { children: () => eT })
+            : eT;
 };

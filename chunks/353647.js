@@ -8,13 +8,13 @@ var r,
     u = n(180335);
 let c = new Map(),
     d = new Set(),
-    _ = null,
-    E = !1,
-    f = !1;
-function h() {
-    (c = new Map()), (d = new Set()), (_ = null), (E = !1);
+    f = null,
+    _ = !1,
+    h = !1;
+function p() {
+    (c = new Map()), (d = new Set()), (f = null), (_ = !1);
 }
-class p extends (r = o.ZP.Store) {
+class m extends (r = o.ZP.Store) {
     getMatchingOutboxEntry(e) {
         let { activity: t, userId: n } = e,
             r = c.get(n);
@@ -27,17 +27,17 @@ class p extends (r = o.ZP.Store) {
         return d.has(e);
     }
     get deleteOutboxEntryError() {
-        return _;
+        return f;
     }
     get isDeletingEntryHistory() {
-        return E;
+        return _;
     }
     get hasInitialized() {
-        return f;
+        return h;
     }
 }
 (s = 'ContentInventoryOutboxStore'),
-    (a = 'displayName') in (i = p)
+    (a = 'displayName') in (i = m)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -45,12 +45,12 @@ class p extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new p(l.Z, {
+    (t.Z = new m(l.Z, {
         CONNECTION_OPEN: function () {
-            h(), (f = !0);
+            p(), (h = !0);
         },
         LOGOUT: function () {
-            h();
+            p();
         },
         CONTENT_INVENTORY_FETCH_OUTBOX_START: function (e) {
             let { userId: t } = e;
@@ -69,11 +69,11 @@ class p extends (r = o.ZP.Store) {
             d.delete(t);
         },
         CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START: function () {
-            (_ = null), (E = !0);
+            (f = null), (_ = !0);
         },
         CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_SUCCESS: function (e) {
             let { entry: t, userId: n } = e;
-            _ = null;
+            f = null;
             let r = c.get(n);
             if (null == r) return !1;
             let i = r.entries.filter((e) => e.id !== t.id);
@@ -81,13 +81,13 @@ class p extends (r = o.ZP.Store) {
                 ...r,
                 entries: i
             }),
-                (E = !1);
+                (_ = !1);
         },
         CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE: function (e) {
             let { error: t } = e;
-            (_ = t), (E = !1);
+            (f = t), (_ = !1);
         },
         CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR: function () {
-            (_ = null), (E = !1);
+            (f = null), (_ = !1);
         }
     }));

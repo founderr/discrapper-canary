@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return _;
     }
 });
 var r = n(200651),
@@ -12,24 +12,24 @@ var r = n(200651),
     u = n(580552),
     c = n(249458),
     d = n(240991),
-    _ = n(554034);
-function E(e) {
-    let { userBio: t, className: n, animateOnHover: a = !1, isHovering: E = !1, lineClamp: f = 6, setLineClamp: h = !0, textColor: p, userId: I } = e,
-        m = i.useMemo(() => ((0, u.Z)(I) ? (0, r.jsx)(l.Z, {}) : null == t || '' === t ? null : (0, d.parseBioReact)(t)), [I, t]);
-    return null == m
+    f = n(554034);
+function _(e) {
+    let { userBio: t, className: n, animateOnHover: a = !1, isHovering: _ = !1, lineClamp: h = 6, setLineClamp: p = !0, textColor: m, userId: g } = e,
+        E = i.useMemo(() => ((0, u.Z)(g) ? (0, r.jsx)(l.Z, {}) : null == t || '' === t ? null : (0, d.parseBioReact)(t)), [g, t]);
+    return null == E
         ? null
         : (0, r.jsx)('div', {
-              className: s()(n, _.markup),
+              className: s()(n, f.markup),
               children: (0, r.jsx)(o.Text, {
                   variant: 'text-sm/normal',
-                  lineClamp: h ? f : void 0,
-                  color: void 0 !== p ? p : void 0,
+                  lineClamp: p ? h : void 0,
+                  color: void 0 !== m ? m : void 0,
                   children: (0, r.jsx)(c.G.Provider, {
                       value: {
-                          disableAnimations: a && !E,
+                          disableAnimations: a && !_,
                           disableInteractions: !1
                       },
-                      children: m
+                      children: E
                   })
               })
           });

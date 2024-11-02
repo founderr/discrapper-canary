@@ -15,9 +15,9 @@ function s(e) {
             intervalOffset: o
         }),
         d = null == c ? void 0 : c.users.find((e) => e.user_id === t),
-        _ = null == d ? void 0 : d.statistics[l];
+        f = null == d ? void 0 : d.statistics[l];
     return {
         lastUpdateRequested: u,
-        statisticLastUpdatedDate: null != _ ? new Date(_.updated_at) : void 0
+        statisticLastUpdatedDate: null != f ? new Date(f.updated_at) : void 0
     };
 }

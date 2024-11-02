@@ -3,9 +3,9 @@ var i,
     l = n(200651),
     r = n(192379),
     a = n(120356),
-    s = n.n(a),
-    o = n(954955),
-    c = n.n(o),
+    o = n.n(a),
+    s = n(954955),
+    c = n.n(s),
     u = n(748780),
     d = n(902704),
     h = n(481060),
@@ -23,11 +23,11 @@ function f(e, t, n) {
         e
     );
 }
-let _ = {
+let m = {
     friction: 10,
     tension: 300
 };
-class m extends r.Component {
+class g extends r.Component {
     shouldComponentUpdate(e, t) {
         return !(0, d.Z)(this.props, e, ['animate']) || !(0, d.Z)(this.state, t);
     }
@@ -52,7 +52,7 @@ class m extends r.Component {
         this._timeout = setTimeout(() => {
             u.Z.spring(e, {
                 toValue: 0,
-                ..._
+                ...m
             }).start();
         }, 100);
     }
@@ -64,13 +64,13 @@ class m extends r.Component {
         }
         u.Z.spring(e, {
             toValue: 1,
-            ..._
+            ...m
         }).start();
     }
     render() {
         let { className: e, text: t, hide: n, onClick: i } = this.props;
         return (0, l.jsx)(u.Z.div, {
-            className: s()(p.bar, e),
+            className: o()(p.bar, e),
             onClick: i,
             style: this.getAnimatedStyle(),
             'aria-hidden': n,
@@ -103,7 +103,7 @@ class m extends r.Component {
             });
     }
 }
-class g extends (i = r.PureComponent) {
+class C extends (i = r.PureComponent) {
     componentDidMount() {
         this.calculateState();
     }
@@ -115,13 +115,13 @@ class g extends (i = r.PureComponent) {
     }
     render() {
         let { unread: e, mention: t } = this.state,
-            { textMention: n, textUnread: i, reverse: r, className: a, barClassName: o, hide: c, animate: u } = this.props,
+            { textMention: n, textUnread: i, reverse: r, className: a, barClassName: s, hide: c, animate: u } = this.props,
             { reducedMotion: d } = this.context;
         return (0, l.jsx)('div', {
             className: null != a ? a : void 0,
-            children: (0, l.jsx)(m, {
+            children: (0, l.jsx)(g, {
                 hide: !0 === c || (null == e && null == t),
-                className: s()(o, null != t ? p.mention : p.unread),
+                className: o()(s, null != t ? p.mention : p.unread),
                 text: null != t ? n : i,
                 reverse: r,
                 animate: u && !d.enabled,
@@ -140,14 +140,14 @@ class g extends (i = r.PureComponent) {
                 'calculateState',
                 c()(() => {
                     let { items: e, expandedFolders: t, isVisible: n, isUnread: i, isMentioned: l, reverse: r, onCalculate: a } = this.props,
-                        s = null,
                         o = null,
+                        s = null,
                         c = [];
                     e.forEach((e) => {
                         'string' == typeof e ? c.push(e) : 'object' == typeof e && null != e.folderId ? (null != t && t.has(e.folderId) ? (c.push('folder:'.concat(e.folderId)), e.guildIds.forEach((e) => c.push(e))) : c.push(e.guildIds)) : c.push(e.guildIds[0]);
                     });
                     let u = (e) => {
-                            null == s && l(e, r, c) && (s = e), null == o && i(e, r, c) && (o = e);
+                            null == o && l(e, r, c) && (o = e), null == s && i(e, r, c) && (s = e);
                         },
                         d = r ? c.length - 1 : 0,
                         h = c[d];
@@ -168,10 +168,10 @@ class g extends (i = r.PureComponent) {
                         }
                         (d += r ? -1 : 1), (h = c[d]);
                     }
-                    null != a && a(s, o, r),
+                    null != a && a(o, s, r),
                         this.setState({
-                            mention: s,
-                            unread: o
+                            mention: o,
+                            unread: s
                         });
                 }, 200)
             ),
@@ -184,11 +184,11 @@ class g extends (i = r.PureComponent) {
             });
     }
 }
-f(g, 'contextType', h.AccessibilityPreferencesContext),
-    f(g, 'defaultProps', {
+f(C, 'contextType', h.AccessibilityPreferencesContext),
+    f(C, 'defaultProps', {
         className: p.container,
         reverse: !1,
         hide: !1,
         animate: !0
     }),
-    (t.Z = g);
+    (t.Z = C);

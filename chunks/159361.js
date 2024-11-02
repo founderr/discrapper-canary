@@ -1,27 +1,27 @@
 n.d(t, {
     Z: function () {
-        return i;
+        return l;
     }
 });
-var s = n(581050),
-    a = n(689938);
-function i(e) {
+var i = n(581050),
+    r = n(388032);
+function l(e) {
     var t, n;
-    let i = (null == e ? void 0 : null === (t = e.latestRequest) || void 0 === t ? void 0 : t.state) === s.X.REJECTED;
+    let l = (null == e ? void 0 : null === (t = e.latestRequest) || void 0 === t ? void 0 : t.state) === i.X.REJECTED;
     return {
-        isApplicationRejected: i,
+        isApplicationRejected: l,
         requestCooldownDuration: (function (e) {
             let t;
             if (null == e) return;
             let n = Date.parse(e),
-                s = Date.now();
-            if (isNaN(n) || n < s) return;
-            let i = 1440,
-                r = 10080,
-                l = 43200,
-                o = Math.round((n - s) / 60000),
+                i = Date.now();
+            if (isNaN(n) || n < i) return;
+            let l = 1440,
+                s = 10080,
+                a = 43200,
+                o = Math.round((n - i) / 60000),
                 c = (e) => Math.round(o / e);
-            return (t = o >= 43200 ? a.Z.Messages.DURATION_MONTHS.format({ months: c(l) }) : o >= r ? a.Z.Messages.DURATION_WEEKS.format({ weeks: c(r) }) : o >= i ? a.Z.Messages.DURATION_DAYS.format({ days: c(i) }) : o >= 60 ? a.Z.Messages.DURATION_HOURS.format({ hours: c(60) }) : a.Z.Messages.DURATION_MINUTES.format({ minutes: o }));
+            return (t = o >= 43200 ? r.intl.formatToPlainString(r.t.kridzM, { months: c(a) }) : o >= s ? r.intl.formatToPlainString(r.t.EmoBDw, { weeks: c(s) }) : o >= l ? r.intl.formatToPlainString(r.t.k2UNz8, { days: c(l) }) : o >= 60 ? r.intl.formatToPlainString(r.t.xCjYxM, { hours: c(60) }) : r.intl.formatToPlainString(r.t.iXLF9f, { minutes: o }));
         })(null == e ? void 0 : null === (n = e.rejection) || void 0 === n ? void 0 : n.can_reapply_at)
     };
 }

@@ -8,7 +8,7 @@ var n = t(200651),
     r = t(70097),
     a = t(947849),
     s = t(981631),
-    o = t(689938);
+    o = t(388032);
 function d(e) {
     let { poster: l, src: t, width: a, height: o, naturalWidth: d, naturalHeight: u, play: m = !0, className: h, alt: c, responsive: p } = e,
         b = i.useRef(null);
@@ -39,7 +39,7 @@ function d(e) {
           });
 }
 function u(e) {
-    let { src: l, poster: t, naturalWidth: i, naturalHeight: r, responsive: s, autoPlay: u, className: m, playable: h = !0, renderImageComponent: c, alt: p = o.Z.Messages.GIF, sourceMetadata: b, ...g } = e;
+    let { src: l, poster: t, naturalWidth: i, naturalHeight: r, responsive: s, autoPlay: u, className: m, playable: h = !0, renderImageComponent: c, alt: p = o.intl.string(o.t.I5gL2N), sourceMetadata: b, ...g } = e;
     return (0, n.jsx)(a.h.Consumer, {
         children: (e) =>
             c({

@@ -7,7 +7,7 @@ var r = n(200651);
 n(192379);
 var i = n(481060),
     a = n(782568),
-    s = n(689938),
+    s = n(388032),
     o = n(16432);
 let l = (e) => {
     let {
@@ -75,7 +75,7 @@ function u(e) {
                     variant: 'heading-sm/semibold',
                     color: 'header-secondary',
                     className: o.header,
-                    children: s.Z.Messages.LEARN_MORE
+                    children: s.intl.string(s.t.hvVgAQ)
                 }),
             n
         ]

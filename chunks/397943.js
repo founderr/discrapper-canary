@@ -13,24 +13,24 @@ function l(e) {
     let { value: t, onChange: n, hideValue: l, disabled: u = !1 } = e,
         c = i.useRef(null),
         d = i.useMemo(() => new s.tR(), []),
-        [_, E] = i.useState('');
-    function f(e) {
+        [f, _] = i.useState('');
+    function h(e) {
         null != t && n((0, s.rK)(t, d.selectValue(e)));
     }
     return (0, r.jsx)(a.V, {
         ref: c,
         className: o.select,
-        options: d.getOptions(_),
+        options: d.getOptions(f),
         value: l ? void 0 : d.lookupByValue(t),
-        onChange: f,
+        onChange: h,
         isDisabled: u,
-        onSearchChange: E,
+        onSearchChange: _,
         onKeyDown: function (e) {
             if ('Enter' === e.key) {
-                let e = (0, s.tj)(t, _);
+                let e = (0, s.tj)(t, f);
                 if (null != e) {
                     var n;
-                    f(e), null === (n = c.current) || void 0 === n || n.close();
+                    h(e), null === (n = c.current) || void 0 === n || n.close();
                 }
             }
         }

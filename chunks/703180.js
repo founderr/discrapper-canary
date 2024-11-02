@@ -6,40 +6,40 @@ n.r(t),
     });
 var i = n(200651);
 n(192379);
-var s = n(442837),
-    a = n(481060),
-    l = n(485267),
-    r = n(71585),
+var l = n(442837),
+    r = n(481060),
+    a = n(485267),
+    s = n(71585),
     o = n(981631),
-    c = n(689938);
+    c = n(388032);
 let u = (e) => {
     let { closePopout: t } = e,
-        u = (0, s.e7)([r.Z], () => r.Z.hidden);
-    return (0, i.jsx)(a.Menu, {
+        u = (0, l.e7)([s.Z], () => s.Z.hidden);
+    return (0, i.jsx)(r.Menu, {
         onSelect: () => {},
         navId: 'member-list-settings-menu',
         onClose: null != t ? t : o.dG4,
-        'aria-label': c.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_SETTINGS_ALT,
-        children: (0, i.jsxs)(a.MenuGroup, {
+        'aria-label': c.intl.string(c.t.w2jvOT),
+        children: (0, i.jsxs)(r.MenuGroup, {
             children: [
-                (0, i.jsx)(a.MenuItem, {
+                (0, i.jsx)(r.MenuItem, {
                     id: 'about',
-                    label: c.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_SETTINGS_ABOUT,
-                    icon: a.CircleInformationIcon,
+                    label: c.intl.string(c.t.pWLGnJ),
+                    icon: r.CircleInformationIcon,
                     action: () => {
-                        (0, a.openModalLazy)(async () => {
+                        (0, r.openModalLazy)(async () => {
                             let { default: e } = await n.e('71517').then(n.bind(n, 549505));
                             return (t) => (0, i.jsx)(e, { ...t });
                         }),
                             null == t || t();
                     }
                 }),
-                (0, i.jsx)(a.MenuCheckboxItem, {
+                (0, i.jsx)(r.MenuCheckboxItem, {
                     id: 'hide',
-                    label: c.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_SETTINGS_HIDE,
+                    label: c.intl.string(c.t.AhNYub),
                     checked: u,
                     action: () => {
-                        (0, l.lY)(), null == t || t();
+                        (0, a.lY)(), null == t || t();
                     }
                 })
             ]
@@ -47,8 +47,8 @@ let u = (e) => {
     });
 };
 t.default = () =>
-    (0, i.jsx)(a.Popout, {
-        animation: a.Popout.Animation.NONE,
+    (0, i.jsx)(r.Popout, {
+        animation: r.Popout.Animation.NONE,
         position: 'bottom',
         align: 'right',
         renderPopout: (e) => {
@@ -56,7 +56,7 @@ t.default = () =>
             return (0, i.jsx)(u, { closePopout: t });
         },
         children: (e) =>
-            (0, i.jsx)(a.Clickable, {
+            (0, i.jsx)(r.Clickable, {
                 ...e,
                 onClick: (t) => {
                     t.stopPropagation(), e.onClick(t);
@@ -65,6 +65,6 @@ t.default = () =>
                     width: '12px',
                     height: '12px'
                 },
-                children: (0, i.jsx)(a.SettingsIcon, { size: 'xxs' })
+                children: (0, i.jsx)(r.SettingsIcon, { size: 'xxs' })
             })
     });

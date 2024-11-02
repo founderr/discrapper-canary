@@ -18,8 +18,8 @@ function d(e) {
     let { closeReason: t = u.ti.DISMISSED } = e;
     return (c.show = !1), (c.entrypoint = u._b.NONE), (c.closeReason = t), (c.initialState = void 0), !0;
 }
-let _ = new Set();
-class E extends (r = o.ZP.Store) {
+let f = new Set();
+class _ extends (r = o.ZP.Store) {
     initialize() {}
     shouldShowPopup() {
         return c.show && c.entrypoint === u._b.TEXT;
@@ -43,17 +43,17 @@ class E extends (r = o.ZP.Store) {
         return c.initialState;
     }
     appDMChannelsWithFailedLoads() {
-        return _;
+        return f;
     }
 }
-function f() {
+function h() {
     d({ closeReason: u.ti.DISMISSED });
 }
-function h() {
+function p() {
     d({ closeReason: u.ti.COMMAND });
 }
 (s = 'AppLauncherStore'),
-    (a = 'displayName') in (i = E)
+    (a = 'displayName') in (i = _)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -61,23 +61,23 @@ function h() {
               writable: !0
           })
         : (i[a] = s);
-t.Z = new E(l.Z, {
+t.Z = new _(l.Z, {
     APP_LAUNCHER_SHOW: function (e) {
         let { entrypoint: t, activeViewType: n, initialState: r } = e;
         return (c.show = !0), (c.entrypoint = t), (c.lastShownEntrypoint = t), (c.closeReason = u.ti.DISMISSED), (c.activeViewType = n), (c.initialState = r), !0;
     },
     APP_LAUNCHER_DISMISS: d,
-    CONNECTION_OPEN: f,
-    LOGOUT: f,
-    CHANNEL_SELECT: f,
-    APPLICATION_COMMAND_SET_ACTIVE_COMMAND: h,
-    APP_LAUNCHER_SET_ACTIVE_COMMAND: h,
+    CONNECTION_OPEN: h,
+    LOGOUT: h,
+    CHANNEL_SELECT: h,
+    APPLICATION_COMMAND_SET_ACTIVE_COMMAND: p,
+    APP_LAUNCHER_SET_ACTIVE_COMMAND: p,
     APP_LAUNCHER_ADD_FAILED_APP_DM_LOAD: function (e) {
         let { channelId: t } = e;
-        _.add(t);
+        f.add(t);
     },
     APP_LAUNCHER_REMOVE_FAILED_APP_DM_LOAD: function (e) {
         let { channelId: t } = e;
-        _.delete(t);
+        f.delete(t);
     }
 });

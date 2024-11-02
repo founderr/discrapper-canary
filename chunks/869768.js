@@ -1,13 +1,13 @@
-i.d(n, {
+t.d(e, {
     W: function () {
-        return a;
+        return u;
     }
 });
-var t = i(442837),
-    l = i(314897),
-    s = i(979651);
-function a(e) {
-    return (function (e) {
-        return (0, t.e7)([s.Z, l.default], () => s.Z.isInChannel(e, l.default.getId()));
-    })(null == e ? void 0 : e.id);
+var i = t(442837),
+    l = t(314897),
+    r = t(979651);
+function u(n) {
+    return (function (n) {
+        return (0, i.e7)([r.Z, l.default], () => r.Z.isInChannel(n, l.default.getId()));
+    })(null == n ? void 0 : n.id);
 }

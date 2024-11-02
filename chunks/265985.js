@@ -1,118 +1,118 @@
 n.d(t, {
     h: function () {
-        return C;
+        return x;
     },
     x: function () {
-        return g;
+        return v;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(120356),
-    s = n.n(a),
-    r = n(442837),
-    l = n(481060),
-    o = n(596454),
+var r = n(120356),
+    l = n.n(r),
+    a = n(442837),
+    o = n(481060),
+    s = n(596454),
     c = n(131388),
     u = n(409813),
     d = n(430824),
-    _ = n(73346),
-    E = n(817460),
-    I = n(584825),
-    m = n(570533),
-    f = n(629262),
-    T = n(575460),
-    h = n(293810),
-    N = n(689938),
-    p = n(265746);
-let C = (e) => {
-        let { onClose: t, listing: n, step: a, guildId: r } = e,
-            o = (0, I.YB)(r),
-            d = (0, c.Z)(h.Xy),
-            E = (() => {
+    m = n(73346),
+    f = n(817460),
+    h = n(584825),
+    p = n(570533),
+    g = n(629262),
+    _ = n(575460),
+    C = n(293810),
+    E = n(388032),
+    I = n(265746);
+let x = (e) => {
+        let { onClose: t, listing: n, step: r, guildId: a } = e,
+            s = (0, h.YB)(a),
+            d = (0, c.Z)(C.Xy),
+            f = (() => {
                 var e;
                 if (d) return null;
-                let t = (null == o ? void 0 : null === (e = o.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null ? (0, _._W)(o.cover_image_asset.application_id, o.cover_image_asset, 440) : void 0;
-                return null == t && a !== u.h8.CONFIRM
+                let t = (null == s ? void 0 : null === (e = s.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null ? (0, m._W)(s.cover_image_asset.application_id, s.cover_image_asset, 440) : void 0;
+                return null == t && r !== u.h8.CONFIRM
                     ? null
                     : null == t
-                      ? (0, i.jsx)('div', { className: p.headerImageEmpty })
+                      ? (0, i.jsx)('div', { className: I.headerImageEmpty })
                       : (0, i.jsx)('img', {
                             src: t,
                             alt: '',
-                            className: p.headerImage
+                            className: I.headerImage
                         });
             })();
         return (0, i.jsxs)('div', {
-            className: s()(p.headerContainer, { [p.headerEmpty]: d || null == E }),
+            className: l()(I.headerContainer, { [I.headerEmpty]: d || null == f }),
             children: [
-                E,
+                f,
                 (() => {
-                    if (a !== u.h8.CONFIRM) return null;
-                    let e = null == n.image_asset ? void 0 : (0, _._W)(n.application_id, n.image_asset, 80);
+                    if (r !== u.h8.CONFIRM) return null;
+                    let e = null == n.image_asset ? void 0 : (0, m._W)(n.application_id, n.image_asset, 80);
                     return (0, i.jsx)('div', {
-                        className: p.tierImageContainer,
+                        className: I.tierImageContainer,
                         children: (0, i.jsx)('img', {
                             src: e,
                             alt: '',
-                            className: p.tierImage
+                            className: I.tierImage
                         })
                     });
                 })(),
-                (0, i.jsx)(l.Clickable, {
-                    className: p.closeContainer,
+                (0, i.jsx)(o.Clickable, {
+                    className: I.closeContainer,
                     onClick: () => t(!1),
-                    'aria-label': N.Z.Messages.CLOSE,
-                    children: (0, i.jsx)(l.XSmallIcon, {
+                    'aria-label': E.intl.string(E.t.cpT0Cg),
+                    children: (0, i.jsx)(o.XSmallIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: p.closeIcon
+                        className: I.closeIcon
                     })
                 })
             ]
         });
     },
-    g = (e) => {
-        let { onClose: t, listing: n, guildId: a } = e,
-            s = (0, r.e7)([d.Z], () => d.Z.getGuild(a), [a]),
-            c = (0, m.Z)(a).filter((e) => e.roles.includes(n.role_id)),
-            u = n.role_benefits.benefits.filter(E.rC).slice(0, null === c.length ? 4 : 3),
-            _ = (0, f.Z)(u).slice(0, null === c.length ? 4 : 3);
+    v = (e) => {
+        let { onClose: t, listing: n, guildId: r } = e,
+            l = (0, a.e7)([d.Z], () => d.Z.getGuild(r), [r]),
+            c = (0, p.Z)(r).filter((e) => e.roles.includes(n.role_id)),
+            u = n.role_benefits.benefits.filter(f.rC).slice(0, null === c.length ? 4 : 3),
+            m = (0, g.Z)(u).slice(0, null === c.length ? 4 : 3);
         return (0, i.jsxs)('div', {
-            className: p.confirmationContainer,
+            className: I.confirmationContainer,
             children: [
-                (0, i.jsx)(l.Heading, {
-                    className: p.confirmationHeader,
+                (0, i.jsx)(o.Heading, {
+                    className: I.confirmationHeader,
                     variant: 'heading-xl/semibold',
                     color: 'header-secondary',
-                    children: N.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_TITLE.format({ serverName: null == s ? void 0 : s.toString() })
+                    children: E.intl.format(E.t['1HIsTk'], { serverName: null == l ? void 0 : l.toString() })
                 }),
-                (0, i.jsx)(l.Text, {
-                    className: p.confirmationSubtitle,
+                (0, i.jsx)(o.Text, {
+                    className: I.confirmationSubtitle,
                     variant: 'text-md/normal',
                     color: 'header-secondary',
-                    children: N.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_SUBTITLE.format({ tier: n.name })
+                    children: E.intl.format(E.t.oi3gio, { tier: n.name })
                 }),
-                _.length > 0 &&
+                m.length > 0 &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, i.jsx)(l.Text, {
+                            (0, i.jsx)(o.Text, {
                                 variant: 'text-xs/normal',
                                 color: 'header-secondary',
-                                className: p.confirmationSectionLabel,
-                                children: N.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_CHANNEL_PREVIEW
+                                className: I.confirmationSectionLabel,
+                                children: E.intl.string(E.t.w0CQ09)
                             }),
                             (0, i.jsx)('div', {
-                                className: p.confirmationBenefits,
-                                children: _.map((e) =>
+                                className: I.confirmationBenefits,
+                                children: m.map((e) =>
                                     (0, i.jsx)(
-                                        T.Z,
+                                        _.Z,
                                         {
                                             benefit: e,
-                                            guildId: a,
+                                            guildId: r,
                                             onClick: () => t(!0)
                                         },
-                                        (0, E.ab)(e)
+                                        (0, f.ab)(e)
                                     )
                                 )
                             })
@@ -124,33 +124,33 @@ let C = (e) => {
                     let t = c[0];
                     return (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, i.jsx)(l.Text, {
+                            (0, i.jsx)(o.Text, {
                                 variant: 'text-xs/medium',
                                 color: 'header-secondary',
-                                className: p.confirmationSectionLabel,
-                                children: N.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_PREMIUM_EMOJI_PREVIEW_TITLE
+                                className: I.confirmationSectionLabel,
+                                children: E.intl.string(E.t['6Y1FLi'])
                             }),
                             (0, i.jsxs)('div', {
-                                className: p.emojiBenefitsRow,
+                                className: I.emojiBenefitsRow,
                                 children: [
-                                    (0, i.jsx)(o.Z, {
+                                    (0, i.jsx)(s.Z, {
                                         emojiId: t.id,
                                         emojiName: t.name,
                                         animated: null !== (e = t.animated) && void 0 !== e && e,
-                                        className: p.emojiImage
+                                        className: I.emojiImage
                                     }),
                                     (0, i.jsxs)('div', {
                                         children: [
-                                            (0, i.jsx)(l.Text, {
+                                            (0, i.jsx)(o.Text, {
                                                 variant: 'text-md/medium',
                                                 color: 'header-primary',
-                                                className: p.emojiName,
-                                                children: N.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_PREMIUM_EMOJI_BENEFIT_TEXT
+                                                className: I.emojiName,
+                                                children: E.intl.string(E.t.PrKk4u)
                                             }),
-                                            (0, i.jsx)(l.Text, {
+                                            (0, i.jsx)(o.Text, {
                                                 color: 'interactive-normal',
                                                 variant: 'text-sm/normal',
-                                                children: N.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_PREMIUM_EMOJI_BENEFIT_DESCRIPTION.format({ count: c.length })
+                                                children: E.intl.format(E.t['2ICUkJ'], { count: c.length })
                                             })
                                         ]
                                     })
@@ -159,10 +159,10 @@ let C = (e) => {
                         ]
                     });
                 })(),
-                (0, i.jsx)(l.Button, {
-                    className: p.confirmationButton,
+                (0, i.jsx)(o.Button, {
+                    className: I.confirmationButton,
                     onClick: () => t(!0),
-                    children: N.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_DONE_BUTTON
+                    children: E.intl.string(E.t['Ph+ecH'])
                 })
             ]
         });

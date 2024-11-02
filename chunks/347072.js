@@ -10,24 +10,24 @@ var i = n(120356),
     s = n(481060),
     o = n(357156),
     l = n(343747),
-    u = n(689938),
+    u = n(388032),
     c = n(5477);
 function d(e) {
-    let { guild: t, focused: n, onSelectItem: i, refreshEnabled: d, ..._ } = e,
-        { canCreateExpressions: E } = (0, o.XJ)(t);
+    let { guild: t, focused: n, onSelectItem: i, refreshEnabled: d, ...f } = e,
+        { canCreateExpressions: _ } = (0, o.XJ)(t);
     return (0, r.jsx)(s.Tooltip, {
-        text: u.Z.Messages.SOUNDBOARD_SOUND_UPLOAD_BUTTON_DISABLED,
-        shouldShow: !E,
+        text: u.intl.string(u.t['fHo+z8']),
+        shouldShow: !_,
         children: (e) =>
             (0, r.jsx)('li', {
                 className: c.soundButtonWrapper,
                 ...e,
                 children: (0, r.jsx)(s.ClickableContainer, {
-                    ..._,
-                    'aria-label': u.Z.Messages.SOUNDBOARD_UPLOAD_SOUND_FOR_GUILD.format({ guildName: t.name }),
+                    ...f,
+                    'aria-label': u.intl.formatToPlainString(u.t.c1qVYm, { guildName: t.name }),
                     className: a()(d ? c.soundAddButtonRefresh : c.soundAddButton, {
                         [c.focused]: n,
-                        [c.disabled]: !E
+                        [c.disabled]: !_
                     }),
                     onClick: () => (null != i ? i() : (0, l.Z)(t.id)),
                     children: d
@@ -41,9 +41,9 @@ function d(e) {
                                   }),
                                   (0, r.jsx)(s.Text, {
                                       variant: 'text-xs/medium',
-                                      color: E ? void 0 : 'text-muted',
+                                      color: _ ? void 0 : 'text-muted',
                                       className: c.soundAddTextRefresh,
-                                      children: u.Z.Messages.SOUNDBOARD_SOUND_ADD_SOUND
+                                      children: u.intl.string(u.t['8Fu/S0'])
                                   })
                               ]
                           })
@@ -56,8 +56,8 @@ function d(e) {
                                   }),
                                   (0, r.jsx)(s.Text, {
                                       variant: 'text-xs/normal',
-                                      color: E ? 'header-primary' : 'text-muted',
-                                      children: u.Z.Messages.SOUNDBOARD_SOUND_ADD_SOUND
+                                      color: _ ? 'header-primary' : 'text-muted',
+                                      children: u.intl.string(u.t['8Fu/S0'])
                                   })
                               ]
                           })

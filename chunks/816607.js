@@ -1,57 +1,57 @@
-n.r(a),
-    n.d(a, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return m;
+            return u;
         }
     }),
     n(47120);
-var t = n(200651);
+var a = n(200651);
 n(192379);
-var s = n(512722),
-    c = n.n(s),
-    o = n(481060),
-    r = n(584825),
-    i = n(353254),
-    d = n(866104),
-    l = n(689938),
-    _ = n(839137);
-function m(e) {
-    let { onClose: a, guildId: n, transitionState: s } = e,
-        m = (0, r.YB)(n);
-    c()(null != m, 'subscriptionsSettings cannot be null');
-    let u = m.cover_image_asset,
-        [h] = (0, i.Z)(null != u ? u : void 0);
-    return (0, t.jsxs)(o.ModalRoot, {
-        className: _.modal,
-        size: o.ModalSize.MEDIUM,
-        transitionState: s,
-        'aria-label': l.Z.Messages.GUILD_STORE_HERO_DESCRIPTION_MODAL_ARIA,
+var i = n(512722),
+    r = n.n(i),
+    c = n(481060),
+    o = n(584825),
+    s = n(353254),
+    l = n(866104),
+    d = n(388032),
+    m = n(839137);
+function u(e) {
+    let { onClose: t, guildId: n, transitionState: i } = e,
+        u = (0, o.YB)(n);
+    r()(null != u, 'subscriptionsSettings cannot be null');
+    let h = u.cover_image_asset,
+        [p] = (0, s.Z)(null != h ? h : void 0);
+    return (0, a.jsxs)(c.ModalRoot, {
+        className: m.modal,
+        size: c.ModalSize.MEDIUM,
+        transitionState: i,
+        'aria-label': d.intl.string(d.t.D98gR0),
         children: [
-            (0, t.jsx)('div', {
-                ref: h,
-                className: _.coverImageContainer,
-                children: null != u && (0, t.jsx)(d.Z, { coverImageAsset: u })
+            (0, a.jsx)('div', {
+                ref: p,
+                className: m.coverImageContainer,
+                children: null != h && (0, a.jsx)(l.Z, { coverImageAsset: h })
             }),
-            (0, t.jsx)(o.Heading, {
+            (0, a.jsx)(c.Heading, {
                 variant: 'text-lg/medium',
                 color: 'header-primary',
-                className: _.header,
-                children: l.Z.Messages.GUILD_STORE_HERO_DESCRIPTION_MODAL_HEADER
+                className: m.header,
+                children: d.intl.string(d.t.xPum5e)
             }),
-            (0, t.jsx)(o.ModalContent, {
-                className: _.content,
-                children: (0, t.jsx)(o.Text, {
+            (0, a.jsx)(c.ModalContent, {
+                className: m.content,
+                children: (0, a.jsx)(c.Text, {
                     variant: 'text-md/normal',
                     color: 'text-muted',
-                    className: _.description,
-                    children: m.description
+                    className: m.description,
+                    children: u.description
                 })
             }),
-            (0, t.jsx)(o.ModalFooter, {
-                className: _.__invalid_footer,
-                children: (0, t.jsx)(o.Button, {
-                    onClick: a,
-                    children: l.Z.Messages.GUILD_STORE_HERO_DESCRIPTION_MODAL_CTA
+            (0, a.jsx)(c.ModalFooter, {
+                className: m.__invalid_footer,
+                children: (0, a.jsx)(c.Button, {
+                    onClick: t,
+                    children: d.intl.string(d.t.wdo1oK)
                 })
             })
         ]

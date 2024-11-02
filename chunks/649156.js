@@ -1,7 +1,7 @@
-var s = n(200651);
+var i = n(200651);
 n(192379);
 var r = n(3570),
-    i = n(685311),
+    s = n(685311),
     a = n(186901);
 t.Z = function (e) {
     let { match: t, location: n } = e,
@@ -12,7 +12,7 @@ t.Z = function (e) {
                 search: t.search
             });
         };
-    return (0, s.jsx)(i.Z, {
+    return (0, i.jsx)(s.Z, {
         match: t,
         location: n,
         attemptDeepLink: l

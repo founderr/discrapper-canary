@@ -1,96 +1,96 @@
-s.r(t),
-    s.d(t, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return g;
+            return j;
         }
     });
-var n = s(200651);
-s(192379);
-var o = s(442837),
-    a = s(481060),
-    l = s(231757),
-    i = s(511010),
-    r = s(553795),
-    d = s(430824),
-    c = s(979192),
-    u = s(647529),
-    x = s(463031),
-    m = s(981631),
-    h = s(689938),
-    _ = s(97741);
-function g(e) {
-    let { guildId: t, ...s } = e,
+var s = n(200651);
+n(192379);
+var o = n(442837),
+    i = n(481060),
+    l = n(231757),
+    a = n(511010),
+    r = n(553795),
+    d = n(430824),
+    c = n(979192),
+    u = n(647529),
+    x = n(463031),
+    m = n(981631),
+    h = n(388032),
+    g = n(97741);
+function j(e) {
+    let { guildId: t, ...n } = e,
         l = (0, o.e7)([d.Z], () => d.Z.getGuild(t));
     return null == l
         ? null
-        : (0, n.jsx)(u.Z, {
+        : (0, s.jsx)(u.Z, {
               guildId: t,
-              title: h.Z.Messages.LEADERBOARD_MODAL_TITLE,
-              ...s,
-              children: (0, n.jsxs)(a.ModalContent, {
-                  className: _.modalContent,
+              title: h.intl.string(h.t['WWBw5+']),
+              ...n,
+              children: (0, s.jsxs)(i.ModalContent, {
+                  className: g.modalContent,
                   children: [
-                      (0, n.jsxs)('div', {
-                          className: _.subtitleContainer,
+                      (0, s.jsxs)('div', {
+                          className: g.subtitleContainer,
                           children: [
-                              (0, n.jsx)(a.Text, {
+                              (0, s.jsx)(i.Text, {
                                   variant: 'text-md/normal',
                                   color: 'text-secondary',
-                                  children: h.Z.Messages.LEADERBOARD_MODAL_SUBTITLE
+                                  children: h.intl.string(h.t.OBuzJi)
                               }),
-                              (0, n.jsx)(a.LeagueOfLegendsBrandIcon, { size: 'xs' })
+                              (0, s.jsx)(i.LeagueOfLegendsBrandIcon, { size: 'xs' })
                           ]
                       }),
-                      (0, n.jsxs)('div', {
-                          className: _.notes,
-                          children: [(0, n.jsx)(j, {}), (0, n.jsx)(a.Spacer, { size: 4 }), (0, n.jsx)(i.Z, { className: _.divider }), null != l && (0, n.jsx)(S, { guild: l })]
+                      (0, s.jsxs)('div', {
+                          className: g.notes,
+                          children: [(0, s.jsx)(p, {}), (0, s.jsx)(i.Spacer, { size: 4 }), (0, s.jsx)(a.Z, { className: g.divider }), null != l && (0, s.jsx)(B, { guild: l })]
                       })
                   ]
               })
           });
 }
-function j() {
-    return (0, n.jsxs)('div', {
-        className: _.row,
+function p() {
+    return (0, s.jsxs)('div', {
+        className: g.row,
         children: [
-            (0, n.jsx)(a.Text, {
+            (0, s.jsx)(i.Text, {
                 variant: 'text-md/medium',
-                children: h.Z.Messages.LEADERBOARD_MODAL_CONNECT_RIOT
+                children: h.intl.string(h.t.PL48CA)
             }),
-            (0, n.jsx)(N, {})
+            (0, s.jsx)(f, {})
         ]
     });
 }
-function N() {
+function f() {
     return null != (0, o.e7)([r.Z], () => r.Z.getAccount(null, m.ABu.RIOT_GAMES))
-        ? (0, n.jsxs)(a.Button, {
+        ? (0, s.jsxs)(i.Button, {
               disabled: !0,
-              color: a.Button.Colors.TRANSPARENT,
-              look: a.Button.Looks.OUTLINED,
-              innerClassName: _.doneButton,
+              color: i.Button.Colors.TRANSPARENT,
+              look: i.Button.Looks.OUTLINED,
+              innerClassName: g.doneButton,
               children: [
-                  (0, n.jsx)(a.CheckmarkSmallIcon, {}),
-                  (0, n.jsx)(a.Text, {
+                  (0, s.jsx)(i.CheckmarkSmallIcon, {}),
+                  (0, s.jsx)(i.Text, {
                       variant: 'text-sm/medium',
-                      children: h.Z.Messages.DONE
+                      children: h.intl.string(h.t.i4jeWV)
                   })
               ]
           })
-        : (0, n.jsx)(a.Button, {
+        : (0, s.jsx)(i.Button, {
               onClick: () => (0, l.Z)({ platformType: m.ABu.RIOT_GAMES }),
-              size: a.Button.Sizes.SMALL,
-              color: a.Button.Colors.PRIMARY,
-              children: h.Z.Messages.LEADERBOARD_SETTINGS_SIGN_IN_TO_CONNECTION
+              size: i.Button.Sizes.SMALL,
+              color: i.Button.Colors.PRIMARY,
+              children: h.intl.string(h.t.To26Nj)
           });
 }
-function S(e) {
+function B(e) {
     let { guild: t } = e,
-        { leaderboardsDisabled: s, toggleGuildLeaderboardsDisabled: o } = (0, c.O)(t.id, x._);
-    return (0, n.jsx)(a.FormSwitch, {
+        { leaderboardsDisabled: n, toggleGuildLeaderboardsDisabled: o } = (0, c.O)(t.id, x._);
+    return (0, s.jsx)(i.FormSwitch, {
         hideBorder: !0,
         onChange: o,
-        value: !s,
-        className: _.guildOptoutSwitch,
-        children: h.Z.Messages.LEADERBOARD_SHARE_STATS
+        value: !n,
+        className: g.guildOptoutSwitch,
+        children: h.intl.string(h.t.eZhXQU)
     });
 }

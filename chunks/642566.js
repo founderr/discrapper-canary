@@ -1,18 +1,18 @@
-t.d(n, {
+e.d(t, {
     Z: function () {
-        return s;
+        return c;
     }
 });
-var o = t(200651);
-t(192379);
-var i = t(859097),
-    r = t(689938);
-function s(e) {
-    let { onContinue: n, onClose: t } = e;
+var o = e(200651);
+e(192379);
+var i = e(859097),
+    r = e(388032);
+function c(n) {
+    let { onContinue: t, onClose: e } = n;
     return (0, o.jsx)(i.C, {
-        title: r.Z.Messages.CONNECT_CRUNCHYROLL_ERROR_TITLE,
-        body: r.Z.Messages.CONNECT_CRUNCHYROLL_ERROR_BODY,
-        onClose: t,
-        onContinue: n
+        title: r.intl.string(r.t['8YK70d']),
+        body: r.intl.string(r.t.moyYLS),
+        onClose: e,
+        onContinue: t
     });
 }

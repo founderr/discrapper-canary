@@ -1,157 +1,157 @@
-a.r(s),
-    a.d(s, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return T;
+            return g;
         }
     }),
-    a(47120);
-var t = a(200651),
-    n = a(192379),
-    i = a(481060),
-    l = a(626135),
-    r = a(115345),
-    c = a(57927),
-    d = a(273236),
-    o = a(931839),
-    _ = a(905987),
-    I = a(789662),
-    N = a(981631),
-    x = a(689938),
-    m = a(55011);
-function T(e) {
-    let { onClose: s, transitionState: a, dismissable: c, guildPain: T, myUsage: u } = e,
-        [O, g] = n.useState(o.O.Intro),
-        { submitted: j, submitting: b, saveSettings: M } = (0, r.vo)(s),
-        { guildPlans: v, overrideGuild: f, getDebug: C } = (0, r.F6)(T, u),
-        A = n.useRef(null);
+    n(47120);
+var i = n(200651),
+    s = n(192379),
+    r = n(481060),
+    l = n(626135),
+    a = n(115345),
+    c = n(57927),
+    d = n(273236),
+    o = n(931839),
+    m = n(905987),
+    x = n(789662),
+    h = n(981631),
+    u = n(388032),
+    j = n(55011);
+function g(e) {
+    let { onClose: t, transitionState: n, dismissable: c, guildPain: g, myUsage: v } = e,
+        [f, N] = s.useState(o.O.Intro),
+        { submitted: _, submitting: p, saveSettings: C } = (0, a.vo)(t),
+        { guildPlans: I, overrideGuild: T, getDebug: w } = (0, a.F6)(g, v),
+        k = s.useRef(null);
     return (
-        n.useEffect(() => {
-            l.default.track(N.rMx.OPEN_MODAL, { type: 'notification_migration_modal' });
+        s.useEffect(() => {
+            l.default.track(h.rMx.OPEN_MODAL, { type: 'notification_migration_modal' });
         }, []),
-        (0, t.jsxs)(i.ModalRoot, {
-            className: m.__invalid_modal,
-            transitionState: a,
-            'aria-label': x.Z.Messages.NOTIFICATIONS,
-            size: i.ModalSize.DYNAMIC,
+        (0, i.jsxs)(r.ModalRoot, {
+            className: j.__invalid_modal,
+            transitionState: n,
+            'aria-label': u.intl.string(u.t.HcoRu7),
+            size: r.ModalSize.DYNAMIC,
             children: [
-                (0, t.jsx)(o.Z, {
-                    selectedTab: O,
-                    onClick: g,
-                    submitted: j
+                (0, i.jsx)(o.Z, {
+                    selectedTab: f,
+                    onClick: N,
+                    submitted: _
                 }),
-                O === o.O.Intro
-                    ? (0, t.jsx)(d.Z, { ref: A })
-                    : O === o.O.Customize
-                      ? (0, t.jsx)(h, {
-                            guildPlans: v,
-                            overrideGuild: f,
-                            getDebug: C
+                f === o.O.Intro
+                    ? (0, i.jsx)(d.Z, { ref: k })
+                    : f === o.O.Customize
+                      ? (0, i.jsx)(b, {
+                            guildPlans: I,
+                            overrideGuild: T,
+                            getDebug: w
                         })
-                      : (0, t.jsx)(_.Z, {
-                            count: Object.values(v).filter((e) => {
-                                var s;
-                                return (null !== (s = e.overrideMode) && void 0 !== s ? s : e.mode) === I.AR.UseGreyDot;
+                      : (0, i.jsx)(m.Z, {
+                            count: Object.values(I).filter((e) => {
+                                var t;
+                                return (null !== (t = e.overrideMode) && void 0 !== t ? t : e.mode) === x.AR.UseGreyDot;
                             }).length
                         }),
-                (0, t.jsxs)(i.ModalFooter, {
-                    className: m.buttons,
+                (0, i.jsxs)(r.ModalFooter, {
+                    className: j.buttons,
                     children: [
-                        (0, t.jsxs)('div', {
-                            className: m.__invalid_left,
+                        (0, i.jsxs)('div', {
+                            className: j.__invalid_left,
                             children: [
-                                c || (O !== o.O.Tips && O !== o.O.Customize)
+                                c || (f !== o.O.Tips && f !== o.O.Customize)
                                     ? null
-                                    : (0, t.jsx)(i.Anchor, {
-                                          className: m.dismiss,
+                                    : (0, i.jsx)(r.Anchor, {
+                                          className: j.dismiss,
                                           href: 'https://dis.gd/better-muting',
-                                          children: (0, t.jsx)(i.Text, {
+                                          children: (0, i.jsx)(r.Text, {
                                               variant: 'text-sm/semibold',
                                               color: 'interactive-normal',
-                                              children: x.Z.Messages.LEARN_MORE
+                                              children: u.intl.string(u.t.hvVgAQ)
                                           })
                                       }),
-                                c && O === o.O.Intro
-                                    ? (0, t.jsx)(i.Clickable, {
-                                          className: m.dismiss,
-                                          onClick: s,
-                                          children: (0, t.jsx)(i.Text, {
+                                c && f === o.O.Intro
+                                    ? (0, i.jsx)(r.Clickable, {
+                                          className: j.dismiss,
+                                          onClick: t,
+                                          children: (0, i.jsx)(r.Text, {
                                               variant: 'text-sm/semibold',
                                               color: 'interactive-normal',
-                                              children: x.Z.Messages.DISMISS
+                                              children: u.intl.string(u.t.WAI6xs)
                                           })
                                       })
                                     : null,
-                                c && O === o.O.Customize
-                                    ? (0, t.jsx)(i.Clickable, {
-                                          className: m.dismiss,
-                                          onClick: s,
-                                          children: (0, t.jsx)(i.Text, {
+                                c && f === o.O.Customize
+                                    ? (0, i.jsx)(r.Clickable, {
+                                          className: j.dismiss,
+                                          onClick: t,
+                                          children: (0, i.jsx)(r.Text, {
                                               variant: 'text-sm/semibold',
                                               color: 'interactive-normal',
-                                              children: x.Z.Messages.CANCEL
+                                              children: u.intl.string(u.t['ETE/oK'])
                                           })
                                       })
                                     : null
                             ]
                         }),
-                        (0, t.jsxs)('div', {
-                            className: m.right,
+                        (0, i.jsxs)('div', {
+                            className: j.right,
                             children: [
-                                O === o.O.Customize
-                                    ? (0, t.jsx)(i.Text, {
-                                          className: m.warning,
+                                f === o.O.Customize
+                                    ? (0, i.jsx)(r.Text, {
+                                          className: j.warning,
                                           variant: 'text-xs/medium',
                                           color: 'text-muted',
-                                          children: x.Z.Messages.NOTIF_MIGRATION_BACKUP
+                                          children: u.intl.string(u.t.nlpqxM)
                                       })
                                     : null,
-                                O !== o.O.Customize || j
+                                f !== o.O.Customize || _
                                     ? null
-                                    : (0, t.jsxs)(i.Button, {
-                                          onClick: () => g(o.O.Intro),
-                                          color: i.Button.Colors.TRANSPARENT,
+                                    : (0, i.jsxs)(r.Button, {
+                                          onClick: () => N(o.O.Intro),
+                                          color: r.Button.Colors.TRANSPARENT,
                                           children: [
-                                              (0, t.jsx)(i.ArrowSmallLeftIcon, {
+                                              (0, i.jsx)(r.ArrowSmallLeftIcon, {
                                                   size: 'xs',
                                                   color: 'currentColor'
                                               }),
                                               ' ',
-                                              x.Z.Messages.BACK
+                                              u.intl.string(u.t['13/7kZ'])
                                           ]
                                       }),
-                                O === o.O.Intro
-                                    ? (0, t.jsxs)(i.Button, {
+                                f === o.O.Intro
+                                    ? (0, i.jsxs)(r.Button, {
                                           onClick: () => {
                                               var e;
-                                              (null === (e = A.current) || void 0 === e ? void 0 : e.maybeChangeToAfterTab()) && g(o.O.Customize);
+                                              (null === (e = k.current) || void 0 === e ? void 0 : e.maybeChangeToAfterTab()) && N(o.O.Customize);
                                           },
                                           children: [
-                                              x.Z.Messages.TRY_IT_OUT,
+                                              u.intl.string(u.t.uw9zIy),
                                               ' ',
-                                              (0, t.jsx)(i.ArrowSmallRightIcon, {
+                                              (0, i.jsx)(r.ArrowSmallRightIcon, {
                                                   size: 'xs',
                                                   color: 'currentColor'
                                               })
                                           ]
                                       })
-                                    : O === o.O.Customize
-                                      ? (0, t.jsxs)(i.Button, {
+                                    : f === o.O.Customize
+                                      ? (0, i.jsxs)(r.Button, {
                                             onClick: () => {
-                                                g(o.O.Tips), M(v);
+                                                N(o.O.Tips), C(I);
                                             },
                                             children: [
-                                                x.Z.Messages.APPLY,
+                                                u.intl.string(u.t['1Qm829']),
                                                 ' ',
-                                                (0, t.jsx)(i.CheckmarkLargeIcon, {
+                                                (0, i.jsx)(r.CheckmarkLargeIcon, {
                                                     size: 'xs',
                                                     color: 'currentColor'
                                                 })
                                             ]
                                         })
-                                      : (0, t.jsx)(i.Button, {
-                                            submitting: b,
-                                            onClick: s,
-                                            children: x.Z.Messages.CLOSE
+                                      : (0, i.jsx)(r.Button, {
+                                            submitting: p,
+                                            onClick: t,
+                                            children: u.intl.string(u.t.cpT0Cg)
                                         })
                             ]
                         })
@@ -161,30 +161,30 @@ function T(e) {
         })
     );
 }
-function h(e) {
-    let { guildPlans: s, overrideGuild: a } = e;
-    return (0, t.jsxs)(i.Scroller, {
-        className: m.content,
+function b(e) {
+    let { guildPlans: t, overrideGuild: n } = e;
+    return (0, i.jsxs)(r.Scroller, {
+        className: j.content,
         children: [
-            (0, t.jsxs)('div', {
-                className: m.header,
+            (0, i.jsxs)('div', {
+                className: j.header,
                 children: [
-                    (0, t.jsx)(i.Heading, {
+                    (0, i.jsx)(r.Heading, {
                         variant: 'heading-xl/bold',
                         color: 'header-primary',
-                        children: x.Z.Messages.NOTIF_MIGRATION_CUSTOMIZE_TITLE
+                        children: u.intl.string(u.t['zBC2+f'])
                     }),
-                    (0, t.jsx)(i.Text, {
-                        className: m.__invalid_subtitle,
+                    (0, i.jsx)(r.Text, {
+                        className: j.__invalid_subtitle,
                         variant: 'text-md/medium',
                         color: 'header-secondary',
-                        children: x.Z.Messages.NOTIF_MIGRATION_CUSTOMIZE_SUB_TITLE
+                        children: u.intl.string(u.t['zE9e//'])
                     })
                 ]
             }),
-            (0, t.jsx)(c.Z, {
-                guildPlans: s,
-                overrideGuild: a
+            (0, i.jsx)(c.Z, {
+                guildPlans: t,
+                overrideGuild: n
             })
         ]
     });

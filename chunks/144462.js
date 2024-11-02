@@ -1,67 +1,67 @@
-s.r(t),
-    s.d(t, {
+n.r(e),
+    n.d(e, {
         default: function () {
-            return l;
+            return d;
         }
     }),
-    s(47120);
-var a = s(200651),
-    o = s(192379),
-    n = s(481060),
-    r = s(313201),
-    i = s(273504),
-    c = s(689938),
-    d = s(361818);
-function l(e) {
-    let { initialCustomMessage: t, onSubmit: s, onClose: l, transitionState: _ } = e,
-        C = (0, r.Dt)(),
-        [M, A] = o.useState(t);
-    return (0, a.jsxs)(n.ModalRoot, {
-        transitionState: _,
-        'aria-labelledby': C,
-        size: n.ModalSize.SMALL,
+    n(47120);
+var o = n(200651),
+    a = n(192379),
+    r = n(481060),
+    s = n(313201),
+    i = n(273504),
+    l = n(388032),
+    c = n(361818);
+function d(t) {
+    let { initialCustomMessage: e, onSubmit: n, onClose: d, transitionState: u } = t,
+        h = (0, s.Dt)(),
+        [x, C] = a.useState(e);
+    return (0, o.jsxs)(r.ModalRoot, {
+        transitionState: u,
+        'aria-labelledby': h,
+        size: r.ModalSize.SMALL,
         children: [
-            (0, a.jsxs)(n.ModalContent, {
-                className: d.actionContentContainer,
+            (0, o.jsxs)(r.ModalContent, {
+                className: c.actionContentContainer,
                 children: [
-                    (0, a.jsx)(n.Heading, {
-                        id: C,
+                    (0, o.jsx)(r.Heading, {
+                        id: h,
                         color: 'header-primary',
                         variant: 'heading-md/semibold',
-                        className: d.header,
-                        children: c.Z.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_MODAL_TITLE
+                        className: c.header,
+                        children: l.intl.string(l.t.Df4aUF)
                     }),
-                    (0, a.jsx)(n.Text, {
+                    (0, o.jsx)(r.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: c.Z.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_MODAL_DESCRIPTION
+                        children: l.intl.string(l.t.eOWEmJ)
                     }),
-                    (0, a.jsx)(n.TextArea, {
-                        className: d.customMessageTextArea,
-                        placeholder: c.Z.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_MODAL_CUSTOM_MESSAGE_PLACEHOLDER,
-                        value: M,
-                        onChange: A,
+                    (0, o.jsx)(r.TextArea, {
+                        className: c.customMessageTextArea,
+                        placeholder: l.intl.string(l.t.gDZw7O),
+                        value: x,
+                        onChange: C,
                         maxLength: i._6
                     })
                 ]
             }),
-            (0, a.jsxs)(n.ModalFooter, {
+            (0, o.jsxs)(r.ModalFooter, {
                 children: [
-                    (0, a.jsx)(n.Button, {
+                    (0, o.jsx)(r.Button, {
                         onClick: () => {
-                            s(M);
+                            n(x);
                         },
-                        color: n.Button.Colors.BRAND,
-                        size: n.Button.Sizes.SMALL,
-                        children: c.Z.Messages.EDIT
+                        color: r.Button.Colors.BRAND,
+                        size: r.Button.Sizes.SMALL,
+                        children: l.intl.string(l.t.bt75u7)
                     }),
-                    (0, a.jsx)(n.Button, {
+                    (0, o.jsx)(r.Button, {
                         onClick: () => {
-                            l();
+                            d();
                         },
-                        color: n.Button.Colors.TRANSPARENT,
-                        look: n.Button.Looks.LINK,
-                        children: c.Z.Messages.CANCEL
+                        color: r.Button.Colors.TRANSPARENT,
+                        look: r.Button.Looks.LINK,
+                        children: l.intl.string(l.t['ETE/oK'])
                     })
                 ]
             })

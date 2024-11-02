@@ -6,13 +6,13 @@ n.d(t, {
         return c;
     },
     Tt: function () {
-        return E;
+        return _;
     },
     ZD: function () {
-        return h;
+        return p;
     },
     yY: function () {
-        return f;
+        return h;
     }
 }),
     n(47120);
@@ -45,13 +45,13 @@ function d(e) {
         u.setState((e) => ({
             flashQueue: [...e.flashQueue, t]
         })),
-        () => _(t.id)
+        () => f(t.id)
     );
 }
-function _(e) {
+function f(e) {
     u.setState((t) => ({ flashQueue: t.flashQueue.filter((t) => t.id !== e) }));
 }
-function E(e) {
+function _(e) {
     r.useEffect(() => {
         var t;
         return (
@@ -67,10 +67,10 @@ function E(e) {
         );
     }, [...Object.values(e)]);
 }
-function f(e) {
-    return E(e), null;
+function h(e) {
+    return _(e), null;
 }
-function h() {
+function p() {
     let { skipsSettingDefaultPageTitle: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     r.useEffect(() => {
         function e() {
@@ -107,12 +107,12 @@ function h() {
                     return;
                 }
                 if (document.hasFocus() && t.onlyWhenBlurred) {
-                    _(t.id), i(!1);
+                    f(t.id), i(!1);
                     return;
                 }
                 let e = setInterval(() => {
                     if (a.current >= t.count) {
-                        _(t.id), i(!1);
+                        f(t.id), i(!1);
                         return;
                     }
                     i((e) => !e || ((a.current += 1), !1));

@@ -1,6 +1,6 @@
 n.d(t, {
     Eg: function () {
-        return o;
+        return s;
     },
     XL: function () {
         return u;
@@ -10,9 +10,9 @@ var i = n(192379),
     l = n(903797),
     r = n(782690),
     a = n(731965);
-let s = (0, l.Z)((e) => ({ upsellsByGuildId: {} }));
-function o(e) {
-    return s((t) => {
+let o = (0, l.Z)((e) => ({ upsellsByGuildId: {} }));
+function s(e) {
+    return o((t) => {
         var n;
         let i = {};
         return null == e ? i : null !== (n = t.upsellsByGuildId[e]) && void 0 !== n ? n : i;
@@ -34,23 +34,23 @@ function u(e, t) {
             let i = l.current,
                 r = () => {
                     requestAnimationFrame(() => {
-                        var i, r, o;
+                        var i, r, s;
                         let c = null !== (r = null === (i = l.current) || void 0 === i ? void 0 : i.getBoundingClientRect()) && void 0 !== r ? r : null;
-                        (o = {
+                        (s = {
                             name: t,
                             guildId: e,
                             disabled: n,
                             boundingRect: null != c ? c : null
                         }),
                             (0, a.j)(() => {
-                                s.setState((e) => {
+                                o.setState((e) => {
                                     var t, n;
                                     return {
                                         upsellsByGuildId: {
                                             ...(null !== (t = e.upsellsByGuildId) && void 0 !== t ? t : {}),
-                                            [o.guildId]: {
-                                                ...(null !== (n = e.upsellsByGuildId[o.guildId]) && void 0 !== n ? n : {}),
-                                                [o.name]: o
+                                            [s.guildId]: {
+                                                ...(null !== (n = e.upsellsByGuildId[s.guildId]) && void 0 !== n ? n : {}),
+                                                [s.name]: s
                                             }
                                         }
                                     };
@@ -59,16 +59,16 @@ function u(e, t) {
                     });
                 };
             if (null == i) return r(), () => {};
-            let o = (function (e) {
+            let s = (function (e) {
                 let t = e.parentNode;
                 for (; null != t && t !== document.body && !c(t); ) t = t.parentNode;
                 return c(t) ? t : null;
             })(i);
             return (
                 r(),
-                null == o || o.addEventListener('scroll', r, { passive: !0 }),
+                null == s || s.addEventListener('scroll', r, { passive: !0 }),
                 () => {
-                    null == o || o.removeEventListener('scroll', r);
+                    null == s || s.removeEventListener('scroll', r);
                 }
             );
         }, [e, t, n]),

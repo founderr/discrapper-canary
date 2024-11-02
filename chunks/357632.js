@@ -1,60 +1,60 @@
-s.r(o);
-var t = s(200651);
-s(192379);
-var r = s(106351),
-    a = s(481060),
-    E = s(933557),
-    n = s(689938);
-o.default = (e) => {
-    let { channel: o, onClose: s, onConfirm: i, transitionState: l } = e,
+o.r(n);
+var r = o(200651);
+o(192379);
+var i = o(106351),
+    l = o(481060),
+    e = o(933557),
+    a = o(388032);
+n.default = (t) => {
+    let { channel: n, onClose: o, onConfirm: s, transitionState: d } = t,
         {
-            title: d,
-            body: c,
-            confirm: _
-        } = (function (e) {
-            let o = (0, E.ZP)(e, !0);
-            return e.type === r.d.GUILD_CATEGORY
+            title: c,
+            body: h,
+            confirm: u
+        } = (function (t) {
+            let n = (0, e.ZP)(t, !0);
+            return t.type === i.d.GUILD_CATEGORY
                 ? {
-                      title: n.Z.Messages.DELETE_FAVORITES_CHANNEL_TITLE,
-                      body: n.Z.Messages.DELETE_FAVORITES_CATEGORY_BODY.format({ channelName: o }),
-                      confirm: n.Z.Messages.DELETE_FAVORITES_CATEGORY_CONFIRM
+                      title: a.intl.string(a.t['4VpUw8']),
+                      body: a.intl.format(a.t.GuhMa2, { channelName: n }),
+                      confirm: a.intl.string(a.t.xOscRk)
                   }
                 : {
-                      title: n.Z.Messages.DELETE_FAVORITES_CHANNEL_TITLE,
-                      body: n.Z.Messages.DELETE_FAVORITES_CHANNEL_BODY.format({ channelName: o }),
-                      confirm: n.Z.Messages.DELETE_FAVORITES_CHANNEL_CONFIRM
+                      title: a.intl.string(a.t['4VpUw8']),
+                      body: a.intl.format(a.t['2z/hBg'], { channelName: n }),
+                      confirm: a.intl.string(a.t.gGs6TU)
                   };
-        })(o);
-    return (0, t.jsxs)(a.ModalRoot, {
-        transitionState: l,
-        'aria-label': d,
+        })(n);
+    return (0, r.jsxs)(l.ModalRoot, {
+        transitionState: d,
+        'aria-label': c,
         children: [
-            (0, t.jsx)(a.ModalHeader, {
+            (0, r.jsx)(l.ModalHeader, {
                 separator: !1,
-                children: (0, t.jsx)(a.Heading, {
+                children: (0, r.jsx)(l.Heading, {
                     variant: 'heading-lg/semibold',
-                    children: d
-                })
-            }),
-            (0, t.jsx)(a.ModalContent, {
-                children: (0, t.jsx)(a.Text, {
-                    variant: 'text-md/normal',
-                    color: 'header-primary',
                     children: c
                 })
             }),
-            (0, t.jsxs)(a.ModalFooter, {
+            (0, r.jsx)(l.ModalContent, {
+                children: (0, r.jsx)(l.Text, {
+                    variant: 'text-md/normal',
+                    color: 'header-primary',
+                    children: h
+                })
+            }),
+            (0, r.jsxs)(l.ModalFooter, {
                 children: [
-                    (0, t.jsx)(a.Button, {
-                        onClick: i,
-                        color: a.Button.Colors.RED,
-                        children: _
-                    }),
-                    (0, t.jsx)(a.Button, {
+                    (0, r.jsx)(l.Button, {
                         onClick: s,
-                        look: a.Button.Looks.LINK,
-                        color: a.Button.Colors.PRIMARY,
-                        children: n.Z.Messages.CANCEL
+                        color: l.Button.Colors.RED,
+                        children: u
+                    }),
+                    (0, r.jsx)(l.Button, {
+                        onClick: o,
+                        look: l.Button.Looks.LINK,
+                        color: l.Button.Colors.PRIMARY,
+                        children: a.intl.string(a.t['ETE/oK'])
                     })
                 ]
             })

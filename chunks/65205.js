@@ -24,11 +24,11 @@ function a(e, t, n) {
             x: n.x,
             y: n.y + n.height
         },
-        s = {
+        o = {
             x: n.x + n.width,
             y: n.y + n.height
         };
-    return l(e, t, i, r) || l(e, t, r, s) || l(e, t, s, a) || l(e, t, a, i);
+    return l(e, t, i, r) || l(e, t, r, o) || l(e, t, o, a) || l(e, t, a, i);
 }
 n.d(t, {
     Vr: function () {

@@ -1,93 +1,93 @@
-t.r(s), t(47120);
-var a = t(200651),
-    o = t(192379),
-    l = t(481060),
-    r = t(153867),
-    n = t(663993),
-    i = t(771845),
-    h = t(981631),
-    d = t(689938),
-    c = t(861378);
-function m(e, s, t) {
+s.r(t), s(47120);
+var i = s(200651),
+    l = s(192379),
+    n = s(481060),
+    r = s(153867),
+    o = s(663993),
+    a = s(771845),
+    h = s(981631),
+    d = s(388032),
+    c = s(861378);
+function m(e, t, s) {
     return (
-        s in e
-            ? Object.defineProperty(e, s, {
-                  value: t,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: s,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[s] = t),
+            : (e[t] = s),
         e
     );
 }
-let u = (0, n.Un)({
-    createPromise: () => t.e('5609').then(t.bind(t, 336231)),
+let u = (0, o.Un)({
+    createPromise: () => s.e('5609').then(s.bind(s, 336231)),
     webpackId: 336231
 });
-class p extends o.PureComponent {
+class p extends l.PureComponent {
     render() {
         let { transitionState: e } = this.props,
-            { name: s, color: t } = this.state;
-        return (0, a.jsxs)(l.ModalRoot, {
+            { name: t, color: s } = this.state;
+        return (0, i.jsxs)(n.ModalRoot, {
             transitionState: e,
-            'aria-label': d.Z.Messages.SERVER_FOLDER_SETTINGS,
-            size: l.ModalSize.DYNAMIC,
+            'aria-label': d.intl.string(d.t.Dx7im5),
+            size: n.ModalSize.DYNAMIC,
             children: [
-                (0, a.jsxs)(l.ModalHeader, {
+                (0, i.jsxs)(n.ModalHeader, {
                     className: c.header,
                     separator: !1,
                     children: [
-                        (0, a.jsx)(l.Heading, {
+                        (0, i.jsx)(n.Heading, {
                             variant: 'heading-lg/semibold',
-                            children: d.Z.Messages.SERVER_FOLDER_SETTINGS
+                            children: d.intl.string(d.t.Dx7im5)
                         }),
-                        (0, a.jsx)(l.ModalCloseButton, { onClick: this.close })
+                        (0, i.jsx)(n.ModalCloseButton, { onClick: this.close })
                     ]
                 }),
-                (0, a.jsx)(l.ModalContent, {
-                    children: (0, a.jsxs)('form', {
+                (0, i.jsx)(n.ModalContent, {
+                    children: (0, i.jsxs)('form', {
                         onSubmit: this.handleSubmit,
                         children: [
-                            (0, a.jsx)(l.FormItem, {
-                                title: d.Z.Messages.GUILD_FOLDER_NAME,
+                            (0, i.jsx)(n.FormItem, {
+                                title: d.intl.string(d.t.tGRbjI),
                                 className: c.formItem,
-                                children: (0, a.jsx)(l.TextInput, {
+                                children: (0, i.jsx)(n.TextInput, {
                                     maxLength: h.dYL,
-                                    value: s,
+                                    value: t,
                                     onChange: this.handleNameChange,
-                                    placeholder: d.Z.Messages.SERVER_FOLDER_PLACEHOLDER,
+                                    placeholder: d.intl.string(d.t.xV9hVl),
                                     autoFocus: !0
                                 })
                             }),
-                            (0, a.jsx)(l.FormItem, {
-                                title: d.Z.Messages.GUILD_FOLDER_COLOR,
+                            (0, i.jsx)(n.FormItem, {
+                                title: d.intl.string(d.t.xpurRE),
                                 className: c.formItem,
-                                children: (0, a.jsx)(u, {
+                                children: (0, i.jsx)(u, {
                                     defaultColor: h.Wyy,
                                     colors: h.pmI,
-                                    value: null != t ? t : h.Wyy,
+                                    value: null != s ? s : h.Wyy,
                                     onChange: this.handleColorChange
                                 })
                             })
                         ]
                     })
                 }),
-                (0, a.jsx)(l.ModalFooter, {
-                    children: (0, a.jsx)(l.Button, {
+                (0, i.jsx)(n.ModalFooter, {
+                    children: (0, i.jsx)(n.Button, {
                         type: 'submit',
                         onClick: this.handleSubmit,
-                        children: d.Z.Messages.DONE
+                        children: d.intl.string(d.t.i4jeWV)
                     })
                 })
             ]
         });
     }
     constructor(...e) {
-        var s;
+        var t;
         super(...e),
             m(this, 'state', {
-                name: null !== (s = this.props.folderName) && void 0 !== s ? s : '',
+                name: null !== (t = this.props.folderName) && void 0 !== t ? t : '',
                 color: this.props.folderColor
             }),
             m(this, 'close', () => {
@@ -101,19 +101,19 @@ class p extends o.PureComponent {
             }),
             m(this, 'handleSubmit', (e) => {
                 e.preventDefault();
-                let { folderId: s } = this.props,
-                    { name: t, color: a } = this.state,
-                    o = i.ZP.getGuildFolders().map((e) =>
-                        e.folderId === s
+                let { folderId: t } = this.props,
+                    { name: s, color: i } = this.state,
+                    l = a.ZP.getGuildFolders().map((e) =>
+                        e.folderId === t
                             ? {
                                   ...e,
-                                  folderName: t,
-                                  folderColor: a
+                                  folderName: s,
+                                  folderColor: i
                               }
                             : e
                     );
-                (0, r.V1)(o), this.close();
+                (0, r.V1)(l), this.close();
             });
     }
 }
-s.default = p;
+t.default = p;

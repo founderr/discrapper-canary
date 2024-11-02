@@ -1,20 +1,20 @@
 n.d(t, {
     _: function () {
-        return I;
+        return p;
     }
 }),
     n(47120);
-var s,
-    a = n(200651),
-    r = n(192379),
-    i = n(120356),
-    l = n.n(i),
+var i,
+    r = n(200651),
+    a = n(192379),
+    s = n(120356),
+    l = n.n(s),
     o = n(692547),
     c = n(477690),
-    _ = n(162168),
-    d = n(624138),
-    E = n(229684);
-function u(e, t, n) {
+    d = n(162168),
+    u = n(624138),
+    g = n(229684);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,12 +27,12 @@ function u(e, t, n) {
         e
     );
 }
-let T = (0, d.Mg)(c.Z.GRADIENT_PROGRESS_NOTCH_WIDTH),
-    I = Object.freeze({
-        BLACK: E.black,
-        GRAY: E.gray
+let f = (0, u.Mg)(c.Z.GRADIENT_PROGRESS_NOTCH_WIDTH),
+    p = Object.freeze({
+        BLACK: g.black,
+        GRAY: g.gray
     });
-class R extends (s = r.Component) {
+class _ extends (i = a.Component) {
     componentDidMount() {
         this.computeBars(), window.addEventListener('resize', this.computeBars);
     }
@@ -40,41 +40,41 @@ class R extends (s = r.Component) {
         window.removeEventListener('resize', this.computeBars);
     }
     roundToNearestStep(e) {
-        return Math.round(e / T) * T;
+        return Math.round(e / f) * f;
     }
     getProgressStyles() {
         let { progress: e } = this.props,
             t = Math.max(0, Math.min(100, e)),
             { barWidth: n } = this.state,
-            s = Math.abs(this.roundToNearestStep((n * (100 - t)) / 100) - n);
-        return { transform: 'translateX('.concat(s, 'px)') };
+            i = Math.abs(this.roundToNearestStep((n * (100 - t)) / 100) - n);
+        return { transform: 'translateX('.concat(i, 'px)') };
     }
     getGradientStyles() {
         let { gradientEnd: e, gradientStart: t, progress: n } = this.props,
-            { barWidth: s } = this.state;
+            { barWidth: i } = this.state;
         return {
-            width: ''.concat(s, 'px'),
+            width: ''.concat(i, 'px'),
             background: n <= 0 ? 'none' : 'linear-gradient(to right, '.concat(t, ', ').concat(e, ')')
         };
     }
     render() {
         let { className: e, notchBackground: t } = this.props,
             { barWidth: n } = this.state;
-        return (0, a.jsx)('div', {
-            className: E.wrapper,
+        return (0, r.jsx)('div', {
+            className: g.wrapper,
             ref: this.sizerRef,
-            children: (0, a.jsxs)('div', {
-                className: l()(E.container, e),
+            children: (0, r.jsxs)('div', {
+                className: l()(g.container, e),
                 style: this.getGradientStyles(),
                 children: [
-                    (0, a.jsx)('div', {
-                        className: E.progress,
+                    (0, r.jsx)('div', {
+                        className: g.progress,
                         style: this.getProgressStyles()
                     }),
                     0 !== n &&
-                        (0, a.jsx)(_.Z, {
+                        (0, r.jsx)(d.Z, {
                             width: n,
-                            className: l()(E.notches, t)
+                            className: l()(g.notches, t)
                         })
                 ]
             })
@@ -82,16 +82,16 @@ class R extends (s = r.Component) {
     }
     constructor(...e) {
         super(...e),
-            u(this, 'state', { barWidth: 0 }),
-            u(this, 'sizerRef', r.createRef()),
-            u(this, 'computeBars', () => {
+            m(this, 'state', { barWidth: 0 }),
+            m(this, 'sizerRef', a.createRef()),
+            m(this, 'computeBars', () => {
                 let { current: e } = this.sizerRef;
                 this.setState({ barWidth: null != e ? this.roundToNearestStep(e.clientWidth) : 0 });
             });
     }
 }
-u(R, 'defaultProps', {
+m(_, 'defaultProps', {
     gradientStart: o.Z.unsafe_rawColors.YELLOW_260.css,
     gradientEnd: o.Z.unsafe_rawColors.GREEN_360.css
 }),
-    (t.Z = R);
+    (t.Z = _);

@@ -4,21 +4,21 @@ n.d(t, {
     }
 }),
     n(47120);
-var s = n(200651),
-    a = n(192379),
-    i = n(481060),
-    r = n(457414),
-    l = n(311173),
-    o = n(689938),
+var i = n(200651),
+    r = n(192379),
+    l = n(481060),
+    s = n(457414),
+    a = n(311173),
+    o = n(388032),
     c = n(343189);
 function d(e) {
     var t;
     let { rule: n, onChangeRule: d, collapsed: u = !1 } = e,
-        [_, I] = a.useState(!u),
-        E = a.useCallback(() => {
-            I(!_);
-        }, [_, I]),
-        T = a.useCallback(
+        [m, h] = r.useState(!u),
+        g = r.useCallback(() => {
+            h(!m);
+        }, [m, h]),
+        x = r.useCallback(
             (e) => {
                 d({
                     ...n,
@@ -30,36 +30,36 @@ function d(e) {
             },
             [d, n]
         );
-    return (0, r.S)(n.triggerType)
-        ? (0, s.jsx)(i.Collapsible, {
-              isExpanded: _,
-              collapsibleContent: (0, s.jsx)(l.Z, {
+    return (0, s.S)(n.triggerType)
+        ? (0, i.jsx)(l.Collapsible, {
+              isExpanded: m,
+              collapsibleContent: (0, i.jsx)(a.Z, {
                   rule: n,
-                  onChangeText: T,
+                  onChangeText: x,
                   className: c.textAreaContainer,
                   initialValue: null === (t = n.triggerMetadata) || void 0 === t ? void 0 : t.regexPatterns
               }),
               className: c.collapseable,
               children: (e) => {
                   let { onClick: t } = e;
-                  return (0, s.jsx)(i.Clickable, {
+                  return (0, i.jsx)(l.Clickable, {
                       onClick: (e) => {
-                          E(), t(e);
+                          g(), t(e);
                       },
-                      children: (0, s.jsxs)('div', {
+                      children: (0, i.jsxs)('div', {
                           className: c.header,
                           children: [
-                              (0, s.jsx)(i.Heading, {
+                              (0, i.jsx)(l.Heading, {
                                   variant: 'text-sm/medium',
-                                  children: o.Z.Messages.GUILD_AUTOMOD_REGEX_TEXTAREA_TITLE
+                                  children: o.intl.string(o.t.dnunm5)
                               }),
-                              _
-                                  ? (0, s.jsx)(i.ChevronSmallUpIcon, {
+                              m
+                                  ? (0, i.jsx)(l.ChevronSmallUpIcon, {
                                         size: 'md',
                                         color: 'currentColor',
                                         className: c.arrow
                                     })
-                                  : (0, s.jsx)(i.ChevronSmallDownIcon, {
+                                  : (0, i.jsx)(l.ChevronSmallDownIcon, {
                                         size: 'md',
                                         color: 'currentColor',
                                         className: c.arrow

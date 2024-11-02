@@ -1,4 +1,4 @@
-t.d(e, {
+e.d(t, {
     ER: function () {
         return d;
     },
@@ -6,54 +6,54 @@ t.d(e, {
         return _;
     },
     s$: function () {
-        return E;
+        return f;
     }
 }),
-    t(724458),
-    t(47120),
-    t(392711);
-var i = t(19780),
-    s = t(5192),
-    l = t(700785),
-    a = t(427679),
-    r = t(157925),
-    c = t(981631),
-    o = t(71080),
-    u = t(689938);
-function d(n, e, t, i) {
-    let l = e[0],
-        a = s.ZP.getName(n, t, l),
-        r = null != i ? i : e.length;
-    return 1 === r && null != l
-        ? a
-        : null == l
-          ? u.Z.Messages.SPEAKING_COUNT.format({ count: r })
-          : u.Z.Messages.USER_SUMMARY_WITH_OTHERS.format({
-                name: a,
-                count: r - 1
+    e(724458),
+    e(47120),
+    e(392711);
+var i = e(19780),
+    l = e(5192),
+    r = e(700785),
+    c = e(427679),
+    o = e(157925),
+    a = e(981631),
+    s = e(71080),
+    u = e(388032);
+function d(n, t, e, i) {
+    let r = t[0],
+        c = l.ZP.getName(n, e, r),
+        o = null != i ? i : t.length;
+    return 1 === o && null != r
+        ? c
+        : null == r
+          ? u.intl.formatToPlainString(u.t.chmM9P, { count: o })
+          : u.intl.formatToPlainString(u.t.GhkJ29, {
+                name: c,
+                count: o - 1
             });
 }
-function _(n, e) {
+function _(n, t) {
     switch (n) {
-        case o.aC.OWNER:
-            return u.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_OWNER;
-        case o.aC.ADMINISTRATOR:
-            return u.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_ADMINISTRATOR;
-        case o.aC.MEMBER:
-        case o.aC.ROLE:
-            return e ? u.Z.Messages.CHANNEL_PERMISSIONS_CANNOT_REMOVE_PERMISSIONS : u.Z.Messages.CHANNEL_PERMISSIONS_REMOVE_MODERATOR_TOOLTIP;
-        case o.aC.EMPTY_STATE:
+        case s.aC.OWNER:
+            return u.intl.string(u.t.icuNBA);
+        case s.aC.ADMINISTRATOR:
+            return u.intl.string(u.t.eTmN5e);
+        case s.aC.MEMBER:
+        case s.aC.ROLE:
+            return t ? u.intl.string(u.t.Hw3XW1) : u.intl.string(u.t.YieyPj);
+        case s.aC.EMPTY_STATE:
     }
     return null;
 }
-function E(n) {
-    let e = a.Z.getStageInstanceByChannel(n.id);
+function f(n) {
+    let t = c.Z.getStageInstanceByChannel(n.id);
     return {
         channel_id: n.id,
         guild_id: n.guild_id,
-        topic: null == e ? void 0 : e.topic,
+        topic: null == t ? void 0 : t.topic,
         media_session_id: i.Z.getMediaSessionId(),
-        request_to_speak_state: l.Uu(c.Plq.REQUEST_TO_SPEAK, n) ? r.BM.EVERYONE : r.BM.NO_ONE,
-        stage_instance_id: null == e ? void 0 : e.id
+        request_to_speak_state: r.Uu(a.Plq.REQUEST_TO_SPEAK, n) ? o.BM.EVERYONE : o.BM.NO_ONE,
+        stage_instance_id: null == t ? void 0 : t.id
     };
 }

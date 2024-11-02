@@ -1,50 +1,50 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return E;
+        return h;
     }
 });
-var n = t(200651);
-t(192379);
-var a = t(120356),
-    i = t.n(a),
-    r = t(481060),
-    o = t(654904),
-    l = t(993413),
-    c = t(486324),
-    d = t(689938),
-    _ = t(680029);
-let u = [
+var i = n(200651);
+n(192379);
+var s = n(120356),
+    r = n.n(s),
+    l = n(481060),
+    a = n(654904),
+    o = n(993413),
+    c = n(486324),
+    d = n(388032),
+    u = n(680029);
+let m = [
     {
         name: 'gif',
         extensions: ['gif']
     }
 ];
-function E(e) {
-    let { showRemoveAvatarButton: s, errors: t, onAvatarChange: a, sectionTitle: E, changeAvatarButtonText: T, guildId: S, className: I, disabled: N = !1, isTryItOutFlow: m = !1, forcedDivider: C, withHighlight: A = !1 } = e,
-        g = A ? r.ShinyButton : r.Button;
-    return (0, n.jsx)(l.Z, {
-        className: I,
-        title: E,
-        errors: t,
-        disabled: N,
+function h(e) {
+    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: h, changeAvatarButtonText: g, guildId: p, className: x, disabled: S = !1, isTryItOutFlow: T = !1, forcedDivider: C, withHighlight: _ = !1 } = e,
+        E = _ ? l.ShinyButton : l.Button;
+    return (0, i.jsx)(o.Z, {
+        className: x,
+        title: h,
+        errors: n,
+        disabled: S,
         forcedDivider: C,
-        children: (0, n.jsxs)('div', {
-            className: _.buttonsContainer,
+        children: (0, i.jsxs)('div', {
+            className: u.buttonsContainer,
             children: [
-                (0, n.jsx)(g, {
-                    className: i()({ [_.buttonHighlighted]: A }),
-                    size: r.Button.Sizes.SMALL,
-                    onClick: () => (0, o.$r)(c.pC.AVATAR, S, m, m ? u : void 0),
-                    children: null != T ? T : d.Z.Messages.USER_SETTINGS_CHANGE_AVATAR
+                (0, i.jsx)(E, {
+                    className: r()({ [u.buttonHighlighted]: _ }),
+                    size: l.Button.Sizes.SMALL,
+                    onClick: () => (0, a.$r)(c.pC.AVATAR, p, T, T ? m : void 0),
+                    children: null != g ? g : d.intl.string(d.t['4OynCA'])
                 }),
-                s &&
-                    (0, n.jsx)(r.Button, {
-                        className: _.removeButton,
-                        color: r.Button.Colors.PRIMARY,
-                        look: r.Button.Looks.LINK,
-                        size: r.Button.Sizes.SMALL,
-                        onClick: () => a(null),
-                        children: null != S ? d.Z.Messages.USER_SETTINGS_RESET_AVATAR : d.Z.Messages.USER_SETTINGS_REMOVE_AVATAR
+                t &&
+                    (0, i.jsx)(l.Button, {
+                        className: u.removeButton,
+                        color: l.Button.Colors.PRIMARY,
+                        look: l.Button.Looks.LINK,
+                        size: l.Button.Sizes.SMALL,
+                        onClick: () => s(null),
+                        children: null != p ? d.intl.string(d.t.TDjKDg) : d.intl.string(d.t.twB3f3)
                     })
             ]
         })

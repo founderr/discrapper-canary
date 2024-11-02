@@ -8,34 +8,34 @@ var r = n(836560),
     u = n(996106),
     c = n(981631);
 let d = c.V6Z + c.frH - 1;
-function _(e, t) {
+function f(e, t) {
     if (null == e || null == t) throw Error('cmd and name required');
     return ''.concat(e, ':').concat(t);
 }
-let E = s.parse(location.search.slice(1)),
-    f = parseInt(null != E.rpc && '' !== E.rpc ? E.rpc : c.V6Z, 10),
-    h = null;
-class p extends r.EventEmitter {
+let _ = s.parse(location.search.slice(1)),
+    h = parseInt(null != _.rpc && '' !== _.rpc ? _.rpc : c.V6Z, 10),
+    p = null;
+class m extends r.EventEmitter {
     get port() {
-        return f;
+        return h;
     }
     get connected() {
-        return null != h && h.readyState === WebSocket.OPEN;
+        return null != p && p.readyState === WebSocket.OPEN;
     }
     connect() {
-        if (null == h) {
-            if (f > d) {
-                (f = c.V6Z), this.emit('disconnected');
+        if (null == p) {
+            if (h > d) {
+                (h = c.V6Z), this.emit('disconnected');
                 return;
             }
             try {
-                h = new WebSocket('ws://127.0.0.1:'.concat(this.port, '/?v=').concat(c.X6Q));
+                p = new WebSocket('ws://127.0.0.1:'.concat(this.port, '/?v=').concat(c.X6Q));
             } catch (e) {
                 this.disconnect({ code: c.$VG.CLOSE_ABNORMAL });
                 return;
             }
-            null != h &&
-                ((h.onmessage = (e) => {
+            null != p &&
+                ((p.onmessage = (e) => {
                     let t;
                     try {
                         if ('string' == typeof e.data) t = JSON.parse(e.data);
@@ -54,27 +54,27 @@ class p extends r.EventEmitter {
                             this.emit('error', new u.Z({ errorCode: a.code }, a.message)), this.disconnect();
                             return;
                         }
-                        this.emit(_(n, r), a);
+                        this.emit(f(n, r), a);
                         return;
                     }
                     let s = null;
-                    r === c.zMe.ERROR && ((s = new u.Z({ errorCode: a.code }, a.message)), (a = null)), this.emit(_(n, i), s, a);
+                    r === c.zMe.ERROR && ((s = new u.Z({ errorCode: a.code }, a.message)), (a = null)), this.emit(f(n, i), s, a);
                 }),
-                (h.onclose = h.onerror = (e) => this.disconnect(e)));
+                (p.onclose = p.onerror = (e) => this.disconnect(e)));
         }
     }
     disconnect(e) {
         if (null != e && 'code' in e && [c.$VG.CLOSE_ABNORMAL, c.$VG.INVALID_CLIENTID].includes(e.code)) {
-            f++, (h = null), this.connect();
+            h++, (p = null), this.connect();
             return;
         }
-        null != h && (this.emit('disconnected'), h.close(), (h = null));
+        null != p && (this.emit('disconnected'), p.close(), (p = null));
     }
     subscribe(e, t, n) {
-        return this.on(_(c.Etm.DISPATCH, e), n), this.request(c.Etm.SUBSCRIBE, t, e);
+        return this.on(f(c.Etm.DISPATCH, e), n), this.request(c.Etm.SUBSCRIBE, t, e);
     }
     unsubscribe(e, t, n) {
-        return this.removeListener(_(c.Etm.DISPATCH, e), n), this.request(c.Etm.UNSUBSCRIBE, t, e);
+        return this.removeListener(f(c.Etm.DISPATCH, e), n), this.request(c.Etm.UNSUBSCRIBE, t, e);
     }
     request(e, t, n) {
         return new Promise((r, i) => {
@@ -95,7 +95,7 @@ class p extends r.EventEmitter {
                     evt: n,
                     nonce: a
                 });
-            this.once(_(e, a), (e, t) => (null != e ? i(e) : r(t))), null == h || h.send(s);
+            this.once(f(e, a), (e, t) => (null != e ? i(e) : r(t))), null == p || p.send(s);
         });
     }
     requestOnce(e, t, n) {
@@ -131,4 +131,4 @@ class p extends r.EventEmitter {
         return window.open('http://127.0.0.1:'.concat(this.port, '/rpc?v=').concat(c.X6Q, '&payload=').concat(r, '&callback=').concat(i), '_self'), new Promise(() => null);
     }
 }
-t.default = new p();
+t.default = new m();

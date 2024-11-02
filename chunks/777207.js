@@ -1,6 +1,6 @@
 n.d(t, {
     x: function () {
-        return E;
+        return _;
     }
 });
 var r = n(200651),
@@ -12,24 +12,24 @@ var r = n(200651),
     u = n(692547),
     c = n(56077),
     d = n(654165);
-let _ = Object.fromEntries(Object.keys(u.Z.colors).map((e) => [l()(e), e])),
-    E = i.forwardRef(function (e, t) {
+let f = Object.fromEntries(Object.keys(u.Z.colors).map((e) => [l()(e), e])),
+    _ = i.forwardRef(function (e, t) {
         let n,
-            { variant: i, tag: a = 'div', selectable: o = !1, className: l, lineClamp: E, color: f, tabularNumbers: h = !1, scaleFontToUserSetting: p = !1, ...I } = e,
-            m = '',
-            T = {};
+            { variant: i, tag: a = 'div', selectable: o = !1, className: l, lineClamp: _, color: h, tabularNumbers: p = !1, scaleFontToUserSetting: m = !1, ...g } = e,
+            E = '',
+            v = {};
         if (
-            (null != E &&
-                (1 === E
-                    ? (m = c.lineClamp1)
-                    : ((m = c.lineClamp2Plus),
-                      (T = {
-                          lineClamp: E,
-                          WebkitLineClamp: E
+            (null != _ &&
+                (1 === _
+                    ? (E = c.lineClamp1)
+                    : ((E = c.lineClamp2Plus),
+                      (v = {
+                          lineClamp: _,
+                          WebkitLineClamp: _
                       }))),
-            void 0 !== f)
+            void 0 !== h)
         )
-            switch (f) {
+            switch (h) {
                 case 'currentColor':
                     n = 'currentColor';
                     break;
@@ -40,29 +40,29 @@ let _ = Object.fromEntries(Object.keys(u.Z.colors).map((e) => [l()(e), e])),
                     n = 'white';
                     break;
                 default:
-                    var S;
-                    n = null === (S = u.Z.colors[_[f]]) || void 0 === S ? void 0 : S.css;
+                    var I;
+                    n = null === (I = u.Z.colors[f[h]]) || void 0 === I ? void 0 : I.css;
             }
-        let g = {
+        let S = {
             color: n,
-            ...T,
-            ...I.style
+            ...v,
+            ...g.style
         };
         return (0, r.jsx)(a, {
             ref: t,
             className: s()(
                 {
-                    [c.defaultColor]: void 0 === f,
+                    [c.defaultColor]: void 0 === h,
                     [c.selectable]: o,
-                    [c.tabularNumbers]: h,
-                    [d.fontScaling]: p
+                    [c.tabularNumbers]: p,
+                    [d.fontScaling]: m
                 },
-                m,
+                E,
                 d[i],
                 l
             ),
-            ...I,
-            style: Object.values(g).filter(Boolean).length > 0 ? g : void 0,
+            ...g,
+            style: Object.values(S).filter(Boolean).length > 0 ? S : void 0,
             'data-text-variant': i
         });
     });

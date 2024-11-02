@@ -1,18 +1,18 @@
-s.d(l, {
+t.d(l, {
     Z: function () {
         return r;
     }
 });
-var t = s(512722),
-    n = s.n(t),
-    i = s(442837),
-    a = s(339085),
-    o = s(633302);
+var n = t(512722),
+    i = t.n(n),
+    s = t(442837),
+    a = t(339085),
+    o = t(633302);
 function r(e) {
-    let { emojiId: l, emojiName: s } = e,
-        t = (0, i.e7)([a.ZP], () => (null != l ? a.ZP.getCustomEmojiById(l) : null));
-    if (null != t || null != s) {
-        if (null == l) return n()(null != s, 'emojiName must be defined if emojiId is not defined'), o.ZP.convertSurrogateToName(s, !1);
-        else return null == t ? void 0 : t.name;
+    let { emojiId: l, emojiName: t } = e,
+        n = (0, s.e7)([a.ZP], () => (null != l ? a.ZP.getCustomEmojiById(l) : null));
+    if (null != n || null != t) {
+        if (null == l) return i()(null != t, 'emojiName must be defined if emojiId is not defined'), o.ZP.convertSurrogateToName(t, !1);
+        else return null == n ? void 0 : n.name;
     }
 }

@@ -1,119 +1,119 @@
-a(47120);
-var t = a(200651),
-    r = a(192379),
-    i = a(120356),
-    n = a.n(i),
-    l = a(481060),
-    o = a(219369),
-    c = a(981631),
-    d = a(689938),
-    E = a(70047);
-s.Z = (e) => {
-    let { headerId: s, guild: a, onAgreedChange: i } = e,
-        [S, _] = r.useState(!1),
-        [m, R] = r.useState(!1),
-        [x, u] = r.useState(!1);
-    r.useEffect(() => {
-        S && m && x ? i(!0) : i(!1);
-    }, [S, m, x, i]);
-    let g = d.Z.Messages.SERVER_DISCOVERY_RULES_COMPLY_GUIDELINES.format({
+i(47120);
+var s = i(200651),
+    a = i(192379),
+    n = i(120356),
+    r = i.n(n),
+    l = i(481060),
+    o = i(219369),
+    c = i(981631),
+    d = i(388032),
+    m = i(70047);
+t.Z = (e) => {
+    let { headerId: t, guild: i, onAgreedChange: n } = e,
+        [u, x] = a.useState(!1),
+        [g, h] = a.useState(!1),
+        [p, v] = a.useState(!1);
+    a.useEffect(() => {
+        u && g && p ? n(!0) : n(!1);
+    }, [u, g, p, n]);
+    let f = d.intl.format(d.t.S2lVJS, {
         onCommunityGuidelinesClick: () =>
             (0, o.lW)({
                 articleId: c.BhN.PUBLIC_GUILD_GUILDLINES,
-                guildId: a.id,
+                guildId: i.id,
                 modalStep: o.tK.AGREE_TO_RULES
             }),
         onDiscoveryGuidelinesClick: () =>
             (0, o.lW)({
                 articleId: c.BhN.SERVER_DISCOVERY_GUIDELINES,
-                guildId: a.id,
+                guildId: i.id,
                 modalStep: o.tK.AGREE_TO_RULES
             })
     });
-    return (0, t.jsxs)('div', {
-        className: E.container,
+    return (0, s.jsxs)('div', {
+        className: m.container,
         children: [
-            (0, t.jsxs)('div', {
-                className: E.content,
+            (0, s.jsxs)('div', {
+                className: m.content,
                 children: [
-                    (0, t.jsx)('div', { className: n()(E.stepImage, E.checkImage) }),
-                    (0, t.jsx)(l.Heading, {
+                    (0, s.jsx)('div', { className: r()(m.stepImage, m.checkImage) }),
+                    (0, s.jsx)(l.Heading, {
                         variant: 'heading-xl/semibold',
-                        className: E.header,
-                        id: s,
-                        children: d.Z.Messages.SERVER_DISCOVERY_AGREE_TO_RULES
+                        className: m.header,
+                        id: t,
+                        children: d.intl.string(d.t.Q8OFNz)
                     }),
-                    (0, t.jsx)(l.Text, {
+                    (0, s.jsx)(l.Text, {
                         color: 'none',
                         variant: 'text-md/normal',
-                        className: E.headerCaption,
-                        children: d.Z.Messages.SERVER_DISCOVERY_RULES_PAGE_SUBHEADING
+                        className: m.headerCaption,
+                        children: d.intl.string(d.t['20piMT'])
                     })
                 ]
             }),
-            (0, t.jsxs)('div', {
-                className: E.form,
+            (0, s.jsxs)('div', {
+                className: m.form,
                 children: [
-                    (0, t.jsx)(l.FormTitle, {
+                    (0, s.jsx)(l.FormTitle, {
                         required: !0,
-                        children: d.Z.Messages.SERVER_DISCOVERY_RULES_FORM_LABEL
+                        children: d.intl.string(d.t.HsM7a2)
                     }),
-                    (0, t.jsx)('div', {
-                        className: E.checkboxWrapper,
-                        children: (0, t.jsxs)(l.Checkbox, {
+                    (0, s.jsx)('div', {
+                        className: m.checkboxWrapper,
+                        children: (0, s.jsxs)(l.Checkbox, {
                             type: l.Checkbox.Types.ROW,
-                            value: S,
+                            value: u,
                             align: l.Checkbox.Aligns.TOP,
-                            onChange: () => _(!S),
+                            onChange: () => x(!u),
                             children: [
-                                (0, t.jsx)(l.Text, {
+                                (0, s.jsx)(l.Text, {
                                     variant: 'text-md/semibold',
-                                    className: E.checkboxTitle,
-                                    children: d.Z.Messages.SERVER_DISCOVERY_RULES_HEALTHY_ENV_HEADING
+                                    className: m.checkboxTitle,
+                                    children: d.intl.string(d.t.jIi9go)
                                 }),
-                                (0, t.jsx)(l.Text, {
+                                (0, s.jsx)(l.Text, {
                                     variant: 'text-sm/normal',
-                                    children: d.Z.Messages.SERVER_DISCOVERY_RULES_HEALTHY_ENV_DESCRIPTION
+                                    children: d.intl.string(d.t['4uUAXl'])
                                 })
                             ]
                         })
                     }),
-                    (0, t.jsx)('div', {
-                        className: E.checkboxWrapper,
-                        children: (0, t.jsxs)(l.Checkbox, {
+                    (0, s.jsx)('div', {
+                        className: m.checkboxWrapper,
+                        children: (0, s.jsxs)(l.Checkbox, {
                             type: l.Checkbox.Types.ROW,
                             align: l.Checkbox.Aligns.TOP,
-                            value: m,
-                            onChange: () => R(!m),
+                            value: g,
+                            onChange: () => h(!g),
                             children: [
-                                (0, t.jsx)(l.Text, {
+                                (0, s.jsx)(l.Text, {
                                     variant: 'text-md/semibold',
-                                    className: E.checkboxTitle,
-                                    children: d.Z.Messages.SERVER_DISCOVERY_RULES_SEXUAL_CONTENT_HEADING
+                                    className: m.checkboxTitle,
+                                    children: d.intl.string(d.t.iwnCh4)
                                 }),
-                                (0, t.jsx)(l.Text, {
+                                (0, s.jsx)(l.Text, {
                                     variant: 'text-sm/normal',
-                                    children: d.Z.Messages.SERVER_DISCOVERY_RULES_SEXUAL_CONTENT_DESCRIPTION
+                                    children: d.intl.string(d.t.UKFzER)
                                 })
                             ]
                         })
                     }),
-                    (0, t.jsx)('div', {
-                        className: E.checkboxWrapper,
-                        children: (0, t.jsxs)(l.Checkbox, {
+                    (0, s.jsx)('div', {
+                        className: m.checkboxWrapper,
+                        children: (0, s.jsxs)(l.Checkbox, {
                             type: l.Checkbox.Types.ROW,
                             align: l.Checkbox.Aligns.TOP,
-                            value: x,
-                            onChange: () => u(!x),
+                            value: p,
+                            onChange: () => v(!p),
                             children: [
-                                (0, t.jsx)(l.Text, {
+                                (0, s.jsx)(l.Text, {
                                     variant: 'text-md/semibold',
-                                    className: E.checkboxTitle,
-                                    children: g
+                                    className: m.checkboxTitle,
+                                    children: f
                                 }),
-                                (0, t.jsx)(l.Text, {
+                                (0, s.jsx)(l.Text, {
                                     variant: 'text-sm/normal',
-                                    children: d.Z.Messages.SERVER_DISCOVERY_RULES_COMPLY_GUIDELINES_DESCRIPTION
+                                    children: d.intl.string(d.t.u0Go2t)
                                 })
                             ]
                         })

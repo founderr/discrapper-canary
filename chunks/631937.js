@@ -4,10 +4,10 @@ n.d(t, {
     }
 });
 var i = n(192379),
-    s = n(442837),
-    a = n(661111),
-    l = n(706454),
-    r = n(306680),
+    l = n(442837),
+    r = n(661111),
+    a = n(706454),
+    s = n(306680),
     o = n(626135),
     c = n(802098),
     u = n(193701),
@@ -15,27 +15,27 @@ var i = n(192379),
     h = n(981631);
 function m(e) {
     let t = (0, u.Z)(e),
-        n = (0, s.e7)([l.default], () => l.default.locale),
-        m = (0, s.e7)([c.Z], () => c.Z.getChangelog(null != t ? t : '', n), [t, n]),
+        n = (0, l.e7)([a.default], () => a.default.locale),
+        m = (0, l.e7)([c.Z], () => c.Z.getChangelog(null != t ? t : '', n), [t, n]),
         p = (0, d.Z)(e),
-        _ = i.useRef(p ? Date.now() : null),
-        f = (0, s.e7)([r.ZP], () => r.ZP.getUnreadCount(e), [e]);
+        f = i.useRef(p ? Date.now() : null),
+        g = (0, l.e7)([s.ZP], () => s.ZP.getUnreadCount(e), [e]);
     i.useEffect(() => {
-        _.current = Date.now();
+        f.current = Date.now();
     }, [p]),
         i.useEffect(() => {
-            p && null != t && a.Z.fetchChangelog(t, n, !0);
+            p && null != t && r.Z.fetchChangelog(t, n, !0);
         }, [t, n, p]),
         i.useEffect(() => {
             p &&
                 null != m &&
                 o.default.track(h.rMx.CHANGE_LOG_OPENED, {
                     change_log_id: ''.concat(m.date, ':').concat(m.revision),
-                    unread_count: f
+                    unread_count: g
                 });
         }, [p, m]),
         i.useEffect(() => {
-            let e = _.current;
+            let e = f.current;
             return () => {
                 p &&
                     null != m &&
@@ -43,9 +43,9 @@ function m(e) {
                     (o.default.track(h.rMx.CHANGE_LOG_CLOSED, {
                         seconds_open: Math.round((Date.now() - e) / 1000),
                         change_log_id: ''.concat(m.date, ':').concat(m.revision),
-                        unread_count: f
+                        unread_count: g
                     }),
-                    (_.current = 0));
+                    (f.current = 0));
             };
         }, [p, m]);
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 });
 var r = n(200651),
@@ -12,16 +12,16 @@ var r = n(200651),
     u = n(688465),
     c = n(63063),
     d = n(689079),
-    _ = n(981631),
-    E = n(689938),
-    f = n(412825);
-function h(e) {
+    f = n(981631),
+    _ = n(388032),
+    h = n(412825);
+function p(e) {
     var t;
-    let { className: a, activeCommand: h } = e,
-        p = i.useCallback(
+    let { className: a, activeCommand: p } = e,
+        m = i.useCallback(
             (e) => {
                 var t;
-                let i = null == h ? void 0 : null === (t = h.rootCommand) || void 0 === t ? void 0 : t.id;
+                let i = null == p ? void 0 : null === (t = p.rootCommand) || void 0 === t ? void 0 : t.id;
                 if (null == i) {
                     e.preventDefault();
                     return;
@@ -32,23 +32,23 @@ function h(e) {
                         (0, r.jsx)(e, {
                             ...t,
                             id: i,
-                            label: E.Z.Messages.COPY_ID_COMMAND
+                            label: _.intl.string(_.t.oJ1Mu7)
                         });
                 });
             },
-            [null == h ? void 0 : null === (t = h.rootCommand) || void 0 === t ? void 0 : t.id]
+            [null == p ? void 0 : null === (t = p.rootCommand) || void 0 === t ? void 0 : t.id]
         );
-    return null == h
+    return null == p
         ? null
         : (0, r.jsxs)('div', {
-              className: s()(a, f.bar),
-              onContextMenu: p,
+              className: s()(a, h.bar),
+              onContextMenu: m,
               children: [
                   (0, r.jsx)(u.Z, {}),
                   (0, r.jsxs)(o.Text, {
                       variant: 'text-sm/normal',
                       color: 'text-muted',
-                      children: [E.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EDUCATION.format({ betaUserLimit: d.um }), E.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_LEARN_MORE.format({ learnMoreUrl: c.Z.getArticleURL(_.BhN.USING_APPS_FAQ) })]
+                      children: [_.intl.format(_.t.AlCInJ, { betaUserLimit: d.um }), _.intl.format(_.t.U1zEqq, { learnMoreUrl: c.Z.getArticleURL(f.BhN.USING_APPS_FAQ) })]
                   })
               ]
           });

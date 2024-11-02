@@ -1,31 +1,31 @@
 n.d(t, {
     DC: function () {
-        return o;
+        return s;
     },
     ZR: function () {
         return u;
     }
 });
-var l = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(657707),
-    i = n(297781);
+var l = n(657707),
+    a = n(297781);
 n(709054);
 var r = n(528567);
 n(814059);
-var s = n(689938);
-function o(e) {
+var o = n(388032);
+function s(e) {
     let { value: t, statisticId: n } = e,
-        a = s.Z.Messages.MEMBER_LIST_CONTENT_FEED_LEADERBOARD_STATISTIC_VALUE.format({
+        l = o.intl.formatToPlainString(o.t.yhdo8v, {
             value: t,
             statisticName: (0, r.C)(n)
         });
-    return (0, l.jsx)(u, { text: a });
+    return (0, i.jsx)(u, { text: l });
 }
 function u(e) {
     let { text: t } = e;
-    return (0, l.jsx)(i.ej, {
-        Icon: a.hAD,
+    return (0, i.jsx)(a.ej, {
+        Icon: l.hAD,
         text: t
     });
 }

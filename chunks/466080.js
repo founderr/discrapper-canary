@@ -1,26 +1,26 @@
-s.r(n),
-    s.d(n, {
+r.r(n),
+    r.d(n, {
         default: function () {
-            return a;
+            return c;
         }
     });
-var t = s(200651);
-s(192379);
-var r = s(481060),
-    o = s(689938);
-function a(e) {
-    let { onConfirm: n, onBack: s, ...a } = e;
-    return (0, t.jsx)(r.ConfirmModal, {
-        header: o.Z.Messages.MESSAGE_FORWARD_STAFF_NON_STAFF_TITLE,
-        confirmText: o.Z.Messages.MESSAGE_FORWARD_STAFF_NON_STAFF_CONFIRM,
-        cancelText: o.Z.Messages.BACK,
-        confirmButtonColor: r.Button.Colors.BRAND,
+var i = r(200651);
+r(192379);
+var e = r(481060),
+    o = r(388032);
+function c(t) {
+    let { onConfirm: n, onBack: r, ...c } = t;
+    return (0, i.jsx)(e.ConfirmModal, {
+        header: o.intl.string(o.t.YrV3Iy),
+        confirmText: o.intl.string(o.t.X7eUJi),
+        cancelText: o.intl.string(o.t['13/7kZ']),
+        confirmButtonColor: e.Button.Colors.BRAND,
         onConfirm: n,
-        onCancel: s,
-        ...a,
-        children: (0, t.jsx)(r.Text, {
+        onCancel: r,
+        ...c,
+        children: (0, i.jsx)(e.Text, {
             variant: 'text-md/medium',
-            children: o.Z.Messages.MESSAGE_FORWARD_STAFF_NON_STAFF_CONTENT
+            children: o.intl.string(o.t.MXSMtr)
         })
     });
 }

@@ -47,16 +47,16 @@ if ('object' == typeof performance && 'function' == typeof performance.now) {
 }
 var c = [],
     d = [],
-    _ = 1,
-    E = null,
-    f = 3,
-    h = !1,
+    f = 1,
+    _ = null,
+    h = 3,
     p = !1,
-    I = !1,
-    m = 'function' == typeof setTimeout ? setTimeout : null,
-    T = 'function' == typeof clearTimeout ? clearTimeout : null,
-    S = 'undefined' != typeof setImmediate ? setImmediate : null;
-function g(e) {
+    m = !1,
+    g = !1,
+    E = 'function' == typeof setTimeout ? setTimeout : null,
+    v = 'function' == typeof clearTimeout ? clearTimeout : null,
+    I = 'undefined' != typeof setImmediate ? setImmediate : null;
+function S(e) {
     for (var t = r(d); null !== t; ) {
         if (null === t.callback) i(d);
         else if (t.startTime <= e) i(d), (t.sortIndex = t.expirationTime), n(c, t);
@@ -64,79 +64,79 @@ function g(e) {
         t = r(d);
     }
 }
-function A(e) {
-    if (((I = !1), g(e), !p)) {
-        if (null !== r(c)) (p = !0), P(N);
+function T(e) {
+    if (((g = !1), S(e), !m)) {
+        if (null !== r(c)) (m = !0), w(b);
         else {
             var t = r(d);
-            null !== t && U(A, t.startTime - e);
+            null !== t && M(T, t.startTime - e);
         }
     }
 }
-function N(e, n) {
-    (p = !1), I && ((I = !1), T(v), (v = -1)), (h = !0);
-    var a = f;
+function b(e, n) {
+    (m = !1), g && ((g = !1), v(N), (N = -1)), (p = !0);
+    var a = h;
     try {
-        for (g(n), E = r(c); null !== E && (!(E.expirationTime > n) || (e && !D())); ) {
-            var s = E.callback;
+        for (S(n), _ = r(c); null !== _ && (!(_.expirationTime > n) || (e && !O())); ) {
+            var s = _.callback;
             if ('function' == typeof s) {
-                (E.callback = null), (f = E.priorityLevel);
-                var o = s(E.expirationTime <= n);
-                (n = t.unstable_now()), 'function' == typeof o ? (E.callback = o) : E === r(c) && i(c), g(n);
+                (_.callback = null), (h = _.priorityLevel);
+                var o = s(_.expirationTime <= n);
+                (n = t.unstable_now()), 'function' == typeof o ? (_.callback = o) : _ === r(c) && i(c), S(n);
             } else i(c);
-            E = r(c);
+            _ = r(c);
         }
-        if (null !== E) var l = !0;
+        if (null !== _) var l = !0;
         else {
             var u = r(d);
-            null !== u && U(A, u.startTime - n), (l = !1);
+            null !== u && M(T, u.startTime - n), (l = !1);
         }
         return l;
     } finally {
-        (E = null), (f = a), (h = !1);
+        (_ = null), (h = a), (p = !1);
     }
 }
 'undefined' != typeof navigator && void 0 !== navigator.scheduling && void 0 !== navigator.scheduling.isInputPending && navigator.scheduling.isInputPending.bind(navigator.scheduling);
-var R = !1,
-    O = null,
-    v = -1,
+var y = !1,
+    A = null,
+    N = -1,
     C = 5,
-    L = -1;
-function D() {
-    return !(t.unstable_now() - L < C);
+    R = -1;
+function O() {
+    return !(t.unstable_now() - R < C);
 }
-function y() {
-    if (null !== O) {
+function D() {
+    if (null !== A) {
         var e = t.unstable_now();
-        L = e;
+        R = e;
         var n = !0;
         try {
-            n = O(!0, e);
+            n = A(!0, e);
         } finally {
-            n ? s() : ((R = !1), (O = null));
+            n ? s() : ((y = !1), (A = null));
         }
-    } else R = !1;
+    } else y = !1;
 }
-if ('function' == typeof S)
+if ('function' == typeof I)
     s = function () {
-        S(y);
+        I(D);
     };
 else if ('undefined' != typeof MessageChannel) {
-    var b = new MessageChannel(),
-        M = b.port2;
-    (b.port1.onmessage = y),
+    var L = new MessageChannel(),
+        x = L.port2;
+    (L.port1.onmessage = D),
         (s = function () {
-            M.postMessage(null);
+            x.postMessage(null);
         });
 } else
     s = function () {
-        m(y, 0);
+        E(D, 0);
     };
-function P(e) {
-    (O = e), R || ((R = !0), s());
+function w(e) {
+    (A = e), y || ((y = !0), s());
 }
-function U(e, n) {
-    v = m(function () {
+function M(e, n) {
+    N = E(function () {
         e(t.unstable_now());
     }, n);
 }
@@ -150,33 +150,33 @@ function U(e, n) {
         e.callback = null;
     }),
     (t.unstable_continueExecution = function () {
-        p || h || ((p = !0), P(N));
+        m || p || ((m = !0), w(b));
     }),
     (t.unstable_forceFrameRate = function (e) {
         0 > e || 125 < e ? console.error('forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported') : (C = 0 < e ? Math.floor(1000 / e) : 5);
     }),
     (t.unstable_getCurrentPriorityLevel = function () {
-        return f;
+        return h;
     }),
     (t.unstable_getFirstCallbackNode = function () {
         return r(c);
     }),
     (t.unstable_next = function (e) {
-        switch (f) {
+        switch (h) {
             case 1:
             case 2:
             case 3:
                 var t = 3;
                 break;
             default:
-                t = f;
+                t = h;
         }
-        var n = f;
-        f = t;
+        var n = h;
+        h = t;
         try {
             return e();
         } finally {
-            f = n;
+            h = n;
         }
     }),
     (t.unstable_pauseExecution = function () {}),
@@ -192,12 +192,12 @@ function U(e, n) {
             default:
                 e = 3;
         }
-        var n = f;
-        f = e;
+        var n = h;
+        h = e;
         try {
             return t();
         } finally {
-            f = n;
+            h = n;
         }
     }),
     (t.unstable_scheduleCallback = function (e, i, a) {
@@ -221,27 +221,27 @@ function U(e, n) {
         return (
             (o = a + o),
             (e = {
-                id: _++,
+                id: f++,
                 callback: i,
                 priorityLevel: e,
                 startTime: a,
                 expirationTime: o,
                 sortIndex: -1
             }),
-            a > s ? ((e.sortIndex = a), n(d, e), null === r(c) && e === r(d) && (I ? (T(v), (v = -1)) : (I = !0), U(A, a - s))) : ((e.sortIndex = o), n(c, e), p || h || ((p = !0), P(N))),
+            a > s ? ((e.sortIndex = a), n(d, e), null === r(c) && e === r(d) && (g ? (v(N), (N = -1)) : (g = !0), M(T, a - s))) : ((e.sortIndex = o), n(c, e), m || p || ((m = !0), w(b))),
             e
         );
     }),
-    (t.unstable_shouldYield = D),
+    (t.unstable_shouldYield = O),
     (t.unstable_wrapCallback = function (e) {
-        var t = f;
+        var t = h;
         return function () {
-            var n = f;
-            f = t;
+            var n = h;
+            h = t;
             try {
                 return e.apply(this, arguments);
             } finally {
-                f = n;
+                h = n;
             }
         };
     });

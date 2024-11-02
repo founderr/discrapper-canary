@@ -8,25 +8,25 @@ var r = n(200651),
     u = n(996146),
     c = n(481060),
     d = n(100527),
-    _ = n(906732),
-    E = n(605236),
-    f = n(243778),
-    h = n(963249),
-    p = n(599659),
-    I = n(282925),
-    m = n(819640),
-    T = n(594174),
-    S = n(70956),
-    g = n(709054),
-    A = n(51144),
-    N = n(443603),
-    R = n(981631),
-    O = n(921944),
-    v = n(689938),
+    f = n(906732),
+    _ = n(605236),
+    h = n(243778),
+    p = n(963249),
+    m = n(599659),
+    g = n(282925),
+    E = n(819640),
+    v = n(594174),
+    I = n(70956),
+    S = n(709054),
+    T = n(51144),
+    b = n(443603),
+    y = n(981631),
+    A = n(921944),
+    N = n(388032),
     C = n(679583),
-    L = n(703130);
-let D = S.Z.Millis.DAYS_30;
-function y(e) {
+    R = n(703130);
+let O = I.Z.Millis.DAYS_30;
+function D(e) {
     let { animatedIconComponent: t, hovered: i, isCoachmarkDismissed: a } = e,
         o = !a || i;
     return (0, r.jsxs)('div', {
@@ -58,31 +58,31 @@ function y(e) {
 }
 t.Z = i.memo(function (e) {
     let { disabled: t, channel: n } = e,
-        { analyticsLocations: a } = (0, _.ZP)(d.Z.GIFT_BUTTON),
+        { analyticsLocations: a } = (0, f.ZP)(d.Z.GIFT_BUTTON),
         [s, c] = i.useState(!1),
-        S = (0, o.e7)([m.Z], () => !(null === m.Z || void 0 === m.Z ? void 0 : m.Z.hasLayers())),
-        b = (0, o.e7)([T.default], () => T.default.getCurrentUser()),
-        M = null != b ? g.default.age(b.id) : 0,
-        { enabled: P } = p.O.useExperiment({ location: 'gift-button' }),
-        U = [];
-    P && !t && S && M >= D && U.push(l.z.NITROWEEN_COACHMARKS);
-    let [w, x] = (0, f.US)(U),
-        G = null != w,
-        k = (0, A.Ft)(n),
-        { Component: B, events: F, play: V } = (0, u.$)();
+        I = (0, o.e7)([E.Z], () => !(null === E.Z || void 0 === E.Z ? void 0 : E.Z.hasLayers())),
+        L = (0, o.e7)([v.default], () => v.default.getCurrentUser()),
+        x = null != L ? S.default.age(L.id) : 0,
+        { enabled: w } = m.O.useExperiment({ location: 'gift-button' }),
+        M = [];
+    w && !t && I && x >= O && M.push(l.z.NITROWEEN_COACHMARKS);
+    let [P, k] = (0, h.US)(M),
+        U = null != P,
+        G = (0, T.Ft)(n),
+        { Component: B, events: Z, play: F } = (0, u.$)();
     if (t) return null;
-    let H = () => {
-        (0, h.Z)({
+    let V = () => {
+        (0, p.Z)({
             isGift: !0,
-            giftRecipient: null == k ? void 0 : k,
-            giftMessage: v.Z.Messages.NITROWEEN_DESKTOP_GIFT_PURCHASE_PLACEHOLDER,
+            giftRecipient: null == G ? void 0 : G,
+            giftMessage: N.intl.string(N.t['rX/m/f']),
             initialPlanId: null,
             analyticsLocations: a,
             analyticsObject: {
-                page: n.isPrivate() ? R.ZY5.DM_CHANNEL : R.ZY5.GUILD_CHANNEL,
-                section: R.jXE.CHANNEL_TEXT_AREA,
-                object: R.qAy.NITROWEEN_BUTTON_ICON,
-                objectType: R.Qqv.GIFT
+                page: n.isPrivate() ? y.ZY5.DM_CHANNEL : y.ZY5.GUILD_CHANNEL,
+                section: y.jXE.CHANNEL_TEXT_AREA,
+                object: y.qAy.NITROWEEN_BUTTON_ICON,
+                objectType: y.Qqv.GIFT
             }
         });
     };
@@ -95,24 +95,24 @@ t.Z = i.memo(function (e) {
             c(!1);
         },
         children: [
-            G &&
-                (0, r.jsx)(I.Z, {
+            U &&
+                (0, r.jsx)(g.Z, {
                     onComplete: () => c(!1),
-                    onCheckItOutClick: H,
-                    markAsDismissed: x
+                    onCheckItOutClick: V,
+                    markAsDismissed: k
                 }),
-            (0, r.jsx)(N.Z, {
-                innerClassName: L.button,
-                'aria-label': v.Z.Messages.PREMIUM_GIFT_BUTTON_LABEL,
+            (0, r.jsx)(b.Z, {
+                innerClassName: R.button,
+                'aria-label': N.intl.string(N.t.Z1RnTk),
                 isActive: !1,
                 onClick: () => {
-                    V(), c(!1), (0, E.EW)(l.z.NITROWEEN_ANIMATED_GIFTING_ICON, { dismissAction: O.L.TAKE_ACTION }), H();
+                    F(), c(!1), (0, _.EW)(l.z.NITROWEEN_ANIMATED_GIFTING_ICON, { dismissAction: A.L.TAKE_ACTION }), V();
                 },
-                ...F,
-                children: (0, r.jsx)(y, {
+                ...Z,
+                children: (0, r.jsx)(D, {
                     animatedIconComponent: B,
                     hovered: s,
-                    isCoachmarkDismissed: !G
+                    isCoachmarkDismissed: !U
                 })
             })
         ]

@@ -13,8 +13,8 @@ var r = n(192379),
             a = e.onSwatchHover,
             u = e.triangle,
             d = e.styles,
-            _ = e.className,
-            E = (0, s.default)(
+            f = e.className,
+            _ = (0, s.default)(
                 (0, l.Z)(
                     {
                         default: {
@@ -99,7 +99,7 @@ var r = n(192379),
                     'bottom-right-triangle': 'bottom-right' === u
                 }
             ),
-            f = function (e, t) {
+            h = function (e, t) {
                 return i(
                     {
                         hex: e,
@@ -111,16 +111,16 @@ var r = n(192379),
         return r.createElement(
             'div',
             {
-                style: E.card,
-                className: 'github-picker ' + (void 0 === _ ? '' : _)
+                style: _.card,
+                className: 'github-picker ' + (void 0 === f ? '' : f)
             },
-            r.createElement('div', { style: E.triangleShadow }),
-            r.createElement('div', { style: E.triangle }),
+            r.createElement('div', { style: _.triangleShadow }),
+            r.createElement('div', { style: _.triangle }),
             (0, o.Z)(n, function (e) {
                 return r.createElement(c.Z, {
                     color: e,
                     key: e,
-                    onClick: f,
+                    onClick: h,
                     onSwatchHover: a
                 });
             })

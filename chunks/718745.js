@@ -10,7 +10,7 @@ let c = {},
         integration: '',
         query: ''
     };
-class _ extends (s = o.ZP.Store) {
+class f extends (s = o.ZP.Store) {
     getResults(e, t) {
         if (null == e || null == t) return null;
         let n = c[e];
@@ -21,7 +21,7 @@ class _ extends (s = o.ZP.Store) {
     }
 }
 (a = 'IntegrationQueryStore'),
-    (i = 'displayName') in (r = _)
+    (i = 'displayName') in (r = f)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -29,7 +29,7 @@ class _ extends (s = o.ZP.Store) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = new _(l.Z, {
+    (t.Z = new f(l.Z, {
         INTEGRATION_QUERY: function (e) {
             var t;
             let { integration: n, query: r } = e;

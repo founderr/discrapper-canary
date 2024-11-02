@@ -1,46 +1,46 @@
-E.r(e),
-    E.d(e, {
+e.r(n),
+    e.d(n, {
         default: function () {
-            return I;
+            return g;
         }
     });
-var s = E(200651);
-E(192379);
-var D = E(913527),
-    o = E.n(D),
-    M = E(848246),
-    a = E(442837),
-    t = E(230711),
-    n = E(174609),
-    L = E(114064),
-    O = E(790527),
-    A = E(1163),
-    r = E(474936),
-    i = E(981631),
-    c = E(689938);
-function I(_) {
-    let { onClose: e, ...D } = _,
-        I = A.Z.useExperiment({ location: 'PerksDemoPostUpsellModal' }, { autoTrackExposure: !1 }).extendedDemoDuration,
-        d = (0, a.e7)([L.Z], () => {
-            let _ = o()(L.Z.activatedEndTime(M.q.STREAM_HIGH_QUALITY));
-            return o().duration(_.diff(o()())).days();
+var o = e(200651);
+e(192379);
+var i = e(913527),
+    r = e.n(i),
+    s = e(848246),
+    a = e(442837),
+    l = e(230711),
+    c = e(174609),
+    d = e(114064),
+    u = e(790527),
+    p = e(1163),
+    E = e(474936),
+    M = e(981631),
+    f = e(388032);
+function g(t) {
+    let { onClose: n, ...i } = t,
+        g = p.Z.useExperiment({ location: 'PerksDemoPostUpsellModal' }, { autoTrackExposure: !1 }).extendedDemoDuration,
+        L = (0, a.e7)([d.Z], () => {
+            let t = r()(d.Z.activatedEndTime(s.q.STREAM_HIGH_QUALITY));
+            return r().duration(t.diff(r()())).days();
         }),
-        R = I ? (d < 1 ? c.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_MODAL_BODY_1_DAY : c.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_MODAL_BODY_MANY_DAYS.format({ days: Math.floor(d) })) : c.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_ENDED_UPSELL_BODY;
-    return (0, s.jsx)(O.Z, {
-        type: r.cd.STREAM_QUALITY_UPSELL,
-        artURL: E(279360),
-        title: c.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_ENDED_UPSELL_TITLE,
-        glowUp: c.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_ENDED_UPSELL_TITLE,
+        T = g ? (L < 1 ? f.intl.string(f.t.cRox19) : f.intl.formatToPlainString(f.t['5JlTZW'], { days: Math.floor(L) })) : f.intl.string(f.t.qLByR0);
+    return (0, o.jsx)(u.Z, {
+        type: E.cd.STREAM_QUALITY_UPSELL,
+        artURL: e(279360),
+        title: f.intl.string(f.t.uMbnCg),
+        glowUp: f.intl.string(f.t.uMbnCg),
         showEnhancedUpsell: !0,
-        body: R,
-        analyticsLocation: { section: i.jXE.PREMIUM_PERKS_DEMO_UPSELL_MODAL },
-        onSubscribeClick: n.Z,
-        secondaryCTA: c.Z.Messages.PREMIUM_ROADBLOCK_UPSELL_SECONDARY_CTA,
+        body: T,
+        analyticsLocation: { section: M.jXE.PREMIUM_PERKS_DEMO_UPSELL_MODAL },
+        onSubscribeClick: c.Z,
+        secondaryCTA: f.intl.string(f.t.PcTCBw),
         onSecondaryClick: () => {
-            e(), t.Z.open(i.oAB.PREMIUM);
+            n(), l.Z.open(M.oAB.PREMIUM);
         },
         enableArtBoxShadow: !1,
-        onClose: e,
-        ...D
+        onClose: n,
+        ...i
     });
 }

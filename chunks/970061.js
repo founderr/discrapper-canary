@@ -1,87 +1,87 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return h;
     }
 }),
     n(47120),
     n(390547);
-var s = n(200651),
-    a = n(192379),
-    i = n(120356),
-    r = n.n(i),
-    l = n(100621),
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    s = n.n(l),
+    a = n(100621),
     o = n(692547),
     c = n(481060),
     d = n(259580),
     u = n(340051);
-function _(e) {
+function m(e) {
     let { checked: t, children: n } = e;
-    return (0, s.jsxs)('div', {
+    return (0, i.jsxs)('div', {
         className: u.row,
         children: [
-            (0, s.jsx)(c.Text, {
+            (0, i.jsx)(c.Text, {
                 variant: 'text-md/normal',
                 color: 'interactive-active',
                 className: u.rowText,
                 children: n
             }),
             t
-                ? (0, s.jsx)(c.CircleCheckIcon, {
+                ? (0, i.jsx)(c.CircleCheckIcon, {
                       size: 'md',
                       color: 'currentColor',
                       secondaryColor: o.Z.unsafe_rawColors.WHITE_500.css,
-                      className: r()(u.rowIcon, u.rowIconChecked)
+                      className: s()(u.rowIcon, u.rowIconChecked)
                   })
-                : (0, s.jsx)('div', { className: r()(u.rowIcon, u.rowIconEmpty) })
+                : (0, i.jsx)('div', { className: s()(u.rowIcon, u.rowIconEmpty) })
         ]
     });
 }
-function I(e) {
-    let { title: t, children: n, buttonLabel: i, buttonCallback: r, disabled: o } = e,
-        [I, E] = a.useState(!1),
-        T = n.flatMap((e) => e.items.map((e) => e.completed)),
-        m = T.filter((e) => e).length / T.length,
-        N = (0, c.useSpring)({ width: ''.concat(100 * m, '%') });
-    return (0, s.jsxs)('div', {
+function h(e) {
+    let { title: t, children: n, buttonLabel: l, buttonCallback: s, disabled: o } = e,
+        [h, g] = r.useState(!1),
+        x = n.flatMap((e) => e.items.map((e) => e.completed)),
+        p = x.filter((e) => e).length / x.length,
+        f = (0, c.useSpring)({ width: ''.concat(100 * p, '%') });
+    return (0, i.jsxs)('div', {
         className: u.container,
         children: [
-            (0, s.jsxs)(c.Clickable, {
+            (0, i.jsxs)(c.Clickable, {
                 className: u.headerBar,
-                onClick: () => E((e) => !e),
+                onClick: () => g((e) => !e),
                 children: [
-                    (0, s.jsx)(c.Heading, {
+                    (0, i.jsx)(c.Heading, {
                         variant: 'heading-md/semibold',
                         className: u.headerText,
                         children: t
                     }),
-                    (0, s.jsx)(d.Z, {
-                        direction: I ? d.Z.Directions.DOWN : d.Z.Directions.UP,
+                    (0, i.jsx)(d.Z, {
+                        direction: h ? d.Z.Directions.DOWN : d.Z.Directions.UP,
                         className: u.headerCaret
                     })
                 ]
             }),
-            (0, s.jsx)('div', {
+            (0, i.jsx)('div', {
                 className: u.progressBarOuter,
-                children: (0, s.jsx)(l.animated.div, {
+                children: (0, i.jsx)(a.animated.div, {
                     className: u.progressBarInner,
-                    style: N
+                    style: f
                 })
             }),
-            !I &&
+            !h &&
                 n.map((e, t) => {
-                    let { title: n, items: i } = e;
-                    return (0, s.jsxs)(
-                        a.Fragment,
+                    let { title: n, items: l } = e;
+                    return (0, i.jsxs)(
+                        r.Fragment,
                         {
                             children: [
-                                t > 0 && (0, s.jsx)(c.FormDivider, { className: u.divider }),
-                                (0, s.jsx)(c.FormTitle, {
+                                t > 0 && (0, i.jsx)(c.FormDivider, { className: u.divider }),
+                                (0, i.jsx)(c.FormTitle, {
                                     className: u.categoryTitle,
                                     children: n
                                 }),
-                                i.map((e, t) =>
-                                    (0, s.jsx)(
-                                        _,
+                                l.map((e, t) =>
+                                    (0, i.jsx)(
+                                        m,
                                         {
                                             children: e.description,
                                             checked: e.completed
@@ -94,19 +94,19 @@ function I(e) {
                         t
                     );
                 }),
-            null !== i &&
-                '' !== i &&
-                null !== r &&
-                (0, s.jsxs)('div', {
+            null !== l &&
+                '' !== l &&
+                null !== s &&
+                (0, i.jsxs)('div', {
                     children: [
-                        (0, s.jsx)(c.FormDivider, { className: u.divider }),
-                        (0, s.jsx)(c.Button, {
+                        (0, i.jsx)(c.FormDivider, { className: u.divider }),
+                        (0, i.jsx)(c.Button, {
                             className: u.button,
                             size: c.Button.Sizes.SMALL,
                             color: c.Button.Colors.BRAND,
-                            onClick: r,
-                            disabled: 1 !== m || o,
-                            children: i
+                            onClick: s,
+                            disabled: 1 !== p || o,
+                            children: l
                         })
                     ]
                 })

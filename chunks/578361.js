@@ -1,24 +1,24 @@
-t.d(n, {
+n.d(t, {
     n: function () {
         return a;
     }
 });
 var i,
     a,
-    r = t(200651),
-    o = t(192379),
-    s = t(120356),
-    l = t.n(s),
-    c = t(748780),
-    d = t(215569),
-    u = t(189682);
+    r = n(200651),
+    o = n(192379),
+    l = n(120356),
+    s = n.n(l),
+    c = n(748780),
+    d = n(215569),
+    u = n(189682);
 ((i = a || (a = {}))[(i.RIGHT = -1)] = 'RIGHT'), (i[(i.LEFT = 1)] = 'LEFT');
-let _ = {
+let p = {
     friction: 7,
     tension: 40,
     clamp: !0
 };
-class p extends o.PureComponent {
+class m extends o.PureComponent {
     componentWillEnter(e) {
         this._animated.setValue(-this.props.direction),
             c.Z.spring(this._animated, {
@@ -63,35 +63,35 @@ class p extends o.PureComponent {
         });
     }
     constructor(e) {
-        var n, t, i;
+        var t, n, i;
         super(e),
-            (n = this),
+            (t = this),
             (i = void 0),
-            (t = '_animated') in n
-                ? Object.defineProperty(n, t, {
+            (n = '_animated') in t
+                ? Object.defineProperty(t, n, {
                       value: i,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (n[t] = i),
+                : (t[n] = i),
             (this._animated = new c.Z.Value(-1 * e.direction));
     }
 }
-n.Z = (e) => {
-    let { children: n, step: t, direction: i, className: a, springSettings: o = _, fadeInOut: s = !1 } = e;
+t.Z = (e) => {
+    let { children: t, step: n, direction: i, className: a, springSettings: o = p, fadeInOut: l = !1 } = e;
     return (0, r.jsx)(d.W, {
         component: 'div',
-        className: l()(u.animator, a),
+        className: s()(u.animator, a),
         children: (0, r.jsx)(
-            p,
+            m,
             {
                 direction: i,
                 springSettings: o,
-                fadeInOut: s,
-                children: n
+                fadeInOut: l,
+                children: t
             },
-            t
+            n
         )
     });
 };

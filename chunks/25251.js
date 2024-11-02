@@ -6,39 +6,39 @@ var a,
     u = n(392711),
     c = n(442837),
     d = n(570140);
-let _ = [],
-    E = [],
-    f = !1;
-let h = _,
-    p = {},
-    I = null;
-let m = 0,
-    T = (e) => {
-        h = (0, u.cloneDeep)(e);
+let f = [],
+    _ = [],
+    h = !1;
+let p = f,
+    m = {},
+    g = null;
+let E = 0,
+    v = (e) => {
+        p = (0, u.cloneDeep)(e);
         let t = {};
-        h.forEach((e) => {
-            if (((t[e.id] = e), E.length > 0)) {
+        p.forEach((e) => {
+            if (((t[e.id] = e), _.length > 0)) {
                 var n;
-                t[e.id].config.effects = null !== (n = (0, u.sample)(E)) && void 0 !== n ? n : [];
+                t[e.id].config.effects = null !== (n = (0, u.sample)(_)) && void 0 !== n ? n : [];
             }
         }),
-            (p = t);
+            (m = t);
     },
-    S = () => {
-        T(_), (I = null), (i = void 0), (f = !1);
+    I = () => {
+        v(f), (g = null), (i = void 0), (h = !1);
     };
-class g extends (l = c.ZP.Store) {
+class S extends (l = c.ZP.Store) {
     get isFetching() {
-        return f;
+        return h;
     }
     get fetchError() {
         return r;
     }
     get profileEffects() {
-        return h;
+        return p;
     }
     get tryItOutId() {
-        return I;
+        return g;
     }
     canFetch() {
         return null == i || Date.now() >= i;
@@ -47,11 +47,11 @@ class g extends (l = c.ZP.Store) {
         return null != i && null == r;
     }
     getProfileEffectById(e) {
-        return null != e ? p[e] : void 0;
+        return null != e ? m[e] : void 0;
     }
 }
 (o = 'ProfileEffectStore'),
-    (s = 'displayName') in (a = g)
+    (s = 'displayName') in (a = S)
         ? Object.defineProperty(a, s, {
               value: o,
               enumerable: !0,
@@ -59,23 +59,23 @@ class g extends (l = c.ZP.Store) {
               writable: !0
           })
         : (a[s] = o),
-    (t.Z = new g(d.Z, {
+    (t.Z = new S(d.Z, {
         USER_PROFILE_EFFECTS_FETCH: () => {
-            f = !0;
+            h = !0;
         },
         USER_PROFILE_EFFECTS_FETCH_SUCCESS: (e) => {
             let { profileEffects: t } = e;
-            (r = void 0), (i = Date.now() + 300000), (m = 0), T(0 === t.length ? _ : t), (f = !1);
+            (r = void 0), (i = Date.now() + 300000), (E = 0), v(0 === t.length ? f : t), (h = !1);
         },
         USER_PROFILE_EFFECTS_FETCH_FAILURE: (e) => {
             let { error: t } = e;
-            (r = t), (i = Date.now() + Math.min(60000 * 2 ** m, 3600000)), ++m, T(_), (f = !1);
+            (r = t), (i = Date.now() + Math.min(60000 * 2 ** E, 3600000)), ++E, v(f), (h = !1);
         },
         PROFILE_EFFECTS_SET_TRY_IT_OUT: (e) => {
             let { id: t } = e;
-            I = t;
+            g = t;
         },
         LOGOUT: (e) => {
-            S();
+            I();
         }
     }));

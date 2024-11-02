@@ -1,13 +1,13 @@
 var i = n(200651),
-    s = n(192379),
-    a = n(442837),
-    l = n(481060),
-    r = n(607070),
+    l = n(192379),
+    r = n(442837),
+    a = n(481060),
+    s = n(607070),
     o = n(665906),
     c = n(314897),
     u = n(496675),
     d = n(981631),
-    h = n(689938),
+    h = n(388032),
     m = n(976320);
 let p = () =>
     n
@@ -17,33 +17,33 @@ let p = () =>
             let { default: t } = e;
             return t;
         });
-t.Z = s.memo(function (e) {
+t.Z = l.memo(function (e) {
     let { channel: t, isLastItem: n } = e,
-        s = (0, a.e7)([r.Z], () => r.Z.useReducedMotion),
-        _ = (0, a.e7)([u.Z], () => u.Z.can(d.Plq.SEND_MESSAGES_IN_THREADS, t)),
-        f = (0, o.Gu)(t),
-        E = (0, a.e7)([c.default], () => c.default.getId());
+        l = (0, r.e7)([s.Z], () => s.Z.useReducedMotion),
+        f = (0, r.e7)([u.Z], () => u.Z.can(d.Plq.SEND_MESSAGES_IN_THREADS, t)),
+        g = (0, o.Gu)(t),
+        C = (0, r.e7)([c.default], () => c.default.getId());
     return n
-        ? _ && !f && t.ownerId !== E
+        ? f && !g && t.ownerId !== C
             ? (0, i.jsxs)('div', {
                   className: m.box,
                   children: [
-                      (0, i.jsx)(l.LottieAnimation, {
+                      (0, i.jsx)(a.LottieAnimation, {
                           importData: p,
-                          shouldAnimate: !s,
+                          shouldAnimate: !l,
                           className: m.animation
                       }),
                       (0, i.jsxs)('div', {
                           className: m.textContainer,
                           children: [
-                              (0, i.jsx)(l.Heading, {
+                              (0, i.jsx)(a.Heading, {
                                   variant: 'heading-md/semibold',
-                                  children: h.Z.Messages.FORUM_START_THE_CONVERSATION_HEADER
+                                  children: h.intl.string(h.t.OmBThI)
                               }),
-                              (0, i.jsx)(l.Text, {
+                              (0, i.jsx)(a.Text, {
                                   variant: 'text-sm/normal',
                                   color: 'header-secondary',
-                                  children: h.Z.Messages.FORUM_START_THE_CONVERSATION_DESCRIPTION
+                                  children: h.intl.string(h.t.zcs5kp)
                               })
                           ]
                       })

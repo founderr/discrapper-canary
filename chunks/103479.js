@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return f;
     },
     s: function () {
         return d;
@@ -13,7 +13,7 @@ var i = n(763472),
     s = n(49012),
     o = n(591759),
     l = n(475413),
-    u = n(689938),
+    u = n(388032),
     c = n(676411);
 async function d(e) {
     let { activity: t, user: n, index: r } = e;
@@ -30,7 +30,7 @@ async function d(e) {
         });
     } catch (e) {}
 }
-function _(e) {
+function f(e) {
     let { user: t, activity: n, onAction: i } = e;
     if ((null == n ? void 0 : n.buttons) == null || n.buttons.length < 1) return null;
     let s = (0, a.Z)(n);
@@ -39,7 +39,7 @@ function _(e) {
             (0, r.jsx)(
                 l.tG,
                 {
-                    text: s ? u.Z.Messages.WATCH : e,
+                    text: s ? u.intl.string(u.t['I6JG4+']) : e,
                     className: c.customButton,
                     fullWidth: !0,
                     onClick: () => {

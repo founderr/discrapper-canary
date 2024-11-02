@@ -1,28 +1,28 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return r;
     }
 });
-var a,
+var l,
     o,
-    s = n(689938);
-function l() {
+    a = n(388032);
+function r() {
     return [
         {
-            label: s.Z.Messages.IAR_FEEDBACK_PROBLEM_COULD_NOT_FIND,
+            label: a.intl.string(a.t.cigGCQ),
             code: 2,
             value: "I couldn't find what I was looking for"
         },
         {
-            label: s.Z.Messages.IAR_FEEDBACK_PROBLEM_CONFUSING_LANGUAGE,
+            label: a.intl.string(a.t.ZyXA0t),
             code: 3,
             value: 'I found the language confusing'
         },
         {
-            label: s.Z.Messages.CALL_FEEDBACK_OPTION_OTHER,
+            label: a.intl.string(a.t['emlT9/']),
             code: 1,
             value: 'Other'
         }
     ];
 }
-((a = o || (o = {})).COULD_NOT_FIND = "I couldn't find what I was looking for"), (a.CONFUSING_LANGUAGE = 'I found the language confusing'), (a.OTHER = 'Other');
+((l = o || (o = {})).COULD_NOT_FIND = "I couldn't find what I was looking for"), (l.CONFUSING_LANGUAGE = 'I found the language confusing'), (l.OTHER = 'Other');

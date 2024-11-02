@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return _;
     }
 });
 var r = n(200651),
@@ -12,7 +12,7 @@ var r = n(200651),
     u = n(718582),
     c = n(981631),
     d = n(979340);
-let _ = [
+let f = [
     [
         {
             translateY: 0,
@@ -102,23 +102,23 @@ let _ = [
         }
     ]
 ];
-function E(e) {
+function _(e) {
     let { users: t, guildId: n } = e,
         a = (0, u.fd)(t),
         o = (0, l.ZP)(),
-        E = i.useRef(!1);
+        _ = i.useRef(!1);
     i.useEffect(() => {
-        E.current = !0;
+        _.current = !0;
     }, []);
-    let p = Math.min(_.length - 1, a.length - 1),
-        I = _[Math.max(0, p)],
-        m = a.length > 4,
-        T = a.length - 3,
-        S = T >= 10 ? 1 : 2,
-        g = I.map((e, t) => {
+    let m = Math.min(f.length - 1, a.length - 1),
+        g = f[Math.max(0, m)],
+        E = a.length > 4,
+        v = a.length - 3,
+        I = v >= 10 ? 1 : 2,
+        S = g.map((e, t) => {
             let i = a[t];
             if (null == i) return null;
-            let o = m && t === S;
+            let o = E && t === I;
             return (0, r.jsx)(
                 'div',
                 {
@@ -128,8 +128,8 @@ function E(e) {
                         transform: 'translateX('.concat(e.translateX, 'px) translateY(').concat(e.translateY, 'px) scale(').concat(e.scale, ')')
                     },
                     children: o
-                        ? (0, r.jsx)(f, { count: T })
-                        : (0, r.jsx)(h, {
+                        ? (0, r.jsx)(h, { count: v })
+                        : (0, r.jsx)(p, {
                               guildId: n,
                               user: i
                           })
@@ -141,11 +141,11 @@ function E(e) {
         className: o === c.BRd.DARK ? d.gradientContainerDark : d.gradientContainer,
         children: (0, r.jsx)('div', {
             className: d.groupContainer,
-            children: g
+            children: S
         })
     });
 }
-function f(e) {
+function h(e) {
     let { count: t } = e;
     return (0, r.jsx)('div', {
         className: d.avatarWrapper,
@@ -158,7 +158,7 @@ function f(e) {
         })
     });
 }
-function h(e) {
+function p(e) {
     let { guildId: t, user: n } = e;
     return null == i.useMemo(() => (null == n ? void 0 : n.getAvatarSource(t, !1, 30)), [t, n])
         ? null

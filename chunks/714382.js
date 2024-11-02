@@ -30,32 +30,32 @@ function o(e, t, n) {
         u = t,
         c = [],
         d = c,
-        _ = !1;
-    function E() {
+        f = !1;
+    function _() {
         d === c && (d = c.slice());
     }
-    function f() {
-        if (_) throw Error(r(3));
+    function h() {
+        if (f) throw Error(r(3));
         return u;
     }
-    function h(e) {
+    function p(e) {
         if ('function' != typeof e) throw Error(r(4));
-        if (_) throw Error(r(5));
+        if (f) throw Error(r(5));
         var t = !0;
         return (
-            E(),
+            _(),
             d.push(e),
             function () {
                 if (!!t) {
-                    if (_) throw Error(r(6));
-                    (t = !1), E();
+                    if (f) throw Error(r(6));
+                    (t = !1), _();
                     var n = d.indexOf(e);
                     d.splice(n, 1), (c = null);
                 }
             }
         );
     }
-    function p(e) {
+    function m(e) {
         if (
             !(function (e) {
                 if ('object' != typeof e || null === e) return !1;
@@ -65,24 +65,24 @@ function o(e, t, n) {
         )
             throw Error(r(7));
         if (void 0 === e.type) throw Error(r(8));
-        if (_) throw Error(r(9));
+        if (f) throw Error(r(9));
         try {
-            (_ = !0), (u = l(u, e));
+            (f = !0), (u = l(u, e));
         } finally {
-            _ = !1;
+            f = !1;
         }
         for (var t = (c = d), n = 0; n < t.length; n++) (0, t[n])();
         return e;
     }
     return (
-        p({ type: s.INIT }),
+        m({ type: s.INIT }),
         ((a = {
-            dispatch: p,
-            subscribe: h,
-            getState: f,
+            dispatch: m,
+            subscribe: p,
+            getState: h,
             replaceReducer: function (e) {
                 if ('function' != typeof e) throw Error(r(10));
-                (l = e), p({ type: s.REPLACE });
+                (l = e), m({ type: s.REPLACE });
             }
         })[i] = function () {
             var e;
@@ -91,9 +91,9 @@ function o(e, t, n) {
                     subscribe: function (e) {
                         if ('object' != typeof e || null === e) throw Error(r(11));
                         function t() {
-                            e.next && e.next(f());
+                            e.next && e.next(h());
                         }
-                        return t(), { unsubscribe: h(t) };
+                        return t(), { unsubscribe: p(t) };
                     }
                 })[i] = function () {
                     return this;

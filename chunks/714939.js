@@ -3,46 +3,46 @@ n.d(t, {
         return o;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(481060),
-    i = n(259580),
-    r = n(689938),
-    l = n(914908);
+var r = n(481060),
+    l = n(259580),
+    s = n(388032),
+    a = n(914908);
 function o(e) {
     let { role: t, onClick: n } = e;
-    return (0, s.jsxs)(a.Clickable, {
-        className: l.container,
+    return (0, i.jsxs)(r.Clickable, {
+        className: a.container,
         onClick: n,
         children: [
-            (0, s.jsx)('div', {
-                className: l.icon,
-                children: (0, s.jsx)(a.GroupIcon, {
+            (0, i.jsx)('div', {
+                className: a.icon,
+                children: (0, i.jsx)(r.GroupIcon, {
                     size: 'custom',
                     color: 'currentColor',
                     width: 20,
                     height: 20
                 })
             }),
-            (0, s.jsxs)('div', {
-                className: l.description,
+            (0, i.jsxs)('div', {
+                className: a.description,
                 children: [
-                    (0, s.jsx)(a.Text, {
-                        className: l.label,
+                    (0, i.jsx)(r.Text, {
+                        className: a.label,
                         color: 'none',
                         variant: 'text-md/bold',
-                        children: r.Z.Messages.ROLE_EVERYONE_LABEL
+                        children: s.intl.string(s.t.yiaoNj)
                     }),
-                    (0, s.jsxs)(a.Text, {
+                    (0, i.jsxs)(r.Text, {
                         color: 'none',
                         variant: 'text-xs/normal',
-                        children: [t.name, ' \u2022 ', r.Z.Messages.ROLE_EVERYONE_DESCRIPTION]
+                        children: [t.name, ' \u2022 ', s.intl.string(s.t.JwYI3N)]
                     })
                 ]
             }),
-            (0, s.jsx)(i.Z, {
-                className: l.arrow,
-                direction: i.Z.Directions.RIGHT
+            (0, i.jsx)(l.Z, {
+                className: a.arrow,
+                direction: l.Z.Directions.RIGHT
             })
         ]
     });

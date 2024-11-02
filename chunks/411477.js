@@ -3,31 +3,31 @@ n.d(t, {
         return u;
     }
 });
-var o = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(120356),
-    a = n.n(i),
+var o = n(120356),
+    a = n.n(o),
     r = n(481060),
     c = n(436774),
-    s = n(112831),
-    l = n(148393);
+    l = n(112831),
+    s = n(148393);
 function u(e) {
-    let { text: t, textSize: n = s.Z.Sizes.SIZE_12, textColor: i = s.Z.Colors.STANDARD, className: u, button: d, reducedRightPadding: _ = !1 } = e;
-    return (0, o.jsxs)('div', {
-        className: a()(_ ? l.noticeWithoutRightPadding : l.noticeWithRightPadding, u),
+    let { text: t, textSize: n = l.Z.Sizes.SIZE_12, textColor: o = l.Z.Colors.STANDARD, className: u, button: d, reducedRightPadding: b = !1 } = e;
+    return (0, i.jsxs)('div', {
+        className: a()(b ? s.noticeWithoutRightPadding : s.noticeWithRightPadding, u),
         children: [
-            (0, o.jsxs)('div', {
-                className: l.noticeLeft,
+            (0, i.jsxs)('div', {
+                className: s.noticeLeft,
                 children: [
-                    (0, o.jsx)(r.NitroWheelIcon, {
+                    (0, i.jsx)(r.NitroWheelIcon, {
                         size: 'md',
-                        className: l.icon,
+                        className: s.icon,
                         color: c.JX.PREMIUM_TIER_2
                     }),
-                    (0, o.jsx)(s.Z, {
-                        className: l.text,
+                    (0, i.jsx)(l.Z, {
+                        className: s.text,
                         size: n,
-                        color: i,
+                        color: o,
                         children: t
                     })
                 ]

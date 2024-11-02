@@ -3,9 +3,9 @@ n.d(t, {
         return r;
     }
 });
-var s = n(570140);
+var i = n(570140);
 function r(e) {
-    s.Z.dispatch({
+    i.Z.dispatch({
         type: 'AUTH_INVITE_UPDATE',
         invite: e
     });

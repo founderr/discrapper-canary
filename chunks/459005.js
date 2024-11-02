@@ -6,7 +6,7 @@ n.d(t, {
         return a;
     },
     mA: function () {
-        return h;
+        return p;
     },
     ug: function () {
         return r;
@@ -41,26 +41,26 @@ let d = Object.freeze({
         time_over_deadline: null,
         initial_time_of_deadline: null
     }),
-    _ = Object.freeze({
+    f = Object.freeze({
         time_to_fire_idle_callback: [0, 0],
         time_to_flush_all_work: [0, 0],
         time_over_deadline: [0, 0],
         initial_time_of_deadline: [0, 0]
     }),
-    E = Object.freeze({
+    _ = Object.freeze({
         count_flush_before_queue_empty: [0, 0],
         count_dispatches_left_after_yield: [0, 0],
         count_initial_dispatches_length: [0, 0]
     }),
-    f = Object.freeze({
+    h = Object.freeze({
         longer_dispatch: 0,
         exceeded_max_consecutive_flushes: 0,
         fired_due_to_max_timeout: 0,
         skip_idle_callback_due_to_backgrounded: 0
     });
-class h {
+class p {
     reset() {
-        (this._timeTracking = (0, u.cloneDeep)(d)), (this._timingStats = (0, u.cloneDeep)(_)), (this._measurements = (0, u.cloneDeep)(E)), (this._eventCounts = (0, u.cloneDeep)(f));
+        (this._timeTracking = (0, u.cloneDeep)(d)), (this._timingStats = (0, u.cloneDeep)(f)), (this._measurements = (0, u.cloneDeep)(_)), (this._eventCounts = (0, u.cloneDeep)(h));
     }
     clearTime(e) {
         this._timeTracking[e] = null;
@@ -115,6 +115,6 @@ class h {
         };
     }
     constructor() {
-        c(this, '_timeTracking', (0, u.cloneDeep)(d)), c(this, '_timingStats', (0, u.cloneDeep)(_)), c(this, '_measurements', (0, u.cloneDeep)(E)), c(this, '_eventCounts', (0, u.cloneDeep)(f)), c(this, '_enabled', !1);
+        c(this, '_timeTracking', (0, u.cloneDeep)(d)), c(this, '_timingStats', (0, u.cloneDeep)(f)), c(this, '_measurements', (0, u.cloneDeep)(_)), c(this, '_eventCounts', (0, u.cloneDeep)(h)), c(this, '_enabled', !1);
     }
 }

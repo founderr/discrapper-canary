@@ -4,10 +4,10 @@ n.d(t, {
     }
 });
 var i = n(192379),
-    s = n(442837),
-    a = n(131704),
-    l = n(9156),
-    r = n(423589),
+    l = n(442837),
+    r = n(131704),
+    a = n(9156),
+    s = n(423589),
     o = n(674190),
     c = n(624617),
     u = n(490897);
@@ -23,17 +23,17 @@ let d = Object.freeze({
 });
 function h(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = (0, r.Mn)('useShouldRenderBanner'),
-        h = (0, s.e7)(
-            [c.Z, l.ZP],
+        n = (0, s.Mn)('useShouldRenderBanner'),
+        h = (0, l.e7)(
+            [c.Z, a.ZP],
             () => {
                 let { guild_id: t, id: n } = e;
-                if (!a.$N.has(e.type)) return !1;
-                let i = l.ZP.resolveUnreadSetting(e),
-                    s = l.ZP.getChannelUnreadSetting(t, n),
-                    r = c.Z.getNumberOfRendersSince(d.NOTICE_RENDER.PER_SECONDS),
+                if (!r.$N.has(e.type)) return !1;
+                let i = a.ZP.resolveUnreadSetting(e),
+                    l = a.ZP.getChannelUnreadSetting(t, n),
+                    s = c.Z.getNumberOfRendersSince(d.NOTICE_RENDER.PER_SECONDS),
                     o = c.Z.getNumberOfChannelVisitsSince(t, n, d.CHANNEL_VISTS.PER_SECONDS);
-                return s === u.i.UNSET && i !== u.i.ALL_MESSAGES && r <= d.NOTICE_RENDER.MAX && o >= d.CHANNEL_VISTS.MIN;
+                return l === u.i.UNSET && i !== u.i.ALL_MESSAGES && s <= d.NOTICE_RENDER.MAX && o >= d.CHANNEL_VISTS.MIN;
             },
             [e]
         );
@@ -42,7 +42,7 @@ function h(e) {
             t && h && (0, o.g)(e.guild_id, e.id);
         }, [t, h, e.guild_id, e.id]),
         i.useEffect(() => {
-            a.$N.has(e.type) && (0, o.a)(e.guild_id, e.id);
+            r.$N.has(e.type) && (0, o.a)(e.guild_id, e.id);
         }, [e.guild_id, e.id, e.type]),
         {
             canRenderNotice: h && n,

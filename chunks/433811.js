@@ -1,9 +1,9 @@
 n.d(t, {
     X: function () {
-        return i;
+        return s;
     }
 });
-var s = n(91641),
-    a = n(609105),
-    r = n(987338);
-let i = new s.E([a.NR, a.ZI, a.Ob, a.uc, a.m1], r.$P.OPEN_NITRO, { location: 'open nitro tab/settings' });
+var i = n(91641),
+    r = n(609105),
+    a = n(987338);
+let s = new i.E([r.NR, r.ZI, r.Ob, r.uc, r.m1], a.$P.OPEN_NITRO, { location: 'open nitro tab/settings' });

@@ -118,30 +118,30 @@ class d extends r.EventEmitter {
             this.clearQuery();
             return;
         }
-        let { type: d, typeInfo: _, query: E } = u,
-            f = r || (n && ((null === (e = this.state.query) || void 0 === e ? void 0 : e.queryText) !== E || (null === (t = this.state.query) || void 0 === t ? void 0 : t.typeInfo) !== _)),
-            h = s.fq.getSetting();
-        i.allowStickers = i.allowStickers ? h : i.allowStickers;
-        let { results: p, metadata: I } = _.queryResults(this.props.channel, this.props.guild, E, i, f),
-            m = 0;
-        for (let e of Object.values(p)) Array.isArray(e) && (m += e.length);
-        let T = !0 === p.isLoading,
-            S = this.shouldShow(m, T, _),
-            g = this.state.selectedIndex;
-        !S || T ? (g = null) : null != g && g >= m && (g = m - 1),
-            S && !this.state.isVisible && (0, a.a7)(d, this.props.channel, I),
+        let { type: d, typeInfo: f, query: _ } = u,
+            h = r || (n && ((null === (e = this.state.query) || void 0 === e ? void 0 : e.queryText) !== _ || (null === (t = this.state.query) || void 0 === t ? void 0 : t.typeInfo) !== f)),
+            p = s.fq.getSetting();
+        i.allowStickers = i.allowStickers ? p : i.allowStickers;
+        let { results: m, metadata: g } = f.queryResults(this.props.channel, this.props.guild, _, i, h),
+            E = 0;
+        for (let e of Object.values(m)) Array.isArray(e) && (E += e.length);
+        let v = !0 === m.isLoading,
+            I = this.shouldShow(E, v, f),
+            S = this.state.selectedIndex;
+        !I || v ? (S = null) : null != S && S >= E && (S = E - 1),
+            I && !this.state.isVisible && (0, a.a7)(d, this.props.channel, g),
             this.setState({
                 query: {
                     type: d,
-                    typeInfo: _,
-                    queryText: E,
-                    results: p,
-                    resultCount: m,
+                    typeInfo: f,
+                    queryText: _,
+                    results: m,
+                    resultCount: E,
                     options: i,
-                    isLoading: T
+                    isLoading: v
                 },
-                isVisible: S,
-                selectedIndex: g
+                isVisible: I,
+                selectedIndex: S
             });
     }
     shouldShow(e, t, n) {
@@ -150,22 +150,22 @@ class d extends r.EventEmitter {
     selectResult(e, t, n) {
         var r, i, s;
         if (!this.state.isVisible) return !1;
-        let { type: l, typeInfo: u, results: c, resultCount: d, options: _ } = this.state.query;
+        let { type: l, typeInfo: u, results: c, resultCount: d, options: f } = this.state.query;
         if (e >= d) return !1;
-        let E =
+        let _ =
             null === (i = u.onSelect) || void 0 === i
                 ? void 0
                 : i.call(u, {
                       results: c,
                       index: e,
                       type: t ? o.QB.SEND : o.QB.INSERT,
-                      options: _,
+                      options: f,
                       channel: this.props.channel,
                       guild: this.props.guild,
                       tabOrEnter: n,
                       queryText: null === (r = this.state.query) || void 0 === r ? void 0 : r.queryText
                   });
-        return null != E && (0, a.Qt)(l, null !== (s = E.type) && void 0 !== s ? s : null, this.props.channel, E.metadata), !0;
+        return null != _ && (0, a.Qt)(l, null !== (s = _.type) && void 0 !== s ? s : null, this.props.channel, _.metadata), !0;
     }
     setState(e) {
         for (let t in e)

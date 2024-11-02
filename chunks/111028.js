@@ -12,13 +12,13 @@ var r = n(200651),
 function u(e) {
     let { children: t, 'aria-label': n, className: a, position: u, ...c } = e,
         d = i.useRef(null),
-        _ = null != n ? n : 'string' == typeof t && t;
+        f = null != n ? n : 'string' == typeof t && t;
     return (0, r.jsx)(o.Tooltip, {
         ...c,
         position: null != u ? u : 'top',
         delay: 500,
         text: t,
-        'aria-label': _,
+        'aria-label': f,
         children: (n) => {
             let { onMouseEnter: i, onMouseLeave: o } = n;
             return (0, r.jsx)('div', {

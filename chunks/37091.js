@@ -7,11 +7,11 @@ var r,
 let u = { enabled: !1 },
     c = {},
     d = {},
-    _ = !1;
-class E extends (s = o.ZP.DeviceSettingsStore) {
+    f = !1;
+class _ extends (s = o.ZP.DeviceSettingsStore) {
     initialize() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u;
-        _ = e.enabled;
+        f = e.enabled;
     }
     getWaitingHighFive(e, t) {
         var n;
@@ -22,14 +22,14 @@ class E extends (s = o.ZP.DeviceSettingsStore) {
         return null === (n = d[e]) || void 0 === n ? void 0 : n[t];
     }
     getEnabled() {
-        return _;
+        return f;
     }
     getUserAgnosticState() {
-        return { enabled: _ };
+        return { enabled: f };
     }
 }
 (a = 'HighFiveStore'),
-    (i = 'persistKey') in (r = E)
+    (i = 'persistKey') in (r = _)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -37,7 +37,7 @@ class E extends (s = o.ZP.DeviceSettingsStore) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = new E(l.Z, {
+    (t.Z = new _(l.Z, {
         HIGH_FIVE_QUEUE: function (e) {
             let { userId: t, channelId: n, emoji: r } = e;
             c[n] = {
@@ -53,7 +53,7 @@ class E extends (s = o.ZP.DeviceSettingsStore) {
         },
         HIGH_FIVE_SET_ENABLED: function (e) {
             let { enabled: t } = e;
-            _ = t;
+            f = t;
         },
         HIGH_FIVE_COMPLETE: function (e) {
             var t;

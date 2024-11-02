@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return m;
     }
 });
 var r = n(200651),
@@ -12,32 +12,32 @@ var r = n(200651),
     u = n(843693),
     c = n(576125),
     d = n(112843),
-    _ = n(524484),
-    E = n(981631),
-    f = n(675654);
-function h(e) {
+    f = n(524484),
+    _ = n(981631),
+    h = n(675654);
+function p(e) {
     var t, n;
     let { editorHeight: r, textValue: c } = e,
-        _ = i.useRef(c),
-        h = (0, s.Z)({ editorHeight: r }),
-        p = (0, d.Z)(),
-        I = (0, a.e7)([u.ZP, o.default, l.Z], () => {
+        f = i.useRef(c),
+        p = (0, s.Z)({ editorHeight: r }),
+        m = (0, d.Z)(),
+        g = (0, a.e7)([u.ZP, o.default, l.Z], () => {
             var e;
-            return u.ZP.isComboing(o.default.getId(), null !== (e = l.Z.getChannelId()) && void 0 !== e ? e : E.lds);
+            return u.ZP.isComboing(o.default.getId(), null !== (e = l.Z.getChannelId()) && void 0 !== e ? e : _.lds);
         }),
-        m = null !== (t = null == h ? void 0 : h.left) && void 0 !== t ? t : 0,
-        T = (null !== (n = null == h ? void 0 : h.top) && void 0 !== n ? n : 0) - 16,
-        S = i.useMemo(() => 0.05 > Math.random(), [0 === c.length]);
+        E = null !== (t = null == p ? void 0 : p.left) && void 0 !== t ? t : 0,
+        v = (null !== (n = null == p ? void 0 : p.top) && void 0 !== n ? n : 0) - 16,
+        I = i.useMemo(() => 0.05 > Math.random(), [0 === c.length]);
     return (
         i.useEffect(() => {
-            0 !== c.length && c !== _.current && I && (p.fire(m, T, S ? { sprite: f.vv } : null), (_.current = c));
-        }, [c, I, m, T, S, p]),
+            0 !== c.length && c !== f.current && g && (m.fire(E, v, I ? { sprite: h.vv } : null), (f.current = c));
+        }, [c, g, E, v, I, m]),
         null
     );
 }
-function p(e) {
+function m(e) {
     return (0, r.jsx)(c.Z, {
-        confettiLocation: _.Hn.CHAT_INPUT,
-        children: (0, r.jsx)(h, { ...e })
+        confettiLocation: f.Hn.CHAT_INPUT,
+        children: (0, r.jsx)(p, { ...e })
     });
 }

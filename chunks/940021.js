@@ -1,26 +1,26 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return _;
+        return u;
     }
 });
-var n = t(200651);
-t(192379);
-var a = t(63063),
-    i = t(695346),
-    r = t(838436),
-    o = t(51331),
-    l = t(726985),
-    c = t(981631),
-    d = t(689938);
-function _() {
-    let e = i.bh.useSetting();
-    return (0, n.jsx)(r.U, {
-        setting: l.s6.PRIVACY_DATA_QUESTS_V2,
-        children: (0, n.jsx)(o.Z, {
-            title: d.Z.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT,
-            note: d.Z.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED_V2.format({ helpdeskArticle: a.Z.getArticleURL(c.BhN.QUESTS_PRIVACY_CONTROLS) }),
+var i = n(200651);
+n(192379);
+var s = n(63063),
+    r = n(695346),
+    l = n(838436),
+    a = n(51331),
+    o = n(726985),
+    c = n(981631),
+    d = n(388032);
+function u() {
+    let e = r.bh.useSetting();
+    return (0, i.jsx)(l.U, {
+        setting: o.s6.PRIVACY_DATA_QUESTS_V2,
+        children: (0, i.jsx)(a.Z, {
+            title: d.intl.string(d.t.VkS7YW),
+            note: d.intl.format(d.t['5htRLC'], { helpdeskArticle: s.Z.getArticleURL(c.BhN.QUESTS_PRIVACY_CONTROLS) }),
             value: !e,
-            onChange: (e) => i.bh.updateSetting(!e)
+            onChange: (e) => r.bh.updateSetting(!e)
         })
     });
 }

@@ -1,49 +1,49 @@
 n.d(t, {
     J: function () {
-        return a;
+        return r;
     },
     z: function () {
-        return _;
+        return h;
     }
 });
 var i,
-    a,
-    s = n(200651);
+    r,
+    l = n(200651);
 n(192379);
-var r = n(990547),
-    l = n(481060),
+var a = n(990547),
+    s = n(481060),
     o = n(213609),
-    c = n(689938),
+    c = n(388032),
     d = n(861569),
     u = n(837753);
-((i = a || (a = {})).GUILD_NOT_ELIGIBLE = 'guild_not_eligible'), (i.NOT_GUILD_MEMBER = 'not_guild_member');
-let _ = (e) => {
+((i = r || (r = {})).GUILD_NOT_ELIGIBLE = 'guild_not_eligible'), (i.NOT_GUILD_MEMBER = 'not_guild_member');
+let h = (e) => {
     let { errorType: t } = e;
     return (
         (0, o.Z)({
-            type: r.ImpressionTypes.PAGE,
-            name: r.ImpressionNames.ROLE_SUBSCRIPTION_LISTING_UPSELL_ERROR_PAGE,
+            type: a.ImpressionTypes.PAGE,
+            name: a.ImpressionNames.ROLE_SUBSCRIPTION_LISTING_UPSELL_ERROR_PAGE,
             properties: { error_page_type: t }
         }),
-        (0, s.jsx)('div', {
+        (0, l.jsx)('div', {
             className: d.errorPageContainer,
-            children: (0, s.jsxs)('div', {
+            children: (0, l.jsxs)('div', {
                 className: d.errorPageContent,
                 children: [
-                    (0, s.jsx)('img', {
+                    (0, l.jsx)('img', {
                         src: u,
                         alt: '',
                         className: d.errorPageIllo
                     }),
-                    (0, s.jsx)(l.Heading, {
+                    (0, l.jsx)(s.Heading, {
                         variant: 'heading-xl/extrabold',
                         className: d.errorPageTitle,
-                        children: 'guild_not_eligible' === t ? c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_ERROR_PAGE_GUILD_NOT_ELIGIBLE_TITLE : c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_ERROR_PAGE_NOT_GUILD_MEMBER_TITLE
+                        children: 'guild_not_eligible' === t ? c.intl.string(c.t.atZQVV) : c.intl.string(c.t.gAdWBg)
                     }),
-                    (0, s.jsx)(l.Text, {
+                    (0, l.jsx)(s.Text, {
                         variant: 'text-md/normal',
                         className: d.errorPagSubtitle,
-                        children: 'guild_not_eligible' === t ? c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_ERROR_PAGE_GUILD_NOT_ELIGIBLE_SUBTITLE : c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_ERROR_PAGE_NOT_GUILD_MEMBER_SUBTITLE
+                        children: 'guild_not_eligible' === t ? c.intl.string(c.t.teWe5O) : c.intl.string(c.t['X/yMrK'])
                     })
                 ]
             })

@@ -6,8 +6,8 @@ t.d(n, {
         return d;
     }
 });
-var a,
-    r,
+var r,
+    a,
     i,
     s,
     o = t(442837),
@@ -16,7 +16,7 @@ let c = 1000,
     d = 200,
     u = {},
     m = !1;
-class _ extends (s = o.ZP.Store) {
+class f extends (s = o.ZP.Store) {
     isLoading() {
         return m;
     }
@@ -33,15 +33,15 @@ class _ extends (s = o.ZP.Store) {
     }
 }
 (i = 'DiscoverGuildChecklistStore'),
-    (r = 'displayName') in (a = _)
-        ? Object.defineProperty(a, r, {
+    (a = 'displayName') in (r = f)
+        ? Object.defineProperty(r, a, {
               value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[r] = i),
-    (n.ZP = new _(l.Z, {
+        : (r[a] = i),
+    (n.ZP = new f(l.Z, {
         DISCOVER_CHECKLIST_FETCH_START: function (e) {
             m = !0;
         },
@@ -50,9 +50,9 @@ class _ extends (s = o.ZP.Store) {
         },
         DISCOVER_CHECKLIST_FETCH_SUCCESS: function (e) {
             var n;
-            let { checklist: t, guildId: a } = e;
+            let { checklist: t, guildId: r } = e;
             (m = !1),
-                (u[a] = {
+                (u[r] = {
                     guildId: t.guild_id,
                     safeEnvironment: t.safe_environment,
                     healthy: t.healthy,

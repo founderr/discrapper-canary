@@ -9,7 +9,7 @@ var r = n(200651),
     s = n(640108);
 class o extends i.PureComponent {
     render() {
-        let { src: e, fileSize: t, fileName: n, className: i, playable: o, volume: l, renderLinkComponent: u, onVolumeChange: c, onVolumeShow: d, onVolumeHide: _, autoMute: E, onMute: f, mimeType: h, onPlay: p } = this.props;
+        let { src: e, fileSize: t, fileName: n, className: i, playable: o, volume: l, renderLinkComponent: u, onVolumeChange: c, onVolumeShow: d, onVolumeHide: f, autoMute: _, onMute: h, mimeType: p, onPlay: m } = this.props;
         return (0, r.jsx)(s.ZP, {
             src: e,
             fileName: n,
@@ -19,14 +19,14 @@ class o extends i.PureComponent {
             className: i,
             playable: o,
             volume: l,
-            onMute: f,
-            autoMute: E,
+            onMute: h,
+            autoMute: _,
             onVolumeChange: c,
             onVolumeShow: d,
-            onVolumeHide: _,
+            onVolumeHide: f,
             renderLinkComponent: u,
-            mimeType: h,
-            onPlay: p
+            mimeType: p,
+            onPlay: m
         });
     }
 }

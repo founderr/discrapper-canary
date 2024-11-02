@@ -63,7 +63,7 @@ function a(e) {
             (this.text = c), (this.end = d), (t = 3);
             break;
         default:
-            (this.write = _), (this.end = E);
+            (this.write = f), (this.end = _);
             return;
     }
     (this.lastNeed = 0), (this.lastTotal = 0), (this.lastChar = r.allocUnsafe(t));
@@ -143,9 +143,9 @@ function d(e) {
     var t = e && e.length ? this.write(e) : '';
     return this.lastNeed ? t + this.lastChar.toString('base64', 0, 3 - this.lastNeed) : t;
 }
-function _(e) {
+function f(e) {
     return e.toString(this.encoding);
 }
-function E(e) {
+function _(e) {
     return e && e.length ? this.write(e) : '';
 }

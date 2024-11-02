@@ -12,61 +12,61 @@ var r,
     u = n(91192),
     c = n(481060),
     d = n(166459),
-    _ = n(951394),
-    E = n(585483),
-    f = n(43085),
-    h = n(981631),
-    p = n(689938),
-    I = n(57604);
-function m(e) {
+    f = n(951394),
+    _ = n(585483),
+    h = n(43085),
+    p = n(981631),
+    m = n(388032),
+    g = n(57604);
+function E(e) {
     e.stopPropagation();
 }
 ((r = i || (i = {}))[(r.SMALL = 0)] = 'SMALL'), (r[(r.MEDIUM = 1)] = 'MEDIUM'), (r[(r.CLIP = 2)] = 'CLIP');
 t.Z = s.forwardRef(function (e, t) {
-    let { id: n, channelId: r, className: i, children: s, actions: o, handleEditModal: T, keyboardModeEnabled: S, onKeyDown: g, draftType: A, size: N = 1 } = e,
-        { onFocus: R, ...O } = (0, u.JA)(n),
-        { handleFocus: v, handleBlur: C } = (0, f.b)(R),
-        L = 0 === N,
-        D = null != o;
+    let { id: n, channelId: r, className: i, children: s, actions: o, handleEditModal: v, keyboardModeEnabled: I, onKeyDown: S, draftType: T, size: b = 1 } = e,
+        { onFocus: y, ...A } = (0, u.JA)(n),
+        { handleFocus: N, handleBlur: C } = (0, h.b)(y),
+        R = 0 === b,
+        O = null != o;
     return (0, a.jsx)(c.FocusRing, {
         children: (0, a.jsx)('li', {
-            ...O,
-            onFocus: v,
+            ...A,
+            onFocus: N,
             onBlur: C,
             onKeyDown: (e) => {
-                if (!!S) {
+                if (!!I) {
                     switch (e.which) {
-                        case h.yXg.D:
-                            e.preventDefault(), d.Z.remove(r, n, A);
+                        case p.yXg.D:
+                            e.preventDefault(), d.Z.remove(r, n, T);
                             return;
-                        case h.yXg.E:
-                            null != T && (e.preventDefault(), T(e));
+                        case p.yXg.E:
+                            null != v && (e.preventDefault(), v(e));
                             return;
-                        case h.yXg.BACKSPACE:
-                            e.ctrlKey ? (e.preventDefault(), d.Z.clearAll(r, A)) : (e.preventDefault(), d.Z.remove(r, n, A));
+                        case p.yXg.BACKSPACE:
+                            e.ctrlKey ? (e.preventDefault(), d.Z.clearAll(r, T)) : (e.preventDefault(), d.Z.remove(r, n, T));
                             return;
-                        case h.yXg.ARROW_UP:
+                        case p.yXg.ARROW_UP:
                             if (e.shiftKey || e.altKey || e.ctrlKey || e.metaKey) return;
-                            e.preventDefault(), E.S.dispatchToLastSubscribed(h.CkL.FOCUS_MESSAGES, { atEnd: !0 });
+                            e.preventDefault(), _.S.dispatchToLastSubscribed(p.CkL.FOCUS_MESSAGES, { atEnd: !0 });
                     }
-                    null == g || g(e);
+                    null == S || S(e);
                 }
             },
-            className: l()(I.upload, i, { [I.sizeClip]: 2 === N }),
+            className: l()(g.upload, i, { [g.sizeClip]: 2 === b }),
             ref: t,
             children: (0, a.jsxs)('div', {
-                className: I.uploadContainer,
+                className: g.uploadContainer,
                 children: [
                     s,
-                    D
+                    O
                         ? (0, a.jsx)('div', {
-                              className: I.actionBarContainer,
+                              className: g.actionBarContainer,
                               children: (0, a.jsx)('div', {
-                                  className: l()(I.actionBar, { [I.smallActionBar]: L }),
-                                  onContextMenu: m,
-                                  'aria-label': p.Z.Messages.ATTACHMENT_UTILITIES,
-                                  children: (0, a.jsx)(_.ZP, {
-                                      className: l()({ [I.miniPopover]: L }),
+                                  className: l()(g.actionBar, { [g.smallActionBar]: R }),
+                                  onContextMenu: E,
+                                  'aria-label': m.intl.string(m.t['8Lu3Dg']),
+                                  children: (0, a.jsx)(f.ZP, {
+                                      className: l()({ [g.miniPopover]: R }),
                                       children: o
                                   })
                               })

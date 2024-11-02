@@ -1,76 +1,76 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return p;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(120356),
-    s = n.n(a),
-    r = n(481060),
-    l = n(592125),
-    o = n(944486),
+var r = n(120356),
+    l = n.n(r),
+    a = n(481060),
+    o = n(592125),
+    s = n(944486),
     c = n(471253),
     u = n(623633),
     d = n(930180),
-    _ = n(689938),
-    E = n(979661);
-function I(e) {
-    let t = o.Z.getVoiceChannelId();
+    m = n(388032),
+    f = n(979661);
+function h(e) {
+    let t = s.Z.getVoiceChannelId();
     if (null == t) return;
-    let n = l.Z.getChannel(t);
+    let n = o.Z.getChannel(t);
     if (null != n) (0, c.RK)(n, e);
 }
-function m() {
+function p() {
     var e;
     let t = (0, u.Z)(),
         n = null !== (e = (0, d._d)(null == t ? void 0 : t.id)) && void 0 !== e ? e : 0;
     return null == t
         ? null
-        : (0, i.jsxs)(r.Notice, {
-              className: E.container,
-              color: r.NoticeColors.DEFAULT,
+        : (0, i.jsxs)(a.Notice, {
+              className: f.container,
+              color: a.NoticeColors.DEFAULT,
               children: [
-                  (0, i.jsx)('div', { children: _.Z.Messages.STAGE_SPEAK_INVITE_HEADER }),
+                  (0, i.jsx)('div', { children: m.intl.string(m.t.Ul1RJS) }),
                   n > 0
                       ? (0, i.jsxs)('div', {
-                            className: E.blocked,
+                            className: f.blocked,
                             children: [
-                                (0, i.jsx)(r.DenyIcon, {
+                                (0, i.jsx)(a.DenyIcon, {
                                     size: 'xxs',
                                     color: 'currentColor',
-                                    className: E.blockedIcon
+                                    className: f.blockedIcon
                                 }),
                                 (0, i.jsx)('div', {
-                                    className: E.blockedText,
-                                    children: _.Z.Messages.STAGE_SPEAK_INVITE_HEADER_BLOCKED_USERS.format({ number: n })
+                                    className: f.blockedText,
+                                    children: m.intl.format(m.t.ATpigY, { number: n })
                                 })
                             ]
                         })
                       : null,
-                  (0, i.jsx)(r.Button, {
-                      className: s()(E.__invalid_button, E.acceptButton),
-                      size: r.Button.Sizes.MIN,
-                      color: r.Button.Colors.WHITE,
-                      onClick: () => I(!1),
-                      children: (0, i.jsx)(r.Text, {
-                          className: E.acceptText,
+                  (0, i.jsx)(a.Button, {
+                      className: l()(f.__invalid_button, f.acceptButton),
+                      size: a.Button.Sizes.MIN,
+                      color: a.Button.Colors.WHITE,
+                      onClick: () => h(!1),
+                      children: (0, i.jsx)(a.Text, {
+                          className: f.acceptText,
                           variant: 'text-xs/normal',
                           color: 'none',
-                          children: _.Z.Messages.STAGE_SPEAK_INVITE_ACCEPT
+                          children: m.intl.string(m.t.MpO0p6)
                       })
                   }),
-                  (0, i.jsx)(r.Button, {
-                      className: s()(E.__invalid_button, E.declineButton),
-                      look: r.Button.Looks.OUTLINED,
-                      size: r.Button.Sizes.MIN,
-                      color: r.Button.Colors.WHITE,
-                      onClick: () => I(!0),
-                      children: (0, i.jsx)(r.Text, {
-                          className: E.declineText,
+                  (0, i.jsx)(a.Button, {
+                      className: l()(f.__invalid_button, f.declineButton),
+                      look: a.Button.Looks.OUTLINED,
+                      size: a.Button.Sizes.MIN,
+                      color: a.Button.Colors.WHITE,
+                      onClick: () => h(!0),
+                      children: (0, i.jsx)(a.Text, {
+                          className: f.declineText,
                           variant: 'text-xs/normal',
                           color: 'none',
-                          children: _.Z.Messages.STAGE_SPEAK_INVITE_DECLINE
+                          children: m.intl.string(m.t['1YDv7e'])
                       })
                   })
               ]

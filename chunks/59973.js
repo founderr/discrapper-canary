@@ -22,15 +22,15 @@ function l(e) {
             u = n.clientOffset,
             c = n.getSourceClientOffset,
             d = e.getMonitor(),
-            _ = e.getRegistry();
+            f = e.getRegistry();
         e.dispatch((0, i.T)(u)),
             (function (e, t, n) {
                 (0, r.k)(!t.isDragging(), 'Cannot call beginDrag while dragging.'),
                     e.forEach(function (e) {
                         (0, r.k)(n.getSource(e), 'Expected sourceIds to be registered.');
                     });
-            })(t, d, _);
-        var E = (function (e, t) {
+            })(t, d, f);
+        var _ = (function (e, t) {
             for (var n = null, r = e.length - 1; r >= 0; r--)
                 if (t.canDragSource(e[r])) {
                     n = e[r];
@@ -38,34 +38,34 @@ function l(e) {
                 }
             return n;
         })(t, d);
-        if (null === E) {
+        if (null === _) {
             e.dispatch(o);
             return;
         }
-        var f = null;
+        var h = null;
         if (u) {
             if (!c) throw Error('getSourceClientOffset must be defined');
             (function (e) {
                 (0, r.k)('function' == typeof e, 'When clientOffset is provided, getSourceClientOffset must be a function.');
             })(c),
-                (f = c(E));
+                (h = c(_));
         }
-        e.dispatch((0, i.T)(u, f));
-        var h = _.getSource(E).beginDrag(d, E);
-        if (null != h) {
+        e.dispatch((0, i.T)(u, h));
+        var p = f.getSource(_).beginDrag(d, _);
+        if (null != p) {
             (function (e) {
                 (0, r.k)((0, a.Kn)(e), 'Item must be an object.');
-            })(h),
-                _.pinSource(E);
-            var p = _.getSourceType(E);
+            })(p),
+                f.pinSource(_);
+            var m = f.getSourceType(_);
             return {
                 type: s.qu,
                 payload: {
-                    itemType: p,
-                    item: h,
-                    sourceId: E,
+                    itemType: m,
+                    item: p,
+                    sourceId: _,
                     clientOffset: u || null,
-                    sourceClientOffset: f || null,
+                    sourceClientOffset: h || null,
                     isSourcePublic: !!(void 0 === l || l)
                 }
             };

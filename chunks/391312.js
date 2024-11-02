@@ -1,43 +1,43 @@
-n.r(t),
-    n.d(t, {
+e.r(n),
+    e.d(n, {
         default: function () {
-            return d;
+            return u;
         }
     }),
-    n(47120);
-var o = n(200651),
-    r = n(192379),
-    s = n(433517),
-    a = n(481060),
-    c = n(818634),
-    i = n(689938),
-    u = n(525815);
-function d(e) {
-    let [t, n] = r.useState(!1);
-    return (0, o.jsxs)(a.ConfirmModal, {
-        ...e,
-        header: i.Z.Messages.GUILD_SIDEBAR_REORDER_DIALOG_TITLE,
-        confirmText: i.Z.Messages.GUILD_SIDEBAR_REORDER_CONFIRM,
-        cancelText: i.Z.Messages.CANCEL,
+    e(47120);
+var r = e(200651),
+    o = e(192379),
+    i = e(433517),
+    c = e(481060),
+    a = e(818634),
+    s = e(388032),
+    l = e(525815);
+function u(t) {
+    let [n, e] = o.useState(!1);
+    return (0, r.jsxs)(c.ConfirmModal, {
+        ...t,
+        header: s.intl.string(s.t.pjYu09),
+        confirmText: s.intl.string(s.t.zVZXRU),
+        cancelText: s.intl.string(s.t['ETE/oK']),
         onConfirm: () => {
-            (0, c.l)(!0);
+            (0, a.l)(!0);
         },
-        confirmButtonColor: a.Button.Colors.BRAND,
+        confirmButtonColor: c.Button.Colors.BRAND,
         children: [
-            (0, o.jsx)(a.Text, {
+            (0, r.jsx)(c.Text, {
                 variant: 'text-md/normal',
-                children: i.Z.Messages.GUILD_SIDEBAR_REORDER_DESCRIPTION.format()
+                children: s.intl.format(s.t['0eydys'], {})
             }),
-            (0, o.jsx)(a.Checkbox, {
-                className: u.checkboxMargin,
-                type: a.Checkbox.Types.INVERTED,
-                value: t,
+            (0, r.jsx)(c.Checkbox, {
+                className: l.checkboxMargin,
+                type: c.Checkbox.Types.INVERTED,
+                value: n,
                 onChange: () => {
-                    s.K.set('doNotShowReorderModal', JSON.stringify(!0)), n(!0);
+                    i.K.set('doNotShowReorderModal', JSON.stringify(!0)), e(!0);
                 },
-                children: (0, o.jsx)(a.Text, {
+                children: (0, r.jsx)(c.Text, {
                     variant: 'text-md/normal',
-                    children: i.Z.Messages.GUILD_SIDEBAR_DO_NOT_SHOW_AGAIN
+                    children: s.intl.string(s.t['50TyjY'])
                 })
             })
         ]

@@ -1,36 +1,36 @@
 n.d(t, {
     U: function () {
-        return i;
+        return l;
     }
 });
 var o = n(200651);
 n(192379);
-var s = n(481060),
-    r = n(46140),
-    a = n(689938);
-function l(e) {
-    let { onClose: t, onSelect: n, quest: l } = e;
-    return (0, o.jsx)(s.Menu, {
+var r = n(481060),
+    s = n(46140),
+    a = n(388032);
+function i(e) {
+    let { onClose: t, onSelect: n, quest: i } = e;
+    return (0, o.jsx)(r.Menu, {
         variant: 'fixed',
         onSelect: t,
-        navId: 'quest-home-platform-select-'.concat(l.id),
-        'aria-label': a.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
+        navId: 'quest-home-platform-select-'.concat(i.id),
+        'aria-label': a.intl.string(a.t.ogxXGh),
         onClose: t,
         children: (0, o.jsxs)(
-            s.MenuGroup,
+            r.MenuGroup,
             {
                 children: [
-                    (0, o.jsx)(s.MenuItem, {
+                    (0, o.jsx)(r.MenuItem, {
                         id: 'desktop',
-                        label: a.Z.Messages.QUEST_MULTIPLATFORM_SELECT_DESKTOP,
-                        action: () => n(r.cd.DESKTOP),
-                        icon: s.ScreenIcon
+                        label: a.intl.string(a.t.QXc019),
+                        action: () => n(s.cd.DESKTOP),
+                        icon: r.ScreenIcon
                     }),
-                    (0, o.jsx)(s.MenuItem, {
+                    (0, o.jsx)(r.MenuItem, {
                         id: 'console',
-                        label: a.Z.Messages.QUEST_MULTIPLATFORM_SELECT_CONSOLE,
-                        action: () => n(r.cd.CONSOLE),
-                        icon: s.GameControllerIcon
+                        label: a.intl.string(a.t['8lAfuL']),
+                        action: () => n(s.cd.CONSOLE),
+                        icon: r.GameControllerIcon
                     })
                 ]
             },
@@ -38,14 +38,14 @@ function l(e) {
         )
     });
 }
-function i(e) {
+function l(e) {
     let { children: t, ...n } = e;
-    return (0, o.jsx)(s.Popout, {
+    return (0, o.jsx)(r.Popout, {
         position: 'bottom',
         align: 'right',
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, o.jsx)(l, {
+            return (0, o.jsx)(i, {
                 ...n,
                 onClose: t
             });

@@ -1,59 +1,59 @@
 var i = n(200651),
-    a = n(192379),
-    s = n(442837),
-    r = n(481060),
-    l = n(565138),
+    r = n(192379),
+    l = n(442837),
+    a = n(481060),
+    s = n(565138),
     o = n(693546),
     c = n(937111),
-    d = n(689938),
+    d = n(388032),
     u = n(27471),
-    _ = n(364632);
+    h = n(364632);
 t.Z = (e) => {
-    let { headerId: t, reapplyText: n, onReapply: E, confirmText: h, onWithdrawApplication: m, rejectionReason: I = null, guild: p = null } = e,
-        g = (0, s.e7)([c.Z], () => {
+    let { headerId: t, reapplyText: n, onReapply: m, confirmText: p, onWithdrawApplication: g, rejectionReason: f = null, guild: _ = null } = e,
+        E = (0, l.e7)([c.Z], () => {
             var e;
-            return c.Z.getCooldown(null !== (e = null == p ? void 0 : p.id) && void 0 !== e ? e : '0');
+            return c.Z.getCooldown(null !== (e = null == _ ? void 0 : _.id) && void 0 !== e ? e : '0');
         });
-    a.useEffect(() => {
-        null == g && null != p && o.Z.fetchJoinRequestCooldown(p.id);
-    }, [g, p]);
-    let T = (null != g ? g : 0) > 0,
-        S = T && null != g ? Math.ceil((1000 * g - Date.now()) / 86400000) : 0;
+    r.useEffect(() => {
+        null == E && null != _ && o.Z.fetchJoinRequestCooldown(_.id);
+    }, [E, _]);
+    let I = (null != E ? E : 0) > 0,
+        C = I && null != E ? Math.ceil((1000 * E - Date.now()) / 86400000) : 0;
     return (0, i.jsxs)('div', {
         className: u.confirmation,
         children: [
             (0, i.jsxs)('div', {
                 className: u.confirmationContent,
                 children: [
-                    null !== p
-                        ? (0, i.jsx)(l.Z, {
-                              size: l.Z.Sizes.LARGER,
-                              guild: p,
+                    null !== _
+                        ? (0, i.jsx)(s.Z, {
+                              size: s.Z.Sizes.LARGER,
+                              guild: _,
                               className: u.guildIcon
                           })
                         : (0, i.jsx)('img', {
-                              alt: d.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_ICON,
-                              src: _,
+                              alt: d.intl.string(d.t.bFPqMj),
+                              src: h,
                               className: u.__invalid_verificationStateIcon
                           }),
-                    (0, i.jsx)(r.Heading, {
+                    (0, i.jsx)(a.Heading, {
                         id: t,
                         variant: 'heading-xl/semibold',
                         className: u.header,
-                        children: (null == p ? void 0 : p.name) != null ? d.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_TITLE_WITH_GUILD_NAME.format({ guildName: p.name }) : d.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_TITLE
+                        children: (null == _ ? void 0 : _.name) != null ? d.intl.formatToPlainString(d.t['P+/gzM'], { guildName: _.name }) : d.intl.string(d.t.gBPcuL)
                     }),
-                    null != I && '' !== I
+                    null != f && '' !== f
                         ? (0, i.jsx)(i.Fragment, {
-                              children: (0, i.jsxs)(r.Text, {
+                              children: (0, i.jsxs)(a.Text, {
                                   variant: 'text-sm/normal',
                                   children: [
                                       (0, i.jsx)('span', {
                                           className: u.rejectionReasonLabel,
-                                          children: d.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_REASON
+                                          children: d.intl.string(d.t.cf1psb)
                                       }),
                                       (0, i.jsx)('span', {
                                           className: u.rejectionReason,
-                                          children: I
+                                          children: f
                                       })
                                   ]
                               })
@@ -64,24 +64,24 @@ t.Z = (e) => {
             (0, i.jsxs)('div', {
                 className: u.confirmationButtonRow,
                 children: [
-                    (0, i.jsx)(r.TooltipContainer, {
+                    (0, i.jsx)(a.TooltipContainer, {
                         className: u.confirmationButton,
-                        text: T ? d.Z.Messages.MEMBER_VERIFICATION_PENDING_APPLICATION_MODAL_REAPPLY_COOLDOWN.format({ days: S }) : null,
-                        'aria-label': T ? d.Z.Messages.MEMBER_VERIFICATION_PENDING_APPLICATION_MODAL_REAPPLY_COOLDOWN.format({ days: S }) : void 0,
-                        children: (0, i.jsx)(r.Button, {
+                        text: I ? d.intl.formatToPlainString(d.t.A0f0Pz, { days: C }) : null,
+                        'aria-label': I ? d.intl.formatToPlainString(d.t.A0f0Pz, { days: C }) : void 0,
+                        children: (0, i.jsx)(a.Button, {
                             className: u.confirmationTooltipContents,
-                            onClick: E,
-                            color: r.Button.Colors.PRIMARY,
-                            submitting: null == g,
-                            disabled: T,
+                            onClick: m,
+                            color: a.Button.Colors.PRIMARY,
+                            submitting: null == E,
+                            disabled: I,
                             children: n
                         })
                     }),
-                    (0, i.jsx)(r.Button, {
-                        onClick: m,
-                        color: r.Button.Colors.RED,
+                    (0, i.jsx)(a.Button, {
+                        onClick: g,
+                        color: a.Button.Colors.RED,
                         className: u.confirmationButton,
-                        children: h
+                        children: p
                     })
                 ]
             })

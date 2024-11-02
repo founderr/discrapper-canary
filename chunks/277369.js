@@ -3,48 +3,48 @@ n.d(t, {
         return d;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(399606),
-    i = n(481060),
-    r = n(430824),
-    l = n(594174),
+var r = n(399606),
+    l = n(481060),
+    s = n(430824),
+    a = n(594174),
     o = n(723047),
-    c = n(689938);
+    c = n(388032);
 function d(e) {
     let { guildId: t, application: d } = e,
-        u = (0, a.e7)([r.Z], () => r.Z.getGuild(t)),
-        _ = (0, a.e7)([l.default], () => l.default.getCurrentUser()),
-        I = (0, o.mY)();
-    if (null == u || !u.isOwner(_)) return null;
-    let E = d.team;
-    return (0, s.jsxs)('div', {
+        u = (0, r.e7)([s.Z], () => s.Z.getGuild(t)),
+        m = (0, r.e7)([a.default], () => a.default.getCurrentUser()),
+        h = (0, o.mY)();
+    if (null == u || !u.isOwner(m)) return null;
+    let g = d.team;
+    return (0, i.jsxs)('div', {
         children: [
-            (0, s.jsx)(i.FormText, {
-                type: i.FormText.Types.DESCRIPTION,
-                disabled: I,
-                children: null != E ? c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_DESCRIPTION.format({ teamName: E.name }) : c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_NO_TEAM_DESCRIPTION
+            (0, i.jsx)(l.FormText, {
+                type: l.FormText.Types.DESCRIPTION,
+                disabled: h,
+                children: null != g ? c.intl.format(c.t.erxwWF, { teamName: g.name }) : c.intl.string(c.t.FGzLkJ)
             }),
-            (0, s.jsx)(i.Spacer, { size: 16 }),
-            (0, s.jsx)(i.Button, {
-                look: i.Button.Looks.FILLED,
-                color: null != E ? i.Button.Colors.PRIMARY : i.Button.Colors.BRAND,
+            (0, i.jsx)(l.Spacer, { size: 16 }),
+            (0, i.jsx)(l.Button, {
+                look: l.Button.Looks.FILLED,
+                color: null != g ? l.Button.Colors.PRIMARY : l.Button.Colors.BRAND,
                 onClick: () => {
                     var e;
                     return (
                         (e = d),
-                        void (0, i.openModalLazy)(async () => {
+                        void (0, l.openModalLazy)(async () => {
                             let { default: t } = await n.e('83942').then(n.bind(n, 743582));
                             return (n) =>
-                                (0, s.jsx)(t, {
+                                (0, i.jsx)(t, {
                                     ...n,
                                     application: e
                                 });
                         })
                     );
                 },
-                disabled: I,
-                children: null != E ? c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_CHANGE_TEAM_CTA : c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_SELECT_TEAM_CTA
+                disabled: h,
+                children: null != g ? c.intl.string(c.t['/Fjq5O']) : c.intl.string(c.t['6ih+b2'])
             })
         ]
     });

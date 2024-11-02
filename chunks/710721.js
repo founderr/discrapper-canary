@@ -1,15 +1,15 @@
 var r = n(55935),
     i = n(70956),
     a = n(34756),
-    s = n(689938);
+    s = n(388032);
 class o extends a.Z {
     _getMessageFromRateLimit(e) {
         let t = e.body.retry_after,
             n = (0, r.TD)(0, t * i.Z.Millis.SECOND);
         return (0, r.QX)(n, {
-            days: s.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_ERROR_RATE_LIMIT_DAYS,
-            hours: s.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_ERROR_RATE_LIMIT_HOURS,
-            minutes: s.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_ERROR_RATE_LIMIT_MINUTES
+            days: s.t['iXc/IS'],
+            hours: s.t['WW9P5+'],
+            minutes: s.t.I7rYen
         });
     }
     constructor(e, t) {

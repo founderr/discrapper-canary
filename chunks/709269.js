@@ -60,19 +60,19 @@ e.exports = function (e) {
                 }
             ]
         },
-        _ = {
+        f = {
             beginKeywords: 'fun receive if try case',
             end: 'end',
             keywords: r
         };
-    _.contains = [i, s, e.inherit(e.APOS_STRING_MODE, { className: '' }), _, o, e.QUOTE_STRING_MODE, a, l, u, c, d];
-    let E = [i, s, _, o, e.QUOTE_STRING_MODE, a, l, u, c, d];
-    (o.contains[1].contains = E), (l.contains = E), (d.contains[1].contains = E);
-    let f = {
+    f.contains = [i, s, e.inherit(e.APOS_STRING_MODE, { className: '' }), f, o, e.QUOTE_STRING_MODE, a, l, u, c, d];
+    let _ = [i, s, f, o, e.QUOTE_STRING_MODE, a, l, u, c, d];
+    (o.contains[1].contains = _), (l.contains = _), (d.contains[1].contains = _);
+    let h = {
         className: 'params',
         begin: '\\(',
         end: '\\)',
-        contains: E
+        contains: _
     };
     return {
         name: 'Erlang',
@@ -86,11 +86,11 @@ e.exports = function (e) {
                 end: '->',
                 returnBegin: !0,
                 illegal: '\\(|#|//|/\\*|\\\\|:|;',
-                contains: [f, e.inherit(e.TITLE_MODE, { begin: t })],
+                contains: [h, e.inherit(e.TITLE_MODE, { begin: t })],
                 starts: {
                     end: ';|\\.',
                     keywords: r,
-                    contains: E
+                    contains: _
                 }
             },
             i,
@@ -104,7 +104,7 @@ e.exports = function (e) {
                     $pattern: '-' + e.IDENT_RE,
                     keyword: ['-module', '-record', '-undef', '-export', '-ifdef', '-ifndef', '-author', '-copyright', '-doc', '-vsn', '-import', '-include', '-include_lib', '-compile', '-define', '-else', '-endif', '-file', '-behaviour', '-behavior', '-spec'].map((e) => `${e}|1.5`).join(' ')
                 },
-                contains: [f]
+                contains: [h]
             },
             a,
             e.QUOTE_STRING_MODE,

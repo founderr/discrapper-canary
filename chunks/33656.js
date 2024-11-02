@@ -1,105 +1,105 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
         return C;
     }
 }),
-    t(724458);
-var n = t(200651),
-    a = t(192379),
-    i = t(120356),
-    r = t.n(i),
-    o = t(442837),
-    l = t(481060),
-    c = t(921801),
-    d = t(663389),
-    _ = t(960412),
-    u = t(151662),
-    E = t(930441),
-    T = t(726985),
-    S = t(689938),
-    I = t(325582),
-    N = t(113207);
-function m(e) {
-    let { label: s, onChange: t, enabled: a, subLabel: i } = e;
-    return (0, n.jsx)(l.FormSwitch, {
-        value: !!a,
-        onChange: t,
-        note: i,
-        children: s
+    n(724458);
+var i = n(200651),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(442837),
+    o = n(481060),
+    c = n(921801),
+    d = n(663389),
+    u = n(960412),
+    m = n(151662),
+    h = n(930441),
+    g = n(726985),
+    p = n(388032),
+    x = n(325582),
+    S = n(113207);
+function T(e) {
+    let { label: t, onChange: n, enabled: s, subLabel: r } = e;
+    return (0, i.jsx)(o.FormSwitch, {
+        value: !!s,
+        onChange: n,
+        note: r,
+        children: t
     });
 }
 function C() {
-    let e = (0, o.e7)([d.Z], () => d.Z.getSubsection()),
-        s = a.createRef(),
-        { categories: t, initialized: i } = (0, o.cj)([u.Z], () => u.Z.getEmailSettings());
-    a.useEffect(() => {
-        if (null == i) (0, _.Y7)();
-        else if (e === E.vG.toUpperCase()) {
-            var t;
-            null == s || null === (t = s.current) || void 0 === t || t.scrollIntoView(!0);
+    let e = (0, a.e7)([d.Z], () => d.Z.getSubsection()),
+        t = s.createRef(),
+        { categories: n, initialized: r } = (0, a.cj)([m.Z], () => m.Z.getEmailSettings());
+    s.useEffect(() => {
+        if (null == r) (0, u.Y7)();
+        else if (e === h.vG.toUpperCase()) {
+            var n;
+            null == t || null === (n = t.current) || void 0 === n || n.scrollIntoView(!0);
         }
-    }, [i, s, e]);
-    let C = E.M0.reduce((e, s) => e || !!t[s], !1),
-        A = {
-            [E.$Z.COMMUNICATION]: T.s6.NOTIFICATIONS_EMAILS_COMMUNICATION,
-            [E.$Z.SOCIAL]: T.s6.NOTIFICATIONS_EMAILS_SOCIAL,
-            [E.$Z.UPDATES_AND_ANNOUNCEMENTS]: T.s6.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES,
-            [E.$Z.TIPS]: T.s6.NOTIFICATIONS_EMAILS_TIPS,
-            [E.$Z.RECOMMENDATIONS_AND_EVENTS]: T.s6.NOTIFICATIONS_EMAILS_RECOMMENDATIONS_AND_EVENTS
+    }, [r, t, e]);
+    let C = h.M0.reduce((e, t) => e || !!n[t], !1),
+        _ = {
+            [h.$Z.COMMUNICATION]: g.s6.NOTIFICATIONS_EMAILS_COMMUNICATION,
+            [h.$Z.SOCIAL]: g.s6.NOTIFICATIONS_EMAILS_SOCIAL,
+            [h.$Z.UPDATES_AND_ANNOUNCEMENTS]: g.s6.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES,
+            [h.$Z.TIPS]: g.s6.NOTIFICATIONS_EMAILS_TIPS,
+            [h.$Z.RECOMMENDATIONS_AND_EVENTS]: g.s6.NOTIFICATIONS_EMAILS_RECOMMENDATIONS_AND_EVENTS
         };
-    return i
-        ? (0, n.jsxs)(c.F, {
-              setting: T.s6.NOTIFICATIONS_EMAILS,
+    return r
+        ? (0, i.jsxs)(c.F, {
+              setting: g.s6.NOTIFICATIONS_EMAILS,
               children: [
-                  (0, n.jsx)('div', { ref: s }),
-                  (0, n.jsxs)(l.FormSection, {
-                      className: r()(N.marginTop40),
-                      tag: l.FormTitleTags.H1,
-                      title: S.Z.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS,
+                  (0, i.jsx)('div', { ref: t }),
+                  (0, i.jsxs)(o.FormSection, {
+                      className: l()(S.marginTop40),
+                      tag: o.FormTitleTags.H1,
+                      title: p.intl.string(p.t.TPchzM),
                       children: [
-                          E.Od.map((e) => {
-                              let { category: s, label: a, subLabel: i } = e,
-                                  r = A[s],
-                                  o = (0, n.jsx)(
-                                      m,
+                          h.Od.map((e) => {
+                              let { category: t, label: s, subLabel: r } = e,
+                                  l = _[t],
+                                  a = (0, i.jsx)(
+                                      T,
                                       {
-                                          label: a(),
-                                          subLabel: i(),
-                                          enabled: t[s],
+                                          label: s(),
+                                          subLabel: r(),
+                                          enabled: n[t],
                                           onChange: (e) => {
-                                              var t, n;
-                                              return (t = s), (n = e), void (0, _.pR)(t, n);
+                                              var n, i;
+                                              return (n = t), (i = e), void (0, u.pR)(n, i);
                                           }
                                       },
-                                      a()
+                                      s()
                                   );
-                              return null != r
-                                  ? (0, n.jsx)(
+                              return null != l
+                                  ? (0, i.jsx)(
                                         c.F,
                                         {
-                                            setting: r,
-                                            children: o
+                                            setting: l,
+                                            children: a
                                         },
-                                        a()
+                                        s()
                                     )
-                                  : o;
+                                  : a;
                           }),
-                          (0, n.jsxs)(c.F, {
-                              setting: T.s6.NOTIFICATIONS_EMAILS_UNSUBSCRIBE_FROM_ALL_MARKETING_EMAILS,
+                          (0, i.jsxs)(c.F, {
+                              setting: g.s6.NOTIFICATIONS_EMAILS_UNSUBSCRIBE_FROM_ALL_MARKETING_EMAILS,
                               children: [
-                                  (0, n.jsx)(l.Button, {
-                                      className: I.marketingUnsubscribeButton,
+                                  (0, i.jsx)(o.Button, {
+                                      className: x.marketingUnsubscribeButton,
                                       disabled: !C,
-                                      look: l.ButtonLooks.LINK,
-                                      color: l.ButtonColors.LINK,
-                                      onClick: _.oc,
-                                      children: S.Z.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS_UNSUB_MARKETING
+                                      look: o.ButtonLooks.LINK,
+                                      color: o.ButtonColors.LINK,
+                                      onClick: u.oc,
+                                      children: p.intl.string(p.t.Ra9Pws)
                                   }),
-                                  (0, n.jsx)(l.FormText, {
-                                      type: l.FormTextTypes.DESCRIPTION,
-                                      children: S.Z.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS_UNSUB_MARKETING_DESCRIPTION
+                                  (0, i.jsx)(o.FormText, {
+                                      type: o.FormTextTypes.DESCRIPTION,
+                                      children: p.intl.string(p.t.iYjQ8f)
                                   }),
-                                  (0, n.jsx)(l.FormDivider, { className: r()(N.marginTop40, N.marginBottom40) })
+                                  (0, i.jsx)(o.FormDivider, { className: l()(S.marginTop40, S.marginBottom40) })
                               ]
                           })
                       ]

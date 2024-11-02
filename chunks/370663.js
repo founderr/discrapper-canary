@@ -1,29 +1,29 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return s;
     }
 });
 var i = n(192379),
-    s = n(772848),
-    a = n(125268);
-let l = () => {};
-function r(e, t, n) {
-    let r = i.useRef((0, s.Z)()),
+    l = n(772848),
+    r = n(125268);
+let a = () => {};
+function s(e, t, n) {
+    let s = i.useRef((0, l.Z)()),
         o = i.useRef(Date.now()),
         c = i.useCallback(
-            (i, s) => {
-                let l = {
+            (i, l) => {
+                let a = {
                     x: i,
-                    y: s,
+                    y: l,
                     deltaTime: Date.now() - o.current
                 };
-                (0, a.oW)(t, r.current, e, n, l), (0, a.cV)(r.current, e, n, [l]);
+                (0, r.oW)(t, s.current, e, n, a), (0, r.cV)(s.current, e, n, [a]);
             },
             [t, n, e]
         ),
         u = i.useCallback(
             (e, t, n) => {
-                (r.current = (0, s.Z)()), (o.current = Date.now()), c(t, n);
+                (s.current = (0, l.Z)()), (o.current = Date.now()), c(t, n);
             },
             [c]
         ),
@@ -33,7 +33,7 @@ function r(e, t, n) {
         () => ({
             handleMouseDown: u,
             handleMouseMove: d,
-            handleMouseUp: l,
+            handleMouseUp: a,
             handleMouseEnter: h
         }),
         [u, h, d]

@@ -1,15 +1,15 @@
 n.d(t, {
     T: function () {
-        return s;
+        return r;
     },
     Z: function () {
-        return r;
+        return s;
     }
 });
 var o = n(200651);
-let s = n(192379).createContext(!1);
-function r(e) {
-    return (0, o.jsx)(s.Provider, {
+let r = n(192379).createContext(!1);
+function s(e) {
+    return (0, o.jsx)(r.Provider, {
         value: !0,
         children: e.children
     });

@@ -1,18 +1,18 @@
 n.d(t, {
     U: function () {
-        return l;
+        return a;
     },
     v: function () {
-        return a;
+        return r;
     }
 });
 var i = n(818083),
-    s = n(987338);
-let a = (0, i.B)({
+    l = n(987338);
+let r = (0, i.B)({
         kind: 'user',
         id: '2024-10_user_profile_panel_recent_activity_status',
         label: 'User Profile Panel Recent Activity Status',
-        commonTriggerPoint: s.$P.DM_GDM_LIST_RENDER,
+        commonTriggerPoint: l.$P.DM_GDM_LIST_RENDER,
         defaultConfig: { recentActivityStatusEnabled: !1 },
         treatments: [
             {
@@ -22,7 +22,7 @@ let a = (0, i.B)({
             }
         ]
     }),
-    l = (e) => {
+    a = (e) => {
         let { location: t } = e;
-        return a.useExperiment({ location: t });
+        return r.useExperiment({ location: t });
     };

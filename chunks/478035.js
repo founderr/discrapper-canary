@@ -1,25 +1,25 @@
-t.d(n, {
+e.d(t, {
     Z: function () {
-        return o;
+        return c;
     }
 });
-var a = t(200651);
-t(192379);
-var i = t(442837),
-    l = t(481060),
-    u = t(703656),
-    r = t(914010),
-    s = t(981631),
-    d = t(689938);
-function o(e) {
-    let n = (0, i.e7)([r.Z], () => r.Z.getGuildId());
-    return __OVERLAY__ || n !== s.I_8
+var i = e(200651);
+e(192379);
+var l = e(442837),
+    a = e(481060),
+    r = e(703656),
+    u = e(914010),
+    d = e(981631),
+    o = e(388032);
+function c(n) {
+    let t = (0, l.e7)([u.Z], () => u.Z.getGuildId());
+    return __OVERLAY__ || t !== d.I_8
         ? null
-        : (0, a.jsx)(l.MenuItem, {
+        : (0, i.jsx)(a.MenuItem, {
               id: 'go-to-original-guild',
-              label: d.Z.Messages.FAVORITES_GO_TO_ORIGINAL_GUILD,
+              label: o.intl.string(o.t.WYj55e),
               action: function () {
-                  (0, u.XU)(e.guild_id, e.id);
+                  (0, r.XU)(n.guild_id, n.id);
               }
           });
 }

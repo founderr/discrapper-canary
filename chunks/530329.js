@@ -1,39 +1,39 @@
-a.d(n, {
+t.d(n, {
     Z: function () {
-        return f;
+        return p;
     }
 });
-var t = a(200651),
-    s = a(192379),
-    c = a(120356),
-    o = a.n(c),
-    i = a(53691),
-    r = a(378879),
-    d = a(981631),
-    l = a(486324),
-    u = a(689938),
-    A = a(734471);
-function f(e) {
-    let { uploadType: n, className: a, ...c } = e,
-        f = s.useCallback(() => {
+var a = t(200651),
+    i = t(192379),
+    c = t(120356),
+    o = t.n(c),
+    s = t(53691),
+    r = t(378879),
+    d = t(981631),
+    l = t(486324),
+    u = t(388032),
+    f = t(734471);
+function p(e) {
+    let { uploadType: n, className: t, ...c } = e,
+        p = i.useCallback(() => {
             (0, r.openProfileUpsellModal)(n, void 0);
         }, [n]),
-        p = s.useMemo(() => {
+        A = i.useMemo(() => {
             switch (n) {
                 case l.pC.AVATAR:
-                    return u.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_AVATAR_INLINE_UPSELL.format({ onClick: f });
+                    return u.intl.format(u.t['pvw/HB'], { onClick: p });
                 case l.pC.BANNER:
-                    return u.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_BANNER_INLINE_UPSELL.format({ onClick: f });
+                    return u.intl.format(u.t.aCrz1d, { onClick: p });
                 default:
                     return '';
             }
-        }, [n, f]);
+        }, [n, p]);
     return n === l.pC.AVATAR || n === l.pC.BANNER
-        ? (0, t.jsx)(i.p, {
-              text: p,
-              button: u.Z.Messages.EMOJI_PICKER_PREMIUM_UPSELL_CTA,
+        ? (0, a.jsx)(s.p, {
+              text: A,
+              button: u.intl.string(u.t.BmJkbW),
               buttonAnalyticsObject: { section: d.jXE.USER_PROFILE },
-              className: o()(A.container, a),
+              className: o()(f.container, t),
               ...c
           })
         : null;

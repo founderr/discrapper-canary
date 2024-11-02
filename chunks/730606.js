@@ -1,138 +1,138 @@
-t.d(n, {
+t.d(e, {
     Z: function () {
-        return R;
+        return b;
     }
 }),
     t(477488),
     t(47120);
 var r = t(200651),
     i = t(192379),
-    a = t(120356),
-    l = t.n(a),
-    o = t(299608),
-    s = t.n(o),
+    l = t(120356),
+    o = t.n(l),
+    a = t(299608),
+    s = t.n(a),
     u = t(100621),
     c = t(484957),
     d = t(481060),
     m = t(376641),
-    _ = t(714338),
-    f = t(95398),
-    h = t(163268),
-    E = t(134432),
-    x = t(169525),
-    p = t(585483),
-    C = t(212459),
-    g = t(683528),
-    A = t(549635),
-    I = t(981631),
-    L = t(689938),
-    S = t(193889);
-function M(e, n) {
-    return ((e % n) + n) % n;
+    f = t(714338),
+    h = t(95398),
+    _ = t(163268),
+    x = t(134432),
+    p = t(169525),
+    C = t(585483),
+    g = t(212459),
+    S = t(683528),
+    E = t(549635),
+    L = t(981631),
+    v = t(388032),
+    A = t(193889);
+function I(n, e) {
+    return ((n % e) + e) % e;
 }
-function O(e) {
-    let { width: n, height: t } = e;
-    return null == n || 0 === n || null == t || 0 === t;
+function O(n) {
+    let { width: e, height: t } = n;
+    return null == e || 0 === e || null == t || 0 === t;
 }
-function v(e) {
-    let { children: n, isObscured: t, src: a } = e,
-        [o, s] = i.useState(!1),
+function M(n) {
+    let { children: e, isObscured: t, src: l } = n,
+        [a, s] = i.useState(!1),
         u = i.useCallback(() => {
-            s((e) => !e);
+            s((n) => !n);
         }, []);
     return t
-        ? (0, r.jsx)(f.a.Provider, {
-              value: o,
+        ? (0, r.jsx)(h.a.Provider, {
+              value: a,
               children: (0, r.jsx)(
-                  f.Z,
+                  h.Z,
                   {
-                      type: f.Z.Types.ATTACHMENT,
-                      reason: x.wk.EXPLICIT_CONTENT,
+                      type: h.Z.Types.ATTACHMENT,
+                      reason: p.wk.EXPLICIT_CONTENT,
                       obscured: !0,
                       isSingleMosaicItem: !0,
                       onToggleObscurity: u,
-                      children: (e) =>
+                      children: (n) =>
                           (0, r.jsx)(r.Fragment, {
                               children: (0, r.jsx)('div', {
-                                  className: l()(S.obscureWrapper, { [S.obscure]: e }),
-                                  children: n(e)
+                                  className: o()(A.obscureWrapper, { [A.obscure]: n }),
+                                  children: e(n)
                               })
                           })
                   },
-                  a
+                  l
               )
           })
-        : (0, r.jsx)(r.Fragment, { children: n(!1) });
+        : (0, r.jsx)(r.Fragment, { children: e(!1) });
 }
-function R(e) {
-    var n;
-    let { items: t, onIndexChange: a, startIndex: l = 0, shouldRedactExplicitContent: o = !1, shouldHideMediaOptions: f = !1 } = e,
-        [x, M] = i.useState(l),
-        R = i.useRef(l),
-        [b, N] = i.useState([]),
-        { zoomed: y, setZoomed: j } = (0, C.Y)();
+function b(n) {
+    var e;
+    let { items: t, onIndexChange: l, startIndex: o = 0, shouldRedactExplicitContent: a = !1, shouldHideMediaOptions: h = !1 } = n,
+        [p, I] = i.useState(o),
+        b = i.useRef(o),
+        [R, j] = i.useState([]),
+        { zoomed: y, setZoomed: D } = (0, g.Y)();
     i.useEffect(
         () => (
-            _.Z.disable(),
-            _.Z.enableTemp(m.P),
+            f.Z.disable(),
+            f.Z.enableTemp(m.P),
             () => {
-                _.Z.disableTemp();
+                f.Z.disableTemp();
             }
         ),
         []
     ),
         i.useEffect(() => {
-            var e, n;
-            let r = (((x + 1) % (e = t.length)) + e) % e;
-            let i = (((x - 1) % (n = t.length)) + n) % n;
-            O(t[r]) && (0, E.po)(t[r].url), O(t[i]) && (0, E.po)(t[i].url);
-        }, [x, t]);
-    let T = i.useCallback(
-        (e) => {
-            var n;
-            let r = e - R.current;
-            M((e = ((e % (n = t.length)) + n) % n)), (R.current = e), N((e) => [...e, r]), null == a || a(e), j(!1);
+            var n, e;
+            let r = (((p + 1) % (n = t.length)) + n) % n;
+            let i = (((p - 1) % (e = t.length)) + e) % e;
+            O(t[r]) && (0, x.po)(t[r].url), O(t[i]) && (0, x.po)(t[i].url);
+        }, [p, t]);
+    let N = i.useCallback(
+        (n) => {
+            var e;
+            let r = n - b.current;
+            I((n = ((n % (e = t.length)) + e) % e)), (b.current = n), j((n) => [...n, r]), null == l || l(n), D(!1);
         },
-        [a, t, j]
+        [l, t, D]
     );
     i.useEffect(() => {
-        let e = s()(() => {
-                T(R.current + 1);
+        let n = s()(() => {
+                N(b.current + 1);
             }, 300),
-            n = s()(() => {
-                T(R.current - 1);
+            e = s()(() => {
+                N(b.current - 1);
             }, 300);
         return (
-            p.S.subscribe(I.CkL.MODAL_CAROUSEL_NEXT, e),
-            p.S.subscribe(I.CkL.MODAL_CAROUSEL_PREV, n),
+            C.S.subscribe(L.CkL.MODAL_CAROUSEL_NEXT, n),
+            C.S.subscribe(L.CkL.MODAL_CAROUSEL_PREV, e),
             () => {
-                p.S.unsubscribe(I.CkL.MODAL_CAROUSEL_NEXT, e), p.S.unsubscribe(I.CkL.MODAL_CAROUSEL_PREV, n);
+                C.S.unsubscribe(L.CkL.MODAL_CAROUSEL_NEXT, n), C.S.unsubscribe(L.CkL.MODAL_CAROUSEL_PREV, e);
             }
         );
-    }, [T, j]);
-    let D = t[x],
-        k = (0, h.KP)(
+    }, [N, D]);
+    let k = t[p],
+        T = (0, _.KP)(
             {
-                type: h.lJ.GenericMedia,
-                media: D
+                type: _.lJ.GenericMedia,
+                media: k
             },
-            o
+            a
         ),
-        Z = f
-            ? (e) => {
-                  e.stopPropagation(), e.preventDefault();
+        P = h
+            ? (n) => {
+                  n.stopPropagation(), n.preventDefault();
               }
             : void 0,
-        P = (function (e) {
-            if (0 === e) return ['translateX(0)'];
-            let n = ['translateX(100px)', 'translateX(-100px)'];
-            return e > 0 ? n : n.toReversed();
-        })(null !== (n = b[b.length - 1]) && void 0 !== n ? n : 0),
-        B = (0, d.useTransition)(D, {
-            key: D.url,
+        B = (function (n) {
+            if (0 === n) return ['translateX(0)'];
+            let e = ['translateX(100px)', 'translateX(-100px)'];
+            return n > 0 ? e : e.toReversed();
+        })(null !== (e = R[R.length - 1]) && void 0 !== e ? e : 0),
+        Z = (0, d.useTransition)(k, {
+            key: k.url,
             from: {
                 opacity: 0,
-                transform: P[0]
+                transform: B[0]
             },
             enter: {
                 opacity: 1,
@@ -140,7 +140,7 @@ function R(e) {
             },
             leave: {
                 opacity: 0,
-                transform: P[P.length - 1]
+                transform: B[B.length - 1]
             },
             config: {
                 friction: 20,
@@ -151,60 +151,60 @@ function R(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: S.wrapper,
+                className: A.wrapper,
                 children: [
                     U
                         ? (0, r.jsx)(d.CircleIconButton, {
-                              className: S.navPrev,
+                              className: A.navPrev,
                               size: d.CircleIconButtonSizes.SIZE_36,
-                              onClick: () => p.S.dispatch(I.CkL.MODAL_CAROUSEL_PREV),
+                              onClick: () => C.S.dispatch(L.CkL.MODAL_CAROUSEL_PREV),
                               icon: (0, r.jsx)(c.j, {}),
-                              tooltip: L.Z.Messages.PAGINATION_PREVIOUS,
+                              tooltip: v.intl.string(v.t.vgfxaG),
                               color: d.CircleIconButtonColors.PRIMARY
                           })
                         : null,
                     (0, r.jsx)('div', {
-                        className: S.mediaContainer,
-                        children: B((e, n) =>
+                        className: A.mediaContainer,
+                        children: Z((n, e) =>
                             (0, r.jsx)(r.Fragment, {
                                 children: (0, r.jsx)(
                                     u.animated.div,
                                     {
-                                        style: e,
-                                        className: S.mediaWrapper,
-                                        children: (0, r.jsx)(v, {
-                                            isObscured: !y && k,
-                                            src: n.url,
-                                            children: (e) =>
-                                                (0, r.jsx)(A.Z, {
-                                                    media: n,
-                                                    obscured: e,
-                                                    onContextMenu: Z
+                                        style: n,
+                                        className: A.mediaWrapper,
+                                        children: (0, r.jsx)(M, {
+                                            isObscured: !y && T,
+                                            src: e.url,
+                                            children: (n) =>
+                                                (0, r.jsx)(E.Z, {
+                                                    media: e,
+                                                    obscured: n,
+                                                    onContextMenu: P
                                                 })
                                         })
                                     },
-                                    n.url
+                                    e.url
                                 )
                             })
                         )
                     }),
                     U
                         ? (0, r.jsx)(d.CircleIconButton, {
-                              className: S.navNext,
+                              className: A.navNext,
                               size: d.CircleIconButtonSizes.SIZE_36,
-                              onClick: () => p.S.dispatch(I.CkL.MODAL_CAROUSEL_NEXT),
+                              onClick: () => C.S.dispatch(L.CkL.MODAL_CAROUSEL_NEXT),
                               icon: (0, r.jsx)(d.ArrowLargeRightIcon, {}),
-                              tooltip: L.Z.Messages.PAGINATION_NEXT,
+                              tooltip: v.intl.string(v.t.XiOHRU),
                               color: d.CircleIconButtonColors.PRIMARY
                           })
                         : null
                 ]
             }),
             U &&
-                (0, r.jsx)(g.Z, {
+                (0, r.jsx)(S.Z, {
                     items: t,
-                    currentIndex: x,
-                    onGalleryItemClick: T
+                    currentIndex: p,
+                    onGalleryItemClick: N
                 })
         ]
     });

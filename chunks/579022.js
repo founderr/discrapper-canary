@@ -1,35 +1,35 @@
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(689938),
-    r = n(937110);
-let l = Math.ceil(2 * Math.PI * 20);
+var r = n(481060),
+    l = n(388032),
+    a = n(937110);
+let s = Math.ceil(2 * Math.PI * 20);
 t.Z = (e) => {
     let { total: t, used: n } = e,
         o = Math.max(0, Math.min(1, n / t)),
         c = ''.concat(Math.floor(100 * o), '%');
-    return (0, i.jsx)(a.Tooltip, {
-        text: s.Z.Messages.APPLICATION_INSTALLATION_SPACE_USED.format({ used: c }),
+    return (0, i.jsx)(r.Tooltip, {
+        text: l.intl.formatToPlainString(l.t['2eoRMj'], { used: c }),
         children: (e) =>
             (0, i.jsxs)('div', {
-                className: r.wrapper,
+                className: a.wrapper,
                 role: 'progressbar',
-                'aria-label': s.Z.Messages.APPLICATION_INSTALLATION_SPACE_USED.format({ used: c }),
+                'aria-label': l.intl.formatToPlainString(l.t['2eoRMj'], { used: c }),
                 ...e,
                 children: [
                     (0, i.jsxs)('svg', {
                         viewBox: '25 25 50 50',
-                        className: r.svg,
+                        className: a.svg,
                         'aria-hidden': !0,
                         children: [
                             (0, i.jsx)('circle', {
-                                className: r.background,
+                                className: a.background,
                                 cx: '50',
                                 cy: '50',
                                 r: 20
                             }),
                             (0, i.jsx)('circle', {
-                                className: r.foreground,
+                                className: a.foreground,
                                 cx: '50',
                                 cy: '50',
                                 r: 20,
@@ -40,14 +40,14 @@ t.Z = (e) => {
                                     return 'rgb('.concat(t, ', ').concat(n, ', ').concat(i, ')');
                                 })(o),
                                 strokeDasharray: (function (e) {
-                                    let t = Math.floor(l * e);
-                                    return ''.concat(t, ', ').concat(l);
+                                    let t = Math.floor(s * e);
+                                    return ''.concat(t, ', ').concat(s);
                                 })(o)
                             })
                         ]
                     }),
                     (0, i.jsx)('aside', {
-                        className: r.usageInfo,
+                        className: a.usageInfo,
                         'aria-hidden': !0,
                         children: c
                     })

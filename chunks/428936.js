@@ -1,61 +1,61 @@
-l.d(t, {
+n.d(t, {
     Z: function () {
-        return E;
+        return x;
     }
 }),
-    l(47120);
-var n = l(200651),
-    a = l(192379),
-    o = l(120356),
-    s = l.n(o),
-    i = l(399606),
-    r = l(481060),
-    C = l(823596),
-    c = l(201070),
-    d = l(893966),
-    u = l(527379),
-    m = l(689938),
-    _ = l(343407);
-function E(e) {
-    let { guildId: t, onPageChange: l } = e,
-        [o, E] = a.useTransition(),
-        h = (0, i.e7)([d.Z], () => d.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
-        M = (0, i.cj)([d.Z], () => d.Z.getPaginationStateByGuildId(t), [t]),
-        x = (0, c.$j)(t),
-        b = a.useMemo(
+    n(47120);
+var l = n(200651),
+    o = n(192379),
+    a = n(120356),
+    i = n.n(a),
+    r = n(399606),
+    s = n(481060),
+    c = n(823596),
+    C = n(201070),
+    d = n(893966),
+    u = n(527379),
+    m = n(388032),
+    h = n(343407);
+function x(e) {
+    let { guildId: t, onPageChange: n } = e,
+        [a, x] = o.useTransition(),
+        b = (0, r.e7)([d.Z], () => d.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
+        f = (0, r.cj)([d.Z], () => d.Z.getPaginationStateByGuildId(t), [t]),
+        g = (0, C.$j)(t),
+        p = o.useMemo(
             () =>
-                C.LU.map((e) => ({
+                c.LU.map((e) => ({
                     value: e,
                     label: Number(e).toLocaleString()
                 })),
             []
         ),
-        T = new Intl.NumberFormat(m.Z.getLocale()).format(h),
-        L = m.Z.Messages.MEMBER_SAFETY_TABLE_PAGINATION_LABEL.format({ count: x ? '...' : T }),
-        g = h > M.pageSize || x,
-        H = h > C.LU['0'];
-    return (0, n.jsxs)('div', {
-        className: s()(_.paginationContainer),
+        H = new Intl.NumberFormat(m.intl.currentLocale).format(b),
+        j = m.intl.formatToPlainString(m.t.RNDnQ0, { count: g ? '...' : H }),
+        v = b > f.pageSize || g,
+        N = b > c.LU['0'];
+    return (0, l.jsxs)('div', {
+        className: i()(h.paginationContainer),
         children: [
-            (0, n.jsx)('div', {
-                className: s()(_.pageSizeSelection),
-                children: H
-                    ? (0, n.jsxs)(n.Fragment, {
+            (0, l.jsx)('div', {
+                className: i()(h.pageSizeSelection),
+                children: N
+                    ? (0, l.jsxs)(l.Fragment, {
                           children: [
-                              (0, n.jsx)(r.Text, {
+                              (0, l.jsx)(s.Text, {
                                   variant: 'text-md/normal',
                                   color: 'text-muted',
-                                  children: m.Z.Messages.MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL
+                                  children: m.intl.string(m.t.jNwLu7)
                               }),
-                              (0, n.jsx)(r.Select, {
-                                  'aria-label': L,
-                                  className: _.pageSizeInput,
-                                  options: b,
-                                  isSelected: (e) => e === M.pageSize,
+                              (0, l.jsx)(s.Select, {
+                                  'aria-label': j,
+                                  className: h.pageSizeInput,
+                                  options: p,
+                                  isSelected: (e) => e === f.pageSize,
                                   select: (e) => {
-                                      E(() => {
+                                      x(() => {
                                           (0, u._o)(t, {
-                                              ...M,
+                                              ...f,
                                               pageSize: e
                                           });
                                       });
@@ -64,49 +64,49 @@ function E(e) {
                                   popoutPosition: 'top',
                                   popoutWidth: 72
                               }),
-                              (0, n.jsx)(r.Tooltip, {
-                                  text: m.Z.Messages.LOADING,
-                                  shouldShow: x,
+                              (0, l.jsx)(s.Tooltip, {
+                                  text: m.intl.string(m.t.ZTNur6),
+                                  shouldShow: g,
                                   children: (e) =>
-                                      (0, n.jsx)(r.Text, {
+                                      (0, l.jsx)(s.Text, {
                                           variant: 'text-md/normal',
                                           color: 'text-muted',
-                                          className: s()(_.pageLabel),
+                                          className: i()(h.pageLabel),
                                           ...e,
-                                          children: L
+                                          children: j
                                       })
                               })
                           ]
                       })
-                    : (0, n.jsx)(r.Text, {
+                    : (0, l.jsx)(s.Text, {
                           variant: 'text-md/normal',
                           color: 'text-muted',
-                          children: m.Z.Messages.MEMBER_SAFETY_TABLE_PAGINATION_NO_PAGE_NUMBERS_LABEL.format({ count: h })
+                          children: m.intl.format(m.t.GZpwMD, { count: b })
                       })
             }),
-            (0, n.jsx)('div', {
-                className: s()(_.pagination),
+            (0, l.jsx)('div', {
+                className: i()(h.pagination),
                 children:
-                    g &&
-                    (0, n.jsx)(r.Paginator, {
-                        className: s()(_.paginationInput),
-                        totalCount: h,
-                        pageSize: M.pageSize,
+                    v &&
+                    (0, l.jsx)(s.Paginator, {
+                        className: i()(h.paginationInput),
+                        totalCount: b,
+                        pageSize: f.pageSize,
                         disablePaginationGap: !0,
                         hideMaxPage: !0,
-                        currentPage: M.currentPage,
+                        currentPage: f.currentPage,
                         onPageChange: (e) => {
-                            null == l || l(e),
+                            null == n || n(e),
                                 requestIdleCallback(() => {
-                                    E(() => {
+                                    x(() => {
                                         (0, u._o)(t, {
-                                            ...M,
+                                            ...f,
                                             currentPage: e
                                         });
                                     });
                                 });
                         },
-                        maxVisiblePages: C.hW
+                        maxVisiblePages: c.hW
                     })
             })
         ]

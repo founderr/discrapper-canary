@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return f;
     }
 });
 var i = n(200651);
 n(192379);
-var s = n(782690),
-    a = n(442837),
-    l = n(481060),
-    r = n(43267),
+var l = n(782690),
+    r = n(442837),
+    a = n(481060),
+    s = n(43267),
     o = n(565138),
     c = n(905423),
     u = n(592125),
@@ -16,48 +16,48 @@ var s = n(782690),
     h = n(594174),
     m = n(768581),
     p = n(522291);
-function _() {
+function f() {
     let { guildId: e, channelId: t } = (0, c.Z)((e) => {
             let { guildId: t, channelId: n } = e;
             return {
                 guildId: t,
                 channelId: n
             };
-        }, s.Z),
-        n = (0, a.e7)([d.Z], () => d.Z.getGuild(e)),
-        _ = (0, a.e7)([u.Z], () => (null == n ? u.Z.getChannel(t) : null)),
-        f = (0, a.e7)([h.default], () => h.default.getCurrentUser()),
-        E = null != _ ? (0, r.x)(_) : null,
-        g = null != f ? f.getAvatarURL(e, 80) : m.pK['0'],
-        C = (0, i.jsx)(l.Avatar, {
-            src: g,
+        }, l.Z),
+        n = (0, r.e7)([d.Z], () => d.Z.getGuild(e)),
+        f = (0, r.e7)([u.Z], () => (null == n ? u.Z.getChannel(t) : null)),
+        g = (0, r.e7)([h.default], () => h.default.getCurrentUser()),
+        C = null != f ? (0, s.x)(f) : null,
+        x = null != g ? g.getAvatarURL(e, 80) : m.pK['0'],
+        v = (0, i.jsx)(a.Avatar, {
+            src: x,
             'aria-hidden': !0,
-            size: l.AvatarSizes.SIZE_80,
+            size: a.AvatarSizes.SIZE_80,
             className: p.avatarSizeOverride
         }),
-        I = null;
+        _ = null;
     return (
-        (I =
+        (_ =
             null != n
                 ? (0, i.jsx)(o.Z, { guild: n })
-                : null != E
-                  ? (0, i.jsx)(l.Avatar, {
+                : null != C
+                  ? (0, i.jsx)(a.Avatar, {
                         'aria-hidden': !0,
-                        src: E,
-                        size: l.AvatarSizes.SIZE_80,
+                        src: C,
+                        size: a.AvatarSizes.SIZE_80,
                         className: p.avatarSizeOverride
                     })
-                  : C),
+                  : v),
         (0, i.jsxs)('div', {
             className: p.container,
             children: [
                 (0, i.jsx)('div', {
                     className: p.personAvatar,
-                    children: C
+                    children: v
                 }),
                 (0, i.jsx)('div', {
                     className: p.guildAvatar,
-                    children: I
+                    children: _
                 }),
                 (0, i.jsx)('svg', {
                     className: p.illustration,

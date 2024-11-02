@@ -3,19 +3,19 @@ n.d(t, {
         return p;
     }
 });
-var s = n(512722),
-    r = n.n(s),
-    i = n(525654),
-    a = n.n(i),
+var i = n(512722),
+    r = n.n(i),
+    s = n(525654),
+    a = n.n(s),
     l = n(39612),
     o = n(271579),
     c = n(756647),
     u = n(703656),
     d = n(314897),
-    _ = n(896797),
-    h = n(626135),
-    E = n(954824),
-    g = n(981631);
+    h = n(896797),
+    g = n(626135),
+    m = n(954824),
+    f = n(981631);
 function p(e) {
     let t = (function (e) {
             var t;
@@ -36,12 +36,12 @@ function p(e) {
         })(e),
         n = (0, o.zS)(t);
     null != n &&
-        h.default.track(g.rMx.DEEP_LINK_CLICKED, {
+        g.default.track(f.rMx.DEEP_LINK_CLICKED, {
             fingerprint: (0, c.K)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource
         }),
-        E.Z.launch(t, (e) => {
-            !e && (0, u.dL)(_.Z.fallbackRoute);
+        m.Z.launch(t, (e) => {
+            !e && (0, u.dL)(h.Z.fallbackRoute);
         });
 }

@@ -13,104 +13,104 @@ var i = n(442837),
     u = n(5192),
     c = n(621853),
     d = n(172351),
-    _ = n(648052),
-    E = n(483424),
-    f = n(681837),
-    h = n(678738),
-    p = n(530),
-    I = n(871604),
-    m = n(53558),
-    T = n(827313),
-    S = n(420654),
-    g = n(166584),
-    A = n(915014),
-    N = n(228168),
-    R = n(689938),
-    O = n(800677),
-    v = n(451563);
+    f = n(648052),
+    _ = n(483424),
+    h = n(681837),
+    p = n(678738),
+    m = n(530),
+    g = n(871604),
+    E = n(53558),
+    v = n(827313),
+    I = n(420654),
+    S = n(166584),
+    T = n(915014),
+    b = n(228168),
+    y = n(388032),
+    A = n(800677),
+    N = n(451563);
 function C(e) {
-    let { user: t, currentUser: n, displayProfile: C, guild: L, isHovering: D, onOpenProfile: y, channelId: b, onClose: M } = e,
-        P = u.ZP.getName(null == L ? void 0 : L.id, b, t),
-        U = (0, i.e7)([c.Z], () => {
+    let { user: t, currentUser: n, displayProfile: C, guild: R, isHovering: O, onOpenProfile: D, channelId: L, onClose: x } = e,
+        w = u.ZP.getName(null == R ? void 0 : R.id, L, t),
+        M = (0, i.e7)([c.Z], () => {
             var e;
             return null === (e = c.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
         }),
-        w = (0, i.e7)([s.Z, o.Z], () => s.Z.getChannel(o.Z.getChannelId())),
-        x = (0, i.e7)([l.Z], () => l.Z.hidePersonalInformation);
+        P = (0, i.e7)([s.Z, o.Z], () => s.Z.getChannel(o.Z.getChannelId())),
+        k = (0, i.e7)([l.Z], () => l.Z.hidePersonalInformation);
     return (0, r.jsxs)(a.Scroller, {
         fade: !0,
-        className: v.body,
+        className: N.body,
         children: [
-            (0, r.jsx)(p.Z, {
+            (0, r.jsx)(m.Z, {
                 user: t,
-                profileType: N.y0.BITE_SIZE,
-                onOpenProfile: y,
-                nickname: P,
+                profileType: b.y0.BITE_SIZE,
+                onOpenProfile: D,
+                nickname: w,
                 pronouns: null == C ? void 0 : C.pronouns,
-                tags: (0, r.jsx)(_.Z, {
+                tags: (0, r.jsx)(f.Z, {
                     displayProfile: C,
-                    profileType: N.y0.BITE_SIZE,
-                    onClose: M
+                    profileType: b.y0.BITE_SIZE,
+                    onClose: x
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(f.Z, { userId: t.id }),
-                        !x &&
-                            (0, r.jsx)(T.Z, {
+                        (0, r.jsx)(h.Z, { userId: t.id }),
+                        !k &&
+                            (0, r.jsx)(v.Z, {
                                 userId: t.id,
-                                isHovering: D,
-                                onOpenProfile: y
+                                isHovering: O,
+                                onOpenProfile: D
                             })
                     ]
                 })
             }),
-            (0, r.jsx)(A.Z, {
+            (0, r.jsx)(T.Z, {
                 user: t,
-                onOpenProfile: (e) => (null == y ? void 0 : y({ section: e }))
+                onOpenProfile: (e) => (null == D ? void 0 : D({ section: e }))
             }),
             (0, r.jsxs)('div', {
-                className: O.buttons,
+                className: A.buttons,
                 children: [
-                    (0, r.jsx)(I.Z, {
+                    (0, r.jsx)(g.Z, {
                         user: t,
-                        className: O.button,
-                        closePopout: M
+                        className: A.button,
+                        closePopout: x
                     }),
-                    (0, r.jsx)(m.Z, {
+                    (0, r.jsx)(E.Z, {
                         user: t,
-                        guildId: null == L ? void 0 : L.id,
-                        className: O.button
+                        guildId: null == R ? void 0 : R.id,
+                        className: A.button
                     })
                 ]
             }),
-            (0, r.jsx)(S.Z, {
+            (0, r.jsx)(I.Z, {
                 user: t,
                 bio: null == C ? void 0 : C.bio,
-                hidePersonalInformation: x,
-                onClose: M
+                hidePersonalInformation: k,
+                onClose: x
             }),
-            (0, r.jsx)(E.Z, {
+            (0, r.jsx)(_.Z, {
                 user: t,
                 currentUser: n,
-                onClose: M,
-                className: v.activity
+                onClose: x,
+                className: N.activity
             }),
-            (null == U ? void 0 : U.popularApplicationCommandIds) != null &&
-                null != w &&
+            (null == M ? void 0 : M.popularApplicationCommandIds) != null &&
+                null != P &&
                 (0, r.jsx)(d.Z, {
-                    applicationId: U.id,
-                    commandIds: U.popularApplicationCommandIds,
-                    channel: w,
-                    guildId: null == L ? void 0 : L.id,
-                    onClick: M
+                    applicationId: M.id,
+                    commandIds: M.popularApplicationCommandIds,
+                    channel: P,
+                    guildId: null == R ? void 0 : R.id,
+                    onClick: x
                 }),
-            null != L &&
-                (0, r.jsx)(h.Z, {
-                    heading: R.Z.Messages.ROLES,
-                    children: (0, r.jsx)(g.Z, {
+            null != R &&
+                (0, r.jsx)(p.Z, {
+                    heading: y.intl.string(y.t.LPJmLy),
+                    children: (0, r.jsx)(S.Z, {
                         user: t,
                         currentUser: n,
-                        guild: L
+                        guild: R
                     })
                 })
         ]

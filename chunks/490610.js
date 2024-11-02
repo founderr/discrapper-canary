@@ -1,67 +1,67 @@
 n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(782690),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    s = n(782690),
     o = n(622535),
     c = n(970606),
     d = n(945124),
     u = n(231467),
-    _ = n(931515),
-    E = n(207796),
-    h = n(777734),
-    m = n(976757),
-    I = n(981631),
-    p = n(641388);
-t.Z = a.memo(function (e) {
-    let { title: t, subtitle: n, className: s } = e,
-        { loaded: g, clans: T, searchResult: S, searchCriteria: C } = (0, _.Qc)(20),
-        f = (0, E.GN)((e) => e.selectedTraits, l.Z),
-        N = a.useMemo(() => new Set(C.games), [C.games]),
-        A = a.useCallback(
+    h = n(931515),
+    m = n(207796),
+    p = n(777734),
+    g = n(976757),
+    f = n(981631),
+    _ = n(641388);
+t.Z = r.memo(function (e) {
+    let { title: t, subtitle: n, className: l } = e,
+        { loaded: E, clans: I, searchResult: C, searchCriteria: v } = (0, h.Qc)(20),
+        S = (0, m.GN)((e) => e.selectedTraits, s.Z),
+        N = r.useMemo(() => new Set(v.games), [v.games]),
+        T = r.useCallback(
             (e) => {
                 var t;
                 return (0, i.jsx)(
                     u.ZP,
                     {
                         clan: e,
-                        className: p.card,
-                        affinity: null !== (t = e.affininty) && void 0 !== t ? t : (0, d.y)(e, C),
-                        traitsToHighlight: f,
-                        source: I.jXE.DISCOVER_SEARCH,
+                        className: _.card,
+                        affinity: null !== (t = e.affininty) && void 0 !== t ? t : (0, d.y)(e, v),
+                        traitsToHighlight: S,
+                        source: f.jXE.DISCOVER_SEARCH,
                         prioritizedGameIds: N,
                         onlyAnimateIconOnHover: !0
                     },
                     e.id
                 );
             },
-            [C, f, N]
+            [v, S, N]
         ),
-        v = a.useMemo(() => (null != S && (0, m.Pw)(S) ? T : []), [T, S]),
-        Z = a.useCallback(
+        x = r.useMemo(() => (null != C && (0, g.Pw)(C) ? I : []), [I, C]),
+        b = r.useCallback(
             (e) => {
-                e && (0, c.Oe)('top_picks', C, 'control');
+                e && (0, c.Oe)('top_picks', v, 'control');
             },
-            [C]
+            [v]
         );
-    return 0 !== T.length && g
+    return 0 !== I.length && E
         ? (0, i.jsx)(o.$, {
-              onChange: Z,
+              onChange: b,
               threshold: 0.25,
               children: (0, i.jsxs)('div', {
-                  className: r()(p.previewListContainer, s),
+                  className: a()(_.previewListContainer, l),
                   children: [
                       (0, i.jsx)('div', {
-                          className: p.previewListSection,
-                          children: (0, i.jsx)(h.Z, {
+                          className: _.previewListSection,
+                          children: (0, i.jsx)(p.Z, {
                               title: t,
                               subtitle: n
                           })
                       }),
                       (0, i.jsx)('div', {
-                          className: p.previewList,
-                          children: v.map((e) => A(e))
+                          className: _.previewList,
+                          children: x.map((e) => T(e))
                       })
                   ]
               })

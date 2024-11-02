@@ -5,7 +5,7 @@ n.d(t, {
 });
 var r = n(63063),
     i = n(927923),
-    a = n(689938);
+    a = n(388032);
 function s(e, t, n) {
     let s = null;
     return (
@@ -15,29 +15,29 @@ function s(e, t, n) {
                   switch (t) {
                       case i.Ry.CONSOLE_DEVICE_COMMUNICATION_RESTRICTED:
                           return {
-                              title: a.Z.Messages.CONSOLE_DEVICE_COMMUNICATION_RESTRICTED,
-                              body: a.Z.Messages.CONSOLE_DEVICE_COMMUNICATION_RESTRICTED_BODY.format({ deviceType: n })
+                              title: a.intl.string(a.t['GSZ+HB']),
+                              body: a.intl.formatToPlainString(a.t['cYX/3N'], { deviceType: n })
                           };
                       case i.Ry.CONSOLE_DEVICE_INVALID_POWER_MODE:
                           return {
-                              title: a.Z.Messages.CONSOLE_DEVICE_NOT_RESPONDING.format({ deviceType: n }),
-                              body: a.Z.Messages.CONSOLE_DEVICE_NOT_RESPONDING_BODY.format({ deviceName: r })
+                              title: a.intl.formatToPlainString(a.t.akd6S0, { deviceType: n }),
+                              body: a.intl.formatToPlainString(a.t.RyOvpK, { deviceName: r })
                           };
                       case i.Ry.CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS:
                           return {
-                              title: a.Z.Messages.CONSOLE_DEVICE_IN_USE.format({ deviceType: n }),
-                              body: a.Z.Messages.CONSOLE_DEVICE_IN_USE_BODY.format({ deviceName: r })
+                              title: a.intl.formatToPlainString(a.t.M6Vzam, { deviceType: n }),
+                              body: a.intl.formatToPlainString(a.t.InKtnJ, { deviceName: r })
                           };
                       case i.Ry.CONSOLE_DEVICE_ACCOUNT_LINK_ERROR:
                           return {
-                              title: a.Z.Messages.CONSOLE_DEVICE_UNKNOWN_ERROR,
-                              body: a.Z.Messages.CONSOLE_DEVICE_RECONNECT_ACCOUNT.format({ deviceType: n }),
+                              title: a.intl.string(a.t['QL1y9/']),
+                              body: a.intl.formatToPlainString(a.t.D18eZm, { deviceType: n }),
                               isAccountLinkError: !0
                           };
                       default:
                           return {
-                              title: a.Z.Messages.CONSOLE_DEVICE_UNKNOWN_ERROR,
-                              body: a.Z.Messages.CONSOLE_DEVICE_UNKNOWN_ERROR_BODY.format({ deviceName: r })
+                              title: a.intl.string(a.t['QL1y9/']),
+                              body: a.intl.formatToPlainString(a.t['6ZyNHx'], { deviceName: r })
                           };
                   }
               })(e, n.code))
@@ -46,13 +46,13 @@ function s(e, t, n) {
                   let { platform: n, name: r } = e;
                   if (t === i.Ry.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED)
                       return {
-                          title: a.Z.Messages.CONSOLE_DEVICE_REQUIRES_PASSCODE.format({ deviceType: n }),
-                          body: a.Z.Messages.CONSOLE_DEVICE_REQUIRES_PASSCODE_BODY.format({ deviceName: r })
+                          title: a.intl.formatToPlainString(a.t.KchfhI, { deviceType: n }),
+                          body: a.intl.formatToPlainString(a.t['21ndz8'], { deviceName: r })
                       };
                   return null;
               })(e, n.code)),
         null != s &&
-            (s.errorCodeMessage = a.Z.Messages.CONSOLE_ERROR_CODE_SUPPORT.format({
+            (s.errorCodeMessage = a.intl.format(a.t['1Bi9CQ'], {
                 supportURL: r.Z.getSubmitRequestURL(),
                 errorCode: n.code
             })),

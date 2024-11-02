@@ -68,13 +68,13 @@ var s = {
                 } else a > u && (47 === e.charCodeAt(n + d) ? (c = d) : 0 === d && (c = 0));
                 break;
             }
-            var _ = e.charCodeAt(n + d);
-            if (_ !== t.charCodeAt(o + d)) break;
-            47 === _ && (c = d);
+            var f = e.charCodeAt(n + d);
+            if (f !== t.charCodeAt(o + d)) break;
+            47 === f && (c = d);
         }
-        var E = '';
-        for (d = n + c + 1; d <= r; ++d) (d === r || 47 === e.charCodeAt(d)) && (0 === E.length ? (E += '..') : (E += '/..'));
-        return E.length > 0 ? E + t.slice(o + c) : ((o += c), 47 === t.charCodeAt(o) && ++o, t.slice(o));
+        var _ = '';
+        for (d = n + c + 1; d <= r; ++d) (d === r || 47 === e.charCodeAt(d)) && (0 === _.length ? (_ += '..') : (_ += '/..'));
+        return _.length > 0 ? _ + t.slice(o + c) : ((o += c), 47 === t.charCodeAt(o) && ++o, t.slice(o));
     },
     _makeLong: function (e) {
         return e;

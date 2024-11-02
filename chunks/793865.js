@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return h;
     }
 });
 var r = n(200651);
@@ -13,29 +13,29 @@ var i = n(512722),
     u = n(594174),
     c = n(907285),
     d = n(737013),
-    _ = n(981631),
-    E = n(689938);
-function f(e) {
+    f = n(981631),
+    _ = n(388032);
+function h(e) {
     let { onClose: t, onSelect: n } = e,
         i = (0, s.e7)([u.default], () => {
             let e = u.default.getCurrentUser();
             return a()(null != e, 'VideoDeviceMenu: currentUser cannot be undefined'), e;
         }),
-        f = (0, c.Z)(),
-        h = (0, d.Z)(i.id);
+        h = (0, c.Z)(),
+        p = (0, d.Z)(i.id);
     return (0, r.jsx)(l.Z, {
-        object: _.qAy.CONTEXT_MENU,
+        object: f.qAy.CONTEXT_MENU,
         children: (0, r.jsxs)(o.Menu, {
             onClose: t,
             navId: 'video-device-context',
-            'aria-label': E.Z.Messages.FORM_LABEL_VIDEO_DEVICE,
+            'aria-label': _.intl.string(_.t.F122Gx),
             onSelect: n,
             children: [
                 (0, r.jsx)(o.MenuGroup, {
-                    label: E.Z.Messages.FORM_LABEL_VIDEO_DEVICE,
-                    children: f
+                    label: _.intl.string(_.t.F122Gx),
+                    children: h
                 }),
-                (0, r.jsx)(o.MenuGroup, { children: h })
+                (0, r.jsx)(o.MenuGroup, { children: p })
             ]
         })
     });

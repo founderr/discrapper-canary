@@ -1,32 +1,32 @@
-s.d(n, {
+t.d(n, {
     n: function () {
-        return _;
+        return u;
     }
 });
-var a = s(192379),
-    t = s(442837),
-    i = s(626135),
-    l = s(236289),
-    o = s(451284),
-    r = s(613734),
-    c = s(800530),
-    d = s(981631);
-let _ = () => {
-    let e = (0, t.e7)([l.Z], () => l.Z.getAppealClassificationId()),
+var i = t(192379),
+    l = t(442837),
+    a = t(626135),
+    s = t(236289),
+    o = t(451284),
+    r = t(613734),
+    c = t(800530),
+    d = t(981631);
+let u = () => {
+    let e = (0, l.e7)([s.Z], () => s.Z.getAppealClassificationId()),
         n = (0, r.YG)(null != e ? e : d.lds),
-        s = (0, o.P)(),
-        _ = (0, t.e7)([l.Z], () => l.Z.getIsDsaEligible());
-    return a.useCallback(
-        (a) => {
-            i.default.track(d.rMx.SAFETY_HUB_ACTION, {
-                action: a,
-                account_standing: s.state,
+        t = (0, o.P)(),
+        u = (0, l.e7)([s.Z], () => s.Z.getIsDsaEligible());
+    return i.useCallback(
+        (i) => {
+            a.default.track(d.rMx.SAFETY_HUB_ACTION, {
+                action: i,
+                account_standing: t.state,
                 classification_ids: null != e ? [Number(e)] : null,
                 source: c.s.AppealIngestion,
-                is_dsa_eligible: _,
+                is_dsa_eligible: u,
                 violation_type: n.violationType
             });
         },
-        [s.state, e, n, _]
+        [t.state, e, n, u]
     );
 };

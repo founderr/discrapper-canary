@@ -1,33 +1,33 @@
 var i,
-    a,
-    s,
     r,
-    l = n(442837),
-    o = n(570140),
+    l,
+    a,
+    o = n(442837),
+    s = n(570140),
     c = n(186901);
 let u = null,
     d = [c.ff.REDISTRIBUTABLE_INSTALL_FAILED, c.ff.POST_INSTALL_FAILED, c.ff.POST_INSTALL_CANCELLED],
-    _ = [c.ff.APPLICATION_NOT_FOUND, c.ff.APPLICATION_LOAD_FAILED, c.ff.INTERRUPTED, c.ff.DESERIALIZATION_FAILED];
-class E extends (r = l.ZP.Store) {
+    m = [c.ff.APPLICATION_NOT_FOUND, c.ff.APPLICATION_LOAD_FAILED, c.ff.INTERRUPTED, c.ff.DESERIALIZATION_FAILED];
+class f extends (a = o.ZP.Store) {
     getLastError() {
         return u;
     }
 }
-(s = 'DispatchApplicationErrorStore'),
-    (a = 'displayName') in (i = E)
-        ? Object.defineProperty(i, a, {
-              value: s,
+(l = 'DispatchApplicationErrorStore'),
+    (r = 'displayName') in (i = f)
+        ? Object.defineProperty(i, r, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[a] = s),
-    (t.Z = new E(o.Z, {
+        : (i[r] = l),
+    (t.Z = new f(s.Z, {
         DISPATCH_APPLICATION_LAUNCH_SETUP_START: function () {
             null != u && null != u.code && d.includes(u.code) && (u = null);
         },
         DISPATCH_APPLICATION_ERROR: function (e) {
             let { error: t } = e;
-            u = null != t.code && _.includes(t.code) ? null : t;
+            u = null != t.code && m.includes(t.code) ? null : t;
         }
     }));

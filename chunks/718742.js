@@ -12,13 +12,13 @@ var r = n(200651),
     o = n(637538),
     s = n(747387),
     p = n(981631),
-    d = n(689938),
+    d = n(388032),
     l = n(579591),
     u = n(480781);
 let h = new Set([a.ModalTransitionState.ENTERING, a.ModalTransitionState.ENTERED]);
 function f(e) {
-    let { onClose: t, onCaptchaVerify: n, onReject: f, transitionState: v, headerText: m, bodyText: y, rqtoken: C, serveInvisible: E, ..._ } = e,
-        b = (0, o.Z)(f);
+    let { onClose: t, onCaptchaVerify: n, onReject: f, transitionState: v, headerText: m, bodyText: y, rqtoken: C, serveInvisible: E, ...b } = e,
+        _ = (0, o.Z)(f);
     return (i.useEffect(() => {
         c.S.subscribe(p.CkL.LAYER_POP_ESCAPE_KEY, t);
     }, [t]),
@@ -50,9 +50,9 @@ function f(e) {
                                             (0, r.jsx)('div', {
                                                 className: l.title,
                                                 'aria-hidden': !0,
-                                                children: null != m ? m : d.Z.Messages.GENERIC_CAPTCHA_HEADER
+                                                children: null != m ? m : d.intl.string(d.t.FpoiHR)
                                             }),
-                                            (0, r.jsx)('div', { children: null != y ? y : d.Z.Messages.GENERIC_CAPTCHA_DESCRIPTION }),
+                                            (0, r.jsx)('div', { children: null != y ? y : d.intl.string(d.t['/CidxM']) }),
                                             (0, r.jsxs)('div', {
                                                 className: l.captchaContainer,
                                                 children: [
@@ -60,10 +60,10 @@ function f(e) {
                                                     (0, r.jsx)(s.Z, {
                                                         size: E ? 'invisible' : void 0,
                                                         onVerify: (e) => {
-                                                            b(), n(e, C), t();
+                                                            _(), n(e, C), t();
                                                         },
                                                         onClose: E ? t : void 0,
-                                                        ..._
+                                                        ...b
                                                     })
                                                 ]
                                             })

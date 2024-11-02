@@ -1,21 +1,21 @@
 n.d(t, {
     VF: function () {
-        return b;
-    },
-    WW: function () {
         return L;
     },
+    WW: function () {
+        return R;
+    },
     XO: function () {
-        return v;
+        return N;
     },
     Yp: function () {
-        return O;
+        return A;
     },
     hC: function () {
-        return y;
+        return D;
     },
     o9: function () {
-        return D;
+        return O;
     },
     zC: function () {
         return C;
@@ -28,44 +28,44 @@ var r = n(692547),
     o = n(123245),
     l = n(981631);
 n(474936);
-var u = n(689938);
+var u = n(388032);
 let c = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css,
         icon: i.ImagesIcon,
-        description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_CUSTOM_INVITE
+        description: u.intl.string(u.t.iGuEFR)
     }),
     d = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : r.Z.unsafe_rawColors.PREMIUM_PERK_ORANGE.css;
         return {
             color: e,
             icon: i.GifIcon,
-            description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_ANIMATED_ICON
+            description: u.intl.string(u.t['94l3Ul'])
         };
     },
-    _ = () => ({
+    f = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css,
         icon: i.ImagesIcon,
-        description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_GUILD_BANNER
+        description: u.intl.string(u.t['n/HqCg'])
     }),
-    E = () => ({
+    _ = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css,
         icon: i.GifIcon,
-        description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_ANIMATED_GUILD_BANNER
+        description: u.intl.string(u.t.AU0zcX)
     }),
-    f = () => ({
+    h = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_ORANGE.css,
         icon: i.ShieldUserIcon,
-        description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_ROLE_ICON
+        description: u.intl.string(u.t.zZe94u)
     }),
-    h = function () {
+    p = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : r.Z.unsafe_rawColors.PREMIUM_PERK_PURPLE.css;
         return {
             color: e,
             icon: i.StickerIcon,
-            description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_STICKERS
+            description: u.intl.string(u.t.ZwOSdn)
         };
     },
-    p = function (e) {
+    m = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.Z.unsafe_rawColors.PREMIUM_PERK_PURPLE.css,
             n = 0,
             a = 0;
@@ -82,75 +82,75 @@ let c = () => ({
         return {
             color: t,
             icon: i.StickerIcon,
-            description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_STICKERS_AND_EMOJIS.format({
+            description: u.intl.formatToPlainString(u.t['12vFYG'], {
                 numStickers: n,
                 numEmojis: a
             })
         };
     },
-    I = () => ({
+    g = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_GOLD.css,
         icon: i.StarIcon,
-        description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_VANITY_URL
+        description: u.intl.string(u.t['ThRK/v'])
     }),
-    m = () => ({
+    E = () => ({
         icon: a.Z,
-        description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_PROFILE_BADGE
+        description: u.intl.string(u.t.a7LWeH)
     }),
-    T = () => ({
+    v = () => ({
         icon: s.Z,
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_PINK.css,
-        description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_BOOST_CRYSTAL
+        description: u.intl.string(u.t.QouJkp)
     }),
-    S = () => ({
+    I = () => ({
         icon: i.ShieldUserIcon,
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_YELLOW.css,
-        description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_SPECIAL_ROLE
+        description: u.intl.string(u.t['3MpIx8'])
     }),
-    g = () => ({
+    S = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_BLUE.css,
         icon: i.ReactionIcon,
-        description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_OTHERS
+        description: u.intl.string(u.t.gAeHJS)
     }),
-    A = function () {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_OTHER;
+    T = function () {
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u.intl.string(u.t.SQV8g4);
         return {
             color: r.Z.unsafe_rawColors.PREMIUM_PERK_BLUE.css,
             icon: i.ReactionIcon,
             description: e
         };
     },
-    N = () => ({
+    b = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_PURPLE.css,
         icon: o.Z,
-        description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_FILE_UPLOAD_TIER_3
+        description: u.intl.string(u.t.Tm40TU)
     }),
-    R = function () {
+    y = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css;
         return {
             color: e,
             icon: i.ScreenArrowIcon,
-            description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_SCREEN_SHARE_1080P
+            description: u.intl.string(u.t.oIKhwc)
         };
     };
-function O() {
-    return [f(), _(), h(), A()];
+function A() {
+    return [h(), f(), p(), T()];
 }
-function v() {
-    return [f(), p(l.Eu4.TIER_2), R(), A()];
+function N() {
+    return [h(), m(l.Eu4.TIER_2), y(), T()];
 }
 function C() {
-    return [p(l.Eu4.TIER_3, r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css), N(), I(), A()];
+    return [m(l.Eu4.TIER_3, r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css), b(), g(), T()];
 }
-function L() {
-    return [I(), E(), p(l.Eu4.TIER_3), A()];
+function R() {
+    return [g(), _(), m(l.Eu4.TIER_3), T()];
+}
+function O() {
+    return [c(), p(), d(), T()];
 }
 function D() {
-    return [c(), h(), d(), A()];
+    return [p(), T()];
 }
-function y() {
-    return [h(), A()];
-}
-function b() {
-    return [T(), S(), m(), g()];
+function L() {
+    return [v(), I(), E(), S()];
 }

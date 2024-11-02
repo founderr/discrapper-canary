@@ -17,21 +17,21 @@ e.exports = function (e) {
                           u,
                           c = ((l = ['display: block', 'position: absolute', 'top: 0', 'left: 0', 'width: 100%', 'height: 100%', 'border: none', 'padding: 0', 'margin: 0', 'opacity: 0', 'z-index: -1000', 'pointer-events: none']), (u = e.important ? ' !important; ' : '; '), (l.join(u) + u).trim()),
                           d = !1,
-                          _ = window.getComputedStyle(s),
-                          E = s.offsetWidth,
-                          f = s.offsetHeight;
-                      function h() {
+                          f = window.getComputedStyle(s),
+                          _ = s.offsetWidth,
+                          h = s.offsetHeight;
+                      function p() {
                           function e() {
-                              if ('static' === _.position) {
+                              if ('static' === f.position) {
                                   s.style.setProperty('position', 'relative', a.important ? 'important' : '');
                                   var e = function (e, t, n, r) {
                                       var i = n[r];
                                       if ('auto' !== i && '0' !== i.replace(/[^-\d\.]/g, '')) e.warn('An element that is positioned static has style.' + r + '=' + i + ' which is ignored due to the static positioning. The element will need to be positioned relative, so the style.' + r + ' will be set to 0. Element: ', t), t.style.setProperty(r, '0', a.important ? 'important' : '');
                                   };
-                                  e(t, s, _, 'top'), e(t, s, _, 'right'), e(t, s, _, 'bottom'), e(t, s, _, 'left');
+                                  e(t, s, f, 'top'), e(t, s, f, 'right'), e(t, s, f, 'bottom'), e(t, s, f, 'left');
                               }
                           }
-                          '' !== _.position && (e(_), (d = !0));
+                          '' !== f.position && (e(f), (d = !0));
                           var n = document.createElement('object');
                           if (
                               ((n.style.cssText = c),
@@ -60,10 +60,10 @@ e.exports = function (e) {
                               s.appendChild(n), (i(s).object = n), r.isIE() && (n.data = 'about:blank');
                       }
                       (i(s).startSize = {
-                          width: E,
-                          height: f
+                          width: _,
+                          height: h
                       }),
-                          n ? n.add(h) : h();
+                          n ? n.add(p) : p();
                   })(s, o);
         },
         addListener: function (e, t) {

@@ -1,31 +1,31 @@
-t.d(s, {
+n.d(t, {
     E: function () {
         return d;
     }
 });
-var n,
-    a = t(903797),
-    i = t(731965),
-    r = t(433517);
-let o = '__DEBUG_PROFILE_EFFECTS_STORE',
-    l = { profileEffects: null !== (n = r.K.get(o)) && void 0 !== n ? n : {} },
+var i,
+    s = n(903797),
+    r = n(731965),
+    l = n(433517);
+let a = '__DEBUG_PROFILE_EFFECTS_STORE',
+    o = { profileEffects: null !== (i = l.K.get(a)) && void 0 !== i ? i : {} },
     c = (e) => {
-        r.K.set(o, e.profileEffects);
+        l.K.set(a, e.profileEffects);
     },
-    d = (0, a.Z)((e) => ({
-        ...l,
-        upsertConfig: (s) =>
-            (0, i.j)(() => {
+    d = (0, s.Z)((e) => ({
+        ...o,
+        upsertConfig: (t) =>
+            (0, r.j)(() => {
                 e((e) => {
-                    let t = { ...e };
-                    return (t.profileEffects[s.id] = s), c(t), t;
+                    let n = { ...e };
+                    return (n.profileEffects[t.id] = t), c(n), n;
                 });
             }),
-        deleteConfig: (s) =>
-            (0, i.j)(() => {
+        deleteConfig: (t) =>
+            (0, r.j)(() => {
                 e((e) => {
-                    let t = { ...e };
-                    return delete t.profileEffects[s], c(t), t;
+                    let n = { ...e };
+                    return delete n.profileEffects[t], c(n), n;
                 });
             })
     }));

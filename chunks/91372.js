@@ -1,28 +1,28 @@
 var i,
-    a,
-    s,
     r,
-    l = n(442837),
-    o = n(570140);
+    l,
+    a,
+    o = n(442837),
+    s = n(570140);
 let c = 'UPDATE_NOT_AVAILABLE';
 function u(e) {
     c = e.type;
 }
-class d extends (r = l.ZP.Store) {
+class d extends (a = o.ZP.Store) {
     getState() {
         return c;
     }
 }
-(s = 'AutoUpdateStore'),
-    (a = 'displayName') in (i = d)
-        ? Object.defineProperty(i, a, {
-              value: s,
+(l = 'AutoUpdateStore'),
+    (r = 'displayName') in (i = d)
+        ? Object.defineProperty(i, r, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[a] = s),
-    (t.Z = new d(o.Z, {
+        : (i[r] = l),
+    (t.Z = new d(s.Z, {
         CHECKING_FOR_UPDATES: u,
         UPDATE_NOT_AVAILABLE: u,
         UPDATE_AVAILABLE: u,

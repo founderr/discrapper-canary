@@ -4,31 +4,31 @@ n.d(t, {
     }
 });
 var i = n(192379),
-    s = n(399606),
-    a = n(570140),
-    l = n(607070),
-    r = n(222677),
+    l = n(399606),
+    r = n(570140),
+    a = n(607070),
+    s = n(222677),
     o = n(695346),
     c = n(960020),
     u = n(566006);
 function d() {
     let e = o.Yk.useSetting(),
-        t = (0, s.e7)([l.Z], () => l.Z.useReducedMotion);
+        t = (0, l.e7)([a.Z], () => a.Z.useReducedMotion);
     i.useEffect(() => {
         function n(n) {
-            let { messageId: i, channelId: s, emoji: a, optimistic: l, reactionType: o } = n;
-            if (!l && o === u.O.BURST && !!e && !t)
-                (0, r.T6)({
-                    channelId: s,
+            let { messageId: i, channelId: l, emoji: r, optimistic: a, reactionType: o } = n;
+            if (!a && o === u.O.BURST && !!e && !t)
+                (0, s.T6)({
+                    channelId: l,
                     messageId: i,
-                    emoji: a,
+                    emoji: r,
                     key: c.I.EXTERNAL
                 });
         }
         return (
-            a.Z.subscribe('MESSAGE_REACTION_ADD', n),
+            r.Z.subscribe('MESSAGE_REACTION_ADD', n),
             () => {
-                a.Z.unsubscribe('MESSAGE_REACTION_ADD', n);
+                r.Z.unsubscribe('MESSAGE_REACTION_ADD', n);
             }
         );
     }, [e, t]);

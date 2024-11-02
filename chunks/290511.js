@@ -3,58 +3,58 @@ n.d(t, {
         return o;
     },
     M$: function () {
-        return p;
+        return m;
     },
     NE: function () {
-        return E;
+        return _;
     },
     NO: function () {
-        return f;
+        return h;
     },
     Oq: function () {
-        return L;
+        return R;
     },
     RF: function () {
-        return A;
+        return T;
     },
     Un: function () {
         return l;
     },
     X: function () {
-        return S;
+        return I;
     },
     YW: function () {
-        return h;
+        return p;
     },
     ae: function () {
-        return N;
+        return b;
     },
     b3: function () {
-        return m;
+        return E;
     },
     cf: function () {
         return C;
     },
     dr: function () {
-        return O;
+        return A;
     },
     fY: function () {
-        return g;
+        return S;
     },
     iU: function () {
-        return _;
+        return f;
     },
     l7: function () {
         return s;
     },
     md: function () {
-        return T;
+        return v;
     },
     qm: function () {
-        return I;
+        return g;
     },
     yZ: function () {
-        return R;
+        return y;
     }
 });
 var r,
@@ -65,27 +65,27 @@ var r,
     l,
     u = n(348327),
     c = n.n(u),
-    d = n(689938);
-let _ = 100,
-    E = 50,
-    f = 100,
-    h = 15,
-    p = 12,
-    I = 50,
-    m = 4,
-    T = 7,
-    S = 5,
-    g = 13;
-function A(e) {
+    d = n(388032);
+let f = 100,
+    _ = 50,
+    h = 100,
+    p = 15,
+    m = 12,
+    g = 50,
+    E = 4,
+    v = 7,
+    I = 5,
+    S = 13;
+function T(e) {
     if (e.options.length > 0) return !1;
-    let { id: t, ...n } = N(),
+    let { id: t, ...n } = b(),
         { id: r, ...i } = e;
     return c()(n, i);
 }
-function N() {
+function b() {
     return {
         id: String(Date.now()),
-        title: d.Z.Messages.ONBOARDING_PROMPT_DEFAULT_TITLE,
+        title: d.intl.string(d.t.vY91Cw),
         options: [],
         singleSelect: !1,
         required: !1,
@@ -93,7 +93,7 @@ function N() {
         type: 0
     };
 }
-function R(e) {
+function y(e) {
     return {
         id: String(Date.now()),
         title: '',
@@ -104,7 +104,7 @@ function R(e) {
         type: 0
     };
 }
-function O(e) {
+function A(e) {
     return {
         id: e.id,
         options: e.options.map((e) => {
@@ -129,7 +129,7 @@ function O(e) {
         type: e.type
     };
 }
-function v(e) {
+function N(e) {
     return {
         id: e.id,
         options: e.options.map((e) => {
@@ -154,7 +154,7 @@ function v(e) {
 function C(e) {
     var t, n, r;
     return {
-        prompts: e.prompts.map(v),
+        prompts: e.prompts.map(N),
         defaultChannelIds: e.default_channel_ids,
         responses: null !== (t = e.responses) && void 0 !== t ? t : [],
         mode: e.mode,
@@ -164,7 +164,7 @@ function C(e) {
         belowRequirements: e.below_requirements
     };
 }
-function L(e) {
+function R(e) {
     return null == e || (null == e.id && null == e.name);
 }
 ((r = s || (s = {}))[(r.CUSTOMIZE = 0)] = 'CUSTOMIZE'), (r[(r.BROWSE = 1)] = 'BROWSE'), ((i = o || (o = {}))[(i.MULTIPLE_CHOICE = 0)] = 'MULTIPLE_CHOICE'), (i[(i.DROPDOWN = 1)] = 'DROPDOWN'), ((a = l || (l = {}))[(a.ONBOARDING_DEFAULT = 0)] = 'ONBOARDING_DEFAULT'), (a[(a.ONBOARDING_ADVANCED = 1)] = 'ONBOARDING_ADVANCED');

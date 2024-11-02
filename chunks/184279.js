@@ -5,13 +5,13 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(481060),
-    a = n(43267),
-    l = n(933557),
-    r = n(297700),
+var l = n(481060),
+    r = n(43267),
+    a = n(933557),
+    s = n(297700),
     o = n(534091),
     c = n(967128),
-    u = n(689938),
+    u = n(388032),
     d = n(302028),
     h = n(191986);
 let m = () =>
@@ -26,7 +26,7 @@ let m = () =>
 function p(e) {
     var t;
     let { channel: n } = e,
-        p = null !== (t = (0, l.ZP)(n)) && void 0 !== t ? t : '';
+        p = null !== (t = (0, a.ZP)(n)) && void 0 !== t ? t : '';
     return (0, i.jsxs)('div', {
         id: (0, o.p)(n.id, n.id),
         className: d.headerContainer,
@@ -43,19 +43,19 @@ function p(e) {
                     (0, i.jsxs)('div', {
                         className: d.chatBubble,
                         children: [
-                            (0, i.jsx)(s.Avatar, {
+                            (0, i.jsx)(l.Avatar, {
                                 'aria-label': p,
-                                size: s.AvatarSizes.SIZE_80,
-                                src: (0, a.x)(n, 80, !1)
+                                size: l.AvatarSizes.SIZE_80,
+                                src: (0, r.x)(n, 80, !1)
                             }),
                             (0, i.jsxs)(c.Ot, {
                                 className: d.emptyMessageHeader,
                                 children: [
                                     p,
-                                    (0, i.jsx)(r.Z, {
+                                    (0, i.jsx)(s.Z, {
                                         className: d.flowerStar,
                                         size: 24,
-                                        children: (0, i.jsx)(s.CheckmarkSmallIcon, {
+                                        children: (0, i.jsx)(l.CheckmarkSmallIcon, {
                                             size: 'md',
                                             color: 'currentColor',
                                             className: d.verified
@@ -63,7 +63,7 @@ function p(e) {
                                     })
                                 ]
                             }),
-                            (0, i.jsx)(c.jz, { children: u.Z.Messages.SYSTEM_DM_EMPTY_MESSAGE })
+                            (0, i.jsx)(c.jz, { children: u.intl.string(u.t.Rzvnio) })
                         ]
                     })
                 ]

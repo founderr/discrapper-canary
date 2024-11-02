@@ -1,121 +1,121 @@
-a.r(s), a(47120);
-var o = a(200651),
-    t = a(192379),
-    r = a(481060),
-    n = a(985002),
-    c = a(880257),
-    l = a(198952),
-    i = a(329242),
-    _ = a(689938),
-    N = a(868747);
-s.default = (e) => {
-    let { currentUser: s, otherUser: a, transitionState: d, onClose: C } = e,
-        E = t.useCallback(() => {
-            C();
-        }, [C]),
-        I = (0, c.Z)(),
-        [h, x] = t.useState(!1),
-        [T, L] = t.useState(!1),
-        u = t.useCallback(() => {
-            L(!0), x(!1);
+o.r(t), o(47120);
+var n = o(200651),
+    a = o(192379),
+    r = o(481060),
+    s = o(985002),
+    l = o(880257),
+    c = o(198952),
+    i = o(329242),
+    d = o(388032),
+    h = o(868747);
+t.default = (e) => {
+    let { currentUser: t, otherUser: o, transitionState: x, onClose: u } = e,
+        b = a.useCallback(() => {
+            u();
+        }, [u]),
+        m = (0, l.Z)(),
+        [k, f] = a.useState(!1),
+        [j, g] = a.useState(!1),
+        C = a.useCallback(() => {
+            g(!0), f(!1);
         }, []),
-        { disconnectLinkRequest: M, isDisconnectLoading: b } = (0, n.G)({
-            onSuccess: E,
-            onError: u
+        { disconnectLinkRequest: N, isDisconnectLoading: p } = (0, s.G)({
+            onSuccess: b,
+            onError: C
         });
-    return (0, o.jsx)(r.ModalRoot, {
-        transitionState: d,
-        children: (0, o.jsxs)('form', {
+    return (0, n.jsx)(r.ModalRoot, {
+        transitionState: x,
+        children: (0, n.jsxs)('form', {
             onSubmit: (e) => {
-                e.preventDefault(), M(a);
+                e.preventDefault(), N(o);
             },
             children: [
-                T
-                    ? (0, o.jsx)(r.FormErrorBlock, {
-                          className: N.error,
-                          children: _.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_ERROR
+                j
+                    ? (0, n.jsx)(r.FormErrorBlock, {
+                          className: h.error,
+                          children: d.intl.string(d.t.krIDd3)
                       })
                     : null,
-                (0, o.jsxs)(r.ModalContent, {
+                (0, n.jsxs)(r.ModalContent, {
                     children: [
-                        (0, o.jsxs)('div', {
-                            className: N.header,
+                        (0, n.jsxs)('div', {
+                            className: h.header,
                             children: [
-                                (0, o.jsx)(l.Z, {
-                                    currentUser: s,
-                                    otherUser: a,
-                                    children: (0, o.jsx)(r.XSmallIcon, {
+                                (0, n.jsx)(c.Z, {
+                                    currentUser: t,
+                                    otherUser: o,
+                                    children: (0, n.jsx)(r.XSmallIcon, {
                                         size: 'md',
                                         color: 'currentColor',
-                                        className: N.closeIcon
+                                        className: h.closeIcon
                                     })
                                 }),
-                                (0, o.jsx)(r.Heading, {
-                                    className: N.headerText,
+                                (0, n.jsx)(r.Heading, {
+                                    className: h.headerText,
                                     variant: 'text-lg/bold',
-                                    children: _.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_TITLE.format({ isAdult: String(I) })
+                                    children: d.intl.format(d.t.NMSTb2, { isAdult: String(m) })
                                 }),
-                                (0, o.jsx)(i.Z, {
-                                    user: a,
+                                (0, n.jsx)(i.Z, {
+                                    user: o,
                                     fill: !0
                                 })
                             ]
                         }),
-                        (0, o.jsxs)('div', {
-                            className: N.content,
+                        (0, n.jsxs)('div', {
+                            className: h.content,
                             children: [
-                                (0, o.jsx)(r.Text, {
-                                    className: N.noticeHeader,
+                                (0, n.jsx)(r.Text, {
+                                    className: h.noticeHeader,
                                     variant: 'eyebrow',
                                     color: 'header-primary',
-                                    children: _.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_NOTICE_HEADER
+                                    children: d.intl.string(d.t.VKblNj)
                                 }),
-                                (0, o.jsx)(r.Text, {
+                                (0, n.jsx)(r.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'header-secondary',
-                                    children: I ? _.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_NOTICE_DESCRIPTION_PARENT : _.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_NOTICE_DESCRIPTION_TEEN
+                                    children: m ? d.intl.string(d.t.EvMGLS) : d.intl.string(d.t.f1SUeX)
                                 })
                             ]
                         }),
-                        (0, o.jsx)(r.Checkbox, {
-                            className: N.acknowledgementCheckbox,
+                        (0, n.jsx)(r.Checkbox, {
+                            className: h.acknowledgementCheckbox,
                             type: r.Checkbox.Types.INVERTED,
-                            value: h,
-                            onChange: (e, s) => {
-                                x(s), L(!1);
+                            value: k,
+                            onChange: (e, t) => {
+                                f(t), g(!1);
                             },
-                            children: (0, o.jsx)('div', {
-                                className: N.checkboxLabel,
-                                children: (0, o.jsx)(r.Text, {
+                            children: (0, n.jsx)('div', {
+                                className: h.checkboxLabel,
+                                children: (0, n.jsx)(r.Text, {
                                     variant: 'text-xs/semibold',
-                                    children: I ? _.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_DISCLAIMER_PARENT : _.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_DISCLAIMER_TEEN
+                                    children: m ? d.intl.string(d.t['/MYCeX']) : d.intl.string(d.t.VJaHUV)
                                 })
                             })
                         })
                     ]
                 }),
-                (0, o.jsx)(r.ModalFooter, {
-                    children: (0, o.jsxs)('div', {
-                        className: N.footer,
+                (0, n.jsx)(r.ModalFooter, {
+                    children: (0, n.jsxs)('div', {
+                        className: h.footer,
                         children: [
-                            (0, o.jsx)(r.Button, {
-                                className: N.button,
+                            (0, n.jsx)(r.Button, {
+                                className: h.button,
                                 type: 'button',
                                 look: r.Button.Looks.LINK,
                                 color: r.Button.Colors.PRIMARY,
-                                onClick: C,
+                                onClick: u,
                                 size: r.Button.Sizes.SMALL,
-                                disabled: b,
-                                children: _.Z.Messages.CANCEL
+                                disabled: p,
+                                children: d.intl.string(d.t['ETE/oK'])
                             }),
-                            (0, o.jsx)(r.Button, {
-                                className: N.button,
+                            (0, n.jsx)(r.Button, {
+                                className: h.button,
                                 type: 'submit',
-                                disabled: !h || b,
-                                submitting: b,
+                                disabled: !k || p,
+                                submitting: p,
                                 color: r.ButtonColors.RED,
                                 size: r.Button.Sizes.SMALL,
-                                children: _.Z.Messages.FAMILY_CENTER_DISCONNECT_BUTTON
+                                children: d.intl.string(d.t['c5L+sr'])
                             })
                         ]
                     })

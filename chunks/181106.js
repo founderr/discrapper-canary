@@ -7,13 +7,13 @@ var r,
     u = n(570140),
     c = n(981631);
 let d = {},
-    _ = {};
-function E(e, t, n) {
+    f = {};
+function _(e, t, n) {
     var r;
     let { applicationId: i } = n,
         a = null !== (r = d[i]) && void 0 !== r ? r : {};
     if (((a[t] = e), (d[i] = a), !__OVERLAY__ && e === c.OcF.FAILED)) {
-        null != _[i] && _[i].stop();
+        null != f[i] && f[i].stop();
         let e = new l.V7();
         e.start(120000, () =>
             u.Z.dispatch({
@@ -22,13 +22,13 @@ function E(e, t, n) {
                 activityType: t
             })
         ),
-            (_[i] = e);
+            (f[i] = e);
     }
 }
-function f(e) {
-    return E(c.OcF.COMPLETE, c.mFx.JOIN, e);
+function h(e) {
+    return _(c.OcF.COMPLETE, c.mFx.JOIN, e);
 }
-class h extends (s = o.ZP.Store) {
+class p extends (s = o.ZP.Store) {
     getState(e, t) {
         let n = d[e];
         return null == n ? void 0 : n[t];
@@ -38,7 +38,7 @@ class h extends (s = o.ZP.Store) {
     }
 }
 (a = 'ActivityLauncherStore'),
-    (i = 'displayName') in (r = h)
+    (i = 'displayName') in (r = p)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -46,15 +46,15 @@ class h extends (s = o.ZP.Store) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = new h(u.Z, {
+    (t.Z = new p(u.Z, {
         OVERLAY_INITIALIZE: function (e) {
             let { activityLauncherStates: t } = e;
             d = { ...t };
         },
-        ACTIVITY_JOIN_LOADING: (e) => E(c.OcF.LOADING, c.mFx.JOIN, e),
-        ACTIVITY_JOIN_FAILED: (e) => E(c.OcF.FAILED, c.mFx.JOIN, e),
-        ACTIVITY_JOIN: f,
-        EMBEDDED_ACTIVITY_CLOSE: f,
+        ACTIVITY_JOIN_LOADING: (e) => _(c.OcF.LOADING, c.mFx.JOIN, e),
+        ACTIVITY_JOIN_FAILED: (e) => _(c.OcF.FAILED, c.mFx.JOIN, e),
+        ACTIVITY_JOIN: h,
+        EMBEDDED_ACTIVITY_CLOSE: h,
         ACTIVITY_LAUNCH_FAIL: function (e) {
             let { applicationId: t, activityType: n } = e,
                 r = d[t];

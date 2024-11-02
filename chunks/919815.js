@@ -1,23 +1,23 @@
 t.d(n, {
     Z: function () {
-        return r;
+        return o;
     }
 });
-var s = t(200651);
+var i = t(200651);
 t(192379);
-var i = t(442837),
+var l = t(442837),
     a = t(481060),
-    l = t(888369),
+    s = t(888369),
     u = t(181945),
-    o = t(689938);
-function r(e, n) {
+    r = t(388032);
+function o(e, n) {
     let t = e.id,
-        r = (0, i.e7)([l.default], () => l.default.getGuildHasUnreadIgnoreMuted(t), [t]);
-    return (0, s.jsx)(a.MenuItem, {
+        o = (0, l.e7)([s.default], () => s.default.getGuildHasUnreadIgnoreMuted(t), [t]);
+    return (0, i.jsx)(a.MenuItem, {
         id: 'mark-guild-read',
-        label: o.Z.Messages.MARK_AS_READ,
+        label: r.intl.string(r.t.e6RscX),
         icon: void 0,
         action: () => (0, u.Z)([t], n.section),
-        disabled: !r
+        disabled: !o
     });
 }

@@ -1,56 +1,56 @@
-a.r(t);
-var s = a(200651);
-a(192379);
-var n = a(481060),
-    o = a(313201),
-    l = a(430824),
-    d = a(614812),
-    c = a(689938),
-    r = a(640733);
-t.default = (e) => {
-    let { onClose: t, guildId: a } = e,
-        i = (0, o.Dt)(),
-        u = c.Z.Messages.GUILD_LIMITED_ACCESS_INFO_MODAL_DESCRIPTION_FALLBACK.format({ helpdeskArticle: d.z }),
-        _ = l.Z.getGuild(a);
+n.r(e);
+var a = n(200651);
+n(192379);
+var o = n(481060),
+    l = n(313201),
+    d = n(430824),
+    s = n(614812),
+    i = n(388032),
+    r = n(640733);
+e.default = (t) => {
+    let { onClose: e, guildId: n } = t,
+        c = (0, l.Dt)(),
+        u = i.intl.format(i.t.ZqkXsL, { helpdeskArticle: s.z }),
+        m = d.Z.getGuild(n);
     return (
-        null != _ &&
-            (u = c.Z.Messages.GUILD_LIMITED_ACCESS_INFO_MODAL_DESCRIPTION.format({
-                guildName: _.name,
-                helpdeskArticle: d.z
+        null != m &&
+            (u = i.intl.format(i.t.jn0Xy8, {
+                guildName: m.name,
+                helpdeskArticle: s.z
             })),
-        (0, s.jsxs)(n.ModalRoot, {
-            ...e,
-            'aria-labelledby': i,
+        (0, a.jsxs)(o.ModalRoot, {
+            ...t,
+            'aria-labelledby': c,
             children: [
-                (0, s.jsxs)(n.ModalHeader, {
+                (0, a.jsxs)(o.ModalHeader, {
                     separator: !1,
                     className: r.modalHeader,
                     children: [
-                        (0, s.jsx)(n.Heading, {
-                            id: i,
+                        (0, a.jsx)(o.Heading, {
+                            id: c,
                             variant: 'heading-xl/extrabold',
-                            children: c.Z.Messages.GUILD_LIMITED_ACCESS_INFO_MODAL_HEADING
+                            children: i.intl.string(i.t.kJwpBQ)
                         }),
-                        (0, s.jsx)(n.ModalCloseButton, {
+                        (0, a.jsx)(o.ModalCloseButton, {
                             className: r.closeButton,
-                            onClick: t
+                            onClick: e
                         })
                     ]
                 }),
-                (0, s.jsx)(n.ModalContent, {
+                (0, a.jsx)(o.ModalContent, {
                     className: r.modalContent,
-                    children: (0, s.jsx)(n.Text, {
+                    children: (0, a.jsx)(o.Text, {
                         variant: 'text-md/normal',
                         className: r.contentText,
                         children: u
                     })
                 }),
-                (0, s.jsx)(n.ModalFooter, {
-                    children: (0, s.jsx)(n.Button, {
+                (0, a.jsx)(o.ModalFooter, {
+                    children: (0, a.jsx)(o.Button, {
                         className: r.button,
-                        size: n.Button.Sizes.MIN,
-                        onClick: t,
-                        children: c.Z.Messages.OKAY
+                        size: o.Button.Sizes.MIN,
+                        onClick: e,
+                        children: i.intl.string(i.t.BddRzc)
                     })
                 })
             ]

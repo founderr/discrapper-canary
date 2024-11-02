@@ -1,40 +1,40 @@
-t(411104);
+e(411104);
 var i,
     l,
     o,
-    E,
-    r = t(442837),
-    a = t(570140);
-let u = null;
-class s extends (i = r.ZP.Store) {
+    r,
+    u = e(442837),
+    a = e(570140);
+let d = null;
+class E extends (i = u.ZP.Store) {
     getCurrentPath() {
-        return null != u ? u.pathname : null;
+        return null != d ? d.pathname : null;
     }
     getCurrentRoute() {
-        return (function (e) {
-            let n = null != e && null != e.search ? e.search : '';
-            return null != e ? ''.concat(e.pathname).concat(n) : null;
-        })(u);
+        return (function (n) {
+            let t = null != n && null != n.search ? n.search : '';
+            return null != n ? ''.concat(n.pathname).concat(t) : null;
+        })(d);
     }
     reset() {
         throw Error('Should not reset the store this way outside of a test environment');
     }
 }
-(E = 'ApplicationStoreLocationStore'),
-    (o = 'displayName') in (l = s)
+(r = 'ApplicationStoreLocationStore'),
+    (o = 'displayName') in (l = E)
         ? Object.defineProperty(l, o, {
-              value: E,
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[o] = E),
-    (n.Z = new s(a.Z, {
-        APPLICATION_STORE_LOCATION_CHANGE: function (e) {
-            let { location: n } = e;
-            u = { ...n };
+        : (l[o] = r),
+    (t.Z = new E(a.Z, {
+        APPLICATION_STORE_LOCATION_CHANGE: function (n) {
+            let { location: t } = n;
+            d = { ...t };
         },
         APPLICATION_STORE_RESET_NAVIGATION: function () {
-            u = null;
+            d = null;
         }
     }));

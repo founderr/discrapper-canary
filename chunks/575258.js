@@ -1,8 +1,8 @@
-var s,
-    a,
-    i,
+var i,
     r,
-    l = n(442837),
+    l,
+    s,
+    a = n(442837),
     o = n(570140),
     c = n(430824),
     d = n(981631);
@@ -11,74 +11,74 @@ let u = {
         channels: [],
         enabled: !1
     },
-    _ = u,
-    I = !1,
-    E = !1,
-    T = u;
-function m(e) {
+    m = u,
+    h = !1,
+    g = !1,
+    x = u;
+function p(e) {
     let { welcomeScreen: t, guildId: n } = e,
-        s = c.Z.getGuild(n);
+        i = c.Z.getGuild(n);
     if (null != t) {
-        var a, i;
-        T = _ = {
-            description: null !== (a = t.description) && void 0 !== a ? a : '',
-            channels: null !== (i = t.welcome_channels) && void 0 !== i ? i : [],
-            enabled: null == s ? void 0 : s.hasFeature(d.oNc.WELCOME_SCREEN_ENABLED)
+        var r, l;
+        x = m = {
+            description: null !== (r = t.description) && void 0 !== r ? r : '',
+            channels: null !== (l = t.welcome_channels) && void 0 !== l ? l : [],
+            enabled: null == i ? void 0 : i.hasFeature(d.oNc.WELCOME_SCREEN_ENABLED)
         };
-    } else T = _ = u;
-    E = !1;
+    } else x = m = u;
+    g = !1;
 }
-class N extends (r = l.ZP.Store) {
+class f extends (s = a.ZP.Store) {
     initialize() {
         this.waitFor(c.Z);
     }
     get() {
-        return T;
+        return x;
     }
     showNotice() {
-        return E;
+        return g;
     }
     getSettingsProps() {
         return {
-            submitting: I,
-            hasErrors: E,
-            welcomeSettings: T,
-            originalWelcomeSettings: _
+            submitting: h,
+            hasErrors: g,
+            welcomeSettings: x,
+            originalWelcomeSettings: m
         };
     }
 }
-(i = 'WelcomeScreenSettingsStore'),
-    (a = 'displayName') in (s = N)
-        ? Object.defineProperty(s, a, {
-              value: i,
+(l = 'WelcomeScreenSettingsStore'),
+    (r = 'displayName') in (i = f)
+        ? Object.defineProperty(i, r, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (s[a] = i),
-    (t.Z = new N(o.Z, {
-        WELCOME_SCREEN_FETCH_SUCCESS: m,
-        WELCOME_SCREEN_UPDATE: m,
+        : (i[r] = l),
+    (t.Z = new f(o.Z, {
+        WELCOME_SCREEN_FETCH_SUCCESS: p,
+        WELCOME_SCREEN_UPDATE: p,
         WELCOME_SCREEN_SETTINGS_RESET: function () {
-            (T = _), (E = !1);
+            (x = m), (g = !1);
         },
         WELCOME_SCREEN_SETTINGS_CLEAR: function () {
-            (T = u), (_ = u);
+            (x = u), (m = u);
         },
         WELCOME_SCREEN_SETTINGS_UPDATE: function (e) {
             let { settings: t } = e;
-            T = {
-                ...T,
+            x = {
+                ...x,
                 ...t
             };
         },
         WELCOME_SCREEN_SUBMIT: function () {
-            I = !0;
+            h = !0;
         },
         WELCOME_SCREEN_SUBMIT_SUCCESS: function (e) {
-            m(e), (I = !1);
+            p(e), (h = !1);
         },
         WELCOME_SCREEN_SUBMIT_FAILURE: function () {
-            (E = !0), (I = !1);
+            (g = !0), (h = !1);
         }
     }));

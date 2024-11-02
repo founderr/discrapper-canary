@@ -1,24 +1,24 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return s;
     }
 });
 var i = n(200651),
-    a = n(192379),
-    s = n(122611),
-    r = n(849496);
-function l(e) {
+    r = n(192379),
+    l = n(122611),
+    a = n(849496);
+function s(e) {
     let { guild: t, setHasSubheader: n } = e,
-        l = a.useRef(null);
+        s = r.useRef(null);
     return (
-        a.useLayoutEffect(() => {
-            let e = l.current;
+        r.useLayoutEffect(() => {
+            let e = s.current;
             null != e && n(e.childNodes.length > 0);
         }),
         (0, i.jsx)('div', {
-            className: r.container,
-            ref: l,
-            children: (0, i.jsx)(s.Z, { guild: t })
+            className: a.container,
+            ref: s,
+            children: (0, i.jsx)(l.Z, { guild: t })
         })
     );
 }

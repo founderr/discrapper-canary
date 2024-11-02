@@ -11,35 +11,35 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    a = n.n(s),
-    l = n(481060),
-    r = n(722029);
+var l = n(120356),
+    r = n.n(l),
+    a = n(481060),
+    s = n(722029);
 let o = 16;
 function c(e) {
-    let { description: t, name: n, icon: s, onNavigate: c, className: u, missingNavIcon: d } = e;
-    return (0, i.jsxs)(l.Clickable, {
+    let { description: t, name: n, icon: l, onNavigate: c, className: u, missingNavIcon: d } = e;
+    return (0, i.jsxs)(a.Clickable, {
         onClick: c,
-        className: a()(r.modInfoItem, null != c && r.modInfoAction, u),
+        className: r()(s.modInfoItem, null != c && s.modInfoAction, u),
         children: [
-            null != s &&
+            null != l &&
                 (0, i.jsx)('div', {
-                    className: r.modInfoItemIcon,
-                    children: s
+                    className: s.modInfoItemIcon,
+                    children: l
                 }),
             null != n &&
                 (0, i.jsx)('div', {
-                    className: r.modInfoItemName,
+                    className: s.modInfoItemName,
                     children: n
                 }),
             (0, i.jsx)('div', {
-                className: r.modInfoItemDescription,
+                className: s.modInfoItemDescription,
                 children: t
             }),
             null != c &&
                 (0, i.jsx)('div', {
-                    className: r.modInfoItemActionIcon,
-                    children: (0, i.jsx)(l.ChevronLargeRightIcon, {
+                    className: s.modInfoItemActionIcon,
+                    children: (0, i.jsx)(a.ChevronLargeRightIcon, {
                         size: 'custom',
                         width: o,
                         height: o
@@ -48,7 +48,7 @@ function c(e) {
             null == c &&
                 null != d &&
                 (0, i.jsx)('div', {
-                    className: r.modInfoItemActionIcon,
+                    className: s.modInfoItemActionIcon,
                     children: d
                 })
         ]
@@ -57,7 +57,7 @@ function c(e) {
 function u(e) {
     let { children: t } = e;
     return (0, i.jsx)('div', {
-        className: r.modInfoItemContainer,
+        className: s.modInfoItemContainer,
         children: t
     });
 }

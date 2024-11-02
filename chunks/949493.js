@@ -1,60 +1,60 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return R;
+        return A;
     }
 });
-var n = t(200651);
-t(192379);
-var a = t(921801),
-    i = t(10298),
-    r = t(924356),
-    o = t(24400),
-    l = t(122897),
-    c = t(821035),
-    d = t(694569),
-    _ = t(394655),
-    u = t(540204),
-    E = t(546957),
-    T = t(893996),
-    S = t(864239),
-    I = t(190014),
-    N = t(301812),
-    m = t(988043),
-    C = t(919539),
-    A = t(726985),
-    g = t(689938);
-let h = () =>
-        (0, n.jsx)(T.Z, {
-            title: g.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_SOCIAL_PERMISSIONS,
-            webSetting: A.s6.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_CATEGORY,
-            children: (0, n.jsxs)(E.Z, {
+var i = n(200651);
+n(192379);
+var s = n(921801),
+    r = n(10298),
+    l = n(924356),
+    a = n(24400),
+    o = n(122897),
+    c = n(821035),
+    d = n(694569),
+    u = n(394655),
+    m = n(540204),
+    h = n(546957),
+    g = n(893996),
+    p = n(864239),
+    x = n(190014),
+    S = n(301812),
+    T = n(988043),
+    C = n(919539),
+    _ = n(726985),
+    E = n(388032);
+let f = () =>
+        (0, i.jsx)(g.Z, {
+            title: E.intl.string(E.t['y62Z/f']),
+            webSetting: _.s6.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_CATEGORY,
+            children: (0, i.jsxs)(h.Z, {
                 children: [
-                    (0, n.jsx)(a.F, {
-                        setting: A.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
-                        children: (0, n.jsx)(u.Z, {})
+                    (0, i.jsx)(s.F, {
+                        setting: _.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
+                        children: (0, i.jsx)(m.Z, {})
                     }),
-                    (0, n.jsx)(m.Z, {}),
-                    (0, n.jsx)(C.Z, {}),
-                    (0, n.jsx)(N.Z, {}),
-                    (0, n.jsx)(I.Z, {})
+                    (0, i.jsx)(T.Z, {}),
+                    (0, i.jsx)(C.Z, {}),
+                    (0, i.jsx)(S.Z, {}),
+                    (0, i.jsx)(x.Z, {})
                 ]
             })
         }),
-    O = () =>
-        (0, n.jsxs)(T.Z, {
-            title: g.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_CONTENT,
-            webSetting: A.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-            children: [(0, n.jsx)(c.P, {}), (0, n.jsx)(l.Z, {}), (0, n.jsx)(_.Z, {}), (0, n.jsx)(o.Z, {}), (0, n.jsx)(r.Z, {}), (0, n.jsx)(S.Z, {})]
+    I = () =>
+        (0, i.jsxs)(g.Z, {
+            title: E.intl.string(E.t.xVRG4O),
+            webSetting: _.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
+            children: [(0, i.jsx)(c.P, {}), (0, i.jsx)(o.Z, {}), (0, i.jsx)(u.Z, {}), (0, i.jsx)(a.Z, {}), (0, i.jsx)(l.Z, {}), (0, i.jsx)(p.Z, {})]
         }),
-    p = () =>
-        (0, n.jsx)(T.Z, {
-            title: g.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_FRIEND_REQUESTS,
-            webSetting: A.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
-            children: (0, n.jsx)(d.Z, {})
+    N = () =>
+        (0, i.jsx)(g.Z, {
+            title: E.intl.string(E.t['1Qn8iY']),
+            webSetting: _.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
+            children: (0, i.jsx)(d.Z, {})
         });
-function R() {
-    return (0, n.jsxs)(i.N, {
-        header: g.Z.Messages.CONTENT_AND_SOCIAL,
-        children: [(0, n.jsx)(O, {}), (0, n.jsx)(h, {}), (0, n.jsx)(p, {})]
+function A() {
+    return (0, i.jsxs)(r.N, {
+        header: E.intl.string(E.t['+o1pDQ']),
+        children: [(0, i.jsx)(I, {}), (0, i.jsx)(f, {}), (0, i.jsx)(N, {})]
     });
 }

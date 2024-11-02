@@ -13,29 +13,29 @@ n.d(t, {
     }
 });
 var i,
-    s,
-    a = n(539573),
-    l = n(689938);
-function r(e, t) {
+    l,
+    r = n(539573),
+    a = n(388032);
+function s(e, t) {
     return {
         type: e,
         message: null != t ? t : null
     };
 }
 function o(e) {
-    return r(0, e);
+    return s(0, e);
 }
 function c() {
-    return r(0, l.Z.Messages.FORM_THREAD_NAME_REQUIRED_ERROR);
+    return s(0, a.intl.string(a.t['uXA57+']));
 }
 function u() {
-    return r(0, l.Z.Messages.FORM_THREAD_STARTER_MESSAGE_REQUIRED_ERROR);
+    return s(0, a.intl.string(a.t.kesTVV));
 }
 function d(e, t) {
-    return r(1, (0, a.$q)(e, null == t ? void 0 : t.id));
+    return s(1, (0, r.$q)(e, null == t ? void 0 : t.id));
 }
 function h(e, t) {
     var n;
     return null == e || (0 === e.type && null != t.content && t.content.trim().length > 0) ? null : null !== (n = e.message) && void 0 !== n ? n : null;
 }
-((i = s || (s = {}))[(i.EmptyContent = 0)] = 'EmptyContent'), (i[(i.AutomodViolation = 1)] = 'AutomodViolation');
+((i = l || (l = {}))[(i.EmptyContent = 0)] = 'EmptyContent'), (i[(i.AutomodViolation = 1)] = 'AutomodViolation');

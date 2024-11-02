@@ -1,6 +1,6 @@
 n.d(t, {
     h: function () {
-        return p;
+        return m;
     }
 });
 var r = n(952265),
@@ -12,25 +12,25 @@ var r = n(952265),
     u = n(653175),
     c = n(592125),
     d = n(430824),
-    _ = n(607744),
-    E = n(944486),
-    f = n(979651),
-    h = n(934415);
-let p = function (e, t) {
-    let p = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        I = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        m = c.Z.getChannel(e),
-        T = f.Z.getCurrentClientVoiceChannelId(null != t ? t : null) === e,
-        S = null != m ? _.Z.getCheck(m.guild_id) : null;
-    if (!(null != t && (0, a.n)(t)) && (null == S || !!S.canChat || !!(0, s.jU)(m))) {
-        if (null != m && !T) {
-            let e = (0, h.rY)(m, f.Z, d.Z);
-            if (e && m.isGuildStageVoice() && (0, o.xJ)(m.id)) {
+    f = n(607744),
+    _ = n(944486),
+    h = n(979651),
+    p = n(934415);
+let m = function (e, t) {
+    let m = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        g = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        E = c.Z.getChannel(e),
+        v = h.Z.getCurrentClientVoiceChannelId(null != t ? t : null) === e,
+        I = null != E ? f.Z.getCheck(E.guild_id) : null;
+    if (!(null != t && (0, a.n)(t)) && (null == I || !!I.canChat || !!(0, s.jU)(E))) {
+        if (null != E && !v) {
+            let e = (0, p.rY)(E, h.Z, d.Z);
+            if (e && E.isGuildStageVoice() && (0, o.xJ)(E.id)) {
                 (0, r.ZD)(async () => {
                     let { default: e } = await n.e('46398').then(n.bind(n, 523794));
                     return (t) =>
                         e({
-                            channel: m,
+                            channel: E,
                             ...t
                         });
                 });
@@ -44,21 +44,21 @@ let p = function (e, t) {
                 return;
             }
         }
-        p && (0, l.eH)();
+        m && (0, l.eH)();
         (0, u.Z)(
             function () {
                 i.Z.dispatch({
                     type: 'VOICE_CHANNEL_SELECT',
                     guildId: t,
                     channelId: e,
-                    currentVoiceChannelId: E.Z.getVoiceChannelId(),
-                    video: p,
-                    stream: I
+                    currentVoiceChannelId: _.Z.getVoiceChannelId(),
+                    video: m,
+                    stream: g
                 });
             },
             e,
-            I,
-            p
+            g,
+            m
         );
     }
 };

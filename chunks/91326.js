@@ -1,27 +1,27 @@
 var i = n(200651);
 n(192379);
-var a = n(442837),
-    s = n(471445),
-    r = n(862099),
-    l = n(938475),
-    o = n(689938),
+var r = n(442837),
+    l = n(471445),
+    a = n(862099),
+    s = n(938475),
+    o = n(388032),
     c = n(362057);
 t.Z = function (e) {
     let { name: t, channel: n } = e,
-        d = (0, a.Wu)(
-            [l.ZP],
+        d = (0, r.Wu)(
+            [s.ZP],
             () =>
-                l.ZP.getVoiceStatesForChannel(n).map((e) => {
+                s.ZP.getVoiceStatesForChannel(n).map((e) => {
                     let { user: t } = e;
                     return t;
                 }),
             [n]
         ),
-        u = (0, s.KS)(n);
-    return (0, i.jsx)(r.gt, {
-        heading: o.Z.Messages.STAGE_CHANNEL_LIVE_NOW,
+        u = (0, l.KS)(n);
+    return (0, i.jsx)(a.gt, {
+        heading: o.intl.string(o.t['X2K3//']),
         topic: t,
-        location: o.Z.Messages.HUB_STUDY_ROOM_VOICE_CHANNEL_TOOLTIP,
+        location: o.intl.string(o.t.LZA6NT),
         locationIcon:
             null != u
                 ? (0, i.jsx)(u, {
@@ -30,10 +30,10 @@ t.Z = function (e) {
                       className: c.icon
                   })
                 : null,
-        children: (0, i.jsx)(r.Co, {
+        children: (0, i.jsx)(a.Co, {
             channel: n,
             speakers: d,
-            voiceType: r.bZ.STUDY_ROOM
+            voiceType: a.bZ.STUDY_ROOM
         })
     });
 };

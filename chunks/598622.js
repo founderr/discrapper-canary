@@ -1,50 +1,50 @@
 n.d(t, {
     Q: function () {
-        return I;
+        return h;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(740903),
-    i = n(426434),
-    r = n(112824),
-    l = n(181339),
+var r = n(740903),
+    l = n(426434),
+    s = n(112824),
+    a = n(181339),
     o = n(195189),
     c = n(616230),
     d = n(3896),
     u = n(981631),
-    _ = n(689938);
-let I = (e) => ({
-    [a.u.CAPTCHA_AND_RAID_PROTECTION]: [
+    m = n(388032);
+let h = (e) => ({
+    [r.u.CAPTCHA_AND_RAID_PROTECTION]: [
         {
-            renderComponent: () => (0, s.jsx)(l.Z, { guild: e }, 'raid-alerts'),
+            renderComponent: () => (0, i.jsx)(a.Z, { guild: e }, 'raid-alerts'),
             enabled: !e.hasFeature(u.oNc.RAID_ALERTS_DISABLED)
         },
         {
-            renderComponent: () => (0, s.jsx)(o.Z, { title: _.Z.Messages.GUILD_SETTINGS_SAFETY_RAID_CAPTCHA }, 'captcha-suspicious-joins'),
+            renderComponent: () => (0, i.jsx)(o.Z, { title: m.intl.string(m.t.gOkFfH) }, 'captcha-suspicious-joins'),
             enabled: !0
         },
         {
-            renderComponent: () => (0, s.jsx)(o.Z, { title: _.Z.Messages.GUILD_SETTINGS_SAFETY_RAID_CAPTCH_RAID }, 'captcha-raid-joins'),
+            renderComponent: () => (0, i.jsx)(o.Z, { title: m.intl.string(m.t.r3esyM) }, 'captcha-raid-joins'),
             enabled: !0
         }
     ],
-    [a.u.DM_AND_SPAM_PROTECTION]: [
+    [r.u.DM_AND_SPAM_PROTECTION]: [
         {
-            renderComponent: () => (0, s.jsx)(d.Z, { guild: e }, 'verification-level'),
+            renderComponent: () => (0, i.jsx)(d.Z, { guild: e }, 'verification-level'),
             enabled: !0
         },
         {
-            renderComponent: () => (0, s.jsx)(c.Z, { guild: e }, 'member-verification'),
+            renderComponent: () => (0, i.jsx)(c.Z, { guild: e }, 'member-verification'),
             enabled: e.hasVerificationGate()
         },
         {
             renderComponent: () =>
-                (0, s.jsx)(
+                (0, i.jsx)(
                     o.Z,
                     {
-                        title: _.Z.Messages.GUILD_SETTINGS_SAFETY_SPAM_SUSPICIOUS_DMS,
-                        details: _.Z.Messages.GUILD_SETTINGS_SAFETY_SPAM_SUSPICIOUS_DMS_DESCRIPTION
+                        title: m.intl.string(m.t.QiONLy),
+                        details: m.intl.string(m.t.dSRTMD)
                     },
                     'hide-suspicious-dms'
                 ),
@@ -52,33 +52,33 @@ let I = (e) => ({
         },
         {
             renderComponent: () =>
-                (0, s.jsx)(
+                (0, i.jsx)(
                     o.Z,
                     {
-                        title: _.Z.Messages.GUILD_SETTINGS_SAFETY_SPAM_DM_NON_FRIENDS,
-                        details: _.Z.Messages.GUILD_SETTINGS_SAFETY_SPAM_DM_NON_FRIENDS_DESCRIPTION
+                        title: m.intl.string(m.t['f+8F8P']),
+                        details: m.intl.string(m.t.qChrIy)
                     },
                     'filter-unknown-dms'
                 ),
             enabled: !0
         },
         {
-            renderComponent: () => (0, s.jsx)(o.Z, { title: _.Z.Messages.GUILD_SETTINGS_SAFETY_SPAM_SUSPICIOUS_LINKS }, 'outbound-links-warn'),
+            renderComponent: () => (0, i.jsx)(o.Z, { title: m.intl.string(m.t.EkSAHR) }, 'outbound-links-warn'),
             enabled: !0
         },
         {
-            renderComponent: () => (0, s.jsx)(o.Z, { title: _.Z.Messages.GUILD_SETTINGS_SAFETY_SPAM_DM_SUSPCIOUS_MESSAGES }, 'delete-spam'),
+            renderComponent: () => (0, i.jsx)(o.Z, { title: m.intl.string(m.t['7cAQmp']) }, 'delete-spam'),
             enabled: !0
         }
     ],
-    [a.u.PERMISSIONS]: [
+    [r.u.PERMISSIONS]: [
         {
-            renderComponent: () => (0, s.jsx)(i.Z, { guild: e }, 'guild-mfa'),
+            renderComponent: () => (0, i.jsx)(l.Z, { guild: e }, 'guild-mfa'),
             enabled: e.mfaLevel === u.BpS.ELEVATED
         },
         {
-            renderComponent: () => (0, s.jsx)(r.Z, { guild: e }, 'disable-risky-perms'),
-            enabled: 0 === (0, r.R)(e).length
+            renderComponent: () => (0, i.jsx)(s.Z, { guild: e }, 'disable-risky-perms'),
+            enabled: 0 === (0, s.R)(e).length
         }
     ]
 });

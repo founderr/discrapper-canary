@@ -3,7 +3,7 @@ n.d(t, {
         return d;
     },
     l: function () {
-        return _;
+        return f;
     }
 }),
     n(47120);
@@ -32,6 +32,6 @@ function d(e) {
     let [t, n] = c((e) => [e.notificationDismissedInGuilds, e.dismissNotification], i.Z);
     return [!t.has(e), n];
 }
-function _(e) {
+function f(e) {
     return u.getState().resetNotification(e);
 }

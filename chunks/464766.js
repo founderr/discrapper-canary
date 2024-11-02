@@ -8,63 +8,63 @@ var i = t(200651),
     a = t(192379),
     l = t(120356),
     r = t.n(l),
-    o = t(481060),
-    c = t(765305),
-    s = t(689938),
-    d = t(400463);
+    d = t(481060),
+    o = t(765305),
+    c = t(388032),
+    s = t(400463);
 function u(e) {
     let { onClose: n, selectedTab: t, onTabSelected: l, userCount: u, hasBanner: _, isHub: g = !1 } = e,
-        v = a.useRef(null);
+        p = a.useRef(null);
     a.useEffect(() => {
         var e, n, t;
-        return null === (t = v.current) || void 0 === t ? void 0 : null === (n = t.ref) || void 0 === n ? void 0 : null === (e = n.blur) || void 0 === e ? void 0 : e.call(n);
+        return null === (t = p.current) || void 0 === t ? void 0 : null === (n = t.ref) || void 0 === n ? void 0 : null === (e = n.blur) || void 0 === e ? void 0 : e.call(n);
     }, []);
-    let h = s.Z.Messages.GUILD_EVENT_DETAILS_USER_LIST_TAB_TITLE.format({ userCount: u }),
-        f = [
+    let m = c.intl.formatToPlainString(c.t['ZrTT/P'], { userCount: u }),
+        I = [
             (0, i.jsx)(
-                o.TabBar.Item,
+                d.TabBar.Item,
                 {
-                    className: d.tabBarItem,
-                    id: c.fL.EVENT_INFO,
-                    children: s.Z.Messages.GUILD_EVENT_DETAILS_INFO_TAB_TITLE
+                    className: s.tabBarItem,
+                    id: o.fL.EVENT_INFO,
+                    children: c.intl.string(c.t.iW6Xur)
                 },
                 'event-details'
             )
         ];
     return (
         !g &&
-            f.push(
+            I.push(
                 (0, i.jsx)(
-                    o.TabBar.Item,
+                    d.TabBar.Item,
                     {
-                        className: d.tabBarItem,
-                        id: c.fL.RSVP_LIST,
-                        children: h
+                        className: s.tabBarItem,
+                        id: o.fL.RSVP_LIST,
+                        children: m
                     },
                     'is-hub'
                 )
             ),
         (0, i.jsxs)('div', {
-            className: d.container,
+            className: s.container,
             children: [
-                (0, i.jsx)(o.Clickable, {
-                    ref: v,
+                (0, i.jsx)(d.Clickable, {
+                    ref: p,
                     onClick: n,
-                    className: d.closeButton,
-                    'aria-label': s.Z.Messages.CLOSE,
-                    children: (0, i.jsx)(o.XSmallIcon, {
+                    className: s.closeButton,
+                    'aria-label': c.intl.string(c.t.cpT0Cg),
+                    children: (0, i.jsx)(d.XSmallIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: r()(d.closeIcon, _ && d.closeIconBanner)
+                        className: r()(s.closeIcon, _ && s.closeIconBanner)
                     })
                 }),
-                (0, i.jsx)(o.TabBar, {
-                    className: d.tabBar,
-                    'aria-label': s.Z.Messages.OPTIONS,
+                (0, i.jsx)(d.TabBar, {
+                    className: s.tabBar,
+                    'aria-label': c.intl.string(c.t['+1H47u']),
                     selectedItem: t,
                     type: 'top',
                     onItemSelect: l,
-                    children: f
+                    children: I
                 })
             ]
         })

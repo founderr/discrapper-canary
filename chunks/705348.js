@@ -5,25 +5,25 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(82950),
-    s = n(63063),
-    r = n(981631),
-    l = n(921944),
-    o = n(689938),
+var r = n(82950),
+    l = n(63063),
+    a = n(981631),
+    s = n(921944),
+    o = n(388032),
     c = n(157476);
 function d(e) {
     let { guild: t, markAsDismissed: n } = e;
-    return (0, i.jsx)(a.Z, {
+    return (0, i.jsx)(r.Z, {
         image: c,
         guild: t,
-        onDismissed: () => n(l.L.UNKNOWN),
+        onDismissed: () => n(s.L.UNKNOWN),
         onClick: () => {
-            open(s.Z.getArticleURL(r.BhN.CONNECTION_DETAILS)), n(l.L.UNKNOWN);
+            open(l.Z.getArticleURL(a.BhN.CONNECTION_DETAILS)), n(s.L.UNKNOWN);
         },
-        title: o.Z.Messages.LINKED_ROLES_ADMIN_NUX_TITLE,
-        message: o.Z.Messages.LINKED_ROLES_ADMIN_NUX_CONTENT,
-        cta: o.Z.Messages.LEARN_MORE,
-        trackingSource: r.PsQ.LINKED_ROLES_ADMIN_NUX,
-        type: r.vID.LINKED_ROLES_ADMIN
+        title: o.intl.string(o.t.YMgaJi),
+        message: o.intl.string(o.t['AV/9eX']),
+        cta: o.intl.string(o.t.hvVgAQ),
+        trackingSource: a.PsQ.LINKED_ROLES_ADMIN_NUX,
+        type: a.vID.LINKED_ROLES_ADMIN
     });
 }

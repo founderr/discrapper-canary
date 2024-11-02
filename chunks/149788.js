@@ -1,21 +1,21 @@
 var i = n(200651),
-    a = n(192379),
-    s = n(481060),
-    r = n(749210),
-    l = n(322665),
+    r = n(192379),
+    l = n(481060),
+    a = n(749210),
+    s = n(322665),
     o = n(17845),
     c = n(374939),
     d = n(283293),
     u = n(469988),
-    _ = n(526383),
-    E = n(294330),
-    h = n(689938),
-    m = n(417712),
-    I = n(157770);
+    h = n(526383),
+    m = n(294330),
+    p = n(388032),
+    g = n(417712),
+    f = n(157770);
 t.Z = function (e) {
     let { onScroll: t } = e,
-        n = (0, _.Z)(),
-        p = a.useMemo(
+        n = (0, h.Z)(),
+        _ = r.useMemo(
             () =>
                 n.map((e) => ({
                     ...e,
@@ -30,30 +30,30 @@ t.Z = function (e) {
         onScroll: t,
         children: [
             (0, i.jsx)(o.Z, {
-                title: h.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_TITLE,
-                description: h.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_DESCRIPTION,
-                children: (0, i.jsx)(l.Z, {})
+                title: p.intl.string(p.t.X5xPlZ),
+                description: p.intl.string(p.t['F/IQCA']),
+                children: (0, i.jsx)(s.Z, {})
             }),
             (0, i.jsxs)(c.Z, {
                 children: [
                     n.length > 0
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(s.Heading, {
-                                      className: m.sectionTitle,
+                                  (0, i.jsx)(l.Heading, {
+                                      className: g.sectionTitle,
                                       variant: 'heading-lg/semibold',
                                       color: 'header-primary',
-                                      children: h.Z.Messages.YOUR_HUB
+                                      children: p.intl.string(p.t['2DfZIS'])
                                   }),
                                   (0, i.jsxs)('div', {
-                                      className: m.content,
+                                      className: g.content,
                                       children: [
-                                          p.map((e) =>
+                                          _.map((e) =>
                                               (0, i.jsx)(
-                                                  E.VD,
+                                                  m.VD,
                                                   {
                                                       guild: e,
-                                                      onClick: () => r.Z.transitionToGuildSync(e.id)
+                                                      onClick: () => a.Z.transitionToGuildSync(e.id)
                                                   },
                                                   e.id
                                               )
@@ -64,24 +64,24 @@ t.Z = function (e) {
                               ]
                           })
                         : (0, i.jsx)('div', {
-                              className: m.content,
+                              className: g.content,
                               children: (0, i.jsx)(u.Z, { hasHub: !1 })
                           }),
-                    (0, i.jsx)('div', { className: I.divider }),
+                    (0, i.jsx)('div', { className: f.divider }),
                     (0, i.jsxs)('div', {
-                        className: I.disclaimer,
+                        className: f.disclaimer,
                         children: [
-                            (0, i.jsxs)(s.Text, {
-                                className: I.text,
+                            (0, i.jsxs)(l.Text, {
+                                className: f.text,
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
-                                children: [h.Z.Messages.MOBILE_HUB_EMAIL_CONNECTION_SIDEBAR_DESCRIPTION_2, ' ']
+                                children: [p.intl.string(p.t.O1k9XV), ' ']
                             }),
-                            (0, i.jsx)(s.Text, {
-                                className: I.text,
+                            (0, i.jsx)(l.Text, {
+                                className: f.text,
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
-                                children: h.Z.Messages.MOBILE_HUB_EMAIL_CONNECTION_SIDEBAR_DESCRIPTION_4
+                                children: p.intl.string(p.t.FV5dvr)
                             })
                         ]
                     })

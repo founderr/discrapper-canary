@@ -1,42 +1,42 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return h;
     }
 });
 var i = n(200651),
-    a = n(192379),
-    s = n(442837),
-    r = n(58540),
-    l = n(905405),
-    o = n(937889),
+    r = n(192379),
+    l = n(442837),
+    a = n(58540),
+    o = n(905405),
+    s = n(937889),
     c = n(267128),
     u = n(123145),
     d = n(699516),
-    _ = n(217702),
-    E = n(825193);
-function I(e) {
+    m = n(217702),
+    f = n(825193);
+function h(e) {
     let { message: t, channel: n } = e,
-        I = (0, s.e7)([d.Z], () => d.Z.isBlockedForMessage(t)),
-        m = (0, l.p)(),
-        f = a.useMemo(() => ({ [n.guild_id]: [t.author.id] }), [n.guild_id, t.author.id]);
-    (0, r.$)(f);
-    let T = a.useMemo(
+        h = (0, l.e7)([d.Z], () => d.Z.isBlockedForMessage(t)),
+        p = (0, o.p)(),
+        g = r.useMemo(() => ({ [n.guild_id]: [t.author.id] }), [n.guild_id, t.author.id]);
+    (0, a.$)(g);
+    let _ = r.useMemo(
         () =>
             null != t.content && '' !== t.content
-                ? (0, o.ZP)(t, {
+                ? (0, s.ZP)(t, {
                       formatInline: !0,
-                      shouldFilterKeywords: m
+                      shouldFilterKeywords: p
                   }).content
                 : null,
-        [t, m]
+        [t, p]
     );
     return (0, i.jsxs)('div', {
-        className: E.threadMessageAccessory,
+        className: f.threadMessageAccessory,
         children: [
             (0, i.jsx)('img', {
                 alt: '',
                 src: t.author.getAvatarURL(n.guild_id, 16),
-                className: E.threadMessageAccessoryAvatar
+                className: f.threadMessageAccessoryAvatar
             }),
             (0, i.jsx)(u.Z, {
                 message: t,
@@ -44,31 +44,31 @@ function I(e) {
                 compact: !0
             }),
             (0, i.jsx)('div', {
-                className: E.threadMessageAccessoryPreview,
+                className: f.threadMessageAccessoryPreview,
                 children: (function (e, t, n) {
                     let {
-                        contentPlaceholder: a,
-                        renderedContent: s,
-                        leadingIcon: r,
-                        trailingIcon: l
-                    } = (0, c.f)(e, t, n, E.threadMessageAccessoryContent, {
-                        trailingIconClass: E.threadMessageAccessoryContentTrailingIcon,
-                        leadingIconClass: E.threadMessageAccessoryContentLeadingIcon,
-                        iconSize: _.WW
+                        contentPlaceholder: r,
+                        renderedContent: l,
+                        leadingIcon: a,
+                        trailingIcon: o
+                    } = (0, c.f)(e, t, n, f.threadMessageAccessoryContent, {
+                        trailingIconClass: f.threadMessageAccessoryContentTrailingIcon,
+                        leadingIconClass: f.threadMessageAccessoryContentLeadingIcon,
+                        iconSize: m.WW
                     });
                     return (0, i.jsxs)(i.Fragment, {
                         children: [
-                            r,
-                            null != s
-                                ? s
+                            a,
+                            null != l
+                                ? l
                                 : (0, i.jsx)('span', {
-                                      className: E.threadMessageAccessoryPlaceholder,
-                                      children: a
+                                      className: f.threadMessageAccessoryPlaceholder,
+                                      children: r
                                   }),
-                            l
+                            o
                         ]
                     });
-                })(t, T, I)
+                })(t, _, h)
             })
         ]
     });

@@ -1,175 +1,175 @@
 n.d(t, {
     B: function () {
-        return g;
+        return I;
     },
     Z: function () {
-        return S;
+        return C;
     }
 }),
     n(47120);
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(120356),
-    i = n.n(a),
-    r = n(392711),
+var r = n(120356),
     l = n.n(r),
+    s = n(392711),
+    a = n.n(s),
     o = n(481060),
     c = n(668781),
     d = n(659388),
     u = n(107862),
-    _ = n(307707),
-    I = n(305762),
-    E = n(570961),
-    T = n(290511),
-    m = n(689938),
-    N = n(926916);
-function S(e) {
-    var t, a, r, c;
-    let { guild: u, prompt: S, singleColumn: g, promptIndex: h, option: C, hasError: x, onDragStart: p, onDragComplete: R, onDragReset: L } = e,
-        f = null,
-        O = l().findIndex(S.options, (e) => e.id === C.id),
+    m = n(307707),
+    h = n(305762),
+    g = n(570961),
+    x = n(290511),
+    p = n(388032),
+    f = n(926916);
+function C(e) {
+    var t, r, s, c;
+    let { guild: u, prompt: C, singleColumn: I, promptIndex: _, option: N, hasError: v, onDragStart: T, onDragComplete: j, onDragReset: E } = e,
+        S = null,
+        b = a().findIndex(C.options, (e) => e.id === N.id),
         {
-            drag: A,
-            dragSourcePosition: M,
-            drop: D,
-            setIsDraggable: v
+            drag: R,
+            dragSourcePosition: Z,
+            drop: A,
+            setIsDraggable: L
         } = (0, d.Z)({
-            type: 'ONBOARDING_PROMPT_OPTION_CARD-'.concat(S.id),
-            index: O,
-            optionId: C.id,
-            onDragStart: p,
-            onDragComplete: R,
-            onDragReset: L
+            type: 'ONBOARDING_PROMPT_OPTION_CARD-'.concat(C.id),
+            index: b,
+            optionId: N.id,
+            onDragStart: T,
+            onDragComplete: j,
+            onDragReset: E
         }),
-        { customEmoji: j, unicodeEmoji: Z } = (0, _.Z)(null === (t = C.emoji) || void 0 === t ? void 0 : t.id, null === (a = C.emoji) || void 0 === a ? void 0 : a.name);
+        { customEmoji: y, unicodeEmoji: D } = (0, m.Z)(null === (t = N.emoji) || void 0 === t ? void 0 : t.id, null === (r = N.emoji) || void 0 === r ? void 0 : r.name);
     return (
-        !((0, T.Oq)(C.emoji) || null != j || null != Z) && (f = m.Z.Messages.GUILD_SETTINGS_ONBOARDING_PROMPT_INVALID_EMOJI),
-        (0, s.jsxs)(o.Clickable, {
-            className: i()(N.optionCard, {
-                [N.hasError]: x || null != f,
-                [N.dropIndicatorBefore]: null != M && O < M,
-                [N.dropIndicatorAfter]: null != M && O > M,
-                [N.singleColumn]: g
+        !((0, x.Oq)(N.emoji) || null != y || null != D) && (S = p.intl.string(p.t['61wfmp'])),
+        (0, i.jsxs)(o.Clickable, {
+            className: l()(f.optionCard, {
+                [f.hasError]: v || null != S,
+                [f.dropIndicatorBefore]: null != Z && b < Z,
+                [f.dropIndicatorAfter]: null != Z && b > Z,
+                [f.singleColumn]: I
             }),
             onClick: () =>
                 (0, o.openModalLazy)(async () => {
                     let { default: e } = await n.e('1862').then(n.bind(n, 801001));
                     return (t) =>
-                        (0, s.jsx)(e, {
+                        (0, i.jsx)(e, {
                             ...t,
                             guild: u,
-                            prompt: S,
-                            option: C,
-                            index: h,
+                            prompt: C,
+                            option: N,
+                            index: _,
                             onSave: (e) => {
-                                (0, E.Kk)(u, S.id, { options: S.options.map((t) => (t.id === C.id ? e : t)) });
+                                (0, g.Kk)(u, C.id, { options: C.options.map((t) => (t.id === N.id ? e : t)) });
                             },
                             onDelete: () => {
-                                (0, E.Kk)(u, S.id, { options: S.options.filter((e) => e.id !== C.id) });
+                                (0, g.Kk)(u, C.id, { options: C.options.filter((e) => e.id !== N.id) });
                             }
                         });
                 }),
-            onMouseEnter: () => v(!0),
-            onMouseLeave: () => v(!1),
-            innerRef: (e) => A(D(e)),
+            onMouseEnter: () => L(!0),
+            onMouseLeave: () => L(!1),
+            innerRef: (e) => R(A(e)),
             children: [
-                (0, s.jsx)('div', {
-                    className: N.dragContainer,
-                    children: (0, s.jsx)(o.DragIcon, {
+                (0, i.jsx)('div', {
+                    className: f.dragContainer,
+                    children: (0, i.jsx)(o.DragIcon, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: N.__invalid_dragIcon
+                        className: f.__invalid_dragIcon
                     })
                 }),
-                (0, s.jsxs)('div', {
-                    className: N.optionCardRow,
+                (0, i.jsxs)('div', {
+                    className: f.optionCardRow,
                     children: [
-                        (0, s.jsx)('div', {
-                            className: N.emoji,
-                            children: (0, s.jsx)(I.Z, {
-                                emojiId: null === (r = C.emoji) || void 0 === r ? void 0 : r.id,
-                                emojiName: null === (c = C.emoji) || void 0 === c ? void 0 : c.name,
+                        (0, i.jsx)('div', {
+                            className: f.emoji,
+                            children: (0, i.jsx)(h.Z, {
+                                emojiId: null === (s = N.emoji) || void 0 === s ? void 0 : s.id,
+                                emojiName: null === (c = N.emoji) || void 0 === c ? void 0 : c.name,
                                 defaultComponent: null
                             })
                         }),
-                        (0, s.jsxs)('div', {
-                            className: N.text,
+                        (0, i.jsxs)('div', {
+                            className: f.text,
                             children: [
-                                (0, s.jsx)(o.Text, {
+                                (0, i.jsx)(o.Text, {
                                     variant: 'text-md/medium',
                                     color: 'header-primary',
                                     lineClamp: 1,
-                                    children: C.title
+                                    children: N.title
                                 }),
-                                '' !== C.description &&
-                                    (0, s.jsx)(o.Text, {
-                                        className: N.description,
+                                '' !== N.description &&
+                                    (0, i.jsx)(o.Text, {
+                                        className: f.description,
                                         variant: 'text-xs/normal',
                                         color: 'header-secondary',
-                                        children: C.description
+                                        children: N.description
                                     })
                             ]
                         })
                     ]
                 }),
-                null != f &&
-                    (0, s.jsx)(o.Text, {
+                null != S &&
+                    (0, i.jsx)(o.Text, {
                         variant: 'text-xs/medium',
                         color: 'text-danger',
-                        children: f
+                        children: S
                     })
             ]
         })
     );
 }
-function g(e) {
-    let { guild: t, prompt: a, promptIndex: r, singleColumn: l } = e,
+function I(e) {
+    let { guild: t, prompt: r, promptIndex: s, singleColumn: a } = e,
         { dropdownsAllowed: d } = (0, u.Ug)(t.id),
-        _ = () => {
+        m = () => {
             (0, o.openModalLazy)(async () => {
                 let { default: e } = await n.e('1862').then(n.bind(n, 801001));
                 return (n) =>
-                    (0, s.jsx)(e, {
+                    (0, i.jsx)(e, {
                         ...n,
                         guild: t,
-                        prompt: a,
+                        prompt: r,
                         onSave: (e) =>
-                            (0, E.Kk)(t, a.id, {
-                                options: [...a.options, e]
+                            (0, g.Kk)(t, r.id, {
+                                options: [...r.options, e]
                             }),
                         onDelete: () => {},
-                        index: r
+                        index: s
                     });
             });
         };
-    return (0, s.jsx)(o.Clickable, {
-        className: i()(N.optionCard, N.addOptionCard, {
-            [N.addFirstOptionCard]: 0 === a.options.length,
-            [N.singleColumn]: l
+    return (0, i.jsx)(o.Clickable, {
+        className: l()(f.optionCard, f.addOptionCard, {
+            [f.addFirstOptionCard]: 0 === r.options.length,
+            [f.singleColumn]: a
         }),
         onClick: () => {
-            d && a.options.length + 1 === T.fY
+            d && r.options.length + 1 === x.fY
                 ? c.Z.show({
-                      title: m.Z.Messages.ONBOARDING_PROMPT_THRESHOLD_ALERT_TITLE,
-                      body: m.Z.Messages.ONBOARDING_PROMPT_THRESHOLD_ALERT_DESCRIPTION.format({ thresholdCount: T.fY }),
-                      confirmText: m.Z.Messages.OKAY,
-                      cancelText: m.Z.Messages.CANCEL,
-                      onConfirm: _
+                      title: p.intl.string(p.t.TggC7u),
+                      body: p.intl.formatToPlainString(p.t.kPQKam, { thresholdCount: x.fY }),
+                      confirmText: p.intl.string(p.t.BddRzc),
+                      cancelText: p.intl.string(p.t['ETE/oK']),
+                      onConfirm: m
                   })
-                : _();
+                : m();
         },
-        children: (0, s.jsxs)('div', {
-            className: N.optionCardRow,
+        children: (0, i.jsxs)('div', {
+            className: f.optionCardRow,
             children: [
-                (0, s.jsx)(o.CirclePlusIcon, {
+                (0, i.jsx)(o.CirclePlusIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: N.plusIcon
+                    className: f.plusIcon
                 }),
-                (0, s.jsx)(o.Text, {
+                (0, i.jsx)(o.Text, {
                     variant: 'text-md/medium',
                     color: 'header-primary',
-                    children: m.Z.Messages.ONBOARDING_PROMPT_ADD_OPTION
+                    children: p.intl.string(p.t.Ty3lgo)
                 })
             ]
         })

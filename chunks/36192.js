@@ -1,160 +1,160 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return p;
+        return N;
     }
 }),
-    t(47120);
-var n = t(200651),
-    a = t(192379),
-    i = t(120356),
-    r = t.n(i),
-    o = t(442837),
-    l = t(544891),
-    c = t(704215),
-    d = t(481060),
-    _ = t(230711),
-    u = t(497321),
-    E = t(43015),
-    T = t(136097),
-    S = t(605236),
-    I = t(246946),
-    N = t(594174),
-    m = t(460562),
-    C = t(823379),
-    A = t(981631),
-    g = t(921944),
-    h = t(689938),
-    O = t(722177);
-function p() {
+    n(47120);
+var i = n(200651),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(442837),
+    o = n(544891),
+    c = n(704215),
+    d = n(481060),
+    u = n(230711),
+    m = n(497321),
+    h = n(43015),
+    g = n(136097),
+    p = n(605236),
+    x = n(246946),
+    S = n(594174),
+    T = n(460562),
+    C = n(823379),
+    _ = n(981631),
+    E = n(921944),
+    f = n(388032),
+    I = n(722177);
+function N() {
     let e;
-    let { currentSession: s, otherSessions: t } = (0, T.h)(),
-        i = (0, o.e7)([I.Z], () => I.Z.hidePersonalInformation),
-        r = (0, o.e7)([N.default], () => N.default.getCurrentUser()),
-        [_, m] = a.useState(!1);
-    a.useEffect(() => {
-        (0, S.EW)(c.z.AUTH_SESSIONS_NEW, { dismissAction: g.L.AUTO }), (0, E.fw)();
-        let e = setTimeout(() => m(!0), 500);
+    let { currentSession: t, otherSessions: n } = (0, g.h)(),
+        r = (0, a.e7)([x.Z], () => x.Z.hidePersonalInformation),
+        l = (0, a.e7)([S.default], () => S.default.getCurrentUser()),
+        [u, T] = s.useState(!1);
+    s.useEffect(() => {
+        (0, p.EW)(c.z.AUTH_SESSIONS_NEW, { dismissAction: E.L.AUTO }), (0, h.fw)();
+        let e = setTimeout(() => T(!0), 500);
         return () => {
-            clearTimeout(e), (0, E.$Z)();
+            clearTimeout(e), (0, h.$Z)();
         };
     }, []);
     let C = () => {
-            l.tn.post({ url: A.ANM.AUTH_SESSION_NOTIFICATIONS_DEBUG });
+            o.tn.post({ url: _.ANM.AUTH_SESSION_NOTIFICATIONS_DEBUG });
         },
-        [p, M] = a.useState(new Set());
-    return i
-        ? (0, n.jsx)(u.Z, {})
+        [N, v] = s.useState(new Set());
+    return r
+        ? (0, i.jsx)(m.Z, {})
         : ((e =
-              null == s && 0 === t.length
-                  ? _
-                      ? (0, n.jsx)('div', {
-                            className: O.loading,
-                            children: (0, n.jsx)(d.Spinner, {})
+              null == t && 0 === n.length
+                  ? u
+                      ? (0, i.jsx)('div', {
+                            className: I.loading,
+                            children: (0, i.jsx)(d.Spinner, {})
                         })
                       : null
-                  : (0, n.jsxs)(n.Fragment, {
+                  : (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, n.jsxs)('div', {
-                                className: O.sessions,
+                            (0, i.jsxs)('div', {
+                                className: I.sessions,
                                 children: [
-                                    (0, n.jsx)(d.FormSection, {
+                                    (0, i.jsx)(d.FormSection, {
                                         tag: d.FormTitleTags.H5,
-                                        title: h.Z.Messages.AUTH_SESSIONS_CURRENT,
-                                        titleClassName: O.groupTitle,
+                                        title: f.intl.string(f.t.LLS19v),
+                                        titleClassName: I.groupTitle,
                                         children:
-                                            null != s
-                                                ? (0, n.jsx)(R, {
-                                                      session: s,
+                                            null != t
+                                                ? (0, i.jsx)(A, {
+                                                      session: t,
                                                       current: !0
                                                   })
                                                 : null
                                     }),
-                                    !(t.length > 0) && (null == r ? void 0 : r.mfaEnabled)
+                                    !(n.length > 0) && (null == l ? void 0 : l.mfaEnabled)
                                         ? null
-                                        : (0, n.jsxs)(d.FormSection, {
+                                        : (0, i.jsxs)(d.FormSection, {
                                               tag: d.FormTitleTags.H5,
-                                              title: h.Z.Messages.AUTH_SESSIONS_OTHERS,
-                                              titleClassName: O.groupTitle,
-                                              className: O.otherSessions,
+                                              title: f.intl.string(f.t.xx1MWV),
+                                              titleClassName: I.groupTitle,
+                                              className: I.otherSessions,
                                               children: [
-                                                  t.map((e) =>
-                                                      (0, n.jsx)(
-                                                          R,
+                                                  n.map((e) =>
+                                                      (0, i.jsx)(
+                                                          A,
                                                           {
                                                               session: e,
-                                                              useChecks: p.size > 0,
-                                                              checked: p.has(e.id_hash),
-                                                              setChecked: (s) => {
-                                                                  let t = new Set(p);
-                                                                  s ? t.add(e.id_hash) : t.delete(e.id_hash), M(t);
+                                                              useChecks: N.size > 0,
+                                                              checked: N.has(e.id_hash),
+                                                              setChecked: (t) => {
+                                                                  let n = new Set(N);
+                                                                  t ? n.add(e.id_hash) : n.delete(e.id_hash), v(n);
                                                               }
                                                           },
                                                           e.id_hash
                                                       )
                                                   ),
-                                                  (null == r ? void 0 : r.mfaEnabled) ? null : (0, n.jsx)(x, {})
+                                                  (null == l ? void 0 : l.mfaEnabled) ? null : (0, i.jsx)(b, {})
                                               ]
                                           })
                                 ]
                             }),
-                            t.length > 0
-                                ? (0, n.jsxs)(d.FormSection, {
+                            n.length > 0
+                                ? (0, i.jsxs)(d.FormSection, {
                                       tag: d.FormTitleTags.H5,
-                                      title: p.size > 0 ? h.Z.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_TITLE : h.Z.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_TITLE,
+                                      title: N.size > 0 ? f.intl.string(f.t.mMEmRE) : f.intl.string(f.t.Vij32N),
                                       children: [
-                                          (0, n.jsx)(d.FormText, {
+                                          (0, i.jsx)(d.FormText, {
                                               type: d.FormTextTypes.DESCRIPTION,
-                                              children: h.Z.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_DESCRIPTION
+                                              children: f.intl.string(f.t.OTXyaW)
                                           }),
-                                          (0, n.jsx)(d.Button, {
+                                          (0, i.jsx)(d.Button, {
                                               look: d.Button.Looks.OUTLINED,
                                               color: d.Button.Colors.RED,
                                               size: d.Button.Sizes.SMALL,
-                                              className: O.logOutAllButton,
+                                              className: I.logOutAllButton,
                                               onClick: () => {
-                                                  p.size > 0 ? (0, E.L$)(Array.from(p)) : (0, E.L$)(t.map((e) => e.id_hash));
+                                                  N.size > 0 ? (0, h.L$)(Array.from(N)) : (0, h.L$)(n.map((e) => e.id_hash));
                                               },
-                                              children: p.size > 0 ? h.Z.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_ACTION.format({ count: p.size }) : h.Z.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_ACTION
+                                              children: N.size > 0 ? f.intl.formatToPlainString(f.t['83CPLi'], { count: N.size }) : f.intl.string(f.t.cLmmeX)
                                           })
                                       ]
                                   })
                                 : null
                         ]
                     })),
-          (0, n.jsxs)(d.FormSection, {
+          (0, i.jsxs)(d.FormSection, {
               tag: d.FormTitleTags.H1,
-              title: h.Z.Messages.AUTH_SESSIONS,
+              title: f.intl.string(f.t['+1h0k5']),
               children: [
-                  (0, n.jsx)(d.FormText, {
+                  (0, i.jsx)(d.FormText, {
                       type: d.FormTextTypes.DESCRIPTION,
-                      className: O.description,
-                      children: h.Z.Messages.AUTH_SESSIONS_DESCRIPTION
+                      className: I.description,
+                      children: f.intl.string(f.t.zZp619)
                   }),
-                  (null == r ? void 0 : r.isStaff())
-                      ? (0, n.jsxs)('div', {
-                            className: O.tools,
+                  (null == l ? void 0 : l.isStaff())
+                      ? (0, i.jsxs)('div', {
+                            className: I.tools,
                             children: [
-                                (0, n.jsx)(d.Text, {
-                                    className: O.toolsTitle,
+                                (0, i.jsx)(d.Text, {
+                                    className: I.toolsTitle,
                                     variant: 'text-md/bold',
                                     children: 'DEV TOOLS'
                                 }),
-                                (0, n.jsx)(d.Text, {
-                                    className: O.toolsTitle,
+                                (0, i.jsx)(d.Text, {
+                                    className: I.toolsTitle,
                                     variant: 'text-sm/normal',
                                     color: 'text-danger',
                                     children: 'These tools are only shown to staff users.'
                                 }),
-                                (0, n.jsx)(d.Tooltip, {
+                                (0, i.jsx)(d.Tooltip, {
                                     text: 'Triggers mobile and email suspicious session notifications for the current user',
                                     children: (e) => {
-                                        let { onMouseEnter: s, onMouseLeave: t } = e;
-                                        return (0, n.jsx)(d.Button, {
+                                        let { onMouseEnter: t, onMouseLeave: n } = e;
+                                        return (0, i.jsx)(d.Button, {
                                             size: d.Button.Sizes.SMALL,
                                             color: d.Button.Colors.PRIMARY,
                                             onClick: C,
-                                            onMouseEnter: s,
-                                            onMouseLeave: t,
+                                            onMouseEnter: t,
+                                            onMouseLeave: n,
                                             children: 'Trigger Suspicious Sessions Notification'
                                         });
                                     }
@@ -166,18 +166,18 @@ function p() {
               ]
           }));
 }
-function R(e) {
-    var s, t, a, i, o;
-    let { session: l, current: c, setChecked: _, checked: u, useChecks: S } = e,
-        I = null !== (o = null === (s = l.client_info) || void 0 === s ? void 0 : s.location) && void 0 !== o ? o : null === (t = l.client_info) || void 0 === t ? void 0 : t.ip,
-        N = null === (a = l.client_info) || void 0 === a ? void 0 : a.platform,
-        { text: m, icon: A } = (function (e) {
+function A(e) {
+    var t, n, s, r, a;
+    let { session: o, current: c, setChecked: u, checked: m, useChecks: p } = e,
+        x = null !== (a = null === (t = o.client_info) || void 0 === t ? void 0 : t.location) && void 0 !== a ? a : null === (n = o.client_info) || void 0 === n ? void 0 : n.ip,
+        S = null === (s = o.client_info) || void 0 === s ? void 0 : s.platform,
+        { text: T, icon: _ } = (function (e) {
             switch (null == e ? void 0 : e.toLowerCase().trim()) {
                 case null:
                 case void 0:
                 case '':
                     return {
-                        text: h.Z.Messages.AUTH_SESSIONS_OS_UNKNOWN,
+                        text: f.intl.string(f.t.cDHCNT),
                         icon: d.ScreenIcon
                     };
                 case 'ios':
@@ -192,44 +192,44 @@ function R(e) {
                         icon: d.ScreenIcon
                     };
             }
-        })(null === (i = l.client_info) || void 0 === i ? void 0 : i.os),
-        g = c ? null : (0, T.p)(l.approx_last_used_time),
-        p = [m, N].filter(C.lm),
-        R = [I, g].filter(C.lm);
-    return (0, n.jsxs)(
+        })(null === (r = o.client_info) || void 0 === r ? void 0 : r.os),
+        E = c ? null : (0, g.p)(o.approx_last_used_time),
+        N = [T, S].filter(C.lm),
+        A = [x, E].filter(C.lm);
+    return (0, i.jsxs)(
         'div',
         {
-            className: r()(O.session, c ? O.currentSession : null),
+            className: l()(I.session, c ? I.currentSession : null),
             children: [
-                (0, n.jsx)('div', {
-                    className: O.sessionIcon,
-                    children: (0, n.jsx)(A, {
+                (0, i.jsx)('div', {
+                    className: I.sessionIcon,
+                    children: (0, i.jsx)(_, {
                         size: 'md',
                         color: 'currentColor'
                     })
                 }),
-                (0, n.jsxs)('div', {
-                    className: O.sessionInfo,
+                (0, i.jsxs)('div', {
+                    className: I.sessionInfo,
                     children: [
-                        (0, n.jsxs)(d.Text, {
+                        (0, i.jsxs)(d.Text, {
                             variant: 'eyebrow',
-                            className: O.sessionInfoRow,
+                            className: I.sessionInfoRow,
                             children: [
-                                (0, n.jsx)('span', { children: p[0] }),
-                                p.length > 1 &&
-                                    (0, n.jsxs)(n.Fragment, {
-                                        children: [(0, n.jsx)('span', { children: '\xB7' }), (0, n.jsx)('span', { children: p[1] })]
+                                (0, i.jsx)('span', { children: N[0] }),
+                                N.length > 1 &&
+                                    (0, i.jsxs)(i.Fragment, {
+                                        children: [(0, i.jsx)('span', { children: '\xB7' }), (0, i.jsx)('span', { children: N[1] })]
                                     })
                             ]
                         }),
-                        (0, n.jsxs)(d.Text, {
+                        (0, i.jsxs)(d.Text, {
                             variant: 'text-sm/medium',
-                            className: O.sessionInfoRow,
+                            className: I.sessionInfoRow,
                             children: [
-                                (0, n.jsx)('span', { children: R[0] }),
-                                R.length > 1 &&
-                                    (0, n.jsxs)(n.Fragment, {
-                                        children: [(0, n.jsx)('span', { children: '\xB7' }), (0, n.jsx)('span', { children: R[1] })]
+                                (0, i.jsx)('span', { children: A[0] }),
+                                A.length > 1 &&
+                                    (0, i.jsxs)(i.Fragment, {
+                                        children: [(0, i.jsx)('span', { children: '\xB7' }), (0, i.jsx)('span', { children: A[1] })]
                                     })
                             ]
                         })
@@ -237,57 +237,57 @@ function R(e) {
                 }),
                 c
                     ? null
-                    : S
-                      ? (0, n.jsx)('div', {
-                            className: O.sessionCheckbox,
-                            children: (0, n.jsx)(d.Checkbox, {
-                                onChange: (e, s) => {
-                                    null == _ || _(s);
+                    : p
+                      ? (0, i.jsx)('div', {
+                            className: I.sessionCheckbox,
+                            children: (0, i.jsx)(d.Checkbox, {
+                                onChange: (e, t) => {
+                                    null == u || u(t);
                                 },
-                                value: u
+                                value: m
                             })
                         })
-                      : (0, n.jsx)(d.Clickable, {
-                            className: O.sessionMoreButton,
+                      : (0, i.jsx)(d.Clickable, {
+                            className: I.sessionMoreButton,
                             onClick: (e) => {
-                                e.shiftKey ? null == _ || _(!0) : (0, E.L$)(l.id_hash);
+                                e.shiftKey ? null == u || u(!0) : (0, h.L$)(o.id_hash);
                             },
-                            'aria-label': h.Z.Messages.AUTH_SESSIONS_SESSION_LOG_OUT,
-                            children: (0, n.jsx)(d.XSmallIcon, {
+                            'aria-label': f.intl.string(f.t.E4MJNj),
+                            children: (0, i.jsx)(d.XSmallIcon, {
                                 size: 'md',
                                 color: 'currentColor'
                             })
                         })
             ]
         },
-        l.id_hash
+        o.id_hash
     );
 }
-function x() {
-    return (0, n.jsxs)('div', {
-        className: r()(O.session, O.legacySession),
+function b() {
+    return (0, i.jsxs)('div', {
+        className: l()(I.session, I.legacySession),
         children: [
-            (0, n.jsx)('div', {
-                className: O.sessionIcon,
-                children: (0, n.jsx)(m.Z, {
+            (0, i.jsx)('div', {
+                className: I.sessionIcon,
+                children: (0, i.jsx)(T.Z, {
                     width: '32',
                     height: '32'
                 })
             }),
-            (0, n.jsxs)('div', {
-                className: O.sessionInfo,
+            (0, i.jsxs)('div', {
+                className: I.sessionInfo,
                 children: [
-                    (0, n.jsx)(d.Text, {
+                    (0, i.jsx)(d.Text, {
                         variant: 'eyebrow',
-                        className: O.sessionInfoRow,
+                        className: I.sessionInfoRow,
                         color: 'text-muted',
-                        children: (0, n.jsx)('span', { children: h.Z.Messages.AUTH_SESSIONS_UNKNOWN_LEGACY })
+                        children: (0, i.jsx)('span', { children: f.intl.string(f.t.iUa0sr) })
                     }),
-                    (0, n.jsx)(d.Text, {
+                    (0, i.jsx)(d.Text, {
                         variant: 'text-sm/medium',
-                        className: O.sessionInfoRow,
+                        className: I.sessionInfoRow,
                         color: 'text-muted',
-                        children: (0, n.jsx)('span', { children: h.Z.Messages.AUTH_SESSIONS_UNKNOWN_LEGACY_LOG_OUT.format({ onClick: () => _.Z.setSection(A.oAB.ACCOUNT) }) })
+                        children: (0, i.jsx)('span', { children: f.intl.format(f.t['044+8v'], { onClick: () => u.Z.setSection(_.oAB.ACCOUNT) }) })
                     })
                 ]
             })

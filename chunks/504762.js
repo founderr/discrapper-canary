@@ -5,31 +5,31 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(689938),
-    r = n(599475),
-    l = n(217110);
+var r = n(481060),
+    l = n(388032),
+    a = n(599475),
+    s = n(217110);
 function o() {
     return (0, i.jsx)('div', {
-        className: r.container,
+        className: a.container,
         children: (0, i.jsxs)('div', {
-            className: r.content,
+            className: a.content,
             children: [
                 (0, i.jsx)('img', {
-                    src: l,
-                    alt: s.Z.Messages.CREATOR_MONETIZATION_NOTICE_ILLO_A11Y_LABEL
+                    src: s,
+                    alt: l.intl.string(l.t.MvLOqq)
                 }),
-                (0, i.jsx)(a.Spacer, { size: 12 }),
-                (0, i.jsx)(a.Heading, {
-                    className: r.header,
+                (0, i.jsx)(r.Spacer, { size: 12 }),
+                (0, i.jsx)(r.Heading, {
+                    className: a.header,
                     variant: 'heading-lg/semibold',
-                    children: s.Z.Messages.CREATOR_MONETIZATION_DISABLED_NOTICE_TITLE
+                    children: l.intl.string(l.t.t18lFh)
                 }),
-                (0, i.jsx)(a.Spacer, { size: 8 }),
-                (0, i.jsx)(a.Text, {
+                (0, i.jsx)(r.Spacer, { size: 8 }),
+                (0, i.jsx)(r.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
-                    children: s.Z.Messages.CREATOR_MONETIZATION_DISABLED_NOTICE_DESCRIPTION
+                    children: l.intl.string(l.t.TvGJgo)
                 })
             ]
         })

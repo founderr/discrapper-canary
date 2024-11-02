@@ -5,34 +5,34 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(481060),
-    a = n(153867),
-    l = n(468026),
-    r = n(740492),
-    o = n(689938);
+var l = n(481060),
+    r = n(153867),
+    a = n(468026),
+    s = n(740492),
+    o = n(388032);
 function c(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => {},
         n = (t) => {
-            a.ZP.updatedUnsyncedSettings({ disableEmbeddedActivityPopOutAlert: !0 }), t(), e();
+            r.ZP.updatedUnsyncedSettings({ disableEmbeddedActivityPopOutAlert: !0 }), t(), e();
         };
-    r.ZP.disableEmbeddedActivityPopOutAlert
+    s.ZP.disableEmbeddedActivityPopOutAlert
         ? e()
-        : (0, s.openModal)(
-              (s) =>
-                  (0, i.jsx)(l.default, {
-                      confirmText: o.Z.Messages.EMBEDDED_ACTIVITIES_YEP,
-                      secondaryConfirmText: o.Z.Messages.DONT_ASK_AGAIN,
-                      title: o.Z.Messages.EMBEDDED_ACTIVITIES_CAREFUL,
-                      cancelText: o.Z.Messages.EMBEDDED_ACTIVITIES_NVM,
+        : (0, l.openModal)(
+              (l) =>
+                  (0, i.jsx)(a.default, {
+                      confirmText: o.intl.string(o.t.efSOLC),
+                      secondaryConfirmText: o.intl.string(o.t['JdIQ/f']),
+                      title: o.intl.string(o.t.pVr7Cg),
+                      cancelText: o.intl.string(o.t.EwoEOT),
                       onConfirm: () => {
-                          s.onClose(), e();
+                          l.onClose(), e();
                       },
                       onCancel: t,
-                      onConfirmSecondary: () => n(s.onClose),
-                      body: o.Z.Messages.EMBEDDED_ACTIVITIES_POP_IN_WARNING,
-                      ...s
+                      onConfirmSecondary: () => n(l.onClose),
+                      body: o.intl.string(o.t.ugSbNT),
+                      ...l
                   }),
               {},
-              s.POPOUT_MODAL_CONTEXT
+              l.POPOUT_MODAL_CONTEXT
           );
 }

@@ -3,18 +3,18 @@ n.d(t, {
         return c;
     }
 });
-var a = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    s = n(239091),
-    i = n(299206),
+var i = n(481060),
+    a = n(239091),
+    l = n(299206),
     o = n(858042),
-    l = n(689938);
+    s = n(388032);
 function c(e) {
     let { applicationId: t, className: n, viewId: c } = e,
-        d = (0, i.Z)({
+        d = (0, l.Z)({
             id: t,
-            label: l.Z.Messages.COPY_ID_APPLICATION
+            label: s.intl.string(s.t['FfCL+/'])
         }),
         u = (0, o.M)({
             applicationId: t,
@@ -22,35 +22,35 @@ function c(e) {
         });
     return null == d && null == u
         ? null
-        : (0, a.jsx)(r.Popout, {
+        : (0, r.jsx)(i.Popout, {
               align: 'top',
               position: 'right',
               disablePointerEvents: !1,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
-                  return (0, a.jsx)(r.Menu, {
+                  return (0, r.jsx)(i.Menu, {
                       navId: 'game-profile-context',
                       onClose: () => {
-                          (0, s.Zy)(), t();
+                          (0, a.Zy)(), t();
                       },
-                      'aria-label': l.Z.Messages.GAME_PROFILE_VIEW_MORE,
+                      'aria-label': s.intl.string(s.t.PNeFgY),
                       onSelect: () => {},
-                      children: (0, a.jsxs)(a.Fragment, {
-                          children: [(0, a.jsx)(r.MenuGroup, { children: d }), (0, a.jsx)(r.MenuGroup, { children: u })]
+                      children: (0, r.jsxs)(r.Fragment, {
+                          children: [(0, r.jsx)(i.MenuGroup, { children: d }), (0, r.jsx)(i.MenuGroup, { children: u })]
                       })
                   });
               },
               children: (e) =>
-                  (0, a.jsx)(r.Tooltip, {
-                      text: l.Z.Messages.MORE,
+                  (0, r.jsx)(i.Tooltip, {
+                      text: s.intl.string(s.t.UKOtz8),
                       children: (t) =>
-                          (0, a.jsx)(r.Clickable, {
+                          (0, r.jsx)(i.Clickable, {
                               className: n,
                               ...t,
                               ...e,
-                              children: (0, a.jsx)(r.MoreHorizontalIcon, {
+                              children: (0, r.jsx)(i.MoreHorizontalIcon, {
                                   size: 'xs',
-                                  color: r.tokens.colors.WHITE
+                                  color: i.tokens.colors.WHITE
                               })
                           })
                   })

@@ -8,8 +8,8 @@ var r = n(544891),
     u = n(621600),
     c = n(709054),
     d = n(981631),
-    _ = n(526761),
-    E = n(689938);
+    f = n(526761),
+    _ = n(388032);
 t.Z = {
     open(e) {
         a.Z.dispatch({
@@ -70,7 +70,7 @@ t.Z = {
                 channelId: t,
                 settings: n
             }),
-            i.uv.announce(E.Z.Messages.A11Y_ANNOUNCEMENT_CHANNEL_SETTINGS_UPDATED),
+            i.uv.announce(_.intl.string(_.t.MlIsJy)),
             (0, u.jz)(e, t, n, l, r, o);
     },
     updateChannelOverrideSettingsBulk(e, t, n, r) {
@@ -85,8 +85,8 @@ t.Z = {
             c.default.keys(t).forEach((i) => (0, u.jz)(e, i, t[i], o.get(i), n, r));
     },
     setForumThreadsCreated(e, t) {
-        let n = t ? _.ic.NEW_FORUM_THREADS_ON : _.ic.NEW_FORUM_THREADS_OFF,
-            r = t ? _.ic.NEW_FORUM_THREADS_OFF : _.ic.NEW_FORUM_THREADS_ON,
+        let n = t ? f.ic.NEW_FORUM_THREADS_ON : f.ic.NEW_FORUM_THREADS_OFF,
+            r = t ? f.ic.NEW_FORUM_THREADS_OFF : f.ic.NEW_FORUM_THREADS_ON,
             i = o.ZP.getChannelFlags(e);
         this.updateChannelOverrideSettings(e.guild_id, e.id, { flags: (i & ~r) | n }, u.UE.forumThreadsCreated(t));
     },

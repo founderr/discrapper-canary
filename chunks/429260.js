@@ -3,38 +3,38 @@ t.d(n, {
         return c;
     },
     e: function () {
-        return E;
+        return g;
     }
 });
 var i = t(200651);
 t(192379);
-var a = t(442837),
-    s = t(481060),
-    l = t(432877),
-    r = t(726521),
-    o = t(594174),
+var l = t(442837),
+    r = t(481060),
+    a = t(432877),
+    o = t(726521),
+    s = t(594174),
     u = t(970257),
-    d = t(689938);
+    d = t(388032);
 function c(e) {
     return (0, u.a4)(e)
-        ? (0, i.jsx)(s.MenuItem, {
+        ? (0, i.jsx)(r.MenuItem, {
               id: 'report',
-              label: d.Z.Messages.REPORT_MESSAGE_MENU_OPTION,
-              action: () => (0, r.ak)(e, 'web_message_context_menu'),
-              icon: s.FlagIcon,
+              label: d.intl.string(d.t.GwbdGR),
+              action: () => (0, o.ak)(e, 'web_message_context_menu'),
+              icon: r.FlagIcon,
               color: 'danger'
           })
         : null;
 }
-function E(e) {
-    let n = (0, a.e7)([l.ZP], () => l.ZP.get('iar_testing')),
-        t = (0, a.e7)([o.default], () => o.default.getCurrentUser());
+function g(e) {
+    let n = (0, l.e7)([a.ZP], () => a.ZP.get('iar_testing')),
+        t = (0, l.e7)([s.default], () => s.default.getCurrentUser());
     return (0, u.a4)(e) && null != t && t.isStaff() && n
-        ? (0, i.jsx)(s.MenuItem, {
+        ? (0, i.jsx)(r.MenuItem, {
               id: 'staff-test-message-report',
               label: '[STAFF] Test Message Report',
-              action: () => (0, r.Jw)(e, 'web_message_context_menu'),
-              icon: s.FlagIcon,
+              action: () => (0, o.Jw)(e, 'web_message_context_menu'),
+              icon: r.FlagIcon,
               color: 'danger'
           })
         : null;

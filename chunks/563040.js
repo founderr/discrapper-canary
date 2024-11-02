@@ -1,12 +1,12 @@
 n.d(t, {
     rK: function () {
-        return p;
-    },
-    tR: function () {
         return m;
     },
+    tR: function () {
+        return E;
+    },
     tj: function () {
-        return f;
+        return h;
     }
 }),
     n(757143),
@@ -34,22 +34,22 @@ let o = /^[0]+/,
     u = /(AM|ΠΜ|सुबह)/i,
     c = /(PM|ΜΜ|शाम)/i,
     d = /\s+/,
-    _ = (e) => e.replace(o, '').replace(l, '').replace(u, '').replace(d, ''),
-    E = (e) => e.replace(o, '').replace(c, '').replace(d, ''),
-    f = (e, t) => {
+    f = (e) => e.replace(o, '').replace(l, '').replace(u, '').replace(d, ''),
+    _ = (e) => e.replace(o, '').replace(c, '').replace(d, ''),
+    h = (e, t) => {
         let n = t.toUpperCase().trim();
         if (n.length > 0) {
             let t = i()(''.concat(null == e ? void 0 : e.format('YYYY-MM-DD'), ' ').concat(n), 'YYYY-MM-DD LT');
-            if (_(t.format('LT')) === _(n)) return t;
+            if (f(t.format('LT')) === f(n)) return t;
         }
     },
-    h = i()('2021-04-12T00:00:00'),
-    p = (e, t) => e.clone().hours(t.hour()).minutes(t.minutes()).seconds(0),
-    I = (e, t) => e.value.unix() - t.value.unix();
-class m {
+    p = i()('2021-04-12T00:00:00'),
+    m = (e, t) => e.clone().hours(t.hour()).minutes(t.minutes()).seconds(0),
+    g = (e, t) => e.value.unix() - t.value.unix();
+class E {
     lookupByValue(e) {
         if (null == e) return;
-        let t = p(h, e);
+        let t = m(p, e);
         return this._index[t.unix()];
     }
     _createLabel(e) {
@@ -57,7 +57,7 @@ class m {
     }
     _generateTimeOptions() {
         (this.options = []), (this._index = {});
-        let e = i()(h),
+        let e = i()(p),
             t = i()(e).add(1, 'day'),
             n = i()(e);
         for (; n < t; ) {
@@ -66,14 +66,14 @@ class m {
         }
     }
     _createNewOption(e) {
-        let t = p(h, e);
+        let t = m(p, e);
         return {
             label: this._createLabel(t),
             value: t
         };
     }
     _addNewOption(e) {
-        let t = p(h, e),
+        let t = m(p, e),
             n = this._createLabel(t);
         return (
             (this._index[t.unix()] = t),
@@ -81,18 +81,18 @@ class m {
                 label: n,
                 value: t
             }),
-            this.options.sort(I),
+            this.options.sort(g),
             e
         );
     }
     _guessOptions(e) {
         let t = [];
         if (/[:\\.]/.test(e)) {
-            let n = f(h, e);
+            let n = h(p, e);
             if (null != n) {
                 t.push(n.clone());
                 let r = n.add({ hours: 12 });
-                r.isBefore(h.clone().add({ hours: 24 })) && E(r.format('LT')) === E(e) && t.push(r);
+                r.isBefore(p.clone().add({ hours: 24 })) && _(r.format('LT')) === _(e) && t.push(r);
             }
         }
         return t;
@@ -106,7 +106,7 @@ class m {
                 t.forEach((t) => {
                     null == this.lookupByValue(t) && e.push(this._createNewOption(t));
                 }),
-                e.sort(I),
+                e.sort(g),
                 e
             );
         }

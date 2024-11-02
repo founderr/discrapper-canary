@@ -1,84 +1,84 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return g;
     }
 }),
     n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(990547),
-    r = n(399606),
-    l = n(481060),
+    r = n(192379),
+    l = n(990547),
+    a = n(399606),
+    s = n(481060),
     o = n(232567),
     c = n(213609),
     d = n(313201),
     u = n(23434),
-    _ = n(981631),
-    E = n(689938),
-    h = n(646634);
-function m(e) {
+    h = n(981631),
+    m = n(388032),
+    p = n(646634);
+function g(e) {
     let { transitionState: t } = e,
-        m = (0, r.e7)([u.Z], () => u.Z.getAction()),
-        [I, p] = a.useState(!1),
-        g = (0, d.Dt)();
-    async function T() {
-        return p(!0), m === _.c2C.AGREEMENTS && p(await (0, o.Lr)()), null;
+        g = (0, a.e7)([u.Z], () => u.Z.getAction()),
+        [f, _] = r.useState(!1),
+        E = (0, d.Dt)();
+    async function I() {
+        return _(!0), g === h.c2C.AGREEMENTS && _(await (0, o.Lr)()), null;
     }
     return (
         (0, c.Z)(
             {
-                type: s.ImpressionTypes.VIEW,
-                name: s.ImpressionNames.USER_AGREEMENTS,
-                properties: { required_action: m }
+                type: l.ImpressionTypes.VIEW,
+                name: l.ImpressionNames.USER_AGREEMENTS,
+                properties: { required_action: g }
             },
             {},
             []
         ),
-        (0, i.jsxs)(l.ModalRoot, {
-            'aria-labelledby': g,
+        (0, i.jsxs)(s.ModalRoot, {
+            'aria-labelledby': E,
             transitionState: t,
             children: [
-                (0, i.jsx)('div', { id: g }),
-                (0, i.jsx)(l.ModalHeader, {
+                (0, i.jsx)('div', { id: E }),
+                (0, i.jsx)(s.ModalHeader, {
                     separator: !1,
-                    children: (0, i.jsx)(l.Heading, {
+                    children: (0, i.jsx)(s.Heading, {
                         variant: 'heading-lg/semibold',
-                        children: E.Z.Messages.NEW_TERMS_TITLE
+                        children: m.intl.string(m.t['7glvXl'])
                     })
                 }),
-                (0, i.jsxs)(l.ModalContent, {
+                (0, i.jsxs)(s.ModalContent, {
                     children: [
-                        (0, i.jsx)(l.Text, {
+                        (0, i.jsx)(s.Text, {
                             variant: 'text-md/normal',
-                            children: m === _.c2C.AGREEMENTS ? E.Z.Messages.TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION.format() : null
+                            children: g === h.c2C.AGREEMENTS ? m.intl.format(m.t.zHolhY, {}) : null
                         }),
                         (0, i.jsxs)('div', {
-                            className: h.container,
+                            className: p.container,
                             children: [
                                 (0, i.jsxs)('ul', {
-                                    className: h.links,
-                                    children: [(0, i.jsx)('li', { children: E.Z.Messages.TERMS_OF_SERVICE.format({ url: _.EYA.TERMS }) }), (0, i.jsx)('li', { children: E.Z.Messages.PAID_SERVICES_TERMS.format({ url: _.EYA.PAID_TERMS }) }), (0, i.jsx)('li', { children: E.Z.Messages.PRIVACY_POLICY.format({ url: _.EYA.PRIVACY }) }), (0, i.jsx)('li', { children: E.Z.Messages.COMMUNITY_GUIDELINES.format({ url: _.EYA.GUIDELINES }) })]
+                                    className: p.links,
+                                    children: [(0, i.jsx)('li', { children: m.intl.format(m.t.iw0hFh, { url: h.EYA.TERMS }) }), (0, i.jsx)('li', { children: m.intl.format(m.t['36klnJ'], { url: h.EYA.PAID_TERMS }) }), (0, i.jsx)('li', { children: m.intl.format(m.t.TquFBA, { url: h.EYA.PRIVACY }) }), (0, i.jsx)('li', { children: m.intl.format(m.t.ia96TU, { url: h.EYA.GUIDELINES }) })]
                                 }),
                                 (0, i.jsx)('img', {
-                                    className: h.image,
+                                    className: p.image,
                                     alt: '',
                                     src: n(146714)
                                 })
                             ]
                         }),
-                        (0, i.jsx)(l.Text, {
+                        (0, i.jsx)(s.Text, {
                             variant: 'text-md/normal',
-                            className: h.agreementDescription,
-                            children: E.Z.Messages.TERMS_OF_SERVICE_AGREEMENT_DESCRIPTION
+                            className: p.agreementDescription,
+                            children: m.intl.string(m.t['+USXQE'])
                         })
                     ]
                 }),
-                (0, i.jsx)(l.ModalFooter, {
-                    children: (0, i.jsx)(l.Button, {
-                        submitting: I,
-                        onClick: T,
-                        color: l.Button.Colors.GREEN,
-                        children: E.Z.Messages.AGREE
+                (0, i.jsx)(s.ModalFooter, {
+                    children: (0, i.jsx)(s.Button, {
+                        submitting: f,
+                        onClick: I,
+                        color: s.Button.Colors.GREEN,
+                        children: m.intl.string(m.t['+TBKLy'])
                     })
                 })
             ]

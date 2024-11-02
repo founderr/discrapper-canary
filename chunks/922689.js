@@ -48,9 +48,9 @@ var u = [1, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1];
                 c = e.keys[l + 1];
             a.expand(o, e.tmp, 0), (u ^= e.tmp[0]), (c ^= e.tmp[1]);
             var d = a.substitute(u, c),
-                _ = a.permute(d),
-                E = o;
-            (o = (s ^ _) >>> 0), (s = E);
+                f = a.permute(d),
+                _ = o;
+            (o = (s ^ f) >>> 0), (s = _);
         }
         a.rip(o, s, r, i);
     }),
@@ -60,9 +60,9 @@ var u = [1, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1];
                 c = e.keys[l + 1];
             a.expand(s, e.tmp, 0), (u ^= e.tmp[0]), (c ^= e.tmp[1]);
             var d = a.substitute(u, c),
-                _ = a.permute(d),
-                E = s;
-            (s = (o ^ _) >>> 0), (o = E);
+                f = a.permute(d),
+                _ = s;
+            (s = (o ^ f) >>> 0), (o = _);
         }
         a.rip(s, o, r, i);
     });

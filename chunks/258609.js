@@ -20,30 +20,30 @@ function l(e, t, n) {
 let u = null,
     c = null,
     d = new Set(),
+    f = {},
     _ = {},
-    E = {},
-    f = new Set(),
-    h = Object.freeze({});
-class p extends (r = i.ZP.DeviceSettingsStore) {
+    h = new Set(),
+    p = Object.freeze({});
+class m extends (r = i.ZP.DeviceSettingsStore) {
     initialize(e) {
-        null != e && (E = e.lastSelectedDeviceByPlatform), this.waitFor(s.Z, o.Z);
+        null != e && (_ = e.lastSelectedDeviceByPlatform), this.waitFor(s.Z, o.Z);
     }
     getUserAgnosticState() {
-        return { lastSelectedDeviceByPlatform: E };
+        return { lastSelectedDeviceByPlatform: _ };
     }
     getDevicesForPlatform(e) {
         var t;
-        return null !== (t = _[e]) && void 0 !== t ? t : h;
+        return null !== (t = f[e]) && void 0 !== t ? t : p;
     }
     getLastSelectedDeviceByPlatform(e) {
-        return E[e];
+        return _[e];
     }
     getDevice(e, t) {
         var n;
-        return null === (n = _[e]) || void 0 === n ? void 0 : n[t];
+        return null === (n = f[e]) || void 0 === n ? void 0 : n[t];
     }
     getFetchingDevices(e) {
-        return f.has(e);
+        return h.has(e);
     }
     getPendingDeviceCommands() {
         return d;
@@ -55,9 +55,9 @@ class p extends (r = i.ZP.DeviceSettingsStore) {
         return c;
     }
 }
-l(p, 'displayName', 'GameConsoleStore'),
-    l(p, 'persistKey', 'GameConsoleStore'),
-    (t.Z = new p(a.Z, {
+l(m, 'displayName', 'GameConsoleStore'),
+    l(m, 'persistKey', 'GameConsoleStore'),
+    (t.Z = new m(a.Z, {
         REMOTE_SESSION_CONNECT: function (e) {
             let { sessionId: t } = e;
             (u = t), (c = null);
@@ -78,22 +78,22 @@ l(p, 'displayName', 'GameConsoleStore'),
         },
         GAME_CONSOLE_FETCH_DEVICES_START: function (e) {
             let { platform: t } = e;
-            f.add(t);
+            h.add(t);
         },
         GAME_CONSOLE_FETCH_DEVICES_SUCCESS: function (e) {
             let { platform: t, devices: n } = e;
-            f.delete(t);
-            let r = (_[t] = {}),
+            h.delete(t);
+            let r = (f[t] = {}),
                 i = {};
-            for (let e of n) (r[e.id] = e), E[t] === e.id && (i[t] = e.id);
-            E = i;
+            for (let e of n) (r[e.id] = e), _[t] === e.id && (i[t] = e.id);
+            _ = i;
         },
         GAME_CONSOLE_FETCH_DEVICES_FAIL: function (e) {
             let { platform: t } = e;
-            f.delete(t);
+            h.delete(t);
         },
         GAME_CONSOLE_SELECT_DEVICE: function (e) {
             let { platform: t, deviceId: n } = e;
-            E[t] = n;
+            _[t] = n;
         }
     }));

@@ -1,204 +1,204 @@
 n(627341);
-var r = n(200651),
-    s = n(192379),
-    i = n(120356),
-    l = n.n(i),
-    o = n(278074),
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    s = n(278074),
     a = n(831209),
     c = n(399606),
     d = n(481060),
     u = n(37234),
     f = n(597688),
     m = n(884697),
-    E = n(81245),
-    p = n(74538),
-    _ = n(731896),
-    h = n(528439),
-    I = n(981631),
-    g = n(689938),
-    v = n(876573),
-    C = n(223223);
-let x = () => 80,
-    P = (e) => {
-        let { children: t, className: n, isSelected: s = !1, ...i } = e;
-        return (0, r.jsx)(d.Clickable, {
-            className: l()(v.effectGridItem, n, { [v.selected]: s }),
-            ...i,
-            onClick: i.onSelect,
+    p = n(81245),
+    h = n(74538),
+    g = n(731896),
+    v = n(528439),
+    x = n(981631),
+    I = n(388032),
+    C = n(876573),
+    P = n(223223);
+let j = () => 80,
+    Z = (e) => {
+        let { children: t, className: n, isSelected: r = !1, ...l } = e;
+        return (0, i.jsx)(d.Clickable, {
+            className: o()(C.effectGridItem, n, { [C.selected]: r }),
+            ...l,
+            onClick: l.onSelect,
             children: t
         });
     },
-    A = (e) => {
+    E = (e) => {
         var t;
-        let { user: n, profileEffect: i, innerRef: l, section: o, isSelected: u, ...I } = e,
-            x = (0, _.V)(i.id),
-            A = (0, c.e7)([f.Z], () => {
-                let e = f.Z.getProduct(i.skuId);
+        let { user: n, profileEffect: l, innerRef: o, section: s, isSelected: u, ...x } = e,
+            j = (0, g.V)(l.id),
+            E = (0, c.e7)([f.Z], () => {
+                let e = f.Z.getProduct(l.skuId);
                 return (0, m.G1)(e);
             }),
-            T = (0, m.Yq)(i.skuId),
-            Z = s.useRef(null),
-            { accessibilityLabel: N, thumbnailPreviewSrc: S, title: j } = null !== (t = null == x ? void 0 : x.config) && void 0 !== t ? t : {},
-            R = p.ZP.canUseCollectibles(n),
-            M = o === h.$0.PREMIUM_PURCHASE && !R,
-            L = (0, E.Mu)('ProfileEffectPresetItem');
-        return (0, r.jsxs)(P, {
-            className: !M || u || L ? void 0 : v.decorationGridItemChurned,
-            innerRef: null != l ? l : Z,
+            _ = (0, m.Yq)(l.skuId),
+            N = r.useRef(null),
+            { accessibilityLabel: y, thumbnailPreviewSrc: b, title: S } = null !== (t = null == j ? void 0 : j.config) && void 0 !== t ? t : {},
+            T = h.ZP.canUseCollectibles(n),
+            A = s === v.$0.PREMIUM_PURCHASE && !T,
+            B = (0, p.Mu)('ProfileEffectPresetItem');
+        return (0, i.jsxs)(Z, {
+            className: !A || u || B ? void 0 : C.decorationGridItemChurned,
+            innerRef: null != o ? o : N,
             isSelected: u,
-            ...I,
+            ...x,
             children: [
-                (0, r.jsx)('img', {
-                    src: C,
-                    alt: N,
-                    className: v.presetEffectBackground
+                (0, i.jsx)('img', {
+                    src: P,
+                    alt: y,
+                    className: C.presetEffectBackground
                 }),
-                (0, r.jsx)('img', {
-                    className: v.presetEffectImg,
-                    src: S,
-                    alt: j
+                (0, i.jsx)('img', {
+                    className: C.presetEffectImg,
+                    src: b,
+                    alt: S
                 }),
-                o === h.$0.PURCHASE || (o === h.$0.PREMIUM_PURCHASE && R)
+                s === v.$0.PURCHASE || (s === v.$0.PREMIUM_PURCHASE && T)
                     ? null
-                    : T
-                      ? (0, r.jsx)(d.PremiumBadge, {
-                            className: v.newBadge,
-                            text: (0, r.jsxs)('div', {
-                                className: v.newBadgeText,
+                    : _
+                      ? (0, i.jsx)(d.PremiumBadge, {
+                            className: C.newBadge,
+                            text: (0, i.jsxs)('div', {
+                                className: C.newBadgeText,
                                 children: [
-                                    (0, r.jsx)(d.LockIcon, {
+                                    (0, i.jsx)(d.LockIcon, {
                                         size: 'xxs',
                                         color: 'currentColor'
                                     }),
-                                    g.Z.Messages.NEW
+                                    I.intl.string(I.t.y2b7CA)
                                 ]
                             })
                         })
-                      : (0, r.jsx)(d.IconBadge, {
-                            icon: A
+                      : (0, i.jsx)(d.IconBadge, {
+                            icon: E
                                 ? () =>
-                                      (0, r.jsx)(d.NitroWheelIcon, {
+                                      (0, i.jsx)(d.NitroWheelIcon, {
                                           size: 'custom',
                                           color: 'currentColor',
                                           width: 14,
                                           height: 14
                                       })
                                 : () =>
-                                      (0, r.jsx)(d.LockIcon, {
+                                      (0, i.jsx)(d.LockIcon, {
                                           size: 'xxs',
                                           color: 'currentColor'
                                       }),
                             color: a.Z.BACKGROUND_ACCENT,
-                            className: v.lockBadge
+                            className: C.lockBadge
                         })
             ]
         });
     };
 t.Z = (e) => {
-    let { user: t, guild: n, pendingProfileEffect: s, selectedProfileEffectRef: i, onSelect: l, onClose: a } = e,
+    let { user: t, guild: n, pendingProfileEffect: r, selectedProfileEffectRef: l, onSelect: o, onClose: a } = e,
         c = () => {
-            a(), (0, u.jN)(I.S9g.COLLECTIBLES_SHOP);
+            a(), (0, u.jN)(x.S9g.COLLECTIBLES_SHOP);
         },
-        f = (0, h.ZP)(),
-        m = null != s;
-    return (0, r.jsx)('section', {
-        className: v.section,
-        children: (0, r.jsx)(d.MasonryList, {
+        f = (0, v.ZP)(),
+        m = null != r;
+    return (0, i.jsx)('section', {
+        className: C.section,
+        children: (0, i.jsx)(d.MasonryList, {
             fade: !0,
             itemGutter: 12,
             sectionGutter: 16,
             paddingVertical: 0,
             paddingHorizontal: 12,
-            className: v.list,
+            className: C.list,
             columns: 3,
             sections: f.map((e) => {
                 let { items: t } = e;
                 return t.length;
             }),
-            renderItem: (e, a, u, E) => {
-                let { section: p, items: _ } = f[e];
-                return (0, o.EQ)(_[a])
-                    .with(h.Tm, () =>
-                        (0, r.jsxs)(
-                            P,
+            renderItem: (e, a, u, p) => {
+                let { section: h, items: g } = f[e];
+                return (0, s.EQ)(g[a])
+                    .with(v.Tm, () =>
+                        (0, i.jsxs)(
+                            Z,
                             {
                                 style: { ...u },
                                 isSelected: !m,
-                                onSelect: () => l(null),
+                                onSelect: () => o(null),
                                 children: [
-                                    (0, r.jsx)(d.DenyIcon, {
+                                    (0, i.jsx)(d.DenyIcon, {
                                         size: 'md',
                                         color: 'currentColor',
-                                        className: v.notAllowedIcon
+                                        className: C.notAllowedIcon
                                     }),
-                                    (0, r.jsx)(d.Text, {
+                                    (0, i.jsx)(d.Text, {
                                         variant: 'text-xs/normal',
                                         color: 'header-primary',
-                                        children: null != n ? g.Z.Messages.USER_SETTINGS_USE_DEFAULT_PROFILE_EFFECT : g.Z.Messages.NONE
+                                        children: null != n ? I.intl.string(I.t.GJ3Fcn) : I.intl.string(I.t.PoWNfX)
                                     })
                                 ]
                             },
-                            E
+                            p
                         )
                     )
-                    .with(h.oT, () =>
-                        (0, r.jsxs)(
-                            P,
+                    .with(v.oT, () =>
+                        (0, i.jsxs)(
+                            Z,
                             {
                                 style: u,
                                 onSelect: c,
                                 children: [
-                                    (0, r.jsx)(d.ShopIcon, {
+                                    (0, i.jsx)(d.ShopIcon, {
                                         size: 'custom',
                                         width: 23,
                                         height: 23,
                                         color: 'currentColor',
-                                        className: v.shopIcon
+                                        className: C.shopIcon
                                     }),
-                                    (0, r.jsx)(d.Text, {
+                                    (0, i.jsx)(d.Text, {
                                         variant: 'text-xs/normal',
                                         color: 'header-primary',
-                                        children: g.Z.Messages.COLLECTIBLES_SHOP
+                                        children: I.intl.string(I.t.pWG4zc)
                                     })
                                 ]
                             },
-                            E
+                            p
                         )
                     )
                     .otherwise((e) => {
-                        let n = s === e.id;
-                        return (0, r.jsx)(
-                            A,
+                        let n = r === e.id;
+                        return (0, i.jsx)(
+                            E,
                             {
                                 user: t,
                                 style: { ...u },
-                                section: p,
+                                section: h,
                                 profileEffect: e,
-                                innerRef: n ? i : void 0,
+                                innerRef: n ? l : void 0,
                                 isSelected: n,
-                                onSelect: () => l(e.id)
+                                onSelect: () => o(e.id)
                             },
-                            E
+                            p
                         );
                     });
             },
             renderSection: (e, t) => {
                 let { header: n } = f[e];
-                return (0, r.jsx)('div', {
+                return (0, i.jsx)('div', {
                     style: {
                         ...t,
                         height: ''.concat(16, 'px'),
                         position: 'absolute'
                     },
-                    children: (0, r.jsx)(d.FormTitle, { children: n })
+                    children: (0, i.jsx)(d.FormTitle, { children: n })
                 });
             },
             getSectionHeight: () => 16,
             getItemKey: (e, t) => {
-                var n, r;
-                return null !== (r = null === (n = f[e].items[t]) || void 0 === n ? void 0 : n.id) && void 0 !== r ? r : null;
+                var n, i;
+                return null !== (i = null === (n = f[e].items[t]) || void 0 === n ? void 0 : n.id) && void 0 !== i ? i : null;
             },
-            getItemHeight: x,
+            getItemHeight: j,
             removeEdgeItemGutters: !0
         })
     });

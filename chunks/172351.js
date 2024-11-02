@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return h;
     }
 });
 var r = n(200651),
@@ -12,38 +12,38 @@ var r = n(200651),
     u = n(785717),
     c = n(678738),
     d = n(981631),
-    _ = n(689938),
-    E = n(987352);
-function f(e) {
-    let { applicationId: t, commandIds: n, guildId: f, channel: h, onClick: p } = e,
-        { trackUserProfileAction: I } = (0, u.KZ)(),
-        { commands: m } = s.Qm(h, t, n),
-        T = i.useMemo(
+    f = n(388032),
+    _ = n(987352);
+function h(e) {
+    let { applicationId: t, commandIds: n, guildId: h, channel: p, onClick: m } = e,
+        { trackUserProfileAction: g } = (0, u.KZ)(),
+        { commands: E } = s.Qm(p, t, n),
+        v = i.useMemo(
             () =>
-                null == m
+                null == E
                     ? void 0
-                    : m.filter((e) => {
+                    : E.filter((e) => {
                           let { nsfw: t } = e;
                           return !0 !== t;
                       }),
-            [m]
+            [E]
         );
-    if (null == T || 0 === T.length) return null;
-    let S = (e) => {
-        null == p || p(),
-            I({ action: 'PRESS_APP_COMMAND' }),
+    if (null == v || 0 === v.length) return null;
+    let I = (e) => {
+        null == m || m(),
+            g({ action: 'PRESS_APP_COMMAND' }),
             l.default.track(d.rMx.POPULAR_APPLICATION_COMMAND_CLICKED, {
                 application_id: t,
                 command_id: e,
-                guild_id: f,
-                ...(0, a.JS)(h.id)
+                guild_id: h,
+                ...(0, a.JS)(p.id)
             });
     };
     return (0, r.jsx)(c.Z, {
-        heading: _.Z.Messages.COMMANDS,
+        heading: f.intl.string(f.t['0hKkS0']),
         children: (0, r.jsx)('ul', {
-            className: E.list,
-            children: T.map((e) =>
+            className: _.list,
+            children: v.map((e) =>
                 (0, r.jsx)(
                     'li',
                     {
@@ -51,9 +51,9 @@ function f(e) {
                             commandId: e.id,
                             commandName: e.displayName,
                             commandDescription: e.displayDescription,
-                            onClick: S,
-                            guildId: f,
-                            channelId: h.id,
+                            onClick: I,
+                            guildId: h,
+                            channelId: p.id,
                             applicationId: e.applicationId
                         })
                     },

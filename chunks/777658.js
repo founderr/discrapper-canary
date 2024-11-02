@@ -1,65 +1,65 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return c;
     }
 }),
-    t(47120);
-var l = t(200651),
-    i = t(192379),
-    a = t(442837),
-    s = t(481060),
-    o = t(194359),
-    u = t(699516),
-    d = t(594174),
-    r = t(689938);
+    n(47120);
+var i = n(200651),
+    l = n(192379),
+    r = n(442837),
+    o = n(481060),
+    a = n(194359),
+    u = n(699516),
+    d = n(594174),
+    s = n(388032);
 function c(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'ContextMenu',
-        { id: t, username: c, bot: Z } = e,
-        E = (0, a.e7)(
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'ContextMenu',
+        { id: n, username: c, bot: f } = e,
+        Z = (0, r.e7)(
             [d.default],
             () => {
                 var e;
-                return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t;
+                return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === n;
             },
-            [t]
+            [n]
         ),
-        [M, f] = (0, a.Wu)([u.Z], () => [u.Z.isFriend(t), u.Z.isBlocked(t)], [t]),
-        [_, I] = i.useState(!1);
-    return Z || E
+        [g, m] = (0, r.Wu)([u.Z], () => [u.Z.isFriend(n), u.Z.isBlocked(n)], [n]),
+        [v, b] = l.useState(!1);
+    return f || Z
         ? null
-        : M
-          ? (0, l.jsx)(s.MenuItem, {
+        : g
+          ? (0, i.jsx)(o.MenuItem, {
                 id: 'remove-friend',
-                label: r.Z.Messages.REMOVE_FRIEND,
+                label: s.intl.string(s.t.cvSt1N),
                 action: function () {
-                    (0, s.openModal)((e) =>
-                        (0, l.jsx)(s.ConfirmModal, {
-                            header: r.Z.Messages.REMOVE_FRIEND_TITLE.format({ name: c }),
-                            confirmText: r.Z.Messages.REMOVE_FRIEND,
-                            cancelText: r.Z.Messages.CANCEL,
+                    (0, o.openModal)((e) =>
+                        (0, i.jsx)(o.ConfirmModal, {
+                            header: s.intl.formatToPlainString(s.t.fPLvZW, { name: c }),
+                            confirmText: s.intl.string(s.t.cvSt1N),
+                            cancelText: s.intl.string(s.t['ETE/oK']),
                             onConfirm: () => {
-                                o.Z.removeFriend(t, { location: n }), I(!1);
+                                a.Z.removeFriend(n, { location: t }), b(!1);
                             },
                             ...e,
-                            children: (0, l.jsx)(s.Text, {
+                            children: (0, i.jsx)(o.Text, {
                                 variant: 'text-md/normal',
-                                children: r.Z.Messages.REMOVE_FRIEND_CONFIRMATION.format({ name: c })
+                                children: s.intl.format(s.t.l5FFq6, { name: c })
                             })
                         })
                     );
                 }
             })
-          : (0, l.jsx)(s.MenuItem, {
+          : (0, i.jsx)(o.MenuItem, {
                 id: 'add-friend',
-                label: _ ? r.Z.Messages.ADD_FRIEND_BUTTON_AFTER : r.Z.Messages.ADD_FRIEND,
+                label: v ? s.intl.string(s.t.xMH6vL) : s.intl.string(s.t.w5uwoK),
                 action: () => {
-                    !_ &&
-                        (o.Z.addRelationship({
-                            userId: t,
-                            context: { location: n }
+                    !v &&
+                        (a.Z.addRelationship({
+                            userId: n,
+                            context: { location: t }
                         }),
-                        I(!0));
+                        b(!0));
                 },
-                disabled: f || (_ && !M)
+                disabled: m || (v && !g)
             });
 }

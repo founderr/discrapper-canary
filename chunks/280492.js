@@ -1,4 +1,4 @@
-t.d(n, {
+e.d(t, {
     iN: function () {
         return l;
     },
@@ -6,7 +6,7 @@ t.d(n, {
         return o;
     }
 });
-var i = t(846027);
+var i = e(846027);
 let l = {
         binds: ['mod+shift+m'],
         comboKeysBindGlobal: !0,

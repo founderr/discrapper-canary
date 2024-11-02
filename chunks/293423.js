@@ -1,62 +1,62 @@
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(584825),
-    r = n(290348),
-    l = n(934826),
+var r = n(481060),
+    l = n(584825),
+    a = n(290348),
+    s = n(934826),
     o = n(660196),
     c = n(330181),
     d = n(939225),
     u = n(36246),
-    _ = n(305342),
-    E = n(726324),
-    h = n(981631),
-    m = n(689938),
-    I = n(154512);
+    h = n(305342),
+    m = n(726324),
+    p = n(981631),
+    g = n(388032),
+    f = n(154512);
 t.Z = (e) => {
     var t, n;
-    let { guild: p } = e,
-        g = (0, s.GG)(p.id)[0];
+    let { guild: _ } = e,
+        E = (0, l.GG)(_.id)[0];
     (0, o.Z)({
-        guildId: p.id,
-        groupListingId: null == g ? void 0 : g.id,
-        location: h.Sbl.ROLE_SUBSCRIPTIONS_TAB,
-        relevantSubscriptionListingIds: null == g ? void 0 : g.subscription_listings_ids
+        guildId: _.id,
+        groupListingId: null == E ? void 0 : E.id,
+        location: p.Sbl.ROLE_SUBSCRIPTIONS_TAB,
+        relevantSubscriptionListingIds: null == E ? void 0 : E.subscription_listings_ids
     });
-    let { activeSubscription: T } = (0, l.Z)(null == g ? void 0 : g.id),
-        S = (0, s.YB)(p.id),
-        C = null == S ? void 0 : S.description,
-        { editStateIds: f } = r.B7(null !== (t = null == g ? void 0 : g.id) && void 0 !== t ? t : null, p.id);
+    let { activeSubscription: I } = (0, s.Z)(null == E ? void 0 : E.id),
+        C = (0, l.YB)(_.id),
+        v = null == C ? void 0 : C.description,
+        { editStateIds: S } = a.B7(null !== (t = null == E ? void 0 : E.id) && void 0 !== t ? t : null, _.id);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsxs)(E.Z, {
-                title: m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_PAGE_GROUP_CTA.format({ serverName: p.toString() }),
-                description: null != C ? C : null,
-                coverImageAsset: null !== (n = null == S ? void 0 : S.cover_image_asset) && void 0 !== n ? n : null,
-                guild: p,
+            (0, i.jsxs)(m.Z, {
+                title: g.intl.format(g.t['rm+ojI'], { serverName: _.toString() }),
+                description: null != v ? v : null,
+                coverImageAsset: null !== (n = null == C ? void 0 : C.cover_image_asset) && void 0 !== n ? n : null,
+                guild: _,
                 children: [
-                    null != g
+                    null != E
                         ? (0, i.jsx)(c.Z, {
-                              className: I.pendingPlanChangeNotice,
-                              groupListingId: g.id,
-                              subscription: T
+                              className: f.pendingPlanChangeNotice,
+                              groupListingId: E.id,
+                              subscription: I
                           })
                         : null,
-                    (0, i.jsx)(d.Z, { subscription: T })
+                    (0, i.jsx)(d.Z, { subscription: I })
                 ]
             }),
-            (0, i.jsx)(a.HeadingLevel, {
+            (0, i.jsx)(r.HeadingLevel, {
                 children: (0, i.jsx)(u.Z, {
-                    guildId: p.id,
-                    children: f.map((e) => {
+                    guildId: _.id,
+                    children: S.map((e) => {
                         var t;
                         return (0, i.jsx)(
-                            _.Z,
+                            h.Z,
                             {
-                                guildId: p.id,
-                                groupListingId: null !== (t = null == g ? void 0 : g.id) && void 0 !== t ? t : '',
+                                guildId: _.id,
+                                groupListingId: null !== (t = null == E ? void 0 : E.id) && void 0 !== t ? t : '',
                                 listingId: e,
-                                analyticsLocation: h.Sbl.ROLE_SUBSCRIPTIONS_TAB
+                                analyticsLocation: p.Sbl.ROLE_SUBSCRIPTIONS_TAB
                             },
                             e
                         );

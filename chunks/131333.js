@@ -1,6 +1,6 @@
 n.d(t, {
     t: function () {
-        return v;
+        return N;
     }
 }),
     n(653041),
@@ -14,19 +14,19 @@ var r,
     u = n(703533),
     c = n(481060),
     d = n(40851),
-    _ = n(745510),
-    E = n(633302),
-    f = n(549006),
-    h = n(146128),
-    p = n(981631),
-    I = n(675654),
-    m = n(10257);
-let T = [];
-function S(e) {
+    f = n(745510),
+    _ = n(633302),
+    h = n(549006),
+    p = n(146128),
+    m = n(981631),
+    g = n(675654),
+    E = n(10257);
+let v = [];
+function I(e) {
     let t = [];
     return (
         e.forEach((e) => {
-            let n = E.ZP.getByName(e);
+            let n = _.ZP.getByName(e);
             if (null != n) {
                 if (
                     (t.push({
@@ -48,15 +48,15 @@ function S(e) {
     );
 }
 ((a = r || (r = {})).JACK_O_LANTERN = 'jack_o_lantern'), (a.NOSE = 'nose');
-let g = new Set(['jack_o_lantern', 'nose']),
-    A = {
+let S = new Set(['jack_o_lantern', 'nose']),
+    T = {
         jack_o_lantern: {
-            sprites: S(['chocolate_bar', 'lollipop', 'candy'])
+            sprites: I(['chocolate_bar', 'lollipop', 'candy'])
         },
-        nose: { sprites: S(['foot']) }
+        nose: { sprites: I(['foot']) }
     };
 ((s = i || (i = {})).ENTER = 'enter'), (s.CONFETTI = 'confetti'), (s.EXIT = 'exit');
-let N = {
+let b = {
     enter: {
         BEG: 0,
         END: 22
@@ -70,7 +70,7 @@ let N = {
         END: 200
     }
 };
-function R() {
+function y() {
     return n
         .e('60005')
         .then(n.t.bind(n, 931152, 19))
@@ -79,10 +79,10 @@ function R() {
             return t;
         });
 }
-let O = l.forwardRef(function (e, t) {
+let A = l.forwardRef(function (e, t) {
     let { sprites: n } = e,
         [r, i] = l.useState(null),
-        { confettiCanvas: a } = l.useContext(_.h),
+        { confettiCanvas: a } = l.useContext(f.h),
         s = (0, u.uR)(a, r);
     return (
         l.useImperativeHandle(
@@ -91,7 +91,7 @@ let O = l.forwardRef(function (e, t) {
                 fireConfetti: (e, t) => {
                     s.createMultipleConfetti(
                         {
-                            ...I.We,
+                            ...g.We,
                             position: {
                                 type: 'static',
                                 value: {
@@ -128,14 +128,14 @@ let O = l.forwardRef(function (e, t) {
         ),
         (0, o.jsx)(u.Ji, {
             ref: i,
-            colors: T,
+            colors: v,
             sprites: n,
             spriteWidth: 48,
             spriteHeight: 48
         })
     );
 });
-function v(e) {
+function N(e) {
     let { children: t } = e,
         n = l.useRef({}),
         [r, i] = l.useState(null),
@@ -151,30 +151,30 @@ function v(e) {
             }
         })(r),
         s = l.useRef(null),
-        [u, _] = l.useState(!1),
-        E = l.useRef('jack_o_lantern'),
-        I = (0, d.bp)(),
-        T = l.useCallback(
+        [u, f] = l.useState(!1),
+        _ = l.useRef('jack_o_lantern'),
+        g = (0, d.bp)(),
+        v = l.useCallback(
             (e) => {
                 if (!u) {
                     let t = (function (e) {
                         if (null == e) return null;
-                        for (let t of g) if (null != e.match(new RegExp(':'.concat(t, '(_tone[1-9])?')))) return t;
+                        for (let t of S) if (null != e.match(new RegExp(':'.concat(t, '(_tone[1-9])?')))) return t;
                         return null;
                     })(e);
-                    null != t && ((E.current = t), _(!0), i(null));
+                    null != t && ((_.current = t), f(!0), i(null));
                 }
             },
             [u]
         ),
-        S = l.useMemo(() => ({ triggerAnimation: T }), [T]),
-        v = l.useCallback((e) => {
+        I = l.useMemo(() => ({ triggerAnimation: v }), [v]),
+        N = l.useCallback((e) => {
             i(e);
         }, []),
         C = l.useCallback((e) => {
-            'exit' === e && _(!1);
+            'exit' === e && f(!1);
         }, []),
-        L = l.useCallback((e) => {
+        R = l.useCallback((e) => {
             s.current = e;
         }, []);
     return (l.useEffect(() => {
@@ -183,20 +183,20 @@ function v(e) {
             let e = s.current.getBoundingClientRect(),
                 t = e.left - 11,
                 r = e.top + 125,
-                i = n.current[E.current];
+                i = n.current[_.current];
             null == i || i.fireConfetti(t, r);
         }
     }, [r]),
-    I !== p.IlC.APP)
+    g !== m.IlC.APP)
         ? (0, o.jsx)(o.Fragment, { children: t })
-        : (0, o.jsxs)(h.Rm.Provider, {
-              value: S,
+        : (0, o.jsxs)(p.Rm.Provider, {
+              value: I,
               children: [
                   t,
-                  Object.keys(A).map((e) => {
-                      let t = A[e];
+                  Object.keys(T).map((e) => {
+                      let t = T[e];
                       return (0, o.jsx)(
-                          O,
+                          A,
                           {
                               ref: (t) => {
                                   null != t ? (n.current[e] = t) : delete n.current[e];
@@ -207,17 +207,17 @@ function v(e) {
                       );
                   }),
                   u
-                      ? (0, o.jsx)(f.ZP, {
+                      ? (0, o.jsx)(h.ZP, {
                             children: (0, o.jsx)('div', {
-                                className: m.animationWrapper,
+                                className: E.animationWrapper,
                                 children: (0, o.jsx)(c.SequencedLottieAnimation, {
-                                    animationRef: L,
-                                    className: m.lottieAnimation,
+                                    animationRef: R,
+                                    className: E.lottieAnimation,
                                     nextScene: a,
-                                    sceneSegments: N,
-                                    onScenePlay: v,
+                                    sceneSegments: b,
+                                    onScenePlay: N,
                                     onSceneComplete: C,
-                                    importData: R,
+                                    importData: y,
                                     pauseWhileUnfocused: !1
                                 })
                             })

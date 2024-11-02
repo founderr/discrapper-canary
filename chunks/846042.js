@@ -9,7 +9,7 @@ n.d(t, {
         return d;
     },
     WG: function () {
-        return _;
+        return f;
     },
     ZL: function () {
         return u;
@@ -21,7 +21,7 @@ n.d(t, {
         return a;
     },
     kT: function () {
-        return E;
+        return _;
     },
     n8: function () {
         return l;
@@ -108,7 +108,7 @@ function d(e) {
             return 0;
     }
 }
-function _(e, t) {
+function f(e, t) {
     var n,
         r = t > 0,
         i = r ? t : 1 - t;
@@ -120,6 +120,6 @@ function _(e, t) {
     }
     return r ? n : 1 - n;
 }
-function E(e) {
+function _(e) {
     return e % 400 == 0 || (e % 4 == 0 && e % 100 != 0);
 }

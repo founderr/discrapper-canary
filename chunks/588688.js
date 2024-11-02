@@ -8,73 +8,73 @@ n.d(t, {
                         value: t[0].value
                     }
                 ];
-            for (var _, E = [], f = 0; f < t.length; f++) {
-                var h = t[f];
-                if ((0, a.O4)(h)) {
-                    E.push({
+            for (var f, _ = [], h = 0; h < t.length; h++) {
+                var p = t[h];
+                if ((0, a.O4)(p)) {
+                    _.push({
                         type: i.literal,
-                        value: h.value
+                        value: p.value
                     });
                     continue;
                 }
-                if ((0, a.yx)(h)) {
+                if ((0, a.yx)(p)) {
                     'number' == typeof c &&
-                        E.push({
+                        _.push({
                             type: i.literal,
                             value: r.getNumberFormat(n).format(c)
                         });
                     continue;
                 }
-                var p = h.value;
-                if (!(u && p in u)) throw new s.HR(p, d);
-                var I = u[p];
-                if ((0, a.VG)(h)) {
-                    (!I || 'string' == typeof I || 'number' == typeof I) && (I = 'string' == typeof I || 'number' == typeof I ? String(I) : ''),
-                        E.push({
-                            type: 'string' == typeof I ? i.literal : i.object,
-                            value: I
+                var m = p.value;
+                if (!(u && m in u)) throw new s.HR(m, d);
+                var g = u[m];
+                if ((0, a.VG)(p)) {
+                    (!g || 'string' == typeof g || 'number' == typeof g) && (g = 'string' == typeof g || 'number' == typeof g ? String(g) : ''),
+                        _.push({
+                            type: 'string' == typeof g ? i.literal : i.object,
+                            value: g
                         });
                     continue;
                 }
-                if ((0, a.rp)(h)) {
-                    var m = 'string' == typeof h.style ? l.date[h.style] : (0, a.Ii)(h.style) ? h.style.parsedOptions : void 0;
-                    E.push({
+                if ((0, a.rp)(p)) {
+                    var E = 'string' == typeof p.style ? l.date[p.style] : (0, a.Ii)(p.style) ? p.style.parsedOptions : void 0;
+                    _.push({
                         type: i.literal,
-                        value: r.getDateTimeFormat(n, m).format(I)
+                        value: r.getDateTimeFormat(n, E).format(g)
                     });
                     continue;
                 }
-                if ((0, a.pe)(h)) {
-                    var m = 'string' == typeof h.style ? l.time[h.style] : (0, a.Ii)(h.style) ? h.style.parsedOptions : l.time.medium;
-                    E.push({
+                if ((0, a.pe)(p)) {
+                    var E = 'string' == typeof p.style ? l.time[p.style] : (0, a.Ii)(p.style) ? p.style.parsedOptions : l.time.medium;
+                    _.push({
                         type: i.literal,
-                        value: r.getDateTimeFormat(n, m).format(I)
+                        value: r.getDateTimeFormat(n, E).format(g)
                     });
                     continue;
                 }
-                if ((0, a.uf)(h)) {
-                    var m = 'string' == typeof h.style ? l.number[h.style] : (0, a.Wh)(h.style) ? h.style.parsedOptions : void 0;
-                    m && m.scale && (I *= m.scale || 1),
-                        E.push({
+                if ((0, a.uf)(p)) {
+                    var E = 'string' == typeof p.style ? l.number[p.style] : (0, a.Wh)(p.style) ? p.style.parsedOptions : void 0;
+                    E && E.scale && (g *= E.scale || 1),
+                        _.push({
                             type: i.literal,
-                            value: r.getNumberFormat(n, m).format(I)
+                            value: r.getNumberFormat(n, E).format(g)
                         });
                     continue;
                 }
-                if ((0, a.HI)(h)) {
-                    var T = h.children,
-                        S = h.value,
-                        g = u[S];
-                    if (!o(g)) throw new s.YR(S, 'function', d);
-                    var A = g(
-                        e(T, n, r, l, u, c).map(function (e) {
+                if ((0, a.HI)(p)) {
+                    var v = p.children,
+                        I = p.value,
+                        S = u[I];
+                    if (!o(S)) throw new s.YR(I, 'function', d);
+                    var T = S(
+                        e(v, n, r, l, u, c).map(function (e) {
                             return e.value;
                         })
                     );
-                    !Array.isArray(A) && (A = [A]),
-                        E.push.apply(
-                            E,
-                            A.map(function (e) {
+                    !Array.isArray(T) && (T = [T]),
+                        _.push.apply(
+                            _,
+                            T.map(function (e) {
                                 return {
                                     type: 'string' == typeof e ? i.literal : i.object,
                                     value: e
@@ -82,27 +82,27 @@ n.d(t, {
                             })
                         );
                 }
-                if ((0, a.Wi)(h)) {
-                    var N = h.options[I] || h.options.other;
-                    if (!N) throw new s.C8(h.value, I, Object.keys(h.options), d);
-                    E.push.apply(E, e(N.value, n, r, l, u));
+                if ((0, a.Wi)(p)) {
+                    var b = p.options[g] || p.options.other;
+                    if (!b) throw new s.C8(p.value, g, Object.keys(p.options), d);
+                    _.push.apply(_, e(b.value, n, r, l, u));
                     continue;
                 }
-                if ((0, a.Jo)(h)) {
-                    var N = h.options['='.concat(I)];
-                    if (!N) {
+                if ((0, a.Jo)(p)) {
+                    var b = p.options['='.concat(g)];
+                    if (!b) {
                         if (!Intl.PluralRules) throw new s.u_('Intl.PluralRules is not available in this environment.\nTry polyfilling it using "@formatjs/intl-pluralrules"\n', s.jK.MISSING_INTL_API, d);
-                        var R = r.getPluralRules(n, { type: h.pluralType }).select(I - (h.offset || 0));
-                        N = h.options[R] || h.options.other;
+                        var y = r.getPluralRules(n, { type: p.pluralType }).select(g - (p.offset || 0));
+                        b = p.options[y] || p.options.other;
                     }
-                    if (!N) throw new s.C8(h.value, I, Object.keys(h.options), d);
-                    E.push.apply(E, e(N.value, n, r, l, u, I - (h.offset || 0)));
+                    if (!b) throw new s.C8(p.value, g, Object.keys(p.options), d);
+                    _.push.apply(_, e(b.value, n, r, l, u, g - (p.offset || 0)));
                     continue;
                 }
             }
-            return (_ = E).length < 2
-                ? _
-                : _.reduce(function (e, t) {
+            return (f = _).length < 2
+                ? f
+                : f.reduce(function (e, t) {
                       var n = e[e.length - 1];
                       return n && n.type === i.literal && t.type === i.literal ? (n.value += t.value) : e.push(t), e;
                   }, []);

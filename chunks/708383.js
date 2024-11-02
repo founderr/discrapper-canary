@@ -1,13 +1,13 @@
 var i = n(200651),
-    s = n(192379),
-    r = n(512969),
-    a = n(749210),
-    o = n(287734),
+    r = n(192379),
+    s = n(512969),
+    o = n(749210),
+    a = n(287734),
     l = n(765717),
     c = n(893607),
     d = n(703656),
     u = n(981631);
-class h extends s.Component {
+class h extends r.Component {
     componentDidUpdate(e) {
         let { location: t } = this.props;
         t.pathname + t.search !== e.location.pathname + e.location.search && this.checkGuildAndChannel();
@@ -28,8 +28,8 @@ class h extends s.Component {
             };
         })(e);
         (0, c.Ss)(t) && (0, c.cq)(n)
-            ? (a.Z.selectGuild(t),
-              o.default.selectChannel({
+            ? (o.Z.selectGuild(t),
+              a.default.selectChannel({
                   guildId: t,
                   channelId: n,
                   messageId: i
@@ -41,7 +41,7 @@ class h extends s.Component {
     }
 }
 t.Z = () =>
-    (0, i.jsxs)(r.rs, {
+    (0, i.jsxs)(s.rs, {
         children: [
             (0, i.jsx)(l.Z, {
                 path: u.Z5c.CHANNEL(c.Hw.guildId(), c.Hw.channelId({ optional: !0 }), ':messageId?'),

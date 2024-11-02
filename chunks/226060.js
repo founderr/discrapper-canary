@@ -1,59 +1,59 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return g;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(512722),
-    s = n.n(a),
-    r = n(399606),
-    l = n(481060),
-    o = n(607070),
+var r = n(512722),
+    l = n.n(r),
+    a = n(399606),
+    o = n(481060),
+    s = n(607070),
     c = n(430824),
     u = n(506071),
     d = n(267101),
-    _ = n(240864),
-    E = n(57949),
-    I = n(400916),
-    m = n(689938);
-function f(e) {
-    let { guildId: t, guildProductListingId: n, sourceAnalyticsLocations: a } = e,
-        f = (0, r.e7)([_.Z], () => _.Z.getGuildProduct(n)),
-        T = (0, r.e7)([c.Z], () => c.Z.getGuild(t), [t]),
-        h = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
-        N = (0, u.n)();
-    if ((s()(null != T, 'guild cannot be null'), s()(null != f, 'guildProductListing cannot be null'), (0, d.SO)(T)))
-        return (0, i.jsx)(l.Tooltip, {
-            text: m.Z.Messages.GUILD_PRODUCT_PURCHASE_DISABLED_TOOLTIP,
+    m = n(240864),
+    f = n(57949),
+    h = n(400916),
+    p = n(388032);
+function g(e) {
+    let { guildId: t, guildProductListingId: n, sourceAnalyticsLocations: r } = e,
+        g = (0, a.e7)([m.Z], () => m.Z.getGuildProduct(n)),
+        _ = (0, a.e7)([c.Z], () => c.Z.getGuild(t), [t]),
+        C = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
+        E = (0, u.n)();
+    if ((l()(null != _, 'guild cannot be null'), l()(null != g, 'guildProductListing cannot be null'), (0, d.SO)(_)))
+        return (0, i.jsx)(o.Tooltip, {
+            text: p.intl.string(p.t.sAJr9f),
             children: (e) =>
-                (0, i.jsx)(l.Button, {
+                (0, i.jsx)(o.Button, {
                     ...e,
-                    color: l.Button.Colors.BRAND,
+                    color: o.Button.Colors.BRAND,
                     disabled: !0,
-                    children: m.Z.Messages.GUILD_PRODUCT_CARD_PURCHASE_BUTTON
+                    children: p.intl.string(p.t.xUi3BA)
                 })
         });
-    if (!f.has_entitlement)
-        return (0, i.jsx)(l.ShinyButton, {
-            shineSize: l.ShinyButton.ShineSizes.SMALL,
-            pauseAnimation: h || !N,
+    if (!g.has_entitlement)
+        return (0, i.jsx)(o.ShinyButton, {
+            shineSize: o.ShinyButton.ShineSizes.SMALL,
+            pauseAnimation: C || !E,
             onClick: () =>
-                (0, E.z)({
-                    guildProductListing: f,
-                    guildId: T.id,
-                    sourceAnalyticsLocations: a
+                (0, f.z)({
+                    guildProductListing: g,
+                    guildId: _.id,
+                    sourceAnalyticsLocations: r
                 }),
-            children: m.Z.Messages.GUILD_PRODUCT_CARD_PURCHASE_BUTTON
+            children: p.intl.string(p.t.xUi3BA)
         });
-    return null != f.attachments
-        ? (0, i.jsx)(I.Z, {
-              guildId: T.id,
-              productId: f.id
+    return null != g.attachments
+        ? (0, i.jsx)(h.Z, {
+              guildId: _.id,
+              productId: g.id
           })
-        : (0, i.jsx)(l.Button, {
-              color: l.Button.Colors.PRIMARY,
+        : (0, i.jsx)(o.Button, {
+              color: o.Button.Colors.PRIMARY,
               disabled: !0,
-              children: m.Z.Messages.GUILD_PRODUCT_CARD_PURCHASED
+              children: p.intl.string(p.t.RcTOGB)
           });
 }

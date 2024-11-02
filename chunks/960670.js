@@ -1,39 +1,39 @@
-c.r(n),
-    c.d(n, {
+e.r(n),
+    e.d(n, {
         default: function () {
-            return i;
+            return s;
         }
     }),
-    c(47120);
-var s = c(200651),
-    t = c(192379),
-    a = c(481060),
-    r = c(689938),
-    o = c(93518);
-function i(e) {
-    let { header: n, body: c, onSubmit: i, ...h } = e,
-        [x, d] = t.useState(!1);
-    return (0, s.jsxs)(a.ConfirmModal, {
+    e(47120);
+var c = e(200651),
+    r = e(192379),
+    i = e(481060),
+    o = e(388032),
+    a = e(93518);
+function s(t) {
+    let { header: n, body: e, onSubmit: s, ...l } = t,
+        [h, x] = r.useState(!1);
+    return (0, c.jsxs)(i.ConfirmModal, {
         header: n,
-        confirmText: r.Z.Messages.LEAVE_GROUP_DM,
-        cancelText: r.Z.Messages.CANCEL,
+        confirmText: o.intl.string(o.t['26C4oq']),
+        cancelText: o.intl.string(o.t['ETE/oK']),
         onConfirm: () => {
-            i(null, x);
+            s(null, h);
         },
-        ...h,
+        ...l,
         children: [
-            (0, s.jsx)(a.Text, {
+            (0, c.jsx)(i.Text, {
                 variant: 'text-md/normal',
-                children: c
+                children: e
             }),
-            (0, s.jsx)(a.Checkbox, {
-                type: a.Checkbox.Types.INVERTED,
-                value: x,
-                onChange: () => d((e) => !e),
-                className: o.checkbox,
-                children: (0, s.jsx)(a.Text, {
+            (0, c.jsx)(i.Checkbox, {
+                type: i.Checkbox.Types.INVERTED,
+                value: h,
+                onChange: () => x((t) => !t),
+                className: a.checkbox,
+                children: (0, c.jsx)(i.Text, {
                     variant: 'text-md/normal',
-                    children: r.Z.Messages.LEAVE_GROUP_DM_SILENTLY
+                    children: o.intl.string(o.t.bq3JXl)
                 })
             })
         ]

@@ -1,11 +1,11 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return i;
+        return r;
     }
 });
-var n = t(200651);
-t(192379);
-var a = t(106939);
-function i() {
-    return (0, n.jsx)(a.M, {});
+var i = n(200651);
+n(192379);
+var s = n(106939);
+function r() {
+    return (0, i.jsx)(s.M, {});
 }

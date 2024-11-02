@@ -12,21 +12,21 @@ let a = function (e) {
     return function (n) {
         var a, s, o, l, u;
         let { color: c, ...d } = n,
-            _ = 'currentColor';
-        null != c && (_ = 'string' != typeof c && 'css' in c ? c.css : c);
-        let E = null !== (a = d.size) && void 0 !== a ? a : 'md',
-            f = (0, i.m)(E),
-            h = null !== (o = null !== (s = null == f ? void 0 : f.width) && void 0 !== s ? s : d.width) && void 0 !== o ? o : 24,
-            p = {
-                color: _,
-                width: h,
-                height: null !== (u = null !== (l = null == f ? void 0 : f.height) && void 0 !== l ? l : d.height) && void 0 !== u ? u : 24,
+            f = 'currentColor';
+        null != c && (f = 'string' != typeof c && 'css' in c ? c.css : c);
+        let _ = null !== (a = d.size) && void 0 !== a ? a : 'md',
+            h = (0, i.m)(_),
+            p = null !== (o = null !== (s = null == h ? void 0 : h.width) && void 0 !== s ? s : d.width) && void 0 !== o ? o : 24,
+            m = {
+                color: f,
+                width: p,
+                height: null !== (u = null !== (l = null == h ? void 0 : h.height) && void 0 !== l ? l : d.height) && void 0 !== u ? u : 24,
                 foreground: d.colorClass
             };
-        for (let [e, n] of Object.entries(t)) null != d[e] && (p[n] = d[e]);
+        for (let [e, n] of Object.entries(t)) null != d[e] && (m[n] = d[e]);
         return (0, r.jsx)(e, {
             ...d,
-            ...p
+            ...m
         });
     };
 };

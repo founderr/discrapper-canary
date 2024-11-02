@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return r;
     }
 });
-var s = n(689938);
-function a(e) {
-    return e > 0 && e % 7 == 0 ? s.Z.Messages.DURATION_WEEKS.format({ weeks: e / 7 }) : s.Z.Messages.DURATION_DAYS.format({ days: e });
+var i = n(388032);
+function r(e) {
+    return e > 0 && e % 7 == 0 ? i.intl.formatToPlainString(i.t.EmoBDw, { weeks: e / 7 }) : i.intl.formatToPlainString(i.t.k2UNz8, { days: e });
 }

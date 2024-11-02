@@ -1,6 +1,6 @@
 n.d(t, {
     P: function () {
-        return _;
+        return f;
     }
 }),
     n(789020);
@@ -13,9 +13,9 @@ var r = n(592125),
     u = n(199689),
     c = n(981631),
     d = n(372897);
-function _(e, t) {
-    var n, _;
-    let E = a.Z.getGuild(e),
-        f = r.Z.getChannel(t);
-    return null != E && null != f && (0, u.Z)(E) && E.hasFeature(c.oNc.GUILD_SERVER_GUIDE) && !s.yE(null !== (_ = null === (n = i.ZP.getSelfMember(E.id)) || void 0 === n ? void 0 : n.flags) && void 0 !== _ ? _ : 0, d.q.COMPLETED_HOME_ACTIONS) && o.Z.hasMemberAction(E.id, f.id) && !l.Z.hasCompletedActionForChannel(E.id, f.id);
+function f(e, t) {
+    var n, f;
+    let _ = a.Z.getGuild(e),
+        h = r.Z.getChannel(t);
+    return null != _ && null != h && (0, u.Z)(_) && _.hasFeature(c.oNc.GUILD_SERVER_GUIDE) && !s.yE(null !== (f = null === (n = i.ZP.getSelfMember(_.id)) || void 0 === n ? void 0 : n.flags) && void 0 !== f ? f : 0, d.q.COMPLETED_HOME_ACTIONS) && o.Z.hasMemberAction(_.id, h.id) && !l.Z.hasCompletedActionForChannel(_.id, h.id);
 }

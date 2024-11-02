@@ -1,70 +1,70 @@
-s.r(t), s(47120);
-var n = s(200651),
-    i = s(192379),
-    o = s(442837),
-    l = s(279837),
-    a = s(479531),
-    r = s(144114),
-    h = s(145454),
-    d = s(23434),
-    u = s(594174),
-    c = s(1964),
-    p = s(689938);
+n.r(t), n(47120);
+var s = n(200651),
+    i = n(192379),
+    o = n(442837),
+    l = n(279837),
+    a = n(479531),
+    r = n(144114),
+    h = n(145454),
+    u = n(23434),
+    d = n(594174),
+    c = n(1964),
+    p = n(388032);
 t.default = i.forwardRef(function (e, t) {
-    let { onAddedPhone: s, onClose: m, transitionState: C, reason: f } = e,
-        g = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
-        y = (0, o.e7)([d.Z], () => d.Z.getAction()),
-        [N, x] = i.useState(null),
-        [R, E] = i.useState(null),
-        [P, b] = i.useState(null),
-        [j, v] = i.useState(!1),
+    let { onAddedPhone: n, onClose: m, transitionState: f, reason: g } = e,
+        C = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
+        y = (0, o.e7)([u.Z], () => u.Z.getAction()),
+        [x, b] = i.useState(null),
+        [j, v] = i.useState(null),
+        [N, P] = i.useState(null),
+        [R, w] = i.useState(!1),
+        k = i.useCallback(
+            async (e) => {
+                w(!0);
+                try {
+                    c.Z.isPhoneReverification(C, y) ? await r.Z.beginReverifyPhone(e, g) : await r.Z.beginAddPhone(e, g), P(null), b(e);
+                } catch (e) {
+                    P(new a.Z(e));
+                }
+                w(!1);
+            },
+            [C, g, y]
+        ),
         S = i.useCallback(
             async (e) => {
-                v(!0);
-                try {
-                    c.Z.isPhoneReverification(g, y) ? await r.Z.beginReverifyPhone(e, f) : await r.Z.beginAddPhone(e, f), b(null), x(e);
-                } catch (e) {
-                    b(new a.Z(e));
+                if (null != x && null != C) {
+                    w(!0);
+                    try {
+                        let { token: t } = await r.Z.verifyPhone(x, e);
+                        P(null), v(t);
+                    } catch (e) {
+                        P(new a.Z(e));
+                    }
+                    w(!1);
                 }
-                v(!1);
             },
-            [g, f, y]
+            [C, x]
         ),
         Z = i.useCallback(
             async (e) => {
-                if (null != N && null != g) {
-                    v(!0);
-                    try {
-                        let { token: t } = await r.Z.verifyPhone(N, e);
-                        b(null), E(t);
-                    } catch (e) {
-                        b(new a.Z(e));
-                    }
-                    v(!1);
-                }
+                if (null != j) c.Z.isPhoneReverification(C, y) ? await r.Z.reverifyPhone(j, e, g) : await r.Z.addPhone(j, e, g), null == n || n(), m();
             },
-            [g, N]
-        ),
-        I = i.useCallback(
-            async (e) => {
-                if (null != R) c.Z.isPhoneReverification(g, y) ? await r.Z.reverifyPhone(R, e, f) : await r.Z.addPhone(R, e, f), null == s || s(), m();
-            },
-            [s, m, R, f, g, y]
+            [n, m, j, g, C, y]
         );
-    return null != R
-        ? (0, n.jsx)(l.default, {
+    return null != j
+        ? (0, s.jsx)(l.default, {
               onClose: m,
-              transitionState: C,
-              title: p.Z.Messages.USER_SETTINGS_EDIT_ACCOUNT_PASSWORD_LABEL,
-              handleSubmit: I
+              transitionState: f,
+              title: p.intl.string(p.t.ZtCDc3),
+              handleSubmit: Z
           })
-        : (0, n.jsx)(h.Z, {
+        : (0, s.jsx)(h.Z, {
               onClose: m,
-              transitionState: C,
-              error: null == P ? void 0 : P.getAnyErrorMessage(),
-              working: j,
-              validPhone: null != N,
-              onAddPhone: S,
-              onVerifyPhone: Z
+              transitionState: f,
+              error: null == N ? void 0 : N.getAnyErrorMessage(),
+              working: R,
+              validPhone: null != x,
+              onAddPhone: k,
+              onVerifyPhone: S
           });
 });

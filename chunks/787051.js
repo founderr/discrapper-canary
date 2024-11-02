@@ -1,34 +1,34 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return s;
     }
 }),
     n(47120);
-var s = n(192379),
-    a = n(881052),
-    i = n(53365);
-function r(e) {
-    let [t, n] = s.useState(!0),
-        [r, l] = s.useState(),
-        [o, c] = s.useState(),
-        d = s.useCallback(async (e) => {
-            n(!0), l(void 0);
+var i = n(192379),
+    r = n(881052),
+    l = n(53365);
+function s(e) {
+    let [t, n] = i.useState(!0),
+        [s, a] = i.useState(),
+        [o, c] = i.useState(),
+        d = i.useCallback(async (e) => {
+            n(!0), a(void 0);
             try {
-                let t = await i.wZ(e);
+                let t = await l.wZ(e);
                 c(t);
             } catch (e) {
-                l(new a.Hx(e));
+                a(new r.Hx(e));
             } finally {
                 n(!1);
             }
         }, []);
     return (
-        s.useEffect(() => {
+        i.useEffect(() => {
             d(e);
         }, [e, d]),
         {
             isLoading: t,
-            error: r,
+            error: s,
             creatorMonetizationOnboardingMarketing: o
         }
     );

@@ -3,19 +3,19 @@ n.d(t, {
         return c;
     },
     g: function () {
-        return _;
+        return d;
     }
 }),
     n(411104);
-var s = n(544891),
-    a = n(570140),
-    r = n(981631),
-    i = n(689938);
+var i = n(544891),
+    r = n(570140),
+    a = n(981631),
+    s = n(388032);
 function l(e) {
     return (
         null != e &&
             null != e.body &&
-            a.Z.dispatch({
+            r.Z.dispatch({
                 type: 'UPDATE_CONSENTS',
                 consents: { ...e.body }
             }),
@@ -24,20 +24,20 @@ function l(e) {
 }
 function o(e) {
     let t;
-    throw Error((t = e.status >= 500 && e.status <= 599 ? i.Z.Messages.DATA_PRIVACY_UPDATE_CONSENTS_FAILED : null != e && null != e.body && null != e.body.message ? e.body.message : i.Z.Messages.DATA_PRIVACY_UPDATE_CONSENTS_FAILED));
+    throw Error((t = e.status >= 500 && e.status <= 599 ? s.intl.string(s.t.cvJdtr) : null != e && null != e.body && null != e.body.message ? e.body.message : s.intl.string(s.t.cvJdtr)));
 }
 function c() {
-    return s.tn
+    return i.tn
         .get({
-            url: r.ANM.SETTINGS_CONSENT,
+            url: a.ANM.SETTINGS_CONSENT,
             oldFormErrors: !0
         })
         .then(l, (e) => Promise.reject(Error(e.body.message)));
 }
-function _(e, t) {
-    return s.tn
+function d(e, t) {
+    return i.tn
         .post({
-            url: r.ANM.SETTINGS_CONSENT,
+            url: a.ANM.SETTINGS_CONSENT,
             body: {
                 grant: e,
                 revoke: t

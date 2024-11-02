@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return _;
     }
 });
 var r = n(200651),
@@ -11,18 +11,18 @@ var r = n(200651),
     l = n(962293),
     u = n(555573),
     c = n(665692),
-    d = n(689938),
-    _ = n(735141);
-function E(e) {
+    d = n(388032),
+    f = n(735141);
+function _(e) {
     var t;
     let a,
-        E,
-        f,
-        { className: h, activeCommand: p, activeOption: I, optionStates: m, channelId: T } = e,
-        S = i.useCallback(
+        _,
+        h,
+        { className: p, activeCommand: m, activeOption: g, optionStates: E, channelId: v } = e,
+        I = i.useCallback(
             (e) => {
                 var t;
-                let i = null == p ? void 0 : null === (t = p.rootCommand) || void 0 === t ? void 0 : t.id;
+                let i = null == m ? void 0 : null === (t = m.rootCommand) || void 0 === t ? void 0 : t.id;
                 if (null == i) {
                     e.preventDefault();
                     return;
@@ -33,49 +33,49 @@ function E(e) {
                         (0, r.jsx)(e, {
                             ...t,
                             id: i,
-                            label: d.Z.Messages.COPY_ID_COMMAND
+                            label: d.intl.string(d.t.oJ1Mu7)
                         });
                 });
             },
-            [null == p ? void 0 : null === (t = p.rootCommand) || void 0 === t ? void 0 : t.id]
+            [null == m ? void 0 : null === (t = m.rootCommand) || void 0 === t ? void 0 : t.id]
         ),
-        g = i.useCallback(() => {
+        S = i.useCallback(() => {
             u.Po({
-                channelId: T,
+                channelId: v,
                 command: null,
                 section: null
             });
-        }, [T]);
-    if (null == p) return null;
-    if (null != I) {
-        let e = m[I.name].lastValidationResult;
-        (a = I.displayName), (E = I.displayDescription), (f = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error);
-    } else (a = ''.concat(c.GI).concat(p.displayName)), (E = p.displayDescription), (f = null);
+        }, [v]);
+    if (null == m) return null;
+    if (null != g) {
+        let e = E[g.name].lastValidationResult;
+        (a = g.displayName), (_ = g.displayDescription), (h = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error);
+    } else (a = ''.concat(c.GI).concat(m.displayName)), (_ = m.displayDescription), (h = null);
     return (0, r.jsxs)('div', {
-        className: s()(h, _.bar),
-        onContextMenu: S,
+        className: s()(p, f.bar),
+        onContextMenu: I,
         children: [
             (0, r.jsxs)('div', {
-                className: _.commandInfo,
+                className: f.commandInfo,
                 children: [
                     (0, r.jsx)('span', {
-                        className: _.name,
+                        className: f.name,
                         children: a
                     }),
-                    null != f
+                    null != h
                         ? (0, r.jsx)('span', {
-                              className: _.error,
-                              children: f
+                              className: f.error,
+                              children: h
                           })
                         : (0, r.jsx)('span', {
-                              className: _.description,
-                              children: E
+                              className: f.description,
+                              children: _
                           })
                 ]
             }),
             (0, r.jsx)('div', {
-                className: _.actions,
-                children: (0, r.jsx)(l.B, { onClick: g })
+                className: f.actions,
+                children: (0, r.jsx)(l.B, { onClick: S })
             })
         ]
     });

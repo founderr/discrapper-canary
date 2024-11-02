@@ -1,9 +1,9 @@
 n.d(i, {
     L9: function () {
-        return b;
+        return w;
     },
     ZK: function () {
-        return A;
+        return b;
     },
     d4: function () {
         return M;
@@ -27,22 +27,22 @@ var t = n(200651),
     a = n(442837),
     c = n(993365),
     r = n(981729),
-    s = n(481060),
-    l = n(543651),
+    l = n(481060),
+    s = n(543651),
     d = n(519320),
     u = n(592125),
     m = n(52824),
     _ = n(630388),
     f = n(591759),
-    I = n(850908),
-    p = n(524444),
+    p = n(850908),
+    I = n(524444),
     C = n(981631),
-    h = n(689938),
+    h = n(388032),
     v = n(120131);
 function y(e) {
     var i;
     let n = e.item.originalItem;
-    return (0, p.Yi)({
+    return (0, I.Yi)({
         ...e,
         alt: n.description,
         src: (0, m.q)({
@@ -69,32 +69,32 @@ function g(e) {
             var e;
             return (0, _.yE)(null !== (e = n.flags) && void 0 !== e ? e : 0, C.J0y.IS_CLIP)
                 ? (0, t.jsxs)(r.DY, {
-                      text: h.Z.Messages.CLIPS_BETA_TAG_HOVER,
+                      text: h.intl.string(h.t['/fgfWl']),
                       className: v.clipPill,
                       children: [
-                          (0, t.jsx)(s.ClipsIcon, {
+                          (0, t.jsx)(l.ClipsIcon, {
                               size: 'xs',
                               color: 'currentColor'
                           }),
                           (0, t.jsx)(c.x, {
                               variant: 'text-xs/semibold',
                               color: 'always-white',
-                              children: h.Z.Messages.CLIP_TAG
+                              children: h.intl.string(h.t.oA4afH)
                           })
                       ]
                   })
                 : null;
         }, [n]),
-        l = f.Z.toURLSafe(n.proxy_url);
-    return null == l
+        s = f.Z.toURLSafe(n.proxy_url);
+    return null == s
         ? null
-        : (l.searchParams.append('format', 'webp'),
-          (0, p.lV)({
+        : (s.searchParams.append('format', 'webp'),
+          (0, I.lV)({
               ...e,
               alt: n.description,
-              poster: l.toString(),
+              poster: s.toString(),
               fileSize: n.size,
-              fileName: (0, I.Z)(n),
+              fileName: (0, p.Z)(n),
               src: n.url,
               placeholder: n.placeholder,
               placeholderVersion: n.placeholder_version,
@@ -111,10 +111,10 @@ function g(e) {
 }
 function E(e) {
     let i = e.item.originalItem;
-    return (0, p.hX)({
+    return (0, I.hX)({
         ...e,
         fileSize: i.size,
-        fileName: (0, I.Z)(i),
+        fileName: (0, p.Z)(i),
         src: i.url
     });
 }
@@ -142,10 +142,10 @@ function B(e) {
             },
             [i]
         );
-    return (0, p.wj)({
+    return (0, I.wj)({
         ...e,
         fileSize: t.size,
-        fileName: (0, I.Z)(t),
+        fileName: (0, p.Z)(t),
         src: t.url,
         durationSecs: t.duration_secs,
         waveform: t.waveform,
@@ -156,32 +156,32 @@ function B(e) {
 }
 function M(e) {
     let i = e.item.originalItem;
-    return (0, p.xi)({
+    return (0, I.xi)({
         ...e,
         url: i.url,
-        fileName: (0, I.Z)(i),
+        fileName: (0, p.Z)(i),
         fileSize: i.size,
         contentType: i.content_type
     });
 }
-function A(e) {
+function b(e) {
     let i = e.item.originalItem;
-    return (0, p.ur)({
+    return (0, I.ur)({
         ...e,
         url: i.url,
-        fileName: (0, I.Z)(i),
+        fileName: (0, p.Z)(i),
         fileSize: i.size
     });
 }
-function b(e) {
+function w(e) {
     if ('CLIP' === e.item.type)
-        return (0, t.jsx)(w, {
+        return (0, t.jsx)(x, {
             attachment: e.item.originalItem,
             message: e.message
         });
     return null;
 }
-function w(e) {
+function x(e) {
     var i;
     let { attachment: n, message: o } = e,
         c = o.channel_id,
@@ -189,9 +189,9 @@ function w(e) {
             var e;
             return null === (e = u.Z.getBasicChannel(c)) || void 0 === e ? void 0 : e.guild_id;
         }),
-        { clip_created_at: s, clip_participants: d, title: m, application: _ } = n;
-    return (0, t.jsx)(l.Z, {
-        createdAt: null != s ? Date.parse(s) : void 0,
+        { clip_created_at: l, clip_participants: d, title: m, application: _ } = n;
+    return (0, t.jsx)(s.Z, {
+        createdAt: null != l ? Date.parse(l) : void 0,
         participantIds:
             null !==
                 (i =

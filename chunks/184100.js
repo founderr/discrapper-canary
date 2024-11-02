@@ -6,19 +6,19 @@ i.r(t),
     }),
     i(47120);
 var n = i(200651),
-    a = i(192379),
-    r = i(481060),
-    s = i(44315),
-    o = i(745510),
+    r = i(192379),
+    a = i(481060),
+    o = i(44315),
+    s = i(745510),
     d = i(981631),
-    u = i(689938),
+    u = i(388032),
     c = i(787724);
 function h(e) {
     let { onClose: t, initialPercent: i, numActions: h } = e,
-        [l, p] = a.useState(i),
-        { createMultipleConfetti: m } = a.useContext(o.h);
+        [l, p] = r.useState(i),
+        { createMultipleConfetti: m } = r.useContext(s.h);
     return (
-        a.useEffect(() => {
+        r.useEffect(() => {
             setTimeout(() => p(1), 200),
                 setTimeout(() => {
                     let e = window.innerWidth / 2,
@@ -44,14 +44,14 @@ function h(e) {
         }, [m, t]),
         (0, n.jsxs)('div', {
             children: [
-                (0, n.jsx)(r.Heading, {
+                (0, n.jsx)(a.Heading, {
                     className: c.heading,
                     variant: 'heading-xl/semibold',
                     color: 'header-primary',
-                    children: u.Z.Messages.MEMBER_ACTION_COMPLETE_MODAL_TEXT_WITH_COUNT.format({ count: h })
+                    children: u.intl.format(u.t.pGj5u7, { count: h })
                 }),
-                (0, n.jsx)(r.Progress, {
-                    foregroundGradientColor: [(0, s.Lq)(d.Ilk.GREEN_300), (0, s.Lq)(d.Ilk.GREEN_230)],
+                (0, n.jsx)(a.Progress, {
+                    foregroundGradientColor: [(0, o.Lq)(d.Ilk.GREEN_300), (0, o.Lq)(d.Ilk.GREEN_230)],
                     percent: 100 * l,
                     animate: !0
                 })

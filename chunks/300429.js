@@ -13,33 +13,33 @@ var r,
     u = n(442837),
     c = n(846519),
     d = n(570140),
-    _ = n(70956),
-    E = n(592125),
-    f = n(496675),
-    h = n(981631);
+    f = n(70956),
+    _ = n(592125),
+    h = n(496675),
+    p = n(981631);
 ((a = r || (r = {}))[(a.SendMessage = 0)] = 'SendMessage'), (a[(a.CreateThread = 1)] = 'CreateThread');
-let p = {
+let m = {
     0: {},
     1: {}
 };
-function I(e, t, n) {
+function g(e, t, n) {
     if (
         ((function (e, t) {
-            null != p[t][e.id] && (p[t][e.id].timer.stop(), delete p[t][e.id]);
+            null != m[t][e.id] && (m[t][e.id].timer.stop(), delete m[t][e.id]);
         })(e, t),
         (function (e, t) {
-            return 0 === t ? f.Z.can(h.Plq.MANAGE_CHANNELS, e) || f.Z.can(h.Plq.MANAGE_MESSAGES, e) : f.Z.can(h.Plq.MANAGE_THREADS, e);
+            return 0 === t ? h.Z.can(p.Plq.MANAGE_CHANNELS, e) || h.Z.can(p.Plq.MANAGE_MESSAGES, e) : h.Z.can(p.Plq.MANAGE_THREADS, e);
         })(e, t) || n <= 0)
     )
         return;
     let r = n + Date.now();
-    (p[t][e.id] = {
+    (m[t][e.id] = {
         rateLimitPerUser: e.rateLimitPerUser,
         cooldownMs: n,
         cooldownEndTimestamp: r,
         timer: new c.V7()
     }),
-        p[t][e.id].timer.start(
+        m[t][e.id].timer.start(
             1000,
             () => {
                 d.Z.dispatch({
@@ -52,27 +52,27 @@ function I(e, t, n) {
             !0
         );
 }
-function m(e, t) {
-    let n = E.Z.getChannel(e);
+function E(e, t) {
+    let n = _.Z.getChannel(e);
     if (null == n) return !1;
-    I(n, t, 0 === n.rateLimitPerUser ? 0 : n.rateLimitPerUser * _.Z.Millis.SECOND + 100);
+    g(n, t, 0 === n.rateLimitPerUser ? 0 : n.rateLimitPerUser * f.Z.Millis.SECOND + 100);
 }
-function T(e) {
+function v(e) {
     let { file: t } = e,
-        n = E.Z.getChannel(t.channelId);
-    return null != n && I(n, 0, 0);
+        n = _.Z.getChannel(t.channelId);
+    return null != n && g(n, 0, 0);
 }
-class S extends (i = u.ZP.Store) {
+class I extends (i = u.ZP.Store) {
     initialize() {
-        this.waitFor(E.Z);
+        this.waitFor(_.Z);
     }
     getSlowmodeCooldownGuess(e, t) {
-        let n = p[null != t ? t : 0][e];
+        let n = m[null != t ? t : 0][e];
         return null != n ? n.cooldownMs : 0;
     }
 }
 (l = 'SlowmodeStore'),
-    (o = 'displayName') in (s = S)
+    (o = 'displayName') in (s = I)
         ? Object.defineProperty(s, o, {
               value: l,
               enumerable: !0,
@@ -80,37 +80,37 @@ class S extends (i = u.ZP.Store) {
               writable: !0
           })
         : (s[o] = l),
-    (t.Z = new S(d.Z, {
+    (t.Z = new I(d.Z, {
         SLOWMODE_RESET_COOLDOWN: function (e) {
             let { channelId: t, slowmodeType: n } = e;
-            return m(t, n);
+            return E(t, n);
         },
         SLOWMODE_SET_COOLDOWN: function (e) {
             let { channelId: t, slowmodeType: n, cooldownMs: r } = e,
-                i = E.Z.getChannel(t);
+                i = _.Z.getChannel(t);
             if (null == i) return !1;
-            I(i, n, 0 === r ? 0 : r + 100);
+            g(i, n, 0 === r ? 0 : r + 100);
         },
         UPLOAD_START: function (e) {
             let { channelId: t } = e;
-            return m(t, 0);
+            return E(t, 0);
         },
-        UPLOAD_FAIL: T,
-        UPLOAD_CANCEL_REQUEST: T,
+        UPLOAD_FAIL: v,
+        UPLOAD_CANCEL_REQUEST: v,
         CHANNEL_UPDATES: function (e) {
             let { channels: t } = e;
             [0, 1].forEach((e) => {
                 for (let r of t) {
                     var n;
-                    let t = p[e][r.id],
+                    let t = m[e][r.id],
                         i = r.rateLimitPerUser;
-                    if (null != t && t.rateLimitPerUser !== i) I(r, e, Math.min(null !== (n = null == t ? void 0 : t.cooldownMs) && void 0 !== n ? n : 0, i * _.Z.Millis.SECOND));
+                    if (null != t && t.rateLimitPerUser !== i) g(r, e, Math.min(null !== (n = null == t ? void 0 : t.cooldownMs) && void 0 !== n ? n : 0, i * f.Z.Millis.SECOND));
                 }
             });
         },
         LOGOUT: function () {
             [0, 1].forEach((e) => {
-                Object.keys(p[e]).forEach((t) => p[e][t].timer.stop()), (p[e] = {});
+                Object.keys(m[e]).forEach((t) => m[e][t].timer.stop()), (m[e] = {});
             });
         }
     }));

@@ -1,23 +1,23 @@
-i.d(n, {
+t.d(e, {
     Z: function () {
-        return r;
+        return d;
     }
 });
-var t = i(200651);
-i(192379);
-var l = i(442837),
-    s = i(481060),
-    a = i(5036),
-    u = i(58468),
-    o = i(689938);
-function r(e) {
-    let n = (0, l.e7)([u.Z], () => u.Z.isCollapsed(e.id), [e.id]);
+var i = t(200651);
+t(192379);
+var l = t(442837),
+    r = t(481060),
+    u = t(5036),
+    a = t(58468),
+    o = t(388032);
+function d(n) {
+    let e = (0, l.e7)([a.Z], () => a.Z.isCollapsed(n.id), [n.id]);
     return __OVERLAY__
         ? null
-        : (0, t.jsx)(s.MenuCheckboxItem, {
+        : (0, i.jsx)(r.MenuCheckboxItem, {
               id: 'hide-voice-names',
-              label: o.Z.Messages.VOICE_CHANNEL_HIDE_NAMES,
-              action: () => a.Z.update(e.id),
-              checked: n
+              label: o.intl.string(o.t.LxzNio),
+              action: () => u.Z.update(n.id),
+              checked: e
           });
 }

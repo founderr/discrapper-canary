@@ -1,9 +1,9 @@
-a.d(s, {
+n.d(t, {
     b: function () {
-        return n;
+        return s;
     }
 });
-let t = (0, a(818083).B)({
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2022-08_back_to_school',
     label: 'Back to School Event',
@@ -16,7 +16,7 @@ let t = (0, a(818083).B)({
         }
     ]
 });
-function n() {
-    return t.getCurrentConfig({ location: '68acbb_1' }, { autoTrackExposure: !1 }).enabled;
+function s() {
+    return i.getCurrentConfig({ location: '68acbb_1' }, { autoTrackExposure: !1 }).enabled;
 }
-s.Z = t;
+t.Z = i;

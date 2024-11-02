@@ -1,19 +1,19 @@
 var i = n(200651),
-    a = n(192379),
-    s = n(230711),
-    r = n(82950),
-    l = n(981631),
-    o = n(689938),
+    r = n(192379),
+    l = n(230711),
+    a = n(82950),
+    s = n(981631),
+    o = n(388032),
     c = n(510342);
-class d extends a.PureComponent {
+class d extends r.PureComponent {
     render() {
-        return (0, i.jsx)(r.Z, {
+        return (0, i.jsx)(a.Z, {
             guild: this.props.guild,
-            onClick: () => s.Z.open(l.oAB.ACCOUNT),
-            message: o.Z.Messages.TWO_FA_GUILD_MFA_WARNING_MESSAGE_WITH_SPACING.format(),
-            cta: o.Z.Messages.TWO_FA_GUILD_MFA_WARNING_RESOLVE_BUTTON,
-            trackingSource: l.PsQ.GUILD_MFA_WARNING,
-            type: l.vID.MFA_WARNING,
+            onClick: () => l.Z.open(s.oAB.ACCOUNT),
+            message: o.intl.format(o.t['oCd+am'], {}),
+            cta: o.intl.string(o.t['8dCrV1']),
+            trackingSource: s.PsQ.GUILD_MFA_WARNING,
+            type: s.vID.MFA_WARNING,
             image: c,
             imageMarginX: 54,
             undismissable: !0

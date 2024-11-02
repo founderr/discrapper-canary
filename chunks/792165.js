@@ -1,83 +1,83 @@
 n.d(t, {
     o: function () {
-        return N;
+        return E;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(442837),
-    s = n(693789),
-    r = n(993365),
-    l = n(481060),
-    o = n(230711),
+var r = n(442837),
+    l = n(693789),
+    a = n(993365),
+    o = n(481060),
+    s = n(230711),
     c = n(197115),
     u = n(504983),
     d = n(594174),
-    _ = n(74538),
-    E = n(981631),
-    I = n(921944),
-    m = n(474936),
-    f = n(526761),
-    T = n(689938),
-    h = n(568492);
-function N(e) {
+    m = n(74538),
+    f = n(981631),
+    h = n(921944),
+    p = n(474936),
+    g = n(526761),
+    _ = n(388032),
+    C = n(568492);
+function E(e) {
     var t;
-    let { onClose: n, markAsDismissed: N } = e,
-        p = (0, a.e7)([d.default], () => d.default.getCurrentUser());
-    let C = (t = null == p ? void 0 : p.premiumType) === m.p9.TIER_2 ? T.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_TIER_2 : null == t ? T.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_SUB : T.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_TIER_2,
-        g = _.ZP.canUseCustomCallSounds(p);
+    let { onClose: n, markAsDismissed: E } = e,
+        I = (0, r.e7)([d.default], () => d.default.getCurrentUser());
+    let x = (t = null == I ? void 0 : I.premiumType) === p.p9.TIER_2 ? _.intl.string(_.t.jqO5Qk) : null == t ? _.intl.string(_.t.f2qjw8) : _.intl.string(_.t.SblICQ),
+        v = m.ZP.canUseCustomCallSounds(I);
     return (0, i.jsxs)(u.Z, {
         isShown: !0,
         type: u.Y.PREMIUM,
-        className: h.upsellOuter,
-        backgroundClassName: h.upsellInner,
+        className: C.upsellOuter,
+        backgroundClassName: C.upsellInner,
         children: [
-            null != N
-                ? (0, i.jsx)(l.Clickable, {
-                      className: h.close,
-                      onClick: () => (null == N ? void 0 : N(I.L.DISMISS)),
-                      'aria-label': T.Z.Messages.CLOSE,
-                      children: (0, i.jsx)(l.XSmallIcon, {
+            null != E
+                ? (0, i.jsx)(o.Clickable, {
+                      className: C.close,
+                      onClick: () => (null == E ? void 0 : E(h.L.DISMISS)),
+                      'aria-label': _.intl.string(_.t.cpT0Cg),
+                      children: (0, i.jsx)(o.XSmallIcon, {
                           size: 'xs',
                           color: 'currentColor',
-                          className: h.closeIcon
+                          className: C.closeIcon
                       })
                   })
                 : null,
             (0, i.jsxs)('div', {
-                className: h.upsellTitle,
+                className: C.upsellTitle,
                 children: [
-                    (0, i.jsx)(l.NitroWheelIcon, {
+                    (0, i.jsx)(o.NitroWheelIcon, {
                         size: 'sm',
                         color: 'currentColor',
-                        className: h.nitroWheel
+                        className: C.nitroWheel
                     }),
-                    (0, i.jsx)(l.Heading, {
+                    (0, i.jsx)(o.Heading, {
                         variant: 'heading-sm/bold',
-                        children: T.Z.Messages.CALL_SOUNDS_UPSELL_TITLE_NON_SUB
+                        children: _.intl.string(_.t.dTbAx8)
                     })
                 ]
             }),
-            (0, i.jsx)(r.x, {
+            (0, i.jsx)(a.x, {
                 variant: 'text-sm/normal',
-                children: C
+                children: x
             }),
-            g
-                ? (0, i.jsx)(s.zx, {
+            v
+                ? (0, i.jsx)(l.zx, {
                       onClick: function () {
-                          o.Z.open(E.oAB.VOICE, f.GA), null == n || n(), null == N || N(I.L.PRIMARY);
+                          s.Z.open(f.oAB.VOICE, g.GA), null == n || n(), null == E || E(h.L.PRIMARY);
                       },
-                      children: T.Z.Messages.CHECK_IT_OUT
+                      children: _.intl.string(_.t.RzWDqa)
                   })
                 : (0, i.jsx)(c.Z, {
-                      buttonText: T.Z.Messages.PREMIUM_UPSELL_GET_NITRO,
-                      subscriptionTier: m.Si.TIER_2,
+                      buttonText: _.intl.string(_.t.pj0XBA),
+                      subscriptionTier: p.Si.TIER_2,
                       premiumModalAnalyticsLocation: {
-                          section: E.jXE.SOUNDBOARD_SOUND_PICKER,
-                          object: E.qAy.BUTTON_CTA
+                          section: f.jXE.SOUNDBOARD_SOUND_PICKER,
+                          object: f.qAy.BUTTON_CTA
                       },
-                      color: s.zx.Colors.GREEN,
-                      onSubscribeModalClose: () => (null == N ? void 0 : N(I.L.PRIMARY))
+                      color: l.zx.Colors.GREEN,
+                      onSubscribeModalClose: () => (null == E ? void 0 : E(h.L.PRIMARY))
                   })
         ]
     });

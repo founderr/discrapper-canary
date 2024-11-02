@@ -8,7 +8,7 @@ n(192379);
 var i = n(481060),
     a = n(131951),
     s = n(65154),
-    o = n(689938);
+    o = n(388032);
 function l(e) {
     a.Z.supports(s.AN.VIDEO)
         ? (0, i.openModalLazy)(async () => {
@@ -16,9 +16,9 @@ function l(e) {
               return (n) =>
                   (0, r.jsx)(t, {
                       ...n,
-                      header: o.Z.Messages.CAMERA_UNAVAILABLE,
-                      body: o.Z.Messages.CAMERA_NO_DEVICE,
-                      confirmText: o.Z.Messages.OKAY,
+                      header: o.intl.string(o.t['8jSzSU']),
+                      body: o.intl.string(o.t.bhqSWl),
+                      confirmText: o.intl.string(o.t.BddRzc),
                       onConfirm: e
                   });
           })
@@ -27,9 +27,9 @@ function l(e) {
               return (a) =>
                   (0, r.jsx)(t, {
                       ...a,
-                      header: o.Z.Messages.VIDEO_UNSUPPORTED_BROWSER_TITLE,
-                      body: o.Z.Messages.VIDEO_UNSUPPORTED_BROWSER_BODY,
-                      confirmText: o.Z.Messages.DOWNLOAD_APP,
+                      header: o.intl.string(o.t.XLw6FB),
+                      body: o.intl.string(o.t.wVjKGh),
+                      confirmText: o.intl.string(o.t.BK8LKy),
                       onConfirm: () => {
                           null == e || e(),
                               (0, i.openModalLazy)(async () => {

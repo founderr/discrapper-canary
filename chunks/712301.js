@@ -1,73 +1,73 @@
-l.d(n, {
+t.d(n, {
     Z: function () {
-        return C;
+        return p;
     }
 });
-var t = l(200651);
-l(192379);
-var i = l(442837),
-    a = l(481060),
-    r = l(749210),
-    s = l(287734),
-    u = l(933557),
-    d = l(314897),
-    o = l(592125),
-    c = l(984933),
-    Z = l(271383),
-    E = l(430824),
-    M = l(496675),
-    f = l(699516),
-    _ = l(594174),
-    g = l(979651),
-    I = l(934415),
-    m = l(700785),
-    R = l(981631),
-    N = l(689938);
-function C(e, n) {
-    let l = (0, i.e7)([c.ZP], () => c.ZP.getChannels(n)[c.Zb], [n]),
-        C = (0, i.e7)(
-            [g.Z, o.Z],
+var l = t(200651);
+t(192379);
+var i = t(442837),
+    r = t(481060),
+    a = t(749210),
+    u = t(287734),
+    d = t(933557),
+    o = t(314897),
+    s = t(592125),
+    c = t(984933),
+    Z = t(271383),
+    f = t(430824),
+    g = t(496675),
+    m = t(699516),
+    M = t(594174),
+    v = t(979651),
+    x = t(934415),
+    h = t(700785),
+    P = t(981631),
+    I = t(388032);
+function p(e, n) {
+    let t = (0, i.e7)([c.ZP], () => c.ZP.getChannels(n)[c.Zb], [n]),
+        p = (0, i.e7)(
+            [v.Z, s.Z],
             () => {
-                let l = g.Z.getUserVoiceChannelId(n, e.id);
-                return o.Z.getChannel(l);
+                let t = v.Z.getUserVoiceChannelId(n, e.id);
+                return s.Z.getChannel(t);
             },
             [n, e.id]
         );
-    if ((0, i.e7)([Z.ZP], () => Z.ZP.isGuestOrLurker(n, e.id), [n, e.id]) || null == C) return null;
-    let O = e.id === d.default.getId();
-    if (!O && !M.Z.can(R.Plq.MOVE_MEMBERS, C)) return null;
-    let A = l.filter((n) => {
-        let { channel: l } = n;
+    if ((0, i.e7)([Z.ZP], () => Z.ZP.isGuestOrLurker(n, e.id), [n, e.id]) || null == p) return null;
+    let b = e.id === o.default.getId();
+    if (!b && !g.Z.can(P.Plq.MOVE_MEMBERS, p)) return null;
+    let C = t.filter((n) => {
+        let { channel: t } = n;
         return (
-            l.id !== C.id &&
-            (O
-                ? M.Z.can(R.Plq.CONNECT, l) && !(0, I.rY)(l, g.Z, E.Z)
-                : M.Z.can(R.Plq.MOVE_MEMBERS, l) &&
-                  (M.Z.can(R.Plq.CONNECT, l) ||
-                      m.BT({
-                          permission: R.Plq.CONNECT,
+            t.id !== p.id &&
+            (b
+                ? g.Z.can(P.Plq.CONNECT, t) && !(0, x.rY)(t, v.Z, f.Z)
+                : g.Z.can(P.Plq.MOVE_MEMBERS, t) &&
+                  (g.Z.can(P.Plq.CONNECT, t) ||
+                      h.BT({
+                          permission: P.Plq.CONNECT,
                           user: e,
-                          context: l
+                          context: t
                       })) &&
-                  !(0, I.rY)(l, g.Z, E.Z))
+                  !(0, x.rY)(t, v.Z, f.Z))
         );
     });
-    return 0 === A.length
+    return 0 === C.length
         ? null
-        : (0, t.jsx)(a.MenuItem, {
+        : (0, l.jsx)(r.MenuItem, {
               id: 'voice-move',
-              label: N.Z.Messages.MOVE_TO,
-              children: A.map((l) => {
-                  let { channel: i } = l;
-                  return (0, t.jsx)(
-                      a.MenuItem,
+              label: I.intl.string(I.t.FAplmp),
+              children: C.map((t) => {
+                  let { channel: i } = t;
+                  return (0, l.jsx)(
+                      r.MenuItem,
                       {
                           id: i.id,
                           action: () => {
-                              var l;
-                              return (l = i), void (e.id === d.default.getId() ? s.default.selectVoiceChannel(l.id) : r.Z.setChannel(n, e.id, l.id));
+                              var t;
+                              return (t = i), void (e.id === o.default.getId() ? u.default.selectVoiceChannel(t.id) : a.Z.setChannel(n, e.id, t.id));
                           },
-                          label: (0, u.F6)(i, _.default, f.Z)
+                          label: (0, d.F6)(i, M.default, m.Z)
                       },
                       i.id
                   );

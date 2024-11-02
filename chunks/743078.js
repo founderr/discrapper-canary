@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return l;
     }
 });
 let i = (0, n(818083).B)({
@@ -21,6 +21,6 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function s(e) {
+function l(e) {
     return i.useExperiment(e);
 }

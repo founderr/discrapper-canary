@@ -48,7 +48,7 @@ function c(e, t) {
     }
     let c = encodeURIComponent(u.toString()),
         d = encodeURIComponent((0, s.Z)()),
-        _ = !(function () {
+        f = !(function () {
             var e, t;
             let n = RegExp('('.concat('WebView|(iPhone|iPod|iPad)(?!.*Safari/)', ')'), 'ig'),
                 r = (null === i() || void 0 === i() ? void 0 : null === (e = i().ua) || void 0 === e ? void 0 : e.match(n)) != null,
@@ -57,8 +57,8 @@ function c(e, t) {
         })()
             ? 0
             : 1,
-        E = null != r ? encodeURIComponent(r) : null,
-        f = null != a ? encodeURIComponent(a) : null,
-        h = ''.concat(o, '/?link=').concat(c, '&utm_source=').concat(n, '&apn=').concat('com.discord', '&isi=').concat(985746746, '&ibi=').concat('com.hammerandchisel.discord', '&sd=').concat(d, '&efr=').concat(_);
-    return null != E && (h += '&afl='.concat(E)), null != f && (h += '&ifl='.concat(f)), h;
+        _ = null != r ? encodeURIComponent(r) : null,
+        h = null != a ? encodeURIComponent(a) : null,
+        p = ''.concat(o, '/?link=').concat(c, '&utm_source=').concat(n, '&apn=').concat('com.discord', '&isi=').concat(985746746, '&ibi=').concat('com.hammerandchisel.discord', '&sd=').concat(d, '&efr=').concat(f);
+    return null != _ && (p += '&afl='.concat(_)), null != h && (p += '&ifl='.concat(h)), p;
 }

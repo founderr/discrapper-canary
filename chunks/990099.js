@@ -5,40 +5,40 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(197115),
-    r = n(834129),
-    l = n(981631),
-    o = n(474936),
-    c = n(689938),
+var r = n(481060),
+    l = n(197115),
+    a = n(834129),
+    o = n(981631),
+    s = n(474936),
+    c = n(388032),
     u = n(315642);
 function d(e) {
     let { message: t, channel: n } = e,
-        d = null != n.guild_id ? l.jXE.TEXT_IN_VOICE : l.jXE.CHANNEL_TEXT_AREA;
-    return (0, i.jsx)(r.Z, {
+        d = null != n.guild_id ? o.jXE.TEXT_IN_VOICE : o.jXE.CHANNEL_TEXT_AREA;
+    return (0, i.jsx)(a.Z, {
         contentClassName: u.messageContentContainer,
         iconContainerClassName: u.iconContainer,
-        iconNode: (0, i.jsx)(a.BellIcon, { colorClass: u.icon }),
+        iconNode: (0, i.jsx)(r.BellIcon, { colorClass: u.icon }),
         children: (0, i.jsxs)('div', {
             className: u.container,
             children: [
                 (0, i.jsxs)('div', {
                     children: [
-                        (0, i.jsx)(a.Text, {
+                        (0, i.jsx)(r.Text, {
                             variant: 'text-sm/medium',
                             children: t.content
                         }),
                         (0, i.jsxs)('div', {
                             className: u.nitroBadge,
                             children: [
-                                (0, i.jsx)(a.NitroWheelIcon, {
+                                (0, i.jsx)(r.NitroWheelIcon, {
                                     size: 'xs',
                                     colorClass: u.nitroBadgeIcon
                                 }),
-                                (0, i.jsx)(a.Text, {
+                                (0, i.jsx)(r.Text, {
                                     variant: 'text-xs/medium',
                                     className: u.nitroBadgeText,
-                                    children: c.Z.Messages.POWERED_BY_NITRO
+                                    children: c.intl.string(c.t['BMw+7O'])
                                 })
                             ]
                         })
@@ -46,15 +46,15 @@ function d(e) {
                 }),
                 (0, i.jsx)('div', {
                     className: u.buttonContainer,
-                    children: (0, i.jsx)(s.Z, {
+                    children: (0, i.jsx)(l.Z, {
                         showGradient: !0,
                         iconClassName: u.premiumIcon,
-                        subscriptionTier: o.Si.TIER_2,
-                        buttonText: c.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_CTA,
-                        size: a.Button.Sizes.SMALL,
+                        subscriptionTier: s.Si.TIER_2,
+                        buttonText: c.intl.string(c.t.Y2WKTk),
+                        size: r.Button.Sizes.SMALL,
                         premiumModalAnalyticsLocation: {
                             section: d,
-                            object: l.qAy.MESSAGE
+                            object: o.qAy.MESSAGE
                         }
                     })
                 })

@@ -1,6 +1,6 @@
 n.d(t, {
     D: function () {
-        return h;
+        return p;
     }
 }),
     n(47120);
@@ -13,18 +13,18 @@ var r = n(200651),
     u = n(463208),
     c = n(481060),
     d = n(889963),
-    _ = n(689938),
-    E = n(887603);
-function f(e) {
+    f = n(388032),
+    _ = n(887603);
+function h(e) {
     let { page: t, totalPageCount: n, disabled: a, onPageChange: o } = e,
-        [d, _] = i.useState(!1),
-        [f, h] = i.useState(null),
-        p = null != f && f >= 1 && f <= n;
+        [d, f] = i.useState(!1),
+        [h, p] = i.useState(null),
+        m = null != h && h >= 1 && h <= n;
     return a
         ? (0, r.jsx)(
               c.Heading,
               {
-                  className: E.gap,
+                  className: _.gap,
                   'aria-hidden': !0,
                   variant: 'heading-sm/semibold',
                   children: '\u2026'
@@ -36,22 +36,22 @@ function f(e) {
                 u.o,
                 {
                     autoFocus: !0,
-                    className: E.jumpToPageInlineInput,
+                    className: _.jumpToPageInlineInput,
                     size: u.o.Sizes.MINI,
-                    value: null == f ? '' : ''.concat(f),
+                    value: null == h ? '' : ''.concat(h),
                     onChange: (e) => {
                         let t = parseInt(e);
                         if ('' === e || isNaN(t)) {
-                            h(null);
+                            p(null);
                             return;
                         }
-                        h(t);
+                        p(t);
                     },
                     onBlur: () => {
-                        _(!1), h(null);
+                        f(!1), p(null);
                     },
                     onKeyPress: (e) => {
-                        'Enter' === e.key && null != f && p && (o(f), _(!1), h(null));
+                        'Enter' === e.key && null != h && m && (o(h), f(!1), p(null));
                     },
                     disabled: a
                 },
@@ -60,9 +60,9 @@ function f(e) {
           : (0, r.jsx)(
                 l.P,
                 {
-                    onClick: () => _(!0),
+                    onClick: () => f(!0),
                     children: (0, r.jsx)(c.Heading, {
-                        className: s()(E.roundButton, E.gap),
+                        className: s()(_.roundButton, _.gap),
                         'aria-hidden': !0,
                         variant: 'heading-sm/semibold',
                         children: '\u2026'
@@ -71,24 +71,24 @@ function f(e) {
                 t.key
             );
 }
-function h(e) {
-    let { currentPage: t, totalCount: n, pageSize: i, maxVisiblePages: a, disablePaginationGap: u, onPageChange: h, hideMaxPage: p = !1, className: I } = e,
-        m = Math.ceil(n / i);
+function p(e) {
+    let { currentPage: t, totalCount: n, pageSize: i, maxVisiblePages: a, disablePaginationGap: u, onPageChange: p, hideMaxPage: m = !1, className: g } = e,
+        E = Math.ceil(n / i);
     return (0, r.jsx)(d.W, {
-        totalPageCount: m,
+        totalPageCount: E,
         selectedPage: t,
         maxVisiblePages: a,
-        hideMaxPage: p,
+        hideMaxPage: m,
         onPageChange: function (e) {
-            null != h && h(e);
+            null != p && p(e);
         },
         children: function (e) {
             let { pages: t, hasMultiplePages: n } = e;
             return n
                 ? (0, r.jsx)('div', {
-                      className: s()(E.pageControlContainer, I),
+                      className: s()(_.pageControlContainer, g),
                       children: (0, r.jsx)('nav', {
-                          className: E.pageControl,
+                          className: _.pageControl,
                           children: t.map((e) => {
                               var t, n;
                               switch (e.type) {
@@ -98,8 +98,8 @@ function h(e) {
                                           return (0, r.jsxs)(
                                               o.zx,
                                               {
-                                                  className: E.endButton,
-                                                  innerClassName: E.endButtonInner,
+                                                  className: _.endButton,
+                                                  innerClassName: _.endButtonInner,
                                                   look: o.zx.Looks.BLANK,
                                                   color: o.zx.Colors.TRANSPARENT,
                                                   onClick: i,
@@ -109,10 +109,10 @@ function h(e) {
                                                       (0, r.jsx)(c.ChevronSmallLeftIcon, {
                                                           size: 'md',
                                                           color: 'currentColor',
-                                                          className: E.iconCaret,
+                                                          className: _.iconCaret,
                                                           'aria-hidden': !0
                                                       }),
-                                                      (0, r.jsx)('span', { children: _.Z.Messages.BACK })
+                                                      (0, r.jsx)('span', { children: f.intl.string(f.t['13/7kZ']) })
                                                   ]
                                               },
                                               t
@@ -124,9 +124,9 @@ function h(e) {
                                           (0, r.jsx)(
                                               l.P,
                                               {
-                                                  className: s()(E.roundButton, { [E.activeButton]: t.selected }),
+                                                  className: s()(_.roundButton, { [_.activeButton]: t.selected }),
                                                   onClick: t.selected ? void 0 : t.navigateToPage,
-                                                  'aria-label': _.Z.Messages.PAGINATION_PAGE_LABEL.format({ pageNumber: t.targetPage }),
+                                                  'aria-label': f.intl.formatToPlainString(f.t.IGMs8f, { pageNumber: t.targetPage }),
                                                   'aria-current': t.selected ? 'page' : void 0,
                                                   children: (0, r.jsx)('span', { children: t.targetPage })
                                               },
@@ -137,12 +137,12 @@ function h(e) {
                                       return (
                                           (n = e),
                                           (0, r.jsx)(
-                                              f,
+                                              h,
                                               {
                                                   page: n,
-                                                  totalPageCount: m,
+                                                  totalPageCount: E,
                                                   disabled: !!u,
-                                                  onPageChange: h
+                                                  onPageChange: p
                                               },
                                               n.key
                                           )
@@ -153,19 +153,19 @@ function h(e) {
                                           return (0, r.jsxs)(
                                               o.zx,
                                               {
-                                                  className: E.endButton,
-                                                  innerClassName: E.endButtonInner,
+                                                  className: _.endButton,
+                                                  innerClassName: _.endButtonInner,
                                                   look: o.zx.Looks.BLANK,
                                                   color: o.zx.Colors.TRANSPARENT,
                                                   onClick: i,
                                                   disabled: n,
                                                   rel: 'next',
                                                   children: [
-                                                      (0, r.jsx)('span', { children: _.Z.Messages.NEXT }),
+                                                      (0, r.jsx)('span', { children: f.intl.string(f.t.PDTjLC) }),
                                                       (0, r.jsx)(c.ChevronSmallRightIcon, {
                                                           size: 'md',
                                                           color: 'currentColor',
-                                                          className: E.iconCaret,
+                                                          className: _.iconCaret,
                                                           'aria-hidden': !0
                                                       })
                                                   ]

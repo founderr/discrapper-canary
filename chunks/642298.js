@@ -1,137 +1,137 @@
-t.r(s),
-    t.d(s, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return R;
+            return f;
         }
     }),
-    t(47120);
-var n = t(200651),
-    o = t(192379),
-    a = t(990547),
-    l = t(442837),
-    r = t(481060),
-    i = t(809206),
-    E = t(594174),
-    _ = t(626135),
-    N = t(706734),
-    c = t(264119),
-    d = t(75788),
-    u = t(22150),
-    A = t(361833),
-    C = t(134562),
-    M = t(526761),
-    S = t(981631),
-    m = t(259076),
-    I = t(859565),
-    x = t(800010),
-    T = t(75277);
-function R(e) {
-    var s;
-    let { transitionState: t, onClose: R } = e,
-        O = (0, l.e7)([E.default], () => E.default.getCurrentUser()),
-        h = o.useRef(null !== (s = null == O ? void 0 : O.verified) && void 0 !== s && s);
-    o.useEffect(() => (_.default.track(S.rMx.USER_ACCOUNT_EMAIL_CHANGE_ATTEMPTED), () => (0, i.Zy)()), []);
-    let L = null == O ? void 0 : O.verified,
-        f = L ? M.Ax.CONFIRM_START : M.Ax.EMAIL_AND_PASSWORD,
-        [p, g] = o.useState(f),
-        [G, j] = o.useState(null),
-        [v, U] = o.useState(null),
-        [D, H] = o.useState(null),
-        [Z, B] = o.useState(''),
-        [k, P] = o.useState(),
-        [b, F] = o.useState(''),
-        y = p === M.Ax.CHANGE_EMAIL_WARNING ? I.wumpusExclamationImg : I.emailHeaderImg,
-        w = p === M.Ax.CHANGE_EMAIL_WARNING ? T : x,
-        K = { impression_group: a.ImpressionGroups.USER_ACCOUNT_EMAIL_CHANGE_FLOW };
-    return (0, n.jsxs)(r.ModalRoot, {
-        transitionState: t,
+    n(47120);
+var o = n(200651),
+    s = n(192379),
+    l = n(990547),
+    a = n(442837),
+    i = n(481060),
+    r = n(809206),
+    d = n(594174),
+    c = n(626135),
+    u = n(706734),
+    E = n(264119),
+    _ = n(75788),
+    m = n(22150),
+    N = n(361833),
+    x = n(134562),
+    A = n(526761),
+    C = n(981631),
+    h = n(259076),
+    M = n(859565),
+    S = n(800010),
+    p = n(75277);
+function f(e) {
+    var t;
+    let { transitionState: n, onClose: f } = e,
+        I = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
+        g = s.useRef(null !== (t = null == I ? void 0 : I.verified) && void 0 !== t && t);
+    s.useEffect(() => (c.default.track(C.rMx.USER_ACCOUNT_EMAIL_CHANGE_ATTEMPTED), () => (0, r.Zy)()), []);
+    let R = null == I ? void 0 : I.verified,
+        j = R ? A.Ax.CONFIRM_START : A.Ax.EMAIL_AND_PASSWORD,
+        [T, v] = s.useState(j),
+        [O, L] = s.useState(null),
+        [B, k] = s.useState(null),
+        [D, U] = s.useState(null),
+        [H, b] = s.useState(''),
+        [G, y] = s.useState(),
+        [F, w] = s.useState(''),
+        P = T === A.Ax.CHANGE_EMAIL_WARNING ? M.wumpusExclamationImg : M.emailHeaderImg,
+        Z = T === A.Ax.CHANGE_EMAIL_WARNING ? p : S,
+        W = { impression_group: l.ImpressionGroups.USER_ACCOUNT_EMAIL_CHANGE_FLOW };
+    return (0, o.jsxs)(i.ModalRoot, {
+        transitionState: n,
         disableTrack: !0,
         children: [
-            (0, n.jsx)('img', {
+            (0, o.jsx)('img', {
                 alt: '',
-                className: y,
-                src: w
+                className: P,
+                src: Z
             }),
-            (0, n.jsxs)(r.Slides, {
-                activeSlide: p,
+            (0, o.jsxs)(i.Slides, {
+                activeSlide: T,
                 width: 440,
-                onSlideReady: (e) => j(e),
+                onSlideReady: (e) => L(e),
                 children: [
-                    (0, n.jsx)(r.Slide, {
-                        id: M.Ax.CONFIRM_START,
-                        impressionName: a.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE,
-                        impressionProperties: K,
-                        children: (0, n.jsx)(u.Z, {
-                            onNext: () => g(M.Ax.CONFIRM_CODE),
-                            onClose: R
+                    (0, o.jsx)(i.Slide, {
+                        id: A.Ax.CONFIRM_START,
+                        impressionName: l.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE,
+                        impressionProperties: W,
+                        children: (0, o.jsx)(m.Z, {
+                            onNext: () => v(A.Ax.CONFIRM_CODE),
+                            onClose: f
                         })
                     }),
-                    (0, n.jsx)(r.Slide, {
-                        id: M.Ax.CONFIRM_CODE,
-                        impressionName: a.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_VERIFY_CODE,
-                        impressionProperties: K,
-                        children: (0, n.jsx)(d.Z, {
+                    (0, o.jsx)(i.Slide, {
+                        id: A.Ax.CONFIRM_CODE,
+                        impressionName: l.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_VERIFY_CODE,
+                        impressionProperties: W,
+                        children: (0, o.jsx)(_.Z, {
                             error: D,
-                            setError: H,
-                            setEmailToken: U,
-                            isSlideReady: G === M.Ax.CONFIRM_CODE,
-                            onNext: () => g(M.Ax.CHANGE_EMAIL_REASONS),
-                            onClose: R
+                            setError: U,
+                            setEmailToken: k,
+                            isSlideReady: O === A.Ax.CONFIRM_CODE,
+                            onNext: () => v(A.Ax.CHANGE_EMAIL_REASONS),
+                            onClose: f
                         })
                     }),
-                    (0, n.jsx)(r.Slide, {
-                        id: M.Ax.CHANGE_EMAIL_REASONS,
-                        impressionName: a.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_COLLECT_REASONS,
-                        impressionProperties: K,
-                        children: (0, n.jsx)(N.Z, {
-                            onNext: () => (_.default.track(S.rMx.USER_ACCOUNT_EMAIL_CHANGE_REASON_CONTINUE, { change_email_reason_enum: k }), null != k && m.Mr.has(k) ? g(M.Ax.CHANGE_EMAIL_WARNING) : g(M.Ax.EMAIL_AND_PASSWORD)),
-                            onClose: R,
-                            reason: k,
-                            onReasonChange: P,
-                            freeTextResponse: b,
-                            setFreeTextResponse: F
+                    (0, o.jsx)(i.Slide, {
+                        id: A.Ax.CHANGE_EMAIL_REASONS,
+                        impressionName: l.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_COLLECT_REASONS,
+                        impressionProperties: W,
+                        children: (0, o.jsx)(u.Z, {
+                            onNext: () => (c.default.track(C.rMx.USER_ACCOUNT_EMAIL_CHANGE_REASON_CONTINUE, { change_email_reason_enum: G }), null != G && h.Mr.has(G) ? v(A.Ax.CHANGE_EMAIL_WARNING) : v(A.Ax.EMAIL_AND_PASSWORD)),
+                            onClose: f,
+                            reason: G,
+                            onReasonChange: y,
+                            freeTextResponse: F,
+                            setFreeTextResponse: w
                         })
                     }),
-                    (0, n.jsx)(r.Slide, {
-                        id: M.Ax.CHANGE_EMAIL_WARNING,
-                        impressionName: a.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_WARNING,
-                        impressionProperties: K,
-                        children: (0, n.jsx)(C.Z, {
+                    (0, o.jsx)(i.Slide, {
+                        id: A.Ax.CHANGE_EMAIL_WARNING,
+                        impressionName: l.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_WARNING,
+                        impressionProperties: W,
+                        children: (0, o.jsx)(x.Z, {
                             onNext: () => {
-                                _.default.track(S.rMx.USER_ACCOUNT_EMAIL_CHANGE_WARNING_CONTINUE, { change_email_reason_enum: k }), g(M.Ax.EMAIL_AND_PASSWORD);
+                                c.default.track(C.rMx.USER_ACCOUNT_EMAIL_CHANGE_WARNING_CONTINUE, { change_email_reason_enum: G }), v(A.Ax.EMAIL_AND_PASSWORD);
                             },
-                            onClose: R
+                            onClose: f
                         })
                     }),
-                    (0, n.jsx)(r.Slide, {
-                        id: M.Ax.EMAIL_AND_PASSWORD,
-                        impressionName: a.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_ENTER_EMAIL,
+                    (0, o.jsx)(i.Slide, {
+                        id: A.Ax.EMAIL_AND_PASSWORD,
+                        impressionName: l.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_ENTER_EMAIL,
                         impressionProperties: {
-                            ...K,
-                            email_verified: h.current
+                            ...W,
+                            email_verified: g.current
                         },
-                        children: (0, n.jsx)(A.Z, {
-                            emailToken: v,
-                            isSlideReady: G === M.Ax.EMAIL_AND_PASSWORD,
-                            onBack: L ? () => g(null != k && m.Mr.has(k) ? M.Ax.CHANGE_EMAIL_WARNING : M.Ax.CHANGE_EMAIL_REASONS) : null,
+                        children: (0, o.jsx)(N.Z, {
+                            emailToken: B,
+                            isSlideReady: O === A.Ax.EMAIL_AND_PASSWORD,
+                            onBack: R ? () => v(null != G && h.Mr.has(G) ? A.Ax.CHANGE_EMAIL_WARNING : A.Ax.CHANGE_EMAIL_REASONS) : null,
                             onNext: (e) => {
-                                _.default.track(S.rMx.USER_ACCOUNT_EMAIL_CHANGE_SAVE_NEW_EMAIL, {
-                                    change_email_reason_enum: k,
-                                    free_text_response: b
+                                c.default.track(C.rMx.USER_ACCOUNT_EMAIL_CHANGE_SAVE_NEW_EMAIL, {
+                                    change_email_reason_enum: G,
+                                    free_text_response: F
                                 }),
-                                    B(e),
-                                    g(M.Ax.COMPLETE);
+                                    b(e),
+                                    v(A.Ax.COMPLETE);
                             },
-                            onClose: R
+                            onClose: f
                         })
                     }),
-                    (0, n.jsx)(r.Slide, {
-                        id: M.Ax.COMPLETE,
-                        impressionName: a.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_COMPLETE,
-                        impressionProperties: K,
-                        children: (0, n.jsx)(c.Z, {
-                            email: Z,
-                            onClose: R
+                    (0, o.jsx)(i.Slide, {
+                        id: A.Ax.COMPLETE,
+                        impressionName: l.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_COMPLETE,
+                        impressionProperties: W,
+                        children: (0, o.jsx)(E.Z, {
+                            email: H,
+                            onClose: f
                         })
                     })
                 ]

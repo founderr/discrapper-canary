@@ -1,33 +1,33 @@
 n.d(t, {
     Z: function () {
-        return i;
+        return l;
     }
 }),
     n(47120);
-var s = n(999153),
-    a = n(584922);
-function i(e, t, n, i) {
-    let [{ isDragging: r }, l, o] = (0, s.c)({
+var i = n(999153),
+    r = n(584922);
+function l(e, t, n, l) {
+    let [{ isDragging: s }, a, o] = (0, i.c)({
             type: t,
             item: () => ({ index: n }),
             collect: (e) => ({ isDragging: e.isDragging() })
         }),
-        [, c] = (0, a.L)({
+        [, c] = (0, r.L)({
             accept: t,
-            hover(t, s) {
+            hover(t, i) {
                 if (null == e.current) return;
-                let a = t.index;
-                if (a === n) return;
-                let r = e.current.getBoundingClientRect(),
-                    l = (r.bottom - r.top) / 2,
-                    o = s.getClientOffset().y - r.top;
-                if ((!(a < n) || !(o < l)) && (!(a > n) || !(o > l))) i(a, n), (t.index = n);
+                let r = t.index;
+                if (r === n) return;
+                let s = e.current.getBoundingClientRect(),
+                    a = (s.bottom - s.top) / 2,
+                    o = i.getClientOffset().y - s.top;
+                if ((!(r < n) || !(o < a)) && (!(r > n) || !(o > a))) l(r, n), (t.index = n);
             }
         });
     return {
-        drag: l,
+        drag: a,
         dragPreview: o,
         drop: c,
-        isDragging: r
+        isDragging: s
     };
 }

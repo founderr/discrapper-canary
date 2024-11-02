@@ -93,19 +93,19 @@ function u(e, t) {
         u = !1,
         c = void 0;
     try {
-        for (var E, f = a[Symbol.iterator](); !(l = (E = f.next()).done); l = !0) {
-            var h = E.value,
-                p = h.endsWith('?') && h.length > 1;
-            p && (h = h.slice(0, -1));
-            var I = _(h),
-                m = i[I];
-            (1 === s || !m) && (n ? (r.key = I) : (r.which = d(h))), m && (r[m] = !p || null);
+        for (var _, h = a[Symbol.iterator](); !(l = (_ = h.next()).done); l = !0) {
+            var p = _.value,
+                m = p.endsWith('?') && p.length > 1;
+            m && (p = p.slice(0, -1));
+            var g = f(p),
+                E = i[g];
+            (1 === s || !E) && (n ? (r.key = g) : (r.which = d(p))), E && (r[E] = !m || null);
         }
     } catch (e) {
         (u = !0), (c = e);
     } finally {
         try {
-            !l && f.return && f.return();
+            !l && h.return && h.return();
         } finally {
             if (u) throw c;
         }
@@ -123,9 +123,9 @@ function c(e, t) {
     return !0;
 }
 function d(e) {
-    return s[(e = _(e))] || e.toUpperCase().charCodeAt(0);
+    return s[(e = f(e))] || e.toUpperCase().charCodeAt(0);
 }
-function _(e) {
+function f(e) {
     return (e = a[(e = e.toLowerCase())] || e);
 }
 t.isKeyHotkey = function (e, t) {

@@ -1,5 +1,5 @@
 var i = n(981631),
-    l = n(689938);
+    l = n(388032);
 t.Z = {
     getStatus: function (e) {
         let t,
@@ -7,35 +7,35 @@ t.Z = {
             r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         switch (e) {
             case i.hes.CONNECTING:
-                (t = i.QKv.CONNECTING), (n = l.Z.Messages.CONNECTION_STATUS_CONNECTING);
+                (t = i.QKv.CONNECTING), (n = l.intl.string(l.t.MzW9sL));
                 break;
             case i.hes.AUTHENTICATING:
-                (t = i.QKv.CONNECTING), (n = l.Z.Messages.CONNECTION_STATUS_AUTHENTICATING);
+                (t = i.QKv.CONNECTING), (n = l.intl.string(l.t.GxXwEx));
                 break;
             case i.hes.AWAITING_ENDPOINT:
-                (t = i.QKv.CONNECTING), (n = l.Z.Messages.CONNECTION_STATUS_AWAITING_ENDPOINT);
+                (t = i.QKv.CONNECTING), (n = l.intl.string(l.t.xEbu0d));
                 break;
             case i.hes.RTC_CONNECTED:
-                (t = i.QKv.CONNECTED), (n = r ? l.Z.Messages.CONNECTION_STATUS_VIDEO_CONNECTED : l.Z.Messages.CONNECTION_STATUS_VOICE_CONNECTED);
+                (t = i.QKv.CONNECTED), (n = r ? l.intl.string(l.t.HtVOdX) : l.intl.string(l.t['daXg4+']));
                 break;
             case i.hes.RTC_CONNECTING:
-                (t = i.QKv.CONNECTING), (n = l.Z.Messages.CONNECTION_STATUS_RTC_CONNECTING);
+                (t = i.QKv.CONNECTING), (n = l.intl.string(l.t.Gp51dn));
                 break;
             case i.hes.ICE_CHECKING:
-                (t = i.QKv.CONNECTING), (n = l.Z.Messages.CONNECTION_STATUS_ICE_CHECKING);
+                (t = i.QKv.CONNECTING), (n = l.intl.string(l.t.rdCyAw));
                 break;
             case i.hes.DTLS_CONNECTING:
-                (t = i.QKv.CONNECTING), (n = l.Z.Messages.CONNECTION_STATUS_DTLS_CONNECTING);
+                (t = i.QKv.CONNECTING), (n = l.intl.string(l.t.UvB3gY));
                 break;
             case i.hes.NO_ROUTE:
-                (t = i.QKv.ERROR), (n = l.Z.Messages.CONNECTION_STATUS_NO_ROUTE);
+                (t = i.QKv.ERROR), (n = l.intl.string(l.t.mGhOIi));
                 break;
             case i.hes.RTC_DISCONNECTED:
-                (t = i.QKv.ERROR), (n = l.Z.Messages.CONNECTION_STATUS_RTC_DISCONNECTED);
+                (t = i.QKv.ERROR), (n = l.intl.string(l.t.M7LDmJ));
                 break;
             case i.hes.DISCONNECTED:
             default:
-                (t = i.QKv.ERROR), (n = l.Z.Messages.CONNECTION_STATUS_DISCONNECTED);
+                (t = i.QKv.ERROR), (n = l.intl.string(l.t.NLKQb2));
         }
         return {
             connectionStatus: t,

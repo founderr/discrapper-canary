@@ -1,20 +1,20 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return o;
+        return a;
     }
 });
-var n = t(200651);
-t(192379);
-var a = t(481060),
-    i = t(695346),
-    r = t(689938);
-function o(e) {
-    let s = i.R_.useSetting();
-    return (0, n.jsx)(a.FormSwitch, {
+var i = n(200651);
+n(192379);
+var s = n(481060),
+    r = n(695346),
+    l = n(388032);
+function a(e) {
+    let t = r.R_.useSetting();
+    return (0, i.jsx)(s.FormSwitch, {
         hideBorder: !0,
-        value: !s,
-        onChange: () => i.R_.updateSetting(!s),
-        note: s ? null : r.Z.Messages.UNIQUE_USERNAME_TOGGLE_SUBTITLE.format({ username: e.legacyUsername }),
-        children: r.Z.Messages.UNIQUE_USERNAME_TOGGLE_TITLE
+        value: !t,
+        onChange: () => r.R_.updateSetting(!t),
+        note: t ? null : l.intl.formatToPlainString(l.t.aYhclZ, { username: e.legacyUsername }),
+        children: l.intl.string(l.t['3cWDuL'])
     });
 }

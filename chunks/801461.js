@@ -10,7 +10,7 @@ n.d(t, {
         return r;
     },
     en: function () {
-        return _;
+        return f;
     },
     hy: function () {
         return u;
@@ -31,4 +31,4 @@ let o = /([^A-Za-z0-9_.]+)/g,
 let u = 32,
     c = 'pomelo',
     d = [1564, 917505, 12644, 65279, 173, 6068, 10240, 4447, 847, 4448, 65440],
-    _ = 2000;
+    f = 2000;

@@ -1,6 +1,6 @@
 n.d(t, {
     q: function () {
-        return _;
+        return f;
     }
 }),
     n(411104);
@@ -13,10 +13,10 @@ var r = n(956067),
 let { WEBAPP_ENDPOINT: u } = window.GLOBAL_ENV,
     c = 'https:'.concat(u, '/bad-hash-delta'),
     d = new s.Z('FetchBlockedDomain');
-function _() {
-    return r.Z.timeAsync('\uD83D\uDCBE', 'fetchBlockedDomainList', E);
+function f() {
+    return r.Z.timeAsync('\uD83D\uDCBE', 'fetchBlockedDomainList', _);
 }
-async function E() {
+async function _() {
     d.verbose('Fetching blocked domain list');
     try {
         let e;

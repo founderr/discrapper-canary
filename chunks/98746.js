@@ -1,182 +1,182 @@
-a.r(s),
-    a.d(s, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return R;
+            return C;
         }
     }),
-    a(47120);
-var o,
-    t,
-    l = a(200651),
-    n = a(192379),
-    r = a(481060),
-    c = a(749210),
-    i = a(70097),
-    u = a(910693),
-    _ = a(70956),
-    E = a(5192),
-    d = a(981631),
-    S = a(689938),
-    N = a(516703);
-((t = o || (o = {}))[(t.INITIAL = 0)] = 'INITIAL'), (t[(t.OTHER_REASON = 1)] = 'OTHER_REASON');
-function O() {
+    n(47120);
+var l,
+    s,
+    o = n(200651),
+    i = n(192379),
+    a = n(481060),
+    r = n(749210),
+    c = n(70097),
+    u = n(910693),
+    d = n(70956),
+    m = n(5192),
+    b = n(981631),
+    g = n(388032),
+    p = n(516703);
+((s = l || (l = {}))[(s.INITIAL = 0)] = 'INITIAL'), (s[(s.OTHER_REASON = 1)] = 'OTHER_REASON');
+function h() {
     return [
         {
             value: 0,
-            label: S.Z.Messages.DELETE_MESSAGE_HISTORY_OPTION_NONE
+            label: g.intl.string(g.t['4obaMT'])
         },
         {
-            value: 1 * _.Z.Seconds.HOUR,
-            label: S.Z.Messages.DELETE_MESSAGE_HISTORY_OPTION_1HR
+            value: 1 * d.Z.Seconds.HOUR,
+            label: g.intl.string(g.t.RKpitb)
         },
         {
-            value: 6 * _.Z.Seconds.HOUR,
-            label: S.Z.Messages.DELETE_MESSAGE_HISTORY_OPTION_6HR
+            value: 6 * d.Z.Seconds.HOUR,
+            label: g.intl.string(g.t['8WfJZ2'])
         },
         {
-            value: 12 * _.Z.Seconds.HOUR,
-            label: S.Z.Messages.DELETE_MESSAGE_HISTORY_OPTION_12HR
+            value: 12 * d.Z.Seconds.HOUR,
+            label: g.intl.string(g.t.p1up7u)
         },
         {
-            value: 1 * _.Z.Seconds.DAY,
-            label: S.Z.Messages.DELETE_MESSAGE_HISTORY_OPTION_24HR
+            value: 1 * d.Z.Seconds.DAY,
+            label: g.intl.string(g.t.XuVkkJ)
         },
         {
-            value: 3 * _.Z.Seconds.DAY,
-            label: S.Z.Messages.DELETE_MESSAGE_HISTORY_OPTION_3D
+            value: 3 * d.Z.Seconds.DAY,
+            label: g.intl.string(g.t.gMcDS0)
         },
         {
-            value: 7 * _.Z.Seconds.DAY,
-            label: S.Z.Messages.DELETE_MESSAGE_HISTORY_OPTION_7D
+            value: 7 * d.Z.Seconds.DAY,
+            label: g.intl.string(g.t.FA7IUl)
         }
     ];
 }
-let A = O()[1].value;
-function R(e) {
-    let { guildId: s, user: o, location: t, userIds: _, onBanMultiple: R, transitionState: M, onClose: C, canBulkBan: I = !1 } = e,
-        [m, T] = n.useState(A),
-        [b, g] = n.useState(''),
-        [p, h] = n.useState(0),
-        [x, Z] = n.useState(!1),
-        B = (0, u.sE)(s, {
-            location: t,
-            targetUserId: null == o ? void 0 : o.id,
-            targets: _
+let x = h()[1].value;
+function C(e) {
+    let { guildId: t, user: l, location: s, userIds: d, onBanMultiple: C, transitionState: S, onClose: j, canBulkBan: f = !1 } = e,
+        [k, v] = i.useState(x),
+        [I, N] = i.useState(''),
+        [R, B] = i.useState(0),
+        [M, A] = i.useState(!1),
+        L = (0, u.sE)(t, {
+            location: s,
+            targetUserId: null == l ? void 0 : l.id,
+            targets: d
         }),
-        L = n.useCallback(() => {
-            if (null != R) {
-                if (!(null != _ && (null == _ ? void 0 : _.size) > 0 && I) || x) return;
-                if ('' === b.trim() && !x) {
-                    Z(!0);
+        E = i.useCallback(() => {
+            if (null != C) {
+                if (!(null != d && (null == d ? void 0 : d.size) > 0 && f) || M) return;
+                if ('' === I.trim() && !M) {
+                    A(!0);
                     return;
                 }
-                R(s, [..._], m, b);
+                C(t, [...d], k, I);
             } else {
-                if (null == o) return;
-                c.Z.banUser(s, null == o ? void 0 : o.id, m, b);
+                if (null == l) return;
+                r.Z.banUser(t, null == l ? void 0 : l.id, k, I);
             }
-            B(u.jQ.BAN), C();
-        }, [R, B, C, _, I, x, b, s, m, o]),
-        f = n.useCallback((e) => {
-            T(e);
+            L(u.jQ.BAN), j();
+        }, [C, L, j, d, f, M, I, t, k, l]),
+        Z = i.useCallback((e) => {
+            v(e);
         }, []),
-        j = n.useCallback((e) => {
-            let { value: s } = e;
-            g(s), Z(!1);
+        _ = i.useCallback((e) => {
+            let { value: t } = e;
+            N(t), A(!1);
         }, []),
-        v = n.useCallback(
+        O = i.useCallback(
             (e) => {
-                g(e), x && Z(!1);
+                N(e), M && A(!1);
             },
-            [x]
+            [M]
         ),
-        k = n.useCallback(() => {
-            g(''), h(1);
+        T = i.useCallback(() => {
+            N(''), B(1);
         }, []),
-        H = n.useCallback(() => {
-            h(0);
+        y = i.useCallback(() => {
+            B(0);
         }, []),
-        P = [
+        w = [
             {
-                name: S.Z.Messages.BAN_REASON_OPTION_SPAM_ACCOUNT,
-                value: S.Z.Messages.BAN_REASON_OPTION_SPAM_ACCOUNT
+                name: g.intl.string(g.t.tamLhY),
+                value: g.intl.string(g.t.tamLhY)
             },
             {
-                name: S.Z.Messages.BAN_REASON_OPTION_HACKED_ACCOUNT,
-                value: S.Z.Messages.BAN_REASON_OPTION_HACKED_ACCOUNT
+                name: g.intl.string(g.t.UmxjMj),
+                value: g.intl.string(g.t.UmxjMj)
             },
             {
-                name: S.Z.Messages.BAN_REASON_OPTION_BREAKING_RULES,
-                value: S.Z.Messages.BAN_REASON_OPTION_BREAKING_RULES
+                name: g.intl.string(g.t.EXY1d3),
+                value: g.intl.string(g.t.EXY1d3)
             }
         ],
-        D = null != R && null != _ ? S.Z.Messages.BAN_MULTIPLE_CONFIRM_TITLE.format({ count: null == _ ? void 0 : _.size }) : null == o ? '' : S.Z.Messages.BAN_CONFIRM_TITLE.format({ username: '@'.concat(E.ZP.getName(s, null, o)) });
-    return (0, l.jsxs)(r.ModalRoot, {
-        transitionState: M,
+        Y = null != C && null != d ? g.intl.formatToPlainString(g.t.Ka68TE, { count: null == d ? void 0 : d.size }) : null == l ? '' : g.intl.formatToPlainString(g.t.Qd6w7e, { username: '@'.concat(m.ZP.getName(t, null, l)) });
+    return (0, o.jsxs)(a.ModalRoot, {
+        transitionState: S,
         children: [
-            (0, l.jsx)(r.ModalHeader, {
+            (0, o.jsx)(a.ModalHeader, {
                 separator: !1,
-                children: (0, l.jsx)(r.Heading, {
+                children: (0, o.jsx)(a.Heading, {
                     variant: 'heading-md/semibold',
-                    children: D
+                    children: Y
                 })
             }),
-            (0, l.jsxs)(r.ModalContent, {
-                className: N.modalContent,
+            (0, o.jsxs)(a.ModalContent, {
+                className: p.modalContent,
                 children: [
-                    (0, l.jsxs)(i.Z, {
+                    (0, o.jsxs)(c.Z, {
                         autoPlay: !0,
                         loop: !0,
-                        className: N.spacing,
+                        className: p.spacing,
                         width: 400,
                         children: [
-                            (0, l.jsx)('source', {
-                                src: a(942314),
+                            (0, o.jsx)('source', {
+                                src: n(942314),
                                 type: 'video/webm'
                             }),
-                            (0, l.jsx)('source', {
-                                src: a(888322),
+                            (0, o.jsx)('source', {
+                                src: n(888322),
                                 type: 'video/mp4'
                             }),
-                            (0, l.jsx)('img', {
+                            (0, o.jsx)('img', {
                                 alt: '',
-                                src: a(860724)
+                                src: n(860724)
                             })
                         ]
                     }),
-                    (0, l.jsxs)(r.FormItem, {
-                        title: S.Z.Messages.FORM_LABEL_REASON_BAN,
-                        className: N.spacing,
+                    (0, o.jsxs)(a.FormItem, {
+                        title: g.intl.string(g.t.w4Ivys),
+                        className: p.spacing,
                         children: [
-                            x &&
-                                (0, l.jsx)(r.FormErrorBlock, {
-                                    className: N.error,
-                                    children: S.Z.Messages.BAN_REASON_REQUIRED_ERROR
+                            M &&
+                                (0, o.jsx)(a.FormErrorBlock, {
+                                    className: p.error,
+                                    children: g.intl.string(g.t.IrYX19)
                                 }),
-                            (0, l.jsx)(r.Sequencer, {
+                            (0, o.jsx)(a.Sequencer, {
                                 steps: [0, 1],
-                                step: p,
+                                step: R,
                                 children: ((e) => {
-                                    switch (p) {
+                                    switch (R) {
                                         case 0:
-                                            return (0, l.jsxs)(l.Fragment, {
+                                            return (0, o.jsxs)(o.Fragment, {
                                                 children: [
-                                                    (0, l.jsx)(r.RadioGroup, {
-                                                        value: b,
+                                                    (0, o.jsx)(a.RadioGroup, {
+                                                        value: I,
                                                         options: e,
-                                                        onChange: j,
-                                                        radioItemClassName: N.radioItemStyles
+                                                        onChange: _,
+                                                        radioItemClassName: p.radioItemStyles
                                                     }),
-                                                    (0, l.jsxs)(r.Clickable, {
-                                                        onClick: k,
-                                                        className: N.banReasonOtherClickable,
+                                                    (0, o.jsxs)(a.Clickable, {
+                                                        onClick: T,
+                                                        className: p.banReasonOtherClickable,
                                                         children: [
-                                                            (0, l.jsx)(r.Text, {
+                                                            (0, o.jsx)(a.Text, {
                                                                 variant: 'text-md/medium',
                                                                 color: 'none',
-                                                                children: S.Z.Messages.OTHER
+                                                                children: g.intl.string(g.t.BcZTKi)
                                                             }),
-                                                            (0, l.jsx)(r.ChevronSmallRightIcon, {
+                                                            (0, o.jsx)(a.ChevronSmallRightIcon, {
                                                                 color: 'currentColor',
                                                                 size: 'xs'
                                                             })
@@ -185,71 +185,71 @@ function R(e) {
                                                 ]
                                             });
                                         case 1:
-                                            return (0, l.jsx)(r.TextArea, {
-                                                maxLength: d.GNZ,
-                                                onChange: v,
-                                                value: b,
+                                            return (0, o.jsx)(a.TextArea, {
+                                                maxLength: b.GNZ,
+                                                onChange: O,
+                                                value: I,
                                                 rows: 5,
                                                 autoFocus: !0
                                             });
                                     }
-                                })(P)
+                                })(w)
                             })
                         ]
                     }),
-                    (0, l.jsx)(r.FormItem, {
-                        title: S.Z.Messages.FORM_LABEL_DELETE_MESSAGE_HISTORY,
-                        className: N.spacing,
-                        children: (0, l.jsx)(r.SingleSelect, {
-                            options: O(),
-                            value: m,
-                            onChange: f
+                    (0, o.jsx)(a.FormItem, {
+                        title: g.intl.string(g.t['8l3W09']),
+                        className: p.spacing,
+                        children: (0, o.jsx)(a.SingleSelect, {
+                            options: h(),
+                            value: k,
+                            onChange: Z
                         })
                     })
                 ]
             }),
             (() => {
-                switch (p) {
+                switch (R) {
                     case 0:
-                        return (0, l.jsxs)(r.ModalFooter, {
-                            className: N.footer,
+                        return (0, o.jsxs)(a.ModalFooter, {
+                            className: p.footer,
                             children: [
-                                (0, l.jsx)(r.Button, {
+                                (0, o.jsx)(a.Button, {
                                     type: 'button',
-                                    look: r.Button.Looks.LINK,
-                                    color: r.Button.Colors.PRIMARY,
-                                    onClick: C,
-                                    children: S.Z.Messages.CANCEL
+                                    look: a.Button.Looks.LINK,
+                                    color: a.Button.Colors.PRIMARY,
+                                    onClick: j,
+                                    children: g.intl.string(g.t['ETE/oK'])
                                 }),
-                                (0, l.jsx)(r.Button, {
+                                (0, o.jsx)(a.Button, {
                                     type: 'submit',
-                                    color: r.Button.Colors.RED,
-                                    size: r.Button.Sizes.SMALL,
-                                    onClick: L,
-                                    children: S.Z.Messages.BAN
+                                    color: a.Button.Colors.RED,
+                                    size: a.Button.Sizes.SMALL,
+                                    onClick: E,
+                                    children: g.intl.string(g.t['5MBJ5O'])
                                 })
                             ]
                         });
                     case 1:
-                        return (0, l.jsxs)(r.ModalFooter, {
-                            className: N.footerStepped,
+                        return (0, o.jsxs)(a.ModalFooter, {
+                            className: p.footerStepped,
                             children: [
-                                (0, l.jsx)(r.Button, {
-                                    className: N.cancel,
-                                    innerClassName: N.cancel,
+                                (0, o.jsx)(a.Button, {
+                                    className: p.cancel,
+                                    innerClassName: p.cancel,
                                     type: 'button',
-                                    look: r.Button.Looks.LINK,
-                                    color: r.Button.Colors.PRIMARY,
-                                    size: r.Button.Sizes.SMALL,
-                                    onClick: H,
-                                    children: S.Z.Messages.BACK
+                                    look: a.Button.Looks.LINK,
+                                    color: a.Button.Colors.PRIMARY,
+                                    size: a.Button.Sizes.SMALL,
+                                    onClick: y,
+                                    children: g.intl.string(g.t['13/7kZ'])
                                 }),
-                                (0, l.jsx)(r.Button, {
+                                (0, o.jsx)(a.Button, {
                                     type: 'submit',
-                                    color: r.Button.Colors.RED,
-                                    size: r.Button.Sizes.SMALL,
-                                    onClick: L,
-                                    children: S.Z.Messages.BAN
+                                    color: a.Button.Colors.RED,
+                                    size: a.Button.Sizes.SMALL,
+                                    onClick: E,
+                                    children: g.intl.string(g.t['5MBJ5O'])
                                 })
                             ]
                         });

@@ -1,8 +1,8 @@
-var a, i;
+var i, a;
 n.d(t, {
     c: function () {
-        return a;
+        return i;
     }
 }),
-    ((i = a || (a = {}))[(i.SEARCH_RESULTS = 1)] = 'SEARCH_RESULTS'),
-    (i[(i.MUSIC = 2)] = 'MUSIC');
+    ((a = i || (i = {}))[(a.SEARCH_RESULTS = 1)] = 'SEARCH_RESULTS'),
+    (a[(a.MUSIC = 2)] = 'MUSIC');

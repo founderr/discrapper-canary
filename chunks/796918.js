@@ -1,6 +1,6 @@
 t(47120);
-var a = t(200651),
-    r = t(192379),
+var r = t(200651),
+    a = t(192379),
     i = t(120356),
     s = t.n(i),
     o = t(392711),
@@ -9,170 +9,170 @@ var a = t(200651),
     d = t(355932),
     u = t(314897),
     m = t(353093),
-    _ = t(214715),
-    f = t(18100),
-    C = t(308083),
-    h = t(689938),
-    x = t(258738),
-    p = t(602075);
+    f = t(214715),
+    h = t(18100),
+    x = t(308083),
+    p = t(388032),
+    g = t(258738),
+    C = t(602075);
 n.Z = (e) => {
-    let { guildId: n, handleUpdate: t, progress: i, error: g } = e,
-        { interests: T } = i,
-        [E, I] = r.useState(''),
-        [b, N] = r.useState(0),
-        v = (0, c.e7)([u.default], () => u.default.getId()),
-        y = r.useMemo(() => (0, o.chunk)((0, m.XV)(C.i6, v), 9), [v]),
-        S = [...y[b], ...y[(b + 1) % y.length]],
-        A = r.useMemo(() => Array.from(T), [T]),
-        M = r.useMemo(() => A.filter((e) => !C.WZ.has(e) && !C.gh.has(e)), [A]),
-        j = (e) => {
-            let n = new Set(T);
+    let { guildId: n, handleUpdate: t, progress: i, error: b } = e,
+        { interests: v } = i,
+        [_, y] = a.useState(''),
+        [T, I] = a.useState(0),
+        j = (0, c.e7)([u.default], () => u.default.getId()),
+        N = a.useMemo(() => (0, o.chunk)((0, m.XV)(x.i6, j), 9), [j]),
+        S = [...N[T], ...N[(T + 1) % N.length]],
+        E = a.useMemo(() => Array.from(v), [v]),
+        k = a.useMemo(() => E.filter((e) => !x.WZ.has(e) && !x.gh.has(e)), [E]),
+        A = (e) => {
+            let n = new Set(v);
             n.delete(e), t({ interests: n });
         },
-        R = r.useCallback(
+        w = a.useCallback(
             (e) => {
-                if (T.size === C.c4) return;
-                let n = null != e ? e : E.trim();
+                if (v.size === x.c4) return;
+                let n = null != e ? e : _.trim();
                 if (0 === n.length) return;
-                let a = new Set(T);
-                a.add(n), t({ interests: a }), I('');
+                let r = new Set(v);
+                r.add(n), t({ interests: r }), y('');
             },
-            [t, E, T]
+            [t, _, v]
         ),
-        L = r.useCallback(
+        M = a.useCallback(
             (e) => {
                 switch (e.key) {
                     case 'Enter':
                     case 'Tab':
-                        e.preventDefault(), e.stopPropagation(), R();
+                        e.preventDefault(), e.stopPropagation(), w();
                 }
             },
-            [R]
+            [w]
         ),
-        O = r.useCallback(() => {
-            N((e) => (e + 1) % y.length);
-        }, [N, y]);
-    return (0, a.jsxs)('div', {
-        className: p.slideContent,
+        R = a.useCallback(() => {
+            I((e) => (e + 1) % N.length);
+        }, [I, N]);
+    return (0, r.jsxs)('div', {
+        className: C.slideContent,
         children: [
-            (0, a.jsx)(l.Heading, {
+            (0, r.jsx)(l.Heading, {
                 variant: 'heading-xxl/medium',
-                className: p.title,
-                children: h.Z.Messages.CLAN_SETUP_INTERESTS_TITLE
+                className: C.title,
+                children: p.intl.string(p.t.V69HzM)
             }),
-            (0, a.jsx)(l.Text, {
+            (0, r.jsx)(l.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                className: p.subtitle,
-                children: h.Z.Messages.CLAN_SETUP_INTERESTS_SUBTITLE.format()
+                className: C.subtitle,
+                children: p.intl.format(p.t['BAK+ND'], {})
             }),
-            null != g &&
-                (0, a.jsx)(l.Text, {
+            null != b &&
+                (0, r.jsx)(l.Text, {
                     variant: 'text-sm/normal',
                     color: 'status-danger',
-                    className: p.errorText,
-                    children: g
+                    className: C.errorText,
+                    children: b
                 }),
-            (0, a.jsxs)('div', {
-                className: p.content,
+            (0, r.jsxs)('div', {
+                className: C.content,
                 children: [
-                    (0, a.jsxs)('div', {
-                        className: p.mainPanelContainer,
+                    (0, r.jsxs)('div', {
+                        className: C.mainPanelContainer,
                         children: [
-                            (0, a.jsxs)('div', {
-                                className: p.inputContainer,
+                            (0, r.jsxs)('div', {
+                                className: C.inputContainer,
                                 children: [
-                                    (0, a.jsx)(l.Text, {
+                                    (0, r.jsx)(l.Text, {
                                         variant: 'text-xs/semibold',
                                         color: 'text-muted',
-                                        className: p.contentLabel,
-                                        children: h.Z.Messages.CLAN_SETUP_INTERESTS_LABEL
+                                        className: C.contentLabel,
+                                        children: p.intl.string(p.t.qMh4Oj)
                                     }),
-                                    (0, a.jsx)(l.TextInput, {
+                                    (0, r.jsx)(l.TextInput, {
                                         autoFocus: !0,
-                                        inputClassName: p.input,
-                                        value: E,
-                                        onKeyDown: L,
-                                        onChange: I,
-                                        placeholder: h.Z.Messages.CLAN_SETUP_INTERESTS_PLACEHOLDER,
-                                        maxLength: C.Sq,
-                                        disabled: T.size === C.c4
+                                        inputClassName: C.input,
+                                        value: _,
+                                        onKeyDown: M,
+                                        onChange: y,
+                                        placeholder: p.intl.string(p.t.axCpsL),
+                                        maxLength: x.Sq,
+                                        disabled: v.size === x.c4
                                     }),
-                                    E.length > 0 &&
-                                        (0, a.jsx)(l.Clickable, {
-                                            onClick: () => R(E.trim()),
-                                            className: s()(p.plusIcon, p.clickable),
-                                            children: (0, a.jsx)(l.PlusSmallIcon, {
+                                    _.length > 0 &&
+                                        (0, r.jsx)(l.Clickable, {
+                                            onClick: () => w(_.trim()),
+                                            className: s()(C.plusIcon, C.clickable),
+                                            children: (0, r.jsx)(l.PlusSmallIcon, {
                                                 size: 'md',
                                                 color: 'currentColor',
-                                                className: p.icon
+                                                className: C.icon
                                             })
                                         }),
-                                    E.length > 0 &&
-                                        (0, a.jsx)(l.Text, {
+                                    _.length > 0 &&
+                                        (0, r.jsx)(l.Text, {
                                             color: 'text-muted',
                                             variant: 'text-xs/normal',
-                                            className: p.enterToSearchText,
-                                            children: h.Z.Messages.CLAN_SETUP_INTERESTS_HELP
+                                            className: C.enterToSearchText,
+                                            children: p.intl.string(p.t.ZGkhJS)
                                         })
                                 ]
                             }),
-                            (0, a.jsx)(l.Text, {
-                                className: p.interestsCategoryTitle,
+                            (0, r.jsx)(l.Text, {
+                                className: C.interestsCategoryTitle,
                                 variant: 'text-xs/semibold',
                                 color: 'text-muted',
-                                children: h.Z.Messages.CLAN_SETUP_SUGGESTED_INTERESTS
+                                children: p.intl.string(p.t.P793o6)
                             }),
-                            (0, a.jsx)(d.ZP, {
+                            (0, r.jsx)(d.ZP, {
                                 items: S,
                                 renderItem: (e) =>
-                                    (0, a.jsx)(
-                                        _.Z,
+                                    (0, r.jsx)(
+                                        f.Z,
                                         {
                                             variant: 'text-xs/semibold',
                                             color: 'interactive-normal',
                                             text: e,
-                                            selected: T.has(e),
-                                            onClick: T.has(e) ? j : R
+                                            selected: v.has(e),
+                                            onClick: v.has(e) ? A : w
                                         },
                                         e
                                     ),
                                 maxLines: 2,
-                                className: p.interestsCategory,
+                                className: C.interestsCategory,
                                 itemGapPx: 8,
                                 renderOverflow: () => null
                             }),
-                            (0, a.jsx)('div', {
-                                children: (0, a.jsxs)(l.Button, {
+                            (0, r.jsx)('div', {
+                                children: (0, r.jsxs)(l.Button, {
                                     color: l.ButtonColors.PRIMARY,
-                                    onClick: O,
-                                    className: x.rerollButton,
-                                    innerClassName: x.innerRerollButton,
+                                    onClick: R,
+                                    className: g.rerollButton,
+                                    innerClassName: g.innerRerollButton,
                                     children: [
-                                        (0, a.jsx)(l.MagicWandIcon, {
+                                        (0, r.jsx)(l.MagicWandIcon, {
                                             size: 'sm',
                                             color: 'currentColor'
                                         }),
-                                        (0, a.jsx)(l.Text, {
+                                        (0, r.jsx)(l.Text, {
                                             variant: 'text-xs/semibold',
                                             color: 'none',
-                                            children: h.Z.Messages.CLAN_SETUP_INTERESTS_GENERATE_MORE
+                                            children: p.intl.string(p.t.ldYCQ0)
                                         })
                                     ]
                                 })
                             })
                         ]
                     }),
-                    (0, a.jsx)('div', {
-                        className: p.fixedWidthSidebar,
+                    (0, r.jsx)('div', {
+                        className: C.fixedWidthSidebar,
                         children:
-                            A.length > 0 &&
-                            (0, a.jsx)(f.Z, {
+                            E.length > 0 &&
+                            (0, r.jsx)(h.Z, {
                                 guildId: n,
                                 progress: i,
-                                traitsToHighlight: M,
+                                traitsToHighlight: k,
                                 maskDescription: !0,
-                                onTraitClick: j
+                                onTraitClick: A
                             })
                     })
                 ]

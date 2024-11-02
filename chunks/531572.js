@@ -14,25 +14,25 @@ function a(e, t, n) {
         e
     );
 }
-let s = {};
-class o extends (i = l.ZP.PersistedStore) {
+let o = {};
+class s extends (i = l.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (s = e);
+        null != e && (o = e);
     }
     getState() {
-        return s;
+        return o;
     }
     getCountForGuild(e) {
-        return s[e];
+        return o[e];
     }
 }
-a(o, 'displayName', 'GuildBoostingProgressBarPersistedStore'),
-    a(o, 'persistKey', 'PremiumGuildProgressBarPersistedStore'),
-    (t.Z = new o(r.Z, {
+a(s, 'displayName', 'GuildBoostingProgressBarPersistedStore'),
+    a(s, 'persistKey', 'PremiumGuildProgressBarPersistedStore'),
+    (t.Z = new s(r.Z, {
         APPLIED_GUILD_BOOST_COUNT_UPDATE: (e) => {
             let { guildId: t, premiumCount: n } = e;
-            s = {
-                ...s,
+            o = {
+                ...o,
                 [t]: n
             };
         }

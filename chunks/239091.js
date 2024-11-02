@@ -34,18 +34,18 @@ function u(e) {
 function c(e, t, n, r) {
     var u, c, d;
     if ((e.stopPropagation(), null != e.currentTarget.contains && !e.currentTarget.contains(e.target))) return;
-    let _ = 0,
-        E = 0;
-    if (('pageX' in e && ((_ = e.pageX), (E = e.pageY)), 0 === _ && 0 === E)) {
+    let f = 0,
+        _ = 0;
+    if (('pageX' in e && ((f = e.pageX), (_ = e.pageY)), 0 === f && 0 === _)) {
         let t = null === (u = e.target) || void 0 === u ? void 0 : u.getBoundingClientRect(),
             { left: n = 0, top: r = 0, width: i = 0, height: a = 0 } = null != t ? t : {};
-        (_ = n + i / 2), (E = r + a / 2);
+        (f = n + i / 2), (_ = r + a / 2);
     }
-    let f = {
+    let h = {
         render: t,
         renderLazy: r,
         target: null !== (c = e.target) && void 0 !== c ? c : e.currentTarget,
-        rect: new DOMRect(_, E, 0, 0),
+        rect: new DOMRect(f, _, 0, 0),
         config: {
             context: __OVERLAY__ ? o.IlC.OVERLAY : null !== (d = (0, i.GB)()) && void 0 !== d ? d : o.IlC.APP,
             ...n
@@ -53,9 +53,9 @@ function c(e, t, n, r) {
     };
     if ((null == n ? void 0 : n.enableSpellCheck) && (0, a.isDesktop)()) {
         let e = (0, s.RD)(() => {
-            e(), l(f);
+            e(), l(h);
         });
-    } else e.preventDefault(), l(f);
+    } else e.preventDefault(), l(h);
 }
 function d(e, t, n) {
     c(e, void 0, n, t);

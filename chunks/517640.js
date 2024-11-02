@@ -1,22 +1,22 @@
-t.d(e, {
+i.d(t, {
     Z: function () {
-        return a;
+        return l;
     }
 });
-var r = t(200651);
-t(192379);
-var i = t(481060),
-    s = t(434404),
-    u = t(144507),
-    o = t(981631),
-    c = t(689938);
-function a(n) {
-    return (0, u.$D)(n)
-        ? (0, r.jsx)(i.MenuItem, {
+var r = i(200651);
+i(192379);
+var e = i(481060),
+    u = i(434404),
+    o = i(144507),
+    s = i(981631),
+    c = i(388032);
+function l(n) {
+    return (0, o.$D)(n)
+        ? (0, r.jsx)(e.MenuItem, {
               id: 'role-subscription-settings',
-              label: c.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_EDIT_SETTINGS,
+              label: c.intl.string(c.t.jMN5ZG),
               action: () => {
-                  s.Z.open(n.id, o.pNK.ROLE_SUBSCRIPTIONS);
+                  u.Z.open(n.id, s.pNK.ROLE_SUBSCRIPTIONS);
               }
           })
         : null;

@@ -28,14 +28,14 @@ let l = {
         SELECTABLE: 'modeSelectable'
     };
 function c(e) {
-    let { type: t = l.DEFAULT, className: n, disabled: i, selectable: c, children: d, style: _, ...E } = e,
-        f = u.DEFAULT;
+    let { type: t = l.DEFAULT, className: n, disabled: i, selectable: c, children: d, style: f, ..._ } = e,
+        h = u.DEFAULT;
     return (
-        i ? (f = u.DISABLED) : c && (f = u.SELECTABLE),
+        i ? (h = u.DISABLED) : c && (h = u.SELECTABLE),
         (0, r.jsx)(s.Z, {
-            className: a()(o[t], n, o[f]),
-            style: _,
-            ...E,
+            className: a()(o[t], n, o[h]),
+            style: f,
+            ..._,
             children: d
         })
     );

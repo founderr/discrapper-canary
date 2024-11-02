@@ -1,32 +1,32 @@
-var a = s(990547),
-    n = s(881052),
-    l = s(573261),
-    o = s(981631);
-async function i(e, t, s, i, r) {
+var i = n(990547),
+    l = n(881052),
+    s = n(573261),
+    a = n(981631);
+async function o(e, t, n, o, r) {
     try {
         return (
-            await l.Z.post({
-                url: o.ANM.GUILDS,
+            await s.Z.post({
+                url: a.ANM.GUILDS,
                 body: {
                     name: e,
                     icon: t,
-                    channels: s.channels,
-                    system_channel_id: s.system_channel_id,
-                    roles: s.roles,
-                    guild_template_code: s.code,
+                    channels: n.channels,
+                    system_channel_id: n.system_channel_id,
+                    roles: n.roles,
+                    guild_template_code: n.code,
                     staff_only: !!r || void 0
                 },
                 trackedActionData: {
-                    event: a.NetworkActionNames.GUILD_CREATE,
+                    event: i.NetworkActionNames.GUILD_CREATE,
                     properties: {
-                        template_name: s.id,
-                        is_community_intent: i
+                        template_name: n.id,
+                        is_community_intent: o
                     }
                 }
             })
         ).body;
     } catch (e) {
-        throw new n.Hx(e);
+        throw new l.Hx(e);
     }
 }
-t.Z = { createGuildFromTemplate: i };
+t.Z = { createGuildFromTemplate: o };

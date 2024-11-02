@@ -1,17 +1,17 @@
 n.d(t, {
     T: function () {
-        return l;
+        return a;
     }
 }),
     n(733860);
 var i = n(392711),
-    s = n.n(i),
-    a = n(823379);
-function l(e, t) {
-    return s()(e)
+    l = n.n(i),
+    r = n(823379);
+function a(e, t) {
+    return l()(e)
         .map(t.getUser)
         .unshift(t.getCurrentUser())
-        .filter(a.lm)
+        .filter(r.lm)
         .sortBy((e) => e.username.toLowerCase())
         .value();
 }

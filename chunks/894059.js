@@ -1,32 +1,32 @@
 t.d(n, {
     Z: function () {
-        return r;
+        return u;
     }
 });
-var a = t(200651);
+var i = t(200651);
 t(192379);
-var i = t(481060),
-    l = t(518756),
-    s = t(576749),
-    o = t(689938);
-function r(e) {
+var l = t(481060),
+    a = t(518756),
+    r = t(576749),
+    o = t(388032);
+function u(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        r = (0, l.Z)(e),
-        u = (0, s.Z)();
-    return r
-        ? (0, a.jsx)(i.MenuItem, {
+        u = (0, a.Z)(e),
+        d = (0, r.Z)();
+    return u
+        ? (0, i.jsx)(l.MenuItem, {
               id: 'create-event',
-              label: o.Z.Messages.SCHEDULE_EVENT,
-              icon: n ? i.CalendarPlusIcon : void 0,
+              label: o.intl.string(o.t['60lJ0N']),
+              icon: n ? l.CalendarPlusIcon : void 0,
               action: () => {
-                  (0, i.openModalLazy)(async () => {
-                      let { default: n } = await Promise.all([t.e('18543'), t.e('53115'), t.e('22347'), t.e('58023'), t.e('91899')]).then(t.bind(t, 779250));
+                  (0, l.openModalLazy)(async () => {
+                      let { default: n } = await Promise.all([t.e('18543'), t.e('22347'), t.e('58023'), t.e('30654')]).then(t.bind(t, 779250));
                       return (t) =>
-                          (0, a.jsx)(n, {
+                          (0, i.jsx)(n, {
                               ...t,
                               guildId: e
                           });
-                  }, u);
+                  }, d);
               }
           })
         : null;

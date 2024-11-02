@@ -1,91 +1,91 @@
-l.d(n, {
+t.d(n, {
     Z: function () {
-        return O;
+        return z;
     }
 }),
-    l(47120);
-var s = l(200651),
-    a = l(192379),
-    t = l(913527),
-    i = l.n(t),
-    r = l(442837),
-    o = l(481060),
-    d = l(933557),
-    c = l(592125),
-    u = l(430824),
-    E = l(496675),
-    _ = l(699516),
-    x = l(594174),
-    I = l(924301),
-    m = l(518756),
-    N = l(545165),
-    T = l(77810),
-    h = l(274311),
-    g = l(230900),
-    v = l(63712),
-    S = l(765305),
-    C = l(981631),
-    L = l(689938),
-    A = l(356731);
-let Z = (e) => e === S.WX.EXTERNAL,
-    f = (e, n) => {
-        let l = c.Z.getChannel(e);
-        if (null == l) return null;
-        let a = l.type === C.d4z.GUILD_STAGE_VOICE,
-            t = (0, h.Q)(l, n),
-            i = t ? o.VoiceNormalIcon : o.VoiceLockIcon,
-            r = t ? o.StageIcon : o.StageLockIcon;
-        return (0, s.jsx)(a ? r : i, {
+    t(47120);
+var l = t(200651),
+    i = t(192379),
+    r = t(913527),
+    a = t.n(r),
+    s = t(442837),
+    o = t(481060),
+    d = t(933557),
+    c = t(592125),
+    u = t(430824),
+    m = t(496675),
+    x = t(699516),
+    h = t(594174),
+    g = t(924301),
+    v = t(518756),
+    f = t(545165),
+    N = t(77810),
+    j = t(274311),
+    I = t(230900),
+    p = t(63712),
+    C = t(765305),
+    E = t(981631),
+    S = t(388032),
+    T = t(356731);
+let y = (e) => e === C.WX.EXTERNAL,
+    Z = (e, n) => {
+        let t = c.Z.getChannel(e);
+        if (null == t) return null;
+        let i = t.type === E.d4z.GUILD_STAGE_VOICE,
+            r = (0, j.Q)(t, n),
+            a = r ? o.VoiceNormalIcon : o.VoiceLockIcon,
+            s = r ? o.StageIcon : o.StageLockIcon;
+        return (0, l.jsx)(i ? s : a, {
             color: 'currentColor',
             size: 'md',
-            className: A.channelOptionIcon
+            className: T.channelOptionIcon
         });
     },
-    j = (e) => {
-        let { guildId: n, channelType: l, channel: a, onSelectChannel: t, disabled: i, entityType: r } = e,
-            c = l === C.d4z.GUILD_STAGE_VOICE,
-            u = (0, h.Q)(a, r),
-            E = (0, N.sR)(n, l);
-        return (0, s.jsxs)(o.FormItem, {
-            title: c ? L.Z.Messages.START_STAGE_MODAL_SET_TOPIC_SELECT_LABEL : L.Z.Messages.GUILD_EVENT_LOCATION_VOICE_FIELD_LABEL,
-            className: A.options,
-            disabled: i,
+    b = (e) => {
+        let { guildId: n, channelType: t, channel: i, onSelectChannel: r, disabled: a, entityType: s } = e,
+            c = t === E.d4z.GUILD_STAGE_VOICE,
+            u = (0, j.Q)(i, s),
+            m = (0, f.sR)(n, t);
+        return (0, l.jsxs)(o.FormItem, {
+            title: c ? S.intl.string(S.t.S7GjDw) : S.intl.string(S.t['7RYWCA']),
+            className: T.options,
+            disabled: a,
             required: !0,
             children: [
-                (0, s.jsx)(o.SearchableSelect, {
-                    value: null == a ? void 0 : a.id,
-                    options: E.map((e) => ({
+                (0, l.jsx)(o.SearchableSelect, {
+                    value: null == i ? void 0 : i.id,
+                    options: m.map((e) => ({
                         value: e.id,
-                        label: (0, d.F6)(e, x.default, _.Z, !0)
+                        label: (0, d.F6)(e, h.default, x.Z, !0)
                     })),
                     onChange: (e) => {
-                        let n = E.find((n) => n.id === e);
-                        t(null != n ? n : void 0);
+                        let n = m.find((n) => n.id === e);
+                        r(null != n ? n : void 0);
                     },
-                    renderOptionPrefix: (e) => f(null == e ? void 0 : e.value, r),
-                    isDisabled: i
+                    renderOptionPrefix: (e) => Z(null == e ? void 0 : e.value, s),
+                    isDisabled: a
                 }),
                 !u &&
-                    (0, s.jsx)(o.Text, {
+                    (0, l.jsx)(o.Text, {
                         color: 'header-secondary',
-                        className: A.channelPrivate,
+                        className: T.channelPrivate,
                         variant: 'text-sm/normal',
-                        children: L.Z.Messages.GUILD_EVENT_PRIVATE_DESCRIPTION
+                        children: S.intl.string(S.t.F3bDaW)
                     })
             ]
         });
     };
-function M(e, n, l, s) {
+function _(e, n, t, l) {
     return n
         ? {
               disabled: !0,
-              tooltipText: L.Z.Messages.GUILD_EVENT_LOCATION_DISABLED_CANNOT_EDIT
+              tooltipText: S.intl.string(S.t.yutP5e)
           }
-        : l
-          ? 0 === s && e !== S.WX.EXTERNAL
+        : t
+          ? 0 === l && e !== C.WX.EXTERNAL
               ? {
                     disabled: !0,
-                    tooltipText: L.Z.Messages.GUILD_EVENT_LOCATION_DISABLED_NO_AVAILABLE_CHANNEL
+                    tooltipText: S.intl.string(S.t['DkY+cH'])
                 }
               : {
                     disabled: !1,
@@ -93,167 +93,167 @@ function M(e, n, l, s) {
                 }
           : {
                 disabled: !0,
-                tooltipText: L.Z.Messages.GUILD_EVENT_LOCATION_DISABLED_NO_PERMISSION
+                tooltipText: S.intl.string(S.t.HeF1kZ)
             };
 }
-let D = (e) => (n) => {
+let R = (e) => (n) => {
         e({ entityMetadata: { location: n } });
     },
-    R = (e) => (n) => {
-        var l;
-        e({ channelId: null !== (l = null == n ? void 0 : n.id) && void 0 !== l ? l : null });
+    k = (e) => (n) => {
+        var t;
+        e({ channelId: null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : null });
     },
-    p = (e, n) => (l) => {
-        let { value: s } = l,
-            a = {
-                entityType: s,
+    A = (e, n) => (t) => {
+        let { value: l } = t,
+            i = {
+                entityType: l,
                 scheduledEndTime: void 0
             };
-        if (Z(s)) {
-            var t;
-            let e = (null !== (t = i()(n.scheduledStartTime)) && void 0 !== t ? t : i()()).add(2, 'hour');
-            a.scheduledEndTime = e.toISOString();
+        if (y(l)) {
+            var r;
+            let e = (null !== (r = a()(n.scheduledStartTime)) && void 0 !== r ? r : a()()).add(2, 'hour');
+            i.scheduledEndTime = e.toISOString();
         }
-        e(a);
+        e(i);
     };
-function V(e) {
-    let { guildId: n, guildEvent: l, onChange: t, isFocusReady: i } = e,
-        { entityType: d, channelId: u } = l,
-        E = (0, r.e7)([c.Z], () => c.Z.getChannel(u), [u]),
-        _ = a.useRef(null);
-    a.useEffect(() => {
-        if (i && Z(d)) {
+function L(e) {
+    let { guildId: n, guildEvent: t, onChange: r, isFocusReady: a } = e,
+        { entityType: d, channelId: u } = t,
+        m = (0, s.e7)([c.Z], () => c.Z.getChannel(u), [u]),
+        x = i.useRef(null);
+    i.useEffect(() => {
+        if (a && y(d)) {
             var e;
-            null === (e = _.current) || void 0 === e || e.focus();
+            null === (e = x.current) || void 0 === e || e.focus();
         }
-    }, [i, d]);
-    let x = D(t),
-        m = R(t),
-        N = (0, g.xV)(l),
-        T = (0, g.xC)(d),
-        h = (0, I.xt)(l);
-    return null == d || d === S.WX.NONE
+    }, [a, d]);
+    let h = R(r),
+        v = k(r),
+        f = (0, I.xV)(t),
+        N = (0, I.xC)(d),
+        j = (0, g.xt)(t);
+    return null == d || d === C.WX.NONE
         ? null
-        : Z(d)
-          ? (0, s.jsx)(o.FormItem, {
-                title: L.Z.Messages.GUILD_EVENT_LOCATION_ELSEWHERE_FIELD_LABEL,
-                className: A.options,
+        : y(d)
+          ? (0, l.jsx)(o.FormItem, {
+                title: S.intl.string(S.t.yx785O),
+                className: T.options,
                 required: !0,
-                children: (0, s.jsx)(o.TextInput, {
-                    className: A.__invalid_textInput,
-                    onChange: x,
-                    placeholder: L.Z.Messages.GUILD_EVENT_LOCATION_OPTION_ELSEWHERE_PLACEHOLDER,
-                    maxLength: S.gG,
-                    value: null != N ? N : '',
-                    inputRef: _
+                children: (0, l.jsx)(o.TextInput, {
+                    className: T.__invalid_textInput,
+                    onChange: h,
+                    placeholder: S.intl.string(S.t.mkCMiY),
+                    maxLength: C.gG,
+                    value: null != f ? f : '',
+                    inputRef: x
                 })
             })
-          : null == T
+          : null == N
             ? null
-            : (0, s.jsx)(j, {
+            : (0, l.jsx)(b, {
                   guildId: n,
-                  channelType: T,
-                  onSelectChannel: m,
-                  channel: E,
+                  channelType: N,
+                  onSelectChannel: v,
+                  channel: m,
                   entityType: d,
-                  disabled: h
+                  disabled: j
               });
 }
-function G(e) {
-    let { guildId: n, guildEvent: l, onChange: t } = e,
-        i = (0, r.e7)([u.Z], () => u.Z.getGuild(n), [n]),
-        d = (0, m.Z)(n, void 0),
-        c = (0, m.Z)(n, C.d4z.GUILD_VOICE),
-        E = (0, m.Z)(n, C.d4z.GUILD_STAGE_VOICE),
-        _ = (0, N.sR)(n, C.d4z.GUILD_VOICE),
-        x = (0, T.q)(i),
-        h = null == i ? void 0 : i.hasFeature(C.oNc.COMMUNITY),
-        g = (0, I.xt)(l),
-        v = p(t, l),
-        Z = a.useMemo(() => {
+function D(e) {
+    let { guildId: n, guildEvent: t, onChange: r } = e,
+        a = (0, s.e7)([u.Z], () => u.Z.getGuild(n), [n]),
+        d = (0, v.Z)(n, void 0),
+        c = (0, v.Z)(n, E.d4z.GUILD_VOICE),
+        m = (0, v.Z)(n, E.d4z.GUILD_STAGE_VOICE),
+        x = (0, f.sR)(n, E.d4z.GUILD_VOICE),
+        h = (0, N.q)(a),
+        j = null == a ? void 0 : a.hasFeature(E.oNc.COMMUNITY),
+        I = (0, g.xt)(t),
+        p = A(r, t),
+        y = i.useMemo(() => {
             let e = [
                 {
-                    name: L.Z.Messages.VOICE_CHANNEL,
-                    value: S.WX.VOICE,
-                    desc: L.Z.Messages.GUILD_EVENT_LOCATION_OPTION_VOICE_HINT,
+                    name: S.intl.string(S.t.BVZqJi),
+                    value: C.WX.VOICE,
+                    desc: S.intl.string(S.t['EV//4e']),
                     icon: o.VoiceNormalIcon,
-                    ...M(S.WX.VOICE, g, c, _.length)
+                    ..._(C.WX.VOICE, I, c, x.length)
                 },
                 {
-                    name: L.Z.Messages.GUILD_EVENT_LOCATION_EXTERNAL,
-                    value: S.WX.EXTERNAL,
-                    desc: L.Z.Messages.GUILD_EVENT_LOCATION_OPTION_ELSEWHERE_HINT,
+                    name: S.intl.string(S.t.w7ipb2),
+                    value: C.WX.EXTERNAL,
+                    desc: S.intl.string(S.t.DYxrHh),
                     icon: o.LocationIcon,
-                    ...M(S.WX.EXTERNAL, g, d, 0)
+                    ..._(C.WX.EXTERNAL, I, d, 0)
                 }
             ];
-            return h
+            return j
                 ? [
                       {
-                          name: L.Z.Messages.STAGE_CHANNEL,
-                          value: S.WX.STAGE_INSTANCE,
-                          desc: L.Z.Messages.GUILD_EVENT_LOCATION_OPTION_STAGE_HINT,
+                          name: S.intl.string(S.t.EErMzM),
+                          value: C.WX.STAGE_INSTANCE,
+                          desc: S.intl.string(S.t.LgALpq),
                           icon: o.StageIcon,
-                          ...M(S.WX.STAGE_INSTANCE, g, E, x.length)
+                          ..._(C.WX.STAGE_INSTANCE, I, m, h.length)
                       },
                       ...e
                   ]
                 : e;
-        }, [d, c, E, h, _.length, x.length, g]);
-    return (0, s.jsx)(o.RadioGroup, {
-        value: l.entityType,
-        options: Z,
-        onChange: v,
-        className: A.options
+        }, [d, c, m, j, x.length, h.length, I]);
+    return (0, l.jsx)(o.RadioGroup, {
+        value: t.entityType,
+        options: y,
+        onChange: p,
+        className: T.options
     });
 }
-function O(e) {
-    let { guildId: n, guildEvent: a, validationErrorMessage: t, onChange: i, isSlideReady: d = !1 } = e,
-        { entityType: c } = a,
-        _ = (0, r.e7)([u.Z], () => u.Z.getGuild(n), [n]),
-        x = (0, T.q)(_),
-        I = (0, r.e7)([E.Z], () => E.Z.can(C.Plq.MANAGE_CHANNELS, _)),
-        m = null == _ ? void 0 : _.hasFeature(C.oNc.COMMUNITY),
-        N = p(i, a),
-        h = m && !Z(c) && 0 === x.length && I && null != c;
-    return (0, s.jsxs)('div', {
-        className: A.container,
+function z(e) {
+    let { guildId: n, guildEvent: i, validationErrorMessage: r, onChange: a, isSlideReady: d = !1 } = e,
+        { entityType: c } = i,
+        x = (0, s.e7)([u.Z], () => u.Z.getGuild(n), [n]),
+        h = (0, N.q)(x),
+        g = (0, s.e7)([m.Z], () => m.Z.can(E.Plq.MANAGE_CHANNELS, x)),
+        v = null == x ? void 0 : x.hasFeature(E.oNc.COMMUNITY),
+        f = A(a, i),
+        j = v && !y(c) && 0 === h.length && g && null != c;
+    return (0, l.jsxs)('div', {
+        className: T.container,
         children: [
-            (0, s.jsx)(o.Heading, {
+            (0, l.jsx)(o.Heading, {
                 variant: 'heading-xl/semibold',
-                className: A.header,
-                children: L.Z.Messages.GUILD_EVENT_LOCATION_TITLE
+                className: T.header,
+                children: S.intl.string(S.t['DC+Qm5'])
             }),
-            (0, s.jsx)(o.Text, {
+            (0, l.jsx)(o.Text, {
                 color: 'header-secondary',
-                className: A.text,
+                className: T.text,
                 variant: 'text-sm/normal',
-                children: L.Z.Messages.GUILD_EVENT_LOCATION_SUBTITLE
+                children: S.intl.string(S.t.IwmXLC)
             }),
-            (0, s.jsx)(G, {
+            (0, l.jsx)(D, {
                 guildId: n,
-                guildEvent: a,
-                onChange: i
+                guildEvent: i,
+                onChange: a
             }),
-            (0, s.jsx)(V, {
+            (0, l.jsx)(L, {
                 guildId: n,
-                guildEvent: a,
+                guildEvent: i,
                 isFocusReady: d,
-                onChange: i
+                onChange: a
             }),
-            h
-                ? (0, s.jsx)(v.Z, {
+            j
+                ? (0, l.jsx)(p.Z, {
                       onClick: () => {
-                          N({
-                              value: S.WX.STAGE_INSTANCE,
-                              name: L.Z.Messages.STAGE_CHANNEL
+                          f({
+                              value: C.WX.STAGE_INSTANCE,
+                              name: S.intl.string(S.t.EErMzM)
                           }),
                               (0, o.openModalLazy)(async () => {
-                                  let { default: e } = await Promise.all([l.e('90508'), l.e('7590'), l.e('45094'), l.e('54548')]).then(l.bind(l, 218613));
-                                  return (l) =>
-                                      (0, s.jsx)(e, {
-                                          ...l,
-                                          channelType: C.d4z.GUILD_STAGE_VOICE,
+                                  let { default: e } = await Promise.all([t.e('90508'), t.e('7590'), t.e('45094'), t.e('54548')]).then(t.bind(t, 218613));
+                                  return (t) =>
+                                      (0, l.jsx)(e, {
+                                          ...t,
+                                          channelType: E.d4z.GUILD_STAGE_VOICE,
                                           guildId: n
                                       });
                               });

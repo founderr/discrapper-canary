@@ -1,98 +1,98 @@
-s.d(t, {
+n.d(t, {
     Z: function () {
-        return g;
+        return E;
     }
 });
-var n = s(200651);
-s(192379);
-var i = s(120356),
-    a = s.n(i),
-    r = s(481060),
-    o = s(63063),
-    l = s(773446),
-    u = s(572264),
-    c = s(981631),
-    d = s(689938),
-    E = s(923112),
-    _ = s(849399);
-function g(e) {
+var i = n(200651);
+n(192379);
+var s = n(120356),
+    r = n.n(s),
+    a = n(481060),
+    l = n(63063),
+    o = n(773446),
+    u = n(572264),
+    c = n(981631),
+    d = n(388032),
+    m = n(923112),
+    g = n(849399);
+function E(e) {
     let { user: t } = e;
-    return (0, n.jsxs)('div', {
-        className: E.infoContainer,
+    return (0, i.jsxs)('div', {
+        className: m.infoContainer,
         children: [
-            (0, n.jsx)('img', {
-                className: E.infoPicture,
+            (0, i.jsx)('img', {
+                className: m.infoPicture,
                 alt: '',
-                src: _
+                src: g
             }),
-            (0, n.jsx)(r.Heading, {
-                className: E.title,
+            (0, i.jsx)(a.Heading, {
+                className: m.title,
                 color: 'header-primary',
                 variant: 'heading-xl/bold',
-                children: d.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_TITLE.format({ n: t.tag })
+                children: d.intl.format(d.t['au+lPj'], { n: t.tag })
             }),
-            (0, n.jsx)(r.Text, {
-                className: E.subtitleInfo,
+            (0, i.jsx)(a.Text, {
+                className: m.subtitleInfo,
                 color: 'header-secondary',
                 variant: 'text-md/medium',
-                children: d.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_BODY_1.format()
+                children: d.intl.format(d.t['5fwX5+'], {})
             }),
-            (0, n.jsx)(r.Text, {
-                className: E.prompt,
+            (0, i.jsx)(a.Text, {
+                className: m.prompt,
                 color: 'header-secondary',
                 variant: 'text-sm/medium',
-                children: d.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_BODY_2.format({ helpdeskArticle: o.Z.getArticleURL(c.BhN.POMELO_FAQ) })
+                children: d.intl.format(d.t['i2vB8/'], { helpdeskArticle: l.Z.getArticleURL(c.BhN.POMELO_FAQ) })
             }),
-            (0, n.jsxs)('div', {
-                className: a()([E.infoItem, E.infoItemSpacing]),
+            (0, i.jsxs)('div', {
+                className: r()([m.infoItem, m.infoItemSpacing]),
                 children: [
-                    (0, n.jsx)('div', {
-                        className: E.infoIcon,
-                        children: (0, n.jsx)(r.FriendsIcon, {
+                    (0, i.jsx)('div', {
+                        className: m.infoIcon,
+                        children: (0, i.jsx)(a.FriendsIcon, {
                             size: 'custom',
                             color: 'currentColor',
                             width: 20,
                             height: 20
                         })
                     }),
-                    (0, n.jsx)(r.Text, {
+                    (0, i.jsx)(a.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/medium',
-                        children: d.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_ITEM_1.format()
+                        children: d.intl.format(d.t.SzUaZ2, {})
                     })
                 ]
             }),
-            (0, n.jsxs)('div', {
-                className: a()([E.infoItem, E.infoItemSpacing]),
+            (0, i.jsxs)('div', {
+                className: r()([m.infoItem, m.infoItemSpacing]),
                 children: [
-                    (0, n.jsx)('div', {
-                        className: E.infoIcon,
-                        children: (0, n.jsx)(l.Z, {
+                    (0, i.jsx)('div', {
+                        className: m.infoIcon,
+                        children: (0, i.jsx)(o.Z, {
                             width: 20,
                             height: 20
                         })
                     }),
-                    (0, n.jsx)(r.Text, {
+                    (0, i.jsx)(a.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/medium',
-                        children: d.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_ITEM_2.format()
+                        children: d.intl.format(d.t['UwPc+P'], {})
                     })
                 ]
             }),
-            (0, n.jsxs)('div', {
-                className: E.infoItem,
+            (0, i.jsxs)('div', {
+                className: m.infoItem,
                 children: [
-                    (0, n.jsx)('div', {
-                        className: E.infoIcon,
-                        children: (0, n.jsx)(u.Z, {
+                    (0, i.jsx)('div', {
+                        className: m.infoIcon,
+                        children: (0, i.jsx)(u.Z, {
                             width: 20,
                             height: 20
                         })
                     }),
-                    (0, n.jsx)(r.Text, {
+                    (0, i.jsx)(a.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/medium',
-                        children: d.Z.Messages.UNIQUE_USERNAME_EXISTING_FLOW_PROMPT_ITEM_3.format({ username: t.tag })
+                        children: d.intl.format(d.t.okLjjo, { username: t.tag })
                     })
                 ]
             })

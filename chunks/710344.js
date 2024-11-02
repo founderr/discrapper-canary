@@ -1,42 +1,42 @@
 t.d(n, {
     Z: function () {
-        return a;
+        return l;
     }
 }),
     t(47120);
 var i = t(192379);
-function a(e, n) {
-    let [t, a] = i.useState(null),
-        l = i.useCallback((e) => {
-            a(e);
+function l(e, n) {
+    let [t, l] = i.useState(null),
+        r = i.useCallback((e) => {
+            l(e);
         }, []),
-        s = i.useCallback(() => {
-            a(null);
+        a = i.useCallback(() => {
+            l(null);
         }, []),
         o = i.useCallback(
             (i) => {
-                s();
-                let a = e.find((e) => {
+                a();
+                let l = e.find((e) => {
                         let { id: n } = e;
                         return t === n;
                     }),
-                    l = e.find((e) => {
+                    r = e.find((e) => {
                         let { id: n } = e;
                         return i === n;
                     });
-                if (null == a || null == l || a === l) return;
+                if (null == l || null == r || l === r) return;
                 let o = [...e],
-                    r = o.indexOf(a),
-                    d = o.indexOf(l),
-                    c = d - r > 0 ? 1 : 0;
-                o.splice(r, 1), (d = o.indexOf(l)), o.splice(d + c, 0, a), n(o);
+                    s = o.indexOf(l),
+                    d = o.indexOf(r),
+                    c = d - s > 0 ? 1 : 0;
+                o.splice(s, 1), (d = o.indexOf(r)), o.splice(d + c, 0, l), n(o);
             },
-            [e, t, s, n]
+            [e, t, a, n]
         );
     return {
         draggingId: t,
-        handleDragStart: l,
-        handleDragReset: s,
+        handleDragStart: r,
+        handleDragReset: a,
         handleDragComplete: o
     };
 }

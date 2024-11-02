@@ -1,51 +1,51 @@
-n.d(t, {
+n.d(e, {
     Z: function () {
-        return g;
+        return T;
     }
 });
-var a = n(200651),
-    i = n(192379),
-    s = n(286379),
-    l = n(481060),
+var i = n(200651),
+    a = n(192379),
+    l = n(286379),
+    s = n(481060),
     r = n(797614),
     o = n(626135),
     c = n(103879),
-    _ = n(451284),
-    u = n(802429),
-    d = n(846488),
+    u = n(451284),
+    d = n(802429),
+    _ = n(846488),
     E = n(181211),
-    T = n(811085),
-    S = n(967254),
-    A = n(981631),
-    I = n(689938),
-    N = n(262714);
-function g() {
-    let e = (0, E.Z)(),
-        t = (0, d.e)(),
-        n = (0, _.P)(),
-        g = (0, u.i)();
-    return (i.useEffect(() => {
+    S = n(811085),
+    f = n(967254),
+    g = n(981631),
+    m = n(388032),
+    p = n(262714);
+function T() {
+    let t = (0, E.Z)(),
+        e = (0, _.e)(),
+        n = (0, u.P)(),
+        T = (0, d.i)();
+    return (a.useEffect(() => {
         c.yq();
     }, []),
-    i.useEffect(() => {
-        t && (o.default.track(A.rMx.SAFETY_HUB_VIEWED, { account_standing: n.state }), r.Z.increment({ name: s.V.SAFETY_HUB_VIEW }));
-    }, [t]),
-    e)
-        ? (0, a.jsx)('div', { children: (0, a.jsx)(l.Spinner, {}) })
-        : null != g
-          ? (0, a.jsxs)(l.Notice, {
-                color: l.NoticeColors.DANGER,
-                className: N.nagbar,
+    a.useEffect(() => {
+        e && (o.default.track(g.rMx.SAFETY_HUB_VIEWED, { account_standing: n.state }), r.Z.increment({ name: l.V.SAFETY_HUB_VIEW }));
+    }, [e]),
+    t)
+        ? (0, i.jsx)('div', { children: (0, i.jsx)(s.Spinner, {}) })
+        : null != T
+          ? (0, i.jsxs)(s.Notice, {
+                color: s.NoticeColors.DANGER,
+                className: p.nagbar,
                 children: [
-                    I.Z.Messages.SAFETY_HUB_ERROR_MESSAGE,
-                    (0, a.jsx)(l.NoticeButton, {
+                    m.intl.string(m.t.TDRvqq),
+                    (0, i.jsx)(s.NoticeButton, {
                         onClick: () => c.yq(),
-                        children: I.Z.Messages.SAFETY_HUB_ERROR_ACTION_BUTTON
+                        children: m.intl.string(m.t.R1AN4O)
                     })
                 ]
             })
-          : (0, a.jsxs)('div', {
-                className: N.container,
-                children: [(0, a.jsx)(T.Z, {}), (0, a.jsx)(S.N, {})]
+          : (0, i.jsxs)('div', {
+                className: p.container,
+                children: [(0, i.jsx)(S.Z, {}), (0, i.jsx)(f.N, {})]
             });
 }

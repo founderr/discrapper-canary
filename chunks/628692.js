@@ -8,103 +8,103 @@ var r = n(200651),
     u = n(596454),
     c = n(315744),
     d = n(208049),
-    _ = n(135869),
-    E = n(763296),
-    f = n(22382),
-    h = n(747071),
-    p = n(42693);
+    f = n(135869),
+    _ = n(763296),
+    h = n(22382),
+    p = n(747071),
+    m = n(42693);
 t.Z = function (e) {
     let { soundId: t, jumbo: n = !1 } = e,
-        { currentPreviewRef: a } = i.useContext(_.Z),
-        I = (0, o.e7)([E.Z], () => E.Z.getSoundById(t)),
-        m = (null == I ? void 0 : I.emojiId) != null || (null == I ? void 0 : I.emojiName) != null,
-        [T, S] = i.useState(!1),
-        g = (0, c.P)('soundmoji_chat_mention'),
-        A = i.useCallback(() => {
+        { currentPreviewRef: a } = i.useContext(f.Z),
+        g = (0, o.e7)([_.Z], () => _.Z.getSoundById(t)),
+        E = (null == g ? void 0 : g.emojiId) != null || (null == g ? void 0 : g.emojiName) != null,
+        [v, I] = i.useState(!1),
+        S = (0, c.P)('soundmoji_chat_mention'),
+        T = i.useCallback(() => {
             var e;
-            null == I && (0, d.w)();
-            let n = new Audio((0, f.Z)(t));
+            null == g && (0, d.w)();
+            let n = new Audio((0, h.Z)(t));
             null != a.current && a.current.pause(),
                 (a.current = n),
                 (n.currentTime = 0),
-                (n.volume = (0, h.Z)(null !== (e = null == I ? void 0 : I.volume) && void 0 !== e ? e : 0.5)),
-                S(!0),
+                (n.volume = (0, p.Z)(null !== (e = null == g ? void 0 : g.volume) && void 0 !== e ? e : 0.5)),
+                I(!0),
                 n.play(),
                 n.addEventListener(
                     'ended',
                     () => {
-                        S(!1);
+                        I(!1);
                     },
                     { once: !0 }
                 );
-        }, [t, I, a, S]);
-    return g
-        ? null == I
+        }, [t, g, a, I]);
+    return S
+        ? null == g
             ? (0, r.jsxs)(l.Clickable, {
                   title: 'Risky Click',
                   tag: 'span',
-                  onClick: A,
-                  className: p.container,
+                  onClick: T,
+                  className: m.container,
                   children: [
                       (0, r.jsx)(l.VoiceNormalIcon, {
                           size: 'md',
                           color: 'currentColor',
-                          className: p.unknownSound
+                          className: m.unknownSound
                       }),
                       (0, r.jsx)(l.Text, {
                           tag: 'span',
                           variant: 'text-md/normal',
                           color: 'none',
-                          className: p.text,
+                          className: m.text,
                           children: 'Unknown'
                       })
                   ]
               })
             : n
               ? (0, r.jsxs)(l.Clickable, {
-                    onClick: A,
-                    className: p.jumboContainer,
+                    onClick: T,
+                    className: m.jumboContainer,
                     children: [
                         (0, r.jsx)('div', {
-                            className: s()(p.jumboOverlay, { [p.playing]: T }),
+                            className: s()(m.jumboOverlay, { [m.playing]: v }),
                             children: (0, r.jsx)(l.CirclePlayIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: p.__invalid_jumboPlayIcon
+                                className: m.__invalid_jumboPlayIcon
                             })
                         }),
-                        m &&
+                        E &&
                             (0, r.jsx)(u.Z, {
-                                emojiId: null == I ? void 0 : I.emojiId,
-                                emojiName: null == I ? void 0 : I.emojiName,
-                                className: p.jumboEmoji
+                                emojiId: null == g ? void 0 : g.emojiId,
+                                emojiName: null == g ? void 0 : g.emojiName,
+                                className: m.jumboEmoji
                             }),
                         (0, r.jsx)(l.Text, {
                             tag: 'span',
                             variant: 'text-lg/normal',
                             color: 'none',
-                            className: p.text,
-                            children: I.name
+                            className: m.text,
+                            children: g.name
                         })
                     ]
                 })
               : (0, r.jsxs)(l.Clickable, {
                     tag: 'span',
-                    onClick: A,
-                    className: p.container,
+                    onClick: T,
+                    className: m.container,
                     children: [
-                        m &&
+                        E &&
                             (0, r.jsx)(u.Z, {
-                                emojiId: null == I ? void 0 : I.emojiId,
-                                emojiName: null == I ? void 0 : I.emojiName,
-                                className: p.emoji
+                                emojiId: null == g ? void 0 : g.emojiId,
+                                emojiName: null == g ? void 0 : g.emojiName,
+                                className: m.emoji
                             }),
                         (0, r.jsx)(l.Text, {
                             tag: 'span',
                             variant: 'text-md/normal',
                             color: 'none',
-                            className: p.text,
-                            children: I.name
+                            className: m.text,
+                            children: g.name
                         })
                     ]
                 })

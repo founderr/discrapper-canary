@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return v;
     }
 });
 var r = n(200651);
@@ -13,71 +13,71 @@ var i = n(120356),
     u = n(906732),
     c = n(849522),
     d = n(639119),
-    _ = n(594174),
-    E = n(74538),
-    f = n(694320),
-    h = n(981631),
-    p = n(474936),
-    I = n(689938),
-    m = n(766905);
-function T(e) {
-    var t, n, i, T;
-    let { type: S, textValue: g, maxCharacterCount: A, showRemainingCharsAfterCount: N, className: R } = e,
-        O = (0, s.e7)([_.default], () => E.ZP.canUseIncreasedMessageLength(_.default.getCurrentUser())),
-        v = (0, c.Z)(),
-        C = null != A ? A : v,
-        L = null !== (T = null != N ? N : A) && void 0 !== T ? T : v / 10,
-        D = g.length,
-        y = null != S.upsellLongMessages && (null != D ? D : 0) > h.J6R && O,
-        b = null != S.upsellLongMessages && !O,
-        M = (null === (n = (0, d.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === p.Si.TIER_2,
-        P = C - D,
-        U = P > L,
-        w = P < 0 && M,
-        x = 0 === P ? I.Z.Messages.CHARACTER_COUNT_AT_LIMIT : P > 0 ? I.Z.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({ count: P }) : I.Z.Messages.CHARACTER_COUNT_OVER_LIMIT,
-        { analyticsLocations: G } = (0, u.ZP)(l.Z.CHARACTER_COUNT);
-    return (y && P >= 0) || !U || (b && !U)
+    f = n(594174),
+    _ = n(74538),
+    h = n(694320),
+    p = n(981631),
+    m = n(474936),
+    g = n(388032),
+    E = n(766905);
+function v(e) {
+    var t, n, i, v;
+    let { type: I, textValue: S, maxCharacterCount: T, showRemainingCharsAfterCount: b, className: y } = e,
+        A = (0, s.e7)([f.default], () => _.ZP.canUseIncreasedMessageLength(f.default.getCurrentUser())),
+        N = (0, c.Z)(),
+        C = null != T ? T : N,
+        R = null !== (v = null != b ? b : T) && void 0 !== v ? v : N / 10,
+        O = S.length,
+        D = null != I.upsellLongMessages && (null != O ? O : 0) > p.J6R && A,
+        L = null != I.upsellLongMessages && !A,
+        x = (null === (n = (0, d.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === m.Si.TIER_2,
+        w = C - O,
+        M = w > R,
+        P = w < 0 && x,
+        k = 0 === w ? g.intl.string(g.t.tU6YQ0) : w > 0 ? g.intl.formatToPlainString(g.t.qH8uFR, { count: w }) : g.intl.string(g.t.YSRIqa),
+        { analyticsLocations: U } = (0, u.ZP)(l.Z.CHARACTER_COUNT);
+    return (D && w >= 0) || !M || (L && !M)
         ? (0, r.jsx)(u.Gt, {
-              value: G,
+              value: U,
               children: (0, r.jsxs)('div', {
-                  className: a()(R, m.characterCount, { [m.error]: P < 0 }),
+                  className: a()(y, E.characterCount, { [E.error]: w < 0 }),
                   children: [
                       (0, r.jsxs)('div', {
-                          className: m.flairContainer,
+                          className: E.flairContainer,
                           children: [
-                              y && P >= 0
+                              D && w >= 0
                                   ? (0, r.jsx)(o.Tooltip, {
-                                        text: I.Z.Messages.PREMIUM_MESSAGE_LENGTH_CHATBOX_FLAIR.format({ maxLength: C }),
+                                        text: g.intl.formatToPlainString(g.t.vcvHa2, { maxLength: C }),
                                         position: 'top',
                                         children: (e) =>
                                             (0, r.jsx)(o.NitroWheelIcon, {
                                                 size: 'md',
                                                 color: 'currentColor',
-                                                className: m.premiumFlair,
+                                                className: E.premiumFlair,
                                                 ...e
                                             })
                                     })
                                   : null,
-                              U || w
+                              M || P
                                   ? null
                                   : (0, r.jsx)(o.Tooltip, {
-                                        text: x,
+                                        text: k,
                                         position: 'top',
                                         children: (e) =>
                                             (0, r.jsx)('span', {
                                                 'aria-hidden': !0,
                                                 ...e,
-                                                children: P
+                                                children: w
                                             })
                                     })
                           ]
                       }),
-                      (0, r.jsx)(o.HiddenVisually, { children: I.Z.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({ count: P }) }),
-                      b && !U
-                          ? (0, r.jsx)(f.Z, {
-                                className: m.upsell,
-                                iconOnly: (null === (i = S.upsellLongMessages) || void 0 === i ? void 0 : i.iconOnly) || !1,
-                                remaining: P
+                      (0, r.jsx)(o.HiddenVisually, { children: g.intl.format(g.t.qH8uFR, { count: w }) }),
+                      L && !M
+                          ? (0, r.jsx)(h.Z, {
+                                className: E.upsell,
+                                iconOnly: (null === (i = I.upsellLongMessages) || void 0 === i ? void 0 : i.iconOnly) || !1,
+                                remaining: w
                             })
                           : null
                   ]

@@ -14,14 +14,14 @@ async function o(e) {
         c = screen.height > 640 ? Math.round(screen.height / 2 - 320) : 0,
         d = null;
     !(0, i.isDesktop)() && (d = window.open(''.concat(window.location.protocol, '//').concat(window.location.host).concat(s.Z5c.CONNECTIONS(e), '?loading=true'), 'authorize', 'scrollbars=yes,resizable=yes,toolbar=no,location=yes,top='.concat(c, ',left=').concat(u, ',width=').concat(700, ',height=').concat(640)));
-    let _ = l;
-    if (null == _ && e !== a.Kt) {
+    let f = l;
+    if (null == f && e !== a.Kt) {
         let { body: i } = await r.Z.authorize(e, {
             location: t,
             twoWayLinkType: n,
             successRedirect: o
         });
-        _ = i.url;
+        f = i.url;
     }
-    if (null != _) return null != d ? (d.location.href = _) : window.open(_), _;
+    if (null != f) return null != d ? (d.location.href = f) : window.open(f), f;
 }

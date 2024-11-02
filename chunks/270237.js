@@ -1,17 +1,17 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return a;
     }
 });
-var s = n(192379),
-    a = n(661111);
-function r(e) {
-    s.useEffect(() => {
+var i = n(192379),
+    r = n(661111);
+function a(e) {
+    i.useEffect(() => {
         if (null != e)
             return (
-                a.Z.lockChangeLog(e),
+                r.Z.lockChangeLog(e),
                 () => {
-                    a.Z.unlockChangeLog(e);
+                    r.Z.unlockChangeLog(e);
                 }
             );
     }, [e]);

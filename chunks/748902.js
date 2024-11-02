@@ -1,9 +1,9 @@
 n(47120);
 var i,
-    s,
-    a,
     l,
-    r = n(442837),
+    r,
+    a,
+    s = n(442837),
     o = n(570140),
     c = n(786761),
     u = n(594174),
@@ -11,12 +11,12 @@ var i,
     h = n(333984);
 let m = {},
     p = new Set();
-function _(e) {
+function f(e) {
     return d.Z.isMessageRequest(e) || h.Z.isSpam(e);
 }
-function f(e, t) {
+function g(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    if (!_(e) || (null != t && e !== (null == t ? void 0 : t.channel_id))) return;
+    if (!f(e) || (null != t && e !== (null == t ? void 0 : t.channel_id))) return;
     let i = null == t ? null : (0, c.e5)(t);
     m[e] = {
         loaded: !0,
@@ -24,7 +24,7 @@ function f(e, t) {
         message: i
     };
 }
-class E extends (i = r.ZP.Store) {
+class C extends (i = s.ZP.Store) {
     initialize() {
         this.waitFor(d.Z, h.Z, u.default);
     }
@@ -43,26 +43,26 @@ class E extends (i = r.ZP.Store) {
         );
     }
 }
-(l = 'MessageRequestPreviewStore'),
-    (a = 'displayName') in (s = E)
-        ? Object.defineProperty(s, a, {
-              value: l,
+(a = 'MessageRequestPreviewStore'),
+    (r = 'displayName') in (l = C)
+        ? Object.defineProperty(l, r, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (s[a] = l),
-    (t.Z = new E(o.Z, {
+        : (l[r] = a),
+    (t.Z = new C(o.Z, {
         CONNECTION_OPEN: function () {
             (m = {}), p.clear();
         },
         CHANNEL_CREATE: function (e) {
             let { channel: t } = e;
-            _(t.id) && p.add(t.id);
+            f(t.id) && p.add(t.id);
         },
         CHANNEL_UPDATES: function (e) {
             let { channels: t } = e;
-            for (let e of t) !_(e.id) && (p.delete(e.id), delete m[e.id]);
+            for (let e of t) !f(e.id) && (p.delete(e.id), delete m[e.id]);
         },
         CHANNEL_DELETE: function (e) {
             let { channel: t } = e;
@@ -70,7 +70,7 @@ class E extends (i = r.ZP.Store) {
         },
         MESSAGE_CREATE: function (e) {
             if (e.isPushNotification) return !1;
-            f(e.message.channel_id, e.message);
+            g(e.message.channel_id, e.message);
         },
         MESSAGE_UPDATE: function (e) {
             let t = e.message.channel_id;
@@ -83,7 +83,7 @@ class E extends (i = r.ZP.Store) {
             };
         },
         MESSAGE_DELETE: function (e) {
-            if (!_(e.channelId)) return !1;
+            if (!f(e.channelId)) return !1;
             m[e.channelId] = {
                 loaded: !0,
                 error: !1,
@@ -94,15 +94,15 @@ class E extends (i = r.ZP.Store) {
             let { requestedChannelIds: t, supplementalData: n } = e,
                 i = new Set([...t]);
             for (let e of (n.forEach((e) => {
-                f(e.channel_id, e.message_preview), i.delete(e.channel_id);
+                g(e.channel_id, e.message_preview), i.delete(e.channel_id);
             }),
             Array.from(i)))
-                f(e, null);
+                g(e, null);
         },
         LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_ERROR: function (e) {
             let { requestedChannelIds: t } = e;
             t.forEach((e) => {
-                f(e, null, !0);
+                g(e, null, !0);
             });
         }
     }));

@@ -8,10 +8,10 @@ var r = n(570140),
     u = n(199902),
     c = n(314897),
     d = n(569545),
-    _ = n(803647),
-    E = n(981631),
-    f = n(65154);
-function h(e, t, n) {
+    f = n(803647),
+    _ = n(981631),
+    h = n(65154);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function h(e, t, n) {
         e
     );
 }
-class p {
+class m {
     _onGameDetectionUpdate(e) {
         if (
             ((this.applications = e.map((e) => {
@@ -98,7 +98,7 @@ class p {
                             resolution: n.resolution,
                             frameRate: n.fps
                         },
-                        context: f.Yn.STREAM
+                        context: h.Yn.STREAM
                     });
                 } else {
                     var r;
@@ -112,7 +112,7 @@ class p {
                             resolution: n.resolution,
                             frameRate: n.fps
                         },
-                        context: f.Yn.STREAM
+                        context: h.Yn.STREAM
                     });
                 }
                 break;
@@ -120,7 +120,7 @@ class p {
                 null != t && (0, a.tK)(t, !0);
                 break;
             case o.A.STOP:
-                null != t && (0, _.Z)(t);
+                null != t && (0, f.Z)(t);
                 break;
             default:
                 throw Error('unhandled stream action: '.concat(e.type));
@@ -144,23 +144,23 @@ class p {
         }
     }
     constructor() {
-        h(this, 'director', void 0),
-            h(this, 'applications', void 0),
-            h(this, 'streamKey', void 0),
-            h(this, 'mode', void 0),
+        p(this, 'director', void 0),
+            p(this, 'applications', void 0),
+            p(this, 'streamKey', void 0),
+            p(this, 'mode', void 0),
             (this.mode = null),
             (this.applications = []),
             (this.director = new o.a((e) => this._onDirectorAction(e))),
             r.Z.subscribe('STREAM_START', (e) => {
                 let { streamType: t, guildId: n, channelId: r, pid: i, sourceId: a, audioSourceId: o, sound: l } = e,
                     u = c.default.getId(),
-                    _ = (0, d.V9)({
+                    f = (0, d.V9)({
                         streamType: t,
                         guildId: n,
                         channelId: r,
                         ownerId: u
                     });
-                (null == i) != (null == a) ? (null != i && this._onStreamApplication(_, i), null != a && this._onStreamDirectSource(_, a, o, l)) : new s.Z('ApplicationSwitchingManager').warn('invalid start_stream: both application + display modes were specified (pid: '.concat(i, ', source-id: ').concat(a, ')'));
+                (null == i) != (null == a) ? (null != i && this._onStreamApplication(f, i), null != a && this._onStreamDirectSource(f, a, o, l)) : new s.Z('ApplicationSwitchingManager').warn('invalid start_stream: both application + display modes were specified (pid: '.concat(i, ', source-id: ').concat(a, ')'));
             }),
             r.Z.subscribe('STREAM_DELETE', (e) => {
                 let { streamKey: t } = e;
@@ -176,17 +176,17 @@ class p {
             }),
             r.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
                 let { videoState: t, context: n } = e;
-                n === f.Yn.STREAM && this._onCapturePaused(t === E.FQ1.PAUSED);
+                n === h.Yn.STREAM && this._onCapturePaused(t === _.FQ1.PAUSED);
             }),
             r.Z.subscribe('MEDIA_ENGINE_SET_GO_LIVE_SOURCE', (e) => {
                 let { settings: t } = e;
-                (null == t ? void 0 : t.context) === f.Yn.STREAM && (null == t ? void 0 : t.desktopSettings) == null && (null == t ? void 0 : t.cameraSettings) == null && this._onCaptureEnded();
+                (null == t ? void 0 : t.context) === h.Yn.STREAM && (null == t ? void 0 : t.desktopSettings) == null && (null == t ? void 0 : t.cameraSettings) == null && this._onCaptureEnded();
             });
     }
 }
 t.Z = {
     instance: null,
     init() {
-        null == this.instance && (this.instance = new p());
+        null == this.instance && (this.instance = new m());
     }
 };

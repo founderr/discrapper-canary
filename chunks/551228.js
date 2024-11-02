@@ -11,8 +11,8 @@ var t = l(200651),
     i = l(192379),
     r = l(442837),
     a = l(594174),
-    s = l(379357),
-    d = l(719247),
+    d = l(379357),
+    s = l(719247),
     u = l(442550),
     c = l(297781),
     o = l(443487),
@@ -20,14 +20,14 @@ var t = l(200651),
 let m = [c.XF];
 function x(e) {
     var n, l, t, i;
-    let s = (0, r.e7)([d.Z], () => d.Z.getMatchingActivity(e)),
+    let d = (0, r.e7)([s.Z], () => s.Z.getMatchingActivity(e)),
         u = (0, r.e7)([a.default], () => a.default.getUser(e.author_id));
-    if (null == s || null == u) return {};
+    if (null == d || null == u) return {};
     let c = e.extra.entries[0],
-        o = null !== (t = null !== (l = s.state) && void 0 !== l ? l : null === (n = c.media.artists[0]) || void 0 === n ? void 0 : n.name) && void 0 !== t ? t : c.media.title,
-        h = null !== (i = s.details) && void 0 !== i ? i : c.media.title;
+        o = null !== (t = null !== (l = d.state) && void 0 !== l ? l : null === (n = c.media.artists[0]) || void 0 === n ? void 0 : n.name) && void 0 !== t ? t : c.media.title,
+        h = null !== (i = d.details) && void 0 !== i ? i : c.media.title;
     return {
-        activity: s,
+        activity: d,
         artist: o,
         currentEntry: c,
         title: h,
@@ -37,7 +37,7 @@ function x(e) {
 n.ZP = i.memo(function (e) {
     let { entry: n, channel: l, selected: i } = e,
         { activity: r, artist: a } = x(n),
-        { largeImage: d } = (0, s.rv)({ entry: n });
+        { largeImage: s } = (0, d.rv)({ entry: n });
     return null == r
         ? (0, t.jsx)(o.cA, {})
         : (0, t.jsxs)(o.Zb, {
@@ -58,7 +58,7 @@ n.ZP = i.memo(function (e) {
                       ]
                   }),
                   (0, t.jsx)(u.f, {
-                      src: null == d ? void 0 : d.src,
+                      src: null == s ? void 0 : s.src,
                       size: 48,
                       className: h.thumbnail
                   })

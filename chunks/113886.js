@@ -1,29 +1,29 @@
-s.r(a), s(47120);
-var t = s(200651),
-    n = s(192379),
-    E = s(481060),
-    r = s(693546),
-    u = s(246364),
-    c = s(689938);
-a.default = (e) => {
-    let { guildId: a, userId: s, guildJoinRequestId: i, onConfirm: I, onError: T, modalProps: _ } = e,
-        [l, C] = n.useState(),
-        d = async () => {
+e.r(n), e(47120);
+var a = e(200651),
+    i = e(192379),
+    r = e(481060),
+    s = e(693546),
+    l = e(246364),
+    u = e(388032);
+n.default = (t) => {
+    let { guildId: n, userId: e, guildJoinRequestId: c, onConfirm: h, onError: o, modalProps: d } = t,
+        [p, x] = i.useState(),
+        C = async () => {
             try {
-                await r.Z.updateGuildJoinRequest(a, s, i, u.wB.REJECTED, l), null == I || I();
-            } catch (e) {
-                null == T || T();
+                await s.Z.updateGuildJoinRequest(n, e, c, l.wB.REJECTED, p), null == h || h();
+            } catch (t) {
+                null == o || o();
             }
         };
-    return (0, t.jsx)(E.ConfirmModal, {
-        header: c.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_MODAL_TITLE,
-        cancelText: c.Z.Messages.CANCEL,
-        confirmText: c.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_APPLICATION,
-        onConfirm: d,
-        ..._,
-        children: (0, t.jsx)(E.TextArea, {
-            value: l,
-            onChange: C,
+    return (0, a.jsx)(r.ConfirmModal, {
+        header: u.intl.string(u.t['mFP/q6']),
+        cancelText: u.intl.string(u.t['ETE/oK']),
+        confirmText: u.intl.string(u.t.hDtbs7),
+        onConfirm: C,
+        ...d,
+        children: (0, a.jsx)(r.TextArea, {
+            value: p,
+            onChange: x,
             maxLength: 160
         })
     });

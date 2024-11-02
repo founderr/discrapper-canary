@@ -7,18 +7,18 @@ var r = n(147018),
     u = n(155763),
     c = n(714050),
     d = n(995739),
-    _ = n(87046),
-    E = n(115726),
-    f = n(641236),
-    h = n(992051),
-    p = f('replace'),
-    I = TypeError,
-    m = a(''.indexOf),
-    T = a(''.replace),
-    S = a(''.slice),
-    g = Math.max,
-    A = function (e, t, n) {
-        return n > e.length ? -1 : '' === t ? n : m(e, t, n);
+    f = n(87046),
+    _ = n(115726),
+    h = n(641236),
+    p = n(992051),
+    m = h('replace'),
+    g = TypeError,
+    E = a(''.indexOf),
+    v = a(''.replace),
+    I = a(''.slice),
+    S = Math.max,
+    T = function (e, t, n) {
+        return n > e.length ? -1 : '' === t ? n : E(e, t, n);
     };
 r(
     {
@@ -30,22 +30,22 @@ r(
             var n,
                 r,
                 a,
-                f,
+                h,
+                b,
+                y,
+                A,
                 N,
-                R,
-                O,
-                v,
                 C = s(this),
-                L = 0,
-                D = 0,
-                y = '';
+                R = 0,
+                O = 0,
+                D = '';
             if (!l(e)) {
-                if ((n = u(e)) && !~m(c(s(_(e))), 'g')) throw I('`.replaceAll` does not allow non-global regexes');
-                if ((r = d(e, p))) return i(r, e, C, t);
-                if (h && n) return T(c(C), e, t);
+                if ((n = u(e)) && !~E(c(s(f(e))), 'g')) throw g('`.replaceAll` does not allow non-global regexes');
+                if ((r = d(e, m))) return i(r, e, C, t);
+                if (p && n) return v(c(C), e, t);
             }
-            for (a = c(C), f = c(e), !(N = o(t)) && (t = c(t)), O = g(1, (R = f.length)), L = A(a, f, 0); -1 !== L; ) (v = N ? c(t(f, L, a)) : E(f, a, L, [], void 0, t)), (y += S(a, D, L) + v), (D = L + R), (L = A(a, f, L + O));
-            return D < a.length && (y += S(a, D)), y;
+            for (a = c(C), h = c(e), !(b = o(t)) && (t = c(t)), A = S(1, (y = h.length)), R = T(a, h, 0); -1 !== R; ) (N = b ? c(t(h, R, a)) : _(h, a, R, [], void 0, t)), (D += I(a, O, R) + N), (O = R + y), (R = T(a, h, R + A));
+            return O < a.length && (D += I(a, O)), D;
         }
     }
 );

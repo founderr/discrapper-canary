@@ -1,30 +1,30 @@
 n.d(t, {
     To: function () {
-        return m;
-    },
-    Xu: function () {
         return g;
     },
-    ZP: function () {
+    Xu: function () {
         return C;
     },
-    aF: function () {
+    ZP: function () {
         return _;
+    },
+    aF: function () {
+        return m;
     }
 });
 var i = n(200651),
     l = n(192379),
     r = n(481060),
     a = n(100527),
-    s = n(428695),
-    o = n(703656),
+    o = n(428695),
+    s = n(703656),
     c = n(970606),
     u = n(308083),
     d = n(981631),
     h = n(921944),
-    p = n(689938),
+    p = n(388032),
     f = n(737116);
-function _(e) {
+function m(e) {
     let { title: t } = e;
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)(r.Heading, {
@@ -35,7 +35,7 @@ function _(e) {
         })
     });
 }
-function m(e) {
+function g(e) {
     let { message: t } = e;
     return (0, i.jsx)(r.Text, {
         variant: 'text-xs/normal',
@@ -44,7 +44,7 @@ function m(e) {
         children: t
     });
 }
-function g(e) {
+function C(e) {
     let { onClick: t } = e;
     return (0, i.jsx)(r.Button, {
         fullWidth: !0,
@@ -56,11 +56,11 @@ function g(e) {
         children: (0, i.jsx)(r.Text, {
             variant: 'text-sm/semibold',
             color: 'always-white',
-            children: p.Z.Messages.CHECK_IT_OUT
+            children: p.intl.string(p.t.RzWDqa)
         })
     });
 }
-function C(e) {
+function _(e) {
     let { guild: t, markAsDismissed: n, defaultGameId: r } = e;
     l.useEffect(() => {
         (0, c.TE)({
@@ -68,24 +68,24 @@ function C(e) {
             location: a.Z.GUILD_CHANNEL_LIST
         });
     }, [t.id]);
-    let C = r === u.xn ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE : r === u.nJ ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE : p.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
-        I = l.useCallback(() => (0, i.jsx)(m, { message: p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE }), []),
-        E = l.useCallback(() => (0, i.jsx)(_, { title: C }), [C]),
-        N = l.useCallback(() => {
+    let _ = r === u.xn ? p.intl.string(p.t.Y95lq6) : r === u.nJ ? p.intl.string(p.t['1UjqaG']) : p.intl.string(p.t.MA2x2N),
+        x = l.useCallback(() => (0, i.jsx)(g, { message: p.intl.string(p.t.VuqJFR) }), []),
+        v = l.useCallback(() => (0, i.jsx)(m, { title: _ }), [_]),
+        I = l.useCallback(() => {
             (0, c.aN)({
                 guildId: t.id,
                 location: a.Z.GUILD_CHANNEL_LIST
             }),
-                (0, o.uL)(d.Z5c.GUILD_DISCOVERY);
+                (0, s.uL)(d.Z5c.GUILD_DISCOVERY);
         }, [t.id]),
-        x = l.useCallback(() => (0, i.jsx)(g, { onClick: N }), [N]);
-    return (0, i.jsx)(s.Z, {
+        b = l.useCallback(() => (0, i.jsx)(C, { onClick: I }), [I]);
+    return (0, i.jsx)(o.Z, {
         className: f.notice,
         guild: t,
         onDismissed: () => n(h.L.DISMISS),
-        title: E,
-        message: I,
-        cta: x,
+        title: v,
+        message: x,
+        cta: b,
         trackingSource: d.PsQ.CLAN_ADMIN_UPSELL,
         type: d.vID.CLAN_ADMIN_UPSELL
     });

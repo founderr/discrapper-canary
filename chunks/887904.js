@@ -3,23 +3,23 @@ t.d(n, {
         return o;
     }
 });
-var a = t(200651);
+var i = t(200651);
 t(192379);
-var i = t(481060),
-    l = t(557239),
-    s = t(689938);
+var l = t(481060),
+    a = t(557239),
+    r = t(388032);
 function o(e) {
-    let { guildFriendsEnabled: n } = l.Z.useExperiment({ location: 'useFriendsItem' }, { autoTrackExposure: !1 });
+    let { guildFriendsEnabled: n } = a.Z.useExperiment({ location: 'useFriendsItem' }, { autoTrackExposure: !1 });
     return n
-        ? (0, a.jsx)(i.MenuItem, {
+        ? (0, i.jsx)(l.MenuItem, {
               id: 'friends',
-              label: s.Z.Messages.GUILD_FRIENDS,
-              icon: i.FriendsIcon,
+              label: r.intl.string(r.t.kYxEcH),
+              icon: l.FriendsIcon,
               action: () => {
-                  (0, i.openModalLazy)(async () => {
+                  (0, l.openModalLazy)(async () => {
                       let { default: n } = await t.e('62635').then(t.bind(t, 564232));
                       return (t) =>
-                          (0, a.jsx)(n, {
+                          (0, i.jsx)(n, {
                               guild: e,
                               ...t
                           });

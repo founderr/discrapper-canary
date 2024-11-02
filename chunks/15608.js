@@ -1,108 +1,108 @@
-s.d(t, {
+n.d(t, {
     Z: function () {
         return C;
     }
 });
-var a = s(200651),
-    n = s(192379),
-    l = s(481060),
-    o = s(600164),
-    i = s(109983),
-    r = s(120298),
-    c = s(486527),
-    d = s(689938),
-    u = s(241689);
+var i = n(200651),
+    l = n(192379),
+    s = n(481060),
+    a = n(600164),
+    o = n(109983),
+    r = n(120298),
+    c = n(486527),
+    d = n(388032),
+    u = n(241689);
 function m(e) {
-    let { guildTemplate: t, onClick: s, autoFocus: l } = e,
-        o = n.useCallback(() => {
-            s(t);
-        }, [t, s]);
-    return (0, a.jsx)(i.Z, {
+    let { guildTemplate: t, onClick: n, autoFocus: s } = e,
+        a = l.useCallback(() => {
+            n(t);
+        }, [t, n]);
+    return (0, i.jsx)(o.Z, {
         icon: r.M[t.id],
         message: t.label,
-        onClick: o,
-        autoFocus: l
+        onClick: a,
+        autoFocus: s
     });
 }
 function C(e) {
-    let { onClose: t, onBack: s, onChooseTemplate: n, directoryGuildName: i } = e,
+    let { onClose: t, onBack: n, onChooseTemplate: l, directoryGuildName: o } = e,
         r = (0, c.Pp)();
-    return (0, a.jsxs)(a.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, a.jsxs)(l.ModalHeader, {
-                direction: o.Z.Direction.VERTICAL,
+            (0, i.jsxs)(s.ModalHeader, {
+                direction: a.Z.Direction.VERTICAL,
                 className: u.header,
                 separator: !1,
                 children: [
-                    (0, a.jsx)(l.Heading, {
+                    (0, i.jsx)(s.Heading, {
                         className: u.title,
                         variant: 'heading-xl/semibold',
-                        children: d.Z.Messages.HUB_CREATE_OR_ADD_GUILD_TITLE.format({ guildName: i })
+                        children: d.intl.format(d.t.T7aLYW, { guildName: o })
                     }),
-                    (0, a.jsx)(l.Text, {
+                    (0, i.jsx)(s.Text, {
                         className: u.subtitle,
                         color: 'header-secondary',
                         variant: 'text-md/normal',
-                        children: d.Z.Messages.HUB_CREATE_OR_ADD_GUILD_SUBTITLE
+                        children: d.intl.string(d.t['RA+St7'])
                     }),
                     null != t &&
-                        (0, a.jsx)(l.ModalCloseButton, {
+                        (0, i.jsx)(s.ModalCloseButton, {
                             className: u.closeButton,
                             onClick: t
                         })
                 ]
             }),
-            (0, a.jsxs)(l.ModalContent, {
+            (0, i.jsxs)(s.ModalContent, {
                 className: u.templatesList,
                 paddingFix: !1,
                 children: [
-                    (0, a.jsx)(m, {
+                    (0, i.jsx)(m, {
                         guildTemplate: {
                             ...r[c.sE.CREATE],
-                            label: d.Z.Messages.HUB_CREATE_GUILD_CTA
+                            label: d.intl.string(d.t.WqJbLi)
                         },
-                        onClick: n
+                        onClick: l
                     }),
-                    (0, a.jsx)(l.Text, {
+                    (0, i.jsx)(s.Text, {
                         className: u.optionHeader,
                         color: 'header-secondary',
                         variant: 'text-xs/bold',
-                        children: d.Z.Messages.GUILD_TEMPLATE_SELECTOR_OPTION_HEADER
+                        children: d.intl.string(d.t.JGDkfn)
                     }),
-                    (0, a.jsx)(m, {
+                    (0, i.jsx)(m, {
                         guildTemplate: r[c.sE.HUB_STUDY],
-                        onClick: n
+                        onClick: l
                     }),
-                    (0, a.jsx)(m, {
+                    (0, i.jsx)(m, {
                         guildTemplate: r[c.sE.HUB_SCHOOL_CLUB],
-                        onClick: n
+                        onClick: l
                     }),
-                    (0, a.jsx)(m, {
+                    (0, i.jsx)(m, {
                         guildTemplate: r[c.sE.HUB_CLASS],
-                        onClick: n
+                        onClick: l
                     }),
-                    (0, a.jsx)(m, {
+                    (0, i.jsx)(m, {
                         guildTemplate: r[c.sE.HUB_SOCIAL],
-                        onClick: n
+                        onClick: l
                     }),
-                    (0, a.jsx)(m, {
+                    (0, i.jsx)(m, {
                         guildTemplate: r[c.sE.HUB_MAJOR],
-                        onClick: n
+                        onClick: l
                     }),
-                    (0, a.jsx)(m, {
+                    (0, i.jsx)(m, {
                         guildTemplate: r[c.sE.HUB_DORM],
-                        onClick: n
+                        onClick: l
                     })
                 ]
             }),
-            (0, a.jsx)(l.ModalFooter, {
+            (0, i.jsx)(s.ModalFooter, {
                 className: u.footer,
-                children: (0, a.jsx)(l.Button, {
+                children: (0, i.jsx)(s.Button, {
                     className: u.backButton,
-                    look: l.Button.Looks.BLANK,
-                    size: l.Button.Sizes.MIN,
-                    onClick: s,
-                    children: d.Z.Messages.BACK
+                    look: s.Button.Looks.BLANK,
+                    size: s.Button.Sizes.MIN,
+                    onClick: n,
+                    children: d.intl.string(d.t['13/7kZ'])
                 })
             })
         ]

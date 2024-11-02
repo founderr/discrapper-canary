@@ -1,83 +1,83 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return g;
+        return E;
     }
 }),
-    t(47120);
-var n = t(200651),
-    a = t(192379),
-    i = t(481060),
-    r = t(430824),
-    o = t(626135),
-    l = t(63063),
-    c = t(709054),
-    d = t(88658),
-    _ = t(695346),
-    u = t(639814),
-    E = t(838436),
-    T = t(51331),
-    S = t(922628),
-    I = t(526761),
-    N = t(726985),
-    m = t(736530),
-    C = t(981631),
-    A = t(689938);
-function g() {
-    let e = (0, u.is)(),
-        s = (0, u.c_)(),
-        t = _.iG.useSetting(),
-        g = _.h2.useSetting().includes(e),
-        h = _.mX.useSetting(),
-        O = _.zA.useSetting().includes(e),
-        p = a.useCallback(
-            (s) => {
-                let t = new Set((0, d.gl)());
-                s ? t.delete(e) : t.add(e), _.zA.updateSetting(Array.from(t));
+    n(47120);
+var i = n(200651),
+    s = n(192379),
+    r = n(481060),
+    l = n(430824),
+    a = n(626135),
+    o = n(63063),
+    c = n(709054),
+    d = n(88658),
+    u = n(695346),
+    m = n(639814),
+    h = n(838436),
+    g = n(51331),
+    p = n(922628),
+    x = n(526761),
+    S = n(726985),
+    T = n(736530),
+    C = n(981631),
+    _ = n(388032);
+function E() {
+    let e = (0, m.is)(),
+        t = (0, m.c_)(),
+        n = u.iG.useSetting(),
+        E = u.h2.useSetting().includes(e),
+        f = u.mX.useSetting(),
+        I = u.zA.useSetting().includes(e),
+        N = s.useCallback(
+            (t) => {
+                let n = new Set((0, d.gl)());
+                t ? n.delete(e) : n.add(e), u.zA.updateSetting(Array.from(n));
             },
             [e]
         );
-    function R(e, s) {
-        o.default.track(C.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
+    function A(e, t) {
+        a.default.track(C.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
             default_guilds_restricted: e,
-            applied_to_existing_guilds: s
+            applied_to_existing_guilds: t
         });
     }
-    return (0, n.jsx)(E.U, {
-        setting: N.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_MESSAGE_REQUESTS_V2,
-        scrollPosition: I.to.MESSAGE_REQUESTS_V2,
+    return (0, i.jsx)(h.U, {
+        setting: S.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_MESSAGE_REQUESTS_V2,
+        scrollPosition: x.to.MESSAGE_REQUESTS_V2,
         children:
-            e === m.T
-                ? (0, n.jsx)(T.Z, {
-                      title: A.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_MESSAGE_REQUESTS_SETTING_TITLE,
-                      value: !t && !h,
+            e === T.T
+                ? (0, i.jsx)(g.Z, {
+                      title: _.intl.string(_.t['3o2ojo']),
+                      value: !n && !f,
                       onChange: () => {
                           var e;
                           return (
-                              (e = !h),
-                              void (0, S.V)({
-                                  header: A.Z.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_MODAL_HEADER,
-                                  body: A.Z.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_MODAL_DESCRIPTION,
-                                  confirmText: A.Z.Messages.NO_TEXT,
-                                  cancelText: A.Z.Messages.YES_TEXT,
-                                  confirmButtonColor: i.Button.Colors.BRAND,
+                              (e = !f),
+                              void (0, p.V)({
+                                  header: _.intl.string(_.t.yAfu1t),
+                                  body: _.intl.string(_.t['Ry2z7+']),
+                                  confirmText: _.intl.string(_.t.gm1Ven),
+                                  cancelText: _.intl.string(_.t.p89ACg),
+                                  confirmButtonColor: r.Button.Colors.BRAND,
                                   onConfirm: () => {
-                                      _.mX.updateSetting(e), R(e, !1);
+                                      u.mX.updateSetting(e), A(e, !1);
                                   },
                                   onCancel: () => {
-                                      _.mX.updateSetting(e), _.zA.updateSetting(e ? c.default.keys(r.Z.getGuilds()) : []), R(e, !0);
+                                      u.mX.updateSetting(e), u.zA.updateSetting(e ? c.default.keys(l.Z.getGuilds()) : []), A(e, !0);
                                   }
                               })
                           );
                       },
-                      disabled: t,
-                      note: A.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC_V2.format({ helpdeskArticle: l.Z.getArticleURL(C.BhN.MESSAGE_REQUESTS) })
+                      disabled: n,
+                      note: _.intl.format(_.t.wkm9a2, { helpdeskArticle: o.Z.getArticleURL(C.BhN.MESSAGE_REQUESTS) })
                   })
-                : (0, n.jsx)(T.Z, {
-                      title: A.Z.Messages.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_MESSAGE_REQUESTS_SETTING_TITLE,
-                      value: !O,
-                      onChange: p,
-                      disabled: g,
-                      note: s ? A.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC_HUB_V2.format({ helpdeskArticle: l.Z.getArticleURL(C.BhN.MESSAGE_REQUESTS) }) : A.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC_V2.format({ helpdeskArticle: l.Z.getArticleURL(C.BhN.MESSAGE_REQUESTS) })
+                : (0, i.jsx)(g.Z, {
+                      title: _.intl.string(_.t['3o2ojo']),
+                      value: !I,
+                      onChange: N,
+                      disabled: E,
+                      note: t ? _.intl.format(_.t.WpnWLS, { helpdeskArticle: o.Z.getArticleURL(C.BhN.MESSAGE_REQUESTS) }) : _.intl.format(_.t.wkm9a2, { helpdeskArticle: o.Z.getArticleURL(C.BhN.MESSAGE_REQUESTS) })
                   })
     });
 }

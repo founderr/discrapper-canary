@@ -1,26 +1,26 @@
-s.r(n),
-    s.d(n, {
+e.r(t),
+    e.d(t, {
         default: function () {
             return c;
         }
     });
-var a = s(200651),
-    t = s(481060),
-    u = s(239091),
-    i = s(299206),
-    r = s(689938);
-function c(e) {
-    let { tag: n } = e;
-    return (0, a.jsx)(t.Menu, {
+var i = e(200651),
+    r = e(481060),
+    u = e(239091),
+    a = e(299206),
+    s = e(388032);
+function c(n) {
+    let { tag: t } = n;
+    return (0, i.jsx)(r.Menu, {
         navId: 'forum-tag',
         onClose: u.Zy,
-        'aria-label': r.Z.Messages.FORUM_TAG_ACTIONS_MENU_LABEL,
+        'aria-label': s.intl.string(s.t.AzTwio),
         onSelect: void 0,
         className: 'context-menu',
-        children: (0, a.jsx)(t.MenuGroup, {
-            children: (0, i.Z)({
-                id: n.id,
-                label: r.Z.Messages.COPY_ID_FORUM_TAG
+        children: (0, i.jsx)(r.MenuGroup, {
+            children: (0, a.Z)({
+                id: t.id,
+                label: s.intl.string(s.t['8VG6IS'])
             })
         })
     });

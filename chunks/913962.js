@@ -1,69 +1,69 @@
-n.r(e),
-    n.d(e, {
+e.r(n),
+    e.d(n, {
         default: function () {
-            return T;
+            return C;
         }
     });
-var o = n(200651);
-n(192379);
-var s = n(481060),
-    a = n(230711),
-    i = n(600164),
-    l = n(313201),
-    r = n(695346),
-    d = n(626135),
-    c = n(981631),
-    A = n(526761),
-    _ = n(689938),
-    u = n(773611),
-    C = n(38880);
-function T(t) {
-    let { onClose: e, transitionState: n } = t,
-        T = (0, l.Dt)();
-    function N() {
-        e(), a.Z.open(c.oAB.ACCESSIBILITY, null, { scrollPosition: A.rP.LEGACY_CHAT_INPUT });
+var i = e(200651);
+e(192379);
+var o = e(481060),
+    a = e(230711),
+    l = e(600164),
+    s = e(313201),
+    r = e(695346),
+    d = e(626135),
+    c = e(981631),
+    u = e(526761),
+    h = e(388032),
+    p = e(773611),
+    x = e(38880);
+function C(t) {
+    let { onClose: n, transitionState: e } = t,
+        C = (0, s.Dt)();
+    function f() {
+        n(), a.Z.open(c.oAB.ACCESSIBILITY, null, { scrollPosition: u.rP.LEGACY_CHAT_INPUT });
     }
-    return (0, o.jsxs)(s.ModalRoot, {
-        transitionState: n,
-        'aria-labelledby': T,
+    return (0, i.jsxs)(o.ModalRoot, {
+        transitionState: e,
+        'aria-labelledby': C,
         children: [
-            (0, o.jsx)('img', {
-                className: u.art,
-                src: C,
+            (0, i.jsx)('img', {
+                className: p.art,
+                src: x,
                 alt: ''
             }),
-            (0, o.jsx)(s.ModalContent, {
-                children: (0, o.jsxs)(i.Z, {
-                    direction: i.Z.Direction.VERTICAL,
-                    justify: i.Z.Justify.CENTER,
+            (0, i.jsx)(o.ModalContent, {
+                children: (0, i.jsxs)(l.Z, {
+                    direction: l.Z.Direction.VERTICAL,
+                    justify: l.Z.Justify.CENTER,
                     children: [
-                        (0, o.jsx)(s.Heading, {
-                            id: T,
+                        (0, i.jsx)(o.Heading, {
+                            id: C,
                             variant: 'heading-lg/semibold',
-                            className: u.title,
-                            children: _.Z.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_EXPLANATION_MODAL_TITLE
+                            className: p.title,
+                            children: h.intl.string(h.t.G9HG5O)
                         }),
-                        (0, o.jsx)(s.Text, {
+                        (0, i.jsx)(o.Text, {
                             variant: 'text-md/normal',
-                            className: u.body,
-                            children: _.Z.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_EXPLANATION_MODAL_MESSAGE.format({
-                                openSettingsHook: (t, e) =>
-                                    (0, o.jsx)(
-                                        s.Anchor,
+                            className: p.body,
+                            children: h.intl.format(h.t.ZtUieH, {
+                                openSettingsHook: (t, n) =>
+                                    (0, i.jsx)(
+                                        o.Anchor,
                                         {
-                                            onClick: N,
+                                            onClick: f,
                                             children: t
                                         },
-                                        e
+                                        n
                                     )
                             })
                         })
                     ]
                 })
             }),
-            (0, o.jsxs)(s.ModalFooter, {
+            (0, i.jsxs)(o.ModalFooter, {
                 children: [
-                    (0, o.jsx)(s.Button, {
+                    (0, i.jsx)(o.Button, {
                         type: 'button',
                         onClick: function () {
                             d.default.track(c.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
@@ -71,17 +71,17 @@ function T(t) {
                                 location: 'LegacyChatInputExplanationModal'
                             }),
                                 r.dN.updateSetting(!1),
-                                e();
+                                n();
                         },
-                        children: _.Z.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_EXPLANATION_MODAL_BUTTON_CTA
+                        children: h.intl.string(h.t.VdzwlJ)
                     }),
-                    (0, o.jsx)(s.Button, {
+                    (0, i.jsx)(o.Button, {
                         type: 'button',
-                        look: s.Button.Looks.LINK,
-                        size: s.Button.Sizes.MEDIUM,
-                        color: s.Button.Colors.PRIMARY,
-                        onClick: e,
-                        children: _.Z.Messages.NO_THANKS
+                        look: o.Button.Looks.LINK,
+                        size: o.Button.Sizes.MEDIUM,
+                        color: o.Button.Colors.PRIMARY,
+                        onClick: n,
+                        children: h.intl.string(h.t.f3Pet7)
                     })
                 ]
             })

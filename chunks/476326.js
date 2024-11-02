@@ -1,12 +1,12 @@
 n.d(t, {
     ZP: function () {
-        return h;
+        return p;
     },
     ow: function () {
         return a;
     },
     rG: function () {
-        return f;
+        return h;
     }
 });
 var r,
@@ -18,8 +18,8 @@ var r,
     u = n.n(l),
     c = n(772848),
     d = n(403182),
-    _ = n(861990);
-function E(e, t, n) {
+    f = n(861990);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,20 +32,20 @@ function E(e, t, n) {
         e
     );
 }
-function f(e) {
+function h(e) {
     return void 0 !== e.isVideo && void 0 !== e.isImage;
 }
 ((r = a || (a = {}))[(r.REACT_NATIVE = 0)] = 'REACT_NATIVE'), (r[(r.WEB = 1)] = 'WEB'), ((i = s || (s = {}))[(i.FILE_ATTACHMENT = 0)] = 'FILE_ATTACHMENT'), (i[(i.IMAGE_PICKER = 1)] = 'IMAGE_PICKER');
-class h extends o.EventEmitter {
+class p extends o.EventEmitter {
     cancel() {}
     resetState() {
         return this;
     }
     constructor(e, t) {
         var n, r;
-        if ((super(), E(this, 'id', void 0), E(this, 'uniqueId', void 0), E(this, 'filename', void 0), E(this, 'item', void 0), E(this, 'spoiler', void 0), E(this, 'description', void 0), E(this, 'classification', void 0), E(this, 'isImage', void 0), E(this, 'isVideo', void 0), E(this, 'uploadedFilename', void 0), E(this, 'showLargeMessageDialog', void 0), E(this, 'mimeType', void 0), E(this, 'origin', void 0), E(this, 'durationSecs', void 0), E(this, 'waveform', void 0), E(this, 'isThumbnail', void 0), E(this, 'isRemix', void 0), E(this, 'clip', void 0), (this.item = e), 0 === e.platform)) {
+        if ((super(), _(this, 'id', void 0), _(this, 'uniqueId', void 0), _(this, 'filename', void 0), _(this, 'item', void 0), _(this, 'spoiler', void 0), _(this, 'description', void 0), _(this, 'classification', void 0), _(this, 'isImage', void 0), _(this, 'isVideo', void 0), _(this, 'uploadedFilename', void 0), _(this, 'showLargeMessageDialog', void 0), _(this, 'mimeType', void 0), _(this, 'origin', void 0), _(this, 'durationSecs', void 0), _(this, 'waveform', void 0), _(this, 'isThumbnail', void 0), _(this, 'isRemix', void 0), _(this, 'clip', void 0), (this.item = e), 0 === e.platform)) {
             this.id = null !== (n = e.id) && void 0 !== n ? n : e.uri;
-            let t = (0, _.hn)({
+            let t = (0, f.hn)({
                 uri: e.uri,
                 overrideFilename: e.filename,
                 overrideType: e.mimeType

@@ -4,8 +4,8 @@ t.d(n, {
     }
 }),
     t(724458);
-var a = t(544891),
-    r = t(981631);
+var r = t(544891),
+    a = t(981631);
 let i = (e) =>
     e.reduce(
         (e, n) => (
@@ -18,5 +18,5 @@ let i = (e) =>
         {}
     );
 async function s(e) {
-    return i((await a.tn.get({ url: r.ANM.GUILD_TOP_GAMES(e) })).body.top_games);
+    return i((await r.tn.get({ url: a.ANM.GUILD_TOP_GAMES(e) })).body.top_games);
 }

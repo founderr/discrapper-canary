@@ -13,20 +13,20 @@ var i = n(120356),
 function u(e) {
     var t;
     let { name: n, className: i, state: u, isInline: c, onClick: d } = e,
-        _ = null,
-        E = o.Z.Colors.HEADER_PRIMARY;
-    (null == u ? void 0 : u.isActive) && !c ? (_ = l.active) : (null == u ? void 0 : null === (t = u.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? (_ = l.error) : (null == u ? void 0 : u.hasValue) && !c && (_ = l.set);
-    let f = (0, r.jsx)(o.Z, {
+        f = null,
+        _ = o.Z.Colors.HEADER_PRIMARY;
+    (null == u ? void 0 : u.isActive) && !c ? (f = l.active) : (null == u ? void 0 : null === (t = u.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? (f = l.error) : (null == u ? void 0 : u.hasValue) && !c && (f = l.set);
+    let h = (0, r.jsx)(o.Z, {
         size: c ? o.Z.Sizes.SIZE_16 : o.Z.Sizes.SIZE_14,
-        color: E,
-        className: a()(l.option, { [l.inline]: c }, _, i),
+        color: _,
+        className: a()(l.option, { [l.inline]: c }, f, i),
         children: n + (c ? ':' : '')
     });
     return null == d
-        ? f
+        ? h
         : (0, r.jsx)(s.Clickable, {
               className: l.clickable,
               onClick: () => d(n),
-              children: f
+              children: h
           });
 }

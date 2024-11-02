@@ -3,17 +3,17 @@ n.d(t, {
         return o;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(481060),
-    i = n(44315),
-    r = n(981631),
-    l = n(689938);
+var r = n(481060),
+    l = n(44315),
+    s = n(981631),
+    a = n(388032);
 function o(e) {
-    let { className: t, color: n = (0, i.Lq)(r.Ilk.BRAND_500), ...o } = e;
-    return (0, s.jsx)(a.TextBadge, {
+    let { className: t, color: n = (0, l.Lq)(s.Ilk.BRAND_500), ...o } = e;
+    return (0, i.jsx)(r.TextBadge, {
         ...o,
-        text: l.Z.Messages.ALPHA,
+        text: a.intl.string(a.t.G6GWZ2),
         color: n,
         className: t
     });

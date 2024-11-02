@@ -8,32 +8,32 @@ var r,
     u = n(981631),
     c = n(65154);
 let d = null,
-    _ = null,
-    E = {};
-function f(e, t) {
+    f = null,
+    _ = {};
+function h(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-        r = E[e];
+        r = _[e];
     if (null == r) return;
     let i = r[null != t ? t : u.kod];
     if (null != i) {
         for (let e of Object.values(c.Yn)) (n === e || null == n) && delete i[e];
-        E[e][null != t ? t : u.kod] = i;
+        _[e][null != t ? t : u.kod] = i;
     }
 }
-class h extends (r = o.ZP.Store) {
+class p extends (r = o.ZP.Store) {
     getStreamId(e, t) {
         var n, r, i;
         let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.Yn.DEFAULT;
-        return null === (i = E[e]) || void 0 === i ? void 0 : null === (r = i[null != t ? t : u.kod]) || void 0 === r ? void 0 : null === (n = r[a]) || void 0 === n ? void 0 : n.streamId;
+        return null === (i = _[e]) || void 0 === i ? void 0 : null === (r = i[null != t ? t : u.kod]) || void 0 === r ? void 0 : null === (n = r[a]) || void 0 === n ? void 0 : n.streamId;
     }
     getUserStreamData(e, t) {
         var n, r;
         let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.Yn.DEFAULT;
-        return null === (r = E[e]) || void 0 === r ? void 0 : null === (n = r[null != t ? t : u.kod]) || void 0 === n ? void 0 : n[i];
+        return null === (r = _[e]) || void 0 === r ? void 0 : null === (n = r[null != t ? t : u.kod]) || void 0 === n ? void 0 : n[i];
     }
 }
 (s = 'VideoStreamStore'),
-    (a = 'displayName') in (i = h)
+    (a = 'displayName') in (i = p)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -41,28 +41,28 @@ class h extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new h(l.Z, {
+    (t.Z = new p(l.Z, {
         CONNECTION_OPEN: function (e) {
             let { user: t, sessionId: n } = e;
-            (d = t.id), (_ = n);
+            (d = t.id), (f = n);
         },
         OVERLAY_INITIALIZE: function (e) {
             let { user: t, sessionId: n } = e;
-            (d = t.id), (_ = n);
+            (d = t.id), (f = n);
         },
         RTC_CONNECTION_VIDEO: function (e) {
             let { userId: t, guildId: n, streamId: r, context: i } = e;
             null != r
                 ? !(function (e, t, n, r) {
                       var i;
-                      !(e in E) && (E[e] = {});
-                      let a = null !== (i = E[e][null != t ? t : u.kod]) && void 0 !== i ? i : {};
-                      E[e][null != t ? t : u.kod] = {
+                      !(e in _) && (_[e] = {});
+                      let a = null !== (i = _[e][null != t ? t : u.kod]) && void 0 !== i ? i : {};
+                      _[e][null != t ? t : u.kod] = {
                           ...a,
                           [r]: { streamId: n }
                       };
                   })(t, n, r, i)
-                : f(t, n, i);
+                : h(t, n, i);
         },
         VOICE_STATE_UPDATES: function (e) {
             let { voiceStates: t } = e;
@@ -70,11 +70,11 @@ class h extends (r = o.ZP.Store) {
                 var n;
                 let { userId: r, sessionId: i, channelId: a, guildId: s } = t;
                 if (null == a && r === d) {
-                    if (i !== _) return e;
-                    E = {};
+                    if (i !== f) return e;
+                    _ = {};
                 } else {
-                    if (null != a || (null === (n = E[r]) || void 0 === n ? void 0 : n[null != s ? s : u.kod]) == null) return e;
-                    f(r, s);
+                    if (null != a || (null === (n = _[r]) || void 0 === n ? void 0 : n[null != s ? s : u.kod]) == null) return e;
+                    h(r, s);
                 }
                 return !0;
             }, !1);

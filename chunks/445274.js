@@ -31,16 +31,16 @@ n.r(t),
             return r.ax;
         },
         createIntl: function () {
-            return _.d;
+            return f.d;
         },
         createIntlCache: function () {
             return r.Sn;
         },
         defineMessage: function () {
-            return f;
+            return h;
         },
         defineMessages: function () {
-            return E;
+            return _;
         },
         filterProps: function () {
             return r.L6;
@@ -91,10 +91,10 @@ var r = n(543491),
     u = n(635846),
     c = n(832584),
     d = n(744154),
-    _ = n(454439);
-function E(e) {
+    f = n(454439);
+function _(e) {
     return e;
 }
-function f(e) {
+function h(e) {
     return e;
 }

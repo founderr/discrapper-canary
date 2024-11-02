@@ -20,38 +20,38 @@ function u(e, t, n) {
     var a;
     let { key: s, isDisabled: o, shouldSelectOnPressUp: u } = e,
         { selectionManager: c, selectedKey: d } = t,
-        _ = s === d,
-        E = o || t.isDisabled || t.disabledKeys.has(s),
-        { itemProps: f, isPressed: h } = (0, i.Cs)({
+        f = s === d,
+        _ = o || t.isDisabled || t.disabledKeys.has(s),
+        { itemProps: h, isPressed: p } = (0, i.Cs)({
             selectionManager: c,
             key: s,
             ref: n,
-            isDisabled: E,
+            isDisabled: _,
             shouldSelectOnPressUp: u,
             linkBehavior: 'selection'
         }),
-        p = l(t, s, 'tab'),
-        I = l(t, s, 'tabpanel'),
-        { tabIndex: m } = f,
-        T = t.collection.getItem(s),
-        S = (0, r.zL)(null == T ? void 0 : T.props, {
-            isLink: !!(null == T ? void 0 : null === (a = T.props) || void 0 === a ? void 0 : a.href),
+        m = l(t, s, 'tab'),
+        g = l(t, s, 'tabpanel'),
+        { tabIndex: E } = h,
+        v = t.collection.getItem(s),
+        I = (0, r.zL)(null == v ? void 0 : v.props, {
+            isLink: !!(null == v ? void 0 : null === (a = v.props) || void 0 === a ? void 0 : a.href),
             labelable: !0
         });
     return (
-        delete S.id,
+        delete I.id,
         {
-            tabProps: (0, r.dG)(S, f, {
-                id: p,
-                'aria-selected': _,
-                'aria-disabled': E || void 0,
-                'aria-controls': _ ? I : void 0,
-                tabIndex: E ? void 0 : m,
+            tabProps: (0, r.dG)(I, h, {
+                id: m,
+                'aria-selected': f,
+                'aria-disabled': _ || void 0,
+                'aria-controls': f ? g : void 0,
+                tabIndex: _ ? void 0 : E,
                 role: 'tab'
             }),
-            isSelected: _,
-            isDisabled: E,
-            isPressed: h
+            isSelected: f,
+            isDisabled: _,
+            isPressed: p
         }
     );
 }
@@ -92,27 +92,27 @@ class c {
 }
 function d(e, t, n) {
     let { orientation: l = 'horizontal', keyboardActivation: u = 'automatic' } = e,
-        { collection: d, selectionManager: _, disabledKeys: E } = t,
-        { direction: f } = (0, s.bU)(),
-        h = (0, a.useMemo)(() => new c(d, f, l, E), [d, E, l, f]),
-        { collectionProps: p } = (0, i.gq)({
+        { collection: d, selectionManager: f, disabledKeys: _ } = t,
+        { direction: h } = (0, s.bU)(),
+        p = (0, a.useMemo)(() => new c(d, h, l, _), [d, _, l, h]),
+        { collectionProps: m } = (0, i.gq)({
             ref: n,
-            selectionManager: _,
-            keyboardDelegate: h,
+            selectionManager: f,
+            keyboardDelegate: p,
             selectOnFocus: 'automatic' === u,
             disallowEmptySelection: !0,
             scrollRef: n,
             linkBehavior: 'selection'
         }),
-        I = (0, r.Me)();
-    o.set(t, I);
-    let m = (0, r.bE)({
+        g = (0, r.Me)();
+    o.set(t, g);
+    let E = (0, r.bE)({
         ...e,
-        id: I
+        id: g
     });
     return {
         tabListProps: {
-            ...(0, r.dG)(p, m),
+            ...(0, r.dG)(m, E),
             role: 'tablist',
             'aria-orientation': l,
             tabIndex: void 0

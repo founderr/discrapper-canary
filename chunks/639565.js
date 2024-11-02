@@ -1,53 +1,53 @@
-s.r(e),
-    s.d(e, {
+a.r(n),
+    a.d(n, {
         default: function () {
-            return O;
+            return A;
         }
     });
-var a = s(200651);
-s(192379);
-var n = s(703656),
-    _ = s(626135),
-    c = s(790527),
-    L = s(474936),
-    o = s(981631),
-    r = s(689938),
-    i = s(588058),
-    A = s(235810);
+var e = a(200651);
+a(192379);
+var s = a(703656),
+    i = a(626135),
+    r = a(790527),
+    c = a(474936),
+    o = a(981631),
+    l = a(388032),
+    _ = a(588058),
+    u = a(235810);
 function E() {
-    return (0, a.jsx)('div', {
-        className: i.artContainer,
-        children: (0, a.jsx)('img', {
-            src: A,
-            className: i.artAsset,
+    return (0, e.jsx)('div', {
+        className: _.artContainer,
+        children: (0, e.jsx)('img', {
+            src: u,
+            className: _.artAsset,
             alt: ''
         })
     });
 }
-function O(t) {
-    let { onClose: e, source: s, ...i } = t;
-    return (0, a.jsx)(c.Z, {
-        artElement: (0, a.jsx)(E, {}),
-        type: L.cd.FOR_LATER_MODAL_UPSELL,
-        title: r.Z.Messages.FOR_LATER_UPSELL_MODAL_TITLE,
-        body: r.Z.Messages.FOR_LATER_UPSELL_MODAL_BODY,
-        glowUp: r.Z.Messages.FOR_LATER_UPSELL_MODAL_BODY,
-        secondaryCTA: r.Z.Messages.PREMIUM_ROADBLOCK_UPSELL_SECONDARY_CTA,
+function A(t) {
+    let { onClose: n, source: a, ..._ } = t;
+    return (0, e.jsx)(r.Z, {
+        artElement: (0, e.jsx)(E, {}),
+        type: c.cd.FOR_LATER_MODAL_UPSELL,
+        title: l.intl.string(l.t.w4DRbW),
+        body: l.intl.string(l.t.F6u3Ex),
+        glowUp: l.intl.string(l.t.F6u3Ex),
+        secondaryCTA: l.intl.string(l.t.PcTCBw),
         onSecondaryClick: function () {
-            _.default.track(o.rMx.PREMIUM_PROMOTION_OPENED, {
+            i.default.track(o.rMx.PREMIUM_PROMOTION_OPENED, {
                 location_section: o.jXE.PREMIUM_FOR_LATER_UPSELL_MODAL,
                 location_object: o.qAy.NAVIGATION_LINK
             }),
-                e(),
-                (0, n.uL)(o.Z5c.APPLICATION_STORE);
+                n(),
+                (0, s.uL)(o.Z5c.APPLICATION_STORE);
         },
         showEnhancedUpsell: !0,
-        analyticsSource: s,
+        analyticsSource: a,
         analyticsLocation: {
             section: o.jXE.PREMIUM_FOR_LATER_UPSELL_MODAL,
             object: o.qAy.BUTTON_CTA
         },
-        onClose: e,
-        ...i
+        onClose: n,
+        ..._
     });
 }

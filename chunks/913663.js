@@ -7,13 +7,13 @@ var r,
     u = n(703558);
 let c = {},
     d = {};
-class _ extends (s = o.ZP.Store) {
+class f extends (s = o.ZP.Store) {
     getStickerPreview(e, t) {
         return (t === u.d.FirstThreadMessage ? d : c)[e];
     }
 }
 (a = 'StickerMessagePreviewStore'),
-    (i = 'displayName') in (r = _)
+    (i = 'displayName') in (r = f)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -21,7 +21,7 @@ class _ extends (s = o.ZP.Store) {
               writable: !0
           })
         : (r[i] = a);
-let E = new _(l.Z, {
+let _ = new f(l.Z, {
     ADD_STICKER_PREVIEW: function (e) {
         let { channelId: t, sticker: n, draftType: r } = e;
         (r === u.d.FirstThreadMessage ? d : c)[t] = [n];
@@ -35,4 +35,4 @@ let E = new _(l.Z, {
         (c = {}), (d = {});
     }
 });
-t.Z = E;
+t.Z = _;

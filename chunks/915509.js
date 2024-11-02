@@ -1,59 +1,59 @@
-a.d(n, {
+t.d(n, {
     Z: function () {
         return u;
     }
 }),
-    a(47120);
-var t = a(200651),
-    l = a(192379),
-    r = a(120356),
-    o = a.n(r),
-    s = a(481060),
-    i = a(313201),
-    c = a(689938),
-    d = a(352784);
+    t(47120);
+var l = t(200651),
+    a = t(192379),
+    r = t(120356),
+    o = t.n(r),
+    i = t(481060),
+    s = t(313201),
+    c = t(388032),
+    d = t(352784);
 function u(e) {
-    let { errorText: n, title: a, description: r, transitionState: u, onCancel: f, onConfirm: m, children: I } = e,
-        C = (0, i.Dt)(),
-        [p, _] = l.useState(!1),
-        E = l.useCallback(async () => {
-            _(!0);
+    let { errorText: n, title: t, description: r, transitionState: u, onCancel: f, onConfirm: m, children: p } = e,
+        x = (0, s.Dt)(),
+        [h, g] = a.useState(!1),
+        C = a.useCallback(async () => {
+            g(!0);
             try {
                 await m();
             } catch (e) {
                 throw e;
             } finally {
-                _(!1);
+                g(!1);
             }
         }, [m]);
-    return (0, t.jsxs)(s.ModalRoot, {
+    return (0, l.jsxs)(i.ModalRoot, {
         className: d.modal,
         transitionState: u,
-        'aria-labelledby': C,
-        size: s.ModalSize.SMALL,
+        'aria-labelledby': x,
+        size: i.ModalSize.SMALL,
         children: [
-            (0, t.jsxs)(s.ModalContent, {
+            (0, l.jsxs)(i.ModalContent, {
                 className: d.modalContent,
                 children: [
-                    (0, t.jsx)(s.Heading, {
+                    (0, l.jsx)(i.Heading, {
                         variant: 'heading-md/semibold',
-                        id: C,
-                        children: a
+                        id: x,
+                        children: t
                     }),
                     null != r && '' !== r
-                        ? (0, t.jsx)(s.Text, {
+                        ? (0, l.jsx)(i.Text, {
                               variant: 'text-sm/normal',
                               color: 'header-secondary',
                               className: d.description,
                               children: r
                           })
                         : null,
-                    (0, t.jsx)('div', {
+                    (0, l.jsx)('div', {
                         className: d.body,
-                        children: I
+                        children: p
                     }),
                     null != n && '' !== n
-                        ? (0, t.jsx)(s.Text, {
+                        ? (0, l.jsx)(i.Text, {
                               className: d.errorText,
                               variant: 'text-xs/normal',
                               color: 'text-danger',
@@ -62,22 +62,22 @@ function u(e) {
                         : null
                 ]
             }),
-            (0, t.jsxs)(s.ModalFooter, {
+            (0, l.jsxs)(i.ModalFooter, {
                 children: [
-                    (0, t.jsx)(s.Button, {
-                        submitting: p,
+                    (0, l.jsx)(i.Button, {
+                        submitting: h,
                         className: d.button,
-                        size: s.Button.Sizes.SMALL,
-                        color: s.Button.Colors.BRAND,
-                        onClick: E,
-                        children: c.Z.Messages.SAVE
+                        size: i.Button.Sizes.SMALL,
+                        color: i.Button.Colors.BRAND,
+                        onClick: C,
+                        children: c.intl.string(c.t.R3BPHx)
                     }),
-                    (0, t.jsx)(s.Button, {
+                    (0, l.jsx)(i.Button, {
                         className: o()(d.cancelButton, d.button),
-                        size: s.Button.Sizes.SMALL,
-                        color: s.Button.Colors.PRIMARY,
+                        size: i.Button.Sizes.SMALL,
+                        color: i.Button.Colors.PRIMARY,
                         onClick: f,
-                        children: c.Z.Messages.CANCEL
+                        children: c.intl.string(c.t['ETE/oK'])
                     })
                 ]
             })

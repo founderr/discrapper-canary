@@ -1,52 +1,52 @@
 n.r(t),
     n.d(t, {
         openCreateGuildModal: function () {
-            return d;
+            return _;
         },
         updateCreateGuildModal: function () {
-            return I;
+            return m;
         }
     });
-var o = n(200651);
+var i = n(200651);
 n(192379);
 var l = n(481060),
-    a = n(390885),
-    s = n(626135),
-    r = n(299402),
-    i = n(675999),
+    r = n(390885),
+    o = n(626135),
+    a = n(299402),
+    s = n(675999),
     c = n(981631),
     u = n(630724);
-function _(e, t, n, l) {
-    return (0, o.jsx)(r.Z, {
+function d(e, t, n, l) {
+    return (0, i.jsx)(a.Z, {
         onSuccess: (t) => {
-            a.Z.flowStep(u.MK.CREATE_GUILD, u.X2.SUCCESS), e.onClose(), null == l || l(t);
+            r.Z.flowStep(u.MK.CREATE_GUILD, u.X2.SUCCESS), e.onClose(), null == l || l(t);
         },
         onSlideChange: (e) =>
             (function (e, t) {
                 switch (e) {
-                    case i._m.GUILD_TEMPLATES:
-                        a.Z.flowStepOrStart(u.MK.CREATE_GUILD, u.X2.GUILD_TEMPLATES),
-                            s.default.track(c.rMx.OPEN_MODAL, {
+                    case s._m.GUILD_TEMPLATES:
+                        r.Z.flowStepOrStart(u.MK.CREATE_GUILD, u.X2.GUILD_TEMPLATES),
+                            o.default.track(c.rMx.OPEN_MODAL, {
                                 type: 'Create Guild Templates',
                                 location: t
                             });
                         break;
-                    case i._m.CUSTOMIZE_GUILD:
-                        a.Z.flowStep(u.MK.CREATE_GUILD, u.X2.GUILD_CREATE),
-                            s.default.track(c.rMx.OPEN_MODAL, {
+                    case s._m.CUSTOMIZE_GUILD:
+                        r.Z.flowStep(u.MK.CREATE_GUILD, u.X2.GUILD_CREATE),
+                            o.default.track(c.rMx.OPEN_MODAL, {
                                 type: 'Create Guild Step 2',
                                 location: t
                             });
                         break;
-                    case i._m.CREATION_INTENT:
-                        s.default.track(c.rMx.OPEN_MODAL, {
+                    case s._m.CREATION_INTENT:
+                        o.default.track(c.rMx.OPEN_MODAL, {
                             type: 'Server Intent Discovery',
                             location: t
                         });
                         break;
-                    case i._m.JOIN_GUILD:
-                        a.Z.flowStep(u.MK.CREATE_GUILD, u.X2.JOIN_GUILD),
-                            s.default.track(c.rMx.OPEN_MODAL, {
+                    case s._m.JOIN_GUILD:
+                        r.Z.flowStep(u.MK.CREATE_GUILD, u.X2.JOIN_GUILD),
+                            o.default.track(c.rMx.OPEN_MODAL, {
                                 type: 'Join Guild',
                                 location: t
                             });
@@ -57,11 +57,11 @@ function _(e, t, n, l) {
         ...e
     });
 }
-let d = (e) => {
-        let { initialSlide: t, location: n, onSuccess: o } = e;
-        (0, l.openModal)((e) => _(e, t, n, o), { modalKey: i.PU });
+let _ = (e) => {
+        let { initialSlide: t, location: n, onSuccess: i } = e;
+        (0, l.openModal)((e) => d(e, t, n, i), { modalKey: s.PU });
     },
-    I = (e) => {
+    m = (e) => {
         let { slide: t, location: n } = e;
-        (0, l.updateModal)(i.PU, (e) => _(e, t, n));
+        (0, l.updateModal)(s.PU, (e) => d(e, t, n));
     };

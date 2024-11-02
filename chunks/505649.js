@@ -1,47 +1,47 @@
 n(411104);
-var E,
-    r,
-    u,
+var r,
+    E,
     i,
+    u,
     S = n(442837),
-    _ = n(570140),
-    o = n(366939),
-    A = n(16084),
-    l = n(128069),
+    o = n(570140),
+    l = n(366939),
+    _ = n(16084),
+    A = n(128069),
     a = n(122289),
     T = n(622999),
     I = n(981631),
-    c = n(689938);
+    c = n(388032);
 let R = !1,
     C = null,
     N = null;
 function s() {
     (R = !1), (N = null);
 }
-function M(e) {
-    let { error: t } = e,
-        { code: n, paymentId: E } = t;
-    if (n !== l.ZP.ErrorCodes.CONFIRMATION_REQUIRED && n !== l.ZP.ErrorCodes.AUTHENTICATION_REQUIRED) return (R = !1), !1;
-    !R && ((R = !0), (C = E), n === l.ZP.ErrorCodes.AUTHENTICATION_REQUIRED && P(E));
+function M(t) {
+    let { error: e } = t,
+        { code: n, paymentId: r } = e;
+    if (n !== A.ZP.ErrorCodes.CONFIRMATION_REQUIRED && n !== A.ZP.ErrorCodes.AUTHENTICATION_REQUIRED) return (R = !1), !1;
+    !R && ((R = !0), (C = r), n === A.ZP.ErrorCodes.AUTHENTICATION_REQUIRED && P(r));
 }
-async function P(e) {
-    if (null == e) return;
-    let { error: t } = await (0, T.oe)(e);
-    if (null != t) {
-        _.Z.dispatch({
+async function P(t) {
+    if (null == t) return;
+    let { error: e } = await (0, T.oe)(t);
+    if (null != e) {
+        o.Z.dispatch({
             type: 'PAYMENT_AUTHENTICATION_ERROR',
-            error: new l.ZP(c.Z.Messages.PAYMENT_METHOD_CONFIRMATION_ERROR)
+            error: new A.ZP(c.intl.string(c.t.khEaRE))
         });
-        let e = Error(t);
-        (0, a.q2)(e, { extra: { authenticationError: t } });
+        let t = Error(e);
+        (0, a.q2)(t, { extra: { authenticationError: e } });
     }
 }
-function U(e) {
-    let { payment: t } = e;
-    if (!R || t.id !== C || ![I.PyE.COMPLETED, I.PyE.CANCELED].includes(t.status)) return !1;
-    (R = !1), (N = null), (C = null), _.Z.wait(o.fw), _.Z.wait(A.pB);
+function U(t) {
+    let { payment: e } = t;
+    if (!R || e.id !== C || ![I.PyE.COMPLETED, I.PyE.CANCELED].includes(e.status)) return !1;
+    (R = !1), (N = null), (C = null), o.Z.wait(l.fw), o.Z.wait(_.pB);
 }
-class d extends (E = S.ZP.Store) {
+class d extends (r = S.ZP.Store) {
     get isAwaitingAuthentication() {
         return R;
     }
@@ -52,16 +52,16 @@ class d extends (E = S.ZP.Store) {
         return C;
     }
 }
-(i = 'PaymentAuthenticationStore'),
-    (u = 'displayName') in (r = d)
-        ? Object.defineProperty(r, u, {
-              value: i,
+(u = 'PaymentAuthenticationStore'),
+    (i = 'displayName') in (E = d)
+        ? Object.defineProperty(E, i, {
+              value: u,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (r[u] = i),
-    (t.Z = new d(_.Z, {
+        : (E[i] = u),
+    (e.Z = new d(o.Z, {
         BILLING_SUBSCRIPTION_UPDATE_START: s,
         PAYMENT_AUTHENTICATION_CLEAR_ERROR: s,
         PREMIUM_PAYMENT_ERROR_CLEAR: s,
@@ -79,9 +79,9 @@ class d extends (E = S.ZP.Store) {
         PREMIUM_PAYMENT_UPDATE_FAIL: M,
         SKU_PURCHASE_FAIL: M,
         GIFT_CODE_REDEEM_FAILURE: M,
-        PAYMENT_AUTHENTICATION_ERROR: function (e) {
-            let { error: t } = e;
-            (N = t), (R = !1);
+        PAYMENT_AUTHENTICATION_ERROR: function (t) {
+            let { error: e } = t;
+            (N = e), (R = !1);
         },
         PAYMENT_UPDATE: U,
         BILLING_PAYMENT_FETCH_SUCCESS: U

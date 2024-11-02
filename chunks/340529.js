@@ -1,75 +1,75 @@
 n.d(t, {
     z: function () {
-        return T;
+        return L;
     }
 });
 var r = n(200651);
 n(192379);
-var s = n(120356),
-    i = n.n(s),
+var i = n(120356),
+    s = n.n(i),
     o = n(399606),
-    a = n(433517),
-    l = n(481060),
+    l = n(433517),
+    a = n(481060),
     c = n(607070),
     d = n(357352),
     C = n(703656),
     u = n(652515),
-    _ = n(847033),
-    x = n(544978),
-    f = n(307537),
-    I = n(987513),
-    p = n(895737),
-    h = n(629481),
-    m = n(981631),
-    L = n(176505),
-    E = n(689938),
-    S = n(34274);
-function g(e) {
-    let { icon: t, title: n, body: s, selected: o, disabled: a = !1, onClick: c, onPreviewDismiss: d, isNew: C = !1 } = e;
-    return (0, r.jsxs)(l.ClickableContainer, {
-        onClick: a ? void 0 : c,
-        'aria-disabled': a,
-        className: i()(S.tab, {
-            [S.selected]: o,
-            [S.tabDisabled]: a,
-            [S.preview]: !o && null != d
+    x = n(847033),
+    f = n(544978),
+    p = n(307537),
+    h = n(987513),
+    m = n(895737),
+    g = n(629481),
+    v = n(981631),
+    _ = n(176505),
+    j = n(388032),
+    I = n(34274);
+function w(e) {
+    let { icon: t, title: n, body: i, selected: o, disabled: l = !1, onClick: c, onPreviewDismiss: d, isNew: C = !1 } = e;
+    return (0, r.jsxs)(a.ClickableContainer, {
+        onClick: l ? void 0 : c,
+        'aria-disabled': l,
+        className: s()(I.tab, {
+            [I.selected]: o,
+            [I.tabDisabled]: l,
+            [I.preview]: !o && null != d
         }),
         'aria-label': n,
         children: [
             (0, r.jsx)('div', {
-                className: S.iconContainer,
+                className: I.iconContainer,
                 children: t
             }),
-            (0, r.jsx)(l.Spacer, {
+            (0, r.jsx)(a.Spacer, {
                 size: 8,
                 horizontal: !0
             }),
             (0, r.jsxs)('div', {
                 children: [
-                    (0, r.jsx)(l.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-sm/semibold',
                         color: o ? 'always-white' : 'header-primary',
                         children: n
                     }),
-                    (0, r.jsx)(l.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-xs/normal',
-                        color: o ? 'always-white' : a ? 'text-muted' : 'header-primary',
-                        children: s
+                        color: o ? 'always-white' : l ? 'text-muted' : 'header-primary',
+                        children: i
                     })
                 ]
             }),
             C &&
-                (0, r.jsx)(l.TextBadge, {
-                    color: l.tokens.unsafe_rawColors.BRAND_260.css,
-                    className: S.newBadge,
-                    text: E.Z.Messages.NEW
+                (0, r.jsx)(a.TextBadge, {
+                    color: a.tokens.unsafe_rawColors.BRAND_260.css,
+                    className: I.newBadge,
+                    text: j.intl.string(j.t.y2b7CA)
                 }),
             null != d &&
-                (0, r.jsx)(l.Clickable, {
-                    className: S.tabPreviewClose,
+                (0, r.jsx)(a.Clickable, {
+                    className: I.tabPreviewClose,
                     onClick: d,
-                    'aria-label': E.Z.Messages.DISMISS,
-                    children: (0, r.jsx)(l.CircleXIcon, {
+                    'aria-label': j.intl.string(j.t.WAI6xs),
+                    children: (0, r.jsx)(a.CircleXIcon, {
                         size: 'xs',
                         color: 'currentColor'
                     })
@@ -77,69 +77,69 @@ function g(e) {
         ]
     });
 }
-function T(e) {
+function L(e) {
     let { guild: t } = e,
         n = (0, u.RF)(t.id, 'guild_shop_category_selector'),
-        { selectedTab: s, setSelectedTab: i, categoryTabs: T, handlePreviewDismiss: v } = (0, _.m)(),
-        R = 'false' === a.K.get(h.Hr, 'false'),
-        j = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
-        P = T.map((e) => {
+        { selectedTab: i, setSelectedTab: s, categoryTabs: L, handlePreviewDismiss: S } = (0, x.m)(),
+        b = 'false' === l.K.get(g.Hr, 'false'),
+        Z = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
+        N = L.map((e) => {
             switch (e) {
-                case x.y.GUILD_PRODUCTS:
+                case f.y.GUILD_PRODUCTS:
                     return (0, r.jsx)(
-                        g,
+                        w,
                         {
-                            icon: (0, r.jsx)(f.Z, {
+                            icon: (0, r.jsx)(p.Z, {
                                 width: 20,
                                 height: 20
                             }),
-                            title: E.Z.Messages.GUILD_SHOP_PRODUCT_TYPE_SELECTOR_TITLE,
-                            body: E.Z.Messages.GUILD_SHOP_PRODUCT_TYPE_BODY,
-                            selected: s === x.y.GUILD_PRODUCTS,
-                            onClick: () => i(x.y.GUILD_PRODUCTS)
+                            title: j.intl.string(j.t.odvTUl),
+                            body: j.intl.string(j.t['0JFpRU']),
+                            selected: i === f.y.GUILD_PRODUCTS,
+                            onClick: () => s(f.y.GUILD_PRODUCTS)
                         },
                         e
                     );
-                case x.y.GUILD_ROLE_SUBSCRIPTIONS:
+                case f.y.GUILD_ROLE_SUBSCRIPTIONS:
                     return (0, r.jsx)(
-                        g,
+                        w,
                         {
-                            icon: (0, r.jsx)(I.Z, {
+                            icon: (0, r.jsx)(h.Z, {
                                 width: 20,
                                 height: 20
                             }),
-                            title: E.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
-                            body: n ? E.Z.Messages.GUILD_ROLE_SUB_TYPE_BODY_AFTER_CONSOLIDATION : E.Z.Messages.GUILD_ROLE_SUB_TYPE_BODY.format({ openRoleSubPage: () => (0, C.uL)(m.Z5c.CHANNEL(t.id, L.oC.ROLE_SUBSCRIPTIONS)) }),
+                            title: j.intl.string(j.t['KzCF//']),
+                            body: n ? j.intl.string(j.t['jqz+l5']) : j.intl.format(j.t.ycs4oK, { openRoleSubPage: () => (0, C.uL)(v.Z5c.CHANNEL(t.id, _.oC.ROLE_SUBSCRIPTIONS)) }),
                             disabled: !n,
-                            selected: s === x.y.GUILD_ROLE_SUBSCRIPTIONS,
-                            onClick: () => i(x.y.GUILD_ROLE_SUBSCRIPTIONS)
+                            selected: i === f.y.GUILD_ROLE_SUBSCRIPTIONS,
+                            onClick: () => s(f.y.GUILD_ROLE_SUBSCRIPTIONS)
                         },
                         e
                     );
-                case x.y.GUILD_PRODUCTS_PREVIEW:
+                case f.y.GUILD_PRODUCTS_PREVIEW:
                     return (0, r.jsx)(
-                        g,
+                        w,
                         {
-                            icon: R
+                            icon: b
                                 ? (0, r.jsx)('img', {
-                                      src: j ? (0, d.b)('server_products/storefront/question-mark.png') : (0, d.b)('server_products/storefront/question-mark.gif'),
-                                      className: S.questionMark,
+                                      src: Z ? (0, d.b)('server_products/storefront/question-mark.png') : (0, d.b)('server_products/storefront/question-mark.gif'),
+                                      className: I.questionMark,
                                       alt: ''
                                   })
-                                : (0, r.jsx)(l.GiftIcon, {
+                                : (0, r.jsx)(a.GiftIcon, {
                                       size: 'custom',
                                       color: 'currentColor',
                                       width: 20,
                                       height: 20
                                   }),
-                            title: E.Z.Messages.GUILD_SHOP_PRODUCT_TYPE_SELECTOR_TITLE,
-                            body: E.Z.Messages.GUILD_STORE_PREVIEW_TAB_SELECTOR_BODY,
-                            selected: s === x.y.GUILD_PRODUCTS_PREVIEW,
+                            title: j.intl.string(j.t.odvTUl),
+                            body: j.intl.string(j.t['827i8P']),
+                            selected: i === f.y.GUILD_PRODUCTS_PREVIEW,
                             onClick: () => {
-                                i(x.y.GUILD_PRODUCTS_PREVIEW), a.K.set(h.Hr, 'true');
+                                s(f.y.GUILD_PRODUCTS_PREVIEW), l.K.set(g.Hr, 'true');
                             },
-                            onPreviewDismiss: v,
-                            isNew: R
+                            onPreviewDismiss: S,
+                            isNew: b
                         },
                         e
                     );
@@ -148,22 +148,22 @@ function T(e) {
             }
         });
     return (0, r.jsxs)('div', {
-        className: S.container,
+        className: I.container,
         children: [
-            (0, r.jsx)(l.Heading, {
+            (0, r.jsx)(a.Heading, {
                 variant: 'heading-sm/bold',
-                className: S.header,
-                children: E.Z.Messages.GUILD_SHOP_SUPPORT_SERVER_HEADER
+                className: I.header,
+                children: j.intl.string(j.t.GF433N)
             }),
-            (0, r.jsx)(l.Spacer, { size: 12 }),
+            (0, r.jsx)(a.Spacer, { size: 12 }),
             (0, r.jsxs)('div', {
-                className: S.filters,
+                className: I.filters,
                 children: [
                     (0, r.jsx)('div', {
-                        className: S.tabs,
-                        children: P
+                        className: I.tabs,
+                        children: N
                     }),
-                    s === x.y.GUILD_PRODUCTS && (0, r.jsx)(p.Z, {})
+                    i === f.y.GUILD_PRODUCTS && (0, r.jsx)(m.Z, {})
                 ]
             })
         ]

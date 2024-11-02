@@ -1,51 +1,51 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return r;
+        return l;
     }
 }),
-    t(47120),
-    t(653041);
-var n = t(658722),
-    a = t.n(n);
-function i(e, s, t) {
+    n(47120),
+    n(653041);
+var i = n(658722),
+    s = n.n(i);
+function r(e, t, n) {
     return (
-        s in e
-            ? Object.defineProperty(e, s, {
-                  value: t,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[s] = t),
+            : (e[t] = n),
         e
     );
 }
-class r {
+class l {
     search(e) {
-        return new Promise((s) => {
-            s(this.getMatchingSettings(e));
+        return new Promise((t) => {
+            t(this.getMatchingSettings(e));
         });
     }
     getMatchingSettings(e) {
-        let s = this.cache[e];
-        if (null != s) return s;
+        let t = this.cache[e];
+        if (null != t) return t;
         {
-            let s = [];
+            let t = [];
             return (
-                this.terms.forEach((t) => {
-                    let [n, i] = t;
-                    for (let t of i)
-                        if (a()(e.toLowerCase(), t.toLowerCase())) {
-                            s.push(n);
+                this.terms.forEach((n) => {
+                    let [i, r] = n;
+                    for (let n of r)
+                        if (s()(e.toLowerCase(), n.toLowerCase())) {
+                            t.push(i);
                             break;
                         }
                 }),
-                (this.cache[e] = s),
-                s
+                (this.cache[e] = t),
+                t
             );
         }
     }
     constructor(e) {
-        i(this, 'terms', void 0), i(this, 'cache', void 0), (this.terms = e), (this.cache = {});
+        r(this, 'terms', void 0), r(this, 'cache', void 0), (this.terms = e), (this.cache = {});
     }
 }

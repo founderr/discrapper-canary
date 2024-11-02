@@ -7,8 +7,8 @@ t.d(n, {
     }
 }),
     t(47120);
-var a = t(192379),
-    r = t(442837),
+var r = t(192379),
+    a = t(442837),
     i = t(818083),
     s = t(650774),
     o = t(430824),
@@ -29,28 +29,28 @@ let u = (0, i.B)({
     ]
 });
 function m(e) {
-    let n = (0, r.e7)([o.Z], () => o.Z.getGuild(e)),
-        t = (0, r.e7)([l.Z], () => l.Z.can(d.Plq.ADMINISTRATOR, n)),
+    let n = (0, a.e7)([o.Z], () => o.Z.getGuild(e)),
+        t = (0, a.e7)([l.Z], () => l.Z.can(d.Plq.ADMINISTRATOR, n)),
         i = null == n ? void 0 : n.hasFeature(d.oNc.COMMUNITY),
-        [m] = (0, r.Wu)([s.Z], () => [s.Z.getMemberCount(e)], [e]),
-        _ = (null != m ? m : 0) >= c.WZ && (null != m ? m : 0) < c.TN,
-        f = t && i && _;
-    a.useEffect(() => {
-        f &&
+        [m] = (0, a.Wu)([s.Z], () => [s.Z.getMemberCount(e)], [e]),
+        f = (null != m ? m : 0) >= c.WZ && (null != m ? m : 0) < c.TN,
+        h = t && i && f;
+    r.useEffect(() => {
+        h &&
             u.trackExposure({
                 guildId: e,
                 location: '747eb3_1'
             });
-    }, [e, f]);
-    let { enableLowerMemberCountReq: C } = u.useExperiment(
+    }, [e, h]);
+    let { enableLowerMemberCountReq: x } = u.useExperiment(
         {
             guildId: e,
             location: '747eb3_2'
         },
         {
             autoTrackExposure: !1,
-            disable: !f
+            disable: !h
         }
     );
-    return C;
+    return x;
 }

@@ -1,12 +1,12 @@
 t.d(n, {
     p: function () {
-        return C;
+        return x;
     }
 }),
     t(47120),
     t(773603);
-var a = t(200651),
-    r = t(192379),
+var r = t(200651),
+    a = t(192379),
     i = t(120356),
     s = t.n(i),
     o = t(481060),
@@ -14,77 +14,77 @@ var a = t(200651),
     c = t(364083),
     d = t(92373),
     u = t(308083),
-    m = t(689938),
-    _ = t(494750),
-    f = t(602075);
-function C(e) {
-    let { gameApplicationIds: n, preventGameRemoval: t, onUpdateGames: i, minGames: l = 1, error: C } = e,
-        { options: h, matchSorterOptions: x } = (0, c.P)(),
-        p = r.useMemo(() => Array.from(n), [n]),
-        g = r.useCallback(
+    m = t(388032),
+    f = t(494750),
+    h = t(602075);
+function x(e) {
+    let { gameApplicationIds: n, preventGameRemoval: t, onUpdateGames: i, minGames: l = 1, error: x } = e,
+        { options: p, matchSorterOptions: g } = (0, c.P)(),
+        C = a.useMemo(() => Array.from(n), [n]),
+        b = a.useCallback(
             (e) => {
                 if (!(e.length < l)) i(new Set(e));
             },
             [l, i]
         ),
-        T = r.useCallback(
+        v = a.useCallback(
             (e) => {
                 if (t) return;
-                let a = new Set(n);
-                n.has(e) ? a.delete(e) : a.add(e), i(a);
+                let r = new Set(n);
+                n.has(e) ? r.delete(e) : r.add(e), i(r);
             },
             [t, n, i]
         ),
-        E = r.useCallback(() => null, []);
-    return (0, a.jsx)('div', {
-        className: _.inputContainer,
-        children: (0, a.jsxs)(o.FormItem, {
-            error: C,
+        _ = a.useCallback(() => null, []);
+    return (0, r.jsx)('div', {
+        className: f.inputContainer,
+        children: (0, r.jsxs)(o.FormItem, {
+            error: x,
             children: [
-                (0, a.jsx)(o.SearchableSelect, {
+                (0, r.jsx)(o.SearchableSelect, {
                     multi: !0,
                     hidePills: !0,
                     autoFocus: !0,
-                    wrapperClassName: s()(f.input, _.input),
-                    options: h,
-                    value: p,
-                    placeholder: m.Z.Messages.CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER,
-                    onChange: g,
+                    wrapperClassName: s()(h.input, f.input),
+                    options: p,
+                    value: C,
+                    placeholder: m.intl.string(m.t.acyezc),
+                    onChange: b,
                     isDisabled: n.size === u.cm,
-                    matchSorterOptions: x,
+                    matchSorterOptions: g,
                     clearQueryOnSelect: !0,
-                    customPillContainerClassName: _.pills,
-                    renderCustomPill: E
+                    customPillContainerClassName: f.pills,
+                    renderCustomPill: _
                 }),
-                p.length > 0 &&
-                    (0, a.jsxs)('div', {
-                        className: _.gamesContainer,
+                C.length > 0 &&
+                    (0, r.jsxs)('div', {
+                        className: f.gamesContainer,
                         children: [
-                            (0, a.jsx)(o.Text, {
+                            (0, r.jsx)(o.Text, {
                                 variant: 'text-xs/semibold',
                                 color: 'text-muted',
-                                children: m.Z.Messages.CLAN_SETUP_SELECTED_GAMES
+                                children: m.intl.string(m.t.PgOVsL)
                             }),
-                            (0, a.jsx)('div', {
-                                className: _.gamesList,
-                                children: p.map((e) =>
-                                    (0, a.jsx)(
+                            (0, r.jsx)('div', {
+                                className: f.gamesList,
+                                children: C.map((e) =>
+                                    (0, r.jsx)(
                                         o.Tooltip,
                                         {
-                                            text: m.Z.Messages.CLAN_SETUP_GAMES_ONE_GAME_REQUIRED,
+                                            text: m.intl.string(m.t.C1K2XV),
                                             shouldShow: t,
-                                            tooltipContentClassName: _.tooltip,
-                                            children: (r) =>
-                                                (0, a.jsx)('div', {
-                                                    ...r,
-                                                    children: (0, a.jsx)(
+                                            tooltipContentClassName: f.tooltip,
+                                            children: (a) =>
+                                                (0, r.jsx)('div', {
+                                                    ...a,
+                                                    children: (0, r.jsx)(
                                                         d.Z,
                                                         {
                                                             applicationId: e,
-                                                            imageContainerClassName: n.size > l ? _.clickableGame : void 0,
+                                                            imageContainerClassName: n.size > l ? f.clickableGame : void 0,
                                                             selected: !0,
                                                             locked: t,
-                                                            onClick: T
+                                                            onClick: v
                                                         },
                                                         e
                                                     )
@@ -100,50 +100,50 @@ function C(e) {
         })
     });
 }
-function h(e) {
+function p(e) {
     let { guildId: n, selectedGameApplicationIds: t, onUpdateGames: i } = e,
         { topGames: s, tryFetchTopGames: c } = (0, l.B)(),
         u = s.get(n),
-        [f, C] = r.useState(!1);
-    r.useEffect(() => {
-        C(!0),
+        [h, x] = a.useState(!1);
+    a.useEffect(() => {
+        x(!0),
             c(n).finally(() => {
-                C(!1);
+                x(!1);
             });
     }, [n, c]);
-    let h = r.useMemo(() => (null == u ? [] : Object.keys(u).sort((e, n) => u[n].score - u[e].score)), [u]),
-        x = r.useCallback(
+    let p = a.useMemo(() => (null == u ? [] : Object.keys(u).sort((e, n) => u[n].score - u[e].score)), [u]),
+        g = a.useCallback(
             (e) => {
                 let n = new Set(t);
                 t.has(e) ? n.delete(e) : n.add(e), i(n);
             },
             [i, t]
         );
-    return f && null == u
-        ? (0, a.jsx)(o.Spinner, { className: _.loadingSpinner })
-        : null == h || 0 === h.length
+    return h && null == u
+        ? (0, r.jsx)(o.Spinner, { className: f.loadingSpinner })
+        : null == p || 0 === p.length
           ? null
-          : (0, a.jsxs)(a.Fragment, {
+          : (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, a.jsx)('hr', { className: _.separator }),
-                    (0, a.jsxs)('div', {
-                        className: _.gamesContainer,
+                    (0, r.jsx)('hr', { className: f.separator }),
+                    (0, r.jsxs)('div', {
+                        className: f.gamesContainer,
                         children: [
-                            (0, a.jsx)(o.Text, {
+                            (0, r.jsx)(o.Text, {
                                 variant: 'text-xs/semibold',
                                 color: 'text-muted',
-                                children: m.Z.Messages.CLAN_SETUP_GAMES_SUGGESTED
+                                children: m.intl.string(m.t['0wEQQ0'])
                             }),
-                            (0, a.jsx)('div', {
-                                className: _.gamesList,
-                                children: h.map((e) =>
-                                    (0, a.jsx)(
+                            (0, r.jsx)('div', {
+                                className: f.gamesList,
+                                children: p.map((e) =>
+                                    (0, r.jsx)(
                                         d.Z,
                                         {
                                             applicationId: e,
-                                            imageContainerClassName: _.clickableGame,
+                                            imageContainerClassName: f.clickableGame,
                                             selected: t.has(e),
-                                            onClick: x
+                                            onClick: g
                                         },
                                         e
                                     )
@@ -155,35 +155,35 @@ function h(e) {
             });
 }
 n.Z = (e) => {
-    let { title: n, description: t, onUpdateGames: r, gameApplicationIds: i, minGames: l = 1, error: c, guildId: d, includeSuggestedGames: u } = e,
+    let { title: n, description: t, onUpdateGames: a, gameApplicationIds: i, minGames: l = 1, error: c, guildId: d, includeSuggestedGames: u } = e,
         m = i.size <= l;
-    return (0, a.jsxs)('div', {
-        className: s()(f.slideContent, _.container),
+    return (0, r.jsxs)('div', {
+        className: s()(h.slideContent, f.container),
         children: [
-            (0, a.jsx)(o.Heading, {
+            (0, r.jsx)(o.Heading, {
                 variant: 'heading-xxl/medium',
-                className: f.title,
+                className: h.title,
                 children: n
             }),
-            (0, a.jsx)(o.Text, {
+            (0, r.jsx)(o.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                className: f.subtitle,
+                className: h.subtitle,
                 children: t
             }),
-            (0, a.jsx)(C, {
+            (0, r.jsx)(x, {
                 minGames: l,
                 gameApplicationIds: i,
                 preventGameRemoval: m,
-                onUpdateGames: r,
+                onUpdateGames: a,
                 error: c
             }),
             u &&
                 null != d &&
-                (0, a.jsx)(h, {
+                (0, r.jsx)(p, {
                     guildId: d,
                     selectedGameApplicationIds: i,
-                    onUpdateGames: r
+                    onUpdateGames: a
                 })
         ]
     });

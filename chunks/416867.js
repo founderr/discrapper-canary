@@ -1,56 +1,56 @@
-n.d(s, {
+e.d(n, {
     B: function () {
-        return c;
+        return u;
     }
 });
-var t = n(200651);
-n(192379);
-var o = n(481060),
-    a = n(313201),
-    l = n(192635),
-    r = n(689938),
-    i = n(169528);
-function E(e) {
-    let { transitionState: s, Icon: n, title: E, body: c, onClose: _ } = e,
-        u = (0, a.Dt)();
-    return (0, t.jsxs)(o.ModalRoot, {
-        className: i.container,
-        transitionState: s,
-        'aria-labelledby': u,
+var i = e(200651);
+e(192379);
+var s = e(481060),
+    l = e(313201),
+    o = e(192635),
+    r = e(388032),
+    a = e(169528);
+function c(t) {
+    let { transitionState: n, Icon: e, title: c, body: u, onClose: d } = t,
+        g = (0, l.Dt)();
+    return (0, i.jsxs)(s.ModalRoot, {
+        className: a.container,
+        transitionState: n,
+        'aria-labelledby': g,
         children: [
-            (0, t.jsxs)(o.ModalContent, {
+            (0, i.jsxs)(s.ModalContent, {
                 children: [
-                    (0, t.jsx)(l.Z, { Icon: n }),
-                    (0, t.jsx)(o.Spacer, { size: 24 }),
-                    (0, t.jsx)(o.Heading, {
-                        id: u,
-                        className: i.__invalid_title,
+                    (0, i.jsx)(o.Z, { Icon: e }),
+                    (0, i.jsx)(s.Spacer, { size: 24 }),
+                    (0, i.jsx)(s.Heading, {
+                        id: g,
+                        className: a.__invalid_title,
                         variant: 'heading-xl/semibold',
-                        children: E
-                    }),
-                    (0, t.jsx)(o.Spacer, { size: 8 }),
-                    (0, t.jsx)(o.Text, {
-                        className: i.body,
-                        variant: 'text-sm/normal',
                         children: c
+                    }),
+                    (0, i.jsx)(s.Spacer, { size: 8 }),
+                    (0, i.jsx)(s.Text, {
+                        className: a.body,
+                        variant: 'text-sm/normal',
+                        children: u
                     })
                 ]
             }),
-            (0, t.jsx)(o.Spacer, { size: 24 }),
-            (0, t.jsx)(o.Button, {
-                size: o.Button.Sizes.MEDIUM,
+            (0, i.jsx)(s.Spacer, { size: 24 }),
+            (0, i.jsx)(s.Button, {
+                size: s.Button.Sizes.MEDIUM,
                 grow: !1,
-                onClick: _,
-                children: r.Z.Messages.GOT_IT
+                onClick: d,
+                children: r.intl.string(r.t['NX+WJC'])
             })
         ]
     });
 }
-function c(e) {
-    (0, o.openModal)((s) =>
-        (0, t.jsx)(E, {
-            ...s,
-            ...e
+function u(t) {
+    (0, s.openModal)((n) =>
+        (0, i.jsx)(c, {
+            ...n,
+            ...t
         })
     );
 }

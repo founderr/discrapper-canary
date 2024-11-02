@@ -1,77 +1,77 @@
-a.r(t),
-    a.d(t, {
+e.r(n),
+    e.d(n, {
         ParagraphFormFieldModal: function () {
-            return I;
+            return m;
         },
         TextInputFormFieldModal: function () {
             return f;
         }
     }),
-    a(47120),
-    a(757143);
-var n = a(200651),
-    r = a(192379),
-    o = a(481060),
-    l = a(881052),
-    s = a(246364),
-    i = a(915509),
-    d = a(592286),
-    u = a(689938);
-function c(e) {
-    var t;
-    let { type: a, title: s, description: c, field: f, onSave: I, onClose: _ } = e,
-        [p, E] = r.useState(null !== (t = null == f ? void 0 : f.label) && void 0 !== t ? t : ''),
-        [m, C] = r.useState(null),
-        R = async () => {
-            null != m && C(null);
-            let e = p.trim();
-            if ('' === e) {
-                C(u.Z.Messages.MEMBER_VERIFICATION_FIELD_QUESTION_REQUIRED_ERROR);
+    e(47120),
+    e(757143);
+var a = e(200651),
+    r = e(192379),
+    l = e(481060),
+    o = e(881052),
+    i = e(246364),
+    s = e(915509),
+    d = e(592286),
+    u = e(388032);
+function c(t) {
+    var n;
+    let { type: e, title: i, description: c, field: f, onSave: m, onClose: p } = t,
+        [x, g] = r.useState(null !== (n = null == f ? void 0 : f.label) && void 0 !== n ? n : ''),
+        [_, C] = r.useState(null),
+        h = async () => {
+            null != _ && C(null);
+            let t = x.trim();
+            if ('' === t) {
+                C(u.intl.string(u.t['G+TI4+']));
                 return;
             }
             try {
-                await I({
-                    field_type: a,
-                    label: e,
+                await m({
+                    field_type: e,
+                    label: t,
                     required: !0
                 }),
-                    _();
-            } catch (e) {
-                C(new l.Hx(e).getAnyErrorMessage());
+                    p();
+            } catch (t) {
+                C(new o.Hx(t).getAnyErrorMessage());
             }
         };
-    return (0, n.jsx)(i.Z, {
-        ...e,
-        errorText: m,
-        title: s,
+    return (0, a.jsx)(s.Z, {
+        ...t,
+        errorText: _,
+        title: i,
         description: c,
-        onConfirm: R,
-        onCancel: _,
-        children: (0, n.jsx)(o.TextInput, {
-            onChange: (e) => {
-                null != m && C(null);
-                let t = e.replace(/(\r\n|\n|\r)/g, ' ');
-                t.length > d.XN && (t = t.slice(0, d.XN)), E(t);
+        onConfirm: h,
+        onCancel: p,
+        children: (0, a.jsx)(l.TextInput, {
+            onChange: (t) => {
+                null != _ && C(null);
+                let n = t.replace(/(\r\n|\n|\r)/g, ' ');
+                n.length > d.XN && (n = n.slice(0, d.XN)), g(n);
             },
-            placeholder: u.Z.Messages.MEMBER_VERIFICATION_FIELD_QUESTION,
-            value: p,
-            onKeyDown: (e) => 'Enter' === e.key && R()
+            placeholder: u.intl.string(u.t.fqVmbG),
+            value: x,
+            onKeyDown: (t) => 'Enter' === t.key && h()
         })
     });
 }
-function f(e) {
-    return (0, n.jsx)(c, {
-        title: u.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_TEXT_INPUT,
-        description: u.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_TEXT_DESCRIPTION,
-        type: s.QJ.TEXT_INPUT,
-        ...e
+function f(t) {
+    return (0, a.jsx)(c, {
+        title: u.intl.string(u.t.w6Q9w8),
+        description: u.intl.string(u.t['A6M+qq']),
+        type: i.QJ.TEXT_INPUT,
+        ...t
     });
 }
-function I(e) {
-    return (0, n.jsx)(c, {
-        title: u.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_PARAGRAPH,
-        description: u.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PARAGRAPH_DESCRIPTION,
-        type: s.QJ.PARAGRAPH,
-        ...e
+function m(t) {
+    return (0, a.jsx)(c, {
+        title: u.intl.string(u.t.gG0JBA),
+        description: u.intl.string(u.t.SMX0iY),
+        type: i.QJ.PARAGRAPH,
+        ...t
     });
 }

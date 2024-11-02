@@ -1,34 +1,34 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return f;
     }
 });
 var a = n(200651),
     r = n(192379),
-    s = n(873546),
-    i = n(481060),
+    i = n(873546),
+    s = n(481060),
     o = n(231467),
-    c = n(17845),
-    l = n(703656),
+    l = n(17845),
+    c = n(703656),
     d = n(981631),
     u = n(559469),
-    m = n(689938),
+    m = n(388032),
     p = n(970047);
-let _ = n(575703),
-    x = n(2984),
-    b = s.tq || s.Em;
-function g(e) {
+let x = n(575703),
+    b = n(2984),
+    g = i.tq || i.Em;
+function f(e) {
     let { gameId: t } = e,
         n = (0, u.n)(),
-        s = r.useMemo(() => n.slice(0, 4), [n]);
+        i = r.useMemo(() => n.slice(0, 4), [n]);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)('img', {
                 className: p.backgroundImage,
-                src: _,
+                src: x,
                 alt: ''
             }),
-            (0, a.jsxs)(i.Scroller, {
+            (0, a.jsxs)(s.Scroller, {
                 className: p.pageContainer,
                 children: [
                     (0, a.jsxs)('div', {
@@ -36,51 +36,51 @@ function g(e) {
                         children: [
                             (0, a.jsx)('img', {
                                 className: p.logoWithText,
-                                src: x,
+                                src: b,
                                 alt: ''
                             }),
-                            (0, a.jsx)(i.Button, {
+                            (0, a.jsx)(s.Button, {
                                 className: p.headerButton,
-                                look: i.ButtonLooks.FILLED,
-                                size: i.ButtonSizes.MEDIUM,
-                                color: i.ButtonColors.WHITE,
+                                look: s.ButtonLooks.FILLED,
+                                size: s.ButtonSizes.MEDIUM,
+                                color: s.ButtonColors.WHITE,
                                 onClick: () =>
-                                    (0, l.dL)({
+                                    (0, c.dL)({
                                         pathname: d.Z5c.GLOBAL_DISCOVERY_SERVERS,
                                         search: '?game='.concat(t)
                                     }),
-                                children: (0, a.jsx)(i.Text, {
+                                children: (0, a.jsx)(s.Text, {
                                     variant: 'text-md/medium',
                                     color: 'none',
-                                    children: m.Z.Messages.LOGIN
+                                    children: m.intl.string(m.t.HAkXzs)
                                 })
                             })
                         ]
                     }),
-                    (0, a.jsx)(c.Z, {
+                    (0, a.jsx)(l.Z, {
                         className: p.banner,
-                        title: m.Z.Messages.LOGGED_OUT_DISCOVERY_FIND_GAMING_GUILD_HEADER,
-                        description: m.Z.Messages.LOGGED_OUT_DISCOVERY_FIND_GAMING_GUILD_SUBHEADER,
-                        button: b
-                            ? (0, a.jsx)(i.Text, {
+                        title: m.intl.string(m.t.a2lbLi),
+                        description: m.intl.string(m.t['/B+X5e']),
+                        button: g
+                            ? (0, a.jsx)(s.Text, {
                                   variant: 'text-md/medium',
                                   color: 'text-muted',
-                                  children: m.Z.Messages.LOGGED_OUT_DISCOVERY_MOBILE_CTA
+                                  children: m.intl.string(m.t.PrDDkp)
                               })
-                            : (0, a.jsx)(i.Button, {
+                            : (0, a.jsx)(s.Button, {
                                   className: p.cta,
-                                  look: i.ButtonLooks.FILLED,
-                                  size: i.ButtonSizes.LARGE,
-                                  color: i.ButtonColors.WHITE,
+                                  look: s.ButtonLooks.FILLED,
+                                  size: s.ButtonSizes.LARGE,
+                                  color: s.ButtonColors.WHITE,
                                   onClick: () =>
-                                      (0, l.dL)({
+                                      (0, c.dL)({
                                           pathname: d.Z5c.GLOBAL_DISCOVERY_SERVERS,
                                           search: '?game='.concat(t)
                                       }),
-                                  children: (0, a.jsx)(i.Text, {
+                                  children: (0, a.jsx)(s.Text, {
                                       variant: 'text-md/medium',
                                       color: 'none',
-                                      children: m.Z.Messages.LOGGED_OUT_DISCOVERY_FIND_GAMING_GUILD_CTA
+                                      children: m.intl.string(m.t.gbOKxs)
                                   })
                               })
                     }),
@@ -89,15 +89,15 @@ function g(e) {
                         children: (0, a.jsxs)('div', {
                             className: p.sampleGuildsSection,
                             children: [
-                                (0, a.jsx)(i.Text, {
+                                (0, a.jsx)(s.Text, {
                                     className: p.sectionTitle,
                                     variant: 'text-md/medium',
                                     color: 'header-primary',
-                                    children: m.Z.Messages.DISCOVERY_SAMPLE_GUILDS_LABEL
+                                    children: m.intl.string(m.t.x0rBe3)
                                 }),
                                 (0, a.jsx)('div', {
                                     className: p.cardsWrapper,
-                                    children: s.map((e) =>
+                                    children: i.map((e) =>
                                         (0, a.jsx)(
                                             o.xV,
                                             {

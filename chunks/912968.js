@@ -9,10 +9,10 @@ e.exports = function (e, t) {
     var n = a(e),
         c = !n && i(e),
         d = !n && !c && s(e),
-        _ = !n && !c && !d && l(e),
-        E = n || c || d || _,
-        f = E ? r(e.length, String) : [],
-        h = f.length;
-    for (var p in e) (t || u.call(e, p)) && !(E && ('length' == p || (d && ('offset' == p || 'parent' == p)) || (_ && ('buffer' == p || 'byteLength' == p || 'byteOffset' == p)) || o(p, h))) && f.push(p);
-    return f;
+        f = !n && !c && !d && l(e),
+        _ = n || c || d || f,
+        h = _ ? r(e.length, String) : [],
+        p = h.length;
+    for (var m in e) (t || u.call(e, m)) && !(_ && ('length' == m || (d && ('offset' == m || 'parent' == m)) || (f && ('buffer' == m || 'byteLength' == m || 'byteOffset' == m)) || o(m, p))) && h.push(m);
+    return h;
 };

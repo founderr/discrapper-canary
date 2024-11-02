@@ -1,13 +1,13 @@
 t.d(n, {
     Z: function () {
-        return f;
+        return h;
     }
 });
-var a = t(200651);
+var r = t(200651);
 t(192379);
-var r = t(249849),
+var a = t(249849),
     i = t(907561),
-    s = t(689938),
+    s = t(388032),
     o = t(136050);
 let l = ['#7185f6', '#7799f3', '#7eb2eb', '#85d5e0', '#89e6dd', '#8cefda', '#68eacb'],
     c = ['#ffffff', '#f0f0f0'],
@@ -43,7 +43,7 @@ let l = ['#7185f6', '#7799f3', '#7eb2eb', '#85d5e0', '#89e6dd', '#8cefda', '#68e
         }
     ],
     m = [0.95, 1],
-    _ = [
+    f = [
         {
             base: 1,
             tint: 2
@@ -53,30 +53,30 @@ let l = ['#7185f6', '#7799f3', '#7eb2eb', '#85d5e0', '#89e6dd', '#8cefda', '#68e
             tint: 1
         }
     ];
-function f(e) {
-    let { width: n, height: t, primaryTintColor: f, secondaryTintColor: C, ...h } = e,
-        { primaryColorsTransformed: x, secondaryColorsTransformed: p } = (0, r.s)({
+function h(e) {
+    let { width: n, height: t, primaryTintColor: h, secondaryTintColor: x, ...p } = e,
+        { primaryColorsTransformed: g, secondaryColorsTransformed: C } = (0, a.s)({
             primaryBaseColors: l,
-            primaryTintColor: f,
+            primaryTintColor: h,
             primaryTintLuminances: d,
             primaryLuminanceWeights: u,
             secondaryBaseColors: c,
-            secondaryTintColor: C,
+            secondaryTintColor: x,
             secondaryTintLuminances: m,
-            secondaryLuminanceWeights: _
+            secondaryLuminanceWeights: f
         }),
-        { styleContent: g, containerId: T } = (0, i.bC)(x, p);
-    return (0, a.jsxs)('svg', {
-        ...h,
-        'aria-label': s.Z.Messages.CLAN_LOOK_BANNER,
+        { styleContent: b, containerId: v } = (0, i.bC)(g, C);
+    return (0, r.jsxs)('svg', {
+        ...p,
+        'aria-label': s.intl.string(s.t.nH6S2d),
         width: n,
         height: t,
         viewBox: '0 0 '.concat(i.Km, ' ').concat(i.md),
         children: [
-            (0, a.jsxs)('defs', {
+            (0, r.jsxs)('defs', {
                 children: [
-                    (0, a.jsx)('defs', {
-                        children: (0, a.jsxs)('radialGradient', {
+                    (0, r.jsx)('defs', {
+                        children: (0, r.jsxs)('radialGradient', {
                             id: 'foam-gradient',
                             cx: '0.5',
                             cy: '0.5',
@@ -84,25 +84,25 @@ function f(e) {
                             fx: '0.5',
                             fy: '0.8',
                             children: [
-                                (0, a.jsx)('stop', {
-                                    stopColor: p[1],
+                                (0, r.jsx)('stop', {
+                                    stopColor: C[1],
                                     offset: '60%'
                                 }),
-                                (0, a.jsx)('stop', {
-                                    stopColor: p[0],
+                                (0, r.jsx)('stop', {
+                                    stopColor: C[0],
                                     offset: '100%'
                                 })
                             ]
                         })
                     }),
-                    (0, a.jsx)('style', { children: g })
+                    (0, r.jsx)('style', { children: b })
                 ]
             }),
-            (0, a.jsx)('use', {
+            (0, r.jsx)('use', {
                 href: ''.concat(o, '#wrapper-layer'),
-                id: T
+                id: v
             }),
-            (0, a.jsx)('use', {
+            (0, r.jsx)('use', {
                 href: ''.concat(o, '#foam'),
                 style: { fill: 'url(#foam-gradient)' }
             })

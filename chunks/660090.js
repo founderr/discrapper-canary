@@ -5,8 +5,8 @@ t.d(n, {
 }),
     t(47120);
 var i = t(192379),
-    a = t(674588),
-    l = t(70956),
+    l = t(674588),
+    a = t(70956),
     o = t(314734);
 function r(e) {
     let { sectionId: n, commandsByActiveSection: t } = e,
@@ -57,7 +57,7 @@ function r(e) {
             }, [n]);
         })({ alphabeticalSortedCommands: c });
     i.useEffect(() => {
-        a.i6(n, { dontRefetchMs: l.Z.Millis.DAY });
+        l.i6(n, { dontRefetchMs: a.Z.Millis.DAY });
     }, [n]),
         i.useLayoutEffect(() => {
             if (!!u) s(o.bS.POPULAR);

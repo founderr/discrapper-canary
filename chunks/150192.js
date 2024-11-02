@@ -1,12 +1,12 @@
 t.d(n, {
     j: function () {
-        return f;
+        return h;
     }
 }),
     t(653041),
     t(47120);
-var a,
-    r,
+var r,
+    a,
     i,
     s,
     o = t(392711),
@@ -15,100 +15,100 @@ var a,
     d = t(570140),
     u = t(823379),
     m = t(731455),
-    _ = t(689938);
-function f(e, n) {
+    f = t(388032);
+function h(e, n) {
     return l().isEqual(
         e.map((e) => [e.categoryId, e.name]),
         n.map((e) => [e.categoryId, e.name])
     );
 }
-let C = null,
-    h = [],
-    x = [],
-    p = {};
-class g extends (a = c.ZP.Store) {
+let x = null,
+    p = [],
+    g = [],
+    C = {};
+class b extends (r = c.ZP.Store) {
     getPrimaryCategories() {
-        return h;
+        return p;
     }
     getDiscoveryCategories() {
-        let e = m.L3.map((e) => x.find((n) => n.categoryId === e)).filter(u.lm);
+        let e = m.L3.map((e) => g.find((n) => n.categoryId === e)).filter(u.lm);
         return [
             {
                 categoryId: m.Hk,
-                name: _.Z.Messages.HOME
+                name: f.intl.string(f.t.Ym2Ri4)
             },
             ...e
         ];
     }
     getClanDiscoveryCategories() {
-        let e = m.L3.map((e) => x.find((n) => n.categoryId === e)).filter(u.lm);
+        let e = m.L3.map((e) => g.find((n) => n.categoryId === e)).filter(u.lm);
         return [
             {
                 categoryId: m.Hk,
-                name: _.Z.Messages.COMMUNITIES
+                name: f.intl.string(f.t.QToH29)
             },
             ...e
         ];
     }
     getAllCategories() {
-        return x;
+        return g;
     }
     getFetchedLocale() {
-        return C;
+        return x;
     }
     getCategoryName(e) {
-        return e === m.Hk ? _.Z.Messages.HOME : p[e];
+        return e === m.Hk ? f.intl.string(f.t.Ym2Ri4) : C[e];
     }
 }
 (s = 'GuildDiscoveryCategoryStore'),
-    (i = 'displayName') in (r = g)
-        ? Object.defineProperty(r, i, {
+    (i = 'displayName') in (a = b)
+        ? Object.defineProperty(a, i, {
               value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (r[i] = s),
-    (n.Z = new g(d.Z, {
+        : (a[i] = s),
+    (n.Z = new b(d.Z, {
         GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function (e) {
             let n,
-                { categories: t, locale: a } = e,
-                r = [],
+                { categories: t, locale: r } = e,
+                a = [],
                 i = [];
             if (
                 (t
                     .sort((e, n) => (e.name < n.name ? -1 : 1))
                     .forEach((e) => {
-                        let { id: t, name: a, is_primary: s } = e;
+                        let { id: t, name: r, is_primary: s } = e;
                         if (t !== m.o3) {
                             if (t === m.dc) {
                                 n = {
                                     categoryId: t,
-                                    name: a
+                                    name: r
                                 };
                                 return;
                             }
                             !0 === s &&
-                                r.push({
+                                a.push({
                                     categoryId: t,
-                                    name: a
+                                    name: r
                                 }),
                                 i.push({
                                     categoryId: t,
-                                    name: a
+                                    name: r
                                 }),
-                                (p[t] = a);
+                                (C[t] = r);
                         }
                     }),
                 null != n)
             ) {
                 let { categoryId: e, name: t } = n;
-                r.push({
+                a.push({
                     categoryId: e,
                     name: t
                 }),
-                    (p[e] = t);
+                    (C[e] = t);
             }
-            (C = a), (h = r), (x = i);
+            (x = r), (p = a), (g = i);
         }
     }));

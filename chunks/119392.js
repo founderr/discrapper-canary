@@ -1,89 +1,89 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return x;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(239091),
-    r = n(782568),
-    l = n(570938),
-    o = n(951394),
+var r = n(481060),
+    l = n(239091),
+    a = n(782568),
+    o = n(570938),
+    s = n(951394),
     c = n(749681),
     u = n(572004),
     d = n(63063),
-    _ = n(931515),
-    E = n(981631),
-    I = n(49898),
-    m = n(128449),
-    f = n(689938),
-    T = n(818768),
-    h = n(761604);
-function N(e) {
+    m = n(931515),
+    f = n(981631),
+    h = n(49898),
+    p = n(128449),
+    g = n(388032),
+    _ = n(818768),
+    C = n(761604);
+function E(e) {
     let { gameId: t, onSelect: n } = e;
-    return (0, i.jsx)(a.Menu, {
+    return (0, i.jsx)(r.Menu, {
         onSelect: n,
         navId: 'discovery-entrypoint-context-menu',
-        'aria-label': f.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
-        onClose: s.Zy,
-        children: (0, i.jsxs)(a.MenuGroup, {
+        'aria-label': g.intl.string(g.t.ogxXGh),
+        onClose: l.Zy,
+        children: (0, i.jsxs)(r.MenuGroup, {
             children: [
                 u.wS &&
-                    (0, i.jsx)(a.MenuItem, {
+                    (0, i.jsx)(r.MenuItem, {
                         id: 'copy',
-                        label: f.Z.Messages.COPY_LINK,
-                        icon: a.CopyIcon,
+                        label: g.intl.string(g.t.WqhZsr),
+                        icon: r.CopyIcon,
                         action: () => {
-                            (0, u.JG)(''.concat(location.protocol, '//').concat(location.host).concat(E.Z5c.DISCOVERY_GUILD_GAME_RESULTS(t)));
+                            (0, u.JG)(''.concat(location.protocol, '//').concat(location.host).concat(f.Z5c.DISCOVERY_GUILD_GAME_RESULTS(t)));
                         }
                     }),
-                (0, i.jsx)(a.MenuItem, {
+                (0, i.jsx)(r.MenuItem, {
                     id: 'learn-more',
-                    label: f.Z.Messages.LEARN_MORE,
-                    icon: a.LinkExternalMediumIcon,
+                    label: g.intl.string(g.t.hvVgAQ),
+                    icon: r.LinkExternalMediumIcon,
                     action: () => {
-                        (0, r.Z)(d.Z.getArticleURL(E.BhN.CLANS_FAQ));
+                        (0, a.Z)(d.Z.getArticleURL(f.BhN.CLANS_FAQ));
                     }
                 })
             ]
         })
     });
 }
-function p(e) {
+function I(e) {
     let { gameId: t } = e;
-    return (0, i.jsx)(o.ZP, {
-        className: T.buttonContainer,
-        children: (0, i.jsx)(a.Popout, {
-            animation: a.Popout.Animation.NONE,
+    return (0, i.jsx)(s.ZP, {
+        className: _.buttonContainer,
+        children: (0, i.jsx)(r.Popout, {
+            animation: r.Popout.Animation.NONE,
             position: 'bottom',
             spacing: 4,
             align: 'right',
             renderPopout: (e) => {
                 let { closePopout: n } = e;
-                return (0, i.jsx)(N, {
+                return (0, i.jsx)(E, {
                     gameId: t,
                     onSelect: n
                 });
             },
             children: (e) => {
                 let { onClick: t, ...n } = e;
-                return (0, i.jsx)(a.Tooltip, {
-                    text: f.Z.Messages.MORE,
+                return (0, i.jsx)(r.Tooltip, {
+                    text: g.intl.string(g.t.UKOtz8),
                     hideOnClick: !0,
                     children: (e) => {
-                        let { onClick: s, ...r } = e;
-                        return (0, i.jsx)(o.zx, {
+                        let { onClick: l, ...a } = e;
+                        return (0, i.jsx)(s.zx, {
                             ...n,
-                            ...r,
+                            ...a,
                             onClick: (e) => {
-                                e.stopPropagation(), null == s || s(), t(e);
+                                e.stopPropagation(), null == l || l(), t(e);
                             },
-                            'aria-label': f.Z.Messages.MORE,
-                            children: (0, i.jsx)(a.MoreHorizontalIcon, {
+                            'aria-label': g.intl.string(g.t.UKOtz8),
+                            children: (0, i.jsx)(r.MoreHorizontalIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: T.overflowIcon
+                                className: _.overflowIcon
                             })
                         });
                     }
@@ -92,122 +92,122 @@ function p(e) {
         })
     });
 }
-function C(e) {
+function x(e) {
     let { gameId: t } = e,
         {
             isLoading: n,
-            backgroundImageUrl: s,
-            gameName: r
-        } = (0, _.kN)(t, {
+            backgroundImageUrl: l,
+            gameName: a
+        } = (0, m.kN)(t, {
             coverImageWidth: 600,
             coverImageHeight: 280
         });
     return n
-        ? (0, i.jsx)(a.Spinner, { className: T.spinner })
-        : null == r
+        ? (0, i.jsx)(r.Spinner, { className: _.spinner })
+        : null == a
           ? (0, i.jsxs)('div', {
-                className: T.wrapper,
+                className: _.wrapper,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: T.errorHeader,
+                        className: _.errorHeader,
                         children: [
                             (0, i.jsx)('div', {
-                                className: T.headerContent,
-                                children: (0, i.jsx)(a.Heading, {
-                                    className: T.title,
+                                className: _.headerContent,
+                                children: (0, i.jsx)(r.Heading, {
+                                    className: _.title,
                                     variant: 'display-md',
                                     color: 'header-secondary',
-                                    children: f.Z.Messages.DISCOVERY_ENTRYPOINT_EMBED_ERROR_TITLE
+                                    children: g.intl.string(g.t.ZDg1eH)
                                 })
                             }),
                             (0, i.jsx)('img', {
                                 alt: '',
-                                src: h,
-                                className: T.errorImage
+                                src: C,
+                                className: _.errorImage
                             })
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: T.content,
+                        className: _.content,
                         children: [
-                            (0, i.jsx)(a.Text, {
+                            (0, i.jsx)(r.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-normal',
-                                children: f.Z.Messages.DISCOVERY_ENTRYPOINT_EMBED_ERROR_DESCRIPTION
+                                children: g.intl.string(g.t['yHp/y8'])
                             }),
-                            (0, i.jsx)(a.Button, {
-                                className: T.button,
-                                look: a.Button.Looks.FILLED,
-                                size: a.Button.Sizes.MEDIUM,
-                                color: a.Button.Colors.BRAND,
+                            (0, i.jsx)(r.Button, {
+                                className: _.button,
+                                look: r.Button.Looks.FILLED,
+                                size: r.Button.Sizes.MEDIUM,
+                                color: r.Button.Colors.BRAND,
                                 onClick: () => {
                                     (0, c.transitionToGlobalDiscovery)({
-                                        tab: I.F$.SERVERS,
-                                        selectedServersTab: m.vf.GUILDS,
-                                        entrypoint: m.Qq.EMBED
+                                        tab: h.F$.SERVERS,
+                                        selectedServersTab: p.vf.GUILDS,
+                                        entrypoint: p.Qq.EMBED
                                     });
                                 },
-                                children: f.Z.Messages.DISCOVERY_ENTRYPOINT_EMBED_ERROR_CTA
+                                children: g.intl.string(g.t.uPeLWl)
                             })
                         ]
                     })
                 ]
             })
           : (0, i.jsxs)('div', {
-                className: T.wrapper,
+                className: _.wrapper,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: T.header,
+                        className: _.header,
                         children: [
-                            (0, i.jsx)(p, { gameId: t }),
+                            (0, i.jsx)(I, { gameId: t }),
                             (0, i.jsx)('div', {
-                                className: T.splashWrapper,
+                                className: _.splashWrapper,
                                 children: (0, i.jsx)('div', {
-                                    className: T.splash,
-                                    style: { backgroundImage: 'url("'.concat(s, '")') }
+                                    className: _.splash,
+                                    style: { backgroundImage: 'url("'.concat(l, '")') }
                                 })
                             }),
                             (0, i.jsxs)('div', {
-                                className: T.headerContent,
+                                className: _.headerContent,
                                 children: [
-                                    (0, i.jsxs)(a.Text, {
-                                        className: T.label,
+                                    (0, i.jsxs)(r.Text, {
+                                        className: _.label,
                                         variant: 'text-sm/normal',
                                         color: 'text-normal',
-                                        children: [(0, i.jsx)(l.Z, { className: T.icon }), f.Z.Messages.DISCOVERY_ENTRYPOINT_EMBED_LABEL]
+                                        children: [(0, i.jsx)(o.Z, { className: _.icon }), g.intl.string(g.t.KH2azs)]
                                     }),
-                                    (0, i.jsx)(a.Heading, {
-                                        className: T.title,
+                                    (0, i.jsx)(r.Heading, {
+                                        className: _.title,
                                         variant: 'display-md',
                                         color: 'header-secondary',
-                                        children: f.Z.Messages.DISCOVERY_ENTRYPOINT_EMBED_TITLE.format({ gameName: r })
+                                        children: g.intl.format(g.t.DOeucH, { gameName: a })
                                     })
                                 ]
                             })
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: T.content,
+                        className: _.content,
                         children: [
-                            (0, i.jsx)(a.Text, {
+                            (0, i.jsx)(r.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-normal',
-                                children: f.Z.Messages.DISCOVERY_ENTRYPOINT_EMBED_DESCRIPTION.format({ gameName: r })
+                                children: g.intl.format(g.t['34PBmJ'], { gameName: a })
                             }),
-                            (0, i.jsx)(a.Button, {
-                                className: T.button,
-                                look: a.Button.Looks.FILLED,
-                                size: a.Button.Sizes.MEDIUM,
-                                color: a.Button.Colors.BRAND,
+                            (0, i.jsx)(r.Button, {
+                                className: _.button,
+                                look: r.Button.Looks.FILLED,
+                                size: r.Button.Sizes.MEDIUM,
+                                color: r.Button.Colors.BRAND,
                                 onClick: () => {
                                     (0, c.transitionToGlobalDiscovery)({
-                                        tab: I.F$.SERVERS,
-                                        selectedServersTab: m.vf.GUILDS,
-                                        entrypoint: m.Qq.EMBED,
+                                        tab: h.F$.SERVERS,
+                                        selectedServersTab: p.vf.GUILDS,
+                                        entrypoint: p.Qq.EMBED,
                                         extra: { search: '?game='.concat(t) }
                                     });
                                 },
-                                children: f.Z.Messages.DISCOVERY_ENTRYPOINT_EMBED_CTA
+                                children: g.intl.string(g.t['7R5eKi'])
                             })
                         ]
                     })

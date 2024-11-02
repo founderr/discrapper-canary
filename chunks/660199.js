@@ -3,7 +3,7 @@ n.d(t, {
         return c;
     },
     He: function () {
-        return _;
+        return f;
     },
     K_: function () {
         return l;
@@ -59,6 +59,6 @@ function d(e, t) {
         }
     );
 }
-function _(e, t) {
+function f(e, t) {
     return null != t ? '<t:'.concat(e, ':').concat(t, '>') : '<t:'.concat(e, '>');
 }

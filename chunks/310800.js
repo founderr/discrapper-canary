@@ -1,82 +1,82 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return C;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(852229),
-    i = n(481060),
-    r = n(724598),
-    l = n(674180),
+var r = n(852229),
+    l = n(481060),
+    s = n(724598),
+    a = n(674180),
     o = n(495437),
     c = n(267101),
     d = n(863663),
     u = n(676651),
-    _ = n(613810),
-    I = n(391181),
-    E = n(689938),
-    T = n(463446);
-let m = 'guild-product-listings-header';
-function N(e) {
+    m = n(613810),
+    h = n(391181),
+    g = n(388032),
+    x = n(463446);
+let p = 'guild-product-listings-header';
+function f(e) {
     let { guildId: t, handleCreateOrEditProduct: u } = e,
-        N = (0, c.ue)(t, { publishedOnly: !1 }),
-        { shouldRestrictUpdatingCreatorMonetizationSettings: S } = (0, l.gX)(t),
-        g = (e) => {
+        f = (0, c.ue)(t, { publishedOnly: !1 }),
+        { shouldRestrictUpdatingCreatorMonetizationSettings: C } = (0, a.gX)(t),
+        I = (e) => {
             (0, o.Je)(t, e, { published: !1 });
         },
-        h = (e, a) => {
-            (0, i.openModalLazy)(async () => {
-                let { default: i } = await n.e('95925').then(n.bind(n, 673078));
+        _ = (e, r) => {
+            (0, l.openModalLazy)(async () => {
+                let { default: l } = await n.e('95925').then(n.bind(n, 673078));
                 return (n) =>
-                    (0, s.jsx)(i, {
+                    (0, i.jsx)(l, {
                         guildId: t,
                         productId: e,
-                        productName: a,
+                        productName: r,
                         ...n
                     });
             });
         },
-        C = (e, t) => {
-            (0, a.J)((0, d.ar)(e, t));
+        N = (e, t) => {
+            (0, r.J)((0, d.ar)(e, t));
         },
-        x = N.length > 0;
-    return (0, s.jsxs)(s.Fragment, {
+        v = f.length > 0;
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, s.jsx)(i.FormTitle, {
-                className: T.productListingsHeader,
-                id: m,
-                children: x ? E.Z.Messages.GUILD_PRODUCTS_YOUR_PRODUCTS_HEADER : E.Z.Messages.GUILD_PRODUCTS_NO_PRODUCTS_HEADER
+            (0, i.jsx)(l.FormTitle, {
+                className: x.productListingsHeader,
+                id: p,
+                children: v ? g.intl.string(g.t.RwuStb) : g.intl.string(g.t.WKMcMT)
             }),
-            x
-                ? (0, s.jsx)('ul', {
-                      className: T.productListings,
-                      'aria-labelledby': m,
-                      children: N.map((e) =>
-                          (0, s.jsx)(
+            v
+                ? (0, i.jsx)('ul', {
+                      className: x.productListings,
+                      'aria-labelledby': p,
+                      children: f.map((e) =>
+                          (0, i.jsx)(
                               'li',
                               {
-                                  children: (0, s.jsx)(I.Z, {
+                                  children: (0, i.jsx)(h.Z, {
                                       guildId: t,
                                       product: e,
                                       onEditProduct: () => u(e.id),
-                                      onUnpublishProduct: () => g(e.id),
-                                      onDeleteProduct: () => h(e.id, e.name),
-                                      onCopyProductLink: () => C(t, e.id),
+                                      onUnpublishProduct: () => I(e.id),
+                                      onDeleteProduct: () => _(e.id, e.name),
+                                      onCopyProductLink: () => N(t, e.id),
                                       onTestDownload: () =>
-                                          _.Z.open({
+                                          m.Z.open({
                                               guildId: t,
                                               productId: e.id
                                           }),
                                       onReportProduct: () => {},
-                                      disabled: S
+                                      disabled: C
                                   })
                               },
                               e.id
                           )
                       )
                   })
-                : (0, s.jsx)(r.Z, {
+                : (0, i.jsx)(s.Z, {
                       guildId: t,
                       showCTA: !1,
                       responsive: !1
@@ -84,38 +84,38 @@ function N(e) {
         ]
     });
 }
-function S(e) {
+function C(e) {
     let { guildId: t } = e,
-        { shouldRestrictUpdatingCreatorMonetizationSettings: n } = (0, l.gX)(t),
-        a = (e) => {
+        { shouldRestrictUpdatingCreatorMonetizationSettings: n } = (0, a.gX)(t),
+        r = (e) => {
             u.h(t, e);
         };
-    return (0, s.jsxs)(s.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, s.jsxs)(i.Button, {
-                className: T.addButton,
-                innerClassName: T.addButtonInner,
-                onClick: () => a(null),
+            (0, i.jsxs)(l.Button, {
+                className: x.addButton,
+                innerClassName: x.addButtonInner,
+                onClick: () => r(null),
                 disabled: n,
                 children: [
-                    (0, s.jsx)(i.PlusSmallIcon, {
+                    (0, i.jsx)(l.PlusSmallIcon, {
                         size: 'custom',
                         color: 'currentColor',
                         width: 20,
                         height: 20,
                         'aria-hidden': !0
                     }),
-                    (0, s.jsx)(i.Spacer, {
+                    (0, i.jsx)(l.Spacer, {
                         size: 6,
                         horizontal: !0
                     }),
-                    E.Z.Messages.GUILD_PRODUCTS_CREATE_PRODUCT_BUTTON
+                    g.intl.string(g.t.riG6DQ)
                 ]
             }),
-            (0, s.jsx)(i.Spacer, { size: 24 }),
-            (0, s.jsx)(N, {
+            (0, i.jsx)(l.Spacer, { size: 24 }),
+            (0, i.jsx)(f, {
                 guildId: t,
-                handleCreateOrEditProduct: a
+                handleCreateOrEditProduct: r
             })
         ]
     });

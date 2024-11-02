@@ -1,15 +1,15 @@
 a.r(t), a(47120);
 var n = a(200651),
     s = a(192379),
-    r = a(548668),
-    i = a(231262),
+    i = a(548668),
+    r = a(231262),
     l = a(501522),
     o = a(442837),
     c = a(153867),
     d = a(706454),
     u = a(626135),
     N = a(981631),
-    h = a(689938),
+    h = a(388032),
     m = a(256109);
 class p extends s.Component {
     shouldScrollToTop(e) {
@@ -24,7 +24,7 @@ class p extends s.Component {
             render: (t, l) =>
                 (0, n.jsxs)(s.Fragment, {
                     children: [
-                        (0, n.jsx)(i.h, {
+                        (0, n.jsx)(r.h, {
                             avoidRouter: !0,
                             locale: o,
                             authRedirectTo: e.pathname,
@@ -32,12 +32,12 @@ class p extends s.Component {
                             className: m.marketingHeader,
                             onChangeLocale: this.handleHeaderLocaleChange,
                             mobileClassName: m.marketingHeader,
-                            openNavAriaLabel: h.Z.Messages.OPEN_NAVIGATION,
-                            hideNavAriaLabel: h.Z.Messages.HIDE_NAVIGATION,
-                            skipToContentLabel: h.Z.Messages.SKIP_TO_CONTENT
+                            openNavAriaLabel: h.intl.string(h.t.Fs9k3N),
+                            hideNavAriaLabel: h.intl.string(h.t.AbfyHB),
+                            skipToContentLabel: h.intl.string(h.t['18gavL'])
                         }),
                         a(t, l),
-                        (0, n.jsx)(r.$, {
+                        (0, n.jsx)(i.$, {
                             locale: o,
                             authRedirectTo: e.pathname,
                             avoidRouter: !0,

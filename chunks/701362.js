@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return A;
     }
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    a = n(120356),
-    l = n.n(a),
-    r = n(442837),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
+    s = n(442837),
     o = n(481060),
     c = n(717881),
     u = n(58540),
@@ -16,23 +16,23 @@ var i = n(200651),
     h = n(951844),
     m = n(258609),
     p = n(199902),
-    _ = n(314897),
-    f = n(430824),
-    E = n(496675),
-    g = n(158776),
-    C = n(979651),
-    I = n(626135),
-    T = n(382182),
-    x = n(687516),
-    S = n(718805),
-    v = n(871118),
-    N = n(981631),
-    A = n(689938),
-    Z = n(278552);
-class M extends s.PureComponent {
+    f = n(314897),
+    g = n(430824),
+    C = n(496675),
+    x = n(158776),
+    v = n(979651),
+    _ = n(626135),
+    I = n(382182),
+    E = n(687516),
+    b = n(718805),
+    S = n(871118),
+    Z = n(981631),
+    T = n(388032),
+    N = n(278552);
+class j extends l.PureComponent {
     componentDidMount() {
         let { user: e, streamApplication: t } = this.props;
-        I.default.track(N.rMx.OPEN_POPOUT, {
+        _.default.track(Z.rMx.OPEN_POPOUT, {
             type: 'Stream Preview',
             other_user_id: e.id,
             application_id: null != t ? t.id : null,
@@ -42,23 +42,23 @@ class M extends s.PureComponent {
         });
     }
     renderPreview(e) {
-        let { onWatch: t, activeStream: n, currentUserId: s, canWatch: a, unavailableReason: l } = this.props;
+        let { onWatch: t, activeStream: n, currentUserId: l, canWatch: r, unavailableReason: a } = this.props;
         return (0, i.jsxs)(o.Clickable, {
             onClick: t,
-            className: Z.previewContainer,
+            className: N.previewContainer,
             children: [
-                (0, i.jsx)(v.Z, {
-                    className: Z.previewImage,
+                (0, i.jsx)(S.Z, {
+                    className: N.previewImage,
                     stream: e
                 }),
-                a
+                r
                     ? (0, i.jsx)('div', {
-                          className: Z.previewHover,
+                          className: N.previewHover,
                           children: (0, i.jsx)(o.Text, {
                               variant: 'text-sm/normal',
                               color: 'none',
-                              className: Z.white,
-                              children: (0, S.Z)(e, n, s, l)
+                              className: N.white,
+                              children: (0, b.Z)(e, n, l, a)
                           })
                       })
                     : null
@@ -66,17 +66,17 @@ class M extends s.PureComponent {
         });
     }
     render() {
-        let { activity: e, user: t, stream: n, previewIsOpen: s } = this.props;
+        let { activity: e, user: t, stream: n, previewIsOpen: l } = this.props;
         return null == n
             ? null
             : (0, i.jsx)('div', {
-                  className: l()(Z.streamPreviewWrapper, { [Z.mounted]: s }),
+                  className: a()(N.streamPreviewWrapper, { [N.mounted]: l }),
                   children: (0, i.jsxs)('div', {
-                      className: Z.streamPreview,
+                      className: N.streamPreview,
                       children: [
                           this.renderPreview(n),
                           (0, i.jsxs)('div', {
-                              className: Z.body,
+                              className: N.body,
                               children: [
                                   null != e
                                       ? (0, i.jsx)(c.Z, {
@@ -88,8 +88,8 @@ class M extends s.PureComponent {
                                             channelId: n.channelId,
                                             analyticsParams: {
                                                 location: {
-                                                    page: N.ZY5.GO_LIVE_MODAL,
-                                                    section: N.jXE.STREAM_VIEWER_POPOUT
+                                                    page: Z.ZY5.GO_LIVE_MODAL,
+                                                    section: Z.jXE.STREAM_VIEWER_POPOUT
                                                 }
                                             }
                                         })
@@ -99,13 +99,13 @@ class M extends s.PureComponent {
                                             user: t,
                                             guildId: n.guildId,
                                             channelId: n.channelId,
-                                            className: Z.activityActions,
-                                            color: Z.watchButton
+                                            className: N.activityActions,
+                                            color: N.watchButton
                                         }),
                                   (0, i.jsx)(h.Z, {
                                       type: h.Z.Types.INLINE,
-                                      className: Z.protip,
-                                      children: __OVERLAY__ ? A.Z.Messages.WATCH_STREAM_IN_APP : A.Z.Messages.WATCH_STREAM_TIP
+                                      className: N.protip,
+                                      children: __OVERLAY__ ? T.intl.string(T.t['YRdw7+']) : T.intl.string(T.t.CCTgbG)
                                   })
                               ]
                           })
@@ -114,27 +114,27 @@ class M extends s.PureComponent {
               });
     }
 }
-function b(e) {
-    let { user: t, channel: n, ...a } = e,
-        [l, o] = (0, r.Wu)([C.Z, f.Z, E.Z, m.Z], () => (0, T.p9)(n, C.Z, f.Z, E.Z, m.Z)),
-        c = (0, r.e7)([p.Z], () => p.Z.getStreamForUser(t.id, n.getGuildId())),
-        d = (0, r.e7)([p.Z], () => p.Z.getActiveStreamForApplicationStream(c)),
-        h = (0, r.e7)([_.default], () => _.default.getId()),
-        I = (0, x.Cf)(c),
-        S = (0, r.e7)([g.Z], () => (0, x.Um)(c, g.Z)),
-        v = s.useMemo(() => ({ [n.guild_id]: [t.id] }), [n.guild_id, t.id]);
+function A(e) {
+    let { user: t, channel: n, ...r } = e,
+        [a, o] = (0, s.Wu)([v.Z, g.Z, C.Z, m.Z], () => (0, I.p9)(n, v.Z, g.Z, C.Z, m.Z)),
+        c = (0, s.e7)([p.Z], () => p.Z.getStreamForUser(t.id, n.getGuildId())),
+        d = (0, s.e7)([p.Z], () => p.Z.getActiveStreamForApplicationStream(c)),
+        h = (0, s.e7)([f.default], () => f.default.getId()),
+        _ = (0, E.Cf)(c),
+        b = (0, s.e7)([x.Z], () => (0, E.Um)(c, x.Z)),
+        S = l.useMemo(() => ({ [n.guild_id]: [t.id] }), [n.guild_id, t.id]);
     return (
-        (0, u.$)(v),
-        (0, i.jsx)(M, {
-            ...a,
-            canWatch: l,
+        (0, u.$)(S),
+        (0, i.jsx)(j, {
+            ...r,
+            canWatch: a,
             unavailableReason: o,
             user: t,
-            streamApplication: I,
+            streamApplication: _,
             stream: c,
             activeStream: d,
             currentUserId: h,
-            activity: S
+            activity: b
         })
     );
 }

@@ -1,29 +1,29 @@
 l.r(t),
     l.d(t, {
         default: function () {
-            return S;
+            return A;
         }
     }),
     l(47120);
-var s = l(200651),
-    n = l(192379),
+var n = l(200651),
+    s = l(192379),
     r = l(120356),
     a = l.n(r),
-    u = l(442837),
-    i = l(481060),
+    i = l(442837),
+    u = l(481060),
     o = l(988298),
     c = l(461745),
     d = l(212819),
     h = l(43267),
-    _ = l(447003),
-    f = l(933557),
-    p = l(606206),
-    I = l(585483),
-    E = l(981631),
-    N = l(689938),
-    T = l(539782),
-    m = l(113207);
-function C(e, t, l) {
+    f = l(447003),
+    p = l(933557),
+    _ = l(606206),
+    m = l(585483),
+    N = l(981631),
+    v = l(388032),
+    g = l(539782),
+    C = l(113207);
+function E(e, t, l) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,79 +36,79 @@ function C(e, t, l) {
         e
     );
 }
-let A = (e) => {
-        let { channel: t, categoryName: l, guildName: n } = e,
-            r = i.TextIcon;
+let I = (e) => {
+        let { channel: t, categoryName: l, guildName: s } = e,
+            r = u.TextIcon;
         return (
-            (0, _.Z)(t) ? (r = i.TextLockIcon) : t.isNSFW() && (r = i.TextWarningIcon),
-            (0, s.jsxs)('div', {
-                className: T.result,
+            (0, f.Z)(t) ? (r = u.TextLockIcon) : t.isNSFW() && (r = u.TextWarningIcon),
+            (0, n.jsxs)('div', {
+                className: g.result,
                 children: [
-                    (0, s.jsx)(r, {
-                        className: T.resultIcon,
-                        colorClass: T.resultIconBackground,
+                    (0, n.jsx)(r, {
+                        className: g.resultIcon,
+                        colorClass: g.resultIconBackground,
                         size: 'xs'
                     }),
-                    (0, s.jsxs)('div', {
-                        className: T.resultText,
+                    (0, n.jsxs)('div', {
+                        className: g.resultText,
                         children: [
-                            (0, s.jsx)('span', { children: t.name }),
-                            (0, s.jsx)('span', {
-                                className: T.resultCategoryName,
+                            (0, n.jsx)('span', { children: t.name }),
+                            (0, n.jsx)('span', {
+                                className: g.resultCategoryName,
                                 children: l
                             })
                         ]
                     }),
-                    (0, s.jsx)('div', {
-                        className: T.resultGuildName,
-                        children: n
+                    (0, n.jsx)('div', {
+                        className: g.resultGuildName,
+                        children: s
                     })
                 ]
             })
         );
     },
-    v = (e) => {
+    S = (e) => {
         let { channel: t } = e,
-            l = (0, f.ZP)(t);
-        return (0, s.jsxs)('div', {
-            className: T.result,
+            l = (0, p.ZP)(t);
+        return (0, n.jsxs)('div', {
+            className: g.result,
             children: [
-                (0, s.jsx)(i.Avatar, {
+                (0, n.jsx)(u.Avatar, {
                     src: (0, h.x)(t),
                     'aria-label': null != l ? l : '',
-                    className: T.resultAvatar,
-                    size: i.AvatarSizes.SIZE_32
+                    className: g.resultAvatar,
+                    size: u.AvatarSizes.SIZE_32
                 }),
-                (0, s.jsx)('div', {
-                    className: T.resultText,
+                (0, n.jsx)('div', {
+                    className: g.resultText,
                     children: l
                 })
             ]
         });
     },
-    g = (e) => {
+    T = (e) => {
         let t,
-            { user: l, comparator: n, status: r } = e;
-        if (null != n && n === l.tag) {
-            let e = n.split('#');
+            { user: l, comparator: s, status: r } = e;
+        if (null != s && s === l.tag) {
+            let e = s.split('#');
             e.pop(), (t = e.join('#'));
-        } else t = null != n && '' !== n ? n : l.username;
-        return (0, s.jsxs)('div', {
-            className: T.result,
+        } else t = null != s && '' !== s ? s : l.username;
+        return (0, n.jsxs)('div', {
+            className: g.result,
             children: [
-                (0, s.jsx)(i.Avatar, {
+                (0, n.jsx)(u.Avatar, {
                     src: l.getAvatarURL(void 0, 32),
                     'aria-label': l.username,
-                    className: T.resultAvatar,
-                    size: i.AvatarSizes.SIZE_32,
+                    className: g.resultAvatar,
+                    size: u.AvatarSizes.SIZE_32,
                     status: r
                 }),
-                (0, s.jsxs)('div', {
-                    className: T.resultText,
+                (0, n.jsxs)('div', {
+                    className: g.resultText,
                     children: [
-                        (0, s.jsx)('span', { children: t }),
-                        (0, s.jsx)('span', {
-                            className: T.resultUsername,
+                        (0, n.jsx)('span', { children: t }),
+                        (0, n.jsx)('span', {
+                            className: g.resultUsername,
                             children: l.tag
                         })
                     ]
@@ -116,56 +116,56 @@ let A = (e) => {
             ]
         });
     };
-class L extends n.Component {
+class x extends s.Component {
     render() {
         let e, t;
-        let { result: l, selected: n, sending: r } = this.props;
+        let { result: l, selected: s, sending: r } = this.props;
         switch (l.type) {
             case d.h8.GROUP_DM:
-                e = (0, s.jsx)(v, { channel: l.data.record });
+                e = (0, n.jsx)(S, { channel: l.data.record });
                 break;
             case d.h8.TEXT_CHANNEL: {
-                let { categoryName: t, guildName: n } = l;
-                e = (0, s.jsx)(A, {
+                let { categoryName: t, guildName: s } = l;
+                e = (0, n.jsx)(I, {
                     channel: l.data.record,
                     categoryName: t,
-                    guildName: n
+                    guildName: s
                 });
                 break;
             }
             case d.h8.USER: {
                 let {
-                    data: { comparator: t, record: n },
+                    data: { comparator: t, record: s },
                     status: r
                 } = l;
-                e = (0, s.jsx)(g, {
+                e = (0, n.jsx)(T, {
                     comparator: t,
-                    user: n,
+                    user: s,
                     status: r
                 });
             }
         }
         return (
             (t = l.sent
-                ? (0, s.jsx)(i.Button, {
-                      className: T.inviteButton,
-                      look: i.Button.Looks.LINK,
-                      size: i.Button.Sizes.SMALL,
+                ? (0, n.jsx)(u.Button, {
+                      className: g.inviteButton,
+                      look: u.Button.Looks.LINK,
+                      size: u.Button.Sizes.SMALL,
                       disabled: !0,
-                      color: i.Button.Colors.WHITE,
-                      children: N.Z.Messages.ACTIVITY_INVITE_MODAL_SENT
+                      color: u.Button.Colors.WHITE,
+                      children: v.intl.string(v.t.i6A1X1)
                   })
-                : (0, s.jsx)(i.Button, {
-                      color: i.Button.Colors.GREEN,
-                      look: n ? i.Button.Looks.FILLED : i.Button.Looks.OUTLINED,
-                      className: T.inviteButton,
-                      size: i.Button.Sizes.SMALL,
+                : (0, n.jsx)(u.Button, {
+                      color: u.Button.Colors.GREEN,
+                      look: s ? u.Button.Looks.FILLED : u.Button.Looks.OUTLINED,
+                      className: g.inviteButton,
+                      size: u.Button.Sizes.SMALL,
                       submitting: r,
                       onClick: this.handleClick,
-                      children: N.Z.Messages.ACTIVITY_INVITE_MODAL_INVITE
+                      children: v.intl.string(v.t['6F9ivr'])
                   })),
-            (0, s.jsxs)('div', {
-                className: a()(T.resultWrapper, { [T.resultWrapperSelected]: n }),
+            (0, n.jsxs)('div', {
+                className: a()(g.resultWrapper, { [g.resultWrapperSelected]: s }),
                 onMouseEnter: this.handleMouseEnter,
                 children: [e, t]
             })
@@ -173,70 +173,70 @@ class L extends n.Component {
     }
     constructor(...e) {
         super(...e),
-            C(this, 'handleClick', () => {
+            E(this, 'handleClick', () => {
                 let { onInvite: e, row: t } = this.props;
                 e(t);
             }),
-            C(this, 'handleMouseEnter', () => {
+            E(this, 'handleMouseEnter', () => {
                 let { onMouseEnter: e, row: t } = this.props;
                 e(t);
             });
     }
 }
-function S(e) {
+function A(e) {
     let { transitionState: t, onClose: l } = e,
         {
             results: r,
             query: a,
             activity: h
-        } = (0, u.cj)(
-            [p.Z],
+        } = (0, i.cj)(
+            [_.Z],
             () => ({
-                results: p.Z.getResults(),
-                query: p.Z.getQuery(),
-                activity: p.Z.getActivity()
+                results: _.Z.getResults(),
+                query: _.Z.getQuery(),
+                activity: _.Z.getActivity()
             }),
             []
         ),
-        [_, f] = n.useState(a),
-        [C, A] = n.useState(0),
-        [v, g] = n.useState([]),
-        [S, x] = n.useState(!1),
-        M = n.useRef(null),
-        y = n.useCallback(() => {
+        [f, p] = s.useState(a),
+        [E, I] = s.useState(0),
+        [S, T] = s.useState([]),
+        [A, L] = s.useState(!1),
+        y = s.useRef(null),
+        R = s.useCallback(() => {
             var e;
-            null === (e = M.current) || void 0 === e || e.scrollPageUp({ animate: !0 });
-        }, [M]),
-        R = n.useCallback(() => {
+            null === (e = y.current) || void 0 === e || e.scrollPageUp({ animate: !0 });
+        }, [y]),
+        j = s.useCallback(() => {
             var e;
-            null === (e = M.current) || void 0 === e || e.scrollPageDown({ animate: !0 });
-        }, [M]);
-    n.useEffect(
+            null === (e = y.current) || void 0 === e || e.scrollPageDown({ animate: !0 });
+        }, [y]);
+    s.useEffect(
         () => (
-            I.S.subscribe(E.CkL.SCROLL_PAGE_UP, y),
+            m.S.subscribe(N.CkL.SCROLL_PAGE_UP, R),
             () => {
-                I.S.unsubscribe(E.CkL.SCROLL_PAGE_UP, y);
+                m.S.unsubscribe(N.CkL.SCROLL_PAGE_UP, R);
             }
         ),
-        [y]
+        [R]
     ),
-        n.useEffect(
+        s.useEffect(
             () => (
-                I.S.subscribe(E.CkL.SCROLL_PAGE_DOWN, R),
+                m.S.subscribe(N.CkL.SCROLL_PAGE_DOWN, j),
                 () => {
-                    I.S.unsubscribe(E.CkL.SCROLL_PAGE_DOWN, R);
+                    m.S.unsubscribe(N.CkL.SCROLL_PAGE_DOWN, j);
                 }
             ),
-            [R]
+            [j]
         ),
-        n.useEffect(() => {
+        s.useEffect(() => {
             null == h && l();
         }, [l, h]),
-        n.useEffect(() => {
+        s.useEffect(() => {
             var e;
-            null === (e = M.current) || void 0 === e || e.scrollToTop(), A(0);
-        }, [M, r]);
-    let O = n.useCallback(
+            null === (e = y.current) || void 0 === e || e.scrollToTop(), I(0);
+        }, [y, r]);
+    let b = s.useCallback(
             (e) => {
                 let {
                     data: t,
@@ -244,8 +244,8 @@ function S(e) {
                         record: { id: l }
                     }
                 } = r[e];
-                if (!(null == l || v.includes(l)))
-                    switch ((g([...v, l]), t.type)) {
+                if (!(null == l || S.includes(l)))
+                    switch ((T([...S, l]), t.type)) {
                         case d.h8.GROUP_DM:
                         case d.h8.TEXT_CHANNEL:
                             (0, o.GG)(t.record.id);
@@ -254,101 +254,101 @@ function S(e) {
                             (0, o.R2)(t.record.id);
                     }
             },
-            [r, v]
+            [r, S]
         ),
-        j = n.useCallback(
+        M = s.useCallback(
             (e) => {
-                A(e);
+                I(e);
             },
-            [A]
+            [I]
         ),
-        D = () => {
-            b('');
+        k = () => {
+            P('');
         },
-        b = (e) => {
-            f(e), (0, o.rh)(e);
+        P = (e) => {
+            p(e), (0, o.rh)(e);
         };
     return null == h
         ? null
-        : (0, s.jsxs)(i.ModalRoot, {
+        : (0, n.jsxs)(u.ModalRoot, {
               transitionState: t,
-              size: i.ModalSize.SMALL,
-              'aria-label': N.Z.Messages.ACTIVITY_INVITE_MODAL_HEADER.format({ name: h.name }),
+              size: u.ModalSize.SMALL,
+              'aria-label': v.intl.formatToPlainString(v.t['2tN7io'], { name: h.name }),
               children: [
-                  (0, s.jsxs)(i.ModalHeader, {
-                      separator: S,
+                  (0, n.jsxs)(u.ModalHeader, {
+                      separator: A,
                       children: [
-                          (0, s.jsx)(i.ModalCloseButton, {
-                              className: T.closeButton,
+                          (0, n.jsx)(u.ModalCloseButton, {
+                              className: g.closeButton,
                               onClick: l
                           }),
-                          (0, s.jsxs)('div', {
-                              className: T.header,
+                          (0, n.jsxs)('div', {
+                              className: g.header,
                               children: [
-                                  (0, s.jsx)(i.FormTitle, {
+                                  (0, n.jsx)(u.FormTitle, {
                                       tag: 'h2',
-                                      className: m.marginBottom8,
-                                      children: N.Z.Messages.ACTIVITY_INVITE_MODAL_HEADER.format({ name: h.name })
+                                      className: C.marginBottom8,
+                                      children: v.intl.format(v.t['2tN7io'], { name: h.name })
                                   }),
-                                  (0, s.jsx)(c.ZP, {
+                                  (0, n.jsx)(c.ZP, {
                                       size: c.ZP.Sizes.MEDIUM,
-                                      query: _,
+                                      query: f,
                                       selectedSection: 0,
-                                      selectedRow: C,
+                                      selectedRow: E,
                                       sections: [r.length],
-                                      className: m.marginTop4,
+                                      className: C.marginTop4,
                                       onSelect: (e, t) => {
-                                          null == t ? D() : O(t);
+                                          null == t ? k() : b(t);
                                       },
                                       onSelectionChange: (e, t) => {
                                           var l;
-                                          A(t),
-                                              null === (l = M.current) ||
+                                          I(t),
+                                              null === (l = y.current) ||
                                                   void 0 === l ||
                                                   l.scrollIntoViewRect({
                                                       start: 44 * t,
                                                       end: 44 * t + 44
                                                   });
                                       },
-                                      onQueryChange: b,
-                                      placeholder: N.Z.Messages.ACTIVITY_INVITE_MODAL_SEARCH_PLACEHOLDER,
+                                      onQueryChange: P,
+                                      placeholder: v.intl.string(v.t.IJExws),
                                       autoFocus: !0,
-                                      onClear: D
+                                      onClear: k
                                   })
                               ]
                           })
                       ]
                   }),
-                  (0, s.jsx)(i.ModalListContent, {
-                      scrollerRef: M,
-                      className: 0 === r.length ? T.noResults : T.results,
+                  (0, n.jsx)(u.ModalListContent, {
+                      scrollerRef: y,
+                      className: 0 === r.length ? g.noResults : g.results,
                       paddingBottom: 8,
                       sections: [r.length],
                       sectionHeight: 0,
-                      renderSection: E.VqG,
+                      renderSection: N.VqG,
                       rowHeight: (e, t) => (e > 0 ? 0 : null != r[t] ? 44 : 0),
                       renderRow: (e) => {
                           let { section: t, row: l } = e;
                           if (t > 0) return null;
-                          let n = r[l];
-                          return null == n
+                          let s = r[l];
+                          return null == s
                               ? null
-                              : (0, s.jsx)(
-                                    L,
+                              : (0, n.jsx)(
+                                    x,
                                     {
                                         row: l,
-                                        result: n,
-                                        sending: null != n.data.record.id && v.includes(n.data.record.id),
-                                        selected: l === C,
-                                        onMouseEnter: j,
-                                        onInvite: O
+                                        result: s,
+                                        sending: null != s.data.record.id && S.includes(s.data.record.id),
+                                        selected: l === E,
+                                        onMouseEnter: M,
+                                        onInvite: b
                                     },
-                                    n.data.record.id
+                                    s.data.record.id
                                 );
                       },
                       onScroll: (e) => {
                           let t = e.currentTarget.scrollTop > 0;
-                          S !== t && x(t);
+                          A !== t && L(t);
                       }
                   })
               ]

@@ -3,51 +3,51 @@ n.d(t, {
         return u;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(120356),
-    i = n.n(a),
-    r = n(481060),
-    l = n(264451),
+var r = n(120356),
+    l = n.n(r),
+    s = n(481060),
+    a = n(264451),
     o = n(75775),
-    c = n(689938),
+    c = n(388032),
     d = n(117584);
 let u = (e) => {
     let { value: t, isPercent: n } = e;
     if (null == t) return null;
-    let { formattedValue: a, isPositive: u } = (0, l.m5)(t, n);
-    return (0, s.jsxs)('div', {
+    let { formattedValue: r, isPositive: u } = (0, a.m5)(t, n);
+    return (0, i.jsxs)('div', {
         className: d.trendContainer,
         children: [
-            (0, s.jsx)(o.Z, { className: i()(d.chartLineIcon, { [d.chartLineIconNegative]: !u }) }),
-            (0, s.jsx)(r.Text, {
+            (0, i.jsx)(o.Z, { className: l()(d.chartLineIcon, { [d.chartLineIconNegative]: !u }) }),
+            (0, i.jsx)(s.Text, {
                 variant: 'text-md/normal',
                 className: d.trendDescription,
-                children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_METRIC_TREND_DESCRIPTION.format({ value: a })
+                children: c.intl.format(c.t.OTHOvb, { value: r })
             })
         ]
     });
 };
 t.Z = (e) => {
-    let { label: t, sublabel: n, value: a, additionalContent: i, tooltip: l } = e;
-    return (0, s.jsxs)('div', {
+    let { label: t, sublabel: n, value: r, additionalContent: l, tooltip: a } = e;
+    return (0, i.jsxs)('div', {
         className: d.container,
         children: [
-            (0, s.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 children: [
-                    (0, s.jsxs)('div', {
+                    (0, i.jsxs)('div', {
                         className: d.labelContainer,
                         children: [
-                            (0, s.jsx)(r.Text, {
+                            (0, i.jsx)(s.Text, {
                                 variant: 'text-xs/medium',
                                 className: d.label,
                                 children: t
                             }),
-                            null != l &&
-                                (0, s.jsx)(r.Tooltip, {
-                                    text: l,
+                            null != a &&
+                                (0, i.jsx)(s.Tooltip, {
+                                    text: a,
                                     children: (e) =>
-                                        (0, s.jsx)(r.CircleInformationIcon, {
+                                        (0, i.jsx)(s.CircleInformationIcon, {
                                             size: 'xs',
                                             color: 'currentColor',
                                             className: d.labelTooltipIcon,
@@ -55,7 +55,7 @@ t.Z = (e) => {
                                         })
                                 }),
                             null != n
-                                ? (0, s.jsx)(r.Text, {
+                                ? (0, i.jsx)(s.Text, {
                                       variant: 'text-xs/normal',
                                       className: d.sublabel,
                                       children: n
@@ -63,14 +63,14 @@ t.Z = (e) => {
                                 : null
                         ]
                     }),
-                    (0, s.jsx)(r.Text, {
+                    (0, i.jsx)(s.Text, {
                         className: d.value,
                         variant: 'text-sm/normal',
-                        children: a
+                        children: r
                     })
                 ]
             }),
-            i
+            l
         ]
     });
 };

@@ -31,8 +31,8 @@ e.exports = function (e) {
         })),
         o.prototype)
     ) {
-        var _ = function () {};
-        (_.prototype = o.prototype), (s.prototype = new _()), (_.prototype = null);
+        var f = function () {};
+        (f.prototype = o.prototype), (s.prototype = new f()), (f.prototype = null);
     }
     return s;
 };

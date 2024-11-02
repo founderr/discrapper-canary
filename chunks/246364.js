@@ -1,7 +1,7 @@
 var r, i, a, s, o, l, u, c;
 n.d(t, {
     J: function () {
-        return E;
+        return _;
     },
     Nw: function () {
         return a;
@@ -10,10 +10,10 @@ n.d(t, {
         return r;
     },
     YG: function () {
-        return f;
+        return h;
     },
     hW: function () {
-        return _;
+        return f;
     },
     tB: function () {
         return d;
@@ -23,11 +23,11 @@ n.d(t, {
     }
 });
 let d = 25,
-    _ = 4;
-function E(e) {
+    f = 4;
+function _(e) {
     return null != e && 'TERMS' === e.field_type;
 }
-function f(e) {
-    return null != e && e.some((e) => !E(e));
+function h(e) {
+    return null != e && e.some((e) => !_(e));
 }
 ((o = r || (r = {})).TERMS = 'TERMS'), (o.TEXT_INPUT = 'TEXT_INPUT'), (o.PARAGRAPH = 'PARAGRAPH'), (o.MULTIPLE_CHOICE = 'MULTIPLE_CHOICE'), (o.VERIFICATION = 'VERIFICATION'), ((l = i || (i = {})).EMAIL = 'email'), (l.PHONE = 'phone'), ((u = a || (a = {})).TIMESTAMP_DESC = 'NEWEST'), (u.TIMESTAMP_ASC = 'OLDEST'), ((c = s || (s = {})).STARTED = 'STARTED'), (c.SUBMITTED = 'SUBMITTED'), (c.REJECTED = 'REJECTED'), (c.APPROVED = 'APPROVED');

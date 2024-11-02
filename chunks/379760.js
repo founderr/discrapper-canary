@@ -1,38 +1,38 @@
-s.d(t, {
+n.d(t, {
     Z: function () {
         return d;
     }
 });
-var n = s(200651);
-s(192379);
-var r = s(481060),
-    i = s(600164),
-    a = s(7557),
-    o = s(388905),
-    l = s(689938),
-    c = s(985772),
-    u = s(113207);
+var s = n(200651);
+n(192379);
+var r = n(481060),
+    i = n(600164),
+    o = n(7557),
+    l = n(388905),
+    a = n(388032),
+    c = n(985772),
+    u = n(113207);
 function d(e) {
-    let { title: t, subtitle: s, error: d, onSubmit: h, onCancel: p } = e;
-    return (0, n.jsxs)(i.Z, {
+    let { title: t, subtitle: n, error: d, onSubmit: h, onCancel: p } = e;
+    return (0, s.jsxs)(i.Z, {
         direction: i.Z.Direction.VERTICAL,
         children: [
-            (0, n.jsx)(o.Dx, {
+            (0, s.jsx)(l.Dx, {
                 className: u.marginBottom8,
                 children: t
             }),
-            (0, n.jsx)(o.DK, {
+            (0, s.jsx)(l.DK, {
                 className: c.subTitle,
-                children: s
+                children: n
             }),
-            (0, n.jsxs)('div', {
+            (0, s.jsxs)('div', {
                 children: [
-                    (0, n.jsx)(a.Z, {
+                    (0, s.jsx)(o.Z, {
                         inputClassName: c.codeInput,
                         onSubmit: h
                     }),
                     null != d
-                        ? (0, n.jsx)(r.Text, {
+                        ? (0, s.jsx)(r.Text, {
                               className: c.error,
                               variant: 'text-sm/normal',
                               children: d
@@ -41,11 +41,11 @@ function d(e) {
                 ]
             }),
             null != p &&
-                (0, n.jsx)(r.Button, {
+                (0, s.jsx)(r.Button, {
                     className: c.button,
                     onClick: p,
                     color: r.Button.Colors.PRIMARY,
-                    children: l.Z.Messages.CANCEL
+                    children: a.intl.string(a.t['ETE/oK'])
                 })
         ]
     });

@@ -1,6 +1,6 @@
 n.d(t, {
     R: function () {
-        return f;
+        return h;
     }
 }),
     n(47120);
@@ -14,11 +14,11 @@ var i = n(544891),
     u = n(9156),
     c = n(312400),
     d = n(115345),
-    _ = n(981631);
-class E extends o.Z {
+    f = n(981631);
+class _ extends o.Z {
     handlePostConnectionOpen() {
         if (!a.K.get('turnedOffNewNotifications')) {
-            if (l.Z.hasConsented(_.pjP.PERSONALIZATION)) {
+            if (l.Z.hasConsented(f.pjP.PERSONALIZATION)) {
                 if (!c.xT.getCurrentConfig({ location: 'NotificationMigrationManager' }, { autoTrackExposure: !1 }).enabled || u.ZP.useNewNotifications) return;
                 this.checkOldUserExperiment(), this.checkNewUserExperiment();
             }
@@ -69,7 +69,7 @@ class E extends o.Z {
                 : (t[n] = r);
     }
 }
-async function f(e) {
+async function h(e) {
     let {
             body: { guild_noise: t, usage: a }
         } = await i.tn.get('/users/@me/notification-migration-data2'),
@@ -85,4 +85,4 @@ async function f(e) {
             });
     });
 }
-t.Z = new E();
+t.Z = new _();

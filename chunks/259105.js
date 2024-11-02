@@ -27,7 +27,7 @@ var r =
 function d(e) {
     return e && e.__esModule ? e : { default: e };
 }
-var _ = (function (e) {
+var f = (function (e) {
     function t() {
         !(function (e, t) {
             if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
@@ -109,7 +109,7 @@ var _ = (function (e) {
         t
     );
 })(a.Component);
-(_.propTypes = {
+(f.propTypes = {
     children: o.default.oneOfType([o.default.element, o.default.func]).isRequired
 }),
-    (t.default = _);
+    (t.default = f);

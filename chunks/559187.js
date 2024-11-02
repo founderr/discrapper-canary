@@ -1,18 +1,18 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return a;
     }
 });
-var a = n(626135),
+var l = n(626135),
     o = n(981631);
-function s(e) {
-    let { problem: t, feedback: n, reportType: s, reportId: l = null, rating: r = null, dontShowAgain: i } = e;
-    a.default.track(o.rMx.IAR_FEEDBACK_SUBMITTED, {
+function a(e) {
+    let { problem: t, feedback: n, reportType: a, reportId: r = null, rating: i = null, dontShowAgain: s } = e;
+    l.default.track(o.rMx.IAR_FEEDBACK_SUBMITTED, {
         reason: t,
-        report_type: s,
-        report_id: l,
-        rating: r,
+        report_type: a,
+        report_id: r,
+        rating: i,
         feedback: n,
-        dont_show_again: i
+        dont_show_again: s
     });
 }

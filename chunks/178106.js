@@ -8,13 +8,13 @@ var r,
     u = n(570140),
     c = n(704907),
     d = n(581883),
-    _ = n(594174),
-    E = n(164878),
-    f = n(763296),
-    h = n(697426),
-    p = n(710111),
-    I = n(526761);
-function m(e, t, n) {
+    f = n(594174),
+    _ = n(164878),
+    h = n(763296),
+    p = n(697426),
+    m = n(710111),
+    g = n(526761);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,75 +27,75 @@ function m(e, t, n) {
         e
     );
 }
-let T = [],
-    S = new (o())({ max: p.zb }),
-    g = new c.ZP({
+let v = [],
+    I = new (o())({ max: m.zb }),
+    S = new c.ZP({
         computeBonus: () => 100,
         computeWeight: (e) => {
             let t = 1;
             return e <= 3 ? (t = 100) : e <= 15 ? (t = 70) : e <= 30 ? (t = 50) : e <= 45 ? (t = 30) : e <= 80 && (t = 10), t;
         },
-        lookupKey: (e) => f.Z.getSoundById(e),
+        lookupKey: (e) => h.Z.getSoundById(e),
         afterCompute: () => {},
-        numFrequentlyItems: p.O6
+        numFrequentlyItems: m.O6
     });
-function A() {
+function T() {
     var e, t;
-    if (!N()) return;
+    if (!b()) return;
     let n = null === (e = d.Z.frecencyWithoutFetchingLatest.playedSoundFrecency) || void 0 === e ? void 0 : e.playedSounds;
-    g.overwriteHistory(
+    S.overwriteHistory(
         ((t = null != n ? n : {}),
         a().mapValues(t, (e) => ({
             ...e,
             recentUses: e.recentUses.map(Number).filter((e) => e > 0)
         }))),
-        T
+        v
     );
 }
-function N() {
-    return (0, E.v)({
+function b() {
+    return (0, _.v)({
         location: 'soundboard_event_store',
         autoTrackExposure: !1
     }).canSeeFrequentlyPlayed;
 }
-class R extends (r = l.ZP.PersistedStore) {
+class y extends (r = l.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(_.default, f.Z), (null == e ? void 0 : e.recentlyHeardCache) != null && S.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (T = e.playedEventsPendingFlush), this.syncWith([d.Z], A);
+        this.waitFor(f.default, h.Z), (null == e ? void 0 : e.recentlyHeardCache) != null && I.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (v = e.playedEventsPendingFlush), this.syncWith([d.Z], T);
     }
     getState() {
         return {
-            recentlyHeardCache: S.dump(),
-            playedEventsPendingFlush: T
+            recentlyHeardCache: I.dump(),
+            playedEventsPendingFlush: v
         };
     }
     hasPendingUsage() {
-        return T.length > 0;
+        return v.length > 0;
     }
     get playedSoundHistory() {
-        return g.usageHistory;
+        return S.usageHistory;
     }
     get recentlyHeardSoundIds() {
-        return S.values();
+        return I.values();
     }
     get frecentlyPlayedSounds() {
-        return g.frequently;
+        return S.frequently;
     }
 }
-m(R, 'displayName', 'SoundboardEventStore'),
-    m(R, 'persistKey', 'SoundboardEventStore'),
-    (t.Z = new R(u.Z, {
+E(y, 'displayName', 'SoundboardEventStore'),
+    E(y, 'persistKey', 'SoundboardEventStore'),
+    (t.Z = new y(u.Z, {
         GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY: function (e) {
             let { sound: t, trigger: n } = e;
-            if (!N()) return;
+            if (!b()) return;
             let r = t.soundId.toString();
-            n === h.YQ.SOUNDBOARD &&
+            n === p.YQ.SOUNDBOARD &&
                 (function (e) {
-                    g.track(e),
-                        T.push({
+                    S.track(e),
+                        v.push({
                             key: e,
                             timestamp: Date.now()
                         }),
-                        g.compute();
+                        S.compute();
                 })(r);
         },
         GUILD_SOUNDBOARD_SOUND_PLAY_START: function (e) {
@@ -103,7 +103,7 @@ m(R, 'displayName', 'SoundboardEventStore'),
             let { soundId: n, userId: r } = e;
             if (
                 !(function () {
-                    return (0, E.v)({
+                    return (0, _.v)({
                         location: 'soundboard_event_store',
                         autoTrackExposure: !1
                     }).canSeeRecentlyHeard;
@@ -111,13 +111,13 @@ m(R, 'displayName', 'SoundboardEventStore'),
             )
                 return;
             let i = n.toString();
-            r !== (null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) &&
+            r !== (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) &&
                 (function (e) {
-                    for (let t of f.Z.getSounds().values()) if (null != t.find((t) => t.soundId.toString() === e)) return !0;
+                    for (let t of h.Z.getSounds().values()) if (null != t.find((t) => t.soundId.toString() === e)) return !0;
                     return !1;
                 })(i) &&
                 (function (e) {
-                    S.set(e, e);
+                    I.set(e, e);
                 })(i);
         },
         USER_SETTINGS_PROTO_UPDATE: function (e) {
@@ -125,6 +125,6 @@ m(R, 'displayName', 'SoundboardEventStore'),
                 settings: { type: t },
                 wasSaved: n
             } = e;
-            N() && t === I.yP.FRECENCY_AND_FAVORITES_SETTINGS && n && (T = []);
+            b() && t === g.yP.FRECENCY_AND_FAVORITES_SETTINGS && n && (v = []);
         }
     }));

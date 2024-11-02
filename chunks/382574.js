@@ -1,13 +1,13 @@
-var a = t(200651);
+var r = t(200651);
 t(192379);
-var r = t(73880),
+var a = t(73880),
     i = t(137158),
-    s = t(689938),
+    s = t(388032),
     o = t(631403);
 n.Z = function (e) {
-    let { formField: n, index: t, isDragEnabled: l, isDropHovered: c, onDrop: d, onEdit: u, onRemove: m, canRemove: _, actionsLocation: f } = e,
-        { label: C, placeholder: h } = n;
-    return (0, a.jsx)(i.Z, {
+    let { formField: n, index: t, isDragEnabled: l, isDropHovered: c, onDrop: d, onEdit: u, onRemove: m, canRemove: f, actionsLocation: h } = e,
+        { label: x, placeholder: p } = n;
+    return (0, r.jsx)(i.Z, {
         field: n,
         index: t,
         isDragEnabled: l,
@@ -15,12 +15,12 @@ n.Z = function (e) {
         onDrop: d,
         onEdit: u,
         onRemove: m,
-        title: C,
-        canRemove: _,
-        actionsLocation: f,
-        children: (0, a.jsx)(r.Q8, {
+        title: x,
+        canRemove: f,
+        actionsLocation: h,
+        children: (0, r.jsx)(a.Q8, {
             className: o.fieldBackground,
-            placeholder: null != h ? h : s.Z.Messages.MEMBER_VERIFICATION_ANSWER_PLACEHOLDER,
+            placeholder: null != p ? p : s.intl.string(s.t['Sqn+Wl']),
             disabled: !0
         })
     });

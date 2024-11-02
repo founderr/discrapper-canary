@@ -1,43 +1,43 @@
 n.d(t, {
     _: function () {
-        return A;
+        return y;
     }
 });
 var a = n(200651),
-    s = n(192379),
+    i = n(192379),
     r = n(120356),
     l = n.n(r),
-    i = n(512722),
-    o = n.n(i),
+    s = n(512722),
+    o = n.n(s),
     c = n(399606),
     d = n(481060),
     u = n(166459),
     m = n(607070),
     h = n(541716),
-    _ = n(273031),
-    g = n(859235),
-    x = n(313201),
-    C = n(70097),
-    f = n(374794),
-    p = n(470623),
-    T = n(983200),
-    I = n(127654),
-    E = n(124252),
-    N = n(689938),
-    b = n(682459);
-let v = [
+    g = n(273031),
+    x = n(859235),
+    f = n(313201),
+    p = n(70097),
+    C = n(374794),
+    v = n(470623),
+    b = n(983200),
+    j = n(127654),
+    _ = n(124252),
+    I = n(388032),
+    T = n(682459);
+let N = [
         {
             name: 'Media Post Thumbnail',
             extensions: ['jpg', 'jpeg', 'png', 'gif', 'webp']
         }
     ],
-    S = (0, x.hQ)();
-function M(e) {
-    let { mediaAttachments: t, containerWidth: n, containerHeight: s } = e,
-        r = (0, T.tu)({
+    S = (0, f.hQ)();
+function w(e) {
+    let { mediaAttachments: t, containerWidth: n, containerHeight: i } = e,
+        r = (0, b.tu)({
             numAttachments: t.length,
             containerWidth: n,
-            containerHeight: s
+            containerHeight: i
         });
     return (0, a.jsx)(a.Fragment, {
         children: t.map((e, t) => {
@@ -48,14 +48,14 @@ function M(e) {
                     style: r[t],
                     children:
                         !0 === e.isVideo
-                            ? (0, a.jsx)(C.Z, {
+                            ? (0, a.jsx)(p.Z, {
                                   src: e.src,
-                                  className: b.thumbnail,
+                                  className: T.thumbnail,
                                   'aria-hidden': !0
                               })
                             : (0, a.jsx)('img', {
                                   src: e.src,
-                                  className: b.thumbnail,
+                                  className: T.thumbnail,
                                   'aria-hidden': !0,
                                   alt: null !== (n = null == e ? void 0 : e.alt) && void 0 !== n ? n : ''
                               })
@@ -65,39 +65,39 @@ function M(e) {
         })
     });
 }
-let A = (e) => {
+let y = (e) => {
     var t;
     let { parentChannel: r } = e,
-        { textAreaState: i } = (0, p.xH)((e) => {
+        { textAreaState: s } = (0, v.xH)((e) => {
             let { textAreaState: t } = e;
             return { textAreaState: t };
         }),
-        x = (0, c.e7)([m.Z], () => m.Z.keyboardModeEnabled),
-        C = (0, E.Z)(r, null === (t = i.textValue) || void 0 === t ? void 0 : t.trim()),
-        T = s.useMemo(() => C.find((e) => e.isThumbnail), [C]),
-        A = null != C && C.length > 0,
-        j = s.useMemo(() => {
-            let e = (null == C ? void 0 : C.length) > 1 ? 1.15 : 1;
+        f = (0, c.e7)([m.Z], () => m.Z.keyboardModeEnabled),
+        p = (0, _.Z)(r, null === (t = s.textValue) || void 0 === t ? void 0 : t.trim()),
+        b = i.useMemo(() => p.find((e) => e.isThumbnail), [p]),
+        y = null != p && p.length > 0,
+        E = i.useMemo(() => {
+            let e = (null == p ? void 0 : p.length) > 1 ? 1.15 : 1;
             return {
                 width: 153 * e,
                 height: 86 * e
             };
-        }, [C]),
-        R = s.useCallback(
+        }, [p]),
+        R = i.useCallback(
             (e) => {
-                null != T && u.Z.remove(r.id, T.id, h.I.CREATE_FORUM_POST.drafts.type),
-                    (0, I.d)(e.currentTarget.files, r, h.I.CREATE_FORUM_POST.drafts.type, {
+                null != b && u.Z.remove(r.id, b.id, h.I.CREATE_FORUM_POST.drafts.type),
+                    (0, j.d)(e.currentTarget.files, r, h.I.CREATE_FORUM_POST.drafts.type, {
                         requireConfirm: !0,
                         isThumbnail: !0
                     }),
                     (e.currentTarget.value = null);
             },
-            [r, T]
+            [r, b]
         ),
-        O = (e) => {
-            if ((e.stopPropagation(), (null == T ? void 0 : T.upload) != null))
+        P = (e) => {
+            if ((e.stopPropagation(), (null == b ? void 0 : b.upload) != null))
                 (0, d.openModalLazy)(async () => {
-                    let e = T.upload;
+                    let e = b.upload;
                     o()(null != e, 'upload should not be null');
                     let { default: t } = await Promise.resolve().then(n.bind(n, 95152));
                     return (n) =>
@@ -107,48 +107,48 @@ let A = (e) => {
                             channelId: r.id,
                             draftType: h.I.CREATE_FORUM_POST.drafts.type,
                             onSubmit: (t) => {
-                                let { name: n, description: a, spoiler: s } = t;
+                                let { name: n, description: a, spoiler: i } = t;
                                 u.Z.update(r.id, e.id, h.I.CREATE_FORUM_POST.drafts.type, {
                                     filename: n,
                                     description: a,
-                                    spoiler: s
+                                    spoiler: i
                                 });
                             },
                             disableSpoiler: !0
                         });
                 });
         },
-        Z = (0, a.jsx)(f.Z, {
+        M = (0, a.jsx)(C.Z, {
             color: d.ButtonColors.CUSTOM,
-            className: l()(b.uploadFileInputContainer),
-            innerClassName: b.uploadThumbnailContainer,
+            className: l()(T.uploadFileInputContainer),
+            innerClassName: T.uploadThumbnailContainer,
             onChange: R,
             multiple: !1,
             'aria-hidden': !0,
-            filters: v,
+            filters: N,
             'aria-describedby': S,
-            'aria-label': A ? N.Z.Messages.MEDIA_CHANNEL_CHANGE_THUMBNAIL_LABEL : N.Z.Messages.MEDIA_CHANNEL_UPLOAD_THUMBNAIL_LABEL,
-            children: A
+            'aria-label': y ? I.intl.string(I.t.MxJI3d) : I.intl.string(I.t.CbiofX),
+            children: y
                 ? (0, a.jsxs)(a.Fragment, {
                       children: [
-                          (0, a.jsx)(M, {
-                              mediaAttachments: C,
-                              containerWidth: j.width,
-                              containerHeight: j.height
+                          (0, a.jsx)(w, {
+                              mediaAttachments: p,
+                              containerWidth: E.width,
+                              containerHeight: E.height
                           }),
                           (0, a.jsxs)('div', {
-                              className: l()(b.changeThumbnailLabelContainer, { [b.changeThumbnailLabelOverflow]: (null == C ? void 0 : C.length) > 2 }),
+                              className: l()(T.changeThumbnailLabelContainer, { [T.changeThumbnailLabelOverflow]: (null == p ? void 0 : p.length) > 2 }),
                               children: [
                                   (0, a.jsx)(d.Text, {
                                       variant: 'text-xs/medium',
                                       color: 'header-secondary',
-                                      children: N.Z.Messages.MEDIA_CHANNEL_CHANGE_THUMBNAIL_LABEL
+                                      children: I.intl.string(I.t.MxJI3d)
                                   }),
-                                  null == T &&
+                                  null == b &&
                                       (0, a.jsx)(d.PencilIcon, {
                                           size: 'xs',
                                           color: 'currentColor',
-                                          className: b.editIcon
+                                          className: T.editIcon
                                       })
                               ]
                           })
@@ -161,37 +161,37 @@ let A = (e) => {
                               width: 39,
                               height: 39,
                               color: 'currentColor',
-                              className: b.uploadIcon
+                              className: T.uploadIcon
                           }),
                           (0, a.jsx)(d.Text, {
                               variant: 'text-xs/normal',
                               color: 'text-muted',
-                              children: N.Z.Messages.MEDIA_CHANNEL_UPLOAD_THUMBNAIL_LABEL
+                              children: I.intl.string(I.t.CbiofX)
                           })
                       ]
                   })
         });
     return (0, a.jsx)('div', {
-        className: b.thumbnailContainer,
-        style: j,
+        className: T.thumbnailContainer,
+        style: E,
         children:
-            null != T
-                ? (0, a.jsx)(g.Z, {
+            null != b
+                ? (0, a.jsx)(x.Z, {
                       actions: (0, a.jsxs)(a.Fragment, {
                           children: [
-                              (0, a.jsx)(_.Z, {
-                                  className: b.action,
-                                  tooltip: N.Z.Messages.ATTACHMENT_UTILITIES_MODIFY,
-                                  onClick: O,
+                              (0, a.jsx)(g.Z, {
+                                  className: T.action,
+                                  tooltip: I.intl.string(I.t.Y8ujqq),
+                                  onClick: P,
                                   children: (0, a.jsx)(d.PencilIcon, {
                                       size: 'xs',
                                       color: 'currentColor'
                                   })
                               }),
-                              (0, a.jsx)(_.Z, {
-                                  className: b.action,
-                                  tooltip: N.Z.Messages.ATTACHMENT_UTILITIES_REMOVE,
-                                  onClick: () => u.Z.remove(r.id, T.id, h.I.CREATE_FORUM_POST.drafts.type),
+                              (0, a.jsx)(g.Z, {
+                                  className: T.action,
+                                  tooltip: I.intl.string(I.t.vN7REx),
+                                  onClick: () => u.Z.remove(r.id, b.id, h.I.CREATE_FORUM_POST.drafts.type),
                                   dangerous: !0,
                                   children: (0, a.jsx)(d.TrashIcon, {
                                       size: 'md',
@@ -201,14 +201,14 @@ let A = (e) => {
                           ]
                       }),
                       draftType: h.I.CREATE_FORUM_POST.drafts.type,
-                      id: T.id,
+                      id: b.id,
                       channelId: r.id,
-                      handleEditModal: O,
-                      keyboardModeEnabled: x,
-                      size: g.q.SMALL,
-                      className: b.attachmentListItem,
-                      children: Z
+                      handleEditModal: P,
+                      keyboardModeEnabled: f,
+                      size: x.q.SMALL,
+                      className: T.attachmentListItem,
+                      children: M
                   })
-                : (0, a.jsx)(a.Fragment, { children: Z })
+                : (0, a.jsx)(a.Fragment, { children: M })
     });
 };

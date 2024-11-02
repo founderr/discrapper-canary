@@ -1,75 +1,75 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return N;
+        return S;
     }
 }),
-    t(47120);
-var n = t(200651),
-    a = t(192379),
-    i = t(120356),
-    r = t.n(i),
-    o = t(772848),
-    l = t(866442),
-    c = t(692547),
-    d = t(481060),
-    _ = t(699682),
-    u = t(44315),
-    E = t(654904),
-    T = t(981631),
-    S = t(689938),
-    I = t(109469);
-function N(e) {
-    let { onChange: s, onClose: t, color: i, suggestedColors: N, disabled: m, label: C, colorPickerMiddle: A, colorPickerFooter: g, showEyeDropper: h } = e,
-        O = a.useRef(null),
-        p = (0, d.useToken)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
-        R = c.Z.colors.BACKGROUND_ACCENT.css,
-        x = (0, E.DP)(i),
-        M = (0, l.Rf)(i),
-        f = M === p ? R : M,
-        D = (0, u.Lq)(x ? T.Ilk.WHITE_500 : T.Ilk.PRIMARY_530),
-        L = (0, _.Z)(A),
-        P = (0, _.Z)(g),
-        [b, Z] = a.useState((0, o.Z)());
+    n(47120);
+var i = n(200651),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(772848),
+    o = n(866442),
+    c = n(692547),
+    d = n(481060),
+    u = n(699682),
+    m = n(44315),
+    h = n(654904),
+    g = n(981631),
+    p = n(388032),
+    x = n(109469);
+function S(e) {
+    let { onChange: t, onClose: n, color: r, suggestedColors: S, disabled: T, label: C, colorPickerMiddle: _, colorPickerFooter: E, showEyeDropper: f } = e,
+        I = s.useRef(null),
+        N = (0, d.useToken)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
+        A = c.Z.colors.BACKGROUND_ACCENT.css,
+        b = (0, h.DP)(r),
+        v = (0, o.Rf)(r),
+        j = v === N ? A : v,
+        O = (0, m.Lq)(b ? g.Ilk.WHITE_500 : g.Ilk.PRIMARY_530),
+        R = (0, u.Z)(_),
+        P = (0, u.Z)(E),
+        [D, y] = s.useState((0, a.Z)());
     return (
-        a.useEffect(() => {
-            (L !== A || P !== g) && Z((0, o.Z)());
-        }, [g, A, P, L]),
-        (0, n.jsx)(d.Popout, {
-            positionKey: b,
+        s.useEffect(() => {
+            (R !== _ || P !== E) && y((0, a.Z)());
+        }, [E, _, P, R]),
+        (0, i.jsx)(d.Popout, {
+            positionKey: D,
             renderPopout: (e) =>
-                (0, n.jsx)(d.CustomColorPicker, {
+                (0, i.jsx)(d.CustomColorPicker, {
                     ...e,
-                    value: i,
-                    onChange: s,
-                    suggestedColors: N,
-                    middle: A,
-                    footer: g,
-                    showEyeDropper: h
+                    value: r,
+                    onChange: t,
+                    suggestedColors: S,
+                    middle: _,
+                    footer: E,
+                    showEyeDropper: f
                 }),
-            onRequestClose: t,
+            onRequestClose: n,
             children: (e) => {
-                let { onClick: s, ...t } = e;
-                return (0, n.jsxs)('div', {
-                    ref: O,
-                    className: r()(I.colorSwatch, { [I.disabled]: m }),
+                let { onClick: t, ...n } = e;
+                return (0, i.jsxs)('div', {
+                    ref: I,
+                    className: l()(x.colorSwatch, { [x.disabled]: T }),
                     children: [
-                        (0, n.jsx)(d.Clickable, {
-                            ...t,
-                            tabIndex: m ? -1 : 0,
-                            onClick: m ? T.dG4 : s,
+                        (0, i.jsx)(d.Clickable, {
+                            ...n,
+                            tabIndex: T ? -1 : 0,
+                            onClick: T ? g.dG4 : t,
                             style: {
-                                backgroundColor: M,
-                                borderColor: f
+                                backgroundColor: v,
+                                borderColor: j
                             },
-                            className: I.swatch,
-                            'aria-label': S.Z.Messages.USER_SETTINGS_PROFILE_COLOR_SELECT_COLOR,
-                            focusProps: { ringTarget: O },
-                            children: (0, n.jsx)(d.PencilIcon, {
+                            className: x.swatch,
+                            'aria-label': p.intl.string(p.t.Qp04hI),
+                            focusProps: { ringTarget: I },
+                            children: (0, i.jsx)(d.PencilIcon, {
                                 size: 'custom',
-                                className: I.editPencilIcon,
+                                className: x.editPencilIcon,
                                 width: 14,
                                 height: 14,
-                                color: D
+                                color: O
                             })
                         }),
                         C

@@ -5,37 +5,37 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(120356),
-    s = n.n(a),
-    r = n(739566),
-    l = n(492593),
-    o = n(930282),
+var r = n(120356),
+    l = n.n(r),
+    a = n(739566),
+    o = n(492593),
+    s = n(930282),
     c = n(464891),
     u = n(831557);
 function d(e) {
-    let { message: t, channel: n, content: a, className: d, compact: _, popoutProps: E, hideTimestamp: I = !1, withFooter: m = !1, ...f } = e,
-        T = (0, r.ZP)(t);
+    let { message: t, channel: n, content: r, className: d, compact: m, popoutProps: f, hideTimestamp: h = !1, withFooter: p = !1, ...g } = e,
+        _ = (0, a.ZP)(t);
     return (0, i.jsx)('div', {
-        className: s()({ [u.withFooter]: m }, u.embedCard, { [u.compact]: _ }, d),
-        children: (0, i.jsx)(l.Z, {
-            ...f,
-            className: s()(u.messageContainer, { [u.compact]: _ }),
-            childrenMessageContent: (0, i.jsx)(o.ZP, {
-                className: s()(u.__invalid_messageContent, { [u.compact]: _ }),
+        className: l()({ [u.withFooter]: p }, u.embedCard, { [u.compact]: m }, d),
+        children: (0, i.jsx)(o.Z, {
+            ...g,
+            className: l()(u.messageContainer, { [u.compact]: m }),
+            childrenMessageContent: (0, i.jsx)(s.ZP, {
+                className: l()(u.__invalid_messageContent, { [u.compact]: m }),
                 message: t,
-                content: a
+                content: r
             }),
             childrenHeader: (0, i.jsx)(c.ZP, {
                 message: t,
                 channel: n,
-                author: T,
+                author: _,
                 guildId: null == n ? void 0 : n.guild_id,
-                compact: _,
-                hideTimestamp: I,
-                className: s()(u.header, { [u.compact]: _ }),
-                ...(null != E ? E : {})
+                compact: m,
+                hideTimestamp: h,
+                className: l()(u.header, { [u.compact]: m }),
+                ...(null != f ? f : {})
             }),
-            compact: _
+            compact: m
         })
     });
 }

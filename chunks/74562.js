@@ -1,80 +1,80 @@
-i.d(n, {
+t.d(e, {
     Z: function () {
-        return h;
+        return v;
     }
 });
-var l = i(200651);
-i(192379);
-var t = i(442837),
-    a = i(481060),
-    r = i(434404),
-    s = i(147754),
-    o = i(939863),
-    c = i(430824),
-    u = i(496675),
-    d = i(981631),
-    E = i(689938),
-    g = i(682213);
-function h(e) {
-    let { guildId: n, onClose: i } = e,
-        { showHubEventsList: h } = s.Z.useExperiment(
+var i = t(200651);
+t(192379);
+var l = t(442837),
+    r = t(481060),
+    a = t(434404),
+    o = t(147754),
+    c = t(939863),
+    s = t(430824),
+    u = t(496675),
+    d = t(981631),
+    g = t(388032),
+    h = t(682213);
+function v(n) {
+    let { guildId: e, onClose: t } = n,
+        { showHubEventsList: v } = o.Z.useExperiment(
             {
-                guildId: n,
+                guildId: e,
                 location: '6597ca_1'
             },
             { autoTrackExposure: !1 }
         ),
-        v = (0, t.e7)(
-            [c.Z, u.Z],
+        m = (0, l.e7)(
+            [s.Z, u.Z],
             () => {
-                let e = c.Z.getGuild(n);
-                return u.Z.can(d.Plq.MANAGE_ROLES, e);
+                let n = s.Z.getGuild(e);
+                return u.Z.can(d.Plq.MANAGE_ROLES, n);
             },
-            [n]
+            [e]
         ),
-        Z = (0, t.e7)(
-            [c.Z],
+        x = (0, l.e7)(
+            [s.Z],
             () => {
-                let e = c.Z.getGuild(n);
-                return h && (null == e ? void 0 : e.hasFeature(d.oNc.HUB));
+                let n = s.Z.getGuild(e);
+                return v && (null == n ? void 0 : n.hasFeature(d.oNc.HUB));
             },
-            [n, h]
+            [e, v]
         );
-    return (0, l.jsxs)('div', {
-        className: g.container,
+    return (0, i.jsxs)('div', {
+        className: h.container,
         children: [
-            (0, l.jsx)(o.Z, {
-                children: (0, l.jsx)('div', {
-                    className: g.circle,
-                    children: (0, l.jsx)(a.CalendarIcon, {
+            (0, i.jsx)(c.Z, {
+                children: (0, i.jsx)('div', {
+                    className: h.circle,
+                    children: (0, i.jsx)(r.CalendarIcon, {
                         size: 'custom',
                         color: 'currentColor',
                         height: 40,
                         width: 40,
-                        className: g.icon
+                        className: h.icon
                     })
                 })
             }),
-            (0, l.jsx)(a.Heading, {
+            (0, i.jsx)(r.Heading, {
                 color: 'header-primary',
                 variant: 'heading-xl/semibold',
-                className: g.title,
-                children: Z ? E.Z.Messages.HUB_EVENTS_HEADER_TITLE : E.Z.Messages.GUILD_EVENT_MODAL_EMPTY_TITLE
+                className: h.title,
+                children: x ? g.intl.string(g.t.RhXVpa) : g.intl.string(g.t['WgZ+3N'])
             }),
-            (0, l.jsx)(a.Text, {
+            (0, i.jsx)(r.Text, {
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                className: g.subtitle,
-                children: Z ? E.Z.Messages.HUB_EVENTS_HEADER_DESCRIPTION : E.Z.Messages.GUILD_EVENT_MODAL_EMPTY_SUBTITLE
+                className: h.subtitle,
+                children: x ? g.intl.string(g.t['6hktHB']) : g.intl.string(g.t['v/S/PD'])
             }),
-            v &&
-                (0, l.jsx)(a.Text, {
+            m &&
+                (0, i.jsx)(r.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
-                    className: g.roleTip,
-                    children: E.Z.Messages.GUILD_EVENT_ROLE_TIP.format({
+                    className: h.roleTip,
+                    children: g.intl.format(g.t['K+DH2t'], {
                         onClick: () => {
-                            r.Z.open(n, d.pNK.ROLES), i();
+                            a.Z.open(e, d.pNK.ROLES), t();
                         }
                     })
                 })

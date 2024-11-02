@@ -15,7 +15,7 @@ function u(e) {
         { profileType: c } = (0, s.z)(),
         d = 'string' == typeof t ? t.trim() : t;
     if (null == d || '' === d) return null;
-    let _ = () =>
+    let f = () =>
         c === o.y0.FULL_SIZE
             ? (0, r.jsx)(i.Text, {
                   color: 'text-normal',
@@ -31,7 +31,7 @@ function u(e) {
         ? (0, r.jsx)(i.Clickable, {
               onClick: n,
               className: l.clickable,
-              children: _()
+              children: f()
           })
-        : _();
+        : f();
 }

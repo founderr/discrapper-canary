@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return g;
     }
 });
 var r = n(430198),
@@ -12,38 +12,38 @@ var r = n(430198),
     u = n(994592),
     c = n(911560),
     d = n(592125),
-    _ = n(430824),
-    E = n(823379),
-    f = n(754688),
-    h = n(981631),
-    p = n(176505);
-async function I(e) {
+    f = n(430824),
+    _ = n(823379),
+    h = n(754688),
+    p = n(981631),
+    m = n(176505);
+async function g(e) {
     let { guildId: t, channelId: n } = e,
-        I = _.Z.getGuild(t),
-        m = _.Z.getRoles(t);
-    if (null == I && t !== h.ME) return !1;
+        g = f.Z.getGuild(t),
+        E = f.Z.getRoles(t);
+    if (null == g && t !== p.ME) return !1;
     if (null == n) return !0;
-    if ((0, p.AB)(n))
+    if ((0, m.AB)(n))
         switch (n) {
-            case p.oC.ROLE_SUBSCRIPTIONS:
-                return (0, u.on)(t, m);
-            case p.oC.GUILD_SHOP:
-                return (0, i.r)(I, m);
-            case p.oC.MEMBER_APPLICATIONS:
+            case m.oC.ROLE_SUBSCRIPTIONS:
+                return (0, u.on)(t, E);
+            case m.oC.GUILD_SHOP:
+                return (0, i.r)(g, E);
+            case m.oC.MEMBER_APPLICATIONS:
                 return (0, a.v)(t);
-            case p.oC.GUILD_HOME:
+            case m.oC.GUILD_HOME:
                 return (0, l.s)(t);
-            case p.oC.CHANNEL_BROWSER:
-                return null != I && I.hasFeature(h.oNc.COMMUNITY);
-            case p.oC.GUILD_ONBOARDING:
+            case m.oC.CHANNEL_BROWSER:
+                return null != g && g.hasFeature(p.oNc.COMMUNITY);
+            case m.oC.GUILD_ONBOARDING:
                 return o.ZP.shouldShowOnboarding(t);
-            case p.oC.CUSTOMIZE_COMMUNITY:
-                return null != I && I.hasFeature(h.oNc.COMMUNITY);
-            case p.oC.MEMBER_SAFETY:
+            case m.oC.CUSTOMIZE_COMMUNITY:
+                return null != g && g.hasFeature(p.oNc.COMMUNITY);
+            case m.oC.MEMBER_SAFETY:
                 return (0, s.lv)(t);
             default:
-                (0, E.vE)(n);
+                (0, _.vE)(n);
         }
-    let T = d.Z.getChannel(n);
-    return (null != T || (await c.Z.loadThread(n), null != (T = d.Z.getChannel(n)))) && ((0, f.YO)(T) || r.Z.isChannelGatedAndVisible(t, n));
+    let v = d.Z.getChannel(n);
+    return (null != v || (await c.Z.loadThread(n), null != (v = d.Z.getChannel(n)))) && ((0, h.YO)(v) || r.Z.isChannelGatedAndVisible(t, n));
 }

@@ -1,25 +1,25 @@
-t.d(n, {
+e.d(t, {
     Z: function () {
         return u;
     }
 });
-var i = t(200651);
-t(192379);
-var a = t(481060),
-    r = t(787014),
-    o = t(665906),
-    s = t(689938);
-function u(e) {
-    let n = (0, o.C7)(e),
-        t = (0, o.$R)(e),
-        u = (0, o.Gu)(e);
-    return !n || !t || u || __OVERLAY__
+var i = e(200651);
+e(192379);
+var r = e(481060),
+    a = e(787014),
+    l = e(665906),
+    o = e(388032);
+function u(n) {
+    let t = (0, l.C7)(n),
+        e = (0, l.$R)(n),
+        u = (0, l.Gu)(n);
+    return !t || !e || u || __OVERLAY__
         ? null
-        : (0, i.jsx)(a.MenuItem, {
+        : (0, i.jsx)(r.MenuItem, {
               id: 'edit-thread',
-              label: e.isForumPost() ? s.Z.Messages.EDIT_FORUM_POST : s.Z.Messages.EDIT_THREAD,
+              label: n.isForumPost() ? o.intl.string(o.t.NP1yHB) : o.intl.string(o.t['2Mk1TE']),
               action: () => {
-                  (0, a.closeAllModals)(), r.ZP.open(e.id);
+                  (0, r.closeAllModals)(), a.ZP.open(n.id);
               }
           });
 }

@@ -1,25 +1,25 @@
-t.d(e, {
+i.d(t, {
     Z: function () {
-        return s;
+        return u;
     }
 });
-var i = t(200651);
-t(192379);
-var a = t(442837),
-    l = t(481060),
-    r = t(131951),
-    d = t(689938);
-function s(n) {
-    return (0, a.e7)([r.Z], () => r.Z.hasContext(n.id), [n.id])
-        ? (0, i.jsx)(l.MenuItem, {
+var e = i(200651);
+i(192379);
+var l = i(442837),
+    a = i(481060),
+    r = i(131951),
+    d = i(388032);
+function u(n) {
+    return (0, l.e7)([r.Z], () => r.Z.hasContext(n.id), [n.id])
+        ? (0, e.jsx)(a.MenuItem, {
               id: 'ingame-voice',
-              label: d.Z.Messages.IN_GAME_VOICE_SETTINGS,
+              label: d.intl.string(d.t['pOul5+']),
               action: () =>
-                  (0, l.openModalLazy)(async () => {
-                      let { default: e } = await t.e('66063').then(t.bind(t, 344516));
-                      return (t) =>
-                          (0, i.jsx)(e, {
-                              ...t,
+                  (0, a.openModalLazy)(async () => {
+                      let { default: t } = await i.e('66063').then(i.bind(i, 344516));
+                      return (i) =>
+                          (0, e.jsx)(t, {
+                              ...i,
                               mediaEngineContext: n.id,
                               title: n.name
                           });

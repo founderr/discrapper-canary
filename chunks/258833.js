@@ -8,7 +8,7 @@ var r = n(147913),
     u = n(938475),
     c = n(557177);
 let d = (0, c.uk)('call_calling', i.Z.getSoundpack());
-class _ extends r.Z {
+class f extends r.Z {
     handleSoundpackUpdate() {
         d.stop(), (d = (0, c.uk)('call_calling', i.Z.getSoundpack()));
     }
@@ -33,4 +33,4 @@ class _ extends r.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new _();
+t.Z = new f();

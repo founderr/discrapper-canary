@@ -117,8 +117,8 @@ a(l, s),
             u = a.redMul(s),
             c = o.redMul(l),
             d = a.redMul(l),
-            _ = s.redMul(o);
-        return this.curve.point(u, c, _, d);
+            f = s.redMul(o);
+        return this.curve.point(u, c, f, d);
     }),
     (u.prototype._projAdd = function (e) {
         var t,

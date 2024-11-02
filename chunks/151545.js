@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return T;
     }
 });
 var r = n(200651),
@@ -12,97 +12,97 @@ var r = n(200651),
     u = n(835473),
     c = n(574176),
     d = n(592125),
-    _ = n(430824),
-    E = n(496675),
-    f = n(979651),
-    h = n(626135),
-    p = n(984173),
-    I = n(409057),
-    m = n(443375),
-    T = n(128277),
-    S = n(263059),
-    g = n(981631);
-function A(e) {
-    let { user: t, currentUser: n, activity: A, className: N, onClose: R, profileGuildId: O } = e,
-        v = (0, a.e7)([f.Z, d.Z], () => {
+    f = n(430824),
+    _ = n(496675),
+    h = n(979651),
+    p = n(626135),
+    m = n(984173),
+    g = n(409057),
+    E = n(443375),
+    v = n(128277),
+    I = n(263059),
+    S = n(981631);
+function T(e) {
+    let { user: t, currentUser: n, activity: T, className: b, onClose: y, profileGuildId: A } = e,
+        N = (0, a.e7)([h.Z, d.Z], () => {
             var e;
-            return d.Z.getChannel(null === (e = f.Z.getVoiceStateForUser(t.id)) || void 0 === e ? void 0 : e.channelId);
+            return d.Z.getChannel(null === (e = h.Z.getVoiceStateForUser(t.id)) || void 0 === e ? void 0 : e.channelId);
         }),
         { enableHangStatus: C } = c.n.useExperiment(
             {
-                guildId: null == v ? void 0 : v.guild_id,
+                guildId: null == N ? void 0 : N.guild_id,
                 location: 'UserProfileActivityCardWrapper'
             },
             { autoTrackExposure: !1 }
         ),
-        L = C && E.Z.can(g.Plq.CONNECT, v),
-        D = (null == A ? void 0 : A.type) === g.IIU.HANG_STATUS && L ? v : null,
-        y = (0, p.F)({ location: 'UserProfileActivityCardWrapper' }),
-        b = t.id === n.id,
-        M = (0, a.e7)([_.Z, f.Z, d.Z], () => {
-            if ((0, s.Z)(A)) {
+        R = C && _.Z.can(S.Plq.CONNECT, N),
+        O = (null == T ? void 0 : T.type) === S.IIU.HANG_STATUS && R ? N : null,
+        D = (0, m.F)({ location: 'UserProfileActivityCardWrapper' }),
+        L = t.id === n.id,
+        x = (0, a.e7)([f.Z, h.Z, d.Z], () => {
+            if ((0, s.Z)(T)) {
                 var e, n;
-                let r = null === (e = f.Z.getVoiceStateForSession(t.id, null == A ? void 0 : A.session_id)) || void 0 === e ? void 0 : e.channelId;
-                return _.Z.getGuild(null === (n = d.Z.getChannel(r)) || void 0 === n ? void 0 : n.getGuildId());
+                let r = null === (e = h.Z.getVoiceStateForSession(t.id, null == T ? void 0 : T.session_id)) || void 0 === e ? void 0 : e.channelId;
+                return f.Z.getGuild(null === (n = d.Z.getChannel(r)) || void 0 === n ? void 0 : n.getGuildId());
             }
-            return null != D ? _.Z.getGuild(D.getGuildId()) : null;
+            return null != O ? f.Z.getGuild(O.getGuildId()) : null;
         });
-    (0, u.q)(null == A ? void 0 : A.application_id);
-    let P = (0, a.e7)([l.Z], () => ((null == A ? void 0 : A.application_id) != null ? l.Z.getApplication(A.application_id) : (null == A ? void 0 : A.name) != null ? l.Z.getApplicationByName(A.name) : null));
+    (0, u.q)(null == T ? void 0 : T.application_id);
+    let w = (0, a.e7)([l.Z], () => ((null == T ? void 0 : T.application_id) != null ? l.Z.getApplication(T.application_id) : (null == T ? void 0 : T.name) != null ? l.Z.getApplicationByName(T.name) : null));
     if (
         (i.useEffect(() => {
-            (null == A ? void 0 : A.type) === g.IIU.HANG_STATUS &&
-                L &&
-                h.default.track(g.rMx.VIEW_HANG_STATUS, {
+            (null == T ? void 0 : T.type) === S.IIU.HANG_STATUS &&
+                R &&
+                p.default.track(S.rMx.VIEW_HANG_STATUS, {
                     source: 'UserProfilePopout',
-                    guild_id: null == D ? void 0 : D.guild_id,
-                    channel_id: null == D ? void 0 : D.id
+                    guild_id: null == O ? void 0 : O.guild_id,
+                    channel_id: null == O ? void 0 : O.id
                 });
-        }, [null == A ? void 0 : A.type, L, D]),
-        (null == A ? void 0 : A.type) === g.IIU.HANG_STATUS && !L)
+        }, [null == T ? void 0 : T.type, R, O]),
+        (null == T ? void 0 : T.type) === S.IIU.HANG_STATUS && !R)
     )
         return null;
-    if ((0, o.Z)(A))
-        return !y || b || t.bot
-            ? (0, r.jsx)(T.Z, {
+    if ((0, o.Z)(T))
+        return !D || L || t.bot
+            ? (0, r.jsx)(v.Z, {
                   user: t,
                   currentUser: n,
-                  activity: A,
-                  guild: M,
-                  channel: v,
-                  className: N,
-                  onClose: R
+                  activity: T,
+                  guild: x,
+                  channel: N,
+                  className: b,
+                  onClose: y
               })
-            : (0, r.jsx)(S.Z, {
+            : (0, r.jsx)(I.Z, {
                   user: t,
                   currentUser: n,
-                  activity: A,
-                  guild: M,
-                  profileGuildId: O,
-                  channel: v,
-                  className: N,
-                  onClose: R
+                  activity: T,
+                  guild: x,
+                  profileGuildId: A,
+                  channel: N,
+                  className: b,
+                  onClose: y
               });
-    return !y || b || t.bot
-        ? (0, r.jsx)(I.Z, {
+    return !D || L || t.bot
+        ? (0, r.jsx)(g.Z, {
               user: t,
               currentUser: n,
-              activity: A,
-              application: P,
-              guild: M,
-              channel: v,
-              className: N,
-              onClose: R
+              activity: T,
+              application: w,
+              guild: x,
+              channel: N,
+              className: b,
+              onClose: y
           })
-        : (0, r.jsx)(m.Z, {
+        : (0, r.jsx)(E.Z, {
               user: t,
               currentUser: n,
-              activity: A,
-              application: P,
-              guild: M,
-              profileGuildId: O,
-              channel: v,
-              className: N,
-              onClose: R
+              activity: T,
+              application: w,
+              guild: x,
+              profileGuildId: A,
+              channel: N,
+              className: b,
+              onClose: y
           });
 }

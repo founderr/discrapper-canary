@@ -1,152 +1,152 @@
-s.r(a), s(47120);
-var t = s(200651),
-    i = s(192379),
-    l = s(688619),
-    n = s.n(l),
-    r = s(442837),
-    c = s(481060),
-    d = s(313201),
-    o = s(271383),
-    x = s(430824),
-    m = s(594174),
-    v = s(931240),
-    S = s(970606),
-    u = s(979264),
-    g = s(284019),
-    h = s(308083),
-    _ = s(981631),
-    C = s(689938),
-    N = s(457243);
-a.default = (e) => {
-    var a, s, l, f;
-    let { guildId: T, tag: p, brandPrimaryColor: j, transitionState: E, onClose: w } = e,
-        b = (0, d.Dt)(),
-        [A, L] = i.useState(!0),
-        M = (0, r.e7)([x.Z], () => x.Z.getGuild(T)),
+a.r(t), a(47120);
+var i = a(200651),
+    s = a(192379),
+    l = a(688619),
+    n = a.n(l),
+    r = a(442837),
+    c = a(481060),
+    d = a(313201),
+    o = a(271383),
+    x = a(430824),
+    m = a(594174),
+    v = a(931240),
+    u = a(970606),
+    g = a(979264),
+    h = a(284019),
+    f = a(308083),
+    p = a(981631),
+    N = a(388032),
+    j = a(457243);
+t.default = (e) => {
+    var t, a, l, S;
+    let { guildId: _, tag: w, brandPrimaryColor: b, transitionState: T, onClose: k } = e,
+        C = (0, d.Dt)(),
+        [P, z] = s.useState(!0),
+        M = (0, r.e7)([x.Z], () => x.Z.getGuild(_)),
         Z = (0, r.e7)([m.default], () => m.default.getCurrentUser()),
-        k = (0, r.e7)([o.ZP], () => (null != Z ? o.ZP.getMember(T, Z.id) : null));
+        y = (0, r.e7)([o.ZP], () => (null != Z ? o.ZP.getMember(_, Z.id) : null));
     if (
-        (i.useEffect(() => {
-            (0, S.dx)(T);
-        }, [T]),
-        null == M || null == Z || null == k)
+        (s.useEffect(() => {
+            (0, u.dx)(_);
+        }, [_]),
+        null == M || null == Z || null == y)
     )
         return null;
-    let P = null != j ? { background: 'radial-gradient(circle at top, '.concat(n()(j).alpha(0.3).hex(), ' 0%, transparent 50%)') } : void 0;
-    return (0, t.jsx)(c.ModalRoot, {
-        className: N.modal,
-        transitionState: E,
-        'aria-labelledby': b,
+    let A = null != b ? { background: 'radial-gradient(circle at top, '.concat(n()(b).alpha(0.3).hex(), ' 0%, transparent 50%)') } : void 0;
+    return (0, i.jsx)(c.ModalRoot, {
+        className: j.modal,
+        transitionState: T,
+        'aria-labelledby': C,
         size: c.ModalSize.SMALL,
-        children: (0, t.jsxs)('div', {
-            className: N.content,
-            style: P,
+        children: (0, i.jsxs)('div', {
+            className: j.content,
+            style: A,
             children: [
-                (0, t.jsx)(u.aG, {
-                    guildId: T,
-                    clanTag: p,
-                    clanBadge: null === (a = M.clan) || void 0 === a ? void 0 : a.badge,
-                    className: N.tagPreview,
-                    textClassName: N.tagText,
+                (0, i.jsx)(g.aG, {
+                    guildId: _,
+                    clanTag: w,
+                    clanBadge: null === (t = M.clan) || void 0 === t ? void 0 : t.badge,
+                    className: j.tagPreview,
+                    textClassName: j.tagText,
                     textVariant: 'heading-xxl/semibold',
-                    badgeSize: h.NC.SIZE_36
+                    badgeSize: f.NC.SIZE_36
                 }),
-                (0, t.jsx)(c.Heading, {
+                (0, i.jsx)(c.Heading, {
                     variant: 'heading-xxl/medium',
-                    children: C.Z.Messages.CLAN_SUCCESS_TITLE.format({ name: M.name })
+                    children: N.intl.format(N.t.SQNe9v, { name: M.name })
                 }),
-                (0, t.jsx)(c.Text, {
-                    className: N.subtitle,
+                (0, i.jsx)(c.Text, {
+                    className: j.subtitle,
                     variant: 'text-md/normal',
-                    children: C.Z.Messages.CLAN_SUCCESS_SUBTITLE
+                    children: N.intl.string(N.t.vhwmmp)
                 }),
-                (0, t.jsxs)('div', {
-                    className: N.previewSection,
+                (0, i.jsxs)('div', {
+                    className: j.previewSection,
                     children: [
-                        (0, t.jsxs)('div', {
-                            className: N.chatPreview,
+                        (0, i.jsxs)('div', {
+                            className: j.chatPreview,
                             children: [
-                                (0, t.jsx)(c.Avatar, {
-                                    src: Z.getAvatarURL(T, 40),
+                                (0, i.jsx)(c.Avatar, {
+                                    src: Z.getAvatarURL(_, 40),
                                     size: c.AvatarSizes.SIZE_40,
                                     'aria-hidden': !0
                                 }),
-                                (0, t.jsxs)('div', {
-                                    className: N.previewText,
+                                (0, i.jsxs)('div', {
+                                    className: j.previewText,
                                     children: [
-                                        (0, t.jsxs)('div', {
-                                            className: N.userName,
+                                        (0, i.jsxs)('div', {
+                                            className: j.userName,
                                             children: [
-                                                (0, t.jsx)(c.NameWithRole, {
-                                                    className: N.userName,
-                                                    name: null !== (l = k.nick) && void 0 !== l ? l : Z.username,
-                                                    color: null !== (f = k.colorString) && void 0 !== f ? f : void 0
+                                                (0, i.jsx)(c.NameWithRole, {
+                                                    className: j.userName,
+                                                    name: null !== (l = y.nick) && void 0 !== l ? l : Z.username,
+                                                    color: null !== (S = y.colorString) && void 0 !== S ? S : void 0
                                                 }),
-                                                A &&
-                                                    (0, t.jsx)(u.aG, {
-                                                        guildId: T,
-                                                        clanBadge: null === (s = M.clan) || void 0 === s ? void 0 : s.badge,
-                                                        clanTag: p,
-                                                        badgeSize: h.NC.SIZE_12,
+                                                P &&
+                                                    (0, i.jsx)(g.aG, {
+                                                        guildId: _,
+                                                        clanBadge: null === (a = M.clan) || void 0 === a ? void 0 : a.badge,
+                                                        clanTag: w,
+                                                        badgeSize: f.NC.SIZE_12,
                                                         textVariant: 'text-xs/semibold'
                                                     })
                                             ]
                                         }),
-                                        (0, t.jsx)('div', {
-                                            className: N.fakeMessage,
+                                        (0, i.jsx)('div', {
+                                            className: j.fakeMessage,
                                             style: { width: '80%' }
                                         }),
-                                        (0, t.jsx)('div', {
-                                            className: N.fakeMessage,
+                                        (0, i.jsx)('div', {
+                                            className: j.fakeMessage,
                                             style: { width: '50%' }
                                         })
                                     ]
                                 })
                             ]
                         }),
-                        (0, t.jsx)('div', { className: N.divider }),
-                        (0, t.jsxs)('div', {
-                            className: N.settingSection,
+                        (0, i.jsx)('div', { className: j.divider }),
+                        (0, i.jsxs)('div', {
+                            className: j.settingSection,
                             children: [
-                                (0, t.jsxs)('div', {
+                                (0, i.jsxs)('div', {
                                     children: [
-                                        (0, t.jsx)(c.Text, {
+                                        (0, i.jsx)(c.Text, {
                                             variant: 'text-md/normal',
                                             color: 'header-primary',
-                                            children: C.Z.Messages.CLAN_SUCCESS_USE_TAG_TEXT
+                                            children: N.intl.string(N.t.nwNzVV)
                                         }),
-                                        (0, t.jsx)(c.Text, {
+                                        (0, i.jsx)(c.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'text-muted',
-                                            children: C.Z.Messages.CLAN_SUCCESS_USE_TAG_HELP
+                                            children: N.intl.string(N.t.Dpl68P)
                                         })
                                     ]
                                 }),
-                                (0, t.jsx)(c.Switch, {
-                                    onChange: () => L(!A),
-                                    checked: A
+                                (0, i.jsx)(c.Switch, {
+                                    onChange: () => z(!P),
+                                    checked: P
                                 })
                             ]
                         })
                     ]
                 }),
-                (0, t.jsx)(g.Z, {
+                (0, i.jsx)(h.Z, {
                     size: c.Button.Sizes.LARGE,
-                    themeColor: j,
+                    themeColor: b,
                     onClick: () => {
-                        A && (0, v.nE)(T, A, _.Sbl.CLAN_SETUP_MODAL), (0, S.B3)(T, A), w();
+                        P && (0, v.nE)(_, P, p.Sbl.CLAN_SETUP_MODAL), (0, u.B3)(_, P), k();
                     },
-                    children: (0, t.jsx)(c.Text, {
+                    children: (0, i.jsx)(c.Text, {
                         color: 'none',
                         variant: 'text-md/medium',
-                        children: C.Z.Messages.CLAN_SUCCESS_CTA
+                        children: N.intl.string(N.t['3v6hfH'])
                     })
                 }),
-                (0, t.jsx)(c.Text, {
-                    className: N.postscript,
+                (0, i.jsx)(c.Text, {
+                    className: j.postscript,
                     variant: 'text-xs/normal',
                     color: 'header-secondary',
-                    children: C.Z.Messages.CLAN_SUCCESS_POSTSCRIPT
+                    children: N.intl.string(N.t.xs3yjY)
                 })
             ]
         })

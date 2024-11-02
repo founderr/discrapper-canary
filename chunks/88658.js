@@ -1,59 +1,59 @@
 t.d(n, {
     $6: function () {
-        return S;
+        return f;
     },
     YK: function () {
-        return u;
+        return s;
     },
     _o: function () {
-        return b;
+        return g;
     },
     ac: function () {
-        return T;
+        return p;
     },
     bL: function () {
         return m;
     },
     g0: function () {
-        return o;
+        return a;
     },
     gl: function () {
-        return _;
+        return b;
     },
     rr: function () {
-        return g;
+        return _;
     },
     xH: function () {
-        return f;
+        return B;
     }
 });
-var a,
-    o,
+var o,
+    a,
     c = t(695346),
-    r = t(486472),
-    i = t(430824);
+    i = t(486472),
+    r = t(430824);
 t(626135);
-var d = t(981631),
-    l = t(689938);
-let s = 86400000 * d.eBq;
-function u() {
+var l = t(981631),
+    d = t(388032);
+let u = 86400000 * l.eBq;
+function s() {
     let e = c.h2.getSetting();
-    return 0 === r.Z.totalUnavailableGuilds && (e = e.filter((e) => null != i.Z.getGuild(e))), e;
-}
-function _() {
-    let e = c.zA.getSetting();
-    return 0 === r.Z.totalUnavailableGuilds && (e = e.filter((e) => null != i.Z.getGuild(e))), e;
+    return 0 === i.Z.totalUnavailableGuilds && (e = e.filter((e) => null != r.Z.getGuild(e))), e;
 }
 function b() {
-    let e = c.SE.getSetting();
-    return 0 === r.Z.totalUnavailableGuilds && (e = e.filter((e) => null != i.Z.getGuild(e))), e;
+    let e = c.zA.getSetting();
+    return 0 === i.Z.totalUnavailableGuilds && (e = e.filter((e) => null != r.Z.getGuild(e))), e;
 }
 function g() {
+    let e = c.SE.getSetting();
+    return 0 === i.Z.totalUnavailableGuilds && (e = e.filter((e) => null != r.Z.getGuild(e))), e;
+}
+function _() {
     let e = c.iH.getSetting();
-    return 0 === r.Z.totalUnavailableGuilds && (e = e.filter((e) => null != i.Z.getGuild(e))), e;
+    return 0 === i.Z.totalUnavailableGuilds && (e = e.filter((e) => null != r.Z.getGuild(e))), e;
 }
 function m(e) {
-    return (e & d.HGf) === d.HGf
+    return (e & l.HGf) === l.HGf
         ? {
               all: !0,
               mutualFriends: !0,
@@ -61,34 +61,34 @@ function m(e) {
           }
         : {
               all: !1,
-              mutualFriends: (e & d.SOq.MUTUAL_FRIENDS) === d.SOq.MUTUAL_FRIENDS,
-              mutualGuilds: (e & d.SOq.MUTUAL_GUILDS) === d.SOq.MUTUAL_GUILDS
+              mutualFriends: (e & l.SOq.MUTUAL_FRIENDS) === l.SOq.MUTUAL_FRIENDS,
+              mutualGuilds: (e & l.SOq.MUTUAL_GUILDS) === l.SOq.MUTUAL_GUILDS
           };
 }
-function S(e, n) {
-    return !n.verified || (null != e && s > Date.now() - new Date(e.created_at).getTime());
+function f(e, n) {
+    return !n.verified || (null != e && u > Date.now() - new Date(e.created_at).getTime());
 }
-((a = o || (o = {}))[(a.UNDECIDED = 0)] = 'UNDECIDED'), (a[(a.OPTIN = 1)] = 'OPTIN'), (a[(a.OPTOUT = 2)] = 'OPTOUT');
-let T = {
+((o = a || (a = {}))[(o.UNDECIDED = 0)] = 'UNDECIDED'), (o[(o.OPTIN = 1)] = 'OPTIN'), (o[(o.OPTOUT = 2)] = 'OPTOUT');
+let p = {
     0: void 0,
     1: !0,
     2: !1
 };
-function f() {
+function B() {
     return [
         {
-            name: l.Z.Messages.PRIVACY_SETTINGS_NON_SPAM_RETRAINING_SETTING_OPT_IN_HEADER,
-            desc: l.Z.Messages.PRIVACY_SETTINGS_NON_SPAM_RETRAINING_SETTING_OPT_IN_DESC,
+            name: d.intl.string(d.t['/yLMRU']),
+            desc: d.intl.string(d.t['3fzkPj']),
             value: 1
         },
         {
-            name: l.Z.Messages.PRIVACY_SETTINGS_NON_SPAM_RETRAINING_SETTING_OPT_OUT_HEADER,
-            desc: l.Z.Messages.PRIVACY_SETTINGS_NON_SPAM_RETRAINING_SETTING_OPT_OUT_DESC,
+            name: d.intl.string(d.t['21fP2d']),
+            desc: d.intl.string(d.t.ggJ9jY),
             value: 2
         },
         {
-            name: l.Z.Messages.PRIVACY_SETTINGS_NON_SPAM_RETRAINING_SETTING_UNSET_HEADER,
-            desc: l.Z.Messages.PRIVACY_SETTINGS_NON_SPAM_RETRAINING_SETTING_UNSET_DESC,
+            name: d.intl.string(d.t['OWIo8/']),
+            desc: d.intl.string(d.t.HqYXp6),
             value: 0
         }
     ];

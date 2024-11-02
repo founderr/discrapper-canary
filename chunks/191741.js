@@ -1,89 +1,89 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return v;
+            return x;
         },
         useAppSidebarState: function () {
             return N;
         }
     });
 var i = n(200651),
-    a = n(192379),
-    s = n(903797),
-    r = n(442837),
-    l = n(481060),
+    r = n(192379),
+    l = n(903797),
+    a = n(442837),
+    s = n(481060),
     o = n(230711),
     c = n(174556),
     d = n(565138),
     u = n(300986),
-    _ = n(314451),
-    E = n(35583),
-    h = n(141321),
-    m = n(592125),
-    I = n(430824),
-    p = n(944486),
-    g = n(358085),
-    T = n(998502),
-    S = n(981631),
-    C = n(741764),
-    f = n(350133);
-let N = (0, s.Z)(() => ({ isOpen: !0 }));
-function A(e) {
+    h = n(314451),
+    m = n(35583),
+    p = n(141321),
+    g = n(592125),
+    f = n(430824),
+    _ = n(944486),
+    E = n(358085),
+    I = n(998502),
+    C = n(981631),
+    v = n(741764),
+    S = n(350133);
+let N = (0, l.Z)(() => ({ isOpen: !0 }));
+function T(e) {
     e.stopPropagation();
 }
-function v() {
-    let e = (0, r.e7)([p.Z], () => p.Z.getChannelId()),
-        t = (0, r.e7)([m.Z], () => m.Z.getChannel(e), [e]),
-        n = I.Z.getGuild(null == t ? void 0 : t.guild_id),
-        s = N((e) => e.isOpen),
-        { hasBugReporterAccess: v } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
-    a.useLayoutEffect(() => {
-        T.ZP.setMinimumSize(C.J, C.N);
+function x() {
+    let e = (0, a.e7)([_.Z], () => _.Z.getChannelId()),
+        t = (0, a.e7)([g.Z], () => g.Z.getChannel(e), [e]),
+        n = f.Z.getGuild(null == t ? void 0 : t.guild_id),
+        l = N((e) => e.isOpen),
+        { hasBugReporterAccess: x } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
+    r.useLayoutEffect(() => {
+        I.ZP.setMinimumSize(v.J, v.N);
     }, []);
-    let L = a.useCallback(() => {
-        (0, g.isMac)() && T.ZP.maximize();
+    let A = r.useCallback(() => {
+        (0, E.isMac)() && I.ZP.maximize();
     }, []);
     return (0, i.jsxs)('div', {
-        className: f.bar,
-        onDoubleClick: L,
+        className: S.bar,
+        onDoubleClick: A,
         children: [
             (0, i.jsx)('div', {
-                className: f.left,
-                'data-sidebar-collapsed': !s,
-                onDoubleClick: A,
+                className: S.left,
+                'data-sidebar-collapsed': !l,
+                onDoubleClick: T,
                 children:
-                    !s &&
+                    !l &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, i.jsx)(l.Clickable, {
+                            (0, i.jsx)(s.Clickable, {
                                 onClick: () => {
                                     N.setState({ isOpen: !N.getState().isOpen });
                                 },
-                                children: (0, i.jsx)(Z, {})
+                                children: (0, i.jsx)(b, {})
                             }),
-                            (0, i.jsx)(l.Clickable, {
+                            (0, i.jsx)(s.Clickable, {
                                 onClick: () => {
-                                    o.Z.open(S.oAB.ACCOUNT);
+                                    o.Z.open(C.oAB.ACCOUNT);
                                 },
-                                children: (0, i.jsx)(l.SettingsIcon, { size: 'xs' })
+                                children: (0, i.jsx)(s.SettingsIcon, { size: 'xs' })
                             })
                         ]
                     })
             }),
             (0, i.jsx)('div', {
-                className: f.center,
+                className: S.center,
                 children:
                     null != n &&
                     (0, i.jsxs)('div', {
-                        className: f.guild,
+                        className: S.guild,
                         children: [
                             (0, i.jsx)(d.Z, {
                                 guild: n,
                                 size: d.Z.Sizes.SMALLER,
                                 active: !0,
-                                className: f.icon
+                                className: S.icon
                             }),
-                            (0, i.jsx)(l.Text, {
+                            (0, i.jsx)(s.Text, {
                                 variant: 'text-sm/medium',
                                 children: n.name
                             })
@@ -91,17 +91,17 @@ function v() {
                     })
             }),
             (0, i.jsxs)('div', {
-                className: f.right,
-                onDoubleClick: A,
-                children: [(0, i.jsx)(h.Z, {}), v ? (0, i.jsx)(_.Z, {}) : (0, i.jsx)(u.Z, {}), (0, i.jsx)(E.Z, {})]
+                className: S.right,
+                onDoubleClick: T,
+                children: [(0, i.jsx)(p.Z, {}), x ? (0, i.jsx)(h.Z, {}) : (0, i.jsx)(u.Z, {}), (0, i.jsx)(m.Z, {})]
             })
         ]
     });
 }
-function Z() {
+function b() {
     return (0, i.jsxs)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',
-        className: f.icon,
+        className: S.icon,
         width: '24',
         height: '24',
         viewBox: '0 0 24 24',

@@ -1,102 +1,102 @@
-t.r(a),
-    t.d(a, {
+e.r(a),
+    e.d(a, {
         default: function () {
-            return C;
+            return T;
         }
     }),
-    t(47120);
+    e(47120);
 var s,
-    o,
-    r = t(200651),
-    i = t(192379),
-    c = t(541822),
-    n = t(442837),
-    l = t(481060),
-    d = t(728345),
-    p = t(812206),
-    u = t(600164),
-    f = t(886176),
-    m = t(572004),
-    N = t(504211),
-    _ = t(283836),
-    h = t(507608),
-    T = t(533159),
-    E = t(981631),
-    O = t(272242),
-    x = t(689938),
-    S = t(213891);
-function C(e) {
-    let { onClose: a, transitionState: t, appId: s, guildId: o } = e,
-        C = (0, n.e7)([p.Z], () => p.Z.getApplication(s), [s]),
-        [g, R] = i.useState(() => (p.Z.isFetchingApplication(s) ? { status: 1 } : { status: 0 }));
-    i.useEffect(() => {
-        0 === g.status &&
-            (R({ status: 1 }),
+    i,
+    r = e(200651),
+    o = e(192379),
+    c = e(541822),
+    n = e(442837),
+    l = e(481060),
+    d = e(728345),
+    p = e(812206),
+    u = e(600164),
+    f = e(886176),
+    m = e(572004),
+    h = e(504211),
+    N = e(283836),
+    x = e(507608),
+    _ = e(533159),
+    E = e(981631),
+    S = e(272242),
+    g = e(388032),
+    C = e(213891);
+function T(t) {
+    let { onClose: a, transitionState: e, appId: s, guildId: i } = t,
+        T = (0, n.e7)([p.Z], () => p.Z.getApplication(s), [s]),
+        [j, O] = o.useState(() => (p.Z.isFetchingApplication(s) ? { status: 1 } : { status: 0 }));
+    o.useEffect(() => {
+        0 === j.status &&
+            (O({ status: 1 }),
             d.ZP.fetchApplication(s)
                 .then(() => {
-                    R({ status: 2 });
+                    O({ status: 2 });
                 })
-                .catch((e) => {
-                    R({
+                .catch((t) => {
+                    O({
                         status: 3,
-                        error: e.message
+                        error: t.message
                     });
                 }));
-    }, [s, g.status]);
-    let { subscriptions: I, otps: j } = (0, _.q)(s);
-    if (null == C) return null;
-    let P = x.Z.Messages.STOREFRONT_TITLE.format({ appName: C.name });
+    }, [s, j.status]);
+    let { subscriptions: R, otps: I } = (0, N.q)(s);
+    if (null == T) return null;
+    let b = g.intl.formatToPlainString(g.t.XDRjs7, { appName: T.name });
     return (0, r.jsxs)(l.ModalRoot, {
-        transitionState: t,
-        'aria-label': P,
+        transitionState: e,
+        'aria-label': b,
         size: l.ModalSize.DYNAMIC,
-        className: S.modal,
+        className: C.modal,
         children: [
             (0, r.jsxs)(l.ModalHeader, {
-                className: S.modalHeader,
+                className: C.modalHeader,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: S.modalTitle,
+                        className: C.modalTitle,
                         children: [
                             (0, r.jsx)(f.Z, {}),
                             (0, r.jsx)(l.Heading, {
                                 variant: 'heading-md/semibold',
-                                children: P
+                                children: b
                             })
                         ]
                     }),
                     (0, r.jsxs)('div', {
-                        className: S.modalHeaderLinks,
+                        className: C.modalHeaderLinks,
                         children: [
                             m.wS &&
                                 (0, r.jsx)(l.Button, {
                                     look: l.ButtonLooks.BLANK,
                                     size: l.ButtonSizes.ICON,
                                     color: l.ButtonColors.TRANSPARENT,
-                                    'aria-label': x.Z.Messages.COPY_LINK,
+                                    'aria-label': g.intl.string(g.t.WqhZsr),
                                     onClick: () => {
-                                        let e = ''.concat(location.protocol, '//').concat(location.host).concat(E.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(s, O.ApplicationDirectoryProfileSections.STORE));
-                                        (0, m.JG)(e), (0, l.showToast)((0, l.createToast)(x.Z.Messages.COPIED_LINK, l.ToastType.SUCCESS)), (0, N.X)(s, N.B.STORE_MODAL);
+                                        let t = ''.concat(location.protocol, '//').concat(location.host).concat(E.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(s, S.ApplicationDirectoryProfileSections.STORE));
+                                        (0, m.JG)(t), (0, l.showToast)((0, l.createToast)(g.intl.string(g.t['L/PwZW']), l.ToastType.SUCCESS)), (0, h.X)(s, h.B.STORE_MODAL);
                                     },
                                     children: (0, r.jsx)(l.LinkIcon, { size: 'sm' })
                                 }),
                             (0, r.jsx)(l.ModalCloseButton, {
                                 onClick: a,
-                                className: S.modalCloseBtn
+                                className: C.modalCloseBtn
                             })
                         ]
                     })
                 ]
             }),
             (0, r.jsx)('div', {
-                className: S.scrollerWrapper,
+                className: C.scrollerWrapper,
                 children: (0, r.jsx)(c.Z, {
-                    className: S.scroller,
-                    children: (0, r.jsx)(h.AF, {
-                        app: C,
-                        guildId: o,
-                        subscriptions: I,
-                        otps: j
+                    className: C.scroller,
+                    children: (0, r.jsx)(x.AF, {
+                        app: T,
+                        guildId: i,
+                        subscriptions: R,
+                        otps: I
                     })
                 })
             }),
@@ -105,15 +105,15 @@ function C(e) {
                 children: (0, r.jsx)(l.Text, {
                     variant: 'text-md/normal',
                     children:
-                        null != C.termsOfServiceUrl || null != C.privacyPolicyUrl
-                            ? (0, r.jsx)(T.Z, {
-                                  termsOfServiceUrl: C.termsOfServiceUrl,
-                                  privacyPolicyUrl: C.privacyPolicyUrl
+                        null != T.termsOfServiceUrl || null != T.privacyPolicyUrl
+                            ? (0, r.jsx)(_.Z, {
+                                  termsOfServiceUrl: T.termsOfServiceUrl,
+                                  privacyPolicyUrl: T.privacyPolicyUrl
                               })
-                            : x.Z.Messages.STOREFRONT_NO_TOS_PP
+                            : g.intl.string(g.t['3ZY+0N'])
                 })
             })
         ]
     });
 }
-((o = s || (s = {}))[(o.NONE = 0)] = 'NONE'), (o[(o.FETCHING = 1)] = 'FETCHING'), (o[(o.FETCHED = 2)] = 'FETCHED'), (o[(o.ERROR = 3)] = 'ERROR');
+((i = s || (s = {}))[(i.NONE = 0)] = 'NONE'), (i[(i.FETCHING = 1)] = 'FETCHING'), (i[(i.FETCHED = 2)] = 'FETCHED'), (i[(i.ERROR = 3)] = 'ERROR');

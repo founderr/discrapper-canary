@@ -14,13 +14,13 @@ async function u(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         c = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
     if (c > 3) throw Error('Unable to search guild members after max retries');
-    let { autoRetry: d = !0, signal: _ } = n;
+    let { autoRetry: d = !0, signal: f } = n;
     try {
-        var E;
+        var _;
         let a = await r.tn.post({
             url: l.ANM.GUILD_MEMBER_SEARCH(e),
             body: t,
-            signal: _
+            signal: f
         });
         if (a.status === o.t) {
             if (null == a.body.retry_after) throw Error('Indexing response did not include retry_after');
@@ -37,10 +37,10 @@ async function u(e, t) {
         return {
             type: o.d.SUCCESSFUL_QUERY,
             body: {
-                guild_id: (E = a.body).guild_id,
-                members: E.members,
-                page_result_count: E.page_result_count,
-                total_result_count: E.total_result_count
+                guild_id: (_ = a.body).guild_id,
+                members: _.members,
+                page_result_count: _.page_result_count,
+                total_result_count: _.total_result_count
             }
         };
     } catch (t) {

@@ -1,6 +1,6 @@
 n.d(t, {
     Q: function () {
-        return m;
+        return E;
     }
 });
 var r = n(264344),
@@ -12,10 +12,10 @@ var r = n(264344),
     u = n(886848),
     c = n(236842),
     d = n(649318),
-    _ = n(199857),
-    E = n(65154),
-    f = n(436620);
-function h(e, t, n) {
+    f = n(199857),
+    _ = n(65154),
+    h = n(436620);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,10 +28,10 @@ function h(e, t, n) {
         e
     );
 }
-function p(e) {
+function m(e) {
     return e.split('-')[0];
 }
-class I extends o.Z {
+class g extends o.Z {
     destroy() {
         super.destroy(), this.pc.close();
     }
@@ -73,7 +73,7 @@ class I extends o.Z {
     }
     setVideoEncoderParameters(e) {}
     constructor(e, t, n, r) {
-        super(e, t, n, r), h(this, 'pc', void 0), h(this, 'fpc', void 0), h(this, 'codecs', []), h(this, 'logger', void 0), (this.logger = new a.Y('Connection('.concat(e, ')')));
+        super(e, t, n, r), p(this, 'pc', void 0), p(this, 'fpc', void 0), p(this, 'codecs', []), p(this, 'logger', void 0), (this.logger = new a.Y('Connection('.concat(e, ')')));
         let i = new l.Z();
         i.on('answer', (e) => this.pc.setRemoteDescription(e).catch((e) => this.logger.error('Failed to set remote description (answer): '.concat(e)))),
             i.on('offer', (e) => {
@@ -86,16 +86,16 @@ class I extends o.Z {
             (i.direction = null != this.input.stream ? d.Ns.SENDRECV : d.Ns.SENDONLY),
             (this.fpc = i);
         let o = new c.Z(this.voiceBitrate);
-        o.on('addtrack', (e, t) => this.createOutput(p(e), t)),
-            o.on('removetrack', (e, t) => this.destroyOutput(p(e), t)),
+        o.on('addtrack', (e, t) => this.createOutput(m(e), t)),
+            o.on('removetrack', (e, t) => this.destroyOutput(m(e), t)),
             o.once('connected', () => {
-                this.input.reset(), this.setConnectionState(E.$j.CONNECTED), this.on(s.Sh.Stats, this.handleStats), this.input.on(u.G.VoiceActivity, this.handleVoiceActivity);
+                this.input.reset(), this.setConnectionState(_.$j.CONNECTED), this.on(s.Sh.Stats, this.handleStats), this.input.on(u.G.VoiceActivity, this.handleVoiceActivity);
             }),
-            o.on('connecting', () => this.setConnectionState(E.$j.DTLS_CONNECTING)),
-            o.on('checking', () => this.setConnectionState(E.$j.ICE_CHECKING)),
-            o.on('failed', () => this.setConnectionState(E.$j.NO_ROUTE)),
-            o.on('disconnected', () => this.setConnectionState(E.$j.DISCONNECTED)),
-            o.on('closed', () => this.setConnectionState(E.$j.DISCONNECTED)),
+            o.on('connecting', () => this.setConnectionState(_.$j.DTLS_CONNECTING)),
+            o.on('checking', () => this.setConnectionState(_.$j.ICE_CHECKING)),
+            o.on('failed', () => this.setConnectionState(_.$j.NO_ROUTE)),
+            o.on('disconnected', () => this.setConnectionState(_.$j.DISCONNECTED)),
+            o.on('closed', () => this.setConnectionState(_.$j.DISCONNECTED)),
             o.on('offer', (e) => {
                 let { sdp: t } = e,
                     { outboundStreams: n, codecs: r, audioSSRC: a, videoSSRC: o, rtxSSRC: l } = (0, d.Nl)(t);
@@ -111,8 +111,8 @@ class I extends o.Z {
             (this.pc = o);
     }
 }
-function m(e, t, n, r) {
+function E(e, t, n, r) {
     let s = ''.concat(null != i().name && '' !== i().name ? i().name : 'unknown', ' ').concat(null != i().version && '' !== i().version ? i().version : 'unknown'),
         o = new a.Y('Connection('.concat(e, ')'));
-    return f.WS ? (o.info('Using Unified Plan ('.concat(s, ')')), new _.Z(e, t, n, r)) : (o.info('Using Plan B ('.concat(s, ')')), new I(e, t, n, r));
+    return h.WS ? (o.info('Using Unified Plan ('.concat(s, ')')), new f.Z(e, t, n, r)) : (o.info('Using Plan B ('.concat(s, ')')), new g(e, t, n, r));
 }

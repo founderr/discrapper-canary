@@ -5,12 +5,12 @@ t.d(n, {
 });
 var l = t(200651);
 t(192379);
-var a = t(481060),
+var i = t(481060),
     r = t(695346),
-    i = t(981631);
+    a = t(981631);
 function s(e, n) {
     r.qF.getSetting()
-        ? (0, a.openModalLazy)(
+        ? (0, i.openModalLazy)(
               async () => {
                   let { default: n } = await Promise.all([t.e('8821'), t.e('62010')]).then(t.bind(t, 601572));
                   return (t) =>
@@ -22,7 +22,7 @@ function s(e, n) {
               },
               {
                   modalKey: 'camera-preview',
-                  contextKey: n === i.IlC.POPOUT ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT
+                  contextKey: n === a.IlC.POPOUT ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT
               }
           )
         : null == e || e();

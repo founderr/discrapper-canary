@@ -5,22 +5,22 @@ t.d(n, {
 });
 var i = t(200651);
 t(192379);
-var a = t(481060),
-    s = t(346610),
-    l = t(868643),
-    r = t(245216),
-    o = t(996861),
-    u = t(689938);
+var l = t(481060),
+    r = t(346610),
+    a = t(868643),
+    o = t(245216),
+    s = t(996861),
+    u = t(388032);
 function d(e, n) {
-    let t = (0, l.a)(e),
-        { canForwardMessages: d } = (0, s.yk)({ location: 'MessageActionsMenu' }, { autoTrackExposure: !1 });
+    let t = (0, a.a)(e),
+        { canForwardMessages: d } = (0, r.yk)({ location: 'MessageActionsMenu' }, { autoTrackExposure: !1 });
     return t && d
-        ? (0, i.jsx)(a.MenuItem, {
+        ? (0, i.jsx)(l.MenuItem, {
               id: 'forward',
-              label: u.Z.Messages.MESSAGE_ACTION_FORWARD,
-              icon: r.Z,
+              label: u.intl.string(u.t.I3ltXF),
+              icon: o.Z,
               action: () => {
-                  (0, o.ts)(n, e);
+                  (0, s.ts)(n, e);
               }
           })
         : null;

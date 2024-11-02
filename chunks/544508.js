@@ -1,57 +1,57 @@
-s(47120), s(757143);
-var n = s(200651),
-    i = s(192379),
-    a = s(120356),
-    r = s.n(a),
-    o = s(100621),
-    l = s(399606),
-    u = s(481060),
-    c = s(607070),
-    d = s(745510),
-    E = s(899007),
-    _ = s(867176),
-    g = s(51144),
-    m = s(346585),
-    S = s(81259),
-    I = s(119848),
-    T = s(801461),
-    N = s(228168),
-    O = s(689938),
-    h = s(923112),
-    f = s(733469);
-let M = i.forwardRef(function (e, t) {
-    let { style: s, value: i, placeholder: a, maxLength: o, onFocus: l, onChange: c } = e;
-    return (0, n.jsx)(u.TextArea, {
-        className: r()(h.userCardInput, s),
+n(47120), n(757143);
+var i = n(200651),
+    s = n(192379),
+    r = n(120356),
+    a = n.n(r),
+    l = n(100621),
+    o = n(399606),
+    u = n(481060),
+    c = n(607070),
+    d = n(745510),
+    m = n(899007),
+    g = n(867176),
+    E = n(51144),
+    h = n(346585),
+    f = n(81259),
+    S = n(119848),
+    N = n(801461),
+    T = n(228168),
+    x = n(388032),
+    _ = n(923112),
+    I = n(733469);
+let C = s.forwardRef(function (e, t) {
+    let { style: n, value: s, placeholder: r, maxLength: l, onFocus: o, onChange: c } = e;
+    return (0, i.jsx)(u.TextArea, {
+        className: a()(_.userCardInput, n),
         autosize: !0,
         error: null,
         showCharacterCount: !1,
         spellCheck: !1,
         showRemainingCharacterCount: !1,
-        value: i,
-        placeholder: a,
+        value: s,
+        placeholder: r,
         rows: 1,
-        maxLength: o,
+        maxLength: l,
         onChange: c,
-        onFocus: l,
+        onFocus: o,
         onKeyDown: (e) => {
             'Enter' === e.key && e.preventDefault();
         },
         inputRef: t
     });
 });
-t.Z = i.forwardRef(function (e, t) {
-    let { user: s, error: a, formValues: L, displayProfile: x, onChangeFormValue: C, onFocusDisplayName: R, onFocusUsername: A, editState: v, footerNotice: P, usernameSuggestionLoading: p, oneClickFlow: y } = e,
-        { username: Z, globalName: U } = L,
-        G = i.useRef(null),
-        b = i.useRef(null),
-        j = i.useMemo(() => s.merge({ discriminator: '0000' }), [s]),
-        [D, W] = (0, u.useSpring)(() => ({
+t.Z = s.forwardRef(function (e, t) {
+    let { user: n, error: r, formValues: v, displayProfile: p, onChangeFormValue: A, onFocusDisplayName: y, onFocusUsername: O, editState: M, footerNotice: L, usernameSuggestionLoading: R, oneClickFlow: b } = e,
+        { username: P, globalName: j } = v,
+        U = s.useRef(null),
+        k = s.useRef(null),
+        Z = s.useMemo(() => n.merge({ discriminator: '0000' }), [n]),
+        [G, D] = (0, u.useSpring)(() => ({
             opacity: 0,
             y: 5
         }));
-    i.useEffect(() => {
-        W({
+    s.useEffect(() => {
+        D({
             y: 0,
             opacity: 1,
             from: {
@@ -59,28 +59,28 @@ t.Z = i.forwardRef(function (e, t) {
                 opacity: 0
             }
         });
-    }, [W, v]),
-        i.useImperativeHandle(
+    }, [D, M]),
+        s.useImperativeHandle(
             t,
             () => ({
                 focusDisplayName: () => {
-                    var e, t, s;
-                    null === (t = b.current) || void 0 === t || t.setSelection(0, null === (e = b.current) || void 0 === e ? void 0 : e.value.length), null === (s = b.current) || void 0 === s || s.focus();
+                    var e, t, n;
+                    null === (t = k.current) || void 0 === t || t.setSelection(0, null === (e = k.current) || void 0 === e ? void 0 : e.value.length), null === (n = k.current) || void 0 === n || n.focus();
                 },
                 focusUsername: () => {
-                    var e, t, s;
-                    null === (t = G.current) || void 0 === t || t.setSelection(0, null === (e = G.current) || void 0 === e ? void 0 : e.value.length), null === (s = G.current) || void 0 === s || s.focus();
+                    var e, t, n;
+                    null === (t = U.current) || void 0 === t || t.setSelection(0, null === (e = U.current) || void 0 === e ? void 0 : e.value.length), null === (n = U.current) || void 0 === n || n.focus();
                 }
             }),
             []
         );
-    let k = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
-        { createMultipleConfettiAt: F } = i.useContext(d.h),
-        w = null == x ? void 0 : x.getLegacyUsername();
+    let w = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
+        { createMultipleConfettiAt: W } = s.useContext(d.h),
+        q = null == p ? void 0 : p.getLegacyUsername();
     return (
-        i.useEffect(() => {
-            if (!k && v === T.Wq.PREVIEW && !!s.username.includes(T.nA))
-                F(
+        s.useEffect(() => {
+            if (!w && M === N.Wq.PREVIEW && !!n.username.includes(N.nA))
+                W(
                     window.innerWidth / 2 + 150,
                     0,
                     {
@@ -98,7 +98,7 @@ t.Z = i.forwardRef(function (e, t) {
                     },
                     15
                 ),
-                    F(
+                    W(
                         window.innerWidth / 2 - 150,
                         0,
                         {
@@ -116,142 +116,142 @@ t.Z = i.forwardRef(function (e, t) {
                         },
                         15
                     );
-        }, [F, v, s, k]),
-        (0, n.jsxs)('div', {
-            className: r()(h.userCardContainer, { [h.shinyCard]: v === T.Wq.PREVIEW }),
+        }, [W, M, n, w]),
+        (0, i.jsxs)('div', {
+            className: a()(_.userCardContainer, { [_.shinyCard]: M === N.Wq.PREVIEW }),
             children: [
-                (0, n.jsxs)('div', {
-                    className: h.profileCard,
+                (0, i.jsxs)('div', {
+                    className: _.profileCard,
                     children: [
-                        (0, n.jsx)(_.Z, {
-                            user: j,
-                            displayProfile: x,
-                            profileType: N.y0.PANEL
+                        (0, i.jsx)(g.Z, {
+                            user: Z,
+                            displayProfile: p,
+                            profileType: T.y0.PANEL
                         }),
-                        (0, n.jsx)(E.Z, {
-                            user: j,
-                            displayProfile: x,
-                            profileType: N.y0.PANEL
+                        (0, i.jsx)(m.Z, {
+                            user: Z,
+                            displayProfile: p,
+                            profileType: T.y0.PANEL
                         }),
-                        v === T.Wq.PREVIEW &&
-                            null != w &&
-                            (0, n.jsx)('div', {
-                                className: h.legacyUsernameBadgeContainer,
-                                children: (0, n.jsx)(u.Tooltip, {
+                        M === N.Wq.PREVIEW &&
+                            null != q &&
+                            (0, i.jsx)('div', {
+                                className: _.legacyUsernameBadgeContainer,
+                                children: (0, i.jsx)(u.Tooltip, {
                                     position: 'top',
-                                    text: O.Z.Messages.ORIGINALLY_KNOWN_AS.format({ legacyUsername: w }),
+                                    text: x.intl.formatToPlainString(x.t.bhrgkJ, { legacyUsername: q }),
                                     spacing: 12,
                                     children: (e) =>
-                                        (0, n.jsx)(u.Anchor, {
+                                        (0, i.jsx)(u.Anchor, {
                                             ...e,
                                             onClick: e.onClick,
-                                            children: (0, n.jsx)('img', {
-                                                className: h.legacyUsernameBadge,
+                                            children: (0, i.jsx)('img', {
+                                                className: _.legacyUsernameBadge,
                                                 alt: '',
-                                                src: f
+                                                src: I
                                             })
                                         })
                                 })
                             })
                     ]
                 }),
-                v !== T.Wq.PREVIEW &&
-                    (0, n.jsxs)(o.animated.div, {
+                M !== N.Wq.PREVIEW &&
+                    (0, i.jsxs)(l.animated.div, {
                         style: {
-                            opacity: D.opacity,
-                            y: D.y
+                            opacity: G.opacity,
+                            y: G.y
                         },
-                        className: h.inputContainer,
+                        className: _.inputContainer,
                         children: [
-                            v === T.Wq.EDIT_DISPLAY_NAME &&
-                                (0, n.jsxs)(n.Fragment, {
+                            M === N.Wq.EDIT_DISPLAY_NAME &&
+                                (0, i.jsxs)(i.Fragment, {
                                     children: [
-                                        (0, n.jsx)(u.Text, {
-                                            className: h.textPadding,
+                                        (0, i.jsx)(u.Text, {
+                                            className: _.textPadding,
                                             color: 'text-muted',
                                             variant: 'text-sm/semibold',
-                                            children: O.Z.Messages.DISPLAY_NAME
+                                            children: x.intl.string(x.t['9AjdkJ'])
                                         }),
-                                        (0, n.jsx)(M, {
-                                            style: r()(h.displayNameHeight, h['heading-xl/bold']),
-                                            value: null != U ? U : '',
-                                            placeholder: g.ZP.getName(s),
-                                            maxLength: T.hy,
-                                            onChange: (e) => C({ globalName: e }),
-                                            onFocus: R,
-                                            ref: b
+                                        (0, i.jsx)(C, {
+                                            style: a()(_.displayNameHeight, _['heading-xl/bold']),
+                                            value: null != j ? j : '',
+                                            placeholder: E.ZP.getName(n),
+                                            maxLength: N.hy,
+                                            onChange: (e) => A({ globalName: e }),
+                                            onFocus: y,
+                                            ref: k
                                         })
                                     ]
                                 }),
-                            (v === T.Wq.EDIT_USERNAME || v === T.Wq.SUGGESTION) &&
-                                (0, n.jsxs)(n.Fragment, {
+                            (M === N.Wq.EDIT_USERNAME || M === N.Wq.SUGGESTION) &&
+                                (0, i.jsxs)(i.Fragment, {
                                     children: [
-                                        (0, n.jsx)(u.Text, {
-                                            className: h.textPadding,
+                                        (0, i.jsx)(u.Text, {
+                                            className: _.textPadding,
                                             color: 'text-muted',
                                             variant: 'text-sm/semibold',
-                                            children: O.Z.Messages.USERNAME
+                                            children: x.intl.string(x.t.IEpCBQ)
                                         }),
-                                        (0, n.jsx)(M, {
-                                            style: r()(h.userCardHeight, h.lowercaseUsername, h['heading-lg/medium']),
-                                            value: null != Z ? Z : '',
-                                            placeholder: s.username,
-                                            maxLength: T.hy,
-                                            onChange: (e) => C({ username: e.replace('@', '') }),
-                                            onFocus: A,
-                                            ref: G
+                                        (0, i.jsx)(C, {
+                                            style: a()(_.userCardHeight, _.lowercaseUsername, _['heading-lg/medium']),
+                                            value: null != P ? P : '',
+                                            placeholder: n.username,
+                                            maxLength: N.hy,
+                                            onChange: (e) => A({ username: e.replace('@', '') }),
+                                            onFocus: O,
+                                            ref: U
                                         })
                                     ]
                                 }),
-                            (0, n.jsx)('div', {
-                                className: h.messageContainer,
+                            (0, i.jsx)('div', {
+                                className: _.messageContainer,
                                 children: (() => {
-                                    if (null != a)
-                                        return (0, n.jsx)(S.Z, {
+                                    if (null != r)
+                                        return (0, i.jsx)(f.Z, {
                                             type: 'error',
-                                            children: a
+                                            children: r
                                         });
-                                    if (null != P) {
-                                        if (v !== T.Wq.SUGGESTION)
-                                            return (0, n.jsx)(u.Text, {
+                                    if (null != L) {
+                                        if (M !== N.Wq.SUGGESTION)
+                                            return (0, i.jsx)(u.Text, {
                                                 variant: 'text-sm/normal',
-                                                children: P
+                                                children: L
                                             });
-                                        if (!p)
-                                            return (0, n.jsx)(S.Z, {
+                                        if (!R)
+                                            return (0, i.jsx)(f.Z, {
                                                 type: 'success',
-                                                children: P
+                                                children: L
                                             });
                                     }
-                                    return null == P && null == a && (v === T.Wq.EDIT_USERNAME || v === T.Wq.SUGGESTION)
-                                        ? (0, n.jsx)(I.Z, {
-                                              username: Z,
-                                              oneClickFlow: y
+                                    return null == L && null == r && (M === N.Wq.EDIT_USERNAME || M === N.Wq.SUGGESTION)
+                                        ? (0, i.jsx)(S.Z, {
+                                              username: P,
+                                              oneClickFlow: b
                                           })
                                         : null;
                                 })()
                             })
                         ]
                     }),
-                v === T.Wq.PREVIEW &&
-                    (0, n.jsxs)('div', {
-                        className: h.userCard,
+                M === N.Wq.PREVIEW &&
+                    (0, i.jsxs)('div', {
+                        className: _.userCard,
                         children: [
-                            (0, n.jsx)(u.Heading, {
+                            (0, i.jsx)(u.Heading, {
                                 color: 'header-primary',
                                 variant: 'heading-xl/bold',
-                                children: g.ZP.getName(s)
+                                children: E.ZP.getName(n)
                             }),
-                            (0, n.jsx)(u.Heading, {
+                            (0, i.jsx)(u.Heading, {
                                 color: 'text-normal',
                                 variant: 'heading-lg/medium',
-                                children: s.username
+                                children: n.username
                             }),
-                            (0, n.jsx)(u.Text, {
-                                className: h.memberText,
+                            (0, i.jsx)(u.Text, {
+                                className: _.memberText,
                                 color: 'text-muted',
                                 variant: 'text-sm/medium',
-                                children: O.Z.Messages.CONNECTIONS_PROFILE_MEMBER_SINCE.format({ date: (0, m.K9)(s.id) })
+                                children: x.intl.format(x.t['9rfonp'], { date: (0, h.K9)(n.id) })
                             })
                         ]
                     })

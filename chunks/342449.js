@@ -1,81 +1,81 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return m;
     }
 }),
-    t(47120);
-var a = t(200651),
-    s = t(192379),
-    l = t(683860),
-    r = t(481060),
-    i = t(235449),
-    o = t(487894),
-    c = t(300234),
-    d = t(689938),
-    u = t(77300);
+    n(47120);
+var a = n(200651),
+    l = n(192379),
+    r = n(683860),
+    s = n(481060),
+    i = n(235449),
+    o = n(487894),
+    c = n(300234),
+    d = n(388032),
+    u = n(77300);
 let h = new Set();
 function m(e) {
-    let { channel: n, startThread: t, goToThread: m } = e,
-        { joinedThreadIds: E, unjoinedThreadIds: f } = (0, i.FO)(n),
-        { threadIds: Z, canLoadMore: x, loading: T, loadMore: v } = (0, i.qQ)(n, l.z.LATEST_ACTIVITY, h),
-        _ = s.useRef(null);
+    let { channel: t, startThread: n, goToThread: m } = e,
+        { joinedThreadIds: f, unjoinedThreadIds: x } = (0, i.FO)(t),
+        { threadIds: v, canLoadMore: Z, loading: j, loadMore: N } = (0, i.qQ)(t, r.z.LATEST_ACTIVITY, h),
+        T = l.useRef(null);
     (0, i.r7)();
-    let R = s.useCallback(
+    let C = l.useCallback(
             (e) => {
-                let n = 0 === e.section ? E : 1 === e.section ? f : Z;
+                let t = 0 === e.section ? f : 1 === e.section ? x : v;
                 return (0, a.jsx)(
                     c.Z,
                     {
-                        threadId: n[e.row],
+                        threadId: t[e.row],
                         goToThread: m
                     },
                     ''.concat(e.section, '-').concat(e.row)
                 );
             },
-            [Z, E, f, m]
+            [v, f, x, m]
         ),
-        j = s.useCallback((e) => (0 === e.section ? (0, a.jsx)(g, { text: d.Z.Messages.THREAD_BROWSER_JOINED_HEADER.format({ count: E.length }) }, e.section) : 1 === e.section ? (0, a.jsx)(g, { text: d.Z.Messages.THREAD_BROWSER_OTHER_HEADER.format({ count: f.length }) }, e.section) : (0, a.jsx)(g, { text: d.Z.Messages.THREAD_BROWSER_ARCHIVED_HEADER }, e.section)), [E.length, f.length]),
-        N = s.useCallback((e) => (1 === e && E.length > 0 ? 64 : 2 === e && (E.length > 0 || f.length > 0) ? 64 : 32), [E.length, f.length]),
-        S = s.useCallback(() => {
+        I = l.useCallback((e) => (0 === e.section ? (0, a.jsx)(g, { text: d.intl.formatToPlainString(d.t['4E27f3'], { count: f.length }) }, e.section) : 1 === e.section ? (0, a.jsx)(g, { text: d.intl.formatToPlainString(d.t.csPc4O, { count: x.length }) }, e.section) : (0, a.jsx)(g, { text: d.intl.string(d.t['wUNQ+/']) }, e.section)), [f.length, x.length]),
+        p = l.useCallback((e) => (1 === e && f.length > 0 ? 64 : 2 === e && (f.length > 0 || x.length > 0) ? 64 : 32), [f.length, x.length]),
+        S = l.useCallback(() => {
             var e;
-            let n = null === (e = _.current) || void 0 === e ? void 0 : e.getScrollerState();
-            if (null == n) return;
-            let t = n.scrollTop + n.offsetHeight;
-            n.scrollHeight - t < 200 && v();
-        }, [v]);
-    if (0 === E.length && 0 === f.length && 0 === Z.length)
-        return T
+            let t = null === (e = T.current) || void 0 === e ? void 0 : e.getScrollerState();
+            if (null == t) return;
+            let n = t.scrollTop + t.offsetHeight;
+            t.scrollHeight - n < 200 && N();
+        }, [N]);
+    if (0 === f.length && 0 === x.length && 0 === v.length)
+        return j
             ? (0, a.jsx)('div', {
                   className: u.list,
-                  children: (0, a.jsx)(r.Spinner, { className: u.spinner })
+                  children: (0, a.jsx)(s.Spinner, { className: u.spinner })
               })
             : (0, a.jsx)('div', {
                   className: u.list,
                   children: (0, a.jsx)(o.Z, {
-                      channel: n,
-                      header: d.Z.Messages.THREAD_BROWSER_EMPTY_STATE_HEADER,
-                      startThread: t
+                      channel: t,
+                      header: d.intl.string(d.t.HgTQ8v),
+                      startThread: n
                   })
               });
-    return (0, a.jsx)(r.List, {
-        ref: _,
+    return (0, a.jsx)(s.List, {
+        ref: T,
         className: u.list,
         fade: !0,
-        sections: [E.length, f.length, Z.length],
-        sectionHeight: N,
+        sections: [f.length, x.length, v.length],
+        sectionHeight: p,
         rowHeight: 80,
-        renderRow: R,
-        renderSection: j,
+        renderRow: C,
+        renderSection: I,
         chunkSize: 20,
-        onScroll: x ? S : void 0
+        onScroll: Z ? S : void 0
     });
 }
 function g(e) {
-    let { text: n } = e;
-    return (0, a.jsx)(r.Text, {
+    let { text: t } = e;
+    return (0, a.jsx)(s.Text, {
         color: 'header-secondary',
         variant: 'text-xs/bold',
         className: u.sectionHeader,
-        children: n
+        children: t
     });
 }

@@ -22,7 +22,7 @@ function d(e) {
     if (n !== s.Z_OK) throw Error(o[n]);
     (this.header = new u()), r.inflateGetHeader(this.strm, this.header);
 }
-function _(e, t) {
+function f(e, t) {
     var n = new d(t);
     if ((n.push(e, !0), n.err)) throw n.msg || o[n.err];
     return n.result;
@@ -33,18 +33,18 @@ function _(e, t) {
         l,
         u,
         d,
-        _,
-        E = this.strm,
-        f = this.options.chunkSize,
-        h = this.options.dictionary,
-        p = !1;
+        f,
+        _ = this.strm,
+        h = this.options.chunkSize,
+        p = this.options.dictionary,
+        m = !1;
     if (this.ended) return !1;
-    (o = t === ~~t ? t : !0 === t ? s.Z_FINISH : s.Z_NO_FLUSH), 'string' == typeof e ? (E.input = a.binstring2buf(e)) : '[object ArrayBuffer]' === c.call(e) ? (E.input = new Uint8Array(e)) : (E.input = e), (E.next_in = 0), (E.avail_in = E.input.length);
+    (o = t === ~~t ? t : !0 === t ? s.Z_FINISH : s.Z_NO_FLUSH), 'string' == typeof e ? (_.input = a.binstring2buf(e)) : '[object ArrayBuffer]' === c.call(e) ? (_.input = new Uint8Array(e)) : (_.input = e), (_.next_in = 0), (_.avail_in = _.input.length);
     do {
-        if ((0 === E.avail_out && ((E.output = new i.Buf8(f)), (E.next_out = 0), (E.avail_out = f)), (n = r.inflate(E, s.Z_NO_FLUSH)) === s.Z_NEED_DICT && h && ((_ = 'string' == typeof h ? a.string2buf(h) : '[object ArrayBuffer]' === c.call(h) ? new Uint8Array(h) : h), (n = r.inflateSetDictionary(this.strm, _))), n === s.Z_BUF_ERROR && !0 === p && ((n = s.Z_OK), (p = !1)), n !== s.Z_STREAM_END && n !== s.Z_OK)) return this.onEnd(n), (this.ended = !0), !1;
-        E.next_out && (0 === E.avail_out || n === s.Z_STREAM_END || (0 === E.avail_in && (o === s.Z_FINISH || o === s.Z_SYNC_FLUSH))) && ('string' === this.options.to ? ((l = a.utf8border(E.output, E.next_out)), (u = E.next_out - l), (d = a.buf2string(E.output, l)), (E.next_out = u), (E.avail_out = f - u), u && i.arraySet(E.output, E.output, l, u, 0), this.onData(d)) : this.onData(i.shrinkBuf(E.output, E.next_out))), 0 === E.avail_in && 0 === E.avail_out && (p = !0);
-    } while ((E.avail_in > 0 || 0 === E.avail_out) && n !== s.Z_STREAM_END);
-    return (n === s.Z_STREAM_END && (o = s.Z_FINISH), o === s.Z_FINISH) ? ((n = r.inflateEnd(this.strm)), this.onEnd(n), (this.ended = !0), n === s.Z_OK) : (o === s.Z_SYNC_FLUSH && (this.onEnd(s.Z_OK), (E.avail_out = 0)), !0);
+        if ((0 === _.avail_out && ((_.output = new i.Buf8(h)), (_.next_out = 0), (_.avail_out = h)), (n = r.inflate(_, s.Z_NO_FLUSH)) === s.Z_NEED_DICT && p && ((f = 'string' == typeof p ? a.string2buf(p) : '[object ArrayBuffer]' === c.call(p) ? new Uint8Array(p) : p), (n = r.inflateSetDictionary(this.strm, f))), n === s.Z_BUF_ERROR && !0 === m && ((n = s.Z_OK), (m = !1)), n !== s.Z_STREAM_END && n !== s.Z_OK)) return this.onEnd(n), (this.ended = !0), !1;
+        _.next_out && (0 === _.avail_out || n === s.Z_STREAM_END || (0 === _.avail_in && (o === s.Z_FINISH || o === s.Z_SYNC_FLUSH))) && ('string' === this.options.to ? ((l = a.utf8border(_.output, _.next_out)), (u = _.next_out - l), (d = a.buf2string(_.output, l)), (_.next_out = u), (_.avail_out = h - u), u && i.arraySet(_.output, _.output, l, u, 0), this.onData(d)) : this.onData(i.shrinkBuf(_.output, _.next_out))), 0 === _.avail_in && 0 === _.avail_out && (m = !0);
+    } while ((_.avail_in > 0 || 0 === _.avail_out) && n !== s.Z_STREAM_END);
+    return (n === s.Z_STREAM_END && (o = s.Z_FINISH), o === s.Z_FINISH) ? ((n = r.inflateEnd(this.strm)), this.onEnd(n), (this.ended = !0), n === s.Z_OK) : (o === s.Z_SYNC_FLUSH && (this.onEnd(s.Z_OK), (_.avail_out = 0)), !0);
 }),
     (d.prototype.onData = function (e) {
         this.chunks.push(e);
@@ -53,8 +53,8 @@ function _(e, t) {
         e === s.Z_OK && ('string' === this.options.to ? (this.result = this.chunks.join('')) : (this.result = i.flattenChunks(this.chunks))), (this.chunks = []), (this.err = e), (this.msg = this.strm.msg);
     });
 (t.Inflate = d),
-    (t.inflate = _),
+    (t.inflate = f),
     (t.inflateRaw = function (e, t) {
-        return ((t = t || {}).raw = !0), _(e, t);
+        return ((t = t || {}).raw = !0), f(e, t);
     }),
-    (t.ungzip = _);
+    (t.ungzip = f);

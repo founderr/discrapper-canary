@@ -1,102 +1,102 @@
-n.r(e),
-    n.d(e, {
+e.r(n),
+    e.d(n, {
         default: function () {
             return c;
         }
     }),
-    n(757143);
-var o = n(200651);
-n(192379);
-var a = n(481060),
-    s = n(313201),
-    l = n(988158),
-    r = n(689938),
-    i = n(66015);
+    e(757143);
+var o = e(200651);
+e(192379);
+var l = e(481060),
+    a = e(313201),
+    r = e(988158),
+    i = e(388032),
+    s = e(66015);
 function c(t) {
-    let { url: e, trustUrl: n, isProtocol: c, onConfirm: d, onClose: _, transitionState: u } = t,
-        x = (0, s.Dt)(),
+    let { url: n, trustUrl: e, isProtocol: c, onConfirm: d, onClose: x, transitionState: u } = t,
+        h = (0, a.Dt)(),
         {
-            protocol: h,
-            hostname: m,
-            theRestOfTheUrl: M,
-            shouldTrustUrl: T,
-            setShouldTrustUrl: E,
-            handleConfirm: C
-        } = (0, l.X)({
-            url: e,
-            trustUrl: n,
+            protocol: m,
+            hostname: C,
+            theRestOfTheUrl: p,
+            shouldTrustUrl: k,
+            setShouldTrustUrl: g,
+            handleConfirm: b
+        } = (0, r.X)({
+            url: n,
+            trustUrl: e,
             onConfirm: d,
-            onClose: _
+            onClose: x
         });
-    return (0, o.jsxs)(a.ModalRoot, {
-        size: a.ModalSize.DYNAMIC,
+    return (0, o.jsxs)(l.ModalRoot, {
+        size: l.ModalSize.DYNAMIC,
         transitionState: u,
-        'aria-labelledby': x,
+        'aria-labelledby': h,
         children: [
-            (0, o.jsxs)(a.ModalContent, {
+            (0, o.jsxs)(l.ModalContent, {
                 children: [
-                    (0, o.jsx)(a.Heading, {
-                        id: x,
+                    (0, o.jsx)(l.Heading, {
+                        id: h,
                         variant: 'heading-xl/bold',
-                        className: i.title,
-                        children: r.Z.Messages.MASKED_LINK_ALERT_V2_HEADER
+                        className: s.title,
+                        children: i.intl.string(i.t['3w1QGh'])
                     }),
-                    (0, o.jsx)(a.Text, {
-                        className: i.warningText,
+                    (0, o.jsx)(l.Text, {
+                        className: s.warningText,
                         variant: 'text-md/normal',
-                        children: c ? r.Z.Messages.MASKED_LINK_ALERT_V2_WARNING_PROTOCOL.format({}) : r.Z.Messages.MASKED_LINK_ALERT_V2_WARNING_WEBSITE
+                        children: c ? i.intl.format(i.t.aCYv19, {}) : i.intl.string(i.t.soRxRU)
                     }),
-                    (0, o.jsxs)(a.Scroller, {
-                        className: i.linkCalloutContainer,
+                    (0, o.jsxs)(l.Scroller, {
+                        className: s.linkCalloutContainer,
                         children: [
-                            (0, o.jsxs)(a.Text, {
+                            (0, o.jsxs)(l.Text, {
                                 tag: 'span',
                                 variant: c ? 'text-md/semibold' : 'text-md/normal',
                                 color: c ? 'text-normal' : 'text-muted',
-                                children: [h, '//']
+                                children: [m, '//']
                             }),
-                            (0, o.jsx)(a.Text, {
+                            (0, o.jsx)(l.Text, {
                                 tag: 'span',
                                 variant: c ? 'text-md/normal' : 'text-md/semibold',
                                 color: c ? 'text-muted' : 'text-normal',
-                                children: m
+                                children: C
                             }),
-                            (0, o.jsx)(a.Text, {
+                            (0, o.jsx)(l.Text, {
                                 tag: 'span',
                                 variant: 'text-md/normal',
                                 color: 'text-muted',
-                                children: M
+                                children: p
                             })
                         ]
                     }),
-                    (0, o.jsx)(a.Checkbox, {
-                        className: i.checkbox,
-                        type: a.Checkbox.Types.INVERTED,
-                        value: T,
-                        onChange: (t, e) => E(e),
-                        children: (0, o.jsx)(a.Text, {
+                    (0, o.jsx)(l.Checkbox, {
+                        className: s.checkbox,
+                        type: l.Checkbox.Types.INVERTED,
+                        value: k,
+                        onChange: (t, n) => g(n),
+                        children: (0, o.jsx)(l.Text, {
                             variant: 'text-sm/normal',
-                            children: c ? r.Z.Messages.MASKED_LINK_ALERT_V2_TRUST_PROTOCOL.format({ protocol: h.replace(':', '') }) : r.Z.Messages.MASKED_LINK_ALERT_V2_TRUST_WEBSITE.format({ domain: m })
+                            children: c ? i.intl.format(i.t['haA+X1'], { protocol: m.replace(':', '') }) : i.intl.format(i.t.ZgXDsL, { domain: C })
                         })
                     })
                 ]
             }),
-            (0, o.jsxs)(a.ModalFooter, {
+            (0, o.jsxs)(l.ModalFooter, {
                 children: [
-                    (0, o.jsx)(a.Button, {
+                    (0, o.jsx)(l.Button, {
                         type: 'button',
-                        size: a.Button.Sizes.MEDIUM,
-                        color: a.Button.Colors.BRAND,
-                        onClick: C,
-                        children: c ? r.Z.Messages.MASKED_LINK_ALERT_V2_CONFIRM_PROTOCOL : r.Z.Messages.MASKED_LINK_ALERT_V2_CONFIRM_WEBSITE
+                        size: l.Button.Sizes.MEDIUM,
+                        color: l.Button.Colors.BRAND,
+                        onClick: b,
+                        children: c ? i.intl.string(i.t.COq6kp) : i.intl.string(i.t.NcJfJC)
                     }),
-                    (0, o.jsx)(a.Button, {
+                    (0, o.jsx)(l.Button, {
                         type: 'button',
-                        size: a.Button.Sizes.MEDIUM,
-                        color: a.Button.Colors.PRIMARY,
-                        onClick: _,
-                        look: a.ButtonLooks.LINK,
-                        children: r.Z.Messages.GO_BACK
+                        size: l.Button.Sizes.MEDIUM,
+                        color: l.Button.Colors.PRIMARY,
+                        onClick: x,
+                        look: l.ButtonLooks.LINK,
+                        children: i.intl.string(i.t['/g10LC'])
                     })
                 ]
             })

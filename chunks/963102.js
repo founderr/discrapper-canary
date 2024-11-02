@@ -1,12 +1,12 @@
 n.d(t, {
     I: function () {
-        return _;
+        return b;
     }
 });
 var r = n(200651),
-    s = n(192379),
-    a = n(120356),
-    i = n.n(a),
+    a = n(192379),
+    s = n(120356),
+    i = n.n(s),
     l = n(442837),
     o = n(780384),
     c = n(481060),
@@ -15,53 +15,53 @@ var r = n(200651),
     m = n(984370),
     f = n(594174),
     p = n(471731),
-    C = n(335131),
-    h = n(689938),
-    g = n(454801);
-function _(e) {
-    let { isFullScreen: t, isLayer: n, onClose: a, isCatalogView: _, handleTransition: b, transparent: x } = e,
-        E = (0, u.ZP)(),
-        v = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
-        I = (null == v ? void 0 : v.isStaff()) || (null == v ? void 0 : v.isStaffPersonal()) || !1;
+    h = n(335131),
+    g = n(388032),
+    C = n(454801);
+function b(e) {
+    let { isFullScreen: t, isLayer: n, onClose: s, isCatalogView: b, handleTransition: x, transparent: v } = e,
+        _ = (0, u.ZP)(),
+        k = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
+        j = (null == k ? void 0 : k.isStaff()) || (null == k ? void 0 : k.isStaffPersonal()) || !1;
     return (0, r.jsx)(c.ThemeProvider, {
-        theme: E,
+        theme: _,
         children: (e) =>
             (0, r.jsxs)(m.Z, {
-                className: i()(e, g.headerBar, {
-                    [g.fullscreenHeaderBar]: t,
-                    [g.headerBarRegularBackground]: !x,
-                    [g.headerBarTransparentLightBackground]: x && !(0, o.wj)(E),
-                    [g.headerBarTransparentDarkBackground]: x && (0, o.wj)(E)
+                className: i()(e, C.headerBar, {
+                    [C.fullscreenHeaderBar]: t,
+                    [C.headerBarRegularBackground]: !v,
+                    [C.headerBarTransparentLightBackground]: v && !(0, o.wj)(_),
+                    [C.headerBarTransparentDarkBackground]: v && (0, o.wj)(_)
                 }),
-                transparent: x,
-                toolbar: t || !I ? null : (0, r.jsx)(s.Fragment, {}),
+                transparent: v,
+                toolbar: t || !j ? null : (0, r.jsx)(a.Fragment, {}),
                 children: [
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            _ &&
-                                null != b &&
+                            b &&
+                                null != x &&
                                 (0, r.jsx)(c.Clickable, {
-                                    onClick: b,
-                                    className: g.back,
-                                    'aria-label': h.Z.Messages.BACK,
+                                    onClick: x,
+                                    className: C.back,
+                                    'aria-label': g.intl.string(g.t['13/7kZ']),
                                     children: (0, r.jsx)(c.ArrowLargeLeftIcon, {})
                                 }),
                             (0, r.jsx)(p.Z, {
-                                color: x ? ((0, o.wj)(E) ? 'white' : 'black') : void 0,
-                                className: g.discordLogo
+                                color: v ? ((0, o.wj)(_) ? 'white' : 'black') : void 0,
+                                className: C.discordLogo
                             })
                         ]
                     }),
-                    (0, r.jsx)(m.Z.Title, { children: h.Z.Messages.COLLECTIBLES_SHOP }),
-                    _ &&
+                    (0, r.jsx)(m.Z.Title, { children: g.intl.string(g.t.pWG4zc) }),
+                    b &&
                         (0, r.jsx)(m.Z.Title, {
-                            className: g.shopAllHeader,
-                            children: h.Z.Messages.COLLECTIBLES_SHOP_ALL
+                            className: C.shopAllHeader,
+                            children: g.intl.string(g.t.xFcotb)
                         }),
                     t &&
                         (0, r.jsx)(d.Z, {
-                            className: g.closeIcon,
-                            closeAction: n ? C.DR : a,
+                            className: C.closeIcon,
+                            closeAction: n ? h.DR : s,
                             keybind: 'ESC'
                         })
                 ]

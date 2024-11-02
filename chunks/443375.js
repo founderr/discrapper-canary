@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return Y;
     }
 });
 var r = n(200651);
@@ -13,237 +13,237 @@ var i = n(120356),
     u = n(841784),
     c = n(833664),
     d = n(420660),
-    _ = n(100527),
-    E = n(906732),
-    f = n(379357),
-    h = n(358696),
-    p = n(180335),
-    I = n(810568),
-    m = n(168524),
-    T = n(833858),
-    S = n(769654),
-    g = n(960870),
-    A = n(139793),
-    N = n(994746),
-    R = n(232174),
-    O = n(510659),
-    v = n(287954),
+    f = n(100527),
+    _ = n(906732),
+    h = n(379357),
+    p = n(358696),
+    m = n(180335),
+    g = n(810568),
+    E = n(168524),
+    v = n(833858),
+    I = n(769654),
+    S = n(960870),
+    T = n(139793),
+    b = n(994746),
+    y = n(232174),
+    A = n(510659),
+    N = n(287954),
     C = n(660579),
-    L = n(502762),
-    D = n(652853),
-    y = n(979038),
-    b = n(448980),
-    M = n(194811),
-    P = n(373826),
-    U = n(315324),
-    w = n(582123),
-    x = n(262210),
-    G = n(103479),
-    k = n(290274),
+    R = n(502762),
+    O = n(652853),
+    D = n(979038),
+    L = n(448980),
+    x = n(194811),
+    w = n(373826),
+    M = n(315324),
+    P = n(582123),
+    k = n(262210),
+    U = n(103479),
+    G = n(290274),
     B = n(553375),
-    F = n(228168),
-    V = n(981631),
-    H = n(701488),
-    Z = n(689938),
-    Y = n(676411);
-function j(e) {
+    Z = n(228168),
+    F = n(981631),
+    V = n(701488),
+    j = n(388032),
+    H = n(676411);
+function Y(e) {
     var t;
-    let { user: n, currentUser: i, activity: j, application: W, guild: K, channel: z, className: q, onClose: Q, profileGuildId: X } = e,
-        { analyticsLocations: $ } = (0, E.ZP)(_.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        { profileType: J } = (0, D.z)(),
-        ee = { [Y.fullSize]: J === F.y0.FULL_SIZE },
-        { interactionSource: et, interactionSourceId: en } = (0, O.Xo)(),
-        er = (0, p.Bq)({
-            activity: j,
+    let { user: n, currentUser: i, activity: Y, application: W, guild: K, channel: z, className: q, onClose: Q, profileGuildId: X } = e,
+        { analyticsLocations: J } = (0, _.ZP)(f.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        { profileType: $ } = (0, O.z)(),
+        ee = { [H.fullSize]: $ === Z.y0.FULL_SIZE },
+        { interactionSource: et, interactionSourceId: en } = (0, A.Xo)(),
+        er = (0, m.Bq)({
+            activity: Y,
             user: n
         }),
-        ei = (0, m.Z)({
+        ei = (0, E.Z)({
             location: 'UserProfileActivityCard',
-            source: I.m1.UserProfile,
+            source: g.m1.UserProfile,
             trackEntryPointImpression: !0,
             ...(0, B.nK)({
                 user: n,
-                activity: j,
+                activity: Y,
                 entry: er
             })
         }),
-        ea = (0, g.Z)({
+        ea = (0, S.Z)({
             display: 'live',
             user: n,
-            activity: j,
+            activity: Y,
             entry: er,
-            analyticsLocations: $
+            analyticsLocations: J
         }),
-        es = (0, A.Z)({
+        es = (0, T.Z)({
             userId: n.id,
             onAction: ea
         }),
-        eo = (0, N.Z)(j),
-        { largeImage: el, smallImage: eu } = (0, f.FO)(j, W),
-        ec = (0, s.EQ)(j)
+        eo = (0, b.Z)(Y),
+        { largeImage: el, smallImage: eu } = (0, h.FO)(Y, W),
+        ec = (0, s.EQ)(Y)
             .when(c.Z, () => ei)
             .when(l.Z, () => {
                 if (n.id !== i.id)
                     return () =>
-                        (0, G.s)({
-                            activity: j,
+                        (0, U.s)({
+                            activity: Y,
                             user: n,
                             index: 0
                         });
             })
             .otherwise(() => void 0),
         ed = () => {
-            let e = (0, l.Z)(j) ? 'crunchyroll' : 'default';
+            let e = (0, l.Z)(Y) ? 'crunchyroll' : 'default';
             return null == ec
-                ? (0, r.jsx)(h.E, {
+                ? (0, r.jsx)(p.E, {
                       image: el,
                       smallImage: eu,
-                      size: h.J.SIZE_60,
+                      size: p.J.SIZE_60,
                       aspectRatio: e
                   })
-                : (0, r.jsx)(h.E, {
+                : (0, r.jsx)(p.E, {
                       image: el,
                       smallImage: eu,
-                      size: h.J.SIZE_60,
+                      size: p.J.SIZE_60,
                       aspectRatio: e,
                       onClick: (e) => {
                           ea({ action: 'PRESS_IMAGE' }), ec(e);
                       }
                   });
         },
-        e_ = () => {
+        ef = () => {
             var e;
-            return j.type === V.IIU.HANG_STATUS
-                ? (0, r.jsx)(P.Z, {
+            return Y.type === F.IIU.HANG_STATUS
+                ? (0, r.jsx)(w.Z, {
                       variant: 'heading-sm/semibold',
-                      text: (0, T.O8)(j)
+                      text: (0, v.O8)(Y)
                   })
-                : (0, d.Z)(j) && null != z
+                : (0, d.Z)(Y) && null != z
                   ? (0, r.jsxs)('div', {
-                        className: Y.voiceChannelText,
+                        className: H.voiceChannelText,
                         children: [
                             (0, r.jsx)(o.VoiceNormalIcon, {
                                 size: 'xxs',
                                 color: o.tokens.colors.TEXT_NORMAL,
-                                className: Y.voiceIcon
+                                className: H.voiceIcon
                             }),
-                            (0, r.jsx)(P.Z, {
+                            (0, r.jsx)(w.Z, {
                                 variant: 'heading-sm/semibold',
                                 text: z.name
                             })
                         ]
                     })
-                  : (0, c.Z)(j)
-                    ? (0, r.jsx)(P.Z, {
+                  : (0, c.Z)(Y)
+                    ? (0, r.jsx)(w.Z, {
                           variant: 'heading-sm/semibold',
-                          text: j.name
+                          text: Y.name
                       })
-                    : (0, r.jsx)(P.Z, {
+                    : (0, r.jsx)(w.Z, {
                           variant: 'heading-sm/semibold',
-                          text: null !== (e = j.details) && void 0 !== e ? e : j.name
+                          text: null !== (e = Y.details) && void 0 !== e ? e : Y.name
                       });
         },
-        eE = () =>
-            j.type === V.IIU.HANG_STATUS
+        e_ = () =>
+            Y.type === F.IIU.HANG_STATUS
                 ? null
-                : (0, d.Z)(j) && null != K
-                  ? (0, r.jsx)(P.Z, {
+                : (0, d.Z)(Y) && null != K
+                  ? (0, r.jsx)(w.Z, {
                         variant: 'text-xs/normal',
-                        text: Z.Z.Messages.USER_PROFILE_IN_GUILD_DETAILS.format({ guildName: K.name }),
+                        text: j.intl.formatToPlainString(j.t['hq/Qzc'], { guildName: K.name }),
                         onClick: () => {
-                            (0, S.X)(K.id), ea({ action: 'OPEN_VOICE_GUILD' }), null == Q || Q();
+                            (0, I.X)(K.id), ea({ action: 'OPEN_VOICE_GUILD' }), null == Q || Q();
                         }
                     })
-                  : (0, c.Z)(j)
-                    ? (0, r.jsx)(P.Z, {
+                  : (0, c.Z)(Y)
+                    ? (0, r.jsx)(w.Z, {
                           variant: 'text-xs/normal',
-                          text: j.details
+                          text: Y.details
                       })
-                    : (0, r.jsx)(P.Z, {
-                          text: j.state,
+                    : (0, r.jsx)(w.Z, {
+                          text: Y.state,
                           variant: 'text-xs/normal'
                       }),
-        ef = () => {
+        eh = () => {
             var e;
-            return j.type === V.IIU.WATCHING
+            return Y.type === F.IIU.WATCHING
                 ? null
-                : (0, c.Z)(j)
-                  ? eh()
-                  : (0, r.jsx)(P.Z, {
-                        text: null === (e = j.assets) || void 0 === e ? void 0 : e.large_text,
+                : (0, c.Z)(Y)
+                  ? ep()
+                  : (0, r.jsx)(w.Z, {
+                        text: null === (e = Y.assets) || void 0 === e ? void 0 : e.large_text,
                         variant: 'text-xs/normal'
                     });
         },
-        eh = () => {
+        ep = () => {
             var e, t, n, i;
-            return (null === (e = j.party) || void 0 === e ? void 0 : e.size) == null && j.application_id === H.Zc
+            return (null === (e = Y.party) || void 0 === e ? void 0 : e.size) == null && Y.application_id === V.Zc
                 ? (0, r.jsxs)('div', {
-                      className: Y.gameState,
+                      className: H.gameState,
                       children: [
-                          (0, r.jsx)(P.Z, {
+                          (0, r.jsx)(w.Z, {
                               variant: 'text-xs/normal',
-                              text: j.state
+                              text: Y.state
                           }),
-                          (0, r.jsx)(P.Z, {
+                          (0, r.jsx)(w.Z, {
                               variant: 'text-xs/normal',
-                              text: Z.Z.Messages.USER_ACTIVITY_STATE_SIZE.format({
+                              text: j.intl.formatToPlainString(j.t['u//9Bw'], {
                                   count: '0',
                                   max: null !== (i = null == W ? void 0 : W.getMaxParticipants()) && void 0 !== i ? i : 0
                               })
                           })
                       ]
                   })
-                : (0, u.Z)(j) && (null === (t = j.party) || void 0 === t ? void 0 : t.size) != null && (null === (n = j.party) || void 0 === n ? void 0 : n.size.length) >= 2
+                : (0, u.Z)(Y) && (null === (t = Y.party) || void 0 === t ? void 0 : t.size) != null && (null === (n = Y.party) || void 0 === n ? void 0 : n.size.length) >= 2
                   ? (0, r.jsxs)('div', {
-                        className: Y.gameState,
+                        className: H.gameState,
                         children: [
-                            (0, r.jsx)(P.Z, {
+                            (0, r.jsx)(w.Z, {
                                 variant: 'text-xs/normal',
-                                text: j.state
+                                text: Y.state
                             }),
-                            (0, r.jsx)(P.Z, {
+                            (0, r.jsx)(w.Z, {
                                 variant: 'text-xs/normal',
-                                text: Z.Z.Messages.USER_ACTIVITY_STATE_SIZE.format({
-                                    count: j.party.size[0],
-                                    max: j.party.size[1]
+                                text: j.intl.formatToPlainString(j.t['u//9Bw'], {
+                                    count: Y.party.size[0],
+                                    max: Y.party.size[1]
                                 })
                             })
                         ]
                     })
-                  : null == j.party
-                    ? (0, r.jsx)(P.Z, {
+                  : null == Y.party
+                    ? (0, r.jsx)(w.Z, {
                           variant: 'text-xs/normal',
-                          text: j.state
+                          text: Y.state
                       })
                     : null;
         },
-        ep = () => {
-            if (!(0, R.Z)(j)) return null;
-            let { start: e, end: t } = j.timestamps;
-            return (0, r.jsx)(x.Z, {
+        em = () => {
+            if (!(0, y.Z)(Y)) return null;
+            let { start: e, end: t } = Y.timestamps;
+            return (0, r.jsx)(k.Z, {
                 start: e,
                 end: t
             });
         },
-        eI = () =>
+        eg = () =>
             null == ec
                 ? (0, r.jsxs)('div', {
-                      children: [e_(), eE(), ef()]
+                      children: [ef(), e_(), eh()]
                   })
                 : (0, r.jsxs)(o.Clickable, {
-                      className: Y.clickable,
+                      className: H.clickable,
                       onClick: (e) => {
                           ea({ action: 'PRESS_TEXT' }), ec(e);
                       },
-                      children: [e_(), eE(), ef()]
+                      children: [ef(), e_(), eh()]
                   }),
-        em = () =>
+        eE = () =>
             null == K || null == z
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)('div', { className: Y.voiceChannelDivider }),
-                          (0, r.jsx)(U.Z, {
+                          (0, r.jsx)('div', { className: H.voiceChannelDivider }),
+                          (0, r.jsx)(M.Z, {
                               user: n,
                               guild: K,
                               channel: z,
@@ -252,83 +252,83 @@ function j(e) {
                           })
                       ]
                   }),
-        eT = () =>
+        ev = () =>
             n.id === i.id
                 ? null
                 : (0, r.jsx)('div', {
-                      className: a()(Y.actions, ee),
-                      children: (0, r.jsx)(y.Z, {
-                          activity: j,
+                      className: a()(H.actions, ee),
+                      children: (0, r.jsx)(D.Z, {
+                          activity: Y,
                           user: n,
                           currentUser: i,
                           onAction: ea,
                           onClose: Q
                       })
                   });
-    if (null === J) return null;
-    let eS = null !== (t = j.application_id) && void 0 !== t ? t : j.name,
-        eg = et === F.n_.ACTIVITY && en === eS;
-    return (0, r.jsx)(E.Gt, {
-        value: $,
-        children: (0, r.jsx)(w.Z, {
+    if (null === $) return null;
+    let eI = null !== (t = Y.application_id) && void 0 !== t ? t : Y.name,
+        eS = et === Z.n_.ACTIVITY && en === eI;
+    return (0, r.jsx)(_.Gt, {
+        value: J,
+        children: (0, r.jsx)(P.Z, {
             user: n,
             onClose: Q,
             children: (e) => {
                 let { onAutoDismiss: t } = e;
-                return (0, r.jsx)(v.Z, {
+                return (0, r.jsx)(N.Z, {
                     user: n,
                     guildId: X,
-                    profileType: J,
-                    sourceId: eS,
-                    sourceType: F.n_.ACTIVITY,
+                    profileType: $,
+                    sourceId: eI,
+                    sourceType: Z.n_.ACTIVITY,
                     children: () =>
-                        (0, r.jsx)(L.Z.Overlay, {
-                            className: a()(Y.card, q, { [Y.hoisted]: eg }),
+                        (0, r.jsx)(R.Z.Overlay, {
+                            className: a()(H.card, q, { [H.hoisted]: eS }),
                             ref: es,
                             children: (0, r.jsxs)(C.Z, {
                                 user: n,
-                                className: Y.body,
-                                interactionSourceId: eS,
-                                sourceType: F.n_.ACTIVITY,
+                                className: H.body,
+                                interactionSourceId: eI,
+                                sourceType: Z.n_.ACTIVITY,
                                 children: [
-                                    (0, r.jsx)(M.Z, {
+                                    (0, r.jsx)(x.Z, {
                                         ...eo,
-                                        contextMenu: (0, r.jsx)(k.Z, {
+                                        contextMenu: (0, r.jsx)(G.Z, {
                                             display: 'live',
                                             user: n,
-                                            activity: j,
+                                            activity: Y,
                                             entry: er,
                                             onClose: Q,
                                             onRequestOpen: t
                                         })
                                     }),
                                     (0, r.jsxs)('div', {
-                                        className: Y.body,
+                                        className: H.body,
                                         children: [
                                             (0, r.jsxs)('div', {
-                                                className: a()(Y.content, ee),
+                                                className: a()(H.content, ee),
                                                 children: [
                                                     !n.bot && ed(),
                                                     (0, r.jsxs)('div', {
-                                                        className: Y.details,
+                                                        className: H.details,
                                                         children: [
-                                                            eI(),
+                                                            eg(),
                                                             !n.bot &&
-                                                                (0, r.jsx)(b.Z, {
+                                                                (0, r.jsx)(L.Z, {
                                                                     user: n,
-                                                                    activity: j,
-                                                                    className: Y.badges
+                                                                    activity: Y,
+                                                                    className: H.badges
                                                                 }),
-                                                            ep()
+                                                            em()
                                                         ]
                                                     }),
-                                                    J === F.y0.FULL_SIZE && eT()
+                                                    $ === Z.y0.FULL_SIZE && ev()
                                                 ]
                                             }),
-                                            em()
+                                            eE()
                                         ]
                                     }),
-                                    J !== F.y0.FULL_SIZE && eT()
+                                    $ !== Z.y0.FULL_SIZE && ev()
                                 ]
                             })
                         })

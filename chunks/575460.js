@@ -5,21 +5,21 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(259580),
-    r = n(528027),
-    l = n(686807),
-    o = n(113318),
+var r = n(481060),
+    l = n(259580),
+    a = n(528027),
+    o = n(686807),
+    s = n(113318),
     c = n(131809);
 function u(e) {
     let { benefit: t, guildId: n, onClick: u } = e,
-        d = (0, o.Z)(n, t.ref_id),
-        _ = (0, i.jsx)(r.Z, {
+        d = (0, s.Z)(n, t.ref_id),
+        m = (0, i.jsx)(a.Z, {
             guildId: n,
             emojiId: t.emoji_id,
             emojiName: t.emoji_name
         });
-    return (0, i.jsxs)(a.Clickable, {
+    return (0, i.jsxs)(r.Clickable, {
         className: c.container,
         onClick: () => {
             null == d || d.navigateToChannel(), u();
@@ -29,26 +29,26 @@ function u(e) {
         children: [
             (0, i.jsx)('div', {
                 className: c.emojiContainer,
-                children: _
+                children: m
             }),
             (0, i.jsxs)('div', {
                 className: c.infoContainer,
                 children: [
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(r.Text, {
                         variant: 'text-md/medium',
                         color: 'header-primary',
                         className: c.name,
-                        children: (0, l.Z)(t)
+                        children: (0, o.Z)(t)
                     }),
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(r.Text, {
                         color: 'interactive-normal',
                         variant: 'text-sm/normal',
                         children: t.description
                     })
                 ]
             }),
-            (0, i.jsx)(s.Z, {
-                direction: s.Z.Directions.RIGHT,
+            (0, i.jsx)(l.Z, {
+                direction: l.Z.Directions.RIGHT,
                 className: c.caret
             })
         ]

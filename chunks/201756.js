@@ -1,57 +1,57 @@
-l.d(t, {
+n.d(t, {
     Z: function () {
         return R;
     }
 }),
-    l(47120);
-var n = l(200651),
-    a = l(192379),
-    o = l(120356),
-    s = l.n(o),
-    i = l(498607),
-    r = l.n(i),
-    C = l(399606),
-    c = l(433517),
-    d = l(481060),
-    u = l(430824),
-    m = l(496675),
-    _ = l(588215),
-    E = l(241559),
-    h = l(893966),
-    M = l(256003),
-    x = l(170323),
-    b = l(434368),
-    T = l(42170),
-    L = l(123846),
-    g = l(42551),
-    H = l(981631),
-    I = l(689938),
-    f = l(443547),
-    p = l(352533);
-function N(e) {
-    let { label: t, onFilter: l, isFiltered: a, isSorted: o, className: i, ...r } = e,
-        C = a ? 'header-primary' : 'header-secondary';
+    n(47120);
+var l = n(200651),
+    o = n(192379),
+    a = n(120356),
+    i = n.n(a),
+    r = n(498607),
+    s = n.n(r),
+    c = n(399606),
+    C = n(433517),
+    d = n(481060),
+    u = n(430824),
+    m = n(496675),
+    h = n(588215),
+    x = n(241559),
+    b = n(893966),
+    f = n(256003),
+    g = n(170323),
+    p = n(434368),
+    H = n(42170),
+    j = n(123846),
+    v = n(42551),
+    N = n(981631),
+    L = n(388032),
+    I = n(443547),
+    _ = n(352533);
+function M(e) {
+    let { label: t, onFilter: n, isFiltered: o, isSorted: a, className: r, ...s } = e,
+        c = o ? 'header-primary' : 'header-secondary';
     return (
-        o && (C = 'text-brand'),
-        (0, n.jsx)('th', {
-            className: s()(f.tableHeaderCellContainer, i),
-            children: (0, n.jsxs)(d.Clickable, {
-                ...r,
-                onClick: l,
-                className: s()(f.tableHeaderCell, { [f.tableHeaderCellWithFilter]: null != l }),
+        a && (c = 'text-brand'),
+        (0, l.jsx)('th', {
+            className: i()(I.tableHeaderCellContainer, r),
+            children: (0, l.jsxs)(d.Clickable, {
+                ...s,
+                onClick: n,
+                className: i()(I.tableHeaderCell, { [I.tableHeaderCellWithFilter]: null != n }),
                 children: [
-                    (0, n.jsx)(d.Text, {
+                    (0, l.jsx)(d.Text, {
                         variant: 'eyebrow',
-                        color: C,
+                        color: c,
                         children: t
                     }),
-                    null != l &&
-                        (0, n.jsx)('div', {
-                            className: f.filterIconButton,
-                            children: (0, n.jsx)(d.FiltersHorizontalIcon, {
+                    null != n &&
+                        (0, l.jsx)('div', {
+                            className: I.filterIconButton,
+                            children: (0, l.jsx)(d.FiltersHorizontalIcon, {
                                 size: 'custom',
-                                className: f.filterIcon,
-                                color: a ? d.tokens.colors.CONTROL_BRAND_FOREGROUND.css : d.tokens.colors.TEXT_MUTED.css,
+                                className: I.filterIcon,
+                                color: o ? d.tokens.colors.CONTROL_BRAND_FOREGROUND.css : d.tokens.colors.TEXT_MUTED.css,
                                 width: 16,
                                 height: 16
                             })
@@ -61,200 +61,200 @@ function N(e) {
         })
     );
 }
-let A = 'member-safety-force-show-signals-tooltip';
+let Z = 'member-safety-force-show-signals-tooltip';
 function R(e) {
-    let { guildId: t, currentPagedMembers: l } = e,
-        o = (0, C.e7)([h.Z], () => h.Z.getSearchStateByGuildId(t), [t], r()),
-        i = (0, C.e7)([m.Z, u.Z], () => m.Z.can(H.Plq.MANAGE_GUILD, u.Z.getGuild(t)), [t]),
-        { selectedUserIds: R, addUsers: S, clearSelection: Z } = (0, M.Z)(t),
-        j = o.requireUnusualDmActivity || o.requireCommunicationDisabled || o.requireUnusualAccountActivity || o.requireUsernameQuarantined,
-        v = o.selectedRoleIds.size > 0,
-        D = null != o.selectedJoinDateOption.afterDate,
-        B = o.selectedSort === _.d$.ORDER_BY_GUILD_JOINED_AT_ASC,
-        O = null != o.selectedAccountAgeOption.afterDate,
-        V = o.selectedSort === _.d$.ORDER_BY_USER_ID_ASC || o.selectedSort === _.d$.ORDER_BY_USER_ID_DESC,
-        U = null != o.selectedSourceInviteCode && '' !== o.selectedSourceInviteCode,
-        w = null != o.selectedJoinSourceType,
-        k = U || w,
-        [F, y] = a.useState(null == c.K.get(A, null)),
-        P = a.useCallback(() => {
-            c.K.set(A, Date.now()), y(!1);
+    let { guildId: t, currentPagedMembers: n } = e,
+        a = (0, c.e7)([b.Z], () => b.Z.getSearchStateByGuildId(t), [t], s()),
+        r = (0, c.e7)([m.Z, u.Z], () => m.Z.can(N.Plq.MANAGE_GUILD, u.Z.getGuild(t)), [t]),
+        { selectedUserIds: R, addUsers: D, clearSelection: S } = (0, f.Z)(t),
+        V = a.requireUnusualDmActivity || a.requireCommunicationDisabled || a.requireUnusualAccountActivity || a.requireUsernameQuarantined,
+        T = a.selectedRoleIds.size > 0,
+        E = null != a.selectedJoinDateOption.afterDate,
+        w = a.selectedSort === h.d$.ORDER_BY_GUILD_JOINED_AT_ASC,
+        k = null != a.selectedAccountAgeOption.afterDate,
+        A = a.selectedSort === h.d$.ORDER_BY_USER_ID_ASC || a.selectedSort === h.d$.ORDER_BY_USER_ID_DESC,
+        y = null != a.selectedSourceInviteCode && '' !== a.selectedSourceInviteCode,
+        B = null != a.selectedJoinSourceType,
+        O = y || B,
+        [U, P] = o.useState(null == C.K.get(Z, null)),
+        F = o.useCallback(() => {
+            C.K.set(Z, Date.now()), P(!1);
         }, []),
-        Y = (0, E.xC)(t),
-        G = a.useMemo(() => l.filter((e) => (0, E.rX)(t, Y, e)), [Y, l, t]),
-        z = G.length > 0,
-        q = 0 === G.filter((e) => !R.has(e)).length,
-        W = a.useCallback(() => {
-            z && (q ? Z() : S(G));
-        }, [z, q, Z, S, G]);
-    return (0, n.jsx)('thead', {
-        children: (0, n.jsxs)('tr', {
-            className: f.tableHeaderRow,
+        G = (0, x.xC)(t),
+        z = o.useMemo(() => n.filter((e) => (0, x.rX)(t, G, e)), [G, n, t]),
+        q = z.length > 0,
+        Y = 0 === z.filter((e) => !R.has(e)).length,
+        W = o.useCallback(() => {
+            q && (Y ? S() : D(z));
+        }, [q, Y, S, D, z]);
+    return (0, l.jsx)('thead', {
+        children: (0, l.jsxs)('tr', {
+            className: I.tableHeaderRow,
             children: [
-                Y &&
-                    (0, n.jsx)('th', {
-                        className: s()(f.tableHeaderCellContainer, p.xsmallCol),
-                        children: (0, n.jsx)(d.Tooltip, {
-                            shouldShow: !z,
-                            text: I.Z.Messages.MEMBER_SAFETY_CANNOT_SELECT_ALL,
+                G &&
+                    (0, l.jsx)('th', {
+                        className: i()(I.tableHeaderCellContainer, _.xsmallCol),
+                        children: (0, l.jsx)(d.Tooltip, {
+                            shouldShow: !q,
+                            text: L.intl.string(L.t.tJEY0N),
                             children: (e) =>
-                                (0, n.jsx)(d.Clickable, {
+                                (0, l.jsx)(d.Clickable, {
                                     ...e,
                                     onClick: W,
-                                    className: f.tableHeaderCell,
-                                    children: (0, n.jsx)(d.Checkbox, {
+                                    className: I.tableHeaderCell,
+                                    children: (0, l.jsx)(d.Checkbox, {
                                         type: d.Checkbox.Types.INVERTED,
-                                        value: q,
-                                        disabled: !z
+                                        value: Y,
+                                        disabled: !q
                                     })
                                 })
                         })
                     }),
-                (0, n.jsx)(N, { label: I.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_NAME }),
-                i
-                    ? (0, n.jsxs)(n.Fragment, {
+                (0, l.jsx)(M, { label: L.intl.string(L.t.Es7n9f) }),
+                r
+                    ? (0, l.jsxs)(l.Fragment, {
                           children: [
-                              (0, n.jsx)(d.Popout, {
+                              (0, l.jsx)(d.Popout, {
                                   animation: d.Popout.Animation.FADE,
                                   position: 'bottom',
                                   spacing: 4,
                                   align: 'left',
                                   renderPopout: () =>
-                                      (0, n.jsx)(T.Z, {
+                                      (0, l.jsx)(H.Z, {
                                           guildId: t,
-                                          onClose: H.dG4
+                                          onClose: N.dG4
                                       }),
                                   children: (e) => {
-                                      let { onClick: t, ...l } = e;
-                                      return (0, n.jsx)(N, {
-                                          label: I.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_JOINED_AT,
+                                      let { onClick: t, ...n } = e;
+                                      return (0, l.jsx)(M, {
+                                          label: L.intl.string(L.t.xcKP1N),
                                           onFilter: t,
-                                          isFiltered: D,
-                                          isSorted: B,
-                                          className: p.smallCol,
-                                          ...l
+                                          isFiltered: E,
+                                          isSorted: w,
+                                          className: _.smallCol,
+                                          ...n
                                       });
                                   }
                               }),
-                              (0, n.jsx)(d.Popout, {
+                              (0, l.jsx)(d.Popout, {
                                   animation: d.Popout.Animation.FADE,
                                   position: 'bottom',
                                   spacing: 4,
                                   align: 'left',
                                   renderPopout: () =>
-                                      (0, n.jsx)(x.Z, {
+                                      (0, l.jsx)(g.Z, {
                                           guildId: t,
-                                          onClose: H.dG4
+                                          onClose: N.dG4
                                       }),
                                   children: (e) => {
-                                      let { onClick: t, ...l } = e;
-                                      return (0, n.jsx)(N, {
-                                          label: I.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE,
+                                      let { onClick: t, ...n } = e;
+                                      return (0, l.jsx)(M, {
+                                          label: L.intl.string(L.t.sPph4O),
                                           onFilter: t,
-                                          isFiltered: O,
-                                          isSorted: V,
-                                          className: p.smallCol,
-                                          ...l
+                                          isFiltered: k,
+                                          isSorted: A,
+                                          className: _.smallCol,
+                                          ...n
                                       });
                                   }
                               })
                           ]
                       })
-                    : (0, n.jsxs)(n.Fragment, {
+                    : (0, l.jsxs)(l.Fragment, {
                           children: [
-                              (0, n.jsx)(N, {
-                                  label: I.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_JOINED_AT,
-                                  className: p.smallCol
+                              (0, l.jsx)(M, {
+                                  label: L.intl.string(L.t.xcKP1N),
+                                  className: _.smallCol
                               }),
-                              (0, n.jsx)(N, {
-                                  label: I.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE,
-                                  className: p.smallCol
+                              (0, l.jsx)(M, {
+                                  label: L.intl.string(L.t.sPph4O),
+                                  className: _.smallCol
                               })
                           ]
                       }),
-                i
-                    ? (0, n.jsx)(d.Popout, {
+                r
+                    ? (0, l.jsx)(d.Popout, {
                           animation: d.Popout.Animation.FADE,
                           position: 'bottom',
                           spacing: 4,
                           align: 'left',
                           renderPopout: () =>
-                              (0, n.jsx)(L.Z, {
+                              (0, l.jsx)(j.Z, {
                                   guildId: t,
-                                  onClose: H.dG4
+                                  onClose: N.dG4
                               }),
                           children: (e) => {
-                              let { onClick: t, ...l } = e;
-                              return (0, n.jsx)(N, {
-                                  label: I.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_JOIN_METHOD,
+                              let { onClick: t, ...n } = e;
+                              return (0, l.jsx)(M, {
+                                  label: L.intl.string(L.t.yn0w19),
                                   onFilter: t,
-                                  isFiltered: k,
-                                  className: p.smallCol,
-                                  ...l
+                                  isFiltered: O,
+                                  className: _.smallCol,
+                                  ...n
                               });
                           }
                       })
-                    : i &&
-                      (0, n.jsx)(N, {
-                          label: I.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_JOIN_METHOD,
-                          className: p.smallCol
+                    : r &&
+                      (0, l.jsx)(M, {
+                          label: L.intl.string(L.t.yn0w19),
+                          className: _.smallCol
                       }),
-                (0, n.jsx)(d.Popout, {
+                (0, l.jsx)(d.Popout, {
                     animation: d.Popout.Animation.FADE,
                     position: 'bottom',
                     spacing: 4,
                     align: 'left',
                     renderPopout: (e) => {
-                        let { closePopout: l } = e;
-                        return (0, n.jsx)(g.Z, {
+                        let { closePopout: n } = e;
+                        return (0, l.jsx)(v.Z, {
                             guildId: t,
-                            onClose: l
+                            onClose: n
                         });
                     },
                     children: (e) => {
-                        let { onClick: t, ...l } = e;
-                        return (0, n.jsx)(N, {
-                            label: I.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_ROLES,
+                        let { onClick: t, ...n } = e;
+                        return (0, l.jsx)(M, {
+                            label: L.intl.string(L.t['2SZsWV']),
                             onFilter: t,
-                            isFiltered: v,
-                            className: s()(p.mediumCol),
-                            ...l
+                            isFiltered: T,
+                            className: i()(_.mediumCol),
+                            ...n
                         });
                     }
                 }),
-                (0, n.jsx)(d.Tooltip, {
-                    text: I.Z.Messages.MEMBER_SAFETY_SIGNALS_DESCRIPTION,
+                (0, l.jsx)(d.Tooltip, {
+                    text: L.intl.string(L.t['2cRO3d']),
                     position: 'top',
                     align: 'left',
-                    forceOpen: F,
+                    forceOpen: U,
                     shouldShow: !0,
                     color: d.Tooltip.Colors.BRAND,
                     children: (e) =>
-                        (0, n.jsx)(d.Popout, {
+                        (0, l.jsx)(d.Popout, {
                             animation: d.Popout.Animation.FADE,
                             position: 'bottom',
                             spacing: 4,
                             align: 'left',
                             renderPopout: (e) => {
-                                let { closePopout: l } = e;
-                                return (0, n.jsx)(b.Z, {
+                                let { closePopout: n } = e;
+                                return (0, l.jsx)(p.Z, {
                                     guildId: t,
-                                    onClose: l
+                                    onClose: n
                                 });
                             },
                             children: (t) =>
-                                (0, n.jsx)(N, {
-                                    label: I.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_FLAGS,
-                                    'aria-label': I.Z.Messages.MEMBER_SAFETY_SIGNALS_DESCRIPTION,
-                                    onFilter: (l) => {
-                                        var n, a;
-                                        P(), null === (n = t.onClick) || void 0 === n || n.call(t, l), null === (a = e.onClick) || void 0 === a || a.call(e);
+                                (0, l.jsx)(M, {
+                                    label: L.intl.string(L.t['7V375+']),
+                                    'aria-label': L.intl.string(L.t['2cRO3d']),
+                                    onFilter: (n) => {
+                                        var l, o;
+                                        F(), null === (l = t.onClick) || void 0 === l || l.call(t, n), null === (o = e.onClick) || void 0 === o || o.call(e);
                                     },
-                                    isFiltered: j,
-                                    className: s()(p.smallCol),
+                                    isFiltered: V,
+                                    className: i()(_.smallCol),
                                     onMouseEnter: () => {
-                                        var l, n;
-                                        P(), null === (l = e.onMouseEnter) || void 0 === l || l.call(e), null === (n = t.onMouseEnter) || void 0 === n || n.call(t);
+                                        var n, l;
+                                        F(), null === (n = e.onMouseEnter) || void 0 === n || n.call(e), null === (l = t.onMouseEnter) || void 0 === l || l.call(t);
                                     },
                                     onMouseDown: t.onMouseDown,
                                     onMouseLeave: e.onMouseLeave,
@@ -266,9 +266,9 @@ function R(e) {
                                 })
                         })
                 }),
-                (0, n.jsx)(N, {
-                    label: I.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_ACTIONS,
-                    className: p.smallCol
+                (0, l.jsx)(M, {
+                    label: L.intl.string(L.t['5Q9xGh']),
+                    className: _.smallCol
                 })
             ]
         })

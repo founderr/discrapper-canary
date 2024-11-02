@@ -5,16 +5,16 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(739566),
-    r = n(942951),
-    l = n(834129),
-    o = n(689938),
+var r = n(481060),
+    l = n(739566),
+    a = n(942951),
+    o = n(834129),
+    s = n(388032),
     c = n(116264);
 function u(e) {
     let { compact: t, message: n, channel: u } = e,
-        d = (0, s.ZP)(n),
-        _ = (0, r.l)({
+        d = (0, l.ZP)(n),
+        m = (0, a.l)({
             user: n.author,
             channelId: n.channel_id,
             guildId: u.guild_id,
@@ -22,42 +22,42 @@ function u(e) {
         })(d);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(l.Z, {
+            (0, i.jsx)(o.Z, {
                 timestamp: n.timestamp,
                 compact: t,
-                iconNode: (0, i.jsx)(a.HdIcon, {
+                iconNode: (0, i.jsx)(r.HdIcon, {
                     size: 'md',
                     colorClass: 'currentColor',
                     className: c.icon
                 }),
                 children: (0, i.jsx)('div', {
                     className: c.parentContainer,
-                    children: o.Z.Messages.SYSTEM_MESSAGE_CONSUMABLE_HD_STREAMING_STARTED.format({
+                    children: s.intl.format(s.t['5bYXjo'], {
                         actorName: d.nick,
-                        actorHook: _
+                        actorHook: m
                     })
                 })
             }),
-            (0, i.jsxs)(a.Clickable, {
+            (0, i.jsxs)(r.Clickable, {
                 className: c.embed,
                 children: [
                     (0, i.jsx)('img', {
                         src: 'https://cdn.discordapp.com/assets/shop/images/potion.png',
-                        alt: o.Z.Messages.SYSTEM_MESSAGE_CONSUMABLE_HD_STREAMING_IMG_ALT
+                        alt: s.intl.string(s.t.N6rchI)
                     }),
                     (0, i.jsxs)('div', {
                         className: c.text,
                         children: [
-                            (0, i.jsx)(a.Text, {
+                            (0, i.jsx)(r.Text, {
                                 color: 'text-normal',
                                 variant: 'text-sm/semibold',
                                 className: c.title,
-                                children: o.Z.Messages.SYSTEM_MESSAGE_CONSUMABLE_HD_STREAMING_EMBED_TITLE
+                                children: s.intl.string(s.t.AeU3uL)
                             }),
-                            (0, i.jsx)(a.Text, {
+                            (0, i.jsx)(r.Text, {
                                 color: 'text-primary',
                                 variant: 'text-xs/normal',
-                                children: o.Z.Messages.SYSTEM_MESSAGE_CONSUMABLE_HD_STREAMING_EMBED_BODY
+                                children: s.intl.string(s.t['UoHq/f'])
                             })
                         ]
                     })

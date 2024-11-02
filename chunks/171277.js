@@ -5,21 +5,21 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    a = n.n(s),
-    l = n(442837),
-    r = n(481060),
+var l = n(120356),
+    r = n.n(l),
+    a = n(442837),
+    s = n(481060),
     o = n(607070),
     c = n(254238),
-    u = n(689938),
+    u = n(388032),
     d = n(863748);
 function h(e) {
     let { height: t } = e,
-        s = (0, l.e7)([o.Z], () => o.Z.useReducedMotion);
+        l = (0, a.e7)([o.Z], () => o.Z.useReducedMotion);
     return (0, i.jsxs)('div', {
         className: d.root,
         children: [
-            (0, i.jsx)(r.LottieAnimation, {
+            (0, i.jsx)(s.LottieAnimation, {
                 importData: () =>
                     n
                         .e('70036')
@@ -28,18 +28,18 @@ function h(e) {
                             let { default: t } = e;
                             return t;
                         }),
-                shouldAnimate: !s,
-                className: a()(d.art, { [d.hidden]: t <= 280 })
+                shouldAnimate: !l,
+                className: r()(d.art, { [d.hidden]: t <= 280 })
             }),
-            (0, i.jsx)(r.Heading, {
+            (0, i.jsx)(s.Heading, {
                 className: d.header,
                 variant: 'heading-md/bold',
-                children: u.Z.Messages.PLAYSTATION_TRANSFERRING
+                children: u.intl.string(u.t['C+tj1d'])
             }),
-            (0, i.jsx)(r.Text, {
+            (0, i.jsx)(s.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                children: u.Z.Messages.CONSOLE_TRANSFERRING_SUBTITLE.format({ onCancel: c.s6 })
+                children: u.intl.format(u.t['nNHd//'], { onCancel: c.s6 })
             })
         ]
     });

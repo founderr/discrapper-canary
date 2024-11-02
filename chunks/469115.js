@@ -1,15 +1,15 @@
 n.d(t, {
     Qf: function () {
-        return E;
-    },
-    XV: function () {
         return _;
     },
-    bV: function () {
+    XV: function () {
         return f;
     },
-    qt: function () {
+    bV: function () {
         return h;
+    },
+    qt: function () {
+        return p;
     }
 }),
     n(47120);
@@ -18,7 +18,7 @@ var r,
     a = n(392711),
     s = n(524437),
     o = n(231338),
-    l = n(689938);
+    l = n(388032);
 let u = [
         {
             id: s.Us.MINT_APPLE,
@@ -38,7 +38,7 @@ let u = [
                 }
             ],
             angle: 180,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_MINT_APPLE,
+            getName: () => l.intl.string(l.t.kCdS4e),
             midpointPercentage: 27
         },
         {
@@ -55,7 +55,7 @@ let u = [
                 }
             ],
             angle: 180,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_CITRUS_SHERBERT,
+            getName: () => l.intl.string(l.t.S4UnEx),
             midpointPercentage: 27
         },
         {
@@ -80,7 +80,7 @@ let u = [
                 }
             ],
             angle: 148.71,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_RETRO_RAINCLOUD,
+            getName: () => l.intl.string(l.t['48xnKS']),
             midpointPercentage: 50
         },
         {
@@ -101,7 +101,7 @@ let u = [
                 }
             ],
             angle: 38.08,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_HANAMI,
+            getName: () => l.intl.string(l.t.G4HsBA),
             midpointPercentage: 50
         },
         {
@@ -122,7 +122,7 @@ let u = [
                 }
             ],
             angle: 154.19,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_SUNRISE,
+            getName: () => l.intl.string(l.t['NAt88/']),
             midpointPercentage: 50
         },
         {
@@ -139,7 +139,7 @@ let u = [
                 }
             ],
             angle: 180.14,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_COTTON_CANDY,
+            getName: () => l.intl.string(l.t.godtzM),
             midpointPercentage: 50
         },
         {
@@ -164,7 +164,7 @@ let u = [
                 }
             ],
             angle: 179.52,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_LOFI_VIBES,
+            getName: () => l.intl.string(l.t.hlS2xs),
             midpointPercentage: 27
         },
         {
@@ -185,7 +185,7 @@ let u = [
                 }
             ],
             angle: 38.99,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_DESERT_KHAKI,
+            getName: () => l.intl.string(l.t['abMn9/']),
             midpointPercentage: 50
         }
     ],
@@ -204,7 +204,7 @@ let u = [
                 }
             ],
             angle: 141.68,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_SUNSET,
+            getName: () => l.intl.string(l.t.JKDra2),
             midpointPercentage: 35
         },
         {
@@ -233,7 +233,7 @@ let u = [
                 }
             ],
             angle: 128.92,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_CHROMA_GLOW,
+            getName: () => l.intl.string(l.t.kwc8Ul),
             midpointPercentage: 15
         },
         {
@@ -262,7 +262,7 @@ let u = [
                 }
             ],
             angle: 162.27,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_FOREST,
+            getName: () => l.intl.string(l.t['TeA/j4']),
             midpointPercentage: 50
         },
         {
@@ -279,7 +279,7 @@ let u = [
                 }
             ],
             angle: 64.92,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_CRIMSON_MOON,
+            getName: () => l.intl.string(l.t.blIucn),
             midpointPercentage: 30
         },
         {
@@ -296,7 +296,7 @@ let u = [
                 }
             ],
             angle: 48.17,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_MIDNIGHT_BLURPLE,
+            getName: () => l.intl.string(l.t.O1yOXF),
             midpointPercentage: 24
         },
         {
@@ -313,7 +313,7 @@ let u = [
                 }
             ],
             angle: 170.82,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_MARS,
+            getName: () => l.intl.string(l.t['1swi9v']),
             midpointPercentage: 50
         },
         {
@@ -330,7 +330,7 @@ let u = [
                 }
             ],
             angle: 180,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_DUSK,
+            getName: () => l.intl.string(l.t.So2Wur),
             midpointPercentage: 50
         },
         {
@@ -351,7 +351,7 @@ let u = [
                 }
             ],
             angle: 179.14,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_UNDER_THE_SEA,
+            getName: () => l.intl.string(l.t['a22o4+']),
             midpointPercentage: 50
         },
         {
@@ -376,7 +376,7 @@ let u = [
                 }
             ],
             angle: 148.71,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_RETRO_STORM,
+            getName: () => l.intl.string(l.t.Bf294e),
             midpointPercentage: 61
         },
         {
@@ -397,7 +397,7 @@ let u = [
                 }
             ],
             angle: 180,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_NEON_NIGHTS,
+            getName: () => l.intl.string(l.t['p+XCtb']),
             midpointPercentage: 50
         },
         {
@@ -418,7 +418,7 @@ let u = [
                 }
             ],
             angle: 161.03,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_STRAWBERRY_LEMONADE,
+            getName: () => l.intl.string(l.t['d5Ar+v']),
             midpointPercentage: 32
         },
         {
@@ -447,7 +447,7 @@ let u = [
                 }
             ],
             angle: 239.16,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_AURORA,
+            getName: () => l.intl.string(l.t.Je1FWF),
             midpointPercentage: 34
         },
         {
@@ -464,7 +464,7 @@ let u = [
                 }
             ],
             angle: 69.98,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_SEPIA,
+            getName: () => l.intl.string(l.t['Z+Un4+']),
             midpointPercentage: 50
         }
     ],
@@ -482,10 +482,10 @@ let u = [
             }
         ],
         angle: 47.61,
-        getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_BLURPLE_TWILIGHT,
+        getName: () => l.intl.string(l.t.Mfoe3t),
         midpointPercentage: 50
     },
-    _ = [
+    f = [
         ...u,
         ...c,
         d,
@@ -503,28 +503,28 @@ let u = [
                 }
             ],
             angle: 180,
-            getName: () => l.Z.Messages.CLIENT_THEMES_GRADIENT_EASTER_EGG,
+            getName: () => l.intl.string(l.t.mFinbW),
             midpointPercentage: 50
         }
     ],
-    E = [d, ...c, ...u];
+    _ = [d, ...c, ...u];
 ((i = r || (r = {}))[(i.DARK = 0)] = 'DARK'), (i[(i.LIGHT = 1)] = 'LIGHT'), (i[(i.SYSTEM = 2)] = 'SYSTEM');
-let f = [
+let h = [
         {
             theme: o.BR.DARKER,
-            getName: () => l.Z.Messages.THEME_DARK
+            getName: () => l.intl.string(l.t.b8Cei4)
         },
         {
             theme: o.BR.LIGHT,
-            getName: () => l.Z.Messages.THEME_LIGHT
+            getName: () => l.intl.string(l.t.K2sFfn)
         },
         {
             theme: o.BR.MIDNIGHT,
-            getName: () => l.Z.Messages.THEME_MIDNIGHT
+            getName: () => l.intl.string(l.t.pQwSpa)
         },
         {
             theme: 'system',
-            getName: () => l.Z.Messages.MOBILE_AUTOMATIC_THEME
+            getName: () => l.intl.string(l.t.zlvNOj)
         }
     ],
-    h = (0, a.keyBy)(_, 'id');
+    p = (0, a.keyBy)(f, 'id');

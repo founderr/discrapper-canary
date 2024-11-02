@@ -1,46 +1,46 @@
-n.d(t, {
+n.d(e, {
     W: function () {
         return d;
     }
 }),
     n(47120);
-var a = n(192379),
-    r = n(979554),
-    s = n(809206),
+var r = n(192379),
+    a = n(979554),
+    i = n(809206),
     o = n(350327),
-    i = n(884697),
+    s = n(884697),
     l = n(328456),
-    c = n(689938);
-let d = (e) => {
-    let { product: t, onSuccess: d, onError: u } = e,
-        [f, g] = a.useState(!1),
-        { firstAvatarDecoration: p, firstProfileEffect: E } = (0, l.R)(t),
-        T = (0, i.x6)(t) ? c.Z.Messages.COLLECTIBLES_PROFILE_UPDATE_NOTIFICATION : t.type === r.Z.AVATAR_DECORATION ? c.Z.Messages.COLLECTIBLES_AVATAR_DECO_UPDATED_NOTIFICATION : c.Z.Messages.COLLECTIBLES_PFX_UPDATED_NOTIFICATION;
+    c = n(388032);
+let d = (t) => {
+    let { product: e, onSuccess: d, onError: u } = t,
+        [f, g] = r.useState(!1),
+        { firstAvatarDecoration: p, firstProfileEffect: h } = (0, l.R)(e),
+        b = (0, s.x6)(e) ? c.intl.string(c.t.tf1ZZ2) : e.type === a.Z.AVATAR_DECORATION ? c.intl.string(c.t.zOA4a2) : c.intl.string(c.t.SWm2am);
     return {
-        handleUseNow: a.useCallback(async () => {
+        handleUseNow: r.useCallback(async () => {
             g(!0);
             try {
-                if ((null != p && (await (0, s.Mn)({ avatarDecoration: p })), null != E)) {
-                    let e = { profile_effect_id: E.id };
-                    await (0, o.Z)(e);
+                if ((null != p && (await (0, i.Mn)({ avatarDecoration: p })), null != h)) {
+                    let t = { profile_effect_id: h.id };
+                    await (0, o.Z)(t);
                 }
                 {
-                    let { ToastPosition: e, ToastType: t, createToast: a, popToast: r, showToast: s } = await Promise.resolve().then(n.bind(n, 481060));
-                    r(),
-                        s(
-                            a(T, t.MESSAGE, {
+                    let { ToastPosition: t, ToastType: e, createToast: r, popToast: a, showToast: i } = await Promise.resolve().then(n.bind(n, 481060));
+                    a(),
+                        i(
+                            r(b, e.MESSAGE, {
                                 duration: 6000,
-                                position: e.TOP
+                                position: t.TOP
                             })
                         );
                 }
                 null == d || d();
-            } catch (e) {
-                null == u || u(e);
+            } catch (t) {
+                null == u || u(t);
             } finally {
                 g(!1);
             }
-        }, [p, E, d, T, u]),
+        }, [p, h, d, b, u]),
         isApplying: f
     };
 };

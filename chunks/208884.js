@@ -1,470 +1,470 @@
-_.d(S, {
+n.d(i, {
     FX: function () {
-        return l;
+        return g;
     },
     Ny: function () {
-        return A;
+        return o;
     },
     WV: function () {
-        return t;
+        return P;
     },
     WW: function () {
-        return R;
+        return e;
     },
     _u: function () {
         return a;
     },
     aW: function () {
-        return T;
+        return N;
     },
     kv: function () {
-        return n;
+        return I;
     },
     s4: function () {
-        return M;
+        return s;
     },
     uu: function () {
-        return r;
+        return M;
     },
     vq: function () {
-        return P;
+        return _;
     },
     xU: function () {
-        return i;
+        return T;
     },
     zO: function () {
-        return O;
+        return A;
     }
 }),
-    _(653041);
-var s = _(231338),
-    I = _(689938);
-function e(E) {
-    let S = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    n(653041);
+var E = n(231338),
+    l = n(388032);
+function r(t) {
+    let i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return (
-        !S &&
-            (E.permissions = E.permissions.filter((E) => {
-                let { isExperimental: S } = E;
-                return !S;
+        !i &&
+            (t.permissions = t.permissions.filter((t) => {
+                let { isExperimental: i } = t;
+                return !i;
             })),
-        E
+        t
     );
 }
-function N(E, S) {
-    return E.map((E) => S[E.toString()]);
+function S(t, i) {
+    return t.map((t) => i[t.toString()]);
 }
-function R(E) {
-    var S, _;
+function e(t) {
+    var i, n;
     return {
-        [s.Pl.VIEW_CHANNEL.toString()]: {
-            title: I.Z.Messages.ROLE_PERMISSIONS_VIEW_CHANNEL,
-            description: I.Z.Messages.ROLE_PERMISSIONS_VIEW_CHANNEL_DESCRIPTION,
-            flag: s.Pl.VIEW_CHANNEL
+        [E.Pl.VIEW_CHANNEL.toString()]: {
+            title: l.intl.string(l.t.uV83ys),
+            description: l.t.ybTHLi,
+            flag: E.Pl.VIEW_CHANNEL
         },
-        [s.Pl.MANAGE_CHANNELS.toString()]: {
-            title: I.Z.Messages.MANAGE_CHANNELS,
-            description: I.Z.Messages.ROLE_PERMISSIONS_MANAGE_CHANNELS_DESCRIPTION,
-            flag: s.Pl.MANAGE_CHANNELS
+        [E.Pl.MANAGE_CHANNELS.toString()]: {
+            title: l.intl.string(l.t['9qLtWl']),
+            description: l.t.qfJnur,
+            flag: E.Pl.MANAGE_CHANNELS
         },
-        [s.Pl.MANAGE_ROLES.toString()]: {
-            title: I.Z.Messages.MANAGE_ROLES,
-            description: I.Z.Messages.ROLE_PERMISSIONS_MANAGE_ROLES_DESCRIPTION,
-            flag: s.Pl.MANAGE_ROLES
+        [E.Pl.MANAGE_ROLES.toString()]: {
+            title: l.intl.string(l.t['C8d+oK']),
+            description: l.t.buo9u7,
+            flag: E.Pl.MANAGE_ROLES
         },
-        [s.Pl.MANAGE_GUILD_EXPRESSIONS.toString()]: {
-            title: I.Z.Messages.MANAGE_EXPRESSIONS,
-            description: I.Z.Messages.ROLE_PERMISSIONS_MANAGE_EXPRESSIONS_DESCRIPTION,
-            flag: s.Pl.MANAGE_GUILD_EXPRESSIONS
+        [E.Pl.MANAGE_GUILD_EXPRESSIONS.toString()]: {
+            title: l.intl.string(l.t.bbuXIi),
+            description: l.t['4vb3//'],
+            flag: E.Pl.MANAGE_GUILD_EXPRESSIONS
         },
-        [s.Pl.CREATE_GUILD_EXPRESSIONS.toString()]: {
-            title: I.Z.Messages.CREATE_EXPRESSIONS,
-            description: I.Z.Messages.ROLE_PERMISSIONS_CREATE_EXPRESSIONS_DESCRIPTION,
-            flag: s.Pl.CREATE_GUILD_EXPRESSIONS
+        [E.Pl.CREATE_GUILD_EXPRESSIONS.toString()]: {
+            title: l.intl.string(l.t.HarVuL),
+            description: l.t.gkdHvL,
+            flag: E.Pl.CREATE_GUILD_EXPRESSIONS
         },
-        [s.Pl.VIEW_AUDIT_LOG.toString()]: {
-            title: I.Z.Messages.VIEW_AUDIT_LOG,
-            description: I.Z.Messages.ROLE_PERMISSIONS_VIEW_AUDIT_LOG_DESCRIPTION,
-            flag: s.Pl.VIEW_AUDIT_LOG
+        [E.Pl.VIEW_AUDIT_LOG.toString()]: {
+            title: l.intl.string(l.t.fZgLpK),
+            description: l.t['0hx75u'],
+            flag: E.Pl.VIEW_AUDIT_LOG
         },
-        [s.Pl.VIEW_GUILD_ANALYTICS.toString()]: {
-            title: I.Z.Messages.VIEW_GUILD_ANALYTICS,
-            description: I.Z.Messages.ROLE_PERMISSIONS_VIEW_GUILD_ANALYTICS_DESCRIPTION,
-            flag: s.Pl.VIEW_GUILD_ANALYTICS
+        [E.Pl.VIEW_GUILD_ANALYTICS.toString()]: {
+            title: l.intl.string(l.t.rQJBEx),
+            description: l.t.whVKhY,
+            flag: E.Pl.VIEW_GUILD_ANALYTICS
         },
-        [s.Pl.VIEW_CREATOR_MONETIZATION_ANALYTICS.toString()]: {
-            title: I.Z.Messages.VIEW_CREATOR_MONETIZATION_ANALYTICS,
-            description: I.Z.Messages.ROLE_PERMISSIONS_VIEW_CREATOR_MONETIZATION_ANALYTICS_DESCRIPTION,
-            flag: s.Pl.VIEW_CREATOR_MONETIZATION_ANALYTICS
+        [E.Pl.VIEW_CREATOR_MONETIZATION_ANALYTICS.toString()]: {
+            title: l.intl.string(l.t['0lTLTk']),
+            description: l.t.mut6NT,
+            flag: E.Pl.VIEW_CREATOR_MONETIZATION_ANALYTICS
         },
-        [s.Pl.MANAGE_WEBHOOKS.toString()]: {
-            title: I.Z.Messages.MANAGE_WEBHOOKS,
-            description: I.Z.Messages.ROLE_PERMISSIONS_MANAGE_WEBHOOKS_DESCRIPTION,
-            flag: s.Pl.MANAGE_WEBHOOKS
+        [E.Pl.MANAGE_WEBHOOKS.toString()]: {
+            title: l.intl.string(l.t['/ADKmJ']),
+            description: l.t.LczYqK,
+            flag: E.Pl.MANAGE_WEBHOOKS
         },
-        [s.Pl.MANAGE_GUILD.toString()]: {
-            title: I.Z.Messages.MANAGE_SERVER,
-            description: I.Z.Messages.ROLE_PERMISSIONS_MANAGE_SERVER_DESCRIPTION,
-            flag: s.Pl.MANAGE_GUILD
+        [E.Pl.MANAGE_GUILD.toString()]: {
+            title: l.intl.string(l.t.QZRcfH),
+            description: l.t['KoQe/P'],
+            flag: E.Pl.MANAGE_GUILD
         },
-        [s.Pl.CREATE_INSTANT_INVITE.toString()]: {
-            title: I.Z.Messages.CREATE_INSTANT_INVITE,
-            description: I.Z.Messages.ROLE_PERMISSIONS_CREATE_INSTANT_INVITE_DESCRIPTION,
-            flag: s.Pl.CREATE_INSTANT_INVITE
+        [E.Pl.CREATE_INSTANT_INVITE.toString()]: {
+            title: l.intl.string(l.t.zJrgTE),
+            description: l.t.PCFOZW,
+            flag: E.Pl.CREATE_INSTANT_INVITE
         },
-        [s.Pl.CHANGE_NICKNAME.toString()]: {
-            title: I.Z.Messages.CHANGE_NICKNAME,
-            description: I.Z.Messages.ROLE_PERMISSIONS_CHANGE_NICKNAME_DESCRIPTION,
-            flag: s.Pl.CHANGE_NICKNAME
+        [E.Pl.CHANGE_NICKNAME.toString()]: {
+            title: l.intl.string(l.t.dilOFx),
+            description: l.t['b8B++v'],
+            flag: E.Pl.CHANGE_NICKNAME
         },
-        [s.Pl.MANAGE_NICKNAMES.toString()]: {
-            title: I.Z.Messages.MANAGE_NICKNAMES,
-            description: I.Z.Messages.ROLE_PERMISSIONS_MANAGE_NICKNAMES_DESCRIPTION,
-            flag: s.Pl.MANAGE_NICKNAMES
+        [E.Pl.MANAGE_NICKNAMES.toString()]: {
+            title: l.intl.string(l.t['t+Ct5+']),
+            description: l.t.hTnlMT,
+            flag: E.Pl.MANAGE_NICKNAMES
         },
-        [s.Pl.KICK_MEMBERS.toString()]: {
-            title: E.showMembershipManualApprovalPermissions ? I.Z.Messages.KICK_MEMBERS_AND_REVIEW_APPLICATIONS : I.Z.Messages.KICK_MEMBERS,
-            description: E.showMembershipManualApprovalPermissions ? I.Z.Messages.ROLE_PERMISSIONS_KICK_MEMBERS_AND_REVIEW_APPLICATION_DESCRIPTION : I.Z.Messages.ROLE_PERMISSIONS_KICK_MEMBERS_DESCRIPTION,
-            flag: s.Pl.KICK_MEMBERS
+        [E.Pl.KICK_MEMBERS.toString()]: {
+            title: t.showMembershipManualApprovalPermissions ? l.intl.string(l.t['9TxXwc']) : l.intl.string(l.t.pBNv6u),
+            description: t.showMembershipManualApprovalPermissions ? l.t.hGBAn5 : l.t.rwdPaG,
+            flag: E.Pl.KICK_MEMBERS
         },
-        [s.Pl.BAN_MEMBERS.toString()]: {
-            title: I.Z.Messages.BAN_MEMBERS,
-            description: I.Z.Messages.ROLE_PERMISSIONS_BAN_MEMBERS_DESCRIPTION,
-            flag: s.Pl.BAN_MEMBERS
+        [E.Pl.BAN_MEMBERS.toString()]: {
+            title: l.intl.string(l.t.oTBA7O),
+            description: l.t.OqNY09,
+            flag: E.Pl.BAN_MEMBERS
         },
-        [s.Pl.MODERATE_MEMBERS.toString()]: {
-            title: I.Z.Messages.MODERATE_MEMBER,
-            description: I.Z.Messages.ROLE_PERMISSIONS_MODERATE_MEMBER_DESCRIPTION,
-            flag: s.Pl.MODERATE_MEMBERS
+        [E.Pl.MODERATE_MEMBERS.toString()]: {
+            title: l.intl.string(l.t['+RL6p6']),
+            description: l.t.T6bZsb,
+            flag: E.Pl.MODERATE_MEMBERS
         },
-        [s.Pl.SEND_MESSAGES.toString()]: {
-            title: E.showForumPermissions ? I.Z.Messages.SEND_MESSAGES_AND_CREATE_FORUM_POSTS : I.Z.Messages.SEND_MESSAGES,
-            description: E.showForumPermissions ? I.Z.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_WITH_FORUMS_DESCRIPTION : I.Z.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_DESCRIPTION,
-            flag: s.Pl.SEND_MESSAGES
+        [E.Pl.SEND_MESSAGES.toString()]: {
+            title: t.showForumPermissions ? l.intl.string(l.t.S1VOwc) : l.intl.string(l.t.T32rkJ),
+            description: t.showForumPermissions ? l.t.prvWKi : l.t.qry4PT,
+            flag: E.Pl.SEND_MESSAGES
         },
-        [s.Pl.EMBED_LINKS.toString()]: {
-            title: I.Z.Messages.EMBED_LINKS,
-            description: I.Z.Messages.ROLE_PERMISSIONS_EMBED_LINKS_DESCRIPTION,
-            flag: s.Pl.EMBED_LINKS
+        [E.Pl.EMBED_LINKS.toString()]: {
+            title: l.intl.string(l.t['969dEB']),
+            description: l.t.ChoIi4,
+            flag: E.Pl.EMBED_LINKS
         },
-        [s.Pl.ATTACH_FILES.toString()]: {
-            title: I.Z.Messages.ATTACH_FILES,
-            description: I.Z.Messages.ROLE_PERMISSIONS_ATTACH_FILES_DESCRIPTION,
-            flag: s.Pl.ATTACH_FILES
+        [E.Pl.ATTACH_FILES.toString()]: {
+            title: l.intl.string(l.t['3AS4UF']),
+            description: l.t['/87mYG'],
+            flag: E.Pl.ATTACH_FILES
         },
-        [s.Pl.ADD_REACTIONS.toString()]: {
-            title: I.Z.Messages.ADD_REACTIONS,
-            description: I.Z.Messages.ROLE_PERMISSIONS_ADD_REACTIONS_DESCRIPTION,
-            flag: s.Pl.ADD_REACTIONS
+        [E.Pl.ADD_REACTIONS.toString()]: {
+            title: l.intl.string(l.t.yEoJAg),
+            description: l.t.FEYwX1,
+            flag: E.Pl.ADD_REACTIONS
         },
-        [s.Pl.USE_EXTERNAL_EMOJIS.toString()]: {
-            title: I.Z.Messages.ROLE_PERMISSIONS_USE_EXTERNAL_EMOJIS,
-            description: I.Z.Messages.ROLE_PERMISSIONS_USE_EXTERNAL_EMOJIS_DESCRIPTION,
-            flag: s.Pl.USE_EXTERNAL_EMOJIS
+        [E.Pl.USE_EXTERNAL_EMOJIS.toString()]: {
+            title: l.intl.string(l.t['+bxf3N']),
+            description: l.t.POeVIi,
+            flag: E.Pl.USE_EXTERNAL_EMOJIS
         },
-        [s.Pl.USE_EXTERNAL_STICKERS.toString()]: {
-            title: I.Z.Messages.ROLE_PERMISSIONS_USE_EXTERNAL_STICKERS,
-            description: I.Z.Messages.ROLE_PERMISSIONS_USE_EXTERNAL_STICKERS_DESCRIPTION,
-            flag: s.Pl.USE_EXTERNAL_STICKERS
+        [E.Pl.USE_EXTERNAL_STICKERS.toString()]: {
+            title: l.intl.string(l.t.ERNhYW),
+            description: l.t.AdXVhI,
+            flag: E.Pl.USE_EXTERNAL_STICKERS
         },
-        [s.Pl.MENTION_EVERYONE.toString()]: {
-            title: I.Z.Messages.MENTION_EVERYONE,
-            description: I.Z.Messages.ROLE_PERMISSIONS_MENTION_EVERYONE_DESCRIPTION,
-            flag: s.Pl.MENTION_EVERYONE
+        [E.Pl.MENTION_EVERYONE.toString()]: {
+            title: l.intl.string(l.t.Y78KGB),
+            description: l.t.ryj6Nz,
+            flag: E.Pl.MENTION_EVERYONE
         },
-        [s.Pl.MANAGE_MESSAGES.toString()]: {
-            title: I.Z.Messages.MANAGE_MESSAGES,
-            description: I.Z.Messages.ROLE_PERMISSIONS_MANAGE_MESSAGES_DESCRIPTION,
-            flag: s.Pl.MANAGE_MESSAGES
+        [E.Pl.MANAGE_MESSAGES.toString()]: {
+            title: l.intl.string(l.t['6lU9xM']),
+            description: l.t['RXMG//'],
+            flag: E.Pl.MANAGE_MESSAGES
         },
-        [s.Pl.READ_MESSAGE_HISTORY.toString()]: {
-            title: I.Z.Messages.READ_MESSAGE_HISTORY,
-            description: I.Z.Messages.ROLE_PERMISSIONS_READ_MESSAGE_HISTORY_DESCRIPTION,
-            flag: s.Pl.READ_MESSAGE_HISTORY
+        [E.Pl.READ_MESSAGE_HISTORY.toString()]: {
+            title: l.intl.string(l.t.l9ufaW),
+            description: l.t.rmHPFR,
+            flag: E.Pl.READ_MESSAGE_HISTORY
         },
-        [s.Pl.SEND_TTS_MESSAGES.toString()]: {
-            title: I.Z.Messages.ROLE_PERMISSIONS_SEND_TTS_MESSAGES,
-            description: I.Z.Messages.ROLE_PERMISSIONS_SEND_TTS_MESSAGES_DESCRIPTION,
-            flag: s.Pl.SEND_TTS_MESSAGES
+        [E.Pl.SEND_TTS_MESSAGES.toString()]: {
+            title: l.intl.string(l.t.mMbwh4),
+            description: l.t.D6x8Nj,
+            flag: E.Pl.SEND_TTS_MESSAGES
         },
-        [s.Pl.USE_APPLICATION_COMMANDS.toString()]: {
-            title: I.Z.Messages.ROLE_PERMISSIONS_USE_APPLICATION_COMMANDS,
-            description: I.Z.Messages.ROLE_PERMISSIONS_USE_APPLICATION_COMMANDS_GUILD_DESCRIPTION,
-            flag: s.Pl.USE_APPLICATION_COMMANDS
+        [E.Pl.USE_APPLICATION_COMMANDS.toString()]: {
+            title: l.intl.string(l.t.nkoPOj),
+            description: l.t.pJrJ39,
+            flag: E.Pl.USE_APPLICATION_COMMANDS
         },
-        [s.Pl.USE_EXTERNAL_APPS.toString()]: {
-            title: I.Z.Messages.ROLE_PERMISSIONS_USE_EXTERNAL_APPS,
-            description: E.externalAppsEnabled ? I.Z.Messages.ROLE_PERMISSIONS_USE_EXTERNAL_APPS_GUILD_DESCRIPTION : ''.concat(I.Z.Messages.ROLE_PERMISSIONS_USE_EXTERNAL_APPS_GUILD_DESCRIPTION, ' ').concat(I.Z.Messages.ROLE_PERMISSIONS_USE_EXTERNAL_APPS_GUILD_DESCRIPTION_NOT_ENABLED_YET),
-            flag: s.Pl.USE_EXTERNAL_APPS
+        [E.Pl.USE_EXTERNAL_APPS.toString()]: {
+            title: l.intl.string(l.t.TtA5rK),
+            description: t.externalAppsEnabled ? l.t.mzLoDQ : ''.concat(l.intl.string(l.t.mzLoDQ), ' ').concat(l.intl.string(l.t['5qxqGh'])),
+            flag: E.Pl.USE_EXTERNAL_APPS
         },
-        [s.Pl.SEND_VOICE_MESSAGES.toString()]: {
-            title: I.Z.Messages.ROLE_PERMISSIONS_SEND_VOICE_MESSAGE,
-            description: I.Z.Messages.ROLE_PERMISSIONS_SEND_VOICE_MESSAGE_GUILD_DESCRIPTION,
-            flag: s.Pl.SEND_VOICE_MESSAGES
+        [E.Pl.SEND_VOICE_MESSAGES.toString()]: {
+            title: l.intl.string(l.t.WlWSBQ),
+            description: l.t.pDuyi4,
+            flag: E.Pl.SEND_VOICE_MESSAGES
         },
-        [s.Pl.USE_CLYDE_AI.toString()]: {
-            title: I.Z.Messages.ROLE_PERMISSIONS_USE_CLYDE_AI,
-            description: I.Z.Messages.ROLE_PERMISSIONS_USE_CLYDE_AI_GUILD_DESCRIPTION,
-            flag: s.Pl.USE_CLYDE_AI
+        [E.Pl.USE_CLYDE_AI.toString()]: {
+            title: l.intl.string(l.t['8eeEZm']),
+            description: l.t.Tx5TjI,
+            flag: E.Pl.USE_CLYDE_AI
         },
-        [s.Pl.SEND_POLLS.toString()]: {
-            title: I.Z.Messages.ROLE_PERMISSIONS_SEND_POLLS,
-            description: I.Z.Messages.ROLE_PERMISSIONS_SEND_POLLS_DESCRIPTION_GUILD,
-            flag: s.Pl.SEND_POLLS
+        [E.Pl.SEND_POLLS.toString()]: {
+            title: l.intl.string(l.t.UMQ7W1),
+            description: l.t['Xl6W+P'],
+            flag: E.Pl.SEND_POLLS
         },
-        [s.Pl.CONNECT.toString()]: {
-            title: I.Z.Messages.CONNECT,
-            description: I.Z.Messages.ROLE_PERMISSIONS_CONNECT_DESCRIPTION,
-            flag: s.Pl.CONNECT
+        [E.Pl.CONNECT.toString()]: {
+            title: l.intl.string(l.t.S0W8Z2),
+            description: l.t['3GCm/f'],
+            flag: E.Pl.CONNECT
         },
-        [s.Pl.SPEAK.toString()]: {
-            title: I.Z.Messages.SPEAK,
-            description: I.Z.Messages.ROLE_PERMISSIONS_SPEAK_DESCRIPTION,
-            flag: s.Pl.SPEAK
+        [E.Pl.SPEAK.toString()]: {
+            title: l.intl.string(l.t['8w1tIS']),
+            description: l.t.y4MncH,
+            flag: E.Pl.SPEAK
         },
-        [s.Pl.STREAM.toString()]: {
-            title: I.Z.Messages.VIDEO,
-            description: I.Z.Messages.ROLE_PERMISSIONS_STREAM_DESCRIPTION,
-            flag: s.Pl.STREAM
+        [E.Pl.STREAM.toString()]: {
+            title: l.intl.string(l.t.FlNoSU),
+            description: l.t['6Z0j9v'],
+            flag: E.Pl.STREAM
         },
-        [s.Pl.USE_EMBEDDED_ACTIVITIES.toString()]: {
-            title: I.Z.Messages.USE_EMBEDDED_ACTIVITIES,
-            description: I.Z.Messages.ROLE_PERMISSIONS_USE_EMBEDDED_ACTIVITIES_DESCRIPTION,
-            flag: s.Pl.USE_EMBEDDED_ACTIVITIES
+        [E.Pl.USE_EMBEDDED_ACTIVITIES.toString()]: {
+            title: l.intl.string(l.t.rLSGen),
+            description: l.t.BEqU5O,
+            flag: E.Pl.USE_EMBEDDED_ACTIVITIES
         },
-        [s.Pl.USE_SOUNDBOARD.toString()]: {
-            title: I.Z.Messages.USE_SOUNDBOARD,
-            description: null !== (S = null == E ? void 0 : E.SOUNDBOARD_DESCRIPTION) && void 0 !== S ? S : I.Z.Messages.ROLE_PERMISSIONS_USE_SOUNDBOARD_DESCRIPTION,
-            flag: s.Pl.USE_SOUNDBOARD
+        [E.Pl.USE_SOUNDBOARD.toString()]: {
+            title: l.intl.string(l.t.Bco7ND),
+            description: null !== (i = null == t ? void 0 : t.SOUNDBOARD_DESCRIPTION) && void 0 !== i ? i : l.t['+8p+fX'],
+            flag: E.Pl.USE_SOUNDBOARD
         },
-        [s.Pl.USE_EXTERNAL_SOUNDS.toString()]: {
-            title: I.Z.Messages.USE_EXTERNAL_SOUNDS,
-            description: I.Z.Messages.ROLE_PERMISSIONS_USE_EXTERNAL_SOUNDS_DESCRIPTION,
-            flag: s.Pl.USE_EXTERNAL_SOUNDS
+        [E.Pl.USE_EXTERNAL_SOUNDS.toString()]: {
+            title: l.intl.string(l.t.pwaVJy),
+            description: l.t.qDpPtb,
+            flag: E.Pl.USE_EXTERNAL_SOUNDS
         },
-        [s.Pl.USE_VAD.toString()]: {
-            title: I.Z.Messages.USE_VAD,
-            description: I.Z.Messages.ROLE_PERMISSIONS_USE_VAD_DESCRIPTION,
-            flag: s.Pl.USE_VAD
+        [E.Pl.USE_VAD.toString()]: {
+            title: l.intl.string(l.t['08zAV1']),
+            description: l.t['7CHjmZ'],
+            flag: E.Pl.USE_VAD
         },
-        [s.Pl.PRIORITY_SPEAKER.toString()]: {
-            title: I.Z.Messages.PRIORITY_SPEAKER,
-            description: null !== (_ = null == E ? void 0 : E.PRIORITY_SPEAKER_DESCRIPTION) && void 0 !== _ ? _ : I.Z.Messages.ROLE_PERMISSIONS_PRIORITY_SPEAKER_DESCRIPTION,
-            flag: s.Pl.PRIORITY_SPEAKER
+        [E.Pl.PRIORITY_SPEAKER.toString()]: {
+            title: l.intl.string(l.t.BVK71t),
+            description: null !== (n = null == t ? void 0 : t.PRIORITY_SPEAKER_DESCRIPTION) && void 0 !== n ? n : l.t.OJkrrq,
+            flag: E.Pl.PRIORITY_SPEAKER
         },
-        [s.Pl.MUTE_MEMBERS.toString()]: {
-            title: I.Z.Messages.MUTE_MEMBERS,
-            description: I.Z.Messages.ROLE_PERMISSIONS_MUTE_MEMBERS_DESCRIPTION,
-            flag: s.Pl.MUTE_MEMBERS
+        [E.Pl.MUTE_MEMBERS.toString()]: {
+            title: l.intl.string(l.t['8EI309']),
+            description: l.t.PIhGAw,
+            flag: E.Pl.MUTE_MEMBERS
         },
-        [s.Pl.DEAFEN_MEMBERS.toString()]: {
-            title: I.Z.Messages.DEAFEN_MEMBERS,
-            description: I.Z.Messages.ROLE_PERMISSIONS_DEAFEN_MEMBERS_DESCRIPTION,
-            flag: s.Pl.DEAFEN_MEMBERS
+        [E.Pl.DEAFEN_MEMBERS.toString()]: {
+            title: l.intl.string(l.t['9L47Fh']),
+            description: l.t['FQr3+v'],
+            flag: E.Pl.DEAFEN_MEMBERS
         },
-        [s.Pl.MOVE_MEMBERS.toString()]: {
-            title: I.Z.Messages.MOVE_MEMBERS,
-            description: I.Z.Messages.ROLE_PERMISSIONS_MOVE_MEMBERS_DESCRIPTION,
-            flag: s.Pl.MOVE_MEMBERS
+        [E.Pl.MOVE_MEMBERS.toString()]: {
+            title: l.intl.string(l.t.YtjJPT),
+            description: l.t.SEe0Gh,
+            flag: E.Pl.MOVE_MEMBERS
         },
-        [s.Pl.REQUEST_TO_SPEAK.toString()]: {
-            title: I.Z.Messages.REQUEST_TO_SPEAK,
-            description: I.Z.Messages.ROLE_PERMISSIONS_REQUEST_TO_SPEAK_DESCRIPTION,
-            flag: s.Pl.REQUEST_TO_SPEAK,
+        [E.Pl.REQUEST_TO_SPEAK.toString()]: {
+            title: l.intl.string(l.t['5kicT0']),
+            description: l.t['yNE+Q0'],
+            flag: E.Pl.REQUEST_TO_SPEAK,
             isExperimental: !0
         },
-        [s.Pl.ADMINISTRATOR.toString()]: {
-            title: I.Z.Messages.ADMINISTRATOR,
-            description: 'string' == typeof I.Z.Messages.ROLE_PERMISSIONS_ADMINISTRATOR_DESCRIPTION ? I.Z.Messages.ROLE_PERMISSIONS_ADMINISTRATOR_DESCRIPTION : I.Z.Messages.ROLE_PERMISSIONS_ADMINISTRATOR_DESCRIPTION.format(),
-            flag: s.Pl.ADMINISTRATOR
+        [E.Pl.ADMINISTRATOR.toString()]: {
+            title: l.intl.string(l.t.PGvZqa),
+            description: 'string' == typeof l.t.UJxMrK ? l.t.UJxMrK : l.intl.format(l.t.UJxMrK, {}),
+            flag: E.Pl.ADMINISTRATOR
         },
-        [s.Pl.MANAGE_EVENTS.toString()]: {
-            title: I.Z.Messages.MANAGE_EVENTS,
-            description: I.Z.Messages.ROLE_PERMISSIONS_MANAGE_EVENTS_DESCRIPTION,
-            flag: s.Pl.MANAGE_EVENTS
+        [E.Pl.MANAGE_EVENTS.toString()]: {
+            title: l.intl.string(l.t.HIgA5e),
+            description: l.t['SL+qgI'],
+            flag: E.Pl.MANAGE_EVENTS
         },
-        [s.Pl.CREATE_EVENTS.toString()]: {
-            title: I.Z.Messages.CREATE_EVENTS,
-            description: I.Z.Messages.ROLE_PERMISSIONS_CREATE_EVENTS_DESCRIPTION,
-            flag: s.Pl.CREATE_EVENTS
+        [E.Pl.CREATE_EVENTS.toString()]: {
+            title: l.intl.string(l.t.qyjZub),
+            description: l.t.bQEFJS,
+            flag: E.Pl.CREATE_EVENTS
         },
-        [s.Pl.MANAGE_THREADS.toString()]: {
-            title: E.showForumPermissions ? I.Z.Messages.MANAGE_THREADS_AND_FORUM_POSTS : I.Z.Messages.MANAGE_THREADS,
-            description: E.showForumPermissions ? I.Z.Messages.ROLE_PERMISSIONS_MANAGE_THREADS_AND_FORUMS_DESCRIPTION : I.Z.Messages.ROLE_PERMISSIONS_MANAGE_THREADS_DESCRIPTION,
-            flag: s.Pl.MANAGE_THREADS
+        [E.Pl.MANAGE_THREADS.toString()]: {
+            title: t.showForumPermissions ? l.intl.string(l.t.QKe7Q0) : l.intl.string(l.t.kEqgr6),
+            description: t.showForumPermissions ? l.t.QAxIIi : l.t.AKdc4O,
+            flag: E.Pl.MANAGE_THREADS
         },
-        [s.Pl.CREATE_PUBLIC_THREADS.toString()]: {
-            title: I.Z.Messages.CREATE_PUBLIC_THREADS,
-            description: I.Z.Messages.ROLE_PERMISSIONS_CREATE_PUBLIC_THREADS_DESCRIPTION,
-            flag: s.Pl.CREATE_PUBLIC_THREADS
+        [E.Pl.CREATE_PUBLIC_THREADS.toString()]: {
+            title: l.intl.string(l.t['25rKnZ']),
+            description: l.t.ODCYj4,
+            flag: E.Pl.CREATE_PUBLIC_THREADS
         },
-        [s.Pl.CREATE_PRIVATE_THREADS.toString()]: {
-            title: I.Z.Messages.CREATE_PRIVATE_THREADS,
-            description: I.Z.Messages.ROLE_PERMISSIONS_CREATE_PRIVATE_THREADS_DESCRIPTION,
-            flag: s.Pl.CREATE_PRIVATE_THREADS
+        [E.Pl.CREATE_PRIVATE_THREADS.toString()]: {
+            title: l.intl.string(l.t.QwbTSU),
+            description: l.t['G/cc3t'],
+            flag: E.Pl.CREATE_PRIVATE_THREADS
         },
-        [s.Pl.SEND_MESSAGES_IN_THREADS.toString()]: {
-            title: E.showForumPermissions ? I.Z.Messages.SEND_MESSAGES_IN_THREADS_AND_FORUM_POSTS : I.Z.Messages.SEND_MESSAGES_IN_THREADS,
-            description: E.showForumPermissions ? I.Z.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_IN_THREADS_AND_FORUM_POSTS_DESCRIPTION : I.Z.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_IN_THREADS_DESCRIPTION,
-            flag: s.Pl.SEND_MESSAGES_IN_THREADS
+        [E.Pl.SEND_MESSAGES_IN_THREADS.toString()]: {
+            title: t.showForumPermissions ? l.intl.string(l.t['5QlVGx']) : l.intl.string(l.t.fTE74u),
+            description: t.showForumPermissions ? l.t.C2ZPEx : l.t['6pyXvr'],
+            flag: E.Pl.SEND_MESSAGES_IN_THREADS
         },
-        [s.Pl.USE_CLYDE_AI.toString()]: {
-            title: I.Z.Messages.ROLE_PERMISSIONS_USE_CLYDE_AI,
-            description: I.Z.Messages.ROLE_PERMISSIONS_USE_CLYDE_AI_GUILD_DESCRIPTION,
-            flag: s.Pl.USE_CLYDE_AI
+        [E.Pl.USE_CLYDE_AI.toString()]: {
+            title: l.intl.string(l.t['8eeEZm']),
+            description: l.t.Tx5TjI,
+            flag: E.Pl.USE_CLYDE_AI
         },
-        [s.Pl.SET_VOICE_CHANNEL_STATUS.toString()]: {
-            title: I.Z.Messages.VOICE_CHANNEL_STATUS_PERMISSION_TITLE,
-            description: I.Z.Messages.VOICE_CHANNEL_STATUS_PERMISSION_DESCRIPTION,
-            flag: s.Pl.SET_VOICE_CHANNEL_STATUS
+        [E.Pl.SET_VOICE_CHANNEL_STATUS.toString()]: {
+            title: l.intl.string(l.t.VBwkUV),
+            description: l.t.C6BzX1,
+            flag: E.Pl.SET_VOICE_CHANNEL_STATUS
         }
     };
 }
-function M(E) {
-    var S, _, M, O, A, P, t;
-    let T,
-        i = R(E);
-    let l = [
-        (function (E, S) {
-            let _ = [s.Pl.VIEW_CHANNEL, s.Pl.MANAGE_CHANNELS, s.Pl.MANAGE_ROLES, s.Pl.CREATE_GUILD_EXPRESSIONS, s.Pl.MANAGE_GUILD_EXPRESSIONS, s.Pl.VIEW_AUDIT_LOG, s.Pl.VIEW_GUILD_ANALYTICS];
+function s(t) {
+    var i, n, s, A, o, _, P;
+    let N,
+        T = e(t);
+    let g = [
+        (function (t, i) {
+            let n = [E.Pl.VIEW_CHANNEL, E.Pl.MANAGE_CHANNELS, E.Pl.MANAGE_ROLES, E.Pl.CREATE_GUILD_EXPRESSIONS, E.Pl.MANAGE_GUILD_EXPRESSIONS, E.Pl.VIEW_AUDIT_LOG, E.Pl.VIEW_GUILD_ANALYTICS];
             return (
-                S.showCreatorMonetizationAnalyticsPermission && _.push(s.Pl.VIEW_CREATOR_MONETIZATION_ANALYTICS),
-                _.push(s.Pl.MANAGE_WEBHOOKS),
-                _.push(s.Pl.MANAGE_GUILD),
-                e({
-                    title: I.Z.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_GUILD,
-                    permissions: N(_, E)
+                i.showCreatorMonetizationAnalyticsPermission && n.push(E.Pl.VIEW_CREATOR_MONETIZATION_ANALYTICS),
+                n.push(E.Pl.MANAGE_WEBHOOKS),
+                n.push(E.Pl.MANAGE_GUILD),
+                r({
+                    title: l.intl.string(l.t['mYck+P']),
+                    permissions: S(n, t)
                 })
             );
-        })(i, E),
-        (function (E) {
-            let S = [s.Pl.CREATE_INSTANT_INVITE, s.Pl.CHANGE_NICKNAME, s.Pl.MANAGE_NICKNAMES, s.Pl.KICK_MEMBERS, s.Pl.BAN_MEMBERS, s.Pl.MODERATE_MEMBERS];
-            return e({
-                title: I.Z.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP,
-                permissions: N(S, E)
+        })(T, t),
+        (function (t) {
+            let i = [E.Pl.CREATE_INSTANT_INVITE, E.Pl.CHANGE_NICKNAME, E.Pl.MANAGE_NICKNAMES, E.Pl.KICK_MEMBERS, E.Pl.BAN_MEMBERS, E.Pl.MODERATE_MEMBERS];
+            return r({
+                title: l.intl.string(l.t.Ny49TE),
+                permissions: S(i, t)
             });
-        })(i),
-        ((S = i),
-        (_ = E),
-        (T = [s.Pl.SEND_MESSAGES, s.Pl.SEND_MESSAGES_IN_THREADS, s.Pl.CREATE_PUBLIC_THREADS, s.Pl.CREATE_PRIVATE_THREADS, s.Pl.EMBED_LINKS, s.Pl.ATTACH_FILES, s.Pl.ADD_REACTIONS, s.Pl.USE_EXTERNAL_EMOJIS, s.Pl.USE_EXTERNAL_STICKERS, s.Pl.MENTION_EVERYONE, s.Pl.MANAGE_MESSAGES, s.Pl.MANAGE_THREADS, s.Pl.READ_MESSAGE_HISTORY, s.Pl.SEND_TTS_MESSAGES, s.Pl.SEND_VOICE_MESSAGES, s.Pl.USE_CLYDE_AI, s.Pl.SEND_POLLS]),
-        !_.showClydeAIPermissions && (T = T.filter((E) => E !== s.Pl.USE_CLYDE_AI)),
-        e({
-            title: I.Z.Messages.ROLE_PERMISSIONS_SECTION_TEXT,
-            permissions: N(T, S)
+        })(T),
+        ((i = T),
+        (n = t),
+        (N = [E.Pl.SEND_MESSAGES, E.Pl.SEND_MESSAGES_IN_THREADS, E.Pl.CREATE_PUBLIC_THREADS, E.Pl.CREATE_PRIVATE_THREADS, E.Pl.EMBED_LINKS, E.Pl.ATTACH_FILES, E.Pl.ADD_REACTIONS, E.Pl.USE_EXTERNAL_EMOJIS, E.Pl.USE_EXTERNAL_STICKERS, E.Pl.MENTION_EVERYONE, E.Pl.MANAGE_MESSAGES, E.Pl.MANAGE_THREADS, E.Pl.READ_MESSAGE_HISTORY, E.Pl.SEND_TTS_MESSAGES, E.Pl.SEND_VOICE_MESSAGES, E.Pl.USE_CLYDE_AI, E.Pl.SEND_POLLS]),
+        !n.showClydeAIPermissions && (N = N.filter((t) => t !== E.Pl.USE_CLYDE_AI)),
+        r({
+            title: l.intl.string(l.t.cKobOz),
+            permissions: S(N, i)
         })),
-        (function (E, S) {
-            let _ = [s.Pl.CONNECT, s.Pl.SPEAK, s.Pl.STREAM, s.Pl.USE_SOUNDBOARD, s.Pl.USE_EXTERNAL_SOUNDS, s.Pl.USE_VAD, s.Pl.PRIORITY_SPEAKER, s.Pl.MUTE_MEMBERS, s.Pl.DEAFEN_MEMBERS, s.Pl.MOVE_MEMBERS, s.Pl.SET_VOICE_CHANNEL_STATUS];
-            return e({
-                title: I.Z.Messages.ROLE_PERMISSIONS_SECTION_VOICE,
-                permissions: N(_, E)
+        (function (t, i) {
+            let n = [E.Pl.CONNECT, E.Pl.SPEAK, E.Pl.STREAM, E.Pl.USE_SOUNDBOARD, E.Pl.USE_EXTERNAL_SOUNDS, E.Pl.USE_VAD, E.Pl.PRIORITY_SPEAKER, E.Pl.MUTE_MEMBERS, E.Pl.DEAFEN_MEMBERS, E.Pl.MOVE_MEMBERS, E.Pl.SET_VOICE_CHANNEL_STATUS];
+            return r({
+                title: l.intl.string(l.t['46Ra1d']),
+                permissions: S(n, t)
             });
-        })(i, 0),
-        (function (E) {
-            let S = [s.Pl.USE_APPLICATION_COMMANDS, s.Pl.USE_EMBEDDED_ACTIVITIES, s.Pl.USE_EXTERNAL_APPS];
-            return e({
-                title: I.Z.Messages.ROLE_PERMISSIONS_SECTION_APPS,
-                permissions: N(S, E)
+        })(T, 0),
+        (function (t) {
+            let i = [E.Pl.USE_APPLICATION_COMMANDS, E.Pl.USE_EMBEDDED_ACTIVITIES, E.Pl.USE_EXTERNAL_APPS];
+            return r({
+                title: l.intl.string(l.t['rrh/W1']),
+                permissions: S(i, t)
             });
-        })(i)
+        })(T)
     ];
-    if (E.showStageChannelPermissions) {
-        l.push(
-            ((M = i),
-            (O = E),
-            e(
+    if (t.showStageChannelPermissions) {
+        g.push(
+            ((s = T),
+            (A = t),
+            r(
                 {
-                    title: I.Z.Messages.ROLE_PERMISSIONS_SECTION_STAGE,
-                    permissions: N([s.Pl.REQUEST_TO_SPEAK], M)
+                    title: l.intl.string(l.t.yniaur),
+                    permissions: S([E.Pl.REQUEST_TO_SPEAK], s)
                 },
-                O.showExperimental
+                A.showExperimental
             ))
         );
     }
     return (
-        l.push(
-            ((A = i),
-            (P = E),
-            e(
+        g.push(
+            ((o = T),
+            (_ = t),
+            r(
                 {
-                    title: I.Z.Messages.ROLE_PERMISSIONS_SECTION_GUILD_EVENTS,
-                    permissions: N([s.Pl.CREATE_EVENTS, s.Pl.MANAGE_EVENTS], A)
+                    title: l.intl.string(l.t.b8lplZ),
+                    permissions: S([E.Pl.CREATE_EVENTS, E.Pl.MANAGE_EVENTS], o)
                 },
-                P.showExperimental
+                _.showExperimental
             ))
         ),
-        l.push(
-            ((t = i),
-            e({
-                title: I.Z.Messages.ROLE_PERMISSIONS_SECTION_ADVANCED,
-                permissions: N([s.Pl.ADMINISTRATOR], t)
+        g.push(
+            ((P = T),
+            r({
+                title: l.intl.string(l.t['3uI5CQ']),
+                permissions: S([E.Pl.ADMINISTRATOR], P)
             }))
         ),
-        l
+        g
     );
 }
-function O(E, S) {
-    let _ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { showManageWebhooks: !0 };
+function A(t, i) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { showManageWebhooks: !0 };
     return {
-        title: S,
-        permissions: N((null == _ ? void 0 : _.showManageWebhooks) ? [s.Pl.VIEW_CHANNEL, s.Pl.MANAGE_CHANNELS, s.Pl.MANAGE_ROLES, s.Pl.MANAGE_WEBHOOKS] : [s.Pl.VIEW_CHANNEL, s.Pl.MANAGE_CHANNELS, s.Pl.MANAGE_ROLES], E)
+        title: i,
+        permissions: S((null == n ? void 0 : n.showManageWebhooks) ? [E.Pl.VIEW_CHANNEL, E.Pl.MANAGE_CHANNELS, E.Pl.MANAGE_ROLES, E.Pl.MANAGE_WEBHOOKS] : [E.Pl.VIEW_CHANNEL, E.Pl.MANAGE_CHANNELS, E.Pl.MANAGE_ROLES], t)
     };
 }
-function A(E, S) {
+function o(t, i) {
     return {
-        title: S,
-        permissions: N([s.Pl.CREATE_INSTANT_INVITE], E)
+        title: i,
+        permissions: S([E.Pl.CREATE_INSTANT_INVITE], t)
     };
 }
-function P(E, S, _) {
-    let I = [s.Pl.SEND_MESSAGES, s.Pl.SEND_MESSAGES_IN_THREADS, s.Pl.CREATE_PUBLIC_THREADS, s.Pl.CREATE_PRIVATE_THREADS, s.Pl.EMBED_LINKS, s.Pl.ATTACH_FILES, s.Pl.ADD_REACTIONS, s.Pl.USE_EXTERNAL_EMOJIS, s.Pl.USE_EXTERNAL_STICKERS, s.Pl.MENTION_EVERYONE, s.Pl.MANAGE_MESSAGES, s.Pl.MANAGE_THREADS, s.Pl.READ_MESSAGE_HISTORY, s.Pl.SEND_TTS_MESSAGES, s.Pl.SEND_VOICE_MESSAGES, s.Pl.USE_CLYDE_AI, s.Pl.SEND_POLLS];
+function _(t, i, n) {
+    let l = [E.Pl.SEND_MESSAGES, E.Pl.SEND_MESSAGES_IN_THREADS, E.Pl.CREATE_PUBLIC_THREADS, E.Pl.CREATE_PRIVATE_THREADS, E.Pl.EMBED_LINKS, E.Pl.ATTACH_FILES, E.Pl.ADD_REACTIONS, E.Pl.USE_EXTERNAL_EMOJIS, E.Pl.USE_EXTERNAL_STICKERS, E.Pl.MENTION_EVERYONE, E.Pl.MANAGE_MESSAGES, E.Pl.MANAGE_THREADS, E.Pl.READ_MESSAGE_HISTORY, E.Pl.SEND_TTS_MESSAGES, E.Pl.SEND_VOICE_MESSAGES, E.Pl.USE_CLYDE_AI, E.Pl.SEND_POLLS];
     return (
-        (!_.showPrivateThreads || !_.showCreateThreads) && (I = I.filter((E) => E !== s.Pl.CREATE_PRIVATE_THREADS)),
-        !_.showCreateThreads && (I = I.filter((E) => E !== s.Pl.CREATE_PUBLIC_THREADS)),
-        !_.showClydeAIPermissions && (I = I.filter((E) => E !== s.Pl.USE_CLYDE_AI)),
+        (!n.showPrivateThreads || !n.showCreateThreads) && (l = l.filter((t) => t !== E.Pl.CREATE_PRIVATE_THREADS)),
+        !n.showCreateThreads && (l = l.filter((t) => t !== E.Pl.CREATE_PUBLIC_THREADS)),
+        !n.showClydeAIPermissions && (l = l.filter((t) => t !== E.Pl.USE_CLYDE_AI)),
         {
-            title: S,
-            description: _.sectionDescription,
-            permissions: N(I, E)
+            title: i,
+            description: n.sectionDescription,
+            permissions: S(l, t)
         }
     );
 }
-function t(E, S) {
+function P(t, i) {
     return {
-        title: S,
-        permissions: N([s.Pl.CONNECT, s.Pl.SPEAK, s.Pl.STREAM, s.Pl.USE_SOUNDBOARD, s.Pl.USE_EXTERNAL_SOUNDS, s.Pl.USE_VAD, s.Pl.PRIORITY_SPEAKER, s.Pl.MUTE_MEMBERS, s.Pl.DEAFEN_MEMBERS, s.Pl.MOVE_MEMBERS, s.Pl.SET_VOICE_CHANNEL_STATUS], E)
+        title: i,
+        permissions: S([E.Pl.CONNECT, E.Pl.SPEAK, E.Pl.STREAM, E.Pl.USE_SOUNDBOARD, E.Pl.USE_EXTERNAL_SOUNDS, E.Pl.USE_VAD, E.Pl.PRIORITY_SPEAKER, E.Pl.MUTE_MEMBERS, E.Pl.DEAFEN_MEMBERS, E.Pl.MOVE_MEMBERS, E.Pl.SET_VOICE_CHANNEL_STATUS], t)
     };
 }
-function T(E, S, _) {
-    let I = [s.Pl.SEND_MESSAGES, s.Pl.EMBED_LINKS, s.Pl.ATTACH_FILES, s.Pl.ADD_REACTIONS, s.Pl.USE_EXTERNAL_EMOJIS, s.Pl.USE_EXTERNAL_STICKERS, s.Pl.MENTION_EVERYONE, s.Pl.MANAGE_MESSAGES, s.Pl.READ_MESSAGE_HISTORY, s.Pl.SEND_TTS_MESSAGES, s.Pl.USE_APPLICATION_COMMANDS, s.Pl.SEND_VOICE_MESSAGES, s.Pl.SEND_POLLS];
+function N(t, i, n) {
+    let l = [E.Pl.SEND_MESSAGES, E.Pl.EMBED_LINKS, E.Pl.ATTACH_FILES, E.Pl.ADD_REACTIONS, E.Pl.USE_EXTERNAL_EMOJIS, E.Pl.USE_EXTERNAL_STICKERS, E.Pl.MENTION_EVERYONE, E.Pl.MANAGE_MESSAGES, E.Pl.READ_MESSAGE_HISTORY, E.Pl.SEND_TTS_MESSAGES, E.Pl.USE_APPLICATION_COMMANDS, E.Pl.SEND_VOICE_MESSAGES, E.Pl.SEND_POLLS];
     return {
-        title: S,
-        description: _.sectionDescription,
-        permissions: N(I, E)
+        title: i,
+        description: n.sectionDescription,
+        permissions: S(l, t)
     };
 }
-function i(E, S) {
+function T(t, i) {
     return {
-        title: S,
-        permissions: N([s.Pl.USE_APPLICATION_COMMANDS, s.Pl.USE_EMBEDDED_ACTIVITIES, s.Pl.USE_EXTERNAL_APPS], E)
+        title: i,
+        permissions: S([E.Pl.USE_APPLICATION_COMMANDS, E.Pl.USE_EMBEDDED_ACTIVITIES, E.Pl.USE_EXTERNAL_APPS], t)
     };
 }
-function l(E, S, _) {
+function g(t, i, n) {
     return {
-        title: S,
-        permissions: N(_ ? [s.Pl.CONNECT, s.Pl.STREAM, s.Pl.MUTE_MEMBERS, s.Pl.MOVE_MEMBERS] : [s.Pl.CONNECT, s.Pl.MUTE_MEMBERS, s.Pl.MOVE_MEMBERS], E)
+        title: i,
+        permissions: S(n ? [E.Pl.CONNECT, E.Pl.STREAM, E.Pl.MUTE_MEMBERS, E.Pl.MOVE_MEMBERS] : [E.Pl.CONNECT, E.Pl.MUTE_MEMBERS, E.Pl.MOVE_MEMBERS], t)
     };
 }
-function n(E, S) {
+function I(t, i) {
     return {
-        title: S,
-        permissions: N([s.Pl.REQUEST_TO_SPEAK, s.Pl.MENTION_EVERYONE], E)
+        title: i,
+        permissions: S([E.Pl.REQUEST_TO_SPEAK, E.Pl.MENTION_EVERYONE], t)
     };
 }
-function r(E, S) {
+function M(t, i) {
     return {
-        title: S,
-        permissions: N([s.Pl.CREATE_EVENTS, s.Pl.MANAGE_EVENTS], E)
+        title: i,
+        permissions: S([E.Pl.CREATE_EVENTS, E.Pl.MANAGE_EVENTS], t)
     };
 }
-function a(E) {
-    return null == E ? E : 'string' == typeof E ? E.trim() : 'function' == typeof E.format ? E.format() : E;
+function a(t) {
+    return null == t ? t : 'string' == typeof t ? t.trim() : 'function' == typeof t ? l.intl.format(t, {}) : t;
 }

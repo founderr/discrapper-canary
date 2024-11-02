@@ -173,8 +173,8 @@ class d extends l.C {
         ]);
     }
 }
-let _ = new d();
-class E extends l.C {
+let f = new d();
+class _ extends l.C {
     create(e) {
         let t = { ackedDisclosures: [] };
         return (
@@ -191,7 +191,7 @@ class E extends l.C {
             s = e.pos + t;
         for (; e.pos < s; ) {
             let [t, r] = e.tag();
-            if (1 === t) i.ackedDisclosures.push(_.internalBinaryRead(e, e.uint32(), n));
+            if (1 === t) i.ackedDisclosures.push(f.internalBinaryRead(e, e.uint32(), n));
             else {
                 let s = n.readUnknownField;
                 if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
@@ -202,7 +202,7 @@ class E extends l.C {
         return i;
     }
     internalBinaryWrite(e, t, n) {
-        for (let r = 0; r < e.ackedDisclosures.length; r++) _.internalBinaryWrite(e.ackedDisclosures[r], t.tag(1, a.TD.LengthDelimited).fork(), n).join();
+        for (let r = 0; r < e.ackedDisclosures.length; r++) f.internalBinaryWrite(e.ackedDisclosures[r], t.tag(1, a.TD.LengthDelimited).fork(), n).join();
         let r = n.writeUnknownFields;
         return !1 !== r && (!0 == r ? a.z.onWrite : r)(this.typeName, e, t), t;
     }
@@ -213,9 +213,9 @@ class E extends l.C {
                 name: 'acked_disclosures',
                 kind: 'message',
                 repeat: 1,
-                T: () => _
+                T: () => f
             }
         ]);
     }
 }
-new E();
+new _();

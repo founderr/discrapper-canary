@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return s;
     }
 });
 var i = n(271383),
-    s = n(5192),
-    a = n(354459),
-    l = n(689938);
-function r(e, t, n) {
-    var r, o;
-    if (t.type === a.fO.ACTIVITY) return null !== (o = null == n ? void 0 : n.name) && void 0 !== o ? o : null;
-    let c = i.ZP.isGuestOrLurker(e.guild_id, null === (r = t.user) || void 0 === r ? void 0 : r.id);
-    return s.ZP.getName(e.getGuildId(), e.id, t.user) + (c ? ' '.concat(l.Z.Messages.GUEST_NAME_SUFFIX) : '');
+    l = n(5192),
+    r = n(354459),
+    a = n(388032);
+function s(e, t, n) {
+    var s, o;
+    if (t.type === r.fO.ACTIVITY) return null !== (o = null == n ? void 0 : n.name) && void 0 !== o ? o : null;
+    let c = i.ZP.isGuestOrLurker(e.guild_id, null === (s = t.user) || void 0 === s ? void 0 : s.id);
+    return l.ZP.getName(e.getGuildId(), e.id, t.user) + (c ? ' '.concat(a.intl.string(a.t['pFO/Pj'])) : '');
 }

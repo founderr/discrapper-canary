@@ -13,30 +13,30 @@ var r = n(200651),
 function u(e, t) {
     let n = (0, l.G6)(e);
     return i.forwardRef(function (a, u) {
-        let { children: c, className: d, dir: _ = 'ltr', orientation: E = 'vertical', paddingFix: f = !0, fade: h = !1, onScroll: p, style: I, ...m } = a,
-            T = i.useRef(null),
-            S = (0, l.tT)({
-                paddingFix: f,
-                orientation: E,
-                dir: _,
+        let { children: c, className: d, dir: f = 'ltr', orientation: _ = 'vertical', paddingFix: h = !0, fade: p = !1, onScroll: m, style: g, ...E } = a,
+            v = i.useRef(null),
+            I = (0, l.tT)({
+                paddingFix: h,
+                orientation: _,
+                dir: f,
                 className: d,
-                scrollerRef: T,
+                scrollerRef: v,
                 specs: n
             });
         return (0, r.jsx)('div', {
             ref: (e) => {
-                'function' == typeof u ? u(e) : null != u && (u.current = e), (T.current = e);
+                'function' == typeof u ? u(e) : null != u && (u.current = e), (v.current = e);
             },
             className: s()(d, {
                 [e]: !0,
-                [t]: h
+                [t]: p
             }),
-            style: (0, l.uT)(I, E),
-            dir: _,
-            ...m,
+            style: (0, l.uT)(g, _),
+            dir: f,
+            ...E,
             children: (0, r.jsxs)(o.Jc, {
-                containerRef: T,
-                children: [c, S]
+                containerRef: v,
+                children: [c, I]
             })
         });
     });

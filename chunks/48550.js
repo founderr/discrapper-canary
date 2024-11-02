@@ -1,23 +1,23 @@
-s.d(t, {
+n.d(t, {
     P: function () {
-        return l;
+        return i;
     }
 });
-var n = s(689938);
-let l = {
+var l = n(388032);
+let i = {
     get webauthn() {
-        return n.Z.Messages.MFA_V2_WEBAUTHN_NAME;
+        return l.intl.string(l.t.gTH4Dg);
     },
     get totp() {
-        return n.Z.Messages.MFA_V2_TOTP_NAME;
+        return l.intl.string(l.t.nXKmyc);
     },
     get sms() {
-        return n.Z.Messages.MFA_V2_SMS_NAME;
+        return l.intl.string(l.t.ZbVwZW);
     },
     get password() {
-        return n.Z.Messages.MFA_V2_PASSWORD_NAME;
+        return l.intl.string(l.t['8F6hKS']);
     },
     get backup() {
-        return n.Z.Messages.MFA_V2_BACKUP_NAME;
+        return l.intl.string(l.t.vhSRKS);
     }
 };

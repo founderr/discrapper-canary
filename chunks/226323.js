@@ -6,99 +6,99 @@ n.d(t, {
     n(653041),
     n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(442837),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    s = n(442837),
     o = n(481060),
     c = n(239091),
     d = n(586902),
     u = n(512384),
-    _ = n(184301),
-    E = n(347475),
-    h = n(314897),
-    m = n(131951),
-    I = n(51144),
-    p = n(524484),
-    g = n(689938),
-    T = n(497867);
-let S = { offset: 2 },
-    C = {
+    h = n(184301),
+    m = n(347475),
+    p = n(314897),
+    g = n(131951),
+    f = n(51144),
+    _ = n(524484),
+    E = n(388032),
+    I = n(497867);
+let C = { offset: 2 },
+    v = {
         serverDeaf: {
             icon: o.HeadphonesDenyIcon,
             colorize: !0,
-            getStatus: () => g.Z.Messages.SERVER_DEAFENED
+            getStatus: () => E.intl.string(E.t.btxSdH)
         },
         serverMute: {
             icon: o.MicrophoneDenyIcon,
             colorize: !0,
-            getStatus: () => g.Z.Messages.SERVER_MUTED
+            getStatus: () => E.intl.string(E.t.uLddbW)
         },
         deaf: {
             icon: o.HeadphonesSlashIcon,
             colorize: !1,
-            getStatus: () => g.Z.Messages.VOICE_CHANNEL_DEAFENED
+            getStatus: () => E.intl.string(E.t.NjmiOD)
         },
         mute: {
             icon: o.MicrophoneSlashIcon,
             colorize: !1,
-            getStatus: () => g.Z.Messages.VOICE_CHANNEL_MUTED
+            getStatus: () => E.intl.string(E.t.tjtv3N)
         },
         localMute: {
             icon: o.MicrophoneDenyIcon,
             colorize: !1,
-            getStatus: () => g.Z.Messages.VOICE_CHANNEL_LOCAL_MUTED
+            getStatus: () => E.intl.string(E.t['9F+xJS'])
         }
     };
-function f(e) {
-    var t, a;
-    let { channel: s, user: h, nick: f, mute: N, deaf: A, serverMute: v, serverDeaf: Z } = e,
-        L = (0, l.e7)([m.Z], () => m.Z.isLocalMute(h.id)),
-        R = (0, d.Z)({
-            userId: h.id,
+function S(e) {
+    var t, r;
+    let { channel: l, user: p, nick: S, mute: N, deaf: T, serverMute: x, serverDeaf: b } = e,
+        A = (0, s.e7)([g.Z], () => g.Z.isLocalMute(p.id)),
+        Z = (0, d.Z)({
+            userId: p.id,
             checkSoundSharing: !0
         }),
-        O = null !== (t = s.getGuildId()) && void 0 !== t ? t : void 0,
-        x = h.getAvatarURL(s.guild_id, 24),
-        b = null != f ? f : I.ZP.getName(h),
+        y = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0,
+        L = p.getAvatarURL(l.guild_id, 24),
+        R = null != S ? S : f.ZP.getName(p),
         {
-            icon: M,
-            colorize: P,
-            getStatus: D
+            icon: P,
+            colorize: O,
+            getStatus: j
         } = null !==
-            (a = (function (e) {
-                let { serverDeaf: t, deaf: n, serverMute: i, mute: a, localMute: s } = e;
-                if (t) return C.serverDeaf;
-                if (n) return C.deaf;
-                if (i) return C.serverMute;
-                else if (s) return C.localMute;
-                else if (a) return C.mute;
+            (r = (function (e) {
+                let { serverDeaf: t, deaf: n, serverMute: i, mute: r, localMute: l } = e;
+                if (t) return v.serverDeaf;
+                if (n) return v.deaf;
+                if (i) return v.serverMute;
+                else if (l) return v.localMute;
+                else if (r) return v.mute;
             })({
-                serverDeaf: Z,
-                deaf: A,
-                serverMute: v,
+                serverDeaf: b,
+                deaf: T,
+                serverMute: x,
                 mute: N,
-                localMute: L
-            })) && void 0 !== a
-            ? a
+                localMute: A
+            })) && void 0 !== r
+            ? r
             : {},
-        y =
-            null != D
-                ? g.Z.Messages.VOICE_PANEL_USER_TOOLTIP.format({
-                      userName: b,
-                      status: D()
+        D =
+            null != j
+                ? E.intl.formatToPlainString(E.t['1+MVBA'], {
+                      userName: R,
+                      status: j()
                   })
-                : b;
-    function j(e) {
-        null != O
+                : R;
+    function M(e) {
+        null != y
             ? (0, c.jW)(e, async () => {
                   let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('13125'), n.e('91864')]).then(n.bind(n, 757387));
                   return (t) =>
                       (0, i.jsx)(e, {
                           ...t,
-                          user: h,
-                          guildId: O,
-                          channel: s,
+                          user: p,
+                          guildId: y,
+                          channel: l,
                           showMediaItems: !0
                       });
               })
@@ -107,45 +107,45 @@ function f(e) {
                   return (t) =>
                       (0, i.jsx)(e, {
                           ...t,
-                          user: h,
+                          user: p,
                           showMediaItems: !0
                       });
               });
     }
     return (0, i.jsx)(o.Popout, {
         preload: () =>
-            (0, _.Z)(h.id, h.getAvatarURL(O, 80), {
-                guildId: O,
-                channelId: s.id
+            (0, h.Z)(p.id, p.getAvatarURL(y, 80), {
+                guildId: y,
+                channelId: l.id
             }),
         position: 'top',
         renderPopout: (e) =>
-            (0, i.jsx)(E.Z, {
-                userId: h.id,
-                guildId: O,
-                channelId: s.id,
+            (0, i.jsx)(m.Z, {
+                userId: p.id,
+                guildId: y,
+                channelId: l.id,
                 ...e
             }),
         children: (e) =>
             (0, i.jsx)(o.Tooltip, {
-                text: y,
+                text: D,
                 children: (t) =>
                     (0, i.jsx)(o.Clickable, {
                         ...t,
                         ...e,
-                        className: T.avatarContainer,
-                        onContextMenu: j,
-                        focusProps: S,
+                        className: I.avatarContainer,
+                        onContextMenu: M,
+                        focusProps: C,
                         children: (0, i.jsx)(u.Z, {
-                            shakeLocation: p.oZ.VOICE_USER,
-                            isShaking: R,
+                            shakeLocation: _.oZ.VOICE_USER,
+                            isShaking: Z,
                             children: (0, i.jsx)('div', {
-                                className: r()(T.avatar, { [T.speaking]: R }),
-                                style: { backgroundImage: 'url('.concat(x, ')') },
+                                className: a()(I.avatar, { [I.speaking]: Z }),
+                                style: { backgroundImage: 'url('.concat(L, ')') },
                                 children:
-                                    null != M
-                                        ? (0, i.jsx)(M, {
-                                              className: r()(T.avatarIconOverlay, { [T.avatarIconRed]: P }),
+                                    null != P
+                                        ? (0, i.jsx)(P, {
+                                              className: a()(I.avatarIconOverlay, { [I.avatarIconRed]: O }),
                                               color: 'currentColor',
                                               size: 'xs'
                                           })
@@ -157,23 +157,23 @@ function f(e) {
     });
 }
 function N(e) {
-    let { voiceStates: t, channel: n, className: s } = e,
-        [c, d] = a.useState(!1),
+    let { voiceStates: t, channel: n, className: l } = e,
+        [c, d] = r.useState(!1),
         u = c ? o.MinusIcon : o.PlusSmallIcon,
-        _ = (0, i.jsx)(o.CircleIconButton, {
-            className: T.expandButton,
+        h = (0, i.jsx)(o.CircleIconButton, {
+            className: I.expandButton,
             onClick: () => d(!c),
             color: o.CircleIconButtonColors.PRIMARY,
             size: o.CircleIconButtonSizes.SIZE_24,
-            tooltip: c ? g.Z.Messages.VOICE_PANEL_HIDE_EXTRAS : g.Z.Messages.VOICE_PANEL_SHOW_EXTRAS,
+            tooltip: c ? E.intl.string(E.t['Z/Tya2']) : E.intl.string(E.t.XR5BAQ),
             icon: (0, i.jsx)(u, {
                 size: 'xs',
                 color: 'currentColor'
             }),
-            focusProps: S
+            focusProps: C
         }),
-        E = (0, l.e7)([h.default], () => h.default.getId(), []),
-        [m, I] = (function (e, t) {
+        m = (0, s.e7)([p.default], () => p.default.getId(), []),
+        [g, f] = (function (e, t) {
             let n = [];
             for (let i of e) {
                 if (!(i.user.id === t || n.some((e) => e.user.id === i.user.id))) {
@@ -182,38 +182,38 @@ function N(e) {
                 }
             }
             return [n, !1];
-        })(t, E),
-        p = I && c ? t : m;
-    return p.length <= 0
+        })(t, m),
+        _ = f && c ? t : g;
+    return _.length <= 0
         ? null
         : (0, i.jsx)(o.ScrollerThin, {
-              className: r()(T.scroller, s),
+              className: a()(I.scroller, l),
               fade: !0,
               children: (0, i.jsxs)('div', {
-                  className: T.voiceUsers,
+                  className: I.voiceUsers,
                   role: 'group',
-                  'aria-label': g.Z.Messages.VOICE_PANEL_USERS_A11Y_LABEL,
+                  'aria-label': E.intl.string(E.t['/ZgaVV']),
                   children: [
-                      p.map((e) => {
-                          let { user: t, nick: a, voiceState: s } = e;
-                          return t.id !== E
+                      _.map((e) => {
+                          let { user: t, nick: r, voiceState: l } = e;
+                          return t.id !== m
                               ? (0, i.jsx)(
-                                    f,
+                                    S,
                                     {
                                         channel: n,
                                         user: t,
-                                        nick: a,
-                                        mute: s.isVoiceMuted(),
-                                        deaf: s.isVoiceDeafened(),
-                                        video: s.selfVideo,
-                                        serverMute: s.mute,
-                                        serverDeaf: s.deaf
+                                        nick: r,
+                                        mute: l.isVoiceMuted(),
+                                        deaf: l.isVoiceDeafened(),
+                                        video: l.selfVideo,
+                                        serverMute: l.mute,
+                                        serverDeaf: l.deaf
                                     },
                                     t.id
                                 )
                               : null;
                       }),
-                      I ? _ : null
+                      f ? h : null
                   ]
               })
           });

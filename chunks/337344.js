@@ -1,48 +1,48 @@
 n.d(t, {
     L: function () {
-        return _;
+        return m;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(481060),
-    i = n(962086),
-    r = n(225675),
-    l = n(671533),
+var r = n(481060),
+    l = n(962086),
+    s = n(225675),
+    a = n(671533),
     o = n(434404),
     c = n(981631),
-    d = n(689938),
+    d = n(388032),
     u = n(657968);
-function _(e) {
+function m(e) {
     let { guildId: t, role: n } = e;
-    return (0, s.jsx)(s.Fragment, {
-        children: (0, s.jsxs)(a.FormItem, {
-            title: d.Z.Messages.VIEW_AS_ROLE,
+    return (0, i.jsx)(i.Fragment, {
+        children: (0, i.jsxs)(r.FormItem, {
+            title: d.intl.string(d.t.arFPfH),
             className: u.container,
             children: [
-                (0, s.jsx)(a.Text, {
+                (0, i.jsx)(r.Text, {
                     variant: 'text-sm/normal',
-                    children: d.Z.Messages.VIEW_AS_ROLE_DESCRIPTION
+                    children: d.intl.string(d.t['IT/0AA'])
                 }),
-                (0, s.jsxs)(a.Button, {
+                (0, i.jsxs)(r.Button, {
                     className: u.button,
                     innerClassName: u.buttonInner,
-                    size: a.Button.Sizes.SMALL,
-                    color: a.Button.Colors.PRIMARY,
+                    size: r.Button.Sizes.SMALL,
+                    color: r.Button.Colors.PRIMARY,
                     onClick: () => {
                         o.Z.close(),
-                            (0, i.iD)(t, {
-                                type: r.z.ROLES,
+                            (0, l.iD)(t, {
+                                type: s.z.ROLES,
                                 roles: { [n.id]: n },
                                 returnToSection: c.pNK.ROLES
                             });
                     },
                     children: [
-                        d.Z.Messages.VIEW_AS_ROLE,
-                        (0, s.jsx)(l.Z, {
+                        d.intl.string(d.t.arFPfH),
+                        (0, i.jsx)(a.Z, {
                             width: 16,
                             height: 16,
-                            direction: l.Z.Directions.RIGHT,
+                            direction: a.Z.Directions.RIGHT,
                             className: u.arrowIcon
                         })
                     ]

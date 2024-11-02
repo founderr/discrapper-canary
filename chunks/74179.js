@@ -20,16 +20,16 @@ function o(e) {
             hasFetchedPaymentSources: s.Z.hasFetchedPaymentSources
         })),
         c = (e, t, n) => (e || (null == t ? void 0 : t.paymentSourceId) == null ? n : t.paymentSourceId),
-        [d, _] = r.useState(() => c(t, n, o));
+        [d, f] = r.useState(() => c(t, n, o));
     return (
         r.useEffect(() => {
-            u ? _(c(t, n, o)) : (0, a.tZ)();
+            u ? f(c(t, n, o)) : (0, a.tZ)();
         }, [u, t, n, o]),
         {
             paymentSources: l,
             hasPaymentSources: Object.keys(l).length > 0,
             paymentSourceId: d,
-            setPaymentSourceId: _,
+            setPaymentSourceId: f,
             hasFetchedPaymentSources: u,
             defaultPaymentSource: null != o ? l[o] : null
         }

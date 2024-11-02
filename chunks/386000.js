@@ -4,33 +4,33 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(192379),
-    a = n(692547),
-    l = n(652844),
-    r = n(628581),
+    l = n(192379),
+    r = n(692547),
+    a = n(652844),
+    s = n(628581),
     o = n(743078),
     c = n(871499);
 function u(e) {
-    let { selfMute: t, serverMute: n, suppress: u, centerButton: d = !1, awaitingRemote: h, onMouseEnter: m, onMouseLeave: p, ..._ } = e,
-        { mode: f } = (0, o.Z)({ location: 'MicButton' }),
-        E = t || n || u,
-        g = d ? c.d : c.Z,
-        C = (0, r.Z)(t, n, u, h),
-        { Component: I, play: T, events: x } = (0, l.O)(E ? 'unmute' : 'mute');
+    let { selfMute: t, serverMute: n, suppress: u, centerButton: d = !1, awaitingRemote: h, onMouseEnter: m, onMouseLeave: p, ...f } = e,
+        { mode: g } = (0, o.Z)({ location: 'MicButton' }),
+        C = t || n || u,
+        x = d ? c.d : c.Z,
+        v = (0, s.Z)(t, n, u, h),
+        { Component: _, play: I, events: E } = (0, a.O)(C ? 'unmute' : 'mute');
     return (
-        s.useEffect(() => () => T(), [T, E]),
-        (0, i.jsx)(g, {
-            isActive: 'mic-push-to-enable' === f ? !E : E,
-            iconComponent: I,
-            iconColor: E && 'mic-push-to-disable-red' === f ? a.Z.unsafe_rawColors.RED_400.css : void 0,
-            label: C,
+        l.useEffect(() => () => I(), [I, C]),
+        (0, i.jsx)(x, {
+            isActive: 'mic-push-to-enable' === g ? !C : C,
+            iconComponent: _,
+            iconColor: C && 'mic-push-to-disable-red' === g ? r.Z.unsafe_rawColors.RED_400.css : void 0,
+            label: v,
             onMouseEnter: (e) => {
-                null == m || m(e), x.onMouseEnter();
+                null == m || m(e), E.onMouseEnter();
             },
             onMouseLeave: (e) => {
-                null == p || p(e), x.onMouseLeave();
+                null == p || p(e), E.onMouseLeave();
             },
-            ..._
+            ...f
         })
     );
 }

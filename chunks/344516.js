@@ -1,15 +1,15 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return D;
+            return N;
         }
     }),
     n(47120);
-var s = n(200651),
-    i = n(192379),
-    o = n(392711),
-    r = n.n(o),
-    l = n(442837),
+var i = n(200651),
+    s = n(192379),
+    r = n(392711),
+    l = n.n(r),
+    o = n(442837),
     a = n(481060),
     d = n(846027),
     u = n(825209),
@@ -18,12 +18,12 @@ var s = n(200651),
     m = n(382577),
     p = n(131951),
     g = n(36703),
-    _ = n(981631),
-    b = n(65154),
-    C = n(689938),
-    E = n(300247),
-    R = n(113207);
-function T(e, t, n) {
+    b = n(981631),
+    f = n(65154),
+    C = n(388032),
+    x = n(300247),
+    v = n(113207);
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,28 +36,28 @@ function T(e, t, n) {
         e
     );
 }
-let f = (0, c.hQ)(),
-    M = (0, c.hQ)(),
-    O = (0, c.hQ)();
-class x extends i.PureComponent {
+let _ = (0, c.hQ)(),
+    j = (0, c.hQ)(),
+    D = (0, c.hQ)();
+class E extends s.PureComponent {
     handleValueRender(e) {
         return ''.concat((-((100 - e) * 1)).toFixed(0), 'dB');
     }
     renderAutomaticVADToggle() {
         let { autoThreshold: e } = this.props;
-        return (0, s.jsx)(c.FG, {
+        return (0, i.jsx)(c.FG, {
             children: (t) =>
-                (0, s.jsxs)(h.Z, {
-                    className: R.marginBottom4,
+                (0, i.jsxs)(h.Z, {
+                    className: v.marginBottom4,
                     children: [
-                        (0, s.jsx)(a.FormTitle, {
+                        (0, i.jsx)(a.FormTitle, {
                             tag: a.FormTitleTags.H3,
-                            children: (0, s.jsx)('label', {
+                            children: (0, i.jsx)('label', {
                                 htmlFor: t,
-                                children: C.Z.Messages.FORM_LABEL_AUTOMATIC_VAD
+                                children: C.intl.string(C.t.I1Zuq6)
                             })
                         }),
-                        (0, s.jsx)(a.Switch, {
+                        (0, i.jsx)(a.Switch, {
                             id: t,
                             checked: e,
                             onChange: this.handleAutoThresholdChange
@@ -69,33 +69,33 @@ class x extends i.PureComponent {
     renderSlider() {
         let { autoThreshold: e, threshold: t } = this.props;
         if (!e)
-            return (0, s.jsx)(a.Slider, {
+            return (0, i.jsx)(a.Slider, {
                 initialValue: t + 100,
                 onValueRender: this.handleValueRender,
                 onValueChange: this.handleSensitivityChange,
-                'aria-label': C.Z.Messages.FORM_LABEL_INPUT_SENSITIVTY
+                'aria-label': C.intl.string(C.t['sqUm+v'])
             });
     }
     render() {
-        return (0, s.jsxs)(a.FormItem, {
-            title: C.Z.Messages.FORM_LABEL_INPUT_SENSITIVTY,
-            className: R.marginBottom8,
+        return (0, i.jsxs)(a.FormItem, {
+            title: C.intl.string(C.t['sqUm+v']),
+            className: v.marginBottom8,
             children: [this.renderAutomaticVADToggle(), this.renderSlider()]
         });
     }
     constructor(...e) {
         super(...e),
-            T(this, 'handleAutoThresholdChange', (e) => {
+            R(this, 'handleAutoThresholdChange', (e) => {
                 let { onThresholdChange: t, threshold: n } = this.props;
                 null == t || t(n, e);
             }),
-            T(this, 'handleSensitivityChange', (e) => {
+            R(this, 'handleSensitivityChange', (e) => {
                 let { onThresholdChange: t, autoThreshold: n } = this.props;
                 null == t || t(-((100 - e) * 1), n);
             });
     }
 }
-let I = l.ZP.connectStores([p.Z], (e) => {
+let I = o.ZP.connectStores([p.Z], (e) => {
     let { mediaEngineContext: t } = e;
     return {
         inputVolume: p.Z.getInputVolume(),
@@ -112,60 +112,60 @@ let I = l.ZP.connectStores([p.Z], (e) => {
     };
 })((e) => {
     let t,
-        { mediaEngineContext: n, inputMode: o, shortcut: l, delay: h, vadThreshold: c, vadAutoThreshold: m, inputDevices: p, inputDeviceId: b, inputVolume: E, outputDeviceId: T, outputDevices: I, outputVolume: D, speaking: v = !1 } = e,
-        Z = r().first(p),
-        N = null != Z && Z.disabled,
-        j = r().first(I),
-        S = null != j && j.disabled,
-        U = [
+        { mediaEngineContext: n, inputMode: r, shortcut: o, delay: h, vadThreshold: c, vadAutoThreshold: m, inputDevices: p, inputDeviceId: f, inputVolume: x, outputDeviceId: R, outputDevices: I, outputVolume: N, speaking: T = !1 } = e,
+        Z = l().first(p),
+        O = null != Z && Z.disabled,
+        M = l().first(I),
+        V = null != M && M.disabled,
+        y = [
             {
-                value: _.pM4.VOICE_ACTIVITY,
-                name: C.Z.Messages.INPUT_MODE_VAD
+                value: b.pM4.VOICE_ACTIVITY,
+                name: C.intl.string(C.t.cHCEOD)
             },
             {
-                value: _.pM4.PUSH_TO_TALK,
-                name: C.Z.Messages.INPUT_MODE_PTT
+                value: b.pM4.PUSH_TO_TALK,
+                name: C.intl.string(C.t.Q8gkVF)
             }
         ];
     return (
         (t =
-            o === _.pM4.PUSH_TO_TALK
-                ? (0, s.jsxs)(i.Fragment, {
+            r === b.pM4.PUSH_TO_TALK
+                ? (0, i.jsxs)(s.Fragment, {
                       children: [
-                          (0, s.jsx)(a.FormItem, {
-                              title: C.Z.Messages.FORM_LABEL_SHORTCUT,
-                              className: R.marginBottom20,
-                              children: (0, s.jsx)(u.Z, {
-                                  defaultValue: l,
-                                  onChange: (e) => d.Z.setMode(o, { shortcut: e }, n)
+                          (0, i.jsx)(a.FormItem, {
+                              title: C.intl.string(C.t.YkDjVF),
+                              className: v.marginBottom20,
+                              children: (0, i.jsx)(u.Z, {
+                                  defaultValue: o,
+                                  onChange: (e) => d.Z.setMode(r, { shortcut: e }, n)
                               })
                           }),
-                          (0, s.jsxs)(a.FormItem, {
-                              className: R.marginBottom8,
+                          (0, i.jsxs)(a.FormItem, {
+                              className: v.marginBottom8,
                               children: [
-                                  (0, s.jsx)(a.FormTitle, {
-                                      id: f,
-                                      children: C.Z.Messages.INPUT_MODE_PTT_RELEASE_DELAY
+                                  (0, i.jsx)(a.FormTitle, {
+                                      id: _,
+                                      children: C.intl.string(C.t.y0ShVl)
                                   }),
-                                  (0, s.jsx)(a.Slider, {
+                                  (0, i.jsx)(a.Slider, {
                                       initialValue: h,
-                                      onValueChange: (e) => d.Z.setMode(o, { delay: e }, n),
+                                      onValueChange: (e) => d.Z.setMode(r, { delay: e }, n),
                                       onValueRender: (e) => (e >= 1000 ? ((e /= 1000), ''.concat(e.toFixed(2), 's')) : ''.concat(e.toFixed(0), 'ms')),
-                                      maxValue: _.qhL,
-                                      'aria-labelledby': f
+                                      maxValue: b.qhL,
+                                      'aria-labelledby': _
                                   })
                               ]
                           })
                       ]
                   })
-                : (0, s.jsx)(x, {
-                      speaking: v,
-                      inputMode: o,
+                : (0, i.jsx)(E, {
+                      speaking: T,
+                      inputMode: r,
                       threshold: c,
                       autoThreshold: m,
                       onThresholdChange: (e, t) =>
                           d.Z.setMode(
-                              o,
+                              r,
                               {
                                   threshold: e,
                                   autoThreshold: t
@@ -173,79 +173,79 @@ let I = l.ZP.connectStores([p.Z], (e) => {
                               n
                           )
                   })),
-        (0, s.jsxs)(i.Fragment, {
+        (0, i.jsxs)(s.Fragment, {
             children: [
-                (0, s.jsx)(a.FormItem, {
-                    title: C.Z.Messages.FORM_LABEL_INPUT_DEVICE,
-                    className: R.marginBottom20,
-                    children: (0, s.jsx)(a.SingleSelect, {
-                        value: b,
+                (0, i.jsx)(a.FormItem, {
+                    title: C.intl.string(C.t.hHMYbW),
+                    className: v.marginBottom20,
+                    children: (0, i.jsx)(a.SingleSelect, {
+                        value: f,
                         onChange: (e) => d.Z.setInputDevice(e, { location: 'Voice Settings' }),
-                        options: r().map(p, (e) => {
+                        options: l().map(p, (e) => {
                             let { id: t, name: n } = e;
                             return {
                                 value: t,
                                 label: n
                             };
                         }),
-                        isDisabled: N
+                        isDisabled: O
                     })
                 }),
-                (0, s.jsxs)(a.FormItem, {
-                    className: R.marginBottom20,
+                (0, i.jsxs)(a.FormItem, {
+                    className: v.marginBottom20,
                     children: [
-                        (0, s.jsx)(a.FormTitle, {
-                            id: M,
-                            children: C.Z.Messages.FORM_LABEL_INPUT_VOLUME
+                        (0, i.jsx)(a.FormTitle, {
+                            id: j,
+                            children: C.intl.string(C.t.OX2Bnp)
                         }),
-                        (0, s.jsx)(a.Slider, {
-                            initialValue: (0, g.P)(E),
+                        (0, i.jsx)(a.Slider, {
+                            initialValue: (0, g.P)(x),
                             asValueChanges: (e) => d.Z.setInputVolume((0, g.A)(e)),
-                            'aria-labelledby': M
+                            'aria-labelledby': j
                         })
                     ]
                 }),
-                (0, s.jsx)(a.FormItem, {
-                    title: C.Z.Messages.FORM_LABEL_OUTPUT_DEVICE,
-                    className: R.marginBottom20,
-                    children: (0, s.jsx)(a.SingleSelect, {
-                        value: T,
+                (0, i.jsx)(a.FormItem, {
+                    title: C.intl.string(C.t.dl18zc),
+                    className: v.marginBottom20,
+                    children: (0, i.jsx)(a.SingleSelect, {
+                        value: R,
                         onChange: (e) => d.Z.setOutputDevice(e, { location: 'Voice Settings' }),
-                        options: r().map(I, (e) => {
+                        options: l().map(I, (e) => {
                             let { id: t, name: n } = e;
                             return {
                                 value: t,
                                 label: n
                             };
                         }),
-                        isDisabled: S
+                        isDisabled: V
                     })
                 }),
-                (0, s.jsxs)(a.FormItem, {
-                    className: R.marginBottom20,
+                (0, i.jsxs)(a.FormItem, {
+                    className: v.marginBottom20,
                     children: [
-                        (0, s.jsx)(a.FormTitle, {
-                            id: O,
-                            children: C.Z.Messages.FORM_LABEL_OUTPUT_VOLUME
+                        (0, i.jsx)(a.FormTitle, {
+                            id: D,
+                            children: C.intl.string(C.t.eATD2N)
                         }),
-                        (0, s.jsx)(a.Slider, {
-                            initialValue: (0, g.P)(D),
+                        (0, i.jsx)(a.Slider, {
+                            initialValue: (0, g.P)(N),
                             maxValue: 200,
                             asValueChanges: (e) => d.Z.setOutputVolume((0, g.A)(e)),
-                            'aria-labelledby': O
+                            'aria-labelledby': D
                         })
                     ]
                 }),
-                (0, s.jsx)(a.FormItem, {
-                    title: C.Z.Messages.FORM_LABEL_INPUT_MODE,
-                    className: R.marginBottom20,
-                    children: (0, s.jsx)(a.RadioGroup, {
+                (0, i.jsx)(a.FormItem, {
+                    title: C.intl.string(C.t['pS+K2N']),
+                    className: v.marginBottom20,
+                    children: (0, i.jsx)(a.RadioGroup, {
                         onChange: (e) => {
                             let { value: t } = e;
                             return d.Z.setMode(t, {}, n);
                         },
-                        options: U,
-                        value: o
+                        options: y,
+                        value: r
                     })
                 }),
                 t
@@ -253,39 +253,39 @@ let I = l.ZP.connectStores([p.Z], (e) => {
         })
     );
 });
-function D(e) {
+function N(e) {
     var t;
     return (
         (0, m.Z)(() => {
-            null != _.e3s && e.onClose();
+            null != b.e3s && e.onClose();
         }),
-        (0, s.jsxs)(a.ModalRoot, {
+        (0, i.jsxs)(a.ModalRoot, {
             transitionState: e.transitionState,
-            'aria-label': C.Z.Messages.VOICE_SETTINGS,
+            'aria-label': C.intl.string(C.t.NiTd0d),
             children: [
-                (0, s.jsxs)(a.ModalHeader, {
+                (0, i.jsxs)(a.ModalHeader, {
                     children: [
-                        (0, s.jsxs)(h.Z.Child, {
+                        (0, i.jsxs)(h.Z.Child, {
                             children: [
-                                (0, s.jsx)(a.FormTitle, {
+                                (0, i.jsx)(a.FormTitle, {
                                     tag: 'h1',
-                                    className: R.marginReset,
-                                    children: C.Z.Messages.VOICE_SETTINGS
+                                    className: v.marginReset,
+                                    children: C.intl.string(C.t.NiTd0d)
                                 }),
-                                (0, s.jsx)(a.Text, {
+                                (0, i.jsx)(a.Text, {
                                     variant: 'text-xs/normal',
-                                    className: E.title,
+                                    className: x.title,
                                     children: e.title
                                 })
                             ]
                         }),
-                        (0, s.jsx)(h.Z.Child, {
+                        (0, i.jsx)(h.Z.Child, {
                             grow: 0,
-                            children: (0, s.jsx)(a.ModalCloseButton, { onClick: e.onClose })
+                            children: (0, i.jsx)(a.ModalCloseButton, { onClick: e.onClose })
                         })
                     ]
                 }),
-                (0, s.jsx)(a.ModalContent, { children: (0, s.jsx)(I, { mediaEngineContext: null !== (t = e.mediaEngineContext) && void 0 !== t ? t : b.Yn.DEFAULT }) })
+                (0, i.jsx)(a.ModalContent, { children: (0, i.jsx)(I, { mediaEngineContext: null !== (t = e.mediaEngineContext) && void 0 !== t ? t : f.Yn.DEFAULT }) })
             ]
         })
     );

@@ -1,34 +1,34 @@
-s.r(t);
-var a = s(200651),
-    n = s(192379),
-    i = s(481060),
-    o = s(689938),
-    d = s(881311);
-t.default = (e) => {
-    let { transitionState: t, processFiles: s, onClose: l } = e;
+i.r(e);
+var n = i(200651),
+    s = i(192379),
+    a = i(481060),
+    l = i(388032),
+    o = i(881311);
+e.default = (t) => {
+    let { transitionState: e, processFiles: i, onClose: r } = t;
     return (
-        n.useEffect(() => {
+        s.useEffect(() => {
             (async () => {
-                t === i.ModalTransitionState.ENTERED && (await s(), l());
+                e === a.ModalTransitionState.ENTERED && (await i(), r());
             })();
-        }, [l, s, t]),
-        (0, a.jsx)(i.ModalRoot, {
-            transitionState: t,
-            size: i.ModalSize.SMALL,
-            'aria-label': o.Z.Messages.UPLOADING_FILES_TITLE,
-            children: (0, a.jsxs)(i.ModalContent, {
-                className: d.modalContent,
+        }, [r, i, e]),
+        (0, n.jsx)(a.ModalRoot, {
+            transitionState: e,
+            size: a.ModalSize.SMALL,
+            'aria-label': l.intl.string(l.t['B/HSDQ']),
+            children: (0, n.jsxs)(a.ModalContent, {
+                className: o.modalContent,
                 children: [
-                    (0, a.jsx)(i.Spinner, { className: d.spinner }),
-                    (0, a.jsx)(i.FormSection, {
-                        tag: i.FormTitleTags.H1,
-                        titleClassName: d.title,
-                        title: o.Z.Messages.UPLOADING_FILES_TITLE,
-                        className: d.__invalid_content,
-                        children: (0, a.jsx)(i.FormText, {
-                            type: i.FormTextTypes.DESCRIPTION,
-                            className: d.description,
-                            children: o.Z.Messages.UPLOADING_LOADING_TEXT
+                    (0, n.jsx)(a.Spinner, { className: o.spinner }),
+                    (0, n.jsx)(a.FormSection, {
+                        tag: a.FormTitleTags.H1,
+                        titleClassName: o.title,
+                        title: l.intl.string(l.t['B/HSDQ']),
+                        className: o.__invalid_content,
+                        children: (0, n.jsx)(a.FormText, {
+                            type: a.FormTextTypes.DESCRIPTION,
+                            className: o.description,
+                            children: l.intl.string(l.t.k7OALi)
                         })
                     })
                 ]

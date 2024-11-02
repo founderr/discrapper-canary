@@ -1,32 +1,32 @@
 t.d(n, {
     Z: function () {
-        return r;
+        return o;
     }
 });
 var i = t(200651);
 t(192379);
-var a = t(481060),
-    s = t(163268),
-    l = t(689938);
-function r(e, n) {
+var l = t(481060),
+    r = t(163268),
+    a = t(388032);
+function o(e, n) {
     return null != n &&
-        (0, s.KP)(
+        (0, r.KP)(
             {
-                type: s.lJ.GenericMedia,
+                type: r.lJ.GenericMedia,
                 media: n
             },
-            (0, s.HH)(e)
+            (0, r.HH)(e)
         )
         ? (0, i.jsx)(
-              a.MenuItem,
+              l.MenuItem,
               {
                   id: 'report-image-false-positive',
-                  label: l.Z.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE,
+                  label: a.intl.string(a.t.ZH7P2t),
                   action: () => {
-                      (0, a.openModalLazy)(async () => {
-                          let { default: a } = await t(788679);
+                      (0, l.openModalLazy)(async () => {
+                          let { default: l } = await t(788679);
                           return (t) =>
-                              (0, i.jsx)(a, {
+                              (0, i.jsx)(l, {
                                   channelId: e.channel_id,
                                   messageId: e.id,
                                   mediaItemUrl: n.url,
@@ -34,7 +34,7 @@ function r(e, n) {
                               });
                       });
                   },
-                  icon: a.ImageWarningIcon
+                  icon: l.ImageWarningIcon
               },
               'report-image-false-positive'
           )

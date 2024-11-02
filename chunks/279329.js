@@ -5,19 +5,19 @@ t.d(n, {
 });
 var i = t(200651);
 t(192379);
-var a = t(442837),
-    s = t(481060),
-    l = t(196051),
-    r = t(441729),
-    o = t(689938);
+var l = t(442837),
+    r = t(481060),
+    a = t(196051),
+    o = t(441729),
+    s = t(388032);
 function u(e, n) {
-    let t = (0, a.e7)([r.Z], () => r.Z.isSpeakingMessage(n.id, e.id), [n, e]);
+    let t = (0, l.e7)([o.Z], () => o.Z.isSpeakingMessage(n.id, e.id), [n, e]);
     return '' === e.content
         ? null
-        : (0, i.jsx)(s.MenuItem, {
+        : (0, i.jsx)(r.MenuItem, {
               id: 'tts',
-              label: t ? o.Z.Messages.STOP_SPEAKING_MESSAGE : o.Z.Messages.SPEAK_MESSAGE,
-              icon: s.ChatSpeakIcon,
-              action: () => (t ? (0, l.NB)() : (0, l.LA)(n, e))
+              label: t ? s.intl.string(s.t.CJ30BA) : s.intl.string(s.t.yGLjXF),
+              icon: r.ChatSpeakIcon,
+              action: () => (t ? (0, a.NB)() : (0, a.LA)(n, e))
           });
 }

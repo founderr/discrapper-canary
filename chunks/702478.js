@@ -1,96 +1,96 @@
 n(47120);
-var s = n(200651),
-    a = n(192379),
-    i = n(772848),
-    r = n(640358),
-    l = n(442837),
+var i = n(200651),
+    r = n(192379),
+    l = n(772848),
+    s = n(640358),
+    a = n(442837),
     o = n(544891),
     c = n(704215),
     d = n(692547),
     u = n(481060),
-    _ = n(497321),
-    I = n(841470),
-    E = n(605236),
-    T = n(142497),
-    m = n(690221),
-    N = n(706454),
-    S = n(650774),
-    g = n(430824),
-    h = n(246946),
-    C = n(626135),
-    x = n(771212),
-    p = n(434404),
-    R = n(146596),
-    L = n(559368),
-    f = n(999382),
-    O = n(981631),
-    A = n(921944),
-    M = n(190378),
-    D = n(689938),
-    v = n(396466),
-    j = n(287837),
-    Z = n(573189),
-    b = n(899947),
-    U = n(117831),
-    G = n(996737),
-    P = n(21846),
-    B = n(280632),
-    y = n(44234),
-    F = n(117428);
-let w = function (e, t, n) {
-        let s = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-            a = null;
+    m = n(497321),
+    h = n(841470),
+    g = n(605236),
+    x = n(142497),
+    p = n(690221),
+    f = n(706454),
+    C = n(650774),
+    I = n(430824),
+    _ = n(246946),
+    N = n(626135),
+    v = n(771212),
+    T = n(434404),
+    j = n(146596),
+    E = n(559368),
+    S = n(999382),
+    b = n(981631),
+    R = n(921944),
+    Z = n(190378),
+    A = n(388032),
+    L = n(396466),
+    y = n(287837),
+    D = n(573189),
+    O = n(899947),
+    M = n(117831),
+    P = n(996737),
+    k = n(21846),
+    w = n(280632),
+    B = n(44234),
+    U = n(117428);
+let G = function (e, t, n) {
+        let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+            r = null;
         return (
-            null == t || Number.isNaN(t) ? (null == t || Number.isNaN(t)) && null != e && (a = D.Z.Messages.GUILD_ANALYTICS_METRICS_LAST_WEEK) : (a = D.Z.Messages.PERCENTAGE_SINCE_LAST_WEEK.format({ percentage: (0, r.o)(Math.abs(t), n) })),
+            null == t || Number.isNaN(t) ? (null == t || Number.isNaN(t)) && null != e && (r = A.intl.string(A.t.xO2msb)) : (r = A.intl.formatToPlainString(A.t.nskeMz, { percentage: (0, s.o)(Math.abs(t), n) })),
             {
-                localizedNumber: null != e ? ''.concat((0, r.o)(e, n)).concat(s ? '%' : '') : D.Z.Messages.NOT_AVAILABLE,
-                subtext: a,
+                localizedNumber: null != e ? ''.concat((0, s.o)(e, n)).concat(i ? '%' : '') : A.intl.string(A.t.jHpxws),
+                subtext: r,
                 isTrendingUp: t > 0,
                 isTrendingDown: t < 0
             }
         );
     },
-    k = function (e) {
+    F = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return t || e === O.evJ.NOT_ENOUGH_GUILD_MEMBERS
-            ? (0, s.jsx)(u.FormErrorBlock, {
+        return t || e === b.evJ.NOT_ENOUGH_GUILD_MEMBERS
+            ? (0, i.jsx)(u.FormErrorBlock, {
                   icon: u.CircleInformationIcon,
-                  className: v.notEnoughMembersError,
+                  className: L.notEnoughMembersError,
                   backgroundColor: u.FormErrorBlockColors.BACKGROUND_ACCENT,
-                  children: D.Z.Messages.GUILD_ANALYTICS_ERROR_GUILD_SIZE
+                  children: A.intl.string(A.t['FsgE/P'])
               })
             : null == e
               ? null
-              : (0, s.jsx)(u.FormErrorBlock, {
+              : (0, i.jsx)(u.FormErrorBlock, {
                     backgroundColor: u.FormErrorBlockColors.BACKGROUND_ACCENT,
-                    children: D.Z.Messages.GUILD_ANALYTICS_ERROR_MESSAGE
+                    children: A.intl.string(A.t.Iju63d)
                 });
     };
 function H(e) {
-    C.default.track(O.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: e });
-    let t = null == e ? O.E07.DEVELOPER_PORTAL : O.E07.DEVELOPER_PORTAL_GUILD_ANALYTICS(e),
-        n = (0, i.Z)();
+    N.default.track(b.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: e });
+    let t = null == e ? b.E07.DEVELOPER_PORTAL : b.E07.DEVELOPER_PORTAL_GUILD_ANALYTICS(e),
+        n = (0, l.Z)();
     return o.tn
         .post({
-            url: O.ANM.HANDOFF,
+            url: b.ANM.HANDOFF,
             body: { key: n },
             oldFormErrors: !0
         })
         .then(
             (e) => {
-                let s = e.body.handoff_token;
-                window.open(O.EYA.DEVELOPER_PORTAL_LOGIN_HANDOFF(n, s, t));
+                let i = e.body.handoff_token;
+                window.open(b.EYA.DEVELOPER_PORTAL_LOGIN_HANDOFF(n, i, t));
             },
             () => {
                 window.open(t);
             }
         );
 }
-let V = () => {
-    let [e, t] = a.useState(!1),
-        n = (0, l.e7)([f.Z], () => f.Z.getGuildId());
-    return (0, s.jsx)(u.Button, {
-        className: v.developerPortalCta,
+let z = () => {
+    let [e, t] = r.useState(!1),
+        n = (0, a.e7)([S.Z], () => S.Z.getGuildId());
+    return (0, i.jsx)(u.Button, {
+        className: L.developerPortalCta,
         onClick: () => {
             t(!0),
                 H(n).then(() => {
@@ -98,128 +98,128 @@ let V = () => {
                 });
         },
         submitting: e,
-        children: D.Z.Messages.GUILD_ANALYICS_DEVELOPERS_BUTTON
+        children: A.intl.string(A.t.Uskgx8)
     });
 };
-function Y(e) {
+function V(e) {
     let { guildId: t } = e,
-        { hasAccessRate: n, accessRate: i } = (0, l.cj)([L.Z], () => L.Z.getMemberInsights(t)),
-        r = (0, l.e7)([S.Z], () => {
+        { hasAccessRate: n, accessRate: l } = (0, a.cj)([E.Z], () => E.Z.getMemberInsights(t)),
+        s = (0, a.e7)([C.Z], () => {
             var e;
-            return null !== (e = S.Z.getMemberCount()) && void 0 !== e ? e : 0;
+            return null !== (e = C.Z.getMemberCount()) && void 0 !== e ? e : 0;
         }),
-        { showAccessRate: o } = (0, x.eA)(t, !n);
+        { showAccessRate: o } = (0, v.eA)(t, !n);
     if (
-        (a.useEffect(() => {
-            o && ((0, E.kk)(c.z.GUILD_INSIGHTS_ACCESS_RATE_NEW), (0, E.EW)(c.z.GUILD_INSIGHTS_ACCESS_RATE_NEW, { dismissAction: A.L.AUTO }));
+        (r.useEffect(() => {
+            o && ((0, g.kk)(c.z.GUILD_INSIGHTS_ACCESS_RATE_NEW), (0, g.EW)(c.z.GUILD_INSIGHTS_ACCESS_RATE_NEW, { dismissAction: R.L.AUTO }));
         }, [o]),
-        !o || !n || null == i)
+        !o || !n || null == l)
     )
         return null;
-    let _ = 10 * Math.ceil((1 - i) * 10),
-        I = F,
-        T = null,
-        N = null;
+    let m = 10 * Math.ceil((1 - l) * 10),
+        h = U,
+        x = null,
+        f = null;
     return (
-        i >= 0.9
-            ? ((I = F),
-              (T = D.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_VERY_GOOD.format({
+        l >= 0.9
+            ? ((h = U),
+              (x = A.intl.format(A.t.wMU3am, {
                   ratingHook: (e, t) =>
-                      (0, s.jsx)(
+                      (0, i.jsx)(
                           'span',
                           {
-                              className: v.ratingVeryGood,
+                              className: L.ratingVeryGood,
                               children: e
                           },
                           t
                       )
               })),
-              (N = D.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_LESS.format({ accessRate: 10 })))
-            : i >= (r > 10000 ? 0.7 : 0.8)
-              ? ((I = B),
-                (T = D.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_GOOD.format({
+              (f = A.intl.formatToPlainString(A.t.cgTr3d, { accessRate: 10 })))
+            : l >= (s > 10000 ? 0.7 : 0.8)
+              ? ((h = w),
+                (x = A.intl.format(A.t.DelTmZ, {
                     ratingHook: (e, t) =>
-                        (0, s.jsx)(
+                        (0, i.jsx)(
                             'span',
                             {
-                                className: v.ratingGood,
+                                className: L.ratingGood,
                                 children: e
                             },
                             t
                         )
                 })),
-                (N = D.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({ accessRate: _ })))
-              : i >= 0.5
-                ? ((I = y),
-                  (T = D.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_NEUTRAL.format({
+                (f = A.intl.formatToPlainString(A.t['+k7pAA'], { accessRate: m })))
+              : l >= 0.5
+                ? ((h = B),
+                  (x = A.intl.format(A.t.THsJo6, {
                       ratingHook: (e, t) =>
-                          (0, s.jsx)(
+                          (0, i.jsx)(
                               'span',
                               {
-                                  className: v.ratingNeutral,
+                                  className: L.ratingNeutral,
                                   children: e
                               },
                               t
                           )
                   })),
-                  (N = D.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({ accessRate: _ })))
-                : ((I = P),
-                  (T = D.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_BAD.format({
+                  (f = A.intl.formatToPlainString(A.t['+k7pAA'], { accessRate: m })))
+                : ((h = k),
+                  (x = A.intl.format(A.t.RNxsr6, {
                       ratingHook: (e, t) =>
-                          (0, s.jsx)(
+                          (0, i.jsx)(
                               'span',
                               {
-                                  className: v.ratingBad,
+                                  className: L.ratingBad,
                                   children: e
                               },
                               t
                           )
                   })),
-                  (N = 100 === _ ? D.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({ accessRate: _ }) : D.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_MORE.format({ accessRate: _ }))),
-        (0, s.jsxs)(s.Fragment, {
+                  (f = 100 === m ? A.intl.formatToPlainString(A.t['+k7pAA'], { accessRate: m }) : A.intl.formatToPlainString(A.t['Qsgz/v'], { accessRate: m }))),
+        (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, s.jsxs)(u.Heading, {
+                (0, i.jsxs)(u.Heading, {
                     variant: 'heading-md/semibold',
-                    className: v.insightsTitle,
+                    className: L.insightsTitle,
                     children: [
-                        D.Z.Messages.MEMBER_INSIGHTS_SERVER_ACCESS,
-                        (0, s.jsx)(u.TextBadge, {
-                            text: D.Z.Messages.BETA,
+                        A.intl.string(A.t['qF8c+/']),
+                        (0, i.jsx)(u.TextBadge, {
+                            text: A.intl.string(A.t.oW0eUV),
                             color: d.Z.unsafe_rawColors.BRAND_500.css,
-                            className: v.betaTag
+                            className: L.betaTag
                         })
                     ]
                 }),
-                (0, s.jsxs)('div', {
-                    className: v.memberInsightsContainer,
+                (0, i.jsxs)('div', {
+                    className: L.memberInsightsContainer,
                     children: [
-                        (0, s.jsxs)('div', {
-                            className: v.insightsHeader,
+                        (0, i.jsxs)('div', {
+                            className: L.insightsHeader,
                             children: [
-                                (0, s.jsx)('img', {
+                                (0, i.jsx)('img', {
                                     alt: '',
-                                    className: v.insightsIcon,
-                                    src: I
+                                    className: L.insightsIcon,
+                                    src: h
                                 }),
-                                (0, s.jsxs)('div', {
+                                (0, i.jsxs)('div', {
                                     children: [
-                                        (0, s.jsx)(u.Text, {
+                                        (0, i.jsx)(u.Text, {
                                             variant: 'text-md/semibold',
-                                            className: v.title,
-                                            children: T
+                                            className: L.title,
+                                            children: x
                                         }),
-                                        (0, s.jsxs)(u.Text, {
-                                            className: v.description,
+                                        (0, i.jsxs)(u.Text, {
+                                            className: L.description,
                                             variant: 'text-sm/normal',
                                             children: [
-                                                N,
-                                                (0, s.jsx)(u.TooltipContainer, {
-                                                    text: D.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATE_TOOLTIP,
-                                                    className: v.insightsTooltip,
-                                                    children: (0, s.jsx)(u.CircleInformationIcon, {
+                                                f,
+                                                (0, i.jsx)(u.TooltipContainer, {
+                                                    text: A.intl.string(A.t['60A+Hh']),
+                                                    className: L.insightsTooltip,
+                                                    children: (0, i.jsx)(u.CircleInformationIcon, {
                                                         size: 'xs',
                                                         color: 'currentColor',
-                                                        className: v.insightsTooltipIcon
+                                                        className: L.insightsTooltipIcon
                                                     })
                                                 })
                                             ]
@@ -228,68 +228,68 @@ function Y(e) {
                                 })
                             ]
                         }),
-                        i < 0.9
-                            ? (0, s.jsxs)(s.Fragment, {
+                        l < 0.9
+                            ? (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      (0, s.jsx)('div', { className: v.divider }),
-                                      (0, s.jsx)(u.Text, {
-                                          className: v.tips,
+                                      (0, i.jsx)('div', { className: L.divider }),
+                                      (0, i.jsx)(u.Text, {
+                                          className: L.tips,
                                           variant: 'text-sm/semibold',
-                                          children: D.Z.Messages.MEMBER_INSIGHTS_TIPS.format()
+                                          children: A.intl.format(A.t.lTFjS0, {})
                                       }),
-                                      (0, s.jsxs)('div', {
-                                          className: v.insightsActions,
+                                      (0, i.jsxs)('div', {
+                                          className: L.insightsActions,
                                           children: [
-                                              (0, s.jsxs)('div', {
-                                                  className: v.insightAction,
+                                              (0, i.jsxs)('div', {
+                                                  className: L.insightAction,
                                                   children: [
-                                                      (0, s.jsx)('img', {
+                                                      (0, i.jsx)('img', {
                                                           alt: '',
-                                                          className: v.actionIcon,
-                                                          src: b
+                                                          className: L.actionIcon,
+                                                          src: O
                                                       }),
-                                                      (0, s.jsx)(u.Text, {
-                                                          className: v.actionText,
+                                                      (0, i.jsx)(u.Text, {
+                                                          className: L.actionText,
                                                           variant: 'text-sm/normal',
-                                                          children: D.Z.Messages.ACCESS_RATE_ACTION_SIMPLIFY
+                                                          children: A.intl.string(A.t.SpYbQE)
                                                       })
                                                   ]
                                               }),
-                                              (0, s.jsx)('div', { className: v.dividerInline }),
-                                              (0, s.jsxs)('div', {
-                                                  className: v.insightAction,
+                                              (0, i.jsx)('div', { className: L.dividerInline }),
+                                              (0, i.jsxs)('div', {
+                                                  className: L.insightAction,
                                                   children: [
-                                                      (0, s.jsx)('img', {
+                                                      (0, i.jsx)('img', {
                                                           alt: '',
-                                                          className: v.actionIcon,
-                                                          src: U
+                                                          className: L.actionIcon,
+                                                          src: M
                                                       }),
-                                                      (0, s.jsx)(u.Text, {
-                                                          className: v.actionText,
+                                                      (0, i.jsx)(u.Text, {
+                                                          className: L.actionText,
                                                           variant: 'text-sm/normal',
-                                                          children: D.Z.Messages.ACCESS_RATE_ACTION_EXTRA_STEPS
+                                                          children: A.intl.string(A.t.fLKr9v)
                                                       })
                                                   ]
                                               }),
-                                              (0, s.jsx)('div', { className: v.dividerInline }),
-                                              (0, s.jsxs)('div', {
-                                                  className: v.insightAction,
+                                              (0, i.jsx)('div', { className: L.dividerInline }),
+                                              (0, i.jsxs)('div', {
+                                                  className: L.insightAction,
                                                   children: [
-                                                      (0, s.jsx)('img', {
+                                                      (0, i.jsx)('img', {
                                                           alt: '',
-                                                          className: v.actionIcon,
-                                                          src: Z
+                                                          className: L.actionIcon,
+                                                          src: D
                                                       }),
-                                                      (0, s.jsx)(u.Text, {
-                                                          className: v.actionText,
+                                                      (0, i.jsx)(u.Text, {
+                                                          className: L.actionText,
                                                           variant: 'text-sm/normal',
-                                                          children: D.Z.Messages.ACCESS_RATE_ACTION_BOTS.format({
+                                                          children: A.intl.format(A.t.cq9w2N, {
                                                               integrationsHook: (e, t) =>
-                                                                  (0, s.jsx)(
-                                                                      m.Z,
+                                                                  (0, i.jsx)(
+                                                                      p.Z,
                                                                       {
-                                                                          onClick: () => p.Z.setSection(O.pNK.INTEGRATIONS),
-                                                                          className: v.link,
+                                                                          onClick: () => T.Z.setSection(b.pNK.INTEGRATIONS),
+                                                                          className: L.link,
                                                                           children: e
                                                                       },
                                                                       t
@@ -298,19 +298,19 @@ function Y(e) {
                                                       })
                                                   ]
                                               }),
-                                              (0, s.jsx)('div', { className: v.dividerInline }),
-                                              (0, s.jsxs)('div', {
-                                                  className: v.insightAction,
+                                              (0, i.jsx)('div', { className: L.dividerInline }),
+                                              (0, i.jsxs)('div', {
+                                                  className: L.insightAction,
                                                   children: [
-                                                      (0, s.jsx)('img', {
+                                                      (0, i.jsx)('img', {
                                                           alt: '',
-                                                          className: v.actionIcon,
-                                                          src: j
+                                                          className: L.actionIcon,
+                                                          src: y
                                                       }),
-                                                      (0, s.jsx)(u.Text, {
-                                                          className: v.actionText,
+                                                      (0, i.jsx)(u.Text, {
+                                                          className: L.actionText,
                                                           variant: 'text-sm/normal',
-                                                          children: D.Z.Messages.ACCESS_RATE_ACTION_AUDIT
+                                                          children: A.intl.string(A.t['2Gz/j4'])
                                                       })
                                                   ]
                                               })
@@ -318,26 +318,26 @@ function Y(e) {
                                       })
                                   ]
                               })
-                            : (0, s.jsx)('div', {
-                                  className: v.insightsActions,
-                                  children: (0, s.jsxs)('div', {
-                                      className: v.insightAction,
+                            : (0, i.jsx)('div', {
+                                  className: L.insightsActions,
+                                  children: (0, i.jsxs)('div', {
+                                      className: L.insightAction,
                                       children: [
-                                          (0, s.jsx)('img', {
+                                          (0, i.jsx)('img', {
                                               alt: '',
-                                              className: v.actionIcon,
-                                              src: G
+                                              className: L.actionIcon,
+                                              src: P
                                           }),
-                                          (0, s.jsx)(u.Text, {
-                                              className: v.actionText,
+                                          (0, i.jsx)(u.Text, {
+                                              className: L.actionText,
                                               variant: 'text-sm/normal',
-                                              children: D.Z.Messages.ACCESS_RATE_ACTION_SUCCESS.format({
+                                              children: A.intl.format(A.t['3i3mAg'], {
                                                   insightsHook: (e, n) =>
-                                                      (0, s.jsx)(
-                                                          m.Z,
+                                                      (0, i.jsx)(
+                                                          p.Z,
                                                           {
                                                               onClick: () => H(t),
-                                                              className: v.link,
+                                                              className: L.link,
                                                               children: e
                                                           },
                                                           n
@@ -349,91 +349,91 @@ function Y(e) {
                               })
                     ]
                 }),
-                (0, s.jsx)('div', { className: v.divider }),
-                (0, s.jsx)(u.Heading, {
+                (0, i.jsx)('div', { className: L.divider }),
+                (0, i.jsx)(u.Heading, {
                     variant: 'heading-md/semibold',
-                    className: v.insightsTitle,
-                    children: D.Z.Messages.SERVER_INSIGHTS
+                    className: L.insightsTitle,
+                    children: A.intl.string(A.t['0wWfUF'])
                 })
             ]
         })
     );
 }
 t.Z = () => {
-    let e = (0, l.e7)([f.Z], () => f.Z.getGuildId()),
-        t = (0, l.e7)([S.Z], () => S.Z.getMemberCount(e)),
-        n = (0, l.e7)([g.Z], () => g.Z.getGuild(e)),
-        i = (0, l.e7)([N.default], () => N.default.locale),
-        { analytics: r, errorCode: o } = (0, l.cj)([L.Z], () => ({
-            analytics: null != e ? L.Z.getOverviewAnalytics(e) : null,
-            errorCode: L.Z.getError()
+    let e = (0, a.e7)([S.Z], () => S.Z.getGuildId()),
+        t = (0, a.e7)([C.Z], () => C.Z.getMemberCount(e)),
+        n = (0, a.e7)([I.Z], () => I.Z.getGuild(e)),
+        l = (0, a.e7)([f.default], () => f.default.locale),
+        { analytics: s, errorCode: o } = (0, a.cj)([E.Z], () => ({
+            analytics: null != e ? E.Z.getOverviewAnalytics(e) : null,
+            errorCode: E.Z.getError()
         })),
-        c = (0, l.e7)([h.Z], () => h.Z.getSettings().enabled),
-        d = null == t || null == n || (null != t && t < 500 && null != n && !n.hasFeature(O.oNc.PARTNERED) && !n.hasFeature(O.oNc.VERIFIED));
-    a.useEffect(() => {
-        null != e && !d && ((0, R.Vk)(e), (0, R.SR)(e), (0, R.xl)(e));
+        c = (0, a.e7)([_.Z], () => _.Z.getSettings().enabled),
+        d = null == t || null == n || (null != t && t < 500 && null != n && !n.hasFeature(b.oNc.PARTNERED) && !n.hasFeature(b.oNc.VERIFIED));
+    r.useEffect(() => {
+        null != e && !d && ((0, j.Vk)(e), (0, j.SR)(e), (0, j.xl)(e));
     }, [e, d]),
-        a.useEffect(() => {
-            (0, T.Kw)(M.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU);
+        r.useEffect(() => {
+            (0, x.Kw)(Z.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU);
         }, []);
-    let E =
-        null != r
-            ? (0, s.jsx)('div', {
-                  className: v.__invalid_guildAnalyticsOverviewWrapper,
-                  children: (0, s.jsxs)('div', {
-                      className: v.overviewData,
+    let g =
+        null != s
+            ? (0, i.jsx)('div', {
+                  className: L.__invalid_guildAnalyticsOverviewWrapper,
+                  children: (0, i.jsxs)('div', {
+                      className: L.overviewData,
                       children: [
-                          (0, s.jsx)(I.Z, {
-                              title: D.Z.Messages.WEEKLY_VISITORS,
-                              tooltipText: D.Z.Messages.VISITORS_INFO,
-                              ...w(r.visitors, r.visitorsChange, i)
+                          (0, i.jsx)(h.Z, {
+                              title: A.intl.string(A.t.i0Nora),
+                              tooltipText: A.intl.string(A.t.KiRbLC),
+                              ...G(s.visitors, s.visitorsChange, l)
                           }),
-                          (0, s.jsx)(I.Z, {
-                              title: D.Z.Messages.WEEKLY_COMMUNICATORS,
-                              tooltipText: D.Z.Messages.COMMUNICATORS_INFO,
-                              ...w(r.communicators, r.communicatorsChange, i)
+                          (0, i.jsx)(h.Z, {
+                              title: A.intl.string(A.t.DDAHdX),
+                              tooltipText: A.intl.string(A.t.HxWUkZ),
+                              ...G(s.communicators, s.communicatorsChange, l)
                           }),
-                          (0, s.jsx)(I.Z, {
-                              title: D.Z.Messages.WEEKLY_NEW_MEMBERS,
-                              ...w(r.newMembers, r.newMembersChange, i)
+                          (0, i.jsx)(h.Z, {
+                              title: A.intl.string(A.t.hYeOqK),
+                              ...G(s.newMembers, s.newMembersChange, l)
                           }),
-                          (0, s.jsx)(I.Z, {
-                              title: D.Z.Messages.WEEKLY_NEW_MEMBER_RETENTION,
-                              tooltipText: D.Z.Messages.NEW_MEMBER_RETENTION_INFO,
-                              ...w(r.pctRetained, r.pctRetainedChange, i, !0)
+                          (0, i.jsx)(h.Z, {
+                              title: A.intl.string(A.t.jj7OPz),
+                              tooltipText: A.intl.string(A.t.MQCsl5),
+                              ...G(s.pctRetained, s.pctRetainedChange, l, !0)
                           })
                       ]
                   })
               })
             : null;
-    return (0, s.jsxs)(u.FormSection, {
+    return (0, i.jsxs)(u.FormSection, {
         tag: u.FormTitleTags.H1,
-        title: D.Z.Messages.SERVER_INSIGHTS,
+        title: A.intl.string(A.t['0wWfUF']),
         children: [
-            (0, s.jsx)(u.FormText, {
+            (0, i.jsx)(u.FormText, {
                 type: u.FormTextTypes.DESCRIPTION,
-                children: D.Z.Messages.GUILD_ANALYTICS_DESCRIPTION.format()
+                children: A.intl.format(A.t.NIZ60d, {})
             }),
-            k(o, d),
-            null != e ? (0, s.jsx)(Y, { guildId: e }) : null,
-            (0, s.jsxs)('div', {
-                className: v.developerPortalCtaWrapper,
+            F(o, d),
+            null != e ? (0, i.jsx)(V, { guildId: e }) : null,
+            (0, i.jsxs)('div', {
+                className: L.developerPortalCtaWrapper,
                 children: [
-                    (0, s.jsx)('div', { className: v.placeholderImage }),
-                    (0, s.jsx)(u.Text, {
-                        className: v.developerPortalCtaText,
+                    (0, i.jsx)('div', { className: L.placeholderImage }),
+                    (0, i.jsx)(u.Text, {
+                        className: L.developerPortalCtaText,
                         variant: 'text-sm/normal',
-                        children: D.Z.Messages.GUILD_ANALYTICS_DEVELOPERS_CTA
+                        children: A.intl.string(A.t.A5vsws)
                     }),
-                    (0, s.jsx)(V, {})
+                    (0, i.jsx)(z, {})
                 ]
             }),
             c
-                ? (0, s.jsx)('div', {
-                      className: v.streamerMode,
-                      children: (0, s.jsx)(_.Z, {})
+                ? (0, i.jsx)('div', {
+                      className: L.streamerMode,
+                      children: (0, i.jsx)(m.Z, {})
                   })
-                : E
+                : g
         ]
     });
 };

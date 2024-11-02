@@ -1,122 +1,122 @@
 n.d(t, {
     Z: function () {
-        return M;
+        return j;
     }
 });
 var i = n(200651),
-    a = n(192379),
-    s = n(442837),
-    r = n(524437),
-    l = n(481060),
-    o = n(235820),
+    r = n(192379),
+    l = n(442837),
+    a = n(524437),
+    o = n(481060),
+    s = n(235820),
     c = n(494404),
     u = n(110924),
     d = n(198620),
-    _ = n(294218),
-    E = n(695346),
-    I = n(592125),
-    m = n(731290),
-    f = n(944486),
-    T = n(455199),
-    h = n(655354),
-    N = n(999671),
-    p = n(324081),
-    C = n(240126),
-    g = n(791914),
-    S = n(981631),
-    A = n(689938),
-    x = n(42967);
-let R = {
+    m = n(294218),
+    f = n(695346),
+    h = n(592125),
+    p = n(731290),
+    g = n(944486),
+    _ = n(455199),
+    C = n(655354),
+    E = n(999671),
+    I = n(324081),
+    x = n(240126),
+    v = n(791914),
+    N = n(981631),
+    T = n(388032),
+    S = n(42967);
+let b = {
     offset: {
         left: 4,
         right: -12
     }
 };
-function v(e, t, n) {
-    let i = t ? T.Z.guildFilter : null,
-        a = t ? T.Z.roleFilter : null,
-        s = t ? T.Z.everyoneFilter : null,
-        r = null;
-    null != e && null != i && (r = i === S.NgX.ALL_SERVERS ? null : e.getGuildId()), o.Z.fetchRecentMentions(n, S.DJj, r, a, s);
+function A(e, t, n) {
+    let i = t ? _.Z.guildFilter : null,
+        r = t ? _.Z.roleFilter : null,
+        l = t ? _.Z.everyoneFilter : null,
+        a = null;
+    null != e && null != i && (a = i === N.NgX.ALL_SERVERS ? null : e.getGuildId()), s.Z.fetchRecentMentions(n, N.DJj, a, r, l);
 }
-function M(e) {
-    let { setTab: t, onJump: n, badgeState: l, closePopout: _ } = e,
-        E = (0, s.e7)([I.Z, f.Z], () => I.Z.getChannel(f.Z.getChannelId())),
+function j(e) {
+    let { setTab: t, onJump: n, badgeState: o, closePopout: m } = e,
+        f = (0, l.e7)([h.Z, g.Z], () => h.Z.getChannel(g.Z.getChannelId())),
         {
-            messages: m,
-            hasMore: h,
-            loading: p,
-            guildFilter: C,
-            roleFilter: R,
-            everyoneFilter: M
-        } = (0, s.cj)([T.Z], () => ({
-            messages: T.Z.getMentions(),
-            hasMore: T.Z.hasMore,
-            loading: T.Z.loading,
-            guildFilter: T.Z.guildFilter,
-            roleFilter: T.Z.roleFilter,
-            everyoneFilter: T.Z.everyoneFilter
+            messages: p,
+            hasMore: C,
+            loading: I,
+            guildFilter: x,
+            roleFilter: b,
+            everyoneFilter: j
+        } = (0, l.cj)([_.Z], () => ({
+            messages: _.Z.getMentions(),
+            hasMore: _.Z.hasMore,
+            loading: _.Z.loading,
+            guildFilter: _.Z.guildFilter,
+            roleFilter: _.Z.roleFilter,
+            everyoneFilter: _.Z.everyoneFilter
         })),
-        O = (0, u.Z)(C),
-        Z = (0, u.Z)(R),
-        P = (0, u.Z)(M);
-    a.useEffect(() => {
-        if (!T.Z.hasLoadedEver) {
-            v(E, !0);
+        Z = (0, u.Z)(x),
+        P = (0, u.Z)(b),
+        L = (0, u.Z)(j);
+    r.useEffect(() => {
+        if (!_.Z.hasLoadedEver) {
+            A(f, !0);
             return;
         }
-        ((null != O && C !== O) || (null != Z && R !== Z) || (null != P && M !== P)) && v(E, !0);
-    }, [O, C, Z, R, P, M, E, !0]);
-    a.useEffect(() => {
-        (null == m ? void 0 : m.some(d.k5)) && (o.Z.clearMentions(), v(E, !0));
+        ((null != Z && x !== Z) || (null != P && b !== P) || (null != L && j !== L)) && A(f, !0);
+    }, [Z, x, P, b, L, j, f, !0]);
+    r.useEffect(() => {
+        (null == p ? void 0 : p.some(d.k5)) && (s.Z.clearMentions(), A(f, !0));
     }, []),
-        a.useEffect(
+        r.useEffect(
             () => () => {
-                o.Z.truncateMentions(S.DJj);
+                s.Z.truncateMentions(N.DJj);
             },
             []
         );
-    let D = a.useCallback(
+    let O = r.useCallback(
         () =>
-            (0, i.jsx)(g.Z, {
-                tab: r.X.MENTIONS,
+            (0, i.jsx)(v.Z, {
+                tab: a.X.MENTIONS,
                 setTab: t,
-                badgeState: l,
-                closePopout: _,
-                children: (0, i.jsx)(N.Z, {})
+                badgeState: o,
+                closePopout: m,
+                children: (0, i.jsx)(E.Z, {})
             }),
-        [!0, t, l, _]
+        [!0, t, o, m]
     );
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)(c.ZP, {
-            className: x.recentMentionsPopout,
-            scrollerClassName: x.scroller,
+            className: S.recentMentionsPopout,
+            scrollerClassName: S.scroller,
             onFetch: () => null,
             onJump: n,
             onCloseMessage: function (e) {
-                o.Z.deleteRecentMention(e.id);
+                s.Z.deleteRecentMention(e.id);
             },
-            channel: E,
-            messages: m,
-            loading: p,
-            hasMore: h,
+            channel: f,
+            messages: p,
+            loading: I,
+            hasMore: C,
             analyticsName: 'Recent Mentions',
             loadMore: function () {
-                v(E, !0, null != m && m.length > 0 ? m[m.length - 1].id : null);
+                A(f, !0, null != p && p.length > 0 ? p[p.length - 1].id : null);
             },
             canCloseAllMessages: !0,
-            renderHeader: D,
-            renderEmptyState: b,
-            renderMessage: L,
-            'aria-label': A.Z.Messages.RECENT_MENTIONS,
+            renderHeader: O,
+            renderEmptyState: y,
+            renderMessage: R,
+            'aria-label': T.intl.string(T.t.jbV6MD),
             listName: 'recents'
         })
     });
 }
-function O(e, t) {
+function Z(e, t) {
     return [
         (0, i.jsx)(
-            Z,
+            P,
             {
                 message: e,
                 gotoMessage: t
@@ -125,10 +125,10 @@ function O(e, t) {
         )
     ];
 }
-function L(e, t) {
+function R(e, t) {
     return [
         (0, i.jsx)(
-            Z,
+            P,
             {
                 message: e,
                 gotoMessage: t,
@@ -138,50 +138,50 @@ function L(e, t) {
         )
     ];
 }
-function Z(e) {
-    let { message: t, gotoMessage: n, dismissible: a } = e;
+function P(e) {
+    let { message: t, gotoMessage: n, dismissible: r } = e;
     if (null == t) return null;
-    let s = I.Z.getChannel(t.channel_id);
-    if (null == s) return null;
-    let r = m.Z.didAgree(s.getGuildId()),
-        c = !!s.isNSFW() && !r;
+    let l = h.Z.getChannel(t.channel_id);
+    if (null == l) return null;
+    let a = p.Z.didAgree(l.getGuildId()),
+        c = !!l.isNSFW() && !a;
     return (0, i.jsxs)('div', {
-        className: x.container,
+        className: S.container,
         children: [
-            (0, i.jsx)(p.Z, {
-                channel: s,
+            (0, i.jsx)(I.Z, {
+                channel: l,
                 gotoChannel: n,
                 children:
-                    null != a
-                        ? (0, i.jsx)(l.CircleIconButton, {
-                              className: x.closeButton,
-                              tooltip: A.Z.Messages.CLOSE,
-                              color: l.CircleIconButtonColors.TERTIARY,
-                              icon: (0, i.jsx)(l.XSmallIcon, {
+                    null != r
+                        ? (0, i.jsx)(o.CircleIconButton, {
+                              className: S.closeButton,
+                              tooltip: T.intl.string(T.t.cpT0Cg),
+                              color: o.CircleIconButtonColors.TERTIARY,
+                              icon: (0, i.jsx)(o.XSmallIcon, {
                                   size: 'xs',
                                   color: 'currentColor'
                               }),
-                              onClick: () => o.Z.deleteRecentMention(t.id)
+                              onClick: () => s.Z.deleteRecentMention(t.id)
                           })
                         : null
             }),
             (0, i.jsxs)('div', {
-                className: x.messageContainer,
+                className: S.messageContainer,
                 children: [
-                    (0, i.jsx)(h.Z, {
-                        className: x.jumpMessageButton,
+                    (0, i.jsx)(C.Z, {
+                        className: S.jumpMessageButton,
                         onJump: n
                     }),
                     (0, i.jsx)(
-                        _.Z,
+                        m.Z,
                         {
                             message: t,
-                            channel: s,
-                            className: x.message,
+                            channel: l,
+                            className: S.message,
                             hideAccessories: c,
-                            compact: E.jU.getSetting(),
+                            compact: f.jU.getSetting(),
                             animateAvatar: !1,
-                            focusProps: R,
+                            focusProps: b,
                             trackAnnouncementViews: !0
                         },
                         t.id
@@ -191,10 +191,10 @@ function Z(e) {
         ]
     });
 }
-function b(e) {
-    return (0, i.jsx)(C.Z, {
-        Icon: l.AtIcon,
-        header: A.Z.Messages.RECENT_MENTIONS_EMPTY_STATE_HEADER,
-        tip: A.Z.Messages.RECENT_MENTIONS_EMPTY_STATE_TIP
+function y(e) {
+    return (0, i.jsx)(x.Z, {
+        Icon: o.AtIcon,
+        header: T.intl.string(T.t['bgDz7+']),
+        tip: T.intl.string(T.t.NS15vr)
     });
 }

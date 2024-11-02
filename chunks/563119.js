@@ -8,19 +8,19 @@ var i = n(704215),
     u = n(131951),
     c = n(626135),
     d = n(542238),
-    _ = n(927923),
-    E = n(981631),
-    f = n(689938),
-    h = n(820611);
-let p = 'game_console_alert_modal',
-    I = 'game_console_ptt_alert_modal';
+    f = n(927923),
+    _ = n(981631),
+    h = n(388032),
+    p = n(820611);
+let m = 'game_console_alert_modal',
+    g = 'game_console_ptt_alert_modal';
 t.Z = {
     maybeShowPTTAlert(e) {
-        if (u.Z.getMode() !== E.pM4.PUSH_TO_TALK || (0, l.un)(i.z.CONSOLE_PTT_DISABLE_ALERT)) return Promise.resolve();
+        if (u.Z.getMode() !== _.pM4.PUSH_TO_TALK || (0, l.un)(i.z.CONSOLE_PTT_DISABLE_ALERT)) return Promise.resolve();
         let t = {
-            [E.ABu.XBOX]: f.Z.Messages.PTT_NOT_SUPPORTED_XBOX,
-            [E.ABu.PLAYSTATION]: f.Z.Messages.PTT_NOT_SUPPORTED_PLAYSTATION,
-            [E.ABu.PLAYSTATION_STAGING]: f.Z.Messages.PTT_NOT_SUPPORTED_PLAYSTATION
+            [_.ABu.XBOX]: h.intl.string(h.t.bVZ7v7),
+            [_.ABu.PLAYSTATION]: h.intl.string(h.t['6iqUsb']),
+            [_.ABu.PLAYSTATION_STAGING]: h.intl.string(h.t['6iqUsb'])
         }[e];
         return null == t
             ? Promise.resolve()
@@ -32,11 +32,11 @@ t.Z = {
                           (0, r.jsx)(s.default, {
                               ...e,
                               title: t,
-                              body: f.Z.Messages.PTT_NOT_SUPPORTED_ALERT_BODY,
+                              body: h.intl.string(h.t.bL21zs),
                               onConfirm: n,
-                              titleClassName: h.title
+                              titleClassName: p.title
                           });
-                  (0, a.nf)(I) ? (0, a.o)(I, o) : (0, a.h7)(o, { modalKey: I });
+                  (0, a.nf)(g) ? (0, a.o)(g, o) : (0, a.h7)(o, { modalKey: g });
               });
     },
     showSelfDismissableAlert(e) {
@@ -44,24 +44,24 @@ t.Z = {
             u = (0, r.jsx)(d.t, {
                 body: n,
                 errorCodeMessage: i,
-                dismissCallback: () => (0, a.Mr)(p)
+                dismissCallback: () => (0, a.Mr)(m)
             });
-        function f() {
+        function h() {
             null != l &&
                 ((0, o.Z)({ platformType: l }),
-                c.default.track(E.rMx.ACCOUNT_LINK_STEP, {
-                    previous_step: _.Lw,
+                c.default.track(_.rMx.ACCOUNT_LINK_STEP, {
+                    previous_step: f.Lw,
                     current_step: 'desktop oauth',
                     platform_type: l
                 }));
         }
-        let h = (e) =>
+        let p = (e) =>
             (0, r.jsx)(s.default, {
                 ...e,
                 title: t,
                 body: u,
-                onConfirm: f
+                onConfirm: h
             });
-        (0, a.nf)(p) ? (0, a.o)(p, h) : (0, a.h7)(h, { modalKey: p });
+        (0, a.nf)(m) ? (0, a.o)(m, p) : (0, a.h7)(p, { modalKey: m });
     }
 };

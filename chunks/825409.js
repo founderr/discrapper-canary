@@ -1,6 +1,6 @@
 n.d(t, {
     m: function () {
-        return E;
+        return _;
     },
     q: function () {
         return u;
@@ -68,7 +68,7 @@ class d extends c {
             });
     }
 }
-class _ extends c {
+class f extends c {
     refresh(e) {
         Object.assign(this._context, e),
             Object.keys(this._parsedMessages).forEach((e) => {
@@ -86,7 +86,7 @@ class _ extends c {
             (this._parsedMessages = this._createProxy(this._context));
     }
 }
-class E extends r.EventEmitter {
+class _ extends r.EventEmitter {
     updateMessagesForExperiment(e, t) {
         let n = this._fetchMessages(e);
         if (n instanceof Promise) {
@@ -220,7 +220,7 @@ class E extends r.EventEmitter {
             })),
             Intl.__addLocaleData && Intl.__addLocaleData(n(201688)),
             (this._languages = r()),
-            (this._provider = null != window.Proxy ? new _(this._getParsedMessages) : new d(this._getParsedMessages)),
+            (this._provider = null != window.Proxy ? new f(this._getParsedMessages) : new d(this._getParsedMessages)),
             (this.Messages = this._provider.getMessages()),
             (this._getMessages = t);
         try {

@@ -25,8 +25,8 @@ t.d(n, {
 var l = t(512722),
     a = t.n(l),
     i = t(304809),
-    s = t(70956),
-    r = t(208049),
+    r = t(70956),
+    s = t(208049),
     u = t(419202);
 let o = new AudioContext({ sampleRate: Math.min((0, i.N)().sampleRate, 48000) });
 async function c(e) {
@@ -50,14 +50,14 @@ async function d(e) {
     return t;
 }
 async function f(e) {
-    let { readPromise: n, guildId: t, name: l, volume: a, emojiId: i, emojiName: s } = e;
-    return (0, r.Dx)({
+    let { readPromise: n, guildId: t, name: l, volume: a, emojiId: i, emojiName: r } = e;
+    return (0, s.Dx)({
         guildId: t,
         name: l,
         sound: await n,
         volume: a,
         emojiId: i,
-        emojiName: s
+        emojiName: r
     });
 }
 async function m(e) {
@@ -128,8 +128,8 @@ async function m(e) {
 async function h(e, n) {
     let t = (function (e, n) {
         let { startMs: t, endMs: l } = n,
-            { sampleRate: a, numberOfChannels: i, duration: r } = e,
-            u = r * s.Z.Millis.SECOND,
+            { sampleRate: a, numberOfChannels: i, duration: s } = e,
+            u = s * r.Z.Millis.SECOND,
             c = Math.min(l, u);
         if (0 === t && c === u) return e;
         let d = Math.floor((t / u) * e.length),

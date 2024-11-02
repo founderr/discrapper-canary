@@ -1,11 +1,11 @@
 t.d(n, {
     Z: function () {
-        return x;
+        return g;
     }
 }),
     t(47120);
-var a = t(200651),
-    r = t(192379),
+var r = t(200651),
+    a = t(192379),
     i = t(120356),
     s = t.n(i),
     o = t(392711),
@@ -13,139 +13,139 @@ var a = t(200651),
     c = t(584922),
     d = t(692547),
     u = t(481060),
-    m = t(689938),
-    _ = t(631403);
-function f(e) {
-    let { title: n, children: t, onEdit: r, onRemove: i, canRemove: o, actionsLocation: l } = e;
-    return (0, a.jsxs)('div', {
-        className: _.backgroundContainer,
+    m = t(388032),
+    f = t(631403);
+function h(e) {
+    let { title: n, children: t, onEdit: a, onRemove: i, canRemove: o, actionsLocation: l } = e;
+    return (0, r.jsxs)('div', {
+        className: f.backgroundContainer,
         children: [
-            (0, a.jsxs)('div', {
-                className: _.containerPadding,
+            (0, r.jsxs)('div', {
+                className: f.containerPadding,
                 children: [
-                    (0, a.jsx)(u.FormTitle, {
+                    (0, r.jsx)(u.FormTitle, {
                         tag: 'h3',
-                        className: _.containerTitle,
+                        className: f.containerTitle,
                         children: n
                     }),
                     t
                 ]
             }),
             'footer' === l &&
-                (0, a.jsxs)(u.FormSection, {
-                    className: _.containerFooter,
+                (0, r.jsxs)(u.FormSection, {
+                    className: f.containerFooter,
                     children: [
-                        (0, a.jsx)(u.Tooltip, {
-                            text: m.Z.Messages.CLAN_APPLICATION_CANT_REMOVE_FIELD,
+                        (0, r.jsx)(u.Tooltip, {
+                            text: m.intl.string(m.t.B3Jj1N),
                             shouldShow: !o,
                             children: (e) =>
-                                (0, a.jsx)(u.Button, {
+                                (0, r.jsx)(u.Button, {
                                     ...e,
-                                    className: s()(_.removeButton, _.button),
+                                    className: s()(f.removeButton, f.button),
                                     size: u.Button.Sizes.SMALL,
                                     look: u.Button.Looks.BLANK,
                                     onClick: i,
                                     disabled: !o,
-                                    children: m.Z.Messages.REMOVE
+                                    children: m.intl.string(m.t.N86XcH)
                                 })
                         }),
-                        (0, a.jsx)(u.Button, {
-                            className: _.button,
+                        (0, r.jsx)(u.Button, {
+                            className: f.button,
                             size: u.Button.Sizes.SMALL,
                             color: u.Button.Colors.PRIMARY,
-                            onClick: r,
-                            children: m.Z.Messages.EDIT
+                            onClick: a,
+                            children: m.intl.string(m.t.bt75u7)
                         })
                     ]
                 })
         ]
     });
 }
-let C = 'FORM_FIELD';
-function h(e) {
+let x = 'FORM_FIELD';
+function p(e) {
     let { index: n, field: t, isDropHovered: i, onDrop: m } = e,
-        h = (0, o.debounce)(async (e, n, t) => {
+        p = (0, o.debounce)(async (e, n, t) => {
             await m(e, n, t);
         }),
-        x = r.useRef(null),
-        [, p] = (0, l.c)({
-            type: C,
+        g = a.useRef(null),
+        [, C] = (0, l.c)({
+            type: x,
             item: {
                 index: n,
                 field: t
             },
             end: (e, n) => {
-                null != e && !n.didDrop() && h(e.field, null, !0);
+                null != e && !n.didDrop() && p(e.field, null, !0);
             }
         }),
-        [, g] = (0, c.L)({
-            accept: C,
+        [, b] = (0, c.L)({
+            accept: x,
             hover: (e, t) => {
-                var a;
-                let { index: r } = e,
-                    i = null === (a = x.current) || void 0 === a ? void 0 : a.getBoundingClientRect(),
+                var r;
+                let { index: a } = e,
+                    i = null === (r = g.current) || void 0 === r ? void 0 : r.getBoundingClientRect(),
                     s = t.getClientOffset();
                 if (null == i || null == s) return;
                 let o = (i.bottom - i.top) / 2,
                     l = s.y - i.top;
-                (!(r < n) || !(l < o)) && (!(r > n) || !(l < o)) && r !== n && h(e.field, n, !1);
+                (!(a < n) || !(l < o)) && (!(a > n) || !(l < o)) && a !== n && p(e.field, n, !1);
             },
             drop: (e) => {
-                h(e.field, n, !0);
+                p(e.field, n, !0);
             }
         });
     return (
-        r.useLayoutEffect(
+        a.useLayoutEffect(
             () => (
-                p(g(x)),
+                C(b(g)),
                 () => {
-                    g(null), p(null);
+                    b(null), C(null);
                 }
             ),
-            [p, g]
+            [C, b]
         ),
-        (0, a.jsxs)('div', {
-            ref: x,
+        (0, r.jsxs)('div', {
+            ref: g,
             'data-dnd-name': 'field-'.concat(n),
-            className: s()(_.dragContainer, { [_.dropHovered]: i }),
+            className: s()(f.dragContainer, { [f.dropHovered]: i }),
             children: [
-                (0, a.jsx)('div', {
-                    className: _.dragIconContainer,
-                    children: (0, a.jsx)(u.DragIcon, {
+                (0, r.jsx)('div', {
+                    className: f.dragIconContainer,
+                    children: (0, r.jsx)(u.DragIcon, {
                         size: 'xs',
-                        className: _.dragIcon,
+                        className: f.dragIcon,
                         color: d.Z.unsafe_rawColors.PRIMARY_400.css
                     })
                 }),
-                (0, a.jsx)(f, { ...e })
+                (0, r.jsx)(h, { ...e })
             ]
         })
     );
 }
-function x(e) {
-    return (0, a.jsxs)('div', {
-        className: _.formFieldContainer,
+function g(e) {
+    return (0, r.jsxs)('div', {
+        className: f.formFieldContainer,
         children: [
-            (0, a.jsx)('div', {
-                className: _.spacingContainer,
-                children: e.isDragEnabled ? (0, a.jsx)(h, { ...e }) : (0, a.jsx)(f, { ...e })
+            (0, r.jsx)('div', {
+                className: f.spacingContainer,
+                children: e.isDragEnabled ? (0, r.jsx)(p, { ...e }) : (0, r.jsx)(h, { ...e })
             }),
             'side' === e.actionsLocation &&
-                (0, a.jsxs)('div', {
-                    className: _.actionButtonsContainer,
+                (0, r.jsxs)('div', {
+                    className: f.actionButtonsContainer,
                     children: [
-                        (0, a.jsx)(u.Clickable, {
-                            className: _.actionButton,
+                        (0, r.jsx)(u.Clickable, {
+                            className: f.actionButton,
                             onClick: e.onEdit,
-                            'aria-label': m.Z.Messages.EDIT,
-                            children: (0, a.jsx)(u.PencilIcon, { size: 'xs' })
+                            'aria-label': m.intl.string(m.t.bt75u7),
+                            children: (0, r.jsx)(u.PencilIcon, { size: 'xs' })
                         }),
                         e.canRemove &&
-                            (0, a.jsx)(u.Clickable, {
-                                className: _.actionButton,
+                            (0, r.jsx)(u.Clickable, {
+                                className: f.actionButton,
                                 onClick: e.onRemove,
-                                'aria-label': m.Z.Messages.REMOVE,
-                                children: (0, a.jsx)(u.TrashIcon, { size: 'xs' })
+                                'aria-label': m.intl.string(m.t.N86XcH),
+                                children: (0, r.jsx)(u.TrashIcon, { size: 'xs' })
                             })
                     ]
                 })

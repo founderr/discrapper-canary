@@ -19,12 +19,12 @@ function l(e, t, n) {
 let u = s.tI.PRESET_VIDEO,
     c = s.LY.RESOLUTION_720,
     d = s.ws.FPS_30,
-    _ = !0;
-class E extends (r = i.ZP.PersistedStore) {
+    f = !0;
+class _ extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
             var t, n;
-            (u = null !== (t = e.preset) && void 0 !== t ? t : s.tI.PRESET_VIDEO), (c = e.resolution), (d = e.fps), (_ = null === (n = e.soundshareEnabled) || void 0 === n || n);
+            (u = null !== (t = e.preset) && void 0 !== t ? t : s.tI.PRESET_VIDEO), (c = e.resolution), (d = e.fps), (f = null === (n = e.soundshareEnabled) || void 0 === n || n);
         }
     }
     getState() {
@@ -32,13 +32,13 @@ class E extends (r = i.ZP.PersistedStore) {
             preset: u,
             resolution: c,
             fps: d,
-            soundshareEnabled: _
+            soundshareEnabled: f
         };
     }
 }
-l(E, 'displayName', 'ApplicationStreamingSettingsStore'),
-    l(E, 'persistKey', 'ApplicationStreamingSettingStore'),
-    (t.Z = new E(a.Z, {
+l(_, 'displayName', 'ApplicationStreamingSettingsStore'),
+    l(_, 'persistKey', 'ApplicationStreamingSettingStore'),
+    (t.Z = new _(a.Z, {
         MEDIA_ENGINE_SET_GO_LIVE_SOURCE: function (e) {
             let { settings: t } = e;
             if ((null == t ? void 0 : t.context) === o.Yn.STREAM) {
@@ -49,6 +49,6 @@ l(E, 'displayName', 'ApplicationStreamingSettingsStore'),
         STREAM_UPDATE_SETTINGS: function (e) {
             let { preset: t, resolution: n, frameRate: r, soundshareEnabled: i } = e,
                 a = !1;
-            return null != t && ((u = t), (a = !0)), null != n && ((c = n), (a = !0)), null != r && ((d = r), (a = !0)), null != i && ((_ = i), (a = !0)), a;
+            return null != t && ((u = t), (a = !0)), null != n && ((c = n), (a = !0)), null != r && ((d = r), (a = !0)), null != i && ((f = i), (a = !0)), a;
         }
     }));

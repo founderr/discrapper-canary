@@ -44,7 +44,7 @@ n(689118)(c, o),
     (d.prototype.flush = function () {
         if (this.cache.length) return this.cache;
     });
-function _(e, t, n) {
+function f(e, t, n) {
     var o = a[e.toLowerCase()];
     if (!o) throw TypeError('invalid suite type');
     if (('string' == typeof n && (n = i.from(n)), 'GCM' !== o.mode && n.length !== o.iv)) throw TypeError('invalid iv length ' + n.length);
@@ -55,6 +55,6 @@ function _(e, t, n) {
     var n = a[e.toLowerCase()];
     if (!n) throw TypeError('invalid suite type');
     var r = u(t, !1, n.key, n.iv);
-    return _(e, r.key, r.iv);
+    return f(e, r.key, r.iv);
 }),
-    (t.createDecipheriv = _);
+    (t.createDecipheriv = f);

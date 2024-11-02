@@ -1,47 +1,47 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return _;
+        return u;
     }
 });
-var n = t(200651);
-t(192379);
-var a = t(481060),
-    i = t(37234),
-    r = t(703656),
-    o = t(981631),
-    l = t(689938),
-    c = t(149267),
-    d = t(286359);
-function _() {
-    return (0, n.jsxs)('div', {
+var i = n(200651);
+n(192379);
+var s = n(481060),
+    r = n(37234),
+    l = n(703656),
+    a = n(981631),
+    o = n(388032),
+    c = n(149267),
+    d = n(286359);
+function u() {
+    return (0, i.jsxs)('div', {
         className: c.wrapper,
         children: [
-            (0, n.jsx)('img', {
+            (0, i.jsx)('img', {
                 className: c.icon,
                 alt: '',
                 src: d
             }),
-            (0, n.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: c.info,
                 children: [
-                    (0, n.jsx)(a.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: 'text-lg/bold',
-                        children: l.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PUBLIC_SERVER_TITLE
+                        children: o.intl.string(o.t.ZHNSYW)
                     }),
-                    (0, n.jsx)(a.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-muted',
-                        children: l.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PUBLIC_SERVER_SUBTITLE
+                        children: o.intl.string(o.t.kCj5pq)
                     })
                 ]
             }),
-            (0, n.jsx)(a.Button, {
-                color: a.Button.Colors.PRIMARY,
+            (0, i.jsx)(s.Button, {
+                color: s.Button.Colors.PRIMARY,
                 onClick: () => {
-                    (0, r.uL)(o.Z5c.GUILD_DISCOVERY), (0, i.xf)();
+                    (0, l.uL)(a.Z5c.GUILD_DISCOVERY), (0, r.xf)();
                 },
-                size: a.Button.Sizes.LARGE,
-                children: l.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PUBLIC_SERVER_CTA
+                size: s.Button.Sizes.LARGE,
+                children: o.intl.string(o.t.JFlifn)
             })
         ]
     });

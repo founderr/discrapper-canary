@@ -14,28 +14,28 @@ var r = n(175922),
 function d(e, t, n) {
     void 0 === n && (n = !1);
     var d,
-        _,
-        E,
         f,
-        h = (0, s.Re)(t);
-    var p = (0, s.Re)(t) && ((_ = (d = t).getBoundingClientRect()), (E = (0, c.NM)(_.width) / d.offsetWidth || 1), (f = (0, c.NM)(_.height) / d.offsetHeight || 1), 1 !== E || 1 !== f),
-        I = (0, l.Z)(t),
-        m = (0, r.Z)(e, p, n),
-        T = {
+        _,
+        h,
+        p = (0, s.Re)(t);
+    var m = (0, s.Re)(t) && ((f = (d = t).getBoundingClientRect()), (_ = (0, c.NM)(f.width) / d.offsetWidth || 1), (h = (0, c.NM)(f.height) / d.offsetHeight || 1), 1 !== _ || 1 !== h),
+        g = (0, l.Z)(t),
+        E = (0, r.Z)(e, m, n),
+        v = {
             scrollLeft: 0,
             scrollTop: 0
         },
-        S = {
+        I = {
             x: 0,
             y: 0
         };
     return (
-        (h || (!h && !n)) && (('body' !== (0, a.Z)(t) || (0, u.Z)(I)) && (T = (0, i.Z)(t)), (0, s.Re)(t) ? ((S = (0, r.Z)(t, !0)), (S.x += t.clientLeft), (S.y += t.clientTop)) : I && (S.x = (0, o.Z)(I))),
+        (p || (!p && !n)) && (('body' !== (0, a.Z)(t) || (0, u.Z)(g)) && (v = (0, i.Z)(t)), (0, s.Re)(t) ? ((I = (0, r.Z)(t, !0)), (I.x += t.clientLeft), (I.y += t.clientTop)) : g && (I.x = (0, o.Z)(g))),
         {
-            x: m.left + T.scrollLeft - S.x,
-            y: m.top + T.scrollTop - S.y,
-            width: m.width,
-            height: m.height
+            x: E.left + v.scrollLeft - I.x,
+            y: E.top + v.scrollTop - I.y,
+            width: E.width,
+            height: E.height
         }
     );
 }

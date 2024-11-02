@@ -1,12 +1,12 @@
 t.d(n, {
     Z: function () {
-        return l;
+        return a;
     }
 });
 var i = t(192379),
-    a = t(434650);
-function l(e) {
-    let { onVisible: n, threshold: t, minTimeVisibleMs: l } = e,
+    l = t(434650);
+function a(e) {
+    let { onVisible: n, threshold: t, minTimeVisibleMs: a } = e,
         o = i.useRef(!1),
         r = i.useRef(null);
     return (
@@ -16,12 +16,12 @@ function l(e) {
             },
             []
         ),
-        (0, a.O)((e) => {
+        (0, l.O)((e) => {
             if ((null != r.current && !e && !1 === o.current && (clearTimeout(r.current), (r.current = null)), !e || !0 === o.current)) return;
             let t = () => {
                 n(), (o.current = !0), (r.current = null);
             };
-            null != l ? (r.current = setTimeout(t, l)) : t();
+            null != a ? (r.current = setTimeout(t, a)) : t();
         }, t)
     );
 }

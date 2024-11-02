@@ -10,10 +10,10 @@ if (
     12633 == n.j)
 )
     var i = n(155281);
-var s = n(222146),
-    a = n(749210),
-    l = n(430824),
-    r = n(496675),
+var l = n(222146),
+    r = n(749210),
+    a = n(430824),
+    s = n(496675),
     o = n(979651),
     c = n(938475),
     u = n(981631);
@@ -25,16 +25,16 @@ function h(e) {
             canDrop(e) {
                 var t, n;
                 let { channel: i } = e,
-                    s = i.getGuildId(),
-                    a = null !== (n = null === (t = l.Z.getGuild(s)) || void 0 === t ? void 0 : t.maxVideoChannelUsers) && void 0 !== n ? n : -1,
+                    l = i.getGuildId(),
+                    r = null !== (n = null === (t = a.Z.getGuild(l)) || void 0 === t ? void 0 : t.maxVideoChannelUsers) && void 0 !== n ? n : -1,
                     d = c.ZP.countVoiceStatesForChannel(i.id),
-                    h = null != s && o.Z.hasVideo(i.id) && a > 0 && d >= a + 1;
-                return r.Z.can(u.Plq.MOVE_MEMBERS, i) && r.Z.can(u.Plq.CONNECT, i) && !h;
+                    h = null != l && o.Z.hasVideo(i.id) && r > 0 && d >= r + 1;
+                return s.Z.can(u.Plq.MOVE_MEMBERS, i) && s.Z.can(u.Plq.CONNECT, i) && !h;
             },
             drop(e, t) {
                 let { channel: n } = e,
                     i = o.Z.getVoiceStateForUser(t.getItem().user.id);
-                (null == i ? void 0 : i.channelId) !== n.id && a.Z.setChannel(n.getGuildId(), t.getItem().user.id, n.id);
+                (null == i ? void 0 : i.channelId) !== n.id && r.Z.setChannel(n.getGuildId(), t.getItem().user.id, n.id);
             }
         },
         (e, t) => ({
@@ -44,7 +44,7 @@ function h(e) {
     )(e);
 }
 function m(e) {
-    return (0, s.E)(
+    return (0, l.E)(
         d,
         {
             canDrag(e) {

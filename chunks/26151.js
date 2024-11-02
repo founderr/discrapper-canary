@@ -7,11 +7,11 @@ var r = n(544891),
     u = n(668781),
     c = n(194359),
     d = n(287734),
-    _ = n(981631),
-    E = n(689938);
+    f = n(981631),
+    _ = n(388032);
 t.Z = {
     call(e, t, n, i, a) {
-        let f = (n) => {
+        let h = (n) => {
             d.default.selectVoiceChannel(e, t), n && this.ring(e), null == a || a(e);
         };
         if (null != i) {
@@ -19,23 +19,23 @@ t.Z = {
             let t = o.default.getUser(i);
             r.tn
                 .get({
-                    url: _.ANM.CALL(e),
+                    url: f.ANM.CALL(e),
                     oldFormErrors: !0
                 })
                 .then(
                     (e) => {
-                        f(n && e.body.ringable);
+                        h(n && e.body.ringable);
                     },
                     () => {
-                        l.default.track(_.rMx.OPEN_POPOUT, {
+                        l.default.track(f.rMx.OPEN_POPOUT, {
                             type: 'Not Friend',
                             source: 'Call'
                         }),
                             u.Z.show({
-                                title: E.Z.Messages.START_CALL,
-                                body: E.Z.Messages.CALL_INVITE_NOT_FRIENDS.format({ username: null != t ? t.username : '' }),
-                                confirmText: E.Z.Messages.ADD_FRIEND_BUTTON,
-                                cancelText: E.Z.Messages.OKAY,
+                                title: _.intl.string(_.t.My50nZ),
+                                body: _.intl.format(_.t.IdKo29, { username: null != t ? t.username : '' }),
+                                confirmText: _.intl.string(_.t['PMsq/f']),
+                                cancelText: _.intl.string(_.t.BddRzc),
                                 onConfirm() {
                                     c.Z.addRelationship({
                                         userId: i,
@@ -45,13 +45,13 @@ t.Z = {
                             });
                     }
                 );
-        } else f(n);
+        } else h(n);
     },
     ring(e, t) {
         let n = a.Z.getCall(e);
         if (null != n && null != n.messageId && !a.Z.isCallUnavailable(e)) {
             r.tn.post({
-                url: _.ANM.CALL_RING(e),
+                url: f.ANM.CALL_RING(e),
                 body: { recipients: t },
                 oldFormErrors: !0
             });
@@ -65,7 +65,7 @@ t.Z = {
     },
     stopRinging: (e, t) =>
         r.tn.post({
-            url: _.ANM.CALL_STOP_RINGING(e),
+            url: f.ANM.CALL_STOP_RINGING(e),
             body: { recipients: t },
             oldFormErrors: !0
         })

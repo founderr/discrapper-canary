@@ -1,102 +1,102 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return D;
+        return O;
     }
 });
-var n = t(200651),
-    a = t(192379),
-    i = t(512722),
-    r = t.n(i),
-    o = t(442837),
-    l = t(481060),
-    c = t(570140),
-    d = t(497321),
-    _ = t(100527),
-    u = t(367907),
-    E = t(906732),
-    T = t(296810),
-    S = t(921813),
-    I = t(621853),
-    N = t(246946),
-    m = t(594174),
-    C = t(63063),
-    A = t(74538),
-    g = t(18438),
-    h = t(778825),
-    O = t(856607),
-    p = t(594496),
-    R = t(856768),
-    x = t(981631),
-    M = t(689938);
-function f(e) {
-    (0, l.openModalLazy)(async () => {
-        let { default: s } = await t.e('84509').then(t.bind(t, 933696));
-        return (t) =>
-            (0, n.jsx)(s, {
+var i = n(200651),
+    s = n(192379),
+    r = n(512722),
+    l = n.n(r),
+    a = n(442837),
+    o = n(481060),
+    c = n(570140),
+    d = n(497321),
+    u = n(100527),
+    m = n(367907),
+    h = n(906732),
+    g = n(296810),
+    p = n(921813),
+    x = n(621853),
+    S = n(246946),
+    T = n(594174),
+    C = n(63063),
+    _ = n(74538),
+    E = n(18438),
+    f = n(778825),
+    I = n(856607),
+    N = n(594496),
+    A = n(856768),
+    b = n(981631),
+    v = n(388032);
+function j(e) {
+    (0, o.openModalLazy)(async () => {
+        let { default: t } = await n.e('84509').then(n.bind(n, 933696));
+        return (n) =>
+            (0, i.jsx)(t, {
                 source: {
                     ...e,
-                    page: x.ZY5.GUILD_MEMBER_PROFILE_SETTINGS
+                    page: b.ZY5.GUILD_MEMBER_PROFILE_SETTINGS
                 },
-                ...t
+                ...n
             });
     });
 }
-function D(e) {
-    let { selectedGuild: s } = e,
-        { analyticsLocations: t } = (0, E.ZP)(_.Z.GUILD_PROFILE),
-        i = (0, o.e7)([m.default], () => {
-            let e = m.default.getCurrentUser();
-            return r()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
+function O(e) {
+    let { selectedGuild: t } = e,
+        { analyticsLocations: n } = (0, h.ZP)(u.Z.GUILD_PROFILE),
+        r = (0, a.e7)([T.default], () => {
+            let e = T.default.getCurrentUser();
+            return l()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
         }),
-        D = (0, o.e7)([I.Z], () => !I.Z.isFetchingProfile(i.id, null == s ? void 0 : s.id)),
-        L = (0, o.e7)([N.Z], () => N.Z.hidePersonalInformation),
-        { source: P, ...b } = (0, o.cj)([h.Z], () => ({
-            ...h.Z.getAllPending(),
-            source: h.Z.getSource()
+        O = (0, a.e7)([x.Z], () => !x.Z.isFetchingProfile(r.id, null == t ? void 0 : t.id)),
+        R = (0, a.e7)([S.Z], () => S.Z.hidePersonalInformation),
+        { source: P, ...D } = (0, a.cj)([f.Z], () => ({
+            ...f.Z.getAllPending(),
+            source: f.Z.getSource()
         }));
-    return (a.useEffect(() => () => c.Z.wait(g.W3), []),
-    a.useEffect(() => {
+    return (s.useEffect(() => () => c.Z.wait(E.W3), []),
+    s.useEffect(() => {
         null != P &&
-            u.ZP.trackWithMetadata(x.rMx.SETTINGS_PANE_VIEWED, {
+            m.ZP.trackWithMetadata(b.rMx.SETTINGS_PANE_VIEWED, {
                 settings_type: 'guild',
-                destination_pane: x.jXE.SETTINGS_CUSTOMIZE_PROFILE,
+                destination_pane: b.jXE.SETTINGS_CUSTOMIZE_PROFILE,
                 source: P
             });
     }, [P]),
-    L)
-        ? (0, n.jsx)(d.Z, {})
-        : D
-          ? (0, n.jsxs)(E.Gt, {
-                value: t,
+    R)
+        ? (0, i.jsx)(d.Z, {})
+        : O
+          ? (0, i.jsxs)(h.Gt, {
+                value: n,
                 children: [
-                    (0, n.jsx)(l.Text, {
+                    (0, i.jsx)(o.Text, {
                         variant: 'text-sm/normal',
-                        children: M.Z.Messages.PROFILE_CUSTOMIZATION_GUILD_HINT.format({ helpCenterLink: C.Z.getArticleURL(x.BhN.GUILD_PROFILES) })
+                        children: v.intl.format(v.t['/PTB2N'], { helpCenterLink: C.Z.getArticleURL(b.BhN.GUILD_PROFILES) })
                     }),
-                    null != s
-                        ? (0, n.jsxs)(n.Fragment, {
+                    null != t
+                        ? (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, n.jsx)(R.Z, {
-                                      guildId: s.id,
+                                  (0, i.jsx)(A.Z, {
+                                      guildId: t.id,
                                       onChange: (e) => {
-                                          null != e && (0, g.HP)(e);
+                                          null != e && (0, E.HP)(e);
                                       }
                                   }),
-                                  (0, n.jsx)(T.Z, {
-                                      previewTitle: M.Z.Messages.CHANGE_IDENTITY_PREVIEW_WITH_GUILD_NAME.format({ guildName: null == s ? void 0 : s.name }),
-                                      profilePreview: (0, n.jsx)(S.Z, {
-                                          user: i,
-                                          guild: s,
-                                          canUsePremiumCustomization: A.ZP.canUsePremiumProfileCustomization(i),
-                                          onUpsellClick: f,
-                                          ...b
+                                  (0, i.jsx)(g.Z, {
+                                      previewTitle: v.intl.formatToPlainString(v.t.Tc0slJ, { guildName: null == t ? void 0 : t.name }),
+                                      profilePreview: (0, i.jsx)(p.Z, {
+                                          user: r,
+                                          guild: t,
+                                          canUsePremiumCustomization: _.ZP.canUsePremiumProfileCustomization(r),
+                                          onUpsellClick: j,
+                                          ...D
                                       }),
-                                      children: (0, n.jsx)(p.Z, {})
+                                      children: (0, i.jsx)(N.Z, {})
                                   })
                               ]
                           })
-                        : (0, n.jsx)(O.Z, {})
+                        : (0, i.jsx)(I.Z, {})
                 ]
             })
-          : (0, n.jsx)(l.Spinner, {});
+          : (0, i.jsx)(o.Spinner, {});
 }

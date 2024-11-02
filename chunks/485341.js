@@ -10,7 +10,7 @@ var r = n(399606),
     i = n(695346),
     a = n(246946),
     s = n(594174),
-    o = n(689938);
+    o = n(388032);
 let l = 'quest_completed',
     u = 'legacy_username';
 function c(e) {
@@ -25,7 +25,7 @@ function c(e) {
         c &&
             (d = d.map((e) => ({
                 ...e,
-                description: e.id === u ? o.Z.Messages.STREAMER_MODE_ENABLED : e.description
+                description: e.id === u ? o.intl.string(o.t.Br1ls7) : e.description
             }))),
         d
     );

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return _;
     }
 });
 var r = n(200651),
@@ -11,9 +11,9 @@ var r = n(200651),
     l = n(481060),
     u = n(518950),
     c = n(357355),
-    d = n(689938),
-    _ = n(447234);
-function E() {
+    d = n(388032),
+    f = n(447234);
+function _() {
     let e = (0, o.e7)([c.Z], () => c.Z.affinities.slice(0, 3)),
         t = e[0],
         { avatarSrc: n, eventHandlers: a } = (0, u.Z)({
@@ -21,25 +21,25 @@ function E() {
             size: l.AvatarSizes.SIZE_24,
             animateOnHover: !0
         }),
-        E = (e) => (null != e.globalName ? e.globalName : e.username),
-        f = i.useMemo(() => (e.length >= 2 ? d.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_3.format({ username: E(e[0]) }) : 1 === e.length ? d.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_1.format({ username: E(e[0]) }) : ''), [e]);
+        _ = (e) => (null != e.globalName ? e.globalName : e.username),
+        h = i.useMemo(() => (e.length >= 2 ? d.intl.formatToPlainString(d.t.c7ETJC, { username: _(e[0]) }) : 1 === e.length ? d.intl.formatToPlainString(d.t.dpjXPD, { username: _(e[0]) }) : ''), [e]);
     return 0 === e.length
         ? null
         : (0, r.jsxs)('div', {
-              className: _.container,
+              className: f.container,
               children: [
                   (0, r.jsx)(l.Avatar, {
-                      className: _.__invalid_icon,
+                      className: f.__invalid_icon,
                       src: n,
                       'aria-label': t.username,
                       size: l.AvatarSizes.SIZE_24,
                       ...a
                   }),
                   (0, r.jsx)(l.Text, {
-                      className: s()(_.text),
+                      className: s()(f.text),
                       variant: 'text-sm/normal',
                       color: 'always-white',
-                      children: f
+                      children: h
                   })
               ]
           });

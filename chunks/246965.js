@@ -1,69 +1,69 @@
 n(411104);
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(774078),
-    r = n(100527),
-    l = n(906732),
-    o = n(963249),
+var r = n(481060),
+    l = n(774078),
+    a = n(100527),
+    o = n(906732),
+    s = n(963249),
     c = n(639119),
     u = n(474936),
     d = n(981631),
-    _ = n(689938),
-    E = n(569252);
+    m = n(388032),
+    f = n(569252);
 t.Z = function (e) {
     var t;
-    let { dismissCurrentNotice: n, subscriptionTier: I } = e,
-        { analyticsLocations: m } = (0, l.ZP)(
+    let { dismissCurrentNotice: n, subscriptionTier: h } = e,
+        { analyticsLocations: p } = (0, o.ZP)(
             (function (e) {
                 switch (e) {
                     case u.Si.TIER_0:
-                        return r.Z.PREMIUM_TIER_0_TRIAL_ENDING_NOTICE;
+                        return a.Z.PREMIUM_TIER_0_TRIAL_ENDING_NOTICE;
                     case u.Si.TIER_2:
-                        return r.Z.PREMIUM_TIER_2_TRIAL_ENDING_NOTICE;
+                        return a.Z.PREMIUM_TIER_2_TRIAL_ENDING_NOTICE;
                     default:
                         throw Error('Unsupported subscription tier: '.concat(e));
                 }
-            })(I)
+            })(h)
         ),
-        f = (0, c.N)(),
-        T = (0, s.Z)(null != f && null != f.expires_at ? Date.parse(f.expires_at) : 0);
-    return null == f || (null === (t = f.subscription_trial) || void 0 === t ? void 0 : t.sku_id) !== I || null == f.expires_at || Object.values(T).every((e) => 0 === e)
+        g = (0, c.N)(),
+        _ = (0, l.Z)(null != g && null != g.expires_at ? Date.parse(g.expires_at) : 0);
+    return null == g || (null === (t = g.subscription_trial) || void 0 === t ? void 0 : t.sku_id) !== h || null == g.expires_at || Object.values(_).every((e) => 0 === e)
         ? null
-        : (0, i.jsxs)(a.Notice, {
+        : (0, i.jsxs)(r.Notice, {
               color: (function (e) {
                   switch (e) {
                       case u.Si.TIER_0:
-                          return a.NoticeColors.PREMIUM_TIER_0;
+                          return r.NoticeColors.PREMIUM_TIER_0;
                       case u.Si.TIER_2:
-                          return a.NoticeColors.PREMIUM_TIER_2;
+                          return r.NoticeColors.PREMIUM_TIER_2;
                       default:
                           throw Error('Unsupported subscription tier: '.concat(e));
                   }
-              })(I),
+              })(h),
               children: [
-                  (0, i.jsx)(a.NoticeCloseButton, { onClick: n }),
-                  (0, i.jsx)(a.NitroWheelIcon, {
+                  (0, i.jsx)(r.NoticeCloseButton, { onClick: n }),
+                  (0, i.jsx)(r.NitroWheelIcon, {
                       size: 'md',
                       color: 'currentColor',
-                      className: E.premiumIcon
+                      className: f.premiumIcon
                   }),
                   (function (e, t) {
                       switch (e) {
                           case u.Si.TIER_0:
-                              return t.days > 0 ? _.Z.Messages.NOTICE_PREMIUM_TIER_0_TRIAL_ENDING_DAYS_VARIANT.format({ days: t.days }) : t.hours > 0 ? _.Z.Messages.NOTICE_PREMIUM_TIER_0_TRIAL_ENDING_HOURS_VARIANT.format({ hours: t.hours }) : _.Z.Messages.NOTICE_PREMIUM_TIER_0_TRIAL_ENDING_MINUTES_VARIANT.format({ minutes: Math.max(t.minutes, 1) });
+                              return t.days > 0 ? m.intl.formatToPlainString(m.t.sP5OqK, { days: t.days }) : t.hours > 0 ? m.intl.formatToPlainString(m.t['7Lhfu7'], { hours: t.hours }) : m.intl.formatToPlainString(m.t.coDiS0, { minutes: Math.max(t.minutes, 1) });
                           case u.Si.TIER_2:
-                              return t.days > 0 ? _.Z.Messages.NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_DAYS_VARIANT.format({ days: t.days }) : t.hours > 0 ? _.Z.Messages.NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_HOURS_VARIANT.format({ hours: t.hours }) : _.Z.Messages.NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_MINUTES_VARIANT.format({ minutes: Math.max(t.minutes, 1) });
+                              return t.days > 0 ? m.intl.formatToPlainString(m.t['4prs5e'], { days: t.days }) : t.hours > 0 ? m.intl.formatToPlainString(m.t.OD5nIS, { hours: t.hours }) : m.intl.formatToPlainString(m.t.rvyXjI, { minutes: Math.max(t.minutes, 1) });
                           default:
                               throw Error('Unsupported subscription tier: '.concat(e));
                       }
-                  })(I, T),
-                  (0, i.jsx)(a.NoticeButton, {
+                  })(h, _),
+                  (0, i.jsx)(r.NoticeButton, {
                       onClick: () => {
-                          (0, o.Z)({
-                              trialId: f.trial_id,
-                              subscriptionTier: I,
-                              analyticsLocations: m,
+                          (0, s.Z)({
+                              trialId: g.trial_id,
+                              subscriptionTier: h,
+                              analyticsLocations: p,
                               analyticsObject: {
                                   page: d.ZY5.IN_APP,
                                   section: d.jXE.NOTIFICATION_BAR,
@@ -74,13 +74,13 @@ t.Z = function (e) {
                       children: (function (e) {
                           switch (e) {
                               case u.Si.TIER_0:
-                                  return _.Z.Messages.NOTICE_PREMIUM_TIER_0_TRIAL_ENDING_CTA_VARIANT;
+                                  return m.intl.string(m.t.mCG029);
                               case u.Si.TIER_2:
-                                  return _.Z.Messages.NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_CTA_VARIANT;
+                                  return m.intl.string(m.t['7590PT']);
                               default:
                                   throw Error('Unsupported subscription tier: '.concat(e));
                           }
-                      })(I)
+                      })(h)
                   })
               ]
           });

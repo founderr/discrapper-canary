@@ -1,18 +1,18 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return u;
     }
 }),
     n(47120);
 var i = n(200651),
-    o = n(192379),
-    a = n(100621),
+    a = n(192379),
+    o = n(100621),
     s = n(849146),
     r = n(481060);
-let u = () => {
-    let e = o.useRef(null),
-        [t, n] = o.useState(0),
-        i = o.useMemo(
+let l = () => {
+    let e = a.useRef(null),
+        [t, n] = a.useState(0),
+        i = a.useMemo(
             () =>
                 new s.Z((e) => {
                     let [t] = e;
@@ -21,33 +21,33 @@ let u = () => {
             []
         );
     return (
-        o.useLayoutEffect(() => (null != e.current && i.observe(e.current), () => i.disconnect()), [i]),
+        a.useLayoutEffect(() => (null != e.current && i.observe(e.current), () => i.disconnect()), [i]),
         {
             ref: e,
             height: t
         }
     );
 };
-function l(e) {
-    let { show: t, children: n, top: o = 0, bottom: s = 0 } = e,
-        { ref: l, height: g } = u(),
-        d = (0, r.useSpring)({
+function u(e) {
+    let { show: t, children: n, top: a = 0, bottom: s = 0 } = e,
+        { ref: u, height: d } = l(),
+        c = (0, r.useSpring)({
             from: {
                 height: 0,
                 paddingBottom: '0px',
                 marginTop: '0px'
             },
             to: {
-                height: t ? g : 0,
+                height: t ? d : 0,
                 paddingBottom: t ? ''.concat(s, 'px') : '0px',
-                marginTop: t ? ''.concat(o, 'px') : '0px'
+                marginTop: t ? ''.concat(a, 'px') : '0px'
             },
             config: {
                 tension: 170,
                 friction: 26
             }
         }),
-        c = (0, r.useSpring)({
+        g = (0, r.useSpring)({
             from: { opacity: 0 },
             to: { opacity: t ? 1 : 0 },
             config: {
@@ -55,16 +55,16 @@ function l(e) {
                 easing: t ? (e) => e ** 4 : (e) => e * (2 - e)
             }
         });
-    return (0, i.jsx)(a.animated.div, {
+    return (0, i.jsx)(o.animated.div, {
         style: {
             overflow: 'hidden',
-            height: d.height,
-            paddingBottom: d.paddingBottom,
-            marginTop: d.marginTop
+            height: c.height,
+            paddingBottom: c.paddingBottom,
+            marginTop: c.marginTop
         },
-        children: (0, i.jsx)(a.animated.div, {
-            style: { opacity: c.opacity },
-            ref: l,
+        children: (0, i.jsx)(o.animated.div, {
+            style: { opacity: g.opacity },
+            ref: u,
             children: n
         })
     });

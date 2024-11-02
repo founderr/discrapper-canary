@@ -3,7 +3,7 @@ n.d(t, {
         return r;
     },
     Hv: function () {
-        return E;
+        return _;
     },
     JD: function () {
         return d;
@@ -12,7 +12,7 @@ n.d(t, {
         return c;
     },
     y_: function () {
-        return _;
+        return f;
     },
     ym: function () {
         return u;
@@ -84,14 +84,14 @@ function d(e, t) {
         }
     };
 }
-function _(e) {
+function f(e) {
     var t;
     return {
         ...e,
         type: ((t = e), (0, a.tw)(t.contentType) ? 'IMAGE' : (0, a.X2)(t.contentType) && null != t.proxyUrl && null != o.Z.toURLSafe(t.proxyUrl) ? 'VIDEO' : 'INVALID')
     };
 }
-function E(e, t, n) {
+function _(e, t, n) {
     return {
         type: n,
         url: e.url,

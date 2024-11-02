@@ -1,36 +1,36 @@
 n.d(t, {
     HG: function () {
-        return E;
+        return m;
     },
     Iv: function () {
         return u;
     },
     XN: function () {
-        return _;
+        return h;
     }
 });
 var i = n(704215),
-    a = n(823385),
-    s = n(327689),
-    r = n(421176),
-    l = n(456065),
+    r = n(823385),
+    l = n(327689),
+    a = n(421176),
+    s = n(456065),
     o = n(683743),
     c = n(823379),
     d = n(981631);
 let u = 'lastHiddenChannelNotice',
-    _ = [
+    h = [
         {
             type: d.vID.CLAN_ADMIN_UPSELL,
             dismissibleContentType: i.z.CHANNEL_LIST_CLAN_ADMIN_UPSELL
         },
         {
             type: d.vID.GUILD_BOOSTING,
-            store: r.Z,
+            store: a.Z,
             dismissibleContentType: i.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION
         },
         {
             type: d.vID.GUILD_BANNER,
-            store: s.Z,
+            store: l.Z,
             dismissibleContentType: i.z.CHANNEL_NOTICE_GUILD_BANNER
         },
         {
@@ -40,12 +40,12 @@ let u = 'lastHiddenChannelNotice',
         },
         {
             type: d.vID.HUB_LINK,
-            store: l.Z,
+            store: s.Z,
             dismissibleContentType: i.z.CHANNEL_NOTICE_HUBLINK
         },
         {
             type: d.vID.QUICKSWITCHER,
-            store: a.Z,
+            store: r.Z,
             dismissibleContentType: i.z.CHANNEL_NOTICE_QUICKSWITCHER
         },
         {
@@ -53,4 +53,4 @@ let u = 'lastHiddenChannelNotice',
             dismissibleContentType: i.z.LINKED_ROLE_ADMIN_GUILD
         }
     ],
-    E = _.map((e) => e.store).filter(c.lm);
+    m = h.map((e) => e.store).filter(c.lm);

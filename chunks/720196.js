@@ -1,10 +1,10 @@
-var s, r;
+var i, r;
 n.d(t, {
     n: function () {
-        return s;
+        return i;
     }
 }),
-    ((r = s || (s = {})).START = 'start'),
+    ((r = i || (i = {})).START = 'start'),
     (r.PASSWORD = 'password'),
     (r.SUCCESS = 'success'),
     (r.FAILED = 'failed');

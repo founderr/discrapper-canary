@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return k;
     }
 }),
     n(47120);
@@ -9,8 +9,8 @@ var r = n(200651),
     l = n(120356),
     i = n.n(l),
     o = n(392711),
-    s = n(913527),
-    c = n.n(s),
+    c = n(913527),
+    s = n.n(c),
     d = n(481060),
     u = n(570140),
     h = n(665149),
@@ -21,16 +21,16 @@ var r = n(200651),
     g = n(257785),
     b = n(484036),
     v = n(681619),
-    _ = n(621060),
-    j = n(246195),
-    C = n(219299);
+    j = n(621060),
+    C = n(246195),
+    _ = n(219299);
 function T(e) {
     return parseFloat(e.toFixed(3));
 }
 let S = [
     {
         key: 'store',
-        cellClassName: j.actionColumn,
+        cellClassName: C.actionColumn,
         render(e) {
             let { trace: t } = e;
             return t.name;
@@ -38,7 +38,7 @@ let S = [
     },
     {
         key: 'time',
-        cellClassName: j.totalTimeColumn,
+        cellClassName: C.totalTimeColumn,
         render(e) {
             let { trace: t } = e;
             return ''.concat(T(t.time), ' ms');
@@ -69,11 +69,11 @@ let y = [
         render(e) {
             var t;
             let { actionLog: n } = e,
-                a = c()(n.createdAt);
+                a = s()(n.createdAt);
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsxs)(g.E, {
-                        className: j.actionProperties,
+                        className: C.actionProperties,
                         children: [
                             (0, r.jsx)(g.Z9, {
                                 name: 'Created at',
@@ -90,7 +90,7 @@ let y = [
                         ]
                     }),
                     (0, r.jsx)(d.ScrollerThin, {
-                        className: j.inspectorContainer,
+                        className: C.inspectorContainer,
                         children: (0, r.jsx)(p.Z, { data: n.action })
                     })
                 ]
@@ -116,18 +116,18 @@ function I(e) {
                           {
                               id: 'error',
                               name: (0, r.jsxs)(r.Fragment, {
-                                  children: [(0, r.jsx)(x.Z, { className: j.errorIcon }), 'Error']
+                                  children: [(0, r.jsx)(x.Z, { className: C.errorIcon }), 'Error']
                               }),
                               render(e) {
                                   let { actionLog: t } = e;
                                   return (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)('div', {
-                                              className: i()(j.errorToolbar, C.toolbar),
+                                              className: i()(C.errorToolbar, _.toolbar),
                                               children: (0, r.jsx)('div', {
-                                                  className: C.toolbarGroup,
+                                                  className: _.toolbarGroup,
                                                   children: (0, r.jsx)(d.Button, {
-                                                      className: C.toolbarButton,
+                                                      className: _.toolbarButton,
                                                       size: d.Button.Sizes.MIN,
                                                       onClick: () => console.error(t.error),
                                                       children: 'Log to Console'
@@ -135,7 +135,7 @@ function I(e) {
                                               })
                                           }),
                                           (0, r.jsx)(d.ScrollerThin, {
-                                              className: j.inspectorContainer,
+                                              className: C.inspectorContainer,
                                               children: (0, r.jsx)(p.Z, { data: t.error })
                                           })
                                       ]
@@ -146,15 +146,15 @@ function I(e) {
                     : y,
             [t]
         ),
-        { TabBar: o, renderSelectedTab: s } = (0, _.Z)({ tabs: l }, [l]);
+        { TabBar: o, renderSelectedTab: c } = (0, j.Z)({ tabs: l }, [l]);
     return (0, r.jsxs)(b.Z, {
-        className: j.subPanel,
+        className: C.subPanel,
         minHeight: 100,
         initialHeight: n,
         children: [
             (0, r.jsx)(o, {}),
             (0, r.jsxs)(h.ZP, {
-                className: i()(C.headerBar, j.subPanelHeaderBar),
+                className: i()(_.headerBar, C.subPanelHeaderBar),
                 children: [
                     (0, r.jsx)(h.ZP.Icon, {
                         icon: d.ReceiptIcon,
@@ -163,31 +163,31 @@ function I(e) {
                     (0, r.jsx)(h.ZP.Title, { children: t.name })
                 ]
             }),
-            s({ actionLog: t })
+            c({ actionLog: t })
         ]
     });
 }
 let w = [
     {
         key: 'action',
-        cellClassName: j.actionColumn,
+        cellClassName: C.actionColumn,
         render(e) {
             let { actionLog: t } = e;
             return (0, r.jsxs)(r.Fragment, {
-                children: [t.error && (0, r.jsx)(x.Z, { className: j.errorIcon }), t.name]
+                children: [t.error && (0, r.jsx)(x.Z, { className: C.errorIcon }), t.name]
             });
         }
     },
     {
         key: 'total time',
-        cellClassName: j.totalTimeColumn,
+        cellClassName: C.totalTimeColumn,
         render(e) {
             let { actionLog: t } = e;
             return ''.concat(T(t.totalTime), ' ms');
         }
     }
 ];
-function E() {
+function k() {
     let e = a.useRef(null),
         [t, n] = a.useState(''),
         l = (function (e) {
@@ -206,7 +206,7 @@ function E() {
                 t
             );
         })(u.Z.actionLogger),
-        s = a.useMemo(
+        c = a.useMemo(
             () =>
                 l.map((e) => ({
                     key: e.id.toString(),
@@ -214,7 +214,7 @@ function E() {
                 })),
             [l]
         ),
-        [c, h] = a.useState(s),
+        [s, h] = a.useState(c),
         [x, f] = a.useState(),
         p = a.useRef(null),
         g = a.useCallback(
@@ -243,19 +243,19 @@ function E() {
         );
     return (
         a.useEffect(() => {
-            g(t, s);
-        }, [t, g, s]),
+            g(t, c);
+        }, [t, g, c]),
         a.useEffect(() => {
             p.current = null;
         }, []),
         (0, r.jsxs)('div', {
             ref: e,
-            className: i()(C.panel, j.panel),
+            className: i()(_.panel, C.panel),
             children: [
                 (0, r.jsx)('div', {
-                    className: j.toolbar,
+                    className: C.toolbar,
                     children: (0, r.jsx)(d.SearchBar, {
-                        className: j.searchBar,
+                        className: C.searchBar,
                         query: t,
                         onChange: n,
                         onClear: () => n(''),
@@ -264,7 +264,7 @@ function E() {
                 }),
                 (0, r.jsx)(v.Z, {
                     columns: w,
-                    data: t.trim().length > 0 ? c : s,
+                    data: t.trim().length > 0 ? s : c,
                     selectedRowKey: null == x ? void 0 : x.id.toString(),
                     onClickRow: (e) => f(e.actionLog)
                 }),

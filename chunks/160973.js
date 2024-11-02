@@ -1,11 +1,11 @@
 t.d(n, {
     Z: function () {
-        return _;
+        return h;
     }
 });
 var i = t(442837),
-    a = t(595519),
-    l = t(374065),
+    l = t(595519),
+    a = t(374065),
     o = t(761122),
     r = t(542094),
     s = t(973616),
@@ -13,33 +13,33 @@ var i = t(442837),
     d = t(496675),
     u = t(358085),
     m = t(231338),
-    p = t(689938);
-function _(e) {
+    p = t(388032);
+function h(e) {
     let n,
-        { channelId: t, application: _, activityAction: C } = e,
-        h = (0, i.e7)([c.Z], () => c.Z.getChannel(t)),
-        f = (0, i.e7)([d.Z], () => d.Z.can(m.Pl.USE_EMBEDDED_ACTIVITIES, h)),
-        A = (0, l.KF)(null == h ? void 0 : h.id),
-        E = !1;
-    switch (C) {
+        { channelId: t, application: h, activityAction: f } = e,
+        C = (0, i.e7)([c.Z], () => c.Z.getChannel(t)),
+        v = (0, i.e7)([d.Z], () => d.Z.can(m.Pl.USE_EMBEDDED_ACTIVITIES, C)),
+        x = (0, a.KF)(null == C ? void 0 : C.id),
+        _ = !1;
+    switch (f) {
         case r.JS.LEAVE:
-            E = !1;
+            _ = !1;
             break;
         case r.JS.START:
-            (null == h ? void 0 : h.isGuildVoice()) ? A !== l.jy.CAN_LAUNCH && (E = !0) : !(0, a.WS)(h) && (E = !0);
+            (null == C ? void 0 : C.isGuildVoice()) ? x !== a.jy.CAN_LAUNCH && (_ = !0) : !(0, l.WS)(C) && (_ = !0);
             break;
         case r.JS.JOIN:
-            (null == h ? void 0 : h.isGuildVoice()) ? (E = !f) : !(0, a.WS)(h) && (E = !0);
+            (null == C ? void 0 : C.isGuildVoice()) ? (_ = !v) : !(0, l.WS)(C) && (_ = !0);
     }
-    if (C !== r.JS.LEAVE) {
-        let e = _ instanceof s.Z ? _.embeddedActivityConfig : _.embedded_activity_config,
+    if (f !== r.JS.LEAVE) {
+        let e = h instanceof s.Z ? h.embeddedActivityConfig : h.embedded_activity_config,
             t = (0, o.Z)((0, u.getOS)());
-        null == e || e.supported_platforms.includes(t) ? (null == h ? void 0 : h.isThread()) && ((E = !0), (n = p.Z.Messages.APP_LAUNCHER_ACTIVITY_NOT_AVAILABLE_IN_THREAD)) : ((E = !1), (n = p.Z.Messages.APP_LAUNCHER_ACTIVITY_NOT_AVAILABLE_ON_DEVICE));
+        null == e || e.supported_platforms.includes(t) ? (null == C ? void 0 : C.isThread()) && ((_ = !0), (n = p.intl.string(p.t.ddSR3t))) : ((_ = !1), (n = p.intl.string(p.t.z2YTgI)));
     }
     return (
-        E && null == n && (n = p.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_DISABLED_START),
+        _ && null == n && (n = p.intl.string(p.t.f41E1t)),
         {
-            disabled: E,
+            disabled: _,
             reason: n
         }
     );

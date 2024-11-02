@@ -7,7 +7,7 @@ var r = n(200651);
 n(192379);
 var i = n(481060),
     a = n(929204),
-    s = n(689938),
+    s = n(388032),
     o = n(980895);
 function l(e) {
     let { analyticsSection: t, buttonText: n } = e;
@@ -23,7 +23,7 @@ function l(e) {
                 color: 'currentColor',
                 className: o.premiumButtonNitroWheel
             }),
-            null != n ? n : s.Z.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_CTA
+            null != n ? n : s.intl.string(s.t['8Sh5fn'])
         ]
     });
 }

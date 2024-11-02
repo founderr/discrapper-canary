@@ -3,37 +3,37 @@ t.d(n, {
         return d;
     }
 });
-var a = t(200651),
-    l = t(192379),
-    s = t(481060),
-    i = t(377171),
-    r = t(854698),
-    o = t(689938),
+var l = t(200651),
+    i = t(192379),
+    a = t(481060),
+    r = t(377171),
+    o = t(854698),
+    s = t(388032),
     c = t(94277);
 function d(e) {
     let { startDate: n, recurrenceRule: t, onRecurrenceChange: d } = e,
-        u = l.useMemo(() => (0, r.zi)(n, t), [t, n]),
-        _ = (0, r.P8)(n),
-        E = (e) => e.toString(),
-        h = (0, a.jsxs)('div', {
+        u = i.useMemo(() => (0, o.zi)(n, t), [t, n]),
+        h = (0, o.P8)(n),
+        m = (e) => e.toString(),
+        x = (0, l.jsxs)('div', {
             className: c.title,
             children: [
-                o.Z.Messages.CREATE_EVENT_RECUR_LABEL,
-                (0, a.jsx)(s.TextBadge, {
-                    text: o.Z.Messages.NEW,
-                    color: i.Z.BG_BRAND
+                s.intl.string(s.t['59TVxM']),
+                (0, l.jsx)(a.TextBadge, {
+                    text: s.intl.string(s.t.y2b7CA),
+                    color: r.Z.BG_BRAND
                 })
             ]
         });
-    return (0, a.jsx)(s.FormItem, {
-        title: h,
+    return (0, l.jsx)(a.FormItem, {
+        title: x,
         required: !0,
-        children: (0, a.jsx)(s.Select, {
+        children: (0, l.jsx)(a.Select, {
             placeholder: 'gaming',
-            options: _,
+            options: h,
             select: d,
-            serialize: E,
-            isSelected: (e) => null != u && E(e) === E(u)
+            serialize: m,
+            isSelected: (e) => null != u && m(e) === m(u)
         })
     });
 }

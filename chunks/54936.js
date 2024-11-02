@@ -1,58 +1,58 @@
 n.d(t, {
     n: function () {
-        return m;
+        return p;
     }
 }),
     n(411104);
 var i = n(200651);
 n(192379);
-var a = n(120356),
-    s = n.n(a),
-    r = n(481060),
-    l = n(910111),
-    o = n(732559),
+var r = n(120356),
+    l = n.n(r),
+    a = n(481060),
+    o = n(910111),
+    s = n(732559),
     c = n(723851),
     u = n(981631),
-    d = n(689938),
-    _ = n(500792);
-let E = {
+    d = n(388032),
+    m = n(500792);
+let f = {
     [u.TaA.WINDOWS]: {
         icon: c.Z,
-        getLabel: () => d.Z.Messages.WINDOWS
+        getLabel: () => d.intl.string(d.t['0/xHFB'])
     },
     [u.TaA.MACOS]: {
-        icon: o.Z,
-        getLabel: () => d.Z.Messages.MACOS
+        icon: s.Z,
+        getLabel: () => d.intl.string(d.t.E4u4n5)
     },
     [u.TaA.LINUX]: {
-        icon: l.Z,
-        getLabel: () => d.Z.Messages.LINUX
+        icon: o.Z,
+        getLabel: () => d.intl.string(d.t.tcawo6)
     }
 };
-function I(e) {
+function h(e) {
     let { operatingSystem: t, className: n } = e,
-        a = E[t];
-    if (null == a) throw Error('Unexpected operating system: '.concat(t));
-    let s = a.icon;
-    return (0, i.jsx)(r.Tooltip, {
-        text: a.getLabel(),
+        r = f[t];
+    if (null == r) throw Error('Unexpected operating system: '.concat(t));
+    let l = r.icon;
+    return (0, i.jsx)(a.Tooltip, {
+        text: r.getLabel(),
         children: (e) =>
-            (0, i.jsx)(s, {
+            (0, i.jsx)(l, {
                 ...e,
                 className: n
             })
     });
 }
-let m = (e) => {
-    let { systems: t, className: n, iconClassName: a } = e;
+let p = (e) => {
+    let { systems: t, className: n, iconClassName: r } = e;
     return (0, i.jsx)('div', {
-        className: s()(_.OSSection, n),
+        className: l()(m.OSSection, n),
         children: t.map((e) =>
             (0, i.jsx)(
-                I,
+                h,
                 {
                     operatingSystem: e,
-                    className: s()(_.purchaseUnitOperatingSystem, a)
+                    className: l()(m.purchaseUnitOperatingSystem, r)
                 },
                 e
             )

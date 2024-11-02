@@ -13,7 +13,7 @@ n.d(t, {
         return c;
     },
     O6: function () {
-        return E;
+        return _;
     },
     X8: function () {
         return o;
@@ -25,7 +25,7 @@ n.d(t, {
         return d;
     },
     zb: function () {
-        return _;
+        return f;
     }
 }),
     n(47120);
@@ -41,5 +41,5 @@ let l = {
     u = 'ctrl+`',
     c = [],
     d = '0',
-    _ = 6,
-    E = 6;
+    f = 6,
+    _ = 6;

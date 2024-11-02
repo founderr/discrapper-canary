@@ -1,87 +1,87 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return T;
+        return g;
     }
 }),
-    t(47120);
-var n = t(200651),
-    a = t(192379),
-    i = t(442837),
-    r = t(481060),
-    o = t(325997),
-    l = t(78839),
-    c = t(270144),
-    d = t(851718),
-    _ = t(238847),
-    u = t(689938),
-    E = t(917205);
-function T(e) {
-    let { onGoBack: s } = e,
-        t = (0, i.Wu)([l.ZP], () => {
-            var e, s;
+    n(47120);
+var i = n(200651),
+    s = n(192379),
+    r = n(442837),
+    l = n(481060),
+    a = n(325997),
+    o = n(78839),
+    c = n(270144),
+    d = n(851718),
+    u = n(238847),
+    m = n(388032),
+    h = n(917205);
+function g(e) {
+    let { onGoBack: t } = e,
+        n = (0, r.Wu)([o.ZP], () => {
+            var e, t;
             return null !==
-                (s =
-                    null === (e = l.ZP.getActiveApplicationSubscriptions()) || void 0 === e
+                (t =
+                    null === (e = o.ZP.getActiveApplicationSubscriptions()) || void 0 === e
                         ? void 0
-                        : e.slice().sort((e, s) => {
-                              var t, n, a, i;
-                              return (null !== (a = null === (t = e.createdAt) || void 0 === t ? void 0 : t.getTime()) && void 0 !== a ? a : e.currentPeriodStart.getTime()) - (null !== (i = null === (n = s.createdAt) || void 0 === n ? void 0 : n.getTime()) && void 0 !== i ? i : s.currentPeriodStart.getTime());
-                          })) && void 0 !== s
-                ? s
+                        : e.slice().sort((e, t) => {
+                              var n, i, s, r;
+                              return (null !== (s = null === (n = e.createdAt) || void 0 === n ? void 0 : n.getTime()) && void 0 !== s ? s : e.currentPeriodStart.getTime()) - (null !== (r = null === (i = t.createdAt) || void 0 === i ? void 0 : i.getTime()) && void 0 !== r ? r : t.currentPeriodStart.getTime());
+                          })) && void 0 !== t
+                ? t
                 : [];
         }),
-        { loading: T } = (0, c.sp)(t),
-        { loadState: I } = (0, c.qz)(),
-        N = T || I !== c.jd.LOADED,
-        { enabled: m } = o.m.useExperiment({ location: 'UserSettingsApplicationSubscriptions' }),
-        [C, A] = a.useState();
+        { loading: g } = (0, c.sp)(n),
+        { loadState: x } = (0, c.qz)(),
+        S = g || x !== c.jd.LOADED,
+        { enabled: T } = a.m.useExperiment({ location: 'UserSettingsApplicationSubscriptions' }),
+        [C, _] = s.useState();
     return (
         null == C &&
-            (C = (0, n.jsx)(S, {
-                onBack: s,
-                title: u.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PAGE_TITLE
+            (C = (0, i.jsx)(p, {
+                onBack: t,
+                title: m.intl.string(m.t['DB/m9f'])
             })),
-        (0, n.jsxs)('div', {
+        (0, i.jsxs)('div', {
             children: [
                 C,
-                N
-                    ? (0, n.jsx)(r.Spinner, {})
-                    : (0, n.jsx)('div', {
-                          className: E.subscriptionsContainer,
-                          children: m
-                              ? (0, n.jsx)(d.Z, {
-                                    subscriptions: t,
-                                    updateHeader: (e, s) => {
-                                        A(
-                                            (0, n.jsx)(S, {
+                S
+                    ? (0, i.jsx)(l.Spinner, {})
+                    : (0, i.jsx)('div', {
+                          className: h.subscriptionsContainer,
+                          children: T
+                              ? (0, i.jsx)(d.Z, {
+                                    subscriptions: n,
+                                    updateHeader: (e, t) => {
+                                        _(
+                                            (0, i.jsx)(p, {
                                                 title: e,
                                                 onBack: () => {
-                                                    s(), A(void 0);
+                                                    t(), _(void 0);
                                                 }
                                             })
                                         );
                                     }
                                 })
-                              : t.map((e) => (0, n.jsx)(_.Z, { subscription: e }, e.id))
+                              : n.map((e) => (0, i.jsx)(u.Z, { subscription: e }, e.id))
                       })
             ]
         })
     );
 }
-function S(e) {
-    let { onBack: s, title: t } = e;
-    return (0, n.jsxs)('div', {
-        className: E.title,
+function p(e) {
+    let { onBack: t, title: n } = e;
+    return (0, i.jsxs)('div', {
+        className: h.title,
         children: [
-            (0, n.jsx)(r.Button, {
-                look: r.Button.Looks.BLANK,
-                onClick: s,
-                size: r.Button.Sizes.ICON,
-                children: (0, n.jsx)(r.ArrowLargeLeftIcon, { size: 'sm' })
+            (0, i.jsx)(l.Button, {
+                look: l.Button.Looks.BLANK,
+                onClick: t,
+                size: l.Button.Sizes.ICON,
+                children: (0, i.jsx)(l.ArrowLargeLeftIcon, { size: 'sm' })
             }),
-            (0, n.jsx)(r.Heading, {
+            (0, i.jsx)(l.Heading, {
                 variant: 'heading-lg/semibold',
-                children: t
+                children: n
             })
         ]
     });

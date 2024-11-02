@@ -1,44 +1,44 @@
-let r, i, a, s, o, l, u, c, d, _, E, f, h, p;
-var I,
-    m,
-    T,
-    S,
-    g = n(979554),
-    A = n(442837),
-    N = n(570140),
-    R = n(981631);
-let O = R.QZA.CLOSED,
-    v = {};
+let r, i, a, s, o, l, u, c, d, f, _, h, p, m;
+var g,
+    E,
+    v,
+    I,
+    S = n(979554),
+    T = n(442837),
+    b = n(570140),
+    y = n(981631);
+let A = y.QZA.CLOSED,
+    N = {};
 function C() {
-    (O = R.QZA.OPEN), (v = {});
+    (A = y.QZA.OPEN), (N = {});
 }
-function L() {
-    (O = R.QZA.CLOSED), (v = {});
+function R() {
+    (A = y.QZA.CLOSED), (N = {});
+}
+function O() {
+    D(), L(), (N = {});
 }
 function D() {
-    y(), b(), (v = {});
-}
-function y() {
     (r = void 0), (i = void 0), (a = void 0), (s = void 0);
 }
-function b() {
+function L() {
     (o = void 0), (l = void 0), (u = void 0), (c = void 0), (d = void 0), (s = void 0);
 }
-function M() {
-    (E = void 0), (f = void 0), (h = void 0), (p = void 0), (_ = void 0);
+function x() {
+    (_ = void 0), (h = void 0), (p = void 0), (m = void 0), (f = void 0);
 }
-class P extends (S = A.ZP.Store) {
+class w extends (I = T.ZP.Store) {
     getFormState() {
-        return O;
+        return A;
     }
     getErrors() {
-        return v;
+        return N;
     }
     showNotice() {
         return void 0 !== r || void 0 !== o || void 0 !== l || void 0 !== u || void 0 !== c || void 0 !== d || void 0 !== a || void 0 !== s || void 0 !== i;
     }
     getIsSubmitDisabled() {
-        return void 0 !== l && l.length > R.tPV;
+        return void 0 !== l && l.length > y.tPV;
     }
     getPendingAvatar() {
         return r;
@@ -81,62 +81,62 @@ class P extends (S = A.ZP.Store) {
         };
     }
     getTryItOutThemeColors() {
-        return _;
-    }
-    getTryItOutAvatar() {
-        return E;
-    }
-    getTryItOutAvatarDecoration() {
         return f;
     }
-    getTryItOutProfileEffectId() {
+    getTryItOutAvatar() {
+        return _;
+    }
+    getTryItOutAvatarDecoration() {
         return h;
     }
-    getTryItOutBanner() {
+    getTryItOutProfileEffectId() {
         return p;
+    }
+    getTryItOutBanner() {
+        return m;
     }
     getAllTryItOut() {
         return {
-            tryItOutThemeColors: _,
-            tryItOutAvatar: E,
-            tryItOutAvatarDecoration: f,
-            tryItOutProfileEffectId: h,
-            tryItOutBanner: p
+            tryItOutThemeColors: f,
+            tryItOutAvatar: _,
+            tryItOutAvatarDecoration: h,
+            tryItOutProfileEffectId: p,
+            tryItOutBanner: m
         };
     }
 }
-(T = 'UserSettingsAccountStore'),
-    (m = 'displayName') in (I = P)
-        ? Object.defineProperty(I, m, {
-              value: T,
+(v = 'UserSettingsAccountStore'),
+    (E = 'displayName') in (g = w)
+        ? Object.defineProperty(g, E, {
+              value: v,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (I[m] = T),
-    (t.Z = new P(N.Z, {
+        : (g[E] = v),
+    (t.Z = new w(b.Z, {
         USER_SETTINGS_ACCOUNT_INIT: C,
         USER_SETTINGS_MODAL_INIT: C,
         USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: C,
         USER_SETTINGS_MODAL_SET_SECTION: function (e) {
             let { section: t } = e;
-            return t === R.oAB.ACCOUNT && C();
+            return t === y.oAB.ACCOUNT && C();
         },
-        USER_SETTINGS_ACCOUNT_CLOSE: L,
+        USER_SETTINGS_ACCOUNT_CLOSE: R,
         USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: function () {
-            D(), M(), L();
+            O(), x(), R();
         },
         USER_SETTINGS_ACCOUNT_SUBMIT: function () {
-            (O = R.QZA.SUBMITTING), (v = {});
+            (A = y.QZA.SUBMITTING), (N = {});
         },
         USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: function (e) {
             var t;
-            if (O !== R.QZA.SUBMITTING) return !1;
-            (O = R.QZA.OPEN), (v = null !== (t = e.errors) && void 0 !== t ? t : {});
+            if (A !== y.QZA.SUBMITTING) return !1;
+            (A = y.QZA.OPEN), (N = null !== (t = e.errors) && void 0 !== t ? t : {});
         },
         USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: function (e) {
             let { avatar: t } = e;
-            (r = t), (E = void 0);
+            (r = t), (_ = void 0);
         },
         USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME: function (e) {
             let { globalName: t } = e;
@@ -148,7 +148,7 @@ class P extends (S = A.ZP.Store) {
         },
         USER_SETTINGS_ACCOUNT_SET_SINGLE_TRY_IT_OUT_COLLECTIBLES_ITEM: function (e) {
             let { item: t } = e;
-            (null == t ? void 0 : t.type) === g.Z.PROFILE_EFFECT ? ((f = null), (h = null == t ? void 0 : t.id)) : ((h = null), (f = t));
+            (null == t ? void 0 : t.type) === S.Z.PROFILE_EFFECT ? ((h = null), (p = null == t ? void 0 : t.id)) : ((p = null), (h = t));
         },
         USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID: function (e) {
             let { profileEffectId: t } = e;
@@ -176,37 +176,37 @@ class P extends (S = A.ZP.Store) {
         },
         USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR: function (e) {
             let { avatar: t } = e;
-            E = t;
+            _ = t;
         },
         USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION: function (e) {
             let { avatarDecoration: t } = e;
-            f = t;
+            h = t;
         },
         USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PROFILE_EFFECT_ID: function (e) {
             let { profileEffectId: t } = e;
-            h = t;
+            p = t;
         },
         USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER: function (e) {
             let { banner: t } = e;
-            p = t;
+            m = t;
         },
         USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS: function (e) {
             let { themeColors: t } = e;
-            _ = t;
+            f = t;
         },
         USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET: function (e) {
             let {
                 preset: { themeColors: t, bannerImage: n, avatarDecoration: r }
             } = e;
-            (_ = t), (p = n), (f = r);
+            (f = t), (m = n), (h = r);
         },
         USER_SETTINGS_CLEAR_ERRORS: function () {
-            v = {};
+            N = {};
         },
-        USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: y,
-        USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: b,
-        USER_SETTINGS_RESET_ALL_PENDING: D,
-        USER_SETTINGS_RESET_ALL_TRY_IT_OUT: M,
+        USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: D,
+        USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: L,
+        USER_SETTINGS_RESET_ALL_PENDING: O,
+        USER_SETTINGS_RESET_ALL_TRY_IT_OUT: x,
         USER_SETTINGS_RESET_PENDING_AVATAR_DECORATION: function () {
             a = void 0;
         },

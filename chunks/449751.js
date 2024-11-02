@@ -5,26 +5,26 @@ t.d(n, {
 });
 var i = t(200651);
 t(192379);
-var a = t(852229),
-    s = t(481060),
-    l = t(626135),
-    r = t(572004),
-    o = t(981631),
-    u = t(689938);
+var l = t(852229),
+    r = t(481060),
+    a = t(626135),
+    o = t(572004),
+    s = t(981631),
+    u = t(388032);
 function d(e, n) {
-    return r.wS && e.type !== o.uaV.GUILD_INVITE_REMINDER
-        ? (0, i.jsx)(s.MenuItem, {
+    return o.wS && e.type !== s.uaV.GUILD_INVITE_REMINDER
+        ? (0, i.jsx)(r.MenuItem, {
               id: 'copy-link',
-              label: u.Z.Messages.COPY_MESSAGE_LINK,
-              icon: s.LinkIcon,
+              label: u.intl.string(u.t.Xrt5Pj),
+              icon: r.LinkIcon,
               action: () => {
-                  (0, a.J)(
+                  (0, l.J)(
                       ''
                           .concat(location.protocol, '//')
                           .concat(location.host)
-                          .concat(o.Z5c.CHANNEL(n.guild_id, n.id, e.id))
+                          .concat(s.Z5c.CHANNEL(n.guild_id, n.id, e.id))
                   ),
-                      l.default.track(o.rMx.MESSAGE_LINK_COPIED, {
+                      a.default.track(s.rMx.MESSAGE_LINK_COPIED, {
                           message_id: e.id,
                           channel: e.channel_id
                       });

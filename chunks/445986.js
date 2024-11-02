@@ -13,7 +13,7 @@ var s = n(200651),
     o = n(9807),
     h = n(843445),
     u = n(981631),
-    d = n(689938);
+    d = n(388032);
 function c(e) {
     return ''.concat(e.split('?')[0], '?size=').concat(2048);
 }
@@ -58,7 +58,7 @@ class m extends i.Component {
                     (0, a.openModal)((e) =>
                         (0, s.jsx)(a.ModalRoot, {
                             size: a.ModalSize.DYNAMIC,
-                            'aria-label': d.Z.Messages.IMAGE,
+                            'aria-label': d.intl.string(d.t.X4IxWF),
                             ...e,
                             children: (0, s.jsx)(p, {
                                 ...e,

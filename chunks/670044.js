@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return r;
     }
 });
 var i = n(990547),
-    s = n(213609);
-function a(e) {
+    l = n(213609);
+function r(e) {
     return (
-        (0, s.Z)(
+        (0, l.Z)(
             {
                 type: i.ImpressionTypes.VIEW,
                 name: i.ImpressionNames.NOTIFICATION_SETTING_UNREAD_NUDGE

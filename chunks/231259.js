@@ -1,79 +1,79 @@
-t.d(n, {
+e.d(t, {
     Z: function () {
-        return c;
+        return E;
     }
 }),
-    t(47120);
-var l = t(200651);
-t(192379);
-var i = t(442837),
-    u = t(481060),
-    s = t(357156),
-    r = t(924301),
-    a = t(482241),
-    d = t(894017),
-    E = t(79874),
-    o = t(689938);
-function c(e) {
-    let { guildEventId: n, recurrenceId: t, guild: c, channel: _ } = e,
-        T = null != t,
-        { canManageGuildEvent: N } = (0, s.XJ)(null != _ ? _ : c),
-        [I, Z] = (0, i.Wu)([r.ZP], () => [r.ZP.isActive(n), r.ZP.getGuildScheduledEvent(n)]),
-        f = (0, d.Z)(t, null == Z ? void 0 : Z.id),
-        g = null != Z && N(Z),
-        M = (null == Z ? void 0 : Z.recurrence_rule) != null && !T,
-        D = (0, E.zI)(n, t);
-    if (!g || (I && !M && !T) || (T && !T) || null == Z || null == D) return null;
-    let { startTime: v } = D;
-    if (I && T) {
-        var S;
-        if (null == v) return null;
-        let e = new Date(null !== (S = null == f ? void 0 : f.scheduled_start_time) && void 0 !== S ? S : v);
-        if (new Date() > e) return null;
+    e(47120);
+var l = e(200651);
+e(192379);
+var i = e(442837),
+    r = e(481060),
+    u = e(357156),
+    d = e(924301),
+    a = e(482241),
+    o = e(894017),
+    c = e(79874),
+    s = e(388032);
+function E(n) {
+    let { guildEventId: t, recurrenceId: e, guild: E, channel: g } = n,
+        f = null != e,
+        { canManageGuildEvent: _ } = (0, u.XJ)(null != g ? g : E),
+        [v, Z] = (0, i.Wu)([d.ZP], () => [d.ZP.isActive(t), d.ZP.getGuildScheduledEvent(t)]),
+        m = (0, o.Z)(e, null == Z ? void 0 : Z.id),
+        T = null != Z && _(Z),
+        h = (null == Z ? void 0 : Z.recurrence_rule) != null && !f,
+        I = (0, c.zI)(t, e);
+    if (!T || (v && !h && !f) || (f && !f) || null == Z || null == I) return null;
+    let { startTime: N } = I;
+    if (v && f) {
+        var p;
+        if (null == N) return null;
+        let n = new Date(null !== (p = null == m ? void 0 : m.scheduled_start_time) && void 0 !== p ? p : N);
+        if (new Date() > n) return null;
     }
-    let O = (e) => {
-        (0, u.openModal)((i) =>
-            (0, l.jsxs)(u.ConfirmModal, {
+    let P = (n) => {
+        (0, r.openModal)((i) =>
+            (0, l.jsxs)(r.ConfirmModal, {
                 ...i,
-                header: o.Z.Messages.GUILD_EVENT_DELETE_CONFIRM_HEADER,
-                confirmText: M || e ? o.Z.Messages.DELETE_ALL_EVENTS : o.Z.Messages.DELETE_EVENT,
-                cancelText: o.Z.Messages.NEVERMIND,
-                onConfirm: () => (T && !e ? a.Z.deleteRecurrence(c.id, n, t, f) : a.Z.deleteGuildEvent(n, c.id)),
+                header: s.intl.string(s.t.R5bpio),
+                confirmText: h || n ? s.intl.string(s.t['8ZsNv7']) : s.intl.string(s.t.B9sJLS),
+                cancelText: s.intl.string(s.t.oEAioK),
+                onConfirm: () => (f && !n ? a.Z.deleteRecurrence(E.id, t, e, m) : a.Z.deleteGuildEvent(t, E.id)),
                 children: [
-                    (0, l.jsx)(u.Text, {
+                    (0, l.jsx)(r.Text, {
                         variant: 'text-md/normal',
-                        children: o.Z.Messages.GUILD_EVENT_DELETE_CONFIRM_BODY
+                        children: s.intl.string(s.t.v2GWNT)
                     }),
                     (0, l.jsx)('br', {}),
-                    (M || e) &&
-                        (0, l.jsx)(u.Text, {
+                    (h || n) &&
+                        (0, l.jsx)(r.Text, {
                             variant: 'text-md/normal',
-                            children: o.Z.Messages.GUILD_EVENT_DELETE_CONFIRM_BODY_IS_RECURRING.format()
+                            children: s.intl.format(s.t.ZcpcyM, {})
                         })
                 ]
             })
         );
     };
-    return (0, l.jsx)(u.MenuItem, {
-        id: o.Z.Messages.DELETE_EVENT,
-        label: o.Z.Messages.DELETE_EVENT,
-        action: T ? void 0 : () => O(),
+    return (0, l.jsx)(r.MenuItem, {
+        id: s.intl.string(s.t.B9sJLS),
+        label: s.intl.string(s.t.B9sJLS),
+        action: f ? void 0 : () => P(),
         color: 'danger',
         children:
-            T &&
+            f &&
             (0, l.jsxs)(l.Fragment, {
                 children: [
-                    (0, l.jsx)(u.MenuItem, {
-                        id: o.Z.Messages.DELETE_THIS_EVENT,
-                        label: o.Z.Messages.DELETE_THIS_EVENT,
-                        action: () => O(),
-                        disabled: null == f ? void 0 : f.is_canceled,
+                    (0, l.jsx)(r.MenuItem, {
+                        id: s.intl.string(s.t.tqCll5),
+                        label: s.intl.string(s.t.tqCll5),
+                        action: () => P(),
+                        disabled: null == m ? void 0 : m.is_canceled,
                         color: 'danger'
                     }),
-                    (0, l.jsx)(u.MenuItem, {
-                        id: o.Z.Messages.DELETE_ALL_EVENTS_IN_SERIES,
-                        label: o.Z.Messages.DELETE_ALL_EVENTS_IN_SERIES,
-                        action: () => O(!0),
+                    (0, l.jsx)(r.MenuItem, {
+                        id: s.intl.string(s.t.wr33ra),
+                        label: s.intl.string(s.t.wr33ra),
+                        action: () => P(!0),
                         color: 'danger'
                     })
                 ]

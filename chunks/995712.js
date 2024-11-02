@@ -3,13 +3,13 @@ n(192379);
 var i = n(481060),
     a = n(686546),
     s = n(768581),
-    o = n(689938),
+    o = n(388032),
     l = n(733071);
 t.Z = (e) => {
     var t;
     let { entry: n } = e,
         { id: u, icon: c, name: d } = n,
-        _ =
+        f =
             null !==
                 (t = s.ZP.getGuildIconURL({
                     id: u,
@@ -24,7 +24,7 @@ t.Z = (e) => {
             (0, r.jsx)(i.Heading, {
                 className: l.header,
                 variant: 'heading-sm/semibold',
-                children: o.Z.Messages.REPORT_MODAL_SERVER_PREVIEW_HEADER
+                children: o.intl.string(o.t.nTe4HB)
             }),
             (0, r.jsx)('div', {
                 className: l.guildContainer,
@@ -37,7 +37,7 @@ t.Z = (e) => {
                             height: 32,
                             className: l.guildIconMask,
                             children: (0, r.jsx)('img', {
-                                src: _,
+                                src: f,
                                 alt: '',
                                 className: l.guildIcon
                             })

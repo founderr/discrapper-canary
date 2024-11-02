@@ -1,33 +1,33 @@
-t.d(n, {
+e.d(t, {
     Z: function () {
         return o;
     }
 });
-var a = t(200651);
-t(192379);
-var i = t(442837),
-    s = t(481060),
-    r = t(914010),
-    l = t(362658),
-    u = t(981631),
-    d = t(689938);
-function o(e) {
-    let n = (0, i.e7)([r.Z], () => r.Z.getGuildId()),
-        o = e.type === u.d4z.GUILD_CATEGORY,
-        { isFavoritesPerk: c } = (0, l.z)('useCategoryAddChannelItem');
-    return !__OVERLAY__ && n === u.I_8 && c && o
-        ? (0, a.jsx)(s.MenuItem, {
+var i = e(200651);
+e(192379);
+var r = e(442837),
+    l = e(481060),
+    a = e(914010),
+    u = e(362658),
+    d = e(981631),
+    s = e(388032);
+function o(n) {
+    let t = (0, r.e7)([a.Z], () => a.Z.getGuildId()),
+        o = n.type === d.d4z.GUILD_CATEGORY,
+        { isFavoritesPerk: c } = (0, u.z)('useCategoryAddChannelItem');
+    return !__OVERLAY__ && t === d.I_8 && c && o
+        ? (0, i.jsx)(l.MenuItem, {
               id: 'add-channel-to-category',
-              icon: s.CirclePlusIcon,
+              icon: l.CirclePlusIcon,
               color: 'brand',
-              label: d.Z.Messages.FAVORITES_ADD_A_CHANNEL,
+              label: s.intl.string(s.t['6uDHk5']),
               action: function () {
-                  (0, s.openModalLazy)(async () => {
-                      let { default: n } = await t.e('95257').then(t.bind(t, 178125));
-                      return (t) =>
-                          (0, a.jsx)(n, {
-                              ...t,
-                              parentId: e.id
+                  (0, l.openModalLazy)(async () => {
+                      let { default: t } = await e.e('95257').then(e.bind(e, 178125));
+                      return (e) =>
+                          (0, i.jsx)(t, {
+                              ...e,
+                              parentId: n.id
                           });
                   });
               }

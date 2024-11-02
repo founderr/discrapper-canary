@@ -6,13 +6,13 @@ n.d(t, {
         return d;
     },
     Bo: function () {
-        return f;
+        return g;
     },
     Df: function () {
         return h;
     },
     LT: function () {
-        return E;
+        return C;
     },
     ZZ: function () {
         return m;
@@ -21,7 +21,7 @@ n.d(t, {
         return u;
     },
     fW: function () {
-        return _;
+        return f;
     },
     gr: function () {
         return p;
@@ -31,23 +31,23 @@ n.d(t, {
     }
 });
 var i = n(261470),
-    s = n(544891),
-    a = n(570140),
-    l = n(292793),
-    r = n(981631);
-function o(e, t, n, i, s) {
-    a.Z.dispatch({
+    l = n(544891),
+    r = n(570140),
+    a = n(292793),
+    s = n(981631);
+function o(e, t, n, i, l) {
+    r.Z.dispatch({
         type: 'SHARED_CANVAS_DRAW_LINE_POINT',
         channelId: e,
         userId: n,
         lineId: t,
         streamerId: i,
-        point: s
+        point: l
     });
 }
 function c(e, t, n, i) {
-    return s.tn.post({
-        url: r.ANM.SHARED_CANVAS_LINES(e, n),
+    return l.tn.post({
+        url: s.ANM.SHARED_CANVAS_LINES(e, n),
         body: {
             line_id: t,
             points: i
@@ -55,7 +55,7 @@ function c(e, t, n, i) {
     });
 }
 function u(e, t, n, i) {
-    a.Z.dispatch({
+    r.Z.dispatch({
         type: 'SHARED_CANVAS_UPDATE_LINE_POINTS',
         userId: t,
         lineId: e,
@@ -64,20 +64,20 @@ function u(e, t, n, i) {
     });
 }
 function d(e, t, n) {
-    return s.tn.post({
-        url: r.ANM.SHARED_CANVAS_EMOJI_HOSES(e, t),
+    return l.tn.post({
+        url: s.ANM.SHARED_CANVAS_EMOJI_HOSES(e, t),
         body: { emoji_hose: n }
     });
 }
 function h(e, t, n) {
-    s.tn.del({
-        url: r.ANM.SHARED_CANVAS_EMOJI_HOSE(e, t, n),
+    l.tn.del({
+        url: s.ANM.SHARED_CANVAS_EMOJI_HOSE(e, t, n),
         backoff: new i.Z()
     });
 }
 function m(e, t) {
-    (t.state = l.f.STOP),
-        a.Z.dispatch({
+    (t.state = a.f.STOP),
+        r.Z.dispatch({
             type: 'SHARED_CANVAS_UPDATE_EMOJI_HOSE',
             emojiHose: t,
             userId: t.userId,
@@ -85,26 +85,26 @@ function m(e, t) {
         });
 }
 function p(e, t, n) {
-    a.Z.dispatch({
+    r.Z.dispatch({
         type: 'SHARED_CANVAS_UPDATE_EMOJI_HOSE',
         emojiHose: e,
         userId: t,
         streamerId: n
     });
 }
-function _(e, t) {
-    a.Z.dispatch({
+function f(e, t) {
+    r.Z.dispatch({
         type: 'SHARED_CANVAS_CLEAR_DRAWABLES',
         drawables: e,
         streamerId: t
     });
 }
-function f(e) {
-    a.Z.dispatch({
+function g(e) {
+    r.Z.dispatch({
         type: 'SHARED_CANVAS_SET_DRAW_MODE',
         drawMode: e
     });
 }
-function E() {
-    a.Z.dispatch({ type: 'TOGGLE_OVERLAY_CANVAS' });
+function C() {
+    r.Z.dispatch({ type: 'TOGGLE_OVERLAY_CANVAS' });
 }

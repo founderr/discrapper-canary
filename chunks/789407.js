@@ -1,24 +1,24 @@
 n.d(t, {
     XB: function () {
-        return s;
-    },
-    ZP: function () {
         return l;
     },
-    r9: function () {
+    ZP: function () {
         return o;
+    },
+    r9: function () {
+        return s;
     }
 });
 var i = n(726542),
-    a = n(973616);
-let s = 'spotify',
-    r = i.Z.get(s);
-class l extends a.Z {
+    r = n(973616);
+let l = 'spotify',
+    a = i.Z.get(l);
+class o extends r.Z {
     getIconURL(e) {
-        return r.icon.lightPNG;
+        return a.icon.lightPNG;
     }
     constructor() {
-        super({}), (this.id = s), (this.name = r.name);
+        super({}), (this.id = l), (this.name = a.name);
     }
 }
-let o = new l();
+let s = new o();

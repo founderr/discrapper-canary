@@ -8,107 +8,107 @@ var r,
     u = n(570140),
     c = n(594174),
     d = n(281494),
-    _ = n(981631);
-let E = null,
-    f = {},
-    h = [],
-    p = new Map(),
+    f = n(981631);
+let _ = null,
+    h = {},
+    p = [],
+    m = new Map(),
+    g = new Set(),
+    E = !1,
+    v = new Set(),
     I = new Set(),
-    m = !1,
-    T = new Set(),
-    S = new Set(),
-    g = {},
-    A = 0,
-    N = null,
-    R = [],
-    O = !1,
-    v = 0,
+    S = {},
+    T = 0,
+    b = null,
+    y = [],
+    A = !1,
+    N = 0,
     C = !1,
-    L = null,
+    R = null,
+    O = !1,
     D = !1,
-    y = !1,
-    b = !1,
-    M = _.g2L.NOT_ELIGIBLE,
-    P = () => !0;
-function U(e) {
-    T.add(e);
+    L = !1,
+    x = f.g2L.NOT_ELIGIBLE,
+    w = () => !0;
+function M(e) {
+    v.add(e);
 }
-function w(e) {
+function P(e) {
     let { messages: t } = e;
-    t.forEach((e) => x(e));
+    t.forEach((e) => k(e));
 }
-function x(e) {
+function k(e) {
     let t = e.type === o.u.PREMIUM_REFERRAL ? e.content : null;
     if (null == t) return !1;
-    if (!S.has(t) && !T.has(t)) {
+    if (!I.has(t) && !v.has(t)) {
         var n;
-        (n = t), T.add(n), u.Z.wait(() => (0, d.IB)(t).catch(_.VqG));
+        (n = t), v.add(n), u.Z.wait(() => (0, d.IB)(t).catch(f.VqG));
     }
 }
-class G extends (r = l.ZP.Store) {
+class U extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(c.default), this.syncWith([c.default], P);
+        this.waitFor(c.default), this.syncWith([c.default], w);
     }
     checkAndFetchReferralsRemaining() {
-        null == E && !m && A < 5 && (null == N || N < Date.now()) && (0, d.C$)();
+        null == _ && !E && T < 5 && (null == b || b < Date.now()) && (0, d.C$)();
     }
     getReferralsRemaining() {
-        return this.checkAndFetchReferralsRemaining(), E;
+        return this.checkAndFetchReferralsRemaining(), _;
     }
     getSentUserIds() {
-        return this.checkAndFetchReferralsRemaining(), null == h ? [] : h;
+        return this.checkAndFetchReferralsRemaining(), null == p ? [] : p;
     }
     isFetchingReferralsRemaining() {
-        return m;
+        return E;
     }
     isFetchingRecipientEligibility(e) {
-        return I.has(e);
+        return g.has(e);
     }
     getRecipientEligibility(e) {
-        return void 0 === f[e] && !I.has(e) && (0, d.Ve)(e), f[e];
+        return void 0 === h[e] && !g.has(e) && (0, d.Ve)(e), h[e];
     }
     getRelevantUserTrialOffer(e) {
-        return g[e];
+        return S[e];
     }
     isResolving(e) {
-        return T.has(e);
+        return v.has(e);
     }
     getEligibleUsers() {
-        return R;
+        return y;
     }
     getFetchingEligibleUsers() {
-        return O;
+        return A;
     }
     getNextIndexOfEligibleUsers() {
-        return v;
+        return N;
     }
     getIsEligibleToSendReferrals() {
         return C;
     }
     getRefreshAt() {
-        return L;
+        return R;
     }
     getRelevantReferralTrialOffers() {
-        return g;
+        return S;
     }
     getRecipientStatus() {
-        return p;
+        return m;
     }
     getIsSenderEligibleForIncentive() {
-        return D;
+        return O;
     }
     getIsSenderQualifiedForIncentive() {
-        return y;
+        return D;
     }
     getIsFetchingReferralIncentiveEligibility() {
-        return b;
+        return L;
     }
     getSenderIncentiveState() {
-        return M;
+        return x;
     }
 }
 (s = 'ReferralTrialStore'),
-    (a = 'displayName') in (i = G)
+    (a = 'displayName') in (i = U)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -116,81 +116,81 @@ class G extends (r = l.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new G(u.Z, {
+    (t.Z = new U(u.Z, {
         BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function (e) {
             let { userTrialOfferId: t, recipientId: n } = e;
-            if ((!m && (0, d.C$)(), !I.has(n) && (0, d.Ve)(n), !T.has(t))) {
+            if ((!E && (0, d.C$)(), !g.has(n) && (0, d.Ve)(n), !v.has(t))) {
                 var r;
-                (r = t), T.add(r), u.Z.wait(() => (0, d.IB)(t).catch(_.VqG));
+                (r = t), v.add(r), u.Z.wait(() => (0, d.IB)(t).catch(f.VqG));
             }
         },
         BILLING_REFERRALS_REMAINING_FETCH_START: function (e) {
             let {} = e;
-            (C = !1), (L = null), (m = !0);
+            (C = !1), (R = null), (E = !0);
         },
         BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: function (e) {
             let { referrals_remaining: t, sent_user_ids: n, refresh_at: r, recipient_status: i, has_eligible_friends: a, isUserEligibleForIncentive: s, isUserQualifiedForIncentive: o, userReferralIncentiveState: l } = e;
-            (C = null == r && a), (m = !1), (E = t), (h = n), (L = r), (p = i), (D = s && (a || p.size > 0)), (y = o), (M = l);
+            (C = null == r && a), (E = !1), (_ = t), (p = n), (R = r), (m = i), (O = s && (a || m.size > 0)), (D = o), (x = l);
         },
         BILLING_REFERRALS_REMAINING_FETCH_FAIL: function (e) {
             let {} = e;
-            (C = !1), (L = null), (m = !1), (A += 1), (N = Date.now() + 1000 * Math.pow(2, A));
+            (C = !1), (R = null), (E = !1), (T += 1), (b = Date.now() + 1000 * Math.pow(2, T));
         },
         BILLING_CREATE_REFERRAL_PREVIEW_START: function (e) {
             let { recipientId: t } = e;
-            I.add(t);
+            g.add(t);
         },
         BILLING_GET_REFERRAL_INCENTIVE_STATUS_SUCCESS: function (e) {
             let { isUserEligibleForIncentive: t } = e;
-            (b = !1), null != t && (D = t);
+            (L = !1), null != t && (O = t);
         },
         BILLING_GET_REFERRAL_INCENTIVE_STATUS_FAIL: function () {
-            b = !1;
+            L = !1;
         },
         BILLING_GET_REFERRAL_INCENTIVE_STATUS_START: function () {
-            b = !0;
+            L = !0;
         },
         BILLING_CREATE_REFERRAL_PREVIEW_SUCCESS: function (e) {
             let { recipientId: t, is_eligible: n } = e;
-            (f[t] = n), I.delete(t);
+            (h[t] = n), g.delete(t);
         },
         BILLING_CREATE_REFERRAL_PREVIEW_FAIL: function (e) {
             let { recipientId: t } = e;
-            (f[t] = !1), I.delete(t);
+            (h[t] = !1), g.delete(t);
         },
         BILLING_CREATE_REFERRAL_SUCCESS: function (e) {
             let { userTrialOffer: t } = e;
-            (0, d.C$)(), (g[t.id] = t), (h = [...h, t.user_id]);
+            (0, d.C$)(), (S[t.id] = t), (p = [...p, t.user_id]);
         },
         CREATE_REFERRALS_SUCCESS: function (e) {
             let { userTrialOffers: t } = e;
-            for (let e of ((0, d.C$)(), t)) (g[e.id] = e), (h = [...h, e.user_id]);
+            for (let e of ((0, d.C$)(), t)) (S[e.id] = e), (p = [...p, e.user_id]);
         },
         BILLING_REFERRAL_RESOLVE_SUCCESS: function (e) {
             let { userTrialOffer: t } = e;
-            null != t && (T.delete(t.id), S.add(t.id), (g[t.id] = t));
+            null != t && (v.delete(t.id), I.add(t.id), (S[t.id] = t));
         },
         BILLING_REFERRAL_RESOLVE_FAIL: function (e) {
             let { userTrialOfferId: t } = e;
-            T.delete(t), S.add(t);
+            v.delete(t), I.add(t);
         },
         REFERRALS_FETCH_ELIGIBLE_USER_START: function () {
-            O = !0;
+            A = !0;
         },
         REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS: function (e) {
             let { users: t, nextIndex: n } = e;
-            (O = !1), (R = t), (v = n);
+            (A = !1), (y = t), (N = n);
         },
         REFERRALS_FETCH_ELIGIBLE_USER_FAIL: function () {
-            O = !1;
+            A = !1;
         },
-        LOAD_MESSAGES_SUCCESS: w,
+        LOAD_MESSAGES_SUCCESS: P,
         MESSAGE_CREATE: function (e) {
             let { message: t } = e;
-            x(t);
+            k(t);
         },
-        LOAD_MESSAGES_AROUND_SUCCESS: w,
+        LOAD_MESSAGES_AROUND_SUCCESS: P,
         LOGOUT: function () {
-            (E = null), (f = {}), (h = []), (I = new Set()), (m = !1), (T = new Set()), (S = new Set()), (g = {}), (A = 0), (N = null), (R = []), (O = !1), (v = 0), (C = !1), (L = null), (p = new Map()), (D = !1), (y = !1), (b = !1), (M = _.g2L.NOT_ELIGIBLE);
+            (_ = null), (h = {}), (p = []), (g = new Set()), (E = !1), (v = new Set()), (I = new Set()), (S = {}), (T = 0), (b = null), (y = []), (A = !1), (N = 0), (C = !1), (R = null), (m = new Map()), (O = !1), (D = !1), (L = !1), (x = f.g2L.NOT_ELIGIBLE);
         }
     }));

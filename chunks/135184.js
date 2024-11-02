@@ -1,18 +1,18 @@
-o.d(n, {
+n.d(t, {
     Z: function () {
-        return i;
+        return c;
     }
 });
-var t = o(200651);
-o(192379);
-var s = o(859097),
-    r = o(689938);
-function i(e) {
-    let { onContinue: n, onClose: o } = e;
-    return (0, t.jsx)(s.C, {
-        title: r.Z.Messages.CONNECT_XBOX_ERROR_TITLE,
-        body: r.Z.Messages.CONNECT_XBOX_ERROR_BODY,
-        onClose: o,
-        onContinue: n
+var o = n(200651);
+n(192379);
+var r = n(859097),
+    i = n(388032);
+function c(e) {
+    let { onContinue: t, onClose: n } = e;
+    return (0, o.jsx)(r.C, {
+        title: i.intl.string(i.t.INwPCQ),
+        body: i.intl.string(i.t.GyXRR0),
+        onClose: n,
+        onContinue: t
     });
 }

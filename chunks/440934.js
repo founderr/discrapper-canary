@@ -4,22 +4,22 @@ n.r(e),
             return p;
         },
         openInteractionModal: function () {
-            return I;
+            return S;
         }
     });
 var i = n(200651);
 n(192379);
 var o = n(481060),
     r = n(112831),
-    s = n(970184),
-    l = n(471073),
+    l = n(970184),
+    s = n(471073),
     a = n(293979),
     c = n(954654),
-    u = n(689938),
+    u = n(388032),
     d = n(251686);
 function p(t) {
     let { title: e, onClose: n, transitionState: p } = t,
-        { components: I, applicationIconURL: S, applicationName: _, submissionState: T, error: f, validators: C, onSubmit: E } = (0, a.X9)(t, n);
+        { components: S, applicationIconURL: _, applicationName: I, submissionState: T, error: f, validators: C, onSubmit: E } = (0, a.X9)(t, n);
     return (0, i.jsx)('form', {
         onSubmit: (t) => {
             t.preventDefault(), E();
@@ -31,9 +31,9 @@ function p(t) {
                     separator: !1,
                     children: [
                         (0, i.jsx)(o.Avatar, {
-                            src: S,
+                            src: _,
                             size: o.AvatarSizes.SIZE_24,
-                            'aria-label': _,
+                            'aria-label': I,
                             className: d.applicationIcon
                         }),
                         (0, i.jsx)(r.Z, {
@@ -59,13 +59,13 @@ function p(t) {
                         (0, i.jsx)(o.HelpMessage, {
                             messageType: o.HelpMessageTypes.WARNING,
                             className: d.submissionWarning,
-                            children: u.Z.Messages.INTERACTION_FORM_SUBMISSION_APPLICATION.format({ applicationName: _ })
+                            children: u.intl.format(u.t['dSTy//'], { applicationName: I })
                         }),
                         (0, i.jsx)(o.FormSection, {
-                            children: (0, i.jsx)(s.Il, {
+                            children: (0, i.jsx)(l.Il, {
                                 modal: t,
                                 validators: C,
-                                children: (0, c.xX)(I)
+                                children: (0, c.xX)(S)
                             })
                         })
                     ]
@@ -76,14 +76,14 @@ function p(t) {
                             type: 'submit',
                             color: o.Button.Colors.BRAND,
                             size: o.Button.Sizes.MEDIUM,
-                            submitting: T === l.i.IN_FLIGHT,
-                            children: u.Z.Messages.SUBMIT
+                            submitting: T === s.i.IN_FLIGHT,
+                            children: u.intl.string(u.t.geKm7u)
                         }),
                         (0, i.jsx)(o.Button, {
                             look: o.Button.Looks.LINK,
                             color: o.Button.Colors.PRIMARY,
                             onClick: n,
-                            children: u.Z.Messages.CANCEL
+                            children: u.intl.string(u.t['ETE/oK'])
                         })
                     ]
                 })
@@ -91,7 +91,7 @@ function p(t) {
         })
     });
 }
-function I(t) {
+function S(t) {
     (0, o.openModal)((e) =>
         (0, i.jsx)(p, {
             ...e,

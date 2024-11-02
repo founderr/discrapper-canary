@@ -1,9 +1,9 @@
 n.d(t, {
     OG: function () {
-        return x;
+        return b;
     },
     Zu: function () {
-        return N;
+        return I;
     }
 }),
     n(47120);
@@ -11,17 +11,17 @@ var i = n(200651),
     l = n(192379),
     r = n(120356),
     a = n.n(r),
-    s = n(512722),
-    o = n.n(s),
+    o = n(512722),
+    s = n.n(o),
     c = n(584922),
     u = n(749210),
     d = n(626135),
     h = n(727258),
     p = n(662146),
     f = n(981631),
-    _ = n(689938),
-    m = n(577837);
-function g(e) {
+    m = n(388032),
+    g = n(577837);
+function C(e) {
     let t = l.useRef(null),
         n = e.map((e) => e[0]);
     return (
@@ -35,11 +35,11 @@ function g(e) {
         t
     );
 }
-function C(e, t) {
+function _(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     return (
-        o()(t.type !== h.eD.ROOT, '[GuildDropTarget] Tried using a root node as a drop target.'),
+        s()(t.type !== h.eD.ROOT, '[GuildDropTarget] Tried using a root node as a drop target.'),
         {
             accept: e,
             canDrop: (e) => e.nodeId !== t.id && (!i || e.type !== h.eD.FOLDER || t.type !== h.eD.FOLDER) && (e.type !== h.eD.FOLDER || null == t.parentId) && !0,
@@ -54,72 +54,72 @@ function C(e, t) {
         }
     );
 }
-function I(e) {
-    let { name: t, targetNode: n, combine: r, below: s } = e,
-        o = l.useMemo(() => C([h.eD.GUILD, h.eD.FOLDER], n, s, r), [n, s, r]),
-        [{ canDrop: u, isOver: d }, p] = (0, c.L)(o),
-        f = g([
-            [u, m.autoPointerEvents],
-            [d, m.dragOver]
+function x(e) {
+    let { name: t, targetNode: n, combine: r, below: o } = e,
+        s = l.useMemo(() => _([h.eD.GUILD, h.eD.FOLDER], n, o, r), [n, o, r]),
+        [{ canDrop: u, isOver: d }, p] = (0, c.L)(s),
+        f = C([
+            [u, g.autoPointerEvents],
+            [d, g.dragOver]
         ]);
     return (0, i.jsx)('div', {
         ref: (e) => {
             (f.current = e), p(e);
         },
-        'data-dnd-name': _.Z.Messages.DND_DROP_ABOVE.format({ itemName: t }),
-        className: a()(m.target)
+        'data-dnd-name': m.intl.formatToPlainString(m.t.A5aDw8, { itemName: t }),
+        className: a()(g.target)
     });
 }
-function E(e) {
+function v(e) {
     let { name: t, targetNode: n, onDragOverChanged: r } = e,
-        [{ canDrop: s, isOver: o }, u] = (0, c.L)(() => C([h.eD.GUILD], n, !0, !0));
+        [{ canDrop: o, isOver: s }, u] = (0, c.L)(() => _([h.eD.GUILD], n, !0, !0));
     l.useEffect(() => {
-        null == r || r(o);
-    }, [r, o]);
-    let d = g([
-        [s, m.autoPointerEvents],
-        [o, m.dragOver]
+        null == r || r(s);
+    }, [r, s]);
+    let d = C([
+        [o, g.autoPointerEvents],
+        [s, g.dragOver]
     ]);
     return (0, i.jsx)(p.Z, {
         text: t,
-        shouldShow: o,
-        forceOpen: o,
+        shouldShow: s,
+        forceOpen: s,
         disableWrapper: !0,
-        tooltipClass: m.centerTargetTooltip,
+        tooltipClass: g.centerTargetTooltip,
         children: (0, i.jsx)('div', {
             ref: (e) => {
                 (d.current = e), u(e);
             },
-            'data-dnd-name': _.Z.Messages.DND_DROP_COMBINE.format({ itemName: t }),
-            className: a()(m.centerTarget, {})
+            'data-dnd-name': m.intl.formatToPlainString(m.t.qiQ0QE, { itemName: t }),
+            className: a()(g.centerTarget, {})
         })
     });
 }
-function N(e) {
+function I(e) {
     let { name: t, targetNode: n } = e,
-        [{ canDrop: l, isOver: r }, s] = (0, c.L)(() => C([h.eD.GUILD], n, !0, !0)),
-        o = g([[r, m.wrapperOver]]),
-        u = g([
-            [r, m.dragOver],
-            [l, m.autoPointerEvents]
+        [{ canDrop: l, isOver: r }, o] = (0, c.L)(() => _([h.eD.GUILD], n, !0, !0)),
+        s = C([[r, g.wrapperOver]]),
+        u = C([
+            [r, g.dragOver],
+            [l, g.autoPointerEvents]
         ]);
     return (0, i.jsx)('div', {
-        ref: o,
-        className: a()(m.folderEndWrapper),
+        ref: s,
+        className: a()(g.folderEndWrapper),
         'aria-hidden': !0,
         children: (0, i.jsx)('div', {
-            className: m.folderTarget,
+            className: g.folderTarget,
             children: (0, i.jsx)('div', {
                 ref: (e) => {
-                    (u.current = e), s(e);
+                    (u.current = e), o(e);
                 },
                 'aria-label': 'At end of '.concat(t),
-                className: a()(m.target)
+                className: a()(g.target)
             })
         })
     });
 }
-function x(e) {
+function b(e) {
     let { children: t } = e,
         [, n] = (0, c.L)({ accept: [] });
     return (0, i.jsx)('div', {
@@ -129,18 +129,18 @@ function x(e) {
 }
 t.ZP = l.memo(function (e) {
     let { name: t, targetNode: n, noCombine: l = !1, below: r = !1, onDragOverChanged: a } = e,
-        s = !l && null == n.parentId;
+        o = !l && null == n.parentId;
     return (0, i.jsxs)('div', {
-        className: m.wrapper,
+        className: g.wrapper,
         'aria-hidden': !0,
         children: [
-            (0, i.jsx)(I, {
+            (0, i.jsx)(x, {
                 name: t,
                 targetNode: n,
                 below: r
             }),
-            s
-                ? (0, i.jsx)(E, {
+            o
+                ? (0, i.jsx)(v, {
                       name: t,
                       targetNode: n,
                       onDragOverChanged: a

@@ -1,54 +1,54 @@
 t.d(n, {
     Z: function () {
-        return S;
+        return M;
     }
 }),
     t(47120),
     t(724458);
 var i = t(200651),
-    a = t(192379),
-    s = t(481060),
-    l = t(239091),
-    r = t(236413),
-    o = t(727072),
+    l = t(192379),
+    r = t(481060),
+    a = t(239091),
+    o = t(236413),
+    s = t(727072),
     u = t(85960),
     d = t(676317),
     c = t(65912),
-    E = t(556012),
-    M = t(572456),
-    g = t(434404),
-    f = t(981631),
-    m = t(273504),
-    I = t(689938),
-    _ = t(561240);
-let Z = m.fX.KEYWORD;
-function S(e, n) {
-    let { perGuildMaxCount: t } = u.I6[Z],
-        { isLoading: S, saveRule: h, errorMessage: A } = (0, c.w)(),
-        { createNewEditingRule: N } = (0, c.V)(),
-        [v, T] = a.useState(!1),
-        [p, O] = (0, o.I2)(n),
-        { rulesByTriggerType: R, updateRule: x } = (0, o.pH)(n),
-        C = a.useMemo(() => {
+    g = t(556012),
+    m = t(572456),
+    f = t(434404),
+    h = t(981631),
+    v = t(273504),
+    I = t(388032),
+    E = t(561240);
+let p = v.fX.KEYWORD;
+function M(e, n) {
+    let { perGuildMaxCount: t } = u.I6[p],
+        { isLoading: M, saveRule: Z, errorMessage: x } = (0, c.w)(),
+        { createNewEditingRule: S } = (0, c.V)(),
+        [j, b] = l.useState(!1),
+        [A, _] = (0, s.I2)(n),
+        { rulesByTriggerType: P, updateRule: N } = (0, s.pH)(n),
+        T = l.useMemo(() => {
             var e;
-            return null !== (e = R[Z]) && void 0 !== e ? e : [];
-        }, [R]),
-        D = 0 === C.length,
-        P = t > C.length && !D;
-    if (!a.useMemo(() => (0, d.ze)(n), [n]) || null == e || 0 === e.length || null == n) return null;
+            return null !== (e = P[p]) && void 0 !== e ? e : [];
+        }, [P]),
+        y = 0 === T.length,
+        C = t > T.length && !y;
+    if (!l.useMemo(() => (0, d.ze)(n), [n]) || null == e || 0 === e.length || null == n) return null;
     let L = e.split(' '),
-        b = L.length;
+        D = L.length;
     try {
-        (0, r.km)(L, m.RH);
+        (0, o.km)(L, v.RH);
     } catch (e) {
         return null;
     }
-    let j = () => {
+    let O = () => {
             if (null != n)
-                (0, l.Zy)(),
-                    g.Z.open(n, f.pNK.GUILD_AUTOMOD),
+                (0, a.Zy)(),
+                    f.Z.open(n, h.pNK.GUILD_AUTOMOD),
                     setTimeout(() => {
-                        N(n, Z, {
+                        S(n, p, {
                             triggerMetadata: {
                                 keywordFilter: [e],
                                 regexPatterns: [],
@@ -59,83 +59,83 @@ function S(e, n) {
         },
         G = async (n) => {
             var t, i;
-            if (((0, l.Zy)(), !(await (0, M.XN)(n.name, e)))) return;
-            let a = {
+            if (((0, a.Zy)(), !(await (0, m.XN)(n.name, e)))) return;
+            let l = {
                 ...n,
                 triggerMetadata: {
                     ...n.triggerMetadata,
                     keywordFilter: [...(null !== (i = null === (t = n.triggerMetadata) || void 0 === t ? void 0 : t.keywordFilter) && void 0 !== i ? i : []), e]
                 }
             };
-            await h(a, C), x(a), null != A ? (0, s.showToast)((0, s.createToast)(I.Z.Messages.GUILD_AUTOMOD_ADD_SELECTION_TOAST_ERROR, s.ToastType.FAILURE)) : (0, s.showToast)((0, s.createToast)(I.Z.Messages.GUILD_AUTOMOD_ADD_SELECTION_TOAST_SUCCESS, s.ToastType.SUCCESS));
+            await Z(l, T), N(l), null != x ? (0, r.showToast)((0, r.createToast)(I.intl.string(I.t.wH6L0t), r.ToastType.FAILURE)) : (0, r.showToast)((0, r.createToast)(I.intl.string(I.t['0rdYm5']), r.ToastType.SUCCESS));
         },
-        y = (0, i.jsx)(i.Fragment, {
-            children: (0, i.jsx)(s.MenuItem, {
+        R = (0, i.jsx)(i.Fragment, {
+            children: (0, i.jsx)(r.MenuItem, {
                 id: 'automod-rules-loading',
-                label: I.Z.Messages.LOADING
+                label: I.intl.string(I.t.ZTNur6)
             })
         });
     return (
-        !p &&
-            (y = (0, i.jsxs)(i.Fragment, {
+        !A &&
+            (R = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    D &&
-                        (0, i.jsx)(s.MenuItem, {
+                    y &&
+                        (0, i.jsx)(r.MenuItem, {
                             id: 'add-first-rule',
-                            label: I.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_AUTOMOD_RULE_CREATE,
-                            action: j,
-                            disabled: S
+                            label: I.intl.string(I.t.f72Zqa),
+                            action: O,
+                            disabled: M
                         }),
-                    C.map((e) => {
-                        let n = (0, u.V9)(Z).reduce((n, t) => {
+                    T.map((e) => {
+                        let n = (0, u.V9)(p).reduce((n, t) => {
                             let i = e.actions.find((e) => {
                                 let { type: n } = e;
                                 return t === n;
                             });
                             if (null == i) return n;
-                            let a = (0, E.c)(t, i);
-                            return (n += ', '.concat(null == a ? void 0 : a.headerText));
+                            let l = (0, g.c)(t, i);
+                            return (n += ', '.concat(null == l ? void 0 : l.headerText));
                         }, '');
                         return (0, i.jsx)(
-                            s.MenuRadioItem,
+                            r.MenuRadioItem,
                             {
                                 id: e.id,
                                 label: e.name,
-                                subtext: (0, i.jsx)(s.Text, {
+                                subtext: (0, i.jsx)(r.Text, {
                                     color: 'text-muted',
-                                    className: _.actionTextHeader,
+                                    className: E.actionTextHeader,
                                     variant: 'text-xs/normal',
                                     children: n.slice(2)
                                 }),
                                 group: 'automod-rule-selection',
                                 checked: !1,
-                                disabled: S,
+                                disabled: M,
                                 action: () => G(e)
                             },
                             e.id
                         );
                     }),
-                    P &&
+                    C &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)(s.MenuSeparator, {}),
-                                (0, i.jsx)(s.MenuItem, {
+                                (0, i.jsx)(r.MenuSeparator, {}),
+                                (0, i.jsx)(r.MenuItem, {
                                     id: 'add-another-rule',
-                                    label: I.Z.Messages.GUILD_AUTOMOD_ADD_NEW_RULE,
-                                    action: j,
-                                    disabled: S
+                                    label: I.intl.string(I.t['0K5jDA']),
+                                    action: O,
+                                    disabled: M
                                 })
                             ]
                         })
                 ]
             })),
-        (0, i.jsx)(s.MenuItem, {
+        (0, i.jsx)(r.MenuItem, {
             id: 'guild-automod-add-selection',
-            label: I.Z.Messages.GUILD_AUTOMOD_ADD_SELECTION.format({ keywordCount: b }),
+            label: I.intl.formatToPlainString(I.t.Kkjv1t, { keywordCount: D }),
             onFocus: () => {
-                if (!v) T(!0), O();
+                if (!j) b(!0), _();
             },
-            children: y
+            children: R
         })
     );
 }

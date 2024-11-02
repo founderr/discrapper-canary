@@ -1,40 +1,40 @@
-n.r(s),
-    n.d(s, {
+e.r(n),
+    e.d(n, {
         default: function () {
-            return d;
+            return l;
         }
     }),
-    n(47120);
-var t = n(200651),
-    o = n(192379),
-    a = n(481060),
-    r = n(153867),
-    c = n(689938),
-    i = n(553685);
-function d(e) {
-    let { onSubmit: s, onClose: n, ...d } = e,
-        [l, C] = o.useState(!1);
-    return (0, t.jsxs)(a.ConfirmModal, {
-        header: c.Z.Messages.CALL_USER_PROMPT_HEADER,
-        confirmButtonColor: a.Button.Colors.GREEN,
-        confirmText: c.Z.Messages.CALL_USER_CONFIRM,
-        cancelText: c.Z.Messages.CANCEL,
-        onConfirm: s,
-        onClose: () => (l && r.ZP.updatedUnsyncedSettings({ disableCallUserConfirmationPrompt: !0 }), n()),
-        ...d,
+    e(47120);
+var o = e(200651),
+    i = e(192379),
+    r = e(481060),
+    s = e(153867),
+    c = e(388032),
+    a = e(553685);
+function l(t) {
+    let { onSubmit: n, onClose: e, ...l } = t,
+        [d, h] = i.useState(!1);
+    return (0, o.jsxs)(r.ConfirmModal, {
+        header: c.intl.string(c.t.HlAPoq),
+        confirmButtonColor: r.Button.Colors.GREEN,
+        confirmText: c.intl.string(c.t.rimG2d),
+        cancelText: c.intl.string(c.t['ETE/oK']),
+        onConfirm: n,
+        onClose: () => (d && s.ZP.updatedUnsyncedSettings({ disableCallUserConfirmationPrompt: !0 }), e()),
+        ...l,
         children: [
-            (0, t.jsx)(a.Text, {
+            (0, o.jsx)(r.Text, {
                 variant: 'text-md/normal',
-                children: c.Z.Messages.CALL_USER_PROMPT
+                children: c.intl.string(c.t.Jz3oqK)
             }),
-            (0, t.jsx)(a.Checkbox, {
-                type: a.Checkbox.Types.INVERTED,
-                value: l,
-                onChange: (e, s) => C(s),
-                className: i.checkbox,
-                children: (0, t.jsx)(a.Text, {
+            (0, o.jsx)(r.Checkbox, {
+                type: r.Checkbox.Types.INVERTED,
+                value: d,
+                onChange: (t, n) => h(n),
+                className: a.checkbox,
+                children: (0, o.jsx)(r.Text, {
                     variant: 'text-md/normal',
-                    children: c.Z.Messages.DONT_ASK_AGAIN
+                    children: c.intl.string(c.t['JdIQ/f'])
                 })
             })
         ]

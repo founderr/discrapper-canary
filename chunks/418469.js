@@ -11,25 +11,25 @@ var i = n(442837),
     o = n(687516),
     l = n(314897),
     u = n(959457),
-    c = n(689938);
+    c = n(388032);
 function d(e, t, d) {
-    var _;
-    let E = (0, o.Cf)(e),
-        f = (0, i.e7)([l.default], () => l.default.getId()),
-        h = null != e ? (0, s.V9)(e) : u.Z.getActiveStreamKey(),
-        p = null !== (_ = u.Z.getVideoStats(h)) && void 0 !== _ ? _ : {},
-        I = {
-            media_session_id: u.Z.getMediaSessionId(h),
-            rtc_connection_id: u.Z.getRtcConnectionId(h),
-            stream_region: u.Z.getRegion(h),
-            max_viewers: u.Z.getMaxViewers(h),
-            ...p
+    var f;
+    let _ = (0, o.Cf)(e),
+        h = (0, i.e7)([l.default], () => l.default.getId()),
+        p = null != e ? (0, s.V9)(e) : u.Z.getActiveStreamKey(),
+        m = null !== (f = u.Z.getVideoStats(p)) && void 0 !== f ? f : {},
+        g = {
+            media_session_id: u.Z.getMediaSessionId(p),
+            rtc_connection_id: u.Z.getRtcConnectionId(p),
+            stream_region: u.Z.getRegion(p),
+            max_viewers: u.Z.getMaxViewers(p),
+            ...m
         };
     return null == e
         ? null
         : (0, r.jsx)(a.MenuItem, {
               id: 'report-stream-problem',
-              label: c.Z.Messages.STREAM_REPORT_PROBLEM_MENU_ITEM,
+              label: c.intl.string(c.t.sdnCxc),
               action: () => {
                   null == d || d(),
                       null != e &&
@@ -38,9 +38,9 @@ function d(e, t, d) {
                               return (n) =>
                                   (0, r.jsx)(t, {
                                       stream: e,
-                                      streamApplication: E,
-                                      isStreamer: f === (null == e ? void 0 : e.ownerId),
-                                      analyticsData: I,
+                                      streamApplication: _,
+                                      isStreamer: h === (null == e ? void 0 : e.ownerId),
+                                      analyticsData: g,
                                       ...n
                                   });
                           });

@@ -1,43 +1,43 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return a;
     }
 });
-var a = n(70722),
-    s = n(689938);
-function l(e, t) {
+var l = n(70722),
+    i = n(388032);
+function a(e, t) {
     return [
         {
-            value: a.kr.BLACK_SCREEN,
-            label: t ? s.Z.Messages.STREAM_REPORT_ENDED_BLACK : s.Z.Messages.STREAM_REPORT_BLACK
+            value: l.kr.BLACK_SCREEN,
+            label: t ? i.intl.string(i.t['0X5Zbm']) : i.intl.string(i.t.fxiRNj)
         },
         {
-            value: a.kr.BLURRY,
-            label: t ? s.Z.Messages.STREAM_REPORT_ENDED_BLURRY : s.Z.Messages.STREAM_REPORT_BLURRY
+            value: l.kr.BLURRY,
+            label: t ? i.intl.string(i.t.VVPQy8) : i.intl.string(i.t.E8jTMD)
         },
         {
-            value: a.kr.LAGGING,
-            label: t ? s.Z.Messages.STREAM_REPORT_ENDED_LAGGING : s.Z.Messages.STREAM_REPORT_LAGGING
+            value: l.kr.LAGGING,
+            label: t ? i.intl.string(i.t.ObEHd3) : i.intl.string(i.t.VoSJER)
         },
         {
-            value: a.kr.OUT_OF_SYNC,
-            label: t ? s.Z.Messages.STREAM_REPORT_ENDED_OUT_OF_SYNC : s.Z.Messages.STREAM_REPORT_OUT_OF_SYNC
+            value: l.kr.OUT_OF_SYNC,
+            label: t ? i.intl.string(i.t.mYmwDw) : i.intl.string(i.t['+NluQk'])
         },
         {
-            value: a.kr.AUDIO_MISSING,
-            label: t ? s.Z.Messages.STREAM_REPORT_ENDED_AUDIO_MISSING : s.Z.Messages.STREAM_REPORT_AUDIO_MISSING
+            value: l.kr.AUDIO_MISSING,
+            label: t ? i.intl.string(i.t.Xwv419) : i.intl.string(i.t.G2egzc)
         },
         {
-            value: a.kr.AUDIO_POOR,
-            label: t ? s.Z.Messages.STREAM_REPORT_ENDED_AUDIO_POOR : s.Z.Messages.STREAM_REPORT_AUDIO_POOR
+            value: l.kr.AUDIO_POOR,
+            label: t ? i.intl.string(i.t['fHey+f']) : i.intl.string(i.t.aHOfIi)
         },
         {
-            value: a.kr.STREAM_STOPPED,
-            label: s.Z.Messages.STREAM_REPORT_ENDED_STREAM_STOPPED_UNEXPECTEDLY
+            value: l.kr.STREAM_STOPPED,
+            label: i.intl.string(i.t.uEoqQk)
         },
         {
-            value: a.kr.OTHER,
-            label: s.Z.Messages.CALL_FEEDBACK_OPTION_OTHER
+            value: l.kr.OTHER,
+            label: i.intl.string(i.t['emlT9/'])
         }
     ];
 }

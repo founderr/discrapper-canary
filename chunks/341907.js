@@ -1,25 +1,25 @@
 n.r(t),
     n.d(t, {
         maybeShowSurveyForQuest: function () {
-            return N;
+            return b;
         },
         navigateToQuestHome: function () {
-            return A;
-        },
-        openDisclosureModal: function () {
-            return g;
-        },
-        openQuestInGameRewardModal: function () {
-            return S;
-        },
-        openQuestsNitroRewardModal: function () {
             return T;
         },
+        openDisclosureModal: function () {
+            return S;
+        },
+        openQuestInGameRewardModal: function () {
+            return I;
+        },
+        openQuestsNitroRewardModal: function () {
+            return v;
+        },
         openQuestsRewardCodeModal: function () {
-            return m;
+            return E;
         },
         openVideoQuestModal: function () {
-            return R;
+            return y;
         }
     });
 var r = n(200651);
@@ -32,13 +32,13 @@ var i = n(481060),
     u = n(918701),
     c = n(862847),
     d = n(5881),
-    _ = n(842942),
-    E = n(61115),
-    f = n(150560),
-    h = n(46140),
-    p = n(981631),
-    I = n(49898);
-function m(e) {
+    f = n(842942),
+    _ = n(61115),
+    h = n(150560),
+    p = n(46140),
+    m = n(981631),
+    g = n(49898);
+function E(e) {
     let { questId: t, location: a, questContentPosition: s, preview: o = !1 } = e;
     (0, i.openModalLazy)(async () => {
         let { default: e } = await Promise.all([n.e('48923'), n.e('99393'), n.e('28044'), n.e('71740')]).then(n.bind(n, 985866));
@@ -52,7 +52,7 @@ function m(e) {
             });
     });
 }
-function T(e, t) {
+function v(e, t) {
     (0, i.openModalLazy)(async () => {
         let { default: i } = await n.e('838').then(n.bind(n, 824393));
         return (n) =>
@@ -63,7 +63,7 @@ function T(e, t) {
             });
     });
 }
-function S(e, t) {
+function I(e, t) {
     (0, i.openModalLazy)(async () => {
         let { default: i } = await n.e('88938').then(n.bind(n, 390238));
         return (n) =>
@@ -74,7 +74,7 @@ function S(e, t) {
             });
     });
 }
-function g(e, t) {
+function S(e, t) {
     (0, o._3)({
         questId: e.id,
         questContent: t.content,
@@ -91,8 +91,8 @@ function g(e, t) {
                 });
         });
 }
-function A(e, t, n) {
-    let r = f.Z.getState().setUtmCurrentContext;
+function T(e, t, n) {
+    let r = h.Z.getState().setUtmCurrentContext;
     r({
         utmSourceCurrent: 'Discord Widget',
         utmMediumCurrent: 'in-app',
@@ -100,22 +100,22 @@ function A(e, t, n) {
         utmContentCurrent: Object.keys(l.jn).find((e) => l.jn[e] === t)
     });
     let i = null != n ? '#'.concat(n) : '';
-    a.Z.setState({ selectedTab: I.F$.QUESTS }), (0, s.uL)(p.Z5c.QUEST_HOME + i);
+    a.Z.setState({ selectedTab: g.F$.QUESTS }), (0, s.uL)(m.Z5c.QUEST_HOME + i);
 }
-function N(e) {
+function b(e) {
     let t = (0, d.T)({ quest: e }),
-        n = { location: h.dr.QUESTS_BAR };
+        n = { location: p.dr.QUESTS_BAR };
     if (!(0, c.j)(n)) return;
     let r = (0, u.il)(e),
-        i = (0, _.Z)({ gameName: e.config.messages.gameTitle });
+        i = (0, f.Z)({ gameName: e.config.messages.gameTitle });
     if (i.taskType === r.taskType && !!i.experiment.getCurrentConfig(n).enabled)
         t.log('Showing survey '.concat(i.id)),
-            (0, E.openQuestSurveyModal)({
+            (0, _.openQuestSurveyModal)({
                 questId: e.id,
                 survey: i
             });
 }
-function R(e) {
+function y(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     (0, i.openModalLazy)(
         async () => {

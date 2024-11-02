@@ -1,36 +1,36 @@
 n.d(t, {
     Bo: function () {
-        return S;
+        return I;
     },
     Dc: function () {
         return d;
     },
     OF: function () {
-        return p;
+        return m;
     },
     QB: function () {
-        return T;
+        return v;
     },
     Tj: function () {
         return u;
     },
     XN: function () {
-        return h;
+        return p;
     },
     c0: function () {
-        return A;
+        return T;
     },
     fD: function () {
-        return m;
+        return E;
     },
     kD: function () {
-        return g;
+        return S;
     },
     rn: function () {
-        return _;
+        return f;
     },
     rv: function () {
-        return E;
+        return _;
     },
     zp: function () {
         return c;
@@ -84,18 +84,18 @@ function d(e) {
     let s = 1;
     return (n = Math.round(n * a)) > i && (s = i / n), Math.min(a * s, 1);
 }
-function _(e) {
+function f(e) {
     let { width: t, height: n, maxWidth: r, maxHeight: i } = e;
     return t === n ? 1 : Math.min(Math.max(r / t, i / n), 1);
 }
-function E(e) {
+function _(e) {
     return null == e || '' === e ? 'none' : 'url('.concat(e, ')');
 }
-let f = [[0, 0, 0]];
-function h(e, t, n) {
+let h = [[0, 0, 0]];
+function p(e, t, n) {
     let r = document.createElement('canvas'),
         i = r.getContext('2d');
-    if (null == i) return f;
+    if (null == i) return h;
     let a = (r.width = 0 === e.width ? 128 : e.width),
         s = (r.height = 0 === e.height ? 128 : e.height);
     i.drawImage(e, 0, 0, a, s);
@@ -105,10 +105,10 @@ function h(e, t, n) {
             return r;
         })(i.getImageData(0, 0, a, s).data, a * s, n),
         u = l()(o, t);
-    return 'boolean' == typeof u ? f : u.palette();
+    return 'boolean' == typeof u ? h : u.palette();
 }
-let p = (e) => ('number' == typeof e ? null : I(e)),
-    I = s().memoize(
+let m = (e) => ('number' == typeof e ? null : g(e)),
+    g = s().memoize(
         (e) =>
             new Promise((t, n) => {
                 let r = new Image();
@@ -117,12 +117,12 @@ let p = (e) => ('number' == typeof e ? null : I(e)),
                         n(e), (r.onerror = r.onload = null), (r = null);
                     }),
                     (r.onload = () => {
-                        t(h(r, 5, 10)), (r.onerror = r.onload = null), (r = null);
+                        t(p(r, 5, 10)), (r.onerror = r.onload = null), (r = null);
                     }),
                     (r.src = e);
             })
     );
-function m(e) {
+function E(e) {
     return new Promise((t, n) => {
         let r = new FileReader();
         r.readAsDataURL(e),
@@ -132,15 +132,15 @@ function m(e) {
             (r.onerror = (e) => n(e));
     });
 }
-function T(e) {
+function v(e) {
     let t = e.split(';base64,');
     return i()(2 === t.length, 'Input data is not a valid image.'), atob(t[1]).length;
 }
-async function S(e, t, n) {
-    let r = g(e);
+async function I(e, t, n) {
+    let r = S(e);
     return new File([await r.arrayBuffer()], t, { type: n });
 }
-function g(e) {
+function S(e) {
     let t;
     t = e.split(',')[0].indexOf('base64') >= 0 ? atob(e.split(',')[1]) : btoa(e.split(',')[1]);
     let n = e.split(',')[0].split(':')[1].split(';')[0],
@@ -148,7 +148,7 @@ function g(e) {
     for (var i = 0; i < t.length; i++) r[i] = t.charCodeAt(i);
     return new Blob([r], { type: n });
 }
-async function A(e) {
+async function T(e) {
     var t;
     if ('image/png' !== (null === (t = e.type) || void 0 === t ? void 0 : t.split(';')[0])) throw Error('File is not a PNG');
     let n = await e.text(),

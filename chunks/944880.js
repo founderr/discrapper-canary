@@ -8,62 +8,62 @@ var r = n(913527),
     u = n(580130),
     c = n(111361),
     d = n(470918),
-    _ = n(595878),
-    E = n(513785),
-    f = n(106255),
-    h = n(474936),
-    p = n(735825);
-let I = null,
-    m = !1;
-function T(e) {
+    f = n(595878),
+    _ = n(513785),
+    h = n(106255),
+    p = n(474936),
+    m = n(735825);
+let g = null,
+    E = !1;
+function v(e) {
     let t = o.Z.createFromServer(e.entitlement);
-    (0, f._k)(t)
-        ? S({ forceRefresh: !0 })
-        : (0, f.YE)(t) &&
-          null != E.Z.getTenureRewardStatusForRewardId(t.skuId) &&
+    (0, h._k)(t)
+        ? I({ forceRefresh: !0 })
+        : (0, h.YE)(t) &&
+          null != _.Z.getTenureRewardStatusForRewardId(t.skuId) &&
           a.Z.dispatch({
               type: 'USER_TENURE_REWARD_STATUS_DELETE',
               tenureRewardIds: [t.skuId]
           });
 }
-function S() {
+function I() {
     let { forceRefresh: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    A();
-    let t = u.Z.getForApplication(h.CL),
-        n = (0, f.kG)(t),
-        r = (0, f.MR)([p.Ft.FREE_GUILD_BOOST_1_MONTH, p.Ft.FREE_GUILD_BOOST_3_MONTHS], t),
+    T();
+    let t = u.Z.getForApplication(p.CL),
+        n = (0, h.kG)(t),
+        r = (0, h.MR)([m.Ft.FREE_GUILD_BOOST_1_MONTH, m.Ft.FREE_GUILD_BOOST_3_MONTHS], t),
         s = l.default.getCurrentUser();
-    if (!(0, c.M5)(s, h.p9.TIER_2) && null == n) {
+    if (!(0, c.M5)(s, p.p9.TIER_2) && null == n) {
         null != s && a.Z.dispatch({ type: 'USER_TENURE_REWARD_STATUS_RESET' });
         return;
     }
-    if (!!(0, _.dR)({ location: 'tenure_reward_manager' }))
+    if (!!(0, f.dR)({ location: 'tenure_reward_manager' }))
         if (
             (!0 === e ||
                 (function (e) {
-                    if (E.Z.getFetchState() !== E.M.FETCHED) return !0;
-                    let t = (0, f.LA)();
+                    if (_.Z.getFetchState() !== _.M.FETCHED) return !0;
+                    let t = (0, h.LA)();
                     return (
                         (null != t && null != e && e.id !== t.user_id) ||
                         (function () {
-                            let e = E.Z.getState();
+                            let e = _.Z.getState();
                             return null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 1209600000;
                         })() ||
                         (function () {
                             var e;
-                            let t = null !== (e = E.Z.getTenureRewardStatusForRewardId(p.Ft.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : E.Z.getTenureRewardStatusForRewardId(p.Ft.FREE_GUILD_BOOST_3_MONTHS);
+                            let t = null !== (e = _.Z.getTenureRewardStatusForRewardId(m.Ft.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : _.Z.getTenureRewardStatusForRewardId(m.Ft.FREE_GUILD_BOOST_3_MONTHS);
                             return null != t && null != t.redeemable_at && 0 >= i()(t.redeemable_at).diff(i().utc(), 'seconds');
                         })()
                     );
                 })(s)) &&
             null == r
         )
-            g();
+            S();
         else {
-            let e = u.Z.getForApplication(h.CL);
+            let e = u.Z.getForApplication(p.CL);
             if (null == e) return;
             let t = Array.from(e)
-                .filter((e) => null != E.Z.getTenureRewardStatusForRewardId(e.skuId))
+                .filter((e) => null != _.Z.getTenureRewardStatusForRewardId(e.skuId))
                 .map((e) => e.skuId);
             t.length > 0 &&
                 a.Z.dispatch({
@@ -72,35 +72,35 @@ function S() {
                 });
         }
 }
-async function g() {
-    if (!m)
-        (m = !0),
+async function S() {
+    if (!E)
+        (E = !0),
             await d.V(),
-            (m = !1),
+            (E = !1),
             a.Z.wait(() =>
                 (function () {
                     var e;
-                    if ((A(), E.Z.getFetchState() !== E.M.FETCHED || m)) return;
-                    let t = null !== (e = E.Z.getTenureRewardStatusForRewardId(p.Ft.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : E.Z.getTenureRewardStatusForRewardId(p.Ft.FREE_GUILD_BOOST_3_MONTHS);
+                    if ((T(), _.Z.getFetchState() !== _.M.FETCHED || E)) return;
+                    let t = null !== (e = _.Z.getTenureRewardStatusForRewardId(m.Ft.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : _.Z.getTenureRewardStatusForRewardId(m.Ft.FREE_GUILD_BOOST_3_MONTHS);
                     if ((null == t ? void 0 : t.redeemable_at) == null) return;
                     let n = (null == t ? void 0 : t.redeemable_at) != null ? new Date(t.redeemable_at).getTime() - Date.now() : null;
-                    null != n && n > 0 && (I = setTimeout(S, n));
+                    null != n && n > 0 && (g = setTimeout(I, n));
                 })()
             );
 }
-function A() {
-    clearTimeout(I), (I = null);
+function T() {
+    clearTimeout(g), (g = null);
 }
-function N() {
-    A();
+function b() {
+    T();
 }
-function R() {
-    S();
+function y() {
+    I();
 }
-class O extends s.Z {
+class A extends s.Z {
     forceRefreshIfOutdated() {
-        let e = E.Z.getState();
-        null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 86400000 && S({ forceRefresh: !0 });
+        let e = _.Z.getState();
+        null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 86400000 && I({ forceRefresh: !0 });
     }
     constructor(...e) {
         var t, n, r;
@@ -108,13 +108,13 @@ class O extends s.Z {
             (t = this),
             (n = 'actions'),
             (r = {
-                POST_CONNECTION_OPEN: R,
-                CONNECTION_CLOSED: N,
-                ENTITLEMENT_FETCH_APPLICATION_SUCCESS: () => S(),
-                ENTITLEMENT_CREATE: T,
-                ENTITLEMENT_UPDATE: () => S(),
-                ENTITLEMENT_DELETE: () => S(),
-                LOGOUT: A
+                POST_CONNECTION_OPEN: y,
+                CONNECTION_CLOSED: b,
+                ENTITLEMENT_FETCH_APPLICATION_SUCCESS: () => I(),
+                ENTITLEMENT_CREATE: v,
+                ENTITLEMENT_UPDATE: () => I(),
+                ENTITLEMENT_DELETE: () => I(),
+                LOGOUT: T
             }),
             n in t
                 ? Object.defineProperty(t, n, {
@@ -126,4 +126,4 @@ class O extends s.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new O();
+t.Z = new A();

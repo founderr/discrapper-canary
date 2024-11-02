@@ -68,7 +68,7 @@ let o = Object.freeze({
                 })
             ]
         }),
-    _ = () =>
+    f = () =>
         (0, r.jsxs)('linearGradient', {
             id: o.PREMIUM_GUILD,
             children: [
@@ -79,7 +79,7 @@ let o = Object.freeze({
                 })
             ]
         }),
-    E = () =>
+    _ = () =>
         (0, r.jsxs)('linearGradient', {
             id: o.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
             gradientTransform: 'rotate(45)',
@@ -94,7 +94,7 @@ let o = Object.freeze({
                 })
             ]
         }),
-    f = i.memo(
+    h = i.memo(
         function () {
             return (0, r.jsxs)('svg', {
                 viewBox: '0 0 1 1',
@@ -107,9 +107,9 @@ let o = Object.freeze({
                     height: 1
                 },
                 'aria-hidden': !0,
-                children: [u(), c(), d(), _(), E()]
+                children: [u(), c(), d(), f(), _()]
             });
         },
         () => !0
     );
-t.ZP = f;
+t.ZP = h;

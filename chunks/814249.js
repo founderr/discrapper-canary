@@ -12,7 +12,7 @@ n.d(t, {
         return d;
     },
     iq: function () {
-        return _;
+        return f;
     }
 });
 var r,
@@ -22,33 +22,33 @@ var r,
     o,
     l,
     u = n(70956),
-    c = n(689938);
+    c = n(388032);
 let d = 5 * u.Z.Millis.SECOND;
-function _() {
+function f() {
     return [
         {
             value: 'DUPLICATED',
-            label: c.Z.Messages.SUMMARIES_FEEDBACK_OPTION_DUPLICATED
+            label: c.intl.string(c.t.wwXl5u)
         },
         {
             value: 'TOO_GENERIC',
-            label: c.Z.Messages.SUMMARIES_FEEDBACK_OPTION_TOO_GENERIC
+            label: c.intl.string(c.t['t+6knp'])
         },
         {
             value: 'TOO_MANY',
-            label: c.Z.Messages.SUMMARIES_FEEDBACK_OPTION_TOO_MANY
+            label: c.intl.string(c.t.xnKDnp)
         },
         {
             value: 'INACCURATE',
-            label: c.Z.Messages.SUMMARIES_FEEDBACK_OPTION_INACCURATE
+            label: c.intl.string(c.t.JW5VFh)
         },
         {
             value: 'NOT_USEFUL',
-            label: c.Z.Messages.SUMMARIES_FEEDBACK_OPTION_NOT_USEFUL
+            label: c.intl.string(c.t.ZtCNiY)
         },
         {
             value: 'OTHER',
-            label: c.Z.Messages.SUMMARIES_FEEDBACK_OPTION_OTHER
+            label: c.intl.string(c.t.BufsKi)
         }
     ];
 }

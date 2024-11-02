@@ -4,43 +4,43 @@ n.d(t, {
     }
 }),
     n(47120);
-var s = n(200651),
-    a = n(192379),
-    i = n(130341),
-    r = n(34112),
-    l = n(623691),
+var i = n(200651),
+    r = n(192379),
+    l = n(130341),
+    s = n(34112),
+    a = n(623691),
     o = n(494831);
 function c(e) {
     let { setEditRoleId: t, guild: n, everyoneRole: c, otherRoles: d, setSelectedSection: u } = e,
-        [_, I] = a.useState(''),
-        [E, T] = a.useState(o.Cl),
-        m = _.trim(),
-        N = a.useMemo(() => d.filter((e) => (0, i.uo)(e, m)), [d, m]),
-        S = a.useCallback(
+        [m, h] = r.useState(''),
+        [g, x] = r.useState(o.Cl),
+        p = m.trim(),
+        f = r.useMemo(() => d.filter((e) => (0, l.uo)(e, p)), [d, p]),
+        C = r.useCallback(
             () =>
-                (0, s.jsx)(
-                    l.Z,
+                (0, i.jsx)(
+                    a.Z,
                     {
                         guild: n,
                         everyoneRole: c,
-                        filteredRoles: N,
+                        filteredRoles: f,
                         setEditRoleId: t,
-                        query: _,
-                        setQuery: I,
-                        setHeaderHeight: T
+                        query: m,
+                        setQuery: h,
+                        setHeaderHeight: x
                     },
                     'header'
                 ),
-            [n, c, N, t, _]
+            [n, c, f, t, m]
         );
-    return (0, s.jsx)(r.Z, {
+    return (0, i.jsx)(s.Z, {
         setEditRoleId: t,
         guild: n,
         everyoneRole: c,
         otherRoles: d,
         setSelectedSection: u,
-        renderHeader: S,
-        headerHeight: E,
-        query: _
+        renderHeader: C,
+        headerHeight: g,
+        query: m
     });
 }

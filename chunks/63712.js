@@ -1,103 +1,103 @@
-l.d(n, {
+t.d(n, {
     Z: function () {
-        return E;
+        return m;
     }
 });
-var s = l(200651);
-l(192379);
-var a = l(442837),
-    t = l(481060),
-    i = l(536442),
-    r = l(142497),
-    o = l(689938),
-    d = l(510863),
-    c = l(137707);
+var l = t(200651);
+t(192379);
+var i = t(442837),
+    r = t(481060),
+    a = t(536442),
+    s = t(142497),
+    o = t(388032),
+    d = t(510863),
+    c = t(137707);
 let u = () =>
-    (0, s.jsxs)(s.Fragment, {
+    (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, s.jsx)(t.Text, {
+            (0, l.jsx)(r.Text, {
                 color: 'header-primary',
                 variant: 'text-xs/normal',
                 className: d.inlineText,
-                children: o.Z.Messages.GUILD_EVENT_STAGE_UPSELL_HINT_1
+                children: o.intl.string(o.t.GcZzp6)
             }),
-            (0, s.jsx)(t.Text, {
+            (0, l.jsx)(r.Text, {
                 color: 'header-primary',
                 variant: 'text-xs/normal',
                 className: d.inlineText,
-                children: o.Z.Messages.GUILD_EVENT_STAGE_UPSELL_HINT_2
+                children: o.intl.string(o.t['/NEGrK'])
             }),
-            (0, s.jsx)(t.Text, {
+            (0, l.jsx)(r.Text, {
                 color: 'header-primary',
                 variant: 'text-xs/normal',
                 className: d.inlineText,
-                children: o.Z.Messages.GUILD_EVENT_STAGE_UPSELL_HINT_3
+                children: o.intl.string(o.t.eUbuHB)
             }),
-            (0, s.jsx)(t.Text, {
+            (0, l.jsx)(r.Text, {
                 color: 'header-primary',
                 variant: 'text-xs/normal',
                 className: d.inlineText,
-                children: o.Z.Messages.GUILD_EVENT_STAGE_UPSELL_HINT_4
+                children: o.intl.string(o.t.sCAZeH)
             })
         ]
     });
-function E(e) {
+function m(e) {
     let { onClick: n } = e;
-    return (0, a.e7)([i.qc], () => !i.qc.hasHotspot(i.v6.STAGE_CHANNEL_UPSELL))
+    return (0, i.e7)([a.qc], () => !a.qc.hasHotspot(a.v6.STAGE_CHANNEL_UPSELL))
         ? null
-        : (0, s.jsxs)('div', {
+        : (0, l.jsxs)('div', {
               className: d.container,
               children: [
-                  (0, s.jsxs)('div', {
+                  (0, l.jsxs)('div', {
                       className: d.content,
                       children: [
-                          (0, s.jsxs)('div', {
+                          (0, l.jsxs)('div', {
                               className: d.textContainer,
                               children: [
-                                  (0, s.jsx)(t.Heading, {
+                                  (0, l.jsx)(r.Heading, {
                                       variant: 'heading-md/semibold',
-                                      children: o.Z.Messages.GUILD_EVENT_STAGE_UPSELL_TITLE
+                                      children: o.intl.string(o.t.Sx8Ezs)
                                   }),
-                                  (0, s.jsx)(t.Text, {
+                                  (0, l.jsx)(r.Text, {
                                       color: 'header-secondary',
                                       variant: 'text-xs/normal',
                                       className: d.descriptionText,
-                                      children: o.Z.Messages.GUILD_EVENT_STAGE_TOOLTIP_BODY
+                                      children: o.intl.string(o.t.JUzPho)
                                   }),
-                                  (0, s.jsx)(t.Text, {
+                                  (0, l.jsx)(r.Text, {
                                       color: 'header-secondary',
                                       variant: 'text-xs/normal',
-                                      children: o.Z.Messages.GUILD_EVENT_STAGE_UPSELL.format({ suggestionsHook: u })
+                                      children: o.intl.format(o.t.Vh7rPz, { suggestionsHook: u })
                                   })
                               ]
                           }),
-                          (0, s.jsx)('div', {
+                          (0, l.jsx)('div', {
                               className: d.image,
-                              children: (0, s.jsx)('img', {
+                              children: (0, l.jsx)('img', {
                                   src: c,
-                                  alt: o.Z.Messages.GUILD_EVENT_STAGE_UPSELL_ALT_IMAGE
+                                  alt: o.intl.string(o.t['uIm/n5'])
                               })
                           })
                       ]
                   }),
-                  (0, s.jsxs)('div', {
+                  (0, l.jsxs)('div', {
                       className: d.footer,
                       children: [
-                          (0, s.jsx)(t.Button, {
+                          (0, l.jsx)(r.Button, {
                               onClick: n,
-                              color: t.Button.Colors.PRIMARY,
-                              size: t.Button.Sizes.SMALL,
+                              color: r.Button.Colors.PRIMARY,
+                              size: r.Button.Sizes.SMALL,
                               className: d.button,
-                              children: o.Z.Messages.CREATE_STAGE_CHANNEL
+                              children: o.intl.string(o.t['X/3SyM'])
                           }),
-                          (0, s.jsx)(t.Button, {
+                          (0, l.jsx)(r.Button, {
                               onClick: () => {
-                                  r.Kw(i.v6.STAGE_CHANNEL_UPSELL);
+                                  s.Kw(a.v6.STAGE_CHANNEL_UPSELL);
                               },
-                              color: t.Button.Colors.TRANSPARENT,
-                              size: t.Button.Sizes.SMALL,
-                              look: t.ButtonLooks.LINK,
-                              children: o.Z.Messages.DONT_SHOW_AGAIN
+                              color: r.Button.Colors.TRANSPARENT,
+                              size: r.Button.Sizes.SMALL,
+                              look: r.ButtonLooks.LINK,
+                              children: o.intl.string(o.t['5E9SBw'])
                           })
                       ]
                   })

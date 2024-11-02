@@ -1,43 +1,43 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return f;
     }
 }),
     n(47120),
     n(724458);
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(780384),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    s = n(780384),
     o = n(481060),
     c = n(410030),
     d = n(355932),
     u = n(889711),
-    _ = n(79707),
-    E = n(689938),
-    h = n(116155);
-function m(e) {
-    let { onTabSelect: t, tabs: n, selectedTab: s } = e,
+    h = n(79707),
+    m = n(388032),
+    p = n(116155);
+function g(e) {
+    let { onTabSelect: t, tabs: n, selectedTab: l } = e,
         d = (0, c.ZP)(),
-        u = (0, l.wj)(d),
-        m = a.useMemo(
+        u = (0, s.wj)(d),
+        g = r.useMemo(
             () =>
                 null !=
                 n.find((e) => {
                     let { id: t } = e;
-                    return t === s;
+                    return t === l;
                 }),
-            [s, n]
+            [l, n]
         ),
-        I = m ? 'header-primary' : u ? 'text-muted' : 'header-primary',
-        p = m ? o.tokens.colors.HEADER_PRIMARY : u ? o.tokens.colors.TEXT_MUTED : o.tokens.colors.HEADER_PRIMARY;
+        f = g ? 'header-primary' : u ? 'text-muted' : 'header-primary',
+        _ = g ? o.tokens.colors.HEADER_PRIMARY : u ? o.tokens.colors.TEXT_MUTED : o.tokens.colors.HEADER_PRIMARY;
     return (0, i.jsx)(o.Popout, {
         renderPopout: (e) => {
-            let { closePopout: a } = e;
-            return (0, i.jsx)(_.Z, {
-                selectedTab: s,
-                onClose: a,
+            let { closePopout: r } = e;
+            return (0, i.jsx)(h.Z, {
+                selectedTab: l,
+                onClose: r,
                 tabs: n,
                 onTabSelect: t
             });
@@ -50,77 +50,77 @@ function m(e) {
                 ...e,
                 id: 'more',
                 color: 'text-muted',
-                className: r()(h.tab, h.more, { [h.selected]: m }),
-                'aria-label': E.Z.Messages.MORE,
+                className: a()(p.tab, p.more, { [p.selected]: g }),
+                'aria-label': m.intl.string(m.t.UKOtz8),
                 children: [
                     (0, i.jsx)(o.Text, {
                         variant: 'text-md/medium',
-                        color: I,
-                        children: E.Z.Messages.MORE
+                        color: f,
+                        children: m.intl.string(m.t.UKOtz8)
                     }),
                     n
                         ? (0, i.jsx)(o.ChevronSmallUpIcon, {
                               size: 'sm',
-                              color: p
+                              color: _
                           })
                         : (0, i.jsx)(o.ChevronSmallDownIcon, {
                               size: 'sm',
-                              color: p
+                              color: _
                           })
                 ]
             });
         }
     });
 }
-function I(e) {
-    let { className: t, selectedTab: n, tabs: s, onTabSelect: l, onAvailableWidthChange: c } = e,
-        [_, E] = a.useState(0),
-        I = a.useRef(_),
+function f(e) {
+    let { className: t, selectedTab: n, tabs: l, onTabSelect: s, onAvailableWidthChange: c } = e,
+        [h, m] = r.useState(0),
+        f = r.useRef(h),
         {
-            lastVisibleIndex: p,
-            onItemLayout: g,
-            overflowItemsRef: T,
-            itemWidthsRef: S
+            lastVisibleIndex: _,
+            onItemLayout: E,
+            overflowItemsRef: I,
+            itemWidthsRef: C
         } = (0, d.zP)({
-            items: s,
+            items: l,
             itemGapPx: 20,
             maxLines: 1,
-            containerWidth: _
+            containerWidth: h
         }),
-        C = a.useMemo(() => s.slice(0, p + 1), [p, s]),
-        f = a.useMemo(() => s.slice(p + 1), [p, s]),
-        N = a.useRef(null),
-        A = a.useCallback(() => {
+        v = r.useMemo(() => l.slice(0, _ + 1), [_, l]),
+        S = r.useMemo(() => l.slice(_ + 1), [_, l]),
+        N = r.useRef(null),
+        T = r.useCallback(() => {
             var e;
             let t = null === (e = N.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
-            if (null == t || I.current === t.width) return;
-            E(t.width), (I.current = t.width);
-            let n = S.current.reduce((e, t, n) => e + t + (0 === n ? 0 : 20)),
+            if (null == t || f.current === t.width) return;
+            m(t.width), (f.current = t.width);
+            let n = C.current.reduce((e, t, n) => e + t + (0 === n ? 0 : 20)),
                 i = t.width - n;
             null == c || c(i);
-        }, [S, c]);
-    a.useEffect(() => {
-        let e = (0, u.pP)(A);
+        }, [C, c]);
+    r.useEffect(() => {
+        let e = (0, u.pP)(T);
         return (0, u.YP)(e, document.body), () => (0, u.UC)(e, document.body);
-    }, [A]);
-    let v = 0 !== _;
+    }, [T]);
+    let x = 0 !== h;
     return (0, i.jsxs)('div', {
-        className: r()(h.container, t),
+        className: a()(p.container, t),
         ref: N,
         children: [
             (0, i.jsxs)('div', {
-                className: h.measurements,
+                className: p.measurements,
                 children: [
-                    s.map((e, t) =>
+                    l.map((e, t) =>
                         (0, i.jsx)(
                             d.AJ,
                             {
                                 index: t,
-                                onItemLayout: g,
+                                onItemLayout: E,
                                 children: (0, i.jsx)(o.TabBar.Item, {
                                     id: e.id,
                                     'aria-label': e.label,
-                                    className: h.tab,
+                                    className: p.tab,
                                     children: (0, i.jsx)(o.Text, {
                                         variant: 'text-md/medium',
                                         children: e.label
@@ -131,39 +131,39 @@ function I(e) {
                         )
                     ),
                     (0, i.jsx)('div', {
-                        ref: T,
-                        children: (0, i.jsx)(m, {
-                            tabs: f,
-                            onTabSelect: l,
+                        ref: I,
+                        children: (0, i.jsx)(g, {
+                            tabs: S,
+                            onTabSelect: s,
                             selectedTab: n
                         })
                     })
                 ]
             }),
-            v &&
+            x &&
                 (0, i.jsxs)(o.TabBar, {
                     type: 'top',
                     look: 'brand',
                     selectedItem: n,
-                    onItemSelect: l,
-                    className: h.tabs,
+                    onItemSelect: s,
+                    className: p.tabs,
                     children: [
-                        C.map((e) =>
+                        v.map((e) =>
                             (0, i.jsx)(
                                 o.TabBar.Item,
                                 {
                                     id: e.id,
                                     'aria-label': e.label,
-                                    className: r()(h.tab, { [h.selected]: n === e.id }),
+                                    className: a()(p.tab, { [p.selected]: n === e.id }),
                                     children: e.label
                                 },
                                 e.id
                             )
                         ),
-                        0 !== f.length
-                            ? (0, i.jsx)(m, {
-                                  tabs: f,
-                                  onTabSelect: l,
+                        0 !== S.length
+                            ? (0, i.jsx)(g, {
+                                  tabs: S,
+                                  onTabSelect: s,
                                   selectedTab: n
                               })
                             : null

@@ -19,7 +19,7 @@ var u = 0,
         var t,
             n,
             d = e.children;
-        var E =
+        var _ =
                 ((n = 2),
                 (function (e) {
                     if (Array.isArray(e)) return e;
@@ -29,7 +29,7 @@ var u = 0,
                             ? [{ dragDropManager: e.manager }, !1]
                             : [
                                   (function (e) {
-                                      var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _(),
+                                      var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f(),
                                           n = arguments.length > 2 ? arguments[2] : void 0,
                                           r = arguments.length > 3 ? arguments[3] : void 0;
                                       return !t[c] && (t[c] = { dragDropManager: (0, a.i)(e, t, n, r) }), t[c];
@@ -93,12 +93,12 @@ var u = 0,
                     (function () {
                         throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
                     })()),
-            f = E[0],
-            h = E[1];
+            h = _[0],
+            p = _[1];
         return (
             (0, i.useEffect)(function () {
-                if (h) {
-                    var e = _();
+                if (p) {
+                    var e = f();
                     return (
                         ++u,
                         function () {
@@ -107,9 +107,9 @@ var u = 0,
                     );
                 }
             }, []),
-            (0, r.jsx)(s.L.Provider, Object.assign({ value: f }, { children: d }), void 0)
+            (0, r.jsx)(s.L.Provider, Object.assign({ value: h }, { children: d }), void 0)
         );
     });
-function _() {
+function f() {
     return void 0 !== n.g ? n.g : window;
 }

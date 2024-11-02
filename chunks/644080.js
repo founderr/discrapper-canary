@@ -1,7 +1,7 @@
 var a = l(200651),
     i = l(192379),
-    r = l(120356),
-    t = l.n(r),
+    t = l(120356),
+    r = l.n(t),
     s = l(442837),
     d = l(692547),
     c = l(481060),
@@ -10,21 +10,21 @@ var a = l(200651),
     h = l(523751),
     m = l(637853),
     g = l(434404),
-    C = l(159300),
-    x = l(496675),
+    x = l(159300),
+    C = l(496675),
     f = l(709586),
-    I = l(768581),
-    v = l(981631),
-    _ = l(689938),
-    Z = l(215966),
-    N = l(63190),
-    j = l(102219);
-let p = (e) => {
+    v = l(768581),
+    I = l(981631),
+    Z = l(388032),
+    p = l(215966),
+    j = l(63190),
+    N = l(102219);
+let _ = (e) => {
     let n = i.useMemo(
         () =>
             null == e
                 ? null
-                : I.ZP.getGuildHomeHeaderURL({
+                : v.ZP.getGuildHomeHeaderURL({
                       id: e.id,
                       homeHeader: e.homeHeader
                   }),
@@ -39,12 +39,12 @@ let p = (e) => {
 function b(e) {
     let { guild: n } = e,
         l = () => {
-            g.Z.open(n.id, v.pNK.ONBOARDING, void 0, v.KsC.SERVER_GUIDE);
+            g.Z.open(n.id, I.pNK.ONBOARDING, void 0, I.KsC.SERVER_GUIDE);
         };
-    return n.hasFeature(v.oNc.BANNER)
+    return n.hasFeature(I.oNc.BANNER)
         ? (0, a.jsxs)(c.Button, {
-              className: Z.editButton,
-              innerClassName: Z.editButtonInner,
+              className: p.editButton,
+              innerClassName: p.editButtonInner,
               type: 'button',
               size: c.Button.Sizes.MEDIUM,
               color: c.Button.Colors.BRAND,
@@ -54,59 +54,59 @@ function b(e) {
                       size: 'xs',
                       color: d.Z.unsafe_rawColors.WHITE_500.css
                   }),
-                  _.Z.Messages.EDIT_IMAGE
+                  Z.intl.string(Z.t.b0y3DA)
               ]
           })
         : (0, a.jsxs)(c.ShinyButton, {
               color: c.Button.Colors.GREEN,
-              className: Z.editButton,
-              innerClassName: Z.editButtonInner,
+              className: p.editButton,
+              innerClassName: p.editButtonInner,
               onClick: l,
               children: [
                   (0, a.jsx)(f.Z, {
                       height: 16,
                       width: 16
                   }),
-                  _.Z.Messages.PREMIUM_GUILD_UNLOCK_WTH_BOOSTING_CTA
+                  Z.intl.string(Z.t['+7XY39'])
               ]
           });
 }
 let E = i.memo(function (e) {
     let { guild: n, titleClassName: i } = e,
-        { homeHeaderImage: r, isHomeHeaderImageSet: d } = p(n),
+        { homeHeaderImage: t, isHomeHeaderImageSet: d } = _(n),
         g = (0, m.b$)(n.id),
-        f = (0, s.e7)([x.Z], () => (0, C.b)(x.Z, n)),
-        I = (0, o.ZP)();
+        f = (0, s.e7)([C.Z], () => (0, x.b)(C.Z, n)),
+        v = (0, o.ZP)();
     return (0, a.jsxs)('div', {
-        className: Z.header,
+        className: p.header,
         children: [
             (0, a.jsxs)('div', {
-                className: Z.headerArtWrapper,
+                className: p.headerArtWrapper,
                 children: [
                     (0, a.jsx)('div', {
-                        className: t()(Z.headerArt, { [Z.headerArtPlaceholder]: !d }),
-                        style: { backgroundImage: 'url('.concat(d ? r : 'dark' === I ? N : j, ')') }
+                        className: r()(p.headerArt, { [p.headerArtPlaceholder]: !d }),
+                        style: { backgroundImage: 'url('.concat(d ? t : 'dark' === v ? j : N, ')') }
                     }),
                     g && (0, a.jsx)(b, { guild: n })
                 ]
             }),
             (0, a.jsx)('div', {
-                className: Z.titleWrapper,
+                className: p.titleWrapper,
                 children: (0, a.jsxs)('div', {
                     className: i,
                     children: [
                         (0, a.jsx)(u.Z, {
-                            className: Z.headerIcon,
+                            className: p.headerIcon,
                             guild: n,
                             size: u.Z.Sizes.XLARGE,
                             active: !0
                         }),
                         (0, a.jsx)(c.HeadingLevel, {
                             children: (0, a.jsxs)('div', {
-                                className: Z.headerName,
+                                className: p.headerName,
                                 children: [
                                     (0, a.jsx)(c.Heading, {
-                                        className: Z.headerName,
+                                        className: p.headerName,
                                         variant: 'heading-xxl/bold',
                                         children: n.name
                                     }),
@@ -118,7 +118,7 @@ let E = i.memo(function (e) {
                                     }),
                                     f &&
                                         (0, a.jsx)(c.Button, {
-                                            className: Z.inviteButton,
+                                            className: p.inviteButton,
                                             size: c.Button.Sizes.MEDIUM,
                                             color: c.Button.Colors.PRIMARY,
                                             onClick: () =>
@@ -128,10 +128,10 @@ let E = i.memo(function (e) {
                                                         (0, a.jsx)(e, {
                                                             ...l,
                                                             guild: n,
-                                                            source: v.t4x.GUILD_HOME
+                                                            source: I.t4x.GUILD_HOME
                                                         });
                                                 }),
-                                            children: _.Z.Messages.INSTANT_INVITE
+                                            children: Z.intl.string(Z.t.VINpSE)
                                         })
                                 ]
                             })

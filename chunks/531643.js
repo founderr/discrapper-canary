@@ -1,13 +1,13 @@
 n.r(t),
     n.d(t, {
         UPLOAD_ERROR_MODAL_KEY: function () {
-            return f;
+            return h;
         },
         default: function () {
-            return E;
+            return _;
         },
         openUploadError: function () {
-            return h;
+            return p;
         }
     });
 var r = n(200651);
@@ -20,34 +20,34 @@ var i = n(120356),
     u = n(355314),
     c = n(310752),
     d = n(731994),
-    _ = n(570486);
-function E(e) {
-    let { title: t, help: n, showPremiumUpsell: i, transitionState: s, icons: E, fileSize: f, onClose: h } = e,
-        p = (0, l.Dt)(),
-        I = null != E ? E : d.J6;
+    f = n(570486);
+function _(e) {
+    let { title: t, help: n, showPremiumUpsell: i, transitionState: s, icons: _, fileSize: h, onClose: p } = e,
+        m = (0, l.Dt)(),
+        g = null != _ ? _ : d.J6;
     return i
         ? (0, r.jsx)(u.Z, {
               transitionState: s,
-              onClose: h,
-              fileSize: f
+              onClose: p,
+              fileSize: h
           })
         : (0, r.jsx)(o.Y0, {
               size: o.Cg.DYNAMIC,
-              'aria-labelledby': p,
+              'aria-labelledby': m,
               transitionState: s,
               children: (0, r.jsx)('div', {
-                  className: a()(_.uploadDropModal, _.error),
+                  className: a()(f.uploadDropModal, f.error),
                   children: (0, r.jsxs)('div', {
-                      className: _.inner,
+                      className: f.inner,
                       children: [
-                          (0, r.jsx)(c.Z, { icons: I }),
+                          (0, r.jsx)(c.Z, { icons: g }),
                           (0, r.jsx)('div', {
-                              id: p,
-                              className: _.title,
+                              id: m,
+                              className: f.title,
                               children: t
                           }),
                           (0, r.jsx)('div', {
-                              className: _.instructions,
+                              className: f.instructions,
                               children: n
                           })
                       ]
@@ -55,14 +55,14 @@ function E(e) {
               })
           });
 }
-let f = 'UPLOAD_ERROR_MODAL_KEY';
-function h(e) {
+let h = 'UPLOAD_ERROR_MODAL_KEY';
+function p(e) {
     (0, s.h7)(
         (t) =>
-            (0, r.jsx)(E, {
+            (0, r.jsx)(_, {
                 ...t,
                 ...e
             }),
-        { modalKey: f }
+        { modalKey: h }
     );
 }

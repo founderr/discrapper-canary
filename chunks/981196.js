@@ -12,19 +12,19 @@ function l(e) {
     for (var t = [], n = '', l = Object.keys(e), u = Object.keys(r.WN), c = 0; c < l.length; c++) {
         if ('tzid' !== l[c] && !!(0, i.q9)(u, l[c])) {
             var d = l[c].toUpperCase(),
-                _ = e[l[c]],
-                E = '';
-            if (!(!(0, i.EN)(_) || ((0, i.kJ)(_) && !_.length))) {
+                f = e[l[c]],
+                _ = '';
+            if (!(!(0, i.EN)(f) || ((0, i.kJ)(f) && !f.length))) {
                 switch (d) {
                     case 'FREQ':
-                        E = r.Ci.FREQUENCIES[e.freq];
+                        _ = r.Ci.FREQUENCIES[e.freq];
                         break;
                     case 'WKST':
-                        E = (0, i.hj)(_) ? new a.O(_).toString() : _.toString();
+                        _ = (0, i.hj)(f) ? new a.O(f).toString() : f.toString();
                         break;
                     case 'BYWEEKDAY':
                         (d = 'BYDAY'),
-                            (E = (0, i.qo)(_)
+                            (_ = (0, i.qo)(f)
                                 .map(function (e) {
                                     return e instanceof a.O ? e : (0, i.kJ)(e) ? new a.O(e[0], e[1]) : new a.O(e);
                                 })
@@ -33,32 +33,32 @@ function l(e) {
                     case 'DTSTART':
                         n = (function (e, t) {
                             return e ? 'DTSTART' + new o.M(new Date(e), t).toString() : '';
-                        })(_, e.tzid);
+                        })(f, e.tzid);
                         break;
                     case 'UNTIL':
-                        E = (0, s.Od)(_, !e.tzid);
+                        _ = (0, s.Od)(f, !e.tzid);
                         break;
                     default:
-                        if ((0, i.kJ)(_)) {
-                            for (var f = [], h = 0; h < _.length; h++) f[h] = String(_[h]);
-                            E = f.toString();
-                        } else E = String(_);
+                        if ((0, i.kJ)(f)) {
+                            for (var h = [], p = 0; p < f.length; p++) h[p] = String(f[p]);
+                            _ = h.toString();
+                        } else _ = String(f);
                 }
-                E && t.push([d, E]);
+                _ && t.push([d, _]);
             }
         }
     }
-    var p = t
+    var m = t
             .map(function (e) {
                 var t = e[0],
                     n = e[1];
                 return ''.concat(t, '=').concat(n.toString());
             })
             .join(';'),
-        I = '';
+        g = '';
     return (
-        '' !== p && (I = 'RRULE:'.concat(p)),
-        [n, I]
+        '' !== m && (g = 'RRULE:'.concat(m)),
+        [n, g]
             .filter(function (e) {
                 return !!e;
             })

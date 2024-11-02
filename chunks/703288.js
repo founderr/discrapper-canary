@@ -1,10 +1,10 @@
-var n = t(200651);
-t(192379);
-var a = t(481060),
-    i = t(688465),
-    r = t(689938);
-s.Z = () =>
-    (0, n.jsx)(a.TooltipContainer, {
-        text: r.Z.Messages.CLIPS_BETA_TAG_HOVER,
-        children: (0, n.jsx)(i.Z, {})
+var i = n(200651);
+n(192379);
+var s = n(481060),
+    r = n(688465),
+    l = n(388032);
+t.Z = () =>
+    (0, i.jsx)(s.TooltipContainer, {
+        text: l.intl.string(l.t['/fgfWl']),
+        children: (0, i.jsx)(r.Z, {})
     });

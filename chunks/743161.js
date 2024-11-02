@@ -1,30 +1,30 @@
 n.r(e);
-var a = n(200651),
-    o = n(192379),
+var o = n(200651),
+    a = n(192379),
     r = n(442837),
-    c = n(481060),
-    i = n(541099),
-    u = n(827498),
-    l = n(421591),
+    i = n(481060),
+    c = n(541099),
+    l = n(827498),
+    u = n(421591),
     s = n(314734),
-    E = n(689938),
+    E = n(388032),
     d = n(574455);
-e.default = o.memo(function (t) {
+e.default = a.memo(function (t) {
     let { channel: e, ...n } = t,
-        C = (0, r.e7)([i.Z], () => i.Z.shouldShowModal());
+        f = (0, r.e7)([c.Z], () => c.Z.shouldShowModal());
     return (
-        o.useEffect(() => {
-            !C && (0, c.closeModalInAllContexts)(s.e9);
+        a.useEffect(() => {
+            !f && (0, i.closeModalInAllContexts)(s.e9);
         }),
-        (0, a.jsx)('span', {
+        (0, o.jsx)('span', {
             style: s.u$,
-            children: (0, a.jsx)(c.ModalRoot, {
+            children: (0, o.jsx)(i.ModalRoot, {
                 className: d.root,
-                'aria-label': E.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE,
+                'aria-label': E.intl.string(E.t.shUONj),
                 ...n,
-                children: (0, a.jsx)(l.Z, {
+                children: (0, o.jsx)(u.Z, {
                     channel: e,
-                    entrypoint: u._b.VOICE
+                    entrypoint: l._b.VOICE
                 })
             })
         })

@@ -5,55 +5,55 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    a = n(481060),
-    l = n(665149),
-    r = n(585483),
+    l = n(192379),
+    r = n(481060),
+    a = n(665149),
+    s = n(585483),
     o = n(723170),
     c = n(64247),
     u = n(124368),
     d = n(981631),
-    h = n(689938),
+    h = n(388032),
     m = n(607222);
 function p(e) {
     let { channel: t } = e,
         n = (0, o.B)(t),
-        [p, _] = s.useState(!1),
-        f = (0, a.useRedesignIconContext)().enabled;
-    s.useEffect(() => {
-        let e = () => _(!0);
+        [p, f] = l.useState(!1),
+        g = (0, r.useRedesignIconContext)().enabled;
+    l.useEffect(() => {
+        let e = () => f(!0);
         return (
-            r.S.subscribe(d.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
+            s.S.subscribe(d.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
             () => {
-                r.S.unsubscribe(d.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e);
+                s.S.unsubscribe(d.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e);
             }
         );
     }, []);
-    let E = h.Z.Messages.NOTIFICATION_SETTINGS;
-    return (0, i.jsx)(a.Popout, {
+    let C = h.intl.string(h.t.h850Sk);
+    return (0, i.jsx)(r.Popout, {
         shouldShow: p,
-        animation: a.Popout.Animation.NONE,
+        animation: r.Popout.Animation.NONE,
         position: 'bottom',
         align: 'right',
         autoInvert: !1,
-        onRequestClose: () => _(!1),
+        onRequestClose: () => f(!1),
         renderPopout: (e) =>
             (0, i.jsx)(c.Z, {
                 ...e,
                 channel: t,
                 navId: 'thread-context',
-                label: h.Z.Messages.THREAD_ACTIONS_MENU_LABEL
+                label: h.intl.string(h.t['1NBjqa'])
             }),
         children: (e, t) => {
-            let { isShown: s } = t;
-            return (0, i.jsx)(l.ZP.Icon, {
+            let { isShown: l } = t;
+            return (0, i.jsx)(a.ZP.Icon, {
                 ...e,
-                onClick: () => _((e) => !e),
-                tooltip: s ? null : E,
-                icon: n === u.iN.NO_MESSAGES ? a.BellSlashIcon : a.BellIcon,
-                foreground: n !== u.iN.NO_MESSAGES || f ? null : m.strikethrough,
-                'aria-label': E,
-                selected: s
+                onClick: () => f((e) => !e),
+                tooltip: l ? null : C,
+                icon: n === u.iN.NO_MESSAGES ? r.BellSlashIcon : r.BellIcon,
+                foreground: n !== u.iN.NO_MESSAGES || g ? null : m.strikethrough,
+                'aria-label': C,
+                selected: l
             });
         }
     });

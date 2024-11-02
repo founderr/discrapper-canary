@@ -13,7 +13,7 @@ var i = n(120356),
     u = n(565138),
     c = n(711258);
 function d(e) {
-    let { className: t, maxGuilds: n, guilds: i, onFocus: s, onClick: d, size: _ = u.Z.Sizes.SMALLER, hideOverflowCount: E = !1, disableGuildNameTooltip: f = !1 } = e;
+    let { className: t, maxGuilds: n, guilds: i, onFocus: s, onClick: d, size: f = u.Z.Sizes.SMALLER, hideOverflowCount: _ = !1, disableGuildNameTooltip: h = !1 } = e;
     return i.length <= 0
         ? null
         : (0, r.jsx)('div', {
@@ -23,13 +23,13 @@ function d(e) {
                           .take(n)
                           .map((e) => {
                               let t = e.name;
-                              return f
+                              return h
                                   ? (0, r.jsx)('div', {
                                         className: c.avatar,
                                         children: (0, r.jsx)(u.Z, {
                                             guild: e,
                                             onClick: d,
-                                            size: _,
+                                            size: f,
                                             showTooltip: !1
                                         })
                                     })
@@ -41,7 +41,7 @@ function d(e) {
                                             children: (0, r.jsx)(u.Z, {
                                                 guild: e,
                                                 onClick: d,
-                                                size: _
+                                                size: f
                                             })
                                         },
                                         e.id
@@ -51,7 +51,7 @@ function d(e) {
                       t = i.length - n;
                   return (
                       t > 0 &&
-                          !E &&
+                          !_ &&
                           (e[e.length - 1] = (0, r.jsxs)(l.Button, {
                               className: a()(c.avatar, c.overflow),
                               onFocus: s,

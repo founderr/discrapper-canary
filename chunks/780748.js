@@ -10,40 +10,40 @@ var r = n(192379),
     o = n(417662),
     l = n(981631);
 function u(e) {
-    let { editor: t, channel: n, disableEnterToSubmit: u, onKeyDown: c, onKeyUp: d, onTab: _, onEnter: E, allowNewLines: f, submit: h, hideAutocomplete: p, moveSelection: I } = e,
-        m = r.useCallback(
+    let { editor: t, channel: n, disableEnterToSubmit: u, onKeyDown: c, onKeyUp: d, onTab: f, onEnter: _, allowNewLines: h, submit: p, hideAutocomplete: m, moveSelection: g } = e,
+        E = r.useCallback(
             (e) => {
                 var r;
                 switch (e.which) {
                     case l.yXg.ARROW_UP:
-                        if (I(-1)) {
+                        if (g(-1)) {
                             e.preventDefault();
                             return;
                         }
                         break;
                     case l.yXg.ARROW_DOWN:
-                        if (I(1)) {
+                        if (g(1)) {
                             e.preventDefault();
                             return;
                         }
                         break;
                     case l.yXg.P:
-                        if ((0, o.E)(e, { ctrl: !0 }) && I(-1)) {
+                        if ((0, o.E)(e, { ctrl: !0 }) && g(-1)) {
                             e.preventDefault();
                             return;
                         }
                         break;
                     case l.yXg.N:
-                        if ((0, o.E)(e, { ctrl: !0 }) && I(1)) {
+                        if ((0, o.E)(e, { ctrl: !0 }) && g(1)) {
                             e.preventDefault();
                             return;
                         }
                         break;
                     case l.yXg.ESCAPE:
-                        null == p || p();
+                        null == m || m();
                         break;
                     case l.yXg.TAB:
-                        if ((0, o.E)(e, {}) && (null == _ ? void 0 : _())) {
+                        if ((0, o.E)(e, {}) && (null == f ? void 0 : f())) {
                             e.preventDefault(), e.stopPropagation();
                             return;
                         }
@@ -53,7 +53,7 @@ function u(e) {
                         }
                         break;
                     case l.yXg.ENTER:
-                        if ((0, o.E)(e, {}) && (null == E ? void 0 : E(e))) {
+                        if ((0, o.E)(e, {}) && (null == _ ? void 0 : _(e))) {
                             e.preventDefault(), e.stopPropagation();
                             return;
                         }
@@ -62,12 +62,12 @@ function u(e) {
                     e.preventDefault(), e.stopPropagation();
                     return;
                 }
-                e.which === l.yXg.ENTER && ((!e.altKey && !e.shiftKey && (!u || e.ctrlKey) && !(0, s.L6)(t)) || !f) && (e.preventDefault(), e.stopPropagation(), h()), null == c || c(e);
+                e.which === l.yXg.ENTER && ((!e.altKey && !e.shiftKey && (!u || e.ctrlKey) && !(0, s.L6)(t)) || !h) && (e.preventDefault(), e.stopPropagation(), p()), null == c || c(e);
             },
-            [f, n.id, u, t, p, I, E, c, _, h]
+            [h, n.id, u, t, m, g, _, c, f, p]
         );
     return {
-        handleKeyDown: m,
+        handleKeyDown: E,
         handleKeyUp: r.useCallback(
             (e) => {
                 null == d || d(e);

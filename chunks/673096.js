@@ -1,47 +1,47 @@
-t(47120);
-var n,
-    a,
-    i,
+n(47120);
+var i,
+    s,
     r,
-    o = t(442837),
-    l = t(570140);
+    l,
+    a = n(442837),
+    o = n(570140);
 let c = [];
 function d() {
     c = [];
 }
-class _ extends (n = o.ZP.Store) {
+class u extends (i = a.ZP.Store) {
     getSessions() {
         return c;
     }
 }
-(r = 'AuthSessionsStore'),
-    (i = 'displayName') in (a = _)
-        ? Object.defineProperty(a, i, {
-              value: r,
+(l = 'AuthSessionsStore'),
+    (r = 'displayName') in (s = u)
+        ? Object.defineProperty(s, r, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[i] = r),
-    (s.Z = new _(l.Z, {
+        : (s[r] = l),
+    (t.Z = new u(o.Z, {
         LOGOUT: d,
         LOGIN_SUCCESS: d,
         FETCH_AUTH_SESSIONS_SUCCESS: function (e) {
-            let { sessions: s } = e;
-            c = s.map((e) => ({
+            let { sessions: t } = e;
+            c = t.map((e) => ({
                 ...e,
                 approx_last_used_time: new Date(e.approx_last_used_time)
             }));
         },
         LOGOUT_AUTH_SESSIONS_SUCCESS: function (e) {
-            let { sessionIdHashes: s } = e,
-                t = [...c],
-                n = !1;
-            for (let e of s) {
-                let s = t.findIndex((s) => s.id_hash === e);
-                s >= 0 && (t.splice(s, 1), (n = !0));
+            let { sessionIdHashes: t } = e,
+                n = [...c],
+                i = !1;
+            for (let e of t) {
+                let t = n.findIndex((t) => t.id_hash === e);
+                t >= 0 && (n.splice(t, 1), (i = !0));
             }
-            if (!n) return !1;
-            c = t;
+            if (!i) return !1;
+            c = n;
         }
     }));

@@ -9,8 +9,8 @@ var i = n(442837),
     l = n(853856),
     r = n(592125),
     a = n(938475),
-    s = n(823379),
-    o = n(136015),
+    o = n(823379),
+    s = n(136015),
     c = n(709054),
     u = n(565799),
     d = n(501655),
@@ -35,7 +35,7 @@ function f(e) {
                     ? c.default
                           .keys(l.Z.getFavoriteChannels())
                           .map((e) => r.Z.getChannel(e))
-                          .filter(s.lm)
+                          .filter(o.lm)
                           .filter((e) => e.isGuildStageVoice())
                     : u.Z.getChannels(e)).reduce((e, t) => {
                 let n = u.Z.getMutableParticipants(t.id, d.pV.SPEAKER);
@@ -50,7 +50,7 @@ function f(e) {
             ];
         },
         [e],
-        o.Q
+        s.Q
     );
     return t;
 }

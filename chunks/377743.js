@@ -1,34 +1,34 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(100527),
-    s = n(906732),
-    r = n(82950),
-    l = n(26323),
+var r = n(100527),
+    l = n(906732),
+    a = n(82950),
+    s = n(26323),
     o = n(267642),
     c = n(981631),
     d = n(921944),
     u = n(30513),
-    _ = n(689938),
-    E = n(420569);
-function h(e) {
+    h = n(388032),
+    m = n(420569);
+function p(e) {
     let { guild: t, markAsDismissed: n } = e,
-        h = (0, o.KK)(t, c.Eu4.TIER_2),
-        { analyticsLocations: m } = (0, s.ZP)(a.Z.GUILD_BANNER_NOTICE);
-    return (0, i.jsx)(r.Z, {
+        p = (0, o.KK)(t, c.Eu4.TIER_2),
+        { analyticsLocations: g } = (0, l.ZP)(r.Z.GUILD_BANNER_NOTICE);
+    return (0, i.jsx)(a.Z, {
         guild: t,
         onDismissed: () => n(d.L.UNKNOWN),
-        cta: _.Z.Messages.GUILD_BANNER_NOTICE_CTA,
-        message: _.Z.Messages.GUILD_BANNER_NOTICE.format({ boostsNeeded: h }),
+        cta: h.intl.string(h.t['oPAx7+']),
+        message: h.intl.format(h.t.AcaNY2, { boostsNeeded: p }),
         type: c.vID.GUILD_BANNER,
-        image: E,
+        image: m,
         onClick: () =>
-            (0, l.Z)({
-                analyticsLocations: m,
+            (0, s.Z)({
+                analyticsLocations: g,
                 analyticsSourceLocation: {
                     section: c.jXE.CHANNEL_NOTICE,
                     object: c.qAy.SERVER_BANNER_TOOLTIP

@@ -7,16 +7,16 @@ var r = n(481060),
     u = n(474639),
     c = n(435064),
     d = n(779618),
-    _ = n(39604),
-    E = n(356659),
-    f = n(689938);
-class h extends u.Z {
+    f = n(39604),
+    _ = n(356659),
+    h = n(388032);
+class p extends u.Z {
     showClipsToast() {
         (0, r.showToast)({
             id: 'CLIPS_IN_CALL_WARNING',
-            message: f.Z.Messages.CLIPS_IN_CALL_WARNING,
+            message: h.intl.string(h.t['d+41qK']),
             type: r.ToastType.CLIP,
-            options: { duration: E.G$ }
+            options: { duration: _.G$ }
         });
     }
     applyNativeClipsSettings(e) {
@@ -36,7 +36,7 @@ class h extends u.Z {
     }
     handleClipsInitOnGamesChange(e) {
         let t = a.ZP.getVisibleGame();
-        if (null != t) e.added.find((e) => e.pid === t.pid) ? setTimeout(() => this.fireClipsInitEvent(), E.jp) : this.fireClipsInitEvent();
+        if (null != t) e.added.find((e) => e.pid === t.pid) ? setTimeout(() => this.fireClipsInitEvent(), _.jp) : this.fireClipsInitEvent();
     }
     fireClipsInitEvent() {
         if (!(0, d.Z)(o.Z)) return;
@@ -56,14 +56,14 @@ class h extends u.Z {
         let { enabled: t } = e;
         if (!t) {
             let { clipsEnabled: e } = c.Z.getSettings();
-            e && _.em({ clipsEnabled: !1 });
+            e && f.em({ clipsEnabled: !1 });
         }
     }
     disableClips() {
-        _.em({
+        f.em({
             clipsEnabled: !1,
             trackAnalytics: !1
         });
     }
 }
-t.Z = new h();
+t.Z = new p();

@@ -1,109 +1,109 @@
 a.r(t),
     a.d(t, {
         DECO_SKU_ID: function () {
-            return T;
+            return h;
         },
         default: function () {
-            return E;
+            return D;
         }
     });
 var o = a(200651);
 a(192379);
-var s = a(990547),
-    r = a(442837),
-    n = a(481060),
+var r = a(990547),
+    n = a(442837),
+    s = a(481060),
     i = a(37234),
     d = a(100527),
     c = a(906732),
     l = a(213609),
-    _ = a(204418),
-    u = a(1585),
-    m = a(223143),
-    v = a(313201),
-    I = a(300284),
-    x = a(158776),
-    M = a(594174),
-    p = a(741245),
-    A = a(474936),
-    C = a(689938),
-    f = a(553510);
-let T = '1225876188074082374';
-function D(e) {
+    u = a(204418),
+    m = a(1585),
+    v = a(223143),
+    _ = a(313201),
+    x = a(300284),
+    p = a(158776),
+    f = a(594174),
+    I = a(741245),
+    T = a(474936),
+    C = a(388032),
+    M = a(553510);
+let h = '1225876188074082374';
+function j(e) {
     let { user: t, deco: a } = e,
-        s = (0, r.e7)([x.Z], () => x.Z.getStatus(t.id));
+        r = (0, n.e7)([p.Z], () => p.Z.getStatus(t.id));
     return (0, o.jsxs)('div', {
-        className: f.avatarBackground,
+        className: M.avatarBackground,
         children: [
-            (0, o.jsx)(_.Z, {
+            (0, o.jsx)(u.Z, {
                 user: t,
                 guildId: void 0,
                 avatarDecorationOverride: a,
-                status: s,
-                className: f.avatar
+                status: r,
+                className: M.avatar
             }),
-            (0, o.jsx)('div', { className: f.rect }),
-            (0, o.jsx)('div', { className: f.rect }),
-            (0, o.jsx)('div', { className: f.bottomOverlay })
+            (0, o.jsx)('div', { className: M.rect }),
+            (0, o.jsx)('div', { className: M.rect }),
+            (0, o.jsx)('div', { className: M.bottomOverlay })
         ]
     });
 }
-function E(e) {
+function D(e) {
     var t;
-    let { transitionState: a, onClose: _ } = e,
-        x = (0, v.Dt)(),
-        { theme: E } = (0, n.useThemeContext)(),
-        N = (0, r.e7)([M.default], () => M.default.getCurrentUser()),
-        { purchases: O } = (0, m.c)(),
-        R = null === (t = O.get(T)) || void 0 === t ? void 0 : t.items,
-        h = void 0 !== R ? R[0] : void 0,
-        { analyticsLocations: j } = (0, c.ZP)(d.Z.PREMIUM_SUBSCRIPTION_APRIL_CAMPAIGN_MODAL),
-        y = (0, I.Z)({ analyticsLocations: j });
+    let { transitionState: a, onClose: u } = e,
+        p = (0, _.Dt)(),
+        { theme: D } = (0, s.useThemeContext)(),
+        N = (0, n.e7)([f.default], () => f.default.getCurrentUser()),
+        { purchases: y } = (0, v.c)(),
+        A = null === (t = y.get(h)) || void 0 === t ? void 0 : t.items,
+        k = void 0 !== A ? A[0] : void 0,
+        { analyticsLocations: E } = (0, c.ZP)(d.Z.PREMIUM_SUBSCRIPTION_APRIL_CAMPAIGN_MODAL),
+        b = (0, x.Z)({ analyticsLocations: E });
     return (
         (0, l.Z)({
-            type: s.ImpressionTypes.MODAL,
-            name: s.ImpressionNames.APRIL_PREMIUM_MARKETING_DECO_CLAIMED_MODAL,
-            properties: { location_stack: j }
+            type: r.ImpressionTypes.MODAL,
+            name: r.ImpressionNames.APRIL_PREMIUM_MARKETING_DECO_CLAIMED_MODAL,
+            properties: { location_stack: E }
         }),
-        (0, o.jsxs)(n.ModalRoot, {
+        (0, o.jsxs)(s.ModalRoot, {
             transitionState: a,
-            'aria-labelledby': x,
-            className: f.container,
+            'aria-labelledby': p,
+            className: M.container,
             children: [
                 void 0 !== N &&
-                    (0, o.jsx)(D, {
+                    (0, o.jsx)(j, {
                         user: N,
-                        deco: h
+                        deco: k
                     }),
-                (0, o.jsxs)(n.ModalContent, {
-                    className: f.content,
+                (0, o.jsxs)(s.ModalContent, {
+                    className: M.content,
                     children: [
-                        (0, o.jsx)(p.C, {
-                            theme: E,
-                            premiumType: A.p9.TIER_2,
-                            type: p.C.Types.PREMIUM_ACTIVATED
+                        (0, o.jsx)(I.C, {
+                            theme: D,
+                            premiumType: T.p9.TIER_2,
+                            type: I.C.Types.PREMIUM_ACTIVATED
                         }),
-                        (0, o.jsx)(n.Text, {
+                        (0, o.jsx)(s.Text, {
                             variant: 'text-md/medium',
                             color: 'text-normal',
-                            className: f.bodyText,
-                            children: C.Z.Messages.PREMIUM_2024_APRIL_NITRO_OFFER_CLAIM_DECO_MODAL_BODY.format()
+                            className: M.bodyText,
+                            children: C.intl.format(C.t['9juoTE'], {})
                         })
                     ]
                 }),
-                (0, o.jsx)(n.ModalFooter, {
-                    children: (0, o.jsx)(n.Button, {
-                        look: n.Button.Looks.FILLED,
-                        color: n.Button.Colors.BRAND,
+                (0, o.jsx)(s.ModalFooter, {
+                    children: (0, o.jsx)(s.Button, {
+                        look: s.Button.Looks.FILLED,
+                        color: s.Button.Colors.BRAND,
                         onClick: () => {
-                            _(),
+                            u(),
                                 (0, i.xf)(),
-                                y(),
-                                (0, u.ps)({
-                                    initialSelectedDecoration: h,
-                                    analyticsLocations: j
+                                b(),
+                                (0, m.ps)({
+                                    initialSelectedDecoration: k,
+                                    analyticsLocations: E
                                 });
                         },
-                        children: C.Z.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
+                        children: C.intl.string(C.t['Tna/TU'])
                     })
                 })
             ]

@@ -1,81 +1,81 @@
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(120356),
-    i = n.n(a),
-    r = n(442837),
-    l = n(481060),
+var r = n(120356),
+    l = n.n(r),
+    s = n(442837),
+    a = n(481060),
     o = n(706454),
     c = n(594174),
     d = n(509545),
     u = n(78839),
-    _ = n(930153),
-    I = n(74538),
-    E = n(937615),
-    T = n(474936),
-    m = n(689938),
-    N = n(907820);
+    m = n(930153),
+    h = n(74538),
+    g = n(937615),
+    x = n(474936),
+    p = n(388032),
+    f = n(907820);
 t.Z = (e) => {
     var t;
     let { className: n } = e,
-        a = (0, r.e7)([c.default], () => c.default.getCurrentUser()),
-        S = (0, r.e7)([o.default], () => o.default.locale),
-        g = (0, r.e7)([u.ZP], () => u.ZP.getPremiumTypeSubscription()),
-        h = (0, r.e7)([d.Z], () => (null != g ? d.Z.get(g.planId) : void 0)),
-        C = null !== (t = (0, r.e7)([d.Z], () => (null != h ? d.Z.getForSkuAndInterval((0, I.Wz)(T.Si.GUILD), h.interval, h.intervalCount) : void 0))) && void 0 !== t ? t : T.GP[T.Xh.PREMIUM_MONTH_GUILD];
-    return (0, s.jsxs)('div', {
-        className: i()(N.wrapper, n),
+        r = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
+        C = (0, s.e7)([o.default], () => o.default.locale),
+        I = (0, s.e7)([u.ZP], () => u.ZP.getPremiumTypeSubscription()),
+        _ = (0, s.e7)([d.Z], () => (null != I ? d.Z.get(I.planId) : void 0)),
+        N = null !== (t = (0, s.e7)([d.Z], () => (null != _ ? d.Z.getForSkuAndInterval((0, h.Wz)(x.Si.GUILD), _.interval, _.intervalCount) : void 0))) && void 0 !== t ? t : x.GP[x.Xh.PREMIUM_MONTH_GUILD];
+    return (0, i.jsxs)('div', {
+        className: l()(f.wrapper, n),
         children: [
-            (0, s.jsx)(l.Heading, {
-                className: N.heading,
+            (0, i.jsx)(a.Heading, {
+                className: f.heading,
                 variant: 'heading-xl/semibold',
-                children: m.Z.Messages.GUILD_SETTINGS_PREMIUM_UPSELL_HEADING_PRIMARY
+                children: p.intl.string(p.t['3x1PFB'])
             }),
-            (0, s.jsx)(l.Text, {
+            (0, i.jsx)(a.Text, {
                 variant: 'text-md/normal',
                 children: (function (e) {
-                    let { currentUser: t, locale: n, guildBoostingPlanId: a, interval: i, intervalCount: r } = e,
-                        l = I.ZP.getDefaultPrice(a, I.ZP.isPremium(t)),
-                        o = I.ZP.getDefaultPrice(a, !1),
-                        c = (0, E.og)((0, E.T4)(l.amount, l.currency), i, r),
-                        d = (0, E.og)((0, E.T4)(o.amount, o.currency), i, r);
-                    return I.ZP.isPremium(t, T.p9.TIER_2)
-                        ? m.Z.Messages.GUILD_SETTINGS_PREMIUM_UPSELL_SUBHEADING_TIER_2.format({
+                    let { currentUser: t, locale: n, guildBoostingPlanId: r, interval: l, intervalCount: s } = e,
+                        a = h.ZP.getDefaultPrice(r, h.ZP.isPremium(t)),
+                        o = h.ZP.getDefaultPrice(r, !1),
+                        c = (0, g.og)((0, g.T4)(a.amount, a.currency), l, s),
+                        d = (0, g.og)((0, g.T4)(o.amount, o.currency), l, s);
+                    return h.ZP.isPremium(t, x.p9.TIER_2)
+                        ? p.intl.format(p.t.N3Icb2, {
                               price: c,
                               originalPrice: d,
                               originalPriceHook: (e, t) =>
-                                  (0, s.jsx)(
+                                  (0, i.jsx)(
                                       'span',
                                       {
-                                          className: N.originalPrice,
+                                          className: f.originalPrice,
                                           children: e
                                       },
                                       t
                                   ),
-                              freeSubscriptionCount: T.cb,
-                              discountPercent: (0, _.T3)(n, T.Rr / 100)
+                              freeSubscriptionCount: x.cb,
+                              discountPercent: (0, m.T3)(n, x.Rr / 100)
                           })
-                        : I.ZP.isPremium(t, T.p9.TIER_1)
-                          ? m.Z.Messages.GUILD_SETTINGS_PREMIUM_UPSELL_SUBHEADING_TIER_1.format({
+                        : h.ZP.isPremium(t, x.p9.TIER_1)
+                          ? p.intl.format(p.t.nQLVBA, {
                                 price: c,
                                 originalPrice: d,
                                 originalPriceHook: (e, t) =>
-                                    (0, s.jsx)(
+                                    (0, i.jsx)(
                                         'span',
                                         {
-                                            className: N.originalPrice,
+                                            className: f.originalPrice,
                                             children: e
                                         },
                                         t
                                     ),
-                                discountPercent: (0, _.T3)(n, T.Rr / 100)
+                                discountPercent: (0, m.T3)(n, x.Rr / 100)
                             })
-                          : m.Z.Messages.GUILD_SETTINGS_PREMIUM_UPSELL_SUBHEADING.format({ price: c });
+                          : p.intl.format(p.t.Mmf63N, { price: c });
                 })({
-                    currentUser: a,
-                    locale: S,
-                    guildBoostingPlanId: C.id,
-                    interval: C.interval,
-                    intervalCount: C.intervalCount
+                    currentUser: r,
+                    locale: C,
+                    guildBoostingPlanId: N.id,
+                    interval: N.interval,
+                    intervalCount: N.intervalCount
                 })
             })
         ]

@@ -1,55 +1,55 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return g;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(685072),
-    s = n(287734),
-    r = n(15274),
-    l = n(389303),
+var r = n(685072),
+    l = n(287734),
+    a = n(15274),
+    s = n(389303),
     o = n(881824),
     c = n(719100),
     d = n(870569),
-    u = n(689938);
-function _(e) {
+    u = n(388032);
+function h(e) {
     let { tooltipText: t, onClick: n } = e,
-        s = (0, a.K)();
+        l = (0, r.K)();
     return (0, i.jsx)(d.Z, {
         tooltipText: t,
         onClick: n,
-        ...s.events,
-        icon: s.Component
+        ...l.events,
+        icon: l.Component
     });
 }
-function E(e) {
+function m(e) {
     let { channel: t } = e;
-    return (0, i.jsx)(_, {
-        tooltipText: u.Z.Messages.AUDIENCE_DISCONNECT,
+    return (0, i.jsx)(h, {
+        tooltipText: u.intl.string(u.t.SMKyio),
         onClick: () => {
             if ((0, c.Z)(t)) {
                 (0, o.Us)(t);
                 return;
             }
-            s.default.disconnect();
+            l.default.disconnect();
         }
     });
 }
-function h(e) {
+function p(e) {
     let { channel: t } = e;
-    return (0, i.jsx)(_, {
-        tooltipText: u.Z.Messages.DISCONNECT_SELF,
+    return (0, i.jsx)(h, {
+        tooltipText: u.intl.string(u.t['6vrfgo']),
         onClick: () => {
-            if ((0, l.Z)(t)) {
-                (0, r.lC)(t);
+            if ((0, s.Z)(t)) {
+                (0, a.lC)(t);
                 return;
             }
-            s.default.disconnect();
+            l.default.disconnect();
         }
     });
 }
-function m(e) {
+function g(e) {
     let { channel: t } = e;
-    return t.isGuildStageVoice() ? (0, i.jsx)(E, { channel: t }) : (0, i.jsx)(h, { channel: t });
+    return t.isGuildStageVoice() ? (0, i.jsx)(m, { channel: t }) : (0, i.jsx)(p, { channel: t });
 }

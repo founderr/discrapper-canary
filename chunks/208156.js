@@ -1,6 +1,6 @@
 n.d(t, {
     J: function () {
-        return S;
+        return I;
     }
 }),
     n(47120),
@@ -17,68 +17,68 @@ var r = n(200651),
     u = n(442837),
     c = n(928518),
     d = n(631467),
-    _ = n(210887),
-    E = n(585483),
-    f = n(53289),
-    h = n(953101),
-    p = n(701488),
-    I = n(981631),
-    m = n(336259);
-function T(e) {
-    let { url: t, className: n, style: a, onLoad: s, shouldRefocus: m, queryParams: T, allowPopups: S = !1, referrerPolicy: g = 'origin' } = e,
-        A = (0, u.e7)([c.Z], () => c.Z.getWindow(I.KJ3.CHANNEL_CALL_POPOUT)),
-        N = (0, o.useMemoOne)(() => (0, l.Z)(), [t]),
-        R = i.useRef(null),
-        O = (0, f.Z)(R, m, null == A ? window : A),
-        v = {
-            ...T,
-            frame_id: N,
-            platform: p.S4.DESKTOP
+    f = n(210887),
+    _ = n(585483),
+    h = n(53289),
+    p = n(953101),
+    m = n(701488),
+    g = n(981631),
+    E = n(336259);
+function v(e) {
+    let { url: t, className: n, style: a, onLoad: s, shouldRefocus: E, queryParams: v, allowPopups: I = !1, referrerPolicy: S = 'origin' } = e,
+        T = (0, u.e7)([c.Z], () => c.Z.getWindow(g.KJ3.CHANNEL_CALL_POPOUT)),
+        b = (0, o.useMemoOne)(() => (0, l.Z)(), [t]),
+        y = i.useRef(null),
+        A = (0, h.Z)(y, E, null == T ? window : T),
+        N = {
+            ...v,
+            frame_id: b,
+            platform: m.S4.DESKTOP
         },
-        [C, L] = i.useState(!1),
-        D = _.Z.theme,
-        y = { ...a };
+        [C, R] = i.useState(!1),
+        O = f.Z.theme,
+        D = { ...a };
     return (
-        D === I.BRd.LIGHT ? (y.colorScheme = 'light') : (y.colorScheme = 'dark'),
+        O === g.BRd.LIGHT ? (D.colorScheme = 'light') : (D.colorScheme = 'dark'),
         i.useEffect(
             () => (
-                E.S.dispatch(I.CkL.IFRAME_MOUNT, { id: N }),
+                _.S.dispatch(g.CkL.IFRAME_MOUNT, { id: b }),
                 () => {
-                    E.S.dispatch(I.CkL.IFRAME_UNMOUNT, { id: N });
+                    _.S.dispatch(g.CkL.IFRAME_UNMOUNT, { id: b });
                 }
             ),
-            [N]
+            [b]
         ),
         i.useEffect(() => {
             let e = (e) => {
                 let { resizing: t } = e;
-                L(t);
+                R(t);
             };
             return (
-                E.S.subscribe(I.CkL.MANUAL_IFRAME_RESIZING, e),
+                _.S.subscribe(g.CkL.MANUAL_IFRAME_RESIZING, e),
                 () => {
-                    E.S.unsubscribe(I.CkL.MANUAL_IFRAME_RESIZING, e);
+                    _.S.unsubscribe(g.CkL.MANUAL_IFRAME_RESIZING, e);
                 }
             );
         }, []),
-        C && (y.pointerEvents = 'none'),
+        C && (D.pointerEvents = 'none'),
         null != t
             ? (0, r.jsx)('iframe', {
-                  style: y,
+                  style: D,
                   allow: 'autoplay; encrypted-media',
-                  referrerPolicy: g,
+                  referrerPolicy: S,
                   onLoad: function (e) {
                       var n;
-                      null == s || s(e.target), (R.current = e.target), O(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([d.Z.HELLO, v], null != t ? t : '');
+                      null == s || s(e.target), (y.current = e.target), A(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([d.Z.HELLO, N], null != t ? t : '');
                   },
-                  sandbox: (0, h.Z)({ allowPopups: S }),
+                  sandbox: (0, p.Z)({ allowPopups: I }),
                   className: n,
-                  src: ''.concat(t, '?').concat(new URLSearchParams(v))
+                  src: ''.concat(t, '?').concat(new URLSearchParams(N))
               })
             : null
     );
 }
-function S(e) {
+function I(e) {
     let { onLoad: t } = e,
         [n, a] = i.useState(!1),
         o = i.useCallback(
@@ -88,12 +88,12 @@ function S(e) {
             [t]
         );
     return (0, r.jsxs)('div', {
-        className: m.fillParent,
+        className: E.fillParent,
         children: [
-            !n && (0, r.jsx)('div', { className: s()(m.fillParent, m.iframePlaceholder) }),
+            !n && (0, r.jsx)('div', { className: s()(E.fillParent, E.iframePlaceholder) }),
             (0, r.jsx)('div', {
-                className: s()(m.fillParent, n ? void 0 : m.hiddenIframeContainer),
-                children: (0, r.jsx)(T, {
+                className: s()(E.fillParent, n ? void 0 : E.hiddenIframeContainer),
+                children: (0, r.jsx)(v, {
                     ...e,
                     onLoad: o
                 })

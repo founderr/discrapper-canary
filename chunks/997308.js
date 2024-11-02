@@ -1,47 +1,47 @@
-a.r(s),
-    a.d(s, {
+n.r(e),
+    n.d(e, {
         default: function () {
-            return l;
+            return d;
         }
     });
-var t = a(200651);
-a(192379);
-var n = a(481060),
-    r = a(600164),
-    d = a(689938),
-    i = a(827678);
-function l(e) {
-    let { transitionState: s, onClose: a } = e;
-    return (0, t.jsxs)(n.ModalRoot, {
-        size: n.ModalSize.DYNAMIC,
-        transitionState: s,
-        'aria-label': d.Z.Messages.UNABLE_TO_JOIN_CHANNEL_FULL_MODAL_HEADER,
+var s = n(200651);
+n(192379);
+var i = n(481060),
+    a = n(600164),
+    r = n(388032),
+    l = n(827678);
+function d(t) {
+    let { transitionState: e, onClose: n } = t;
+    return (0, s.jsxs)(i.ModalRoot, {
+        size: i.ModalSize.DYNAMIC,
+        transitionState: e,
+        'aria-label': r.intl.string(r.t.elyVbm),
         children: [
-            (0, t.jsxs)(n.ModalHeader, {
-                justify: r.Z.Justify.BETWEEN,
+            (0, s.jsxs)(i.ModalHeader, {
+                justify: a.Z.Justify.BETWEEN,
                 separator: !1,
                 children: [
-                    (0, t.jsx)(n.Heading, {
+                    (0, s.jsx)(i.Heading, {
                         variant: 'heading-md/semibold',
-                        className: i.header,
-                        children: d.Z.Messages.UNABLE_TO_JOIN_CHANNEL_FULL_MODAL_HEADER
+                        className: l.header,
+                        children: r.intl.string(r.t.elyVbm)
                     }),
-                    (0, t.jsx)(n.ModalCloseButton, { onClick: a })
+                    (0, s.jsx)(i.ModalCloseButton, { onClick: n })
                 ]
             }),
-            (0, t.jsxs)(n.ModalContent, {
+            (0, s.jsxs)(i.ModalContent, {
                 children: [
-                    (0, t.jsx)(n.Text, {
+                    (0, s.jsx)(i.Text, {
                         variant: 'text-sm/normal',
-                        children: d.Z.Messages.UNABLE_TO_JOIN_CHANNEL_FULL_MODAL_BODY
+                        children: r.intl.string(r.t.nIeRen)
                     }),
-                    (0, t.jsx)('div', { className: i.fullArt })
+                    (0, s.jsx)('div', { className: l.fullArt })
                 ]
             }),
-            (0, t.jsx)(n.ModalFooter, {
-                children: (0, t.jsx)(n.Button, {
-                    onClick: a,
-                    children: d.Z.Messages.OKAY
+            (0, s.jsx)(i.ModalFooter, {
+                children: (0, s.jsx)(i.Button, {
+                    onClick: n,
+                    children: r.intl.string(r.t.BddRzc)
                 })
             })
         ]

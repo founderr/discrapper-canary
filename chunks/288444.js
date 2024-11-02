@@ -7,8 +7,8 @@ var r = n(846519),
     l = n(592125),
     u = n(979651),
     c = n(938475),
-    d = n(689938);
-function _(e, t, n) {
+    d = n(388032);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,40 +21,40 @@ function _(e, t, n) {
         e
     );
 }
-let E = 180000;
-function f() {
+let _ = 180000;
+function h() {
     let e = u.Z.getCurrentClientVoiceChannelId(null);
     if (null == e) return !1;
     let t = l.Z.getChannel(e);
     return !(null == t || !t.isPrivate() || t.recipients.length > 1 || c.ZP.countVoiceStatesForChannel(e) > 1) && null == o.ZP.getSelfEmbeddedActivityForChannel(e) && !0;
 }
-function h() {
-    if (!f()) return;
+function p() {
+    if (!h()) return;
     let e = u.Z.getCurrentClientVoiceChannelId(null);
-    if (null != e) i.Z.sendBotMessage(e, d.Z.Messages.BOT_CALL_IDLE_DISCONNECT_2.format({ number: 3 })), a.default.selectVoiceChannel(null);
+    if (null != e) i.Z.sendBotMessage(e, d.intl.formatToPlainString(d.t.XYof5O, { number: 3 })), a.default.selectVoiceChannel(null);
 }
-class p extends s.Z {
+class m extends s.Z {
     constructor(...e) {
         super(...e),
-            _(this, 'idleTimeout', new r.V7()),
-            _(this, 'handleConnectionClosed', () => {
+            f(this, 'idleTimeout', new r.V7()),
+            f(this, 'handleConnectionClosed', () => {
                 this.idleTimeout.stop();
             }),
-            _(this, 'handleEmbeddedActivityDisconnect', () => {
-                if (!!f()) this.idleTimeout.start(E, h, !0);
+            f(this, 'handleEmbeddedActivityDisconnect', () => {
+                if (!!h()) this.idleTimeout.start(_, p, !0);
             }),
-            _(this, 'handleVoiceStateUpdates', () => {
-                if (!f()) {
+            f(this, 'handleVoiceStateUpdates', () => {
+                if (!h()) {
                     this.idleTimeout.stop();
                     return;
                 }
-                this.idleTimeout.start(E, h, !1);
+                this.idleTimeout.start(_, p, !1);
             }),
-            _(this, 'actions', {
+            f(this, 'actions', {
                 VOICE_STATE_UPDATES: this.handleVoiceStateUpdates,
                 CONNECTION_CLOSED: this.handleConnectionClosed,
                 EMBEDDED_ACTIVITY_CLOSE: this.handleEmbeddedActivityDisconnect
             });
     }
 }
-t.Z = new p();
+t.Z = new m();

@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return C;
     }
 });
 var i = n(200651);
 n(192379);
-var s = n(442837),
-    a = n(481060),
-    l = n(194359),
-    r = n(631937),
+var l = n(442837),
+    r = n(481060),
+    a = n(194359),
+    s = n(631937),
     o = n(702321),
     c = n(377171),
     u = n(699516),
@@ -16,52 +16,52 @@ var s = n(442837),
     h = n(63063),
     m = n(862679),
     p = n(981631),
-    _ = n(596401),
-    f = n(689938);
-function E(e) {
-    let { channel: t, children: E } = e,
-        g = (0, s.e7)([u.Z], () => u.Z.isBlocked(t.getRecipientId()));
-    (0, r.Z)(t.id);
-    let C = (0, o.Z)(t.id),
-        I = t.isSystemDM(),
-        T = g && !I && !t.isMultiUserDM(),
-        x = {};
-    if (I) {
-        let e = C
+    f = n(596401),
+    g = n(388032);
+function C(e) {
+    let { channel: t, children: C } = e,
+        x = (0, l.e7)([u.Z], () => u.Z.isBlocked(t.getRecipientId()));
+    (0, s.Z)(t.id);
+    let v = (0, o.Z)(t.id),
+        _ = t.isSystemDM(),
+        I = x && !_ && !t.isMultiUserDM(),
+        E = {};
+    if (_) {
+        let e = v
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
-                      f.Z.Messages.SYSTEM_DM_OPEN_BLOG,
-                      (0, i.jsx)(a.WindowLaunchIcon, {
+                      g.intl.string(g.t['+KSnWV']),
+                      (0, i.jsx)(r.WindowLaunchIcon, {
                           size: 'xs',
                           color: c.Z.HEADER_PRIMARY
                       })
                   ]
               })
-            : f.Z.Messages.LEARN_MORE;
-        (x.message = f.Z.Messages.SYSTEM_DM_CHANNEL_DESCRIPTION),
-            (x.subtitle = f.Z.Messages.SYSTEM_DM_CHANNEL_DESCRIPTION_SUBTEXT),
-            (x.buttonText = e),
-            (x.onButtonClick = () => {
-                if (C) {
-                    open(_.D2),
+            : g.intl.string(g.t.hvVgAQ);
+        (E.message = g.intl.string(g.t.Bt2N7O)),
+            (E.subtitle = g.intl.string(g.t['n/Vzk5'])),
+            (E.buttonText = e),
+            (E.onButtonClick = () => {
+                if (v) {
+                    open(f.D2),
                         d.default.track(p.rMx.CHANGE_LOG_CTA_CLICKED, {
                             cta_type: 'chat_blocker',
-                            target: _.D2
+                            target: f.D2
                         });
                     return;
                 }
                 open(h.Z.getArticleURL(p.BhN.SYSTEM_DMS));
             }),
-            (x.imageSrc = n(780961));
+            (E.imageSrc = n(780961));
     } else
-        T &&
-            ((x.message = f.Z.Messages.DM_VERIFICATION_TEXT_BLOCKED),
-            (x.buttonText = f.Z.Messages.UNBLOCK),
-            (x.onButtonClick = () => {
-                l.Z.unblockUser(t.getRecipientId());
+        I &&
+            ((E.message = g.intl.string(g.t['9T6N5+'])),
+            (E.buttonText = g.intl.string(g.t.XyHpKC)),
+            (E.onButtonClick = () => {
+                a.Z.unblockUser(t.getRecipientId());
             }));
     return (0, i.jsx)(m.Z, {
-        ...x,
-        children: E
+        ...E,
+        children: C
     });
 }

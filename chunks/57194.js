@@ -49,7 +49,7 @@ e.exports = function (e) {
             variants: [{ match: i(c, /``.*?``/) }, { match: i(c, e.UNDERSCORE_IDENT_RE) }],
             relevance: 0
         },
-        _ = function ({ includeEqual: e }) {
+        f = function ({ includeEqual: e }) {
             let n;
             let s = i('[', ...Array.from((n = e ? '!%&*+-/<=>@^|~?' : '!%&*+-/<>@^|~?')).map(t), ']'),
                 o = a(s, /\./),
@@ -61,21 +61,21 @@ e.exports = function (e) {
                 relevance: 0
             };
         },
-        E = _({ includeEqual: !0 }),
-        f = _({ includeEqual: !1 }),
-        h = function (t, n) {
+        _ = f({ includeEqual: !0 }),
+        h = f({ includeEqual: !1 }),
+        p = function (t, n) {
             return {
                 begin: i(t, r(i(/\s*/, a(/\w/, /'/, /\^/, /#/, /``/, /\(/, /{\|/)))),
                 beginScope: n,
                 end: r(a(/\n/, /=/)),
                 relevance: 0,
                 keywords: e.inherit(o, { type: s }),
-                contains: [l, d, e.inherit(u, { scope: null }), f]
+                contains: [l, d, e.inherit(u, { scope: null }), h]
             };
         },
-        p = h(/:/, 'operator'),
-        I = h(/\bof\b/, 'keyword'),
-        m = {
+        m = p(/:/, 'operator'),
+        g = p(/\bof\b/, 'keyword'),
+        E = {
             begin: [/(^|\s+)/, /type/, /\s+/, /[a-zA-Z_](\w|')*/],
             beginScope: {
                 2: 'keyword',
@@ -91,63 +91,63 @@ e.exports = function (e) {
                     scope: 'operator',
                     match: /<|>/
                 },
-                p
+                m
             ]
         },
-        T = {
+        v = {
             scope: 'computation-expression',
             match: /\b[_a-z]\w*(?=\s*\{)/
         },
-        S = {
+        I = {
             begin: [/^\s*/, i(/#/, a('if', 'else', 'endif', 'line', 'nowarn', 'light', 'r', 'i', 'I', 'load', 'time', 'help', 'quit')), /\b/],
             beginScope: { 2: 'meta' },
             end: r(/\s|$/)
         },
-        g = {
+        S = {
             variants: [e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE]
         },
-        A = {
+        T = {
             scope: 'string',
             begin: /"/,
             end: /"/,
             contains: [e.BACKSLASH_ESCAPE]
         },
-        N = {
+        b = {
             scope: 'string',
             begin: /@"/,
             end: /"/,
             contains: [{ match: /""/ }, e.BACKSLASH_ESCAPE]
         },
-        R = {
+        y = {
             scope: 'string',
             begin: /"""/,
             end: /"""/,
             relevance: 2
         },
-        O = {
+        A = {
             scope: 'subst',
             begin: /\{/,
             end: /\}/,
             keywords: o
         },
-        v = {
+        N = {
             scope: 'string',
             begin: /\$"/,
             end: /"/,
-            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, e.BACKSLASH_ESCAPE, O]
+            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, e.BACKSLASH_ESCAPE, A]
         },
         C = {
             scope: 'string',
             begin: /(\$@|@\$)"/,
             end: /"/,
-            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, { match: /""/ }, e.BACKSLASH_ESCAPE, O]
+            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, { match: /""/ }, e.BACKSLASH_ESCAPE, A]
         },
-        L = {
+        R = {
             scope: 'string',
             match: i(/'/, a(/[^\\']/, /\\(?:.|\d{3}|x[a-fA-F\d]{2}|u[a-fA-F\d]{4}|U[a-fA-F\d]{8})/), /'/)
         };
     return (
-        (O.contains = [C, v, N, A, L, n, l, u, p, T, S, g, d, E]),
+        (A.contains = [C, N, b, T, R, n, l, u, m, v, I, S, d, _]),
         {
             name: 'F#',
             aliases: ['fs', 'f#'],
@@ -162,34 +162,34 @@ e.exports = function (e) {
                             scope: 'string',
                             begin: /\$"""/,
                             end: /"""/,
-                            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, O],
+                            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, A],
                             relevance: 2
                         },
                         C,
-                        v,
-                        R,
                         N,
-                        A,
-                        L
+                        y,
+                        b,
+                        T,
+                        R
                     ]
                 },
                 l,
                 u,
-                m,
+                E,
                 {
                     scope: 'meta',
                     begin: /\[</,
                     end: />\]/,
                     relevance: 2,
-                    contains: [u, R, N, A, L, g]
+                    contains: [u, y, b, T, R, S]
                 },
-                I,
-                p,
-                T,
-                S,
                 g,
+                m,
+                v,
+                I,
+                S,
                 d,
-                E
+                _
             ]
         }
     );

@@ -1,43 +1,43 @@
-a.r(n);
-var t = a(200651);
-a(192379);
-var l = a(481060),
-    r = a(239091),
-    u = a(108843),
-    c = a(100527),
-    i = a(299206),
-    s = a(398048),
-    o = a(3689),
-    d = a(323597),
-    E = a(852245),
-    _ = a(367722),
-    Z = a(689938);
-n.default = (0, u.Z)(
-    function (e) {
-        let { channel: n, guild: a, onSelect: u } = e,
-            c = (0, E.Z)(n),
-            N = (0, _.Z)(n, a),
-            M = (0, s.Z)(n, a),
-            I = (0, o.Z)(n, a),
-            A = (0, d.Z)(n),
-            C = (0, i.Z)({
-                id: n.id,
-                label: Z.Z.Messages.COPY_ID_CHANNEL
+t.r(e);
+var l = t(200651);
+t(192379);
+var a = t(481060),
+    i = t(239091),
+    r = t(108843),
+    u = t(100527),
+    c = t(299206),
+    o = t(398048),
+    d = t(3689),
+    s = t(323597),
+    _ = t(852245),
+    E = t(367722),
+    Z = t(388032);
+e.default = (0, r.Z)(
+    function (n) {
+        let { channel: e, guild: t, onSelect: r } = n,
+            u = (0, _.Z)(e),
+            h = (0, E.Z)(e, t),
+            f = (0, o.Z)(e, t),
+            p = (0, d.Z)(e, t),
+            I = (0, s.Z)(e),
+            M = (0, c.Z)({
+                id: e.id,
+                label: Z.intl.string(Z.t.gFHI3t)
             });
-        return (0, t.jsxs)(l.Menu, {
+        return (0, l.jsxs)(a.Menu, {
             navId: 'channel-context',
-            onClose: r.Zy,
-            'aria-label': Z.Z.Messages.CHANNEL_ACTIONS_MENU_LABEL,
-            onSelect: u,
+            onClose: i.Zy,
+            'aria-label': Z.intl.string(Z.t.Xm41aW),
+            onSelect: r,
             children: [
-                (0, t.jsx)(l.MenuGroup, { children: c }),
-                (0, t.jsxs)(l.MenuGroup, {
-                    children: [N, M, I]
+                (0, l.jsx)(a.MenuGroup, { children: u }),
+                (0, l.jsxs)(a.MenuGroup, {
+                    children: [h, f, p]
                 }),
-                (0, t.jsx)(l.MenuGroup, { children: A }),
-                (0, t.jsx)(l.MenuGroup, { children: C })
+                (0, l.jsx)(a.MenuGroup, { children: I }),
+                (0, l.jsx)(a.MenuGroup, { children: M })
             ]
         });
     },
-    [c.Z.CONTEXT_MENU, c.Z.CHANNEL_ACTIVITY_FEED_VOICE_MENU]
+    [u.Z.CONTEXT_MENU, u.Z.CHANNEL_ACTIVITY_FEED_VOICE_MENU]
 );

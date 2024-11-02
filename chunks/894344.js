@@ -11,7 +11,7 @@ var i = n(481060),
     o = n(680686),
     l = n(131303);
 async function u(e, t, u) {
-    let { hasSpotifyAccount: c, activity: d, user: _ } = e;
+    let { hasSpotifyAccount: c, activity: d, user: f } = e;
     (0, l.Z)(c) &&
         null != d &&
         null != d.sync_id &&
@@ -25,6 +25,6 @@ async function u(e, t, u) {
                 Promise.reject(e)
             )
         ),
-        a.Z_(d, _.id),
-        (0, o.Z)(t, _, d, u));
+        a.Z_(d, f.id),
+        (0, o.Z)(t, f, d, u));
 }

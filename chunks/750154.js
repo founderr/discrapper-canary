@@ -1,12 +1,12 @@
 n.d(t, {
     JE: function () {
-        return E;
+        return _;
     },
     Lw: function () {
         return c;
     },
     dS: function () {
-        return _;
+        return f;
     },
     rq: function () {
         return d;
@@ -49,10 +49,10 @@ function d(e) {
         return null;
     }
 }
-function _(e) {
+function f(e) {
     return (null == e ? void 0 : e.application_id) === o.gD;
 }
-function E(e) {
+function _(e) {
     let t = d(e);
     if (null == t) return !1;
     let { channelId: n } = t;

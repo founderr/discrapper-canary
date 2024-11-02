@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return h;
     }
 });
 var r = n(594190),
@@ -12,15 +12,15 @@ var r = n(594190),
     u = n(979651),
     c = n(709054),
     d = n(356659),
-    _ = n(981631),
-    E = n(689938);
-function f(e) {
+    f = n(981631),
+    _ = n(388032);
+function h(e) {
     let { sourceName: t, sourceApplicationId: n } = (function (e) {
             var t, n;
             if (null != e) {
                 let { ownerId: t } = i.my(e);
                 if (t !== s.default.getId()) {
-                    let e = o.Z.getActivities(t).find((e) => e.type === _.IIU.PLAYING);
+                    let e = o.Z.getActivities(t).find((e) => e.type === f.IIU.PLAYING);
                     return {
                         sourceName: null == e ? void 0 : e.name,
                         sourceApplicationId: null == e ? void 0 : e.application_id
@@ -35,16 +35,16 @@ function f(e) {
                 sourceApplicationId: null !== (n = null == l ? void 0 : l.id) && void 0 !== n ? n : null == c ? void 0 : c.id
             };
         })(e),
-        f = l.Z.getChannelId(),
-        h = [s.default.getId()];
+        h = l.Z.getChannelId(),
+        p = [s.default.getId()];
     return (
-        null != f && (h = Object.keys(u.Z.getVoiceStatesForChannel(f))),
+        null != h && (p = Object.keys(u.Z.getVoiceStatesForChannel(h))),
         {
             id: c.default.fromTimestamp(Date.now()),
             version: d.Bg,
-            applicationName: null != t ? t : E.Z.Messages.CLIPS_UNKNOWN_SOURCE,
+            applicationName: null != t ? t : _.intl.string(_.t.qtSJxc),
             applicationId: n,
-            users: h,
+            users: p,
             clipMethod: 'manual',
             length: 0,
             thumbnail: ''

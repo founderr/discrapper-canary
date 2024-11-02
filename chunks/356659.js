@@ -1,57 +1,57 @@
 n.d(t, {
     A5: function () {
-        return k;
+        return G;
     },
     Bg: function () {
-        return I;
+        return g;
     },
     D5: function () {
         return c;
     },
     D_: function () {
-        return E;
+        return _;
     },
     EF: function () {
-        return p;
+        return m;
     },
     G$: function () {
-        return f;
+        return h;
     },
     HW: function () {
-        return A;
+        return T;
     },
     Hp: function () {
-        return g;
+        return S;
     },
     JO: function () {
-        return D;
+        return O;
     },
     Kw: function () {
-        return b;
+        return L;
     },
     MG: function () {
-        return R;
+        return y;
     },
     OT: function () {
         return o;
     },
     Qr: function () {
-        return v;
+        return N;
     },
     Ut: function () {
-        return O;
+        return A;
     },
     WM: function () {
-        return m;
+        return E;
     },
     X9: function () {
         return u;
     },
     XH: function () {
-        return N;
+        return b;
     },
     _U: function () {
-        return x;
+        return k;
     },
     dJ: function () {
         return l;
@@ -60,34 +60,34 @@ n.d(t, {
         return C;
     },
     i$: function () {
-        return U;
-    },
-    jF: function () {
-        return h;
-    },
-    ji: function () {
-        return P;
-    },
-    jp: function () {
         return M;
     },
-    mg: function () {
-        return S;
+    jF: function () {
+        return p;
     },
-    nU: function () {
-        return T;
-    },
-    wD: function () {
-        return L;
-    },
-    xd: function () {
-        return G;
-    },
-    xx: function () {
+    ji: function () {
         return w;
     },
+    jp: function () {
+        return x;
+    },
+    mg: function () {
+        return I;
+    },
+    nU: function () {
+        return v;
+    },
+    wD: function () {
+        return R;
+    },
+    xd: function () {
+        return U;
+    },
+    xx: function () {
+        return P;
+    },
     yl: function () {
-        return y;
+        return D;
     }
 });
 var r,
@@ -99,31 +99,31 @@ var r,
     u,
     c,
     d = n(710845),
-    _ = n(70956);
-((r = o || (o = {}))[(r.SECONDS_30 = 30 * _.Z.Millis.SECOND)] = 'SECONDS_30'), (r[(r.MINUTES_1 = _.Z.Millis.MINUTE)] = 'MINUTES_1'), (r[(r.MINUTES_2 = 2 * _.Z.Millis.MINUTE)] = 'MINUTES_2'), ((i = l || (l = {}))[(i.ALL = 0)] = 'ALL'), (i[(i.FRIENDS = 1)] = 'FRIENDS'), ((a = u || (u = {})).DECOUPLED = 'decoupled'), (a.VIEWER = 'viewer'), (a.STREAMER = 'streamer'), ((s = c || (c = {}))[(s.Error = 0)] = 'Error'), (s[(s.Disabled = 1)] = 'Disabled'), (s[(s.Enabled = 2)] = 'Enabled');
-let E = 'alt+c',
-    f = 6 * _.Z.Millis.SECOND,
-    h = new d.Z('Clips'),
-    p = (e) => 'Discord_Clip_'.concat(e, '.mp4'),
-    I = 3,
-    m = 1,
-    T = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
-    S = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
-    g = 0.1,
-    A = 25,
-    N = 0,
-    R = 200,
-    O = 'clips-edit',
-    v = 'clips-gallery',
+    f = n(70956);
+((r = o || (o = {}))[(r.SECONDS_30 = 30 * f.Z.Millis.SECOND)] = 'SECONDS_30'), (r[(r.MINUTES_1 = f.Z.Millis.MINUTE)] = 'MINUTES_1'), (r[(r.MINUTES_2 = 2 * f.Z.Millis.MINUTE)] = 'MINUTES_2'), ((i = l || (l = {}))[(i.ALL = 0)] = 'ALL'), (i[(i.FRIENDS = 1)] = 'FRIENDS'), ((a = u || (u = {})).DECOUPLED = 'decoupled'), (a.VIEWER = 'viewer'), (a.STREAMER = 'streamer'), ((s = c || (c = {}))[(s.Error = 0)] = 'Error'), (s[(s.Disabled = 1)] = 'Disabled'), (s[(s.Enabled = 2)] = 'Enabled');
+let _ = 'alt+c',
+    h = 6 * f.Z.Millis.SECOND,
+    p = new d.Z('Clips'),
+    m = (e) => 'Discord_Clip_'.concat(e, '.mp4'),
+    g = 3,
+    E = 1,
+    v = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
+    I = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
+    S = 0.1,
+    T = 25,
+    b = 0,
+    y = 200,
+    A = 'clips-edit',
+    N = 'clips-gallery',
     C = 640,
-    L = 360,
-    D = 100,
-    y = (e) => 'Clip - '.concat(new Date(e).toLocaleString()),
-    b = 15,
-    M = 30000,
-    P = 30,
-    U = 10,
-    w = 14 * _.Z.Millis.DAY,
-    x = 5,
-    G = 5,
-    k = 1;
+    R = 360,
+    O = 100,
+    D = (e) => 'Clip - '.concat(new Date(e).toLocaleString()),
+    L = 15,
+    x = 30000,
+    w = 30,
+    M = 10,
+    P = 14 * f.Z.Millis.DAY,
+    k = 5,
+    U = 5,
+    G = 1;

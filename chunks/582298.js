@@ -5,37 +5,37 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(430824),
-    r = n(646504),
-    l = n(834129),
-    o = n(981631),
-    c = n(689938),
+var r = n(481060),
+    l = n(430824),
+    a = n(646504),
+    o = n(834129),
+    s = n(981631),
+    c = n(388032),
     u = n(657480);
 function d(e) {
     let t,
-        { compact: d, isOwner: _, channel: E } = e,
-        I = () => {
-            let e = s.Z.getGuild(E.getGuildId());
+        { compact: d, isOwner: m, channel: f } = e,
+        h = () => {
+            let e = l.Z.getGuild(f.getGuildId());
             null != e &&
-                ((0, a.openModalLazy)(async () => {
+                ((0, r.openModalLazy)(async () => {
                     let { default: t } = await Promise.all([n.e('7654'), n.e('1187'), n.e('28299')]).then(n.bind(n, 560114));
                     return (n) =>
                         (0, i.jsx)(t, {
                             ...n,
                             guild: e,
-                            channel: E,
-                            source: o.t4x.INVITE_SYSTEM_MESSAGE
+                            channel: f,
+                            source: s.t4x.INVITE_SYSTEM_MESSAGE
                         });
                 }),
-                (0, r.w)());
+                (0, a.w)());
         },
-        m = (e, t) =>
+        p = (e, t) =>
             (0, i.jsx)(
-                a.Anchor,
+                r.Anchor,
                 {
                     className: u.inviteLink,
-                    onClick: I,
+                    onClick: h,
                     children: e
                 },
                 t
@@ -44,28 +44,28 @@ function d(e) {
         (t = d
             ? (0, i.jsx)('div', {
                   className: u.inviteContent,
-                  children: _ ? c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_OWNER_COMPACT.format({ inviteHook: m }) : c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_COMPACT.format({ inviteHook: m })
+                  children: m ? c.intl.format(c.t['9OheEh'], { inviteHook: p }) : c.intl.format(c.t['7hv6yM'], { inviteHook: p })
               })
             : (0, i.jsxs)('div', {
                   className: u.content,
                   children: [
                       (0, i.jsx)('div', {
                           className: u.inviteHeader,
-                          children: _ ? c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_OWNER : c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS
+                          children: m ? c.intl.string(c.t['Ry1T//']) : c.intl.string(c.t.ppUFLy)
                       }),
                       (0, i.jsx)('div', {
                           className: u.inviteContent,
-                          children: _ ? c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION_OWNER : c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION
+                          children: m ? c.intl.string(c.t.kLfkNj) : c.intl.string(c.t.gRHGFB)
                       }),
-                      (0, i.jsx)(a.Button, {
-                          onClick: I,
-                          size: a.Button.Sizes.SMALL,
+                      (0, i.jsx)(r.Button, {
+                          onClick: h,
+                          size: r.Button.Sizes.SMALL,
                           className: u.inviteButton,
-                          children: c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_BUTTON
+                          children: c.intl.string(c.t.K1BAQ0)
                       })
                   ]
               })),
-        (0, i.jsx)(l.Z, {
+        (0, i.jsx)(o.Z, {
             className: d ? u.compact : u.inviteContent,
             iconNode: d
                 ? null

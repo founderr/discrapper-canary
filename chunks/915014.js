@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 });
 var r = n(200651);
@@ -13,59 +13,59 @@ var i = n(481060),
     u = n(200634),
     c = n(708108),
     d = n(146078),
-    _ = n(228168),
-    E = n(182294),
-    f = n(352235);
-function h(e) {
+    f = n(228168),
+    _ = n(182294),
+    h = n(352235);
+function p(e) {
     let { user: t, onOpenProfile: n } = e,
-        { mutualFriends: h } = (0, l.Z)(t.id),
-        { mutualGuilds: p } = (0, u.Z)(t.id),
-        I = null != h && h.length > 0,
-        m = null != p && p.length > 0,
-        T = I && m ? 'text-xs/normal' : 'text-sm/normal';
-    return I || m
+        { mutualFriends: p } = (0, l.Z)(t.id),
+        { mutualGuilds: m } = (0, u.Z)(t.id),
+        g = null != p && p.length > 0,
+        E = null != m && m.length > 0,
+        v = g && E ? 'text-xs/normal' : 'text-sm/normal';
+    return g || E
         ? (0, r.jsxs)('div', {
-              className: f.mutuals,
+              className: h.mutuals,
               children: [
-                  I
+                  g
                       ? (0, r.jsxs)(i.Clickable, {
-                            className: f.section,
-                            onClick: () => (null == n ? void 0 : n(_.oh.MUTUAL_FRIENDS)),
+                            className: h.section,
+                            onClick: () => (null == n ? void 0 : n(f.oh.MUTUAL_FRIENDS)),
                             children: [
                                 (0, r.jsx)(a.Z, {
                                     maxUsers: 3,
-                                    users: h.map((e) => {
+                                    users: p.map((e) => {
                                         let { user: t } = e;
                                         return t;
                                     }),
-                                    size: E.EF.SIZE_16,
+                                    size: _.EF.SIZE_16,
                                     hideOverflowCount: !0,
                                     disableUsernameTooltip: !0
                                 }),
                                 (0, r.jsx)(i.Text, {
-                                    className: f.text,
-                                    variant: T,
+                                    className: h.text,
+                                    variant: v,
                                     color: 'interactive-normal',
-                                    children: (0, c.Z)(h.length)
+                                    children: (0, c.Z)(p.length)
                                 })
                             ]
                         })
                       : null,
-                  I && m
+                  g && E
                       ? (0, r.jsx)('div', {
                             'aria-hidden': 'true',
-                            className: f.spacer
+                            className: h.spacer
                         })
                       : null,
-                  m
+                  E
                       ? (0, r.jsxs)(i.Clickable, {
-                            className: f.section,
-                            onClick: () => (null == n ? void 0 : n(_.oh.MUTUAL_GUILDS)),
+                            className: h.section,
+                            onClick: () => (null == n ? void 0 : n(f.oh.MUTUAL_GUILDS)),
                             children: [
-                                !I &&
+                                !g &&
                                     (0, r.jsx)(s.Z, {
                                         maxGuilds: 3,
-                                        guilds: p.map((e) => {
+                                        guilds: m.map((e) => {
                                             let { guild: t } = e;
                                             return t;
                                         }),
@@ -74,10 +74,10 @@ function h(e) {
                                         disableGuildNameTooltip: !0
                                     }),
                                 (0, r.jsx)(i.Text, {
-                                    className: f.text,
-                                    variant: T,
+                                    className: h.text,
+                                    variant: v,
                                     color: 'interactive-normal',
-                                    children: (0, d.Z)(p.length)
+                                    children: (0, d.Z)(m.length)
                                 })
                             ]
                         })

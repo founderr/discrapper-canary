@@ -6,24 +6,24 @@ n.d(t, {
     n(47120);
 var i = n(200651);
 n(192379);
-var s = n(442837),
-    a = n(481060),
-    l = n(740492),
-    r = n(984014),
+var l = n(442837),
+    r = n(481060),
+    a = n(740492),
+    s = n(984014),
     o = n(295510),
     c = n(394059),
-    u = n(689938);
+    u = n(388032);
 function d(e, t) {
-    let [n, d, h] = (0, r.Z)(e, t),
-        m = (0, s.e7)([l.ZP], () => l.ZP.disableHideSelfStreamAndVideoConfirmationAlert);
+    let [n, d, h] = (0, s.Z)(e, t),
+        m = (0, l.e7)([a.ZP], () => a.ZP.disableHideSelfStreamAndVideoConfirmationAlert);
     return n
-        ? (0, i.jsx)(a.MenuCheckboxItem, {
+        ? (0, i.jsx)(r.MenuCheckboxItem, {
               id: 'self-stream-hide',
-              label: u.Z.Messages.SHOW_SELF_STREAM,
+              label: u.intl.string(u.t.aol7iY),
               checked: !d,
               action: () => {
                   if (m || d) return h(!d);
-                  (0, a.openModal)((e) =>
+                  (0, r.openModal)((e) =>
                       (0, i.jsx)(o.Z, {
                           ...e,
                           type: c.K.STREAM,

@@ -3,13 +3,13 @@ n.d(t, {
         return l;
     }
 });
-var s = n(331119),
-    a = n(575595),
-    r = n(650032);
-let i = 'getWhatsNewBadgeCount',
+var i = n(331119),
+    r = n(575595),
+    a = n(650032);
+let s = 'getWhatsNewBadgeCount',
     l = () => {
-        let { enabled: e } = r._.getCurrentConfig({ location: i }, { autoTrackExposure: !1 }),
-            { enabled: t } = a.r.getCurrentConfig({ location: i }, { autoTrackExposure: !1 }),
-            { enabled: n } = s.C.getCurrentConfig({ location: i }, { autoTrackExposure: !1 });
+        let { enabled: e } = a._.getCurrentConfig({ location: s }, { autoTrackExposure: !1 }),
+            { enabled: t } = r.r.getCurrentConfig({ location: s }, { autoTrackExposure: !1 }),
+            { enabled: n } = i.C.getCurrentConfig({ location: s }, { autoTrackExposure: !1 });
         return e && !t && !n;
     };

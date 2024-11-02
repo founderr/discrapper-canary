@@ -31,31 +31,31 @@ var r = n(995769),
             u = t.parameterLimit === 1 / 0 ? void 0 : t.parameterLimit,
             c = l.split(t.delimiter, u),
             d = -1,
-            _ = t.charset;
-        if (t.charsetSentinel) for (E = 0; E < c.length; ++E) 0 === c[E].indexOf('utf8=') && ('utf8=%E2%9C%93' === c[E] ? (_ = 'utf-8') : 'utf8=%26%2310003%3B' === c[E] && (_ = 'iso-8859-1'), (d = E), (E = c.length));
-        for (E = 0; E < c.length; ++E) {
-            if (E !== d) {
-                var E,
-                    f,
+            f = t.charset;
+        if (t.charsetSentinel) for (_ = 0; _ < c.length; ++_) 0 === c[_].indexOf('utf8=') && ('utf8=%E2%9C%93' === c[_] ? (f = 'utf-8') : 'utf8=%26%2310003%3B' === c[_] && (f = 'iso-8859-1'), (d = _), (_ = c.length));
+        for (_ = 0; _ < c.length; ++_) {
+            if (_ !== d) {
+                var _,
                     h,
-                    p = c[E],
-                    I = p.indexOf(']='),
-                    m = -1 === I ? p.indexOf('=') : I + 1;
+                    p,
+                    m = c[_],
+                    g = m.indexOf(']='),
+                    E = -1 === g ? m.indexOf('=') : g + 1;
                 if (
-                    (-1 === m
-                        ? ((f = t.decoder(p, s.decoder, _, 'key')), (h = t.strictNullHandling ? null : ''))
-                        : ((f = t.decoder(p.slice(0, m), s.decoder, _, 'key')),
-                          (h = r.maybeMap(o(p.slice(m + 1), t), function (e) {
-                              return t.decoder(e, s.decoder, _, 'value');
+                    (-1 === E
+                        ? ((h = t.decoder(m, s.decoder, f, 'key')), (p = t.strictNullHandling ? null : ''))
+                        : ((h = t.decoder(m.slice(0, E), s.decoder, f, 'key')),
+                          (p = r.maybeMap(o(m.slice(E + 1), t), function (e) {
+                              return t.decoder(e, s.decoder, f, 'value');
                           }))),
-                    h && t.interpretNumericEntities && 'iso-8859-1' === _)
+                    p && t.interpretNumericEntities && 'iso-8859-1' === f)
                 )
-                    h = h.replace(/&#(\d+);/g, function (e, t) {
+                    p = p.replace(/&#(\d+);/g, function (e, t) {
                         return String.fromCharCode(parseInt(t, 10));
                     });
-                p.indexOf('[]=') > -1 && (h = a(h) ? [h] : h);
-                var T = i.call(n, f);
-                T && 'combine' === t.duplicates ? (n[f] = r.combine(n[f], h)) : (!T || 'last' === t.duplicates) && (n[f] = h);
+                m.indexOf('[]=') > -1 && (p = a(p) ? [p] : p);
+                var v = i.call(n, h);
+                v && 'combine' === t.duplicates ? (n[h] = r.combine(n[h], p)) : (!v || 'last' === t.duplicates) && (n[h] = p);
             }
         }
         return n;
@@ -130,8 +130,8 @@ e.exports = function (e, t) {
     if ('' === e || null == e) return n.plainObjects ? Object.create(null) : {};
     for (var i = 'string' == typeof e ? l(e, n) : e, a = n.plainObjects ? Object.create(null) : {}, s = Object.keys(i), o = 0; o < s.length; ++o) {
         var u = s[o],
-            _ = c(u, i[u], n, 'string' == typeof e);
-        a = r.merge(a, _, n);
+            f = c(u, i[u], n, 'string' == typeof e);
+        a = r.merge(a, f, n);
     }
     return !0 === n.allowSparse ? a : r.compact(a);
 };

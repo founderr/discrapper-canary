@@ -8,9 +8,9 @@ var r,
     u = n(129861),
     c = n(600164),
     d = n(184301),
-    _ = n(347475),
-    E = n(415457);
-function f(e, t, n) {
+    f = n(347475),
+    _ = n(415457);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function f(e, t, n) {
         e
     );
 }
-class h extends (r = a.Component) {
+class p extends (r = a.Component) {
     render() {
         let { popoutOpen: e } = this.state,
             { user: t, disablePopout: n, ignoreModalClicks: r, guildId: a, channelId: s } = this.props;
@@ -34,7 +34,7 @@ class h extends (r = a.Component) {
                     channelId: s
                 }),
             renderPopout: (e) =>
-                (0, i.jsx)(_.Z, {
+                (0, i.jsx)(f.Z, {
                     ...e,
                     userId: t.id,
                     guildId: a,
@@ -49,39 +49,39 @@ class h extends (r = a.Component) {
     }
     constructor(...e) {
         super(...e),
-            f(this, 'state', { popoutOpen: !1 }),
-            f(this, 'handleClickUser', () => {
+            h(this, 'state', { popoutOpen: !1 }),
+            h(this, 'handleClickUser', () => {
                 let { onPopoutOpen: e } = this.props;
                 this.setState({ popoutOpen: !this.state.popoutOpen }), null == e || e();
             }),
-            f(this, 'handleUserPopoutClose', () => {
+            h(this, 'handleUserPopoutClose', () => {
                 let { onPopoutClose: e } = this.props;
                 this.setState({ popoutOpen: !1 }), null == e || e();
             }),
-            f(this, 'renderUserPopout', (e) => {
-                let { className: t, disablePopout: n, onContextMenu: r, user: a, status: s, textClassName: d, nick: _, guildId: f } = this.props;
+            h(this, 'renderUserPopout', (e) => {
+                let { className: t, disablePopout: n, onContextMenu: r, user: a, status: s, textClassName: d, nick: f, guildId: h } = this.props;
                 return (0, i.jsxs)(c.Z, {
                     align: c.Z.Align.CENTER,
-                    className: o()(E.memberListItem, t, { [E.popoutDisabled]: n }),
+                    className: o()(_.memberListItem, t, { [_.popoutDisabled]: n }),
                     onContextMenu: r,
                     onMouseDown: e.onMouseDown,
                     onKeyDown: e.onKeyDown,
                     onClick: this.handleClickUser,
                     children: [
                         (0, i.jsx)(l.Avatar, {
-                            src: a.getAvatarURL(f, 24),
-                            className: E.avatar,
+                            src: a.getAvatarURL(h, 24),
+                            className: _.avatar,
                             'aria-label': a.username,
                             size: l.AvatarSizes.SIZE_24,
                             status: s
                         }),
                         (0, i.jsx)(l.Text, {
-                            className: o()(E.memberListItemTag, d),
+                            className: o()(_.memberListItemTag, d),
                             variant: 'text-sm/normal',
                             children: (0, i.jsx)(u.Z, {
                                 user: a,
-                                nick: _,
-                                usernameClass: E.username,
+                                nick: f,
+                                usernameClass: _.username,
                                 hideDiscriminator: !0
                             })
                         })
@@ -90,4 +90,4 @@ class h extends (r = a.Component) {
             });
     }
 }
-f(h, 'defaultProps', { disablePopout: !1 }), (t.Z = h);
+h(p, 'defaultProps', { disablePopout: !1 }), (t.Z = p);

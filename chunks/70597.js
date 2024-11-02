@@ -24,11 +24,11 @@ function u(e, t) {
         u = t.months ? (0, o.Z)(t.months) : 0,
         c = t.weeks ? (0, o.Z)(t.weeks) : 0,
         d = t.days ? (0, o.Z)(t.days) : 0,
-        _ = t.hours ? (0, o.Z)(t.hours) : 0,
-        E = t.minutes ? (0, o.Z)(t.minutes) : 0,
-        f = t.seconds ? (0, o.Z)(t.seconds) : 0,
-        h = (0, a.default)(e),
-        p = u || n ? (0, i.default)(h, u + 12 * n) : h,
-        I = d || c ? (0, r.default)(p, d + 7 * c) : p;
-    return new Date(I.getTime() + 1000 * (f + 60 * (E + 60 * _)));
+        f = t.hours ? (0, o.Z)(t.hours) : 0,
+        _ = t.minutes ? (0, o.Z)(t.minutes) : 0,
+        h = t.seconds ? (0, o.Z)(t.seconds) : 0,
+        p = (0, a.default)(e),
+        m = u || n ? (0, i.default)(p, u + 12 * n) : p,
+        g = d || c ? (0, r.default)(m, d + 7 * c) : m;
+    return new Date(g.getTime() + 1000 * (h + 60 * (_ + 60 * f)));
 }

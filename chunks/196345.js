@@ -18,9 +18,9 @@ n(192379);
 var r = n(120356),
     a = n.n(r),
     i = n(481060),
-    s = n(454585),
-    l = n(489813),
-    c = n(689938),
+    l = n(454585),
+    s = n(489813),
+    c = n(388032),
     u = n(738912);
 function d(e) {
     let { terms: t, channelId: n, className: r } = e;
@@ -40,7 +40,7 @@ function d(e) {
                         (0, o.jsx)(i.Text, {
                             variant: 'text-md/normal',
                             className: u.termsRowContent,
-                            children: s.Z.parseGuildVerificationFormRule(e, !0, { channelId: n })
+                            children: l.Z.parseGuildVerificationFormRule(e, !0, { channelId: n })
                         })
                     ]
                 },
@@ -61,22 +61,22 @@ function m(e) {
         className: u.checkbox,
         children: (0, o.jsx)(i.Text, {
             variant: 'text-sm/normal',
-            children: c.Z.Messages.MEMBER_VERIFICATION_READ_RULES
+            children: c.intl.string(c.t['2EXfGB'])
         })
     });
 }
 function f(e) {
     let { formField: t } = e;
-    return (0, o.jsx)(l.Ih, {
+    return (0, o.jsx)(s.Ih, {
         icon: i.BookCheckIcon,
-        text: c.Z.Messages.MEMBER_VERIFICATION_AGREED_TO_RULES,
+        text: c.intl.string(c.t['2xbmoK']),
         meetsRequirement: !!t.response
     });
 }
 let p = (e) => {
     let { channelId: t, formField: n, onChange: r } = e;
-    return (0, o.jsxs)(l.hK, {
-        title: c.Z.Messages.SERVER_DISCOVERY_AGREE_TO_RULES,
+    return (0, o.jsxs)(s.hK, {
+        title: c.intl.string(c.t.Q8OFNz),
         children: [
             (0, o.jsx)(d, {
                 className: u.fieldBackground,

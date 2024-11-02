@@ -1,21 +1,21 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return a;
     }
 });
-var a = n(626135),
-    s = n(981631);
-function l(e) {
-    let { problem: t, channel: n, feedback: l, activityApplication: i, analyticsData: o, location: r, rating: c = null } = e;
-    a.default.track(s.rMx.ACTIVITY_REPORT_PROBLEM, {
+var i = n(626135),
+    l = n(981631);
+function a(e) {
+    let { problem: t, channel: n, feedback: a, activityApplication: o, analyticsData: r, location: s, rating: c = null } = e;
+    i.default.track(l.rMx.ACTIVITY_REPORT_PROBLEM, {
         reason: t,
         guild_id: n.getGuildId(),
         channel_id: n.id,
-        application_id: null == i ? void 0 : i.id,
-        application_name: null == i ? void 0 : i.name,
-        location: r,
+        application_id: null == o ? void 0 : o.id,
+        application_name: null == o ? void 0 : o.name,
+        location: s,
         rating: c,
-        feedback: l,
-        ...o
+        feedback: a,
+        ...r
     });
 }

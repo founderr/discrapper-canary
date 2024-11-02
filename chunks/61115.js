@@ -1,10 +1,10 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return S;
+            return I;
         },
         openQuestSurveyModal: function () {
-            return A;
+            return T;
         }
     }),
     n(47120);
@@ -17,47 +17,47 @@ var r,
     u = n(100621),
     c = n(481060),
     d = n(600164),
-    _ = n(626135),
-    E = n(617136),
-    f = n(113434),
-    h = n(569984),
-    p = n(981631),
-    I = n(689938),
-    m = n(950542),
-    T = n(677486);
-function S(e) {
+    f = n(626135),
+    _ = n(617136),
+    h = n(113434),
+    p = n(569984),
+    m = n(981631),
+    g = n(388032),
+    E = n(950542),
+    v = n(677486);
+function I(e) {
     let { questId: t, survey: n, transitionState: r, onClose: i, onSubmit: o } = e,
-        l = (0, f.B4)(t),
-        [E, h] = s.useState(0),
-        [S, A] = (0, c.useSpring)(() => ({
+        l = (0, h.B4)(t),
+        [_, p] = s.useState(0),
+        [I, T] = (0, c.useSpring)(() => ({
             from: { width: '0%' },
             config: { duration: 2500 }
         })),
-        R = (e) => {
+        y = (e) => {
             o(),
-                h(1),
+                p(1),
                 null != l &&
-                    _.default.track(p.rMx.QUEST_SURVEY_SUBMITTED, {
-                        ...N(l, n),
+                    f.default.track(m.rMx.QUEST_SURVEY_SUBMITTED, {
+                        ...b(l, n),
                         choice: e
                     });
         },
-        O = async (e) => {
-            1 === e && (await A({ width: '100%' }), i());
+        A = async (e) => {
+            1 === e && (await T({ width: '100%' }), i());
         };
     return (
         s.useEffect(() => {
-            null != l && _.default.track(p.rMx.QUEST_SURVEY_DISPLAYED, N(l, n));
+            null != l && f.default.track(m.rMx.QUEST_SURVEY_DISPLAYED, b(l, n));
         }, []),
         null == l && i(),
         (0, a.jsx)(c.ModalRoot, {
             transitionState: r,
             size: c.ModalSize.DYNAMIC,
-            className: m.modalRoot,
+            className: E.modalRoot,
             children: (0, a.jsxs)(c.Slides, {
-                activeSlide: E,
+                activeSlide: _,
                 width: 467,
-                onSlideReady: O,
+                onSlideReady: A,
                 children: [
                     (0, a.jsxs)(c.Slide, {
                         id: 0,
@@ -65,16 +65,16 @@ function S(e) {
                             (0, a.jsxs)(c.ModalHeader, {
                                 direction: d.Z.Direction.VERTICAL,
                                 separator: !1,
-                                className: m.modalHeader,
+                                className: E.modalHeader,
                                 children: [
                                     (0, a.jsx)(c.ModalCloseButton, {
-                                        className: m.closeBtn,
+                                        className: E.closeBtn,
                                         onClick: i
                                     }),
                                     (0, a.jsx)('img', {
-                                        src: T,
+                                        src: v,
                                         alt: '',
-                                        className: m.asset
+                                        className: E.asset
                                     }),
                                     (0, a.jsx)(c.Heading, {
                                         variant: 'heading-lg/semibold',
@@ -88,13 +88,13 @@ function S(e) {
                                 ]
                             }),
                             (0, a.jsx)(c.ModalContent, {
-                                className: m.modalContent,
+                                className: E.modalContent,
                                 children: n.choices.map((e) =>
                                     (0, a.jsx)(
-                                        g,
+                                        S,
                                         {
                                             text: e,
-                                            onClick: R
+                                            onClick: y
                                         },
                                         e
                                     )
@@ -106,35 +106,35 @@ function S(e) {
                         id: 1,
                         children: [
                             (0, a.jsxs)(c.ModalContent, {
-                                className: m.completedModalContent,
+                                className: E.completedModalContent,
                                 children: [
                                     (0, a.jsx)('img', {
-                                        src: T,
+                                        src: v,
                                         alt: '',
-                                        className: m.asset
+                                        className: E.asset
                                     }),
                                     (0, a.jsx)(c.Heading, {
                                         variant: 'heading-lg/semibold',
-                                        children: I.Z.Messages.STREAM_REPORTED
+                                        children: g.intl.string(g.t.KTjjrK)
                                     }),
                                     (0, a.jsx)(c.Text, {
                                         variant: 'text-md/normal',
                                         color: 'text-muted',
-                                        children: I.Z.Messages.PREMIUM_SURVEY_WE_APPRECIATE_IT
+                                        children: g.intl.string(g.t.AvbrEB)
                                     })
                                 ]
                             }),
                             (0, a.jsx)(c.ModalFooter, {
                                 children: (0, a.jsxs)('div', {
-                                    className: m.closeButtonContainer,
+                                    className: E.closeButtonContainer,
                                     children: [
                                         (0, a.jsx)(c.Button, {
                                             onClick: i,
-                                            children: I.Z.Messages.CLOSE
+                                            children: g.intl.string(g.t.cpT0Cg)
                                         }),
                                         (0, a.jsx)(u.animated.div, {
-                                            className: m.progressOverlay,
-                                            style: S
+                                            className: E.progressOverlay,
+                                            style: I
                                         })
                                     ]
                                 })
@@ -146,10 +146,10 @@ function S(e) {
         })
     );
 }
-function g(e) {
+function S(e) {
     let { className: t, text: n, onClick: r } = e;
     return (0, a.jsxs)(c.Clickable, {
-        className: l()(m.choiceContainer, t),
+        className: l()(E.choiceContainer, t),
         onClick: () => r(n),
         children: [
             (0, a.jsx)(c.Text, {
@@ -160,7 +160,7 @@ function g(e) {
         ]
     });
 }
-function A(e) {
+function T(e) {
     let t = !1;
     (0, c.openModalLazy)(
         async () => {
@@ -176,20 +176,20 @@ function A(e) {
         },
         {
             onCloseCallback: () => {
-                let n = h.Z.getQuest(e.questId);
+                let n = p.Z.getQuest(e.questId);
                 null != n &&
-                    _.default.track(p.rMx.QUEST_SURVEY_DISMISSED, {
-                        ...N(n, e.survey),
+                    f.default.track(m.rMx.QUEST_SURVEY_DISMISSED, {
+                        ...b(n, e.survey),
                         submitted: t
                     });
             }
         }
     );
 }
-function N(e, t) {
+function b(e, t) {
     return {
         quest_id: e.id,
-        quest_status: (0, E.uk)(e),
+        quest_status: (0, _.uk)(e),
         survey_id: t.id,
         survey_title: t.title,
         survey_subtitle: t.subtitle,

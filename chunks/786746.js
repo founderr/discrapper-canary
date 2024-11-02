@@ -1,33 +1,33 @@
-s.r(n),
-    s.d(n, {
+i.r(t),
+    i.d(t, {
         default: function () {
             return c;
         }
     }),
-    s(653041);
-var l = s(200651);
-s(192379);
-var t = s(481060),
-    i = s(239091),
-    u = s(299206),
-    a = s(867108),
-    r = s(981631),
-    o = s(689938);
-function c(e) {
-    let { role: n, guild: s, onSelect: c } = e,
+    i(653041);
+var l = i(200651);
+i(192379);
+var e = i(481060),
+    s = i(239091),
+    r = i(299206),
+    u = i(867108),
+    a = i(981631),
+    o = i(388032);
+function c(n) {
+    let { role: t, guild: i, onSelect: c } = n,
         d = [],
-        p = (0, a.Z)(s, n, r.pNK.INTEGRATIONS);
+        p = (0, u.Z)(i, t, a.pNK.INTEGRATIONS);
     null != p && d.push(p);
-    let h = (0, u.Z)({
-        id: n.id,
-        label: o.Z.Messages.COPY_ID_ROLE
+    let h = (0, r.Z)({
+        id: t.id,
+        label: o.intl.string(o.t.sMsaLi)
     });
     return (null != h && d.push(h), 0 === d.length)
         ? null
-        : (0, l.jsx)(t.Menu, {
+        : (0, l.jsx)(e.Menu, {
               navId: 'guild-integrations-permission-role-context',
-              'aria-label': o.Z.Messages.GUILD_ROLE_ACTIONS_MENU_LABEL,
-              onClose: i.Zy,
+              'aria-label': o.intl.string(o.t['337Ja2']),
+              onClose: s.Zy,
               onSelect: c,
               children: d
           });

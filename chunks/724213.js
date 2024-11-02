@@ -18,17 +18,17 @@ t(581883);
 var a = t(984933),
     i = t(271383),
     r = t(9156),
-    s = t(630388),
-    o = t(152376),
+    o = t(630388),
+    s = t(152376),
     c = t(398758),
     d = t(372897);
 function u(e) {
     var n, t;
     let l = (0, c.r1)(e),
         a = null !== (t = null === (n = i.ZP.getSelfMember(e)) || void 0 === n ? void 0 : n.flags) && void 0 !== t ? t : 0,
-        o = (0, s.yE)(a, d.q.COMPLETED_ONBOARDING),
+        s = (0, o.yE)(a, d.q.COMPLETED_ONBOARDING),
         u = r.ZP.getOptedInChannels(e).size > 0;
-    return !l && !o && !u;
+    return !l && !s && !u;
 }
 function h(e) {
     if (u(e)) {
@@ -37,7 +37,7 @@ function h(e) {
     }
     {
         let n = (0, c.r1)(e);
-        (0, o.QG)(e, !n);
+        (0, s.QG)(e, !n);
     }
 }
 function m(e) {

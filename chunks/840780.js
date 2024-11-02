@@ -3,40 +3,40 @@ var i = n(200651),
     l = n(192379),
     r = n(120356),
     a = n.n(r),
-    s = n(512722),
-    o = n.n(s),
+    o = n(512722),
+    s = n.n(o),
     c = n(442837),
     u = n(481060),
     d = n(475179),
     h = n(925549),
     p = n(438139),
     f = n(730749),
-    _ = n(607070),
-    m = n(566620),
-    g = n(317381),
-    C = n(835473),
-    I = n(933557),
-    E = n(194082),
-    N = n(436774),
-    x = n(594190),
-    S = n(925329),
-    v = n(382182),
-    Z = n(74299),
-    T = n(914923),
-    b = n(165393),
-    A = n(989941),
-    M = n(690221),
-    R = n(231664),
-    L = n(759198),
-    y = n(131704),
-    P = n(199902),
-    O = n(314897),
-    j = n(592125),
+    m = n(607070),
+    g = n(566620),
+    C = n(317381),
+    _ = n(835473),
+    x = n(933557),
+    v = n(194082),
+    I = n(436774),
+    b = n(594190),
+    N = n(925329),
+    E = n(382182),
+    S = n(74299),
+    Z = n(914923),
+    y = n(165393),
+    T = n(989941),
+    j = n(690221),
+    A = n(231664),
+    P = n(759198),
+    R = n(131704),
+    M = n(199902),
+    L = n(314897),
+    w = n(592125),
     D = n(984933),
-    w = n(430824),
-    U = n(131951),
+    O = n(430824),
+    k = n(131951),
     G = n(496675),
-    k = n(158776),
+    U = n(158776),
     B = n(699516),
     H = n(944486),
     V = n(594174),
@@ -82,15 +82,15 @@ class ee extends l.PureComponent {
     }
     renderScreenshare() {
         let { isStreaming: e, streamMetadata: t, streamQualityIndicator: n } = this.props,
-            { title: l, sanitizedTitle: r } = (0, T.Z)(t);
+            { title: l, sanitizedTitle: r } = (0, Z.Z)(t);
         return (0, i.jsxs)('div', {
             className: J.gameWrapper,
             children: [
                 e
-                    ? (0, i.jsx)(b.Z, { title: r })
-                    : (0, i.jsx)(E.ZP, {
-                          look: E.ZP.Looks.GRAY,
-                          size: E.ZP.Sizes.SMALL,
+                    ? (0, i.jsx)(y.Z, { title: r })
+                    : (0, i.jsx)(v.ZP, {
+                          look: v.ZP.Looks.GRAY,
+                          size: v.ZP.Sizes.SMALL,
                           className: J.liveIndicator
                       }),
                 (0, i.jsxs)('div', {
@@ -103,9 +103,9 @@ class ee extends l.PureComponent {
                                 children: [
                                     (0, i.jsx)(u.NitroWheelIcon, {
                                         size: 'xxs',
-                                        color: N.JX.PREMIUM_TIER_2
+                                        color: I.JX.PREMIUM_TIER_2
                                     }),
-                                    (0, i.jsx)(L.Z, {
+                                    (0, i.jsx)(P.Z, {
                                         className: J.perksDemoText,
                                         variant: 'text-xxs/semibold',
                                         children: n
@@ -121,29 +121,29 @@ class ee extends l.PureComponent {
         let e;
         let { application: t, embeddedActivity: n, channel: l, channelName: r, guildForConnectedChannel: a } = this.props;
         if (null == n || null == l || null == t) return null;
-        let s = { start: n.connectedSince },
-            o = r;
-        null != a ? ((e = Q.Z5c.CHANNEL(a.id, l.id)), (o = ''.concat(o, ' / ').concat(a.name))) : (e = Q.Z5c.CHANNEL(Q.ME, l.id));
-        let c = (0, i.jsx)(M.Z, {
+        let o = { start: n.connectedSince },
+            s = r;
+        null != a ? ((e = Q.Z5c.CHANNEL(a.id, l.id)), (s = ''.concat(s, ' / ').concat(a.name))) : (e = Q.Z5c.CHANNEL(Q.ME, l.id));
+        let c = (0, i.jsx)(j.Z, {
             href: e,
             onClick: this.handleApplicationLinkClick,
             children: (0, i.jsx)(z.Z, {
                 className: J.channel,
-                children: o
+                children: s
             })
         });
         return (0, i.jsxs)('div', {
             className: J.gameWrapper,
             children: [
-                (0, i.jsx)(S.Z, {
+                (0, i.jsx)(N.Z, {
                     className: J.gameIcon,
                     game: t,
-                    size: S.Z.Sizes.SMALL
+                    size: N.Z.Sizes.SMALL
                 }),
                 (0, i.jsxs)('div', {
                     className: J.info,
                     children: [
-                        (0, i.jsx)(M.Z, {
+                        (0, i.jsx)(j.Z, {
                             href: e,
                             onClick: this.handleApplicationLinkClick,
                             children: (0, i.jsx)(Y.Z, {
@@ -151,15 +151,15 @@ class ee extends l.PureComponent {
                                 children: t.name
                             })
                         }),
-                        (0, y.Qm)(l.type) ? c : (0, i.jsx)($, { timestamps: s })
+                        (0, R.Qm)(l.type) ? c : (0, i.jsx)($, { timestamps: o })
                     ]
                 })
             ]
         });
     }
     render() {
-        let { canGoLive: e, embeddedActivity: t, runningGame: n, isStreaming: l, streamMetadata: r, application: s, activity: o, className: c } = this.props;
-        return l || (((0, K.y)(s, o, t) || e) && (null != n || null != t))
+        let { canGoLive: e, embeddedActivity: t, runningGame: n, isStreaming: l, streamMetadata: r, application: o, activity: s, className: c } = this.props;
+        return l || (((0, K.y)(o, s, t) || e) && (null != n || null != t))
             ? (0, i.jsx)('div', {
                   className: a()(J.panel, c),
                   children: (0, i.jsxs)('div', {
@@ -177,7 +177,7 @@ class ee extends l.PureComponent {
             (i = () => {
                 var e;
                 let { channel: t, embeddedActivity: n } = this.props;
-                o()(null != t, 'Channel is null during navigation click'), o()(null != n, 'Activity null during navigation click'), (0, y.vd)(t.type) && d.Z.selectParticipant(t.id, n.applicationId), h.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : Q.ME, t.id), (0, y.Qm)(t.type) && (0, m.tg)(X.Ez.PANEL);
+                s()(null != t, 'Channel is null during navigation click'), s()(null != n, 'Activity null during navigation click'), (0, R.vd)(t.type) && d.Z.selectParticipant(t.id, n.applicationId), h.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : Q.ME, t.id), (0, R.Qm)(t.type) && (0, g.tg)(X.Ez.PANEL);
             }),
             n in t
                 ? Object.defineProperty(t, n, {
@@ -192,48 +192,48 @@ class ee extends l.PureComponent {
 t.Z = (0, f.Z)(function (e) {
     var t;
     let { guildId: n, ...l } = e,
-        r = (0, c.e7)([O.default], () => O.default.getId()),
-        a = (0, c.e7)([x.ZP, F.Z], () => (0, A.Z)(x.ZP, F.Z)),
-        s = (0, c.e7)([H.Z, j.Z], () => j.Z.getChannel(H.Z.getVoiceChannelId())),
-        o = (0, c.e7)([g.ZP], () => g.ZP.getConnectedActivityChannelId()),
-        u = (0, c.e7)([j.Z], () => j.Z.getChannel(o)),
-        d = (0, c.e7)([w.Z], () => w.Z.getGuild(null == u ? void 0 : u.guild_id)),
-        [h, p] = (0, c.Wu)([P.Z], () => [P.Z.getCurrentUserActiveStream(), P.Z.getStreamerActiveStreamMetadata()]),
-        f = (0, c.e7)([_.Z], () => _.Z.useReducedMotion),
-        m = (0, c.e7)([g.ZP], () => (null != u ? g.ZP.getSelfEmbeddedActivityForChannel(u.id) : null)),
-        E = (0, c.e7)([w.Z, G.Z, D.ZP], () => (null != s ? v.JL(s, w.Z, G.Z, !1) : null != n && v.h_(D.ZP.getChannels(n), w.Z, G.Z).length > 0)),
-        [N] = (0, C.Z)([
+        r = (0, c.e7)([L.default], () => L.default.getId()),
+        a = (0, c.e7)([b.ZP, F.Z], () => (0, T.Z)(b.ZP, F.Z)),
+        o = (0, c.e7)([H.Z, w.Z], () => w.Z.getChannel(H.Z.getVoiceChannelId())),
+        s = (0, c.e7)([C.ZP], () => C.ZP.getConnectedActivityChannelId()),
+        u = (0, c.e7)([w.Z], () => w.Z.getChannel(s)),
+        d = (0, c.e7)([O.Z], () => O.Z.getGuild(null == u ? void 0 : u.guild_id)),
+        [h, p] = (0, c.Wu)([M.Z], () => [M.Z.getCurrentUserActiveStream(), M.Z.getStreamerActiveStreamMetadata()]),
+        f = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
+        g = (0, c.e7)([C.ZP], () => (null != u ? C.ZP.getSelfEmbeddedActivityForChannel(u.id) : null)),
+        v = (0, c.e7)([O.Z, G.Z, D.ZP], () => (null != o ? E.JL(o, O.Z, G.Z, !1) : null != n && E.h_(D.ZP.getChannels(n), O.Z, G.Z).length > 0)),
+        [I] = (0, _.Z)([
             null !==
                 (t = (function () {
                     if (null != p && null != p.id) return p.id;
                     if (null != a && null != a.id) return a.id;
-                    if (null != m) return m.applicationId;
+                    if (null != g) return g.applicationId;
                 })()) && void 0 !== t
                 ? t
                 : ''
         ]),
-        S = (0, c.e7)([U.Z], () => (0, Z.Z)(U.Z) && (0, W.isWindows)()),
-        T = (0, c.e7)([k.Z], () => (null != r ? k.Z.findActivity(r, (e) => e.type === Q.IIU.PLAYING) : null)),
-        b = null != h && h.ownerId === r && h.state !== Q.jm8.ENDED,
-        M = (0, c.e7)([V.default, B.Z], () => (null != u ? (0, I.F6)(u, V.default, B.Z) : void 0)),
-        L = (0, R.Z)();
+        N = (0, c.e7)([k.Z], () => (0, S.Z)(k.Z) && (0, W.isWindows)()),
+        Z = (0, c.e7)([U.Z], () => (null != r ? U.Z.findActivity(r, (e) => e.type === Q.IIU.PLAYING) : null)),
+        y = null != h && h.ownerId === r && h.state !== Q.jm8.ENDED,
+        j = (0, c.e7)([V.default, B.Z], () => (null != u ? (0, x.F6)(u, V.default, B.Z) : void 0)),
+        P = (0, A.Z)();
     return (0, i.jsx)(ee, {
         ...l,
         guildId: n,
-        canGoLive: S,
-        activity: T,
-        embeddedActivity: m,
+        canGoLive: N,
+        activity: Z,
+        embeddedActivity: g,
         userId: r,
         runningGame: a,
-        application: N,
+        application: I,
         useReducedMotion: f,
-        isStreaming: b,
+        isStreaming: y,
         channel: u,
-        canStream: E,
+        canStream: v,
         stream: h,
         streamMetadata: p,
-        channelName: M,
+        channelName: j,
         guildForConnectedChannel: d,
-        streamQualityIndicator: L
+        streamQualityIndicator: P
     });
 });

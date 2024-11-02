@@ -1,34 +1,34 @@
 var i = n(200651),
-    a = n(192379),
-    s = n(481060),
-    r = n(984370),
-    l = n(703656),
+    r = n(192379),
+    l = n(481060),
+    a = n(984370),
+    s = n(703656),
     o = n(626135),
     c = n(804739),
     d = n(981631),
-    u = n(689938),
-    _ = n(438201);
-let E = (0, c.Q)() || !1;
-t.Z = a.memo(function (e) {
+    u = n(388032),
+    h = n(438201);
+let m = (0, c.Q)() || !1;
+t.Z = r.memo(function (e) {
     let { currentRoute: t, renderToolbar: n } = e,
-        c = a.useContext(o.AnalyticsContext),
-        h = E || t === d.Z5c.APPLICATION_LIBRARY_SETTINGS;
-    return (0, i.jsxs)(r.Z, {
-        className: _.libraryHeader,
+        c = r.useContext(o.AnalyticsContext),
+        p = m || t === d.Z5c.APPLICATION_LIBRARY_SETTINGS;
+    return (0, i.jsxs)(a.Z, {
+        className: h.libraryHeader,
         toolbar: null == n ? void 0 : n(),
         children: [
-            (0, i.jsx)(r.Z.Icon, {
-                icon: s.InventoryIcon,
+            (0, i.jsx)(a.Z.Icon, {
+                icon: l.InventoryIcon,
                 'aria-hidden': !0
             }),
-            (0, i.jsx)(r.Z.Title, { children: u.Z.Messages.LIBRARY }),
-            (0, i.jsx)(r.Z.Divider, {}),
-            (0, i.jsxs)(s.TabBar, {
+            (0, i.jsx)(a.Z.Title, { children: u.intl.string(u.t.cw57am) }),
+            (0, i.jsx)(a.Z.Divider, {}),
+            (0, i.jsxs)(l.TabBar, {
                 type: 'top-pill',
                 selectedItem: t,
                 onItemSelect: function (e) {
                     e !== t &&
-                        (0, l.uL)(e, {
+                        (0, s.uL)(e, {
                             state: {
                                 analyticsSource: {
                                     ...c.location,
@@ -39,14 +39,14 @@ t.Z = a.memo(function (e) {
                         });
                 },
                 children: [
-                    (0, i.jsx)(s.TabBar.Item, {
+                    (0, i.jsx)(l.TabBar.Item, {
                         id: d.Z5c.APPLICATION_LIBRARY,
-                        children: u.Z.Messages.APPLICATION_LIBRARY_MY_GAMES
+                        children: u.intl.string(u.t.p7ARTE)
                     }),
-                    h
-                        ? (0, i.jsx)(s.TabBar.Item, {
+                    p
+                        ? (0, i.jsx)(l.TabBar.Item, {
                               id: d.Z5c.APPLICATION_LIBRARY_SETTINGS,
-                              children: u.Z.Messages.SETTINGS
+                              children: u.intl.string(u.t['3D5yo6'])
                           })
                         : null
                 ]

@@ -12,13 +12,13 @@ e.exports = function (e, t, n, r) {
         var u,
             c,
             d,
-            _,
-            E,
             f,
-            h = e[l].replace(a, '%20'),
-            p = h.indexOf(n);
-        if ((p >= 0 ? ((d = h.substr(0, p)), (_ = h.substr(p + 1))) : ((d = h), (_ = '')), (E = decodeURIComponent(d)), (f = decodeURIComponent(_)), (u = i), (c = E), Object.prototype.hasOwnProperty.call(u, c))) Array.isArray(i[E]) ? i[E].push(f) : (i[E] = [i[E], f]);
-        else i[E] = f;
+            _,
+            h,
+            p = e[l].replace(a, '%20'),
+            m = p.indexOf(n);
+        if ((m >= 0 ? ((d = p.substr(0, m)), (f = p.substr(m + 1))) : ((d = p), (f = '')), (_ = decodeURIComponent(d)), (h = decodeURIComponent(f)), (u = i), (c = _), Object.prototype.hasOwnProperty.call(u, c))) Array.isArray(i[_]) ? i[_].push(h) : (i[_] = [i[_], h]);
+        else i[_] = h;
     }
     return i;
 };

@@ -1,6 +1,6 @@
 n.d(t, {
     c: function () {
-        return E;
+        return _;
     }
 });
 var r = n(200651),
@@ -11,21 +11,21 @@ var r = n(200651),
     l = n(481060),
     u = n(607070),
     c = n(79320),
-    d = n(689938),
-    _ = n(550581);
-function E() {
+    d = n(388032),
+    f = n(550581);
+function _() {
     let e = [
             {
                 keybinds: ['Spacebar', 'Enter'],
-                name: d.Z.Messages.DND_OPERATION_LABEL_DROP
+                name: d.intl.string(d.t['cs/HVF'])
             },
             {
                 keybinds: ['up', 'down'],
-                name: d.Z.Messages.DND_OPERATION_LABEL_MOVE
+                name: d.intl.string(d.t.dmMqa2)
             },
             {
                 keybinds: ['ESC'],
-                name: d.Z.Messages.DND_OPERATION_LABEL_CANCEL
+                name: d.intl.string(d.t['1ioMJS'])
             }
         ],
         t = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
@@ -53,9 +53,9 @@ function E() {
     )((t, n) =>
         n
             ? (0, r.jsx)('div', {
-                  className: _.positioner,
+                  className: f.positioner,
                   children: (0, r.jsx)(a.animated.div, {
-                      className: _.container,
+                      className: f.container,
                       style: t,
                       children: e.map((t, n) => {
                           let { keybinds: a, name: s } = t;
@@ -65,7 +65,7 @@ function E() {
                                   children: [
                                       (0, r.jsx)(l.Text, {
                                           variant: 'text-md/semibold',
-                                          className: _.bindName,
+                                          className: f.bindName,
                                           children: s
                                       }),
                                       a.map((e) =>
@@ -73,12 +73,12 @@ function E() {
                                               o.M,
                                               {
                                                   shortcut: e,
-                                                  className: _.shortcut
+                                                  className: f.shortcut
                                               },
                                               e
                                           )
                                       ),
-                                      n < e.length - 1 ? (0, r.jsx)('span', { className: _.separator }) : null
+                                      n < e.length - 1 ? (0, r.jsx)('span', { className: f.separator }) : null
                                   ]
                               },
                               s

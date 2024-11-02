@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return _;
     }
 });
 var r = n(200651),
@@ -12,14 +12,14 @@ var r = n(200651),
     u = n(468026),
     c = n(269647),
     d = n(981631),
-    _ = n(689938);
-function E() {
+    f = n(388032);
+function _() {
     let e = (0, a.e7)([c.Z], () => c.Z.shouldShowWarning(), []),
         t = i.useRef(null);
     function n() {
         null !== t.current && ((0, s.closeModal)(t.current), (t.current = null));
     }
-    function E() {
+    function _() {
         l.Z.clearVADWarning();
     }
     return (
@@ -28,13 +28,13 @@ function E() {
                 e
                     ? (t.current = (0, s.openModal)((e) =>
                           (0, r.jsx)(u.default, {
-                              title: _.Z.Messages.VAD_PERMISSION_TITLE,
-                              body: _.Z.Messages.VAD_PERMISSION_BODY,
-                              onCancel: E,
-                              cancelText: _.Z.Messages.VAD_PERMISSION_OKAY,
-                              confirmText: _.Z.Messages.VAD_PERMISSION_ENABLE_PTT,
+                              title: f.intl.string(f.t.NYklho),
+                              body: f.intl.string(f.t.EJ26Oj),
+                              onCancel: _,
+                              cancelText: f.intl.string(f.t.UYW0d3),
+                              confirmText: f.intl.string(f.t.E3Y7ND),
                               onConfirm: () => {
-                                  o.Z.setMode(d.pM4.PUSH_TO_TALK), E();
+                                  o.Z.setMode(d.pM4.PUSH_TO_TALK), _();
                               },
                               ...e
                           })

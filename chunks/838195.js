@@ -1,23 +1,23 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return s;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(522474),
-    r = n(981631);
-function l(e) {
-    let { applicationId: t, channelId: l, mediaUrl: o } = e,
-        c = s.Z.getWindowOpen(r.KJ3.CHANNEL_CALL_POPOUT) ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
-    (0, a.openModalLazy)(
+var r = n(481060),
+    l = n(522474),
+    a = n(981631);
+function s(e) {
+    let { applicationId: t, channelId: s, mediaUrl: o } = e,
+        c = l.Z.getWindowOpen(a.KJ3.CHANNEL_CALL_POPOUT) ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT;
+    (0, r.openModalLazy)(
         async () => {
             let { default: e } = await n.e('4530').then(n.bind(n, 899201));
             return (n) =>
                 (0, i.jsx)(e, {
                     applicationId: t,
-                    channelId: l,
+                    channelId: s,
                     mediaUrl: o,
                     ...n
                 });

@@ -1,18 +1,18 @@
-l.d(n, {
+t.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 }),
-    l(47120);
-var o = l(200651),
-    t = l(192379),
-    i = l(225433),
-    s = l(655303);
-function a(e) {
-    let { hasSetEmoji: n, onClick: l, children: a } = e,
-        [r, d] = t.useState(!1);
-    return (0, o.jsxs)('div', {
-        className: s.container,
+    t(47120);
+var l = t(200651),
+    i = t(192379),
+    o = t(225433),
+    a = t(655303);
+function s(e) {
+    let { hasSetEmoji: n, onClick: t, children: s } = e,
+        [r, d] = i.useState(!1);
+    return (0, l.jsxs)('div', {
+        className: a.container,
         onMouseEnter: () => {
             if (n) {
                 d(!0);
@@ -24,12 +24,12 @@ function a(e) {
             d(!1);
         },
         children: [
-            a,
+            s,
             n &&
                 r &&
-                (0, o.jsx)(i.Z, {
-                    onClick: l,
-                    className: s.removeButton
+                (0, l.jsx)(o.Z, {
+                    onClick: t,
+                    className: a.removeButton
                 })
         ]
     });

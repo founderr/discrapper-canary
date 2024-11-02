@@ -1,112 +1,112 @@
-s.d(t, {
+n.d(t, {
     Cd: function () {
         return f;
     },
     YR: function () {
-        return S;
+        return g;
     }
 }),
-    s(47120),
-    s(411104);
-var n = s(200651),
-    l = s(192379),
-    i = s(481060),
-    r = s(447097),
-    o = s(873124),
-    a = s(248902),
-    d = s(160511),
-    u = s(51693),
-    c = s(973810),
-    h = s(689938);
+    n(47120),
+    n(411104);
+var l = n(200651),
+    i = n(192379),
+    s = n(481060),
+    r = n(447097),
+    o = n(873124),
+    a = n(248902),
+    d = n(160511),
+    u = n(51693),
+    c = n(973810),
+    h = n(388032);
 function f(e) {
-    var t, s;
-    let { mfaChallenge: h, mfaFinish: f, onEarlyClose: m, onClose: S, width: _ = 440 } = e,
-        [g, x] = l.useState(null !== (s = null === (t = h.methods[0]) || void 0 === t ? void 0 : t.type) && void 0 !== s ? s : 'select'),
-        [E, C] = l.useState(g),
-        p = async (e) => {
-            let { mfaType: t, data: s } = e;
+    var t, n;
+    let { mfaChallenge: h, mfaFinish: f, onEarlyClose: m, onClose: g, width: S = 440 } = e,
+        [x, v] = i.useState(null !== (n = null === (t = h.methods[0]) || void 0 === t ? void 0 : t.type) && void 0 !== n ? n : 'select'),
+        [p, j] = i.useState(x),
+        C = async (e) => {
+            let { mfaType: t, data: n } = e;
             await f({
                 mfaType: t,
-                data: s,
+                data: n,
                 ticket: h.ticket
             }),
-                null != S && S();
+                null != g && g();
         },
-        v = {
+        b = {
             mfaChallenge: h,
-            finish: p,
-            setSlide: x,
+            finish: C,
+            setSlide: v,
             onClose: m
         };
-    return (0, n.jsxs)(i.Slides, {
-        activeSlide: g,
-        width: _,
-        onSlideReady: C,
+    return (0, l.jsxs)(s.Slides, {
+        activeSlide: x,
+        width: S,
+        onSlideReady: j,
         children: [
-            (0, n.jsx)(i.Slide, {
+            (0, l.jsx)(s.Slide, {
                 id: 'select',
-                children: (0, n.jsx)(a.Z, { ...v })
+                children: (0, l.jsx)(a.Z, { ...b })
             }),
-            (0, n.jsx)(i.Slide, {
+            (0, l.jsx)(s.Slide, {
                 id: 'webauthn',
-                children: (0, n.jsx)(c.Z, { ...v })
+                children: (0, l.jsx)(c.Z, { ...b })
             }),
-            (0, n.jsx)(i.Slide, {
+            (0, l.jsx)(s.Slide, {
                 id: 'totp',
-                children: (0, n.jsx)(u.Z, {
-                    ...v,
-                    isSlideReady: 'totp' === E
+                children: (0, l.jsx)(u.Z, {
+                    ...b,
+                    isSlideReady: 'totp' === p
                 })
             }),
-            (0, n.jsx)(i.Slide, {
+            (0, l.jsx)(s.Slide, {
                 id: 'sms',
-                children: (0, n.jsx)(d.Z, {
-                    ...v,
-                    isSlideReady: 'sms' === E
+                children: (0, l.jsx)(d.Z, {
+                    ...b,
+                    isSlideReady: 'sms' === p
                 })
             }),
-            (0, n.jsx)(i.Slide, {
+            (0, l.jsx)(s.Slide, {
                 id: 'backup',
-                children: (0, n.jsx)(r.Z, {
-                    ...v,
-                    isSlideReady: 'backup' === E
+                children: (0, l.jsx)(r.Z, {
+                    ...b,
+                    isSlideReady: 'backup' === p
                 })
             }),
-            (0, n.jsx)(i.Slide, {
+            (0, l.jsx)(s.Slide, {
                 id: 'password',
-                children: (0, n.jsx)(o.Z, {
-                    ...v,
-                    isSlideReady: 'password' === E
+                children: (0, l.jsx)(o.Z, {
+                    ...b,
+                    isSlideReady: 'password' === p
                 })
             })
         ]
     });
 }
 function m(e) {
-    let { mfaChallenge: t, finish: s, transitionState: l, onClose: r } = e;
-    return (0, n.jsx)(i.ModalRoot, {
-        transitionState: l,
-        size: i.ModalSize.SMALL,
-        'aria-label': h.Z.Messages.MFA_V2_HEADER,
-        children: (0, n.jsx)(f, {
+    let { mfaChallenge: t, finish: n, transitionState: i, onClose: r } = e;
+    return (0, l.jsx)(s.ModalRoot, {
+        transitionState: i,
+        size: s.ModalSize.SMALL,
+        'aria-label': h.intl.string(h.t.saHocH),
+        children: (0, l.jsx)(f, {
             mfaChallenge: t,
-            mfaFinish: s,
+            mfaFinish: n,
             onClose: r,
             onEarlyClose: r
         })
     });
 }
-function S(e, t, s) {
-    (0, i.openModal)(
-        (s) =>
-            (0, n.jsx)(m, {
+function g(e, t, n) {
+    (0, s.openModal)(
+        (n) =>
+            (0, l.jsx)(m, {
                 finish: t,
                 mfaChallenge: e,
-                ...s
+                ...n
             }),
         {
             onCloseCallback: () => {
-                s(Error(h.Z.Messages.MFA_V2_CANCELED));
+                n(Error(h.intl.string(h.t.N2yb9f)));
             }
         }
     );

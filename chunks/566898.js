@@ -1,21 +1,21 @@
 n.d(t, {
     M9: function () {
-        return g;
+        return x;
     },
     Pb: function () {
-        return E;
+        return C;
     },
     XX: function () {
-        return _;
+        return f;
     },
     ZP: function () {
-        return C;
+        return v;
     },
     ZT: function () {
         return h;
     },
     iv: function () {
-        return f;
+        return g;
     },
     pk: function () {
         return p;
@@ -23,10 +23,10 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    a = n.n(s),
-    l = n(392711),
+var l = n(120356),
     r = n.n(l),
+    a = n(392711),
+    s = n.n(a),
     o = n(481060),
     c = n(668327);
 function u(e) {
@@ -39,21 +39,21 @@ function d() {
     });
 }
 function h(e) {
-    let { width: t, opacity: n, className: s } = e;
+    let { width: t, opacity: n, className: l } = e;
     return (0, i.jsx)('div', {
-        className: a()(s, { [c.blob]: !0 }),
+        className: r()(l, { [c.blob]: !0 }),
         style: {
             width: u(t),
-            opacity: null != n ? n : r().random(0.02, 0.08)
+            opacity: null != n ? n : s().random(0.02, 0.08)
         }
     });
 }
 function m(e) {
     let t,
-        { groupStart: n = !1, compact: s = !1, attachmentSpecs: l, usernameWidth: u, usernameOpacity: m, className: p, style: _ } = e,
-        f = s ? 50 : r().random(40, 50);
+        { groupStart: n = !1, compact: l = !1, attachmentSpecs: a, usernameWidth: u, usernameOpacity: m, className: p, style: f } = e,
+        g = l ? 50 : s().random(40, 50);
     return (
-        !s && n
+        !l && n
             ? (t = (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsx)(d, {}),
@@ -67,13 +67,13 @@ function m(e) {
                       })
                   ]
               }))
-            : s &&
+            : l &&
               (t = (0, i.jsxs)(i.Fragment, {
                   children: [
-                      s &&
+                      l &&
                           (0, i.jsx)(h, {
-                              width: f,
-                              className: a()({
+                              width: g,
+                              className: r()({
                                   [c.compactTimestamp]: !0,
                                   [c.hidden]: !n
                               })
@@ -89,12 +89,12 @@ function m(e) {
               })),
         (0, i.jsxs)('div', {
             'aria-hidden': !0,
-            className: a()(p, {
+            className: r()(p, {
                 [c.wrapper]: !0,
-                [c.compact]: s,
-                [c.cozy]: !s
+                [c.compact]: l,
+                [c.cozy]: !l
             }),
-            style: _,
+            style: f,
             children: [
                 (0, i.jsxs)('div', {
                     className: c.contents,
@@ -102,9 +102,9 @@ function m(e) {
                         t,
                         (0, i.jsx)('div', {
                             className: c.content,
-                            children: Array(r().random(3, 8))
+                            children: Array(s().random(3, 8))
                                 .fill(null)
-                                .map(() => r().random(30, 80))
+                                .map(() => s().random(30, 80))
                                 .map((e, t) =>
                                     (0, i.jsx)(
                                         h,
@@ -118,14 +118,14 @@ function m(e) {
                         })
                     ]
                 }),
-                null != l &&
+                null != a &&
                     (0, i.jsx)('div', {
                         className: c.attachmentContainer,
                         children: (0, i.jsx)('div', {
                             className: c.attachment,
                             style: {
                                 opacity: 0.03,
-                                ...l
+                                ...a
                             }
                         })
                     })
@@ -134,15 +134,15 @@ function m(e) {
     );
 }
 let p = 44,
-    _ = 22,
-    f = 26,
-    E = 26,
-    g = 6;
-function C(e) {
-    let { messages: t, groupSpacing: n = 0, compact: s = !1, attachmentSpecs: a, className: l } = e,
-        o = null != a ? (a.last ? t - 1 : r().random(0, t - 1)) : -1,
-        c = r().random(80, 120),
-        d = r().random(0.1, 0.2);
+    f = 22,
+    g = 26,
+    C = 26,
+    x = 6;
+function v(e) {
+    let { messages: t, groupSpacing: n = 0, compact: l = !1, attachmentSpecs: r, className: a } = e,
+        o = null != r ? (r.last ? t - 1 : s().random(0, t - 1)) : -1,
+        c = s().random(80, 120),
+        d = s().random(0.1, 0.2);
     return (0, i.jsx)(i.Fragment, {
         children: Array(t)
             .fill(null)
@@ -150,12 +150,12 @@ function C(e) {
                 (0, i.jsx)(
                     m,
                     {
-                        compact: s,
-                        className: l,
+                        compact: l,
+                        className: a,
                         usernameWidth: c,
                         usernameOpacity: d,
                         groupStart: 0 === t,
-                        attachmentSpecs: t === o ? a : void 0,
+                        attachmentSpecs: t === o ? r : void 0,
                         style: 0 === t ? { marginTop: u(n) } : void 0
                     },
                     t

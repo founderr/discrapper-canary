@@ -1,65 +1,65 @@
 var i = n(200651),
-    a = n(192379),
-    s = n(481060),
-    r = n(783097),
-    l = n(924489),
+    r = n(192379),
+    l = n(481060),
+    a = n(783097),
+    s = n(924489),
     o = n(824606),
     c = n(66637),
     d = n(768581),
     u = n(956965),
-    _ = n(689938),
-    E = n(923592);
-let h = 28;
+    h = n(388032),
+    m = n(923592);
+let p = 28;
 t.Z = function (e) {
-    var t, n, m, I, p;
-    let { application: g, onSelectApplication: T, showCategory: S = !1 } = e,
-        C = (0, o.Z)({ application: g }),
-        f = null === (t = g.categories) || void 0 === t ? void 0 : t[0],
-        N = (0, r.lf)(g),
-        A = a.useCallback(() => {
-            T(g.id);
-        }, [T, g.id]),
-        v = a.useMemo(
+    var t, n, g, f, _;
+    let { application: E, onSelectApplication: I, showCategory: C = !1 } = e,
+        v = (0, o.Z)({ application: E }),
+        S = null === (t = E.categories) || void 0 === t ? void 0 : t[0],
+        N = (0, a.lf)(E),
+        T = r.useCallback(() => {
+            I(E.id);
+        }, [I, E.id]),
+        x = r.useMemo(
             () =>
                 d.ZP.getApplicationIconURL({
-                    id: g.id,
-                    icon: g.icon,
+                    id: E.id,
+                    icon: E.icon,
                     size: 48
                 }),
-            [g]
+            [E]
         ),
-        Z = (null !== (I = null === (n = g.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== I ? I : 0) > 0 || C.length > 0,
-        L = (0, i.jsx)(l.Z, {
-            application: g,
+        b = (null !== (f = null === (n = E.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== f ? f : 0) > 0 || v.length > 0,
+        A = (0, i.jsx)(s.Z, {
+            application: E,
             textVariant: 'text-xs/medium',
-            mutualGuilds: C,
+            mutualGuilds: v,
             mutualGuildShownMax: 3,
-            guildIconSize: l.x.SMALL,
+            guildIconSize: s.x.SMALL,
             compact: !0
         }),
-        R = S && null != f;
+        Z = C && null != S;
     return (0, i.jsx)('div', {
-        className: E.container,
+        className: m.container,
         children: (0, i.jsxs)(c.Z, {
-            className: E.card,
-            onClick: A,
+            className: m.card,
+            onClick: T,
             onContextMenu: () => {},
             children: [
                 (0, i.jsxs)('div', {
-                    className: E.header,
+                    className: m.header,
                     children: [
                         (0, i.jsx)(u.Z, {
-                            application: g,
+                            application: E,
                             bannerType: 'card',
-                            iconURL: v
+                            iconURL: x
                         }),
                         (0, i.jsx)('div', {
-                            className: E.avatarContainer,
-                            style: { height: h },
+                            className: m.avatarContainer,
+                            style: { height: p },
                             children: (0, i.jsx)('img', {
-                                src: v,
+                                src: x,
                                 alt: '',
-                                className: E.avatar,
+                                className: m.avatar,
                                 height: 48,
                                 width: 48,
                                 style: {
@@ -71,60 +71,60 @@ t.Z = function (e) {
                     ]
                 }),
                 (0, i.jsxs)('div', {
-                    className: E.appDetails,
+                    className: m.appDetails,
                     children: [
                         (0, i.jsx)('div', {
-                            className: E.titleContainer,
+                            className: m.titleContainer,
                             children: (0, i.jsx)('div', {
-                                className: E.title,
-                                children: (0, i.jsx)(s.Heading, {
+                                className: m.title,
+                                children: (0, i.jsx)(l.Heading, {
                                     variant: 'heading-md/semibold',
                                     color: 'header-primary',
-                                    className: E.appName,
-                                    children: g.name
+                                    className: m.appName,
+                                    children: E.name
                                 })
                             })
                         }),
-                        R || N
+                        Z || N
                             ? (0, i.jsxs)('div', {
-                                  className: E.infoContainer,
+                                  className: m.infoContainer,
                                   children: [
-                                      R
-                                          ? (0, i.jsx)(s.Text, {
-                                                className: E.appCategory,
+                                      Z
+                                          ? (0, i.jsx)(l.Text, {
+                                                className: m.appCategory,
                                                 variant: 'text-xs/medium',
                                                 color: 'text-normal',
-                                                children: f.name
+                                                children: S.name
                                             })
                                           : null,
-                                      R && N
-                                          ? (0, i.jsx)(s.Text, {
+                                      Z && N
+                                          ? (0, i.jsx)(l.Text, {
                                                 variant: 'text-xs/medium',
                                                 color: 'text-secondary',
                                                 children: '\u2022'
                                             })
                                           : null,
                                       N
-                                          ? (0, i.jsx)(s.Text, {
+                                          ? (0, i.jsx)(l.Text, {
                                                 variant: 'text-xs/medium',
                                                 color: 'text-secondary',
-                                                children: _.Z.Messages.APP_LAUNCHER_PROMOTED
+                                                children: h.intl.string(h.t['/eVltr'])
                                             })
                                           : null
                                   ]
                               })
                             : null,
-                        (0, i.jsx)(s.Text, {
-                            className: E.description,
+                        (0, i.jsx)(l.Text, {
+                            className: m.description,
                             variant: 'text-sm/medium',
                             color: 'header-secondary',
-                            lineClamp: R || N ? 2 : 3,
-                            children: null !== (p = null === (m = g.directory_entry) || void 0 === m ? void 0 : m.short_description) && void 0 !== p ? p : g.description
+                            lineClamp: Z || N ? 2 : 3,
+                            children: null !== (_ = null === (g = E.directory_entry) || void 0 === g ? void 0 : g.short_description) && void 0 !== _ ? _ : E.description
                         }),
-                        Z
+                        b
                             ? (0, i.jsx)('div', {
-                                  className: E.memberDetails,
-                                  children: L
+                                  className: m.memberDetails,
+                                  children: A
                               })
                             : null
                     ]

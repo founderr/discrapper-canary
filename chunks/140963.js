@@ -8,11 +8,11 @@ var r = n(200651),
     u = n(555573),
     c = n(998698),
     d = n(459273),
-    _ = n(358085),
-    E = n(62883),
-    f = n(752305),
-    h = n(981631);
-function p(e, t, n) {
+    f = n(358085),
+    _ = n(62883),
+    h = n(752305),
+    p = n(981631);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,8 +25,8 @@ function p(e, t, n) {
         e
     );
 }
-let I = /(\t|\s)/;
-class m extends i.PureComponent {
+let g = /(\t|\s)/;
+class E extends i.PureComponent {
     componentDidMount() {
         !this.props.disableAutoFocus &&
             (Promise.resolve().then(() => {
@@ -60,7 +60,7 @@ class m extends i.PureComponent {
             };
         let n = e.selectionStart,
             r = e.selectionEnd;
-        for (; n > 0 && !I.test(t[n - 1]); ) {
+        for (; n > 0 && !g.test(t[n - 1]); ) {
             n--;
         }
         return {
@@ -100,7 +100,7 @@ class m extends i.PureComponent {
         r && (e += ' ');
         let i = t + e + n,
             { onChange: a } = this.props;
-        null == a || a(null, i, (0, f.JM)(i));
+        null == a || a(null, i, (0, h.JM)(i));
         let s = t.length + e.length;
         this.setState({ nextSelection: s }, () => {
             this.props.maybeShowAutocomplete();
@@ -113,16 +113,16 @@ class m extends i.PureComponent {
         return null != t && t.length > 0 && t.length % 2 != 0;
     }
     render() {
-        let { value: e, disabled: t, placeholder: n, required: i, onResize: a, className: l, id: u, submitting: c, textAreaPaddingClassName: _, spellcheckEnabled: E, 'aria-controls': f, 'aria-expanded': p, 'aria-activedescendant': I } = this.props;
+        let { value: e, disabled: t, placeholder: n, required: i, onResize: a, className: l, id: u, submitting: c, textAreaPaddingClassName: f, spellcheckEnabled: _, 'aria-controls': h, 'aria-expanded': m, 'aria-activedescendant': g } = this.props;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(d.d9, {
-                    event: h.CkL.GLOBAL_CLIPBOARD_PASTE,
+                    event: p.CkL.GLOBAL_CLIPBOARD_PASTE,
                     handler: this.handleGlobalPaste
                 }),
                 (0, r.jsx)(o.TextAreaAutosize, {
                     ref: this.handleSetRef,
-                    className: s()(l, _),
+                    className: s()(l, f),
                     id: u,
                     rows: 1,
                     fontWidthEstimate: 6,
@@ -141,10 +141,10 @@ class m extends i.PureComponent {
                     onContextMenu: this.handleContextMenu,
                     value: t ? '' : e,
                     tabIndex: 0,
-                    spellCheck: E,
-                    'aria-controls': f,
-                    'aria-expanded': p,
-                    'aria-activedescendant': I,
+                    spellCheck: _,
+                    'aria-controls': h,
+                    'aria-expanded': m,
+                    'aria-activedescendant': g,
                     'aria-haspopup': 'listbox',
                     'aria-autocomplete': 'list',
                     'aria-multiline': !0
@@ -153,7 +153,7 @@ class m extends i.PureComponent {
         });
     }
     handleTabOrEnterDown(e) {
-        e.which === h.yXg.TAB && this.props.onTab() ? (e.preventDefault(), e.stopPropagation()) : e.which === h.yXg.ENTER && this.props.onEnter(e) ? (e.preventDefault(), e.stopPropagation()) : e.which === h.yXg.ESCAPE ? (e.preventDefault(), e.stopPropagation(), this.props.hideAutocomplete()) : e.which === h.yXg.TAB && this.hasOpenCodeBlock() && (e.preventDefault(), e.stopPropagation(), this.insertText('\t', void 0, !1));
+        e.which === p.yXg.TAB && this.props.onTab() ? (e.preventDefault(), e.stopPropagation()) : e.which === p.yXg.ENTER && this.props.onEnter(e) ? (e.preventDefault(), e.stopPropagation()) : e.which === p.yXg.ESCAPE ? (e.preventDefault(), e.stopPropagation(), this.props.hideAutocomplete()) : e.which === p.yXg.TAB && this.hasOpenCodeBlock() && (e.preventDefault(), e.stopPropagation(), this.insertText('\t', void 0, !1));
     }
     insertEmoji(e, t) {
         this.insertText(''.concat(':').concat(e.name).concat(':'), void 0, t);
@@ -163,65 +163,65 @@ class m extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            p(this, '_ref', void 0),
-            p(this, 'state', { nextSelection: -1 }),
-            p(this, 'focus', () => {
+            m(this, '_ref', void 0),
+            m(this, 'state', { nextSelection: -1 }),
+            m(this, 'focus', () => {
                 let { _ref: e } = this;
                 null != e && e.focus();
             }),
-            p(this, 'handleSetRef', (e) => {
+            m(this, 'handleSetRef', (e) => {
                 this._ref = e;
             }),
-            p(this, 'handleKeyPress', (e) => {
-                if (e.which === h.yXg.ENTER) {
+            m(this, 'handleKeyPress', (e) => {
+                if (e.which === p.yXg.ENTER) {
                     if (!e.shiftKey && !this.hasOpenCodeBlock() && (!this.props.disableEnterToSubmit || e.ctrlKey)) return e.preventDefault(), this.props.onSubmit(this.props.value);
                 }
             }),
-            p(this, 'handleKeyDown', (e) => {
+            m(this, 'handleKeyDown', (e) => {
                 switch (e.which) {
-                    case h.yXg.ARROW_DOWN:
+                    case p.yXg.ARROW_DOWN:
                         this.props.moveSelection(1) && e.preventDefault();
                         break;
-                    case h.yXg.N:
+                    case p.yXg.N:
                         e.ctrlKey && this.props.moveSelection(1) && e.preventDefault();
                         break;
-                    case h.yXg.ARROW_UP:
+                    case p.yXg.ARROW_UP:
                         this.props.moveSelection(-1) && e.preventDefault();
                         break;
-                    case h.yXg.P:
+                    case p.yXg.P:
                         e.ctrlKey && this.props.moveSelection(-1) && e.preventDefault();
                         break;
-                    case h.yXg.TAB:
-                    case h.yXg.ENTER:
+                    case p.yXg.TAB:
+                    case p.yXg.ENTER:
                         this.handleTabOrEnterDown(e);
                 }
                 let { onKeyDown: t } = this.props;
                 null == t || t(e);
             }),
-            p(this, 'handleKeyUp', (e) => {
+            m(this, 'handleKeyUp', (e) => {
                 switch (e.which) {
-                    case h.yXg.ARROW_RIGHT:
-                    case h.yXg.ARROW_LEFT:
-                    case h.yXg.HOME:
-                    case h.yXg.END:
+                    case p.yXg.ARROW_RIGHT:
+                    case p.yXg.ARROW_LEFT:
+                    case p.yXg.HOME:
+                    case p.yXg.END:
                         this.props.maybeShowAutocomplete();
                 }
                 let { onKeyUp: t } = this.props;
                 null == t || t(e);
             }),
-            p(this, 'handleGlobalPaste', (e) => {
+            m(this, 'handleGlobalPaste', (e) => {
                 let { event: t } = e;
                 !this.handlePaste(t) && this.focus();
             }),
-            p(this, 'handlePaste', (e) => {
+            m(this, 'handlePaste', (e) => {
                 let t = this.props.onPaste(e);
                 return t && e.preventDefault(), t;
             }),
-            p(this, 'handleClick', () => {
+            m(this, 'handleClick', () => {
                 this.props.maybeShowAutocomplete();
             }),
-            p(this, 'handleContextMenu', (e) => {
-                _.isPlatformEmbedded &&
+            m(this, 'handleContextMenu', (e) => {
+                f.isPlatformEmbedded &&
                     (0, l.jW)(
                         e,
                         async () => {
@@ -230,7 +230,7 @@ class m extends i.PureComponent {
                                 (0, r.jsx)(e, {
                                     ...t,
                                     isChannelTextArea: !0,
-                                    text: (0, E.getSelectionText)()
+                                    text: (0, _.getSelectionText)()
                                 });
                         },
                         {
@@ -239,12 +239,12 @@ class m extends i.PureComponent {
                         }
                     );
             }),
-            p(this, 'handleOnChange', (e) => {
+            m(this, 'handleOnChange', (e) => {
                 let { onChange: t, allowNewLines: n } = this.props,
                     r = e.currentTarget.value,
                     i = n ? r : r.replace('\n', '');
-                null == t || t(e, i, (0, f.JM)(i));
+                null == t || t(e, i, (0, h.JM)(i));
             });
     }
 }
-t.Z = m;
+t.Z = E;

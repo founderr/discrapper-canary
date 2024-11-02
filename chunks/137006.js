@@ -1,22 +1,22 @@
 n.d(t, {
     m: function () {
-        return s;
+        return l;
     }
 }),
     n(47120);
 var i = n(243814),
-    a = n(103964);
-let s = {
-        [a.Q5.INITIATE_IMAGE_UPLOAD]: {
+    r = n(103964);
+let l = {
+        [r.Q5.INITIATE_IMAGE_UPLOAD]: {
             request: void 0,
             response: (e) => e.object({ image_url: e.string().required() })
         },
-        [a.Q5.OPEN_SHARE_MOMENT_DIALOG]: {
+        [r.Q5.OPEN_SHARE_MOMENT_DIALOG]: {
             response: void 0,
-            request: (e) => (0, a.C5)(e.object({ mediaUrl: e.string().required().max(1024) }))
+            request: (e) => (0, r.C5)(e.object({ mediaUrl: e.string().required().max(1024) }))
         },
-        [a.Q5.AUTHENTICATE]: {
-            request: (e) => (0, a.C5)(e.object({ access_token: e.string().allow(null).optional() })),
+        [r.Q5.AUTHENTICATE]: {
+            request: (e) => (0, r.C5)(e.object({ access_token: e.string().allow(null).optional() })),
             response: (e) =>
                 e.object({
                     access_token: e.string().required(),
@@ -32,7 +32,7 @@ let s = {
                         .required(),
                     scopes: e
                         .array()
-                        .items(e.string().valid(...(0, a.no)(i.x)))
+                        .items(e.string().valid(...(0, r.no)(i.x)))
                         .required(),
                     expires: e.string().required(),
                     application: e
@@ -46,7 +46,7 @@ let s = {
                         .required()
                 })
         },
-        [a.Q5.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: {
+        [r.Q5.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: {
             request: void 0,
             response: (e) =>
                 e
@@ -54,7 +54,7 @@ let s = {
                         participants: e
                             .array()
                             .items(
-                                r(e)
+                                a(e)
                                     .keys({ nickname: e.string().description('Server nickname. Not unique.') })
                                     .required()
                             )
@@ -63,7 +63,7 @@ let s = {
                     .required()
         }
     },
-    r = (e) =>
+    a = (e) =>
         e
             .object({
                 id: e.string().required().description('User ID'),

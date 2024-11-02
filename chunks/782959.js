@@ -1,49 +1,49 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return m;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(367907),
-    r = n(70097),
-    l = n(970731),
+var r = n(481060),
+    l = n(367907),
+    a = n(70097),
+    s = n(970731),
     o = n(626135),
     c = n(63063),
     d = n(981631),
-    u = n(689938),
-    _ = n(893225);
-function E(e) {
-    let { guildId: t, markAsDismissed: E } = e,
-        h = (0, i.jsxs)(i.Fragment, {
+    u = n(388032),
+    h = n(893225);
+function m(e) {
+    let { guildId: t, markAsDismissed: m } = e,
+        p = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(a.Text, {
+                (0, i.jsx)(r.Text, {
                     color: 'always-white',
                     variant: 'text-sm/normal',
-                    className: _.upsellBody,
-                    children: u.Z.Messages.MEDIA_CHANNEL_UPSELL_BODY
+                    className: h.upsellBody,
+                    children: u.intl.string(u.t['yQ0X+f'])
                 }),
-                (0, i.jsx)(a.Text, {
+                (0, i.jsx)(r.Text, {
                     color: 'always-white',
                     variant: 'text-sm/normal',
-                    children: u.Z.Messages.MEDIA_CHANNEL_LEARN_MORE.format({ hcArticleUrl: c.Z.getCreatorSupportArticleURL(d.BhN.MEDIA_CHANNEL) })
+                    children: u.intl.format(u.t['2Sapx8'], { hcArticleUrl: c.Z.getCreatorSupportArticleURL(d.BhN.MEDIA_CHANNEL) })
                 })
             ]
         });
-    return (0, i.jsx)(l.ZP, {
-        header: u.Z.Messages.MEDIA_CHANNEL_UPSELL_TITLE,
-        content: h,
-        asset: (0, i.jsx)(r.Z, {
-            className: _.video,
+    return (0, i.jsx)(s.ZP, {
+        header: u.intl.string(u.t.fW7UqK),
+        content: p,
+        asset: (0, i.jsx)(a.Z, {
+            className: h.video,
             src: 'https://cdn.discordapp.com/assets/media_channel/media_channel_upsell_demo.mp4',
             autoPlay: !0,
             loop: !0
         }),
-        buttonCTA: u.Z.Messages.MEDIA_CHANNEL_UPSELL_CREATE_NOW_CTA,
+        buttonCTA: u.intl.string(u.t.JzJpg4),
         onClick: () => {
-            o.default.track(d.rMx.MEDIA_CHANNEL_UPSELL_CLICKED, { ...(0, s.hH)(t) }),
-                (0, a.openModalLazy)(async () => {
+            o.default.track(d.rMx.MEDIA_CHANNEL_UPSELL_CLICKED, { ...(0, l.hH)(t) }),
+                (0, r.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([n.e('45094'), n.e('5324')]).then(n.bind(n, 218613));
                     return (n) =>
                         (0, i.jsx)(e, {
@@ -53,7 +53,7 @@ function E(e) {
                         });
                 });
         },
-        secondaryButtonCTA: u.Z.Messages.DISMISS,
-        markAsDismissed: E
+        secondaryButtonCTA: u.intl.string(u.t.WAI6xs),
+        markAsDismissed: m
     });
 }

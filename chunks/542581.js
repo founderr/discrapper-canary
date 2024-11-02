@@ -1,58 +1,58 @@
 n(47120);
 var a = n(200651),
-    s = n(192379),
+    i = n(192379),
     r = n(120356),
     l = n.n(r),
-    i = n(100621),
+    s = n(100621),
     o = n(481060),
     c = n(787014),
     d = n(454585),
     u = n(456269),
     m = n(470623),
     h = n(981631),
-    _ = n(689938),
-    g = n(820634),
-    x = n(554034);
-t.Z = s.memo(function (e) {
+    g = n(388032),
+    x = n(820634),
+    f = n(554034);
+t.Z = i.memo(function (e) {
     let { channel: t, onChange: r } = e,
-        C = (0, m.AF)(),
-        { guidelinesOpen: f } = (0, m.xH)((e) => {
+        p = (0, m.AF)(),
+        { guidelinesOpen: C } = (0, m.xH)((e) => {
             let { guidelinesOpen: t } = e;
             return { guidelinesOpen: t };
         }),
-        p = (0, u.r_)(t),
-        [T, I] = s.useState(!1),
-        E = s.useCallback(
+        v = (0, u.r_)(t),
+        [b, j] = i.useState(!1),
+        _ = i.useCallback(
             (e) => {
                 if (null == e) return;
                 let t = e.clientHeight >= 220;
-                t !== T && I(t);
+                t !== b && j(t);
             },
-            [T]
+            [b]
         );
-    s.useLayoutEffect(() => {
+    i.useLayoutEffect(() => {
         setTimeout(r, 350);
-    }, [f, r]);
-    let [N, b] = s.useState(!f),
-        v = (0, o.useSpring)({
-            opacity: f ? 1 : 0,
-            maxHeight: f ? 500 : 0,
+    }, [C, r]);
+    let [I, T] = i.useState(!C),
+        N = (0, o.useSpring)({
+            opacity: C ? 1 : 0,
+            maxHeight: C ? 500 : 0,
             config: { duration: 300 },
-            onRest: () => b(!f)
+            onRest: () => T(!C)
         });
     return null != t.topic && t.topic.length > 0
-        ? (0, a.jsx)(i.animated.div, {
-              style: v,
-              className: N ? g.hiddenVisually : void 0,
+        ? (0, a.jsx)(s.animated.div, {
+              style: N,
+              className: I ? x.hiddenVisually : void 0,
               children: (0, a.jsxs)('div', {
-                  className: g.container,
+                  className: x.container,
                   children: [
                       (0, a.jsxs)('div', {
-                          className: g.headerContainer,
+                          className: x.headerContainer,
                           children: [
                               (0, a.jsxs)(o.Heading, {
                                   variant: 'heading-lg/semibold',
-                                  className: g.guidelinesHeader,
+                                  className: x.guidelinesHeader,
                                   children: [
                                       (0, a.jsx)(o.BookCheckIcon, {
                                           size: 'custom',
@@ -60,14 +60,14 @@ t.Z = s.memo(function (e) {
                                           width: 20,
                                           height: 20
                                       }),
-                                      _.Z.Messages.FORUM_POST_GUIDELINES_TITLE,
-                                      p &&
+                                      g.intl.string(g.t['4d4T4u']),
+                                      v &&
                                           (0, a.jsx)(o.Clickable, {
                                               onClick: () => {
                                                   c.ZP.open(t.id, void 0, h.ZfP.TOPIC);
                                               },
                                               tag: 'span',
-                                              className: g.clickable,
+                                              className: x.clickable,
                                               children: (0, a.jsx)(o.PencilIcon, {
                                                   size: 'xs',
                                                   color: 'currentColor'
@@ -76,10 +76,10 @@ t.Z = s.memo(function (e) {
                                   ]
                               }),
                               (0, a.jsx)(o.Clickable, {
-                                  'aria-label': _.Z.Messages.CLOSE,
-                                  className: g.clickable,
+                                  'aria-label': g.intl.string(g.t.cpT0Cg),
+                                  className: x.clickable,
                                   onClick: () => {
-                                      C.getState().setGuidelinesOpen(!1);
+                                      p.getState().setGuidelinesOpen(!1);
                                   },
                                   children: (0, a.jsx)(o.XSmallIcon, {
                                       size: 'xs',
@@ -89,16 +89,16 @@ t.Z = s.memo(function (e) {
                           ]
                       }),
                       (0, a.jsxs)('div', {
-                          className: g.descriptionContainer,
+                          className: x.descriptionContainer,
                           children: [
                               (0, a.jsx)(o.Text, {
                                   selectable: !0,
                                   variant: 'text-sm/normal',
                                   color: 'header-secondary',
                                   style: { maxHeight: 220 },
-                                  className: l()(g.guidelines, x.markup),
+                                  className: l()(x.guidelines, f.markup),
                                   children: (0, a.jsx)('div', {
-                                      ref: E,
+                                      ref: _,
                                       children: d.Z.parseForumPostGuidelines(t.topic, !0, {
                                           channelId: t.id,
                                           allowHeading: !0,
@@ -106,15 +106,15 @@ t.Z = s.memo(function (e) {
                                       })
                                   })
                               }),
-                              T &&
+                              b &&
                                   (0, a.jsxs)('div', {
-                                      className: g.showMore,
+                                      className: x.showMore,
                                       children: [
-                                          (0, a.jsx)('div', { className: g.gradient }),
+                                          (0, a.jsx)('div', { className: x.gradient }),
                                           (0, a.jsx)('div', {
-                                              className: g.linkContainer,
+                                              className: x.linkContainer,
                                               children: (0, a.jsx)(o.Clickable, {
-                                                  className: g.showMoreLink,
+                                                  className: x.showMoreLink,
                                                   onClick: () => {
                                                       (0, o.openModalLazy)(async () => {
                                                           let { default: e } = await n.e('78712').then(n.bind(n, 223164));
@@ -128,13 +128,13 @@ t.Z = s.memo(function (e) {
                                                   children: (0, a.jsxs)(o.Text, {
                                                       variant: 'text-sm/semibold',
                                                       color: 'text-brand',
-                                                      className: g.showMoreText,
+                                                      className: x.showMoreText,
                                                       children: [
-                                                          _.Z.Messages.FORUM_CHANNEL_TOPIC_VIEW_ALL,
+                                                          g.intl.string(g.t.Vu7odH),
                                                           (0, a.jsx)(o.MaximizeIcon, {
                                                               size: 'xs',
                                                               color: 'currentColor',
-                                                              className: g.showMoreIcon
+                                                              className: x.showMoreIcon
                                                           })
                                                       ]
                                                   })

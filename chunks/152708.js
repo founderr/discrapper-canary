@@ -1,7 +1,7 @@
 var l,
-    s,
     i,
-    r = n(200651),
+    r,
+    s = n(200651),
     a = n(192379),
     o = n(120356),
     c = n.n(o),
@@ -20,8 +20,8 @@ function f(e, t, n) {
         e
     );
 }
-((l = s || (s = {})).WRAP = 'wrap'), (l.STACK = 'stack');
-class h extends (i = a.PureComponent) {
+((l = i || (i = {})).WRAP = 'wrap'), (l.STACK = 'stack');
+class h extends (r = a.PureComponent) {
     renderChildren() {
         let e;
         let { children: t, layout: n, columns: l } = this.props;
@@ -33,7 +33,7 @@ class h extends (i = a.PureComponent) {
                 e = ''.concat((1 / l) * 100, '%');
         }
         return t.map((t, n) =>
-            (0, r.jsx)(
+            (0, s.jsx)(
                 d.Z.Child,
                 {
                     className: u.tile,
@@ -47,14 +47,14 @@ class h extends (i = a.PureComponent) {
     }
     render() {
         let { className: e } = this.props;
-        return (0, r.jsx)(d.Z, {
+        return (0, s.jsx)(d.Z, {
             className: c()(e, u.grid),
             wrap: d.Z.Wrap.WRAP,
             children: this.renderChildren()
         });
     }
 }
-f(h, 'Layout', s),
+f(h, 'Layout', i),
     f(h, 'defaultProps', {
         children: [],
         layout: 'wrap',

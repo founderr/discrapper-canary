@@ -1,34 +1,34 @@
 var i,
-    a,
-    s,
     r,
-    l = n(442837),
-    o = n(570140),
+    l,
+    a,
+    o = n(442837),
+    s = n(570140),
     c = n(70956),
     u = n(709054),
     d = n(314897),
-    _ = n(699516);
-let E = 180 * c.Z.Millis.DAY,
-    I = !1;
-class m extends (r = l.ZP.Store) {
+    m = n(699516);
+let f = 180 * c.Z.Millis.DAY,
+    h = !1;
+class p extends (a = o.ZP.Store) {
     initialize() {
-        this.waitFor(_.Z, d.default);
+        this.waitFor(m.Z, d.default);
     }
     isEligible() {
-        return I;
+        return h;
     }
 }
-(s = 'PremiumPromoStore'),
-    (a = 'displayName') in (i = m)
-        ? Object.defineProperty(i, a, {
-              value: s,
+(l = 'PremiumPromoStore'),
+    (r = 'displayName') in (i = p)
+        ? Object.defineProperty(i, r, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[a] = s),
-    (t.Z = new m(o.Z, {
+        : (i[r] = l),
+    (t.Z = new p(s.Z, {
         CONNECTION_OPEN: function () {
-            return I !== (I = _.Z.getFriendIDs().length >= 10 && u.default.extractTimestamp(d.default.getId()) < Date.now() - E);
+            return h !== (h = m.Z.getFriendIDs().length >= 10 && u.default.extractTimestamp(d.default.getId()) < Date.now() - f);
         }
     }));

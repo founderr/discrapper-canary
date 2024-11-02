@@ -1,21 +1,21 @@
-i.d(n, {
+t.d(e, {
     Z: function () {
         return o;
     }
 });
-var t = i(200651);
-i(192379);
-var l = i(481060),
-    s = i(726521),
-    a = i(427679),
-    u = i(689938);
-function o(e) {
-    let n = a.Z.isLive(e.id);
-    return e.isGuildStageVoice() && n
-        ? (0, t.jsx)(l.MenuItem, {
+var i = t(200651);
+t(192379);
+var l = t(481060),
+    r = t(726521),
+    u = t(427679),
+    a = t(388032);
+function o(n) {
+    let e = u.Z.isLive(n.id);
+    return n.isGuildStageVoice() && e
+        ? (0, i.jsx)(l.MenuItem, {
               id: 'report-stage',
-              label: u.Z.Messages.REPORT_MODAL_REPORT_STAGE_MENU_ITEM,
-              action: () => (0, s.ic)(e),
+              label: a.intl.string(a.t.JGj6Cg),
+              action: () => (0, r.ic)(n),
               icon: l.FlagIcon,
               color: 'danger'
           })

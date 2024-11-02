@@ -13,25 +13,25 @@ var r,
 let u = { enabled: !1 },
     c = [],
     d = {},
-    _ = new Set(),
-    E = {};
-function f(e) {
+    f = new Set(),
+    _ = {};
+function h(e) {
     var t;
     let n = null === (t = d[e]) || void 0 === t ? void 0 : t.newMemberActions;
-    return null == n ? null : ((E[e] = n), E[e]);
+    return null == n ? null : ((_[e] = n), _[e]);
 }
-function h(e) {
+function p(e) {
     let { homeSettings: t, guildId: n } = e;
-    null != n && (null == t && (d[n] = u), (d[n] = t), f(n), _.delete(n));
+    null != n && (null == t && (d[n] = u), (d[n] = t), h(n), f.delete(n));
 }
-class p extends (r = o.ZP.Store) {
+class m extends (r = o.ZP.Store) {
     getSettings(e) {
         var t;
         return null == e ? null : null !== (t = d[e]) && void 0 !== t ? t : u;
     }
     getNewMemberActions(e) {
         var t;
-        return null == e || (null === (t = this.getSettings(e)) || void 0 === t ? void 0 : t.newMemberActions) == null ? null : null == E[e] ? f(e) : E[e];
+        return null == e || (null === (t = this.getSettings(e)) || void 0 === t ? void 0 : t.newMemberActions) == null ? null : null == _[e] ? h(e) : _[e];
     }
     getActionForChannel(e, t) {
         var n;
@@ -51,7 +51,7 @@ class p extends (r = o.ZP.Store) {
         return n === c ? null : n.find((e) => e.channelId === t);
     }
     getIsLoading(e) {
-        return null != e && _.has(e);
+        return null != e && f.has(e);
     }
     getWelcomeMessage(e) {
         var t;
@@ -70,7 +70,7 @@ class p extends (r = o.ZP.Store) {
     }
 }
 (s = 'GuildOnboardingHomeSettingsStore'),
-    (a = 'displayName') in (i = p)
+    (a = 'displayName') in (i = m)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -78,17 +78,17 @@ class p extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new p(l.Z, {
+    (t.Z = new m(l.Z, {
         GUILD_HOME_SETTINGS_FETCH_START: function (e) {
             let { guildId: t } = e;
-            _.add(t);
+            f.add(t);
         },
-        GUILD_HOME_SETTINGS_FETCH_SUCCESS: h,
+        GUILD_HOME_SETTINGS_FETCH_SUCCESS: p,
         GUILD_HOME_SETTINGS_FETCH_FAIL: function (e) {
             let { guildId: t } = e;
-            _.delete(t);
+            f.delete(t);
         },
-        GUILD_HOME_SETTINGS_UPDATE_SUCCESS: h,
+        GUILD_HOME_SETTINGS_UPDATE_SUCCESS: p,
         GUILD_HOME_SETTINGS_TOGGLE_ENABLED: function (e) {
             let { guildId: t, enabled: n } = e,
                 r = d[t];
@@ -116,6 +116,6 @@ class p extends (r = o.ZP.Store) {
         GUILD_DELETE: function (e) {
             let { guild: t } = e;
             if (null == d[t.id]) return !1;
-            delete d[t.id], delete E[t.id];
+            delete d[t.id], delete _[t.id];
         }
     }));

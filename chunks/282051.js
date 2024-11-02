@@ -4,55 +4,55 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    a = n(192379),
-    s = n(481060),
-    r = n(946314),
-    l = n(921944),
-    o = n(689938),
+    r = n(192379),
+    l = n(481060),
+    a = n(946314),
+    s = n(921944),
+    o = n(388032),
     c = n(641608);
 function d(e) {
     let { onClick: t, onSecondaryClick: n, onComponentMount: d, markAsDismissed: u } = e;
-    a.useEffect(() => {
+    r.useEffect(() => {
         null == d || d();
     }, [d]);
-    let _ = a.useCallback(
+    let h = r.useCallback(
             (e) => {
-                t(e), null == u || u(l.L.PRIMARY);
+                t(e), null == u || u(s.L.PRIMARY);
             },
             [t, u]
         ),
-        E = a.useCallback(() => {
-            null == n || n(), null == u || u(l.L.SECONDARY);
+        m = r.useCallback(() => {
+            null == n || n(), null == u || u(s.L.SECONDARY);
         }, [n, u]);
     return (0, i.jsxs)('div', {
         className: c.tooltipWrapper,
         children: [
-            (0, i.jsx)(s.Heading, {
+            (0, i.jsx)(l.Heading, {
                 className: c.tooltipHeader,
                 variant: 'heading-md/semibold',
-                children: o.Z.Messages.SERVER_DISCOVERY_TOOLTIP_TITLE
+                children: o.intl.string(o.t['5uQfvr'])
             }),
-            (0, i.jsx)(s.Text, {
+            (0, i.jsx)(l.Text, {
                 className: c.tooltipText,
                 variant: 'text-sm/normal',
-                children: o.Z.Messages.SERVER_DISCOVERY_TOOLTIP_DESCRIPTION.format({ count: r.WZ })
+                children: o.intl.format(o.t.lgcisb, { count: a.WZ })
             }),
             (0, i.jsxs)('div', {
                 className: c.buttonsContainer,
                 children: [
-                    (0, i.jsx)(s.Button, {
+                    (0, i.jsx)(l.Button, {
                         fullWidth: !0,
-                        size: s.Button.Sizes.SMALL,
-                        color: s.Button.Colors.BRAND,
-                        onClick: _,
-                        children: o.Z.Messages.LEARN_MORE
+                        size: l.Button.Sizes.SMALL,
+                        color: l.Button.Colors.BRAND,
+                        onClick: h,
+                        children: o.intl.string(o.t.hvVgAQ)
                     }),
-                    (0, i.jsx)(s.Button, {
+                    (0, i.jsx)(l.Button, {
                         fullWidth: !0,
-                        size: s.Button.Sizes.SMALL,
-                        look: s.Button.Looks.BLANK,
-                        onClick: E,
-                        children: o.Z.Messages.NO_THANKS
+                        size: l.Button.Sizes.SMALL,
+                        look: l.Button.Looks.BLANK,
+                        onClick: m,
+                        children: o.intl.string(o.t.f3Pet7)
                     })
                 ]
             })

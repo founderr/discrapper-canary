@@ -1,26 +1,26 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(739566),
-    s = n(834129),
-    r = n(689938),
-    l = n(922133);
-function o(e) {
-    let { message: t, usernameHook: o, compact: c, isForumPost: u } = e,
-        d = (0, a.ZP)(t),
-        _ = o(d);
-    return (0, i.jsx)(s.Z, {
+var r = n(739566),
+    l = n(834129),
+    a = n(388032),
+    o = n(922133);
+function s(e) {
+    let { message: t, usernameHook: s, compact: c, isForumPost: u } = e,
+        d = (0, r.ZP)(t),
+        m = s(d);
+    return (0, i.jsx)(l.Z, {
         compact: c,
-        className: l.channelNameChange,
+        className: o.channelNameChange,
         icon: n(819373),
         timestamp: t.timestamp,
-        children: (u ? r.Z.Messages.SYSTEM_MESSAGE_FORUM_POST_TITLE_CHANGE2 : r.Z.Messages.SYSTEM_MESSAGE_CHANNEL_NAME_CHANGE2).format({
+        children: a.intl.format(u ? a.t.SOQ4hI : a.t.oItgEx, {
             username: d.nick,
-            usernameHook: _,
+            usernameHook: m,
             channelName: t.content
         })
     });

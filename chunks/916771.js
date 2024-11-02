@@ -10,18 +10,18 @@ var i = n(872810),
     s = n(63063),
     o = n(112560),
     l = n(981631),
-    u = n(689938);
+    u = n(388032);
 let c = n(66737);
 function d(e) {
-    let { stream: t, width: n, selected: d = !1, noArt: _ = !1 } = e;
+    let { stream: t, width: n, selected: d = !1, noArt: f = !1 } = e;
     return (0, r.jsx)(o.Z, {
         artURL: c,
-        header: u.Z.Messages.STREAM_FAILED_TITLE,
+        header: u.intl.string(u.t.rSlOen),
         size: (0, o.L)(n),
-        noArt: _,
+        noArt: f,
         selected: d,
-        description: u.Z.Messages.STREAM_FAILED_DESCRIPTION.format({ helpUrl: s.Z.getArticleURL(l.BhN.STREAM_FAILED) }),
+        description: u.intl.format(u.t.sXsgsL, { helpUrl: s.Z.getArticleURL(l.BhN.STREAM_FAILED) }),
         onCTAClick: () => (0, i.aP)((0, a.V9)(t)),
-        callToAction: u.Z.Messages.CLOSE_STREAM
+        callToAction: u.intl.string(u.t['4EGMWF'])
     });
 }

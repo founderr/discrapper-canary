@@ -1,5 +1,5 @@
 function i(e, n) {
-    var t, i, a, l, o;
+    var t, i, l, a, o;
     let r;
     let s = null !== (t = n.limit) && void 0 !== t ? t : 1 / 0,
         c = (function (e, n) {
@@ -7,7 +7,7 @@ function i(e, n) {
         })(e, null !== (i = n.filterPredicates) && void 0 !== i ? i : []);
     return (function (e, n, t) {
         let i = [];
-        for (let a of e) {
+        for (let l of e) {
             let e = (function (e, n) {
                 return e.sort((e, t) => {
                     for (let i of n) {
@@ -16,7 +16,7 @@ function i(e, n) {
                     }
                     return 0;
                 });
-            })(a, n);
+            })(l, n);
             if ((i.push(...e), i.length >= t)) break;
         }
         return i;
@@ -35,18 +35,18 @@ function i(e, n) {
                                       break;
                                   }
                           return t;
-                      })(c, null !== (a = n.bucketPredicates) && void 0 !== a ? a : [])
+                      })(c, null !== (l = n.bucketPredicates) && void 0 !== l ? l : [])
                     : (function (e, n, t) {
                           let i = [],
-                              a = e;
+                              l = e;
                           for (let e of n) {
                               let n = [],
-                                  l = [];
-                              for (let t of a) e(t) ? l.push(t) : n.push(t);
-                              if ((i.push(l), (a = n), i.reduce((e, n) => n.length + e, 0) >= t)) break;
+                                  a = [];
+                              for (let t of l) e(t) ? a.push(t) : n.push(t);
+                              if ((i.push(a), (l = n), i.reduce((e, n) => n.length + e, 0) >= t)) break;
                           }
                           return i;
-                      })(c, null !== (l = n.bucketPredicates) && void 0 !== l ? l : [], s)
+                      })(c, null !== (a = n.bucketPredicates) && void 0 !== a ? a : [], s)
                 : [c]),
         null !== (o = n.sortComparers) && void 0 !== o ? o : [],
         s

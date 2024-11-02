@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return g;
     }
 }),
     n(47120),
@@ -14,31 +14,31 @@ var r = n(192379),
     u = n(496929),
     c = n(594174),
     d = n(78839),
-    _ = n(580130),
-    E = n(122289),
-    f = n(111361),
-    h = n(981631),
-    p = n(474936);
-function I() {
+    f = n(580130),
+    _ = n(122289),
+    h = n(111361),
+    p = n(981631),
+    m = n(474936);
+function g() {
     let { forceFetch: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : { forceFetch: !1 },
         t = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
-        n = (0, l.Wu)([_.Z], () => _.Z.getFractionalPremium(!1)),
+        n = (0, l.Wu)([f.Z], () => f.Z.getFractionalPremium(!1)),
         i = (0, l.e7)([d.ZP], () => d.ZP.getPremiumTypeSubscription()),
-        [s, I] = r.useState({
-            fractionalState: p.a$.NONE,
+        [s, g] = r.useState({
+            fractionalState: m.a$.NONE,
             endsAt: o()(0)
         });
     return (
         r.useEffect(() => {
-            if ((null != t && !!(0, f.I5)(t)) || !!e) !_.Z.fetchingAllEntitlements && (0, u.p0)({ entitlementType: h.qc2.FRACTIONAL_REDEMPTION });
+            if ((null != t && !!(0, h.I5)(t)) || !!e) !f.Z.fetchingAllEntitlements && (0, u.p0)({ entitlementType: p.qc2.FRACTIONAL_REDEMPTION });
         }, []),
         r.useEffect(() => {
-            if (null == t || !(0, f.I5)(t) || 0 === n.length) {
-                I((e) =>
-                    e.endsAt.isSame(o()(0)) && e.fractionalState === p.a$.NONE
+            if (null == t || !(0, h.I5)(t) || 0 === n.length) {
+                g((e) =>
+                    e.endsAt.isSame(o()(0)) && e.fractionalState === m.a$.NONE
                         ? e
                         : {
-                              fractionalState: p.a$.NONE,
+                              fractionalState: m.a$.NONE,
                               endsAt: o()(0)
                           }
                 );
@@ -48,10 +48,10 @@ function I() {
             if ((e.reverse(), e.length !== n.length || null == e[0].endsAt)) {
                 let e = Array.from(n.values()).map((e) => e.id),
                     t = 'fractional redemption entitlements should have startsAt/endsAt';
-                throw ((0, E.g9)(t, { extra: { entitlementIds: e } }), Error(t));
+                throw ((0, _.g9)(t, { extra: { entitlementIds: e } }), Error(t));
             }
-            I({
-                fractionalState: null == i || h.JwP.INACTIVE.has(i.status) ? p.a$.FP_ONLY : p.a$.FP_SUB,
+            g({
+                fractionalState: null == i || p.JwP.INACTIVE.has(i.status) ? m.a$.FP_ONLY : m.a$.FP_SUB,
                 endsAt: o()(e[0].endsAt)
             });
         }, [t, n, i]),

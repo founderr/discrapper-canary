@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return y;
     }
 });
 var r = n(200651),
@@ -12,71 +12,71 @@ var r = n(200651),
     u = n(481060),
     c = n(880949),
     d = n(806966),
-    _ = n(254494),
-    E = n(593618),
-    f = n(594174),
-    h = n(74538),
-    p = n(697426),
-    I = n(526617),
-    m = n(474936),
-    T = n(689938),
-    S = n(199398);
-let g = [8, 8, 8, 8];
-function A(e) {
+    f = n(254494),
+    _ = n(593618),
+    h = n(594174),
+    p = n(74538),
+    m = n(697426),
+    g = n(526617),
+    E = n(474936),
+    v = n(388032),
+    I = n(199398);
+let S = [8, 8, 8, 8];
+function T(e) {
     let { icon: t, isSelected: n, onClick: i, listItemProps: a, ...o } = e;
     return (0, r.jsx)(u.Clickable, {
         ...a,
         ...o,
         onClick: i,
-        className: s()(S.categoryIcon, { [S.selected]: n }),
+        className: s()(I.categoryIcon, { [I.selected]: n }),
         children: (0, r.jsx)(t, {
-            className: S.categoryIconIcon,
+            className: I.categoryIconIcon,
             color: 'currentColor'
         })
     });
 }
-function N(e) {
+function b(e) {
     let { category: t, categoryIndex: n, onClick: i, isSelected: a, isNitroLocked: s } = e,
         l = (0, o.JA)('soundboard_guild_'.concat(n));
     return (0, r.jsx)(u.Tooltip, {
         text: (function (e) {
             switch (e.categoryInfo.type) {
-                case p.bg.FAVORITES:
-                    return T.Z.Messages.FAVORITES;
-                case p.bg.RECENTLY_HEARD:
-                    return T.Z.Messages.RECENTLY_HEARD;
-                case p.bg.FREQUENTLY_USED:
-                    return T.Z.Messages.FREQUENTLY_USED;
-                case p.bg.GUILD:
-                    return (0, r.jsx)(E.K, {
+                case m.bg.FAVORITES:
+                    return v.intl.string(v.t.k8fFjo);
+                case m.bg.RECENTLY_HEARD:
+                    return v.intl.string(v.t['8i/+SE']);
+                case m.bg.FREQUENTLY_USED:
+                    return v.intl.string(v.t['+cGVV1']);
+                case m.bg.GUILD:
+                    return (0, r.jsx)(_.K, {
                         guild: e.categoryInfo.guild,
                         includeActivity: !1
                     });
-                case p.bg.DEFAULTS:
-                    return T.Z.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS;
+                case m.bg.DEFAULTS:
+                    return v.intl.string(v.t.Rtvk9f);
             }
         })(t),
         'aria-label': (function (e) {
             switch (e.categoryInfo.type) {
-                case p.bg.FAVORITES:
-                    return T.Z.Messages.FAVORITES;
-                case p.bg.RECENTLY_HEARD:
-                    return T.Z.Messages.RECENTLY_HEARD;
-                case p.bg.FREQUENTLY_USED:
-                    return T.Z.Messages.FREQUENTLY_USED;
-                case p.bg.GUILD:
+                case m.bg.FAVORITES:
+                    return v.intl.string(v.t.k8fFjo);
+                case m.bg.RECENTLY_HEARD:
+                    return v.intl.string(v.t['8i/+SE']);
+                case m.bg.FREQUENTLY_USED:
+                    return v.intl.string(v.t['+cGVV1']);
+                case m.bg.GUILD:
                     return e.categoryInfo.guild.name;
-                case p.bg.DEFAULTS:
-                    return T.Z.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS;
+                case m.bg.DEFAULTS:
+                    return v.intl.string(v.t.Rtvk9f);
             }
         })(t),
         position: 'right',
         children: (e) =>
             (function (e, t, n, i, a, s) {
                 switch (e.categoryInfo.type) {
-                    case p.bg.FAVORITES:
+                    case m.bg.FAVORITES:
                         return (0, r.jsx)(
-                            A,
+                            T,
                             {
                                 ...i,
                                 icon: u.StarIcon,
@@ -86,9 +86,9 @@ function N(e) {
                             },
                             e.key
                         );
-                    case p.bg.RECENTLY_HEARD:
+                    case m.bg.RECENTLY_HEARD:
                         return (0, r.jsx)(
-                            A,
+                            T,
                             {
                                 ...i,
                                 icon: u.ClockIcon,
@@ -98,9 +98,9 @@ function N(e) {
                             },
                             e.key
                         );
-                    case p.bg.FREQUENTLY_USED:
+                    case m.bg.FREQUENTLY_USED:
                         return (0, r.jsx)(
-                            A,
+                            T,
                             {
                                 ...i,
                                 icon: u.AnalyticsIcon,
@@ -110,13 +110,13 @@ function N(e) {
                             },
                             e.key
                         );
-                    case p.bg.GUILD:
+                    case m.bg.GUILD:
                         return (0, r.jsx)(
                             u.Clickable,
                             {
                                 ...a,
                                 ...i,
-                                className: S.category,
+                                className: I.category,
                                 onClick: t,
                                 children: (0, r.jsx)(c.Z, {
                                     guild: e.categoryInfo.guild,
@@ -126,9 +126,9 @@ function N(e) {
                             },
                             e.key
                         );
-                    case p.bg.DEFAULTS:
+                    case m.bg.DEFAULTS:
                         return (0, r.jsx)(
-                            A,
+                            T,
                             {
                                 ...i,
                                 icon: u.ClydeIcon,
@@ -144,15 +144,15 @@ function N(e) {
             })(t, i, a, e, l, s)
     });
 }
-function R(e) {
-    let { soundboardListRef: t, categories: n, shouldUpsellLockedCategories: a, listPadding: s = g, guildId: o, inExpressionPicker: u } = e,
+function y(e) {
+    let { soundboardListRef: t, categories: n, shouldUpsellLockedCategories: a, listPadding: s = S, guildId: o, inExpressionPicker: u } = e,
         c = i.useRef(null),
-        E = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
-        p = (0, h.I5)(E, m.p9.TIER_2),
-        T = i.useCallback(
+        _ = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
+        m = (0, p.I5)(_, E.p9.TIER_2),
+        v = i.useCallback(
             (e, t, n, i) => {
-                let s = a && (0, I.O)(e.categoryInfo, p, o);
-                return (0, r.jsx)(N, {
+                let s = a && (0, g.O)(e.categoryInfo, m, o);
+                return (0, r.jsx)(b, {
                     category: e,
                     categoryIndex: t,
                     onClick: n,
@@ -160,16 +160,16 @@ function R(e) {
                     isNitroLocked: s
                 });
             },
-            [o, a, p]
+            [o, a, m]
         );
-    return (0, r.jsx)(_.Z, {
-        className: u ? S.expressionPickerCategoryList : S.categoryList,
+    return (0, r.jsx)(f.Z, {
+        className: u ? I.expressionPickerCategoryList : I.categoryList,
         categoryListRef: c,
         expressionsListRef: t,
         store: d.Wq,
         categories: n,
         listPadding: s,
-        renderCategoryListItem: T,
+        renderCategoryListItem: v,
         rowCount: n.length,
         categoryHeight: 40
     });

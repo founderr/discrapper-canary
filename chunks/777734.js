@@ -1,36 +1,36 @@
 var i = n(200651),
-    a = n(192379),
-    s = n(481060),
-    r = n(641388);
-let l = a.forwardRef(function (e, t) {
-    let { title: n, subtitle: a, icon: l, style: o } = e;
+    r = n(192379),
+    l = n(481060),
+    a = n(641388);
+let s = r.forwardRef(function (e, t) {
+    let { title: n, subtitle: r, icon: s, style: o } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
                 style: o,
-                className: r.sectionContainer,
+                className: a.sectionContainer,
                 children: (0, i.jsxs)('div', {
-                    className: r.sectionHeader,
+                    className: a.sectionHeader,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: r.sectionHeaderTitle,
+                            className: a.sectionHeaderTitle,
                             children: [
-                                l,
-                                (0, i.jsx)(s.Heading, {
+                                s,
+                                (0, i.jsx)(l.Heading, {
                                     variant: 'heading-lg/medium',
                                     color: 'header-primary',
                                     children: n
                                 })
                             ]
                         }),
-                        null != a &&
+                        null != r &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    (0, i.jsx)('div', { className: r.sectionHeaderSpacer }),
-                                    (0, i.jsx)(s.Text, {
+                                    (0, i.jsx)('div', { className: a.sectionHeaderSpacer }),
+                                    (0, i.jsx)(l.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'text-muted',
-                                        children: a
+                                        children: r
                                     })
                                 ]
                             })
@@ -41,4 +41,4 @@ let l = a.forwardRef(function (e, t) {
         ]
     });
 });
-t.Z = a.memo(l);
+t.Z = r.memo(s);

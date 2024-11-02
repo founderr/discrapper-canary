@@ -1,9 +1,9 @@
 n.d(t, {
     q0: function () {
-        return R;
+        return y;
     },
     xo: function () {
-        return v;
+        return N;
     }
 });
 var r = n(544891),
@@ -15,21 +15,21 @@ var r = n(544891),
     u = n(962086),
     c = n(160404),
     d = n(264229),
-    _ = n(271383),
-    E = n(701190),
-    f = n(594174),
-    h = n(626135),
-    p = n(246364),
-    I = n(981631),
-    m = n(976757),
-    T = n(689938);
-let S = async (e, t) => {
-        let n = null != t ? t : E.Z.getInviteKeyForGuildId(e),
-            a = f.default.getCurrentUser(),
-            s = !_.ZP.isMember(e, null == a ? void 0 : a.id);
+    f = n(271383),
+    _ = n(701190),
+    h = n(594174),
+    p = n(626135),
+    m = n(246364),
+    g = n(981631),
+    E = n(976757),
+    v = n(388032);
+let I = async (e, t) => {
+        let n = null != t ? t : _.Z.getInviteKeyForGuildId(e),
+            a = h.default.getCurrentUser(),
+            s = !f.ZP.isMember(e, null == a ? void 0 : a.id);
         try {
             let t = await r.tn.get({
-                url: I.ANM.GUILD_MEMBER_VERIFICATION(e),
+                url: g.ANM.GUILD_MEMBER_VERIFICATION(e),
                 query: {
                     with_guild: s,
                     invite_code: null != n ? (0, d.jX)(n) : void 0
@@ -58,9 +58,9 @@ let S = async (e, t) => {
             });
         }
     },
-    g = async (e, t) => {
+    S = async (e, t) => {
         let { body: n } = await r.tn.patch({
-            url: I.ANM.GUILD_MEMBER_VERIFICATION(e),
+            url: g.ANM.GUILD_MEMBER_VERIFICATION(e),
             body: { form_fields: t },
             oldFormErrors: !0
         });
@@ -74,9 +74,9 @@ let S = async (e, t) => {
             }
         });
     },
-    A = async (e, t) => {
+    T = async (e, t) => {
         let { body: n } = await r.tn.patch({
-            url: I.ANM.GUILD_MEMBER_VERIFICATION(e),
+            url: g.ANM.GUILD_MEMBER_VERIFICATION(e),
             body: { description: t },
             oldFormErrors: !0
         });
@@ -90,15 +90,15 @@ let S = async (e, t) => {
             }
         });
     },
-    N = async (e, t) => {
+    b = async (e, t) => {
         await r.tn.patch({
-            url: I.ANM.GUILD_MEMBER_VERIFICATION(e),
+            url: g.ANM.GUILD_MEMBER_VERIFICATION(e),
             body: { enabled: t },
             oldFormErrors: !0
         });
     },
-    R = -1,
-    O = async function (e, t) {
+    y = -1,
+    A = async function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 200;
         if (c.Z.isFullServerPreview(e)) {
             (0, u.aq)(e, { memberOptions: { isPending: !1 } });
@@ -106,9 +106,9 @@ let S = async (e, t) => {
         }
         try {
             let { body: a } = await r.tn.put({
-                url: I.ANM.GUILD_MEMBER_REQUEST_TO_JOIN(e),
+                url: g.ANM.GUILD_MEMBER_REQUEST_TO_JOIN(e),
                 body: {
-                    ...(0, l.jK)({ outcome: m.qz.UNKNOWN }),
+                    ...(0, l.jK)({ outcome: E.qz.UNKNOWN }),
                     version: t.version,
                     form_fields: t.formFields
                 }
@@ -119,7 +119,7 @@ let S = async (e, t) => {
                     guildId: e,
                     request: a
                 }),
-                (0, p.YG)(t.formFields) && n !== R && setTimeout(v, n),
+                (0, m.YG)(t.formFields) && n !== y && setTimeout(N, n),
                 a
             );
         } catch (t) {
@@ -129,35 +129,35 @@ let S = async (e, t) => {
                     throw (
                         ((0, s.Zy)(),
                         a.Z.show({
-                            title: T.Z.Messages.CLAN_APPLICATION_RATE_LIMITED_HEADER,
-                            body: T.Z.Messages.CLAN_APPLICATION_RATE_LIMITED_BODY,
-                            confirmText: T.Z.Messages.CLAN_APPLICATION_RATE_LIMITED_BUTTON
+                            title: v.intl.string(v.t['2bHM5e']),
+                            body: v.intl.string(v.t.D0lNBA),
+                            confirmText: v.intl.string(v.t.qFctfH)
                         }),
                         {
                             ...t,
-                            message: T.Z.Messages.CLAN_APPLICATION_RATE_LIMITED_BODY
+                            message: v.intl.string(v.t.D0lNBA)
                         })
                     );
                 case 403:
                     throw {
                         ...t,
-                        message: T.Z.Messages.CLAN_APPLICATION_MISSING_PERMISSION
+                        message: v.intl.string(v.t.bu2hl5)
                     };
                 default:
-                    var d, _;
+                    var d, f;
                     throw {
                         ...t,
-                        message: null !== (_ = ((d = new o.Hx(t)), d.getAnyErrorMessage())) && void 0 !== _ ? _ : T.Z.Messages.ERROR_GENERIC_TITLE
+                        message: null !== (f = ((d = new o.Hx(t)), d.getAnyErrorMessage())) && void 0 !== f ? f : v.intl.string(v.t.R0RpRU)
                     };
             }
         }
     };
-function v() {
+function N() {
     i.Z.dispatch({ type: 'USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW' });
 }
 t.ZP = {
-    fetchVerificationForm: S,
-    updateVerificationForm: g,
+    fetchVerificationForm: I,
+    updateVerificationForm: S,
     updateVerificationFormFieldsLocal: (e, t) => {
         i.Z.dispatch({
             type: 'MEMBER_VERIFICATION_FORM_UPDATE',
@@ -166,7 +166,7 @@ t.ZP = {
             isLocalUpdate: !0
         });
     },
-    updateVerificationFormDescription: A,
+    updateVerificationFormDescription: T,
     updateVerificationFormDescriptionLocal: (e, t) => {
         i.Z.dispatch({
             type: 'MEMBER_VERIFICATION_FORM_UPDATE',
@@ -175,14 +175,14 @@ t.ZP = {
             isLocalUpdate: !0
         });
     },
-    enableVerificationForm: N,
-    submitVerificationForm: O,
+    enableVerificationForm: b,
+    submitVerificationForm: A,
     clearCoachmark: function () {
         i.Z.dispatch({ type: 'USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR' });
     },
     reportApplication: function (e) {
         let { guild: t, guildJoinRequest: n, guildJoinRequestUser: r, reason: i, reasonOther: a, responses: s } = e;
-        h.default.track(I.rMx.GUILD_MEMBER_APPLICATION_REPORTED, {
+        p.default.track(g.rMx.GUILD_MEMBER_APPLICATION_REPORTED, {
             application_id: n.joinRequestId,
             applicant_id: r.id,
             guild_id: t.id,

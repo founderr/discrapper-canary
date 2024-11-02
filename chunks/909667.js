@@ -3,29 +3,29 @@ n.d(t, {
         return c;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(481060),
-    i = n(723047),
-    r = n(463939),
-    l = n(981631),
-    o = n(689938);
+var r = n(481060),
+    l = n(723047),
+    s = n(463939),
+    a = n(981631),
+    o = n(388032);
 function c(e) {
     let { team: t, ...n } = e,
-        c = (0, i.mY)() || null == t ? null : o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EDIT_PAYMENT_METHOD_LINK.format({ url: l.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(t.id) });
+        c = (0, l.mY)() || null == t ? null : o.intl.format(o.t.d1sCiY, { url: a.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(t.id) });
     return 0 === n.payoutsByPeriod.length
-        ? (0, s.jsxs)(a.FormText, {
-              type: a.FormText.Types.DESCRIPTION,
-              children: [o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EARNINGS_HISTORY_EMPTY, ' ', c]
+        ? (0, i.jsxs)(r.FormText, {
+              type: r.FormText.Types.DESCRIPTION,
+              children: [o.intl.string(o.t.RrtXu7), ' ', c]
           })
-        : (0, s.jsxs)(s.Fragment, {
+        : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, s.jsxs)(a.FormText, {
-                      type: a.FormText.Types.DESCRIPTION,
-                      children: [o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EARNINGS_HISTORY_DESCRIPTION, ' ', c]
+                  (0, i.jsxs)(r.FormText, {
+                      type: r.FormText.Types.DESCRIPTION,
+                      children: [o.intl.string(o.t['9Ub4KS']), ' ', c]
                   }),
-                  (0, s.jsx)(a.Spacer, { size: 16 }),
-                  (0, s.jsx)(r.Z, { ...n })
+                  (0, i.jsx)(r.Spacer, { size: 16 }),
+                  (0, i.jsx)(s.Z, { ...n })
               ]
           });
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return h;
     }
 }),
     n(47120);
@@ -13,13 +13,13 @@ var r = n(654861),
     u = n(430824),
     c = n(70956),
     d = n(709054);
-function _(e, t, n) {
+function f(e, t, n) {
     let r = i()(e),
         a = null != t ? i()(t) : null,
         s = null != n ? i()(n) : null;
     return !((null != a && r.lesser(a)) || (null != s && r.greater(s))) && !0;
 }
-function E(e) {
+function _(e) {
     let t, n;
     for (let [r, i] of e)
         switch (r) {
@@ -34,25 +34,25 @@ function E(e) {
         max: n
     };
 }
-let f = {
+let h = {
     [s().v3('guild_ids')]: (e) => {
         let t = [];
         for (let [n, r] of e) n === s().v3('guild_ids') && (t = r);
         return (e) => t.includes(e);
     },
     [s().v3('guild_id_range')]: (e) => {
-        let { min: t, max: n } = E(e);
-        return (e) => _(e, t, n);
+        let { min: t, max: n } = _(e);
+        return (e) => f(e, t, n);
     },
     [s().v3('guild_age_range_days')]: (e) => {
-        let { min: t, max: n } = E(e);
-        return (e) => _(Math.floor(d.default.age(e) / c.Z.Millis.DAY), t, n);
+        let { min: t, max: n } = _(e);
+        return (e) => f(Math.floor(d.default.age(e) / c.Z.Millis.DAY), t, n);
     },
     [s().v3('guild_member_count_range')]: (e) => {
-        let { min: t, max: n } = E(e);
+        let { min: t, max: n } = _(e);
         return (e) => {
             let r = l.Z.getMemberCount(e);
-            return null != r && _(r, t, n);
+            return null != r && f(r, t, n);
         };
     },
     [s().v3('guild_has_feature')]: (e) => {

@@ -1,57 +1,57 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return _;
+        return u;
     }
 });
-var n = t(200651);
-t(192379);
-var a = t(442837),
-    i = t(481060),
-    r = t(846027),
-    o = t(131951),
-    l = t(358085),
-    c = t(689938),
-    d = t(113207);
-function _() {
+var i = n(200651);
+n(192379);
+var s = n(442837),
+    r = n(481060),
+    l = n(846027),
+    a = n(131951),
+    o = n(358085),
+    c = n(388032),
+    d = n(113207);
+function u() {
     let {
             videoHook: e,
-            experimentalSoundshare: s,
-            useSystemScreensharePicker: t,
-            supportsVideoHook: _,
-            supportsExperimentalSoundshare: u,
-            supportsSystemScreensharePicker: E
-        } = (0, a.cj)([o.Z], () => ({
-            videoHook: o.Z.getVideoHook(),
-            experimentalSoundshare: o.Z.getExperimentalSoundshare(),
-            useSystemScreensharePicker: o.Z.getUseSystemScreensharePicker(),
-            supportsVideoHook: o.Z.supportsVideoHook(),
-            supportsExperimentalSoundshare: o.Z.supportsExperimentalSoundshare(),
-            supportsSystemScreensharePicker: o.Z.supportsSystemScreensharePicker()
+            experimentalSoundshare: t,
+            useSystemScreensharePicker: n,
+            supportsVideoHook: u,
+            supportsExperimentalSoundshare: m,
+            supportsSystemScreensharePicker: h
+        } = (0, s.cj)([a.Z], () => ({
+            videoHook: a.Z.getVideoHook(),
+            experimentalSoundshare: a.Z.getExperimentalSoundshare(),
+            useSystemScreensharePicker: a.Z.getUseSystemScreensharePicker(),
+            supportsVideoHook: a.Z.supportsVideoHook(),
+            supportsExperimentalSoundshare: a.Z.supportsExperimentalSoundshare(),
+            supportsSystemScreensharePicker: a.Z.supportsSystemScreensharePicker()
         })),
-        T = E && (0, l.isMac)();
-    return _ || u || T
-        ? (0, n.jsxs)(i.FormSection, {
+        g = h && (0, o.isMac)();
+    return u || m || g
+        ? (0, i.jsxs)(r.FormSection, {
               className: d.marginBottom20,
-              title: c.Z.Messages.FORM_LABEL_SCREENSHARE,
+              title: c.intl.string(c.t.NMCIf3),
               children: [
-                  _ &&
-                      (0, n.jsx)(i.FormSwitch, {
-                          value: e,
-                          onChange: (e) => r.Z.setVideoHook(e),
-                          note: c.Z.Messages.FORM_HELP_VIDEO_HOOK,
-                          children: c.Z.Messages.USER_SETTINGS_VOICE_VIDEO_HOOK_LABEL
-                      }),
                   u &&
-                      (0, n.jsx)(i.FormSwitch, {
-                          value: s,
-                          onChange: (e) => r.Z.setExperimentalSoundshare(e),
-                          children: c.Z.Messages.USER_SETTINGS_VOICE_EXPERIMENTAL_SOUNDSHARE_LABEL
+                      (0, i.jsx)(r.FormSwitch, {
+                          value: e,
+                          onChange: (e) => l.Z.setVideoHook(e),
+                          note: c.intl.string(c.t['Fj/xn5']),
+                          children: c.intl.string(c.t.GmWk2N)
                       }),
-                  T &&
-                      (0, n.jsx)(i.FormSwitch, {
+                  m &&
+                      (0, i.jsx)(r.FormSwitch, {
                           value: t,
-                          onChange: (e) => r.Z.setUseSystemScreensharePicker(e),
-                          children: c.Z.Messages.USER_SETTINGS_VOICE_SYSTEM_PICKER_LABEL
+                          onChange: (e) => l.Z.setExperimentalSoundshare(e),
+                          children: c.intl.string(c.t['4I0qzc'])
+                      }),
+                  g &&
+                      (0, i.jsx)(r.FormSwitch, {
+                          value: n,
+                          onChange: (e) => l.Z.setUseSystemScreensharePicker(e),
+                          children: c.intl.string(c.t.ie1mgY)
                       })
               ]
           })

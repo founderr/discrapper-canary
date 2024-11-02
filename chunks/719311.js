@@ -1,6 +1,6 @@
 n.d(t, {
     I: function () {
-        return s;
+        return l;
     }
 });
 let i = (0, n(818083).B)({
@@ -16,13 +16,13 @@ let i = (0, n(818083).B)({
             }
         ]
     }),
-    s = (e) => {
-        let { location: t, autoTrackExposure: n = !0, trackExposureOptions: s = {} } = e;
+    l = (e) => {
+        let { location: t, autoTrackExposure: n = !0, trackExposureOptions: l = {} } = e;
         return i.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
-                trackExposureOptions: s
+                trackExposureOptions: l
             }
         );
     };

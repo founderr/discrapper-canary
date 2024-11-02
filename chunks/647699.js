@@ -1,16 +1,16 @@
-t.d(s, {
+n.d(t, {
     r: function () {
-        return i;
+        return r;
     },
     v: function () {
-        return r;
+        return l;
     }
 });
-var n = t(481060),
-    a = t(689938);
-function i() {
-    (0, n.showToast)((0, n.createToast)(a.Z.Messages.USER_SETTINGS_EDIT_PROFILE_GENERIC_ERROR, n.ToastType.FAILURE));
-}
+var i = n(481060),
+    s = n(388032);
 function r() {
-    (0, n.showToast)((0, n.createToast)(a.Z.Messages.GUILD_SETTINGS_EDIT_PROFILE_GENERIC_ERROR, n.ToastType.FAILURE));
+    (0, i.showToast)((0, i.createToast)(s.intl.string(s.t['84MExs']), i.ToastType.FAILURE));
+}
+function l() {
+    (0, i.showToast)((0, i.createToast)(s.intl.string(s.t.s35OuL), i.ToastType.FAILURE));
 }

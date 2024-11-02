@@ -1,64 +1,64 @@
-t(47120), t(411104);
-var n,
-    s,
+n(47120), n(411104);
+var a,
     r,
     l,
-    o,
     i,
+    s,
+    o,
     c,
-    u = t(200651),
-    d = t(192379),
-    E = t(588391),
-    _ = t(217986),
-    A = t(971809),
-    m = t(481060),
-    N = t(313201),
-    p = t(823379),
-    h = t(754103),
-    C = t(689938),
-    I = t(251316);
-function T(e, a, t) {
+    u = n(200651),
+    d = n(192379),
+    m = n(588391),
+    p = n(217986),
+    h = n(971809),
+    A = n(481060),
+    E = n(313201),
+    N = n(823379),
+    f = n(754103),
+    b = n(388032),
+    _ = n(251316);
+function y(e, t, n) {
     return (
-        a in e
-            ? Object.defineProperty(e, a, {
-                  value: t,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[a] = t),
+            : (e[t] = n),
         e
     );
 }
 let P = ['AE', 'AG', 'AN', 'AO', 'AW', 'BF', 'BI', 'BJ', 'BM', 'BO', 'BQ', 'BS', 'BW', 'BZ', 'CD', 'CF', 'CG', 'CI', 'CK', 'CM', 'CW', 'DJ', 'DM', 'ER', 'FJ', 'GA', 'GD', 'GH', 'GM', 'GQ', 'GY', 'HK', 'HM', 'IE', 'JM', 'KE', 'KI', 'KM', 'KN', 'KP', 'LY', 'ML', 'MO', 'MR', 'MW', 'NA', 'NR', 'NU', 'QA', 'RW', 'SB', 'SC', 'SL', 'SR', 'ST', 'SX', 'SY', 'TD', 'TF', 'TG', 'TK', 'TL', 'TO', 'TV', 'UG', 'VU', 'YE', 'ZA', 'ZW'],
-    S = _.Z.map((e) => ({
+    g = p.Z.map((e) => ({
         value: e.alpha2,
         label: e.name
     })).filter((e) => 'KP' !== e.value && 'SY' !== e.value),
-    R = (0, N.hQ)(),
-    f = (0, N.hQ)(),
-    M = (0, N.hQ)(),
-    O = (0, N.hQ)(),
-    b = (0, N.hQ)(),
-    y = (0, N.hQ)(),
-    g = (0, N.hQ)();
-((o = n || (n = {})).NAME = 'name'), (o.COUNTRY = 'country'), (o.LINE1 = 'line1'), (o.LINE2 = 'line2'), (o.CITY = 'city'), (o.POSTAL_CODE = 'postalCode'), (o.STATE = 'state'), ((i = s || (s = {})).MODAL_US = 'modalUS'), (i.MODAL_INTL = 'modalInternational'), (i.MODAL_US_WITH_NAME = 'modalUSWithName'), (i.MODAL_INTL_WITH_NAME = 'modalInternationalWithName'), (i.SETTINGS_US = 'settingsUS'), (i.SETTINGS_INTL = 'settingsInternational'), (i.SETTINGS_INTL_NO_NAME = 'settingsInternationalWithoutName'), (i.SETTINGS_US_MOBILE = 'settingsUSMobile'), (i.SETTINGS_INTL_MOBILE = 'settingsInternationalMobile'), (i.SETTINGS_INTL_NO_NAME_MOBILE = 'settingsInternationalWithoutNameMobile'), ((c = r || (r = {})).EDIT = 'edit'), (c.CREATE = 'create');
-let L = {
-        US: A.G,
-        CA: E.X
+    C = (0, E.hQ)(),
+    T = (0, E.hQ)(),
+    I = (0, E.hQ)(),
+    S = (0, E.hQ)(),
+    v = (0, E.hQ)(),
+    x = (0, E.hQ)(),
+    L = (0, E.hQ)();
+((s = a || (a = {})).NAME = 'name'), (s.COUNTRY = 'country'), (s.LINE1 = 'line1'), (s.LINE2 = 'line2'), (s.CITY = 'city'), (s.POSTAL_CODE = 'postalCode'), (s.STATE = 'state'), ((o = r || (r = {})).MODAL_US = 'modalUS'), (o.MODAL_INTL = 'modalInternational'), (o.MODAL_US_WITH_NAME = 'modalUSWithName'), (o.MODAL_INTL_WITH_NAME = 'modalInternationalWithName'), (o.SETTINGS_US = 'settingsUS'), (o.SETTINGS_INTL = 'settingsInternational'), (o.SETTINGS_INTL_NO_NAME = 'settingsInternationalWithoutName'), (o.SETTINGS_US_MOBILE = 'settingsUSMobile'), (o.SETTINGS_INTL_MOBILE = 'settingsInternationalMobile'), (o.SETTINGS_INTL_NO_NAME_MOBILE = 'settingsInternationalWithoutNameMobile'), ((c = l || (l = {})).EDIT = 'edit'), (c.CREATE = 'create');
+let R = {
+        US: h.G,
+        CA: m.X
     },
-    D = (e) => ({
+    O = (e) => ({
         name: 'name',
-        id: R,
-        title: () => C.Z.Messages.BILLING_ADDRESS_NAME,
+        id: C,
+        title: () => b.intl.string(b.t.vyuULS),
         autoComplete: 'name',
-        getClassNameForLayout: (e) => (['modalUS', 'modalInternational', 'modalUSWithName', 'modalInternationalWithName', 'settingsUSMobile', 'settingsInternationalMobile', 'settingsInternationalWithoutNameMobile'].includes(e) ? I.width100 : I.width60),
-        renderInput: (e) => (0, u.jsx)(m.TextInput, { ...e })
+        getClassNameForLayout: (e) => (['modalUS', 'modalInternational', 'modalUSWithName', 'modalInternationalWithName', 'settingsUSMobile', 'settingsInternationalMobile', 'settingsInternationalWithoutNameMobile'].includes(e) ? _.width100 : _.width60),
+        renderInput: (e) => (0, u.jsx)(A.TextInput, { ...e })
     }),
-    v = (e) => ({
+    M = (e) => ({
         name: 'country',
-        id: f,
-        title: () => C.Z.Messages.BILLING_ADDRESS_COUNTRY,
+        id: T,
+        title: () => b.intl.string(b.t.eDdrAA),
         autoComplete: 'country',
         getClassNameForLayout: (e) => {
             switch (e) {
@@ -66,49 +66,49 @@ let L = {
                 case 'modalInternational':
                 case 'modalUSWithName':
                 case 'modalInternationalWithName':
-                    return I.width100;
+                    return _.width100;
                 default:
-                    return I.width75;
+                    return _.width75;
             }
         },
-        renderInput(e, a) {
-            let { onChange: t, ...n } = e;
-            return (0, u.jsx)(m.SearchableSelect, {
-                ...n,
+        renderInput(e, t) {
+            let { onChange: n, ...a } = e;
+            return (0, u.jsx)(A.SearchableSelect, {
+                ...a,
                 autoFocus: !0,
                 maxVisibleItems: 8,
-                isDisabled: 'edit' === a.mode,
-                options: S,
-                onChange: (a) => {
-                    null != t && t(a, e.name);
+                isDisabled: 'edit' === t.mode,
+                options: g,
+                onChange: (t) => {
+                    null != n && n(t, e.name);
                 }
             });
         }
     }),
-    Z = (e) => ({
+    w = (e) => ({
         name: 'line1',
-        id: M,
-        title: () => C.Z.Messages.BILLING_ADDRESS_ADDRESS,
+        id: I,
+        title: () => b.intl.string(b.t.x0beVV),
         autoComplete: 'address-line1',
-        placeholder: () => C.Z.Messages.BILLING_ADDRESS_ADDRESS_PLACEHOLDER,
-        getClassNameForLayout: (e) => (['modalUS', 'modalInternational', 'modalUSWithName', 'modalInternationalWithName', 'settingsUSMobile', 'settingsInternationalMobile', 'settingsInternationalWithoutNameMobile'].includes(e) ? I.width100 : I.width60),
-        renderInput: (e) => (0, u.jsx)(m.TextInput, { ...e })
+        placeholder: () => b.intl.string(b.t['ynII//']),
+        getClassNameForLayout: (e) => (['modalUS', 'modalInternational', 'modalUSWithName', 'modalInternationalWithName', 'settingsUSMobile', 'settingsInternationalMobile', 'settingsInternationalWithoutNameMobile'].includes(e) ? _.width100 : _.width60),
+        renderInput: (e) => (0, u.jsx)(A.TextInput, { ...e })
     }),
-    x = (e) => ({
+    D = (e) => ({
         name: 'line2',
-        id: O,
-        title: () => C.Z.Messages.BILLING_ADDRESS_ADDRESS2,
-        placeholder: () => C.Z.Messages.BILLING_ADDRESS_ADDRESS2_PLACEHOLDER,
+        id: S,
+        title: () => b.intl.string(b.t.i2Z0gI),
+        placeholder: () => b.intl.string(b.t.fKLoNj),
         autoComplete: 'address-line2',
-        getClassNameForLayout: (e) => (['modalUS', 'modalInternational', 'modalUSWithName', 'modalInternationalWithName', 'settingsUSMobile', 'settingsInternationalMobile', 'settingsInternationalWithoutNameMobile'].includes(e) ? I.width100 : I.width40),
-        renderInput: (e) => (0, u.jsx)(m.TextInput, { ...e })
+        getClassNameForLayout: (e) => (['modalUS', 'modalInternational', 'modalUSWithName', 'modalInternationalWithName', 'settingsUSMobile', 'settingsInternationalMobile', 'settingsInternationalWithoutNameMobile'].includes(e) ? _.width100 : _.width40),
+        renderInput: (e) => (0, u.jsx)(A.TextInput, { ...e })
     }),
-    Y = (e) => ({
+    Z = (e) => ({
         name: 'city',
-        id: b,
-        title: () => C.Z.Messages.BILLING_ADDRESS_CITY,
+        id: v,
+        title: () => b.intl.string(b.t.bUSWl5),
         autoComplete: 'address-level2',
-        placeholder: () => C.Z.Messages.BILLING_ADDRESS_CITY_PLACEHOLDER,
+        placeholder: () => b.intl.string(b.t['5rRx39']),
         getClassNameForLayout: (e) => {
             switch (e) {
                 case 'modalInternational':
@@ -118,69 +118,69 @@ let L = {
                 case 'settingsUSMobile':
                 case 'settingsInternationalMobile':
                 case 'settingsInternationalWithoutNameMobile':
-                    return I.width100;
+                    return _.width100;
                 case 'settingsInternational':
-                    return I.width60;
+                    return _.width60;
                 default:
-                    return I.width50;
+                    return _.width50;
             }
         },
-        renderInput: (e) => (0, u.jsx)(m.TextInput, { ...e })
+        renderInput: (e) => (0, u.jsx)(A.TextInput, { ...e })
     }),
-    U = (e) => {
-        let a, t;
+    j = (e) => {
+        let t, n;
         switch (e) {
             case 'US':
-                (a = C.Z.Messages.BILLING_ADDRESS_ZIP_CODE), (t = C.Z.Messages.BILLING_ADDRESS_ZIP_CODE_PLACEHOLDER);
+                (t = b.intl.string(b.t['/95CeH'])), (n = b.intl.string(b.t['9xLNmp']));
                 break;
             case 'CA':
-                (a = C.Z.Messages.BILLING_ADDRESS_POSTAL_CODE), (t = C.Z.Messages.BILLING_ADDRESS_POSTAL_CODE_CANADA_PLACEHOLDER);
+                (t = b.intl.string(b.t.mfpJ9v)), (n = b.intl.string(b.t.Nc4Rzs));
                 break;
             default:
-                a = C.Z.Messages.BILLING_ADDRESS_POSTAL_CODE;
+                t = b.intl.string(b.t.mfpJ9v);
         }
         return {
             name: 'postalCode',
-            id: y,
-            title: () => a,
+            id: x,
+            title: () => t,
             autoComplete: 'postal-code',
-            placeholder: () => t,
+            placeholder: () => n,
             getClassNameForLayout: (e) => {
                 switch (e) {
                     case 'modalInternational':
                     case 'modalInternationalWithName':
-                        return I.width100;
+                        return _.width100;
                     case 'modalUS':
                     case 'modalUSWithName':
                     case 'settingsUSMobile':
                     case 'settingsInternationalMobile':
                     case 'settingsInternationalWithoutNameMobile':
-                        return I.width50;
+                        return _.width50;
                     case 'settingsInternational':
-                        return I.width30;
+                        return _.width30;
                     default:
-                        return I.width25;
+                        return _.width25;
                 }
             },
-            renderInput: (e) => (0, u.jsx)(m.TextInput, { ...e })
+            renderInput: (e) => (0, u.jsx)(A.TextInput, { ...e })
         };
     },
-    B = (e) => {
-        let a;
+    k = (e) => {
+        let t;
         switch (e) {
             case 'US':
-                a = C.Z.Messages.BILLING_ADDRESS_STATE;
+                t = b.intl.string(b.t.PNfx5e);
                 break;
             case 'CA':
-                a = C.Z.Messages.BILLING_ADDRESS_PROVINCE;
+                t = b.intl.string(b.t['7A/tEx']);
                 break;
             default:
-                a = C.Z.Messages.BILLING_ADDRESS_REGION;
+                t = b.intl.string(b.t.w0xG2t);
         }
         return {
             name: 'state',
-            id: g,
-            title: () => a,
+            id: L,
+            title: () => t,
             autoComplete: 'address-level1',
             getClassNameForLayout: (e) => {
                 switch (e) {
@@ -189,116 +189,116 @@ let L = {
                     case 'settingsUSMobile':
                     case 'settingsInternationalMobile':
                     case 'settingsInternationalWithoutNameMobile':
-                        return I.width100;
+                        return _.width100;
                     case 'modalUS':
                     case 'modalUSWithName':
-                        return I.width50;
+                        return _.width50;
                     case 'settingsInternational':
-                        return I.width30;
+                        return _.width30;
                     default:
-                        return I.width25;
+                        return _.width25;
                 }
             },
-            renderInput(a) {
-                let t = L[e],
-                    n =
-                        null == a.value ||
-                        '' === a.value ||
-                        (null != t &&
+            renderInput(t) {
+                let n = R[e],
+                    a =
+                        null == t.value ||
+                        '' === t.value ||
+                        (null != n &&
                             null !=
-                                t.find((e) => {
-                                    let { value: t } = e;
-                                    return t === a.value;
+                                n.find((e) => {
+                                    let { value: n } = e;
+                                    return n === t.value;
                                 })),
-                    { layout: s, onChange: r, ...l } = a;
-                return ['US', 'CA'].includes(e) && n
-                    ? (0, u.jsx)(m.SearchableSelect, {
-                          ...l,
-                          popoutPosition: ['modalUS', 'modalInternational'].includes(s) ? 'top' : void 0,
-                          options: t,
+                    { layout: r, onChange: l, ...i } = t;
+                return ['US', 'CA'].includes(e) && a
+                    ? (0, u.jsx)(A.SearchableSelect, {
+                          ...i,
+                          popoutPosition: ['modalUS', 'modalInternational'].includes(r) ? 'top' : void 0,
+                          options: n,
                           onChange: (e) => {
-                              null != r && r(e, a.name);
+                              null != l && l(e, t.name);
                           }
                       })
-                    : (0, u.jsx)(m.TextInput, { ...a });
+                    : (0, u.jsx)(A.TextInput, { ...t });
             }
         };
     },
     H = {
-        modalUS: [[v], [Z], [x], [Y], [B, U]],
-        modalInternational: [[v], [Z], [x], [Y], [B], [U]],
-        modalUSWithName: [[v], [D], [Z], [x], [Y], [B, U]],
-        modalInternationalWithName: [[v], [D], [Z], [x], [Y], [B], [U]],
-        settingsUS: [[D], [Z, x], [Y, B, U], [v]],
-        settingsUSMobile: [[D], [Z], [x], [Y], [B], [U], [v]],
-        settingsInternational: [[D], [Z, x], [Y], [B, U], [v]],
-        settingsInternationalMobile: [[D], [Z], [x], [Y], [B], [U], [v]],
-        settingsInternationalWithoutName: [[Z, x], [Y], [B, U], [v]],
-        settingsInternationalWithoutNameMobile: [[Z], [x], [Y], [B], [U], [v]]
+        modalUS: [[M], [w], [D], [Z], [k, j]],
+        modalInternational: [[M], [w], [D], [Z], [k], [j]],
+        modalUSWithName: [[M], [O], [w], [D], [Z], [k, j]],
+        modalInternationalWithName: [[M], [O], [w], [D], [Z], [k], [j]],
+        settingsUS: [[O], [w, D], [Z, k, j], [M]],
+        settingsUSMobile: [[O], [w], [D], [Z], [k], [j], [M]],
+        settingsInternational: [[O], [w, D], [Z], [k, j], [M]],
+        settingsInternationalMobile: [[O], [w], [D], [Z], [k], [j], [M]],
+        settingsInternationalWithoutName: [[w, D], [Z], [k, j], [M]],
+        settingsInternationalWithoutNameMobile: [[w], [D], [Z], [k], [j], [M]]
     };
-class w extends (l = d.PureComponent) {
+class Y extends (i = d.PureComponent) {
     componentDidMount() {
         this.handleInfoChange();
     }
-    componentDidUpdate(e, a) {
-        this.state !== a && this.handleInfoChange();
+    componentDidUpdate(e, t) {
+        this.state !== t && this.handleInfoChange();
     }
     hasValue(e) {
         return null != e && '' !== e;
     }
     validateForm(e) {
-        let { values: a, dirtyFields: t } = this.state,
-            n = {};
-        (!e || t.name) && !this.hasValue(a.name) && 'edit' === this.props.mode && (n.name = C.Z.Messages.BILLING_ADDRESS_NAME_ERROR_REQUIRED), (!e || t.country) && !this.hasValue(a.country) && (n.country = C.Z.Messages.BILLING_ADDRESS_COUNTRY_ERROR_REQUIRED), (!e || t.line1) && !this.hasValue(a.line1) && (n.line1 = C.Z.Messages.BILLING_ADDRESS_ADDRESS_ERROR_REQUIRED), (!e || t.city) && !this.hasValue(a.city) && (n.city = C.Z.Messages.BILLING_ADDRESS_CITY_ERROR_REQUIRED);
-        let s = a.country;
-        switch (s) {
+        let { values: t, dirtyFields: n } = this.state,
+            a = {};
+        (!e || n.name) && !this.hasValue(t.name) && 'edit' === this.props.mode && (a.name = b.intl.string(b.t.KU5mWF)), (!e || n.country) && !this.hasValue(t.country) && (a.country = b.intl.string(b.t['+bm+zM'])), (!e || n.line1) && !this.hasValue(t.line1) && (a.line1 = b.intl.string(b.t['6HMkBw'])), (!e || n.city) && !this.hasValue(t.city) && (a.city = b.intl.string(b.t.kOrBmZ));
+        let r = t.country;
+        switch (r) {
             case 'US':
-                if (!e || t.postalCode) {
-                    let e = a.postalCode;
-                    this.hasValue(e) ? (5 !== e.length ? (n.postalCode = C.Z.Messages.BILLING_ADDRESS_ZIP_CODE_ERROR_LENGTH) : !/^\d{5}$/.test(e) && (n.postalCode = C.Z.Messages.BILLING_ADDRESS_ZIP_CODE_INVALID)) : (n.postalCode = C.Z.Messages.BILLING_ADDRESS_ZIP_CODE_ERROR_REQUIRED);
+                if (!e || n.postalCode) {
+                    let e = t.postalCode;
+                    this.hasValue(e) ? (5 !== e.length ? (a.postalCode = b.intl.string(b.t['+zjAbm'])) : !/^\d{5}$/.test(e) && (a.postalCode = b.intl.string(b.t.CuZPeX))) : (a.postalCode = b.intl.string(b.t['iXID+/']));
                 }
-                (!e || t.state) && !this.hasValue(a.state) && (n.state = C.Z.Messages.BILLING_ADDRESS_STATE_ERROR_REQUIRED);
+                (!e || n.state) && !this.hasValue(t.state) && (a.state = b.intl.string(b.t.RIaPdH));
                 break;
             case 'CA':
-                (!e || t.postalCode) && !this.hasValue(a.postalCode) && (n.postalCode = C.Z.Messages.BILLING_ADDRESS_POSTAL_CODE_ERROR_REQUIRED), (!e || t.state) && !this.hasValue(a.state) && (n.state = C.Z.Messages.BILLING_ADDRESS_PROVINCE_ERROR_REQUIRED);
+                (!e || n.postalCode) && !this.hasValue(t.postalCode) && (a.postalCode = b.intl.string(b.t.LRlhb2)), (!e || n.state) && !this.hasValue(t.state) && (a.state = b.intl.string(b.t.PsJCcn));
                 break;
             default:
-                (!e || t.postalCode) && !this.hasValue(a.postalCode) && !P.includes(null != s ? s : '') && (n.postalCode = C.Z.Messages.BILLING_ADDRESS_POSTAL_CODE_ERROR_REQUIRED);
+                (!e || n.postalCode) && !this.hasValue(t.postalCode) && !P.includes(null != r ? r : '') && (a.postalCode = b.intl.string(b.t.LRlhb2));
         }
-        return n;
+        return a;
     }
     handleInfoChange() {
-        let { values: e, dirtyFields: a } = this.state,
-            t = this.validateForm(!1);
-        this.props.onBillingAddressChange(e, 0 === Object.keys(t).length, Object.keys(a).length > 0);
+        let { values: e, dirtyFields: t } = this.state,
+            n = this.validateForm(!1);
+        this.props.onBillingAddressChange(e, 0 === Object.keys(n).length, Object.keys(t).length > 0);
     }
     render() {
-        let { errors: e, values: a } = this.state,
-            { layout: t, mode: n, className: s, error: r } = this.props,
-            l = H[t];
-        if (null == l) throw Error('Provide a proper layout property.');
-        let o = a.country,
-            i = l
+        let { errors: e, values: t } = this.state,
+            { layout: n, mode: a, className: r, error: l } = this.props,
+            i = H[n];
+        if (null == i) throw Error('Provide a proper layout property.');
+        let s = t.country,
+            o = i
                 .map((e) => {
-                    let a = e.map((e) => e(null != o ? o : '')).filter(p.lm);
-                    return a.length > 0 ? { fields: a } : null;
+                    let t = e.map((e) => e(null != s ? s : '')).filter(N.lm);
+                    return t.length > 0 ? { fields: t } : null;
                 })
-                .filter(p.lm);
-        return (0, u.jsx)(h.Z, {
-            className: s,
-            form: i,
-            layout: t,
-            values: a,
+                .filter(N.lm);
+        return (0, u.jsx)(f.Z, {
+            className: r,
+            form: o,
+            layout: n,
+            values: t,
             errors: e,
-            formError: r,
+            formError: l,
             onFieldChange: this.handleFieldChange,
             onFieldBlur: this.handleFieldBlur,
-            mode: n
+            mode: a
         });
     }
     constructor(...e) {
         super(...e),
-            T(this, 'state', {
+            y(this, 'state', {
                 values: {
                     name: this.props.name,
                     country: this.props.country,
@@ -311,30 +311,30 @@ class w extends (l = d.PureComponent) {
                 dirtyFields: {},
                 errors: {}
             }),
-            T(this, 'handleFieldBlur', () => {
+            y(this, 'handleFieldBlur', () => {
                 this.setState({ errors: this.validateForm(!0) });
             }),
-            T(this, 'handleFieldChange', (e, a) => {
-                if (null == a) return;
-                let { values: t, errors: n, dirtyFields: s } = this.state;
-                delete n[a],
+            y(this, 'handleFieldChange', (e, t) => {
+                if (null == t) return;
+                let { values: n, errors: a, dirtyFields: r } = this.state;
+                delete a[t],
                     this.setState({
                         values: {
-                            ...t,
-                            [a]: e
+                            ...n,
+                            [t]: e
                         },
                         dirtyFields: {
-                            ...s,
-                            [a]: !0
+                            ...r,
+                            [t]: !0
                         },
-                        errors: n
+                        errors: a
                     });
             });
     }
 }
-T(w, 'Layouts', s),
-    T(w, 'Modes', r),
-    T(w, 'defaultProps', {
+y(Y, 'Layouts', r),
+    y(Y, 'Modes', l),
+    y(Y, 'defaultProps', {
         name: '',
         country: '',
         line1: '',
@@ -346,4 +346,4 @@ T(w, 'Layouts', s),
         mode: 'create',
         error: null
     }),
-    (a.ZP = w);
+    (t.ZP = Y);

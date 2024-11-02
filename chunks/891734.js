@@ -15,21 +15,21 @@ function o(e, t) {
         u = n.rootBoundary,
         c = n.padding,
         d = n.flipVariations,
-        _ = n.allowedAutoPlacements,
-        E = void 0 === _ ? i.Ct : _,
-        f = (0, r.Z)(o),
-        h = f
+        f = n.allowedAutoPlacements,
+        _ = void 0 === f ? i.Ct : f,
+        h = (0, r.Z)(o),
+        p = h
             ? d
                 ? i.bw
                 : i.bw.filter(function (e) {
-                      return (0, r.Z)(e) === f;
+                      return (0, r.Z)(e) === h;
                   })
             : i.mv,
-        p = h.filter(function (e) {
-            return E.indexOf(e) >= 0;
+        m = p.filter(function (e) {
+            return _.indexOf(e) >= 0;
         });
-    0 === p.length && (p = h);
-    var I = p.reduce(function (t, n) {
+    0 === m.length && (m = p);
+    var g = m.reduce(function (t, n) {
         return (
             (t[n] = (0, a.Z)(e, {
                 placement: n,
@@ -40,7 +40,7 @@ function o(e, t) {
             t
         );
     }, {});
-    return Object.keys(I).sort(function (e, t) {
-        return I[e] - I[t];
+    return Object.keys(g).sort(function (e, t) {
+        return g[e] - g[t];
     });
 }

@@ -25,10 +25,10 @@ function d() {
         [n, r, i] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [a.Z, s.Z, o.ZP],
         c = n.paymentSourceIds,
         d = n.defaultPaymentSourceId,
-        _ = r.isLoadedForSKUs(t),
-        E = null === (e = i.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.paymentSourceId;
-    if (null != E && !r.hasPaymentSourceForSKUIds(E, t)) return u('subscription payment source '.concat(E, ' not loaded for ').concat(t)), !1;
+        f = r.isLoadedForSKUs(t),
+        _ = null === (e = i.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.paymentSourceId;
+    if (null != _ && !r.hasPaymentSourceForSKUIds(_, t)) return u('subscription payment source '.concat(_, ' not loaded for ').concat(t)), !1;
     if (null != d && !r.hasPaymentSourceForSKUIds(d, t)) return u('default payment source '.concat(d, ' not loaded for ').concat(t)), !1;
     for (let e of c) if (!r.hasPaymentSourceForSKUIds(e, t)) return u('payment source '.concat(e, ' not loaded for ').concat(t)), !1;
-    return _;
+    return f;
 }

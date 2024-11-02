@@ -26,11 +26,11 @@ function l(e, t, n) {
         a = i.keys,
         l = i.threshold,
         c = void 0 === l ? s.MATCHES : l,
-        _ = i.baseSort,
-        E = void 0 === _ ? o : _,
-        f = i.sorter;
+        f = i.baseSort,
+        _ = void 0 === f ? o : f,
+        h = i.sorter;
     return (
-        void 0 === f
+        void 0 === h
             ? function (e) {
                   return e.sort(function (e, t) {
                       return (function (e, t, n) {
@@ -39,10 +39,10 @@ function l(e, t, n) {
                               a = t.rank,
                               s = t.keyIndex;
                           return r !== a ? (r > a ? -1 : 1) : i === s ? n(e, t) : i < s ? -1 : 1;
-                      })(e, t, E);
+                      })(e, t, _);
                   });
               }
-            : f
+            : h
     )(
         e.reduce(function (e, i, o) {
             var l = (function (e, t, n, i) {
@@ -75,8 +75,8 @@ function l(e, t, n) {
                                                               r = o;
                                                           }
                                                           if (Array.isArray(r[0])) {
-                                                              var _ = [];
-                                                              return _.concat.apply(_, r);
+                                                              var f = [];
+                                                              return f.concat.apply(f, r);
                                                           }
                                                           return r;
                                                       })(t, e);
@@ -102,17 +102,17 @@ function l(e, t, n) {
                                       l = e.keyIndex,
                                       c = e.keyThreshold,
                                       d = t.itemValue,
-                                      _ = t.attributes,
-                                      E = u(d, n, i),
-                                      f = o,
-                                      h = _.minRanking,
-                                      p = _.maxRanking,
-                                      I = _.threshold;
+                                      f = t.attributes,
+                                      _ = u(d, n, i),
+                                      h = o,
+                                      p = f.minRanking,
+                                      m = f.maxRanking,
+                                      g = f.threshold;
                                   return (
-                                      E < h && E >= s.MATCHES ? (E = h) : E > p && (E = p),
-                                      E > a && ((a = E), (l = r), (c = I), (f = d)),
+                                      _ < p && _ >= s.MATCHES ? (_ = p) : _ > m && (_ = m),
+                                      _ > a && ((a = _), (l = r), (c = g), (h = d)),
                                       {
-                                          rankedValue: f,
+                                          rankedValue: h,
                                           rank: a,
                                           keyIndex: l,
                                           keyThreshold: c
@@ -133,10 +133,10 @@ function l(e, t, n) {
                               keyThreshold: i.threshold
                           };
                 })(i, a, t, n),
-                _ = l.rank,
-                E = l.keyThreshold;
+                f = l.rank,
+                _ = l.keyThreshold;
             return (
-                _ >= (void 0 === E ? c : E) &&
+                f >= (void 0 === _ ? c : _) &&
                     e.push(
                         (0, r.Z)({}, l, {
                             item: i,

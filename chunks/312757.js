@@ -1,76 +1,76 @@
-n.r(t),
-    n.d(t, {
+e.r(n),
+    e.d(n, {
         default: function () {
-            return E;
+            return c;
         }
     });
-var l = n(200651);
-n(192379);
-var i = n(481060),
-    r = n(287734),
-    u = n(313201),
-    d = n(939863),
-    c = n(482241),
-    a = n(554747),
-    s = n(689938),
-    o = n(131462);
-function E(e) {
-    let { channel: t, transitionState: n, onClose: E } = e,
-        _ = (0, u.Dt)(),
-        N = (0, a.qY)(t.id);
-    if (null == N) return null;
-    let f = () => {
-        r.default.selectVoiceChannel(null), E();
+var i = e(200651);
+e(192379);
+var l = e(481060),
+    r = e(287734),
+    d = e(313201),
+    a = e(939863),
+    s = e(482241),
+    u = e(554747),
+    _ = e(388032),
+    E = e(131462);
+function c(t) {
+    let { channel: n, transitionState: e, onClose: c } = t,
+        o = (0, d.Dt)(),
+        I = (0, u.qY)(n.id);
+    if (null == I) return null;
+    let p = () => {
+        r.default.selectVoiceChannel(null), c();
     };
-    return (0, l.jsxs)(i.ModalRoot, {
-        transitionState: n,
-        'aria-labelledby': _,
-        size: i.ModalSize.SMALL,
+    return (0, i.jsxs)(l.ModalRoot, {
+        transitionState: e,
+        'aria-labelledby': o,
+        size: l.ModalSize.SMALL,
         children: [
-            (0, l.jsxs)(i.ModalContent, {
-                className: o.content,
+            (0, i.jsxs)(l.ModalContent, {
+                className: E.content,
                 children: [
-                    (0, l.jsx)(d.Z, {
-                        children: (0, l.jsx)('div', {
-                            className: o.iconBackground,
-                            children: (0, l.jsx)(i.CalendarIcon, {
+                    (0, i.jsx)(a.Z, {
+                        children: (0, i.jsx)('div', {
+                            className: E.iconBackground,
+                            children: (0, i.jsx)(l.CalendarIcon, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 height: 40,
                                 width: 40,
-                                className: o.icon
+                                className: E.icon
                             })
                         })
                     }),
-                    (0, l.jsx)(i.Heading, {
-                        id: _,
+                    (0, i.jsx)(l.Heading, {
+                        id: o,
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
-                        className: o.title,
-                        children: s.Z.Messages.GUILD_EVENT_END_PROMPT_TITLE
+                        className: E.title,
+                        children: _.intl.string(_.t['4Ao8LC'])
                     }),
-                    (0, l.jsx)(i.Text, {
+                    (0, i.jsx)(l.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        className: o.subtitle,
-                        children: s.Z.Messages.GUILD_EVENT_END_PROMPT_BODY
+                        className: E.subtitle,
+                        children: _.intl.string(_.t['0I0B8f'])
                     })
                 ]
             }),
-            (0, l.jsxs)(i.ModalFooter, {
+            (0, i.jsxs)(l.ModalFooter, {
                 children: [
-                    (0, l.jsx)(i.Button, {
-                        color: i.Button.Colors.RED,
+                    (0, i.jsx)(l.Button, {
+                        color: l.Button.Colors.RED,
                         onClick: () => {
-                            c.Z.endEvent(N.id, N.guild_id), f();
+                            s.Z.endEvent(I.id, I.guild_id), p();
                         },
-                        children: s.Z.Messages.GUILD_EVENT_END_PROMPT_CONFIRM
+                        children: _.intl.string(_.t.mjB9pa)
                     }),
-                    (0, l.jsx)(i.Button, {
-                        color: i.Button.Colors.PRIMARY,
-                        className: o.cancelButton,
-                        onClick: f,
-                        children: s.Z.Messages.GUILD_EVENT_END_PROMPT_CANCEL
+                    (0, i.jsx)(l.Button, {
+                        color: l.Button.Colors.PRIMARY,
+                        className: E.cancelButton,
+                        onClick: p,
+                        children: _.intl.string(_.t.P60OAQ)
                     })
                 ]
             })

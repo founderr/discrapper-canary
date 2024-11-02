@@ -3,77 +3,77 @@ n.d(t, {
         return m;
     }
 });
-var l = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(481060),
-    i = n(239091),
+var l = n(481060),
+    a = n(239091),
     r = n(299206),
-    s = n(810568),
-    o = n(168524),
+    o = n(810568),
+    s = n(168524),
     u = n(725119),
     c = n(26033),
-    d = n(689938),
+    d = n(388032),
     h = n(301698);
 function m(e) {
     var t;
-    let { user: n, guildId: m, channel: x, entry: E, onSelect: _, disableGameProfileLinks: v } = e,
-        C = (0, u.Z)({
+    let { user: n, guildId: m, channel: x, entry: v, onSelect: f, disableGameProfileLinks: p } = e,
+        g = (0, u.Z)({
             userId: n.id,
             guildId: m,
             channelId: null == x ? void 0 : x.id
         }),
-        f = (0, r.Z)({
+        C = (0, r.Z)({
             id: n.id,
-            label: d.Z.Messages.COPY_ID_USER
+            label: d.intl.string(d.t['/AXYnJ'])
         }),
-        p = (0, c.dX)(E),
-        T = (0, o.Z)({
+        I = (0, c.dX)(v),
+        P = (0, s.Z)({
             location: 'ContentPopoutContextMenu',
-            applicationId: p && !0 !== v ? (null === (t = E.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
-            source: s.m1.ActivityCardContextMenu,
+            applicationId: I && !0 !== p ? (null === (t = v.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
+            source: o.m1.ActivityCardContextMenu,
             trackEntryPointImpression: !0,
-            sourceUserId: E.author_id
+            sourceUserId: v.author_id
         });
-    return (0, l.jsx)(a.Popout, {
+    return (0, i.jsx)(l.Popout, {
         align: 'top',
         position: 'right',
         disablePointerEvents: !1,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, l.jsx)(a.Menu, {
+            return (0, i.jsx)(l.Menu, {
                 navId: 'content-inventory-context',
                 onClose: () => {
-                    (0, i.Zy)(), t();
+                    (0, a.Zy)(), t();
                 },
-                'aria-label': d.Z.Messages.USER_ACTIONS_MENU_LABEL,
-                onSelect: _,
-                children: (0, l.jsxs)(l.Fragment, {
+                'aria-label': d.intl.string(d.t.liqwPD),
+                onSelect: f,
+                children: (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, l.jsxs)(a.MenuGroup, {
+                        (0, i.jsxs)(l.MenuGroup, {
                             children: [
-                                C,
-                                null != T &&
-                                    (0, l.jsx)(a.MenuItem, {
+                                g,
+                                null != P &&
+                                    (0, i.jsx)(l.MenuItem, {
                                         id: 'game-profile',
-                                        label: d.Z.Messages.GAME_PROFILE,
-                                        action: T
+                                        label: d.intl.string(d.t.f7aVGh),
+                                        action: P
                                     })
                             ]
                         }),
-                        (0, l.jsx)(a.MenuGroup, { children: f })
+                        (0, i.jsx)(l.MenuGroup, { children: C })
                     ]
                 })
             });
         },
         children: (e) =>
-            (0, l.jsx)(a.Tooltip, {
-                text: d.Z.Messages.MORE,
+            (0, i.jsx)(l.Tooltip, {
+                text: d.intl.string(d.t.UKOtz8),
                 children: (t) =>
-                    (0, l.jsx)(a.Clickable, {
+                    (0, i.jsx)(l.Clickable, {
                         ...t,
                         className: h.menuIcon,
                         ...e,
-                        children: (0, l.jsx)(a.MoreHorizontalIcon, {
+                        children: (0, i.jsx)(l.MoreHorizontalIcon, {
                             color: 'currentColor',
                             size: 'custom',
                             width: 16,

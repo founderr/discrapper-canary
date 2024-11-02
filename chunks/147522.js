@@ -7,63 +7,63 @@ n.d(t, {
     n(653041);
 var i = n(200651);
 n(192379);
-var a = n(392711),
-    s = n.n(a),
-    r = n(661824),
-    l = n(289481),
-    o = n(809780),
-    c = n(689938),
+var r = n(392711),
+    l = n.n(r),
+    a = n(661824),
+    o = n(289481),
+    s = n(809780),
+    c = n(388032),
     u = n(258360);
 function d(e, t, n) {
-    let { markChannelRead: a, markGuildRead: d, deleteChannel: _, toggle: E, getNumUnreadChannels: I } = t,
-        m = null;
-    return s().flatMap(e, (e) => {
-        let t = e.sortOrder !== m;
-        m = e.sortOrder;
-        let s = [];
+    let { markChannelRead: r, markGuildRead: d, deleteChannel: m, toggle: f, getNumUnreadChannels: h } = t,
+        p = null;
+    return l().flatMap(e, (e) => {
+        let t = e.sortOrder !== p;
+        p = e.sortOrder;
+        let l = [];
         return (
             t &&
-                (e.hasLoadedAnything && e.sortOrder === o.As.ReallyOldChannel
-                    ? s.push(
+                (e.hasLoadedAnything && e.sortOrder === s.As.ReallyOldChannel
+                    ? l.push(
                           (0, i.jsx)(
-                              r.Z,
+                              a.Z,
                               {
                                   className: u.divider,
                                   contentClassName: u.dividerContent,
-                                  children: c.Z.Messages.UNREADS_OLD_CHANNELS_DIVIDER
+                                  children: c.intl.string(c.t.roBMzs)
                               },
                               'old-divider'
                           )
                       )
                     : e.hasLoadedAnything &&
-                      e.sortOrder === o.As.NoNotifications &&
-                      s.push(
+                      e.sortOrder === s.As.NoNotifications &&
+                      l.push(
                           (0, i.jsx)(
-                              r.Z,
+                              a.Z,
                               {
                                   className: u.divider,
                                   contentClassName: u.dividerContent,
-                                  children: c.Z.Messages.UNREADS_NO_NOTIFICATIONS_DIVIDER
+                                  children: c.intl.string(c.t['2Ys7np'])
                               },
                               'disabled-divider'
                           )
                       )),
-            s.push(
+            l.push(
                 (0, i.jsx)(
-                    l.Z,
+                    o.Z,
                     {
                         channel: e,
-                        markChannelRead: a,
+                        markChannelRead: r,
                         markGuildRead: d,
-                        toggle: E,
-                        deleteChannel: _,
+                        toggle: f,
+                        deleteChannel: m,
                         onJump: n,
-                        getNumUnreadChannels: I
+                        getNumUnreadChannels: h
                     },
                     e.channelId
                 )
             ),
-            s
+            l
         );
     });
 }

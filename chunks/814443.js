@@ -27,8 +27,8 @@ let l = !1,
         affinityUserIds: new Set()
     }),
     d = { ...u },
-    _ = { ...c };
-function E() {
+    f = { ...c };
+function _() {
     let e = new Map(
             d.userAffinities
                 .filter((e) => {
@@ -38,14 +38,14 @@ function E() {
                 .map((e) => [e.user_id, e])
         ),
         t = new Set(e.keys());
-    _ = {
+    f = {
         userAffinitiesMap: e,
         affinityUserIds: t
     };
 }
-class f extends (r = i.ZP.PersistedStore) {
+class h extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(s.Z), null != e && ((d.userAffinities = e.userAffinities), (d.lastFetched = e.lastFetched), E()), this.syncWith([s.Z], E);
+        this.waitFor(s.Z), null != e && ((d.userAffinities = e.userAffinities), (d.lastFetched = e.lastFetched), _()), this.syncWith([s.Z], _);
     }
     needsRefresh() {
         return !l && Date.now() - d.lastFetched > 86400000;
@@ -60,23 +60,23 @@ class f extends (r = i.ZP.PersistedStore) {
         return d.userAffinities;
     }
     getUserAffinitiesMap() {
-        return _.userAffinitiesMap;
+        return f.userAffinitiesMap;
     }
     getUserAffinity(e) {
-        return _.userAffinitiesMap.get(e);
+        return f.userAffinitiesMap.get(e);
     }
     getUserAffinitiesUserIds() {
-        return _.affinityUserIds;
+        return f.affinityUserIds;
     }
 }
-o(f, 'displayName', 'UserAffinitiesStore'),
-    o(f, 'persistKey', 'UserAffinitiesStore'),
-    o(f, 'migrations', [(e) => null]),
-    (t.Z = new f(a.Z, {
+o(h, 'displayName', 'UserAffinitiesStore'),
+    o(h, 'persistKey', 'UserAffinitiesStore'),
+    o(h, 'migrations', [(e) => null]),
+    (t.Z = new h(a.Z, {
         LOAD_USER_AFFINITIES_SUCCESS: function (e) {
             var t;
             let { affinities: n } = e;
-            (d.userAffinities = null !== (t = n.user_affinities) && void 0 !== t ? t : []), (d.lastFetched = Date.now()), E(), (l = !1);
+            (d.userAffinities = null !== (t = n.user_affinities) && void 0 !== t ? t : []), (d.lastFetched = Date.now()), _(), (l = !1);
         },
         LOAD_USER_AFFINITIES: function () {
             l = !0;
@@ -85,6 +85,6 @@ o(f, 'displayName', 'UserAffinitiesStore'),
             l = !1;
         },
         LOGOUT: function () {
-            (d = { ...u }), (_ = { ...c });
+            (d = { ...u }), (f = { ...c });
         }
     }));

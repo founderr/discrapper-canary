@@ -1,17 +1,17 @@
-a.d(e, {
+t.d(e, {
     Z: function () {
-        return u;
+        return a;
     }
 });
-var t = a(200651);
-a(192379);
-var l = a(906732);
-function u(n, e) {
-    return function (a) {
-        let { analyticsLocations: u } = (0, l.ZP)(e);
-        return (0, t.jsx)(l.Gt, {
-            value: u,
-            children: (0, t.jsx)(n, { ...a })
+var l = t(200651);
+t(192379);
+var i = t(906732);
+function a(n, e) {
+    return function (t) {
+        let { analyticsLocations: a } = (0, i.ZP)(e);
+        return (0, l.jsx)(i.Gt, {
+            value: a,
+            children: (0, l.jsx)(n, { ...t })
         });
     };
 }

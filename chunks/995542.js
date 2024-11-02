@@ -6,7 +6,7 @@ var r = n(56135),
     l = n(82075),
     u = r ? r.prototype : void 0,
     c = u ? u.valueOf : void 0;
-e.exports = function (e, t, n, r, u, d, _) {
+e.exports = function (e, t, n, r, u, d, f) {
     switch (n) {
         case '[object DataView]':
             if (e.byteLength != t.byteLength || e.byteOffset != t.byteOffset) break;
@@ -24,15 +24,15 @@ e.exports = function (e, t, n, r, u, d, _) {
         case '[object String]':
             return e == t + '';
         case '[object Map]':
-            var E = o;
+            var _ = o;
         case '[object Set]':
-            var f = 1 & r;
-            if ((E || (E = l), e.size != t.size && !f)) break;
-            var h = _.get(e);
-            if (h) return h == t;
-            (r |= 2), _.set(e, t);
-            var p = s(E(e), E(t), r, u, d, _);
-            return _.delete(e), p;
+            var h = 1 & r;
+            if ((_ || (_ = l), e.size != t.size && !h)) break;
+            var p = f.get(e);
+            if (p) return p == t;
+            (r |= 2), f.set(e, t);
+            var m = s(_(e), _(t), r, u, d, f);
+            return f.delete(e), m;
         case '[object Symbol]':
             if (c) return c.call(e) == c.call(t);
     }

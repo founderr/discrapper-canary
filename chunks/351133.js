@@ -6,8 +6,8 @@ var r = n(911969),
     l = n(456007),
     u = n(581364),
     c = n(689079),
-    d = n(689938);
-let _ = {
+    d = n(388032);
+let f = {
         [r.jw.SUB_COMMAND]: () => ({ success: !1 }),
         [r.jw.SUB_COMMAND_GROUP]: () => ({ success: !1 }),
         [r.jw.STRING]: (e, t, n) => {
@@ -36,33 +36,33 @@ let _ = {
                                   if (void 0 !== t.maxLength && void 0 !== t.minLength && t.minLength === t.maxLength)
                                       return {
                                           success: !1,
-                                          error: n.exactRangeErrorMessage.format({ value: h(t.minLength) })
+                                          error: d.intl.formatToPlainString(n.exactRangeErrorMessage, { value: p(t.minLength) })
                                       };
                                   if (void 0 !== t.maxLength && void 0 !== t.minLength)
                                       return {
                                           success: !1,
-                                          error: n.rangeErrorMessage.format({
-                                              minimum: h(t.minLength),
-                                              maximum: h(t.maxLength)
+                                          error: d.intl.formatToPlainString(n.rangeErrorMessage, {
+                                              minimum: p(t.minLength),
+                                              maximum: p(t.maxLength)
                                           })
                                       };
                                   else if (void 0 !== t.minLength)
                                       return {
                                           success: !1,
-                                          error: n.minErrorMessage.format({ minimum: h(t.minLength) })
+                                          error: d.intl.formatToPlainString(n.minErrorMessage, { minimum: p(t.minLength) })
                                       };
                                   else if (void 0 !== t.maxLength)
                                       return {
                                           success: !1,
-                                          error: n.maxErrorMessage.format({ maximum: h(t.maxLength) })
+                                          error: d.intl.formatToPlainString(n.maxErrorMessage, { maximum: p(t.maxLength) })
                                       };
                               }
                               return { success: !0 };
                           })(l, t, {
-                              exactRangeErrorMessage: d.Z.Messages.COMMAND_VALIDATION_STRING_EXACT_RANGE_ERROR,
-                              rangeErrorMessage: d.Z.Messages.COMMAND_VALIDATION_STRING_RANGE_ERROR,
-                              minErrorMessage: d.Z.Messages.COMMAND_VALIDATION_STRING_MINIMUM_ERROR,
-                              maxErrorMessage: d.Z.Messages.COMMAND_VALIDATION_STRING_MAXIMUM_ERROR
+                              exactRangeErrorMessage: d.t['e+9/SU'],
+                              rangeErrorMessage: d.t.IE1sTk,
+                              minErrorMessage: d.t.rXAFQE,
+                              maxErrorMessage: d.t.ycEPx8
                           })
                         : { success: !0 }
                     : { success: !0 }
@@ -81,7 +81,7 @@ let _ = {
             let s = o.Z.getAutocompleteLastChoices(n, t.name);
             if (null != s && s.map((e) => e.displayName).includes(i)) return { success: !0 };
             let u = Number(l.AS(a.default.locale, i));
-            return !isNaN(u) && Number.isInteger(u) && Number.isSafeInteger(u) ? f(u, t, d.Z.Messages.COMMAND_VALIDATION_NUMBER_RANGE_ERROR, d.Z.Messages.COMMAND_VALIDATION_NUMBER_MINIMUM_ERROR, d.Z.Messages.COMMAND_VALIDATION_NUMBER_MAXIMUM_ERROR) : { success: !1 };
+            return !isNaN(u) && Number.isInteger(u) && Number.isSafeInteger(u) ? h(u, t, d.t['8Y5zsr'], d.t.CyRLmJ, d.t['VD3Q+f']) : { success: !1 };
         },
         [r.jw.NUMBER]: (e, t, n) => {
             if ('text' !== e.type || t.type !== r.jw.NUMBER) return { success: !1 };
@@ -91,7 +91,7 @@ let _ = {
             let s = o.Z.getAutocompleteLastChoices(n, t.name);
             if (null != s && s.map((e) => e.displayName).includes(i)) return { success: !0 };
             let u = Number(l.AS(a.default.locale, i));
-            return isNaN(u) || u > Number.MAX_SAFE_INTEGER || u < Number.MIN_SAFE_INTEGER ? { success: !1 } : f(u, t, d.Z.Messages.COMMAND_VALIDATION_NUMBER_RANGE_ERROR, d.Z.Messages.COMMAND_VALIDATION_NUMBER_MINIMUM_ERROR, d.Z.Messages.COMMAND_VALIDATION_NUMBER_MAXIMUM_ERROR);
+            return isNaN(u) || u > Number.MAX_SAFE_INTEGER || u < Number.MIN_SAFE_INTEGER ? { success: !1 } : h(u, t, d.t['8Y5zsr'], d.t.CyRLmJ, d.t['VD3Q+f']);
         },
         [r.jw.USER]: (e, t, n, r) => {
             if ('text' !== e.type) return { success: 'userMention' === e.type };
@@ -110,7 +110,7 @@ let _ = {
             }
         },
         [r.jw.ROLE]: (e, t, n, r) => {
-            if ('text' !== e.type) return { success: E(e) };
+            if ('text' !== e.type) return { success: _(e) };
             {
                 if ((0, u.BH)(e.text)) return { success: !0 };
                 let t = (0, i.K)(e.text, r, n, { allowUsers: !1 });
@@ -118,11 +118,11 @@ let _ = {
             }
         },
         [r.jw.MENTIONABLE]: (e, t, n, r) => {
-            if ('text' !== e.type) return { success: 'userMention' === e.type || E(e) };
+            if ('text' !== e.type) return { success: 'userMention' === e.type || _(e) };
             {
                 if ((0, u.BH)(e.text)) return { success: !0 };
                 let t = (0, i.K)(e.text, r, n);
-                return { success: null != t && ('userMention' === t.type || E(t)) };
+                return { success: null != t && ('userMention' === t.type || _(t)) };
             }
         },
         [r.jw.ATTACHMENT]: (e, t, n, r, i) => {
@@ -131,31 +131,31 @@ let _ = {
             return { success: null != a && a.filename === e.text };
         }
     },
-    E = (e) => 'roleMention' === e.type || ('textMention' === e.type && '@everyone' === e.text);
-function f(e, t, n, r, i) {
+    _ = (e) => 'roleMention' === e.type || ('textMention' === e.type && '@everyone' === e.text);
+function h(e, t, n, r, i) {
     if ((null != t.minValue && e < t.minValue) || (null != t.maxValue && e > t.maxValue)) {
         if (null != t.maxValue && null != t.minValue)
             return {
                 success: !1,
-                error: n.format({
-                    minimum: h(t.minValue),
-                    maximum: h(t.maxValue)
+                error: d.intl.formatToPlainString(n, {
+                    minimum: p(t.minValue),
+                    maximum: p(t.maxValue)
                 })
             };
         if (null != t.minValue)
             return {
                 success: !1,
-                error: r.format({ minimum: h(t.minValue) })
+                error: d.intl.formatToPlainString(r, { minimum: p(t.minValue) })
             };
         else if (null != t.maxValue)
             return {
                 success: !1,
-                error: i.format({ maximum: h(t.maxValue) })
+                error: d.intl.formatToPlainString(i, { maximum: p(t.maxValue) })
             };
     }
     return { success: !0 };
 }
-function h(e) {
-    return e.toLocaleString(d.Z.getLocale(), { useGrouping: !1 });
+function p(e) {
+    return e.toLocaleString(d.intl.currentLocale, { useGrouping: !1 });
 }
-t.Z = _;
+t.Z = f;

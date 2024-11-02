@@ -9,18 +9,18 @@ var r = n(192379),
     s = n(937889),
     o = n(761910),
     l = n(981631),
-    u = n(689938),
+    u = n(388032),
     c = n(170714);
 function d(e, t) {
-    let { hideSimpleEmbedContent: n, formatInline: d = !1, noStyleAndInteraction: _ = !1, isInteracting: E = !1, allowHeading: f = !1, allowList: h = !1, allowLinks: p = !1, allowDevLinks: I = !1, allowSubtext: m = !1, previewLinkTarget: T = !1, viewingChannelId: S } = t,
-        g = (0, i.p)();
+    let { hideSimpleEmbedContent: n, formatInline: d = !1, noStyleAndInteraction: f = !1, isInteracting: _ = !1, allowHeading: h = !1, allowList: p = !1, allowLinks: m = !1, allowDevLinks: g = !1, allowSubtext: E = !1, previewLinkTarget: v = !1, viewingChannelId: I } = t,
+        S = (0, i.p)();
     return r.useMemo(
         () =>
             null != e.customRenderedContent
                 ? e.customRenderedContent
                 : e.isUnsupported
                   ? {
-                        content: u.Z.Messages.MESSAGE_UNSUPPORTED,
+                        content: u.intl.string(u.t.sWi5ER),
                         hasSpoilerEmbeds: !1
                     }
                   : (e.isCommandType() && 0 === e.content.length) || e.hasFlag(l.iLy.LOADING)
@@ -34,17 +34,17 @@ function d(e, t) {
                       : (0, s.ZP)(e, {
                             hideSimpleEmbedContent: n,
                             formatInline: d,
-                            noStyleAndInteraction: _,
-                            isInteracting: E,
-                            allowHeading: f,
-                            allowList: h,
-                            allowLinks: p,
-                            allowSubtext: m,
-                            allowDevLinks: I,
-                            previewLinkTarget: T,
-                            shouldFilterKeywords: g,
-                            viewingChannelId: S
+                            noStyleAndInteraction: f,
+                            isInteracting: _,
+                            allowHeading: h,
+                            allowList: p,
+                            allowLinks: m,
+                            allowSubtext: E,
+                            allowDevLinks: g,
+                            previewLinkTarget: v,
+                            shouldFilterKeywords: S,
+                            viewingChannelId: I
                         }),
-        [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, n, d, _, E, f, h, p, T, m, g]
+        [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, n, d, f, _, h, p, m, v, E, S]
     );
 }

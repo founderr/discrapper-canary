@@ -1,57 +1,57 @@
-t.r(a),
-    t.d(a, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return u;
+            return h;
         }
     });
-var n = t(200651),
-    s = t(192379),
-    o = t(481060),
-    r = t(313201),
-    c = t(626135),
-    d = t(981631),
-    i = t(689938),
-    l = t(817257),
-    C = t(963705);
-function u(e) {
-    let { source: a, onClose: t, transitionState: u } = e;
-    s.useEffect(() => {
-        c.default.track(d.rMx.OPEN_MODAL, {
-            type: d.jXE.CONTACT_SYNC_NC_MODAL,
-            source: { location: a }
+var a = n(200651),
+    r = n(192379),
+    s = n(481060),
+    o = n(313201),
+    c = n(626135),
+    i = n(981631),
+    d = n(388032),
+    l = n(817257),
+    u = n(963705);
+function h(e) {
+    let { source: t, onClose: n, transitionState: h } = e;
+    r.useEffect(() => {
+        c.default.track(i.rMx.OPEN_MODAL, {
+            type: i.jXE.CONTACT_SYNC_NC_MODAL,
+            source: { location: t }
         });
-    }, [a]);
-    let N = (0, r.Dt)();
-    return (0, n.jsxs)(o.ModalRoot, {
+    }, [t]);
+    let x = (0, o.Dt)();
+    return (0, a.jsxs)(s.ModalRoot, {
         className: l.contactSync,
-        transitionState: u,
-        'aria-labelledby': N,
+        transitionState: h,
+        'aria-labelledby': x,
         children: [
-            (0, n.jsx)(o.ModalCloseButton, {
-                onClick: t,
+            (0, a.jsx)(s.ModalCloseButton, {
+                onClick: n,
                 className: l.modalCloseButton
             }),
-            (0, n.jsxs)('div', {
+            (0, a.jsxs)('div', {
                 className: l.inner,
                 children: [
-                    (0, n.jsx)(o.Heading, {
+                    (0, a.jsx)(s.Heading, {
                         variant: 'heading-xl/extrabold',
                         color: 'header-primary',
                         className: l.header,
-                        children: i.Z.Messages.NOTIFICATION_CENTER_CONTACT_SYNC_TITLE
+                        children: d.intl.string(d.t.fdR8HR)
                     }),
-                    (0, n.jsx)(o.Text, {
+                    (0, a.jsx)(s.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: i.Z.Messages.NOTIFICATION_CENTER_CONTACT_SYNC_BODY
+                        children: d.intl.string(d.t.JXyNq6)
                     })
                 ]
             }),
-            (0, n.jsx)('div', {
+            (0, a.jsx)('div', {
                 className: l.container,
-                children: (0, n.jsx)('img', {
+                children: (0, a.jsx)('img', {
                     alt: '',
-                    src: C
+                    src: u
                 })
             })
         ]

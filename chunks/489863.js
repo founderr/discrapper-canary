@@ -3,25 +3,25 @@ n.d(t, {
         return c;
     },
     UR: function () {
-        return _;
+        return f;
     },
     Ww: function () {
         return d;
     },
     c$: function () {
-        return E;
+        return _;
     },
     g: function () {
         return u;
     },
     i2: function () {
-        return p;
+        return m;
     },
     tR: function () {
-        return h;
+        return p;
     },
     tV: function () {
-        return f;
+        return h;
     }
 });
 var r = n(860911),
@@ -38,7 +38,7 @@ function u(e) {
     });
 }
 async function c(e) {
-    let { authorize: t, clientId: n, scopes: r, responseType: a, redirectUri: u, codeChallenge: c, codeChallengeMethod: d, state: _, permissions: E, guildId: f, channelId: h, integrationType: p, nonce: I } = e;
+    let { authorize: t, clientId: n, scopes: r, responseType: a, redirectUri: u, codeChallenge: c, codeChallengeMethod: d, state: f, permissions: _, guildId: h, channelId: p, integrationType: m, nonce: g } = e;
     return (
         await i.tn.post({
             url: l.ANM.OAUTH2_AUTHORIZE,
@@ -49,16 +49,16 @@ async function c(e) {
                 code_challenge: c,
                 code_challenge_method: d,
                 scope: r.join(' '),
-                state: _,
-                nonce: I
+                state: f,
+                nonce: g
             },
             body: {
-                guild_id: f,
-                webhook_channel_id: null != f && null != h ? h : void 0,
-                channel_id: null == f && null != h ? h : void 0,
-                permissions: E,
+                guild_id: h,
+                webhook_channel_id: null != h && null != p ? p : void 0,
+                channel_id: null == h && null != p ? p : void 0,
+                permissions: _,
                 authorize: t,
-                integration_type: p,
+                integration_type: m,
                 location_context: (function () {
                     var e, t, n;
                     let r = o.Z.getChannelId(),
@@ -75,7 +75,7 @@ async function c(e) {
     ).body;
 }
 async function d(e) {
-    let { clientId: t, scopes: n, responseType: r, redirectUri: a, codeChallenge: s, codeChallengeMethod: o, state: u, integrationType: c, nonce: d, signal: _ } = e;
+    let { clientId: t, scopes: n, responseType: r, redirectUri: a, codeChallenge: s, codeChallengeMethod: o, state: u, integrationType: c, nonce: d, signal: f } = e;
     return (
         await i.tn.get({
             url: l.ANM.OAUTH2_AUTHORIZE,
@@ -90,13 +90,13 @@ async function d(e) {
                 integration_type: c,
                 nonce: d
             },
-            signal: _,
+            signal: f,
             retries: 3,
             oldFormErrors: !0
         })
     ).body;
 }
-async function _(e) {
+async function f(e) {
     let { body: t } = await i.tn.get({
         url: l.ANM.OAUTH2_AUTHORIZE_WEBHOOK_CHANNELS,
         query: { guild_id: e },
@@ -104,16 +104,16 @@ async function _(e) {
     });
     return t;
 }
-function E(e) {
+function _(e) {
     a.Z.logout((0, r.Ui)(e.pathname + e.search, !1));
 }
-async function f(e) {
+async function h(e) {
     return await i.tn.post({
         url: l.ANM.OAUTH2_DEVICE_VERIFY,
         body: { user_code: e }
     });
 }
-async function h(e, t) {
+async function p(e, t) {
     return await i.tn.post({
         url: l.ANM.OAUTH2_DEVICE_FINISH,
         body: {
@@ -122,7 +122,7 @@ async function h(e, t) {
         }
     });
 }
-async function p(e, t, n) {
+async function m(e, t, n) {
     return await i.tn.post({
         url: l.ANM.OAUTH2_DEVICE_FINISH,
         body: {

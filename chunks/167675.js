@@ -1,35 +1,35 @@
-t.d(n, {
+e.d(n, {
     Z: function () {
-        return c;
+        return E;
     }
 }),
-    t(47120);
-var i = t(200651);
-t(192379);
-var r = t(442837),
-    o = t(481060),
-    a = t(740492),
-    u = t(27584),
-    s = t(295510),
-    l = t(394059),
-    d = t(65154),
-    E = t(689938);
-function c(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.Yn.DEFAULT,
-        [t, c, _] = (0, u.Z)(e, n),
+    e(47120);
+var i = e(200651);
+e(192379);
+var r = e(442837),
+    o = e(481060),
+    a = e(740492),
+    u = e(27584),
+    l = e(295510),
+    d = e(394059),
+    s = e(65154),
+    c = e(388032);
+function E(t) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.Yn.DEFAULT,
+        [e, E, f] = (0, u.Z)(t, n),
         I = (0, r.e7)([a.ZP], () => a.ZP.disableHideSelfStreamAndVideoConfirmationAlert);
-    return t
+    return e
         ? (0, i.jsx)(o.MenuCheckboxItem, {
               id: 'self-video-hide',
-              label: E.Z.Messages.SHOW_SELF_VIDEO,
-              checked: !c,
+              label: c.intl.string(c.t.MH8ESU),
+              checked: !E,
               action: () => {
-                  if (I || c) return _(!c);
-                  (0, o.openModal)((e) =>
-                      (0, i.jsx)(s.Z, {
-                          ...e,
-                          type: l.K.VIDEO,
-                          onConfirm: () => _(!c)
+                  if (I || E) return f(!E);
+                  (0, o.openModal)((t) =>
+                      (0, i.jsx)(l.Z, {
+                          ...t,
+                          type: d.K.VIDEO,
+                          onConfirm: () => f(!E)
                       })
                   );
               }

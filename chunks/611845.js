@@ -5,37 +5,37 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    a = n.n(s),
-    l = n(481060),
-    r = n(170671),
+var l = n(120356),
+    r = n.n(l),
+    a = n(481060),
+    s = n(170671),
     o = n(738672),
-    c = n(689938),
+    c = n(388032),
     u = n(684365),
     d = n(946790);
 function h(e) {
     let { hidden: t, onDismiss: n } = e;
     return (0, i.jsxs)('div', {
-        className: a()(u.demoCta, { [u.hidden]: t }),
+        className: r()(u.demoCta, { [u.hidden]: t }),
         children: [
             (0, i.jsxs)('div', {
                 children: [
                     (0, i.jsx)('div', {
                         className: u.wumpusContainer,
-                        children: (0, i.jsx)(l.Image, {
+                        children: (0, i.jsx)(a.Image, {
                             src: d,
                             width: 72,
                             height: 52,
                             zoomable: !1
                         })
                     }),
-                    (0, i.jsx)(l.Button, {
-                        'aria-label': c.Z.Messages.CLOSE,
-                        look: l.Button.Looks.BLANK,
-                        size: l.Button.Sizes.NONE,
+                    (0, i.jsx)(a.Button, {
+                        'aria-label': c.intl.string(c.t.cpT0Cg),
+                        look: a.Button.Looks.BLANK,
+                        size: a.Button.Sizes.NONE,
                         onClick: () => n(),
                         className: u.closeButton,
-                        children: (0, i.jsx)(l.XSmallIcon, {
+                        children: (0, i.jsx)(a.XSmallIcon, {
                             size: 'md',
                             className: u.closeIcon,
                             color: 'white'
@@ -45,20 +45,20 @@ function h(e) {
             }),
             (0, i.jsx)('div', {
                 className: u.textContainer,
-                children: (0, i.jsx)(l.Text, {
+                children: (0, i.jsx)(a.Text, {
                     variant: 'text-md/semibold',
                     color: 'always-white',
-                    children: c.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_UPSELL_TOOLTIP
+                    children: c.intl.string(c.t.TguaU1)
                 })
             }),
             (0, i.jsxs)('div', {
                 className: u.nitroTextAndBadge,
                 children: [
-                    (0, i.jsx)(r.Z, { isSelected: !0 }),
-                    (0, i.jsx)(l.Text, {
+                    (0, i.jsx)(s.Z, { isSelected: !0 }),
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-xs/medium',
                         color: 'always-white',
-                        children: c.Z.Messages.POWERED_BY_NITRO
+                        children: c.intl.string(c.t['BMw+7O'])
                     })
                 ]
             })

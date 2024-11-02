@@ -27,7 +27,7 @@ async function d(e) {
             application_id: e.application.id
         });
 }
-class _ extends r.Z {
+class f extends r.Z {
     constructor(...e) {
         super(...e),
             u(this, 'iframeModalOpenTimeMs', void 0),
@@ -67,4 +67,4 @@ class _ extends r.Z {
             });
     }
 }
-t.Z = new _();
+t.Z = new f();

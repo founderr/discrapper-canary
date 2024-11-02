@@ -1,9 +1,9 @@
 n.d(t, {
     oW: function () {
-        return f;
+        return h;
     },
     p: function () {
-        return E;
+        return _;
     }
 });
 var r = n(381499),
@@ -15,13 +15,13 @@ var r = n(381499),
     u = n(626135),
     c = n(468788),
     d = n(981631),
-    _ = n(689938);
-function E() {
+    f = n(388032);
+function _() {
     let e = s.QZ.useSetting(),
         t = s.fv.useSetting();
     return e && ('0' === t || new Date(Number(t)).getTime() - new Date().getTime() > 0);
 }
-function f(e, t) {
+function h(e, t) {
     let n = s.QZ.getSetting();
     o.hW.updateAsync(
         'notifications',
@@ -39,10 +39,10 @@ function f(e, t) {
             e &&
             null == t &&
             i.Z.show({
-                title: _.Z.Messages.QUIET_MODE_WHILE_DND_UPSELL_TITLE,
-                body: _.Z.Messages.QUIET_MODE_WHILE_DND_UPSELL_BODY,
-                cancelText: _.Z.Messages.NO_THANKS,
-                confirmText: _.Z.Messages.OKAY,
+                title: f.intl.string(f.t['B+cbLS']),
+                body: f.intl.string(f.t.CYVgLC),
+                cancelText: f.intl.string(f.t.f3Pet7),
+                confirmText: f.intl.string(f.t.BddRzc),
                 onConfirm: () => {
                     (0, a.Z)(d.Skl.ONLINE);
                 }

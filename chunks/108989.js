@@ -6,10 +6,10 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(703533);
-let r = [n(123353)],
-    s = ['#FFFFFF'],
-    o = 1000 / 60,
+    r = n(703533);
+let a = [n(123353)],
+    o = ['#FFFFFF'],
+    s = 1000 / 60,
     u = {
         velocity: {
             type: 'static-random',
@@ -60,18 +60,18 @@ let r = [n(123353)],
         }
     };
 function c(e) {
-    let { className: t, firing: n = !0, wind: c = 2, sprites: d = r, spriteColors: _ = s, confettiConfig: f } = e,
-        [C, L] = l.useState(null),
-        [m, T] = l.useState(null),
-        E = (0, a.uR)(m, C),
-        S = l.useMemo(() => new a.qA({ wind: c }), [c]),
-        p = l.useCallback(() => {
-            let e = null == m ? void 0 : m.getCanvas();
+    let { className: t, firing: n = !0, wind: c = 2, sprites: d = a, spriteColors: f = o, confettiConfig: C } = e,
+        [_, m] = l.useState(null),
+        [L, S] = l.useState(null),
+        p = (0, r.uR)(L, _),
+        T = l.useMemo(() => new r.qA({ wind: c }), [c]),
+        E = l.useCallback(() => {
+            let e = null == L ? void 0 : L.getCanvas();
             if (null == e) return;
             let t = e.getBoundingClientRect();
-            E.createConfetti({
+            p.createConfetti({
                 ...u,
-                ...f,
+                ...C,
                 position: {
                     type: 'static-random',
                     minValue: {
@@ -84,22 +84,22 @@ function c(e) {
                     }
                 }
             });
-        }, [E, m, f]);
+        }, [p, L, C]);
     return (
         l.useEffect(() => {
-            let e = n ? setInterval(p, o) : null;
+            let e = n ? setInterval(E, s) : null;
             return () => clearInterval(e);
-        }, [n, p]),
+        }, [n, E]),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(a.O_, {
-                    ref: T,
+                (0, i.jsx)(r.O_, {
+                    ref: S,
                     className: t,
-                    environment: S
+                    environment: T
                 }),
-                (0, i.jsx)(a.Ji, {
-                    ref: L,
-                    colors: _,
+                (0, i.jsx)(r.Ji, {
+                    ref: m,
+                    colors: f,
                     sprites: d,
                     spriteWidth: 6,
                     spriteHeight: 6

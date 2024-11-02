@@ -1,28 +1,28 @@
-n.d(e, {
+e.d(n, {
     Z: function () {
-        return o;
+        return a;
     }
 }),
-    n(47120);
-var a = n(192379),
-    s = n(881052);
-function o(t) {
-    let { onSubmit: e, onClose: n } = t,
-        [o, i] = a.useState(!1),
-        [r, c] = a.useState(null),
-        l = a.useCallback(async () => {
-            if (!o) {
-                i(!0), c(null);
+    e(47120);
+var i = e(192379),
+    o = e(881052);
+function a(t) {
+    let { onSubmit: n, onClose: e } = t,
+        [a, s] = i.useState(!1),
+        [r, l] = i.useState(null),
+        c = i.useCallback(async () => {
+            if (!a) {
+                s(!0), l(null);
                 try {
-                    await e(), n();
+                    await n(), e();
                 } catch (t) {
-                    c(new s.Hx(t).getAnyErrorMessage()), i(!1);
+                    l(new o.Hx(t).getAnyErrorMessage()), s(!1);
                 }
             }
-        }, [n, e, o]);
+        }, [e, n, a]);
     return {
-        submitting: o,
+        submitting: a,
         errorMessage: r,
-        onSubmit: l
+        onSubmit: c
     };
 }

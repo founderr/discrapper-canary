@@ -8,68 +8,68 @@ var r = n(200651),
     u = n(355467),
     c = n(100527),
     d = n(906732),
-    _ = n(28546),
-    E = n(357355),
-    f = n(98278),
-    h = n(48125),
-    p = n(104494),
-    I = n(639119),
-    m = n(165583),
-    T = n(197115),
-    S = n(631771),
-    g = n(609218),
-    A = n(210887),
-    N = n(626135),
-    R = n(176354),
-    O = n(74538),
-    v = n(543241),
+    f = n(28546),
+    _ = n(357355),
+    h = n(98278),
+    p = n(48125),
+    m = n(104494),
+    g = n(639119),
+    E = n(165583),
+    v = n(197115),
+    I = n(631771),
+    S = n(609218),
+    T = n(210887),
+    b = n(626135),
+    y = n(176354),
+    A = n(74538),
+    N = n(543241),
     C = n(149203),
-    L = n(981631),
-    D = n(185923),
-    y = n(474936),
-    b = n(689938),
-    M = n(145834);
+    R = n(981631),
+    O = n(185923),
+    D = n(474936),
+    L = n(388032),
+    x = n(145834);
 t.Z = (e) => {
     var t, a;
-    let P,
-        { onLearnMore: U, onClose: w, channel: x, emojiDescriptor: G, pickerIntention: k, analyticsLocation: B, containerContext: F } = e,
-        V = (0, o.e7)([A.Z], () => A.Z.theme) === L.BRd.LIGHT ? 'light' : 'dark',
-        [H, Z] = i.useState(!1),
-        Y = () => {
-            (0, v.A3)(x), (0, f.z)(), U();
+    let w,
+        { onLearnMore: M, onClose: P, channel: k, emojiDescriptor: U, pickerIntention: G, analyticsLocation: B, containerContext: Z } = e,
+        F = (0, o.e7)([T.Z], () => T.Z.theme) === R.BRd.LIGHT ? 'light' : 'dark',
+        [V, j] = i.useState(!1),
+        H = () => {
+            (0, N.A3)(k), (0, h.z)(), M();
         },
-        j = n(577391)('./img_premium_emoji_'.concat(V, '.svg')),
-        W = 'https://cdn.discordapp.com/assets/premium/roadblocks/emoji_'.concat(V, '.png'),
-        K = (0, I.N)(),
-        z = (0, p.Ng)(),
+        Y = n(577391)('./img_premium_emoji_'.concat(F, '.svg')),
+        W = 'https://cdn.discordapp.com/assets/premium/roadblocks/emoji_'.concat(F, '.png'),
+        K = (0, g.N)(),
+        z = (0, m.Ng)(),
         q = null != K || null != z,
-        Q = (0, _.Iu)((e) => e.searchQuery),
+        Q = (0, f.Iu)((e) => e.searchQuery),
         { analyticsLocations: X } = (0, d.ZP)(c.Z.EMOJI_PICKER),
-        $ = S.Gi.useExperiment(
+        J = I.Gi.useExperiment(
             { location: 'Premium Emoji Roadblock' },
             {
                 autoTrackExposure: !q,
                 disable: q
             }
         ),
-        J = h.Z.useExperiment(
+        $ = p.Z.useExperiment(
             { location: 'EmojiPickerPremiumUpsell' },
             {
                 autoTrackExposure: null != K,
                 disable: null == K
             }
         ),
-        ee = $.enabled || J.enabled,
-        et = $.addSocialProof;
-    P = k === D.Hz.REACTION ? y.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED : null == G ? y.cd.EMOJI_PICKER_FLOATING_UPSELL : G.subCategory === C.t0.TOP_GUILD_EMOJI ? y.cd.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : G.subCategory === C.t0.NEWLY_ADDED_EMOJI ? y.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : y.cd.EMOJI_PICKER_EMOJI_CLICKED;
-    let en = null != G ? G.emoji : void 0,
+        ee = J.enabled || $.enabled,
+        et = J.addSocialProof;
+    w = G === O.Hz.REACTION ? D.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED : null == U ? D.cd.EMOJI_PICKER_FLOATING_UPSELL : U.subCategory === C.t0.TOP_GUILD_EMOJI ? D.cd.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : U.subCategory === C.t0.NEWLY_ADDED_EMOJI ? D.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : D.cd.EMOJI_PICKER_EMOJI_CLICKED;
+    let en = null != U ? U.emoji : void 0,
         er = null != en && en.animated,
-        ei = null != en && !R.ZP.isInternalEmojiForGuildId(en, null == x ? void 0 : x.getGuildId()),
-        ea = null != en ? L.qAy.EMOJI : L.qAy.EMOJI_PICKER_FLOATING_UPSELL;
+        ei = null != en && !y.ZP.isInternalEmojiForGuildId(en, null == k ? void 0 : k.getGuildId()),
+        ea = null != en ? R.qAy.EMOJI : R.qAy.EMOJI_PICKER_FLOATING_UPSELL;
     i.useEffect(() => {
         !ee &&
-            N.default.track(L.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: P,
+            b.default.track(R.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: w,
                 is_animated: er,
                 is_external: ei,
                 has_search_query: null != Q && '' !== Q,
@@ -78,94 +78,94 @@ t.Z = (e) => {
                     object: ea
                 },
                 location_stack: X,
-                sku_id: (0, O.Wz)(O.ZP.getSkuIdForPremiumType(y.p9.TIER_2))
+                sku_id: (0, A.Wz)(A.ZP.getSkuIdForPremiumType(D.p9.TIER_2))
             });
-    }, [B, X, Q, er, ei, P, ea, ee]);
-    let es = (0, o.e7)([E.Z], () => E.Z.affinities),
-        eo = (0, o.e7)([E.Z], () => E.Z.hasFetched);
+    }, [B, X, Q, er, ei, w, ea, ee]);
+    let es = (0, o.e7)([_.Z], () => _.Z.affinities),
+        eo = (0, o.e7)([_.Z], () => _.Z.hasFetched);
     i.useEffect(() => {
         !eo && u.MH();
     }, [eo]);
     let el = es.length > 1 && et;
     return ee
-        ? (0, r.jsx)(g.Z, {
-              containerContext: F,
+        ? (0, r.jsx)(S.Z, {
+              containerContext: Z,
               image: {
                   url: W,
                   width: 220,
                   height: 132
               },
-              title: b.Z.Messages.EMOJI_PICKER_PREMIUM_UPSELL_TITLE_V2,
-              description: b.Z.Messages.EMOJI_PICKER_PREMIUM_UPSELL_DESCRIPTION_V2,
+              title: L.intl.string(L.t['0+11FB']),
+              description: L.intl.string(L.t.dURIzc),
               enableSocialProof: el,
-              analyticsLocationSection: L.jXE.EMOJI_UPSELL_POPOUT,
-              onClose: w,
+              analyticsLocationSection: R.jXE.EMOJI_UPSELL_POPOUT,
+              onClose: P,
               upsellViewedTrackingData: {
-                  type: P,
+                  type: w,
                   is_external: ei,
                   location: {
                       ...B,
                       object: ea
                   },
                   location_stack: X,
-                  sku_id: (0, O.Wz)(O.ZP.getSkuIdForPremiumType(y.p9.TIER_2)),
+                  sku_id: (0, A.Wz)(A.ZP.getSkuIdForPremiumType(D.p9.TIER_2)),
                   has_search_query: null != Q && '' !== Q,
                   is_animated: er
               }
           })
         : (0, r.jsxs)('div', {
-              className: s()(M.premiumPromo, { [M.unifyTrialUpsell]: q }),
+              className: s()(x.premiumPromo, { [x.unifyTrialUpsell]: q }),
               children: [
                   (0, r.jsx)(l.Clickable, {
-                      className: M.premiumPromoClose,
-                      onClick: w,
-                      children: b.Z.Messages.CLOSE
+                      className: x.premiumPromoClose,
+                      onClick: P,
+                      children: L.intl.string(L.t.cpT0Cg)
                   }),
                   (0, r.jsxs)(r.Fragment, {
                       children: [
                           q
-                              ? (0, r.jsx)(m.ZP, {
-                                    type: y.cd.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
-                                    subscriptionTier: null !== (a = null == K ? void 0 : null === (t = K.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== a ? a : y.Si.TIER_2,
-                                    onClose: w,
+                              ? (0, r.jsx)(E.ZP, {
+                                    type: D.cd.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
+                                    subscriptionTier: null !== (a = null == K ? void 0 : null === (t = K.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== a ? a : D.Si.TIER_2,
+                                    onClose: P,
                                     trialOffer: K,
                                     discountOffer: z,
-                                    children: b.Z.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({ onClick: Y })
+                                    children: L.intl.format(L.t.se13Fh, { onClick: H })
                                 })
                               : (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)('img', {
                                             alt: '',
-                                            className: M.premiumPromoImage,
-                                            src: j
+                                            className: x.premiumPromoImage,
+                                            src: Y
                                         }),
                                         (0, r.jsx)('div', {
-                                            className: M.premiumPromoTitle,
-                                            children: b.Z.Messages.PREMIUM_PROMO_TITLE_SEARCH_UPSELL
+                                            className: x.premiumPromoTitle,
+                                            children: L.intl.string(L.t['1SsvhY'])
                                         }),
                                         (0, r.jsx)('div', {
-                                            className: M.premiumPromoDescription,
-                                            children: b.Z.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({ onClick: Y })
+                                            className: x.premiumPromoDescription,
+                                            children: L.intl.format(L.t.se13Fh, { onClick: H })
                                         })
                                     ]
                                 }),
                           !q &&
-                              (0, r.jsx)(T.Z, {
-                                  subscriptionTier: y.Si.TIER_2,
-                                  submitting: H,
+                              (0, r.jsx)(v.Z, {
+                                  subscriptionTier: D.Si.TIER_2,
+                                  submitting: V,
                                   premiumModalAnalyticsLocation: {
-                                      section: L.jXE.EMOJI_PICKER_POPOUT,
-                                      object: L.qAy.BUTTON_CTA
+                                      section: R.jXE.EMOJI_PICKER_POPOUT,
+                                      object: R.qAy.BUTTON_CTA
                                   },
                                   size: l.Button.Sizes.SMALL,
                                   color: l.Button.Colors.GREEN,
                                   onClick: () => {
-                                      Z(!0);
+                                      j(!0);
                                   },
                                   onSubscribeModalClose: (e) => {
-                                      Z(!1), e && w();
+                                      j(!1), e && P();
                                   },
-                                  buttonText: q ? b.Z.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : b.Z.Messages.PREMIUM_REQUIRED_GET_NITRO
+                                  buttonText: q ? L.intl.string(L.t['Gd/XHB']) : L.intl.string(L.t.P3etAg)
                               })
                       ]
                   })

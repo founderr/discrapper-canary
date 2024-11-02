@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     },
     q: function () {
-        return f;
+        return h;
     }
 }),
     n(47120);
@@ -17,35 +17,35 @@ var i = n(442837),
     u = n(944486),
     c = n(585483),
     d = n(51144),
-    _ = n(981631),
-    E = n(689938);
-function f(e, t) {
+    f = n(981631),
+    _ = n(388032);
+function h(e, t) {
     let { id: n } = e,
         r = '@'.concat(d.ZP.getUserTag(e, { decoration: 'never' }));
-    c.S.dispatchToLastSubscribed(_.CkL.INSERT_TEXT, {
+    c.S.dispatchToLastSubscribed(f.CkL.INSERT_TEXT, {
         plainText: r,
         rawText: '<@'.concat(n, '>')
     }),
         null != t && s.Z.startTyping(t);
 }
-function h(e, t, n) {
+function p(e, t, n) {
     let [s, c] = (0, i.Wu)(
             [u.Z, o.Z, l.Z],
             () => {
                 let e = u.Z.getChannelId(t),
                     n = o.Z.getChannel(e);
-                return [e, null != n && (n.isMultiUserDM() || l.Z.can(_.Plq.SEND_MESSAGES, n))];
+                return [e, null != n && (n.isMultiUserDM() || l.Z.can(f.Plq.SEND_MESSAGES, n))];
             },
             [t]
         ),
-        d = n === _.IlC.POPOUT;
+        d = n === f.IlC.POPOUT;
     return !c || d
         ? null
         : (0, r.jsx)(a.MenuItem, {
               id: 'mention',
-              label: E.Z.Messages.MENTION,
+              label: _.intl.string(_.t.P8tvKC),
               action: function () {
-                  f(e, s);
+                  h(e, s);
               }
           });
 }

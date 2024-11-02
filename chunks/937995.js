@@ -36,14 +36,14 @@ function l(e) {
         ),
         [n]
     );
-    let _ = i.useCallback(
+    let f = i.useCallback(
             (e) => {
                 var t;
                 u(!1), c.current.add(e), null === (t = d.current) || void 0 === t || t.cancel();
             },
             [c, d, u]
         ),
-        E = i.useCallback(
+        _ = i.useCallback(
             (e) => {
                 if ((c.current.delete(e), 0 === c.current.size)) {
                     var t;
@@ -52,32 +52,32 @@ function l(e) {
             },
             [c, d]
         ),
-        f = i.useCallback(() => {
+        h = i.useCallback(() => {
             if ((u(!1), 0 === c.current.size)) {
                 var e;
                 null === (e = d.current) || void 0 === e || e.delay();
             }
         }, [c, d, u]),
-        h = i.useCallback(() => {
+        p = i.useCallback(() => {
             var e;
             if (!(c.current.size > 0)) null === (e = d.current) || void 0 === e || e.cancel(), u(!0);
         }, [d, u]),
-        p = i.useMemo(
+        m = i.useMemo(
             () => ({
-                onAllowIdle: E,
-                onPreventIdle: _,
-                onActive: f,
-                onForceIdle: h
+                onAllowIdle: _,
+                onPreventIdle: f,
+                onActive: h,
+                onForceIdle: p
             }),
-            [E, _, f, h]
+            [_, f, h, p]
         );
     return (0, r.jsx)(o.Provider, {
         value: l,
         children: (0, r.jsx)(s.Provider, {
-            value: p,
+            value: m,
             children: t({
                 idle: l,
-                ...p
+                ...m
             })
         })
     });

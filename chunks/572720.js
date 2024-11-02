@@ -1,10 +1,10 @@
-a.d(t, {
+n.d(t, {
     l: function () {
-        return s;
+        return i;
     }
 });
-var l = a(192379),
-    n = a(579806);
-function s(e) {
-    return (0, l.useMemo)(() => (null == n.Z.clips.getClipProtocolURLFromPath ? null : n.Z.clips.getClipProtocolURLFromPath(e.filepath)), [e.filepath]);
+var l = n(192379),
+    a = n(579806);
+function i(e) {
+    return (0, l.useMemo)(() => (null == a.Z.clips.getClipProtocolURLFromPath ? null : a.Z.clips.getClipProtocolURLFromPath(e.filepath)), [e.filepath]);
 }

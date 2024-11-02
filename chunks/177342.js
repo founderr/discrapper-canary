@@ -4,17 +4,17 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(192379),
-    a = n(286379),
-    l = n(797614),
-    r = n(596739),
+    l = n(192379),
+    r = n(286379),
+    a = n(797614),
+    s = n(596739),
     o = n(473092);
 function c(e) {
     let { channelId: t, warningId: n, senderId: c, warningType: u, header: d, description: h, onDismiss: m, buttons: p } = e;
-    s.useEffect(() => {
-        l.Z.increment({ name: a.V.SAFETY_WARNING_VIEW });
+    l.useEffect(() => {
+        a.Z.increment({ name: r.V.SAFETY_WARNING_VIEW });
     }, []);
-    let _ = s.useCallback(() => {
+    let f = l.useCallback(() => {
         null == m || m(),
             (0, o.qc)({
                 channelId: t,
@@ -24,10 +24,10 @@ function c(e) {
                 cta: o.NM.USER_BANNER_DISMISS
             });
     }, [m, t, n, c, u]);
-    return (0, i.jsx)(r.W, {
+    return (0, i.jsx)(s.W, {
         buttons: p,
         description: h,
         header: d,
-        onDismiss: _
+        onDismiss: f
     });
 }

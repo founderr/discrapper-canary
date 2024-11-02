@@ -1,6 +1,6 @@
 t(47120), t(724458);
-var a = t(200651),
-    r = t(192379),
+var r = t(200651),
+    a = t(192379),
     i = t(688619),
     s = t.n(i),
     o = t(120356),
@@ -9,78 +9,78 @@ var a = t(200651),
     d = t(866442),
     u = t(442837),
     m = t(481060),
-    _ = t(231467),
-    f = t(650774),
-    C = t(430824),
-    h = t(175557),
-    x = t(688298),
-    p = t(995119),
-    g = t(116175),
-    T = t(308083),
-    E = t(689938),
-    I = t(861246),
-    b = t(602075);
-let N = [
+    f = t(231467),
+    h = t(650774),
+    x = t(430824),
+    p = t(175557),
+    g = t(688298),
+    C = t(995119),
+    b = t(116175),
+    v = t(308083),
+    _ = t(388032),
+    y = t(861246),
+    T = t(602075);
+let I = [
         {
             name: 'Night Sky',
-            bannerKind: T.qC.NIGHT_SKY,
+            bannerKind: v.qC.NIGHT_SKY,
             icon: m.ThemeDarkIcon
         },
         {
             name: 'Castle',
-            bannerKind: T.qC.CASTLE,
+            bannerKind: v.qC.CASTLE,
             icon: m.CrownIcon
         },
         {
             name: 'World Map',
-            bannerKind: T.qC.WORLD_MAP,
+            bannerKind: v.qC.WORLD_MAP,
             icon: m.GlobeEarthIcon
         },
         {
             name: 'Sea Foam',
-            bannerKind: T.qC.SEA_FOAM,
+            bannerKind: v.qC.SEA_FOAM,
             icon: m.PrivacyAndSafetyIcon
         },
         {
             name: 'Warp',
-            bannerKind: T.qC.WARP_TUNNEL,
+            bannerKind: v.qC.WARP_TUNNEL,
             icon: m.BlurBackgroundIcon
         },
         {
             name: 'House',
-            bannerKind: T.qC.HOUSE,
+            bannerKind: v.qC.HOUSE,
             icon: m.TreehouseIcon
         },
         {
             name: 'Pulsar',
-            bannerKind: T.qC.HEIGHTMAP,
+            bannerKind: v.qC.HEIGHTMAP,
             icon: m.WaveformIcon
         },
         {
             name: 'Mesh',
-            bannerKind: T.qC.MESH,
+            bannerKind: v.qC.MESH,
             icon: m.GridVerticalIcon
         },
         {
             name: 'Spatter',
-            bannerKind: T.qC.SPATTER,
+            bannerKind: v.qC.SPATTER,
             icon: m.PaintbrushThickIcon
         }
     ],
-    v = (e) => {
-        let { name: n, primaryColor: t, secondaryColor: r, isCustom: i } = e;
-        return (0, a.jsxs)(a.Fragment, {
+    j = (e) => {
+        let { name: n, primaryColor: t, secondaryColor: a, isCustom: i } = e;
+        return (0, r.jsxs)(r.Fragment, {
             children: [
                 i
-                    ? (0, a.jsx)(m.PaintPaletteIcon, { size: 'md' })
-                    : (0, a.jsx)('div', {
-                          className: I.brandItemCircle,
-                          style: { background: 'linear-gradient(-45deg, '.concat(r, ' 50%, ').concat(t, ' 50% )') }
+                    ? (0, r.jsx)(m.PaintPaletteIcon, { size: 'md' })
+                    : (0, r.jsx)('div', {
+                          className: y.brandItemCircle,
+                          style: { background: 'linear-gradient(-45deg, '.concat(a, ' 50%, ').concat(t, ' 50% )') }
                       }),
-                (0, a.jsx)(m.Text, {
+                (0, r.jsx)(m.Text, {
                     variant: 'text-sm/medium',
                     color: 'interactive-normal',
-                    className: I.noWrap,
+                    className: y.noWrap,
                     children: n
                 })
             ]
@@ -89,41 +89,41 @@ let N = [
 n.Z = (e) => {
     var n;
     let { handleUpdate: t, progress: i, guildId: o } = e,
-        { banner: y, brandPrimaryColor: S, brandSecondaryColor: A, badgePrimaryColor: M, badgeSecondaryColor: j } = i,
-        R = (0, u.e7)([C.Z], () => C.Z.getGuild(o)),
-        L = null !== (n = (0, u.e7)([f.Z], () => f.Z.getMemberCount(o))) && void 0 !== n ? n : 0,
-        O = r.useMemo(
+        { banner: N, brandPrimaryColor: S, brandSecondaryColor: E, badgePrimaryColor: k, badgeSecondaryColor: A } = i,
+        w = (0, u.e7)([x.Z], () => x.Z.getGuild(o)),
+        M = null !== (n = (0, u.e7)([h.Z], () => h.Z.getMemberCount(o))) && void 0 !== n ? n : 0,
+        R = a.useMemo(
             () => ({
-                primary: null != S ? S : T.OH,
-                secondary: null != A ? A : T.K_
+                primary: null != S ? S : v.OH,
+                secondary: null != E ? E : v.K_
             }),
-            [S, A]
+            [S, E]
         ),
-        Z = r.useMemo(() => {
-            if (S === M && A === j) return 1;
-            for (let e = 0; e < T.ym.length; e++) if (T.ym[e].primary === i.brandPrimaryColor && T.ym[e].secondary === i.brandSecondaryColor) return 2 + e;
+        D = a.useMemo(() => {
+            if (S === k && E === A) return 1;
+            for (let e = 0; e < v.ym.length; e++) if (v.ym[e].primary === i.brandPrimaryColor && v.ym[e].secondary === i.brandSecondaryColor) return 2 + e;
             return 0;
-        }, [S, A, M, j, i.brandPrimaryColor, i.brandSecondaryColor]),
-        [k, D] = r.useState(!1),
-        P = 0 === Z,
-        w = 1 === Z,
-        F = r.useMemo(() => {
-            if (P) return O;
-            if (w)
+        }, [S, E, k, A, i.brandPrimaryColor, i.brandSecondaryColor]),
+        [Z, L] = a.useState(!1),
+        O = 0 === D,
+        P = 1 === D,
+        F = a.useMemo(() => {
+            if (O) return R;
+            if (P)
                 return {
-                    primary: null != M ? M : g.Nh,
-                    secondary: null != j ? j : g.vY
+                    primary: null != k ? k : b.Nh,
+                    secondary: null != A ? A : b.vY
                 };
             {
-                let e = T.ym[Z - 2];
+                let e = v.ym[D - 2];
                 return {
                     primary: e.primary,
                     secondary: e.secondary
                 };
             }
-        }, [O, w, P, M, j, Z]),
-        G = r.useCallback(() => {
-            let e = N[Math.floor(Math.random() * N.length)].bannerKind,
+        }, [R, P, O, k, A, D]),
+        G = a.useCallback(() => {
+            let e = I[Math.floor(Math.random() * I.length)].bannerKind,
                 n = s().random().hex();
             t({
                 banner: e,
@@ -131,32 +131,32 @@ n.Z = (e) => {
                 brandSecondaryColor: s().random().hex()
             });
         }, [t]);
-    r.useEffect(() => {
+    a.useEffect(() => {
         t({
-            banner: y,
+            banner: N,
             brandPrimaryColor: F.primary,
             brandSecondaryColor: F.secondary
         });
-    }, [t, y, F.primary, F.secondary]);
-    let B = r.useMemo(() => {
+    }, [t, N, F.primary, F.secondary]);
+    let B = a.useMemo(() => {
         var e, n, t;
         return {
             ...i,
             id: o,
-            name: null !== (e = null == R ? void 0 : R.name) && void 0 !== e ? e : '',
-            icon: null == R ? void 0 : R.icon,
-            memberCount: L,
+            name: null !== (e = null == w ? void 0 : w.name) && void 0 !== e ? e : '',
+            icon: null == w ? void 0 : w.icon,
+            memberCount: M,
             games: Array.from(i.gameApplicationIds),
             traits: Array.from(i.interests),
-            banner: y,
+            banner: N,
             badge: {
                 badgeKind: i.badgeKind,
-                primaryColor: null != M ? M : T.OH,
-                secondaryColor: null != j ? j : T.K_
+                primaryColor: null != k ? k : v.OH,
+                secondaryColor: null != A ? A : v.K_
             },
             branding: {
-                primaryColor: null !== (n = F.primary) && void 0 !== n ? n : T.OH,
-                secondaryColor: null !== (t = F.secondary) && void 0 !== t ? t : T.K_
+                primaryColor: null !== (n = F.primary) && void 0 !== n ? n : v.OH,
+                secondaryColor: null !== (t = F.secondary) && void 0 !== t ? t : v.K_
             },
             gameActivity: Array.from(i.gameApplicationIds).reduce(
                 (e, n) => (
@@ -169,92 +169,92 @@ n.Z = (e) => {
                 {}
             )
         };
-    }, [i, o, R, L, y, M, j, F]);
-    return (0, a.jsxs)('div', {
-        className: b.slideContent,
+    }, [i, o, w, M, N, k, A, F]);
+    return (0, r.jsxs)('div', {
+        className: T.slideContent,
         children: [
-            (0, a.jsx)(m.Heading, {
+            (0, r.jsx)(m.Heading, {
                 variant: 'heading-xxl/medium',
-                className: b.title,
-                children: E.Z.Messages.CLAN_SETUP_CUSTOMIZE_LOOK_TITLE
+                className: T.title,
+                children: _.intl.string(_.t.kPwMOz)
             }),
-            (0, a.jsx)(m.Text, {
+            (0, r.jsx)(m.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                className: b.subtitle,
-                children: E.Z.Messages.CLAN_SETUP_CUSTOMIZE_LOOK_SUBTITLE
+                className: T.subtitle,
+                children: _.intl.string(_.t['E+KhDA'])
             }),
-            (0, a.jsxs)('div', {
-                className: I.content,
+            (0, r.jsxs)('div', {
+                className: y.content,
                 children: [
-                    (0, a.jsx)('div', {
-                        className: I.leftColumn,
-                        children: (0, a.jsxs)('div', {
-                            className: I.colorsContainer,
+                    (0, r.jsx)('div', {
+                        className: y.leftColumn,
+                        children: (0, r.jsxs)('div', {
+                            className: y.colorsContainer,
                             children: [
-                                (0, a.jsx)(p.Z, { onClick: G }),
-                                (0, a.jsxs)('div', {
-                                    className: I.colorPickerContainer,
+                                (0, r.jsx)(C.Z, { onClick: G }),
+                                (0, r.jsxs)('div', {
+                                    className: y.colorPickerContainer,
                                     children: [
-                                        (0, a.jsx)(m.Text, {
+                                        (0, r.jsx)(m.Text, {
                                             variant: 'text-xs/semibold',
                                             color: 'text-muted',
-                                            children: E.Z.Messages.CLAN_LOOK_BRAND_COLOR
+                                            children: _.intl.string(_.t.Ul1tIS)
                                         }),
-                                        (0, a.jsxs)('div', {
-                                            className: I.colorPickerGrid,
+                                        (0, r.jsxs)('div', {
+                                            className: y.colorPickerGrid,
                                             children: [
-                                                (0, a.jsx)(x.Z, {
+                                                (0, r.jsx)(g.Z, {
                                                     showSecondaryColor: !0,
-                                                    palette: O,
+                                                    palette: R,
                                                     onPrimaryColorChange: (e) => {
                                                         t({ brandPrimaryColor: (0, d.Rf)(e) });
                                                     },
                                                     onSecondaryColorChange: (e) => {
                                                         t({ brandSecondaryColor: (0, d.Rf)(e) });
                                                     },
-                                                    shouldShow: k,
-                                                    onRequestClose: () => D(!1),
+                                                    shouldShow: Z,
+                                                    onRequestClose: () => L(!1),
                                                     children: (e) =>
-                                                        (0, a.jsx)(m.Clickable, {
+                                                        (0, r.jsx)(m.Clickable, {
                                                             ...e,
                                                             onClick: () => {
-                                                                D((e) => !e);
+                                                                L((e) => !e);
                                                             },
-                                                            className: l()(I.brandItemContainer, { [I.brandItemContainerSelected]: 0 === Z }),
-                                                            children: (0, a.jsx)(v, {
-                                                                name: E.Z.Messages.CLAN_LOOK_PRESET_CUSTOM,
+                                                            className: l()(y.brandItemContainer, { [y.brandItemContainerSelected]: 0 === D }),
+                                                            children: (0, r.jsx)(j, {
+                                                                name: _.intl.string(_.t.AemVoa),
                                                                 isCustom: !0
                                                             })
                                                         })
                                                 }),
-                                                (0, a.jsx)(m.Clickable, {
+                                                (0, r.jsx)(m.Clickable, {
                                                     onClick: () => {
                                                         t({
-                                                            brandPrimaryColor: null != M ? M : T.OH,
-                                                            brandSecondaryColor: null != j ? j : T.K_
+                                                            brandPrimaryColor: null != k ? k : v.OH,
+                                                            brandSecondaryColor: null != A ? A : v.K_
                                                         });
                                                     },
-                                                    className: l()(I.brandItemContainer, { [I.brandItemContainerSelected]: 1 === Z }),
-                                                    children: (0, a.jsx)(v, {
-                                                        name: E.Z.Messages.CLAN_LOOK_PRESET_BADGE,
-                                                        primaryColor: M,
-                                                        secondaryColor: j
+                                                    className: l()(y.brandItemContainer, { [y.brandItemContainerSelected]: 1 === D }),
+                                                    children: (0, r.jsx)(j, {
+                                                        name: _.intl.string(_.t['1Pvr/v']),
+                                                        primaryColor: k,
+                                                        secondaryColor: A
                                                     })
                                                 }),
-                                                T.ym.map((e, n) =>
-                                                    (0, a.jsx)(
+                                                v.ym.map((e, n) =>
+                                                    (0, r.jsx)(
                                                         m.Clickable,
                                                         {
                                                             'aria-label': e.name,
                                                             onClick: () => {
                                                                 t({
-                                                                    brandPrimaryColor: T.ym[n].primary,
-                                                                    brandSecondaryColor: T.ym[n].secondary
+                                                                    brandPrimaryColor: v.ym[n].primary,
+                                                                    brandSecondaryColor: v.ym[n].secondary
                                                                 });
                                                             },
-                                                            className: l()(I.brandItemContainer, { [I.brandItemContainerSelected]: Z === n + 2 }),
-                                                            children: (0, a.jsx)(v, {
+                                                            className: l()(y.brandItemContainer, { [y.brandItemContainerSelected]: D === n + 2 }),
+                                                            children: (0, r.jsx)(j, {
                                                                 name: e.name,
                                                                 primaryColor: e.primary,
                                                                 secondaryColor: e.secondary
@@ -267,31 +267,31 @@ n.Z = (e) => {
                                         })
                                     ]
                                 }),
-                                (0, a.jsxs)('div', {
-                                    className: I.bannerPickerContainer,
+                                (0, r.jsxs)('div', {
+                                    className: y.bannerPickerContainer,
                                     children: [
-                                        (0, a.jsx)(m.Text, {
+                                        (0, r.jsx)(m.Text, {
                                             variant: 'text-xs/semibold',
                                             color: 'text-muted',
-                                            children: E.Z.Messages.CLAN_LOOK_BANNER
+                                            children: _.intl.string(_.t.nH6S2d)
                                         }),
-                                        (0, a.jsx)('div', {
-                                            className: I.bannerPickerGrid,
-                                            children: N.map((e, n) =>
-                                                (0, a.jsxs)(
+                                        (0, r.jsx)('div', {
+                                            className: y.bannerPickerGrid,
+                                            children: I.map((e, n) =>
+                                                (0, r.jsxs)(
                                                     m.Clickable,
                                                     {
                                                         'aria-label': e.name,
                                                         onClick: () => {
                                                             t({ banner: e.bannerKind });
                                                         },
-                                                        className: l()(I.bannerItemContainer, { [I.bannerItemContainerSelected]: e.bannerKind === y }),
+                                                        className: l()(y.bannerItemContainer, { [y.bannerItemContainerSelected]: e.bannerKind === N }),
                                                         children: [
-                                                            (0, a.jsx)(e.icon, { size: 'md' }),
-                                                            (0, a.jsx)(m.Text, {
+                                                            (0, r.jsx)(e.icon, { size: 'md' }),
+                                                            (0, r.jsx)(m.Text, {
                                                                 variant: 'text-sm/medium',
                                                                 color: 'interactive-normal',
-                                                                className: I.noWrap,
+                                                                className: y.noWrap,
                                                                 children: e.name
                                                             })
                                                         ]
@@ -305,14 +305,14 @@ n.Z = (e) => {
                             ]
                         })
                     }),
-                    (0, a.jsx)('div', {
-                        className: I.clanCardWrapper,
-                        children: (0, a.jsx)(_.xV, {
-                            bannerComponent: (0, a.jsx)(h.Z, {
-                                banner: y,
+                    (0, r.jsx)('div', {
+                        className: y.clanCardWrapper,
+                        children: (0, r.jsx)(f.xV, {
+                            bannerComponent: (0, r.jsx)(p.Z, {
+                                banner: N,
                                 primaryTintColor: F.primary,
                                 secondaryTintColor: F.secondary,
-                                className: I.clanBannerPreview
+                                className: y.clanBannerPreview
                             }),
                             clan: B
                         })

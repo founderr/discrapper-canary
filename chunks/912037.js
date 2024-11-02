@@ -73,9 +73,9 @@ var r =
                         var i = e.easing || o,
                             a = 'extend';
                         void 0 !== e.extrapolateLeft ? (a = e.extrapolateLeft) : void 0 !== e.extrapolate && (a = e.extrapolate);
-                        var _ = 'extend';
+                        var f = 'extend';
                         return (
-                            void 0 !== e.extrapolateRight ? (_ = e.extrapolateRight) : void 0 !== e.extrapolate && (_ = e.extrapolate),
+                            void 0 !== e.extrapolateRight ? (f = e.extrapolateRight) : void 0 !== e.extrapolate && (f = e.extrapolate),
                             function (e) {
                                 s('number' == typeof e, 'Cannot interpolation an input which is not a number');
                                 var r = (function (e, t) {
@@ -95,7 +95,7 @@ var r =
                                     if (r === i) return r;
                                     if (t === n) return e <= t ? r : i;
                                     return t === -1 / 0 ? (l = -l) : n === 1 / 0 ? (l -= t) : (l = (l - t) / (n - t)), (l = a(l)), r === -1 / 0 ? (l = -l) : i === 1 / 0 ? (l += r) : (l = l * (i - r) + r), l;
-                                })(e, n[r], n[r + 1], t[r], t[r + 1], i, a, _);
+                                })(e, n[r], n[r + 1], t[r], t[r + 1], i, a, f);
                             }
                         );
                     }

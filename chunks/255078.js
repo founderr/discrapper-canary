@@ -1,6 +1,6 @@
 n.d(t, {
     Q: function () {
-        return E;
+        return _;
     }
 });
 var r = n(512722),
@@ -24,16 +24,16 @@ function d(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     return {
         id: e.id,
         planId: e.plan_id,
         quantity: e.quantity
     };
 }
-class E extends a.Z {
+class _ extends a.Z {
     static createFromServer(e) {
-        return new E({
+        return new _({
             id: e.id,
             type: e.type,
             createdAt: new Date(e.created_at),
@@ -47,11 +47,11 @@ class E extends a.Z {
             paymentGatewaySubscriptionId: e.payment_gateway_subscription_id,
             trialId: e.trial_id,
             trialEndsAt: e.trial_ends_at,
-            items: e.items.map(_),
+            items: e.items.map(f),
             renewalMutations:
                 null != e.renewal_mutations
                     ? {
-                          items: e.renewal_mutations.items.map(_),
+                          items: e.renewal_mutations.items.map(f),
                           paymentGatewayPlanId: e.renewal_mutations.payment_gateway_plan_id
                       }
                     : null,
@@ -124,4 +124,4 @@ class E extends a.Z {
         (this.planId = n), (this.additionalPlans = e.items.filter((e) => e.planId !== n)), null != t && null != r && ((t.planId = r), (t.additionalPlans = t.items.filter((e) => e.planId !== r)));
     }
 }
-t.Z = E;
+t.Z = _;

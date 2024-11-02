@@ -1,74 +1,74 @@
-s.r(n),
-    s.d(n, {
+e.r(n),
+    e.d(n, {
         default: function () {
-            return N;
+            return m;
         }
     });
-var t = s(200651),
-    a = s(192379),
-    o = s(481060),
-    r = s(493683),
-    _ = s(594174),
-    i = s(626135),
-    c = s(799352),
-    d = s(343544),
-    l = s(110223),
-    E = s(981631),
-    u = s(689938);
-function N(e) {
+var i = e(200651),
+    r = e(192379),
+    a = e(481060),
+    s = e(493683),
+    o = e(594174),
+    l = e(626135),
+    c = e(799352),
+    d = e(343544),
+    u = e(110223),
+    _ = e(981631),
+    x = e(388032);
+function m(t) {
     var n;
-    let { channelId: s, blockedUserIds: N, transitionState: R, onClose: M } = e,
-        D = N.map((e) => _.default.getUser(e));
-    a.useEffect(() => {
-        i.default.track(E.rMx.GDM_BLOCKED_USER_WARNING_VIEWED, {
-            channel_id: s,
-            warning_medium: l.WR.MODAL,
-            blocked_user_ids: N
+    let { channelId: e, blockedUserIds: m, transitionState: h, onClose: f } = t,
+        g = m.map((t) => o.default.getUser(t));
+    r.useEffect(() => {
+        l.default.track(_.rMx.GDM_BLOCKED_USER_WARNING_VIEWED, {
+            channel_id: e,
+            warning_medium: u.WR.MODAL,
+            blocked_user_ids: m
         });
-    }, [s, N]);
-    let G = D.length > 1,
-        x = [
+    }, [e, m]);
+    let N = g.length > 1,
+        p = [
             {
-                icon: G ? (0, t.jsx)(o.GroupIcon, {}) : (0, t.jsx)(o.UserIcon, {}),
-                text: G ? u.Z.Messages.GDM_MULTIPLE_BLOCKED_USERS_WARNING_PRESENCE.format({ blockedUserCount: D.length }) : u.Z.Messages.GDM_SINGLE_BLOCKED_USER_WARNING_PRESENCE.format({ userName: null === (n = D[0]) || void 0 === n ? void 0 : n.username })
+                icon: N ? (0, i.jsx)(a.GroupIcon, {}) : (0, i.jsx)(a.UserIcon, {}),
+                text: N ? x.intl.formatToPlainString(x.t.Zqlt5e, { blockedUserCount: g.length }) : x.intl.formatToPlainString(x.t.V0aCFx, { userName: null === (n = g[0]) || void 0 === n ? void 0 : n.username })
             },
             {
-                icon: (0, t.jsx)(o.BellSlashIcon, {}),
-                text: u.Z.Messages.GDM_BLOCKED_USER_WARNING_NO_NOTIFY
+                icon: (0, i.jsx)(a.BellSlashIcon, {}),
+                text: x.intl.string(x.t['RIMw5+'])
             },
             {
-                icon: (0, t.jsx)(o.EnvelopeIcon, {}),
-                text: u.Z.Messages.GDM_BLOCKED_USER_WARNING_INVITE_NEEDED
+                icon: (0, i.jsx)(a.EnvelopeIcon, {}),
+                text: x.intl.string(x.t.bejNWF)
             }
         ];
-    return (0, t.jsx)(d.Z, {
-        headerText: G ? u.Z.Messages.GDM_MULTIPLE_BLOCKED_USERS_WARNING_HEADER_MODAL : u.Z.Messages.GDM_SINGLE_BLOCKED_USER_WARNING_HEADER_MODAL,
-        secondaryHeaderText: u.Z.Messages.GDM_BLOCKED_USER_WARNING_LEAVE_GROUP_MODAL,
-        infoRows: x,
+    return (0, i.jsx)(d.Z, {
+        headerText: N ? x.intl.string(x.t.aJRlSU) : x.intl.string(x.t.rlBMub),
+        secondaryHeaderText: x.intl.string(x.t['mwJJ+f']),
+        infoRows: p,
         onDismissAndStay: () => {
-            M(),
-                (0, c.O)(s),
-                i.default.track(E.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                    action: l.q.CLICK_TO_STAY,
-                    channel_id: s,
-                    warning_medium: l.WR.MODAL,
-                    blocked_user_ids: N
+            f(),
+                (0, c.O)(e),
+                l.default.track(_.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                    action: u.q.CLICK_TO_STAY,
+                    channel_id: e,
+                    warning_medium: u.WR.MODAL,
+                    blocked_user_ids: m
                 });
         },
         onDismissAndLeave: () => {
-            M(),
-                (0, c.O)(s),
-                r.Z.closePrivateChannel(s, !0, !0),
-                i.default.track(E.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                    action: l.q.CLICK_TO_LEAVE,
-                    channel_id: s,
-                    warning_medium: l.WR.MODAL,
-                    blocked_user_ids: N
+            f(),
+                (0, c.O)(e),
+                s.Z.closePrivateChannel(e, !0, !0),
+                l.default.track(_.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                    action: u.q.CLICK_TO_LEAVE,
+                    channel_id: e,
+                    warning_medium: u.WR.MODAL,
+                    blocked_user_ids: m
                 });
         },
-        leaveButtonText: u.Z.Messages.GDM_BLOCKED_USER_WARNING_LEAVE,
-        stayButtonText: u.Z.Messages.GDM_BLOCKED_USER_WARNING_STAY,
-        transitionState: R,
-        onClose: M
+        leaveButtonText: x.intl.string(x.t.I4q1kJ),
+        stayButtonText: x.intl.string(x.t.DRJhmZ),
+        transitionState: h,
+        onClose: f
     });
 }

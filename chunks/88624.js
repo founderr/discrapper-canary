@@ -1,64 +1,64 @@
-var n = t(200651),
-    a = t(192379),
-    i = t(512722),
-    r = t.n(i),
-    o = t(442837),
-    l = t(481060),
-    c = t(346951),
-    d = t(644744),
-    _ = t(792423),
-    u = t(674985),
-    E = t(594174),
-    T = t(843200),
-    S = t(689938),
-    I = t(903407);
-class N extends a.PureComponent {
+var i = n(200651),
+    s = n(192379),
+    r = n(512722),
+    l = n.n(r),
+    a = n(442837),
+    o = n(481060),
+    c = n(346951),
+    d = n(644744),
+    u = n(792423),
+    m = n(674985),
+    h = n(594174),
+    g = n(843200),
+    p = n(388032),
+    x = n(903407);
+class S extends s.PureComponent {
     renderIntroHeader() {
         let { houseMembership: e } = this.props;
-        return null == e ? S.Z.Messages.HYPESQUAD_HEADING : S.Z.Messages.HYPESQUAD_HEADING_EXISTING_MEMBER;
+        return null == e ? p.intl.string(p.t.iZowCQ) : p.intl.string(p.t.e7fL7O);
     }
     render() {
-        let { houseMembership: e, isClaimed: s, isVerified: t } = this.props;
-        return (0, n.jsxs)(l.HeadingLevel, {
-            component: (0, n.jsxs)('div', {
-                className: I.intro,
+        let { houseMembership: e, isClaimed: t, isVerified: n } = this.props;
+        return (0, i.jsxs)(o.HeadingLevel, {
+            component: (0, i.jsxs)('div', {
+                className: x.intro,
                 children: [
-                    (0, n.jsx)(l.Heading, {
+                    (0, i.jsx)(o.Heading, {
                         variant: 'heading-xxl/semibold',
-                        className: I.introHeader,
+                        className: x.introHeader,
                         children: this.renderIntroHeader()
                     }),
-                    (0, n.jsx)(l.Text, {
+                    (0, i.jsx)(o.Text, {
                         variant: 'text-lg/normal',
-                        children: S.Z.Messages.HYPESQUAD_SUBHEADING
+                        children: p.intl.string(p.t['6FaVFB'])
                     })
                 ]
             }),
             children: [
-                (0, n.jsx)(T.Z, {
-                    className: I.verificationNotice,
-                    unclaimedNotice: S.Z.Messages.HYPESQUAD_UNCLAIMED_ACCOUNT_NOTICE,
-                    unverifiedNotice: S.Z.Messages.HYPESQUAD_UNVERIFIED_EMAIL_NOTICE
+                (0, i.jsx)(g.Z, {
+                    className: x.verificationNotice,
+                    unclaimedNotice: p.intl.string(p.t.vZU8Ki),
+                    unverifiedNotice: p.intl.string(p.t.T7TYEB)
                 }),
-                (0, n.jsx)(d.Z, {
+                (0, i.jsx)(d.Z, {
                     houseMembership: e,
-                    isClaimed: s,
-                    isVerified: t
+                    isClaimed: t,
+                    isVerified: n
                 }),
-                (0, n.jsx)(c.Z, {}),
-                (0, n.jsx)(_.Z, { isHypeSquadOnlineMember: null != e })
+                (0, i.jsx)(c.Z, {}),
+                (0, i.jsx)(u.Z, { isHypeSquadOnlineMember: null != e })
             ]
         });
     }
 }
-s.Z = o.ZP.connectStores([E.default, u.Z], () => {
-    let e = E.default.getCurrentUser();
+t.Z = a.ZP.connectStores([h.default, m.Z], () => {
+    let e = h.default.getCurrentUser();
     return (
-        r()(null != e, 'UserSettingsHypeSquad: currentUser cannot be undefined'),
+        l()(null != e, 'UserSettingsHypeSquad: currentUser cannot be undefined'),
         {
-            houseMembership: u.Z.getHouseMembership(),
+            houseMembership: m.Z.getHouseMembership(),
             isClaimed: e.isClaimed(),
             isVerified: e.verified
         }
     );
-})(N);
+})(S);

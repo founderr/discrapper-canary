@@ -3,19 +3,19 @@ e.d(t, {
         return c;
     }
 });
-var u = e(200651);
+var i = e(200651);
 e(192379);
-var i = e(481060),
+var u = e(481060),
     r = e(37234),
     l = e(191471),
     o = e(981631),
-    a = e(689938);
+    a = e(388032);
 function c(n, t) {
     return t === o.IlC.POPOUT
         ? null
-        : (0, u.jsx)(i.MenuItem, {
+        : (0, i.jsx)(u.MenuItem, {
               id: 'report-raid',
-              label: a.Z.Messages.GUILD_REPORT_RAID_BUTTON_TITLE,
+              label: a.intl.string(a.t.cswId3),
               action: () => {
                   (0, r.xf)(), (0, l.J)(n);
               }

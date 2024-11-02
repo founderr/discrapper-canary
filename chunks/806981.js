@@ -32,9 +32,9 @@ function u(e, t) {
             for (var c = n + i.step - 1; c >= n; c--) r = (r << 1) + s[c];
             u.push(r);
         }
-        for (var d = this.jpoint(null, null, null), _ = this.jpoint(null, null, null), E = l; E > 0; E--) {
-            for (n = 0; n < u.length; n++) (r = u[n]) === E ? (_ = _.mixedAdd(i.points[n])) : r === -E && (_ = _.mixedAdd(i.points[n].neg()));
-            d = d.add(_);
+        for (var d = this.jpoint(null, null, null), f = this.jpoint(null, null, null), _ = l; _ > 0; _--) {
+            for (n = 0; n < u.length; n++) (r = u[n]) === _ ? (f = f.mixedAdd(i.points[n])) : r === -_ && (f = f.mixedAdd(i.points[n].neg()));
+            d = d.add(f);
         }
         return d.toP();
     }),
@@ -56,49 +56,49 @@ function u(e, t) {
             u,
             c = this._wnafT1,
             d = this._wnafT2,
-            _ = this._wnafT3,
-            E = 0;
+            f = this._wnafT3,
+            _ = 0;
         for (o = 0; o < r; o++) {
-            var f = (u = t[o])._getNAFPoints(e);
-            (c[o] = f.wnd), (d[o] = f.points);
+            var h = (u = t[o])._getNAFPoints(e);
+            (c[o] = h.wnd), (d[o] = h.points);
         }
         for (o = r - 1; o >= 1; o -= 2) {
-            var h = o - 1,
-                p = o;
-            if (1 !== c[h] || 1 !== c[p]) {
-                (_[h] = a(n[h], c[h], this._bitLength)), (_[p] = a(n[p], c[p], this._bitLength)), (E = Math.max(_[h].length, E)), (E = Math.max(_[p].length, E));
+            var p = o - 1,
+                m = o;
+            if (1 !== c[p] || 1 !== c[m]) {
+                (f[p] = a(n[p], c[p], this._bitLength)), (f[m] = a(n[m], c[m], this._bitLength)), (_ = Math.max(f[p].length, _)), (_ = Math.max(f[m].length, _));
                 continue;
             }
-            var I = [t[h], null, null, t[p]];
-            0 === t[h].y.cmp(t[p].y) ? ((I[1] = t[h].add(t[p])), (I[2] = t[h].toJ().mixedAdd(t[p].neg()))) : 0 === t[h].y.cmp(t[p].y.redNeg()) ? ((I[1] = t[h].toJ().mixedAdd(t[p])), (I[2] = t[h].add(t[p].neg()))) : ((I[1] = t[h].toJ().mixedAdd(t[p])), (I[2] = t[h].toJ().mixedAdd(t[p].neg())));
-            var m = [-3, -1, -5, -7, 0, 7, 5, 1, 3],
-                T = s(n[h], n[p]);
-            for (l = 0, E = Math.max(T[0].length, E), _[h] = Array(E), _[p] = Array(E); l < E; l++) {
-                var S = 0 | T[0][l],
-                    g = 0 | T[1][l];
-                (_[h][l] = m[(S + 1) * 3 + (g + 1)]), (_[p][l] = 0), (d[h] = I);
+            var g = [t[p], null, null, t[m]];
+            0 === t[p].y.cmp(t[m].y) ? ((g[1] = t[p].add(t[m])), (g[2] = t[p].toJ().mixedAdd(t[m].neg()))) : 0 === t[p].y.cmp(t[m].y.redNeg()) ? ((g[1] = t[p].toJ().mixedAdd(t[m])), (g[2] = t[p].add(t[m].neg()))) : ((g[1] = t[p].toJ().mixedAdd(t[m])), (g[2] = t[p].toJ().mixedAdd(t[m].neg())));
+            var E = [-3, -1, -5, -7, 0, 7, 5, 1, 3],
+                v = s(n[p], n[m]);
+            for (l = 0, _ = Math.max(v[0].length, _), f[p] = Array(_), f[m] = Array(_); l < _; l++) {
+                var I = 0 | v[0][l],
+                    S = 0 | v[1][l];
+                (f[p][l] = E[(I + 1) * 3 + (S + 1)]), (f[m][l] = 0), (d[p] = g);
             }
         }
-        var A = this.jpoint(null, null, null),
-            N = this._wnafT4;
-        for (o = E; o >= 0; o--) {
-            for (var R = 0; o >= 0; ) {
-                var O = !0;
-                for (l = 0; l < r; l++) (N[l] = 0 | _[l][o]), 0 !== N[l] && (O = !1);
-                if (!O) break;
-                R++, o--;
+        var T = this.jpoint(null, null, null),
+            b = this._wnafT4;
+        for (o = _; o >= 0; o--) {
+            for (var y = 0; o >= 0; ) {
+                var A = !0;
+                for (l = 0; l < r; l++) (b[l] = 0 | f[l][o]), 0 !== b[l] && (A = !1);
+                if (!A) break;
+                y++, o--;
             }
-            if ((o >= 0 && R++, (A = A.dblp(R)), o < 0)) break;
+            if ((o >= 0 && y++, (T = T.dblp(y)), o < 0)) break;
             for (l = 0; l < r; l++) {
-                var v = N[l];
-                if (0 !== v) {
-                    v > 0 ? (u = d[l][(v - 1) >> 1]) : v < 0 && (u = d[l][(-v - 1) >> 1].neg());
-                    A = 'affine' === u.type ? A.mixedAdd(u) : A.add(u);
+                var N = b[l];
+                if (0 !== N) {
+                    N > 0 ? (u = d[l][(N - 1) >> 1]) : N < 0 && (u = d[l][(-N - 1) >> 1].neg());
+                    T = 'affine' === u.type ? T.mixedAdd(u) : T.add(u);
                 }
             }
         }
         for (o = 0; o < r; o++) d[o] = null;
-        return i ? A : A.toP();
+        return i ? T : T.toP();
     }),
     (l.BasePoint = u),
     (u.prototype.eq = function () {

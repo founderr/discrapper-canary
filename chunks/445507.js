@@ -9,10 +9,10 @@ n.d(t, {
         return a;
     },
     mU: function () {
-        return s;
+        return o;
     },
     qJ: function () {
-        return o;
+        return s;
     },
     u9: function () {
         return r;
@@ -25,21 +25,21 @@ n.d(t, {
     }
 });
 var i = n(704215),
-    l = n(689938);
+    l = n(388032);
 function r(e) {
     return 'user' === e.type;
 }
 function a(e) {
     return 'guild' === e.type;
 }
-function s(e) {
+function o(e) {
     return JSON.stringify({
         playstyle: e.playstyle,
         acknowledgeCap: e.acknowledgeCap,
         acknowledgeScreen: e.acknowledgeScreen
     });
 }
-let o = {
+let s = {
         key: 'valorant-user',
         type: 'user',
         title: 'Preview new features for Valorant players on Discord',
@@ -179,23 +179,23 @@ function h() {
     return [
         {
             value: 'very-casual',
-            title: l.Z.Messages.SIGNUP_CLAN_OPTION_VERY_CASUAL_TITLE,
-            description: l.Z.Messages.SIGNUP_CLAN_OPTION_VERY_CASUAL_DESCRIPTION
+            title: l.intl.string(l.t['4g8/9/']),
+            description: l.intl.string(l.t['0qVVu7'])
         },
         {
             value: 'casual',
-            title: l.Z.Messages.SIGNUP_CLAN_OPTION_CASUAL_TITLE,
-            description: l.Z.Messages.SIGNUP_CLAN_OPTION_CASUAL_DESCRIPTION
+            title: l.intl.string(l.t.gfRcc3),
+            description: l.intl.string(l.t.zbh9nJ)
         },
         {
             value: 'hardcore',
-            title: l.Z.Messages.SIGNUP_CLAN_OPTION_HARDCORE_TITLE,
-            description: l.Z.Messages.SIGNUP_CLAN_OPTION_HARDCORE_DESCRIPTION
+            title: l.intl.string(l.t['lj/ol5']),
+            description: l.intl.string(l.t.U2ICp6)
         },
         {
             value: 'very-hardcore',
-            title: l.Z.Messages.SIGNUP_CLAN_OPTION_VERY_HARDCORE_TITLE,
-            description: l.Z.Messages.SIGNUP_CLAN_OPTION_VERY_HARDCORE_DESCRIPTION
+            title: l.intl.string(l.t.kQaews),
+            description: l.intl.string(l.t.y4zY3t)
         }
     ];
 }

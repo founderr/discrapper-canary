@@ -1,30 +1,30 @@
 t.d(n, {
     M: function () {
-        return c;
+        return r;
     }
 });
 var i,
-    a,
     l,
+    a,
     o,
+    r,
     c,
-    d,
-    r = t(442837),
+    d = t(442837),
     u = t(570140);
-((i = c || (c = {}))[(i.FETCHING = 0)] = 'FETCHING'), (i[(i.FETCHED = 1)] = 'FETCHED'), (i[(i.ERROR = 2)] = 'ERROR');
+((i = r || (r = {}))[(i.FETCHING = 0)] = 'FETCHING'), (i[(i.FETCHED = 1)] = 'FETCHED'), (i[(i.ERROR = 2)] = 'ERROR');
 let s = {},
     m = {},
     E = {};
-function _(e) {
+function p(e) {
     let { location: n, channelId: t, withCommands: i } = e;
     return 'location:'.concat(n, ' channelId:').concat('0', ' withCommands:').concat(i);
 }
-let p = Object.freeze([]);
-class M extends (d = r.ZP.Store) {
+let g = Object.freeze([]);
+class C extends (c = d.ZP.Store) {
     getLastFetchTimeMs(e) {
         let { location: n, channelId: t, withCommands: i } = e;
         return E[
-            _({
+            p({
                 location: n,
                 channelId: t,
                 withCommands: i
@@ -34,7 +34,7 @@ class M extends (d = r.ZP.Store) {
     getFetchState(e) {
         let { location: n, channelId: t, withCommands: i } = e;
         return m[
-            _({
+            p({
                 location: n,
                 channelId: t,
                 withCommands: i
@@ -43,35 +43,35 @@ class M extends (d = r.ZP.Store) {
     }
     getRecommendations(e) {
         var n;
-        let { location: t, channelId: i, withCommands: a } = e;
+        let { location: t, channelId: i, withCommands: l } = e;
         return null !==
             (n =
                 s[
-                    _({
+                    p({
                         location: t,
                         channelId: i,
-                        withCommands: a
+                        withCommands: l
                     })
                 ]) && void 0 !== n
             ? n
-            : p;
+            : g;
     }
 }
 (o = void 0),
-    (l = 'displayName') in (a = M)
-        ? Object.defineProperty(a, l, {
+    (a = 'displayName') in (l = C)
+        ? Object.defineProperty(l, a, {
               value: o,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[l] = o),
-    (n.ZP = new M(u.Z, {
+        : (l[a] = o),
+    (n.ZP = new C(u.Z, {
         APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS: function (e) {
             let { location: n, channelId: t, withCommands: i } = e;
             m = {
                 ...m,
-                [_({
+                [p({
                     location: n,
                     channelId: t,
                     withCommands: i
@@ -79,31 +79,31 @@ class M extends (d = r.ZP.Store) {
             };
         },
         APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_SUCCESS: function (e) {
-            let { recommendations: n, location: t, channelId: i, withCommands: a } = e,
-                l = _({
+            let { recommendations: n, location: t, channelId: i, withCommands: l } = e,
+                a = p({
                     location: t,
                     channelId: i,
-                    withCommands: a
+                    withCommands: l
                 });
             (s = {
                 ...s,
-                [l]: n
+                [a]: n
             }),
                 (m = {
                     ...m,
-                    [l]: 1
+                    [a]: 1
                 });
             let o = Date.now();
             E = {
                 ...E,
-                [l]: o
+                [a]: o
             };
         },
         APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_FAILURE: function (e) {
             let { location: n, channelId: t, withCommands: i } = e;
             m = {
                 ...m,
-                [_({
+                [p({
                     location: n,
                     channelId: t,
                     withCommands: i

@@ -5,18 +5,18 @@ t.d(n, {
 });
 var i = t(200651);
 t(192379);
-var a = t(481060),
-    s = t(203143),
-    l = t(615669),
-    r = t(689938);
-let o = {
-    [l.z.END_EARLY]: (e) =>
-        (0, i.jsx)(a.MenuItem, {
+var l = t(481060),
+    r = t(203143),
+    a = t(615669),
+    o = t(388032);
+let s = {
+    [a.z.END_EARLY]: (e) =>
+        (0, i.jsx)(l.MenuItem, {
             id: 'end-poll-early',
-            label: r.Z.Messages.POLL_END_EARLY,
-            icon: a.ClockXIcon,
+            label: o.intl.string(o.t.grdwws),
+            icon: l.ClockXIcon,
             action: () => {
-                s.Z.endPollEarly({
+                r.Z.endPollEarly({
                     channelId: e.channel_id,
                     messageId: e.id
                 });
@@ -25,6 +25,6 @@ let o = {
         })
 };
 function u(e) {
-    let n = (0, l.Z)(e);
-    return 0 === n.length ? null : (0, i.jsx)(i.Fragment, { children: n.map((n) => o[n](e)) });
+    let n = (0, a.Z)(e);
+    return 0 === n.length ? null : (0, i.jsx)(i.Fragment, { children: n.map((n) => s[n](e)) });
 }

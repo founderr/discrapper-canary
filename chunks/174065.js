@@ -20,7 +20,7 @@ let l = { captionsById: new Map() },
     u = l,
     c = !1,
     d = null;
-class _ extends (r = i.ZP.PersistedStore) {
+class f extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         u = null != e ? { captionsById: new Map(e.captionsById) } : l;
     }
@@ -45,9 +45,9 @@ class _ extends (r = i.ZP.PersistedStore) {
         (u = l), (c = !1), (d = null);
     }
 }
-o(_, 'displayName', 'EmojiCaptionsStore'),
-    o(_, 'persistKey', 'EmojiCaptionsStore'),
-    (t.Z = new _(a.Z, {
+o(f, 'displayName', 'EmojiCaptionsStore'),
+    o(f, 'persistKey', 'EmojiCaptionsStore'),
+    (t.Z = new f(a.Z, {
         LOGOUT: function () {
             (u = l), (c = !1), (d = null);
         },

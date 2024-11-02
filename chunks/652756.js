@@ -32,39 +32,39 @@ function o(e, t, n, s, o) {
         u,
         c,
         d,
-        _,
-        E,
         f,
+        _,
         h,
         p,
-        I = 'IMG' === (l = t).nodeName && ((0, r.v)() || !(null !== (u = document.documentElement) && void 0 !== u && u.contains(l))),
-        m = a(I ? e : t),
-        T = {
-            x: n.x - m.x,
-            y: n.y - m.y
+        m,
+        g = 'IMG' === (l = t).nodeName && ((0, r.v)() || !(null !== (u = document.documentElement) && void 0 !== u && u.contains(l))),
+        E = a(g ? e : t),
+        v = {
+            x: n.x - E.x,
+            y: n.y - E.y
         },
-        S = e.offsetWidth,
-        g = e.offsetHeight,
-        A = s.anchorX,
-        N = s.anchorY;
-    var R =
-            ((c = I),
+        I = e.offsetWidth,
+        S = e.offsetHeight,
+        T = s.anchorX,
+        b = s.anchorY;
+    var y =
+            ((c = g),
             (d = t),
+            (f = I),
             (_ = S),
-            (E = g),
-            (f = c ? d.width : _),
-            (h = c ? d.height : E),
-            (0, r.G)() && c && ((h /= window.devicePixelRatio), (f /= window.devicePixelRatio)),
+            (h = c ? d.width : f),
+            (p = c ? d.height : _),
+            (0, r.G)() && c && ((p /= window.devicePixelRatio), (h /= window.devicePixelRatio)),
             {
-                dragPreviewWidth: f,
-                dragPreviewHeight: h
+                dragPreviewWidth: h,
+                dragPreviewHeight: p
             }),
-        O = R.dragPreviewWidth,
-        v = R.dragPreviewHeight,
+        A = y.dragPreviewWidth,
+        N = y.dragPreviewHeight,
         C = o.offsetX,
-        L = o.offsetY;
+        R = o.offsetY;
     return {
-        x: 0 === C || C ? C : new i.I([0, 0.5, 1], [T.x, (T.x / S) * O, T.x + O - S]).interpolate(A),
-        y: 0 === L || L ? L : ((p = new i.I([0, 0.5, 1], [T.y, (T.y / g) * v, T.y + v - g]).interpolate(N)), (0, r.G)() && I && (p += (window.devicePixelRatio - 1) * v), p)
+        x: 0 === C || C ? C : new i.I([0, 0.5, 1], [v.x, (v.x / I) * A, v.x + A - I]).interpolate(T),
+        y: 0 === R || R ? R : ((m = new i.I([0, 0.5, 1], [v.y, (v.y / S) * N, v.y + N - S]).interpolate(b)), (0, r.G)() && g && (m += (window.devicePixelRatio - 1) * N), m)
     };
 }

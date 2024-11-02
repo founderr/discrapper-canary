@@ -25,6 +25,6 @@ function o(e, t) {
                       ...s.F
                   })));
     let c = 'function' == typeof u,
-        [d, _, E] = (0, i.useSprings)(e, u, o);
-    return c || 4 == arguments.length ? [d, _, E] : d;
+        [d, f, _] = (0, i.useSprings)(e, u, o);
+    return c || 4 == arguments.length ? [d, f, _] : d;
 }

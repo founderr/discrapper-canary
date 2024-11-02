@@ -1,13 +1,13 @@
 n.d(t, {
     ZP: function () {
-        return s;
+        return o;
     }
 });
 var i,
     l,
     r = n(833845),
     a = n(643632);
-function s(e) {
+function o(e) {
     let t = (0, a.Z)(e),
         n = (0, r.Z)(e, !0).moderator;
     return !t && n ? 1 : 0;

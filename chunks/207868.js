@@ -1,8 +1,8 @@
 var i = n(200651),
-    s = n(192379),
-    a = n(392711),
-    l = n.n(a),
-    r = n(442837),
+    l = n(192379),
+    r = n(392711),
+    a = n.n(r),
+    s = n(442837),
     o = n(481060),
     c = n(557135),
     u = n(590293),
@@ -10,34 +10,34 @@ var i = n(200651),
     h = n(665906),
     m = n(496675),
     p = n(979651),
-    _ = n(585483),
-    f = n(665149),
-    E = n(981631),
-    g = n(689938);
-t.Z = s.memo(function (e) {
+    f = n(585483),
+    g = n(665149),
+    C = n(981631),
+    x = n(388032);
+t.Z = l.memo(function (e) {
     let { channel: t } = e,
         n = (0, u.Z)(),
-        a = (0, r.e7)([p.Z], () => p.Z.isInChannel(t.id)),
-        C = (0, r.e7)([p.Z], () => !l().isEmpty(p.Z.getVoiceStatesForChannel(t.id))),
-        I = (0, r.e7)([m.Z], () => m.Z.can(E.Plq.CONNECT, t)),
-        { needSubscriptionToAccess: T } = (0, d.Z)(t.id),
-        x = (0, h.$R)(t),
-        S = s.useCallback(() => {
+        r = (0, s.e7)([p.Z], () => p.Z.isInChannel(t.id)),
+        v = (0, s.e7)([p.Z], () => !a().isEmpty(p.Z.getVoiceStatesForChannel(t.id))),
+        _ = (0, s.e7)([m.Z], () => m.Z.can(C.Plq.CONNECT, t)),
+        { needSubscriptionToAccess: I } = (0, d.Z)(t.id),
+        E = (0, h.$R)(t),
+        b = l.useCallback(() => {
             c.Z.handleVoiceConnect({
                 channel: t,
-                connected: a,
-                needSubscriptionToAccess: T,
+                connected: r,
+                needSubscriptionToAccess: I,
                 locked: !1
             });
-        }, [t, a, T]);
-    return (s.useEffect(
+        }, [t, r, I]);
+    return (l.useEffect(
         () => (
-            _.S.subscribe(E.CkL.CALL_START, S),
+            f.S.subscribe(C.CkL.CALL_START, b),
             () => {
-                _.S.unsubscribe(E.CkL.CALL_START, S);
+                f.S.unsubscribe(C.CkL.CALL_START, b);
             }
         ),
-        [S]
+        [b]
     ),
     h.tM.useExperiment(
         {
@@ -47,14 +47,14 @@ t.Z = s.memo(function (e) {
         { autoTrackExposure: !1 }
     ).enabled &&
         !n &&
-        !a &&
-        I &&
-        x &&
+        !r &&
+        _ &&
+        E &&
         t.isVocalThread())
-        ? (0, i.jsx)(f.ZP.Icon, {
+        ? (0, i.jsx)(g.ZP.Icon, {
               icon: o.PhoneCallIcon,
-              onClick: S,
-              tooltip: C ? g.Z.Messages.JOIN_VOICE_CALL : g.Z.Messages.START_VOICE_CALL
+              onClick: b,
+              tooltip: v ? x.intl.string(x.t.fdEeb2) : x.intl.string(x.t.focH1t)
           })
         : null;
 });

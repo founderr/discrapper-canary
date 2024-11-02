@@ -1,7 +1,7 @@
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(689938);
+    a = n(388032);
 let s = (e, t) =>
     (0, r.jsxs)(
         i.Text,
@@ -28,6 +28,6 @@ let s = (e, t) =>
     );
 t.Z = {
     getForumChannelPermissionText: function () {
-        return a.Z.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_WITH_FORUMS_DESCRIPTION_TEXT_DISABLED.format({ warningHook: s });
+        return a.intl.format(a.t.zlXUVV, { warningHook: s });
     }
 };

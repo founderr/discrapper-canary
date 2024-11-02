@@ -5,25 +5,25 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(113434),
-    r = n(497505),
-    l = n(37303),
-    o = n(683650),
+var r = n(481060),
+    l = n(113434),
+    a = n(497505),
+    o = n(37303),
+    s = n(683650),
     c = n(170658);
 function u(e) {
     let { questId: t } = e,
-        { quests: n, isFetchingCurrentQuests: u } = (0, s.J2)({ fetchPolicy: 'cache-or-network' }),
+        { quests: n, isFetchingCurrentQuests: u } = (0, l.J2)({ fetchPolicy: 'cache-or-network' }),
         d = n.find((e) => e.id === t);
     return u
-        ? (0, i.jsx)(a.Spinner, { className: c.spinner })
+        ? (0, i.jsx)(r.Spinner, { className: c.spinner })
         : null == d
-          ? (0, i.jsx)(o.o, {})
+          ? (0, i.jsx)(s.o, {})
           : (0, i.jsx)(
-                l.Z,
+                o.Z,
                 {
                     quest: d,
-                    location: r.jn.QUESTS_EMBED
+                    location: a.jn.QUESTS_EMBED
                 },
                 d.id
             );

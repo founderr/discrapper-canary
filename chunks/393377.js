@@ -23,11 +23,11 @@ var u = (t.Swatch = function (e) {
         u = e.onHover,
         c = e.title,
         d = void 0 === c ? t : c,
-        _ = e.children,
-        E = e.focus,
-        f = e.focusStyle,
-        h = 'transparent' === t,
-        p = (0, a.default)({
+        f = e.children,
+        _ = e.focus,
+        h = e.focusStyle,
+        p = 'transparent' === t,
+        m = (0, a.default)({
             default: {
                 swatch: r(
                     {
@@ -39,21 +39,21 @@ var u = (t.Swatch = function (e) {
                         outline: 'none'
                     },
                     n,
-                    E ? (void 0 === f ? {} : f) : {}
+                    _ ? (void 0 === h ? {} : h) : {}
                 )
             }
         }),
-        I = {};
+        g = {};
     return (
         u &&
-            (I.onMouseOver = function (e) {
+            (g.onMouseOver = function (e) {
                 return u(t, e);
             }),
         i.default.createElement(
             'div',
             r(
                 {
-                    style: p.swatch,
+                    style: m.swatch,
                     onClick: function (e) {
                         return l(t, e);
                     },
@@ -63,12 +63,12 @@ var u = (t.Swatch = function (e) {
                         return 13 === e.keyCode && l(t, e);
                     }
                 },
-                I
+                g
             ),
-            _,
-            h &&
+            f,
+            p &&
                 i.default.createElement(o.default, {
-                    borderRadius: p.swatch.borderRadius,
+                    borderRadius: m.swatch.borderRadius,
                     boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.1)'
                 })
         )

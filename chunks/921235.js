@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return b;
     }
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    a = n(392711),
-    l = n.n(a),
-    r = n(442837),
+    l = n(192379),
+    r = n(392711),
+    a = n.n(r),
+    s = n(442837),
     o = n(481060),
     c = n(904245),
     u = n(268350),
@@ -16,92 +16,92 @@ var i = n(200651),
     h = n(419922),
     m = n(314897),
     p = n(375954),
-    _ = n(594174),
-    f = n(626135),
-    E = n(51144),
-    g = n(901461),
-    C = n(981631),
-    I = n(689938),
-    T = n(546764);
-let x = '749054660769218631';
-function S(e) {
+    f = n(594174),
+    g = n(626135),
+    C = n(51144),
+    x = n(901461),
+    v = n(981631),
+    _ = n(388032),
+    I = n(546764);
+let E = '749054660769218631';
+function b(e) {
     var t;
     let { channel: n } = e,
-        [a, S] = s.useState('');
-    s.useEffect(() => {
+        [r, b] = l.useState('');
+    l.useEffect(() => {
         (0, u.FQ)('847199849233514549', !0);
     }, []);
-    let v = (0, r.e7)(
+    let S = (0, s.e7)(
             [p.Z, m.default],
             () =>
-                !!l()(p.Z.getMessages(n.id).toArray())
+                !!a()(p.Z.getMessages(n.id).toArray())
                     .reverse()
-                    .find((e) => e.author.id !== m.default.getId() && e.state === C.yb.SENT && !(0, g.Z)(e))
+                    .find((e) => e.author.id !== m.default.getId() && e.state === v.yb.SENT && !(0, x.Z)(e))
         ),
-        N = (0, r.e7)([_.default], () => _.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
-        A = null !== (t = E.ZP.useName(N)) && void 0 !== t ? t : I.Z.Messages.WAVE_DEFAULT_RECIPIENT,
-        Z = (0, r.e7)([d.Z], () => d.Z.getStickerById(x)),
-        M = s.useCallback(async () => {
-            if (null == a || '' === a)
+        Z = (0, s.e7)([f.default], () => f.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
+        T = null !== (t = C.ZP.useName(Z)) && void 0 !== t ? t : _.intl.string(_.t.y1Wu2d),
+        N = (0, s.e7)([d.Z], () => d.Z.getStickerById(E)),
+        j = l.useCallback(async () => {
+            if (null == r || '' === r)
                 try {
-                    await c.Z.sendGreetMessage(n.id, x),
-                        f.default.track(C.rMx.DM_EMPTY_ACTION, {
+                    await c.Z.sendGreetMessage(n.id, E),
+                        g.default.track(v.rMx.DM_EMPTY_ACTION, {
                             channel_id: n.id,
                             channel_type: n.type,
                             source: 'Wave',
                             type: 'Send wave'
                         });
                 } catch (e) {
-                    !e.ok && 429 === e.status && S(I.Z.Messages.RATE_LIMITED);
+                    !e.ok && 429 === e.status && b(_.intl.string(_.t['Whhv4+']));
                 }
-        }, [n.id, n.type, a]),
-        b = I.Z.Messages.WAVE_TO.format({ username: A }),
-        R =
-            null != a && '' !== a
+        }, [n.id, n.type, r]),
+        A = _.intl.formatToPlainString(_.t.m0zYbW, { username: T }),
+        y =
+            null != r && '' !== r
                 ? (0, i.jsx)(o.Text, {
-                      className: T.error,
+                      className: I.error,
                       color: 'text-danger',
                       variant: 'text-sm/normal',
-                      children: a
+                      children: r
                   })
                 : null;
-    return v
+    return S
         ? (0, i.jsxs)('div', {
-              className: T.containerCompact,
+              className: I.containerCompact,
               children: [
                   (0, i.jsxs)(o.Clickable, {
-                      className: null != a && '' !== a ? T.compactButtonDisabled : T.compactButton,
-                      'aria-label': I.Z.Messages.SEND_WAVE,
-                      onClick: M,
+                      className: null != r && '' !== r ? I.compactButtonDisabled : I.compactButton,
+                      'aria-label': _.intl.string(_.t.pJObYG),
+                      onClick: j,
                       children: [
                           (0, i.jsx)(h.ZP, {
-                              sticker: Z,
+                              sticker: N,
                               size: 24
                           }),
                           (0, i.jsx)(o.Text, {
-                              className: T.text,
+                              className: I.text,
                               variant: 'text-md/medium',
-                              children: b
+                              children: A
                           })
                       ]
                   }),
-                  R
+                  y
               ]
           })
         : (0, i.jsxs)('div', {
-              className: T.containerExpanded,
+              className: I.containerExpanded,
               children: [
                   (0, i.jsx)(h.ZP, {
-                      sticker: Z,
+                      sticker: N,
                       size: 160
                   }),
                   (0, i.jsx)(o.Button, {
-                      className: T.button,
-                      onClick: M,
-                      disabled: !!a,
-                      children: b
+                      className: I.button,
+                      onClick: j,
+                      disabled: !!r,
+                      children: A
                   }),
-                  R
+                  y
               ]
           });
 }

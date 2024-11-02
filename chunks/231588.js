@@ -1,8 +1,8 @@
 l.r(n);
 var a = l(200651),
     i = l(192379),
-    r = l(442837),
-    t = l(749210),
+    t = l(442837),
+    r = l(749210),
     s = l(112724),
     d = l(923029),
     c = l(353926),
@@ -12,13 +12,13 @@ var a = l(200651),
 let m = (0, s.Z)(u.Z);
 n.default = function (e) {
     let { guildId: n } = e,
-        l = (0, r.e7)([h.Z], () => h.Z.getGuild(n), [n]),
-        s = (0, r.e7)([c.Z], () => c.Z.hasLoadedExperiments),
+        l = (0, t.e7)([h.Z], () => h.Z.getGuild(n), [n]),
+        s = (0, t.e7)([c.Z], () => c.Z.hasLoadedExperiments),
         u = (0, o.g)(n);
     return (i.useEffect(() => {
         if (!!s) {
             if (!u) {
-                t.Z.escapeToDefaultChannel(n);
+                r.Z.escapeToDefaultChannel(n);
                 return;
             }
         }

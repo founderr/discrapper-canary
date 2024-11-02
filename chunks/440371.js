@@ -3,157 +3,157 @@ t.d(n, {
         return u;
     }
 });
-var a = t(200651);
+var l = t(200651);
 t(192379);
-var l = t(913527),
-    s = t.n(l),
-    i = t(481060),
-    r = t(854698),
-    o = t(401876),
-    c = t(689938),
+var i = t(913527),
+    a = t.n(i),
+    r = t(481060),
+    o = t(854698),
+    s = t(401876),
+    c = t(388032),
     d = t(805553);
 function u(e) {
-    let { className: n, onScheduleChange: t, onRecurrenceChange: l, onTimeChange: u, timeSelected: _ = !0, schedule: E, recurrenceRule: h, showEndDate: T = !1, requireEndDate: m = !1, disableStartDateTime: I = !1 } = e;
-    if (null == E) return null;
-    let N = null,
-        x = E.startDate,
-        f = s()(),
-        g = s()().add(r.G3, 'days'),
-        S = s()().add(r.Ib, 'days');
-    null != h && (g.add(r.hn, 'years'), S.add(r.hn, 'years'));
-    let C = (e) => {
+    let { className: n, onScheduleChange: t, onRecurrenceChange: i, onTimeChange: u, timeSelected: h = !0, schedule: m, recurrenceRule: x, showEndDate: f = !1, requireEndDate: g = !1, disableStartDateTime: _ = !1 } = e;
+    if (null == m) return null;
+    let v = null,
+        I = m.startDate,
+        N = a()(),
+        p = a()().add(o.G3, 'days'),
+        C = a()().add(o.Ib, 'days');
+    null != x && (p.add(o.hn, 'years'), C.add(o.hn, 'years'));
+    let j = (e) => {
         t({
-            ...E,
+            ...m,
             endDate: e
         });
     };
     return (
-        T &&
-            (N =
-                null != E.endDate || m
-                    ? (0, a.jsxs)(a.Fragment, {
+        f &&
+            (v =
+                null != m.endDate || g
+                    ? (0, l.jsxs)(l.Fragment, {
                           children: [
-                              (0, a.jsxs)('div', {
+                              (0, l.jsxs)('div', {
                                   className: d.doubleInput,
                                   children: [
-                                      (0, a.jsx)(i.FormItem, {
-                                          title: c.Z.Messages.CREATE_EVENT_END_DATE_LABEL,
-                                          required: m,
-                                          children: (0, a.jsx)(i.DateInput, {
-                                              value: E.endDate,
-                                              onSelect: C,
-                                              minDate: E.startDate,
-                                              maxDate: S
+                                      (0, l.jsx)(r.FormItem, {
+                                          title: c.intl.string(c.t.CTLgZG),
+                                          required: g,
+                                          children: (0, l.jsx)(r.DateInput, {
+                                              value: m.endDate,
+                                              onSelect: j,
+                                              minDate: m.startDate,
+                                              maxDate: C
                                           })
                                       }),
-                                      (0, a.jsx)(i.FormItem, {
-                                          title: c.Z.Messages.CREATE_EVENT_END_TIME_LABEL,
-                                          required: m,
-                                          children: (0, a.jsx)(i.TimeInput, {
-                                              value: E.endDate,
-                                              onChange: C
+                                      (0, l.jsx)(r.FormItem, {
+                                          title: c.intl.string(c.t.j2RuXF),
+                                          required: g,
+                                          children: (0, l.jsx)(r.TimeInput, {
+                                              value: m.endDate,
+                                              onChange: j
                                           })
                                       })
                                   ]
                               }),
-                              m
+                              g
                                   ? null
-                                  : (0, a.jsx)(i.Button, {
+                                  : (0, l.jsx)(r.Button, {
                                         onClick: () => {
-                                            C(void 0);
+                                            j(void 0);
                                         },
-                                        look: i.Button.Looks.BLANK,
-                                        size: i.Button.Sizes.MIN,
-                                        children: (0, a.jsxs)('div', {
+                                        look: r.Button.Looks.BLANK,
+                                        size: r.Button.Sizes.MIN,
+                                        children: (0, l.jsxs)('div', {
                                             className: d.link,
                                             children: [
-                                                (0, a.jsx)(i.CircleXIcon, {
+                                                (0, l.jsx)(r.CircleXIcon, {
                                                     size: 'custom',
                                                     color: 'currentColor',
                                                     width: 17,
                                                     height: 17,
                                                     className: d.removeIcon
                                                 }),
-                                                (0, a.jsx)(i.Text, {
+                                                (0, l.jsx)(r.Text, {
                                                     variant: 'text-sm/normal',
-                                                    children: c.Z.Messages.CREATE_EVENT_REMOVE_END_TIME_LABEL
+                                                    children: c.intl.string(c.t.petdfn)
                                                 })
                                             ]
                                         })
                                     })
                           ]
                       })
-                    : (0, a.jsx)(i.Button, {
-                          look: i.Button.Looks.BLANK,
-                          size: i.Button.Sizes.MIN,
+                    : (0, l.jsx)(r.Button, {
+                          look: r.Button.Looks.BLANK,
+                          size: r.Button.Sizes.MIN,
                           onClick: () => {
-                              C(s()(E.startDate).add(1, 'hour'));
+                              j(a()(m.startDate).add(1, 'hour'));
                           },
-                          children: (0, a.jsxs)('div', {
+                          children: (0, l.jsxs)('div', {
                               className: d.link,
                               children: [
-                                  (0, a.jsx)(i.CirclePlusIcon, {
+                                  (0, l.jsx)(r.CirclePlusIcon, {
                                       size: 'custom',
                                       color: 'currentColor',
                                       width: 20,
                                       height: 20,
                                       className: d.addIcon
                                   }),
-                                  (0, a.jsx)(i.Text, {
+                                  (0, l.jsx)(r.Text, {
                                       variant: 'text-sm/normal',
-                                      children: c.Z.Messages.CREATE_EVENT_ADD_END_TIME_LABEL
+                                      children: c.intl.string(c.t.ncdPcn)
                                   })
                               ]
                           })
                       })),
-        (0, a.jsxs)('div', {
+        (0, l.jsxs)('div', {
             className: n,
             children: [
-                (0, a.jsxs)('div', {
+                (0, l.jsxs)('div', {
                     className: d.doubleInput,
                     children: [
-                        (0, a.jsx)(i.FormItem, {
-                            title: c.Z.Messages.CREATE_EVENT_START_DATE_LABEL,
+                        (0, l.jsx)(r.FormItem, {
+                            title: c.intl.string(c.t.kKOIwM),
                             required: !0,
-                            children: (0, a.jsx)(i.DateInput, {
-                                value: E.startDate,
+                            children: (0, l.jsx)(r.DateInput, {
+                                value: m.startDate,
                                 onSelect: (e) => {
                                     t({
-                                        ...E,
+                                        ...m,
                                         startDate: e
                                     });
                                 },
-                                minDate: f,
-                                maxDate: g,
-                                disabled: I
+                                minDate: N,
+                                maxDate: p,
+                                disabled: _
                             })
                         }),
-                        (0, a.jsx)(i.FormItem, {
-                            title: c.Z.Messages.CREATE_EVENT_START_TIME_LABEL,
+                        (0, l.jsx)(r.FormItem, {
+                            title: c.intl.string(c.t['6dGmCA']),
                             required: !0,
-                            children: (0, a.jsx)(i.TimeInput, {
-                                value: E.startDate,
+                            children: (0, l.jsx)(r.TimeInput, {
+                                value: m.startDate,
                                 onChange: (e) => {
                                     if (!!e.isValid())
                                         null == u || u(!0),
                                             t({
-                                                ...E,
+                                                ...m,
                                                 startDate: e
                                             });
                                 },
-                                hideValue: !_,
-                                disabled: I
+                                hideValue: !h,
+                                disabled: _
                             })
                         })
                     ]
                 }),
-                N,
-                null != x &&
-                    null != l &&
-                    (0, a.jsx)(o.Z, {
-                        onRecurrenceChange: l,
-                        startDate: x,
-                        recurrenceRule: h
+                v,
+                null != I &&
+                    null != i &&
+                    (0, l.jsx)(s.Z, {
+                        onRecurrenceChange: i,
+                        startDate: I,
+                        recurrenceRule: x
                     })
             ]
         })

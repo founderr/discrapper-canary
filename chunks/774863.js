@@ -8,31 +8,31 @@ var i,
     u = n(570140),
     c = n(70956),
     d = n(709054);
-let _ = 14 * c.Z.Millis.DAY,
-    E = Object.freeze([]);
-let f = {},
-    h = {};
-function p() {
-    (f = {}), (h = {});
+let f = 14 * c.Z.Millis.DAY,
+    _ = Object.freeze([]);
+let h = {},
+    p = {};
+function m() {
+    (h = {}), (p = {});
 }
-class I extends (i = l.ZP.Store) {
+class g extends (i = l.ZP.Store) {
     getFpMessageInfo(e) {
-        return f[e];
+        return h[e];
     }
     getChannelFpInfo(e) {
         var t;
-        return null !== (t = h[e]) && void 0 !== t ? t : E;
+        return null !== (t = p[e]) && void 0 !== t ? t : _;
     }
     canSubmitFpReport(e) {
-        let t = f[e];
-        return null != t && !t.reportSubmit && d.default.age(t.messageId) < _;
+        let t = h[e];
+        return null != t && !t.reportSubmit && d.default.age(t.messageId) < f;
     }
     get validContentScanVersion() {
         return r;
     }
 }
 (o = 'FalsePositiveStore'),
-    (s = 'displayName') in (a = I)
+    (s = 'displayName') in (a = g)
         ? Object.defineProperty(a, s, {
               value: o,
               enumerable: !0,
@@ -40,17 +40,17 @@ class I extends (i = l.ZP.Store) {
               writable: !0
           })
         : (a[s] = o),
-    (t.Z = new I(u.Z, {
+    (t.Z = new g(u.Z, {
         LOGOUT: function () {
             (function () {
-                (f = {}), (h = {});
+                (h = {}), (p = {});
             })();
         },
         CONNECTION_OPEN: function (e) {
             let { explicitContentScanVersion: t } = e;
             (r = t),
                 (function () {
-                    (f = {}), (h = {});
+                    (h = {}), (p = {});
                 })();
         },
         MESSAGE_EXPLICIT_CONTENT_FP_CREATE: function (e) {
@@ -62,14 +62,14 @@ class I extends (i = l.ZP.Store) {
                     attachments: i,
                     reportSubmit: !1
                 },
-                s = null !== (t = h[r]) && void 0 !== t ? t : E;
-            (h[r] = [...s, a]), (f[n] = a);
+                s = null !== (t = p[r]) && void 0 !== t ? t : _;
+            (p[r] = [...s, a]), (h[n] = a);
         },
         MESSAGE_EXPLICIT_CONTENT_FP_SUBMIT: function (e) {
             let { messageId: t, channelId: n } = e,
-                r = h[n];
+                r = p[n];
             null != r &&
-                ((h[n] = r.map((e) =>
+                ((p[n] = r.map((e) =>
                     e.messageId === t
                         ? {
                               ...e,
@@ -77,8 +77,8 @@ class I extends (i = l.ZP.Store) {
                           }
                         : e
                 )),
-                (f[t] = {
-                    ...f[t],
+                (h[t] = {
+                    ...h[t],
                     reportSubmit: !0
                 }));
         }

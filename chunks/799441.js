@@ -1,9 +1,9 @@
 n.d(t, {
     L7: function () {
-        return E;
+        return _;
     },
     MG: function () {
-        return f;
+        return h;
     }
 });
 var r = n(661763),
@@ -15,15 +15,15 @@ var r = n(661763),
     u = n(184495),
     c = n(464170),
     d = n(867824);
-let _ = new WeakMap();
-function E(e, t, n) {
-    let { keyboardDelegate: c, isDisabled: d, isRequired: E, name: f, validationBehavior: h = 'aria' } = e,
-        p = (0, o.Xe)({
+let f = new WeakMap();
+function _(e, t, n) {
+    let { keyboardDelegate: c, isDisabled: d, isRequired: _, name: h, validationBehavior: p = 'aria' } = e,
+        m = (0, o.Xe)({
             usage: 'search',
             sensitivity: 'base'
         }),
-        I = (0, i.useMemo)(() => c || new a.dp(t.collection, t.disabledKeys, null, p), [c, t.collection, t.disabledKeys, p]),
-        { menuTriggerProps: m, menuProps: T } = (0, u.u4)(
+        g = (0, i.useMemo)(() => c || new a.dp(t.collection, t.disabledKeys, null, m), [c, t.collection, t.disabledKeys, m]),
+        { menuTriggerProps: E, menuProps: v } = (0, u.u4)(
             {
                 isDisabled: d,
                 type: 'listbox'
@@ -31,59 +31,59 @@ function E(e, t, n) {
             t,
             n
         ),
-        { typeSelectProps: S } = (0, a.ip)({
-            keyboardDelegate: I,
+        { typeSelectProps: I } = (0, a.ip)({
+            keyboardDelegate: g,
             selectionManager: t.selectionManager,
             onTypeSelect(e) {
                 t.setSelectedKey(e);
             }
         }),
-        { isInvalid: g, validationErrors: A, validationDetails: N } = t.displayValidation,
+        { isInvalid: S, validationErrors: T, validationDetails: b } = t.displayValidation,
         {
-            labelProps: R,
-            fieldProps: O,
-            descriptionProps: v,
+            labelProps: y,
+            fieldProps: A,
+            descriptionProps: N,
             errorMessageProps: C
         } = (0, l.U)({
             ...e,
             labelElementType: 'span',
-            isInvalid: g,
-            errorMessage: e.errorMessage || A
+            isInvalid: S,
+            errorMessage: e.errorMessage || T
         });
-    (S.onKeyDown = S.onKeyDownCapture), delete S.onKeyDownCapture;
-    let L = (0, r.zL)(e, { labelable: !0 }),
-        D = (0, r.dG)(S, m, O),
-        y = (0, r.Me)();
+    (I.onKeyDown = I.onKeyDownCapture), delete I.onKeyDownCapture;
+    let R = (0, r.zL)(e, { labelable: !0 }),
+        O = (0, r.dG)(I, E, A),
+        D = (0, r.Me)();
     return (
-        _.set(t, {
+        f.set(t, {
             isDisabled: d,
-            isRequired: E,
-            name: f,
-            validationBehavior: h
+            isRequired: _,
+            name: h,
+            validationBehavior: p
         }),
         {
             labelProps: {
-                ...R,
+                ...y,
                 onClick: () => {
                     !e.isDisabled && (n.current.focus(), (0, s._w)('keyboard'));
                 }
             },
-            triggerProps: (0, r.dG)(L, {
-                ...D,
+            triggerProps: (0, r.dG)(R, {
+                ...O,
                 isDisabled: d,
                 onKeyDown: (0, r.tS)(
-                    D.onKeyDown,
+                    O.onKeyDown,
                     (e) => {
                         switch (e.key) {
                             case 'ArrowLeft': {
                                 e.preventDefault();
-                                let n = null != t.selectedKey ? I.getKeyAbove(t.selectedKey) : I.getFirstKey();
+                                let n = null != t.selectedKey ? g.getKeyAbove(t.selectedKey) : g.getFirstKey();
                                 n && t.setSelectedKey(n);
                                 break;
                             }
                             case 'ArrowRight': {
                                 e.preventDefault();
-                                let n = null != t.selectedKey ? I.getKeyBelow(t.selectedKey) : I.getFirstKey();
+                                let n = null != t.selectedKey ? g.getKeyBelow(t.selectedKey) : g.getFirstKey();
                                 n && t.setSelectedKey(n);
                             }
                         }
@@ -91,7 +91,7 @@ function E(e, t, n) {
                     e.onKeyDown
                 ),
                 onKeyUp: e.onKeyUp,
-                'aria-labelledby': [y, D['aria-labelledby'], D['aria-label'] && !D['aria-labelledby'] ? D.id : null].filter(Boolean).join(' '),
+                'aria-labelledby': [D, O['aria-labelledby'], O['aria-label'] && !O['aria-labelledby'] ? O.id : null].filter(Boolean).join(' '),
                 onFocus(n) {
                     !t.isFocused && (e.onFocus && e.onFocus(n), e.onFocusChange && e.onFocusChange(!0), t.setFocused(!0));
                 },
@@ -99,9 +99,9 @@ function E(e, t, n) {
                     !t.isOpen && (e.onBlur && e.onBlur(n), e.onFocusChange && e.onFocusChange(!1), t.setFocused(!1));
                 }
             }),
-            valueProps: { id: y },
+            valueProps: { id: D },
             menuProps: {
-                ...T,
+                ...v,
                 autoFocus: t.focusStrategy || !0,
                 shouldSelectOnPressUp: !0,
                 shouldFocusOnHover: !0,
@@ -110,36 +110,36 @@ function E(e, t, n) {
                 onBlur: (n) => {
                     !n.currentTarget.contains(n.relatedTarget) && (e.onBlur && e.onBlur(n), e.onFocusChange && e.onFocusChange(!1), t.setFocused(!1));
                 },
-                'aria-labelledby': [O['aria-labelledby'], D['aria-label'] && !O['aria-labelledby'] ? D.id : null].filter(Boolean).join(' ')
+                'aria-labelledby': [A['aria-labelledby'], O['aria-label'] && !A['aria-labelledby'] ? O.id : null].filter(Boolean).join(' ')
             },
-            descriptionProps: v,
+            descriptionProps: N,
             errorMessageProps: C,
-            isInvalid: g,
-            validationErrors: A,
-            validationDetails: N
+            isInvalid: S,
+            validationErrors: T,
+            validationDetails: b
         }
     );
 }
-function f(e) {
+function h(e) {
     var t;
     let { state: n, triggerRef: a, label: o, name: l, isDisabled: u } = e,
-        E = (0, i.useRef)(null),
+        _ = (0, i.useRef)(null),
         {
-            containerProps: f,
-            inputProps: h,
-            selectProps: p
+            containerProps: h,
+            inputProps: p,
+            selectProps: m
         } = (function (e, t, n) {
             var i;
-            let a = _.get(t) || {},
+            let a = f.get(t) || {},
                 { autoComplete: o, name: l = a.name, isDisabled: u = a.isDisabled } = e,
-                { validationBehavior: E, isRequired: f } = a,
-                h = (0, s.Kf)(),
-                { visuallyHiddenProps: p } = (0, d.S)();
+                { validationBehavior: _, isRequired: h } = a,
+                p = (0, s.Kf)(),
+                { visuallyHiddenProps: m } = (0, d.S)();
             return (
                 (0, r.y$)(e.selectRef, t.selectedKey, t.setSelectedKey),
                 (0, c.Q)(
                     {
-                        validationBehavior: E,
+                        validationBehavior: _,
                         focus: () => n.current.focus()
                     },
                     t,
@@ -147,13 +147,13 @@ function f(e) {
                 ),
                 {
                     containerProps: {
-                        ...p,
+                        ...m,
                         'aria-hidden': !0,
                         'data-a11y-ignore': 'aria-hidden-focus'
                     },
                     inputProps: {
                         type: 'text',
-                        tabIndex: null == h || t.isFocused || t.isOpen ? -1 : 0,
+                        tabIndex: null == p || t.isFocused || t.isOpen ? -1 : 0,
                         style: { fontSize: 16 },
                         onFocus: () => n.current.focus(),
                         disabled: u
@@ -162,7 +162,7 @@ function f(e) {
                         tabIndex: -1,
                         autoComplete: o,
                         disabled: u,
-                        required: 'native' === E && f,
+                        required: 'native' === _ && h,
                         name: l,
                         value: null !== (i = t.selectedKey) && void 0 !== i ? i : '',
                         onChange: (e) => t.setSelectedKey(e.target.value)
@@ -172,7 +172,7 @@ function f(e) {
         })(
             {
                 ...e,
-                selectRef: E
+                selectRef: _
             },
             n,
             a
@@ -181,10 +181,10 @@ function f(e) {
         ? i.createElement(
               'div',
               {
-                  ...f,
+                  ...h,
                   'data-testid': 'hidden-select-container'
               },
-              i.createElement('input', h),
+              i.createElement('input', p),
               i.createElement(
                   'label',
                   null,
@@ -192,8 +192,8 @@ function f(e) {
                   i.createElement(
                       'select',
                       {
-                          ...p,
-                          ref: E
+                          ...m,
+                          ref: _
                       },
                       i.createElement('option', null),
                       [...n.collection.getKeys()].map((e) => {
@@ -214,7 +214,7 @@ function f(e) {
         : l
           ? i.createElement('input', {
                 type: 'hidden',
-                autoComplete: p.autoComplete,
+                autoComplete: m.autoComplete,
                 name: l,
                 disabled: u,
                 value: null !== (t = n.selectedKey) && void 0 !== t ? t : ''

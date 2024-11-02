@@ -1,100 +1,100 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return C;
     }
 }),
     n(47120);
 var a = n(200651),
-    s = n(192379),
+    i = n(192379),
     r = n(924826),
     l = n(91192),
-    i = n(442837),
+    s = n(442837),
     o = n(481060),
     c = n(607070),
     d = n(109434),
     u = n(456269),
     m = n(228392),
     h = n(479099),
-    _ = n(981631),
-    g = n(689938),
-    x = n(120160);
-function C() {
+    g = n(981631),
+    x = n(388032),
+    f = n(120160);
+function p() {
     return Promise.resolve();
 }
-function f(e) {
-    let { channel: t, closePopout: n, setPopoutRef: f } = e,
-        p = (0, u.Vm)(t),
-        { tagFilter: T } = (0, d.H)(t.id),
-        I = (0, d.v)(),
-        E = (0, i.e7)([c.Z], () => c.Z.keyboardModeEnabled),
-        N = s.useCallback(
+function C(e) {
+    let { channel: t, closePopout: n, setPopoutRef: C } = e,
+        v = (0, u.Vm)(t),
+        { tagFilter: b } = (0, d.H)(t.id),
+        j = (0, d.v)(),
+        _ = (0, s.e7)([c.Z], () => c.Z.keyboardModeEnabled),
+        I = i.useCallback(
             (e) => {
                 (0, m.e7)({
                     guildId: t.guild_id,
                     channelId: t.id,
                     tagId: e,
-                    filterTagIds: Array.from(T),
-                    added: !T.has(e),
+                    filterTagIds: Array.from(b),
+                    added: !b.has(e),
                     location: {
-                        page: _.ZY5.GUILD_CHANNEL,
-                        section: _.jXE.FORUM_CHANNEL_HEADER,
-                        object: _.qAy.CHANNEL_TAG
+                        page: g.ZY5.GUILD_CHANNEL,
+                        section: g.jXE.FORUM_CHANNEL_HEADER,
+                        object: g.qAy.CHANNEL_TAG
                     }
                 }),
-                    I.getState().toggleTagFilter(t.id, e);
+                    j.getState().toggleTagFilter(t.id, e);
             },
-            [t, T, I]
+            [t, b, j]
         ),
-        b = s.useCallback(() => {
-            I.getState().setTagFilter(t.id, new Set()), !E && n();
-        }, [I, t.id, E, n]),
-        v = (0, r.ZP)({
+        T = i.useCallback(() => {
+            j.getState().setTagFilter(t.id, new Set()), !_ && n();
+        }, [j, t.id, _, n]),
+        N = (0, r.ZP)({
             id: ''.concat(t.id, '-all-tags-dropdown-navigator'),
             isEnabled: !0,
             wrap: !0,
-            scrollToStart: C,
-            scrollToEnd: C
+            scrollToStart: p,
+            scrollToEnd: p
         }),
-        S = s.useRef(null);
+        S = i.useRef(null);
     return (
-        s.useEffect(() => {
+        i.useEffect(() => {
             requestAnimationFrame(() => {
                 if (null != S.current) {
-                    let e = S.current.querySelector('.'.concat(x.tag));
+                    let e = S.current.querySelector('.'.concat(f.tag));
                     null != e && e.focus();
                 }
             });
         }, []),
         (0, a.jsxs)(o.Dialog, {
-            ref: f,
-            'aria-label': g.Z.Messages.FORUM_TAG_FILTER_HEADER,
-            className: x.container,
+            ref: C,
+            'aria-label': x.intl.string(x.t.TdqRTk),
+            className: f.container,
             children: [
                 (0, a.jsx)('div', {
-                    className: x.header,
+                    className: f.header,
                     children: (0, a.jsxs)('div', {
-                        className: x.headerLeft,
+                        className: f.headerLeft,
                         children: [
                             (0, a.jsx)(o.Heading, {
                                 color: 'interactive-normal',
                                 variant: 'text-xs/bold',
-                                className: x.headerText,
-                                children: g.Z.Messages.FORUM_TAG_POST_SELECT
+                                className: f.headerText,
+                                children: x.intl.string(x.t.HPu3kp)
                             }),
                             (0, a.jsx)('div', {
-                                className: x.countContainer,
+                                className: f.countContainer,
                                 children: (0, a.jsx)(o.Text, {
-                                    className: x.countText,
+                                    className: f.countText,
                                     color: 'none',
                                     variant: 'text-xs/medium',
-                                    children: T.size
+                                    children: b.size
                                 })
                             })
                         ]
                     })
                 }),
                 (0, a.jsx)(l.bG, {
-                    navigator: v,
+                    navigator: N,
                     children: (0, a.jsx)(l.SJ, {
                         children: (e) => {
                             let { ref: t, ...n } = e;
@@ -103,15 +103,15 @@ function f(e) {
                                     (t.current = e), (S.current = e);
                                 },
                                 ...n,
-                                className: x.tagContainer,
-                                children: p.map((e) =>
+                                className: f.tagContainer,
+                                children: v.map((e) =>
                                     (0, a.jsx)(
                                         h.Z,
                                         {
-                                            className: x.tag,
+                                            className: f.tag,
                                             tag: e,
-                                            selected: T.has(e.id),
-                                            onClick: () => N(e.id)
+                                            selected: b.has(e.id),
+                                            onClick: () => I(e.id)
                                         },
                                         e.id
                                     )
@@ -120,18 +120,18 @@ function f(e) {
                         }
                     })
                 }),
-                (0, a.jsx)('div', { className: x.separator }),
+                (0, a.jsx)('div', { className: f.separator }),
                 (0, a.jsx)(o.Button, {
                     look: o.Button.Looks.LINK,
                     size: o.Button.Sizes.MIN,
                     color: o.Button.Colors.CUSTOM,
-                    className: x.clear,
-                    'aria-label': g.Z.Messages.FORUM_CLEAR_ALL,
-                    onClick: b,
+                    className: f.clear,
+                    'aria-label': x.intl.string(x.t['98EPQE']),
+                    onClick: T,
                     children: (0, a.jsx)(o.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-link',
-                        children: g.Z.Messages.FORUM_CLEAR_ALL
+                        children: x.intl.string(x.t['98EPQE'])
                     })
                 })
             ]

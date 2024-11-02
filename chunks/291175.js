@@ -12,7 +12,7 @@ n.d(t, {
 var r = n(913527),
     i = n.n(r),
     a = n(474936),
-    s = n(689938);
+    s = n(388032);
 let o = (e) => (Object.values(a.VU).includes(e) ? e : null),
     l = (e, t) => {
         if (null == t) return null;
@@ -24,22 +24,22 @@ let o = (e) => (Object.values(a.VU).includes(e) ? e : null),
         let n = l(e, t);
         switch (e) {
             case a.VU.PREMIUM_TENURE_1_MONTH:
-                return s.Z.Messages.TIERED_TNURE_BADGE_BRONZE_TOOLTIP.format({ date: n });
+                return s.intl.formatToPlainString(s.t['1vEPKC'], { date: n });
             case a.VU.PREMIUM_TENURE_3_MONTH:
-                return s.Z.Messages.TIERED_TNURE_BADGE_SILVER_TOOLTIP.format({ date: n });
+                return s.intl.formatToPlainString(s.t['1pri6u'], { date: n });
             case a.VU.PREMIUM_TENURE_6_MONTH:
-                return s.Z.Messages.TIERED_TNURE_BADGE_GOLD_TOOLTIP.format({ date: n });
+                return s.intl.formatToPlainString(s.t['t5Yv9/'], { date: n });
             case a.VU.PREMIUM_TENURE_12_MONTH:
-                return s.Z.Messages.TIERED_TNURE_BADGE_PLATINUM_TOOLTIP.format({ date: n });
+                return s.intl.formatToPlainString(s.t.IppEDg, { date: n });
             case a.VU.PREMIUM_TENURE_24_MONTH:
-                return s.Z.Messages.TIERED_TNURE_BADGE_DIAMOND_TOOLTIP.format({ date: n });
+                return s.intl.formatToPlainString(s.t.yUxtHB, { date: n });
             case a.VU.PREMIUM_TENURE_36_MONTH:
-                return s.Z.Messages.TIERED_TNURE_BADGE_EMERALD_TOOLTIP.format({ date: n });
+                return s.intl.formatToPlainString(s.t['6FLaGR'], { date: n });
             case a.VU.PREMIUM_TENURE_60_MONTH:
-                return s.Z.Messages.TIERED_TNURE_BADGE_RUBY_TOOLTIP.format({ date: n });
+                return s.intl.formatToPlainString(s.t.qA7ah4, { date: n });
             case a.VU.PREMIUM_TENURE_72_MONTH:
-                return s.Z.Messages.TIERED_TNURE_BADGE_FIRE_TOOLTIP.format({ date: n });
+                return s.intl.formatToPlainString(s.t['2E+W8f'], { date: n });
             default:
-                return s.Z.Messages.PREMIUM_BADGE_TOOLTIP.format({ date: t });
+                return s.intl.formatToPlainString(s.t['8zbGNT'], { date: t });
         }
     };

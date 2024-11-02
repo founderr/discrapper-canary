@@ -1,64 +1,64 @@
-t.r(e),
-    t.d(e, {
+i.r(t),
+    i.d(t, {
         default: function () {
-            return P;
+            return v;
         }
     });
-var i = t(200651);
-t(192379);
-var a = t(442837),
-    l = t(481060),
-    r = t(239091),
-    d = t(812206),
-    s = t(731646),
-    u = t(283595),
-    c = t(499502),
-    I = t(955809),
-    o = t(332845),
-    A = t(78874),
-    _ = t(350758),
-    T = t(149835),
-    E = t(38346),
-    N = t(683609),
-    Z = t(679879),
-    M = t(981631),
-    b = t(689938);
-function C(n) {
-    let { application: e, libraryApplication: t, analyticsContext: a, onSelect: d } = n,
-        s = {
-            ...(null != a ? a.location : null),
-            object: M.qAy.CONTEXT_MENU
+var e = i(200651);
+i(192379);
+var l = i(442837),
+    a = i(481060),
+    r = i(239091),
+    d = i(812206),
+    u = i(731646),
+    c = i(283595),
+    o = i(499502),
+    s = i(955809),
+    I = i(332845),
+    b = i(78874),
+    f = i(350758),
+    h = i(149835),
+    p = i(38346),
+    Z = i(683609),
+    g = i(679879),
+    A = i(981631),
+    T = i(388032);
+function x(n) {
+    let { application: t, libraryApplication: i, analyticsContext: l, onSelect: d } = n,
+        u = {
+            ...(null != l ? l.location : null),
+            object: A.qAy.CONTEXT_MENU
         },
-        u = (0, A.Z)(t, s),
-        C = (0, _.Z)(t),
-        P = (0, E.Z)(t),
-        O = (0, Z.Z)(t),
-        f = (0, N.Z)(t),
-        L = (0, o.Z)(t, e),
-        h = (0, T.Z)(t, e),
-        p = (0, c.Z)(t, e),
-        g = (0, I.Z)(e);
-    return (0, i.jsxs)(l.Menu, {
+        c = (0, b.Z)(i, u),
+        x = (0, f.Z)(i),
+        v = (0, p.Z)(i),
+        E = (0, g.Z)(i),
+        m = (0, Z.Z)(i),
+        _ = (0, I.Z)(i, t),
+        L = (0, h.Z)(i, t),
+        S = (0, o.Z)(i, t),
+        M = (0, s.Z)(t);
+    return (0, e.jsxs)(a.Menu, {
         navId: 'game-context',
         onClose: r.Zy,
-        'aria-label': b.Z.Messages.APPLICATION_ACTIONS_MENU_LABEL,
+        'aria-label': T.intl.string(T.t.tKobzc),
         onSelect: d,
-        children: [u, C, P, O, f, L, h, (0, i.jsx)(l.MenuGroup, { children: p }), (0, i.jsx)(l.MenuGroup, { children: g })]
+        children: [c, x, v, E, m, _, L, (0, e.jsx)(a.MenuGroup, { children: S }), (0, e.jsx)(a.MenuGroup, { children: M })]
     });
 }
-function P(n) {
-    let { applicationId: e, branchId: t } = n,
-        l = (0, a.e7)([d.Z], () => d.Z.getApplication(e), [e]),
-        r = (0, a.e7)([u.Z], () => (null != t ? u.Z.getLibraryApplication(e, t) : u.Z.getActiveLibraryApplication(e)), [e, t]);
-    return null == l || null == r
-        ? (0, i.jsx)(s.default, {
+function v(n) {
+    let { applicationId: t, branchId: i } = n,
+        a = (0, l.e7)([d.Z], () => d.Z.getApplication(t), [t]),
+        r = (0, l.e7)([c.Z], () => (null != i ? c.Z.getLibraryApplication(t, i) : c.Z.getActiveLibraryApplication(t)), [t, i]);
+    return null == a || null == r
+        ? (0, e.jsx)(u.default, {
               ...n,
-              id: e,
-              label: b.Z.Messages.COPY_ID_APPLICATION
+              id: t,
+              label: T.intl.string(T.t['FfCL+/'])
           })
-        : (0, i.jsx)(C, {
+        : (0, e.jsx)(x, {
               ...n,
-              application: l,
+              application: a,
               libraryApplication: r
           });
 }

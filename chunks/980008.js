@@ -231,23 +231,23 @@ function c(e) {
             }),
             [e.children, o, s, c]
         ),
-        _ = (0, r.Kx)(
+        f = (0, r.Kx)(
             e,
             (0, i.useCallback)((e) => new l(e, null, d), [d]),
             d
         ),
-        { disabledKeys: E, selectionManager: f } = (0, a.S)({
+        { disabledKeys: _, selectionManager: h } = (0, a.S)({
             ...e,
-            collection: _,
+            collection: f,
             disabledBehavior: e.disabledBehavior || 'selection'
         });
     return {
-        collection: _,
-        disabledKeys: E,
-        selectionManager: f,
+        collection: f,
+        disabledKeys: _,
+        selectionManager: h,
         showSelectionCheckboxes: e.showSelectionCheckboxes || !1,
         sortDescriptor: e.sortDescriptor,
-        isKeyboardNavigationDisabled: 0 === _.size || t,
+        isKeyboardNavigationDisabled: 0 === f.size || t,
         setKeyboardNavigationDisabled: n,
         sort(t, n) {
             var r;

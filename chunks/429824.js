@@ -1,38 +1,38 @@
 t.d(n, {
     Z: function () {
-        return d;
+        return c;
     }
 });
-var a = t(200651),
-    i = t(192379),
-    l = t(481060),
-    s = t(528011),
+var i = t(200651),
+    l = t(192379),
+    a = t(481060),
+    r = t(528011),
     o = t(666657),
-    r = t(533244),
-    u = t(689938);
-function d(e) {
+    u = t(533244),
+    d = t(388032);
+function c(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { shouldShowIncidentActions: d, isUnderLockdown: c, incidentData: E } = (0, s.mI)(e.id),
-        I = i.useCallback(() => {
+        { shouldShowIncidentActions: c, isUnderLockdown: s, incidentData: g } = (0, r.mI)(e.id),
+        I = l.useCallback(() => {
             let n = {
                 source: o.Zu.CONTEXT_MENU,
-                alertType: (0, r.T1)(E)
+                alertType: (0, u.T1)(g)
             };
-            (0, l.openModalLazy)(async () => {
-                let { default: i } = await t.e('61536').then(t.bind(t, 664452));
+            (0, a.openModalLazy)(async () => {
+                let { default: l } = await t.e('61536').then(t.bind(t, 664452));
                 return (t) =>
-                    (0, a.jsx)(i, {
+                    (0, i.jsx)(l, {
                         ...t,
                         guildId: e.id,
                         analyticsData: n
                     });
             });
-        }, [e.id, E]);
-    return e.isCommunity() && d
-        ? (0, a.jsx)(l.MenuItem, {
+        }, [e.id, g]);
+    return e.isCommunity() && c
+        ? (0, i.jsx)(a.MenuItem, {
               id: 'server-lockdown',
-              label: c ? u.Z.Messages.GUILD_SERVER_LOCKDOWN_CONTEXT_MENU_UNLOCK : u.Z.Messages.GUILD_SERVER_LOCKDOWN_CONTEXT_MENU_LOCK,
-              icon: n ? (c ? l.LockUnlockedIcon : l.LockIcon) : void 0,
+              label: s ? d.intl.string(d.t['+tSVi4']) : d.intl.string(d.t.EPlEdn),
+              icon: n ? (s ? a.LockUnlockedIcon : a.LockIcon) : void 0,
               action: I,
               color: 'danger'
           })

@@ -1,21 +1,21 @@
 var i = n(200651),
-    s = n(192379),
-    a = n(481060),
-    l = n(128557),
-    r = n(981631),
-    o = n(689938),
+    l = n(192379),
+    r = n(481060),
+    a = n(128557),
+    s = n(981631),
+    o = n(388032),
     c = n(339828);
 t.Z = (e) => {
     let { guild: t, onAddGuild: u } = e,
-        d = s.useCallback(() => {
-            (0, a.openModalLazy)(async () => {
+        d = l.useCallback(() => {
+            (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e('7654'), n.e('85683')]).then(n.bind(n, 560114));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,
                         guild: t,
-                        source: r.t4x.HUB_DIRECTORY,
-                        analyticsLocation: { section: r.jXE.HUB_WELCOME_CTA }
+                        source: s.t4x.HUB_DIRECTORY,
+                        analyticsLocation: { section: s.jXE.HUB_WELCOME_CTA }
                     });
             });
         }, [t]);
@@ -27,29 +27,29 @@ t.Z = (e) => {
                 alt: '',
                 src: n(705845)
             }),
-            (0, i.jsx)(a.Heading, {
+            (0, i.jsx)(r.Heading, {
                 className: c.emptyTitle,
                 variant: 'heading-xl/semibold',
-                children: o.Z.Messages.HUB_DIRECTORY_CHANNEL_EMPTY_TITLE.format({ guildName: t.name })
+                children: o.intl.format(o.t.vyvrpK, { guildName: t.name })
             }),
-            (0, i.jsx)(a.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: 'text-md/normal',
                 className: c.emptySubtitle,
-                children: o.Z.Messages.HUB_DIRECTORY_CHANNEL_EMPTY_SUBTITLE
+                children: o.intl.string(o.t.WypE0t)
             }),
             null != u
-                ? (0, i.jsx)(l.i, {
+                ? (0, i.jsx)(a.i, {
                       className: c.emptyCTA,
                       iconUrl: n(362827),
-                      header: o.Z.Messages.HUB_DIRECTORY_CHANNEL_EMPTY_ADD_SERVER,
+                      header: o.intl.string(o.t.hyK15u),
                       completed: !1,
                       onClick: u
                   })
                 : null,
-            (0, i.jsx)(l.i, {
+            (0, i.jsx)(a.i, {
                 className: c.emptyCTA,
                 iconUrl: n(538548),
-                header: o.Z.Messages.HUB_DIRECTORY_CHANNEL_EMPTY_INVITE,
+                header: o.intl.string(o.t.L4bwJy),
                 completed: !1,
                 onClick: d
             })

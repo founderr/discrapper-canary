@@ -3,33 +3,33 @@ var i = n(200651),
     l = n(192379),
     r = n(120356),
     a = n.n(r),
-    s = n(481060),
-    o = n(72416),
+    o = n(481060),
+    s = n(72416),
     c = n(476221),
     u = n(873596),
     d = n(423516),
     h = n(981631),
     p = n(700883);
 let f = {
-        [h.IE4.UNKNOWN]: s.Tooltip.Colors.BLACK,
-        [h.IE4.BAD]: s.Tooltip.Colors.RED,
-        [h.IE4.AVERAGE]: s.Tooltip.Colors.YELLOW,
-        [h.IE4.FINE]: s.Tooltip.Colors.GREEN
+        [h.IE4.UNKNOWN]: o.Tooltip.Colors.BLACK,
+        [h.IE4.BAD]: o.Tooltip.Colors.RED,
+        [h.IE4.AVERAGE]: o.Tooltip.Colors.YELLOW,
+        [h.IE4.FINE]: o.Tooltip.Colors.GREEN
     },
-    _ = {
+    m = {
         [h.QKv.CONNECTED]: p.rtcConnectionStatusConnected,
         [h.QKv.CONNECTING]: p.rtcConnectionStatusConnecting,
         [h.QKv.ERROR]: p.rtcConnectionStatusError
     },
-    m = {
+    g = {
         [h.IE4.FINE]: p.rtcConnectionQualityFine,
         [h.IE4.AVERAGE]: p.rtcConnectionQualityAverage,
         [h.IE4.BAD]: p.rtcConnectionQualityBad,
         [h.IE4.UNKNOWN]: null
     };
-class g extends l.PureComponent {
+class C extends l.PureComponent {
     renderPopoutTarget(e) {
-        return (0, i.jsx)(s.Popout, {
+        return (0, i.jsx)(o.Popout, {
             renderPopout: this.renderPopout,
             position: 'top',
             children: e
@@ -40,28 +40,28 @@ class g extends l.PureComponent {
             { connectionStatus: n, connectionStatusText: l } = c.Z.getStatus(t, e);
         return this.renderPopoutTarget((e) => {
             let { onClick: t } = e;
-            return (0, i.jsx)(s.Button, {
-                look: s.Button.Looks.BLANK,
-                size: s.Button.Sizes.NONE,
+            return (0, i.jsx)(o.Button, {
+                look: o.Button.Looks.BLANK,
+                size: o.Button.Sizes.NONE,
                 onClick: t,
                 children: (0, i.jsx)(d.Z, {
                     text: l,
                     hasVideo: this.props.hasVideo,
-                    className: _[n]
+                    className: m[n]
                 })
             });
         });
     }
     render() {
         let e;
-        let { quality: t, smallPing: n, lastPing: l, state: r, className: o, children: c } = this.props;
+        let { quality: t, smallPing: n, lastPing: l, state: r, className: s, children: c } = this.props;
         return (
             r === h.hes.RTC_CONNECTED &&
-                (e = (0, i.jsx)(s.Tooltip, {
+                (e = (0, i.jsx)(o.Tooltip, {
                     text: t !== h.IE4.UNKNOWN && null != l ? ''.concat(l.toFixed(0), ' ms') : null,
                     color: f[t],
                     children: (e) =>
-                        (0, i.jsx)(C, {
+                        (0, i.jsx)(_, {
                             quality: t,
                             smallPing: n,
                             ...e
@@ -70,7 +70,7 @@ class g extends l.PureComponent {
             (0, i.jsxs)('div', {
                 children: [
                     (0, i.jsxs)('div', {
-                        className: a()(p.rtcConnectionStatus, m[t], o),
+                        className: a()(p.rtcConnectionStatus, g[t], s),
                         children: [
                             e,
                             (0, i.jsx)('div', {
@@ -104,19 +104,19 @@ class g extends l.PureComponent {
                 : (t[n] = l);
     }
 }
-function C(e) {
+function _(e) {
     let { quality: t, smallPing: n, ...l } = e;
-    if (!(0, s.useRedesignIconContext)().enabled)
-        return (0, i.jsx)(o.Z, {
+    if (!(0, o.useRedesignIconContext)().enabled)
+        return (0, i.jsx)(s.Z, {
             className: a()(p.ping, { [p.smallPing]: n }),
             foreground: p.pingForeground
         });
     {
         let e = {
-            [h.IE4.FINE]: s.ConnectionFineIcon,
-            [h.IE4.AVERAGE]: s.ConnectionAverageIcon,
-            [h.IE4.BAD]: s.ConnectionBadIcon,
-            [h.IE4.UNKNOWN]: s.ConnectionUnknownIcon
+            [h.IE4.FINE]: o.ConnectionFineIcon,
+            [h.IE4.AVERAGE]: o.ConnectionAverageIcon,
+            [h.IE4.BAD]: o.ConnectionBadIcon,
+            [h.IE4.UNKNOWN]: o.ConnectionUnknownIcon
         }[t];
         return (0, i.jsx)(e, {
             className: a()(p.ping, { [p.smallPing]: n }),
@@ -124,4 +124,4 @@ function C(e) {
         });
     }
 }
-t.Z = g;
+t.Z = C;

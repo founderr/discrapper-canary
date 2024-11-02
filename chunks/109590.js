@@ -1,9 +1,9 @@
 n.d(t, {
     EB: function () {
-        return S;
+        return I;
     },
     cl: function () {
-        return m;
+        return E;
     }
 }),
     n(47120);
@@ -17,8 +17,8 @@ var r = n(392711),
     c = n(238349),
     d = n(660189);
 n(682474);
-var _ = n(981631);
-function E(e, t, n) {
+var f = n(981631);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function E(e, t, n) {
         e
     );
 }
-class f {
+class h {
     get(e) {
         return !this._set.hasOwnProperty(e) && (this._set[e] = this._defaultValueFunc()), this._set[e];
     }
@@ -45,10 +45,10 @@ class f {
         return u.default.keys(this._set)[0];
     }
     constructor(e) {
-        E(this, '_set', void 0), E(this, '_defaultValueFunc', void 0), (this._set = {}), (this._defaultValueFunc = e);
+        _(this, '_set', void 0), _(this, '_defaultValueFunc', void 0), (this._set = {}), (this._defaultValueFunc = e);
     }
 }
-let h = new (class e {
+let p = new (class e {
         request(e, t) {
             this.requested.get(e).add(t);
         }
@@ -57,7 +57,7 @@ let h = new (class e {
         }
         finishRequesting(e, t) {
             let n = this.requested.get(e);
-            t.forEach((e) => n.delete(e)), h.compact(e);
+            t.forEach((e) => n.delete(e)), p.compact(e);
         }
         getRequested(e) {
             return this.requested.get(e);
@@ -75,51 +75,51 @@ let h = new (class e {
             0 === this.requested.get(e).size && this.requested.delete(e);
         }
         constructor() {
-            E(this, 'requested', void 0), (this.requested = new f(() => new Set()));
+            _(this, 'requested', void 0), (this.requested = new h(() => new Set()));
         }
     })(),
-    p = null;
-function I(e, t) {
+    m = null;
+function g(e, t) {
     return !e && null == t;
 }
-function m(e) {
+function E(e) {
     var t, n;
     let { loaded: r, firstMessage: i } = (0, a.cj)([d.Z], () => d.Z.getMessage(e.id)),
         s = (0, a.e7)([l.Z], () => l.Z.getChannel(e.parent_id));
     if (null != s && ((t = r), (n = i), !t && null == n))
         (function (e, t) {
-            if (h.hasRequested(e.id, t)) return;
+            if (p.hasRequested(e.id, t)) return;
             let n = (0, c.U)(e.id),
                 r = n.findIndex((e) => e === t),
-                i = n.slice(r, r + 5).filter((t) => !h.hasRequested(e.id, t));
-            T(e, i);
+                i = n.slice(r, r + 5).filter((t) => !p.hasRequested(e.id, t));
+            v(e, i);
         })(s, e.id);
     return {
         loaded: r,
         firstMessage: i
     };
 }
-function T(e, t) {
+function v(e, t) {
     let n = !1;
     t.forEach((t) => {
         var r, i;
         let { loaded: a, firstMessage: s } = d.Z.getMessage(t);
-        if (((r = a), (i = s), !r && null == i)) h.request(e.id, t), (n = !0);
+        if (((r = a), (i = s), !r && null == i)) p.request(e.id, t), (n = !0);
     }),
-        n && null == p && (p = setTimeout(g, 0));
+        n && null == m && (m = setTimeout(S, 0));
 }
-function S(e) {
-    T(e, (0, c.U)(e.id).slice(0, 10));
+function I(e) {
+    v(e, (0, c.U)(e.id).slice(0, 10));
 }
-async function g() {
+async function S() {
     try {
-        for (; h.hasNext(); ) await A(h.next());
+        for (; p.hasNext(); ) await T(p.next());
     } finally {
-        p = null;
+        m = null;
     }
 }
-async function A(e) {
-    let t = h.getNextBatch(e, 10);
+async function T(e) {
+    let t = p.getNextBatch(e, 10);
     try {
         var n;
         if (0 === t.length) return;
@@ -128,7 +128,7 @@ async function A(e) {
         let {
             body: { threads: i }
         } = await s.tn.post({
-            url: _.ANM.FORUM_POSTS(e),
+            url: f.ANM.FORUM_POSTS(e),
             body: { thread_ids: t }
         });
         o.Z.dispatch({
@@ -138,6 +138,6 @@ async function A(e) {
         });
     } catch (e) {
     } finally {
-        h.finishRequesting(e, t);
+        p.finishRequesting(e, t);
     }
 }

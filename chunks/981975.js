@@ -1,219 +1,219 @@
 n.d(t, {
     Z: function () {
-        return D;
+        return A;
     }
 }),
     n(47120),
     n(653041),
     n(536091);
-var s = n(200651),
-    a = n(192379),
-    i = n(120356),
-    r = n.n(i),
-    l = n(392711),
-    o = n.n(l),
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    s = n.n(l),
+    a = n(392711),
+    o = n.n(a),
     c = n(442837),
     d = n(481060),
     u = n(570140),
-    _ = n(275759),
-    I = n(313201),
-    E = n(63063),
-    T = n(243730),
-    m = n(764260),
-    N = n(946724),
-    S = n(95242),
-    g = n(530198),
-    h = n(420966),
-    C = n(203377),
-    x = n(981631),
-    p = n(856651),
-    R = n(689938),
-    L = n(16297),
-    f = n(571621);
-let O = (0, I.hQ)();
-function A(e, t) {
-    return t !== _.O1.AND ? Object.values(o().groupBy(e, (e) => ''.concat(e.connectionType, ':').concat(e.applicationId))) : 0 === e.length ? [] : [[...e]];
+    m = n(275759),
+    h = n(313201),
+    g = n(63063),
+    x = n(243730),
+    p = n(764260),
+    f = n(946724),
+    C = n(95242),
+    I = n(530198),
+    _ = n(420966),
+    N = n(203377),
+    v = n(981631),
+    T = n(856651),
+    j = n(388032),
+    E = n(16297),
+    S = n(571621);
+let b = (0, h.hQ)();
+function R(e, t) {
+    return t !== m.O1.AND ? Object.values(o().groupBy(e, (e) => ''.concat(e.connectionType, ':').concat(e.applicationId))) : 0 === e.length ? [] : [[...e]];
 }
-function M(e) {
+function Z(e) {
     let { handleAddVerificationClicked: t, locked: n } = e;
-    return (0, s.jsxs)('div', {
-        className: L.headerNoConfigContainer,
+    return (0, i.jsxs)('div', {
+        className: E.headerNoConfigContainer,
         children: [
-            (0, s.jsx)(d.Heading, {
-                className: L.headerHeading,
+            (0, i.jsx)(d.Heading, {
+                className: E.headerHeading,
                 variant: 'eyebrow',
-                children: R.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER
+                children: j.intl.string(j.t.nMir29)
             }),
-            (0, s.jsx)(d.Text, {
+            (0, i.jsx)(d.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: R.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_DESCRIPTION_LEARN_MORE.format({ helpdeskArticleUrl: E.Z.getArticleURL(x.BhN.CONNECTION_DETAILS_ADMIN) })
+                children: j.intl.format(j.t.q5f7tL, { helpdeskArticleUrl: g.Z.getArticleURL(v.BhN.CONNECTION_DETAILS_ADMIN) })
             }),
-            (0, s.jsx)(d.Button, {
+            (0, i.jsx)(d.Button, {
                 disabled: n,
-                className: L.addVerificationButton,
+                className: E.addVerificationButton,
                 size: d.Button.Sizes.MEDIUM,
                 look: d.Button.Looks.FILLED,
                 color: d.Button.Colors.BRAND,
                 onClick: t,
-                children: R.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_ADD_CONNECTION
+                children: j.intl.string(j.t['OSvW5+'])
             })
         ]
     });
 }
-function D(e) {
-    let { guild: t, role: n, locked: i, setSelectedSection: l, integrations: o } = e,
-        { headerHeight: I, headerRef: D } = (0, S.Z)(0),
-        { scrolledToTop: v, handleScroll: j } = (0, h.V)(),
-        Z = (0, c.e7)(
-            [T.Z],
+function A(e) {
+    let { guild: t, role: n, locked: l, setSelectedSection: a, integrations: o } = e,
+        { headerHeight: h, headerRef: A } = (0, C.Z)(0),
+        { scrolledToTop: L, handleScroll: y } = (0, _.V)(),
+        D = (0, c.e7)(
+            [x.Z],
             () => {
                 var e;
-                return null === (e = T.Z.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[n.id];
+                return null === (e = x.Z.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[n.id];
             },
             [n.id, t.id]
         ),
-        b = (0, c.Wu)([N.Z], () => {
+        O = (0, c.Wu)([f.Z], () => {
             var e;
-            return null !== (e = N.Z.getEditedRoleConnectionConfigurationsMap().get(n.id)) && void 0 !== e ? e : [];
+            return null !== (e = f.Z.getEditedRoleConnectionConfigurationsMap().get(n.id)) && void 0 !== e ? e : [];
         }),
-        U = b.length > 1 ? _.O1.OR : _.O1.AND,
-        G = a.useMemo(() => (U === _.O1.OR ? b.flat() : null != b && b.length > 0 ? b[0] : []), [U, b]),
-        P = a.useMemo(() => new Set(G.map((e) => e.connectionType)), [G]);
-    function B(e) {
+        M = O.length > 1 ? m.O1.OR : m.O1.AND,
+        P = r.useMemo(() => (M === m.O1.OR ? O.flat() : null != O && O.length > 0 ? O[0] : []), [M, O]),
+        k = r.useMemo(() => new Set(P.map((e) => e.connectionType)), [P]);
+    function w(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-            s = [...G];
-        s.push({
+            i = [...P];
+        i.push({
             connectionType: e,
             connectionMetadataField: void 0,
             applicationId: t,
             operator: void 0,
             value: void 0
         }),
-            (0, m.d_)(n.id, A(s, U));
+            (0, p.d_)(n.id, R(i, M));
     }
-    function y() {
+    function B() {
         u.Z.dispatch({
             type: 'CONNECTIONS_GRID_MODAL_SHOW',
-            onComplete: (e) => B(e),
-            excludedPlatformTypes: P,
+            onComplete: (e) => w(e),
+            excludedPlatformTypes: k,
             integrations: o,
-            onCompleteApplication: (e) => B(p.Kt, e)
+            onCompleteApplication: (e) => w(T.Kt, e)
         });
     }
-    let F = null;
-    if (0 === G.length)
-        F = (0, s.jsx)(M, {
-            handleAddVerificationClicked: y,
-            locked: i
+    let U = null;
+    if (0 === P.length)
+        U = (0, i.jsx)(Z, {
+            handleAddVerificationClicked: B,
+            locked: l
         });
-    else if (G.length > 0) {
-        var w, k;
+    else if (P.length > 0) {
+        var G, F;
         let e = null;
-        G.length < 10 &&
-            (e = (0, s.jsx)(d.Button, {
-                className: r()(L.addVerificationButton, L.addVerificationButtonAppend),
+        P.length < 10 &&
+            (e = (0, i.jsx)(d.Button, {
+                className: s()(E.addVerificationButton, E.addVerificationButtonAppend),
                 size: d.Button.Sizes.LARGE,
                 look: d.Button.Looks.BLANK,
                 color: d.Button.Colors.LINK,
-                onClick: y,
-                disabled: i,
-                children: (0, s.jsxs)('div', {
-                    className: L.addVerificationButtonAppendTextContainer,
+                onClick: B,
+                disabled: l,
+                children: (0, i.jsxs)('div', {
+                    className: E.addVerificationButtonAppendTextContainer,
                     children: [
-                        (0, s.jsx)(d.CirclePlusIcon, {
+                        (0, i.jsx)(d.CirclePlusIcon, {
                             size: 'xs',
                             color: 'currentColor'
                         }),
-                        R.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_ADD_CONNECTION
+                        j.intl.string(j.t['OSvW5+'])
                     ]
                 })
             })),
-            (F = (0, s.jsxs)(s.Fragment, {
+            (U = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    ((w = () => (0, m.d_)(n.id, [])),
-                    (k = i),
-                    (0, s.jsxs)(s.Fragment, {
+                    ((G = () => (0, p.d_)(n.id, [])),
+                    (F = l),
+                    (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, s.jsxs)('div', {
-                                className: L.headerTitleContainer,
+                            (0, i.jsxs)('div', {
+                                className: E.headerTitleContainer,
                                 children: [
-                                    (0, s.jsx)('div', {
-                                        className: L.headerTitleTextContainer,
-                                        children: (0, s.jsx)(d.Heading, {
+                                    (0, i.jsx)('div', {
+                                        className: E.headerTitleTextContainer,
+                                        children: (0, i.jsx)(d.Heading, {
                                             variant: 'eyebrow',
-                                            children: R.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER
+                                            children: j.intl.string(j.t.nMir29)
                                         })
                                     }),
-                                    (0, s.jsx)(d.Button, {
-                                        className: L.headerTitleButton,
+                                    (0, i.jsx)(d.Button, {
+                                        className: E.headerTitleButton,
                                         size: d.Button.Sizes.TINY,
                                         look: d.Button.Looks.LINK,
                                         color: d.Button.Colors.LINK,
-                                        onClick: w,
-                                        disabled: k,
-                                        children: R.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_CLEAR_ALL
+                                        onClick: G,
+                                        disabled: F,
+                                        children: j.intl.string(j.t.ntW1cX)
                                     })
                                 ]
                             }),
-                            (0, s.jsx)(d.Text, {
+                            (0, i.jsx)(d.Text, {
                                 variant: 'text-sm/normal',
-                                children: R.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_DESCRIPTION_LEARN_MORE.format({ helpdeskArticleUrl: E.Z.getArticleURL(x.BhN.CONNECTION_DETAILS_ADMIN) })
+                                children: j.intl.format(j.t.q5f7tL, { helpdeskArticleUrl: g.Z.getArticleURL(v.BhN.CONNECTION_DETAILS_ADMIN) })
                             })
                         ]
                     })),
-                    (function (e, t, n, a, i) {
-                        let r = A(a, _.O1.OR);
-                        return (0, s.jsx)(d.FormItem, {
-                            className: L.operatorContainer,
-                            title: R.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_REQUIREMENTS,
-                            children: (0, s.jsx)(d.RadioGroup, {
+                    (function (e, t, n, r, l) {
+                        let s = R(r, m.O1.OR);
+                        return (0, i.jsx)(d.FormItem, {
+                            className: E.operatorContainer,
+                            title: j.intl.string(j.t.Xs7PHR),
+                            children: (0, i.jsx)(d.RadioGroup, {
                                 options: [
                                     {
-                                        name: R.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_OR_DESCRIPTION,
-                                        value: _.O1.OR
+                                        name: j.intl.string(j.t['W3iY5+']),
+                                        value: m.O1.OR
                                     },
                                     {
-                                        name: R.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_AND_DESCRIPTION,
-                                        value: _.O1.AND
+                                        name: j.intl.string(j.t.gHXS9P),
+                                        value: m.O1.AND
                                     }
                                 ],
-                                onChange: (e) => i(a, e.value),
+                                onChange: (e) => l(r, e.value),
                                 value: n,
-                                disabled: e || r.length < 2,
-                                'aria-labelledby': O
+                                disabled: e || s.length < 2,
+                                'aria-labelledby': b
                             })
                         });
-                    })(i, n.id, U, G, (e, t) => (0, m.d_)(n.id, A(e, t))),
-                    (function (e, t, n, a, i) {
-                        function r(n, s) {
-                            let a = [];
-                            for (let t of e) a.push({ ...t });
+                    })(l, n.id, M, P, (e, t) => (0, p.d_)(n.id, R(e, t))),
+                    (function (e, t, n, r, l) {
+                        function s(n, i) {
+                            let r = [];
+                            for (let t of e) r.push({ ...t });
                             if (null == n) {
-                                let t = e[s];
-                                null !== t && null == t.connectionMetadataField && null == t.operator && null == t.value ? (a = a.filter((e) => (null == t.applicationId ? e.connectionType !== t.connectionType : e.connectionType !== t.connectionType && e.applicationId !== t.applicationId))) : a.splice(s, 1);
-                            } else -1 === s ? a.push(n) : s >= 0 && (a[s] = n);
-                            t(a);
+                                let t = e[i];
+                                null !== t && null == t.connectionMetadataField && null == t.operator && null == t.value ? (r = r.filter((e) => (null == t.applicationId ? e.connectionType !== t.connectionType : e.connectionType !== t.connectionType && e.applicationId !== t.applicationId))) : r.splice(i, 1);
+                            } else -1 === i ? r.push(n) : i >= 0 && (r[i] = n);
+                            t(r);
                         }
-                        let l = new Map();
+                        let a = new Map();
                         for (let t of (e.forEach((e, t) => {
                             let n = ''.concat(e.connectionType, ':').concat(e.applicationId);
-                            if (l.has(n)) {
-                                let s = l.get(n);
-                                null == s ||
-                                    s.push({
+                            if (a.has(n)) {
+                                let i = a.get(n);
+                                null == i ||
+                                    i.push({
                                         index: t,
                                         configuration: e
                                     });
                             } else
-                                l.set(n, [
+                                a.set(n, [
                                     {
                                         index: t,
                                         configuration: e
                                     }
                                 ]);
                         }),
-                        l.values())) {
+                        a.values())) {
                             if (
                                 t.some((e) => {
                                     let { configuration: t } = e;
@@ -227,69 +227,69 @@ function D(e) {
                                     operator: void 0,
                                     value: void 0
                                 },
-                                s = e.push(n);
+                                i = e.push(n);
                             t.push({
-                                index: s - 1,
+                                index: i - 1,
                                 configuration: n
                             });
                         }
-                        return (0, s.jsx)('div', {
-                            className: L.configurationsContainer,
-                            children: Array.from(l.values()).map((e) =>
-                                (0, s.jsx)(
-                                    g.Z,
+                        return (0, i.jsx)('div', {
+                            className: E.configurationsContainer,
+                            children: Array.from(a.values()).map((e) =>
+                                (0, i.jsx)(
+                                    I.Z,
                                     {
                                         configurationItems: e,
-                                        onConfigurationChange: r,
+                                        onConfigurationChange: s,
                                         locked: n,
-                                        integrations: i
+                                        integrations: l
                                     },
                                     e[0].configuration.connectionType + ':' + e[0].index
                                 )
                             )
                         });
-                    })(G, (e) => (0, m.d_)(n.id, A(e, U)), i, n.id, o),
+                    })(P, (e) => (0, p.d_)(n.id, R(e, M)), l, n.id, o),
                     e
                 ]
             }));
     }
-    return (0, s.jsx)(d.AdvancedScrollerAuto, {
-        className: L.scroller,
-        style: { scrollPaddingTop: I },
-        onScroll: j,
-        children: (0, s.jsxs)('div', {
-            className: f.contentWidth,
+    return (0, i.jsx)(d.AdvancedScrollerAuto, {
+        className: E.scroller,
+        style: { scrollPaddingTop: h },
+        onScroll: y,
+        children: (0, i.jsxs)('div', {
+            className: S.contentWidth,
             children: [
-                (0, s.jsx)('div', {
-                    className: r()(f.header, f.stickyHeader, { [f.stickyHeaderElevated]: !v }),
-                    ref: D,
-                    children: (0, s.jsx)(h.Z, {
+                (0, i.jsx)('div', {
+                    className: s()(S.header, S.stickyHeader, { [S.stickyHeaderElevated]: !L }),
+                    ref: A,
+                    children: (0, i.jsx)(_.Z, {
                         guild: t,
                         role: n,
-                        selectedSection: C.ZI.VERIFICATIONS,
-                        setSelectedSection: l
+                        selectedSection: N.ZI.VERIFICATIONS,
+                        setSelectedSection: a
                     })
                 }),
-                (null != Z ? Z : 0) > 0
-                    ? (0, s.jsxs)('div', {
-                          className: L.warningContainer,
+                (null != D ? D : 0) > 0
+                    ? (0, i.jsxs)('div', {
+                          className: E.warningContainer,
                           children: [
-                              (0, s.jsx)(d.CircleWarningIcon, {
+                              (0, i.jsx)(d.CircleWarningIcon, {
                                   size: 'custom',
                                   width: 20,
                                   height: 20,
                                   color: 'currentColor',
-                                  className: L.warningIcon
+                                  className: E.warningIcon
                               }),
-                              (0, s.jsx)(d.Text, {
+                              (0, i.jsx)(d.Text, {
                                   variant: 'text-sm/normal',
                                   color: 'text-normal',
-                                  children: R.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MEMBERS_WARNING
+                                  children: j.intl.string(j.t['2aFeeX'])
                               })
                           ]
                       })
                     : null,
-                F
+                U
             ]
         })
     });

@@ -20,22 +20,22 @@ function u(e, t, n) {
 }
 let c = {},
     d = 0,
-    _ = 15 * o.Z.Millis.SECOND;
-function E() {
+    f = 15 * o.Z.Millis.SECOND;
+function _() {
     c = { ...a.Z.getCollapsedCategories() };
 }
-function f() {
-    !__OVERLAY__ && (clearTimeout(d), (d = setTimeout(() => p({}), _)));
+function h() {
+    !__OVERLAY__ && (clearTimeout(d), (d = setTimeout(() => m({}), f)));
 }
-async function h(e, t) {
+async function p(e, t) {
     null == e || e === l.ME
         ? await r.tn.patch({
               url: l.ANM.USER_GUILD_SETTINGS(l.ME),
               body: t
           })
-        : await p(null != t ? { [null != e ? e : l.ME]: t } : {});
+        : await m(null != t ? { [null != e ? e : l.ME]: t } : {});
 }
-async function p(e) {
+async function m(e) {
     clearTimeout(d);
     let t = 0 !== Object.keys(e).length,
         n = a.Z.getCollapsedCategories(),
@@ -69,22 +69,22 @@ async function p(e) {
           ).body)
         : [];
 }
-function I() {
+function g() {
     c = { ...a.Z.getCollapsedCategories() };
 }
-class m extends i.Z {
+class E extends i.Z {
     constructor(...e) {
         super(...e),
             u(this, 'actions', {
-                CATEGORY_COLLAPSE: f,
-                CATEGORY_EXPAND: f,
-                CATEGORY_COLLAPSE_ALL: f,
-                CATEGORY_EXPAND_ALL: f,
-                POST_CONNECTION_OPEN: E,
-                USER_GUILD_SETTINGS_FULL_UPDATE: I
+                CATEGORY_COLLAPSE: h,
+                CATEGORY_EXPAND: h,
+                CATEGORY_COLLAPSE_ALL: h,
+                CATEGORY_EXPAND_ALL: h,
+                POST_CONNECTION_OPEN: _,
+                USER_GUILD_SETTINGS_FULL_UPDATE: g
             }),
-            u(this, 'saveUserGuildSettings', h),
-            u(this, 'saveUserGuildSettingsBulk', p);
+            u(this, 'saveUserGuildSettings', p),
+            u(this, 'saveUserGuildSettingsBulk', m);
     }
 }
-t.Z = new m();
+t.Z = new E();

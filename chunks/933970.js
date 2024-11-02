@@ -3,26 +3,26 @@ n.d(t, {
         return o;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(120356),
-    r = n.n(a),
-    i = n(481060),
+var r = n(120356),
+    a = n.n(r),
+    s = n(481060),
     l = n(526299);
 function o(e) {
-    let { icon: t, tooltip: n, onClick: a, className: o } = e,
+    let { icon: t, tooltip: n, onClick: r, className: o } = e,
         c = (e) => {
-            e.preventDefault(), e.stopPropagation(), a(e);
+            e.preventDefault(), e.stopPropagation(), r(e);
         };
-    return (0, s.jsx)(i.Tooltip, {
+    return (0, i.jsx)(s.Tooltip, {
         text: n,
         children: (e) =>
-            (0, s.jsx)(i.Clickable, {
+            (0, i.jsx)(s.Clickable, {
                 ...e,
                 'aria-label': n,
                 onClick: c,
-                className: r()(l.actionButton, o),
-                children: (0, s.jsx)(t, {
+                className: a()(l.actionButton, o),
+                children: (0, i.jsx)(t, {
                     className: l.icon,
                     color: 'currentColor'
                 })

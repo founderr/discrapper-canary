@@ -1,54 +1,54 @@
-var i = s(200651);
-s(192379);
-var l = s(979554),
-    n = s(442837),
-    a = s(481060),
-    r = s(1585),
-    o = s(125988),
-    d = s(876917),
-    u = s(594174),
-    c = s(597688),
-    h = s(464029);
+var s = i(200651);
+i(192379);
+var n = i(979554),
+    l = i(442837),
+    a = i(481060),
+    r = i(1585),
+    o = i(125988),
+    d = i(876917),
+    u = i(594174),
+    c = i(597688),
+    h = i(464029);
 let p = a.AvatarSizes.SIZE_152,
     f = (0, r.y9)(p),
-    m = (e) => {
-        let { item: t } = e,
-            s = (0, n.e7)([u.default], () => u.default.getCurrentUser()),
+    m = (t) => {
+        let { item: e } = t,
+            i = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
             {
-                avatarDecorationSrc: l,
+                avatarDecorationSrc: n,
                 avatarPlaceholderSrc: r,
                 eventHandlers: d
             } = (0, o.Z)({
-                user: s,
-                avatarDecorationOverride: t,
+                user: i,
+                avatarDecorationOverride: e,
                 size: f
             });
-        return (0, i.jsx)('div', {
+        return (0, s.jsx)('div', {
             className: h.avatarDecorationPreview,
-            children: (0, i.jsx)(a.Avatar, {
+            children: (0, s.jsx)(a.Avatar, {
                 ...d,
-                'aria-label': t.label,
+                'aria-label': e.label,
                 src: r,
-                avatarDecoration: l,
+                avatarDecoration: n,
                 size: p
             })
         });
     },
-    g = (e) => {
-        let { item: t } = e;
-        return (0, i.jsx)('div', {
+    g = (t) => {
+        let { item: e } = t;
+        return (0, s.jsx)('div', {
             className: h.profileEffectPreview,
-            children: (0, i.jsx)(d.Z, {
+            children: (0, s.jsx)(d.Z, {
                 isHovering: !0,
-                profileEffectId: null == t ? void 0 : t.id
+                profileEffectId: null == e ? void 0 : e.id
             })
         });
     };
-t.Z = (e) => {
-    let { giftCode: t } = e,
-        s = (0, n.e7)([c.Z], () => c.Z.getProduct(t.skuId)),
-        a = null == s ? void 0 : s.items[0];
-    return (0, i.jsxs)(i.Fragment, {
-        children: [(null == a ? void 0 : a.type) === l.Z.AVATAR_DECORATION && (0, i.jsx)(m, { item: a }), (null == a ? void 0 : a.type) === l.Z.PROFILE_EFFECT && (0, i.jsx)(g, { item: a })]
+e.Z = (t) => {
+    let { giftCode: e } = t,
+        i = (0, l.e7)([c.Z], () => c.Z.getProduct(e.skuId)),
+        a = null == i ? void 0 : i.items[0];
+    return (0, s.jsxs)(s.Fragment, {
+        children: [(null == a ? void 0 : a.type) === n.Z.AVATAR_DECORATION && (0, s.jsx)(m, { item: a }), (null == a ? void 0 : a.type) === n.Z.PROFILE_EFFECT && (0, s.jsx)(g, { item: a })]
     });
 };

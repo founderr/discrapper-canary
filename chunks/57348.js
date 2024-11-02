@@ -1,6 +1,6 @@
 i.d(t, {
     Z: function () {
-        return C;
+        return x;
     }
 });
 var n = i(200651);
@@ -8,91 +8,91 @@ i(192379);
 var a = i(120356),
     r = i.n(a),
     o = i(912370),
-    s = i(481060),
-    l = i(626135),
+    l = i(481060),
+    s = i(626135),
     c = i(463571),
     d = i(34674),
     u = i(218864),
     h = i(950854),
-    _ = i(132871),
-    p = i(147890),
-    m = i(57716),
+    p = i(132871),
+    m = i(147890),
+    _ = i(57716),
     f = i(981631),
     g = i(294882);
-function C(e) {
+function x(e) {
     let {
             collection: t,
-            collection: { id: i, title: a, application_directory_collection_items: C }
+            collection: { id: i, title: a, application_directory_collection_items: x }
         } = e,
-        x = (0, m.Z)({ collection: t }),
-        I = (0, _.useApplicationDirectoryHistory)((e) => e.guildId);
+        C = (0, _.Z)({ collection: t }),
+        b = (0, p.useApplicationDirectoryHistory)((e) => e.guildId);
     return (0, n.jsxs)('div', {
-        ref: x,
+        ref: C,
         children: [
-            (0, n.jsx)(s.Heading, {
+            (0, n.jsx)(l.Heading, {
                 variant: 'heading-lg/semibold',
                 className: g.header,
                 children: a
             }),
             (0, n.jsx)('div', {
                 className: g.list,
-                children: C.map((e) => {
-                    let { id: t, type: a, application: _, image_hash: m, title: C, description: x, call_to_action_label: b, call_to_action_url: N } = e;
-                    if (null == m) return;
-                    let v = (0, d.$_)({
+                children: x.map((e) => {
+                    let { id: t, type: a, application: p, image_hash: _, title: x, description: C, call_to_action_label: I, call_to_action_url: v } = e;
+                    if (null == _) return;
+                    let N = (0, d.$_)({
                         itemId: t,
-                        hash: m
+                        hash: _
                     });
-                    return a === o.C.APPLICATION && null != _
+                    return a === o.C.APPLICATION && null != p
                         ? (0, n.jsx)(
                               c.Z,
                               {
-                                  href: f.Z5c.APPLICATION_DIRECTORY_PROFILE(_.id),
+                                  href: f.Z5c.APPLICATION_DIRECTORY_PROFILE(p.id),
                                   className: g.item,
                                   children: (0, n.jsx)(u.Z, {
-                                      imageSrc: v,
-                                      application: _,
+                                      imageSrc: N,
+                                      application: p,
                                       onClick: (e) => {
                                           let { mutualGuilds: t } = e;
-                                          l.default.track(f.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+                                          s.default.track(f.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
                                               collection_id: i,
-                                              application_id: _.id,
-                                              guild_id: I,
+                                              application_id: p.id,
+                                              guild_id: b,
                                               shown_mutual_guilds_count: t.length
                                           }),
-                                              (0, p.goToApplication)({ applicationId: _.id });
+                                              (0, m.goToApplication)({ applicationId: p.id });
                                       },
                                       animatesOnHover: !0
                                   })
                               },
                               t
                           )
-                        : a === o.C.LINK && null != C
+                        : a === o.C.LINK && null != x
                           ? (0, n.jsxs)(
                                 h.Z,
                                 {
                                     className: r()(g.item, g.linkCard),
-                                    imageSrc: v,
-                                    header: C,
+                                    imageSrc: N,
+                                    header: x,
                                     headerClassName: g.cardHeader,
                                     children: [
-                                        (0, n.jsx)(s.Text, {
+                                        (0, n.jsx)(l.Text, {
                                             variant: 'text-sm/normal',
                                             className: g.linkDescription,
-                                            children: x
+                                            children: C
                                         }),
-                                        (0, n.jsx)(s.Anchor, {
+                                        (0, n.jsx)(l.Anchor, {
                                             onClick: () => {
-                                                l.default.track(f.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+                                                s.default.track(f.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
                                                     collection_id: i,
-                                                    link: N,
-                                                    guild_id: I,
+                                                    link: v,
+                                                    guild_id: b,
                                                     shown_mutual_guilds_count: void 0
                                                 });
                                             },
-                                            href: N,
-                                            className: r()((0, s.getButtonStyle)(), g.linkCta),
-                                            children: b
+                                            href: v,
+                                            className: r()((0, l.getButtonStyle)(), g.linkCta),
+                                            children: I
                                         })
                                     ]
                                 },

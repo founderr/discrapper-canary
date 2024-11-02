@@ -1,29 +1,29 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return f;
     }
 });
 var a = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
+var i = n(120356),
+    r = n.n(i),
     l = n(481060),
-    i = n(228392),
+    s = n(228392),
     o = n(404616),
     c = n(710352),
     d = n(921944),
-    u = n(689938),
+    u = n(388032),
     m = n(738941),
     h = n(167135),
-    _ = n(646230),
-    g = n(504764);
-function x(e) {
+    g = n(646230),
+    x = n(504764);
+function f(e) {
     let { onDismiss: t } = e;
     return (0, a.jsxs)(l.Clickable, {
         onClick: () => {
-            open(c.V8), (0, i.GX)({ readGuideCta: !0 });
+            open(c.V8), (0, s.GX)({ readGuideCta: !0 });
         },
-        className: r()(_.container, h.container, m.mainCard),
+        className: r()(g.container, h.container, m.mainCard),
         children: [
             (0, a.jsxs)('div', {
                 className: h.inline,
@@ -41,7 +41,7 @@ function x(e) {
                             (0, a.jsx)(l.Text, {
                                 variant: 'text-sm/semibold',
                                 color: 'header-primary',
-                                children: u.Z.Messages.DISCORD_NAME
+                                children: u.intl.string(u.t.uvGmCw)
                             }),
                             (0, a.jsxs)('div', {
                                 className: h.notice,
@@ -54,7 +54,7 @@ function x(e) {
                                     (0, a.jsx)(l.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'header-secondary',
-                                        children: u.Z.Messages.FORUM_HELPER_CARD_NOTICE
+                                        children: u.intl.string(u.t.t2GkVV)
                                     })
                                 ]
                             })
@@ -62,7 +62,7 @@ function x(e) {
                     }),
                     (0, a.jsx)(l.Clickable, {
                         onClick: (e) => {
-                            e.stopPropagation(), t(d.L.DISMISS), (0, i.GX)({ readGuideCta: !1 });
+                            e.stopPropagation(), t(d.L.DISMISS), (0, s.GX)({ readGuideCta: !1 });
                         },
                         children: (0, a.jsx)(l.XSmallIcon, {
                             size: 'xs',
@@ -79,21 +79,21 @@ function x(e) {
                     (0, a.jsxs)('div', {
                         children: [
                             (0, a.jsx)(l.Heading, {
-                                className: r()(_.__invalid_channelName, h.title),
+                                className: r()(g.__invalid_channelName, h.title),
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
-                                children: u.Z.Messages.FORUM_HELPER_CARD_TITLE
+                                children: u.intl.string(u.t.JtSpDw)
                             }),
                             (0, a.jsx)(l.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                children: u.Z.Messages.FORUM_HELPER_CARD_BODY
+                                children: u.intl.string(u.t.Ajhp09)
                             })
                         ]
                     }),
                     (0, a.jsx)('img', {
-                        src: g,
-                        alt: u.Z.Messages.FORUM_HELPER_CARD_ALT_TEXT,
+                        src: x,
+                        alt: u.intl.string(u.t.gAlJzc),
                         width: o.TJ,
                         height: o.TJ
                     })

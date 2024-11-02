@@ -1,11 +1,11 @@
-var r, t, n, i;
-a.d(s, {
+var r, a, s, i;
+n.d(t, {
     X: function () {
-        return t;
+        return a;
     }
 }),
-    ((n = r || (r = {})).TRANFSER_OWNERSHIP = 'TRANFSER_OWNERSHIP'),
-    (n.CONFIRM_EMAIL_CODE = 'CONFIRM_EMAIL_CODE'),
-    ((i = t || (t = {})).MFA = 'mfa'),
+    ((s = r || (r = {})).TRANFSER_OWNERSHIP = 'TRANFSER_OWNERSHIP'),
+    (s.CONFIRM_EMAIL_CODE = 'CONFIRM_EMAIL_CODE'),
+    ((i = a || (a = {})).MFA = 'mfa'),
     (i.SMS = 'sms'),
     (i.EMAIL = 'email');

@@ -24,52 +24,52 @@ let o = {
             if (null == e.selection) return;
             n = e.selection;
         }
-        let [d, _] = a.M8.isRange(n) ? a.M8.edges(n) : a.bN.edges(e, n);
+        let [d, f] = a.M8.isRange(n) ? a.M8.edges(n) : a.bN.edges(e, n);
         if (null != i || null != s) {
-            var E, f, h;
+            var _, h, p;
             if (o) {
                 let t =
                     null !==
-                        (E = a.bN.before(e, d, {
+                        (_ = a.bN.before(e, d, {
                             distance: i,
                             unit: s
-                        })) && void 0 !== E
-                        ? E
+                        })) && void 0 !== _
+                        ? _
                         : a.bN.start(e, []);
-                if ('character' === s && (null != i ? i : 1) === 1 && a.C0.equals(d.path, _.path)) {
+                if ('character' === s && (null != i ? i : 1) === 1 && a.C0.equals(d.path, f.path)) {
                     let n = a.bN.leaf(e, d.path),
                         r = null != n ? n[0].text : '';
                     r.length > 0 &&
                         null != r[r.length - 1].match(/[\u0E00-\u0E7F]/) &&
                         (t =
                             null !==
-                                (f = a.bN.before(e, d, {
+                                (h = a.bN.before(e, d, {
                                     distance: i,
                                     unit: 'offset'
-                                })) && void 0 !== f
-                                ? f
+                                })) && void 0 !== h
+                                ? h
                                 : a.bN.start(e, []));
                 }
                 d = t;
             } else
-                _ =
+                f =
                     null !==
-                        (h = a.bN.after(e, _, {
+                        (p = a.bN.after(e, f, {
                             distance: i,
                             unit: s
-                        })) && void 0 !== h
-                        ? h
+                        })) && void 0 !== p
+                        ? p
                         : a.bN.end(e, []);
         }
         if (null != u) {
             let [e, t] = a.M8.edges(u);
-            a.Jz.isBefore(d, e) && (d = e), a.Jz.isAfter(_, t) && (_ = t);
+            a.Jz.isBefore(d, e) && (d = e), a.Jz.isAfter(f, t) && (f = t);
         }
-        !a.Jz.equals(d, _) &&
+        !a.Jz.equals(d, f) &&
             (r.YR.delete(e, {
                 at: {
                     anchor: d,
-                    focus: _
+                    focus: f
                 },
                 hanging: !0,
                 voids: c

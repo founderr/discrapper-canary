@@ -6,7 +6,7 @@ n.d(t, {
         return l;
     },
     Rt: function () {
-        return _;
+        return f;
     },
     hW: function () {
         return u;
@@ -50,7 +50,7 @@ function d(e) {
     return Math.max(5 * e.pageSize, 250);
 }
 ((i = r || (r = {}))[(i.FORWARD = 1)] = 'FORWARD'), (i[(i.BACKWARD = -1)] = 'BACKWARD');
-class _ {
+class f {
     reset() {
         (this._paginationState = c()), (this._sortedMemberIds = []), (this._cachedPaginationChunks = {}), (this._version += 1);
     }

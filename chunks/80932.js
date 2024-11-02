@@ -3,22 +3,22 @@ n.d(t, {
         return C;
     },
     OQ: function () {
-        return g;
+        return S;
     },
     RE: function () {
-        return N;
+        return b;
     },
     Xe: function () {
-        return L;
-    },
-    dv: function () {
         return R;
     },
+    dv: function () {
+        return y;
+    },
     rS: function () {
-        return A;
+        return T;
     },
     t0: function () {
-        return S;
+        return I;
     }
 }),
     n(47120),
@@ -32,31 +32,31 @@ var r = n(392711),
     u = n(339085),
     c = n(633302),
     d = n(347374),
-    _ = n(38618),
-    E = n(675478),
-    f = n(486472),
-    h = n(823379),
-    p = n(668781),
-    I = n(981631),
-    m = n(526761),
-    T = n(689938);
-function S(e) {
-    E.hW.updateAsync(
+    f = n(38618),
+    _ = n(675478),
+    h = n(486472),
+    p = n(823379),
+    m = n(668781),
+    g = n(981631),
+    E = n(526761),
+    v = n(388032);
+function I(e) {
+    _.hW.updateAsync(
         'textAndImages',
         (t) => {
             (t.diversitySurrogate = s.Gm.create()), (t.diversitySurrogate.value = e);
         },
-        m.fy.FREQUENT_USER_ACTION
+        E.fy.FREQUENT_USER_ACTION
     );
 }
-function g(e) {
+function S(e) {
     o.Z.dispatch({
         type: 'EMOJI_FETCH',
         guildId: e
     }),
         a.tn
             .get({
-                url: I.ANM.GUILD_EMOJIS(e),
+                url: g.ANM.GUILD_EMOJIS(e),
                 oldFormErrors: !0
             })
             .then(
@@ -73,7 +73,7 @@ function g(e) {
                     })
             );
 }
-function A(e) {
+function T(e) {
     let { guildId: t, image: n, name: r, roles: i } = e;
     return (
         o.Z.dispatch({
@@ -82,7 +82,7 @@ function A(e) {
         }),
         a.tn
             .post({
-                url: I.ANM.GUILD_EMOJIS(t),
+                url: g.ANM.GUILD_EMOJIS(t),
                 body: {
                     image: n,
                     name: r,
@@ -106,7 +106,7 @@ function A(e) {
             )
     );
 }
-function N(e, t) {
+function b(e, t) {
     return (
         o.Z.dispatch({
             type: 'EMOJI_DELETE',
@@ -114,16 +114,16 @@ function N(e, t) {
             emojiId: t
         }),
         a.tn.del({
-            url: I.ANM.GUILD_EMOJI(e, t),
+            url: g.ANM.GUILD_EMOJI(e, t),
             oldFormErrors: !0
         })
     );
 }
-async function R(e) {
+async function y(e) {
     let { guildId: t, emojiId: n, name: r, roles: i } = e;
     try {
         return await a.tn.patch({
-            url: I.ANM.GUILD_EMOJI(t, n),
+            url: g.ANM.GUILD_EMOJI(t, n),
             body: {
                 name: r,
                 roles: i
@@ -134,45 +134,45 @@ async function R(e) {
         throw new l.Z(e);
     }
 }
-function O(e) {
-    if (f.Z.totalUnavailableGuilds > 0 || !_.Z.isConnected()) return e;
+function A(e) {
+    if (h.Z.totalUnavailableGuilds > 0 || !f.Z.isConnected()) return e;
     let t = e
         .map((e) => {
             var t;
             return null !== (t = u.ZP.getCustomEmojiById(e)) && void 0 !== t ? t : c.ZP.getByName(e);
         })
-        .filter(h.lm);
+        .filter(p.lm);
     return [...(0, d.Z)(t).keys()];
 }
-function v(e) {
+function N(e) {
     var t, n, r;
     return null == e ? null : null !== (r = null !== (n = e.id) && void 0 !== n ? n : null === (t = c.ZP.convertSurrogateToBase(e.surrogates)) || void 0 === t ? void 0 : t.name) && void 0 !== r ? r : e.name;
 }
 function C(e) {
-    let t = v(e);
+    let t = N(e);
     if (null != t)
-        E.DZ.updateAsync(
+        _.DZ.updateAsync(
             'favoriteEmojis',
             (e) =>
-                ((e.emojis = O(e.emojis)), i().size(e.emojis) >= m.oX)
-                    ? (p.Z.show({
-                          title: T.Z.Messages.FAVORITES_LIMIT_REACHED_TITLE,
-                          body: T.Z.Messages.FAVORITES_LIMIT_REACHED_BODY.format({ count: m.oX })
+                ((e.emojis = A(e.emojis)), i().size(e.emojis) >= E.oX)
+                    ? (m.Z.show({
+                          title: v.intl.string(v.t['+XYXtb']),
+                          body: v.intl.formatToPlainString(v.t.JaIyFh, { count: E.oX })
                       }),
                       !1)
                     : !e.emojis.includes(t) && void e.emojis.push(t),
-            m.fy.INFREQUENT_USER_ACTION
+            E.fy.INFREQUENT_USER_ACTION
         );
 }
-function L(e) {
-    let t = v(e);
+function R(e) {
+    let t = N(e);
     if (null != t)
-        E.DZ.updateAsync(
+        _.DZ.updateAsync(
             'favoriteEmojis',
             (e) => {
-                if (((e.emojis = O(e.emojis)), !e.emojis.includes(t))) return !1;
+                if (((e.emojis = A(e.emojis)), !e.emojis.includes(t))) return !1;
                 e.emojis = e.emojis.filter((e) => t !== e);
             },
-            m.fy.INFREQUENT_USER_ACTION
+            E.fy.INFREQUENT_USER_ACTION
         );
 }

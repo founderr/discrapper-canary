@@ -1,6 +1,6 @@
-t.d(s, {
+n.d(t, {
     T: function () {
-        return n;
+        return i;
     }
 });
-let n = '0';
+let i = '0';

@@ -1,14 +1,14 @@
 n(757143), n(47120);
 var i = n(200651),
-    s = n(192379),
-    a = n(120356),
-    l = n.n(a),
-    r = n(442837),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
+    s = n(442837),
     o = n(481060),
     c = n(771340),
     u = n(600164),
     d = n(903223),
-    h = n(689938),
+    h = n(388032),
     m = n(953320);
 function p(e, t, n) {
     return (
@@ -23,26 +23,26 @@ function p(e, t, n) {
         e
     );
 }
-let _ = {
+let f = {
         position: 'bottom',
         autoInvert: !1
     },
-    f = (e) => {
+    g = (e) => {
         let { region: t, className: n = m.regionSelectName } = e,
-            s = t.name.replace(/ \(VIP\)$/, '');
+            l = t.name.replace(/ \(VIP\)$/, '');
         return (0, i.jsx)('div', {
             className: n,
-            children: s
+            children: l
         });
     };
-class E extends s.PureComponent {
+class C extends l.PureComponent {
     render() {
         let { region: e, selected: t } = this.props;
         return (0, i.jsxs)(u.Z, {
             align: u.Z.Align.CENTER,
-            className: l()({ selected: t }),
+            className: a()({ selected: t }),
             children: [
-                (0, i.jsx)(f, {
+                (0, i.jsx)(g, {
                     region: e,
                     className: m.regionSelectName
                 }),
@@ -51,7 +51,7 @@ class E extends s.PureComponent {
         });
     }
 }
-class g extends s.PureComponent {
+class x extends l.PureComponent {
     componentDidMount() {
         null == this.props.regions && c.Z.fetchRegions(null);
     }
@@ -63,7 +63,7 @@ class g extends s.PureComponent {
                 label: t.name,
                 value: t
             },
-            s = e
+            l = e
                 .filter((e) => !e.deprecated && !e.hidden)
                 .map((e) => ({
                     label: e.name,
@@ -71,12 +71,12 @@ class g extends s.PureComponent {
                     key: e.id
                 }));
         return (0, i.jsx)(o.QuickSelect, {
-            label: h.Z.Messages.REGION,
-            options: s,
+            label: h.intl.string(h.t.w8gMqq),
+            options: l,
             value: n,
             onChange: this.handleChangeVoiceRegion,
             renderOption: this.renderOption,
-            popoutProps: _,
+            popoutProps: f,
             popoutClassName: m.regionSelectPopout
         });
     }
@@ -84,7 +84,7 @@ class g extends s.PureComponent {
         super(...e),
             p(this, 'renderOption', (e, t) =>
                 (0, i.jsx)(
-                    E,
+                    C,
                     {
                         region: e.value,
                         selected: t
@@ -108,7 +108,7 @@ class g extends s.PureComponent {
                           }
                     : {
                           id: 'automatic',
-                          name: h.Z.Messages.AUTOMATIC_REGION,
+                          name: h.intl.string(h.t.JEmsam),
                           vip: !1,
                           deprecated: !1,
                           hidden: !1
@@ -121,4 +121,4 @@ class g extends s.PureComponent {
             });
     }
 }
-t.Z = r.ZP.connectStores([d.Z], () => ({ regions: d.Z.getRegions(null) }))(g);
+t.Z = s.ZP.connectStores([d.Z], () => ({ regions: d.Z.getRegions(null) }))(x);

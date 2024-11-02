@@ -1,6 +1,6 @@
 n.d(t, {
     Q: function () {
-        return s;
+        return l;
     }
 });
 let i = (0, n(818083).B)({
@@ -21,7 +21,7 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function s() {
+function l() {
     return i.getCurrentConfig({ location: '0a5674_1' }, { autoTrackExposure: !1 }).systemDMRedesignEnabled;
 }
 t.Z = i;

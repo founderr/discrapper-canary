@@ -6,9 +6,9 @@ a.d(t, {
     a(47120);
 var n,
     s = a(200651),
-    r = a(192379),
-    i = a(39383),
-    l = a.n(i),
+    i = a(192379),
+    r = a(39383),
+    l = a.n(r),
     o = a(948789),
     c = a(66037),
     d = a(950132),
@@ -29,9 +29,9 @@ function m(e, t, a) {
     );
 }
 let p = u.j_.MAIN_NAVIGATION_MENU;
-class I extends (n = r.PureComponent) {
+class I extends (n = i.PureComponent) {
     render() {
-        let { title: e, links: t, isOpen: a, isMobile: n, TrackClick: r, avoidRouter: i } = this.props,
+        let { title: e, links: t, isOpen: a, isMobile: n, TrackClick: i, avoidRouter: r } = this.props,
             l =
                 n && a
                     ? (0, s.jsx)('ul', {
@@ -108,8 +108,8 @@ class I extends (n = r.PureComponent) {
                           ),
                           (0, s.jsx)(d.h, {
                               id: this._dropdownId,
-                              avoidRouter: i,
-                              TrackClick: r,
+                              avoidRouter: r,
+                              TrackClick: i,
                               isOpen: a,
                               dropdownLinks: t,
                               'aria-label': e

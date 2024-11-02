@@ -9,8 +9,8 @@ t.d(n, {
 var a = t(200651),
     r = t(120356),
     i = t.n(r),
-    o = t(524444),
-    l = t(52824),
+    l = t(524444),
+    o = t(52824),
     s = t(956664),
     u = t(589530),
     c = t(591759),
@@ -24,28 +24,28 @@ let _ = {
 };
 function p(e) {
     let { media: n, fit: t = _.DEFAULT, obscured: r = !1, onContextMenu: p } = e,
-        { width: m, height: C, url: E, proxyUrl: g, alt: S, type: L, maxWidth: x, maxHeight: A, ...O } = n,
-        { width: v, height: R } = (0, s.zp)(null != m ? m : 0, null != C ? C : 0),
-        N = (0, l.q)({
+        { width: m, height: C, url: E, proxyUrl: g, alt: L, type: S, maxWidth: x, maxHeight: v, ...A } = n,
+        { width: O, height: b } = (0, s.zp)(null != m ? m : 0, null != C ? C : 0),
+        R = (0, o.q)({
             proxyURL: g,
             url: E
         }),
-        b = !(null == m || 0 === m || null == C || 0 === C);
-    if ('VIDEO' === L && b && null != g) {
-        var M;
+        N = !(null == m || 0 === m || null == C || 0 === C);
+    if ('VIDEO' === S && N && null != g) {
+        var D;
         let e = (function (e) {
             let n = c.Z.toURLSafe(e);
             return null == n ? null : (n.searchParams.append('format', 'webp'), n.toString());
         })(g);
         if (null == e) return null;
-        let t = null !== (M = n.renderLinkComponent) && void 0 !== M ? M : o.iT;
+        let t = null !== (D = n.renderLinkComponent) && void 0 !== D ? D : l.iT;
         return (0, a.jsx)(f.Z, {
-            ...O,
-            src: N,
+            ...A,
+            src: R,
             width: m,
             height: C,
-            maxWidth: v,
-            maxHeight: R,
+            maxWidth: O,
+            maxHeight: b,
             poster: e,
             naturalWidth: m,
             naturalHeight: C,
@@ -55,30 +55,30 @@ function p(e) {
             onMute: u.Zj,
             renderLinkComponent: t,
             autoPlay: !r,
-            alt: S,
+            alt: L,
             onContextMenu: p
         });
     }
-    if ('IMAGE' === L)
-        return b
+    if ('IMAGE' === S)
+        return N
             ? (0, a.jsx)(d.ZP, {
-                  ...O,
+                  ...A,
                   imageClassName: i()(h.slide, t),
-                  src: N,
+                  src: R,
                   width: m,
                   height: C,
                   shouldLink: !1,
-                  maxWidth: v,
-                  maxHeight: R,
+                  maxWidth: O,
+                  maxHeight: b,
                   animated: !r && n.animated,
                   autoPlay: !r,
-                  alt: S,
+                  alt: L,
                   zoomThumbnailPlaceholder: n.zoomThumbnailPlaceholder,
                   onContextMenu: p
               })
             : (0, a.jsx)('img', {
-                  src: N,
-                  alt: S,
+                  src: R,
+                  alt: L,
                   className: i()(h.slide, t),
                   onContextMenu: p
               });

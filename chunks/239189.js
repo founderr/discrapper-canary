@@ -1,10 +1,10 @@
 n.r(t),
     n.d(t, {
         assign: function () {
-            return f;
+            return h;
         },
         batchedUpdates: function () {
-            return _;
+            return f;
         },
         colorNames: function () {
             return u;
@@ -28,7 +28,7 @@ n.r(t),
             return i;
         },
         willAdvance: function () {
-            return E;
+            return _;
         }
     });
 var r,
@@ -47,11 +47,11 @@ var r,
             : function () {
                   return -1;
               },
-    _ = function (e) {
+    f = function (e) {
         return e();
     },
-    E = s.ZT,
-    f = function (e) {
+    _ = s.ZT,
+    h = function (e) {
         var t;
         return (
             (i = (t = Object.assign(
@@ -63,8 +63,8 @@ var r,
                     skipAnimation: c,
                     createStringInterpolator: r,
                     requestAnimationFrame: d,
-                    batchedUpdates: _,
-                    willAdvance: E
+                    batchedUpdates: f,
+                    willAdvance: _
                 },
                 (function (e) {
                     var t = {};
@@ -78,8 +78,8 @@ var r,
             (c = t.skipAnimation),
             (r = t.createStringInterpolator),
             (d = t.requestAnimationFrame),
-            (_ = t.batchedUpdates),
-            (E = t.willAdvance),
+            (f = t.batchedUpdates),
+            (_ = t.willAdvance),
             t
         );
     };

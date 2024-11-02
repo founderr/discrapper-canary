@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return b;
     }
 }),
     n(47120);
@@ -13,58 +13,58 @@ var r = n(200651),
     u = n(100527),
     c = n(906732),
     d = n(243778),
-    _ = n(970731),
-    E = n(594174),
-    f = n(785717),
-    h = n(652853),
-    p = n(171368),
-    I = n(228168),
-    m = n(921944),
-    T = n(689938),
-    S = n(398813),
-    g = n(881828);
-let A = 32;
-function N(e) {
-    let { user: t, children: n, onClose: N } = e,
-        { analyticsLocations: R } = (0, c.ZP)(u.Z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP),
-        { context: O } = (0, f.KZ)(),
-        { profileType: v, primaryColor: C } = (0, h.z)(),
-        L =
-            (0, a.e7)([E.default], () => {
+    f = n(970731),
+    _ = n(594174),
+    h = n(785717),
+    p = n(652853),
+    m = n(171368),
+    g = n(228168),
+    E = n(921944),
+    v = n(388032),
+    I = n(398813),
+    S = n(881828);
+let T = 32;
+function b(e) {
+    let { user: t, children: n, onClose: b } = e,
+        { analyticsLocations: y } = (0, c.ZP)(u.Z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP),
+        { context: A } = (0, h.KZ)(),
+        { profileType: N, primaryColor: C } = (0, p.z)(),
+        R =
+            (0, a.e7)([_.default], () => {
                 var e;
-                return (null === (e = E.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t.id;
-            }) && v === I.y0.BITE_SIZE,
-        [D, y] = i.useState(!1);
-    (0, l.Z)(() => y(!0), L ? 200 : null);
-    let b = D ? [s.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP] : [],
-        [M, P] = (0, d.US)(b),
-        U = () => {
-            (0, p.openUserProfileModal)({
+                return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t.id;
+            }) && N === g.y0.BITE_SIZE,
+        [O, D] = i.useState(!1);
+    (0, l.Z)(() => D(!0), R ? 200 : null);
+    let L = O ? [s.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP] : [],
+        [x, w] = (0, d.US)(L),
+        M = () => {
+            (0, m.openUserProfileModal)({
                 userId: t.id,
-                section: I.oh.ACTIVITY,
-                sourceAnalyticsLocations: R,
-                ...O
+                section: g.oh.ACTIVITY,
+                sourceAnalyticsLocations: y,
+                ...A
             }),
-                null == N || N();
+                null == b || b();
         };
     return (0, r.jsx)(o.Popout, {
-        shouldShow: null != M,
-        spacing: null != C ? A : 28,
+        shouldShow: null != x,
+        spacing: null != C ? T : 28,
         renderPopout: (e) => {
             let { position: t, closePopout: n, setPopoutRef: i } = e;
             return (0, r.jsx)(o.Dialog, {
                 ref: i,
-                children: (0, r.jsx)(_.ZP, {
-                    header: T.Z.Messages.USER_PROFILE_RECENT_ACTIVITY_EDUCATION_TOOLTIP_HEADER,
-                    content: T.Z.Messages.USER_PROFILE_RECENT_ACTIVITY_EDUCATION_TOOLTIP_BODY,
-                    className: S.tooltip,
+                children: (0, r.jsx)(f.ZP, {
+                    header: v.intl.string(v.t.ZQJ629),
+                    content: v.intl.string(v.t['mU+JXF']),
+                    className: I.tooltip,
                     asset: (0, r.jsx)('img', {
                         alt: '',
-                        src: g,
-                        className: S.asset
+                        src: S,
+                        className: I.asset
                     }),
-                    buttonCTA: T.Z.Messages.CHECK_IT_OUT,
-                    secondaryButtonCTA: T.Z.Messages.EDUCATION_NEW_FEATURE_DISMISS,
+                    buttonCTA: v.intl.string(v.t.RzWDqa),
+                    secondaryButtonCTA: v.intl.string(v.t.om7Ovr),
                     buttonProps: {
                         color: o.ButtonColors.BRAND_INVERTED,
                         size: o.Button.Sizes.SMALL
@@ -73,18 +73,18 @@ function N(e) {
                         color: o.ButtonColors.BRAND,
                         size: o.Button.Sizes.SMALL
                     },
-                    buttonLayout: _._F.STACKED,
-                    caretPosition: 'right' === t ? _.DF.LEFT_TOP : _.DF.RIGHT_TOP,
-                    onClick: U,
+                    buttonLayout: f._F.STACKED,
+                    caretPosition: 'right' === t ? f.DF.LEFT_TOP : f.DF.RIGHT_TOP,
+                    onClick: M,
                     onSecondaryClick: n,
-                    markAsDismissed: P
+                    markAsDismissed: w
                 })
             });
         },
         children: (e) =>
             n({
                 ...e,
-                onAutoDismiss: () => P(m.L.AUTO_DISMISS)
+                onAutoDismiss: () => w(E.L.AUTO_DISMISS)
             })
     });
 }

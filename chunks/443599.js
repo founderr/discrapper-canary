@@ -15,29 +15,29 @@ async function o(e, t, n, o) {
         c = arguments.length > 6 ? arguments[6] : void 0,
         d = (0, i.getInteractingModalContext)();
     try {
-        let _,
-            E = u ? await (0, a.Nt)(e, t) : await (0, a.B0)(e, t),
-            f = [];
-        let h = (e) => {
-                f.push(e);
+        let f,
+            _ = u ? await (0, a.Nt)(e, t) : await (0, a.B0)(e, t),
+            h = [];
+        let p = (e) => {
+                h.push(e);
             },
-            p = (e) => {
-                (_ = e), null == n || n();
+            m = (e) => {
+                (f = e), null == n || n();
             };
         (0, i.openModal)(
             (t) =>
                 (0, r.jsx)(s.Z, {
-                    menu: E,
+                    menu: _,
                     reportType: e,
                     modalProps: t,
-                    onNavigate: h,
-                    onSubmit: p,
+                    onNavigate: p,
+                    onSubmit: m,
                     isAuthenticated: u,
                     emailToken: c
                 }),
             {
                 onCloseCallback: () => {
-                    (0, a.k8)(e, f, _), null == o || o(), l && (0, a.X)(e, null != _ ? _ : null);
+                    (0, a.k8)(e, h, f), null == o || o(), l && (0, a.X)(e, null != f ? f : null);
                 }
             },
             d

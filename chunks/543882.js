@@ -8,26 +8,26 @@ var r,
     u = n(442837),
     c = n(570140),
     d = n(872810),
-    _ = n(569545),
-    E = n(70722);
-let f = {},
-    h = {},
-    p = new Set();
-function I() {
-    (f = {}), (h = {});
+    f = n(569545),
+    _ = n(70722);
+let h = {},
+    p = {},
+    m = new Set();
+function g() {
+    (h = {}), (p = {});
 }
-class m extends (r = u.ZP.Store) {
+class E extends (r = u.ZP.Store) {
     getPreviewURL(e, t, n) {
-        let r = (0, _.V9)({
-                streamType: null != e ? E.lo.GUILD : E.lo.CALL,
+        let r = (0, f.V9)({
+                streamType: null != e ? _.lo.GUILD : _.lo.CALL,
                 guildId: e,
                 channelId: t,
                 ownerId: n
             }),
-            i = f[r];
+            i = h[r];
         return null == i || Date.now() > i.expires
-            ? (!p.has(r) &&
-                  (p.add(r),
+            ? (!m.has(r) &&
+                  (m.add(r),
                   Promise.resolve().then(() => {
                       (0, d.n9)(e, t, n);
                   })),
@@ -35,21 +35,21 @@ class m extends (r = u.ZP.Store) {
             : i.url;
     }
     getPreviewURLForStreamKey(e) {
-        let { guildId: t, channelId: n, ownerId: r } = (0, _.my)(e);
+        let { guildId: t, channelId: n, ownerId: r } = (0, f.my)(e);
         return this.getPreviewURL(t, n, r);
     }
     getIsPreviewLoading(e, t, n) {
-        let r = (0, _.V9)({
-            streamType: null != e ? E.lo.GUILD : E.lo.CALL,
+        let r = (0, f.V9)({
+            streamType: null != e ? _.lo.GUILD : _.lo.CALL,
             guildId: e,
             channelId: t,
             ownerId: n
         });
-        return p.has(r);
+        return m.has(r);
     }
 }
 (s = 'ApplicationStreamPreviewStore'),
-    (a = 'displayName') in (i = m)
+    (a = 'displayName') in (i = E)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -57,45 +57,45 @@ class m extends (r = u.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new m(c.Z, {
-        CONNECTION_OPEN: I,
-        LOGOUT: I,
+    (t.Z = new E(c.Z, {
+        CONNECTION_OPEN: g,
+        LOGOUT: g,
         STREAM_PREVIEW_FETCH_START: function (e) {
             var t;
             let { streamKey: n } = e;
-            (h[n] = (null !== (t = h[n]) && void 0 !== t ? t : 0) + 1), p.add(n);
+            (p[n] = (null !== (t = p[n]) && void 0 !== t ? t : 0) + 1), m.add(n);
         },
         STREAM_PREVIEW_FETCH_SUCCESS: function (e) {
             let { streamKey: t, previewURL: n } = e;
-            (f[t] = {
+            (h[t] = {
                 url: n,
                 expires: Date.now() + 120000
             }),
-                (h[t] = 0),
-                p.delete(t);
+                (p[t] = 0),
+                m.delete(t);
         },
         STREAM_PREVIEW_FETCH_FAIL: function (e) {
             let { streamKey: t, retryAfter: n } = e;
-            (f[t] = {
+            (h[t] = {
                 url: null,
-                expires: Date.now() + (null != n ? n : 10000 * h[t])
+                expires: Date.now() + (null != n ? n : 10000 * p[t])
             }),
-                p.delete(t);
+                m.delete(t);
         },
         VOICE_STATE_UPDATES: function (e) {
             let { voiceStates: t } = e;
             return (
-                !(l().isEmpty(f) && l().isEmpty(h)) &&
+                !(l().isEmpty(h) && l().isEmpty(p)) &&
                 t.reduce((e, t) => {
                     let { userId: n, guildId: r, channelId: i, selfStream: a } = t;
                     if (a) return e;
-                    let s = (0, _.V9)({
-                        streamType: null != r ? E.lo.GUILD : E.lo.CALL,
+                    let s = (0, f.V9)({
+                        streamType: null != r ? _.lo.GUILD : _.lo.CALL,
                         guildId: r,
                         channelId: i,
                         ownerId: n
                     });
-                    return delete f[s], delete h[s], !0;
+                    return delete h[s], delete p[s], !0;
                 }, !1)
             );
         }

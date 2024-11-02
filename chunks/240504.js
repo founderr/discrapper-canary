@@ -1,7 +1,7 @@
 var i,
-    a = n(442837),
-    s = n(570140);
-function r(e, t, n) {
+    r = n(442837),
+    l = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function r(e, t, n) {
         e
     );
 }
-let l = 12 * n(70956).Z.Millis.HOUR,
+let s = 12 * n(70956).Z.Millis.HOUR,
     o = {
         profileThemesRelevanceExceeded: null,
         savedAt: null
@@ -22,11 +22,11 @@ let l = 12 * n(70956).Z.Millis.HOUR,
     c = { hasFetchedRelevance: !1 },
     d = o,
     u = c;
-class _ extends (i = a.ZP.PersistedStore) {
+class h extends (i = r.ZP.PersistedStore) {
     initialize(e) {
         (u = c), (d = o);
         let t = new Date();
-        null != e && null != e.savedAt && t.getTime() - e.savedAt < l && (d = e);
+        null != e && null != e.savedAt && t.getTime() - e.savedAt < s && (d = e);
     }
     get hasFetchedRelevance() {
         return u.hasFetchedRelevance;
@@ -38,9 +38,9 @@ class _ extends (i = a.ZP.PersistedStore) {
         return d;
     }
 }
-r(_, 'displayName', 'PerksRelevanceStore'),
-    r(_, 'persistKey', 'PerksRelevanceStore'),
-    (t.Z = new _(s.Z, {
+a(h, 'displayName', 'PerksRelevanceStore'),
+    a(h, 'persistKey', 'PerksRelevanceStore'),
+    (t.Z = new h(l.Z, {
         BILLING_PERKS_RELEVANCE_FETCH_START: function () {
             u.hasFetchedRelevance = !0;
         },

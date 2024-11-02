@@ -3,19 +3,19 @@ n.d(t, {
         return c;
     },
     W3: function () {
-        return E;
-    },
-    X8: function () {
         return _;
     },
-    bG: function () {
-        return p;
-    },
-    dG: function () {
+    X8: function () {
         return f;
     },
-    pD: function () {
+    bG: function () {
+        return m;
+    },
+    dG: function () {
         return h;
+    },
+    pD: function () {
+        return p;
     },
     tH: function () {
         return d;
@@ -61,7 +61,7 @@ async function d() {
         t
     );
 }
-async function _() {
+async function f() {
     let e = (
         await r.tn.get({
             url: u.ANM.USER_GUILD_BOOST_SLOTS,
@@ -76,7 +76,7 @@ async function _() {
         e
     );
 }
-async function E(e, t) {
+async function _(e, t) {
     i.Z.dispatch({ type: 'GUILD_APPLY_BOOST_START' });
     try {
         let n = await r.tn.put({
@@ -90,7 +90,7 @@ async function E(e, t) {
                 type: 'GUILD_APPLY_BOOST_SUCCESS',
                 appliedGuildBoost: a
             }),
-            _(),
+            f(),
             a
         );
     } catch (t) {
@@ -104,14 +104,14 @@ async function E(e, t) {
         );
     }
 }
-async function f(e, t) {
+async function h(e, t) {
     i.Z.dispatch({ type: 'GUILD_UNAPPLY_BOOST_START' });
     try {
         await r.tn.del({
             url: u.ANM.APPLIED_GUILD_BOOST(e, t),
             oldFormErrors: !0
         }),
-            _();
+            f();
     } catch (t) {
         let e = new a.zN(t);
         throw (
@@ -127,7 +127,7 @@ async function f(e, t) {
         boostId: t
     });
 }
-async function h(e) {
+async function p(e) {
     let t = await r.tn.post({
             url: u.ANM.USER_GUILD_BOOST_SLOT_CANCEL(e),
             oldFormErrors: !0
@@ -141,7 +141,7 @@ async function h(e) {
         n
     );
 }
-async function p(e) {
+async function m(e) {
     let t = await r.tn.post({
             url: u.ANM.USER_GUILD_BOOST_SLOT_UNCANCEL(e),
             oldFormErrors: !0

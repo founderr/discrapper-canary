@@ -1,113 +1,113 @@
-n.d(t, {
+n.d(e, {
     Z: function () {
-        return f;
+        return E;
     }
 }),
     n(47120);
-var s = n(200651),
-    u = n(192379),
-    c = n(374470),
-    a = n(442837),
-    l = n(481060),
-    i = n(295866),
-    r = n(398327),
+var i = n(200651),
+    l = n(192379),
+    u = n(374470),
+    c = n(442837),
+    r = n(481060),
+    a = n(295866),
+    s = n(398327),
     o = n(63063),
     d = n(601993),
-    E = n(981631),
-    M = n(689938);
-function f(e) {
-    let { text: t = '', target: n } = e,
-        f = (0, a.e7)([r.Z], () => r.Z.isEnabled()),
-        p = (0, a.e7)([r.Z], () => r.Z.hasLearnedWord(t), [t]),
-        C = u.useRef({
-            ...e,
-            spellcheckEnabled: f
+    f = n(981631),
+    p = n(388032);
+function E(t) {
+    let { text: e = '', target: n } = t,
+        E = (0, c.e7)([s.Z], () => s.Z.isEnabled()),
+        h = (0, c.e7)([s.Z], () => s.Z.hasLearnedWord(e), [e]),
+        m = l.useRef({
+            ...t,
+            spellcheckEnabled: E
         });
-    C.current = {
-        ...e,
-        spellcheckEnabled: f
+    m.current = {
+        ...t,
+        spellcheckEnabled: E
     };
-    let T = u.useRef(!1),
-        [Z, h] = u.useState(!1),
-        [m, L] = u.useState([]),
-        b = u.useCallback(() => {
-            let { spellcheckEnabled: e, text: t, onHeightUpdate: n } = C.current;
-            e &&
+    let M = l.useRef(!1),
+        [b, x] = l.useState(!1),
+        [k, C] = l.useState([]),
+        L = l.useCallback(() => {
+            let { spellcheckEnabled: t, text: e, onHeightUpdate: n } = m.current;
+            t &&
                 (0, d.Gb)() &&
-                Promise.all([(0, d.f5)(t, !0), (0, d.WA)(t, !0)]).then((e) => {
-                    let [t, s] = e;
-                    T.current && (h(t), L(s), n());
+                Promise.all([(0, d.f5)(e, !0), (0, d.WA)(e, !0)]).then((t) => {
+                    let [e, i] = t;
+                    M.current && (x(e), C(i), n());
                 });
         }, []),
-        k = u.useCallback(() => {
-            if ((0, c.k)(n, HTMLInputElement) || (0, c.k)(n, HTMLTextAreaElement)) {
-                let { selectionStart: e, selectionEnd: t, value: s } = n;
-                (n.value = ''), (n.value = s), 'email' !== n.type && ((n.selectionStart = e), (n.selectionEnd = t));
+        g = l.useCallback(() => {
+            if ((0, u.k)(n, HTMLInputElement) || (0, u.k)(n, HTMLTextAreaElement)) {
+                let { selectionStart: t, selectionEnd: e, value: i } = n;
+                (n.value = ''), (n.value = i), 'email' !== n.type && ((n.selectionStart = t), (n.selectionEnd = e));
             }
         }, [n]);
     if (
-        (u.useEffect(() => {
-            let e = (0, d.RD)(b);
+        (l.useEffect(() => {
+            let t = (0, d.RD)(L);
             return (
-                (T.current = !0),
+                (M.current = !0),
                 () => {
-                    (T.current = !1), e();
+                    (M.current = !1), t();
                 }
             );
-        }, [b]),
-        u.useEffect(() => {
-            b();
-        }, [t, f, b]),
+        }, [L]),
+        l.useEffect(() => {
+            L();
+        }, [e, E, L]),
         !(0, d.Gb)())
     )
         return [null, null];
-    let x = m.map((e, t) =>
-        (0, s.jsx)(
-            l.MenuItem,
+    let T = k.map((t, e) =>
+        (0, i.jsx)(
+            r.MenuItem,
             {
-                id: 'correction-'.concat(t),
-                label: e,
+                id: 'correction-'.concat(e),
+                label: t,
                 action: () => {
-                    (0, d.Rs)(e), n.focus();
+                    (0, d.Rs)(t), n.focus();
                 }
             },
-            'correction-'.concat(t)
+            'correction-'.concat(e)
         )
     );
     return [
-        x,
-        (0, s.jsxs)(s.Fragment, {
+        T,
+        (0, i.jsxs)(i.Fragment, {
             children: [
-                Z
-                    ? (0, s.jsx)(l.MenuItem, {
+                b
+                    ? (0, i.jsx)(r.MenuItem, {
                           id: 'add-to-dictionary',
-                          label: M.Z.Messages.ADD_TO_DICTIONARY,
+                          label: p.intl.string(p.t.HJmG1N),
                           action: () => {
-                              (0, i.D0)(t), k();
+                              (0, a.D0)(e), g();
                           }
                       })
                     : null,
-                p &&
-                    (0, s.jsx)(l.MenuItem, {
+                h &&
+                    (0, i.jsx)(r.MenuItem, {
                         id: 'remove-from-dictionary',
-                        label: M.Z.Messages.REMOVE_FROM_DICTIONARY,
+                        label: p.intl.string(p.t.xXqIX1),
                         action: () => {
-                            (0, i.lE)(t), k();
+                            (0, a.lE)(e), g();
                         }
                     }),
-                (0, s.jsx)(l.MenuCheckboxItem, {
+                (0, i.jsx)(r.MenuCheckboxItem, {
                     id: 'spellcheck',
-                    label: M.Z.Messages.SPELLCHECK,
-                    checked: f,
+                    label: p.intl.string(p.t.TKkotb),
+                    checked: E,
                     action: () => {
-                        (0, i.kY)(), k();
+                        (0, a.kY)(), g();
                     }
                 }),
-                f
-                    ? (0, s.jsx)(l.MenuItem, {
+                E
+                    ? (0, i.jsx)(r.MenuItem, {
                           id: 'languages',
-                          label: M.Z.Messages.LANGUAGES,
-                          action: () => window.open(o.Z.getArticleURL(E.BhN.SPELLCHECK))
+                          label: p.intl.string(p.t.OlOHDA),
+                          action: () => window.open(o.Z.getArticleURL(f.BhN.SPELLCHECK))
                       })
                     : null
             ]

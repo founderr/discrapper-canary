@@ -5,30 +5,30 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(481060),
-    o = n(44315),
-    a = n(641033),
+var o = n(481060),
+    a = n(44315),
+    s = n(641033),
     l = n(989830),
-    r = n(689938),
+    r = n(388032),
     c = n(80195);
 function d(e) {
     let { channelId: t } = e,
         n = (0, l.Z)(t);
     if (!(null != n && (n.value > 0 || (null == n ? void 0 : n.multiplier) > 1))) return null;
     let { multiplier: d } = n,
-        { color: u } = (0, a.yz)(d);
+        { color: u } = (0, s.yz)(d);
     return (0, i.jsxs)('div', {
         className: c.container,
         children: [
-            (0, i.jsx)(s.Text, {
+            (0, i.jsx)(o.Text, {
                 variant: 'text-xs/normal',
-                children: r.Z.Messages.POGGERMODE_COMBO_BAR
+                children: r.intl.string(r.t.Jr2519)
             }),
-            (0, i.jsx)(s.Progress, {
-                foregroundColor: (0, o.Lq)(u),
+            (0, i.jsx)(o.Progress, {
+                foregroundColor: (0, a.Lq)(u),
                 className: c.progress,
-                size: s.Progress.Sizes.LARGE,
-                percent: 100 * (0, a.nc)(n),
+                size: o.Progress.Sizes.LARGE,
+                percent: 100 * (0, s.nc)(n),
                 animate: !0
             })
         ]

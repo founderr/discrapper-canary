@@ -1,26 +1,26 @@
-var n = t(200651),
-    a = t(192379),
-    i = t(120356),
-    r = t.n(i),
-    o = t(481060),
-    l = t(358085),
-    c = t(998502),
-    d = t(689938),
-    _ = t(113207);
-function u(e, s, t) {
+var i = n(200651),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(481060),
+    o = n(358085),
+    c = n(998502),
+    d = n(388032),
+    u = n(113207);
+function m(e, t, n) {
     return (
-        s in e
-            ? Object.defineProperty(e, s, {
-                  value: t,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[s] = t),
+            : (e[t] = n),
         e
     );
 }
-class E extends a.PureComponent {
+class h extends s.PureComponent {
     async componentDidMount() {
         this.setState({
             openOnStartup: await c.ZP.getSetting('OPEN_ON_STARTUP', !0),
@@ -29,55 +29,55 @@ class E extends a.PureComponent {
         });
     }
     render() {
-        let { openOnStartup: e, startMinimized: s, minimizeToTray: t } = this.state,
-            a = (0, l.isLinux)() ? d.Z.Messages.USER_SETTINGS_LINUX_SETTINGS : d.Z.Messages.USER_SETTINGS_WINDOWS_SETTINGS;
-        return (0, n.jsxs)(o.FormSection, {
-            tag: o.FormTitleTags.H1,
-            title: a,
+        let { openOnStartup: e, startMinimized: t, minimizeToTray: n } = this.state,
+            s = (0, o.isLinux)() ? d.intl.string(d.t['7pPjTU']) : d.intl.string(d.t.ZkDZoq);
+        return (0, i.jsxs)(a.FormSection, {
+            tag: a.FormTitleTags.H1,
+            title: s,
             children: [
-                (0, n.jsx)(o.FormTitle, { children: d.Z.Messages.USER_SETTINGS_STARTUP_BEHAVIOR }),
-                (0, n.jsx)(o.FormSwitch, {
-                    className: _.marginBottom20,
+                (0, i.jsx)(a.FormTitle, { children: d.intl.string(d.t['w/vU5u']) }),
+                (0, i.jsx)(a.FormSwitch, {
+                    className: u.marginBottom20,
                     value: e,
-                    note: d.Z.Messages.USER_SETTINGS_OPEN_ON_STARTUP_BODY,
+                    note: d.intl.string(d.t['s/cQra']),
                     onChange: this.handleToggleOpenOnStartup,
-                    children: d.Z.Messages.USER_SETTINGS_OPEN_ON_STARTUP_LABEL
+                    children: d.intl.string(d.t.WQm4p6)
                 }),
-                (0, l.isWindows)()
-                    ? (0, n.jsx)(o.FormSwitch, {
+                (0, o.isWindows)()
+                    ? (0, i.jsx)(a.FormSwitch, {
                           disabled: !e,
-                          className: r()(_.marginTop8, _.marginBottom20),
-                          value: !!e && s,
-                          note: d.Z.Messages.USER_SETTINGS_START_MINIMIZED_BODY,
+                          className: l()(u.marginTop8, u.marginBottom20),
+                          value: !!e && t,
+                          note: d.intl.string(d.t.o2FSjI),
                           onChange: this.handleToggleStartMinimized,
-                          children: d.Z.Messages.USER_SETTINGS_START_MINIMIZED_LABEL
+                          children: d.intl.string(d.t.n7Yjen)
                       })
                     : null,
-                (0, n.jsx)(o.FormTitle, {
-                    className: r()(_.marginTop20, _.marginBottom8),
-                    children: d.Z.Messages.USER_SETTINGS_CLOSE_BUTTON
+                (0, i.jsx)(a.FormTitle, {
+                    className: l()(u.marginTop20, u.marginBottom8),
+                    children: d.intl.string(d.t.h0hFx8)
                 }),
-                (0, n.jsx)(o.FormSwitch, {
-                    className: _.marginBottom20,
-                    value: t,
-                    note: d.Z.Messages.USER_SETTINGS_MINIMIZE_TO_TRAY_BODY,
+                (0, i.jsx)(a.FormSwitch, {
+                    className: u.marginBottom20,
+                    value: n,
+                    note: d.intl.string(d.t['mVuX+v']),
                     onChange: this.handleToggleMinimizeToTray,
-                    children: d.Z.Messages.USER_SETTINGS_MINIMIZE_TO_TRAY_LABEL
+                    children: d.intl.string(d.t.abLFen)
                 })
             ]
         });
     }
     constructor(e) {
         super(e),
-            u(this, 'handleToggleOpenOnStartup', () => {
+            m(this, 'handleToggleOpenOnStartup', () => {
                 let e = !this.state.openOnStartup;
                 this.setState({ openOnStartup: e }), c.ZP.send('TOGGLE_OPEN_ON_STARTUP', e);
             }),
-            u(this, 'handleToggleStartMinimized', () => {
+            m(this, 'handleToggleStartMinimized', () => {
                 let e = !this.state.startMinimized;
                 this.setState({ startMinimized: e }), c.ZP.send('TOGGLE_START_MINIMIZED', e);
             }),
-            u(this, 'handleToggleMinimizeToTray', () => {
+            m(this, 'handleToggleMinimizeToTray', () => {
                 let e = !this.state.minimizeToTray;
                 this.setState({ minimizeToTray: e }), c.ZP.send('TOGGLE_MINIMIZE_TO_TRAY', e);
             }),
@@ -88,4 +88,4 @@ class E extends a.PureComponent {
             });
     }
 }
-s.Z = E;
+t.Z = h;

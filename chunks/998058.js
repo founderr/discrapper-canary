@@ -3,21 +3,21 @@ n.d(t, {
         return o;
     }
 });
-var a = n(544891),
-    r = n(570140),
-    s = n(881052),
-    i = n(981631);
+var r = n(544891),
+    i = n(570140),
+    a = n(881052),
+    l = n(981631);
 let o = async (e) => {
     try {
         var t;
-        let n = await a.tn.get({ url: i.ANM.SIMILAR_GAMES(e) }),
-            s = (null !== (t = n.body.similar_games) && void 0 !== t ? t : []).filter((t) => t !== e);
-        r.Z.dispatch({
+        let n = await r.tn.get({ url: l.ANM.SIMILAR_GAMES(e) }),
+            a = (null !== (t = n.body.similar_games) && void 0 !== t ? t : []).filter((t) => t !== e);
+        i.Z.dispatch({
             type: 'GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS',
             applicationId: e,
-            games: s
+            games: a
         });
     } catch (e) {
-        throw new s.Hx(e);
+        throw new a.Hx(e);
     }
 };

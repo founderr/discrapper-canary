@@ -8,36 +8,36 @@ var r = n(147913),
     u = n(592125),
     c = n(944486),
     d = n(885110),
-    _ = n(649739),
-    E = n(981631);
-async function f(e) {
+    f = n(649739),
+    _ = n(981631);
+async function h(e) {
     await a.ZP.fetchApplications(e, !1);
 }
-async function h(e) {
+async function p(e) {
     if (null == e) return;
     let t = u.Z.getChannel(e),
         { enableHangStatus: n } = o.n.getCurrentConfig({ location: 'GameActivityManager' }, { autoTrackExposure: !1 });
-    if (null == t || !((0, _.Ku)('running_games_change', !1) || n)) return;
+    if (null == t || !((0, f.Ku)('running_games_change', !1) || n)) return;
     let r = d.Z.getActivities();
     if (0 === r.length) return;
-    let a = [...r].filter((e) => e.type === E.IIU.PLAYING && e.application_id).map((e) => e.application_id);
-    await f([...a]);
+    let a = [...r].filter((e) => e.type === _.IIU.PLAYING && e.application_id).map((e) => e.application_id);
+    await h([...a]);
     let c = s.Z.getApplication(a[0]);
     null != c &&
-        i.ZP.trackWithMetadata(E.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_SET, {
+        i.ZP.trackWithMetadata(_.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_SET, {
             channel_id: e,
             guild_id: t.guild_id,
             game_name: c.name,
             user_id: l.default.getId()
         });
 }
-class p extends r.Z {
+class m extends r.Z {
     handleRunningGamesChange() {
-        h(c.Z.getVoiceChannelId());
+        p(c.Z.getVoiceChannelId());
     }
     handleVoiceChannelSelect(e) {
         let { channelId: t } = e;
-        h(t);
+        p(t);
     }
     constructor(...e) {
         var t, n, r;
@@ -58,4 +58,4 @@ class p extends r.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new p();
+t.Z = new m();

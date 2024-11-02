@@ -1,50 +1,50 @@
-a.r(s);
-var r = a(200651);
-a(192379);
-var t = a(481060),
-    o = a(313201),
-    l = a(426642),
-    c = a(689938),
-    n = a(652601);
-s.default = (e) => {
-    let { transitionState: s, errors: a, onClose: d } = e,
-        i = (0, o.Dt)();
-    return (0, r.jsxs)(t.ModalRoot, {
-        transitionState: s,
-        'aria-labelledby': i,
+r.r(t);
+var l = r(200651);
+r(192379);
+var s = r(481060),
+    a = r(313201),
+    o = r(426642),
+    n = r(388032),
+    c = r(652601);
+t.default = (e) => {
+    let { transitionState: t, errors: r, onClose: i } = e,
+        d = (0, a.Dt)();
+    return (0, l.jsxs)(s.ModalRoot, {
+        transitionState: t,
+        'aria-labelledby': d,
         children: [
-            (0, r.jsx)(t.ModalHeader, {
+            (0, l.jsx)(s.ModalHeader, {
                 separator: !1,
-                className: n.modalHeader,
-                children: (0, r.jsx)(t.ModalCloseButton, {
-                    onClick: d,
-                    className: n.closeButton
+                className: c.modalHeader,
+                children: (0, l.jsx)(s.ModalCloseButton, {
+                    onClick: i,
+                    className: c.closeButton
                 })
             }),
-            (0, r.jsxs)(t.ModalContent, {
-                className: n.modalContent,
+            (0, l.jsxs)(s.ModalContent, {
+                className: c.modalContent,
                 children: [
-                    (0, r.jsxs)(t.FormSection, {
-                        className: n.header,
+                    (0, l.jsxs)(s.FormSection, {
+                        className: c.header,
                         children: [
-                            (0, r.jsx)(t.FormTitle, {
-                                id: i,
-                                className: n.title,
-                                children: c.Z.Messages.UPLOAD_ERROR_TITLE
+                            (0, l.jsx)(s.FormTitle, {
+                                id: d,
+                                className: c.title,
+                                children: n.intl.string(n.t.PanA4O)
                             }),
-                            (0, r.jsx)(t.FormText, {
-                                type: t.FormTextTypes.DESCRIPTION,
-                                children: c.Z.Messages.UPLOAD_ERROR_DESCRIPTION
+                            (0, l.jsx)(s.FormText, {
+                                type: s.FormTextTypes.DESCRIPTION,
+                                children: n.intl.string(n.t['8Ql1Aw'])
                             })
                         ]
                     }),
-                    (0, r.jsx)('div', {
-                        className: n.errors,
-                        children: (0, r.jsx)(t.Scroller, { children: a.map((e) => (0, r.jsx)(l.Z, { error: e }, e.filename)) })
+                    (0, l.jsx)('div', {
+                        className: c.errors,
+                        children: (0, l.jsx)(s.Scroller, { children: r.map((e) => (0, l.jsx)(o.Z, { error: e }, e.filename)) })
                     }),
-                    (0, r.jsx)(t.Button, {
-                        onClick: d,
-                        children: c.Z.Messages.GOT_IT
+                    (0, l.jsx)(s.Button, {
+                        onClick: i,
+                        children: n.intl.string(n.t['NX+WJC'])
                     })
                 ]
             })

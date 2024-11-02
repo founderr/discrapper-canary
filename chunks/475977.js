@@ -1,100 +1,100 @@
-var n = t(200651),
-    a = t(192379),
-    i = t(120356),
-    r = t.n(i),
-    o = t(115434),
-    l = t(264181),
-    c = t(399606),
-    d = t(481060),
-    _ = t(100527),
-    u = t(906732),
-    E = t(626135),
-    T = t(335131),
-    S = t(874703),
-    I = t(410154),
-    N = t(302800),
-    m = t(981631),
-    C = t(474936),
-    A = t(689938),
-    g = t(200895),
-    h = t(786792),
-    O = t(161594);
-let p = (e) => {
-    var s, t, a, i, o;
-    let { displayOptions: l, marketingVariant: c } = e;
-    return (0, n.jsxs)(n.Fragment, {
+var i = n(200651),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(115434),
+    o = n(264181),
+    c = n(399606),
+    d = n(481060),
+    u = n(100527),
+    m = n(906732),
+    h = n(626135),
+    g = n(335131),
+    p = n(874703),
+    x = n(410154),
+    S = n(302800),
+    T = n(981631),
+    C = n(474936),
+    _ = n(388032),
+    E = n(200895),
+    f = n(786792),
+    I = n(161594);
+let N = (e) => {
+    var t, n, s, r, a;
+    let { displayOptions: o, marketingVariant: c } = e;
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, n.jsx)('div', {
-                className: g.artContainer,
+            (0, i.jsx)('div', {
+                className: E.artContainer,
                 'aria-hidden': !0,
                 role: 'presentation',
-                children: (0, n.jsx)('img', {
-                    src: null !== (a = null == l ? void 0 : l.artSrc) && void 0 !== a ? a : O,
-                    className: r()(g.art, { [g.tideArt]: null != c && c === I.C5.TIDE }),
+                children: (0, i.jsx)('img', {
+                    src: null !== (s = null == o ? void 0 : o.artSrc) && void 0 !== s ? s : I,
+                    className: l()(E.art, { [E.tideArt]: null != c && c === x.C5.TIDE }),
                     alt: ''
                 })
             }),
-            (0, n.jsxs)('div', {
-                className: g.mainColumn,
+            (0, i.jsxs)('div', {
+                className: E.mainColumn,
                 children: [
-                    (0, n.jsx)(d.Heading, {
+                    (0, i.jsx)(d.Heading, {
                         variant: 'heading-lg/extrabold',
                         color: 'currentColor',
-                        className: g.title,
-                        children: null !== (i = null == l ? void 0 : null === (s = l.title) || void 0 === s ? void 0 : s.call(l)) && void 0 !== i ? i : A.Z.Messages.COLLECTIBLES_BANNER_TITLE_2024
+                        className: E.title,
+                        children: null !== (r = null == o ? void 0 : null === (t = o.title) || void 0 === t ? void 0 : t.call(o)) && void 0 !== r ? r : _.intl.string(_.t['4Emkur'])
                     }),
-                    (0, n.jsx)(d.Text, {
+                    (0, i.jsx)(d.Text, {
                         variant: 'text-sm/normal',
                         color: 'currentColor',
-                        children: null !== (o = null == l ? void 0 : null === (t = l.description) || void 0 === t ? void 0 : t.call(l)) && void 0 !== o ? o : A.Z.Messages.COLLECTIBLES_BANNER_DESCRIPTION_2024
+                        children: null !== (a = null == o ? void 0 : null === (n = o.description) || void 0 === n ? void 0 : n.call(o)) && void 0 !== a ? a : _.intl.string(_.t.gn7SZW)
                     })
                 ]
             })
         ]
     });
 };
-s.Z = () => {
+t.Z = () => {
     var e;
-    let s;
-    let { analyticsLocations: t } = (0, u.ZP)(_.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL),
-        i = a.useRef(null),
-        O = (0, I.ZP)('CollectiblesUpsellBanner'),
-        R = (0, c.e7)([S.Z], () => S.Z.getMarketingBySurface(o.K.EDIT_PROFILE_SETTINGS));
+    let t;
+    let { analyticsLocations: n } = (0, m.ZP)(u.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL),
+        r = s.useRef(null),
+        I = (0, x.ZP)('CollectiblesUpsellBanner'),
+        A = (0, c.e7)([p.Z], () => p.Z.getMarketingBySurface(a.K.EDIT_PROFILE_SETTINGS));
     return (
-        (s =
-            (null == R ? void 0 : R.type) === l.Z.BANNER
+        (t =
+            (null == A ? void 0 : A.type) === o.Z.BANNER
                 ? {
-                      artSrc: R.popoutAsset,
-                      backgroundSrc: R.asset,
-                      title: () => R.title,
-                      description: () => R.body
+                      artSrc: A.popoutAsset,
+                      backgroundSrc: A.asset,
+                      title: () => A.title,
+                      description: () => A.body
                   }
-                : N.GX[O]),
-        a.useEffect(() => {
-            E.default.track(m.rMx.PREMIUM_UPSELL_VIEWED, {
+                : S.GX[I]),
+        s.useEffect(() => {
+            h.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: C.cd.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
-                location_stack: t
+                location_stack: n
             });
-        }, [t]),
-        (0, n.jsxs)('div', {
-            ref: i,
-            className: r()(g.container, { [g.robertContainer]: O === I.C5.ROBERT }),
-            style: { backgroundImage: 'url('.concat(null !== (e = null == s ? void 0 : s.backgroundSrc) && void 0 !== e ? e : h, ')') },
+        }, [n]),
+        (0, i.jsxs)('div', {
+            ref: r,
+            className: l()(E.container, { [E.robertContainer]: I === x.C5.ROBERT }),
+            style: { backgroundImage: 'url('.concat(null !== (e = null == t ? void 0 : t.backgroundSrc) && void 0 !== e ? e : f, ')') },
             children: [
-                (0, n.jsx)(p, {
-                    displayOptions: s,
-                    marketingVariant: O
+                (0, i.jsx)(N, {
+                    displayOptions: t,
+                    marketingVariant: I
                 }),
-                (0, n.jsx)(d.Button, {
+                (0, i.jsx)(d.Button, {
                     onClick: () => {
-                        (0, T.mK)({
-                            analyticsLocations: t,
-                            analyticsSource: _.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL
+                        (0, g.mK)({
+                            analyticsLocations: n,
+                            analyticsSource: u.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL
                         });
                     },
-                    className: g.ctaButton,
+                    className: E.ctaButton,
                     color: d.Button.Colors.BRAND_INVERTED,
-                    children: A.Z.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
+                    children: _.intl.string(_.t.fYfGgI)
                 })
             ]
         })

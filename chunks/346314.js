@@ -1,9 +1,9 @@
 n.d(t, {
     P: function () {
-        return E;
+        return _;
     },
     r: function () {
-        return _;
+        return f;
     }
 });
 var r = n(200651);
@@ -18,7 +18,7 @@ var i = n(120356),
 function d(e) {
     let { roleStyle: t, name: n, color: i, roleName: s, dotAlignment: o = 'left', className: l } = e,
         d = 'username' === t,
-        _ =
+        f =
             'dot' === t
                 ? (0, r.jsx)(u.F, {
                       color: i,
@@ -29,29 +29,29 @@ function d(e) {
     return (0, r.jsxs)('span', {
         style: { color: d && null != i ? i : void 0 },
         className: a()(l, { [c.username]: d }),
-        children: ['left' === o && _, n, 'right' === o && _]
+        children: ['left' === o && f, n, 'right' === o && f]
     });
 }
-function _(e) {
+function f(e) {
     let { name: t, color: n, roleName: i, dotAlignment: a, className: u, ...c } = e,
-        _ = (0, s.e7)([l.Z], () => l.Z.roleStyle),
-        E = 'username' === _,
-        f = (0, r.jsx)(d, {
-            roleStyle: _,
+        f = (0, s.e7)([l.Z], () => l.Z.roleStyle),
+        _ = 'username' === f,
+        h = (0, r.jsx)(d, {
+            roleStyle: f,
             name: t,
             color: n,
             roleName: i,
             dotAlignment: a,
             className: u
         }),
-        h = E ? { color: n } : void 0;
+        p = _ ? { color: n } : void 0;
     return (0, r.jsx)(o.Anchor, {
         ...c,
-        children: f,
-        style: h
+        children: h,
+        style: p
     });
 }
-function E(e) {
+function _(e) {
     let t = (0, s.e7)([l.Z], () => l.Z.roleStyle);
     return (0, r.jsx)(d, {
         ...e,

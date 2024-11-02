@@ -1,75 +1,75 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return m;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(442837),
-    i = n(481060),
-    r = n(471613),
-    l = n(29605),
+var r = n(442837),
+    l = n(481060),
+    s = n(471613),
+    a = n(29605),
     o = n(345861),
     c = n(723047),
     d = n(796814),
-    u = n(689938);
-function _(e) {
+    u = n(388032);
+function m(e) {
     let { guild: t } = e,
-        _ = (0, a.e7)([r.Z], () => r.Z.isUploadingEmoji()),
-        I = (0, d.Z)(t.id),
-        E = t.getMaxRoleSubscriptionEmojiSlots() - I.length,
-        T = (0, c.mY)();
-    return (0, s.jsx)(s.Fragment, {
-        children: (0, s.jsxs)(i.FormSection, {
-            title: u.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_MANAGE_EMOJI_UPLOAD_TITLE,
-            disabled: T,
+        m = (0, r.e7)([s.Z], () => s.Z.isUploadingEmoji()),
+        h = (0, d.Z)(t.id),
+        g = t.getMaxRoleSubscriptionEmojiSlots() - h.length,
+        x = (0, c.mY)();
+    return (0, i.jsx)(i.Fragment, {
+        children: (0, i.jsxs)(l.FormSection, {
+            title: u.intl.string(u.t.LDT0Q0),
+            disabled: x,
             children: [
-                (0, s.jsx)(i.FormText, {
-                    type: i.FormText.Types.DESCRIPTION,
-                    disabled: T,
-                    children: u.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_MANAGE_EMOJI_UPLOAD_DESCRIPTION.format({ maxSlots: t.getMaxRoleSubscriptionEmojiSlots() })
+                (0, i.jsx)(l.FormText, {
+                    type: l.FormText.Types.DESCRIPTION,
+                    disabled: x,
+                    children: u.intl.format(u.t.H9Jxp6, { maxSlots: t.getMaxRoleSubscriptionEmojiSlots() })
                 }),
-                (0, s.jsx)(i.Spacer, { size: 16 }),
-                (0, s.jsx)(o.Z, {
-                    onChange: (e, a) => {
+                (0, i.jsx)(l.Spacer, { size: 16 }),
+                (0, i.jsx)(o.Z, {
+                    onChange: (e, r) => {
                         null != e &&
-                            null != a &&
-                            (0, i.openModalLazy)(async () => {
-                                let { CreateEmojiWithRolesModal: i } = await n.e('9007').then(n.bind(n, 604623));
+                            null != r &&
+                            (0, l.openModalLazy)(async () => {
+                                let { CreateEmojiWithRolesModal: l } = await n.e('9007').then(n.bind(n, 604623));
                                 return (n) =>
-                                    (0, s.jsx)(i, {
+                                    (0, i.jsx)(l, {
                                         ...n,
                                         data: e,
-                                        file: a,
+                                        file: r,
                                         guildId: t.id
                                     });
                             });
                     },
-                    buttonCTA: u.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_MANAGE_EMOJI_UPLOAD_CTA,
-                    submitting: _,
-                    disabled: T || _ || 0 === E
+                    buttonCTA: u.intl.string(u.t.AuPtoq),
+                    submitting: m,
+                    disabled: x || m || 0 === g
                 }),
-                (0, s.jsx)(i.Spacer, { size: 24 }),
-                (0, s.jsx)(l.L3, {
-                    title: u.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_MANAGE_EMOJI_EMOJI_SECTION_TITLE,
+                (0, i.jsx)(l.Spacer, { size: 24 }),
+                (0, i.jsx)(a.L3, {
+                    title: u.intl.string(u.t.lu1ZQ0),
                     maxSlots: t.getMaxRoleSubscriptionEmojiSlots(),
-                    emojiCount: I.length
+                    emojiCount: h.length
                 }),
-                (0, s.jsx)(l.FT, {
+                (0, i.jsx)(a.FT, {
                     guild: t,
-                    emojis: I,
+                    emojis: h,
                     onEdit: (e, t) => {
-                        (0, i.openModalLazy)(async () => {
-                            let { UpdateEmojiRolesModal: a } = await n.e('9007').then(n.bind(n, 604623));
+                        (0, l.openModalLazy)(async () => {
+                            let { UpdateEmojiRolesModal: r } = await n.e('9007').then(n.bind(n, 604623));
                             return (n) =>
-                                (0, s.jsx)(a, {
+                                (0, i.jsx)(r, {
                                     ...n,
                                     emoji: e,
                                     guildId: t
                                 });
                         });
                     },
-                    editingDisabled: T
+                    editingDisabled: x
                 })
             ]
         })

@@ -1,21 +1,21 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 });
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(481060),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    s = n(481060),
     o = n(686546),
     c = n(778045),
     d = n(355932),
     u = n(852786),
-    _ = n(68118);
-function E(e) {
+    h = n(68118);
+function m(e) {
     let { traits: t } = e,
-        n = a.useCallback(
+        n = r.useCallback(
             (e) =>
                 (0, i.jsx)(
                     u.Z,
@@ -28,56 +28,56 @@ function E(e) {
             []
         );
     return (0, i.jsx)(d.ZP, {
-        className: _.traitsContainer,
+        className: h.traitsContainer,
         items: t,
         renderItem: n,
         maxLines: 2,
         itemGapPx: 4
     });
 }
-function h(e) {
+function p(e) {
     let { className: t, style: n } = e;
     return (0, i.jsx)('div', {
-        className: r()(_.clickableCard, t),
+        className: a()(h.clickableCard, t),
         style: n,
         children: (0, i.jsxs)('div', {
-            className: r()(_.card, _.skeletonCard),
+            className: a()(h.card, h.skeletonCard),
             children: [
                 (0, i.jsx)('div', {
-                    className: _.cardBrandingHeader,
+                    className: h.cardBrandingHeader,
                     children: (0, i.jsx)(u.Z, {
                         width: '100%',
                         height: 100
                     })
                 }),
                 (0, i.jsxs)('div', {
-                    className: _.cardContent,
+                    className: h.cardContent,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: _.cardContentTitleSection,
+                            className: h.cardContentTitleSection,
                             children: [
                                 (0, i.jsxs)('div', {
-                                    className: _.cardNameAndTagWrapper,
+                                    className: h.cardNameAndTagWrapper,
                                     children: [
                                         (0, i.jsx)(o.ZP, {
                                             mask: o.QS.CLAN_ICON,
                                             width: 70,
                                             height: 70,
-                                            className: _.clanIconMask,
+                                            className: h.clanIconMask,
                                             children: (0, i.jsx)('div', {
-                                                className: _.skeletonIconInner,
+                                                className: h.skeletonIconInner,
                                                 children: (0, i.jsx)(u.Z, {
                                                     width: 64,
                                                     height: 64,
                                                     delayMs: 10,
-                                                    className: _.skeletonIcon
+                                                    className: h.skeletonIcon
                                                 })
                                             })
                                         }),
                                         (0, i.jsx)('div', {
-                                            className: _.clanTagChipletWrapper,
+                                            className: h.clanTagChipletWrapper,
                                             children: (0, i.jsxs)('div', {
-                                                className: _.clanTagChiplet,
+                                                className: h.clanTagChiplet,
                                                 children: [
                                                     (0, i.jsx)(u.Z, {
                                                         width: 16,
@@ -94,23 +94,23 @@ function h(e) {
                                         })
                                     ]
                                 }),
-                                (0, i.jsx)(l.Heading, {
+                                (0, i.jsx)(s.Heading, {
                                     variant: 'heading-md/medium',
                                     color: 'header-primary',
                                     lineClamp: 1,
                                     children: (0, i.jsx)(u.Z, {
-                                        className: _.nameText,
+                                        className: h.nameText,
                                         width: 120,
                                         height: 24,
                                         delayMs: 20
                                     })
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: _.clanInfoRow,
+                                    className: h.clanInfoRow,
                                     children: [
-                                        (0, i.jsx)(l.Text, {
+                                        (0, i.jsx)(s.Text, {
                                             variant: 'text-xxs/normal',
-                                            className: _.clanInfoItem,
+                                            className: h.clanInfoItem,
                                             children: (0, i.jsx)(u.Z, {
                                                 width: 40,
                                                 height: 16,
@@ -118,7 +118,7 @@ function h(e) {
                                             })
                                         }),
                                         (0, i.jsx)('span', {
-                                            className: _.wildCardText,
+                                            className: h.wildCardText,
                                             children: (0, i.jsx)(u.Z, {
                                                 width: 40,
                                                 height: 16,
@@ -130,7 +130,7 @@ function h(e) {
                             ]
                         }),
                         (0, i.jsxs)('div', {
-                            className: _.cardContentDescriptionSection,
+                            className: h.cardContentDescriptionSection,
                             style: { gap: '4px' },
                             children: [
                                 (0, i.jsx)(u.Z, {
@@ -150,19 +150,19 @@ function h(e) {
                                 })
                             ]
                         }),
-                        (0, i.jsx)(E, {
+                        (0, i.jsx)(m, {
                             traits: ['1', '2', '3']
                         })
                     ]
                 }),
                 (0, i.jsxs)('div', {
-                    className: _.cardFooter,
+                    className: h.cardFooter,
                     children: [
                         (0, i.jsx)('div', {
-                            className: _.cardFooterInfo,
+                            className: h.cardFooterInfo,
                             children: (0, i.jsx)('div', {
-                                className: _.cardFooterMembers,
-                                children: (0, i.jsx)(l.Text, {
+                                className: h.cardFooterMembers,
+                                children: (0, i.jsx)(s.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'text-muted',
                                     children: (0, i.jsx)(u.Z, {
@@ -174,7 +174,7 @@ function h(e) {
                             })
                         }),
                         (0, i.jsxs)('div', {
-                            className: _.cardFooterGames,
+                            className: h.cardFooterGames,
                             children: [(0, i.jsx)(c.P, { delayMs: 35 }), (0, i.jsx)(c.P, { delayMs: 25 }), (0, i.jsx)(c.P, { delayMs: 55 })]
                         })
                     ]

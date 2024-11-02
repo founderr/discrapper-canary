@@ -1,18 +1,18 @@
 n.d(t, {
     C5: function () {
-        return a;
+        return r;
     },
     Q5: function () {
         return i.Et;
     },
     no: function () {
-        return s;
+        return l;
     }
 });
 var i = n(231338);
-function a(e) {
+function r(e) {
     return e.required().unknown(!0);
 }
-function s(e) {
+function l(e) {
     return Object.values(e);
 }

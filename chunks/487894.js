@@ -1,19 +1,19 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return c;
     }
 });
-var a = t(200651);
-t(192379);
-var s = t(481060),
-    l = t(499033),
-    r = t(665906),
-    i = t(689938),
-    o = t(417716);
+var a = n(200651);
+n(192379);
+var l = n(481060),
+    r = n(499033),
+    s = n(665906),
+    i = n(388032),
+    o = n(417716);
 function c(e) {
-    let { channel: n, header: t, startThread: c } = e,
-        d = (0, r.NE)(n),
-        u = (0, r.Xu)(n);
+    let { channel: t, header: n, startThread: c } = e,
+        d = (0, s.NE)(t),
+        u = (0, s.Xu)(t);
     return (0, a.jsxs)('div', {
         className: o.container,
         children: [
@@ -22,31 +22,31 @@ function c(e) {
                 children: [
                     (0, a.jsx)('div', {
                         className: o.icon,
-                        children: (0, a.jsx)(s.ThreadIcon, {
+                        children: (0, a.jsx)(l.ThreadIcon, {
                             size: 'custom',
                             color: 'currentColor',
                             width: 36,
                             height: 36
                         })
                     }),
-                    (0, a.jsx)(l.Z, { className: o.stars })
+                    (0, a.jsx)(r.Z, { className: o.stars })
                 ]
             }),
-            (0, a.jsx)(s.Heading, {
+            (0, a.jsx)(l.Heading, {
                 className: o.header,
                 variant: 'heading-xl/semibold',
-                children: t
+                children: n
             }),
-            (0, a.jsx)(s.Text, {
+            (0, a.jsx)(l.Text, {
                 color: 'header-secondary',
                 variant: 'text-md/normal',
-                children: i.Z.Messages.THREAD_BROWSER_EMPTY_STATE_SUBTEXT_REDESIGN
+                children: i.intl.string(i.t.jmq9GB)
             }),
             d || u
-                ? (0, a.jsx)(s.Button, {
+                ? (0, a.jsx)(l.Button, {
                       className: o.cta,
                       onClick: c,
-                      children: i.Z.Messages.CREATE_THREAD
+                      children: i.intl.string(i.t.rBIGBA)
                   })
                 : null
         ]

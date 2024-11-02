@@ -5,27 +5,27 @@ t.d(n, {
 }),
     t(627341);
 var i = t(278074),
-    s = t(200634),
+    l = t(200634),
     o = t(228168),
-    l = t(689938);
+    s = t(388032);
 function r(e) {
     var n;
-    let t = null === (n = (0, s.Z)(e.id, !0).mutualGuilds) || void 0 === n ? void 0 : n.length;
+    let t = null === (n = (0, l.Z)(e.id, !0).mutualGuilds) || void 0 === n ? void 0 : n.length;
     return [
         {
             section: o.oh.BOT_INFO,
-            text: l.Z.Messages.USER_PROFILE_ABOUT_ME
+            text: s.intl.string(s.t.jGoPJS)
         },
         {
             section: o.oh.MUTUAL_GUILDS,
             text: (0, i.EQ)(t)
-                .with(void 0, () => l.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER)
-                .with(0, () => l.Z.Messages.USER_PROFILE_NO_MUTUAL_SERVERS)
-                .otherwise((e) => l.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({ count: e }))
+                .with(void 0, () => s.intl.string(s.t['4lTDZm']))
+                .with(0, () => s.intl.string(s.t.jpY0X1))
+                .otherwise((e) => s.intl.formatToPlainString(s.t.eE3oen, { count: e }))
         },
         {
             section: o.oh.BOT_DATA_ACCESS,
-            text: l.Z.Messages.BOTS_DATA_ACCESS_TAB
+            text: s.intl.string(s.t.WstFb2)
         }
     ];
 }

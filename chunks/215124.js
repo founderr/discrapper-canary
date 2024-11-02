@@ -1,60 +1,60 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return m;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(399606),
-    i = n(481060),
-    r = n(674180),
-    l = n(267101),
+var r = n(399606),
+    l = n(481060),
+    s = n(674180),
+    a = n(267101),
     o = n(430824),
     c = n(584825),
     d = n(198139),
-    u = n(689938);
-function _(e) {
-    let { guildId: t, allPeriods: _ } = e,
-        I = (0, a.e7)([o.Z], () => o.Z.getGuild(t)),
-        E = (0, c.qi)(t, { includeSoftDeleted: !0 }),
-        T = (0, l.ue)(t, { publishedOnly: !1 }),
-        { allowSelfRemoveMonetization: m } = (0, r.gX)(t),
-        N = _.filter((e) => {
+    u = n(388032);
+function m(e) {
+    let { guildId: t, allPeriods: m } = e,
+        h = (0, r.e7)([o.Z], () => o.Z.getGuild(t)),
+        g = (0, c.qi)(t, { includeSoftDeleted: !0 }),
+        x = (0, a.ue)(t, { publishedOnly: !1 }),
+        { allowSelfRemoveMonetization: p } = (0, s.gX)(t),
+        f = m.filter((e) => {
             var t;
             let n = Object.values(null !== (t = e.ppgs) && void 0 !== t ? t : {})[0];
             return (null == n ? void 0 : n.status) === d.x_.OPEN || (null == n ? void 0 : n.status) === d.x_.PAYOUT_DEFERRED;
         }),
-        S = E.length > 0,
-        g = T.length > 0,
-        h = N.length > 0;
-    return null == I
+        C = g.length > 0,
+        I = x.length > 0,
+        _ = f.length > 0;
+    return null == h
         ? null
-        : (0, s.jsxs)('div', {
+        : (0, i.jsxs)('div', {
               children: [
-                  (0, s.jsx)(i.FormText, {
-                      type: i.FormText.Types.DESCRIPTION,
-                      children: u.Z.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_SECTION_DESCRIPTION.format({ guildName: I.toString() })
+                  (0, i.jsx)(l.FormText, {
+                      type: l.FormText.Types.DESCRIPTION,
+                      children: u.intl.format(u.t.fvOn6O, { guildName: h.toString() })
                   }),
-                  (0, s.jsx)(i.Spacer, { size: 16 }),
-                  (0, s.jsx)(i.Button, {
-                      disabled: !m || S || g || h,
-                      look: i.Button.Looks.FILLED,
-                      color: i.Button.Colors.RED,
+                  (0, i.jsx)(l.Spacer, { size: 16 }),
+                  (0, i.jsx)(l.Button, {
+                      disabled: !p || C || I || _,
+                      look: l.Button.Looks.FILLED,
+                      color: l.Button.Colors.RED,
                       onClick: () => {
                           var e;
                           return (
-                              (e = I),
-                              void (0, i.openModalLazy)(async () => {
+                              (e = h),
+                              void (0, l.openModalLazy)(async () => {
                                   let { default: t } = await n.e('35282').then(n.bind(n, 157429));
                                   return (n) =>
-                                      (0, s.jsx)(t, {
+                                      (0, i.jsx)(t, {
                                           ...n,
                                           guild: e
                                       });
                               })
                           );
                       },
-                      children: u.Z.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_CTA
+                      children: u.intl.string(u.t.FrOFSk)
                   })
               ]
           });

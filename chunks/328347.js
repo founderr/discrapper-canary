@@ -7,16 +7,16 @@ var i,
     u = n(570140);
 let c = [],
     d = c,
-    _ = null,
-    E = (e) => {
-        (d = c), (_ = null);
+    f = null,
+    _ = (e) => {
+        (d = c), (f = null);
     };
-class f extends (o = l.ZP.Store) {
+class h extends (o = l.ZP.Store) {
     get analyticsLocations() {
         return d;
     }
     get analyticsSource() {
-        return _;
+        return f;
     }
     get initialProductSkuId() {
         return r;
@@ -24,12 +24,12 @@ class f extends (o = l.ZP.Store) {
     getAnalytics() {
         return {
             analyticsLocations: d,
-            analyticsSource: _
+            analyticsSource: f
         };
     }
 }
 (s = 'CollectiblesShopStore'),
-    (a = 'displayName') in (i = f)
+    (a = 'displayName') in (i = h)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -37,14 +37,14 @@ class f extends (o = l.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new f(u.Z, {
+    (t.Z = new h(u.Z, {
         COLLECTIBLES_SHOP_OPEN: (e) => {
             var t, n;
-            (d = null !== (t = e.analyticsLocations) && void 0 !== t ? t : c), (_ = null !== (n = e.analyticsSource) && void 0 !== n ? n : null), (r = e.initialProductSkuId);
+            (d = null !== (t = e.analyticsLocations) && void 0 !== t ? t : c), (f = null !== (n = e.analyticsSource) && void 0 !== n ? n : null), (r = e.initialProductSkuId);
         },
-        COLLECTIBLES_SHOP_CLOSE: E,
+        COLLECTIBLES_SHOP_CLOSE: _,
         COLLECTIBLES_PRODUCT_DETAILS_OPEN: (e) => {
             e.item.skuId === r && (r = void 0);
         },
-        LOGOUT: E
+        LOGOUT: _
     }));

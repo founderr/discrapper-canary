@@ -1,12 +1,12 @@
 n.d(t, {
     Ih: function () {
-        return l;
+        return s;
     },
     PU: function () {
         return c;
     },
     hK: function () {
-        return s;
+        return l;
     }
 });
 var o = n(200651);
@@ -14,7 +14,7 @@ n(192379);
 var r = n(692547),
     a = n(481060),
     i = n(626166);
-function s(e) {
+function l(e) {
     let { title: t, children: n } = e;
     return (0, o.jsxs)('div', {
         className: i.questionContainer,
@@ -29,8 +29,8 @@ function s(e) {
         ]
     });
 }
-function l(e) {
-    let { icon: t, text: n, meetsRequirement: s } = e;
+function s(e) {
+    let { icon: t, text: n, meetsRequirement: l } = e;
     return (0, o.jsxs)('div', {
         className: i.requirementContainer,
         children: [
@@ -46,7 +46,7 @@ function l(e) {
                 variant: 'text-md/normal',
                 children: n
             }),
-            s
+            l
                 ? (0, o.jsx)(a.CircleCheckIcon, {
                       size: 'md',
                       color: 'currentColor',
@@ -63,7 +63,7 @@ function l(e) {
     });
 }
 function c(e) {
-    let { icon: t, text: n, footnote: s, meetsRequirement: l, children: c } = e;
+    let { icon: t, text: n, footnote: l, meetsRequirement: s, children: c } = e;
     return (0, o.jsxs)(o.Fragment, {
         children: [
             (0, o.jsxs)('div', {
@@ -81,7 +81,7 @@ function c(e) {
                         variant: 'text-md/normal',
                         children: n
                     }),
-                    l
+                    s
                         ? (0, o.jsx)(a.CircleCheckIcon, {
                               size: 'md',
                               color: 'currentColor',
@@ -91,12 +91,12 @@ function c(e) {
                         : c
                 ]
             }),
-            null != s &&
+            null != l &&
                 (0, o.jsx)(a.Text, {
                     color: 'header-secondary',
                     className: i.footnote,
                     variant: 'text-xs/normal',
-                    children: s
+                    children: l
                 })
         ]
     });

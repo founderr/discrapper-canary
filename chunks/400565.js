@@ -4,68 +4,68 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    a = n(192379),
-    s = n(686546),
-    r = n(598077),
-    l = n(865112),
-    o = n(655538);
+    r = n(192379),
+    l = n(686546),
+    a = n(598077),
+    o = n(865112),
+    s = n(655538);
 let c = (e) => {
         let { mask: t } = e;
         return null == t
             ? null
             : (0, i.jsx)('div', {
-                  className: o.maskBackground,
+                  className: s.maskBackground,
                   style: { backgroundColor: t.color.css },
                   children: (0, i.jsx)('img', {
-                      className: o.maskIcon,
+                      className: s.maskIcon,
                       alt: '',
                       src: t.icon
                   })
               });
     },
-    u = a.memo(function (e) {
+    u = r.memo(function (e) {
         let { item: t } = e,
             n = null,
-            a = !1;
+            r = !1;
         if (null != t.icon_name)
             n = (0, i.jsx)('img', {
                 alt: '',
-                src: l.VH[(0, l.RB)(t.icon_name)]
+                src: o.VH[(0, o.RB)(t.icon_name)]
             });
         else if (null != t.other_user) {
-            let e = t.other_user instanceof r.Z ? t.other_user : new r.Z(t.other_user);
+            let e = t.other_user instanceof a.Z ? t.other_user : new a.Z(t.other_user);
             (n = (0, i.jsx)('img', {
                 alt: '',
-                className: o.image,
+                className: s.image,
                 src: e.getAvatarURL(void 0, 40)
             })),
-                (a = !0);
+                (r = !0);
         } else
             n =
                 null != t.icon_url
                     ? (0, i.jsx)('img', {
                           alt: '',
-                          className: o.image,
+                          className: s.image,
                           src: t.icon_url
                       })
                     : (0, i.jsx)('img', {
                           alt: '',
-                          src: l.VH[(0, l.q7)(t)]
+                          src: o.VH[(0, o.q7)(t)]
                       });
-        let u = (0, l.Vi)(t.type);
+        let u = (0, o.Vi)(t.type);
         return (0, i.jsxs)('div', {
-            className: o.container,
+            className: s.container,
             children: [
-                (0, i.jsx)(s.ZP, {
-                    mask: null == u ? s.QS.AVATAR_DEFAULT : s.QS.AVATAR_STATUS_ROUND_16,
+                (0, i.jsx)(l.ZP, {
+                    mask: null == u ? l.QS.AVATAR_DEFAULT : l.QS.AVATAR_STATUS_ROUND_16,
                     width: 40,
                     height: 40,
                     rightOverhang: 3,
                     bottomOverhang: 3,
-                    className: o.mask,
+                    className: s.mask,
                     children: (0, i.jsx)('div', {
-                        className: o.imageContainer,
-                        style: a ? void 0 : { backgroundColor: (0, l.Vu)(t) },
+                        className: s.imageContainer,
+                        style: r ? void 0 : { backgroundColor: (0, o.Vu)(t) },
                         children: n
                     })
                 }),

@@ -6,9 +6,9 @@ var i = n(120356),
     o = n(55935),
     l = n(543388),
     u = n(223021),
-    c = n(689938),
+    c = n(388032),
     d = n(825193);
-function _(e) {
+function f(e) {
     let { tooltipProps: t, timeFormatted: n, children: i, compact: a, timestamp: s, id: o } = e;
     return (0, r.jsx)('time', {
         ...t,
@@ -36,43 +36,43 @@ function _(e) {
     });
 }
 t.Z = function (e) {
-    let { children: t, className: n, compact: i = !1, timestamp: E, isVisibleOnlyOnHover: f = !1, cozyAlt: h = !1, isInline: p = !0, id: I, isEdited: m = !1, application: T } = e,
-        S = (0, o.Hg)(E),
-        g = i ? (0, o.vc)(E, 'LT') : (0, o.Y4)(E),
-        A = i ? (0, u.Z)(g) : null,
-        N = m ? c.Z.Messages.MESSAGE_EDITED_TIMESTAMP_A11Y_LABEL.format({ timeFormatted: S }) : S;
+    let { children: t, className: n, compact: i = !1, timestamp: _, isVisibleOnlyOnHover: h = !1, cozyAlt: p = !1, isInline: m = !0, id: g, isEdited: E = !1, application: v } = e,
+        I = (0, o.Hg)(_),
+        S = i ? (0, o.vc)(_, 'LT') : (0, o.Y4)(_),
+        T = i ? (0, u.Z)(S) : null,
+        b = E ? c.intl.formatToPlainString(c.t.CDzOFR, { timeFormatted: I }) : I;
     return (0, r.jsx)('span', {
-        className: a()(n, A, {
+        className: a()(n, T, {
             [d.timestamp]: !0,
-            [d.timestampVisibleOnHover]: f,
-            [d.timestampInline]: p,
-            [d.alt]: h
+            [d.timestampVisibleOnHover]: h,
+            [d.timestampInline]: m,
+            [d.alt]: p
         }),
         children:
-            null == T
+            null == v
                 ? (0, r.jsx)(s.Tooltip, {
-                      text: (0, o.vc)(E, 'LLLL'),
-                      'aria-label': N,
+                      text: (0, o.vc)(_, 'LLLL'),
+                      'aria-label': b,
                       tooltipClassName: d.timestampTooltip,
                       delay: 750,
                       children: (e) =>
-                          (0, r.jsx)(_, {
+                          (0, r.jsx)(f, {
                               tooltipProps: e,
-                              timeFormatted: g,
-                              timestamp: E,
-                              id: I,
+                              timeFormatted: S,
+                              timestamp: _,
+                              id: g,
                               compact: i,
                               children: t
                           })
                   })
                 : (0, r.jsx)(l.Z, {
-                      application: T,
-                      timestamp: E,
+                      application: v,
+                      timestamp: _,
                       compact: i,
-                      children: (0, r.jsx)(_, {
-                          timeFormatted: g,
-                          timestamp: E,
-                          id: I,
+                      children: (0, r.jsx)(f, {
+                          timeFormatted: S,
+                          timestamp: _,
+                          id: g,
                           compact: i,
                           children: t
                       })

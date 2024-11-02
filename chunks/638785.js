@@ -5,25 +5,25 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    a = n(120356),
-    l = n.n(a),
-    r = n(481060),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
+    s = n(481060),
     o = n(566898),
     c = n(785717),
     u = n(46560);
 function d(e) {
-    let { section: t, header: n, items: a, minItems: d = 0, isLoading: h, listClassName: m } = e,
+    let { section: t, header: n, items: r, minItems: d = 0, isLoading: h, listClassName: m } = e,
         { trackUserProfileAction: p } = (0, c.KZ)(),
-        _ = s.useId(),
-        [f, E] = s.useState(!1),
-        g = f ? r.ChevronSmallDownIcon : r.ChevronSmallRightIcon;
+        f = l.useId(),
+        [g, C] = l.useState(!1),
+        x = g ? s.ChevronSmallDownIcon : s.ChevronSmallRightIcon;
     return (0, i.jsxs)('section', {
         className: u.section,
         children: [
             h
                 ? (0, i.jsxs)('div', {
-                      className: l()(u.header, u.loading),
+                      className: a()(u.header, u.loading),
                       children: [
                           (0, i.jsx)(o.ZT, {
                               width: 135,
@@ -35,40 +35,40 @@ function d(e) {
                           })
                       ]
                   })
-                : a.length <= d
-                  ? (0, i.jsxs)(r.Heading, {
+                : r.length <= d
+                  ? (0, i.jsxs)(s.Heading, {
                         variant: 'text-sm/medium',
                         color: 'text-normal',
                         className: u.header,
-                        children: [n, ' \u2014 ', a.length]
+                        children: [n, ' \u2014 ', r.length]
                     })
-                  : (0, i.jsxs)(r.Clickable, {
-                        className: l()(u.header, u.clickable),
-                        'aria-controls': _,
-                        'aria-expanded': f,
+                  : (0, i.jsxs)(s.Clickable, {
+                        className: a()(u.header, u.clickable),
+                        'aria-controls': f,
+                        'aria-expanded': g,
                         onClick: () => {
-                            E(!f),
-                                !f &&
+                            C(!g),
+                                !g &&
                                     p({
                                         action: 'PRESS_SECTION',
                                         section: t
                                     });
                         },
                         children: [
-                            (0, i.jsxs)(r.Heading, {
+                            (0, i.jsxs)(s.Heading, {
                                 variant: 'text-sm/medium',
                                 color: 'text-normal',
-                                children: [n, ' \u2014 ', a.length]
+                                children: [n, ' \u2014 ', r.length]
                             }),
-                            (0, i.jsx)(g, { size: 'md' })
+                            (0, i.jsx)(x, { size: 'md' })
                         ]
                     }),
-            a.length > 0 &&
+            r.length > 0 &&
                 (0, i.jsx)('ul', {
-                    id: _,
-                    hidden: !f && d <= 0,
-                    className: l()(u.list, m),
-                    children: f || a.length <= d ? a : a.slice(0, d)
+                    id: f,
+                    hidden: !g && d <= 0,
+                    className: a()(u.list, m),
+                    children: g || r.length <= d ? r : r.slice(0, d)
                 })
         ]
     });

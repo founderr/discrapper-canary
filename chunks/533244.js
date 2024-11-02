@@ -3,13 +3,13 @@ n.d(t, {
         return c;
     },
     OY: function () {
-        return m;
+        return E;
     },
     SG: function () {
-        return I;
+        return g;
     },
     T1: function () {
-        return _;
+        return f;
     },
     i9: function () {
         return u;
@@ -18,19 +18,19 @@ n.d(t, {
         return d;
     },
     lk: function () {
-        return f;
+        return h;
     },
     pQ: function () {
         return l;
     },
     sN: function () {
-        return p;
+        return m;
     },
     sO: function () {
-        return E;
+        return _;
     },
     ur: function () {
-        return h;
+        return p;
     }
 }),
     n(653041);
@@ -38,7 +38,7 @@ var r = n(913527),
     i = n.n(r),
     a = n(666657),
     s = n(676770),
-    o = n(689938);
+    o = n(388032);
 let l = {
     month: 'numeric',
     day: 'numeric',
@@ -54,27 +54,27 @@ function c(e) {
 function d(e) {
     return null != e.dmSpamDetectedAt && i()(e.dmSpamDetectedAt).add(s.lp, 'hours') > i()();
 }
-function _(e) {
+function f(e) {
     return null == e ? void 0 : c(e) ? a.Hl.JOIN_RAID : a.Hl.DM_RAID;
 }
-function E(e, t) {
+function _(e, t) {
     let n = [];
     return e && n.push(a.dj.INVITES_DISABLED), t && n.push(a.dj.DMS_DISABLED), n;
 }
-function f(e, t) {
+function h(e, t) {
     let n = [];
     return !e && n.push(a.dj.INVITES_DISABLED), !t && n.push(a.dj.DMS_DISABLED), n;
 }
-function h(e) {
+function p(e) {
     return (null != e.dmsDisabledUntil && new Date(e.dmsDisabledUntil) > new Date()) || (null != e.invitesDisabledUntil && new Date(e.invitesDisabledUntil) > new Date());
 }
-function p(e) {
+function m(e) {
     return (null == e ? void 0 : e.dmsDisabledUntil) != null && new Date(e.dmsDisabledUntil) > new Date();
 }
-function I(e) {
+function g(e) {
     return (null == e ? void 0 : e.invitesDisabledUntil) != null && new Date(e.invitesDisabledUntil) > new Date();
 }
-function m(e, t) {
+function E(e, t) {
     var n;
     let r = null !== (n = e.dmsDisabledUntil) && void 0 !== n ? n : e.invitesDisabledUntil;
     if (null == r) return '';
@@ -82,19 +82,19 @@ function m(e, t) {
         a = null != e.invitesDisabledUntil;
     switch (!0) {
         case i && a:
-            return o.Z.Messages.GUILD_ANTIRAID_PAUSE_DMS_AND_JOINS_NAGBAR_MESSAGE_NEW.format({
+            return o.intl.formatToPlainString(o.t.hCZitb, {
                 guildName: t,
-                time: new Date(r).toLocaleString(o.Z.getLocale(), l)
+                time: new Date(r).toLocaleString(o.intl.currentLocale, l)
             });
         case i:
-            return o.Z.Messages.GUILD_ANTIRAID_PAUSE_DMS_NAGBAR_MESSAGE_NEW.format({
+            return o.intl.formatToPlainString(o.t.HNKxf3, {
                 guildName: t,
-                time: new Date(r).toLocaleString(o.Z.getLocale(), l)
+                time: new Date(r).toLocaleString(o.intl.currentLocale, l)
             });
         case a:
-            return o.Z.Messages.GUILD_ANTIRAID_PAUSE_JOINS_NAGBAR_MESSAGE_NEW.format({
+            return o.intl.formatToPlainString(o.t.M3iSyM, {
                 guildName: t,
-                time: new Date(r).toLocaleString(o.Z.getLocale(), l)
+                time: new Date(r).toLocaleString(o.intl.currentLocale, l)
             });
         default:
             return '';

@@ -5,23 +5,23 @@ t.d(n, {
 });
 var i = t(200651);
 t(192379);
-var a = t(442837),
-    s = t(481060),
-    l = t(904245),
-    r = t(665906),
-    o = t(314897),
+var l = t(442837),
+    r = t(481060),
+    a = t(904245),
+    o = t(665906),
+    s = t(314897),
     u = t(418476),
-    d = t(689938);
+    d = t(388032);
 function c(e, n) {
-    let t = (0, a.e7)([o.default], () => o.default.getId()),
-        c = (0, r.$R)(n),
-        E = (0, r.Gu)(n);
-    return (0, u.Z)(e, t) && c && !E
-        ? (0, i.jsx)(s.MenuItem, {
+    let t = (0, l.e7)([s.default], () => s.default.getId()),
+        c = (0, o.$R)(n),
+        g = (0, o.Gu)(n);
+    return (0, u.Z)(e, t) && c && !g
+        ? (0, i.jsx)(r.MenuItem, {
               id: 'edit',
-              label: d.Z.Messages.EDIT_MESSAGE,
-              action: () => l.Z.startEditMessage(n.id, e.id, e.content),
-              icon: s.PencilIcon
+              label: d.intl.string(d.t.fsBWmZ),
+              action: () => a.Z.startEditMessage(n.id, e.id, e.content),
+              icon: r.PencilIcon
           })
         : null;
 }

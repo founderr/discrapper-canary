@@ -5,7 +5,7 @@ n.d(t, {
 });
 var r = n(381129),
     i = n(981631),
-    a = n(689938);
+    a = n(388032);
 let s = [
     {
         check(e, t, n) {
@@ -14,15 +14,15 @@ let s = [
             if (null == i || !r.Z.shouldShowEveryoneGuard(i, t)) return !1;
             let s = r.Z.everyoneMemberCount(i, t),
                 o = Math.pow(10, Math.floor(Math.log10(s))),
-                l = a.Z.Messages.EVERYONE_POPOUT_BODY;
+                l = a.t['47E5R0'];
             return (
-                t.isForumPost() ? (l = a.Z.Messages.EVERYONE_POPOUT_BODY_FORUM_POST) : t.isThread() && (l = a.Z.Messages.EVERYONE_POPOUT_BODY_THREAD),
+                t.isForumPost() ? (l = a.t.sYW2c3) : t.isThread() && (l = a.t['2YaiQ0']),
                 {
-                    body: l.format({
+                    body: a.intl.formatToPlainString(l, {
                         role: i,
                         count: (Math.trunc(s / o) * o).toLocaleString()
                     }),
-                    footer: a.Z.Messages.EVERYONE_POPOUT_FOOTER
+                    footer: a.intl.string(a.t.mVyrtr)
                 }
             );
         },
@@ -33,7 +33,7 @@ let s = [
         }
     },
     {
-        check: (e) => !!i.Jn9.test(e) && { body: a.Z.Messages.TOKEN_POPOUT_BODY },
+        check: (e) => !!i.Jn9.test(e) && { body: a.intl.string(a.t.sTwS1d) },
         analyticsType: 'API Token Warning'
     }
 ];

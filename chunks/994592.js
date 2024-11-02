@@ -1,12 +1,12 @@
 n.d(t, {
     j0: function () {
-        return f;
+        return h;
     },
     mY: function () {
-        return E;
+        return _;
     },
     on: function () {
-        return _;
+        return f;
     }
 }),
     n(47120);
@@ -26,17 +26,17 @@ function d(e) {
         s = r.hasFeature(c.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
     return !!((i && s) || n.isViewingServerShop(e)) || !1;
 }
-function _(e, t) {
+function f(e, t) {
     return !!d(e) || (0, u.U)(e, t);
 }
-function E(e) {
+function _(e) {
     let t = (0, u.Z)(e),
         n = (0, r.e7)([l.Z, o.Z], () => d(e, [l.Z, o.Z]), [e]),
         { shouldHideGuildPurchaseEntryPoints: i } = (0, s.uP)(e);
     return !i && (n || t);
 }
-function f(e) {
-    let t = E(e),
+function h(e) {
+    let t = _(e),
         n = (0, i.RF)(e, 'useShowRoleSubscriptionsInChannelList');
     return t && !n;
 }

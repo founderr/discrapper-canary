@@ -1,73 +1,73 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(990547),
-    s = n(481060),
-    r = n(313201),
-    l = n(703656),
+var r = n(990547),
+    l = n(481060),
+    a = n(313201),
+    s = n(703656),
     o = n(63063),
     c = n(758119),
     d = n(981631),
-    u = n(689938),
-    _ = n(83335);
-function E() {
-    (0, c.qV)(), (0, l.uL)(d.Z5c.LOGIN);
+    u = n(388032),
+    h = n(83335);
+function m() {
+    (0, c.qV)(), (0, s.uL)(d.Z5c.LOGIN);
 }
-function h(e) {
-    let { underageMessage: t, transitionState: l } = e,
-        c = (0, r.Dt)();
-    return (0, i.jsxs)(s.ModalRoot, {
-        transitionState: l,
-        size: s.ModalSize.SMALL,
+function p(e) {
+    let { underageMessage: t, transitionState: s } = e,
+        c = (0, a.Dt)();
+    return (0, i.jsxs)(l.ModalRoot, {
+        transitionState: s,
+        size: l.ModalSize.SMALL,
         'aria-labelledby': c,
         impression: {
-            impressionName: a.ImpressionNames.USER_AGE_GATE_UNDERAGE,
+            impressionName: r.ImpressionNames.USER_AGE_GATE_UNDERAGE,
             impressionProperties: { existing_user: !0 }
         },
         children: [
-            (0, i.jsx)(s.ModalContent, {
+            (0, i.jsx)(l.ModalContent, {
                 children: (0, i.jsxs)('div', {
-                    className: _.container,
+                    className: h.container,
                     children: [
                         (0, i.jsx)('img', {
                             alt: '',
                             src: n(231443),
-                            className: _.img
+                            className: h.img
                         }),
-                        (0, i.jsx)(s.Heading, {
+                        (0, i.jsx)(l.Heading, {
                             variant: 'heading-xl/semibold',
-                            className: _.title,
+                            className: h.title,
                             id: c,
-                            children: u.Z.Messages.AGE_GATE_UNDERAGE_EXISTING_HEADER
+                            children: u.intl.string(u.t['NR/zrK'])
                         }),
-                        (0, i.jsx)(s.Text, {
+                        (0, i.jsx)(l.Text, {
                             color: 'header-secondary',
-                            className: _.subtitle,
+                            className: h.subtitle,
                             variant: 'text-sm/normal',
-                            children: u.Z.Messages.AGE_GATE_UNDERAGE_BODY.format({
-                                underageMessage: null != t ? t : u.Z.Messages.AGE_GATE_UNDERAGE_BODY_DEFAULT_REG_MESSAGE,
+                            children: u.intl.format(u.t.b0QzXV, {
+                                underageMessage: null != t ? t : u.intl.string(u.t.WqEH4O),
                                 helpURL: o.Z.getArticleURL(d.BhN.AGE_GATE)
                             })
                         }),
-                        (0, i.jsx)(s.Text, {
+                        (0, i.jsx)(l.Text, {
                             color: 'header-secondary',
-                            className: _.subtitle,
+                            className: h.subtitle,
                             variant: 'text-sm/normal',
-                            children: u.Z.Messages.AGE_GATE_UNDERAGE_EXISTING_BODY_DELETION_WITH_DAYS.format({ days: 30 })
+                            children: u.intl.format(u.t['3axQdH'], { days: 30 })
                         })
                     ]
                 })
             }),
-            (0, i.jsx)(s.ModalFooter, {
-                children: (0, i.jsx)(s.Button, {
-                    size: s.ButtonSizes.SMALL,
+            (0, i.jsx)(l.ModalFooter, {
+                children: (0, i.jsx)(l.Button, {
+                    size: l.ButtonSizes.SMALL,
                     fullWidth: !0,
-                    onClick: E,
-                    children: u.Z.Messages.AGE_GATE_UNDERAGE_BACK_TO_LOGIN
+                    onClick: m,
+                    children: u.intl.string(u.t.szzQ6O)
                 })
             })
         ]

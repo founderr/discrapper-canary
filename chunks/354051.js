@@ -1,60 +1,60 @@
 n(47120);
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(442837),
-    i = n(481060),
-    r = n(496675),
-    l = n(434404),
+var r = n(442837),
+    l = n(481060),
+    s = n(496675),
+    a = n(434404),
     o = n(845377),
     c = n(981631),
-    d = n(689938),
+    d = n(388032),
     u = n(495994);
 t.Z = (e) => {
     let { guild: t } = e,
-        n = (0, a.e7)([r.Z], () => r.Z.can(c.Plq.ADMINISTRATOR, t), [t]),
-        _ = t.hasFeature(c.oNc.DISCOVERABLE),
-        I = () => {
+        n = (0, r.e7)([s.Z], () => s.Z.can(c.Plq.ADMINISTRATOR, t), [t]),
+        m = t.hasFeature(c.oNc.DISCOVERABLE),
+        h = () => {
             let e = new Set(t.features);
-            t.hasFeature(c.oNc.DISCOVERABLE) && e.delete(c.oNc.DISCOVERABLE), l.Z.updateGuild({ features: e });
+            t.hasFeature(c.oNc.DISCOVERABLE) && e.delete(c.oNc.DISCOVERABLE), a.Z.updateGuild({ features: e });
         };
-    return (0, s.jsxs)(i.FormSection, {
-        title: d.Z.Messages.DISCOVERY,
+    return (0, i.jsxs)(l.FormSection, {
+        title: d.intl.string(d.t.oGaVGx),
         tag: 'h2',
         children: [
-            (0, s.jsx)('div', { className: u.background }),
-            (0, s.jsxs)('div', {
+            (0, i.jsx)('div', { className: u.background }),
+            (0, i.jsxs)('div', {
                 className: u.discoverySettings,
                 children: [
-                    (0, s.jsx)('div', { className: u.image }),
-                    (0, s.jsx)(i.Heading, {
+                    (0, i.jsx)('div', { className: u.image }),
+                    (0, i.jsx)(l.Heading, {
                         className: u.header,
                         variant: 'heading-xl/semibold',
-                        children: d.Z.Messages.GUILD_SETTINGS_DISCOVERY_DISQUALIFIED
+                        children: d.intl.string(d.t.rSBQU1)
                     }),
-                    (0, s.jsx)(i.Text, {
+                    (0, i.jsx)(l.Text, {
                         className: u.description,
                         variant: 'text-md/normal',
-                        children: d.Z.Messages.GUILD_SETTINGS_DISCOVERY_DISQUALIFIED_DESCRIPTION.format()
+                        children: d.intl.format(d.t['6+lwSU'], {})
                     }),
-                    (0, s.jsx)(o.Z, {
+                    (0, i.jsx)(o.Z, {
                         className: u.checklist,
                         guild: t,
                         guildId: t.id,
                         noHeader: !0,
                         failedItemsOnly: !0
                     }),
-                    _ &&
-                        (0, s.jsx)(i.Tooltip, {
-                            text: n ? null : d.Z.Messages.GUILD_SETTINGS_DISCOVERY_ADMIN_ONLY,
+                    m &&
+                        (0, i.jsx)(l.Tooltip, {
+                            text: n ? null : d.intl.string(d.t['5VbUBw']),
                             children: (e) =>
-                                (0, s.jsx)(i.Button, {
-                                    size: i.Button.Sizes.SMALL,
-                                    onClick: I,
-                                    color: i.Button.Colors.PRIMARY,
+                                (0, i.jsx)(l.Button, {
+                                    size: l.Button.Sizes.SMALL,
+                                    onClick: h,
+                                    color: l.Button.Colors.PRIMARY,
                                     className: u.disableDiscoveryButton,
                                     disabled: !n,
                                     ...e,
-                                    children: d.Z.Messages.GUILD_SETTINGS_DISABLE_DISCOVERABLE_PERMINENTLY
+                                    children: d.intl.string(d.t.RPfFQk)
                                 })
                         })
                 ]

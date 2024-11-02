@@ -8,36 +8,36 @@ var r = n(628735),
 let u = /(?:^|\.)(?:discordapp|discord|discordmerch)\.com$/i,
     c = i().v4().source,
     d = RegExp('(?:'.concat('(?:(?:[a-z]+:)?//)', '|www\\.)').concat('(?:\\S+(?::\\S*)?@)?', '(?:localhost|').concat(c, '|').concat('(?:[a-z\\u00a1-\\uffff0-9-_]+\\.)+').concat('(?:(?:[a-z\\u00a1-\\uffff]{2,}))', ')').concat('(?::\\d{2,5})?').concat('(?:[/?#][^\\s"]*)?'), 'ig'),
-    _ = new Set([window.GLOBAL_ENV.CDN_HOST, window.GLOBAL_ENV.INVITE_HOST, window.GLOBAL_ENV.GIFT_CODE_HOST, window.GLOBAL_ENV.GUILD_TEMPLATE_HOST]);
-function E(e) {
+    f = new Set([window.GLOBAL_ENV.CDN_HOST, window.GLOBAL_ENV.INVITE_HOST, window.GLOBAL_ENV.GIFT_CODE_HOST, window.GLOBAL_ENV.GUILD_TEMPLATE_HOST]);
+function _(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (null == e) return !1;
-    return u.test(e) || (n && ((t = e), _.has(t.toLowerCase())));
-}
-function f(e) {
-    return null != e && 'discord:' === e;
+    return u.test(e) || (n && ((t = e), f.has(t.toLowerCase())));
 }
 function h(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return null != e && E(o.parse(e).hostname, t);
+    return null != e && 'discord:' === e;
 }
 function p(e) {
-    return null != e && f(o.parse(e).protocol);
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    return null != e && _(o.parse(e).hostname, t);
+}
+function m(e) {
+    return null != e && h(o.parse(e).protocol);
 }
 t.Z = {
     URL_REGEX: d,
-    isDiscordHostname: E,
+    isDiscordHostname: _,
     isDiscordLocalhost: function (e, t) {
         return null != e && null != t && (window.location.host === e || !1);
     },
-    isDiscordProtocol: f,
-    isDiscordUrl: h,
-    isDiscordUri: p,
+    isDiscordProtocol: h,
+    isDiscordUrl: p,
+    isDiscordUri: m,
     isDiscordCdnUrl: function (e) {
         return null != e && o.parse(e).hostname === window.GLOBAL_ENV.CDN_HOST;
     },
-    isDiscordUrlOrUri: (e) => h(e) || p(e),
+    isDiscordUrlOrUri: (e) => p(e) || m(e),
     isAppRoute: (e) => {
         let t = e.toLowerCase();
         return t.startsWith('/channels/') || t.startsWith(l.Z5c.APPLICATION_STORE) || t.startsWith(l.Z5c.APPLICATION_LIBRARY) || t.startsWith(l.Z5c.MESSAGE_REQUESTS) || t.startsWith(l.Z5c.FAMILY_CENTER) || t.startsWith(l.Z5c.ACTIVITIES) || t.startsWith(l.Z5c.COLLECTIBLES_SHOP) || t.startsWith(l.Z5c.ACTIVITY);

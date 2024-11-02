@@ -1,48 +1,48 @@
 n.r(l);
 var t = n(200651);
 n(192379);
-var r = n(481060),
-    i = n(239091),
+var i = n(481060),
+    r = n(239091),
     o = n(410575),
-    s = n(108843),
-    u = n(100527),
-    d = n(299206),
+    u = n(108843),
+    d = n(100527),
+    s = n(299206),
     a = n(88966),
     c = n(725119),
     Z = n(931617),
     f = n(981631),
-    M = n(689938);
-l.default = (0, s.Z)(
+    h = n(388032);
+l.default = (0, u.Z)(
     function (e) {
-        let { user: l, guildId: n, analyticsContext: s, onSelect: u } = e,
-            h = (0, c.Z)({
+        let { user: l, guildId: n, analyticsContext: u, onSelect: d } = e,
+            g = (0, c.Z)({
                 userId: l.id,
                 guildId: n
             }),
-            R = (0, Z.Z)(l.id, n),
-            _ = (0, d.Z)({
+            p = (0, Z.Z)(l.id, n),
+            v = (0, s.Z)({
                 id: l.id,
-                label: M.Z.Messages.COPY_ID_USER
+                label: h.intl.string(h.t['/AXYnJ'])
             }),
-            g = (0, a.Z)(l.id),
-            E = l.isNonUserBot();
+            x = (0, a.Z)(l.id),
+            M = l.isNonUserBot();
         return (0, t.jsx)(o.Z, {
-            context: s,
+            context: u,
             object: f.qAy.CONTEXT_MENU,
-            children: (0, t.jsxs)(r.Menu, {
+            children: (0, t.jsxs)(i.Menu, {
                 navId: 'user-context',
-                onClose: i.Zy,
-                'aria-label': M.Z.Messages.USER_ACTIONS_MENU_LABEL,
-                onSelect: u,
+                onClose: r.Zy,
+                'aria-label': h.intl.string(h.t.liqwPD),
+                onSelect: d,
                 children: [
-                    (0, t.jsxs)(r.MenuGroup, {
-                        children: [!E && h, !E && g]
+                    (0, t.jsxs)(i.MenuGroup, {
+                        children: [!M && g, !M && x]
                     }),
-                    (0, t.jsx)(r.MenuGroup, { children: !E && R }),
-                    (0, t.jsx)(r.MenuGroup, { children: _ })
+                    (0, t.jsx)(i.MenuGroup, { children: !M && p }),
+                    (0, t.jsx)(i.MenuGroup, { children: v })
                 ]
             })
         });
     },
-    [u.Z.CONTEXT_MENU, u.Z.AUDIT_LOG_USER_MENU]
+    [d.Z.CONTEXT_MENU, d.Z.AUDIT_LOG_USER_MENU]
 );

@@ -9,8 +9,8 @@ var i = n(481060),
     u = n(374023),
     c = n(344532),
     d = n(981631),
-    _ = n(231338);
-class E extends s.Z {
+    f = n(231338);
+class _ extends s.Z {
     handleConnectionOpen() {
         let e = o.default.getCurrentUser();
         if (null == e || u.s.isDisallowPopupsSet()) return;
@@ -34,7 +34,7 @@ class E extends s.Z {
                   },
                   {
                       modalKey: 'LOGIN_REQUIRED_ACTIONS_MODAL_KEY',
-                      onCloseRequest: _.Vq,
+                      onCloseRequest: f.Vq,
                       instant: !0
                   }
               )
@@ -56,4 +56,4 @@ class E extends s.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new E();
+t.Z = new _();

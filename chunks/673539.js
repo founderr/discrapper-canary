@@ -5,17 +5,17 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(442837),
-    a = n(481060),
-    l = n(979696),
-    r = n(963876),
-    o = n(689938);
+var l = n(442837),
+    r = n(481060),
+    a = n(979696),
+    s = n(963876),
+    o = n(388032);
 function c(e) {
-    let t = (0, s.e7)([l.Z], () => l.Z.getToastsEnabled(e));
-    return (0, i.jsx)(a.MenuCheckboxItem, {
+    let t = (0, l.e7)([a.Z], () => a.Z.getToastsEnabled(e));
+    return (0, i.jsx)(r.MenuCheckboxItem, {
         id: 'show-call-chat-toasts',
-        label: o.Z.Messages.SHOW_NEW_MESSAGE_PREVIEWS,
+        label: o.intl.string(o.t['5NL5vb']),
         checked: t,
-        action: () => r.Z.setCallChatToastsEnabled(e, !t)
+        action: () => s.Z.setCallChatToastsEnabled(e, !t)
     });
 }

@@ -15,9 +15,9 @@ function d(e) {
     return {
         react(t, n, d) {
             if (e.enableBuildOverrides && (0, o._G)(t.target)) return (0, r.jsx)(i.Fragment, { children: (0, r.jsx)(l.Z, { url: t.target }, t.target) }, d.key);
-            let _ = n(t.content, d),
-                E = 'string' == typeof t.title && 0 !== t.title.length ? t.title : (0, a.Rp)(t.content),
-                f = (null == e ? void 0 : e.mustConfirmExternalLink)
+            let f = n(t.content, d),
+                _ = 'string' == typeof t.title && 0 !== t.title.length ? t.title : (0, a.Rp)(t.content),
+                h = (null == e ? void 0 : e.mustConfirmExternalLink)
                     ? (e) => (
                           null == e || e.stopPropagation(),
                           null == e || e.preventDefault(),
@@ -32,27 +32,27 @@ function d(e) {
                     : void 0;
             if (d.previewLinkTarget && !(0, c.r)(t)) {
                 let e = '\n\n('.concat(t.target, ')');
-                E.length + e.length > 1024 && ((e = '...' + e), (E = (E = E.substr(0, 1024 - e.length)).trimEnd())), (E += e);
+                _.length + e.length > 1024 && ((e = '...' + e), (_ = (_ = _.substr(0, 1024 - e.length)).trimEnd())), (_ += e);
             }
             return d.noStyleAndInteraction
                 ? (0, r.jsx)(
                       'span',
                       {
-                          title: E,
-                          children: _
+                          title: _,
+                          children: f
                       },
                       d.key
                   )
                 : (0, r.jsx)(
                       s.Z,
                       {
-                          title: E,
+                          title: _,
                           href: t.target,
                           trusted: () => (0, c.r)(t),
-                          onClick: f,
+                          onClick: h,
                           messageId: d.messageId,
                           channelId: d.channelId,
-                          children: _
+                          children: f
                       },
                       d.key
                   );

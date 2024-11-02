@@ -12,8 +12,8 @@ var r = n(200651),
     u = n(96175);
 function c(e) {
     let { children: t, size: n = 16, className: a, flowerStarClassName: c, ...d } = e,
-        _ = i.Children.only(t),
-        E = (0, o.useRedesignIconContext)().enabled && !e.allowFullSizedIcon;
+        f = i.Children.only(t),
+        _ = (0, o.useRedesignIconContext)().enabled && !e.allowFullSizedIcon;
     return (0, r.jsxs)('div', {
         className: s()(u.flowerStarContainer, a),
         style: {
@@ -26,8 +26,8 @@ function c(e) {
                 className: s()(c, u.flowerStar)
             }),
             (0, r.jsx)('div', {
-                className: s()(u.childContainer, { [u.redesignIconChildContainer]: E }),
-                children: _
+                className: s()(u.childContainer, { [u.redesignIconChildContainer]: _ }),
+                children: f
             })
         ]
     });

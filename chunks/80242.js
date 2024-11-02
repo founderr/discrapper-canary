@@ -4,33 +4,33 @@ n.d(t, {
     }
 });
 var i = n(192379),
-    a = n(970606),
-    s = n(41152),
-    r = n(116175),
-    l = n(308083);
-let o = [l.Wy.GAMES, l.Wy.CUSTOMIZE_TAG_BADGE, l.IS.CUSTOMIZE_DISCOVERY, l.IS.THANK_YOU_END];
+    r = n(970606),
+    l = n(41152),
+    a = n(116175),
+    s = n(308083);
+let o = [s.Wy.GAMES, s.Wy.CUSTOMIZE_TAG_BADGE, s.IS.CUSTOMIZE_DISCOVERY, s.IS.THANK_YOU_END];
 function c(e) {
     let { guildId: t, progress: n, inSettings: c, updateCurrentStep: d } = e,
-        { currentStep: u, gameApplicationIds: _, tag: E } = n,
-        h = i.useCallback(
+        { currentStep: u, gameApplicationIds: h, tag: m } = n,
+        p = i.useCallback(
             (e) => {
                 switch (e) {
-                    case l.Wy.GAMES:
-                        (0, a.Gx)({
+                    case s.Wy.GAMES:
+                        (0, r.Gx)({
                             guildId: t,
-                            signupPage: (0, s.F)(e),
-                            actionType: a.eI.CHOOSE_GAME_IDS,
+                            signupPage: (0, l.F)(e),
+                            actionType: r.eI.CHOOSE_GAME_IDS,
                             gameApplicationIds: Array.from(n.gameApplicationIds),
                             inSettings: c
                         });
                         break;
-                    case l.Wy.CUSTOMIZE_TAG_BADGE:
-                        (0, a.Gx)({
+                    case s.Wy.CUSTOMIZE_TAG_BADGE:
+                        (0, r.Gx)({
                             guildId: t,
-                            signupPage: (0, s.F)(e),
-                            actionType: a.eI.UPDATE_GUILD_IDENTITY,
+                            signupPage: (0, l.F)(e),
+                            actionType: r.eI.UPDATE_GUILD_IDENTITY,
                             guildTag: n.tag,
-                            badgeName: (0, r.VF)(n.badgeKind),
+                            badgeName: (0, a.VF)(n.badgeKind),
                             badgePrimaryColor: n.badgePrimaryColor,
                             badgeSecondaryColor: n.badgeSecondaryColor,
                             inSettings: c
@@ -42,41 +42,41 @@ function c(e) {
             },
             [t, n, c]
         ),
-        m = i.useCallback(() => {
+        g = i.useCallback(() => {
             let e = o.indexOf(u);
             if (-1 === e) {
-                d(l.Wy.GAMES);
+                d(s.Wy.GAMES);
                 return;
             }
             if (e === o.length - 1) {
-                d(l.IS.THANK_YOU_END + 1);
+                d(s.IS.THANK_YOU_END + 1);
                 return;
             }
             let t = o[e + 1];
-            h(u), d(t);
-        }, [u, h, d]),
-        I = i.useCallback(() => {
+            p(u), d(t);
+        }, [u, p, d]),
+        f = i.useCallback(() => {
             let e = o.indexOf(u);
             if (-1 === e || 0 === e) {
-                d(l.Wy.GAMES);
+                d(s.Wy.GAMES);
                 return;
             }
             d(o[e - 1]);
         }, [u, d]),
-        p = i.useMemo(() => {
+        _ = i.useMemo(() => {
             switch (u) {
-                case l.Wy.GAMES:
-                    return 0 === _.size;
-                case l.Wy.CUSTOMIZE_TAG_BADGE:
-                    return E.length < 2;
+                case s.Wy.GAMES:
+                    return 0 === h.size;
+                case s.Wy.CUSTOMIZE_TAG_BADGE:
+                    return m.length < 2;
                 default:
                     return !1;
             }
-        }, [u, _.size, E.length]),
-        g = i.useMemo(() => {
+        }, [u, h.size, m.length]),
+        E = i.useMemo(() => {
             switch (Number(u)) {
-                case l.Wy.GAMES:
-                case l.IS.THANK_YOU_END:
+                case s.Wy.GAMES:
+                case s.IS.THANK_YOU_END:
                     return !0;
                 default:
                     return !1;
@@ -84,11 +84,11 @@ function c(e) {
         }, [u]);
     return i.useMemo(
         () => ({
-            onNextClick: m,
-            onBackClick: I,
-            isNextDisabled: p,
-            isBackDisabled: g
+            onNextClick: g,
+            onBackClick: f,
+            isNextDisabled: _,
+            isBackDisabled: E
         }),
-        [g, p, I, m]
+        [E, _, f, g]
     );
 }

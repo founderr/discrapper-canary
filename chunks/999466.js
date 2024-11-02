@@ -1,55 +1,55 @@
-t.r(n),
-    t.d(n, {
+e.r(n),
+    e.d(n, {
         default: function () {
-            return I;
+            return f;
         }
     });
-var s = t(200651);
-t(192379);
-var a = t(442837),
-    u = t(481060),
-    l = t(239091),
-    c = t(547972),
-    i = t(435064),
-    r = t(621781),
-    o = t(39604),
-    S = t(332325),
-    d = t(689938);
-function I(e) {
-    let { onSelect: n } = e,
-        { clipsLength: t } = (0, a.cj)([i.Z], () => i.Z.getSettings()),
-        I = (0, r.Z)();
-    return (0, s.jsxs)(u.Menu, {
+var i = e(200651);
+e(192379);
+var l = e(442837),
+    a = e(481060),
+    r = e(239091),
+    u = e(547972),
+    o = e(435064),
+    c = e(621781),
+    s = e(39604),
+    d = e(332325),
+    p = e(388032);
+function f(t) {
+    let { onSelect: n } = t,
+        { clipsLength: e } = (0, l.cj)([o.Z], () => o.Z.getSettings()),
+        f = (0, c.Z)();
+    return (0, i.jsxs)(a.Menu, {
         navId: 'clips-context',
-        'aria-label': d.Z.Messages.CLIPS_SETTINGS,
-        onClose: l.Zy,
+        'aria-label': p.intl.string(p.t.J1hsY2),
+        onClose: r.Zy,
         onSelect: n,
         children: [
-            (0, s.jsx)(u.MenuGroup, {
-                children: (0, s.jsx)(u.MenuItem, {
+            (0, i.jsx)(a.MenuGroup, {
+                children: (0, i.jsx)(a.MenuItem, {
                     id: 'clips-duration',
-                    label: d.Z.Messages.CLIPS_SETTINGS_LENGTH,
-                    children: I.map((e) => {
-                        let { value: n, label: a } = e;
-                        return (0, s.jsx)(
-                            u.MenuRadioItem,
+                    label: p.intl.string(p.t.OgfUio),
+                    children: f.map((t) => {
+                        let { value: n, label: l } = t;
+                        return (0, i.jsx)(
+                            a.MenuRadioItem,
                             {
                                 id: 'clips-duration-'.concat(n),
                                 group: 'clips-duration',
-                                label: a,
-                                action: () => (0, o.eU)(n),
-                                checked: n === t
+                                label: l,
+                                action: () => (0, s.eU)(n),
+                                checked: n === e
                             },
                             n
                         );
                     })
                 })
             }),
-            (0, s.jsx)(u.MenuGroup, {
-                children: (0, s.jsx)(u.MenuItem, {
+            (0, i.jsx)(a.MenuGroup, {
+                children: (0, i.jsx)(a.MenuItem, {
                     id: 'clips-settings',
-                    label: d.Z.Messages.CLIPS_SETTINGS,
-                    action: () => (0, c.Z)(S.Z.CLIPS)
+                    label: p.intl.string(p.t.J1hsY2),
+                    action: () => (0, u.Z)(d.Z.CLIPS)
                 })
             })
         ]

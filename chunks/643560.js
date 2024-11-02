@@ -5,45 +5,45 @@ n.r(t),
         }
     });
 var i = n(200651),
-    s = n(192379),
-    a = n(481060),
-    l = n(239091),
-    r = n(299206),
+    l = n(192379),
+    r = n(481060),
+    a = n(239091),
+    s = n(299206),
     o = n(726521),
     c = n(99325),
     u = n(683818),
-    d = n(689938);
+    d = n(388032);
 function h(e) {
     let { entry: t, onSelect: h, closePopout: m, hideEditButton: p = !1 } = e,
-        { isEntryAdmin: _, canEdit: f, canRemove: E } = (0, u.Z)(t),
-        g = (0, r.Z)({
+        { isEntryAdmin: f, canEdit: g, canRemove: C } = (0, u.Z)(t),
+        x = (0, s.Z)({
             id: t.guildId,
-            label: d.Z.Messages.COPY_ID_GUILD,
+            label: d.intl.string(d.t['94lLDw']),
             onSuccess: m
         });
-    s.useEffect(() => {
-        !f && !E && null == g && (0, l.Zy)();
+    l.useEffect(() => {
+        !g && !C && null == x && (0, a.Zy)();
     });
-    let C = () => {
+    let v = () => {
         c.kx(t.channelId, t.guildId);
     };
-    function I() {
-        (0, l.Zy)(), null == m || m();
+    function _() {
+        (0, a.Zy)(), null == m || m();
     }
-    return (0, i.jsxs)(a.Menu, {
+    return (0, i.jsxs)(r.Menu, {
         navId: 'guild-entry-context',
-        onClose: I,
-        'aria-label': d.Z.Messages.GUILD_ACTIONS_MENU_LABEL,
+        onClose: _,
+        'aria-label': d.intl.string(d.t.HpQykZ),
         onSelect: h,
         children: [
-            (0, i.jsxs)(a.MenuGroup, {
+            (0, i.jsxs)(r.MenuGroup, {
                 children: [
-                    f && !p
-                        ? (0, i.jsx)(a.MenuItem, {
+                    g && !p
+                        ? (0, i.jsx)(r.MenuItem, {
                               id: 'update-entry',
-                              label: d.Z.Messages.HUB_ENTRY_UPDATE,
+                              label: d.intl.string(d.t.XnuOvL),
                               action: function () {
-                                  (0, a.openModalLazy)(async () => {
+                                  (0, r.openModalLazy)(async () => {
                                       let { default: e } = await n.e('34191').then(n.bind(n, 303647));
                                       return (n) =>
                                           (0, i.jsx)(e, {
@@ -51,49 +51,49 @@ function h(e) {
                                               entry: t
                                           });
                                   }),
-                                      I();
+                                      _();
                               }
                           })
                         : null,
-                    E
-                        ? (0, i.jsx)(a.MenuItem, {
+                    C
+                        ? (0, i.jsx)(r.MenuItem, {
                               id: 'remove-from-hub',
-                              label: d.Z.Messages.HUB_ENTRY_REMOVE,
+                              label: d.intl.string(d.t.KUxYWF),
                               action: function () {
-                                  (0, a.openModal)((e) =>
-                                      (0, i.jsx)(a.ConfirmModal, {
-                                          header: d.Z.Messages.HUB_ENTRY_REMOVE,
-                                          confirmText: d.Z.Messages.REMOVE,
-                                          cancelText: d.Z.Messages.CANCEL,
-                                          onConfirm: C,
+                                  (0, r.openModal)((e) =>
+                                      (0, i.jsx)(r.ConfirmModal, {
+                                          header: d.intl.string(d.t.KUxYWF),
+                                          confirmText: d.intl.string(d.t.N86XcH),
+                                          cancelText: d.intl.string(d.t['ETE/oK']),
+                                          onConfirm: v,
                                           ...e,
-                                          children: (0, i.jsx)(a.Text, {
+                                          children: (0, i.jsx)(r.Text, {
                                               variant: 'text-md/normal',
-                                              children: d.Z.Messages.HUB_ENTRY_REMOVE_BODY.format({ guildName: t.name })
+                                              children: d.intl.format(d.t['/5y0ub'], { guildName: t.name })
                                           })
                                       })
                                   ),
-                                      I();
+                                      _();
                               },
                               color: 'danger'
                           })
                         : null,
-                    _
+                    f
                         ? null
                         : (0, i.jsx)(i.Fragment, {
-                              children: (0, i.jsx)(a.MenuItem, {
+                              children: (0, i.jsx)(r.MenuItem, {
                                   id: 'report-server-listing',
-                                  label: d.Z.Messages.REPORT_SERVER_NO_NAME,
+                                  label: d.intl.string(d.t.Aen9en),
                                   action: function () {
-                                      null != t && ((0, o.sq)(t), I());
+                                      null != t && ((0, o.sq)(t), _());
                                   },
-                                  icon: a.FlagIcon,
+                                  icon: r.FlagIcon,
                                   color: 'danger'
                               })
                           })
                 ]
             }),
-            (0, i.jsx)(a.MenuGroup, { children: g })
+            (0, i.jsx)(r.MenuGroup, { children: x })
         ]
     });
 }

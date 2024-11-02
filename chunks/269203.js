@@ -1,52 +1,52 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return f;
     }
 });
 var i = n(200651);
 n(192379);
-var s = n(442837),
-    a = n(481060),
-    l = n(805519),
-    r = n(565138),
+var l = n(442837),
+    r = n(481060),
+    a = n(805519),
+    s = n(565138),
     o = n(246364),
     c = n(705563),
     u = n(594174),
     d = n(967128),
-    h = n(689938),
+    h = n(388032),
     m = n(527094);
 function p(e) {
     var t;
-    let { joinRequest: n, guild: l } = e,
-        c = (0, s.e7)([u.default], () => u.default.getUser(n.userId));
+    let { joinRequest: n, guild: a } = e,
+        c = (0, l.e7)([u.default], () => u.default.getUser(n.userId));
     return (0, i.jsxs)('div', {
         className: m.summaryContainer,
         children: [
             (0, i.jsxs)('div', {
                 className: m.summaryHeader,
                 children: [
-                    null != l &&
+                    null != a &&
                         (0, i.jsxs)('div', {
                             className: m.summaryHeaderClanInfo,
                             children: [
-                                (0, i.jsx)(r.Z, {
-                                    guild: l,
+                                (0, i.jsx)(s.Z, {
+                                    guild: a,
                                     active: !0,
-                                    size: r.Z.Sizes.SMOL,
+                                    size: s.Z.Sizes.SMOL,
                                     className: m.guildIcon
                                 }),
-                                (0, i.jsx)(a.Heading, {
+                                (0, i.jsx)(r.Heading, {
                                     variant: 'heading-sm/semibold',
                                     color: 'header-primary',
-                                    children: l.name
+                                    children: a.name
                                 })
                             ]
                         }),
                     null != c &&
-                        (0, i.jsx)(a.Heading, {
+                        (0, i.jsx)(r.Heading, {
                             variant: 'heading-xl/semibold',
                             color: 'header-primary',
-                            children: h.Z.Messages.MEMBER_VERIFICATION_USERS_APPLICATION.format({ username: c.globalName })
+                            children: h.intl.format(h.t.jDV3i4, { username: c.globalName })
                         })
                 ]
             }),
@@ -62,12 +62,12 @@ function p(e) {
                                   (0, i.jsxs)('div', {
                                       className: m.formResponseContainer,
                                       children: [
-                                          (0, i.jsx)(a.Text, {
+                                          (0, i.jsx)(r.Text, {
                                               variant: 'text-xs/semibold',
                                               color: 'text-muted',
                                               children: e.label
                                           }),
-                                          (0, i.jsx)(a.Text, {
+                                          (0, i.jsx)(r.Text, {
                                               variant: 'text-md/medium',
                                               color: 'text-primary',
                                               children: t
@@ -80,22 +80,22 @@ function p(e) {
         ]
     });
 }
-function _(e) {
+function f(e) {
     let { channel: t } = e,
-        { loading: n, joinRequest: s, joinRequestGuild: r } = (0, l.Z)(t.id);
+        { loading: n, joinRequest: l, joinRequestGuild: s } = (0, a.Z)(t.id);
     return (0, i.jsx)(d.ZP, {
         channelId: t.id,
         className: m.container,
         children: (0, i.jsx)(d.jz, {
             children:
-                null != s && null != s.formResponses
+                null != l && null != l.formResponses
                     ? (0, i.jsxs)('div', {
                           className: m.formContainer,
                           children: [
                               (0, i.jsx)('div', {
                                   children: (0, i.jsx)(p, {
-                                      guild: r,
-                                      joinRequest: s
+                                      guild: s,
+                                      joinRequest: l
                                   })
                               }),
                               (0, i.jsx)(c.Z, {
@@ -105,7 +105,7 @@ function _(e) {
                           ]
                       })
                     : n
-                      ? (0, i.jsx)(a.Spinner, {})
+                      ? (0, i.jsx)(r.Spinner, {})
                       : null
         })
     });

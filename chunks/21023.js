@@ -1,173 +1,173 @@
 n.d(t, {
     n: function () {
-        return N;
+        return x;
     }
 }),
     n(653041);
-var s,
-    a,
-    r = n(200651);
+var i,
+    r,
+    a = n(200651);
 n(192379);
-var i = n(481060),
+var s = n(481060),
     l = n(706454),
     o = n(74538),
     c = n(937615),
-    _ = n(734741),
-    d = n(474936),
-    E = n(981631),
-    u = n(689938),
-    T = n(515846);
-let I = (e) => {
-        let { text: t, badge: n, variant: s } = e;
-        return (0, r.jsxs)(i.Text, {
+    d = n(734741),
+    u = n(474936),
+    g = n(981631),
+    m = n(388032),
+    f = n(515846);
+let p = (e) => {
+        let { text: t, badge: n, variant: i } = e;
+        return (0, a.jsxs)(s.Text, {
             color: 'text-normal',
-            variant: null != s ? s : 'text-sm/normal',
+            variant: null != i ? i : 'text-sm/normal',
             children: [t, ' ', n]
         });
     },
-    R = (e) => {
+    _ = (e) => {
         let { text: t, variant: n } = e;
-        return (0, r.jsx)(i.Text, {
+        return (0, a.jsx)(s.Text, {
             color: 'header-primary',
             variant: null != n ? n : 'text-md/semibold',
             children: t
         });
     },
-    g = (e) => {
+    h = (e) => {
         let { includes: t } = e;
         return t
-            ? (0, r.jsxs)(r.Fragment, {
+            ? (0, a.jsxs)(a.Fragment, {
                   children: [
-                      (0, r.jsx)(i.CheckmarkLargeIcon, {
+                      (0, a.jsx)(s.CheckmarkLargeIcon, {
                           size: 'md',
                           color: 'currentColor',
-                          className: T.checkmarkIcon,
+                          className: f.checkmarkIcon,
                           'aria-hidden': !0
                       }),
-                      (0, r.jsx)(i.HiddenVisually, { children: u.Z.Messages.INCLUDED })
+                      (0, a.jsx)(s.HiddenVisually, { children: m.intl.string(m.t['tq+6t7']) })
                   ]
               })
-            : (0, r.jsxs)(r.Fragment, {
+            : (0, a.jsxs)(a.Fragment, {
                   children: [
-                      (0, r.jsx)(i.XSmallIcon, {
+                      (0, a.jsx)(s.XSmallIcon, {
                           size: 'md',
                           color: 'currentColor',
-                          className: T.closeIcon,
+                          className: f.closeIcon,
                           'aria-hidden': !0
                       }),
-                      (0, r.jsx)(i.HiddenVisually, { children: u.Z.Messages.NOT_INCLUDED })
+                      (0, a.jsx)(s.HiddenVisually, { children: m.intl.string(m.t.l4qZrq) })
                   ]
               });
     };
-((a = s || (s = {}))[(a.PRICE = 0)] = 'PRICE'), (a[(a.EMOJI = 1)] = 'EMOJI'), (a[(a.STICKER = 2)] = 'STICKER'), (a[(a.CUSTOM_APP_ICONS = 3)] = 'CUSTOM_APP_ICONS'), (a[(a.SUPER_REACTIONS = 4)] = 'SUPER_REACTIONS'), (a[(a.UPLOAD = 5)] = 'UPLOAD'), (a[(a.STREAMING = 6)] = 'STREAMING'), (a[(a.BOOSTS = 7)] = 'BOOSTS'), (a[(a.PROFILE_THEMES = 8)] = 'PROFILE_THEMES'), (a[(a.SERVER_PROFILE = 9)] = 'SERVER_PROFILE'), (a[(a.SHOP_DISCOUNTS = 10)] = 'SHOP_DISCOUNTS'), (a[(a.CLIENT_THEME = 11)] = 'CLIENT_THEME'), (a[(a.BADGE = 12)] = 'BADGE'), (a[(a.VIDEO_BACKGROUND = 13)] = 'VIDEO_BACKGROUND'), (a[(a.CUSTOM_SOUNDS_ANYWHERE = 14)] = 'CUSTOM_SOUNDS_ANYWHERE'), (a[(a.CUSTOM_ENTRY_SOUNDS = 15)] = 'CUSTOM_ENTRY_SOUNDS'), (a[(a.SERVER_LIMIT = 16)] = 'SERVER_LIMIT'), (a[(a.MESSAGE_LENGTH = 17)] = 'MESSAGE_LENGTH'), (a[(a.CUSTOMIZATION_CATEGORY = 18)] = 'CUSTOMIZATION_CATEGORY'), (a[(a.FEATURE_UPGRADES_CATEGORY = 19)] = 'FEATURE_UPGRADES_CATEGORY'), (a[(a.PERSONALIZATION_CATEGORY = 20)] = 'PERSONALIZATION_CATEGORY'), (a[(a.AVATAR_AND_BANNER = 21)] = 'AVATAR_AND_BANNER'), (a[(a.REFERRAL_PROGRAM = 22)] = 'REFERRAL_PROGRAM');
-let N = (e, t, n, s) => {
-    let a = {
+((r = i || (i = {}))[(r.PRICE = 0)] = 'PRICE'), (r[(r.EMOJI = 1)] = 'EMOJI'), (r[(r.STICKER = 2)] = 'STICKER'), (r[(r.CUSTOM_APP_ICONS = 3)] = 'CUSTOM_APP_ICONS'), (r[(r.SUPER_REACTIONS = 4)] = 'SUPER_REACTIONS'), (r[(r.UPLOAD = 5)] = 'UPLOAD'), (r[(r.STREAMING = 6)] = 'STREAMING'), (r[(r.BOOSTS = 7)] = 'BOOSTS'), (r[(r.PROFILE_THEMES = 8)] = 'PROFILE_THEMES'), (r[(r.SERVER_PROFILE = 9)] = 'SERVER_PROFILE'), (r[(r.SHOP_DISCOUNTS = 10)] = 'SHOP_DISCOUNTS'), (r[(r.CLIENT_THEME = 11)] = 'CLIENT_THEME'), (r[(r.BADGE = 12)] = 'BADGE'), (r[(r.VIDEO_BACKGROUND = 13)] = 'VIDEO_BACKGROUND'), (r[(r.CUSTOM_SOUNDS_ANYWHERE = 14)] = 'CUSTOM_SOUNDS_ANYWHERE'), (r[(r.CUSTOM_ENTRY_SOUNDS = 15)] = 'CUSTOM_ENTRY_SOUNDS'), (r[(r.SERVER_LIMIT = 16)] = 'SERVER_LIMIT'), (r[(r.MESSAGE_LENGTH = 17)] = 'MESSAGE_LENGTH'), (r[(r.CUSTOMIZATION_CATEGORY = 18)] = 'CUSTOMIZATION_CATEGORY'), (r[(r.FEATURE_UPGRADES_CATEGORY = 19)] = 'FEATURE_UPGRADES_CATEGORY'), (r[(r.PERSONALIZATION_CATEGORY = 20)] = 'PERSONALIZATION_CATEGORY'), (r[(r.AVATAR_AND_BANNER = 21)] = 'AVATAR_AND_BANNER'), (r[(r.REFERRAL_PROGRAM = 22)] = 'REFERRAL_PROGRAM');
+let x = (e, t, n, i) => {
+    let r = {
             0: {
-                label: (0, r.jsx)(I, { text: u.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_PRICE }),
-                column1: (0, r.jsx)(r.Fragment, { children: (0, r.jsx)(R, { text: o.ZP.formatPriceString(e, d.rV.MONTH) }) }),
-                column2: (0, r.jsx)(r.Fragment, { children: (0, r.jsx)(R, { text: n ? s : o.ZP.formatPriceString(t, d.rV.MONTH) }) }),
+                label: (0, a.jsx)(p, { text: m.intl.string(m.t['09yRKy']) }),
+                column1: (0, a.jsx)(a.Fragment, { children: (0, a.jsx)(_, { text: o.ZP.formatPriceString(e, u.rV.MONTH) }) }),
+                column2: (0, a.jsx)(a.Fragment, { children: (0, a.jsx)(_, { text: n ? i : o.ZP.formatPriceString(t, u.rV.MONTH) }) }),
                 withBottomBorder: !0
             },
             1: {
-                label: (0, r.jsx)(I, { text: u.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_EMOJI }),
-                column1: (0, r.jsx)(g, { includes: !0 }),
-                column2: (0, r.jsx)(g, { includes: !0 })
+                label: (0, a.jsx)(p, { text: m.intl.string(m.t.vaDeDQ) }),
+                column1: (0, a.jsx)(h, { includes: !0 }),
+                column2: (0, a.jsx)(h, { includes: !0 })
             },
             2: {
-                label: (0, r.jsx)(I, { text: u.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_STICKER_V2 }),
-                column1: (0, r.jsx)(g, { includes: !0 }),
-                column2: (0, r.jsx)(g, { includes: !0 })
+                label: (0, a.jsx)(p, { text: m.intl.string(m.t.RIRtn5) }),
+                column1: (0, a.jsx)(h, { includes: !0 }),
+                column2: (0, a.jsx)(h, { includes: !0 })
             },
             3: {
-                label: (0, r.jsx)(I, { text: u.Z.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE }),
-                column1: (0, r.jsx)(g, { includes: !0 }),
-                column2: (0, r.jsx)(g, { includes: !0 })
+                label: (0, a.jsx)(p, { text: m.intl.string(m.t.OuItFh) }),
+                column1: (0, a.jsx)(h, { includes: !0 }),
+                column2: (0, a.jsx)(h, { includes: !0 })
             },
             4: {
-                label: (0, r.jsx)(I, { text: u.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SUPER_REACTIONS }),
-                column1: (0, r.jsx)(g, { includes: !0 }),
-                column2: (0, r.jsx)(g, { includes: !0 })
+                label: (0, a.jsx)(p, { text: m.intl.string(m.t['9kRJS0']) }),
+                column1: (0, a.jsx)(h, { includes: !0 }),
+                column2: (0, a.jsx)(h, { includes: !0 })
             },
             5: {
-                label: (0, r.jsx)(I, { text: u.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_UPLOAD }),
-                column1: (0, r.jsx)(R, { text: (0, o.v9)(d.p9.TIER_0) }),
-                column2: (0, r.jsx)(R, { text: (0, o.v9)(d.p9.TIER_2) })
+                label: (0, a.jsx)(p, { text: m.intl.string(m.t.zAn3dH) }),
+                column1: (0, a.jsx)(_, { text: (0, o.v9)(u.p9.TIER_0) }),
+                column2: (0, a.jsx)(_, { text: (0, o.v9)(u.p9.TIER_2) })
             },
             6: {
-                label: (0, r.jsx)(I, { text: u.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_STREAMING }),
-                column1: (0, r.jsx)(g, { includes: !1 }),
-                column2: (0, r.jsx)(R, { text: u.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_STREAMING_DETAILS })
+                label: (0, a.jsx)(p, { text: m.intl.string(m.t.VwxlMz) }),
+                column1: (0, a.jsx)(h, { includes: !1 }),
+                column2: (0, a.jsx)(_, { text: m.intl.string(m.t.XdN6KS) })
             },
             7: {
-                label: (0, r.jsx)(I, {
-                    text: u.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BOOSTS.format({
-                        numBoosts: d.cb,
-                        percentageOff: (0, c.T3)(l.default.locale, d.Rr / 100)
+                label: (0, a.jsx)(p, {
+                    text: m.intl.formatToPlainString(m.t.nyhDp6, {
+                        numBoosts: u.cb,
+                        percentageOff: (0, c.T3)(l.default.locale, u.Rr / 100)
                     })
                 }),
-                column1: (0, r.jsx)(g, { includes: !1 }),
-                column2: (0, r.jsx)(g, { includes: !0 })
+                column1: (0, a.jsx)(h, { includes: !1 }),
+                column2: (0, a.jsx)(h, { includes: !0 })
             },
             8: {
-                label: (0, r.jsx)(I, { text: u.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_PROFILE_THEMES }),
-                column1: (0, r.jsx)(g, { includes: !1 }),
-                column2: (0, r.jsx)(g, { includes: !0 })
+                label: (0, a.jsx)(p, { text: m.intl.string(m.t.tFbcuL) }),
+                column1: (0, a.jsx)(h, { includes: !1 }),
+                column2: (0, a.jsx)(h, { includes: !0 })
             },
             9: {
-                label: (0, r.jsx)(I, { text: u.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SERVER_PROFILE }),
-                column1: (0, r.jsx)(g, { includes: !1 }),
-                column2: (0, r.jsx)(g, { includes: !0 })
+                label: (0, a.jsx)(p, { text: m.intl.string(m.t['aR/zTk']) }),
+                column1: (0, a.jsx)(h, { includes: !1 }),
+                column2: (0, a.jsx)(h, { includes: !0 })
             },
             10: {
-                label: (0, r.jsx)(I, { text: u.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SHOP_DISCOUNTS_GENERIC }),
-                column1: (0, r.jsx)(g, { includes: !1 }),
-                column2: (0, r.jsx)(g, { includes: !0 })
+                label: (0, a.jsx)(p, { text: m.intl.string(m.t.IzrZHx) }),
+                column1: (0, a.jsx)(h, { includes: !1 }),
+                column2: (0, a.jsx)(h, { includes: !0 })
             },
             11: {
-                label: (0, r.jsx)(I, { text: u.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_CLIENT_THEME }),
-                column1: (0, r.jsx)(g, { includes: !1 }),
-                column2: (0, r.jsx)(g, { includes: !0 })
+                label: (0, a.jsx)(p, { text: m.intl.string(m.t['HwNg/f']) }),
+                column1: (0, a.jsx)(h, { includes: !1 }),
+                column2: (0, a.jsx)(h, { includes: !0 })
             },
             12: {
-                label: (0, r.jsx)(I, { text: u.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BADGE }),
-                column1: (0, r.jsx)(g, { includes: !0 }),
-                column2: (0, r.jsx)(g, { includes: !0 })
+                label: (0, a.jsx)(p, { text: m.intl.string(m.t['y+HHLy']) }),
+                column1: (0, a.jsx)(h, { includes: !0 }),
+                column2: (0, a.jsx)(h, { includes: !0 })
             },
             13: {
-                label: (0, r.jsx)(I, { text: u.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_VIDEO_BACKGROUND }),
-                column1: (0, r.jsx)(g, { includes: !0 }),
-                column2: (0, r.jsx)(g, { includes: !0 })
+                label: (0, a.jsx)(p, { text: m.intl.string(m.t.qQxxVV) }),
+                column1: (0, a.jsx)(h, { includes: !0 }),
+                column2: (0, a.jsx)(h, { includes: !0 })
             },
             14: {
-                label: (0, r.jsx)(I, { text: u.Z.Messages.SOUNDBOARD_MARKETING_CUSTOM_SOUNDS_ANYWHERE }),
-                column1: (0, r.jsx)(g, { includes: !1 }),
-                column2: (0, r.jsx)(g, { includes: !0 }),
+                label: (0, a.jsx)(p, { text: m.intl.string(m.t.xi0NBA) }),
+                column1: (0, a.jsx)(h, { includes: !1 }),
+                column2: (0, a.jsx)(h, { includes: !0 }),
                 withBottomBorder: !0
             },
             15: {
-                label: (0, r.jsx)(I, { text: u.Z.Messages.SOUNDBOARD_MARKETING_CUSTOM_ENTRY_SOUNDS_V2 }),
-                column1: (0, r.jsx)(g, { includes: !1 }),
-                column2: (0, r.jsx)(g, { includes: !0 })
+                label: (0, a.jsx)(p, { text: m.intl.string(m.t.MfsUHh) }),
+                column1: (0, a.jsx)(h, { includes: !1 }),
+                column2: (0, a.jsx)(h, { includes: !0 })
             },
             21: {
-                label: (0, r.jsx)(I, { text: u.Z.Messages.AVATAR_PROFILE_BANNER_MARKETING }),
-                column1: (0, r.jsx)(g, { includes: !1 }),
-                column2: (0, r.jsx)(g, { includes: !0 })
+                label: (0, a.jsx)(p, { text: m.intl.string(m.t['A+0H1d']) }),
+                column1: (0, a.jsx)(h, { includes: !1 }),
+                column2: (0, a.jsx)(h, { includes: !0 })
             },
             16: {
-                label: (0, r.jsx)(I, { text: u.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SERVER_LIMIT }),
-                column1: (0, r.jsx)(g, { includes: !1 }),
-                column2: (0, r.jsx)(g, { includes: !0 })
+                label: (0, a.jsx)(p, { text: m.intl.string(m.t['il8+nJ']) }),
+                column1: (0, a.jsx)(h, { includes: !1 }),
+                column2: (0, a.jsx)(h, { includes: !0 })
             },
             17: {
-                label: (0, r.jsx)(I, { text: u.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_MESSAGE_LENGTH.format({ maxChars: E.en1 }) }),
-                column1: (0, r.jsx)(g, { includes: !1 }),
-                column2: (0, r.jsx)(g, { includes: !0 }),
+                label: (0, a.jsx)(p, { text: m.intl.formatToPlainString(m.t['8crdzM'], { maxChars: g.en1 }) }),
+                column1: (0, a.jsx)(h, { includes: !1 }),
+                column2: (0, a.jsx)(h, { includes: !0 }),
                 withBottomBorder: !0
             },
             18: {
-                label: (0, r.jsx)(i.Heading, {
-                    className: T.__invalid_textColor,
+                label: (0, a.jsx)(s.Heading, {
+                    className: f.__invalid_textColor,
                     variant: 'display-sm',
                     children: 'Make Discord Yours'
                 }),
@@ -176,8 +176,8 @@ let N = (e, t, n, s) => {
                 withBottomBorder: !1
             },
             19: {
-                label: (0, r.jsx)(i.Heading, {
-                    className: T.__invalid_textColor,
+                label: (0, a.jsx)(s.Heading, {
+                    className: f.__invalid_textColor,
                     variant: 'display-sm',
                     children: 'Enjoy an Upgraded Discord'
                 }),
@@ -186,8 +186,8 @@ let N = (e, t, n, s) => {
                 withBottomBorder: !1
             },
             20: {
-                label: (0, r.jsx)(i.Heading, {
-                    className: T.__invalid_textColor,
+                label: (0, a.jsx)(s.Heading, {
+                    className: f.__invalid_textColor,
                     variant: 'display-sm',
                     children: 'Show Up the Way You Want'
                 }),
@@ -196,12 +196,12 @@ let N = (e, t, n, s) => {
                 withBottomBorder: !1
             },
             22: {
-                label: (0, r.jsx)(I, { text: u.Z.Messages.REFERRAL_PROGRAM_PLAN_COMPARISON_ROW }),
-                column1: (0, r.jsx)(g, { includes: !1 }),
-                column2: (0, r.jsx)(g, { includes: !0 }),
+                label: (0, a.jsx)(p, { text: m.intl.string(m.t['93xPy8']) }),
+                column1: (0, a.jsx)(h, { includes: !1 }),
+                column2: (0, a.jsx)(h, { includes: !0 }),
                 withBottomBorder: !1
             }
         },
-        N = [a[0], a[1], a[2], a[3], a[4], a[5], a[6], a[7], a[8], a[9], a[10], a[11], a[12], a[13], a[14], a[15], a[16], a[17]];
-    return (0, _.V)() && N.push(a[22]), N;
+        x = [r[0], r[1], r[2], r[3], r[4], r[5], r[6], r[7], r[8], r[9], r[10], r[11], r[12], r[13], r[14], r[15], r[16], r[17]];
+    return (0, d.V)() && x.push(r[22]), x;
 };

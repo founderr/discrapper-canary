@@ -1,9 +1,9 @@
 var i = n(544891),
-    s = n(981631);
+    l = n(981631);
 t.Z = {
     updatePrivateChannelRecipientFlags: (e, t) =>
         i.tn.patch({
-            url: s.ANM.CHANNEL_RECIPIENT_ME(e),
+            url: l.ANM.CHANNEL_RECIPIENT_ME(e),
             body: { flags: t }
         })
 };

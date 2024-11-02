@@ -1,165 +1,165 @@
-s.r(t),
-    s.d(t, {
+n.r(e),
+    n.d(e, {
         default: function () {
-            return x;
+            return b;
         }
     });
-var a = s(200651),
-    o = s(192379),
-    n = s(481060),
-    r = s(600164),
-    i = s(63063),
-    l = s(113434),
-    c = s(497505),
-    d = s(918701),
-    m = s(46140),
-    _ = s(981631),
-    u = s(689938),
-    S = s(367928),
-    E = s(708901);
-let T = (e, t) => {
-    switch (e) {
+var s = n(200651),
+    o = n(192379),
+    a = n(481060),
+    i = n(600164),
+    r = n(63063),
+    l = n(113434),
+    c = n(497505),
+    d = n(918701),
+    m = n(46140),
+    u = n(981631),
+    x = n(388032),
+    _ = n(367928),
+    j = n(708901);
+let T = (t, e) => {
+    switch (t) {
         case c.jn.QUEST_BAR:
         case c.jn.QUEST_BAR_V2:
             return !0;
         case c.jn.QUEST_HOME_DESKTOP:
-            return t;
+            return e;
         default:
             return !1;
     }
 };
-function x(e) {
-    var t;
-    let { transitionState: s, onClose: x, questContent: j, quest: g } = e,
-        f = (0, d.zK)(g, m.S7.IN_HOUSE_CONSOLE_QUEST),
-        h = (0, d.Mi)(g, c.jn.GIFT_INVENTORY_FOR_YOU),
-        C = (0, l.tP)(g),
-        U = (null === (t = g.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
-        I = T(j, h && !C && !U),
-        O = o.useMemo(
+function b(t) {
+    var e;
+    let { transitionState: n, onClose: b, questContent: g, quest: f } = t,
+        E = (0, d.zK)(f, m.S7.IN_HOUSE_CONSOLE_QUEST),
+        S = (0, d.Mi)(f, c.jn.GIFT_INVENTORY_FOR_YOU),
+        p = (0, l.tP)(f),
+        N = (null === (e = f.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null,
+        C = T(g, S && !p && !N),
+        v = o.useMemo(
             () =>
                 (0, d.Fs)({
-                    isTargetedDisclosure: I,
-                    gamePublisher: g.config.messages.gamePublisher,
-                    gameTitle: g.config.messages.gameTitle,
-                    isInHouseQuest: f
+                    isTargetedDisclosure: C,
+                    gamePublisher: f.config.messages.gamePublisher,
+                    gameTitle: f.config.messages.gameTitle,
+                    isInHouseQuest: E
                 }),
-            [g, f, I]
+            [f, E, C]
         );
-    return (0, a.jsxs)(n.ModalRoot, {
-        transitionState: s,
-        size: n.ModalSize.DYNAMIC,
-        className: S.modalRoot,
+    return (0, s.jsxs)(a.ModalRoot, {
+        transitionState: n,
+        size: a.ModalSize.DYNAMIC,
+        className: _.modalRoot,
         children: [
-            (0, a.jsxs)(n.ModalHeader, {
-                direction: r.Z.Direction.VERTICAL,
+            (0, s.jsxs)(a.ModalHeader, {
+                direction: i.Z.Direction.VERTICAL,
                 separator: !1,
-                className: S.modalHeader,
+                className: _.modalHeader,
                 children: [
-                    (0, a.jsxs)('div', {
-                        className: S.modalTop,
+                    (0, s.jsxs)('div', {
+                        className: _.modalTop,
                         children: [
-                            (0, a.jsx)('div', {
-                                className: S.iconFrame,
-                                children: (0, a.jsx)('img', {
-                                    className: S.icon,
+                            (0, s.jsx)('div', {
+                                className: _.iconFrame,
+                                children: (0, s.jsx)('img', {
+                                    className: _.icon,
                                     alt: '',
-                                    src: E
+                                    src: j
                                 })
                             }),
-                            (0, a.jsx)(n.ModalCloseButton, {
-                                className: S.closeBtn,
-                                onClick: x
+                            (0, s.jsx)(a.ModalCloseButton, {
+                                className: _.closeBtn,
+                                onClick: b
                             })
                         ]
                     }),
-                    (0, a.jsx)(n.Heading, {
+                    (0, s.jsx)(a.Heading, {
                         variant: 'heading-xl/bold',
-                        children: u.Z.Messages.QUESTS_DISCLOSURE_LABEL
+                        children: x.intl.string(x.t.GcsZKC)
                     })
                 ]
             }),
-            (0, a.jsxs)(n.ModalContent, {
-                className: S.modalContent,
+            (0, s.jsxs)(a.ModalContent, {
+                className: _.modalContent,
                 children: [
-                    (0, a.jsx)(n.Text, {
+                    (0, s.jsx)(a.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        className: S.upperBodyText,
-                        children: O
+                        className: _.upperBodyText,
+                        children: v
                     }),
-                    (0, a.jsx)(b, {
-                        quest: g,
-                        questContent: j
+                    (0, s.jsx)(h, {
+                        quest: f,
+                        questContent: g
                     }),
-                    (0, a.jsx)(n.Text, {
+                    (0, s.jsx)(a.Text, {
                         variant: 'text-xs/medium',
                         color: 'text-muted',
-                        children: u.Z.Messages.QUESTS_DISCLOSURE_LEARN_MORE.format({ privacySettingsUrl: i.Z.getArticleURL(_.BhN.QUESTS_PRIVACY_CONTROLS) })
+                        children: x.intl.format(x.t.tzq9WV, { privacySettingsUrl: r.Z.getArticleURL(u.BhN.QUESTS_PRIVACY_CONTROLS) })
                     })
                 ]
             }),
-            (0, a.jsx)(n.ModalFooter, {
-                className: S.footer,
-                children: (0, a.jsx)(n.Button, {
-                    onClick: x,
-                    children: u.Z.Messages.CLOSE
+            (0, s.jsx)(a.ModalFooter, {
+                className: _.footer,
+                children: (0, s.jsx)(a.Button, {
+                    onClick: b,
+                    children: x.intl.string(x.t.cpT0Cg)
                 })
             })
         ]
     });
 }
-function j(e) {
-    let { location: t, age: s, activity: o } = e;
-    return (0, a.jsxs)('ul', {
-        className: S.targetList,
+function g(t) {
+    let { location: e, age: n, activity: o } = t;
+    return (0, s.jsxs)('ul', {
+        className: _.targetList,
         children: [
-            t &&
-                (0, a.jsx)(g, {
-                    icon: n.GlobeEarthIcon,
-                    children: u.Z.Messages.QUESTS_DISCLOSURE_LOCATION
+            e &&
+                (0, s.jsx)(f, {
+                    icon: a.GlobeEarthIcon,
+                    children: x.intl.string(x.t.xQSdPj)
                 }),
-            s &&
-                (0, a.jsx)(g, {
-                    icon: n.UserIcon,
-                    children: u.Z.Messages.QUESTS_DISCLOSURE_AGE
+            n &&
+                (0, s.jsx)(f, {
+                    icon: a.UserIcon,
+                    children: x.intl.string(x.t.mYt7hY)
                 }),
             o &&
-                (0, a.jsx)(g, {
-                    icon: n.GameControllerIcon,
-                    children: u.Z.Messages.QUESTS_DISCLOSURE_ACTIVITY
+                (0, s.jsx)(f, {
+                    icon: a.GameControllerIcon,
+                    children: x.intl.string(x.t.XAsWxc)
                 })
         ]
     });
 }
-function b(e) {
-    var t;
-    let { questContent: s, quest: o } = e,
-        n = (0, d.Mi)(o, c.jn.GIFT_INVENTORY_FOR_YOU),
-        r = (0, l.tP)(o),
-        i = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null;
-    return s !== c.jn.QUEST_BAR && s !== c.jn.QUEST_BAR_V2 && (s !== c.jn.QUEST_HOME_DESKTOP || !n || r || i)
-        ? s === c.jn.ACTIVITY_PANEL || s === c.jn.QUESTS_EMBED || s === c.jn.QUEST_LIVE_STREAM
-            ? (0, a.jsx)(j, { activity: !0 })
+function h(t) {
+    var e;
+    let { questContent: n, quest: o } = t,
+        a = (0, d.Mi)(o, c.jn.GIFT_INVENTORY_FOR_YOU),
+        i = (0, l.tP)(o),
+        r = (null === (e = o.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null;
+    return n !== c.jn.QUEST_BAR && n !== c.jn.QUEST_BAR_V2 && (n !== c.jn.QUEST_HOME_DESKTOP || !a || i || r)
+        ? n === c.jn.ACTIVITY_PANEL || n === c.jn.QUESTS_EMBED || n === c.jn.QUEST_LIVE_STREAM
+            ? (0, s.jsx)(g, { activity: !0 })
             : null
-        : (0, a.jsx)(j, {
+        : (0, s.jsx)(g, {
               location: !0,
               age: !0,
               activity: !0
           });
 }
-function g(e) {
-    let { icon: t, children: s } = e;
-    return (0, a.jsxs)(n.Text, {
+function f(t) {
+    let { icon: e, children: n } = t;
+    return (0, s.jsxs)(a.Text, {
         variant: 'text-sm/medium',
         tag: 'li',
-        className: S.targetItem,
+        className: _.targetItem,
         children: [
-            (0, a.jsx)(t, {
+            (0, s.jsx)(e, {
                 size: 'xs',
                 color: 'currentColor'
             }),
-            s
+            n
         ]
     });
 }

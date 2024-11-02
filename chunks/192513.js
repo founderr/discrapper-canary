@@ -1,37 +1,37 @@
 var i,
-    a,
-    s,
     r,
-    l = n(442837),
+    l,
+    a,
+    s = n(442837),
     o = n(570140),
     c = n(984933),
     d = n(594174),
     u = n(981631);
-let _ = null;
-function E() {
+let h = null;
+function m() {
     let e = d.default.getCurrentUser();
-    if (null == e || e.mfaEnabled === _) return !1;
-    _ = e.mfaEnabled;
+    if (null == e || e.mfaEnabled === h) return !1;
+    h = e.mfaEnabled;
 }
-class h extends (r = l.ZP.Store) {
+class p extends (a = s.ZP.Store) {
     initialize() {
-        this.waitFor(d.default, c.ZP), this.syncWith([d.default, c.ZP], E);
+        this.waitFor(d.default, c.ZP), this.syncWith([d.default, c.ZP], m);
     }
     isVisible(e) {
-        return null != e && e.mfaLevel === u.BpS.ELEVATED && !1 === _ && c.ZP.hasElevatedPermissions(e.id);
+        return null != e && e.mfaLevel === u.BpS.ELEVATED && !1 === h && c.ZP.hasElevatedPermissions(e.id);
     }
 }
-(s = 'GuildMFAWarningStore'),
-    (a = 'displayName') in (i = h)
-        ? Object.defineProperty(i, a, {
-              value: s,
+(l = 'GuildMFAWarningStore'),
+    (r = 'displayName') in (i = p)
+        ? Object.defineProperty(i, r, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[a] = s),
-    (t.Z = new h(o.Z, {
-        CONNECTION_OPEN: E,
+        : (i[r] = l),
+    (t.Z = new p(o.Z, {
+        CONNECTION_OPEN: m,
         GUILD_UPDATE: function () {
             return !0;
         }

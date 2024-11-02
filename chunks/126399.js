@@ -1,20 +1,20 @@
 n(47120);
-var s = n(544891),
+var i = n(544891),
     r = n(570140),
-    i = n(893776),
+    s = n(893776),
     a = n(899742),
     l = n(743142),
     o = n(117240),
     c = n(626135),
     u = n(317770),
     d = n(981631);
-function _(e, t) {
+function h(e, t) {
     c.default.track(d.rMx.BROWSER_HANDOFF_SUCCEEDED, {
         authenticated: e,
         handoff_source: t
     });
 }
-class h extends u.Z {
+class g extends u.Z {
     _initialize() {
         r.Z.subscribe('BROWSER_HANDOFF_END', this.handleEnd), r.Z.subscribe('BROWSER_HANDOFF_FROM_APP', this.handleHandoff);
     }
@@ -24,7 +24,7 @@ class h extends u.Z {
     handleHandoff(e) {
         let { handoffKey: t, handoffToken: n, fingerprint: r, handoffSource: o } = e;
         null != n
-            ? s.tn
+            ? i.tn
                   .post({
                       url: d.ANM.HANDOFF_EXCHANGE,
                       body: {
@@ -35,10 +35,10 @@ class h extends u.Z {
                   .then(
                       (e) => {
                           let { body: t } = e;
-                          (0, a.Vb)(t.user), i.Z.loginToken(t.token, !1), _(!0, o);
+                          (0, a.Vb)(t.user), s.Z.loginToken(t.token, !1), h(!0, o);
                       },
                       (e) => {
-                          if ((null != r && _(!1, o), i.Z.setFingerprint(r), (0, a.lx)(), o === l.F.ROLE_SUBSCRIPTION)) {
+                          if ((null != r && h(!1, o), s.Z.setFingerprint(r), (0, a.lx)(), o === l.F.ROLE_SUBSCRIPTION)) {
                               var t;
                               c.default.track(d.rMx.MOBILE_WEB_HANDOFF_FAILURE, {
                                   reason: null !== (t = e.message) && void 0 !== t ? t : e.text,
@@ -48,34 +48,34 @@ class h extends u.Z {
                       }
                   )
             : null != r
-              ? (i.Z.setFingerprint(r), _(!1, o), (0, a.lx)())
-              : (i.Z.setFingerprint(r), (0, a.by)());
+              ? (s.Z.setFingerprint(r), h(!1, o), (0, a.lx)())
+              : (s.Z.setFingerprint(r), (0, a.by)());
     }
     constructor(...e) {
-        var t, n, s;
+        var t, n, i;
         super(...e),
             (t = this),
             (n = 'handleEnd'),
-            (s = (e) => {
+            (i = (e) => {
                 let { handoffToken: t, fingerprint: n } = e,
-                    s = o.Z.key;
-                null != s && o.Z.isHandoffAvailable()
+                    i = o.Z.key;
+                null != i && o.Z.isHandoffAvailable()
                     ? this.handleHandoff({
-                          handoffKey: s,
+                          handoffKey: i,
                           handoffToken: t,
                           fingerprint: n,
                           handoffSource: void 0
                       })
-                    : (i.Z.setFingerprint(null), (0, a.by)());
+                    : (s.Z.setFingerprint(null), (0, a.by)());
             }),
             n in t
                 ? Object.defineProperty(t, n, {
-                      value: s,
+                      value: i,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[n] = s);
+                : (t[n] = i);
     }
 }
-t.Z = new h();
+t.Z = new g();

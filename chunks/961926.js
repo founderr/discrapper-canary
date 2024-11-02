@@ -1,70 +1,70 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return g;
     }
 });
-var s = n(200651),
-    a = n(192379),
-    i = n(536982),
-    r = n(285318),
-    l = n(456677),
+var i = n(200651),
+    r = n(192379),
+    l = n(536982),
+    s = n(285318),
+    a = n(456677),
     o = n(55889),
     c = n(300453),
     d = n(620436),
     u = n(273504),
-    _ = n(689938),
-    I = n(739864);
-function E(e) {
-    var t, n, E;
-    let { rule: T, onChangeRule: m } = e,
-        N = a.useCallback(
+    m = n(388032),
+    h = n(739864);
+function g(e) {
+    var t, n, g;
+    let { rule: x, onChangeRule: p } = e,
+        f = r.useCallback(
             (e) => {
-                m({
-                    ...T,
+                p({
+                    ...x,
                     triggerMetadata: {
-                        ...T.triggerMetadata,
+                        ...x.triggerMetadata,
                         allowList: e
                     }
                 });
             },
-            [m, T]
+            [p, x]
         );
-    return (0, s.jsx)(s.Fragment, {
-        children: (0, s.jsxs)('div', {
-            className: I.cardContentsContainer,
+    return (0, i.jsx)(i.Fragment, {
+        children: (0, i.jsxs)('div', {
+            className: h.cardContentsContainer,
             children: [
-                (0, s.jsxs)(c.Z, {
+                (0, i.jsxs)(c.Z, {
                     step: 1,
-                    header: _.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_TRIGGER_DESCRIPTION,
+                    header: m.intl.string(m.t.CX5YfX),
                     children: [
-                        (0, s.jsx)(r.Z, {
-                            rule: T,
-                            onChangeRule: m
+                        (0, i.jsx)(s.Z, {
+                            rule: x,
+                            onChangeRule: p
                         }),
-                        (0, s.jsx)(i.Z, {
-                            onChange: N,
-                            initialValue: null === (t = T.triggerMetadata) || void 0 === t ? void 0 : t.allowList,
+                        (0, i.jsx)(l.Z, {
+                            onChange: f,
+                            initialValue: null === (t = x.triggerMetadata) || void 0 === t ? void 0 : t.allowList,
                             maxWordCount: u.I3,
-                            collapsed: (null === (n = T.triggerMetadata) || void 0 === n ? void 0 : n.allowList) == null || (null === (E = T.triggerMetadata) || void 0 === E ? void 0 : E.allowList.length) === 0
+                            collapsed: (null === (n = x.triggerMetadata) || void 0 === n ? void 0 : n.allowList) == null || (null === (g = x.triggerMetadata) || void 0 === g ? void 0 : g.allowList.length) === 0
                         })
                     ]
                 }),
-                (0, s.jsx)(d.Z, { type: d.Z.Type.ARROW_DOWN }),
-                (0, s.jsx)(c.Z, {
+                (0, i.jsx)(d.Z, { type: d.Z.Type.ARROW_DOWN }),
+                (0, i.jsx)(c.Z, {
                     step: 2,
-                    header: _.Z.Messages.GUILD_AUTOMOD_ACTIONS_HEADER,
-                    children: (0, s.jsx)(l.Z, {
-                        rule: T,
-                        onChangeRule: m
+                    header: m.intl.string(m.t['18TOiY']),
+                    children: (0, i.jsx)(a.Z, {
+                        rule: x,
+                        onChangeRule: p
                     })
                 }),
-                (0, s.jsx)(d.Z, { type: d.Z.Type.CROSS }),
-                (0, s.jsx)(c.Z, {
+                (0, i.jsx)(d.Z, { type: d.Z.Type.CROSS }),
+                (0, i.jsx)(c.Z, {
                     step: 3,
-                    header: _.Z.Messages.GUILD_AUTOMOD_EXEMPTION_HEADER,
-                    children: (0, s.jsx)(o.Z, {
-                        rule: T,
-                        onChangeRule: m
+                    header: m.intl.string(m.t.eq3gjo),
+                    children: (0, i.jsx)(o.Z, {
+                        rule: x,
+                        onChangeRule: p
                     })
                 })
             ]

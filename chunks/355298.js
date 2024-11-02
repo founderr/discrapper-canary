@@ -22,58 +22,58 @@ let o = new Set(),
 function d(e) {
     return e.isMessageRequest && !e.isSpam;
 }
-function _(e) {
+function f(e) {
     let t = !1;
     return d(e) && !o.has(e.id) && (o.add(e.id), (t = !0)), !d(e) && o.has(e.id) && (o.delete(e.id), (t = !0)), !d(e) && l.has(e.id) && (l.delete(e.id), (t = !0)), t;
 }
-function E(e) {
+function _(e) {
     var t;
     if (null != e) c = null !== (t = (0, r.Zz)(e)) && void 0 !== t ? t : (0, r.K4)();
 }
-function f(e) {
-    'CONNECTION_OPEN' === e.type && E(e.countryCode),
+function h(e) {
+    'CONNECTION_OPEN' === e.type && _(e.countryCode),
         o.clear(),
         l.clear(),
         Object.values(i.Z.getMutablePrivateChannels()).forEach((e) => {
-            _(e);
+            f(e);
         }),
         (u = !0);
 }
-function h(e) {
+function p(e) {
     let { channelId: t } = e;
     l.add(t);
 }
-function p(e) {
-    let { channel: t } = e;
-    return _(t);
-}
-function I(e) {
-    let { channels: t } = e;
-    for (let e of t) _(e);
-}
 function m(e) {
+    let { channel: t } = e;
+    return f(t);
+}
+function g(e) {
+    let { channels: t } = e;
+    for (let e of t) f(e);
+}
+function E(e) {
     let { channel: t } = e;
     return !!o.has(t.id) && (o.delete(t.id), !0);
 }
-function T(e) {
+function v(e) {
     let { messageRequestChannelIds: t } = e;
     t.forEach((e) => o.add(e));
 }
-function S(e) {
+function I(e) {
     let { countryCode: t } = e;
-    E(t);
+    _(t);
 }
-class g extends a.Z {
+class S extends a.Z {
     initialize() {
         this.waitFor(i.Z);
     }
     loadCache() {
-        let e = this.readSnapshot(g.LATEST_SNAPSHOT_VERSION);
+        let e = this.readSnapshot(S.LATEST_SNAPSHOT_VERSION);
         null != e && (o = new Set(e));
     }
     takeSnapshot() {
         return {
-            version: g.LATEST_SNAPSHOT_VERSION,
+            version: S.LATEST_SNAPSHOT_VERSION,
             data: Array.from(o)
         };
     }
@@ -97,16 +97,16 @@ class g extends a.Z {
     }
     constructor() {
         super({
-            CONNECTION_OPEN: f,
-            CONNECTION_OPEN_SUPPLEMENTAL: f,
+            CONNECTION_OPEN: h,
+            CONNECTION_OPEN_SUPPLEMENTAL: h,
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            OVERLAY_INITIALIZE: T,
-            CHANNEL_CREATE: p,
-            CHANNEL_UPDATES: I,
-            CHANNEL_DELETE: m,
-            SET_LOCATION_METADATA: S,
-            MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: h
+            OVERLAY_INITIALIZE: v,
+            CHANNEL_CREATE: m,
+            CHANNEL_UPDATES: g,
+            CHANNEL_DELETE: E,
+            SET_LOCATION_METADATA: I,
+            MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: p
         });
     }
 }
-s(g, 'displayName', 'MessageRequestStore'), s(g, 'LATEST_SNAPSHOT_VERSION', 1), (t.Z = new g());
+s(S, 'displayName', 'MessageRequestStore'), s(S, 'LATEST_SNAPSHOT_VERSION', 1), (t.Z = new S());

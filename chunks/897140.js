@@ -1,56 +1,56 @@
-a.r(e);
-var t = a(200651);
-a(192379);
-var _ = a(392711),
-    o = a.n(_),
-    c = a(252759),
-    S = a(780384),
-    d = a(481060),
-    O = a(410030),
-    n = a(313201),
-    L = a(689938),
-    l = a(309713),
-    i = a(755524),
-    r = a(788572),
-    E = a(262529);
-let C = [a(4921), a(663416), a(838295)],
-    f = [i, r, E],
-    M = [() => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_01, () => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_02, () => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_03, () => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_04, () => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_05, () => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_06, () => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_07, () => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_08, () => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_09, () => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_10];
-e.default = (s) => {
-    let { transitionState: e, onClose: a } = s,
-        _ = (0, O.ZP)(),
-        i = (0, n.Dt)(),
-        r = (0, S.wj)(_) ? f : C,
-        E = (0, c.Z)(() => o().sample(r), [r]),
-        g = (0, c.Z)(() => o().sample(M), []);
-    return (0, t.jsxs)(d.ModalRoot, {
-        transitionState: e,
-        className: l.root,
-        'aria-labelledby': i,
+e.r(s);
+var n = e(200651);
+e(192379);
+var i = e(392711),
+    a = e.n(i),
+    l = e(252759),
+    o = e(780384),
+    r = e(481060),
+    c = e(410030),
+    d = e(313201),
+    f = e(388032),
+    g = e(309713),
+    u = e(755524),
+    m = e(788572),
+    b = e(262529);
+let x = [e(4921), e(663416), e(838295)],
+    p = [u, m, b],
+    v = [() => f.intl.string(f.t['w2o/6+']), () => f.intl.string(f.t.FiAvKi), () => f.intl.string(f.t.vKUFen), () => f.intl.string(f.t.veQl5e), () => f.intl.string(f.t.Pxb7BQ), () => f.intl.string(f.t['W03w+/']), () => f.intl.string(f.t['95HTb2']), () => f.intl.string(f.t['+XFel5']), () => f.intl.string(f.t.hedHen), () => f.intl.string(f.t.jgC65u)];
+s.default = (t) => {
+    let { transitionState: s, onClose: e } = t,
+        i = (0, c.ZP)(),
+        u = (0, d.Dt)(),
+        m = (0, o.wj)(i) ? p : x,
+        b = (0, l.Z)(() => a().sample(m), [m]),
+        h = (0, l.Z)(() => a().sample(v), []);
+    return (0, n.jsxs)(r.ModalRoot, {
+        transitionState: s,
+        className: g.root,
+        'aria-labelledby': u,
         children: [
-            (0, t.jsx)('img', {
+            (0, n.jsx)('img', {
                 alt: '',
-                src: E,
-                className: l.image
+                src: b,
+                className: g.image
             }),
-            (0, t.jsxs)(d.ModalContent, {
-                className: l.modal,
+            (0, n.jsxs)(r.ModalContent, {
+                className: g.modal,
                 children: [
-                    (0, t.jsx)(d.Heading, {
+                    (0, n.jsx)(r.Heading, {
                         variant: 'heading-xl/semibold',
-                        className: l.followSuccessHeader,
-                        id: i,
-                        children: g()
+                        className: g.followSuccessHeader,
+                        id: u,
+                        children: h()
                     }),
-                    (0, t.jsx)(d.Text, {
+                    (0, n.jsx)(r.Text, {
                         color: 'text-muted',
                         variant: 'text-md/medium',
-                        className: l.body,
-                        children: L.Z.Messages.FOLLOW_SUCCESS_MODAL_BODY
+                        className: g.body,
+                        children: f.intl.string(f.t['2QbSeX'])
                     }),
-                    (0, t.jsx)(d.Button, {
-                        onClick: a,
-                        children: L.Z.Messages.TUTORIAL_CLOSE
+                    (0, n.jsx)(r.Button, {
+                        onClick: e,
+                        children: f.intl.string(f.t['+IrDzM'])
                     })
                 ]
             })

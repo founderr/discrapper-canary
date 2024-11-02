@@ -3,10 +3,10 @@ n.d(t, {
         return l;
     },
     G2: function () {
-        return f;
+        return h;
     },
     IG: function () {
-        return _;
+        return f;
     },
     NG: function () {
         return c;
@@ -15,10 +15,10 @@ n.d(t, {
         return u;
     },
     fW: function () {
-        return h;
+        return p;
     },
     lB: function () {
-        return E;
+        return _;
     },
     mA: function () {
         return d;
@@ -43,9 +43,9 @@ function c(e) {
     return e < 1000 ? ''.concat(e) : ''.concat(Math.min(Math.floor(e / 1000), 9), 'k+');
 }
 let d = (e) => {
-        let { count: t, color: n = s.Z.STATUS_DANGER, disableColor: i = !1, shape: d = l.ROUND, className: _, style: E, ...f } = e;
+        let { count: t, color: n = s.Z.STATUS_DANGER, disableColor: i = !1, shape: d = l.ROUND, className: f, style: _, ...h } = e;
         return (0, r.jsx)('div', {
-            className: a()(_, o.numberBadge, d),
+            className: a()(f, o.numberBadge, d),
             style: {
                 backgroundColor: i ? void 0 : n,
                 width: u(t),
@@ -59,33 +59,33 @@ let d = (e) => {
                             return;
                     }
                 })(t),
-                ...E
+                ..._
             },
-            ...f,
+            ...h,
             children: c(t)
         });
     },
-    _ = (e) => {
-        let { text: t, className: n, color: i = s.Z.STATUS_DANGER, shape: u = l.ROUND, disableColor: c = !1, style: d, ..._ } = e;
+    f = (e) => {
+        let { text: t, className: n, color: i = s.Z.STATUS_DANGER, shape: u = l.ROUND, disableColor: c = !1, style: d, ...f } = e;
         return (0, r.jsx)('div', {
             className: a()(n, o.textBadge, u),
             style: {
                 backgroundColor: c ? void 0 : i,
                 ...d
             },
-            ..._,
+            ...f,
             children: t
         });
     },
-    E = (e) => {
+    _ = (e) => {
         let { text: t, className: n, ...i } = e;
-        return (0, r.jsx)(_, {
+        return (0, r.jsx)(f, {
             className: a()(o.premiumBadge, n),
             text: t,
             ...i
         });
     },
-    f = (e) => {
+    h = (e) => {
         let { icon: t, className: n, color: i = s.Z.STATUS_DANGER, shape: u = l.ROUND, disableColor: c = !1, style: d } = e;
         return (0, r.jsx)('div', {
             className: a()(n, o.iconBadge, u),
@@ -99,7 +99,7 @@ let d = (e) => {
             })
         });
     },
-    h = (e) => {
+    p = (e) => {
         let { className: t, color: n = s.Z.INTERACTIVE_ACTIVE, shape: i = l.ROUND, disableColor: u = !1, style: c, ...d } = e;
         return (0, r.jsx)('div', {
             className: a()(t, o.circleBadge, i),

@@ -3,32 +3,32 @@ n.d(t, {
         return o;
     }
 });
-var s,
-    a,
-    i = n(200651);
+var i,
+    r,
+    l = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(750959);
-((s = a || (a = {})).ARROW_DOWN = 'arrow_down'), (s.CROSS = 'cross');
+var s = n(481060),
+    a = n(750959);
+((i = r || (r = {})).ARROW_DOWN = 'arrow_down'), (i.CROSS = 'cross');
 function o(e) {
     let { type: t } = e;
-    return (0, i.jsx)('div', {
-        className: l.dividerContainer,
-        children: (0, i.jsx)('div', {
-            className: l.dividerIconContainer,
+    return (0, l.jsx)('div', {
+        className: a.dividerContainer,
+        children: (0, l.jsx)('div', {
+            className: a.dividerIconContainer,
             children: (function (e) {
                 switch (e) {
                     case 'arrow_down':
-                        return (0, i.jsx)(r.ArrowSmallDownIcon, {
+                        return (0, l.jsx)(s.ArrowSmallDownIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: l.dividierIcon
+                            className: a.dividierIcon
                         });
                     case 'cross':
-                        return (0, i.jsx)(r.XSmallIcon, {
+                        return (0, l.jsx)(s.XSmallIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: l.dividierIcon
+                            className: a.dividierIcon
                         });
                     default:
                         return null;
@@ -37,4 +37,4 @@ function o(e) {
         })
     });
 }
-o.Type = a;
+o.Type = r;

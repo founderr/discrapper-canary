@@ -1,30 +1,30 @@
-r.r(s);
-var o = r(200651),
-    t = r(192379),
-    c = r(120356),
-    a = r.n(c),
-    i = r(568611),
-    n = r(481060),
-    b = r(710845),
-    d = r(361207),
-    w = r(954824),
-    l = r(981631),
-    m = r(689938),
-    p = r(420706);
+s.r(r);
+var t = s(200651),
+    o = s(192379),
+    i = s(120356),
+    n = s.n(i),
+    c = s(568611),
+    b = s(481060),
+    l = s(710845),
+    a = s(361207),
+    d = s(954824),
+    w = s(981631),
+    m = s(388032),
+    p = s(420706);
 let f = [
         {
             id: 'discord',
-            getName: () => m.Z.Messages.DESKTOP_APP,
-            url: (0, d.t3)()
+            getName: () => m.intl.string(m.t.uON9Ul),
+            url: (0, a.t3)()
         },
         {
             id: 'chrome',
-            getName: () => m.Z.Messages.BROWSER_CHROME,
+            getName: () => m.intl.string(m.t['80Ut6e']),
             url: 'https://www.google.com/chrome/browser/desktop/'
         },
         {
             id: 'firefox',
-            getName: () => m.Z.Messages.BROWSER_FIREFOX,
+            getName: () => m.intl.string(m.t.LVbA5e),
             url: 'https://www.mozilla.org/en-US/firefox/new/?scene=2'
         }
     ],
@@ -33,30 +33,30 @@ let f = [
         firefox: 'browserFirefox',
         chrome: 'browserChrome'
     };
-class x extends t.Component {
+class u extends o.Component {
     render() {
         let e;
-        let { id: s, getName: r, url: t } = this.props.browser;
+        let { id: r, getName: s, url: o } = this.props.browser;
         return (
             (e =
-                null != t
-                    ? (0, o.jsx)(n.Anchor, {
+                null != o
+                    ? (0, t.jsx)(b.Anchor, {
                           className: p.btn,
-                          href: t,
-                          children: m.Z.Messages.DOWNLOAD
+                          href: o,
+                          children: m.intl.string(m.t['1WjMbG'])
                       })
-                    : (0, o.jsx)(i.rU, {
+                    : (0, t.jsx)(c.rU, {
                           className: p.btn,
-                          to: l.Z5c.APPS,
-                          children: m.Z.Messages.DOWNLOAD
+                          to: w.Z5c.APPS,
+                          children: m.intl.string(m.t['1WjMbG'])
                       })),
-            (0, o.jsxs)('li', {
+            (0, t.jsxs)('li', {
                 className: p.browserItem,
                 children: [
-                    (0, o.jsx)('div', { className: a()(p.browserItemText, p.browser, p[h[s]]) }),
-                    (0, o.jsx)('div', {
+                    (0, t.jsx)('div', { className: n()(p.browserItemText, p.browser, p[h[r]]) }),
+                    (0, t.jsx)('div', {
                         className: p.browserItemText,
-                        children: r()
+                        children: s()
                     }),
                     e
                 ]
@@ -64,28 +64,28 @@ class x extends t.Component {
         );
     }
 }
-class u extends t.Component {
+class x extends o.Component {
     componentDidMount() {
-        w.Z.launch('discord://' + this.props.location.pathname, (e) => {
-            new b.Z('UnsupportedBrowser').log('discord://', e);
+        d.Z.launch('discord://' + this.props.location.pathname, (e) => {
+            new l.Z('UnsupportedBrowser').log('discord://', e);
         });
     }
     render() {
-        let e = f.map((e) => (0, o.jsx)(x, { browser: e }, e.id));
-        return (0, o.jsx)('div', {
+        let e = f.map((e) => (0, t.jsx)(u, { browser: e }, e.id));
+        return (0, t.jsx)('div', {
             className: p.unsupportedBrowser,
-            children: (0, o.jsxs)('div', {
+            children: (0, t.jsxs)('div', {
                 className: p.wrap,
                 children: [
-                    (0, o.jsx)(n.H, {
+                    (0, t.jsx)(b.H, {
                         className: p.title,
-                        children: m.Z.Messages.UNSUPPORTED_BROWSER_TITLE
+                        children: m.intl.string(m.t['3h+n+/'])
                     }),
-                    (0, o.jsx)('p', {
+                    (0, t.jsx)('p', {
                         className: p.message,
-                        children: m.Z.Messages.UNSUPPORTED_BROWSER_BODY
+                        children: m.intl.string(m.t.yNDLDA)
                     }),
-                    (0, o.jsx)('ul', {
+                    (0, t.jsx)('ul', {
                         className: p.browserList,
                         children: e
                     })
@@ -94,4 +94,4 @@ class u extends t.Component {
         });
     }
 }
-s.default = u;
+r.default = x;

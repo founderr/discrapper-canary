@@ -3,10 +3,10 @@ n.d(t, {
         return r;
     },
     Tm: function () {
-        return E;
+        return _;
     },
     oT: function () {
-        return f;
+        return h;
     }
 }),
     n(47120),
@@ -21,10 +21,10 @@ var r,
     u = n(884697),
     c = n(594174),
     d = n(74538),
-    _ = n(689938);
+    f = n(388032);
 ((i = r || (r = {})).PURCHASE = 'purchase'), (i.PREMIUM_PURCHASE = 'premium_purchase'), (i.PREVIEW = 'preview'), (i.PREMIUM_PREVIEW = 'premium_preview');
-let E = { id: 'None' },
-    f = { id: 'Shop' };
+let _ = { id: 'None' },
+    h = { id: 'Shop' };
 t.ZP = () => {
     let e = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
         t = d.ZP.canUseCollectibles(e),
@@ -47,21 +47,21 @@ t.ZP = () => {
         return [
             {
                 section: 'purchase',
-                items: [E, f, ...e.purchase],
+                items: [_, h, ...e.purchase],
                 height: 12,
-                header: _.Z.Messages.CHANGE_DECORATION_MODAL_PURCHASE_HEADER
+                header: f.intl.string(f.t.JEimX1)
             },
             {
                 section: e.premium_purchase.length > 0 ? 'premium_purchase' : 'premium_preview',
                 items: e.premium_purchase.length > 0 ? e.premium_purchase : e.premium_preview,
                 height: 12,
-                header: _.Z.Messages.CHANGE_DECORATION_MODAL_PREMIUM_STARTER_HEADER
+                header: f.intl.string(f.t.DIJLzM)
             },
             {
                 section: 'preview',
                 items: e.preview,
                 height: 12,
-                header: _.Z.Messages.PROFILE_EFFECT_MODAL_SHOP_PREVIEW_HEADER
+                header: f.intl.string(f.t.fmIfaG)
             }
         ].filter((e) => {
             let { items: t } = e;

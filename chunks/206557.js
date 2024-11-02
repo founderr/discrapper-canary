@@ -1,6 +1,6 @@
 n.d(t, {
     S: function () {
-        return _;
+        return f;
     }
 });
 var r = n(200651);
@@ -35,7 +35,7 @@ let u = (0, a.vQ)('keydown', (e) => !!(0, l.Tm)(e) && (e.preventDefault(), !0)),
             }
         ]
     };
-function _(e) {
+function f(e) {
     let { children: t } = e;
     return (0, r.jsx)(a.WG, {
         options: d,

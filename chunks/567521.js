@@ -1,35 +1,35 @@
-i.d(n, {
+t.d(e, {
     Z: function () {
-        return d;
+        return c;
     }
 });
-var t = i(200651);
-i(192379);
-var l = i(442837),
-    s = i(481060),
-    a = i(471253),
-    u = i(146085),
-    o = i(496675),
-    r = i(689938);
-function d(e, n) {
-    let i = (0, l.e7)([o.Z], () => o.Z.can(u.yP, e), [e]);
-    return null != n && i
-        ? (0, t.jsx)(s.MenuItem, {
+var i = t(200651);
+t(192379);
+var l = t(442837),
+    r = t(481060),
+    u = t(471253),
+    a = t(146085),
+    o = t(496675),
+    d = t(388032);
+function c(n, e) {
+    let t = (0, l.e7)([o.Z], () => o.Z.can(a.yP, n), [n]);
+    return null != e && t
+        ? (0, i.jsx)(r.MenuItem, {
               id: 'end-stage',
-              label: r.Z.Messages.END_STAGE,
+              label: d.intl.string(d.t.saZaRU),
               color: 'danger',
               action: function () {
-                  (0, s.openModal)((n) =>
-                      (0, t.jsx)(s.ConfirmModal, {
-                          ...n,
-                          header: r.Z.Messages.END_STAGE_TITLE,
-                          confirmText: r.Z.Messages.END_STAGE,
-                          cancelText: r.Z.Messages.CANCEL,
-                          onConfirm: () => (0, a.NZ)(e),
-                          children: (0, t.jsx)(s.Text, {
+                  (0, r.openModal)((e) =>
+                      (0, i.jsx)(r.ConfirmModal, {
+                          ...e,
+                          header: d.intl.string(d.t.gW9je3),
+                          confirmText: d.intl.string(d.t.saZaRU),
+                          cancelText: d.intl.string(d.t['ETE/oK']),
+                          onConfirm: () => (0, u.NZ)(n),
+                          children: (0, i.jsx)(r.Text, {
                               variant: 'text-md/normal',
                               color: 'header-secondary',
-                              children: r.Z.Messages.EXPLICIT_END_STAGE_SUBTITLE
+                              children: d.intl.string(d.t.mT7jwM)
                           })
                       })
                   );

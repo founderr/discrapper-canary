@@ -8,27 +8,27 @@ var r = n(200651),
     u = n(592125),
     c = n(9156),
     d = n(621600),
-    _ = n(981631),
-    E = n(689938);
+    f = n(981631),
+    _ = n(388032);
 t.Z = (e) => {
     let { user: t, reportId: n } = e,
-        f = u.Z.getDMFromUserId(t.id),
-        h = (0, a.e7)([c.ZP], () => (null == f ? null : c.ZP.isChannelMuted(null, f))),
-        [p, I] = i.useState(null != h && h),
-        m = i.useCallback(() => {
-            null != f &&
-                (I(!0),
-                o.ZP.trackWithMetadata(_.rMx.IAR_MUTE_USER_BUTTON_CLICKED, {
+        h = u.Z.getDMFromUserId(t.id),
+        p = (0, a.e7)([c.ZP], () => (null == h ? null : c.ZP.isChannelMuted(null, h))),
+        [m, g] = i.useState(null != p && p),
+        E = i.useCallback(() => {
+            null != h &&
+                (g(!0),
+                o.ZP.trackWithMetadata(f.rMx.IAR_MUTE_USER_BUTTON_CLICKED, {
                     other_user_id: t.id,
                     report_id: n
                 }),
-                s.Z.updateChannelOverrideSettings(null, f, { muted: !0 }, d.ZB.Muted));
-        }, [f, t, n]);
+                s.Z.updateChannelOverrideSettings(null, h, { muted: !0 }, d.ZB.Muted));
+        }, [h, t, n]);
     return (0, r.jsx)(l.Z, {
-        title: E.Z.Messages.IAR_UPSELLS_MUTE_TITLE.format({ username: t.username }),
-        description: E.Z.Messages.IAR_UPSELLS_MUTE_DESCRIPTION,
-        buttonText: p ? E.Z.Messages.IAR_UPSELLS_MUTED_BUTTON : E.Z.Messages.IAR_UPSELLS_MUTE_BUTTON,
-        buttonDisabled: p,
-        onButtonPress: m
+        title: _.intl.formatToPlainString(_.t.TRp5wc, { username: t.username }),
+        description: _.intl.string(_.t['yM/+AA']),
+        buttonText: m ? _.intl.string(_.t.E8x4Nj) : _.intl.string(_.t.HITUcX),
+        buttonDisabled: m,
+        onButtonPress: E
     });
 };

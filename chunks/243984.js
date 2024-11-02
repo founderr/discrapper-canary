@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     content: 'content_e91bdf',
     header: 'header_e91bdf',
     keybindHintKeys: 'keybindHintKeys_e91bdf',

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return _;
     }
 });
 var r = n(200651),
@@ -12,14 +12,14 @@ var r = n(200651),
     u = n(992774),
     c = n(672784),
     d = n(369711),
-    _ = n(649754);
-function E(e) {
-    let { streamId: t, paused: n, onReady: a, onResize: o, className: E, ...f } = e,
-        h = i.useRef(null),
-        { current: p } = i.useRef(l()('media-engine-video-'));
+    f = n(649754);
+function _(e) {
+    let { streamId: t, paused: n, onReady: a, onResize: o, className: _, ...h } = e,
+        p = i.useRef(null),
+        { current: m } = i.useRef(l()('media-engine-video-'));
     return (
         i.useEffect(() => {
-            let e = h.current;
+            let e = p.current;
             if (!n && null != e) {
                 let n = !1,
                     r = (t, r) => {
@@ -36,9 +36,9 @@ function E(e) {
                     i = (0, u.zS)();
                 if (null != i.addVideoOutputSink)
                     return (
-                        i.addVideoOutputSink(p, t, r),
+                        i.addVideoOutputSink(m, t, r),
                         () => {
-                            i.removeVideoOutputSink(p, t);
+                            i.removeVideoOutputSink(m, t);
                         }
                     );
                 {
@@ -49,22 +49,22 @@ function E(e) {
                     })(e);
                     if (null == n) return;
                     return (
-                        _.Z.addSink(t, h, (e) => {
+                        f.Z.addSink(t, p, (e) => {
                             r(e.width, e.height), n.render(e);
                         }),
                         () => {
-                            _.Z.removeSink(t, h);
+                            f.Z.removeSink(t, p);
                         }
                     );
                 }
             }
-        }, [t, n, o, a, p]),
+        }, [t, n, o, a, m]),
         (0, r.jsx)('canvas', {
-            id: p,
-            className: s()('media-engine-video', E),
-            ref: h,
-            ...f
+            id: m,
+            className: s()('media-engine-video', _),
+            ref: p,
+            ...h
         })
     );
 }
-E.defaultProps = { paused: !1 };
+_.defaultProps = { paused: !1 };

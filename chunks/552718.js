@@ -17,10 +17,10 @@ function d(e) {
     if (!t) throw Error('Unknown message digest');
     (this._hash = i(t.hash)), (this._tag = t.id), (this._signType = t.sign);
 }
-function _(e) {
+function f(e) {
     return new c(e);
 }
-function E(e) {
+function _(e) {
     return new d(e);
 }
 Object.keys(u).forEach(function (e) {
@@ -49,8 +49,8 @@ Object.keys(u).forEach(function (e) {
         return 'string' == typeof t && (t = r.from(t, n)), this.end(), l(t, this._hash.digest(), e, this._signType, this._tag);
     }),
     (e.exports = {
-        Sign: _,
-        Verify: E,
-        createSign: _,
-        createVerify: E
+        Sign: f,
+        Verify: _,
+        createSign: f,
+        createVerify: _
     });

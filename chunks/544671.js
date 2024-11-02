@@ -5,16 +5,16 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(557711),
-    a = n(620662),
-    l = n(503438),
-    r = n(981631),
+var l = n(557711),
+    r = n(620662),
+    a = n(503438),
+    s = n(981631),
     o = n(968333);
 function c(e) {
     let { activity: t, user: n, guildId: c, channelId: u, source: d, look: h, color: m, onAction: p } = e;
-    return null != t && (0, a.Z)(t, r.xjy.SYNC) && (0, l.Z)(t)
+    return null != t && (0, r.Z)(t, s.xjy.SYNC) && (0, a.Z)(t)
         ? (0, i.jsx)(
-              s.Z,
+              l.Z,
               {
                   className: o.button,
                   size: o.buttonSize,

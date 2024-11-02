@@ -1,48 +1,48 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return o;
+        return a;
     }
 }),
-    t(47120);
-var n = t(192379),
-    a = t(817080),
-    i = t(579806),
-    r = t(358085);
-class o extends n.Component {
+    n(47120);
+var i = n(192379),
+    s = n(817080),
+    r = n(579806),
+    l = n(358085);
+class a extends i.Component {
     getFileContents() {
         let { fileContents: e } = this.props;
         return 'function' == typeof e && (e = e()), e;
     }
-    downloadNative(e, s) {
-        i.Z.fileManager.saveWithDialog(e, s);
+    downloadNative(e, t) {
+        r.Z.fileManager.saveWithDialog(e, t);
     }
-    downloadHtml5(e, s) {
-        let t = new Blob([e], { type: this.props.contentType });
-        (0, a.saveAs)(t, s);
+    downloadHtml5(e, t) {
+        let n = new Blob([e], { type: this.props.contentType });
+        (0, s.saveAs)(n, t);
     }
     render() {
         let { children: e } = this.props,
-            s = n.Children.only(e);
-        return n.cloneElement(s, { onClick: this.handleFileDownload });
+            t = i.Children.only(e);
+        return i.cloneElement(t, { onClick: this.handleFileDownload });
     }
     constructor(...e) {
-        var s, t, n;
+        var t, n, i;
         super(...e),
-            (s = this),
-            (t = 'handleFileDownload'),
-            (n = (e) => {
+            (t = this),
+            (n = 'handleFileDownload'),
+            (i = (e) => {
                 e.preventDefault();
-                let s = this.getFileContents(),
-                    { fileName: t, onDownload: n } = this.props;
-                r.isPlatformEmbedded ? this.downloadNative(s, t) : this.downloadHtml5(s, t), null == n || n();
+                let t = this.getFileContents(),
+                    { fileName: n, onDownload: i } = this.props;
+                l.isPlatformEmbedded ? this.downloadNative(t, n) : this.downloadHtml5(t, n), null == i || i();
             }),
-            t in s
-                ? Object.defineProperty(s, t, {
-                      value: n,
+            n in t
+                ? Object.defineProperty(t, n, {
+                      value: i,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (s[t] = n);
+                : (t[n] = i);
     }
 }

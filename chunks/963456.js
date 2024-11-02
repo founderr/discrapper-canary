@@ -30,7 +30,7 @@ async function l(e, t) {
     }
     let c = async (t) =>
             u >= 3
-                ? (_(!0),
+                ? (f(!0),
                   i.Z.dispatch({
                       type: 'APPLICATION_COMMAND_INDEX_FETCH_FAILURE',
                       target: e
@@ -48,7 +48,7 @@ async function l(e, t) {
                     (t) =>
                         202 === t.status
                             ? c(5000)
-                            : (_(!1),
+                            : (f(!1),
                               i.Z.dispatch({
                                   type: 'APPLICATION_COMMAND_INDEX_FETCH_SUCCESS',
                                   target: e,
@@ -56,19 +56,19 @@ async function l(e, t) {
                               })),
                     (n) => {
                         if (t.signal.aborted) {
-                            _(!0);
+                            f(!0);
                             return;
                         }
                         return 429 === n.status
                             ? c(n.body.retry_after * s.Z.Millis.SECOND)
-                            : (_(!0),
+                            : (f(!0),
                               i.Z.dispatch({
                                   type: 'APPLICATION_COMMAND_INDEX_FETCH_FAILURE',
                                   target: e
                               }));
                     }
                 ),
-        _ = (e) => {
+        f = (e) => {
             let n = performance.now() - l;
             a.default.track(o.rMx.APPLICATION_COMMAND_PERFORMANCE, {
                 duration_ms: n,

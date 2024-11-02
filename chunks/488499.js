@@ -3,24 +3,24 @@ n.d(t, {
         return c;
     }
 });
-var o = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(180781),
+var o = n(180781),
     a = n(321867),
     r = n(486324);
 function c(e) {
-    let { type: t, analyticsPage: n, analyticsSection: c, isGIF: s, banner: l } = e;
-    return [r.pC.BANNER, r.pC.AVATAR].includes(t) && s
-        ? (0, o.jsx)(a.Z, {
+    let { type: t, analyticsPage: n, analyticsSection: c, isGIF: l, banner: s } = e;
+    return [r.pC.BANNER, r.pC.AVATAR].includes(t) && l
+        ? (0, i.jsx)(a.Z, {
               analyticsSection: c,
               type: t
           })
         : t === r.pC.GUILD_BANNER
-          ? (0, o.jsx)(i.Z, {
+          ? (0, i.jsx)(o.Z, {
                 analyticsSection: c,
                 analyticsPage: n,
-                isGIF: s,
-                banner: l
+                isGIF: l,
+                banner: s
             })
           : null;
 }

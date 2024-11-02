@@ -3,7 +3,7 @@ n.d(t, {
         return i;
     }
 });
-var r = n(689938);
+var r = n(388032);
 class i {
     announce(e, t, n) {
         this.announcer.announce(e, t, n);
@@ -11,16 +11,16 @@ class i {
     announceDrag(e, t) {
         if (null == e) return;
         let n = this.getName(e, t);
-        this.announce(r.Z.Messages.DND_ITEM_PICKED_UP.format({ itemName: n }));
+        this.announce(r.intl.formatToPlainString(r.t['vHD/JS'], { itemName: n }));
     }
     announceHover(e, t) {
         null != e && this.announce(this.getName(e, t));
     }
     announceDrop() {
-        this.announce(r.Z.Messages.DND_ITEM_DROPPED);
+        this.announce(r.intl.string(r.t.lMkmz8));
     }
     announceCancel() {
-        this.announce(r.Z.Messages.DND_DRAG_CANCELED);
+        this.announce(r.intl.string(r.t['u4d/eH']));
     }
     clear() {
         this.announcer.clearAnnouncements();

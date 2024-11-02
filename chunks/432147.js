@@ -1,93 +1,93 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return I;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(120356),
-    s = n.n(a),
-    r = n(442837),
-    l = n(481060),
-    o = n(239091),
+var r = n(120356),
+    l = n.n(r),
+    a = n(442837),
+    o = n(481060),
+    s = n(239091),
     c = n(901461),
     u = n(592125),
     d = n(709054),
-    _ = n(723774),
-    E = n(144140),
-    I = n(91159),
-    m = n(576799),
-    f = n(488131),
-    T = n(981631),
-    h = n(689938),
-    N = n(119487);
-function p(e) {
+    m = n(723774),
+    f = n(144140),
+    h = n(91159),
+    p = n(576799),
+    g = n(488131),
+    _ = n(981631),
+    C = n(388032),
+    E = n(119487);
+function I(e) {
     let { message: t, compact: n } = e,
-        a = (0, r.e7)([u.Z], () => u.Z.getChannel(d.default.castMessageIdAsChannelId(t.id)));
-    return null == a
+        r = (0, a.e7)([u.Z], () => u.Z.getChannel(d.default.castMessageIdAsChannelId(t.id)));
+    return null == r
         ? null
-        : (0, i.jsx)(C, {
-              channel: a,
+        : (0, i.jsx)(x, {
+              channel: r,
               compact: n,
               isSystemMessage: (0, c.Z)(t)
           });
 }
-function C(e) {
-    let { channel: t, compact: a, isSystemMessage: c } = e,
-        u = (0, r.e7)([E.Z], () => E.Z.getCount(t.id)),
+function x(e) {
+    let { channel: t, compact: r, isSystemMessage: c } = e,
+        u = (0, a.e7)([f.Z], () => f.Z.getCount(t.id)),
         d = (function (e) {
             var t;
-            let n = (0, r.e7)([E.Z], () => E.Z.getMostRecentMessage(e.id)),
-                a = (0, r.e7)([E.Z], () => E.Z.getCount(e.id)),
-                s = (0, I.Ok)(e);
+            let n = (0, a.e7)([f.Z], () => f.Z.getMostRecentMessage(e.id)),
+                r = (0, a.e7)([f.Z], () => f.Z.getCount(e.id)),
+                l = (0, h.Ok)(e);
             return (null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.archived)
-                ? h.Z.Messages.NO_RECENT_THREAD_MESSAGES
-                : null == a || 0 === a
-                  ? h.Z.Messages.NO_THREAD_MESSAGES
+                ? C.intl.string(C.t.ZTo4HR)
+                : null == r || 0 === r
+                  ? C.intl.string(C.t.HYtNyM)
                   : null == n
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)('span', { children: h.Z.Messages.NO_RECENT_THREAD_MESSAGES }),
+                              (0, i.jsx)('span', { children: C.intl.string(C.t.ZTo4HR) }),
                               (0, i.jsx)('span', {
-                                  className: N.timestamp,
-                                  children: (0, I.Ye)(s)
+                                  className: E.timestamp,
+                                  children: (0, h.Ye)(l)
                               })
                           ]
                       })
                     : (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)(m.Z, {
+                              (0, i.jsx)(p.Z, {
                                   message: n,
                                   channel: e
                               }),
                               (0, i.jsx)('span', {
-                                  className: N.timestamp,
-                                  children: (0, I.Ye)(s)
+                                  className: E.timestamp,
+                                  children: (0, h.Ye)(l)
                               })
                           ]
                       });
         })(t),
-        p = null != u && u > 0;
+        I = null != u && u > 0;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
-                className: s()(N.spine, {
-                    [N.cozy]: !a,
-                    [N.systemMessageSpine]: c
+                className: l()(E.spine, {
+                    [E.cozy]: !r,
+                    [E.systemMessageSpine]: c
                 })
             }),
-            (0, i.jsx)(l.Clickable, {
+            (0, i.jsx)(o.Clickable, {
                 onClick: function (e) {
-                    e.stopPropagation(), (0, f.ok)(t, e.shiftKey);
+                    e.stopPropagation(), (0, g.ok)(t, e.shiftKey);
                 },
                 onKeyDown: function (e) {
                     e.stopPropagation();
                     let n = !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey,
                         i = e.shiftKey && !(e.altKey || e.ctrlKey || e.metaKey);
-                    (e.which === T.yXg.SPACE || e.which === T.yXg.ENTER) && (e.preventDefault(), (n || i) && (0, f.ok)(t, i));
+                    (e.which === _.yXg.SPACE || e.which === _.yXg.ENTER) && (e.preventDefault(), (n || i) && (0, g.ok)(t, i));
                 },
                 onContextMenu: function (e) {
-                    (0, o.jW)(e, async () => {
+                    (0, s.jW)(e, async () => {
                         let { default: e } = await Promise.all([n.e('38902'), n.e('77564'), n.e('13154')]).then(n.bind(n, 422200));
                         return (n) =>
                             (0, i.jsx)(e, {
@@ -96,28 +96,28 @@ function C(e) {
                             });
                     });
                 },
-                'aria-roledescription': h.Z.Messages.THREAD_MESSAGE_ROLE_DESCRIPTION,
-                className: s()(N.container, { [N.systemMessageContainer]: c }),
-                children: (0, i.jsxs)(l.BlockInteractions, {
+                'aria-roledescription': C.intl.string(C.t['8ipxiY']),
+                className: l()(E.container, { [E.systemMessageContainer]: c }),
+                children: (0, i.jsxs)(o.BlockInteractions, {
                     children: [
                         (0, i.jsxs)('div', {
-                            className: N.topLine,
+                            className: E.topLine,
                             children: [
-                                (0, i.jsx)(l.HiddenVisually, { children: h.Z.Messages.THREAD }),
+                                (0, i.jsx)(o.HiddenVisually, { children: C.intl.string(C.t['7Xm5QE']) }),
                                 (0, i.jsx)('span', {
-                                    className: N.name,
+                                    className: E.name,
                                     children: t.name
                                 }),
                                 (0, i.jsx)('span', {
-                                    className: N.cta,
-                                    'aria-hidden': !p,
-                                    children: (0, _.WE)(u, t.id)
+                                    className: E.cta,
+                                    'aria-hidden': !I,
+                                    children: (0, m.WE)(u, t.id)
                                 })
                             ]
                         }),
                         (0, i.jsx)('span', {
                             'aria-hidden': !0,
-                            className: s()(N.bottomLine),
+                            className: l()(E.bottomLine),
                             children: d
                         })
                     ]

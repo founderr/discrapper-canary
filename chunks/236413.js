@@ -1,155 +1,155 @@
-n.d(t, {
+n.d(e, {
     Ar: function () {
-        return L;
+        return R;
     },
     DO: function () {
-        return I;
+        return d;
     },
     Fn: function () {
-        return O;
+        return T;
     },
     Jq: function () {
         return N;
     },
     QO: function () {
-        return M;
-    },
-    Vb: function () {
-        return d;
-    },
-    YN: function () {
-        return R;
-    },
-    ZF: function () {
-        return f;
-    },
-    ep: function () {
-        return S;
-    },
-    km: function () {
-        return c;
-    },
-    nC: function () {
         return A;
     },
+    Vb: function () {
+        return g;
+    },
+    YN: function () {
+        return p;
+    },
+    ZF: function () {
+        return O;
+    },
+    ep: function () {
+        return _;
+    },
+    km: function () {
+        return I;
+    },
+    nC: function () {
+        return f;
+    },
     vo: function () {
-        return T;
+        return S;
     }
 }),
     n(47120),
     n(411104);
 var r = n(581364),
-    a = n(314897),
-    i = n(866830),
-    E = n(539573),
-    _ = n(727072),
-    u = n(85960),
-    l = n(273504),
-    s = n(689938);
-let o = (e, t) => ''.concat(e, '-').concat(t, '-new-rule'),
-    I = (e) => (null == e ? void 0 : e.triggerType) === l.fX.KEYWORD,
-    T = (e) => (null == e ? void 0 : e.triggerType) === l.fX.ML_SPAM,
-    O = (e) => (null == e ? void 0 : e.triggerType) === l.fX.DEFAULT_KEYWORD_LIST,
-    A = (e) => (null == e ? void 0 : e.triggerType) === l.fX.MENTION_SPAM,
-    N = (e) => (null == e ? void 0 : e.triggerType) === l.fX.USER_PROFILE;
-function S(e, t) {
-    let n = u.I6[t],
-        r = (0, u.jp)(t, e),
-        E = {
-            id: o(e, t),
+    i = n(314897),
+    l = n(866830),
+    u = n(539573),
+    a = n(727072),
+    o = n(85960),
+    E = n(273504),
+    s = n(388032);
+let c = (t, e) => ''.concat(t, '-').concat(e, '-new-rule'),
+    d = (t) => (null == t ? void 0 : t.triggerType) === E.fX.KEYWORD,
+    S = (t) => (null == t ? void 0 : t.triggerType) === E.fX.ML_SPAM,
+    T = (t) => (null == t ? void 0 : t.triggerType) === E.fX.DEFAULT_KEYWORD_LIST,
+    f = (t) => (null == t ? void 0 : t.triggerType) === E.fX.MENTION_SPAM,
+    N = (t) => (null == t ? void 0 : t.triggerType) === E.fX.USER_PROFILE;
+function _(t, e) {
+    let n = o.I6[e],
+        r = (0, o.jp)(e, t),
+        u = {
+            id: c(t, e),
             name: n.getDefaultRuleName(),
-            guildId: e,
+            guildId: t,
             eventType: n.eventType,
-            triggerType: t,
+            triggerType: e,
             triggerMetadata: r,
             enabled: !0,
-            creatorId: a.default.getId(),
-            actions: (0, i.qR)(n),
+            creatorId: i.default.getId(),
+            actions: (0, l.qR)(n),
             position: 0,
             exemptChannels: new Set(),
             exemptRoles: new Set()
         };
-    if (d(E)) throw Error(s.Z.Messages.GUILD_AUTOMOD_NEW_RULE_ERROR);
-    let l = (0, _.mY)(e, t);
-    return l > 0 && (E.name += ' '.concat(l + 1)), E;
+    if (g(u)) throw Error(s.intl.string(s.t['A/nX8P']));
+    let E = (0, a.mY)(t, e);
+    return E > 0 && (u.name += ' '.concat(E + 1)), u;
 }
-function c(e, t) {
-    if (e.length > t) throw Error(s.Z.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_TOO_MANY_KEYWORDS.format({ limit: t }));
-    e.forEach((e) => {
-        if (e.length > l.hu || e.length < l.Vk)
-            throw new E.V6(
-                s.Z.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_INVALID_KEYWORD_LENGTH.format({
-                    keyword: e,
-                    max: l.hu,
-                    min: l.Vk
+function I(t, e) {
+    if (t.length > e) throw Error(s.intl.formatToPlainString(s.t.mee4qa, { limit: e }));
+    t.forEach((t) => {
+        if (t.length > E.hu || t.length < E.Vk)
+            throw new u.V6(
+                s.intl.formatToPlainString(s.t.rbRvGR, {
+                    keyword: t,
+                    max: E.hu,
+                    min: E.Vk
                 })
             );
     });
 }
-function M(e) {
-    if (I(e)) {
-        var t, n;
-        let r = null !== (t = e.triggerMetadata.keywordFilter) && void 0 !== t ? t : [],
-            a = null !== (n = e.triggerMetadata.regexPatterns) && void 0 !== n ? n : [];
-        if (0 === r.length && 0 === a.length) throw Error(s.Z.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_NO_KEYWORDS_OR_REGEX);
-        c(r, l.RH),
-            !(function (e) {
-                if (e.length > l.VW) throw Error(s.Z.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_TOO_MANY_REGEX.format({ limit: l.VW }));
-                e.forEach((e) => {
-                    if (e.length > l.aj || e.length < l.uE)
-                        throw new E.uS(
-                            s.Z.Messages.GUILD_AUTOMOD_REGEX_ERROR_INVALID_REGEX_LENGTH.format({
-                                regex: e,
-                                max: l.aj,
-                                min: l.uE
+function A(t) {
+    if (d(t)) {
+        var e, n;
+        let r = null !== (e = t.triggerMetadata.keywordFilter) && void 0 !== e ? e : [],
+            i = null !== (n = t.triggerMetadata.regexPatterns) && void 0 !== n ? n : [];
+        if (0 === r.length && 0 === i.length) throw Error(s.intl.string(s.t.kz2Av7));
+        I(r, E.RH),
+            !(function (t) {
+                if (t.length > E.VW) throw Error(s.intl.formatToPlainString(s.t.tDjhFx, { limit: E.VW }));
+                t.forEach((t) => {
+                    if (t.length > E.aj || t.length < E.uE)
+                        throw new u.uS(
+                            s.intl.formatToPlainString(s.t['WR0m9/'], {
+                                regex: t,
+                                max: E.aj,
+                                min: E.uE
                             })
                         );
                 });
-            })(a);
+            })(i);
     }
-    if (0 === e.actions.length) throw Error(s.Z.Messages.GUILD_AUTOMOD_ERROR_NO_ACTIONS);
+    if (0 === t.actions.length) throw Error(s.intl.string(s.t['t+gj5e']));
 }
-function d(e) {
-    var t;
-    return (0, r.BH)(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : 'INVALID_SNOWFLAKE');
+function g(t) {
+    var e;
+    return (0, r.BH)(null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : 'INVALID_SNOWFLAKE');
 }
-function R(e) {
-    switch (e) {
-        case l.q4.MESSAGE_SEND:
-            return s.Z.Messages.GUILD_AUTOMOD_EVENT_TYPE_MESSAGE_SEND;
-        case l.q4.GUILD_MEMBER_JOIN_OR_UPDATE:
-            return s.Z.Messages.GUILD_AUTOMOD_EVENT_TYPE_GUILD_MEMBER_JOIN_OR_UPDATE;
+function p(t) {
+    switch (t) {
+        case E.q4.MESSAGE_SEND:
+            return s.intl.string(s.t.NlQW4O);
+        case E.q4.GUILD_MEMBER_JOIN_OR_UPDATE:
+            return s.intl.string(s.t['Q+68IS']);
         default:
-            return s.Z.Messages.GUILD_AUTOMOD_UNKNOWN;
-    }
-}
-function f(e) {
-    switch (e) {
-        case l.jj.BLOCK_MESSAGE:
-            return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_NAME;
-        case l.jj.FLAG_TO_CHANNEL:
-            return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_NAME;
-        case l.jj.USER_COMMUNICATION_DISABLED:
-            return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_USER_COMMUNICATION_DISABLED;
-        case l.jj.QUARANTINE_USER:
-            return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_QUARANTINE_USER;
-        default:
-            return s.Z.Messages.GUILD_AUTOMOD_UNKNOWN;
+            return s.intl.string(s.t.SP9BBw);
     }
 }
-function L(e) {
-    switch (e) {
-        case l.fX.KEYWORD:
-            return s.Z.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_NAME;
-        case l.fX.ML_SPAM:
-            return s.Z.Messages.GUILD_AUTOMOD_ML_SPAM_FILTER_NAME;
-        case l.fX.DEFAULT_KEYWORD_LIST:
-            return s.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_FILTER_NAME;
-        case l.fX.MENTION_SPAM:
-            return s.Z.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_NAME;
-        case l.fX.USER_PROFILE:
-            return s.Z.Messages.GUILD_AUTOMOD_USER_PROFILE_FILTER_NAME;
+function O(t) {
+    switch (t) {
+        case E.jj.BLOCK_MESSAGE:
+            return s.intl.string(s.t.d1ab8v);
+        case E.jj.FLAG_TO_CHANNEL:
+            return s.intl.string(s.t['Y+Vmvb']);
+        case E.jj.USER_COMMUNICATION_DISABLED:
+            return s.intl.string(s.t['6WPxY2']);
+        case E.jj.QUARANTINE_USER:
+            return s.intl.string(s.t.NPO8eX);
         default:
-            return s.Z.Messages.GUILD_AUTOMOD_UNKNOWN;
+            return s.intl.string(s.t.SP9BBw);
+    }
+}
+function R(t) {
+    switch (t) {
+        case E.fX.KEYWORD:
+            return s.intl.string(s.t.ffR2cH);
+        case E.fX.ML_SPAM:
+            return s.intl.string(s.t['puF/Oj']);
+        case E.fX.DEFAULT_KEYWORD_LIST:
+            return s.intl.string(s.t.LnGhZm);
+        case E.fX.MENTION_SPAM:
+            return s.intl.string(s.t.pX7i6u);
+        case E.fX.USER_PROFILE:
+            return s.intl.string(s.t.q1L2v7);
+        default:
+            return s.intl.string(s.t.SP9BBw);
     }
 }

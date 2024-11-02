@@ -6,7 +6,7 @@ n.d(t, {
         return u;
     },
     ZP: function () {
-        return _;
+        return f;
     }
 }),
     n(47120);
@@ -27,19 +27,19 @@ function c(e) {
 function d(e, t) {
     return 0 === t.length ? e : [...e, ...l().flatten(t)];
 }
-function _() {
+function f() {
     for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
     let [a, o] = i.useState(n),
         l = i.useContext(u),
         c = i.useMemo(() => d(l, a), [a, l]),
-        _ = i.useMemo(() => d(l, a.slice(0, a.length - 1)), [a, l]);
+        f = i.useMemo(() => d(l, a.slice(0, a.length - 1)), [a, l]);
     return (
         i.useEffect(() => {
             !s()(n, a) && o(n);
         }, [n]),
         {
             analyticsLocations: c,
-            sourceAnalyticsLocations: _,
+            sourceAnalyticsLocations: f,
             newestAnalyticsLocation: null !== (e = c[c.length - 1]) && void 0 !== e ? e : null
         }
     );

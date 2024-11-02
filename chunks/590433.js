@@ -1,9 +1,9 @@
 n.d(t, {
     Cl: function () {
-        return E;
+        return _;
     },
     GN: function () {
-        return f;
+        return h;
     },
     L9: function () {
         return l;
@@ -12,7 +12,7 @@ n.d(t, {
         return i;
     },
     av: function () {
-        return _;
+        return f;
     },
     cu: function () {
         return c;
@@ -28,21 +28,21 @@ var r,
     i,
     a = n(63063),
     s = n(981631),
-    o = n(689938);
+    o = n(388032);
 function l(e) {
     switch (e) {
         case 60:
-            return o.Z.Messages.DURATION_SECS.format({ secs: 60 });
+            return o.intl.formatToPlainString(o.t['4zv/jo'], { secs: 60 });
         case 300:
-            return o.Z.Messages.DURATION_MINS.format({ mins: 5 });
+            return o.intl.formatToPlainString(o.t.opVZ9v, { mins: 5 });
         case 600:
-            return o.Z.Messages.DURATION_MINS.format({ mins: 10 });
+            return o.intl.formatToPlainString(o.t.opVZ9v, { mins: 10 });
         case 3600:
-            return o.Z.Messages.DURATION_HOURS.format({ hours: 1 });
+            return o.intl.formatToPlainString(o.t.xCjYxM, { hours: 1 });
         case 86400:
-            return o.Z.Messages.DURATION_DAYS.format({ days: 1 });
+            return o.intl.formatToPlainString(o.t.k2UNz8, { days: 1 });
         case 604800:
-            return o.Z.Messages.DURATION_WEEKS.format({ weeks: 1 });
+            return o.intl.formatToPlainString(o.t.EmoBDw, { weeks: 1 });
         default:
             return;
     }
@@ -60,6 +60,6 @@ let u = () =>
             }),
     c = a.Z.getArticleURL(s.BhN.DISABLE_GUILD_COMMUNICATION),
     d = 'GuildCommunicationDisabledDismissedGuilds',
-    _ = 'Set Communication Disabled Modal',
-    E = 'Clear Communication Disabled Modal',
-    f = 512;
+    f = 'Set Communication Disabled Modal',
+    _ = 'Clear Communication Disabled Modal',
+    h = 512;

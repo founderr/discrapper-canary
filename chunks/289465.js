@@ -1,24 +1,24 @@
 t.d(n, {
     Z: function () {
-        return r;
+        return s;
     }
 });
 var i = t(200651);
 t(192379);
-var a = t(120356),
-    l = t.n(a),
-    s = t(481060),
+var l = t(120356),
+    r = t.n(l),
+    a = t(481060),
     o = t(483337);
-function r(e) {
-    let { bar: n, children: t, className: a, inModal: r, title: d } = e;
-    return (0, i.jsxs)(s.Card, {
+function s(e) {
+    let { bar: n, children: t, className: l, inModal: s, title: d } = e;
+    return (0, i.jsxs)(a.Card, {
         editable: !0,
-        className: l()(o.card, a, { [o.inModal]: r }),
+        className: r()(o.card, l, { [o.inModal]: s }),
         children: [
             (0, i.jsxs)('div', {
-                className: l()(o.cardHeader, { [o.inModal]: r }),
+                className: r()(o.cardHeader, { [o.inModal]: s }),
                 children: [
-                    (0, i.jsx)(s.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-xs/semibold',
                         className: o.title,
                         children: d
@@ -26,7 +26,7 @@ function r(e) {
                     (0, i.jsx)('div', { children: n })
                 ]
             }),
-            r ? (0, i.jsx)(s.FormDivider, {}) : null,
+            s ? (0, i.jsx)(a.FormDivider, {}) : null,
             t
         ]
     });

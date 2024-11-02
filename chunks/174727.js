@@ -1,6 +1,6 @@
 t.d(n, {
     MN: function () {
-        return r;
+        return s;
     },
     XG: function () {
         return d;
@@ -15,7 +15,7 @@ t.d(n, {
         return c;
     },
     my: function () {
-        return s;
+        return r;
     },
     pN: function () {
         return u;
@@ -29,12 +29,12 @@ t.d(n, {
     t(815648),
     t(47120);
 var l = t(943351),
-    a = t(689938);
+    a = t(388032);
 let i = (e, n, t) => (-1 === e ? 0 : e - (n * e) / t);
-function s(e) {
+function r(e) {
     return e / 1000;
 }
-let r = (e, n, t) => (-1 === e ? t : e + (n * (t - e)) / t),
+let s = (e, n, t) => (-1 === e ? t : e + (n * (t - e)) / t),
     u = (e, n, t, l) => {
         let a = 0;
         return (a = n >= 0 && t > 0 ? ((e - (n - (t * n) / l)) * 100) / t : (100 * e) / l).toFixed(4);
@@ -45,7 +45,7 @@ let r = (e, n, t) => (-1 === e ? t : e + (n * (t - e)) / t),
     };
 async function c(e) {
     var n;
-    if (!(e.type.startsWith('audio') || e.type.startsWith('video')) || !l.bp.has(e.type)) throw Error(a.Z.Messages.SOUNDBOARD_ERROR_INVALID_FILE_TYPE.format({ fileType: e.type }));
+    if (!(e.type.startsWith('audio') || e.type.startsWith('video')) || !l.bp.has(e.type)) throw Error(a.intl.formatToPlainString(a.t['2y3xGR'], { fileType: e.type }));
     let t = new Audio(URL.createObjectURL(e));
     return (
         await ((n = t),

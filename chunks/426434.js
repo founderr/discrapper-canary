@@ -1,76 +1,76 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return x;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(392711),
-    i = n(442837),
-    r = n(481060),
-    l = n(230711),
+var r = n(392711),
+    l = n(442837),
+    s = n(481060),
+    a = n(230711),
     o = n(496675),
     c = n(594174),
     d = n(434404),
     u = n(449226),
-    _ = n(981631),
-    I = n(689938),
-    E = n(176981);
-function T(e) {
+    m = n(981631),
+    h = n(388032),
+    g = n(176981);
+function x(e) {
     let t,
         { guild: n } = e,
-        T = n.mfaLevel,
-        m = (0, i.e7)([o.Z], () => null != n && o.Z.can(_.Plq.MANAGE_GUILD, n), [n]),
-        N = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
-        S = n.isOwner(N),
-        g = null == N ? void 0 : N.mfaEnabled,
-        h = T === _.BpS.ELEVATED,
-        C = S && g,
-        x = (0, a.throttle)(async (e) => {
-            if (!!C)
+        x = n.mfaLevel,
+        p = (0, l.e7)([o.Z], () => null != n && o.Z.can(m.Plq.MANAGE_GUILD, n), [n]),
+        f = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
+        C = n.isOwner(f),
+        I = null == f ? void 0 : f.mfaEnabled,
+        _ = x === m.BpS.ELEVATED,
+        N = C && I,
+        v = (0, r.throttle)(async (e) => {
+            if (!!N)
                 await d.Z.updateMFALevel({
                     guildId: n.id,
-                    level: e ? _.BpS.ELEVATED : _.BpS.NONE,
+                    level: e ? m.BpS.ELEVATED : m.BpS.NONE,
                     isEnabled: !e
                 });
         }, 1000);
-    if (!m) return null;
-    !C && (t = S ? I.Z.Messages.GUILD_SETTINGS_SAFETY_MFA_OWNER_DETAIL.format({ settingsHook: () => l.Z.open(_.oAB.ACCOUNT) }) : I.Z.Messages.GUILD_SETTINGS_SAFETY_MFA_NON_OWNER_DETAIL);
-    let p = n.hasFeature(_.oNc.DISCOVERABLE);
-    return (0, s.jsxs)('div', {
-        className: E.simpleItemWrapper,
+    if (!p) return null;
+    !N && (t = C ? h.intl.format(h.t.nFwNyc, { settingsHook: () => a.Z.open(m.oAB.ACCOUNT) }) : h.intl.string(h.t['9Ghu4+']));
+    let T = n.hasFeature(m.oNc.DISCOVERABLE);
+    return (0, i.jsxs)('div', {
+        className: g.simpleItemWrapper,
         children: [
-            (0, s.jsxs)('div', {
-                className: E.itemContent,
+            (0, i.jsxs)('div', {
+                className: g.itemContent,
                 children: [
-                    (0, s.jsx)(r.Heading, {
+                    (0, i.jsx)(s.Heading, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: I.Z.Messages.GUILD_SETTINGS_REQ_MFA_LABEL
+                        children: h.intl.string(h.t.lbBfER)
                     }),
-                    (0, s.jsxs)(r.Text, {
+                    (0, i.jsxs)(s.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        children: [I.Z.Messages.GUILD_SETTINGS_SAFETY_MFA_BODY, ' ', t]
+                        children: [h.intl.string(h.t['a/93Jy']), ' ', t]
                     })
                 ]
             }),
-            !C || (h && p)
-                ? (0, s.jsx)(r.Tooltip, {
-                      text: p ? I.Z.Messages.GUILD_SETTINGS_SAFETY_MFA_DISCOVERABLE_DISABLED_TOOLTIP : S ? I.Z.Messages.GUILD_SETTINGS_SAFETY_MFA_OWNER_TOOLTIP : I.Z.Messages.GUILD_SETTINGS_SAFETY_MFA_NON_OWNER_TOOLTIP,
+            !N || (_ && T)
+                ? (0, i.jsx)(s.Tooltip, {
+                      text: T ? h.intl.string(h.t['KG1V/P']) : C ? h.intl.string(h.t.NmsheX) : h.intl.string(h.t.LieBtb),
                       children: (e) =>
-                          (0, s.jsx)(u.Z, {
-                              checked: h,
+                          (0, i.jsx)(u.Z, {
+                              checked: _,
                               disabled: !0,
-                              onChange: x,
-                              className: E.bringToFront,
+                              onChange: v,
+                              className: g.bringToFront,
                               tooltipProps: e
                           })
                   })
-                : (0, s.jsx)(u.Z, {
-                      checked: h,
-                      onChange: x,
-                      className: E.bringToFront
+                : (0, i.jsx)(u.Z, {
+                      checked: _,
+                      onChange: v,
+                      className: g.bringToFront
                   })
         ]
     });

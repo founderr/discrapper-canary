@@ -1,61 +1,61 @@
-a.r(e),
-    a.d(e, {
+e.r(a),
+    e.d(a, {
         default: function () {
             return b;
         }
     });
-var o = a(200651);
-a(192379);
-var s = a(780384),
-    n = a(481060),
-    l = a(410030),
-    i = a(313201),
-    c = a(689938),
-    r = a(698422),
-    d = a(167969),
-    u = a(557256);
+var o = e(200651);
+e(192379);
+var n = e(780384),
+    s = e(481060),
+    i = e(410030),
+    l = e(313201),
+    r = e(388032),
+    c = e(698422),
+    d = e(167969),
+    u = e(557256);
 function b(t) {
-    let { onClose: e, transitionState: a } = t,
-        b = (0, i.Dt)(),
-        _ = (0, s.wj)((0, l.ZP)());
-    return (0, o.jsxs)(n.ModalRoot, {
-        transitionState: a,
+    let { onClose: a, transitionState: e } = t,
+        b = (0, l.Dt)(),
+        h = (0, n.wj)((0, i.ZP)());
+    return (0, o.jsxs)(s.ModalRoot, {
+        transitionState: e,
         'aria-labelledby': b,
-        size: n.ModalSize.SMALL,
+        size: s.ModalSize.SMALL,
         children: [
-            (0, o.jsxs)(n.ModalContent, {
-                className: r.content,
+            (0, o.jsxs)(s.ModalContent, {
+                className: c.content,
                 children: [
-                    (0, o.jsx)(n.ModalCloseButton, {
-                        className: r.closeButton,
-                        onClick: e
+                    (0, o.jsx)(s.ModalCloseButton, {
+                        className: c.closeButton,
+                        onClick: a
                     }),
                     (0, o.jsx)('img', {
-                        className: r.image,
-                        src: _ ? d : u,
+                        className: c.image,
+                        src: h ? d : u,
                         alt: ''
                     }),
-                    (0, o.jsx)(n.Text, {
+                    (0, o.jsx)(s.Text, {
                         variant: 'text-lg/semibold',
                         color: 'header-primary',
-                        className: r.title,
-                        children: c.Z.Messages.GUILD_PRODUCT_NOT_AVAILABLE_TITLE
+                        className: c.title,
+                        children: r.intl.string(r.t.wLrh09)
                     }),
-                    (0, o.jsx)(n.Text, {
+                    (0, o.jsx)(s.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        className: r.body,
-                        children: c.Z.Messages.GUILD_PRODUCT_NOT_AVAILABLE_BODY
+                        className: c.body,
+                        children: r.intl.string(r.t.DW9yJi)
                     })
                 ]
             }),
-            (0, o.jsx)(n.ModalFooter, {
-                children: (0, o.jsx)(n.Button, {
-                    className: r.button,
-                    color: n.Button.Colors.BRAND,
-                    onClick: e,
-                    size: n.Button.Sizes.LARGE,
-                    children: c.Z.Messages.OKAY
+            (0, o.jsx)(s.ModalFooter, {
+                children: (0, o.jsx)(s.Button, {
+                    className: c.button,
+                    color: s.Button.Colors.BRAND,
+                    onClick: a,
+                    size: s.Button.Sizes.LARGE,
+                    children: r.intl.string(r.t.BddRzc)
                 })
             })
         ]

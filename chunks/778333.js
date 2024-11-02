@@ -1,75 +1,75 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return _;
     }
 });
 var i = n(200651),
-    a = n(192379),
-    s = n(442837),
-    r = n(493683),
-    l = n(447543),
-    o = n(955415),
+    r = n(192379),
+    l = n(442837),
+    a = n(493683),
+    o = n(447543),
+    s = n(955415),
     c = n(598077),
     u = n(314897),
     d = n(592125),
-    _ = n(699516),
-    E = n(51144),
-    I = n(981631),
-    m = n(689938),
-    f = n(691784);
-function T(e) {
+    m = n(699516),
+    f = n(51144),
+    h = n(981631),
+    p = n(388032),
+    g = n(691784);
+function _(e) {
     var t;
-    let { invite: n, getAcceptInviteContext: T } = e,
-        h = (0, s.e7)([u.default], () => u.default.getId()),
-        N = (null === (t = n.inviter) || void 0 === t ? void 0 : t.id) === h,
-        p = n.state === I.r2o.ACCEPTING,
-        C = (0, s.e7)([_.Z], () => {
+    let { invite: n, getAcceptInviteContext: _ } = e,
+        C = (0, l.e7)([u.default], () => u.default.getId()),
+        E = (null === (t = n.inviter) || void 0 === t ? void 0 : t.id) === C,
+        I = n.state === h.r2o.ACCEPTING,
+        x = (0, l.e7)([m.Z], () => {
             var e;
-            return null != n.inviter && _.Z.isFriend(null === (e = n.inviter) || void 0 === e ? void 0 : e.id);
+            return null != n.inviter && m.Z.isFriend(null === (e = n.inviter) || void 0 === e ? void 0 : e.id);
         }),
-        g = a.useCallback(() => {
-            null != n.inviter && null != d.Z.getDMFromUserId(n.inviter.id) && r.Z.openPrivateChannel([n.inviter.id]);
+        v = r.useCallback(() => {
+            null != n.inviter && null != d.Z.getDMFromUserId(n.inviter.id) && a.Z.openPrivateChannel([n.inviter.id]);
         }, [n.inviter]),
-        S = a.useCallback(() => {
-            let e = T('Invite Button Embed');
-            l.Z.acceptInviteAndTransitionToInviteChannel({
+        N = r.useCallback(() => {
+            let e = _('Invite Button Embed');
+            o.Z.acceptInviteAndTransitionToInviteChannel({
                 inviteKey: n.code,
                 context: e
             });
-        }, [n.code, T]);
+        }, [n.code, _]);
     if (null == n.inviter) return null;
-    let A = C ? g : S,
-        x = m.Z.Messages.INVITE_BUTTON_ADD_FRIEND,
-        R = o.Z.Button.Colors.GREEN;
-    C ? ((x = m.Z.Messages.INVITE_BUTTON_ALREADY_FRIENDS), (R = o.Z.Button.Colors.PRIMARY)) : N && ((x = m.Z.Messages.INVITE_BUTTON_ADD_FRIEND), (R = o.Z.Button.Colors.PRIMARY));
-    let v = N ? m.Z.Messages.INVITE_BUTTON_TITLE_INVITER_FRIEND : m.Z.Messages.INVITE_BUTTON_TITLE_INVITED_FRIEND,
-        M = null != n.inviter ? ''.concat(n.inviter.username) : '',
-        O = null != n.inviter ? E.ZP.getUserTag(n.inviter) : '';
-    return (0, i.jsxs)(o.Z, {
+    let T = x ? v : N,
+        S = p.intl.string(p.t.ib7Ng4),
+        b = s.Z.Button.Colors.GREEN;
+    x ? ((S = p.intl.string(p.t.xhxnPj)), (b = s.Z.Button.Colors.PRIMARY)) : E && ((S = p.intl.string(p.t.ib7Ng4)), (b = s.Z.Button.Colors.PRIMARY));
+    let A = E ? p.intl.string(p.t.eQyu1N) : p.intl.string(p.t.PYJHW1),
+        j = null != n.inviter ? ''.concat(n.inviter.username) : '',
+        Z = null != n.inviter ? f.ZP.getUserTag(n.inviter) : '';
+    return (0, i.jsxs)(s.Z, {
         children: [
-            (0, i.jsx)(o.Z.Header, { text: v }),
-            (0, i.jsxs)(o.Z.Body, {
+            (0, i.jsx)(s.Z.Header, { text: A }),
+            (0, i.jsxs)(s.Z.Body, {
                 children: [
                     (0, i.jsxs)('div', {
-                        className: f.headerLine,
+                        className: g.headerLine,
                         children: [
-                            (0, i.jsx)(o.Z.Icon, {
+                            (0, i.jsx)(s.Z.Icon, {
                                 user: new c.Z(n.inviter),
-                                onClick: C ? A : void 0
+                                onClick: x ? T : void 0
                             }),
-                            (0, i.jsx)(o.Z.Info, {
-                                title: M,
-                                onClick: C ? A : void 0,
-                                children: O
+                            (0, i.jsx)(s.Z.Info, {
+                                title: j,
+                                onClick: x ? T : void 0,
+                                children: Z
                             })
                         ]
                     }),
-                    (0, i.jsx)(o.Z.Button, {
-                        onClick: A,
-                        submitting: p,
-                        isDisabled: N,
-                        color: R,
-                        children: x
+                    (0, i.jsx)(s.Z.Button, {
+                        onClick: T,
+                        submitting: I,
+                        isDisabled: E,
+                        color: b,
+                        children: S
                     })
                 ]
             })

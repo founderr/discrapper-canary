@@ -18,12 +18,12 @@ function l(e) {
     let u = t.getGuild(e),
         { notClaimed: c } = n.getCheck(e),
         d = r.getCurrentUser(),
-        _ = !1;
+        f = !1;
     if (null != d) {
-        var E, f;
-        _ = null !== (f = null === (E = l.getMember(e, d.id)) || void 0 === E ? void 0 : E.isPending) && void 0 !== f && f;
+        var _, h;
+        f = null !== (h = null === (_ = l.getMember(e, d.id)) || void 0 === _ ? void 0 : _.isPending) && void 0 !== h && h;
     }
-    return (_ || c) && !!(null == u ? void 0 : u.hasVerificationGate());
+    return (f || c) && !!(null == u ? void 0 : u.hasVerificationGate());
 }
 function u(e) {
     return (0, r.e7)([a.Z, s.Z, o.default, i.ZP], () => null != e && l(e, [a.Z, s.Z, o.default, i.ZP]), [e]);

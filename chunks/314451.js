@@ -1,89 +1,89 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return f;
     }
 }),
     n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(442837),
-    r = n(481060),
-    l = n(782568),
-    o = n(31336),
+    r = n(192379),
+    l = n(442837),
+    a = n(481060),
+    o = n(782568),
+    s = n(31336),
     c = n(906467),
     u = n(63063),
     d = n(665149),
-    _ = n(689938);
-function E() {
-    let e = (0, s.e7)([c.Z], () => c.Z.isDeveloper),
-        [t, E] = a.useState(!1),
-        [I, m] = a.useState(0),
-        f = (e) => {
-            clearTimeout(I),
-                m(
+    m = n(388032);
+function f() {
+    let e = (0, l.e7)([c.Z], () => c.Z.isDeveloper),
+        [t, f] = r.useState(!1),
+        [h, p] = r.useState(0),
+        g = (e) => {
+            clearTimeout(h),
+                p(
                     setTimeout(() => {
-                        E(e);
+                        f(e);
                     }, 100)
                 );
         };
     return (0, i.jsx)('div', {
-        onMouseEnter: () => f(!0),
-        onMouseLeave: () => f(!1),
-        children: (0, i.jsx)(r.Popout, {
+        onMouseEnter: () => g(!0),
+        onMouseLeave: () => g(!1),
+        children: (0, i.jsx)(a.Popout, {
             shouldShow: t,
-            animation: r.Popout.Animation.NONE,
+            animation: a.Popout.Animation.NONE,
             position: 'bottom',
             align: 'right',
             autoInvert: !1,
-            onRequestOpen: () => E(!0),
-            onRequestClose: () => E(!1),
+            onRequestOpen: () => f(!0),
+            onRequestClose: () => f(!1),
             renderPopout: () =>
                 (function (e) {
-                    let { onClose: t, isDiscordDeveloper: a } = e;
-                    return (0, i.jsx)(r.Menu, {
+                    let { onClose: t, isDiscordDeveloper: r } = e;
+                    return (0, i.jsx)(a.Menu, {
                         onSelect: () => {},
                         navId: 'staff-help-popout',
                         variant: 'fixed',
                         onClose: t,
-                        'aria-label': _.Z.Messages.GUILD_ACTIONS_MENU_LABEL,
-                        children: (0, i.jsxs)(r.MenuGroup, {
+                        'aria-label': m.intl.string(m.t.HpQykZ),
+                        children: (0, i.jsxs)(a.MenuGroup, {
                             children: [
-                                (0, i.jsx)(r.MenuItem, {
+                                (0, i.jsx)(a.MenuItem, {
                                     id: 'staff-help-bug-reporter',
-                                    label: _.Z.Messages.BUG_REPORT_TITLE,
-                                    icon: r.BugIcon,
+                                    label: m.intl.string(m.t['5Lqopa']),
+                                    icon: a.BugIcon,
                                     action: () =>
-                                        (0, r.openModalLazy)(async () => {
+                                        (0, a.openModalLazy)(async () => {
                                             let { default: e } = await n.e('83051').then(n.bind(n, 115072));
                                             return (t) => (0, i.jsx)(e, { ...t });
                                         })
                                 }),
-                                a &&
-                                    (0, i.jsx)(r.MenuItem, {
+                                r &&
+                                    (0, i.jsx)(a.MenuItem, {
                                         id: 'staff-devtools',
                                         label: 'Toggle DevTools',
-                                        icon: r.StaffBadgeIcon,
-                                        action: () => (0, o.SO)()
+                                        icon: a.StaffBadgeIcon,
+                                        action: () => (0, s.SO)()
                                     }),
-                                (0, i.jsx)(r.MenuItem, {
+                                (0, i.jsx)(a.MenuItem, {
                                     id: 'staff-help-center',
                                     label: 'Go to Help Center',
-                                    icon: r.WindowLaunchIcon,
-                                    action: () => (0, l.Z)(u.w)
+                                    icon: a.WindowLaunchIcon,
+                                    action: () => (0, o.Z)(u.w)
                                 })
                             ]
                         })
                     });
                 })({
-                    onClose: () => E(!1),
+                    onClose: () => f(!1),
                     isDiscordDeveloper: e
                 }),
             children: (e, t) => {
                 let { isShown: n } = t;
                 return (0, i.jsx)(d.JO, {
                     ...e,
-                    icon: r.BugIcon,
-                    'aria-label': _.Z.Messages.HELP,
+                    icon: a.BugIcon,
+                    'aria-label': m.intl.string(m.t.cqEoj4),
                     selected: n
                 });
             }

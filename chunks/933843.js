@@ -1,15 +1,15 @@
 n.d(t, {
     F4: function () {
-        return I;
+        return g;
     },
     So: function () {
-        return S;
+        return I;
     },
     mc: function () {
-        return T;
+        return v;
     },
     vw: function () {
-        return m;
+        return E;
     }
 });
 var r = n(314897),
@@ -21,34 +21,34 @@ var r = n(314897),
     u = n(386542),
     c = n(114064),
     d = n(1163),
-    _ = n(474936),
-    E = n(981631),
-    f = n(37113);
-function h() {
-    let e = s.default.getCurrentUser();
-    return null != e && !(0, l.I5)(e, _.p9.TIER_1);
-}
+    f = n(474936),
+    _ = n(981631),
+    h = n(37113);
 function p() {
+    let e = s.default.getCurrentUser();
+    return null != e && !(0, l.I5)(e, f.p9.TIER_1);
+}
+function m() {
     var e;
     let t = null === (e = o.Z.getVoiceStateForUser(r.default.getId())) || void 0 === e ? void 0 : e.channelId;
     if (null == t) return !1;
     let n = i.Z.getChannel(t);
     if (null == n) return !1;
     let s = a.Z.getGuild(n.guild_id);
-    return null != s && s.premiumTier >= E.Eu4.TIER_2;
+    return null != s && s.premiumTier >= _.Eu4.TIER_2;
 }
-function I() {
+function g() {
     let { enabled: e } = d.Z.getCurrentConfig({ location: 'shouldFetchPerksDemos' }, { autoTrackExposure: !1 });
-    return e && c.Z.shouldFetch() && h() && !p();
+    return e && c.Z.shouldFetch() && p() && !m();
 }
-function m(e) {
+function E(e) {
     let { enabled: t } = d.Z.getCurrentConfig({ location: 'shouldFetchPerksDemos' }, { autoTrackExposure: !1 });
-    return t && c.Z.shouldActivate(e) && h() && !p();
+    return t && c.Z.shouldActivate(e) && p() && !m();
 }
-function T(e, t) {
-    return e === f.LY.RESOLUTION_720 && t !== f.ws.FPS_60;
+function v(e, t) {
+    return e === h.LY.RESOLUTION_720 && t !== h.ws.FPS_60;
 }
-function S(e) {
+function I(e) {
     let { activated: t } = (0, u.k)(e);
     return t;
 }

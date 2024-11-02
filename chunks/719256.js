@@ -1,9 +1,9 @@
 n(47120), n(653041);
 var i = n(846519),
-    a = n(570140),
-    s = n(317770),
-    r = n(220082),
-    l = n(594174),
+    r = n(570140),
+    l = n(317770),
+    a = n(220082),
+    s = n(594174),
     o = n(125268),
     c = n(813900);
 function d(e, t, n) {
@@ -19,35 +19,35 @@ function d(e, t, n) {
         e
     );
 }
-class u extends s.Z {
+class u extends l.Z {
     _initialize() {
-        !__OVERLAY__ && (a.Z.subscribe('SHARED_CANVAS_DRAW_LINE_POINT', this._handleDrawLinePoint), a.Z.subscribe('VOICE_CHANNEL_EFFECT_SEND', this._handleVoiceChannelEffectReceived));
+        !__OVERLAY__ && (r.Z.subscribe('SHARED_CANVAS_DRAW_LINE_POINT', this._handleDrawLinePoint), r.Z.subscribe('VOICE_CHANNEL_EFFECT_SEND', this._handleVoiceChannelEffectReceived));
     }
     _terminate() {
-        !__OVERLAY__ && (a.Z.unsubscribe('SHARED_CANVAS_DRAW_LINE_POINT', this._handleDrawLinePoint), a.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', this._handleVoiceChannelEffectReceived), this.lineBatchTimer.stop());
+        !__OVERLAY__ && (r.Z.unsubscribe('SHARED_CANVAS_DRAW_LINE_POINT', this._handleDrawLinePoint), r.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', this._handleVoiceChannelEffectReceived), this.lineBatchTimer.stop());
     }
     _handleVoiceChannelEffectReceived(e) {
         var t;
-        let { lineId: n, points: i, userId: a, streamerId: s, emojiHose: d } = e;
-        if (null != s && a !== (null === (t = l.default.getCurrentUser()) || void 0 === t ? void 0 : t.id))
+        let { lineId: n, points: i, userId: r, streamerId: l, emojiHose: d } = e;
+        if (null != l && r !== (null === (t = s.default.getCurrentUser()) || void 0 === t ? void 0 : t.id))
             if (null != i && null != n) {
-                let e = l.default.getUser(a);
-                null != e && (0, r.vM)(e.getAvatarURL(null, c.Ks)), (0, o.cV)(n, a, s, i);
-            } else null != d && ((d.lastUpdatedAt = Date.now()), (0, o.gr)(d, a, s));
+                let e = s.default.getUser(r);
+                null != e && (0, a.vM)(e.getAvatarURL(null, c.Ks)), (0, o.cV)(n, r, l, i);
+            } else null != d && ((d.lastUpdatedAt = Date.now()), (0, o.gr)(d, r, l));
     }
     constructor(...e) {
         super(...e),
             d(this, 'linesToUpdate', {}),
             d(this, 'lineBatchTimer', new i.Xp()),
             d(this, '_handleDrawLinePoint', (e) => {
-                let { channelId: t, lineId: n, streamerId: i, point: a } = e;
+                let { channelId: t, lineId: n, streamerId: i, point: r } = e;
                 null == this.linesToUpdate[n]
                     ? (this.linesToUpdate[n] = {
                           channelId: t,
                           streamerId: i,
-                          points: [a]
+                          points: [r]
                       })
-                    : this.linesToUpdate[n].points.push(a),
+                    : this.linesToUpdate[n].points.push(r),
                     null == this.lineBatchTimer._ref && this.lineBatchTimer.start(c.Fq, this.sendLineBatch);
             }),
             d(this, 'sendLineBatch', () => {

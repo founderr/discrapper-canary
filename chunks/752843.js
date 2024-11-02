@@ -10,9 +10,9 @@ var l = t(200651);
 t(192379);
 var i = t(628028),
     r = t(220427),
-    s = t(777207),
+    o = t(777207),
     a = t(692547),
-    o = t(330711),
+    s = t(330711),
     u = t(350727);
 function c(n) {
     let { type: e } = n;
@@ -27,7 +27,7 @@ function c(n) {
                       size: 'xxs',
                       color: a.Z.colors.INTERACTIVE_NORMAL
                   }),
-        text: 'user' === e ? o.Z.Messages.STOREFRONT_USER_SUBSCRIPTION : o.Z.Messages.STOREFRONT_SERVER_SUBSCRIPTION
+        text: 'user' === e ? s.Z.Messages.STOREFRONT_USER_SUBSCRIPTION : s.Z.Messages.STOREFRONT_SERVER_SUBSCRIPTION
     });
 }
 function d(n) {
@@ -36,7 +36,7 @@ function d(n) {
         className: u.container,
         children: [
             e,
-            (0, l.jsx)(s.x, {
+            (0, l.jsx)(o.x, {
                 color: 'header-primary',
                 variant: 'text-sm/medium',
                 children: t

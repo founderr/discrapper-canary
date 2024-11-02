@@ -1,46 +1,46 @@
-t.d(n, {
+e.d(t, {
     Z: function () {
-        return d;
+        return o;
     }
 });
-var l = t(200651);
-t(192379);
-var i = t(481060),
-    u = t(572004),
-    s = t(592126),
-    r = t(981631),
-    a = t(689938);
-function d(e, n, t) {
-    let d = null != t,
-        { isMember: E } = (0, s.Z)(n, e);
-    if (!E) return null;
-    function o() {
+var l = e(200651);
+e(192379);
+var i = e(481060),
+    r = e(572004),
+    u = e(592126),
+    d = e(981631),
+    a = e(388032);
+function o(n, t, e) {
+    let o = null != e,
+        { isMember: c } = (0, u.Z)(t, n);
+    if (!c) return null;
+    function s() {
         let l = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        (0, u.JG)(
+        (0, r.JG)(
             ''
                 .concat(location.protocol, '//')
                 .concat(location.host)
-                .concat(r.Z5c.GUILD_EVENT_DETAILS(n, e, l ? null : t))
+                .concat(d.Z5c.GUILD_EVENT_DETAILS(t, n, l ? null : e))
         ),
-            (0, i.showToast)((0, i.createToast)(a.Z.Messages.COPIED_LINK, i.ToastType.SUCCESS));
+            (0, i.showToast)((0, i.createToast)(a.intl.string(a.t['L/PwZW']), i.ToastType.SUCCESS));
     }
     return (0, l.jsx)(i.MenuItem, {
-        id: a.Z.Messages.COPY_EVENT_LINK,
-        label: a.Z.Messages.COPY_EVENT_LINK,
-        action: d ? void 0 : () => o(!0),
+        id: a.intl.string(a.t['9o+VKy']),
+        label: a.intl.string(a.t['9o+VKy']),
+        action: o ? void 0 : () => s(!0),
         children:
-            d &&
+            o &&
             (0, l.jsxs)(l.Fragment, {
                 children: [
                     (0, l.jsx)(i.MenuItem, {
-                        id: a.Z.Messages.COPY_RECURRENCE_LINK,
-                        label: a.Z.Messages.COPY_RECURRENCE_LINK,
-                        action: () => o(!1)
+                        id: a.intl.string(a.t.QLtDqK),
+                        label: a.intl.string(a.t.QLtDqK),
+                        action: () => s(!1)
                     }),
                     (0, l.jsx)(i.MenuItem, {
-                        id: a.Z.Messages.COPY_SERIES_LINK,
-                        label: a.Z.Messages.COPY_SERIES_LINK,
-                        action: () => o(!0)
+                        id: a.intl.string(a.t.AYnhBw),
+                        label: a.intl.string(a.t.AYnhBw),
+                        action: () => s(!0)
                     })
                 ]
             })

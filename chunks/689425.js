@@ -23,7 +23,7 @@ let d = (e, t) => {
         { x: i, y: a } = t;
     return Math.pow(n - i, 2) + Math.pow(r - a, 2);
 };
-class _ extends (r = a.PureComponent) {
+class f extends (r = a.PureComponent) {
     componentDidMount() {
         let { initialX: e, initialY: t } = this.props;
         this.setPosition(e, t);
@@ -184,7 +184,7 @@ class _ extends (r = a.PureComponent) {
         };
     }
 }
-c(_, 'defaultProps', {
+c(f, 'defaultProps', {
     maxX: 0,
     maxY: 0,
     initialX: 0,
@@ -192,4 +192,4 @@ c(_, 'defaultProps', {
     disabled: !1,
     dragAnywhere: !1
 }),
-    (t.Z = _);
+    (t.Z = f);

@@ -3,7 +3,7 @@ n.d(t, {
         return d;
     },
     cs: function () {
-        return _;
+        return f;
     },
     pe: function () {
         return c;
@@ -30,43 +30,43 @@ function c(e) {
     };
 }
 function d(e) {
-    let { channelId: t, content: n, tts: r = !1, type: d = u.uaV.DEFAULT, messageReference: _, allowedMentions: E, author: f, flags: h, nonce: p, poll: I, changelogId: m, giftingPrompt: T, state: S } = e,
-        g = [];
-    if (d === u.uaV.REPLY && (i()(null != _, 'Replies must have a message reference'), null == E || E.replied_user)) {
-        let e = a.Z.getMessageByReference(_);
-        (null == e ? void 0 : e.state) === a.Y.LOADED && g.push(c(e.message.author));
+    let { channelId: t, content: n, tts: r = !1, type: d = u.uaV.DEFAULT, messageReference: f, allowedMentions: _, author: h, flags: p, nonce: m, poll: g, changelogId: E, giftingPrompt: v, state: I } = e,
+        S = [];
+    if (d === u.uaV.REPLY && (i()(null != f, 'Replies must have a message reference'), null == _ || _.replied_user)) {
+        let e = a.Z.getMessageByReference(f);
+        (null == e ? void 0 : e.state) === a.Y.LOADED && S.push(c(e.message.author));
     }
     return (
-        null == f && (f = o.default.getCurrentUser()),
-        f instanceof s.Z && (f = c(f)),
-        i()(null != f, 'createMessage: author cannot be undefined'),
+        null == h && (h = o.default.getCurrentUser()),
+        h instanceof s.Z && (h = c(h)),
+        i()(null != h, 'createMessage: author cannot be undefined'),
         {
-            id: null != p ? p : (0, l.r)(),
+            id: null != m ? m : (0, l.r)(),
             type: d,
             content: n,
             channel_id: t,
-            author: f,
+            author: h,
             attachments: [],
             embeds: [],
             pinned: !1,
-            mentions: g,
+            mentions: S,
             mention_channels: [],
             mention_roles: [],
             mention_everyone: !1,
             timestamp: new Date().toISOString(),
-            state: S || u.yb.SENDING,
+            state: I || u.yb.SENDING,
             tts: r,
-            message_reference: _,
+            message_reference: f,
             message_snapshots: [],
-            flags: h,
-            nonce: p,
-            poll: I,
-            changelog_id: m,
-            gifting_prompt: T
+            flags: p,
+            nonce: m,
+            poll: g,
+            changelog_id: E,
+            gifting_prompt: v
         }
     );
 }
-function _(e) {
+function f(e) {
     let { messageId: t, channelId: n, content: r, embeds: i, loggingName: a } = e;
     return {
         id: null != t ? t : (0, l.r)(),

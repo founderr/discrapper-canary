@@ -1,6 +1,6 @@
 n.d(t, {
     q: function () {
-        return _;
+        return S;
     }
 }),
     n(47120),
@@ -25,46 +25,46 @@ var r = n(192379),
     d = n(19780),
     f = n(760373),
     E = n(65154);
-function _(e) {
+function S(e) {
     let { userId: t } = e,
         n = (0, s.e7)([a.default], () => a.default.getId());
     u()(n !== t, '[useSecureFramesPairwiseFingerprint] Should not pass current user id.');
-    let [i, _] = r.useState(null),
-        [S, I] = r.useState(!1),
-        g = (0, s.e7)([d.Z], () => d.Z.getSecureFramesRosterMapEntry(t)),
-        R = (0, s.e7)([d.Z], () => d.Z.getSecureFramesRosterMapEntry(n)),
-        C = r.useCallback((e) => {
-            _(l.fromByteArray(e)), I(!1);
+    let [i, S] = r.useState(null),
+        [_, g] = r.useState(!1),
+        m = (0, s.e7)([d.Z], () => d.Z.getSecureFramesRosterMapEntry(t)),
+        h = (0, s.e7)([d.Z], () => d.Z.getSecureFramesRosterMapEntry(n)),
+        R = r.useCallback((e) => {
+            S(l.fromByteArray(e)), g(!1);
         }, []),
-        m = r.useCallback(
+        I = r.useCallback(
             async (e, t, n, r) => {
                 if (c.Z.supports(E.AN.MLS_PAIRWISE_FINGERPRINTS)) {
                     var l;
                     null === (l = d.Z.getRTCConnection()) ||
                         void 0 === l ||
                         l.getMLSPairwiseFingerprint(f.Xj, n, (e) => {
-                            C(new Uint8Array(e));
+                            R(new Uint8Array(e));
                         });
-                } else C(await (0, o.Il)(f.Xj, new Uint8Array(t), e, new Uint8Array(r), n));
+                } else R(await (0, o.Il)(f.Xj, new Uint8Array(t), e, new Uint8Array(r), n));
             },
-            [C]
+            [R]
         ),
-        h = r.useRef(null);
+        C = r.useRef(null);
     return (
         r.useEffect(() => {
-            null != g && null != R && null == h.current && (I(!0), (h.current = setTimeout(() => m(n, R, t, g), 0)));
-            let e = h.current;
+            null != m && null != h && null == C.current && (g(!0), (C.current = setTimeout(() => I(n, h, t, m), 0)));
+            let e = C.current;
             return () => {
                 null != e && clearTimeout(e);
             };
-        }, [n, R, m, t, g]),
+        }, [n, h, I, t, m]),
         r.useMemo(
             () => ({
                 fingerprint: i,
-                userKey: g,
-                loading: S
+                userKey: m,
+                loading: _
             }),
-            [i, S, g]
+            [i, _, m]
         )
     );
 }

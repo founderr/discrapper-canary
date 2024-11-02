@@ -1,42 +1,42 @@
-a.r(s), a(47120);
-var n = a(200651),
-    t = a(192379),
-    c = a(481060),
-    i = a(233787),
-    l = a(689938);
-function o(e, s, a) {
+n.r(t), n(47120);
+var s = n(200651),
+    a = n(192379),
+    i = n(481060),
+    c = n(233787),
+    l = n(388032);
+function o(e, t, n) {
     return (
-        s in e
-            ? Object.defineProperty(e, s, {
-                  value: a,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[s] = a),
+            : (e[t] = n),
         e
     );
 }
-class r extends t.Component {
+class r extends a.Component {
     render() {
         let { transitionState: e } = this.props;
-        return (0, n.jsxs)(i.Z, {
+        return (0, s.jsxs)(c.Z, {
             transitionState: e,
-            'aria-label': l.Z.Messages.PREMIUM_NOT_CLAIMED,
+            'aria-label': l.intl.string(l.t.Nn0Px8),
             children: [
-                (0, n.jsx)(i.Z.Header, { children: l.Z.Messages.PREMIUM_NOT_CLAIMED }),
-                (0, n.jsx)(i.Z.Content, {
-                    type: i.Z.Types.UNCLAIMED,
-                    children: l.Z.Messages.PREMIUM_NOT_CLAIMED_BODY
+                (0, s.jsx)(c.Z.Header, { children: l.intl.string(l.t.Nn0Px8) }),
+                (0, s.jsx)(c.Z.Content, {
+                    type: c.Z.Types.UNCLAIMED,
+                    children: l.intl.string(l.t['7btfmJ'])
                 }),
-                (0, n.jsx)(i.Z.Footer, {
+                (0, s.jsx)(c.Z.Footer, {
                     secondary: {
                         onClick: this.cancel,
-                        label: l.Z.Messages.NEVERMIND
+                        label: l.intl.string(l.t.oEAioK)
                     },
                     primary: {
                         onClick: this.claimAccount,
-                        label: l.Z.Messages.CLAIM_ACCOUNT
+                        label: l.intl.string(l.t.fiNVio)
                     }
                 })
             ]
@@ -51,11 +51,11 @@ class r extends t.Component {
             o(this, 'claimAccount', () => {
                 let { onClose: e } = this.props;
                 null == e || e(),
-                    (0, c.openModalLazy)(async () => {
-                        let { default: e } = await a.e('1677').then(a.bind(a, 324239));
-                        return (s) => (0, n.jsx)(e, { ...s });
+                    (0, i.openModalLazy)(async () => {
+                        let { default: e } = await n.e('1677').then(n.bind(n, 324239));
+                        return (t) => (0, s.jsx)(e, { ...t });
                     });
             });
     }
 }
-s.default = r;
+t.default = r;

@@ -1,61 +1,61 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return _;
+        return u;
     }
 });
-var n = t(200651);
-t(192379);
-var a = t(120356),
-    i = t.n(a),
-    r = t(481060),
-    o = t(689938),
-    l = t(47050),
-    c = t(89216),
-    d = t(834300);
-function _(e) {
-    let { onClickManageSubscription: s, count: t } = e;
-    return (0, n.jsxs)('div', {
+var i = n(200651);
+n(192379);
+var s = n(120356),
+    r = n.n(s),
+    l = n(481060),
+    a = n(388032),
+    o = n(47050),
+    c = n(89216),
+    d = n(834300);
+function u(e) {
+    let { onClickManageSubscription: t, count: n } = e;
+    return (0, i.jsxs)('div', {
         children: [
-            (0, n.jsx)(r.Heading, {
+            (0, i.jsx)(l.Heading, {
                 variant: 'heading-md/bold',
-                children: o.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
+                children: a.intl.string(a.t['KzCF//'])
             }),
-            (0, n.jsx)(r.Spacer, { size: 4 }),
-            (0, n.jsx)(r.Text, {
+            (0, i.jsx)(l.Spacer, { size: 4 }),
+            (0, i.jsx)(l.Text, {
                 variant: 'text-md/normal',
-                className: l.sectionDescription,
-                children: o.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_USER_SUBSCRIPTIONS_DESCRIPTION
+                className: o.sectionDescription,
+                children: a.intl.string(a.t['3D7qCg'])
             }),
-            (0, n.jsx)(r.Spacer, { size: 24 }),
-            (0, n.jsxs)('div', {
-                className: i()(c.guildBoostingSubscriptionRow, l.card),
+            (0, i.jsx)(l.Spacer, { size: 24 }),
+            (0, i.jsxs)('div', {
+                className: r()(c.guildBoostingSubscriptionRow, o.card),
                 children: [
-                    (0, n.jsx)('img', {
+                    (0, i.jsx)('img', {
                         src: d,
                         alt: '',
-                        className: l.handImage
+                        className: o.handImage
                     }),
-                    (0, n.jsxs)('div', {
-                        className: l.textContainer,
+                    (0, i.jsxs)('div', {
+                        className: o.textContainer,
                         children: [
-                            (0, n.jsx)(r.Heading, {
+                            (0, i.jsx)(l.Heading, {
                                 variant: 'heading-xl/semibold',
-                                className: l.header,
-                                children: o.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
+                                className: o.header,
+                                children: a.intl.string(a.t['KzCF//'])
                             }),
-                            (0, n.jsx)(r.Text, {
+                            (0, i.jsx)(l.Text, {
                                 variant: 'text-md/normal',
-                                className: l.description,
-                                children: o.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_ACTIVE_USER_SUBSCRIPTIONS_DESCRIPTION.format({ numSubscriptions: t })
+                                className: o.description,
+                                children: a.intl.format(a.t['m+pcOD'], { numSubscriptions: n })
                             })
                         ]
                     }),
-                    (0, n.jsx)(r.Button, {
-                        color: r.Button.Colors.CUSTOM,
-                        size: r.Button.Sizes.SMALL,
-                        className: l.manageSubscriptionsButton,
-                        onClick: s,
-                        children: o.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_MANAGE_SUBSCRIPTIONS_BUTTON
+                    (0, i.jsx)(l.Button, {
+                        color: l.Button.Colors.CUSTOM,
+                        size: l.Button.Sizes.SMALL,
+                        className: o.manageSubscriptionsButton,
+                        onClick: t,
+                        children: a.intl.string(a.t['3a8Xxs'])
                     })
                 ]
             })

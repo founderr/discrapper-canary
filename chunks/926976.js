@@ -9,8 +9,8 @@ var r = n(200651),
     l = n(120356),
     i = n.n(l),
     o = n(392711),
-    s = n(913527),
-    c = n.n(s),
+    c = n(913527),
+    s = n.n(c),
     d = n(442837),
     u = n(481060),
     h = n(129861),
@@ -21,10 +21,10 @@ var r = n(200651),
     g = n(120816),
     b = n(31336),
     v = n(257785),
-    _ = n(484036),
-    j = n(681619),
-    C = n(621060),
-    T = n(689938),
+    j = n(484036),
+    C = n(681619),
+    _ = n(621060),
+    T = n(388032),
     S = n(574001),
     N = n(219299);
 let y = [
@@ -67,7 +67,7 @@ function w(e) {
         ]
     });
 }
-let E = [
+let k = [
         {
             id: 'details',
             name: 'Details',
@@ -76,8 +76,8 @@ let E = [
                         loggedEvent: { event: t, properties: n, timestamp: a, fingerprint: l },
                         onClose: o
                     } = e,
-                    s = f.default.getUser(l),
-                    d = c()(a);
+                    c = f.default.getUser(l),
+                    d = s()(a);
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsxs)(m.ZP, {
@@ -106,13 +106,13 @@ let E = [
                                     children: (0, r.jsxs)('time', {
                                         dateTime: a.toISOString(),
                                         title: (0, p.vc)(d, 'LLLL'),
-                                        children: [c().locale(), (0, p.Y4)(d)]
+                                        children: [s().locale(), (0, p.Y4)(d)]
                                     })
                                 }),
-                                null != s &&
+                                null != c &&
                                     (0, r.jsx)(v.Z9, {
                                         name: 'User',
-                                        children: (0, r.jsx)(h.Z, { user: s })
+                                        children: (0, r.jsx)(h.Z, { user: c })
                                     }),
                                 (0, r.jsx)(v.Z9, {
                                     name: 'Fingerprint',
@@ -144,11 +144,11 @@ let E = [
             }
         }
     ],
-    k = {
+    E = {
         events: {
             label: 'Events',
             filter: (e) =>
-                Object.entries(k)
+                Object.entries(E)
                     .filter((e) => {
                         let [t] = e;
                         return 'events' !== t;
@@ -176,7 +176,7 @@ function Z() {
     let e = a.useRef(null),
         [t, n] = a.useState(''),
         l = (0, d.e7)([g.Z], () => g.Z.loggedEvents),
-        [s, c] = a.useState(Object.keys(k)),
+        [c, s] = a.useState(Object.keys(E)),
         [h, m] = a.useState(l),
         f = a.useRef(null),
         p = a.useCallback(
@@ -206,17 +206,17 @@ function Z() {
         v = a.useMemo(
             () =>
                 h.filter((e) => {
-                    for (let t of s) if (k[t].filter(e)) return !0;
+                    for (let t of c) if (E[t].filter(e)) return !0;
                     return !1;
                 }),
-            [h, s]
+            [h, c]
         );
     a.useEffect(() => {
         p(t, l);
     }, [t, p, l]);
     let [I, w] = a.useState(void 0),
         Z = v.find((e) => e.key === I),
-        { TabBar: R, renderSelectedTab: O } = (0, C.Z)({ tabs: E }, []);
+        { TabBar: R, renderSelectedTab: O } = (0, _.Z)({ tabs: k }, []);
     return (0, r.jsxs)('div', {
         ref: e,
         className: i()(N.panel, S.panel),
@@ -230,26 +230,26 @@ function Z() {
                         size: u.Button.Sizes.ICON,
                         onClick: b.Zw,
                         children: (0, r.jsx)('span', {
-                            title: T.Z.Messages.CLEAR,
+                            title: T.intl.string(T.t.VkKicX),
                             children: (0, r.jsx)(u.TrashIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                'aria-label': T.Z.Messages.CLEAR
+                                'aria-label': T.intl.string(T.t.VkKicX)
                             })
                         })
                     }),
                     (0, r.jsx)('div', { className: S.toolbarDivider }),
                     (0, r.jsx)('div', {
                         className: S.filters,
-                        children: Object.entries(k).map((e) => {
+                        children: Object.entries(E).map((e) => {
                             let [t, n] = e;
                             return (0, r.jsx)(
                                 u.Clickable,
                                 {
-                                    className: i()(S.filter, s.includes(t) && S.activeFilter),
+                                    className: i()(S.filter, c.includes(t) && S.activeFilter),
                                     onClick: () => {
                                         var e;
-                                        return (e = t), void c((t) => (t.includes(e) ? t.filter((t) => t !== e) : [...t, e]));
+                                        return (e = t), void s((t) => (t.includes(e) ? t.filter((t) => t !== e) : [...t, e]));
                                     },
                                     children: n.label
                                 },
@@ -269,14 +269,14 @@ function Z() {
                     placeholder: 'Search by event name'
                 })
             }),
-            (0, r.jsx)(j.Z, {
+            (0, r.jsx)(C.Z, {
                 columns: y,
                 data: v,
                 selectedRowKey: I,
                 onClickRow: (e) => w(e.key)
             }),
             null != Z &&
-                (0, r.jsxs)(_.Z, {
+                (0, r.jsxs)(j.Z, {
                     className: S.subPanel,
                     minHeight: 100,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,

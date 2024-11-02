@@ -1,9 +1,9 @@
-var n = t(442837),
-    l = t(674525),
-    s = t(689938);
-i.Z = {
-    title: () => s.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
-    description: () => s.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_FINISH_SETTING_UP_DESCRIPTION,
+var n = i(442837),
+    l = i(674525),
+    d = i(388032);
+t.Z = {
+    title: () => d.intl.string(d.t['KzCF//']),
+    description: () => d.intl.string(d.t['1ScBCw']),
     canCreateGuild: !1,
     useIsGuildSupported: () => (0, n.e7)([l.Z], () => (e) => l.Z.getEligibleGuildsForNagActivate().includes(e.id), [])
 };

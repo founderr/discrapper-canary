@@ -12,20 +12,20 @@ var i = n(481060),
     l = n(701488),
     u = n(981631);
 function c(e) {
-    let { channel: t, guildId: c, locationObject: d, openInPopout: _, initialSelectedApplicationId: E, initialSlide: f = l.ag.DIRECTORY, enableSelectedTextChannelInvite: h = !1, analyticsLocations: p, opensAppLauncherModal: I = !1 } = e,
-        m = p.length > 0 ? p[p.length - 1] : 'open-activity-shelf',
-        { enabled: T } = a.m1.getCurrentConfig({ location: m }, { autoTrackExposure: !1 });
-    if (I && T) {
+    let { channel: t, guildId: c, locationObject: d, openInPopout: f, initialSelectedApplicationId: _, initialSlide: h = l.ag.DIRECTORY, enableSelectedTextChannelInvite: p = !1, analyticsLocations: m, opensAppLauncherModal: g = !1 } = e,
+        E = m.length > 0 ? m[m.length - 1] : 'open-activity-shelf',
+        { enabled: v } = a.m1.getCurrentConfig({ location: E }, { autoTrackExposure: !1 });
+    if (g && v) {
         null != t &&
             (0, s.Z)({
-                openInPopout: _,
+                openInPopout: f,
                 channel: t,
-                analyticsLocation: m
+                analyticsLocation: E
             });
         return;
     }
-    _ && (0, o.Z)(u.KJ3.CHANNEL_CALL_POPOUT);
-    let S = _ ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
+    f && (0, o.Z)(u.KJ3.CHANNEL_CALL_POPOUT);
+    let I = f ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
     return (0, i.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([n.e('67588'), n.e('47593'), n.e('34614')]).then(n.bind(n, 471840));
@@ -35,15 +35,15 @@ function c(e) {
                     channel: t,
                     guildId: c,
                     locationObject: d,
-                    initialSlide: f,
-                    initialSelectedApplicationId: E,
-                    enableSelectedTextChannelInvite: h,
-                    analyticsLocations: p
+                    initialSlide: h,
+                    initialSelectedApplicationId: _,
+                    enableSelectedTextChannelInvite: p,
+                    analyticsLocations: m
                 });
         },
         {
             modalKey: l.AC,
-            contextKey: S
+            contextKey: I
         }
     );
 }

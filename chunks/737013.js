@@ -10,19 +10,19 @@ var i = n(442837),
     s = n(898531),
     o = n(314897),
     l = n(131951),
-    u = n(689938),
+    u = n(388032),
     c = n(738269);
 function d(e) {
     let t = (0, a.useModalContext)(),
         d = (0, i.e7)([l.Z], () => l.Z.isVideoEnabled()),
-        _ = (0, i.e7)([o.default], () => o.default.getId() === e),
-        E = (0, s.Z)();
-    return (!d || E) && _
+        f = (0, i.e7)([o.default], () => o.default.getId() === e),
+        _ = (0, s.Z)();
+    return (!d || _) && f
         ? (0, r.jsx)(a.MenuItem, {
               id: 'change-video-background',
               label: (0, r.jsx)('div', {
                   className: c.item,
-                  children: d ? u.Z.Messages.CAMERA_CHANGE_VIDEO_BACKGROUND_MENU_ITEM : u.Z.Messages.CAMERA_PREVIEW_MENU_ITEM
+                  children: d ? u.intl.string(u.t.mZKxHR) : u.intl.string(u.t.vkV939)
               }),
               action: function () {
                   (0, a.openModalLazy)(

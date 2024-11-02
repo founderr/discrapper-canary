@@ -1,51 +1,51 @@
 n(47120);
-var s = n(200651),
-    a = n(192379),
-    r = n(120356),
-    i = n.n(r),
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
     l = n(489948),
     o = n(748780),
     c = n(91192),
-    _ = n(906732),
-    d = n(171368),
-    E = n(981631),
-    u = n(823120);
+    d = n(906732),
+    u = n(171368),
+    g = n(981631),
+    m = n(823120);
 t.Z = (e) => {
-    let { userId: t, children: n, isLast: r, className: T } = e,
-        [I, R] = a.useState(!1),
-        { analyticsLocations: g } = (0, _.ZP)(),
-        N = a.useCallback(() => {
-            (0, d.openUserProfileModal)({
+    let { userId: t, children: n, isLast: a, className: f } = e,
+        [p, _] = r.useState(!1),
+        { analyticsLocations: h } = (0, d.ZP)(),
+        x = r.useCallback(() => {
+            (0, u.openUserProfileModal)({
                 userId: t,
-                sourceAnalyticsLocations: g,
-                analyticsLocation: { section: E.jXE.FAMILY_CENTER }
+                sourceAnalyticsLocations: h,
+                analyticsLocation: { section: g.jXE.FAMILY_CENTER }
             });
-        }, [t, g]),
-        m = () => {
-            R(!0);
+        }, [t, h]),
+        E = () => {
+            _(!0);
         },
-        C = () => {
-            R(!1);
+        b = () => {
+            _(!1);
         };
-    return (0, s.jsx)(c.mh, {
+    return (0, i.jsx)(c.mh, {
         id: t,
         children: (e) =>
-            (0, s.jsx)(l.tE, {
+            (0, i.jsx)(l.tE, {
                 offset: {
                     left: -8,
                     right: -8
                 },
-                children: (0, s.jsx)(o.Z.div, {
+                children: (0, i.jsx)(o.Z.div, {
                     style: { opacity: 1 },
-                    className: i()(u.rowItem, T, {
-                        [u.last]: r,
-                        [u.active]: I
+                    className: s()(m.rowItem, f, {
+                        [m.last]: a,
+                        [m.active]: p
                     }),
-                    onMouseEnter: m,
-                    onMouseLeave: C,
-                    onClick: N,
+                    onMouseEnter: E,
+                    onMouseLeave: b,
+                    onClick: x,
                     ...e,
-                    children: n(I)
+                    children: n(p)
                 })
             })
     });

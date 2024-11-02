@@ -1,6 +1,6 @@
-n.d(a, {
+n.d(t, {
     Z: function () {
-        return i;
+        return s;
     }
 }),
     n(47120),
@@ -9,39 +9,39 @@ n.d(a, {
     n(216116),
     n(78328),
     n(815648);
-var t = n(192379),
-    r = n(442837),
-    l = n(703558),
-    s = n(117530),
+var a = n(192379),
+    l = n(442837),
+    r = n(703558),
+    i = n(117530),
     o = n(524100);
-function i(e) {
-    var a, n;
-    let { channelId: i, localCreationAnswerId: c, image: u } = e,
+function s(e) {
+    var t, n;
+    let { channelId: s, localCreationAnswerId: c, image: u } = e,
         d = null == u ? void 0 : u.emoji,
-        _ = (null == u ? void 0 : null === (a = u.mediaAttachmentState) || void 0 === a ? void 0 : a.status) === o._.PREPARING,
-        m = (0, r.e7)([s.Z], () => s.Z.getUpload(i, c, l.d.Poll)),
-        [E, A] = t.useState(),
-        [f, C] = t.useState('');
+        m = (null == u ? void 0 : null === (t = u.mediaAttachmentState) || void 0 === t ? void 0 : t.status) === o._.PREPARING,
+        f = (0, l.e7)([i.Z], () => i.Z.getUpload(s, c, r.d.Poll)),
+        [h, x] = a.useState(),
+        [g, p] = a.useState('');
     return (
-        t.useEffect(() => {
+        a.useEffect(() => {
             var e;
-            if ((null == m ? void 0 : null === (e = m.item) || void 0 === e ? void 0 : e.file) == null) return;
-            let a = URL.createObjectURL(m.item.file);
+            if ((null == f ? void 0 : null === (e = f.item) || void 0 === e ? void 0 : e.file) == null) return;
+            let t = URL.createObjectURL(f.item.file);
             return (
-                A(a),
-                C(m.item.file.name),
+                x(t),
+                p(f.item.file.name),
                 () => {
-                    URL.revokeObjectURL(a);
+                    URL.revokeObjectURL(t);
                 }
             );
-        }, [null == m ? void 0 : null === (n = m.item) || void 0 === n ? void 0 : n.file]),
+        }, [null == f ? void 0 : null === (n = f.item) || void 0 === n ? void 0 : n.file]),
         {
             emoji: d,
-            isLoadingMedia: _,
-            hasUpload: null != m,
-            upload: m,
-            mediaUrl: E,
-            mediaFilename: f
+            isLoadingMedia: m,
+            hasUpload: null != f,
+            upload: f,
+            mediaUrl: h,
+            mediaFilename: g
         }
     );
 }

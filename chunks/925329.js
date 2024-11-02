@@ -6,20 +6,20 @@ var i = n(120356),
     o = n(829968),
     l = n(565138),
     u = n(474936),
-    c = n(689938),
+    c = n(388032),
     d = n(454416);
-let _ = {
+let f = {
         XXSMALL: d.xxsmall,
         XSMALL: d.xsmall,
         SMALL: d.small,
         MEDIUM: d.medium,
         LARGE: d.large
     },
-    E = (e) => {
+    _ = (e) => {
         let t,
-            { game: i, guild: E, skuId: f, pid: h, className: p, guildClassName: I, size: m = _.MEDIUM } = e;
+            { game: i, guild: _, skuId: h, pid: p, className: m, guildClassName: g, size: E = f.MEDIUM } = e;
         if (
-            (null != f &&
+            (null != h &&
                 (t = (function (e) {
                     if (null == e) return null;
                     switch (e) {
@@ -35,45 +35,45 @@ let _ = {
                         default:
                             return null;
                     }
-                })(f)),
+                })(h)),
             null != i &&
                 null == t &&
                 (t = i.getIconURL(
                     (function (e) {
                         switch (e) {
-                            case _.XXSMALL:
+                            case f.XXSMALL:
                                 return 16;
-                            case _.XSMALL:
+                            case f.XSMALL:
                                 return 24;
-                            case _.SMALL:
+                            case f.SMALL:
                                 return 30;
-                            case _.MEDIUM:
+                            case f.MEDIUM:
                                 return 40;
-                            case _.LARGE:
+                            case f.LARGE:
                                 return 60;
                             default:
                                 return 80;
                         }
-                    })(m)
+                    })(E)
                 )),
-            null == (t = (0, o.Z)(h, t)) && null != E)
+            null == (t = (0, o.Z)(p, t)) && null != _)
         ) {
             let e = (function (e) {
                 switch (e) {
-                    case _.XSMALL:
+                    case f.XSMALL:
                         return l.Z.Sizes.SMALLER;
-                    case _.SMALL:
+                    case f.SMALL:
                         return l.Z.Sizes.SMALL;
-                    case _.LARGE:
+                    case f.LARGE:
                         return l.Z.Sizes.LARGE;
                     default:
-                    case _.MEDIUM:
+                    case f.MEDIUM:
                         return l.Z.Sizes.MEDIUM;
                 }
-            })(m);
+            })(E);
             return (0, r.jsx)(l.Z, {
-                className: a()(d.gameIcon, I, p),
-                guild: E,
+                className: a()(d.gameIcon, g, m),
+                guild: _,
                 size: e
             });
         }
@@ -81,14 +81,14 @@ let _ = {
             return (0, r.jsx)(s.UnknownGameIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: a()(d.gameIcon, m, p)
+                className: a()(d.gameIcon, E, m)
             });
-        let T = null == i ? void 0 : i.name,
-            S = null != T && '' !== T ? c.Z.Messages.APPLICATION_ICON_A11Y_LABEL.format({ applicationName: T }) : c.Z.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL;
+        let v = null == i ? void 0 : i.name,
+            I = null != v && '' !== v ? c.intl.formatToPlainString(c.t.tiKyYm, { applicationName: v }) : c.intl.string(c.t['2B/phI']);
         return (0, r.jsx)('img', {
-            alt: S,
+            alt: I,
             src: t,
-            className: a()(d.gameIcon, m, p)
+            className: a()(d.gameIcon, E, m)
         });
     };
-(E.Sizes = _), (t.Z = E);
+(_.Sizes = f), (t.Z = _);

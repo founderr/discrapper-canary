@@ -3,26 +3,26 @@ n.d(t, {
         return d;
     }
 });
-var s = n(192379),
-    a = n(442837),
-    i = n(80932),
-    r = n(110924),
-    l = n(471613),
+var i = n(192379),
+    r = n(442837),
+    l = n(80932),
+    s = n(110924),
+    a = n(471613),
     o = n(889564);
 let c = [];
 function d(e) {
-    let { revision: t, emojis: n } = (0, a.cj)([l.Z], () => ({
-            revision: l.Z.getEmojiRevision(e),
-            emojis: l.Z.getEmojis(e)
+    let { revision: t, emojis: n } = (0, r.cj)([a.Z], () => ({
+            revision: a.Z.getEmojiRevision(e),
+            emojis: a.Z.getEmojis(e)
         })),
-        d = (0, r.Z)(t);
+        d = (0, s.Z)(t);
     return (
-        s.useEffect(() => {
-            (0, i.OQ)(e);
+        i.useEffect(() => {
+            (0, l.OQ)(e);
         }, [e]),
-        s.useEffect(() => {
-            null != d && d < t && (0, i.OQ)(e);
+        i.useEffect(() => {
+            null != d && d < t && (0, l.OQ)(e);
         }, [t, d, e]),
-        s.useMemo(() => (null == n ? c : n.filter((t) => (0, o.Kt)(t, e))), [n, e])
+        i.useMemo(() => (null == n ? c : n.filter((t) => (0, o.Kt)(t, e))), [n, e])
     );
 }

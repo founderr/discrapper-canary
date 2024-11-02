@@ -1,66 +1,66 @@
 n.d(t, {
     BG: function () {
-        return T;
+        return x;
     },
     DO: function () {
-        return N;
+        return f;
     },
     pt: function () {
-        return m;
+        return p;
     }
 }),
     n(47120);
-var s = n(570140),
-    a = n(668781),
-    i = n(881052),
-    r = n(45966),
-    l = n(637853),
+var i = n(570140),
+    r = n(668781),
+    l = n(881052),
+    s = n(45966),
+    a = n(637853),
     o = n(592125),
     c = n(823379),
     d = n(889369),
     u = n(570961),
-    _ = n(208665),
-    I = n(290511),
-    E = n(689938);
-function T() {
-    s.Z.dispatch({ type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_RESET' });
+    m = n(208665),
+    h = n(290511),
+    g = n(388032);
+function x() {
+    i.Z.dispatch({ type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_RESET' });
 }
-function m(e) {
-    s.Z.dispatch({
+function p(e) {
+    i.Z.dispatch({
         type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_TOGGLE',
         channelId: e
     });
 }
-async function N(e) {
+async function f(e) {
     let t = Array.from(d.Z.editedDefaultChannelIds).filter((e) => null != o.Z.getChannel(e)),
-        n = _.Z.advancedMode,
-        [T, m] = (0, l.d9)(e.id, [...t]),
-        N = (0, l.kl)(e.id, t, _.Z.editedOnboardingPrompts),
-        S = (0, l.kl)(e.id, t, _.Z.editedOnboardingPrompts, l.V7);
-    if (r.Z.getEnabled(e.id) && ((!n && (m.length < I.md || T.length < I.X)) || (n && (N.length < I.md || S.length < I.X)))) {
-        a.Z.show({
-            title: E.Z.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
-            body: E.Z.Messages.DEFAULT_CHANNELS_SAVE_INVALID_DEFAULT_CHANNELS
+        n = m.Z.advancedMode,
+        [x, p] = (0, a.d9)(e.id, [...t]),
+        f = (0, a.kl)(e.id, t, m.Z.editedOnboardingPrompts),
+        C = (0, a.kl)(e.id, t, m.Z.editedOnboardingPrompts, a.V7);
+    if (s.Z.getEnabled(e.id) && ((!n && (p.length < h.md || x.length < h.X)) || (n && (f.length < h.md || C.length < h.X)))) {
+        r.Z.show({
+            title: g.intl.string(g.t.iLdiqa),
+            body: g.intl.string(g.t.JOT74e)
         });
         return;
     }
     if (d.Z.hasChanges()) {
-        s.Z.dispatch({ type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_SUBMIT' });
+        i.Z.dispatch({ type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_SUBMIT' });
         try {
             await (0, u.n_)(e.id, { default_channel_ids: t }),
-                s.Z.dispatch({
+                i.Z.dispatch({
                     type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS',
                     guildId: e.id,
                     channelIds: t
                 });
         } catch (n) {
-            var g;
-            let { fieldName: e, error: t } = null !== (g = new i.Hx(n).getAnyErrorMessageAndField()) && void 0 !== g ? g : {};
-            a.Z.show({
-                title: E.Z.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
+            var I;
+            let { fieldName: e, error: t } = null !== (I = new l.Hx(n).getAnyErrorMessageAndField()) && void 0 !== I ? I : {};
+            r.Z.show({
+                title: g.intl.string(g.t.iLdiqa),
                 body: [e, t].filter(c.lm).join(': ')
             }),
-                s.Z.dispatch({ type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_FAILED' });
+                i.Z.dispatch({ type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_FAILED' });
         }
     }
 }

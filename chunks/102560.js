@@ -1,122 +1,122 @@
-l(47120);
-var n = l(200651),
-    a = l(192379),
-    o = l(392711),
-    s = l.n(o),
-    i = l(442837),
-    r = l(481060),
-    C = l(48210),
-    c = l(605436),
-    d = l(430824),
-    u = l(496675),
-    m = l(689938),
-    _ = l(720969);
+n(47120);
+var l = n(200651),
+    o = n(192379),
+    a = n(392711),
+    i = n.n(a),
+    r = n(442837),
+    s = n(481060),
+    c = n(48210),
+    C = n(605436),
+    d = n(430824),
+    u = n(496675),
+    m = n(388032),
+    h = n(720969);
 t.Z = (e) => {
-    let { guild: t, transitionState: l, onClose: o } = e,
-        [E, h] = a.useState(7),
-        [M, x] = a.useState(null),
-        [b, T] = a.useState([]),
-        L = a.useCallback(async () => {
-            x(null), x(await C.Z.updateEstimate(t.id, E, b));
-        }, [E, t.id, b]);
-    a.useEffect(() => {
-        L();
-    }, [L]);
-    let g = (0, i.Wu)(
+    let { guild: t, transitionState: n, onClose: a } = e,
+        [x, b] = o.useState(7),
+        [f, g] = o.useState(null),
+        [p, H] = o.useState([]),
+        j = o.useCallback(async () => {
+            g(null), g(await c.Z.updateEstimate(t.id, x, p));
+        }, [x, t.id, p]);
+    o.useEffect(() => {
+        j();
+    }, [j]);
+    let v = (0, r.Wu)(
         [u.Z, d.Z],
         () => {
             let e = u.Z.getHighestRole(t);
-            return s()(d.Z.getRoles(t.id))
+            return i()(d.Z.getRoles(t.id))
                 .sortBy((e) => e.position)
-                .filter((e) => !(0, c.pM)(t.id, e.id))
-                .filter((l) => u.Z.isRoleHigher(t, e, l))
+                .filter((e) => !(0, C.pM)(t.id, e.id))
+                .filter((n) => u.Z.isRoleHigher(t, e, n))
                 .value()
                 .map((e) => {
-                    let { id: t, name: l } = e;
+                    let { id: t, name: n } = e;
                     return {
-                        label: l,
+                        label: n,
                         value: t
                     };
                 });
         },
         [t]
     );
-    return (0, n.jsxs)(r.ModalRoot, {
-        transitionState: l,
+    return (0, l.jsxs)(s.ModalRoot, {
+        transitionState: n,
         children: [
-            (0, n.jsx)(r.ModalHeader, {
+            (0, l.jsx)(s.ModalHeader, {
                 separator: !1,
-                children: (0, n.jsxs)(r.Heading, {
+                children: (0, l.jsxs)(s.Heading, {
                     variant: 'heading-lg/semibold',
-                    children: [m.Z.Messages.PRUNE_MEMBERS, '\u2014', null != t ? t.toString() : '']
+                    children: [m.intl.string(m.t.zbyz7u), '\u2014', null != t ? t.toString() : '']
                 })
             }),
-            (0, n.jsxs)('div', {
-                className: _.content,
+            (0, l.jsxs)('div', {
+                className: h.content,
                 children: [
-                    (0, n.jsx)(r.FormItem, {
-                        title: m.Z.Messages.FORM_LABEL_LAST_SEEN,
-                        children: (0, n.jsx)(r.RadioGroup, {
-                            value: E,
+                    (0, l.jsx)(s.FormItem, {
+                        title: m.intl.string(m.t.YccTvL),
+                        children: (0, l.jsx)(s.RadioGroup, {
+                            value: x,
                             options: [
                                 {
-                                    name: m.Z.Messages.LAST_SEEN.format({ days: 7 }),
+                                    name: m.intl.formatToPlainString(m.t.FM1dHR, { days: 7 }),
                                     value: 7
                                 },
                                 {
-                                    name: m.Z.Messages.LAST_SEEN.format({ days: 30 }),
+                                    name: m.intl.formatToPlainString(m.t.FM1dHR, { days: 30 }),
                                     value: 30
                                 }
                             ],
                             onChange: (e) => {
                                 let { value: t } = e;
-                                h(t);
+                                b(t);
                             },
-                            className: _.spacing
+                            className: h.spacing
                         })
                     }),
-                    (0, n.jsx)(r.FormItem, {
-                        title: m.Z.Messages.PRUNE_WITH_ROLES,
-                        children: (0, n.jsx)(r.ScrollerThin, {
-                            className: _.scroller,
-                            children: (0, n.jsx)(r.SearchableSelect, {
+                    (0, l.jsx)(s.FormItem, {
+                        title: m.intl.string(m.t.buoe19),
+                        children: (0, l.jsx)(s.ScrollerThin, {
+                            className: h.scroller,
+                            children: (0, l.jsx)(s.SearchableSelect, {
                                 maxVisibleItems: 10,
                                 multi: !0,
-                                value: b,
-                                onChange: (e) => T(e),
-                                options: g
+                                value: p,
+                                onChange: (e) => H(e),
+                                options: v
                             })
                         })
                     }),
-                    (0, n.jsx)(r.FormText, {
-                        type: r.FormText.Types.DESCRIPTION,
-                        className: _.spacing,
+                    (0, l.jsx)(s.FormText, {
+                        type: s.FormText.Types.DESCRIPTION,
+                        className: h.spacing,
                         children:
-                            b.length > 0
-                                ? m.Z.Messages.FORM_HELP_LAST_SEEN_WITH_ROLES_1.format({
-                                      members: M,
-                                      days: E
+                            p.length > 0
+                                ? m.intl.format(m.t['5WxHHh'], {
+                                      members: f,
+                                      days: x
                                   })
-                                : m.Z.Messages.FORM_HELP_LAST_SEEN_1.format({
-                                      members: M,
-                                      days: E
+                                : m.intl.format(m.t.f13az8, {
+                                      members: f,
+                                      days: x
                                   })
                     })
                 ]
             }),
-            (0, n.jsxs)(r.ModalFooter, {
+            (0, l.jsxs)(s.ModalFooter, {
                 children: [
-                    (0, n.jsx)(r.Button, {
+                    (0, l.jsx)(s.Button, {
                         onClick: () => {
-                            C.Z.prune(t.id, E, b), o();
+                            c.Z.prune(t.id, x, p), a();
                         },
-                        children: m.Z.Messages.PRUNE
+                        children: m.intl.string(m.t['2mIlKS'])
                     }),
-                    (0, n.jsx)(r.Button, {
-                        look: r.Button.Looks.LINK,
-                        color: r.Button.Colors.PRIMARY,
-                        onClick: o,
-                        children: m.Z.Messages.CANCEL
+                    (0, l.jsx)(s.Button, {
+                        look: s.Button.Looks.LINK,
+                        color: s.Button.Colors.PRIMARY,
+                        onClick: a,
+                        children: m.intl.string(m.t['ETE/oK'])
                     })
                 ]
             })

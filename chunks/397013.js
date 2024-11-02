@@ -1,46 +1,46 @@
-a.r(t);
-var o = a(200651);
+a.r(e);
+var n = a(200651);
 a(192379);
-var n = a(481060),
-    s = a(313201),
-    c = a(689938),
-    l = a(454499);
-t.default = (e) => {
-    let { onClose: t } = e,
-        a = (0, s.Dt)();
-    return (0, o.jsxs)(n.ModalRoot, {
-        ...e,
+var o = a(481060),
+    c = a(313201),
+    l = a(388032),
+    s = a(454499);
+e.default = (t) => {
+    let { onClose: e } = t,
+        a = (0, c.Dt)();
+    return (0, n.jsxs)(o.ModalRoot, {
+        ...t,
         'aria-labelledby': a,
         children: [
-            (0, o.jsxs)(n.ModalHeader, {
+            (0, n.jsxs)(o.ModalHeader, {
                 separator: !1,
-                className: l.modalHeader,
+                className: s.modalHeader,
                 children: [
-                    (0, o.jsx)(n.Heading, {
+                    (0, n.jsx)(o.Heading, {
                         id: a,
                         variant: 'heading-xl/extrabold',
-                        children: c.Z.Messages.LIMITED_ACCESS_INFO_MODAL_HEADING
+                        children: l.intl.string(l.t.EouHws)
                     }),
-                    (0, o.jsx)(n.ModalCloseButton, {
-                        className: l.closeButton,
-                        onClick: t
+                    (0, n.jsx)(o.ModalCloseButton, {
+                        className: s.closeButton,
+                        onClick: e
                     })
                 ]
             }),
-            (0, o.jsx)(n.ModalContent, {
-                className: l.modalContent,
-                children: (0, o.jsx)(n.Text, {
+            (0, n.jsx)(o.ModalContent, {
+                className: s.modalContent,
+                children: (0, n.jsx)(o.Text, {
                     variant: 'text-md/normal',
-                    className: l.contentText,
-                    children: c.Z.Messages.LIMITED_ACCESS_INFO_MODAL_DESCRIPTION_V2
+                    className: s.contentText,
+                    children: l.intl.string(l.t.zNPBMD)
                 })
             }),
-            (0, o.jsx)(n.ModalFooter, {
-                children: (0, o.jsx)(n.Button, {
-                    className: l.button,
-                    size: n.Button.Sizes.MIN,
-                    onClick: t,
-                    children: c.Z.Messages.OKAY
+            (0, n.jsx)(o.ModalFooter, {
+                children: (0, n.jsx)(o.Button, {
+                    className: s.button,
+                    size: o.Button.Sizes.MIN,
+                    onClick: e,
+                    children: l.intl.string(l.t.BddRzc)
                 })
             })
         ]

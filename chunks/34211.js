@@ -6,8 +6,8 @@ a.d(t, {
     a(47120);
 var n,
     s = a(200651),
-    r = a(192379),
-    i = a(948789),
+    i = a(192379),
+    r = a(948789),
     l = a(66037),
     o = a(248108),
     c = a(231338),
@@ -124,66 +124,66 @@ let N = c.j_.MAIN_NAVIGATION_MENU,
             ]
         }
     ];
-class m extends (n = r.PureComponent) {
+class m extends (n = i.PureComponent) {
     render() {
-        let e = (0, i.fQ)(this.context.router),
-            { isMobile: t, isVisible: a, styles: n, TrackClick: r, avoidRouter: u } = this.props,
+        let e = (0, r.fQ)(this.context.router),
+            { isMobile: t, isVisible: a, styles: n, TrackClick: i, avoidRouter: u } = this.props,
             { sectionShown: m } = this.state;
-        return h(null != d.Z ? d.Z.getLocale().toLowerCase() : '').map((i) => {
-            if (null != i.links)
+        return h(null != d.Z ? d.Z.getLocale().toLowerCase() : '').map((r) => {
+            if (null != r.links)
                 return (0, s.jsx)(
                     o.Z,
                     {
-                        title: i.title,
-                        links: i.links,
-                        isOpen: m === i.title,
+                        title: r.title,
+                        links: r.links,
+                        isOpen: m === r.title,
                         isMobile: t,
                         avoidRouter: u,
-                        TrackClick: r,
+                        TrackClick: i,
                         onClose: this.closeSubNav,
                         onOpen: this.openSubNav
                     },
-                    i.title
+                    r.title
                 );
-            if (i.external && null != i.route)
+            if (r.external && null != r.route)
                 return (0, s.jsx)(
                     'li',
                     {
                         className: n.listItemInactive,
                         role: 'none',
-                        children: (0, s.jsx)(r, {
+                        children: (0, s.jsx)(i, {
                             className: n.mainNavLink,
                             eventName: N,
-                            data: i.linkClicked ? { linkClicked: i.linkClicked } : {},
-                            href: i.route,
+                            data: r.linkClicked ? { linkClicked: r.linkClicked } : {},
+                            href: r.route,
                             rel: 'me',
-                            children: i.title
+                            children: r.title
                         })
                     },
-                    'external_link_'.concat(i.route)
+                    'external_link_'.concat(r.route)
                 );
-            if (null != i.route)
+            if (null != r.route)
                 return (0, s.jsx)(
                     'li',
                     {
-                        className: e(i.route) ? n.listItemActive : n.listItemInactive,
+                        className: e(r.route) ? n.listItemActive : n.listItemInactive,
                         role: 'none',
                         children: (0, s.jsx)(l.Z, {
                             avoidRouter: u,
-                            to: i.route,
+                            to: r.route,
                             from: c.j_.MAIN_NAVIGATION_MENU,
                             tabIndex: a ? 0 : -1,
                             role: 'menuitem',
-                            children: (0, s.jsx)(r, {
+                            children: (0, s.jsx)(i, {
                                 tag: 'span',
                                 className: n.mainNavLink,
                                 eventName: N,
-                                data: { linkClicked: i.linkClicked },
-                                children: i.title
+                                data: { linkClicked: r.linkClicked },
+                                children: r.title
                             })
                         })
                     },
-                    'link_'.concat(i.route)
+                    'link_'.concat(r.route)
                 );
             return [];
         });

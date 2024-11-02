@@ -1,9 +1,9 @@
 n.d(t, {
     V: function () {
-        return S;
+        return I;
     },
     e: function () {
-        return m;
+        return E;
     }
 }),
     n(47120);
@@ -17,9 +17,9 @@ var a = n(442837),
     u = n(271383),
     c = n(944486),
     d = n(594174),
-    _ = n(689938),
-    E = n(146263);
-function f(e, t, n) {
+    f = n(388032),
+    _ = n(146263);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,37 +32,37 @@ function f(e, t, n) {
         e
     );
 }
-let h = new Set();
-class p extends (r = a.ZP.PersistedStore) {
+let p = new Set();
+class m extends (r = a.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (h = new Set(e));
+        null != e && (p = new Set(e));
     }
     hasId(e) {
-        return h.has(e);
+        return p.has(e);
     }
     getState() {
-        return [...h];
+        return [...p];
     }
 }
-f(p, 'displayName', 'PTOStore'), f(p, 'persistKey', 'PTOStore');
-let I = new p(s.Z, {}),
-    m = (e) =>
-        (0, a.e7)([u.ZP, d.default, I], () => {
+h(m, 'displayName', 'PTOStore'), h(m, 'persistKey', 'PTOStore');
+let g = new m(s.Z, {}),
+    E = (e) =>
+        (0, a.e7)([u.ZP, d.default, g], () => {
             let t = d.default.getCurrentUser();
             if (null == t || !t.isStaff() || !e.isDM()) return !1;
             let n = d.default.getUser(e.getRecipientId());
             if (!(null == n ? void 0 : n.isStaff())) return !1;
             let r = u.ZP.getNicknames(n.id).some((e) => e.endsWith('[PTO]') || e.endsWith('[OOO]'));
-            return r ? !I.hasId(n.id) && r : (h.delete(n.id) && I.emitChange(), !1);
+            return r ? !g.hasId(n.id) && r : (p.delete(n.id) && g.emitChange(), !1);
         }),
-    T = () => {
+    v = () => {
         let e = c.Z.getChannelId();
         if (null == e) return;
         let t = l.Z.getChannel(e);
-        null != t && t.isPrivate() && !h.has(t.getRecipientId()) && (h.add(t.getRecipientId()), I.emitChange());
+        null != t && t.isPrivate() && !p.has(t.getRecipientId()) && (p.add(t.getRecipientId()), g.emitChange());
     },
-    S = () =>
+    I = () =>
         (0, i.jsxs)('div', {
-            className: E.bar,
-            children: [_.Z.Messages.STAFF_PTO_NOTICE, (0, i.jsx)(o.B, { onClick: T })]
+            className: _.bar,
+            children: [f.intl.string(f.t['2UvR1N']), (0, i.jsx)(o.B, { onClick: v })]
         });

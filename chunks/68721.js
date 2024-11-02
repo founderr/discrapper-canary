@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return h;
     }
 }),
     n(411104);
@@ -25,12 +25,12 @@ function d(e, t, n) {
         e
     );
 }
-let _ = new i.Y('Output'),
-    E = new s.Z();
-class f extends r.EventEmitter {
+let f = new i.Y('Output'),
+    _ = new s.Z();
+class h extends r.EventEmitter {
     destroy() {
         var e, t;
-        this.removeAllListeners(), null === (e = this.cleanup) || void 0 === e || e.call(this), this.reset(), null != this.stream && (E.release(this.stream), (this.stream = void 0)), null === (t = this._audioFilter) || void 0 === t || t.dispose(), (this._audioFilter = void 0), (this.destroyed = !0);
+        this.removeAllListeners(), null === (e = this.cleanup) || void 0 === e || e.call(this), this.reset(), null != this.stream && (_.release(this.stream), (this.stream = void 0)), null === (t = this._audioFilter) || void 0 === t || t.dispose(), (this._audioFilter = void 0), (this.destroyed = !0);
     }
     reset() {
         this.setSpeaking(!1);
@@ -81,7 +81,7 @@ class f extends r.EventEmitter {
         this._automaticGainControl !== e && ((this._automaticGainControl = e), null != this.stream && this.enable());
     }
     async enable() {
-        null != this.cleanup && (this.cleanup(), (this.cleanup = void 0)), null != this.stream && (E.release(this.stream), (this.stream = void 0));
+        null != this.cleanup && (this.cleanup(), (this.cleanup = void 0)), null != this.stream && (_.release(this.stream), (this.stream = void 0));
         let e = await (0, a.Hg)(),
             t = {
                 echoCancellation: this.echoCancellation,
@@ -90,8 +90,8 @@ class f extends r.EventEmitter {
             };
         e.some((e) => e.id === this.sourceId) && (t.deviceId = this.sourceId);
         try {
-            let e = await E.acquire({ audio: t });
-            if (this.destroyed) throw (E.release(e), Error('AudioInput: Already destroyed'));
+            let e = await _.acquire({ audio: t });
+            if (this.destroyed) throw (_.release(e), Error('AudioInput: Already destroyed'));
             if (this._noiseCancellation)
                 try {
                     let t = await (0, o.n)();
@@ -101,13 +101,13 @@ class f extends r.EventEmitter {
                             null === (t = this._audioFilter) || void 0 === t || t.enable();
                         }),
                         this._audioFilter.addEventListener('dispose', (t) => {
-                            E.release(e);
+                            _.release(e);
                         });
                     let n = this.context.createMediaStreamSource(e),
                         r = this.context.createMediaStreamDestination();
                     n.connect(this._audioFilter), this._audioFilter.connect(r), (this.stream = r.stream);
                 } catch (t) {
-                    _.error('failure creating krisp node'), _.error(t), (this.stream = e);
+                    f.error('failure creating krisp node'), f.error(t), (this.stream = e);
                 }
             else this.stream = e;
             return this.updateMode(), this.updateAudioTracks(), this.emit('permission', !0), this.emit('stream', this.stream), e;

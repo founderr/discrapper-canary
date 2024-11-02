@@ -1,15 +1,15 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return g;
+            return x;
         }
     });
 var i = n(200651);
 n(192379);
-var s = n(990547),
-    a = n(481060),
-    l = n(410575),
-    r = n(906732),
+var l = n(990547),
+    r = n(481060),
+    a = n(410575),
+    s = n(906732),
     o = n(213609),
     c = n(821564),
     u = n(453925),
@@ -17,52 +17,52 @@ var s = n(990547),
     h = n(947150),
     m = n(488021),
     p = n(822556),
-    _ = n(981631),
-    f = n(689938),
-    E = n(678199);
-function g(e) {
-    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: g = !1, renderInputModes: C = !1, renderInputVolume: I = !1, renderOutputVolume: T = !1, onSelect: x } = e,
-        { analyticsLocations: S } = (0, r.ZP)();
+    f = n(981631),
+    g = n(388032),
+    C = n(678199);
+function x(e) {
+    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: x = !1, renderInputModes: v = !1, renderInputVolume: _ = !1, renderOutputVolume: I = !1, onSelect: E } = e,
+        { analyticsLocations: b } = (0, s.ZP)();
     (0, o.Z)({
-        type: s.ImpressionTypes.MENU,
-        name: s.ImpressionNames.AUDIO_DEVICE_MENU,
-        properties: { location_stack: S }
+        type: l.ImpressionTypes.MENU,
+        name: l.ImpressionNames.AUDIO_DEVICE_MENU,
+        properties: { location_stack: b }
     });
-    let v = (0, p.Z)(),
-        N = (0, h.Z)(S),
-        A = (0, m.Z)(S),
-        Z = (0, c.Z)(S),
-        M = (0, u.Z)(S),
-        b = (0, d.Z)(S);
-    return (0, i.jsx)(l.Z, {
-        object: _.qAy.CONTEXT_MENU,
-        children: (0, i.jsxs)(a.Menu, {
-            onSelect: x,
-            className: E.menu,
+    let S = (0, p.Z)(),
+        Z = (0, h.Z)(b),
+        T = (0, m.Z)(b),
+        N = (0, c.Z)(b),
+        j = (0, u.Z)(b),
+        A = (0, d.Z)(b);
+    return (0, i.jsx)(a.Z, {
+        object: f.qAy.CONTEXT_MENU,
+        children: (0, i.jsxs)(r.Menu, {
+            onSelect: E,
+            className: C.menu,
             onClose: t,
             navId: 'audio-device-context',
-            'aria-label': f.Z.Messages.AUDIO_DEVICE_ACTIONS,
+            'aria-label': g.intl.string(g.t.ZR1Ss7),
             children: [
-                g
-                    ? (0, i.jsx)(a.MenuGroup, {
-                          label: f.Z.Messages.INPUT_DEVICE,
-                          children: N
-                      })
-                    : null,
-                n
-                    ? (0, i.jsx)(a.MenuGroup, {
-                          label: f.Z.Messages.OUTPUT_DEVICE,
-                          children: A
-                      })
-                    : null,
-                C
-                    ? (0, i.jsx)(a.MenuGroup, {
-                          label: f.Z.Messages.FORM_LABEL_INPUT_MODE,
+                x
+                    ? (0, i.jsx)(r.MenuGroup, {
+                          label: g.intl.string(g.t.ElbIXF),
                           children: Z
                       })
                     : null,
-                (0, i.jsxs)(a.MenuGroup, {
-                    children: [I ? M : null, T ? b : null, v]
+                n
+                    ? (0, i.jsx)(r.MenuGroup, {
+                          label: g.intl.string(g.t['6Ww0iI']),
+                          children: T
+                      })
+                    : null,
+                v
+                    ? (0, i.jsx)(r.MenuGroup, {
+                          label: g.intl.string(g.t['pS+K2N']),
+                          children: N
+                      })
+                    : null,
+                (0, i.jsxs)(r.MenuGroup, {
+                    children: [_ ? j : null, I ? A : null, S]
                 })
             ]
         })

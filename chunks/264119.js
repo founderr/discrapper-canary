@@ -1,56 +1,56 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var n = t(200651);
-t(192379);
-var o = t(481060),
-    a = t(689938),
-    l = t(859565);
-function r(e) {
-    let { email: s, onClose: t } = e;
-    return (0, n.jsxs)(n.Fragment, {
+var o = n(200651);
+n(192379);
+var s = n(481060),
+    l = n(388032),
+    a = n(859565);
+function i(e) {
+    let { email: t, onClose: n } = e;
+    return (0, o.jsxs)(o.Fragment, {
         children: [
-            (0, n.jsxs)(o.ModalHeader, {
+            (0, o.jsxs)(s.ModalHeader, {
                 separator: !1,
-                className: l.header,
+                className: a.header,
                 children: [
-                    (0, n.jsx)(o.Heading, {
-                        className: l.title,
+                    (0, o.jsx)(s.Heading, {
+                        className: a.title,
                         variant: 'heading-xl/semibold',
-                        children: a.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_COMPLETE_TITLE
+                        children: l.intl.string(l.t['8O+nFx'])
                     }),
-                    (0, n.jsx)(o.ModalCloseButton, {
-                        onClick: t,
-                        className: l.modalCloseButton
+                    (0, o.jsx)(s.ModalCloseButton, {
+                        onClick: n,
+                        className: a.modalCloseButton
                     })
                 ]
             }),
-            (0, n.jsx)(o.ModalContent, {
-                className: l.content,
-                children: (0, n.jsx)(o.Text, {
-                    className: l.description,
+            (0, o.jsx)(s.ModalContent, {
+                className: a.content,
+                children: (0, o.jsx)(s.Text, {
+                    className: a.description,
                     variant: 'text-md/normal',
-                    children: a.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_COMPLETE_DESCRIPTION.format({ email: s })
+                    children: l.intl.format(l.t.Zvx0Oz, { email: t })
                 })
             }),
-            (0, n.jsx)(o.ModalContent, {
-                className: l.content,
-                children: (0, n.jsx)(o.Text, {
-                    className: l.tooltip,
+            (0, o.jsx)(s.ModalContent, {
+                className: a.content,
+                children: (0, o.jsx)(s.Text, {
+                    className: a.tooltip,
                     variant: 'text-sm/normal',
-                    children: a.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CHECK_SPAM
+                    children: l.intl.string(l.t.yb7itb)
                 })
             }),
-            (0, n.jsx)(o.ModalFooter, {
-                className: l.modalFooter,
-                children: (0, n.jsx)(o.Button, {
-                    className: l.__invalid_submit,
-                    color: o.Button.Colors.BRAND,
-                    size: o.Button.Sizes.MEDIUM,
-                    onClick: t,
-                    children: a.Z.Messages.OKAY
+            (0, o.jsx)(s.ModalFooter, {
+                className: a.modalFooter,
+                children: (0, o.jsx)(s.Button, {
+                    className: a.__invalid_submit,
+                    color: s.Button.Colors.BRAND,
+                    size: s.Button.Sizes.MEDIUM,
+                    onClick: n,
+                    children: l.intl.string(l.t.BddRzc)
                 })
             })
         ]

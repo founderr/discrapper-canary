@@ -1,53 +1,53 @@
-n.d(t, {
+n.d(e, {
     R: function () {
         return o;
     },
     b: function () {
-        return s;
+        return i;
     }
 }),
     n(724458),
     n(653041),
     n(47120);
-var a = n(192379),
-    r = n(979554);
-class s {
+var r = n(192379),
+    a = n(979554);
+class i {
     get firstAvatarDecoration() {
-        return this.getFirstItemByType(r.Z.AVATAR_DECORATION);
+        return this.getFirstItemByType(a.Z.AVATAR_DECORATION);
     }
     get firstProfileEffect() {
-        return this.getFirstItemByType(r.Z.PROFILE_EFFECT);
+        return this.getFirstItemByType(a.Z.PROFILE_EFFECT);
     }
-    getFirstItemByType(e) {
-        var t;
-        let n = (null !== (t = this.itemsByTypes.get(e)) && void 0 !== t ? t : [])[0];
+    getFirstItemByType(t) {
+        var e;
+        let n = (null !== (e = this.itemsByTypes.get(t)) && void 0 !== e ? e : [])[0];
         if (null != n) return n;
     }
-    sortByTypes(e) {
-        return e.reduce((e, t) => {
-            let n = e.get(t.type);
-            return null != n ? n.push(t) : e.set(t.type, [t]), e;
+    sortByTypes(t) {
+        return t.reduce((t, e) => {
+            let n = t.get(e.type);
+            return null != n ? n.push(e) : t.set(e.type, [e]), t;
         }, new Map());
     }
-    constructor(e) {
-        var t, n, a;
-        (t = this),
-            (a = void 0),
-            (n = 'itemsByTypes') in t
-                ? Object.defineProperty(t, n, {
-                      value: a,
+    constructor(t) {
+        var e, n, r;
+        (e = this),
+            (r = void 0),
+            (n = 'itemsByTypes') in e
+                ? Object.defineProperty(e, n, {
+                      value: r,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[n] = a),
-            (this.itemsByTypes = this.sortByTypes(e));
+                : (e[n] = r),
+            (this.itemsByTypes = this.sortByTypes(t));
     }
 }
-let o = (e) => {
-    let { firstProfileEffect: t, firstAvatarDecoration: n } = a.useMemo(() => new s(e.items), [e]);
+let o = (t) => {
+    let { firstProfileEffect: e, firstAvatarDecoration: n } = r.useMemo(() => new i(t.items), [t]);
     return {
-        firstProfileEffect: t,
+        firstProfileEffect: e,
         firstAvatarDecoration: n
     };
 };

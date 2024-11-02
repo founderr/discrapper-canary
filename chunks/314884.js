@@ -8,21 +8,21 @@ var r,
     u = n(78839);
 let c = !1,
     d = {};
-function _(e) {
+function f(e) {
     let { guildBoostSlot: t } = e;
     d = {
         ...d,
         [t.id]: t
     };
 }
-function E() {
+function _() {
     let e = {};
     for (let t of Object.values(d)) (e[t.id] = t), (t.subscription = u.ZP.getSubscriptionById(t.subscriptionId));
     d = e;
 }
-class f extends (r = o.ZP.Store) {
+class h extends (r = o.ZP.Store) {
     initialize() {
-        this.syncWith([u.ZP], E);
+        this.syncWith([u.ZP], _);
     }
     get hasFetched() {
         return c;
@@ -35,7 +35,7 @@ class f extends (r = o.ZP.Store) {
     }
 }
 (s = 'GuildBoostSlotStore'),
-    (a = 'displayName') in (i = f)
+    (a = 'displayName') in (i = h)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -43,7 +43,7 @@ class f extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new f(l.Z, {
+    (t.Z = new h(l.Z, {
         GUILD_BOOST_SLOTS_FETCH_SUCCESS: function (e) {
             let { guildBoostSlots: t } = e;
             (d = {}),
@@ -52,9 +52,9 @@ class f extends (r = o.ZP.Store) {
                 }),
                 (c = !0);
         },
-        GUILD_BOOST_SLOT_UPDATE_SUCCESS: _,
-        GUILD_BOOST_SLOT_CREATE: _,
-        GUILD_BOOST_SLOT_UPDATE: _,
+        GUILD_BOOST_SLOT_UPDATE_SUCCESS: f,
+        GUILD_BOOST_SLOT_CREATE: f,
+        GUILD_BOOST_SLOT_UPDATE: f,
         LOGOUT: function () {
             (d = {}), (c = !1);
         }

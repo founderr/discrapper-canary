@@ -7,35 +7,35 @@ var l = t(200651);
 t(192379);
 var i = t(409794),
     r = t(777207),
-    s = t(541822),
+    o = t(541822),
     a = t(330711),
-    o = t(770561);
+    s = t(770561);
 function u(n) {
-    let { benefits: e, description: t, imgSrc: u, title: c, tag: d, FallbackIcon: f } = n,
-        p = null != u ? { '--custom-background-url': 'url('.concat(u.toString(), ')') } : void 0;
+    let { benefits: e, description: t, imgSrc: u, title: c, tag: d, FallbackIcon: p } = n,
+        f = null != u ? { '--custom-background-url': 'url('.concat(u.toString(), ')') } : void 0;
     return (0, l.jsx)('div', {
-        className: o.container,
-        children: (0, l.jsx)(s.Z, {
-            className: o.scroller,
+        className: s.container,
+        children: (0, l.jsx)(o.Z, {
+            className: s.scroller,
             children: (0, l.jsxs)('div', {
-                className: o.scrollContent,
+                className: s.scrollContent,
                 children: [
                     (0, l.jsxs)('div', {
-                        className: o.header,
+                        className: s.header,
                         children: [
                             (0, l.jsx)('div', {
-                                className: o.headerBackground,
-                                style: p
+                                className: s.headerBackground,
+                                style: f
                             }),
                             (0, l.jsx)('div', {
-                                className: o.headerImage,
+                                className: s.headerImage,
                                 children:
                                     null != u
                                         ? (0, l.jsx)('img', {
                                               src: u.toString(),
                                               alt: ''
                                           })
-                                        : (0, l.jsx)(f, {
+                                        : (0, l.jsx)(p, {
                                               size: 'custom',
                                               color: 'var(--text-muted)',
                                               height: 96,
@@ -45,10 +45,10 @@ function u(n) {
                         ]
                     }),
                     (0, l.jsxs)('div', {
-                        className: o.content,
+                        className: s.content,
                         children: [
                             (0, l.jsxs)('div', {
-                                className: o.details,
+                                className: s.details,
                                 children: [
                                     null != d && (0, l.jsx)('div', { children: d }),
                                     (0, l.jsx)(i.X, {
@@ -61,14 +61,14 @@ function u(n) {
                                         (0, l.jsx)(r.x, {
                                             color: 'text-normal',
                                             variant: 'text-md/normal',
-                                            className: o.description,
+                                            className: s.description,
                                             children: t
                                         })
                                 ]
                             }),
                             null != e &&
                                 (0, l.jsxs)('div', {
-                                    className: o.benefits,
+                                    className: s.benefits,
                                     children: [
                                         (0, l.jsx)(r.x, {
                                             color: 'header-secondary',

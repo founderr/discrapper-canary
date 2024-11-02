@@ -1,24 +1,24 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return C;
     }
 });
 var i = n(200651),
-    a = n(192379),
-    s = n(442837),
-    r = n(224706),
-    l = n(931240),
+    r = n(192379),
+    l = n(442837),
+    a = n(224706),
+    s = n(931240),
     o = n(650461),
     c = n(598131),
     d = n(34993),
     u = n(950279),
-    _ = n(974842),
-    E = n(363915),
-    h = n(308083),
-    m = n(689938);
-function I(e) {
+    h = n(974842),
+    m = n(363915),
+    p = n(308083),
+    g = n(388032);
+function f(e) {
     let t = (0, o.Wg)(),
-        { progress: n, errors: i } = (0, s.cj)([o.ZP], () => {
+        { progress: n, errors: i } = (0, l.cj)([o.ZP], () => {
             var n;
             let i = o.ZP.getStateForGuild(e);
             return {
@@ -29,42 +29,42 @@ function I(e) {
     return {
         progress: n,
         errors: i,
-        handleClanUpdate: a.useCallback((t) => l._9(e, t), [e])
+        handleClanUpdate: r.useCallback((t) => s._9(e, t), [e])
     };
 }
-let p = {
-    [h.Wy.GAMES]: function (e) {
+let _ = {
+    [p.Wy.GAMES]: function (e) {
         let { guildId: t } = e;
-        a.useEffect(() => {
-            r.Z.getDetectableGames();
+        r.useEffect(() => {
+            a.Z.getDetectableGames();
         }, []);
-        let { progress: n, errors: s, handleClanUpdate: l } = I(t);
+        let { progress: n, errors: l, handleClanUpdate: s } = f(t);
         return (0, i.jsx)(u.Z, {
-            title: m.Z.Messages.CLAN_SETUP_GAMES_TITLE,
-            description: m.Z.Messages.CLAN_SETUP_GAMES_SUBTITLE,
-            onUpdateGames: (e) => l({ gameApplicationIds: e }),
+            title: g.intl.string(g.t.t6Mbq6),
+            description: g.intl.string(g.t.E7Ymwc),
+            onUpdateGames: (e) => s({ gameApplicationIds: e }),
             gameApplicationIds: n.gameApplicationIds,
-            error: null == s ? void 0 : s.gameApplicationIds,
+            error: null == l ? void 0 : l.gameApplicationIds,
             guildId: t,
             includeSuggestedGames: !0
         });
     },
-    [h.Wy.CUSTOMIZE_TAG_BADGE]: function (e) {
+    [p.Wy.CUSTOMIZE_TAG_BADGE]: function (e) {
         let { guildId: t } = e,
-            { progress: n, errors: a, handleClanUpdate: s } = I(t);
-        return (0, i.jsx)(_.Z, {
-            handleUpdate: s,
+            { progress: n, errors: r, handleClanUpdate: l } = f(t);
+        return (0, i.jsx)(h.Z, {
+            handleUpdate: l,
             tag: n.tag,
-            error: null == a ? void 0 : a.tag,
+            error: null == r ? void 0 : r.tag,
             badge: n.badgeKind,
             primaryColor: n.badgePrimaryColor,
             secondaryColor: n.badgeSecondaryColor,
             furthestStep: n.furthestStep
         });
     },
-    [h.IS.CUSTOMIZE_DISCOVERY]: function (e) {
+    [p.IS.CUSTOMIZE_DISCOVERY]: function (e) {
         let { guildId: t } = e,
-            { progress: n } = I(t);
+            { progress: n } = f(t);
         return (0, i.jsx)(i.Fragment, {
             children: (0, i.jsx)(c.Z, {
                 guildId: t,
@@ -75,43 +75,43 @@ let p = {
             })
         });
     },
-    [h.IS.THANK_YOU_END]: function (e) {
+    [p.IS.THANK_YOU_END]: function (e) {
         let { guildId: t } = e;
         return (0, i.jsx)(d.Z, {});
     }
 };
-function g(e) {
+function E(e) {
     return e.currentStep.toString();
 }
-function T(e) {
-    if (!p.hasOwnProperty(e.currentStep)) return null;
-    let t = p[e.currentStep];
+function I(e) {
+    if (!_.hasOwnProperty(e.currentStep)) return null;
+    let t = _[e.currentStep];
     return (0, i.jsx)(t, { guildId: e.guildId });
 }
-function S(e) {
+function C(e) {
     let { guildId: t } = e,
         n = (0, o.Wg)(),
-        r = (0, s.e7)([o.ZP], () => {
-            var e, i, a;
-            return null !== (a = null === (i = o.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : null === (e = i.progress) || void 0 === e ? void 0 : e.currentStep) && void 0 !== a ? a : n.currentStep;
+        a = (0, l.e7)([o.ZP], () => {
+            var e, i, r;
+            return null !== (r = null === (i = o.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : null === (e = i.progress) || void 0 === e ? void 0 : e.currentStep) && void 0 !== r ? r : n.currentStep;
         });
-    a.useEffect(() => {
+    r.useEffect(() => {
         var e;
-        if (((e = r), !p.hasOwnProperty(e))) l.LX();
-    }, [r]);
-    let c = a.useMemo(
+        if (((e = a), !_.hasOwnProperty(e))) s.LX();
+    }, [a]);
+    let c = r.useMemo(
         () => [
             {
-                currentStep: r,
+                currentStep: a,
                 guildId: t
             }
         ],
-        [r, t]
+        [a, t]
     );
-    return (0, i.jsx)(E.Z, {
-        currentStep: r,
+    return (0, i.jsx)(m.Z, {
+        currentStep: a,
         items: c,
-        renderItem: T,
-        getItemKey: g
+        renderItem: I,
+        getItemKey: E
     });
 }

@@ -1,76 +1,76 @@
-s.d(t, {
+n.d(t, {
     Z: function () {
         return m;
     }
 });
-var a = s(200651);
-s(192379);
-var n = s(512722),
-    l = s.n(n),
-    o = s(481060),
-    i = s(600164),
-    r = s(565138),
-    c = s(703656),
-    d = s(689938),
-    u = s(178863);
+var i = n(200651);
+n(192379);
+var l = n(512722),
+    s = n.n(l),
+    a = n(481060),
+    o = n(600164),
+    r = n(565138),
+    c = n(703656),
+    d = n(388032),
+    u = n(178863);
 function m(e) {
-    let { directoryGuildName: t, guildToAdd: s, isExistingGuildFlow: n, onClose: m } = e;
+    let { directoryGuildName: t, guildToAdd: n, isExistingGuildFlow: l, onClose: m } = e;
     return (
-        l()(null != s, 'Missing guild in Hub add guild confirmation'),
-        (0, a.jsxs)(a.Fragment, {
+        s()(null != n, 'Missing guild in Hub add guild confirmation'),
+        (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, a.jsxs)(o.ModalHeader, {
-                    direction: i.Z.Direction.VERTICAL,
+                (0, i.jsxs)(a.ModalHeader, {
+                    direction: o.Z.Direction.VERTICAL,
                     className: u.header,
                     separator: !1,
                     children: [
                         null != m &&
-                            (0, a.jsx)(o.ModalCloseButton, {
+                            (0, i.jsx)(a.ModalCloseButton, {
                                 className: u.closeButton,
                                 onClick: m
                             }),
-                        (0, a.jsx)(r.Z, {
-                            guild: s,
+                        (0, i.jsx)(r.Z, {
+                            guild: n,
                             size: r.Z.Sizes.XLARGE,
                             active: !0
                         }),
-                        (0, a.jsx)(o.Heading, {
+                        (0, i.jsx)(a.Heading, {
                             className: u.title,
                             variant: 'heading-xl/semibold',
-                            children: d.Z.Messages.HUB_ADD_OR_CREATE_SERVER_CONFIRMATION_TITLE
+                            children: d.intl.string(d.t.CueiPT)
                         }),
-                        (0, a.jsx)(o.Text, {
+                        (0, i.jsx)(a.Text, {
                             className: u.__invalid_subtitle,
                             color: 'header-secondary',
                             variant: 'text-md/normal',
-                            children: n ? d.Z.Messages.HUB_ADD_SERVER_CONFIRMATION_SUBTITLE.format({ guildName: t }) : d.Z.Messages.HUB_CREATE_SERVER_CONFIRMATION_SUBTITLE.format({ guildName: t })
+                            children: l ? d.intl.formatToPlainString(d.t.R7Pqn5, { guildName: t }) : d.intl.formatToPlainString(d.t.eIxPSk, { guildName: t })
                         })
                     ]
                 }),
-                (0, a.jsx)(o.ModalFooter, {
+                (0, i.jsx)(a.ModalFooter, {
                     className: u.buttonRow,
-                    children: n
-                        ? (0, a.jsx)(o.Button, {
+                    children: l
+                        ? (0, i.jsx)(a.Button, {
                               className: u.addConfirmButton,
-                              color: o.Button.Colors.BRAND,
+                              color: a.Button.Colors.BRAND,
                               onClick: m,
-                              children: d.Z.Messages.HUB_ADD_SERVER_CONFIRMATION_BUTTON
+                              children: d.intl.string(d.t['X0WK+/'])
                           })
-                        : (0, a.jsxs)(a.Fragment, {
+                        : (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, a.jsx)(o.Button, {
+                                  (0, i.jsx)(a.Button, {
                                       className: u.createSecondaryButton,
-                                      color: o.Button.Colors.PRIMARY,
+                                      color: a.Button.Colors.PRIMARY,
                                       onClick: m,
-                                      children: d.Z.Messages.HUB_CREATE_SERVER_CONFIRMATION_STAY
+                                      children: d.intl.string(d.t['X/VABg'])
                                   }),
-                                  (0, a.jsx)(o.Button, {
+                                  (0, i.jsx)(a.Button, {
                                       className: u.createConfirmButton,
-                                      color: o.Button.Colors.BRAND,
+                                      color: a.Button.Colors.BRAND,
                                       onClick: () => {
-                                          (0, c.XU)(s.id), null == m || m();
+                                          (0, c.XU)(n.id), null == m || m();
                                       },
-                                      children: d.Z.Messages.HUB_CREATE_SERVER_CONFIRMATION_GO
+                                      children: d.intl.string(d.t.DymAQk)
                                   })
                               ]
                           })

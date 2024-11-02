@@ -7,7 +7,7 @@ var r = n(200651);
 n(192379);
 var i = n(481060),
     a = n(921944),
-    s = n(689938),
+    s = n(388032),
     o = n(46403),
     l = n(905287);
 function u(e) {
@@ -32,12 +32,12 @@ function u(e) {
                     (0, r.jsx)(i.Heading, {
                         className: o.text,
                         variant: 'heading-sm/semibold',
-                        children: s.Z.Messages.NITROWEEN_GIFT_UPSELL_TITLE
+                        children: s.intl.string(s.t['YMI+UV'])
                     }),
                     (0, r.jsx)(i.Text, {
                         className: o.text,
                         variant: 'text-sm/normal',
-                        children: s.Z.Messages.NITROWEEN_GIFT_UPSELL_DESCRIPTION
+                        children: s.intl.string(s.t.BIBwbm)
                     })
                 ]
             }),
@@ -47,7 +47,7 @@ function u(e) {
                     className: o.ctaButton,
                     color: i.Button.Colors.BRAND_INVERTED,
                     onClick: () => n(),
-                    children: s.Z.Messages.CHECK_IT_OUT
+                    children: s.intl.string(s.t.RzWDqa)
                 })
             }),
             (0, r.jsx)('div', { className: o.pointer })

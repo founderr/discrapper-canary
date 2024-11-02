@@ -17,11 +17,11 @@ var r,
         'sha-512': 'SHA-512',
         sha512: 'SHA-512'
     },
-    _ = [];
-function E() {
+    f = [];
+function _() {
     return i ? i : (i = n.g.process && n.g.process.nextTick ? n.g.process.nextTick : n.g.queueMicrotask ? n.g.queueMicrotask : n.g.setImmediate ? n.g.setImmediate : n.g.setTimeout);
 }
-function f(e, t, n, r, i) {
+function h(e, t, n, r, i) {
     return c
         .importKey('raw', e, { name: 'PBKDF2' }, !1, ['deriveBits'])
         .then(function (e) {
@@ -40,31 +40,31 @@ function f(e, t, n, r, i) {
             return a.from(e);
         });
 }
-e.exports = function (e, t, i, h, p, I) {
-    'function' == typeof p && ((I = p), (p = void 0));
-    var m = d[(p = p || 'sha1').toLowerCase()];
-    if (!m || 'function' != typeof n.g.Promise) {
-        E()(function () {
+e.exports = function (e, t, i, p, m, g) {
+    'function' == typeof m && ((g = m), (m = void 0));
+    var E = d[(m = m || 'sha1').toLowerCase()];
+    if (!E || 'function' != typeof n.g.Promise) {
+        _()(function () {
             var n;
             try {
-                n = l(e, t, i, h, p);
+                n = l(e, t, i, p, m);
             } catch (e) {
-                return I(e);
+                return g(e);
             }
-            I(null, n);
+            g(null, n);
         });
         return;
     }
-    if ((s(i, h), (e = u(e, o, 'Password')), (t = u(t, o, 'Salt')), 'function' != typeof I)) throw Error('No callback provided to pbkdf2');
+    if ((s(i, p), (e = u(e, o, 'Password')), (t = u(t, o, 'Salt')), 'function' != typeof g)) throw Error('No callback provided to pbkdf2');
     !(function (e, t) {
         e.then(
             function (e) {
-                E()(function () {
+                _()(function () {
                     t(null, e);
                 });
             },
             function (e) {
-                E()(function () {
+                _()(function () {
                     t(e);
                 });
             }
@@ -72,18 +72,18 @@ e.exports = function (e, t, i, h, p, I) {
     })(
         (function (e) {
             if ((n.g.process && !n.g.process.browser) || !c || !c.importKey || !c.deriveBits) return Promise.resolve(!1);
-            if (void 0 !== _[e]) return _[e];
-            var t = f((r = r || a.alloc(8)), r, 10, 128, e)
+            if (void 0 !== f[e]) return f[e];
+            var t = h((r = r || a.alloc(8)), r, 10, 128, e)
                 .then(function () {
                     return !0;
                 })
                 .catch(function () {
                     return !1;
                 });
-            return (_[e] = t), t;
-        })(m).then(function (n) {
-            return n ? f(e, t, i, h, m) : l(e, t, i, h, p);
+            return (f[e] = t), t;
+        })(E).then(function (n) {
+            return n ? h(e, t, i, p, E) : l(e, t, i, p, m);
         }),
-        I
+        g
     );
 };

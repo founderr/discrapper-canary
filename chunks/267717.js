@@ -1,66 +1,66 @@
-t.r(s),
-    t.d(s, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return T;
+            return g;
         },
         openPremiumTryItOutProfileUpsell: function () {
-            return E;
+            return h;
         }
     });
-var n = t(200651);
-t(192379);
-var a = t(481060),
-    i = t(649700),
-    r = t(594174),
-    o = t(98278),
-    l = t(790527),
-    c = t(474936),
-    d = t(981631),
-    _ = t(689938),
-    u = t(821774);
-function E(e) {
-    let s = r.default.getCurrentUser();
-    if (null != s)
-        (0, a.openModalLazy)(async () => {
-            let { default: a } = await Promise.resolve().then(t.bind(t, 267717));
-            return (t) =>
-                (0, n.jsx)(a, {
-                    user: s,
+var i = n(200651);
+n(192379);
+var s = n(481060),
+    r = n(649700),
+    l = n(594174),
+    a = n(98278),
+    o = n(790527),
+    c = n(474936),
+    d = n(981631),
+    u = n(388032),
+    m = n(821774);
+function h(e) {
+    let t = l.default.getCurrentUser();
+    if (null != t)
+        (0, s.openModalLazy)(async () => {
+            let { default: s } = await Promise.resolve().then(n.bind(n, 267717));
+            return (n) =>
+                (0, i.jsx)(s, {
+                    user: t,
                     analyticsSource: d.Sbl.PROFILE_PANEL,
                     analyticsLocation: {
                         section: d.jXE.USER_PROFILE,
                         object: d.qAy.BUTTON_CTA
                     },
                     onSubscribeFinish: e,
-                    ...t
+                    ...n
                 });
         });
 }
-function T(e) {
-    let { user: s, onClose: t, ...a } = e;
-    return (0, n.jsx)(l.Z, {
-        modalClassName: u.modal,
-        modalContentClassName: u.modalContent,
+function g(e) {
+    let { user: t, onClose: n, ...s } = e;
+    return (0, i.jsx)(o.Z, {
+        modalClassName: m.modal,
+        modalContentClassName: m.modalContent,
         type: c.cd.TRY_IT_OUT_MODAL_UPSELL,
-        title: _.Z.Messages.PREMIUM_UPSELL_PROFILE_TRY_IT_OUT_MODAL_UPSELL_TITLE_V2,
-        body: _.Z.Messages.PREMIUM_UPSELL_PROFILE_TRY_IT_OUT_MODAL_UPSELL_DESCRIPTION,
-        glowUp: _.Z.Messages.PREMIUM_UPSELL_PROFILE_TRY_IT_OUT_MODAL_UPSELL_TITLE_V2,
+        title: u.intl.string(u.t.reVc0N),
+        body: u.intl.string(u.t.KckEj4),
+        glowUp: u.intl.string(u.t.reVc0N),
         onSecondaryClick: () => {
-            (0, o.$)(t);
+            (0, a.$)(n);
         },
-        secondaryCTA: _.Z.Messages.PREMIUM_ROADBLOCK_UPSELL_SECONDARY_CTA,
-        onClose: t,
+        secondaryCTA: u.intl.string(u.t.PcTCBw),
+        onClose: n,
         enableArtBoxShadow: !1,
         hideBackButton: !0,
         showEnhancedUpsell: !0,
-        LeadingComponent: (0, n.jsx)('div', {
-            className: u.previewContainerParent,
-            children: (0, n.jsx)(i.Z, {
-                containerClassName: u.previewContainer,
-                user: s,
+        LeadingComponent: (0, i.jsx)('div', {
+            className: m.previewContainerParent,
+            children: (0, i.jsx)(r.Z, {
+                containerClassName: m.previewContainer,
+                user: t,
                 disabledInputs: !0
             })
         }),
-        ...a
+        ...s
     });
 }

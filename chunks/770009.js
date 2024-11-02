@@ -1,13 +1,13 @@
 t.d(n, {
     Z: function () {
-        return _;
+        return f;
     }
 });
 var l = t(200651);
 t(192379);
 var i = t(512722),
-    a = t.n(i),
-    r = t(442837),
+    r = t.n(i),
+    a = t(442837),
     o = t(52396),
     s = t(592125),
     c = t(970184),
@@ -22,13 +22,13 @@ function m(e) {
         channel: t
     });
 }
-function _(e) {
+function f(e) {
     let n = (0, c.CJ)();
-    a()(null != n, 'Component context is not defined. Did you forget to wrap your component in a ComponentStateContextProvider?');
+    r()(null != n, 'Component context is not defined. Did you forget to wrap your component in a ComponentStateContextProvider?');
     let { channelId: t } = n,
-        i = (0, r.e7)([s.Z], () => s.Z.getChannel(t));
+        i = (0, a.e7)([s.Z], () => s.Z.getChannel(t));
     return (
-        a()(null != i, 'channel must be defined'),
+        r()(null != i, 'channel must be defined'),
         (0, l.jsx)(o.r, {
             location: d._.EMBED,
             entry: e.contentInventoryEntry,

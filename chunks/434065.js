@@ -1,12 +1,12 @@
-t.d(n, {
+e.d(n, {
     r: function () {
         return o;
     }
 });
-var i = t(903797),
-    r = t(731965);
-let o = (0, i.Z)((e) => ({
+var i = e(903797),
+    r = e(731965);
+let o = (0, i.Z)((t) => ({
     favoriteAdded: !1,
-    notifyFavoriteAdded: () => (0, r.j)(() => e({ favoriteAdded: !0 })),
-    clearFavoriteAdded: () => (0, r.j)(() => e({ favoriteAdded: !1 }))
+    notifyFavoriteAdded: () => (0, r.j)(() => t({ favoriteAdded: !0 })),
+    clearFavoriteAdded: () => (0, r.j)(() => t({ favoriteAdded: !1 }))
 }));

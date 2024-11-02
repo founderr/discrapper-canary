@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return E;
     }
 });
 var r = n(200651);
@@ -13,57 +13,57 @@ var i = n(620662),
     u = n(374129),
     c = n(639351),
     d = n(103479),
-    _ = n(191764),
-    E = n(238607),
-    f = n(414402),
-    h = n(934393),
-    p = n(715547),
-    I = n(981631);
-function m(e) {
-    let { user: t, currentUser: n, activity: m, onAction: T, onClose: S } = e;
-    return (0, o.Z)(m)
-        ? (0, r.jsx)(h.Z, {
-              platformType: I.ABu.XBOX,
+    f = n(191764),
+    _ = n(238607),
+    h = n(414402),
+    p = n(934393),
+    m = n(715547),
+    g = n(981631);
+function E(e) {
+    let { user: t, currentUser: n, activity: E, onAction: v, onClose: I } = e;
+    return (0, o.Z)(E)
+        ? (0, r.jsx)(p.Z, {
+              platformType: g.ABu.XBOX,
               icon: () => (0, r.jsx)(c.Z, {}),
-              onAction: T
+              onAction: v
           })
-        : (0, s.Z)(m)
-          ? (0, r.jsx)(h.Z, {
-                platformType: I.ABu.PLAYSTATION,
+        : (0, s.Z)(E)
+          ? (0, r.jsx)(p.Z, {
+                platformType: g.ABu.PLAYSTATION,
                 icon: () => (0, r.jsx)(u.Z, {}),
-                onAction: T
+                onAction: v
             })
-          : (0, l.Z)(m)
-            ? (0, r.jsx)(p.Z, {
-                  activity: m,
-                  onAction: T
+          : (0, l.Z)(E)
+            ? (0, r.jsx)(m.Z, {
+                  activity: E,
+                  onAction: v
               })
-            : (0, i.Z)(m, I.xjy.JOIN) || (0, a.Z)(m)
-              ? (0, r.jsx)(E.Z, {
+            : (0, i.Z)(E, g.xjy.JOIN) || (0, a.Z)(E)
+              ? (0, r.jsx)(_.Z, {
                     user: t,
                     currentUser: n,
-                    activity: m,
-                    onAction: T,
-                    onClose: S
+                    activity: E,
+                    onAction: v,
+                    onClose: I
                 })
-              : (null == m ? void 0 : m.type) === I.IIU.HANG_STATUS
-                ? (0, r.jsx)(_.Z, {
+              : (null == E ? void 0 : E.type) === g.IIU.HANG_STATUS
+                ? (0, r.jsx)(f.Z, {
                       user: t,
-                      activity: m,
-                      onAction: T,
-                      onClose: S
+                      activity: E,
+                      onAction: v,
+                      onClose: I
                   })
-                : (null == m ? void 0 : m.buttons) != null && (null == m ? void 0 : m.buttons.length) >= 1
+                : (null == E ? void 0 : E.buttons) != null && (null == E ? void 0 : E.buttons.length) >= 1
                   ? (0, r.jsx)(d.Z, {
                         user: t,
-                        activity: m,
-                        onAction: T
+                        activity: E,
+                        onAction: v
                     })
-                  : (0, i.Z)(m, I.xjy.INSTANCE)
-                    ? (0, r.jsx)(f.Z, {
+                  : (0, i.Z)(E, g.xjy.INSTANCE)
+                    ? (0, r.jsx)(h.Z, {
                           user: t,
-                          activity: m,
-                          onAction: T
+                          activity: E,
+                          onAction: v
                       })
                     : null;
 }

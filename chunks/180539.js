@@ -5,33 +5,33 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(442837),
-    a = n(481060),
-    l = n(816782),
-    r = n(221292),
+var l = n(442837),
+    r = n(481060),
+    a = n(816782),
+    s = n(221292),
     o = n(687158),
     c = n(646915),
     u = n(433355),
     d = n(665149),
     h = n(981631),
-    m = n(689938);
+    m = n(388032);
 function p(e) {
     let { channel: t, showCallOrActivityPanel: n } = e,
-        p = (0, s.e7)([u.ZP], () => u.ZP.getSection(t.id, null == t ? void 0 : t.isDM())),
-        _ = (0, o.ZP)(t.getRecipientId()),
-        f = (0, c.Z)(),
-        E = p === h.ULH.PROFILE && !f;
+        p = (0, l.e7)([u.ZP], () => u.ZP.getSection(t.id, null == t ? void 0 : t.isDM())),
+        f = (0, o.ZP)(t.getRecipientId()),
+        g = (0, c.Z)(),
+        C = p === h.ULH.PROFILE && !g;
     return (0, i.jsx)(d.JO, {
-        disabled: f || n,
-        tooltip: f || n ? m.Z.Messages.SHOW_USER_PROFILE_UNAVAILABLE : E ? m.Z.Messages.HIDE_USER_PROFILE : m.Z.Messages.SHOW_USER_PROFILE,
-        icon: a.UserCircleStatusIcon,
+        disabled: g || n,
+        tooltip: g || n ? m.intl.string(m.t.YneDgI) : C ? m.intl.string(m.t.niD64e) : m.intl.string(m.t['+FAsHh']),
+        icon: r.UserCircleStatusIcon,
         onClick: () => {
-            (0, r.TY)({
-                displayProfile: _,
-                isProfileOpen: !E
+            (0, s.TY)({
+                displayProfile: f,
+                isProfileOpen: !C
             }),
-                l.Z.toggleProfilePanelSection();
+                a.Z.toggleProfilePanelSection();
         },
-        selected: E && !f && !n
+        selected: C && !g && !n
     });
 }

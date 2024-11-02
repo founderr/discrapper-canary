@@ -1,12 +1,12 @@
 n.d(t, {
     c: function () {
-        return l;
+        return a;
     }
 });
 var i = n(913527),
-    s = n.n(i),
-    a = n(709054);
-let l = (e) => {
-    let t = a.default.extractTimestamp(e);
-    return !s()().isBefore(s()(t).add(s().duration(15, 'days')));
+    l = n.n(i),
+    r = n(709054);
+let a = (e) => {
+    let t = r.default.extractTimestamp(e);
+    return !l()().isBefore(l()(t).add(l().duration(15, 'days')));
 };

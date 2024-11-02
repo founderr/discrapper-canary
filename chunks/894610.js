@@ -1,58 +1,58 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return m;
     }
 });
-var s,
-    a,
-    i = n(200651),
-    r = n(192379),
-    l = n(755930),
+var i,
+    r,
+    l = n(200651),
+    s = n(192379),
+    a = n(755930),
     o = n(267101),
-    c = n(689938),
+    c = n(388032),
     d = n(350438);
-((s = a || (a = {})).LISTING_NAME = 'LISTING_NAME'), (s.PAYMENTS_COUNT = 'PAYMENTS_COUNT'), (s.PRICE = 'PRICE');
-let u = (0, l.Yn)([
-    (0, l.nn)({
+((i = r || (r = {})).LISTING_NAME = 'LISTING_NAME'), (i.PAYMENTS_COUNT = 'PAYMENTS_COUNT'), (i.PRICE = 'PRICE');
+let u = (0, a.Yn)([
+    (0, a.nn)({
         key: 'LISTING_NAME',
         cellClassName: d.listingNameColumn,
-        renderHeader: () => (0, i.jsx)(l.qN, { children: c.Z.Messages.GUILD_PRODUCT_EARNINGS_TABLE_LISTING_COLUMN_TITLE }),
-        sort: (0, l.Qg)((e) => e.listing.name.toLowerCase())
+        renderHeader: () => (0, l.jsx)(a.qN, { children: c.intl.string(c.t.OGpGqK) }),
+        sort: (0, a.Qg)((e) => e.listing.name.toLowerCase())
     }),
-    (0, l.GW)({
+    (0, a.GW)({
         key: 'PAYMENTS_COUNT',
         cellClassName: d.paymentsCountColumn,
-        renderHeader: () => (0, i.jsx)(l.qN, { children: c.Z.Messages.GUILD_PRODUCT_EARNINGS_TABLE_PURCHASES_COLUMN_TITLE }),
+        renderHeader: () => (0, l.jsx)(a.qN, { children: c.intl.string(c.t.vpHXJy) }),
         getCount: (e) => e.paymentsCount,
-        sort: (0, l.Qg)((e) => {
+        sort: (0, a.Qg)((e) => {
             var t;
             return null !== (t = e.paymentsCount) && void 0 !== t ? t : 0;
         })
     }),
-    (0, l.i$)({
+    (0, a.i$)({
         key: 'PRICE',
         cellClassName: d.priceColumn,
-        renderHeader: () => (0, i.jsx)(l.qN, { children: c.Z.Messages.GUILD_PRODUCT_EARNINGS_TABLE_PRICE_COLUMN_TITLE }),
+        renderHeader: () => (0, l.jsx)(a.qN, { children: c.intl.string(c.t.VodAGR) }),
         getAmount(e) {
             let { listing: t } = e;
             return t.price_tier;
         },
-        sort: (0, l.Qg)((e) => {
+        sort: (0, a.Qg)((e) => {
             var t;
             return null !== (t = e.listing.price_tier) && void 0 !== t ? t : 0;
         })
     })
 ]);
-function _(e) {
+function m(e) {
     let { earningsData: t, guildId: n } = e,
-        s = (0, o.ue)(n, { publishedOnly: !1 }),
-        a = t.currentPeriod,
-        c = r.useMemo(
+        i = (0, o.ue)(n, { publishedOnly: !1 }),
+        r = t.currentPeriod,
+        c = s.useMemo(
             () =>
-                s
+                i
                     .map((e) => {
                         var t;
-                        let n = null == a ? void 0 : a.ppgs[e.id];
+                        let n = null == r ? void 0 : r.ppgs[e.id];
                         return {
                             ...(null != n ? n : {}),
                             key: e.id,
@@ -61,11 +61,11 @@ function _(e) {
                         };
                     })
                     .filter((e) => e.listing.published || e.paymentsCount > 0),
-            [s, null == a ? void 0 : a.ppgs]
+            [i, null == r ? void 0 : r.ppgs]
         );
-    return null == s || 0 === s.length
+    return null == i || 0 === i.length
         ? null
-        : (0, i.jsx)(l.ZP, {
+        : (0, l.jsx)(a.ZP, {
               columns: u,
               data: c,
               initialSortKey: 'LISTING_NAME'

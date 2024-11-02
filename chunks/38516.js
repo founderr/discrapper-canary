@@ -1,61 +1,61 @@
 n(411104);
-var a = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    s = n.n(r),
-    i = n(643872),
+var i = n(120356),
+    a = n.n(i),
+    l = n(643872),
     o = n(481060),
-    l = n(810568),
-    c = n(689938),
+    s = n(810568),
+    c = n(388032),
     d = n(51527),
     u = n(825718);
-let _ = [i.p.OFFICIAL, i.p.TWITTER, i.p.YOUTUBE];
-function E(e) {
+let m = [l.p.OFFICIAL, l.p.TWITTER, l.p.YOUTUBE];
+function p(e) {
     let { website: t, trackClick: n } = e,
         {
-            action: r,
-            icon: s,
+            action: i,
+            icon: a,
             title: d
         } = (function (e) {
             switch (e.category) {
-                case i.p.OFFICIAL:
+                case l.p.OFFICIAL:
                     return {
-                        icon: (0, a.jsx)(o.GlobeEarthIcon, { colorClass: u.linkIcon }),
-                        action: l.as.WebsiteLink,
-                        title: c.Z.Messages.GAME_PROFILE_LINK_OFFICIAL
+                        icon: (0, r.jsx)(o.GlobeEarthIcon, { colorClass: u.linkIcon }),
+                        action: s.as.WebsiteLink,
+                        title: c.intl.string(c.t.fOUKvr)
                     };
-                case i.p.TWITTER:
+                case l.p.TWITTER:
                     return {
-                        icon: (0, a.jsx)(o.XNeutralIcon, { colorClass: u.linkIcon }),
-                        action: l.as.XLink,
-                        title: c.Z.Messages.GAME_PROFILE_LINK_TWITTER
+                        icon: (0, r.jsx)(o.XNeutralIcon, { colorClass: u.linkIcon }),
+                        action: s.as.XLink,
+                        title: c.intl.string(c.t['INic4+'])
                     };
-                case i.p.YOUTUBE:
+                case l.p.YOUTUBE:
                     return {
-                        action: l.as.YouTubeLink,
-                        icon: (0, a.jsx)(o.YoutubeNeutralIcon, { colorClass: u.linkIcon }),
-                        title: c.Z.Messages.GAME_PROFILE_LINK_YOUTUBE
+                        action: s.as.YouTubeLink,
+                        icon: (0, r.jsx)(o.YoutubeNeutralIcon, { colorClass: u.linkIcon }),
+                        title: c.intl.string(c.t.lNmxbG)
                     };
                 default:
                     throw Error('Unknown IGDB website category');
             }
         })(t);
-    return (0, a.jsx)(o.Tooltip, {
+    return (0, r.jsx)(o.Tooltip, {
         text: t.url,
         tooltipClassName: u.tooltip,
         tooltipContentClassName: u.tooltipContent,
         children: (e) => {
-            let { onClick: i, ...l } = e;
-            return (0, a.jsx)(o.Anchor, {
-                ...l,
+            let { onClick: l, ...s } = e;
+            return (0, r.jsx)(o.Anchor, {
+                ...s,
                 className: u.linkAnchor,
                 title: d,
                 href: t.url,
                 onClick: () => {
-                    n(r), null == i || i();
+                    n(i), null == l || l();
                 },
                 target: '_blank',
-                children: s
+                children: a
             });
         }
     });
@@ -63,27 +63,27 @@ function E(e) {
 t.Z = function (e) {
     let { detectedGame: t, trackClick: n } = e;
     if (null == t.websites) return null;
-    let r = t.websites
+    let i = t.websites
         .filter((e) => {
             let { category: t } = e;
-            return _.includes(t);
+            return m.includes(t);
         })
         .sort((e, t) => e.category - t.category);
-    return 0 === r.length
+    return 0 === i.length
         ? null
-        : (0, a.jsxs)('div', {
+        : (0, r.jsxs)('div', {
               children: [
-                  (0, a.jsx)(o.Heading, {
+                  (0, r.jsx)(o.Heading, {
                       className: d.sectionHeader,
                       variant: 'text-xs/semibold',
                       color: 'header-secondary',
-                      children: c.Z.Messages.GAME_PROFILE_LINKS
+                      children: c.intl.string(c.t.Oj3o19)
                   }),
-                  (0, a.jsx)('div', {
-                      className: s()(d.row, d.gapMd),
-                      children: r.map((e) =>
-                          (0, a.jsx)(
-                              E,
+                  (0, r.jsx)('div', {
+                      className: a()(d.row, d.gapMd),
+                      children: i.map((e) =>
+                          (0, r.jsx)(
+                              p,
                               {
                                   website: e,
                                   trackClick: n

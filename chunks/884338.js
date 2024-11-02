@@ -1,6 +1,6 @@
 n.d(t, {
     u: function () {
-        return T;
+        return v;
     }
 }),
     n(653041),
@@ -14,13 +14,13 @@ var r,
     u = n.n(l),
     c = n(481060),
     d = n(686546),
-    _ = n(184301),
-    E = n(347475),
-    f = n(598077),
-    h = n(594174),
-    p = n(426563),
-    I = n(621925);
-function m(e, t, n) {
+    f = n(184301),
+    _ = n(347475),
+    h = n(598077),
+    p = n(594174),
+    m = n(426563),
+    g = n(621925);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,17 +33,17 @@ function m(e, t, n) {
         e
     );
 }
-let T = {
+let v = {
     SIZE_16: 16,
     SIZE_24: 24,
     SIZE_32: 32,
     SIZE_56: 56
 };
-function S(e, t) {
-    let n = e instanceof f.Z ? e : null != e ? e.user : null;
+function I(e, t) {
+    let n = e instanceof h.Z ? e : null != e ? e.user : null;
     return null != n ? n.id : 'user-'.concat(t);
 }
-class g extends (r = a.PureComponent) {
+class S extends (r = a.PureComponent) {
     renderUsers() {
         let { users: e, max: t, renderUser: n = this.defaultRenderUser, size: r, extraDetail: a } = this.props,
             s = [],
@@ -59,21 +59,21 @@ class g extends (r = a.PureComponent) {
                     ? (0, i.jsx)(
                           'div',
                           {
-                              className: I.avatarContainer,
+                              className: g.avatarContainer,
                               children: o
                           },
-                          S(null !== (c = e[u]) && void 0 !== c ? c : null, u)
+                          I(null !== (c = e[u]) && void 0 !== c ? c : null, u)
                       )
                     : (0, i.jsx)(
                           d.ZP,
                           {
-                              className: I.avatarContainerMasked,
+                              className: g.avatarContainerMasked,
                               height: r,
                               width: r,
                               mask: d.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
                               children: o
                           },
-                          S(e[u], u)
+                          I(e[u], u)
                       )
             ),
                 u++;
@@ -101,8 +101,8 @@ class g extends (r = a.PureComponent) {
             ? (0, i.jsx)(c.VoiceNormalIcon, {
                   size: 'md',
                   color: 'currentColor',
-                  colorClass: I.__invalid_foreground,
-                  className: I.icon
+                  colorClass: g.__invalid_foreground,
+                  className: g.icon
               })
             : null;
     }
@@ -110,17 +110,17 @@ class g extends (r = a.PureComponent) {
         let { className: e, size: t, users: n, guildId: r, showUserPopout: a, useFallbackUserForPopout: s } = this.props,
             { popoutUserId: l } = this.state,
             d = n.find((e) => null != e && e.id === l),
-            f = s && null == h.default.getUser(l);
+            h = s && null == p.default.getUser(l);
         return (0, i.jsx)(c.Popout, {
             position: 'right',
-            preload: null == d ? void 0 : () => (0, _.Z)(d.id, d.getAvatarURL(r, 80), { guildId: r }),
+            preload: null == d ? void 0 : () => (0, f.Z)(d.id, d.getAvatarURL(r, 80), { guildId: r }),
             shouldShow: !0 === a && null != l,
             fixed: !0,
             renderPopout: (e) => (
                 u()(null != l, 'UserSummaryItem.render - renderPopout: popoutUserId cannot be null'),
-                (0, i.jsx)(E.Z, {
+                (0, i.jsx)(_.Z, {
                     ...this.props,
-                    user: f && null != d ? d : void 0,
+                    user: h && null != d ? d : void 0,
                     ...e,
                     userId: l,
                     guildId: this.props.guildId
@@ -131,20 +131,20 @@ class g extends (r = a.PureComponent) {
                 (0, i.jsxs)('div', {
                     className: o()(
                         e,
-                        I.container,
+                        g.container,
                         (function () {
-                            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : T.SIZE_24;
+                            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : v.SIZE_24;
                             switch (e) {
-                                case T.SIZE_16:
-                                    return I.size16;
-                                case T.SIZE_24:
-                                    return I.size24;
-                                case T.SIZE_32:
-                                    return I.size32;
-                                case T.SIZE_56:
-                                    return I.size56;
+                                case v.SIZE_16:
+                                    return g.size16;
+                                case v.SIZE_24:
+                                    return g.size24;
+                                case v.SIZE_32:
+                                    return g.size32;
+                                case v.SIZE_56:
+                                    return g.size56;
                                 default:
-                                    return I.size24;
+                                    return g.size24;
                             }
                         })(t)
                     ),
@@ -156,19 +156,19 @@ class g extends (r = a.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            m(this, 'state', { popoutUserId: null }),
-            m(this, '_ref', a.createRef()),
-            m(this, 'defaultRenderUser', (e, t, n) => {
+            E(this, 'state', { popoutUserId: null }),
+            E(this, '_ref', a.createRef()),
+            E(this, 'defaultRenderUser', (e, t, n) => {
                 let { showUserPopout: r, guildId: a, size: s } = this.props;
                 if (null == e) {
-                    if (!this.props.showDefaultAvatarsForNullUsers) return (0, i.jsx)('div', { className: I.emptyUser });
+                    if (!this.props.showDefaultAvatarsForNullUsers) return (0, i.jsx)('div', { className: g.emptyUser });
                     {
-                        let e = (null != n ? n : 0) % p.Z.DEFAULT_AVATARS.length,
-                            t = p.Z.DEFAULT_AVATARS[e];
+                        let e = (null != n ? n : 0) % m.Z.DEFAULT_AVATARS.length,
+                            t = m.Z.DEFAULT_AVATARS[e];
                         return (0, i.jsx)('img', {
                             src: t,
                             alt: '',
-                            className: I.avatar
+                            className: g.avatar
                         });
                     }
                 }
@@ -177,7 +177,7 @@ class g extends (r = a.PureComponent) {
                     {
                         src: e.getAvatarURL(a, s),
                         alt: e.username,
-                        className: I.avatar
+                        className: g.avatar
                     },
                     e.id
                 );
@@ -185,7 +185,7 @@ class g extends (r = a.PureComponent) {
                     ? (0, i.jsx)(
                           c.Clickable,
                           {
-                              className: I.clickableAvatar,
+                              className: g.clickableAvatar,
                               onClick: () => {
                                   null != this._ref.current && null != e && this.setState({ popoutUserId: e.id });
                               },
@@ -198,16 +198,16 @@ class g extends (r = a.PureComponent) {
             });
     }
 }
-m(g, 'defaultProps', {
+E(S, 'defaultProps', {
     max: 10,
     renderMoreUsers: function (e) {
         return (0, i.jsx)('div', {
-            className: I.moreUsers,
+            className: g.moreUsers,
             children: e
         });
     },
     renderIcon: !1,
     showDefaultAvatarsForNullUsers: !1,
-    size: T.SIZE_24
+    size: v.SIZE_24
 }),
-    (t.Z = g);
+    (t.Z = S);

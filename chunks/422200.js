@@ -1,86 +1,86 @@
-t.r(n);
-var i = t(200651);
-t(192379);
-var a = t(481060),
-    s = t(239091),
-    u = t(108843),
-    r = t(100527),
-    l = t(299206),
-    d = t(895563),
-    o = t(32750),
-    c = t(109764),
-    M = t(323597),
-    _ = t(461535),
-    E = t(438536),
-    Z = t(251746),
-    f = t(193987),
-    N = t(933793),
-    O = t(13736),
-    T = t(732393),
-    U = t(214906),
-    A = t(612856),
-    h = t(137591),
-    g = t(689938);
-n.default = (0, u.Z)(
-    function (e) {
-        let { channel: n, onSelect: t } = e,
-            u = (0, c.Z)(n),
-            r = (0, _.Z)(n),
-            S = (0, U.Z)(n),
-            m = (0, o.Z)(n),
-            C = (0, f.Z)(n),
-            R = (0, M.Z)(n),
-            I = (0, l.Z)({
-                id: n.id,
-                label: g.Z.Messages.COPY_ID_THREAD
+e.r(t);
+var i = e(200651);
+e(192379);
+var r = e(481060),
+    l = e(239091),
+    u = e(108843),
+    a = e(100527),
+    d = e(299206),
+    o = e(895563),
+    s = e(32750),
+    c = e(109764),
+    f = e(323597),
+    Z = e(461535),
+    h = e(438536),
+    _ = e(251746),
+    M = e(193987),
+    g = e(933793),
+    m = e(13736),
+    E = e(732393),
+    S = e(214906),
+    O = e(612856),
+    b = e(137591),
+    p = e(388032);
+t.default = (0, u.Z)(
+    function (n) {
+        let { channel: t, onSelect: e } = n,
+            u = (0, c.Z)(t),
+            a = (0, Z.Z)(t),
+            v = (0, S.Z)(t),
+            C = (0, s.Z)(t),
+            N = (0, M.Z)(t),
+            G = (0, f.Z)(t),
+            L = (0, d.Z)({
+                id: t.id,
+                label: p.intl.string(p.t.DQ797u)
             }),
-            p = (0, E.Z)(n, 'Context Menu'),
-            G = (0, N.Z)(n),
-            b = (0, A.Z)(n),
-            L = (0, O.Z)(n),
-            v = (0, T.Z)(n.id),
-            D = (0, Z.Z)(n),
-            P = (0, h.Z)(n),
-            x = (0, d.l)(n),
-            j = (0, d.P)(n);
-        return (0, i.jsxs)(a.Menu, {
+            x = (0, h.Z)(t, 'Context Menu'),
+            A = (0, g.Z)(t),
+            P = (0, O.Z)(t),
+            j = (0, m.Z)(t),
+            I = (0, E.Z)(t.id),
+            U = (0, _.Z)(t),
+            T = (0, b.Z)(t),
+            R = (0, o.l)(t),
+            y = (0, o.P)(t);
+        return (0, i.jsxs)(r.Menu, {
             navId: 'thread-context',
-            onClose: s.Zy,
-            'aria-label': g.Z.Messages.THREAD_ACTIONS_MENU_LABEL,
-            onSelect: t,
+            onClose: l.Zy,
+            'aria-label': p.intl.string(p.t['1NBjqa']),
+            onSelect: e,
             children: [
                 (0, i.jsxs)(
-                    a.MenuGroup,
+                    r.MenuGroup,
                     {
-                        children: [r, x]
+                        children: [a, R]
                     },
                     'mark-as-read-or-favorite'
                 ),
                 (0, i.jsxs)(
-                    a.MenuGroup,
+                    r.MenuGroup,
                     {
-                        children: [p, D, m, C, L, v, u]
+                        children: [x, U, C, N, j, I, u]
                     },
                     'thread-actions'
                 ),
                 (0, i.jsxs)(
-                    a.MenuGroup,
+                    r.MenuGroup,
                     {
-                        children: [S, b]
+                        children: [v, P]
                     },
                     'notifications'
                 ),
-                (0, i.jsx)(a.MenuGroup, { children: j }),
+                (0, i.jsx)(r.MenuGroup, { children: y }),
                 (0, i.jsxs)(
-                    a.MenuGroup,
+                    r.MenuGroup,
                     {
-                        children: [P, G, R]
+                        children: [T, A, G]
                     },
                     'admin-actions'
                 ),
-                (0, i.jsx)(a.MenuGroup, { children: I }, 'developer-actions')
+                (0, i.jsx)(r.MenuGroup, { children: L }, 'developer-actions')
             ]
         });
     },
-    [r.Z.CONTEXT_MENU, r.Z.CHANNEL_LIST_THREAD_MENU]
+    [a.Z.CONTEXT_MENU, a.Z.CHANNEL_LIST_THREAD_MENU]
 );

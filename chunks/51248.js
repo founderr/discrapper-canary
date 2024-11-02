@@ -1,62 +1,62 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return m;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(215569),
-    i = n(481060),
-    r = n(852860),
-    l = n(236413),
+var r = n(215569),
+    l = n(481060),
+    s = n(852860),
+    a = n(236413),
     o = n(727072),
     c = n(65912),
-    d = n(689938),
+    d = n(388032),
     u = n(434514);
-function _(e) {
+function m(e) {
     let { guildId: t, existingRules: n } = e,
-        { cancelEditingRule: _, isLoading: I, hasChanges: E, editingRule: T, errorMessage: m, saveEditingRule: N } = (0, c.w)(),
-        { updateRule: S } = (0, o.pH)(t),
-        g = null != T,
-        h = g && !(0, l.Vb)(T),
-        C = g || E || h,
-        x = async () => {
-            if (!E && !h) return _();
-            null != T && !h && S(T);
+        { cancelEditingRule: m, isLoading: h, hasChanges: g, editingRule: x, errorMessage: p, saveEditingRule: f } = (0, c.w)(),
+        { updateRule: C } = (0, o.pH)(t),
+        I = null != x,
+        _ = I && !(0, a.Vb)(x),
+        N = I || g || _,
+        v = async () => {
+            if (!g && !_) return m();
+            null != x && !_ && C(x);
             let e = n.find((e) => {
                 let { id: t } = e;
-                return t === (null == T ? void 0 : T.id);
+                return t === (null == x ? void 0 : x.id);
             });
             try {
-                let e = await N(n);
-                null != e && S(e);
+                let e = await f(n);
+                null != e && C(e);
             } catch (t) {
-                null != e && S(e);
+                null != e && C(e);
             }
         },
-        p = d.Z.Messages.CANCEL,
-        R = !E && g ? d.Z.Messages.GUILD_AUTOMOD_EDIT_NO_CHANGES.format({ ruleName: null == T ? void 0 : T.name }) : void 0;
+        T = d.intl.string(d.t['ETE/oK']),
+        j = !g && I ? d.intl.formatToPlainString(d.t.nula39, { ruleName: null == x ? void 0 : x.name }) : void 0;
     return (
-        null != m &&
-            (R = (0, s.jsx)(i.Text, {
+        null != p &&
+            (j = (0, i.jsx)(l.Text, {
                 variant: 'text-md/normal',
                 color: 'text-danger',
                 className: u.message,
-                children: m
+                children: p
             })),
-        (0, s.jsx)(a.W, {
+        (0, i.jsx)(r.W, {
             component: 'div',
             className: u.saveNoticeContainer,
             children:
-                C &&
-                (0, s.jsx)(i.SlideIn, {
-                    children: (0, s.jsx)(r.Z, {
-                        submitting: I,
-                        disabled: I,
-                        onSave: x,
-                        onReset: _,
-                        onResetText: p,
-                        message: R
+                N &&
+                (0, i.jsx)(l.SlideIn, {
+                    children: (0, i.jsx)(s.Z, {
+                        submitting: h,
+                        disabled: h,
+                        onSave: v,
+                        onReset: m,
+                        onResetText: T,
+                        message: j
                     })
                 })
         })

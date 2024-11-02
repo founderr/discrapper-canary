@@ -7,14 +7,14 @@ t.d(e, {
 var l = t(200651),
     i = t(192379),
     r = t(557533),
-    s = t.n(r),
+    o = t.n(r),
     a = t(349361),
-    o = t(698117);
+    s = t(698117);
 function u(n) {
     let { children: e, gradientClassName: t, ...r } = n,
         u = i.useRef(null),
         [c, d] = i.useState(!0),
-        f = () => {
+        p = () => {
             var n;
             (null === (n = u.current) || void 0 === n ? void 0 : n.isScrolledToBottom()) === !0 ? d(!1) : d(!0);
         };
@@ -24,13 +24,13 @@ function u(n) {
                 fade: !0,
                 ...r,
                 ref: (n) => {
-                    null != n && ((u.current = n), f());
+                    null != n && ((u.current = n), p());
                 },
-                onScroll: f,
+                onScroll: p,
                 children: e
             }),
             (0, l.jsx)('div', {
-                className: s()(o.containerScrollGradient, t),
+                className: o()(s.containerScrollGradient, t),
                 'data-shown': c
             })
         ]

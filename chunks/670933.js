@@ -11,11 +11,11 @@ function s(e, t) {
     (0, i.Z)(1, arguments);
     var n,
         s,
-        h,
-        p = (0, a.Z)(null !== (n = null == t ? void 0 : t.additionalDigits) && void 0 !== n ? n : 2);
-    if (2 !== p && 1 !== p && 0 !== p) throw RangeError('additionalDigits must be 0, 1 or 2');
+        p,
+        m = (0, a.Z)(null !== (n = null == t ? void 0 : t.additionalDigits) && void 0 !== n ? n : 2);
+    if (2 !== m && 1 !== m && 0 !== m) throw RangeError('additionalDigits must be 0, 1 or 2');
     if (!('string' == typeof e || '[object String]' === Object.prototype.toString.call(e))) return new Date(NaN);
-    var I = (function (e) {
+    var g = (function (e) {
         var t,
             n = {},
             r = e.split(o.dateTimeDelimiter);
@@ -26,8 +26,8 @@ function s(e, t) {
         }
         return n;
     })(e);
-    if (I.date) {
-        var m = (function (e, t) {
+    if (g.date) {
+        var E = (function (e, t) {
             var n = RegExp('^(?:(\\d{4}|[+-]\\d{' + (4 + t) + '})|(\\d{2}|[+-]\\d{' + (2 + t) + '})$)'),
                 r = e.match(n);
             if (!r)
@@ -41,7 +41,7 @@ function s(e, t) {
                 year: null === a ? i : 100 * a,
                 restDateString: e.slice((r[1] || r[2]).length)
             };
-        })(I.date, p);
+        })(g.date, m);
         s = (function (e, t) {
             if (null === t) return new Date(NaN);
             var n = e.match(l);
@@ -65,40 +65,40 @@ function s(e, t) {
                       })(t, o, u);
             var c = new Date(0);
             return !(function (e, t, n) {
-                return t >= 0 && t <= 11 && n >= 1 && n <= (E[t] || (f(e) ? 29 : 28));
+                return t >= 0 && t <= 11 && n >= 1 && n <= (_[t] || (h(e) ? 29 : 28));
             })(t, a, s) ||
                 !(function (e, t) {
-                    return t >= 1 && t <= (f(e) ? 366 : 365);
+                    return t >= 1 && t <= (h(e) ? 366 : 365);
                 })(t, i)
                 ? new Date(NaN)
                 : (c.setUTCFullYear(t, a, Math.max(i, s)), c);
-        })(m.restDateString, m.year);
+        })(E.restDateString, E.year);
     }
     if (!s || isNaN(s.getTime())) return new Date(NaN);
-    var T = s.getTime(),
-        S = 0;
+    var v = s.getTime(),
+        I = 0;
     if (
-        I.time &&
+        g.time &&
         isNaN(
-            (S = (function (e) {
+            (I = (function (e) {
                 var t = e.match(u);
                 if (!t) return NaN;
-                var n = _(t[1]),
-                    i = _(t[2]),
-                    a = _(t[3]);
+                var n = f(t[1]),
+                    i = f(t[2]),
+                    a = f(t[3]);
                 return !(function (e, t, n) {
                     return 24 === e ? 0 === t && 0 === n : n >= 0 && n < 60 && t >= 0 && t < 60 && e >= 0 && e < 25;
                 })(n, i, a)
                     ? NaN
                     : n * r.vh + i * r.yJ + 1000 * a;
-            })(I.time))
+            })(g.time))
         )
     )
         return new Date(NaN);
-    if (I.timezone) {
+    if (g.timezone) {
         if (
             isNaN(
-                (h = (function (e) {
+                (p = (function (e) {
                     if ('Z' === e) return 0;
                     var t = e.match(c);
                     if (!t) return 0;
@@ -110,16 +110,16 @@ function s(e, t) {
                     })(i, a)
                         ? NaN
                         : n * (i * r.vh + a * r.yJ);
-                })(I.timezone))
+                })(g.timezone))
             )
         )
             return new Date(NaN);
     } else {
-        var g = new Date(T + S),
-            A = new Date(0);
-        return A.setFullYear(g.getUTCFullYear(), g.getUTCMonth(), g.getUTCDate()), A.setHours(g.getUTCHours(), g.getUTCMinutes(), g.getUTCSeconds(), g.getUTCMilliseconds()), A;
+        var S = new Date(v + I),
+            T = new Date(0);
+        return T.setFullYear(S.getUTCFullYear(), S.getUTCMonth(), S.getUTCDate()), T.setHours(S.getUTCHours(), S.getUTCMinutes(), S.getUTCSeconds(), S.getUTCMilliseconds()), T;
     }
-    return new Date(T + S + h);
+    return new Date(v + I + p);
 }
 var o = {
         dateTimeDelimiter: /[T ]/,
@@ -132,10 +132,10 @@ var o = {
 function d(e) {
     return e ? parseInt(e) : 1;
 }
-function _(e) {
+function f(e) {
     return (e && parseFloat(e.replace(',', '.'))) || 0;
 }
-var E = [31, null, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-function f(e) {
+var _ = [31, null, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+function h(e) {
     return e % 400 == 0 || (e % 4 == 0 && e % 100 != 0);
 }

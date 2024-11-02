@@ -1,22 +1,22 @@
 var t = n(200651),
     l = n(192379),
     o = n(120356),
-    s = n.n(o),
-    i = n(481060),
+    i = n.n(o),
+    s = n(481060),
     a = n(378233),
-    c = n(689938),
+    c = n(388032),
     d = n(959687);
 let u = (e) => {
     let { stickerPack: r } = e;
     return (0, t.jsx)('div', {
         className: d.features,
         children: (0, a.X_)(r)
-            ? (0, t.jsx)(i.Tooltip, {
+            ? (0, t.jsx)(s.Tooltip, {
                   tooltipClassName: d.featuresTooltip,
                   position: 'top',
-                  text: c.Z.Messages.STICKER_PICKER_PACK_DETAILS_ANIMATED,
+                  text: c.intl.string(c.t.W11rMT),
                   children: (e) =>
-                      (0, t.jsx)(i.PlayIcon, {
+                      (0, t.jsx)(s.PlayIcon, {
                           size: 'xs',
                           color: 'currentColor',
                           ...e,
@@ -29,12 +29,12 @@ let u = (e) => {
 r.Z = l.memo((e) => {
     let { className: r, stickerPack: n, withDescription: l = !1 } = e;
     return (0, t.jsxs)('div', {
-        className: s()(d.header, r),
+        className: i()(d.header, r),
         children: [
             (0, t.jsxs)('div', {
                 className: d.title,
                 children: [
-                    (0, t.jsx)(i.Heading, {
+                    (0, t.jsx)(s.Heading, {
                         className: d.heading,
                         variant: 'heading-sm/semibold',
                         children: n.name
@@ -44,14 +44,14 @@ r.Z = l.memo((e) => {
             }),
             l &&
                 null != n.description &&
-                (0, t.jsx)(i.Text, {
+                (0, t.jsx)(s.Text, {
                     className: d.description,
                     variant: 'text-sm/normal',
                     children: n.description
                 }),
             (0, t.jsx)('div', {
                 className: d.count,
-                children: c.Z.Messages.STICKER_PACK_STICKER_COUNT.format({ numStickers: n.stickers.length })
+                children: c.intl.format(c.t['0S3JpK'], { numStickers: n.stickers.length })
             })
         ]
     });

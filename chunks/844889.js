@@ -3,7 +3,7 @@ n.d(t, {
         return d;
     },
     Hg: function () {
-        return E;
+        return _;
     },
     fr: function () {
         return c;
@@ -21,7 +21,7 @@ function c(e) {
 }
 function d() {
     return (l = l.then(async () => {
-        let e = await _();
+        let e = await f();
         if (
             null == e ||
             (function (e) {
@@ -39,10 +39,10 @@ function d() {
         return e;
     }));
 }
-async function _() {
+async function f() {
     let e = await i.K.getAfterRefresh(s),
-        t = await i.K.getAfterRefresh(o).then(E),
-        n = await i.K.getAfterRefresh(a).then(E);
+        t = await i.K.getAfterRefresh(o).then(_),
+        n = await i.K.getAfterRefresh(a).then(_);
     return null != e && null != t
         ? {
               uuid: e,
@@ -51,6 +51,6 @@ async function _() {
           }
         : null;
 }
-function E(e) {
+function _(e) {
     return null != e ? Number(e) : 0;
 }

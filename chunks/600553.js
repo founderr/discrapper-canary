@@ -1,9 +1,9 @@
 n.d(t, {
     $: function () {
-        return s;
+        return i;
     }
 });
-let s = (0, n(987170).Z)({
+let i = (0, n(987170).Z)({
     kind: 'guild',
     id: '2024-07_guild_settings_foundation',
     label: 'Guild Settings Foundation Revamp',

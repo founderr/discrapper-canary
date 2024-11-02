@@ -1,10 +1,10 @@
 n.d(t, {
     F: function () {
-        return l;
+        return i;
     },
     n: function () {
-        return a;
+        return l;
     }
 });
-let l = 12,
-    a = 24;
+let i = 12,
+    l = 24;

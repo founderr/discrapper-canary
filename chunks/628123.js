@@ -8,20 +8,20 @@ var r = n(200651),
     u = n(286379),
     c = n(442837),
     d = n(481060),
-    _ = n(386506),
-    E = n(304761),
-    f = n(865427),
-    h = n(406128),
-    p = n(25779),
-    I = n(797614),
-    m = n(703656),
-    T = n(626135),
-    S = n(960048),
-    g = n(998502),
-    A = n(981631),
-    N = n(689938),
-    R = n(584738);
-function O(e, t, n) {
+    f = n(386506),
+    _ = n(304761),
+    h = n(865427),
+    p = n(406128),
+    m = n(25779),
+    g = n(797614),
+    E = n(703656),
+    v = n(626135),
+    I = n(960048),
+    S = n(998502),
+    T = n(981631),
+    b = n(388032),
+    y = n(584738);
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,19 +34,19 @@ function O(e, t, n) {
         e
     );
 }
-function v() {
+function N() {
     let [e, t] = i.useState(!1);
     if (
         null ==
-        (0, c.e7)([E.C], () => {
+        (0, c.e7)([_.C], () => {
             var e;
-            return (0, f.fD)() ? (null === (e = E.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
+            return (0, h.fD)() ? (null === (e = _.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         })
     )
         return null;
     let n = async () => {
         try {
-            t(!0), await (0, _.bF)(), window.location.reload(!0);
+            t(!0), await (0, f.bF)(), window.location.reload(!0);
         } catch (e) {
             t(!1);
         }
@@ -55,13 +55,13 @@ function v() {
         size: d.ButtonSizes.LARGE,
         onClick: n,
         submitting: e,
-        className: R.clearOverrideButton,
-        children: N.Z.Messages.CLEAR_BUILD_OVERRIDE
+        className: y.clearOverrideButton,
+        children: b.intl.string(b.t['/Nz9ra'])
     });
 }
 let C = s().throttle(
     (e) => {
-        I.Z.increment(
+        g.Z.increment(
             {
                 name: u.V.APP_CRASHED,
                 tags: ['reason:'.concat(o.v.UNHANDLED_JS_ERROR), 'level:'.concat(l.c.FATAL), 'modded_client:'.concat(e)]
@@ -72,19 +72,19 @@ let C = s().throttle(
     100,
     { trailing: !1 }
 );
-class L extends i.PureComponent {
+class R extends i.PureComponent {
     componentDidCatch(e, t) {
         this.triggerSoftCrash(e, t);
     }
     triggerSoftCrash(e, t) {
-        let n = (0, m.s1)().location;
+        let n = (0, E.s1)().location;
         this.setState({
             error: e,
             info: t
         });
-        let r = (0, p.e)(),
-            i = S.Z.captureCrash(e, { extra: t });
-        T.default.track(A.rMx.APP_CRASHED, {
+        let r = (0, m.e)(),
+            i = I.Z.captureCrash(e, { extra: t });
+        v.default.track(T.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
@@ -94,7 +94,7 @@ class L extends i.PureComponent {
             error_level: 'fatal'
         }),
             C(r),
-            g.ZP.cleanupDisplaySleep();
+            S.ZP.cleanupDisplaySleep();
     }
     _handleSubmitReport() {
         location.reload(!0);
@@ -115,35 +115,35 @@ class L extends i.PureComponent {
         let { children: e, renderCustomMessage: t } = this.props;
         if (null !== this.state.error) {
             let e = (0, r.jsxs)('div', {
-                    children: [(0, r.jsx)('p', { children: N.Z.Messages.ERRORS_UNEXPECTED_CRASH }), (0, r.jsx)('p', { children: N.Z.Messages.ERRORS_ACTION_TO_TAKE })]
+                    children: [(0, r.jsx)('p', { children: b.intl.string(b.t.tx8CkJ) }), (0, r.jsx)('p', { children: b.intl.string(b.t.CvQlAA) })]
                 }),
                 n = (0, r.jsxs)('div', {
-                    className: R.buttons,
+                    className: y.buttons,
                     children: [
                         (0, r.jsx)(d.Button, {
                             size: d.ButtonSizes.LARGE,
                             onClick: this._handleSubmitReport,
-                            children: N.Z.Messages.ERRORS_RELOAD
+                            children: b.intl.string(b.t['+hivLS'])
                         }),
-                        (0, r.jsx)(v, {})
+                        (0, r.jsx)(N, {})
                     ]
                 });
-            return (0, r.jsx)(h.Z, {
-                title: N.Z.Messages.UNSUPPORTED_BROWSER_TITLE,
+            return (0, r.jsx)(p.Z, {
+                title: b.intl.string(b.t['3h+n+/']),
                 note: null != t ? t() : e,
                 action: n,
-                className: R.errorPage
+                className: y.errorPage
             });
         }
         return e;
     }
     constructor(...e) {
         super(...e),
-            O(this, 'state', {
+            A(this, 'state', {
                 error: null,
                 info: null
             }),
-            O(this, 'discordErrorsSet', !1);
+            A(this, 'discordErrorsSet', !1);
     }
 }
-t.Z = L;
+t.Z = R;

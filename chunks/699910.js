@@ -1,6 +1,6 @@
 n.d(t, {
     v: function () {
-        return a;
+        return r;
     }
 });
 let i = (0, n(818083).B)({
@@ -16,4 +16,4 @@ let i = (0, n(818083).B)({
             }
         ]
     }),
-    a = (e) => i.getCurrentConfig({ location: e }).expiryModalEnabled;
+    r = (e) => i.getCurrentConfig({ location: e }).expiryModalEnabled;

@@ -1,75 +1,75 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return _;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(399606),
-    i = n(481060),
-    r = n(395586),
-    l = n(755930),
+var r = n(399606),
+    l = n(481060),
+    s = n(395586),
+    a = n(755930),
     o = n(909667),
     c = n(968820),
     d = n(200472),
     u = n(489028),
-    _ = n(277369),
-    I = n(215124),
-    E = n(999382),
-    T = n(267101),
-    m = n(287576),
-    N = n(894610),
-    S = n(689938);
-function g(e) {
+    m = n(277369),
+    h = n(215124),
+    g = n(999382),
+    x = n(267101),
+    p = n(287576),
+    f = n(894610),
+    C = n(388032);
+function I(e) {
     let { listingId: t } = e,
-        n = (0, T.r)(t);
-    return null == n ? null : (0, s.jsx)(l.bL, { children: n.name });
+        n = (0, x.r)(t);
+    return null == n ? null : (0, i.jsx)(a.bL, { children: n.name });
 }
-function h(e) {
-    var t, n, l;
-    let { guildId: T } = e,
-        h = (0, m.Z)(T),
-        C = (0, r.f3)(),
-        x = (0, a.e7)([E.Z], () => E.Z.getGuild());
-    return h.loading || null == x
-        ? (0, s.jsx)(i.Spinner, {})
-        : null == h.application
-          ? (0, s.jsx)(u.Z, { guild: x })
-          : (0, s.jsxs)(d.Z, {
+function _(e) {
+    var t, n, a;
+    let { guildId: x } = e,
+        _ = (0, p.Z)(x),
+        N = (0, s.f3)(),
+        v = (0, r.e7)([g.Z], () => g.Z.getGuild());
+    return _.loading || null == v
+        ? (0, i.jsx)(l.Spinner, {})
+        : null == _.application
+          ? (0, i.jsx)(u.Z, { guild: v })
+          : (0, i.jsxs)(d.Z, {
                 children: [
-                    (0, s.jsx)(c.Z, {
-                        revenue: h.metrics.revenue,
-                        revenueTrend: h.metrics.revenuePctChange,
-                        summaryMetricLabel: S.Z.Messages.GUILD_PRODUCT_PURCHASES_TITLE,
-                        summaryMetricValue: null !== (n = h.metrics.paymentsCount) && void 0 !== n ? n : '-',
-                        summaryMetricTrend: null !== (l = h.metrics.paymentsCountChange) && void 0 !== l ? l : 0,
+                    (0, i.jsx)(c.Z, {
+                        revenue: _.metrics.revenue,
+                        revenueTrend: _.metrics.revenuePctChange,
+                        summaryMetricLabel: C.intl.string(C.t.R3PCmZ),
+                        summaryMetricValue: null !== (n = _.metrics.paymentsCount) && void 0 !== n ? n : '-',
+                        summaryMetricTrend: null !== (a = _.metrics.paymentsCountChange) && void 0 !== a ? a : 0,
                         summaryMetricTrendIsPercent: !1,
-                        children: (0, s.jsx)(N.Z, {
-                            guildId: T,
-                            earningsData: h
+                        children: (0, i.jsx)(f.Z, {
+                            guildId: x,
+                            earningsData: _
                         })
                     }),
-                    (0, s.jsx)(i.FormSection, {
-                        title: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EARNINGS_HISTORY_HEADER,
-                        children: (0, s.jsx)(o.Z, {
-                            ListingIdLabel: g,
-                            payoutsByPeriod: h.payoutsByPeriod,
-                            team: null === (t = h.application) || void 0 === t ? void 0 : t.team
+                    (0, i.jsx)(l.FormSection, {
+                        title: C.intl.string(C.t['+5Rmho']),
+                        children: (0, i.jsx)(o.Z, {
+                            ListingIdLabel: I,
+                            payoutsByPeriod: _.payoutsByPeriod,
+                            team: null === (t = _.application) || void 0 === t ? void 0 : t.team
                         })
                     }),
-                    (0, s.jsx)(i.FormSection, {
-                        title: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TITLE,
-                        disabled: C,
-                        children: (0, s.jsx)(_.Z, {
-                            guildId: T,
-                            application: h.application
+                    (0, i.jsx)(l.FormSection, {
+                        title: C.intl.string(C.t.O8cDAA),
+                        disabled: N,
+                        children: (0, i.jsx)(m.Z, {
+                            guildId: x,
+                            application: _.application
                         })
                     }),
-                    (0, s.jsx)(i.FormSection, {
-                        title: S.Z.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_SECTION_TITLE,
-                        children: (0, s.jsx)(I.Z, {
-                            guildId: T,
-                            allPeriods: h.payoutsByPeriod
+                    (0, i.jsx)(l.FormSection, {
+                        title: C.intl.string(C.t['0n7R2d']),
+                        children: (0, i.jsx)(h.Z, {
+                            guildId: x,
+                            allPeriods: _.payoutsByPeriod
                         })
                     })
                 ]

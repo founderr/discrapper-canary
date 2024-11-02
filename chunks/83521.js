@@ -1,115 +1,115 @@
-l.r(a),
-    l.d(a, {
+l.r(n),
+    l.d(n, {
         default: function () {
-            return h;
+            return j;
         }
     }),
     l(47120);
-var n = l(200651),
-    s = l(192379),
-    i = l(481060),
+var a = l(200651),
+    i = l(192379),
+    t = l(481060),
     o = l(442837),
-    t = l(410030),
-    r = l(430824),
+    r = l(410030),
+    s = l(430824),
     d = l(594174),
     c = l(931240),
     u = l(645896),
-    _ = l(603368),
-    m = l(353093),
-    v = l(114487),
-    x = l(380365),
-    C = l(981631),
-    g = l(921944),
-    A = l(689938),
+    m = l(603368),
+    v = l(353093),
+    x = l(114487),
+    g = l(380365),
+    h = l(981631),
+    f = l(921944),
+    C = l(388032),
     N = l(126122);
-function h(e) {
-    var a, l;
-    let { guildId: h, transitionState: S, onClose: T } = e,
-        f = (0, o.e7)([r.Z], () => r.Z.getGuild(h), [h]),
-        L = (0, u.Cc)(null != h ? h : null),
-        M = (0, o.e7)([d.default], () => d.default.getCurrentUser(), []),
-        [E, j] = s.useState(!0),
-        D = (0, t.ZP)(),
-        I = s.useCallback(async () => {
-            E && (await (0, c.nE)(h, !0, C.Sbl.CLAN_ADOPT_IDENTITY_MODAL)), T(g.L.PRIMARY);
-        }, [E, T, h]),
-        p = s.useCallback(() => {
-            T(g.L.DISMISS);
-        }, [T]);
-    s.useEffect(() => ((null == f || null == M) && T(g.L.AUTO_DISMISS), () => {}), [M, f, h, T]);
-    let Z = (0, _.nP)(null == L ? void 0 : null === (a = L.branding) || void 0 === a ? void 0 : a.primaryColor, [i.tokens.colors.BG_BRAND, 0.7]),
-        k = i.tokens.colors.BG_SURFACE_OVERLAY.resolve({
-            theme: D,
+function j(e) {
+    var n, l;
+    let { guildId: j, transitionState: S, onClose: _ } = e,
+        p = (0, o.e7)([s.Z], () => s.Z.getGuild(j), [j]),
+        k = (0, u.Cc)(null != j ? j : null),
+        b = (0, o.e7)([d.default], () => d.default.getCurrentUser(), []),
+        [T, w] = i.useState(!0),
+        M = (0, r.ZP)(),
+        P = i.useCallback(async () => {
+            T && (await (0, c.nE)(j, !0, h.Sbl.CLAN_ADOPT_IDENTITY_MODAL)), _(f.L.PRIMARY);
+        }, [T, _, j]),
+        Z = i.useCallback(() => {
+            _(f.L.DISMISS);
+        }, [_]);
+    i.useEffect(() => ((null == p || null == b) && _(f.L.AUTO_DISMISS), () => {}), [b, p, j, _]);
+    let A = (0, m.nP)(null == k ? void 0 : null === (n = k.branding) || void 0 === n ? void 0 : n.primaryColor, [t.tokens.colors.BG_BRAND, 0.7]),
+        I = t.tokens.colors.BG_SURFACE_OVERLAY.resolve({
+            theme: M,
             saturation: 1
         }).hex(),
-        P = (0, _.nj)(Z, k, 'top center'),
-        b = (0, _.nP)(null == L ? void 0 : null === (l = L.branding) || void 0 === l ? void 0 : l.primaryColor, [i.tokens.colors.BG_BRAND, 1]),
-        O = (0, _.$0)(Z).hex(),
-        R = (0, m.Zp)(f, null == M ? void 0 : M.clan);
-    if (null == f || null == M) return null;
-    let U = R ? A.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_NEW_IDENTITY_HEADING.format({ guildName: f.name }) : A.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_HEADING.format({ guildName: f.name }),
-        G = R ? A.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_NEW_IDENTITY_DESCRIPTION.format({ guildName: f.name }) : A.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_DESCRIPTION.format({ guildName: f.name }),
-        w = A.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_CTA;
-    return (0, n.jsxs)(i.ModalRoot, {
+        L = (0, m.nj)(A, I, 'top center'),
+        B = (0, m.nP)(null == k ? void 0 : null === (l = k.branding) || void 0 === l ? void 0 : l.primaryColor, [t.tokens.colors.BG_BRAND, 1]),
+        y = (0, m.$0)(A).hex(),
+        R = (0, v.Zp)(p, null == b ? void 0 : b.clan);
+    if (null == p || null == b) return null;
+    let D = R ? C.intl.format(C.t['hyP/19'], { guildName: p.name }) : C.intl.format(C.t.h1CclZ, { guildName: p.name }),
+        E = R ? C.intl.formatToPlainString(C.t['x+B7c3'], { guildName: p.name }) : C.intl.formatToPlainString(C.t.kPJowM, { guildName: p.name }),
+        U = C.intl.string(C.t.re8ZPj);
+    return (0, a.jsxs)(t.ModalRoot, {
         transitionState: S,
-        size: i.ModalSize.SMALL,
+        size: t.ModalSize.SMALL,
         className: N.modal,
         children: [
-            (0, n.jsx)(i.ModalContent, {
-                style: P,
-                children: (0, n.jsxs)('div', {
+            (0, a.jsx)(t.ModalContent, {
+                style: L,
+                children: (0, a.jsxs)('div', {
                     className: N.mainContainer,
                     children: [
-                        (0, n.jsxs)('div', {
+                        (0, a.jsxs)('div', {
                             className: N.infoContainer,
                             children: [
-                                (0, n.jsx)(v.Z, {
-                                    guild: f,
+                                (0, a.jsx)(x.Z, {
+                                    guild: p,
                                     iconSize: 64
                                 }),
-                                (0, n.jsxs)('div', {
+                                (0, a.jsxs)('div', {
                                     className: N.headerTextContainer,
                                     children: [
-                                        (0, n.jsx)(i.Heading, {
+                                        (0, a.jsx)(t.Heading, {
                                             variant: 'heading-xl/normal',
                                             color: 'header-primary',
-                                            children: U
+                                            children: D
                                         }),
-                                        (0, n.jsx)(i.Text, {
+                                        (0, a.jsx)(t.Text, {
                                             variant: 'text-sm/normal',
                                             color: 'text-secondary',
-                                            children: G
+                                            children: E
                                         })
                                     ]
                                 })
                             ]
                         }),
-                        (0, n.jsx)(x.Z, {
-                            guildId: h,
-                            isTagAdopted: E,
-                            onChangeUseTag: j
+                        (0, a.jsx)(g.Z, {
+                            guildId: j,
+                            isTagAdopted: T,
+                            onChangeUseTag: w
                         })
                     ]
                 })
             }),
-            (0, n.jsxs)(i.ModalFooter, {
+            (0, a.jsxs)(t.ModalFooter, {
                 className: N.modalFooter,
                 children: [
-                    (0, n.jsx)(i.Button, {
-                        onClick: I,
-                        color: i.Button.Colors.CUSTOM,
-                        look: i.Button.Looks.FILLED,
+                    (0, a.jsx)(t.Button, {
+                        onClick: P,
+                        color: t.Button.Colors.CUSTOM,
+                        look: t.Button.Looks.FILLED,
                         style: {
-                            backgroundColor: b,
-                            color: O
+                            backgroundColor: B,
+                            color: y
                         },
-                        children: w
+                        children: U
                     }),
-                    (0, n.jsx)(i.Button, {
-                        onClick: p,
-                        color: i.Button.Colors.PRIMARY,
-                        look: i.Button.Looks.LINK,
-                        children: A.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_CANCEL
+                    (0, a.jsx)(t.Button, {
+                        onClick: Z,
+                        color: t.Button.Colors.PRIMARY,
+                        look: t.Button.Looks.LINK,
+                        children: C.intl.string(C.t.QMwUJy)
                     })
                 ]
             })

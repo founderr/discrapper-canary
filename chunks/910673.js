@@ -1,107 +1,107 @@
-n.r(t);
+n.r(e);
 var o = n(200651),
-    a = n(192379),
-    l = n(481060),
-    r = n(230711),
-    s = n(782568),
-    i = n(880257),
-    d = n(187819),
-    E = n(63063),
-    _ = n(163268),
-    c = n(981631),
-    u = n(526761),
-    I = n(689938),
-    C = n(754812),
-    R = n(444812);
-t.default = (e) => {
-    let { channelId: t, messageId: T, transitionState: A, onClose: N } = e,
-        O = (0, i.Z)(),
-        M = (0, d._p)({ location: 'explicit-media-learn-more' }),
-        h = a.useCallback(
-            (e) => {
-                (0, _.aP)({
-                    action: e,
-                    channelId: t,
-                    messageId: T
+    l = n(192379),
+    r = n(481060),
+    a = n(230711),
+    i = n(782568),
+    d = n(880257),
+    s = n(187819),
+    c = n(63063),
+    u = n(163268),
+    I = n(981631),
+    _ = n(526761),
+    m = n(388032),
+    E = n(754812),
+    h = n(444812);
+e.default = (t) => {
+    let { channelId: e, messageId: f, transitionState: C, onClose: g } = t,
+        v = (0, d.Z)(),
+        A = (0, s._p)({ location: 'explicit-media-learn-more' }),
+        R = l.useCallback(
+            (t) => {
+                (0, u.aP)({
+                    action: t,
+                    channelId: e,
+                    messageId: f
                 });
             },
-            [t, T]
+            [e, f]
         );
     return (
-        a.useEffect(() => {
-            (0, _.aP)({
-                action: _.Yy.EXPLICIT_MEDIA_LEARN_MORE_VIEWED,
-                channelId: t,
-                messageId: T
+        l.useEffect(() => {
+            (0, u.aP)({
+                action: u.Yy.EXPLICIT_MEDIA_LEARN_MORE_VIEWED,
+                channelId: e,
+                messageId: f
             });
-        }, [t, T]),
-        (0, o.jsxs)(l.ModalRoot, {
-            transitionState: A,
-            'aria-label': I.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_MODAL_LABEL,
+        }, [e, f]),
+        (0, o.jsxs)(r.ModalRoot, {
+            transitionState: C,
+            'aria-label': m.intl.string(m.t.xdm3XF),
             children: [
-                (0, o.jsx)(l.ModalHeader, {
+                (0, o.jsx)(r.ModalHeader, {
                     separator: !1,
-                    className: C.modalHeader,
+                    className: E.modalHeader,
                     children: (0, o.jsx)('img', {
-                        src: R,
-                        alt: I.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_HEADER_IMAGE_ALT,
-                        className: C.headerImg
+                        src: h,
+                        alt: m.intl.string(m.t.id3fND),
+                        className: E.headerImg
                     })
                 }),
-                (0, o.jsxs)(l.ModalContent, {
-                    className: C.modalBody,
+                (0, o.jsxs)(r.ModalContent, {
+                    className: E.modalBody,
                     children: [
-                        (0, o.jsx)(l.Heading, {
+                        (0, o.jsx)(r.Heading, {
                             variant: 'heading-lg/bold',
-                            className: C.modalInteriorHeader,
-                            children: I.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_HEADER
+                            className: E.modalInteriorHeader,
+                            children: m.intl.string(m.t.sGW77u)
                         }),
-                        (0, o.jsx)(l.Text, {
+                        (0, o.jsx)(r.Text, {
                             variant: 'text-md/normal',
                             color: 'header-secondary',
-                            children: O ? I.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_DESCRIPTION_ADULT : I.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_DESCRIPTION_TEEN
+                            children: v ? m.intl.string(m.t.XW3vjo) : m.intl.string(m.t.i4daNj)
                         }),
                         (0, o.jsxs)('div', {
-                            className: C.buttonContainer,
+                            className: E.buttonContainer,
                             children: [
-                                O
-                                    ? (0, o.jsx)(l.Button, {
-                                          color: l.Button.Colors.BRAND,
+                                v
+                                    ? (0, o.jsx)(r.Button, {
+                                          color: r.Button.Colors.BRAND,
                                           onClick: function () {
-                                              h(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS), M ? r.Z.open(c.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: u.to.EXPLICIT_MEDIA_REDACTION_V2 }) : r.Z.open(c.oAB.PRIVACY_AND_SAFETY, null, { scrollPosition: u.to.EXPLICIT_MEDIA_REDACTION }), N();
+                                              R(u.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS), A ? a.Z.open(I.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: _.to.EXPLICIT_MEDIA_REDACTION_V2 }) : a.Z.open(I.oAB.PRIVACY_AND_SAFETY, null, { scrollPosition: _.to.EXPLICIT_MEDIA_REDACTION }), g();
                                           },
                                           fullWidth: !0,
-                                          children: I.Z.Messages.OBSCURED_CONTENT_UPDATE_SETTINGS_CTA
+                                          children: m.intl.string(m.t['9D+zGR'])
                                       })
-                                    : (0, o.jsx)(l.Button, {
-                                          color: l.Button.Colors.BRAND,
+                                    : (0, o.jsx)(r.Button, {
+                                          color: r.Button.Colors.BRAND,
                                           onClick: () => {
-                                              (0, s.Z)(E.Z.getArticleURL(c.BhN.EXPLICIT_MEDIA_REDACTION));
+                                              (0, i.Z)(c.Z.getArticleURL(I.BhN.EXPLICIT_MEDIA_REDACTION));
                                           },
                                           fullWidth: !0,
-                                          children: I.Z.Messages.LEARN_MORE
+                                          children: m.intl.string(m.t.hvVgAQ)
                                       }),
-                                (0, o.jsx)(l.Button, {
-                                    color: l.Button.Colors.PRIMARY,
+                                (0, o.jsx)(r.Button, {
+                                    color: r.Button.Colors.PRIMARY,
                                     onClick: function () {
-                                        N(), h(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS);
+                                        g(), R(u.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS);
                                     },
                                     fullWidth: !0,
-                                    children: I.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_DISMISS
+                                    children: m.intl.string(m.t.bmbHPD)
                                 }),
-                                (0, o.jsx)(l.Text, {
+                                (0, o.jsx)(r.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'header-secondary',
-                                    children: I.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE.format({
+                                    children: m.intl.format(m.t.Ge0HUl, {
                                         handleFalsePositiveHook: () => {
-                                            N(),
-                                                h(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE),
-                                                (0, l.openModalLazy)(async () => {
-                                                    let { default: e } = await n(788679);
+                                            g(),
+                                                R(u.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE),
+                                                (0, r.openModalLazy)(async () => {
+                                                    let { default: t } = await n(788679);
                                                     return (n) =>
-                                                        (0, o.jsx)(e, {
-                                                            channelId: t,
-                                                            messageId: T,
+                                                        (0, o.jsx)(t, {
+                                                            channelId: e,
+                                                            messageId: f,
                                                             ...n
                                                         });
                                                 });

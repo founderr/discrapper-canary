@@ -1,28 +1,28 @@
-n.r(t),
-    n.d(t, {
+n.r(e),
+    n.d(e, {
         default: function () {
-            return c;
+            return i;
         }
     }),
     n(47120);
 var r = n(200651),
     o = n(192379),
     a = n(481060),
-    s = n(689938),
-    l = n(365728);
-function c(e) {
-    let { onConfirm: t, onClose: n, validationText: c, errorText: i, header: u, className: d, cancelText: x, confirmText: h, instructionText: p, transitionState: m, children: C } = e,
-        [g, j] = o.useState(''),
+    l = n(388032),
+    s = n(365728);
+function i(t) {
+    let { onConfirm: e, onClose: n, validationText: i, errorText: c, header: u, className: d, cancelText: x, confirmText: h, instructionText: p, transitionState: m, children: g } = t,
+        [j, C] = o.useState(''),
         [f, N] = o.useState(null),
-        M =
-            o.Children.count(C) > 0
+        k =
+            o.Children.count(g) > 0
                 ? (0, r.jsx)(a.Card, {
                       type: a.Card.Types.WARNING,
-                      className: l.card,
+                      className: s.card,
                       children: (0, r.jsx)(a.Text, {
-                          className: l.warning,
+                          className: s.warning,
                           variant: 'text-md/normal',
-                          children: C
+                          children: g
                       })
                   })
                 : null;
@@ -30,12 +30,12 @@ function c(e) {
         transitionState: m,
         className: d,
         children: (0, r.jsxs)('form', {
-            onSubmit: function (e) {
-                if ((e.preventDefault(), g.toLowerCase() !== c.toLowerCase())) {
-                    N(i);
+            onSubmit: function (t) {
+                if ((t.preventDefault(), j.toLowerCase() !== i.toLowerCase())) {
+                    N(c);
                     return;
                 }
-                null == t || t(), n();
+                null == e || e(), n();
             },
             children: [
                 (0, r.jsx)(a.ModalHeader, {
@@ -47,24 +47,24 @@ function c(e) {
                 }),
                 (0, r.jsxs)(a.ModalContent, {
                     children: [
-                        M,
+                        k,
                         (0, r.jsxs)(a.FormItem, {
                             title: p,
-                            className: l.spacing,
+                            className: s.spacing,
                             children: [
                                 (0, r.jsx)(a.TextInput, {
                                     id: 'text-entry-confirm',
                                     type: 'text',
-                                    value: g,
+                                    value: j,
                                     autoComplete: 'off',
-                                    onChange: j,
+                                    onChange: C,
                                     autoFocus: !0
                                 }),
                                 null != f && '' !== f
                                     ? (0, r.jsx)(a.Text, {
                                           color: 'text-danger',
                                           variant: 'text-xs/normal',
-                                          className: l.error,
+                                          className: s.error,
                                           children: f
                                       })
                                     : null
@@ -77,13 +77,13 @@ function c(e) {
                         (0, r.jsx)(a.Button, {
                             type: 'submit',
                             color: a.Button.Colors.RED,
-                            children: null != h ? h : s.Z.Messages.CONFIRM
+                            children: null != h ? h : l.intl.string(l.t['cY+Ooa'])
                         }),
                         (0, r.jsx)(a.Button, {
                             onClick: n,
                             look: a.Button.Looks.LINK,
                             color: a.Button.Colors.PRIMARY,
-                            children: null != x ? x : s.Z.Messages.CANCEL
+                            children: null != x ? x : l.intl.string(l.t['ETE/oK'])
                         })
                     ]
                 })

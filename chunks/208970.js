@@ -10,7 +10,7 @@ function d(e) {
     let t = u.Z.getChannel(e);
     return !!(null != t && t.isForumLikeChannel()) || !1;
 }
-function _(e) {
+function f(e) {
     var t;
     let n =
         null !== (t = c[e]) && void 0 !== t
@@ -22,7 +22,7 @@ function _(e) {
               };
     return (c[e] = n), n;
 }
-class E extends (s = o.ZP.Store) {
+class _ extends (s = o.ZP.Store) {
     getSearchQuery(e) {
         let t = c[e];
         return null == t ? void 0 : t.query;
@@ -42,7 +42,7 @@ class E extends (s = o.ZP.Store) {
     }
 }
 (a = 'ForumSearchStore'),
-    (i = 'displayName') in (r = E)
+    (i = 'displayName') in (r = _)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -50,7 +50,7 @@ class E extends (s = o.ZP.Store) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = new E(l.Z, {
+    (t.Z = new _(l.Z, {
         CONNECTION_OPEN: function () {
             c = {};
         },
@@ -73,7 +73,7 @@ class E extends (s = o.ZP.Store) {
         FORUM_SEARCH_QUERY_UPDATED: function (e) {
             let { channelId: t, query: n } = e;
             if (!d(t)) return !1;
-            let r = _(t);
+            let r = f(t);
             c[t] = {
                 ...r,
                 query: n,
@@ -83,7 +83,7 @@ class E extends (s = o.ZP.Store) {
         FORUM_SEARCH_START: function (e) {
             let { channelId: t } = e;
             if (!d(t)) return !1;
-            let n = _(t);
+            let n = f(t);
             c[t] = {
                 ...n,
                 loading: !0
@@ -92,7 +92,7 @@ class E extends (s = o.ZP.Store) {
         FORUM_SEARCH_SUCCESS: function (e) {
             let { channelId: t, threadIds: n } = e;
             if (!d(t)) return !1;
-            let r = _(t);
+            let r = f(t);
             c[t] = {
                 ...r,
                 loading: !1,
@@ -102,7 +102,7 @@ class E extends (s = o.ZP.Store) {
         FORUM_SEARCH_FAILURE: function (e) {
             let { channelId: t } = e;
             if (!d(t)) return !1;
-            let n = _(t);
+            let n = f(t);
             c[t] = {
                 ...n,
                 loading: !1,

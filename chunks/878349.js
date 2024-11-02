@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return C;
     }
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    a = n(120356),
-    l = n.n(a),
-    r = n(442837),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
+    s = n(442837),
     o = n(780384),
     c = n(481060),
     u = n(393238),
@@ -16,24 +16,24 @@ var i = n(200651),
     h = n(607070),
     m = n(466794),
     p = n(677413),
-    _ = n(546240),
-    f = n(952009);
-function E(e) {
-    let { checked: t, labelText: n, tooltipText: a, canToggle: E, iconAltText: g, onChange: C, tooltipColor: I, className: T, id: x = 'fancybutton-toggle', collapseWhenChecked: S = !0, onClick: v, disabled: N } = e,
-        A = (0, r.e7)([h.Z], () => h.Z.useReducedMotion),
-        [Z, M] = s.useState(!1),
-        b = (0, d.ZP)(),
-        R = (0, o.wj)(b) || t ? f : _,
-        { width: L = 0, ref: P } = (0, u.Z)(),
-        { width: j = 0, ref: O } = (0, u.Z)();
+    f = n(546240),
+    g = n(952009);
+function C(e) {
+    let { checked: t, labelText: n, tooltipText: r, canToggle: C, iconAltText: x, onChange: v, tooltipColor: _, className: I, id: E = 'fancybutton-toggle', collapseWhenChecked: b = !0, onClick: S, disabled: Z } = e,
+        T = (0, s.e7)([h.Z], () => h.Z.useReducedMotion),
+        [N, j] = l.useState(!1),
+        A = (0, d.ZP)(),
+        y = (0, o.wj)(A) || t ? g : f,
+        { width: P = 0, ref: M } = (0, u.Z)(),
+        { width: R = 0, ref: L } = (0, u.Z)();
     return (0, i.jsxs)(c.TooltipContainer, {
         text: (0, i.jsx)(m.X, {
             textColor: 'always-white',
-            tooltipText: a
+            tooltipText: r
         }),
         position: 'top',
-        color: null != I ? I : N ? c.Tooltip.Colors.BLACK : c.Tooltip.Colors.BRAND,
-        'aria-label': a,
+        color: null != _ ? _ : Z ? c.Tooltip.Colors.BLACK : c.Tooltip.Colors.BRAND,
+        'aria-label': r,
         tooltipClassName: p.tooltip,
         className: p.tooltipContainer,
         children: [
@@ -41,41 +41,41 @@ function E(e) {
                 className: p.visuallyHidden,
                 checked: t,
                 onChange: function () {
-                    if (E) {
+                    if (C) {
                         let e = !t;
-                        M(!0), null == C || C(e);
+                        j(!0), null == v || v(e);
                     }
-                    'function' == typeof v && v();
+                    'function' == typeof S && S();
                 },
-                id: x,
+                id: E,
                 type: 'checkbox',
-                disabled: N
+                disabled: Z
             }),
             (0, i.jsxs)('label', {
-                htmlFor: x,
-                className: l()(p.label, T, {
-                    [p.transition]: Z,
+                htmlFor: E,
+                className: a()(p.label, I, {
+                    [p.transition]: N,
                     [p.labelChecked]: t,
-                    [p.labelUnchecked]: !t && !E
+                    [p.labelUnchecked]: !t && !C
                 }),
-                style: S ? { width: t ? L : L + j } : void 0,
+                style: b ? { width: t ? P : P + R } : void 0,
                 children: [
                     t
                         ? (0, i.jsx)(c.Shine, {
                               className: p.shine,
-                              shinePaused: A
+                              shinePaused: T
                           })
                         : null,
                     (0, i.jsx)('img', {
-                        ref: P,
-                        src: R,
-                        alt: g
+                        ref: M,
+                        src: y,
+                        alt: x
                     }),
                     (0, i.jsx)('span', {
-                        ref: O,
+                        ref: L,
                         children: (0, i.jsx)(c.Text, {
-                            className: l()(p.burstText, {
-                                [p.visuallyHidden]: t && S,
+                            className: a()(p.burstText, {
+                                [p.visuallyHidden]: t && b,
                                 [p.burstTextChecked]: t
                             }),
                             variant: 'text-sm/semibold',

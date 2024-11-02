@@ -1,42 +1,42 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return E;
+        return h;
     }
 });
-var n = t(200651);
-t(192379);
-var a = t(399606),
-    i = t(481060),
-    r = t(284056),
-    o = t(131951),
-    l = t(63063),
-    c = t(981631),
-    d = t(65154),
-    _ = t(689938),
-    u = t(893215);
-function E() {
-    return (0, a.e7)([o.Z], () => o.Z.supports(d.AN.LOOPBACK))
-        ? (0, n.jsx)('div', {
-              className: u.micTest,
-              children: (0, n.jsx)(r.Z, {
-                  title: _.Z.Messages.USER_SETTINGS_VOICE_MIC_TEST_TITLE,
-                  description: _.Z.Messages.USER_SETTINGS_VOICE_MIC_TEST_DESCRIPTION,
-                  notchBackground: r._.GRAY,
-                  captionVoice: _.Z.Messages.USER_SETTINGS_VOICE_MIC_TEST_VOICE_CAPTION,
-                  captionNoVoice: (0, n.jsxs)(n.Fragment, {
+var i = n(200651);
+n(192379);
+var s = n(399606),
+    r = n(481060),
+    l = n(284056),
+    a = n(131951),
+    o = n(63063),
+    c = n(981631),
+    d = n(65154),
+    u = n(388032),
+    m = n(893215);
+function h() {
+    return (0, s.e7)([a.Z], () => a.Z.supports(d.AN.LOOPBACK))
+        ? (0, i.jsx)('div', {
+              className: m.micTest,
+              children: (0, i.jsx)(l.Z, {
+                  title: u.intl.string(u.t.gyljWF),
+                  description: u.intl.string(u.t['8hhsCQ']),
+                  notchBackground: l._.GRAY,
+                  captionVoice: u.intl.string(u.t.bp3JOT),
+                  captionNoVoice: (0, i.jsxs)(i.Fragment, {
                       children: [
-                          _.Z.Messages.USER_SETTINGS_VOICE_MIC_TEST_VOICE_NO_INPUT_NOTICE,
-                          (0, n.jsx)(i.Anchor, {
-                              className: u.micTestHelpLink,
-                              href: l.Z.getArticleURL(c.BhN.NO_INPUT_DETECTED),
-                              children: _.Z.Messages.NOTICE_NO_INPUT_DETECTED_HELP_LINK_TEXT
+                          u.intl.string(u.t['MA+OZm']),
+                          (0, i.jsx)(r.Anchor, {
+                              className: m.micTestHelpLink,
+                              href: o.Z.getArticleURL(c.BhN.NO_INPUT_DETECTED),
+                              children: u.intl.string(u.t.RYKKo6)
                           })
                       ]
                   }),
-                  buttonTest: _.Z.Messages.USER_SETTINGS_VOICE_MIC_TEST_BUTTON_INACTIVE,
-                  buttonStop: _.Z.Messages.USER_SETTINGS_VOICE_MIC_TEST_BUTTON_ACTIVE,
-                  buttonClassName: u.micTestButton,
-                  buttonColor: i.Button.Colors.BRAND,
+                  buttonTest: u.intl.string(u.t.c4qHt7),
+                  buttonStop: u.intl.string(u.t.I6OnJy),
+                  buttonClassName: m.micTestButton,
+                  buttonColor: r.Button.Colors.BRAND,
                   location: {
                       page: c.ZY5.USER_SETTINGS,
                       section: c.jXE.SETTINGS_VOICE_AND_VIDEO

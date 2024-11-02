@@ -1,20 +1,20 @@
 n.d(t, {
     $: function () {
-        return i;
+        return l;
     }
 });
-var a = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(907040),
-    s = n(185923);
-function i(e) {
-    let { channel: t, closePopout: n, analyticsOverride: i, onSelectEmoji: o, messageId: l } = e;
-    return (0, a.jsx)(r.Z, {
+var i = n(907040),
+    a = n(185923);
+function l(e) {
+    let { channel: t, closePopout: n, analyticsOverride: l, onSelectEmoji: o, messageId: s } = e;
+    return (0, r.jsx)(i.Z, {
         closePopout: n,
         channel: t,
         onSelectEmoji: o,
-        pickerIntention: s.Hz.REACTION,
-        analyticsOverride: i,
-        messageId: l
+        pickerIntention: a.Hz.REACTION,
+        analyticsOverride: l,
+        messageId: s
     });
 }

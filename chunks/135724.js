@@ -9,15 +9,15 @@ var l = n(829750),
     r = n(280102);
 function a(e) {
     let { channel: t, video: n, userCount: a } = e,
-        { limit: s } = (0, l.Z)(t),
-        o = -1,
+        { limit: o } = (0, l.Z)(t),
+        s = -1,
         c = !1;
     return (
-        t.userLimit > 0 && (o = t.userLimit),
-        n && s > 0 && ((c = o < 0 || s < o), (o = o > 0 ? Math.min(o, s) : s)),
+        t.userLimit > 0 && (s = t.userLimit),
+        n && o > 0 && ((c = s < 0 || o < s), (s = s > 0 ? Math.min(s, o) : o)),
         (0, i.jsx)(r.Z, {
             users: a,
-            total: o,
+            total: s,
             videoLimit: c
         })
     );

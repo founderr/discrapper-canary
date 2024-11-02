@@ -1,277 +1,277 @@
-a.d(s, {
+n.d(t, {
     Z: function () {
-        return h;
+        return b;
     }
 }),
-    a(47120);
-var t = a(200651),
-    n = a(192379),
-    i = a(120356),
-    l = a.n(i),
-    r = a(442837),
-    c = a(481060),
-    d = a(430824),
-    o = a(771845),
-    _ = a(259580),
-    I = a(186523),
-    N = a(553826),
-    x = a(689938),
-    m = a(55011),
-    T = a(50180);
-function h(e) {
-    let { count: s } = e,
-        [a, i] = n.useState('server');
-    return (0, t.jsxs)(c.Scroller, {
-        className: m.content,
+    n(47120);
+var i = n(200651),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(442837),
+    c = n(481060),
+    d = n(430824),
+    o = n(771845),
+    m = n(259580),
+    x = n(186523),
+    h = n(553826),
+    u = n(388032),
+    j = n(55011),
+    g = n(50180);
+function b(e) {
+    let { count: t } = e,
+        [n, r] = s.useState('server');
+    return (0, i.jsxs)(c.Scroller, {
+        className: j.content,
         children: [
-            (0, t.jsxs)('div', {
-                className: l()(m.header, T.header),
+            (0, i.jsxs)('div', {
+                className: l()(j.header, g.header),
                 children: [
-                    (0, t.jsx)(c.CircleCheckIcon, {
+                    (0, i.jsx)(c.CircleCheckIcon, {
                         size: 'custom',
                         color: 'currentColor',
                         width: 40,
                         height: 40
                     }),
-                    (0, t.jsx)(c.Heading, {
+                    (0, i.jsx)(c.Heading, {
                         variant: 'heading-xl/bold',
                         color: 'header-primary',
-                        children: x.Z.Messages.NOTIF_MIGRATION_TIPS_TITLE.format({ count: s })
+                        children: u.intl.format(u.t.Wyk03t, { count: t })
                     }),
-                    (0, t.jsx)(c.Text, {
-                        className: m.__invalid_subtitle,
+                    (0, i.jsx)(c.Text, {
+                        className: j.__invalid_subtitle,
                         variant: 'text-md/medium',
                         color: 'header-secondary',
-                        children: x.Z.Messages.NOTIF_MIGRATION_TIPS_SUB_TITLE
+                        children: u.intl.string(u.t['jr/rn5'])
                     })
                 ]
             }),
-            (0, t.jsxs)('div', {
-                className: T.tabs,
+            (0, i.jsxs)('div', {
+                className: g.tabs,
                 children: [
-                    (0, t.jsx)('div', {
-                        className: T.tabBackground,
-                        style: { left: 'server' === a ? 0 : '50%' }
+                    (0, i.jsx)('div', {
+                        className: g.tabBackground,
+                        style: { left: 'server' === n ? 0 : '50%' }
                     }),
-                    (0, t.jsx)(c.Clickable, {
-                        className: T.tab,
-                        onClick: () => i('server'),
-                        children: (0, t.jsx)(c.Text, {
+                    (0, i.jsx)(c.Clickable, {
+                        className: g.tab,
+                        onClick: () => r('server'),
+                        children: (0, i.jsx)(c.Text, {
                             variant: 'text-sm/medium',
-                            color: 'server' === a ? 'header-primary' : 'text-muted',
-                            children: x.Z.Messages.NOTIF_MIGRATION_TIPS_TAB1
+                            color: 'server' === n ? 'header-primary' : 'text-muted',
+                            children: u.intl.string(u.t.pS4WEh)
                         })
                     }),
-                    (0, t.jsx)(c.Clickable, {
-                        className: T.tab,
-                        onClick: () => i('channel'),
-                        children: (0, t.jsx)(c.Text, {
+                    (0, i.jsx)(c.Clickable, {
+                        className: g.tab,
+                        onClick: () => r('channel'),
+                        children: (0, i.jsx)(c.Text, {
                             variant: 'text-sm/medium',
-                            color: 'channel' === a ? 'header-primary' : 'text-muted',
-                            children: x.Z.Messages.NOTIF_MIGRATION_TIPS_TAB2
+                            color: 'channel' === n ? 'header-primary' : 'text-muted',
+                            children: u.intl.string(u.t.UVxi0d)
                         })
                     })
                 ]
             }),
-            (0, t.jsxs)('div', {
-                className: T.container,
-                children: [(0, t.jsx)(u, { hidden: 'channel' === a }), (0, t.jsx)(O, { hidden: 'server' === a })]
+            (0, i.jsxs)('div', {
+                className: g.container,
+                children: [(0, i.jsx)(v, { hidden: 'channel' === n }), (0, i.jsx)(f, { hidden: 'server' === n })]
             })
         ]
     });
 }
-function u(e) {
-    let { hidden: s } = e,
-        a = (0, r.e7)([d.Z, o.ZP], () => {
+function v(e) {
+    let { hidden: t } = e,
+        n = (0, a.e7)([d.Z, o.ZP], () => {
             var e;
             return null === (e = d.Z.getGuild(o.ZP.getFlattenedGuildIds()[0])) || void 0 === e ? void 0 : e.name;
         }),
-        [i, I] = n.useState(0);
+        [r, x] = s.useState(0);
     return (
-        n.useEffect(() => {
-            if (s) return;
+        s.useEffect(() => {
+            if (t) return;
             let e = 0,
-                a = [1500, 1000, 1000, 500].map((s, a) => setTimeout(() => I(a + 1), (e += s)));
+                n = [1500, 1000, 1000, 500].map((t, n) => setTimeout(() => x(n + 1), (e += t)));
             return () => {
-                a.forEach((e) => clearTimeout(e)), setTimeout(() => I(0), 150);
+                n.forEach((e) => clearTimeout(e)), setTimeout(() => x(0), 150);
             };
-        }, [s]),
-        (0, t.jsxs)(t.Fragment, {
+        }, [t]),
+        (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, t.jsx)('div', {
-                    className: T.containerInner,
-                    children: (0, t.jsxs)('div', {
-                        className: l()(T.serversSection, {
-                            [T.hidden]: s,
-                            [T.showBigMenu]: i >= 1,
-                            [T.fadeChannels]: i >= 1,
-                            [T.showModal]: i >= 3
+                (0, i.jsx)('div', {
+                    className: g.containerInner,
+                    children: (0, i.jsxs)('div', {
+                        className: l()(g.serversSection, {
+                            [g.hidden]: t,
+                            [g.showBigMenu]: r >= 1,
+                            [g.fadeChannels]: r >= 1,
+                            [g.showModal]: r >= 3
                         }),
                         children: [
-                            (0, t.jsxs)('div', {
-                                className: T.channels,
+                            (0, i.jsxs)('div', {
+                                className: g.channels,
                                 children: [
-                                    (0, t.jsxs)('div', {
-                                        className: T.guildName,
+                                    (0, i.jsxs)('div', {
+                                        className: g.guildName,
                                         children: [
-                                            (0, t.jsx)(c.Text, {
+                                            (0, i.jsx)(c.Text, {
                                                 variant: 'text-md/medium',
                                                 color: 'interactive-active',
                                                 lineClamp: 1,
-                                                children: null != a ? a : 'Keyboard Nerds'
+                                                children: null != n ? n : 'Keyboard Nerds'
                                             }),
-                                            i >= 1
-                                                ? (0, t.jsx)(c.XSmallIcon, {
+                                            r >= 1
+                                                ? (0, i.jsx)(c.XSmallIcon, {
                                                       size: 'md',
                                                       color: 'currentColor',
-                                                      className: T.icon
+                                                      className: g.icon
                                                   })
-                                                : (0, t.jsx)(_.Z, {
-                                                      className: l()(T.__invalid_downCaret, T.icon),
+                                                : (0, i.jsx)(m.Z, {
+                                                      className: l()(g.__invalid_downCaret, g.icon),
                                                       width: 24,
                                                       height: 24
                                                   })
                                         ]
                                     }),
-                                    (0, t.jsx)(j, { name: x.Z.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_2 }),
-                                    (0, t.jsx)(j, { name: x.Z.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_1 }),
-                                    (0, t.jsx)(j, {
+                                    (0, i.jsx)(_, { name: u.intl.string(u.t.jqWm9f) }),
+                                    (0, i.jsx)(_, { name: u.intl.string(u.t.WFejRk) }),
+                                    (0, i.jsx)(_, {
                                         grey: !0,
-                                        name: x.Z.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_3
+                                        name: u.intl.string(u.t.p9z9Iy)
                                     }),
-                                    (0, t.jsx)(j, {
+                                    (0, i.jsx)(_, {
                                         grey: !0,
-                                        name: x.Z.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_4
+                                        name: u.intl.string(u.t['2bdWDw'])
                                     }),
-                                    (0, t.jsx)(j, {
+                                    (0, i.jsx)(_, {
                                         grey: !0,
-                                        name: x.Z.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_5
+                                        name: u.intl.string(u.t['Ci+Our'])
                                     }),
-                                    (0, t.jsx)(j, {
+                                    (0, i.jsx)(_, {
                                         nodot: !0,
-                                        name: x.Z.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_6
+                                        name: u.intl.string(u.t['/7TEdn'])
                                     }),
-                                    (0, t.jsx)(j, {
+                                    (0, i.jsx)(_, {
                                         nodot: !0,
-                                        name: x.Z.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_7
+                                        name: u.intl.string(u.t['Ime/t7'])
                                     })
                                 ]
                             }),
-                            (0, t.jsxs)('div', {
-                                className: T.bigMenu,
+                            (0, i.jsxs)('div', {
+                                className: g.bigMenu,
                                 children: [
-                                    (0, t.jsx)(b, {
-                                        text: x.Z.Messages.INVITE_PEOPLE,
-                                        icon: (0, t.jsx)(c.GroupPlusIcon, {
+                                    (0, i.jsx)(p, {
+                                        text: u.intl.string(u.t.BN75l5),
+                                        icon: (0, i.jsx)(c.GroupPlusIcon, {
                                             size: 'sm',
-                                            className: T.icon
+                                            className: g.icon
                                         })
                                     }),
-                                    (0, t.jsx)('div', { className: T.divider }),
-                                    (0, t.jsx)(b, {
-                                        active: i >= 2,
-                                        text: x.Z.Messages.NOTIFICATION_SETTINGS,
-                                        icon: (0, t.jsx)(c.BellIcon, {
+                                    (0, i.jsx)('div', { className: g.divider }),
+                                    (0, i.jsx)(p, {
+                                        active: r >= 2,
+                                        text: u.intl.string(u.t.h850Sk),
+                                        icon: (0, i.jsx)(c.BellIcon, {
                                             size: 'sm',
                                             color: 'currentColor',
-                                            className: T.icon
+                                            className: g.icon
                                         })
                                     }),
-                                    (0, t.jsx)(b, {
-                                        text: x.Z.Messages.PRIVACY_SETTINGS,
-                                        icon: (0, t.jsx)(c.ShieldIcon, {
+                                    (0, i.jsx)(p, {
+                                        text: u.intl.string(u.t.BayiAg),
+                                        icon: (0, i.jsx)(c.ShieldIcon, {
                                             size: 'sm',
                                             color: 'currentColor',
-                                            className: T.icon
+                                            className: g.icon
                                         })
                                     }),
-                                    (0, t.jsx)(b, {
-                                        text: x.Z.Messages.SERVER_SETTINGS,
-                                        icon: (0, t.jsx)(c.SettingsIcon, {
+                                    (0, i.jsx)(p, {
+                                        text: u.intl.string(u.t['154/bG']),
+                                        icon: (0, i.jsx)(c.SettingsIcon, {
                                             size: 'sm',
                                             color: 'currentColor',
-                                            className: T.icon
+                                            className: g.icon
                                         })
                                     }),
-                                    (0, t.jsx)(b, {
-                                        text: x.Z.Messages.CREATE_EVENTS,
-                                        icon: (0, t.jsx)(c.CalendarPlusIcon, {
+                                    (0, i.jsx)(p, {
+                                        text: u.intl.string(u.t.qyjZub),
+                                        icon: (0, i.jsx)(c.CalendarPlusIcon, {
                                             size: 'sm',
                                             color: 'currentColor',
-                                            className: T.icon
+                                            className: g.icon
                                         })
                                     })
                                 ]
                             }),
-                            (0, t.jsxs)('div', {
-                                className: T.notifModal,
+                            (0, i.jsxs)('div', {
+                                className: g.notifModal,
                                 children: [
-                                    (0, t.jsx)(c.Text, {
-                                        className: T.modalHeader,
+                                    (0, i.jsx)(c.Text, {
+                                        className: g.modalHeader,
                                         variant: 'text-md/medium',
                                         color: 'interactive-active',
-                                        children: x.Z.Messages.NOTIFICATION_SETTINGS
+                                        children: u.intl.string(u.t.h850Sk)
                                     }),
-                                    (0, t.jsxs)('div', {
-                                        className: T.notifTabs,
+                                    (0, i.jsxs)('div', {
+                                        className: g.notifTabs,
                                         children: [
-                                            (0, t.jsxs)('div', {
-                                                className: T.notifTab,
+                                            (0, i.jsxs)('div', {
+                                                className: g.notifTab,
                                                 children: [
-                                                    (0, t.jsx)(c.CircleCheckIcon, {
+                                                    (0, i.jsx)(c.CircleCheckIcon, {
                                                         size: 'md',
                                                         color: 'currentColor'
                                                     }),
-                                                    (0, t.jsx)(c.Text, {
+                                                    (0, i.jsx)(c.Text, {
                                                         variant: 'text-xs/medium',
                                                         color: 'text-muted',
                                                         lineClamp: 1,
-                                                        children: x.Z.Messages.NOTIFICATION_PRESET_1
+                                                        children: u.intl.string(u.t.hZrr6u)
                                                     })
                                                 ]
                                             }),
-                                            (0, t.jsxs)('div', {
-                                                className: T.activeNotifTab,
+                                            (0, i.jsxs)('div', {
+                                                className: g.activeNotifTab,
                                                 children: [
-                                                    (0, t.jsx)(c.AtIcon, {
+                                                    (0, i.jsx)(c.AtIcon, {
                                                         size: 'md',
                                                         color: 'currentColor'
                                                     }),
-                                                    (0, t.jsx)(c.Text, {
+                                                    (0, i.jsx)(c.Text, {
                                                         variant: 'text-xs/medium',
                                                         color: 'interactive-active',
                                                         lineClamp: 1,
-                                                        children: x.Z.Messages.NOTIFICATION_PRESET_2
+                                                        children: u.intl.string(u.t.y59NJi)
                                                     })
                                                 ]
                                             }),
-                                            (0, t.jsxs)('div', {
-                                                className: T.notifTab,
+                                            (0, i.jsxs)('div', {
+                                                className: g.notifTab,
                                                 children: [
-                                                    (0, t.jsx)(c.BellSlashIcon, {
+                                                    (0, i.jsx)(c.BellSlashIcon, {
                                                         size: 'md',
                                                         color: 'currentColor'
                                                     }),
-                                                    (0, t.jsx)(c.Text, {
+                                                    (0, i.jsx)(c.Text, {
                                                         variant: 'text-xs/medium',
                                                         color: 'text-muted',
                                                         lineClamp: 1,
-                                                        children: x.Z.Messages.NOTIFICATION_PRESET_3
+                                                        children: u.intl.string(u.t['pGn/bG'])
                                                     })
                                                 ]
                                             })
                                         ]
                                     }),
-                                    (0, t.jsxs)('div', {
-                                        className: T.controls,
+                                    (0, i.jsxs)('div', {
+                                        className: g.controls,
                                         children: [
-                                            (0, t.jsxs)('div', {
-                                                className: T.control,
-                                                children: [(0, t.jsx)('div', { className: T.controlPlaceholder }), (0, t.jsx)('div', { className: T.switchOn })]
+                                            (0, i.jsxs)('div', {
+                                                className: g.control,
+                                                children: [(0, i.jsx)('div', { className: g.controlPlaceholder }), (0, i.jsx)('div', { className: g.switchOn })]
                                             }),
-                                            (0, t.jsxs)('div', {
-                                                className: T.control,
-                                                children: [(0, t.jsx)('div', { className: T.controlPlaceholder }), (0, t.jsx)('div', { className: T.switchOff })]
+                                            (0, i.jsxs)('div', {
+                                                className: g.control,
+                                                children: [(0, i.jsx)('div', { className: g.controlPlaceholder }), (0, i.jsx)('div', { className: g.switchOff })]
                                             })
                                         ]
                                     })
@@ -280,145 +280,145 @@ function u(e) {
                         ]
                     })
                 }),
-                (0, t.jsx)(g, {
-                    text: x.Z.Messages.NOTIF_MIGRATION_TIPS_TAB1_TIP2,
-                    className: T.tipServers2,
-                    hidden: s || i < 4
+                (0, i.jsx)(N, {
+                    text: u.intl.string(u.t['C//fOz']),
+                    className: g.tipServers2,
+                    hidden: t || r < 4
                 })
             ]
         })
     );
 }
-function O(e) {
-    let { hidden: s } = e,
-        [a, i] = n.useState(0);
+function f(e) {
+    let { hidden: t } = e,
+        [n, r] = s.useState(0);
     return (
-        n.useEffect(() => {
-            if (s) return;
+        s.useEffect(() => {
+            if (t) return;
             let e = 0,
-                a = [1000, 1000, 1000, 800, 800].map((s, a) => setTimeout(() => i(a + 1), (e += s)));
+                n = [1000, 1000, 1000, 800, 800].map((t, n) => setTimeout(() => r(n + 1), (e += t)));
             return () => {
-                a.forEach((e) => clearTimeout(e)), setTimeout(() => i(0), 150);
+                n.forEach((e) => clearTimeout(e)), setTimeout(() => r(0), 150);
             };
-        }, [s]),
-        (0, t.jsxs)(t.Fragment, {
+        }, [t]),
+        (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, t.jsx)('div', {
-                    className: T.containerInner,
-                    children: (0, t.jsxs)('div', {
-                        className: l()(T.channelsSection, {
-                            [T.hidden]: s,
-                            [T.fadeOtherChannels]: a >= 2,
-                            [T.showLeftMenu]: a >= 2,
-                            [T.showRightMenu]: a >= 3
+                (0, i.jsx)('div', {
+                    className: g.containerInner,
+                    children: (0, i.jsxs)('div', {
+                        className: l()(g.channelsSection, {
+                            [g.hidden]: t,
+                            [g.fadeOtherChannels]: n >= 2,
+                            [g.showLeftMenu]: n >= 2,
+                            [g.showRightMenu]: n >= 3
                         }),
                         children: [
-                            (0, t.jsxs)('div', {
-                                className: T.channels,
+                            (0, i.jsxs)('div', {
+                                className: g.channels,
                                 children: [
-                                    (0, t.jsx)(j, {
-                                        selected: a >= 1,
-                                        grey: a >= 5,
-                                        name: x.Z.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_2
+                                    (0, i.jsx)(_, {
+                                        selected: n >= 1,
+                                        grey: n >= 5,
+                                        name: u.intl.string(u.t.jqWm9f)
                                     }),
-                                    (0, t.jsx)(j, { name: x.Z.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_1 }),
-                                    (0, t.jsx)(j, {
+                                    (0, i.jsx)(_, { name: u.intl.string(u.t.WFejRk) }),
+                                    (0, i.jsx)(_, {
                                         grey: !0,
-                                        name: x.Z.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_3
+                                        name: u.intl.string(u.t.p9z9Iy)
                                     }),
-                                    (0, t.jsx)(j, {
+                                    (0, i.jsx)(_, {
                                         grey: !0,
-                                        name: x.Z.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_4
+                                        name: u.intl.string(u.t['2bdWDw'])
                                     }),
-                                    (0, t.jsx)(j, {
+                                    (0, i.jsx)(_, {
                                         grey: !0,
-                                        name: x.Z.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_5
+                                        name: u.intl.string(u.t['Ci+Our'])
                                     }),
-                                    (0, t.jsx)(j, {
+                                    (0, i.jsx)(_, {
                                         nodot: !0,
-                                        name: x.Z.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_6
+                                        name: u.intl.string(u.t['/7TEdn'])
                                     }),
-                                    (0, t.jsx)(j, {
+                                    (0, i.jsx)(_, {
                                         nodot: !0,
-                                        name: x.Z.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_7
+                                        name: u.intl.string(u.t['Ime/t7'])
                                     })
                                 ]
                             }),
-                            (0, t.jsxs)('div', {
-                                className: l()(T.menu, T.leftMenu),
+                            (0, i.jsxs)('div', {
+                                className: l()(g.menu, g.leftMenu),
                                 children: [
-                                    (0, t.jsx)(b, {
+                                    (0, i.jsx)(p, {
                                         small: !0,
-                                        text: x.Z.Messages.MUTE,
-                                        icon: (0, t.jsx)(_.Z, {
-                                            className: T.caret,
+                                        text: u.intl.string(u.t['w4m94+']),
+                                        icon: (0, i.jsx)(m.Z, {
+                                            className: g.caret,
                                             width: 12,
                                             height: 12
                                         })
                                     }),
-                                    (0, t.jsx)(b, {
+                                    (0, i.jsx)(p, {
                                         small: !0,
-                                        text: x.Z.Messages.NOTIFICATIONS,
-                                        active: a >= 3,
-                                        icon: (0, t.jsx)(_.Z, {
-                                            className: T.caret,
+                                        text: u.intl.string(u.t.HcoRu7),
+                                        active: n >= 3,
+                                        icon: (0, i.jsx)(m.Z, {
+                                            className: g.caret,
                                             width: 12,
                                             height: 12
                                         })
                                     })
                                 ]
                             }),
-                            (0, t.jsxs)('div', {
-                                className: l()(T.menu, T.rightMenu),
+                            (0, i.jsxs)('div', {
+                                className: l()(g.menu, g.rightMenu),
                                 children: [
-                                    (0, t.jsx)(b, {
+                                    (0, i.jsx)(p, {
                                         small: !0,
-                                        text: x.Z.Messages.NOTIFICATION_PRESET_1,
+                                        text: u.intl.string(u.t.hZrr6u),
                                         icon:
-                                            a <= 4
-                                                ? (0, t.jsx)(N.Z, {
-                                                      className: T.icon,
+                                            n <= 4
+                                                ? (0, i.jsx)(h.Z, {
+                                                      className: g.icon,
                                                       width: 12,
                                                       height: 12
                                                   })
-                                                : (0, t.jsx)(I.Z, {
-                                                      className: T.icon,
+                                                : (0, i.jsx)(x.Z, {
+                                                      className: g.icon,
                                                       width: 12,
                                                       height: 12
                                                   }),
-                                        active: a <= 4
+                                        active: n <= 4
                                     }),
-                                    (0, t.jsx)(b, {
+                                    (0, i.jsx)(p, {
                                         small: !0,
-                                        text: x.Z.Messages.NOTIFICATION_PRESET_2,
+                                        text: u.intl.string(u.t.y59NJi),
                                         icon:
-                                            a >= 5
-                                                ? (0, t.jsx)(N.Z, {
-                                                      className: T.icon,
+                                            n >= 5
+                                                ? (0, i.jsx)(h.Z, {
+                                                      className: g.icon,
                                                       width: 12,
                                                       height: 12
                                                   })
-                                                : (0, t.jsx)(I.Z, {
-                                                      className: T.icon,
+                                                : (0, i.jsx)(x.Z, {
+                                                      className: g.icon,
                                                       width: 12,
                                                       height: 12
                                                   }),
-                                        active: a >= 5
+                                        active: n >= 5
                                     }),
-                                    (0, t.jsx)(b, {
+                                    (0, i.jsx)(p, {
                                         small: !0,
-                                        text: x.Z.Messages.NOTIFICATION_PRESET_3,
-                                        icon: (0, t.jsx)(I.Z, {
-                                            className: T.icon,
+                                        text: u.intl.string(u.t['pGn/bG']),
+                                        icon: (0, i.jsx)(x.Z, {
+                                            className: g.icon,
                                             width: 12,
                                             height: 12
                                         })
                                     }),
-                                    (0, t.jsx)(b, {
+                                    (0, i.jsx)(p, {
                                         small: !0,
-                                        text: x.Z.Messages.NOTIFICATION_PRESET_CUSTOM,
-                                        icon: (0, t.jsx)(I.Z, {
-                                            className: T.icon,
+                                        text: u.intl.string(u.t['32yow8']),
+                                        icon: (0, i.jsx)(x.Z, {
+                                            className: g.icon,
                                             width: 12,
                                             height: 12
                                         })
@@ -428,68 +428,68 @@ function O(e) {
                         ]
                     })
                 }),
-                (0, t.jsx)(g, {
-                    text: x.Z.Messages.NOTIF_MIGRATION_TIPS_TAB2_TIP1,
-                    className: T.tipChannels1,
-                    hidden: s || a < 4
+                (0, i.jsx)(N, {
+                    text: u.intl.string(u.t['5Il5fn']),
+                    className: g.tipChannels1,
+                    hidden: t || n < 4
                 }),
-                (0, t.jsx)(g, {
-                    text: x.Z.Messages.NOTIF_MIGRATION_TIPS_TAB2_TIP2,
-                    className: T.tipChannels2,
-                    hidden: s || a < 4
+                (0, i.jsx)(N, {
+                    text: u.intl.string(u.t['+ROcrq']),
+                    className: g.tipChannels2,
+                    hidden: t || n < 4
                 })
             ]
         })
     );
 }
-function g(e) {
-    let { text: s, className: a, hidden: n } = e;
-    return (0, t.jsxs)('div', {
-        className: l()(a, T.tip, { [T.hidden]: n }),
+function N(e) {
+    let { text: t, className: n, hidden: s } = e;
+    return (0, i.jsxs)('div', {
+        className: l()(n, g.tip, { [g.hidden]: s }),
         children: [
-            (0, t.jsx)(c.Text, {
-                className: T.__invalid_tipText,
+            (0, i.jsx)(c.Text, {
+                className: g.__invalid_tipText,
                 variant: 'text-sm/normal',
                 color: 'text-secondary',
-                children: s
+                children: t
             }),
-            (0, t.jsx)('div', { className: T.tipLine })
+            (0, i.jsx)('div', { className: g.tipLine })
         ]
     });
 }
-function j(e) {
-    let { grey: s, nodot: a, selected: n, name: i } = e;
-    return (0, t.jsxs)('div', {
-        className: l()(T.channel, {
-            [T.grey]: s || a,
-            [T.nodot]: a,
-            [T.selected]: n
+function _(e) {
+    let { grey: t, nodot: n, selected: s, name: r } = e;
+    return (0, i.jsxs)('div', {
+        className: l()(g.channel, {
+            [g.grey]: t || n,
+            [g.nodot]: n,
+            [g.selected]: s
         }),
         children: [
-            (0, t.jsx)(c.TextIcon, {
+            (0, i.jsx)(c.TextIcon, {
                 size: 'xs',
                 color: 'currentColor',
-                className: T.channelIcon
+                className: g.channelIcon
             }),
-            (0, t.jsx)(c.Text, {
+            (0, i.jsx)(c.Text, {
                 variant: 'text-md/medium',
-                className: T.channelName,
-                children: i
+                className: g.channelName,
+                children: r
             })
         ]
     });
 }
-function b(e) {
-    let { text: s, active: a, small: n, icon: i } = e;
-    return (0, t.jsxs)('div', {
-        className: l()(T.menuItem, { [T.active]: a }),
+function p(e) {
+    let { text: t, active: n, small: s, icon: r } = e;
+    return (0, i.jsxs)('div', {
+        className: l()(g.menuItem, { [g.active]: n }),
         children: [
-            (0, t.jsx)(c.Text, {
-                variant: n ? 'text-xs/normal' : 'text-sm/normal',
-                color: a ? 'always-white' : 'interactive-normal',
-                children: s
+            (0, i.jsx)(c.Text, {
+                variant: s ? 'text-xs/normal' : 'text-sm/normal',
+                color: n ? 'always-white' : 'interactive-normal',
+                children: t
             }),
-            i
+            r
         ]
     });
 }

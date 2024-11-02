@@ -6,33 +6,33 @@ e.exports = function (e, t, n, s, o, l) {
         c = e.length,
         d = t.length;
     if (c != d && !(u && d > c)) return !1;
-    var _ = l.get(e);
-    if (_ && l.get(t)) return _ == t;
-    var E = -1,
-        f = !0,
-        h = 2 & n ? new r() : void 0;
-    for (l.set(e, t), l.set(t, e); ++E < c; ) {
-        var p = e[E],
-            I = t[E];
-        if (s) var m = u ? s(I, p, E, t, e, l) : s(p, I, E, e, t, l);
-        if (void 0 !== m) {
-            if (m) continue;
-            f = !1;
+    var f = l.get(e);
+    if (f && l.get(t)) return f == t;
+    var _ = -1,
+        h = !0,
+        p = 2 & n ? new r() : void 0;
+    for (l.set(e, t), l.set(t, e); ++_ < c; ) {
+        var m = e[_],
+            g = t[_];
+        if (s) var E = u ? s(g, m, _, t, e, l) : s(m, g, _, e, t, l);
+        if (void 0 !== E) {
+            if (E) continue;
+            h = !1;
             break;
         }
-        if (h) {
+        if (p) {
             if (
                 !i(t, function (e, t) {
-                    if (!a(h, t) && (p === e || o(p, e, n, s, l))) return h.push(t);
+                    if (!a(p, t) && (m === e || o(m, e, n, s, l))) return p.push(t);
                 })
             ) {
-                f = !1;
+                h = !1;
                 break;
             }
-        } else if (!(p === I || o(p, I, n, s, l))) {
-            f = !1;
+        } else if (!(m === g || o(m, g, n, s, l))) {
+            h = !1;
             break;
         }
     }
-    return l.delete(e), l.delete(t), f;
+    return l.delete(e), l.delete(t), h;
 };

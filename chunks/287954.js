@@ -13,33 +13,33 @@ var i = n(481060),
     u = n(228168);
 function c(e) {
     var t, n;
-    let { user: c, guildId: d, channelId: _, profileType: E, sourceType: f, sourceDetails: h, sourceId: p, onClose: I, children: m } = e,
-        { interactionType: T, interactionSource: S, resetInteraction: g, interactionSourceId: A } = (0, a.Xo)(),
-        N = E === u.y0.FULL_SIZE ? (0, l.z)(c.id, d) : void 0,
-        R = S === f && T === u.P.REACT,
-        O = S === f && T === u.P.REPLY;
+    let { user: c, guildId: d, channelId: f, profileType: _, sourceType: h, sourceDetails: p, sourceId: m, onClose: g, children: E } = e,
+        { interactionType: v, interactionSource: I, resetInteraction: S, interactionSourceId: T } = (0, a.Xo)(),
+        b = _ === u.y0.FULL_SIZE ? (0, l.z)(c.id, d) : void 0,
+        y = I === h && v === u.P.REACT,
+        A = I === h && v === u.P.REPLY;
     return (0, r.jsx)(i.Popout, {
         renderPopout: (e) => {
             let { setPopoutRef: t } = e,
-                n = R ? s.Z : o.Z;
+                n = y ? s.Z : o.Z;
             return (0, r.jsx)(n, {
                 user: c,
                 guildId: d,
-                channelId: _,
-                profileType: E,
-                sourceType: f,
-                sourceDetails: h,
-                onClose: I,
-                modalKey: N,
+                channelId: f,
+                profileType: _,
+                sourceType: h,
+                sourceDetails: p,
+                onClose: g,
+                modalKey: b,
                 setPopoutRef: t
             });
         },
         onRequestClose: () => {
-            g(), null == I || I();
+            S(), null == g || g();
         },
-        shouldShow: (R || O) && A === p,
-        ...((t = T),
-        (n = E),
+        shouldShow: (y || A) && T === m,
+        ...((t = v),
+        (n = _),
         t === u.P.REACT
             ? {
                   position: 'left',
@@ -53,6 +53,6 @@ function c(e) {
                   animationPosition: 'top',
                   spacing: 6
               }),
-        children: m
+        children: E
     });
 }

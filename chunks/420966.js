@@ -1,26 +1,26 @@
 n.d(t, {
     V: function () {
-        return T;
+        return x;
     },
     Z: function () {
-        return m;
+        return p;
     }
 }),
     n(47120);
-var s = n(200651),
-    a = n(192379),
-    i = n(442837),
-    r = n(481060),
-    l = n(239091),
+var i = n(200651),
+    r = n(192379),
+    l = n(442837),
+    s = n(481060),
+    a = n(239091),
     o = n(605436),
     c = n(741247),
     d = n(243730),
     u = n(852898),
-    _ = n(203377),
-    I = n(689938),
-    E = n(729824);
-function T() {
-    let [e, t] = a.useState(!0);
+    m = n(203377),
+    h = n(388032),
+    g = n(729824);
+function x() {
+    let [e, t] = r.useState(!0);
     return {
         scrolledToTop: e,
         handleScroll: function (e) {
@@ -28,55 +28,55 @@ function T() {
         }
     };
 }
-function m(e) {
-    let { guild: t, role: T, selectedSection: m, setSelectedSection: N } = e,
-        S = a.useCallback(
+function p(e) {
+    let { guild: t, role: x, selectedSection: p, setSelectedSection: f } = e,
+        C = r.useCallback(
             (e) => {
-                N(e);
+                f(e);
             },
-            [N]
+            [f]
         ),
-        g = (0, i.e7)(
+        I = (0, l.e7)(
             [d.Z],
             () => {
                 var e;
-                return null === (e = d.Z.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[T.id];
+                return null === (e = d.Z.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[x.id];
             },
-            [T.id, t.id]
+            [x.id, t.id]
         ),
-        h = (0, o.pM)(t.id, T.id),
-        C = (0, u.Z)(T);
-    a.useEffect(() => {
-        h && N(_.ZI.PERMISSIONS);
-    }, [h, N]);
-    let x = (0, c.useHasGuildRoleItems)(t, T);
-    return (0, s.jsxs)(s.Fragment, {
+        _ = (0, o.pM)(t.id, x.id),
+        N = (0, u.Z)(x);
+    r.useEffect(() => {
+        _ && f(m.ZI.PERMISSIONS);
+    }, [_, f]);
+    let v = (0, c.useHasGuildRoleItems)(t, x);
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, s.jsxs)('div', {
-                className: E.titleContainer,
+            (0, i.jsxs)('div', {
+                className: g.titleContainer,
                 children: [
-                    (0, s.jsx)(r.Text, {
-                        className: E.titleText,
+                    (0, i.jsx)(s.Text, {
+                        className: g.titleText,
                         color: 'header-primary',
                         variant: 'text-md/semibold',
-                        children: I.Z.Messages.ROLE_EDIT_TITLE_WITH_NAME.format({ roleName: T.name })
+                        children: h.intl.format(h.t.BUdGkJ, { roleName: x.name })
                     }),
-                    x
-                        ? (0, s.jsx)(r.Clickable, {
-                              className: E.menu,
+                    v
+                        ? (0, i.jsx)(s.Clickable, {
+                              className: g.menu,
                               onClick: function (e) {
-                                  (0, l.jW)(e, async () => {
+                                  (0, a.jW)(e, async () => {
                                       let { default: e } = await Promise.resolve().then(n.bind(n, 741247));
                                       return (n) =>
-                                          (0, s.jsx)(e, {
+                                          (0, i.jsx)(e, {
                                               ...n,
                                               guild: t,
-                                              role: T
+                                              role: x
                                           });
                                   });
                               },
-                              'aria-label': I.Z.Messages.MORE_OPTIONS,
-                              children: (0, s.jsx)(r.MoreHorizontalIcon, {
+                              'aria-label': h.intl.string(h.t.PdRCRk),
+                              children: (0, i.jsx)(s.MoreHorizontalIcon, {
                                   size: 'md',
                                   color: 'currentColor'
                               })
@@ -84,42 +84,42 @@ function m(e) {
                         : null
                 ]
             }),
-            null != C
-                ? (0, s.jsx)(r.HelpMessage, {
-                      messageType: r.HelpMessageTypes.WARNING,
-                      children: C
+            null != N
+                ? (0, i.jsx)(s.HelpMessage, {
+                      messageType: s.HelpMessageTypes.WARNING,
+                      children: N
                   })
                 : null,
-            (0, s.jsxs)(r.TabBar, {
-                className: E.tabBar,
-                'aria-label': I.Z.Messages.OPTIONS,
-                selectedItem: m,
+            (0, i.jsxs)(s.TabBar, {
+                className: g.tabBar,
+                'aria-label': h.intl.string(h.t['+1H47u']),
+                selectedItem: p,
                 type: 'top',
                 look: 'brand',
-                onItemSelect: S,
+                onItemSelect: C,
                 children: [
-                    (0, s.jsx)(r.TabBar.Item, {
-                        className: E.tabBarItem,
-                        id: _.ZI.DISPLAY,
-                        disabled: h,
-                        children: I.Z.Messages.ROLE_EDIT_TAB_DISPLAY
+                    (0, i.jsx)(s.TabBar.Item, {
+                        className: g.tabBarItem,
+                        id: m.ZI.DISPLAY,
+                        disabled: _,
+                        children: h.intl.string(h.t.hmdom5)
                     }),
-                    (0, s.jsx)(r.TabBar.Item, {
-                        className: E.tabBarItem,
-                        id: _.ZI.PERMISSIONS,
-                        children: I.Z.Messages.ROLE_EDIT_TAB_PERMISSIONS
+                    (0, i.jsx)(s.TabBar.Item, {
+                        className: g.tabBarItem,
+                        id: m.ZI.PERMISSIONS,
+                        children: h.intl.string(h.t.WIDE1N)
                     }),
-                    (0, s.jsx)(r.TabBar.Item, {
-                        className: E.tabBarItem,
-                        id: _.ZI.VERIFICATIONS,
-                        disabled: h,
-                        children: I.Z.Messages.ROLE_EDIT_TAB_VERIFICATION
+                    (0, i.jsx)(s.TabBar.Item, {
+                        className: g.tabBarItem,
+                        id: m.ZI.VERIFICATIONS,
+                        disabled: _,
+                        children: h.intl.string(h.t['5//Mur'])
                     }),
-                    (0, s.jsx)(r.TabBar.Item, {
-                        className: E.tabBarItem,
-                        id: _.ZI.MEMBERS,
-                        disabled: h,
-                        children: h ? I.Z.Messages.ROLE_EDIT_TAB_MANAGE_MEMBERS : I.Z.Messages.ROLE_EDIT_TAB_MEMBERS_WITH_LIST.format({ numMembers: String(g) })
+                    (0, i.jsx)(s.TabBar.Item, {
+                        className: g.tabBarItem,
+                        id: m.ZI.MEMBERS,
+                        disabled: _,
+                        children: _ ? h.intl.string(h.t['kg//+/']) : h.intl.formatToPlainString(h.t.bHnZWV, { numMembers: String(I) })
                     })
                 ]
             })

@@ -1,33 +1,33 @@
-e.r(s),
-    e.d(s, {
+i.r(n),
+    i.d(n, {
         default: function () {
-            return c;
+            return e;
         }
     });
-var a = e(200651);
-e(192379);
-var n = e(98278),
-    t = e(790527),
-    _ = e(474936),
-    o = e(689938);
-function c(E) {
-    let { onClose: s, analyticsSource: c, analyticsLocation: L, ...T } = E;
-    return (0, a.jsx)(t.Z, {
-        artURL: e(677531),
-        type: _.cd.CLIENT_THEMES_UPSELL,
-        title: o.Z.Messages.PREMIUM_UPSELL_FEATURE_CLIENT_THEMES_TITLE,
-        body: o.Z.Messages.PREMIUM_UPSELL_FEATURE_CLIENT_THEMES_DESCRIPTION,
-        glowUp: o.Z.Messages.PREMIUM_UPSELL_FEATURE_CLIENT_THEMES_DESCRIPTION,
+var r = i(200651);
+i(192379);
+var s = i(98278),
+    a = i(790527),
+    c = i(474936),
+    o = i(388032);
+function e(t) {
+    let { onClose: n, analyticsSource: e, analyticsLocation: l, ...d } = t;
+    return (0, r.jsx)(a.Z, {
+        artURL: i(677531),
+        type: c.cd.CLIENT_THEMES_UPSELL,
+        title: o.intl.string(o.t.GI7t09),
+        body: o.intl.string(o.t.MRrvSE),
+        glowUp: o.intl.string(o.t.MRrvSE),
         onSecondaryClick: () => {
-            (0, n.$)(s);
+            (0, s.$)(n);
         },
-        secondaryCTA: o.Z.Messages.PREMIUM_ROADBLOCK_UPSELL_SECONDARY_CTA,
-        analyticsSource: c,
-        analyticsLocation: L,
-        onClose: s,
+        secondaryCTA: o.intl.string(o.t.PcTCBw),
+        analyticsSource: e,
+        analyticsLocation: l,
+        onClose: n,
         enableArtBoxShadow: !1,
         hideBackButton: !0,
         showEnhancedUpsell: !0,
-        ...T
+        ...d
     });
 }

@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     modal: 'modal_bf1bdb',
     header: 'header_bf1bdb',
     headerImage: 'headerImage_bf1bdb',

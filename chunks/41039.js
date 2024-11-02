@@ -1,10 +1,10 @@
-let { createLoader: n } = t(171426),
-    a = n(
+let { createLoader: i } = n(171426),
+    s = i(
         ['JJ0wpK', 'uczI4u', 'Q+eyqq', 'HMvECw', 'rdfRys', 'rmps8/', 'XOdbAw'],
         {
-            fr: () => t.e('57337').then(t.t.bind(t, 471542, 19)),
-            'en-US': () => t.e('65520').then(t.bind(t, 591905))
+            fr: () => n.e('57337').then(n.t.bind(n, 471542, 19)),
+            'en-US': () => n.e('65520').then(n.bind(n, 591905))
         },
         'en-US'
     ).getBinds();
-s.Z = a;
+t.Z = s;

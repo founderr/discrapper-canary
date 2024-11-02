@@ -46,10 +46,10 @@ var c = r.define('DSAPrivateKey', function () {
         this.int();
     }));
 var d = r.define('ECPrivateKey', function () {
-    this.seq().obj(this.key('version').int(), this.key('privateKey').octstr(), this.key('parameters').optional().explicit(0).use(_), this.key('publicKey').optional().explicit(1).bitstr());
+    this.seq().obj(this.key('version').int(), this.key('privateKey').octstr(), this.key('parameters').optional().explicit(0).use(f), this.key('publicKey').optional().explicit(1).bitstr());
 });
 t.ECPrivateKey = d;
-var _ = r.define('ECParameters', function () {
+var f = r.define('ECParameters', function () {
     this.choice({ namedCurve: this.objid() });
 });
 t.signature = r.define('signature', function () {

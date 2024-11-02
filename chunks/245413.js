@@ -7,13 +7,13 @@ e.exports = function (e, t, n, a) {
         c.update(u), c.update(e), t && c.update(t), (u = c.digest());
         var d = 0;
         if (s > 0) {
-            var _ = o.length - s;
-            (d = Math.min(s, u.length)), u.copy(o, _, 0, d), (s -= d);
+            var f = o.length - s;
+            (d = Math.min(s, u.length)), u.copy(o, f, 0, d), (s -= d);
         }
         if (d < u.length && a > 0) {
-            var E = l.length - a,
-                f = Math.min(a, u.length - d);
-            u.copy(l, E, d, d + f), (a -= f);
+            var _ = l.length - a,
+                h = Math.min(a, u.length - d);
+            u.copy(l, _, d, d + h), (a -= h);
         }
     }
     return (

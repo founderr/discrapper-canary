@@ -9,12 +9,12 @@ var r = n(200651),
     s = n.n(a),
     o = n(481060),
     l = n(249458),
-    u = n(689938),
+    u = n(388032),
     c = n(917776);
 function d(e) {
     let { onPlay: t, className: n, inactive: a } = e,
         d = i.useRef(null),
-        _ = (0, r.jsx)('div', {
+        f = (0, r.jsx)('div', {
             className: c.iconWrapper,
             ref: d,
             children: (0, r.jsx)(o.PlayIcon, {
@@ -28,15 +28,15 @@ function d(e) {
             a || null == t
                 ? (0, r.jsx)('div', {
                       className: c.cover,
-                      children: _
+                      children: f
                   })
                 : (0, r.jsx)(o.Clickable, {
                       className: s()(n, c.cover, { [c.active]: !e.disableInteractions }),
                       onClick: t,
                       tabIndex: 0,
-                      'aria-label': u.Z.Messages.PLAY,
+                      'aria-label': u.intl.string(u.t.RscU7O),
                       focusProps: { ringTarget: d },
-                      children: _
+                      children: f
                   })
     });
 }

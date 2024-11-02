@@ -13,37 +13,37 @@ function d(e, t) {
         a = Math.round(100 * l);
     (n > 0 && a >= r) || (n < 0 && a <= r) ? (clearInterval(c), 0 === r && null != t && t()) : ((a += n), (l = a / 100), (o.volume = i()(l, 0, 0.5)));
 }
-function _(e) {
+function f(e) {
     null != c && clearInterval(c), (u = 0);
-    let t = p();
+    let t = m();
     c = setInterval(() => {
         d(t, e);
     }, 100);
 }
-function E() {
+function _() {
     null != c && clearInterval(c), o.loop(), (u = 0.5);
-    let e = p();
+    let e = m();
     c = setInterval(() => d(e), 100);
 }
-function f() {
-    _(o.pause.bind(o));
-}
 function h() {
-    _(o.stop.bind(o));
+    f(o.pause.bind(o));
 }
 function p() {
+    f(o.stop.bind(o));
+}
+function m() {
     return 0.2 * (u - l);
 }
-class I extends a.Z {
+class g extends a.Z {
     constructor(...e) {
         var t, n, r;
         super(...e),
             (t = this),
             (n = 'actions'),
             (r = {
-                VIBING_WUMPUS_PLAY_MUSIC: E,
-                VIBING_WUMPUS_STOP_MUSIC: h,
-                VIBING_WUMPUS_PAUSE_MUSIC: f
+                VIBING_WUMPUS_PLAY_MUSIC: _,
+                VIBING_WUMPUS_STOP_MUSIC: p,
+                VIBING_WUMPUS_PAUSE_MUSIC: h
             }),
             n in t
                 ? Object.defineProperty(t, n, {
@@ -55,4 +55,4 @@ class I extends a.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new I();
+t.Z = new g();

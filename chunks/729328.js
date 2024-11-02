@@ -1,41 +1,41 @@
-n.r(e),
-    n.d(e, {
+r.r(n),
+    r.d(n, {
         default: function () {
-            return a;
+            return s;
         }
     });
-var r = n(200651);
-n(192379);
-var o = n(481060),
-    s = n(689938),
-    i = n(954315);
-function a(t) {
-    let { onClose: e, transitionState: n, body: a } = t;
-    return (0, r.jsxs)(o.ModalRoot, {
-        transitionState: n,
+var e = r(200651);
+r(192379);
+var i = r(481060),
+    o = r(388032),
+    l = r(954315);
+function s(t) {
+    let { onClose: n, transitionState: r, body: s } = t;
+    return (0, e.jsxs)(i.ModalRoot, {
+        transitionState: r,
         children: [
-            (0, r.jsx)(o.ModalHeader, {
+            (0, e.jsx)(i.ModalHeader, {
                 separator: !1,
-                children: (0, r.jsx)(o.FormTitle, {
+                children: (0, e.jsx)(i.FormTitle, {
                     tag: 'h2',
-                    className: i.title,
-                    children: s.Z.Messages.STREAM_REPORTED
+                    className: l.title,
+                    children: o.intl.string(o.t.KTjjrK)
                 })
             }),
-            (0, r.jsx)(o.ModalContent, {
+            (0, e.jsx)(i.ModalContent, {
                 children:
-                    'string' == typeof a
-                        ? (0, r.jsx)(o.Text, {
+                    'string' == typeof s
+                        ? (0, e.jsx)(i.Text, {
                               variant: 'text-md/normal',
-                              children: a
+                              children: s
                           })
-                        : a
+                        : s
             }),
-            (0, r.jsx)(o.ModalFooter, {
-                children: (0, r.jsx)(o.Button, {
-                    color: o.Button.Colors.BRAND,
-                    onClick: e,
-                    children: s.Z.Messages.DONE
+            (0, e.jsx)(i.ModalFooter, {
+                children: (0, e.jsx)(i.Button, {
+                    color: i.Button.Colors.BRAND,
+                    onClick: n,
+                    children: o.intl.string(o.t.i4jeWV)
                 })
             })
         ]

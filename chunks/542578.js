@@ -19,8 +19,8 @@ function d(e, t, n) {
         e
     );
 }
-let _ = {};
-class E {
+let f = {};
+class _ {
     static ensure(e, t, n) {
         var r, i;
         let a = ''
@@ -28,23 +28,23 @@ class E {
             .concat(t.name, ':')
             .concat(null !== (r = t.id) && void 0 !== r ? r : '', ':')
             .concat(n);
-        return (_[a] = null !== (i = _[a]) && void 0 !== i ? i : new E());
+        return (f[a] = null !== (i = f[a]) && void 0 !== i ? i : new _());
     }
     constructor() {
         d(this, 'users', void 0), d(this, 'fetched', void 0), (this.fetched = !1), (this.users = {});
     }
 }
-function f(e) {
+function h(e) {
     let { type: t, messageId: n, userId: r, emoji: i, reactionType: a } = e,
-        s = E.ensure(n, i, a);
+        s = _.ensure(n, i, a);
     if ('MESSAGE_REACTION_ADD' === t) {
         let e = c.default.getUser(r);
         null != e && (s.users[r] = e);
     } else delete s.users[r];
 }
-class h extends (r = i.ZP.Store) {
+class p extends (r = i.ZP.Store) {
     getReactions(e, t, n, r, i) {
-        let a = E.ensure(t, n, i);
+        let a = _.ensure(t, n, i);
         if (!a.fetched) {
             let l = u.Z.getChannel(e),
                 c = null != l ? l.getGuildId() : null;
@@ -61,16 +61,16 @@ class h extends (r = i.ZP.Store) {
         return a.users;
     }
 }
-d(h, 'displayName', 'MessageReactionsStore'),
-    (t.Z = new h(a.Z, {
+d(p, 'displayName', 'MessageReactionsStore'),
+    (t.Z = new p(a.Z, {
         CONNECTION_OPEN: function () {
-            _ = {};
+            f = {};
         },
-        MESSAGE_REACTION_ADD: f,
-        MESSAGE_REACTION_REMOVE: f,
+        MESSAGE_REACTION_ADD: h,
+        MESSAGE_REACTION_REMOVE: h,
         MESSAGE_REACTION_ADD_USERS: function (e) {
             let { messageId: t, users: n, emoji: r, reactionType: i } = e,
-                a = E.ensure(t, r, i);
+                a = _.ensure(t, r, i);
             n.forEach((e) => (a.users[e.id] = new l.Z(e)));
         }
     }));

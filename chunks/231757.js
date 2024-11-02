@@ -13,7 +13,7 @@ var i = n(481060),
     u = n(202120),
     c = n(981631);
 function d(e) {
-    let { platformType: t, location: d, overrideUrl: _, successRedirect: E } = e;
+    let { platformType: t, location: d, overrideUrl: f, successRedirect: _ } = e;
     if ((t === c.ABu.LEAGUE_OF_LEGENDS && (t = c.ABu.RIOT_GAMES), t === c.ABu.CRUNCHYROLL)) {
         a.K([null != d ? d : 'unknown']);
         return;
@@ -37,18 +37,18 @@ function d(e) {
         });
         return;
     }
-    if (null != _) {
+    if (null != f) {
         (0, l.q)({
             shouldConfirm: !0,
-            href: _,
+            href: f,
             onConfirm: () => {
                 (0, u.H)(
                     t,
                     {
                         location: d,
-                        successRedirect: E
+                        successRedirect: _
                     },
-                    _
+                    f
                 );
             }
         });
@@ -56,6 +56,6 @@ function d(e) {
     }
     (0, u.H)(t, {
         location: d,
-        successRedirect: E
+        successRedirect: _
     });
 }

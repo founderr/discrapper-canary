@@ -4,51 +4,51 @@ n.d(t, {
     }
 }),
     n(47120);
-var s = n(200651),
-    a = n(192379),
-    i = n(866830),
-    r = n(85960),
-    l = n(226192),
+var i = n(200651),
+    r = n(192379),
+    l = n(866830),
+    s = n(85960),
+    a = n(226192),
     o = n(683579);
 function c(e) {
     let { rule: t, onChangeRule: n } = e,
-        c = a.useMemo(() => (0, r.V9)(t.triggerType), [t.triggerType]),
-        d = l.km(t.guildId),
-        u = a.useMemo(() => (0, i.U5)(), []),
-        _ = (e, s) => {
-            if (null == s) return;
-            let a = t.actions.some((e) => e.type === s.type),
-                i = [...t.actions, s];
-            if (a) {
-                let n = t.actions.filter((e) => e.type !== s.type);
-                i = e ? [...n, s] : n;
+        c = r.useMemo(() => (0, s.V9)(t.triggerType), [t.triggerType]),
+        d = a.km(t.guildId),
+        u = r.useMemo(() => (0, l.U5)(), []),
+        m = (e, i) => {
+            if (null == i) return;
+            let r = t.actions.some((e) => e.type === i.type),
+                l = [...t.actions, i];
+            if (r) {
+                let n = t.actions.filter((e) => e.type !== i.type);
+                l = e ? [...n, i] : n;
             }
             n({
                 ...t,
-                actions: i
+                actions: l
             });
         },
-        I = (e) => async (n) => {
-            let s = t.actions.find((t) => t.type === e),
-                a = null != s,
-                i = u[e],
-                r = n ? s : i;
-            if (null != r && (!a || n)) {
+        h = (e) => async (n) => {
+            let i = t.actions.find((t) => t.type === e),
+                r = null != i,
+                l = u[e],
+                s = n ? i : l;
+            if (null != s && (!r || n)) {
                 let n = d[e];
-                null != n ? _(!0, await n(t, r)) : _(!0, r);
-            } else _(!1, a ? s : i);
+                null != n ? m(!0, await n(t, s)) : m(!0, s);
+            } else m(!1, r ? i : l);
         };
-    return (0, s.jsx)(s.Fragment, {
+    return (0, i.jsx)(i.Fragment, {
         children: c.map((e) => {
             let n = t.actions.find((t) => t.type === e);
-            return (0, s.jsx)(
+            return (0, i.jsx)(
                 o.Z,
                 {
                     guildId: t.guildId,
                     triggerType: t.triggerType,
                     action: null != n ? n : u[e],
                     toggled: null != n,
-                    onToggleAction: I(e)
+                    onToggleAction: h(e)
                 },
                 e
             );

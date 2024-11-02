@@ -1,12 +1,12 @@
 n.d(t, {
     Q: function () {
-        return l;
+        return a;
     }
 });
 var i = n(442837),
-    s = n(699516),
-    a = n(981631);
-function l(e) {
-    let t = (0, i.e7)([s.Z], () => s.Z.getRelationshipType(e), [e]);
-    return t === a.OGo.NONE || t === a.OGo.BLOCKED || t === a.OGo.PENDING_INCOMING;
+    l = n(699516),
+    r = n(981631);
+function a(e) {
+    let t = (0, i.e7)([l.Z], () => l.Z.getRelationshipType(e), [e]);
+    return t === r.OGo.NONE || t === r.OGo.BLOCKED || t === r.OGo.PENDING_INCOMING;
 }

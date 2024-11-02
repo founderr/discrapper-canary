@@ -1,18 +1,18 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return s;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(689938),
-    i = n(70683);
-function r(e) {
+var r = n(388032),
+    l = n(70683);
+function s(e) {
     let { showDirtyIndicator: t } = e;
     return t
-        ? (0, s.jsxs)('div', {
-              className: i.container,
-              children: [a.Z.Messages.GUILD_TEMPLATES, (0, s.jsx)('div', { className: i.dot })]
+        ? (0, i.jsxs)('div', {
+              className: l.container,
+              children: [r.intl.string(r.t.KUw7Sk), (0, i.jsx)('div', { className: l.dot })]
           })
-        : (0, s.jsx)(s.Fragment, { children: a.Z.Messages.GUILD_TEMPLATES });
+        : (0, i.jsx)(i.Fragment, { children: r.intl.string(r.t.KUw7Sk) });
 }

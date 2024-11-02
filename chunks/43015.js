@@ -1,50 +1,50 @@
-t.d(s, {
+n.d(t, {
     $Z: function () {
-        return o;
+        return a;
     },
     L$: function () {
-        return l;
+        return o;
     },
     fw: function () {
-        return r;
+        return l;
     }
 });
-var n = t(544891),
-    a = t(570140),
-    i = t(981631);
-async function r() {
+var i = n(544891),
+    s = n(570140),
+    r = n(981631);
+async function l() {
     var e;
-    let s = await n.tn.get({ url: i.ANM.AUTH_SESSIONS });
+    let t = await i.tn.get({ url: r.ANM.AUTH_SESSIONS });
     return (
-        (null == s ? void 0 : s.ok) &&
-            (null === (e = s.body) || void 0 === e ? void 0 : e.user_sessions) != null &&
-            a.Z.dispatch({
+        (null == t ? void 0 : t.ok) &&
+            (null === (e = t.body) || void 0 === e ? void 0 : e.user_sessions) != null &&
+            s.Z.dispatch({
                 type: 'FETCH_AUTH_SESSIONS_SUCCESS',
-                sessions: s.body.user_sessions
+                sessions: t.body.user_sessions
             }),
-        s
+        t
     );
 }
-function o() {
-    a.Z.dispatch({
+function a() {
+    s.Z.dispatch({
         type: 'FETCH_AUTH_SESSIONS_SUCCESS',
         sessions: []
     });
 }
-async function l(e) {
+async function o(e) {
     if (Array.isArray(e)) {
         if (0 === e.length) return;
     } else e = [e];
-    let s = await n.tn.post({
-        url: i.ANM.AUTH_SESSIONS_LOGOUT,
+    let t = await i.tn.post({
+        url: r.ANM.AUTH_SESSIONS_LOGOUT,
         body: { session_id_hashes: e }
     });
     return (
-        (null == s ? void 0 : s.ok) &&
-            a.Z.dispatch({
+        (null == t ? void 0 : t.ok) &&
+            s.Z.dispatch({
                 type: 'LOGOUT_AUTH_SESSIONS_SUCCESS',
                 sessionIdHashes: e
             }),
-        s
+        t
     );
 }

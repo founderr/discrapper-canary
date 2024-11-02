@@ -9,10 +9,10 @@ n.d(t, {
         return l;
     },
     eg: function () {
-        return _;
+        return f;
     },
     is: function () {
-        return h;
+        return p;
     },
     l8: function () {
         return u;
@@ -189,25 +189,25 @@ function d(e) {
     for (let n of e) t = n;
     return t;
 }
-function _(e, t, n) {
+function f(e, t, n) {
     if (t.parentKey === n.parentKey) return t.index - n.index;
-    let r = [...E(e, t), t],
-        i = [...E(e, n), n],
+    let r = [..._(e, t), t],
+        i = [..._(e, n), n],
         a = r.slice(0, i.length).findIndex((e, t) => e !== i[t]);
     return -1 !== a ? ((t = r[a]), (n = i[a]), t.index - n.index) : r.findIndex((e) => e === n) >= 0 ? 1 : (i.findIndex((e) => e === t), -1);
 }
-function E(e, t) {
+function _(e, t) {
     let n = [];
     for (; (null == t ? void 0 : t.parentKey) != null; ) (t = e.getItem(t.parentKey)), n.unshift(t);
     return n;
 }
-let f = new WeakMap();
-function h(e) {
-    let t = f.get(e);
+let h = new WeakMap();
+function p(e) {
+    let t = h.get(e);
     if (null != t) return t;
     t = 0;
     let n = (r) => {
         for (let i of r) 'section' === i.type ? n(l(i, e)) : t++;
     };
-    return n(e), f.set(e, t), t;
+    return n(e), h.set(e, t), t;
 }

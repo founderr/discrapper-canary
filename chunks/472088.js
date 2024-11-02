@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     modal: 'modal_dd7505',
     closeButton: 'closeButton_dd7505',
     closeIcon: 'closeIcon_dd7505',

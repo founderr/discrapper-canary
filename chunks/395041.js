@@ -1,22 +1,22 @@
 n.d(t, {
     O: function () {
-        return o;
+        return s;
     },
     w: function () {
-        return l;
+        return o;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(742380);
-function r(e, t) {
+var r = n(481060),
+    l = n(742380);
+function a(e, t) {
     let { children: n } = e;
-    return (0, i.jsx)(a.Text, {
+    return (0, i.jsx)(r.Text, {
         variant: 'text-sm/medium',
         className: t,
         children: n
     });
 }
-let l = (e) => r(e, s.searchFilter),
-    o = (e) => r(e, s.searchAnswer);
+let o = (e) => a(e, l.searchFilter),
+    s = (e) => a(e, l.searchAnswer);

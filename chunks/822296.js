@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return f;
     }
 });
 var r = n(200651),
@@ -10,23 +10,23 @@ var r = n(200651),
     o = n(569545),
     l = n(592125),
     u = n(112560),
-    c = n(689938);
+    c = n(388032);
 let d = n(340109);
-function _(e) {
-    let { stream: t, width: n, noArt: _ = !1, selected: E = !1 } = e,
-        f = (0, a.e7)([l.Z], () => l.Z.getChannel(t.channelId));
+function f(e) {
+    let { stream: t, width: n, noArt: f = !1, selected: _ = !1 } = e,
+        h = (0, a.e7)([l.Z], () => l.Z.getChannel(t.channelId));
     return (
         i.useEffect(() => {
-            (null == f ? void 0 : f.isGuildStageVoice()) && (0, s.aP)((0, o.V9)(t), !1);
+            (null == h ? void 0 : h.isGuildStageVoice()) && (0, s.aP)((0, o.V9)(t), !1);
         }, []),
         (0, r.jsx)(u.Z, {
             artURL: d,
-            noArt: _,
-            selected: E,
+            noArt: f,
+            selected: _,
             size: (0, u.L)(n),
-            header: c.Z.Messages.STREAM_ENDED,
+            header: c.intl.formatToMarkdownString(c.t['1Ww0Hh'], {}),
             onCTAClick: () => (0, s.aP)((0, o.V9)(t)),
-            callToAction: c.Z.Messages.CLOSE_STREAM
+            callToAction: c.intl.string(c.t['4EGMWF'])
         })
     );
 }

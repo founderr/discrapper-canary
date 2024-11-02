@@ -1,10 +1,10 @@
 t.d(n, {
     X: function () {
-        return i;
+        return r;
     },
     i: function () {
-        return r;
+        return i;
     }
 });
-let r = '(max-width: 485px)',
-    i = '(max-height: 450px)';
+let i = '(max-width: 485px)',
+    r = '(max-height: 450px)';

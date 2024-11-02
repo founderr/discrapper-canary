@@ -1,6 +1,6 @@
 n.d(t, {
     d: function () {
-        return E;
+        return _;
     }
 });
 var r = n(259630),
@@ -12,35 +12,35 @@ var r = n(259630),
     u = n(635846),
     c = n(672143),
     d = n(225366),
-    _ = n(651837);
-function E(e, t) {
+    f = n(651837);
+function _(e, t) {
     var n = (0, i.ax)(t),
-        E = (0, r.pi)((0, r.pi)({}, i.Z0), e),
-        f = E.locale,
-        h = E.defaultLocale,
-        p = E.onError;
+        _ = (0, r.pi)((0, r.pi)({}, i.Z0), e),
+        h = _.locale,
+        p = _.defaultLocale,
+        m = _.onError;
     return (
-        f ? (!Intl.NumberFormat.supportedLocalesOf(f).length && p ? p(new a.gb('Missing locale data for locale: "'.concat(f, '" in Intl.NumberFormat. Using default locale: "').concat(h, '" as fallback. See https://formatjs.io/docs/react-intl#runtime-requirements for more details'))) : !Intl.DateTimeFormat.supportedLocalesOf(f).length && p && p(new a.gb('Missing locale data for locale: "'.concat(f, '" in Intl.DateTimeFormat. Using default locale: "').concat(h, '" as fallback. See https://formatjs.io/docs/react-intl#runtime-requirements for more details')))) : (p && p(new a.OV('"locale" was not configured, using "'.concat(h, '" as fallback. See https://formatjs.io/docs/react-intl/api#intlshape for more details'))), (E.locale = E.defaultLocale || 'en')),
+        h ? (!Intl.NumberFormat.supportedLocalesOf(h).length && m ? m(new a.gb('Missing locale data for locale: "'.concat(h, '" in Intl.NumberFormat. Using default locale: "').concat(p, '" as fallback. See https://formatjs.io/docs/react-intl#runtime-requirements for more details'))) : !Intl.DateTimeFormat.supportedLocalesOf(h).length && m && m(new a.gb('Missing locale data for locale: "'.concat(h, '" in Intl.DateTimeFormat. Using default locale: "').concat(p, '" as fallback. See https://formatjs.io/docs/react-intl#runtime-requirements for more details')))) : (m && m(new a.OV('"locale" was not configured, using "'.concat(p, '" as fallback. See https://formatjs.io/docs/react-intl/api#intlshape for more details'))), (_.locale = _.defaultLocale || 'en')),
         !(function (e) {
             var t;
             if (e.onWarn && e.defaultRichTextElements && 'string' == typeof ((t = e.messages || {}), t[Object.keys(t)[0]])) e.onWarn('[@formatjs/intl] "defaultRichTextElements" was specified but "message" was not pre-compiled. \nPlease consider using "@formatjs/cli" to pre-compile your messages for performance.\nFor more details see https://formatjs.io/docs/getting-started/message-distribution');
-        })(E),
-        (0, r.pi)((0, r.pi)({}, E), {
+        })(_),
+        (0, r.pi)((0, r.pi)({}, _), {
             formatters: n,
-            formatNumber: s.uf.bind(null, E, n.getNumberFormat),
-            formatNumberToParts: s.T.bind(null, E, n.getNumberFormat),
-            formatRelativeTime: o.S.bind(null, E, n.getRelativeTimeFormat),
-            formatDate: l.p6.bind(null, E, n.getDateTimeFormat),
-            formatDateToParts: l.OI.bind(null, E, n.getDateTimeFormat),
-            formatTime: l.mr.bind(null, E, n.getDateTimeFormat),
-            formatDateTimeRange: l.Hk.bind(null, E, n.getDateTimeFormat),
-            formatTimeToParts: l.uE.bind(null, E, n.getDateTimeFormat),
-            formatPlural: u.R.bind(null, E, n.getPluralRules),
-            formatMessage: c.w.bind(null, E, n),
-            $t: c.w.bind(null, E, n),
-            formatList: d.I.bind(null, E, n.getListFormat),
-            formatListToParts: d.T.bind(null, E, n.getListFormat),
-            formatDisplayName: _.I.bind(null, E, n.getDisplayNames)
+            formatNumber: s.uf.bind(null, _, n.getNumberFormat),
+            formatNumberToParts: s.T.bind(null, _, n.getNumberFormat),
+            formatRelativeTime: o.S.bind(null, _, n.getRelativeTimeFormat),
+            formatDate: l.p6.bind(null, _, n.getDateTimeFormat),
+            formatDateToParts: l.OI.bind(null, _, n.getDateTimeFormat),
+            formatTime: l.mr.bind(null, _, n.getDateTimeFormat),
+            formatDateTimeRange: l.Hk.bind(null, _, n.getDateTimeFormat),
+            formatTimeToParts: l.uE.bind(null, _, n.getDateTimeFormat),
+            formatPlural: u.R.bind(null, _, n.getPluralRules),
+            formatMessage: c.w.bind(null, _, n),
+            $t: c.w.bind(null, _, n),
+            formatList: d.I.bind(null, _, n.getListFormat),
+            formatListToParts: d.T.bind(null, _, n.getListFormat),
+            formatDisplayName: f.I.bind(null, _, n.getDisplayNames)
         })
     );
 }

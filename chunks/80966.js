@@ -9,56 +9,56 @@ var r = n(200651),
     s = n(124347),
     o = n(640108),
     l = n(981631),
-    u = n(689938);
+    u = n(388032);
 class c extends i.Component {
     render() {
-        let { src: e, fileSize: t, className: n, mediaPlayerClassName: i, poster: c, fileName: d, naturalWidth: _, naturalHeight: E, playable: f, downloadable: h = !0, volume: p, autoPlay: I, autoMute: m, responsive: T, mediaLayoutType: S, mimeType: g, renderOverlayContent: A, renderLinkComponent: N, onClick: R, onPlay: O, onPause: v, onEnded: C, onControlsShow: L, onControlsHide: D, onVolumeChange: y, onMute: b, alt: M = u.Z.Messages.VIDEO, ...P } = this.props;
+        let { src: e, fileSize: t, className: n, mediaPlayerClassName: i, poster: c, fileName: d, naturalWidth: f, naturalHeight: _, playable: h, downloadable: p = !0, volume: m, autoPlay: g, autoMute: E, responsive: v, mediaLayoutType: I, mimeType: S, renderOverlayContent: T, renderLinkComponent: b, onClick: y, onPlay: A, onPause: N, onEnded: C, onControlsShow: R, onControlsHide: O, onVolumeChange: D, onMute: L, alt: x = u.intl.string(u.t.FlNoSU), ...w } = this.props;
         return (0, r.jsx)(s.ZP, {
-            alt: M,
+            alt: x,
             className: n,
             src: c,
-            ...P,
+            ...w,
             minWidth: o.ZP.minWidth,
             minHeight: o.ZP.minHeight,
             shouldLink: !1,
             shouldAnimate: !1,
-            mediaLayoutType: S,
-            responsive: T,
+            mediaLayoutType: I,
+            responsive: v,
             children: (n) => {
                 let {
                         src: s,
                         size: { width: u, height: c }
                     } = n,
-                    M = !((_ <= l.N_j && E <= l.XKF) || (_ <= l.XKF && E <= l.N_j));
+                    x = !((f <= l.N_j && _ <= l.XKF) || (f <= l.XKF && _ <= l.N_j));
                 return (0, r.jsx)(o.ZP, {
                     className: i,
-                    forceExternal: M,
+                    forceExternal: x,
                     src: e,
                     poster: s,
                     width: u,
                     height: c,
-                    responsive: T,
-                    volume: p,
-                    autoPlay: null != I && I,
-                    autoMute: null != m && m,
+                    responsive: v,
+                    volume: m,
+                    autoPlay: null != g && g,
+                    autoMute: null != E && E,
                     type: o.ZP.Types.VIDEO,
-                    mediaLayoutType: S,
+                    mediaLayoutType: I,
                     fileName: d,
                     fileSize: null == t ? void 0 : (0, a.Ng)(t),
                     fileSizeBytes: null == t ? void 0 : t,
-                    playable: f,
-                    renderLinkComponent: N,
-                    renderOverlayContent: A,
-                    onClick: R,
-                    onPlay: O,
-                    onPause: v,
+                    playable: h,
+                    renderLinkComponent: b,
+                    renderOverlayContent: T,
+                    onClick: y,
+                    onPlay: A,
+                    onPause: N,
                     onEnded: C,
-                    onVolumeChange: y,
-                    onMute: b,
-                    onControlsShow: L,
-                    onControlsHide: D,
-                    mimeType: g,
-                    downloadable: h
+                    onVolumeChange: D,
+                    onMute: L,
+                    onControlsShow: R,
+                    onControlsHide: O,
+                    mimeType: S,
+                    downloadable: p
                 });
             }
         });

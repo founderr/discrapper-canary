@@ -1,43 +1,43 @@
-s.d(t, {
+n.d(t, {
     Z: function () {
-        return E;
+        return p;
     }
 }),
-    s(47120);
-var n = s(200651),
-    l = s(192379),
-    i = s(120356),
-    a = s.n(i),
-    r = s(780384),
-    o = s(481060),
-    c = s(239091),
-    d = s(741247),
-    u = s(75464),
-    h = s(689938),
-    m = s(244430);
+    n(47120);
+var i = n(200651),
+    l = n(192379),
+    s = n(120356),
+    r = n.n(s),
+    a = n(780384),
+    o = n(481060),
+    c = n(239091),
+    d = n(741247),
+    u = n(75464),
+    h = n(388032),
+    m = n(244430);
 function g(e) {
-    let { role: t, guild: i } = e,
-        [r, u] = l.useState(!1);
-    return (0, d.useHasGuildRoleItems)(i, t)
-        ? (0, n.jsx)(o.Clickable, {
+    let { role: t, guild: s } = e,
+        [a, u] = l.useState(!1);
+    return (0, d.useHasGuildRoleItems)(s, t)
+        ? (0, i.jsx)(o.Clickable, {
               onClick: (e) => {
                   u(!0),
                       (0, c.jW)(
                           e,
                           async () => {
-                              let { default: e } = await Promise.resolve().then(s.bind(s, 741247));
-                              return (s) =>
-                                  (0, n.jsx)(e, {
-                                      ...s,
+                              let { default: e } = await Promise.resolve().then(n.bind(n, 741247));
+                              return (n) =>
+                                  (0, i.jsx)(e, {
+                                      ...n,
                                       role: t,
-                                      guild: i
+                                      guild: s
                                   });
                           },
                           { onClose: () => u(!1) }
                       );
               },
-              className: a()(m.roleOverflow, { [m.open]: r }),
-              children: (0, n.jsx)(o.MoreHorizontalIcon, {
+              className: r()(m.roleOverflow, { [m.open]: a }),
+              children: (0, i.jsx)(o.MoreHorizontalIcon, {
                   size: 'custom',
                   color: 'currentColor',
                   width: 20,
@@ -46,68 +46,68 @@ function g(e) {
           })
         : null;
 }
-function E(e) {
-    let { color: t, id: i, role: a, guild: d, children: E, isDragging: T, selectedItem: p, onItemSelect: N, itemType: _, locked: S, lockTooltip: x, showContextMenu: f, theme: C, roleStyle: M, 'aria-label': I } = e,
-        R = l.useCallback(
+function p(e) {
+    let { color: t, id: s, role: r, guild: d, children: p, isDragging: x, selectedItem: f, onItemSelect: v, itemType: j, locked: C, lockTooltip: b, showContextMenu: T, theme: N, roleStyle: S, 'aria-label': Z } = e,
+        E = l.useCallback(
             (e) => {
                 (0, c.jW)(e, async () => {
-                    let { default: e } = await s.e('5396').then(s.bind(s, 731646));
+                    let { default: e } = await n.e('5396').then(n.bind(n, 731646));
                     return (t) =>
-                        (0, n.jsx)(e, {
+                        (0, i.jsx)(e, {
                             ...t,
-                            id: i,
-                            label: h.Z.Messages.COPY_ID_ROLE
+                            id: s,
+                            label: h.intl.string(h.t.sMsaLi)
                         });
                 });
             },
-            [i]
+            [s]
         );
-    return T
-        ? (0, n.jsx)('div', { className: m.dragged })
-        : (0, n.jsx)(o.TabBar.Item, {
+    return x
+        ? (0, i.jsx)('div', { className: m.dragged })
+        : (0, i.jsx)(o.TabBar.Item, {
               className: m.role,
-              id: i,
-              selectedItem: p,
-              onItemSelect: N,
-              itemType: _,
-              'aria-label': null != x ? ''.concat(I, ', ').concat(x) : I,
-              children: (0, n.jsxs)('div', {
+              id: s,
+              selectedItem: f,
+              onItemSelect: v,
+              itemType: j,
+              'aria-label': null != b ? ''.concat(Z, ', ').concat(b) : Z,
+              children: (0, i.jsxs)('div', {
                   className: m.roleContent,
                   children: [
-                      'dot' === M
-                          ? (0, n.jsx)(o.RoleDot, {
+                      'dot' === S
+                          ? (0, i.jsx)(o.RoleDot, {
                                 color: null != t ? t : void 0,
                                 className: m.roleDot,
                                 background: !1,
                                 tooltip: !1
                             })
-                          : (0, n.jsx)(o.RoleCircle, {
+                          : (0, i.jsx)(o.RoleCircle, {
                                 color: null != t ? t : void 0,
                                 className: m.roleCircle
                             }),
                       (function () {
-                          if (!S) return null;
-                          let e = (0, r.wj)(C) ? s(27377) : s(514811);
-                          return (0, n.jsx)(o.Tooltip, {
-                              text: x,
+                          if (!C) return null;
+                          let e = (0, a.wj)(N) ? n(27377) : n(514811);
+                          return (0, i.jsx)(o.Tooltip, {
+                              text: b,
                               color: o.Tooltip.Colors.RED,
                               children: (t) =>
-                                  (0, n.jsx)(u.Z, {
+                                  (0, i.jsx)(u.Z, {
                                       className: m.lock,
                                       src: e,
                                       ...t
                                   })
                           });
                       })(),
-                      (0, n.jsx)('div', {
+                      (0, i.jsx)('div', {
                           className: m.roleInner,
-                          onContextMenu: R,
-                          children: E
+                          onContextMenu: E,
+                          children: p
                       }),
-                      f && null != a
-                          ? (0, n.jsx)(g, {
+                      T && null != r
+                          ? (0, i.jsx)(g, {
                                 guild: d,
-                                role: a
+                                role: r
                             })
                           : null
                   ]

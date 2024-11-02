@@ -1,34 +1,34 @@
 n.d(t, {
     Z: function () {
-        return i;
+        return l;
     }
 }),
     n(47120);
-var s = n(192379),
-    a = n(295141);
-function i(e) {
-    let [t, n] = s.useState(!0),
-        [i, r] = s.useState(),
-        [l, o] = s.useState(),
-        c = s.useCallback(async (e) => {
-            n(!0), r(void 0);
+var i = n(192379),
+    r = n(295141);
+function l(e) {
+    let [t, n] = i.useState(!0),
+        [l, s] = i.useState(),
+        [a, o] = i.useState(),
+        c = i.useCallback(async (e) => {
+            n(!0), s(void 0);
             try {
-                let t = await a.HT(e);
+                let t = await r.HT(e);
                 o(t);
             } catch (e) {
-                r(e);
+                s(e);
             } finally {
                 n(!1);
             }
         }, []);
     return (
-        s.useEffect(() => {
+        i.useEffect(() => {
             c(e);
         }, [e, c]),
         {
             isLoading: t,
-            error: i,
-            highlightedCreatorDetails: l
+            error: l,
+            highlightedCreatorDetails: a
         }
     );
 }

@@ -1,21 +1,21 @@
-t.d(n, {
+e.d(t, {
     w: function () {
-        return r;
+        return a;
     }
 });
-var i = t(200651);
-t(192379);
-var a = t(481060);
-function r(e, n) {
-    return (0, a.openModalLazy)(async () => {
-        let { default: a } = await Promise.all([t.e('53115'), t.e('79521')]).then(t.bind(t, 207540));
-        return (t) =>
-            (0, i.jsx)(a, {
-                ...t,
+var i = e(200651);
+e(192379);
+var r = e(481060);
+function a(n, t) {
+    return (0, r.openModalLazy)(async () => {
+        let { default: r } = await e.e('79521').then(e.bind(e, 207540));
+        return (e) =>
+            (0, i.jsx)(r, {
+                ...e,
                 onConfirm: () => {
-                    t.onClose(), n();
+                    e.onClose(), t();
                 },
-                channel: e
+                channel: n
             });
     });
 }

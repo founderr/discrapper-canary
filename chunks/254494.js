@@ -32,14 +32,14 @@ let d = (e) => {
     );
 };
 t.Z = function (e) {
-    let { categoryListRef: t, expressionsListRef: n, categories: a, store: u, children: _, className: E, listPadding: f, rowCount: h, getScrollOffsetForIndex: p, categoryHeight: I, onScroll: m, renderCategoryListItem: T, rowCountBySection: S, renderSection: g } = e,
-        A = u.useStore((e) => e.activeCategoryIndex);
+    let { categoryListRef: t, expressionsListRef: n, categories: a, store: u, children: f, className: _, listPadding: h, rowCount: p, getScrollOffsetForIndex: m, categoryHeight: g, onScroll: E, renderCategoryListItem: v, rowCountBySection: I, renderSection: S } = e,
+        T = u.useStore((e) => e.activeCategoryIndex);
     d({
-        activeIndex: A,
+        activeIndex: T,
         categoryListRef: t,
-        getScrollOffsetForIndex: p
+        getScrollOffsetForIndex: m
     });
-    let N = i.useCallback(
+    let b = i.useCallback(
             (e) => {
                 let { searchQuery: t } = l.Iu.getState();
                 if ((u.setActiveCategoryIndex(e), '' !== t)) (0, l.ql)('');
@@ -50,23 +50,23 @@ t.Z = function (e) {
             },
             [n, u]
         ),
-        R = i.useCallback((e) => T(a[e], e, () => N(e), A === e), [A, a, N, T]),
-        O = i.useMemo(() => ('function' == typeof I ? (e) => I(a[e], e) : I), [a, I]);
+        y = i.useCallback((e) => v(a[e], e, () => b(e), T === e), [T, a, b, v]),
+        A = i.useMemo(() => ('function' == typeof g ? (e) => g(a[e], e) : g), [a, g]);
     return (0, r.jsxs)('div', {
-        className: s()(c.wrapper, E),
+        className: s()(c.wrapper, _),
         children: [
             (0, r.jsx)(o.Z, {
-                listPadding: f,
-                onScroll: m,
+                listPadding: h,
+                onScroll: E,
                 ref: t,
-                renderRow: R,
-                rowCount: h,
-                rowHeight: O,
+                renderRow: y,
+                rowCount: p,
+                rowHeight: A,
                 hideScrollbar: !0,
-                rowCountBySection: S,
-                renderSection: g
+                rowCountBySection: I,
+                renderSection: S
             }),
-            null == _ ? void 0 : _(N)
+            null == f ? void 0 : f(b)
         ]
     });
 };

@@ -1,7 +1,7 @@
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(689938),
+    a = n(388032),
     s = n(318067);
 t.Z = (e) => {
     let { errorMessage: t, onClose: n } = e;
@@ -26,7 +26,7 @@ t.Z = (e) => {
                       onClick: () => {
                           n();
                       },
-                      'aria-label': a.Z.Messages.DISMISS,
+                      'aria-label': a.intl.string(a.t.WAI6xs),
                       className: s.closeIcon
                   })
               ]

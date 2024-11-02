@@ -6,27 +6,27 @@ e.exports = function (e, t, n, a, s, o) {
         c = u.length;
     if (c != r(t).length && !l) return !1;
     for (var d = c; d--; ) {
-        var _ = u[d];
-        if (!(l ? _ in t : i.call(t, _))) return !1;
+        var f = u[d];
+        if (!(l ? f in t : i.call(t, f))) return !1;
     }
-    var E = o.get(e);
-    if (E && o.get(t)) return E == t;
-    var f = !0;
+    var _ = o.get(e);
+    if (_ && o.get(t)) return _ == t;
+    var h = !0;
     o.set(e, t), o.set(t, e);
-    for (var h = l; ++d < c; ) {
-        var p = e[(_ = u[d])],
-            I = t[_];
-        if (a) var m = l ? a(I, p, _, t, e, o) : a(p, I, _, e, t, o);
-        if (!(void 0 === m ? p === I || s(p, I, n, a, o) : m)) {
-            f = !1;
+    for (var p = l; ++d < c; ) {
+        var m = e[(f = u[d])],
+            g = t[f];
+        if (a) var E = l ? a(g, m, f, t, e, o) : a(m, g, f, e, t, o);
+        if (!(void 0 === E ? m === g || s(m, g, n, a, o) : E)) {
+            h = !1;
             break;
         }
-        h || (h = 'constructor' == _);
+        p || (p = 'constructor' == f);
     }
-    if (f && !h) {
-        var T = e.constructor,
-            S = t.constructor;
-        T != S && 'constructor' in e && 'constructor' in t && !('function' == typeof T && T instanceof T && 'function' == typeof S && S instanceof S) && (f = !1);
+    if (h && !p) {
+        var v = e.constructor,
+            I = t.constructor;
+        v != I && 'constructor' in e && 'constructor' in t && !('function' == typeof v && v instanceof v && 'function' == typeof I && I instanceof I) && (h = !1);
     }
-    return o.delete(e), o.delete(t), f;
+    return o.delete(e), o.delete(t), h;
 };

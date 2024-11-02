@@ -1,60 +1,60 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return f;
     }
 });
 var i = n(200651),
-    a = n(192379),
-    s = n(793030),
-    r = n(442837),
-    l = n(445986),
+    r = n(192379),
+    l = n(793030),
+    a = n(442837),
+    s = n(445986),
     o = n(9807),
     c = n(341176),
     d = n(312097),
     u = n(451478),
-    _ = n(981631),
-    E = n(689938),
-    h = n(408313),
-    m = n(902294);
-function I(e) {
+    h = n(981631),
+    m = n(388032),
+    p = n(408313),
+    g = n(902294);
+function f(e) {
     let { application: t, carouselItems: n } = e,
-        I = (0, r.e7)([u.Z], () => u.Z.isFocused()),
-        p = (0, i.jsxs)(i.Fragment, {
+        f = (0, a.e7)([u.Z], () => u.Z.isFocused()),
+        _ = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('img', {
-                    className: h.errorImage,
-                    src: m,
+                    className: p.errorImage,
+                    src: g,
                     'aria-hidden': !0,
                     alt: ''
                 }),
-                (0, i.jsx)(s.X6, {
+                (0, i.jsx)(l.X6, {
                     variant: 'heading-xl/semibold',
-                    children: E.Z.Messages.ERRORS_IMAGE_NOT_FOUND
+                    children: m.intl.string(m.t.UvDfMz)
                 })
             ]
         });
     n.forEach((e, i) => {
-        e.alt = E.Z.Messages.APP_DIRECTORY_PROFILE_IMAGE_CAROUSEL_ALT.format({
+        e.alt = m.intl.formatToPlainString(m.t.sSEhHR, {
             index: i + 1,
             totalImages: n.length,
             name: t.name
         });
     });
-    let g = a.useCallback(
+    let E = r.useCallback(
         (e, t) => {
-            if (e.type === _.s9s.IMG) {
-                let t = n.filter((e) => e.type === _.s9s.IMG),
+            if (e.type === h.s9s.IMG) {
+                let t = n.filter((e) => e.type === h.s9s.IMG),
                     i = t.findIndex((t) => t === e);
                 if (i < 0) return;
-                let a = t.map((e) => ({
-                    url: (0, l.Q)(e.src),
+                let r = t.map((e) => ({
+                    url: (0, s.Q)(e.src),
                     original: e.src,
                     width: e.width,
                     height: e.height,
                     type: 'IMAGE'
                 }));
                 (0, d.K)({
-                    items: a,
+                    items: r,
                     startingIndex: i,
                     fit: c.D.CONTAIN,
                     shouldHideMediaOptions: !0,
@@ -68,13 +68,13 @@ function I(e) {
     return 0 === n.length
         ? null
         : (0, i.jsx)(o.Z, {
-              className: h.carousel,
+              className: p.carousel,
               themedPagination: !0,
               items: n,
               autoplayInterval: 8000,
-              paused: !I,
+              paused: !f,
               videoAutoPlay: !0,
-              onCurrentItemClick: g,
-              errorComponent: p
+              onCurrentItemClick: E,
+              errorComponent: _
           });
 }

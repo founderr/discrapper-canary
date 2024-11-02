@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return T;
     }
 });
 var r = n(200651),
@@ -12,15 +12,15 @@ var r = n(200651),
     u = n(76021),
     c = n(592125),
     d = n(594174),
-    _ = n(834348),
-    E = n(74538),
-    f = n(618158),
-    h = n(871499),
-    p = n(981631),
-    I = n(474936),
-    m = n(689938),
-    T = n(157380);
-function S(e) {
+    f = n(834348),
+    _ = n(74538),
+    h = n(618158),
+    p = n(871499),
+    m = n(981631),
+    g = n(474936),
+    E = n(388032),
+    v = n(157380);
+function I(e) {
     let { className: t } = e;
     return (0, r.jsx)(s.SettingsIcon, {
         size: 'md',
@@ -28,52 +28,52 @@ function S(e) {
         className: t
     });
 }
-function g(e) {
+function S(e) {
     let { className: t } = e;
     return (0, r.jsxs)(i.Fragment, {
         children: [
             (0, r.jsx)(o.ZP, {
                 className: t,
                 mask: o.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
-                children: (0, r.jsx)(S, {})
+                children: (0, r.jsx)(I, {})
             }),
-            (0, r.jsx)(_.Z, { className: T.badgeUpgrade })
+            (0, r.jsx)(f.Z, { className: v.badgeUpgrade })
         ]
     });
 }
-function A(e) {
+function T(e) {
     let { hideBadges: t = !1, stream: n, ...o } = e,
-        _ = (0, a.e7)([d.default], () => E.ZP.isPremium(d.default.getCurrentUser(), I.p9.TIER_1)),
-        T = (0, a.e7)([c.Z], () => c.Z.getChannel(null == n ? void 0 : n.channelId)),
-        A = i.useMemo(() => (null != n ? [n] : []), [n]),
-        N = i.useCallback(() => {
-            null != T && (0, u.Z)(T.getGuildId(), T.id, p.jXE.STREAM_SETTINGS);
-        }, [T]);
-    if (null == n || null == T) return null;
-    let R = S;
+        f = (0, a.e7)([d.default], () => _.ZP.isPremium(d.default.getCurrentUser(), g.p9.TIER_1)),
+        v = (0, a.e7)([c.Z], () => c.Z.getChannel(null == n ? void 0 : n.channelId)),
+        T = i.useMemo(() => (null != n ? [n] : []), [n]),
+        b = i.useCallback(() => {
+            null != v && (0, u.Z)(v.getGuildId(), v.id, m.jXE.STREAM_SETTINGS);
+        }, [v]);
+    if (null == n || null == v) return null;
+    let y = I;
     return (
-        !t && !_ && (R = g),
+        !t && !f && (y = S),
         (0, r.jsx)(s.Popout, {
             position: 'top',
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, r.jsx)(f.Z, {
+                return (0, r.jsx)(h.Z, {
                     children: (0, r.jsx)(l.Z, {
-                        channel: T,
+                        channel: v,
                         currentUser: d.default.getCurrentUser(),
-                        activeStreams: A,
+                        activeStreams: T,
                         onClose: t,
                         showReportOption: !0,
-                        handleGoLive: N
+                        handleGoLive: b
                     })
                 });
             },
             animation: s.Popout.Animation.FADE,
             children: (e) =>
-                (0, r.jsx)(h.Z, {
+                (0, r.jsx)(p.Z, {
                     ...e,
-                    label: m.Z.Messages.STREAMER_SETTINGS_TITLE,
-                    iconComponent: R,
+                    label: E.intl.string(E.t.tmiYpK),
+                    iconComponent: y,
                     ...o
                 })
         })

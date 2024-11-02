@@ -1,27 +1,27 @@
 n(47120);
-var s = n(200651),
-    a = n(192379),
-    i = n(120356),
-    r = n.n(i),
-    l = n(392711),
-    o = n.n(l),
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    s = n.n(l),
+    a = n(392711),
+    o = n.n(a),
     c = n(442837),
     d = n(477690),
     u = n(481060),
-    _ = n(179360),
-    I = n(129861),
-    E = n(999382),
-    T = n(733683),
-    m = n(237583),
-    N = n(899667),
-    S = n(271383),
-    g = n(594174),
-    h = n(267642),
-    C = n(624138),
-    x = n(981631),
-    p = n(689938),
-    R = n(366667);
-function L(e, t, n) {
+    m = n(179360),
+    h = n(129861),
+    g = n(999382),
+    x = n(733683),
+    p = n(237583),
+    f = n(899667),
+    C = n(271383),
+    I = n(594174),
+    _ = n(267642),
+    N = n(624138),
+    v = n(981631),
+    T = n(388032),
+    j = n(366667);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,12 +34,12 @@ function L(e, t, n) {
         e
     );
 }
-let f = (0, C.Mg)(d.Z.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
-class O extends a.Component {
+let S = (0, N.Mg)(d.Z.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
+class b extends r.Component {
     componentDidMount() {
         this.measure();
         let { guildId: e } = this.props;
-        null != e && (0, _.C0)(e), window.addEventListener('resize', this.measure);
+        null != e && (0, m.C0)(e), window.addEventListener('resize', this.measure);
     }
     componentWillUnmount() {
         window.removeEventListener('resize', this.measure);
@@ -54,89 +54,89 @@ class O extends a.Component {
     renderProgressBar(e) {
         let { tierPositions: t } = this.state,
             { guildId: n } = this.props,
-            a = this.getSubscriptionCount();
+            r = this.getSubscriptionCount();
         if (null == t || null == n) return null;
-        let i = {
+        let l = {
                 numRequired: 0,
                 y: 0,
-                key: T.x
+                key: x.x
             },
-            r = (0, h.vn)(n),
-            l = e.map((e) => {
+            s = (0, _.vn)(n),
+            a = e.map((e) => {
                 var n;
                 return {
-                    numRequired: r[e.tier],
-                    name: (0, h.nW)(e.tier),
+                    numRequired: s[e.tier],
+                    name: (0, _.nW)(e.tier),
                     y: null !== (n = t[e.tier]) && void 0 !== n ? n : 0,
                     key: e.tier
                 };
             });
-        return (0, s.jsx)(T.Z, {
-            className: a > 0 ? R.progressWithSubscriptions : R.progress,
-            progress: a,
-            tiers: [i, ...l],
+        return (0, i.jsx)(x.Z, {
+            className: r > 0 ? j.progressWithSubscriptions : j.progress,
+            progress: r,
+            tiers: [l, ...a],
             initialAnimationDelay: 500,
             onAnimatedTierMaker: this.handleAnimatedTier
         });
     }
     renderTierNone() {
-        return (0, s.jsxs)('div', {
-            className: R.tierDefaultUnlocked,
+        return (0, i.jsxs)('div', {
+            className: j.tierDefaultUnlocked,
             ref: this.defaultTierRef,
             children: [
-                (0, s.jsx)(u.FormText, {
+                (0, i.jsx)(u.FormText, {
                     type: u.FormText.Types.LABEL_BOLD,
-                    children: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERKS_TITLE_NONE
+                    children: T.intl.string(T.t['76OoX1'])
                 }),
-                (0, s.jsx)(u.FormText, {
+                (0, i.jsx)(u.FormText, {
                     type: u.FormText.Types.DESCRIPTION,
-                    className: R.tierDefaultUnlockedDescription,
-                    children: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERKS_DESCRIPTION_NONE
+                    className: j.tierDefaultUnlockedDescription,
+                    children: T.intl.string(T.t.DaYNQU)
                 })
             ]
         });
     }
     renderSubscribers() {
         let { subscribers: e, subscriberCount: t, guildId: n } = this.props;
-        return (0, s.jsxs)('div', {
+        return (0, i.jsxs)('div', {
             ref: this.defaultTierRef,
-            className: R.subscribers,
+            className: j.subscribers,
             children: [
-                (0, s.jsx)(m.Z, {
+                (0, i.jsx)(p.Z, {
                     guildId: null != n ? n : void 0,
                     users: e,
                     renderUser: this.renderSubscriber,
                     renderMoreUsers: this.renderMoreSubscribers,
                     max: 5
                 }),
-                (0, s.jsx)('div', {
-                    className: R.subscriberCount,
-                    children: p.Z.Messages.GUILD_SETTINGS_PREMIUM_GUILD_COUNT_SUBSCRIBERS.format({ count: t })
+                (0, i.jsx)('div', {
+                    className: j.subscriberCount,
+                    children: T.intl.format(T.t['0r7snZ'], { count: t })
                 })
             ]
         });
     }
     render() {
-        let { guildId: e, renderTier: t, subscriptions: n, subscriberCount: a, tiers: i } = this.props;
-        if (null == n) return (0, s.jsx)(u.Spinner, { type: u.Spinner.Type.SPINNING_CIRCLE });
+        let { guildId: e, renderTier: t, subscriptions: n, subscriberCount: r, tiers: l } = this.props;
+        if (null == n) return (0, i.jsx)(u.Spinner, { type: u.Spinner.Type.SPINNING_CIRCLE });
         if (null == e) return null;
-        let r = (0, h.vn)(e);
-        return (0, s.jsx)('div', {
-            children: (0, s.jsxs)('div', {
-                className: R.content,
+        let s = (0, _.vn)(e);
+        return (0, i.jsx)('div', {
+            children: (0, i.jsxs)('div', {
+                className: j.content,
                 children: [
-                    this.renderProgressBar(i),
-                    (0, s.jsxs)('div', {
-                        className: R.tiers,
+                    this.renderProgressBar(l),
+                    (0, i.jsxs)('div', {
+                        className: j.tiers,
                         children: [
-                            0 === a ? this.renderTierNone() : this.renderSubscribers(),
-                            i.map((n, s, a) =>
+                            0 === r ? this.renderTierNone() : this.renderSubscribers(),
+                            l.map((n, i, r) =>
                                 t({
                                     tier: n,
-                                    tiers: a,
-                                    tierIndex: s,
+                                    tiers: r,
+                                    tierIndex: i,
                                     onSetRef: this.setTierRef,
-                                    isAnimatedTo: r[this.state.animatedTier] >= r[n.tier],
+                                    isAnimatedTo: s[this.state.animatedTier] >= s[n.tier],
                                     subscriptionCount: this.getSubscriptionCount(),
                                     guildId: e
                                 })
@@ -149,74 +149,74 @@ class O extends a.Component {
     }
     constructor(...e) {
         super(...e),
-            L(this, 'tierRefs', {}),
-            L(this, 'defaultTierRef', a.createRef()),
-            L(this, 'state', {
+            E(this, 'tierRefs', {}),
+            E(this, 'defaultTierRef', r.createRef()),
+            E(this, 'state', {
                 tierPositions: null,
-                animatedTier: x.Eu4.NONE
+                animatedTier: v.Eu4.NONE
             }),
-            L(this, 'measure', () => {
+            E(this, 'measure', () => {
                 let { subscriberCount: e } = this.props,
                     t = this.defaultTierRef.current;
                 if (null == t) return;
                 let { top: n } = t.getBoundingClientRect(),
-                    s = {};
-                for (let [t, a] of Object.entries(this.tierRefs)) {
-                    if (null == a) return;
-                    let { top: i } = a.getBoundingClientRect(),
-                        r = e > 0 ? f : 0;
-                    s[t] = i - n + 32 - r;
+                    i = {};
+                for (let [t, r] of Object.entries(this.tierRefs)) {
+                    if (null == r) return;
+                    let { top: l } = r.getBoundingClientRect(),
+                        s = e > 0 ? S : 0;
+                    i[t] = l - n + 32 - s;
                 }
-                this.setState({ tierPositions: s });
+                this.setState({ tierPositions: i });
             }),
-            L(this, 'setTierRef', (e, t) => {
+            E(this, 'setTierRef', (e, t) => {
                 this.tierRefs[t.tier] = e;
             }),
-            L(this, 'handleAnimatedTier', (e) => {
+            E(this, 'handleAnimatedTier', (e) => {
                 this.setState({ animatedTier: e.key });
             }),
-            L(this, 'renderSubscriber', (e, t, n) => {
-                var a;
+            E(this, 'renderSubscriber', (e, t, n) => {
+                var r;
                 return null == e
                     ? null
-                    : (0, s.jsx)(
+                    : (0, i.jsx)(
                           u.Tooltip,
                           {
-                              text: (0, s.jsx)(I.Z, {
+                              text: (0, i.jsx)(h.Z, {
                                   user: e.user,
                                   nick: e.nick
                               }),
-                              'aria-label': null !== (a = e.nick) && void 0 !== a ? a : e.user.tag,
+                              'aria-label': null !== (r = e.nick) && void 0 !== r ? r : e.user.tag,
                               children: (n) =>
-                                  (0, s.jsx)(u.Avatar, {
+                                  (0, i.jsx)(u.Avatar, {
                                       ...n,
                                       tabIndex: -1,
                                       src: null != e ? e.user.getAvatarURL(this.props.guildId, 32) : null,
-                                      className: r()(R.avatar, t, null != t ? R.subscriberMask : null),
+                                      className: s()(j.avatar, t, null != t ? j.subscriberMask : null),
                                       size: u.AvatarSizes.SIZE_32
                                   })
                           },
                           n
                       );
             }),
-            L(this, 'renderSubscribersPopout', () =>
-                (0, s.jsx)(u.Scroller, {
-                    className: R.subscribersPopout,
+            E(this, 'renderSubscribersPopout', () =>
+                (0, i.jsx)(u.Scroller, {
+                    className: j.subscribersPopout,
                     children: this.props.subscribers.map((e) =>
-                        (0, s.jsxs)(
+                        (0, i.jsxs)(
                             'div',
                             {
-                                className: R.subscribersPopoutUser,
+                                className: j.subscribersPopoutUser,
                                 children: [
-                                    (0, s.jsx)(u.Avatar, {
+                                    (0, i.jsx)(u.Avatar, {
                                         src: e.user.getAvatarURL(this.props.guildId, 32),
                                         'aria-label': e.user.username,
                                         size: u.AvatarSizes.SIZE_32,
-                                        className: R.avatar
+                                        className: j.avatar
                                     }),
-                                    (0, s.jsx)('div', {
-                                        className: R.subscribersPopoutUsername,
-                                        children: (0, s.jsx)(I.Z, {
+                                    (0, i.jsx)('div', {
+                                        className: j.subscribersPopoutUsername,
+                                        children: (0, i.jsx)(h.Z, {
                                             user: e.user,
                                             nick: e.nick
                                         })
@@ -228,16 +228,16 @@ class O extends a.Component {
                     )
                 })
             ),
-            L(this, 'renderMoreSubscribers', (e, t, n) =>
-                (0, s.jsx)(
+            E(this, 'renderMoreSubscribers', (e, t, n) =>
+                (0, i.jsx)(
                     u.Popout,
                     {
                         renderPopout: this.renderSubscribersPopout,
                         position: 'bottom',
                         autoInvert: !1,
                         children: (t) =>
-                            (0, s.jsx)('div', {
-                                className: R.moreSubscribers,
+                            (0, i.jsx)('div', {
+                                className: j.moreSubscribers,
                                 ...t,
                                 children: e
                             })
@@ -247,22 +247,22 @@ class O extends a.Component {
             );
     }
 }
-let A = c.ZP.connectStores([E.Z, g.default, N.Z, S.ZP], () => {
-    let e = E.Z.getGuildId(),
-        t = null != e ? N.Z.getAppliedGuildBoostsForGuild(e) : null,
+let R = c.ZP.connectStores([g.Z, I.default, f.Z, C.ZP], () => {
+    let e = g.Z.getGuildId(),
+        t = null != e ? f.Z.getAppliedGuildBoostsForGuild(e) : null,
         n = o()(null != t ? t : []).uniqBy((e) => e.userId),
-        s = n
+        i = n
             .map((t) => ({
-                user: g.default.getUser(t.userId),
-                nick: S.ZP.getNick(e, t.userId)
+                user: I.default.getUser(t.userId),
+                nick: C.ZP.getNick(e, t.userId)
             }))
             .filter((e) => null != e.user)
             .value();
     return {
         guildId: e,
         subscriptions: t,
-        subscribers: s,
+        subscribers: i,
         subscriberCount: n.size()
     };
-})(O);
-t.Z = A;
+})(b);
+t.Z = R;

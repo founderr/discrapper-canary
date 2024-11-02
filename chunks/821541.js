@@ -13,24 +13,24 @@ var r = n(200651),
     l = n.n(o),
     u = n(534493);
 let c = i.forwardRef(function (e, t) {
-        let { as: n = 'div', gap: i = 8, direction: a = 'vertical', align: o = 'stretch', justify: l = 'start', padding: c = 0, style: E, className: f, children: h, ...p } = e;
+        let { as: n = 'div', gap: i = 8, direction: a = 'vertical', align: o = 'stretch', justify: l = 'start', padding: c = 0, style: _, className: h, children: p, ...m } = e;
         return (0, r.jsx)(n, {
             ref: t,
             'data-align': o,
             'data-justify': l,
             'data-direction': a,
-            className: s()(u.stack, f),
+            className: s()(u.stack, h),
             style: {
-                ...E,
+                ..._,
                 gap: d(i),
-                ..._(c)
+                ...f(c)
             },
-            ...p,
-            children: h
+            ...m,
+            children: p
         });
     }),
     d = (e) => 'var(--space-'.concat(e, ')'),
-    _ = (e) =>
+    f = (e) =>
         'number' == typeof e || 'string' == typeof e
             ? { padding: d(e) }
             : Object.entries(e).reduce((e, t) => {

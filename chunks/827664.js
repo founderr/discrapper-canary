@@ -19,9 +19,9 @@ function c(e) {
     a.call(this, e), s.call(this, e), (this.allowHalfOpen = !0), e && (!1 === e.readable && (this.readable = !1), !1 === e.writable && (this.writable = !1), !1 === e.allowHalfOpen && ((this.allowHalfOpen = !1), this.once('end', d)));
 }
 function d() {
-    !this._writableState.ended && r.nextTick(_, this);
+    !this._writableState.ended && r.nextTick(f, this);
 }
-function _(e) {
+function f(e) {
     e.end();
 }
 Object.defineProperty(c.prototype, 'writableHighWaterMark', {

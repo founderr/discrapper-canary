@@ -3,7 +3,7 @@ n.d(t, {
         return d;
     },
     ms: function () {
-        return _;
+        return f;
     }
 }),
     n(47120);
@@ -42,7 +42,7 @@ let c = function (e) {
             });
         return r && i;
     };
-function _(e) {
+function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 ? arguments[2] : void 0,
         r = (0, i.e7)([a.Z, s.default], () => c(e, [a.Z, s.default]), [e]),

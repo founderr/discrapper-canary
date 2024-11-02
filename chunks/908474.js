@@ -4,74 +4,74 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(192379),
-    a = n(399606),
-    l = n(481060),
-    r = n(346486),
+    l = n(192379),
+    r = n(399606),
+    a = n(481060),
+    s = n(346486),
     o = n(69882),
     c = n(815790),
     u = n(893966),
     d = n(776767),
-    h = n(689938),
+    h = n(388032),
     m = n(194898);
 function p(e) {
     let { member: t } = e,
         n = t.userId,
         p = t.guildId,
-        _ = (0, a.e7)([u.Z], () => u.Z.getEnhancedMember(p, n), [n, p]),
-        f = (null != _ ? _ : t).unusualDMActivityUntil,
-        E = s.useCallback((e) => {
+        f = (0, r.e7)([u.Z], () => u.Z.getEnhancedMember(p, n), [n, p]),
+        g = (null != f ? f : t).unusualDMActivityUntil,
+        C = l.useCallback((e) => {
             if (null == e) return null;
             let t = new Date(e).getTime();
             return (0, c.fv)(t, c.jq.JOINED_AT);
         }, []),
-        g = s.useMemo(() => (null == t ? null : E(f)), [t, E, f]),
-        C = s.useMemo(() => (0, o.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
-        I = s.useMemo(() => (null == t.communicationDisabledUntil ? new Date() : new Date(t.communicationDisabledUntil)), [t.communicationDisabledUntil]);
-    return null != f || C
-        ? (0, i.jsx)(l.FormItem, {
-              title: h.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_FLAGS,
+        x = l.useMemo(() => (null == t ? null : C(g)), [t, C, g]),
+        v = l.useMemo(() => (0, o.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
+        _ = l.useMemo(() => (null == t.communicationDisabledUntil ? new Date() : new Date(t.communicationDisabledUntil)), [t.communicationDisabledUntil]);
+    return null != g || v
+        ? (0, i.jsx)(a.FormItem, {
+              title: h.intl.string(h.t['7V375+']),
               titleClassName: m.infoTitle,
               children: (0, i.jsxs)(d.WM, {
                   children: [
-                      null != f &&
+                      null != g &&
                           (0, i.jsx)(d._2, {
-                              icon: (0, i.jsx)(l.ChatWarningIcon, {
+                              icon: (0, i.jsx)(a.ChatWarningIcon, {
                                   size: 'custom',
                                   color: 'currentColor',
                                   width: d.Mn,
                                   height: d.Mn
                               }),
-                              name: (0, i.jsx)(l.Text, {
+                              name: (0, i.jsx)(a.Text, {
                                   variant: 'text-sm/semibold',
                                   color: 'text-normal',
-                                  children: h.Z.Messages.MEMBER_SAFETY_UNUSUAL_DM_ACTIVITY
+                                  children: h.intl.string(h.t.ZRnONz)
                               }),
-                              description: (0, i.jsx)(l.Text, {
+                              description: (0, i.jsx)(a.Text, {
                                   variant: 'text-sm/semibold',
                                   color: 'text-normal',
-                                  children: g
+                                  children: x
                               })
                           }),
-                      C &&
-                          null != I &&
+                      v &&
+                          null != _ &&
                           (0, i.jsx)(d._2, {
-                              icon: (0, i.jsx)(l.ClockWarningIcon, {
+                              icon: (0, i.jsx)(a.ClockWarningIcon, {
                                   size: 'custom',
                                   color: 'currentColor',
                                   width: d.Mn,
                                   height: d.Mn
                               }),
-                              name: (0, i.jsx)(l.Text, {
+                              name: (0, i.jsx)(a.Text, {
                                   variant: 'text-sm/semibold',
                                   color: 'text-normal',
-                                  children: h.Z.Messages.GUILD_COMMUNICATION_DISABLED_ON_MEMBER
+                                  children: h.intl.string(h.t['TJ8/tL'])
                               }),
-                              description: (0, i.jsx)(l.Text, {
+                              description: (0, i.jsx)(a.Text, {
                                   variant: 'text-sm/semibold',
                                   color: 'text-normal',
-                                  children: (0, i.jsx)(r.Z, {
-                                      deadline: I,
+                                  children: (0, i.jsx)(s.Z, {
+                                      deadline: _,
                                       showUnits: !0,
                                       stopAtOneSec: !0
                                   })

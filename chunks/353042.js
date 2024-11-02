@@ -15,7 +15,7 @@ function a(e, t, n) {
         e
     );
 }
-class s extends (i = l.Component) {
+class o extends (i = l.Component) {
     componentDidMount() {
         this.update(), this._interval.start(this.props.updateInterval, this.update);
     }
@@ -27,8 +27,8 @@ class s extends (i = l.Component) {
             l = Date.now(),
             r = 0,
             a = 0,
-            s = [],
-            o = null != e[0] ? e[0].bytes : 0;
+            o = [],
+            s = null != e[0] ? e[0].bytes : 0;
         for (; r < t + i; r++) {
             let t;
             let i = l - (r + 1) * n;
@@ -36,10 +36,10 @@ class s extends (i = l.Component) {
                 if ((t = e[a]).timestamp > i) a++;
                 else break;
             if (a === e.length) break;
-            null != t && (s.push(o - t.bytes), (o = t.bytes));
+            null != t && (o.push(s - t.bytes), (s = t.bytes));
         }
-        for (; r < t + i; r++) s.push(0);
-        return s.reverse(), s;
+        for (; r < t + i; r++) o.push(0);
+        return o.reverse(), o;
     }
     smoothDeltaBytes(e) {
         let { pointsToSmooth: t } = this.props,
@@ -81,9 +81,9 @@ class s extends (i = l.Component) {
         };
     }
 }
-a(s, 'defaultProps', {
+a(o, 'defaultProps', {
     numUpdatesToShow: 30,
     updateInterval: 500,
     pointsToSmooth: 10
 }),
-    (t.Z = s);
+    (t.Z = o);

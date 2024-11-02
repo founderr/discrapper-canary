@@ -1,24 +1,24 @@
 n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(512722),
-    o = n.n(l),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    s = n(512722),
+    o = n.n(s),
     c = n(481060),
     d = n(100527),
     u = n(600164),
-    _ = n(184301),
-    E = n(347475),
-    h = n(237583),
-    m = n(63063),
-    I = n(870569),
-    p = n(345243),
-    g = n(115530),
-    T = n(981631),
-    S = n(689938),
-    C = n(129223);
-function f(e, t, n) {
+    h = n(184301),
+    m = n(347475),
+    p = n(237583),
+    g = n(63063),
+    f = n(870569),
+    _ = n(345243),
+    E = n(115530),
+    I = n(981631),
+    C = n(388032),
+    v = n(129223);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,32 +35,32 @@ let N = {
     HOST: 5,
     LISTENER: 4
 };
-class A extends a.PureComponent {
+class T extends r.PureComponent {
     isHost() {
         let { currentUser: e, host: t } = this.props;
         return e.id === (null == t ? void 0 : t.id);
     }
     renderTitle() {
         return (0, i.jsxs)('div', {
-            children: [(0, i.jsx)(g.Z, { children: this.isHost() ? S.Z.Messages.SPOTIFY_LISTEN_ALONG_TITLE_HOST.format({ count: this.props.party.length }) : S.Z.Messages.SPOTIFY_LISTEN_ALONG_TITLE_LISTENER }), (0, i.jsx)(p.Z, { children: S.Z.Messages.SPOTIFY_LISTEN_ALONG_SUBTITLE_LISTENER })]
+            children: [(0, i.jsx)(E.Z, { children: this.isHost() ? C.intl.formatToPlainString(C.t['6UJ7mp'], { count: this.props.party.length }) : C.intl.string(C.t.RZufbG) }), (0, i.jsx)(_.Z, { children: C.intl.string(C.t['0ZHLIi']) })]
         });
     }
     renderStopListeningButton() {
         let { onStopListening: e } = this.props;
         return this.isHost()
             ? null
-            : (0, i.jsx)(I.Z, {
-                  tooltipText: S.Z.Messages.SPOTIFY_LISTEN_ALONG_STOP,
+            : (0, i.jsx)(f.Z, {
+                  tooltipText: C.intl.string(C.t.LeZSp6),
                   onClick: e,
                   icon: c.XSmallIcon
               });
     }
     renderHelpIcon() {
         return this.isHost()
-            ? (0, i.jsx)(I.Z, {
-                  tooltipText: S.Z.Messages.SPOTIFY_LISTEN_ALONG_INFO,
+            ? (0, i.jsx)(f.Z, {
+                  tooltipText: C.intl.string(C.t.U7N2Hh),
                   onClick: () => {
-                      window.open(m.Z.getArticleURL(T.BhN.SPOTIFY_CONNECTION), '_blank');
+                      window.open(g.Z.getArticleURL(I.BhN.SPOTIFY_CONNECTION), '_blank');
                   },
                   icon: c.CircleInformationIcon
               })
@@ -68,13 +68,13 @@ class A extends a.PureComponent {
     }
     render() {
         return (0, i.jsxs)('div', {
-            className: C.listeningAlong,
+            className: v.listeningAlong,
             children: [
                 this.renderTitle(),
                 (0, i.jsx)(u.Z, {
                     justify: u.Z.Justify.END,
-                    className: C.party,
-                    children: (0, i.jsx)(h.Z, {
+                    className: v.party,
+                    children: (0, i.jsx)(p.Z, {
                         users: this.props.party,
                         max: this.isHost() ? N.HOST : N.LISTENER,
                         renderUser: this.renderPartyMember,
@@ -82,7 +82,7 @@ class A extends a.PureComponent {
                     })
                 }),
                 (0, i.jsxs)('div', {
-                    className: C.icons,
+                    className: v.icons,
                     children: [this.renderHelpIcon(), this.renderStopListeningButton()]
                 })
             ]
@@ -90,19 +90,19 @@ class A extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            f(this, 'renderPartyMember', (e, t) => {
+            S(this, 'renderPartyMember', (e, t) => {
                 let n;
                 if (null == e) return null;
-                let { host: s, onUserContextMenu: l } = this.props;
+                let { host: l, onUserContextMenu: s } = this.props;
                 return (
-                    (n = (null == s ? void 0 : s.id) === e.id ? S.Z.Messages.SPOTIFY_LISTEN_ALONG_HOST : S.Z.Messages.SPOTIFY_LISTEN_ALONG_LISTENER),
+                    (n = (null == l ? void 0 : l.id) === e.id ? C.intl.string(C.t.N9bqDw) : C.intl.string(C.t.Z2Y4c3)),
                     (0, i.jsx)(
                         c.Popout,
                         {
-                            preload: () => (0, _.Z)(e.id, e.getAvatarURL(void 0, 80)),
+                            preload: () => (0, h.Z)(e.id, e.getAvatarURL(void 0, 80)),
                             renderPopout: (t) => (
                                 o()(null != e, ''),
-                                (0, i.jsx)(E.Z, {
+                                (0, i.jsx)(m.Z, {
                                     ...t,
                                     userId: e.id,
                                     newAnalyticsLocations: [d.Z.AVATAR]
@@ -110,21 +110,21 @@ class A extends a.PureComponent {
                             ),
                             position: 'top',
                             align: 'center',
-                            children: (s) =>
+                            children: (l) =>
                                 (0, i.jsx)(c.Tooltip, {
                                     text: n,
                                     children: (n) => {
                                         let { onMouseEnter: i, onMouseLeave: o } = n;
-                                        return (0, a.createElement)(c.Avatar, {
-                                            ...s,
+                                        return (0, r.createElement)(c.Avatar, {
+                                            ...l,
                                             key: e.id,
                                             src: e.getAvatarURL(void 0, 24),
                                             size: c.AvatarSizes.SIZE_24,
-                                            className: r()(C.avatar, t),
+                                            className: a()(v.avatar, t),
                                             'aria-label': e.username,
                                             onMouseEnter: i,
                                             onMouseLeave: o,
-                                            onContextMenu: (t) => void (null != e && (null == l || l(t, e)))
+                                            onContextMenu: (t) => void (null != e && (null == s || s(t, e)))
                                         });
                                     }
                                 })
@@ -133,19 +133,19 @@ class A extends a.PureComponent {
                     )
                 );
             }),
-            f(this, 'renderPartyMemberOverflow', (e, t, n) => {
-                let { renderOverflowPopout: a } = this.props;
+            S(this, 'renderPartyMemberOverflow', (e, t, n) => {
+                let { renderOverflowPopout: r } = this.props;
                 return (0, i.jsx)(
                     c.Popout,
                     {
-                        renderPopout: a,
+                        renderPopout: r,
                         children: (n) =>
                             (0, i.jsx)(c.Tooltip, {
-                                text: S.Z.Messages.SPOTIFY_LISTEN_ALONG_LISTENERS,
-                                children: (a) =>
+                                text: C.intl.string(C.t.Zf4NPT),
+                                children: (r) =>
                                     (0, i.jsx)('div', {
-                                        className: r()(C.overflow, t),
-                                        ...a,
+                                        className: a()(v.overflow, t),
+                                        ...r,
                                         ...n,
                                         children: e
                                     })
@@ -156,4 +156,4 @@ class A extends a.PureComponent {
             });
     }
 }
-t.Z = A;
+t.Z = T;

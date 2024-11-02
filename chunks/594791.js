@@ -3,28 +3,28 @@ t.d(n, {
         return u;
     }
 });
-var o = t(200651);
+var r = t(200651);
 t(192379);
-var r = t(481060),
-    a = t(626135),
-    i = t(695346),
-    l = t(981631),
-    c = t(689938);
+var o = t(481060),
+    i = t(626135),
+    l = t(695346),
+    a = t(981631),
+    c = t(388032);
 function u() {
-    let e = i.dN.useSetting(),
-        n = i.R$.useSetting();
+    let e = l.dN.useSetting(),
+        n = l.R$.useSetting();
     return e
         ? null
-        : (0, o.jsx)(r.MenuCheckboxItem, {
+        : (0, r.jsx)(o.MenuCheckboxItem, {
               id: 'preview-markdown-toggle',
-              label: c.Z.Messages.PREVIEW_MARKDOWN,
+              label: c.intl.string(c.t.sHJ9wc),
               action: () => {
                   let e = !n;
-                  a.default.track(l.rMx.PREVIEW_MARKDOWN_TOGGLED, {
+                  i.default.track(a.rMx.PREVIEW_MARKDOWN_TOGGLED, {
                       enabled: e,
-                      location: { section: l.jXE.SETTINGS_CONTEXT_MENU }
+                      location: { section: a.jXE.SETTINGS_CONTEXT_MENU }
                   }),
-                      i.R$.updateSetting(e);
+                      l.R$.updateSetting(e);
               },
               checked: n
           });

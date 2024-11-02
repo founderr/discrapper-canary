@@ -1,45 +1,45 @@
-var n = t(200651),
-    s = t(192379),
-    r = t(442837),
-    l = t(481060),
-    o = t(873115),
-    i = t(219929),
-    c = t(618541),
-    u = t(975060),
-    d = t(689938),
-    E = t(245715);
-class _ extends s.PureComponent {
+var a = n(200651),
+    r = n(192379),
+    l = n(442837),
+    i = n(481060),
+    s = n(873115),
+    o = n(219929),
+    c = n(618541),
+    u = n(975060),
+    d = n(388032),
+    m = n(245715);
+class p extends r.PureComponent {
     componentDidMount() {
-        null != this.props.paypalClient && o.f6();
+        null != this.props.paypalClient && s.f6();
     }
     componentWillUnmount() {
-        o.Nj().then(() => o.Dz());
+        s.Nj().then(() => s.Dz());
     }
     render() {
-        let { braintreeEmail: e, className: a, paypalClient: t } = this.props;
-        return (0, n.jsx)(l.FormSection, {
-            className: a,
-            title: d.Z.Messages.PAYMENT_SOURCE_PAYPAL_ACCOUNT,
-            children: (0, n.jsxs)('div', {
-                className: E.inputWrapper,
+        let { braintreeEmail: e, className: t, paypalClient: n } = this.props;
+        return (0, a.jsx)(i.FormSection, {
+            className: t,
+            title: d.intl.string(d.t.QQBAoq),
+            children: (0, a.jsxs)('div', {
+                className: m.inputWrapper,
                 children: [
-                    (0, n.jsx)(i.ZP, {
-                        type: i.ZP.Types.PAYPAL,
-                        className: E.paypalIcon
+                    (0, a.jsx)(o.ZP, {
+                        type: o.ZP.Types.PAYPAL,
+                        className: m.paypalIcon
                     }),
-                    (0, n.jsx)(l.TextInput, {
+                    (0, a.jsx)(i.TextInput, {
                         value: e,
                         editable: !1,
                         readOnly: !0,
-                        placeholder: null == t ? d.Z.Messages.PAYMENT_SOURCE_PAYPAL_LOADING : d.Z.Messages.PAYMENT_SOURCE_CONFIRM_PAYPAL_DETAILS,
-                        inputClassName: E.paypalInput
+                        placeholder: null == n ? d.intl.string(d.t.dte2Mz) : d.intl.string(d.t.hopw7e),
+                        inputClassName: m.paypalInput
                     })
                 ]
             })
         });
     }
 }
-a.Z = r.ZP.connectStores([c.Z, u.Z], () => ({
+t.Z = l.ZP.connectStores([c.Z, u.Z], () => ({
     braintreeEmail: u.Z.braintreeEmail,
     paypalClient: c.Z.getPayPalClient()
-}))(_);
+}))(p);

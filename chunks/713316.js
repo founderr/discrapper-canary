@@ -11,7 +11,7 @@ var r = t(512722),
     c = t(598),
     d = t(698708),
     l = t(614277),
-    s = t(689938),
+    s = t(388032),
     u = t(525550);
 function p(e) {
     let { handleClose: n } = e,
@@ -19,7 +19,7 @@ function p(e) {
     i()(null != r, 'Expected selectedSkuId'), i()(null != p, 'Expected application');
     let f = t[r];
     i()(null != f, 'Expected sku');
-    let b = s.Z.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
+    let b = s.intl.formatToPlainString(s.t.wK0IbG, {
         applicationName: p.name,
         itemName: f.name
     });
@@ -41,7 +41,7 @@ function p(e) {
                     (0, o.jsx)('div', { className: u.divider }),
                     (0, o.jsx)(a.Button, {
                         onClick: n,
-                        children: s.Z.Messages.CLOSE
+                        children: s.intl.string(s.t.cpT0Cg)
                     })
                 ]
             })

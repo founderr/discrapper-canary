@@ -1,11 +1,11 @@
-var s, n;
-E.d(_, {
+var r, l;
+n.d(t, {
     w: function () {
-        return s;
+        return r;
     }
 }),
-    E(47120),
-    ((n = s || (s = {})).MESSAGE = 'message'),
-    (n.FORUM_POST = 'forum_post'),
-    (n.MESSAGE_BUNDLE = 'message_bundle'),
-    (n.CONVERSATION = 'conversation');
+    n(47120),
+    ((l = r || (r = {})).MESSAGE = 'message'),
+    (l.FORUM_POST = 'forum_post'),
+    (l.MESSAGE_BUNDLE = 'message_bundle'),
+    (l.CONVERSATION = 'conversation');

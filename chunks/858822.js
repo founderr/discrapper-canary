@@ -5,19 +5,19 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(913527),
-    a = n.n(s),
-    l = n(442837),
-    r = n(481060),
+var l = n(913527),
+    r = n.n(l),
+    a = n(442837),
+    s = n(481060),
     o = n(87051),
     c = n(776568),
     u = n(777861),
     d = n(9156),
     h = n(621600),
-    m = n(689938);
+    m = n(388032);
 function p(e, t) {
     let n = null == e ? void 0 : e.id,
-        { muted: s, muteConfig: p } = (0, l.cj)(
+        { muted: l, muteConfig: p } = (0, a.cj)(
             [d.ZP],
             () => ({
                 muted: null != n ? d.ZP.isMuted(n) : void 0,
@@ -25,31 +25,31 @@ function p(e, t) {
             }),
             [n]
         ),
-        _ = (0, u.U)(p);
+        f = (0, u.U)(p);
     return null == n
         ? null
-        : s
-          ? (0, i.jsx)(r.MenuItem, {
+        : l
+          ? (0, i.jsx)(s.MenuItem, {
                 id: 'unmute-guild',
-                label: m.Z.Messages.UNMUTE_SERVER,
-                subtext: _,
+                label: m.intl.string(m.t.De0BTE),
+                subtext: f,
                 action: () => o.Z.updateGuildNotificationSettings(n, { muted: !1 }, h.ZB.Unmuted)
             })
-          : (0, i.jsx)(r.MenuItem, {
+          : (0, i.jsx)(s.MenuItem, {
                 id: 'mute-guild',
-                label: m.Z.Messages.MUTE_SERVER,
+                label: m.intl.string(m.t.vRzp7O),
                 action: () => o.Z.updateGuildNotificationSettings(n, { muted: !0 }, h.ZB.Muted),
                 children: (0, c.k)().map((e) => {
-                    let { value: s, label: l } = e;
+                    let { value: l, label: a } = e;
                     return (0, i.jsx)(
-                        r.MenuItem,
+                        s.MenuItem,
                         {
-                            id: ''.concat(s),
-                            label: l,
+                            id: ''.concat(l),
+                            label: a,
                             action: () =>
                                 (function (e) {
                                     if (null == n) return;
-                                    let i = e > 0 ? a()().add(e, 'second').toISOString() : null;
+                                    let i = e > 0 ? r()().add(e, 'second').toISOString() : null;
                                     o.Z.updateGuildNotificationSettings(
                                         n,
                                         {
@@ -62,9 +62,9 @@ function p(e, t) {
                                         h.ZB.Muted,
                                         t
                                     );
-                                })(s)
+                                })(l)
                         },
-                        s
+                        l
                     );
                 })
             });

@@ -4,14 +4,14 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(192379),
-    a = n(846519),
-    l = n(689938);
-function r(e) {
+    l = n(192379),
+    r = n(846519),
+    a = n(388032);
+function s(e) {
     return ''.concat(e).length < 13 ? 1000 * e : e;
 }
 function o(e) {
-    return class extends s.PureComponent {
+    return class extends l.PureComponent {
         componentDidMount() {
             this._interval.start(1000, () => this.setState(this.getUpdatedTime()));
         }
@@ -25,9 +25,9 @@ function o(e) {
             let { timestamps: e } = this.props,
                 t = Date.now() / 1000;
             return null != e.end
-                ? this.getDiff(t, r(e.end) / 1000)
+                ? this.getDiff(t, s(e.end) / 1000)
                 : null != e.start
-                  ? this.getDiff(r(e.start) / 1000, t)
+                  ? this.getDiff(s(e.start) / 1000, t)
                   : {
                         hours: 0,
                         minutes: 0,
@@ -41,30 +41,30 @@ function o(e) {
         getDiff(e, t) {
             let n = Math.max(t - e, 0),
                 i = Math.floor(n) % 60,
-                s = Math.floor(n / 60) % 60;
+                l = Math.floor(n / 60) % 60;
             return {
                 hours: Math.floor(n / 3600) % 24,
-                minutes: s,
+                minutes: l,
                 seconds: i
             };
         }
         render() {
             let { timestamps: t, ...n } = this.props,
-                { hours: s, minutes: a, seconds: r } = this.state,
+                { hours: l, minutes: r, seconds: s } = this.state,
                 o = {
-                    hours: this.renderTime(s, !0),
-                    minutes: this.renderTime(a),
-                    seconds: this.renderTime(r)
+                    hours: this.renderTime(l, !0),
+                    minutes: this.renderTime(r),
+                    seconds: this.renderTime(s)
                 };
             return null != t.end
                 ? (0, i.jsx)(e, {
                       ...n,
-                      message: l.Z.Messages.USER_ACTIVITY_TIMESTAMP_END.format(o)
+                      message: a.intl.formatToPlainString(a.t['I/J7vL'], o)
                   })
                 : null != t.start
                   ? (0, i.jsx)(e, {
                         ...n,
-                        message: l.Z.Messages.USER_ACTIVITY_TIMESTAMP_START.format(o)
+                        message: a.intl.formatToPlainString(a.t.M9Fexc, o)
                     })
                   : null;
         }
@@ -81,7 +81,7 @@ function o(e) {
                           writable: !0
                       })
                     : (t[n] = i),
-                (this._interval = new a.Xp()),
+                (this._interval = new r.Xp()),
                 (this.state = { ...this.getUpdatedTime() });
         }
     };

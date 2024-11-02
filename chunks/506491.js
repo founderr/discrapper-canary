@@ -1,73 +1,73 @@
-var t = a(200651);
-a(192379);
-var r = a(120356),
-    i = a.n(r),
-    n = a(442837),
-    l = a(481060),
-    o = a(434404),
-    c = a(999382),
-    d = a(219369),
-    E = a(981631),
-    S = a(689938),
-    _ = a(70047);
-s.Z = (e) => {
-    var s;
-    let { guild: a, headerId: r } = e,
-        m = (0, n.e7)([c.Z], () => 'description' in c.Z.getErrors()),
-        R = m
-            ? S.Z.Messages.SERVER_DISCOVERY_BLOCKED_WORD_LEARN_MORE.format({
+var s = i(200651);
+i(192379);
+var a = i(120356),
+    n = i.n(a),
+    r = i(442837),
+    l = i(481060),
+    o = i(434404),
+    c = i(999382),
+    d = i(219369),
+    m = i(981631),
+    u = i(388032),
+    x = i(70047);
+t.Z = (e) => {
+    var t;
+    let { guild: i, headerId: a } = e,
+        g = (0, r.e7)([c.Z], () => 'description' in c.Z.getErrors()),
+        h = g
+            ? u.intl.format(u.t.loup7u, {
                   onLearnMoreClick: () => {
                       (0, d.lW)({
-                          articleId: E.BhN.SERVER_DISCOVERY_GUIDELINES,
-                          guildId: a.id,
+                          articleId: m.BhN.SERVER_DISCOVERY_GUIDELINES,
+                          guildId: i.id,
                           modalStep: d.tK.DESCRIPTION
                       });
                   }
               })
             : null;
-    return (0, t.jsxs)('div', {
-        className: _.container,
+    return (0, s.jsxs)('div', {
+        className: x.container,
         children: [
-            (0, t.jsxs)('div', {
-                className: _.content,
+            (0, s.jsxs)('div', {
+                className: x.content,
                 children: [
-                    (0, t.jsx)('div', { className: i()(_.stepImage, _.pencilImage) }),
-                    (0, t.jsx)(l.Heading, {
+                    (0, s.jsx)('div', { className: n()(x.stepImage, x.pencilImage) }),
+                    (0, s.jsx)(l.Heading, {
                         variant: 'heading-xl/semibold',
-                        className: _.header,
-                        id: r,
-                        children: S.Z.Messages.SERVER_DISCOVERY_DESCRIPTION_PAGE_HEADER
+                        className: x.header,
+                        id: a,
+                        children: u.intl.string(u.t.HY9iWF)
                     }),
-                    (0, t.jsx)(l.Text, {
+                    (0, s.jsx)(l.Text, {
                         color: 'none',
                         variant: 'text-md/normal',
-                        className: _.headerCaption,
-                        children: S.Z.Messages.SERVER_DISCOVERY_DESCRIPTION_PAGE_SUBHEADING
+                        className: x.headerCaption,
+                        children: u.intl.string(u.t.zTZSv7)
                     })
                 ]
             }),
-            (0, t.jsxs)(l.FormSection, {
-                className: _.form,
+            (0, s.jsxs)(l.FormSection, {
+                className: x.form,
                 children: [
-                    (0, t.jsx)(l.FormTitle, {
+                    (0, s.jsx)(l.FormTitle, {
                         required: !0,
-                        children: S.Z.Messages.FORM_LABEL_SERVER_DESCRIPTION
+                        children: u.intl.string(u.t['RSfm+v'])
                     }),
-                    (0, t.jsx)(l.FormText, {
+                    (0, s.jsx)(l.FormText, {
                         type: l.FormTextTypes.DESCRIPTION,
-                        className: _.description,
-                        children: S.Z.Messages.SERVER_DISCOVERY_SERVER_DESCRIPTION_INPUT_SUBLABEL
+                        className: x.description,
+                        children: u.intl.string(u.t['6jNp19'])
                     }),
-                    (0, t.jsx)(l.TextArea, {
+                    (0, s.jsx)(l.TextArea, {
                         autoFocus: !0,
-                        value: null !== (s = a.description) && void 0 !== s ? s : '',
-                        placeholder: S.Z.Messages.SERVER_DESCIPTION_EMPTY,
+                        value: null !== (t = i.description) && void 0 !== t ? t : '',
+                        placeholder: u.intl.string(u.t.Nvfows),
                         onChange: (e) => {
                             o.Z.updateGuild({ description: e });
                         },
                         maxLength: 120,
-                        className: _.textArea,
-                        error: R
+                        className: x.textArea,
+                        error: h
                     })
                 ]
             })

@@ -10,37 +10,37 @@ var r = n(200651),
     s = n(993365),
     o = n(481060),
     l = n(489863),
-    u = n(689938),
+    u = n(388032),
     c = n(507119);
 function d(e) {
     var t;
-    let { selectedGuildId: n, selectedChannelId: d, onChannelChange: _, error: E } = e,
-        [f, h] = i.useState(null),
-        p = i.useRef(!1);
+    let { selectedGuildId: n, selectedChannelId: d, onChannelChange: f, error: _ } = e,
+        [h, p] = i.useState(null),
+        m = i.useRef(!1);
     if (
         (i.useEffect(() => {
             async function e(e) {
                 let t = await (0, l.UR)(e);
                 n === e &&
                     (t.sort((e, t) => e.name.localeCompare(t.name)),
-                    h({
+                    p({
                         guildId: e,
                         channels: t
                     }),
-                    (p.current = !0));
+                    (m.current = !0));
             }
-            h(null), null == n ? _(null) : e(n);
-        }, [_, n]),
+            p(null), null == n ? f(null) : e(n);
+        }, [f, n]),
         i.useEffect(() => {
-            if (!!p.current) null == f ? null != d && _(null) : !f.channels.some((e) => e.id === d) && _(null);
-        }, [f, _, d, n]),
+            if (!!m.current) null == h ? null != d && f(null) : !h.channels.some((e) => e.id === d) && f(null);
+        }, [h, f, d, n]),
         null == n)
     )
         return null;
-    let I =
-        null == f || f.guildId !== n
+    let g =
+        null == h || h.guildId !== n
             ? []
-            : (null !== (t = null == f ? void 0 : f.channels) && void 0 !== t ? t : []).map((e) => ({
+            : (null !== (t = null == h ? void 0 : h.channels) && void 0 !== t ? t : []).map((e) => ({
                   value: e.id,
                   label: e.name
               }));
@@ -50,21 +50,21 @@ function d(e) {
             (0, r.jsx)(a.X6, {
                 variant: 'heading-deprecated-12/semibold',
                 className: c.sectionLabel,
-                children: u.Z.Messages.OAUTH2_ADD_WEBHOOK_INCOMING
+                children: u.intl.string(u.t['8qKd+P'])
             }),
-            null != E && '' !== E
+            null != _ && '' !== _
                 ? (0, r.jsx)(s.x, {
                       variant: 'text-xs/normal',
                       color: 'text-danger',
-                      children: E
+                      children: _
                   })
                 : null,
             (0, r.jsx)(o.SearchableSelect, {
                 wrapperClassName: c.select,
                 maxVisibleItems: 5,
-                onChange: _,
-                placeholder: u.Z.Messages.SCOPE_WEBHOOK_INCOMING_CHANNEL_PLACEHOLDER,
-                options: I,
+                onChange: f,
+                placeholder: u.intl.string(u.t['Re/64e']),
+                options: g,
                 value: d,
                 renderOptionLabel: (e) =>
                     (0, r.jsx)(s.x, {
@@ -81,7 +81,7 @@ function d(e) {
                 variant: 'text-xs/normal',
                 color: 'header-secondary',
                 className: c.label,
-                children: u.Z.Messages.SCOPE_WEBHOOK_INCOMING_DESCRIPTION
+                children: u.intl.string(u.t.kQXMfH)
             })
         ]
     });

@@ -13,13 +13,13 @@ var r,
     c = n(570140);
 ((r = o || (o = {}))[(r.NOT_STARTED = 0)] = 'NOT_STARTED'), (r[(r.IN_PROGRESS = 1)] = 'IN_PROGRESS'), (r[(r.FAILED = 2)] = 'FAILED'), (r[(r.SKIPPED = 3)] = 'SKIPPED');
 let d = 0;
-class _ extends (l = u.ZP.Store) {
+class f extends (l = u.ZP.Store) {
     getMigrationStatus() {
         return d;
     }
 }
 (s = 'DomainMigrationStore'),
-    (a = 'displayName') in (i = _)
+    (a = 'displayName') in (i = f)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -27,7 +27,7 @@ class _ extends (l = u.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new _(c.Z, {
+    (t.Z = new f(c.Z, {
         DOMAIN_MIGRATION_START: function () {
             d = 1;
         },

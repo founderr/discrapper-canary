@@ -1,20 +1,20 @@
 n.d(t, {
     X: function () {
-        return A;
+        return T;
     }
 });
 var i,
-    a = n(392711),
-    s = n.n(a),
-    r = n(442837),
-    l = n(570140),
+    r = n(392711),
+    l = n.n(r),
+    a = n(442837),
+    s = n(570140),
     o = n(846027),
     c = n(581883),
     d = n(358085),
     u = n(131951),
-    _ = n(981631),
-    E = n(65154);
-function h(e, t, n) {
+    h = n(981631),
+    m = n(65154);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,137 +27,137 @@ function h(e, t, n) {
         e
     );
 }
-let m = {},
-    I = m,
-    p = !1,
-    g = {},
-    T = {},
-    S = {},
-    C = {
+let g = {},
+    f = g,
+    _ = !1,
+    E = {},
+    I = {},
+    C = {},
+    v = {
         id: null,
         justChanged: !1
     },
-    f = {
+    S = {
         id: null,
         justChanged: !1
     },
     N = /\(([^)]+)\)/;
-function A(e) {
+function T(e) {
     if ((0, d.getPlatform)() === d.PlatformTypes.WINDOWS) {
         let t = e.name.match(N);
         if (null != t) return t[1];
     }
     return e.name;
 }
-function v(e, t, n) {
+function x(e, t, n) {
     return null == e || e.displayName !== t
         ? {
               displayName: t,
               type: n
           }
-        : (e.type === _.QyF.INPUT && n === _.QyF.OUTPUT) || (e.type === _.QyF.OUTPUT && n === _.QyF.INPUT)
+        : (e.type === h.QyF.INPUT && n === h.QyF.OUTPUT) || (e.type === h.QyF.OUTPUT && n === h.QyF.INPUT)
           ? {
                 displayName: t,
-                type: _.QyF.INPUT_AND_OUTPUT
+                type: h.QyF.INPUT_AND_OUTPUT
             }
           : e;
 }
-class Z extends (i = r.ZP.DeviceSettingsStore) {
+class b extends (i = a.ZP.DeviceSettingsStore) {
     initialize(e) {
-        this.waitFor(u.Z, c.Z), (I = null != e ? e : m);
+        this.waitFor(u.Z, c.Z), (f = null != e ? e : g);
     }
     getUserAgnosticState() {
-        return I;
-    }
-    get initialized() {
-        return p;
-    }
-    get lastDeviceConnected() {
-        return S;
-    }
-    get inputDevices() {
-        return g;
-    }
-    get lastInputSystemDevice() {
-        return C;
-    }
-    get outputDevices() {
-        return T;
-    }
-    get lastOutputSystemDevice() {
         return f;
     }
+    get initialized() {
+        return _;
+    }
+    get lastDeviceConnected() {
+        return C;
+    }
+    get inputDevices() {
+        return E;
+    }
+    get lastInputSystemDevice() {
+        return v;
+    }
+    get outputDevices() {
+        return I;
+    }
+    get lastOutputSystemDevice() {
+        return S;
+    }
 }
-h(Z, 'displayName', 'ConnectedDeviceStore'),
-    h(Z, 'persistKey', 'ConnectedDeviceStore'),
-    (t.Z = new Z(l.Z, {
+p(b, 'displayName', 'ConnectedDeviceStore'),
+    p(b, 'persistKey', 'ConnectedDeviceStore'),
+    (t.Z = new b(s.Z, {
         MEDIA_ENGINE_DEVICES: function (e) {
             let { inputDevices: t, outputDevices: n } = e,
                 i = {};
-            (C.justChanged = !1),
+            (v.justChanged = !1),
                 t.forEach((e) => {
-                    if (((i[A(e)] = e.id), e.id === E.w5)) {
+                    if (((i[T(e)] = e.id), e.id === m.w5)) {
                         var t;
                         let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-                        n !== C.id && (C.justChanged = !0), (C.id = n);
+                        n !== v.id && (v.justChanged = !0), (v.id = n);
                     }
                 });
-            let a = {};
+            let r = {};
             if (
-                ((f.justChanged = !1),
+                ((S.justChanged = !1),
                 n.forEach((e) => {
-                    if (((a[A(e)] = e.id), e.id === E.w5)) {
+                    if (((r[T(e)] = e.id), e.id === m.w5)) {
                         var t;
                         let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-                        n !== f.id && (f.justChanged = !0), (f.id = n);
+                        n !== S.id && (S.justChanged = !0), (S.id = n);
                     }
                 }),
-                !p)
+                !_)
             ) {
-                (g = i), (T = a), (p = !0);
+                (E = i), (I = r), (_ = !0);
                 return;
             }
-            let r = Object.keys(g),
-                l = Object.keys(i),
-                o = Object.keys(T),
-                c = Object.keys(a),
-                d = s().difference(r, l),
-                u = s().difference(o, c);
+            let a = Object.keys(E),
+                s = Object.keys(i),
+                o = Object.keys(I),
+                c = Object.keys(r),
+                d = l().difference(a, s),
+                u = l().difference(o, c);
             return (
                 d.length > 0 || u.length > 0
-                    ? (S = {})
-                    : (s()
-                          .difference(l, r)
+                    ? (C = {})
+                    : (l()
+                          .difference(s, a)
                           .forEach((e) => {
-                              S[e] = v(S[e], e, _.QyF.INPUT);
+                              C[e] = x(C[e], e, h.QyF.INPUT);
                           }),
-                      s()
+                      l()
                           .difference(c, o)
                           .forEach((e) => {
-                              S[e] = v(S[e], e, _.QyF.OUTPUT);
+                              C[e] = x(C[e], e, h.QyF.OUTPUT);
                           })),
-                !(s().isEqual(r, l) && s().isEqual(o, c)) && ((g = i), (T = a), !0)
+                !(l().isEqual(a, s) && l().isEqual(o, c)) && ((E = i), (I = r), !0)
             );
         },
         CONNECTED_DEVICE_SET: function (e) {
             let { displayName: t, connectedDevicePreference: n, location: i } = e;
             !(function (e, t, n) {
-                if (t === _.aVf.INPUT || t === _.aVf.INPUT_AND_OUTPUT) {
-                    let t = g[e];
-                    null != t && l.Z.wait(() => o.Z.setInputDevice(t, { location: n }));
+                if (t === h.aVf.INPUT || t === h.aVf.INPUT_AND_OUTPUT) {
+                    let t = E[e];
+                    null != t && s.Z.wait(() => o.Z.setInputDevice(t, { location: n }));
                 }
-                if (t === _.aVf.OUTPUT || t === _.aVf.INPUT_AND_OUTPUT) {
-                    let t = T[e];
-                    l.Z.wait(() => o.Z.setOutputDevice(t, { location: n }));
+                if (t === h.aVf.OUTPUT || t === h.aVf.INPUT_AND_OUTPUT) {
+                    let t = I[e];
+                    s.Z.wait(() => o.Z.setOutputDevice(t, { location: n }));
                 }
             })(t, n, i),
-                delete S[t];
+                delete C[t];
         },
         CONNECTED_DEVICE_IGNORE: function (e) {
             let { displayName: t } = e;
-            delete S[t];
+            delete C[t];
         },
         CONNECTED_DEVICE_NEVER_SHOW_MODAL: function () {
-            (S = {}), (I = { neverShowModal: !0 });
+            (C = {}), (f = { neverShowModal: !0 });
         }
     }));

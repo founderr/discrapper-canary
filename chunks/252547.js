@@ -1,71 +1,71 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return p;
     }
 }),
     n(47120);
-var a = n(200651),
-    r = n(192379),
-    s = n(120356),
-    i = n.n(s),
+var r = n(200651),
+    i = n(192379),
+    a = n(120356),
+    l = n.n(a),
     o = n(793030),
-    l = n(481060),
+    s = n(481060),
     c = n(383895),
-    d = n(689938),
+    d = n(388032),
     u = n(51527),
-    _ = n(268236);
-function E(e) {
-    let { entries: t, viewId: n, officialGuildId: s, onClose: E } = e,
-        m = t.length > 7,
-        [I, p] = r.useState(!1),
-        A = r.useMemo(() => t.slice(0, m && !I ? 6 : void 0), [t, m, I]);
-    return (0, a.jsxs)('div', {
+    m = n(268236);
+function p(e) {
+    let { entries: t, viewId: n, officialGuildId: a, onClose: p } = e,
+        g = t.length > 7,
+        [f, h] = i.useState(!1),
+        x = i.useMemo(() => t.slice(0, g && !f ? 6 : void 0), [t, g, f]);
+    return (0, r.jsxs)('div', {
         children: [
-            (0, a.jsx)(o.X6, {
+            (0, r.jsx)(o.X6, {
                 className: u.sectionHeader,
                 variant: 'text-md/semibold',
                 color: 'header-primary',
-                children: d.Z.Messages.GAME_PROFILE_FRIENDS_WHO_PLAY_TAB
+                children: d.intl.string(d.t.ak8OHh)
             }),
             0 === t.length
-                ? (0, a.jsx)(o.xv, {
+                ? (0, r.jsx)(o.xv, {
                       variant: 'text-xs/semibold',
                       color: 'text-primary',
-                      className: _.emptyState,
-                      children: d.Z.Messages.GAME_PROFILE_EMPTY_FRIENDS_WHO_PLAY
+                      className: m.emptyState,
+                      children: d.intl.string(d.t.R5fYVF)
                   })
-                : (0, a.jsxs)(a.Fragment, {
+                : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, a.jsx)('div', {
-                              className: i()(_.friends, { [_.fadedEntries]: m && !I }),
-                              children: (0, a.jsx)('div', {
+                          (0, r.jsx)('div', {
+                              className: l()(m.friends, { [m.fadedEntries]: g && !f }),
+                              children: (0, r.jsx)('div', {
                                   className: u.column,
-                                  children: A.map((e) =>
-                                      (0, a.jsx)(
+                                  children: x.map((e) =>
+                                      (0, r.jsx)(
                                           c.Z,
                                           {
                                               entry: e,
                                               viewId: n,
-                                              onClose: E,
-                                              officialGuildId: s
+                                              onClose: p,
+                                              officialGuildId: a
                                           },
                                           e.id
                                       )
                                   )
                               })
                           }),
-                          m &&
-                              !I &&
-                              (0, a.jsxs)(l.Clickable, {
-                                  className: _.expandEntriesButton,
-                                  onClick: () => p(!0),
+                          g &&
+                              !f &&
+                              (0, r.jsxs)(s.Clickable, {
+                                  className: m.expandEntriesButton,
+                                  onClick: () => h(!0),
                                   children: [
-                                      (0, a.jsx)(o.xv, {
+                                      (0, r.jsx)(o.xv, {
                                           variant: 'text-xs/semibold',
                                           color: 'interactive-normal',
-                                          children: d.Z.Messages.GAME_PROFILE_SEE_ALL_ENTRIES
+                                          children: d.intl.string(d.t.yohc6O)
                                       }),
-                                      (0, a.jsx)(l.ChevronSmallDownIcon, { size: 'xs' })
+                                      (0, r.jsx)(s.ChevronSmallDownIcon, { size: 'xs' })
                                   ]
                               })
                       ]

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return N;
     }
 }),
     n(47120),
@@ -18,8 +18,8 @@ var s,
     p = n(714338),
     m = n(134432),
     g = n(44488),
-    I = n(585483),
-    C = n(981631),
+    C = n(585483),
+    I = n(981631),
     x = n(31185);
 function f(e, t, n) {
     return (
@@ -38,10 +38,10 @@ let v = {
     friction: 10,
     tension: 100
 };
-function E(e, t) {
+function b(e, t) {
     return ((e % t) + t) % t;
 }
-class N extends a.Component {
+class E extends a.Component {
     componentWillEnter(e) {
         let { directionHistory: t } = this.props,
             { translate: n, opacity: s } = this.state;
@@ -107,12 +107,12 @@ class N extends a.Component {
             });
     }
 }
-class b extends (s = a.Component) {
+class N extends (s = a.Component) {
     componentDidMount() {
-        this.preloadNextImages(), p.Z.disable(), p.Z.enableTemp(c.P), I.S.subscribe(C.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled), I.S.subscribe(C.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled);
+        this.preloadNextImages(), p.Z.disable(), p.Z.enableTemp(c.P), C.S.subscribe(I.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled), C.S.subscribe(I.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled);
     }
     componentWillUnmount() {
-        p.Z.disableTemp(), I.S.unsubscribe(C.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled), I.S.unsubscribe(C.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled);
+        p.Z.disableTemp(), C.S.unsubscribe(I.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled), C.S.unsubscribe(I.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled);
     }
     preloadNextImages() {
         var e, t;
@@ -160,7 +160,7 @@ class b extends (s = a.Component) {
                 null !== (e = r.component) && void 0 !== e
                     ? e
                     : (0, i.jsx)(
-                          N,
+                          E,
                           {
                               item: r,
                               directionHistory: s,
@@ -195,4 +195,4 @@ class b extends (s = a.Component) {
             });
     }
 }
-f(b, 'defaultProps', { startWith: 0 });
+f(N, 'defaultProps', { startWith: 0 });

@@ -11,26 +11,26 @@ var i = n(481060),
     o = n(299206),
     l = n(785717),
     u = n(475413),
-    c = n(689938);
+    c = n(388032);
 function d(e) {
     let { user: t, viewProfileItem: n } = e,
         { trackUserProfileAction: d } = (0, l.KZ)(),
-        { analyticsLocations: _ } = (0, s.ZP)(a.Z.USER_PROFILE_OVERFLOW_MENU),
-        E = [
+        { analyticsLocations: f } = (0, s.ZP)(a.Z.USER_PROFILE_OVERFLOW_MENU),
+        _ = [
             [n],
             [
                 (0, o.Z)({
                     id: t.id,
-                    label: c.Z.Messages.COPY_ID_USER,
+                    label: c.intl.string(c.t['/AXYnJ']),
                     onSuccess: () =>
                         d({
                             action: 'COPY_USER_ID',
-                            analyticsLocations: _
+                            analyticsLocations: f
                         })
                 })
             ]
         ];
-    return E.every((e) => e.every((e) => null == e))
+    return _.every((e) => e.every((e) => null == e))
         ? null
         : (0, r.jsx)(i.Popout, {
               renderPopout: (e) => {
@@ -39,15 +39,15 @@ function d(e) {
                       navId: 'non-user-bot-profile-overflow-menu',
                       onSelect: void 0,
                       onClose: t,
-                      'aria-label': c.Z.Messages.PROFILE_ACTIONS_MENU_LABEL,
-                      children: E.map((e, t) => (0, r.jsx)(i.MenuGroup, { children: e.map((e) => e) }, t))
+                      'aria-label': c.intl.string(c.t.AXIHpa),
+                      children: _.map((e, t) => (0, r.jsx)(i.MenuGroup, { children: e.map((e) => e) }, t))
                   });
               },
               children: (e) =>
                   (0, r.jsx)(u.oY, {
                       action: 'PRESS_OPTIONS',
                       icon: i.MoreHorizontalIcon,
-                      tooltipText: c.Z.Messages.MORE,
+                      tooltipText: c.intl.string(c.t.UKOtz8),
                       ...e
                   })
           });

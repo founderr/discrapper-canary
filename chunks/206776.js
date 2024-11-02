@@ -1,6 +1,6 @@
 n.d(t, {
     l: function () {
-        return f;
+        return h;
     }
 });
 var r,
@@ -26,10 +26,10 @@ let c =
                   }, 1);
               },
     d = null !== (i = window.cancelIdleCallback) && void 0 !== i ? i : clearTimeout;
-function _(e) {
+function f(e) {
     return null == e ? new u.Lj(u.HO, !0) : new u.Lj(e.timeRemaining(), e.didTimeout);
 }
-class E extends o.W {
+class _ extends o.W {
     _queueIdleCallback() {
         if (!this._enableRequestIdleCallback || this._criticalWorkScheduled) return this._processWorkCallback();
         this.telemetry.time(l.JV.TIME_TO_FIRE_IDLE_CALLBACK),
@@ -46,7 +46,7 @@ class E extends o.W {
                             this._scheduleRequestIdleCallback(
                                 (e) => {
                                     this.telemetry.timeEnd(l.JV.TIME_TO_FIRE_IDLE_CALLBACK);
-                                    let t = _(e),
+                                    let t = f(e),
                                         n = null == t ? void 0 : t.timeRemaining();
                                     null != n && this.telemetry.timeTrack(l.JV.DEADLINE_INITIAL_TIME_REMAINING, n), this._processWorkCallback(t);
                                 },
@@ -54,7 +54,7 @@ class E extends o.W {
                             );
                     else {
                         this.telemetry.timeEnd(l.JV.TIME_TO_FIRE_IDLE_CALLBACK);
-                        let t = _(e),
+                        let t = f(e),
                             n = null == t ? void 0 : t.timeRemaining();
                         null != n && this.telemetry.timeTrack(l.JV.DEADLINE_INITIAL_TIME_REMAINING, n), this._processWorkCallback(t);
                     }
@@ -96,6 +96,6 @@ class E extends o.W {
             });
     }
 }
-function f() {
-    return new E();
+function h() {
+    return new _();
 }

@@ -1,9 +1,9 @@
 n.d(t, {
     G0: function () {
-        return h;
+        return p;
     },
     u$: function () {
-        return p;
+        return m;
     }
 }),
     n(47120),
@@ -29,8 +29,8 @@ function d(e, t, n) {
         e
     );
 }
-let _ = [u.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, u.Z.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, '#929AFA'];
-class E extends a.PureComponent {
+let f = [u.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, u.Z.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, '#929AFA'];
+class _ extends a.PureComponent {
     render() {
         let {
             props: { height: e },
@@ -45,10 +45,10 @@ class E extends a.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e), d(this, 'state', { backgroundColor: o().sample(_) });
+        super(...e), d(this, 'state', { backgroundColor: o().sample(f) });
     }
 }
-class f extends (r = a.Component) {
+class h extends (r = a.Component) {
     componentDidMount() {
         this.animateSlide();
     }
@@ -74,7 +74,7 @@ class f extends (r = a.Component) {
         return (0, i.jsxs)(l.Z.div, {
             className: c.column,
             style: this.getAnimatedStyle(),
-            children: [e.map((e, t) => (0, i.jsx)(E, { height: e }, t)), e.map((e, t) => (0, i.jsx)(E, { height: e }, 'alt'.concat(t)))]
+            children: [e.map((e, t) => (0, i.jsx)(_, { height: e }, t)), e.map((e, t) => (0, i.jsx)(_, { height: e }, 'alt'.concat(t)))]
         });
     }
     constructor(e) {
@@ -101,8 +101,8 @@ class f extends (r = a.Component) {
         };
     }
 }
-d(f, 'defaultProps', { direction: -1 });
-let h = (e) => {
+d(h, 'defaultProps', { direction: -1 });
+let p = (e) => {
     let { columns: t } = e;
     return (0, i.jsx)('div', {
         className: c.column,
@@ -110,7 +110,7 @@ let h = (e) => {
         children: [, , , ,].fill(null).map((e, t) => (0, i.jsx)('div', { className: c.categoryLoader }, t))
     });
 };
-class p extends a.PureComponent {
+class m extends a.PureComponent {
     render() {
         let { columns: e, renderColumn: t } = this.props;
         return (0, i.jsx)('div', {

@@ -42,12 +42,12 @@ function c(e) {
 let d = function (e, t) {
         return e + 22 + 75 * (e < 26) - ((0 != t) << 5);
     },
-    _ = function (e, t, n) {
+    f = function (e, t, n) {
         let r = 0;
         for (e = n ? s(e / 700) : e >> 1, e += s(e / t); e > (26 * a) >> 1; r += 36) e = s(e / a);
         return s(r + ((a + 1) * e) / (e + 38));
     },
-    E = function (e) {
+    _ = function (e) {
         let t = [],
             n = e.length,
             r = 0,
@@ -65,15 +65,15 @@ let d = function (e, t) {
                 (o >= 36 || o > s((2147483647 - r) / t)) && l('overflow'), (r += o * t);
                 let d = i <= a ? 1 : i >= a + 26 ? 26 : i - a;
                 if (o < d) break;
-                let _ = 36 - d;
-                t > s(2147483647 / _) && l('overflow'), (t *= _);
+                let f = 36 - d;
+                t > s(2147483647 / f) && l('overflow'), (t *= f);
             }
             let d = t.length + 1;
-            (a = _(r - o, d, 0 == o)), s(r / d) > 2147483647 - i && l('overflow'), (i += s(r / d)), (r %= d), t.splice(r++, 0, i);
+            (a = f(r - o, d, 0 == o)), s(r / d) > 2147483647 - i && l('overflow'), (i += s(r / d)), (r %= d), t.splice(r++, 0, i);
         }
         return String.fromCodePoint(...t);
     },
-    f = function (e) {
+    h = function (e) {
         let t = [],
             n = (e = c(e)).length,
             r = 128,
@@ -81,13 +81,13 @@ let d = function (e, t) {
             a = 72;
         for (let n of e) n < 128 && t.push(o(n));
         let u = t.length,
-            E = u;
-        for (u && t.push('-'); E < n; ) {
+            _ = u;
+        for (u && t.push('-'); _ < n; ) {
             let n = 2147483647;
             for (let t of e) t >= r && t < n && (n = t);
-            let c = E + 1;
-            for (let f of (n - r > s((2147483647 - i) / c) && l('overflow'), (i += (n - r) * c), (r = n), e))
-                if ((f < r && ++i > 2147483647 && l('overflow'), f == r)) {
+            let c = _ + 1;
+            for (let h of (n - r > s((2147483647 - i) / c) && l('overflow'), (i += (n - r) * c), (r = n), e))
+                if ((h < r && ++i > 2147483647 && l('overflow'), h == r)) {
                     let e = i;
                     for (let n = 36; ; n += 36) {
                         let r = n <= a ? 1 : n >= a + 26 ? 26 : n - a;
@@ -96,7 +96,7 @@ let d = function (e, t) {
                             l = 36 - r;
                         t.push(o(d(r + (i % l), 0))), (e = s(i / l));
                     }
-                    t.push(o(d(e, 0))), (a = _(i, c, E == u)), (i = 0), ++E;
+                    t.push(o(d(e, 0))), (a = f(i, c, _ == u)), (i = 0), ++_;
                 }
             ++i, ++r;
         }
@@ -108,16 +108,16 @@ e.exports = {
         decode: c,
         encode: (e) => String.fromCodePoint(...e)
     },
-    decode: E,
-    encode: f,
+    decode: _,
+    encode: h,
     toASCII: function (e) {
         return u(e, function (e) {
-            return n.test(e) ? 'xn--' + f(e) : e;
+            return n.test(e) ? 'xn--' + h(e) : e;
         });
     },
     toUnicode: function (e) {
         return u(e, function (e) {
-            return t.test(e) ? E(e.slice(4).toLowerCase()) : e;
+            return t.test(e) ? _(e.slice(4).toLowerCase()) : e;
         });
     }
 };

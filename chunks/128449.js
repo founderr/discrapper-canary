@@ -1,12 +1,12 @@
 n.d(t, {
     AF: function () {
-        return E;
+        return _;
     },
     BP: function () {
         return c;
     },
     KL: function () {
-        return _;
+        return f;
     },
     MU: function () {
         return l;
@@ -35,5 +35,5 @@ let l = new Set(['hubs']),
     u = [],
     c = 'q',
     d = 'c',
-    _ = 'l',
-    E = 10 * o.Z.Millis.MINUTE;
+    f = 'l',
+    _ = 10 * o.Z.Millis.MINUTE;

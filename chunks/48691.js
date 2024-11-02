@@ -1,33 +1,33 @@
-t.d(n, {
+e.d(n, {
     b: function () {
-        return _;
+        return f;
     },
     t: function () {
         return d;
     }
 });
-var r = t(200651);
-t(192379);
-var i = t(481060),
-    l = t(44315),
-    o = t(377171),
-    u = t(981631),
-    s = t(689938),
-    a = t(405013);
-function c(e) {
-    let { label: n, backgroundColor: t = o.Z.BUTTON_SECONDARY_BACKGROUND, icon: l, iconColor: u } = e;
-    return (0, r.jsxs)('div', {
-        className: a.badge,
-        style: { backgroundColor: t },
+var i = e(200651);
+e(192379);
+var r = e(481060),
+    l = e(44315),
+    o = e(377171),
+    u = e(981631),
+    a = e(388032),
+    s = e(405013);
+function c(t) {
+    let { label: n, backgroundColor: e = o.Z.BUTTON_SECONDARY_BACKGROUND, icon: l, iconColor: u } = t;
+    return (0, i.jsxs)('div', {
+        className: s.badge,
+        style: { backgroundColor: e },
         children: [
-            (0, r.jsx)(i.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: 'text-sm/normal',
                 color: 'always-white',
-                className: a.__invalid_badgeText,
+                className: s.__invalid_badgeText,
                 children: n
             }),
-            (0, r.jsx)(l, {
-                className: a.badgeIcon,
+            (0, i.jsx)(l, {
+                className: s.badgeIcon,
                 color: null != u ? u : 'currentColor',
                 'aria-hidden': !0
             })
@@ -35,16 +35,16 @@ function c(e) {
     });
 }
 function d() {
-    return (0, r.jsx)(c, {
-        label: s.Z.Messages.GUILD_PRODUCT_STATUS_BADGE_PUBLISHED,
+    return (0, i.jsx)(c, {
+        label: a.intl.string(a.t['I+02Gh']),
         backgroundColor: '#207B8D',
-        icon: i.SparklesIcon
+        icon: r.SparklesIcon
     });
 }
-function _() {
-    return (0, r.jsx)(c, {
-        label: s.Z.Messages.GUILD_PRODUCT_STATUS_BADGE_DRAFT,
-        icon: i.PencilIcon,
+function f() {
+    return (0, i.jsx)(c, {
+        label: a.intl.string(a.t.TgsPaG),
+        icon: r.PencilIcon,
         iconColor: (0, l.Lq)(u.Ilk.PRIMARY_330)
     });
 }

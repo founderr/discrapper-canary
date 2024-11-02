@@ -5,14 +5,14 @@ n.d(t, {
 }),
     n(47120);
 var i = n(192379),
-    s = n(442837),
-    a = n(592125),
-    l = n(700785),
-    r = n(471253),
+    l = n(442837),
+    r = n(592125),
+    a = n(700785),
+    s = n(471253),
     o = n(981631);
 function c(e) {
-    let t = (0, s.e7)([a.Z], () => a.Z.getChannel(e), [e]),
-        n = l.Uu(o.Plq.REQUEST_TO_SPEAK, t),
+    let t = (0, l.e7)([r.Z], () => r.Z.getChannel(e), [e]),
+        n = a.Uu(o.Plq.REQUEST_TO_SPEAK, t),
         [c, u] = i.useState(n);
     return (
         i.useEffect(() => {
@@ -21,7 +21,7 @@ function c(e) {
         [
             c,
             (e) => {
-                null != t && (u(e), (0, r.Pq)(t, o.Plq.REQUEST_TO_SPEAK, e));
+                null != t && (u(e), (0, s.Pq)(t, o.Plq.REQUEST_TO_SPEAK, e));
             }
         ]
     );

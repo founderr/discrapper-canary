@@ -1,27 +1,27 @@
-s(47120);
-var n = s(200651),
-    l = s(192379),
-    i = s(100621),
-    a = s(692547),
-    r = s(481060),
-    o = s(585483),
-    c = s(981631),
-    d = s(689938),
-    u = s(147768);
+n(47120);
+var i = n(200651),
+    l = n(192379),
+    s = n(100621),
+    r = n(692547),
+    a = n(481060),
+    o = n(585483),
+    c = n(981631),
+    d = n(388032),
+    u = n(147768);
 t.Z = function (e) {
     var t;
-    let { message: s, errorMessage: h, submitting: m, onReset: g, onSave: E, onSaveText: T, onResetText: p, onSaveButtonColor: N, disabled: _, saveButtonTooltip: S } = e,
-        x = l.useRef(null),
-        [{ spring: f }, C] = (0, r.useSpring)(() => ({ spring: 0 }));
+    let { message: n, errorMessage: h, submitting: m, onReset: g, onSave: p, onSaveText: x, onResetText: f, onSaveButtonColor: v, disabled: j, saveButtonTooltip: C } = e,
+        b = l.useRef(null),
+        [{ spring: T }, N] = (0, a.useSpring)(() => ({ spring: 0 }));
     l.useEffect(() => {
         function e() {
-            C({
+            N({
                 spring: 1,
-                config: i.config.gentle
+                config: s.config.gentle
             }),
-                C({
+                N({
                     spring: 0,
-                    config: i.config.gentle,
+                    config: s.config.gentle,
                     delay: 1000
                 });
         }
@@ -31,63 +31,63 @@ t.Z = function (e) {
                 o.S.unsubscribe(c.CkL.EMPHASIZE_NOTICE, e);
             }
         );
-    }, [C]);
-    let M = f.to({
+    }, [N]);
+    let S = T.to({
             range: [0, 1],
-            output: [(0, r.useToken)(a.Z.colors.TEXT_NORMAL).hex(), (0, r.useToken)(a.Z.unsafe_rawColors.WHITE_500).hex()]
+            output: [(0, a.useToken)(r.Z.colors.TEXT_NORMAL).hex(), (0, a.useToken)(r.Z.unsafe_rawColors.WHITE_500).hex()]
         }),
-        I = f.to({
+        Z = T.to({
             range: [0, 1],
-            output: [(0, r.useToken)(a.Z.colors.BACKGROUND_FLOATING).hex(), (0, r.useToken)(a.Z.colors.STATUS_DANGER).hex()]
+            output: [(0, a.useToken)(r.Z.colors.BACKGROUND_FLOATING).hex(), (0, a.useToken)(r.Z.colors.STATUS_DANGER).hex()]
         }),
-        R = f.to({
+        E = T.to({
             range: [0, 1],
-            output: [(0, r.useToken)(a.Z.colors.TEXT_DANGER).hex(), (0, r.useToken)(a.Z.unsafe_rawColors.WHITE_500).hex()]
+            output: [(0, a.useToken)(r.Z.colors.TEXT_DANGER).hex(), (0, a.useToken)(r.Z.unsafe_rawColors.WHITE_500).hex()]
         });
-    return (0, n.jsx)(i.animated.div, {
+    return (0, i.jsx)(s.animated.div, {
         className: u.container,
-        style: { backgroundColor: I },
-        children: (0, n.jsx)('div', {
+        style: { backgroundColor: Z },
+        children: (0, i.jsx)('div', {
             className: u.flexContainer,
-            ref: x,
-            children: (0, n.jsxs)(r.FocusRingScope, {
-                containerRef: x,
+            ref: b,
+            children: (0, i.jsxs)(a.FocusRingScope, {
+                containerRef: b,
                 children: [
-                    (0, n.jsx)('div', {
+                    (0, i.jsx)('div', {
                         className: u.shrinkingContainer,
-                        children: (0, n.jsx)(i.animated.div, {
+                        children: (0, i.jsx)(s.animated.div, {
                             className: u.message,
-                            style: { color: null != h ? R : M },
-                            children: null !== (t = null != h ? h : s) && void 0 !== t ? t : d.Z.Messages.SETTINGS_NOTICE_MESSAGE
+                            style: { color: null != h ? E : S },
+                            children: null !== (t = null != h ? h : n) && void 0 !== t ? t : d.intl.string(d.t.GP7JLC)
                         })
                     }),
-                    (0, n.jsxs)('div', {
+                    (0, i.jsxs)('div', {
                         className: u.actions,
                         children: [
                             null != g &&
-                                (0, n.jsx)(r.Button, {
+                                (0, i.jsx)(a.Button, {
                                     className: u.resetButton,
-                                    size: r.Button.Sizes.SMALL,
-                                    color: r.Button.Colors.PRIMARY,
-                                    look: r.Button.Looks.LINK,
+                                    size: a.Button.Sizes.SMALL,
+                                    color: a.Button.Colors.PRIMARY,
+                                    look: a.Button.Looks.LINK,
                                     onClick: g,
-                                    children: (0, n.jsx)(i.animated.span, {
-                                        style: { color: M },
-                                        children: null != p ? p : d.Z.Messages.RESET
+                                    children: (0, i.jsx)(s.animated.span, {
+                                        style: { color: S },
+                                        children: null != f ? f : d.intl.string(d.t.yBZMsb)
                                     })
                                 }),
-                            null != E
-                                ? (0, n.jsx)(r.Tooltip, {
-                                      text: S,
+                            null != p
+                                ? (0, i.jsx)(a.Tooltip, {
+                                      text: C,
                                       children: (e) =>
-                                          (0, n.jsx)(r.Button, {
-                                              size: r.Button.Sizes.SMALL,
-                                              color: null != N ? N : r.Button.Colors.GREEN,
+                                          (0, i.jsx)(a.Button, {
+                                              size: a.Button.Sizes.SMALL,
+                                              color: null != v ? v : a.Button.Colors.GREEN,
                                               submitting: m,
-                                              disabled: _,
-                                              onClick: E,
+                                              disabled: j,
+                                              onClick: p,
                                               ...e,
-                                              children: null != T ? T : d.Z.Messages.SAVE_CHANGES
+                                              children: null != x ? x : d.intl.string(d.t.K344S0)
                                           })
                                   })
                                 : null

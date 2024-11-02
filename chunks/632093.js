@@ -1,23 +1,23 @@
 n(47120);
-var s = n(392711),
-    a = n.n(s),
-    r = n(710845),
-    i = n(9156),
+var i = n(392711),
+    r = n.n(i),
+    a = n(710845),
+    s = n(9156),
     l = n(287328);
-let o = new r.Z('ReadStates');
+let o = new a.Z('ReadStates');
 t.Z = new (class e {
     async getAll(e) {
         let t = performance.now(),
             n = await l.Z.userGuildSettings(e).getMany(),
-            s = performance.now();
-        return o.log('asynchronously loaded in '.concat(s - t, 'ms (userGuildSettings: ').concat(n.length, ')')), n;
+            i = performance.now();
+        return o.log('asynchronously loaded in '.concat(i - t, 'ms (userGuildSettings: ').concat(n.length, ')')), n;
     }
     resetInMemoryState() {}
     handleConnectionOpen(e, t) {
         !e.userGuildSettings.partial && l.Z.userGuildSettingsTransaction(t).delete(), this.write(e.userGuildSettings.entries, e.userGuildSettings.version, t);
     }
     handleUserGuildSettingsUpdate(e, t) {
-        let n = a().max(
+        let n = r().max(
             e.userGuildSettings.map((e) => {
                 var t;
                 return null !== (t = e.version) && void 0 !== t ? t : -1;
@@ -26,15 +26,15 @@ t.Z = new (class e {
         null != n && this.write(e.userGuildSettings, n, t);
     }
     write(e, t, n) {
-        let s = l.Z.userGuildSettingsTransaction(n);
+        let i = l.Z.userGuildSettingsTransaction(n);
         for (let t of e) {
-            var a;
+            var r;
             let e = {
-                ...(0, i.wL)(t.guild_id),
+                ...(0, s.wL)(t.guild_id),
                 ...t,
-                channel_overrides: (0, i.U2)(t.channel_overrides)
+                channel_overrides: (0, s.U2)(t.channel_overrides)
             };
-            s.put(null !== (a = t.guild_id) && void 0 !== a ? a : 'dm-sentinel', e);
+            i.put(null !== (r = t.guild_id) && void 0 !== r ? r : 'dm-sentinel', e);
         }
         l.Z.nonGuildVersionsTransaction(n).put({
             id: 'user_guild_settings_version',

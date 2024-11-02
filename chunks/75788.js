@@ -1,106 +1,106 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return c;
+        return E;
     }
 }),
-    t(47120);
-var n = t(200651),
-    o = t(192379),
-    a = t(442837),
-    l = t(481060),
-    r = t(479531),
-    i = t(393869),
-    E = t(25990),
-    _ = t(689938),
-    N = t(859565);
-function c(e) {
-    var s;
-    let { isSlideReady: t, error: c, setEmailToken: d, setError: u, onNext: A, onClose: C } = e,
-        [M, S] = o.useState(!1),
-        [m, I] = o.useState(''),
-        [x, T] = o.useState(!1),
-        R = (0, a.e7)([E.Z], () => E.Z.getErrors()),
-        O = o.useRef(null);
-    o.useEffect(() => {
-        if (t) {
+    n(47120);
+var o = n(200651),
+    s = n(192379),
+    l = n(442837),
+    a = n(481060),
+    i = n(479531),
+    r = n(393869),
+    d = n(25990),
+    c = n(388032),
+    u = n(859565);
+function E(e) {
+    var t;
+    let { isSlideReady: n, error: E, setEmailToken: _, setError: m, onNext: N, onClose: x } = e,
+        [A, C] = s.useState(!1),
+        [h, M] = s.useState(''),
+        [S, p] = s.useState(!1),
+        f = (0, l.e7)([d.Z], () => d.Z.getErrors()),
+        I = s.useRef(null);
+    s.useEffect(() => {
+        if (n) {
             var e;
-            null === (e = O.current) || void 0 === e || e.focus();
+            null === (e = I.current) || void 0 === e || e.focus();
         }
-    }, [t]);
-    let h = async (e) => {
-            e.preventDefault(), u(null), S(!0);
+    }, [n]);
+    let g = async (e) => {
+            e.preventDefault(), m(null), C(!0);
             try {
-                let { token: e } = await (0, i.w)(m);
-                d(e), A();
+                let { token: e } = await (0, r.w)(h);
+                _(e), N();
             } catch (e) {
-                u(new r.Z(e).getAnyErrorMessage());
+                m(new i.Z(e).getAnyErrorMessage());
             } finally {
-                S(!1);
+                C(!1);
             }
         },
-        L = async () => {
-            if (!x) {
-                T(!0);
+        R = async () => {
+            if (!S) {
+                p(!0);
                 try {
-                    await (0, i.i)(!0), (0, l.showToast)((0, l.createToast)(_.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_CODE_SENT, l.ToastType.SUCCESS));
-                } catch (s) {
-                    let e = new r.Z(s).getAnyErrorMessage();
-                    null != e && (0, l.showToast)((0, l.createToast)(e, l.ToastType.FAILURE));
+                    await (0, r.i)(!0), (0, a.showToast)((0, a.createToast)(c.intl.string(c.t['84yeo6']), a.ToastType.SUCCESS));
+                } catch (t) {
+                    let e = new i.Z(t).getAnyErrorMessage();
+                    null != e && (0, a.showToast)((0, a.createToast)(e, a.ToastType.FAILURE));
                 } finally {
-                    T(!1);
+                    p(!1);
                 }
             }
         };
-    return (0, n.jsxs)('form', {
-        onSubmit: h,
+    return (0, o.jsxs)('form', {
+        onSubmit: g,
         children: [
-            (0, n.jsxs)(l.ModalHeader, {
+            (0, o.jsxs)(a.ModalHeader, {
                 separator: !1,
-                className: N.header,
+                className: u.header,
                 children: [
-                    (0, n.jsx)(l.Heading, {
-                        className: N.title,
+                    (0, o.jsx)(a.Heading, {
+                        className: u.title,
                         variant: 'heading-xl/extrabold',
-                        children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_TITLE_DESKTOP
+                        children: c.intl.string(c.t.jMGc4O)
                     }),
-                    (0, n.jsx)(l.Text, {
+                    (0, o.jsx)(a.Text, {
                         color: 'header-secondary',
                         variant: 'text-md/normal',
-                        className: N.subtitle,
-                        children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_SUBTITLE
+                        className: u.subtitle,
+                        children: c.intl.string(c.t.SZJow8)
                     }),
-                    (0, n.jsx)(l.ModalCloseButton, {
-                        onClick: C,
-                        className: N.modalCloseButton
+                    (0, o.jsx)(a.ModalCloseButton, {
+                        onClick: x,
+                        className: u.modalCloseButton
                     })
                 ]
             }),
-            (0, n.jsxs)(l.ModalContent, {
-                className: N.content,
+            (0, o.jsxs)(a.ModalContent, {
+                className: u.content,
                 children: [
-                    (0, n.jsx)(l.FormItem, {
-                        title: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_PROMPT,
-                        error: null != c ? c : null == R ? void 0 : null === (s = R.email_token) || void 0 === s ? void 0 : s[0],
-                        children: (0, n.jsx)(l.TextInput, {
-                            value: m,
-                            onChange: I,
-                            inputRef: O
+                    (0, o.jsx)(a.FormItem, {
+                        title: c.intl.string(c.t['8mZX6O']),
+                        error: null != E ? E : null == f ? void 0 : null === (t = f.email_token) || void 0 === t ? void 0 : t[0],
+                        children: (0, o.jsx)(a.TextInput, {
+                            value: h,
+                            onChange: M,
+                            inputRef: I
                         })
                     }),
-                    (0, n.jsx)(l.Text, {
-                        className: N.help,
+                    (0, o.jsx)(a.Text, {
+                        className: u.help,
                         variant: 'text-sm/normal',
-                        children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_RESEND.format({ onResend: L })
+                        children: c.intl.format(c.t.P0sak5, { onResend: R })
                     })
                 ]
             }),
-            (0, n.jsx)(l.ModalFooter, {
-                children: (0, n.jsx)(l.Button, {
+            (0, o.jsx)(a.ModalFooter, {
+                children: (0, o.jsx)(a.Button, {
                     type: 'submit',
-                    color: l.Button.Colors.BRAND,
-                    size: l.Button.Sizes.MEDIUM,
-                    submitting: M,
-                    children: _.Z.Messages.NEXT
+                    color: a.Button.Colors.BRAND,
+                    size: a.Button.Sizes.MEDIUM,
+                    submitting: A,
+                    children: c.intl.string(c.t.PDTjLC)
                 })
             })
         ]

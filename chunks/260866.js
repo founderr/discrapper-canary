@@ -13,7 +13,7 @@ function r(e, t, n) {
 }
 n.d(t, {
     $o: function () {
-        return _;
+        return f;
     },
     NE: function () {
         return c;
@@ -66,7 +66,7 @@ function d(e, t) {
         !n && (e(...i), (n = !0), setTimeout(() => (n = !1), t));
     };
 }
-class _ {
+class f {
     get(e) {
         let t = this.handlers.get(e);
         return null == t && ((t = this.makeHandler(e)), this.handlers.set(e, t)), t;

@@ -1,31 +1,31 @@
-t.d(e, {
+i.d(t, {
     Z: function () {
-        return c;
+        return o;
     }
 });
-var i = t(200651);
-t(192379);
-var a = t(481060),
-    l = t(58642),
-    r = t(626135),
-    d = t(630388),
-    s = t(981631),
-    u = t(689938);
-function c(n) {
+var e = i(200651);
+i(192379);
+var l = i(481060),
+    a = i(58642),
+    r = i(626135),
+    d = i(630388),
+    u = i(981631),
+    c = i(388032);
+function o(n) {
     return null == n
         ? null
-        : (0, i.jsx)(a.MenuCheckboxItem, {
+        : (0, e.jsx)(l.MenuCheckboxItem, {
               id: 'private',
-              label: u.Z.Messages.APPLICATION_CONTEXT_MENU_PRIVATE_STATUS,
+              label: c.intl.string(c.t.fHDNJi),
               action: function () {
                   if (null == n) return;
-                  let e = (0, d.x9)(n.getFlags(), s.eHb.PRIVATE);
-                  l.h(n.id, n.branchId, e),
-                      r.default.track(s.rMx.APPLICATION_SETTINGS_UPDATED, {
-                          private_enabled: (0, d.yE)(e, s.eHb.PRIVATE),
+                  let t = (0, d.x9)(n.getFlags(), u.eHb.PRIVATE);
+                  a.h(n.id, n.branchId, t),
+                      r.default.track(u.rMx.APPLICATION_SETTINGS_UPDATED, {
+                          private_enabled: (0, d.yE)(t, u.eHb.PRIVATE),
                           ...n.getAnalyticsData()
                       });
               },
-              checked: n.hasFlag(s.eHb.PRIVATE)
+              checked: n.hasFlag(u.eHb.PRIVATE)
           });
 }

@@ -1,66 +1,66 @@
-s.r(o),
-    s.d(o, {
+o.r(n),
+    o.d(n, {
         default: function () {
-            return h;
+            return x;
         }
     });
-var n = s(200651),
-    t = s(192379),
-    a = s(481060),
-    r = s(367907),
-    d = s(313889),
-    i = s(177862),
-    c = s(36459),
-    l = s(981631),
-    u = s(689938),
-    _ = s(661470);
-function h(e) {
-    let { automodDecision: o, transitionState: s, onClose: h } = e,
-        M = t.useCallback(() => {
-            (0, r.yw)(l.rMx.GUILD_AUTOMOD_FEEDBACK, {
-                feedback_type: i.x2.BUG,
-                decision_id: o.decisionId,
-                message_id: o.messageId,
-                content: o.messageContent
+var e = o(200651),
+    s = o(192379),
+    i = o(481060),
+    r = o(367907),
+    d = o(313889),
+    a = o(177862),
+    l = o(36459),
+    c = o(981631),
+    u = o(388032),
+    h = o(661470);
+function x(t) {
+    let { automodDecision: n, transitionState: o, onClose: x } = t,
+        k = s.useCallback(() => {
+            (0, r.yw)(c.rMx.GUILD_AUTOMOD_FEEDBACK, {
+                feedback_type: a.x2.BUG,
+                decision_id: n.decisionId,
+                message_id: n.messageId,
+                content: n.messageContent
             }),
-                (0, c.Xx)(o.messageId, o.channel, d.d.SUBMIT_FEEDBACK),
-                h();
-        }, [o, h]);
-    return (0, n.jsxs)(a.ModalRoot, {
-        transitionState: s,
-        size: a.ModalSize.SMALL,
+                (0, l.Xx)(n.messageId, n.channel, d.d.SUBMIT_FEEDBACK),
+                x();
+        }, [n, x]);
+    return (0, e.jsxs)(i.ModalRoot, {
+        transitionState: o,
+        size: i.ModalSize.SMALL,
         children: [
-            (0, n.jsx)(a.ModalHeader, {
+            (0, e.jsx)(i.ModalHeader, {
                 separator: !1,
-                children: (0, n.jsx)(a.Heading, {
+                children: (0, e.jsx)(i.Heading, {
                     color: 'header-primary',
                     variant: 'heading-md/semibold',
-                    children: u.Z.Messages.GUILD_AUTOMOD_REPORT_FEEDBACK_MODAL_TITLE
+                    children: u.intl.string(u.t['7bdzNj'])
                 })
             }),
-            (0, n.jsx)(a.ModalContent, {
-                children: (0, n.jsx)(a.Text, {
+            (0, e.jsx)(i.ModalContent, {
+                children: (0, e.jsx)(i.Text, {
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
-                    children: u.Z.Messages.GUILD_AUTOMOD_REPORT_FEEDBACK_MODAL_SUBTITLE
+                    children: u.intl.string(u.t.Lbpk6u)
                 })
             }),
-            (0, n.jsxs)(a.ModalFooter, {
+            (0, e.jsxs)(i.ModalFooter, {
                 children: [
-                    (0, n.jsx)('div', {
-                        className: _.button,
-                        children: (0, n.jsx)(a.Button, {
-                            onClick: M,
-                            color: a.Button.Colors.BRAND,
-                            look: a.Button.Looks.FILLED,
-                            children: u.Z.Messages.YES_TEXT
+                    (0, e.jsx)('div', {
+                        className: h.button,
+                        children: (0, e.jsx)(i.Button, {
+                            onClick: k,
+                            color: i.Button.Colors.BRAND,
+                            look: i.Button.Looks.FILLED,
+                            children: u.intl.string(u.t.p89ACg)
                         })
                     }),
-                    (0, n.jsx)(a.Button, {
-                        onClick: h,
-                        color: a.Button.Colors.PRIMARY,
-                        look: a.Button.Looks.LINK,
-                        children: u.Z.Messages.CANCEL
+                    (0, e.jsx)(i.Button, {
+                        onClick: x,
+                        color: i.Button.Colors.PRIMARY,
+                        look: i.Button.Looks.LINK,
+                        children: u.intl.string(u.t['ETE/oK'])
                     })
                 ]
             })

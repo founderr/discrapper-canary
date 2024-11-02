@@ -1,26 +1,26 @@
 n(47120);
-var s = n(200651),
-    a = n(192379),
-    i = n(120356),
-    r = n.n(i),
-    l = n(481060),
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    s = n.n(l),
+    a = n(481060),
     o = n(981631),
     c = n(159720);
 t.Z = (e) => {
-    let { className: t, tags: n, value: i, onRemoveTag: d, onAddTag: u, maxTaxLength: _, maxTags: I, disabled: E, placeholder: T, ...m } = e,
-        [N, S] = a.useState(null != i ? i : ''),
-        g = n.map((e, t) =>
-            (0, s.jsxs)(
+    let { className: t, tags: n, value: l, onRemoveTag: d, onAddTag: u, maxTaxLength: m, maxTags: h, disabled: g, placeholder: x, ...p } = e,
+        [f, C] = r.useState(null != l ? l : ''),
+        I = n.map((e, t) =>
+            (0, i.jsxs)(
                 'span',
                 {
-                    className: r()(c.tag, { [c.__invalid_disabledTag]: E }),
+                    className: s()(c.tag, { [c.__invalid_disabledTag]: g }),
                     children: [
                         e,
-                        !E &&
-                            (0, s.jsx)(l.Clickable, {
+                        !g &&
+                            (0, i.jsx)(a.Clickable, {
                                 className: c.closeWrapper,
                                 onClick: () => d(t),
-                                children: (0, s.jsx)(l.XSmallIcon, {
+                                children: (0, i.jsx)(a.XSmallIcon, {
                                     size: 'xs',
                                     color: 'currentColor',
                                     className: c.close
@@ -31,39 +31,39 @@ t.Z = (e) => {
                 t
             )
         ),
-        h = a.useCallback(() => {
-            let e = N.trim();
-            if (0 !== e.length) (null == I || !(n.length >= I)) && (u(e), S(''));
-        }, [N, I, u, n.length]),
-        C = a.useCallback(
+        _ = r.useCallback(() => {
+            let e = f.trim();
+            if (0 !== e.length) (null == h || !(n.length >= h)) && (u(e), C(''));
+        }, [f, h, u, n.length]),
+        N = r.useCallback(
             (e) => {
                 switch (e.keyCode) {
                     case o.yXg.BACKSPACE:
-                        0 === N.length && n.length > 0 && (e.preventDefault(), e.stopPropagation(), d(n.length - 1));
+                        0 === f.length && n.length > 0 && (e.preventDefault(), e.stopPropagation(), d(n.length - 1));
                         break;
                     case o.yXg.ENTER:
                     case o.yXg.TAB:
                     case o.yXg.COMMA:
-                        e.preventDefault(), e.stopPropagation(), h();
+                        e.preventDefault(), e.stopPropagation(), _();
                 }
             },
-            [h, N.length, d, n.length]
+            [_, f.length, d, n.length]
         );
-    return (0, s.jsxs)('div', {
-        className: r()(t, c.inputWrapper, { [c.disabled]: E }),
+    return (0, i.jsxs)('div', {
+        className: s()(t, c.inputWrapper, { [c.disabled]: g }),
         children: [
-            g,
-            (0, s.jsx)(l.TextInput, {
+            I,
+            (0, i.jsx)(a.TextInput, {
                 className: c.inputOuter,
                 inputClassName: c.inputInner,
-                ...m,
-                value: N,
-                onKeyDown: C,
-                onChange: S,
-                maxLength: _,
-                disabled: E,
-                onBlur: h,
-                placeholder: T
+                ...p,
+                value: f,
+                onKeyDown: N,
+                onChange: C,
+                maxLength: m,
+                disabled: g,
+                onBlur: _,
+                placeholder: x
             })
         ]
     });

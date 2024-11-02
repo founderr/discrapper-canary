@@ -1,27 +1,27 @@
-n.d(t, {
+n.d(e, {
     H: function () {
-        return a;
+        return i;
     },
     a: function () {
-        return i;
+        return l;
     }
 });
 var r = n(460083);
-function a(e) {
-    let { enabled: t } = r.d.getCurrentConfig({
-        guildId: e,
+function i(t) {
+    let { enabled: e } = r.d.getCurrentConfig({
+        guildId: t,
         location: '988d4e_3'
     });
-    return t;
+    return e;
 }
-function i(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+function l(t) {
+    let e = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         { enabled: n } = r.d.useExperiment(
             {
-                guildId: e,
+                guildId: t,
                 location: '988d4e_4'
             },
-            { autoTrackExposure: t }
+            { autoTrackExposure: e }
         );
     return n;
 }

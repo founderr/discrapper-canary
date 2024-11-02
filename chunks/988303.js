@@ -1,16 +1,16 @@
 n.d(t, {
     P: function () {
-        return s;
+        return r;
     },
     u: function () {
         return a;
     }
 });
 var o,
-    s,
-    r = n(818083);
-((o = s || (s = {}))[(o.V1 = 0)] = 'V1'), (o[(o.V2 = 1)] = 'V2');
-let a = (0, r.B)({
+    r,
+    s = n(818083);
+((o = r || (r = {}))[(o.V1 = 0)] = 'V1'), (o[(o.V2 = 1)] = 'V2');
+let a = (0, s.B)({
     id: '2024-05_quest_bar',
     kind: 'user',
     label: 'Quest Bar',

@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return a;
     }
 });
 var i = n(933557),
-    s = n(981631),
-    a = n(689938);
-function l(e) {
+    l = n(981631),
+    r = n(388032);
+function a(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = (0, i.ZP)(e, !0),
-        l = (0, i.ZP)(e, !1);
+        a = (0, i.ZP)(e, !1);
     if (null == e || null == n)
         return {
             placeholder: '',
@@ -17,26 +17,26 @@ function l(e) {
         };
     if (t)
         return {
-            placeholder: a.Z.Messages.READ_ONLY_CHANNEL,
-            accessibilityLabel: a.Z.Messages.READ_ONLY_CHANNEL
+            placeholder: r.intl.string(r.t.RRvRp6),
+            accessibilityLabel: r.intl.string(r.t.RRvRp6)
         };
     if (e.isForumPost())
         return {
-            placeholder: a.Z.Messages.FORUM_POST_TEXTAREA_PLACEHOLDER.format({ channel: n }),
-            accessibilityLabel: a.Z.Messages.TEXTAREA_FORUM_POST_A11Y_LABEL.format({ channel: l })
+            placeholder: r.intl.formatToPlainString(r.t.Y6qWLS, { channel: n }),
+            accessibilityLabel: r.intl.formatToPlainString(r.t.KffKoa, { channel: a })
         };
-    if (s.TPd.THREADS.has(e.type))
+    if (l.TPd.THREADS.has(e.type))
         return {
-            placeholder: a.Z.Messages.TEXTAREA_PLACEHOLDER.format({ channel: n }),
-            accessibilityLabel: a.Z.Messages.TEXTAREA_THREAD_A11Y_LABEL.format({ channel: l })
+            placeholder: r.intl.formatToPlainString(r.t['8lzR/f'], { channel: n }),
+            accessibilityLabel: r.intl.formatToPlainString(r.t.UZIMWV, { channel: a })
         };
-    if (e.type === s.d4z.DM)
+    if (e.type === l.d4z.DM)
         return {
-            placeholder: a.Z.Messages.DM_TEXTAREA_PLACEHOLDER.format({ channel: n }),
-            accessibilityLabel: a.Z.Messages.TEXTAREA_TEXT_DM_A11Y_LABEL.format({ channel: l })
+            placeholder: r.intl.formatToPlainString(r.t['4c+CAw'], { channel: n }),
+            accessibilityLabel: r.intl.formatToPlainString(r.t.fqOxbW, { channel: a })
         };
     return {
-        placeholder: a.Z.Messages.TEXTAREA_PLACEHOLDER.format({ channel: n }),
-        accessibilityLabel: a.Z.Messages.TEXTAREA_TEXT_CHANNEL_A11Y_LABEL.format({ channel: l })
+        placeholder: r.intl.formatToPlainString(r.t['8lzR/f'], { channel: n }),
+        accessibilityLabel: r.intl.formatToPlainString(r.t.ih7ZSE, { channel: a })
     };
 }

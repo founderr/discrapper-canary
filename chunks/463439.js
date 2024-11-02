@@ -1,143 +1,143 @@
-n.d(t, {
+e.d(n, {
     Z: function () {
-        return h;
+        return m;
     }
 }),
-    n(47120);
-var s,
+    e(47120);
+var i,
     o,
-    r = n(200651),
-    a = n(192379),
-    i = n(481060),
-    c = n(442837),
-    E = n(194359),
-    u = n(782568),
-    N = n(726521),
-    T = n(485664),
-    I = n(699516),
-    _ = n(863653),
-    l = n(473092),
-    A = n(941362),
-    d = n(850165),
-    R = n(134612),
-    O = n(981631),
-    C = n(689938),
-    S = n(248296),
-    P = n(149355);
-function h(e) {
-    let { senderId: t, channelId: n, hasReported: s, onReport: o, trackAnalyticsEvent: h } = e,
-        M = (0, c.e7)([I.Z], () => I.Z.isBlocked(t)),
-        [f, p] = a.useState(M),
-        g = (0, T.o)(),
-        m = (0, _.zF)('ic-take-action-web'),
-        [b, L] = a.useState(!1),
-        x = (0, A.q)(n),
-        Z = a.useMemo(() => (g ? 0 : m ? 2 : 1), [g, m]),
-        v = () => {
-            p(!0),
-                E.Z.addRelationship({
-                    userId: t,
-                    context: { location: R.DL },
-                    type: O.OGo.BLOCKED
+    s = e(200651),
+    r = e(192379),
+    a = e(481060),
+    c = e(442837),
+    l = e(194359),
+    u = e(782568),
+    d = e(726521),
+    E = e(485664),
+    N = e(699516),
+    I = e(863653),
+    h = e(473092),
+    _ = e(941362),
+    f = e(850165),
+    T = e(134612),
+    C = e(981631),
+    g = e(388032),
+    p = e(248296),
+    A = e(149355);
+function m(t) {
+    let { senderId: n, channelId: e, hasReported: i, onReport: o, trackAnalyticsEvent: m } = t,
+        S = (0, c.e7)([N.Z], () => N.Z.isBlocked(n)),
+        [b, x] = r.useState(S),
+        R = (0, E.o)(),
+        M = (0, I.zF)('ic-take-action-web'),
+        [L, v] = r.useState(!1),
+        O = (0, _.q)(e),
+        j = r.useMemo(() => (R ? 0 : M ? 2 : 1), [R, M]),
+        B = () => {
+            x(!0),
+                l.Z.addRelationship({
+                    userId: n,
+                    context: { location: T.DL },
+                    type: C.OGo.BLOCKED
                 }),
-                h(l.NM.USER_TAKEOVER_MODAL_BLOCK);
+                m(h.NM.USER_TAKEOVER_MODAL_BLOCK);
         },
         D = () => {
-            p(!1), E.Z.unblockUser(t, { location: R.DL }), h(l.NM.USER_TAKEOVER_MODAL_UNBLOCK);
+            x(!1), l.Z.unblockUser(n, { location: T.DL }), m(h.NM.USER_TAKEOVER_MODAL_UNBLOCK);
         },
-        B = async () => {
-            if (null != x)
-                L(!0),
-                    await (0, N.J7)(
-                        x,
+        y = async () => {
+            if (null != O)
+                v(!0),
+                    await (0, d.J7)(
+                        O,
                         () => {
-                            (0, i.showToast)((0, i.createToast)(C.Z.Messages.INAPPROPRIATE_CONVERSATION_REPORT_TOAST, i.ToastType.SUCCESS)), o();
+                            (0, a.showToast)((0, a.createToast)(g.intl.string(g.t.gn2c6e), a.ToastType.SUCCESS)), o();
                         },
                         () => {
-                            (0, i.showToast)((0, i.createToast)(C.Z.Messages.INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST, i.ToastType.FAILURE));
+                            (0, a.showToast)((0, a.createToast)(g.intl.string(g.t['0YV04+']), a.ToastType.FAILURE));
                         }
                     ),
-                    L(!1),
-                    h(l.NM.USER_TAKEOVER_MODAL_REPORT);
+                    v(!1),
+                    m(h.NM.USER_TAKEOVER_MODAL_REPORT);
         },
-        j = (e) => {
-            0 === e ? ((0, u.Z)(R.EI), h(l.NM.USER_TAKEOVER_MODAL_CTL)) : 2 === e ? ((0, u.Z)(R.$l), h(l.NM.USER_TAKEOVER_MODAL_THROUGHLINE)) : ((0, u.Z)(R.n4), h(l.NM.USER_TAKEOVER_MODAL_NO_FILTR));
+        k = (t) => {
+            0 === t ? ((0, u.Z)(T.EI), m(h.NM.USER_TAKEOVER_MODAL_CTL)) : 2 === t ? ((0, u.Z)(T.$l), m(h.NM.USER_TAKEOVER_MODAL_THROUGHLINE)) : ((0, u.Z)(T.n4), m(h.NM.USER_TAKEOVER_MODAL_NO_FILTR));
         },
-        V = a.useMemo(() => {
-            switch (Z) {
+        Z = r.useMemo(() => {
+            switch (j) {
                 case 0:
-                    return C.Z.Messages.INAPPROPRIATE_CONVERSATION_ACTION_CONTACT_CTL;
+                    return g.intl.string(g.t.sZf6c3);
                 case 2:
-                    return C.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_THROUGHLINE_TITLE;
+                    return g.intl.string(g.t.HQ2nKi);
                 default:
-                    return C.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_TITLE;
+                    return g.intl.string(g.t['65XQam']);
             }
-        }, [Z]);
-    return (0, r.jsx)(d.Z, {
-        heroImageSrc: P,
-        heroImageAlt: C.Z.Messages.INAPPROPRIATE_CONVERSATION_WUMPUS_LIGHTBULB_ALT,
-        header: C.Z.Messages.INAPPROPRIATE_CONVERSATION_TAKE_ACTION_HEADER,
-        description: C.Z.Messages.INAPPROPRIATE_CONVERSATION_TAKE_ACTION_DESCRIPTION,
-        children: (0, r.jsxs)('div', {
-            className: S.buttonContainer,
+        }, [j]);
+    return (0, s.jsx)(f.Z, {
+        heroImageSrc: A,
+        heroImageAlt: g.intl.string(g.t.RVyYCA),
+        header: g.intl.string(g.t['mWO+ys']),
+        description: g.intl.string(g.t.S0XtKC),
+        children: (0, s.jsxs)('div', {
+            className: p.buttonContainer,
             children: [
-                (0, r.jsxs)(i.Button, {
-                    color: i.Button.Colors.BRAND,
-                    size: i.Button.Sizes.LARGE,
-                    className: S.button,
-                    innerClassName: S.buttonInner,
+                (0, s.jsxs)(a.Button, {
+                    color: a.Button.Colors.BRAND,
+                    size: a.Button.Sizes.LARGE,
+                    className: p.button,
+                    innerClassName: p.buttonInner,
                     onClick: () => {
-                        f ? D() : v();
+                        b ? D() : B();
                     },
                     children: [
-                        (0, r.jsx)(i.CircleXIcon, {
+                        (0, s.jsx)(a.CircleXIcon, {
                             size: 'custom',
                             height: 20,
                             width: 20,
-                            color: i.tokens.colors.WHITE,
-                            className: S.buttonIcon
+                            color: a.tokens.colors.WHITE,
+                            className: p.buttonIcon
                         }),
-                        f ? C.Z.Messages.UNBLOCK : C.Z.Messages.BLOCK
+                        b ? g.intl.string(g.t.XyHpKC) : g.intl.string(g.t.l4EmaW)
                     ]
                 }),
-                (0, r.jsxs)(i.Button, {
-                    color: i.Button.Colors.PRIMARY,
-                    size: i.Button.Sizes.LARGE,
-                    className: S.button,
-                    innerClassName: S.buttonInner,
-                    onClick: B,
-                    submitting: b,
-                    disabled: s,
+                (0, s.jsxs)(a.Button, {
+                    color: a.Button.Colors.PRIMARY,
+                    size: a.Button.Sizes.LARGE,
+                    className: p.button,
+                    innerClassName: p.buttonInner,
+                    onClick: y,
+                    submitting: L,
+                    disabled: i,
                     children: [
-                        (0, r.jsx)(i.FlagIcon, {
+                        (0, s.jsx)(a.FlagIcon, {
                             size: 'custom',
                             height: 20,
                             width: 20,
-                            color: i.tokens.colors.WHITE,
-                            className: S.buttonIcon
+                            color: a.tokens.colors.WHITE,
+                            className: p.buttonIcon
                         }),
-                        s ? C.Z.Messages.INAPPROPRIATE_CONVERSATION_ACTION_REPORTED : C.Z.Messages.INAPPROPRIATE_CONVERSATION_ACTION_REPORT
+                        i ? g.intl.string(g.t.QvwOJy) : g.intl.string(g.t['7fHyEx'])
                     ]
                 }),
-                (0, r.jsxs)(i.Button, {
-                    color: i.Button.Colors.PRIMARY,
-                    size: i.Button.Sizes.LARGE,
-                    className: S.button,
-                    innerClassName: S.buttonInner,
-                    onClick: () => j(Z),
+                (0, s.jsxs)(a.Button, {
+                    color: a.Button.Colors.PRIMARY,
+                    size: a.Button.Sizes.LARGE,
+                    className: p.button,
+                    innerClassName: p.buttonInner,
+                    onClick: () => k(j),
                     children: [
-                        (0, r.jsx)(i.ChatIcon, {
+                        (0, s.jsx)(a.ChatIcon, {
                             size: 'custom',
                             height: 20,
                             width: 20,
-                            color: i.tokens.colors.WHITE,
-                            className: S.buttonIcon
+                            color: a.tokens.colors.WHITE,
+                            className: p.buttonIcon
                         }),
-                        V
+                        Z
                     ]
                 })
             ]
         })
     });
 }
-((o = s || (s = {}))[(o.CTL = 0)] = 'CTL'), (o[(o.NO_FILTR = 1)] = 'NO_FILTR'), (o[(o.THROUGHLINE = 2)] = 'THROUGHLINE');
+((o = i || (i = {}))[(o.CTL = 0)] = 'CTL'), (o[(o.NO_FILTR = 1)] = 'NO_FILTR'), (o[(o.THROUGHLINE = 2)] = 'THROUGHLINE');

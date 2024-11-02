@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return h;
     }
 });
 var r = n(200651),
@@ -12,12 +12,12 @@ var r = n(200651),
     u = n(254494),
     c = n(895924),
     d = n(826298),
-    _ = n(360557);
-let E = [16, 12, 8, 12];
-function f(e) {
-    let { className: t, channel: n, sections: a, activeCategoryIndex: f, filteredSectionId: h, onSectionClick: p, applicationCommandListRef: I } = e,
-        m = i.useRef(null),
-        T = i.useCallback(
+    f = n(360557);
+let _ = [16, 12, 8, 12];
+function h(e) {
+    let { className: t, channel: n, sections: a, activeCategoryIndex: h, filteredSectionId: p, onSectionClick: m, applicationCommandListRef: g } = e,
+        E = i.useRef(null),
+        v = i.useCallback(
             (e, t) => {
                 var n;
                 let r = 8;
@@ -25,7 +25,7 @@ function f(e) {
             },
             [a]
         ),
-        S = i.useCallback(
+        I = i.useCallback(
             (e, t) => {
                 var n;
                 if (!t) return 0 === e ? 0 : 8;
@@ -33,27 +33,27 @@ function f(e) {
             },
             [a]
         ),
-        g = i.useCallback(
+        S = i.useCallback(
             (e, t) => {
                 let i = a[t];
                 if (null == i) return;
                 let s = (0, d.ky)(i),
                     l = i.type === c.Qi.BUILT_IN ? 4 : 0,
                     u = 32 - 2 * l,
-                    E = (0, r.jsx)(s, {
+                    _ = (0, r.jsx)(s, {
                         channel: n,
                         section: i,
-                        isSelected: null != h ? i.id === h : f === t,
+                        isSelected: null != p ? i.id === p : h === t,
                         padding: l,
                         width: u,
                         height: u,
                         selectable: !0
                     }),
-                    I = i.type !== c.Qi.BUILT_IN && t < a.length - 1 && a[t + 1].type === c.Qi.BUILT_IN;
+                    g = i.type !== c.Qi.BUILT_IN && t < a.length - 1 && a[t + 1].type === c.Qi.BUILT_IN;
                 return (0, r.jsxs)(
                     'div',
                     {
-                        className: _.section,
+                        className: f.section,
                         children: [
                             (0, r.jsx)(o.Tooltip, {
                                 text: i.name,
@@ -63,36 +63,36 @@ function f(e) {
                                     return (0, r.jsx)(o.Clickable, {
                                         'aria-label': i.name,
                                         onClick: () => {
-                                            p(i), null == t || t();
+                                            m(i), null == t || t();
                                         },
                                         ...n,
-                                        children: E
+                                        children: _
                                     });
                                 }
                             }),
-                            I ? (0, r.jsx)('hr', { className: _.builtInSeparator }) : null
+                            g ? (0, r.jsx)('hr', { className: f.builtInSeparator }) : null
                         ]
                     },
                     i.id
                 );
             },
-            [f, n, p, a, h]
+            [h, n, m, a, p]
         );
     return 0 === a.length
         ? null
         : (0, r.jsx)('div', {
-              className: s()(t, _.wrapper),
+              className: s()(t, f.wrapper),
               children: (0, r.jsx)(u.Z, {
-                  categoryListRef: m,
-                  expressionsListRef: I,
+                  categoryListRef: E,
+                  expressionsListRef: g,
                   store: l.Xn,
                   categories: a,
-                  className: _.list,
-                  renderCategoryListItem: g,
+                  className: f.list,
+                  renderCategoryListItem: S,
                   rowCount: a.length,
-                  categoryHeight: T,
-                  listPadding: E,
-                  getScrollOffsetForIndex: S
+                  categoryHeight: v,
+                  listPadding: _,
+                  getScrollOffsetForIndex: I
               })
           });
 }

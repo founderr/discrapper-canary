@@ -1,4 +1,4 @@
-let s = (0, n(818083).B)({
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2020-12_guild_delete_feedback',
     label: 'Guild Delete Feedback experiment',
@@ -11,4 +11,4 @@ let s = (0, n(818083).B)({
         }
     ]
 });
-t.Z = s;
+t.Z = i;

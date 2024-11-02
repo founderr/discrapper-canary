@@ -8,13 +8,13 @@ var r = n(911969),
     u = n(695346),
     c = n(594174),
     d = n(5192),
-    _ = n(417574),
-    E = n(877565),
-    f = n(590921),
-    h = n(126226),
-    p = n(689938);
-function I(e) {
-    let t = _.X.exec(e);
+    f = n(417574),
+    _ = n(877565),
+    h = n(590921),
+    p = n(126226),
+    m = n(388032);
+function g(e) {
+    let t = f.X.exec(e);
     if (null != t) {
         let n = t[1],
             r = c.default.getUser(n);
@@ -28,47 +28,47 @@ function I(e) {
     }
     return null;
 }
-let m = {
-    ...h.Z,
+let E = {
+    ...p.Z,
     sentinel: void 0,
-    focusMode: f.QZ.MANUAL,
+    focusMode: h.QZ.MANUAL,
     matches(e, t, n, r, i) {
-        if (i.commands === f.L8.DISABLED || i.commands === f.L8.OLD_BUILT_INS || n.length < 2 || !u.Xk.getSetting()) return !1;
-        let a = I(n);
+        if (i.commands === h.L8.DISABLED || i.commands === h.L8.OLD_BUILT_INS || n.length < 2 || !u.Xk.getSetting()) return !1;
+        let a = g(n);
         return null != a && a.cleanedQuery.length > 0;
     },
     queryResults(e, t, n, s, l) {
-        if (!u.Xk.getSetting()) return h.K;
-        let c = I(n);
-        if (null == c) return h.K;
+        if (!u.Xk.getSetting()) return p.K;
+        let c = g(n);
+        if (null == c) return p.K;
         let d = (0, o.hV)(e, c.cleanedQuery),
-            { commands: _, sections: E } = i.JT(
+            { commands: f, sections: _ } = i.JT(
                 e,
                 {
                     commandTypes: [r.yU.CHAT],
                     text: d.text
                 },
                 {
-                    limit: f.AQ,
-                    placeholderCount: f.YP,
+                    limit: h.AQ,
+                    placeholderCount: h.YP,
                     scoreMethod: a.p.COMMAND_OR_APPLICATION,
                     allowFetch: l
                 }
             );
-        if (null == _) return h.K;
-        let p = _.filter((e) => e.section.botId === c.user.id);
+        if (null == f) return p.K;
+        let m = f.filter((e) => e.section.botId === c.user.id);
         if (d.hasSpaceTerminator) {
             let e = d.text.trim(),
                 t = e + ' ';
-            p = p.filter((n) => n.untranslatedName === e || n.untranslatedName.startsWith(t));
+            m = m.filter((n) => n.untranslatedName === e || n.untranslatedName.startsWith(t));
         }
-        return 0 === p.length
-            ? h.K
+        return 0 === m.length
+            ? p.K
             : {
                   results: {
-                      entries: p.slice(0, f.AQ).map((e) => ({
+                      entries: m.slice(0, h.AQ).map((e) => ({
                           command: e,
-                          section: null == E ? void 0 : E.find((t) => t.id === e.applicationId)
+                          section: null == _ ? void 0 : _.find((t) => t.id === e.applicationId)
                       }))
                   }
               };
@@ -84,15 +84,15 @@ let m = {
             onHover: o,
             onClick: u
         } = e;
-        return (0, E.HI)({
+        return (0, _.HI)({
             query: a,
             selectedIndex: n,
             autocompletes: t,
             onHover: o,
             onClick: u,
-            titleWithQuery: p.Z.Messages.COMMANDS_MATCHING,
-            titleWithoutQuery: p.Z.Messages.COMMANDS,
-            Component: s.commands === f.L8.OLD_BUILT_INS ? l.ZP.Command : l.ZP.NewCommand,
+            titleWithQuery: m.t.HFRoZW,
+            titleWithoutQuery: m.intl.string(m.t['0hKkS0']),
+            Component: s.commands === h.L8.OLD_BUILT_INS ? l.ZP.Command : l.ZP.NewCommand,
             getProps: (e) => {
                 let { command: t, section: n } = e;
                 return {
@@ -105,17 +105,17 @@ let m = {
                 };
             },
             getQuery: (e) => {
-                let t = I(e);
+                let t = g(e);
                 if ('mention' !== t.type) return e;
                 let n = d.ZP.getName(null == r ? void 0 : r.id, i.id, t.user);
-                return e.replace(_.X, '@'.concat(n));
+                return e.replace(f.X, '@'.concat(n));
             },
             key: 'commands'
         });
     },
     onSelect(e) {
         let { results: t, index: n, type: r, options: i, channel: a, guild: o } = e,
-            l = h.Z.onSelect({
+            l = p.Z.onSelect({
                 results: t,
                 index: n,
                 type: r,
@@ -128,8 +128,8 @@ let m = {
             ? null
             : {
                   ...l,
-                  type: f.z2.COMMAND_SUGGESTION
+                  type: h.z2.COMMAND_SUGGESTION
               };
     }
 };
-t.Z = m;
+t.Z = E;

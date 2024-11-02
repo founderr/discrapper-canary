@@ -1,12 +1,12 @@
 var i,
-    a,
-    s,
     r,
-    l = n(442837),
+    l,
+    a,
+    s = n(442837),
     o = n(570140),
     c = n(496675),
     d = n(981631);
-class u extends (r = l.ZP.Store) {
+class u extends (a = s.ZP.Store) {
     initialize() {
         this.waitFor(c.Z), this.syncWith([c.Z], d.dG4);
     }
@@ -14,13 +14,13 @@ class u extends (r = l.ZP.Store) {
         return Date.now() - t >= d.Hqc && c.Z.can(d.Plq.MANAGE_GUILD, e);
     }
 }
-(s = 'GuildBoostingNoticeStore'),
-    (a = 'displayName') in (i = u)
-        ? Object.defineProperty(i, a, {
-              value: s,
+(l = 'GuildBoostingNoticeStore'),
+    (r = 'displayName') in (i = u)
+        ? Object.defineProperty(i, r, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[a] = s),
+        : (i[r] = l),
     (t.Z = new u(o.Z));

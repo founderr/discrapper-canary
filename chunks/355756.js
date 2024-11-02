@@ -10,7 +10,7 @@ var r = n(192379),
         u = e.styles,
         c = void 0 === u ? {} : u,
         d = e.className,
-        _ = (0, i.default)(
+        f = (0, i.default)(
             (0, a.Z)(
                 {
                     default: {
@@ -75,7 +75,7 @@ var r = n(192379),
                 c
             )
         ),
-        E = function (e, n) {
+        _ = function (e, n) {
             e.hex
                 ? s.FX(e.hex) &&
                   t(
@@ -102,65 +102,65 @@ var r = n(192379),
         r.createElement(
             'div',
             {
-                style: _.material,
+                style: f.material,
                 className: 'material-picker ' + (void 0 === d ? '' : d)
             },
             r.createElement(o.Vm, {
                 style: {
-                    wrap: _.HEXwrap,
-                    input: _.HEXinput,
-                    label: _.HEXlabel
+                    wrap: f.HEXwrap,
+                    input: f.HEXinput,
+                    label: f.HEXlabel
                 },
                 label: 'hex',
                 value: n,
-                onChange: E
+                onChange: _
             }),
             r.createElement(
                 'div',
                 {
-                    style: _.split,
+                    style: f.split,
                     className: 'flexbox-fix'
                 },
                 r.createElement(
                     'div',
-                    { style: _.third },
+                    { style: f.third },
                     r.createElement(o.Vm, {
                         style: {
-                            wrap: _.RGBwrap,
-                            input: _.RGBinput,
-                            label: _.RGBlabel
+                            wrap: f.RGBwrap,
+                            input: f.RGBinput,
+                            label: f.RGBlabel
                         },
                         label: 'r',
                         value: l.r,
-                        onChange: E
+                        onChange: _
                     })
                 ),
                 r.createElement(
                     'div',
-                    { style: _.third },
+                    { style: f.third },
                     r.createElement(o.Vm, {
                         style: {
-                            wrap: _.RGBwrap,
-                            input: _.RGBinput,
-                            label: _.RGBlabel
+                            wrap: f.RGBwrap,
+                            input: f.RGBinput,
+                            label: f.RGBlabel
                         },
                         label: 'g',
                         value: l.g,
-                        onChange: E
+                        onChange: _
                     })
                 ),
                 r.createElement(
                     'div',
-                    { style: _.third },
+                    { style: f.third },
                     r.createElement(o.Vm, {
                         style: {
-                            wrap: _.RGBwrap,
-                            input: _.RGBinput,
-                            label: _.RGBlabel
+                            wrap: f.RGBwrap,
+                            input: f.RGBinput,
+                            label: f.RGBlabel
                         },
                         label: 'b',
                         value: l.b,
-                        onChange: E
+                        onChange: _
                     })
                 )
             )

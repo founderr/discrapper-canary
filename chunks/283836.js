@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return _;
     },
     q: function () {
-        return _;
+        return f;
     }
 });
 var r = n(192379),
@@ -15,10 +15,10 @@ var r = n(192379),
     u = n(509545),
     c = n(238),
     d = n(55563);
-function _(e) {
+function f(e) {
     return (
         r.useEffect(() => {
-            E(e);
+            _(e);
         }, [e]),
         (0, i.cj)(
             [c.Z, d.Z, u.Z],
@@ -33,6 +33,6 @@ function _(e) {
         )
     );
 }
-function E(e) {
+function _(e) {
     (0, a.k)(e), (0, o.oJ)(e), (0, s.yD)(e, !1);
 }

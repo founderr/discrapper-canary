@@ -1,4 +1,4 @@
-t.d(n, {
+e.d(n, {
     HG: function () {
         return u;
     },
@@ -9,10 +9,10 @@ t.d(n, {
         return o;
     }
 });
-var i = t(373228),
-    r = t(689938);
-let o = () => [r.Z.Messages.ROLE_SUBSCRIPTION_JOIN_CTA_LABEL1, r.Z.Messages.ROLE_SUBSCRIPTION_JOIN_CTA_LABEL2],
-    a = () => [r.Z.Messages.ROLE_SUBSCRIPTION_RENEW_CTA_LABEL1, r.Z.Messages.ROLE_SUBSCRIPTION_RENEW_CTA_LABEL2],
+var i = e(373228),
+    r = e(388032);
+let o = () => [r.intl.string(r.t.b6wEe3), r.intl.string(r.t.i8o9hY)],
+    a = () => [r.intl.string(r.t.vqnToa), r.intl.string(r.t['9yh+dH'])],
     u = [
         {
             id: '781323471249604648',

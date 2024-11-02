@@ -3,7 +3,7 @@ n.d(t, {
         return r;
     },
     Ob: function () {
-        return o;
+        return s;
     },
     ZI: function () {
         return a;
@@ -12,7 +12,7 @@ n.d(t, {
         return c;
     },
     uc: function () {
-        return s;
+        return o;
     }
 });
 var i = n(987170),
@@ -45,7 +45,7 @@ let r = (0, i.Z)({
             }
         ]
     }),
-    s = (0, i.Z)({
+    o = (0, i.Z)({
         kind: 'user',
         id: '2024-08_ctp_dmgdm_list_render__multiple_buckets',
         label: 'CTP DM/GDM List Render - A/A test - Multiple buckets',
@@ -64,7 +64,7 @@ let r = (0, i.Z)({
             }
         ]
     }),
-    o = (0, i.Z)({
+    s = (0, i.Z)({
         kind: 'user',
         id: '2024-08_ctp_dmgdm_list_render__everyone',
         label: 'CTP DM/GDM List Render - A/A test - Everyone',

@@ -1,7 +1,7 @@
 function t(e) {
     var t;
     if ('number' == typeof e) return e >>> 0 === e && e >= 0 && e <= 4294967295 ? e : null;
-    return (t = o.hex6.exec(e)) ? parseInt(t[1] + 'ff', 16) >>> 0 : _.hasOwnProperty(e) ? _[e] : (t = o.rgb.exec(e)) ? ((l(t[1]) << 24) | (l(t[2]) << 16) | (l(t[3]) << 8) | 255) >>> 0 : (t = o.rgba.exec(e)) ? ((l(t[1]) << 24) | (l(t[2]) << 16) | (l(t[3]) << 8) | c(t[4])) >>> 0 : (t = o.hex3.exec(e)) ? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + 'ff', 16) >>> 0 : (t = o.hex8.exec(e)) ? parseInt(t[1], 16) >>> 0 : (t = o.hex4.exec(e)) ? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + t[4] + t[4], 16) >>> 0 : (t = o.hsl.exec(e)) ? (255 | r(u(t[1]), d(t[2]), d(t[3]))) >>> 0 : (t = o.hsla.exec(e)) ? (r(u(t[1]), d(t[2]), d(t[3])) | c(t[4])) >>> 0 : null;
+    return (t = o.hex6.exec(e)) ? parseInt(t[1] + 'ff', 16) >>> 0 : f.hasOwnProperty(e) ? f[e] : (t = o.rgb.exec(e)) ? ((l(t[1]) << 24) | (l(t[2]) << 16) | (l(t[3]) << 8) | 255) >>> 0 : (t = o.rgba.exec(e)) ? ((l(t[1]) << 24) | (l(t[2]) << 16) | (l(t[3]) << 8) | c(t[4])) >>> 0 : (t = o.hex3.exec(e)) ? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + 'ff', 16) >>> 0 : (t = o.hex8.exec(e)) ? parseInt(t[1], 16) >>> 0 : (t = o.hex4.exec(e)) ? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + t[4] + t[4], 16) >>> 0 : (t = o.hsl.exec(e)) ? (255 | r(u(t[1]), d(t[2]), d(t[3]))) >>> 0 : (t = o.hsla.exec(e)) ? (r(u(t[1]), d(t[2]), d(t[3])) | c(t[4])) >>> 0 : null;
 }
 function n(e, t, n) {
     return (n < 0 && (n += 1), n > 1 && (n -= 1), n < 1 / 6) ? e + (t - e) * 6 * n : n < 0.5 ? t : n < 2 / 3 ? e + (t - e) * (2 / 3 - n) * 6 : e;
@@ -42,7 +42,7 @@ function d(e) {
     var t = parseFloat(e, 10);
     return t < 0 ? 0 : t > 100 ? 1 : t / 100;
 }
-var _ = {
+var f = {
     transparent: 0,
     aliceblue: 4042850303,
     antiquewhite: 4209760255,

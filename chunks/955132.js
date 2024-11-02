@@ -1,12 +1,12 @@
 n.d(t, {
     GC: function () {
-        return p;
+        return m;
     },
     RR: function () {
-        return h;
+        return p;
     },
     Wb: function () {
-        return f;
+        return h;
     }
 });
 var r = n(570140),
@@ -18,32 +18,32 @@ var r = n(570140),
     u = n(358085),
     c = n(548570),
     d = n(616810),
-    _ = n(755278);
-let E = new a.Z('ConnectionStore'),
-    f = new c.Z(),
-    h = new d.Z(f),
-    p = new _.Z(f);
-f.handleIdentify = () => {
+    f = n(755278);
+let _ = new a.Z('ConnectionStore'),
+    h = new c.Z(),
+    p = new d.Z(h),
+    m = new f.Z(h);
+h.handleIdentify = () => {
     let e = s.default.getToken();
-    return (E.verbose('handleIdentify called', { hasToken: null != e }), null == e)
+    return (_.verbose('handleIdentify called', { hasToken: null != e }), null == e)
         ? null
         : {
               token: e,
               properties: o.default.getSuperProperties(),
-              presence: h.getInitialState()
+              presence: p.getInitialState()
           };
 };
 (0, u.isDesktop)() &&
     i.Z.remotePowerMonitor.on('resume', () => {
-        f.expeditedHeartbeat(5000, 'power monitor resumed');
+        h.expeditedHeartbeat(5000, 'power monitor resumed');
     }),
     l.Z.addOfflineCallback(() => {
-        f.networkStateChange(15000, 'network detected offline.', !1);
+        h.networkStateChange(15000, 'network detected offline.', !1);
     }),
     l.Z.addOnlineCallback(() => {
-        f.networkStateChange(5000, 'network detected online.');
+        h.networkStateChange(5000, 'network detected online.');
     }),
-    f.on('disconnect', (e) => {
+    h.on('disconnect', (e) => {
         let { code: t, reason: n } = e;
         r.Z.dispatch({
             type: 'CONNECTION_CLOSED',
@@ -51,7 +51,7 @@ f.handleIdentify = () => {
             reason: n
         });
     }),
-    f.on('close', (e) => {
+    h.on('close', (e) => {
         let { code: t, reason: n } = e;
         r.Z.dispatch({
             type: 'CONNECTION_INTERRUPTED',

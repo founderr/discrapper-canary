@@ -1,15 +1,15 @@
 n(47120), n(315314), n(610138), n(216116), n(78328), n(815648);
 var i = n(230711),
-    a = n(12647),
-    s = n(49012),
-    r = n(358085),
-    l = n(996106),
+    r = n(12647),
+    l = n(49012),
+    a = n(358085),
+    s = n(996106),
     o = n(914946),
     c = n(452426),
     d = n(186901),
     u = n(981631),
-    _ = n(701488);
-let E = new Set([_.Fu, _.JT]);
+    h = n(701488);
+let m = new Set([h.Fu, h.JT]);
 t.Z = {
     [u.Etm.OPEN_EXTERNAL_LINK]: {
         scope: {
@@ -24,9 +24,9 @@ t.Z = {
             (0, o.bu)(t.transport);
             try {
                 let e = new URL(n);
-                r.isPlatformEmbedded && a.Z.focus(null, !0), (0, s.q)({ href: e.toString() });
+                a.isPlatformEmbedded && r.Z.focus(null, !0), (0, l.q)({ href: e.toString() });
             } catch (e) {
-                throw new l.Z({ errorCode: u.lTL.INVALID_COMMAND }, 'Invalid URL: '.concat(n));
+                throw new s.Z({ errorCode: u.lTL.INVALID_COMMAND }, 'Invalid URL: '.concat(n));
             }
         }
     },
@@ -37,7 +37,7 @@ t.Z = {
             let { socket: t } = e;
             (0, o.bu)(t.transport);
             let n = (0, o._f)(t.application);
-            if (!E.has(n)) throw new l.Z({ errorCode: u.lTL.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
+            if (!m.has(n)) throw new s.Z({ errorCode: u.lTL.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
             i.Z.open(u.oAB.CONNECTIONS);
         }
     }

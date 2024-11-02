@@ -6,8 +6,8 @@ t.d(n, {
 var l = t(903797),
     a = t(782690),
     i = t(731965),
-    s = t(174727);
-let r = (0, l.Z)((e) => ({
+    r = t(174727);
+let s = (0, l.Z)((e) => ({
     audio: null,
     file: null,
     loading: !1,
@@ -23,7 +23,7 @@ let r = (0, l.Z)((e) => ({
             null == n)
         )
             return;
-        let t = await (0, s.lj)(n);
+        let t = await (0, r.lj)(n);
         null != t &&
             (0, i.j)(() =>
                 e({
@@ -38,7 +38,7 @@ let r = (0, l.Z)((e) => ({
     }
 }));
 function u() {
-    return r(
+    return s(
         (e) => ({
             audio: e.audio,
             file: e.file,

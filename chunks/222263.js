@@ -4,21 +4,21 @@ n.d(t, {
     }
 });
 function i(e) {
-    let { userId: t, nick: n, guildId: i, avatar: a, avatarDecoration: s, banner: r, bio: l, pronouns: o, colorString: c } = e;
+    let { userId: t, nick: n, guildId: i, avatar: r, avatarDecoration: l, banner: a, bio: s, pronouns: o, colorString: c } = e;
     return {
         user_id: t,
         nick: n,
         guild_id: i,
-        avatar: a,
+        avatar: r,
         avatar_decoration_data:
-            null != s
+            null != l
                 ? {
-                      asset: s.asset,
-                      sku_id: s.skuId
+                      asset: l.asset,
+                      sku_id: l.skuId
                   }
                 : null,
-        banner: r,
-        bio: l,
+        banner: a,
+        bio: s,
         pronouns: o,
         color_string: c
     };

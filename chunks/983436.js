@@ -1,56 +1,56 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return p;
     }
 });
 var i = n(200651),
-    a = n(192379),
-    s = n(287734),
-    r = n(475468),
-    l = n(358555),
-    o = n(955415),
+    r = n(192379),
+    l = n(287734),
+    a = n(475468),
+    o = n(358555),
+    s = n(955415),
     c = n(944486),
     u = n(914010),
     d = n(626135),
-    _ = n(981631),
-    E = n(689938),
-    I = n(691784);
-function m(e) {
+    m = n(981631),
+    f = n(388032),
+    h = n(691784);
+function p(e) {
     var t;
-    let { guild: n, channel: m, messageData: f } = e,
-        T = u.Z.getGuildId(),
-        h = c.Z.getChannelId(T),
-        N = a.useCallback(() => {
+    let { guild: n, channel: p, messageData: g } = e,
+        _ = u.Z.getGuildId(),
+        C = c.Z.getChannelId(_),
+        E = r.useCallback(() => {
             var e;
-            d.default.track(_.rMx.CHANNEL_LINK_PREVIEW_JOINED, {
-                author_id: null === (e = f.author) || void 0 === e ? void 0 : e.id,
+            d.default.track(m.rMx.CHANNEL_LINK_PREVIEW_JOINED, {
+                author_id: null === (e = g.author) || void 0 === e ? void 0 : e.id,
                 link_guild_id: n.id,
-                link_channel_id: m.id,
-                link_channel_type: m.type,
-                guild_id: T,
-                channel_id: h
+                link_channel_id: p.id,
+                link_channel_type: p.type,
+                guild_id: _,
+                channel_id: C
             }),
-                (0, r.K)(n.id, m.id),
-                s.default.selectVoiceChannel(m.id);
-        }, [null === (t = f.author) || void 0 === t ? void 0 : t.id, n.id, m.id, m.type, T, h]),
-        p = (0, i.jsx)(o.Z.Channel, { channel: m });
-    return (0, i.jsx)(o.Z, {
-        children: (0, i.jsxs)(o.Z.Body, {
+                (0, a.K)(n.id, p.id),
+                l.default.selectVoiceChannel(p.id);
+        }, [null === (t = g.author) || void 0 === t ? void 0 : t.id, n.id, p.id, p.type, _, C]),
+        I = (0, i.jsx)(s.Z.Channel, { channel: p });
+    return (0, i.jsx)(s.Z, {
+        children: (0, i.jsxs)(s.Z.Body, {
             children: [
                 (0, i.jsxs)('div', {
-                    className: I.headerLine,
+                    className: h.headerLine,
                     children: [
-                        (0, i.jsx)(o.Z.Icon, { guild: n }),
-                        (0, i.jsx)(o.Z.Info, {
-                            title: p,
-                            onClick: N,
+                        (0, i.jsx)(s.Z.Icon, { guild: n }),
+                        (0, i.jsx)(s.Z.Info, {
+                            title: I,
+                            onClick: E,
                             children: (0, i.jsxs)('span', {
-                                className: I.infoTitle,
+                                className: h.infoTitle,
                                 children: [
-                                    E.Z.Messages.INVITE_BUTTON_BODY_IN_GUILD.format({ guildName: n.name }),
+                                    f.intl.format(f.t['2wimj4'], { guildName: n.name }),
                                     (0, i.jsx)('span', {
-                                        className: I.infoBadge,
-                                        children: (0, i.jsx)(l.Z, {
+                                        className: h.infoBadge,
+                                        children: (0, i.jsx)(o.Z, {
                                             guild: n,
                                             isBannerVisible: !1
                                         })
@@ -60,10 +60,10 @@ function m(e) {
                         })
                     ]
                 }),
-                (0, i.jsx)(o.Z.Button, {
-                    onClick: N,
-                    color: o.Z.Button.Colors.GREEN,
-                    children: m.isGuildStageVoice() ? E.Z.Messages.STAGE_CHANNEL_JOIN : E.Z.Messages.JOIN_VOICE
+                (0, i.jsx)(s.Z.Button, {
+                    onClick: E,
+                    color: s.Z.Button.Colors.GREEN,
+                    children: p.isGuildStageVoice() ? f.intl.string(f.t['7vb2cX']) : f.intl.string(f.t['96ANUF'])
                 })
             ]
         })

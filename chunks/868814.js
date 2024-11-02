@@ -4,27 +4,27 @@ n.d(t, {
     }
 }),
     n(653041);
-var s = n(442837),
-    a = n(977258),
-    i = n(958832),
-    r = n(592125),
-    l = n(981631);
+var i = n(442837),
+    r = n(977258),
+    l = n(958832),
+    s = n(592125),
+    a = n(981631);
 function o(e) {
-    return (0, s.Wu)([i.Z, r.Z], () => {
+    return (0, i.Wu)([l.Z, s.Z], () => {
         var t;
-        let n = (null !== (t = i.Z.getTopChannelIds(e.id)) && void 0 !== t ? t : []).map((e) => r.Z.getChannel(e)).filter((t) => null == t || t.id !== e.rulesChannelId),
-            s = [],
+        let n = (null !== (t = l.Z.getTopChannelIds(e.id)) && void 0 !== t ? t : []).map((e) => s.Z.getChannel(e)).filter((t) => null == t || t.id !== e.rulesChannelId),
+            i = [],
             o = 0;
         return (
             n.forEach((e) => {
-                if (e.type === l.d4z.GUILD_ANNOUNCEMENT) {
+                if (e.type === a.d4z.GUILD_ANNOUNCEMENT) {
                     if (o >= 2) return;
                     o++;
                 }
-                s.length < 5 && !s.includes(e) && s.push(e);
+                i.length < 5 && !i.includes(e) && i.push(e);
             }),
-            s.sort((t, n) => ((0, a.s)(e.id, n.id) ? 1 : 0) - ((0, a.s)(e.id, t.id) ? 1 : 0)),
-            s
+            i.sort((t, n) => ((0, r.s)(e.id, n.id) ? 1 : 0) - ((0, r.s)(e.id, t.id) ? 1 : 0)),
+            i
         );
     });
 }

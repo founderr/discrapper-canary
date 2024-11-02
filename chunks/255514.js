@@ -8,33 +8,33 @@ var r = n(200651),
     u = n(185625),
     c = n(273389),
     d = n(816342),
-    _ = n(15667),
-    E = n(76264),
-    f = n(822686),
-    h = n(356110),
-    p = n(730719),
-    I = n(996701),
-    m = n(320596),
-    T = n(273514),
-    S = n(995712),
-    g = n(234937),
-    A = n(473121),
-    N = n(449413),
-    R = n(266080),
-    O = n(316617),
-    v = n(15682),
+    f = n(15667),
+    _ = n(76264),
+    h = n(822686),
+    p = n(356110),
+    m = n(730719),
+    g = n(996701),
+    E = n(320596),
+    v = n(273514),
+    I = n(995712),
+    S = n(234937),
+    T = n(473121),
+    b = n(449413),
+    y = n(266080),
+    A = n(316617),
+    N = n(15682),
     C = n(189472),
-    L = n(749534),
-    D = n(521332),
-    y = n(905434),
-    b = n(196627),
-    M = n(739319),
-    P = n(842401),
-    U = n(375790),
-    w = n(981631),
-    x = n(689938),
-    G = n(133404);
-function k(e, t) {
+    R = n(749534),
+    O = n(521332),
+    D = n(905434),
+    L = n(196627),
+    x = n(739319),
+    w = n(842401),
+    M = n(375790),
+    P = n(981631),
+    k = n(388032),
+    U = n(133404);
+function G(e, t) {
     let { elements: n } = e;
     return n.find((e) => {
         let { type: n } = e;
@@ -49,18 +49,18 @@ function B(e, t) {
     });
 }
 t.Z = (e) => {
-    let { node: t, reportType: n, reportSubType: F, history: V, onSelectChild: H, onModalClose: Z, onSubmit: Y, multiSelect: j, reportId: W, textInput: K } = e,
-        z = k(t, 'checkbox'),
-        q = k(t, 'text_line_resource'),
+    let { node: t, reportType: n, reportSubType: Z, history: F, onSelectChild: V, onModalClose: j, onSubmit: H, multiSelect: Y, reportId: W, textInput: K } = e,
+        z = G(t, 'checkbox'),
+        q = G(t, 'text_line_resource'),
         Q = B(t, 'external_link'),
         X = B(t, 'free_text'),
-        $ = B(t, 'dropdown'),
-        [J, ee] = i.useState(!1),
+        J = B(t, 'dropdown'),
+        [$, ee] = i.useState(!1),
         [et, en] = i.useState(!1),
         [er, ei] = i.useState(''),
         [ea, es] = i.useState(() => ({})),
         [eo, el] = i.useState(() => ({})),
-        [eu, ec] = i.useState((0, u.VP)(X, $, z, K, j)),
+        [eu, ec] = i.useState((0, u.VP)(X, J, z, K, Y)),
         ed = function (e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
                 r = { ...eo };
@@ -69,14 +69,14 @@ t.Z = (e) => {
                 isValid: n
             }),
                 el(r),
-                ec((0, u.VP)(X, $, z, r, ea));
+                ec((0, u.VP)(X, J, z, r, ea));
         },
-        e_ = i.useMemo(
+        ef = i.useMemo(
             () => (e) => {
-                H({
+                V({
                     nodeRef: t.id,
                     destination: e,
-                    textInput: null != X || null != $ ? eo : void 0,
+                    textInput: null != X || null != J ? eo : void 0,
                     multiSelect:
                         null != z
                             ? {
@@ -86,26 +86,26 @@ t.Z = (e) => {
                             : void 0
                 });
             },
-            [t, H, z, ea, eo, X, $]
+            [t, V, z, ea, eo, X, J]
         );
     i.useEffect(() => {
-        null != j && es(j), null != K && el(K);
-    }, [j, K]);
-    let eE = (e) => {
-            if (e === w.evJ.INVALID_FORM_BODY) ei(x.Z.Messages.IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR);
-            else ei(x.Z.Messages.MOBILE_REPORTS_SUBMIT_FAILED);
+        null != Y && es(Y), null != K && el(K);
+    }, [Y, K]);
+    let e_ = (e) => {
+            if (e === P.evJ.INVALID_FORM_BODY) ei(k.intl.string(k.t.VjAAuL));
+            else ei(k.intl.string(k.t.h6D8V1));
         },
-        ef = () =>
-            Y({
+        eh = () =>
+            H({
                 nodeRef: t.id,
                 destination: ['', e.successNodeId]
             })
                 .then(() => {
-                    ei(''), e_(['', e.successNodeId]);
+                    ei(''), ef(['', e.successNodeId]);
                 })
                 .catch((e) => {
                     var t;
-                    eE(null === (t = e.body) || void 0 === t ? void 0 : t.code);
+                    e_(null === (t = e.body) || void 0 === t ? void 0 : t.code);
                 })
                 .finally(() => {
                     ee(!1);
@@ -114,115 +114,115 @@ t.Z = (e) => {
         t.is_auto_submit &&
             !et &&
             (en(!0),
-            Y({
+            H({
                 nodeRef: t.id,
                 destination: ['', t.id]
             }));
-    }, [t.is_auto_submit, et, Y, t.id]);
-    let eh = (0, o.fW)(F),
-        ep = (0, l.A)({
+    }, [t.is_auto_submit, et, H, t.id]);
+    let ep = (0, o.fW)(Z),
+        em = (0, l.A)({
             location: 'web_iar_node_view',
-            settingsUpsells: null != eh ? eh : [],
+            settingsUpsells: null != ep ? ep : [],
             channelId: 'message' === n.name ? n.record.channel_id : void 0
         });
     return (0, r.jsxs)('div', {
-        className: G.container,
+        className: U.container,
         children: [
             (0, r.jsxs)(a.ModalHeader, {
                 separator: !1,
                 direction: s.Z.Direction.VERTICAL,
-                className: G.header,
-                children: [(0, r.jsx)(b.Z, { element: k(t, 'success') }), (0, r.jsx)(A.Z, { node: t }), (0, r.jsx)(N.Z, { node: t })]
+                className: U.header,
+                children: [(0, r.jsx)(L.Z, { element: G(t, 'success') }), (0, r.jsx)(T.Z, { node: t }), (0, r.jsx)(b.Z, { node: t })]
             }),
             (0, r.jsxs)(a.ModalContent, {
-                className: G.body,
+                className: U.body,
                 children: [
-                    null != q ? (0, r.jsx)(M.Z, { element: q }) : null,
-                    null != k(t, 'breadcrumbs') && (0, r.jsx)(_.Z, { history: V }),
-                    null != k(t, 'message_preview') && ('message' === n.name || 'first_dm' === n.name) && (0, r.jsx)(O.Z, { message: n.record }),
-                    null != k(t, 'user_preview') && 'user' === n.name ? (0, r.jsx)(P.Z, { user: n.record }) : null,
+                    null != q ? (0, r.jsx)(x.Z, { element: q }) : null,
+                    null != G(t, 'breadcrumbs') && (0, r.jsx)(f.Z, { history: F }),
+                    null != G(t, 'message_preview') && ('message' === n.name || 'first_dm' === n.name) && (0, r.jsx)(A.Z, { message: n.record }),
+                    null != G(t, 'user_preview') && 'user' === n.name ? (0, r.jsx)(w.Z, { user: n.record }) : null,
                     (function (e) {
                         let { elements: t } = e;
                         return t.some((e) => {
                             let { type: t } = e;
-                            return U.O.includes(t);
+                            return M.O.includes(t);
                         });
                     })(t) &&
-                        (0, r.jsxs)(L.Z, {
+                        (0, r.jsxs)(R.Z, {
                             children: [
-                                null != k(t, 'block_users') &&
+                                null != G(t, 'block_users') &&
                                     ('message' === n.name || 'first_dm' === n.name || 'user' === n.name) &&
                                     (0, r.jsx)(d.Z, {
                                         user: 'user' === n.name ? n.record : n.record.author,
                                         reportId: W
                                     }),
-                                null != k(t, 'mute_users') &&
+                                null != G(t, 'mute_users') &&
                                     ('message' === n.name || 'first_dm' === n.name || 'user' === n.name) &&
                                     (0, r.jsx)(C.Z, {
                                         user: 'user' === n.name ? n.record : n.record.author,
                                         reportId: W
                                     }),
-                                null != k(t, 'delete_message') &&
+                                null != G(t, 'delete_message') &&
                                     'message' === n.name &&
-                                    (0, r.jsx)(f.Z, {
+                                    (0, r.jsx)(h.Z, {
                                         message: n.record,
                                         reportId: W
                                     }),
-                                null != k(t, 'leave_guild') &&
+                                null != G(t, 'leave_guild') &&
                                     'guild' === n.name &&
-                                    (0, r.jsx)(R.Z, {
+                                    (0, r.jsx)(y.Z, {
                                         guildId: n.record.id,
                                         reportId: W
                                     })
                             ]
                         }),
-                    null != k(t, 'settings_upsells') &&
+                    null != G(t, 'settings_upsells') &&
                         'message' === n.name &&
-                        null != eh &&
-                        ep &&
-                        (0, r.jsx)(D.Z, {
-                            settingsUpsells: eh,
+                        null != ep &&
+                        em &&
+                        (0, r.jsx)(O.Z, {
+                            settingsUpsells: ep,
                             channelId: n.record.channel_id,
-                            onModalClose: Z,
+                            onModalClose: j,
                             reportId: W,
                             reportType: n,
-                            reportSubType: F
+                            reportSubType: Z
                         }),
-                    null != k(t, 'channel_preview') && 'stage_channel' === n.name && (0, r.jsx)(y.Z, { stageInstance: n.record }),
-                    null != k(t, 'guild_scheduled_event_preview') && 'guild_scheduled_event' === n.name && (0, r.jsx)(g.Z, { event: n.record }),
-                    null != k(t, 'guild_directory_entry_preview') && 'guild_directory_entry' === n.name && (0, r.jsx)(T.Z, { entry: n.record }),
-                    null != k(t, 'guild_discovery_preview') && 'guild_discovery' === n.name && (0, r.jsx)(S.Z, { entry: n.record }),
+                    null != G(t, 'channel_preview') && 'stage_channel' === n.name && (0, r.jsx)(D.Z, { stageInstance: n.record }),
+                    null != G(t, 'guild_scheduled_event_preview') && 'guild_scheduled_event' === n.name && (0, r.jsx)(S.Z, { event: n.record }),
+                    null != G(t, 'guild_directory_entry_preview') && 'guild_directory_entry' === n.name && (0, r.jsx)(v.Z, { entry: n.record }),
+                    null != G(t, 'guild_discovery_preview') && 'guild_discovery' === n.name && (0, r.jsx)(I.Z, { entry: n.record }),
                     null != z &&
-                        (0, r.jsx)(v.Z, {
+                        (0, r.jsx)(N.Z, {
                             element: z,
                             onChange: (e, t) => {
                                 let n = { ...ea };
-                                e in ea ? delete n[e] : (n[e] = t), es(n), ec((0, u.VP)(X, $, z, eo, n));
+                                e in ea ? delete n[e] : (n[e] = t), es(n), ec((0, u.VP)(X, J, z, eo, n));
                             },
                             state: ea
                         }),
                     ('user_urf' === n.name || 'message_urf' === n.name) &&
-                        null != $ &&
-                        $.length > 0 &&
-                        (0, r.jsx)(h.Z, {
-                            elements: $,
+                        null != J &&
+                        J.length > 0 &&
+                        (0, r.jsx)(p.Z, {
+                            elements: J,
                             onChange: ed,
                             state: eo
                         }),
                     ('user_urf' === n.name || 'message_urf' === n.name) &&
                         null != X &&
                         X.length > 0 &&
-                        (0, r.jsx)(m.Z, {
+                        (0, r.jsx)(E.Z, {
                             elements: X,
                             onChange: ed,
                             state: eo
                         }),
-                    (0, r.jsx)(E.Z, {
+                    (0, r.jsx)(_.Z, {
                         node: t,
-                        onSelectChild: e_
+                        onSelectChild: ef
                     }),
-                    null != Q && Q.length > 0 ? (0, r.jsx)(I.Z, { elements: Q }) : null,
-                    (0, r.jsx)(p.Z, {
+                    null != Q && Q.length > 0 ? (0, r.jsx)(g.Z, { elements: Q }) : null,
+                    (0, r.jsx)(m.Z, {
                         errorMessage: er,
                         onClose: () => {
                             ei('');
@@ -232,27 +232,27 @@ t.Z = (e) => {
             }),
             (0, r.jsx)(c.Z, {
                 button: t.button,
-                submitting: J,
+                submitting: $,
                 disableNext: eu,
                 onClick: (e) => {
                     switch (e.type) {
                         case 'done':
                         case 'cancel':
-                            Z();
+                            j();
                             break;
                         case 'next':
-                            e_(['', e.target]);
+                            ef(['', e.target]);
                             break;
                         case 'submit':
-                            ee(!0), ef();
+                            ee(!0), eh();
                     }
                 },
                 onBackClicked: e.onNavigateBack,
-                canNavigateBack: V.length > 0
+                canNavigateBack: F.length > 0
             }),
             (0, r.jsx)(a.ModalCloseButton, {
-                className: G.closeButton,
-                onClick: Z
+                className: U.closeButton,
+                onClick: j
             })
         ]
     });

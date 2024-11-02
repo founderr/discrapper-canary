@@ -1,97 +1,97 @@
-E.d(_, {
+n.d(t, {
     RE: function () {
-        return i;
+        return _;
     },
     RN: function () {
-        return D;
+        return T;
     },
     po: function () {
-        return n;
+        return l;
     },
     vN: function () {
-        return N;
+        return A;
     },
     xb: function () {
-        return S;
+        return g;
     },
     zq: function () {
-        return L;
+        return I;
     }
 });
-var s,
-    n,
-    t = E(192379),
-    r = E(399606),
-    T = E(906732),
-    a = E(171368),
-    I = E(430824),
-    l = E(594174),
-    o = E(91047),
-    A = E(981631);
-let i = (e, _) => {
-    let { guildId: E, userId: s, colorRoleId: n } = e;
-    (0, a.openUserProfileModal)({
-        userId: s,
-        guildId: E,
-        sourceAnalyticsLocations: _,
-        roleId: n,
+var r,
+    l,
+    i = n(192379),
+    s = n(399606),
+    a = n(906732),
+    o = n(171368),
+    E = n(430824),
+    u = n(594174),
+    c = n(91047),
+    d = n(981631);
+let _ = (e, t) => {
+    let { guildId: n, userId: r, colorRoleId: l } = e;
+    (0, o.openUserProfileModal)({
+        userId: r,
+        guildId: n,
+        sourceAnalyticsLocations: t,
+        roleId: l,
         analyticsLocation: {
-            section: A.jXE.MEMBER_SAFETY_PAGE,
-            object: A.qAy.ACTIONED_BY_USER
+            section: d.jXE.MEMBER_SAFETY_PAGE,
+            object: d.qAy.ACTIONED_BY_USER
         }
     });
 };
-function N(e, _, E, s) {
-    let { analyticsLocations: n } = (0, T.ZP)();
-    return t.useCallback(
-        (t) => {
+function A(e, t, n, r) {
+    let { analyticsLocations: l } = (0, a.ZP)();
+    return i.useCallback(
+        (i) => {
             if (null == e) return;
-            let r = l.default.getUser(e.userId);
-            if (null != r)
-                t.stopPropagation(),
-                    (0, o.nm)(t, {
-                        user: r,
+            let s = u.default.getUser(e.userId);
+            if (null != s)
+                i.stopPropagation(),
+                    (0, c.nm)(i, {
+                        user: s,
                         guildId: e.guildId,
-                        analyticsLocations: null != E ? [E] : n,
-                        onCloseContextMenu: s,
-                        isViewOnly: _
+                        analyticsLocations: null != n ? [n] : l,
+                        onCloseContextMenu: r,
+                        isViewOnly: t
                     });
         },
-        [e, n, s, E, _]
+        [e, l, r, n, t]
     );
 }
-function D(e, _, E) {
-    let { analyticsLocations: s } = (0, T.ZP)();
-    return t.useCallback(
-        (n) => {
+function T(e, t, n) {
+    let { analyticsLocations: r } = (0, a.ZP)();
+    return i.useCallback(
+        (l) => {
             if (null == e) return;
-            let t = l.default.getUser(e.userId);
-            if (null != t)
-                n.stopPropagation(),
-                    (0, o._j)(n, {
-                        user: t,
+            let i = u.default.getUser(e.userId);
+            if (null != i)
+                l.stopPropagation(),
+                    (0, c._j)(l, {
+                        user: i,
                         guildId: e.guildId,
-                        analyticsLocations: null != _ ? [_] : s,
-                        onCloseContextMenu: E,
+                        analyticsLocations: null != t ? [t] : r,
+                        onCloseContextMenu: n,
                         showTransferOwnershipItem: !0
                     });
         },
-        [e, E, s, _]
+        [e, n, r, t]
     );
 }
-function L(e) {
-    return (0, r.e7)(
-        [I.Z],
+function I(e) {
+    return (0, s.e7)(
+        [E.Z],
         () => {
-            var _;
+            var t;
             if (null == e) return null;
-            let E = I.Z.getGuild(e.guildId);
-            return null == E || null == e.highestRoleId ? null : null !== (_ = I.Z.getRole(E.id, e.highestRoleId)) && void 0 !== _ ? _ : null;
+            let n = E.Z.getGuild(e.guildId);
+            return null == n || null == e.highestRoleId ? null : null !== (t = E.Z.getRole(n.id, e.highestRoleId)) && void 0 !== t ? t : null;
         },
         [e]
     );
 }
-function S(e, _, E) {
-    return _ ? 0 : e ? 1 : E <= 0 ? 2 : 3;
+function g(e, t, n) {
+    return t ? 0 : e ? 1 : n <= 0 ? 2 : 3;
 }
-((s = n || (n = {}))[(s.LOADING = 0)] = 'LOADING'), (s[(s.SUCCESS_STILL_INDEXING = 1)] = 'SUCCESS_STILL_INDEXING'), (s[(s.SUCCESS_EMPTY = 2)] = 'SUCCESS_EMPTY'), (s[(s.SUCCESS_FULL = 3)] = 'SUCCESS_FULL');
+((r = l || (l = {}))[(r.LOADING = 0)] = 'LOADING'), (r[(r.SUCCESS_STILL_INDEXING = 1)] = 'SUCCESS_STILL_INDEXING'), (r[(r.SUCCESS_EMPTY = 2)] = 'SUCCESS_EMPTY'), (r[(r.SUCCESS_FULL = 3)] = 'SUCCESS_FULL');

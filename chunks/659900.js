@@ -1,141 +1,141 @@
-a.d(s, {
+n.d(t, {
     Z: function () {
-        return m;
+        return Z;
     }
 }),
-    a(47120);
-var E = a(200651),
-    _ = a(192379),
-    t = a(120356),
-    n = a.n(t),
-    r = a(392711),
-    L = a.n(r),
-    l = a(866442),
-    i = a(692547),
-    M = a(481060),
-    c = a(893776),
-    T = a(37234),
-    C = a(232567),
-    A = a(820160),
-    o = a(594174),
-    d = a(259580),
-    u = a(350566),
-    R = a(837748),
-    I = a(971401),
-    S = a(306453),
-    D = a(981631),
-    N = a(689938),
-    O = a(34964);
-function m(e) {
-    let s = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        [a, t] = _.useState(''),
-        [n, r] = _.useState(null),
-        [L, l] = _.useState(null),
-        i = (0, R.Z)(e.code);
-    _.useEffect(() => {
+    n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    l = n.n(s),
+    a = n(392711),
+    c = n.n(a),
+    u = n(866442),
+    d = n(692547),
+    o = n(481060),
+    C = n(893776),
+    m = n(37234),
+    L = n(232567),
+    h = n(820160),
+    f = n(594174),
+    x = n(259580),
+    g = n(350566),
+    p = n(837748),
+    v = n(971401),
+    j = n(306453),
+    N = n(981631),
+    H = n(388032),
+    E = n(34964);
+function Z(e) {
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        [n, s] = i.useState(''),
+        [l, a] = i.useState(null),
+        [c, u] = i.useState(null),
+        d = (0, p.Z)(e.code);
+    i.useEffect(() => {
         (async function e() {
-            let e = o.default.getCurrentUser();
+            let e = f.default.getCurrentUser();
             if (null == e)
                 try {
-                    e = await (0, C.k)();
+                    e = await (0, L.k)();
                 } catch (e) {
-                    c.Z.verifySSOToken(null);
+                    C.Z.verifySSOToken(null);
                 }
-            null != e && t(i.defaultName.format({ username: e.username }));
+            null != e && s(H.intl.formatToPlainString(d.defaultName, { username: e.username }));
         })();
-    }, [i.defaultName]);
-    (0, I.Z)(e);
-    let d = (0, E.jsxs)(E.Fragment, {
+    }, [d.defaultName]);
+    (0, v.Z)(e);
+    let x = (0, r.jsxs)(r.Fragment, {
             children: [
-                s ? (0, E.jsx)(S.Z, { guildTemplate: e }) : null,
-                (0, E.jsx)('div', {
-                    className: O.icon,
-                    children: (0, E.jsx)(A.Z, {
-                        icon: n,
-                        onChange: r
+                t ? (0, r.jsx)(j.Z, { guildTemplate: e }) : null,
+                (0, r.jsx)('div', {
+                    className: E.icon,
+                    children: (0, r.jsx)(h.Z, {
+                        icon: l,
+                        onChange: a
                     })
                 }),
-                (0, E.jsx)(M.FormItem, {
-                    title: i.nameLabel,
-                    children: (0, E.jsx)(M.TextInput, {
+                (0, r.jsx)(o.FormItem, {
+                    title: d.nameLabel,
+                    children: (0, r.jsx)(o.TextInput, {
                         type: 'text',
-                        value: a,
+                        value: n,
                         maxLength: 100,
-                        onChange: t,
-                        error: null == L ? void 0 : L.name
+                        onChange: s,
+                        error: null == c ? void 0 : c.name
                     })
                 }),
-                (0, E.jsx)(M.Text, {
+                (0, r.jsx)(o.Text, {
                     variant: 'text-xs/normal',
                     color: 'text-muted',
-                    className: O.guidelines,
-                    children: i.terms.format({ guidelinesURL: D.EYA.GUIDELINES })
+                    className: E.guidelines,
+                    children: H.intl.format(d.terms, { guidelinesURL: N.EYA.GUIDELINES })
                 })
             ]
         }),
-        m = e.serializedSourceGuild.roles.filter((e) => '@everyone' !== e.name);
+        Z = e.serializedSourceGuild.roles.filter((e) => '@everyone' !== e.name);
     return {
-        form: d,
-        preview: (0, E.jsxs)(E.Fragment, {
+        form: x,
+        preview: (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, E.jsx)('div', { className: O.divider }),
-                (0, E.jsxs)(M.FormItem, {
-                    className: O.previewSection,
-                    title: N.Z.Messages.GUILD_TEMPLATE_MODAL_CHANNELS_HEADER,
+                (0, r.jsx)('div', { className: E.divider }),
+                (0, r.jsxs)(o.FormItem, {
+                    className: E.previewSection,
+                    title: H.intl.string(H.t.Zxk1OD),
                     children: [
-                        (0, E.jsx)(U, { channels: e.serializedSourceGuild.channels }),
-                        (0, E.jsxs)(M.Text, {
+                        (0, r.jsx)(M, { channels: e.serializedSourceGuild.channels }),
+                        (0, r.jsxs)(o.Text, {
                             variant: 'text-xs/normal',
                             color: 'header-secondary',
-                            className: O.protip,
+                            className: E.protip,
                             children: [
-                                (0, E.jsxs)('span', {
-                                    className: O.protipText,
-                                    children: [N.Z.Messages.FORM_LABEL_ROLES_PRO_TIP, ':']
+                                (0, r.jsxs)('span', {
+                                    className: E.protipText,
+                                    children: [H.intl.string(H.t['8tvIiI']), ':']
                                 }),
                                 ' ',
-                                N.Z.Messages.GUILD_TEMPLATE_MODAL_CHANNELS_TIP
+                                H.intl.string(H.t.de7DpK)
                             ]
                         })
                     ]
                 }),
-                m.length > 0
-                    ? (0, E.jsx)(E.Fragment, {
-                          children: (0, E.jsx)(M.FormItem, {
-                              className: O.previewSection,
-                              title: N.Z.Messages.GUILD_TEMPLATE_MODAL_ROLES_HEADER2,
-                              children: (0, E.jsx)(Z, { roles: m })
+                Z.length > 0
+                    ? (0, r.jsx)(r.Fragment, {
+                          children: (0, r.jsx)(o.FormItem, {
+                              className: E.previewSection,
+                              title: H.intl.string(H.t['RJ1e/v']),
+                              children: (0, r.jsx)(T, { roles: Z })
                           })
                       })
                     : null
             ]
         }),
         handleSubmit: () => {
-            u.Z.acceptGuildTemplate(e.code, a, n)
+            g.Z.acceptGuildTemplate(e.code, n, l)
                 .then(() => {
-                    (0, M.closeAllModals)(), (0, T.Ou)();
+                    (0, o.closeAllModals)(), (0, m.Ou)();
                 })
-                .catch((e) => l(e));
+                .catch((e) => u(e));
         }
     };
 }
-function U(e) {
-    let { channels: s } = e,
-        a = L()(s)
+function M(e) {
+    let { channels: t } = e,
+        n = c()(t)
             .sortBy((e) => (null == e.parent_id ? 10000 * Number(e.id) : 10000 * Number(e.parent_id) + e.id))
             .map((e) => {
-                let s = (function (e) {
-                    let { type: s } = e;
-                    return s === D.d4z.GUILD_VOICE ? M.VoiceNormalIcon : s === D.d4z.GUILD_CATEGORY ? d.Z : M.TextIcon;
+                let t = (function (e) {
+                    let { type: t } = e;
+                    return t === N.d4z.GUILD_VOICE ? o.VoiceNormalIcon : t === N.d4z.GUILD_CATEGORY ? x.Z : o.TextIcon;
                 })(e);
-                return (0, E.jsxs)(
+                return (0, r.jsxs)(
                     'div',
                     {
-                        className: n()(O.channel, { [O.category]: e.type === D.d4z.GUILD_CATEGORY }),
+                        className: l()(E.channel, { [E.category]: e.type === N.d4z.GUILD_CATEGORY }),
                         children: [
-                            (0, E.jsx)(s, { className: O.channelIcon }),
-                            (0, E.jsx)(M.Text, {
-                                className: O.channelText,
+                            (0, r.jsx)(t, { className: E.channelIcon }),
+                            (0, r.jsx)(o.Text, {
+                                className: E.channelText,
                                 variant: 'text-sm/normal',
                                 children: e.name
                             })
@@ -145,38 +145,38 @@ function U(e) {
                 );
             })
             .value();
-    return (0, E.jsx)('div', {
-        className: O.channelsWrapper,
-        children: a
+    return (0, r.jsx)('div', {
+        className: E.channelsWrapper,
+        children: n
     });
 }
-a(418757);
-function Z(e) {
-    let { roles: s } = e,
-        a = s
+n(418757);
+function T(e) {
+    let { roles: t } = e,
+        n = t
             .slice()
             .reverse()
-            .map((e) => (0, E.jsx)(g, { role: e }, e.id));
-    return (0, E.jsx)('ul', {
-        className: O.rolesWrapper,
-        children: a
+            .map((e) => (0, r.jsx)(b, { role: e }, e.id));
+    return (0, r.jsx)('ul', {
+        className: E.rolesWrapper,
+        children: n
     });
 }
-function g(e) {
-    var s;
-    let { role: a } = e,
-        _ = null == a.color ? i.Z.unsafe_rawColors.PRIMARY_300.css : (0, l.Rf)(a.color);
-    return (0, E.jsxs)('li', {
-        className: O.role,
-        style: { borderColor: null !== (s = (0, l.wK)(_, 0.6)) && void 0 !== s ? s : void 0 },
+function b(e) {
+    var t;
+    let { role: n } = e,
+        i = null == n.color ? d.Z.unsafe_rawColors.PRIMARY_300.css : (0, u.Rf)(n.color);
+    return (0, r.jsxs)('li', {
+        className: E.role,
+        style: { borderColor: null !== (t = (0, u.wK)(i, 0.6)) && void 0 !== t ? t : void 0 },
         children: [
-            (0, E.jsx)(M.RoleCircle, {
-                className: O.roleCircle,
-                color: _
+            (0, r.jsx)(o.RoleCircle, {
+                className: E.roleCircle,
+                color: i
             }),
-            (0, E.jsx)('div', {
-                className: O.roleName,
-                children: a.name
+            (0, r.jsx)('div', {
+                className: E.roleName,
+                children: n.name
             })
         ]
     });

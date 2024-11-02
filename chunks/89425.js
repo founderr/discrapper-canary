@@ -14,26 +14,26 @@ var r = n(430198),
 class c extends Error {}
 async function d(e) {
     let { channelId: t, timeoutMs: n = 10000, bypassChangeModal: d = !1 } = e,
-        _ = s.Z.getChannel(t);
+        f = s.Z.getChannel(t);
     if (
-        null == _ ||
+        null == f ||
         !(await i.Z.handleVoiceConnect({
             bypassGuildIdCheck: !0,
             bypassChangeModal: d,
-            channel: _,
+            channel: f,
             connected: u.Z.isInChannel(t),
             needSubscriptionToAccess: (0, a.$)(t, s.Z, r.Z, o.Z).needSubscriptionToAccess
         }))
     )
         return !1;
-    let E = new Promise((e, r) => {
+    let _ = new Promise((e, r) => {
         let i = setTimeout(() => {
             r(new c('Joining voice channel has timed out.'));
         }, n);
         l.Z.addConditionalChangeListener(() => l.Z.getVoiceChannelId() !== t || (clearTimeout(i), e(), !1));
     });
     try {
-        await E;
+        await _;
     } catch (e) {
         if (e instanceof c) return !1;
         throw e;

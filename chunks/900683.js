@@ -1,47 +1,47 @@
-s.d(n, {
+t.d(e, {
     Z: function () {
-        return I;
+        return d;
     },
     e: function () {
         return u;
     }
 });
-var i = s(200651);
-s(192379);
-var t = s(120356),
-    a = s.n(t),
-    l = s(481060),
-    r = s(689938),
-    c = s(378145),
-    o = s(531599);
+var i = t(200651);
+t(192379);
+var l = t(120356),
+    r = t.n(l),
+    a = t(481060),
+    s = t(388032),
+    o = t(378145),
+    c = t(531599);
 function u() {
     return (0, i.jsxs)('div', {
-        className: a()(c.upsellFooter, c.reverseTrialUpsellContainer),
+        className: r()(o.upsellFooter, o.reverseTrialUpsellContainer),
         children: [
             (0, i.jsx)('img', {
-                src: o.Z,
+                src: c.Z,
                 alt: 'reverse trial unlock',
-                className: c.unlockIcon
+                className: o.unlockIcon
             }),
-            (0, i.jsx)(l.Text, {
+            (0, i.jsx)(a.Text, {
                 variant: 'text-sm/medium',
-                className: c.upsellText,
-                children: r.Z.Messages.PREMIUM_REVERSE_TRIAL_SERVER_BOOST.format()
+                className: o.upsellText,
+                children: s.intl.format(s.t.f5VHKi, {})
             })
         ]
     });
 }
-function I(e) {
-    let { text: n, color: s } = e;
+function d(n) {
+    let { text: e, color: t } = n;
     return (0, i.jsxs)('div', {
-        className: c.upsellFooter,
+        className: o.upsellFooter,
         children: [
-            (0, i.jsx)(l.NitroWheelIcon, {
+            (0, i.jsx)(a.NitroWheelIcon, {
                 size: 'md',
-                className: c.upsellFooterIcon,
-                color: s
+                className: o.upsellFooterIcon,
+                color: t
             }),
-            (0, i.jsx)('div', { children: n })
+            (0, i.jsx)('div', { children: e })
         ]
     });
 }

@@ -23,9 +23,9 @@ let o = () => ({
     u = new Set(),
     c = new Set(),
     d = 0,
-    _ = !1,
-    E = !1;
-function f() {
+    f = !1,
+    _ = !1;
+function h() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     if (!e && Date.now() < d) return;
     l.itemImpressions.length > 1000 && (l.itemImpressions = []);
@@ -37,15 +37,15 @@ function f() {
         else break;
     }
     t > 0 && (l.itemImpressions = l.itemImpressions.slice(t));
-    let r = E ? 1000 : 57600000,
+    let r = _ ? 1000 : 57600000,
         i = new Set(),
         a = new Set(),
         s = Date.now() - r,
         o = null;
     for (let [e, t] of l.itemImpressions) t < s ? i.add(e) : null == o && (o = t + r), a.add(e);
-    (u = i), (c = a), (d = null != o ? o : 1 / 0), (_ = !0);
+    (u = i), (c = a), (d = null != o ? o : 1 / 0), (f = !0);
 }
-class h extends (r = i.ZP.PersistedStore) {
+class p extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         l = {
             ...l,
@@ -56,10 +56,10 @@ class h extends (r = i.ZP.PersistedStore) {
         return l;
     }
     getImpressionCappedItemIds() {
-        return f(), u;
+        return h(), u;
     }
     getDebugFastImpressionCappingEnabled() {
-        return E;
+        return _;
     }
     get hidden() {
         return l.hidden;
@@ -68,25 +68,25 @@ class h extends (r = i.ZP.PersistedStore) {
         l = o();
     }
 }
-s(h, 'displayName', 'ContentInventoryPersistedStore'),
-    s(h, 'persistKey', 'ContentInventoryPersistedStore'),
-    (t.Z = new h(a.Z, {
+s(p, 'displayName', 'ContentInventoryPersistedStore'),
+    s(p, 'persistKey', 'ContentInventoryPersistedStore'),
+    (t.Z = new p(a.Z, {
         CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS: function (e) {
             let { itemIds: t } = e;
-            !_ && f();
+            !f && h();
             let n = Date.now(),
                 r = !1;
             for (let e of t) !c.has(e) && (l.itemImpressions.push([e, n]), (r = !0));
-            return f(r), r;
+            return h(r), r;
         },
         CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS: function () {
-            (l.itemImpressions = []), f(!0);
+            (l.itemImpressions = []), h(!0);
         },
         CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS: function () {
             return console.log('Item impressions:', l.itemImpressions), !1;
         },
         CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING: function () {
-            E = !E;
+            _ = !_;
         },
         CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: function () {
             l.hidden = !l.hidden;

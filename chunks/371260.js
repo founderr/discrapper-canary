@@ -1,8 +1,8 @@
 var i = n(200651),
-    a = n(192379),
-    s = n(100621),
-    r = n(442837),
-    l = n(481060),
+    r = n(192379),
+    l = n(100621),
+    a = n(442837),
+    s = n(481060),
     o = n(607070),
     c = n(686907);
 let d = {
@@ -12,16 +12,16 @@ let d = {
     clamp: !0
 };
 t.Z = function (e) {
-    let { animate: t, state: n, cleanUp: u, children: _ } = e,
-        E = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
-        h = a.useMemo(() => {
-            var e, i, a;
+    let { animate: t, state: n, cleanUp: u, children: h } = e,
+        m = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
+        p = r.useMemo(() => {
+            var e, i, r;
             return (
-                (e = !1 !== t && !E),
+                (e = !1 !== t && !m),
                 (i = n),
-                (a = u),
+                (r = u),
                 e
-                    ? i === l.TransitionStates.ENTERED || i === l.TransitionStates.MOUNTED
+                    ? i === s.TransitionStates.ENTERED || i === s.TransitionStates.MOUNTED
                         ? {
                               from: { opacity: 0 },
                               to: { opacity: 1 },
@@ -32,16 +32,16 @@ t.Z = function (e) {
                               to: { opacity: 0 },
                               config: d,
                               onRest: () => {
-                                  a();
+                                  r();
                               }
                           }
                     : { opacity: 1 }
             );
-        }, [t, u, E, n]),
-        m = (0, l.useSpring)(h);
-    return (0, i.jsx)(s.animated.div, {
-        style: m,
+        }, [t, u, m, n]),
+        g = (0, s.useSpring)(p);
+    return (0, i.jsx)(l.animated.div, {
+        style: g,
         className: c.transitionItem,
-        children: _
+        children: h
     });
 };

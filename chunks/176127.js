@@ -5,27 +5,27 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(120356),
-    s = n.n(a),
-    r = n(442837),
-    l = n(435064),
-    o = n(735807);
+var r = n(120356),
+    l = n.n(r),
+    a = n(442837),
+    o = n(435064),
+    s = n(735807);
 function c() {
-    let e = (0, r.Wu)([l.Z], () => {
+    let e = (0, a.Wu)([o.Z], () => {
         var e;
-        let t = null === (e = l.Z.getLastClipsSession()) || void 0 === e ? void 0 : e.newClipIds;
+        let t = null === (e = o.Z.getLastClipsSession()) || void 0 === e ? void 0 : e.newClipIds;
         return null == t
             ? []
-            : l.Z.getClips()
+            : o.Z.getClips()
                   .slice(0, 4)
                   .filter((e) => t.includes(e.id));
     });
     return (0, i.jsx)('div', {
-        className: s()(o.thumbnailStack, {
-            [o['height-1']]: 1 === e.length,
-            [o['height-2']]: 2 === e.length,
-            [o['height-3']]: 3 === e.length,
-            [o['height-max']]: e.length >= 4
+        className: l()(s.thumbnailStack, {
+            [s['height-1']]: 1 === e.length,
+            [s['height-2']]: 2 === e.length,
+            [s['height-3']]: 3 === e.length,
+            [s['height-max']]: e.length >= 4
         }),
         children: Array.from({
             ...e,
@@ -37,7 +37,7 @@ function c() {
                           'img',
                           {
                               alt: '',
-                              className: o.thumbnail,
+                              className: s.thumbnail,
                               src: e.thumbnail
                           },
                           e.id

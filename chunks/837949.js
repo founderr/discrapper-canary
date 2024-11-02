@@ -1,29 +1,29 @@
 t.d(n, {
     Z: function () {
-        return E;
+        return g;
     }
 });
-var a = t(200651);
+var i = t(200651);
 t(192379);
-var i = t(442837),
-    l = t(481060),
-    s = t(430824),
+var l = t(442837),
+    a = t(481060),
+    r = t(430824),
     o = t(594174),
-    r = t(724213),
-    u = t(398758),
-    d = t(981631),
-    c = t(689938);
-function E(e) {
-    let n = (0, u.DM)(e),
-        t = (0, i.e7)([s.Z], () => s.Z.getGuild(e)),
-        E = (0, i.e7)([o.default], () => o.default.getCurrentUser());
-    return null != E && null != t && (t.hasFeature(d.oNc.COMMUNITY) || E.isStaff())
-        ? (0, a.jsx)(l.MenuCheckboxItem, {
+    u = t(724213),
+    d = t(398758),
+    c = t(981631),
+    s = t(388032);
+function g(e) {
+    let n = (0, d.DM)(e),
+        t = (0, l.e7)([r.Z], () => r.Z.getGuild(e)),
+        g = (0, l.e7)([o.default], () => o.default.getCurrentUser());
+    return null != g && null != t && (t.hasFeature(c.oNc.COMMUNITY) || g.isStaff())
+        ? (0, i.jsx)(a.MenuCheckboxItem, {
               id: 'opt-in',
-              label: c.Z.Messages.GUILD_CHANNEL_OPT_IN,
+              label: s.intl.string(s.t.FB2ZZW),
               checked: !n,
               action: () => {
-                  (0, r.kH)(e);
+                  (0, u.kH)(e);
               }
           })
         : null;

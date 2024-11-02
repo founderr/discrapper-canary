@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return C;
     }
 }),
     n(653041);
 var i = n(192379),
-    s = n(846519),
-    a = n(692547),
-    l = n(481060),
-    r = n(220082),
+    l = n(846519),
+    r = n(692547),
+    a = n(481060),
+    s = n(220082),
     o = n(979651),
     c = n(125268),
     u = n(673125),
@@ -16,44 +16,44 @@ var i = n(192379),
     h = n(88315),
     m = n(262433),
     p = n(400321),
-    _ = n(813900);
-let f = 1000 / 60;
-function E(e, t, n, E) {
-    let g = (0, l.useToken)(a.Z.unsafe_rawColors.BRAND_500).hex(),
-        C = (0, l.useToken)(a.Z.unsafe_rawColors.BLACK_500).hex(),
-        I = (0, l.useToken)(a.Z.unsafe_rawColors.WHITE_500).hex(),
-        T = i.useRef({}),
-        x = i.useRef(new s.Xp()),
-        S = i.useCallback(
+    f = n(813900);
+let g = 1000 / 60;
+function C(e, t, n, C) {
+    let x = (0, a.useToken)(r.Z.unsafe_rawColors.BRAND_500).hex(),
+        v = (0, a.useToken)(r.Z.unsafe_rawColors.BLACK_500).hex(),
+        _ = (0, a.useToken)(r.Z.unsafe_rawColors.WHITE_500).hex(),
+        I = i.useRef({}),
+        E = i.useRef(new l.Xp()),
+        b = i.useCallback(
             (t) => {
                 let n = u.Z.getDrawables(t);
                 (0, h.UN)(e),
                     !(function (e) {
-                        let { canvasRef: t, drawables: n, fallbackColor: i, linesDrawnAt: s, streamerId: a, channelId: l, outlineColorDark: r, outlineColorLight: u } = e;
+                        let { canvasRef: t, drawables: n, fallbackColor: i, linesDrawnAt: l, streamerId: r, channelId: a, outlineColorDark: s, outlineColorLight: u } = e;
                         if (0 === n.length) return;
                         let h = t.current;
                         if (null == h) return;
-                        let _ = h.getContext('2d');
-                        if (null == _) return;
-                        let { width: f, height: E } = h.getBoundingClientRect(),
-                            g = [];
+                        let f = h.getContext('2d');
+                        if (null == f) return;
+                        let { width: g, height: C } = h.getBoundingClientRect(),
+                            x = [];
                         n.forEach((e) => {
-                            if (!(null != o.Z.getVoiceStateForChannel(l, e.userId))) {
-                                g.push(e);
+                            if (!(null != o.Z.getVoiceStateForChannel(a, e.userId))) {
+                                x.push(e);
                                 return;
                             }
                             !(function (e) {
-                                let { drawable: t, context: n, canvasWidth: i, canvasHeight: s, fallbackColor: a, outlineColorDark: l, outlineColorLight: r, linesDrawnAt: o, streamerId: c, deadDrawables: u } = e;
+                                let { drawable: t, context: n, canvasWidth: i, canvasHeight: l, fallbackColor: r, outlineColorDark: a, outlineColorLight: s, linesDrawnAt: o, streamerId: c, deadDrawables: u } = e;
                                 switch (t.type) {
                                     case d.W.LINE:
                                         return (0, p.Z)({
                                             line: t,
                                             context: n,
                                             canvasWidth: i,
-                                            canvasHeight: s,
-                                            fallbackColor: a,
-                                            outlineColorDark: l,
-                                            outlineColorLight: r,
+                                            canvasHeight: l,
+                                            fallbackColor: r,
+                                            outlineColorDark: a,
+                                            outlineColorLight: s,
                                             linesDrawnAt: o,
                                             deadDrawables: u
                                         });
@@ -62,64 +62,64 @@ function E(e, t, n, E) {
                                             emojiHose: t,
                                             context: n,
                                             canvasWidth: i,
-                                            canvasHeight: s,
-                                            fallbackColor: a,
-                                            outlineColorDark: l,
-                                            outlineColorLight: r,
+                                            canvasHeight: l,
+                                            fallbackColor: r,
+                                            outlineColorDark: a,
+                                            outlineColorLight: s,
                                             streamerId: c,
                                             deadDrawables: u
                                         });
                                 }
                             })({
                                 drawable: e,
-                                context: _,
-                                canvasWidth: f,
-                                canvasHeight: E,
+                                context: f,
+                                canvasWidth: g,
+                                canvasHeight: C,
                                 fallbackColor: i,
-                                outlineColorDark: r,
+                                outlineColorDark: s,
                                 outlineColorLight: u,
-                                linesDrawnAt: s,
-                                deadDrawables: g,
-                                streamerId: a
+                                linesDrawnAt: l,
+                                deadDrawables: x,
+                                streamerId: r
                             });
                         }),
-                            g.length > 0 && (0, c.fW)(g, a);
+                            x.length > 0 && (0, c.fW)(x, r);
                     })({
                         canvasRef: e,
                         drawables: n,
-                        fallbackColor: g,
-                        linesDrawnAt: T,
+                        fallbackColor: x,
+                        linesDrawnAt: I,
                         streamerId: t,
-                        outlineColorDark: C,
-                        outlineColorLight: I,
-                        channelId: E
+                        outlineColorDark: v,
+                        outlineColorLight: _,
+                        channelId: C
                     });
             },
-            [e, E, g, C, I]
+            [e, C, x, v, _]
         );
     i.useEffect(() => {
         let t = new ResizeObserver(() => {
             let t = e.current;
             if (null == t) return;
-            let { width: i, height: s } = t.getBoundingClientRect();
-            (t.width = i * window.devicePixelRatio), (t.height = s * window.devicePixelRatio), S(n);
+            let { width: i, height: l } = t.getBoundingClientRect();
+            (t.width = i * window.devicePixelRatio), (t.height = l * window.devicePixelRatio), b(n);
         });
         return null != e.current && t.observe(e.current), () => t.disconnect();
-    }, [e, S, n]);
-    let v = i.useCallback(() => {
+    }, [e, b, n]);
+    let S = i.useCallback(() => {
         let t = u.Z.getDrawables(n),
             i = m.U.getState().particles,
-            s = t.length > 0 || Object.keys(i).length > 0;
-        s && null == x.current._ref && (null == x.current._ref ? (S(n), x.current.start(f, () => S(n))) : !s && null != x.current._ref && (x.current.stop(), (0, h.UN)(e)));
-    }, [e, S, n]);
+            l = t.length > 0 || Object.keys(i).length > 0;
+        l && null == E.current._ref && (null == E.current._ref ? (b(n), E.current.start(g, () => b(n))) : !l && null != E.current._ref && (E.current.stop(), (0, h.UN)(e)));
+    }, [e, b, n]);
     i.useEffect(() => {
-        let e = x.current;
+        let e = E.current;
         return (
-            u.Z.addChangeListener(v),
-            v(),
-            (0, r.vM)(t.getAvatarURL(null, _.Ks)),
+            u.Z.addChangeListener(S),
+            S(),
+            (0, s.vM)(t.getAvatarURL(null, f.Ks)),
             () => {
-                u.Z.removeChangeListener(v), e.stop();
+                u.Z.removeChangeListener(S), e.stop();
             }
         );
     });

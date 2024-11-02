@@ -16,25 +16,25 @@ function l(e, t, n) {
 }
 function u(e) {
     var t, n, l;
-    let { userId: u, checkSoundSharing: c = !1, checkSoundboardSounds: d = !0, checkIsMuted: _ = !1, context: E } = e,
-        f = (0, r.e7)([o.Z, a.Z], () => {
+    let { userId: u, checkSoundSharing: c = !1, checkSoundboardSounds: d = !0, checkIsMuted: f = !1, context: _ } = e,
+        h = (0, r.e7)([o.Z, a.Z], () => {
             let e = a.Z.getVoiceChannelId();
             return null != e ? o.Z.getVoiceStateForChannel(e, u) : null;
         }),
-        h = _ && ((null == f ? void 0 : f.mute) || (null == f ? void 0 : f.selfMute)),
-        p = (0, r.e7)([s.Z], () => s.Z.isSpeaking(u, E) && !h),
-        I = (0, r.e7)([s.Z], () => s.Z.isSoundSharing(u) && c),
-        m = (0, r.e7)([i.Z], () => i.Z.isUserPlayingSounds(u) && d);
-    return (t = p), (n = m), (l = I), t || n || l;
+        p = f && ((null == h ? void 0 : h.mute) || (null == h ? void 0 : h.selfMute)),
+        m = (0, r.e7)([s.Z], () => s.Z.isSpeaking(u, _) && !p),
+        g = (0, r.e7)([s.Z], () => s.Z.isSoundSharing(u) && c),
+        E = (0, r.e7)([i.Z], () => i.Z.isUserPlayingSounds(u) && d);
+    return (t = m), (n = E), (l = g), t || n || l;
 }
 function c(e) {
     var t, n, r;
-    let { userId: l, checkSoundSharing: u = !1, checkSoundboardSounds: c = !0, checkIsMuted: d = !1, context: _ } = e,
-        E = a.Z.getVoiceChannelId(),
-        f = null != E ? o.Z.getVoiceStateForChannel(E, l) : null,
-        h = d && ((null == f ? void 0 : f.mute) || (null == f ? void 0 : f.selfMute)),
-        p = s.Z.isSpeaking(l, _) && !h,
-        I = s.Z.isSoundSharing(l) && u,
-        m = i.Z.isUserPlayingSounds(l) && c;
-    return (t = p), (n = m), (r = I), t || n || r;
+    let { userId: l, checkSoundSharing: u = !1, checkSoundboardSounds: c = !0, checkIsMuted: d = !1, context: f } = e,
+        _ = a.Z.getVoiceChannelId(),
+        h = null != _ ? o.Z.getVoiceStateForChannel(_, l) : null,
+        p = d && ((null == h ? void 0 : h.mute) || (null == h ? void 0 : h.selfMute)),
+        m = s.Z.isSpeaking(l, f) && !p,
+        g = s.Z.isSoundSharing(l) && u,
+        E = i.Z.isUserPlayingSounds(l) && c;
+    return (t = m), (n = E), (r = g), t || n || r;
 }

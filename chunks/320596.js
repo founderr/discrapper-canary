@@ -4,46 +4,46 @@ var r = n(200651),
     a = n(481060),
     s = n(454585),
     o = n(273744),
-    l = n(689938),
+    l = n(388032),
     u = n(650626),
     c = n(113207);
 let d = (e) => {
     let {
-            data: { title: t, subtitle: n, placeholder: d, rows: _, character_limit: E, pattern: f },
-            onChange: h,
-            initialText: p,
-            isRequired: I
+            data: { title: t, subtitle: n, placeholder: d, rows: f, character_limit: _, pattern: h },
+            onChange: p,
+            initialText: m,
+            isRequired: g
         } = e,
-        m = i.useRef(
+        E = i.useRef(
             s.Z.reactParserFor({
                 ...s.Z.defaultRules,
                 link: o.s
             })
         ),
-        [T, S] = i.useState(''),
-        [g, A] = i.useState('');
+        [v, I] = i.useState(''),
+        [S, T] = i.useState('');
     i.useEffect(() => {
         var e;
-        S(null !== (e = null == p ? void 0 : p.value) && void 0 !== e ? e : '');
-    }, [p]);
-    let N = i.useCallback(
+        I(null !== (e = null == m ? void 0 : m.value) && void 0 !== e ? e : '');
+    }, [m]);
+    let b = i.useCallback(
         (e) => {
-            let t = null != f ? new RegExp(f) : null;
+            let t = null != h ? new RegExp(h) : null;
             null != t && null == t.exec(e)
-                ? (A(l.Z.Messages.IN_APP_REPORTING_FREE_TEXT_INPUT_ERROR),
-                  h({
+                ? (T(l.intl.string(l.t['24xrGR'])),
+                  p({
                       value: e,
                       isValid: !1
                   }))
                 : null != e &&
-                  (A(''),
-                  S(e),
-                  h({
+                  (T(''),
+                  I(e),
+                  p({
                       value: e,
                       isValid: !0
                   }));
         },
-        [h, f]
+        [p, h]
     );
     return (0, r.jsxs)('div', {
         className: c.marginBottom8,
@@ -55,7 +55,7 @@ let d = (e) => {
                         variant: 'text-sm/bold',
                         children: [
                             t,
-                            I &&
+                            g &&
                                 (0, r.jsx)('span', {
                                     className: u.required,
                                     children: '*'
@@ -64,11 +64,11 @@ let d = (e) => {
                     })
                 }),
             (0, r.jsx)(a.TextArea, {
-                maxLength: E,
-                onChange: N,
-                value: T,
-                error: g,
-                rows: _,
+                maxLength: _,
+                onChange: b,
+                value: v,
+                error: S,
+                rows: f,
                 placeholder: d,
                 autoFocus: !0
             }),
@@ -76,7 +76,7 @@ let d = (e) => {
                 (0, r.jsx)('div', {
                     children: (0, r.jsx)(a.Text, {
                         variant: 'text-sm/normal',
-                        children: m.current(n)
+                        children: E.current(n)
                     })
                 })
         ]

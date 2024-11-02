@@ -3,37 +3,37 @@ n.d(t, {
         return Q;
     },
     Cb: function () {
-        return F;
+        return Z;
     },
     Ec: function () {
-        return U;
+        return M;
     },
     Es: function () {
         return W;
     },
     Ev: function () {
-        return N;
+        return b;
     },
     Fr: function () {
-        return A;
+        return T;
     },
     Fu: function () {
-        return j;
+        return Y;
     },
     GR: function () {
-        return y;
+        return D;
     },
     Gv: function () {
         return B;
     },
     IF: function () {
-        return G;
+        return U;
     },
     In: function () {
-        return Z;
+        return j;
     },
     JT: function () {
-        return Y;
+        return H;
     },
     K8: function () {
         return r;
@@ -48,7 +48,7 @@ n.d(t, {
         return q;
     },
     PD: function () {
-        return b;
+        return L;
     },
     Pc: function () {
         return X;
@@ -63,49 +63,49 @@ n.d(t, {
         return i;
     },
     Zc: function () {
-        return k;
+        return G;
     },
     ag: function () {
         return l;
     },
     am: function () {
-        return P;
+        return w;
     },
     cE: function () {
         return c;
     },
     cc: function () {
-        return g;
+        return S;
     },
     eB: function () {
         return z;
     },
     f9: function () {
-        return H;
-    },
-    fE: function () {
-        return x;
-    },
-    jT: function () {
-        return M;
-    },
-    js: function () {
-        return L;
-    },
-    l4: function () {
-        return w;
-    },
-    mI: function () {
-        return D;
-    },
-    qG: function () {
         return V;
     },
-    qm: function () {
+    fE: function () {
+        return k;
+    },
+    jT: function () {
+        return x;
+    },
+    js: function () {
         return R;
     },
+    l4: function () {
+        return P;
+    },
+    mI: function () {
+        return O;
+    },
+    qG: function () {
+        return F;
+    },
+    qm: function () {
+        return y;
+    },
     um: function () {
-        return $;
+        return J;
     },
     wP: function () {
         return et;
@@ -127,54 +127,54 @@ var r,
     u,
     c,
     d,
-    _,
-    E,
     f,
+    _,
     h,
     p,
-    I,
     m,
-    T = n(911969),
-    S = n(981631);
-let g = 160,
-    A = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
-    N = '438122941302046720',
-    R = '773336526917861400',
-    O = '880218832743055411',
-    v = '1050941315912835122',
+    g,
+    E,
+    v = n(911969),
+    I = n(981631);
+let S = 160,
+    T = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
+    b = '438122941302046720',
+    y = '773336526917861400',
+    A = '880218832743055411',
+    N = '1050941315912835122',
     C = '1070087967294631976',
-    L = '1007373802981822582',
-    D = '1039835161136746497',
-    y = '852509694341283871',
-    b = '903769130790969345',
-    M = '880218394199220334',
-    P = '1078728822972764312',
-    U = '947957217959759964',
-    w = '832013003968348200',
-    x = '832012774040141894',
-    G = '832025144389533716',
-    k = '755827207812677713',
+    R = '1007373802981822582',
+    O = '1039835161136746497',
+    D = '852509694341283871',
+    L = '903769130790969345',
+    x = '880218394199220334',
+    w = '1078728822972764312',
+    M = '947957217959759964',
+    P = '832013003968348200',
+    k = '832012774040141894',
+    U = '832025144389533716',
+    G = '755827207812677713',
     B = '879863686565621790',
-    F = '902271654783242291',
-    V = '1037680572660727838',
-    H = '945737671223947305',
-    Z = '1011683823555199066',
-    Y = '1234546995360694434',
-    j = '1214629548377768066',
+    Z = '902271654783242291',
+    F = '1037680572660727838',
+    V = '945737671223947305',
+    j = '1011683823555199066',
+    H = '1234546995360694434',
+    Y = '1214629548377768066',
     W = 'https://discord.sjc1.qualtrics.com/jfe/form/SV_6SvWAOxlcSRWiEu',
     K = {
         SMALL: 64,
         LARGE: 160
     },
     z = ['in_development', 'activities_team', 'employee_release'],
-    q = [V, '235088799074484224', L, '1067803140071620628', '1194351737264406548', '1245041113882955918', '1245040907732910201', '1245040436427489471', '1208090049871351890', '1235205910863806484', '1227719606223765687'];
-((d = r || (r = {})).ADS = 'ADS'), (d.FAILED_LOAD = 'FAILED_LOAD'), (d.LAGGING = 'LAGGING'), (d.CONFUSING = 'CONFUSING'), (d.NOT_FUN = 'NOT_FUN'), (d.OTHER = 'OTHER'), ((_ = i || (i = {}))[(_.PLAY = 0)] = 'PLAY'), (_[(_.SPECTATE = 1)] = 'SPECTATE'), ((E = a || (a = {})).DESKTOP = 'desktop'), (E.MOBILE = 'mobile'), ((f = s || (s = {})).BETRAYAL_MARKETING_TOOLTIP = 'BETRAYAL_MARKETING_TOOLTIP'), (f.FISHINGTON_MARKETING_TOOLTIP = 'FISHINGTON_MARKETING_TOOLTIP'), (f.POKER_MARKETING_TOOLTIP = 'POKER_MARKETING_TOOLTIP'), (f.YOUTUBE_MARKETING_TOOLTIP = 'YOUTUBE_MARKETING_TOOLTIP'), ((h = o || (o = {}))[(h.UNLOCKED = 1)] = 'UNLOCKED'), (h[(h.PORTRAIT = 2)] = 'PORTRAIT'), (h[(h.LANDSCAPE = 3)] = 'LANDSCAPE'), ((p = l || (l = {}))[(p.DIRECTORY = 0)] = 'DIRECTORY'), (p[(p.SELECT_CHANNEL = 1)] = 'SELECT_CHANNEL'), (p[(p.DETAIL_PAGE = 2)] = 'DETAIL_PAGE');
+    q = [F, '235088799074484224', R, '1067803140071620628', '1194351737264406548', '1245041113882955918', '1245040907732910201', '1245040436427489471', '1208090049871351890', '1235205910863806484', '1227719606223765687'];
+((d = r || (r = {})).ADS = 'ADS'), (d.FAILED_LOAD = 'FAILED_LOAD'), (d.LAGGING = 'LAGGING'), (d.CONFUSING = 'CONFUSING'), (d.NOT_FUN = 'NOT_FUN'), (d.OTHER = 'OTHER'), ((f = i || (i = {}))[(f.PLAY = 0)] = 'PLAY'), (f[(f.SPECTATE = 1)] = 'SPECTATE'), ((_ = a || (a = {})).DESKTOP = 'desktop'), (_.MOBILE = 'mobile'), ((h = s || (s = {})).BETRAYAL_MARKETING_TOOLTIP = 'BETRAYAL_MARKETING_TOOLTIP'), (h.FISHINGTON_MARKETING_TOOLTIP = 'FISHINGTON_MARKETING_TOOLTIP'), (h.POKER_MARKETING_TOOLTIP = 'POKER_MARKETING_TOOLTIP'), (h.YOUTUBE_MARKETING_TOOLTIP = 'YOUTUBE_MARKETING_TOOLTIP'), ((p = o || (o = {}))[(p.UNLOCKED = 1)] = 'UNLOCKED'), (p[(p.PORTRAIT = 2)] = 'PORTRAIT'), (p[(p.LANDSCAPE = 3)] = 'LANDSCAPE'), ((m = l || (l = {}))[(m.DIRECTORY = 0)] = 'DIRECTORY'), (m[(m.SELECT_CHANNEL = 1)] = 'SELECT_CHANNEL'), (m[(m.DETAIL_PAGE = 2)] = 'DETAIL_PAGE');
 let Q = 'activity-shelf',
-    X = new Set(['755600276941176913', O, v, M]),
-    $ = new Set([O, v, M]);
-((I = u || (u = {}))[(I.PORTRAIT = 0)] = 'PORTRAIT'), (I[(I.LANDSCAPE = 1)] = 'LANDSCAPE'), ((m = c || (c = {}))[(m.FOCUSED = 0)] = 'FOCUSED'), (m[(m.PIP = 1)] = 'PIP'), (m[(m.GRID = 2)] = 'GRID');
-let J = {
-        label_type: T.ww.NONE,
+    X = new Set(['755600276941176913', A, N, x]),
+    J = new Set([A, N, x]);
+((g = u || (u = {}))[(g.PORTRAIT = 0)] = 'PORTRAIT'), (g[(g.LANDSCAPE = 1)] = 'LANDSCAPE'), ((E = c || (c = {}))[(E.FOCUSED = 0)] = 'FOCUSED'), (E[(E.PIP = 1)] = 'PIP'), (E[(E.GRID = 2)] = 'GRID');
+let $ = {
+        label_type: v.ww.NONE,
         release_phase: '',
         label_until: null
     },
@@ -184,14 +184,14 @@ let J = {
         legacy_responsive_aspect_ratio: !1,
         default_orientation_lock_state: 1,
         tablet_default_orientation_lock_state: 1,
-        supported_platforms: [T.C3.WEB],
+        supported_platforms: [v.C3.WEB],
         client_platform_config: {
-            [T.C3.WEB]: J,
-            [T.C3.IOS]: J,
-            [T.C3.ANDROID]: J
+            [v.C3.WEB]: $,
+            [v.C3.IOS]: $,
+            [v.C3.ANDROID]: $
         },
         has_csp_exception: !1,
         displays_advertisements: !1
     },
-    et = [S.d4z.GUILD_TEXT, S.d4z.DM, S.d4z.GROUP_DM],
+    et = [I.d4z.GUILD_TEXT, I.d4z.DM, I.d4z.GROUP_DM],
     en = 'https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety';

@@ -3,10 +3,10 @@ n.d(t, {
         return d;
     },
     Sw: function () {
-        return _;
+        return f;
     },
     To: function () {
-        return E;
+        return _;
     }
 });
 var r = n(200651);
@@ -19,15 +19,15 @@ var i = n(120356),
     u = n(512983),
     c = n(502002);
 let d = s.Z.Types,
-    _ = {
+    f = {
         LEFT: 'left',
         RIGHT: 'right'
     };
-function E(e) {
+function _(e) {
     let t,
         n,
-        { type: i = s.Z.Types.DANGER, imageData: d, button: E, className: f, iconClassName: h, title: p, body: I, style: m, align: T = o.Z.Align.START } = e,
-        S = o.Z.Direction.HORIZONTAL;
+        { type: i = s.Z.Types.DANGER, imageData: d, button: _, className: h, iconClassName: p, title: m, body: g, style: E, align: v = o.Z.Align.START } = e,
+        I = o.Z.Direction.HORIZONTAL;
     if (null != d) {
         let { position: e, ...n } = d;
         (t = (0, r.jsx)(o.Z.Child, {
@@ -35,37 +35,37 @@ function E(e) {
             shrink: 0,
             children: (0, r.jsx)('img', {
                 alt: '',
-                className: a()(c.icon, h),
+                className: a()(c.icon, p),
                 ...n
             })
         })),
-            e === _.RIGHT && (S = o.Z.Direction.HORIZONTAL_REVERSE);
-    } else null != E && (n = E);
-    let g = !0;
+            e === f.RIGHT && (I = o.Z.Direction.HORIZONTAL_REVERSE);
+    } else null != _ && (n = _);
+    let S = !0;
     return (
-        i === s.Z.Types.PRIMARY && (g = !1),
+        i === s.Z.Types.PRIMARY && (S = !1),
         (0, r.jsx)(s.Z, {
-            className: a()(c.formNotice, f),
+            className: a()(c.formNotice, h),
             type: i,
-            style: m,
+            style: E,
             children: (0, r.jsxs)(o.Z, {
-                direction: S,
-                align: T,
+                direction: I,
+                align: v,
                 children: [
                     t,
                     (0, r.jsxs)(o.Z.Child, {
                         children: [
-                            null != p && '' !== p
+                            null != m && '' !== m
                                 ? (0, r.jsx)(u.v, {
                                       tag: u.R.H5,
-                                      className: a()(c.formNoticeTitle, { [c.whiteText]: g }),
+                                      className: a()(c.formNoticeTitle, { [c.whiteText]: S }),
                                       faded: !0,
-                                      children: p
+                                      children: m
                                   })
                                 : null,
                             (0, r.jsx)(l.R, {
-                                className: a()(c.formNoticeBody, { [c.whiteText]: g }),
-                                children: I
+                                className: a()(c.formNoticeBody, { [c.whiteText]: S }),
+                                children: g
                             }),
                             n
                         ]
@@ -75,4 +75,4 @@ function E(e) {
         })
     );
 }
-E.Types = s.Z.Types;
+_.Types = s.Z.Types;

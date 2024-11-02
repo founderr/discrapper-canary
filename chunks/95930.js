@@ -1,9 +1,9 @@
-var r, i;
-t.d(n, {
+var i, r;
+e.d(n, {
     q: function () {
-        return r;
+        return i;
     }
 }),
-    ((i = r || (r = {}))[(i.UNKNOWN = 0)] = 'UNKNOWN'),
-    (i[(i.MESSAGE_SEND = 1)] = 'MESSAGE_SEND'),
-    (i[(i.GUILD_MEMBER_JOIN_OR_UPDATE = 2)] = 'GUILD_MEMBER_JOIN_OR_UPDATE');
+    ((r = i || (i = {}))[(r.UNKNOWN = 0)] = 'UNKNOWN'),
+    (r[(r.MESSAGE_SEND = 1)] = 'MESSAGE_SEND'),
+    (r[(r.GUILD_MEMBER_JOIN_OR_UPDATE = 2)] = 'GUILD_MEMBER_JOIN_OR_UPDATE');

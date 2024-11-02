@@ -5,28 +5,28 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(921944),
-    r = n(689938),
-    l = n(114922);
+var r = n(481060),
+    l = n(921944),
+    a = n(388032),
+    s = n(114922);
 function o(e) {
     let { markAsDismissed: t } = e;
     return (0, i.jsxs)('div', {
-        className: l.container,
+        className: s.container,
         children: [
-            (0, i.jsx)('div', { className: l.pointer }),
-            (0, i.jsx)(a.Text, {
+            (0, i.jsx)('div', { className: s.pointer }),
+            (0, i.jsx)(r.Text, {
                 variant: 'text-sm/normal',
-                className: l.content,
-                children: r.Z.Messages.HUB_PRIVACY_SETTINGS_TOOLTIP
+                className: s.content,
+                children: a.intl.string(a.t.rdzeVF)
             }),
-            (0, i.jsx)(a.Button, {
-                color: a.Button.Colors.BRAND_INVERTED,
+            (0, i.jsx)(r.Button, {
+                color: r.Button.Colors.BRAND_INVERTED,
                 fullWidth: !0,
                 onClick: () => {
-                    t(s.L.AUTO);
+                    t(l.L.AUTO);
                 },
-                children: r.Z.Messages.GOT_IT
+                children: a.intl.string(a.t['NX+WJC'])
             })
         ]
     });

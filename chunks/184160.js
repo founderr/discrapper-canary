@@ -1,57 +1,57 @@
-n.d(s, {
+n.d(t, {
     x: function () {
-        return I;
+        return f;
     }
 });
-var t = n(200651);
+var i = n(200651);
 n(192379);
 var l = n(512722),
-    i = n.n(l),
-    C = n(780384),
-    r = n(481060),
+    s = n.n(l),
+    r = n(780384),
+    C = n(481060),
     a = n(410030),
     o = n(973159),
-    _ = n(74538),
-    d = n(987209),
-    u = n(598),
-    c = n(409813),
-    p = n(614223),
-    x = n(689938),
-    L = n(117787);
-function I(e) {
-    let { handleStepChange: s, handleClose: n } = e,
+    d = n(74538),
+    u = n(987209),
+    c = n(598),
+    p = n(409813),
+    x = n(614223),
+    h = n(388032),
+    _ = n(117787);
+function f(e) {
+    let { handleStepChange: t, handleClose: n } = e,
         l = (0, a.ZP)(),
-        { activeSubscription: I, selectedSkuId: E, setSelectedPlanId: h, startedPaymentFlowWithPaymentSourcesRef: f } = (0, u.usePaymentContext)(),
-        { isGift: M } = (0, d.wD)(),
-        T = null != I ? (0, _.Af)(I) : null,
-        N = null != T ? (0, _.gq)(T.planId) : null,
-        j = null != T ? (0, _.Rd)(T.planId) : null,
-        A = (0, p.Kp)({
+        { activeSubscription: f, selectedSkuId: j, setSelectedPlanId: L, startedPaymentFlowWithPaymentSourcesRef: m } = (0, c.usePaymentContext)(),
+        { isGift: g } = (0, u.wD)(),
+        E = null != f ? (0, d.Af)(f) : null,
+        S = null != E ? (0, d.gq)(E.planId) : null,
+        y = null != E ? (0, d.Rd)(E.planId) : null,
+        M = (0, x.Kp)({
             isTrial: !1,
-            isGift: M,
-            selectedSkuId: E,
-            startedPaymentFlowWithPaymentSources: f.current
+            isGift: g,
+            selectedSkuId: j,
+            startedPaymentFlowWithPaymentSources: m.current
         });
     return (
-        i()(null != j, 'Expected premium type'),
-        (0, t.jsx)(o.Z, {
-            premiumType: j,
-            titleText: x.Z.Messages.PREMIUM_DOWNGRADE_WHAT_YOU_LOSE_TITLE,
-            subtitleText: x.Z.Messages.PREMIUM_DOWNGRADE_WHAT_YOU_LOSE_SUBTITLE.format({ subscriptionName: N }),
-            footer: (0, t.jsxs)('div', {
-                className: L.whatYouLoseButtonContainer,
+        s()(null != y, 'Expected premium type'),
+        (0, i.jsx)(o.Z, {
+            premiumType: y,
+            titleText: h.intl.string(h.t['7VcWW1']),
+            subtitleText: h.intl.format(h.t.Qk34Ii, { subscriptionName: S }),
+            footer: (0, i.jsxs)('div', {
+                className: _.whatYouLoseButtonContainer,
                 children: [
-                    (0, t.jsx)(r.Button, {
+                    (0, i.jsx)(C.Button, {
                         onClick: () => {
-                            A ? (h((0, p.nA)(E, I)), s(c.h8.REVIEW)) : s(c.h8.PLAN_SELECT);
+                            M ? (L((0, x.nA)(j, f)), t(p.h8.REVIEW)) : t(p.h8.PLAN_SELECT);
                         },
-                        children: x.Z.Messages.CONTINUE
+                        children: h.intl.string(h.t['3PatS0'])
                     }),
-                    (0, t.jsx)(r.Button, {
-                        look: r.Button.Looks.LINK,
-                        color: (0, C.wj)(l) ? r.Button.Colors.WHITE : r.Button.Colors.PRIMARY,
+                    (0, i.jsx)(C.Button, {
+                        look: C.Button.Looks.LINK,
+                        color: (0, r.wj)(l) ? C.Button.Colors.WHITE : C.Button.Colors.PRIMARY,
                         onClick: n,
-                        children: x.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK
+                        children: h.intl.string(h.t.h9tkAA)
                     })
                 ]
             }),

@@ -1,7 +1,7 @@
-var t = n(200651);
-n(192379);
-var a = n(481060),
-    l = n(570140);
+var n = t(200651);
+t(192379);
+var a = t(481060),
+    l = t(570140);
 i.Z = {
     open(e) {
         l.Z.dispatch({
@@ -9,11 +9,11 @@ i.Z = {
             classificationId: e
         }),
             (0, a.openModalLazy)(async () => {
-                let { default: i } = await n.e('65652').then(n.bind(n, 208265));
-                return (n) =>
-                    (0, t.jsx)(i, {
+                let { default: i } = await t.e('65652').then(t.bind(t, 208265));
+                return (t) =>
+                    (0, n.jsx)(i, {
                         classificationId: e,
-                        ...n
+                        ...t
                     });
             });
     },

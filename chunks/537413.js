@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return i;
+        return r;
     }
 }),
     n(47120);
 var l = n(451467),
-    s = n(37113);
-function i(e, t, n) {
-    for (let i of s.no[e]) if ((0, l.Z)(e, i.resolution, i.fps, t, n)) return [i.resolution, i.fps];
+    i = n(37113);
+function r(e, t, n) {
+    for (let r of i.no[e]) if ((0, l.Z)(e, r.resolution, r.fps, t, n)) return [r.resolution, r.fps];
     return null;
 }

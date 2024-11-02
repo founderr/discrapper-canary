@@ -1,4 +1,4 @@
-t.d(n, {
+e.d(n, {
     NB: function () {
         return o;
     },
@@ -6,50 +6,50 @@ t.d(n, {
         return c;
     },
     fG: function () {
-        return a;
+        return s;
     },
     kg: function () {
         return u;
     },
     pM: function () {
-        return s;
+        return a;
     }
 });
-var r = t(881052);
-t(496675);
-var i = t(981631),
-    l = t(689938);
+var i = e(881052);
+e(496675);
+var r = e(981631),
+    l = e(388032);
 let o = '_role';
-function u(e) {
-    if (!(e >= 0))
-        switch (-e) {
-            case i.evJ.ENTITY_TOO_LARGE:
-                return l.Z.Messages.UPLOAD_ERROR_TOO_LARGE;
-            case i.evJ.INVALID_SKU_ATTACHMENT_NO_ARCHIVES:
-                return l.Z.Messages.GUILD_PRODUCT_ERROR_NO_ARCHIVES;
+function u(t) {
+    if (!(t >= 0))
+        switch (-t) {
+            case r.evJ.ENTITY_TOO_LARGE:
+                return l.intl.string(l.t.YbdEFB);
+            case r.evJ.INVALID_SKU_ATTACHMENT_NO_ARCHIVES:
+                return l.intl.string(l.t.ZaXBoK);
             case 1:
-                return l.Z.Messages.ERROR_GENERIC_TITLE;
+                return l.intl.string(l.t.R0RpRU);
             default:
-                return l.Z.Messages.GUILD_PRODUCT_ERROR_OTHER_CODE.format({ code: -e });
+                return l.intl.formatToPlainString(l.t.cYwlp6, { code: -t });
         }
 }
-function s(e) {
-    let { newRoleParams: n } = e;
+function a(t) {
+    let { newRoleParams: n } = t;
     if (null != n && '' === n.name.trim()) {
-        var t, i;
+        var e, r;
         return (
-            (t = o),
-            (i = l.Z.Messages.GUILD_PRODUCT_ERROR_EMPTY_ROLE_NAME),
-            new r.Hx({
+            (e = o),
+            (r = l.intl.string(l.t['V0B/k5'])),
+            new i.Hx({
                 status: 400,
                 body: {
                     message: 'Invalid form body',
                     errors: {
-                        [t]: {
+                        [e]: {
                             _errors: [
                                 {
                                     code: '',
-                                    message: i
+                                    message: r
                                 }
                             ]
                         }
@@ -59,20 +59,20 @@ function s(e) {
         );
     }
 }
-function a(e) {
+function s(t) {
     var n;
-    let { guildProductListing: t, name: r, priceTier: i, description: l, image: o, imageName: u, isImageChanged: s, newRoleParams: a, hasUnsavedAttachmentChanges: c } = e,
+    let { guildProductListing: e, name: i, priceTier: r, description: l, image: o, imageName: u, isImageChanged: a, newRoleParams: s, hasUnsavedAttachmentChanges: c } = t,
         d = {};
-    (null == t ? void 0 : t.name) !== r && '' !== r.trim() && (d.name = r), (null !== (n = null == t ? void 0 : t.description) && void 0 !== n ? n : '') !== l && (d.description = l), (null == t ? void 0 : t.price_tier) !== i && null != i && (d.priceTier = i), null != a && '' !== a.name.trim() ? (d.createNewRole = !0) : null === a && (d.unlinkRole = !0), o.startsWith('data:') && (s || (null == t && (Object.keys(d).length > 0 || c))) && ((d.image = o), (d.imageName = u));
-    let _ = Object.keys(d).length > 0 || c;
+    (null == e ? void 0 : e.name) !== i && '' !== i.trim() && (d.name = i), (null !== (n = null == e ? void 0 : e.description) && void 0 !== n ? n : '') !== l && (d.description = l), (null == e ? void 0 : e.price_tier) !== r && null != r && (d.priceTier = r), null != s && '' !== s.name.trim() ? (d.createNewRole = !0) : null === s && (d.unlinkRole = !0), o.startsWith('data:') && (a || (null == e && (Object.keys(d).length > 0 || c))) && ((d.image = o), (d.imageName = u));
+    let f = Object.keys(d).length > 0 || c;
     return {
         changes: d,
-        hasUnsavedChanges: _,
-        canSaveForDraft: _,
-        canSaveForPublished: _,
-        canPublishOrUnpublish: !(null == t || _)
+        hasUnsavedChanges: f,
+        canSaveForDraft: f,
+        canSaveForPublished: f,
+        canPublishOrUnpublish: !(null == e || f)
     };
 }
-function c(e, n) {
-    return ''.concat(location.protocol, '//').concat(location.host).concat(i.Z5c.GUILD_PRODUCT(e, n));
+function c(t, n) {
+    return ''.concat(location.protocol, '//').concat(location.host).concat(r.Z5c.GUILD_PRODUCT(t, n));
 }

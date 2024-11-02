@@ -1,20 +1,20 @@
-t.d(n, {
+e.d(t, {
     X: function () {
-        return l;
+        return c;
     }
 });
-var o = t(200651);
-t(192379);
-var i = t(859097),
-    s = t(981631),
-    r = t(689938);
-function l(e) {
-    let { onContinue: n, onClose: t, errorCode: l } = e,
-        c = l === s.evJ.UNDER_MINIMUM_AGE ? r.Z.Messages.CONNECTED_ACCOUNT_VERIFY_FAILURE_PSN_CHILD_ACCOUNT_DETAILS : r.Z.Messages.CONNECT_PS_ERROR_BODY;
-    return (0, o.jsx)(i.C, {
-        title: r.Z.Messages.CONNECT_CONSOLE_ERROR_TITLE,
-        body: c,
-        onClose: t,
-        onContinue: n
+var i = e(200651);
+e(192379);
+var o = e(859097),
+    r = e(981631),
+    l = e(388032);
+function c(n) {
+    let { onContinue: t, onClose: e, errorCode: c } = n,
+        s = c === r.evJ.UNDER_MINIMUM_AGE ? l.intl.string(l.t['3dIn2N']) : l.intl.string(l.t.qE9nqK);
+    return (0, i.jsx)(o.C, {
+        title: l.intl.string(l.t.eY3qHR),
+        body: s,
+        onClose: e,
+        onContinue: t
     });
 }

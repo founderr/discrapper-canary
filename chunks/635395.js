@@ -1,30 +1,30 @@
 n(47120);
 var i,
-    a,
-    s = n(192379),
-    r = n(442837),
-    l = n(846027),
+    r,
+    l = n(192379),
+    a = n(442837),
+    s = n(846027),
     o = n(230711),
     c = n(888369),
     d = n(131951),
     u = n(292959),
-    _ = n(19780),
-    E = n(699516),
-    h = n(606304),
-    m = n(358085),
-    I = n(998502),
-    p = n(981631);
-((a = i || (i = {})).DEFAULT = 'DEFAULT'), (a.UNREAD = 'UNREAD'), (a.CONNECTED = 'CONNECTED'), (a.SPEAKING = 'SPEAKING'), (a.MUTED = 'MUTED'), (a.DEAFENED = 'DEAFENED');
-let g = (0, m.isMac)() ? null : 'DEFAULT';
-class T extends s.PureComponent {
+    h = n(19780),
+    m = n(699516),
+    p = n(606304),
+    g = n(358085),
+    f = n(998502),
+    _ = n(981631);
+((r = i || (i = {})).DEFAULT = 'DEFAULT'), (r.UNREAD = 'UNREAD'), (r.CONNECTED = 'CONNECTED'), (r.SPEAKING = 'SPEAKING'), (r.MUTED = 'MUTED'), (r.DEAFENED = 'DEAFENED');
+let E = (0, g.isMac)() ? null : 'DEFAULT';
+class I extends l.PureComponent {
     componentDidMount() {
-        I.ZP.setSystemTrayIcon(this.getIcon());
+        f.ZP.setSystemTrayIcon(this.getIcon());
     }
     componentDidUpdate() {
-        I.ZP.setSystemTrayIcon(this.getIcon());
+        f.ZP.setSystemTrayIcon(this.getIcon());
     }
     componentWillUnmount() {
-        I.ZP.setSystemTrayIcon(g);
+        f.ZP.setSystemTrayIcon(E);
     }
     render() {
         return null;
@@ -35,9 +35,9 @@ class T extends s.PureComponent {
             (t = this),
             (n = 'getIcon'),
             (i = () => {
-                let { deafened: e, muted: t, speaking: n, connected: i, unread: a } = this.props,
-                    s = g;
-                return (0, m.isMac)() && !i ? s : (0, m.isLinux)() || !i ? (a && (s = 'UNREAD'), s) : (s = e ? 'DEAFENED' : t ? 'MUTED' : n ? 'SPEAKING' : 'CONNECTED');
+                let { deafened: e, muted: t, speaking: n, connected: i, unread: r } = this.props,
+                    l = E;
+                return (0, g.isMac)() && !i ? l : (0, g.isLinux)() || !i ? (r && (l = 'UNREAD'), l) : (l = e ? 'DEAFENED' : t ? 'MUTED' : n ? 'SPEAKING' : 'CONNECTED');
             }),
             n in t
                 ? Object.defineProperty(t, n, {
@@ -49,24 +49,24 @@ class T extends s.PureComponent {
                 : (t[n] = i);
     }
 }
-let S = () => null;
-m.isPlatformEmbedded &&
-    (I.ZP.on('SYSTEM_TRAY_TOGGLE_MUTE', () => l.Z.toggleSelfMute({ location: 'System Tray' })),
-    I.ZP.on('SYSTEM_TRAY_TOGGLE_DEAFEN', () => l.Z.toggleSelfDeaf()),
-    I.ZP.on('SYSTEM_TRAY_OPEN_VOICE_SETTINGS', () => {
-        o.Z.open(p.oAB.VOICE);
+let C = () => null;
+g.isPlatformEmbedded &&
+    (f.ZP.on('SYSTEM_TRAY_TOGGLE_MUTE', () => s.Z.toggleSelfMute({ location: 'System Tray' })),
+    f.ZP.on('SYSTEM_TRAY_TOGGLE_DEAFEN', () => s.Z.toggleSelfDeaf()),
+    f.ZP.on('SYSTEM_TRAY_OPEN_VOICE_SETTINGS', () => {
+        o.Z.open(_.oAB.VOICE);
     }),
-    (S = r.ZP.connectStores([_.Z, d.Z, h.Z, c.default, E.Z, u.Z], () => {
+    (C = a.ZP.connectStores([h.Z, d.Z, p.Z, c.default, m.Z, u.Z], () => {
         let e = c.default.getTotalMentionCount(),
             t = c.default.hasAnyUnread(),
-            n = E.Z.getPendingCount(),
+            n = m.Z.getPendingCount(),
             i = u.Z.getDisableUnreadBadge();
         return {
-            connected: _.Z.isConnected(),
-            speaking: h.Z.isCurrentUserSpeaking(),
+            connected: h.Z.isConnected(),
+            speaking: p.Z.isCurrentUserSpeaking(),
             muted: d.Z.isSelfMute() || d.Z.isSelfMutedTemporarily(),
             deafened: d.Z.isSelfDeaf(),
             unread: !i && !!(t || e + n > 0)
         };
-    })(T))),
-    (t.Z = S);
+    })(I))),
+    (t.Z = C);

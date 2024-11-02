@@ -1,124 +1,124 @@
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(442837),
-    i = n(481060),
-    r = n(100527),
-    l = n(906732),
+var r = n(442837),
+    l = n(481060),
+    s = n(100527),
+    a = n(906732),
     o = n(623624),
     c = n(372444),
     d = n(852679),
     u = n(926491),
-    _ = n(145499),
-    I = n(424218),
-    E = n(267642),
-    T = n(63063),
-    m = n(999382),
-    N = n(981631),
-    S = n(611480),
-    g = n(689938),
-    h = n(580765);
-let C = {
-        page: N.ZY5.GUILD_SETTINGS,
-        section: N.jXE.GUILD_SETTINGS_STICKERS,
-        object: N.qAy.BOOSTING_BANNER
+    m = n(145499),
+    h = n(424218),
+    g = n(267642),
+    x = n(63063),
+    p = n(999382),
+    f = n(981631),
+    C = n(611480),
+    I = n(388032),
+    _ = n(580765);
+let N = {
+        page: f.ZY5.GUILD_SETTINGS,
+        section: f.jXE.GUILD_SETTINGS_STICKERS,
+        object: f.qAy.BOOSTING_BANNER
     },
-    x = (e) => {
+    v = (e) => {
         let { guild: t } = e,
-            { analyticsLocations: n } = (0, l.ZP)(),
-            a = (0, E.vn)(t.id)[N.Eu4.TIER_1] - t.premiumSubscriberCount;
-        return (0, s.jsxs)('div', {
-            className: h.upsellContainer,
+            { analyticsLocations: n } = (0, a.ZP)(),
+            r = (0, g.vn)(t.id)[f.Eu4.TIER_1] - t.premiumSubscriberCount;
+        return (0, i.jsxs)('div', {
+            className: _.upsellContainer,
             children: [
-                (0, s.jsx)(i.Heading, {
-                    className: h.upsellHeader,
+                (0, i.jsx)(l.Heading, {
+                    className: _.upsellHeader,
                     variant: 'heading-xl/semibold',
-                    children: g.Z.Messages.GUILD_SETTINGS_STICKERS_UPSELL_TITLE
+                    children: I.intl.string(I.t.hzCkys)
                 }),
-                (0, s.jsx)(i.Text, {
-                    className: h.upsellDescription,
+                (0, i.jsx)(l.Text, {
+                    className: _.upsellDescription,
                     variant: 'text-md/normal',
-                    children: g.Z.Messages.GUILD_SETTINGS_STICKERS_UPSELL_DESCRIPTION_FREE_SLOTS
+                    children: I.intl.string(I.t.jcesAA)
                 }),
-                (0, s.jsxs)('div', {
-                    className: h.upsellButtons,
+                (0, i.jsxs)('div', {
+                    className: _.upsellButtons,
                     children: [
-                        (0, s.jsx)(i.Button, {
-                            className: h.upsellButtonPrimary,
-                            innerClassName: h.upsellButton,
-                            color: i.Button.Colors.WHITE,
+                        (0, i.jsx)(l.Button, {
+                            className: _.upsellButtonPrimary,
+                            innerClassName: _.upsellButton,
+                            color: l.Button.Colors.WHITE,
                             onClick: () =>
                                 (0, d.Z)({
                                     analyticsLocations: n,
-                                    analyticsLocation: C,
+                                    analyticsLocation: N,
                                     guildId: t.id,
-                                    totalNumberOfSlotsToAssign: a
+                                    totalNumberOfSlotsToAssign: r
                                 }),
-                            children: g.Z.Messages.GUILD_SETTINGS_STICKERS_BOOST_SERVER
+                            children: I.intl.string(I.t.Q5dbTk)
                         }),
-                        (0, s.jsx)(i.Button, {
-                            innerClassName: h.upsellButton,
-                            color: i.Button.Colors.WHITE,
+                        (0, i.jsx)(l.Button, {
+                            innerClassName: _.upsellButton,
+                            color: l.Button.Colors.WHITE,
                             onClick: () =>
                                 (0, o.f)({
                                     guildId: t.id,
-                                    location: { section: N.jXE.GUILD_SETTINGS_STICKERS }
+                                    location: { section: f.jXE.GUILD_SETTINGS_STICKERS }
                                 }),
-                            children: g.Z.Messages.LEARN_MORE
+                            children: I.intl.string(I.t.hvVgAQ)
                         })
                     ]
                 })
             ]
         });
     },
-    p = () =>
-        (0, s.jsxs)(i.FormSection, {
-            title: g.Z.Messages.GUILD_SETTINGS_STICKERS_UPLOAD_AUTO_RESIZE_HEADING,
+    T = () =>
+        (0, i.jsxs)(l.FormSection, {
+            title: I.intl.string(I.t['9N2OWF']),
             children: [
-                (0, s.jsx)(i.FormText, {
-                    type: i.FormTextTypes.DESCRIPTION,
-                    children: g.Z.Messages.GUILD_SETTINGS_STICKERS_UPLOAD_AUTO_RESIZE_INSTRUCTIONS.format({ fileSize: (0, I.IC)(S.Ht, { useKibibytes: !0 }) })
+                (0, i.jsx)(l.FormText, {
+                    type: l.FormTextTypes.DESCRIPTION,
+                    children: I.intl.format(I.t.hxLvi4, { fileSize: (0, h.IC)(C.Ht, { useKibibytes: !0 }) })
                 }),
-                (0, s.jsx)(i.FormText, {
-                    type: i.FormTextTypes.DESCRIPTION,
-                    children: g.Z.Messages.GUILD_SETTINGS_STICKERS_UPLOAD_AUTO_RESIZE_HELP.format({ articleUrl: T.Z.getArticleURL(N.BhN.STICKERS_UPLOAD) })
+                (0, i.jsx)(l.FormText, {
+                    type: l.FormTextTypes.DESCRIPTION,
+                    children: I.intl.format(I.t.UBj0aW, { articleUrl: x.Z.getArticleURL(f.BhN.STICKERS_UPLOAD) })
                 })
             ]
         }),
-    R = (e) => {
+    j = (e) => {
         let t,
             n,
-            a,
-            { guild: i, guildStickers: r } = e,
-            l = i.premiumTier,
-            o = (0, E.Qi)(r, l),
-            d = (0, E.FZ)(l, i.id),
-            u = (0, E.A3)(l),
-            _ = r.length;
-        return null == d || l === N.Eu4.TIER_3 || o > 0
-            ? (0, s.jsx)(s.Fragment, {})
-            : (_ > u
-                  ? ((t = g.Z.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TOO_MANY_STICKERS_HEADER.format({ level: d })), (n = g.Z.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TOO_MANY_STICKERS_TEXT.format({ level: d })), (a = N.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL))
-                  : ((t = g.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_BANNER_HEADER),
-                    (n = g.Z.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TEXT.format({
+            r,
+            { guild: l, guildStickers: s } = e,
+            a = l.premiumTier,
+            o = (0, g.Qi)(s, a),
+            d = (0, g.FZ)(a, l.id),
+            u = (0, g.A3)(a),
+            m = s.length;
+        return null == d || a === f.Eu4.TIER_3 || o > 0
+            ? (0, i.jsx)(i.Fragment, {})
+            : (m > u
+                  ? ((t = I.intl.formatToPlainString(I.t.ZtAY1d, { level: d })), (n = I.intl.formatToPlainString(I.t['13hOWl'], { level: d })), (r = f.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL))
+                  : ((t = I.intl.string(I.t.zT9Sxc)),
+                    (n = I.intl.formatToPlainString(I.t.YaW9wM, {
                         level: d,
-                        numAdditional: (0, E.ig)(d)
+                        numAdditional: (0, g.ig)(d)
                     })),
-                    (a = N.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL)),
-              (0, s.jsx)(c.Z, {
+                    (r = f.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL)),
+              (0, i.jsx)(c.Z, {
                   header: t,
                   text: n,
-                  guild: i,
+                  guild: l,
                   analyticsLocation: {
-                      page: N.ZY5.GUILD_SETTINGS,
-                      section: N.jXE.GUILD_SETTINGS_STICKERS,
-                      object: a,
-                      objectType: (0, E.ge)(d)
+                      page: f.ZY5.GUILD_SETTINGS,
+                      section: f.jXE.GUILD_SETTINGS_STICKERS,
+                      object: r,
+                      objectType: (0, g.ge)(d)
                   }
               }));
     };
 t.Z = () => {
-    let e = (0, a.e7)([m.Z], () => m.Z.getGuild()),
-        t = (0, a.e7)(
+    let e = (0, r.e7)([p.Z], () => p.Z.getGuild()),
+        t = (0, r.e7)(
             [u.Z],
             () => {
                 var t;
@@ -126,28 +126,28 @@ t.Z = () => {
             },
             [e]
         ),
-        { analyticsLocations: n } = (0, l.ZP)(r.Z.STICKERS);
+        { analyticsLocations: n } = (0, a.ZP)(s.Z.STICKERS);
     if (null == e) return null;
-    let o = e.premiumTier !== N.Eu4.NONE || t.length > 0;
-    return (0, s.jsx)(l.Gt, {
+    let o = e.premiumTier !== f.Eu4.NONE || t.length > 0;
+    return (0, i.jsx)(a.Gt, {
         value: n,
-        children: (0, s.jsxs)(i.FormSection, {
-            title: g.Z.Messages.GUILD_SETTINGS_STICKERS,
-            tag: i.FormTitleTags.H1,
+        children: (0, i.jsxs)(l.FormSection, {
+            title: I.intl.string(I.t.R5nQkZ),
+            tag: l.FormTitleTags.H1,
             children: [
                 o
-                    ? (0, s.jsxs)('div', {
+                    ? (0, i.jsxs)('div', {
                           children: [
-                              (0, s.jsx)(R, {
+                              (0, i.jsx)(j, {
                                   guild: e,
                                   guildStickers: t
                               }),
-                              (0, s.jsx)(p, {})
+                              (0, i.jsx)(T, {})
                           ]
                       })
-                    : (0, s.jsx)(x, { guild: e }),
-                (0, s.jsx)(i.FormDivider, { className: h.divider }),
-                (0, s.jsx)(_.Z, { guild: e })
+                    : (0, i.jsx)(v, { guild: e }),
+                (0, i.jsx)(l.FormDivider, { className: _.divider }),
+                (0, i.jsx)(m.Z, { guild: e })
             ]
         })
     });

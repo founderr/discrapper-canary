@@ -1,46 +1,46 @@
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(689938),
-    r = n(860768);
+var r = n(481060),
+    l = n(388032),
+    a = n(860768);
 t.Z = (e) => {
     let { hasHub: t } = e;
     return (0, i.jsxs)('div', {
-        className: r.container,
+        className: a.container,
         children: [
             (0, i.jsx)('div', {
-                className: r.iconContainer,
-                children: (0, i.jsx)(a.HubIcon, {
+                className: a.iconContainer,
+                children: (0, i.jsx)(r.HubIcon, {
                     size: 'md',
-                    color: a.tokens.colors.WHITE.css
+                    color: r.tokens.colors.WHITE.css
                 })
             }),
-            (0, i.jsx)(a.Text, {
+            (0, i.jsx)(r.Text, {
                 color: 'header-primary',
                 variant: 'text-lg/semibold',
-                className: r.header,
-                children: t ? s.Z.Messages.HUB_EMAIL_CONNECTION_ADD_HEADER : s.Z.Messages.HUB_EMAIL_CONNECTION_JOIN_HEADER
+                className: a.header,
+                children: t ? l.intl.string(l.t.hsSHh4) : l.intl.string(l.t.Wf6iio)
             }),
-            (0, i.jsx)(a.Text, {
+            (0, i.jsx)(r.Text, {
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                className: r.__invalid_description,
-                children: t ? s.Z.Messages.HUB_EMAIL_CONNECTION_ADD_DESCRIPTION : s.Z.Messages.HUB_EMAIL_CONNECTION_JOIN_CARD_DESCRIPTION
+                className: a.__invalid_description,
+                children: t ? l.intl.string(l.t.FZ2J3d) : l.intl.string(l.t.TvHcv7)
             }),
-            (0, i.jsx)('div', { className: r.gap }),
-            (0, i.jsx)(a.Button, {
-                size: a.Button.Sizes.LARGE,
-                color: t ? a.Button.Colors.PRIMARY : a.Button.Colors.GREEN,
+            (0, i.jsx)('div', { className: a.gap }),
+            (0, i.jsx)(r.Button, {
+                size: r.Button.Sizes.LARGE,
+                color: t ? r.Button.Colors.PRIMARY : r.Button.Colors.GREEN,
                 onClick: () =>
-                    (0, a.openModalLazy)(async () => {
+                    (0, r.openModalLazy)(async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 650233));
                         return (t) => (0, i.jsx)(e, { ...t });
                     }),
-                children: (0, i.jsx)(a.Text, {
+                children: (0, i.jsx)(r.Text, {
                     variant: 'text-sm/semibold',
-                    className: r.addButton,
+                    className: a.addButton,
                     color: 'none',
-                    children: t ? s.Z.Messages.HUB_EMAIL_CONNECTION_JOIN_ANOTHER : s.Z.Messages.HUB_EMAIL_CONNECTION_JOIN_MY_SCHOOOL
+                    children: t ? l.intl.string(l.t.IyjHDw) : l.intl.string(l.t['KU/aNz'])
                 })
             })
         ]

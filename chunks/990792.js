@@ -2,8 +2,8 @@ t(47120);
 var l = t(200651),
     a = t(192379),
     i = t(120356),
-    s = t.n(i),
-    r = t(392711),
+    r = t.n(i),
+    s = t(392711),
     u = t(780384),
     o = t(481060),
     c = t(410030),
@@ -14,12 +14,12 @@ var l = t(200651),
     g = t(690780);
 n.Z = a.memo(function (e) {
     let { file: n, audio: t, className: i, waveformSettings: p } = e,
-        [N, _] = a.useState({
+        [v, x] = a.useState({
             width: 0,
             height: 0
         }),
-        v = a.useRef(null),
-        D = a.useMemo(() => {
+        N = a.useRef(null),
+        y = a.useMemo(() => {
             var e;
             let n = null !== (e = null == t ? void 0 : t.duration) && void 0 !== e ? e : 1;
             return {
@@ -29,61 +29,61 @@ n.Z = a.memo(function (e) {
                 ...(null != p ? p : {})
             };
         }, [t, p]),
-        O = (0, f.b1)(n),
-        S = (0, f.NN)(O, v.current, D),
-        x = (0, c.ZP)(),
-        y = (0, d.Sl)((0, u.wj)(x) ? h.Il.PRIMARY_300 : h.Il.PRIMARY_700),
-        E = null == O || null == S,
-        A = (0 === N.width || 0 === N.height || E) && null != n,
-        b = a.useCallback(() => {
-            null != v.current &&
-                _({
-                    width: v.current.offsetWidth,
-                    height: v.current.offsetHeight
+        b = (0, f.b1)(n),
+        j = (0, f.NN)(b, N.current, y),
+        C = (0, c.ZP)(),
+        w = (0, d.Sl)((0, u.wj)(C) ? h.Il.PRIMARY_300 : h.Il.PRIMARY_700),
+        S = null == b || null == j,
+        I = (0 === v.width || 0 === v.height || S) && null != n,
+        E = a.useCallback(() => {
+            null != N.current &&
+                x({
+                    width: N.current.offsetWidth,
+                    height: N.current.offsetHeight
                 });
         }, []);
     return (
         a.useEffect(() => {
-            if (null != v.current) {
-                let e = new ResizeObserver((0, r.debounce)(b, 50));
+            if (null != N.current) {
+                let e = new ResizeObserver((0, s.debounce)(E, 50));
                 return (
-                    e.observe(v.current),
+                    e.observe(N.current),
                     () => {
                         e.disconnect();
                     }
                 );
             }
-        }, [b]),
+        }, [E]),
         a.useEffect(() => {
-            if (null == v.current) return;
-            let e = v.current,
+            if (null == N.current) return;
+            let e = N.current,
                 n = e.getContext('2d');
             if (null == n) return;
             let { width: t, height: l } = e;
-            if (0 !== N.width && 0 !== N.height) {
-                if (null != S && S.length > 0) {
-                    let e = t / S.length,
+            if (0 !== v.width && 0 !== v.height) {
+                if (null != j && j.length > 0) {
+                    let e = t / j.length,
                         a = -(e * (m.nl.waveformBarWidth - 1));
-                    n.clearRect(0, 0, t, l), (n.fillStyle = y.hex);
-                    for (let t = 0; t < S.length; t++) {
-                        let i = S[t] * l,
-                            s = t * e + a,
-                            r = l / 2 - i / 2;
-                        n.fillRect(s, r, e - a, i);
+                    n.clearRect(0, 0, t, l), (n.fillStyle = w.hex);
+                    for (let t = 0; t < j.length; t++) {
+                        let i = j[t] * l,
+                            r = t * e + a,
+                            s = l / 2 - i / 2;
+                        n.fillRect(r, s, e - a, i);
                     }
                 }
             }
-        }, [y, N, x, S]),
+        }, [w, v, C, j]),
         (0, l.jsxs)('div', {
-            className: s()(g.container, i),
+            className: r()(g.container, i),
             children: [
                 (0, l.jsx)('canvas', {
                     className: g.waveformCanvas,
-                    ref: v,
-                    width: 4 * N.width,
-                    height: 4 * N.height
+                    ref: N,
+                    width: 4 * v.width,
+                    height: 4 * v.height
                 }),
-                A &&
+                I &&
                     (0, l.jsx)('div', {
                         className: g.loading,
                         children: (0, l.jsx)(o.Spinner, { type: o.SpinnerTypes.SPINNING_CIRCLE })

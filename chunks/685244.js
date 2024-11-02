@@ -1,65 +1,65 @@
-l.d(t, {
+n.d(t, {
     Z: function () {
-        return _;
+        return h;
     }
 }),
-    l(47120);
-var n = l(200651),
-    a = l(192379),
-    o = l(498607),
-    s = l.n(o),
-    i = l(100621),
-    r = l(748780),
-    C = l(692547),
-    c = l(481060),
-    d = l(110924);
+    n(47120);
+var l = n(200651),
+    o = n(192379),
+    a = n(498607),
+    i = n.n(a),
+    r = n(100621),
+    s = n(748780),
+    c = n(692547),
+    C = n(481060),
+    d = n(110924);
 let u = {
         duration: 100,
-        easing: r.Z.Easing.inOut(r.Z.Easing.back()),
+        easing: s.Z.Easing.inOut(s.Z.Easing.back()),
         clamp: !0
     },
     m = {
         duration: 2000,
-        easing: r.Z.Easing.quad,
+        easing: s.Z.Easing.quad,
         clamp: !0
     };
-function _(e) {
-    let { value: t, children: l, equalityFn: o = s(), style: r, ..._ } = e,
-        E = (0, d.Z)(t),
-        [{ spring: h }, M] = (0, c.useSpring)(() => ({ spring: 0 }), 'animate-always'),
-        x = (0, c.useToken)(C.Z.colors.BACKGROUND_PRIMARY).hex(),
-        b = (0, c.useToken)(C.Z.colors.CONTROL_BRAND_FOREGROUND).hex(),
-        T = a.useCallback(() => {
-            M({
+function h(e) {
+    let { value: t, children: n, equalityFn: a = i(), style: s, ...h } = e,
+        x = (0, d.Z)(t),
+        [{ spring: b }, f] = (0, C.useSpring)(() => ({ spring: 0 }), 'animate-always'),
+        g = (0, C.useToken)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
+        p = (0, C.useToken)(c.Z.colors.CONTROL_BRAND_FOREGROUND).hex(),
+        H = o.useCallback(() => {
+            f({
                 spring: 1,
                 config: u
             }),
-                M({
+                f({
                     spring: 0,
                     config: m,
                     delay: 300
                 });
-        }, [M]);
-    a.useEffect(() => {
-        if (!(null == t || null == E || o(t, E))) T();
-    }, [T, t, E, o]);
-    let L =
-            null == h
+        }, [f]);
+    o.useEffect(() => {
+        if (!(null == t || null == x || a(t, x))) H();
+    }, [H, t, x, a]);
+    let j =
+            null == b
                 ? void 0
-                : h.to({
+                : b.to({
                       range: [0, 1],
-                      output: [''.concat(x, '00'), ''.concat(b, '27')]
+                      output: [''.concat(g, '00'), ''.concat(p, '27')]
                   }),
-        g =
-            null != r
+        v =
+            null != s
                 ? {
-                      ...r,
-                      backgroundColor: L
+                      ...s,
+                      backgroundColor: j
                   }
-                : { backgroundColor: L };
-    return (0, n.jsx)(i.animated.tr, {
-        ..._,
-        style: g,
-        children: l
+                : { backgroundColor: j };
+    return (0, l.jsx)(r.animated.tr, {
+        ...h,
+        style: v,
+        children: n
     });
 }

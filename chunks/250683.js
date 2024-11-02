@@ -13,10 +13,10 @@
             u = o[0],
             c = o[1];
         var d = new i(((t = 0), ((u + (n = c)) * 3) / 4 - n)),
-            _ = 0,
-            E = c > 0 ? u - 4 : u;
-        for (s = 0; s < E; s += 4) (a = (r[e.charCodeAt(s)] << 18) | (r[e.charCodeAt(s + 1)] << 12) | (r[e.charCodeAt(s + 2)] << 6) | r[e.charCodeAt(s + 3)]), (d[_++] = (a >> 16) & 255), (d[_++] = (a >> 8) & 255), (d[_++] = 255 & a);
-        return 2 === c && ((a = (r[e.charCodeAt(s)] << 2) | (r[e.charCodeAt(s + 1)] >> 4)), (d[_++] = 255 & a)), 1 === c && ((a = (r[e.charCodeAt(s)] << 10) | (r[e.charCodeAt(s + 1)] << 4) | (r[e.charCodeAt(s + 2)] >> 2)), (d[_++] = (a >> 8) & 255), (d[_++] = 255 & a)), d;
+            f = 0,
+            _ = c > 0 ? u - 4 : u;
+        for (s = 0; s < _; s += 4) (a = (r[e.charCodeAt(s)] << 18) | (r[e.charCodeAt(s + 1)] << 12) | (r[e.charCodeAt(s + 2)] << 6) | r[e.charCodeAt(s + 3)]), (d[f++] = (a >> 16) & 255), (d[f++] = (a >> 8) & 255), (d[f++] = 255 & a);
+        return 2 === c && ((a = (r[e.charCodeAt(s)] << 2) | (r[e.charCodeAt(s + 1)] >> 4)), (d[f++] = 255 & a)), 1 === c && ((a = (r[e.charCodeAt(s)] << 10) | (r[e.charCodeAt(s + 1)] << 4) | (r[e.charCodeAt(s + 2)] >> 2)), (d[f++] = (a >> 8) & 255), (d[f++] = 255 & a)), d;
     }),
     (t.fromByteArray = function (e) {
         for (var t, r = e.length, i = r % 3, a = [], s = 0, o = r - i; s < o; s += 16383)

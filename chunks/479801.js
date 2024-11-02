@@ -22,25 +22,25 @@ function u(e) {
         });
     let n = (0, i.e7)([s.Z], () => s.Z.hasLoadedExperiments),
         u = null == e ? void 0 : e.includeBundles,
-        [c, d, _, E, f] = (0, i.Wu)([l.Z], () => {
+        [c, d, f, _, h] = (0, i.Wu)([l.Z], () => {
             var e;
             return [l.Z.isFetchingCategories, l.Z.lastFetchOptions, l.Z.error, null !== (e = l.Z.lastSuccessfulFetch) && void 0 !== e ? e : 0, l.Z.categories];
         });
     return (
         (0, r.useEffect)(() => {
-            if (!n || c || _) return;
+            if (!n || c || f) return;
             let t = {
                     ...e,
                     includeBundles: u
                 },
                 r = !(0, o.oc)(d, t),
-                i = Date.now() - E < 600000;
+                i = Date.now() - _ < 600000;
             (r || !i) && (0, o.F$)(t);
-        }, [n, c, d, E, e, _, u]),
+        }, [n, c, d, _, e, f, u]),
         {
             isFetching: c,
-            categories: f,
-            fetchCategoriesError: _,
+            categories: h,
+            fetchCategoriesError: f,
             refreshCategories: (0, r.useCallback)(() => {
                 let t = {
                     ...e,

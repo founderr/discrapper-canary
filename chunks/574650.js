@@ -1,93 +1,93 @@
 n(653041), n(47120);
 var i = n(200651);
 n(192379);
-var a = n(120356),
-    s = n.n(a),
-    r = n(512969),
-    l = n(442837),
-    o = n(481060),
+var r = n(120356),
+    l = n.n(r),
+    a = n(512969),
+    o = n(442837),
+    s = n(481060),
     c = n(430824),
     u = n(914010),
     d = n(693546),
-    _ = n(305325),
-    E = n(246364),
-    I = n(937111),
-    m = n(981631),
-    f = n(176505),
-    T = n(689938),
-    h = n(373359),
-    N = n(250812);
+    m = n(305325),
+    f = n(246364),
+    h = n(937111),
+    p = n(981631),
+    g = n(176505),
+    _ = n(388032),
+    C = n(373359),
+    E = n(250812);
 t.Z = () => {
     var e, t;
-    let a = (0, l.e7)([u.Z], () => u.Z.getGuildId(), []),
-        p = (0, l.e7)([c.Z], () => c.Z.getGuild(a), [a]),
-        C = (0, l.e7)([I.Z], () => (null != a ? I.Z.getRequest(a) : null), [a]),
-        g = (0, r.TH)(),
-        S = (null === (e = (0, r.LX)(g.pathname, m.Z5c.CHANNEL(null == p ? void 0 : p.id, f.oC.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
-    if (null == p || !p.hasVerificationGate() || S) return null;
-    let A = null !== (t = null == C ? void 0 : C.applicationStatus) && void 0 !== t ? t : E.wB.STARTED,
-        x = null,
-        R = null,
-        v = null,
-        M = [h.notice, N.notice];
-    switch (A) {
-        case E.wB.SUBMITTED:
-            (x = T.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE),
-                (R = T.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION),
-                (v = () => {
-                    (0, o.openModal)((e) =>
-                        (0, i.jsx)(o.ConfirmModal, {
-                            header: T.Z.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
-                            confirmText: T.Z.Messages.CONFIRM,
-                            cancelText: T.Z.Messages.CANCEL,
-                            onConfirm: () => d.Z.removeGuildJoinRequest(p.id),
-                            confirmButtonColor: o.Button.Colors.BRAND,
+    let r = (0, o.e7)([u.Z], () => u.Z.getGuildId(), []),
+        I = (0, o.e7)([c.Z], () => c.Z.getGuild(r), [r]),
+        x = (0, o.e7)([h.Z], () => (null != r ? h.Z.getRequest(r) : null), [r]),
+        v = (0, a.TH)(),
+        N = (null === (e = (0, a.LX)(v.pathname, p.Z5c.CHANNEL(null == I ? void 0 : I.id, g.oC.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
+    if (null == I || !I.hasVerificationGate() || N) return null;
+    let T = null !== (t = null == x ? void 0 : x.applicationStatus) && void 0 !== t ? t : f.wB.STARTED,
+        S = null,
+        b = null,
+        A = null,
+        j = [C.notice, E.notice];
+    switch (T) {
+        case f.wB.SUBMITTED:
+            (S = _.intl.string(_.t['5iLvS0'])),
+                (b = _.intl.string(_.t.mqtdmZ)),
+                (A = () => {
+                    (0, s.openModal)((e) =>
+                        (0, i.jsx)(s.ConfirmModal, {
+                            header: _.intl.string(_.t.aIz1oa),
+                            confirmText: _.intl.string(_.t['cY+Ooa']),
+                            cancelText: _.intl.string(_.t['ETE/oK']),
+                            onConfirm: () => d.Z.removeGuildJoinRequest(I.id),
+                            confirmButtonColor: s.Button.Colors.BRAND,
                             ...e,
-                            children: (0, i.jsx)(o.Text, {
+                            children: (0, i.jsx)(s.Text, {
                                 variant: 'text-md/normal',
-                                children: T.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION_SUBTITLE
+                                children: _.intl.string(_.t['13tjTU'])
                             })
                         })
                     );
                 });
             break;
-        case E.wB.REJECTED:
-            (x = T.Z.Messages.MEMBER_VERIFICATION_REJECTED_TITLE),
-                (R = T.Z.Messages.MEMBER_VERIFICATION_LEARN_MORE),
-                (v = () => {
-                    (0, o.openModalLazy)(async () => {
+        case f.wB.REJECTED:
+            (S = _.intl.string(_.t.lk30cX)),
+                (b = _.intl.string(_.t['8RrsHh'])),
+                (A = () => {
+                    (0, s.openModalLazy)(async () => {
                         let { default: e } = await n.e('3378').then(n.bind(n, 76075));
                         return (t) =>
                             (0, i.jsx)(e, {
-                                guildId: p.id,
+                                guildId: I.id,
                                 ...t
                             });
                     });
                 }),
-                M.push(h.error);
+                j.push(C.error);
             break;
         default:
-            (x = T.Z.Messages.MEMBER_VERIFICATION_NOTICE_TEXT),
-                (R = T.Z.Messages.MEMBER_VERIFICATION_NOTICE_CTA),
-                (v = () => {
-                    (0, _.hk)(p.id);
+            (S = _.intl.string(_.t.G5YKXF)),
+                (b = _.intl.string(_.t['r8/DT0'])),
+                (A = () => {
+                    (0, m.hk)(I.id);
                 });
     }
     return (0, i.jsxs)('div', {
-        className: s()(...M),
+        className: l()(...j),
         children: [
-            (0, i.jsx)(o.Text, {
-                className: h.header,
+            (0, i.jsx)(s.Text, {
+                className: C.header,
                 variant: 'text-sm/normal',
-                children: x
+                children: S
             }),
-            (0, i.jsx)(o.Button, {
-                className: h.button,
-                look: o.Button.Looks.OUTLINED,
-                color: o.Button.Colors.WHITE,
-                size: o.Button.Sizes.NONE,
-                onClick: v,
-                children: R
+            (0, i.jsx)(s.Button, {
+                className: C.button,
+                look: s.Button.Looks.OUTLINED,
+                color: s.Button.Colors.WHITE,
+                size: s.Button.Sizes.NONE,
+                onClick: A,
+                children: b
             })
         ]
     });

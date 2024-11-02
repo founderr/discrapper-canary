@@ -15,7 +15,7 @@ n.d(t, {
 var r = n(544891),
     i = n(921072),
     a = n(981631),
-    s = n(689938);
+    s = n(388032);
 async function o(e) {
     let t = a.ANM.APPLICATION_DISCLOSURES(e),
         n = await r.tn.get({
@@ -40,9 +40,9 @@ async function l(e, t) {
 function u(e) {
     switch (e) {
         case i.u$.IP_LOCATION:
-            return s.Z.Messages.OAUTH2_IP_LOCATION_DISCLOSURE;
+            return s.intl.string(s.t['6wPmjo']);
         case i.u$.DISPLAYS_ADVERTISEMENTS:
-            return s.Z.Messages.OAUTH2_ADVERTISEMENTS_DISCLOSURE;
+            return s.intl.string(s.t['/uOMKS']);
         default:
             return null;
     }

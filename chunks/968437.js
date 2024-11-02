@@ -10,23 +10,23 @@ var r = n(404759),
     i = n.n(r);
 n(913527);
 var a = n(124368),
-    s = n(689938);
+    s = n(388032);
 function o() {
     return [
         {
-            label: s.Z.Messages.AUTO_ARCHIVE_DURATION_1_HOUR,
+            label: s.intl.string(s.t.cs8A1d),
             value: 60
         },
         {
-            label: s.Z.Messages.AUTO_ARCHIVE_DURATION_24_HOURS,
+            label: s.intl.string(s.t.zFKbrK),
             value: 1440
         },
         {
-            label: s.Z.Messages.AUTO_ARCHIVE_DURATION_3_DAYS,
+            label: s.intl.string(s.t.TmPIZW),
             value: 4320
         },
         {
-            label: s.Z.Messages.AUTO_ARCHIVE_DURATION_1_WEEK,
+            label: s.intl.string(s.t['/7i2en']),
             value: 10080
         }
     ];

@@ -1,127 +1,127 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return E;
     }
 }),
     n(47120);
-var s,
-    a,
-    i,
+var i,
     r,
-    l = n(200651),
+    l,
+    s,
+    a = n(200651),
     o = n(192379),
     c = n(120356),
     d = n.n(c),
     u = n(100621),
-    _ = n(481060),
-    I = n(205641),
-    E = n(119331),
-    T = n(902807),
-    m = n(402766),
-    N = n(267642),
-    S = n(981631),
-    g = n(689938),
-    h = n(366667);
-let C = {
+    m = n(481060),
+    h = n(205641),
+    g = n(119331),
+    x = n(902807),
+    p = n(402766),
+    f = n(267642),
+    C = n(981631),
+    I = n(388032),
+    _ = n(366667);
+let N = {
         tension: 200,
         friction: 20
     },
-    x = {
-        ...C,
+    v = {
+        ...N,
         clamp: !0
     };
-function p(e) {
+function T(e) {
     let [t, n] = o.useState(0),
-        { numUnlocked: s, numRequired: a } = e,
-        i = () => {
+        { numUnlocked: i, numRequired: r } = e,
+        l = () => {
             n(1);
         },
-        r = () => {
+        s = () => {
             n(2);
         },
         c = 2 === t,
-        E = 1 === t;
-    if (!(!(s >= a) && s / a >= 0.8) || c) return null;
-    let T = E || c ? h.hidden : null,
-        m = E ? I.Z.Stages.FLYING : I.Z.Stages.HOVERING;
-    return (0, l.jsx)(_.Spring, {
+        g = 1 === t;
+    if (!(!(i >= r) && i / r >= 0.8) || c) return null;
+    let x = g || c ? _.hidden : null,
+        p = g ? h.Z.Stages.FLYING : h.Z.Stages.HOVERING;
+    return (0, a.jsx)(m.Spring, {
         from: { opacity: 0 },
         to: { opacity: 1 },
-        config: x,
+        config: v,
         shouldAnimate: 'animate-always',
         children: (e) =>
-            (0, l.jsxs)(u.animated.div, {
-                className: h.tierClose,
+            (0, a.jsxs)(u.animated.div, {
+                className: _.tierClose,
                 style: e,
                 children: [
-                    (0, l.jsx)(I.Z, {
-                        className: h.tierCloseMechaWumpus,
-                        stage: m,
-                        onFlyingComplete: r
+                    (0, a.jsx)(h.Z, {
+                        className: _.tierCloseMechaWumpus,
+                        stage: p,
+                        onFlyingComplete: s
                     }),
-                    (0, l.jsx)('div', {
-                        className: d()(h.tierCloseHint, T),
-                        children: g.Z.Messages.GUILD_SETTINGS_PREMIUM_GUILD_CLOSE_HINT.format({ numLeft: a - s })
+                    (0, a.jsx)('div', {
+                        className: d()(_.tierCloseHint, x),
+                        children: I.intl.format(I.t.qV3Erq, { numLeft: r - i })
                     }),
-                    (0, l.jsx)(_.Clickable, {
-                        onClick: i,
-                        className: d()(h.tierCloseClose, T),
-                        children: (0, l.jsx)(_.CircleXIcon, {
+                    (0, a.jsx)(m.Clickable, {
+                        onClick: l,
+                        className: d()(_.tierCloseClose, x),
+                        children: (0, a.jsx)(m.CircleXIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: h.tierCloseCloseIcon
+                            className: _.tierCloseCloseIcon
                         })
                     })
                 ]
             })
     });
 }
-function R(e) {
-    let { withCardBody: t, isAnimatedTo: n, hasAnimatedUnlocked: s, onSetRef: a, tier: i, showHeaderLockStatus: r, headerButton: c = null, subscriptionsRequired: u, subscriptionCount: I, className: E } = e,
-        T = (e) => {
-            null == a || a(e);
+function j(e) {
+    let { withCardBody: t, isAnimatedTo: n, hasAnimatedUnlocked: i, onSetRef: r, tier: l, showHeaderLockStatus: s, headerButton: c = null, subscriptionsRequired: u, subscriptionCount: h, className: g } = e,
+        x = (e) => {
+            null == r || r(e);
         },
-        [N, S] = o.useState(0);
+        [f, C] = o.useState(0);
     return (
         o.useLayoutEffect(() => {
-            n && S(1);
+            n && C(1);
         }, [n]),
-        (0, l.jsx)(_.Spring, {
+        (0, a.jsx)(m.Spring, {
             from: { unlockedTranslateY: 50 },
-            to: { unlockedTranslateY: 0 === N ? 50 : 0 },
-            config: C,
+            to: { unlockedTranslateY: 0 === f ? 50 : 0 },
+            config: N,
             children: (e) =>
-                (0, l.jsx)('div', {
+                (0, a.jsx)('div', {
                     className: d()(
                         {
-                            [h.tierHeaderWithoutCardBody]: !t,
-                            [h.tierHeaderUnlocked]: s,
-                            [h.tierHeaderLocked]: !s
+                            [_.tierHeaderWithoutCardBody]: !t,
+                            [_.tierHeaderUnlocked]: i,
+                            [_.tierHeaderLocked]: !i
                         },
-                        E
+                        g
                     ),
-                    ref: T,
-                    children: (0, l.jsxs)('div', {
-                        className: h.tierHeaderContent,
+                    ref: x,
+                    children: (0, a.jsxs)('div', {
+                        className: _.tierHeaderContent,
                         children: [
-                            (0, l.jsx)(m.Z, {
-                                tier: i.tier,
-                                className: d()(h.tierIcon, { [h.tierIconLocked]: !s })
+                            (0, a.jsx)(p.Z, {
+                                tier: l.tier,
+                                className: d()(_.tierIcon, { [_.tierIconLocked]: !i })
                             }),
-                            (0, l.jsx)('div', {
-                                className: d()(h.tierTitle, { [h.tierTitleActive]: s }),
-                                children: i.title
+                            (0, a.jsx)('div', {
+                                className: d()(_.tierTitle, { [_.tierTitleActive]: i }),
+                                children: l.title
                             }),
-                            r
-                                ? (0, l.jsx)(f, {
+                            s
+                                ? (0, a.jsx)(S, {
                                       transform: null == e ? void 0 : e.unlockedTranslateY.to((e) => 'translate3d(0, '.concat(e, 'px, 0)')),
                                       headerButton: c,
                                       subscriptionsRequired: u,
-                                      hasAnimatedUnlocked: s
+                                      hasAnimatedUnlocked: i
                                   })
                                 : null,
-                            (0, l.jsx)(p, {
-                                numUnlocked: I,
+                            (0, a.jsx)(T, {
+                                numUnlocked: h,
                                 numRequired: u
                             })
                         ]
@@ -130,42 +130,42 @@ function R(e) {
         })
     );
 }
-function L(e) {
-    let { children: t, subscriptionCount: n, onSetRef: s, tier: a, isAnimatedTo: i, hasBottomMargin: r, headerButton: o = null, withCardBody: c = !0, guildId: u, showHeaderLockStatus: I = !0 } = e,
-        m = (0, N.vn)(u)[a.tier],
-        C = i && n >= m,
-        x = a.tier !== S.Eu4.NONE && a.tier !== S.Eu4.TIER_1,
-        p = (e, t) => {
+function E(e) {
+    let { children: t, subscriptionCount: n, onSetRef: i, tier: r, isAnimatedTo: l, hasBottomMargin: s, headerButton: o = null, withCardBody: c = !0, guildId: u, showHeaderLockStatus: h = !0 } = e,
+        p = (0, f.vn)(u)[r.tier],
+        N = l && n >= p,
+        v = r.tier !== C.Eu4.NONE && r.tier !== C.Eu4.TIER_1,
+        T = (e, t) => {
             var n;
-            let { icon: s, className: a } = (0, E.t)(e.icon, t);
-            return (0, l.jsxs)(
+            let { icon: i, className: r } = (0, g.t)(e.icon, t);
+            return (0, a.jsxs)(
                 'div',
                 {
-                    className: h.perk,
+                    className: _.perk,
                     children: [
-                        (0, l.jsx)(T.Z, {
+                        (0, a.jsx)(x.Z, {
                             name: String(e.icon),
-                            icon: s,
-                            className: h.perkIcon,
-                            iconClassName: a
+                            icon: i,
+                            className: _.perkIcon,
+                            iconClassName: r
                         }),
-                        (0, l.jsxs)('div', {
-                            className: h.perkText,
+                        (0, a.jsxs)('div', {
+                            className: _.perkText,
                             children: [
-                                (0, l.jsxs)('div', {
-                                    className: h.perkTitle,
+                                (0, a.jsxs)('div', {
+                                    className: _.perkTitle,
                                     children: [
                                         e.title,
                                         e.isNew
-                                            ? (0, l.jsx)(_.TextBadge, {
-                                                  className: h.newBadge,
-                                                  text: g.Z.Messages.NEW
+                                            ? (0, a.jsx)(m.TextBadge, {
+                                                  className: _.newBadge,
+                                                  text: I.intl.string(I.t.y2b7CA)
                                               })
                                             : null
                                     ]
                                 }),
-                                (0, l.jsx)('div', {
-                                    className: h.perkDescription,
+                                (0, a.jsx)('div', {
+                                    className: _.perkDescription,
                                     children: e.description
                                 })
                             ]
@@ -175,77 +175,77 @@ function L(e) {
                 null === (n = e.title) || void 0 === n ? void 0 : n.toString()
             );
         };
-    return (0, l.jsxs)(
+    return (0, a.jsxs)(
         'div',
         {
-            className: d()(h.tier, { [h.tierBottomMargin]: r }),
+            className: d()(_.tier, { [_.tierBottomMargin]: s }),
             children: [
-                (0, l.jsx)(R, {
+                (0, a.jsx)(j, {
                     subscriptionCount: n,
-                    tier: a,
+                    tier: r,
                     headerButton: o,
-                    showHeaderLockStatus: I,
+                    showHeaderLockStatus: h,
                     onSetRef: (e) => {
-                        null != s && s(e, a);
+                        null != i && i(e, r);
                     },
                     withCardBody: c,
                     guildId: u,
-                    hasBottomMargin: r,
-                    subscriptionsRequired: m,
-                    hasAnimatedUnlocked: C,
-                    isAnimatedTo: i
+                    hasBottomMargin: s,
+                    subscriptionsRequired: p,
+                    hasAnimatedUnlocked: N,
+                    isAnimatedTo: l
                 }),
-                (0, l.jsx)('div', {
-                    className: d()({ [h.tierBody]: c }),
+                (0, a.jsx)('div', {
+                    className: d()({ [_.tierBody]: c }),
                     children:
                         null != t
                             ? t
-                            : (0, l.jsxs)(l.Fragment, {
+                            : (0, a.jsxs)(a.Fragment, {
                                   children: [
-                                      x
-                                          ? (0, l.jsx)('div', {
-                                                className: h.previousPerks,
-                                                children: g.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERKS_PREVIOUS_PERKS
+                                      v
+                                          ? (0, a.jsx)('div', {
+                                                className: _.previousPerks,
+                                                children: I.intl.string(I.t.oKzyRU)
                                             })
                                           : null,
-                                      null != a.perks &&
-                                          (0, l.jsx)('div', {
-                                              className: h.perks,
-                                              children: a.perks.map((e) => p(e, C))
+                                      null != r.perks &&
+                                          (0, a.jsx)('div', {
+                                              className: _.perks,
+                                              children: r.perks.map((e) => T(e, N))
                                           })
                                   ]
                               })
                 })
             ]
         },
-        a.tier
+        r.tier
     );
 }
-((i = s || (s = {}))[(i.OPEN = 0)] = 'OPEN'), (i[(i.CLOSING = 1)] = 'CLOSING'), (i[(i.CLOSED = 2)] = 'CLOSED'), ((r = a || (a = {}))[(r.NONE = 0)] = 'NONE'), (r[(r.UNLOCKED_SLIDE = 1)] = 'UNLOCKED_SLIDE');
-let f = (e) => {
-        let { transform: t, hasAnimatedUnlocked: n, headerButton: s, subscriptionsRequired: a } = e;
-        return null !== s ? s : n ? (0, l.jsx)(O, { transform: t }) : (0, l.jsx)(A, { subscriptionsRequired: a });
+((l = i || (i = {}))[(l.OPEN = 0)] = 'OPEN'), (l[(l.CLOSING = 1)] = 'CLOSING'), (l[(l.CLOSED = 2)] = 'CLOSED'), ((s = r || (r = {}))[(s.NONE = 0)] = 'NONE'), (s[(s.UNLOCKED_SLIDE = 1)] = 'UNLOCKED_SLIDE');
+let S = (e) => {
+        let { transform: t, hasAnimatedUnlocked: n, headerButton: i, subscriptionsRequired: r } = e;
+        return null !== i ? i : n ? (0, a.jsx)(b, { transform: t }) : (0, a.jsx)(R, { subscriptionsRequired: r });
     },
-    O = (e) => {
+    b = (e) => {
         let { transform: t } = e;
-        return (0, l.jsx)(u.animated.div, {
+        return (0, a.jsx)(u.animated.div, {
             style: { transform: t },
-            className: h.tierUnlocked,
-            children: g.Z.Messages.GUILD_SETTINGS_PREMIUM_GUILD_UNLOCKED
+            className: _.tierUnlocked,
+            children: I.intl.string(I.t.dNGM0t)
         });
     },
-    A = (e) => {
+    R = (e) => {
         let { subscriptionsRequired: t } = e;
-        return (0, l.jsxs)(l.Fragment, {
+        return (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, l.jsx)('div', {
-                    className: h.tierRequirement,
-                    children: g.Z.Messages.GUILD_SETTINGS_PREMIUM_GUILD_TIER_REQUIREMENT.format({ required: t })
+                (0, a.jsx)('div', {
+                    className: _.tierRequirement,
+                    children: I.intl.format(I.t.t2Wbo6, { required: t })
                 }),
-                (0, l.jsx)(_.LockIcon, {
+                (0, a.jsx)(m.LockIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: h.tierLock
+                    className: _.tierLock
                 })
             ]
         });

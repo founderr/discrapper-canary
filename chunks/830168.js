@@ -7,19 +7,19 @@ var a = n(570140),
     u = n(436181),
     c = n(626135),
     d = n(358085),
-    _ = n(998502),
-    E = n(981631),
-    f = n(186901);
-let h = new o.Z('NativeDispatchUtils');
-function p() {
-    return null == i && h.warn('Tried getting Dispatch instance before instantiated'), i;
+    f = n(998502),
+    _ = n(981631),
+    h = n(186901);
+let p = new o.Z('NativeDispatchUtils');
+function m() {
+    return null == i && p.warn('Tried getting Dispatch instance before instantiated'), i;
 }
-function I(e) {
+function g(e) {
     let t = JSON.parse(e);
-    return h.log('Native Dispatch error', t), new s.Z(t);
+    return p.log('Native Dispatch error', t), new s.Z(t);
 }
-function m(e, t) {
-    '' !== e && I(e);
+function E(e, t) {
+    '' !== e && g(e);
 }
 t.Z = {
     init(e) {
@@ -28,9 +28,9 @@ t.Z = {
             (null != r
                 ? Promise.resolve(r)
                 : (0, d.isDesktop)()
-                  ? Promise.all([_.ZP.ensureModule('discord_dispatch'), _.ZP.ensureModule('discord_modules')]).then(() => {
-                        _.ZP.requireModule('discord_modules');
-                        let e = _.ZP.getDispatch();
+                  ? Promise.all([f.ZP.ensureModule('discord_dispatch'), f.ZP.ensureModule('discord_modules')]).then(() => {
+                        f.ZP.requireModule('discord_modules');
+                        let e = f.ZP.getDispatch();
                         return null != e ? ((r = e), e) : Promise.reject(Error('dispatch not found'));
                     })
                   : Promise.reject(Error('not desktop client'))
@@ -38,11 +38,11 @@ t.Z = {
                 var r;
                 let d = {
                         environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                        build_number: '341142'
+                        build_number: '341192'
                     },
-                    _ = l.default.getCurrentUser();
-                null != _ && ((d.user_id = _.id), (d.user_name = _.tag), null != _.email && (d.email = _.email));
-                let f = {
+                    f = l.default.getCurrentUser();
+                null != f && ((d.user_id = f.id), (d.user_name = f.tag), null != f.email && (d.email = f.email));
+                let h = {
                     user_token: t,
                     user_id: n,
                     install_paths: a.map((e) => {
@@ -55,7 +55,7 @@ t.Z = {
                     platform: s
                 };
                 i = new e.Dispatch(
-                    JSON.stringify(f),
+                    JSON.stringify(h),
                     (e) => {
                         let t = JSON.parse(e);
                         o({
@@ -78,19 +78,19 @@ t.Z = {
                         });
                     },
                     (e) => {
-                        u(I(e));
+                        u(g(e));
                     },
                     (e) => {
                         !(function (e) {
                             let { properties: t } = e;
                             switch ((null != t.stage && null != t.stage.type && (t.stage = t.stage.type), e.event_name)) {
-                                case E.rMx.DISPATCH_PATCH_STARTED:
-                                case E.rMx.DISPATCH_PATCH_PAUSED:
-                                case E.rMx.DISPATCH_PATCH_FAILED:
-                                case E.rMx.DISPATCH_PATCH_VERIFICATION_FAILED:
-                                case E.rMx.DISPATCH_PATCH_COMPLETE:
-                                case E.rMx.DISPATCH_PATCH_CANCELLED:
-                                case E.rMx.DISPATCH_APPLICATION_UNINSTALLED:
+                                case _.rMx.DISPATCH_PATCH_STARTED:
+                                case _.rMx.DISPATCH_PATCH_PAUSED:
+                                case _.rMx.DISPATCH_PATCH_FAILED:
+                                case _.rMx.DISPATCH_PATCH_VERIFICATION_FAILED:
+                                case _.rMx.DISPATCH_PATCH_COMPLETE:
+                                case _.rMx.DISPATCH_PATCH_CANCELLED:
+                                case _.rMx.DISPATCH_APPLICATION_UNINSTALLED:
                                     c.default.track(e.event_name, t);
                             }
                         })(JSON.parse(e));
@@ -99,12 +99,12 @@ t.Z = {
             });
     },
     destroy() {
-        let e = p();
+        let e = m();
         null != e && void 0 !== e.destroy && (e.destroy(), (i = null));
     },
     setTargetManifest(e) {
         let { applicationId: t, applicationName: n, applicationIcon: r, branchId: i, buildId: a, manifestIds: s, installationPath: o } = e,
-            l = p();
+            l = m();
         if (null != l)
             l.command(
                 JSON.stringify({
@@ -117,11 +117,11 @@ t.Z = {
                     manifest_ids: s,
                     install_path: o
                 }),
-                m
+                E
             );
     },
     setCurrentTask(e, t, n, r, i) {
-        let a = p();
+        let a = m();
         return (
             null != a &&
             (a.command(
@@ -133,13 +133,13 @@ t.Z = {
                     user_id: r,
                     user_token: i
                 }),
-                m
+                E
             ),
             !0)
         );
     },
     setCredentials(e, t) {
-        let n = p();
+        let n = m();
         null != n &&
             n.command(
                 JSON.stringify({
@@ -147,11 +147,11 @@ t.Z = {
                     user_id: e,
                     user_token: t
                 }),
-                m
+                E
             );
     },
     cancel(e, t) {
-        let n = p();
+        let n = m();
         if (null != n)
             n.command(
                 JSON.stringify({
@@ -159,11 +159,11 @@ t.Z = {
                     application_id: e,
                     branch_id: t
                 }),
-                m
+                E
             );
     },
     uninstall(e, t) {
-        let n = p();
+        let n = m();
         if (null != n)
             n.command(
                 JSON.stringify({
@@ -171,19 +171,19 @@ t.Z = {
                     application_id: e,
                     branch_id: t
                 }),
-                m
+                E
             );
     },
     pause() {
-        let e = p();
-        if (null != e) e.command(JSON.stringify({ command: 'Pause' }), m);
+        let e = m();
+        if (null != e) e.command(JSON.stringify({ command: 'Pause' }), E);
     },
     resume() {
-        let e = p();
-        if (null != e) e.command(JSON.stringify({ command: 'Resume' }), m);
+        let e = m();
+        if (null != e) e.command(JSON.stringify({ command: 'Resume' }), E);
     },
     queryDirectory(e, t) {
-        let n = p();
+        let n = m();
         if (null != n)
             n.command(
                 JSON.stringify({
@@ -208,7 +208,7 @@ t.Z = {
             ? Promise.reject(Error('Already running launch setup.'))
             : (a.Z.dispatch({ type: 'DISPATCH_APPLICATION_LAUNCH_SETUP_START' }),
               new Promise((n, r) => {
-                  let i = p();
+                  let i = m();
                   if (null == i) {
                       r(Error('native dispatch instance not found'));
                       return;
@@ -222,12 +222,12 @@ t.Z = {
                       (e, t, i) => {
                           if ('' !== e) {
                               a.Z.dispatch({ type: 'DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE' });
-                              let t = I(e);
+                              let t = g(e);
                               a.Z.dispatch({
                                   type: 'DISPATCH_APPLICATION_ERROR',
                                   error: t
                               }),
-                                  null != t.code && t.code === f.ff.POST_INSTALL_CANCELLED ? r(t) : n();
+                                  null != t.code && t.code === h.ff.POST_INSTALL_CANCELLED ? r(t) : n();
                               return;
                           }
                           if ('' !== t) {
@@ -248,7 +248,7 @@ t.Z = {
               })),
     launch: (e, t, n, r) =>
         new Promise((i, a) => {
-            let s = p();
+            let s = m();
             if (null == s) {
                 a(Error('native dispatch instance not found'));
                 return;
@@ -262,7 +262,7 @@ t.Z = {
                     environment: r
                 }),
                 function (e, t) {
-                    '' !== e ? a(I(e)) : i([JSON.parse(t).pid]);
+                    '' !== e ? a(g(e)) : i([JSON.parse(t).pid]);
                 }
             );
         })

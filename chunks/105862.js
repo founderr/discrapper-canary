@@ -1,11 +1,11 @@
 t.d(n, {
     Z: function () {
-        return f;
+        return v;
     }
 });
 var i = t(200651),
-    a = t(192379),
-    l = t(780384),
+    l = t(192379),
+    a = t(780384),
     o = t(481060),
     r = t(410030),
     s = t(782568),
@@ -13,54 +13,54 @@ var i = t(200651),
     d = t(827498),
     u = t(888617),
     m = t(981631),
-    p = t(689938),
-    _ = t(597397),
-    C = t(983008),
-    h = t(478408);
-function f() {
+    p = t(388032),
+    h = t(597397),
+    f = t(983008),
+    C = t(478408);
+function v() {
     let e = (0, r.ZP)(),
-        n = (0, l.ap)(e) ? h : C,
-        t = a.useCallback(() => {
+        n = (0, a.ap)(e) ? C : f,
+        t = l.useCallback(() => {
             (0, s.Z)(c.Z.getArticleURL(m.BhN.LAUNCHING_APPS_WITH_SHAPES_BUTTON));
         }, []),
-        { trackSectionImpressionRef: f } = (0, u.Z)({
+        { trackSectionImpressionRef: v } = (0, u.Z)({
             sectionName: d.L3.NEW_TO_APPS,
             numItems: 1,
             numVisibleItems: 1
         });
     return (0, i.jsxs)('div', {
-        ref: (e) => (f.current = e),
-        className: _.container,
+        ref: (e) => (v.current = e),
+        className: h.container,
         children: [
             (0, i.jsx)('img', {
-                className: _.image,
+                className: h.image,
                 src: n,
                 alt: '',
                 'aria-hidden': !0
             }),
             (0, i.jsxs)('div', {
-                className: _.body,
+                className: h.body,
                 children: [
                     (0, i.jsx)(o.Heading, {
                         variant: 'heading-lg/bold',
                         color: 'header-primary',
-                        children: p.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_TITLE
+                        children: p.intl.string(p.t['kw8/ER'])
                     }),
                     (0, i.jsx)(o.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-normal',
-                        children: p.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_BODY
+                        children: p.intl.string(p.t.GZoV1N)
                     })
                 ]
             }),
             (0, i.jsx)(o.Button, {
                 size: o.Button.Sizes.MEDIUM,
-                'aria-label': p.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_LEARN_MORE_ARIA_LABEL.format({
-                    sectionTitle: p.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_TITLE,
-                    sectionBody: p.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_BODY
+                'aria-label': p.intl.formatToPlainString(p.t.xx5Sur, {
+                    sectionTitle: p.intl.string(p.t['kw8/ER']),
+                    sectionBody: p.intl.string(p.t.GZoV1N)
                 }),
                 onClick: t,
-                children: p.Z.Messages.APP_LAUNCHER_HOME_LEARN_MORE_SECTION_LEARN_MORE
+                children: p.intl.string(p.t.Ye51oa)
             })
         ]
     });

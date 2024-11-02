@@ -1,18 +1,18 @@
-t.d(o, {
+o.d(t, {
     Z: function () {
         return r;
     }
 });
-var i = t(200651);
-t(192379);
-var a = t(442837),
-    n = t(481060),
-    l = t(596454),
-    s = t(339085),
-    d = t(259605);
+var i = o(200651);
+o(192379);
+var n = o(442837),
+    l = o(481060),
+    a = o(596454),
+    s = o(339085),
+    d = o(259605);
 function r(e) {
-    let { reactionEmoji: o } = e,
-        t = (0, a.e7)([s.ZP], () => ((null == o ? void 0 : o.emojiId) != null ? s.ZP.getUsableCustomEmojiById(o.emojiId) : null));
+    let { reactionEmoji: t } = e,
+        o = (0, n.e7)([s.ZP], () => ((null == t ? void 0 : t.emojiId) != null ? s.ZP.getUsableCustomEmojiById(t.emojiId) : null));
     return (0, i.jsxs)('div', {
         className: d.container,
         children: [
@@ -49,19 +49,19 @@ function r(e) {
                     (0, i.jsxs)('div', {
                         className: d.reaction,
                         children: [
-                            null != o
-                                ? (0, i.jsx)(l.Z, {
+                            null != t
+                                ? (0, i.jsx)(a.Z, {
                                       className: d.reactionEmote,
-                                      emojiId: o.emojiId,
-                                      emojiName: o.emojiName,
-                                      animated: !!(null == t ? void 0 : t.animated)
+                                      emojiId: t.emojiId,
+                                      emojiName: t.emojiName,
+                                      animated: !!(null == o ? void 0 : o.animated)
                                   })
-                                : (0, i.jsx)(n.ReactionIcon, {
+                                : (0, i.jsx)(l.ReactionIcon, {
                                       size: 'sm',
                                       color: 'currentColor',
                                       className: d.reactionEmote
                                   }),
-                            (0, i.jsx)(n.Text, {
+                            (0, i.jsx)(l.Text, {
                                 variant: 'text-sm/semibold',
                                 color: 'interactive-normal',
                                 children: 17
@@ -83,12 +83,12 @@ function r(e) {
     });
 }
 function c(e) {
-    let { width: o, marginBottom: t } = e;
+    let { width: t, marginBottom: o } = e;
     return (0, i.jsx)('div', {
         className: d.placeholderLine,
         style: {
-            width: o,
-            marginBottom: t
+            width: t,
+            marginBottom: o
         }
     });
 }

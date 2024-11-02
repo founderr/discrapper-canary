@@ -1,22 +1,22 @@
 n.d(t, {
     RY: function () {
-        return s;
+        return l;
     },
     Tb: function () {
-        return l;
+        return s;
     },
     ec: function () {
         return o;
     },
     iD: function () {
-        return r;
+        return a;
     }
 }),
     n(47120);
 var i = n(570140),
-    a = n(830168);
-function s(e) {
-    a.Z.queryDirectory(e, (t, n) => {
+    r = n(830168);
+function l(e) {
+    r.Z.queryDirectory(e, (t, n) => {
         if (null == t && null != n)
             i.Z.dispatch({
                 type: 'INSTALLATION_LOCATION_ADD',
@@ -25,29 +25,29 @@ function s(e) {
             });
     });
 }
-function r(e) {
+function a(e) {
     i.Z.dispatch({
         type: 'INSTALLATION_LOCATION_REMOVE',
         path: e
     });
 }
-function l(e, t) {
-    let { label: n, isDefault: a } = t;
+function s(e, t) {
+    let { label: n, isDefault: r } = t;
     i.Z.dispatch({
         type: 'INSTALLATION_LOCATION_UPDATE',
         path: e,
         label: n,
-        isDefault: a
+        isDefault: r
     });
 }
 function o(e) {
     let t = {},
         n = 0;
-    for (let s of e) {
-        if (null != s && 'string' == typeof s)
-            a.Z.queryDirectory(s, (a, r) => {
+    for (let l of e) {
+        if (null != l && 'string' == typeof l)
+            r.Z.queryDirectory(l, (r, a) => {
                 ++n,
-                    null == a && null != r && (t[s] = r),
+                    null == r && null != a && (t[l] = a),
                     n === e.length &&
                         i.Z.dispatch({
                             type: 'INSTALLATION_LOCATION_FETCH_METADATA',

@@ -1,225 +1,225 @@
-n.r(l),
-    n.d(l, {
+t.r(n),
+    t.d(n, {
         default: function () {
-            return M;
+            return b;
         }
     }),
-    n(47120);
-var s = n(200651),
-    a = n(192379),
-    t = n(658722),
-    r = n.n(t),
-    o = n(399606),
-    u = n(481060),
-    i = n(313201),
-    d = n(734893),
-    c = n(271383),
-    _ = n(430824),
-    m = n(594174),
-    E = n(700785),
-    I = n(580357),
-    g = n(981631),
-    h = n(689938),
-    f = n(224474);
-function M(e) {
-    var l, n, t;
-    let { transitionState: M, onClose: x, guildId: S, welcomeMessage: p, onSave: T } = e,
-        v = (0, i.Dt)(),
-        [N, O] = a.useState({ ...p }),
-        A = (0, o.e7)([_.Z], () => _.Z.getGuild(S)),
-        b = a.useCallback(
+    t(47120);
+var l = t(200651),
+    r = t(192379),
+    a = t(658722),
+    o = t.n(a),
+    s = t(399606),
+    i = t(481060),
+    u = t(313201),
+    d = t(734893),
+    c = t(271383),
+    m = t(430824),
+    g = t(594174),
+    h = t(700785),
+    f = t(580357),
+    x = t(981631),
+    p = t(388032),
+    v = t(224474);
+function b(e) {
+    var n, t, a;
+    let { transitionState: b, onClose: I, guildId: _, welcomeMessage: j, onSave: k } = e,
+        B = (0, u.Dt)(),
+        [C, L] = r.useState({ ...j }),
+        M = (0, s.e7)([m.Z], () => m.Z.getGuild(_)),
+        N = r.useCallback(
             (e) => {
-                let l = {};
+                let n = {};
                 return Promise.resolve(
-                    c.ZP.getMembers(S)
-                        .filter((n) => {
-                            var s, a, t;
-                            let o = m.default.getUser(n.userId);
+                    c.ZP.getMembers(_)
+                        .filter((t) => {
+                            var l, r, a;
+                            let s = g.default.getUser(t.userId);
                             if (
-                                (null != o && (l[n.userId] = o),
-                                null == A ||
-                                    null == o ||
-                                    ((a = A),
-                                    (t = o),
+                                (null != s && (n[t.userId] = s),
+                                null == M ||
+                                    null == s ||
+                                    ((r = M),
+                                    (a = s),
                                     !(
-                                        a.isOwner(t) ||
-                                        E.BT({
-                                            permission: g.Plq.ADMINISTRATOR,
-                                            context: a,
-                                            user: t
+                                        r.isOwner(a) ||
+                                        h.BT({
+                                            permission: x.Plq.ADMINISTRATOR,
+                                            context: r,
+                                            user: a
                                         }) ||
-                                        (E.BT({
-                                            permission: g.Plq.MANAGE_GUILD,
-                                            context: a,
-                                            user: t
+                                        (h.BT({
+                                            permission: x.Plq.MANAGE_GUILD,
+                                            context: r,
+                                            user: a
                                         }) &&
-                                            E.BT({
-                                                permission: g.Plq.MANAGE_ROLES,
-                                                context: a,
-                                                user: t
+                                            h.BT({
+                                                permission: x.Plq.MANAGE_ROLES,
+                                                context: r,
+                                                user: a
                                             }))
                                     )))
                             )
                                 return !1;
-                            let u = ''.concat(null !== (s = n.nick) && void 0 !== s ? s : '', ' ').concat(null == o ? void 0 : o.username);
-                            return r()(e.toLowerCase(), u.toLowerCase());
+                            let i = ''.concat(null !== (l = t.nick) && void 0 !== l ? l : '', ' ').concat(null == s ? void 0 : s.username);
+                            return o()(e.toLowerCase(), i.toLowerCase());
                         })
                         .map((e) => {
-                            var n, s, a;
+                            var t, l, r;
                             return {
                                 value: e.userId,
-                                label: null !== (a = null !== (s = e.nick) && void 0 !== s ? s : null === (n = l[e.userId]) || void 0 === n ? void 0 : n.username) && void 0 !== a ? a : ''
+                                label: null !== (r = null !== (l = e.nick) && void 0 !== l ? l : null === (t = n[e.userId]) || void 0 === t ? void 0 : t.username) && void 0 !== r ? r : ''
                             };
                         })
                 );
             },
-            [S, A]
+            [_, M]
         ),
-        L = a.useCallback(
+        T = r.useCallback(
             (e) => {
-                if (null == S || null == e) return null;
-                let l = c.ZP.getMember(S, e.value);
-                if (null == l) return null;
-                let n = m.default.getUser(l.userId);
+                if (null == _ || null == e) return null;
+                let n = c.ZP.getMember(_, e.value);
                 if (null == n) return null;
-                let a = n.getAvatarURL(S, 20);
-                return (0, s.jsx)(u.AnimatedAvatar, {
-                    size: u.AvatarSizes.SIZE_20,
-                    src: a,
+                let t = g.default.getUser(n.userId);
+                if (null == t) return null;
+                let r = t.getAvatarURL(_, 20);
+                return (0, l.jsx)(i.AnimatedAvatar, {
+                    size: i.AvatarSizes.SIZE_20,
+                    src: r,
                     'aria-hidden': !0
                 });
             },
-            [S]
+            [_]
         ),
-        R = a.useCallback(
+        S = r.useCallback(
             (e) => {
-                let { value: l } = e;
-                O((e) => ({
+                let { value: n } = e;
+                L((e) => ({
                     ...e,
-                    authorIds: null != l ? [l] : []
+                    authorIds: null != n ? [n] : []
                 }));
             },
-            [O]
+            [L]
         ),
-        G = a.useCallback(
+        A = r.useCallback(
             (e) => {
-                O((l) => ({
-                    ...l,
+                L((n) => ({
+                    ...n,
                     message: null != e ? e : ''
                 }));
             },
-            [O]
+            [L]
         ),
-        C = a.useCallback(() => {
-            T(null), x();
-        }, [T, x]),
-        B = null !== (l = N.authorIds[0]) && void 0 !== l ? l : '',
-        j = (0, o.e7)([c.ZP], () => (null != S ? c.ZP.getMember(S, B) : null)),
-        Z = (0, o.e7)([m.default], () => (null != j ? m.default.getUser(j.userId) : null)),
-        k = null !== (t = null !== (n = null == j ? void 0 : j.nick) && void 0 !== n ? n : null == Z ? void 0 : Z.username) && void 0 !== t ? t : '',
-        D = (function (e) {
+        P = r.useCallback(() => {
+            k(null), I();
+        }, [k, I]),
+        R = null !== (n = C.authorIds[0]) && void 0 !== n ? n : '',
+        Z = (0, s.e7)([c.ZP], () => (null != _ ? c.ZP.getMember(_, R) : null)),
+        G = (0, s.e7)([g.default], () => (null != Z ? g.default.getUser(Z.userId) : null)),
+        H = null !== (a = null !== (t = null == Z ? void 0 : Z.nick) && void 0 !== t ? t : null == G ? void 0 : G.username) && void 0 !== a ? a : '',
+        w = (function (e) {
             if (null == e.message || 0 === e.message.length) return null;
-            if (null == e.authorIds || 0 === e.authorIds.length) return e.message.length < d.ZR ? h.Z.Messages.WELCOME_MESSAGE_VALIDATION_ERROR_AUTHOR_AND_MESSAGE.format({ minLength: d.ZR }) : h.Z.Messages.WELCOME_MESSAGE_VALIDATION_ERROR_AUTHOR;
-            return e.message.length < d.ZR ? h.Z.Messages.WELCOME_MESSAGE_VALIDATION_ERROR_MESSAGE.format({ minLength: d.ZR }) : null;
-        })(N);
-    return (0, s.jsxs)(u.ModalRoot, {
-        transitionState: M,
-        'aria-labelledby': v,
+            if (null == e.authorIds || 0 === e.authorIds.length) return e.message.length < d.ZR ? p.intl.formatToPlainString(p.t.Lj831N, { minLength: d.ZR }) : p.intl.string(p.t['4m7gtr']);
+            return e.message.length < d.ZR ? p.intl.formatToPlainString(p.t.TJGHXl, { minLength: d.ZR }) : null;
+        })(C);
+    return (0, l.jsxs)(i.ModalRoot, {
+        transitionState: b,
+        'aria-labelledby': B,
         children: [
-            (0, s.jsxs)('div', {
-                className: f.container,
+            (0, l.jsxs)('div', {
+                className: v.container,
                 children: [
-                    (0, s.jsx)(u.ModalCloseButton, {
-                        className: f.closeButton,
-                        onClick: x
+                    (0, l.jsx)(i.ModalCloseButton, {
+                        className: v.closeButton,
+                        onClick: I
                     }),
-                    (0, s.jsxs)('div', {
-                        className: f.formGroup,
+                    (0, l.jsxs)('div', {
+                        className: v.formGroup,
                         children: [
-                            (0, s.jsxs)(u.Heading, {
+                            (0, l.jsxs)(i.Heading, {
                                 variant: 'heading-md/semibold',
                                 color: 'header-primary',
-                                children: [h.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_WELCOME_AUTHOR_TITLE, (0, s.jsx)(I.Z, {})]
+                                children: [p.intl.string(p.t.zNQfQ0), (0, l.jsx)(f.Z, {})]
                             }),
-                            (0, s.jsx)(u.Text, {
+                            (0, l.jsx)(i.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                children: h.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_WELCOME_AUTHOR_EXPLAINER
+                                children: p.intl.string(p.t.mQHK2d)
                             }),
-                            (0, s.jsx)(u.SearchableSelect, {
+                            (0, l.jsx)(i.SearchableSelect, {
                                 value: {
-                                    value: B,
-                                    label: k
+                                    value: R,
+                                    label: H
                                 },
-                                renderOptionPrefix: L,
-                                options: b,
-                                onChange: R,
+                                renderOptionPrefix: T,
+                                options: N,
+                                onChange: S,
                                 filter: !1
                             })
                         ]
                     }),
-                    (0, s.jsx)('div', { className: f.separator }),
-                    (0, s.jsxs)('div', {
-                        className: f.formGroup,
+                    (0, l.jsx)('div', { className: v.separator }),
+                    (0, l.jsxs)('div', {
+                        className: v.formGroup,
                         children: [
-                            (0, s.jsx)(u.Heading, {
+                            (0, l.jsx)(i.Heading, {
                                 variant: 'heading-md/semibold',
                                 color: 'header-primary',
-                                children: h.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_WELCOME_MESSAGE_INPUT_HEADER
+                                children: p.intl.string(p.t.SHQcv7)
                             }),
-                            (0, s.jsx)(u.Text, {
+                            (0, l.jsx)(i.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                children: h.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_WELCOME_DESCRIPTION_TIP.format()
+                                children: p.intl.format(p.t['6biC4e'], {})
                             }),
-                            (0, s.jsx)(u.TextArea, {
-                                className: f.welcomeMessageTextInput,
-                                placeholder: h.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_WELCOME_PLACEHOLDER,
-                                value: N.message,
-                                onChange: G,
+                            (0, l.jsx)(i.TextArea, {
+                                className: v.welcomeMessageTextInput,
+                                placeholder: p.intl.string(p.t['kX/Sb2']),
+                                value: C.message,
+                                onChange: A,
                                 maxLength: d.W4
                             }),
-                            null != D
-                                ? (0, s.jsx)(u.Text, {
+                            null != w
+                                ? (0, l.jsx)(i.Text, {
                                       variant: 'text-xs/normal',
                                       color: 'text-danger',
-                                      children: D
+                                      children: w
                                   })
                                 : null
                         ]
                     })
                 ]
             }),
-            (0, s.jsx)(u.ModalFooter, {
-                children: (0, s.jsxs)('div', {
-                    className: f.footerButtons,
+            (0, l.jsx)(i.ModalFooter, {
+                children: (0, l.jsxs)('div', {
+                    className: v.footerButtons,
                     children: [
-                        (0, s.jsx)('div', {
-                            className: f.__invalid_leftButtons,
-                            children: (0, s.jsx)(u.Button, {
-                                size: u.Button.Sizes.SMALL,
-                                look: u.Button.Looks.LINK,
-                                color: u.Button.Colors.RED,
-                                onClick: C,
-                                children: h.Z.Messages.REMOVE
+                        (0, l.jsx)('div', {
+                            className: v.__invalid_leftButtons,
+                            children: (0, l.jsx)(i.Button, {
+                                size: i.Button.Sizes.SMALL,
+                                look: i.Button.Looks.LINK,
+                                color: i.Button.Colors.RED,
+                                onClick: P,
+                                children: p.intl.string(p.t.N86XcH)
                             })
                         }),
-                        (0, s.jsxs)('div', {
-                            className: f.rightButtons,
+                        (0, l.jsxs)('div', {
+                            className: v.rightButtons,
                             children: [
-                                (0, s.jsx)(u.Button, {
-                                    onClick: x,
-                                    size: u.Button.Sizes.SMALL,
-                                    look: u.Button.Looks.LINK,
-                                    color: u.Button.Colors.PRIMARY,
-                                    children: h.Z.Messages.CANCEL
+                                (0, l.jsx)(i.Button, {
+                                    onClick: I,
+                                    size: i.Button.Sizes.SMALL,
+                                    look: i.Button.Looks.LINK,
+                                    color: i.Button.Colors.PRIMARY,
+                                    children: p.intl.string(p.t['ETE/oK'])
                                 }),
-                                (0, s.jsx)(u.Button, {
-                                    disabled: 0 === N.message.length || null != D,
+                                (0, l.jsx)(i.Button, {
+                                    disabled: 0 === C.message.length || null != w,
                                     onClick: () => {
-                                        T(N), x();
+                                        k(C), I();
                                     },
-                                    children: h.Z.Messages.SAVE
+                                    children: p.intl.string(p.t.R3BPHx)
                                 })
                             ]
                         })

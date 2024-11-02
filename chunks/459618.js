@@ -8,22 +8,22 @@ var r = n(259443),
     u = n(650774),
     c = n(866960),
     d = n(626135),
-    _ = n(981631);
-let E = new r.Y('MessageRoundtripTrackerStore');
-function f(e) {
+    f = n(981631);
+let _ = new r.Y('MessageRoundtripTrackerStore');
+function h(e) {
     return null != e.apiResponseTimestamp && null != e.gatewaySeenTimestamp;
 }
-function h(e) {
+function p(e) {
     let t = l.Z.getBasicChannel(e.channelId);
     if (null == t) {
-        E.warn('Ignoring a messageData for channel '.concat(e.channelId, " because we can't find that channel."));
+        _.warn('Ignoring a messageData for channel '.concat(e.channelId, " because we can't find that channel."));
         return;
     }
     if (Math.random() > 0.1) return;
     let n = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
         r = null == e.gatewaySeenTimestamp ? null : e.gatewaySeenTimestamp - e.initialSendTimestamp,
         i = (0, o.d)();
-    d.default.track(_.rMx.SEND_MESSAGE_ROUNDTRIP, {
+    d.default.track(f.rMx.SEND_MESSAGE_ROUNDTRIP, {
         ...(0, s.Z)(),
         api_latency_ms: n,
         gateway_latency_ms: r,
@@ -35,7 +35,7 @@ function h(e) {
         ...(null != i && { mobile_signal_strength_level: i })
     });
 }
-class p extends i.ZP.Store {
+class m extends i.ZP.Store {
     recordMessageSendAttempt(e, t) {
         let n = {
             initialSendTimestamp: Date.now(),
@@ -46,7 +46,7 @@ class p extends i.ZP.Store {
         this.pendingMessages.set(t, n),
             setTimeout(() => {
                 let e = this.pendingMessages.get(t);
-                null != e && (h(e), this.pendingMessages.delete(t));
+                null != e && (p(e), this.pendingMessages.delete(t));
             }, 30000);
     }
     recordMessageSendApiResponse(e) {
@@ -56,7 +56,7 @@ class p extends i.ZP.Store {
                 ...t,
                 apiResponseTimestamp: Date.now()
             };
-            f(n) ? (h(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
+            h(n) ? (p(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
         }
     }
     recordGatewayResponse(e) {
@@ -66,7 +66,7 @@ class p extends i.ZP.Store {
                 ...t,
                 gatewaySeenTimestamp: Date.now()
             };
-            f(n) ? (h(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
+            h(n) ? (p(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
         }
     }
     constructor(...e) {
@@ -85,11 +85,11 @@ class p extends i.ZP.Store {
                 : (t[n] = r);
     }
 }
-let I = new p(a.Z, {
+let g = new m(a.Z, {
     MESSAGE_CREATE: function (e) {
         let { optimistic: t, message: n } = e,
             r = n.nonce;
-        if (!t && null != r) I.recordGatewayResponse(r);
+        if (!t && null != r) g.recordGatewayResponse(r);
     }
 });
-t.Z = I;
+t.Z = g;

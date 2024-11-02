@@ -10,8 +10,8 @@ var t = l(200651),
     i = l(192379),
     r = l(317261),
     a = l(379357),
-    s = l(442550),
-    d = l(561308),
+    d = l(442550),
+    s = l(561308),
     u = l(297781),
     c = l(443487),
     o = l(494399);
@@ -23,7 +23,7 @@ function x(e) {
 n.ZP = i.memo((e) => {
     let { entry: n, channel: l, selected: i } = e,
         { largeImage: r } = (0, a.rv)({ entry: n }),
-        m = (0, d.Nq)(n);
+        m = (0, s.Nq)(n);
     return null != m && x(m)
         ? (0, t.jsxs)(c.Zb, {
               selected: i,
@@ -42,7 +42,7 @@ n.ZP = i.memo((e) => {
                           })
                       ]
                   }),
-                  (0, t.jsx)(s.f, {
+                  (0, t.jsx)(d.f, {
                       src: null == r ? void 0 : r.src,
                       size: 48,
                       className: o.thumbnail,

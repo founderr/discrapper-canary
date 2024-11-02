@@ -6,7 +6,7 @@ var r,
 Object.defineProperty(t, 'Hue', {
     enumerable: !0,
     get: function () {
-        return _(o).default;
+        return f(o).default;
     }
 });
 var l = n(87977),
@@ -14,11 +14,11 @@ var l = n(87977),
 Object.defineProperty(t, 'Saturation', {
     enumerable: !0,
     get: function () {
-        return _(u).default;
+        return f(u).default;
     }
 });
 var c = n(15488),
     d = n(393377);
-function _(e) {
+function f(e) {
     return e && e.__esModule ? e : { default: e };
 }

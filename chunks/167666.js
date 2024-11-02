@@ -23,7 +23,7 @@ let d = {
     MEDIUM: u.sizeMedium,
     LARGE: u.sizeLarge
 };
-class _ extends (r = a.PureComponent) {
+class f extends (r = a.PureComponent) {
     calculateScroll() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this._scroller;
         if (null == e) return;
@@ -72,13 +72,13 @@ class _ extends (r = a.PureComponent) {
             (this.state = { hideSeparator: !1 });
     }
 }
-c(_, 'Header', l.ModalHeader),
-    c(_, 'Footer', l.ModalFooter),
-    c(_, 'Content', l.ModalContent),
-    c(_, 'ListContent', l.ModalListContent),
-    c(_, 'CloseButton', l.ModalCloseButton),
-    c(_, 'Sizes', d),
-    c(_, 'defaultProps', {
+c(f, 'Header', l.ModalHeader),
+    c(f, 'Footer', l.ModalFooter),
+    c(f, 'Content', l.ModalContent),
+    c(f, 'ListContent', l.ModalListContent),
+    c(f, 'CloseButton', l.ModalCloseButton),
+    c(f, 'Sizes', d),
+    c(f, 'defaultProps', {
         fullscreenOnMobile: !0,
         size: d.SMALL,
         tag: 'div'

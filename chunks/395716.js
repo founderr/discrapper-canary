@@ -1,44 +1,44 @@
-n.d(s, {
+n.d(t, {
     Z: function () {
         return u;
     }
 }),
     n(47120);
-var t = n(200651),
-    a = n(192379),
-    l = n(442837),
-    r = n(481060),
-    i = n(287734),
+var i = n(200651),
+    l = n(192379),
+    r = n(442837),
+    a = n(481060),
+    s = n(287734),
     o = n(592125),
     c = n(693546),
-    d = n(689938);
+    d = n(388032);
 function u(e) {
-    let { joinRequest: s } = e,
-        [n, u] = a.useState(!1),
-        I = (0, l.e7)([o.Z], () => o.Z.getChannel(s.interviewChannelId)),
-        E = a.useCallback(() => {
-            (0, r.showToast)((0, r.createToast)(d.Z.Messages.ERROR_GENERIC_TITLE, r.ToastType.FAILURE));
+    let { joinRequest: t } = e,
+        [n, u] = l.useState(!1),
+        m = (0, r.e7)([o.Z], () => o.Z.getChannel(t.interviewChannelId)),
+        h = l.useCallback(() => {
+            (0, a.showToast)((0, a.createToast)(d.intl.string(d.t.R0RpRU), a.ToastType.FAILURE));
         }, []),
-        _ = a.useCallback(async () => {
-            if (null != I) {
-                i.default.selectPrivateChannel(I.id);
+        x = l.useCallback(async () => {
+            if (null != m) {
+                s.default.selectPrivateChannel(m.id);
                 return;
             }
             if (!n) {
                 u(!0);
                 try {
-                    await c.Z.createOrEnterJoinRequestInterview(s.joinRequestId);
+                    await c.Z.createOrEnterJoinRequestInterview(t.joinRequestId);
                 } catch {
-                    E();
+                    h();
                 } finally {
                     u(!1);
                 }
             }
-        }, [I, s.joinRequestId, E, n]);
-    return (0, t.jsx)(r.Button, {
-        color: r.Button.Colors.BRAND,
+        }, [m, t.joinRequestId, h, n]);
+    return (0, i.jsx)(a.Button, {
+        color: a.Button.Colors.BRAND,
         submitting: n,
-        onClick: _,
-        children: d.Z.Messages.CLAN_DM_APPLICANT
+        onClick: x,
+        children: d.intl.string(d.t.aqiUAA)
     });
 }

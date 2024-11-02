@@ -1,19 +1,19 @@
-E.d(_, {
+n.d(t, {
     E: function () {
-        return T;
+        return a;
     }
 });
-var s = E(442837),
-    n = E(650774),
-    t = E(206583),
-    r = E(981631);
-function T(e) {
-    return (0, s.e7)([n.Z], () => {
+var r = n(442837),
+    l = n(650774),
+    i = n(206583),
+    s = n(981631);
+function a(e) {
+    return (0, r.e7)([l.Z], () => {
         if (null == e) return;
-        let _ = n.Z.getMemberCount(e.id),
-            E = e.hasFeature(r.oNc.ACTIVITY_FEED_ENABLED_BY_USER),
-            s = e.hasFeature(r.oNc.ACTIVITY_FEED_DISABLED_BY_USER),
-            T = null != _ && _ < t.k4;
-        return E || s ? E : T;
+        let t = l.Z.getMemberCount(e.id),
+            n = e.hasFeature(s.oNc.ACTIVITY_FEED_ENABLED_BY_USER),
+            r = e.hasFeature(s.oNc.ACTIVITY_FEED_DISABLED_BY_USER),
+            a = null != t && t < i.k4;
+        return n || r ? n : a;
     });
 }

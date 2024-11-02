@@ -1,19 +1,19 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var l = n(200651),
-    a = n(481060),
-    i = n(531501),
+var i = n(200651),
+    l = n(481060),
+    a = n(531501),
     r = n(211494);
-function s(e) {
+function o(e) {
     let { rank: t } = e;
-    return (0, l.jsx)(i.Z, {
+    return (0, i.jsx)(a.Z, {
         color: '#cbaa62',
-        children: (0, l.jsx)('div', {
+        children: (0, i.jsx)('div', {
             className: r.innerContainer,
-            children: (0, l.jsx)(a.Text, {
+            children: (0, i.jsx)(l.Text, {
                 variant: 'text-sm/medium',
                 className: r.rankText,
                 children: t

@@ -7,9 +7,9 @@ var r = n(961123),
 e.exports = function (e, t, n) {
     t = r(t, e);
     for (var u = -1, c = t.length, d = !1; ++u < c; ) {
-        var _ = l(t[u]);
-        if (!(d = null != e && n(e, _))) break;
-        e = e[_];
+        var f = l(t[u]);
+        if (!(d = null != e && n(e, f))) break;
+        e = e[f];
     }
-    return d || ++u != c ? d : !!(c = null == e ? 0 : e.length) && o(c) && s(_, c) && (a(e) || i(e));
+    return d || ++u != c ? d : !!(c = null == e ? 0 : e.length) && o(c) && s(f, c) && (a(e) || i(e));
 };

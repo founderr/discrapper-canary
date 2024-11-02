@@ -1,6 +1,6 @@
 n.d(t, {
     NR: function () {
-        return a;
+        return s;
     },
     Ob: function () {
         return o;
@@ -16,13 +16,13 @@ n.d(t, {
     }
 });
 var r = n(987170),
-    s = n(987338);
-let a = (0, r.Z)({
+    a = n(987338);
+let s = (0, r.Z)({
         kind: 'user',
         id: '2024-07_ctp_collectibles_shop_open_vanilla',
         label: 'CTP collectibles shop open - A/A test - Vanilla',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: s.$P.COLLECTIBLES_SHOP_OPEN,
+        commonTriggerPoint: a.$P.COLLECTIBLES_SHOP_OPEN,
         treatments: [
             {
                 id: 1,
@@ -36,7 +36,7 @@ let a = (0, r.Z)({
         id: '2024-07_ctp_collectibles_shop_open_filters',
         label: 'CTP collectibles shop open - A/A test - Filters',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: s.$P.COLLECTIBLES_SHOP_OPEN,
+        commonTriggerPoint: a.$P.COLLECTIBLES_SHOP_OPEN,
         treatments: [
             {
                 id: 1,
@@ -50,7 +50,7 @@ let a = (0, r.Z)({
         id: '2024-07_ctp_collectibles_shop_open_multiple_buckets',
         label: 'CTP collectibles shop open - A/A test - Multiple buckets',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: s.$P.COLLECTIBLES_SHOP_OPEN,
+        commonTriggerPoint: a.$P.COLLECTIBLES_SHOP_OPEN,
         treatments: [
             {
                 id: 1,
@@ -69,7 +69,7 @@ let a = (0, r.Z)({
         id: '2024-07_ctp_collectibles_shop_open_everyone',
         label: 'CTP collectibles shop open - A/A test - Everyone',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: s.$P.COLLECTIBLES_SHOP_OPEN,
+        commonTriggerPoint: a.$P.COLLECTIBLES_SHOP_OPEN,
         treatments: [
             {
                 id: 1,
@@ -83,7 +83,7 @@ let a = (0, r.Z)({
         id: '2024-07_ctp_collectibles_shop_open_uneven_buckets',
         label: 'CTP collectibles shop open - A/A test - Uneven buckets',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: s.$P.COLLECTIBLES_SHOP_OPEN,
+        commonTriggerPoint: a.$P.COLLECTIBLES_SHOP_OPEN,
         treatments: [
             {
                 id: 1,

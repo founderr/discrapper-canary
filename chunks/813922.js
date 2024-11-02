@@ -1,89 +1,89 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return x;
     }
 });
-var s = n(200651),
-    a = n(192379),
-    i = n(536982),
-    r = n(456677),
-    l = n(951665),
+var i = n(200651),
+    r = n(192379),
+    l = n(536982),
+    s = n(456677),
+    a = n(951665),
     o = n(428760),
     c = n(55889),
     d = n(300453),
     u = n(620436),
-    _ = n(273504),
-    I = n(689938),
-    E = n(739864);
-function T(e) {
-    var t, n, T, m, N, S;
-    let { rule: g, onChangeRule: h } = e,
-        C = a.useCallback(
+    m = n(273504),
+    h = n(388032),
+    g = n(739864);
+function x(e) {
+    var t, n, x, p, f, C;
+    let { rule: I, onChangeRule: _ } = e,
+        N = r.useCallback(
             (e) => {
-                h({
-                    ...g,
+                _({
+                    ...I,
                     triggerMetadata: {
-                        ...g.triggerMetadata,
+                        ...I.triggerMetadata,
                         keywordFilter: e
                     }
                 });
             },
-            [h, g]
+            [_, I]
         ),
-        x = a.useCallback(
+        v = r.useCallback(
             (e) => {
-                h({
-                    ...g,
+                _({
+                    ...I,
                     triggerMetadata: {
-                        ...g.triggerMetadata,
+                        ...I.triggerMetadata,
                         allowList: e
                     }
                 });
             },
-            [h, g]
+            [_, I]
         );
-    return (0, s.jsx)(s.Fragment, {
-        children: (0, s.jsxs)('div', {
-            className: E.cardContentsContainer,
+    return (0, i.jsx)(i.Fragment, {
+        children: (0, i.jsxs)('div', {
+            className: g.cardContentsContainer,
             children: [
-                (0, s.jsxs)(d.Z, {
+                (0, i.jsxs)(d.Z, {
                     step: 1,
-                    header: I.Z.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_TRIGGER_HEADER,
+                    header: h.intl.string(h.t['ue+tnZ']),
                     children: [
-                        (0, s.jsx)(o.Z, {
-                            onChangeText: C,
-                            maxWordCount: _.RH,
-                            initialValue: null === (t = g.triggerMetadata) || void 0 === t ? void 0 : t.keywordFilter
+                        (0, i.jsx)(o.Z, {
+                            onChangeText: N,
+                            maxWordCount: m.RH,
+                            initialValue: null === (t = I.triggerMetadata) || void 0 === t ? void 0 : t.keywordFilter
                         }),
-                        (0, s.jsx)(l.Z, {
-                            rule: g,
-                            onChangeRule: h,
-                            collapsed: (null == g ? void 0 : null === (n = g.triggerMetadata) || void 0 === n ? void 0 : n.regexPatterns) == null || (null == g ? void 0 : null === (T = g.triggerMetadata) || void 0 === T ? void 0 : T.regexPatterns.length) === 0
+                        (0, i.jsx)(a.Z, {
+                            rule: I,
+                            onChangeRule: _,
+                            collapsed: (null == I ? void 0 : null === (n = I.triggerMetadata) || void 0 === n ? void 0 : n.regexPatterns) == null || (null == I ? void 0 : null === (x = I.triggerMetadata) || void 0 === x ? void 0 : x.regexPatterns.length) === 0
                         }),
-                        (0, s.jsx)(i.Z, {
-                            onChange: x,
-                            initialValue: null === (m = g.triggerMetadata) || void 0 === m ? void 0 : m.allowList,
-                            maxWordCount: _.n4,
-                            collapsed: (null === (N = g.triggerMetadata) || void 0 === N ? void 0 : N.allowList) == null || (null === (S = g.triggerMetadata) || void 0 === S ? void 0 : S.allowList.length) === 0
+                        (0, i.jsx)(l.Z, {
+                            onChange: v,
+                            initialValue: null === (p = I.triggerMetadata) || void 0 === p ? void 0 : p.allowList,
+                            maxWordCount: m.n4,
+                            collapsed: (null === (f = I.triggerMetadata) || void 0 === f ? void 0 : f.allowList) == null || (null === (C = I.triggerMetadata) || void 0 === C ? void 0 : C.allowList.length) === 0
                         })
                     ]
                 }),
-                (0, s.jsx)(u.Z, { type: u.Z.Type.ARROW_DOWN }),
-                (0, s.jsx)(d.Z, {
+                (0, i.jsx)(u.Z, { type: u.Z.Type.ARROW_DOWN }),
+                (0, i.jsx)(d.Z, {
                     step: 2,
-                    header: I.Z.Messages.GUILD_AUTOMOD_ACTIONS_HEADER,
-                    children: (0, s.jsx)(r.Z, {
-                        rule: g,
-                        onChangeRule: h
+                    header: h.intl.string(h.t['18TOiY']),
+                    children: (0, i.jsx)(s.Z, {
+                        rule: I,
+                        onChangeRule: _
                     })
                 }),
-                (0, s.jsx)(u.Z, { type: u.Z.Type.CROSS }),
-                (0, s.jsx)(d.Z, {
+                (0, i.jsx)(u.Z, { type: u.Z.Type.CROSS }),
+                (0, i.jsx)(d.Z, {
                     step: 3,
-                    header: I.Z.Messages.GUILD_AUTOMOD_ROLES_EXEMPTION_HEADER,
-                    children: (0, s.jsx)(c.Z, {
-                        rule: g,
-                        onChangeRule: h,
+                    header: h.intl.string(h.t.u5xPPT),
+                    children: (0, i.jsx)(c.Z, {
+                        rule: I,
+                        onChangeRule: _,
                         onlyRoles: !0
                     })
                 })

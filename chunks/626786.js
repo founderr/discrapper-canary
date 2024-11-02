@@ -5,27 +5,27 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    a = n.n(s),
-    l = n(134433),
-    r = n(139513);
+var l = n(120356),
+    r = n.n(l),
+    a = n(134433),
+    s = n(139513);
 function o(e) {
     let t,
-        { className: n, children: s, verified: o, roleColor: c, roleName: u } = e;
+        { className: n, children: l, verified: o, roleColor: c, roleName: u } = e;
     return (
         (t = o
-            ? (0, i.jsx)(l.Z, {
+            ? (0, i.jsx)(a.Z, {
                   size: 12,
                   color: c,
-                  className: r.linkedRoleColor
+                  className: s.linkedRoleColor
               })
             : (0, i.jsx)('div', {
-                  className: r.roleColor,
+                  className: s.roleColor,
                   style: { backgroundColor: c }
               })),
         (0, i.jsxs)('div', {
-            className: a()(n, r.role),
-            children: [t, u, s]
+            className: r()(n, s.role),
+            children: [t, u, l]
         })
     );
 }

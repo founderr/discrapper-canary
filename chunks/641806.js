@@ -1,15 +1,15 @@
 n.d(t, {
     $: function () {
-        return i;
+        return l;
     }
 });
-var s = n(970648),
-    a = n(981631);
-async function i(e) {
-    let t = s.Z.generateNonce();
+var i = n(970648),
+    r = n(981631);
+async function l(e) {
+    let t = i.Z.generateNonce();
     try {
-        let n = await s.Z.createHandoffToken(t);
-        return a.EYA.DEVELOPER_PORTAL_LOGIN_HANDOFF(t, n, e);
+        let n = await i.Z.createHandoffToken(t);
+        return r.EYA.DEVELOPER_PORTAL_LOGIN_HANDOFF(t, n, e);
     } catch {
         return '//'.concat(window.GLOBAL_ENV.DEVELOPERS_ENDPOINT, '/').concat(e);
     }

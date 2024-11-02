@@ -5,12 +5,12 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(100621),
-    a = n(481060),
-    l = n(871499),
-    r = n(689938),
+var l = n(100621),
+    r = n(481060),
+    a = n(871499),
+    s = n(388032),
     o = n(305705);
-let c = (0, s.animated)((e) => {
+let c = (0, l.animated)((e) => {
     let { percentComplete: t } = e,
         n = 20;
     return (0, i.jsx)('svg', {
@@ -31,29 +31,29 @@ let c = (0, s.animated)((e) => {
     });
 });
 function u(e) {
-    let { totalCooldownSeconds: t, remainingCooldownSeconds: n, onClick: u, onKeyDown: d, onMouseEnter: h, onMouseLeave: m, isActive: p = !1, isCenterButton: _ = !1, ...f } = e,
-        E = n > 0,
-        g = (0, a.useSpring)(
+    let { totalCooldownSeconds: t, remainingCooldownSeconds: n, onClick: u, onKeyDown: d, onMouseEnter: h, onMouseLeave: m, isActive: p = !1, isCenterButton: f = !1, ...g } = e,
+        C = n > 0,
+        x = (0, r.useSpring)(
             {
                 percentComplete: 0 !== n ? (t - n) / t : 0,
                 config: {
-                    ...s.config.molasses,
+                    ...l.config.molasses,
                     duration: 1000
                 }
             },
             'animate-always'
         ),
-        C = E ? r.Z.Messages.VOICE_CHANNEL_EFFECTS_COOLDOWN.format({ seconds: n }) : void 0,
-        I = _ ? l.d : l.Z;
+        v = C ? s.intl.formatToPlainString(s.t.D8Drx8, { seconds: n }) : void 0,
+        _ = f ? a.d : a.Z;
     return (0, i.jsxs)('div', {
         className: o.container,
         children: [
-            E ? (0, i.jsx)(c, { percentComplete: g.percentComplete }) : null,
-            (0, i.jsx)(I, {
-                ...f,
-                disabled: E,
-                label: C,
-                iconComponent: a.ReactionIcon,
+            C ? (0, i.jsx)(c, { percentComplete: x.percentComplete }) : null,
+            (0, i.jsx)(_, {
+                ...g,
+                disabled: C,
+                label: v,
+                iconComponent: r.ReactionIcon,
                 onClick: u,
                 onKeyDown: d,
                 onMouseEnter: h,

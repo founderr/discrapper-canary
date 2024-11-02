@@ -1,13 +1,13 @@
 let r, i;
 n.d(t, {
     FC: function () {
-        return f;
+        return h;
     },
     _H: function () {
-        return _;
+        return f;
     },
     yR: function () {
-        return E;
+        return _;
     }
 }),
     n(47120),
@@ -31,7 +31,7 @@ function d(e, t, n) {
         e
     );
 }
-class _ {
+class f {
     format(e) {
         if (!this.hasMarkdown) return this.intlMessage.format(e);
         let [t, n] = this.getContext(e);
@@ -57,7 +57,7 @@ class _ {
         d(this, 'message', void 0), d(this, 'hasMarkdown', void 0), d(this, 'intlMessage', void 0), (this.message = n ? e : e.replace(c.hN, '')), (this.hasMarkdown = n), (this.intlMessage = new (s())(this.message, t));
     }
 }
-function E(e) {
+function _(e) {
     (r = (function (e, t) {
         let n = l().parserFor(t(e)),
             r = l().reactFor(l().ruleOutput(e, 'react'));
@@ -85,10 +85,10 @@ function E(e) {
                 });
         })(u.j));
 }
-function f(e, t) {
+function h(e, t) {
     if (null == e) return '';
-    null == r && E(n(281071).Z), (e = e.replace(/^\n+|\n+$/g, ''));
+    null == r && _(n(281071).Z), (e = e.replace(/^\n+|\n+$/g, ''));
     let i = c.aT.test(e),
         a = c.b9.test(e);
-    return i || a ? new _(e, t, a) : e;
+    return i || a ? new f(e, t, a) : e;
 }

@@ -1,33 +1,33 @@
 n(47120);
-var s = n(200651),
-    a = n(192379),
-    i = n(392711),
-    r = n.n(i),
-    l = n(252759),
+var i = n(200651),
+    r = n(192379),
+    l = n(392711),
+    s = n.n(l),
+    a = n(252759),
     o = n(442837),
     c = n(481060),
     d = n(946314),
     u = n(938502),
-    _ = n(967916),
-    I = n(68638),
-    E = n(816817),
-    T = n(219369),
-    m = n(650774),
-    N = n(845377),
-    S = n(981631),
-    g = n(689938),
-    h = n(445314),
-    C = n(716455);
-let x = ['322850917248663552', '172018499005317120', '414234792121597953', '228406572756369408'],
-    p = ['620723483965653003', '662246299369734154', '181970867549503489', '102860784329052160'];
+    m = n(967916),
+    h = n(68638),
+    g = n(816817),
+    x = n(219369),
+    p = n(650774),
+    f = n(845377),
+    C = n(981631),
+    I = n(388032),
+    _ = n(445314),
+    N = n(716455);
+let v = ['322850917248663552', '172018499005317120', '414234792121597953', '228406572756369408'],
+    T = ['620723483965653003', '662246299369734154', '181970867549503489', '102860784329052160'];
 t.Z = (e) => {
-    let { guild: t, onEnableDiscovery: n, isGuildAdmin: i } = e,
-        [R, L] = (0, l.Z)(() => [r().sample(x), r().sample(p)], []);
-    a.useEffect(() => {
-        _.z([R, L]);
-    }, [R, L]);
-    let [f, O] = (0, o.Wu)([I.Z], () => [I.Z.getGuild(R), I.Z.getGuild(L)], [R, L]),
-        { canEnableDiscovery: A, isPendingSuccess: M } = (0, o.cj)(
+    let { guild: t, onEnableDiscovery: n, isGuildAdmin: l } = e,
+        [j, E] = (0, a.Z)(() => [s().sample(v), s().sample(T)], []);
+    r.useEffect(() => {
+        m.z([j, E]);
+    }, [j, E]);
+    let [S, b] = (0, o.Wu)([h.Z], () => [h.Z.getGuild(j), h.Z.getGuild(E)], [j, E]),
+        { canEnableDiscovery: R, isPendingSuccess: Z } = (0, o.cj)(
             [d.ZP],
             () => ({
                 canEnableDiscovery: d.ZP.passesChecklist(t.id),
@@ -35,93 +35,93 @@ t.Z = (e) => {
             }),
             [t.id]
         ),
-        [D, v] = (0, o.Wu)([m.Z], () => [null, m.Z.getMemberCount(t.id)], [t.id]),
-        j = a.useCallback(() => {
+        [A, L] = (0, o.Wu)([p.Z], () => [null, p.Z.getMemberCount(t.id)], [t.id]),
+        y = r.useCallback(() => {
             null != n && n();
         }, [n]),
-        Z = null;
+        D = null;
     return (
-        i ? (M ? (Z = g.Z.Messages.GUILD_SETTINGS_DISCOVERY_PENDING_HEALTHY) : !A && (Z = g.Z.Messages.GUILD_SETTINGS_DISCOVERY_REQUIREMENTS_NOT_MET)) : (Z = g.Z.Messages.GUILD_SETTINGS_DISCOVERY_ADMIN_ONLY),
-        (0, s.jsxs)('div', {
-            className: h.container,
+        l ? (Z ? (D = I.intl.string(I.t.zP8DFx)) : !R && (D = I.intl.string(I.t.ABFu19))) : (D = I.intl.string(I.t['5VbUBw'])),
+        (0, i.jsxs)('div', {
+            className: _.container,
             children: [
-                (0, s.jsx)('img', {
+                (0, i.jsx)('img', {
                     alt: '',
-                    src: C,
-                    className: h.sparkles
+                    src: N,
+                    className: _.sparkles
                 }),
-                (0, s.jsxs)('div', {
-                    className: h.discoverPreview,
+                (0, i.jsxs)('div', {
+                    className: _.discoverPreview,
                     children: [
-                        (0, s.jsx)(E.Z, {
-                            className: h.placeholderCard,
+                        (0, i.jsx)(g.Z, {
+                            className: _.placeholderCard,
                             disabled: !0,
                             small: !0,
-                            loading: null == f,
-                            guild: f
+                            loading: null == S,
+                            guild: S
                         }),
-                        (0, s.jsx)(E.Z, {
-                            className: h.previewCard,
+                        (0, i.jsx)(g.Z, {
+                            className: _.previewCard,
                             guild: t,
-                            description: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_PREVIEW_DESCRIPTION,
-                            presenceCount: D,
-                            memberCount: v
+                            description: I.intl.string(I.t['0k7fyM']),
+                            presenceCount: A,
+                            memberCount: L
                         }),
-                        (0, s.jsx)(E.Z, {
-                            className: h.placeholderCard,
+                        (0, i.jsx)(g.Z, {
+                            className: _.placeholderCard,
                             disabled: !0,
                             small: !0,
-                            loading: null == O,
-                            guild: O
+                            loading: null == b,
+                            guild: b
                         })
                     ]
                 }),
-                (0, s.jsx)(c.Heading, {
-                    className: h.header,
+                (0, i.jsx)(c.Heading, {
+                    className: _.header,
                     variant: 'heading-xl/semibold',
-                    children: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_HEADER
+                    children: I.intl.string(I.t.UwPrKS)
                 }),
-                (0, s.jsx)(c.Text, {
+                (0, i.jsx)(c.Text, {
                     variant: 'text-md/normal',
-                    className: h.valueProp,
+                    className: _.valueProp,
                     color: 'header-secondary',
-                    children: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_PAGE_DESCRIPTION.format({
+                    children: I.intl.format(I.t.BhkgBg, {
                         onLinkClick: () =>
-                            (0, T.lW)({
-                                articleId: S.BhN.SERVER_DISCOVERY,
+                            (0, x.lW)({
+                                articleId: C.BhN.SERVER_DISCOVERY,
                                 guildId: t.id,
                                 pageView: u.d5.INTRO
                             })
                     })
                 }),
-                (0, s.jsx)(c.Text, {
+                (0, i.jsx)(c.Text, {
                     variant: 'text-md/normal',
-                    className: h.byline,
+                    className: _.byline,
                     color: 'header-secondary',
-                    children: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_PAGE_DESCRIPTION_SUBHEADING.format({
+                    children: I.intl.format(I.t.ALSi8v, {
                         onGuidelinesClick: () =>
-                            (0, T.lW)({
-                                articleId: S.BhN.SERVER_DISCOVERY_GUIDELINES,
+                            (0, x.lW)({
+                                articleId: C.BhN.SERVER_DISCOVERY_GUIDELINES,
                                 guildId: t.id,
                                 pageView: u.d5.INTRO
                             })
                     })
                 }),
-                (0, s.jsx)(c.Tooltip, {
-                    text: Z,
+                (0, i.jsx)(c.Tooltip, {
+                    text: D,
                     children: (e) =>
-                        (0, s.jsx)(c.Button, {
+                        (0, i.jsx)(c.Button, {
                             ...e,
-                            className: h.enableButton,
+                            className: _.enableButton,
                             color: c.Button.Colors.BRAND,
                             size: c.Button.Sizes.LARGE,
-                            disabled: !A || !i,
-                            onClick: j,
-                            children: g.Z.Messages.GUILD_SETTINGS_SET_UP_DISCOVERY
+                            disabled: !R || !l,
+                            onClick: y,
+                            children: I.intl.string(I.t.oBIZwc)
                         })
                 }),
-                (0, s.jsx)(N.Z, {
-                    className: h.checklist,
+                (0, i.jsx)(f.Z, {
+                    className: _.checklist,
                     guild: t,
                     guildId: t.id
                 })

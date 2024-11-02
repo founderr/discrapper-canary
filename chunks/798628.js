@@ -1,6 +1,6 @@
 n.d(t, {
     cE: function () {
-        return o;
+        return s;
     },
     eu: function () {
         return c;
@@ -10,21 +10,21 @@ n.d(t, {
     }
 });
 var i = n(903797),
-    a = n(731965),
-    s = n(902704);
-let r = {},
-    l = (0, i.Z)((e) => ({
+    r = n(731965),
+    l = n(902704);
+let a = {},
+    o = (0, i.Z)((e) => ({
         polls: {},
         updatePollState(t, n, i) {
-            (0, a.j)(() => {
+            (0, r.j)(() => {
                 e((e) => {
-                    var a;
+                    var r;
                     return {
                         polls: {
                             ...e.polls,
                             [t]: {
                                 ...e.polls[t],
-                                [n]: i(null === (a = e.polls[t]) || void 0 === a ? void 0 : a[n])
+                                [n]: i(null === (r = e.polls[t]) || void 0 === r ? void 0 : r[n])
                             }
                         }
                     };
@@ -32,16 +32,16 @@ let r = {},
             });
         }
     }));
-function o(e) {
-    return l((t) => {
+function s(e) {
+    return o((t) => {
         var n;
-        return null !== (n = t.polls[e]) && void 0 !== n ? n : r;
-    }, s.Z);
+        return null !== (n = t.polls[e]) && void 0 !== n ? n : a;
+    }, l.Z);
 }
 function c(e, t, n) {
-    l.getState().updatePollState(e, t, n);
+    o.getState().updatePollState(e, t, n);
 }
 function u(e, t) {
     var n;
-    return null === (n = l.getState().polls[e]) || void 0 === n ? void 0 : n[t];
+    return null === (n = o.getState().polls[e]) || void 0 === n ? void 0 : n[t];
 }

@@ -1,73 +1,73 @@
-t.d(n, {
+e.d(n, {
     ZP: function () {
         return c;
     }
 }),
-    t(653041);
-var r = t(131704),
-    i = t(699516),
-    l = t(594174),
-    o = t(933557),
-    u = t(981631),
-    s = t(689938);
-function a(e) {
-    let { isSubscriptionGated: n, needSubscriptionToAccess: t } = e;
-    if (n) return t ? s.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_PREMIUM_LOCKED : s.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_PREMIUM_UNLOCKED;
+    e(653041);
+var i = e(131704),
+    r = e(699516),
+    l = e(594174),
+    o = e(933557),
+    u = e(981631),
+    a = e(388032);
+function s(t) {
+    let { isSubscriptionGated: n, needSubscriptionToAccess: e } = t;
+    if (n) return e ? a.intl.string(a.t['oj+HOj']) : a.intl.string(a.t.xI3TQU);
 }
-function c(e) {
+function c(t) {
     let n,
-        { channel: t, unread: c = !1, mentionCount: d = 0, userCount: _, embeddedActivitiesCount: E, isSubscriptionGated: f, needSubscriptionToAccess: I } = e,
-        S = (0, o.F6)(t, l.default, i.Z);
-    switch (t.type) {
+        { channel: e, unread: c = !1, mentionCount: d = 0, userCount: f, embeddedActivitiesCount: _, isSubscriptionGated: p, needSubscriptionToAccess: E } = t,
+        g = (0, o.F6)(e, l.default, r.Z);
+    switch (e.type) {
         case u.d4z.DM:
-            n = c ? s.Z.Messages.DIRECT_MESSAGE_A11Y_LABEL_WITH_UNREADS : s.Z.Messages.DIRECT_MESSAGE_A11Y_LABEL;
+            n = c ? a.t.F2MZsr : a.t.fYqXVV;
             break;
         case u.d4z.GROUP_DM:
-            n = c ? s.Z.Messages.GROUP_MESSAGE_A11Y_LABEL_WITH_UNREADS : s.Z.Messages.GROUP_MESSAGE_A11Y_LABEL;
+            n = c ? a.t.fxxUo6 : a.t.lts3LS;
             break;
         case u.d4z.GUILD_STORE:
-            n = s.Z.Messages.GUILD_SIDEBAR_STORE_CHANNEL_A11Y_LABEL;
+            n = a.t.Bo4msr;
             break;
         case u.d4z.GUILD_DIRECTORY:
-            n = s.Z.Messages.GUILD_SIDEBAR_DIRECTORY_CHANNEL_A11Y_LABEL;
+            n = a.t['92EAFx'];
             break;
         case u.d4z.GUILD_ANNOUNCEMENT:
-            n = d > 0 ? s.Z.Messages.GUILD_SIDEBAR_ANNOUNCEMENT_CHANNEL_A11Y_LABEL_WITH_MENTIONS : c ? s.Z.Messages.GUILD_SIDEBAR_ANNOUNCEMENT_CHANNEL_A11Y_LABEL_WITH_UNREADS : s.Z.Messages.GUILD_SIDEBAR_ANNOUNCEMENT_CHANNEL_A11Y_LABEL;
+            n = d > 0 ? a.t.sDKIpq : c ? a.t.VM7z8f : a.t.WJ3MPj;
             break;
         case u.d4z.GUILD_VOICE:
-            let p = [s.Z.Messages.GUILD_SIDEBAR_VOICE_CHANNEL_A11Y_LABEL.format({ channelName: t.name })];
-            if ((d > 0 && p.push(s.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({ mentionCount: d })), c && p.push(s.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), null != _)) {
-                let e = t.userLimit;
-                null != e && e > 0
-                    ? p.push(
-                          s.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_LIMIT.format({
-                              userCount: _,
-                              limit: e
+            let m = [a.intl.formatToPlainString(a.t.bkpadH, { channelName: e.name })];
+            if ((d > 0 && m.push(a.intl.formatToPlainString(a.t['3l1GOz'], { mentionCount: d })), c && m.push(a.intl.string(a.t.x5zAGR)), null != f)) {
+                let t = e.userLimit;
+                null != t && t > 0
+                    ? m.push(
+                          a.intl.formatToPlainString(a.t['6qgTOD'], {
+                              userCount: f,
+                              limit: t
                           })
                       )
-                    : p.push(s.Z.Messages.GUILD_SIDEBAR_VOICE_CHANNEL_A11Y_LABEL_USERS.format({ userCount: _ }));
+                    : m.push(a.intl.formatToPlainString(a.t.GNIiAA, { userCount: f }));
             }
-            null != E && E > 0 && p.push(s.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_ACTIVITIES.format({ activitiesCount: E }));
-            let T = a({
-                isSubscriptionGated: f,
-                needSubscriptionToAccess: I
+            null != _ && _ > 0 && m.push(a.intl.formatToPlainString(a.t.O6PLYW, { activitiesCount: _ }));
+            let h = s({
+                isSubscriptionGated: p,
+                needSubscriptionToAccess: E
             });
-            return null != T && p.push(T), p.join(', ');
+            return null != h && m.push(h), m.join(', ');
         case u.d4z.GUILD_STAGE_VOICE:
-            n = s.Z.Messages.GUILD_SIDEBAR_STAGE_CHANNEL_A11Y_LABEL;
+            n = a.t.TPPk2d;
             break;
         default:
-            n = r.Ec.has(t.type) ? (d > 0 ? s.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS : c ? s.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_UNREADS : s.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL) : d > 0 ? s.Z.Messages.GUILD_SIDEBAR_DEFAULT_CHANNEL_A11Y_LABEL_WITH_MENTIONS : c ? s.Z.Messages.GUILD_SIDEBAR_DEFAULT_CHANNEL_A11Y_LABEL_WITH_UNREADS : s.Z.Messages.GUILD_SIDEBAR_DEFAULT_CHANNEL_A11Y_LABEL;
+            n = i.Ec.has(e.type) ? (d > 0 ? a.t['ZL7+Iy'] : c ? a.t.YlVvmZ : a.t['0nZpiI']) : d > 0 ? a.t.g8ONMz : c ? a.t.smf1CQ : a.t.s0JADg;
     }
-    let C = [
-            n.format({
-                channelName: S,
+    let I = [
+            a.intl.formatToPlainString(n, {
+                channelName: g,
                 mentionCount: d
             })
         ],
-        g = a({
-            isSubscriptionGated: f,
-            needSubscriptionToAccess: I
+        S = s({
+            isSubscriptionGated: p,
+            needSubscriptionToAccess: E
         });
-    return null != g && C.push(g), C.join(', ');
+    return null != S && I.push(S), I.join(', ');
 }

@@ -15,54 +15,54 @@ function u(e) {
 }
 ((a = r || (r = {}))[(a.VERTICAL_TOP = 0)] = 'VERTICAL_TOP'), (a[(a.VERTICAL_BOTTOM = 1)] = 'VERTICAL_BOTTOM'), (a[(a.HORIZONTAL_LEFT = 2)] = 'HORIZONTAL_LEFT'), (a[(a.HORIZONTAL_RIGHT = 3)] = 'HORIZONTAL_RIGHT'), ((s = i || (i = {}))[(s.VERTICAL = 0)] = 'VERTICAL'), (s[(s.HORIZONTAL = 1)] = 'HORIZONTAL');
 t.Z = (e) => {
-    let { initialElementDimension: t, resizableDomNodeRef: n, maxDimension: r, minDimension: i, onElementResize: a, onElementResizeStart: s, onElementResizeEnd: c, throttleDuration: d = 300, orientation: _, usePointerEvents: E = !1, getClampedValue: f = l.clamp } = e,
-        [h, p] = o.useState(!1),
-        I = o.useRef(0),
-        m = o.useRef(!1),
-        T = o.useRef(null == t ? 0 : t);
+    let { initialElementDimension: t, resizableDomNodeRef: n, maxDimension: r, minDimension: i, onElementResize: a, onElementResizeStart: s, onElementResizeEnd: c, throttleDuration: d = 300, orientation: f, usePointerEvents: _ = !1, getClampedValue: h = l.clamp } = e,
+        [p, m] = o.useState(!1),
+        g = o.useRef(0),
+        E = o.useRef(!1),
+        v = o.useRef(null == t ? 0 : t);
     return (
         o.useLayoutEffect(() => {
-            if (!h || null == n.current) return;
+            if (!p || null == n.current) return;
             function e(e) {
-                let t = 1 === u(_) ? e.screenX : e.screenY,
-                    n = 0 === _ || 2 === _,
-                    r = (t - I.current) * (n ? -1 : 1);
-                return T.current + r;
+                let t = 1 === u(f) ? e.screenX : e.screenY,
+                    n = 0 === f || 2 === f,
+                    r = (t - g.current) * (n ? -1 : 1);
+                return v.current + r;
             }
             function t(e) {
-                return f(e, null != i ? i : 0, null != r ? r : e);
+                return h(e, null != i ? i : 0, null != r ? r : e);
             }
             let o = (0, l.throttle)(a, d),
-                S = (r) => {
+                I = (r) => {
                     if (null == n.current) return null;
                     let i = e(r),
                         a = t(i),
-                        l = 1 === u(_) ? 'width' : 'height';
-                    (n.current.style[l] = ''.concat(a, 'px')), !m.current && ((m.current = !0), null == s || s(a)), o(a, i);
+                        l = 1 === u(f) ? 'width' : 'height';
+                    (n.current.style[l] = ''.concat(a, 'px')), !E.current && ((E.current = !0), null == s || s(a)), o(a, i);
                 },
-                g = (n) => {
-                    p(!1);
+                S = (n) => {
+                    m(!1);
                     let r = e(n),
                         i = t(r);
-                    a(i, r), null == c || c(i), (m.current = !1);
+                    a(i, r), null == c || c(i), (E.current = !1);
                 },
-                A = E ? 'pointerup' : 'mouseup',
-                N = E ? 'pointermove' : 'mousemove',
-                R = n.current.ownerDocument;
+                T = _ ? 'pointerup' : 'mouseup',
+                b = _ ? 'pointermove' : 'mousemove',
+                y = n.current.ownerDocument;
             return (
-                R.addEventListener(A, g),
-                R.addEventListener(N, S),
+                y.addEventListener(T, S),
+                y.addEventListener(b, I),
                 () => {
-                    R.removeEventListener(A, g), R.removeEventListener(N, S), o.cancel();
+                    y.removeEventListener(T, S), y.removeEventListener(b, I), o.cancel();
                 }
             );
-        }, [h, a, i, r, _, n, d, c, E, f, s]),
+        }, [p, a, i, r, f, n, d, c, _, h, s]),
         o.useCallback(
             (e) => {
-                let t = 1 === u(_);
-                null != n.current && (T.current = t ? n.current.offsetWidth : n.current.offsetHeight), (I.current = t ? e.screenX : e.screenY), p(!0);
+                let t = 1 === u(f);
+                null != n.current && (v.current = t ? n.current.offsetWidth : n.current.offsetHeight), (g.current = t ? e.screenX : e.screenY), m(!0);
             },
-            [_, n]
+            [f, n]
         )
     );
 };

@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return i;
     }
 });
 var l = n(855403);
-function s(e, t, n) {
+function i(e, t, n) {
     return null == t ? e : n.find((e) => (0, l.Z)(t.id, e.windowHandle));
 }

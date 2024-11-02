@@ -1,207 +1,207 @@
-t.r(n),
-    t.d(n, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return M;
+            return C;
         }
     }),
-    t(47120);
-var s = t(200651),
-    o = t(192379),
-    i = t(392711),
-    l = t.n(i),
-    a = t(442837),
-    r = t(481060),
-    d = t(706371),
-    c = t(563115),
-    u = t(313201),
-    m = t(661824),
-    N = t(984933),
-    _ = t(430824),
-    O = t(823379),
-    h = t(402148),
-    I = t(570961),
-    v = t(208665),
-    E = t(460117),
-    x = t(290511),
-    R = t(689938),
-    j = t(996747);
-function M(e) {
-    let { transitionState: n, onClose: t, onSave: i, onDelete: _, option: O, guild: h, prompt: M, index: T } = e,
-        P = (0, u.Dt)(),
-        p = (0, a.e7)([N.ZP], () => N.ZP.getDefaultChannel(h.id)),
-        [B, A] = o.useState(() => {
+    n(47120);
+var i = n(200651),
+    o = n(192379),
+    l = n(392711),
+    r = n.n(l),
+    s = n(442837),
+    a = n(481060),
+    d = n(706371),
+    c = n(563115),
+    u = n(313201),
+    m = n(661824),
+    h = n(984933),
+    v = n(430824),
+    x = n(823379),
+    j = n(402148),
+    g = n(570961),
+    p = n(208665),
+    I = n(460117),
+    N = n(290511),
+    f = n(388032),
+    B = n(996747);
+function C(e) {
+    let { transitionState: t, onClose: n, onSave: l, onDelete: v, option: x, guild: j, prompt: C, index: b } = e,
+        S = (0, u.Dt)(),
+        T = (0, s.e7)([h.ZP], () => h.ZP.getDefaultChannel(j.id)),
+        [Z, E] = o.useState(() => {
             var e;
-            return null !== (e = null == O ? void 0 : O.emoji) && void 0 !== e ? e : null;
+            return null !== (e = null == x ? void 0 : x.emoji) && void 0 !== e ? e : null;
         }),
-        [C, L] = o.useState(() => {
+        [k, M] = o.useState(() => {
             var e;
-            return null !== (e = null == O ? void 0 : O.title) && void 0 !== e ? e : '';
+            return null !== (e = null == x ? void 0 : x.title) && void 0 !== e ? e : '';
         }),
-        [Z, f] = o.useState(() => {
+        [H, R] = o.useState(() => {
             var e;
-            return null !== (e = null == O ? void 0 : O.description) && void 0 !== e ? e : '';
+            return null !== (e = null == x ? void 0 : x.description) && void 0 !== e ? e : '';
         }),
-        [D, S] = o.useState(() => {
+        [L, P] = o.useState(() => {
             var e;
-            return new Set(null !== (e = null == O ? void 0 : O.channelIds) && void 0 !== e ? e : []);
+            return new Set(null !== (e = null == x ? void 0 : x.channelIds) && void 0 !== e ? e : []);
         }),
-        [H, b] = o.useState(() => {
+        [y, z] = o.useState(() => {
             var e;
-            return new Set(null !== (e = null == O ? void 0 : O.roleIds) && void 0 !== e ? e : []);
+            return new Set(null !== (e = null == x ? void 0 : x.roleIds) && void 0 !== e ? e : []);
         }),
-        [k, G] = o.useState({}),
-        U = o.useRef(null);
+        [w, A] = o.useState({}),
+        D = o.useRef(null);
     return (
         o.useLayoutEffect(() => {
             var e;
-            return null === (e = U.current) || void 0 === e ? void 0 : e.focus();
+            return null === (e = D.current) || void 0 === e ? void 0 : e.focus();
         }, []),
-        (0, s.jsxs)(r.ModalRoot, {
-            transitionState: n,
-            'aria-labelledby': P,
+        (0, i.jsxs)(a.ModalRoot, {
+            transitionState: t,
+            'aria-labelledby': S,
             children: [
-                (0, s.jsxs)('div', {
-                    className: j.container,
+                (0, i.jsxs)('div', {
+                    className: B.container,
                     children: [
-                        (0, s.jsx)(r.ModalCloseButton, {
-                            className: j.closeButton,
-                            onClick: t
+                        (0, i.jsx)(a.ModalCloseButton, {
+                            className: B.closeButton,
+                            onClick: n
                         }),
-                        (0, s.jsx)(r.Text, {
-                            className: j.questionNumber,
+                        (0, i.jsx)(a.Text, {
+                            className: B.questionNumber,
                             variant: 'text-xs/semibold',
                             color: 'text-muted',
-                            children: R.Z.Messages.ONBOARDING_PROMPT_OPTION_QUESTION_NUMBER.format({ index: T + 1 })
+                            children: f.intl.format(f.t.yjS3zs, { index: b + 1 })
                         }),
-                        (0, s.jsx)(r.Heading, {
-                            id: P,
-                            className: j.header,
+                        (0, i.jsx)(a.Heading, {
+                            id: S,
+                            className: B.header,
                             variant: 'heading-lg/semibold',
-                            children: null != M.title && M.title.length > 0 ? M.title : R.Z.Messages.ONBOARDING_PROMPT_DEFAULT_TITLE
+                            children: null != C.title && C.title.length > 0 ? C.title : f.intl.string(f.t.vY91Cw)
                         }),
-                        (0, s.jsx)(r.Heading, {
-                            className: j.nameHeader,
+                        (0, i.jsx)(a.Heading, {
+                            className: B.nameHeader,
                             variant: 'heading-md/semibold',
-                            children: R.Z.Messages.ONBOARDING_PROMPT_OPTION_NAME_HEADER
+                            children: f.intl.string(f.t.VWdcBg)
                         }),
-                        (0, s.jsx)(r.TextInput, {
-                            inputRef: U,
-                            placeholder: R.Z.Messages.ONBOARDING_PROMPT_OPTION_TITLE_PLACEHOLDER,
-                            value: C,
-                            onChange: (e) => L(e),
-                            maxLength: x.NE,
+                        (0, i.jsx)(a.TextInput, {
+                            inputRef: D,
+                            placeholder: f.intl.string(f.t.EHe6gY),
+                            value: k,
+                            onChange: (e) => M(e),
+                            maxLength: N.NE,
                             autoFocus: !0
                         }),
-                        (0, s.jsx)(r.InputError, { error: k.title }),
-                        (0, s.jsx)(r.TextInput, {
-                            className: j.descriptionInput,
-                            placeholder: R.Z.Messages.ONBOARDING_PROMPT_OPTION_DESCRIPTION_PLACEHOLDER,
-                            value: Z,
-                            onChange: (e) => f(e),
-                            maxLength: x.NO
+                        (0, i.jsx)(a.InputError, { error: w.title }),
+                        (0, i.jsx)(a.TextInput, {
+                            className: B.descriptionInput,
+                            placeholder: f.intl.string(f.t.mIjgJC),
+                            value: H,
+                            onChange: (e) => R(e),
+                            maxLength: N.NO
                         }),
-                        (0, s.jsx)(m.Z, { className: j.divider }),
-                        (0, s.jsx)(r.Heading, {
-                            className: j.rolesHeader,
+                        (0, i.jsx)(m.Z, { className: B.divider }),
+                        (0, i.jsx)(a.Heading, {
+                            className: B.rolesHeader,
                             variant: 'heading-md/semibold',
-                            children: R.Z.Messages.ONBOARDING_PROMPT_OPTION_ROLES_CHANNELS_HEADER
+                            children: f.intl.string(f.t.TtIbPD)
                         }),
-                        (0, s.jsx)(d.Z, {
-                            guildId: h.id,
-                            selectedChannelIds: D,
-                            placeholder: R.Z.Messages.GUILD_AUTOMOD_EXEMPTION_SEARCH_CHANNEL_PLACEHOLDER,
-                            onChange: S,
-                            helperText: R.Z.Messages.ONBOARDING_PROMPT_NO_PRIVATE_CHANNELS,
-                            className: j.searchInput
+                        (0, i.jsx)(d.Z, {
+                            guildId: j.id,
+                            selectedChannelIds: L,
+                            placeholder: f.intl.string(f.t.vephiI),
+                            onChange: P,
+                            helperText: f.intl.string(f.t.SoT6wc),
+                            className: B.searchInput
                         }),
-                        (0, s.jsx)(c.Z, {
-                            guildId: h.id,
-                            selectedRoleIds: H,
+                        (0, i.jsx)(c.Z, {
+                            guildId: j.id,
+                            selectedRoleIds: y,
                             disableEveryoneRole: !0,
-                            placeholder: R.Z.Messages.GUILD_AUTOMOD_EXEMPTION_SEARCH_ROLE_PLACEHOLDER,
-                            onChange: b,
-                            helperText: R.Z.Messages.ONBOARDING_PROMPT_NO_PRIVATE_CHANNELS_SUBTEXT,
-                            className: j.searchInput,
+                            placeholder: f.intl.string(f.t.aFO1Iy),
+                            onChange: z,
+                            helperText: f.intl.string(f.t.Mbvpv7),
+                            className: B.searchInput,
                             selectableRoleFilter: (e) => !e.managed
                         }),
-                        null == k.roles ? null : (0, s.jsx)(r.InputError, { error: k.roles }),
-                        (0, s.jsx)(g, {
-                            guild: h,
-                            roleIds: H
+                        null == w.roles ? null : (0, i.jsx)(a.InputError, { error: w.roles }),
+                        (0, i.jsx)(_, {
+                            guild: j,
+                            roleIds: y
                         }),
-                        (0, s.jsx)(m.Z, { className: j.divider }),
-                        (0, s.jsxs)('div', {
-                            className: j.emojiQuestionContainer,
+                        (0, i.jsx)(m.Z, { className: B.divider }),
+                        (0, i.jsxs)('div', {
+                            className: B.emojiQuestionContainer,
                             children: [
-                                (0, s.jsxs)('div', {
-                                    className: j.emojiQuestionText,
+                                (0, i.jsxs)('div', {
+                                    className: B.emojiQuestionText,
                                     children: [
-                                        (0, s.jsx)(r.Heading, {
+                                        (0, i.jsx)(a.Heading, {
                                             variant: 'heading-md/semibold',
-                                            children: R.Z.Messages.ONBOARDING_PROMPT_OPTION_EMOJI_HEADER
+                                            children: f.intl.string(f.t['4ahTBg'])
                                         }),
-                                        (0, s.jsx)(r.Text, {
+                                        (0, i.jsx)(a.Text, {
                                             variant: 'text-sm/normal',
                                             color: 'text-muted',
-                                            children: R.Z.Messages.ONBOARDING_PROMPT_OPTION_EMOJI_SUBHEADER
+                                            children: f.intl.string(f.t.Iv9RGh)
                                         })
                                     ]
                                 }),
-                                (0, s.jsx)(E.Z, {
-                                    emoji: B,
-                                    setEmoji: A,
-                                    channel: p
+                                (0, i.jsx)(I.Z, {
+                                    emoji: Z,
+                                    setEmoji: E,
+                                    channel: T
                                 })
                             ]
                         })
                     ]
                 }),
-                (0, s.jsx)(r.ModalFooter, {
-                    children: (0, s.jsxs)('div', {
-                        className: j.footerButtons,
+                (0, i.jsx)(a.ModalFooter, {
+                    children: (0, i.jsxs)('div', {
+                        className: B.footerButtons,
                         children: [
-                            (0, s.jsx)('div', {
-                                className: j.removeButton,
-                                children: (0, s.jsx)(r.Button, {
-                                    size: r.Button.Sizes.SMALL,
-                                    look: r.Button.Looks.LINK,
-                                    color: r.Button.Colors.RED,
+                            (0, i.jsx)('div', {
+                                className: B.removeButton,
+                                children: (0, i.jsx)(a.Button, {
+                                    size: a.Button.Sizes.SMALL,
+                                    look: a.Button.Looks.LINK,
+                                    color: a.Button.Colors.RED,
                                     onClick: () => {
-                                        _(), t();
+                                        v(), n();
                                     },
-                                    children: R.Z.Messages.REMOVE
+                                    children: f.intl.string(f.t.N86XcH)
                                 })
                             }),
-                            (0, s.jsxs)('div', {
-                                className: j.rightButtons,
+                            (0, i.jsxs)('div', {
+                                className: B.rightButtons,
                                 children: [
-                                    (0, s.jsx)(r.Button, {
-                                        onClick: t,
-                                        size: r.Button.Sizes.SMALL,
-                                        look: r.Button.Looks.LINK,
-                                        color: r.Button.Colors.PRIMARY,
-                                        children: R.Z.Messages.CANCEL
+                                    (0, i.jsx)(a.Button, {
+                                        onClick: n,
+                                        size: a.Button.Sizes.SMALL,
+                                        look: a.Button.Looks.LINK,
+                                        color: a.Button.Colors.PRIMARY,
+                                        children: f.intl.string(f.t['ETE/oK'])
                                     }),
-                                    (0, s.jsx)(r.Button, {
+                                    (0, i.jsx)(a.Button, {
                                         onClick: () => {
                                             var e;
-                                            let n = {
-                                                    id: null !== (e = null == O ? void 0 : O.id) && void 0 !== e ? e : ''.concat(Date.now()),
-                                                    title: C,
-                                                    description: Z,
-                                                    channelIds: Array.from(D).sort(),
-                                                    roleIds: Array.from(H).sort(),
-                                                    emoji: null == B ? void 0 : B
+                                            let t = {
+                                                    id: null !== (e = null == x ? void 0 : x.id) && void 0 !== e ? e : ''.concat(Date.now()),
+                                                    title: k,
+                                                    description: H,
+                                                    channelIds: Array.from(L).sort(),
+                                                    roleIds: Array.from(y).sort(),
+                                                    emoji: null == Z ? void 0 : Z
                                                 },
-                                                s = (function (e, n, t, s) {
+                                                i = (function (e, t, n, i) {
                                                     let o = {};
-                                                    s.title.length <= 0 && (o.title = R.Z.Messages.ONBOARDING_PROMPT_OPTION_TITLE_REQUIRED);
-                                                    let i = (0, I.en)(e, n, t, s);
-                                                    return null != i && (o.roles = i), o;
-                                                })(h, v.Z.editedOnboardingPrompts, M, n);
-                                            G(s), l().isEmpty(s) && (i(n), t());
+                                                    i.title.length <= 0 && (o.title = f.intl.string(f.t.p3PKzM));
+                                                    let l = (0, g.en)(e, t, n, i);
+                                                    return null != l && (o.roles = l), o;
+                                                })(j, p.Z.editedOnboardingPrompts, C, t);
+                                            A(i), r().isEmpty(i) && (l(t), n());
                                         },
-                                        children: R.Z.Messages.SAVE
+                                        children: f.intl.string(f.t.R3BPHx)
                                     })
                                 ]
                             })
@@ -212,30 +212,30 @@ function M(e) {
         })
     );
 }
-function g(e) {
-    let { guild: n, roleIds: t } = e,
-        o = (0, a.e7)([_.Z], () => _.Z.getRoles(n.id)),
-        i = Array.from(t)
+function _(e) {
+    let { guild: t, roleIds: n } = e,
+        o = (0, s.e7)([v.Z], () => v.Z.getRoles(t.id)),
+        l = Array.from(n)
             .map((e) => o[e])
-            .filter(O.lm)
-            .find(h.F);
-    return null == i
+            .filter(x.lm)
+            .find(j.F);
+    return null == l
         ? null
-        : (0, s.jsx)('div', {
-              className: j.notice,
-              children: (0, s.jsxs)('div', {
-                  className: j.noticeMessage,
+        : (0, i.jsx)('div', {
+              className: B.notice,
+              children: (0, i.jsxs)('div', {
+                  className: B.noticeMessage,
                   children: [
-                      (0, s.jsx)(r.CircleWarningIcon, {
+                      (0, i.jsx)(a.CircleWarningIcon, {
                           size: 'custom',
                           width: 20,
                           height: 20,
                           color: 'currentColor',
-                          className: j.noticeIcon
+                          className: B.noticeIcon
                       }),
-                      (0, s.jsx)(r.Text, {
+                      (0, i.jsx)(a.Text, {
                           variant: 'text-sm/normal',
-                          children: R.Z.Messages.ROLE_PROMPT_ROLE_IS_POWERFUL.format({ permissions: (0, h.i)(n, i).join(', ') })
+                          children: f.intl.format(f.t['5zPJER'], { permissions: (0, j.i)(t, l).join(', ') })
                       })
                   ]
               })

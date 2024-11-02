@@ -1,82 +1,82 @@
-n.r(s),
-    n.d(s, {
+t.r(n),
+    t.d(n, {
         default: function () {
-            return m;
+            return x;
         }
     });
-var r = n(200651),
-    t = n(192379),
-    o = n(120356),
-    a = n.n(o),
-    c = n(512969),
-    l = n(873546),
-    i = n(481060),
-    u = n(169382),
-    d = n(726542),
-    f = n(656649),
-    g = n(981631),
-    C = n(689938),
-    _ = n(280532);
-let N = 'https://dis.gd/Amazon-Music-Connection',
-    E = null != window.opener;
-function m() {
-    let { type: e } = (0, c.UO)(),
-        s = (0, f.vJ)(e),
-        n = (0, u.l)().get('error-code'),
-        o = t.useCallback(() => {
+var s = t(200651),
+    r = t(192379),
+    o = t(120356),
+    i = t.n(o),
+    l = t(512969),
+    c = t(873546),
+    a = t(481060),
+    u = t(169382),
+    d = t(726542),
+    f = t(656649),
+    g = t(981631),
+    m = t(388032),
+    h = t(280532);
+let v = 'https://dis.gd/Amazon-Music-Connection',
+    p = null != window.opener;
+function x() {
+    let { type: e } = (0, l.UO)(),
+        n = (0, f.vJ)(e),
+        t = (0, u.l)().get('error-code'),
+        o = r.useCallback(() => {
             window.close();
         }, []),
-        m = t.useMemo(() => {
-            switch (s) {
+        x = r.useMemo(() => {
+            switch (n) {
                 case g.ABu.AMAZON_MUSIC:
-                    return (0, r.jsx)('div', {
-                        className: a()(_.message, _.details),
-                        children: l.tq
-                            ? C.Z.Messages.CONNECTED_ACCOUNT_HELP_CENTER_ARTICLE_MOBILE.format({
+                    return (0, s.jsx)('div', {
+                        className: i()(h.message, h.details),
+                        children: c.tq
+                            ? m.intl.format(m.t['0EikXl'], {
                                   link: () =>
-                                      (0, r.jsx)(i.Anchor, {
-                                          href: N,
-                                          children: N
+                                      (0, s.jsx)(a.Anchor, {
+                                          href: v,
+                                          children: v
                                       })
                               })
-                            : C.Z.Messages.CONNECTED_ACCOUNT_HELP_CENTER_ARTICLE.format({
+                            : m.intl.format(m.t.hKHZhI, {
                                   link: () =>
-                                      (0, r.jsx)(i.Anchor, {
-                                          href: N,
-                                          children: N
+                                      (0, s.jsx)(a.Anchor, {
+                                          href: v,
+                                          children: v
                                       })
                               })
                     });
                 case g.ABu.YOUTUBE:
-                    if (n === g.evJ.UNKNOWN_ACCOUNT.toString())
-                        return (0, r.jsx)('div', {
-                            className: a()(_.message, _.details),
-                            children: C.Z.Messages.CONNECTED_ACCOUNT_VERIFY_FAILURE_YOUTUBE_PROFILE.format({ link: 'https://support.google.com/youtube/answer/1646861' })
+                    if (t === g.evJ.UNKNOWN_ACCOUNT.toString())
+                        return (0, s.jsx)('div', {
+                            className: i()(h.message, h.details),
+                            children: m.intl.format(m.t.nQPJdH, { link: 'https://support.google.com/youtube/answer/1646861' })
                         });
                     return null;
                 default:
                     return null;
             }
-        }, [n, s]);
-    if (null == s) return null;
-    let h = d.Z.get(s);
-    return (0, r.jsxs)(f.UV, {
-        platformType: s,
+        }, [t, n]);
+    if (null == n) return null;
+    let b = d.Z.get(n);
+    return (0, s.jsxs)(f.UV, {
+        platformType: n,
         children: [
-            (0, r.jsx)('div', {
-                className: a()(_.message, _.error),
-                children: C.Z.Messages.CONNECTED_ACCOUNT_VERIFY_FAILURE.format({ name: h.name })
+            (0, s.jsx)('div', {
+                className: i()(h.message, h.error),
+                children: m.intl.format(m.t.E62dXl, { name: b.name })
             }),
-            (0, r.jsx)('div', {
-                className: a()(_.message, _.details),
-                children: C.Z.Messages.CONNECTED_ACCOUNT_VERIFY_FAILURE_DETAILS
+            (0, s.jsx)('div', {
+                className: i()(h.message, h.details),
+                children: m.intl.string(m.t.Ra6lcn)
             }),
-            m,
-            E
-                ? (0, r.jsx)(i.Button, {
-                      className: _.btn,
+            x,
+            p
+                ? (0, s.jsx)(a.Button, {
+                      className: h.btn,
                       onClick: o,
-                      children: C.Z.Messages.DONE
+                      children: m.intl.string(m.t.i4jeWV)
                   })
                 : null
         ]

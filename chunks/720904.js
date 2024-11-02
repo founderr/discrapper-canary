@@ -1,61 +1,61 @@
 t.d(n, {
     Z: function () {
-        return A;
+        return x;
     }
 });
 var i = t(200651);
 t(192379);
-var a = t(120356),
-    s = t.n(a),
-    l = t(442837),
-    r = t(481060),
-    o = t(543241),
+var l = t(120356),
+    r = t.n(l),
+    a = t(442837),
+    o = t(481060),
+    s = t(543241),
     u = t(222677),
     d = t(995774),
     c = t(665906),
-    E = t(695346),
-    M = t(496675),
-    g = t(768581),
-    f = t(176354),
-    m = t(981631),
+    g = t(695346),
+    m = t(496675),
+    f = t(768581),
+    h = t(176354),
+    v = t(981631),
     I = t(185923),
-    _ = t(689938),
-    Z = t(50455);
-let S = ['slight_smile', 'frowning', 'smile', 'stuck_out_tongue', 'wink'];
-function h(e) {
+    E = t(388032),
+    p = t(50455);
+let M = ['slight_smile', 'frowning', 'smile', 'stuck_out_tongue', 'wink'];
+function Z(e) {
     var n;
-    let { emoji: t, isFocused: a } = e,
-        { animated: l, src: o, surrogates: u } = t;
+    let { emoji: t, isFocused: l } = e,
+        { animated: a, src: s, surrogates: u } = t;
     return (
-        null == o && null != t.id
-            ? (o = g.ZP.getEmojiURL({
+        null == s && null != t.id
+            ? (s = f.ZP.getEmojiURL({
                   id: t.id,
-                  animated: !!l,
+                  animated: !!a,
                   size: 20
               }))
-            : null == o && (o = f.ZP.getURL(u)),
+            : null == s && (s = h.ZP.getURL(u)),
         (0, i.jsx)(
-            r.Tooltip,
+            o.Tooltip,
             {
                 text: t.allNamesString,
                 hideOnClick: !0,
                 spacing: 16,
-                forceOpen: a,
+                forceOpen: l,
                 children: (e) =>
                     (0, i.jsx)('div', {
-                        'aria-label': _.Z.Messages.ADD_REACTION_NAMED.format({ emojiName: t.name }),
-                        className: s()(Z.button, { [Z.focused]: a }),
+                        'aria-label': E.intl.formatToPlainString(E.t['/iYSo6'], { emojiName: t.name }),
+                        className: r()(p.button, { [p.focused]: l }),
                         ...e,
                         children:
-                            null == o || '' === o.trim()
+                            null == s || '' === s.trim()
                                 ? (0, i.jsx)('span', {
-                                      className: s()('emoji', 'emoji-text', Z.icon),
+                                      className: r()('emoji', 'emoji-text', p.icon),
                                       ...e,
                                       children: u
                                   })
                                 : (0, i.jsx)('img', {
-                                      className: Z.icon,
-                                      src: o,
+                                      className: p.icon,
+                                      src: s,
                                       alt: ''
                                   })
                     })
@@ -64,12 +64,12 @@ function h(e) {
         )
     );
 }
-function A(e, n) {
-    let t = (0, o.MZ)(n.guild_id).filter((e) => {
+function x(e, n) {
+    let t = (0, s.MZ)(n.guild_id).filter((e) => {
         var t;
         return (
-            !(e.useSpriteSheet && S.indexOf(null !== (t = e.uniqueName) && void 0 !== t ? t : '') >= 0) &&
-            !f.ZP.isEmojiPremiumLocked({
+            !(e.useSpriteSheet && M.indexOf(null !== (t = e.uniqueName) && void 0 !== t ? t : '') >= 0) &&
+            !h.ZP.isEmojiPremiumLocked({
                 emoji: e,
                 channel: n,
                 intention: I.Hz.REACTION
@@ -77,29 +77,29 @@ function A(e, n) {
         );
     });
     t.length > 4 && (t.length = 4);
-    let a = E.nc.useSetting(),
-        s = (0, c.$R)(n),
-        g = (0, l.e7)([M.Z], () => a && s && (n.isPrivate() || M.Z.can(m.Plq.ADD_REACTIONS, n)), [n, s, a]),
-        _ = (t) => {
+    let l = g.nc.useSetting(),
+        r = (0, c.$R)(n),
+        f = (0, a.e7)([m.Z], () => l && r && (n.isPrivate() || m.Z.can(v.Plq.ADD_REACTIONS, n)), [n, r, l]),
+        E = (t) => {
             (0, u.rU)(n.id, e.id, (0, d.g1)(t), u.TW.MESSAGE_CONTEXT_MENU);
         };
-    return g && t.length > 0
-        ? (0, i.jsx)(r.MenuGroup, {
-              className: Z.wrapper,
+    return f && t.length > 0
+        ? (0, i.jsx)(o.MenuGroup, {
+              className: p.wrapper,
               children: t.map((e, n) => {
                   var t;
                   return (0, i.jsx)(
-                      r.MenuItem,
+                      o.MenuItem,
                       {
                           id: 'quickreact-'.concat(null !== (t = e.id) && void 0 !== t ? t : n),
                           render: (n) => {
                               let { isFocused: t } = n;
-                              return (0, i.jsx)(h, {
+                              return (0, i.jsx)(Z, {
                                   emoji: e,
                                   isFocused: t
                               });
                           },
-                          action: () => _(e),
+                          action: () => E(e),
                           dontCloseOnActionIfHoldingShiftKey: !0
                       },
                       n

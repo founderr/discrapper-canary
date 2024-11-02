@@ -1,45 +1,45 @@
 var i = n(200651),
-    a = n(192379),
-    s = n(512969),
-    r = n(252618),
-    l = n(352057),
+    r = n(192379),
+    l = n(512969),
+    a = n(252618),
+    s = n(352057),
     o = n(319443),
     c = n(106075),
     d = n(121711),
     u = n(823379),
-    _ = n(571457),
-    E = n(836768),
-    h = n(766219),
-    m = n(49898),
-    I = n(909482);
+    h = n(571457),
+    m = n(836768),
+    p = n(766219),
+    g = n(49898),
+    f = n(909482);
 t.Z = function () {
-    let e = (0, l.h)({ location: 'DiscoveryUISelectedTab' }),
-        t = E.Z.useField('selectedTab'),
+    let e = (0, s.h)({ location: 'DiscoveryUISelectedTab' }),
+        t = m.Z.useField('selectedTab'),
         n = (function (e) {
             switch (e) {
-                case m.F$.SERVERS:
+                case g.F$.SERVERS:
                     return (0, i.jsx)(c.Z, {});
-                case m.F$.APPS:
+                case g.F$.APPS:
                     return (0, i.jsx)(o.Z, {});
-                case m.F$.QUESTS:
+                case g.F$.QUESTS:
                     return (0, i.jsx)(d.Z, {});
                 default:
                     (0, u.vE)(e);
             }
         })(t),
-        p = (0, s.TH)();
+        _ = (0, l.TH)();
     return (
-        a.useEffect(() => {
-            let t = p.pathname,
-                n = (0, h.IE)(t, e);
-            n !== E.Z.getField('selectedTab') && E.Z.setState({ selectedTab: n });
-        }, [e, p.pathname]),
-        a.useEffect(() => {
-            (0, _.RI)({ selectedTab: t });
+        r.useEffect(() => {
+            let t = _.pathname,
+                n = (0, p.IE)(t, e);
+            n !== m.Z.getField('selectedTab') && m.Z.setState({ selectedTab: n });
+        }, [e, _.pathname]),
+        r.useEffect(() => {
+            (0, h.RI)({ selectedTab: t });
         }, [t]),
         (0, i.jsxs)('section', {
-            className: I.container,
-            children: [(0, i.jsx)(r.yY, { location: (0, h.sm)(t) }), (0, i.jsx)('div', { className: I.dragRegion }), n]
+            className: f.container,
+            children: [(0, i.jsx)(a.yY, { location: (0, p.sm)(t) }), (0, i.jsx)('div', { className: f.dragRegion }), n]
         })
     );
 };

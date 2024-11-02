@@ -1,28 +1,28 @@
-t.r(a),
-    t.d(a, {
+n.r(e),
+    n.d(e, {
         default: function () {
-            return c;
+            return u;
         }
     });
-var s = t(200651);
-t(192379);
-var n = t(481060),
-    r = t(239091),
-    o = t(13245),
-    u = t(145597),
-    i = t(689938);
-function c(e) {
-    let { onSelect: a } = e;
-    return (0, s.jsx)(n.Menu, {
+var a = n(200651);
+n(192379);
+var r = n(481060),
+    i = n(239091),
+    s = n(13245),
+    l = n(145597),
+    o = n(388032);
+function u(t) {
+    let { onSelect: e } = t;
+    return (0, a.jsx)(r.Menu, {
         navId: 'overlay',
-        onClose: r.Zy,
-        'aria-label': i.Z.Messages.OVERLAY_ACTIONS_MENU_LABEL,
-        onSelect: a,
-        children: (0, s.jsx)(n.MenuItem, {
+        onClose: i.Zy,
+        'aria-label': o.intl.string(o.t.tPfVWl),
+        onSelect: e,
+        children: (0, a.jsx)(r.MenuItem, {
             id: 'reset',
-            label: i.Z.Messages.OVERLAY_RESET_DEFAULT_LAYOUT,
-            action: (e) => {
-                e.stopPropagation(), o.Z.resetDefaultLayout(u.qU);
+            label: o.intl.string(o.t['hW+EMj']),
+            action: (t) => {
+                t.stopPropagation(), s.Z.resetDefaultLayout(l.qU);
             }
         })
     });

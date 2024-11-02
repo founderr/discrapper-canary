@@ -3,12 +3,12 @@ n.d(t, {
         return l;
     }
 });
-var s = n(913527),
-    r = n.n(s),
-    i = n(626135),
+var i = n(913527),
+    r = n.n(i),
+    s = n(626135),
     a = n(981631);
 function l(e, t) {
-    i.default.track(a.rMx.AGE_GATE_SUBMITTED, {
+    s.default.track(a.rMx.AGE_GATE_SUBMITTED, {
         dob: 18 > r()().diff(e, 'years') ? e.format('YYYY-MM-DD') : null,
         dob_day: e.date(),
         dob_month: e.month() + 1,

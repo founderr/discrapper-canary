@@ -7,10 +7,10 @@ var r = n(544891),
     u = n(826581),
     c = n(246364),
     d = n(937111),
-    _ = n(981631),
-    E = n(689938);
-let f = async (e) => {
-        let t = await r.tn.get({ url: _.ANM.GUILD_JOIN_REQUEST_BY_ID(e) }),
+    f = n(981631),
+    _ = n(388032);
+let h = async (e) => {
+        let t = await r.tn.get({ url: f.ANM.GUILD_JOIN_REQUEST_BY_ID(e) }),
             n = (0, d.j)(t.body);
         return (
             i.Z.dispatch({
@@ -20,15 +20,15 @@ let f = async (e) => {
             t
         );
     },
-    h = async (e) => {
+    p = async (e) => {
         let { guildId: t, status: n = c.wB.SUBMITTED, before: a, after: s, limit: o = c.tB, force: l = !1 } = e,
-            E = l || !u.Z.hasFetched(t);
-        if (!u.Z.isFetching() && E) {
+            _ = l || !u.Z.hasFetched(t);
+        if (!u.Z.isFetching() && _) {
             i.Z.dispatch({ type: 'GUILD_JOIN_REQUESTS_FETCH_START' });
             try {
-                var f;
+                var h;
                 let e = await r.tn.get({
-                        url: _.ANM.GUILD_JOIN_REQUESTS(t),
+                        url: f.ANM.GUILD_JOIN_REQUESTS(t),
                         query: {
                             status: n,
                             limit: o,
@@ -37,7 +37,7 @@ let f = async (e) => {
                         }
                     }),
                     l = e.body.total,
-                    u = (null !== (f = e.body.guild_join_requests) && void 0 !== f ? f : []).map(d.j);
+                    u = (null !== (h = e.body.guild_join_requests) && void 0 !== h ? h : []).map(d.j);
                 return (
                     i.Z.dispatch({
                         type: 'GUILD_JOIN_REQUESTS_FETCH_SUCCESS',
@@ -54,9 +54,9 @@ let f = async (e) => {
             }
         }
     },
-    p = async (e) => {
+    m = async (e) => {
         try {
-            let t = await r.tn.del({ url: _.ANM.GUILD_MEMBER_REQUEST_TO_JOIN(e) });
+            let t = await r.tn.del({ url: f.ANM.GUILD_MEMBER_REQUEST_TO_JOIN(e) });
             return (
                 i.Z.dispatch({
                     type: 'USER_GUILD_JOIN_REQUEST_UPDATE',
@@ -69,9 +69,9 @@ let f = async (e) => {
             throw e;
         }
     },
-    I = async (e, t) => {
+    g = async (e, t) => {
         try {
-            return await r.tn.post({ url: _.ANM.GUILD_JOIN_REQUEST_ACK(e, t) });
+            return await r.tn.post({ url: f.ANM.GUILD_JOIN_REQUEST_ACK(e, t) });
         } catch (e) {
         } finally {
             i.Z.dispatch({
@@ -81,7 +81,7 @@ let f = async (e) => {
             });
         }
     },
-    m = async function (e, t, n) {
+    E = async function (e, t, n) {
         let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : c.wB.APPROVED,
             l = arguments.length > 4 ? arguments[4] : void 0;
         (0, o.r2)({
@@ -91,7 +91,7 @@ let f = async (e) => {
         });
         let u = await r.tn
             .patch({
-                url: _.ANM.GUILD_JOIN_REQUEST_ID(e, n),
+                url: f.ANM.GUILD_JOIN_REQUEST_ID(e, n),
                 body: {
                     action: s,
                     rejection_reason: l
@@ -101,10 +101,10 @@ let f = async (e) => {
                 (e) => (
                     e &&
                         e.body &&
-                        e.body.code === _.evJ.REQUEST_TO_JOIN_USER_INELIGIBLE &&
+                        e.body.code === f.evJ.REQUEST_TO_JOIN_USER_INELIGIBLE &&
                         a.Z.show({
-                            title: E.Z.Messages.GUILD_JOIN_REQUEST_USER_NOT_ELIGIBLE_TITLE,
-                            body: E.Z.Messages.GUILD_JOIN_REQUEST_USER_NOT_ELIGIBLE_DESCRIPTION
+                            title: _.intl.string(_.t.DxJj4e),
+                            body: _.intl.string(_.t.rSAOk5)
                         }),
                     Promise.reject(e)
                 )
@@ -116,9 +116,9 @@ let f = async (e) => {
             request: u.body
         });
     },
-    T = async (e, t) => {
+    v = async (e, t) => {
         let n = await r.tn.patch({
-            url: _.ANM.GUILD_JOIN_REQUESTS(e),
+            url: f.ANM.GUILD_JOIN_REQUESTS(e),
             body: { action: t }
         });
         return (
@@ -130,9 +130,9 @@ let f = async (e) => {
             n.body
         );
     },
-    S = async (e) => {
+    I = async (e) => {
         try {
-            let { body: t } = await r.tn.post({ url: _.ANM.GUILD_MEMBER_REQUEST_TO_JOIN(e) });
+            let { body: t } = await r.tn.post({ url: f.ANM.GUILD_MEMBER_REQUEST_TO_JOIN(e) });
             return (
                 i.Z.dispatch({
                     type: 'USER_GUILD_JOIN_REQUEST_UPDATE',
@@ -145,16 +145,16 @@ let f = async (e) => {
             throw e;
         }
     },
-    g = async () => {
-        let e = await r.tn.get({ url: _.ANM.USER_JOIN_REQUEST_GUILDS });
+    S = async () => {
+        let e = await r.tn.get({ url: f.ANM.USER_JOIN_REQUEST_GUILDS });
         i.Z.dispatch({
             type: 'USER_JOIN_REQUEST_GUILDS_FETCH',
             guilds: e.body
         });
     },
-    A = async function (e) {
+    T = async function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            n = await r.tn.post({ url: _.ANM.GUILD_JOIN_REQUEST_INTERVIEW(e) }),
+            n = await r.tn.post({ url: f.ANM.GUILD_JOIN_REQUEST_INTERVIEW(e) }),
             a = (0, l.q_)(n.body);
         return (
             i.Z.dispatch({
@@ -165,9 +165,9 @@ let f = async (e) => {
             a.id
         );
     },
-    N = async (e) => {
+    b = async (e) => {
         try {
-            let t = await r.tn.get({ url: _.ANM.GUILD_MEMBER_JOIN_REQUEST_COOLDOWN(e) });
+            let t = await r.tn.get({ url: f.ANM.GUILD_MEMBER_JOIN_REQUEST_COOLDOWN(e) });
             return (
                 i.Z.dispatch({
                     type: 'USER_GUILD_JOIN_REQUEST_COOLDOWN_FETCH',
@@ -188,14 +188,14 @@ let f = async (e) => {
         }
     };
 t.Z = {
-    fetchGuildJoinRequest: f,
-    fetchGuildJoinRequests: h,
-    ackUserGuildJoinRequest: I,
-    removeGuildJoinRequest: p,
-    updateGuildJoinRequest: m,
-    actionAllPendingJoinRequests: T,
-    resetGuildJoinRequest: S,
-    fetchRequestToJoinGuilds: g,
+    fetchGuildJoinRequest: h,
+    fetchGuildJoinRequests: p,
+    ackUserGuildJoinRequest: g,
+    removeGuildJoinRequest: m,
+    updateGuildJoinRequest: E,
+    actionAllPendingJoinRequests: v,
+    resetGuildJoinRequest: I,
+    fetchRequestToJoinGuilds: S,
     setSelectedApplicationTab: (e, t) => {
         i.Z.dispatch({
             type: 'GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB',
@@ -223,6 +223,6 @@ t.Z = {
                 request: t
             });
     },
-    createOrEnterJoinRequestInterview: A,
-    fetchJoinRequestCooldown: N
+    createOrEnterJoinRequestInterview: T,
+    fetchJoinRequestCooldown: b
 };

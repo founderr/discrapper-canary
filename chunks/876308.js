@@ -1,62 +1,62 @@
-n.r(t), n(411104);
-var o = n(200651),
-    r = n(192379),
+n.r(e), n(411104);
+var r = n(200651),
+    o = n(192379),
     i = n(817080),
     a = n(442837),
-    s = n(481060),
-    u = n(668781),
-    c = n(239091),
-    d = n(883385),
-    l = n(108843),
+    u = n(481060),
+    c = n(668781),
+    s = n(239091),
+    l = n(883385),
+    d = n(108843),
     f = n(100527),
-    O = n(299206),
-    p = n(496675),
-    N = n(358085),
-    w = n(998502),
-    S = n(22382),
-    b = n(51078),
-    D = n(710111),
-    g = n(981631),
-    y = n(689938);
-t.default = (0, l.Z)(
-    (0, d.Z)(
-        function (e) {
-            let { soundGuild: t, sound: d, activeCallGuildId: l, onSelect: f } = e,
-                g = (function (e, t) {
-                    let { canManageGuildExpressions: i } = (0, a.cj)([p.Z], () => (null == t ? { canManageGuildExpressions: !1 } : p.Z.getGuildPermissionProps(t)), [t]),
-                        u = r.useCallback(() => {
-                            if ((null == t ? void 0 : t.id) == null) return null;
-                            (0, s.openModalLazy)(async () => {
-                                let { default: r } = await Promise.all([n.e('56035'), n.e('55876')]).then(n.bind(n, 758961));
+    p = n(299206),
+    w = n(496675),
+    b = n(358085),
+    y = n(998502),
+    g = n(22382),
+    h = n(51078),
+    v = n(710111),
+    m = n(981631),
+    S = n(388032);
+e.default = (0, d.Z)(
+    (0, l.Z)(
+        function (t) {
+            let { soundGuild: e, sound: l, activeCallGuildId: d, onSelect: f } = t,
+                m = (function (t, e) {
+                    let { canManageGuildExpressions: i } = (0, a.cj)([w.Z], () => (null == e ? { canManageGuildExpressions: !1 } : w.Z.getGuildPermissionProps(e)), [e]),
+                        c = o.useCallback(() => {
+                            if ((null == e ? void 0 : e.id) == null) return null;
+                            (0, u.openModalLazy)(async () => {
+                                let { default: o } = await Promise.all([n.e('56035'), n.e('55876')]).then(n.bind(n, 758961));
                                 return (n) =>
-                                    (0, o.jsx)(r, {
+                                    (0, r.jsx)(o, {
                                         ...n,
-                                        existingSound: e,
-                                        guildId: t.id
+                                        existingSound: t,
+                                        guildId: e.id
                                     });
                             });
-                        }, [t, e]);
+                        }, [e, t]);
                     return i
-                        ? (0, o.jsx)(
-                              s.MenuItem,
+                        ? (0, r.jsx)(
+                              u.MenuItem,
                               {
                                   id: 'edit-soundboard-sound',
-                                  label: y.Z.Messages.SOUNDBOARD_CONTEXT_MENU_EDIT_SOUND,
-                                  action: u
+                                  label: S.intl.string(S.t.ponZcH),
+                                  action: c
                               },
                               'edit-soundboard-sound'
                           )
                         : null;
-                })(d, t),
-                h = (function (e) {
-                    let { soundId: t } = e,
-                        n = r.useCallback(async () => {
+                })(l, e),
+                O = (function (t) {
+                    let { soundId: e } = t,
+                        n = o.useCallback(async () => {
                             try {
-                                let e = (0, S.Z)(t),
-                                    n = await fetch(e),
-                                    o = await n.blob(),
-                                    r = (function (e) {
-                                        switch (e.type) {
+                                let t = (0, g.Z)(e),
+                                    n = await fetch(t),
+                                    r = await n.blob(),
+                                    o = (function (t) {
+                                        switch (t.type) {
                                             case 'audio/mpeg':
                                             case 'audio/mpeg3':
                                                 return 'mp3';
@@ -65,45 +65,45 @@ t.default = (0, l.Z)(
                                             default:
                                                 throw Error('unable to determine file type');
                                         }
-                                    })(o),
-                                    a = ''.concat(t, '.').concat(r);
-                                N.isPlatformEmbedded ? await w.ZP.saveFile(e, a) : (0, i.saveAs)(o, a);
-                            } catch (e) {
-                                u.Z.show({
-                                    title: y.Z.Messages.SOUNDBOARD_DOWNLOAD_SOUND_FAILED_TITLE,
-                                    body: y.Z.Messages.SOUNDBOARD_DOWNLOAD_SOUND_FAILED_BODY,
-                                    confirmText: y.Z.Messages.OKAY
+                                    })(r),
+                                    a = ''.concat(e, '.').concat(o);
+                                b.isPlatformEmbedded ? await y.ZP.saveFile(t, a) : (0, i.saveAs)(r, a);
+                            } catch (t) {
+                                c.Z.show({
+                                    title: S.intl.string(S.t.mK3tDA),
+                                    body: S.intl.string(S.t.jLlfDA),
+                                    confirmText: S.intl.string(S.t.BddRzc)
                                 });
                             }
-                        }, [t]);
-                    return e.guildId === D.X8
+                        }, [e]);
+                    return t.guildId === v.X8
                         ? null
-                        : (0, o.jsx)(
-                              s.MenuItem,
+                        : (0, r.jsx)(
+                              u.MenuItem,
                               {
                                   id: 'download-soundboard-sound',
-                                  label: y.Z.Messages.SOUNDBOARD_CONTEXT_MENU_DOWNLOAD_SOUND,
+                                  label: S.intl.string(S.t['/fzLLC']),
                                   action: n
                               },
                               'download-soundboard-sound'
                           );
-                })(d),
-                v = (0, b.Z)(d, l),
-                E = (0, O.Z)({
-                    id: d.soundId,
-                    label: y.Z.Messages.COPY_ID_SOUND
+                })(l),
+                x = (0, h.Z)(l, d),
+                E = (0, p.Z)({
+                    id: l.soundId,
+                    label: S.intl.string(S.t.HJikXl)
                 });
-            return (0, o.jsx)(s.Menu, {
+            return (0, r.jsx)(u.Menu, {
                 navId: 'sound-button-context',
-                onClose: c.Zy,
-                'aria-label': y.Z.Messages.USER_ACTIONS_MENU_LABEL,
+                onClose: s.Zy,
+                'aria-label': S.intl.string(S.t.liqwPD),
                 onSelect: f,
-                children: (0, o.jsxs)(s.MenuGroup, {
-                    children: [g, v, h, E]
+                children: (0, r.jsxs)(u.MenuGroup, {
+                    children: [m, x, O, E]
                 })
             });
         },
-        { object: g.qAy.CONTEXT_MENU }
+        { object: m.qAy.CONTEXT_MENU }
     ),
     [f.Z.CONTEXT_MENU, f.Z.SOUNDBOARD_BUTTON]
 );

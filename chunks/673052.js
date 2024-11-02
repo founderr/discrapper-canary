@@ -5,38 +5,38 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(835473),
-    r = n(739566),
-    l = n(942951),
-    o = n(834129),
-    c = n(689938),
+var r = n(481060),
+    l = n(835473),
+    a = n(739566),
+    o = n(942951),
+    s = n(834129),
+    c = n(388032),
     u = n(828972);
 function d(e) {
     let { message: t, channel: n, compact: d } = e,
-        _ = (0, r.ZP)(t),
-        E = (0, l.l)({
+        m = (0, a.ZP)(t),
+        f = (0, o.l)({
             user: t.author,
             channelId: n.id,
             guildId: n.guild_id,
             messageId: t.id
-        })(_),
-        I = (0, s.q)(t.applicationId);
-    if (null == I) return null;
-    let m = c.Z.Messages.SYSTEM_MESSAGE_CHANNEL_LINKED_TO_LOBBY.format({
+        })(m),
+        h = (0, l.q)(t.applicationId);
+    if (null == h) return null;
+    let p = c.intl.format(c.t.fwn2Mz, {
         username: t.author.username,
-        usernameHook: E,
-        applicationName: I.name,
+        usernameHook: f,
+        applicationName: h.name,
         helpdeskArticle: '#'
     });
-    return (0, i.jsx)(o.Z, {
-        iconNode: (0, i.jsx)(a.RefreshIcon, {
+    return (0, i.jsx)(s.Z, {
+        iconNode: (0, i.jsx)(r.RefreshIcon, {
             size: 'sm',
-            color: a.tokens.colors.STATUS_POSITIVE
+            color: r.tokens.colors.STATUS_POSITIVE
         }),
         timestamp: t.timestamp,
         compact: d,
         contentClassName: u.systemMessage,
-        children: m
+        children: p
     });
 }

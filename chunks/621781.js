@@ -1,30 +1,30 @@
-t.d(n, {
+e.d(n, {
     Z: function () {
-        return i;
+        return o;
     }
 });
-var s = t(192379),
-    a = t(442837),
-    u = t(706454),
-    l = t(356659),
-    c = t(689938);
-function i() {
-    let e = (0, a.e7)([u.default], () => u.default.locale);
-    return s.useMemo(
+var i = e(192379),
+    l = e(442837),
+    a = e(706454),
+    r = e(356659),
+    u = e(388032);
+function o() {
+    let t = (0, l.e7)([a.default], () => a.default.locale);
+    return i.useMemo(
         () => [
             {
-                value: l.OT.SECONDS_30,
-                label: c.Z.Messages.CLIPS_LENGTH_SECONDS.format({ count: 30 })
+                value: r.OT.SECONDS_30,
+                label: u.intl.formatToPlainString(u.t['bTFv//'], { count: 30 })
             },
             {
-                value: l.OT.MINUTES_1,
-                label: c.Z.Messages.CLIPS_LENGTH_MINUTES.format({ count: 1 })
+                value: r.OT.MINUTES_1,
+                label: u.intl.formatToPlainString(u.t.ICo9Nj, { count: 1 })
             },
             {
-                value: l.OT.MINUTES_2,
-                label: c.Z.Messages.CLIPS_LENGTH_MINUTES.format({ count: 2 })
+                value: r.OT.MINUTES_2,
+                label: u.intl.formatToPlainString(u.t.ICo9Nj, { count: 2 })
             }
         ],
-        [e]
+        [t]
     );
 }

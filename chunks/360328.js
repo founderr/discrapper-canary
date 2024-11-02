@@ -5,21 +5,21 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    a = n(481060),
-    l = n(693546),
-    r = n(246364),
-    o = n(689938);
+    l = n(192379),
+    r = n(481060),
+    a = n(693546),
+    s = n(246364),
+    o = n(388032);
 function c(e, t, c) {
-    let [u, d] = s.useState(!1),
+    let [u, d] = l.useState(!1),
         h = () => {
-            (0, a.showToast)((0, a.createToast)(o.Z.Messages.ERROR_GENERIC_TITLE, a.ToastType.FAILURE));
+            (0, r.showToast)((0, r.createToast)(o.intl.string(o.t.R0RpRU), r.ToastType.FAILURE));
         },
         m = async () => {
             if (!u && null != e && null != t && null != c) {
                 d(!0);
                 try {
-                    await l.Z.updateGuildJoinRequest(e, t, c, r.wB.APPROVED);
+                    await a.Z.updateGuildJoinRequest(e, t, c, s.wB.APPROVED);
                 } catch {
                     h();
                 } finally {
@@ -33,10 +33,10 @@ function c(e, t, c) {
             null != e &&
                 null != t &&
                 null != c &&
-                (0, a.openModalLazy)(async () => {
-                    let { default: s } = await n.e('56496').then(n.bind(n, 113886));
+                (0, r.openModalLazy)(async () => {
+                    let { default: l } = await n.e('56496').then(n.bind(n, 113886));
                     return (n) =>
-                        (0, i.jsx)(s, {
+                        (0, i.jsx)(l, {
                             modalProps: n,
                             guildId: e,
                             userId: t,

@@ -1,48 +1,48 @@
-s(47120);
-var n,
-    a = s(200651),
-    r = s(192379),
-    l = s(442837),
-    i = s(481060),
-    o = s(274616),
-    d = s(560587),
-    c = s(689938);
-function h(e, t, s) {
+n(47120);
+var l,
+    i = n(200651),
+    r = n(192379),
+    s = n(442837),
+    a = n(481060),
+    o = n(274616),
+    d = n(560587),
+    c = n(388032);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: s,
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = s),
+            : (e[t] = n),
         e
     );
 }
-class u extends (n = r.Component) {
+class u extends (l = r.Component) {
     componentDidMount() {
-        let { applicationId: e, branches: t, onHasBranchesChange: s } = this.props;
-        (0, o.Z)(e), null == s || s(t.length > 0);
+        let { applicationId: e, branches: t, onHasBranchesChange: n } = this.props;
+        (0, o.Z)(e), null == n || n(t.length > 0);
     }
     componentDidUpdate(e) {
-        let { onHasBranchesChange: t, branches: s } = this.props,
-            n = s.length > 0;
-        null != t && n !== e.branches.length > 0 && t(n);
+        let { onHasBranchesChange: t, branches: n } = this.props,
+            l = n.length > 0;
+        null != t && l !== e.branches.length > 0 && t(l);
     }
     render() {
-        let { branches: e, selectedBranchId: t, applicationId: s, includeMaster: n, hide: r, className: l } = this.props;
+        let { branches: e, selectedBranchId: t, applicationId: n, includeMaster: l, hide: r, className: s } = this.props;
         if (0 === e.length || r) return null;
-        let o = n ? e : e.filter((e) => e.id !== s);
-        return (0, a.jsx)(i.SingleSelect, {
+        let o = l ? e : e.filter((e) => e.id !== n);
+        return (0, i.jsx)(a.SingleSelect, {
             options: o.map((e) => ({
-                label: e.getName(s),
+                label: e.getName(n),
                 value: e.id
             })),
-            placeholder: c.Z.Messages.CREATE_STORE_CHANNEL_SELECT_BRANCH,
+            placeholder: c.intl.string(c.t.Sw7pHB),
             value: t,
             onChange: this.handleChange,
-            className: l
+            className: s
         });
     }
     constructor(...e) {
@@ -53,7 +53,7 @@ class u extends (n = r.Component) {
     }
 }
 h(u, 'defaultProps', { includeMaster: !1 }),
-    (t.Z = l.ZP.connectStores([d.Z], (e) => {
+    (t.Z = s.ZP.connectStores([d.Z], (e) => {
         let { applicationId: t } = e;
         return { branches: d.Z.getBranches(t) };
     })(u));

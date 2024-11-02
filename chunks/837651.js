@@ -1,34 +1,34 @@
-s.r(t), s(47120);
-var n = s(200651),
-    r = s(192379),
-    i = s(481060),
-    a = s(816814),
-    o = s(600164),
-    c = s(198993),
-    l = s(200483),
-    d = s(594174),
-    u = s(287880),
-    h = s(689938),
-    f = s(925924);
-function g(e, t, s) {
+n.r(t), n(47120);
+var i = n(200651),
+    r = n(192379),
+    s = n(481060),
+    a = n(816814),
+    o = n(600164),
+    l = n(198993),
+    c = n(200483),
+    d = n(594174),
+    u = n(287880),
+    h = n(388032),
+    f = n(925924);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: s,
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = s),
+            : (e[t] = n),
         e
     );
 }
 let p = (e) => {
-    let { image: t, label: s, text: r, children: a } = e;
-    return (0, n.jsxs)(o.Z, {
+    let { image: t, label: n, text: r, children: a } = e;
+    return (0, i.jsxs)(o.Z, {
         className: f.spacing,
         children: [
-            (0, n.jsx)(o.Z, {
+            (0, i.jsx)(o.Z, {
                 grow: 0,
                 shrink: 0,
                 basis: '156px',
@@ -36,18 +36,18 @@ let p = (e) => {
                 className: f.image,
                 children: t
             }),
-            (0, n.jsx)(o.Z, {
+            (0, i.jsx)(o.Z, {
                 direction: o.Z.Direction.VERTICAL,
                 justify: o.Z.Justify.CENTER,
-                children: (0, n.jsxs)('div', {
+                children: (0, i.jsxs)('div', {
                     children: [
-                        (0, n.jsx)(i.FormTitle, {
+                        (0, i.jsx)(s.FormTitle, {
                             tag: 'h5',
                             className: f.headerSpacing,
-                            children: s
+                            children: n
                         }),
-                        (0, n.jsx)(i.FormText, {
-                            type: i.FormText.Types.DESCRIPTION,
+                        (0, i.jsx)(s.FormText, {
+                            type: s.FormText.Types.DESCRIPTION,
                             children: r
                         }),
                         a
@@ -61,17 +61,17 @@ class m extends r.PureComponent {
     render() {
         var e;
         let { transitionState: t, onClose: r } = this.props,
-            { totpSecret: a, code: l, isVerifying: g } = this.state,
+            { totpSecret: a, code: c, isVerifying: g } = this.state,
             m = null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.email,
             x = (0, u.U0)(null != m ? m : '', a),
-            _ = (0, n.jsx)('form', {
+            v = (0, i.jsx)('form', {
                 onSubmit: this.handleActivate,
-                children: (0, n.jsxs)(o.Z, {
+                children: (0, i.jsxs)(o.Z, {
                     className: f.inputContainer,
                     align: o.Z.Align.START,
                     children: [
-                        (0, n.jsx)(i.TextInput, {
-                            value: l,
+                        (0, i.jsx)(s.TextInput, {
+                            value: c,
                             className: f.input,
                             placeholder: '000 000',
                             maxLength: 7,
@@ -80,76 +80,76 @@ class m extends r.PureComponent {
                             error: this.state.error,
                             autoFocus: !0
                         }),
-                        (0, n.jsx)(o.Z.Child, {
+                        (0, i.jsx)(o.Z.Child, {
                             grow: 0,
                             shrink: 0,
-                            children: (0, n.jsx)(i.Button, {
+                            children: (0, i.jsx)(s.Button, {
                                 type: 'submit',
                                 submitting: g,
-                                children: h.Z.Messages.TWO_FA_ACTIVATE
+                                children: h.intl.string(h.t['/a5+YW'])
                             })
                         })
                     ]
                 })
             });
-        return (0, n.jsxs)(i.ModalRoot, {
+        return (0, i.jsxs)(s.ModalRoot, {
             transitionState: t,
-            size: i.ModalSize.DYNAMIC,
+            size: s.ModalSize.DYNAMIC,
             className: f.customWidth,
             children: [
-                (0, n.jsxs)(i.ModalHeader, {
+                (0, i.jsxs)(s.ModalHeader, {
                     separator: !1,
                     children: [
-                        (0, n.jsxs)(o.Z.Child, {
+                        (0, i.jsxs)(o.Z.Child, {
                             grow: 1,
                             shrink: 1,
                             children: [
-                                (0, n.jsx)(i.Heading, {
+                                (0, i.jsx)(s.Heading, {
                                     variant: 'heading-lg/semibold',
-                                    children: h.Z.Messages.TWO_FA_ENABLE
+                                    children: h.intl.string(h.t.cDgKtb)
                                 }),
-                                (0, n.jsx)(i.Text, {
+                                (0, i.jsx)(s.Text, {
                                     variant: 'text-xs/normal',
                                     className: f.subHeader,
-                                    children: h.Z.Messages.TWO_FA_ENABLE_SUBHEADER
+                                    children: h.intl.string(h.t['7NGwtL'])
                                 })
                             ]
                         }),
-                        (0, n.jsx)(o.Z.Child, {
+                        (0, i.jsx)(o.Z.Child, {
                             grow: 0,
-                            children: (0, n.jsx)(i.ModalCloseButton, { onClick: r })
+                            children: (0, i.jsx)(s.ModalCloseButton, { onClick: r })
                         })
                     ]
                 }),
-                (0, n.jsxs)(i.ModalContent, {
+                (0, i.jsxs)(s.ModalContent, {
                     children: [
-                        (0, n.jsx)(p, {
-                            image: (0, n.jsx)('img', {
+                        (0, i.jsx)(p, {
+                            image: (0, i.jsx)('img', {
                                 alt: '',
-                                src: s(340061),
+                                src: n(340061),
                                 width: 100,
                                 height: 100
                             }),
-                            label: h.Z.Messages.TWO_FA_DOWNLOAD_APP_LABEL,
-                            text: h.Z.Messages.TWO_FA_DOWNLOAD_APP_BODY.format({
+                            label: h.intl.string(h.t['9E74Dw']),
+                            text: h.intl.format(h.t.A7Aeh4, {
                                 googleAuthURL: 'https://support.google.com/accounts/answer/1066447?hl=en',
                                 authyURL: 'https://www.authy.com/'
                             })
                         }),
-                        (0, n.jsx)(i.FormDivider, { className: f.divider }),
-                        (0, n.jsx)(p, {
-                            image: (0, n.jsx)(c.ZP, { text: x }),
-                            label: h.Z.Messages.TWO_FA_QR_LABEL,
-                            text: h.Z.Messages.TWO_FA_QR_BODY,
-                            children: (0, n.jsxs)('div', {
+                        (0, i.jsx)(s.FormDivider, { className: f.divider }),
+                        (0, i.jsx)(p, {
+                            image: (0, i.jsx)(l.ZP, { text: x }),
+                            label: h.intl.string(h.t['91InFx']),
+                            text: h.intl.string(h.t.hFeBkp),
+                            children: (0, i.jsxs)('div', {
                                 className: f.topSpacing,
                                 children: [
-                                    (0, n.jsx)(i.FormTitle, {
+                                    (0, i.jsx)(s.FormTitle, {
                                         tag: 'h5',
                                         className: f.headerSpacing,
-                                        children: h.Z.Messages.TWO_FA_KEY
+                                        children: h.intl.string(h.t['76IPws'])
                                     }),
-                                    (0, n.jsx)(i.Text, {
+                                    (0, i.jsx)(s.Text, {
                                         variant: 'text-md/normal',
                                         className: f.secret,
                                         selectable: !0,
@@ -158,15 +158,15 @@ class m extends r.PureComponent {
                                 ]
                             })
                         }),
-                        (0, n.jsx)(i.FormDivider, { className: f.divider }),
-                        (0, n.jsx)(p, {
-                            image: (0, n.jsx)('img', {
+                        (0, i.jsx)(s.FormDivider, { className: f.divider }),
+                        (0, i.jsx)(p, {
+                            image: (0, i.jsx)('img', {
                                 alt: '',
-                                src: s(308777)
+                                src: n(308777)
                             }),
-                            label: h.Z.Messages._TWO_FA_LOGIN_LABEL,
-                            text: h.Z.Messages.TWO_FA_LOGIN_BODY,
-                            children: _
+                            label: h.intl.string(h.t['SaD/LS']),
+                            text: h.intl.string(h.t.vI1ziY),
+                            children: v
                         })
                     ]
                 })
@@ -186,14 +186,14 @@ class m extends r.PureComponent {
             }),
             g(this, 'handleActivate', (e) => {
                 e.preventDefault();
-                let { password: t, emailToken: s } = this.props,
-                    { totpSecret: n, code: r } = this.state;
+                let { password: t, emailToken: n } = this.props,
+                    { totpSecret: i, code: r } = this.state;
                 this.setState({ isVerifying: !0 }),
                     a.Z.enable({
                         password: t,
                         code: r,
-                        secret: (0, u.Qe)(n),
-                        ...((0, l.j)() && { emailToken: s })
+                        secret: (0, u.Qe)(i),
+                        ...((0, c.j)() && { emailToken: n })
                     }).then(this.handleActivateSuccess, (e) =>
                         this.setState({
                             error: e.body.message,

@@ -5,23 +5,23 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(704215),
-    s = n(230711),
-    r = n(765585),
-    l = n(981631),
+var r = n(704215),
+    l = n(230711),
+    a = n(765585),
+    s = n(981631),
     o = n(921944),
-    c = n(689938),
+    c = n(388032),
     d = n(501656);
 function u(e) {
     let { markAsDismissed: t } = e;
-    return (0, i.jsx)(r.Z, {
-        header: c.Z.Messages.SOUNDBOARD_VOLUME_TOOLTIP_HEADER,
-        body: c.Z.Messages.SOUNDBOARD_VOLUME_TOOLTIP_BODY,
-        tryItText: c.Z.Messages.TAKE_ME_THERE,
-        dismissibleContent: a.z.SOUNDBOARD_VOLUME_EDUCATION,
+    return (0, i.jsx)(a.Z, {
+        header: c.intl.string(c.t['89R9tb']),
+        body: c.intl.string(c.t['/BB09P']),
+        tryItText: c.intl.string(c.t.jVcuVV),
+        dismissibleContent: r.z.SOUNDBOARD_VOLUME_EDUCATION,
         artClassName: d.art,
         onTryFeature: () => {
-            s.Z.open(l.oAB.VOICE), t(o.L.UNKNOWN);
+            l.Z.open(s.oAB.VOICE), t(o.L.UNKNOWN);
         },
         onClose: () => t(o.L.UNKNOWN),
         shouldUseHorizontalButtons: !0,

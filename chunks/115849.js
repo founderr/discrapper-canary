@@ -5,41 +5,41 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(512722),
-    o = n.n(l),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    s = n(512722),
+    o = n.n(s),
     c = n(481060),
     d = n(194359),
     u = n(313201),
-    _ = n(657682),
-    E = n(981631),
-    h = n(420212),
-    m = n(689938),
-    I = n(467189),
-    p = n(113207);
-let g = {
+    h = n(657682),
+    m = n(981631),
+    p = n(420212),
+    g = n(388032),
+    f = n(467189),
+    _ = n(113207);
+let E = {
         canSend: !1,
         hint: null,
         success: null,
         error: null
     },
-    T = (0, u.hQ)(),
-    S = ''.concat(T, '-decription'),
-    C = ''.concat(T, '-error');
-function f(e, t) {
+    I = (0, u.hQ)(),
+    C = ''.concat(I, '-decription'),
+    v = ''.concat(I, '-error');
+function S(e, t) {
     switch (t.type) {
         case 'RESET':
-            return g;
+            return E;
         case 'SUCCESS':
             return {
-                ...g,
+                ...E,
                 success: t.text
             };
         case 'HINT':
             return {
-                ...g,
+                ...E,
                 canSend: !0,
                 hint: t.text
             };
@@ -52,12 +52,12 @@ function f(e, t) {
     }
 }
 function N() {
-    let e = a.createRef(),
-        t = a.createRef(),
-        [n, s] = a.useReducer(f, g),
-        { canSend: l, hint: u, success: N, error: A } = n;
+    let e = r.createRef(),
+        t = r.createRef(),
+        [n, l] = r.useReducer(S, E),
+        { canSend: s, hint: u, success: N, error: T } = n;
     return (
-        a.useEffect(() => {
+        r.useEffect(() => {
             null != N && (o()(null != e.current, 'Input is submitting when not mounted'), (e.current.value = ''), e.current.focus());
         }, [N, e]),
         (0, i.jsxs)('form', {
@@ -65,9 +65,9 @@ function N() {
                 t.preventDefault(), o()(null != e.current, 'Input is submitted when not mounted');
                 let n = e.current.value.trim();
                 !n.includes('#') && n.startsWith('@') && (n = n.substring(1));
-                let i = (0, _.Zy)(n);
+                let i = (0, h.Zy)(n);
                 if (null != i) {
-                    s({
+                    l({
                         type: 'ERROR',
                         text: i
                     });
@@ -78,15 +78,15 @@ function N() {
                     context: { location: 'Add Friend' }
                 }).then(
                     () =>
-                        s({
+                        l({
                             type: 'SUCCESS',
-                            text: m.Z.Messages.ADD_FRIEND_SUCCESS.format({ discordTag: n })
+                            text: g.intl.format(g.t.Rtl1Eh, { discordTag: n })
                         }),
                     (e) => {
                         var t;
-                        return s({
+                        return l({
                             type: 'ERROR',
-                            text: (0, _.NF)(null === (t = e.body) || void 0 === t ? void 0 : t.code, n)
+                            text: (0, h.NF)(null === (t = e.body) || void 0 === t ? void 0 : t.code, n)
                         });
                     }
                 );
@@ -94,48 +94,48 @@ function N() {
             autoComplete: 'off',
             children: [
                 (0, i.jsx)(c.FormText, {
-                    id: S,
+                    id: C,
                     type: c.FormText.Types.DESCRIPTION,
-                    children: m.Z.Messages.POMELO_ADD_FRIEND_DESCRIPTION
+                    children: g.intl.string(g.t['Rn/sLi'])
                 }),
                 (0, i.jsx)(c.FocusRing, {
                     focusTarget: e,
                     ringTarget: t,
-                    ringClassName: I.ring,
+                    ringClassName: f.ring,
                     children: (0, i.jsxs)('div', {
                         ref: t,
-                        className: r()(I.addFriendInputWrapper, {
-                            [I.success]: N,
-                            [I.error]: A
+                        className: a()(f.addFriendInputWrapper, {
+                            [f.success]: N,
+                            [f.error]: T
                         }),
                         children: [
                             (0, i.jsx)(c.TextInput, {
-                                id: T,
+                                id: I,
                                 inputRef: e,
-                                className: I.addFriendInput,
-                                inputClassName: I.input,
+                                className: f.addFriendInput,
+                                inputClassName: f.input,
                                 onKeyPress: (t) => {
                                     let n = t.currentTarget.value;
-                                    if (t.key !== h.mR.Enter) {
+                                    if (t.key !== p.mR.Enter) {
                                         if (n.includes('#')) {
                                             o()(null != e.current, 'Input is handling keypress when not mounted');
                                             let i = n.indexOf('#'),
-                                                a = e.current.selectionStart,
-                                                s = t.key === h.mR.Backspace || t.key === h.mR.ArrowRight || t.key === h.mR.ArrowLeft,
-                                                r = t.which >= 48 && t.which <= 57;
-                                            null != a && a > i && /^(.+?#\d{4})$/.test(n) && !s ? t.preventDefault() : null != a && a > i && !r && !s && t.preventDefault();
+                                                r = e.current.selectionStart,
+                                                l = t.key === p.mR.Backspace || t.key === p.mR.ArrowRight || t.key === p.mR.ArrowLeft,
+                                                a = t.which >= 48 && t.which <= 57;
+                                            null != r && r > i && /^(.+?#\d{4})$/.test(n) && !l ? t.preventDefault() : null != r && r > i && !a && !l && t.preventDefault();
                                         }
                                     }
                                 },
                                 onChange: (e) => {
                                     if (e.length <= 0) {
-                                        s({ type: 'RESET' });
+                                        l({ type: 'RESET' });
                                         return;
                                     }
                                     let t = '',
                                         [, n] = e.split('#');
-                                    null != n && (t = e + E.LYt.slice(null != n ? n.length + 1 : 0)),
-                                        s({
+                                    null != n && (t = e + m.LYt.slice(null != n ? n.length + 1 : 0)),
+                                        l({
                                             type: 'HINT',
                                             text: t
                                         });
@@ -147,39 +147,39 @@ function N() {
                                 'data-form-type': 'other',
                                 'data-lpignore': !0,
                                 'data-1p-ignore': !0,
-                                placeholder: m.Z.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
-                                'aria-label': m.Z.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
-                                'aria-invalid': null != A || void 0,
-                                'aria-describedby': null != A ? C : S
+                                placeholder: g.intl.string(g.t['Rn/sLi']),
+                                'aria-label': g.intl.string(g.t['Rn/sLi']),
+                                'aria-invalid': null != T || void 0,
+                                'aria-describedby': null != T ? v : C
                             }),
                             null != u &&
                                 (0, i.jsx)('div', {
-                                    className: I.addFriendHint,
+                                    className: f.addFriendHint,
                                     'aria-hidden': !0,
                                     children: u
                                 }),
                             (0, i.jsx)(c.Button, {
                                 size: c.Button.Sizes.SMALL,
-                                disabled: !l,
+                                disabled: !s,
                                 type: 'submit',
-                                children: m.Z.Messages.ADD_FRIEND_BUTTON
+                                children: g.intl.string(g.t['PMsq/f'])
                             })
                         ]
                     })
                 }),
-                null != A &&
+                null != T &&
                     (0, i.jsx)(c.FormText, {
                         role: 'alert',
-                        id: C,
+                        id: v,
                         type: c.FormText.Types.ERROR,
-                        className: p.marginTop8,
-                        children: A
+                        className: _.marginTop8,
+                        children: T
                     }),
                 null != N &&
                     (0, i.jsx)(c.FormText, {
                         role: 'status',
                         type: c.FormText.Types.SUCCESS,
-                        className: p.marginTop8,
+                        className: _.marginTop8,
                         children: N
                     })
             ]

@@ -1,81 +1,81 @@
-a.r(t),
-    a.d(t, {
+n.r(e),
+    n.d(e, {
         default: function () {
             return c;
         }
     });
-var n = a(200651);
-a(192379);
-var s = a(481060),
-    o = a(313201),
-    l = a(689938),
-    i = a(848401),
-    d = a(298860);
-let r = (e) => {
-    let { text: t, icon: a, foreground: o } = e;
-    return (0, n.jsxs)('div', {
-        className: i.bulletContainer,
+var a = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(313201),
+    o = n(388032),
+    r = n(848401),
+    s = n(298860);
+let d = (t) => {
+    let { text: e, icon: n, foreground: l } = t;
+    return (0, a.jsxs)('div', {
+        className: r.bulletContainer,
         children: [
-            (0, n.jsx)('div', {
-                className: i.iconContainer,
-                children: (0, n.jsx)(a, {
-                    color: null != o ? o : 'currentColor',
-                    className: i.bulletIcon,
+            (0, a.jsx)('div', {
+                className: r.iconContainer,
+                children: (0, a.jsx)(n, {
+                    color: null != l ? l : 'currentColor',
+                    className: r.bulletIcon,
                     size: 'custom',
                     height: 40,
                     width: 40
                 })
             }),
-            (0, n.jsx)(s.Text, {
+            (0, a.jsx)(i.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                className: i.bulletText,
-                children: t
+                className: r.bulletText,
+                children: e
             })
         ]
     });
 };
-function c(e) {
-    let { transitionState: t, onClose: a, ...c } = e,
-        _ = (0, o.Dt)();
-    return (0, n.jsx)(s.ModalRoot, {
-        transitionState: t,
-        'aria-labelledby': _,
+function c(t) {
+    let { transitionState: e, onClose: n, ...c } = t,
+        u = (0, l.Dt)();
+    return (0, a.jsx)(i.ModalRoot, {
+        transitionState: e,
+        'aria-labelledby': u,
         ...c,
-        size: s.ModalSize.SMALL,
-        children: (0, n.jsxs)('div', {
-            className: i.content,
+        size: i.ModalSize.SMALL,
+        children: (0, a.jsxs)('div', {
+            className: r.content,
             children: [
-                (0, n.jsx)('img', {
-                    src: d,
-                    alt: l.Z.Messages.STAGE_CHANNEL_AUDIENCE_MODAL_ALT_TEXT,
-                    className: i.illustration
+                (0, a.jsx)('img', {
+                    src: s,
+                    alt: o.intl.string(o.t['5DRw+/']),
+                    className: r.illustration
                 }),
-                (0, n.jsx)(s.Heading, {
-                    id: _,
+                (0, a.jsx)(i.Heading, {
+                    id: u,
                     variant: 'heading-xl/semibold',
                     color: 'header-primary',
-                    className: i.headerTitle,
-                    children: l.Z.Messages.STAGE_CHANNEL_AUDIENCE_MODAL_TITLE
+                    className: r.headerTitle,
+                    children: o.intl.string(o.t.UVuXCg)
                 }),
-                (0, n.jsx)(r, {
-                    text: l.Z.Messages.STAGE_CHANNEL_AUDIENCE_MODAL_BULLET_1,
-                    icon: s.MicrophoneSlashIcon,
-                    foreground: i.red
+                (0, a.jsx)(d, {
+                    text: o.intl.string(o.t.sBDfo6),
+                    icon: i.MicrophoneSlashIcon,
+                    foreground: r.red
                 }),
-                (0, n.jsx)(r, {
-                    text: l.Z.Messages.STAGE_CHANNEL_AUDIENCE_MODAL_BULLET_2,
-                    icon: s.PhoneHangUpIcon
+                (0, a.jsx)(d, {
+                    text: o.intl.string(o.t.x58YtL),
+                    icon: i.PhoneHangUpIcon
                 }),
-                (0, n.jsx)(r, {
-                    text: l.Z.Messages.STAGE_CHANNEL_AUDIENCE_MODAL_BULLET_3,
-                    icon: s.HandRequestSpeakIcon
+                (0, a.jsx)(d, {
+                    text: o.intl.string(o.t.XtVqlZ),
+                    icon: i.HandRequestSpeakIcon
                 }),
-                (0, n.jsx)(s.Button, {
-                    color: s.Button.Colors.BRAND,
-                    className: i.button,
-                    onClick: a,
-                    children: l.Z.Messages.STAGE_CHANNEL_AUDIENCE_MODAL_ACTION
+                (0, a.jsx)(i.Button, {
+                    color: i.Button.Colors.BRAND,
+                    className: r.button,
+                    onClick: n,
+                    children: o.intl.string(o.t.obLqZ2)
                 })
             ]
         })

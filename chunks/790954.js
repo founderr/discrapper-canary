@@ -3,7 +3,7 @@ n.d(r, {
         return a;
     },
     Y6: function () {
-        return i;
+        return s;
     },
     pF: function () {
         return c;
@@ -17,11 +17,11 @@ let o = Object.freeze({
             columnIndex: -1
         }
     }),
-    s = (0, t.Z)((e) => o),
-    i = s,
+    i = (0, t.Z)((e) => o),
+    s = i,
     a = (e, r, n) => {
         (0, l.j)(() =>
-            s.setState({
+            i.setState({
                 inspectedStickerPosition: {
                     rowIndex: r,
                     columnIndex: e,

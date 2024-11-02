@@ -13,11 +13,11 @@ var r = n(200651),
 function c(e) {
     let { themeColor: t, color: n, className: a, ...c } = e,
         d = (0, o.useToken)(o.tokens.colors.BG_SURFACE_OVERLAY),
-        _ = i.useMemo(() => (0, l.j1)(t, d.hex()), [t]);
+        f = i.useMemo(() => (0, l.j1)(t, d.hex()), [t]);
     return (0, r.jsx)(o.Button, {
         ...c,
-        style: _,
-        className: s()(a, { [u.customButton]: null != _ }),
-        color: null != _ ? o.Button.Colors.CUSTOM : n
+        style: f,
+        className: s()(a, { [u.customButton]: null != f }),
+        color: null != f ? o.Button.Colors.CUSTOM : n
     });
 }

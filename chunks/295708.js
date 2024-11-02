@@ -4,28 +4,28 @@ n.d(t, {
     }
 }),
     n(47120);
-var s = n(200651),
-    a = n(192379),
-    i = n(481060),
-    r = n(273504),
-    l = n(981631),
-    o = n(689938),
+var i = n(200651),
+    r = n(192379),
+    l = n(481060),
+    s = n(273504),
+    a = n(981631),
+    o = n(388032),
     c = n(753925),
     d = n(707524);
 function u(e) {
     let { rule: t, onChangeRule: n } = e,
-        [u, _] = a.useState(t.name);
-    return (0, s.jsxs)(i.FormItem, {
+        [u, m] = r.useState(t.name);
+    return (0, i.jsxs)(l.FormItem, {
         children: [
-            (0, s.jsx)(i.Text, {
+            (0, i.jsx)(l.Text, {
                 className: d.triggerHeader,
                 variant: 'text-sm/semibold',
-                children: o.Z.Messages.GUILD_AUTOMOD_INPUT_FILTER_NAME
+                children: o.intl.string(o.t.WVAHxM)
             }),
-            (0, s.jsx)(i.TextInput, {
+            (0, i.jsx)(l.TextInput, {
                 className: c.ruleNameInput,
                 onChange: (e) => {
-                    _(e),
+                    m(e),
                         n({
                             ...t,
                             name: e
@@ -33,10 +33,10 @@ function u(e) {
                 },
                 onClick: (e) => e.stopPropagation(),
                 onKeyPress: (e) => {
-                    e.which === l.yXg.SPACE && e.stopPropagation();
+                    e.which === a.yXg.SPACE && e.stopPropagation();
                 },
-                placeholder: o.Z.Messages.GUILD_AUTOMOD_INPUT_FILTER_NAME_PLACEHOLDER,
-                maxLength: r.OU,
+                placeholder: o.intl.string(o.t['5AO43N']),
+                maxLength: s.OU,
                 value: u
             })
         ]

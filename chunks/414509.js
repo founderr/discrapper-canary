@@ -1,6 +1,6 @@
 n.d(t, {
     M: function () {
-        return p;
+        return m;
     }
 }),
     n(47120);
@@ -14,10 +14,10 @@ var r = n(147913),
 n(452369);
 var c = n(807031),
     d = n(189275),
-    _ = n(451092);
+    f = n(451092);
 n(334431);
-let E = 1 * o.Z.Millis.HOUR;
-function f(e) {
+let _ = 1 * o.Z.Millis.HOUR;
+function h(e) {
     let { channelId: t } = e;
     if (null == t) return;
     let n = i.Z.getChannel(t);
@@ -32,16 +32,16 @@ function f(e) {
             });
     }
 }
-function h(e) {
+function p(e) {
     let { state: t } = e;
 }
-function p(e) {
-    return (0, u.Iu)(e) > Date.now() - E;
+function m(e) {
+    return (0, u.Iu)(e) > Date.now() - _;
 }
-class I extends r.Z {
+class g extends r.Z {
     handleBlockedUserVoiceChannelJoin(e, t) {
         let n = a.Z.getChannelId();
-        if (e === n && null != i.Z.getChannel(e)) (0, c.wC)({ location: 'warning_manager' }) && !p(e) && (0, _.H)(n, t);
+        if (e === n && null != i.Z.getChannel(e)) (0, c.wC)({ location: 'warning_manager' }) && !m(e) && (0, f.H)(n, t);
     }
     constructor(...e) {
         var t, n, r;
@@ -49,8 +49,8 @@ class I extends r.Z {
             (t = this),
             (n = 'actions'),
             (r = {
-                CHANNEL_SELECT: f,
-                APP_STATE_UPDATE: h
+                CHANNEL_SELECT: h,
+                APP_STATE_UPDATE: p
             }),
             n in t
                 ? Object.defineProperty(t, n, {
@@ -62,4 +62,4 @@ class I extends r.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new I();
+t.Z = new g();

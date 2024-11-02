@@ -7,70 +7,70 @@ var r = n(200651),
     u = n(91218),
     c = n(829883),
     d = n(623624),
-    _ = n(973542),
-    E = n(703656),
-    f = n(592125),
-    h = n(430824),
-    p = n(944486),
-    I = n(709586),
-    m = n(626135),
-    T = n(524444),
-    S = n(981631),
-    g = n(176505),
-    A = n(689938),
-    N = n(118151);
+    f = n(973542),
+    _ = n(703656),
+    h = n(592125),
+    p = n(430824),
+    m = n(944486),
+    g = n(709586),
+    E = n(626135),
+    v = n(524444),
+    I = n(981631),
+    S = n(176505),
+    T = n(388032),
+    b = n(118151);
 t.Z = (e) => {
     let { roleIcon: t, guild: n } = e,
-        { name: R } = t;
+        { name: y } = t;
     i.useEffect(() => {
-        m.default.track(S.rMx.OPEN_POPOUT, {
+        E.default.track(I.rMx.OPEN_POPOUT, {
             type: 'Role Icon Popout',
             guild_id: n.id,
-            ...(0, o.v_)(f.Z.getChannel(p.Z.getChannelId(n.id)))
+            ...(0, o.v_)(h.Z.getChannel(m.Z.getChannelId(n.id)))
         });
     }, []);
-    let O = (0, a.e7)([h.Z], () => (null != t.roleId ? h.Z.getRole(n.id, t.roleId) : void 0)),
-        v = (0, _.Z)(O),
-        C = v ? A.Z.Messages.ROLE_ICON_POPOUT_DESCRIPTION_ROLE_SUBSCRIPTIONS.format({ name: R }) : A.Z.Messages.ROLE_ICON_POPOUT_DESCRIPTION.format({ name: R }),
-        L = {
+    let A = (0, a.e7)([p.Z], () => (null != t.roleId ? p.Z.getRole(n.id, t.roleId) : void 0)),
+        N = (0, f.Z)(A),
+        C = N ? T.intl.formatToPlainString(T.t.t0928f, { name: y }) : T.intl.formatToPlainString(T.t.UDDkGx, { name: y }),
+        R = {
             ...t,
             src: null == t.src ? t.src : (0, c.o)(t.src, 40),
             size: 40
         },
-        D = v
+        O = N
             ? () => {
-                  (0, E.uL)(S.Z5c.CHANNEL(n.id, g.oC.ROLE_SUBSCRIPTIONS));
+                  (0, _.uL)(I.Z5c.CHANNEL(n.id, S.oC.ROLE_SUBSCRIPTIONS));
               }
             : () => {
                   (0, d.f)({
                       guildId: n.id,
-                      location: { section: S.jXE.ROLE_ICON_POPOUT }
+                      location: { section: I.jXE.ROLE_ICON_POPOUT }
                   });
               };
     return (0, r.jsx)(s.Dialog, {
-        children: (0, r.jsx)(T.W_, {
+        children: (0, r.jsx)(v.W_, {
             children: (0, r.jsxs)('div', {
-                className: N.popoutContainer,
+                className: b.popoutContainer,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: N.mainContent,
+                        className: b.mainContent,
                         children: [
                             (0, r.jsx)('div', {
-                                className: N.roleIconContainer,
+                                className: b.roleIconContainer,
                                 children: (0, r.jsx)(u.Z, {
-                                    ...L,
+                                    ...R,
                                     enableTooltip: !1,
-                                    className: N.__invalid_roleIcon,
+                                    className: b.__invalid_roleIcon,
                                     enableHeight: !1
                                 })
                             }),
                             (0, r.jsxs)('div', {
-                                className: N.truncatingText,
+                                className: b.truncatingText,
                                 children: [
                                     (0, r.jsx)(s.Heading, {
                                         variant: 'heading-md/semibold',
-                                        className: N.roleName,
-                                        children: (0, r.jsx)(l.Z, { children: R })
+                                        className: b.roleName,
+                                        children: (0, r.jsx)(l.Z, { children: y })
                                     }),
                                     (0, r.jsx)(s.Text, {
                                         variant: 'text-sm/normal',
@@ -83,18 +83,18 @@ t.Z = (e) => {
                     (0, r.jsxs)(s.Button, {
                         size: s.Button.Sizes.SMALL,
                         color: s.Button.Colors.PRIMARY,
-                        className: N.ctaButton,
-                        innerClassName: N.ctaButtonContent,
+                        className: b.ctaButton,
+                        innerClassName: b.ctaButtonContent,
                         fullWidth: !0,
-                        onClick: D,
+                        onClick: O,
                         autoFocus: !0,
                         children: [
-                            (0, r.jsx)(I.Z, {
+                            (0, r.jsx)(g.Z, {
                                 width: 14,
                                 height: 14,
-                                className: N.boosterBadge
+                                className: b.boosterBadge
                             }),
-                            A.Z.Messages.ROLE_ICON_POPOUT_CTA
+                            T.intl.string(T.t['H930+P'])
                         ]
                     })
                 ]

@@ -3,10 +3,10 @@ n.d(t, {
         return i;
     },
     p: function () {
-        return s;
+        return l;
     }
 });
 let i = 'chat-messages';
-function s(e, t) {
+function l(e, t) {
     return ''.concat(i, '-').concat(e, '-').concat(t);
 }

@@ -1,7 +1,7 @@
 t(47120), t(177593);
-var o,
-    i = t(392711),
-    r = t.n(i),
+var i,
+    o = t(392711),
+    r = t.n(o),
     a = t(525654),
     c = t.n(a),
     l = t(579806),
@@ -34,18 +34,18 @@ if (h && !m) {
 }
 let C = (h && I) || ('Chrome' === c().name && 47 > parseFloat(c().version)) || ('Firefox' === c().name && 52 > parseFloat(c().version)),
     T = r().throttle(_.GN, 1000, { leading: !0 });
-function R() {
+function w() {
     g.ZP.flashFrame(!1);
 }
-h && (window.addEventListener('focus', R), g.ZP.on('MAIN_WINDOW_FOCUS', R));
-let w = window.Notification;
+h && (window.addEventListener('focus', w), g.ZP.on('MAIN_WINDOW_FOCUS', w));
+let S = window.Notification;
 m &&
     (g.ZP.on('NOTIFICATION_CLICK', (e, n) => {
         let t = null[n];
         null != t && (t.onclick(), t.close());
     }),
     g.ZP.send('NOTIFICATIONS_CLEAR'),
-    (o = class {
+    (i = class {
         static requestPermission(e) {
             e();
         }
@@ -53,7 +53,7 @@ m &&
             null != null[this.id] && (delete null[this.id], g.ZP.send('NOTIFICATION_CLOSE', this.id), this.onclose());
         }
         constructor(e, { body: n, icon: t }) {
-            p(this, 'id', w._id++),
+            p(this, 'id', S._id++),
                 p(this, 'title', void 0),
                 p(this, 'body', void 0),
                 p(this, 'icon', void 0),
@@ -73,37 +73,37 @@ m &&
                 });
         }
     }),
-    p(o, 'permission', 'granted'),
-    p(o, '_id', 0),
-    (w = o));
-function S() {
-    return null != w && 'granted' === w.permission;
+    p(i, 'permission', 'granted'),
+    p(i, '_id', 0),
+    (S = i));
+function R() {
+    return null != S && 'granted' === S.permission;
 }
 function v(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         t = arguments.length > 2 ? arguments[2] : void 0;
     e.includes('message') ? T(e, n, void 0, t) : (0, _.GN)(e, n);
 }
-function O(e) {
-    return (s.Z.disableNotifications && null == e.overrideStreamerMode) || !S() || (f.isPlatformEmbedded && !g.ZP.shouldDisplayNotifications());
+function A(e) {
+    return (s.Z.disableNotifications && null == e.overrideStreamerMode) || !R() || (f.isPlatformEmbedded && !g.ZP.shouldDisplayNotifications());
 }
 n.Z = {
-    hasPermission: S,
+    hasPermission: R,
     requestPermission: function (e) {
-        null != w &&
-            w.requestPermission(() => {
-                null != e && e(S());
+        null != S &&
+            S.requestPermission(() => {
+                null != e && e(R());
             });
     },
-    showNotification: function (e, n, t, o, i) {
+    showNotification: function (e, n, t, i, o) {
         var a, c, l, s;
         let _;
-        if (O(i)) {
-            null != i.sound && !1 !== i.playSoundIfDisabled && v(i.sound, null !== (c = i.volume) && void 0 !== c ? c : 1, i.soundpack);
+        if (A(o)) {
+            null != o.sound && !1 !== o.playSoundIfDisabled && v(o.sound, null !== (c = o.volume) && void 0 !== c ? c : 1, o.soundpack);
             return;
         }
-        null != i.sound && v(i.sound, null !== (l = i.volume) && void 0 !== l ? l : 1, i.soundpack);
-        let p = null !== (s = null == i ? void 0 : i.tag) && void 0 !== s ? s : null;
+        null != o.sound && v(o.sound, null !== (l = o.volume) && void 0 !== l ? l : 1, o.soundpack);
+        let p = null !== (s = null == o ? void 0 : o.tag) && void 0 !== s ? s : null;
         (0, f.isLinux)() && (t = r().escape(t));
         let m = {
             icon: e,
@@ -113,15 +113,15 @@ n.Z = {
         };
         h && u.Z.taskbarFlash && g.ZP.flashFrame(!0);
         try {
-            _ = new w(n, m);
+            _ = new S(n, m);
         } catch (e) {
             return null;
         }
-        return (null === (a = i.onShown) || void 0 === a || a.call(i),
-        !i.omitViewTracking && d.default.track(b.rMx.NOTIFICATION_VIEWED, o),
+        return (null === (a = o.onShown) || void 0 === a || a.call(o),
+        !o.omitViewTracking && d.default.track(b.rMx.NOTIFICATION_VIEWED, i),
         (_.onclick = () => {
             var e;
-            f.isPlatformEmbedded ? g.ZP.focus() : (window.focus(), _.close()), !i.omitClickTracking && d.default.track(b.rMx.NOTIFICATION_CLICKED, o), null === (e = i.onClick) || void 0 === e || e.call(i);
+            f.isPlatformEmbedded ? g.ZP.focus() : (window.focus(), _.close()), !o.omitClickTracking && d.default.track(b.rMx.NOTIFICATION_CLICKED, i), null === (e = o.onClick) || void 0 === e || e.call(o);
         }),
         C && setTimeout(() => _.close(), 5000),
         I)
@@ -133,5 +133,5 @@ n.Z = {
                   }
               };
     },
-    disabled: O
+    disabled: A
 };

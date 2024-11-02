@@ -22,7 +22,7 @@ let u = {
     },
     c = u,
     d = 'LAST_VIEWED_PATH';
-class _ extends (r = i.ZP.PersistedStore) {
+class f extends (r = i.ZP.PersistedStore) {
     initialize() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u;
         c = null != e ? e : u;
@@ -41,15 +41,15 @@ class _ extends (r = i.ZP.PersistedStore) {
         return c;
     }
 }
-l(_, 'displayName', 'DefaultRouteStore'),
-    l(_, 'persistKey', 'DefaultRouteStore'),
-    l(_, 'migrations', [
+l(f, 'displayName', 'DefaultRouteStore'),
+    l(f, 'persistKey', 'DefaultRouteStore'),
+    l(f, 'migrations', [
         () => {
             let e = a.K.get(d, null);
             return a.K.remove(d), { lastViewedPath: e };
         }
     ]),
-    (t.Z = new _(s.Z, {
+    (t.Z = new f(s.Z, {
         SAVE_LAST_ROUTE: function (e) {
             let { path: t } = e;
             return (c.lastViewedPath = t), !0;

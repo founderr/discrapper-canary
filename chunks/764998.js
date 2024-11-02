@@ -1,24 +1,24 @@
-n.r(a),
-    n.d(a, {
+r.r(n),
+    r.d(n, {
         default: function () {
-            return T;
+            return o;
         }
     });
-var s = n(200651);
-n(192379);
-var r = n(481060),
-    t = n(689938);
-function T(e) {
-    let { onConfirmUninstall: a, game: n, ...T } = e;
-    return (0, s.jsx)(r.ConfirmModal, {
-        header: t.Z.Messages.APPLICATION_UNINSTALL_PROMPT_TITLE.format({ gameName: n.name }),
-        confirmText: t.Z.Messages.APPLICATION_UNINSTALL_PROMPT_CONFIRM,
-        cancelText: t.Z.Messages.APPLICATION_UNINSTALL_PROMPT_CANCEL,
-        onConfirm: a,
-        ...T,
-        children: (0, s.jsx)(r.Text, {
+var a = r(200651);
+r(192379);
+var e = r(481060),
+    i = r(388032);
+function o(t) {
+    let { onConfirmUninstall: n, game: r, ...o } = t;
+    return (0, a.jsx)(e.ConfirmModal, {
+        header: i.intl.formatToPlainString(i.t['f/BAbG'], { gameName: r.name }),
+        confirmText: i.intl.string(i.t.RVy6Vl),
+        cancelText: i.intl.string(i.t['96dwMT']),
+        onConfirm: n,
+        ...o,
+        children: (0, a.jsx)(e.Text, {
             variant: 'text-md/normal',
-            children: t.Z.Messages.APPLICATION_UNINSTALL_PROMPT_BODY.format({ gameName: n.name })
+            children: i.intl.format(i.t['FP+NKS'], { gameName: r.name })
         })
     });
 }

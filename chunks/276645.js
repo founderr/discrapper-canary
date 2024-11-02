@@ -5,29 +5,29 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(970731),
-    r = n(689938),
-    l = n(56681);
+var r = n(481060),
+    l = n(970731),
+    a = n(388032),
+    s = n(56681);
 function o(e) {
     let { guildId: t, markAsDismissed: o } = e;
-    return (0, i.jsx)(s.ZP, {
-        className: l.container,
+    return (0, i.jsx)(l.ZP, {
+        className: s.container,
         asset: (0, i.jsx)('img', {
-            className: l.image,
+            className: s.image,
             src: n(297806),
             alt: ''
         }),
-        header: r.Z.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_COACHMARK_TITLE,
-        headerClassName: l.header,
-        content: r.Z.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_COACHMARK_DESCRIPTION,
-        buttonCTA: r.Z.Messages.CHECK_IT_OUT,
+        header: a.intl.string(a.t['2l9beX']),
+        headerClassName: s.header,
+        content: a.intl.string(a.t.gdqdND),
+        buttonCTA: a.intl.string(a.t.RzWDqa),
         buttonProps: {
-            color: a.ButtonColors.WHITE,
-            innerClassName: l.primaryButton
+            color: r.ButtonColors.WHITE,
+            innerClassName: s.primaryButton
         },
         onClick: () => {
-            (0, a.openModalLazy)(async () => {
+            (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e('5863'), n.e('53658')]).then(n.bind(n, 751212));
                 return (n) =>
                     (0, i.jsx)(e, {
@@ -36,10 +36,10 @@ function o(e) {
                     });
             });
         },
-        secondaryButtonCTA: r.Z.Messages.MAYBE_LATER,
+        secondaryButtonCTA: a.intl.string(a.t.TulDPj),
         secondaryButtonProps: {
-            look: a.ButtonLooks.LINK,
-            color: a.ButtonColors.WHITE
+            look: r.ButtonLooks.LINK,
+            color: r.ButtonColors.WHITE
         },
         markAsDismissed: o
     });

@@ -109,10 +109,10 @@ function u(e, t) {
         u,
         c,
         d = t.disableReturnRef,
-        _ = t.attachTo;
-    void 0 === _ && (_ = document);
-    var E = t.disable,
-        f =
+        f = t.attachTo;
+    void 0 === f && (f = document);
+    var _ = t.disable,
+        h =
             ((i = (0, r.useState)(function () {
                 return 'lock-' + o++;
             })[0]),
@@ -133,15 +133,15 @@ function u(e, t) {
             l);
     (0, r.useEffect)(
         function () {
-            E && (f.current = !1);
+            _ && (h.current = !1);
         },
-        [E]
+        [_]
     ),
         (0, r.useLayoutEffect)(
             function () {
                 var t = e.current;
                 function n(t) {
-                    if (f.current) {
+                    if (h.current) {
                         var n = e.current;
                         if (null != n) {
                             var r = t.target || document.body;
@@ -150,7 +150,7 @@ function u(e, t) {
                     }
                 }
                 function r(t) {
-                    if (f.current) {
+                    if (h.current) {
                         var n = e.current;
                         if (null != n) {
                             (null != t.relatedTarget && t.relatedTarget !== document.body) || (t.preventDefault(), n.focus());
@@ -161,10 +161,10 @@ function u(e, t) {
                 }
                 return (
                     null == t || null == document.activeElement || t.contains(document.activeElement) || null != t.querySelector('[autofocus]') || a(t, document.activeElement, !0),
-                    _.addEventListener('focusin', n, { capture: !0 }),
-                    _.addEventListener('focusout', r, { capture: !0 }),
+                    f.addEventListener('focusin', n, { capture: !0 }),
+                    f.addEventListener('focusout', r, { capture: !0 }),
                     function () {
-                        _.removeEventListener('focusin', n, { capture: !0 }), _.removeEventListener('focusout', r, { capture: !0 });
+                        f.removeEventListener('focusin', n, { capture: !0 }), f.removeEventListener('focusout', r, { capture: !0 });
                     }
                 );
             },

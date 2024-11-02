@@ -15,10 +15,10 @@ n.d(t, {
     n(47120);
 var r = n(192379),
     i = n(918701),
-    a = n(689938);
+    a = n(388032);
 let s = (e) => {
         let t = (0, i.si)(e);
-        return e.percentComplete > 0 ? a.Z.Messages.QUESTS_VIDEO_WATCH_RESUME_WITH_TIME_CTA.format({ remainTime: ''.concat(String(t.minutes).padStart(2, '0'), ':').concat(String(t.seconds).padStart(2, '0')) }) : a.Z.Messages.QUESTS_VIDEO_WATCH_WITH_TIME_CTA.format({ remainTime: ''.concat(String(t.minutes).padStart(2, '0'), ':').concat(String(t.seconds).padStart(2, '0')) });
+        return e.percentComplete > 0 ? a.intl.formatToPlainString(a.t['c59/Tk'], { remainTime: ''.concat(String(t.minutes).padStart(2, '0'), ':').concat(String(t.seconds).padStart(2, '0')) }) : a.intl.formatToPlainString(a.t.GNsKiY, { remainTime: ''.concat(String(t.minutes).padStart(2, '0'), ':').concat(String(t.seconds).padStart(2, '0')) });
     },
     o = (e) => null != e.text;
 function l(e) {

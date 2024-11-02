@@ -7,8 +7,8 @@ var r = n(200651),
     u = n(877565),
     c = n(590921),
     d = n(665692),
-    _ = n(689938);
-let E = {
+    f = n(388032);
+let _ = {
     sentinel: d.ME,
     stores: [s.ZP],
     matches: (e, t, n, r, i) => (i.mentions.user !== c.h3.DENY || i.mentions.role !== c.Fw.DENY || i.mentions.global !== c.VV.DENY) && !0,
@@ -18,7 +18,7 @@ let E = {
             l = r.mentions.user !== c.h3.DENY,
             u = r.mentions.role !== c.Fw.DENY,
             d = r.mentions.user === c.h3.ALLOW_GUILD,
-            _ = r.mentions.role === c.Fw.ALLOW_ALL;
+            f = r.mentions.role === c.Fw.ALLOW_ALL;
         return {
             results: o.ZP.queryMentionResults({
                 query: n,
@@ -28,7 +28,7 @@ let E = {
                 canMentionUsers: l,
                 canMentionRoles: u,
                 includeAllGuildUsers: d,
-                includeNonMentionableRoles: _,
+                includeNonMentionableRoles: f,
                 request: i
             })
         };
@@ -38,61 +38,61 @@ let E = {
             n,
             {
                 results: { users: s, globals: o, roles: l },
-                selectedIndex: E,
-                channel: f,
-                query: h,
-                options: p,
-                onHover: I,
-                onClick: m
+                selectedIndex: _,
+                channel: h,
+                query: p,
+                options: m,
+                onHover: g,
+                onClick: E
             } = e,
-            T = s.map((e, t) =>
+            v = s.map((e, t) =>
                 (0, r.jsx)(
                     a.ZP.User,
                     {
-                        guildId: f.guild_id,
-                        onClick: m,
-                        onHover: I,
-                        selected: E === t,
+                        guildId: h.guild_id,
+                        onClick: E,
+                        onHover: g,
+                        selected: _ === t,
                         index: t,
                         user: e.user,
                         nick: e.nick,
                         status: e.status,
-                        hidePersonalInformation: p.hidePersonalInformation
+                        hidePersonalInformation: m.hidePersonalInformation
                     },
                     e.user.id
                 )
             ),
-            S = o.map((e, t) =>
+            I = o.map((e, t) =>
                 (0, r.jsx)(
                     a.ZP.Generic,
                     {
-                        onClick: m,
-                        onHover: I,
-                        selected: E === t + s.length,
+                        onClick: E,
+                        onHover: g,
+                        selected: _ === t + s.length,
                         index: s.length + t,
                         text: e.text,
-                        description: p.hideMentionDescription ? null : e.description,
+                        description: m.hideMentionDescription ? null : e.description,
                         'aria-label': e.text
                     },
                     e.text
                 )
             ),
-            g = l.map((e, t) =>
+            S = l.map((e, t) =>
                 (0, r.jsx)(
                     a.ZP.Role,
                     {
-                        onClick: m,
-                        onHover: I,
-                        selected: E === t + s.length + o.length,
+                        onClick: E,
+                        onHover: g,
+                        selected: _ === t + s.length + o.length,
                         index: s.length + o.length + t,
                         role: e,
-                        hideDescription: p.hideMentionDescription
+                        hideDescription: m.hideMentionDescription
                     },
                     e.id
                 )
             );
         return (
-            p.mentions.user === c.h3.DENY ? ((t = _.Z.Messages.ROLES_MATCHING), (n = _.Z.Messages.ROLES)) : ((t = _.Z.Messages.MEMBERS_MATCHING), (n = _.Z.Messages.MEMBERS)),
+            m.mentions.user === c.h3.DENY ? ((t = f.t.MLiD1d), (n = f.intl.string(f.t.LPJmLy))) : ((t = f.t.rPNimp), (n = f.intl.string(f.t['9Oq93t']))),
             (0, r.jsxs)(
                 i.Fragment,
                 {
@@ -100,14 +100,14 @@ let E = {
                         (0, u.gm)({
                             titleWithQuery: t,
                             titleWithoutQuery: n,
-                            query: h,
+                            query: p,
                             getQuery: (e) => ''.concat(d.ME).concat(e)
                         }),
-                        T,
+                        v,
                         s.length > 0 && o.length > 0 ? (0, r.jsx)(a.ZP.Divider, {}) : null,
-                        S,
+                        I,
                         (s.length > 0 && l.length > 0) || (o.length > 0 && l.length > 0) ? (0, r.jsx)(a.ZP.Divider, {}) : null,
-                        g
+                        S
                     ]
                 },
                 'mentions'
@@ -122,8 +122,8 @@ let E = {
                 channel: s
             } = e,
             u = t[i],
-            _ = n[i - t.length],
-            E = r[i - t.length - n.length];
+            f = n[i - t.length],
+            _ = r[i - t.length - n.length];
         return (
             null != u
                 ? a.insertText(
@@ -134,23 +134,23 @@ let E = {
                           return '<@'.concat(e.id, '>');
                       })(u.user)
                   )
-                : null != _
+                : null != f
                   ? a.insertText(
                         (function (e) {
                             return e.text;
-                        })(_)
+                        })(f)
                     )
-                  : null != E &&
+                  : null != _ &&
                     a.insertText(
                         (function (e) {
                             return ''.concat(d.ME).concat(e.name);
-                        })(E),
+                        })(_),
                         (function (e) {
                             return '<@&'.concat(e.id, '>');
-                        })(E)
+                        })(_)
                     ),
             { type: c.z2.MENTION }
         );
     }
 };
-t.Z = E;
+t.Z = _;

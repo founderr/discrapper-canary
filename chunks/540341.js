@@ -12,7 +12,7 @@ n.d(t, {
         return l;
     },
     uE: function () {
-        return _;
+        return f;
     }
 });
 var r = n(259630),
@@ -26,20 +26,20 @@ function o(e, t, n, a) {
         c = e.timeZone;
     void 0 === a && (a = {});
     var d = a.format,
-        _ = (0, r.pi)((0, r.pi)({}, c && { timeZone: c }), d && (0, i.TB)(l, t, d, u)),
-        E = (0, i.L6)(a, s, _);
+        f = (0, r.pi)((0, r.pi)({}, c && { timeZone: c }), d && (0, i.TB)(l, t, d, u)),
+        _ = (0, i.L6)(a, s, f);
     return (
         'time' === t &&
-            !E.hour &&
-            !E.minute &&
-            !E.second &&
-            !E.timeStyle &&
-            !E.dateStyle &&
-            (E = (0, r.pi)((0, r.pi)({}, E), {
+            !_.hour &&
+            !_.minute &&
+            !_.second &&
+            !_.timeStyle &&
+            !_.dateStyle &&
+            (_ = (0, r.pi)((0, r.pi)({}, _), {
                 hour: 'numeric',
                 minute: 'numeric'
             })),
-        n(o, E)
+        n(o, _)
     );
 }
 function l(e, t) {
@@ -73,12 +73,12 @@ function c(e, t) {
         u = n[2],
         c = e.timeZone,
         d = e.locale,
-        _ = e.onError,
-        E = (0, i.L6)(void 0 === u ? {} : u, s, c ? { timeZone: c } : {});
+        f = e.onError,
+        _ = (0, i.L6)(void 0 === u ? {} : u, s, c ? { timeZone: c } : {});
     try {
-        return t(d, E).formatRange(o, l);
+        return t(d, _).formatRange(o, l);
     } catch (t) {
-        _(new a.Qe('Error formatting date time range.', e.locale, t));
+        f(new a.Qe('Error formatting date time range.', e.locale, t));
     }
     return String(o);
 }
@@ -94,7 +94,7 @@ function d(e, t) {
     }
     return [];
 }
-function _(e, t) {
+function f(e, t) {
     for (var n = [], r = 2; r < arguments.length; r++) n[r - 2] = arguments[r];
     var i = n[0],
         s = n[1],

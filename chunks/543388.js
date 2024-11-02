@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return f;
     },
     j: function () {
         return d;
@@ -12,7 +12,7 @@ var i = n(913527),
     a = n.n(i),
     s = n(481060),
     o = n(925329),
-    l = n(689938),
+    l = n(388032),
     u = n(901613);
 function c(e) {
     let { application: t, timestamp: n } = e;
@@ -34,7 +34,7 @@ function c(e) {
                     (0, r.jsx)(s.Text, {
                         variant: 'text-md/normal',
                         color: 'interactive-active',
-                        children: l.Z.Messages.MESSAGE_GAME_ICON_TOOLTIP_CONTENT.format({ applicationName: t.name })
+                        children: l.intl.format(l.t.J3s8JC, { applicationName: t.name })
                     })
                 ]
             })
@@ -46,7 +46,7 @@ function d(e) {
     return (0, r.jsx)(s.Tooltip, {
         hideOnClick: !0,
         position: 'top',
-        'aria-label': l.Z.Messages.MESSAGE_GAME_ICON_TOOLTIP,
+        'aria-label': l.intl.string(l.t['5nMcv7']),
         tooltipClassName: u.gameMessageTooltip,
         tooltipContentClassName: u.gameMessageTooltipContent,
         text: (0, r.jsx)(c, {
@@ -61,7 +61,7 @@ function d(e) {
             })
     });
 }
-function _(e) {
+function f(e) {
     let { application: t, timestamp: n, compact: i, children: a } = e;
     return (0, r.jsxs)(d, {
         application: t,

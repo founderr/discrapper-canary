@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
     l: function () {
-        return f;
+        return h;
     }
 });
 var i,
@@ -12,7 +12,7 @@ var i,
     u = n(58654),
     c = n(84735),
     d = n(112864);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,8 +25,8 @@ function _(e, t, n) {
         e
     );
 }
-let E = ['letter-spacing', 'line-height', 'padding-top', 'padding-bottom', 'font-family', 'font-weight', 'font-size', 'text-transform', 'width', 'padding-left', 'padding-right', 'border-width', 'box-sizing'];
-class f extends (i = s.PureComponent) {
+let _ = ['letter-spacing', 'line-height', 'padding-top', 'padding-bottom', 'font-family', 'font-weight', 'font-size', 'text-transform', 'width', 'padding-left', 'padding-right', 'border-width', 'box-sizing'];
+class h extends (i = s.PureComponent) {
     componentDidMount() {
         var e, t;
         null === (e = (t = this.props).onResize) || void 0 === e || e.call(t, void 0), Promise.resolve().then(() => this.calculateSize());
@@ -60,7 +60,7 @@ class f extends (i = s.PureComponent) {
             r = parseFloat(t.getPropertyValue('padding-bottom')) + parseFloat(t.getPropertyValue('padding-top')),
             i = parseFloat(t.getPropertyValue('border-bottom-width')) + parseFloat(t.getPropertyValue('border-top-width'));
         return {
-            sizingStyle: E.map((e) => ''.concat(e, ':').concat(t.getPropertyValue(e))).join(';'),
+            sizingStyle: _.map((e) => ''.concat(e, ':').concat(t.getPropertyValue(e))).join(';'),
             paddingSize: r,
             borderSize: i,
             boxSizing: n
@@ -111,18 +111,18 @@ class f extends (i = s.PureComponent) {
     }
     constructor(e) {
         super(e),
-            _(this, '_textArea', void 0),
-            _(this, 'handleSetRef', (e) => {
+            f(this, '_textArea', void 0),
+            f(this, 'handleSetRef', (e) => {
                 this._textArea = e;
             }),
-            _(this, 'handleChange', (e) => {
+            f(this, 'handleChange', (e) => {
                 let { onChange: t } = this.props;
                 null == t || t(e), this.calculateSize();
             }),
             (this.state = { height: void 0 });
     }
 }
-_(f, 'defaultProps', {
+f(h, 'defaultProps', {
     autoFocus: !1,
     disabled: !1,
     autoCorrect: 'off'

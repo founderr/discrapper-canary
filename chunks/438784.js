@@ -1,9 +1,9 @@
 n.d(t, {
     I: function () {
-        return f;
+        return h;
     },
     b: function () {
-        return h;
+        return p;
     }
 }),
     n(47120);
@@ -29,23 +29,23 @@ let d = {
         enter: { dotPosition: 1 },
         leave: { dotPosition: 0 }
     },
-    _ = {
+    f = {
         config: { duration: 2400 },
         from: { dotCycle: 2.8 },
         reset: !0
     };
-function E(e) {
+function _(e) {
     let t = e % 2;
     return t > 1 ? 1 - (t - 1) : t;
 }
-let f = i.memo(function (e) {
+let h = i.memo(function (e) {
         let { dotRadius: t, dotPosition: n, fill: a = 'currentColor', spacing: s = 2.5 } = e,
             u = i.useRef(c()),
             d = i.useRef(!0);
         i.useEffect(() => () => void (d.current = !1), []);
-        let [f] = (0, l.useSpring)(
+        let [h] = (0, l.useSpring)(
                 () => ({
-                    ..._,
+                    ...f,
                     to: async (e) => {
                         let t = 2.8;
                         for (; d.current; ) {
@@ -68,7 +68,7 @@ let f = i.memo(function (e) {
                 }),
                 'animate-always'
             ),
-            h = (6 * t + (t / 4) * 2) / 2;
+            p = (6 * t + (t / 4) * 2) / 2;
         return (0, r.jsx)(r.Fragment, {
             children: [0, 1, 2].map((e) => {
                 let i = 0.25 * e,
@@ -76,16 +76,16 @@ let f = i.memo(function (e) {
                 return (0, r.jsx)(
                     o.animated.circle,
                     {
-                        cx: n ? n.to([0, 1], [h, l]) : l,
+                        cx: n ? n.to([0, 1], [p, l]) : l,
                         cy: t,
-                        r: f.dotCycle
-                            .to((e) => E(e - i))
+                        r: h.dotCycle
+                            .to((e) => _(e - i))
                             .to([0, 0.4, 0.8, 1], [0.8 * t, 0.8 * t, t, t])
                             .to((e) => (u.current ? e : t)),
                         fill: a,
                         style: {
-                            opacity: f.dotCycle
-                                .to((e) => E(e - i))
+                            opacity: h.dotCycle
+                                .to((e) => _(e - i))
                                 .to([0, 0.4, 0.8, 1], [0.3, 0.3, 1, 1])
                                 .to((e) => (u.current ? e : 1))
                         }
@@ -95,11 +95,11 @@ let f = i.memo(function (e) {
             })
         });
     }),
-    h = i.memo(
+    p = i.memo(
         i.forwardRef(function (e, t) {
-            let { dotRadius: n, x: i, y: a, hide: _ = !1, themed: E = !1, className: h } = e;
+            let { dotRadius: n, x: i, y: a, hide: f = !1, themed: _ = !1, className: p } = e;
             return (0, l.useTransition)(
-                _,
+                f,
                 {
                     ...d,
                     key: (e) => (e ? 'true' : 'false')
@@ -107,7 +107,7 @@ let f = i.memo(function (e) {
                 c() ? 'animate-always' : 'animate-never'
             )((e, l, c) => {
                 let { dotPosition: d } = e,
-                    { key: _ } = c;
+                    { key: f } = c;
                 return l
                     ? null
                     : (0, r.jsx)(
@@ -118,16 +118,16 @@ let f = i.memo(function (e) {
                               y: a,
                               width: 6 * n + (n / 2) * 2,
                               height: 2 * n,
-                              className: s()(h, u.dots, E ? u.themed : null),
+                              className: s()(p, u.dots, _ ? u.themed : null),
                               children: (0, r.jsx)(o.animated.g, {
                                   style: { opacity: d.to((e) => Math.min(1, Math.max(e, 0))) },
-                                  children: (0, r.jsx)(f, {
+                                  children: (0, r.jsx)(h, {
                                       dotRadius: n,
                                       dotPosition: d
                                   })
                               })
                           },
-                          _
+                          f
                       );
             });
         })

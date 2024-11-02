@@ -1,206 +1,206 @@
-a.r(s),
-    a.d(s, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return x;
+            return I;
         }
     }),
-    a(47120);
-var r = a(200651),
-    t = a(192379),
-    n = a(990547),
-    i = a(481060),
-    o = a(37234),
-    l = a(700582),
-    c = a(213609),
-    d = a(600164),
-    _ = a(434404),
-    R = a(706454),
-    E = a(768581),
-    u = a(5192),
-    m = a(51144),
-    N = a(981631),
-    T = a(72766),
-    f = a(689938),
-    I = a(737881);
-let S = function () {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : R.default.locale;
-    return 'https://'.concat(N.xr4, '/hc/').concat(e.toLowerCase(), '/requests/new?ticket_form_id=360000168511');
+    n(47120);
+var r = n(200651),
+    a = n(192379),
+    s = n(990547),
+    i = n(481060),
+    o = n(37234),
+    l = n(700582),
+    c = n(213609),
+    d = n(600164),
+    u = n(434404),
+    m = n(706454),
+    f = n(768581),
+    x = n(5192),
+    T = n(51144),
+    p = n(981631),
+    N = n(72766),
+    h = n(388032),
+    _ = n(737881);
+let E = function () {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m.default.locale;
+    return 'https://'.concat(p.xr4, '/hc/').concat(e.toLowerCase(), '/requests/new?ticket_form_id=360000168511');
 };
-function x(e) {
-    let { guild: s, toUser: R, fromUser: x, onClose: A, transitionState: h } = e,
-        [p, O] = t.useState(!1),
-        F = s.hasFeature(N.oNc.VERIFIED) || s.hasFeature(N.oNc.PARTNERED),
-        M = F ? f.Z.Messages.TRANSFER_OWNERSHIP_PROTECTED_GUILD_PAUSED : null,
-        b = F ? f.Z.Messages.TRANSFER_OWNERSHIP_PROTECTED_GUILD_LINK_PAUSED.format({ ticketUrl: S() }) : null,
-        g = s.hasFeature(N.oNc.CREATOR_MONETIZABLE) || s.hasFeature(N.oNc.CREATOR_MONETIZABLE_PROVISIONAL);
-    async function C(e) {
-        await _.Z.transferOwnership(s.id, R.id, T.X.EMAIL, e);
+function I(e) {
+    let { guild: t, toUser: m, fromUser: I, onClose: R, transitionState: b } = e,
+        [A, S] = a.useState(!1),
+        g = t.hasFeature(p.oNc.VERIFIED) || t.hasFeature(p.oNc.PARTNERED),
+        v = g ? h.intl.string(h.t.wDkfrK) : null,
+        j = g ? h.intl.format(h.t.A37vwM, { ticketUrl: E() }) : null,
+        C = t.hasFeature(p.oNc.CREATOR_MONETIZABLE) || t.hasFeature(p.oNc.CREATOR_MONETIZABLE_PROVISIONAL);
+    async function F(e) {
+        await u.Z.transferOwnership(t.id, m.id, N.X.EMAIL, e);
     }
-    async function P() {
-        await _.Z.sendTransferOwnershipPincode(s.id, !0);
+    async function O() {
+        await u.Z.sendTransferOwnershipPincode(t.id, !0);
     }
-    async function Z(e) {
-        e.preventDefault(), A();
+    async function k(e) {
+        e.preventDefault(), R();
         try {
-            x.mfaEnabled || null == x.email
-                ? (await _.Z.transferOwnership(s.id, R.id, x.mfaEnabled ? T.X.MFA : null), (0, o.xf)())
-                : (await _.Z.sendTransferOwnershipPincode(s.id),
+            I.mfaEnabled || null == I.email
+                ? (await u.Z.transferOwnership(t.id, m.id, I.mfaEnabled ? N.X.MFA : null), (0, o.xf)())
+                : (await u.Z.sendTransferOwnershipPincode(t.id),
                   (0, i.openModalLazy)(async () => {
-                      let { default: e } = await a.e('94566').then(a.bind(a, 965072));
-                      return (s) =>
+                      let { default: e } = await n.e('94566').then(n.bind(n, 965072));
+                      return (t) =>
                           (0, r.jsx)(e, {
-                              ...s,
-                              onFormSubmit: C,
-                              onResend: P,
+                              ...t,
+                              onFormSubmit: F,
+                              onResend: O,
                               onSuccess: o.xf,
-                              headerText: f.Z.Messages.TRANSFER_OWNERSHIP,
-                              confirmButtonText: f.Z.Messages.TRANSFER_OWNERSHIP,
+                              headerText: h.intl.string(h.t.Z5s7PD),
+                              confirmButtonText: h.intl.string(h.t.Z5s7PD),
                               confirmButtonColor: i.Button.Colors.RED,
-                              impressionName: n.ImpressionNames.GUILD_TRANSFER_OWNERSHIP_CONFIRM_EMAIL_CODE
+                              impressionName: s.ImpressionNames.GUILD_TRANSFER_OWNERSHIP_CONFIRM_EMAIL_CODE
                           });
                   }));
         } catch (e) {
-            e.body.code === N.evJ.NEW_OWNER_INELIGIBLE_FOR_SERVER_SUBSCRIPTION &&
+            e.body.code === p.evJ.NEW_OWNER_INELIGIBLE_FOR_SERVER_SUBSCRIPTION &&
                 (0, i.openModal)((e) =>
                     (0, r.jsx)(i.ConfirmModal, {
                         ...e,
-                        header: f.Z.Messages.TRANSFER_OWNERSHIP_FAILURE_MODAL_TITLE,
-                        confirmText: f.Z.Messages.GOT_IT,
+                        header: h.intl.string(h.t['m+nQlp']),
+                        confirmText: h.intl.string(h.t['NX+WJC']),
                         confirmButtonColor: i.Button.Colors.BRAND,
                         children: (0, r.jsx)(i.Text, {
                             variant: 'text-md/normal',
-                            children: f.Z.Messages.SERVER_SUBSCRIPTION_OWNERSHIP_TRANSFER_FAILURE_MODAL_BODY.format({ server_subscription_owner_transfer_article: N.T23 })
+                            children: h.intl.format(h.t.wG747e, { server_subscription_owner_transfer_article: p.T23 })
                         })
                     })
                 );
         }
     }
     (0, c.Z)({
-        type: n.ImpressionTypes.MODAL,
-        name: n.ImpressionNames.GUILD_TRANSFER_OWNERSHIP
+        type: s.ImpressionTypes.MODAL,
+        name: s.ImpressionNames.GUILD_TRANSFER_OWNERSHIP
     });
-    let L = u.ZP.getNickname(s.id, void 0, R),
-        j = R.hasAvatarForGuild(s.id),
-        v = () =>
+    let M = x.ZP.getNickname(t.id, void 0, m),
+        L = m.hasAvatarForGuild(t.id),
+        Z = () =>
             (0, r.jsxs)('span', {
-                className: I.guildTransfer,
+                className: _.guildTransfer,
                 children: [
-                    null != s.icon
+                    null != t.icon
                         ? (0, r.jsx)(i.Avatar, {
-                              src: E.ZP.getGuildIconURL({
-                                  id: s.id,
-                                  icon: s.icon,
+                              src: f.ZP.getGuildIconURL({
+                                  id: t.id,
+                                  icon: t.icon,
                                   size: 16
                               }),
                               size: i.AvatarSizes.SIZE_16,
-                              className: I.miniGuildIcon,
+                              className: _.miniGuildIcon,
                               'aria-hidden': !0
                           })
                         : null,
                     (0, r.jsx)(i.Text, {
-                        className: I.guildName,
+                        className: _.guildName,
                         variant: 'text-sm/bold',
-                        children: s.toString()
+                        children: t.toString()
                     })
                 ]
             });
     return (0, r.jsx)(i.ModalRoot, {
-        transitionState: h,
+        transitionState: b,
         children: (0, r.jsxs)('form', {
-            onSubmit: Z,
+            onSubmit: k,
             children: [
                 (0, r.jsx)(i.ModalHeader, {
                     separator: !1,
                     children: (0, r.jsx)(i.Heading, {
                         variant: 'heading-lg/semibold',
-                        className: I.header,
-                        children: f.Z.Messages.TRANSFER_OWNERSHIP
+                        className: _.header,
+                        children: h.intl.string(h.t.Z5s7PD)
                     })
                 }),
                 (0, r.jsxs)(i.ModalContent, {
                     children: [
                         (0, r.jsx)(i.FormText, {
                             type: i.FormText.Types.DESCRIPTION,
-                            className: I.subHeader,
+                            className: _.subHeader,
                             children:
-                                null != L || j
-                                    ? f.Z.Messages.TRANSFER_OWNERSHIP_TO_USER_WITH_AKA_V2.format({
-                                          GuildHook: v,
-                                          user: (0, m.W5)(R),
+                                null != M || L
+                                    ? h.intl.format(h.t.E90vgo, {
+                                          GuildHook: Z,
+                                          user: (0, T.W5)(m),
                                           AKAHook: function () {
                                               return (0, r.jsxs)('span', {
-                                                  className: I.akaTransfer,
+                                                  className: _.akaTransfer,
                                                   children: [
                                                       (0, r.jsx)(i.TextBadge, {
-                                                          text: f.Z.Messages.AKA,
+                                                          text: h.intl.string(h.t.l1QVfn),
                                                           disableColor: !0,
-                                                          className: I.akaBadge
+                                                          className: _.akaBadge
                                                       }),
-                                                      j
+                                                      L
                                                           ? (0, r.jsx)(i.Avatar, {
-                                                                src: R.getAvatarURL(s.id, 16, !0),
+                                                                src: m.getAvatarURL(t.id, 16, !0),
                                                                 size: i.AvatarSizes.SIZE_16,
-                                                                className: I.miniAvatar,
+                                                                className: _.miniAvatar,
                                                                 'aria-hidden': !0
                                                             })
                                                           : null,
                                                       (0, r.jsx)(i.Text, {
-                                                          className: I.nickname,
+                                                          className: _.nickname,
                                                           variant: 'text-sm/normal',
-                                                          children: null != L ? L : m.ZP.getName(R)
+                                                          children: null != M ? M : T.ZP.getName(m)
                                                       })
                                                   ]
                                               });
                                           }
                                       })
-                                    : f.Z.Messages.TRANSFER_OWNERSHIP_TO_USER_V2.format({
-                                          GuildHook: v,
-                                          user: (0, m.W5)(R)
+                                    : h.intl.format(h.t['2XLnGx'], {
+                                          GuildHook: Z,
+                                          user: (0, T.W5)(m)
                                       })
                         }),
                         (0, r.jsxs)(d.Z, {
-                            className: I.fromToWrapper,
+                            className: _.fromToWrapper,
                             justify: d.Z.Justify.CENTER,
                             children: [
                                 (0, r.jsx)('div', {
-                                    className: I.from,
+                                    className: _.from,
                                     children: (0, r.jsx)(l.Z, {
-                                        user: x,
+                                        user: I,
                                         size: i.AvatarSizes.SIZE_80
                                     })
                                 }),
                                 (0, r.jsx)('div', {
-                                    className: I.to,
+                                    className: _.to,
                                     children: (0, r.jsx)(l.Z, {
-                                        user: R,
+                                        user: m,
                                         size: i.AvatarSizes.SIZE_80
                                     })
                                 })
                             ]
                         }),
-                        g &&
+                        C &&
                             (0, r.jsx)(i.FormText, {
                                 type: i.FormText.Types.DESCRIPTION,
-                                className: I.roleSubscriptionText,
-                                children: f.Z.Messages.TRANSFER_OWNERSHIP_SERVER_SUBSCRIPTION_GUILD.format({ server_subscription_owner_transfer_article: N.T23 })
+                                className: _.roleSubscriptionText,
+                                children: h.intl.format(h.t.LAlucX, { server_subscription_owner_transfer_article: p.T23 })
                             }),
                         (0, r.jsx)(i.FormSwitch, {
-                            disabled: F,
-                            tooltipNote: M,
+                            disabled: g,
+                            tooltipNote: v,
                             hideBorder: !0,
-                            value: p,
+                            value: A,
                             onChange: function (e) {
-                                O(e);
+                                S(e);
                             },
                             children: (0, r.jsx)(i.FormText, {
                                 type: i.FormText.Types.DESCRIPTION,
-                                children: f.Z.Messages.TRANSFER_OWNERSHIP_ACKNOWLEDGE.format({ username: (0, m.W5)(R) })
+                                children: h.intl.format(h.t.xm6ACA, { username: (0, T.W5)(m) })
                             })
                         }),
                         (0, r.jsx)(i.FormText, {
-                            className: I.protectedText,
+                            className: _.protectedText,
                             type: i.FormText.Types.DEFAULT,
-                            children: b
+                            children: j
                         })
                     ]
                 }),
@@ -208,15 +208,15 @@ function x(e) {
                     children: [
                         (0, r.jsx)(i.Button, {
                             type: 'submit',
-                            disabled: !p,
+                            disabled: !A,
                             color: i.Button.Colors.RED,
-                            children: f.Z.Messages.TRANSFER_OWNERSHIP
+                            children: h.intl.string(h.t.Z5s7PD)
                         }),
                         (0, r.jsx)(i.Button, {
                             look: i.Button.Looks.LINK,
                             color: i.Button.Colors.PRIMARY,
-                            onClick: A,
-                            children: f.Z.Messages.CANCEL
+                            onClick: R,
+                            children: h.intl.string(h.t['ETE/oK'])
                         })
                     ]
                 })

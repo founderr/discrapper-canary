@@ -42,7 +42,7 @@ let u = !1,
         warningSeen: !1
     },
     d = (0, i.cloneDeep)(c);
-class _ extends (r = a.ZP.DeviceSettingsStore) {
+class f extends (r = a.ZP.DeviceSettingsStore) {
     initialize(e) {
         d = {
             ...d,
@@ -80,9 +80,9 @@ class _ extends (r = a.ZP.DeviceSettingsStore) {
         return d.comboSoundsEnabled;
     }
 }
-l(_, 'displayName', 'PoggermodeSettingsStore'),
-    l(_, 'persistKey', 'PoggermodeSettingsStore'),
-    (t.Z = new _(s.Z, {
+l(f, 'displayName', 'PoggermodeSettingsStore'),
+    l(f, 'persistKey', 'PoggermodeSettingsStore'),
+    (t.Z = new f(s.Z, {
         POGGERMODE_SETTINGS_UPDATE: function (e) {
             let { settings: t } = e;
             d = {

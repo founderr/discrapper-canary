@@ -1,37 +1,37 @@
-t.r(n),
-    t.d(n, {
+i.r(n),
+    i.d(n, {
         default: function () {
-            return d;
+            return r;
         }
     });
-var i = t(200651);
-t(192379);
-var a = t(481060),
-    s = t(239091),
-    l = t(560067),
-    o = t(675999),
-    u = t(689938);
-function d(e) {
-    let { onSelect: n } = e;
-    return (0, i.jsxs)(a.Menu, {
+var e = i(200651);
+i(192379);
+var l = i(481060),
+    a = i(239091),
+    o = i(560067),
+    u = i(675999),
+    d = i(388032);
+function r(t) {
+    let { onSelect: n } = t;
+    return (0, e.jsxs)(l.Menu, {
         navId: 'guild-context',
-        'aria-label': u.Z.Messages.GUILD_ACTIONS_MENU_LABEL,
-        onClose: s.Zy,
+        'aria-label': d.intl.string(d.t.HpQykZ),
+        onClose: a.Zy,
         onSelect: n,
         children: [
-            (0, i.jsx)(a.MenuItem, {
+            (0, e.jsx)(l.MenuItem, {
                 id: 'join',
-                label: u.Z.Messages.JOIN_SERVER_BUTTON_CTA,
+                label: d.intl.string(d.t.yRjK4u),
                 action: () =>
-                    l.Z.openCreateGuildModal({
-                        initialSlide: o._m.JOIN_GUILD,
+                    o.Z.openCreateGuildModal({
+                        initialSlide: u._m.JOIN_GUILD,
                         location: 'Guild List - ContextMenu'
                     })
             }),
-            (0, i.jsx)(a.MenuItem, {
+            (0, e.jsx)(l.MenuItem, {
                 id: 'create',
-                label: u.Z.Messages.CREATE_SERVER_BUTTON_CTA,
-                action: () => l.Z.openCreateGuildModal({ location: 'Guild List - ContextMenu' })
+                label: d.intl.string(d.t.B44MTk),
+                action: () => o.Z.openCreateGuildModal({ location: 'Guild List - ContextMenu' })
             })
         ]
     });

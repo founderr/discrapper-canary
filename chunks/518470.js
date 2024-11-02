@@ -1,16 +1,16 @@
 n.d(t, {
     Z: function () {
-        return i;
+        return l;
     }
 });
-var s = n(192379),
-    a = n(689938);
-function i() {
-    return s.useMemo(
+var i = n(192379),
+    r = n(388032);
+function l() {
+    return i.useMemo(
         () => [
             {
                 value: null,
-                label: a.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ACTIVE_TRIAL_USER_LIMIT_NONE_OPTION
+                label: r.intl.string(r.t.zHfL6u)
             },
             {
                 value: 10,

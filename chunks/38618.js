@@ -8,83 +8,83 @@ var r,
     u = n(442837),
     c = n(570140),
     d = n(287734),
-    _ = n(710845),
-    E = n(569545),
-    f = n(581883),
-    h = n(314897),
-    p = n(523746),
-    I = n(592125),
-    m = n(131951),
-    T = n(19780),
-    S = n(936349),
-    g = n(944486),
-    A = n(885110),
-    N = n(959457),
-    R = n(358085),
-    O = n(138859),
-    v = n(955132),
+    f = n(710845),
+    _ = n(569545),
+    h = n(581883),
+    p = n(314897),
+    m = n(523746),
+    g = n(592125),
+    E = n(131951),
+    v = n(19780),
+    I = n(936349),
+    S = n(944486),
+    T = n(885110),
+    b = n(959457),
+    y = n(358085),
+    A = n(138859),
+    N = n(955132),
     C = n(645436),
-    L = n(344651),
-    D = n(981631),
-    y = n(526761);
-let b = window.DiscordNative;
-v.Wb.dispatcher.getDispatchHandler = L.Z;
-let M = new _.Z('ConnectionStore'),
-    P = 0,
-    U = null,
-    w = !0,
-    x = null;
-async function G(e) {
-    (P = Date.now()), (U = e.sessionId), v.RR.handleConnectionOpen();
+    R = n(344651),
+    O = n(981631),
+    D = n(526761);
+let L = window.DiscordNative;
+N.Wb.dispatcher.getDispatchHandler = R.Z;
+let x = new f.Z('ConnectionStore'),
+    w = 0,
+    M = null,
+    P = !0,
+    k = null;
+async function U(e) {
+    (w = Date.now()), (M = e.sessionId), N.RR.handleConnectionOpen();
     let t = {},
-        n = g.Z.getVoiceChannelId();
+        n = S.Z.getVoiceChannelId();
     if (null != n) {
         var r, i, a, s, o, l, u, c;
-        if ((null === (o = window) || void 0 === o ? void 0 : null === (s = o.performance) || void 0 === s ? void 0 : null === (a = s.getEntriesByType) || void 0 === a ? void 0 : null === (i = a.call(s, 'navigation')) || void 0 === i ? void 0 : null === (r = i[0]) || void 0 === r ? void 0 : r.type) === 'reload' || (null === (l = await (null == b ? void 0 : null === (c = b.processUtils) || void 0 === c ? void 0 : null === (u = c.getLastCrash) || void 0 === u ? void 0 : u.call(c))) || void 0 === l ? void 0 : l.rendererCrashReason) != null || !w) {
-            let e = I.Z.getChannel(n);
+        if ((null === (o = window) || void 0 === o ? void 0 : null === (s = o.performance) || void 0 === s ? void 0 : null === (a = s.getEntriesByType) || void 0 === a ? void 0 : null === (i = a.call(s, 'navigation')) || void 0 === i ? void 0 : null === (r = i[0]) || void 0 === r ? void 0 : r.type) === 'reload' || (null === (l = await (null == L ? void 0 : null === (c = L.processUtils) || void 0 === c ? void 0 : null === (u = c.getLastCrash) || void 0 === u ? void 0 : u.call(c))) || void 0 === l ? void 0 : l.rendererCrashReason) != null || !P) {
+            let e = g.Z.getChannel(n);
             null != e &&
                 (t = {
                     guildId: e.getGuildId(),
                     channelId: n
                 });
-        } else T.Z.setLastSessionVoiceChannelId(null != n ? n : null), d.default.selectVoiceChannel(null);
+        } else v.Z.setLastSessionVoiceChannelId(null != n ? n : null), d.default.selectVoiceChannel(null);
     }
-    v.GC.update(t, !0), (w = !1);
+    N.GC.update(t, !0), (P = !1);
 }
-function k() {
-    v.GC.update();
+function G() {
+    N.GC.update();
 }
 function B() {
-    return v.GC.update(), !1;
+    return N.GC.update(), !1;
 }
-function F() {
-    return v.RR.update(), !1;
+function Z() {
+    return N.RR.update(), !1;
 }
-function V(e) {
-    v.Wb.isSessionEstablished() && v.Wb.streamDelete(e);
+function F(e) {
+    N.Wb.isSessionEstablished() && N.Wb.streamDelete(e);
 }
-class H extends (r = u.ZP.Store) {
+class V extends (r = u.ZP.Store) {
     initialize() {
-        this.waitFor(h.default, g.Z, I.Z, p.Z, f.Z), this.syncWith([m.Z], B), this.syncWith([A.Z], F);
+        this.waitFor(p.default, S.Z, g.Z, m.Z, h.Z), this.syncWith([E.Z], B), this.syncWith([T.Z], Z);
     }
     getSocket() {
-        return v.Wb;
+        return N.Wb;
     }
     isTryingToConnect() {
-        return !v.Wb.isClosed();
+        return !N.Wb.isClosed();
     }
     isConnected() {
-        return v.Wb.isSessionEstablished();
+        return N.Wb.isSessionEstablished();
     }
     isConnectedOrOverlay() {
-        return v.Wb.isSessionEstablished() || __OVERLAY__;
+        return N.Wb.isSessionEstablished() || __OVERLAY__;
     }
     lastTimeConnectedChanged() {
-        return P;
+        return w;
     }
 }
 (s = 'GatewayConnectionStore'),
-    (a = 'displayName') in (i = H)
+    (a = 'displayName') in (i = V)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -92,51 +92,51 @@ class H extends (r = u.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new H(c.Z, {
+    (t.Z = new V(c.Z, {
         START_SESSION: function () {
-            return v.Wb.isClosed() ? (M.verbose('Socket is reconnecting because of starting new session'), v.Wb.connect()) : (M.verbose('Socket is not reconnecting during a new session because it is not closed'), !1);
+            return N.Wb.isClosed() ? (x.verbose('Socket is reconnecting because of starting new session'), N.Wb.connect()) : (x.verbose('Socket is not reconnecting during a new session because it is not closed'), !1);
         },
         LOGIN_SUCCESS: function () {
-            return M.verbose('session refresh dispatched', { isEstablished: v.Wb.isSessionEstablished() }), !!v.Wb.isSessionEstablished() && (v.Wb.close(), v.Wb.connect());
+            return x.verbose('session refresh dispatched', { isEstablished: N.Wb.isSessionEstablished() }), !!N.Wb.isSessionEstablished() && (N.Wb.close(), N.Wb.connect());
         },
         LOGOUT: function (e) {
-            e.isSwitchingAccount && v.RR.handleAccountSwitch(), M.verbose('Closing socket because of logout'), v.Wb.close();
+            e.isSwitchingAccount && N.RR.handleAccountSwitch(), x.verbose('Closing socket because of logout'), N.Wb.close();
         },
         CLEAR_CACHES: function (e) {
-            return e.resetSocket && (v.Wb.close(), v.Wb.dispatcher.clear(), v.Wb.connect()), !1;
+            return e.resetSocket && (N.Wb.close(), N.Wb.dispatcher.clear(), N.Wb.connect()), !1;
         },
         CONNECTION_OPEN: (e) => {
-            G(e);
+            U(e);
         },
         CONNECTION_CLOSED: function () {
-            M.verbose('connection closed dispatched'), (P = Date.now());
+            x.verbose('connection closed dispatched'), (w = Date.now());
         },
         RTC_CONNECTION_STATE: function (e) {
-            if (e.state !== D.hes.DISCONNECTED) return !1;
-            e.willReconnect && (null != e.streamKey ? v.Wb.streamPing(e.streamKey) : v.Wb.voiceServerPing());
+            if (e.state !== O.hes.DISCONNECTED) return !1;
+            e.willReconnect && (null != e.streamKey ? N.Wb.streamPing(e.streamKey) : N.Wb.voiceServerPing());
         },
         VOICE_CHANNEL_SELECT: function (e) {
             return (
-                v.GC.update({
+                N.GC.update({
                     guildId: e.guildId,
                     channelId: e.channelId
                 }),
-                (0, R.isIOS)() && x === D.$7l.BACKGROUND && (null == e.channelId ? v.Wb.close(!0) : v.Wb.isClosed() && (C.Y(!1), v.Wb.connect())),
+                (0, y.isIOS)() && k === O.$7l.BACKGROUND && (null == e.channelId ? N.Wb.close(!0) : N.Wb.isClosed() && (C.Y(!1), N.Wb.connect())),
                 !1
             );
         },
         VOICE_STATE_UPDATES: function (e) {
             let { voiceStates: t } = e;
             return t.reduce((e, t) => {
-                if (h.default.getId() !== t.userId) return e;
-                if (t.sessionId === U)
-                    v.GC.setState({
+                if (p.default.getId() !== t.userId) return e;
+                if (t.sessionId === M)
+                    N.GC.setState({
                         guildId: t.guildId,
                         channelId: t.channelId
                     });
                 else {
-                    if (t.guildId !== v.GC.guildId) return e;
-                    v.GC.setState({
+                    if (t.guildId !== N.GC.guildId) return e;
+                    N.GC.setState({
                         guildId: null,
                         channelId: null
                     });
@@ -145,44 +145,44 @@ class H extends (r = u.ZP.Store) {
             }, !1);
         },
         GUILD_DELETE: function (e) {
-            e.guild.id === v.GC.guildId &&
-                v.GC.setState({
+            e.guild.id === N.GC.guildId &&
+                N.GC.setState({
                     guildId: null,
                     channelId: null
                 });
         },
         CHANNEL_DELETE: function (e) {
             let { channel: t } = e;
-            t.id === v.GC.channelId &&
-                v.GC.setState({
+            t.id === N.GC.channelId &&
+                N.GC.setState({
                     guildId: null,
                     channelId: null
                 });
         },
         CALL_DELETE: function (e) {
             let { channelId: t } = e;
-            t === v.GC.channelId &&
-                v.GC.setState({
+            t === N.GC.channelId &&
+                N.GC.setState({
                     guildId: null,
                     channelId: null
                 });
         },
         APP_STATE_UPDATE: function (e) {
-            return (0, R.isIOS)() ? (h.default.isAuthenticated() && (x === D.$7l.INACTIVE && e.state === D.$7l.BACKGROUND && null == v.GC.channelId ? v.Wb.close(!0) : x === D.$7l.BACKGROUND && e.state === D.$7l.ACTIVE && v.Wb.isClosed() && (C.Y(!1), v.Wb.connect())), (x = e.state)) : e.state === D.$7l.ACTIVE && (C.Y(!1), h.default.isAuthenticated() && v.Wb.resetBackoff('App state is active')), !1;
+            return (0, y.isIOS)() ? (p.default.isAuthenticated() && (k === O.$7l.INACTIVE && e.state === O.$7l.BACKGROUND && null == N.GC.channelId ? N.Wb.close(!0) : k === O.$7l.BACKGROUND && e.state === O.$7l.ACTIVE && N.Wb.isClosed() && (C.Y(!1), N.Wb.connect())), (k = e.state)) : e.state === O.$7l.ACTIVE && (C.Y(!1), p.default.isAuthenticated() && N.Wb.resetBackoff('App state is active')), !1;
         },
         GUILD_MEMBERS_REQUEST: function (e) {
             return (
-                v.Wb.isSessionEstablished() &&
+                N.Wb.isSessionEstablished() &&
                     ('userIds' in e
                         ? l()(e.userIds)
                               .chunk(100)
                               .forEach((t) => {
-                                  v.Wb.requestGuildMembers(e.guildIds, {
+                                  N.Wb.requestGuildMembers(e.guildIds, {
                                       userIds: t,
                                       presences: !!e.presences
                                   });
                               })
-                        : v.Wb.requestGuildMembers(e.guildIds, {
+                        : N.Wb.requestGuildMembers(e.guildIds, {
                               query: e.query,
                               limit: e.limit,
                               presences: !!e.presences
@@ -192,87 +192,87 @@ class H extends (r = u.ZP.Store) {
         },
         GUILD_SEARCH_RECENT_MEMBERS: function (e) {
             let { guildId: t, query: n, continuationToken: r } = e;
-            v.Wb.isSessionEstablished() &&
-                v.Wb.searchRecentMembers(t, {
+            N.Wb.isSessionEstablished() &&
+                N.Wb.searchRecentMembers(t, {
                     query: n,
                     continuationToken: r
                 });
         },
         GUILD_SUBSCRIPTIONS_FLUSH: function (e) {
             let { subscriptions: t } = e;
-            return v.Wb.isSessionEstablished() && v.Wb.updateGuildSubscriptions(t), !1;
+            return N.Wb.isSessionEstablished() && N.Wb.updateGuildSubscriptions(t), !1;
         },
         CALL_CONNECT: function (e) {
             let { channelId: t } = e;
-            return v.Wb.isSessionEstablished() && v.Wb.callConnect(t), !1;
+            return N.Wb.isSessionEstablished() && N.Wb.callConnect(t), !1;
         },
         CALL_CONNECT_MULTIPLE: function (e) {
             let { channelIds: t } = e;
             return (
-                v.Wb.isSessionEstablished() &&
+                N.Wb.isSessionEstablished() &&
                     t.forEach((e) => {
-                        v.Wb.callConnect(e);
+                        N.Wb.callConnect(e);
                     }),
                 !1
             );
         },
-        STREAM_CREATE: k,
+        STREAM_CREATE: G,
         STREAM_START: function (e) {
             let { streamType: t, guildId: n, channelId: r } = e;
-            if (v.Wb.isSessionEstablished()) {
+            if (N.Wb.isSessionEstablished()) {
                 var i, a;
-                let e = null != n ? (null === (i = I.Z.getChannel(r)) || void 0 === i ? void 0 : i.rtcRegion) : null === (a = p.Z.getCall(r)) || void 0 === a ? void 0 : a.region;
-                v.Wb.streamCreate(t, n, r, null != e ? e : S.Z.getPreferredRegion());
+                let e = null != n ? (null === (i = g.Z.getChannel(r)) || void 0 === i ? void 0 : i.rtcRegion) : null === (a = m.Z.getCall(r)) || void 0 === a ? void 0 : a.region;
+                N.Wb.streamCreate(t, n, r, null != e ? e : I.Z.getPreferredRegion());
             }
             return !1;
         },
         STREAM_WATCH: function (e) {
             let { streamKey: t, allowMultiple: n } = e;
             return (
-                v.Wb.isSessionEstablished() &&
+                N.Wb.isSessionEstablished() &&
                     (n ||
                         !(function () {
                             let e = (function () {
-                                return N.Z.getAllActiveStreamKeys().find((e) => (0, E.my)(e).ownerId === h.default.getId());
+                                return b.Z.getAllActiveStreamKeys().find((e) => (0, _.my)(e).ownerId === p.default.getId());
                             })();
-                            N.Z.getAllActiveStreamKeys()
+                            b.Z.getAllActiveStreamKeys()
                                 .filter((t) => t !== e)
-                                .forEach((e) => V(e));
+                                .forEach((e) => F(e));
                         })(),
-                    v.Wb.streamWatch(t)),
+                    N.Wb.streamWatch(t)),
                 !1
             );
         },
         STREAM_STOP: function (e) {
             let { streamKey: t } = e;
-            return V(t), k(), !1;
+            return F(t), G(), !1;
         },
         STREAM_SET_PAUSED: function (e) {
             let { streamKey: t, paused: n } = e;
-            v.Wb.isSessionEstablished() && v.Wb.streamSetPaused(t, n);
+            N.Wb.isSessionEstablished() && N.Wb.streamSetPaused(t, n);
         },
         PUSH_NOTIFICATION_CLICK: function () {
-            return v.Wb.expeditedHeartbeat(5000, 'user clicked on notification', !0), !1;
+            return N.Wb.expeditedHeartbeat(5000, 'user clicked on notification', !0), !1;
         },
         REQUEST_FORUM_UNREADS: function (e) {
             let { guildId: t, channelId: n, threads: r } = e;
-            v.Wb.requestForumUnreads(t, n, r);
+            N.Wb.requestForumUnreads(t, n, r);
         },
         REQUEST_SOUNDBOARD_SOUNDS: function (e) {
             let { guildIds: t } = e;
-            v.Wb.requestSoundboardSounds(t);
+            N.Wb.requestSoundboardSounds(t);
         },
         REMOTE_COMMAND: function (e) {
             let { sessionId: t, payload: n } = e;
-            return v.Wb.isSessionEstablished() && v.Wb.remoteCommand(t, n), !1;
+            return N.Wb.isSessionEstablished() && N.Wb.remoteCommand(t, n), !1;
         },
         RESET_SOCKET: function (e) {
-            if (v.Wb.connectionState !== O.Z.WILL_RECONNECT) v.Wb.resetSocketOnError(e.args);
+            if (N.Wb.connectionState !== A.Z.WILL_RECONNECT) N.Wb.resetSocketOnError(e.args);
         },
-        CLIPS_SETTINGS_UPDATE: k,
-        RUNNING_GAMES_CHANGE: k,
+        CLIPS_SETTINGS_UPDATE: G,
+        RUNNING_GAMES_CHANGE: G,
         USER_SETTINGS_PROTO_UPDATE: function (e) {
             var t;
-            e.settings.type === y.yP.PRELOADED_USER_SETTINGS && (null === (t = e.settings.proto.clips) || void 0 === t ? void 0 : t.allowVoiceRecording) != null && k();
+            e.settings.type === D.yP.PRELOADED_USER_SETTINGS && (null === (t = e.settings.proto.clips) || void 0 === t ? void 0 : t.allowVoiceRecording) != null && G();
         }
     }));

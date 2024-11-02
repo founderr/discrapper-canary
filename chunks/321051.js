@@ -1,115 +1,115 @@
-s.d(n, {
+t.d(n, {
     Z: function () {
-        return m;
+        return p;
     }
 }),
-    s(47120);
-var t = s(200651),
-    l = s(192379),
-    i = s(692547),
-    r = s(481060),
-    a = s(697426),
-    c = s(603074),
-    o = s(689938),
-    u = s(599215);
+    t(47120);
+var i = t(200651),
+    l = t(192379),
+    r = t(692547),
+    s = t(481060),
+    a = t(697426),
+    c = t(603074),
+    o = t(388032),
+    u = t(599215);
 let d = [54, 8, 8, 8];
-function _(e) {
-    let { onSelect: n, sound: s } = e,
-        [_, m] = l.useState(!1);
-    function I(e) {
-        m(!1), null == n || n(e);
+function m(e) {
+    let { onSelect: n, sound: t } = e,
+        [m, p] = l.useState(!1);
+    function x(e) {
+        p(!1), null == n || n(e);
     }
-    let E = (e) =>
-        (0, t.jsxs)('div', {
+    let h = (e) =>
+        (0, i.jsxs)('div', {
             className: u.customGiftHeader,
             children: [
-                (0, t.jsxs)('div', {
+                (0, i.jsxs)('div', {
                     className: u.__invalid_customGiftHeaderText,
                     children: [
-                        (0, t.jsx)(r.Text, {
+                        (0, i.jsx)(s.Text, {
                             variant: 'text-md/bold',
-                            children: o.Z.Messages.GIFT_SELECT_SOUND
+                            children: o.intl.string(o.t.aThJz8)
                         }),
-                        (0, t.jsx)(r.Text, {
+                        (0, i.jsx)(s.Text, {
                             variant: 'text-sm/normal',
-                            children: o.Z.Messages.GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION
+                            children: o.intl.string(o.t.stGFAw)
                         })
                     ]
                 }),
-                (0, t.jsx)('div', {
+                (0, i.jsx)('div', {
                     className: u.searchAndSound,
                     children: e
                 })
             ]
         });
-    return (0, t.jsx)(r.Popout, {
-        shouldShow: _,
+    return (0, i.jsx)(s.Popout, {
+        shouldShow: m,
         position: 'bottom',
         align: 'left',
-        onRequestClose: () => m(!1),
+        onRequestClose: () => p(!1),
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return (0, t.jsx)(r.Dialog, {
-                children: (0, t.jsx)(c.Z, {
+            return (0, i.jsx)(s.Dialog, {
+                children: (0, i.jsx)(c.Z, {
                     suppressPlaySound: !0,
                     shouldShowUpsell: !1,
                     guildId: null,
                     channel: null,
                     onClose: n,
-                    onSelect: I,
+                    onSelect: x,
                     analyticsSource: 'gift soundboard',
                     soundButtonOverlay: a.Pb.ADD,
                     listPadding: d,
-                    renderHeader: E,
+                    renderHeader: h,
                     defaultSoundsOnly: !0
                 })
             });
         },
         children: () =>
-            (0, t.jsx)(r.Clickable, {
+            (0, i.jsx)(s.Clickable, {
                 className: u.sound,
-                onClick: () => m(!0),
+                onClick: () => p(!0),
                 children:
-                    null == s
-                        ? (0, t.jsxs)(t.Fragment, {
+                    null == t
+                        ? (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, t.jsx)(r.SoundboardIcon, {
+                                  (0, i.jsx)(s.SoundboardIcon, {
                                       size: 'custom',
-                                      color: i.Z.colors.WHITE,
+                                      color: r.Z.colors.WHITE,
                                       className: u.soundIcon,
                                       width: 14,
                                       height: 14
                                   }),
-                                  (0, t.jsx)(r.Text, {
+                                  (0, i.jsx)(s.Text, {
                                       className: u.text,
                                       variant: 'text-sm/semibold',
-                                      children: o.Z.Messages.GIFT_SELECT_SOUND
+                                      children: o.intl.string(o.t.aThJz8)
                                   })
                               ]
                           })
-                        : (0, t.jsxs)(t.Fragment, {
+                        : (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, t.jsx)(r.Text, {
+                                  (0, i.jsx)(s.Text, {
                                       className: u.textSelected,
                                       variant: 'text-sm/semibold',
-                                      children: s.emojiName
+                                      children: t.emojiName
                                   }),
-                                  (0, t.jsx)(r.Text, {
+                                  (0, i.jsx)(s.Text, {
                                       className: u.text,
                                       variant: 'text-sm/semibold',
-                                      children: s.name
+                                      children: t.name
                                   })
                               ]
                           })
             })
     });
 }
-function m(e) {
-    let { sound: n, onSelect: s } = e;
-    return (0, t.jsx)('div', {
+function p(e) {
+    let { sound: n, onSelect: t } = e;
+    return (0, i.jsx)('div', {
         className: u.container,
-        children: (0, t.jsx)(_, {
-            onSelect: s,
+        children: (0, i.jsx)(m, {
+            onSelect: t,
             sound: n
         })
     });

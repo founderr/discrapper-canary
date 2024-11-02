@@ -1,18 +1,18 @@
 n.d(t, {
     $0: function () {
-        return f;
+        return h;
     },
     j1: function () {
-        return I;
+        return g;
     },
     nP: function () {
-        return m;
+        return E;
     },
     nj: function () {
-        return T;
+        return v;
     },
     pX: function () {
-        return p;
+        return m;
     }
 }),
     n(47120);
@@ -25,9 +25,9 @@ var r = n(192379),
     u = n(481060),
     c = n(410030),
     d = n(564334),
-    _ = n(302221),
-    E = n(308083);
-function f(e) {
+    f = n(302221),
+    _ = n(308083);
+function h(e) {
     let t = a()(e),
         n = t.get('rgb.r'),
         r = t.get('rgb.g'),
@@ -42,10 +42,10 @@ function f(e) {
               saturation: 1
           });
 }
-function h(e) {
+function p(e) {
     return new d.Z(e.get('rgb.r'), e.get('rgb.g'), e.get('rgb.b'), e.alpha());
 }
-function p(e, t) {
+function m(e, t) {
     var n;
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.S3.Text;
     if (null == e) return;
@@ -55,7 +55,7 @@ function p(e, t) {
                     var t;
                     let n = a()(e);
                     return null ===
-                        (t = o()(E.ym)
+                        (t = o()(_.ym)
                             .map((e) => {
                                 let { primary: t } = e;
                                 return {
@@ -78,17 +78,17 @@ function p(e, t) {
                 : e,
         s = a()(i),
         u = a()(t),
-        c = (0, _.k8)({
-            colors: [h(s), h(u)],
+        c = (0, f.k8)({
+            colors: [p(s), p(u)],
             ratio: r,
             saturationFactor: 1
         });
     if (null != c) return a()(c.toHexString());
 }
-function I(e, t) {
+function g(e, t) {
     let n = (function (e, t) {
         if (null == e) return;
-        let n = p(e, t, l.S3.NonText);
+        let n = m(e, t, l.S3.NonText);
         if (null == n) return;
         let r = 0.2 > n.luminance() ? n.brighten(0.3) : n.darken(0.3),
             i = 0.2 > n.luminance() ? n.brighten(0.35) : n.darken(0.35);
@@ -99,13 +99,13 @@ function I(e, t) {
         };
     })(e, t);
     if (null == n) return;
-    let r = { '--custom-clan-text': f(n['--custom-clan-bg']).hex() };
+    let r = { '--custom-clan-text': h(n['--custom-clan-bg']).hex() };
     return {
         ...n,
         ...r
     };
 }
-function m(e, t) {
+function E(e, t) {
     let [n, i = 1] = t,
         a = (0, c.ZP)();
     return r.useMemo(
@@ -121,7 +121,7 @@ function m(e, t) {
         [e, n, i, a]
     );
 }
-function T(e, t) {
+function v(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'top left',
         r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0.3,
         i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : '50%';

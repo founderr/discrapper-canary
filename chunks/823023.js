@@ -1,6 +1,6 @@
 n.d(t, {
     N: function () {
-        return f;
+        return h;
     }
 }),
     n(47120);
@@ -21,18 +21,18 @@ let c = {
         ...c,
         config: { duration: 50 }
     },
-    _ = {
+    f = {
         ...c,
         config: (e, t) => (t ? { duration: 800 } : { duration: 200 })
     };
-function E(e) {
+function _(e) {
     let { readyState: t, placeholderImg: n, placeholderStyle: o } = e,
-        _ = t === l.zo9.LOADING,
-        [E] = i.useState(() => Date.now()),
-        f = t === l.zo9.READY && Date.now() - E < 200,
-        h = (0, s.useTransition)(_ && null != n, f ? d : c);
+        f = t === l.zo9.LOADING,
+        [_] = i.useState(() => Date.now()),
+        h = t === l.zo9.READY && Date.now() - _ < 200,
+        p = (0, s.useTransition)(f && null != n, h ? d : c);
     return (0, r.jsx)(r.Fragment, {
-        children: h(
+        children: p(
             (e, t) =>
                 t &&
                 (0, r.jsx)(a.animated.img, {
@@ -47,33 +47,33 @@ function E(e) {
         )
     });
 }
-function f(e) {
-    let { readyState: t, aspectRatio: n, placeholder: c, placeholderVersion: d, placeholderStyle: f, children: h } = e,
-        p = t === l.zo9.LOADING,
-        [I] = i.useState(p),
-        [m, T] = i.useState(!1),
-        S = (0, o.L)(c, d, I);
+function h(e) {
+    let { readyState: t, aspectRatio: n, placeholder: c, placeholderVersion: d, placeholderStyle: h, children: p } = e,
+        m = t === l.zo9.LOADING,
+        [g] = i.useState(m),
+        [E, v] = i.useState(!1),
+        I = (0, o.L)(c, d, g);
     i.useEffect(() => {
         let e = setTimeout(() => {
-            T(!0);
+            v(!0);
         }, 2000);
         return () => {
             clearTimeout(e);
         };
-    }, [I]);
-    let g = (0, s.useTransition)(p && m, _);
+    }, [g]);
+    let S = (0, s.useTransition)(m && E, f);
     return (0, r.jsxs)('div', {
         className: u.loadingOverlay,
         style: { aspectRatio: n },
         children: [
-            h,
-            null != S &&
-                (0, r.jsx)(E, {
+            p,
+            null != I &&
+                (0, r.jsx)(_, {
                     readyState: t,
-                    placeholderImg: S,
-                    placeholderStyle: f
+                    placeholderImg: I,
+                    placeholderStyle: h
                 }),
-            g(
+            S(
                 (e, t) =>
                     t &&
                     (0, r.jsx)(a.animated.div, {

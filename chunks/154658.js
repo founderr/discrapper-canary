@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return h;
     }
 });
 var r = n(200651);
@@ -13,41 +13,41 @@ var i = n(120356),
     u = n(594174),
     c = n(5192),
     d = n(873128),
-    _ = n(689938),
-    E = n(98518);
-function f(e) {
+    f = n(388032),
+    _ = n(98518);
+function h(e) {
     var t;
-    let { guildId: n, leaderboardId: i, intervalOffset: f = -1, className: h } = e,
-        p = (0, d.Z)({
+    let { guildId: n, leaderboardId: i, intervalOffset: h = -1, className: p } = e,
+        m = (0, d.Z)({
             guildId: n,
             leaderboardId: i,
-            intervalOffset: f
+            intervalOffset: h
         }),
-        I = null == p ? void 0 : null === (t = p.users) || void 0 === t ? void 0 : t[0],
-        m = (0, o.e7)([u.default], () => u.default.getUser(null == I ? void 0 : I.user_id));
-    if (null == m || null == p) return null;
-    let T = c.ZP.getName(n, void 0, m);
+        g = null == m ? void 0 : null === (t = m.users) || void 0 === t ? void 0 : t[0],
+        E = (0, o.e7)([u.default], () => u.default.getUser(null == g ? void 0 : g.user_id));
+    if (null == E || null == m) return null;
+    let v = c.ZP.getName(n, void 0, E);
     return (0, r.jsxs)('div', {
-        className: a()(E.container, h),
+        className: a()(_.container, p),
         children: [
             (0, r.jsx)(l.Text, {
                 variant: 'text-xs/medium',
-                className: E.title,
+                className: _.title,
                 children: (function (e) {
                     switch (e) {
                         case s.q.DAILY:
-                            return _.Z.Messages.LEADERBOARD_YESTERDAYS_CHAMPION;
+                            return f.intl.string(f.t.UfbhDA);
                         case s.q.WEEKLY:
-                            return _.Z.Messages.LEADERBOARD_LAST_WEEKS_CHAMPION;
+                            return f.intl.string(f.t['9x5Nam']);
                         case s.q.MONTHLY:
-                            return _.Z.Messages.LEADERBOARD_LAST_MONTHS_CHAMPION;
+                            return f.intl.string(f.t.xB2Co6);
                         default:
-                            return _.Z.Messages.LEADERBOARD_LAST_CHAMPION;
+                            return f.intl.string(f.t['4N67JS']);
                     }
-                })(p.settings.interval_type)
+                })(m.settings.interval_type)
             }),
             (0, r.jsx)(l.Avatar, {
-                src: m.getAvatarURL(n, 16),
+                src: E.getAvatarURL(n, 16),
                 size: l.AvatarSizes.SIZE_16,
                 'aria-label': 'avatar'
             }),
@@ -58,7 +58,7 @@ function f(e) {
             (0, r.jsx)(l.Text, {
                 variant: 'text-xs/semibold',
                 color: 'header-primary',
-                children: T
+                children: v
             })
         ]
     });

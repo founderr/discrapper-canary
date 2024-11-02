@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return g;
     }
 }),
     n(47120);
@@ -13,50 +13,50 @@ var r = n(200651),
     u = n(131704),
     c = n(5192),
     d = n(785717),
-    _ = n(698305),
-    E = n(981631),
-    f = n(689938),
-    h = n(687610);
-let p = (0, u.kt)({
+    f = n(698305),
+    _ = n(981631),
+    h = n(388032),
+    p = n(687610);
+let m = (0, u.kt)({
     id: '1',
-    type: E.d4z.DM
+    type: _.d4z.DM
 });
-function I(e) {
-    let { user: t, guildId: n, channelId: u, onClose: E } = e,
-        { newestAnalyticsLocation: I } = (0, a.ZP)(),
-        { trackUserProfileAction: m } = (0, d.KZ)(),
-        [T, S] = i.useState(''),
-        [g, A] = i.useState((0, o.JM)(T)),
-        N = i.useRef(!1);
+function g(e) {
+    let { user: t, guildId: n, channelId: u, onClose: _ } = e,
+        { newestAnalyticsLocation: g } = (0, a.ZP)(),
+        { trackUserProfileAction: E } = (0, d.KZ)(),
+        [v, I] = i.useState(''),
+        [S, T] = i.useState((0, o.JM)(v)),
+        b = i.useRef(!1);
     return (0, r.jsx)(l.Z, {
-        innerClassName: h.inner,
-        editorClassName: h.editor,
+        innerClassName: p.inner,
+        editorClassName: p.editor,
         type: s.I.USER_PROFILE,
-        placeholder: f.Z.Messages.QUICK_DM_USER.format({ name: c.ZP.getName(n, u, t) }),
-        channel: p,
-        textValue: T,
-        richValue: g,
+        placeholder: h.intl.formatToPlainString(h.t['0ZQw/f'], { name: c.ZP.getName(n, u, t) }),
+        channel: m,
+        textValue: v,
+        richValue: S,
         onChange: (e, t, n) => {
-            if (t !== T) S(t), A(n);
+            if (t !== v) I(t), T(n);
         },
-        focused: N.current,
+        focused: b.current,
         onFocus: () => {
-            N.current = !0;
+            b.current = !0;
         },
         onBlur: () => {
-            N.current = !1;
+            b.current = !1;
         },
         onSubmit: async (e) => {
             let { value: n } = e;
             try {
                 return (
-                    m({ action: 'SEND_DIRECT_MESSAGE' }),
-                    await (0, _.Z)({
+                    E({ action: 'SEND_DIRECT_MESSAGE' }),
+                    await (0, f.Z)({
                         userId: t.id,
                         content: n.trim(),
-                        location: I
+                        location: g
                     }),
-                    null == E || E(),
+                    null == _ || _(),
                     {
                         shouldClear: !0,
                         shouldRefocus: !1

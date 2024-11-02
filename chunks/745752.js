@@ -1,15 +1,15 @@
 n.d(t, {
     I1: function () {
-        return m;
+        return E;
     },
     eM: function () {
-        return p;
+        return m;
     },
     rK: function () {
-        return I;
+        return g;
     },
     rj: function () {
-        return h;
+        return p;
     }
 }),
     n(789020);
@@ -22,26 +22,26 @@ var r = n(544891),
     u = n(626135),
     c = n(630388),
     d = n(45966),
-    _ = n(290511),
-    E = n(981631),
-    f = n(372897);
-function h(e) {
-    u.default.track(E.rMx.GUILD_ONBOARDING_LOADED, {
+    f = n(290511),
+    _ = n(981631),
+    h = n(372897);
+function p(e) {
+    u.default.track(_.rMx.GUILD_ONBOARDING_LOADED, {
         ...(0, a.hH)(e),
         has_new_prompts: !1,
         number_of_prompts: 0
     });
 }
-function p(e) {
+function m(e) {
     return (
         i.Z.dispatch({
             type: 'GUILD_ONBOARDING_PROMPTS_FETCH_START',
             guildId: e
         }),
-        r.tn.get({ url: E.ANM.GUILD_ONBOARDING(e) }).then(
+        r.tn.get({ url: _.ANM.GUILD_ONBOARDING(e) }).then(
             (t) => {
                 let { body: n } = t,
-                    r = (0, _.cf)(n);
+                    r = (0, f.cf)(n);
                 return i.Z.dispatch({
                     type: 'GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS',
                     guildId: e,
@@ -58,31 +58,31 @@ function p(e) {
         )
     );
 }
-async function I(e) {
+async function g(e) {
     var t, n;
     let r = s.default.getId(),
-        i = (0, c.yE)(null !== (n = null === (t = o.ZP.getMember(e, r)) || void 0 === t ? void 0 : t.flags) && void 0 !== n ? n : 0, f.q.COMPLETED_ONBOARDING),
+        i = (0, c.yE)(null !== (n = null === (t = o.ZP.getMember(e, r)) || void 0 === t ? void 0 : t.flags) && void 0 !== n ? n : 0, h.q.COMPLETED_ONBOARDING),
         a = l.Z.getGuild(e);
-    if (null == a || !a.hasFeature(E.oNc.GUILD_ONBOARDING)) return Promise.resolve();
+    if (null == a || !a.hasFeature(_.oNc.GUILD_ONBOARDING)) return Promise.resolve();
     let u = d.Z.shouldFetchPrompts(e),
-        _ = d.Z.getOnboardingPrompts(e);
-    if (!u && _.length > 0) return _.every((e) => !e.inOnboarding) ? (T(e), Promise.resolve()) : (!i && m(e), Promise.resolve());
-    let h = await p(e);
-    return Array.isArray(h) && h.every((e) => !e.inOnboarding) ? (T(e), Promise.resolve()) : (!i && m(e), h);
+        f = d.Z.getOnboardingPrompts(e);
+    if (!u && f.length > 0) return f.every((e) => !e.inOnboarding) ? (v(e), Promise.resolve()) : (!i && E(e), Promise.resolve());
+    let p = await m(e);
+    return Array.isArray(p) && p.every((e) => !e.inOnboarding) ? (v(e), Promise.resolve()) : (!i && E(e), p);
 }
-function m(e) {
+function E(e) {
     i.Z.dispatch({
         type: 'GUILD_ONBOARDING_START',
         guildId: e
     });
 }
-function T(e) {
-    u.default.track(E.rMx.GUILD_ONBOARDING_STEP_VIEWED, {
+function v(e) {
+    u.default.track(_.rMx.GUILD_ONBOARDING_STEP_VIEWED, {
         ...(0, a.hH)(e),
         step: -2,
         required: !0
     }),
-        u.default.track(E.rMx.GUILD_ONBOARDING_STEP_COMPLETED, {
+        u.default.track(_.rMx.GUILD_ONBOARDING_STEP_COMPLETED, {
             ...(0, a.hH)(e),
             step: -2,
             skipped: !1,

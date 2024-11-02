@@ -1,25 +1,25 @@
 var i,
-    a,
-    s,
     r,
-    l = n(873546),
+    l,
+    a,
+    s = n(873546),
     o = n(442837),
     c = n(570140);
 let d = !1;
-class u extends (r = o.ZP.Store) {
+class u extends (a = o.ZP.Store) {
     getIsOpen() {
-        return !l.tq || d;
+        return !s.tq || d;
     }
 }
-(s = 'MobileWebSidebarStore'),
-    (a = 'displayName') in (i = u)
-        ? Object.defineProperty(i, a, {
-              value: s,
+(l = 'MobileWebSidebarStore'),
+    (r = 'displayName') in (i = u)
+        ? Object.defineProperty(i, r, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[a] = s),
+        : (i[r] = l),
     (t.Z = new u(c.Z, {
         MOBILE_WEB_SIDEBAR_OPEN: function () {
             d = !0;

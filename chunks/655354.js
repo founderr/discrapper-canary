@@ -5,26 +5,26 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(481060),
-    o = n(689938),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    o = n(481060),
+    s = n(388032),
     c = n(521348);
 function u(e) {
     let { className: t, onJump: n } = e,
-        [s, u] = a.useState(!1);
-    return (0, i.jsx)(l.Clickable, {
-        className: r()(c.jumpButton, t),
+        [l, u] = r.useState(!1);
+    return (0, i.jsx)(o.Clickable, {
+        className: a()(c.jumpButton, t),
         onClick: (e) => {
             u(!0), n(e);
         },
-        children: s
-            ? (0, i.jsx)(l.Spinner, { type: l.Spinner.Type.PULSING_ELLIPSIS })
-            : (0, i.jsx)(l.Text, {
+        children: l
+            ? (0, i.jsx)(o.Spinner, { type: o.Spinner.Type.PULSING_ELLIPSIS })
+            : (0, i.jsx)(o.Text, {
                   variant: 'text-xs/normal',
                   className: c.text,
-                  children: o.Z.Messages.JUMP
+                  children: s.intl.string(s.t.k5WiPT)
               })
     });
 }

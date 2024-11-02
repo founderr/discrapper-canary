@@ -10,15 +10,15 @@ var i = n(692547),
     s = n(267843);
 let o = (e) => {
     var t, n;
-    let { size: o = 'md', width: l, height: u, secondaryColor: c = 'transparent', secondaryColorClass: d = '', color: _ = i.Z.colors.INTERACTIVE_NORMAL, colorClass: E = '', ...f } = e,
-        h = (0, s.m)(o),
-        p = null !== (t = null == h ? void 0 : h.width) && void 0 !== t ? t : l,
-        I = null !== (n = null == h ? void 0 : h.height) && void 0 !== n ? n : u;
+    let { size: o = 'md', width: l, height: u, secondaryColor: c = 'transparent', secondaryColorClass: d = '', color: f = i.Z.colors.INTERACTIVE_NORMAL, colorClass: _ = '', ...h } = e,
+        p = (0, s.m)(o),
+        m = null !== (t = null == p ? void 0 : p.width) && void 0 !== t ? t : l,
+        g = null !== (n = null == p ? void 0 : p.height) && void 0 !== n ? n : u;
     return (0, r.jsxs)('svg', {
-        ...(0, a.Z)(f),
+        ...(0, a.Z)(h),
         xmlns: 'http://www.w3.org/2000/svg',
-        width: p,
-        height: I,
+        width: m,
+        height: g,
         fill: 'none',
         viewBox: '0 0 24 24',
         children: [
@@ -30,11 +30,11 @@ let o = (e) => {
                 className: d
             }),
             (0, r.jsx)('path', {
-                fill: 'string' == typeof _ ? _ : _.css,
+                fill: 'string' == typeof f ? f : f.css,
                 fillRule: 'evenodd',
                 d: 'M12 23a11 11 0 1 0 0-22 11 11 0 0 0 0 22ZM7 11a1 1 0 1 0 0 2h10a1 1 0 1 0 0-2H7Z',
                 clipRule: 'evenodd',
-                className: E
+                className: _
             })
         ]
     });

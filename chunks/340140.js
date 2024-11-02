@@ -1,87 +1,87 @@
-t.r(s), t(47120);
-var a = t(200651),
-    l = t(192379),
-    n = t(481060),
-    o = t(600164),
-    r = t(538211),
-    _ = t(698066),
-    i = t(111810),
-    E = t(689938),
-    R = t(452988),
-    u = t(54934);
-function c(e, s, t) {
+l.r(n), l(47120);
+var e = l(200651),
+    i = l(192379),
+    r = l(481060),
+    s = l(600164),
+    a = l(538211),
+    o = l(698066),
+    u = l(111810),
+    c = l(388032),
+    d = l(452988),
+    h = l(54934);
+function g(t, n, l) {
     return (
-        s in e
-            ? Object.defineProperty(e, s, {
-                  value: t,
+        n in t
+            ? Object.defineProperty(t, n, {
+                  value: l,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[s] = t),
-        e
+            : (t[n] = l),
+        t
     );
 }
-class M extends l.PureComponent {
+class m extends i.PureComponent {
     render() {
-        let { isStreamer: e, transitionState: s, onClose: t } = this.props,
-            { problem: l } = this.state;
-        return (0, a.jsxs)(n.ModalRoot, {
-            transitionState: s,
-            size: n.ModalSize.SMALL,
-            'aria-label': E.Z.Messages.STREAM_REPORT_A_PROBLEM,
+        let { isStreamer: t, transitionState: n, onClose: l } = this.props,
+            { problem: i } = this.state;
+        return (0, e.jsxs)(r.ModalRoot, {
+            transitionState: n,
+            size: r.ModalSize.SMALL,
+            'aria-label': c.intl.string(c.t.qnJ9W1),
             children: [
-                (0, a.jsx)(i.Z, {}),
-                (0, a.jsxs)(n.ModalHeader, {
+                (0, e.jsx)(u.Z, {}),
+                (0, e.jsxs)(r.ModalHeader, {
                     separator: !1,
                     children: [
-                        (0, a.jsx)(n.ModalCloseButton, {
-                            className: u.closeButton,
-                            onClick: t
+                        (0, e.jsx)(r.ModalCloseButton, {
+                            className: h.closeButton,
+                            onClick: l
                         }),
-                        (0, a.jsx)(n.FormTitle, {
+                        (0, e.jsx)(r.FormTitle, {
                             tag: 'h2',
-                            className: u.title,
-                            children: E.Z.Messages.STREAM_REPORT_A_PROBLEM
+                            className: h.title,
+                            children: c.intl.string(c.t.qnJ9W1)
                         })
                     ]
                 }),
-                (0, a.jsxs)(n.ModalContent, {
-                    className: u.content,
+                (0, e.jsxs)(r.ModalContent, {
+                    className: h.content,
                     children: [
-                        (0, a.jsx)(n.Text, {
+                        (0, e.jsx)(r.Text, {
                             variant: 'text-sm/normal',
-                            children: E.Z.Messages.STREAM_REPORT_PROBLEM_BODY
+                            children: c.intl.string(c.t['7vw0h4'])
                         }),
-                        (0, a.jsx)(n.FormItem, {
-                            title: E.Z.Messages.STREAM_REPORT_LABEL,
-                            children: (0, a.jsx)(n.SingleSelect, {
-                                placeholder: E.Z.Messages.STREAM_REPORT_PLACEHOLDER,
-                                options: (0, r.Z)(e, !1),
+                        (0, e.jsx)(r.FormItem, {
+                            title: c.intl.string(c.t['6Y1t5O']),
+                            children: (0, e.jsx)(r.SingleSelect, {
+                                placeholder: c.intl.string(c.t.U0kGk5),
+                                options: (0, a.Z)(t, !1),
                                 onChange: this.handleChanged,
-                                value: l,
+                                value: i,
                                 maxVisibleItems: 4
                             })
                         }),
-                        (0, a.jsx)('div', { className: R.art })
+                        (0, e.jsx)('div', { className: d.art })
                     ]
                 }),
-                (0, a.jsxs)(n.ModalFooter, {
-                    className: u.__invalid_footer,
+                (0, e.jsxs)(r.ModalFooter, {
+                    className: h.__invalid_footer,
                     children: [
-                        (0, a.jsx)(n.Button, {
-                            color: n.Button.Colors.BRAND,
-                            disabled: null == l,
+                        (0, e.jsx)(r.Button, {
+                            color: r.Button.Colors.BRAND,
+                            disabled: null == i,
                             onClick: this.handleSubmit,
-                            children: E.Z.Messages.STREAM_REPORT_SUBMIT
+                            children: c.intl.string(c.t.E48BIS)
                         }),
-                        (0, a.jsx)(o.Z, {
-                            children: (0, a.jsx)(n.Button, {
-                                look: n.Button.Looks.LINK,
-                                color: n.Button.Colors.PRIMARY,
-                                size: n.Button.Sizes.NONE,
-                                onClick: t,
-                                children: E.Z.Messages.CANCEL
+                        (0, e.jsx)(s.Z, {
+                            children: (0, e.jsx)(r.Button, {
+                                look: r.Button.Looks.LINK,
+                                color: r.Button.Colors.PRIMARY,
+                                size: r.Button.Sizes.NONE,
+                                onClick: l,
+                                children: c.intl.string(c.t['ETE/oK'])
                             })
                         })
                     ]
@@ -89,33 +89,33 @@ class M extends l.PureComponent {
             ]
         });
     }
-    constructor(...e) {
-        super(...e),
-            c(this, 'state', { problem: null }),
-            c(this, 'handleChanged', (e) => {
-                this.setState({ problem: null != e ? e : null });
+    constructor(...t) {
+        super(...t),
+            g(this, 'state', { problem: null }),
+            g(this, 'handleChanged', (t) => {
+                this.setState({ problem: null != t ? t : null });
             }),
-            c(this, 'handleSubmit', () => {
-                let { stream: e, streamApplication: s, analyticsData: l, onClose: o } = this.props,
-                    { problem: r } = this.state;
-                (0, _.Z)({
-                    problem: r,
-                    stream: e,
+            g(this, 'handleSubmit', () => {
+                let { stream: t, streamApplication: n, analyticsData: i, onClose: s } = this.props,
+                    { problem: a } = this.state;
+                (0, o.Z)({
+                    problem: a,
+                    stream: t,
                     feedback: '',
-                    streamApplication: s,
-                    analyticsData: l,
+                    streamApplication: n,
+                    analyticsData: i,
                     location: 'Stream'
                 }),
-                    o(),
-                    (0, n.openModalLazy)(async () => {
-                        let { default: e } = await t.e('14466').then(t.bind(t, 729328));
-                        return (s) =>
-                            (0, a.jsx)(e, {
-                                body: E.Z.Messages.STREAM_REPORTED_BODY,
-                                ...s
+                    s(),
+                    (0, r.openModalLazy)(async () => {
+                        let { default: t } = await l.e('14466').then(l.bind(l, 729328));
+                        return (n) =>
+                            (0, e.jsx)(t, {
+                                body: c.intl.string(c.t.mMTVnp),
+                                ...n
                             });
                     });
             });
     }
 }
-s.default = M;
+n.default = m;

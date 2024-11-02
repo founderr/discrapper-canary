@@ -1,165 +1,165 @@
 n.d(t, {
     Z: function () {
-        return D;
+        return T;
     }
 }),
     n(47120);
-var a = n(200651),
-    o = n(192379),
-    s = n(120356),
-    l = n.n(s),
-    r = n(392711),
-    i = n.n(r),
+var o = n(200651),
+    l = n(192379),
+    a = n(120356),
+    r = n.n(a),
+    i = n(392711),
+    s = n.n(i),
     c = n(481060),
     u = n(110924),
-    E = n(600164),
-    d = n(313201),
-    _ = n(237617),
-    b = n(572539),
-    C = n(111810),
-    m = n(63063),
-    I = n(957115),
-    f = n(531578),
-    h = n(689938),
-    x = n(214859),
-    A = n(112003);
-function N() {
-    return (0, a.jsx)(c.Text, {
-        className: x.helpdeskLink,
+    d = n(600164),
+    b = n(313201),
+    m = n(237617),
+    f = n(572539),
+    h = n(111810),
+    x = n(63063),
+    C = n(957115),
+    E = n(531578),
+    p = n(388032),
+    N = n(214859),
+    j = n(112003);
+function I() {
+    return (0, o.jsx)(c.Text, {
+        className: N.helpdeskLink,
         variant: 'text-xs/normal',
         color: 'text-muted',
-        children: h.Z.Messages.FEEDBACK_NEED_MORE_HELP.format({ helpdeskURL: m.Z.getSubmitRequestURL() })
+        children: p.intl.format(p.t.ybi2tL, { helpdeskURL: x.Z.getSubmitRequestURL() })
     });
 }
-function D(e) {
+function T(e) {
     var t, n;
-    let { header: s, body: r, problems: m, transitionState: D, feedbackProblems: T = {}, otherKey: L, hasCloseButton: B, onSubmit: p, onClose: R, canDismissForever: S = !0, showHelpdeskLink: Z = !0 } = e,
-        M = (0, u.Z)(m),
-        [O, g] = o.useState(!1),
-        [j, v] = o.useState(null),
-        [F, U] = o.useState(i().shuffle(m)),
-        [V, k] = o.useState(''),
-        [G, y] = o.useState(!1),
-        K = (0, d.Dt)(),
-        H = (0, _.Z)(O),
-        P = (0, _.Z)(j),
-        z = (0, _.Z)(p),
-        w = (0, _.Z)(V),
-        W = (0, _.Z)(G),
-        Y = null != j ? T[j] : null,
-        q = null != Y;
+    let { header: a, body: i, problems: x, transitionState: T, feedbackProblems: v = {}, otherKey: g, hasCloseButton: _, onSubmit: S, onClose: k, canDismissForever: R = !0, showHelpdeskLink: B = !0 } = e,
+        O = (0, u.Z)(x),
+        [A, y] = l.useState(!1),
+        [L, Z] = l.useState(null),
+        [M, D] = l.useState(s().shuffle(x)),
+        [F, U] = l.useState(''),
+        [V, P] = l.useState(!1),
+        G = (0, b.Dt)(),
+        H = (0, m.Z)(A),
+        z = (0, m.Z)(L),
+        K = (0, m.Z)(S),
+        X = (0, m.Z)(F),
+        w = (0, m.Z)(V),
+        q = null != L ? v[L] : null,
+        W = null != q;
     return (
-        o.useEffect(() => {
-            !i().isEqual(M, m) && U((0, I.B)(m, L));
-        }, [m, M, L]),
-        o.useEffect(
+        l.useEffect(() => {
+            !s().isEqual(O, x) && D((0, C.B)(x, g));
+        }, [x, O, g]),
+        l.useEffect(
             () => () => {
-                z.current({
-                    problem: P.current,
+                K.current({
+                    problem: z.current,
                     dontShowAgain: H.current,
-                    feedback: w.current,
-                    closeClicked: W.current
+                    feedback: X.current,
+                    closeClicked: w.current
                 });
             },
             []
         ),
-        (0, a.jsxs)(c.ModalRoot, {
-            transitionState: D,
-            'aria-labelledby': K,
+        (0, o.jsxs)(c.ModalRoot, {
+            transitionState: T,
+            'aria-labelledby': G,
             children: [
-                (0, a.jsx)(C.Z, {}),
-                (0, a.jsxs)(c.ModalHeader, {
+                (0, o.jsx)(h.Z, {}),
+                (0, o.jsxs)(c.ModalHeader, {
                     separator: !1,
-                    className: l()(x.headerContainer, A.headerContainer),
+                    className: r()(N.headerContainer, j.headerContainer),
                     children: [
-                        (0, a.jsx)(c.Heading, {
-                            id: K,
+                        (0, o.jsx)(c.Heading, {
+                            id: G,
                             variant: 'heading-xl/bold',
                             color: 'header-primary',
-                            className: x.header,
-                            children: s
+                            className: N.header,
+                            children: a
                         }),
-                        (0, a.jsx)(c.Text, {
+                        (0, o.jsx)(c.Text, {
                             variant: 'text-sm/medium',
                             color: 'header-secondary',
-                            className: l()(x.ratingBody, A.headerBody),
-                            children: null !== (t = null == Y ? void 0 : Y.subheader) && void 0 !== t ? t : r
+                            className: r()(N.ratingBody, j.headerBody),
+                            children: null !== (t = null == q ? void 0 : q.subheader) && void 0 !== t ? t : i
                         }),
-                        B
-                            ? (0, a.jsx)(c.ModalCloseButton, {
-                                  className: x.modalCloseButton,
+                        _
+                            ? (0, o.jsx)(c.ModalCloseButton, {
+                                  className: N.modalCloseButton,
                                   onClick: function () {
-                                      y(!0), R();
+                                      P(!0), k();
                                   }
                               })
                             : null
                     ]
                 }),
-                (0, a.jsxs)(c.ModalContent, {
-                    className: A.modalContent,
+                (0, o.jsxs)(c.ModalContent, {
+                    className: j.modalContent,
                     children: [
-                        q
+                        W
                             ? null
-                            : (0, a.jsx)(c.FormItem, {
-                                  className: x.problemInfo,
-                                  children: (0, a.jsx)(b.Z, {
-                                      options: F,
+                            : (0, o.jsx)(c.FormItem, {
+                                  className: N.problemInfo,
+                                  children: (0, o.jsx)(f.Z, {
+                                      options: M,
                                       onClick: function (e) {
                                           let { value: t } = e;
-                                          v(t), !Object.keys(T).includes(t) && R();
+                                          Z(t), !Object.keys(v).includes(t) && k();
                                       }
                                   })
                               }),
-                        q
-                            ? (0, a.jsxs)(c.FormItem, {
-                                  className: x.problemInfo,
+                        W
+                            ? (0, o.jsxs)(c.FormItem, {
+                                  className: N.problemInfo,
                                   children: [
-                                      (0, a.jsx)(c.TextArea, {
-                                          value: V,
-                                          maxLength: f.iF,
-                                          onChange: k,
-                                          className: A.textArea,
-                                          placeholder: null !== (n = Y.hint) && void 0 !== n ? n : h.Z.Messages.FEEDBACK_DESCRIBE_ISSUE
+                                      (0, o.jsx)(c.TextArea, {
+                                          value: F,
+                                          maxLength: E.iF,
+                                          onChange: U,
+                                          className: j.textArea,
+                                          placeholder: null !== (n = q.hint) && void 0 !== n ? n : p.intl.string(p.t.h95hcn)
                                       }),
-                                      Z ? (0, a.jsx)(N, {}) : null
+                                      B ? (0, o.jsx)(I, {}) : null
                                   ]
                               })
                             : null
                     ]
                 }),
-                S || q
-                    ? (0, a.jsx)(c.ModalFooter, {
-                          className: l()(x.footer, q ? A.submitFooter : A.modalFooter),
-                          direction: E.Z.Direction.HORIZONTAL,
-                          children: q
-                              ? (0, a.jsxs)(a.Fragment, {
+                R || W
+                    ? (0, o.jsx)(c.ModalFooter, {
+                          className: r()(N.footer, W ? j.submitFooter : j.modalFooter),
+                          direction: d.Z.Direction.HORIZONTAL,
+                          children: W
+                              ? (0, o.jsxs)(o.Fragment, {
                                     children: [
-                                        (0, a.jsx)(c.Button, {
-                                            className: A.backButton,
+                                        (0, o.jsx)(c.Button, {
+                                            className: j.backButton,
                                             size: c.Button.Sizes.NONE,
                                             look: c.Button.Looks.LINK,
                                             color: c.Button.Colors.PRIMARY,
                                             onClick: () => {
-                                                v(null), k('');
+                                                Z(null), U('');
                                             },
-                                            children: h.Z.Messages.BACK
+                                            children: p.intl.string(p.t['13/7kZ'])
                                         }),
-                                        (0, a.jsx)(c.Button, {
+                                        (0, o.jsx)(c.Button, {
                                             size: c.Button.Sizes.SMALL,
-                                            onClick: R,
-                                            children: h.Z.Messages.SUBMIT
+                                            onClick: k,
+                                            children: p.intl.string(p.t.geKm7u)
                                         })
                                     ]
                                 })
-                              : S
-                                ? (0, a.jsx)(c.Checkbox, {
+                              : R
+                                ? (0, o.jsx)(c.Checkbox, {
                                       size: 24,
                                       type: c.Checkbox.Types.INVERTED,
-                                      value: O,
-                                      onChange: () => g(!O),
-                                      children: (0, a.jsx)(c.Text, {
+                                      value: A,
+                                      onChange: () => y(!A),
+                                      children: (0, o.jsx)(c.Text, {
                                           variant: 'text-md/normal',
-                                          children: h.Z.Messages.FEEDBACK_DONT_SHOW_AGAIN
+                                          children: p.intl.string(p.t.lkWab2)
                                       })
                                   })
                                 : null

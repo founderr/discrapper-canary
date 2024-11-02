@@ -3,25 +3,25 @@ n.d(t, {
         return u;
     }
 });
-var a = n(348327),
-    s = n.n(a),
-    l = n(392711),
-    r = n.n(l),
+var l = n(348327),
+    a = n.n(l),
+    r = n(392711),
+    s = n.n(r),
     i = n(442837),
     o = n(566006),
     d = n(542578),
     c = n(981631);
 function u(e) {
     var t, n;
-    let { channelId: a, messageId: l, reaction: u } = e,
+    let { channelId: l, messageId: r, reaction: u } = e,
         m = (0, i.e7)(
             [d.Z],
             () => {
-                let e = d.Z.getReactions(a, l, u.emoji, c.pTL, o.O.VOTE);
-                return r().map(e, (e) => e);
+                let e = d.Z.getReactions(l, r, u.emoji, c.pTL, o.O.VOTE);
+                return s().map(e, (e) => e);
             },
-            [a, l, u.emoji],
-            s()
+            [l, r, u.emoji],
+            a()
         );
     return {
         reactors: m,

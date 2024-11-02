@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 }),
     n(47120);
@@ -12,35 +12,35 @@ var r = n(200651),
     l = n(753972),
     u = n(520315),
     c = n(688465),
-    d = n(689938),
-    _ = n(517066),
-    E = n(554034),
-    f = n(413097);
-function h(e) {
+    d = n(388032),
+    f = n(517066),
+    _ = n(554034),
+    h = n(413097);
+function p(e) {
     let { application: t, onSelect: n, onClose: u } = e,
-        { iconURL: E } = i.useMemo(
+        { iconURL: _ } = i.useMemo(
             () =>
                 (0, o.sl)(t, {
-                    fakeAppIconURL: f,
+                    fakeAppIconURL: h,
                     size: 84
                 }),
             [t]
         ),
-        h = i.useMemo(
+        p = i.useMemo(
             () =>
                 [
                     {
                         type: a.Y.USER_INSTALL,
                         icon: s.UserPlusIcon,
-                        title: d.Z.Messages.OAUTH2_INTEGRATION_SELECT_USER,
-                        subtitle: d.Z.Messages.OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE,
+                        title: d.intl.string(d.t.aCg60N),
+                        subtitle: d.intl.string(d.t.YeiIUV),
                         beta: !1
                     },
                     {
                         type: a.Y.GUILD_INSTALL,
                         icon: s.ServerIcon,
-                        title: d.Z.Messages.OAUTH2_INTEGRATION_SELECT_GUILD,
-                        subtitle: d.Z.Messages.OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE,
+                        title: d.intl.string(d.t.E64YCw),
+                        subtitle: d.intl.string(d.t.bbtoKi),
                         beta: !1
                     }
                 ].filter((e) => {
@@ -50,16 +50,16 @@ function h(e) {
             [t.integrationTypesConfig]
         );
     return (0, r.jsxs)('div', {
-        className: _.container,
+        className: f.container,
         children: [
             (0, r.jsxs)('div', {
-                className: _.header,
+                className: f.header,
                 children: [
                     null != u
                         ? (0, r.jsx)(s.Clickable, {
                               onClick: u,
-                              className: _.closeButton,
-                              'aria-label': d.Z.Messages.CLOSE,
+                              className: f.closeButton,
+                              'aria-label': d.intl.string(d.t.cpT0Cg),
                               children: (0, r.jsx)(s.XSmallIcon, {
                                   size: 'md',
                                   color: 'currentColor'
@@ -67,34 +67,34 @@ function h(e) {
                           })
                         : null,
                     (0, r.jsx)(l.Z, {
-                        src: E,
-                        className: _.appIcon,
+                        src: _,
+                        className: f.appIcon,
                         rendersPlaceholder: !0
                     }),
-                    (0, r.jsx)(I, { application: t }),
-                    (0, r.jsx)(p, { application: t })
+                    (0, r.jsx)(g, { application: t }),
+                    (0, r.jsx)(m, { application: t })
                 ]
             }),
             (0, r.jsx)('ul', {
-                className: _.rows,
-                children: h.map((e) =>
+                className: f.rows,
+                children: p.map((e) =>
                     (0, r.jsxs)(
                         s.Clickable,
                         {
                             tag: 'li',
-                            className: _.row,
+                            className: f.row,
                             onClick: () => n(e.type),
                             children: [
                                 (0, r.jsx)(e.icon, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: _.leftIcon
+                                    className: f.leftIcon
                                 }),
                                 (0, r.jsxs)('div', {
-                                    className: _.rowInner,
+                                    className: f.rowInner,
                                     children: [
                                         (0, r.jsxs)('div', {
-                                            className: _.rowDetails,
+                                            className: f.rowDetails,
                                             children: [
                                                 (0, r.jsx)(s.Text, {
                                                     variant: 'text-md/medium',
@@ -112,7 +112,7 @@ function h(e) {
                                         (0, r.jsx)(s.ChevronSmallRightIcon, {
                                             size: 'md',
                                             color: 'currentColor',
-                                            className: _.rightIcon
+                                            className: f.rightIcon
                                         })
                                     ]
                                 })
@@ -125,25 +125,25 @@ function h(e) {
         ]
     });
 }
-function p(e) {
+function m(e) {
     let { application: t } = e,
         n = t.description;
     return null == n || 0 === n.length
         ? null
         : (0, r.jsx)('div', {
-              className: _.detailsContainer,
+              className: f.detailsContainer,
               children: (0, r.jsx)('div', {
-                  className: _.overviewContainerNoVideo,
-                  children: null != n && n.length > 0 ? (0, r.jsx)(m, { description: n }) : null
+                  className: f.overviewContainerNoVideo,
+                  children: null != n && n.length > 0 ? (0, r.jsx)(E, { description: n }) : null
               })
           });
 }
-function I(e) {
+function g(e) {
     let { application: t } = e,
         n = t.name,
         i = (0, o.vJ)(t);
     return (0, r.jsxs)('div', {
-        className: _.titleContainer,
+        className: f.titleContainer,
         children: [
             (0, r.jsx)(s.Heading, {
                 variant: 'heading-xl/extrabold',
@@ -152,18 +152,18 @@ function I(e) {
             }),
             i
                 ? (0, r.jsx)('div', {
-                      className: _.partnerLabelContainer,
+                      className: f.partnerLabelContainer,
                       children: (0, r.jsx)(s.Text, {
                           variant: 'text-xs/medium',
                           color: 'text-normal',
-                          children: d.Z.Messages.APP_DIRECTORY_PARTNER
+                          children: d.intl.string(d.t.LO4f0N)
                       })
                   })
                 : null
         ]
     });
 }
-function m(e) {
+function E(e) {
     let { description: t } = e,
         [a, o] = i.useState(!0);
     i.useLayoutEffect(() => o(!1), []);
@@ -173,8 +173,8 @@ function m(e) {
         }, [t]),
         {
             ref: c,
-            lineHeight: f,
-            lineCount: h
+            lineHeight: h,
+            lineCount: p
         } = (function () {
             let e = i.useRef(null),
                 [t, n] = i.useState(null),
@@ -193,51 +193,51 @@ function m(e) {
                 }
             );
         })(),
-        p = i.useMemo(() => {
-            if (null == f || null == h) return { key: 0 };
-            let e = f * h;
+        m = i.useMemo(() => {
+            if (null == h || null == p) return { key: 0 };
+            let e = h * p;
             return {
                 key: 1,
-                minHeightOverride: Math.min(e, 3 * f),
+                minHeightOverride: Math.min(e, 3 * h),
                 maxHeightOverride: e
             };
-        }, [h, f]),
+        }, [p, h]),
         {
-            ref: I,
-            isTransitioning: m,
-            onTransitionEnd: T
+            ref: g,
+            isTransitioning: E,
+            onTransitionEnd: v
         } = (0, u.Z)({
             isExpanded: a,
-            ...p
+            ...m
         }),
-        S = a || m;
+        I = a || E;
     return (0, r.jsxs)('div', {
-        className: _.descriptionContainer,
+        className: f.descriptionContainer,
         children: [
             (0, r.jsx)('div', {
-                ref: I,
-                className: _.overflowHidden,
-                onTransitionEnd: T,
+                ref: g,
+                className: f.overflowHidden,
+                onTransitionEnd: v,
                 children: (0, r.jsx)(s.Text, {
                     ref: c,
-                    className: E.markup,
+                    className: _.markup,
                     variant: 'text-sm/medium',
-                    lineClamp: S ? void 0 : 3,
-                    style: { maxHeight: S ? void 0 : p.minHeightOverride },
+                    lineClamp: I ? void 0 : 3,
+                    style: { maxHeight: I ? void 0 : m.minHeightOverride },
                     children: l
                 })
             }),
-            null != h && h > 3
+            null != p && p > 3
                 ? (0, r.jsxs)(s.Clickable, {
-                      className: _.expandableDescriptionClickable,
+                      className: f.expandableDescriptionClickable,
                       onClick: () => o((e) => !e),
                       children: [
                           (0, r.jsx)(s.Text, {
                               variant: 'text-sm/semibold',
                               color: 'text-brand',
-                              children: S ? d.Z.Messages.APP_LAUNCHER_SHOW_LESS : d.Z.Messages.APP_LAUNCHER_SHOW_MORE
+                              children: I ? d.intl.string(d.t.u4YJ8v) : d.intl.string(d.t['N/tajI'])
                           }),
-                          S
+                          I
                               ? (0, r.jsx)(s.ChevronSmallUpIcon, {
                                     size: 'sm',
                                     color: s.tokens.colors.TEXT_BRAND

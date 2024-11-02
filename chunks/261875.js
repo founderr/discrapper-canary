@@ -24,7 +24,7 @@ class d extends r.ZP.Store {
         this.waitFor(o.default), this.carefullySpeculativelyOpen(l.n()), this.handleAuthenticationStoreChanged(), o.default.addChangeListener(() => this.handleAuthenticationStoreChanged());
     }
     databaseName(e) {
-        return _(e);
+        return f(e);
     }
     database(e) {
         if (null != e) {
@@ -77,7 +77,7 @@ class d extends r.ZP.Store {
             return;
         }
         if (null != e) {
-            let t = await E(e);
+            let t = await _(e);
             null == t || this.databases.has(e) ? (c.verbose('discarding speculative database ('.concat(e, ' \u2192 ').concat(t, ')')), null == t || t.close()) : (c.verbose('added speculative database ('.concat(e, ' \u2192 ').concat(t, ')')), this.databases.set(e, t), this.emitChange());
         }
     }
@@ -97,10 +97,10 @@ class d extends r.ZP.Store {
             u(this, 'preventWritingCachesAgainThisSession', !1);
     }
 }
-function _(e) {
+function f(e) {
     return '@account.'.concat(e);
 }
-async function E(e) {
+async function _(e) {
     var t;
     return null;
 }

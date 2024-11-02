@@ -15,28 +15,28 @@ t.Z = {
         var t,
             n,
             a,
-            _ = e.state,
-            E = e.name,
-            f = e.options,
-            h = _.elements.arrow,
-            p = _.modifiersData.popperOffsets,
-            I = (0, r.Z)(_.placement),
-            m = (0, o.Z)(I),
-            T = [d.t$, d.F2].indexOf(I) >= 0 ? 'height' : 'width';
-        if (!!h && !!p) {
-            var S = ((t = f.padding), (n = _), (t = 'function' == typeof t ? t(Object.assign({}, n.rects, { placement: n.placement })) : t), (0, u.Z)('number' != typeof t ? t : (0, c.Z)(t, d.mv))),
-                g = (0, i.Z)(h),
-                A = 'y' === m ? d.we : d.t$,
-                N = 'y' === m ? d.I : d.F2,
-                R = _.rects.reference[T] + _.rects.reference[m] - p[m] - _.rects.popper[T],
-                O = p[m] - _.rects.reference[m],
-                v = (0, s.Z)(h),
-                C = v ? ('y' === m ? v.clientHeight || 0 : v.clientWidth || 0) : 0,
-                L = S[A],
-                D = C - g[T] - S[N],
-                y = C / 2 - g[T] / 2 + (R / 2 - O / 2),
-                b = (0, l.u)(L, y, D);
-            _.modifiersData[E] = (((a = {})[m] = b), (a.centerOffset = b - y), a);
+            f = e.state,
+            _ = e.name,
+            h = e.options,
+            p = f.elements.arrow,
+            m = f.modifiersData.popperOffsets,
+            g = (0, r.Z)(f.placement),
+            E = (0, o.Z)(g),
+            v = [d.t$, d.F2].indexOf(g) >= 0 ? 'height' : 'width';
+        if (!!p && !!m) {
+            var I = ((t = h.padding), (n = f), (t = 'function' == typeof t ? t(Object.assign({}, n.rects, { placement: n.placement })) : t), (0, u.Z)('number' != typeof t ? t : (0, c.Z)(t, d.mv))),
+                S = (0, i.Z)(p),
+                T = 'y' === E ? d.we : d.t$,
+                b = 'y' === E ? d.I : d.F2,
+                y = f.rects.reference[v] + f.rects.reference[E] - m[E] - f.rects.popper[v],
+                A = m[E] - f.rects.reference[E],
+                N = (0, s.Z)(p),
+                C = N ? ('y' === E ? N.clientHeight || 0 : N.clientWidth || 0) : 0,
+                R = I[T],
+                O = C - S[v] - I[b],
+                D = C / 2 - S[v] / 2 + (y / 2 - A / 2),
+                L = (0, l.u)(R, D, O);
+            f.modifiersData[_] = (((a = {})[E] = L), (a.centerOffset = L - D), a);
         }
     },
     effect: function (e) {

@@ -1,19 +1,19 @@
-n.r(e);
-var o = n(200651);
-n(192379);
-var t = n(481060),
-    C = n(194359),
-    i = n(468026),
-    a = n(689938);
-e.default = (s) =>
-    (0, o.jsx)(i.default, {
-        confirmText: a.Z.Messages.CLEAR_INCOMING_REQUESTS_CONFIRMATION_CTA,
-        title: a.Z.Messages.CLEAR_INCOMING_REQUESTS_CONFIRMATION_TITLE,
-        cancelText: a.Z.Messages.CANCEL,
+i.r(n);
+var o = i(200651);
+i(192379);
+var e = i(481060),
+    s = i(194359),
+    r = i(468026),
+    a = i(388032);
+n.default = (t) =>
+    (0, o.jsx)(r.default, {
+        confirmText: a.intl.string(a.t.Eq9seX),
+        title: a.intl.string(a.t.eVjfAg),
+        cancelText: a.intl.string(a.t['ETE/oK']),
         onConfirm: () => {
-            C.Z.clearPendingRelationships();
+            s.Z.clearPendingRelationships();
         },
-        body: a.Z.Messages.CLEAR_INCOMING_REQUESTS_CONFIRMATION_BODY.format({ incomingRequestCount: s.incomingRequestCount }),
-        confirmColor: t.ButtonColors.RED,
-        ...s
+        body: a.intl.formatToPlainString(a.t.jaXsAw, { incomingRequestCount: t.incomingRequestCount }),
+        confirmColor: e.ButtonColors.RED,
+        ...t
     });

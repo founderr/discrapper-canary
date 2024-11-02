@@ -1,24 +1,24 @@
 n.d(t, {
     IS: function () {
-        return E;
+        return _;
     },
     MH: function () {
-        return p;
+        return m;
     },
     UE: function () {
-        return h;
+        return p;
     },
     as: function () {
         return a;
     },
     fP: function () {
-        return _;
+        return f;
     },
     m1: function () {
         return s;
     },
     wz: function () {
-        return f;
+        return h;
     }
 });
 var r,
@@ -31,8 +31,8 @@ var r,
     c = n(981631),
     d = n(206583);
 ((r = a || (a = {}))[(r.FollowGame = 0)] = 'FollowGame'), (r[(r.UnfollowGame = 1)] = 'UnfollowGame'), (r[(r.ClickMessageUser = 2)] = 'ClickMessageUser'), (r[(r.SendMessageUser = 3)] = 'SendMessageUser'), (r[(r.JoinVC = 4)] = 'JoinVC'), (r[(r.WatchStream = 5)] = 'WatchStream'), (r[(r.ClickSimilarGame = 6)] = 'ClickSimilarGame'), (r[(r.WebsiteLink = 7)] = 'WebsiteLink'), (r[(r.XLink = 8)] = 'XLink'), (r[(r.YouTubeLink = 9)] = 'YouTubeLink'), (r[(r.ShowMore = 10)] = 'ShowMore'), (r[(r.ShowLess = 11)] = 'ShowLess'), (r[(r.JoinOfficialServer = 12)] = 'JoinOfficialServer'), (r[(r.ClickImage = 13)] = 'ClickImage'), ((i = s || (s = {})).ActivityCard = 'activity_card'), (i.ActivityCardContextMenu = 'activity_card_context_menu'), (i.UserProfile = 'user_profile'), (i.UserProfileCardContextMenu = 'user_profile_card_context_menu'), (i.SimilarGames = 'similar_games'), (i.DevTools = 'dev_tools'), (i.Embed = 'embed'), (i.RtcPanel = 'rtc_panel');
-let _ = () => (0, o.Z)(),
-    E = (e) => {
+let f = () => (0, o.Z)(),
+    _ = (e) => {
         let { viewId: t, source: n, gameName: r, applicationId: i, authorId: a } = e;
         return (
             u.default.track(c.rMx.GAME_PROFILE_OPEN, {
@@ -46,7 +46,7 @@ let _ = () => (0, o.Z)(),
             t
         );
     },
-    f = (e) => {
+    h = (e) => {
         let { viewId: t, gameName: n, applicationId: r, playedFriendIds: i, playedFriendsData: a, similarGames: s, officialGuildId: o } = e;
         u.default.track(c.rMx.GAME_PROFILE_CLOSE, {
             view_id: t,
@@ -59,7 +59,7 @@ let _ = () => (0, o.Z)(),
             official_guild_id: o
         });
     },
-    h = (e) => {
+    p = (e) => {
         let { gameName: t, applicationId: n, action: r, recipientUserId: i, similarGameId: a, viewId: s, officialGuildId: o } = e;
         u.default.track(c.rMx.GAME_PROFILE_ACTION, {
             game_name: t,
@@ -71,7 +71,7 @@ let _ = () => (0, o.Z)(),
             official_guild_id: o
         });
     },
-    p = (e) => {
+    m = (e) => {
         let { viewId: t, applicationId: n, suggestedGameName: r, suggestedGameApplicationId: i, feedback: a, submitted: s } = e;
         return u.default.track(c.rMx.GAME_PROFILE_FEEDBACK, {
             view_id: t,

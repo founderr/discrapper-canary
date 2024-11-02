@@ -1,107 +1,107 @@
-var a = n(200651),
-    r = n(192379),
-    s = n(120356),
-    i = n.n(s),
+var r = n(200651),
+    i = n(192379),
+    a = n(120356),
+    l = n.n(a),
     o = n(442837),
-    l = n(481060),
+    s = n(481060),
     c = n(178762),
     d = n(91140),
     u = n(297781),
-    _ = n(592125),
-    E = n(944486),
-    m = n(594174),
-    I = n(5192),
-    p = n(810568),
-    A = n(689938),
-    g = n(501345),
-    T = n(51527);
+    m = n(592125),
+    p = n(944486),
+    g = n(594174),
+    f = n(5192),
+    h = n(810568),
+    x = n(388032),
+    _ = n(501345),
+    E = n(51527);
 t.Z = (e) => {
-    let { entry: t, viewId: n, officialGuildId: s, onClose: f } = e,
-        N = (0, o.e7)([E.Z, _.Z], () => _.Z.getChannel(E.Z.getChannelId())),
-        O = (0, o.e7)([m.default], () => m.default.getUser(t.author_id)),
-        { nick: R, avatar: h } = r.useMemo(() => {
-            let e = null == O ? void 0 : O.getAvatarURL(null == N ? void 0 : N.guild_id, 48, !1);
+    let { entry: t, viewId: n, officialGuildId: a, onClose: v } = e,
+        I = (0, o.e7)([p.Z, m.Z], () => m.Z.getChannel(p.Z.getChannelId())),
+        C = (0, o.e7)([g.default], () => g.default.getUser(t.author_id)),
+        { nick: A, avatar: S } = i.useMemo(() => {
+            let e = null == C ? void 0 : C.getAvatarURL(null == I ? void 0 : I.guild_id, 48, !1);
             return {
-                nick: I.ZP.getName(null == N ? void 0 : N.guild_id, null == N ? void 0 : N.id, O),
+                nick: f.ZP.getName(null == I ? void 0 : I.guild_id, null == I ? void 0 : I.id, C),
                 avatar: e
             };
-        }, [O, N]);
-    return null == O
+        }, [C, I]);
+    return null == C
         ? null
-        : (0, a.jsx)(l.Popout, {
+        : (0, r.jsx)(s.Popout, {
               position: 'right',
               renderPopout: (e) => {
-                  let { closePopout: r, updatePosition: i } = e;
-                  return (0, a.jsx)(c.J, {
+                  let { closePopout: i, updatePosition: l } = e;
+                  return (0, r.jsx)(c.J, {
                       entry: t,
-                      closePopout: r,
-                      updatePopoutPosition: i,
+                      closePopout: i,
+                      updatePopoutPosition: l,
                       onReaction: () => {
-                          (0, p.UE)({
-                              action: p.as.SendMessageUser,
+                          (0, h.UE)({
+                              action: h.as.SendMessageUser,
                               applicationId: t.extra.application_id,
                               gameName: t.extra.game_name,
                               recipientUserId: t.author_id,
                               viewId: n,
-                              officialGuildId: s
+                              officialGuildId: a
                           }),
-                              f(),
-                              r();
+                              v(),
+                              i();
                       },
-                      onUserPopoutClosed: () => r(),
+                      onUserPopoutClosed: () => i(),
                       disableGameProfileLinks: !0
                   });
               },
               positionKey: 'game-profile-entry-'.concat(t.id),
               onRequestOpen: () => {
-                  (0, p.UE)({
-                      action: p.as.ClickMessageUser,
+                  (0, h.UE)({
+                      action: h.as.ClickMessageUser,
                       applicationId: t.extra.application_id,
                       gameName: t.extra.game_name,
                       recipientUserId: t.author_id,
                       viewId: n,
-                      officialGuildId: s
+                      officialGuildId: a
                   });
               },
               children: (e) =>
-                  (0, a.jsx)(l.Clickable, {
+                  (0, r.jsx)(s.Clickable, {
                       ...e,
-                      className: g.profileEntryCard,
-                      children: (0, a.jsx)(l.FocusRing, {
+                      className: _.profileEntryCard,
+                      children: (0, r.jsx)(s.FocusRing, {
                           offset: {
                               top: 4,
                               bottom: 4,
                               left: 4,
                               right: 4
                           },
-                          children: (0, a.jsxs)(a.Fragment, {
+                          children: (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, a.jsx)('img', {
-                                      className: g.avatar,
-                                      src: h,
-                                      alt: A.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: R })
+                                  (0, r.jsx)('img', {
+                                      className: _.avatar,
+                                      src: S,
+                                      alt: x.intl.formatToPlainString(x.t.IzVXxc, { userName: A })
                                   }),
-                                  (0, a.jsx)('div', {
-                                      className: i()(g.playerInfo),
-                                      children: (0, a.jsxs)('div', {
-                                          className: i()(T.column, T.gapXs),
+                                  (0, r.jsx)('div', {
+                                      className: l()(_.playerInfo),
+                                      children: (0, r.jsxs)('div', {
+                                          className: l()(E.column, E.gapXs),
                                           children: [
-                                              (0, a.jsx)(l.Text, {
+                                              (0, r.jsx)(s.Text, {
                                                   variant: 'text-md/medium',
                                                   color: 'text-primary',
                                                   lineClamp: 1,
-                                                  children: R
+                                                  children: A
                                               }),
-                                              (0, a.jsx)(u.Gk, {
+                                              (0, r.jsx)(u.Gk, {
                                                   location: u.Gt.GAME_PROFILE,
-                                                  children: d.W.map((e, n) => (0, a.jsx)(e, { entry: t }, n))
+                                                  children: d.W.map((e, n) => (0, r.jsx)(e, { entry: t }, n))
                                               })
                                           ]
                                       })
                                   }),
-                                  (0, a.jsx)('div', {
-                                      className: g.reactions,
-                                      children: (0, a.jsx)(l.ArrowAngleLeftUpIcon, { size: 'sm' })
+                                  (0, r.jsx)('div', {
+                                      className: _.reactions,
+                                      children: (0, r.jsx)(s.ArrowAngleLeftUpIcon, { size: 'sm' })
                                   })
                               ]
                           })

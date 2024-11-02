@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return S;
     }
 });
 var r = n(200651),
@@ -12,19 +12,19 @@ var r = n(200651),
     u = n(367907),
     c = n(739566),
     d = n(623292),
-    _ = n(703656),
-    E = n(665906),
-    f = n(488131),
-    h = n(375954),
-    p = n(962293),
-    I = n(981631),
-    m = n(689938),
-    T = n(486522);
-function S(e) {
+    f = n(703656),
+    _ = n(665906),
+    h = n(488131),
+    p = n(375954),
+    m = n(962293),
+    g = n(981631),
+    E = n(388032),
+    v = n(486522);
+function I(e) {
     let { channel: t, message: n, replyChainLength: a } = e;
     return (
         i.useEffect(() => {
-            (0, u.yw)(I.rMx.THREAD_NUDGE_SHOWN, {
+            (0, u.yw)(g.rMx.THREAD_NUDGE_SHOWN, {
                 type: 'Reply Chain ('.concat(3, ')'),
                 reply_chain_length: a + 1,
                 channel_id: t.id,
@@ -33,9 +33,9 @@ function S(e) {
         }, [t]),
         (0, r.jsxs)(l.Clickable, {
             onClick: function () {
-                (0, d.A6)(t.id), (0, f.R6)(t, n, 'Reply Chain Nudge');
+                (0, d.A6)(t.id), (0, h.R6)(t, n, 'Reply Chain Nudge');
             },
-            className: T.threadSuggestionBar,
+            className: v.threadSuggestionBar,
             focusProps: {
                 offset: {
                     right: -4,
@@ -45,34 +45,34 @@ function S(e) {
             children: [
                 (0, r.jsx)(l.Text, {
                     color: 'header-secondary',
-                    className: T.text,
+                    className: v.text,
                     variant: 'text-sm/normal',
-                    children: m.Z.Messages.THREAD_REPLY_SUGGESTION.format({ count: Math.min(10, a + 1) })
+                    children: E.intl.format(E.t.B3V0FB, { count: Math.min(10, a + 1) })
                 }),
                 (0, r.jsx)(l.Text, {
                     color: 'text-link',
-                    className: T.createThreadButton,
+                    className: v.createThreadButton,
                     variant: 'text-sm/semibold',
-                    children: m.Z.Messages.CREATE_THREAD
+                    children: E.intl.string(E.t.rBIGBA)
                 })
             ]
         })
     );
 }
-function g(e) {
+function S(e) {
     let { reply: t, chatInputType: n } = e,
-        { channel: i, message: a, shouldMention: u, showMentionToggle: f } = t,
-        { nick: g, colorString: A, colorRoleName: N } = (0, c.ZP)(a),
-        R = (function (e, t) {
+        { channel: i, message: a, shouldMention: u, showMentionToggle: h } = t,
+        { nick: S, colorString: T, colorRoleName: b } = (0, c.ZP)(a),
+        y = (function (e, t) {
             let n = e.id,
                 r = t.id;
             return (0, o.e7)(
-                [h.Z],
+                [p.Z],
                 () => {
                     let e = r;
                     for (let t = 0; t < 10; t++) {
-                        let r = h.Z.getMessage(n, e);
-                        if ((null == r ? void 0 : r.type) !== I.uaV.REPLY || null == r.messageReference) return t;
+                        let r = p.Z.getMessage(n, e);
+                        if ((null == r ? void 0 : r.type) !== g.uaV.REPLY || null == r.messageReference) return t;
                         e = r.messageReference.message_id;
                     }
                     return 10;
@@ -80,21 +80,21 @@ function g(e) {
                 [n, r]
             );
         })(i, a),
-        O = (0, E.NE)(i, a),
-        v = n.showThreadPromptOnReply && R >= 2 && O;
+        A = (0, _.NE)(i, a),
+        N = n.showThreadPromptOnReply && y >= 2 && A;
     function C(e) {
         e.stopPropagation(), (0, d.qx)(i.id, !u);
     }
     return (0, r.jsx)('div', {
-        className: T.clipContainer,
+        className: v.clipContainer,
         children: (0, r.jsxs)('div', {
-            className: T.container,
+            className: v.container,
             children: [
                 (0, r.jsxs)('div', {
-                    className: T.replyBar,
+                    className: v.replyBar,
                     children: [
                         (0, r.jsx)(l.Clickable, {
-                            onClick: () => (0, _.uL)(I.Z5c.CHANNEL(i.getGuildId(), i.id, a.id)),
+                            onClick: () => (0, f.uL)(g.Z5c.CHANNEL(i.getGuildId(), i.id, a.id)),
                             focusProps: {
                                 offset: {
                                     top: -8,
@@ -105,17 +105,17 @@ function g(e) {
                             },
                             children: (0, r.jsx)(l.Text, {
                                 color: 'header-secondary',
-                                className: s()(T.text, T.replyLabel),
+                                className: s()(v.text, v.replyLabel),
                                 variant: 'text-sm/normal',
-                                children: m.Z.Messages.REPLYING_TO.format({
+                                children: E.intl.format(E.t['8E4Gxc'], {
                                     userHook: (e, t) =>
                                         (0, r.jsx)(
                                             l.NameWithRole,
                                             {
-                                                className: T.name,
-                                                name: g,
-                                                color: A,
-                                                roleName: N
+                                                className: v.name,
+                                                name: S,
+                                                color: T,
+                                                roleName: b
                                             },
                                             t
                                         )
@@ -123,13 +123,13 @@ function g(e) {
                             })
                         }),
                         (0, r.jsxs)('div', {
-                            className: T.actions,
+                            className: v.actions,
                             children: [
-                                f &&
+                                h &&
                                     (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)(l.Tooltip, {
-                                                text: u ? m.Z.Messages.REPLY_MENTION_ON_TOOLTIP : m.Z.Messages.REPLY_MENTION_OFF_TOOLTIP,
+                                                text: u ? E.intl.string(E.t.DH2o6e) : E.intl.string(E.t.utGGIS),
                                                 children: (e) => {
                                                     let { onMouseEnter: t, onMouseLeave: n, onFocus: i, onBlur: a } = e;
                                                     return (0, r.jsx)(l.Clickable, {
@@ -143,27 +143,27 @@ function g(e) {
                                                         children: (0, r.jsxs)(l.Text, {
                                                             variant: 'text-sm/bold',
                                                             color: u ? 'text-link' : 'text-muted',
-                                                            className: T.mentionButton,
+                                                            className: v.mentionButton,
                                                             children: [
                                                                 (0, r.jsx)(l.AtIcon, {
                                                                     size: 'md',
                                                                     color: 'currentColor',
-                                                                    'aria-label': m.Z.Messages.MENTION,
-                                                                    className: T.mentionIcon
+                                                                    'aria-label': E.intl.string(E.t.P8tvKC),
+                                                                    className: v.mentionIcon
                                                                 }),
-                                                                u ? m.Z.Messages.REPLY_MENTION_ON : m.Z.Messages.REPLY_MENTION_OFF
+                                                                u ? E.intl.string(E.t.p9jC2t) : E.intl.string(E.t.U7f3bG)
                                                             ]
                                                         })
                                                     });
                                                 }
                                             }),
                                             (0, r.jsx)('div', {
-                                                className: T.separator,
+                                                className: v.separator,
                                                 'aria-hidden': !0
                                             })
                                         ]
                                     }),
-                                (0, r.jsx)(p.B, {
+                                (0, r.jsx)(m.B, {
                                     onClick: function (e) {
                                         e.stopPropagation(), (0, d.A6)(i.id);
                                     }
@@ -172,11 +172,11 @@ function g(e) {
                         })
                     ]
                 }),
-                v &&
-                    (0, r.jsx)(S, {
+                N &&
+                    (0, r.jsx)(I, {
                         channel: i,
                         message: a,
-                        replyChainLength: R
+                        replyChainLength: y
                     })
             ]
         })

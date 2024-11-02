@@ -10,17 +10,17 @@ var r = n(192379),
     o = n(785717),
     l = n(221292);
 function u(e) {
-    let { user: t, display: n, activity: u, entry: c, stream: d, analyticsLocations: _ } = e,
-        { context: E, trackUserProfileAction: f } = (0, o.KZ)(),
-        { analyticsLocations: h } = (0, a.ZP)(),
-        p = null != _ ? _ : h,
-        I = (0, i.e7)([s.Z], () => s.Z.getUserOutbox(t.id));
+    let { user: t, display: n, activity: u, entry: c, stream: d, analyticsLocations: f } = e,
+        { context: _, trackUserProfileAction: h } = (0, o.KZ)(),
+        { analyticsLocations: p } = (0, a.ZP)(),
+        m = null != f ? f : p,
+        g = (0, i.e7)([s.Z], () => s.Z.getUserOutbox(t.id));
     return (0, r.useCallback)(
         (e) => {
             let { action: t } = e;
-            f({
+            h({
                 action: t,
-                analyticsLocations: p
+                analyticsLocations: m
             }),
                 (0, l.z7)({
                     action: t,
@@ -28,11 +28,11 @@ function u(e) {
                     activity: u,
                     entry: c,
                     stream: d,
-                    outbox: I,
-                    analyticsLocations: p,
-                    ...E
+                    outbox: g,
+                    analyticsLocations: m,
+                    ..._
                 });
         },
-        [f, E, n, u, d, c, I, p]
+        [h, _, n, u, d, c, g, m]
     );
 }

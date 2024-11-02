@@ -1,38 +1,38 @@
 n.d(t, {
     f: function () {
-        return a;
+        return s;
     }
 });
-var s,
-    a,
-    i = n(200651);
+var i,
+    s,
+    l = n(200651);
 n(192379);
-var l = n(120356),
-    r = n.n(l),
-    o = n(780384),
+var r = n(120356),
+    o = n.n(r),
+    a = n(780384),
     u = n(302245),
     d = n(475595),
     c = n(78826),
-    E = n(46140),
-    m = n(981631),
+    m = n(46140),
+    x = n(981631),
     C = n(789935);
-((s = a || (a = {}))[(s.SMALL = 24)] = 'SMALL'), (s[(s.MEDIUM = 32)] = 'MEDIUM');
+((i = s || (s = {}))[(i.SMALL = 24)] = 'SMALL'), (i[(i.MEDIUM = 32)] = 'MEDIUM');
 t.Z = function (e) {
-    let { className: t, gameTileSize: n = 24, quest: s, theme: a = m.BRd.DARK, withGameTile: l = !0 } = e,
-        x = (0, o.wj)(a) ? m.BRd.DARK : m.BRd.LIGHT,
-        _ = (0, u.vI)(s, E.dr.QUESTS_BAR);
-    return (0, i.jsxs)('div', {
-        className: r()(C.partnerBranding, t),
+    let { className: t, gameTileSize: n = 24, quest: i, theme: s = x.BRd.DARK, withGameTile: r = !0 } = e,
+        h = (0, a.wj)(s) ? x.BRd.DARK : x.BRd.LIGHT,
+        g = (0, u.vI)(i, m.dr.QUESTS_BAR);
+    return (0, l.jsxs)('div', {
+        className: o()(C.partnerBranding, t),
         children: [
-            l &&
-                (0, i.jsx)(c.Fl, {
+            r &&
+                (0, l.jsx)(c.Fl, {
                     id: 'QuestPartnerBranding_gameTile',
                     children: (e) =>
-                        (0, i.jsx)('img', {
+                        (0, l.jsx)('img', {
                             ref: e,
                             className: C.partnerBrandingGameTile,
                             alt: '',
-                            src: (0, d.fh)(s, d.eC.GAME_TILE, x).url,
+                            src: (0, d.fh)(i, d.eC.GAME_TILE, h).url,
                             style: {
                                 borderRadius: (function (e) {
                                     switch (e) {
@@ -47,14 +47,14 @@ t.Z = function (e) {
                             }
                         })
                 }),
-            (0, i.jsx)(c.Fl, {
+            (0, l.jsx)(c.Fl, {
                 id: 'QuestPartnerBranding_gameLogotype',
                 children: (e) =>
-                    (0, i.jsx)('img', {
+                    (0, l.jsx)('img', {
                         ref: e,
-                        className: r()(C.partnerBrandingLogotype, { [C.rewardHighlightLogotype]: _ }),
-                        alt: s.config.messages.gameTitle,
-                        src: (0, d.fh)(s, d.eC.LOGO_TYPE, x).url
+                        className: o()(C.partnerBrandingLogotype, { [C.rewardHighlightLogotype]: g }),
+                        alt: i.config.messages.gameTitle,
+                        src: (0, d.fh)(i, d.eC.LOGO_TYPE, h).url
                     })
             })
         ]

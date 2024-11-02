@@ -1,99 +1,99 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return b;
     }
 });
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(91192),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    s = n(91192),
     o = n(286379),
     c = n(481060),
     d = n(183126),
     u = n(209613),
-    _ = n(82295),
-    E = n(797614),
-    h = n(626135),
-    m = n(26373),
-    I = n(486622),
-    p = n(922409),
-    g = n(727813),
-    T = n(355350),
-    S = n(307947),
-    C = n(125855),
-    f = n(687683),
+    h = n(82295),
+    m = n(797614),
+    p = n(626135),
+    g = n(26373),
+    f = n(486622),
+    _ = n(922409),
+    E = n(727813),
+    I = n(355350),
+    C = n(307947),
+    v = n(125855),
+    S = n(687683),
     N = n(981631),
-    A = n(689938),
-    v = n(908120);
-function Z() {
-    let e = a.useRef(null),
-        t = (0, g.Z)(),
-        n = (0, T.w)(),
-        s = (0, m.V)(),
-        Z = (0, d.N)(),
-        L = (0, u.Z)('message-requests-spam-list'),
-        { channelId: R } = (0, p._)(),
-        O = a.useCallback(() => {
-            (0, c.showToast)((0, c.createToast)(A.Z.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, c.ToastType.FAILURE));
+    T = n(388032),
+    x = n(908120);
+function b() {
+    let e = r.useRef(null),
+        t = (0, E.Z)(),
+        n = (0, I.w)(),
+        l = (0, g.V)(),
+        b = (0, d.N)(),
+        A = (0, u.Z)('message-requests-spam-list'),
+        { channelId: Z } = (0, _._)(),
+        y = r.useCallback(() => {
+            (0, c.showToast)((0, c.createToast)(T.intl.string(T.t.EDYbS0), c.ToastType.FAILURE));
         }, []),
-        { rejectAll: x } = (0, I.m)({ onError: O }),
-        b = a.useCallback(() => {
-            x(t.map((e) => e.channel.id));
-        }, [t, x]);
-    a.useEffect(() => {
-        h.default.track(N.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), E.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
+        { rejectAll: L } = (0, f.m)({ onError: y }),
+        R = r.useCallback(() => {
+            L(t.map((e) => e.channel.id));
+        }, [t, L]);
+    r.useEffect(() => {
+        p.default.track(N.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), m.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
     }, []);
-    let M = a.useCallback(
+    let P = r.useCallback(
             (e) => {
-                var n, a;
-                let { row: l } = e,
-                    o = t[l],
-                    c = null === (a = t[l + 1]) || void 0 === a ? void 0 : null === (n = a.channel) || void 0 === n ? void 0 : n.id,
+                var n, r;
+                let { row: s } = e,
+                    o = t[s],
+                    c = null === (r = t[s + 1]) || void 0 === r ? void 0 : null === (n = r.channel) || void 0 === n ? void 0 : n.id,
                     d = o.channel.id;
                 return (0, i.jsx)(
-                    C.Z,
+                    v.Z,
                     {
-                        index: l,
-                        className: r()({
-                            [v.selected]: null != R && R === d,
-                            [v.siblingSelected]: null != R && R === c
+                        index: s,
+                        className: a()({
+                            [x.selected]: null != Z && Z === d,
+                            [x.siblingSelected]: null != Z && Z === c
                         }),
                         channel: o.channel,
                         user: o.user,
-                        hasSingleMessageRequest: s
+                        hasSingleMessageRequest: l
                     },
                     d
                 );
             },
-            [t, s, R]
+            [t, l, Z]
         ),
-        P = a.useCallback(
+        O = r.useCallback(
             () =>
                 (0, i.jsxs)(
-                    _.Z,
+                    h.Z,
                     {
-                        className: v.sectionTitle,
+                        className: x.sectionTitle,
                         children: [
-                            A.Z.Messages.MESSAGE_REQUESTS_SPAM_HEADER.format({ count: n }),
-                            Z && n > 0
+                            T.intl.format(T.t.C79Edn, { count: n }),
+                            b && n > 0
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(c.Text, {
-                                              className: v.titleDivider,
+                                              className: x.titleDivider,
                                               variant: 'eyebrow',
                                               color: 'header-secondary',
                                               tag: 'span',
                                               children: '\u2022'
                                           }),
                                           (0, i.jsx)(c.Button, {
-                                              onClick: b,
+                                              onClick: R,
                                               look: c.ButtonLooks.LINK,
                                               color: c.ButtonColors.LINK,
                                               size: c.ButtonSizes.SMALL,
-                                              className: v.clearAllButton,
-                                              'aria-label': A.Z.Messages.MESSAGE_REQUESTS_CLEAR_ALL,
-                                              children: A.Z.Messages.MESSAGE_REQUESTS_CLEAR_ALL
+                                              className: x.clearAllButton,
+                                              'aria-label': T.intl.string(T.t.p6t7RE),
+                                              children: T.intl.string(T.t.p6t7RE)
                                           })
                                       ]
                                   })
@@ -102,35 +102,35 @@ function Z() {
                     },
                     'message-requests-spam-title'
                 ),
-            [n, b, Z]
+            [n, R, b]
         );
     return 0 === t.length
-        ? (0, i.jsx)(S.Z, { section: f.pS.SPAM })
-        : (0, i.jsx)(l.bG, {
-              navigator: L,
-              children: (0, i.jsx)(l.SJ, {
+        ? (0, i.jsx)(C.Z, { section: S.pS.SPAM })
+        : (0, i.jsx)(s.bG, {
+              navigator: A,
+              children: (0, i.jsx)(s.SJ, {
                   children: (n) => {
-                      let { ref: a, role: s, ...r } = n;
+                      let { ref: r, role: l, ...a } = n;
                       return (0, i.jsx)(
                           c.List,
                           {
-                              className: v.list,
-                              innerRole: s,
-                              innerAriaLabel: A.Z.Messages.MESSAGE_REQUESTS,
+                              className: x.list,
+                              innerRole: l,
+                              innerAriaLabel: T.intl.string(T.t.e7GWjY),
                               ref: (t) => {
                                   var n;
-                                  (e.current = t), (a.current = null !== (n = null == t ? void 0 : t.getScrollerNode()) && void 0 !== n ? n : null);
+                                  (e.current = t), (r.current = null !== (n = null == t ? void 0 : t.getScrollerNode()) && void 0 !== n ? n : null);
                               },
                               paddingTop: 24,
                               paddingBottom: 24,
-                              sectionHeight: f.oi,
-                              rowHeight: f.WN,
-                              renderSection: P,
-                              renderRow: M,
+                              sectionHeight: S.oi,
+                              rowHeight: S.WN,
+                              renderSection: O,
+                              renderRow: P,
                               sections: [t.length],
                               chunkSize: 30,
                               fade: !0,
-                              ...r
+                              ...a
                           },
                           'message-requests-spam-list'
                       );

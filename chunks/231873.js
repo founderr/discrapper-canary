@@ -1,32 +1,32 @@
-var i, s, a, l, r, o;
+var i, l, r, a, s, o;
 n.d(t, {
     Ft: function () {
-        return a;
+        return r;
     },
     Rg: function () {
         return i;
     },
     j7: function () {
-        return s;
+        return l;
     }
 }),
-    ((l = i || (i = {})).INVITE = 'member_joined'),
-    (l.CHANNEL = 'create_channel'),
-    (l.AVATAR = 'avatar'),
-    (l.MESSAGE = 'send_message'),
-    (l.COMPLETED = 'completed'),
-    (l.DISMISSED = 'dismissed'),
-    ((r = s || (s = {})).PERSONALIZE_SERVER = 'Personalize Server'),
-    (r.INVITE = 'Invite Friends'),
-    (r.CREATE_CHANNEL = 'Create Channel'),
-    (r.SEND_MESSAGE = 'Send Message'),
-    (r.DOWNLOAD = 'Download'),
-    (r.ADD_APP = 'Add App'),
-    (r.DISMISS_GUILD_PROGRESS = 'Dismiss Guild Progress'),
-    (r.DISCORD_OVERVIEW_VIDEO = 'Discord Overview Video'),
-    (r.JOIN_GUILD = 'Join Guild'),
-    (r.CONTACT_SYNC = 'Sync Contacts'),
-    (r.DISMISS = 'Dismiss'),
-    ((o = a || (a = {})).CHANNEL_WELCOME = 'Channel Welcome CTA'),
+    ((a = i || (i = {})).INVITE = 'member_joined'),
+    (a.CHANNEL = 'create_channel'),
+    (a.AVATAR = 'avatar'),
+    (a.MESSAGE = 'send_message'),
+    (a.COMPLETED = 'completed'),
+    (a.DISMISSED = 'dismissed'),
+    ((s = l || (l = {})).PERSONALIZE_SERVER = 'Personalize Server'),
+    (s.INVITE = 'Invite Friends'),
+    (s.CREATE_CHANNEL = 'Create Channel'),
+    (s.SEND_MESSAGE = 'Send Message'),
+    (s.DOWNLOAD = 'Download'),
+    (s.ADD_APP = 'Add App'),
+    (s.DISMISS_GUILD_PROGRESS = 'Dismiss Guild Progress'),
+    (s.DISCORD_OVERVIEW_VIDEO = 'Discord Overview Video'),
+    (s.JOIN_GUILD = 'Join Guild'),
+    (s.CONTACT_SYNC = 'Sync Contacts'),
+    (s.DISMISS = 'Dismiss'),
+    ((o = r || (r = {})).CHANNEL_WELCOME = 'Channel Welcome CTA'),
     (o.GUILD_PROGRESS = 'Guild Progress'),
     (o.HUB_PROGRESS = 'Hub Progress');

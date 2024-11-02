@@ -5,10 +5,10 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(481060),
-    a = n(63063),
-    l = n(981631),
-    r = n(689938),
+var l = n(481060),
+    r = n(63063),
+    a = n(981631),
+    s = n(388032),
     o = n(187281);
 function c(e) {
     let { searchMode: t, searchByMode: n } = e;
@@ -16,23 +16,23 @@ function c(e) {
         className: o.searchHeader,
         children: [
             (0, i.jsx)(u, { ...e }),
-            (0, i.jsxs)(s.TabBar, {
+            (0, i.jsxs)(l.TabBar, {
                 orientation: 'horizontal',
                 className: o.searchHeaderTabList,
                 selectedItem: t,
                 onItemSelect: n,
                 children: [
-                    (0, i.jsx)(s.TabBar.Item, {
-                        id: l.QIO.NEWEST,
-                        children: r.Z.Messages.SEARCH_NEWEST_SHORT
+                    (0, i.jsx)(l.TabBar.Item, {
+                        id: a.QIO.NEWEST,
+                        children: s.intl.string(s.t.rLjqbW)
                     }),
-                    (0, i.jsx)(s.TabBar.Item, {
-                        id: l.QIO.OLDEST,
-                        children: r.Z.Messages.SEARCH_OLDEST_SHORT
+                    (0, i.jsx)(l.TabBar.Item, {
+                        id: a.QIO.OLDEST,
+                        children: s.intl.string(s.t.a1BaUl)
                     }),
-                    (0, i.jsx)(s.TabBar.Item, {
-                        id: l.QIO.MOST_RELEVANT,
-                        children: r.Z.Messages.SEARCH_MOST_RELEVANT_SHORT
+                    (0, i.jsx)(l.TabBar.Item, {
+                        id: a.QIO.MOST_RELEVANT,
+                        children: s.intl.string(s.t.FtR97u)
                     })
                 ]
             })
@@ -41,24 +41,24 @@ function c(e) {
 }
 function u(e) {
     let t;
-    let { isSearching: n, isIndexing: a, documentsIndexed: l } = e;
-    (a || n) &&
+    let { isSearching: n, isIndexing: r, documentsIndexed: a } = e;
+    (r || n) &&
         (t = (0, i.jsx)('div', {
             className: o.spinnerWrapper,
-            children: (0, i.jsx)(s.Spinner, {
-                type: s.Spinner.Type.SPINNING_CIRCLE,
+            children: (0, i.jsx)(l.Spinner, {
+                type: l.Spinner.Type.SPINNING_CIRCLE,
                 className: o.spinner,
                 itemClassName: o.spinnerPath
             })
         }));
-    let c = a && !n;
+    let c = r && !n;
     return (0, i.jsxs)('div', {
         className: o.totalResults,
         role: 'status',
         children: [
             c
-                ? (0, i.jsx)(s.Tooltip, {
-                      text: r.Z.Messages.SEARCH_STILL_INDEXING_HINT.format({ count: l }),
+                ? (0, i.jsx)(l.Tooltip, {
+                      text: s.intl.formatToPlainString(s.t['4Y3O+P'], { count: a }),
                       children: (n) =>
                           (0, i.jsxs)('div', {
                               className: o.totalResultsWrapper,
@@ -74,26 +74,26 @@ function u(e) {
 function d(e) {
     let { isSearching: t, isIndexing: n, totalResults: c } = e;
     if (t)
-        return (0, i.jsx)(s.Text, {
+        return (0, i.jsx)(l.Text, {
             variant: 'text-md/normal',
             color: 'header-primary',
-            children: r.Z.Messages.SEARCHING
+            children: s.intl.string(s.t.uixzLS)
         });
     if (n)
-        return (0, i.jsx)(s.Text, {
+        return (0, i.jsx)(l.Text, {
             variant: 'text-md/normal',
-            children: (0, i.jsx)(s.Anchor, {
+            children: (0, i.jsx)(l.Anchor, {
                 className: o.helpdeskLink,
-                href: a.Z.getArticleURL(l.BhN.SEARCH_INDEXING),
-                children: r.Z.Messages.STILL_INDEXING
+                href: r.Z.getArticleURL(a.BhN.SEARCH_INDEXING),
+                children: s.intl.string(s.t['G3EA+/'])
             })
         });
     {
         let e = c.toLocaleString();
-        return (0, i.jsx)(s.Text, {
+        return (0, i.jsx)(l.Text, {
             variant: 'text-md/normal',
             color: 'header-primary',
-            children: r.Z.Messages.TOTAL_RESULTS.format({ count: e })
+            children: s.intl.format(s.t.ZGVL3t, { count: e })
         });
     }
 }

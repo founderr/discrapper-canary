@@ -1,35 +1,35 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return h;
     },
     j: function () {
-        return E;
+        return g;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(442837),
-    i = n(139387),
-    r = n(852860),
-    l = n(490655),
+var r = n(442837),
+    l = n(139387),
+    s = n(852860),
+    a = n(490655),
     o = n(434404),
     c = n(360606),
     d = n(999382),
     u = n(821864),
-    _ = n(905753);
-function I(e) {
+    m = n(905753);
+function h(e) {
     let { refToScroller: t } = e,
-        n = (0, a.e7)([d.Z], () => d.Z.getGuild()),
+        n = (0, r.e7)([d.Z], () => d.Z.getGuild()),
         {
-            section: i,
-            sectionId: r,
+            section: l,
+            sectionId: s,
             integrations: o,
             editedIntegration: u,
-            webhooks: _,
-            editedWebhook: I,
-            isFetching: E,
-            errors: T
-        } = (0, a.cj)([c.Z], () => ({
+            webhooks: m,
+            editedWebhook: h,
+            isFetching: g,
+            errors: x
+        } = (0, r.cj)([c.Z], () => ({
             editedIntegration: c.Z.editedIntegration,
             editedWebhook: c.Z.editedWebhook,
             errors: c.Z.getErrors(),
@@ -41,39 +41,39 @@ function I(e) {
         }));
     return null == n
         ? null
-        : (0, s.jsx)(l.Z, {
+        : (0, i.jsx)(a.Z, {
               guild: n,
-              section: i,
-              sectionId: r,
+              section: l,
+              sectionId: s,
               integrations: o,
-              webhooks: _,
+              webhooks: m,
               editedIntegration: u,
-              editedWebhook: I,
-              isFetching: E,
+              editedWebhook: h,
+              isFetching: g,
               hasChanges: c.Z.hasChanges,
-              errors: T,
+              errors: x,
               refToScroller: t
           });
 }
-function E() {
-    let { guild: e, submitting: t } = (0, a.cj)([d.Z], () => ({
+function g() {
+    let { guild: e, submitting: t } = (0, r.cj)([d.Z], () => ({
         guild: d.Z.getGuild(),
         submitting: d.Z.isSubmitting()
     }));
-    return (0, s.jsx)(r.Z, {
+    return (0, i.jsx)(s.Z, {
         submitting: t,
         onReset: () => {
-            i.Z.init(), u.Ui(), null != e && o.Z.init(e.id);
+            l.Z.init(), u.Ui(), null != e && o.Z.init(e.id);
         },
         onSave: () => {
             if (null != e) {
-                if (null != c.Z.editedIntegration) i.Z.saveIntegration(e.id, c.Z.editedIntegration);
-                else if (null != c.Z.editedWebhook) i.Z.saveWebhook(e.id, c.Z.editedWebhook);
+                if (null != c.Z.editedIntegration) l.Z.saveIntegration(e.id, c.Z.editedIntegration);
+                else if (null != c.Z.editedWebhook) l.Z.saveWebhook(e.id, c.Z.editedWebhook);
                 else if (null != c.Z.editedCommandId) {
                     let t = c.Z.getSectionId(),
-                        n = _.Z.getEditedApplication();
+                        n = m.Z.getEditedApplication();
                     if (null == t || null == n) return;
-                    i.Z.saveApplicationPermissions(t, e.id, Object.values(n));
+                    l.Z.saveApplicationPermissions(t, e.id, Object.values(n));
                 }
                 d.Z.hasChanges() && o.Z.saveGuild(e.id, { features: e.features });
             }

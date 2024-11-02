@@ -1,97 +1,97 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return N;
+        return S;
     }
 }),
-    t(47120);
-var n = t(200651),
-    a = t(192379),
-    i = t(120356),
-    r = t.n(i),
-    o = t(481060),
-    l = t(600164),
-    c = t(490529),
-    d = t(981631),
-    _ = t(689938),
-    u = t(18415);
-let E = {
-        [d.gkr.HOUSE_1]: u.membershipDialogHouse1,
-        [d.gkr.HOUSE_2]: u.membershipDialogHouse2,
-        [d.gkr.HOUSE_3]: u.membershipDialogHouse3
+    n(47120);
+var i = n(200651),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(481060),
+    o = n(600164),
+    c = n(490529),
+    d = n(981631),
+    u = n(388032),
+    m = n(18415);
+let h = {
+        [d.gkr.HOUSE_1]: m.membershipDialogHouse1,
+        [d.gkr.HOUSE_2]: m.membershipDialogHouse2,
+        [d.gkr.HOUSE_3]: m.membershipDialogHouse3
     },
-    T = {
-        [d.gkr.HOUSE_1]: u.houseLogoHouse1,
-        [d.gkr.HOUSE_2]: u.__invalid_houseLogoHouse2,
-        [d.gkr.HOUSE_3]: u.__invalid_houseLogoHouse3
+    g = {
+        [d.gkr.HOUSE_1]: m.houseLogoHouse1,
+        [d.gkr.HOUSE_2]: m.__invalid_houseLogoHouse2,
+        [d.gkr.HOUSE_3]: m.__invalid_houseLogoHouse3
     },
-    S = {
-        [d.gkr.HOUSE_1]: t(246300),
-        [d.gkr.HOUSE_2]: t(797148),
-        [d.gkr.HOUSE_3]: t(374347)
+    p = {
+        [d.gkr.HOUSE_1]: n(246300),
+        [d.gkr.HOUSE_2]: n(797148),
+        [d.gkr.HOUSE_3]: n(374347)
     },
-    I = (e) =>
+    x = (e) =>
         ({
-            [d.gkr.HOUSE_1]: _.Z.Messages.HYPESQUAD_DESCRIPTION_HOUSE_1,
-            [d.gkr.HOUSE_2]: _.Z.Messages.HYPESQUAD_DESCRIPTION_HOUSE_2,
-            [d.gkr.HOUSE_3]: _.Z.Messages.HYPESQUAD_DESCRIPTION_HOUSE_3
+            [d.gkr.HOUSE_1]: u.intl.string(u.t.CpG10d),
+            [d.gkr.HOUSE_2]: u.intl.string(u.t.VNPE6u),
+            [d.gkr.HOUSE_3]: u.intl.string(u.t.KNfiTU)
         })[e];
-class N extends a.Component {
+class S extends s.Component {
     render() {
-        let { houseMembership: e, isClaimed: s, isVerified: t } = this.props;
-        if (!s || !t) return null;
+        let { houseMembership: e, isClaimed: t, isVerified: n } = this.props;
+        if (!t || !n) return null;
         if (null != e) {
-            let s = _.Z.Messages.HYPESQUAD_MEMBERSHIP_HEADING.format({ houseName: (0, c.X8)(e) });
-            return (0, n.jsx)('div', {
-                className: r()(u.membershipDialog, E[e]),
-                children: (0, n.jsxs)('div', {
-                    className: u.membershipDialogContent,
+            let t = u.intl.formatToPlainString(u.t.yG0XAA, { houseName: (0, c.X8)(e) });
+            return (0, i.jsx)('div', {
+                className: l()(m.membershipDialog, h[e]),
+                children: (0, i.jsxs)('div', {
+                    className: m.membershipDialogContent,
                     children: [
-                        (0, n.jsxs)(l.Z, {
+                        (0, i.jsxs)(o.Z, {
                             children: [
-                                (0, n.jsxs)(l.Z.Child, {
+                                (0, i.jsxs)(o.Z.Child, {
                                     grow: 1,
                                     shrink: 1,
                                     children: [
-                                        (0, n.jsx)(o.Text, {
-                                            className: u.membershipDialogHeading,
+                                        (0, i.jsx)(a.Text, {
+                                            className: m.membershipDialogHeading,
                                             variant: 'text-xs/bold',
-                                            children: _.Z.Messages.HYPESQUAD_YOUR_HOUSE
+                                            children: u.intl.string(u.t.KZoEIy)
                                         }),
-                                        (0, n.jsx)(o.Heading, {
-                                            className: u.membershipDialogHouseName,
+                                        (0, i.jsx)(a.Heading, {
+                                            className: m.membershipDialogHouseName,
                                             variant: 'heading-sm/semibold',
-                                            children: s
+                                            children: t
                                         }),
-                                        (0, n.jsx)(o.Text, {
-                                            className: u.membershipDialogHouseDescription,
+                                        (0, i.jsx)(a.Text, {
+                                            className: m.membershipDialogHouseDescription,
                                             variant: 'text-md/normal',
-                                            children: I(e)
+                                            children: x(e)
                                         })
                                     ]
                                 }),
-                                (0, n.jsx)(l.Z.Child, {
-                                    className: u.houseLogoWrapper,
+                                (0, i.jsx)(o.Z.Child, {
+                                    className: m.houseLogoWrapper,
                                     grow: 0,
                                     shrink: 0,
                                     wrap: !0,
-                                    children: (0, n.jsx)('img', {
-                                        className: r()(u.houseLogo, T[e]),
-                                        src: S[e],
-                                        alt: s
+                                    children: (0, i.jsx)('img', {
+                                        className: l()(m.houseLogo, g[e]),
+                                        src: p[e],
+                                        alt: t
                                     })
                                 })
                             ]
                         }),
-                        (0, n.jsxs)(o.Text, {
-                            className: u.membershipDialogSwitchHouses,
+                        (0, i.jsxs)(a.Text, {
+                            className: m.membershipDialogSwitchHouses,
                             variant: 'text-md/normal',
                             children: [
-                                _.Z.Messages.HYPESQUAD_SWITCH_HOUSES_PROMPT,
-                                (0, n.jsx)(o.Clickable, {
-                                    className: u.membershipDialogSwitchHousesAction,
+                                u.intl.string(u.t.zD3mqK),
+                                (0, i.jsx)(a.Clickable, {
+                                    className: m.membershipDialogSwitchHousesAction,
                                     onClick: this.handleJoinHypeSquadClick,
                                     tag: 'span',
-                                    children: _.Z.Messages.HYPESQUAD_SWITCH_HOUSES_ACTION
+                                    children: u.intl.string(u.t.LzBgrq)
                                 })
                             ]
                         })
@@ -99,59 +99,59 @@ class N extends a.Component {
                 })
             });
         }
-        return (0, n.jsxs)('div', {
-            className: u.joinCTAWrapper,
+        return (0, i.jsxs)('div', {
+            className: m.joinCTAWrapper,
             children: [
-                (0, n.jsxs)(l.Z, {
-                    className: u.joinCTA,
-                    align: l.Z.Align.CENTER,
-                    justify: l.Z.Justify.CENTER,
-                    direction: l.Z.Direction.HORIZONTAL,
+                (0, i.jsxs)(o.Z, {
+                    className: m.joinCTA,
+                    align: o.Z.Align.CENTER,
+                    justify: o.Z.Justify.CENTER,
+                    direction: o.Z.Direction.HORIZONTAL,
                     children: [
-                        (0, n.jsx)(l.Z.Child, {
+                        (0, i.jsx)(o.Z.Child, {
                             grow: 0,
                             shrink: 0,
-                            children: (0, n.jsx)(o.Text, {
+                            children: (0, i.jsx)(a.Text, {
                                 variant: 'text-sm/normal',
-                                children: _.Z.Messages.HYPESQUAD_READY_TO_REP
+                                children: u.intl.string(u.t.Uq6KRk)
                             })
                         }),
-                        (0, n.jsx)(l.Z.Child, {
+                        (0, i.jsx)(o.Z.Child, {
                             grow: 0,
                             shrink: 0,
-                            children: (0, n.jsx)(o.Button, {
+                            children: (0, i.jsx)(a.Button, {
                                 onClick: this.handleJoinHypeSquadClick,
-                                children: _.Z.Messages.HYPESQUAD_JOIN
+                                children: u.intl.string(u.t['1GWQKi'])
                             })
                         })
                     ]
                 }),
-                (0, n.jsx)(o.Text, {
-                    className: u.newsletterWarning,
+                (0, i.jsx)(a.Text, {
+                    className: m.newsletterWarning,
                     variant: 'text-sm/normal',
-                    children: _.Z.Messages.HYPESQUAD_NEWSLETTER_WARNING
+                    children: u.intl.string(u.t['3kUvgo'])
                 })
             ]
         });
     }
     constructor(...e) {
-        var s, a, i;
+        var t, s, r;
         super(...e),
-            (s = this),
-            (a = 'handleJoinHypeSquadClick'),
-            (i = () => {
-                (0, o.openModalLazy)(async () => {
-                    let { default: e } = await t.e('83264').then(t.bind(t, 711184));
-                    return (s) => (0, n.jsx)(e, { ...s });
+            (t = this),
+            (s = 'handleJoinHypeSquadClick'),
+            (r = () => {
+                (0, a.openModalLazy)(async () => {
+                    let { default: e } = await n.e('83264').then(n.bind(n, 711184));
+                    return (t) => (0, i.jsx)(e, { ...t });
                 });
             }),
-            a in s
-                ? Object.defineProperty(s, a, {
-                      value: i,
+            s in t
+                ? Object.defineProperty(t, s, {
+                      value: r,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (s[a] = i);
+                : (t[s] = r);
     }
 }

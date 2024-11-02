@@ -1,60 +1,60 @@
 n.d(t, {
     k: function () {
-        return c;
+        return i;
     }
 }),
     n(47120);
 var a = n(192379),
     r = n(110924),
-    s = n(626135),
+    l = n(626135),
     o = n(798930),
-    l = n(981631);
-function c(e, t) {
-    let [n, c] = a.useState(o.O.LANDING),
-        i = (0, r.Z)(n),
+    s = n(981631);
+function i(e, t) {
+    let [n, i] = a.useState(o.O.LANDING),
+        c = (0, r.Z)(n),
         [d, u] = a.useState(null),
-        [x, N] = a.useState(null),
-        [h, C] = a.useState(void 0),
-        m = a.useCallback(() => {
+        [x, h] = a.useState(null),
+        [m, N] = a.useState(void 0),
+        C = a.useCallback(() => {
             switch (n) {
                 case o.O.LANDING:
-                    c(o.O.PRE_CONNECT);
+                    i(o.O.PRE_CONNECT);
                     break;
                 case o.O.DISCORD_CONSENT:
-                    c(o.O.SUCCESS);
+                    i(o.O.SUCCESS);
                     break;
                 case o.O.ERROR:
-                    c(o.O.PRE_CONNECT);
+                    i(o.O.PRE_CONNECT);
             }
         }, [n]),
         j = a.useCallback((e) => {
-            u(null), C(e), c(o.O.ERROR);
-        }, []),
-        E = a.useCallback((e) => {
-            u(e), c(o.O.PRE_CONNECT_WAITING);
+            u(null), N(e), i(o.O.ERROR);
         }, []),
         f = a.useCallback((e) => {
-            u(null), N(e), c(o.O.DISCORD_CONSENT);
+            u(e), i(o.O.PRE_CONNECT_WAITING);
+        }, []),
+        v = a.useCallback((e) => {
+            u(null), h(e), i(o.O.DISCORD_CONSENT);
         }, []);
     return (
         a.useEffect(() => {
-            if (n !== i)
-                s.default.track(l.rMx.ACCOUNT_LINK_STEP, {
+            if (n !== c)
+                l.default.track(s.rMx.ACCOUNT_LINK_STEP, {
                     location_stack: e,
-                    previous_step: i,
+                    previous_step: c,
                     current_step: n,
                     platform_type: t
                 });
-        }, [n, i, e, t]),
+        }, [n, c, e, t]),
         {
             slide: n,
-            gotoNext: m,
+            gotoNext: C,
             gotoError: j,
-            handleWaitingForConnection: E,
-            handleAuthToken: f,
+            handleWaitingForConnection: f,
+            handleAuthToken: v,
             expectedCallbackState: d,
             callbackData: x,
-            errorCode: h
+            errorCode: m
         }
     );
 }

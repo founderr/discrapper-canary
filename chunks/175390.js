@@ -1,44 +1,44 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return v;
     }
 });
 var r = n(200651);
 n(192379);
-var s = n(399606),
-    i = n(481060),
+var i = n(399606),
+    s = n(481060),
     o = n(607070),
-    a = n(357352),
-    l = n(623488),
+    l = n(357352),
+    a = n(623488),
     c = n(695346),
     d = n(937615),
     C = n(506071),
     u = n(724598),
-    _ = n(629481),
-    x = n(981631),
-    f = n(689938),
-    I = n(276051);
-function p() {
+    x = n(629481),
+    f = n(981631),
+    p = n(388032),
+    h = n(276051);
+function m() {
     let e = c.QK.useSetting(),
         t = (0, C.n)(),
-        n = (0, s.e7)([o.Z], () => o.Z.useReducedMotion),
-        i = t && e && !n ? (0, a.b)('server_products/storefront/question-mark.gif') : (0, a.b)('server_products/storefront/question-mark.png');
+        n = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
+        s = t && e && !n ? (0, l.b)('server_products/storefront/question-mark.gif') : (0, l.b)('server_products/storefront/question-mark.png');
     return (0, r.jsxs)('div', {
-        className: I.previewListingCard,
+        className: h.previewListingCard,
         children: [
-            (0, r.jsx)(l.Z, {
+            (0, r.jsx)(a.Z, {
                 role: void 0,
                 ctaComponent: null,
-                imageUrl: (0, a.b)('server_products/storefront/preview-thumbnail.png'),
-                name: f.Z.Messages.GUILD_STORE_PREVIEW_CARD_TITLE,
-                description: f.Z.Messages.GUILD_STORE_PREVIEW_CARD_DESCRIPTION,
-                formattedPrice: (0, d.T4)(0, x.pKx.USD, {
+                imageUrl: (0, l.b)('server_products/storefront/preview-thumbnail.png'),
+                name: p.intl.string(p.t.U2hvDg),
+                description: p.intl.string(p.t['w/TNGR']),
+                formattedPrice: (0, d.T4)(0, f.pKx.USD, {
                     localeMatcher: 'best fit',
                     style: 'currency',
                     maximumSignificantDigits: 1
                 }),
                 shouldShowFullDescriptionButton: !1,
-                productType: f.Z.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE,
+                productType: p.intl.string(p.t.ih4QMT),
                 onTapCard: () => null,
                 hideRoleTag: !0,
                 lineClamp: 3,
@@ -47,46 +47,46 @@ function p() {
                 descriptionTextVariant: 'text-xs/normal'
             }),
             (0, r.jsx)('img', {
-                className: I.questionMark,
+                className: h.questionMark,
                 alt: '',
-                src: i
+                src: s
             })
         ]
     });
 }
-function h() {
+function g() {
     return (0, r.jsxs)('div', {
-        className: I.learnMoreTipContainer,
+        className: h.learnMoreTipContainer,
         children: [
-            (0, r.jsx)(i.CircleInformationIcon, {
+            (0, r.jsx)(s.CircleInformationIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: I.infoCircle
+                className: h.infoCircle
             }),
-            (0, r.jsx)(i.Text, {
+            (0, r.jsx)(s.Text, {
                 variant: 'text-sm/normal',
                 color: 'text-muted',
-                children: f.Z.Messages.GUILD_STORE_PREVIEW_LEARN_MORE.format({ learnMoreLink: _.P4 })
+                children: p.intl.format(p.t.umfZ8v, { learnMoreLink: x.P4 })
             })
         ]
     });
 }
-function m(e) {
+function v(e) {
     let { guildId: t } = e;
     return (0, r.jsxs)('div', {
-        className: I.previewContentContainer,
+        className: h.previewContentContainer,
         children: [
             (0, r.jsxs)('div', {
-                className: I.previewContent,
+                className: h.previewContent,
                 children: [
-                    (0, r.jsx)(p, {}),
+                    (0, r.jsx)(m, {}),
                     (0, r.jsx)(u.Z, {
                         guildId: t,
                         showCTA: !0
                     })
                 ]
             }),
-            (0, r.jsx)(h, {})
+            (0, r.jsx)(g, {})
         ]
     });
 }

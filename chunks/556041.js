@@ -1,53 +1,53 @@
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(600164),
-    r = n(245315),
-    l = n(689938),
-    o = n(905702);
+var r = n(481060),
+    l = n(600164),
+    a = n(245315),
+    o = n(388032),
+    s = n(905702);
 t.Z = () =>
-    (0, i.jsxs)(s.Z, {
-        align: s.Z.Align.CENTER,
-        justify: s.Z.Justify.CENTER,
-        direction: s.Z.Direction.VERTICAL,
-        className: o.popout,
+    (0, i.jsxs)(l.Z, {
+        align: l.Z.Align.CENTER,
+        justify: l.Z.Justify.CENTER,
+        direction: l.Z.Direction.VERTICAL,
+        className: s.popout,
         children: [
             (0, i.jsx)('img', {
                 alt: '',
-                src: (0, r.QA)(),
-                className: o.avatar
+                src: (0, a.QA)(),
+                className: s.avatar
             }),
-            (0, i.jsxs)(s.Z, {
-                align: s.Z.Align.CENTER,
-                justify: s.Z.Justify.CENTER,
-                className: o.nameWrapper,
+            (0, i.jsxs)(l.Z, {
+                align: l.Z.Align.CENTER,
+                justify: l.Z.Justify.CENTER,
+                className: s.nameWrapper,
                 children: [
-                    (0, i.jsx)(a.Tooltip, {
-                        text: l.Z.Messages.STAFF_BADGE_TOOLTIP,
+                    (0, i.jsx)(r.Tooltip, {
+                        text: o.intl.string(o.t.oMx98P),
                         children: (e) =>
                             (0, i.jsx)('div', {
                                 ...e,
-                                className: o.staffBadge
+                                className: s.staffBadge
                             })
                     }),
-                    (0, i.jsx)(a.Heading, {
-                        className: o.header,
+                    (0, i.jsx)(r.Heading, {
+                        className: s.header,
                         variant: 'heading-md/semibold',
-                        children: l.Z.Messages.ANNOUNCEMENT_GUILD_POPOUT_NAME
+                        children: o.intl.string(o.t.xfAlNz)
                     })
                 ]
             }),
-            (0, i.jsx)(a.Text, {
-                className: o.description,
+            (0, i.jsx)(r.Text, {
+                className: s.description,
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                children: l.Z.Messages.ANNOUNCEMENT_GUILD_DESCRIPTION
+                children: o.intl.string(o.t.BUZ0sr)
             }),
-            (0, i.jsx)(a.Text, {
-                className: o.description,
+            (0, i.jsx)(r.Text, {
+                className: s.description,
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                children: l.Z.Messages.ANNOUNCEMENT_GUILD_HERE_TO_HELP
+                children: o.intl.string(o.t.w5beJC)
             })
         ]
     });

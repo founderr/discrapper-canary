@@ -1,6 +1,6 @@
 n.d(t, {
     P: function () {
-        return _;
+        return f;
     }
 }),
     n(47120);
@@ -25,7 +25,7 @@ function d(e, t, n) {
         e
     );
 }
-class _ extends (r = a.Component) {
+class f extends (r = a.Component) {
     renderNonInteractive() {
         let { tag: e, focusProps: t, innerRef: n, onClick: r, role: i, tabIndex: s, ...o } = this.props;
         return a.createElement(e, {
@@ -79,8 +79,8 @@ class _ extends (r = a.Component) {
             });
     }
 }
-d(_, 'contextType', l.g),
-    d(_, 'defaultProps', {
+d(f, 'contextType', l.g),
+    d(f, 'defaultProps', {
         tag: 'div',
         role: 'button',
         tabIndex: 0

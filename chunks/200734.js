@@ -71,7 +71,7 @@ function d(e) {
                     case 'BYMINUTE':
                     case 'BYSECOND':
                         var d = (function (e) {
-                            return -1 !== e.indexOf(',') ? e.split(',').map(_) : _(e);
+                            return -1 !== e.indexOf(',') ? e.split(',').map(f) : f(e);
                         })(c);
                         t[l.toLowerCase()] = d;
                         break;
@@ -91,8 +91,8 @@ function d(e) {
                         break;
                     case 'DTSTART':
                     case 'TZID':
-                        var E = u(e);
-                        (t.tzid = E.tzid), (t.dtstart = E.dtstart);
+                        var _ = u(e);
+                        (t.tzid = _.tzid), (t.dtstart = _.dtstart);
                         break;
                     case 'UNTIL':
                         t.until = (0, s.gE)(c);
@@ -107,6 +107,6 @@ function d(e) {
         t
     );
 }
-function _(e) {
+function f(e) {
     return /^[+-]?\d+$/.test(e) ? Number(e) : e;
 }

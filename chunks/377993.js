@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return R;
     }
 }),
     n(47120),
     n(653041);
 var i = n(200651),
-    s = n(192379),
-    a = n(873546),
-    l = n(442837),
-    r = n(481060),
+    l = n(192379),
+    r = n(873546),
+    a = n(442837),
+    s = n(481060),
     o = n(239091),
     c = n(144144),
     u = n(100527),
@@ -17,151 +17,151 @@ var i = n(200651),
     h = n(385499),
     m = n(82295),
     p = n(184301),
-    _ = n(347475),
-    f = n(158776),
-    E = n(699516),
-    g = n(111583),
-    C = n(594174),
-    I = n(626135),
-    T = n(585483),
-    x = n(233870),
-    S = n(51144),
-    v = n(998502),
-    N = n(276264),
-    A = n(981631),
-    Z = n(689938),
-    M = n(204394);
-let b = [],
-    R = v.ZP.getEnableHardwareAcceleration();
-function L(e) {
-    let { user: t, channel: s, status: u, activities: d } = e,
-        h = (0, l.e7)([g.Z], () => null != g.Z.getTypingUsers(s.id)[t.id]),
-        m = (0, l.e7)([C.default], () => C.default.getCurrentUser()),
-        I = (0, l.e7)([f.Z], () => f.Z.isMobileOnline(t.id)),
-        x = (0, l.e7)([E.Z], () => E.Z.getNickname(t.id)),
-        v = (e) => {
+    f = n(347475),
+    g = n(158776),
+    C = n(699516),
+    x = n(111583),
+    v = n(594174),
+    _ = n(626135),
+    I = n(585483),
+    E = n(233870),
+    b = n(51144),
+    S = n(998502),
+    Z = n(276264),
+    T = n(981631),
+    N = n(388032),
+    j = n(204394);
+let A = [],
+    y = S.ZP.getEnableHardwareAcceleration();
+function P(e) {
+    let { user: t, channel: l, status: u, activities: d } = e,
+        h = (0, a.e7)([x.Z], () => null != x.Z.getTypingUsers(l.id)[t.id]),
+        m = (0, a.e7)([v.default], () => v.default.getCurrentUser()),
+        _ = (0, a.e7)([g.Z], () => g.Z.isMobileOnline(t.id)),
+        E = (0, a.e7)([C.Z], () => C.Z.getNickname(t.id)),
+        S = (e) => {
             (0, o.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('18283')]).then(n.bind(n, 354589));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,
                         user: t,
-                        channel: s
+                        channel: l
                     });
             });
         };
-    return (0, i.jsx)(r.Popout, {
-        preload: () => (0, p.Z)(t, { channelId: s.id }),
+    return (0, i.jsx)(s.Popout, {
+        preload: () => (0, p.Z)(t, { channelId: l.id }),
         renderPopout: (e) =>
-            (0, i.jsx)(_.Z, {
+            (0, i.jsx)(f.Z, {
                 ...e,
                 userId: t.id,
-                channelId: s.id
+                channelId: l.id
             }),
-        position: a.tq ? 'window_center' : 'left',
+        position: r.tq ? 'window_center' : 'left',
         spacing: 16,
         onShiftClick: () => {
-            let e = '@'.concat(S.ZP.getUserTag(t, { decoration: 'never' })),
+            let e = '@'.concat(b.ZP.getUserTag(t, { decoration: 'never' })),
                 n = '<@'.concat(t.id, '>');
-            T.S.dispatchToLastSubscribed(A.CkL.INSERT_TEXT, {
+            I.S.dispatchToLastSubscribed(T.CkL.INSERT_TEXT, {
                 plainText: e,
                 rawText: n
             }),
-                c.Z.startTyping(s.id);
+                c.Z.startTyping(l.id);
         },
         children: (e) =>
             (0, i.jsx)(
-                N.Z,
+                Z.Z,
                 {
                     user: t,
                     currentUser: m,
-                    isOwner: t.id === s.ownerId,
-                    ownerTooltipText: Z.Z.Messages.GROUP_OWNER,
-                    shouldAnimateStatus: R,
+                    isOwner: t.id === l.ownerId,
+                    ownerTooltipText: N.intl.string(N.t['MRXZ+/']),
+                    shouldAnimateStatus: y,
                     isTyping: h,
                     status: u,
                     activities: d,
-                    channel: s,
-                    onContextMenu: v,
-                    isMobile: I,
-                    nick: x,
+                    channel: l,
+                    onContextMenu: S,
+                    isMobile: _,
+                    nick: E,
                     ...e
                 },
                 t.id
             )
     });
 }
-function P(e, t) {
+function M(e, t) {
     if (e.listItems.length !== t.listItems.length) return !1;
     for (let n = 0; n < e.listItems.length; n++) {
         let i = e.listItems[n],
-            s = t.listItems[n];
-        if (i.user !== s.user || i.status !== s.status || i.activities !== s.activities) return !1;
+            l = t.listItems[n];
+        if (i.user !== l.user || i.status !== l.status || i.activities !== l.activities) return !1;
     }
     return !0;
 }
-function j(e) {
+function R(e) {
     var t;
     let { channel: n } = e,
-        a = C.default.getCurrentUser(),
-        o = null == a ? void 0 : a.isStaff(),
+        r = v.default.getCurrentUser(),
+        o = null == r ? void 0 : r.isStaff(),
         { analyticsLocations: c } = (0, d.ZP)(u.Z.MEMBER_LIST);
     let { listItems: p } =
         ((t = n),
-        (0, l.e7)(
-            [E.Z, C.default, f.Z],
+        (0, a.e7)(
+            [C.Z, v.default, g.Z],
             () => {
-                let e = (0, x.T)(t.recipients, C.default),
+                let e = (0, E.T)(t.recipients, v.default),
                     n = {};
                 for (let t of e) {
-                    var i, s, a;
-                    E.Z.isFriend(t.id) || t.id === (null === (i = C.default.getCurrentUser()) || void 0 === i ? void 0 : i.id)
+                    var i, l, r;
+                    C.Z.isFriend(t.id) || t.id === (null === (i = v.default.getCurrentUser()) || void 0 === i ? void 0 : i.id)
                         ? (n[t.id] = {
-                              status: null !== (s = f.Z.getStatus(t.id)) && void 0 !== s ? s : A.Skl.OFFLINE,
-                              activities: null !== (a = f.Z.getActivities(t.id)) && void 0 !== a ? a : b
+                              status: null !== (l = g.Z.getStatus(t.id)) && void 0 !== l ? l : T.Skl.OFFLINE,
+                              activities: null !== (r = g.Z.getActivities(t.id)) && void 0 !== r ? r : A
                           })
                         : (n[t.id] = {
-                              status: A.Skl.OFFLINE,
-                              activities: b
+                              status: T.Skl.OFFLINE,
+                              activities: A
                           });
                 }
-                let l = [];
+                let a = [];
                 for (let t of e) {
                     let e = {
                         user: t,
                         status: n[t.id].status,
                         activities: n[t.id].activities
                     };
-                    l.push(e);
+                    a.push(e);
                 }
-                return { listItems: l };
+                return { listItems: a };
             },
             [t],
-            P
+            M
         ));
-    s.useEffect(() => {
-        I.default.track(A.rMx.MEMBER_LIST_VIEWED, {
+    l.useEffect(() => {
+        _.default.track(T.rMx.MEMBER_LIST_VIEWED, {
             channel_id: n.id,
             channel_type: n.type,
             guild_id: n.guild_id
         });
     }, [n.guild_id, n.id, n.type]);
-    let _ = o && p.every((e) => e.user.isStaff());
+    let f = o && p.every((e) => e.user.isStaff());
     return (0, i.jsx)(d.Gt, {
         value: c,
         children: (0, i.jsx)('div', {
-            className: M.membersWrap,
-            children: (0, i.jsxs)(r.Scroller, {
-                className: M.members,
+            className: j.membersWrap,
+            children: (0, i.jsxs)(s.Scroller, {
+                className: j.members,
                 fade: !0,
                 children: [
                     (0, i.jsxs)(m.Z, {
-                        className: M.membersGroup,
-                        children: [''.concat(Z.Z.Messages.MEMBERS, '\u2014').concat(p.length, ' '), _ && (0, i.jsx)(h.Z, { type: h.Z.Types.STAFF_ONLY_DM })]
+                        className: j.membersGroup,
+                        children: [''.concat(N.intl.string(N.t['9Oq93t']), '\u2014').concat(p.length, ' '), f && (0, i.jsx)(h.Z, { type: h.Z.Types.STAFF_ONLY_DM })]
                     }),
                     p.map((e) =>
                         (0, i.jsx)(
-                            L,
+                            P,
                             {
                                 user: e.user,
                                 status: e.status,

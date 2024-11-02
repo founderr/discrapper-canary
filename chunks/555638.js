@@ -1,43 +1,43 @@
-t.d(n, {
+e.d(t, {
     A: function () {
         return a;
     }
 });
-var o = t(200651);
-t(192379);
-var i = t(212598),
-    s = t(927923),
-    r = t(689938),
-    l = t(283554),
-    c = t(124248);
-function a(e) {
-    let { platformType: n, isWaitingForConnection: t, onWaitingForConnection: a, expectedCallbackState: C, onAuthToken: u, onError: d, onClose: _ } = e,
-        T = t
-            ? (0, o.jsx)('img', {
-                  src: c,
+var i = e(200651);
+e(192379);
+var o = e(212598),
+    r = e(927923),
+    l = e(388032),
+    c = e(283554),
+    s = e(124248);
+function a(n) {
+    let { platformType: t, isWaitingForConnection: e, onWaitingForConnection: a, expectedCallbackState: d, onAuthToken: u, onError: C, onClose: f } = n,
+        h = e
+            ? (0, i.jsx)('img', {
+                  src: s,
                   width: '180',
                   height: '125',
                   alt: ''
               })
-            : (0, o.jsx)('img', {
-                  src: l,
+            : (0, i.jsx)('img', {
+                  src: c,
                   width: '180',
                   height: '111',
                   alt: ''
               }),
-        N = t ? r.Z.Messages.CONSOLE_PRECONNECT_TITLE_WAITING : r.Z.Messages.PS_PRECONNECT_TITLE,
-        P = t ? r.Z.Messages.PS_PRECONNECT_BODY_WAITING : r.Z.Messages.PS_PRECONNECT_BODY;
-    return (0, o.jsx)(i.t, {
-        platformType: n,
-        isWaitingForConnection: t,
+        T = e ? l.intl.string(l.t.TTIocn) : l.intl.string(l.t.LDTnRk),
+        A = e ? l.intl.string(l.t.MNmoKC) : l.intl.string(l.t.JA1He3);
+    return (0, i.jsx)(o.t, {
+        platformType: t,
+        isWaitingForConnection: e,
         onWaitingForConnection: a,
-        expectedCallbackState: C,
+        expectedCallbackState: d,
         onAuthToken: u,
-        onError: d,
-        onClose: _,
-        img: T,
-        title: N,
-        body: P,
-        redirectDestination: s.uu
+        onError: C,
+        onClose: f,
+        img: h,
+        title: T,
+        body: A,
+        redirectDestination: r.uu
     });
 }

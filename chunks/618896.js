@@ -1,23 +1,23 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return s;
     }
 });
 var i = n(200651);
 n(192379);
-var s = n(481060),
-    a = n(939863),
-    l = n(613713);
-function r(e) {
+var l = n(481060),
+    r = n(939863),
+    a = n(613713);
+function s(e) {
     let { className: t } = e;
-    return (0, i.jsx)(a.Z, {
+    return (0, i.jsx)(r.Z, {
         className: t,
         children: (0, i.jsx)('div', {
-            className: l.background,
-            children: (0, i.jsx)(s.StageIcon, {
+            className: a.background,
+            children: (0, i.jsx)(l.StageIcon, {
                 size: 'custom',
                 color: 'currentColor',
-                className: l.foreground,
+                className: a.foreground,
                 width: 32,
                 height: 32
             })

@@ -3,14 +3,14 @@ n.d(t, {
         return l;
     },
     mJ: function () {
-        return a;
+        return r;
     }
 });
-var s,
-    a,
-    r = n(818083);
-((s = a || (a = {}))[(s.DEFAULT = 0)] = 'DEFAULT'), (s[(s.VARIANT_1 = 1)] = 'VARIANT_1'), (s[(s.VARIANT_2 = 2)] = 'VARIANT_2');
-let i = (0, r.B)({
+var i,
+    r,
+    a = n(818083);
+((i = r || (r = {}))[(i.DEFAULT = 0)] = 'DEFAULT'), (i[(i.VARIANT_1 = 1)] = 'VARIANT_1'), (i[(i.VARIANT_2 = 2)] = 'VARIANT_2');
+let s = (0, a.B)({
     kind: 'user',
     id: '2024-04_marketing_page_non_sub_perk_tile_order',
     label: 'Changes the order of the non-subscriber perk tiles',
@@ -35,6 +35,6 @@ let i = (0, r.B)({
 });
 function l(e) {
     let { location: t } = e,
-        { tileOrderVariant: n } = i.useExperiment({ location: t });
+        { tileOrderVariant: n } = s.useExperiment({ location: t });
     return n;
 }

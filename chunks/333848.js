@@ -8,37 +8,37 @@ var r = n(990547),
     u = n(573261),
     c = n(87051),
     d = n(981631),
-    _ = n(526761);
+    f = n(526761);
 t.Z = {
     createChannel(e) {
-        let { guildId: t, type: n, name: E, permissionOverwrites: f = [], bitrate: h, userLimit: p, parentId: I, skuId: m, branchId: T } = e;
+        let { guildId: t, type: n, name: _, permissionOverwrites: h = [], bitrate: p, userLimit: m, parentId: g, skuId: E, branchId: v } = e;
         a.Z.dispatch({ type: 'CREATE_CHANNEL_MODAL_SUBMIT' });
-        let S = {
+        let I = {
             type: n,
-            name: E,
-            permission_overwrites: f
+            name: _,
+            permission_overwrites: h
         };
-        if ((null != h && h !== d.epw && (S.bitrate = h), null != p && p > 0 && (S.user_limit = p), null != I && (S.parent_id = I), n === d.d4z.GUILD_STORE)) {
-            if (null == m) throw Error('Unexpected missing SKU');
-            (S.sku_id = m), (S.branch_id = T);
+        if ((null != p && p !== d.epw && (I.bitrate = p), null != m && m > 0 && (I.user_limit = m), null != g && (I.parent_id = g), n === d.d4z.GUILD_STORE)) {
+            if (null == E) throw Error('Unexpected missing SKU');
+            (I.sku_id = E), (I.branch_id = v);
         }
         return u.Z.post({
             url: d.ANM.GUILD_CHANNELS(t),
-            body: S,
+            body: I,
             oldFormErrors: !0,
             trackedActionData: {
                 event: r.NetworkActionNames.CHANNEL_CREATE,
                 properties: (e) => {
                     var t, n;
                     return (0, i.iG)({
-                        is_private: f.length > 0,
+                        is_private: h.length > 0,
                         channel_id: null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.id,
                         channel_type: null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.type
                     });
                 }
             }
         }).then(
-            (e) => (o.ZP.isOptInEnabled(t) && c.Z.updateChannelOverrideSettings(t, e.body.id, { flags: _.ic.OPT_IN_ENABLED }, l.ZB.OptedIn), s.Z.checkGuildTemplateDirty(t), e),
+            (e) => (o.ZP.isOptInEnabled(t) && c.Z.updateChannelOverrideSettings(t, e.body.id, { flags: f.ic.OPT_IN_ENABLED }, l.ZB.OptedIn), s.Z.checkGuildTemplateDirty(t), e),
             (e) => {
                 throw (
                     (a.Z.dispatch({

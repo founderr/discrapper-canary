@@ -1,16 +1,16 @@
 var i = n(710845),
-    a = n(857192),
-    s = n(901077),
-    r = n(46832),
-    l = n(852926),
+    r = n(857192),
+    l = n(901077),
+    a = n(46832),
+    s = n(852926),
     o = n(748635),
     c = n(981631);
 let d = new i.Z('RPCServer:PostMessage'),
     u = (e, t, n) => {
-        (a.default.isLoggingOverlayEvents || e.cmd !== c.Etm.OVERLAY) && t.info('Socket Message: '.concat(n.id), (0, s.Z)(e));
+        (r.default.isLoggingOverlayEvents || e.cmd !== c.Etm.OVERLAY) && t.info('Socket Message: '.concat(n.id), (0, l.Z)(e));
     };
 t.Z = (function () {
-    let e = new r.Z(l.em, d, o.Z, u);
+    let e = new a.Z(s.em, d, o.Z, u);
     return (
         window.addEventListener('message', (t) => {
             if (window === t.source) return;
@@ -20,8 +20,8 @@ t.Z = (function () {
             }
             let n = t.source,
                 i = t.data,
-                a = t.origin;
-            e.handleMessage(i, a, (e, t) => {
+                r = t.origin;
+            e.handleMessage(i, r, (e, t) => {
                 !(function (e) {
                     try {
                         return e.closed;

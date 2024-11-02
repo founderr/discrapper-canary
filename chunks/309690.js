@@ -1,48 +1,48 @@
-t.r(s),
-    t.d(s, {
+s.r(e),
+    s.d(e, {
         default: function () {
-            return r;
+            return i;
         }
     });
-var a = t(200651);
-t(192379);
-var o = t(481060),
-    l = t(600164),
-    n = t(689938),
-    d = t(766286);
-function r(e) {
-    let { onClose: s, transitionState: t } = e;
-    return (0, a.jsxs)(o.ModalRoot, {
-        size: o.ModalSize.SMALL,
-        transitionState: t,
+var a = s(200651);
+s(192379);
+var n = s(481060),
+    l = s(600164),
+    o = s(388032),
+    d = s(766286);
+function i(t) {
+    let { onClose: e, transitionState: s } = t;
+    return (0, a.jsxs)(n.ModalRoot, {
+        size: n.ModalSize.SMALL,
+        transitionState: s,
         children: [
-            (0, a.jsxs)(o.ModalHeader, {
+            (0, a.jsxs)(n.ModalHeader, {
                 justify: l.Z.Justify.BETWEEN,
                 children: [
-                    (0, a.jsx)(o.FormTitle, {
+                    (0, a.jsx)(n.FormTitle, {
                         tag: 'h2',
                         className: d.header,
-                        children: n.Z.Messages.STREAM_FULL_MODAL_HEADER
+                        children: o.intl.string(o.t.GzjdOz)
                     }),
-                    (0, a.jsx)(o.ModalCloseButton, {
-                        onClick: s,
+                    (0, a.jsx)(n.ModalCloseButton, {
+                        onClick: e,
                         className: d.modalCloseButton
                     })
                 ]
             }),
-            (0, a.jsxs)(o.ModalContent, {
+            (0, a.jsxs)(n.ModalContent, {
                 children: [
-                    (0, a.jsx)(o.Text, {
+                    (0, a.jsx)(n.Text, {
                         variant: 'text-md/medium',
-                        children: n.Z.Messages.STREAM_FULL_MODAL_BODY
+                        children: o.intl.string(o.t.VVZDBA)
                     }),
                     (0, a.jsx)('div', { className: d.fullArt })
                 ]
             }),
-            (0, a.jsx)(o.ModalFooter, {
-                children: (0, a.jsx)(o.Button, {
-                    onClick: s,
-                    children: n.Z.Messages.OKAY
+            (0, a.jsx)(n.ModalFooter, {
+                children: (0, a.jsx)(n.Button, {
+                    onClick: e,
+                    children: o.intl.string(o.t.BddRzc)
                 })
             })
         ]

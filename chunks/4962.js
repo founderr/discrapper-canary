@@ -1,36 +1,36 @@
 n(411104);
 var i,
-    a,
-    s = n(200651);
+    r,
+    l = n(200651);
 n(192379);
-var r = n(120356),
-    l = n.n(r),
+var a = n(120356),
+    s = n.n(a),
     o = n(442837),
     c = n(481060),
     d = n(700582),
     u = n(451478),
-    _ = n(689938),
-    E = n(273027);
-(a = i || (i = {}))[(a.STAFF_NOTES = 1)] = 'STAFF_NOTES';
-let h = o.ZP.connectStores([u.Z], () => ({ animate: u.Z.isFocused() }))((e) => {
+    h = n(388032),
+    m = n(273027);
+(r = i || (i = {}))[(r.STAFF_NOTES = 1)] = 'STAFF_NOTES';
+let p = o.ZP.connectStores([u.Z], () => ({ animate: u.Z.isFocused() }))((e) => {
         let { user: t, className: n, animate: i } = e;
-        return (0, s.jsxs)('div', {
-            className: l()(E.staffReviewHeader, n),
+        return (0, l.jsxs)('div', {
+            className: s()(m.staffReviewHeader, n),
             children: [
-                (0, s.jsx)(d.Z, {
+                (0, l.jsx)(d.Z, {
                     size: c.AvatarSizes.SIZE_32,
                     user: t,
                     animate: i
                 }),
-                (0, s.jsxs)('div', {
-                    className: E.headerText,
+                (0, l.jsxs)('div', {
+                    className: m.headerText,
                     children: [
-                        (0, s.jsx)('div', {
-                            className: E.label,
-                            children: _.Z.Messages.APPLICATION_STORE_STAFF_PICK
+                        (0, l.jsx)('div', {
+                            className: m.label,
+                            children: h.intl.string(h.t.vmzMZG)
                         }),
-                        (0, s.jsx)('div', {
-                            className: E.username,
+                        (0, l.jsx)('div', {
+                            className: m.username,
                             children: t.username
                         })
                     ]
@@ -38,22 +38,22 @@ let h = o.ZP.connectStores([u.Z], () => ({ animate: u.Z.isFocused() }))((e) => {
             ]
         });
     }),
-    m = (e) => {
+    g = (e) => {
         let { data: t, className: n } = e;
         if (1 === t.type) {
             if (null == t.staffNotes) return null;
             let { user: e, content: i } = t.staffNotes;
             return null == e
                 ? null
-                : (0, s.jsxs)('div', {
+                : (0, l.jsxs)('div', {
                       className: n,
                       children: [
-                          (0, s.jsx)(h, {
+                          (0, l.jsx)(p, {
                               user: e,
-                              className: E.header
+                              className: m.header
                           }),
-                          (0, s.jsx)('div', {
-                              className: E.notes,
+                          (0, l.jsx)('div', {
+                              className: m.notes,
                               children: i
                           })
                       ]
@@ -61,4 +61,4 @@ let h = o.ZP.connectStores([u.Z], () => ({ animate: u.Z.isFocused() }))((e) => {
         }
         throw Error('Unknown type');
     };
-(m.Types = i), (t.Z = m);
+(g.Types = i), (t.Z = g);

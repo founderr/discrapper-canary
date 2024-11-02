@@ -1,35 +1,35 @@
-n.d(s, {
+t.d(n, {
     Z: function () {
         return i;
     }
 });
-var r = n(981631),
-    t = n(689938);
+var r = t(981631),
+    s = t(388032);
 function i(e) {
     if (null == e) return null;
     switch (e.type) {
         case r.d4z.GUILD_ANNOUNCEMENT:
-            return t.Z.Messages.NEWS_CHANNEL;
+            return s.intl.string(s.t.l1dkSE);
         case r.d4z.GUILD_STORE:
-            return t.Z.Messages.STORE_CHANNEL;
+            return s.intl.string(s.t['P1/Erq']);
         case r.d4z.DM:
         case r.d4z.GROUP_DM:
-            return t.Z.Messages.DM;
+            return s.intl.string(s.t.jN2DfX);
         case r.d4z.PRIVATE_THREAD:
-            return t.Z.Messages.PRIVATE_THREAD;
+            return s.intl.string(s.t.F1zyvb);
         case r.d4z.ANNOUNCEMENT_THREAD:
         case r.d4z.PUBLIC_THREAD:
-            return t.Z.Messages.THREAD;
+            return s.intl.string(s.t['7Xm5QE']);
         case r.d4z.GUILD_TEXT:
-            return t.Z.Messages.TEXT_CHANNEL;
+            return s.intl.string(s.t.Pnajj4);
         case r.d4z.GUILD_FORUM:
-            return e.isMediaChannel() ? t.Z.Messages.MEDIA_CHANNEL : t.Z.Messages.FORUM_CHANNEL;
+            return e.isMediaChannel() ? s.intl.string(s.t.seKITE) : s.intl.string(s.t.GbryDQ);
         case r.d4z.GUILD_MEDIA:
-            return t.Z.Messages.MEDIA_CHANNEL;
+            return s.intl.string(s.t.seKITE);
         case r.d4z.GUILD_STAGE_VOICE:
-            return t.Z.Messages.STAGE_CHANNEL;
+            return s.intl.string(s.t.EErMzM);
         case r.d4z.GUILD_VOICE:
-            return t.Z.Messages.VOICE_CHANNEL;
+            return s.intl.string(s.t.BVZqJi);
         case r.d4z.GUILD_CATEGORY:
         default:
             return null;

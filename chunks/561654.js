@@ -1,13 +1,13 @@
 n(47120);
-var s,
-    a,
-    i,
+var i,
     r,
-    l = n(442837),
+    l,
+    s,
+    a = n(442837),
     o = n(570140),
     c = n(430824);
 let d = new Map();
-class u extends (s = l.ZP.Store) {
+class u extends (i = a.ZP.Store) {
     initialize() {
         this.waitFor(c.Z);
     }
@@ -15,15 +15,15 @@ class u extends (s = l.ZP.Store) {
         return d.get(e);
     }
 }
-(r = 'GuildRoleConnectionsConfigurationStore'),
-    (i = 'displayName') in (a = u)
-        ? Object.defineProperty(a, i, {
-              value: r,
+(s = 'GuildRoleConnectionsConfigurationStore'),
+    (l = 'displayName') in (r = u)
+        ? Object.defineProperty(r, l, {
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[i] = r),
+        : (r[l] = s),
     (t.Z = new u(o.Z, {
         GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS: (e) => {
             let { roleId: t, roleConnectionConfigurations: n } = e;

@@ -18,7 +18,7 @@ var i = function (e) {
             u = new Set(),
             c = new Set(),
             d = new Set(),
-            _ = function (e) {
+            f = function (e) {
                 var t = o.indexOf(e);
                 t < 0 &&
                     ((t = o.findIndex(function (t) {
@@ -26,27 +26,27 @@ var i = function (e) {
                     })),
                     o.splice(~t ? t : o.length, 0, e));
             },
-            E = function () {
+            _ = function () {
                 if (!t)
                     try {
-                        p(), e(E);
+                        m(), e(_);
                     } catch (e) {
                         console.error(e);
                     }
             },
-            f = function () {
-                t && ((t = !1), 0 == a && ((a = r.now()), e(E)));
+            h = function () {
+                t && ((t = !1), 0 == a && ((a = r.now()), e(_)));
             },
-            h = [];
+            p = [];
         this.setTimeout = function (e, t) {
             var n = r.now() + t,
                 i = function () {
-                    var e = h.findIndex(function (e) {
+                    var e = p.findIndex(function (e) {
                         return e.cancel == i;
                     });
-                    e >= 0 && h.splice(e, 1);
+                    e >= 0 && p.splice(e, 1);
                 },
-                a = s(h, function (e) {
+                a = s(p, function (e) {
                     return e.time > n;
                 }),
                 o = {
@@ -54,18 +54,18 @@ var i = function (e) {
                     handler: e,
                     cancel: i
                 };
-            return h.splice(a, 0, o), f(), o;
+            return p.splice(a, 0, o), h(), o;
         };
-        var p = (this.advance = function () {
+        var m = (this.advance = function () {
             var e = r.now();
             if (
-                (u.size && (u.forEach(_), u.clear()),
-                h.length &&
+                (u.size && (u.forEach(f), u.clear()),
+                p.length &&
                     r.batchedUpdates(function () {
-                        var t = s(h, function (t) {
+                        var t = s(p, function (t) {
                             return t.time > e;
                         });
-                        h.splice(0, t).forEach(function (e) {
+                        p.splice(0, t).forEach(function (e) {
                             return e.handler();
                         });
                     }),
@@ -96,10 +96,10 @@ var i = function (e) {
             }
         });
         (this.start = function (e) {
-            l > e.priority ? u.add(e) : (_(e), f());
+            l > e.priority ? u.add(e) : (f(e), h());
         }),
             (this.onFrame = function (e) {
-                c.add(e), f();
+                c.add(e), h();
             }),
             (this.onWrite = function (e) {
                 n ? e(a) : d.add(e);

@@ -14,12 +14,12 @@ function l(e, t) {
         u = (0, r.e7)([a.ZP], () => (null != e ? a.ZP.getMember(e.id, t) : null), [e, t]),
         c = (0, r.e7)([i.Z], () => i.Z.getChannel(n), [n]),
         d = (0, r.e7)([i.Z], () => i.Z.getChannel(null == c ? void 0 : c.parent_id), [c]),
-        _ = (0, r.e7)([s.Z], () => (null != e ? s.Z.getRoles(e.id) : void 0));
-    return null == e || null == _ || null == u
+        f = (0, r.e7)([s.Z], () => (null != e ? s.Z.getRoles(e.id) : void 0));
+    return null == e || null == f || null == u
         ? null
         : (0, o.Ur)({
               guild: e,
-              guildRoles: _,
+              guildRoles: f,
               guildMember: u,
               channel: null != c && c.isThread() && null != d ? d : c,
               onlyChannelConnectionRoles: l

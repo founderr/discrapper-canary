@@ -1,83 +1,83 @@
 n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(782690),
-    r = n(481060),
-    l = n(393238),
+    r = n(192379),
+    l = n(782690),
+    a = n(481060),
+    s = n(393238),
     o = n(963202),
     c = n(353093),
     d = n(931515),
     u = n(807933),
-    _ = n(207796),
-    E = n(497189),
-    h = n(86014),
-    m = n(895068),
-    I = n(490610),
-    p = n(322665),
-    g = n(689938),
-    T = n(590522);
-function S(e) {
+    h = n(207796),
+    m = n(497189),
+    p = n(86014),
+    g = n(895068),
+    f = n(490610),
+    _ = n(322665),
+    E = n(388032),
+    I = n(590522);
+function C(e) {
     let { onScroll: t } = e,
         { guilds: n } = (0, o.C3)({
             location: 'ClanDiscoveryAdminContainer',
             includeConverted: !0
         }),
-        { guilds: s } = (0, o.Pu)({ location: 'ClanDiscoveryAdminContainer' }),
-        l = a.useMemo(() => {
-            let e = [...n, ...s],
+        { guilds: l } = (0, o.Pu)({ location: 'ClanDiscoveryAdminContainer' }),
+        s = r.useMemo(() => {
+            let e = [...n, ...l],
                 t = new Set();
             return e.filter((e) => !t.has(e.id) && (t.add(e.id), !(0, c.EJ)(e)));
-        }, [n, s]),
-        d = a.useMemo(() => {
-            let e = [...n, ...s],
+        }, [n, l]),
+        d = r.useMemo(() => {
+            let e = [...n, ...l],
                 t = new Set();
             return e.filter((e) => !t.has(e.id) && (t.add(e.id), !0));
-        }, [n, s]);
+        }, [n, l]);
     return (0, i.jsx)('section', {
-        className: T.guilds,
-        children: (0, i.jsxs)(r.AdvancedScrollerNone, {
+        className: I.guilds,
+        children: (0, i.jsxs)(a.AdvancedScrollerNone, {
             onScroll: t,
-            className: T.upsellScroller,
+            className: I.upsellScroller,
             fade: !0,
             children: [
                 (0, i.jsxs)('div', {
-                    className: T.adminUpsell,
+                    className: I.adminUpsell,
                     children: [
-                        (0, i.jsx)(p.Z, {}),
+                        (0, i.jsx)(_.Z, {}),
                         (0, i.jsx)('div', {
-                            className: T.backgroundImageContent,
-                            children: (0, i.jsx)(E.Z, {
-                                eligibleGuilds: l,
+                            className: I.backgroundImageContent,
+                            children: (0, i.jsx)(m.Z, {
+                                eligibleGuilds: s,
                                 eligibleGuildsIncludingConverted: d
                             })
                         })
                     ]
                 }),
-                (0, i.jsx)(I.Z, { title: g.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE })
+                (0, i.jsx)(f.Z, { title: E.intl.string(E.t['5FgmFx']) })
             ]
         })
     });
 }
-function C(e) {
+function v(e) {
     let { onScroll: t, withAdminContent: n } = e,
-        a = (0, _.GN)((e) => e.mode, s.Z),
-        { ref: r, width: o } = (0, l.Z)();
+        r = (0, h.GN)((e) => e.mode, l.Z),
+        { ref: a, width: o } = (0, s.Z)();
     return (0, i.jsxs)('section', {
-        ref: r,
-        className: T.guilds,
+        ref: a,
+        className: I.guilds,
         children: [
             (0, i.jsx)('div', {
-                className: T.list,
-                children: (0, i.jsx)(h.Z, {
+                className: I.list,
+                children: (0, i.jsx)(p.Z, {
                     width: o,
-                    variant: (0, m.s)(a, m.Bj.GLOBAL_DISCOVERY),
+                    variant: (0, g.s)(r, g.Bj.GLOBAL_DISCOVERY),
                     onScroll: t,
                     withAdminContent: n
                 })
             }),
             (0, i.jsx)('div', {
-                className: T.selectors,
-                children: (0, i.jsx)(u.Z, { mode: a })
+                className: I.selectors,
+                children: (0, i.jsx)(u.Z, { mode: r })
             })
         ]
     });
@@ -88,19 +88,19 @@ t.Z = function (e) {
             location: 'GuildsTab',
             includeConverted: !0
         }),
-        { signupEnabled: a } = (0, o.Pu)({ location: 'GuildsTab' }),
-        s = (0, o.iN)('global_discovery_guilds_tab'),
-        r = (0, _.GN)((e) => e.dismissedPilotAdminNux),
-        l = (0, _.GN)((e) => e.dismissedSignupAdmin),
+        { signupEnabled: r } = (0, o.Pu)({ location: 'GuildsTab' }),
+        l = (0, o.iN)('global_discovery_guilds_tab'),
+        a = (0, h.GN)((e) => e.dismissedPilotAdminNux),
+        s = (0, h.GN)((e) => e.dismissedSignupAdmin),
         c = (0, o.YH)('clan_discovery_admin_upsell');
     (0, d.LE)(), (0, d.c2)();
-    let u = r || l,
-        E = n && s && !u && !c,
-        h = a && s && !u && !c;
-    return E || h
-        ? (0, i.jsx)(S, { onScroll: t })
-        : (0, i.jsx)(C, {
+    let u = a || s,
+        m = n && l && !u && !c,
+        p = r && l && !u && !c;
+    return m || p
+        ? (0, i.jsx)(C, { onScroll: t })
+        : (0, i.jsx)(v, {
               onScroll: t,
-              withAdminContent: n && s
+              withAdminContent: n && l
           });
 };

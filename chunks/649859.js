@@ -1,24 +1,24 @@
 n.d(t, {
     Kq: function () {
-        return T;
-    },
-    L0: function () {
         return v;
     },
-    Ux: function () {
+    L0: function () {
         return N;
     },
+    Ux: function () {
+        return b;
+    },
     Xe: function () {
-        return O;
+        return A;
     },
     aQ: function () {
-        return g;
+        return S;
     },
     bU: function () {
-        return I;
+        return g;
     },
     qb: function () {
-        return S;
+        return I;
     }
 });
 var r = n(192379),
@@ -30,7 +30,7 @@ var r = n(192379),
 let u = new Set(['Arab', 'Syrc', 'Samr', 'Mand', 'Thaa', 'Mend', 'Nkoo', 'Adlm', 'Rohg', 'Hebr']),
     c = new Set(['ae', 'ar', 'arc', 'bcc', 'bqi', 'ckb', 'dv', 'fa', 'glk', 'he', 'ku', 'mzn', 'nqo', 'pnb', 'ps', 'sd', 'ug', 'ur', 'yi']),
     d = Symbol.for('react-aria.i18n.locale');
-function _() {
+function f() {
     let e = ('undefined' != typeof window && window[d]) || ('undefined' != typeof navigator && (navigator.language || navigator.userLanguage)) || 'en-US';
     try {
         Intl.DateTimeFormat.supportedLocalesOf([e]);
@@ -53,22 +53,22 @@ function _() {
             : 'rtl'
     };
 }
-let E = _(),
-    f = new Set();
-function h() {
-    for (let e of ((E = _()), f)) e(E);
+let _ = f(),
+    h = new Set();
+function p() {
+    for (let e of ((_ = f()), h)) e(_);
 }
-let p = r.createContext(null);
-function I() {
+let m = r.createContext(null);
+function g() {
     let e = (function () {
         let e = (0, i.Av)(),
-            [t, n] = (0, r.useState)(E);
+            [t, n] = (0, r.useState)(_);
         return ((0, r.useEffect)(
             () => (
-                0 === f.size && window.addEventListener('languagechange', h),
-                f.add(n),
+                0 === h.size && window.addEventListener('languagechange', p),
+                h.add(n),
                 () => {
-                    f.delete(n), 0 === f.size && window.removeEventListener('languagechange', h);
+                    h.delete(n), 0 === h.size && window.removeEventListener('languagechange', p);
                 }
             ),
             []
@@ -80,25 +80,25 @@ function I() {
               }
             : t;
     })();
-    return (0, r.useContext)(p) || e;
+    return (0, r.useContext)(m) || e;
 }
-let m = new WeakMap();
-function T(e, t) {
+let E = new WeakMap();
+function v(e, t) {
     var n;
     let r;
-    return (t && (0, a.J).getGlobalDictionaryForPackage(t)) || ((n = e), !(r = m.get(n)) && ((r = new a.J(n)), m.set(n, r)), r);
+    return (t && (0, a.J).getGlobalDictionaryForPackage(t)) || ((n = e), !(r = E.get(n)) && ((r = new a.J(n)), E.set(n, r)), r);
 }
-function S(e, t) {
-    let { locale: n } = I(),
-        i = T(e, t);
+function I(e, t) {
+    let { locale: n } = g(),
+        i = v(e, t);
     return (0, r.useMemo)(() => new a.E(n, i), [n, i]);
 }
-function g(e) {
-    e = (0, o.vE)(null != e ? e : {}, A);
-    let { locale: t } = I();
+function S(e) {
+    e = (0, o.vE)(null != e ? e : {}, T);
+    let { locale: t } = g();
     return (0, r.useMemo)(() => new s.CN(t, e), [t, e]);
 }
-function A(e, t) {
+function T(e, t) {
     if (e === t) return !0;
     let n = Object.keys(e),
         r = Object.keys(t);
@@ -106,13 +106,13 @@ function A(e, t) {
     for (let r of n) if (t[r] !== e[r]) return !1;
     return !0;
 }
-function N(e = {}) {
-    let { locale: t } = I();
+function b(e = {}) {
+    let { locale: t } = g();
     return (0, r.useMemo)(() => new l.e(t, e), [t, e]);
 }
-let R = new Map();
-function O(e) {
-    let { locale: t } = I(),
+let y = new Map();
+function A(e) {
+    let { locale: t } = g(),
         n =
             t +
             (e
@@ -120,12 +120,12 @@ function O(e) {
                       .sort((e, t) => (e[0] < t[0] ? -1 : 1))
                       .join()
                 : '');
-    if (R.has(n)) return R.get(n);
+    if (y.has(n)) return y.get(n);
     let r = new Intl.Collator(t, e);
-    return R.set(n, r), r;
+    return y.set(n, r), r;
 }
-function v(e) {
-    let t = O({
+function N(e) {
+    let t = A({
             usage: 'search',
             ...e
         }),

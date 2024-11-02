@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     body: 'body_f4a859',
     title: 'title_f4a859',
     subtitle: 'subtitle_f4a859',

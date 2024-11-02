@@ -12,20 +12,20 @@ var r = n(200651),
     u = n(607070),
     c = n(830900);
 function d(e) {
-    let { children: t, heading: n, subheading: a, className: d, scrollIntoView: _ = !1, headingColor: E = 'header-secondary' } = e,
-        f = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-        h = i.useRef(null);
+    let { children: t, heading: n, subheading: a, className: d, scrollIntoView: f = !1, headingColor: _ = 'header-secondary' } = e,
+        h = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
+        p = i.useRef(null);
     return (
         i.useEffect(() => {
-            let e = h.current;
+            let e = p.current;
             if (null == e) return;
             let t = requestAnimationFrame(() => {
-                e.scrollIntoView({ behavior: f ? 'auto' : 'smooth' });
+                e.scrollIntoView({ behavior: h ? 'auto' : 'smooth' });
             });
             return () => cancelAnimationFrame(t);
-        }, [f]),
+        }, [h]),
         (0, r.jsxs)('section', {
-            ref: _ ? h : void 0,
+            ref: f ? p : void 0,
             className: s()(c.section, d),
             children: [
                 null != n &&
@@ -34,7 +34,7 @@ function d(e) {
                         children: [
                             (0, r.jsx)(l.Heading, {
                                 variant: 'text-xs/semibold',
-                                color: E,
+                                color: _,
                                 children: n
                             }),
                             null != a &&

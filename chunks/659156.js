@@ -45,13 +45,13 @@ e.exports = function (e) {
     let d = {
             variants: [u, l, i, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE]
         },
-        _ = {
+        f = {
             begin: '<',
             end: '>',
             contains: [{ beginKeywords: 'in out' }, n]
         },
-        E = e.IDENT_RE + '(<' + e.IDENT_RE + '(\\s*,\\s*' + e.IDENT_RE + ')*>)?(\\[\\])?',
-        f = {
+        _ = e.IDENT_RE + '(<' + e.IDENT_RE + '(\\s*,\\s*' + e.IDENT_RE + ')*>)?(\\[\\])?',
+        h = {
             begin: '@' + e.IDENT_RE,
             relevance: 0
         };
@@ -95,7 +95,7 @@ e.exports = function (e) {
                 relevance: 0,
                 end: /[{;=]/,
                 illegal: /[^\s:,]/,
-                contains: [{ beginKeywords: 'where class' }, n, _, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
+                contains: [{ beginKeywords: 'where class' }, n, f, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
             },
             {
                 beginKeywords: 'namespace',
@@ -109,7 +109,7 @@ e.exports = function (e) {
                 relevance: 0,
                 end: /[{;=]/,
                 illegal: /[^\s:]/,
-                contains: [n, _, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
+                contains: [n, f, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
             },
             {
                 className: 'meta',
@@ -131,7 +131,7 @@ e.exports = function (e) {
             },
             {
                 className: 'function',
-                begin: '(' + E + '\\s+)+' + e.IDENT_RE + '\\s*(<[^=]+>\\s*)?\\(',
+                begin: '(' + _ + '\\s+)+' + e.IDENT_RE + '\\s*(<[^=]+>\\s*)?\\(',
                 returnBegin: !0,
                 end: /\s*[{;=]/,
                 excludeEnd: !0,
@@ -144,7 +144,7 @@ e.exports = function (e) {
                     {
                         begin: e.IDENT_RE + '\\s*(<[^=]+>\\s*)?\\(',
                         returnBegin: !0,
-                        contains: [e.TITLE_MODE, _],
+                        contains: [e.TITLE_MODE, f],
                         relevance: 0
                     },
                     { match: /\(\)/ },
@@ -162,7 +162,7 @@ e.exports = function (e) {
                     e.C_BLOCK_COMMENT_MODE
                 ]
             },
-            f
+            h
         ]
     };
 };

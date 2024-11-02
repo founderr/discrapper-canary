@@ -1,6 +1,6 @@
 n.d(t, {
     i: function () {
-        return C;
+        return I;
     }
 }),
     n(47120);
@@ -14,7 +14,7 @@ var s = n(200651),
     u = n(770146),
     d = n(241209),
     c = n(73346),
-    p = n(689938),
+    p = n(388032),
     m = n(499142);
 function g(e, t, n) {
     return (
@@ -29,8 +29,8 @@ function g(e, t, n) {
         e
     );
 }
-let I = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
-    C = {
+let C = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
+    I = {
         ...d.Z.rules,
         heading: {
             ...d.Z.rules.heading,
@@ -49,7 +49,7 @@ let I = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
         assetImage: {
             order: 5,
             match(e, t) {
-                let n = e.match(I);
+                let n = e.match(C);
                 if (null != n) {
                     let e = n[2],
                         s = t.assets.find((t) => t.id === e);
@@ -77,8 +77,8 @@ let I = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
                 )
         }
     },
-    x = o().parserFor(C),
-    f = o().reactFor(o().ruleOutput(C, 'react'));
+    x = o().parserFor(I),
+    f = o().reactFor(o().ruleOutput(I, 'react'));
 class v extends i.PureComponent {
     componentDidMount() {
         if (null != this._container) {
@@ -119,7 +119,7 @@ class v extends i.PureComponent {
                           className: m.toggleCollapseButton,
                           onClick: this.handleToggleCollapse,
                           color: h.Button.Colors.PRIMARY,
-                          children: l ? p.Z.Messages.APPLICATION_STORE_DESCRIPTION_READ_MORE : p.Z.Messages.APPLICATION_STORE_DESCRIPTION_READ_LESS
+                          children: l ? p.intl.string(p.t.DxcOXF) : p.intl.string(p.t.rD6EaG)
                       })
                     : null
             ]

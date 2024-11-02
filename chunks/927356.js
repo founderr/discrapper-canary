@@ -3,32 +3,32 @@ n.d(t, {
         return u;
     }
 });
-var a = n(200651),
-    i = n(192379),
+var i = n(200651),
+    a = n(192379),
     l = n(120356),
     r = n.n(l),
-    s = n(481060),
-    c = n(689938),
-    o = n(202371),
+    c = n(481060),
+    o = n(388032),
+    s = n(202371),
     d = n(902294);
 function u(e) {
-    let { heading: t = c.Z.Messages.APP_DIRECTORY_ERROR_HEADING, body: n = c.Z.Messages.APP_DIRECTORY_ERROR_BODY, className: l } = e;
-    return (0, a.jsxs)('div', {
-        className: r()(o.container, l),
+    let { heading: t = o.intl.string(o.t.NGw8v7), body: n = o.intl.string(o.t['1XZRY2']), className: l } = e;
+    return (0, i.jsxs)('div', {
+        className: r()(s.container, l),
         children: [
-            (0, a.jsx)('img', {
-                className: o.image,
+            (0, i.jsx)('img', {
+                className: s.image,
                 src: d,
-                alt: c.Z.Messages.APP_DIRECTORY_CONFUSED_CLYDE_IMAGE_ALT
+                alt: o.intl.string(o.t['/UJaIy'])
             }),
-            (0, a.jsxs)(i.Fragment, {
+            (0, i.jsxs)(a.Fragment, {
                 children: [
-                    (0, a.jsx)(s.Heading, {
-                        className: o.header,
+                    (0, i.jsx)(c.Heading, {
+                        className: s.header,
                         variant: 'heading-xl/semibold',
                         children: t
                     }),
-                    (0, a.jsx)(s.Text, {
+                    (0, i.jsx)(c.Text, {
                         variant: 'text-md/normal',
                         children: n
                     })

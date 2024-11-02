@@ -1,25 +1,25 @@
 t.d(n, {
     Z: function () {
-        return E;
+        return f;
     }
 }),
     t(653041);
 var i = t(200651),
-    a = t(192379),
-    l = t(481060),
-    s = t(668781),
+    l = t(192379),
+    r = t(481060),
+    a = t(668781),
     o = t(139387),
-    r = t(308063),
+    s = t(308063),
     d = t(600164),
     c = t(259580),
     u = t(768581),
-    I = t(486199),
-    m = t(981631),
-    _ = t(689938),
-    N = t(176662);
-function E(e) {
-    let { webhook: n, editedWebhook: t, channelOptions: E, isExpanded: T, errors: h, onToggleExpand: g } = e,
-        p = a.useMemo(() => {
+    m = t(486199),
+    h = t(981631),
+    p = t(388032),
+    g = t(176662);
+function f(e) {
+    let { webhook: n, editedWebhook: t, channelOptions: f, isExpanded: x, errors: b, onToggleExpand: v } = e,
+        C = l.useMemo(() => {
             var e, t;
             return (
                 (e = n),
@@ -28,50 +28,50 @@ function E(e) {
                     : (0, u.ov)({
                           id: e.id,
                           avatar: t,
-                          discriminator: m.fo$
+                          discriminator: h.fo$
                       })
             );
         }, [n]),
-        f = a.useCallback(() => {
-            (0, l.openModal)((e) =>
-                (0, i.jsx)(l.ConfirmModal, {
+        I = l.useCallback(() => {
+            (0, r.openModal)((e) =>
+                (0, i.jsx)(r.ConfirmModal, {
                     ...e,
-                    header: _.Z.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DELETE_TITLE.format({ name: n.name }),
-                    confirmText: _.Z.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DELETE,
-                    cancelText: _.Z.Messages.CANCEL,
+                    header: p.intl.formatToPlainString(p.t.gBKqZ2, { name: n.name }),
+                    confirmText: p.intl.string(p.t.CMy0Cg),
+                    cancelText: p.intl.string(p.t['ETE/oK']),
                     onConfirm: () => {
-                        r.Z.delete(n.guild_id, n.id).catch(() => {
-                            s.Z.show({
-                                title: _.Z.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_ERROR_DELETING,
-                                body: _.Z.Messages.WEBHOOK_ERROR_INTERNAL_SERVER_ERROR
+                        s.Z.delete(n.guild_id, n.id).catch(() => {
+                            a.Z.show({
+                                title: p.intl.string(p.t.LpbaFR),
+                                body: p.intl.string(p.t['/4TwKS'])
                             });
                         });
                     },
-                    children: (0, i.jsx)(l.Text, {
+                    children: (0, i.jsx)(r.Text, {
                         variant: 'text-md/normal',
-                        children: _.Z.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DELETE_BODY
+                        children: p.intl.string(p.t.zO9jrK)
                     })
                 })
             );
         }, [n.guild_id, n.id, n.name]),
-        C = [];
+        N = [];
     null != n.source_channel &&
         null != n.source_guild &&
-        (C.push({
-            icon: l.AnnouncementsIcon,
+        (N.push({
+            icon: r.AnnouncementsIcon,
             text: n.source_channel.name
         }),
-        C.push({
+        N.push({
             text: (0, i.jsx)(
                 'span',
                 {
-                    className: N.guildSource,
-                    children: _.Z.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_GUILD_SOURCE.format({
+                    className: g.guildSource,
+                    children: p.intl.format(p.t['H/jJ6e'], {
                         guildHook: () =>
                             (0, i.jsx)(
                                 'span',
                                 {
-                                    className: N.sourceName,
+                                    className: g.sourceName,
                                     children: n.source_guild.name
                                 },
                                 n.id
@@ -81,14 +81,14 @@ function E(e) {
                 'guild-source'
             )
         }));
-    let x = null;
+    let T = null;
     return (
-        T &&
+        x &&
             null != t &&
-            (x = (0, i.jsxs)('div', {
-                className: N.body,
+            (T = (0, i.jsxs)('div', {
+                className: g.body,
                 children: [
-                    (0, i.jsx)(l.FormDivider, { className: N.topDivider }),
+                    (0, i.jsx)(r.FormDivider, { className: g.topDivider }),
                     (0, i.jsx)(d.Z, {
                         children: (0, i.jsxs)(d.Z, {
                             direction: d.Z.Direction.VERTICAL,
@@ -97,25 +97,25 @@ function E(e) {
                                     children: [
                                         (0, i.jsx)(d.Z.Child, {
                                             basis: '50%',
-                                            children: (0, i.jsx)(l.FormItem, {
-                                                title: _.Z.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_NAME,
-                                                children: (0, i.jsx)(l.TextInput, {
+                                            children: (0, i.jsx)(r.FormItem, {
+                                                title: p.intl.string(p.t.I1o5gY),
+                                                children: (0, i.jsx)(r.TextInput, {
                                                     value: t.name,
                                                     onChange: (e) => {
                                                         o.Z.updateWebhook({ name: e });
                                                     },
                                                     maxLength: 80,
-                                                    error: h.name
+                                                    error: b.name
                                                 })
                                             })
                                         }),
                                         (0, i.jsx)(d.Z.Child, {
                                             basis: '50%',
-                                            children: (0, i.jsx)(l.FormItem, {
-                                                title: _.Z.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DEST_CHANNEL,
-                                                children: (0, i.jsx)(l.SingleSelect, {
+                                            children: (0, i.jsx)(r.FormItem, {
+                                                title: p.intl.string(p.t['4TuWfX']),
+                                                children: (0, i.jsx)(r.SingleSelect, {
                                                     value: t.channel_id,
-                                                    options: E,
+                                                    options: f,
                                                     onChange: (e) => {
                                                         o.Z.updateWebhook({ channelId: e });
                                                     }
@@ -124,15 +124,15 @@ function E(e) {
                                         })
                                     ]
                                 }),
-                                (0, i.jsx)(l.FormDivider, { className: N.bottomDivider }),
+                                (0, i.jsx)(r.FormDivider, { className: g.bottomDivider }),
                                 (0, i.jsx)(d.Z, {
-                                    children: (0, i.jsx)(l.Button, {
-                                        onClick: f,
-                                        size: l.Button.Sizes.SMALL,
-                                        color: l.Button.Colors.RED,
-                                        look: l.Button.Looks.LINK,
-                                        className: N.removeButton,
-                                        children: _.Z.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DELETE
+                                    children: (0, i.jsx)(r.Button, {
+                                        onClick: I,
+                                        size: r.Button.Sizes.SMALL,
+                                        color: r.Button.Colors.RED,
+                                        look: r.Button.Looks.LINK,
+                                        className: g.removeButton,
+                                        children: p.intl.string(p.t.CMy0Cg)
                                     })
                                 })
                             ]
@@ -140,34 +140,34 @@ function E(e) {
                     })
                 ]
             })),
-        (0, i.jsx)(l.Card, {
+        (0, i.jsx)(r.Card, {
             editable: !0,
-            className: N.card,
+            className: g.card,
             children: (0, i.jsxs)(d.Z, {
                 direction: d.Z.Direction.VERTICAL,
                 children: [
-                    (0, i.jsx)(l.Clickable, {
-                        className: N.header,
-                        'aria-expanded': T,
-                        onClick: g,
+                    (0, i.jsx)(r.Clickable, {
+                        className: g.header,
+                        'aria-expanded': x,
+                        onClick: v,
                         children: (0, i.jsxs)(d.Z, {
                             align: d.Z.Align.CENTER,
                             children: [
-                                (0, i.jsx)(I.Z, {
+                                (0, i.jsx)(m.Z, {
                                     name: n.name,
-                                    imageSrc: p,
-                                    detailsClassName: N.__invalid_description,
-                                    details: C
+                                    imageSrc: C,
+                                    detailsClassName: g.__invalid_description,
+                                    details: N
                                 }),
                                 (0, i.jsx)(c.Z, {
-                                    className: N.expandIcon,
-                                    expanded: T,
+                                    className: g.expandIcon,
+                                    expanded: x,
                                     'aria-hidden': !0
                                 })
                             ]
                         })
                     }),
-                    x
+                    T
                 ]
             })
         })

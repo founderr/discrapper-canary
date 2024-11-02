@@ -3,10 +3,10 @@ n.d(t, {
         return l;
     },
     GV: function () {
-        return i;
+        return s;
     },
     S$: function () {
-        return _;
+        return g;
     },
     Vn: function () {
         return o;
@@ -16,10 +16,10 @@ n.d(t, {
     }
 });
 var a = n(192379),
-    s = n(31775),
-    r = n.n(s);
+    i = n(31775),
+    r = n.n(i);
 let l = 0,
-    i = 4,
+    s = 4,
     o = 4,
     c = 'absolute',
     d = (e, t, n, a) => {
@@ -55,7 +55,7 @@ let l = 0,
         }
         if (3 === n) {
             let n = Math.ceil((e - a) / 2),
-                s = Math.ceil((t - a) / 2);
+                i = Math.ceil((t - a) / 2);
             return [
                 {
                     top: 0,
@@ -69,72 +69,72 @@ let l = 0,
                     left: n + a,
                     position: c,
                     width: n,
-                    height: s
+                    height: i
                 },
                 {
-                    top: s + a,
+                    top: i + a,
                     left: n + a,
                     position: c,
                     width: n,
-                    height: s
+                    height: i
                 }
             ];
         } else {
             let n = Math.ceil((e - a) / 2),
-                s = Math.ceil((t - a) / 2);
+                i = Math.ceil((t - a) / 2);
             return [
                 {
                     top: 0,
                     left: 0,
                     position: c,
                     width: n,
-                    height: s
+                    height: i
                 },
                 {
-                    top: s + a,
+                    top: i + a,
                     left: 0,
                     position: c,
                     width: n,
-                    height: s
+                    height: i
                 },
                 {
                     top: 0,
                     left: n + a,
                     position: c,
                     width: n,
-                    height: s
+                    height: i
                 },
                 {
-                    top: s + a,
+                    top: i + a,
                     left: n + a,
                     position: c,
                     width: n,
-                    height: s
+                    height: i
                 }
             ];
         }
     },
     u = new (r())({ max: 100 });
 function m(e) {
-    let { numAttachments: t, containerWidth: n, containerHeight: s } = e;
+    let { numAttachments: t, containerWidth: n, containerHeight: i } = e;
     return a.useMemo(
         () =>
             (function (e) {
                 var t, n, a;
-                let { numAttachments: s, containerWidth: r, containerHeight: l } = e;
-                let i = ((t = s), (n = r), (a = l), ''.concat(t, '-').concat(n, '-').concat(a)),
-                    o = u.get(i);
+                let { numAttachments: i, containerWidth: r, containerHeight: l } = e;
+                let s = ((t = i), (n = r), (a = l), ''.concat(t, '-').concat(n, '-').concat(a)),
+                    o = u.get(s);
                 if (null != o) return o;
                 {
-                    let e = d(r, l, s, 4);
-                    return u.set(i, e), e;
+                    let e = d(r, l, i, 4);
+                    return u.set(s, e), e;
                 }
             })({
                 numAttachments: t,
                 containerWidth: n,
-                containerHeight: s
+                containerHeight: i
             }),
-        [t, n, s]
+        [t, n, i]
     );
 }
 function h(e) {
@@ -145,12 +145,12 @@ function h(e) {
         maxHeight: 2 * e[n].height
     }));
 }
-function _(e) {
-    let { imageContainerStyles: t, containerWidth: n, containerHeight: s } = e,
+function g(e) {
+    let { imageContainerStyles: t, containerWidth: n, containerHeight: i } = e,
         r = a.useRef(h(t)),
         l = a.useRef(n),
-        i = a.useRef(s),
+        s = a.useRef(i),
         o = n > l.current + 100,
-        c = s > i.current + 100;
+        c = i > s.current + 100;
     return (o || c) && (r.current = h(t)), r.current;
 }

@@ -1,513 +1,513 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return K;
+        return W;
     }
 }),
-    t(47120);
-var n,
-    a,
-    i,
+    n(47120);
+var i,
+    s,
     r,
-    o = t(200651),
-    l = t(192379),
-    c = t(392711),
-    d = t(442837),
-    _ = t(692547),
-    u = t(481060),
-    E = t(37234),
-    T = t(607070),
-    S = t(578361),
-    I = t(585483),
-    N = t(557177),
-    m = t(57562),
-    C = t(955204),
-    A = t(64078),
-    g = t(351780),
-    h = t(954794),
-    O = t(112843),
-    p = t(524484),
-    R = t(981631),
-    x = t(689938),
-    M = t(771830);
-let f = {
+    l,
+    a = n(200651),
+    o = n(192379),
+    c = n(392711),
+    d = n(442837),
+    u = n(692547),
+    m = n(481060),
+    h = n(37234),
+    g = n(607070),
+    p = n(578361),
+    x = n(585483),
+    S = n(557177),
+    T = n(57562),
+    C = n(955204),
+    _ = n(64078),
+    E = n(351780),
+    f = n(954794),
+    I = n(112843),
+    N = n(524484),
+    A = n(981631),
+    b = n(388032),
+    v = n(771830);
+let j = {
         enabled: !0,
         combosEnabled: !0,
         screenshakeEnabled: !1,
         confettiEnabled: !1
     },
-    D = (0, c.range)(0, 11),
-    L = (0, c.range)(0, 2.25, 0.25),
+    O = (0, c.range)(0, 11),
+    R = (0, c.range)(0, 2.25, 0.25),
     P = (0, c.range)(1, 11),
-    b = (0, c.range)(1, 26);
-((i = n || (n = {}))[(i.CONFETTI = 0)] = 'CONFETTI'), (i[(i.SHAKE = 1)] = 'SHAKE'), ((r = a || (a = {}))[(r.USER_SETTINGS = 0)] = 'USER_SETTINGS'), (r[(r.ACHIEVEMENT_LIST = 1)] = 'ACHIEVEMENT_LIST');
-let Z = () => [
+    D = (0, c.range)(1, 26);
+((r = i || (i = {}))[(r.CONFETTI = 0)] = 'CONFETTI'), (r[(r.SHAKE = 1)] = 'SHAKE'), ((l = s || (s = {}))[(l.USER_SETTINGS = 0)] = 'USER_SETTINGS'), (l[(l.ACHIEVEMENT_LIST = 1)] = 'ACHIEVEMENT_LIST');
+let y = () => [
         {
-            location: p.Hn.CHAT_INPUT,
-            title: x.Z.Messages.POGGERMODE_CONFETTI_LOCATION_CHAT_INPUT_ENABLED,
-            description: x.Z.Messages.POGGERMODE_CONFETTI_LOCATION_CHAT_INPUT_ENABLED_DESCRIPTION
+            location: N.Hn.CHAT_INPUT,
+            title: b.intl.string(b.t.elTty8),
+            description: b.intl.string(b.t.HtKfMj)
         },
         {
-            location: p.Hn.REACTION,
-            title: x.Z.Messages.POGGERMODE_CONFETTI_LOCATION_REACTION_ENABLED,
-            description: x.Z.Messages.POGGERMODE_CONFETTI_LOCATION_REACTION_ENABLED_DESCRIPTION
+            location: N.Hn.REACTION,
+            title: b.intl.string(b.t.Ik4VIS),
+            description: b.intl.string(b.t.y4rqKy)
         },
         {
-            location: p.Hn.MEMBER_USER,
-            title: x.Z.Messages.POGGERMODE_CONFETTI_LOCATION_MEMBER_USER_ENABLED,
-            description: x.Z.Messages.POGGERMODE_CONFETTI_LOCATION_MEMBER_USER_ENABLED_DESCRIPTION
+            location: N.Hn.MEMBER_USER,
+            title: b.intl.string(b.t.ZXBlAg),
+            description: b.intl.string(b.t['m9RD+f'])
         },
         {
-            location: p.Hn.CALL_TILE,
-            title: x.Z.Messages.POGGERMODE_CONFETTI_LOCATION_CALL_TILE_ENABLED,
-            description: x.Z.Messages.POGGERMODE_CONFETTI_LOCATION_CALL_TILE_ENABLED_DESCRIPTION
+            location: N.Hn.CALL_TILE,
+            title: b.intl.string(b.t.V66giY),
+            description: b.intl.string(b.t.fiHV7u)
         }
     ],
-    v = () => [
+    B = () => [
         {
-            location: p.oZ.CHAT_INPUT,
-            title: x.Z.Messages.POGGERMODE_SCREENSHAKE_LOCATION_CHAT_INPUT_ENABLED,
-            description: x.Z.Messages.POGGERMODE_SCREENSHAKE_LOCATION_CHAT_INPUT_ENABLED_DESCRIPTION
+            location: N.oZ.CHAT_INPUT,
+            title: b.intl.string(b.t.vUcvPD),
+            description: b.intl.string(b.t.y00OrK)
         },
         {
-            location: p.oZ.VOICE_USER,
-            title: x.Z.Messages.POGGERMODE_SCREENSHAKE_LOCATION_VOICE_USER_ENABLED,
-            description: x.Z.Messages.POGGERMODE_SCREENSHAKE_LOCATION_VOICE_USER_ENABLED_DESCRIPTION
+            location: N.oZ.VOICE_USER,
+            title: b.intl.string(b.t['TcRO5+']),
+            description: b.intl.string(b.t.YJCxVV)
         },
         {
-            location: p.oZ.MENTION,
-            title: x.Z.Messages.POGGERMODE_SCREENSHAKE_LOCATION_MENTION_ENABLED,
-            description: x.Z.Messages.POGGERMODE_SCREENSHAKE_LOCATION_MENTION_ENABLED_DESCRIPTION
+            location: N.oZ.MENTION,
+            title: b.intl.string(b.t.oW4shI),
+            description: b.intl.string(b.t['mqfw/P'])
         }
     ];
-function j(e) {
-    let { disabled: s, locations: t, settingsLocations: n, onChange: a } = e,
-        i = t.map((e) =>
-            (0, o.jsx)(
-                u.FormSwitch,
+function L(e) {
+    let { disabled: t, locations: n, settingsLocations: i, onChange: s } = e,
+        r = n.map((e) =>
+            (0, a.jsx)(
+                m.FormSwitch,
                 {
-                    disabled: s,
-                    value: n[e.location],
+                    disabled: t,
+                    value: i[e.location],
                     note: e.description,
-                    onChange: (s) =>
-                        a({
-                            ...n,
-                            [e.location]: s
+                    onChange: (t) =>
+                        s({
+                            ...i,
+                            [e.location]: t
                         }),
                     children: e.title
                 },
                 e.location
             )
         );
-    return (0, o.jsxs)(o.Fragment, {
-        children: [(0, o.jsx)(u.FormTitle, { children: x.Z.Messages.POGGERMODE_LOCATIONS }), i]
+    return (0, a.jsxs)(a.Fragment, {
+        children: [(0, a.jsx)(m.FormTitle, { children: b.intl.string(b.t.bWVN1N) }), r]
     });
 }
-function B(e) {
-    let { children: s } = e;
-    return (0, o.jsx)(u.Text, {
-        className: M.sliderDescription,
+function Z(e) {
+    let { children: t } = e;
+    return (0, a.jsx)(m.Text, {
+        className: v.sliderDescription,
         variant: 'text-sm/normal',
         color: 'header-secondary',
-        children: s
+        children: t
     });
 }
-function U(e) {
+function F(e) {
     let {
-            settings: { enabled: s, warningSeen: t },
-            updateSettings: n
+            settings: { enabled: t, warningSeen: n },
+            updateSettings: i
         } = e,
-        a = (0, d.e7)([T.Z], () => T.Z.useReducedMotion);
-    return (0, o.jsx)(u.FormSwitch, {
-        value: s,
-        note: x.Z.Messages.POGGERMODE_ENABLE_DESCRIPTION,
+        s = (0, d.e7)([g.Z], () => g.Z.useReducedMotion);
+    return (0, a.jsx)(m.FormSwitch, {
+        value: t,
+        note: b.intl.string(b.t.KuYbWF),
         onChange: (e) => {
-            !e && (0, m.T)(C.hn.DISABLE_POGGERMODE),
-                e && (!t || a)
-                    ? (0, u.openModal)((e) =>
-                          (0, o.jsx)(u.ConfirmModal, {
-                              header: a ? x.Z.Messages.POGGERMODE_WARNING_TITLE_REDUCED_MOTION : x.Z.Messages.POGGERMODE_WARNING_TITLE,
-                              confirmText: x.Z.Messages.ENABLE,
-                              cancelText: x.Z.Messages.CANCEL,
+            !e && (0, T.T)(C.hn.DISABLE_POGGERMODE),
+                e && (!n || s)
+                    ? (0, m.openModal)((e) =>
+                          (0, a.jsx)(m.ConfirmModal, {
+                              header: s ? b.intl.string(b.t['FxT+p6']) : b.intl.string(b.t.TAZ4Fx),
+                              confirmText: b.intl.string(b.t.JFfinp),
+                              cancelText: b.intl.string(b.t['ETE/oK']),
                               onConfirm: () =>
-                                  n(
-                                      a
-                                          ? f
+                                  i(
+                                      s
+                                          ? j
                                           : {
                                                 enabled: !0,
                                                 warningSeen: !0
                                             }
                                   ),
                               ...e,
-                              children: (0, o.jsx)(u.Text, {
+                              children: (0, a.jsx)(m.Text, {
                                   variant: 'text-md/normal',
-                                  children: a ? x.Z.Messages.POGGERMODE_WARNING_BODY_REDUCED_MOTION : x.Z.Messages.POGGERMODE_WARNING_BODY
+                                  children: s ? b.intl.string(b.t.gmixr6) : b.intl.string(b.t.jN3t3N)
                               })
                           })
                       )
-                    : n({ enabled: e });
+                    : i({ enabled: e });
         },
-        children: x.Z.Messages.POGGERMODE_ENABLE
+        children: b.intl.string(b.t.vuiXm5)
     });
 }
-function G(e) {
+function M(e) {
     let {
-            settings: { enabled: s, confettiEnabled: t, confettiCount: n, confettiSize: a, confettiEnabledLocations: i },
-            updateSettings: r
+            settings: { enabled: t, confettiEnabled: n, confettiCount: i, confettiSize: s, confettiEnabledLocations: r },
+            updateSettings: l
         } = e,
-        l = !s || !t;
-    return (0, o.jsxs)(u.FormSection, {
-        tag: u.FormTitleTags.H1,
-        title: x.Z.Messages.POGGERMODE_CONFETTI_CUSTOMIZATION,
+        o = !t || !n;
+    return (0, a.jsxs)(m.FormSection, {
+        tag: m.FormTitleTags.H1,
+        title: b.intl.string(b.t.mqxwJC),
         children: [
-            (0, o.jsx)(u.FormSwitch, {
-                disabled: !s,
-                value: t,
-                note: x.Z.Messages.POGGERMODE_CONFETTI_ENABLED_DESCRIPTION,
-                onChange: (e) => r({ confettiEnabled: e }, 0),
-                children: x.Z.Messages.POGGERMODE_CONFETTI_ENABLED
+            (0, a.jsx)(m.FormSwitch, {
+                disabled: !t,
+                value: n,
+                note: b.intl.string(b.t.O1Vflp),
+                onChange: (e) => l({ confettiEnabled: e }, 0),
+                children: b.intl.string(b.t.s0KCgI)
             }),
-            (0, o.jsxs)(u.FormItem, {
-                disabled: l,
-                title: x.Z.Messages.POGGERMODE_CONFETTI_COUNT,
-                className: M.formItem,
+            (0, a.jsxs)(m.FormItem, {
+                disabled: o,
+                title: b.intl.string(b.t['vd0D8/']),
+                className: v.formItem,
                 children: [
-                    (0, o.jsx)(B, { children: x.Z.Messages.POGGERMODE_CONFETTI_COUNT_DESCRIPTION }),
-                    (0, o.jsx)(u.Slider, {
-                        disabled: l,
+                    (0, a.jsx)(Z, { children: b.intl.string(b.t.a18Sur) }),
+                    (0, a.jsx)(m.Slider, {
+                        disabled: o,
                         markers: P,
                         stickToMarkers: !0,
                         minValue: P[0],
                         maxValue: P[P.length - 1],
-                        initialValue: n,
-                        onValueChange: (e) => r({ confettiCount: e }, 0),
+                        initialValue: i,
+                        onValueChange: (e) => l({ confettiCount: e }, 0),
                         onValueRender: (e) => ''.concat(e)
                     })
                 ]
             }),
-            (0, o.jsxs)(u.FormItem, {
-                disabled: l,
-                title: x.Z.Messages.POGGERMODE_CONFETTI_SIZE,
-                className: M.formItem,
+            (0, a.jsxs)(m.FormItem, {
+                disabled: o,
+                title: b.intl.string(b.t.sPO3io),
+                className: v.formItem,
                 children: [
-                    (0, o.jsx)(B, { children: x.Z.Messages.POGGERMODE_CONFETTI_SIZE_DESCRIPTION }),
-                    (0, o.jsx)(u.Slider, {
-                        disabled: l,
-                        markers: b,
-                        stickToMarkers: !0,
-                        minValue: b[0],
-                        maxValue: b[b.length - 1],
-                        initialValue: a,
-                        onValueChange: (e) => r({ confettiSize: e }, 0),
-                        onValueRender: (e) => ''.concat(e)
-                    })
-                ]
-            }),
-            (0, o.jsx)(j, {
-                disabled: l,
-                locations: Z(),
-                settingsLocations: i,
-                onChange: (e) => r({ confettiEnabledLocations: e }, 0)
-            })
-        ]
-    });
-}
-function F(e) {
-    let {
-            settings: { enabled: s, combosEnabled: t, comboSoundsEnabled: n, combosRequiredCount: a },
-            updateSettings: i
-        } = e,
-        r = !s || !t;
-    return (0, o.jsxs)(u.FormSection, {
-        tag: u.FormTitleTags.H1,
-        title: x.Z.Messages.POGGERMODE_COMBOS_CUSTOMIZATION,
-        children: [
-            (0, o.jsx)(u.FormSwitch, {
-                disabled: !s,
-                value: t,
-                note: x.Z.Messages.POGGERMODE_COMBOS_ENABLED_DESCRIPTION,
-                onChange: (e) => i({ combosEnabled: e }),
-                children: x.Z.Messages.POGGERMODE_COMBOS_ENABLED
-            }),
-            (0, o.jsx)(u.FormSwitch, {
-                disabled: !s,
-                value: n,
-                note: x.Z.Messages.POGGERMODE_COMBO_SOUNDS_ENABLED_DESCRIPTION,
-                onChange: (e) => i({ comboSoundsEnabled: e }),
-                children: x.Z.Messages.POGGERMODE_COMBO_SOUNDS_ENABLED
-            }),
-            (0, o.jsxs)(u.FormItem, {
-                disabled: r,
-                title: x.Z.Messages.POGGERMODE_COMBOS_REQUIRED,
-                className: M.formItem,
-                children: [
-                    (0, o.jsx)(B, { children: x.Z.Messages.POGGERMODE_COMBOS_REQUIRED_DESCRIPTION }),
-                    (0, o.jsx)(u.Slider, {
-                        disabled: r,
+                    (0, a.jsx)(Z, { children: b.intl.string(b.t.xoldVl) }),
+                    (0, a.jsx)(m.Slider, {
+                        disabled: o,
                         markers: D,
                         stickToMarkers: !0,
                         minValue: D[0],
                         maxValue: D[D.length - 1],
-                        initialValue: a,
-                        onValueChange: (e) => i({ combosRequiredCount: e }),
+                        initialValue: s,
+                        onValueChange: (e) => l({ confettiSize: e }, 0),
                         onValueRender: (e) => ''.concat(e)
                     })
                 ]
             }),
-            (0, o.jsx)(u.FormDivider, { className: M.divider })
-        ]
-    });
-}
-function y(e) {
-    let {
-            settings: { enabled: s, screenshakeEnabled: t, shakeIntensity: n, screenshakeEnabledLocations: a },
-            updateSettings: i
-        } = e,
-        r = (0, d.e7)([T.Z], () => T.Z.useReducedMotion),
-        l = !s || !t || r,
-        c = (e, s) => {
-            null != e.shakeIntensity && e.shakeIntensity > n && (0, m.T)(C.hn.MORE), i(e, s);
-        };
-    return (0, o.jsxs)(u.FormSection, {
-        tag: u.FormTitleTags.H1,
-        title: x.Z.Messages.POGGERMODE_SCREENSHAKE_CUSTOMIZATION,
-        children: [
-            (0, o.jsx)(u.FormSwitch, {
-                disabled: !s || r,
-                tooltipNote: r ? x.Z.Messages.POGGERMODE_SCREENSHAKE_DISABLED_REDUCED_MOTION : null,
-                value: t && !r,
-                note: x.Z.Messages.POGGERMODE_SCREENSHAKE_ENABLED_DESCRIPTION,
-                onChange: (e) => i({ screenshakeEnabled: e }, 1),
-                children: x.Z.Messages.POGGERMODE_SCREENSHAKE_ENABLED
-            }),
-            (0, o.jsxs)(u.FormItem, {
-                disabled: l,
-                title: x.Z.Messages.POGGERMODE_SCREENSHAKE,
-                className: M.formItem,
-                children: [
-                    (0, o.jsx)(B, { children: x.Z.Messages.POGGERMODE_SCREENSHAKE_DESCRIPTION }),
-                    (0, o.jsx)(u.Slider, {
-                        disabled: l,
-                        markers: L,
-                        equidistant: !0,
-                        stickToMarkers: !0,
-                        minValue: L[0],
-                        maxValue: L[L.length - 1],
-                        initialValue: n,
-                        onValueChange: (e) => c({ shakeIntensity: e }, 1),
-                        onMarkerRender: (e) => (e === L[L.length - 1] ? x.Z.Messages.POGGERMODE_SCREENSHAKE_MAX : ''.concat(100 * e, '%'))
-                    })
-                ]
-            }),
-            (0, o.jsx)(j, {
-                disabled: l,
-                locations: v(),
-                settingsLocations: a,
-                onChange: (e) => i({ screenshakeEnabledLocations: e }, 1)
+            (0, a.jsx)(L, {
+                disabled: o,
+                locations: y(),
+                settingsLocations: r,
+                onChange: (e) => l({ confettiEnabledLocations: e }, 0)
             })
         ]
     });
 }
-function V(e) {
-    let { updateSettings: s } = e;
-    return (0, o.jsx)(u.FormSection, {
-        tag: u.FormTitleTags.H1,
-        title: x.Z.Messages.POGGERMODE_SETTINGS_CUSTOMIZATION,
-        children: (0, o.jsxs)(u.FormItem, {
-            className: M.formItem,
+function k(e) {
+    let {
+            settings: { enabled: t, combosEnabled: n, comboSoundsEnabled: i, combosRequiredCount: s },
+            updateSettings: r
+        } = e,
+        l = !t || !n;
+    return (0, a.jsxs)(m.FormSection, {
+        tag: m.FormTitleTags.H1,
+        title: b.intl.string(b.t.Xz0olZ),
+        children: [
+            (0, a.jsx)(m.FormSwitch, {
+                disabled: !t,
+                value: n,
+                note: b.intl.string(b.t['31Z8ER']),
+                onChange: (e) => r({ combosEnabled: e }),
+                children: b.intl.string(b.t.o3iV7O)
+            }),
+            (0, a.jsx)(m.FormSwitch, {
+                disabled: !t,
+                value: i,
+                note: b.intl.string(b.t['9rgQEh']),
+                onChange: (e) => r({ comboSoundsEnabled: e }),
+                children: b.intl.string(b.t['Ax+Ioa'])
+            }),
+            (0, a.jsxs)(m.FormItem, {
+                disabled: l,
+                title: b.intl.string(b.t.L0oQur),
+                className: v.formItem,
+                children: [
+                    (0, a.jsx)(Z, { children: b.intl.string(b.t['/OOFpK']) }),
+                    (0, a.jsx)(m.Slider, {
+                        disabled: l,
+                        markers: O,
+                        stickToMarkers: !0,
+                        minValue: O[0],
+                        maxValue: O[O.length - 1],
+                        initialValue: s,
+                        onValueChange: (e) => r({ combosRequiredCount: e }),
+                        onValueRender: (e) => ''.concat(e)
+                    })
+                ]
+            }),
+            (0, a.jsx)(m.FormDivider, { className: v.divider })
+        ]
+    });
+}
+function w(e) {
+    let {
+            settings: { enabled: t, screenshakeEnabled: n, shakeIntensity: i, screenshakeEnabledLocations: s },
+            updateSettings: r
+        } = e,
+        l = (0, d.e7)([g.Z], () => g.Z.useReducedMotion),
+        o = !t || !n || l,
+        c = (e, t) => {
+            null != e.shakeIntensity && e.shakeIntensity > i && (0, T.T)(C.hn.MORE), r(e, t);
+        };
+    return (0, a.jsxs)(m.FormSection, {
+        tag: m.FormTitleTags.H1,
+        title: b.intl.string(b.t.wVS5SU),
+        children: [
+            (0, a.jsx)(m.FormSwitch, {
+                disabled: !t || l,
+                tooltipNote: l ? b.intl.string(b.t.GckHGx) : null,
+                value: n && !l,
+                note: b.intl.string(b.t.Qq5W3t),
+                onChange: (e) => r({ screenshakeEnabled: e }, 1),
+                children: b.intl.string(b.t.N004zM)
+            }),
+            (0, a.jsxs)(m.FormItem, {
+                disabled: o,
+                title: b.intl.string(b.t.UxnnCw),
+                className: v.formItem,
+                children: [
+                    (0, a.jsx)(Z, { children: b.intl.string(b.t.CEOEOT) }),
+                    (0, a.jsx)(m.Slider, {
+                        disabled: o,
+                        markers: R,
+                        equidistant: !0,
+                        stickToMarkers: !0,
+                        minValue: R[0],
+                        maxValue: R[R.length - 1],
+                        initialValue: i,
+                        onValueChange: (e) => c({ shakeIntensity: e }, 1),
+                        onMarkerRender: (e) => (e === R[R.length - 1] ? b.intl.string(b.t['4rbMWV']) : ''.concat(100 * e, '%'))
+                    })
+                ]
+            }),
+            (0, a.jsx)(L, {
+                disabled: o,
+                locations: B(),
+                settingsLocations: s,
+                onChange: (e) => r({ screenshakeEnabledLocations: e }, 1)
+            })
+        ]
+    });
+}
+function U(e) {
+    let { updateSettings: t } = e;
+    return (0, a.jsx)(m.FormSection, {
+        tag: m.FormTitleTags.H1,
+        title: b.intl.string(b.t.EuXv2t),
+        children: (0, a.jsxs)(m.FormItem, {
+            className: v.formItem,
             children: [
-                (0, o.jsx)(u.FormText, {
-                    className: M.formItem,
-                    children: x.Z.Messages.POGGERMODE_HIDE_SETTINGS_DESCRIPTION
+                (0, a.jsx)(m.FormText, {
+                    className: v.formItem,
+                    children: b.intl.string(b.t['1SLnkp'])
                 }),
-                (0, o.jsx)(u.Button, {
-                    className: M.hideButton,
-                    size: u.Button.Sizes.SMALL,
+                (0, a.jsx)(m.Button, {
+                    className: v.hideButton,
+                    size: m.Button.Sizes.SMALL,
                     onClick: () => {
-                        s({
+                        t({
                             enabled: !1,
                             settingsVisible: !1
                         }),
-                            (0, E.xf)();
+                            (0, h.xf)();
                     },
-                    children: x.Z.Messages.POGGERMODE_HIDE_SETTINGS
+                    children: b.intl.string(b.t.qz65yc)
                 })
             ]
         })
     });
 }
-function Y(e) {
-    let { onChangePage: s } = e;
-    return (0, o.jsxs)(u.FormSection, {
+function V(e) {
+    let { onChangePage: t } = e;
+    return (0, a.jsxs)(m.FormSection, {
         children: [
-            (0, o.jsxs)(u.Clickable, {
-                onClick: () => s(1),
-                className: M.achievementContainer,
+            (0, a.jsxs)(m.Clickable, {
+                onClick: () => t(1),
+                className: v.achievementContainer,
                 children: [
-                    (0, o.jsx)('div', {
-                        className: M.achievementIconContainer,
-                        children: (0, o.jsx)(u.TrophyIcon, {
+                    (0, a.jsx)('div', {
+                        className: v.achievementIconContainer,
+                        children: (0, a.jsx)(m.TrophyIcon, {
                             size: 'md',
-                            color: _.Z.unsafe_rawColors.ORANGE_345.css
+                            color: u.Z.unsafe_rawColors.ORANGE_345.css
                         })
                     }),
-                    (0, o.jsxs)('div', {
-                        className: M.achievementTextContainer,
+                    (0, a.jsxs)('div', {
+                        className: v.achievementTextContainer,
                         children: [
-                            (0, o.jsx)(u.Heading, {
+                            (0, a.jsx)(m.Heading, {
                                 variant: 'heading-md/semibold',
                                 color: 'header-primary',
-                                children: x.Z.Messages.POGGERMODE_ACHIEVEMENT_TITLE
+                                children: b.intl.string(b.t['6jI0hY'])
                             }),
-                            (0, o.jsx)(u.Text, {
+                            (0, a.jsx)(m.Text, {
                                 variant: 'text-md/normal',
                                 color: 'header-secondary',
-                                children: x.Z.Messages.POGGERMODE_ACHIEVEMENT_DESCRIPTION
+                                children: b.intl.string(b.t.GuUItb)
                             })
                         ]
                     }),
-                    (0, o.jsx)(u.ChevronSmallRightIcon, {
+                    (0, a.jsx)(m.ChevronSmallRightIcon, {
                         size: 'custom',
                         color: 'currentColor',
                         width: 16,
-                        className: M.rightCaretIcon
+                        className: v.rightCaretIcon
                     })
                 ]
             }),
-            (0, o.jsx)(u.FormDivider, { className: M.divider })
+            (0, a.jsx)(m.FormDivider, { className: v.divider })
         ]
     });
 }
-let k = () =>
-    t
+let G = () =>
+    n
         .e('20467')
-        .then(t.t.bind(t, 205663, 19))
+        .then(n.t.bind(n, 205663, 19))
         .then((e) => {
-            let { default: s } = e;
-            return s;
+            let { default: t } = e;
+            return t;
         });
-function w(e) {
-    let { onChangePage: s, setShowEnableAnimation: t } = e,
-        n = (0, d.cj)([g.Z], () => g.Z.getState()),
-        [a, i] = l.useState({
+function Y(e) {
+    let { onChangePage: t, setShowEnableAnimation: n } = e,
+        i = (0, d.cj)([E.Z], () => E.Z.getState()),
+        [s, r] = o.useState({
             x: 0,
             y: 0
         }),
-        r = (0, O.Z)();
-    function c(e, s, t, n) {
-        return (null != s ? s : e) && (null != n ? n : t);
+        l = (0, I.Z)();
+    function c(e, t, n, i) {
+        return (null != t ? t : e) && (null != i ? i : n);
     }
-    let _ = (e) => {
-            if (e.enabled && !1 === n.enabled) {
-                var s;
-                t(!0),
-                    (0, N.GN)('poggermode_enabled'),
-                    I.S.dispatch(R.CkL.SHAKE_APP, {
+    let u = (e) => {
+            if (e.enabled && !1 === i.enabled) {
+                var t;
+                n(!0),
+                    (0, S.GN)('poggermode_enabled'),
+                    x.S.dispatch(A.CkL.SHAKE_APP, {
                         duration: 2000,
-                        intensity: null !== (s = e.shakeIntensity) && void 0 !== s ? s : n.shakeIntensity
+                        intensity: null !== (t = e.shakeIntensity) && void 0 !== t ? t : i.shakeIntensity
                     });
             }
         },
-        E = (e, s) => {
-            if ((_(e), (0, A.AI)(e), null == s)) return;
-            let t = c(n.confettiEnabled, e.confettiEnabled, n.enabled, e.enabled);
-            0 === s && t && r.fire(a.x, a.y, { settings: e });
-            let i = c(n.screenshakeEnabled, e.screenshakeEnabled, n.enabled, e.enabled);
-            if (1 === s && i) {
-                var o;
-                I.S.dispatch(R.CkL.SHAKE_APP, {
+        h = (e, t) => {
+            if ((u(e), (0, _.AI)(e), null == t)) return;
+            let n = c(i.confettiEnabled, e.confettiEnabled, i.enabled, e.enabled);
+            0 === t && n && l.fire(s.x, s.y, { settings: e });
+            let r = c(i.screenshakeEnabled, e.screenshakeEnabled, i.enabled, e.enabled);
+            if (1 === t && r) {
+                var a;
+                x.S.dispatch(A.CkL.SHAKE_APP, {
                     duration: 1000,
-                    intensity: null !== (o = e.shakeIntensity) && void 0 !== o ? o : n.shakeIntensity
+                    intensity: null !== (a = e.shakeIntensity) && void 0 !== a ? a : i.shakeIntensity
                 });
             }
         },
-        T = (e) => {
-            i({
+        g = (e) => {
+            r({
                 x: e.clientX,
                 y: e.clientY
             });
         };
     return (
-        l.useEffect(() => (window.addEventListener('mousemove', T), () => window.removeEventListener('mousemove', T)), []),
-        (0, o.jsxs)(o.Fragment, {
+        o.useEffect(() => (window.addEventListener('mousemove', g), () => window.removeEventListener('mousemove', g)), []),
+        (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, o.jsx)(u.Heading, {
+                (0, a.jsx)(m.Heading, {
                     variant: 'heading-lg/semibold',
-                    className: M.title,
-                    children: x.Z.Messages.POGGERMODE
+                    className: v.title,
+                    children: b.intl.string(b.t.AtCukJ)
                 }),
-                (0, o.jsx)(U, {
-                    settings: n,
-                    updateSettings: E
+                (0, a.jsx)(F, {
+                    settings: i,
+                    updateSettings: h
                 }),
-                (0, o.jsx)(Y, { onChangePage: s }),
-                (0, o.jsx)(F, {
-                    settings: n,
-                    updateSettings: E
+                (0, a.jsx)(V, { onChangePage: t }),
+                (0, a.jsx)(k, {
+                    settings: i,
+                    updateSettings: h
                 }),
-                (0, o.jsx)(y, {
-                    settings: n,
-                    updateSettings: E
+                (0, a.jsx)(w, {
+                    settings: i,
+                    updateSettings: h
                 }),
-                (0, o.jsx)(G, {
-                    settings: n,
-                    updateSettings: E
+                (0, a.jsx)(M, {
+                    settings: i,
+                    updateSettings: h
                 }),
-                (0, o.jsx)(V, { updateSettings: E })
+                (0, a.jsx)(U, { updateSettings: h })
             ]
         })
     );
 }
-let H = (e, s, t) => {
-        let n = (e) => () => {
-            s(e);
+let H = (e, t, n) => {
+        let i = (e) => () => {
+            t(e);
         };
         switch (e) {
             case 0:
-                return (0, o.jsx)(w, {
-                    onChangePage: n(1),
-                    setShowEnableAnimation: t
+                return (0, a.jsx)(Y, {
+                    onChangePage: i(1),
+                    setShowEnableAnimation: n
                 });
             case 1:
-                return (0, o.jsx)(h.Z, { onBackClick: n(0) });
+                return (0, a.jsx)(f.Z, { onBackClick: i(0) });
             default:
                 return null;
         }
     },
-    W = (e) => (0 === e ? S.n.LEFT : S.n.RIGHT);
-function K() {
-    let [e, s] = l.useState(0),
-        [t, n] = l.useState(W(e)),
-        [a, i] = l.useState(!1),
-        r = (0, d.e7)([T.Z], () => T.Z.useReducedMotion),
-        c = a && !r;
+    z = (e) => (0 === e ? p.n.LEFT : p.n.RIGHT);
+function W() {
+    let [e, t] = o.useState(0),
+        [n, i] = o.useState(z(e)),
+        [s, r] = o.useState(!1),
+        l = (0, d.e7)([g.Z], () => g.Z.useReducedMotion),
+        c = s && !l;
     return (
-        l.useEffect(() => {
-            let s = setTimeout(() => {
-                n(W(e));
+        o.useEffect(() => {
+            let t = setTimeout(() => {
+                i(z(e));
             }, 500);
-            return () => clearTimeout(s);
+            return () => clearTimeout(t);
         }, [e]),
-        l.useEffect(() => {
-            Math.random() > 0.99 && (0, m.T)(C.hn.VISITOR_100);
+        o.useEffect(() => {
+            Math.random() > 0.99 && (0, T.T)(C.hn.VISITOR_100);
         }, []),
-        (0, o.jsxs)(o.Fragment, {
+        (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, o.jsx)(S.Z, {
-                    className: M.slideAnimator,
+                (0, a.jsx)(p.Z, {
+                    className: v.slideAnimator,
                     step: e,
-                    direction: t,
-                    children: H(e, s, i)
+                    direction: n,
+                    children: H(e, t, r)
                 }),
-                (0, o.jsx)('div', {
-                    className: c ? M.enableAnimationOverlayVisible : M.enableAnimationOverlayHidden,
-                    children: (0, o.jsx)(u.LottieAnimation, {
-                        className: M.enableAnimation,
-                        importData: k,
+                (0, a.jsx)('div', {
+                    className: c ? v.enableAnimationOverlayVisible : v.enableAnimationOverlayHidden,
+                    children: (0, a.jsx)(m.LottieAnimation, {
+                        className: v.enableAnimation,
+                        importData: G,
                         shouldAnimate: c,
                         autoplay: !1,
                         resetOnPlay: !0,
                         loop: !1,
-                        onComplete: () => i(!1)
+                        onComplete: () => r(!1)
                     })
                 })
             ]

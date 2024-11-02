@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return h;
     }
 });
 var r = n(200651);
@@ -13,77 +13,77 @@ var i = n(481060),
     u = n(710631),
     c = n(622724),
     d = n(785717),
-    _ = n(475413),
-    E = n(689938);
-function f(e) {
-    let { user: t, guildId: n, viewProfileItem: f } = e,
-        { trackUserProfileAction: h } = (0, d.KZ)(),
-        { analyticsLocations: p, newestAnalyticsLocation: I } = (0, s.ZP)(a.Z.USER_PROFILE_OVERFLOW_MENU),
-        m = (0, u.Z)({
+    f = n(475413),
+    _ = n(388032);
+function h(e) {
+    let { user: t, guildId: n, viewProfileItem: h } = e,
+        { trackUserProfileAction: p } = (0, d.KZ)(),
+        { analyticsLocations: m, newestAnalyticsLocation: g } = (0, s.ZP)(a.Z.USER_PROFILE_OVERFLOW_MENU),
+        E = (0, u.Z)({
             user: t,
             guildId: n,
             onAction: () =>
-                h({
+                p({
                     action: 'PRESS_INVITE_TO_SERVER',
-                    analyticsLocations: p
+                    analyticsLocations: m
                 })
         }),
-        T = (0, l.Z)({
+        v = (0, l.Z)({
             user: t,
-            location: I,
+            location: g,
             color: 'danger',
             onBlock: () =>
-                h({
+                p({
                     action: 'BLOCK',
-                    analyticsLocations: p
+                    analyticsLocations: m
                 }),
             onUnblock: () =>
-                h({
+                p({
                     action: 'UNBLOCK',
-                    analyticsLocations: p
+                    analyticsLocations: m
                 })
         }),
-        S = (0, c.Z)({
+        I = (0, c.Z)({
             user: t,
             guildId: n,
-            location: I,
+            location: g,
             color: 'danger',
             onAction: () =>
-                h({
+                p({
                     action: 'REPORT',
-                    analyticsLocations: p
+                    analyticsLocations: m
                 })
         }),
-        g = (0, c.T)({
+        S = (0, c.T)({
             user: t,
             guildId: n,
-            location: I,
+            location: g,
             color: 'danger',
             onAction: () =>
-                h({
+                p({
                     action: 'REPORT',
-                    analyticsLocations: p
+                    analyticsLocations: m
                 })
         }),
-        A = [
-            [f, m],
-            [T, S, g],
+        T = [
+            [h, E],
+            [v, I, S],
             [
                 (0, o.Z)({
                     id: t.id,
-                    label: E.Z.Messages.COPY_ID_USER,
+                    label: _.intl.string(_.t['/AXYnJ']),
                     onSuccess: () =>
-                        h({
+                        p({
                             action: 'COPY_USER_ID',
-                            analyticsLocations: p
+                            analyticsLocations: m
                         })
                 })
             ]
         ];
-    return A.every((e) => e.every((e) => null == e))
+    return T.every((e) => e.every((e) => null == e))
         ? null
         : (0, r.jsx)(s.Gt, {
-              value: p,
+              value: m,
               children: (0, r.jsx)(i.Popout, {
                   renderPopout: (e) => {
                       let { closePopout: t } = e;
@@ -91,15 +91,15 @@ function f(e) {
                           navId: 'user-profile-overflow-menu',
                           onSelect: void 0,
                           onClose: t,
-                          'aria-label': E.Z.Messages.PROFILE_ACTIONS_MENU_LABEL,
-                          children: A.map((e, t) => (0, r.jsx)(i.MenuGroup, { children: e.map((e) => e) }, t))
+                          'aria-label': _.intl.string(_.t.AXIHpa),
+                          children: T.map((e, t) => (0, r.jsx)(i.MenuGroup, { children: e.map((e) => e) }, t))
                       });
                   },
                   children: (e) =>
-                      (0, r.jsx)(_.oY, {
+                      (0, r.jsx)(f.oY, {
                           action: 'PRESS_OPTIONS',
                           icon: i.MoreHorizontalIcon,
-                          tooltipText: E.Z.Messages.MORE,
+                          tooltipText: _.intl.string(_.t.UKOtz8),
                           ...e
                       })
               })

@@ -1,26 +1,26 @@
 n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(442837),
-    r = n(82950),
-    l = n(623624),
+    r = n(192379),
+    l = n(442837),
+    a = n(82950),
+    s = n(623624),
     o = n(650774),
     c = n(981631),
     d = n(921944),
-    u = n(689938),
-    _ = n(241626);
-class E extends a.PureComponent {
+    u = n(388032),
+    h = n(241626);
+class m extends r.PureComponent {
     render() {
         let { guild: e, memberCount: t, markAsDismissed: n } = this.props;
-        return (0, i.jsx)(r.Z, {
+        return (0, i.jsx)(a.Z, {
             guild: e,
             onDismissed: () => n(d.L.UNKNOWN),
             onClick: this.handleButtonClick,
-            message: null == t || t < 30 ? u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_NOTICE_SMALL_GUILD : u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_NOTICE,
-            cta: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_NOTICE_BUTTON,
+            message: null == t || t < 30 ? u.intl.string(u.t.hlitVV) : u.intl.string(u.t.XHtaDA),
+            cta: u.intl.string(u.t['vqb+Hx']),
             trackingSource: c.PsQ.GUILD_SUBSCRIPTION_NOTICE,
             type: c.vID.GUILD_BOOSTING,
-            image: _,
+            image: h,
             imageMarginX: 26
         });
     }
@@ -31,7 +31,7 @@ class E extends a.PureComponent {
             (n = 'handleButtonClick'),
             (i = () => {
                 let { guild: e } = this.props;
-                (0, l.f)({
+                (0, s.f)({
                     guildId: e.id,
                     location: {
                         section: c.jXE.CHANNEL_NOTICE,
@@ -49,7 +49,7 @@ class E extends a.PureComponent {
                 : (t[n] = i);
     }
 }
-t.Z = s.ZP.connectStores([o.Z], (e) => {
+t.Z = l.ZP.connectStores([o.Z], (e) => {
     let { guild: t } = e;
     return { memberCount: o.Z.getMemberCount(t.id) };
-})(E);
+})(m);

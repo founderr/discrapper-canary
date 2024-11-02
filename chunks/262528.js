@@ -1,75 +1,75 @@
-t.r(a);
-var s = t(200651),
-    n = t(192379),
-    r = t(481060),
-    d = t(933557),
-    o = t(925329),
-    i = t(296023),
-    l = t(689938),
-    c = t(164933);
-a.default = (e) => {
-    let { channel: a, application: N, onClose: x, transitionState: h } = e,
-        m = (0, i.w)(a),
-        _ = n.useCallback(
+a.r(t);
+var n = a(200651),
+    r = a(192379),
+    i = a(481060),
+    s = a(933557),
+    d = a(925329),
+    l = a(296023),
+    o = a(388032),
+    c = a(164933);
+t.default = (e) => {
+    let { channel: t, application: x, onClose: h, transitionState: m } = e,
+        u = (0, l.w)(t),
+        j = r.useCallback(
             () => (
-                x(),
-                (0, r.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([t.e('38902'), t.e('39955')]).then(t.bind(t, 547653));
-                    return (t) =>
-                        (0, s.jsx)(e, {
-                            ...t,
-                            channelId: a.id,
-                            application: N
+                h(),
+                (0, i.openModalLazy)(async () => {
+                    let { default: e } = await Promise.all([a.e('38902'), a.e('39955')]).then(a.bind(a, 547653));
+                    return (a) =>
+                        (0, n.jsx)(e, {
+                            ...a,
+                            channelId: t.id,
+                            application: x
                         });
                 })
             ),
-            [N, a.id, x]
+            [x, t.id, h]
         ),
-        C = (0, d.ZP)(a, !0);
-    return (0, s.jsxs)(r.ModalRoot, {
-        transitionState: h,
-        'aria-label': l.Z.Messages.EDIT_CHANNEL_SYNCING_TITLE,
+        p = (0, s.ZP)(t, !0);
+    return (0, n.jsxs)(i.ModalRoot, {
+        transitionState: m,
+        'aria-label': o.intl.string(o.t['Qq+kXF']),
         children: [
-            (0, s.jsx)(r.ModalHeader, {
+            (0, n.jsx)(i.ModalHeader, {
                 separator: !1,
-                children: (0, s.jsx)(r.Heading, {
+                children: (0, n.jsx)(i.Heading, {
                     variant: 'heading-lg/semibold',
-                    children: l.Z.Messages.EDIT_CHANNEL_SYNCING_TITLE
+                    children: o.intl.string(o.t['Qq+kXF'])
                 })
             }),
-            (0, s.jsxs)(r.ModalContent, {
+            (0, n.jsxs)(i.ModalContent, {
                 className: c.content,
                 children: [
-                    (0, s.jsx)(o.Z, {
-                        game: N,
-                        size: o.Z.Sizes.LARGE
+                    (0, n.jsx)(d.Z, {
+                        game: x,
+                        size: d.Z.Sizes.LARGE
                     }),
-                    (0, s.jsxs)('div', {
+                    (0, n.jsxs)('div', {
                         className: c.metadata,
                         children: [
-                            (0, s.jsxs)('div', {
+                            (0, n.jsxs)('div', {
                                 className: c.metadataHeader,
                                 children: [
-                                    (0, s.jsx)(r.Text, {
+                                    (0, n.jsx)(i.Text, {
                                         variant: 'text-md/semibold',
                                         color: 'header-primary',
-                                        children: N.name
+                                        children: x.name
                                     }),
-                                    (0, s.jsx)(r.Text, {
+                                    (0, n.jsx)(i.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'header-secondary',
-                                        children: l.Z.Messages.INTEGRATIONS_LINKED_LOBBY_SYNCING_WITH_CHANNEL.format({ channelName: C })
+                                        children: o.intl.format(o.t['0NJZAQ'], { channelName: p })
                                     })
                                 ]
                             }),
-                            null != m &&
-                                (0, s.jsxs)(s.Fragment, {
+                            null != u &&
+                                (0, n.jsxs)(n.Fragment, {
                                     children: [
-                                        (0, s.jsx)('div', { className: c.divider }),
-                                        (0, s.jsx)(r.Text, {
+                                        (0, n.jsx)('div', { className: c.divider }),
+                                        (0, n.jsx)(i.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'text-secondary',
-                                            children: m
+                                            children: u
                                         })
                                     ]
                                 })
@@ -77,18 +77,18 @@ a.default = (e) => {
                     })
                 ]
             }),
-            (0, s.jsxs)(r.ModalFooter, {
+            (0, n.jsxs)(i.ModalFooter, {
                 children: [
-                    (0, s.jsx)(r.Button, {
-                        onClick: _,
-                        color: r.Button.Colors.RED,
-                        children: l.Z.Messages.CHANNEL_SYNCING_STOP_SYNCING
+                    (0, n.jsx)(i.Button, {
+                        onClick: j,
+                        color: i.Button.Colors.RED,
+                        children: o.intl.string(o.t.AmrSuL)
                     }),
-                    (0, s.jsx)(r.Button, {
-                        onClick: x,
-                        look: r.Button.Looks.LINK,
-                        color: r.Button.Colors.PRIMARY,
-                        children: l.Z.Messages.CANCEL
+                    (0, n.jsx)(i.Button, {
+                        onClick: h,
+                        look: i.Button.Looks.LINK,
+                        color: i.Button.Colors.PRIMARY,
+                        children: o.intl.string(o.t['ETE/oK'])
                     })
                 ]
             })

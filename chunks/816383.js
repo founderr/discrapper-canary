@@ -37,27 +37,27 @@ var a = (function () {
         l.sort(function (t, n) {
             return e[t] < e[n] ? -1 : 1;
         });
-        for (var c = [], d = [], _ = [], E = 0; E < o - 1; E++) (n = e[E + 1] - e[E]), (r = t[E + 1] - t[E]), d.push(n), c.push(r), _.push(r / n);
-        for (var f = [_[0]], h = 0; h < d.length - 1; h++) {
-            var p = _[h],
-                I = _[h + 1];
-            if (p * I <= 0) f.push(0);
+        for (var c = [], d = [], f = [], _ = 0; _ < o - 1; _++) (n = e[_ + 1] - e[_]), (r = t[_ + 1] - t[_]), d.push(n), c.push(r), f.push(r / n);
+        for (var h = [f[0]], p = 0; p < d.length - 1; p++) {
+            var m = f[p],
+                g = f[p + 1];
+            if (m * g <= 0) h.push(0);
             else {
-                n = d[h];
-                var m = d[h + 1],
-                    T = n + m;
-                f.push((3 * T) / ((T + m) / p + (T + n) / I));
+                n = d[p];
+                var E = d[p + 1],
+                    v = n + E;
+                h.push((3 * v) / ((v + E) / m + (v + n) / g));
             }
         }
-        f.push(_[_.length - 1]);
-        for (var S = [], g = [], A = 0; A < f.length - 1; A++) {
-            s = _[A];
-            var N = f[A],
-                R = 1 / d[A],
-                O = N + f[A + 1] - s - s;
-            S.push((s - N - O) * R), g.push(O * R * R);
+        h.push(f[f.length - 1]);
+        for (var I = [], S = [], T = 0; T < h.length - 1; T++) {
+            s = f[T];
+            var b = h[T],
+                y = 1 / d[T],
+                A = b + h[T + 1] - s - s;
+            I.push((s - b - A) * y), S.push(A * y * y);
         }
-        (this.xs = e), (this.ys = t), (this.c1s = f), (this.c2s = S), (this.c3s = g);
+        (this.xs = e), (this.ys = t), (this.c1s = h), (this.c2s = I), (this.c3s = S);
     }
     return (
         (e = a),
@@ -82,8 +82,8 @@ var a = (function () {
                         }
                     }
                     var d = e - n[(o = Math.max(0, u))],
-                        _ = d * d;
-                    return r[o] + i[o] * d + a[o] * _ + s[o] * d * _;
+                        f = d * d;
+                    return r[o] + i[o] * d + a[o] * f + s[o] * d * f;
                 }
             }
         ]),

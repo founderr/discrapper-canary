@@ -1,9 +1,9 @@
 n.d(t, {
     B2: function () {
-        return f;
+        return g;
     },
     Ov: function () {
-        return _;
+        return f;
     },
     Qn: function () {
         return m;
@@ -19,10 +19,10 @@ n.d(t, {
     n(411104),
     n(653041);
 var i = n(149765),
-    s = n(399606),
-    a = n(271383),
-    l = n(430824),
-    r = n(594174),
+    l = n(399606),
+    r = n(271383),
+    a = n(430824),
+    s = n(594174),
     o = n(700785),
     c = n(981631),
     u = n(135899);
@@ -34,19 +34,19 @@ let d = [c.Plq.USE_CLYDE_AI],
         return t;
     }),
     p = new Set(c.yYS);
-function _(e, t) {
+function f(e, t) {
     return e === t;
 }
-function f(e, t, n) {
-    let u = (0, s.e7)([l.Z], () => l.Z.getGuild(t), [t]);
-    return (0, s.e7)(
-        [a.ZP, r.default, l.Z],
+function g(e, t, n) {
+    let u = (0, l.e7)([a.Z], () => a.Z.getGuild(t), [t]);
+    return (0, l.e7)(
+        [r.ZP, s.default, a.Z],
         () => {
-            let s = {},
-                d = a.ZP.getMember(t, e),
-                h = r.default.getUser(e);
-            if (null == u || null == d || null == h) return s;
-            let m = l.Z.getRole(u.id, u.getEveryoneRoleId()),
+            let l = {},
+                d = r.ZP.getMember(t, e),
+                h = s.default.getUser(e);
+            if (null == u || null == d || null == h) return l;
+            let m = a.Z.getRole(u.id, u.getEveryoneRoleId()),
                 p = o.uB({
                     user: h,
                     context: u
@@ -54,14 +54,14 @@ function f(e, t, n) {
             for (let e of n) {
                 let t = c.Plq[e];
                 if (!!i.e$(p, t)) {
-                    for (let n of ((s[e] = []), d.roles)) {
-                        let a = l.Z.getRole(u.id, n);
-                        if (null != a) (i.e$(a.permissions, c.Plq.ADMINISTRATOR) || i.Db(a.permissions, t)) && s[e].push(a.id);
+                    for (let n of ((l[e] = []), d.roles)) {
+                        let r = a.Z.getRole(u.id, n);
+                        if (null != r) (i.e$(r.permissions, c.Plq.ADMINISTRATOR) || i.Db(r.permissions, t)) && l[e].push(r.id);
                     }
-                    null != m && (i.e$(m.permissions, c.Plq.ADMINISTRATOR) || i.Db(m.permissions, t)) && s[e].push(m.id), u.isOwner(h) && s[e].push(h.id);
+                    null != m && (i.e$(m.permissions, c.Plq.ADMINISTRATOR) || i.Db(m.permissions, t)) && l[e].push(m.id), u.isOwner(h) && l[e].push(h.id);
                 }
             }
-            return s;
+            return l;
         },
         [u, t, n, e]
     );

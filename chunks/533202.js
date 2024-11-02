@@ -1,131 +1,131 @@
-s.r(t),
-    s.d(t, {
+n.r(t),
+    n.d(t, {
         default: function () {
             return L;
         }
     }),
-    s(47120);
-var a = s(200651),
-    n = s(192379),
-    l = s(990547),
-    o = s(481060),
-    i = s(458879),
-    r = s(996453),
-    c = s(601964),
-    d = s(99325),
-    u = s(454432),
-    m = s(492749),
-    C = s(66626),
-    _ = s(892322),
-    x = s(15608),
-    E = s(486527),
-    I = s(507064);
+    n(47120);
+var i = n(200651),
+    l = n(192379),
+    s = n(990547),
+    a = n(481060),
+    o = n(458879),
+    r = n(996453),
+    c = n(601964),
+    d = n(99325),
+    u = n(454432),
+    m = n(492749),
+    C = n(66626),
+    x = n(892322),
+    f = n(15608),
+    h = n(486527),
+    g = n(507064);
 function L(e) {
-    let { directoryChannelId: t, transitionState: s, initialSlide: L = E.VX.CHOOSE_GUILD, onClose: f, directoryGuildName: T, directoryGuildId: h, currentCategoryId: g } = e,
-        [N, B] = n.useState(L),
-        [M, Z] = n.useState(null),
-        [p, b] = n.useState(null),
-        [j, S] = n.useState(null),
-        [U, R] = n.useState(null),
-        [A, D] = n.useState(null),
-        [H, O] = n.useState(''),
-        [v, G] = n.useState(null != g ? g : E.AR.UNCATEGORIZED),
-        [y, k] = n.useState(!1),
-        { availableGuilds: V, addedGuilds: F, loading: w } = (0, u.Z)(h, t);
-    n.useEffect(() => {
-        B(L);
-    }, [B, L]);
-    let P = async () => {
-            let e = A;
-            if (!y) {
-                if (null == j || null == p) return;
-                let t = await i.Z.createGuildFromTemplate(j, U, p);
-                D((e = new c.ZP(t)));
+    let { directoryChannelId: t, transitionState: n, initialSlide: L = h.VX.CHOOSE_GUILD, onClose: p, directoryGuildName: b, directoryGuildId: j, currentCategoryId: _ } = e,
+        [I, N] = l.useState(L),
+        [B, T] = l.useState(null),
+        [S, Z] = l.useState(null),
+        [M, E] = l.useState(null),
+        [v, H] = l.useState(null),
+        [y, A] = l.useState(null),
+        [k, D] = l.useState(''),
+        [R, U] = l.useState(null != _ ? _ : h.AR.UNCATEGORIZED),
+        [G, V] = l.useState(!1),
+        { availableGuilds: O, addedGuilds: F, loading: w } = (0, u.Z)(j, t);
+    l.useEffect(() => {
+        N(L);
+    }, [N, L]);
+    let X = async () => {
+            let e = y;
+            if (!G) {
+                if (null == M || null == S) return;
+                let t = await o.Z.createGuildFromTemplate(M, v, S);
+                A((e = new c.ZP(t)));
             }
-            null != e && (await d.bF(t, e.id, H, v), B(E.VX.CONFIRMATION));
+            null != e && (await d.bF(t, e.id, k, R), N(h.VX.CONFIRMATION));
         },
-        X = { impression_group: l.ImpressionGroups.DIRECTORY_GUILD_ADD_FLOW };
-    return (0, a.jsx)('div', {
-        children: (0, a.jsx)(o.ModalRoot, {
-            transitionState: s,
+        P = { impression_group: s.ImpressionGroups.DIRECTORY_GUILD_ADD_FLOW };
+    return (0, i.jsx)('div', {
+        children: (0, i.jsx)(a.ModalRoot, {
+            transitionState: n,
             disableTrack: !0,
-            children: (0, a.jsx)('div', {
-                className: I.container,
-                children: (0, a.jsxs)(o.Slides, {
-                    activeSlide: N,
+            children: (0, i.jsx)('div', {
+                className: g.container,
+                children: (0, i.jsxs)(a.Slides, {
+                    activeSlide: I,
                     width: 440,
-                    onSlideReady: (e) => Z(e),
+                    onSlideReady: (e) => T(e),
                     children: [
-                        (0, a.jsx)(o.Slide, {
-                            id: E.VX.CHOOSE_GUILD,
-                            impressionName: l.ImpressionNames.HUB_EXISTING_GUILD_CHOOSE,
-                            impressionProperties: X,
-                            children: (0, a.jsx)(m.Z, {
+                        (0, i.jsx)(a.Slide, {
+                            id: h.VX.CHOOSE_GUILD,
+                            impressionName: s.ImpressionNames.HUB_EXISTING_GUILD_CHOOSE,
+                            impressionProperties: P,
+                            children: (0, i.jsx)(m.Z, {
                                 directoryChannelId: t,
-                                directoryGuildName: T,
+                                directoryGuildName: b,
                                 onGuildChosen: (e) => {
-                                    k(!0), B(E.VX.CUSTOMIZE_EXISTING_GUILD), D(e);
+                                    V(!0), N(h.VX.CUSTOMIZE_EXISTING_GUILD), A(e);
                                 },
                                 handleChooseCreate: () => {
-                                    k(!1), B(E.VX.GUILD_TEMPLATES);
+                                    V(!1), N(h.VX.GUILD_TEMPLATES);
                                 },
-                                onClose: f,
-                                availableGuilds: V,
+                                onClose: p,
+                                availableGuilds: O,
                                 addedGuilds: F,
                                 loading: w
                             })
                         }),
-                        (0, a.jsx)(o.Slide, {
-                            id: E.VX.GUILD_TEMPLATES,
-                            impressionName: l.ImpressionNames.HUB_CREATE_GUILD_TEMPLATE,
-                            impressionProperties: X,
-                            children: (0, a.jsx)(x.Z, {
-                                directoryGuildName: T,
+                        (0, i.jsx)(a.Slide, {
+                            id: h.VX.GUILD_TEMPLATES,
+                            impressionName: s.ImpressionNames.HUB_CREATE_GUILD_TEMPLATE,
+                            impressionProperties: P,
+                            children: (0, i.jsx)(f.Z, {
+                                directoryGuildName: b,
                                 onChooseTemplate: (e) => {
-                                    k(!1), B(E.VX.CUSTOMIZE_NEW_GUILD), b(e);
+                                    V(!1), N(h.VX.CUSTOMIZE_NEW_GUILD), Z(e);
                                 },
-                                onClose: f,
-                                onBack: () => B(E.VX.CHOOSE_GUILD)
+                                onClose: p,
+                                onBack: () => N(h.VX.CHOOSE_GUILD)
                             })
                         }),
-                        (0, a.jsx)(o.Slide, {
-                            id: E.VX.CUSTOMIZE_NEW_GUILD,
-                            impressionName: l.ImpressionNames.HUB_CREATE_GUILD_CUSTOMIZE,
-                            impressionProperties: X,
-                            children: (0, a.jsx)(r.Z, {
-                                guildTemplate: p,
+                        (0, i.jsx)(a.Slide, {
+                            id: h.VX.CUSTOMIZE_NEW_GUILD,
+                            impressionName: s.ImpressionNames.HUB_CREATE_GUILD_CUSTOMIZE,
+                            impressionProperties: P,
+                            children: (0, i.jsx)(r.Z, {
+                                guildTemplate: S,
                                 onHubGuildInfoSet: (e, t) => {
-                                    S(e), R(t), B(E.VX.CUSTOMIZE_EXISTING_GUILD);
+                                    E(e), H(t), N(h.VX.CUSTOMIZE_EXISTING_GUILD);
                                 },
-                                onClose: f,
-                                onBack: () => B(E.VX.GUILD_TEMPLATES),
-                                isSlideReady: M === E.VX.CUSTOMIZE_NEW_GUILD
+                                onClose: p,
+                                onBack: () => N(h.VX.GUILD_TEMPLATES),
+                                isSlideReady: B === h.VX.CUSTOMIZE_NEW_GUILD
                             })
                         }),
-                        (0, a.jsx)(o.Slide, {
-                            id: E.VX.CUSTOMIZE_EXISTING_GUILD,
-                            impressionName: l.ImpressionNames.HUB_EXISTING_GUILD_CUSTOMIZE,
-                            impressionProperties: X,
-                            children: (0, a.jsx)(C.Z, {
+                        (0, i.jsx)(a.Slide, {
+                            id: h.VX.CUSTOMIZE_EXISTING_GUILD,
+                            impressionName: s.ImpressionNames.HUB_EXISTING_GUILD_CUSTOMIZE,
+                            impressionProperties: P,
+                            children: (0, i.jsx)(C.Z, {
                                 directoryChannelId: t,
-                                description: H,
-                                onDescriptionChange: O,
-                                categoryId: v,
-                                onCategoryIdChange: G,
-                                onSubmit: P,
-                                onBack: () => B(y ? E.VX.CHOOSE_GUILD : E.VX.CUSTOMIZE_NEW_GUILD),
-                                onClose: f
+                                description: k,
+                                onDescriptionChange: D,
+                                categoryId: R,
+                                onCategoryIdChange: U,
+                                onSubmit: X,
+                                onBack: () => N(G ? h.VX.CHOOSE_GUILD : h.VX.CUSTOMIZE_NEW_GUILD),
+                                onClose: p
                             })
                         }),
-                        (0, a.jsx)(o.Slide, {
-                            id: E.VX.CONFIRMATION,
-                            impressionName: l.ImpressionNames.DIRECTORY_ADD_GUILD_CONFIRMATION,
-                            impressionProperties: X,
-                            children: (0, a.jsx)(_.Z, {
-                                directoryGuildName: T,
-                                guildToAdd: A,
-                                isExistingGuildFlow: y,
-                                onClose: f
+                        (0, i.jsx)(a.Slide, {
+                            id: h.VX.CONFIRMATION,
+                            impressionName: s.ImpressionNames.DIRECTORY_ADD_GUILD_CONFIRMATION,
+                            impressionProperties: P,
+                            children: (0, i.jsx)(x.Z, {
+                                directoryGuildName: b,
+                                guildToAdd: y,
+                                isExistingGuildFlow: G,
+                                onClose: p
                             })
                         })
                     ]

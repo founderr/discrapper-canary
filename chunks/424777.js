@@ -58,26 +58,26 @@ function d(e) {
                     persEnc: a.persEnc || 'utf8'
                 }),
                 d = this.n.sub(new r(1)),
-                _ = 0;
+                f = 0;
             ;
-            _++
+            f++
         ) {
-            var E = a.k ? a.k(_) : new r(u.generate(this.n.byteLength()));
-            if (0 >= (E = this._truncateToN(E, !0)).cmpn(1) || E.cmp(d) >= 0) continue;
-            var f = this.g.mul(E);
-            if (f.isInfinity()) continue;
-            var h = f.getX(),
-                p = h.umod(this.n);
-            if (0 !== p.cmpn(0)) {
-                var I = E.invm(this.n).mul(p.mul(t.getPrivate()).iadd(e));
-                if (0 !== (I = I.umod(this.n)).cmpn(0)) {
-                    var m = (f.getY().isOdd() ? 1 : 0) | (0 !== h.cmp(p) ? 2 : 0);
+            var _ = a.k ? a.k(f) : new r(u.generate(this.n.byteLength()));
+            if (0 >= (_ = this._truncateToN(_, !0)).cmpn(1) || _.cmp(d) >= 0) continue;
+            var h = this.g.mul(_);
+            if (h.isInfinity()) continue;
+            var p = h.getX(),
+                m = p.umod(this.n);
+            if (0 !== m.cmpn(0)) {
+                var g = _.invm(this.n).mul(m.mul(t.getPrivate()).iadd(e));
+                if (0 !== (g = g.umod(this.n)).cmpn(0)) {
+                    var E = (h.getY().isOdd() ? 1 : 0) | (0 !== p.cmp(m) ? 2 : 0);
                     return (
-                        a.canonical && I.cmp(this.nh) > 0 && ((I = this.n.sub(I)), (m ^= 1)),
+                        a.canonical && g.cmp(this.nh) > 0 && ((g = this.n.sub(g)), (E ^= 1)),
                         new c({
-                            r: p,
-                            s: I,
-                            recoveryParam: m
+                            r: m,
+                            s: g,
+                            recoveryParam: E
                         })
                     );
                 }
@@ -103,13 +103,13 @@ function d(e) {
             o = t.r,
             u = t.s,
             d = 1 & n,
-            _ = n >> 1;
-        if (o.cmp(this.curve.p.umod(this.curve.n)) >= 0 && _) throw Error('Unable to find sencond key candinate');
-        o = _ ? this.curve.pointFromX(o.add(this.curve.n), d) : this.curve.pointFromX(o, d);
-        var E = t.r.invm(a),
-            f = a.sub(s).mul(E).umod(a),
-            h = u.mul(E).umod(a);
-        return this.g.mulAdd(f, o, h);
+            f = n >> 1;
+        if (o.cmp(this.curve.p.umod(this.curve.n)) >= 0 && f) throw Error('Unable to find sencond key candinate');
+        o = f ? this.curve.pointFromX(o.add(this.curve.n), d) : this.curve.pointFromX(o, d);
+        var _ = t.r.invm(a),
+            h = a.sub(s).mul(_).umod(a),
+            p = u.mul(_).umod(a);
+        return this.g.mulAdd(h, o, p);
     }),
     (d.prototype.getKeyRecoveryParam = function (e, t, n, r) {
         if (null !== (t = new c(t, r)).recoveryParam) return t.recoveryParam;

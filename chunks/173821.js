@@ -80,23 +80,23 @@ var c = (function (e) {
                             n = e + (u * l) / 2,
                             r = t + (c * l) / 2,
                             d = r,
-                            _ = this._tension * (this._toValue - n) - this._friction * r;
-                        n = e + (d * l) / 2;
-                        var E = (r = t + (_ * l) / 2),
                             f = this._tension * (this._toValue - n) - this._friction * r;
-                        n = e + (E * l) / 2;
-                        var h = (r = t + (f * l) / 2),
-                            p = this._tension * (this._toValue - n) - this._friction * r;
-                        (n = e + (E * l) / 2), (r = t + (f * l) / 2);
-                        var I = (c + 2 * (_ + f) + p) / 6;
-                        (e += ((u + 2 * (d + E) + h) / 6) * l), (t += I * l);
+                        n = e + (d * l) / 2;
+                        var _ = (r = t + (f * l) / 2),
+                            h = this._tension * (this._toValue - n) - this._friction * r;
+                        n = e + (_ * l) / 2;
+                        var p = (r = t + (h * l) / 2),
+                            m = this._tension * (this._toValue - n) - this._friction * r;
+                        (n = e + (_ * l) / 2), (r = t + (h * l) / 2);
+                        var g = (c + 2 * (f + h) + m) / 6;
+                        (e += ((u + 2 * (d + _) + p) / 6) * l), (t += g * l);
                     }
                     if (((this._lastTime = i), (this._lastPosition = e), (this._lastVelocity = t), this._onUpdate(e), !!this.__active)) {
-                        var m = !1;
-                        this._overshootClamping && 0 !== this._tension && (m = this._startPosition < this._toValue ? e > this._toValue : e < this._toValue);
-                        var T = Math.abs(t) <= this._restSpeedThreshold,
-                            S = !0;
-                        if ((0 !== this._tension && (S = Math.abs(this._toValue - e) <= this._restDisplacementThreshold), m || (T && S))) {
+                        var E = !1;
+                        this._overshootClamping && 0 !== this._tension && (E = this._startPosition < this._toValue ? e > this._toValue : e < this._toValue);
+                        var v = Math.abs(t) <= this._restSpeedThreshold,
+                            I = !0;
+                        if ((0 !== this._tension && (I = Math.abs(this._toValue - e) <= this._restDisplacementThreshold), E || (v && I))) {
                             0 !== this._tension && this._onUpdate(this._toValue), this.__debouncedOnEnd({ finished: !0 });
                             return;
                         }

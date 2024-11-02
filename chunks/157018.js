@@ -3,28 +3,28 @@ n.d(t, {
         return u;
     }
 });
-var s = n(201895),
-    a = n(933557),
-    i = n(592125),
-    r = n(699516),
-    l = n(594174),
+var i = n(201895),
+    r = n(933557),
+    l = n(592125),
+    s = n(699516),
+    a = n(594174),
     o = n(293810),
     c = n(981631),
-    d = n(689938);
+    d = n(388032);
 function u(e) {
     switch (e.ref_type) {
         case o.Qs.CHANNEL: {
-            let t = i.Z.getChannel(e.ref_id);
+            let t = l.Z.getChannel(e.ref_id);
             return null != t
                 ? (function (e) {
-                      let t = (0, a.F6)(e, l.default, r.Z);
+                      let t = (0, r.F6)(e, a.default, s.Z);
                       switch (e.type) {
                           case c.d4z.GUILD_VOICE:
-                              return d.Z.Messages.GUILD_SIDEBAR_VOICE_CHANNEL_A11Y_LABEL.format({ channelName: t });
+                              return d.intl.formatToPlainString(d.t.bkpadH, { channelName: t });
                           case c.d4z.GUILD_STAGE_VOICE:
-                              return d.Z.Messages.GUILD_SIDEBAR_STAGE_CHANNEL_A11Y_LABEL.format({ channelName: t });
+                              return d.intl.formatToPlainString(d.t.TPPk2d, { channelName: t });
                           default:
-                              return (0, s.ZP)({ channel: e });
+                              return (0, i.ZP)({ channel: e });
                       }
                   })(t)
                 : '';

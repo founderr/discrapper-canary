@@ -1,47 +1,47 @@
-t.d(A, {
+n.d(t, {
     V: function () {
-        return i;
+        return s;
     }
 });
-var a = t(200651);
-t(192379);
-var n = t(952265),
-    r = t(776045),
-    s = t(871388),
-    o = t(981631),
-    l = t(689938);
-function i(e, A, i) {
+var A = n(200651);
+n(192379);
+var r = n(952265),
+    a = n(776045),
+    l = n(871388),
+    i = n(981631),
+    o = n(388032);
+function s(e, t, s) {
     var d, c, u;
     switch (e.code) {
-        case o.evJ.TOO_MANY_PUBLISHED_PRODUCT_LISTINGS:
-            (0, s.B)(l.Z.Messages.GUILD_PRODUCT_TOO_MANY_PUBLISHED_PRODUCT_ERROR_TITLE, l.Z.Messages.GUILD_PRODUCT_TOO_MANY_PUBLISHED_PRODUCT_ERROR_BODY, r.IconVariant.DANGER);
+        case i.evJ.TOO_MANY_PUBLISHED_PRODUCT_LISTINGS:
+            (0, l.B)(o.intl.string(o.t['04e8bG']), o.t.uVN1Y2, a.IconVariant.DANGER);
             break;
-        case o.evJ.TWO_FA_NOT_ENABLED:
-            (0, s.B)(l.Z.Messages.GUILD_PRODUCT_TWO_FA_NOT_ENABLED_ERROR_TITLE, l.Z.Messages.GUILD_PRODUCT_TWO_FA_NOT_ENABLED_ERROR_BODY, r.IconVariant.WARNING);
+        case i.evJ.TWO_FA_NOT_ENABLED:
+            (0, l.B)(o.intl.string(o.t['/yBjZ2']), o.t.kZ6Tgo, a.IconVariant.WARNING);
             break;
-        case o.evJ.GUILD_PRODUCT_LISTING_CANNOT_PUBLISH_WITHOUT_BENEFIT:
-            (0, s.B)(l.Z.Messages.GUILD_PRODUCT_MISSING_BENEFITS_ERROR_TITLE, l.Z.Messages.GUILD_PRODUCT_MISSING_BENEFITS_ERROR_BODY, r.IconVariant.WARNING);
+        case i.evJ.GUILD_PRODUCT_LISTING_CANNOT_PUBLISH_WITHOUT_BENEFIT:
+            (0, l.B)(o.intl.string(o.t.MeXDxs), o.t['5q146O'], a.IconVariant.WARNING);
             break;
-        case o.evJ.MONETIZATION_TERMS_NOT_ACCEPTED:
-            (d = A),
-                (0, n.ZD)(async () => {
-                    let { default: e } = await t.e('31835').then(t.bind(t, 393809));
-                    return (A) =>
-                        (0, a.jsx)(e, {
+        case i.evJ.MONETIZATION_TERMS_NOT_ACCEPTED:
+            (d = t),
+                (0, r.ZD)(async () => {
+                    let { default: e } = await n.e('31835').then(n.bind(n, 393809));
+                    return (t) =>
+                        (0, A.jsx)(e, {
                             guildId: d,
-                            ...A
+                            ...t
                         });
                 });
             break;
-        case o.evJ.CREATOR_MONETIZATION_PAYMENT_TEAM_REQUIRED:
-            (0, s.B)(l.Z.Messages.CREATOR_MONETIZATION_PAYMENT_TEAM_REQUIRED_TITLE, l.Z.Messages.CREATOR_MONETIZATION_PAYMENT_TEAM_REQUIRED_BODY, r.IconVariant.WARNING);
+        case i.evJ.CREATOR_MONETIZATION_PAYMENT_TEAM_REQUIRED:
+            (0, l.B)(o.intl.string(o.t['4hWo0N']), o.t.Zkhwe3, a.IconVariant.WARNING);
             break;
-        case o.evJ.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED:
-            let C, g;
-            null != i ? ((C = l.Z.Messages.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED_BODY_WITH_LINK), (g = { url: o.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(i) })) : (C = l.Z.Messages.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED_BODY), (0, s.B)(l.Z.Messages.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED_TITLE, C, r.IconVariant.WARNING, g);
+        case i.evJ.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED:
+            let g, h;
+            null != s ? ((g = o.t.j2VMk5), (h = { url: i.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(s) })) : (g = o.t.ZVV1go), (0, l.B)(o.intl.string(o.t['+CT/gY']), g, a.IconVariant.WARNING, h);
             break;
         default:
-            let h = null !== (u = e.getFirstFieldErrorMessage(['published'])) && void 0 !== u ? u : (null === (c = e.hasFieldErrors) || void 0 === c ? void 0 : c.call(e)) ? void 0 : e.message;
-            if (null != h) (0, s.B)(l.Z.Messages.GUILD_PRODUCT_GENERIC_ERROR_TITLE, h, r.IconVariant.WARNING);
+            let p = null !== (u = e.getFirstFieldErrorMessage(['published'])) && void 0 !== u ? u : (null === (c = e.hasFieldErrors) || void 0 === c ? void 0 : c.call(e)) ? void 0 : e.message;
+            if (null != p) (0, l.B)(o.intl.string(o.t.bvWf8f), p, a.IconVariant.WARNING);
     }
 }

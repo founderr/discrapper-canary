@@ -4,13 +4,13 @@ n.d(t, {
     }
 });
 var i = n(442837),
-    a = n(430824),
-    s = n(496675),
-    r = n(312146),
-    l = n(981631);
+    r = n(430824),
+    l = n(496675),
+    a = n(312146),
+    s = n(981631);
 function o(e) {
-    let t = (0, i.e7)([a.Z], () => a.Z.getGuild(e)),
-        n = (0, r.Ui)(t),
-        o = s.Z.can(l.Plq.MANAGE_CHANNELS, t);
+    let t = (0, i.e7)([r.Z], () => r.Z.getGuild(e)),
+        n = (0, a.Ui)(t),
+        o = l.Z.can(s.Plq.MANAGE_CHANNELS, t);
     return n && o;
 }

@@ -5,16 +5,16 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(481060),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    s = n(481060),
     o = n(497505),
     c = n(415104),
     d = n(468128);
 function u(e) {
     var t;
-    let { quests: n, isFetching: s } = e,
+    let { quests: n, isFetching: l } = e,
         u = null;
     if (window.location.hash.length > 0) {
         let e = window.location.hash.slice(1);
@@ -24,7 +24,7 @@ function u(e) {
                 break;
             }
     }
-    a.useEffect(() => {
+    r.useEffect(() => {
         for (let e of n)
             if (e.id === u) {
                 let e = document.getElementById('quest-tile-'.concat(u));
@@ -36,11 +36,11 @@ function u(e) {
                 break;
             }
     }, [n, u]);
-    let _ = null != u,
-        [E, h] = a.useState(window.innerWidth);
-    a.useEffect(() => {
+    let h = null != u,
+        [m, p] = r.useState(window.innerWidth);
+    r.useEffect(() => {
         let e = () => {
-            h(window.innerWidth);
+            p(window.innerWidth);
         };
         return (
             window.addEventListener('resize', e),
@@ -49,15 +49,15 @@ function u(e) {
             }
         );
     }, []);
-    let m = (t = E) >= 1610 ? 3 : t >= 1340 ? 2 : 1;
-    return s && 0 === n.length
-        ? (0, i.jsx)(l.Spinner, { className: d.spinner })
+    let g = (t = m) >= 1610 ? 3 : t >= 1340 ? 2 : 1;
+    return l && 0 === n.length
+        ? (0, i.jsx)(s.Spinner, { className: d.spinner })
         : (0, i.jsx)(
               'div',
               {
                   className: d.container,
                   children: n.map((e, t) => {
-                      let n = Math.floor(t / m);
+                      let n = Math.floor(t / g);
                       return (0, i.jsx)(
                           c.Z,
                           {
@@ -65,9 +65,9 @@ function u(e) {
                               questContent: o.jn.QUEST_HOME_DESKTOP,
                               contentPosition: t,
                               rowIndex: n,
-                              className: r()(d.questTile, {
-                                  [d.selected]: _ && e.id === u,
-                                  [d.unselected]: _ && e.id !== u
+                              className: a()(d.questTile, {
+                                  [d.selected]: h && e.id === u,
+                                  [d.unselected]: h && e.id !== u
                               })
                           },
                           e.id

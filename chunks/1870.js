@@ -6,20 +6,20 @@ var s,
     u,
     c = n(392711),
     d = n(442837),
-    _ = n(570140);
-let E = new Map(),
-    f = E,
-    h = !1;
-let p = !1;
-class I extends (s = d.ZP.Store) {
+    f = n(570140);
+let _ = new Map(),
+    h = _,
+    p = !1;
+let m = !1;
+class g extends (s = d.ZP.Store) {
     get isFetching() {
-        return h;
+        return p;
     }
     get isClaiming() {
         return r;
     }
     get purchases() {
-        return f;
+        return h;
     }
     get fetchError() {
         return i;
@@ -28,14 +28,14 @@ class I extends (s = d.ZP.Store) {
         return a;
     }
     get hasPreviouslyFetched() {
-        return p;
+        return m;
     }
     getPurchase(e) {
-        return null != e ? f.get(e) : void 0;
+        return null != e ? h.get(e) : void 0;
     }
 }
 (u = 'CollectiblesPurchaseStore'),
-    (l = 'displayName') in (o = I)
+    (l = 'displayName') in (o = g)
         ? Object.defineProperty(o, l, {
               value: u,
               enumerable: !0,
@@ -43,28 +43,28 @@ class I extends (s = d.ZP.Store) {
               writable: !0
           })
         : (o[l] = u),
-    (t.Z = new I(_.Z, {
+    (t.Z = new g(f.Z, {
         COLLECTIBLES_PURCHASES_FETCH: (e) => {
-            (h = !0), (i = void 0);
+            (p = !0), (i = void 0);
         },
         COLLECTIBLES_PURCHASES_FETCH_SUCCESS: (e) => {
-            0 === e.purchases.length ? (f = E) : !(0, c.isEqual)([...f.values()], e.purchases) && (f = new Map(e.purchases.map((e) => [e.skuId, e]))), (p = !0), (h = !1), (i = void 0);
+            0 === e.purchases.length ? (h = _) : !(0, c.isEqual)([...h.values()], e.purchases) && (h = new Map(e.purchases.map((e) => [e.skuId, e]))), (m = !0), (p = !1), (i = void 0);
         },
         COLLECTIBLES_PURCHASES_FETCH_FAILURE: (e) => {
             let { error: t } = e;
-            (f = E), (h = !1), (i = t), (p = !0);
+            (h = _), (p = !1), (i = t), (m = !0);
         },
         COLLECTIBLES_CLAIM: (e) => {
             (r = e.skuId), (a = void 0);
         },
         COLLECTIBLES_CLAIM_SUCCESS: (e) => {
-            null == e.purchases || 0 === e.purchases.length ? (f = E) : !(0, c.isEqual)([...f.values()], e.purchases) && (f = new Map(e.purchases.map((e) => [e.skuId, e]))), (r = void 0), (a = void 0);
+            null == e.purchases || 0 === e.purchases.length ? (h = _) : !(0, c.isEqual)([...h.values()], e.purchases) && (h = new Map(e.purchases.map((e) => [e.skuId, e]))), (r = void 0), (a = void 0);
         },
         COLLECTIBLES_CLAIM_FAILURE: (e) => {
             let { error: t, skuId: n } = e;
             (r = n), (a = t);
         },
         LOGOUT: (e) => {
-            (f = E), (h = !1), (r = void 0), (i = void 0), (a = void 0);
+            (h = _), (p = !1), (r = void 0), (i = void 0), (a = void 0);
         }
     }));

@@ -6,10 +6,10 @@ n.d(t, {
         return f;
     },
     Or: function () {
-        return _;
+        return m;
     },
     jt: function () {
-        return m;
+        return g;
     }
 }),
     n(47120);
@@ -18,8 +18,8 @@ n(192379);
 var l = n(120356),
     r = n.n(l),
     a = n(481060),
-    s = n(44315),
-    o = n(246364),
+    o = n(44315),
+    s = n(246364),
     c = n(460562),
     u = n(510601),
     d = n(981631),
@@ -37,12 +37,12 @@ function f() {
         className: h.unavailableBadge
     });
 }
-function _(e) {
+function m(e) {
     let t,
-        { audio: n, video: i, screenshare: l, isCurrentUserConnected: r, liveStage: s, activeEvent: o, activity: c, gaming: d } = e,
+        { audio: n, video: i, screenshare: l, isCurrentUserConnected: r, liveStage: o, activeEvent: s, activity: c, gaming: d } = e,
         h = (0, u.vg)('Guild Icon', !1);
-    if ((!o && !s && !c && !l && !i && d && u.ZP.trackExposure({ location: 'Guild Icon' }), o)) t = a.CalendarIcon;
-    else if (s) t = a.StageIcon;
+    if ((!s && !o && !c && !l && !i && d && u.ZP.trackExposure({ location: 'Guild Icon' }), s)) t = a.CalendarIcon;
+    else if (o) t = a.StageIcon;
     else if (c) t = a.ActivitiesIcon;
     else if (l) t = a.ScreenIcon;
     else if (i) t = a.VideoIcon;
@@ -51,36 +51,36 @@ function _(e) {
         if (!n) return null;
         t = a.VoiceNormalIcon;
     }
-    return g({
+    return C({
         icon: t,
         isCurrentUserConnected: r
     });
 }
-function m(e) {
+function g(e) {
     let { guildJoinRequestStatus: t } = e,
         [n, i] = (function (e) {
             switch (e) {
-                case o.wB.SUBMITTED:
+                case s.wB.SUBMITTED:
                     return [void 0, a.ClockIcon];
-                case o.wB.REJECTED:
+                case s.wB.REJECTED:
                     return [d.Ilk.RED_400, a.XSmallIcon];
-                case o.wB.APPROVED:
+                case s.wB.APPROVED:
                     return [d.Ilk.GREEN_360, a.CheckmarkLargeIcon];
                 default:
                     return [void 0, a.PencilIcon];
             }
         })(t);
-    return g({
+    return C({
         icon: i,
         color: n
     });
 }
-function g(e) {
+function C(e) {
     let { icon: t, color: n, isCurrentUserConnected: l } = e,
-        o = null == n ? { disableColor: !0 } : { color: (0, s.Lq)(n) };
+        s = null == n ? { disableColor: !0 } : { color: (0, o.Lq)(n) };
     return (0, i.jsx)(a.IconBadge, {
         icon: t,
         className: r()(h.iconBadge, { [h.isCurrentUserConnected]: l }),
-        ...o
+        ...s
     });
 }

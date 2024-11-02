@@ -1,24 +1,24 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(834129),
-    r = n(689938),
-    l = n(861111);
-function o(e) {
+var r = n(481060),
+    l = n(834129),
+    a = n(388032),
+    o = n(861111);
+function s(e) {
     let { message: t, compact: n } = e;
-    return (0, i.jsx)(s.Z, {
-        iconNode: (0, i.jsx)(a.ThreadIcon, {
+    return (0, i.jsx)(l.Z, {
+        iconNode: (0, i.jsx)(r.ThreadIcon, {
             size: 'md',
             color: 'currentColor',
-            className: l.icon
+            className: o.icon
         }),
         timestamp: t.timestamp,
         compact: n,
-        children: r.Z.Messages.THREAD_STARTER_MESSAGE_NOT_LOADED
+        children: a.intl.string(a.t.OCs36O)
     });
 }

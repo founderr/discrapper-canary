@@ -1,44 +1,44 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return s;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(546735),
-    s = n(754961),
-    r = n(837275);
-function l(e) {
-    let { steps: t, progress: n, updateCurrentStep: l, animationStyle: o, animationClassName: c } = e,
+var r = n(546735),
+    l = n(754961),
+    a = n(837275);
+function s(e) {
+    let { steps: t, progress: n, updateCurrentStep: s, animationStyle: o, animationClassName: c } = e,
         {
             onStepClick: d,
             onNextClick: u,
-            onBackClick: _,
-            isNextDisabled: E,
-            isBackDisabled: h
-        } = (0, a.Z)({
+            onBackClick: h,
+            isNextDisabled: m,
+            isBackDisabled: p
+        } = (0, r.Z)({
             progress: n,
-            updateCurrentStep: l
+            updateCurrentStep: s
         }),
-        { currentStep: m, furthestStep: I, brandPrimaryColor: p } = n;
+        { currentStep: g, furthestStep: f, brandPrimaryColor: _ } = n;
     return (0, i.jsxs)('div', {
-        className: r.navigation,
+        className: a.navigation,
         children: [
-            (0, i.jsx)(s.T, {
+            (0, i.jsx)(l.T, {
                 animationStyle: o,
                 className: c,
                 steps: t,
-                currentStepIndex: m,
-                furthestStepIndex: I,
+                currentStepIndex: g,
+                furthestStepIndex: f,
                 onStepClick: d,
-                stepFillColor: p
+                stepFillColor: _
             }),
-            (0, i.jsx)(s.i, {
-                isBackDisabled: h,
-                isNextDisabled: E,
+            (0, i.jsx)(l.i, {
+                isBackDisabled: p,
+                isNextDisabled: m,
                 onNextClick: u,
-                onBackClick: _,
-                nextButtonBackgroundColor: p,
+                onBackClick: h,
+                nextButtonBackgroundColor: _,
                 nextButtonClassName: c,
                 nextButtonAnimationStyle: o
             })

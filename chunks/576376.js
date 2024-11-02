@@ -1,14 +1,14 @@
-function s(e) {
+function i(e) {
     let t;
     let n = !1;
     return function () {
-        for (var s = arguments.length, a = Array(s), r = 0; r < s; r++) a[r] = arguments[r];
-        return !n && ((n = !0), (t = e(...a))), t;
+        for (var i = arguments.length, r = Array(i), a = 0; a < i; a++) r[a] = arguments[a];
+        return !n && ((n = !0), (t = e(...r))), t;
     };
 }
 n.d(t, {
     h: function () {
-        return s;
+        return i;
     }
 }),
     n(47120);

@@ -1,41 +1,41 @@
-t.d(n, {
+e.d(t, {
     U: function () {
-        return A;
+        return S;
     }
 }),
-    t(47120);
-var i = t(610521),
-    l = t(607070),
-    o = t(819640),
-    E = t(131951),
-    r = t(19780),
-    a = t(585483),
-    u = t(5967),
-    s = t(13140),
-    d = t(981631);
-let _ = new Set(['PageDown', 'PageUp', 'Home', 'End', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight']),
-    c = new Set(['Alt', 'AltGraph', 'CapsLock', 'Control', 'Fn', 'FnLock', 'Hyper', 'Meta', 'NumLock', 'OS', 'ScrollLock', 'Shift', 'Super', 'Symbol', 'SymbolLock']),
+    e(47120);
+var i = e(610521),
+    l = e(607070),
+    o = e(819640),
+    r = e(131951),
+    u = e(19780),
+    a = e(585483),
+    d = e(5967),
+    E = e(13140),
+    s = e(981631);
+let c = new Set(['PageDown', 'PageUp', 'Home', 'End', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight']),
+    _ = new Set(['Alt', 'AltGraph', 'CapsLock', 'Control', 'Fn', 'FnLock', 'Hyper', 'Meta', 'NumLock', 'OS', 'ScrollLock', 'Shift', 'Super', 'Symbol', 'SymbolLock']),
     C = new Set(['F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12', 'F13', 'F14', 'F15', 'F16', 'F17', 'F18', 'F19', 'F20', 'Accept', 'ContextMenu', 'Find', 'ZoomIn', 'ZoomOut']),
-    I = new Set(['ChannelDown', 'ChannelUp', 'MediaFastForward', 'MediaPause', 'MediaPlay', 'MediaPlayPause', 'MediaRecord', 'MediaRewind', 'MediaStop', 'MediaTrackNext', 'MediaTrackPrevious', 'AudioBalanceLeft', 'AudioBalanceRight', 'AudioBassDown', 'AudioBassBoostDown', 'AudioBassBoostToggle', 'AudioBassBoostUp', 'AudioBassUp', 'AudioFaderFront', 'AudioFaderReader', 'AudioSurroundModeNext', 'AudioTrebleDown', 'AudioTreblUp', 'AudioVolumeDown', 'AudioVolumeMute', 'AudioVolumeUp', 'VolumeUp', 'VolumeDown', 'VolumeMute']),
-    A = {
+    A = new Set(['ChannelDown', 'ChannelUp', 'MediaFastForward', 'MediaPause', 'MediaPlay', 'MediaPlayPause', 'MediaRecord', 'MediaRewind', 'MediaStop', 'MediaTrackNext', 'MediaTrackPrevious', 'AudioBalanceLeft', 'AudioBalanceRight', 'AudioBassDown', 'AudioBassBoostDown', 'AudioBassBoostToggle', 'AudioBassBoostUp', 'AudioBassUp', 'AudioFaderFront', 'AudioFaderReader', 'AudioSurroundModeNext', 'AudioTrebleDown', 'AudioTreblUp', 'AudioVolumeDown', 'AudioVolumeMute', 'AudioVolumeUp', 'VolumeUp', 'VolumeDown', 'VolumeMute']),
+    S = {
         binds: ['any-character'],
-        keydown(e, n) {
-            var t;
-            let A = null === (t = (0, u.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
-            if ((0, u.VG)(A) || i.fC.isActive() || c.has(n) || C.has(n) || I.has(n)) return !1;
-            let S = null != A && 'BODY' === A.tagName;
+        keydown(n, t) {
+            var e;
+            let S = null === (e = (0, d.uB)(n)) || void 0 === e ? void 0 : e.activeElement;
+            if ((0, d.VG)(S) || i.fC.isActive() || _.has(t) || C.has(t) || A.has(t)) return !1;
+            let I = null != S && 'BODY' === S.tagName;
             return (
-                !((l.Z.keyboardModeEnabled && !S && !/^[a-zA-Z0-9]$/.test(n)) || a.S.hasSubscribers(d.CkL.MODAL_CLOSE) || o.Z.hasLayers()) &&
-                ('Tab' === n && a.S.hasSubscribers(d.CkL.TEXTAREA_FOCUS) && null != document.querySelector('[data-can-focus="true"]')
-                    ? (e.preventDefault(), a.S.dispatch(d.CkL.TEXTAREA_FOCUS), !1)
+                !((l.Z.keyboardModeEnabled && !I && !/^[a-zA-Z0-9]$/.test(t)) || a.S.hasSubscribers(s.CkL.MODAL_CLOSE) || o.Z.hasLayers()) &&
+                ('Tab' === t && a.S.hasSubscribers(s.CkL.TEXTAREA_FOCUS) && null != document.querySelector('[data-can-focus="true"]')
+                    ? (n.preventDefault(), a.S.dispatch(s.CkL.TEXTAREA_FOCUS), !1)
                     : !(
-                          r.Z.isConnected() &&
-                          E.Z.getMode() === d.pM4.PUSH_TO_TALK &&
-                          !E.Z.isSelfMute() &&
-                          Object.values(E.Z.getShortcuts())
-                              .map(s.d2)
-                              .some((n) => n.map((e) => e.keyCode).includes(e.keyCode))
-                      ) && void (!e.metaKey && !e.ctrlKey && !_.has(n) && a.S.dispatchToLastSubscribed(d.CkL.TEXTAREA_FOCUS)))
+                          u.Z.isConnected() &&
+                          r.Z.getMode() === s.pM4.PUSH_TO_TALK &&
+                          !r.Z.isSelfMute() &&
+                          Object.values(r.Z.getShortcuts())
+                              .map(E.d2)
+                              .some((t) => t.map((n) => n.keyCode).includes(n.keyCode))
+                      ) && void (!n.metaKey && !n.ctrlKey && !c.has(t) && a.S.dispatchToLastSubscribed(s.CkL.TEXTAREA_FOCUS)))
             );
         }
     };

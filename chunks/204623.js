@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return T;
     }
 }),
     n(47120);
@@ -13,40 +13,40 @@ var r = n(200651),
     u = n(946188),
     c = n(481060),
     d = n(596454),
-    _ = n(406128),
-    E = n(451478),
-    f = n(176354),
-    h = n(63063),
-    p = n(358085),
-    I = n(998502),
-    m = n(151851),
-    T = n(981631),
-    S = n(689938);
-let g = l.ZP.connectStores([E.Z], () => ({ focused: E.Z.isFocused() }))(m.Z);
-class A extends i.PureComponent {
+    f = n(406128),
+    _ = n(451478),
+    h = n(176354),
+    p = n(63063),
+    m = n(358085),
+    g = n(998502),
+    E = n(151851),
+    v = n(981631),
+    I = n(388032);
+let S = l.ZP.connectStores([_.Z], () => ({ focused: _.Z.isFocused() }))(E.Z);
+class T extends i.PureComponent {
     getPlatform() {
         var e;
         let t = null === (e = s().os) || void 0 === e ? void 0 : e.family;
-        return null != t && /^win/i.test(t) ? p.PlatformTypes.WINDOWS : null != t && /darwin|os x/i.test(t) ? p.PlatformTypes.OSX : p.PlatformTypes.LINUX;
+        return null != t && /^win/i.test(t) ? m.PlatformTypes.WINDOWS : null != t && /darwin|os x/i.test(t) ? m.PlatformTypes.OSX : m.PlatformTypes.LINUX;
     }
     componentDidMount() {
         !(function () {
             let e = window.require('electron').remote.getCurrentWindow();
-            (I.ZP.minimize = () => e.minimize()),
-                (I.ZP.maximize = () => {
+            (g.ZP.minimize = () => e.minimize()),
+                (g.ZP.maximize = () => {
                     e.isMaximized() ? e.unmaximize() : e.maximize();
                 }),
-                (I.ZP.close = () => e.close());
+                (g.ZP.close = () => e.close());
         })();
     }
     render() {
         let e = (0, r.jsx)('div', {
                 children: (0, r.jsxs)('p', {
                     children: [
-                        S.Z.Messages.VERY_OUT_OF_DATE_DESCRIPTION,
+                        I.intl.string(I.t['4tRjHB']),
                         ' ',
                         (0, r.jsx)(d.Z, {
-                            src: f.ZP.getURL(u.Z.convert.fromCodePoint('1f44c')),
+                            src: h.ZP.getURL(u.Z.convert.fromCodePoint('1f44c')),
                             emojiName: ':ok_hand:',
                             animated: !1
                         })
@@ -56,14 +56,14 @@ class A extends i.PureComponent {
             t = (0, r.jsx)(c.Button, {
                 size: c.ButtonSizes.LARGE,
                 onClick: this.handleDownload,
-                children: S.Z.Messages.DOWNLOAD
+                children: I.intl.string(I.t['1WjMbG'])
             });
         return (0, r.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)(o.ql, { children: (0, r.jsx)('html', { className: (0, c.getThemeClass)(T.BRd.DARK) }) }),
-                (0, r.jsx)(g, { type: this.getPlatform() }),
-                (0, r.jsx)(_.Z, {
-                    title: S.Z.Messages.UNSUPPORTED_BROWSER_TITLE,
+                (0, r.jsx)(o.ql, { children: (0, r.jsx)('html', { className: (0, c.getThemeClass)(v.BRd.DARK) }) }),
+                (0, r.jsx)(S, { type: this.getPlatform() }),
+                (0, r.jsx)(f.Z, {
+                    title: I.intl.string(I.t['3h+n+/']),
                     note: e,
                     action: t
                 })
@@ -76,7 +76,7 @@ class A extends i.PureComponent {
             (t = this),
             (n = 'handleDownload'),
             (r = () => {
-                window.open(this.getPlatform() === p.PlatformTypes.WINDOWS ? h.Z.getArticleURL(T.BhN.CORRUPT_INSTALLATION) : T.EYA.DOWNLOAD);
+                window.open(this.getPlatform() === m.PlatformTypes.WINDOWS ? p.Z.getArticleURL(v.BhN.CORRUPT_INSTALLATION) : v.EYA.DOWNLOAD);
             }),
             n in t
                 ? Object.defineProperty(t, n, {

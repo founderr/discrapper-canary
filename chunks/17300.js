@@ -8,32 +8,32 @@ var r = n(147913),
     u = n(592125),
     c = n(131951),
     d = n(19780),
-    _ = n(876506),
-    E = n(981631),
-    f = n(761274);
-let h = null;
-function p() {
-    i.Z.requestPermission(f.Eu.AUDIO).then((e) => {
-        if (!!e) (0, _.Z)(!0);
+    f = n(876506),
+    _ = n(981631),
+    h = n(761274);
+let p = null;
+function m() {
+    i.Z.requestPermission(h.Eu.AUDIO).then((e) => {
+        if (!!e) (0, f.Z)(!0);
     }),
-        c.Z.getMode() === E.pM4.PUSH_TO_TALK && i.Z.requestPermission(f.Eu.INPUT_MONITORING);
+        c.Z.getMode() === _.pM4.PUSH_TO_TALK && i.Z.requestPermission(h.Eu.INPUT_MONITORING);
 }
-class I extends r.Z {
+class g extends r.Z {
     handleVoiceChannelSelect(e) {
         let { channelId: t } = e;
-        null == t && (h = null);
+        null == t && (p = null);
     }
     handleVoiceStateUpdates(e) {
         let { voiceStates: t } = e;
         t.forEach((e) => {
             var t, n, r, i;
-            let { userId: c, channelId: _ } = e;
-            if (null != _ && l.default.getId() === c && null != d.Z.getRTCConnectionId() && h !== _) {
-                if (((t = c), (n = _), (null === (r = u.Z.getChannel(n)) || void 0 === r ? !void 0 : !r.isListenModeCapable()) || a.ZP.isSpeaker(t, n))) {
-                    (h = _), p();
+            let { userId: c, channelId: f } = e;
+            if (null != f && l.default.getId() === c && null != d.Z.getRTCConnectionId() && p !== f) {
+                if (((t = c), (n = f), (null === (r = u.Z.getChannel(n)) || void 0 === r ? !void 0 : !r.isListenModeCapable()) || a.ZP.isSpeaker(t, n))) {
+                    (p = f), m();
                     return;
                 }
-                (i = new o.Z(e)), (0, s.gf)(i) === s.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && ((h = _), p());
+                (i = new o.Z(e)), (0, s.gf)(i) === s.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && ((p = f), m());
             }
         });
     }
@@ -56,4 +56,4 @@ class I extends r.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new I();
+t.Z = new g();

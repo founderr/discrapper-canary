@@ -1,31 +1,31 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return _;
+        return u;
     }
 });
-var n = t(200651);
-t(192379);
-var a = t(481060),
-    i = t(977059),
-    r = t(921801),
-    o = t(695346),
-    l = t(726985),
-    c = t(689938),
-    d = t(113207);
-function _() {
-    let { enabled: e } = (0, i.S)({ location: 'UserSettingsStreamPreviews' }),
-        s = o.I0.useSetting();
+var i = n(200651);
+n(192379);
+var s = n(481060),
+    r = n(977059),
+    l = n(921801),
+    a = n(695346),
+    o = n(726985),
+    c = n(388032),
+    d = n(113207);
+function u() {
+    let { enabled: e } = (0, r.S)({ location: 'UserSettingsStreamPreviews' }),
+        t = a.I0.useSetting();
     return e
-        ? (0, n.jsx)(r.F, {
-              setting: l.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
-              children: (0, n.jsx)(a.FormSection, {
+        ? (0, i.jsx)(l.F, {
+              setting: o.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
+              children: (0, i.jsx)(s.FormSection, {
                   className: d.marginBottom20,
-                  title: c.Z.Messages.USER_SETTINGS_STREAM_PREVIEWS,
-                  children: (0, n.jsx)(a.FormSwitch, {
-                      value: s,
-                      onChange: o.I0.updateSetting,
-                      note: c.Z.Messages.USER_SETTINGS_DISABLE_STREAM_PREVIEWS_DESC,
-                      children: c.Z.Messages.USER_SETTINGS_DISABLE_STREAM_PREVIEWS
+                  title: c.intl.string(c.t.OBwCXF),
+                  children: (0, i.jsx)(s.FormSwitch, {
+                      value: t,
+                      onChange: a.I0.updateSetting,
+                      note: c.intl.string(c.t.jTNPHB),
+                      children: c.intl.string(c.t['1CzWUF'])
                   })
               })
           })

@@ -1,72 +1,72 @@
-t.r(n),
-    t.d(n, {
+e.r(n),
+    e.d(n, {
         default: function () {
-            return N;
+            return S;
         }
     }),
-    t(47120);
-var a = t(200651),
-    o = t(192379),
-    s = t(481060),
-    i = t(230711),
-    c = t(2052),
-    r = t(906732),
-    l = t(174609),
-    _ = t(626135),
-    C = t(790527),
-    O = t(940165),
-    I = t(474936),
-    p = t(981631),
-    M = t(871465),
-    T = t(689938),
-    d = t(194213);
-function N(e) {
-    let { onClose: n, ...N } = e,
-        u = (0, c.O)(),
-        { analyticsLocations: U } = (0, r.ZP)(),
-        [S, A] = o.useState(!1);
+    e(47120);
+var i = e(200651),
+    o = e(192379),
+    a = e(481060),
+    r = e(230711),
+    c = e(2052),
+    s = e(906732),
+    l = e(174609),
+    p = e(626135),
+    C = e(790527),
+    d = e(940165),
+    u = e(474936),
+    _ = e(981631),
+    f = e(871465),
+    I = e(388032),
+    x = e(194213);
+function S(t) {
+    let { onClose: n, ...S } = t,
+        m = (0, c.O)(),
+        { analyticsLocations: N } = (0, s.ZP)(),
+        [U, E] = o.useState(!1);
     o.useEffect(() => {
-        if (!S)
-            _.default.track(p.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: I.cd.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
-                location: u.location,
-                location_stack: U
+        if (!U)
+            p.default.track(_.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: u.cd.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
+                location: m.location,
+                location_stack: N
             }),
-                A(!0);
-    }, [u.location, U, S]);
-    let E = (0, M.LB)(!1);
-    return (0, a.jsx)(C.Z, {
-        type: I.cd.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
-        artContainerClassName: d.image,
-        artURL: t(98165),
-        title: T.Z.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_TITLE,
-        glowUp: T.Z.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_TITLE,
-        body: T.Z.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_DESCRIPTION,
+                E(!0);
+    }, [m.location, N, U]);
+    let h = (0, f.LB)(!1);
+    return (0, i.jsx)(C.Z, {
+        type: u.cd.CUSTOM_NOTIFICATION_SOUNDS_UPSELL,
+        artContainerClassName: x.image,
+        artURL: e(98165),
+        title: I.intl.string(I.t.c0X1Cw),
+        glowUp: I.intl.string(I.t.c0X1Cw),
+        body: I.intl.string(I.t.SX63mJ),
         showEnhancedUpsell: !0,
-        analyticsLocation: { section: p.jXE.PREMIUM_CUSTOM_NOTIFICATION_SOUND_UPSELL_MODAL },
+        analyticsLocation: { section: _.jXE.PREMIUM_CUSTOM_NOTIFICATION_SOUND_UPSELL_MODAL },
         enableArtBoxShadow: !1,
         onSubscribeClick: l.Z,
-        secondaryCTA: T.Z.Messages.PREMIUM_ROADBLOCK_UPSELL_SECONDARY_CTA,
+        secondaryCTA: I.intl.string(I.t.PcTCBw),
         onSecondaryClick: () => {
-            n(), i.Z.open(p.oAB.PREMIUM);
+            n(), r.Z.open(_.oAB.PREMIUM);
         },
         onClose: n,
-        ...N,
-        children: (0, a.jsx)(s.FormItem, {
-            title: T.Z.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_ROADBLOCK_LABEL,
-            className: d.optionsContainerWrapper,
-            children: (0, a.jsx)('div', {
-                className: d.optionsContainer,
-                children: E.map((e, n) => {
-                    let t = e.value;
-                    return t === M.YC.CLASSIC
+        ...S,
+        children: (0, i.jsx)(a.FormItem, {
+            title: I.intl.string(I.t['K/hjQU']),
+            className: x.optionsContainerWrapper,
+            children: (0, i.jsx)('div', {
+                className: x.optionsContainer,
+                children: h.map((t, n) => {
+                    let e = t.value;
+                    return e === f.YC.CLASSIC
                         ? null
-                        : (0, a.jsx)(
-                              O.Z,
+                        : (0, i.jsx)(
+                              d.Z,
                               {
-                                  label: e.label,
-                                  soundpack: t,
-                                  description: e.description,
+                                  label: t.label,
+                                  soundpack: e,
+                                  description: t.description,
                                   location: 'upsellModal'
                               },
                               n

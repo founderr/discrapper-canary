@@ -1,40 +1,40 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return u;
+        return m;
     }
 });
-var n = t(200651);
-t(192379);
-var a = t(442837),
-    i = t(481060),
-    r = t(993413),
-    o = t(496675),
-    l = t(52597),
-    c = t(981631),
-    d = t(689938),
-    _ = t(983078);
-function u(e) {
-    let { errors: s, pendingNick: t, currentNick: u, username: E, guild: T } = e,
-        S = null != t ? t : u,
-        I = (0, a.e7)([o.Z], () => o.Z.can(c.Plq.CHANGE_NICKNAME, T) || o.Z.can(c.Plq.MANAGE_NICKNAMES, T));
-    return (0, n.jsxs)(r.Z, {
-        title: d.Z.Messages.SERVER_NICKNAME,
-        errors: s,
+var i = n(200651);
+n(192379);
+var s = n(442837),
+    r = n(481060),
+    l = n(993413),
+    a = n(496675),
+    o = n(52597),
+    c = n(981631),
+    d = n(388032),
+    u = n(983078);
+function m(e) {
+    let { errors: t, pendingNick: n, currentNick: m, username: h, guild: g } = e,
+        p = null != n ? n : m,
+        x = (0, s.e7)([a.Z], () => a.Z.can(c.Plq.CHANGE_NICKNAME, g) || a.Z.can(c.Plq.MANAGE_NICKNAMES, g));
+    return (0, i.jsxs)(l.Z, {
+        title: d.intl.string(d.t.me1lRk),
+        errors: t,
         children: [
-            (0, n.jsx)(i.TextInput, {
-                value: null != S ? S : '',
-                placeholder: E,
+            (0, i.jsx)(r.TextInput, {
+                value: null != p ? p : '',
+                placeholder: h,
                 maxLength: c.l$U,
                 onChange: function (e) {
-                    (0, l.wi)(e, u);
+                    (0, o.wi)(e, m);
                 },
-                disabled: !I
+                disabled: !x
             }),
-            !I &&
-                (0, n.jsx)(i.FormText, {
-                    className: _.nicknameDisabled,
-                    type: i.FormText.Types.DESCRIPTION,
-                    children: d.Z.Messages.CHANGE_IDENTITY_NICKNAME_PERMISSIONS_DISABLED
+            !x &&
+                (0, i.jsx)(r.FormText, {
+                    className: u.nicknameDisabled,
+                    type: r.FormText.Types.DESCRIPTION,
+                    children: d.intl.string(d.t.gzjxQk)
                 })
         ]
     });

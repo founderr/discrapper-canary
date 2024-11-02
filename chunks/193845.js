@@ -1,94 +1,94 @@
-a.r(s),
-    a.d(s, {
+t.r(s),
+    t.d(s, {
         default: function () {
-            return j;
+            return f;
         }
     }),
-    a(653041);
-var r = a(200651),
-    n = a(192379),
-    i = a(149765),
-    t = a(481060),
-    l = a(422559),
-    o = a(430824),
-    d = a(768581),
-    c = a(700785),
-    m = a(764260),
-    _ = a(981631),
-    x = a(135899),
-    u = a(689938),
-    E = a(517130);
-function N(e) {
+    t(653041);
+var n = t(200651),
+    i = t(192379),
+    r = t(149765),
+    a = t(481060),
+    l = t(422559),
+    o = t(430824),
+    d = t(768581),
+    c = t(700785),
+    m = t(764260),
+    x = t(981631),
+    u = t(135899),
+    b = t(388032),
+    h = t(517130);
+function p(e) {
     let { guild: s } = e,
-        a = d.ZP.getGuildIconURL({
+        t = d.ZP.getGuildIconURL({
             id: s.id,
             icon: s.icon,
             size: 120
         });
-    return (0, r.jsxs)(t.ModalHeader, {
-        className: E.header,
+    return (0, n.jsxs)(a.ModalHeader, {
+        className: h.header,
         children: [
-            (0, r.jsx)('div', {
-                className: E.headerIconContainer,
+            (0, n.jsx)('div', {
+                className: h.headerIconContainer,
                 children:
-                    null != a
-                        ? (0, r.jsx)(t.Avatar, {
-                              src: a,
+                    null != t
+                        ? (0, n.jsx)(a.Avatar, {
+                              src: t,
                               'aria-label': s.name,
-                              size: t.AvatarSizes.SIZE_120,
-                              className: E.__invalid_guildIcon
+                              size: a.AvatarSizes.SIZE_120,
+                              className: h.__invalid_guildIcon
                           })
-                        : (0, r.jsx)('div', {
-                              className: E.acronym,
+                        : (0, n.jsx)('div', {
+                              className: h.acronym,
                               children: s.acronym
                           })
             }),
-            (0, r.jsxs)('div', {
-                className: E.headerText,
+            (0, n.jsxs)('div', {
+                className: h.headerText,
                 children: [
-                    (0, r.jsx)(t.Heading, {
+                    (0, n.jsx)(a.Heading, {
                         variant: 'heading-lg/extrabold',
                         color: 'header-primary',
-                        children: u.Z.Messages.SAFETY_REMOVE_RISKY_PERMS_MODAL_TITLE
+                        children: b.intl.string(b.t.MatO7O)
                     }),
-                    (0, r.jsx)(t.Text, {
+                    (0, n.jsx)(a.Text, {
                         variant: 'text-md/normal',
                         color: 'header-primary',
-                        children: u.Z.Messages.SAFETY_REMOVE_RISKY_PERMS_MODAL_SUBTITLE
+                        children: b.intl.string(b.t.VyPIen)
                     })
                 ]
             })
         ]
     });
 }
-let b = (e) => {
-    if (e.toString() === _.Plq.MENTION_EVERYONE.toString()) return u.Z.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_MENTION_EVERYONE;
+let j = (e) => {
+    if (e.toString() === x.Plq.MENTION_EVERYONE.toString()) return b.intl.string(b.t.yCpsQ0);
     return (0, l.wt)(e);
 };
-function h(e) {
+function v(e) {
     let { permissions: s } = e;
-    return (0, r.jsxs)('div', {
-        className: E.tableContainer,
+    return (0, n.jsxs)('div', {
+        className: h.tableContainer,
         children: [
-            (0, r.jsx)(t.Text, {
-                className: E.tableHeader,
+            (0, n.jsx)(a.Text, {
+                className: h.tableHeader,
                 variant: 'text-xs/semibold',
                 color: 'text-muted',
-                children: u.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_ENABLED_PERMISSIONS
+                children: b.intl.string(b.t['0WZKIy'])
             }),
-            (0, r.jsx)('div', {
-                className: E.permissionsTable,
+            (0, n.jsx)('div', {
+                className: h.permissionsTable,
                 children: s.map((e, s) =>
-                    (0, r.jsxs)(
+                    (0, n.jsxs)(
                         'div',
                         {
-                            className: E.permissionRow,
+                            className: h.permissionRow,
                             children: [
-                                (0, r.jsx)('div', { className: E.bulletWarning }),
-                                (0, r.jsx)(t.Text, {
+                                (0, n.jsx)('div', { className: h.bulletWarning }),
+                                (0, n.jsx)(a.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-normal',
-                                    children: b(e)
+                                    children: j(e)
                                 })
                             ]
                         },
@@ -99,30 +99,30 @@ function h(e) {
         ]
     });
 }
-function I(e) {
+function N(e) {
     let { permissions: s } = e;
-    return (0, r.jsxs)('div', {
-        className: E.tableContainer,
+    return (0, n.jsxs)('div', {
+        className: h.tableContainer,
         children: [
-            (0, r.jsx)(t.Text, {
-                className: E.tableHeader,
+            (0, n.jsx)(a.Text, {
+                className: h.tableHeader,
                 variant: 'text-xs/semibold',
                 color: 'text-muted',
-                children: u.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_DISABLED_PERMISSIONS
+                children: b.intl.string(b.t.Yo5qlp)
             }),
-            (0, r.jsx)('div', {
-                className: E.permissionsTable,
+            (0, n.jsx)('div', {
+                className: h.permissionsTable,
                 children: s.map((e, s) =>
-                    (0, r.jsxs)(
+                    (0, n.jsxs)(
                         'div',
                         {
-                            className: E.permissionRow,
+                            className: h.permissionRow,
                             children: [
-                                (0, r.jsx)('div', { className: E.bullet }),
-                                (0, r.jsx)(t.Text, {
+                                (0, n.jsx)('div', { className: h.bullet }),
+                                (0, n.jsx)(a.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-muted',
-                                    children: b(e)
+                                    children: j(e)
                                 })
                             ]
                         },
@@ -133,75 +133,75 @@ function I(e) {
         ]
     });
 }
-function S(e) {
+function g(e) {
     let { permissions: s } = e,
-        { enabledPermissions: a, disabledPermissions: n } = s;
-    return (0, r.jsx)(t.ModalContent, {
-        children: (0, r.jsxs)('div', {
-            className: E.table,
-            children: [(0, r.jsx)(h, { permissions: a }), (0, r.jsx)(I, { permissions: n })]
+        { enabledPermissions: t, disabledPermissions: i } = s;
+    return (0, n.jsx)(a.ModalContent, {
+        children: (0, n.jsxs)('div', {
+            className: h.table,
+            children: [(0, n.jsx)(v, { permissions: t }), (0, n.jsx)(N, { permissions: i })]
         })
     });
 }
-function M(e) {
-    let { onConfirm: s, onDismiss: a } = e;
-    return (0, r.jsxs)(t.ModalFooter, {
-        className: E.footer,
+function _(e) {
+    let { onConfirm: s, onDismiss: t } = e;
+    return (0, n.jsxs)(a.ModalFooter, {
+        className: h.footer,
         children: [
-            (0, r.jsx)(t.Button, {
+            (0, n.jsx)(a.Button, {
                 onClick: s,
-                children: u.Z.Messages.UPDATE_COMMUNICATION_NOTIFICATIONS_CONFIRMATION
+                children: b.intl.string(b.t.iOSdAQ)
             }),
-            (0, r.jsx)(t.Button, {
-                look: t.Button.Looks.LINK,
-                onClick: a,
-                color: t.Button.Colors.PRIMARY,
-                children: (0, r.jsx)(t.Text, {
+            (0, n.jsx)(a.Button, {
+                look: a.Button.Looks.LINK,
+                onClick: t,
+                color: a.Button.Colors.PRIMARY,
+                children: (0, n.jsx)(a.Text, {
                     variant: 'text-sm/semibold',
                     color: 'header-primary',
-                    children: u.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_NOTICE_DISMISS
+                    children: b.intl.string(b.t.gWQZvr)
                 })
             })
         ]
     });
 }
-function j(e) {
-    let { guild: s, transitionState: a, onClose: l } = e,
-        d = n.useMemo(() => {
+function f(e) {
+    let { guild: s, transitionState: t, onClose: l } = e,
+        d = i.useMemo(() => {
             let e = [],
-                a = [];
+                t = [];
             return (
-                x.$X.map((r) => {
-                    c.oz(r, s) ? e.push(r) : a.push(r);
+                u.$X.map((n) => {
+                    c.oz(n, s) ? e.push(n) : t.push(n);
                 }),
                 {
                     enabledPermissions: e,
-                    disabledPermissions: a
+                    disabledPermissions: t
                 }
             );
         }, [s]);
     if (null == s) return null;
-    let _ = async () => {
+    let x = async () => {
         let e = null != s ? o.Z.getRole(s.id, s.getEveryoneRoleId()) : void 0;
         if (null == e) return;
-        let a = i.Od(e.permissions, x.mu);
+        let t = r.Od(e.permissions, u.mu);
         await (0, m.Gf)(s.id, [
             {
                 ...e,
-                permissions: a
+                permissions: t
             }
         ]),
             l();
     };
-    return (0, r.jsxs)(t.ModalRoot, {
-        transitionState: a,
-        size: t.ModalSize.SMALL,
-        className: E.modal,
+    return (0, n.jsxs)(a.ModalRoot, {
+        transitionState: t,
+        size: a.ModalSize.SMALL,
+        className: h.modal,
         children: [
-            (0, r.jsx)(N, { guild: s }),
-            (0, r.jsx)(S, { permissions: d }),
-            (0, r.jsx)(M, {
-                onConfirm: _,
+            (0, n.jsx)(p, { guild: s }),
+            (0, n.jsx)(g, { permissions: d }),
+            (0, n.jsx)(_, {
+                onConfirm: x,
                 onDismiss: () => {
                     l();
                 }

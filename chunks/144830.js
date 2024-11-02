@@ -1,19 +1,19 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return f;
     }
 }),
     n(411104),
     n(47120);
 var i,
-    s,
-    a,
     l,
-    r = n(200651),
+    r,
+    a,
+    s = n(200651),
     o = n(192379),
     c = n(379649),
     u = n(846519),
-    d = n(689938);
+    d = n(388032);
 function h(e, t, n) {
     return (
         t in e
@@ -27,85 +27,85 @@ function h(e, t, n) {
         e
     );
 }
-((a = i || (i = {})).ACTIVITY_FEED = 'ACTIVITY_FEED'), (a.ACTIVITY_FEED_NEW = 'ACTIVITY_FEED_NEW'), (a.USER_ACTIVITY = 'USER_ACTIVITY'), (a.GAME_LIBRARY_TIME_PLAYED = 'GAME_LIBRARY_TIME_PLAYED'), (a.GAME_LIBRARY_LAST_PLAYED = 'GAME_LIBRARY_LAST_PLAYED'), ((l = s || (s = {})).START = 'START'), (l.END = 'END'), (l.TIME = 'TIME');
+((r = i || (i = {})).ACTIVITY_FEED = 'ACTIVITY_FEED'), (r.ACTIVITY_FEED_NEW = 'ACTIVITY_FEED_NEW'), (r.USER_ACTIVITY = 'USER_ACTIVITY'), (r.GAME_LIBRARY_TIME_PLAYED = 'GAME_LIBRARY_TIME_PLAYED'), (r.GAME_LIBRARY_LAST_PLAYED = 'GAME_LIBRARY_LAST_PLAYED'), ((a = l || (l = {})).START = 'START'), (a.END = 'END'), (a.TIME = 'TIME');
 let m = (e) => (t, n) =>
         null == n
             ? ''
-            : e().format({
+            : d.intl.format(e(), {
                   time: t,
                   ...n
               }),
     p = {
         ACTIVITY_FEED: {
             START: {
-                [c.J6.SECONDS]: () => d.Z.Messages.GAME_FEED_USER_PLAYING_JUST_STARTED,
-                [c.J6.MINUTES]: (e) => d.Z.Messages.GAME_FEED_USER_PLAYING_FOR_MINUTES.format({ time: e }),
-                [c.J6.HOURS]: (e) => d.Z.Messages.GAME_FEED_USER_PLAYING_FOR_HOURS.format({ time: e }),
-                [c.J6.DAYS]: (e) => d.Z.Messages.GAME_FEED_USER_PLAYING_FOR_DAYS.format({ time: e })
+                [c.J6.SECONDS]: () => d.intl.string(d.t.ahzZr6),
+                [c.J6.MINUTES]: (e) => d.intl.formatToPlainString(d.t['03mIHR'], { time: e }),
+                [c.J6.HOURS]: (e) => d.intl.formatToPlainString(d.t.eNoooa, { time: e }),
+                [c.J6.DAYS]: (e) => d.intl.formatToPlainString(d.t['2rUo/v'], { time: e })
             },
             END: {
-                [c.J6.SECONDS]: () => d.Z.Messages.GAME_FEED_USER_PLAYING_JUST_ENDED,
-                [c.J6.MINUTES]: (e) => d.Z.Messages.GAME_FEED_USER_PLAYED_MINUTES_AGO.format({ time: e }),
-                [c.J6.HOURS]: (e) => d.Z.Messages.GAME_FEED_USER_PLAYED_HOURS_AGO.format({ time: e }),
-                [c.J6.DAYS]: (e) => d.Z.Messages.GAME_FEED_USER_PLAYED_DAYS_AGO.format({ time: e }),
-                [c.J6.WEEKS]: (e) => d.Z.Messages.GAME_FEED_USER_PLAYED_WEEKS_AGO.format({ time: e }),
-                [c.J6.MONTHS]: (e) => d.Z.Messages.GAME_FEED_USER_PLAYED_MONTHS_AGO.format({ time: e }),
-                [c.J6.YEARS]: (e) => d.Z.Messages.GAME_FEED_USER_PLAYED_YEARS_AGO.format({ time: e })
+                [c.J6.SECONDS]: () => d.intl.string(d.t.EluAd3),
+                [c.J6.MINUTES]: (e) => d.intl.formatToPlainString(d.t.BZxG8f, { time: e }),
+                [c.J6.HOURS]: (e) => d.intl.formatToPlainString(d.t.cRMUp6, { time: e }),
+                [c.J6.DAYS]: (e) => d.intl.formatToPlainString(d.t['yP1T8/'], { time: e }),
+                [c.J6.WEEKS]: (e) => d.intl.formatToPlainString(d.t.AWkdqa, { time: e }),
+                [c.J6.MONTHS]: (e) => d.intl.formatToPlainString(d.t.upamAw, { time: e }),
+                [c.J6.YEARS]: (e) => d.intl.formatToPlainString(d.t.vfMC2t, { time: e })
             }
         },
         ACTIVITY_FEED_NEW: {
             START: {
-                [c.J6.SECONDS]: m(() => d.Z.Messages.ACTIVITY_FEED_USER_PLAYING_JUST_STARTED),
-                [c.J6.MINUTES]: m(() => d.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_MINUTES),
-                [c.J6.HOURS]: m(() => d.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_HOURS),
-                [c.J6.DAYS]: m(() => d.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_DAYS)
+                [c.J6.SECONDS]: m(() => d.t.Bf3PRU),
+                [c.J6.MINUTES]: m(() => d.t['A9P+dX']),
+                [c.J6.HOURS]: m(() => d.t.KwVzfn),
+                [c.J6.DAYS]: m(() => d.t.hbUpBA)
             },
             END: {
-                [c.J6.SECONDS]: (e) => d.Z.Messages.DURATION_SECONDS_AGO.format({ seconds: e }),
-                [c.J6.MINUTES]: (e) => d.Z.Messages.DURATION_MINUTES_AGO.format({ minutes: e }),
-                [c.J6.HOURS]: (e) => d.Z.Messages.DURATION_HOURS_AGO.format({ hours: e }),
-                [c.J6.DAYS]: (e) => d.Z.Messages.DURATION_DAYS_AGO.format({ days: e })
+                [c.J6.SECONDS]: (e) => d.intl.formatToPlainString(d.t.C3MTOD, { seconds: e }),
+                [c.J6.MINUTES]: (e) => d.intl.formatToPlainString(d.t['GqQ/Y2'], { minutes: e }),
+                [c.J6.HOURS]: (e) => d.intl.formatToPlainString(d.t.c5zfWV, { hours: e }),
+                [c.J6.DAYS]: (e) => d.intl.formatToPlainString(d.t.amjnaG, { days: e })
             }
         },
         USER_ACTIVITY: {
             START: {
-                [c.J6.SECONDS]: () => d.Z.Messages.GAME_FEED_USER_PLAYING_JUST_STARTED,
+                [c.J6.SECONDS]: () => d.intl.string(d.t.ahzZr6),
                 [c.J6.MINUTES]: function (e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                    return n ? d.Z.Messages.GAME_FEED_USER_PLAYING_FOR_MINUTES.format({ time: e }) : d.Z.Messages.USER_ACTIVITY_USER_PLAYING_FOR_MINUTES.format({ time: e });
+                    return n ? d.intl.formatToPlainString(d.t['03mIHR'], { time: e }) : d.intl.formatToPlainString(d.t['vQml+P'], { time: e });
                 },
                 [c.J6.HOURS]: function (e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                    return n ? d.Z.Messages.GAME_FEED_USER_PLAYING_FOR_HOURS.format({ time: e }) : d.Z.Messages.USER_ACTIVITY_USER_PLAYING_FOR_HOURS.format({ time: e });
+                    return n ? d.intl.formatToPlainString(d.t.eNoooa, { time: e }) : d.intl.formatToPlainString(d.t['4Wq+6+'], { time: e });
                 },
                 [c.J6.DAYS]: function (e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                    return n ? d.Z.Messages.GAME_FEED_USER_PLAYING_FOR_DAYS.format({ time: e }) : d.Z.Messages.USER_ACTIVITY_USER_PLAYING_FOR_DAYS.format({ time: e });
+                    return n ? d.intl.formatToPlainString(d.t['2rUo/v'], { time: e }) : d.intl.formatToPlainString(d.t['jN3/fX'], { time: e });
                 }
             }
         },
         GAME_LIBRARY_TIME_PLAYED: {
             TIME: {
-                [c.J6.NONE]: () => d.Z.Messages.GAME_LIBRARY_TIME_PLAYED_NONE,
-                [c.J6.SECONDS]: (e) => d.Z.Messages.GAME_LIBRARY_TIME_PLAYED_SECONDS.format({ time: e }),
-                [c.J6.MINUTES]: (e) => d.Z.Messages.GAME_LIBRARY_TIME_PLAYED_MINUTES.format({ time: e }),
-                [c.J6.HOURS]: (e) => d.Z.Messages.GAME_LIBRARY_TIME_PLAYED_HOURS.format({ time: e })
+                [c.J6.NONE]: () => d.intl.string(d.t.LqDiCg),
+                [c.J6.SECONDS]: (e) => d.intl.formatToPlainString(d.t.xDIDBA, { time: e }),
+                [c.J6.MINUTES]: (e) => d.intl.formatToPlainString(d.t.KGqJcX, { time: e }),
+                [c.J6.HOURS]: (e) => d.intl.formatToPlainString(d.t.OLchUF, { time: e })
             }
         },
         GAME_LIBRARY_LAST_PLAYED: {
             END: {
-                [c.J6.NONE]: () => d.Z.Messages.GAME_LIBRARY_LAST_PLAYED_NONE,
-                [c.J6.SECONDS]: () => d.Z.Messages.GAME_LIBRARY_LAST_PLAYED_JUST_NOW,
-                [c.J6.MINUTES]: (e) => d.Z.Messages.GAME_LIBRARY_LAST_PLAYED_MINUTES.format({ time: e }),
-                [c.J6.HOURS]: (e) => d.Z.Messages.GAME_LIBRARY_LAST_PLAYED_HOURS.format({ time: e }),
-                [c.J6.DAYS]: (e) => d.Z.Messages.GAME_LIBRARY_LAST_PLAYED_DAYS.format({ time: e }),
-                [c.J6.WEEKS]: (e) => d.Z.Messages.GAME_LIBRARY_LAST_PLAYED_WEEKS.format({ time: e }),
-                [c.J6.MONTHS]: (e) => d.Z.Messages.GAME_LIBRARY_LAST_PLAYED_MONTHS.format({ time: e }),
-                [c.J6.YEARS]: (e) => d.Z.Messages.GAME_LIBRARY_LAST_PLAYED_YEARS.format({ time: e })
+                [c.J6.NONE]: () => d.intl.string(d.t.EoWLrq),
+                [c.J6.SECONDS]: () => d.intl.string(d.t.QTHa8f),
+                [c.J6.MINUTES]: (e) => d.intl.formatToPlainString(d.t.SVEfcX, { time: e }),
+                [c.J6.HOURS]: (e) => d.intl.formatToPlainString(d.t['0Gbusb'], { time: e }),
+                [c.J6.DAYS]: (e) => d.intl.formatToPlainString(d.t.hnPZZ2, { time: e }),
+                [c.J6.WEEKS]: (e) => d.intl.formatToPlainString(d.t.L3fTpK, { time: e }),
+                [c.J6.MONTHS]: (e) => d.intl.formatToPlainString(d.t.xAFWQU, { time: e }),
+                [c.J6.YEARS]: (e) => d.intl.formatToPlainString(d.t['9Yr3NT'], { time: e })
             }
         }
     };
-function _(e) {
+function f(e) {
     var t, n;
     return (
         (n = class extends (t = o.PureComponent) {
@@ -123,8 +123,8 @@ function _(e) {
                 let { start: e, end: t, time: n } = this.props;
                 if (null != n) return n / 1000 / 60;
                 let i = Date.now(),
-                    s = 0;
-                return null != e ? (s = i - e) : null != t && (s = i - t), Math.abs(s) / 1000 / 60;
+                    l = 0;
+                return null != e ? (l = i - e) : null != t && (l = i - t), Math.abs(l) / 1000 / 60;
             }
             getTimeUnit(e, t, n) {
                 let i = (0, c.jU)(e, (e) =>
@@ -148,17 +148,17 @@ function _(e) {
                 return null;
             }
             render() {
-                let { location: t, messageProps: n, isApplicationStreaming: i, ...s } = this.props,
-                    { time: a } = this.state,
-                    l = this.getType();
-                if (null == l) return null;
-                let o = this.getTimeUnit(a, t, l),
-                    u = p[t][l];
+                let { location: t, messageProps: n, isApplicationStreaming: i, ...l } = this.props,
+                    { time: r } = this.state,
+                    a = this.getType();
+                if (null == a) return null;
+                let o = this.getTimeUnit(r, t, a),
+                    u = p[t][a];
                 if (null == u) return null;
                 let d = u[o],
-                    h = Math.floor((0, c.A3)(a, o));
-                return (0, r.jsx)(e, {
-                    ...s,
+                    h = Math.floor((0, c.A3)(r, o));
+                return (0, s.jsx)(e, {
+                    ...l,
                     children: null == d ? void 0 : d(h, n, i)
                 });
             }
@@ -172,7 +172,7 @@ function _(e) {
             }
         }),
         h(n, 'Locations', i),
-        h(n, 'Types', s),
+        h(n, 'Types', l),
         n
     );
 }

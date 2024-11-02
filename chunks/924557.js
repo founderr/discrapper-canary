@@ -1,21 +1,21 @@
 n.d(t, {
     Go: function () {
-        return E;
+        return _;
     },
     NV: function () {
         return c;
     },
     Zq: function () {
-        return f;
-    },
-    ln: function () {
-        return _;
-    },
-    nM: function () {
         return h;
     },
-    xt: function () {
+    ln: function () {
+        return f;
+    },
+    nM: function () {
         return p;
+    },
+    xt: function () {
+        return m;
     }
 });
 var r = n(818083),
@@ -94,7 +94,7 @@ let c = (0, r.B)({
             }
         ]
     });
-function _() {
+function f() {
     if (!(0, l.Z)(a.Z)) return !1;
     let { enableClips: e } = d.getCurrentConfig({ location: 'areClipsEnabled' }, { autoTrackExposure: !1 }),
         { enableClips: t } = c.getCurrentConfig({ location: 'areClipsEnabled' }, { autoTrackExposure: !1 }),
@@ -102,7 +102,7 @@ function _() {
         { enableViewerClipping: r } = i.Z.getCurrentConfig({ location: 'areClipsEnabled' }, { autoTrackExposure: !1 });
     return e || t || n || r;
 }
-function E() {
+function _() {
     let e = (0, l.Z)(a.Z),
         { enableClips: t } = d.useExperiment({ location: 'useEnableClips' }, { autoTrackExposure: !1 }),
         { enableClips: n } = c.useExperiment({ location: 'useEnableClips' }, { autoTrackExposure: !1 }),
@@ -110,18 +110,18 @@ function E() {
         { enableViewerClipping: s } = i.Z.useExperiment({ location: 'useEnableClips' }, { autoTrackExposure: !1 });
     return (n || t || r || s) && e;
 }
-let f = (e) => {
+let h = (e) => {
         let { autoTrackExposure: t } = e,
             n = (0, l.Z)(a.Z),
             { enablePremiumEarlyAccessGoLiveRoadblock: r } = d.useExperiment({ location: 'useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock' }, { autoTrackExposure: t && n });
         return !!n && r;
     },
-    h = (e) => {
+    p = (e) => {
         let { autoTrackExposure: t } = e,
             n = (0, l.Z)(a.Z),
             { enablePremiumEarlyAccessAnnouncementCoachmark: r } = d.useExperiment({ location: 'useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock' }, { autoTrackExposure: t && n });
         return !!n && r;
     };
-function p(e) {
+function m(e) {
     return s.ZP.isPremiumAtLeast(e.premiumType, u.p9.TIER_2);
 }

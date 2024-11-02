@@ -1,18 +1,18 @@
 n.d(e, {
     M: function () {
-        return i;
+        return l;
     }
 });
 var a = n(200651);
 n(192379);
 var r = n(512969),
     o = n(860911),
-    s = n(981631),
-    c = n(188785);
-function i() {
+    i = n(981631),
+    s = n(188785);
+function l() {
     let t = location.pathname + location.search;
-    return c.a ? s.Z5c.REGISTER : (0, o.Ui)(t, !1);
+    return s.a ? i.Z5c.REGISTER : (0, o.Ui)(t, !1);
 }
 e.Z = function () {
-    return (0, a.jsx)(r.l_, { to: i() });
+    return (0, a.jsx)(r.l_, { to: l() });
 };

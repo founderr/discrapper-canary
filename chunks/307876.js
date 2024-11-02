@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return h;
     }
 });
 var r = n(232567),
@@ -24,31 +24,31 @@ function c(e, t, n) {
     );
 }
 let d = !1;
-function _(e) {
+function f(e) {
     if (__OVERLAY__) return;
     let t = o.default.getCurrentUser();
     if (null == t) return;
     let n = s.Z.getChannelId(),
         r = a.Z.getDMFromUserId(l.I);
-    if (!t.hasUrgentMessages() || r === n) return E({ channelId: n });
+    if (!t.hasUrgentMessages() || r === n) return _({ channelId: n });
     !d && ((d = !0), e());
 }
-function E(e) {
+function _(e) {
     let { channelId: t } = e,
         n = o.default.getCurrentUser(),
         i = t === a.Z.getDMFromUserId(l.I);
     null != n && n.hasUrgentMessages() && i && ((d = !1), r.mB(u.xW$.HAS_UNREAD_URGENT_MESSAGES, !1));
 }
-class f extends i.Z {
+class h extends i.Z {
     constructor(e) {
         super(),
             c(this, 'handleShowUrgentMessageAlert', void 0),
             c(this, 'actions', void 0),
             (this.handleShowUrgentMessageAlert = e),
             (this.actions = {
-                POST_CONNECTION_OPEN: () => _(this.handleShowUrgentMessageAlert),
-                MESSAGE_CREATE: () => _(this.handleShowUrgentMessageAlert),
-                CHANNEL_SELECT: E
+                POST_CONNECTION_OPEN: () => f(this.handleShowUrgentMessageAlert),
+                MESSAGE_CREATE: () => f(this.handleShowUrgentMessageAlert),
+                CHANNEL_SELECT: _
             });
     }
 }

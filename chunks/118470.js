@@ -1,67 +1,67 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 }),
     n(47120),
     n(653041);
 var i = n(200651),
-    a = n(192379),
-    s = n(442837),
-    r = n(812206),
-    l = n(82950),
+    r = n(192379),
+    l = n(442837),
+    a = n(812206),
+    s = n(82950),
     o = n(434404),
     c = n(106976),
     d = n(270144),
     u = n(981631),
-    _ = n(689938),
-    E = n(466389);
-function h(e) {
+    h = n(388032),
+    m = n(466389);
+function p(e) {
     let t,
         { guild: n } = e,
-        h = (0, d.h6)(n),
-        m = () => (0, c.sB)(n.id),
-        I = a.useMemo(() => new Set(h.map((e) => e.applicationId)), [h]),
-        p = (0, s.Wu)(
-            [r.Z],
+        p = (0, d.h6)(n),
+        g = () => (0, c.sB)(n.id),
+        f = r.useMemo(() => new Set(p.map((e) => e.applicationId)), [p]),
+        _ = (0, l.Wu)(
+            [a.Z],
             () => {
                 let e = [];
-                for (let t of I) {
-                    let n = r.Z.getApplication(t);
+                for (let t of f) {
+                    let n = a.Z.getApplication(t);
                     null != n && e.push(n);
                 }
                 return e;
             },
-            [I]
+            [f]
         );
-    return 0 === p.length
+    return 0 === _.length
         ? null
         : ((t =
-              1 === p.length
-                  ? _.Z.Messages.ONE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({ a: p[0].name })
-                  : 2 === p.length
-                    ? _.Z.Messages.TWO_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
-                          a: p[0].name,
-                          b: p[1].name
+              1 === _.length
+                  ? h.intl.formatToPlainString(h.t['Egq+Gx'], { a: _[0].name })
+                  : 2 === _.length
+                    ? h.intl.formatToPlainString(h.t.LxU9R0, {
+                          a: _[0].name,
+                          b: _[1].name
                       })
-                    : 3 === p.length
-                      ? _.Z.Messages.THREE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
-                            a: p[0].name,
-                            b: p[1].name,
-                            c: p[2].name
+                    : 3 === _.length
+                      ? h.intl.formatToPlainString(h.t.crKXMD, {
+                            a: _[0].name,
+                            b: _[1].name,
+                            c: _[2].name
                         })
-                      : _.Z.Messages.MORE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT),
-          (0, i.jsx)(l.Z, {
+                      : h.intl.string(h.t.MvfowM)),
+          (0, i.jsx)(s.Z, {
               guild: n,
-              onDismissed: m,
+              onDismissed: g,
               message: t,
               type: u.vID.APPLICATION_SUBSCRIPTION_EXPIRATION,
-              image: E,
+              image: m,
               onClick: () => {
-                  m(), o.Z.open(n.id, u.pNK.INTEGRATIONS);
+                  g(), o.Z.open(n.id, u.pNK.INTEGRATIONS);
               },
               imageMarginTop: 6,
               imageMarginX: 46,
-              cta: _.Z.Messages.APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CTA
+              cta: h.intl.string(h.t.Rr3MAQ)
           }));
 }

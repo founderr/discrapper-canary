@@ -13,25 +13,25 @@ t.Z = function (e) {
             disableInteraction: u = !1,
             childrenRepliedMessage: c,
             childrenExecutedCommand: d,
-            childrenHeader: _,
-            childrenSystemMessage: E,
-            childrenButtons: f,
-            childrenMessageContent: h,
-            childrenAccessories: p,
-            messageRef: I,
-            focusProps: m = {
+            childrenHeader: f,
+            childrenSystemMessage: _,
+            childrenButtons: h,
+            childrenMessageContent: p,
+            childrenAccessories: m,
+            messageRef: g,
+            focusProps: E = {
                 offset: {
                     left: 4,
                     right: 4
                 }
             },
-            hasThread: T,
-            isSystemMessage: S,
-            hasReply: g,
-            ...A
+            hasThread: v,
+            isSystemMessage: I,
+            hasReply: S,
+            ...T
         } = e,
-        N = (0, r.jsx)(s.FocusRing, {
-            ...m,
+        b = (0, r.jsx)(s.FocusRing, {
+            ...E,
             children: (0, r.jsxs)('div', {
                 className: a()(t, {
                     [o.wrapper]: !0,
@@ -39,29 +39,29 @@ t.Z = function (e) {
                     [o.compact]: n,
                     [o.cozy]: !n,
                     [o.zalgo]: l,
-                    [o.hasThread]: T,
-                    [o.isSystemMessage]: S,
-                    [o.hasReply]: g
+                    [o.hasThread]: v,
+                    [o.isSystemMessage]: I,
+                    [o.hasReply]: S
                 }),
-                ref: I,
-                ...A,
+                ref: g,
+                ...T,
                 role: 'article',
                 children: [
                     c,
                     d,
                     (0, r.jsxs)('div', {
                         className: o.contents,
-                        children: [E, _, null == E && h]
+                        children: [_, f, null == _ && p]
                     }),
-                    p,
-                    null != f
+                    m,
+                    null != h
                         ? (0, r.jsx)('div', {
                               className: o.buttonContainer,
-                              children: f
+                              children: h
                           })
                         : null
                 ]
             })
         });
-    return u ? (0, r.jsx)(s.FocusBlock, { children: N }) : N;
+    return u ? (0, r.jsx)(s.FocusBlock, { children: b }) : b;
 };

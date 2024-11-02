@@ -12,34 +12,34 @@ let u = {
         LEFT: l.directionLeft
     },
     c = (e) => {
-        let { direction: t = u.DOWN, width: n = 24, height: i = 24, color: c = 'currentColor', transition: d = l.transition, className: _, foreground: E, expanded: f, ...h } = e,
-            { enabled: p } = (0, s.useRedesignIconContext)(),
-            I = t;
-        if ((!0 === f ? (I = u.DOWN) : !1 === f && (I = u.RIGHT), p)) {
+        let { direction: t = u.DOWN, width: n = 24, height: i = 24, color: c = 'currentColor', transition: d = l.transition, className: f, foreground: _, expanded: h, ...p } = e,
+            { enabled: m } = (0, s.useRedesignIconContext)(),
+            g = t;
+        if ((!0 === h ? (g = u.DOWN) : !1 === h && (g = u.RIGHT), m)) {
             let e = {
                 [u.UP]: s.ChevronSmallUpIcon,
                 [u.DOWN]: s.ChevronSmallDownIcon,
                 [u.LEFT]: s.ChevronSmallLeftIcon,
                 [u.RIGHT]: s.ChevronSmallRightIcon
-            }[I];
+            }[g];
             return (0, r.jsx)(e, {
-                ...h,
-                className: _,
+                ...p,
+                className: f,
                 size: 'custom',
                 width: n,
                 height: i,
                 color: null != c ? c : 'currentColor',
-                colorClass: E
+                colorClass: _
             });
         }
         return (0, r.jsx)('svg', {
-            className: a()(_, d, I),
+            className: a()(f, d, g),
             width: n,
             height: i,
             viewBox: '0 0 24 24',
-            ...(0, o.Z)(h),
+            ...(0, o.Z)(p),
             children: (0, r.jsx)('path', {
-                className: E,
+                className: _,
                 fill: 'none',
                 stroke: c,
                 strokeWidth: '2',

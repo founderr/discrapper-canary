@@ -1,41 +1,41 @@
 n.d(t, {
     M: function () {
-        return l;
+        return s;
     }
 }),
     n(47120);
 var i = n(192379),
-    a = n(288385),
-    s = n(674588),
-    r = n(979007);
-function l() {
+    r = n(288385),
+    l = n(674588),
+    a = n(979007);
+function s() {
     let [e, t] = i.useState(''),
-        [n, l] = i.useState(''),
+        [n, s] = i.useState(''),
         [o, c] = i.useState(!1),
         d = i.useCallback((e) => {
             t(e);
         }, []),
         u = i.useCallback(() => {
-            t(''), l(''), c(!1);
+            t(''), s(''), c(!1);
         }, []),
-        _ = i.useCallback(() => {
-            s.yC({
+        h = i.useCallback(() => {
+            l.yC({
                 query: e,
                 options: {
                     page: 1,
-                    source: a.F.APP_DIRECTORY,
-                    pageSize: r.IV
+                    source: r.F.APP_DIRECTORY,
+                    pageSize: a.IV
                 }
             }),
                 c(!0),
-                l(e);
+                s(e);
         }, [e]);
     return {
         searchQuery: e,
         searchFetchedQuery: n,
         onSearchTextChange: d,
         onClearSearch: u,
-        onSearchSubmit: _,
+        onSearchSubmit: h,
         hasSearchView: o
     };
 }

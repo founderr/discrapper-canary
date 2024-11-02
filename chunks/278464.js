@@ -11,6 +11,6 @@ function a() {
         { pathname: t } = (0, i.TH)(),
         n = t.startsWith(r.Z5c.GUILD_DISCOVERY) || t.startsWith(r.Z5c.GLOBAL_DISCOVERY),
         a = t.startsWith(r.Z5c.GUILD_MEMBER_VERIFICATION('')),
-        s = t.startsWith(r.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(''));
-    return null == e && !(n || a || s);
+        o = t.startsWith(r.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(''));
+    return null == e && !(n || a || o);
 }

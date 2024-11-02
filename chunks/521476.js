@@ -6,42 +6,42 @@ n.d(t, {
     n(47120);
 var i = n(200651);
 n(192379);
-var s = n(481060),
-    a = n(100527),
-    l = n(906732),
-    r = n(545594),
+var l = n(481060),
+    r = n(100527),
+    a = n(906732),
+    s = n(545594),
     o = n(295474),
     c = n(981631),
-    u = n(689938),
+    u = n(388032),
     d = n(473313);
 function h(e) {
     var t, n;
     let { guild: h } = e,
-        { analyticsLocations: m } = (0, l.ZP)(a.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT),
-        [p, _] = (0, o.ww)({
+        { analyticsLocations: m } = (0, a.ZP)(r.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT),
+        [p, f] = (0, o.ww)({
             guildId: null !== (t = null == h ? void 0 : h.id) && void 0 !== t ? t : c.lds,
             analyticsLocations: m,
             openWithoutBackstack: !0
         }),
-        f = _ ? u.Z.Messages.GUILD_AUTOMOD_PROFILE_INVALID_DESCRIPTION : u.Z.Messages.GUILD_AUTOMOD_PROFILE_INVALID_NO_PERMS_DESCRIPTION,
-        E = _ ? u.Z.Messages.GUILD_AUTOMOD_UPDATE_PROFILE_CTA : u.Z.Messages.GUILD_AUTOMOD_UPDATE_ACCOUNT_USERNAME_CTA;
+        g = f ? u.intl.string(u.t['9ph2v7']) : u.intl.string(u.t.ldh9Cg),
+        C = f ? u.intl.string(u.t['/PGQf3']) : u.intl.string(u.t.WikgZ2);
     return (0, i.jsx)('div', {
-        children: (0, i.jsx)(r.i, {
-            bannerIcon: (0, i.jsx)(s.ChatXIcon, {
+        children: (0, i.jsx)(s.i, {
+            bannerIcon: (0, i.jsx)(l.ChatXIcon, {
                 size: 'lg',
                 color: 'currentColor',
                 className: d.bannerIcon
             }),
-            bannerHeader: u.Z.Messages.GUILD_AUTOMOD_PROFILE_INVALID_MODAL_TITLE_MOBILE.format({ guildName: null !== (n = null == h ? void 0 : h.name) && void 0 !== n ? n : '' }),
-            bannerSubtext: f,
+            bannerHeader: u.intl.format(u.t.kcYdTk, { guildName: null !== (n = null == h ? void 0 : h.name) && void 0 !== n ? n : '' }),
+            bannerSubtext: g,
             containerStyles: d.bannerContainer,
             headerStyles: d.bannerHeader,
-            children: (0, i.jsx)(s.Button, {
+            children: (0, i.jsx)(l.Button, {
                 onClick: () => {
                     p();
                 },
-                size: s.Button.Sizes.SMALL,
-                children: E
+                size: l.Button.Sizes.SMALL,
+                children: C
             })
         })
     });

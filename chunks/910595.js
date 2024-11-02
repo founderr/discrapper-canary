@@ -8,9 +8,9 @@ n(192379);
 var l = n(481060),
     r = n(703656),
     a = n(434479),
-    s = n(981631),
-    o = n(176505),
-    c = n(689938);
+    o = n(981631),
+    s = n(176505),
+    c = n(388032);
 function u(e) {
     let { guild: t, selected: n } = e;
     return (0, i.jsx)(a.m, {
@@ -21,10 +21,10 @@ function u(e) {
                 color: 'currentColor',
                 className: e
             }),
-        text: c.Z.Messages.SERVER_GUIDE,
+        text: c.intl.string(c.t.VbpLyc),
         selected: n,
         onClick: function () {
-            (0, r.uL)(s.Z5c.CHANNEL(t.id, o.oC.GUILD_HOME));
+            (0, r.uL)(o.Z5c.CHANNEL(t.id, s.oC.GUILD_HOME));
         }
     });
 }

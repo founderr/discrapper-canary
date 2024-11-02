@@ -1,58 +1,58 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return O;
+        return I;
     }
 });
-var n = t(200651),
-    a = t(192379),
-    i = t(409700),
-    r = t(977059),
-    o = t(630759),
-    l = t(398826),
-    c = t(10298),
-    d = t(623196),
-    _ = t(993315),
-    u = t(883382),
-    E = t(940021),
-    T = t(402583),
-    S = t(230341),
-    I = t(893996),
-    N = t(266132),
-    m = t(726985),
-    C = t(689938);
-function A() {
-    let { enabled: e } = (0, r.S)({ location: 'UserSettingsDataAndPrivacy' });
+var i = n(200651),
+    s = n(192379),
+    r = n(409700),
+    l = n(977059),
+    a = n(630759),
+    o = n(398826),
+    c = n(10298),
+    d = n(623196),
+    u = n(993315),
+    m = n(883382),
+    h = n(940021),
+    g = n(402583),
+    p = n(230341),
+    x = n(893996),
+    S = n(266132),
+    T = n(726985),
+    C = n(388032);
+function _() {
+    let { enabled: e } = (0, l.S)({ location: 'UserSettingsDataAndPrivacy' });
     return e
-        ? (0, n.jsxs)(I.Z, {
-              title: C.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_VOICE_SECURITY,
-              description: C.Z.Messages.USER_SETTINGS_VOICE_PRIVACY_NOTE_V2.format({ helpArticle: (0, o.uV)() }),
-              webSetting: m.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
-              children: [(0, n.jsx)(S.Z, {}), (0, n.jsx)(N.Z, {})]
+        ? (0, i.jsxs)(x.Z, {
+              title: C.intl.string(C.t.WWaFn5),
+              description: C.intl.formatToPlainString(C.t['/6sFWV'], { helpArticle: (0, a.uV)() }),
+              webSetting: T.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
+              children: [(0, i.jsx)(p.Z, {}), (0, i.jsx)(S.Z, {})]
           })
         : null;
 }
-function g() {
-    return (0, n.jsx)(I.Z, {
-        title: C.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_REQUEST_DATA,
-        webSetting: m.s6.PRIVACY_AND_SAFETY_RECEIVE_DISCORD_DATA_CATEGORY,
-        children: (0, n.jsx)(d.Z, {})
+function E() {
+    return (0, i.jsx)(x.Z, {
+        title: C.intl.string(C.t.BG7Qsb),
+        webSetting: T.s6.PRIVACY_AND_SAFETY_RECEIVE_DISCORD_DATA_CATEGORY,
+        children: (0, i.jsx)(d.Z, {})
     });
 }
-function h() {
-    return (0, n.jsxs)(I.Z, {
-        title: C.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_DISCORD_DATA_USAGE,
-        webSetting: m.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
-        children: [(0, n.jsx)(T.Z, {}), (0, n.jsx)(E.Z, {}), (0, n.jsx)(u.Z, {}), (0, n.jsx)(_.Z, {})]
+function f() {
+    return (0, i.jsxs)(x.Z, {
+        title: C.intl.string(C.t.SRZyHh),
+        webSetting: T.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
+        children: [(0, i.jsx)(g.Z, {}), (0, i.jsx)(h.Z, {}), (0, i.jsx)(m.Z, {}), (0, i.jsx)(u.Z, {})]
     });
 }
-function O() {
+function I() {
     return (
-        a.useEffect(() => {
-            (0, i.I)(), (0, l.A)();
+        s.useEffect(() => {
+            (0, r.I)(), (0, o.A)();
         }, []),
-        (0, n.jsxs)(c.N, {
-            header: C.Z.Messages.DATA_AND_PRIVACY,
-            children: [(0, n.jsx)(h, {}), (0, n.jsx)(g, {}), (0, n.jsx)(A, {})]
+        (0, i.jsxs)(c.N, {
+            header: C.intl.string(C.t.OAuOHB),
+            children: [(0, i.jsx)(f, {}), (0, i.jsx)(E, {}), (0, i.jsx)(_, {})]
         })
     );
 }

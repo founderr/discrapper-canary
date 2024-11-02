@@ -7,11 +7,11 @@ var r = n(200651);
 n(192379);
 var i = n(481060),
     a = n(871499),
-    s = n(689938);
+    s = n(388032);
 function o(e) {
     let { label: t, ...n } = e;
     return (0, r.jsx)(a.Z, {
-        label: null != t ? t : s.Z.Messages.CLOSE,
+        label: null != t ? t : s.intl.string(s.t.cpT0Cg),
         iconComponent: i.XSmallBoldIcon,
         ...n
     });

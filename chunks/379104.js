@@ -32,15 +32,15 @@ function l(e, t) {
                 u = null,
                 c = n,
                 d = null,
-                _ = this._root;
+                f = this._root;
             for (c.right = this._root; ; ) {
-                if ((null === _ ? ((_ = new i(e)), d.set_child(r, _), (t = !0), this.size++) : s(_.left) && s(_.right) && ((_.red = !0), (_.left.red = !1), (_.right.red = !1)), s(_) && s(d))) {
-                    var E = c.right === u;
-                    _ === d.get_child(a) ? c.set_child(E, o(u, !a)) : c.set_child(E, l(u, !a));
+                if ((null === f ? ((f = new i(e)), d.set_child(r, f), (t = !0), this.size++) : s(f.left) && s(f.right) && ((f.red = !0), (f.left.red = !1), (f.right.red = !1)), s(f) && s(d))) {
+                    var _ = c.right === u;
+                    f === d.get_child(a) ? c.set_child(_, o(u, !a)) : c.set_child(_, l(u, !a));
                 }
-                var f = this._comparator(_.data, e);
-                if (0 === f) break;
-                (a = r), (r = f < 0), null !== u && (c = u), (u = d), (d = _), (_ = _.get_child(r));
+                var h = this._comparator(f.data, e);
+                if (0 === h) break;
+                (a = r), (r = h < 0), null !== u && (c = u), (u = d), (d = f), (f = f.get_child(r));
             }
             this._root = n.right;
         }
@@ -54,20 +54,20 @@ function l(e, t) {
         for (var r = null, a = null, u = null, c = 1; null !== n.get_child(c); ) {
             var d = c;
             (a = r), (r = n), (n = n.get_child(c));
-            var _ = this._comparator(e, n.data);
-            if (((c = _ > 0), 0 === _ && (u = n), !s(n) && !s(n.get_child(c)))) {
+            var f = this._comparator(e, n.data);
+            if (((c = f > 0), 0 === f && (u = n), !s(n) && !s(n.get_child(c)))) {
                 if (s(n.get_child(!c))) {
-                    var E = o(n, c);
-                    r.set_child(d, E), (r = E);
+                    var _ = o(n, c);
+                    r.set_child(d, _), (r = _);
                 } else if (!s(n.get_child(!c))) {
-                    var f = r.get_child(!d);
-                    if (null !== f) {
-                        if (s(f.get_child(!d)) || s(f.get_child(d))) {
-                            var h = a.right === r;
-                            s(f.get_child(d)) ? a.set_child(h, l(r, d)) : s(f.get_child(!d)) && a.set_child(h, o(r, d));
-                            var p = a.get_child(h);
-                            (p.red = !0), (n.red = !0), (p.left.red = !1), (p.right.red = !1);
-                        } else (r.red = !1), (f.red = !0), (n.red = !0);
+                    var h = r.get_child(!d);
+                    if (null !== h) {
+                        if (s(h.get_child(!d)) || s(h.get_child(d))) {
+                            var p = a.right === r;
+                            s(h.get_child(d)) ? a.set_child(p, l(r, d)) : s(h.get_child(!d)) && a.set_child(p, o(r, d));
+                            var m = a.get_child(p);
+                            (m.red = !0), (n.red = !0), (m.left.red = !1), (m.right.red = !1);
+                        } else (r.red = !1), (h.red = !0), (n.red = !0);
                     }
                 }
             }

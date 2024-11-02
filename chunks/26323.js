@@ -18,9 +18,9 @@ function u(e, t) {
         location: e.analyticsSourceLocation
     });
     let { openInPopoutEnabled: c, ...d } = e,
-        _ = a.Z.getWindowOpen(l.KJ3.CHANNEL_CALL_POPOUT) && null != c && c;
-    _ && (0, s.Z)(l.KJ3.CHANNEL_CALL_POPOUT);
-    let E = _ ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
+        f = a.Z.getWindowOpen(l.KJ3.CHANNEL_CALL_POPOUT) && null != c && c;
+    f && (0, s.Z)(l.KJ3.CHANNEL_CALL_POPOUT);
+    let _ = f ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
     (0, i.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([n.e('29549'), n.e('89675')]).then(n.bind(n, 146747));
@@ -37,7 +37,7 @@ function u(e, t) {
                     location: e.analyticsSourceLocation
                 });
             },
-            contextKey: E
+            contextKey: _
         }
     );
 }

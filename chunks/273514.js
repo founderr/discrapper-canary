@@ -4,7 +4,7 @@ var i = n(481060),
     a = n(565138),
     s = n(592125),
     o = n(430824),
-    l = n(689938),
+    l = n(388032),
     u = n(441159);
 t.Z = (e) => {
     let { entry: t } = e,
@@ -19,7 +19,7 @@ t.Z = (e) => {
                   (0, r.jsx)(i.Heading, {
                       className: u.header,
                       variant: 'heading-sm/semibold',
-                      children: l.Z.Messages.REPORT_MODAL_SERVER_PREVIEW_HEADER
+                      children: l.intl.string(l.t.nTe4HB)
                   }),
                   (0, r.jsxs)('div', {
                       className: u.guildContainer,

@@ -1,21 +1,21 @@
-var o, l, a, s;
+var i, l, r, o;
 n.d(t, {
     PU: function () {
-        return r;
+        return a;
     },
     _m: function () {
-        return o;
+        return i;
     },
     lr: function () {
         return l;
     }
 }),
-    ((a = o || (o = {})).GUILD_TEMPLATES = 'guild-templates'),
-    (a.CUSTOMIZE_GUILD = 'customize-guild'),
-    (a.CHANNEL_PROMPT = 'channel-prompt'),
-    (a.JOIN_GUILD = 'join-guild'),
-    (a.CREATION_INTENT = 'creation-intent'),
-    ((s = l || (l = {})).FRIENDS = 'FRIENDS'),
-    (s.COMMUNITY = 'COMMUNITY'),
-    (s.CLAN = 'CLAN');
-let r = 'create-guild';
+    ((r = i || (i = {})).GUILD_TEMPLATES = 'guild-templates'),
+    (r.CUSTOMIZE_GUILD = 'customize-guild'),
+    (r.CHANNEL_PROMPT = 'channel-prompt'),
+    (r.JOIN_GUILD = 'join-guild'),
+    (r.CREATION_INTENT = 'creation-intent'),
+    ((o = l || (l = {})).FRIENDS = 'FRIENDS'),
+    (o.COMMUNITY = 'COMMUNITY'),
+    (o.CLAN = 'CLAN');
+let a = 'create-guild';

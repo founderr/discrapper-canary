@@ -1,35 +1,35 @@
-t.d(n, {
+n.d(t, {
     B: function () {
-        return E;
+        return v;
     }
 }),
-    t(724458);
-var l = t(200651),
-    s = t(192379),
-    a = t(120356),
-    i = t.n(a),
-    r = t(481060),
-    o = t(397195),
-    d = t(473403),
-    u = t(603236),
-    c = t(689938),
-    h = t(871820),
-    I = t(113207);
-let g = (e) => {
-        let { guild: n, inviteChannel: t, setInviteChannel: a } = e,
-            i = (0, o.Z)(n.id),
-            u = s.useMemo(
+    n(724458);
+var l = n(200651),
+    i = n(192379),
+    r = n(120356),
+    s = n.n(r),
+    a = n(481060),
+    o = n(397195),
+    d = n(473403),
+    u = n(603236),
+    c = n(388032),
+    h = n(871820),
+    g = n(113207);
+let m = (e) => {
+        let { guild: t, inviteChannel: n, setInviteChannel: r } = e,
+            s = (0, o.Z)(t.id),
+            u = i.useMemo(
                 () =>
-                    i.reduce(
-                        (e, n) => ({
+                    s.reduce(
+                        (e, t) => ({
                             ...e,
-                            [n.id]: n
+                            [t.id]: t
                         }),
                         {}
                     ),
-                [i]
+                [s]
             ),
-            h = s.useMemo(
+            h = i.useMemo(
                 () =>
                     Object.values(u).map((e) => ({
                         value: e.id,
@@ -37,72 +37,72 @@ let g = (e) => {
                     })),
                 [u]
             );
-        return (0, l.jsx)(r.SearchableSelect, {
+        return (0, l.jsx)(a.SearchableSelect, {
             options: h,
-            value: null == t ? void 0 : t.id,
+            value: null == n ? void 0 : n.id,
             onChange: (e) => {
-                a(u[e]);
+                r(u[e]);
             },
-            placeholder: c.Z.Messages.INVITE_A_GUEST_SELECT_VOICE_CHANNEL,
+            placeholder: c.intl.string(c.t.VY7qjo),
             renderOptionPrefix: (e) => {
                 if (null == e) return null;
-                let t = u[e.value];
-                return null == t
+                let n = u[e.value];
+                return null == n
                     ? null
                     : (0, l.jsx)(d._, {
-                          channel: t,
-                          guild: n
+                          channel: n,
+                          guild: t
                       });
             }
         });
     },
-    E = (e) => {
-        let { handleDone: n, headerId: t, inviteChannel: s, copyValue: a } = e;
+    v = (e) => {
+        let { handleDone: t, headerId: n, inviteChannel: i, copyValue: r } = e;
         return (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsxs)(r.ModalHeader, {
+                (0, l.jsxs)(a.ModalHeader, {
                     children: [
-                        (0, l.jsx)(r.ModalCloseButton, {
+                        (0, l.jsx)(a.ModalCloseButton, {
                             className: h.closeButton,
-                            onClick: n
+                            onClick: t
                         }),
                         (0, l.jsx)('div', {
                             className: h.headerContainer,
-                            children: (0, l.jsx)(r.FormTitle, {
-                                id: t,
+                            children: (0, l.jsx)(a.FormTitle, {
+                                id: n,
                                 tag: 'h2',
-                                className: i()(I.marginReset, h.headerCloseButtonSpacing, h.headerText),
-                                children: c.Z.Messages.INVITE_A_GUEST_VOICE_ONLY
+                                className: s()(g.marginReset, h.headerCloseButtonSpacing, h.headerText),
+                                children: c.intl.string(c.t.HF5aqq)
                             })
                         })
                     ]
                 }),
-                (0, l.jsx)(r.ModalContent, {
+                (0, l.jsx)(a.ModalContent, {
                     className: h.noScroll,
                     children: (0, l.jsxs)('div', {
                         className: h.guestBody,
                         children: [
-                            (0, l.jsx)(r.Text, {
+                            (0, l.jsx)(a.Text, {
                                 tag: 'div',
                                 variant: 'heading-sm/normal',
                                 color: 'header-secondary',
-                                children: c.Z.Messages.INVITE_A_GUEST_EXPLANATION
+                                children: c.intl.string(c.t.BlXIsr)
                             }),
-                            (0, l.jsx)(r.FormTitle, {
+                            (0, l.jsx)(a.FormTitle, {
                                 tag: 'h5',
                                 className: h.guestSelectChannelHeader,
-                                children: c.Z.Messages.INVITE_A_GUEST_STEP_1
+                                children: c.intl.string(c.t.sqHWY2)
                             }),
-                            (0, l.jsx)(g, { ...e }),
-                            (0, l.jsx)(r.FormTitle, {
+                            (0, l.jsx)(m, { ...e }),
+                            (0, l.jsx)(a.FormTitle, {
                                 tag: 'h5',
                                 className: h.guestSendInviteLinkHeader,
-                                children: c.Z.Messages.INVITE_A_GUEST_STEP_2
+                                children: c.intl.string(c.t.Fp6SU1)
                             }),
                             (0, l.jsx)(u.I, {
                                 ...e,
-                                copyValue: null == s ? '' : a,
-                                disabled: null == s
+                                copyValue: null == i ? '' : r,
+                                disabled: null == i
                             })
                         ]
                     })

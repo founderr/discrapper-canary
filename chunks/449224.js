@@ -7,7 +7,7 @@ var i,
     u = n(570140),
     c = n(594190),
     d = n(77498);
-class _ extends (o = l.ZP.Store) {
+class f extends (o = l.ZP.Store) {
     getGameForPID(e) {
         var t;
         if (__OVERLAY__ || null == e) return null;
@@ -19,7 +19,7 @@ class _ extends (o = l.ZP.Store) {
     }
 }
 (s = 'OverlayRunningGameStore'),
-    (a = 'displayName') in (i = _)
+    (a = 'displayName') in (i = f)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -27,7 +27,7 @@ class _ extends (o = l.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new _(u.Z, {
+    (t.Z = new f(u.Z, {
         OVERLAY_INITIALIZE: function (e) {
             r = e.currentGame;
         },

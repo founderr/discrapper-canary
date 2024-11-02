@@ -1,109 +1,109 @@
-o.r(s), o(47120);
+o.r(t), o(47120);
 var r = o(200651),
-    t = o(192379),
-    n = o(120356),
-    i = o.n(n),
-    a = o(512722),
-    c = o.n(a),
-    l = o(481060),
+    n = o(192379),
+    s = o(120356),
+    i = o.n(s),
+    c = o(512722),
+    l = o.n(c),
+    a = o(481060),
     d = o(198993),
-    C = o(626135),
-    _ = o(985002),
-    u = o(880257),
-    f = o(631885),
-    m = o(292352),
-    E = o(981631),
-    b = o(689938),
-    x = o(532121),
-    N = o(113207);
-s.default = (e) => {
-    let { transitionState: s, onClose: o } = e,
-        n = (0, u.Z)(),
-        [a, h] = t.useState(!1),
-        { getLinkCode: R, isGetLinkCodeLoading: p } = (0, _.G)({}),
-        I = (0, f.rW)(),
-        g = (0, f.gU)(),
-        M = t.useRef(g);
-    c()(!n, 'FamilyCenterQRCodeModal should only be rendered for teens.');
-    let O = () => {
-        h((e) => (C.default.track(E.rMx.FAMILY_CENTER_ACTION, { action: a ? m.YC.HideQRCode : m.YC.RevealQRCode }), !e)),
-            !a &&
+    u = o(626135),
+    f = o(985002),
+    C = o(880257),
+    m = o(631885),
+    b = o(292352),
+    x = o(981631),
+    h = o(388032),
+    g = o(532121),
+    p = o(113207);
+t.default = (e) => {
+    let { transitionState: t, onClose: o } = e,
+        s = (0, C.Z)(),
+        [c, _] = n.useState(!1),
+        { getLinkCode: v, isGetLinkCodeLoading: j } = (0, f.G)({}),
+        N = (0, m.rW)(),
+        I = (0, m.gU)(),
+        z = n.useRef(I);
+    l()(!s, 'FamilyCenterQRCodeModal should only be rendered for teens.');
+    let R = () => {
+        _((e) => (u.default.track(x.rMx.FAMILY_CENTER_ACTION, { action: c ? b.YC.HideQRCode : b.YC.RevealQRCode }), !e)),
+            !c &&
                 setTimeout(() => {
                     o();
-                }, m.f2);
+                }, b.f2);
     };
-    t.useEffect(() => {
-        R();
+    n.useEffect(() => {
+        v();
     }, []),
-        t.useEffect(() => {
-            g > M.current && o();
-        }, [M, g, o]);
-    let v = a && !p && null != I;
-    return (0, r.jsxs)(l.ModalRoot, {
-        className: x.modalRoot,
-        transitionState: s,
+        n.useEffect(() => {
+            I > z.current && o();
+        }, [z, I, o]);
+    let y = c && !j && null != N;
+    return (0, r.jsxs)(a.ModalRoot, {
+        className: g.modalRoot,
+        transitionState: t,
         children: [
-            (0, r.jsxs)(l.Notice, {
-                className: x.notice,
-                color: l.NoticeColors.WARNING,
+            (0, r.jsxs)(a.Notice, {
+                className: g.notice,
+                color: a.NoticeColors.WARNING,
                 children: [
-                    (0, r.jsx)(l.CircleInformationIcon, {
+                    (0, r.jsx)(a.CircleInformationIcon, {
                         size: 'sm',
                         color: 'currentColor',
-                        className: x.infoIcon
+                        className: g.infoIcon
                     }),
-                    b.Z.Messages.FAMILY_CENTER_QR_CODE_MODAL_NOTICE
+                    h.intl.string(h.t.iHYMAw)
                 ]
             }),
-            (0, r.jsxs)(l.ModalContent, {
-                className: x.content,
+            (0, r.jsxs)(a.ModalContent, {
+                className: g.content,
                 children: [
-                    (0, r.jsx)(l.Text, {
-                        className: N.marginBottom8,
+                    (0, r.jsx)(a.Text, {
+                        className: p.marginBottom8,
                         variant: 'text-lg/bold',
                         color: 'header-primary',
-                        children: b.Z.Messages.FAMILY_CENTER_QR_CODE_MODAL_HEADER
+                        children: h.intl.string(h.t.AVTZaG)
                     }),
-                    (0, r.jsx)(l.Text, {
-                        className: N.marginBottom20,
+                    (0, r.jsx)(a.Text, {
+                        className: p.marginBottom20,
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: b.Z.Messages.FAMILY_CENTER_QR_CODE_MODAL_DESCRIPTION.format({ link: 'https://support.discord.com/hc/articles/14155060633623' })
+                        children: h.intl.format(h.t.LyyCsL, { link: 'https://support.discord.com/hc/articles/14155060633623' })
                     }),
                     (0, r.jsx)('div', {
-                        className: x.qrCode,
-                        children: (0, r.jsx)(l.Clickable, {
-                            className: i()(x.qrCodeObscure, { [x.visible]: v }),
-                            onClick: O,
+                        className: g.qrCode,
+                        children: (0, r.jsx)(a.Clickable, {
+                            className: i()(g.qrCodeObscure, { [g.visible]: y }),
+                            onClick: R,
                             children: (0, r.jsx)(d.c2, {
                                 size: 272,
-                                text: v ? I : m.vH,
+                                text: y ? N : b.vH,
                                 overlaySize: d.cK.SIZE_60
                             })
                         })
                     }),
-                    (0, r.jsx)(l.Text, {
-                        className: x.reminder,
+                    (0, r.jsx)(a.Text, {
+                        className: g.reminder,
                         variant: 'text-xs/semibold',
                         color: 'header-secondary',
-                        children: b.Z.Messages.FAMILY_CENTER_QR_CODE_MODAL_REMINDER
+                        children: h.intl.string(h.t.goDyoa)
                     }),
                     (0, r.jsxs)('div', {
-                        className: i()(x.buttonContainer, N.marginTop20),
+                        className: i()(g.buttonContainer, p.marginTop20),
                         children: [
-                            (0, r.jsx)(l.Button, {
-                                className: N.marginBottom8,
+                            (0, r.jsx)(a.Button, {
+                                className: p.marginBottom8,
                                 grow: !0,
-                                size: l.Button.Sizes.LARGE,
-                                onClick: O,
-                                submitting: a && p,
-                                children: a ? b.Z.Messages.FAMILY_CENTER_QR_CODE_MODAL_BUTTON_HIDE : b.Z.Messages.FAMILY_CENTER_QR_CODE_MODAL_BUTTON_SHOW
+                                size: a.Button.Sizes.LARGE,
+                                onClick: R,
+                                submitting: c && j,
+                                children: c ? h.intl.string(h.t.wg2xwc) : h.intl.string(h.t['10dX6e'])
                             }),
-                            (0, r.jsx)(l.Button, {
+                            (0, r.jsx)(a.Button, {
                                 grow: !0,
-                                color: l.Button.Colors.PRIMARY,
+                                color: a.Button.Colors.PRIMARY,
                                 onClick: o,
-                                children: b.Z.Messages.CLOSE
+                                children: h.intl.string(h.t.cpT0Cg)
                             })
                         ]
                     })

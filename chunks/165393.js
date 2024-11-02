@@ -8,13 +8,13 @@ var i = n(200651),
     l = n(192379),
     r = n(120356),
     a = n.n(r),
-    s = n(866442),
-    o = n(481060),
+    o = n(866442),
+    s = n(481060),
     c = n(686546),
     u = n(66);
 let d = [1752220, 3066993, 3447003, 10181046, 15277667, 15844367];
 function h(e) {
-    return (0, s.Rf)(
+    return (0, o.Rf)(
         d[
             (function (e) {
                 let t = 5381,
@@ -28,7 +28,7 @@ function h(e) {
 function p(e) {
     var t;
     let { title: n, className: r } = e,
-        [s, d] = l.useState(h(n));
+        [o, d] = l.useState(h(n));
     return (
         l.useEffect(() => {
             d(h(n));
@@ -42,11 +42,11 @@ function p(e) {
                     height: 32,
                     children: (0, i.jsx)('div', {
                         className: u.icon,
-                        style: { backgroundColor: s },
+                        style: { backgroundColor: o },
                         children: null !== (t = n[0]) && void 0 !== t ? t : '?'
                     })
                 }),
-                (0, i.jsx)(o.VideoIcon, {
+                (0, i.jsx)(s.VideoIcon, {
                     size: 'md',
                     color: 'currentColor',
                     className: u.badge

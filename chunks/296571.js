@@ -5,40 +5,40 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(442837),
-    s = n(481060),
-    r = n(592125),
-    l = n(739566),
-    o = n(834129),
-    c = n(689938),
+var r = n(442837),
+    l = n(481060),
+    a = n(592125),
+    o = n(739566),
+    s = n(834129),
+    c = n(388032),
     u = n(563480);
 function d(e) {
     var t;
-    let { message: n, compact: d, usernameHook: _, onClickThread: E, onClickViewThreads: I, onContextMenuThread: m } = e,
-        f = (0, l.ZP)(n),
-        T = _(f),
-        h = (0, a.e7)([r.Z], () => {
+    let { message: n, compact: d, usernameHook: m, onClickThread: f, onClickViewThreads: h, onContextMenuThread: p } = e,
+        g = (0, o.ZP)(n),
+        _ = m(g),
+        C = (0, r.e7)([a.Z], () => {
             var e;
-            return r.Z.getChannel(null === (e = n.messageReference) || void 0 === e ? void 0 : e.channel_id);
+            return a.Z.getChannel(null === (e = n.messageReference) || void 0 === e ? void 0 : e.channel_id);
         }),
-        N = c.Z.Messages.SYSTEM_MESSAGE_THREAD_CREATED.format({
-            actorName: f.nick,
-            actorHook: T,
-            threadName: null !== (t = null == h ? void 0 : h.name) && void 0 !== t ? t : n.content,
+        E = c.intl.format(c.t.cZ9Uf3, {
+            actorName: g.nick,
+            actorHook: _,
+            threadName: null !== (t = null == C ? void 0 : C.name) && void 0 !== t ? t : n.content,
             threadOnClick: {
-                onClick: E,
-                onContextMenu: m
+                onClick: f,
+                onContextMenu: p
             },
-            viewThreadsOnClick: I
+            viewThreadsOnClick: h
         });
-    return (0, i.jsx)(o.Z, {
-        iconNode: (0, i.jsx)(s.ThreadIcon, {
+    return (0, i.jsx)(s.Z, {
+        iconNode: (0, i.jsx)(l.ThreadIcon, {
             size: 'md',
             color: 'currentColor',
             className: u.icon
         }),
         timestamp: n.timestamp,
         compact: d,
-        children: N
+        children: E
     });
 }

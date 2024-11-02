@@ -1,21 +1,21 @@
-t.d(l, {
+l.d(t, {
     Z: function () {
-        return M;
+        return g;
     }
 });
-var n = t(200651),
-    d = t(192379),
-    i = t(913527),
-    u = t.n(i),
-    a = t(442837),
-    s = t(481060),
-    r = t(87051),
-    o = t(776568),
-    c = t(818083),
-    f = t(9156),
-    E = t(621600),
-    _ = t(689938);
-let m = (0, c.B)({
+var n = l(200651),
+    i = l(192379),
+    d = l(913527),
+    u = l.n(d),
+    r = l(442837),
+    a = l(481060),
+    o = l(87051),
+    s = l(776568),
+    c = l(818083),
+    f = l(9156),
+    m = l(621600),
+    p = l(388032);
+let b = (0, c.B)({
     kind: 'user',
     id: '2022-02_guild_folder_mute',
     label: 'Guild Folder Mute',
@@ -28,59 +28,59 @@ let m = (0, c.B)({
         }
     ]
 });
-function M(e, l) {
-    let { enabled: t } = m.useExperiment({ location: '74d87e_1' }, { autoTrackExposure: !1 }),
-        i = (0, a.cj)([f.ZP], () => Object.fromEntries(e.map((e) => [e, f.ZP.isMuted(e)])), [e]),
-        c = d.useCallback(
-            (t) => {
+function g(e, t) {
+    let { enabled: l } = b.useExperiment({ location: '74d87e_1' }, { autoTrackExposure: !1 }),
+        d = (0, r.cj)([f.ZP], () => Object.fromEntries(e.map((e) => [e, f.ZP.isMuted(e)])), [e]),
+        c = i.useCallback(
+            (l) => {
                 let n = Object.fromEntries(
                     e
-                        .filter((e) => !i[e])
+                        .filter((e) => !d[e])
                         .map((e) => [
                             e,
                             {
                                 muted: !0,
                                 mute_config:
-                                    null != t
+                                    null != l
                                         ? {
-                                              selected_time_window: t,
-                                              end_time: t > 0 ? u()().add(t, 'second').toISOString() : null
+                                              selected_time_window: l,
+                                              end_time: l > 0 ? u()().add(l, 'second').toISOString() : null
                                           }
                                         : void 0
                             }
                         ])
                 );
-                r.Z.updateGuildNotificationSettingsBulk(n, E.ZB.Muted, l);
+                o.Z.updateGuildNotificationSettingsBulk(n, m.ZB.Muted, t);
             },
-            [e, l, i]
+            [e, t, d]
         ),
-        M = d.useCallback(() => {
-            r.Z.updateGuildNotificationSettingsBulk(Object.fromEntries(e.filter((e) => i[e]).map((e) => [e, { muted: !1 }])), E.ZB.Unmuted, l);
-        }, [e, l, i]);
-    return t
+        g = i.useCallback(() => {
+            o.Z.updateGuildNotificationSettingsBulk(Object.fromEntries(e.filter((e) => d[e]).map((e) => [e, { muted: !1 }])), m.ZB.Unmuted, t);
+        }, [e, t, d]);
+    return l
         ? (0, n.jsxs)(n.Fragment, {
               children: [
-                  (0, n.jsx)(s.MenuItem, {
+                  (0, n.jsx)(a.MenuItem, {
                       id: 'mute-folder',
-                      label: _.Z.Messages.SERVER_FOLDER_MUTE_ALL,
+                      label: p.intl.string(p.t.vBTk2N),
                       action: () => c(),
-                      children: (0, o.k)().map((e) => {
-                          let { value: l, label: t } = e;
+                      children: (0, s.k)().map((e) => {
+                          let { value: t, label: l } = e;
                           return (0, n.jsx)(
-                              s.MenuItem,
+                              a.MenuItem,
                               {
-                                  id: ''.concat(l),
-                                  label: t,
-                                  action: () => c(l)
+                                  id: ''.concat(t),
+                                  label: l,
+                                  action: () => c(t)
                               },
-                              l
+                              t
                           );
                       })
                   }),
-                  (0, n.jsx)(s.MenuItem, {
+                  (0, n.jsx)(a.MenuItem, {
                       id: 'unmute-folder',
-                      label: _.Z.Messages.SERVER_FOLDER_UNMUTE_ALL,
-                      action: M
+                      label: p.intl.string(p.t.VFDdkZ),
+                      action: g
                   })
               ]
           })

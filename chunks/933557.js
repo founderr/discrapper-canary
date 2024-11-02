@@ -3,13 +3,13 @@ n.d(t, {
         return d;
     },
     ZP: function () {
-        return f;
+        return h;
     },
     le: function () {
-        return _;
+        return f;
     },
     mA: function () {
-        return E;
+        return _;
     }
 }),
     n(47120),
@@ -21,7 +21,7 @@ var r = n(442837),
     o = n(823379),
     l = n(51144),
     u = n(981631),
-    c = n(689938);
+    c = n(388032);
 function d(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         i = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
@@ -31,19 +31,19 @@ function d(e, t, n) {
             let [s] = e.recipients.map(t.getUser).filter(o.lm);
             if (null == s) return '???';
             let d = n.getNickname(s.id),
-                E = null !== (a = null != d ? d : l.ZP.getName(s)) && void 0 !== a ? a : '???';
-            return r ? '@'.concat(E) : E;
+                _ = null !== (a = null != d ? d : l.ZP.getName(s)) && void 0 !== a ? a : '???';
+            return r ? '@'.concat(_) : _;
         case u.d4z.GROUP_DM:
             if ('' !== e.name) return e.name;
-            let f = e.recipients
+            let h = e.recipients
                 .map(t.getUser)
                 .filter(o.lm)
                 .map((e) => {
                     var t;
                     return null !== (t = n.getNickname(e.id)) && void 0 !== t ? t : l.ZP.getName(e);
                 });
-            if (f.length > 0) return f.join(', ');
-            return c.Z.Messages.GROUP_DM_ALONE.format({ name: l.ZP.getName(t.getCurrentUser()) });
+            if (h.length > 0) return h.join(', ');
+            return c.intl.formatToPlainString(c.t['9Uk8PD'], { name: l.ZP.getName(t.getCurrentUser()) });
         case u.d4z.GUILD_ANNOUNCEMENT:
         case u.d4z.GUILD_TEXT:
         case u.d4z.GUILD_FORUM:
@@ -56,20 +56,20 @@ function d(e, t, n) {
         case u.d4z.GUILD_VOICE:
         case u.d4z.GUILD_STAGE_VOICE:
         case u.d4z.GUILD_CATEGORY:
-            if (i) return '#"'.concat(_(e.name), '"');
+            if (i) return '#"'.concat(f(e.name), '"');
             if (r && e.isThread()) return '"'.concat(e.name, '"');
             return e.name;
         default:
             return e.name;
     }
 }
-function _(e) {
+function f(e) {
     return e.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
 }
-function E(e) {
+function _(e) {
     return e.replace(/\\"/g, '"').replace(/\\\\/g, '\\');
 }
-function f(e) {
+function h(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return (0, r.e7)([s.default, i.Z, a.Z], () => (null == e ? null : d(e, s.default, a.Z, t)));
 }

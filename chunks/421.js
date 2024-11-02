@@ -1,133 +1,133 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return j;
     }
 }),
     n(47120);
-var a = n(200651),
-    i = n(192379),
+var i = n(200651),
+    a = n(192379),
     l = n(399606),
-    s = n(481060),
-    r = n(100527),
+    r = n(481060),
+    s = n(100527),
     o = n(906732),
     c = n(895924),
     d = n(70097),
     u = n(592125),
     v = n(566620),
-    I = n(122613),
-    _ = n(678173),
-    T = n(636508),
-    m = n(696068),
+    m = n(122613),
+    h = n(678173),
+    x = n(636508),
+    g = n(696068),
     C = n(361213),
-    E = n(778569),
-    x = n(182906),
-    h = n(412019),
-    g = n(431136),
-    p = n(226799),
-    f = n(689938),
-    N = n(706451);
-function S(e) {
+    p = n(778569),
+    f = n(182906),
+    _ = n(412019),
+    I = n(431136),
+    T = n(226799),
+    N = n(388032),
+    b = n(706451);
+function j(e) {
     var t;
     let { applicationId: n, guildId: l, channelId: c, onActivityLaunch: u } = e,
-        { analyticsLocations: I } = (0, o.ZP)(r.Z.ACTIVITY_SHELF_ACTIVITY_DETAILS);
-    i.useEffect(() => {
+        { analyticsLocations: m } = (0, o.ZP)(s.Z.ACTIVITY_SHELF_ACTIVITY_DETAILS);
+    a.useEffect(() => {
         (0, v.w1)({ guildId: l });
     }, [l]);
-    let T = (0, E.Z)({
+    let x = (0, p.Z)({
             applicationId: null != n ? n : '',
             size: 2048
         }),
-        m = (0, _.T)(null != l ? l : null, n);
-    if (null == m) return null;
-    let x = null != m.activity.activity_preview_video_asset_id ? (0, C.Z)(n, m.activity.activity_preview_video_asset_id) : null,
-        h = p.o[n],
-        g = (null == h ? void 0 : h.playersSuggestionMin) != null && (null == h ? void 0 : h.playersSuggestionMax) != null ? ''.concat(h.playersSuggestionMin, ' - ').concat(h.playersSuggestionMax) : void 0;
-    return (0, a.jsx)(o.Gt, {
-        value: I,
-        children: (0, a.jsx)('div', {
-            className: N.scrollContainer,
-            children: (0, a.jsxs)(s.Scroller, {
-                className: N.scroller,
+        g = (0, h.T)(null != l ? l : null, n);
+    if (null == g) return null;
+    let f = null != g.activity.activity_preview_video_asset_id ? (0, C.Z)(n, g.activity.activity_preview_video_asset_id) : null,
+        _ = T.o[n],
+        I = (null == _ ? void 0 : _.playersSuggestionMin) != null && (null == _ ? void 0 : _.playersSuggestionMax) != null ? ''.concat(_.playersSuggestionMin, ' - ').concat(_.playersSuggestionMax) : void 0;
+    return (0, i.jsx)(o.Gt, {
+        value: m,
+        children: (0, i.jsx)('div', {
+            className: b.scrollContainer,
+            children: (0, i.jsxs)(r.Scroller, {
+                className: b.scroller,
                 children: [
-                    (0, a.jsx)('div', {
-                        className: N.launcherOuterContainer,
-                        children: (0, a.jsx)(A, {
-                            activityItem: m,
+                    (0, i.jsx)('div', {
+                        className: b.launcherOuterContainer,
+                        children: (0, i.jsx)(S, {
+                            activityItem: g,
                             onLaunch: u,
                             channelId: c
                         })
                     }),
-                    (0, a.jsxs)('div', {
-                        className: N.activityDetailsContainer,
+                    (0, i.jsxs)('div', {
+                        className: b.activityDetailsContainer,
                         children: [
-                            (0, a.jsxs)('div', {
+                            (0, i.jsxs)('div', {
                                 children: [
-                                    null != x
-                                        ? (0, a.jsx)('div', {
-                                              className: N.heroVideoContainer,
-                                              children: (0, a.jsx)(d.Z, {
+                                    null != f
+                                        ? (0, i.jsx)('div', {
+                                              className: b.heroVideoContainer,
+                                              children: (0, i.jsx)(d.Z, {
                                                   loop: !0,
                                                   autoPlay: !0,
                                                   muted: !0,
-                                                  className: N.heroVideo,
-                                                  src: x,
-                                                  poster: T.url
+                                                  className: b.heroVideo,
+                                                  src: f,
+                                                  poster: x.url
                                               })
                                           })
                                         : null,
-                                    (0, a.jsx)('div', {
-                                        className: N.detailsTitle,
-                                        children: (0, a.jsx)(s.Heading, {
+                                    (0, i.jsx)('div', {
+                                        className: b.detailsTitle,
+                                        children: (0, i.jsx)(r.Heading, {
                                             variant: 'heading-xxl/bold',
-                                            children: m.application.name
+                                            children: g.application.name
                                         })
                                     }),
-                                    (0, a.jsxs)('div', {
-                                        className: N.detailsDetails,
+                                    (0, i.jsxs)('div', {
+                                        className: b.detailsDetails,
                                         children: [
-                                            null != g
-                                                ? (0, a.jsxs)('div', {
-                                                      className: N.detailItem,
+                                            null != I
+                                                ? (0, i.jsxs)('div', {
+                                                      className: b.detailItem,
                                                       children: [
-                                                          (0, a.jsx)(s.GroupIcon, {
+                                                          (0, i.jsx)(r.GroupIcon, {
                                                               size: 'xs',
                                                               color: 'currentColor'
                                                           }),
-                                                          (0, a.jsx)(s.Text, {
+                                                          (0, i.jsx)(r.Text, {
                                                               variant: 'text-xs/semibold',
-                                                              className: N.detailItemText,
-                                                              children: f.Z.Messages.EMBEDDED_ACTIVITIES_NUMBER_OF_PLAYERS.format({ nPlayers: g })
+                                                              className: b.detailItemText,
+                                                              children: N.intl.format(N.t.T3isFB, { nPlayers: I })
                                                           })
                                                       ]
                                                   })
                                                 : null,
-                                            (null == h ? void 0 : h.timeSuggestionMinutes) != null
-                                                ? (0, a.jsxs)('div', {
-                                                      className: N.detailItem,
+                                            (null == _ ? void 0 : _.timeSuggestionMinutes) != null
+                                                ? (0, i.jsxs)('div', {
+                                                      className: b.detailItem,
                                                       children: [
-                                                          (0, a.jsx)(s.HourglassIcon, {
+                                                          (0, i.jsx)(r.HourglassIcon, {
                                                               size: 'xs',
                                                               color: 'currentColor'
                                                           }),
-                                                          (0, a.jsx)(s.Text, {
+                                                          (0, i.jsx)(r.Text, {
                                                               variant: 'text-xs/semibold',
-                                                              className: N.detailItemText,
-                                                              children: f.Z.Messages.EMBEDDED_ACTIVITIES_NUMBER_OF_MINUTES.format({ nMinutes: h.timeSuggestionMinutes })
+                                                              className: b.detailItemText,
+                                                              children: N.intl.format(N.t.dehcUV, { nMinutes: _.timeSuggestionMinutes })
                                                           })
                                                       ]
                                                   })
                                                 : null,
-                                            (0, a.jsxs)('div', {
-                                                className: N.detailItem,
+                                            (0, i.jsxs)('div', {
+                                                className: b.detailItem,
                                                 children: [
-                                                    (0, a.jsx)(s.TagsIcon, {
+                                                    (0, i.jsx)(r.TagsIcon, {
                                                         size: 'xs',
                                                         color: 'currentColor'
                                                     }),
-                                                    (0, a.jsx)(s.Text, {
+                                                    (0, i.jsx)(r.Text, {
                                                         variant: 'text-xs/semibold',
-                                                        className: N.detailItemText,
-                                                        children: m.application.tags.slice(0, 3).join(', ')
+                                                        className: b.detailItemText,
+                                                        children: g.application.tags.slice(0, 3).join(', ')
                                                     })
                                                 ]
                                             })
@@ -135,21 +135,21 @@ function S(e) {
                                     })
                                 ]
                             }),
-                            (0, a.jsx)(s.Heading, {
+                            (0, i.jsx)(r.Heading, {
                                 variant: 'heading-lg/medium',
-                                className: N.detailsDescription,
-                                children: m.application.description
+                                className: b.detailsDescription,
+                                children: g.application.description
                             }),
-                            (0, a.jsx)('div', { className: N.divider }),
-                            (0, a.jsx)('div', {
-                                className: N.imagesContainer,
-                                children: (null !== (t = null == h ? void 0 : h.gameplayImageUrls) && void 0 !== t ? t : []).map((e) =>
-                                    (0, a.jsx)(
+                            (0, i.jsx)('div', { className: b.divider }),
+                            (0, i.jsx)('div', {
+                                className: b.imagesContainer,
+                                children: (null !== (t = null == _ ? void 0 : _.gameplayImageUrls) && void 0 !== t ? t : []).map((e) =>
+                                    (0, i.jsx)(
                                         'img',
                                         {
                                             src: e,
-                                            alt: f.Z.Messages.EMBEDDED_ACTIVITIES_GAMEPLAY_ALT.format({ activityName: m.application.name }),
-                                            className: N.activityImage
+                                            alt: N.intl.formatToPlainString(N.t.YOslsL, { activityName: g.application.name }),
+                                            className: b.activityImage
                                         },
                                         e
                                     )
@@ -162,105 +162,105 @@ function S(e) {
         })
     });
 }
-function A(e) {
-    var t, r;
-    let { activityItem: d, onLaunch: v, channelId: _ } = e,
-        C = (0, E.Z)({
+function S(e) {
+    var t, s;
+    let { activityItem: d, onLaunch: v, channelId: h } = e,
+        C = (0, p.Z)({
             applicationId: d.application.id,
             size: 2048
         }),
-        { analyticsLocations: p } = (0, o.ZP)(),
-        [S, A] = i.useState(null !== (t = (0, T.$)({ allowGdmActivityChannelSuggestion: !0 })) && void 0 !== t ? t : void 0),
-        [b, j] = i.useState(
+        { analyticsLocations: T } = (0, o.ZP)(),
+        [j, S] = a.useState(null !== (t = (0, x.$)({ allowGdmActivityChannelSuggestion: !0 })) && void 0 !== t ? t : void 0),
+        [E, y] = a.useState(
             null !==
-                (r = (0, m.d)({
-                    guildId: S,
+                (s = (0, g.d)({
+                    guildId: j,
                     allowGdmActivityChannelSuggestion: !0
-                })) && void 0 !== r
-                ? r
+                })) && void 0 !== s
+                ? s
                 : void 0
         ),
-        D = (0, l.e7)([u.Z], () => u.Z.getChannel(b), [b]),
-        Z = (0, T.W)(),
-        M = (0, m.F)(S),
-        L = i.useCallback(async () => {
+        A = (0, l.e7)([u.Z], () => u.Z.getChannel(E), [E]),
+        Z = (0, x.W)(),
+        L = (0, g.F)(j),
+        O = a.useCallback(async () => {
             var e;
-            if (null != b)
-                await (0, I.Z)({
+            if (null != E)
+                await (0, m.Z)({
                     targetApplicationId: null == d ? void 0 : null === (e = d.application) || void 0 === e ? void 0 : e.id,
-                    channelId: b,
-                    analyticsLocations: p,
+                    channelId: E,
+                    analyticsLocations: T,
                     commandOrigin: c.bB.APPLICATION_LAUNCHER
                 }).then(v);
-        }, [d, p, v, b]),
-        y = i.useCallback(() => {
-            (0, s.openModalLazy)(async () => {
+        }, [d, T, v, E]),
+        k = a.useCallback(() => {
+            (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e('60133'), n.e('43035')]).then(n.bind(n, 827940));
                 return (t) =>
-                    (0, a.jsx)(e, {
+                    (0, i.jsx)(e, {
                         activityItem: d,
                         ...t,
-                        analyticsLocations: p
+                        analyticsLocations: T
                     });
             });
-        }, [d, p]),
-        O = null == D || (null != D.guild_id && !(null != S && null != b && Z.some((e) => e.value === S) && M.some((e) => e.value.channel.id === b)) && !0);
-    return (0, a.jsxs)('div', {
-        className: N.launcherInnerContainer,
+        }, [d, T]),
+        M = null == A || (null != A.guild_id && !(null != j && null != E && Z.some((e) => e.value === j) && L.some((e) => e.value.channel.id === E)) && !0);
+    return (0, i.jsxs)('div', {
+        className: b.launcherInnerContainer,
         children: [
-            (0, a.jsx)(x.Z, {
+            (0, i.jsx)(f.Z, {
                 applicationName: d.application.name,
                 imageBackground: C,
-                imageClassName: N.launchImage,
-                imageNotFoundClassName: N.brokenLaunchImage
+                imageClassName: b.launchImage,
+                imageNotFoundClassName: b.brokenLaunchImage
             }),
-            (0, a.jsx)(s.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: 'text-md/medium',
-                children: f.Z.Messages.EMBEDDED_ACTIVITIES_START_OR_SHARE
+                children: N.intl.string(N.t.lfSF4O)
             }),
-            null == _
-                ? (0, a.jsxs)(a.Fragment, {
+            null == h
+                ? (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, a.jsx)(s.Select, {
-                              placeholder: f.Z.Messages.GUILD_SELECT,
-                              optionClassName: N.__invalid_option,
+                          (0, i.jsx)(r.Select, {
+                              placeholder: N.intl.string(N.t.etZ9tb),
+                              optionClassName: b.__invalid_option,
                               options: Z,
                               renderOptionValue: (e) => {
-                                  let t = e.find((e) => e.value === S);
-                                  return null == t ? null : (0, a.jsx)(g.m, { guildId: t.value });
+                                  let t = e.find((e) => e.value === j);
+                                  return null == t ? null : (0, i.jsx)(I.m, { guildId: t.value });
                               },
                               renderOptionLabel: (e) => {
                                   let { value: t } = e;
-                                  return (0, a.jsx)(g.m, { guildId: t });
+                                  return (0, i.jsx)(I.m, { guildId: t });
                               },
-                              isSelected: (e) => e === S,
+                              isSelected: (e) => e === j,
                               select: (e) => {
                                   var t;
-                                  A(e), j(null !== (t = (0, m.d)({ guildId: e })) && void 0 !== t ? t : void 0);
+                                  S(e), y(null !== (t = (0, g.d)({ guildId: e })) && void 0 !== t ? t : void 0);
                               },
                               serialize: (e) => e
                           }),
-                          (0, a.jsx)(s.Select, {
-                              placeholder: f.Z.Messages.EMBEDDED_ACTIVITIES_SELECT_VOICE_CHANNEL,
-                              optionClassName: N.__invalid_option,
-                              options: M,
+                          (0, i.jsx)(r.Select, {
+                              placeholder: N.intl.string(N.t.SUryfX),
+                              optionClassName: b.__invalid_option,
+                              options: L,
                               isSelected: (e) => {
                                   let { channel: t } = e;
-                                  return t.id === b;
+                                  return t.id === E;
                               },
                               select: (e) => {
                                   let { channel: t } = e;
-                                  return j(t.id);
+                                  return y(t.id);
                               },
                               serialize: (e) => {
                                   let { channel: t } = e;
                                   return t.id;
                               },
                               renderOptionValue: () => {
-                                  let e = M.find((e) => e.value.channel.id === b);
+                                  let e = L.find((e) => e.value.channel.id === E);
                                   return null == e
                                       ? null
-                                      : (0, a.jsx)(h.O, {
+                                      : (0, i.jsx)(_.O, {
                                             channel: e.value.channel,
                                             users: e.value.users
                                         });
@@ -269,41 +269,41 @@ function A(e) {
                                   let {
                                       value: { channel: t, users: n }
                                   } = e;
-                                  return (0, a.jsx)(h.O, {
+                                  return (0, i.jsx)(_.O, {
                                       channel: t,
                                       users: n
                                   });
                               }
                           }),
-                          (0, a.jsx)(s.Button, {
+                          (0, i.jsx)(r.Button, {
                               fullWidth: !0,
-                              disabled: O,
-                              onClick: L,
-                              children: f.Z.Messages.START
+                              disabled: M,
+                              onClick: O,
+                              children: N.intl.string(N.t.I0v0Qk)
                           }),
-                          (0, a.jsx)('div', { className: N.divider }),
-                          (0, a.jsx)(s.Button, {
+                          (0, i.jsx)('div', { className: b.divider }),
+                          (0, i.jsx)(r.Button, {
                               fullWidth: !0,
-                              color: s.Button.Colors.PRIMARY,
-                              onClick: y,
-                              children: f.Z.Messages.SHARE
+                              color: r.Button.Colors.PRIMARY,
+                              onClick: k,
+                              children: N.intl.string(N.t.RDE0SU)
                           })
                       ]
                   })
-                : (0, a.jsxs)('div', {
-                      className: N.singleRowShareContainer,
+                : (0, i.jsxs)('div', {
+                      className: b.singleRowShareContainer,
                       children: [
-                          (0, a.jsx)(s.Button, {
+                          (0, i.jsx)(r.Button, {
                               fullWidth: !0,
-                              disabled: O,
-                              onClick: L,
-                              children: f.Z.Messages.START
+                              disabled: M,
+                              onClick: O,
+                              children: N.intl.string(N.t.I0v0Qk)
                           }),
-                          (0, a.jsx)(s.Button, {
-                              className: N.shareIconButton,
-                              color: s.Button.Colors.PRIMARY,
-                              onClick: y,
-                              children: (0, a.jsx)(s.ArrowAngleLeftUpIcon, {
+                          (0, i.jsx)(r.Button, {
+                              className: b.shareIconButton,
+                              color: r.Button.Colors.PRIMARY,
+                              onClick: k,
+                              children: (0, i.jsx)(r.ArrowAngleLeftUpIcon, {
                                   size: 'md',
                                   color: 'currentColor'
                               })

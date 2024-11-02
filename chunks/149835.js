@@ -1,50 +1,50 @@
-t.d(e, {
+i.d(t, {
     Z: function () {
-        return A;
+        return b;
     }
 });
-var i = t(200651);
-t(192379);
-var a = t(442837),
-    l = t(481060),
-    r = t(58642),
-    d = t(283595),
-    s = t(417363),
-    u = t(626135),
-    c = t(630388),
-    I = t(981631),
-    o = t(689938);
-function A(n, e) {
-    let t = (0, a.e7)([s.Z], () => s.Z.isInstalled(n.id, n.branchId), [n.branchId, n.id]),
-        A = (0, a.e7)([d.Z], () => !d.Z.hasRemovedLibraryApplicationThisSession);
-    if (t && !n.isHidden()) return null;
-    function _() {
-        let e = (0, c.x9)(n.getFlags(), I.eHb.HIDDEN);
-        r.h(n.id, n.branchId, e),
-            u.default.track(I.rMx.APPLICATION_SETTINGS_UPDATED, {
-                hidden_enabled: (0, c.yE)(e, I.eHb.HIDDEN),
+var e = i(200651);
+i(192379);
+var l = i(442837),
+    a = i(481060),
+    r = i(58642),
+    d = i(283595),
+    u = i(417363),
+    c = i(626135),
+    o = i(630388),
+    s = i(981631),
+    I = i(388032);
+function b(n, t) {
+    let i = (0, l.e7)([u.Z], () => u.Z.isInstalled(n.id, n.branchId), [n.branchId, n.id]),
+        b = (0, l.e7)([d.Z], () => !d.Z.hasRemovedLibraryApplicationThisSession);
+    if (i && !n.isHidden()) return null;
+    function f() {
+        let t = (0, o.x9)(n.getFlags(), s.eHb.HIDDEN);
+        r.h(n.id, n.branchId, t),
+            c.default.track(s.rMx.APPLICATION_SETTINGS_UPDATED, {
+                hidden_enabled: (0, o.yE)(t, s.eHb.HIDDEN),
                 ...n.getAnalyticsData()
             });
     }
-    return (0, i.jsx)(l.MenuItem, {
+    return (0, e.jsx)(a.MenuItem, {
         id: 'in-library',
-        label: n.isHidden() ? o.Z.Messages.APPLICATION_CONTEXT_MENU_SHOW : o.Z.Messages.APPLICATION_CONTEXT_MENU_HIDE,
+        label: n.isHidden() ? I.intl.string(I.t['0dnEUF']) : I.intl.string(I.t.TuJXLy),
         action: function () {
             null != n &&
-                null != e &&
-                (n.isHidden() || !A
-                    ? _()
-                    : (0, l.openModal)((n) =>
-                          (0, i.jsx)(l.ConfirmModal, {
-                              header: o.Z.Messages.APPLICATION_LIBRARY_REMOVE_CONFIRM_HEADER,
-                              confirmText: o.Z.Messages.APPLICATION_LIBRARY_REMOVE_CONFIRM_CONFIRM,
-                              cancelText: o.Z.Messages.CANCEL,
-                              onConfirm: () => _(),
-                              confirmButtonColor: l.Button.Colors.BRAND,
+                null != t &&
+                (n.isHidden() || !b
+                    ? f()
+                    : (0, a.openModal)((n) =>
+                          (0, e.jsx)(a.ConfirmModal, {
+                              header: I.intl.string(I.t.oB7isr),
+                              confirmText: I.intl.string(I.t.OWjIiY),
+                              cancelText: I.intl.string(I.t['ETE/oK']),
+                              onConfirm: () => f(),
+                              confirmButtonColor: a.Button.Colors.BRAND,
                               ...n,
-                              children: (0, i.jsx)(l.Text, {
+                              children: (0, e.jsx)(a.Text, {
                                   variant: 'text-md/normal',
-                                  children: o.Z.Messages.APPLICATION_LIBRARY_REMOVE_CONFIRM_BODY.format({ name: e.name })
+                                  children: I.intl.format(I.t.HXfjKi, { name: t.name })
                               })
                           })
                       ));

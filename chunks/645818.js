@@ -1,27 +1,27 @@
 n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(442837),
-    r = n(846519),
-    l = n(481060),
+    r = n(192379),
+    l = n(442837),
+    a = n(846519),
+    s = n(481060),
     o = n(293245),
     c = n(863969),
     d = n(563593),
     u = n(981631),
-    _ = n(689938);
-let E = (0, l.makeIconCompat)(c.Z),
-    h = (0, l.makeIconCompat)(d.Z),
-    m = new Set([u.TzF.PUSHING, u.TzF.PULLING]),
-    I = Object.freeze({
-        [u.TzF.DONE]: E,
-        [u.TzF.PLANNING]: E,
-        [u.TzF.PREPARING]: E,
-        [u.TzF.PUSHING]: l.UploadIcon,
-        [u.TzF.PULLING]: l.DownloadIcon,
-        [u.TzF.CONFLICT]: E,
-        [u.TzF.ERROR]: E
+    h = n(388032);
+let m = (0, s.makeIconCompat)(c.Z),
+    p = (0, s.makeIconCompat)(d.Z),
+    g = new Set([u.TzF.PUSHING, u.TzF.PULLING]),
+    f = Object.freeze({
+        [u.TzF.DONE]: m,
+        [u.TzF.PLANNING]: m,
+        [u.TzF.PREPARING]: m,
+        [u.TzF.PUSHING]: s.UploadIcon,
+        [u.TzF.PULLING]: s.DownloadIcon,
+        [u.TzF.CONFLICT]: m,
+        [u.TzF.ERROR]: m
     });
-class p extends a.PureComponent {
+class _ extends r.PureComponent {
     componentDidMount() {
         this.getIsRecentlySynced() && this.setRecentlySyncedTimeout();
     }
@@ -53,42 +53,42 @@ class p extends a.PureComponent {
     getTooltip(e, t) {
         switch (e.type) {
             case u.TzF.DONE:
-                if (t) return _.Z.Messages.CLOUD_SYNC_ICON_TOOLTIP_DONE;
-                return _.Z.Messages.CLOUD_SYNC_ICON_TOOLTIP_SUPPORTED;
+                if (t) return h.intl.string(h.t.atpo0d);
+                return h.intl.string(h.t.ZCw6zs);
             case u.TzF.CONFLICT:
             case u.TzF.ERROR:
-                return _.Z.Messages.CLOUD_SYNC_ICON_TOOLTIP_SUPPORTED;
+                return h.intl.string(h.t.ZCw6zs);
             case u.TzF.PLANNING:
-                return _.Z.Messages.CLOUD_SYNC_ICON_TOOLTIP_PLANNING;
+                return h.intl.string(h.t.ERQ0VF);
             case u.TzF.PREPARING:
-                return _.Z.Messages.CLOUD_SYNC_ICON_TOOLTIP_PREPARING;
+                return h.intl.string(h.t.n5feu7);
             case u.TzF.PUSHING:
-                return _.Z.Messages.CLOUD_SYNC_ICON_TOOLTIP_PUSHING;
+                return h.intl.string(h.t.oCBh0N);
             case u.TzF.PULLING:
-                return _.Z.Messages.CLOUD_SYNC_ICON_TOOLTIP_PULLING;
+                return h.intl.string(h.t.RTLNqK);
             default:
                 return null;
         }
     }
     render() {
         let { cloudSyncState: e, libraryApplication: t, className: n } = this.props,
-            a = null == e ? { type: u.TzF.DONE } : e,
-            s = this.getIsRecentlySynced(),
-            r = {};
-        (m.has(a.type) || s) &&
-            (r.gradientConfig = {
+            r = null == e ? { type: u.TzF.DONE } : e,
+            l = this.getIsRecentlySynced(),
+            a = {};
+        (g.has(r.type) || l) &&
+            (a.gradientConfig = {
                 id: t.id,
                 startColor: 'rgba(199, 208, 240, 1)',
                 stopColor: 'rgba(114, 137, 218, 1)',
-                stop: this.getStop(a, s)
+                stop: this.getStop(r, l)
             });
-        let o = s ? h : I[a.type];
-        return (0, i.jsx)(l.Tooltip, {
-            text: this.getTooltip(a, s),
+        let o = l ? p : f[r.type];
+        return (0, i.jsx)(s.Tooltip, {
+            text: this.getTooltip(r, l),
             children: (e) =>
                 (0, i.jsx)(o, {
                     className: n,
-                    ...r,
+                    ...a,
                     ...e
                 })
         });
@@ -98,7 +98,7 @@ class p extends a.PureComponent {
         super(...e),
             (t = this),
             (n = '_doneTimer'),
-            (i = new r.V7()),
+            (i = new a.V7()),
             n in t
                 ? Object.defineProperty(t, n, {
                       value: i,
@@ -109,7 +109,7 @@ class p extends a.PureComponent {
                 : (t[n] = i);
     }
 }
-t.Z = s.ZP.connectStores([o.Z], (e) => {
+t.Z = l.ZP.connectStores([o.Z], (e) => {
     let { libraryApplication: t } = e;
     return { cloudSyncState: o.Z.getState(t.id, t.branchId) };
-})(p);
+})(_);

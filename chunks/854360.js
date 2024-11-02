@@ -1,51 +1,51 @@
-a.r(s),
-    a.d(s, {
+n.r(e),
+    n.d(e, {
         default: function () {
             return m;
         }
     }),
-    a(47120);
-var t = a(200651),
-    n = a(192379),
-    r = a(481060),
-    c = a(749210),
-    i = a(910693),
-    o = a(51144),
-    u = a(981631),
-    d = a(689938),
-    l = a(364757);
-function m(e) {
-    let { guildId: s, user: a, location: m, ...C } = e,
-        [g, p] = n.useState(''),
-        f = (0, i.sE)(s, {
+    n(47120);
+var a = n(200651),
+    i = n(192379),
+    r = n(481060),
+    s = n(749210),
+    c = n(910693),
+    l = n(51144),
+    o = n(981631),
+    u = n(388032),
+    d = n(364757);
+function m(t) {
+    let { guildId: e, user: n, location: m, ...g } = t,
+        [p, f] = i.useState(''),
+        h = (0, c.sE)(e, {
             location: m,
-            targetUserId: a.id
+            targetUserId: n.id
         }),
-        h = n.useCallback(() => {
-            c.Z.kickUser(s, a.id, g), f(i.jQ.KICK);
-        }, [s, a.id, g, f]),
-        x = n.useCallback((e) => {
-            p(e);
+        x = i.useCallback(() => {
+            s.Z.kickUser(e, n.id, p), h(c.jQ.KICK);
+        }, [e, n.id, p, h]),
+        k = i.useCallback((t) => {
+            f(t);
         }, []);
-    return (0, t.jsxs)(r.ConfirmModal, {
-        header: d.Z.Messages.KICK_USER_FROM_SERVER.format({ user: a.username }),
-        confirmText: d.Z.Messages.KICK,
-        cancelText: d.Z.Messages.CANCEL,
-        onConfirm: h,
-        ...C,
+    return (0, a.jsxs)(r.ConfirmModal, {
+        header: u.intl.formatToPlainString(u.t['1Ie87u'], { user: n.username }),
+        confirmText: u.intl.string(u.t['3glT6e']),
+        cancelText: u.intl.string(u.t['ETE/oK']),
+        onConfirm: x,
+        ...g,
         children: [
-            (0, t.jsx)(r.Text, {
+            (0, a.jsx)(r.Text, {
                 variant: 'text-md/normal',
-                className: l.spacing,
-                children: d.Z.Messages.KICK_USER_BODY.format({ user: '@'.concat(o.ZP.getName(a)) })
+                className: d.spacing,
+                children: u.intl.format(u.t['/yH0UV'], { user: '@'.concat(l.ZP.getName(n)) })
             }),
-            (0, t.jsx)(r.FormItem, {
-                title: d.Z.Messages.FORM_LABEL_REASON_KICK,
-                className: l.spacing,
-                children: (0, t.jsx)(r.TextArea, {
-                    maxLength: u.GNZ,
-                    onChange: x,
-                    value: g,
+            (0, a.jsx)(r.FormItem, {
+                title: u.intl.string(u.t['+2QEPj']),
+                className: d.spacing,
+                children: (0, a.jsx)(r.TextArea, {
+                    maxLength: o.GNZ,
+                    onChange: k,
+                    value: p,
                     rows: 2
                 })
             })

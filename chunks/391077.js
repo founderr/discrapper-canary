@@ -1,75 +1,75 @@
-var n = t(200651);
-t(192379);
-var a = t(120356),
-    i = t.n(a),
-    r = t(481060),
-    o = t(927359),
-    l = t(975298),
-    c = t(436774),
-    d = t(55935),
-    _ = t(74538),
-    u = t(474936),
-    E = t(689938),
-    T = t(153457);
-function S(e) {
-    let { hasUnactivatedUnits: s, durationText: t, endsAt: a, fractionalState: o, unactivatedHoursString: l, activationDate: c } = e,
-        d = s ? E.Z.Messages.FRACTIONAL_PREMIUM_CREDITS_UNACTIVATED : E.Z.Messages.FRACTIONAL_PREMIUM_TIME_REMAINING,
-        _ = s ? (void 0 === c ? E.Z.Messages.FRACTIONAL_PREMIUM_CREDITS_UNACTIVATED_INFO.format({ activateDate: c }) : '') : o === u.a$.FP_SUB ? E.Z.Messages.FRACTIONAL_CREDITS_SUBSCRIPTION_RESUME_INFO.format({ resumeDate: a }) : '',
-        S = s ? l : t,
-        I = i()({
-            [T.fractionalUnactivatedPill]: s,
-            [T.fractionalTimeRemainingPill]: !s
+var i = n(200651);
+n(192379);
+var s = n(120356),
+    r = n.n(s),
+    l = n(481060),
+    a = n(927359),
+    o = n(975298),
+    c = n(436774),
+    d = n(55935),
+    u = n(74538),
+    m = n(474936),
+    h = n(388032),
+    g = n(153457);
+function p(e) {
+    let { hasUnactivatedUnits: t, durationText: n, endsAt: s, fractionalState: a, unactivatedHoursString: o, activationDate: c } = e,
+        d = t ? h.intl.string(h.t['hT6i//']) : h.intl.string(h.t['3G0CTE']),
+        u = t ? (void 0 === c ? h.intl.formatToPlainString(h.t['0Vwb/v'], { activateDate: c }) : '') : a === m.a$.FP_SUB ? h.intl.formatToPlainString(h.t.MMvaIC, { resumeDate: s.toDate() }) : '',
+        p = t ? o : n,
+        x = r()({
+            [g.fractionalUnactivatedPill]: t,
+            [g.fractionalTimeRemainingPill]: !t
         }),
-        N = i()({
-            [T.fractionalUnactivatedPillText]: s,
-            [T.fractionalTimeRemainingPillText]: !s
+        S = r()({
+            [g.fractionalUnactivatedPillText]: t,
+            [g.fractionalTimeRemainingPillText]: !t
         }),
-        m = i()({ [T.fractionalTimeRemainingRowHeader]: !s });
-    return (0, n.jsxs)('div', {
-        className: T.fractionalTimeRemainingRow,
+        T = r()({ [g.fractionalTimeRemainingRowHeader]: !t });
+    return (0, i.jsxs)('div', {
+        className: g.fractionalTimeRemainingRow,
         children: [
-            (0, n.jsxs)('div', {
-                className: T.fractionalTimeRemainingRowDetails,
+            (0, i.jsxs)('div', {
+                className: g.fractionalTimeRemainingRowDetails,
                 children: [
-                    (0, n.jsx)(r.Heading, {
+                    (0, i.jsx)(l.Heading, {
                         variant: 'heading-md/semibold',
-                        className: m,
+                        className: T,
                         children: d
                     }),
-                    _.length > 0 &&
-                        (0, n.jsx)(r.Text, {
+                    u.length > 0 &&
+                        (0, i.jsx)(l.Text, {
                             variant: 'text-sm/normal',
-                            children: _
+                            children: u
                         })
                 ]
             }),
-            (0, n.jsx)('div', {
-                className: T.fractionalTimeRemainingPillWrapper,
-                children: (0, n.jsx)('div', {
-                    className: I,
-                    children: (0, n.jsx)(r.Text, {
+            (0, i.jsx)('div', {
+                className: g.fractionalTimeRemainingPillWrapper,
+                children: (0, i.jsx)('div', {
+                    className: x,
+                    children: (0, i.jsx)(l.Text, {
                         variant: 'text-sm/semibold',
-                        className: N,
-                        children: S
+                        className: S,
+                        children: p
                     })
                 })
             })
         ]
     });
 }
-s.Z = function (e) {
-    var s;
-    let { className: t, unactivatedUnits: a, activationDate: u } = e,
-        { fractionalState: I, endsAt: N } = (0, l.Z)({ forceFetch: !0 }),
-        m = (0, o.Z)(N, o.a.SHORT_TIME),
-        C = (0, _.sk)(a),
-        A = C > 0,
-        g = {
-            days: E.Z.Messages.FRACTIONAL_PREMIUM_DURATION_DAYS_SHORT,
-            hours: E.Z.Messages.FRACTIONAL_PREMIUM_DURATION_HOURS_SHORT,
-            minutes: E.Z.Messages.FRACTIONAL_PREMIUM_DURATION_MINUTES_SHORT
+t.Z = function (e) {
+    var t;
+    let { className: n, unactivatedUnits: s, activationDate: m } = e,
+        { fractionalState: x, endsAt: S } = (0, o.Z)({ forceFetch: !0 }),
+        T = (0, a.Z)(S, a.a.SHORT_TIME),
+        C = (0, u.sk)(s),
+        _ = C > 0,
+        E = {
+            days: h.t.fYmir6,
+            hours: h.t['C3RO+v'],
+            minutes: h.t.r77oHR
         },
-        h = A
+        f = _
             ? (0, d.QX)(
                   {
                       days: 0,
@@ -77,46 +77,46 @@ s.Z = function (e) {
                       minutes: 0,
                       seconds: 0
                   },
-                  g
+                  E
               )
             : '';
-    return (0, n.jsx)('div', {
-        children: (0, n.jsxs)('div', {
-            className: i()(t, T.fractionalPremiumAccountCredit),
+    return (0, i.jsx)('div', {
+        children: (0, i.jsxs)('div', {
+            className: r()(n, g.fractionalPremiumAccountCredit),
             children: [
-                ((s = h),
-                (0, n.jsxs)('div', {
-                    className: T.accountCreditRow,
+                ((t = f),
+                (0, i.jsxs)('div', {
+                    className: g.accountCreditRow,
                     children: [
-                        (0, n.jsx)('div', {
-                            className: T.iconBackgroundFractional,
-                            children: (0, n.jsx)(r.NitroWheelIcon, {
+                        (0, i.jsx)('div', {
+                            className: g.iconBackgroundFractional,
+                            children: (0, i.jsx)(l.NitroWheelIcon, {
                                 size: 'md',
                                 color: c.JX.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
-                                className: T.iconFractional
+                                className: g.iconFractional
                             })
                         }),
-                        (0, n.jsx)('div', {
-                            className: T.rowDetails,
-                            children: (0, n.jsx)(r.Heading, {
+                        (0, i.jsx)('div', {
+                            className: g.rowDetails,
+                            children: (0, i.jsx)(l.Heading, {
                                 variant: 'heading-md/semibold',
-                                children: E.Z.Messages.FRACTIONAL_PREMIUM_CREDIT
+                                children: h.intl.string(h.t.DFMPWV)
                             })
                         }),
-                        (0, n.jsx)(r.Text, {
-                            className: T.rowCreditCount,
+                        (0, i.jsx)(l.Text, {
+                            className: g.rowCreditCount,
                             variant: 'text-md/semibold',
-                            children: s.length > 0 ? s : E.Z.Messages.FRACTIONAL_PREMIUM_ACTIVE
+                            children: t.length > 0 ? t : h.intl.string(h.t['B66Z+f'])
                         })
                     ]
                 })),
-                (0, n.jsx)(S, {
-                    hasUnactivatedUnits: A,
-                    durationText: m,
-                    endsAt: N,
-                    fractionalState: I,
-                    unactivatedHoursString: h,
-                    activationDate: u
+                (0, i.jsx)(p, {
+                    hasUnactivatedUnits: _,
+                    durationText: T,
+                    endsAt: S,
+                    fractionalState: x,
+                    unactivatedHoursString: f,
+                    activationDate: m
                 })
             ]
         })

@@ -7,46 +7,46 @@ n.d(t, {
     n(571269),
     n(298267);
 var i = n(200651),
-    s = n(192379),
-    a = n(414910),
-    l = n(226961),
-    r = n(507154);
+    l = n(192379),
+    r = n(414910),
+    a = n(226961),
+    s = n(507154);
 function o(e) {
     let { currentUserId: t, participant: n } = e,
-        o = (0, a.Z)(n.type),
-        [c, u] = s.useState(),
-        [d, h] = s.useState(),
-        [m, p] = s.useState(),
-        _ = n.id.split(':').at(-1),
-        f = t === _,
-        E = s.useCallback((e, t, n) => {
-            var i, s, a;
-            let r = n ? l.ZP.getOutboundStats(t) : l.ZP.getInboundStats(e, t);
-            u(null !== (i = null == r ? void 0 : r.codec) && void 0 !== i ? i : 'unknown'), h(void 0 === (s = null == r ? void 0 : r.resolution) || (0 === s.width && 0 === s.height) ? 'unknown' : s.width + ' x ' + s.height), p((null == r ? void 0 : r.bitrateEstimate) !== void 0 ? ((a = r.bitrateEstimate), ''.concat((a / 1000).toFixed(2), ' Kbps')) : 'unknown');
+        o = (0, r.Z)(n.type),
+        [c, u] = l.useState(),
+        [d, h] = l.useState(),
+        [m, p] = l.useState(),
+        f = n.id.split(':').at(-1),
+        g = t === f,
+        C = l.useCallback((e, t, n) => {
+            var i, l, r;
+            let s = n ? a.ZP.getOutboundStats(t) : a.ZP.getInboundStats(e, t);
+            u(null !== (i = null == s ? void 0 : s.codec) && void 0 !== i ? i : 'unknown'), h(void 0 === (l = null == s ? void 0 : s.resolution) || (0 === l.width && 0 === l.height) ? 'unknown' : l.width + ' x ' + l.height), p((null == s ? void 0 : s.bitrateEstimate) !== void 0 ? ((r = s.bitrateEstimate), ''.concat((r / 1000).toFixed(2), ' Kbps')) : 'unknown');
         }, []);
     return (
-        s.useEffect(() => {
-            let e = () => E(_, o, f);
+        l.useEffect(() => {
+            let e = () => C(f, o, g);
             e();
             let t = setInterval(e, 1000);
             return () => clearInterval(t);
-        }, [f, _, o, E]),
+        }, [g, f, o, C]),
         (0, i.jsx)(i.Fragment, {
             children: (0, i.jsxs)('div', {
-                className: r.streamInfoContainer,
+                className: s.streamInfoContainer,
                 children: [
                     (0, i.jsx)('div', { children: (0, i.jsx)('strong', { children: 'Stream Info' }) }),
                     (0, i.jsxs)('div', {
-                        className: r.infoRow,
+                        className: s.infoRow,
                         children: [(0, i.jsx)('span', { children: 'Video Codec: ' }), (0, i.jsx)('strong', { children: c })]
                     }),
                     (0, i.jsxs)('div', {
-                        className: r.infoRow,
+                        className: s.infoRow,
                         children: [(0, i.jsx)('span', { children: 'Resolution: ' }), (0, i.jsx)('strong', { children: d })]
                     }),
-                    f &&
+                    g &&
                         (0, i.jsxs)('div', {
-                            className: r.infoRow,
+                            className: s.infoRow,
                             children: [(0, i.jsx)('span', { children: 'Bitrate Estimate: ' }), (0, i.jsx)('strong', { children: m })]
                         })
                 ]

@@ -1,9 +1,9 @@
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    a = n.n(s),
-    l = n(442837),
-    r = n(692547),
+var l = n(120356),
+    r = n.n(l),
+    a = n(442837),
+    s = n(692547),
     o = n(481060),
     c = n(358221),
     u = n(594190),
@@ -11,35 +11,35 @@ var s = n(120356),
     h = n(924557),
     m = n(435064),
     p = n(354459),
-    _ = n(689938),
-    f = n(162910);
+    f = n(388032),
+    g = n(162910);
 t.Z = (e) => {
     let { className: t, channelId: n } = e,
-        s = (0, h.Go)(),
-        E = m.Z.isDecoupledGameClippingEnabled();
-    return (0, l.e7)([d.Z, c.Z, m.Z, u.ZP], () => {
+        l = (0, h.Go)(),
+        C = m.Z.isDecoupledGameClippingEnabled();
+    return (0, a.e7)([d.Z, c.Z, m.Z, u.ZP], () => {
         var e;
         if (null == n) return !1;
         let t = d.Z.getCurrentUserActiveStream(),
             i = null === (e = u.ZP.getVisibleGame()) || void 0 === e ? void 0 : e.windowHandle;
-        return (null != t && !!m.Z.getSettings().clipsEnabled && !!s) || (null != i && !!m.Z.getSettings().decoupledClipsEnabled && !!E) || c.Z.getParticipants(n).some((e) => e.type === p.fO.USER && m.Z.isClipsEnabledForUser(e.user.id));
+        return (null != t && !!m.Z.getSettings().clipsEnabled && !!l) || (null != i && !!m.Z.getSettings().decoupledClipsEnabled && !!C) || c.Z.getParticipants(n).some((e) => e.type === p.fO.USER && m.Z.isClipsEnabledForUser(e.user.id));
     })
         ? (0, i.jsxs)(o.TooltipContainer, {
-              text: _.Z.Messages.CLIPS_ENABLED_VIEWER_TOOLTIP,
+              text: f.intl.string(f.t.DJXW3N),
               color: o.TooltipColors.GREY,
-              className: a()(t, f.clipsEnabledIndicator),
+              className: r()(t, g.clipsEnabledIndicator),
               children: [
                   (0, i.jsx)(o.IconBadge, {
                       icon: o.ClipsIcon,
                       shape: o.BadgeShapes.ROUND_LEFT,
-                      color: r.Z.unsafe_rawColors.PRIMARY_500.css,
-                      className: f.clipBadgeIcon
+                      color: s.Z.unsafe_rawColors.PRIMARY_500.css,
+                      className: g.clipBadgeIcon
                   }),
                   (0, i.jsx)(o.TextBadge, {
-                      text: _.Z.Messages.CLIPS_ENABLED_BADGE,
+                      text: f.intl.string(f.t.pCMkDQ),
                       shape: o.BadgeShapes.ROUND_RIGHT,
-                      color: r.Z.unsafe_rawColors.PRIMARY_500.css,
-                      className: f.clipBadgeText
+                      color: s.Z.unsafe_rawColors.PRIMARY_500.css,
+                      className: g.clipBadgeText
                   })
               ]
           })

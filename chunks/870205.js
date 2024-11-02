@@ -4,25 +4,25 @@ t.d(n, {
     }
 });
 var i = t(200651),
-    a = t(481060),
-    l = t(984168),
+    l = t(481060),
+    a = t(984168),
     o = t(314734),
-    r = t(689938),
+    r = t(388032),
     s = t(984177);
 function c(e) {
     let n,
         { sortOrder: t, onSortOptionClick: c } = e;
     switch (t) {
         case o.bS.POPULAR:
-            n = r.Z.Messages.APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR;
+            n = r.intl.string(r.t.SzxiqK);
             break;
         case o.bS.ALPHABETICAL:
-            n = r.Z.Messages.APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_ALPHABETICAL;
+            n = r.intl.string(r.t.m8xstr);
     }
-    return (0, i.jsx)(a.Popout, {
+    return (0, i.jsx)(l.Popout, {
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return (0, i.jsx)(l.Z, {
+            return (0, i.jsx)(a.Z, {
                 sortOrder: t,
                 onSortOptionClick: c,
                 closePopout: n
@@ -31,32 +31,32 @@ function c(e) {
         position: 'bottom',
         align: 'left',
         children: (e, t) => {
-            let { isShown: l } = t;
-            return (0, i.jsxs)(a.Button, {
+            let { isShown: a } = t;
+            return (0, i.jsxs)(l.Button, {
                 ...e,
-                size: a.Button.Sizes.MIN,
-                color: a.Button.Colors.CUSTOM,
+                size: l.Button.Sizes.MIN,
+                color: l.Button.Colors.CUSTOM,
                 className: s.sortDropdown,
                 innerClassName: s.sortDropdownInner,
-                'aria-label': r.Z.Messages.APP_LAUNCHER_COMMAND_LIST_SORT_HEADER,
+                'aria-label': r.intl.string(r.t.yeYaHR),
                 children: [
-                    (0, i.jsx)(a.ArrowsUpDownIcon, {
+                    (0, i.jsx)(l.ArrowsUpDownIcon, {
                         size: 'xs',
                         color: 'currentColor',
                         className: s.sortIconMargin
                     }),
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(l.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-normal',
                         children: n
                     }),
-                    l
-                        ? (0, i.jsx)(a.ChevronSmallUpIcon, {
+                    a
+                        ? (0, i.jsx)(l.ChevronSmallUpIcon, {
                               size: 'custom',
                               color: 'currentColor',
                               width: 20
                           })
-                        : (0, i.jsx)(a.ChevronSmallDownIcon, {
+                        : (0, i.jsx)(l.ChevronSmallDownIcon, {
                               size: 'custom',
                               color: 'currentColor',
                               width: 20

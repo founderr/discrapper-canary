@@ -1,43 +1,43 @@
-t.d(n, {
+e.d(t, {
     Z: function () {
-        return Z;
+        return h;
     }
 });
-var i = t(200651);
-t(192379);
-var a = t(442837),
-    r = t(481060),
-    o = t(240872),
-    s = t(456269),
-    u = t(346479),
-    l = t(665906),
-    d = t(592125),
-    c = t(176505),
-    f = t(689938);
-function Z(e) {
-    let n = (0, a.e7)([d.Z], () => d.Z.getChannel(e.parent_id)),
-        t = (0, l.Xb)(e),
-        Z = (0, s.kF)(e);
-    return (null == n ? void 0 : n.isForumLikeChannel()) && t
-        ? e.hasFlag(c.zZ.PINNED)
-            ? (0, i.jsx)(r.MenuItem, {
+var i = e(200651);
+e(192379);
+var r = e(442837),
+    a = e(481060),
+    l = e(240872),
+    o = e(456269),
+    u = e(346479),
+    d = e(665906),
+    s = e(592125),
+    c = e(176505),
+    f = e(388032);
+function h(n) {
+    let t = (0, r.e7)([s.Z], () => s.Z.getChannel(n.parent_id)),
+        e = (0, d.Xb)(n),
+        h = (0, o.kF)(n);
+    return (null == t ? void 0 : t.isForumLikeChannel()) && e
+        ? n.hasFlag(c.zZ.PINNED)
+            ? (0, i.jsx)(a.MenuItem, {
                   id: 'unpin-thread',
-                  label: f.Z.Messages.UNPIN_POST,
-                  action: () => u.Z.unpin(e)
+                  label: f.intl.string(f.t.trD8am),
+                  action: () => u.Z.unpin(n)
               })
-            : (0, i.jsx)(r.MenuItem, {
+            : (0, i.jsx)(a.MenuItem, {
                   id: 'pin-thread',
-                  label: f.Z.Messages.PIN_POST,
+                  label: f.intl.string(f.t.EnaWho),
                   action: function () {
-                      null != Z
-                          ? o.Z.show({
-                                title: f.Z.Messages.FORUM_PIN_CONFIRM_TITLE,
-                                body: f.Z.Messages.FORUM_PIN_CONFIRM_BODY,
+                      null != h
+                          ? l.Z.show({
+                                title: f.intl.string(f.t.IMbjxs),
+                                body: f.intl.string(f.t['mi5+Vl']),
                                 onConfirm: async () => {
-                                    await u.Z.unpin(Z), u.Z.pin(e);
+                                    await u.Z.unpin(h), u.Z.pin(n);
                                 }
                             })
-                          : u.Z.pin(e);
+                          : u.Z.pin(n);
                   }
               })
         : null;

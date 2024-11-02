@@ -1,50 +1,50 @@
-s.d(t, {
+n.d(t, {
     Z: function () {
         return g;
     }
 }),
-    s(47120);
-var n = s(200651),
-    l = s(192379),
-    i = s(748780),
-    a = s(442837),
-    r = s(481060),
-    o = s(741361),
-    c = s(856606),
-    d = s(277053),
-    u = s(259580),
-    h = s(689938),
-    m = s(724129);
+    n(47120);
+var i = n(200651),
+    l = n(192379),
+    s = n(748780),
+    r = n(442837),
+    a = n(481060),
+    o = n(741361),
+    c = n(856606),
+    d = n(277053),
+    u = n(259580),
+    h = n(388032),
+    m = n(724129);
 function g() {
-    let e = (0, a.e7)([d.Z], () => d.Z.advancedMode),
-        [t] = l.useState(new i.Z.Value(e ? 1 : 0));
-    return (0, n.jsxs)(n.Fragment, {
+    let e = (0, r.e7)([d.Z], () => d.Z.advancedMode),
+        [t] = l.useState(new s.Z.Value(e ? 1 : 0));
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, n.jsx)(r.FormDivider, { className: m.advancedModeDivider }),
-            (0, n.jsx)(r.HeadingLevel, {
-                component: (0, n.jsx)(r.Button, {
-                    look: r.Button.Looks.BLANK,
-                    color: r.Button.Colors.TRANSPARENT,
+            (0, i.jsx)(a.FormDivider, { className: m.advancedModeDivider }),
+            (0, i.jsx)(a.HeadingLevel, {
+                component: (0, i.jsx)(a.Button, {
+                    look: a.Button.Looks.BLANK,
+                    color: a.Button.Colors.TRANSPARENT,
                     onClick: function () {
                         e
-                            ? i.Z.timing(t, {
+                            ? s.Z.timing(t, {
                                   toValue: 0,
                                   duration: 250
                               }).start(() => {
                                   (0, o.d$)(!1);
                               })
                             : ((0, o.d$)(!0),
-                              i.Z.timing(t, {
+                              s.Z.timing(t, {
                                   toValue: 1,
                                   duration: 250
                               }).start());
                     },
-                    children: (0, n.jsxs)(r.FormTitle, {
+                    children: (0, i.jsxs)(a.FormTitle, {
                         tag: 'h1',
                         className: m.advancedTitle,
                         children: [
-                            h.Z.Messages.CHANNEL_PERMISSIONS_ADVANCED_PERMISSIONS,
-                            (0, n.jsx)(u.Z, {
+                            h.intl.string(h.t.dYRsrq),
+                            (0, i.jsx)(u.Z, {
                                 expanded: e,
                                 className: m.titleCaret,
                                 width: 20,
@@ -55,9 +55,9 @@ function g() {
                 }),
                 children:
                     e &&
-                    (0, n.jsx)(i.Z.div, {
+                    (0, i.jsx)(s.Z.div, {
                         style: { opacity: t },
-                        children: (0, n.jsx)(c.Z, {})
+                        children: (0, i.jsx)(c.Z, {})
                     })
             })
         ]

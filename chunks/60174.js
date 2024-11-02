@@ -1,36 +1,36 @@
 n.d(t, {
     X: function () {
-        return O;
+        return Z;
     }
 }),
     n(789020),
     n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(954955),
-    o = n.n(l),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    o = n(954955),
+    s = n.n(o),
     c = n(507274),
     u = n(481060),
     d = n(130402),
-    _ = n(466794),
-    E = n(659215),
-    I = n(222677),
-    m = n(995774),
-    f = n(931651),
-    T = n(594174),
-    h = n(630388),
-    N = n(74538),
-    p = n(833803),
-    C = n(566006),
-    g = n(981631),
-    S = n(185923),
-    A = n(474936),
-    x = n(689938),
-    R = n(96042),
-    v = n(968661);
-function M(e, t, n) {
+    m = n(466794),
+    f = n(659215),
+    h = n(222677),
+    p = n(995774),
+    g = n(931651),
+    _ = n(594174),
+    C = n(630388),
+    E = n(74538),
+    I = n(833803),
+    x = n(566006),
+    v = n(981631),
+    N = n(185923),
+    T = n(474936),
+    S = n(388032),
+    b = n(96042),
+    A = n(968661);
+function j(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,54 +43,54 @@ function M(e, t, n) {
         e
     );
 }
-class O extends a.Component {
+class Z extends r.Component {
     render() {
-        let { type: e, message: t, className: n, children: a, useChatFontScaling: s, tabIndex: l = 0 } = this.props,
-            { isReactionPickerActive: o } = this.state,
-            c = t.state === g.yb.SENDING,
-            E = e === C.O.BURST;
-        if (c || (0, h.yE)(t.flags, g.iLy.EPHEMERAL)) return null;
-        let I = T.default.getCurrentUser(),
-            m = (0, N.I5)(I),
-            f = E ? x.Z.Messages.ADD_BURST_REACTION : x.Z.Messages.ADD_REACTION;
-        !m && E && (f = (0, i.jsx)(_.X, { tooltipText: x.Z.Messages.ADD_BURST_REACTION }));
-        let A = s ? v : R,
-            { canShowImprovedReactionButton: M } = p.Z.getCurrentConfig({ location: 'ButtonAddReaction' }, { autoTrackExposure: !this.props.isForumToolbar }),
-            O = M && !this.props.isForumToolbar,
-            L = {
+        let { type: e, message: t, className: n, children: r, useChatFontScaling: l, tabIndex: o = 0 } = this.props,
+            { isReactionPickerActive: s } = this.state,
+            c = t.state === v.yb.SENDING,
+            f = e === x.O.BURST;
+        if (c || (0, C.yE)(t.flags, v.iLy.EPHEMERAL)) return null;
+        let h = _.default.getCurrentUser(),
+            p = (0, E.I5)(h),
+            g = f ? S.intl.string(S.t.Kfcszs) : S.intl.string(S.t.lfIHs7);
+        !p && f && (g = (0, i.jsx)(m.X, { tooltipText: S.intl.string(S.t.Kfcszs) }));
+        let T = l ? A : b,
+            { canShowImprovedReactionButton: j } = I.Z.getCurrentConfig({ location: 'ButtonAddReaction' }, { autoTrackExposure: !this.props.isForumToolbar }),
+            Z = j && !this.props.isForumToolbar,
+            R = {
                 size: 'sm',
                 color: 'currentColor',
-                className: r()(A.icon, { [A.largeIcon]: O })
+                className: a()(T.icon, { [T.largeIcon]: Z })
             };
         return (0, i.jsx)(u.Popout, {
-            shouldShow: o,
+            shouldShow: s,
             onRequestClose: this.handleReactionPickerToggle,
             renderPopout: this.renderReactionPopout,
             position: 'right',
             children: (e, t) => {
-                let { isShown: s } = t;
+                let { isShown: l } = t;
                 return (0, i.jsx)(u.TooltipContainer, {
-                    text: f,
+                    text: g,
                     color: u.TooltipColors.PRIMARY,
-                    'aria-label': E ? x.Z.Messages.ADD_BURST_REACTION : x.Z.Messages.ADD_REACTION,
-                    tooltipClassName: A.__invalid_addReactionTooltip,
+                    'aria-label': f ? S.intl.string(S.t.Kfcszs) : S.intl.string(S.t.lfIHs7),
+                    tooltipClassName: T.__invalid_addReactionTooltip,
                     children: (0, i.jsxs)(u.Clickable, {
                         ...e,
-                        tabIndex: l,
+                        tabIndex: o,
                         onClick: (e) => {
                             this.handleAddReactionClick(e);
                         },
-                        onMouseEnter: () => (0, d.x)(S.qR.AddReactionPopoutMouseEntered),
-                        onFocus: () => (0, d.x)(S.qR.AddReactionPopoutFocused),
-                        className: r()(
-                            A.reactionBtn,
+                        onMouseEnter: () => (0, d.x)(N.qR.AddReactionPopoutMouseEntered),
+                        onFocus: () => (0, d.x)(N.qR.AddReactionPopoutFocused),
+                        className: a()(
+                            T.reactionBtn,
                             {
-                                [A.active]: s,
-                                [A.largeReactionBtn]: O
+                                [T.active]: l,
+                                [T.largeReactionBtn]: Z
                             },
                             n
                         ),
-                        children: [E ? (0, i.jsx)(i.Fragment, { children: (0, i.jsx)(u.SuperReactionIcon, { ...L }) }) : (0, i.jsx)(i.Fragment, { children: (0, i.jsx)(u.ReactionIcon, { ...L }) }), a]
+                        children: [f ? (0, i.jsx)(i.Fragment, { children: (0, i.jsx)(u.SuperReactionIcon, { ...R }) }) : (0, i.jsx)(i.Fragment, { children: (0, i.jsx)(u.ReactionIcon, { ...R }) }), r]
                     })
                 });
             }
@@ -98,60 +98,60 @@ class O extends a.Component {
     }
     constructor(...e) {
         super(...e),
-            M(this, 'state', { isReactionPickerActive: !1 }),
-            M(this, 'onAddReaction', (e, t) => {
+            j(this, 'state', { isReactionPickerActive: !1 }),
+            j(this, 'onAddReaction', (e, t) => {
                 if (null == e) return;
-                let { channel: n, message: i, isForumToolbar: a } = this.props;
-                (0, I.rU)(n.id, i.id, (0, m.g1)(e), a ? I.TW.FORUM_TOOLBAR : I.TW.MESSAGE_INLINE_BUTTON, { burst: t });
+                let { channel: n, message: i, isForumToolbar: r } = this.props;
+                (0, h.rU)(n.id, i.id, (0, p.g1)(e), r ? h.TW.FORUM_TOOLBAR : h.TW.MESSAGE_INLINE_BUTTON, { burst: t });
             }),
-            M(this, 'handleReactionPickerToggle', () => {
+            j(this, 'handleReactionPickerToggle', () => {
                 this.setState((e) => ({ isReactionPickerActive: !e.isReactionPickerActive }));
             }),
-            M(this, 'handleAddReactionClick', (e) => {
+            j(this, 'handleAddReactionClick', (e) => {
                 let { type: t, channel: n } = this.props;
                 e.stopPropagation();
-                let i = T.default.getCurrentUser();
-                t === C.O.BURST &&
-                    !(0, N.I5)(i) &&
-                    (0, E.openBurstReactionsUpsellModal)({
+                let i = _.default.getCurrentUser();
+                t === x.O.BURST &&
+                    !(0, E.I5)(i) &&
+                    (0, f.openBurstReactionsUpsellModal)({
                         analytics: {
-                            type: A.cd.BURST_REACTION_UPSELL,
-                            page: null != n.getGuildId() ? g.ZY5.GUILD_CHANNEL : g.ZY5.DM_CHANNEL,
-                            section: (0, m.s4)(n),
-                            object: g.qAy.INLINE_REACTION_PICKER_UPSELL
+                            type: T.cd.BURST_REACTION_UPSELL,
+                            page: null != n.getGuildId() ? v.ZY5.GUILD_CHANNEL : v.ZY5.DM_CHANNEL,
+                            section: (0, p.s4)(n),
+                            object: v.qAy.INLINE_REACTION_PICKER_UPSELL
                         }
                     }),
                     this.handleReactionPickerToggle();
             }),
-            M(this, 'renderReactionPopout', (e) => {
+            j(this, 'renderReactionPopout', (e) => {
                 let { closePopout: t } = e,
-                    { type: n, channel: a, message: s } = this.props,
-                    r = {
+                    { type: n, channel: r, message: l } = this.props,
+                    a = {
                         openPopoutType: 'message_reaction_emoji_picker',
-                        ...(n === C.O.BURST && {
+                        ...(n === x.O.BURST && {
                             openPopoutType: 'message_super_reaction_emoji_picker',
-                            page: null != a.getGuildId() ? g.ZY5.GUILD_CHANNEL : g.ZY5.DM_CHANNEL,
-                            section: (0, m.s4)(a),
-                            object: g.qAy.REACTION_RAIL
+                            page: null != r.getGuildId() ? v.ZY5.GUILD_CHANNEL : v.ZY5.DM_CHANNEL,
+                            section: (0, p.s4)(r),
+                            object: v.qAy.REACTION_RAIL
                         })
                     },
-                    l = (0, i.jsx)(f.$, {
+                    o = (0, i.jsx)(g.$, {
                         closePopout: t,
-                        channel: a,
+                        channel: r,
                         onSelectEmoji: (e, n, i) => {
-                            this.onAddReaction(e, i), n && (i ? o()(t, 150)() : t());
+                            this.onAddReaction(e, i), n && (i ? s()(t, 150)() : t());
                         },
-                        analyticsOverride: r,
-                        messageId: s.id
+                        analyticsOverride: a,
+                        messageId: l.id
                     });
                 return (0, i.jsx)(c.M.Consumer, {
                     children: (e) =>
                         e
                             ? (0, i.jsx)(u.Dialog, {
-                                  'aria-label': x.Z.Messages.REACTION_PICKER,
-                                  children: l
+                                  'aria-label': S.intl.string(S.t['7Xqzdn']),
+                                  children: o
                               })
-                            : l
+                            : o
                 });
             });
     }

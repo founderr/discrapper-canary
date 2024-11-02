@@ -7,37 +7,37 @@ var a,
     u = n(442837),
     c = n(544891),
     d = n(570140),
-    _ = n(358085),
-    E = n(981631);
-let f = null,
-    h = null,
-    p = null;
-(0, _.isDesktop)() &&
+    f = n(358085),
+    _ = n(981631);
+let h = null,
+    p = null,
+    m = null;
+(0, f.isDesktop)() &&
     (window.popupBridge = {
         getReturnUrlPrefix: () => {
             if (null == r) throw Error('popupBridgeState is unset');
-            return (0, c.K0)() + E.ANM.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(E.gg$.BRAINTREE, r);
+            return (0, c.K0)() + _.ANM.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(_.gg$.BRAINTREE, r);
         },
         open: (e) => {
-            (i = e), window.open(e), m.emitChange();
+            (i = e), window.open(e), E.emitChange();
         }
     });
-class I extends (a = u.ZP.Store) {
+class g extends (a = u.ZP.Store) {
     getClient() {
-        return f;
-    }
-    getPayPalClient() {
         return h;
     }
-    getVenmoClient() {
+    getPayPalClient() {
         return p;
+    }
+    getVenmoClient() {
+        return m;
     }
     getLastURL() {
         return i;
     }
 }
 (l = 'BraintreeStore'),
-    (o = 'displayName') in (s = I)
+    (o = 'displayName') in (s = g)
         ? Object.defineProperty(s, o, {
               value: l,
               enumerable: !0,
@@ -45,18 +45,18 @@ class I extends (a = u.ZP.Store) {
               writable: !0
           })
         : (s[o] = l);
-let m = new I(d.Z, {
+let E = new g(d.Z, {
     BRAINTREE_CREATE_CLIENT_SUCCESS: function (e) {
         let { client: t } = e;
-        f = t;
+        h = t;
     },
     BRAINTREE_CREATE_PAYPAL_CLIENT_SUCCESS: function (e) {
         let { paypalClient: t } = e;
-        h = t;
+        p = t;
     },
     BILLING_POPUP_BRIDGE_CALLBACK: function (e) {
         let { paymentSourceType: t, state: n, path: i, query: a } = e;
-        if (t !== E.HeQ.PAYPAL || n !== r) return;
+        if (t !== _.HeQ.PAYPAL || n !== r) return;
         let s = window.popupBridge.onComplete;
         'function' == typeof s &&
             s(null, {
@@ -66,17 +66,17 @@ let m = new I(d.Z, {
     },
     BILLING_POPUP_BRIDGE_STATE_UPDATE: function (e) {
         let { paymentSourceType: t, state: n } = e;
-        t === E.HeQ.PAYPAL && (r = n);
+        t === _.HeQ.PAYPAL && (r = n);
     },
     BRAINTREE_TEARDOWN_PAYPAL_CLIENT: function () {
-        h = null;
+        p = null;
     },
     BRAINTREE_CREATE_VENMO_CLIENT_SUCCESS: function (e) {
         let { venmoClient: t } = e;
-        p = t;
+        m = t;
     },
     BRAINTREE_TEARDOWN_VENMO_CLIENT: function () {
-        p = null;
+        m = null;
     }
 });
-t.Z = m;
+t.Z = E;

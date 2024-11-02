@@ -16,26 +16,26 @@ function s(e) {
             })(t, e);
         });
 }
-(e.exports = O), (O.WritableState = R);
+(e.exports = A), (A.WritableState = y);
 var o = { deprecate: n(220342) },
     l = n(138772),
     u = n(413135).Buffer,
     c = (void 0 !== n.g ? n.g : 'undefined' != typeof window ? window : 'undefined' != typeof self ? self : {}).Uint8Array || function () {},
     d = n(887866),
-    _ = n(97703).getHighWaterMark,
-    E = n(531478).codes,
-    f = E.ERR_INVALID_ARG_TYPE,
-    h = E.ERR_METHOD_NOT_IMPLEMENTED,
-    p = E.ERR_MULTIPLE_CALLBACK,
-    I = E.ERR_STREAM_CANNOT_PIPE,
-    m = E.ERR_STREAM_DESTROYED,
-    T = E.ERR_STREAM_NULL_VALUES,
-    S = E.ERR_STREAM_WRITE_AFTER_END,
-    g = E.ERR_UNKNOWN_ENCODING,
-    A = d.errorOrDestroy;
-function N() {}
-function R(e, t, i) {
-    (r = r || n(827664)), (e = e || {}), 'boolean' != typeof i && (i = t instanceof r), (this.objectMode = !!e.objectMode), i && (this.objectMode = this.objectMode || !!e.writableObjectMode), (this.highWaterMark = _(this, e, 'writableHighWaterMark', i)), (this.finalCalled = !1), (this.needDrain = !1), (this.ending = !1), (this.ended = !1), (this.finished = !1), (this.destroyed = !1);
+    f = n(97703).getHighWaterMark,
+    _ = n(531478).codes,
+    h = _.ERR_INVALID_ARG_TYPE,
+    p = _.ERR_METHOD_NOT_IMPLEMENTED,
+    m = _.ERR_MULTIPLE_CALLBACK,
+    g = _.ERR_STREAM_CANNOT_PIPE,
+    E = _.ERR_STREAM_DESTROYED,
+    v = _.ERR_STREAM_NULL_VALUES,
+    I = _.ERR_STREAM_WRITE_AFTER_END,
+    S = _.ERR_UNKNOWN_ENCODING,
+    T = d.errorOrDestroy;
+function b() {}
+function y(e, t, i) {
+    (r = r || n(827664)), (e = e || {}), 'boolean' != typeof i && (i = t instanceof r), (this.objectMode = !!e.objectMode), i && (this.objectMode = this.objectMode || !!e.writableObjectMode), (this.highWaterMark = f(this, e, 'writableHighWaterMark', i)), (this.finalCalled = !1), (this.needDrain = !1), (this.ending = !1), (this.ended = !1), (this.finished = !1), (this.destroyed = !1);
     var o = !1 === e.decodeStrings;
     (this.decodeStrings = !o),
         (this.defaultEncoding = e.defaultEncoding || 'utf8'),
@@ -55,12 +55,12 @@ function R(e, t, i) {
                     u = e._writableState,
                     c = u.sync,
                     d = u.writecb;
-                if ('function' != typeof d) throw new p();
+                if ('function' != typeof d) throw new m();
                 if ((((n = u).writing = !1), (n.writecb = null), (n.length -= n.writelen), (n.writelen = 0), t)) {
-                    (r = e), (i = u), (s = c), (o = t), (l = d), --i.pendingcb, s ? (a.nextTick(l, o), a.nextTick(b, r, i), (r._writableState.errorEmitted = !0), A(r, o)) : (l(o), (r._writableState.errorEmitted = !0), A(r, o), b(r, i));
+                    (r = e), (i = u), (s = c), (o = t), (l = d), --i.pendingcb, s ? (a.nextTick(l, o), a.nextTick(L, r, i), (r._writableState.errorEmitted = !0), T(r, o)) : (l(o), (r._writableState.errorEmitted = !0), T(r, o), L(r, i));
                 } else {
-                    var _ = D(u) || e.destroyed;
-                    !_ && !u.corked && !u.bufferProcessing && u.bufferedRequest && L(e, u), c ? a.nextTick(C, e, u, _, d) : C(e, u, _, d);
+                    var f = O(u) || e.destroyed;
+                    !f && !u.corked && !u.bufferProcessing && u.bufferedRequest && R(e, u), c ? a.nextTick(C, e, u, f, d) : C(e, u, f, d);
                 }
             })(t, e);
         }),
@@ -76,19 +76,19 @@ function R(e, t, i) {
         (this.bufferedRequestCount = 0),
         (this.corkedRequestsFree = new s(this));
 }
-function O(e) {
+function A(e) {
     var t = this instanceof (r = r || n(827664));
-    if (!t && !i.call(O, this)) return new O(e);
-    (this._writableState = new R(e, this, t)), (this.writable = !0), e && ('function' == typeof e.write && (this._write = e.write), 'function' == typeof e.writev && (this._writev = e.writev), 'function' == typeof e.destroy && (this._destroy = e.destroy), 'function' == typeof e.final && (this._final = e.final)), l.call(this);
+    if (!t && !i.call(A, this)) return new A(e);
+    (this._writableState = new y(e, this, t)), (this.writable = !0), e && ('function' == typeof e.write && (this._write = e.write), 'function' == typeof e.writev && (this._writev = e.writev), 'function' == typeof e.destroy && (this._destroy = e.destroy), 'function' == typeof e.final && (this._final = e.final)), l.call(this);
 }
-n(689118)(O, l),
-    (R.prototype.getBuffer = function () {
+n(689118)(A, l),
+    (y.prototype.getBuffer = function () {
         for (var e = this.bufferedRequest, t = []; e; ) t.push(e), (e = e.next);
         return t;
     }),
     !(function () {
         try {
-            Object.defineProperty(R.prototype, 'buffer', {
+            Object.defineProperty(y.prototype, 'buffer', {
                 get: o.deprecate(
                     function () {
                         return this.getBuffer();
@@ -101,40 +101,40 @@ n(689118)(O, l),
     })(),
     'function' == typeof Symbol && Symbol.hasInstance && 'function' == typeof Function.prototype[Symbol.hasInstance]
         ? ((i = Function.prototype[Symbol.hasInstance]),
-          Object.defineProperty(O, Symbol.hasInstance, {
+          Object.defineProperty(A, Symbol.hasInstance, {
               value: function (e) {
-                  return !!i.call(this, e) || (this === O && e && e._writableState instanceof R);
+                  return !!i.call(this, e) || (this === A && e && e._writableState instanceof y);
               }
           }))
         : (i = function (e) {
               return e instanceof this;
           }),
-    (O.prototype.pipe = function () {
-        A(this, new I());
+    (A.prototype.pipe = function () {
+        T(this, new g());
     });
-(O.prototype.write = function (e, t, n) {
+(A.prototype.write = function (e, t, n) {
     var r,
         i,
         s,
         o,
         l,
         d,
+        f,
         _,
-        E,
-        h,
         p,
-        I = this._writableState,
-        m = !1;
-    var g = !I.objectMode && ((r = e), u.isBuffer(r) || r instanceof c);
-    if (g && !u.isBuffer(e)) {
+        m,
+        g = this._writableState,
+        E = !1;
+    var S = !g.objectMode && ((r = e), u.isBuffer(r) || r instanceof c);
+    if (S && !u.isBuffer(e)) {
         (i = e), (e = u.from(i));
     }
-    if (('function' == typeof t && ((n = t), (t = null)), g ? (t = 'buffer') : !t && (t = I.defaultEncoding), 'function' != typeof n && (n = N), I.ending)) {
-        (s = this), (o = n), A(s, (l = new S())), a.nextTick(o, l);
+    if (('function' == typeof t && ((n = t), (t = null)), S ? (t = 'buffer') : !t && (t = g.defaultEncoding), 'function' != typeof n && (n = b), g.ending)) {
+        (s = this), (o = n), T(s, (l = new I())), a.nextTick(o, l);
     } else {
-        if (g || ((d = this), (_ = I), (E = e), (h = n), null === E ? (p = new T()) : 'string' != typeof E && !_.objectMode && (p = new f('chunk', ['string', 'Buffer'], E)), !p || (A(d, p), a.nextTick(h, p), 0)))
-            I.pendingcb++,
-                (m = (function (e, t, n, r, i, a) {
+        if (S || ((d = this), (f = g), (_ = e), (p = n), null === _ ? (m = new v()) : 'string' != typeof _ && !f.objectMode && (m = new h('chunk', ['string', 'Buffer'], _)), !m || (T(d, m), a.nextTick(p, m), 0)))
+            g.pendingcb++,
+                (E = (function (e, t, n, r, i, a) {
                     if (!n) {
                         var s,
                             o,
@@ -144,9 +144,9 @@ n(689118)(O, l),
                     }
                     var d = t.objectMode ? 1 : r.length;
                     t.length += d;
-                    var _ = t.length < t.highWaterMark;
-                    if ((!_ && (t.needDrain = !0), t.writing || t.corked)) {
-                        var E = t.lastBufferedRequest;
+                    var f = t.length < t.highWaterMark;
+                    if ((!f && (t.needDrain = !0), t.writing || t.corked)) {
+                        var _ = t.lastBufferedRequest;
                         (t.lastBufferedRequest = {
                             chunk: r,
                             encoding: i,
@@ -154,39 +154,39 @@ n(689118)(O, l),
                             callback: a,
                             next: null
                         }),
-                            E ? (E.next = t.lastBufferedRequest) : (t.bufferedRequest = t.lastBufferedRequest),
+                            _ ? (_.next = t.lastBufferedRequest) : (t.bufferedRequest = t.lastBufferedRequest),
                             (t.bufferedRequestCount += 1);
-                    } else v(e, t, !1, d, r, i, a);
-                    return _;
-                })(this, I, g, e, t, n));
+                    } else N(e, t, !1, d, r, i, a);
+                    return f;
+                })(this, g, S, e, t, n));
     }
-    return m;
+    return E;
 }),
-    (O.prototype.cork = function () {
+    (A.prototype.cork = function () {
         this._writableState.corked++;
     }),
-    (O.prototype.uncork = function () {
+    (A.prototype.uncork = function () {
         var e = this._writableState;
-        e.corked && (e.corked--, !e.writing && !e.corked && !e.bufferProcessing && e.bufferedRequest && L(this, e));
+        e.corked && (e.corked--, !e.writing && !e.corked && !e.bufferProcessing && e.bufferedRequest && R(this, e));
     }),
-    (O.prototype.setDefaultEncoding = function (e) {
-        if (('string' == typeof e && (e = e.toLowerCase()), !(['hex', 'utf8', 'utf-8', 'ascii', 'binary', 'base64', 'ucs2', 'ucs-2', 'utf16le', 'utf-16le', 'raw'].indexOf((e + '').toLowerCase()) > -1))) throw new g(e);
+    (A.prototype.setDefaultEncoding = function (e) {
+        if (('string' == typeof e && (e = e.toLowerCase()), !(['hex', 'utf8', 'utf-8', 'ascii', 'binary', 'base64', 'ucs2', 'ucs-2', 'utf16le', 'utf-16le', 'raw'].indexOf((e + '').toLowerCase()) > -1))) throw new S(e);
         return (this._writableState.defaultEncoding = e), this;
     }),
-    Object.defineProperty(O.prototype, 'writableBuffer', {
+    Object.defineProperty(A.prototype, 'writableBuffer', {
         enumerable: !1,
         get: function () {
             return this._writableState && this._writableState.getBuffer();
         }
     });
-Object.defineProperty(O.prototype, 'writableHighWaterMark', {
+Object.defineProperty(A.prototype, 'writableHighWaterMark', {
     enumerable: !1,
     get: function () {
         return this._writableState.highWaterMark;
     }
 });
-function v(e, t, n, r, i, a, s) {
-    (t.writelen = r), (t.writecb = s), (t.writing = !0), (t.sync = !0), t.destroyed ? t.onwrite(new m('write')) : n ? e._writev(i, t.onwrite) : e._write(i, a, t.onwrite), (t.sync = !1);
+function N(e, t, n, r, i, a, s) {
+    (t.writelen = r), (t.writecb = s), (t.writing = !0), (t.sync = !0), t.destroyed ? t.onwrite(new E('write')) : n ? e._writev(i, t.onwrite) : e._write(i, a, t.onwrite), (t.sync = !1);
 }
 function C(e, t, n, r) {
     !n &&
@@ -195,9 +195,9 @@ function C(e, t, n, r) {
         })(e, t),
         t.pendingcb--,
         r(),
-        b(e, t);
+        L(e, t);
 }
-function L(e, t) {
+function R(e, t) {
     t.bufferProcessing = !0;
     var n = t.bufferedRequest;
     if (e._writev && n && n.next) {
@@ -205,32 +205,32 @@ function L(e, t) {
             i = t.corkedRequestsFree;
         i.entry = n;
         for (var a = 0, o = !0; n; ) (r[a] = n), !n.isBuf && (o = !1), (n = n.next), (a += 1);
-        (r.allBuffers = o), v(e, t, !0, t.length, r, '', i.finish), t.pendingcb++, (t.lastBufferedRequest = null), i.next ? ((t.corkedRequestsFree = i.next), (i.next = null)) : (t.corkedRequestsFree = new s(t)), (t.bufferedRequestCount = 0);
+        (r.allBuffers = o), N(e, t, !0, t.length, r, '', i.finish), t.pendingcb++, (t.lastBufferedRequest = null), i.next ? ((t.corkedRequestsFree = i.next), (i.next = null)) : (t.corkedRequestsFree = new s(t)), (t.bufferedRequestCount = 0);
     } else {
         for (; n; ) {
             var l = n.chunk,
                 u = n.encoding,
                 c = n.callback,
                 d = t.objectMode ? 1 : l.length;
-            if ((v(e, t, !1, d, l, u, c), (n = n.next), t.bufferedRequestCount--, t.writing)) break;
+            if ((N(e, t, !1, d, l, u, c), (n = n.next), t.bufferedRequestCount--, t.writing)) break;
         }
         null === n && (t.lastBufferedRequest = null);
     }
     (t.bufferedRequest = n), (t.bufferProcessing = !1);
 }
-function D(e) {
+function O(e) {
     return e.ending && 0 === e.length && null === e.bufferedRequest && !e.finished && !e.writing;
 }
-function y(e, t) {
+function D(e, t) {
     e._final(function (n) {
-        t.pendingcb--, n && A(e, n), (t.prefinished = !0), e.emit('prefinish'), b(e, t);
+        t.pendingcb--, n && T(e, n), (t.prefinished = !0), e.emit('prefinish'), L(e, t);
     });
 }
-(O.prototype._write = function (e, t, n) {
-    n(new h('_write()'));
+(A.prototype._write = function (e, t, n) {
+    n(new p('_write()'));
 }),
-    (O.prototype._writev = null),
-    (O.prototype.end = function (e, t, n) {
+    (A.prototype._writev = null),
+    (A.prototype.end = function (e, t, n) {
         var r = this._writableState;
         return (
             'function' == typeof e ? ((n = e), (e = null), (t = null)) : 'function' == typeof t && ((n = t), (t = null)),
@@ -238,30 +238,30 @@ function y(e, t) {
             r.corked && ((r.corked = 1), this.uncork()),
             !r.ending &&
                 (function (e, t, n) {
-                    (t.ending = !0), b(e, t), n && (t.finished ? a.nextTick(n) : e.once('finish', n)), (t.ended = !0), (e.writable = !1);
+                    (t.ending = !0), L(e, t), n && (t.finished ? a.nextTick(n) : e.once('finish', n)), (t.ended = !0), (e.writable = !1);
                 })(this, r, n),
             this
         );
     }),
-    Object.defineProperty(O.prototype, 'writableLength', {
+    Object.defineProperty(A.prototype, 'writableLength', {
         enumerable: !1,
         get: function () {
             return this._writableState.length;
         }
     });
-function b(e, t) {
+function L(e, t) {
     var n,
         r,
-        i = D(t);
+        i = O(t);
     if (i) {
-        if (((n = e), (r = t).prefinished || r.finalCalled || ('function' != typeof n._final || r.destroyed ? ((r.prefinished = !0), n.emit('prefinish')) : (r.pendingcb++, (r.finalCalled = !0), a.nextTick(y, n, r))), 0 === t.pendingcb && ((t.finished = !0), e.emit('finish'), t.autoDestroy))) {
+        if (((n = e), (r = t).prefinished || r.finalCalled || ('function' != typeof n._final || r.destroyed ? ((r.prefinished = !0), n.emit('prefinish')) : (r.pendingcb++, (r.finalCalled = !0), a.nextTick(D, n, r))), 0 === t.pendingcb && ((t.finished = !0), e.emit('finish'), t.autoDestroy))) {
             var s = e._readableState;
             (!s || (s.autoDestroy && s.endEmitted)) && e.destroy();
         }
     }
     return i;
 }
-Object.defineProperty(O.prototype, 'destroyed', {
+Object.defineProperty(A.prototype, 'destroyed', {
     enumerable: !1,
     get: function () {
         return void 0 !== this._writableState && this._writableState.destroyed;
@@ -270,8 +270,8 @@ Object.defineProperty(O.prototype, 'destroyed', {
         if (!!this._writableState) this._writableState.destroyed = e;
     }
 }),
-    (O.prototype.destroy = d.destroy),
-    (O.prototype._undestroy = d.undestroy),
-    (O.prototype._destroy = function (e, t) {
+    (A.prototype.destroy = d.destroy),
+    (A.prototype._undestroy = d.undestroy),
+    (A.prototype._destroy = function (e, t) {
         t(e);
     });

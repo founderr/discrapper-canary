@@ -5,10 +5,10 @@ n.d(t, {
 });
 var r = n(200651);
 n(192379);
-var s = n(120356),
-    a = n.n(s),
+var a = n(120356),
+    s = n.n(a),
     i = n(481060),
-    l = n(689938),
+    l = n(388032),
     o = n(74708);
 let c = (e) => {
     let { className: t, isPartiallyPurchased: n } = e;
@@ -17,10 +17,10 @@ let c = (e) => {
               tooltipClassName: o.partiallyOwnedDisclaimer,
               position: 'top',
               align: 'left',
-              text: l.Z.Messages.COLLECTIBLES_PARTIALLY_OWNED_DISCLAIMER,
+              text: l.intl.string(l.t['2MCxfX']),
               children: (e) =>
                   (0, r.jsxs)('div', {
-                      className: a()(o.partialOwnStateContainer, t),
+                      className: s()(o.partialOwnStateContainer, t),
                       ...e,
                       children: [
                           (0, r.jsx)('span', {
@@ -33,7 +33,7 @@ let c = (e) => {
                           }),
                           (0, r.jsx)(i.Text, {
                               variant: 'text-md/semibold',
-                              children: l.Z.Messages.COLLECTIBLES_PARTIALLY_OWNED
+                              children: l.intl.string(l.t['5b+JhY'])
                           })
                       ]
                   })
@@ -41,6 +41,6 @@ let c = (e) => {
         : (0, r.jsx)(i.Text, {
               variant: 'text-md/semibold',
               className: t,
-              children: l.Z.Messages.COLLECTIBLES_ALREADY_OWNED
+              children: l.intl.string(l.t['/bUsx8'])
           });
 };

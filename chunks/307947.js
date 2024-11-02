@@ -1,32 +1,32 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return h;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(442837),
-    s = n(481060),
-    r = n(210887),
-    l = n(687683),
-    o = n(689938),
+var r = n(442837),
+    l = n(481060),
+    a = n(210887),
+    s = n(687683),
+    o = n(388032),
     c = n(335160),
     d = n(138715),
     u = n(979770);
-function _(e) {
+function h(e) {
     let { section: t } = e,
-        n = (0, a.e7)([r.Z], () => r.Z.theme);
-    return (0, i.jsxs)(s.EmptyState, {
+        n = (0, r.e7)([a.Z], () => a.Z.theme);
+    return (0, i.jsxs)(l.EmptyState, {
         theme: n,
         className: c.emptyStateContainer,
         children: [
-            (0, i.jsx)(s.EmptyStateImage, {
+            (0, i.jsx)(l.EmptyStateImage, {
                 width: 415,
                 height: 200,
                 lightSrc: u,
                 darkSrc: d
             }),
-            (0, i.jsx)(s.EmptyStateText, { note: t === l.pS.SPAM ? o.Z.Messages.MESSAGE_REQUESTS_SPAM_EMPTY_STATE_BODY : o.Z.Messages.MESSAGE_REQUESTS_EMPTY_STATE_BODY })
+            (0, i.jsx)(l.EmptyStateText, { note: t === s.pS.SPAM ? o.intl.string(o.t.hasFPT) : o.intl.string(o.t.SXrqTU) })
         ]
     });
 }

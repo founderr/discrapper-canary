@@ -8,62 +8,62 @@ var r = n(200651),
     u = n(114101),
     c = n(481060),
     d = n(28546),
-    _ = n(581883),
-    E = n(459273),
-    f = n(443603),
-    h = n(981631),
-    p = n(957825),
-    I = n(689938),
-    m = n(703130);
+    f = n(581883),
+    _ = n(459273),
+    h = n(443603),
+    p = n(981631),
+    m = n(957825),
+    g = n(388032),
+    E = n(703130);
 t.Z = i.memo(
     i.forwardRef(function (e, t) {
         let { disabled: n, type: a } = e,
-            [T, S] = i.useState(!1),
-            g = (0, l.e7)([_.Z], () => {
+            [v, I] = i.useState(!1),
+            S = (0, l.e7)([f.Z], () => {
                 var e, t;
-                return T && Object.values(null !== (t = null === (e = _.Z.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2;
+                return v && Object.values(null !== (t = null === (e = f.Z.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2;
             }),
-            [A, N, R] = (0, d.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], o.Z),
-            O = i.useRef(0),
-            v = i.useCallback(() => {
-                S(!0),
-                    clearTimeout(O.current),
-                    (O.current = setTimeout(() => {
-                        S(!1), (O.current = 0);
+            [T, b, y] = (0, d.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], o.Z),
+            A = i.useRef(0),
+            N = i.useCallback(() => {
+                I(!0),
+                    clearTimeout(A.current),
+                    (A.current = setTimeout(() => {
+                        I(!1), (A.current = 0);
                     }, 2000));
             }, []);
-        (0, E.yp)({
-            event: h.CkL.FAVORITE_GIF,
-            handler: v
+        (0, _.yp)({
+            event: p.CkL.FAVORITE_GIF,
+            handler: N
         });
         let C = i.useCallback(() => {
-                (0, d.RO)(p.X1.GIF, a);
+                (0, d.RO)(m.X1.GIF, a);
             }, [a]),
-            { Component: L, events: D, play: y } = (0, u.V)();
+            { Component: R, events: O, play: D } = (0, u.V)();
         if (n) return null;
-        let b = A === p.X1.GIF && N === a;
+        let L = T === m.X1.GIF && b === a;
         return (0, r.jsx)(c.Tooltip, {
-            text: g ? I.Z.Messages.GIF_TOOLTIP_FAVORITED_PICKER_BUTTON : null,
+            text: S ? g.intl.string(g.t.mE2e8P) : null,
             forceOpen: !0,
             children: (e) =>
                 (0, r.jsx)('div', {
                     ref: t,
-                    className: s()(p.CT, m.buttonContainer),
+                    className: s()(m.CT, E.buttonContainer),
                     ...e,
-                    children: (0, r.jsx)(f.Z, {
-                        innerClassName: m.button,
-                        onMouseEnter: D.onMouseEnter,
-                        onMouseLeave: D.onMouseLeave,
+                    children: (0, r.jsx)(h.Z, {
+                        innerClassName: E.button,
+                        onMouseEnter: O.onMouseEnter,
+                        onMouseLeave: O.onMouseLeave,
                         onClick: () => {
-                            C(), y();
+                            C(), D();
                         },
-                        isActive: b,
-                        pulse: T,
-                        'aria-label': I.Z.Messages.GIF_BUTTON_LABEL,
-                        'aria-expanded': b,
+                        isActive: L,
+                        pulse: v,
+                        'aria-label': g.intl.string(g.t.PtVpk5),
+                        'aria-expanded': L,
                         'aria-haspopup': 'dialog',
-                        'aria-controls': R,
-                        children: (0, r.jsx)(L, { color: 'currentColor' })
+                        'aria-controls': y,
+                        children: (0, r.jsx)(R, { color: 'currentColor' })
                     })
                 })
         });

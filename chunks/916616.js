@@ -1,6 +1,6 @@
 n.d(t, {
     E: function () {
-        return A;
+        return T;
     }
 }),
     n(47120);
@@ -13,16 +13,16 @@ var r,
     u = n(481060),
     c = n(410030),
     d = n(446108),
-    _ = n(956664),
-    E = n(921948),
-    f = n(823023),
-    h = n(981631),
-    p = n(217702),
-    I = n(689938),
-    m = n(459127),
-    T = n(167969),
-    S = n(557256);
-function g(e, t, n) {
+    f = n(956664),
+    _ = n(921948),
+    h = n(823023),
+    p = n(981631),
+    m = n(217702),
+    g = n(388032),
+    E = n(459127),
+    v = n(167969),
+    I = n(557256);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,104 +35,104 @@ function g(e, t, n) {
         e
     );
 }
-class A extends (r = a.PureComponent) {
+class T extends (r = a.PureComponent) {
     render() {
         let e;
-        let { className: t, imageClassName: n, readyState: r, src: a, placeholder: s, placeholderVersion: l, alt: c, width: E, height: T, maxWidth: S = E, maxHeight: g = T, minWidth: A, minHeight: O, mediaLayoutType: v, limitResponsiveWidth: C = !0, accessory: L, zoomable: D, original: y, children: b, renderAccessory: M, onClick: P, tabIndex: U, dataSafeSrc: w, useFullWidth: x = !1, ...G } = this.props;
-        if (1 === E && 1 === T) return null;
-        let k = (0, _.Tj)({
-                width: E,
-                height: T,
-                maxWidth: S,
-                maxHeight: g,
-                minWidth: A,
-                minHeight: O
+        let { className: t, imageClassName: n, readyState: r, src: a, placeholder: s, placeholderVersion: l, alt: c, width: _, height: v, maxWidth: I = _, maxHeight: S = v, minWidth: T, minHeight: A, mediaLayoutType: N, limitResponsiveWidth: C = !0, accessory: R, zoomable: O, original: D, children: L, renderAccessory: x, onClick: w, tabIndex: M, dataSafeSrc: P, useFullWidth: k = !1, ...U } = this.props;
+        if (1 === _ && 1 === v) return null;
+        let G = (0, f.Tj)({
+                width: _,
+                height: v,
+                maxWidth: I,
+                maxHeight: S,
+                minWidth: T,
+                minHeight: A
             }),
-            B = 0 !== k.width ? k.width / k.height : 1;
-        '' !== a && r !== h.zo9.ERROR
-            ? (e = b({
+            B = 0 !== G.width ? G.width / G.height : 1;
+        '' !== a && r !== p.zo9.ERROR
+            ? (e = L({
                   src: a,
-                  size: k,
+                  size: G,
                   alt: c,
                   className: n,
-                  mediaLayoutType: v
+                  mediaLayoutType: N
               }))
-            : r !== h.zo9.LOADING &&
-              (e = (0, i.jsx)(N, {
-                  size: k,
-                  mediaLayoutType: v,
+            : r !== p.zo9.LOADING &&
+              (e = (0, i.jsx)(b, {
+                  size: G,
+                  mediaLayoutType: N,
                   alt: c
               })),
-            (e = (0, i.jsx)(f.N, {
+            (e = (0, i.jsx)(h.N, {
                 readyState: r,
                 aspectRatio: B,
                 placeholder: s,
                 placeholderVersion: l,
-                placeholderStyle: R(k, v),
+                placeholderStyle: y(G, N),
                 children: e
             }));
-        let F = null != M ? M() : null;
+        let Z = null != x ? x() : null;
         return (
-            (F = null != F ? F : L),
+            (Z = null != Z ? Z : R),
             (0, i.jsx)(u.FocusRing, {
                 ringTarget: this._containerRef,
                 focusTarget: this._clickableRef,
                 children: (0, i.jsxs)('div', {
                     className: o()(
-                        m.imageWrapper,
+                        E.imageWrapper,
                         {
-                            [m.imageZoom]: D,
-                            [m.imageWrapperBackground]: r !== h.zo9.READY,
-                            [m.clickable]: null != P
+                            [E.imageZoom]: O,
+                            [E.imageWrapperBackground]: r !== p.zo9.READY,
+                            [E.clickable]: null != w
                         },
                         t
                     ),
                     style: (function (e, t, n, r) {
-                        return r === p.hV.MOSAIC
+                        return r === m.hV.MOSAIC
                             ? {
                                   display: 'block',
                                   maxHeight: 'inherit',
                                   margin: 'auto',
-                                  width: !n && e.width <= p.mT ? e.width : '100%',
+                                  width: !n && e.width <= m.mT ? e.width : '100%',
                                   height: '100%'
                               }
-                            : r === p.hV.RESPONSIVE
+                            : r === m.hV.RESPONSIVE
                               ? {
                                     maxWidth: t ? e.width : void 0,
                                     width: '100%',
                                     aspectRatio: ''.concat(e.width, ' / ').concat(e.height)
                                 }
                               : e;
-                    })(k, C, x, v),
-                    ...G,
+                    })(G, C, k, N),
+                    ...U,
                     children: [
-                        null != y &&
+                        null != D &&
                             (0, i.jsx)('a', {
                                 tabIndex: -1,
-                                onClick: P,
+                                onClick: w,
                                 'aria-hidden': !0,
-                                className: m.originalLink,
-                                href: y,
+                                className: E.originalLink,
+                                href: D,
                                 ref: this._containerRef,
                                 'data-role': 'img',
-                                'data-safe-src': null != w ? w : a
+                                'data-safe-src': null != P ? P : a
                             }),
-                        null != P
+                        null != w
                             ? (0, i.jsx)(u.Clickable, {
-                                  className: m.clickableWrapper,
-                                  tabIndex: null != U ? U : 0,
-                                  onClick: P,
-                                  'aria-label': null != c ? c : I.Z.Messages.IMAGE,
+                                  className: E.clickableWrapper,
+                                  tabIndex: null != M ? M : 0,
+                                  onClick: w,
+                                  'aria-label': null != c ? c : g.intl.string(g.t.X4IxWF),
                                   'aria-describedby': d.r5,
                                   innerRef: this._clickableRef,
                                   focusProps: { enabled: !1 },
                                   children: e
                               })
                             : e,
-                        null != F
+                        null != Z
                             ? (0, i.jsx)('div', {
-                                  className: m.imageAccessory,
-                                  children: F
+                                  className: E.imageAccessory,
+                                  children: Z
                               })
                             : null
                     ]
@@ -141,17 +141,17 @@ class A extends (r = a.PureComponent) {
         );
     }
     constructor(...e) {
-        super(...e), g(this, '_containerRef', a.createRef()), g(this, '_clickableRef', a.createRef());
+        super(...e), S(this, '_containerRef', a.createRef()), S(this, '_clickableRef', a.createRef());
     }
 }
-function N(e) {
+function b(e) {
     let { size: t, mediaLayoutType: n, alt: r } = e,
         a = (0, c.ZP)();
     return (0, i.jsx)('div', {
-        className: m.imageErrorWrapper,
+        className: E.imageErrorWrapper,
         style: (function (e, t) {
             switch (t) {
-                case p.hV.MOSAIC:
+                case m.hV.MOSAIC:
                     return {
                         width: '100%',
                         height: '100%',
@@ -159,9 +159,9 @@ function N(e) {
                         display: 'flex',
                         maxHeight: 'inherit'
                     };
-                case p.hV.RESPONSIVE:
+                case m.hV.RESPONSIVE:
                     return {
-                        ...O(e),
+                        ...A(e),
                         display: 'flex'
                     };
                 default:
@@ -169,44 +169,44 @@ function N(e) {
             }
         })(t, n),
         children: (0, i.jsx)('img', {
-            src: (0, l.ap)(a) ? S : T,
-            className: m.imageError,
-            alt: null != r ? r : I.Z.Messages.IMAGE
+            src: (0, l.ap)(a) ? I : v,
+            className: E.imageError,
+            alt: null != r ? r : g.intl.string(g.t.X4IxWF)
         })
     });
 }
-g(A, 'defaultProps', {
-    readyState: h.zo9.READY,
+S(T, 'defaultProps', {
+    readyState: p.zo9.READY,
     zoomable: !0,
     children: (e) => {
         let { src: t, size: n, alt: r, className: a, mediaLayoutType: s } = e;
         return (0, i.jsx)('img', {
             className: null != a ? a : void 0,
-            alt: null != r ? r : I.Z.Messages.IMAGE,
+            alt: null != r ? r : g.intl.string(g.t.X4IxWF),
             src: t,
-            style: R(n, s)
+            style: y(n, s)
         });
     },
     minWidth: 0,
     minHeight: 0
 });
-function R(e, t) {
+function y(e, t) {
     switch (t) {
-        case p.hV.MOSAIC:
+        case m.hV.MOSAIC:
             return {
                 display: 'block',
                 objectFit: 'cover',
                 minWidth: '100%',
                 minHeight: '100%',
-                maxWidth: 1 === (0, E.Z)() ? 'calc(100% + 1px)' : '100%'
+                maxWidth: 1 === (0, _.Z)() ? 'calc(100% + 1px)' : '100%'
             };
-        case p.hV.RESPONSIVE:
-            return O(e);
+        case m.hV.RESPONSIVE:
+            return A(e);
         default:
             return e;
     }
 }
-function O(e) {
+function A(e) {
     let { width: t, height: n } = e;
     return {
         maxWidth: t,

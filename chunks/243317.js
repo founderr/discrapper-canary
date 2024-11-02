@@ -6,11 +6,11 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(689938),
+    a = n(388032),
     s = n(661143);
 function o() {
     return (0, r.jsx)(i.Tooltip, {
-        text: a.Z.Messages.SUPPRESS_NOTIFICATIONS_TOOLTIP,
+        text: a.intl.string(a.t['RO/KYm']),
         children: (e) =>
             (0, r.jsx)('div', {
                 className: s.badge,

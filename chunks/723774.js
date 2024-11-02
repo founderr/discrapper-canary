@@ -8,7 +8,7 @@ t.d(n, {
 });
 var u = t(709054),
     l = t(124368),
-    r = t(689938);
+    r = t(388032);
 let i = (e) => u.default.compare('992549565104128000', e) > -1,
     o = (e, n) => {
         if (null == e || e < 0) return '0';
@@ -19,6 +19,6 @@ let i = (e) => u.default.compare('992549565104128000', e) > -1,
     },
     a = (e, n, t) => {
         let u = o(e, t);
-        return '0' === u ? r.Z.Messages.SEE_THREAD : n.format({ count: u });
+        return '0' === u ? r.intl.string(r.t.eXHkho) : r.intl.formatToPlainString(n, { count: u });
     },
-    d = (e, n) => a(e, r.Z.Messages.THREAD_MESSAGE_COUNT, n);
+    d = (e, n) => a(e, r.t.rfAXDQ, n);

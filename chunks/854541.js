@@ -1,12 +1,12 @@
 n.d(t, {
     AG: function () {
-        return R;
+        return y;
     },
     Z$: function () {
-        return v;
+        return N;
     },
     jH: function () {
-        return O;
+        return A;
     },
     zH: function () {
         return C;
@@ -22,62 +22,62 @@ var r = n(200651),
     u = n(866442),
     c = n(1561),
     d = n(507274),
-    _ = n(84735),
-    E = n(463208),
-    f = n(481060),
-    h = n(408886),
-    p = n(44315),
-    I = n(665149),
-    m = n(534828),
-    T = n(981631),
-    S = n(689938),
-    g = n(397375);
-let A = () => Promise.resolve();
-function N(e) {
-    let { color: t, isDefault: n = !1, isCustom: i = !1, isSelected: a = !1, disabled: l = !1, style: c = {}, onClick: d, 'aria-label': E } = e,
-        h = (0, o.JA)('color-'.concat(t)),
-        I = null != t ? (0, u.Rf)(t) : c.backgroundColor,
-        m = !1;
+    f = n(84735),
+    _ = n(463208),
+    h = n(481060),
+    p = n(408886),
+    m = n(44315),
+    g = n(665149),
+    E = n(534828),
+    v = n(981631),
+    I = n(388032),
+    S = n(397375);
+let T = () => Promise.resolve();
+function b(e) {
+    let { color: t, isDefault: n = !1, isCustom: i = !1, isSelected: a = !1, disabled: l = !1, style: c = {}, onClick: d, 'aria-label': _ } = e,
+        p = (0, o.JA)('color-'.concat(t)),
+        g = null != t ? (0, u.Rf)(t) : c.backgroundColor,
+        E = !1;
     return (
-        i && !a ? (m = !0) : (i || a) && (m = (0, u.Bd)(t) > 0.1),
-        (0, r.jsx)(_.t, {
+        i && !a ? (E = !0) : (i || a) && (E = (0, u.Bd)(t) > 0.1),
+        (0, r.jsx)(f.t, {
             offset: -2,
             children: (0, r.jsxs)('button', {
                 type: 'button',
-                className: s()(g.colorPickerSwatch, {
-                    [g.disabled]: l,
-                    [g.default]: n,
-                    [g.custom]: i,
-                    [g.noColor]: null == t
+                className: s()(S.colorPickerSwatch, {
+                    [S.disabled]: l,
+                    [S.default]: n,
+                    [S.custom]: i,
+                    [S.noColor]: null == t
                 }),
                 disabled: l,
                 onClick: () => (null == d ? void 0 : d(t)),
                 style: {
                     ...c,
-                    backgroundColor: I
+                    backgroundColor: g
                 },
-                'aria-label': null != E ? E : I,
-                ...h,
+                'aria-label': null != _ ? _ : g,
+                ...p,
                 children: [
                     i
-                        ? (0, r.jsx)(f.EyeDropperIcon, {
+                        ? (0, r.jsx)(h.EyeDropperIcon, {
                               size: 'custom',
-                              className: g.colorPickerDropper,
-                              colorClass: g.colorPickerDropperFg,
+                              className: S.colorPickerDropper,
+                              colorClass: S.colorPickerDropperFg,
                               width: 14,
                               height: 14,
-                              color: (0, p.Lq)(m ? T.Ilk.WHITE_500 : T.Ilk.BLACK_500)
+                              color: (0, m.Lq)(E ? v.Ilk.WHITE_500 : v.Ilk.BLACK_500)
                           })
                         : null,
                     (function () {
                         let e = 16,
                             t = 16;
                         if (((i || n) && ((e = 32), (t = 24)), a))
-                            return (0, r.jsx)(f.CheckmarkLargeIcon, {
+                            return (0, r.jsx)(h.CheckmarkLargeIcon, {
                                 size: 'custom',
                                 width: e,
                                 height: t,
-                                color: (0, p.Lq)(m ? T.Ilk.WHITE_500 : T.Ilk.BLACK_500)
+                                color: (0, m.Lq)(E ? v.Ilk.WHITE_500 : v.Ilk.BLACK_500)
                             });
                     })()
                 ]
@@ -85,10 +85,10 @@ function N(e) {
         })
     );
 }
-class R extends i.PureComponent {
+class y extends i.PureComponent {
     render() {
         let { color: e, onChange: t, value: n, disabled: i } = this.props;
-        return (0, r.jsx)(N, {
+        return (0, r.jsx)(b, {
             isDefault: !0,
             color: e,
             isSelected: e === n || 0 === n,
@@ -97,10 +97,10 @@ class R extends i.PureComponent {
         });
     }
 }
-class O extends i.PureComponent {
+class A extends i.PureComponent {
     render() {
         let { customColor: e, value: t, disabled: n, 'aria-label': i } = this.props;
-        return (0, r.jsx)(N, {
+        return (0, r.jsx)(b, {
             isCustom: !0,
             color: e,
             isSelected: t === e,
@@ -109,43 +109,43 @@ class O extends i.PureComponent {
         });
     }
 }
-let v = i.memo(function (e) {
-    let { value: t, eagerUpdate: n = !1, onChange: a, onClose: o, suggestedColors: l, middle: _, footer: p, showEyeDropper: T, wrapperComponentType: A, className: N } = e,
-        R = (0, h.Z)(),
-        O = (function (e) {
+let N = i.memo(function (e) {
+    let { value: t, eagerUpdate: n = !1, onChange: a, onClose: o, suggestedColors: l, middle: f, footer: m, showEyeDropper: v, wrapperComponentType: T, className: b } = e,
+        y = (0, p.Z)(),
+        A = (function (e) {
             if (null == e) return null;
             if ('string' == typeof e) return (0, u.FX)(e) ? (0, u._i)(e) : null;
             return e;
         })(t),
-        v = null != O ? O : 0,
-        C = (0, u.Rf)(v),
-        L = (0, u.O)(v),
-        [D, y] = i.useState({
-            current: v,
+        N = null != A ? A : 0,
+        C = (0, u.Rf)(N),
+        R = (0, u.O)(N),
+        [O, D] = i.useState({
+            current: N,
             pending: {
                 hex: C,
-                hsl: L
+                hsl: R
             },
             input: C
         });
     i.useEffect(() => {
-        if (null == O || O === D.current) return;
-        let e = (0, u.Rf)(O),
-            t = (0, u.O)(O);
-        y({
-            current: O,
+        if (null == A || A === O.current) return;
+        let e = (0, u.Rf)(A),
+            t = (0, u.O)(A);
+        D({
+            current: A,
             pending: {
                 hex: e,
                 hsl: t
             },
             input: e
         });
-    }, [O, D]),
+    }, [A, O]),
         i.useEffect(() => o, [o]);
-    let b = (e) => {
+    let L = (e) => {
             let t = '#' === e[0] ? e : '#'.concat(e);
             if (!(0, u.FX)(t)) {
-                y((e) => ({
+                D((e) => ({
                     ...e,
                     input: t
                 }));
@@ -153,7 +153,7 @@ let v = i.memo(function (e) {
             }
             let n = (0, u._i)(t),
                 r = (0, u.O)(n);
-            y({
+            D({
                 current: n,
                 pending: {
                     hex: t,
@@ -163,16 +163,16 @@ let v = i.memo(function (e) {
             }),
                 a(n);
         },
-        M = async () => {
-            if (null != R)
+        x = async () => {
+            if (null != y)
                 try {
-                    let { sRGBHex: e } = await R.open();
-                    b(e);
+                    let { sRGBHex: e } = await y.open();
+                    L(e);
                 } catch {}
         },
-        P = i.useCallback(
+        w = i.useCallback(
             (e) => {
-                y((t) => ({
+                D((t) => ({
                     ...t,
                     pending: e,
                     input: e.hex
@@ -181,36 +181,36 @@ let v = i.memo(function (e) {
             },
             [n, a]
         ),
-        U = (e) => {
+        M = (e) => {
             a((0, u._i)(e));
         },
-        w = (0, r.jsxs)(r.Fragment, {
+        P = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(m.Z, {
-                    onChange: P,
+                (0, r.jsx)(E.Z, {
+                    onChange: w,
                     onChangeComplete: (e) => {
                         let { hex: t } = e;
-                        return U(t);
+                        return M(t);
                     },
-                    color: D.pending.hsl
+                    color: O.pending.hsl
                 }),
-                _,
+                f,
                 (0, r.jsxs)('div', {
-                    className: g.customColorPickerInputContainer,
+                    className: S.customColorPickerInputContainer,
                     children: [
-                        T &&
-                            null != R &&
-                            (0, r.jsx)(I.JO, {
-                                onClick: M,
-                                tooltip: S.Z.Messages.PICK_A_COLOR_FROM_THE_PAGE,
+                        v &&
+                            null != y &&
+                            (0, r.jsx)(g.JO, {
+                                onClick: x,
+                                tooltip: I.intl.string(I.t['0dU9Nz']),
                                 tooltipPosition: 'top',
-                                className: g.customColorPickerEyeDropper,
-                                icon: f.EyeDropperIcon
+                                className: S.customColorPickerEyeDropper,
+                                icon: h.EyeDropperIcon
                             }),
-                        (0, r.jsx)(E.o, {
-                            className: g.customColorPickerInput,
-                            value: D.input,
-                            onChange: b,
+                        (0, r.jsx)(_.o, {
+                            className: S.customColorPickerInput,
+                            value: O.input,
+                            onChange: L,
                             maxLength: 7
                         })
                     ]
@@ -218,38 +218,38 @@ let v = i.memo(function (e) {
                 null != l &&
                     l.length > 0 &&
                     (0, r.jsx)('div', {
-                        className: g.suggestedColors,
+                        className: S.suggestedColors,
                         children: l.map((e, t) =>
                             (0, r.jsx)(
                                 c.P,
                                 {
                                     'aria-label': '',
                                     style: { backgroundColor: e },
-                                    className: g.suggestedColor,
-                                    onClick: () => b(e)
+                                    className: S.suggestedColor,
+                                    onClick: () => L(e)
                                 },
                                 ''.concat(e, '-').concat(t)
                             )
                         )
                     }),
-                p
+                m
             ]
         }),
-        x = null != A ? A : d.V;
-    return (0, r.jsx)(x, {
-        'aria-label': S.Z.Messages.PICK_A_COLOR,
-        className: s()(g.customColorPicker, N),
-        children: w
+        k = null != T ? T : d.V;
+    return (0, r.jsx)(k, {
+        'aria-label': I.intl.string(I.t.WTqQ5e),
+        className: s()(S.customColorPicker, b),
+        children: P
     });
 });
 function C(e) {
-    let { className: t, defaultColor: n, customColor: i, colors: a, value: u, disabled: c, onChange: d, renderDefaultButton: _, renderCustomButton: E, colorContainerClassName: f } = e,
-        h = (e) =>
+    let { className: t, defaultColor: n, customColor: i, colors: a, value: u, disabled: c, onChange: d, renderDefaultButton: f, renderCustomButton: _, colorContainerClassName: h } = e,
+        p = (e) =>
             (0, r.jsx)('div', {
-                className: g.colorPickerRow,
+                className: S.colorPickerRow,
                 children: e.map((e) =>
                     (0, r.jsx)(
-                        N,
+                        b,
                         {
                             color: e,
                             isSelected: e === u,
@@ -260,27 +260,27 @@ function C(e) {
                     )
                 )
             }),
-        p = a.slice(0, a.length / 2),
-        I = a.slice(a.length / 2, a.length),
-        m = (0, l.ZP)({
+        m = a.slice(0, a.length / 2),
+        g = a.slice(a.length / 2, a.length),
+        E = (0, l.ZP)({
             id: 'color-picker',
             isEnabled: !0,
-            scrollToStart: A,
-            scrollToEnd: A
+            scrollToStart: T,
+            scrollToEnd: T
         });
     return (0, r.jsx)(o.bG, {
-        navigator: m,
+        navigator: E,
         children: (0, r.jsx)(o.SJ, {
             children: (e) => {
                 let { ref: a, ...o } = e;
                 return (0, r.jsxs)('div', {
-                    className: s()(g.container, t),
+                    className: s()(S.container, t),
                     ref: a,
                     ...o,
                     children: [
                         (0, r.jsx)('div', {
-                            className: s()(g.defaultContainer, f),
-                            children: _({
+                            className: s()(S.defaultContainer, h),
+                            children: f({
                                 value: u,
                                 color: n,
                                 onChange: d,
@@ -288,15 +288,15 @@ function C(e) {
                             })
                         }),
                         (0, r.jsx)('div', {
-                            className: s()(g.customContainer, f),
-                            children: E({
+                            className: s()(S.customContainer, h),
+                            children: _({
                                 value: u,
                                 customColor: i,
                                 disabled: c
                             })
                         }),
                         (0, r.jsxs)('div', {
-                            children: [h(p), h(I)]
+                            children: [p(m), p(g)]
                         })
                     ]
                 });

@@ -1,18 +1,18 @@
 var i = n(664081),
-    a = n(570140),
-    s = n(317770),
-    r = n(863750),
-    l = n(335131);
-class o extends s.Z {
+    r = n(570140),
+    l = n(317770),
+    a = n(863750),
+    s = n(335131);
+class o extends l.Z {
     _initialize() {
-        a.Z.subscribe('POST_CONNECTION_OPEN', this.handlePostConnectionOpen);
+        r.Z.subscribe('POST_CONNECTION_OPEN', this.handlePostConnectionOpen);
     }
     _terminate() {
-        a.Z.unsubscribe('POST_CONNECTION_OPEN', this.handlePostConnectionOpen);
+        r.Z.unsubscribe('POST_CONNECTION_OPEN', this.handlePostConnectionOpen);
     }
     handlePostConnectionOpen() {
-        let e = r.Z.get('shop_include_unpublished');
-        (0, l.R2)({ release: e ? i.P.BETA : i.P.PROD });
+        let e = a.Z.get('shop_include_unpublished');
+        (0, s.R2)({ release: e ? i.P.BETA : i.P.PROD });
     }
 }
 t.Z = new o();

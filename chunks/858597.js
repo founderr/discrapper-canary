@@ -1,230 +1,230 @@
-var T = s(200651),
-    o = s(192379),
-    n = s(120356),
-    a = s.n(n),
-    l = s(442837),
-    _ = s(692547),
-    i = s(481060),
-    r = s(194359),
-    S = s(782568),
-    E = s(726521),
-    c = s(485664),
-    O = s(699516),
-    A = s(863653),
-    d = s(941362),
-    u = s(367408),
-    I = s(423932),
-    L = s(473092),
-    N = s(611446),
-    C = s(993750),
-    R = s(134612),
-    x = s(689938),
-    M = s(216305);
-function F(e) {
-    let { children: t } = e;
-    return (0, T.jsx)('div', {
-        className: M.actionGroup,
-        children: t
+var i = n(200651),
+    o = n(192379),
+    s = n(120356),
+    l = n.n(s),
+    r = n(442837),
+    a = n(692547),
+    c = n(481060),
+    d = n(194359),
+    u = n(782568),
+    T = n(726521),
+    S = n(485664),
+    _ = n(699516),
+    x = n(863653),
+    A = n(941362),
+    E = n(367408),
+    C = n(423932),
+    h = n(473092),
+    p = n(611446),
+    b = n(993750),
+    N = n(134612),
+    R = n(388032),
+    L = n(216305);
+function m(t) {
+    let { children: e } = t;
+    return (0, i.jsx)('div', {
+        className: L.actionGroup,
+        children: e
     });
 }
-function B(e) {
-    let { title: t, subTitle: s, buttonText: o, buttonColor: n, onPress: a } = e;
-    return (0, T.jsxs)('div', {
-        className: M.actionRow,
+function O(t) {
+    let { title: e, subTitle: n, buttonText: o, buttonColor: s, onPress: l } = t;
+    return (0, i.jsxs)('div', {
+        className: L.actionRow,
         children: [
-            (0, T.jsxs)('div', {
-                className: M.actionButtonDetails,
+            (0, i.jsxs)('div', {
+                className: L.actionButtonDetails,
                 children: [
-                    (0, T.jsx)(i.Text, {
+                    (0, i.jsx)(c.Text, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: t
+                        children: e
                     }),
-                    (0, T.jsx)(i.Text, {
+                    (0, i.jsx)(c.Text, {
                         variant: 'text-xs/medium',
                         color: 'header-secondary',
-                        children: s
+                        children: n
                     })
                 ]
             }),
-            (0, T.jsx)(i.Button, {
-                size: i.Button.Sizes.SMALL,
-                color: n,
-                onClick: a,
+            (0, i.jsx)(c.Button, {
+                size: c.Button.Sizes.SMALL,
+                color: s,
+                onClick: l,
                 children: o
             })
         ]
     });
 }
-function Y(e) {
-    let { title: t, onPress: s } = e;
-    return (0, T.jsxs)(i.Clickable, {
-        className: a()(M.actionRow, M.clickableActionRow),
-        onClick: s,
+function f(t) {
+    let { title: e, onPress: n } = t;
+    return (0, i.jsxs)(c.Clickable, {
+        className: l()(L.actionRow, L.clickableActionRow),
+        onClick: n,
         children: [
-            (0, T.jsx)(i.Text, {
+            (0, i.jsx)(c.Text, {
                 variant: 'text-md/semibold',
                 color: 'header-primary',
-                children: t
+                children: e
             }),
-            (0, T.jsx)(i.ChevronSmallRightIcon, {
+            (0, i.jsx)(c.ChevronSmallRightIcon, {
                 size: 'md',
-                color: _.Z.colors.INTERACTIVE_NORMAL
+                color: a.Z.colors.INTERACTIVE_NORMAL
             })
         ]
     });
 }
-t.Z = function (e) {
-    let { otherUserId: t, channelId: n, warningId: a, warningType: _, transitionToSlide: M } = e,
-        b = (0, c.o)(),
-        h = (0, A.zF)('web_safety-tools-action-slide'),
-        p = (0, d.q)(n),
-        Z = null != (0, u.M)(n),
-        m = (0, l.e7)([O.Z], () => O.Z.isBlocked(t)),
-        f = o.useCallback(
-            (e) => {
-                (0, L.qc)({
-                    channelId: n,
-                    warningId: a,
-                    senderId: t,
-                    warningType: _,
-                    cta: e,
-                    isNudgeWarning: Z
+e.Z = function (t) {
+    let { otherUserId: e, channelId: s, warningId: l, warningType: a, transitionToSlide: L } = t,
+        g = (0, S.o)(),
+        j = (0, x.zF)('web_safety-tools-action-slide'),
+        I = (0, A.q)(s),
+        M = null != (0, E.M)(s),
+        B = (0, r.e7)([_.Z], () => _.Z.isBlocked(e)),
+        F = o.useCallback(
+            (t) => {
+                (0, h.qc)({
+                    channelId: s,
+                    warningId: l,
+                    senderId: e,
+                    warningType: a,
+                    cta: t,
+                    isNudgeWarning: M
                 });
             },
-            [n, a, t, _, Z]
+            [s, l, e, a, M]
         ),
-        P = o.useCallback(() => {
-            (0, i.closeModal)(R.X_), f(L.NM.USER_SAFETY_TOOLS_BLOCK_CONFIRM);
-        }, [f]),
-        g = o.useCallback(() => {
-            r.Z.unblockUser(t, { location: R.DL }), f(L.NM.USER_SAFETY_TOOLS_UNBLOCK);
-        }, [t, f]),
-        U = o.useCallback(() => {
-            (0, i.closeModal)(R.X_), f(L.NM.USER_SAFETY_TOOLS_BLOCK_AND_REPORT_CONFIRM);
-        }, [f]),
-        j = o.useMemo(() => {
-            let e = {
-                    title: x.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_CRISIS_TEXT_LINE_TITLE,
-                    subTitle: x.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_CRISIS_TEXT_LINE_SUBTITLE,
-                    buttonText: x.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_CRISIS_BUTTON,
-                    buttonColor: i.ButtonColors.PRIMARY,
+        k = o.useCallback(() => {
+            (0, c.closeModal)(N.X_), F(h.NM.USER_SAFETY_TOOLS_BLOCK_CONFIRM);
+        }, [F]),
+        v = o.useCallback(() => {
+            d.Z.unblockUser(e, { location: N.DL }), F(h.NM.USER_SAFETY_TOOLS_UNBLOCK);
+        }, [e, F]),
+        Y = o.useCallback(() => {
+            (0, c.closeModal)(N.X_), F(h.NM.USER_SAFETY_TOOLS_BLOCK_AND_REPORT_CONFIRM);
+        }, [F]),
+        P = o.useMemo(() => {
+            let t = {
+                    title: R.intl.string(R.t['4VIrUF']),
+                    subTitle: R.intl.string(R.t.Am8B9P),
+                    buttonText: R.intl.string(R.t['9iFR6+']),
+                    buttonColor: c.ButtonColors.PRIMARY,
                     onPress: () => {
-                        (0, S.Z)(R.EI), f(L.NM.USER_SAFETY_TOOLS_CTL);
+                        (0, u.Z)(N.EI), F(h.NM.USER_SAFETY_TOOLS_CTL);
                     }
                 },
                 o = {
-                    title: x.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_TITLE,
-                    subTitle: x.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_SUBTITLE,
-                    buttonText: x.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_BUTTON,
-                    buttonColor: i.ButtonColors.PRIMARY,
+                    title: R.intl.string(R.t['65XQam']),
+                    subTitle: R.intl.string(R.t.XNwhxM),
+                    buttonText: R.intl.string(R.t['3DJQCA']),
+                    buttonColor: c.ButtonColors.PRIMARY,
                     onPress: () => {
-                        (0, S.Z)(R.n4), f(L.NM.USER_SAFETY_TOOLS_NO_FILTR);
+                        (0, u.Z)(N.n4), F(h.NM.USER_SAFETY_TOOLS_NO_FILTR);
                     }
                 },
-                a = {
-                    title: x.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_THROUGHLINE_TITLE,
-                    subTitle: x.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_THROUGHLINE_SUBTITLE,
-                    buttonText: x.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_THROUGHLINE_BUTTON,
-                    buttonColor: i.ButtonColors.PRIMARY,
+                l = {
+                    title: R.intl.string(R.t.HQ2nKi),
+                    subTitle: R.intl.string(R.t['PMeb/v']),
+                    buttonText: R.intl.string(R.t.viOWqK),
+                    buttonColor: c.ButtonColors.PRIMARY,
                     onPress: () => {
-                        (0, S.Z)(R.$l), f(L.NM.USER_SAFETY_TOOLS_THROUGHLINE);
+                        (0, u.Z)(N.$l), F(h.NM.USER_SAFETY_TOOLS_THROUGHLINE);
                     }
                 };
             return [
                 {
-                    title: x.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_TITLE,
-                    subTitle: x.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_SUBTITLE,
-                    buttonText: m ? x.Z.Messages.INAPPROPRIATE_CONVERSATION_UNBLOCK : x.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_TITLE,
-                    buttonColor: i.ButtonColors.BRAND,
+                    title: R.intl.string(R.t.oDxaKy),
+                    subTitle: R.intl.string(R.t.Lj37a2),
+                    buttonText: B ? R.intl.string(R.t.Hro409) : R.intl.string(R.t.oDxaKy),
+                    buttonColor: c.ButtonColors.BRAND,
                     onPress: () => {
-                        m
-                            ? g()
-                            : (0, i.openModalLazy)(async () => {
-                                  let { default: e } = await s.e('41128').then(s.bind(s, 699783));
-                                  return (s) => {
-                                      let { transitionState: o, onClose: a } = s;
-                                      return (0, T.jsx)(e, {
+                        B
+                            ? v()
+                            : (0, c.openModalLazy)(async () => {
+                                  let { default: t } = await n.e('41128').then(n.bind(n, 699783));
+                                  return (n) => {
+                                      let { transitionState: o, onClose: l } = n;
+                                      return (0, i.jsx)(t, {
                                           transitionState: o,
-                                          onBlock: P,
-                                          onBlockAndReport: U,
+                                          onBlock: k,
+                                          onBlockAndReport: Y,
                                           onCancel: () => {
-                                              null == a || a(), f(L.NM.USER_SAFETY_TOOLS_BLOCK_CANCEL);
+                                              null == l || l(), F(h.NM.USER_SAFETY_TOOLS_BLOCK_CANCEL);
                                           },
-                                          onClose: a,
-                                          userId: t,
-                                          channelId: n
+                                          onClose: l,
+                                          userId: e,
+                                          channelId: s
                                       });
                                   };
                               });
                     }
                 },
                 {
-                    title: x.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_REPORT_TITLE,
-                    subTitle: x.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_REPORT_SUBTITLE,
-                    buttonText: x.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_REPORT_TITLE,
-                    buttonColor: i.ButtonColors.PRIMARY,
+                    title: R.intl.string(R.t.X27yhI),
+                    subTitle: R.intl.string(R.t['0tydOT']),
+                    buttonText: R.intl.string(R.t.X27yhI),
+                    buttonColor: c.ButtonColors.PRIMARY,
                     onPress: () => {
-                        (0, i.closeModal)(R.X_), (0, E.wk)(p), f(L.NM.USER_SAFETY_TOOLS_REPORT);
+                        (0, c.closeModal)(N.X_), (0, T.wk)(I), F(h.NM.USER_SAFETY_TOOLS_REPORT);
                     }
                 },
-                b ? e : h ? a : o,
+                g ? t : j ? l : o,
                 {
-                    title: x.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE,
-                    subTitle: x.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE,
-                    buttonText: x.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON,
-                    buttonColor: i.ButtonColors.PRIMARY,
+                    title: R.intl.string(R.t.uLlgqK),
+                    subTitle: R.intl.string(R.t['f+pTDQ']),
+                    buttonText: R.intl.string(R.t.vf4d8P),
+                    buttonColor: c.ButtonColors.PRIMARY,
                     onPress: () => {
-                        (0, I.Z)(i.closeAllModals), f(L.NM.USER_SAFETY_TOOLS_VIBING_WUMPUS);
+                        (0, C.Z)(c.closeAllModals), F(h.NM.USER_SAFETY_TOOLS_VIBING_WUMPUS);
                     }
                 }
             ];
-        }, [m, b, h, f, g, P, U, t, n, p]),
-        H = o.useMemo(
+        }, [B, g, j, F, v, k, Y, e, s, I]),
+        U = o.useMemo(
             () => [
                 {
-                    title: x.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE,
+                    title: R.intl.string(R.t.EtNxi4),
                     onPress: () => {
-                        M(N.SafetyToolsSlides.SAFETY_TIPS), f(L.NM.USER_SAFETY_TOOLS_SAFETY_TIPS);
+                        L(p.SafetyToolsSlides.SAFETY_TIPS), F(h.NM.USER_SAFETY_TOOLS_SAFETY_TIPS);
                     }
                 },
                 {
-                    title: x.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE,
+                    title: R.intl.string(R.t.qI14KC),
                     onPress: () => {
-                        M(N.SafetyToolsSlides.ABOUT_SAFETY_ALERTS), f(L.NM.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS);
+                        L(p.SafetyToolsSlides.ABOUT_SAFETY_ALERTS), F(h.NM.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS);
                     }
                 }
             ],
-            [M, f]
+            [L, F]
         );
-    return (0, T.jsxs)(C.Z, {
+    return (0, i.jsxs)(b.Z, {
         children: [
-            (0, T.jsx)(F, {
-                children: j.map((e) => {
-                    let { title: t, subTitle: s, buttonText: o, buttonColor: n, onPress: a } = e;
-                    return (0, T.jsx)(
-                        B,
+            (0, i.jsx)(m, {
+                children: P.map((t) => {
+                    let { title: e, subTitle: n, buttonText: o, buttonColor: s, onPress: l } = t;
+                    return (0, i.jsx)(
+                        O,
                         {
-                            title: t,
-                            subTitle: s,
+                            title: e,
+                            subTitle: n,
                             buttonText: o,
-                            buttonColor: n,
-                            onPress: a
+                            buttonColor: s,
+                            onPress: l
                         },
-                        t
+                        e
                     );
                 })
             }),
-            (0, T.jsx)(F, {
-                children: H.map((e) => {
-                    let { title: t, onPress: s } = e;
-                    return (0, T.jsx)(
-                        Y,
+            (0, i.jsx)(m, {
+                children: U.map((t) => {
+                    let { title: e, onPress: n } = t;
+                    return (0, i.jsx)(
+                        f,
                         {
-                            title: t,
-                            onPress: s
+                            title: e,
+                            onPress: n
                         },
-                        t
+                        e
                     );
                 })
             })

@@ -1,12 +1,12 @@
 n.d(t, {
     KS: function () {
-        return f;
-    },
-    Th: function () {
         return h;
     },
+    Th: function () {
+        return p;
+    },
     bT: function () {
-        return E;
+        return _;
     }
 });
 var r = n(481060),
@@ -18,64 +18,64 @@ var r = n(481060),
     u = n(447003),
     c = n(176505),
     d = n(981631),
-    _ = n(689938);
-function E(e, t, n, r) {
+    f = n(388032);
+function _(e, t, n, r) {
     if (null == e) return null;
-    if (e.id === (null == t ? void 0 : t.rulesChannelId)) return _.Z.Messages.CHANNEL_TOOLTIP_RULES;
+    if (e.id === (null == t ? void 0 : t.rulesChannelId)) return f.intl.string(f.t['/7EhaW']);
     switch (e.type) {
         case d.d4z.GUILD_TEXT:
-            if (r) return _.Z.Messages.CHANNEL_TOOLTIP_TEXT_ACTIVE_THREADS;
-            if (e.isNSFW()) return _.Z.Messages.CHANNEL_TOOLTIP_TEXT_NSFW;
-            if ((0, u.Z)(e)) return _.Z.Messages.CHANNEL_TOOLTIP_TEXT_LIMITED;
-            if (null != e.linkedLobby) return _.Z.Messages.CHANNEL_TOOLTIP_TEXT_LINKED_LOBBY;
-            return _.Z.Messages.CHANNEL_TOOLTIP_TEXT;
+            if (r) return f.intl.string(f.t.LKpYbm);
+            if (e.isNSFW()) return f.intl.string(f.t.vvASTU);
+            if ((0, u.Z)(e)) return f.intl.string(f.t.jQ1plp);
+            if (null != e.linkedLobby) return f.intl.string(f.t.Lt3PAA);
+            return f.intl.string(f.t.t1yj0N);
         case d.d4z.GUILD_FORUM:
             let i = e.isMediaChannel();
-            if (e.isNSFW()) return i ? _.Z.Messages.CHANNEL_TOOLTIP_MEDIA_NSFW : _.Z.Messages.CHANNEL_TOOLTIP_FORUM_NSFW;
-            if ((0, u.Z)(e)) return i ? _.Z.Messages.CHANNEL_TOOLTIP_MEDIA_LIMITED : _.Z.Messages.CHANNEL_TOOLTIP_FORUM_LIMITED;
-            return i ? _.Z.Messages.MEDIA_CHANNEL : _.Z.Messages.FORUM;
+            if (e.isNSFW()) return i ? f.intl.string(f.t['pZ/fYW']) : f.intl.string(f.t.ibmpPj);
+            if ((0, u.Z)(e)) return i ? f.intl.string(f.t.gfVCfH) : f.intl.string(f.t.UbLM3N);
+            return i ? f.intl.string(f.t.seKITE) : f.intl.string(f.t['0sDXdn']);
         case d.d4z.GUILD_MEDIA:
-            if (e.isNSFW()) return _.Z.Messages.CHANNEL_TOOLTIP_MEDIA_NSFW;
-            if ((0, u.Z)(e)) return _.Z.Messages.CHANNEL_TOOLTIP_MEDIA_LIMITED;
-            return _.Z.Messages.MEDIA_CHANNEL;
+            if (e.isNSFW()) return f.intl.string(f.t['pZ/fYW']);
+            if ((0, u.Z)(e)) return f.intl.string(f.t.gfVCfH);
+            return f.intl.string(f.t.seKITE);
         case d.d4z.GUILD_STAGE_VOICE:
-            if (n) return _.Z.Messages.CHANNEL_TOOLTIP_STAGE_LOCKED;
-            if ((0, u.Z)(e)) return _.Z.Messages.CHANNEL_TOOLTIP_STAGE_LIMITED;
-            return _.Z.Messages.CHANNEL_TOOLTIP_STAGE;
+            if (n) return f.intl.string(f.t.ZjZB3t);
+            if ((0, u.Z)(e)) return f.intl.string(f.t['7pRuCQ']);
+            return f.intl.string(f.t.eJFSiI);
         case d.d4z.GUILD_VOICE:
-            if (n) return _.Z.Messages.CHANNEL_TOOLTIP_VOICE_LOCKED;
-            if ((0, u.Z)(e)) return _.Z.Messages.CHANNEL_TOOLTIP_VOICE_LIMITED;
-            return _.Z.Messages.CHANNEL_TOOLTIP_VOICE;
+            if (n) return f.intl.string(f.t.xY8Wtr);
+            if ((0, u.Z)(e)) return f.intl.string(f.t.qaY8Dg);
+            return f.intl.string(f.t['0kBmo6']);
         case d.d4z.GUILD_ANNOUNCEMENT:
-            if (e.isNSFW()) return _.Z.Messages.CHANNEL_TOOLTIP_ANNOUNCEMENTS_NSFW;
-            if ((0, u.Z)(e)) return _.Z.Messages.CHANNEL_TOOLTIP_ANNOUNCEMENTS_LIMITED;
-            return _.Z.Messages.CHANNEL_TOOLTIP_ANNOUNCEMENTS;
+            if (e.isNSFW()) return f.intl.string(f.t.eRc6o6);
+            if ((0, u.Z)(e)) return f.intl.string(f.t.EHLQws);
+            return f.intl.string(f.t.GtDRi4);
         case d.d4z.GUILD_STORE:
-            return _.Z.Messages.CHANNEL_TOOLTIP_STORE;
+            return f.intl.string(f.t.Ea4NDA);
         case d.d4z.DM:
-            return _.Z.Messages.DM;
+            return f.intl.string(f.t.jN2DfX);
         case d.d4z.GROUP_DM:
-            return _.Z.Messages.GROUP_DM;
+            return f.intl.string(f.t['e5y+go']);
         case d.d4z.GUILD_DIRECTORY:
-            return _.Z.Messages.CHANNEL_TOOLTIP_DIRECTORY;
+            return f.intl.string(f.t.IzZTIS);
         case d.d4z.PUBLIC_THREAD:
-            return _.Z.Messages.THREAD;
+            return f.intl.string(f.t['7Xm5QE']);
         case d.d4z.PRIVATE_THREAD:
-            return _.Z.Messages.PRIVATE_THREAD;
+            return f.intl.string(f.t.F1zyvb);
         default:
             return null;
     }
 }
-function f(e, t) {
+function h(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { locked: _ = !1, video: E = !1, stream: f = !1, hasActiveThreads: h = !1, textFocused: p = !1 } = n;
+        { locked: f = !1, video: _ = !1, stream: h = !1, hasActiveThreads: p = !1, textFocused: m = !1 } = n;
     if (null == e) return null;
     null == t && (t = s.Z.getGuild(e.getGuildId()));
-    let I = (0, i.n)(null == t ? void 0 : t.id, [s.Z, o.Z, l.default, a.ZP]);
+    let g = (0, i.n)(null == t ? void 0 : t.id, [s.Z, o.Z, l.default, a.ZP]);
     if ((null == e ? void 0 : e.id) === (null == t ? void 0 : t.rulesChannelId)) return r.BookCheckIcon;
     switch (e.type) {
         case d.d4z.GUILD_ANNOUNCEMENT:
-            if (h) {
+            if (p) {
                 if (e.isNSFW()) return r.AnnouncementsWarningIcon;
                 if ((0, u.Z)(e)) return r.AnnouncementsLockIcon;
                 else return r.AnnouncementsIcon;
@@ -96,7 +96,7 @@ function f(e, t) {
             if (e.isForumPost()) return r.ChatIcon;
             else return r.ThreadIcon;
         case d.d4z.GUILD_TEXT:
-            if (h) {
+            if (p) {
                 if (e.isNSFW()) return r.TextWarningIcon;
                 if ((0, u.Z)(e)) return r.TextLockIcon;
                 else return r.TextIcon;
@@ -106,30 +106,30 @@ function f(e, t) {
             if (null != e.linkedLobby) return r.RefreshIcon;
             return r.TextIcon;
         case d.d4z.GUILD_FORUM:
-            let m = e.isMediaChannel();
-            if (e.isNSFW()) return m ? r.ImageWarningIcon : r.ForumWarningIcon;
-            if ((0, u.Z)(e)) return m ? r.ImageLockIcon : r.ForumLockIcon;
-            else return m ? r.ImageIcon : r.ForumIcon;
+            let E = e.isMediaChannel();
+            if (e.isNSFW()) return E ? r.ImageWarningIcon : r.ForumWarningIcon;
+            if ((0, u.Z)(e)) return E ? r.ImageLockIcon : r.ForumLockIcon;
+            else return E ? r.ImageIcon : r.ForumIcon;
         case d.d4z.GUILD_MEDIA:
             if (e.isNSFW()) return r.ImageWarningIcon;
             if ((0, u.Z)(e)) return r.ImageLockIcon;
             else return r.ImageIcon;
         case d.d4z.GUILD_STAGE_VOICE:
-            if (I) return (0, u.Z)(e) ? r.LockIcon : r.StageLockIcon;
-            if (_) return r.LockIcon;
+            if (g) return (0, u.Z)(e) ? r.LockIcon : r.StageLockIcon;
+            if (f) return r.LockIcon;
             if ((0, u.Z)(e)) return r.StageLockIcon;
             else return r.StageIcon;
         case d.d4z.GUILD_VOICE:
-            if (p) return r.ChatIcon;
+            if (m) return r.ChatIcon;
             if (e.isNSFW()) return r.VoiceWarningIcon;
-            if (f) return r.ScreenArrowIcon;
-            if (I) {
+            if (h) return r.ScreenArrowIcon;
+            if (g) {
                 if ((0, u.Z)(e)) return r.LockIcon;
-                return E ? r.VideoLockIcon : r.VoiceLockIcon;
+                return _ ? r.VideoLockIcon : r.VoiceLockIcon;
             }
-            if (_) return r.LockIcon;
-            if ((0, u.Z)(e)) return E ? r.VideoLockIcon : r.VoiceLockIcon;
-            else return E ? r.VideoIcon : r.VoiceNormalIcon;
+            if (f) return r.LockIcon;
+            if ((0, u.Z)(e)) return _ ? r.VideoLockIcon : r.VoiceLockIcon;
+            else return _ ? r.VideoIcon : r.VoiceNormalIcon;
         case d.d4z.GUILD_DIRECTORY:
             return r.HubIcon;
         case d.d4z.GUILD_CATEGORY:
@@ -142,7 +142,7 @@ function f(e, t) {
             return null;
     }
 }
-function h(e) {
+function p(e) {
     switch (e) {
         case d.d4z.GUILD_ANNOUNCEMENT:
             return r.AnnouncementsIcon;

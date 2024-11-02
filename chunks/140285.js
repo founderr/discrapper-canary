@@ -1,47 +1,47 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return m;
     }
 }),
     n(47120);
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(481060),
-    i = n(727843),
-    r = n(944537),
-    l = n(290348),
+var r = n(481060),
+    l = n(727843),
+    s = n(944537),
+    a = n(290348),
     o = n(91354),
     c = n(662961),
-    d = n(689938),
+    d = n(388032),
     u = n(517194);
-function _(e) {
+function m(e) {
     let { 'aria-labelledby': t, disabled: n = !1 } = e,
-        { editStateId: _, guildId: I } = (0, i.N)(),
-        [E, T] = l.GP(_, I);
-    return (0, s.jsx)(a.RadioGroup, {
+        { editStateId: m, guildId: h } = (0, l.N)(),
+        [g, x] = a.GP(m, h);
+    return (0, i.jsx)(r.RadioGroup, {
         className: u.__invalid_channelAccessSelect,
         radioItemClassName: u.__invalid_channelAccessSelectRadioButton,
         withTransparentBackground: !0,
-        size: a.RadioGroup.Sizes.NOT_SET,
+        size: r.RadioGroup.Sizes.NOT_SET,
         onChange: (e) => {
             let { value: t } = e;
-            return T(t);
+            return x(t);
         },
         options: [
             {
-                name: d.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_BENEFITS_SELECT_CHANNELS_MANUALLY_LABEL,
-                value: r.I.SOME_CHANNELS_ACCESS,
-                icon: (0, a.makeIconCompat)(c.Z),
+                name: d.intl.string(d.t['vs2T+P']),
+                value: s.I.SOME_CHANNELS_ACCESS,
+                icon: (0, r.makeIconCompat)(c.Z),
                 radioBarClassName: u.__invalid_channelAccessSelectRadioBar
             },
             {
-                name: d.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_BENEFITS_INCLUDE_ALL_CHANNELS_LABEL,
-                value: r.I.ALL_CHANNELS_ACCESS,
-                icon: (0, a.makeIconCompat)(o.Z),
+                name: d.intl.string(d.t.l4Tr7e),
+                value: s.I.ALL_CHANNELS_ACCESS,
+                icon: (0, r.makeIconCompat)(o.Z),
                 radioBarClassName: u.__invalid_channelAccessSelectRadioBar
             }
         ],
-        value: E,
+        value: g,
         'aria-labelledby': t,
         disabled: n
     });

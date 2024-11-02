@@ -10,61 +10,61 @@ n.d(t, {
     n(653041),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    a = n(392711),
-    l = n.n(a),
-    r = n(566898),
+    l = n(192379),
+    r = n(392711),
+    a = n.n(r),
+    s = n(566898),
     o = n(981631),
     c = n(623433);
 function u(e) {
-    let { compact: t, messageGroups: n, groupRange: i, attachments: s, fontSize: a, groupSpacing: c } = e;
-    if (s > n) throw Error('generateMessageSpecs: too many attachments relative to messageGroups: '.concat(n, ', ').concat(s));
-    let u = a / o.yqN.FONT_SIZE_DEFAULT,
-        d = t ? r.iv : r.pk,
-        h = t ? r.Pb : r.XX,
+    let { compact: t, messageGroups: n, groupRange: i, attachments: l, fontSize: r, groupSpacing: c } = e;
+    if (l > n) throw Error('generateMessageSpecs: too many attachments relative to messageGroups: '.concat(n, ', ').concat(l));
+    let u = r / o.yqN.FONT_SIZE_DEFAULT,
+        d = t ? s.iv : s.pk,
+        h = t ? s.Pb : s.XX,
         m = 0,
         p = Array(n)
             .fill(null)
             .map(() => {
-                let e = l().random(1, i);
+                let e = a().random(1, i);
                 return (m += c * u + d * u + (e - 1) * h * u), e;
             }),
-        _ = p.map((e, t) => t),
-        f = [];
-    for (; f.length < s; ) {
+        f = p.map((e, t) => t),
+        g = [];
+    for (; g.length < l; ) {
         let e = {
-            width: l().random(140, 400),
-            height: l().random(100, 320)
+            width: a().random(140, 400),
+            height: a().random(100, 320)
         };
-        f.push([_.splice(l().random(0, _.length - 1), 1)[0], e]), (m += e.height + r.M9 * u);
+        g.push([f.splice(a().random(0, f.length - 1), 1)[0], e]), (m += e.height + s.M9 * u);
     }
     return {
         messages: p,
-        attachmentSpecs: f,
+        attachmentSpecs: g,
         totalHeight: m,
         groupSpacing: c
     };
 }
 function d(e) {
-    let { compact: t, messages: n, attachmentSpecs: a, totalHeight: l, groupSpacing: o } = e;
-    return s.useMemo(() => {
+    let { compact: t, messages: n, attachmentSpecs: r, totalHeight: a, groupSpacing: o } = e;
+    return l.useMemo(() => {
         let e = Array(n.length).fill(void 0);
-        for (let [t, n] of a) e[t] = n;
+        for (let [t, n] of r) e[t] = n;
         return (0, i.jsx)('div', {
             className: c.wrapper,
-            style: { height: l },
-            children: n.map((n, s) =>
+            style: { height: a },
+            children: n.map((n, l) =>
                 (0, i.jsx)(
-                    r.ZP,
+                    s.ZP,
                     {
                         groupSpacing: o,
                         compact: t,
                         messages: n,
-                        attachmentSpecs: e[s]
+                        attachmentSpecs: e[l]
                     },
-                    s
+                    l
                 )
             )
         });
-    }, [t, n, a, l, o]);
+    }, [t, n, r, a, o]);
 }

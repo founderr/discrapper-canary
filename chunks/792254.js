@@ -1,55 +1,55 @@
-a.d(n, {
+t.d(n, {
     Z: function () {
-        return m;
+        return N;
     }
 });
-var t = a(442837),
-    s = a(410030),
-    c = a(607070),
-    o = a(474936),
-    i = a(231338),
-    r = a(955092),
-    d = a(250225),
-    l = a(778441),
-    u = a(238988),
-    A = a(298233),
-    f = a(304354),
-    p = a(265704),
-    E = a(85010),
-    _ = a(954620),
-    L = a(28747),
-    I = a(962658),
-    P = a(29971),
-    R = a(730837),
-    b = a(95897),
-    Z = a(171362),
-    N = a(945720);
-function m(e) {
-    let n = (0, t.e7)([c.Z], () => c.Z.useReducedMotion),
-        a = (0, s.ZP)();
+var a = t(442837),
+    i = t(410030),
+    c = t(607070),
+    o = t(474936),
+    s = t(231338),
+    r = t(955092),
+    d = t(250225),
+    l = t(778441),
+    u = t(238988),
+    f = t(298233),
+    p = t(304354),
+    A = t(265704),
+    b = t(85010),
+    m = t(954620),
+    v = t(28747),
+    Z = t(962658),
+    h = t(29971),
+    g = t(730837),
+    C = t(95897),
+    E = t(171362),
+    P = t(945720);
+function N(e) {
+    let n = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
+        t = (0, i.ZP)();
     return n
         ? (function (e, n) {
               switch (e) {
                   case o.cd.ANIMATED_AVATAR_MODAL_UPSELL:
-                      return n === i.BR.DARK ? _.Z : R.Z;
+                      return n === s.BR.DARK ? m.Z : g.Z;
                   case o.cd.ANIMATED_BANNER_MODAL_UPSELL:
-                      return n === i.BR.DARK ? L.Z : b.Z;
+                      return n === s.BR.DARK ? v.Z : C.Z;
                   case o.cd.PROFILE_EFFECT_MODAL_UPSELL:
-                      return n === i.BR.DARK ? P.Z : N.Z;
+                      return n === s.BR.DARK ? h.Z : P.Z;
                   case o.cd.AVATAR_DECORATION_MODAL_UPSELL:
-                      return n === i.BR.DARK ? I.Z : Z.Z;
+                      return n === s.BR.DARK ? Z.Z : E.Z;
               }
-          })(e, a)
+          })(e, t)
         : (function (e, n) {
               switch (e) {
                   case o.cd.ANIMATED_AVATAR_MODAL_UPSELL:
-                      return n === i.BR.DARK ? r.Z : A.Z;
+                      return n === s.BR.DARK ? r.Z : f.Z;
                   case o.cd.ANIMATED_BANNER_MODAL_UPSELL:
-                      return n === i.BR.DARK ? d.Z : f.Z;
+                      return n === s.BR.DARK ? d.Z : p.Z;
                   case o.cd.PROFILE_EFFECT_MODAL_UPSELL:
-                      return n === i.BR.DARK ? u.Z : E.Z;
+                      return n === s.BR.DARK ? u.Z : b.Z;
                   case o.cd.AVATAR_DECORATION_MODAL_UPSELL:
-                      return n === i.BR.DARK ? l.Z : p.Z;
+                      return n === s.BR.DARK ? l.Z : A.Z;
               }
-          })(e, a);
+          })(e, t);
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     p: function () {
-        return m;
+        return E;
     }
 }),
     n(789020);
@@ -13,9 +13,9 @@ var r = n(570140),
     u = n(966434),
     c = n(649591),
     d = n(224189),
-    _ = n(574952),
-    E = n(981631);
-async function f(e, t, n) {
+    f = n(574952),
+    _ = n(981631);
+async function h(e, t, n) {
     try {
         return await (0, d.Z)(e, t);
     } catch (a) {
@@ -29,7 +29,7 @@ async function f(e, t, n) {
         });
     }
 }
-async function h(e) {
+async function p(e) {
     let { currentEmbeddedApplication: t } = e;
     return (
         !!(
@@ -45,7 +45,7 @@ async function h(e) {
                     t,
                     r,
                     () => {
-                        (0, _.Z)().leaveActivity({
+                        (0, f.Z)().leaveActivity({
                             channelId: r.id,
                             applicationId: t.id
                         }),
@@ -57,11 +57,11 @@ async function h(e) {
         ) || !1
     );
 }
-async function p(e) {
+async function m(e) {
     let { application: t, applicationId: n, channel: r, user: i } = e;
     if (null == i.nsfwAllowed) {
         var a, s;
-        let e = null != t ? t : await f(n, r.id, r.getGuildId());
+        let e = null != t ? t : await h(n, r.id, r.getGuildId());
         if (
             null == e ||
             (null !== (s = null === (a = e.embeddedActivityConfig) || void 0 === a ? void 0 : a.requires_age_gate) &&
@@ -79,12 +79,12 @@ async function p(e) {
     }
     return !0;
 }
-async function I(e) {
+async function g(e) {
     let { application: t, applicationId: n, channel: r } = e,
-        i = null != t ? t : await f(n, r.id, r.getGuildId());
+        i = null != t ? t : await h(n, r.id, r.getGuildId());
     return (
         null != i &&
-        (!!((0, s.yE)(i.flags, E.udG.EMBEDDED_RELEASED) || i.isVerified || o.ZP.hasActivityEverBeenLaunched(n)) ||
+        (!!((0, s.yE)(i.flags, _.udG.EMBEDDED_RELEASED) || i.isVerified || o.ZP.hasActivityEverBeenLaunched(n)) ||
             new Promise((e) => {
                 (0, c.j)({
                     application: i,
@@ -94,6 +94,6 @@ async function I(e) {
             }))
     );
 }
-async function m(e) {
-    return !!((await h({ currentEmbeddedApplication: e.currentEmbeddedApplication })) && (await p(e)) && (await I(e))) || !1;
+async function E(e) {
+    return !!((await p({ currentEmbeddedApplication: e.currentEmbeddedApplication })) && (await m(e)) && (await g(e))) || !1;
 }

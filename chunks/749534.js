@@ -6,7 +6,7 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(689938),
+    a = n(388032),
     s = n(369922);
 function o(e) {
     let { children: t } = e;
@@ -16,7 +16,7 @@ function o(e) {
             (0, r.jsx)(i.Heading, {
                 className: s.header,
                 variant: 'text-sm/semibold',
-                children: a.Z.Messages.MOBILE_REPORTS_BLOCK_ELEMENT_HEADER
+                children: a.intl.string(a.t['k+QA9P'])
             }),
             (0, r.jsx)('div', {
                 className: s.upsellsContainer,

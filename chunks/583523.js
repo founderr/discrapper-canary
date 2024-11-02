@@ -35,25 +35,25 @@ function d() {
                 });
         })();
 }
-function _(e) {
+function f(e) {
     let { channels: t } = e;
     for (let e of t) l.Z.getVoiceChannelId() === e.id && d();
 }
-function E(e) {
+function _(e) {
     let { voiceStates: t } = e;
     t.forEach((e) => {
         a.default.getSessionId() === e.sessionId && d();
     });
 }
-class f extends i.Z {
+class h extends i.Z {
     constructor(...e) {
         var t, n, r;
         super(...e),
             (t = this),
             (n = 'actions'),
             (r = {
-                CHANNEL_UPDATES: _,
-                VOICE_STATE_UPDATES: E
+                CHANNEL_UPDATES: f,
+                VOICE_STATE_UPDATES: _
             }),
             n in t
                 ? Object.defineProperty(t, n, {
@@ -65,4 +65,4 @@ class f extends i.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new f();
+t.Z = new h();

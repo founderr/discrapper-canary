@@ -1,24 +1,24 @@
 n.d(t, {
     Qs: function () {
-        return I;
+        return g;
     },
     Uf: function () {
-        return p;
-    },
-    VO: function () {
         return m;
     },
+    VO: function () {
+        return E;
+    },
     Xs: function () {
-        return h;
+        return p;
     },
     ep: function () {
-        return f;
+        return h;
     },
     t$: function () {
-        return S;
+        return I;
     },
     yi: function () {
-        return T;
+        return v;
     }
 }),
     n(47120),
@@ -32,10 +32,10 @@ var r = n(192379),
     u = n(468194),
     c = n(477690),
     d = n(691251),
-    _ = n(981631);
-let E = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
-    f = (e) => {
-        let { gridWrapperRef: t, containerWidth: n, showingEmptyState: i, listPaddingLeft: s = E, listScrollbarWidth: o = 8 } = e,
+    f = n(981631);
+let _ = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
+    h = (e) => {
+        let { gridWrapperRef: t, containerWidth: n, showingEmptyState: i, listPaddingLeft: s = _, listScrollbarWidth: o = 8 } = e,
             [l, u] = r.useState(void 0),
             c = r.useCallback(() => {
                 if (null == t.current) return null;
@@ -52,7 +52,7 @@ let E = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
             l
         );
     },
-    h = (e) => {
+    p = (e) => {
         let { activeCategoryIndex: t, listRef: n, searchQuery: i } = e,
             a = r.useRef(i),
             s = r.useRef(!0);
@@ -73,7 +73,7 @@ let E = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
                 a.current = i;
             }, [i]);
     },
-    p = (e) => {
+    m = (e) => {
         let { listRef: t, searchQuery: n, nitroLockedSectionStates: i, setShowUpsell: a, setUpsellGlowOpacity: s } = e,
             o = r.useCallback(
                 (e) => {
@@ -126,9 +126,9 @@ let E = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
             [l, o]
         );
     },
-    I = (e) => {
+    g = (e) => {
         let { activeCategoryIndex: t, listRef: n, isScrolling: i, searchQuery: s, scrollOffset: o = 0, onActiveCategoryIndexChange: l, disableForSearch: u = !0 } = e,
-            c = r.useRef(_.xAR),
+            c = r.useRef(f.xAR),
             d = r.useMemo(
                 () =>
                     a().debounce(() => {
@@ -136,7 +136,7 @@ let E = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
                     }, 250),
                 [i]
             ),
-            E = r.useMemo(
+            _ = r.useMemo(
                 () =>
                     a().debounce((e) => {
                         ('' === s || !u) &&
@@ -159,12 +159,12 @@ let E = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
             );
         return r.useCallback(
             (e) => {
-                (i.current = !0), d(), E(e);
+                (i.current = !0), d(), _(e);
             },
-            [i, d, E]
+            [i, d, _]
         );
     },
-    m = (e) => {
+    E = (e) => {
         let { columnCounts: t, gridNavigatorId: n, itemGrid: i, itemList: a, onGridNavigatorItemSelect: l, onGridNavigatorPositionChange: u } = e,
             c = r.useRef(!1),
             d = r.useCallback(
@@ -174,7 +174,7 @@ let E = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
                 },
                 [i]
             ),
-            _ = r.useCallback(
+            f = r.useCallback(
                 (e) => {
                     let { focusedX: t, focusedY: n } = e;
                     c.current = !0;
@@ -185,7 +185,7 @@ let E = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
                 },
                 [d, a, u]
             ),
-            E = r.useCallback(
+            _ = r.useCallback(
                 (e, t, n) => {
                     switch (n.type) {
                         case s.Us.NAVIGATE_UP:
@@ -198,12 +198,12 @@ let E = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
                         case s.Us.NAVIGATE_END:
                         case s.Us.NAVIGATE_CROSSLINE_START:
                         case s.Us.NAVIGATE_CROSSLINE_END:
-                            _(t);
+                            f(t);
                     }
                 },
-                [_]
+                [f]
             ),
-            f = r.useCallback(
+            h = r.useCallback(
                 (e, t, n) => {
                     let r = d(e, t);
                     null != r && l(r, n);
@@ -211,25 +211,25 @@ let E = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
                 [d, l]
             ),
             {
-                dispatch: h,
-                getItemProps: p,
-                getRowProps: I,
-                getContainerProps: m
+                dispatch: p,
+                getItemProps: m,
+                getRowProps: g,
+                getContainerProps: E
             } = (0, o.Z)({
                 navId: n,
                 columnCounts: t,
-                onDispatch: E,
-                onSelect: f,
+                onDispatch: _,
+                onSelect: h,
                 autoFocusElement: !1,
                 useVirtualFocus: !0
             }),
-            { gridContainerProps: T, handleGridContainerKeyDown: S } = r.useMemo(() => {
-                let e = m();
+            { gridContainerProps: v, handleGridContainerKeyDown: I } = r.useMemo(() => {
+                let e = E();
                 return {
                     gridContainerProps: e,
                     handleGridContainerKeyDown: e.onKeyDown
                 };
-            }, [m]);
+            }, [E]);
         return (
             r.useEffect(() => {
                 let e = () => {
@@ -238,16 +238,16 @@ let E = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
                 return window.addEventListener('mousemove', e), () => window.removeEventListener('mousemove', e);
             }, []),
             {
-                gridDispatch: h,
-                getItemProps: p,
-                getRowProps: I,
-                gridContainerProps: T,
-                handleGridContainerKeyDown: S,
+                gridDispatch: p,
+                getItemProps: m,
+                getRowProps: g,
+                gridContainerProps: v,
+                handleGridContainerKeyDown: I,
                 isUsingKeyboardNavigation: c
             }
         );
     };
-function T(e) {
+function v(e) {
     let { categories: t, collapsedCategories: n, gridWidth: i = 0, listPaddingRight: a = 0, itemNodeWidth: s, itemNodeMargin: o = 0 } = e;
     return r.useMemo(() => {
         let e = Math.max(1, Math.floor((i - a + o) / (s + o))),
@@ -256,32 +256,32 @@ function T(e) {
             u = [],
             c = [],
             d = 0,
-            _ = 0,
-            E = 0;
+            f = 0,
+            _ = 0;
         if (0 !== i) {
             let r = function (t, n) {
                 let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                     i = Math.ceil(t.length / e);
-                u[_] = r ? 0 : i;
+                u[f] = r ? 0 : i;
                 for (let a = 0; a < i; a++) {
                     let i = a * e,
                         s = i + e,
                         o = t.slice(i, s).map((e, t) => ({
                             item: e,
-                            gridSectionIndex: _,
+                            gridSectionIndex: f,
                             rowIndex: d,
                             columnIndex: t,
-                            visibleRowIndex: E,
+                            visibleRowIndex: _,
                             category: n
                         }));
-                    !r && (E++, c.push(o), l.push(o.length)), d++;
+                    !r && (_++, c.push(o), l.push(o.length)), d++;
                 }
-                _++;
+                f++;
             };
             for (let e of t)
                 if (e.items.length > 0) {
-                    var f;
-                    r(e.items, e.categoryInfo.type, null !== (f = null == n ? void 0 : n.has(''.concat(e.key))) && void 0 !== f && f);
+                    var h;
+                    r(e.items, e.categoryInfo.type, null !== (h = null == n ? void 0 : n.has(''.concat(e.key))) && void 0 !== h && h);
                 }
         }
         return {
@@ -293,16 +293,16 @@ function T(e) {
         };
     }, [t, n, i, o, s, a]);
 }
-function S(e) {
+function I(e) {
     let { columnCounts: t, expressionsGrid: n, expressionsListRef: i, store: a, gridNavigatorId: s, onSelectItem: o } = e,
         {
             gridDispatch: u,
             getItemProps: c,
-            getRowProps: _,
-            gridContainerProps: E,
-            handleGridContainerKeyDown: f,
-            isUsingKeyboardNavigation: h
-        } = m({
+            getRowProps: f,
+            gridContainerProps: _,
+            handleGridContainerKeyDown: h,
+            isUsingKeyboardNavigation: p
+        } = E({
             columnCounts: t,
             gridNavigatorId: s,
             itemGrid: n,
@@ -330,10 +330,10 @@ function S(e) {
         ),
         {
             getItemProps: c,
-            getRowProps: _,
-            gridContainerProps: E,
-            handleGridContainerKeyDown: f,
-            isUsingKeyboardNavigation: h
+            getRowProps: f,
+            gridContainerProps: _,
+            handleGridContainerKeyDown: h,
+            isUsingKeyboardNavigation: p
         }
     );
 }

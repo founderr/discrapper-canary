@@ -1,75 +1,75 @@
-n.r(s),
-    n.d(s, {
+t.r(n),
+    t.d(n, {
         default: function () {
             return d;
         }
     });
-var c = n(200651);
-n(192379);
-var r = n(481060),
-    o = n(313201),
-    t = n(930180),
-    a = n(582019),
-    l = n(689938),
-    i = n(511387);
+var r = t(200651);
+t(192379);
+var c = t(481060),
+    s = t(313201),
+    o = t(930180),
+    i = t(582019),
+    l = t(388032),
+    a = t(511387);
 function d(e) {
-    let { channel: s, onAccept: n, transitionState: d, onClose: u, ..._ } = e,
-        x = (0, o.Dt)(),
-        h = (0, t.z)(s.id);
-    return (0, c.jsxs)(r.ModalRoot, {
+    let { channel: n, onAccept: t, transitionState: d, onClose: u, ...x } = e,
+        m = (0, s.Dt)(),
+        h = (0, o.z)(n.id);
+    return (0, r.jsxs)(c.ModalRoot, {
         transitionState: d,
-        'aria-labelledby': x,
-        ..._,
-        size: r.ModalSize.SMALL,
+        'aria-labelledby': m,
+        ...x,
+        size: c.ModalSize.SMALL,
         children: [
-            (0, c.jsxs)(r.ModalHeader, {
-                className: i.header,
+            (0, r.jsxs)(c.ModalHeader, {
+                className: a.header,
                 children: [
-                    (0, c.jsx)(r.Heading, {
+                    (0, r.jsx)(c.Heading, {
                         variant: 'heading-xl/semibold',
-                        children: l.Z.Messages.STAGE_BLOCKED_USERS_TITLE_PLURAL.format({ number: h.length })
+                        children: l.intl.format(l.t.HviVAw, { number: h.length })
                     }),
-                    (0, c.jsx)(r.Text, {
+                    (0, r.jsx)(c.Text, {
                         color: 'header-secondary',
-                        className: i.description,
+                        className: a.description,
                         variant: 'text-sm/normal',
-                        children: l.Z.Messages.STAGE_BLOCKED_USERS_BODY.format({ number: h.length })
+                        children: l.intl.format(l.t['28qZMT'], { number: h.length })
                     })
                 ]
             }),
-            (0, c.jsx)(r.ModalContent, {
-                className: i.content,
+            (0, r.jsx)(c.ModalContent, {
+                className: a.content,
                 children: h.map((e) => {
-                    let { user: n, id: r, speaker: o } = e;
-                    return (0, c.jsx)(
-                        a.Xd,
+                    let { user: t, id: c, speaker: s } = e;
+                    return (0, r.jsx)(
+                        i.Xd,
                         {
-                            user: n,
-                            speaker: o,
+                            user: t,
+                            speaker: s,
                             showStatus: !0,
-                            channelId: s.id
+                            channelId: n.id
                         },
-                        r
+                        c
                     );
                 })
             }),
-            (0, c.jsxs)(r.ModalFooter, {
-                className: i.footer,
+            (0, r.jsxs)(c.ModalFooter, {
+                className: a.footer,
                 children: [
-                    (0, c.jsx)(r.Button, {
+                    (0, r.jsx)(c.Button, {
                         onClick: () => {
-                            n(s), u();
+                            t(n), u();
                         },
-                        color: r.Button.Colors.BRAND,
-                        children: l.Z.Messages.STAGE_BLOCKED_USERS_ACCEPT
+                        color: c.Button.Colors.BRAND,
+                        children: l.intl.string(l.t.mbD50N)
                     }),
-                    (0, c.jsx)(r.Button, {
+                    (0, r.jsx)(c.Button, {
                         onClick: () => {
                             u();
                         },
-                        color: r.Button.Colors.PRIMARY,
-                        look: r.Button.Looks.LINK,
-                        children: l.Z.Messages.STAGE_BLOCKED_USERS_CANCEL
+                        color: c.Button.Colors.PRIMARY,
+                        look: c.Button.Looks.LINK,
+                        children: l.intl.string(l.t.CZGqeX)
                     })
                 ]
             })

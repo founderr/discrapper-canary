@@ -5,23 +5,23 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(287734),
-    r = n(872810),
-    l = n(51144),
-    o = n(689938);
+var r = n(481060),
+    l = n(287734),
+    a = n(872810),
+    s = n(51144),
+    o = n(388032);
 function c(e) {
     let { applicationStreams: t } = e;
     return t.map((e) => {
         let { stream: t, streamUser: n } = e;
         return (0, i.jsx)(
-            a.MenuItem,
+            r.MenuItem,
             {
                 id: 'spectate-'.concat(t.ownerId),
                 action: () => {
-                    s.default.selectVoiceChannel(t.channelId), (0, r.iV)(t);
+                    l.default.selectVoiceChannel(t.channelId), (0, a.iV)(t);
                 },
-                label: o.Z.Messages.WATCH_USER_STREAM.format({ streamerName: l.ZP.getName(n) })
+                label: o.intl.formatToPlainString(o.t.m09d0d, { streamerName: s.ZP.getName(n) })
             },
             'spectate-'.concat(t.ownerId)
         );

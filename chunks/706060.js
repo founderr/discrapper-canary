@@ -1,141 +1,141 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return u;
+        return m;
     }
 }),
-    t(47120),
-    t(653041);
-var n = t(200651),
-    a = t(192379),
-    i = t(772848),
-    r = t(481060),
-    o = t(259580),
-    l = t(394644),
-    c = t(516915);
+    n(47120),
+    n(653041);
+var i = n(200651),
+    s = n(192379),
+    r = n(772848),
+    l = n(481060),
+    a = n(259580),
+    o = n(394644),
+    c = n(516915);
 function d(e) {
-    let { setting: s, hasChildren: t } = e;
-    return (0, n.jsx)(r.Text, {
-        variant: t ? 'text-md/bold' : 'text-md/normal',
-        children: s
+    let { setting: t, hasChildren: n } = e;
+    return (0, i.jsx)(l.Text, {
+        variant: n ? 'text-md/bold' : 'text-md/normal',
+        children: t
     });
 }
-function _(e) {
-    let { setting: s, children: t, depth: l } = e,
-        [u, E] = a.useState(1 === l),
-        T = a.useCallback(() => {
-            E(!u);
-        }, [u, E]);
-    if (0 === t.length)
-        return (0, n.jsx)(
+function u(e) {
+    let { setting: t, children: n, depth: o } = e,
+        [m, h] = s.useState(1 === o),
+        g = s.useCallback(() => {
+            h(!m);
+        }, [m, h]);
+    if (0 === n.length)
+        return (0, i.jsx)(
             'div',
             {
-                style: { marginLeft: 8 * l },
+                style: { marginLeft: 8 * o },
                 className: c.settingNode,
-                children: (0, n.jsx)(d, {
-                    setting: s,
+                children: (0, i.jsx)(d, {
+                    setting: t,
                     hasChildren: !1
                 })
             },
-            (0, i.Z)()
+            (0, r.Z)()
         );
-    let S = u
-        ? (0, n.jsx)('div', {
+    let p = m
+        ? (0, i.jsx)('div', {
               className: c.settingNodeChildren,
-              children: t
-                  .sort((e, s) => e.setting.localeCompare(s.setting))
-                  .sort((e, s) => e.children.length - s.children.length)
+              children: n
+                  .sort((e, t) => e.setting.localeCompare(t.setting))
+                  .sort((e, t) => e.children.length - t.children.length)
                   .map((e) =>
-                      (0, n.jsx)(
-                          _,
+                      (0, i.jsx)(
+                          u,
                           {
                               setting: e.setting,
                               children: e.children,
-                              depth: l + 1
+                              depth: o + 1
                           },
-                          (0, i.Z)()
+                          (0, r.Z)()
                       )
                   )
           })
         : null;
-    return (0, n.jsxs)(
+    return (0, i.jsxs)(
         'div',
         {
-            style: { marginLeft: 8 * l },
+            style: { marginLeft: 8 * o },
             className: c.settingNode,
             children: [
-                (0, n.jsxs)(r.Clickable, {
+                (0, i.jsxs)(l.Clickable, {
                     className: c.headerBar,
-                    onClick: T,
+                    onClick: g,
                     children: [
-                        (0, n.jsx)(d, {
-                            setting: s,
-                            hasChildren: t.length > 0
+                        (0, i.jsx)(d, {
+                            setting: t,
+                            hasChildren: n.length > 0
                         }),
-                        (0, n.jsx)(o.Z, {
-                            direction: u ? o.Z.Directions.DOWN : o.Z.Directions.RIGHT,
+                        (0, i.jsx)(a.Z, {
+                            direction: m ? a.Z.Directions.DOWN : a.Z.Directions.RIGHT,
                             className: c.headerCaret
                         })
                     ]
                 }),
-                S
+                p
             ]
         },
-        (0, i.Z)()
+        (0, r.Z)()
     );
 }
-function u() {
-    let e = (0, l.Pt)(),
-        s = [],
-        t = Object.keys(e)
-            .filter((s) => {
-                let t = e[s];
-                return null == t.predicate || (null != t.predicate && t.predicate());
+function m() {
+    let e = (0, o.Pt)(),
+        t = [],
+        n = Object.keys(e)
+            .filter((t) => {
+                let n = e[t];
+                return null == n.predicate || (null != n.predicate && n.predicate());
             })
-            .map((s) => {
-                var t;
+            .map((t) => {
+                var n;
                 return {
-                    setting: s,
-                    parent: null !== (t = e[s].parent) && void 0 !== t ? t : null
+                    setting: t,
+                    parent: null !== (n = e[t].parent) && void 0 !== n ? n : null
                 };
             });
-    t.filter((e) => null === e.parent).forEach((e) => {
-        s.push({
+    n.filter((e) => null === e.parent).forEach((e) => {
+        t.push({
             setting: e.setting,
             children: []
         });
     });
-    let a = [...s];
-    for (; a.length > 0; ) {
-        let e = a.shift();
+    let s = [...t];
+    for (; s.length > 0; ) {
+        let e = s.shift();
         if (null == e) continue;
-        let s = t
-            .filter((s) => s.parent === e.setting)
+        let t = n
+            .filter((t) => t.parent === e.setting)
             .map((e) => ({
                 setting: e.setting,
                 children: []
             }));
-        (e.children = s), a.push(...s);
+        (e.children = t), s.push(...t);
     }
-    return (0, n.jsxs)('div', {
+    return (0, i.jsxs)('div', {
         className: c.root,
         children: [
-            (0, n.jsx)(r.Heading, {
+            (0, i.jsx)(l.Heading, {
                 variant: 'heading-lg/bold',
                 children: 'Settings Tree'
             }),
-            (0, n.jsx)('div', {
+            (0, i.jsx)('div', {
                 className: c.tree,
-                children: s
-                    .sort((e, s) => e.setting.localeCompare(s.setting))
+                children: t
+                    .sort((e, t) => e.setting.localeCompare(t.setting))
                     .map((e) =>
-                        (0, n.jsx)(
-                            _,
+                        (0, i.jsx)(
+                            u,
                             {
                                 setting: e.setting,
                                 children: e.children,
                                 depth: 1
                             },
-                            (0, i.Z)()
+                            (0, r.Z)()
                         )
                     )
             })

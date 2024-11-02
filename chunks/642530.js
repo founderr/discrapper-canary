@@ -1,20 +1,20 @@
-var t = s(200651);
-s(192379);
-var l = s(987209),
-    i = s(598),
-    r = s(248042),
-    a = s(196567),
-    c = s(474936),
-    o = s(689938),
-    u = s(430597);
+var i = t(200651);
+t(192379);
+var l = t(987209),
+    r = t(598),
+    s = t(248042),
+    a = t(196567),
+    c = t(474936),
+    o = t(388032),
+    u = t(430597);
 n.Z = () => {
-    let e = (0, r.Vi)(),
-        { selectedSkuId: n } = (0, i.usePaymentContext)(),
-        { isGift: s } = (0, l.wD)();
-    return s || n !== c.Si.TIER_2 || !e
+    let e = (0, s.Vi)(),
+        { selectedSkuId: n } = (0, r.usePaymentContext)(),
+        { isGift: t } = (0, l.wD)();
+    return t || n !== c.Si.TIER_2 || !e
         ? null
-        : (0, t.jsx)(a.Z, {
-              copy: o.Z.Messages.BOGO_PAYMENT_MODAL_BANNER_2024,
+        : (0, i.jsx)(a.Z, {
+              copy: o.intl.string(o.t.xk8bIi),
               bannerImage: u,
               hideGiftIcon: !0
           });

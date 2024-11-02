@@ -3,8 +3,8 @@ n(192379);
 var l = n(481060),
     r = n(570140),
     a = n(317770),
-    s = n(175281),
-    o = n(285371);
+    o = n(175281),
+    s = n(285371);
 class c extends a.Z {
     _initialize() {
         r.Z.subscribe('SHOW_KEYBOARD_SHORTCUTS', this.showKeyboardShortcuts), r.Z.subscribe('HIDE_KEYBOARD_SHORTCUTS', this.hideKeyboardShortcuts);
@@ -13,10 +13,10 @@ class c extends a.Z {
         r.Z.unsubscribe('SHOW_KEYBOARD_SHORTCUTS', this.showKeyboardShortcuts), r.Z.unsubscribe('HIDE_KEYBOARD_SHORTCUTS', this.hideKeyboardShortcuts);
     }
     showKeyboardShortcuts() {
-        (0, l.openModal)((e) => (0, i.jsx)(s.Z, { ...e }), { modalKey: o.J });
+        (0, l.openModal)((e) => (0, i.jsx)(o.Z, { ...e }), { modalKey: s.J });
     }
     hideKeyboardShortcuts() {
-        (0, l.closeModal)(o.J);
+        (0, l.closeModal)(s.J);
     }
 }
 t.Z = new c();

@@ -8,7 +8,7 @@ var r = n(348326),
     u = n(40455),
     c = n(989263),
     d = n(513418);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,8 +21,8 @@ function _(e, t, n) {
         e
     );
 }
-let E = new i.Z('Messages');
-class f {
+let _ = new i.Z('Messages');
+class h {
     static computeUsersAndMembers(e) {
         (0, d.Z)(e);
         let t = new Map(),
@@ -38,10 +38,10 @@ class f {
         }
     }
     constructor(e) {
-        if ((_(this, 'connectionId', null), _(this, 'users', []), _(this, 'members', []), _(this, 'messages', []), e.length > 0)) {
+        if ((f(this, 'connectionId', null), f(this, 'users', []), f(this, 'members', []), f(this, 'messages', []), e.length > 0)) {
             var t;
             let n = null === (t = e[0]) || void 0 === t ? void 0 : t.connectionId,
-                [r, i] = f.computeUsersAndMembers(e);
+                [r, i] = h.computeUsersAndMembers(e);
             e.length > 0 && e.every((e) => e.connectionId === n) && (this.connectionId = n), (this.users = r), (this.members = i), (this.messages = e.map((e) => e.message));
         }
     }
@@ -49,14 +49,14 @@ class f {
 t.ZP = new (class e {
     async startupLoad(e, t, n, r) {
         let i = o.Z.messages(e);
-        return new f(await i.getLatest(t, n, r));
+        return new h(await i.getLatest(t, n, r));
     }
     async load(e, t, n) {
         let r = s.Z.getBasicChannel(t);
-        if (null == t || null == r || !(0, c.v)(r)) return new f([]);
+        if (null == t || null == r || !(0, c.v)(r)) return new h([]);
         {
             let i = o.Z.messages(e);
-            return new f(await i.getLatest(r.guild_id, t, n));
+            return new h(await i.getLatest(r.guild_id, t, n));
         }
     }
     handleMessageCreate(e, t) {
@@ -115,7 +115,7 @@ t.ZP = new (class e {
     }
     async updateOne(e, t, n, r) {
         if (null == n.id) {
-            E.warn('updateOne: message.id is null; cannot update a message if we do not know its id.');
+            _.warn('updateOne: message.id is null; cannot update a message if we do not know its id.');
             return;
         }
         let i = o.Z.messages(r.database),
@@ -146,7 +146,7 @@ t.ZP = new (class e {
         o.Z.messagesTransaction(t).deleteGuild(e);
     }
     constructor() {
-        _(this, 'actions', {
+        f(this, 'actions', {
             CHANNEL_DELETE: (e, t) => this.handleChannelDelete(e, t),
             GUILD_DELETE: (e, t) => this.handleGuildDelete(e, t),
             LOAD_MESSAGES_SUCCESS: (e, t) => this.handleLoadMessagesSuccess(e, t),

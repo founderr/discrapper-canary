@@ -1,74 +1,74 @@
-s.d(t, {
+n.d(t, {
     Z: function () {
         return u;
     }
 }),
-    s(47120);
-var a = s(200651),
-    n = s(192379),
-    l = s(481060),
-    o = s(479531),
-    i = s(600164),
-    r = s(486527),
-    c = s(689938),
-    d = s(294550);
+    n(47120);
+var i = n(200651),
+    l = n(192379),
+    s = n(481060),
+    a = n(479531),
+    o = n(600164),
+    r = n(486527),
+    c = n(388032),
+    d = n(294550);
 function u(e) {
-    let { directoryChannelId: t, description: s, onDescriptionChange: u, categoryId: m, onCategoryIdChange: C, onSubmit: _, onClose: x, onBack: E } = e,
-        [I, L] = n.useState(!1),
-        [f, T] = n.useState(null),
-        h = async () => {
+    let { directoryChannelId: t, description: n, onDescriptionChange: u, categoryId: m, onCategoryIdChange: C, onSubmit: x, onClose: f, onBack: h } = e,
+        [g, L] = l.useState(!1),
+        [p, b] = l.useState(null),
+        j = async () => {
             L(!0);
             try {
-                await _();
+                await x();
             } catch (e) {
-                T(new o.Z(e));
+                b(new a.Z(e));
             }
             L(!1);
         };
-    return (0, a.jsxs)(a.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, a.jsxs)(l.ModalHeader, {
-                direction: i.Z.Direction.VERTICAL,
+            (0, i.jsxs)(s.ModalHeader, {
+                direction: o.Z.Direction.VERTICAL,
                 className: d.header,
                 separator: !1,
                 children: [
-                    (0, a.jsx)(l.Heading, {
+                    (0, i.jsx)(s.Heading, {
                         className: d.title,
                         variant: 'heading-xl/semibold',
-                        children: c.Z.Messages.HUB_CUSTOMIZE_GUILD_TITLE
+                        children: c.intl.string(c.t['5bQcoa'])
                     }),
-                    (0, a.jsx)(l.Text, {
+                    (0, i.jsx)(s.Text, {
                         className: d.subtitle,
                         color: 'header-secondary',
                         variant: 'text-md/normal',
-                        children: c.Z.Messages.HUB_CUSTOMIZE_GUILD_SUBTITLE
+                        children: c.intl.string(c.t.Ie60WV)
                     }),
-                    null != x &&
-                        (0, a.jsx)(l.ModalCloseButton, {
+                    null != f &&
+                        (0, i.jsx)(s.ModalCloseButton, {
                             className: d.closeButton,
-                            onClick: x
+                            onClick: f
                         })
                 ]
             }),
-            (0, a.jsxs)(l.ModalContent, {
+            (0, i.jsxs)(s.ModalContent, {
                 className: d.createGuild,
                 paddingFix: !1,
                 children: [
-                    (0, a.jsx)(l.FormItem, {
-                        title: c.Z.Messages.HUB_ADD_GUILD_DESCRIPTION_TITLE,
-                        children: (0, a.jsx)(l.TextArea, {
-                            value: s,
+                    (0, i.jsx)(s.FormItem, {
+                        title: c.intl.string(c.t.FFFAGh),
+                        children: (0, i.jsx)(s.TextArea, {
+                            value: n,
                             maxLength: 200,
-                            placeholder: c.Z.Messages.HUB_ADD_GUILD_DESCRIPTION_PLACEHOLDER,
+                            placeholder: c.intl.string(c.t.VzuITE),
                             onChange: u,
-                            error: null == f ? void 0 : f.getAnyErrorMessage()
+                            error: null == p ? void 0 : p.getAnyErrorMessage()
                         })
                     }),
-                    (0, a.jsx)(l.FormItem, {
+                    (0, i.jsx)(s.FormItem, {
                         className: d.formItemSpaced,
-                        title: c.Z.Messages.HUB_ADD_GUILD_CATEGORY_TITLE,
-                        children: (0, a.jsx)(l.SingleSelect, {
-                            placeholder: c.Z.Messages.SELECT,
+                        title: c.intl.string(c.t.Olo8FB),
+                        children: (0, i.jsx)(s.SingleSelect, {
+                            placeholder: c.intl.string(c.t.XqMe3N),
                             options: (0, r.b7)(t),
                             clearable: !1,
                             value: m,
@@ -78,22 +78,22 @@ function u(e) {
                     })
                 ]
             }),
-            (0, a.jsxs)(l.ModalFooter, {
-                justify: i.Z.Justify.BETWEEN,
+            (0, i.jsxs)(s.ModalFooter, {
+                justify: o.Z.Justify.BETWEEN,
                 children: [
-                    (0, a.jsx)(l.Button, {
-                        color: l.Button.Colors.BRAND,
-                        onClick: h,
-                        submitting: I,
-                        disabled: '' === s || m === r.AR.UNCATEGORIZED,
-                        children: c.Z.Messages.HUB_ADD_SERVER_CTA
+                    (0, i.jsx)(s.Button, {
+                        color: s.Button.Colors.BRAND,
+                        onClick: j,
+                        submitting: g,
+                        disabled: '' === n || m === r.AR.UNCATEGORIZED,
+                        children: c.intl.string(c.t.H9jxS0)
                     }),
-                    (0, a.jsx)(l.Button, {
+                    (0, i.jsx)(s.Button, {
                         className: d.backButton,
-                        look: l.Button.Looks.BLANK,
-                        size: l.Button.Sizes.MIN,
-                        onClick: E,
-                        children: c.Z.Messages.BACK
+                        look: s.Button.Looks.BLANK,
+                        size: s.Button.Sizes.MIN,
+                        onClick: h,
+                        children: c.intl.string(c.t['13/7kZ'])
                     })
                 ]
             })

@@ -1,6 +1,6 @@
 n.d(t, {
     T: function () {
-        return T;
+        return v;
     }
 }),
     n(47120);
@@ -13,11 +13,11 @@ var r,
     u = n(570140),
     c = n(158776),
     d = n(146282),
-    _ = n(26033),
-    E = n(180335),
-    f = n(561308),
-    h = n(981631);
-function p(e, t, n) {
+    f = n(26033),
+    _ = n(180335),
+    h = n(561308),
+    p = n(981631);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,21 +30,21 @@ function p(e, t, n) {
         e
     );
 }
-let I = new Set([o.s.LISTENED_SESSION]),
-    m = new Map();
-function T(e) {
+let g = new Set([o.s.LISTENED_SESSION]),
+    E = new Map();
+function v(e) {
     return ''.concat(e.author_id, ':').concat(e.id);
 }
-function S(e) {
+function I(e) {
     let t = new Set(),
         n = new Set();
     for (let r of e) {
         let e = (function (e) {
-            return (0, f.n2)(e) ? null : (0, f.kr)(e) && e.author_type === s.i.USER ? c.Z.getActivities(e.author_id).find((t) => (t.type === h.IIU.PLAYING && (0, _.m9)(e) ? (0, E.cN)(e, t) : !!(t.type === h.IIU.LISTENING && (0, _.dU)(e)) && (0, E.pB)(e, t))) : void 0;
+            return (0, h.n2)(e) ? null : (0, h.kr)(e) && e.author_type === s.i.USER ? c.Z.getActivities(e.author_id).find((t) => (t.type === p.IIU.PLAYING && (0, f.m9)(e) ? (0, _.cN)(e, t) : !!(t.type === p.IIU.LISTENING && (0, f.dU)(e)) && (0, _.pB)(e, t))) : void 0;
         })(r.content);
         if (void 0 !== e) {
-            let i = T(r.content);
-            n.add(i), e !== m.get(i) && (t.add(i), m.set(i, e));
+            let i = v(r.content);
+            n.add(i), e !== E.get(i) && (t.add(i), E.set(i, e));
         }
     }
     return {
@@ -52,39 +52,39 @@ function S(e) {
         matchedKeys: n
     };
 }
-function g() {
+function S() {
     let e = !1,
-        t = Array.from(m.keys()),
+        t = Array.from(E.keys()),
         n = new Set(),
         r = new Set();
     for (let t of d.Z.getFeeds().values()) {
-        let { updatedKeys: i, matchedKeys: a } = S(n.size > 0 ? t.entries.filter((e) => !n.has(T(e.content))) : t.entries);
+        let { updatedKeys: i, matchedKeys: a } = I(n.size > 0 ? t.entries.filter((e) => !n.has(v(e.content))) : t.entries);
         for (let e of i) n.add(e);
         for (let e of a) r.add(e);
         e = e || i.size > 0;
     }
-    for (let n of a().difference(t, [...r])) m.delete(n), (e = !0);
+    for (let n of a().difference(t, [...r])) E.delete(n), (e = !0);
     return e;
 }
-class A extends (r = l.ZP.Store) {
+class T extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(d.Z, c.Z), this.syncWith([c.Z], g);
+        this.waitFor(d.Z, c.Z), this.syncWith([c.Z], S);
     }
     getMatchingActivity(e) {
-        return (0, f.n2)(e) ? null : m.get(T(e));
+        return (0, h.n2)(e) ? null : E.get(v(e));
     }
     constructor(...e) {
-        super(...e), p(this, 'canRenderContent', (e) => !(0, f.n2)(e) && (!I.has(e.content_type) || null != this.getMatchingActivity(e)));
+        super(...e), m(this, 'canRenderContent', (e) => !(0, h.n2)(e) && (!g.has(e.content_type) || null != this.getMatchingActivity(e)));
     }
 }
-p(A, 'displayName', 'ContentInventoryActivityStore'),
-    (t.Z = new A(u.Z, {
+m(T, 'displayName', 'ContentInventoryActivityStore'),
+    (t.Z = new T(u.Z, {
         CONNECTION_OPEN: function () {
-            m.clear();
+            E.clear();
         },
         CONTENT_INVENTORY_SET_FEED: function (e) {
             let { feed: t } = e,
-                { updatedKeys: n } = S(t.entries);
+                { updatedKeys: n } = I(t.entries);
             return n.size > 0;
         }
     }));

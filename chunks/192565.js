@@ -1,28 +1,28 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return T;
     }
 });
 var i = n(200651),
-    a = n(192379),
-    s = n(442837),
-    r = n(224706),
-    l = n(931240),
+    r = n(192379),
+    l = n(442837),
+    a = n(224706),
+    s = n(931240),
     o = n(650461),
     c = n(94963),
     d = n(745628),
     u = n(950279),
-    _ = n(796918),
-    E = n(513532),
-    h = n(741595),
-    m = n(974842),
-    I = n(363915),
-    p = n(359380),
-    g = n(308083),
-    T = n(689938);
-function S(e) {
+    h = n(796918),
+    m = n(513532),
+    p = n(741595),
+    g = n(974842),
+    f = n(363915),
+    _ = n(359380),
+    E = n(308083),
+    I = n(388032);
+function C(e) {
     let t = (0, o.Wg)(),
-        { progress: n, errors: i } = (0, s.cj)([o.ZP], () => {
+        { progress: n, errors: i } = (0, l.cj)([o.ZP], () => {
             var n;
             let i = o.ZP.getStateForGuild(e);
             return {
@@ -33,126 +33,126 @@ function S(e) {
     return {
         progress: n,
         errors: i,
-        handleClanUpdate: a.useCallback((t) => l._9(e, t), [e])
+        handleClanUpdate: r.useCallback((t) => s._9(e, t), [e])
     };
 }
-let C = {
-    [g.Wy.GAMES]: function (e) {
+let v = {
+    [E.Wy.GAMES]: function (e) {
         let { guildId: t } = e;
-        a.useEffect(() => {
-            r.Z.getDetectableGames();
+        r.useEffect(() => {
+            a.Z.getDetectableGames();
         }, []);
-        let { progress: n, errors: s, handleClanUpdate: l } = S(t);
+        let { progress: n, errors: l, handleClanUpdate: s } = C(t);
         return (0, i.jsx)(u.Z, {
-            title: T.Z.Messages.CLAN_SETUP_GAMES_TITLE,
-            description: T.Z.Messages.CLAN_SETUP_GAMES_SUBTITLE,
-            onUpdateGames: (e) => l({ gameApplicationIds: e }),
+            title: I.intl.string(I.t.t6Mbq6),
+            description: I.intl.string(I.t.E7Ymwc),
+            onUpdateGames: (e) => s({ gameApplicationIds: e }),
             gameApplicationIds: n.gameApplicationIds,
-            error: null == s ? void 0 : s.gameApplicationIds,
+            error: null == l ? void 0 : l.gameApplicationIds,
             guildId: t,
             includeSuggestedGames: !0
         });
     },
-    [g.Wy.PLAYSTYLE]: function (e) {
+    [E.Wy.PLAYSTYLE]: function (e) {
         let { guildId: t } = e,
-            { progress: n, errors: a, handleClanUpdate: s } = S(t);
-        return (0, i.jsx)(h.Z, {
-            title: T.Z.Messages.CLAN_SETUP_PLAYSTYLE_TITLE,
-            description: T.Z.Messages.CLAN_SETUP_PLAYSTYLE_SUBTITLE,
-            onUpdatePlaystyle: (e) => s({ playstyle: e }),
+            { progress: n, errors: r, handleClanUpdate: l } = C(t);
+        return (0, i.jsx)(p.Z, {
+            title: I.intl.string(I.t.W0h7pa),
+            description: I.intl.string(I.t.JHYekZ),
+            onUpdatePlaystyle: (e) => l({ playstyle: e }),
             playstyle: n.playstyle,
-            error: null == a ? void 0 : a.playstyle
+            error: null == r ? void 0 : r.playstyle
         });
     },
-    [g.Wy.UTILITY_TRAITS]: function (e) {
+    [E.Wy.UTILITY_TRAITS]: function (e) {
         let { guildId: t } = e,
-            { progress: n, handleClanUpdate: a } = S(t);
-        return (0, i.jsx)(p.Z, {
+            { progress: n, handleClanUpdate: r } = C(t);
+        return (0, i.jsx)(_.Z, {
             guildId: t,
-            title: T.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_TITLE,
-            description: T.Z.Messages.CLAN_SETUP_UTILITY_TRAITS_SUBTITLE,
-            onUpdateTraits: (e) => a({ interests: e }),
+            title: I.intl.string(I.t.G4tP09),
+            description: I.intl.string(I.t['6Eos19']),
+            onUpdateTraits: (e) => r({ interests: e }),
             progress: n
         });
     },
-    [g.Wy.INTERESTS]: function (e) {
+    [E.Wy.INTERESTS]: function (e) {
         let { guildId: t } = e,
-            { progress: n, errors: a, handleClanUpdate: s } = S(t);
-        return (0, i.jsx)(_.Z, {
+            { progress: n, errors: r, handleClanUpdate: l } = C(t);
+        return (0, i.jsx)(h.Z, {
             guildId: t,
-            handleUpdate: s,
+            handleUpdate: l,
             progress: n,
-            error: null == a ? void 0 : a.interests
+            error: null == r ? void 0 : r.interests
         });
     },
-    [g.Wy.DESCRIPTION]: function (e) {
+    [E.Wy.DESCRIPTION]: function (e) {
         let { guildId: t } = e,
-            { progress: n, errors: a, handleClanUpdate: s } = S(t);
+            { progress: n, errors: r, handleClanUpdate: l } = C(t);
         return (0, i.jsx)(d.Z, {
             guildId: t,
-            handleUpdate: s,
+            handleUpdate: l,
             progress: n,
-            errors: a
+            errors: r
         });
     },
-    [g.Wy.CUSTOMIZE_TAG_BADGE]: function (e) {
+    [E.Wy.CUSTOMIZE_TAG_BADGE]: function (e) {
         let { guildId: t } = e,
-            { progress: n, errors: a, handleClanUpdate: s } = S(t);
-        return (0, i.jsx)(m.Z, {
-            handleUpdate: s,
+            { progress: n, errors: r, handleClanUpdate: l } = C(t);
+        return (0, i.jsx)(g.Z, {
+            handleUpdate: l,
             tag: n.tag,
-            error: null == a ? void 0 : a.tag,
+            error: null == r ? void 0 : r.tag,
             badge: n.badgeKind,
             primaryColor: n.badgePrimaryColor,
             secondaryColor: n.badgeSecondaryColor,
             furthestStep: n.furthestStep
         });
     },
-    [g.Wy.CUSTOMIZE_BANNER]: function (e) {
+    [E.Wy.CUSTOMIZE_BANNER]: function (e) {
         let { guildId: t } = e,
-            { progress: n, handleClanUpdate: a } = S(t);
+            { progress: n, handleClanUpdate: r } = C(t);
         return (0, i.jsx)(c.Z, {
-            handleUpdate: a,
+            handleUpdate: r,
             progress: n,
             guildId: t
         });
     },
-    [g.Wy.MEMBER_APPLICATION]: function (e) {
+    [E.Wy.MEMBER_APPLICATION]: function (e) {
         let { guildId: t } = e,
-            { errors: n } = S(t);
-        return (0, i.jsx)(E.Z, {
+            { errors: n } = C(t);
+        return (0, i.jsx)(m.Z, {
             guildId: t,
             error: null == n ? void 0 : n.verificationForm
         });
     }
 };
-function f(e) {
+function S(e) {
     return e.currentStep.toString();
 }
 function N(e) {
-    let t = C[e.currentStep];
+    let t = v[e.currentStep];
     return (0, i.jsx)(t, { guildId: e.guildId });
 }
-function A(e) {
+function T(e) {
     let { guildId: t } = e,
         n = (0, o.Wg)(),
-        r = (0, s.e7)([o.ZP], () => {
-            var e, i, a;
-            return null !== (a = null === (i = o.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : null === (e = i.progress) || void 0 === e ? void 0 : e.currentStep) && void 0 !== a ? a : n.currentStep;
+        a = (0, l.e7)([o.ZP], () => {
+            var e, i, r;
+            return null !== (r = null === (i = o.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : null === (e = i.progress) || void 0 === e ? void 0 : e.currentStep) && void 0 !== r ? r : n.currentStep;
         }),
-        l = a.useMemo(
+        s = r.useMemo(
             () => [
                 {
-                    currentStep: r,
+                    currentStep: a,
                     guildId: t
                 }
             ],
-            [r, t]
+            [a, t]
         );
-    return (0, i.jsx)(I.Z, {
-        currentStep: r,
-        items: l,
+    return (0, i.jsx)(f.Z, {
+        currentStep: a,
+        items: s,
         renderItem: N,
-        getItemKey: f
+        getItemKey: S
     });
 }

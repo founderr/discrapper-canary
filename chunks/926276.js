@@ -93,7 +93,7 @@ e.exports = function (e) {
                 starts: t
             };
         },
-        _ = function (t, n) {
+        f = function (t, n) {
             return e.inherit(
                 {
                     begin: '\\\\begin(?=[ \t]*(\\r?\\n[ \t]*)?\\{' + t + '\\})',
@@ -106,7 +106,7 @@ e.exports = function (e) {
                 c(l, n)
             );
         },
-        E = (t = 'string') =>
+        _ = (t = 'string') =>
             e.END_SAME_AS_BEGIN({
                 className: t,
                 begin: /(.|\r?\n)/,
@@ -115,13 +115,13 @@ e.exports = function (e) {
                 excludeEnd: !0,
                 endsParent: !0
             }),
-        f = function (e) {
+        h = function (e) {
             return {
                 className: 'string',
                 end: '(?=\\\\end\\{' + e + '\\})'
             };
         },
-        h = (e = 'string') => ({
+        p = (e = 'string') => ({
             relevance: 0,
             begin: /\{/,
             starts: {
@@ -147,21 +147,21 @@ e.exports = function (e) {
         name: 'LaTeX',
         aliases: ['tex'],
         contains: [
-            ...['verb', 'lstinline'].map((e) => d(e, { contains: [E()] })),
-            d('mint', c(l, { contains: [E()] })),
+            ...['verb', 'lstinline'].map((e) => d(e, { contains: [_()] })),
+            d('mint', c(l, { contains: [_()] })),
             d(
                 'mintinline',
                 c(l, {
-                    contains: [h(), E()]
+                    contains: [p(), _()]
                 })
             ),
             d('url', {
-                contains: [h('link'), h('link')]
+                contains: [p('link'), p('link')]
             }),
-            d('hyperref', { contains: [h('link')] }),
-            d('href', c(u, { contains: [h('link')] })),
-            ...[].concat(...['', '\\*'].map((e) => [_('verbatim' + e, f('verbatim' + e)), _('filecontents' + e, c(l, f('filecontents' + e))), ...['', 'B', 'L'].map((t) => _(t + 'Verbatim' + e, c(u, f(t + 'Verbatim' + e))))])),
-            _('minted', c(u, c(l, f('minted')))),
+            d('hyperref', { contains: [p('link')] }),
+            d('href', c(u, { contains: [p('link')] })),
+            ...[].concat(...['', '\\*'].map((e) => [f('verbatim' + e, h('verbatim' + e)), f('filecontents' + e, c(l, h('filecontents' + e))), ...['', 'B', 'L'].map((t) => f(t + 'Verbatim' + e, c(u, h(t + 'Verbatim' + e))))])),
+            f('minted', c(u, c(l, h('minted')))),
             ...i
         ]
     };

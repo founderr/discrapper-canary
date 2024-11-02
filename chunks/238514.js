@@ -19,7 +19,7 @@ function c(e, t, n) {
     );
 }
 let d = {};
-class _ extends (r = s.ZP.PersistedStore) {
+class f extends (r = s.ZP.PersistedStore) {
     initialize(e) {
         d = null != e ? e : {};
     }
@@ -39,9 +39,9 @@ class _ extends (r = s.ZP.PersistedStore) {
         return null === (e = d.appearance) || void 0 === e ? void 0 : e.settings;
     }
 }
-c(_, 'displayName', 'SelectivelySyncedUserSettingsStore'),
-    c(_, 'persistKey', 'SelectivelySyncedUserSettingsStore'),
-    c(_, 'migrations', [
+c(f, 'displayName', 'SelectivelySyncedUserSettingsStore'),
+    c(f, 'persistKey', 'SelectivelySyncedUserSettingsStore'),
+    c(f, 'migrations', [
         () => {
             var e, t;
             let n = null !== (e = o.K.get('UserSettingsSync')) && void 0 !== e ? e : {},
@@ -77,7 +77,7 @@ c(_, 'displayName', 'SelectivelySyncedUserSettingsStore'),
                 };
         }
     ]),
-    (t.Z = new _(l.Z, {
+    (t.Z = new f(l.Z, {
         SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: function (e) {
             let { changes: t } = e;
             for (let e in t) {

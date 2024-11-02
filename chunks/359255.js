@@ -15,11 +15,11 @@ function u(e) {
 }
 let c = (e) => {
     let { value: t, onChange: n, className: a, minValue: c, maxValue: d } = e,
-        [_, E] = i.useState(t),
-        f = u(_) || (null != c && _ <= c),
-        h = u(_) || (null != d && _ >= d),
-        p = (e) => {
-            n(u(e) ? (null != c ? c : 0) : e), E(e);
+        [f, _] = i.useState(t),
+        h = u(f) || (null != c && f <= c),
+        p = u(f) || (null != d && f >= d),
+        m = (e) => {
+            n(u(e) ? (null != c ? c : 0) : e), _(e);
         };
     return (0, r.jsx)(o.FocusRing, {
         within: !0,
@@ -28,35 +28,35 @@ let c = (e) => {
             children: [
                 (0, r.jsx)(o.Clickable, {
                     onClick: (e) => {
-                        if ((e.stopPropagation(), !f)) p(_ - 1);
+                        if ((e.stopPropagation(), !h)) m(f - 1);
                     },
                     tabIndex: -1,
-                    className: s()(l.iconWrapper, l.__invalid_subtract, { [l.disabled]: f }),
+                    className: s()(l.iconWrapper, l.__invalid_subtract, { [l.disabled]: h }),
                     children: (0, r.jsx)(o.MinusIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: s()(l.icon, { [l.disabled]: f })
+                        className: s()(l.icon, { [l.disabled]: h })
                     })
                 }),
                 (0, r.jsx)(o.TextInput, {
-                    value: ''.concat(_),
+                    value: ''.concat(f),
                     onChange: (e) => {
-                        if (u(e)) return p(e);
+                        if (u(e)) return m(e);
                         let t = parseInt(e);
-                        return isNaN(t) ? void 0 : null != d && t >= d ? p(d) : null != c && t <= c ? p(c) : p(t);
+                        return isNaN(t) ? void 0 : null != d && t >= d ? m(d) : null != c && t <= c ? m(c) : m(t);
                     },
                     inputClassName: l.value
                 }),
                 (0, r.jsx)(o.Clickable, {
                     onClick: (e) => {
-                        if ((e.stopPropagation(), !h)) p(_ + 1);
+                        if ((e.stopPropagation(), !p)) m(f + 1);
                     },
                     tabIndex: -1,
-                    className: s()(l.iconWrapper, l.__invalid_add, { [l.disabled]: h }),
+                    className: s()(l.iconWrapper, l.__invalid_add, { [l.disabled]: p }),
                     children: (0, r.jsx)(o.PlusSmallIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: s()(l.icon, { [l.disabled]: h })
+                        className: s()(l.icon, { [l.disabled]: p })
                     })
                 })
             ]

@@ -1,6 +1,6 @@
 n.d(t, {
     o: function () {
-        return E;
+        return _;
     }
 }),
     n(47120);
@@ -25,11 +25,11 @@ function d(e, t, n) {
         e
     );
 }
-let _ = {
+let f = {
     friction: 7,
     tension: 60
 };
-class E extends (r = a.Component) {
+class _ extends (r = a.Component) {
     componentWillAppear(e) {
         this.animateTo(1).start(e);
     }
@@ -42,7 +42,7 @@ class E extends (r = a.Component) {
     }
     animateTo(e) {
         return l.Z.spring(this.animation, {
-            ..._,
+            ...f,
             toValue: e
         });
     }
@@ -74,4 +74,4 @@ class E extends (r = a.Component) {
         super(...e), d(this, 'animation', new l.Z.Value(0));
     }
 }
-d(E, 'contextType', u.AccessibilityPreferencesContext);
+d(_, 'contextType', u.AccessibilityPreferencesContext);

@@ -1,26 +1,26 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return u;
+        return m;
     }
 });
-var n = t(200651),
-    a = t(442837),
-    i = t(718629),
-    r = t(615830),
-    o = t(630759),
-    l = t(838436),
-    c = t(51331),
-    d = t(726985),
-    _ = t(689938);
-function u() {
-    let e = (0, a.e7)([r.Z], () => r.Z.getPersistentCodesEnabled());
-    return (0, n.jsx)(l.U, {
+var i = n(200651),
+    s = n(442837),
+    r = n(718629),
+    l = n(615830),
+    a = n(630759),
+    o = n(838436),
+    c = n(51331),
+    d = n(726985),
+    u = n(388032);
+function m() {
+    let e = (0, s.e7)([l.Z], () => l.Z.getPersistentCodesEnabled());
+    return (0, i.jsx)(o.U, {
         setting: d.s6.PRIVACY_AND_SAFETY_PERSISTENT_VERIFICATION_CODES,
-        children: (0, n.jsx)(c.Z, {
+        children: (0, i.jsx)(c.Z, {
             value: e,
-            onChange: i.Z.updatePersistentCodesEnabled,
-            title: _.Z.Messages.E2EE_ENABLE_PERSISTENT_CODES,
-            note: _.Z.Messages.E2EE_PERSISTENT_CODES_DESCRIPTION_V2.format({ helpArticle: (0, o.aZ)() })
+            onChange: r.Z.updatePersistentCodesEnabled,
+            title: u.intl.string(u.t['opi/XF']),
+            note: u.intl.format(u.t['/T+ZlJ'], { helpArticle: (0, a.aZ)() })
         })
     });
 }

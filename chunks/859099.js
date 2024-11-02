@@ -3,13 +3,13 @@ var r = n(780384),
     i = n(147913),
     a = n(844070),
     s = n(981631),
-    o = n(689938);
+    o = n(388032);
 function l(e) {
-    e.relationship.type === s.OGo.PENDING_INCOMING && (r.uv.announce(o.Z.Messages.FRIEND_REQUEST_PENDING_A11Y_ANNOUNCEMENT.format({ username: e.relationship.user.username })), a.T(e.relationship.user));
+    e.relationship.type === s.OGo.PENDING_INCOMING && (r.uv.announce(o.intl.formatToPlainString(o.t.zH0kCw, { username: e.relationship.user.username })), a.T(e.relationship.user));
 }
 function u(e) {
     let { user: t } = e;
-    r.uv.announce(o.Z.Messages.FRIEND_REQUEST_ACCEPTED_A11Y_ANNOUNCEMENT.format({ username: t.username })), a.z(t);
+    r.uv.announce(o.intl.formatToPlainString(o.t['/+7xk5'], { username: t.username })), a.z(t);
 }
 class c extends i.Z {
     constructor(...e) {

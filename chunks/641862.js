@@ -1,9 +1,9 @@
 n.d(t, {
     Y: function () {
-        return I;
+        return g;
     },
     u: function () {
-        return p;
+        return m;
     }
 });
 var r = n(175730),
@@ -15,56 +15,56 @@ var r = n(175730),
     u = new WeakMap(),
     c = /auto|scroll/,
     d = /^tb|vertical/,
-    _ = /msie|trident/i.test(l.C.navigator && l.C.navigator.userAgent),
-    E = function (e) {
+    f = /msie|trident/i.test(l.C.navigator && l.C.navigator.userAgent),
+    _ = function (e) {
         return parseFloat(e || '0');
     },
-    f = function (e, t, n) {
+    h = function (e, t, n) {
         return void 0 === e && (e = 0), void 0 === t && (t = 0), void 0 === n && (n = !1), new i.D((n ? t : e) || 0, (n ? e : t) || 0);
     },
-    h = (0, o.v)({
-        devicePixelContentBoxSize: f(),
-        borderBoxSize: f(),
-        contentBoxSize: f(),
+    p = (0, o.v)({
+        devicePixelContentBoxSize: h(),
+        borderBoxSize: h(),
+        contentBoxSize: h(),
         contentRect: new a.N(0, 0, 0, 0)
     }),
-    p = function (e, t) {
+    m = function (e, t) {
         if ((void 0 === t && (t = !1), u.has(e) && !t)) return u.get(e);
-        if ((0, s.xj)(e)) return u.set(e, h), h;
+        if ((0, s.xj)(e)) return u.set(e, p), p;
         var n = getComputedStyle(e),
             r = (0, s.zd)(e) && e.ownerSVGElement && e.getBBox(),
-            i = !_ && 'border-box' === n.boxSizing,
+            i = !f && 'border-box' === n.boxSizing,
             l = d.test(n.writingMode || ''),
-            p = !r && c.test(n.overflowY || ''),
-            I = !r && c.test(n.overflowX || ''),
-            m = r ? 0 : E(n.paddingTop),
-            T = r ? 0 : E(n.paddingRight),
-            S = r ? 0 : E(n.paddingBottom),
-            g = r ? 0 : E(n.paddingLeft),
-            A = r ? 0 : E(n.borderTopWidth),
-            N = r ? 0 : E(n.borderRightWidth),
-            R = r ? 0 : E(n.borderBottomWidth),
-            O = r ? 0 : E(n.borderLeftWidth),
-            v = g + T,
-            C = m + S,
-            L = O + N,
-            D = A + R,
-            y = I ? e.offsetHeight - D - e.clientHeight : 0,
-            b = p ? e.offsetWidth - L - e.clientWidth : 0,
-            M = r ? r.width : E(n.width) - (i ? v + L : 0) - b,
-            P = r ? r.height : E(n.height) - (i ? C + D : 0) - y,
-            U = M + v + b + L,
-            w = P + C + y + D,
-            x = (0, o.v)({
-                devicePixelContentBoxSize: f(Math.round(M * devicePixelRatio), Math.round(P * devicePixelRatio), l),
-                borderBoxSize: f(U, w, l),
-                contentBoxSize: f(M, P, l),
-                contentRect: new a.N(g, m, M, P)
+            m = !r && c.test(n.overflowY || ''),
+            g = !r && c.test(n.overflowX || ''),
+            E = r ? 0 : _(n.paddingTop),
+            v = r ? 0 : _(n.paddingRight),
+            I = r ? 0 : _(n.paddingBottom),
+            S = r ? 0 : _(n.paddingLeft),
+            T = r ? 0 : _(n.borderTopWidth),
+            b = r ? 0 : _(n.borderRightWidth),
+            y = r ? 0 : _(n.borderBottomWidth),
+            A = r ? 0 : _(n.borderLeftWidth),
+            N = S + v,
+            C = E + I,
+            R = A + b,
+            O = T + y,
+            D = g ? e.offsetHeight - O - e.clientHeight : 0,
+            L = m ? e.offsetWidth - R - e.clientWidth : 0,
+            x = r ? r.width : _(n.width) - (i ? N + R : 0) - L,
+            w = r ? r.height : _(n.height) - (i ? C + O : 0) - D,
+            M = x + N + L + R,
+            P = w + C + D + O,
+            k = (0, o.v)({
+                devicePixelContentBoxSize: h(Math.round(x * devicePixelRatio), Math.round(w * devicePixelRatio), l),
+                borderBoxSize: h(M, P, l),
+                contentBoxSize: h(x, w, l),
+                contentRect: new a.N(S, E, x, w)
             });
-        return u.set(e, x), x;
+        return u.set(e, k), k;
     },
-    I = function (e, t, n) {
-        var i = p(e, n),
+    g = function (e, t, n) {
+        var i = m(e, n),
             a = i.borderBoxSize,
             s = i.contentBoxSize,
             o = i.devicePixelContentBoxSize;

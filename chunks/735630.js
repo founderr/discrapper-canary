@@ -964,10 +964,10 @@ u.initialize(),
         if (n && n < 8) return i.debug('BoxParser', 'Not enough bytes left in the parent box to parse a new box'), { code: u.ERR_NOT_ENOUGH_DATA };
         var c = e.readUint32(),
             d = e.readString(4),
-            _ = d;
+            f = d;
         if ((i.debug('BoxParser', "Found box of type '" + d + "' and size " + c + ' at position ' + o), (l = 8), 'uuid' == d)) {
             if (e.getEndPosition() - e.getPosition() < 16 || n - l < 16) return e.seek(o), i.debug('BoxParser', 'Not enough bytes left in the parent box to parse a UUID box'), { code: u.ERR_NOT_ENOUGH_DATA };
-            (s = u.parseUUID(e)), (l += 16), (_ = s);
+            (s = u.parseUUID(e)), (l += 16), (f = s);
         }
         if (1 == c) {
             if (e.getEndPosition() - e.getPosition() < 8 || (n && n - l < 8)) return e.seek(o), i.warn('BoxParser', 'Not enough data in stream to parse the extended size of the "' + d + '" box'), { code: u.ERR_NOT_ENOUGH_DATA };
@@ -1024,9 +1024,9 @@ u.initialize(),
                   : (u[d + 'Box'] ? (r = new u[d + 'Box'](c)) : 'uuid' !== d ? (i.warn('BoxParser', "Unknown box type: '" + d + "'"), ((r = new u.Box(d, c)).has_unparsed_data = !0)) : u.UUIDBoxes[s] ? (r = new u.UUIDBoxes[s](c)) : (i.warn('BoxParser', "Unknown uuid type: '" + s + "'"), ((r = new u.Box(d, c)).uuid = s), (r.has_unparsed_data = !0)),
                     (r.hdr_size = l),
                     (r.start = o),
-                    r.write === u.Box.prototype.write && 'mdat' !== r.type && (i.info('BoxParser', "'" + _ + "' box writing not yet implemented, keeping unparsed data in memory for later write"), r.parseDataAndRewind(e)),
+                    r.write === u.Box.prototype.write && 'mdat' !== r.type && (i.info('BoxParser', "'" + f + "' box writing not yet implemented, keeping unparsed data in memory for later write"), r.parseDataAndRewind(e)),
                     r.parse(e),
-                    (a = e.getPosition() - (r.start + r.size)) < 0 ? (i.warn('BoxParser', "Parsing of box '" + _ + "' did not read the entire indicated box data size (missing " + -a + ' bytes), seeking forward'), e.seek(r.start + r.size)) : a > 0 && (i.error('BoxParser', "Parsing of box '" + _ + "' read " + a + ' more bytes than the indicated box data size, seeking backwards'), 0 !== r.size && e.seek(r.start + r.size)),
+                    (a = e.getPosition() - (r.start + r.size)) < 0 ? (i.warn('BoxParser', "Parsing of box '" + f + "' did not read the entire indicated box data size (missing " + -a + ' bytes), seeking forward'), e.seek(r.start + r.size)) : a > 0 && (i.error('BoxParser', "Parsing of box '" + f + "' read " + a + ' more bytes than the indicated box data size, seeking backwards'), 0 !== r.size && e.seek(r.start + r.size)),
                     {
                         code: u.OK,
                         box: r,
@@ -2422,41 +2422,41 @@ d.prototype.parseSample = function (e) {
     } else n.documentString = r.readString(e.data.length);
     return 'undefined' != typeof DOMParser && (n.document = new DOMParser().parseFromString(n.documentString, 'application/xml')), n;
 };
-var _ = function () {};
-(_.prototype.parseSample = function (e) {
+var f = function () {};
+(f.prototype.parseSample = function (e) {
     return new a(e.data.buffer).readString(e.data.length);
 }),
-    (_.prototype.parseConfig = function (e) {
+    (f.prototype.parseConfig = function (e) {
         var t = new a(e.buffer);
         return t.readUint32(), t.readCString();
     });
-(t.XMLSubtitlein4Parser = d), (t.Textin4Parser = _);
-var E = function (e) {
+(t.XMLSubtitlein4Parser = d), (t.Textin4Parser = f);
+var _ = function (e) {
     (this.stream = e || new o()), (this.boxes = []), (this.mdats = []), (this.moofs = []), (this.isProgressive = !1), (this.moovStartFound = !1), (this.onMoovStart = null), (this.moovStartSent = !1), (this.onReady = null), (this.readySent = !1), (this.onSegment = null), (this.onSamples = null), (this.onError = null), (this.sampleListBuilt = !1), (this.fragmentedTracks = []), (this.extractedTracks = []), (this.isFragmentationInitialized = !1), (this.sampleProcessingStarted = !1), (this.nextMoofNumber = 0), (this.itemListBuilt = !1), (this.onSidx = null), (this.sidxSent = !1);
 };
-(E.prototype.setSegmentOptions = function (e, t, n) {
+(_.prototype.setSegmentOptions = function (e, t, n) {
     var r = this.getTrackById(e);
     if (r) {
         var i = {};
         this.fragmentedTracks.push(i), (i.id = e), (i.user = t), (i.trak = r), (r.nextSample = 0), (i.segmentStream = null), (i.nb_samples = 1000), (i.rapAlignement = !0), n && (n.nbSamples && (i.nb_samples = n.nbSamples), n.rapAlignement && (i.rapAlignement = n.rapAlignement));
     }
 }),
-    (E.prototype.unsetSegmentOptions = function (e) {
+    (_.prototype.unsetSegmentOptions = function (e) {
         for (var t = -1, n = 0; n < this.fragmentedTracks.length; n++) this.fragmentedTracks[n].id == e && (t = n);
         t > -1 && this.fragmentedTracks.splice(t, 1);
     }),
-    (E.prototype.setExtractionOptions = function (e, t, n) {
+    (_.prototype.setExtractionOptions = function (e, t, n) {
         var r = this.getTrackById(e);
         if (r) {
             var i = {};
             this.extractedTracks.push(i), (i.id = e), (i.user = t), (i.trak = r), (r.nextSample = 0), (i.nb_samples = 1000), (i.samples = []), n && n.nbSamples && (i.nb_samples = n.nbSamples);
         }
     }),
-    (E.prototype.unsetExtractionOptions = function (e) {
+    (_.prototype.unsetExtractionOptions = function (e) {
         for (var t = -1, n = 0; n < this.extractedTracks.length; n++) this.extractedTracks[n].id == e && (t = n);
         t > -1 && this.extractedTracks.splice(t, 1);
     }),
-    (E.prototype.parse = function () {
+    (_.prototype.parse = function () {
         var e, t, n;
         if (!this.restoreParsePosition || !!this.restoreParsePosition())
             for (;;) {
@@ -2484,16 +2484,16 @@ var E = function (e) {
                 this.updateUsedBytes && this.updateUsedBytes(t, e);
             }
     }),
-    (E.prototype.checkBuffer = function (e) {
+    (_.prototype.checkBuffer = function (e) {
         if (null == e) throw 'Buffer must be defined and non empty';
         if (void 0 === e.fileStart) throw 'Buffer must have a fileStart property';
         return 0 === e.byteLength ? (i.warn('ISOFile', 'Ignoring empty buffer (fileStart: ' + e.fileStart + ')'), this.stream.logBufferLevel(), !1) : (i.info('ISOFile', 'Processing buffer (fileStart: ' + e.fileStart + ')'), (e.usedBytes = 0), this.stream.insertBuffer(e), this.stream.logBufferLevel(), !!this.stream.initialized() || (i.warn('ISOFile', 'Not ready to start parsing'), !1));
     }),
-    (E.prototype.appendBuffer = function (e, t) {
+    (_.prototype.appendBuffer = function (e, t) {
         var n;
         if (!!this.checkBuffer(e)) return this.parse(), this.moovStartFound && !this.moovStartSent && ((this.moovStartSent = !0), this.onMoovStart && this.onMoovStart()), this.moov ? (!this.sampleListBuilt && (this.buildSampleLists(), (this.sampleListBuilt = !0)), this.updateSampleLists(), this.onReady && !this.readySent && ((this.readySent = !0), this.onReady(this.getInfo())), this.processSamples(t), this.nextSeekPosition ? ((n = this.nextSeekPosition), (this.nextSeekPosition = void 0)) : (n = this.nextParsePosition), this.stream.getEndFilePositionAfter && (n = this.stream.getEndFilePositionAfter(n))) : (n = this.nextParsePosition ? this.nextParsePosition : 0), this.sidx && this.onSidx && !this.sidxSent && (this.onSidx(this.sidx), (this.sidxSent = !0)), this.meta && (this.flattenItemInfo && !this.itemListBuilt && (this.flattenItemInfo(), (this.itemListBuilt = !0)), this.processItems && this.processItems(this.onItem)), this.stream.cleanBuffers && (i.info('ISOFile', 'Done processing buffer (fileStart: ' + e.fileStart + ') - next buffer to fetch should have a fileStart position of ' + n), this.stream.logBufferLevel(), this.stream.cleanBuffers(), this.stream.logBufferLevel(!0), i.info('ISOFile', 'Sample data size in memory: ' + this.getAllocatedSampleDataSize())), n;
     }),
-    (E.prototype.getInfo = function () {
+    (_.prototype.getInfo = function () {
         var e,
             t,
             n,
@@ -2541,7 +2541,7 @@ var E = function (e) {
         }
         return s;
     }),
-    (E.prototype.processSamples = function (e) {
+    (_.prototype.processSamples = function (e) {
         if (this.sampleProcessingStarted) {
             if (this.isFragmentationInitialized && null !== this.onSegment)
                 for (t = 0; t < this.fragmentedTracks.length; t++) {
@@ -2569,45 +2569,45 @@ var E = function (e) {
                 }
         }
     }),
-    (E.prototype.getBox = function (e) {
+    (_.prototype.getBox = function (e) {
         var t = this.getBoxes(e, !0);
         return t.length ? t[0] : null;
     }),
-    (E.prototype.getBoxes = function (e, t) {
+    (_.prototype.getBoxes = function (e, t) {
         var n = [];
-        return E._sweep.call(this, e, n, t), n;
+        return _._sweep.call(this, e, n, t), n;
     }),
-    (E._sweep = function (e, t, n) {
+    (_._sweep = function (e, t, n) {
         for (var r in (this.type && this.type == e && t.push(this), this.boxes)) {
             if (t.length && n) return;
-            E._sweep.call(this.boxes[r], e, t, n);
+            _._sweep.call(this.boxes[r], e, t, n);
         }
     }),
-    (E.prototype.getTrackSamplesInfo = function (e) {
+    (_.prototype.getTrackSamplesInfo = function (e) {
         var t = this.getTrackById(e);
         return t ? t.samples : void 0;
     }),
-    (E.prototype.getTrackSample = function (e, t) {
+    (_.prototype.getTrackSample = function (e, t) {
         var n = this.getTrackById(e);
         return this.getSample(n, t);
     }),
-    (E.prototype.releaseUsedSamples = function (e, t) {
+    (_.prototype.releaseUsedSamples = function (e, t) {
         var n = 0,
             r = this.getTrackById(e);
         !r.lastValidSample && (r.lastValidSample = 0);
         for (var a = r.lastValidSample; a < t; a++) n += this.releaseSample(r, a);
         i.info('ISOFile', 'Track #' + e + ' released samples up to ' + t + ' (released size: ' + n + ', remaining: ' + this.samplesDataSize + ')'), (r.lastValidSample = t);
     }),
-    (E.prototype.start = function () {
+    (_.prototype.start = function () {
         (this.sampleProcessingStarted = !0), this.processSamples(!1);
     }),
-    (E.prototype.stop = function () {
+    (_.prototype.stop = function () {
         this.sampleProcessingStarted = !1;
     }),
-    (E.prototype.flush = function () {
+    (_.prototype.flush = function () {
         i.info('ISOFile', 'Flushing remaining samples'), this.updateSampleLists(), this.processSamples(!0), this.stream.cleanBuffers(), this.stream.logBufferLevel(!0);
     }),
-    (E.prototype.seekTrack = function (e, t, n) {
+    (_.prototype.seekTrack = function (e, t, n) {
         var r,
             a,
             s,
@@ -2642,7 +2642,7 @@ var E = function (e) {
             }
         );
     }),
-    (E.prototype.seek = function (e, t) {
+    (_.prototype.seek = function (e, t) {
         var n,
             r,
             a,
@@ -2667,7 +2667,7 @@ var E = function (e) {
         }
         throw 'Cannot seek: moov not received!';
     }),
-    (E.prototype.equal = function (e) {
+    (_.prototype.equal = function (e) {
         for (var t = 0; t < this.boxes.length && t < e.boxes.length; ) {
             var n = this.boxes[t],
                 r = e.boxes[t];
@@ -2676,35 +2676,35 @@ var E = function (e) {
         }
         return !0;
     });
-(t.ISOFile = E),
-    (E.prototype.lastBoxStartPosition = 0),
-    (E.prototype.parsingMdat = null),
-    (E.prototype.nextParsePosition = 0),
-    (E.prototype.discardMdatData = !1),
-    (E.prototype.processIncompleteBox = function (e) {
+(t.ISOFile = _),
+    (_.prototype.lastBoxStartPosition = 0),
+    (_.prototype.parsingMdat = null),
+    (_.prototype.nextParsePosition = 0),
+    (_.prototype.discardMdatData = !1),
+    (_.prototype.processIncompleteBox = function (e) {
         var t;
         if ('mdat' === e.type) return ((t = new u[e.type + 'Box'](e.size)), (this.parsingMdat = t), this.boxes.push(t), this.mdats.push(t), (t.start = e.start), (t.hdr_size = e.hdr_size), this.stream.addUsedBytes(t.hdr_size), (this.lastBoxStartPosition = t.start + t.size), this.stream.seek(t.start + t.size, !1, this.discardMdatData)) ? ((this.parsingMdat = null), !0) : (this.moovStartFound ? (this.nextParsePosition = this.stream.findEndContiguousBuf()) : (this.nextParsePosition = t.start + t.size), !1);
         return ('moov' === e.type && ((this.moovStartFound = !0), 0 === this.mdats.length && (this.isProgressive = !0)), this.stream.mergeNextBuffer && this.stream.mergeNextBuffer()) ? ((this.nextParsePosition = this.stream.getEndPosition()), !0) : (e.type ? (this.moovStartFound ? (this.nextParsePosition = this.stream.getEndPosition()) : (this.nextParsePosition = this.stream.getPosition() + e.size)) : (this.nextParsePosition = this.stream.getEndPosition()), !1);
     }),
-    (E.prototype.hasIncompleteMdat = function () {
+    (_.prototype.hasIncompleteMdat = function () {
         return null !== this.parsingMdat;
     }),
-    (E.prototype.processIncompleteMdat = function () {
+    (_.prototype.processIncompleteMdat = function () {
         var e;
         return ((e = this.parsingMdat), this.stream.seek(e.start + e.size, !1, this.discardMdatData)) ? (i.debug('ISOFile', "Found 'mdat' end in buffered data"), (this.parsingMdat = null), !0) : ((this.nextParsePosition = this.stream.findEndContiguousBuf()), !1);
     }),
-    (E.prototype.restoreParsePosition = function () {
+    (_.prototype.restoreParsePosition = function () {
         return this.stream.seek(this.lastBoxStartPosition, !0, this.discardMdatData);
     }),
-    (E.prototype.saveParsePosition = function () {
+    (_.prototype.saveParsePosition = function () {
         this.lastBoxStartPosition = this.stream.getPosition();
     }),
-    (E.prototype.updateUsedBytes = function (e, t) {
+    (_.prototype.updateUsedBytes = function (e, t) {
         this.stream.addUsedBytes && ('mdat' === e.type ? (this.stream.addUsedBytes(e.hdr_size), this.discardMdatData && this.stream.addUsedBytes(e.size - e.hdr_size)) : this.stream.addUsedBytes(e.size));
     }),
-    (E.prototype.add = u.Box.prototype.add),
-    (E.prototype.addBox = u.Box.prototype.addBox),
-    (E.prototype.init = function (e) {
+    (_.prototype.add = u.Box.prototype.add),
+    (_.prototype.addBox = u.Box.prototype.addBox),
+    (_.prototype.init = function (e) {
         var t = e || {};
         this.add('ftyp')
             .set('major_brand', (t.brands && t.brands[0]) || 'iso4')
@@ -2726,7 +2726,7 @@ var E = function (e) {
             this
         );
     }),
-    (E.prototype.addTrack = function (e) {
+    (_.prototype.addTrack = function (e) {
         !this.moov && this.init(e);
         var t = e || {};
         (t.width = t.width || 320), (t.height = t.height || 320), (t.id = t.id || this.moov.mvhd.next_track_id), (t.type = t.type || 'avc1');
@@ -2784,9 +2784,9 @@ var E = function (e) {
                             .set('depth', 24),
                         t.avcDecoderConfigRecord)
                     ) {
-                        var _ = new u.avcCBox(),
-                            E = new a(t.avcDecoderConfigRecord);
-                        _.parse(E), s.addBox(_);
+                        var f = new u.avcCBox(),
+                            _ = new a(t.avcDecoderConfigRecord);
+                        f.parse(_), s.addBox(f);
                     }
                     break;
                 case 'Audio':
@@ -2818,13 +2818,13 @@ var E = function (e) {
                         s.addBox(e);
                     }),
                 i.add('dinf').add('dref').addEntry(new u['url Box']().set('flags', 1));
-            var f = i.add('stbl');
+            var h = i.add('stbl');
             return (
-                f.add('stsd').addEntry(s),
-                f.add('stts').set('sample_counts', []).set('sample_deltas', []),
-                f.add('stsc').set('first_chunk', []).set('samples_per_chunk', []).set('sample_description_index', []),
-                f.add('stco').set('chunk_offsets', []),
-                f.add('stsz').set('sample_sizes', []),
+                h.add('stsd').addEntry(s),
+                h.add('stts').set('sample_counts', []).set('sample_deltas', []),
+                h.add('stsc').set('first_chunk', []).set('samples_per_chunk', []).set('sample_description_index', []),
+                h.add('stco').set('chunk_offsets', []),
+                h.add('stsz').set('sample_sizes', []),
                 this.moov.mvex
                     .add('trex')
                     .set('track_id', t.id)
@@ -2841,7 +2841,7 @@ var E = function (e) {
         var t = e || new s();
         (t.endianness = s.BIG_ENDIAN), this.write(t);
     }),
-    (E.prototype.addSample = function (e, t, n) {
+    (_.prototype.addSample = function (e, t, n) {
         var r = n || {},
             i = {},
             a = this.getTrackById(e);
@@ -2851,7 +2851,7 @@ var E = function (e) {
             return this.addBox(s), s.computeSize(), (s.trafs[0].truns[0].data_offset = s.size + 8), (this.add('mdat').data = new Uint8Array(t)), i;
         }
     }),
-    (E.prototype.createSingleSampleMoof = function (e) {
+    (_.prototype.createSingleSampleMoof = function (e) {
         var t = 0;
         t = e.is_sync ? 33554432 : 65536;
         var n = new u.moofBox();
@@ -2874,9 +2874,9 @@ var E = function (e) {
             n
         );
     }),
-    (E.prototype.lastMoofIndex = 0),
-    (E.prototype.samplesDataSize = 0),
-    (E.prototype.resetTables = function () {
+    (_.prototype.lastMoofIndex = 0),
+    (_.prototype.samplesDataSize = 0),
+    (_.prototype.resetTables = function () {
         for (e = 0, this.initial_duration = this.moov.mvhd.duration, this.moov.mvhd.duration = 0; e < this.moov.traks.length; e++) {
             ((t = this.moov.traks[e]).tkhd.duration = 0), (t.mdia.mdhd.duration = 0), ((t.mdia.minf.stbl.stco || t.mdia.minf.stbl.co64).chunk_offsets = []), ((n = t.mdia.minf.stbl.stsc).first_chunk = []), (n.samples_per_chunk = []), (n.sample_description_index = []), ((t.mdia.minf.stbl.stsz || t.mdia.minf.stbl.stz2).sample_sizes = []), ((r = t.mdia.minf.stbl.stts).sample_counts = []), (r.sample_deltas = []), (i = t.mdia.minf.stbl.ctts) && ((i.sample_counts = []), (i.sample_offsets = [])), (a = t.mdia.minf.stbl.stss);
             var e,
@@ -2889,7 +2889,7 @@ var E = function (e) {
             -1 != s && (t.mdia.minf.stbl.boxes[s] = null);
         }
     }),
-    (E.initSampleGroups = function (e, t, n, r, i) {
+    (_.initSampleGroups = function (e, t, n, r, i) {
         var a, s, o, l;
         function u(e, t, n) {
             (this.grouping_type = e), (this.grouping_type_parameter = t), (this.sbgp = n), (this.last_sample_in_run = -1), (this.entry_index = -1);
@@ -2902,19 +2902,19 @@ var E = function (e) {
             if (i) for (s = 0; s < i.length; s++) !i[s].used && i[s].version >= 2 && ((l = i[s].grouping_type + '/0'), ((o = new u(i[s].grouping_type, 0)).is_fragment = !0), !t.sample_groups_info[l] && (t.sample_groups_info[l] = o));
         } else for (s = 0; s < r.length; s++) !r[s].used && r[s].version >= 2 && ((l = r[s].grouping_type + '/0'), (o = new u(r[s].grouping_type, 0)), !e.sample_groups_info[l] && (e.sample_groups_info[l] = o));
     }),
-    (E.setSampleGroupProperties = function (e, t, n, r) {
+    (_.setSampleGroupProperties = function (e, t, n, r) {
         var i, a, s;
         for (i in ((t.sample_groups = []), r)) (t.sample_groups[i] = {}), (t.sample_groups[i].grouping_type = r[i].grouping_type), (t.sample_groups[i].grouping_type_parameter = r[i].grouping_type_parameter), n >= r[i].last_sample_in_run && (r[i].last_sample_in_run < 0 && (r[i].last_sample_in_run = 0), r[i].entry_index++, r[i].entry_index <= r[i].sbgp.entries.length - 1 && (r[i].last_sample_in_run += r[i].sbgp.entries[r[i].entry_index].sample_count)), r[i].entry_index <= r[i].sbgp.entries.length - 1 ? (t.sample_groups[i].group_description_index = r[i].sbgp.entries[r[i].entry_index].group_description_index) : (t.sample_groups[i].group_description_index = -1), 0 !== t.sample_groups[i].group_description_index && ((s = r[i].fragment_description ? r[i].fragment_description : r[i].description), t.sample_groups[i].group_description_index > 0 ? ((a = t.sample_groups[i].group_description_index > 65535 ? (t.sample_groups[i].group_description_index >> 16) - 1 : t.sample_groups[i].group_description_index - 1), s && a >= 0 && (t.sample_groups[i].description = s.entries[a])) : s && s.version >= 2 && s.default_group_description_index > 0 && (t.sample_groups[i].description = s.entries[s.default_group_description_index - 1]));
     }),
-    (E.process_sdtp = function (e, t, n) {
+    (_.process_sdtp = function (e, t, n) {
         if (!!t) e ? ((t.is_leading = e.is_leading[n]), (t.depends_on = e.sample_depends_on[n]), (t.is_depended_on = e.sample_is_depended_on[n]), (t.has_redundancy = e.sample_has_redundancy[n])) : ((t.is_leading = 0), (t.depends_on = 0), (t.is_depended_on = 0), (t.has_redundancy = 0));
     }),
-    (E.prototype.buildSampleLists = function () {
+    (_.prototype.buildSampleLists = function () {
         var e, t;
         for (e = 0; e < this.moov.traks.length; e++) (t = this.moov.traks[e]), this.buildTrakSampleLists(t);
     }),
-    (E.prototype.buildTrakSampleLists = function (e) {
-        if (((e.samples = []), (e.samples_duration = 0), (e.samples_size = 0), (n = e.mdia.minf.stbl.stco || e.mdia.minf.stbl.co64), (r = e.mdia.minf.stbl.stsc), (i = e.mdia.minf.stbl.stsz || e.mdia.minf.stbl.stz2), (a = e.mdia.minf.stbl.stts), (s = e.mdia.minf.stbl.ctts), (o = e.mdia.minf.stbl.stss), (l = e.mdia.minf.stbl.stsd), (u = e.mdia.minf.stbl.subs), (_ = e.mdia.minf.stbl.stdp), (c = e.mdia.minf.stbl.sbgps), (d = e.mdia.minf.stbl.sgpds), (T = -1), (S = -1), (g = -1), (A = -1), (N = 0), (R = 0), (O = 0), E.initSampleGroups(e, null, c, d), void 0 !== i)) {
+    (_.prototype.buildTrakSampleLists = function (e) {
+        if (((e.samples = []), (e.samples_duration = 0), (e.samples_size = 0), (n = e.mdia.minf.stbl.stco || e.mdia.minf.stbl.co64), (r = e.mdia.minf.stbl.stsc), (i = e.mdia.minf.stbl.stsz || e.mdia.minf.stbl.stz2), (a = e.mdia.minf.stbl.stts), (s = e.mdia.minf.stbl.ctts), (o = e.mdia.minf.stbl.stss), (l = e.mdia.minf.stbl.stsd), (u = e.mdia.minf.stbl.subs), (f = e.mdia.minf.stbl.stdp), (c = e.mdia.minf.stbl.sbgps), (d = e.mdia.minf.stbl.sgpds), (v = -1), (I = -1), (S = -1), (T = -1), (b = 0), (y = 0), (A = 0), _.initSampleGroups(e, null, c, d), void 0 !== i)) {
             for (t = 0; t < i.sample_sizes.length; t++) {
                 var t,
                     n,
@@ -2927,31 +2927,31 @@ var E = function (e) {
                     u,
                     c,
                     d,
-                    _,
                     f,
                     h,
                     p,
-                    I,
                     m,
-                    T,
-                    S,
                     g,
+                    E,
+                    v,
+                    I,
+                    S,
+                    T,
+                    b,
+                    y,
                     A,
-                    N,
-                    R,
-                    O,
-                    v = {};
-                (v.number = t), (v.track_id = e.tkhd.track_id), (v.timescale = e.mdia.mdhd.timescale), (v.alreadyRead = 0), (e.samples[t] = v), (v.size = i.sample_sizes[t]), (e.samples_size += v.size), 0 === t ? ((h = 1), (f = 0), (v.chunk_index = h), (v.chunk_run_index = f), (m = r.samples_per_chunk[f]), (I = 0), (p = f + 1 < r.first_chunk.length ? r.first_chunk[f + 1] - 1 : 1 / 0)) : t < m ? ((v.chunk_index = h), (v.chunk_run_index = f)) : (h++, (v.chunk_index = h), (I = 0), h <= p || (p = ++f + 1 < r.first_chunk.length ? r.first_chunk[f + 1] - 1 : 1 / 0), (v.chunk_run_index = f), (m += r.samples_per_chunk[f])), (v.description_index = r.sample_description_index[v.chunk_run_index] - 1), (v.description = l.entries[v.description_index]), (v.offset = n.chunk_offsets[v.chunk_index - 1] + I), (I += v.size), t > T && (S++, T < 0 && (T = 0), (T += a.sample_counts[S])), t > 0 ? ((e.samples[t - 1].duration = a.sample_deltas[S]), (e.samples_duration += e.samples[t - 1].duration), (v.dts = e.samples[t - 1].dts + e.samples[t - 1].duration)) : (v.dts = 0), s ? (t >= g && (A++, g < 0 && (g = 0), (g += s.sample_counts[A])), (v.cts = e.samples[t].dts + s.sample_offsets[A])) : (v.cts = v.dts), o ? (t == o.sample_numbers[N] - 1 ? ((v.is_sync = !0), N++) : ((v.is_sync = !1), (v.degradation_priority = 0)), u && u.entries[R].sample_delta + O == t + 1 && ((v.subsamples = u.entries[R].subsamples), (O += u.entries[R].sample_delta), R++)) : (v.is_sync = !0), E.process_sdtp(e.mdia.minf.stbl.sdtp, v, v.number), _ ? (v.degradation_priority = _.priority[t]) : (v.degradation_priority = 0), u && u.entries[R].sample_delta + O == t && ((v.subsamples = u.entries[R].subsamples), (O += u.entries[R].sample_delta)), (c.length > 0 || d.length > 0) && E.setSampleGroupProperties(e, v, t, e.sample_groups_info);
+                    N = {};
+                (N.number = t), (N.track_id = e.tkhd.track_id), (N.timescale = e.mdia.mdhd.timescale), (N.alreadyRead = 0), (e.samples[t] = N), (N.size = i.sample_sizes[t]), (e.samples_size += N.size), 0 === t ? ((p = 1), (h = 0), (N.chunk_index = p), (N.chunk_run_index = h), (E = r.samples_per_chunk[h]), (g = 0), (m = h + 1 < r.first_chunk.length ? r.first_chunk[h + 1] - 1 : 1 / 0)) : t < E ? ((N.chunk_index = p), (N.chunk_run_index = h)) : (p++, (N.chunk_index = p), (g = 0), p <= m || (m = ++h + 1 < r.first_chunk.length ? r.first_chunk[h + 1] - 1 : 1 / 0), (N.chunk_run_index = h), (E += r.samples_per_chunk[h])), (N.description_index = r.sample_description_index[N.chunk_run_index] - 1), (N.description = l.entries[N.description_index]), (N.offset = n.chunk_offsets[N.chunk_index - 1] + g), (g += N.size), t > v && (I++, v < 0 && (v = 0), (v += a.sample_counts[I])), t > 0 ? ((e.samples[t - 1].duration = a.sample_deltas[I]), (e.samples_duration += e.samples[t - 1].duration), (N.dts = e.samples[t - 1].dts + e.samples[t - 1].duration)) : (N.dts = 0), s ? (t >= S && (T++, S < 0 && (S = 0), (S += s.sample_counts[T])), (N.cts = e.samples[t].dts + s.sample_offsets[T])) : (N.cts = N.dts), o ? (t == o.sample_numbers[b] - 1 ? ((N.is_sync = !0), b++) : ((N.is_sync = !1), (N.degradation_priority = 0)), u && u.entries[y].sample_delta + A == t + 1 && ((N.subsamples = u.entries[y].subsamples), (A += u.entries[y].sample_delta), y++)) : (N.is_sync = !0), _.process_sdtp(e.mdia.minf.stbl.sdtp, N, N.number), f ? (N.degradation_priority = f.priority[t]) : (N.degradation_priority = 0), u && u.entries[y].sample_delta + A == t && ((N.subsamples = u.entries[y].subsamples), (A += u.entries[y].sample_delta)), (c.length > 0 || d.length > 0) && _.setSampleGroupProperties(e, N, t, e.sample_groups_info);
             }
             t > 0 && ((e.samples[t - 1].duration = Math.max(e.mdia.mdhd.duration - e.samples[t - 1].dts, 0)), (e.samples_duration += e.samples[t - 1].duration));
         }
     }),
-    (E.prototype.updateSampleLists = function () {
+    (_.prototype.updateSampleLists = function () {
         if (void 0 !== this.moov) {
             for (; this.lastMoofIndex < this.moofs.length; )
                 if (((l = this.moofs[this.lastMoofIndex]), this.lastMoofIndex++, 'moof' == l.type))
                     for (e = 0; e < l.trafs.length; e++) {
-                        for (c = l.trafs[e], d = this.getTrackById(c.tfhd.track_id), _ = this.getTrexById(c.tfhd.track_id), r = c.tfhd.flags & u.TFHD_FLAG_SAMPLE_DESC ? c.tfhd.default_sample_description_index : _ ? _.default_sample_description_index : 1, i = c.tfhd.flags & u.TFHD_FLAG_SAMPLE_DUR ? c.tfhd.default_sample_duration : _ ? _.default_sample_duration : 0, a = c.tfhd.flags & u.TFHD_FLAG_SAMPLE_SIZE ? c.tfhd.default_sample_size : _ ? _.default_sample_size : 0, s = c.tfhd.flags & u.TFHD_FLAG_SAMPLE_FLAGS ? c.tfhd.default_sample_flags : _ ? _.default_sample_flags : 0, c.sample_number = 0, c.sbgps.length > 0 && E.initSampleGroups(d, c, c.sbgps, d.mdia.minf.stbl.sgpds, c.sgpds), t = 0; t < c.truns.length; t++) {
+                        for (c = l.trafs[e], d = this.getTrackById(c.tfhd.track_id), f = this.getTrexById(c.tfhd.track_id), r = c.tfhd.flags & u.TFHD_FLAG_SAMPLE_DESC ? c.tfhd.default_sample_description_index : f ? f.default_sample_description_index : 1, i = c.tfhd.flags & u.TFHD_FLAG_SAMPLE_DUR ? c.tfhd.default_sample_duration : f ? f.default_sample_duration : 0, a = c.tfhd.flags & u.TFHD_FLAG_SAMPLE_SIZE ? c.tfhd.default_sample_size : f ? f.default_sample_size : 0, s = c.tfhd.flags & u.TFHD_FLAG_SAMPLE_FLAGS ? c.tfhd.default_sample_flags : f ? f.default_sample_flags : 0, c.sample_number = 0, c.sbgps.length > 0 && _.initSampleGroups(d, c, c.sbgps, d.mdia.minf.stbl.sgpds, c.sgpds), t = 0; t < c.truns.length; t++) {
                             var e,
                                 t,
                                 n,
@@ -2963,28 +2963,28 @@ var E = function (e) {
                                 l,
                                 c,
                                 d,
-                                _,
                                 f,
                                 h,
-                                p = c.truns[t];
-                            for (n = 0; n < p.sample_count; n++) {
-                                ((f = {}).moof_number = this.lastMoofIndex), (f.number_in_traf = c.sample_number), c.sample_number++, (f.number = d.samples.length), (c.first_sample_index = d.samples.length), d.samples.push(f), (f.track_id = d.tkhd.track_id), (f.timescale = d.mdia.mdhd.timescale), (f.description_index = r - 1), (f.description = d.mdia.minf.stbl.stsd.entries[f.description_index]), (f.size = a), p.flags & u.TRUN_FLAGS_SIZE && (f.size = p.sample_size[n]), (d.samples_size += f.size), (f.duration = i), p.flags & u.TRUN_FLAGS_DURATION && (f.duration = p.sample_duration[n]), (d.samples_duration += f.duration), d.first_traf_merged || n > 0 ? (f.dts = d.samples[d.samples.length - 2].dts + d.samples[d.samples.length - 2].duration) : (c.tfdt ? (f.dts = c.tfdt.baseMediaDecodeTime) : (f.dts = 0), (d.first_traf_merged = !0)), (f.cts = f.dts), p.flags & u.TRUN_FLAGS_CTS_OFFSET && (f.cts = f.dts + p.sample_composition_time_offset[n]), (h = s), p.flags & u.TRUN_FLAGS_FLAGS ? (h = p.sample_flags[n]) : 0 === n && p.flags & u.TRUN_FLAGS_FIRST_FLAG && (h = p.first_sample_flags), (f.is_sync = !((h >> 16) & 1)), (f.is_leading = (h >> 26) & 3), (f.depends_on = (h >> 24) & 3), (f.is_depended_on = (h >> 22) & 3), (f.has_redundancy = (h >> 20) & 3), (f.degradation_priority = 65535 & h);
-                                var I = !!(c.tfhd.flags & u.TFHD_FLAG_BASE_DATA_OFFSET),
-                                    m = !!(c.tfhd.flags & u.TFHD_FLAG_DEFAULT_BASE_IS_MOOF),
-                                    T = !!(p.flags & u.TRUN_FLAGS_DATA_OFFSET),
-                                    S = 0;
-                                (S = I ? c.tfhd.base_data_offset : m ? l.start : 0 === t ? l.start : o), 0 === t && 0 === n ? (T ? (f.offset = S + p.data_offset) : (f.offset = S)) : (f.offset = o), (o = f.offset + f.size), (c.sbgps.length > 0 || c.sgpds.length > 0 || d.mdia.minf.stbl.sbgps.length > 0 || d.mdia.minf.stbl.sgpds.length > 0) && E.setSampleGroupProperties(d, f, f.number_in_traf, c.sample_groups_info);
+                                p,
+                                m = c.truns[t];
+                            for (n = 0; n < m.sample_count; n++) {
+                                ((h = {}).moof_number = this.lastMoofIndex), (h.number_in_traf = c.sample_number), c.sample_number++, (h.number = d.samples.length), (c.first_sample_index = d.samples.length), d.samples.push(h), (h.track_id = d.tkhd.track_id), (h.timescale = d.mdia.mdhd.timescale), (h.description_index = r - 1), (h.description = d.mdia.minf.stbl.stsd.entries[h.description_index]), (h.size = a), m.flags & u.TRUN_FLAGS_SIZE && (h.size = m.sample_size[n]), (d.samples_size += h.size), (h.duration = i), m.flags & u.TRUN_FLAGS_DURATION && (h.duration = m.sample_duration[n]), (d.samples_duration += h.duration), d.first_traf_merged || n > 0 ? (h.dts = d.samples[d.samples.length - 2].dts + d.samples[d.samples.length - 2].duration) : (c.tfdt ? (h.dts = c.tfdt.baseMediaDecodeTime) : (h.dts = 0), (d.first_traf_merged = !0)), (h.cts = h.dts), m.flags & u.TRUN_FLAGS_CTS_OFFSET && (h.cts = h.dts + m.sample_composition_time_offset[n]), (p = s), m.flags & u.TRUN_FLAGS_FLAGS ? (p = m.sample_flags[n]) : 0 === n && m.flags & u.TRUN_FLAGS_FIRST_FLAG && (p = m.first_sample_flags), (h.is_sync = !((p >> 16) & 1)), (h.is_leading = (p >> 26) & 3), (h.depends_on = (p >> 24) & 3), (h.is_depended_on = (p >> 22) & 3), (h.has_redundancy = (p >> 20) & 3), (h.degradation_priority = 65535 & p);
+                                var g = !!(c.tfhd.flags & u.TFHD_FLAG_BASE_DATA_OFFSET),
+                                    E = !!(c.tfhd.flags & u.TFHD_FLAG_DEFAULT_BASE_IS_MOOF),
+                                    v = !!(m.flags & u.TRUN_FLAGS_DATA_OFFSET),
+                                    I = 0;
+                                (I = g ? c.tfhd.base_data_offset : E ? l.start : 0 === t ? l.start : o), 0 === t && 0 === n ? (v ? (h.offset = I + m.data_offset) : (h.offset = I)) : (h.offset = o), (o = h.offset + h.size), (c.sbgps.length > 0 || c.sgpds.length > 0 || d.mdia.minf.stbl.sbgps.length > 0 || d.mdia.minf.stbl.sgpds.length > 0) && _.setSampleGroupProperties(d, h, h.number_in_traf, c.sample_groups_info);
                             }
                         }
                         if (c.subs) {
                             d.has_fragment_subsamples = !0;
-                            var g = c.first_sample_index;
-                            for (t = 0; t < c.subs.entries.length; t++) (g += c.subs.entries[t].sample_delta), ((f = d.samples[g - 1]).subsamples = c.subs.entries[t].subsamples);
+                            var S = c.first_sample_index;
+                            for (t = 0; t < c.subs.entries.length; t++) (S += c.subs.entries[t].sample_delta), ((h = d.samples[S - 1]).subsamples = c.subs.entries[t].subsamples);
                         }
                     }
         }
     }),
-    (E.prototype.getSample = function (e, t) {
+    (_.prototype.getSample = function (e, t) {
         var n,
             r = e.samples[t];
         if (!this.moov) return null;
@@ -3000,14 +3000,14 @@ var E = function (e) {
             i.debug('ISOFile', 'Getting sample #' + t + ' partial data (alreadyRead: ' + r.alreadyRead + ' offset: ' + (r.offset + r.alreadyRead - n.fileStart) + ' read size: ' + o + ' full size: ' + r.size + ')'), s.memcpy(r.data.buffer, r.alreadyRead, n, r.offset + r.alreadyRead - n.fileStart, o), (r.alreadyRead += o), (n.usedBytes += o), this.stream.logBufferLevel();
         }
     }),
-    (E.prototype.releaseSample = function (e, t) {
+    (_.prototype.releaseSample = function (e, t) {
         var n = e.samples[t];
         return n.data ? ((this.samplesDataSize -= n.size), (n.data = null), (n.alreadyRead = 0), n.size) : 0;
     }),
-    (E.prototype.getAllocatedSampleDataSize = function () {
+    (_.prototype.getAllocatedSampleDataSize = function () {
         return this.samplesDataSize;
     }),
-    (E.prototype.getCodecs = function () {
+    (_.prototype.getCodecs = function () {
         var e,
             t = '';
         for (e = 0; e < this.moov.traks.length; e++) {
@@ -3016,7 +3016,7 @@ var E = function (e) {
         }
         return t;
     }),
-    (E.prototype.getTrexById = function (e) {
+    (_.prototype.getTrexById = function (e) {
         var t;
         if (!this.moov || !this.moov.mvex) return null;
         for (t = 0; t < this.moov.mvex.trexs.length; t++) {
@@ -3025,7 +3025,7 @@ var E = function (e) {
         }
         return null;
     }),
-    (E.prototype.getTrackById = function (e) {
+    (_.prototype.getTrackById = function (e) {
         if (void 0 === this.moov) return null;
         for (var t = 0; t < this.moov.traks.length; t++) {
             var n = this.moov.traks[t];
@@ -3033,9 +3033,9 @@ var E = function (e) {
         }
         return null;
     }),
-    (E.prototype.items = []),
-    (E.prototype.itemsDataSize = 0),
-    (E.prototype.flattenItemInfo = function () {
+    (_.prototype.items = []),
+    (_.prototype.itemsDataSize = 0),
+    (_.prototype.flattenItemInfo = function () {
         var e,
             t,
             n,
@@ -3075,8 +3075,8 @@ var E = function (e) {
                             for (void 0 === (n = r[c.id]).properties && ((n.properties = {}), (n.properties.boxes = [])), t = 0; t < c.props.length; t++) {
                                 var d = c.props[t];
                                 if (d.property_index > 0 && d.property_index - 1 < a.iprp.ipco.boxes.length) {
-                                    var _ = a.iprp.ipco.boxes[d.property_index - 1];
-                                    (n.properties[_.type] = _), n.properties.boxes.push(_);
+                                    var f = a.iprp.ipco.boxes[d.property_index - 1];
+                                    (n.properties[f.type] = f), n.properties.boxes.push(f);
                                 }
                             }
                         }
@@ -3084,7 +3084,7 @@ var E = function (e) {
             }
         }
     }),
-    (E.prototype.getItem = function (e) {
+    (_.prototype.getItem = function (e) {
         if (!this.meta) return null;
         if (!(n = this.items[e]).data && n.size) (n.data = new Uint8Array(n.size)), (n.alreadyRead = 0), (this.itemsDataSize += n.size), i.debug('ISOFile', 'Allocating item #' + e + ' of size ' + n.size + ' (total: ' + this.itemsDataSize + ')');
         else if (n.alreadyRead === n.size) return n;
@@ -3100,37 +3100,37 @@ var E = function (e) {
         }
         return n.alreadyRead === n.size ? n : null;
     }),
-    (E.prototype.releaseItem = function (e) {
+    (_.prototype.releaseItem = function (e) {
         var t = this.items[e];
         if (!t.data) return 0;
         (this.itemsDataSize -= t.size), (t.data = null), (t.alreadyRead = 0);
         for (var n = 0; n < t.extents.length; n++) t.extents[n].alreadyRead = 0;
         return t.size;
     }),
-    (E.prototype.processItems = function (e) {
+    (_.prototype.processItems = function (e) {
         for (var t in this.items) {
             var n = this.items[t];
             this.getItem(n.id), e && !n.sent && (e(n), (n.sent = !0), (n.data = null));
         }
     }),
-    (E.prototype.hasItem = function (e) {
+    (_.prototype.hasItem = function (e) {
         for (var t in this.items) {
             var n = this.items[t];
             if (n.name === e) return n.id;
         }
         return -1;
     }),
-    (E.prototype.getMetaHandler = function () {
+    (_.prototype.getMetaHandler = function () {
         return this.meta ? this.meta.hdlr.handler : null;
     }),
-    (E.prototype.getPrimaryItem = function () {
+    (_.prototype.getPrimaryItem = function () {
         return this.meta && this.meta.pitm ? this.getItem(this.meta.pitm.item_id) : null;
     }),
-    (E.prototype.itemToFragmentedTrackFile = function (e) {
+    (_.prototype.itemToFragmentedTrackFile = function (e) {
         var t = e || {},
             n = null;
         if (null == (n = t.itemId ? this.getItem(t.itemId) : this.getPrimaryItem())) return null;
-        var r = new E();
+        var r = new _();
         r.discardMdatData = !1;
         var i = {
             type: n.type,
@@ -3140,10 +3140,10 @@ var E = function (e) {
         var a = r.addTrack(i);
         return a ? (r.addSample(a, n.data), r) : null;
     }),
-    (E.prototype.write = function (e) {
+    (_.prototype.write = function (e) {
         for (var t = 0; t < this.boxes.length; t++) this.boxes[t].write(e);
     }),
-    (E.prototype.createFragment = function (e, t, n) {
+    (_.prototype.createFragment = function (e, t, n) {
         var r = this.getTrackById(e),
             a = this.getSample(r, t);
         if (null == a) return (a = r.samples[t]), this.nextSeekPosition ? (this.nextSeekPosition = Math.min(a.offset + a.alreadyRead, this.nextSeekPosition)) : (this.nextSeekPosition = r.samples[t].offset + a.alreadyRead), null;
@@ -3154,7 +3154,7 @@ var E = function (e) {
         var c = new u.mdatBox();
         return (c.data = a.data), c.write(o), o;
     }),
-    (E.writeInitializationSegment = function (e, t, n, r) {
+    (_.writeInitializationSegment = function (e, t, n, r) {
         i.debug('ISOFile', 'Generating initialization segment');
         var a,
             o = new s();
@@ -3163,22 +3163,22 @@ var E = function (e) {
         for (n && l.add('mehd').set('fragment_duration', n), a = 0; a < t.traks.length; a++) l.add('trex').set('track_id', t.traks[a].tkhd.track_id).set('default_sample_description_index', 1).set('default_sample_duration', r).set('default_sample_size', 0).set('default_sample_flags', 65536);
         return t.write(o), o.buffer;
     }),
-    (E.prototype.save = function (e) {
+    (_.prototype.save = function (e) {
         var t = new s();
         (t.endianness = s.BIG_ENDIAN), this.write(t), t.save(e);
     }),
-    (E.prototype.getBuffer = function () {
+    (_.prototype.getBuffer = function () {
         var e = new s();
         return (e.endianness = s.BIG_ENDIAN), this.write(e), e.buffer;
     }),
-    (E.prototype.initializeSegmentation = function () {
+    (_.prototype.initializeSegmentation = function () {
         for (null === this.onSegment && i.warn('MP4Box', 'No segmentation callback set!'), !this.isFragmentationInitialized && ((this.isFragmentationInitialized = !0), (this.nextMoofNumber = 0), this.resetTables()), t = [], e = 0; e < this.fragmentedTracks.length; e++) {
             var e,
                 t,
                 n,
                 r,
                 a = new u.moovBox();
-            (a.mvhd = this.moov.mvhd), a.boxes.push(a.mvhd), (n = this.getTrackById(this.fragmentedTracks[e].id)), a.boxes.push(n), a.traks.push(n), ((r = {}).id = n.tkhd.track_id), (r.user = this.fragmentedTracks[e].user), (r.buffer = E.writeInitializationSegment(this.ftyp, a, this.moov.mvex && this.moov.mvex.mehd ? this.moov.mvex.mehd.fragment_duration : void 0, this.moov.traks[e].samples.length > 0 ? this.moov.traks[e].samples[0].duration : 0)), t.push(r);
+            (a.mvhd = this.moov.mvhd), a.boxes.push(a.mvhd), (n = this.getTrackById(this.fragmentedTracks[e].id)), a.boxes.push(n), a.traks.push(n), ((r = {}).id = n.tkhd.track_id), (r.user = this.fragmentedTracks[e].user), (r.buffer = _.writeInitializationSegment(this.ftyp, a, this.moov.mvex && this.moov.mvex.mehd ? this.moov.mvex.mehd.fragment_duration : void 0, this.moov.traks[e].samples.length > 0 ? this.moov.traks[e].samples[0].duration : 0)), t.push(r);
         }
         return t;
     }),
@@ -3199,7 +3199,7 @@ var E = function (e) {
                 (e.indent += ' '), this.boxes[t].print(e), (e.indent = n);
             }
     }),
-    (E.prototype.print = function (e) {
+    (_.prototype.print = function (e) {
         e.indent = '';
         for (var t = 0; t < this.boxes.length; t++) this.boxes[t] && this.boxes[t].print(e);
     }),
@@ -3209,9 +3209,9 @@ var E = function (e) {
     (u.tkhdBox.prototype.print = function (e) {
         u.FullBox.prototype.printHeader.call(this, e), e.log(e.indent + 'creation_time: ' + this.creation_time), e.log(e.indent + 'modification_time: ' + this.modification_time), e.log(e.indent + 'track_id: ' + this.track_id), e.log(e.indent + 'duration: ' + this.duration), e.log(e.indent + 'volume: ' + (this.volume >> 8)), e.log(e.indent + 'matrix: ' + this.matrix.join(', ')), e.log(e.indent + 'layer: ' + this.layer), e.log(e.indent + 'alternate_group: ' + this.alternate_group), e.log(e.indent + 'width: ' + this.width), e.log(e.indent + 'height: ' + this.height);
     });
-var f = {};
-f.createFile = function (e, t) {
-    var n = new E(t);
+var h = {};
+h.createFile = function (e, t) {
+    var n = new _(t);
     return (n.discardMdatData = !(void 0 === e || e)), n;
 };
-t.createFile = f.createFile;
+t.createFile = h.createFile;

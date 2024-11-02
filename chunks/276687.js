@@ -1,21 +1,21 @@
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(442837),
-    i = n(852860),
-    r = n(999382),
-    l = n(524329),
+var r = n(442837),
+    l = n(852860),
+    s = n(999382),
+    a = n(524329),
     o = n(575258),
-    c = n(689938);
+    c = n(388032);
 t.Z = () => {
-    let { guild: e } = (0, a.e7)([r.Z], () => r.Z.getProps()),
-        { submitting: t, welcomeSettings: n } = (0, a.e7)([o.Z], () => o.Z.getSettingsProps());
+    let { guild: e } = (0, r.e7)([s.Z], () => s.Z.getProps()),
+        { submitting: t, welcomeSettings: n } = (0, r.e7)([o.Z], () => o.Z.getSettingsProps());
     return null == e
         ? null
-        : (0, s.jsx)(i.Z, {
-              onSave: () => (0, l.Es)(e.id, n),
-              onReset: l.Xb,
+        : (0, i.jsx)(l.Z, {
+              onSave: () => (0, a.Es)(e.id, n),
+              onReset: a.Xb,
               submitting: t,
-              onSaveText: c.Z.Messages.TRY_AGAIN,
-              message: c.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_UPDATE_FAILURE
+              onSaveText: c.intl.string(c.t['7NqTJi']),
+              message: c.intl.string(c.t['Z0/WmZ'])
           });
 };

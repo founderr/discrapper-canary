@@ -1,25 +1,25 @@
-s.r(n),
-    s.d(n, {
+r.r(n),
+    r.d(n, {
         default: function () {
-            return M;
+            return c;
         }
     });
-var r = s(200651);
-s(192379);
-var t = s(481060),
-    E = s(689938);
-function M(e) {
-    let { onConfirm: n, ...s } = e;
-    return (0, r.jsx)(t.ConfirmModal, {
-        header: E.Z.Messages.MEMBERS_TABLE_NEW_MEMBER_TIMESTAMP_REFRESH_MODAL_TITLE,
-        confirmText: E.Z.Messages.OK,
-        cancelText: E.Z.Messages.CANCEL,
-        confirmButtonColor: t.Button.Colors.BRAND,
+var i = r(200651);
+r(192379);
+var o = r(481060),
+    e = r(388032);
+function c(t) {
+    let { onConfirm: n, ...r } = t;
+    return (0, i.jsx)(o.ConfirmModal, {
+        header: e.intl.string(e.t['5yTUub']),
+        confirmText: e.intl.string(e.t.TyCVIi),
+        cancelText: e.intl.string(e.t['ETE/oK']),
+        confirmButtonColor: o.Button.Colors.BRAND,
         onConfirm: n,
-        ...s,
-        children: (0, r.jsx)(t.Text, {
+        ...r,
+        children: (0, i.jsx)(o.Text, {
             variant: 'text-md/normal',
-            children: E.Z.Messages.MEMBERS_TABLE_NEW_MEMBER_TIMESTAMP_REFRESH_MODAL_DESCRIPTION
+            children: e.intl.string(e.t.dRhrXl)
         })
     });
 }

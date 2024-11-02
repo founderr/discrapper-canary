@@ -1,51 +1,51 @@
-var n = t(200651);
-t(192379);
-var a = t(120356),
-    i = t.n(a),
-    r = t(780384),
-    o = t(481060),
-    l = t(410030),
-    c = t(726542),
-    d = t(122021),
-    _ = t(231757),
-    u = t(626135),
-    E = t(981631),
-    T = t(823302);
-s.Z = (e) => {
-    let { disabled: s = !1, type: t, className: a, innerClassName: S, onConnect: I } = e,
-        N = (0, l.ZP)(),
-        m = c.Z.get((0, d.rR)(t));
-    return (0, n.jsx)(o.Tooltip, {
-        text: m.name,
+var i = n(200651);
+n(192379);
+var s = n(120356),
+    r = n.n(s),
+    l = n(780384),
+    a = n(481060),
+    o = n(410030),
+    c = n(726542),
+    d = n(122021),
+    u = n(231757),
+    m = n(626135),
+    h = n(981631),
+    g = n(823302);
+t.Z = (e) => {
+    let { disabled: t = !1, type: n, className: s, innerClassName: p, onConnect: x } = e,
+        S = (0, o.ZP)(),
+        T = c.Z.get((0, d.rR)(n));
+    return (0, i.jsx)(a.Tooltip, {
+        text: T.name,
         children: (e) => {
-            let { onMouseEnter: l, onMouseLeave: d } = e;
-            return (0, n.jsx)('div', {
-                className: i()(T.wrapper, a),
-                children: (0, n.jsx)(o.FocusRing, {
-                    children: (0, n.jsx)('button', {
-                        onMouseEnter: l,
+            let { onMouseEnter: o, onMouseLeave: d } = e;
+            return (0, i.jsx)('div', {
+                className: r()(g.wrapper, s),
+                children: (0, i.jsx)(a.FocusRing, {
+                    children: (0, i.jsx)('button', {
+                        onMouseEnter: o,
                         onMouseLeave: d,
-                        className: i()(T.inner, S),
+                        className: r()(g.inner, p),
                         type: 'button',
-                        disabled: s,
-                        style: { backgroundImage: "url('".concat((0, r.wj)(N) ? m.icon.darkSVG : m.icon.lightSVG, "')") },
+                        disabled: t,
+                        style: { backgroundImage: "url('".concat((0, l.wj)(S) ? T.icon.darkSVG : T.icon.lightSVG, "')") },
                         onClick:
-                            null != I
-                                ? I
+                            null != x
+                                ? x
                                 : () =>
                                       (function (e) {
-                                          let s = c.Z.get(e);
-                                          (0, _.Z)({
-                                              platformType: s.type,
+                                          let t = c.Z.get(e);
+                                          (0, u.Z)({
+                                              platformType: t.type,
                                               location: 'Friends List'
                                           }),
-                                              u.default.track(E.rMx.ACCOUNT_LINK_STEP, {
+                                              m.default.track(h.rMx.ACCOUNT_LINK_STEP, {
                                                   previous_step: 'desktop connections',
                                                   current_step: 'desktop oauth',
-                                                  platform_type: s.type
+                                                  platform_type: t.type
                                               });
-                                      })(t),
-                        'aria-label': m.name
+                                      })(n),
+                        'aria-label': T.name
                     })
                 })
             });

@@ -1,21 +1,21 @@
 n.d(t, {
     hB: function () {
-        return I;
+        return g;
     },
     lv: function () {
-        return _;
-    },
-    n2: function () {
         return f;
     },
-    nX: function () {
-        return p;
+    n2: function () {
+        return h;
     },
-    rX: function () {
+    nX: function () {
         return m;
     },
+    rX: function () {
+        return E;
+    },
     xC: function () {
-        return h;
+        return p;
     }
 }),
     n(47120);
@@ -36,7 +36,7 @@ let d = function (e) {
             guild: i
         };
     },
-    _ = function (e) {
+    f = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [a.Z, o.default],
             n = d(e, t);
         return (
@@ -51,20 +51,20 @@ let d = function (e) {
             )
         );
     },
-    E = function (e) {
+    _ = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [a.Z, o.default],
             n = d(e, t);
         return null != n && s.Z.can(c.Plq.MANAGE_GUILD, n.guild) && s.Z.can(c.Plq.BAN_MEMBERS, n.guild);
     };
-function f(e) {
-    return (0, i.e7)([a.Z, o.default], () => _(e, [a.Z, o.default]), [e]);
-}
 function h(e) {
-    let t = f(e),
-        n = (0, i.e7)([a.Z, o.default], () => E(e, [a.Z, o.default]), [e]);
-    return t && n;
+    return (0, i.e7)([a.Z, o.default], () => f(e, [a.Z, o.default]), [e]);
 }
 function p(e) {
+    let t = h(e),
+        n = (0, i.e7)([a.Z, o.default], () => _(e, [a.Z, o.default]), [e]);
+    return t && n;
+}
+function m(e) {
     return (0, i.e7)(
         [a.Z, s.Z],
         () => {
@@ -74,7 +74,7 @@ function p(e) {
         [e]
     );
 }
-function I(e, t, n) {
+function g(e, t, n) {
     return (0, i.e7)(
         [s.Z, a.Z],
         () => {
@@ -84,7 +84,7 @@ function I(e, t, n) {
         [t, e, n]
     );
 }
-function m(e, t, n) {
+function E(e, t, n) {
     let r = a.Z.getGuild(e);
     return null != r && t && s.Z.canManageUser(c.Plq.BAN_MEMBERS, n, r);
 }

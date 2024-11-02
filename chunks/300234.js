@@ -1,74 +1,74 @@
-var a = t(200651),
-    s = t(192379),
-    l = t(442837),
-    r = t(481060),
-    i = t(239091),
-    o = t(884338),
-    c = t(592125),
-    d = t(720202),
-    u = t(594174),
-    h = t(260483),
-    m = t(314208),
-    g = t(124368),
-    E = t(31812);
-function f(e) {
-    let { channel: n } = e,
-        t = (0, l.e7)([h.Z], () => {
+var a = n(200651),
+    l = n(192379),
+    r = n(442837),
+    s = n(481060),
+    i = n(239091),
+    o = n(884338),
+    c = n(592125),
+    d = n(720202),
+    u = n(594174),
+    h = n(260483),
+    m = n(314208),
+    g = n(124368),
+    f = n(31812);
+function x(e) {
+    let { channel: t } = e,
+        n = (0, r.e7)([h.Z], () => {
             var e;
-            return null !== (e = h.Z.getMemberIdsPreview(n.id)) && void 0 !== e ? e : [];
+            return null !== (e = h.Z.getMemberIdsPreview(t.id)) && void 0 !== e ? e : [];
         }),
-        r = (0, l.e7)([h.Z], () => {
+        s = (0, r.e7)([h.Z], () => {
             var e;
-            return null !== (e = h.Z.getMemberCount(n.id)) && void 0 !== e ? e : 0;
+            return null !== (e = h.Z.getMemberCount(t.id)) && void 0 !== e ? e : 0;
         }),
-        i = (0, l.Wu)([u.default], () => t.map((e) => u.default.getUser(e)));
-    return (s.useEffect(() => {
-        t.filter((e, n) => null == i[n]).forEach((e) => {
-            d.Z.requestMember(n.guild_id, e);
+        i = (0, r.Wu)([u.default], () => n.map((e) => u.default.getUser(e)));
+    return (l.useEffect(() => {
+        n.filter((e, t) => null == i[t]).forEach((e) => {
+            d.Z.requestMember(t.guild_id, e);
         });
     }, []),
-    0 === t.length)
+    0 === n.length)
         ? null
         : (0, a.jsx)(o.Z, {
-              className: E.facepile,
+              className: f.facepile,
               showDefaultAvatarsForNullUsers: !0,
-              guildId: n.guild_id,
+              guildId: t.guild_id,
               users: i,
-              count: r,
+              count: s,
               max: g.yX
           });
 }
-n.Z = s.memo(function (e) {
-    let { threadId: n, goToThread: s, showChannelName: o } = e,
-        d = (0, l.e7)([c.Z], () => c.Z.getChannel(n)),
-        u = (0, l.e7)([c.Z], () => c.Z.getChannel(d.parent_id));
-    return (0, a.jsxs)(r.Clickable, {
-        className: E.container,
-        onClick: (e) => s(d, e.shiftKey),
+t.Z = l.memo(function (e) {
+    let { threadId: t, goToThread: l, showChannelName: o } = e,
+        d = (0, r.e7)([c.Z], () => c.Z.getChannel(t)),
+        u = (0, r.e7)([c.Z], () => c.Z.getChannel(d.parent_id));
+    return (0, a.jsxs)(s.Clickable, {
+        className: f.container,
+        onClick: (e) => l(d, e.shiftKey),
         onContextMenu: (e) =>
             (0, i.jW)(e, async () => {
-                let { default: e } = await Promise.all([t.e('38902'), t.e('77564'), t.e('13154')]).then(t.bind(t, 422200));
-                return (n) =>
+                let { default: e } = await Promise.all([n.e('38902'), n.e('77564'), n.e('13154')]).then(n.bind(n, 422200));
+                return (t) =>
                     (0, a.jsx)(e, {
-                        ...n,
+                        ...t,
                         channel: d
                     });
             }),
         children: [
             (0, a.jsxs)('div', {
-                className: E.left,
+                className: f.left,
                 children: [
-                    (0, a.jsxs)(r.Heading, {
-                        className: E.threadNameLine,
+                    (0, a.jsxs)(s.Heading, {
+                        className: f.threadNameLine,
                         variant: 'heading-md/semibold',
                         children: [
                             (0, a.jsx)('span', {
-                                className: E.threadName,
+                                className: f.threadName,
                                 children: d.name
                             }),
                             o && null != u
                                 ? (0, a.jsx)('span', {
-                                      className: E.parentName,
+                                      className: f.parentName,
                                       children: '#'.concat(u.name)
                                   })
                                 : null
@@ -77,7 +77,7 @@ n.Z = s.memo(function (e) {
                     (0, m.Z)(d)
                 ]
             }),
-            (0, a.jsx)(f, { channel: d })
+            (0, a.jsx)(x, { channel: d })
         ]
     });
 });

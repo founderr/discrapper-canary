@@ -1,27 +1,27 @@
 n.d(t, {
     $s: function () {
-        return T;
+        return v;
     },
     Cg: function () {
-        return m;
+        return E;
     },
     EV: function () {
-        return g;
-    },
-    IS: function () {
         return S;
     },
+    IS: function () {
+        return I;
+    },
     KY: function () {
-        return p;
+        return m;
     },
     SI: function () {
-        return A;
+        return T;
     },
     XB: function () {
-        return f;
+        return h;
     },
     jc: function () {
-        return h;
+        return p;
     }
 }),
     n(315314),
@@ -39,13 +39,13 @@ var r = n(192379),
     u = n(229893),
     c = n(286083),
     d = n(976757),
-    _ = n(981631);
-let E = new Worker(new URL('/assets/' + n.u('59546'), n.b));
-function f() {
+    f = n(981631);
+let _ = new Worker(new URL('/assets/' + n.u('59546'), n.b));
+function h() {
     return (
         o.Z.dispatch({ type: 'FETCH_STATIC_CLAN_LIST_START' }),
         s.tn
-            .get({ url: _.ANM.DISCOVERY_ALL_GAMES })
+            .get({ url: f.ANM.DISCOVERY_ALL_GAMES })
             .then((e) => {
                 let t = e.body.clans.map(d.Gh);
                 o.Z.dispatch({
@@ -64,7 +64,7 @@ function f() {
             })
     );
 }
-async function h(e) {
+async function p(e) {
     var t, n, r;
     if ('loaded' === u.Z.getSearchResult(e).status) return;
     let i = a().v3(JSON.stringify(e)),
@@ -77,11 +77,11 @@ async function h(e) {
                 let {
                     data: { id: r, sortedClans: a }
                 } = t;
-                n === r && e(a), null == E || E.removeEventListener('message', i);
+                n === r && e(a), null == _ || _.removeEventListener('message', i);
             };
-            null == E || E.addEventListener('message', i);
-            null == E ||
-                E.postMessage({
+            null == _ || _.addEventListener('message', i);
+            null == _ ||
+                _.postMessage({
                     id: n,
                     unsortedClans: t,
                     criteria: r
@@ -100,13 +100,13 @@ async function h(e) {
         recommendationId: 'static:'.concat(i)
     });
 }
-function p(e) {
+function m(e) {
     let { location: t, query: n } = e,
         i = (0, l.r3)(t);
     return (
         r.useEffect(() => {
             if (!!i)
-                I({
+                g({
                     games: [],
                     traits: []
                 });
@@ -114,9 +114,9 @@ function p(e) {
         null
     );
 }
-function I(e) {
+function g(e) {
     return s.tn.post({
-        url: _.ANM.DISCOVERY_RECOMMENDATIONS,
+        url: f.ANM.DISCOVERY_RECOMMENDATIONS,
         body: {
             game_application_ids: e.games,
             traits: e.traits,
@@ -124,14 +124,14 @@ function I(e) {
         }
     });
 }
-async function m(e) {
+async function E(e) {
     let t = u.Z.getSearchResult(e),
         { resetPagination: n, updatePaginationResults: r } = c.a.getState();
     if ('loaded' === t.status) return n({ pageMemoryEnabled: !0 }), r(t.guildIds), t;
     let i = a().v3(JSON.stringify(e));
     try {
         var s, l;
-        let t = await I(e),
+        let t = await g(e),
             a = t.body.guilds.map(d.Gh),
             u = null !== (s = t.body.guild_ids) && void 0 !== s ? s : [],
             c = {
@@ -161,12 +161,12 @@ async function m(e) {
         );
     }
 }
-async function T(e, t) {
+async function v(e, t) {
     let n = e.slice(0, 99);
     try {
         let e = (
                 await s.tn.post({
-                    url: _.ANM.DISCOVERY_GUILD_PROFILES,
+                    url: f.ANM.DISCOVERY_GUILD_PROFILES,
                     body: { guild_ids: n },
                     signal: t
                 })
@@ -186,21 +186,21 @@ async function T(e, t) {
         });
     }
 }
-async function S() {
-    let e = (await s.tn.get({ url: _.ANM.GUILD_DISCOVERY_SAVED_GUILDS })).body.guilds.map(d.Gh);
+async function I() {
+    let e = (await s.tn.get({ url: f.ANM.GUILD_DISCOVERY_SAVED_GUILDS })).body.guilds.map(d.Gh);
     await o.Z.dispatch({
         type: 'FETCH_CLAN_DISCOVERY_SAVED_GUILDS_SUCCESS',
         guilds: e
     });
 }
-async function g(e) {
+async function S(e) {
     o.Z.dispatch({
         type: 'DISCOVERY_SAVED_GUILD_ADD',
         guildId: e
     });
     try {
         await s.tn.put({
-            url: _.ANM.GUILD_DISCOVERY_SAVED_GUILDS,
+            url: f.ANM.GUILD_DISCOVERY_SAVED_GUILDS,
             body: { guild_id: e }
         });
     } catch (t) {
@@ -213,14 +213,14 @@ async function g(e) {
         );
     }
 }
-async function A(e) {
+async function T(e) {
     o.Z.dispatch({
         type: 'DISCOVERY_SAVED_GUILD_DELETE',
         guildId: e
     });
     try {
         await s.tn.del({
-            url: _.ANM.GUILD_DISCOVERY_SAVED_GUILDS,
+            url: f.ANM.GUILD_DISCOVERY_SAVED_GUILDS,
             body: { guild_id: e }
         });
     } catch (t) {

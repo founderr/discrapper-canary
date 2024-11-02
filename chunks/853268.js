@@ -3,27 +3,27 @@ n.d(t, {
         return d;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
 var r = n(120356),
-    i = n.n(r),
+    s = n.n(r),
     a = n(481060),
     l = n(600164),
     o = n(388905),
     c = n(691134),
     u = n(113207);
 function d(e) {
-    let { value: t, onChange: n, subText: r, muted: d, marginTopStyle: _ } = e;
-    return (0, s.jsx)(l.Z, {
-        className: null != _ ? _ : u.marginTop20,
+    let { value: t, onChange: n, subText: r, muted: d, marginTopStyle: h } = e;
+    return (0, i.jsx)(l.Z, {
+        className: null != h ? h : u.marginTop20,
         align: l.Z.Align.CENTER,
-        children: (0, s.jsx)(a.Checkbox, {
+        children: (0, i.jsx)(a.Checkbox, {
             value: t,
             type: a.Checkbox.Types.INVERTED,
             onChange: (e, t) => n(t),
             className: c.checkbox,
-            children: (0, s.jsx)(o.i_, {
-                className: i()({ [c.subText]: !d }),
+            children: (0, i.jsx)(o.i_, {
+                className: s()({ [c.subText]: !d }),
                 children: r
             })
         })

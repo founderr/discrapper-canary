@@ -5,102 +5,102 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(782690),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    s = n(782690),
     o = n(990547),
     c = n(91192),
     d = n(873546),
     u = n(442837),
-    _ = n(704215),
-    E = n(952265),
-    h = n(481060),
-    m = n(493683),
-    I = n(758059),
-    p = n(607070),
-    g = n(213609),
-    T = n(143757),
-    S = n(463119),
-    C = n(377171),
-    f = n(243778),
+    h = n(704215),
+    m = n(952265),
+    p = n(481060),
+    g = n(493683),
+    f = n(758059),
+    _ = n(607070),
+    E = n(213609),
+    I = n(143757),
+    C = n(463119),
+    v = n(377171),
+    S = n(243778),
     N = n(922409),
-    A = n(899740),
-    v = n(28476),
-    Z = n(880257),
-    L = n(631885),
-    R = n(522558),
-    O = n(795448),
-    x = n(441623),
-    b = n(457396),
-    M = n(108989),
-    P = n(51596),
-    D = n(905423),
-    y = n(155409),
-    j = n(210887),
-    U = n(695346),
-    G = n(283595),
-    w = n(699516),
-    k = n(923834),
+    T = n(899740),
+    x = n(28476),
+    b = n(880257),
+    A = n(631885),
+    Z = n(522558),
+    y = n(795448),
+    L = n(441623),
+    R = n(457396),
+    P = n(108989),
+    O = n(51596),
+    j = n(905423),
+    D = n(155409),
+    M = n(210887),
+    w = n(695346),
+    k = n(283595),
+    U = n(699516),
+    G = n(923834),
     B = n(55563),
     H = n(774343),
     V = n(626135),
     F = n(814225),
-    Y = n(515753),
-    z = n(831218),
+    z = n(515753),
+    Y = n(831218),
     W = n(339149),
     K = n(981631),
     q = n(675654),
-    Q = n(474936),
-    X = n(689938),
+    X = n(474936),
+    Q = n(388032),
     J = n(465200);
 let $ = (e) => {
         let { selected: t, ...n } = e,
-            s = (0, c.JA)('friends'),
-            r = (0, u.e7)([w.Z], () => w.Z.getPendingCount()),
-            l = (0, u.e7)([x.Z], () => x.Z.canShowFriendsTabBadge()),
-            d = (0, u.e7)([p.Z], () => p.Z.useReducedMotion),
-            { enabled: _ } = R.w.useExperiment({ location: 'Friends Tab' }, { autoTrackExposure: !1 }),
-            E = l && _;
-        a.useEffect(() => {
-            E &&
-                (0, g.h)({
+            l = (0, c.JA)('friends'),
+            a = (0, u.e7)([U.Z], () => U.Z.getPendingCount()),
+            s = (0, u.e7)([L.Z], () => L.Z.canShowFriendsTabBadge()),
+            d = (0, u.e7)([_.Z], () => _.Z.useReducedMotion),
+            { enabled: h } = Z.w.useExperiment({ location: 'Friends Tab' }, { autoTrackExposure: !1 }),
+            m = s && h;
+        r.useEffect(() => {
+            m &&
+                (0, E.h)({
                     name: o.ImpressionNames.GIFT_INTENT_BADGE,
                     type: o.ImpressionTypes.VIEW,
-                    properties: { gift_intent_type: Q.hX.FRIEND_ANNIVERSARY }
+                    properties: { gift_intent_type: X.hX.FRIEND_ANNIVERSARY }
                 });
-        }, [E]);
-        let [m, T] = a.useState(!1);
+        }, [m]);
+        let [g, I] = r.useState(!1);
         return (0, i.jsxs)('div', {
             className: J.friendsButtonContainer,
             children: [
-                (0, i.jsx)(Y.Qj, {
+                (0, i.jsx)(z.Qj, {
                     onClick: () => {
-                        E && (V.default.track(K.rMx.GIFT_INTENT_BADGE_CLICKED, { gift_intent_type: Q.hX.FRIEND_ANNIVERSARY }), I.Z.setSection(K.pJs.ALL), (0, O.Gk)());
+                        m && (V.default.track(K.rMx.GIFT_INTENT_BADGE_CLICKED, { gift_intent_type: X.hX.FRIEND_ANNIVERSARY }), f.Z.setSection(K.pJs.ALL), (0, y.Gk)());
                     },
-                    interactiveClassName: E ? J.friendsBadge : void 0,
+                    interactiveClassName: m ? J.friendsBadge : void 0,
                     selected: t,
                     route: K.Z5c.FRIENDS,
-                    icon: h.FriendsIcon,
-                    text: X.Z.Messages.FRIENDS,
+                    icon: p.FriendsIcon,
+                    text: Q.intl.string(Q.t.TdEu5e),
                     onMouseEnter: () => {
-                        T(!0);
+                        I(!0);
                     },
                     onMouseLeave: () => {
-                        T(!1);
+                        I(!1);
                     },
                     ...n,
-                    ...s,
-                    children: r > 0 ? (0, i.jsx)(h.NumberBadge, { count: r }) : null
+                    ...l,
+                    children: a > 0 ? (0, i.jsx)(p.NumberBadge, { count: a }) : null
                 }),
-                E &&
+                m &&
                     !d &&
-                    (0, i.jsx)(M.Z, {
+                    (0, i.jsx)(P.Z, {
                         className: J.confetti,
                         wind: 0,
                         sprites: q.CA,
                         spriteColors: q.Br,
-                        firing: m,
+                        firing: g,
                         confettiConfig: {
                             opacity: {
                                 type: 'static',
@@ -119,50 +119,50 @@ let $ = (e) => {
         });
     },
     ee = (e) => {
-        let { selected: t, hideGameUpdateProgressIndicator: n, ...a } = e,
-            s = (0, c.JA)('library');
-        return (0, i.jsx)(Y.Qj, {
+        let { selected: t, hideGameUpdateProgressIndicator: n, ...r } = e,
+            l = (0, c.JA)('library');
+        return (0, i.jsx)(z.Qj, {
             selected: t,
             route: K.Z5c.APPLICATION_LIBRARY,
-            icon: h.InventoryIcon,
-            text: X.Z.Messages.LIBRARY,
-            ...a,
-            ...s,
-            children: (0, i.jsx)(W.Z, { className: r()(J.downloadProgressCircle, { [J.hideGameUpdateProgressIndicator]: n }) })
+            icon: p.InventoryIcon,
+            text: Q.intl.string(Q.t.cw57am),
+            ...r,
+            ...l,
+            children: (0, i.jsx)(W.Z, { className: a()(J.downloadProgressCircle, { [J.hideGameUpdateProgressIndicator]: n }) })
         });
     },
     et = () => {
-        let e = (0, A.q)();
-        return e > 0 ? (0, i.jsx)(h.NumberBadge, { count: e }) : null;
+        let e = (0, T.q)();
+        return e > 0 ? (0, i.jsx)(p.NumberBadge, { count: e }) : null;
     },
     en = (e) => {
         let { selected: t } = e,
             n = (0, c.JA)('messageRequests'),
-            { channelId: a } = (0, N._)();
-        if (!(0, v.a)()) return null;
-        let s = null == a ? void 0 : () => m.Z.preload(K.ME, a);
-        return (0, i.jsx)(Y.Qj, {
+            { channelId: r } = (0, N._)();
+        if (!(0, x.a)()) return null;
+        let l = null == r ? void 0 : () => g.Z.preload(K.ME, r);
+        return (0, i.jsx)(z.Qj, {
             selected: t,
             route: K.Z5c.MESSAGE_REQUESTS,
-            icon: h.EnvelopeIcon,
-            text: X.Z.Messages.MESSAGE_REQUESTS,
-            onClick: s,
+            icon: p.EnvelopeIcon,
+            text: Q.intl.string(Q.t.e7GWjY),
+            onClick: l,
             ...n,
             children: (0, i.jsx)(et, {})
         });
     },
     ei = (e) => {
         let { selected: t } = e,
-            n = X.Z.Messages.FAMILY_CENTER_SIDEBAR_TITLE,
-            s = (0, c.JA)('family-center'),
-            r = U.Ex.useSetting(),
-            l = (0, Z.Z)(),
-            [o, d] = a.useState(!0);
-        return r && l
-            ? (0, i.jsx)(Y.Qj, {
+            n = Q.intl.string(Q.t.Rkdixs),
+            l = (0, c.JA)('family-center'),
+            a = w.Ex.useSetting(),
+            s = (0, b.Z)(),
+            [o, d] = r.useState(!0);
+        return a && s
+            ? (0, i.jsx)(z.Qj, {
                   selected: t,
                   route: K.Z5c.FAMILY_CENTER,
-                  icon: h.GroupIcon,
+                  icon: p.GroupIcon,
                   text: n,
                   onMouseEnter: () => {
                       d(!0);
@@ -171,44 +171,44 @@ let $ = (e) => {
                       d(!1);
                   },
                   interactiveClassName: J.familyCenterLinkButton,
-                  ...s,
-                  children: (0, i.jsx)(ea, { isParentHovered: o })
+                  ...l,
+                  children: (0, i.jsx)(er, { isParentHovered: o })
               })
             : null;
     },
-    ea = (e) => {
+    er = (e) => {
         let { isParentHovered: t } = e,
-            a = (0, L.gU)();
+            r = (0, A.gU)();
         return t
-            ? (0, i.jsx)(Y.PZ, {
+            ? (0, i.jsx)(z.PZ, {
                   onClick: () => {
-                      (0, E.ZD)(async () => {
+                      (0, m.ZD)(async () => {
                           let { default: e } = await n.e('44153').then(n.bind(n, 760949));
                           return (t) => (0, i.jsx)(e, { ...t });
                       });
                   },
-                  'aria-label': X.Z.Messages.CLOSE
+                  'aria-label': Q.intl.string(Q.t.cpT0Cg)
               })
-            : a > 0
+            : r > 0
               ? (0, i.jsx)('div', {
                     className: J.familyCenterPendingBadge,
-                    children: (0, i.jsx)(h.NumberBadge, { count: a })
+                    children: (0, i.jsx)(p.NumberBadge, { count: r })
                 })
-              : (0, i.jsx)(f.ZP, {
-                    contentTypes: [_.z.FAMILY_CENTER_NEW_BADGE],
+              : (0, i.jsx)(S.ZP, {
+                    contentTypes: [h.z.FAMILY_CENTER_NEW_BADGE],
                     children: (e) => {
                         let { visibleContent: t } = e;
-                        return t === _.z.FAMILY_CENTER_NEW_BADGE
-                            ? (0, i.jsx)(h.TextBadge, {
-                                  text: X.Z.Messages.NEW,
-                                  color: C.Z.BG_BRAND
+                        return t === h.z.FAMILY_CENTER_NEW_BADGE
+                            ? (0, i.jsx)(p.TextBadge, {
+                                  text: Q.intl.string(Q.t.y2b7CA),
+                                  color: v.Z.BG_BRAND
                               })
                             : null;
                     }
                 });
     },
-    es = () => (0, P.$Z)('DM_SEARCH');
-function er(e) {
+    el = () => (0, O.$Z)('DM_SEARCH');
+function ea(e) {
     switch (e) {
         case K.Z5c.APPLICATION_LIBRARY:
             return K.ZY5.LIBRARY;
@@ -220,55 +220,55 @@ function er(e) {
     if (e.startsWith(K.Z5c.APPLICATION_STORE)) return e === K.Z5c.APPLICATION_STORE ? K.ZY5.STORE_DIRECTORY_HOME : e.startsWith(K.Z5c.APPLICATION_STORE) ? K.ZY5.STORE_DIRECTORY_BROWSE : K.ZY5.STORE_LISTING;
     return K.ZY5.DM_CHANNEL;
 }
-let el = (e) => {
-    let { showLibrary: t, hasLibraryApplication: n, homeLink: a, premiumTabSelected: s } = e,
-        [o, c] = (0, D.Z)((e) => {
+let es = (e) => {
+    let { showLibrary: t, hasLibraryApplication: n, homeLink: r, premiumTabSelected: l } = e,
+        [o, c] = (0, j.Z)((e) => {
             let { channelId: t, path: n } = e;
             return [t, n];
-        }, l.Z);
+        }, s.Z);
     return (0, i.jsxs)('nav', {
         className: J.privateChannels,
-        'aria-label': X.Z.Messages.PRIVATE_CHANNELS_A11Y_LABEL,
+        'aria-label': Q.intl.string(Q.t.ZH9aPz),
         children: [
-            (0, i.jsx)(y.Z, {
+            (0, i.jsx)(D.Z, {
                 tutorialId: 'direct-messages',
                 position: 'right',
                 offsetX: -52,
                 children: (0, i.jsx)('div', {
-                    className: r()(J.searchBar, { [J.themedHeaderMobile]: d.tq }),
+                    className: a()(J.searchBar, { [J.themedHeaderMobile]: d.tq }),
                     children: (0, i.jsx)('button', {
                         type: 'button',
-                        className: r()(J.searchBarComponent, { [J.themedSearchBarMobile]: d.tq }),
-                        onClick: es,
-                        children: X.Z.Messages.DM_SEARCH_PLACEHOLDER
+                        className: a()(J.searchBarComponent, { [J.themedSearchBarMobile]: d.tq }),
+                        onClick: el,
+                        children: Q.intl.string(Q.t.LzcpeX)
                     })
                 })
             }),
-            (0, i.jsxs)(z.Z, {
+            (0, i.jsxs)(Y.Z, {
                 ...e,
                 version: c,
                 selectedChannelId: o,
                 showDMHeader: !0,
                 children: [
-                    (0, i.jsx)($, { selected: null != c ? c === K.Z5c.FRIENDS : a === K.Z5c.FRIENDS }, 'friends'),
+                    (0, i.jsx)($, { selected: null != c ? c === K.Z5c.FRIENDS : r === K.Z5c.FRIENDS }, 'friends'),
                     n && t
                         ? (0, i.jsx)(
                               ee,
                               {
-                                  selected: null == c ? null != a && a.startsWith(K.Z5c.APPLICATION_LIBRARY) : c.startsWith(K.Z5c.APPLICATION_LIBRARY),
-                                  hideGameUpdateProgressIndicator: a === K.Z5c.APPLICATION_LIBRARY
+                                  selected: null == c ? null != r && r.startsWith(K.Z5c.APPLICATION_LIBRARY) : c.startsWith(K.Z5c.APPLICATION_LIBRARY),
+                                  hideGameUpdateProgressIndicator: r === K.Z5c.APPLICATION_LIBRARY
                               },
                               'library'
                           )
                         : null,
                     (0, i.jsx)(
-                        b.g,
+                        R.g,
                         {
-                            selected: null == c ? s : c.startsWith(K.Z5c.APPLICATION_STORE),
+                            selected: null == c ? l : c.startsWith(K.Z5c.APPLICATION_STORE),
                             route: K.Z5c.APPLICATION_STORE,
                             locationState: {
                                 analyticsSource: {
-                                    page: er(a),
+                                    page: ea(r),
                                     section: K.jXE.NAVIGATION,
                                     object: K.qAy.NAVIGATION_LINK
                                 }
@@ -276,14 +276,14 @@ let el = (e) => {
                         },
                         'premium'
                     ),
-                    (0, i.jsx)(en, { selected: null == c ? null != a && a.startsWith(K.Z5c.MESSAGE_REQUESTS) : c === K.Z5c.MESSAGE_REQUESTS }, 'message-requests'),
+                    (0, i.jsx)(en, { selected: null == c ? null != r && r.startsWith(K.Z5c.MESSAGE_REQUESTS) : c === K.Z5c.MESSAGE_REQUESTS }, 'message-requests'),
                     (0, i.jsx)(
-                        S.i,
+                        C.i,
                         {
-                            selected: c === K.Z5c.COLLECTIBLES_SHOP || (null == a ? void 0 : a.startsWith(K.Z5c.COLLECTIBLES_SHOP)),
+                            selected: c === K.Z5c.COLLECTIBLES_SHOP || (null == r ? void 0 : r.startsWith(K.Z5c.COLLECTIBLES_SHOP)),
                             locationState: {
                                 analyticsSource: {
-                                    page: er(a),
+                                    page: ea(r),
                                     section: K.jXE.NAVIGATION,
                                     object: K.qAy.NAVIGATION_LINK
                                 }
@@ -291,8 +291,8 @@ let el = (e) => {
                         },
                         'discord-shop'
                     ),
-                    (0, i.jsx)(ei, { selected: (null != a && a.startsWith(K.Z5c.FAMILY_CENTER)) || (null != c && c.startsWith(K.Z5c.FAMILY_CENTER)) }, 'family-center'),
-                    (0, i.jsx)(T.Z, {}, 'dm-quick-launcher')
+                    (0, i.jsx)(ei, { selected: (null != r && r.startsWith(K.Z5c.FAMILY_CENTER)) || (null != c && c.startsWith(K.Z5c.FAMILY_CENTER)) }, 'family-center'),
+                    (0, i.jsx)(I.Z, {}, 'dm-quick-launcher')
                 ]
             })
         ]
@@ -313,15 +313,15 @@ function eo() {
             },
             [e]
         ),
-        n = !U.bm.useSetting(),
-        { theme: a } = (0, u.cj)([j.Z], () => ({ theme: j.Z.theme })),
-        s = (0, u.e7)([G.Z], () => G.Z.hasLibraryApplication()),
-        r = (0, u.e7)([k.Z], () => k.Z.getCurrentPath());
-    return (0, i.jsx)(el, {
-        theme: a,
+        n = !w.bm.useSetting(),
+        { theme: r } = (0, u.cj)([M.Z], () => ({ theme: M.Z.theme })),
+        l = (0, u.e7)([k.Z], () => k.Z.hasLibraryApplication()),
+        a = (0, u.e7)([G.Z], () => G.Z.getCurrentPath());
+    return (0, i.jsx)(es, {
+        theme: r,
         showLibrary: n,
-        hasLibraryApplication: s,
-        storeLink: r,
+        hasLibraryApplication: l,
+        storeLink: a,
         homeLink: e,
         premiumTabSelected: t
     });

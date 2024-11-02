@@ -1,86 +1,86 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return f;
     }
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    a = n(692547),
-    l = n(780384),
-    r = n(481060),
+    l = n(192379),
+    r = n(692547),
+    a = n(780384),
+    s = n(481060),
     o = n(367907),
     c = n(210887),
     u = n(626135),
     d = n(981631),
-    h = n(689938),
+    h = n(388032),
     m = n(240375),
     p = n(554034);
-function _(e) {
-    let { onClose: t, onConfirm: _, onCancel: f, channel: E, analyticsType: g, popoutText: C, animation: I } = e;
-    s.useEffect(() => {
+function f(e) {
+    let { onClose: t, onConfirm: f, onCancel: g, channel: C, analyticsType: x, popoutText: v, animation: _ } = e;
+    l.useEffect(() => {
         u.default.track(d.rMx.OPEN_POPOUT, {
-            type: g,
-            ...(0, o.v_)(E)
+            type: x,
+            ...(0, o.v_)(C)
         });
-    }, [g, E]);
-    let T = s.useCallback(() => {
-            null == _ || _(), t();
-        }, [_, t]),
-        x = s.useCallback(() => {
+    }, [x, C]);
+    let I = l.useCallback(() => {
             null == f || f(), t();
         }, [f, t]),
-        S = s.useRef(null);
+        E = l.useCallback(() => {
+            null == g || g(), t();
+        }, [g, t]),
+        b = l.useRef(null);
     return (
-        s.useEffect(() => {
+        l.useEffect(() => {
             let e;
             let t = c.Z.theme,
                 i = !1;
             return (
-                null != I &&
+                null != _ &&
                     (async () => {
-                        let [{ default: s }, a] = await Promise.all([Promise.resolve().then(n.t.bind(n, 500923, 23)), (0, l.wj)(t) ? I.dark() : I.light()]);
+                        let [{ default: l }, r] = await Promise.all([Promise.resolve().then(n.t.bind(n, 500923, 23)), (0, a.wj)(t) ? _.dark() : _.light()]);
                         !i &&
-                            null != S.current &&
-                            (e = s.loadAnimation({
-                                container: S.current,
+                            null != b.current &&
+                            (e = l.loadAnimation({
+                                container: b.current,
                                 renderer: 'svg',
                                 loop: !0,
                                 autoplay: !0,
-                                animationData: a
+                                animationData: r
                             }));
                     })(),
                 () => {
                     (i = !0), null != e && (e.destroy(), (e = void 0));
                 }
             );
-        }, [I]),
-        (0, i.jsx)(r.Dialog, {
+        }, [_]),
+        (0, i.jsx)(s.Dialog, {
             'aria-labelledby': 'content-warning-popout-label',
             children: (0, i.jsxs)('form', {
                 className: m.contentWarningPopout,
-                onSubmit: T,
+                onSubmit: I,
                 children: [
                     (0, i.jsxs)('div', {
                         className: m.body,
                         children: [
-                            null != I &&
+                            null != _ &&
                                 (0, i.jsx)('div', {
                                     className: m.animation,
-                                    ref: S
+                                    ref: b
                                 }),
                             (0, i.jsxs)('div', {
                                 className: m.content,
                                 children: [
                                     (0, i.jsx)('div', {
                                         className: m.header,
-                                        children: h.Z.Messages.SELF_XSS_HEADER
+                                        children: h.intl.string(h.t.mY3Y39)
                                     }),
-                                    (0, i.jsx)(r.Text, {
+                                    (0, i.jsx)(s.Text, {
                                         id: 'content-warning-popout-label',
                                         className: p.markup,
                                         variant: 'text-sm/normal',
-                                        children: C.body
+                                        children: v.body
                                     }),
                                     (0, i.jsxs)('div', {
                                         className: m.buttonWrapper,
@@ -88,33 +88,33 @@ function _(e) {
                                             (0, i.jsxs)('div', {
                                                 className: m.buttonContainer,
                                                 children: [
-                                                    (0, i.jsx)(r.Button, {
+                                                    (0, i.jsx)(s.Button, {
                                                         className: m.button,
-                                                        color: r.Button.Colors.PRIMARY,
-                                                        onClick: x,
-                                                        children: h.Z.Messages.EDIT_MESSAGE
+                                                        color: s.Button.Colors.PRIMARY,
+                                                        onClick: E,
+                                                        children: h.intl.string(h.t.fsBWmZ)
                                                     }),
-                                                    (0, i.jsx)(r.Text, {
+                                                    (0, i.jsx)(s.Text, {
                                                         variant: 'text-xs/normal',
                                                         className: m.buttonHint,
-                                                        children: h.Z.Messages.EVERYONE_POPOUT_ESC.format()
+                                                        children: h.intl.format(h.t['0LzVPT'], {})
                                                     })
                                                 ]
                                             }),
                                             (0, i.jsxs)('div', {
                                                 className: m.buttonContainer,
                                                 children: [
-                                                    (0, i.jsx)(r.Button, {
+                                                    (0, i.jsx)(s.Button, {
                                                         className: m.button,
-                                                        onClick: T,
+                                                        onClick: I,
                                                         type: 'submit',
                                                         autoFocus: !0,
-                                                        children: h.Z.Messages.EVERYONE_POPOUT_SEND_NOW
+                                                        children: h.intl.string(h.t.KJnHq6)
                                                     }),
-                                                    (0, i.jsx)(r.Text, {
+                                                    (0, i.jsx)(s.Text, {
                                                         variant: 'text-xs/normal',
                                                         className: m.buttonHint,
-                                                        children: h.Z.Messages.EVERYONE_POPOUT_ENTER.format()
+                                                        children: h.intl.format(h.t.khjqdH, {})
                                                     })
                                                 ]
                                             })
@@ -124,18 +124,18 @@ function _(e) {
                             })
                         ]
                     }),
-                    null != C.footer && '' !== C.footer
+                    null != v.footer && '' !== v.footer
                         ? (0, i.jsxs)('div', {
                               className: m.footer,
                               children: [
-                                  (0, i.jsx)(r.CircleInformationIcon, {
+                                  (0, i.jsx)(s.CircleInformationIcon, {
                                       size: 'xs',
-                                      color: a.Z.unsafe_rawColors.PRIMARY_400.css,
+                                      color: r.Z.unsafe_rawColors.PRIMARY_400.css,
                                       className: m.icon
                                   }),
-                                  (0, i.jsx)(r.Text, {
+                                  (0, i.jsx)(s.Text, {
                                       variant: 'text-sm/normal',
-                                      children: C.footer
+                                      children: v.footer
                                   })
                               ]
                           })

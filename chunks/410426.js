@@ -1,43 +1,43 @@
-a.d(t, {
+n.d(t, {
     Z: function () {
-        return x;
+        return g;
     }
 });
-var l = a(200651),
-    n = a(192379),
-    s = a(120356),
-    i = a.n(s),
-    o = a(399606),
-    r = a(481060),
-    c = a(547972),
-    d = a(556296),
-    u = a(13140),
-    m = a(435064),
-    p = a(981631),
-    C = a(332325),
-    v = a(689938),
-    h = a(630814);
-function x(e) {
-    let { isEmptyBecauseQuery: t, closePopout: a } = e,
-        s = (0, o.e7)([d.Z], () => d.Z.getKeybindForAction(p.kg4.SAVE_CLIP)),
-        x = (0, o.e7)([m.Z], () => m.Z.getSettings().clipsEnabled),
-        g = t ? h.noSearchResultsImage : h.noClipsImage,
-        L = n.useCallback(() => {
-            a(), (0, c.Z)(C.Z.CLIPS);
-        }, [a]),
-        f = (() => {
-            if (!x) return v.Z.Messages.CLIPS_GALLERY_NO_CLIPS_CLIPS_NOT_ENABLED.format({ onClick: L });
-            if (t) return v.Z.Messages.CLIPS_GALLERY_NO_CLIPS_MATCH_QUERY;
-            if (null == s) return v.Z.Messages.CLIPS_GALLERY_NO_CLIPS_NO_KEYBIND_SET.format({ onClick: L });
+var l = n(200651),
+    a = n(192379),
+    i = n(120356),
+    o = n.n(i),
+    s = n(399606),
+    r = n(481060),
+    c = n(547972),
+    d = n(556296),
+    u = n(13140),
+    m = n(435064),
+    p = n(981631),
+    v = n(332325),
+    h = n(388032),
+    x = n(630814);
+function g(e) {
+    let { isEmptyBecauseQuery: t, closePopout: n } = e,
+        i = (0, s.e7)([d.Z], () => d.Z.getKeybindForAction(p.kg4.SAVE_CLIP)),
+        g = (0, s.e7)([m.Z], () => m.Z.getSettings().clipsEnabled),
+        C = t ? x.noSearchResultsImage : x.noClipsImage,
+        f = a.useCallback(() => {
+            n(), (0, c.Z)(v.Z.CLIPS);
+        }, [n]),
+        j = (() => {
+            if (!g) return h.intl.format(h.t['3iveam'], { onClick: f });
+            if (t) return h.intl.string(h.t['xrEs6+']);
+            if (null == i) return h.intl.format(h.t.jpKk7e, { onClick: f });
             {
-                let e = u.BB(s.shortcut, !0);
-                return v.Z.Messages.CLIPS_GALLERY_NO_CLIPS.format({
+                let e = u.BB(i.shortcut, !0);
+                return h.intl.format(h.t['xY/8Ky'], {
                     keybind: e,
                     keybindHook: () =>
                         (0, l.jsx)('span', {
-                            className: h.keybindHintKeys,
+                            className: x.keybindHintKeys,
                             children: (0, l.jsx)(r.KeyCombo, {
-                                className: h.keybindShortcut,
+                                className: x.keybindShortcut,
                                 shortcut: e
                             })
                         })
@@ -45,15 +45,15 @@ function x(e) {
             }
         })();
     return (0, l.jsx)('div', {
-        className: h.container,
+        className: x.container,
         children: (0, l.jsxs)('div', {
-            className: h.content,
+            className: x.content,
             children: [
-                (0, l.jsx)('div', { className: g }),
+                (0, l.jsx)('div', { className: C }),
                 (0, l.jsx)(r.Text, {
                     variant: 'text-md/medium',
-                    className: i()(h.noClipsText, { [h.noSearchResultsText]: t }),
-                    children: f
+                    className: o()(x.noClipsText, { [x.noSearchResultsText]: t }),
+                    children: j
                 })
             ]
         })

@@ -5,33 +5,33 @@ t.d(n, {
 }),
     t(47120);
 var i = t(200651),
-    a = t(192379),
-    s = t(442837),
-    l = t(481060),
-    r = t(436774),
-    o = t(2818),
+    l = t(192379),
+    r = t(442837),
+    a = t(481060),
+    o = t(436774),
+    s = t(2818),
     u = t(324701),
     d = t(575016),
     c = t(768943),
-    E = t(175006),
-    M = t(742989),
-    g = t(898150),
-    f = t(70956),
-    m = t(689938);
+    g = t(175006),
+    m = t(742989),
+    f = t(898150),
+    h = t(70956),
+    v = t(388032);
 function I(e) {
-    let { enabled: n } = o.Z.useExperiment({ location: 'LongPressMessageActionSheet' }),
-        { showReminders: t } = M.Z.useExperiment({ location: 'LongPressMessageActionSheet' }),
-        I = (0, s.e7)([c.Z], () => c.Z.getSavedMessage(e.channel_id, e.id)),
-        _ = (function (e) {
+    let { enabled: n } = s.Z.useExperiment({ location: 'LongPressMessageActionSheet' }),
+        { showReminders: t } = m.Z.useExperiment({ location: 'LongPressMessageActionSheet' }),
+        I = (0, r.e7)([c.Z], () => c.Z.getSavedMessage(e.channel_id, e.id)),
+        E = (function (e) {
             let { message: n, savedMessage: t } = e,
-                [s, r] = a.useState(new Date());
-            a.useEffect(() => {
-                let e = setInterval(() => r(new Date()), f.Z.Millis.MINUTE);
+                [r, o] = l.useState(new Date());
+            l.useEffect(() => {
+                let e = setInterval(() => o(new Date()), h.Z.Millis.MINUTE);
                 return () => {
                     clearInterval(e);
                 };
             }, []);
-            let o = a.useCallback(
+            let s = l.useCallback(
                     (e) =>
                         (0, u.z)({
                             channelId: n.channel_id,
@@ -41,24 +41,24 @@ function I(e) {
                         }),
                     [n.channel_id, n.id]
                 ),
-                c = (0, g.useMessageReminderDurationSuggestions)({ createReminder: o }),
-                { dueInText: E } = (0, d.AT)({
+                c = (0, f.useMessageReminderDurationSuggestions)({ createReminder: s }),
+                { dueInText: g } = (0, d.AT)({
                     dueAt: null == t ? void 0 : t.saveData.dueAt,
-                    now: s,
+                    now: r,
                     type: d.hQ.LONG
                 });
             return (null == t ? void 0 : t.saveData.dueAt) == null
-                ? (0, i.jsx)(l.MenuGroup, {
-                      label: m.Z.Messages.MESSAGE_REMINDERS_REMIND_ME,
+                ? (0, i.jsx)(a.MenuGroup, {
+                      label: v.intl.string(v.t.roMu1N),
                       children: c
                   })
-                : (0, i.jsxs)(l.MenuGroup, {
-                      label: E,
+                : (0, i.jsxs)(a.MenuGroup, {
+                      label: g,
                       children: [
-                          (0, i.jsx)(l.MenuItem, {
+                          (0, i.jsx)(a.MenuItem, {
                               id: 'mark-complete',
-                              label: m.Z.Messages.MESSAGE_REMINDERS_MARK_COMPLETE,
-                              icon: l.CheckmarkSmallIcon,
+                              label: v.intl.string(v.t.yjGtdH),
+                              icon: a.CheckmarkSmallIcon,
                               action: () =>
                                   (0, u.z)({
                                       channelId: n.channel_id,
@@ -66,9 +66,9 @@ function I(e) {
                                       dueAt: void 0
                                   })
                           }),
-                          (0, i.jsx)(l.MenuItem, {
+                          (0, i.jsx)(a.MenuItem, {
                               id: 'edit-reminder',
-                              label: m.Z.Messages.MESSAGE_REMINDERS_EDIT,
+                              label: v.intl.string(v.t.vrbqs7),
                               children: c
                           })
                       ]
@@ -78,10 +78,10 @@ function I(e) {
             savedMessage: I
         });
     return n || t
-        ? null != I || (0, E.Z)()
-            ? (0, i.jsxs)(l.MenuItem, {
+        ? null != I || (0, g.Z)()
+            ? (0, i.jsxs)(a.MenuItem, {
                   id: 'save-for-later',
-                  label: m.Z.Messages.FOR_LATER_SAVE,
+                  label: v.intl.string(v.t.tpxJtr),
                   action: () =>
                       null == I
                           ? (0, u.z)({
@@ -97,10 +97,10 @@ function I(e) {
                             }),
                   children: [
                       null != I
-                          ? (0, i.jsx)(l.MenuItem, {
+                          ? (0, i.jsx)(a.MenuItem, {
                                 id: 'remove-from-for-later',
-                                label: m.Z.Messages.FOR_LATER_REMOVE,
-                                icon: l.BookmarkIcon,
+                                label: v.intl.string(v.t.SvXS1d),
+                                icon: a.BookmarkIcon,
                                 action: () =>
                                     (0, u.x)({
                                         channelId: e.channel_id,
@@ -109,10 +109,10 @@ function I(e) {
                                         displayToast: !0
                                     })
                             })
-                          : (0, i.jsx)(l.MenuItem, {
+                          : (0, i.jsx)(a.MenuItem, {
                                 id: 'create-bookmark',
-                                label: m.Z.Messages.MESSAGE_BOOKMARKS_CREATE,
-                                icon: l.BookmarkOutlineIcon,
+                                label: v.intl.string(v.t['9p3D9v']),
+                                icon: a.BookmarkOutlineIcon,
                                 action: () =>
                                     (0, u.z)({
                                         channelId: e.channel_id,
@@ -120,15 +120,15 @@ function I(e) {
                                         displayToast: !0
                                     })
                             }),
-                      (0, i.jsx)(l.MenuSeparator, {}),
-                      _
+                      (0, i.jsx)(a.MenuSeparator, {}),
+                      E
                   ]
               })
-            : (0, i.jsx)(l.MenuItem, {
+            : (0, i.jsx)(a.MenuItem, {
                   id: 'save-for-later-upsell',
-                  label: m.Z.Messages.FOR_LATER_SAVE,
-                  icon: l.NitroWheelIcon,
-                  iconProps: { color: r.JX.PREMIUM_TIER_2 },
+                  label: v.intl.string(v.t.tpxJtr),
+                  icon: a.NitroWheelIcon,
+                  iconProps: { color: o.JX.PREMIUM_TIER_2 },
                   action: () =>
                       (0, u.z)({
                           channelId: e.channel_id,

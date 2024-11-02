@@ -18,12 +18,12 @@ t.Z = function (e, t) {
         var c = s[s.length - 1];
         i = '.' === c || '..' === c || '' === c;
     } else i = !1;
-    for (var d = 0, _ = s.length; _ >= 0; _--) {
-        var E = s[_];
-        '.' === E ? r(s, _) : '..' === E ? (r(s, _), d++) : d && (r(s, _), d--);
+    for (var d = 0, f = s.length; f >= 0; f--) {
+        var _ = s[f];
+        '.' === _ ? r(s, f) : '..' === _ ? (r(s, f), d++) : d && (r(s, f), d--);
     }
     if (!u) for (; d--; d) s.unshift('..');
     u && '' !== s[0] && (!s[0] || !n(s[0])) && s.unshift('');
-    var f = s.join('/');
-    return i && '/' !== f.substr(-1) && (f += '/'), f;
+    var h = s.join('/');
+    return i && '/' !== h.substr(-1) && (h += '/'), h;
 };

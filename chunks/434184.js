@@ -1,54 +1,54 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return f;
     }
 });
 var i = n(200651),
-    a = n(192379),
-    s = n(481060),
-    r = n(194359),
-    l = n(906732),
+    r = n(192379),
+    l = n(481060),
+    a = n(194359),
+    s = n(906732),
     o = n(171368),
     c = n(626135),
     d = n(321488),
     u = n(417183),
-    _ = n(170245),
-    E = n(981631),
-    h = n(689938),
-    m = n(171449);
-function I(e) {
-    let { user: t, key: n, isFocused: I } = e,
-        p = a.useContext(c.AnalyticsContext),
-        { analyticsLocations: g } = (0, l.ZP)(),
-        T = (e) => {
-            e.stopPropagation(), r.Z.unblockUser(t.id, { location: 'Friends' });
+    h = n(170245),
+    m = n(981631),
+    p = n(388032),
+    g = n(171449);
+function f(e) {
+    let { user: t, key: n, isFocused: f } = e,
+        _ = r.useContext(c.AnalyticsContext),
+        { analyticsLocations: E } = (0, s.ZP)(),
+        I = (e) => {
+            e.stopPropagation(), a.Z.unblockUser(t.id, { location: 'Friends' });
         };
     return (0, i.jsx)(
         u.Z,
         {
-            isFocused: I,
+            isFocused: f,
             onClick: () =>
                 (0, o.openUserProfileModal)({
                     userId: t.id,
-                    sourceAnalyticsLocations: g,
-                    analyticsLocation: p.location
+                    sourceAnalyticsLocations: E,
+                    analyticsLocation: _.location
                 }),
             user: t,
             children: (e) =>
                 (0, i.jsxs)('div', {
-                    className: m.listItemContents,
+                    className: g.listItemContents,
                     children: [
-                        (0, i.jsx)(_.Z, {
+                        (0, i.jsx)(h.Z, {
                             user: t,
                             hovered: e,
-                            status: E.Skl.UNKNOWN,
-                            subText: h.Z.Messages.BLOCKED
+                            status: m.Skl.UNKNOWN,
+                            subText: p.intl.string(p.t['4bDptL'])
                         }),
                         (0, i.jsx)(d.Z, {
-                            icon: s.UserMinusIcon,
+                            icon: l.UserMinusIcon,
                             actionType: d.Z.ActionTypes.DENY,
-                            tooltip: h.Z.Messages.UNBLOCK,
-                            onClick: T,
+                            tooltip: p.intl.string(p.t.XyHpKC),
+                            onClick: I,
                             shouldHighlight: e
                         })
                     ]

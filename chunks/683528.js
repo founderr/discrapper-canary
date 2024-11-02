@@ -1,33 +1,33 @@
-t.d(n, {
+t.d(e, {
     Z: function () {
-        return E;
+        return x;
     }
 });
 var r = t(200651),
     i = t(192379),
-    a = t(120356),
-    l = t.n(a),
-    o = t(481060),
+    l = t(120356),
+    o = t.n(l),
+    a = t(481060),
     s = t(607070),
     u = t(124347),
     c = t(52824),
     d = t(549635),
-    m = t(689938),
-    _ = t(244190);
-function f(e) {
-    return 'media-view-scroll-thumbnail-'.concat(e);
+    m = t(388032),
+    f = t(244190);
+function h(n) {
+    return 'media-view-scroll-thumbnail-'.concat(n);
 }
-let h = i.memo(function (e) {
-    var n;
-    let { item: t } = e;
+let _ = i.memo(function (n) {
+    var e;
+    let { item: t } = n;
     let i =
-        'IMAGE' === (n = t).type
+        'IMAGE' === (e = t).type
             ? (0, c.q)({
-                  proxyURL: n.proxyUrl,
-                  url: n.url
+                  proxyURL: e.proxyUrl,
+                  url: e.url
               })
-            : 'VIDEO' === n.type && null != n.proxyUrl
-              ? (0, d.D)(n.proxyUrl)
+            : 'VIDEO' === e.type && null != e.proxyUrl
+              ? (0, d.D)(e.proxyUrl)
               : null;
     return null == i
         ? null
@@ -40,40 +40,40 @@ let h = i.memo(function (e) {
               alt: t.alt
           });
 });
-function E(e) {
-    let { items: n, currentIndex: t, onGalleryItemClick: a } = e,
+function x(n) {
+    let { items: e, currentIndex: t, onGalleryItemClick: l } = n,
         u = i.useRef(null);
     return (
         i.useLayoutEffect(() => {
-            let e = document.getElementById(f(t));
+            let n = document.getElementById(h(t));
             null != u.current &&
-                null != e &&
+                null != n &&
                 u.current.scrollIntoViewNode({
-                    node: e,
+                    node: n,
                     animate: !s.Z.useReducedMotion,
                     padding: 24
                 });
         }, [t]),
         (0, r.jsx)('div', {
-            className: _.galleryContainer,
-            children: (0, r.jsx)(o.AdvancedScrollerThin, {
+            className: f.galleryContainer,
+            children: (0, r.jsx)(a.AdvancedScrollerThin, {
                 orientation: 'horizontal',
-                className: _.gallery,
+                className: f.gallery,
                 ref: u,
-                children: n.map((e, i) => {
+                children: e.map((n, i) => {
                     let s = i === t,
-                        u = s ? m.Z.Messages.PAGINATION_CURRENT_ITEM_LABEL : m.Z.Messages.PAGINATION_ITEM_LABEL;
+                        u = s ? m.t['qv/U5e'] : m.t.zviMAA;
                     return (0, r.jsx)(
-                        o.Clickable,
+                        a.Clickable,
                         {
-                            id: f(i),
-                            className: l()(_.galleryItem, { [_.selected]: s }),
-                            'aria-label': u.format({
+                            id: h(i),
+                            className: o()(f.galleryItem, { [f.selected]: s }),
+                            'aria-label': m.intl.formatToPlainString(u, {
                                 pageNumber: i + 1,
-                                totalPages: n.length
+                                totalPages: e.length
                             }),
-                            onClick: () => a(i),
-                            children: (0, r.jsx)(h, { item: e })
+                            onClick: () => l(i),
+                            children: (0, r.jsx)(_, { item: n })
                         },
                         i
                     );

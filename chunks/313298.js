@@ -8,9 +8,9 @@ let l = {},
     u = {},
     c = null;
 async function d(e, t) {
-    null == l[e] && (l[e] = new Set()), l[e].add(t), null == u[e] && (u[e] = Date.now()), E(e) && (await _(e));
+    null == l[e] && (l[e] = new Set()), l[e].add(t), null == u[e] && (u[e] = Date.now()), _(e) && (await f(e));
 }
-function _(e) {
+function f(e) {
     if (null == l[e]) return;
     let t = Array.from(l[e]);
     (l[e] = new Set()),
@@ -23,7 +23,7 @@ function _(e) {
             });
         });
 }
-function E(e) {
+function _(e) {
     let t = l[e];
     if (null == t) return !1;
     let n =
@@ -47,17 +47,17 @@ function E(e) {
             })(e)
     );
 }
-function f(e) {
+function h(e) {
     (l[e] = new Set()), (u[e] = null);
 }
-class h extends i.Z {
+class p extends i.Z {
     handleInitialize() {
         null == c &&
             !(function () {
                 if (null == c)
                     c = setInterval(() => {
                         s.default.forEachKey(l, (e) => {
-                            E(e) && _(e);
+                            _(e) && f(e);
                         });
                     }, 10000);
             })();
@@ -70,11 +70,11 @@ class h extends i.Z {
     }
     handleGuildDelete(e) {
         let t = e.guild.id;
-        if (!!o.Z.isInitialized(t)) f(t);
+        if (!!o.Z.isInitialized(t)) h(t);
     }
     handleGuildMemberSearchSuccess(e) {
         let { guildId: t } = e;
-        if (!!o.Z.isInitialized(t)) f(t);
+        if (!!o.Z.isInitialized(t)) h(t);
     }
     constructor(...e) {
         var t, n, r;
@@ -98,4 +98,4 @@ class h extends i.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new h();
+t.Z = new p();

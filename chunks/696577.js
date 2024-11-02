@@ -1,99 +1,99 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return E;
     }
 });
 var i = n(200651),
-    a = n(192379),
-    s = n(692547),
-    r = n(481060),
-    l = n(194359),
+    r = n(192379),
+    l = n(692547),
+    a = n(481060),
+    s = n(194359),
     o = n(906732),
     c = n(171368),
     d = n(594174),
     u = n(626135),
-    _ = n(321488),
-    E = n(417183),
-    h = n(170245),
-    m = n(981631),
-    I = n(689938),
-    p = n(94455);
-function g(e) {
-    let { user: t, type: n, status: g, isFocused: T } = e,
-        S = a.useContext(u.AnalyticsContext),
-        { analyticsLocations: C } = (0, o.ZP)(),
-        f = (e) => {
-            e.stopPropagation(), l.Z.cancelFriendRequest(t.id, { location: 'Friends' });
+    h = n(321488),
+    m = n(417183),
+    p = n(170245),
+    g = n(981631),
+    f = n(388032),
+    _ = n(94455);
+function E(e) {
+    let { user: t, type: n, status: E, isFocused: I } = e,
+        C = r.useContext(u.AnalyticsContext),
+        { analyticsLocations: v } = (0, o.ZP)(),
+        S = (e) => {
+            e.stopPropagation(), s.Z.cancelFriendRequest(t.id, { location: 'Friends' });
         },
         N = (e) => {
             e.stopPropagation(),
-                l.Z.addRelationship({
+                s.Z.addRelationship({
                     userId: t.id,
                     context: { location: 'Friends' }
                 });
         },
-        A = g === m.Skl.OFFLINE ? m.Skl.UNKNOWN : g,
-        v = n === m.OGo.PENDING_INCOMING ? I.Z.Messages.INCOMING_FRIEND_REQUEST : I.Z.Messages.OUTGOING_FRIEND_REQUEST;
-    return (0, i.jsx)(E.Z, {
-        isFocused: T,
+        T = E === g.Skl.OFFLINE ? g.Skl.UNKNOWN : E,
+        x = n === g.OGo.PENDING_INCOMING ? f.intl.string(f.t.ZOFd1N) : f.intl.string(f.t.zz2i8v);
+    return (0, i.jsx)(m.Z, {
+        isFocused: I,
         user: t,
         onClick: () =>
             (0, c.openUserProfileModal)({
                 userId: t.id,
-                sourceAnalyticsLocations: C,
-                analyticsLocation: S.location
+                sourceAnalyticsLocations: v,
+                analyticsLocation: C.location
             }),
         children: (e) => {
-            var a;
-            let l =
-                n === m.OGo.PENDING_INCOMING
+            var r;
+            let s =
+                n === g.OGo.PENDING_INCOMING
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (null === (a = d.default.getCurrentUser()) || void 0 === a ? void 0 : a.isStaff()) &&
+                              (null === (r = d.default.getCurrentUser()) || void 0 === r ? void 0 : r.isStaff()) &&
                                   (null == t ? void 0 : t.isStaff()) &&
                                   (0, i.jsx)('div', {
-                                      className: p.staffIndicator,
-                                      children: (0, i.jsx)(r.TextBadge, {
-                                          color: s.Z.unsafe_rawColors.BRAND_500.css,
-                                          text: I.Z.Messages.STAFF_BADGE_TOOLTIP
+                                      className: _.staffIndicator,
+                                      children: (0, i.jsx)(a.TextBadge, {
+                                          color: l.Z.unsafe_rawColors.BRAND_500.css,
+                                          text: f.intl.string(f.t.oMx98P)
                                       })
                                   }),
-                              (0, i.jsx)(_.Z, {
-                                  icon: r.CheckmarkLargeIcon,
-                                  actionType: _.Z.ActionTypes.ACCEPT,
-                                  tooltip: I.Z.Messages.FRIEND_REQUEST_ACCEPT,
+                              (0, i.jsx)(h.Z, {
+                                  icon: a.CheckmarkLargeIcon,
+                                  actionType: h.Z.ActionTypes.ACCEPT,
+                                  tooltip: f.intl.string(f.t.ZcibdX),
                                   onClick: N,
                                   shouldHighlight: e
                               }),
-                              (0, i.jsx)(_.Z, {
-                                  icon: r.XSmallIcon,
-                                  actionType: _.Z.ActionTypes.DENY,
-                                  tooltip: I.Z.Messages.FRIEND_REQUEST_IGNORE,
-                                  onClick: f,
+                              (0, i.jsx)(h.Z, {
+                                  icon: a.XSmallIcon,
+                                  actionType: h.Z.ActionTypes.DENY,
+                                  tooltip: f.intl.string(f.t.xuio0N),
+                                  onClick: S,
                                   shouldHighlight: e
                               })
                           ]
                       })
-                    : (0, i.jsx)(_.Z, {
-                          icon: r.XSmallIcon,
-                          actionType: _.Z.ActionTypes.DENY,
-                          tooltip: I.Z.Messages.FRIEND_REQUEST_CANCEL,
-                          onClick: f,
+                    : (0, i.jsx)(h.Z, {
+                          icon: a.XSmallIcon,
+                          actionType: h.Z.ActionTypes.DENY,
+                          tooltip: f.intl.string(f.t.eaq81d),
+                          onClick: S,
                           shouldHighlight: e
                       });
             return (0, i.jsxs)('div', {
-                className: p.listItemContents,
+                className: _.listItemContents,
                 children: [
-                    (0, i.jsx)(h.Z, {
+                    (0, i.jsx)(p.Z, {
                         user: t,
                         hovered: e,
                         showAccountIdentifier: !0,
-                        status: A,
-                        subText: v
+                        status: T,
+                        subText: x
                     }),
                     (0, i.jsx)('div', {
-                        className: p.actions,
-                        children: l
+                        className: _.actions,
+                        children: s
                     })
                 ]
             });

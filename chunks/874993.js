@@ -1,190 +1,190 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return j;
     }
 }),
     n(47120),
     n(536091);
-var s = n(200651),
-    a = n(192379),
-    i = n(442837),
-    r = n(692547),
-    l = n(481060),
+var i = n(200651),
+    r = n(192379),
+    l = n(442837),
+    s = n(692547),
+    a = n(481060),
     o = n(999382),
     c = n(279542),
     d = n(823379),
     u = n(63063),
-    _ = n(426563),
-    I = n(727072),
-    E = n(85960),
-    T = n(577330),
-    m = n(65912),
-    N = n(51248),
-    S = n(546513),
-    g = n(572456),
-    h = n(273504),
-    C = n(981631),
-    x = n(689938),
-    p = n(603211);
-function R(e) {
+    m = n(426563),
+    h = n(727072),
+    g = n(85960),
+    x = n(577330),
+    p = n(65912),
+    f = n(51248),
+    C = n(546513),
+    I = n(572456),
+    _ = n(273504),
+    N = n(981631),
+    v = n(388032),
+    T = n(603211);
+function j(e) {
     var t, n;
-    let { guildId: R, setPreventNavigation: L = () => {} } = e,
-        { editingRule: f, setEditingRule: O } = (0, m.V)(),
-        { guild: A, subsection: M } = (0, i.cj)([o.Z], () => o.Z.getProps()),
-        D = null !== (n = null !== (t = null == A ? void 0 : A.id) && void 0 !== t ? t : R) && void 0 !== n ? n : C.lds,
-        v = null != f,
-        [j] = (0, I.RD)(D),
-        { rulesByTriggerType: Z } = (0, I.pH)(D),
-        b = {
-            [E.vh.MEMBERS]: x.Z.Messages.GUILD_SETTINGS_AUTOMOD_MEMBER_CATEGORY_TITLE,
-            [E.vh.CONTENT]: x.Z.Messages.GUILD_SETTINGS_AUTOMOD_CONTENT_CATEGORY_TITLE
+    let { guildId: j, setPreventNavigation: E = () => {} } = e,
+        { editingRule: S, setEditingRule: b } = (0, p.V)(),
+        { guild: R, subsection: Z } = (0, l.cj)([o.Z], () => o.Z.getProps()),
+        A = null !== (n = null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : j) && void 0 !== n ? n : N.lds,
+        L = null != S,
+        [y] = (0, h.RD)(A),
+        { rulesByTriggerType: D } = (0, h.pH)(A),
+        O = {
+            [g.vh.MEMBERS]: v.intl.string(v.t.sx4E5u),
+            [g.vh.CONTENT]: v.intl.string(v.t.fphZb2)
         },
-        U = a.useMemo(
+        M = r.useMemo(
             () =>
-                Object.values(null != Z ? Z : {})
+                Object.values(null != D ? D : {})
                     .flat()
                     .filter(d.lm),
-            [Z]
+            [D]
         );
-    a.useEffect(() => {
-        v && O(null);
-    }, [D]);
-    let G = a.useCallback(
+    r.useEffect(() => {
+        L && b(null);
+    }, [A]);
+    let P = r.useCallback(
             (e, t) => {
                 if (null != e) {
-                    var n, s;
+                    var n, i;
                     return null !==
-                        (s =
+                        (i =
                             null ===
-                                (n = U.find((t) => {
+                                (n = M.find((t) => {
                                     let { id: n } = t;
                                     return n === e;
                                 })) || void 0 === n
                                 ? void 0
-                                : n.name) && void 0 !== s
-                        ? s
+                                : n.name) && void 0 !== i
+                        ? i
                         : null;
                 }
-                return null != t ? E.I6[t].getDefaultRuleName() : null;
+                return null != t ? g.I6[t].getDefaultRuleName() : null;
             },
-            [U]
+            [M]
         ),
-        P = a.useMemo(() => {
+        k = r.useMemo(() => {
             var e, t;
-            return G(null !== (e = null == f ? void 0 : f.id) && void 0 !== e ? e : null, null !== (t = null == f ? void 0 : f.triggerType) && void 0 !== t ? t : null);
-        }, [G, f]);
-    a.useEffect(() => {
-        L(v, (0, g.af)(P));
-    }, [L, v, P]);
-    let B = (0, E.Z6)(D),
-        y = (e) =>
-            (0, s.jsx)(s.Fragment, {
+            return P(null !== (e = null == S ? void 0 : S.id) && void 0 !== e ? e : null, null !== (t = null == S ? void 0 : S.triggerType) && void 0 !== t ? t : null);
+        }, [P, S]);
+    r.useEffect(() => {
+        E(L, (0, I.af)(k));
+    }, [E, L, k]);
+    let w = (0, g.Z6)(A),
+        B = (e) =>
+            (0, i.jsx)(i.Fragment, {
                 children: e.map((e) => {
                     var t;
-                    return (0, s.jsx)(
-                        S.Z,
+                    return (0, i.jsx)(
+                        C.Z,
                         {
-                            guildId: D,
+                            guildId: A,
                             triggerType: e,
-                            rules: null !== (t = Z[e]) && void 0 !== t ? t : [],
-                            initWithEdit: M === C.KsC.AUTOMOD_MENTION_SPAM && e === h.fX.MENTION_SPAM
+                            rules: null !== (t = D[e]) && void 0 !== t ? t : [],
+                            initWithEdit: Z === N.KsC.AUTOMOD_MENTION_SPAM && e === _.fX.MENTION_SPAM
                         },
                         e
                     );
                 })
             });
-    return (0, s.jsxs)(l.FormSection, {
-        title: x.Z.Messages.GUILD_SETTINGS_AUTOMOD_TITLE,
+    return (0, i.jsxs)(a.FormSection, {
+        title: v.intl.string(v.t.uRelg4),
         tag: 'h1',
         children: [
-            (0, s.jsxs)('div', {
-                className: p.descriptionContainer,
+            (0, i.jsxs)('div', {
+                className: T.descriptionContainer,
                 children: [
-                    (0, s.jsxs)(l.FormSection, {
+                    (0, i.jsxs)(a.FormSection, {
                         tag: 'h3',
-                        className: p.description,
-                        titleClassName: p.descriptionHeader,
+                        className: T.description,
+                        titleClassName: T.descriptionHeader,
                         children: [
-                            (0, s.jsx)(l.Text, {
+                            (0, i.jsx)(a.Text, {
                                 variant: 'text-md/medium',
                                 color: 'header-secondary',
-                                children: x.Z.Messages.GUILD_SETTINGS_AUTOMOD_MESSAGE_FILTER_DESCRIPTION
+                                children: v.intl.string(v.t.EwuSCQ)
                             }),
-                            (0, s.jsx)(l.Text, {
+                            (0, i.jsx)(a.Text, {
                                 variant: 'text-sm/medium',
-                                className: p.helpUrl,
-                                children: x.Z.Messages.GUILD_AUTOMOD_LEARN_MORE_LINK.format({ helpUrl: u.Z.getArticleURL(C.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
+                                className: T.helpUrl,
+                                children: v.intl.format(v.t['B+sgGh'], { helpUrl: u.Z.getArticleURL(N.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
                             })
                         ]
                     }),
-                    (0, s.jsxs)('div', {
-                        className: p.descriptionAvatarContainer,
+                    (0, i.jsxs)('div', {
+                        className: T.descriptionAvatarContainer,
                         children: [
-                            (0, s.jsx)(l.Avatar, {
-                                src: (0, _.j)(),
-                                size: l.AvatarSizes.SIZE_80,
-                                'aria-label': x.Z.Messages.GUILD_AUTOMOD_USERNAME
+                            (0, i.jsx)(a.Avatar, {
+                                src: (0, m.j)(),
+                                size: a.AvatarSizes.SIZE_80,
+                                'aria-label': v.intl.string(v.t.hG1StL)
                             }),
-                            (0, s.jsx)(l.TextBadge, {
-                                text: (0, s.jsxs)('div', {
-                                    className: p.automodBadgeText,
+                            (0, i.jsx)(a.TextBadge, {
+                                text: (0, i.jsxs)('div', {
+                                    className: T.automodBadgeText,
                                     children: [
-                                        (0, s.jsx)(l.CheckmarkLargeBoldIcon, {
+                                        (0, i.jsx)(a.CheckmarkLargeBoldIcon, {
                                             size: 'xxs',
                                             color: 'currentColor',
-                                            className: p.checkmarkIcon
+                                            className: T.checkmarkIcon
                                         }),
-                                        (0, s.jsx)(l.Text, {
+                                        (0, i.jsx)(a.Text, {
                                             variant: 'text-xs/bold',
-                                            className: p.automodText,
-                                            children: x.Z.Messages.GUILD_AUTOMOD_USERNAME
+                                            className: T.automodText,
+                                            children: v.intl.string(v.t.hG1StL)
                                         })
                                     ]
                                 }),
-                                color: r.Z.unsafe_rawColors.BRAND_500.css,
-                                className: p.textBadge
+                                color: s.Z.unsafe_rawColors.BRAND_500.css,
+                                className: T.textBadge
                             })
                         ]
                     })
                 ]
             }),
-            j
-                ? (0, s.jsx)(T.Z, {})
-                : Object.entries(B).map((e) => {
+            y
+                ? (0, i.jsx)(x.Z, {})
+                : Object.entries(w).map((e) => {
                       let [t, n] = e;
-                      if (0 === n.length) return (0, s.jsx)(a.Fragment, {}, t);
-                      let i =
-                          null != b[t]
-                              ? (0, s.jsx)(l.FormSection, {
+                      if (0 === n.length) return (0, i.jsx)(r.Fragment, {}, t);
+                      let l =
+                          null != O[t]
+                              ? (0, i.jsx)(a.FormSection, {
                                     tag: 'h3',
-                                    className: p.categoryHeader,
-                                    children: (0, s.jsx)(l.Text, {
+                                    className: T.categoryHeader,
+                                    children: (0, i.jsx)(a.Text, {
                                         variant: 'text-lg/normal',
                                         color: 'header-primary',
-                                        children: b[t]
+                                        children: O[t]
                                     })
                                 })
                               : null;
-                      return (0, s.jsxs)(
+                      return (0, i.jsxs)(
                           'div',
                           {
-                              className: p.categoryContainer,
-                              children: [i, y(n)]
+                              className: T.categoryContainer,
+                              children: [l, B(n)]
                           },
                           t
                       );
                   }),
-            null != A &&
-                (0, s.jsx)(c.k0, {
-                    guild: A,
+            null != R &&
+                (0, i.jsx)(c.k0, {
+                    guild: R,
                     withDivider: !1,
-                    className: p.explicitContentFilterSection
+                    className: T.explicitContentFilterSection
                 }),
-            (0, s.jsx)(N.Z, {
-                guildId: D,
-                existingRules: U
+            (0, i.jsx)(f.Z, {
+                guildId: A,
+                existingRules: M
             }),
-            v && (0, s.jsx)('div', { className: p.endSpacer })
+            L && (0, i.jsx)('div', { className: T.endSpacer })
         ]
     });
 }

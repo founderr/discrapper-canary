@@ -49,7 +49,7 @@ function d(e, t) {
         r = (e.length << 3) - t.bitLength();
     return r > 0 && n.ishrn(r), n;
 }
-function _(e, t, n) {
+function f(e, t, n) {
     var a, s;
     do {
         for (a = r.alloc(0); 8 * a.length < e.bitLength(); ) (t.v = i(n, t.k).update(t.v).digest()), (a = r.concat([a, t.v]));
@@ -62,42 +62,42 @@ function _(e, t, n) {
     } while (-1 !== s.cmp(e));
     return s;
 }
-(e.exports = function (e, t, n, i, E) {
-    var f = l(t);
-    if (f.curve) {
+(e.exports = function (e, t, n, i, _) {
+    var h = l(t);
+    if (h.curve) {
         if ('ecdsa' !== i && 'ecdsa/rsa' !== i) throw Error('wrong private key type');
         return (function (e, t) {
             var n = u[t.curve.join('.')];
             if (!n) throw Error('unknown curve ' + t.curve.join('.'));
             var i = new s(n).keyFromPrivate(t.privateKey).sign(e);
             return r.from(i.toDER());
-        })(e, f);
+        })(e, h);
     }
-    if ('dsa' === f.type) {
+    if ('dsa' === h.type) {
         if ('dsa' !== i) throw Error('wrong private key type');
         return (function (e, t, n) {
-            for (var i, a = t.params.priv_key, s = t.params.p, l = t.params.q, u = t.params.g, E = new o(0), f = d(e, l).mod(l), h = !1, p = c(a, l, e, n); !1 === h; )
-                (E = (function (e, t, n, r) {
+            for (var i, a = t.params.priv_key, s = t.params.p, l = t.params.q, u = t.params.g, _ = new o(0), h = d(e, l).mod(l), p = !1, m = c(a, l, e, n); !1 === p; )
+                (_ = (function (e, t, n, r) {
                     return e.toRed(o.mont(n)).redPow(t).fromRed().mod(r);
-                })(u, (i = _(l, p, n)), s, l)),
+                })(u, (i = f(l, m, n)), s, l)),
                     0 ===
-                        (h = i
+                        (p = i
                             .invm(l)
-                            .imul(f.add(a.mul(E)))
-                            .mod(l)).cmpn(0) && ((h = !1), (E = new o(0)));
+                            .imul(h.add(a.mul(_)))
+                            .mod(l)).cmpn(0) && ((p = !1), (_ = new o(0)));
             return (function (e, t) {
                 (e = e.toArray()), (t = t.toArray()), 128 & e[0] && (e = [0].concat(e)), 128 & t[0] && (t = [0].concat(t));
                 var n = [48, e.length + t.length + 4, 2, e.length];
                 return (n = n.concat(e, [2, t.length], t)), r.from(n);
-            })(E, h);
-        })(e, f, n);
+            })(_, p);
+        })(e, h, n);
     }
     if ('rsa' !== i && 'ecdsa/rsa' !== i) throw Error('wrong private key type');
-    e = r.concat([E, e]);
-    for (var h = f.modulus.byteLength(), p = [0, 1]; e.length + p.length + 1 < h; ) p.push(255);
-    p.push(0);
-    for (var I = -1; ++I < e.length; ) p.push(e[I]);
-    return a(p, f);
+    e = r.concat([_, e]);
+    for (var p = h.modulus.byteLength(), m = [0, 1]; e.length + m.length + 1 < p; ) m.push(255);
+    m.push(0);
+    for (var g = -1; ++g < e.length; ) m.push(e[g]);
+    return a(m, h);
 }),
     (e.exports.getKey = c),
-    (e.exports.makeKey = _);
+    (e.exports.makeKey = f);

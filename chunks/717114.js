@@ -8,39 +8,39 @@ var r = n(200651),
     u = n(594190),
     c = n(131951),
     d = n(19780),
-    _ = n(63063),
-    E = n(981631),
-    f = n(689938);
+    f = n(63063),
+    _ = n(981631),
+    h = n(388032);
 t.Z = () => {
     let [e, t] = (0, a.Wu)([u.ZP], () => [u.ZP.canShowAdminWarning, u.ZP.getVisibleGame()], []),
         n = (0, a.e7)([d.Z], () => d.Z.isConnected(), []),
-        h = (0, a.e7)([c.Z], () => c.Z.getMode() === E.pM4.PUSH_TO_TALK, []),
-        p = null != t && t.elevated && n && h && e,
-        I = i.useRef(null);
-    function m() {
-        null !== I.current && ((0, s.closeModal)(I.current), (I.current = null));
+        p = (0, a.e7)([c.Z], () => c.Z.getMode() === _.pM4.PUSH_TO_TALK, []),
+        m = null != t && t.elevated && n && p && e,
+        g = i.useRef(null);
+    function E() {
+        null !== g.current && ((0, s.closeModal)(g.current), (g.current = null));
     }
     return (
         i.useEffect(
             () => (
-                p
-                    ? (I.current = (0, s.openModal)((e) =>
+                m
+                    ? (g.current = (0, s.openModal)((e) =>
                           (0, r.jsx)(l.default, {
-                              title: f.Z.Messages.PTT_PERMISSION_TITLE,
-                              body: f.Z.Messages.PTT_PERMISSION_BODY.format({ game: null == t ? void 0 : t.name }),
-                              secondaryConfirmText: f.Z.Messages.DONT_SHOW_AGAIN,
+                              title: h.intl.string(h.t.eotlXF),
+                              body: h.intl.formatToPlainString(h.t.Lw6KXV, { game: null == t ? void 0 : t.name }),
+                              secondaryConfirmText: h.intl.string(h.t['5E9SBw']),
                               onConfirmSecondary: () => o.Z.clearPTTAdminWarning(),
-                              onConfirm: () => window.open(_.Z.getArticleURL(E.BhN.PUSH_TO_TALK_ADMINISTRATOR_MODE), '_blank'),
-                              confirmText: f.Z.Messages.HELP_DESK,
+                              onConfirm: () => window.open(f.Z.getArticleURL(_.BhN.PUSH_TO_TALK_ADMINISTRATOR_MODE), '_blank'),
+                              confirmText: h.intl.string(h.t.psXQHB),
                               ...e
                           })
                       ))
-                    : m(),
+                    : E(),
                 () => {
-                    m();
+                    E();
                 }
             ),
-            [t, p]
+            [t, m]
         ),
         null
     );

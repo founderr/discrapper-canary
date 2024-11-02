@@ -37,22 +37,22 @@ var r,
     },
     c = null,
     d = null,
-    _ = null,
-    E = function (e, t, n) {
+    f = null,
+    _ = function (e, t, n) {
         if (null === e) return null;
         var r = e.apply(void 0, t);
         return u(r, n), r;
     },
-    f = function (e) {
+    h = function (e) {
         var t = 'invalid load parameters; expected object of shape\n\n    {advancedFraudSignals: boolean}\n\nbut received\n\n    '.concat(JSON.stringify(e), '\n');
         if (null === e || 'object' !== n(e)) throw Error(t);
         if (1 === Object.keys(e).length && 'boolean' == typeof e.advancedFraudSignals) return e;
         throw Error(t);
     },
-    h = !1,
-    p = function () {
+    p = !1,
+    m = function () {
         for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
-        h = !0;
+        p = !0;
         var a = Date.now();
         return ((e = r),
         null !== c
@@ -72,17 +72,17 @@ var r,
                           a,
                           u,
                           c = o();
-                      c && e ? console.warn(s) : c ? c && null !== _ && null !== d && (c.removeEventListener('load', _), c.removeEventListener('error', d), null === (u = c.parentNode) || void 0 === u || u.removeChild(c), (c = l(e))) : (c = l(e)),
+                      c && e ? console.warn(s) : c ? c && null !== f && null !== d && (c.removeEventListener('load', f), c.removeEventListener('error', d), null === (u = c.parentNode) || void 0 === u || u.removeChild(c), (c = l(e))) : (c = l(e)),
                           (r = t),
                           (i = n),
-                          (_ = function () {
+                          (f = function () {
                               window.Stripe ? r(window.Stripe) : i(Error('Stripe.js not available'));
                           }),
                           (a = n),
                           (d = function () {
                               a(Error('Failed to load Stripe.js'));
                           }),
-                          c.addEventListener('load', _),
+                          c.addEventListener('load', f),
                           c.addEventListener('error', d);
                   } catch (e) {
                       n(e);
@@ -91,22 +91,22 @@ var r,
               })).catch(function (e) {
                   return (c = null), Promise.reject(e);
               })).then(function (e) {
-            return E(e, n, a);
+            return _(e, n, a);
         });
     };
-(p.setLoadParameters = function (e) {
+(m.setLoadParameters = function (e) {
     if (
         !(
-            h &&
+            p &&
             r &&
-            Object.keys(f(e)).reduce(function (t, n) {
+            Object.keys(h(e)).reduce(function (t, n) {
                 var i;
                 return t && e[n] === (null === (i = r) || void 0 === i ? void 0 : i[n]);
             }, !0)
         )
     ) {
-        if (h) throw Error('You cannot change load parameters after calling loadStripe');
-        r = f(e);
+        if (p) throw Error('You cannot change load parameters after calling loadStripe');
+        r = h(e);
     }
 }),
-    (t.loadStripe = p);
+    (t.loadStripe = m);

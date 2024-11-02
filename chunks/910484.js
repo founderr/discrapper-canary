@@ -1,8 +1,8 @@
 n.d(t, {
     n: function () {
-        return s;
+        return l;
     }
 });
 var i = n(845752),
-    a = n(852926);
-let s = (0, i.Z)(a._X, a.GC);
+    r = n(852926);
+let l = (0, i.Z)(r._X, r.GC);

@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
     M3: function () {
-        return _;
+        return f;
     },
     aD: function () {
         return u;
@@ -58,7 +58,7 @@ async function d() {
     });
     return await r(e), e;
 }
-function _(e) {
+function f(e) {
     var t;
     return i.tn
         .post({

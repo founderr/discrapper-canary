@@ -1,21 +1,21 @@
 t.d(n, {
     Z: function () {
-        return s;
+        return a;
     }
 }),
     t(47120);
 var i = t(192379),
-    a = t(999153),
-    l = t(584922);
-function s(e) {
-    let { type: n, index: t, optionId: s, onDragStart: o, onDragComplete: r, onDragReset: d } = e,
+    l = t(999153),
+    r = t(584922);
+function a(e) {
+    let { type: n, index: t, optionId: a, onDragStart: o, onDragComplete: s, onDragReset: d } = e,
         [c, u] = i.useState(!1),
-        [, I] = (0, a.c)({
+        [, m] = (0, l.c)({
             type: n,
             item: () => (
-                o(s),
+                o(a),
                 {
-                    id: s,
+                    id: a,
                     position: t
                 }
             ),
@@ -27,22 +27,22 @@ function s(e) {
                     d();
                     return;
                 }
-                r(t.optionId);
+                s(t.optionId);
             }
         }),
-        [{ dragSourcePosition: m }, _] = (0, l.L)({
+        [{ dragSourcePosition: h }, p] = (0, r.L)({
             accept: n,
             canDrop: () => !0,
             collect: (e) => {
                 let n = e.getItem();
                 return null != n && e.isOver() && e.canDrop() ? { dragSourcePosition: n.position } : { dragSourcePosition: null };
             },
-            drop: () => ({ optionId: s })
+            drop: () => ({ optionId: a })
         });
     return {
-        drag: I,
-        dragSourcePosition: m,
-        drop: _,
+        drag: m,
+        dragSourcePosition: h,
+        drop: p,
         setIsDraggable: u
     };
 }

@@ -1,14 +1,14 @@
-a.d(t, {
+n.d(t, {
     W: function () {
-        return i;
+        return o;
     }
 });
-var l = a(592125),
-    n = a(496675),
-    s = a(981631);
-function i(e) {
+var l = n(592125),
+    a = n(496675),
+    i = n(981631);
+function o(e) {
     let t = l.Z.getChannel(e),
-        a = null == t ? void 0 : t.isPrivate(),
-        i = null == t ? void 0 : t.isForumChannel();
-    return a || (n.Z.can(s.Plq.ATTACH_FILES, t) && n.Z.can(s.Plq.SEND_MESSAGES, t) && !i);
+        n = null == t ? void 0 : t.isPrivate(),
+        o = null == t ? void 0 : t.isForumChannel();
+    return n || (a.Z.can(i.Plq.ATTACH_FILES, t) && a.Z.can(i.Plq.SEND_MESSAGES, t) && !o);
 }

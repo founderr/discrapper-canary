@@ -1,14 +1,14 @@
 i.d(t, {
     k: function () {
-        return l;
+        return r;
     }
 });
 var n = i(192379),
-    s = i(328456);
-let l = (e) => {
+    l = i(328456);
+let r = (e) => {
     let { firstProfileEffect: t, firstAvatarDecoration: i } = n.useMemo(() => {
         var t;
-        return new s.b(null !== (t = e.bundledProducts) && void 0 !== t ? t : []);
+        return new l.b(null !== (t = e.bundledProducts) && void 0 !== t ? t : []);
     }, [e]);
     return {
         firstProfileEffect: t,

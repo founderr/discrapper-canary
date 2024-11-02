@@ -1,40 +1,40 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return a;
     }
 }),
     n(653041);
-var a = n(701488),
-    s = n(689938);
-function l(e) {
+var i = n(701488),
+    l = n(388032);
+function a(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = [
             {
-                value: a.K8.FAILED_LOAD,
-                label: e ? s.Z.Messages.ACTIVITY_REPORT_ACTIVITY_END_FAILED_LOAD : s.Z.Messages.ACTIVITY_REPORT_ACTIVITY_FAILED_LOAD
+                value: i.K8.FAILED_LOAD,
+                label: e ? l.intl.string(l.t.uaiF6O) : l.intl.string(l.t.aO6OMT)
             },
             {
-                value: a.K8.LAGGING,
-                label: e ? s.Z.Messages.ACTIVITY_REPORT_ACTIVITY_END_LAGGING : s.Z.Messages.ACTIVITY_REPORT_ACTIVITY_LAGGING
+                value: i.K8.LAGGING,
+                label: e ? l.intl.string(l.t['/nJOlp']) : l.intl.string(l.t['79HFwc'])
             },
             {
-                value: a.K8.CONFUSING,
-                label: e ? s.Z.Messages.ACTIVITY_REPORT_ACTIVITY_END_CONFUSING : s.Z.Messages.ACTIVITY_REPORT_ACTIVITY_CONFUSING
+                value: i.K8.CONFUSING,
+                label: e ? l.intl.string(l.t['/8psS0']) : l.intl.string(l.t.iSv55O)
             },
             {
-                value: a.K8.NOT_FUN,
-                label: e ? s.Z.Messages.ACTIVITY_REPORT_ACTIVITY_END_NOT_FUN : s.Z.Messages.ACTIVITY_REPORT_ACTIVITY_NOT_FUN
+                value: i.K8.NOT_FUN,
+                label: e ? l.intl.string(l.t['7GVmLi']) : l.intl.string(l.t.GnVff3)
             },
             {
-                value: a.K8.OTHER,
-                label: s.Z.Messages.CALL_FEEDBACK_OPTION_OTHER
+                value: i.K8.OTHER,
+                label: l.intl.string(l.t['emlT9/'])
             }
         ];
     return (
         t &&
             n.push({
-                value: a.K8.ADS,
-                label: e ? s.Z.Messages.ACTIVITY_REPORT_ACTIVITY_END_INCLUDED_ADS : s.Z.Messages.ACTIVITY_REPORT_ACTIVITY_INCLUDES_ADS
+                value: i.K8.ADS,
+                label: e ? l.intl.string(l.t['5o1ULy']) : l.intl.string(l.t.XeeDhI)
             }),
         n
     );

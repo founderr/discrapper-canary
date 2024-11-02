@@ -1,7 +1,7 @@
 var i,
-    a = n(442837),
-    s = n(570140);
-function r(e, t, n) {
+    r = n(442837),
+    l = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,28 +14,28 @@ function r(e, t, n) {
         e
     );
 }
-let l = {};
-class o extends (i = a.ZP.DeviceSettingsStore) {
+let s = {};
+class o extends (i = r.ZP.DeviceSettingsStore) {
     initialize(e) {
-        l = null != e ? e : {};
+        s = null != e ? e : {};
     }
     filterNSFW() {
-        return !0 !== l.showNSFW;
+        return !0 !== s.showNSFW;
     }
     negativeContentOnly() {
-        return !0 === l.negativeContentOnly;
+        return !0 === s.negativeContentOnly;
     }
     getState() {
-        return l;
+        return s;
     }
     getUserAgnosticState() {
-        return l;
+        return s;
     }
 }
-r(o, 'displayName', 'GravityFiltersStore'),
-    r(o, 'persistKey', 'GravityFiltersStore'),
-    (t.Z = new o(s.Z, {
+a(o, 'displayName', 'GravityFiltersStore'),
+    a(o, 'persistKey', 'GravityFiltersStore'),
+    (t.Z = new o(l.Z, {
         SET_GRAVITY_FILTERS: function (e) {
-            l = e.filters;
+            s = e.filters;
         }
     }));

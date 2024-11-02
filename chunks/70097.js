@@ -5,21 +5,21 @@ var r = n(200651),
     o = n(607070),
     l = n(217702);
 let u = (e) => {
-    let { externalRef: t, autoPlay: n, playOnHover: u, responsive: c, mediaLayoutType: d, ..._ } = e,
-        E = (0, s.e7)([o.Z], () => o.Z.useReducedMotion),
-        f = i.useRef(null);
-    function h() {
-        var e;
-        u && (null == f || null === (e = f.current) || void 0 === e || e.play());
-    }
+    let { externalRef: t, autoPlay: n, playOnHover: u, responsive: c, mediaLayoutType: d, ...f } = e,
+        _ = (0, s.e7)([o.Z], () => o.Z.useReducedMotion),
+        h = i.useRef(null);
     function p() {
         var e;
-        u && (null == f || null === (e = f.current) || void 0 === e || e.pause());
+        u && (null == h || null === (e = h.current) || void 0 === e || e.play());
+    }
+    function m() {
+        var e;
+        u && (null == h || null === (e = h.current) || void 0 === e || e.pause());
     }
     return (
         i.useLayoutEffect(
             () => () => {
-                let { current: e } = f;
+                let { current: e } = h;
                 null != e &&
                     (function (e) {
                         e.removeAttribute('src'),
@@ -35,20 +35,20 @@ let u = (e) => {
         ),
         i.useLayoutEffect(
             () => (
-                'function' == typeof t ? (t(null), t(f.current)) : null != t && (t.current = f.current),
+                'function' == typeof t ? (t(null), t(h.current)) : null != t && (t.current = h.current),
                 () => {
                     'function' == typeof t ? t(null) : null != t && (t.current = null);
                 }
             ),
-            [t, f]
+            [t, h]
         ),
         (0, r.jsx)('video', {
-            ref: f,
-            autoPlay: !E && !u && n,
-            onMouseEnter: h,
-            onMouseLeave: p,
-            onFocus: h,
-            onBlur: p,
+            ref: h,
+            autoPlay: !_ && !u && n,
+            onMouseEnter: p,
+            onMouseLeave: m,
+            onFocus: p,
+            onBlur: m,
             style:
                 d === l.hV.MOSAIC
                     ? {
@@ -60,14 +60,14 @@ let u = (e) => {
                     : c
                       ? (function () {
                             return {
-                                maxWidth: _.width,
-                                maxHeight: _.height,
+                                maxWidth: f.width,
+                                maxHeight: f.height,
                                 width: '100%',
                                 height: '100%'
                             };
                         })()
                       : {},
-            ..._
+            ...f
         })
     );
 };

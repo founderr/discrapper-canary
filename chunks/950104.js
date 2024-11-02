@@ -29,19 +29,19 @@ function o(e) {
         u = null !== (n = o.tolerance) && void 0 !== n ? n : 3,
         c = i()(null !== (r = o.base) && void 0 !== r ? r : e),
         d = i()(e),
-        _ = c.luminance(),
-        E = d,
-        f = l + u,
-        h = i().contrast(c, d),
-        p = 100;
-    for (; p-- > 0; ) {
-        let e = h < l,
-            t = h > f;
+        f = c.luminance(),
+        _ = d,
+        h = l + u,
+        p = i().contrast(c, d),
+        m = 100;
+    for (; m-- > 0; ) {
+        let e = p < l,
+            t = p > h;
         if (!e && !t) break;
-        let n = E.luminance() > _;
-        (E = (t && n) || (e && !n) ? E.darken() : E.brighten()), (h = i().contrast(c, E));
+        let n = _.luminance() > f;
+        (_ = (t && n) || (e && !n) ? _.darken() : _.brighten()), (p = i().contrast(c, _));
     }
-    return s(E);
+    return s(_);
 }
 function l(e, t) {
     return s(i()(e).darken(t));

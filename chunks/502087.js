@@ -26,7 +26,7 @@ function d(e) {
     let { user: t } = e;
     c.premiumTypeActual = (0, s.G)(t.premium_type);
 }
-class _ extends (r = i.ZP.PersistedStore) {
+class f extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
             (c.premiumTypeActual = null == e ? void 0 : e.premiumTypeActual), (c.premiumTypeOverride = null == e ? void 0 : e.premiumTypeOverride), null != e.createdAtOverride ? (c.createdAtOverride = new Date(e.createdAtOverride)) : (c.createdAtOverride = o.Zh);
@@ -50,9 +50,9 @@ class _ extends (r = i.ZP.PersistedStore) {
         return c.premiumTypeOverride;
     }
 }
-l(_, 'displayName', u),
-    l(_, 'persistKey', u),
-    l(_, 'migrations', [
+l(f, 'displayName', u),
+    l(f, 'persistKey', u),
+    l(f, 'migrations', [
         (e) => {
             if ((null == e ? void 0 : e.createdAtOverride) == null)
                 return {
@@ -61,7 +61,7 @@ l(_, 'displayName', u),
                 };
         }
     ]),
-    (t.Z = new _(a.Z, {
+    (t.Z = new f(a.Z, {
         SET_PREMIUM_TYPE_OVERRIDE: function (e) {
             let { premiumType: t } = e;
             c.premiumTypeOverride = t;

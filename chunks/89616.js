@@ -1,98 +1,98 @@
-s.r(t),
-    s.d(t, {
+n.r(e),
+    n.d(e, {
         default: function () {
-            return d;
+            return c;
         }
     }),
-    s(47120);
-var n = s(200651),
-    o = s(192379),
-    a = s(481060),
-    l = s(365007),
-    c = s(689938),
-    r = s(846177);
-function d(e) {
-    let { transitionState: t, onClose: s, credential: d } = e,
-        [i, u] = o.useState(!1),
-        [h, _] = o.useState(''),
-        [E, M] = o.useState(void 0),
-        m = o.useRef(null);
-    async function N(e) {
-        e.preventDefault(), u(!0);
+    n(47120);
+var o = n(200651),
+    s = n(192379),
+    l = n(481060),
+    a = n(365007),
+    i = n(388032),
+    r = n(846177);
+function c(t) {
+    let { transitionState: e, onClose: n, credential: c } = t,
+        [d, u] = s.useState(!1),
+        [h, m] = s.useState(''),
+        [x, f] = s.useState(void 0),
+        g = s.useRef(null);
+    async function j(t) {
+        t.preventDefault(), u(!0);
         try {
-            await (0, l.WQ)(d.id, h), s();
-        } catch (e) {
-            M(e.message);
+            await (0, a.WQ)(c.id, h), n();
+        } catch (t) {
+            f(t.message);
         } finally {
             u(!1);
         }
     }
     return (
-        o.useEffect(() => {
-            if (t === a.ModalTransitionState.ENTERED) {
-                var e;
-                null === (e = m.current) || void 0 === e || e.focus();
+        s.useEffect(() => {
+            if (e === l.ModalTransitionState.ENTERED) {
+                var t;
+                null === (t = g.current) || void 0 === t || t.focus();
             }
-        }, [t]),
-        (0, n.jsxs)(a.ModalRoot, {
-            transitionState: t,
+        }, [e]),
+        (0, o.jsxs)(l.ModalRoot, {
+            transitionState: e,
             children: [
-                (0, n.jsxs)(a.ModalHeader, {
+                (0, o.jsxs)(l.ModalHeader, {
                     separator: !1,
                     className: r.header,
                     children: [
-                        (0, n.jsx)(a.Text, {
+                        (0, o.jsx)(l.Text, {
                             color: 'header-secondary',
                             variant: 'text-lg/bold',
                             className: r.subtitle,
-                            children: c.Z.Messages.TWO_FA_WEBAUTHN_RENAME
+                            children: i.intl.string(i.t.YjuMsb)
                         }),
-                        (0, n.jsx)(a.ModalCloseButton, {
-                            onClick: s,
+                        (0, o.jsx)(l.ModalCloseButton, {
+                            onClick: n,
                             className: r.modalCloseButton
                         })
                     ]
                 }),
-                (0, n.jsxs)('form', {
-                    onSubmit: N,
+                (0, o.jsxs)('form', {
+                    onSubmit: j,
                     children: [
-                        (0, n.jsx)(a.ModalContent, {
+                        (0, o.jsx)(l.ModalContent, {
                             className: r.content,
-                            children: (0, n.jsx)(a.FormItem, {
-                                title: c.Z.Messages.TWO_FA_WEBAUTHN_RENAME_FORM_NEW_KEY,
-                                error: E,
+                            children: (0, o.jsx)(l.FormItem, {
+                                title: i.intl.string(i.t['7yEgJS']),
+                                error: x,
                                 required: !0,
-                                children: (0, n.jsx)('div', {
-                                    children: (0, n.jsx)(a.TextInput, {
-                                        inputRef: m,
-                                        'aria-label': c.Z.Messages.TWO_FA_WEBAUTHN_RENAME_FORM_NEW_KEY,
-                                        placeholder: d.name,
+                                children: (0, o.jsx)('div', {
+                                    children: (0, o.jsx)(l.TextInput, {
+                                        inputRef: g,
+                                        'aria-label': i.intl.string(i.t['7yEgJS']),
+                                        placeholder: c.name,
                                         value: h,
                                         minLength: 1,
                                         maxLength: 32,
-                                        onChange: _,
+                                        onChange: m,
                                         autoFocus: !0,
                                         required: !0
                                     })
                                 })
                             })
                         }),
-                        (0, n.jsxs)(a.ModalFooter, {
+                        (0, o.jsxs)(l.ModalFooter, {
                             children: [
-                                (0, n.jsx)(a.Button, {
+                                (0, o.jsx)(l.Button, {
                                     type: 'submit',
-                                    color: a.Button.Colors.BRAND,
-                                    size: a.Button.Sizes.MEDIUM,
-                                    submitting: i,
+                                    color: l.Button.Colors.BRAND,
+                                    size: l.Button.Sizes.MEDIUM,
+                                    submitting: d,
                                     disabled: 0 === h.length || h.length > 32,
-                                    children: c.Z.Messages.DONE
+                                    children: i.intl.string(i.t.i4jeWV)
                                 }),
-                                (0, n.jsx)(a.Button, {
+                                (0, o.jsx)(l.Button, {
                                     className: r.cancel,
-                                    look: a.Button.Looks.LINK,
-                                    color: a.Button.Colors.PRIMARY,
-                                    onClick: s,
-                                    children: c.Z.Messages.CANCEL
+                                    look: l.Button.Looks.LINK,
+                                    color: l.Button.Colors.PRIMARY,
+                                    onClick: n,
+                                    children: i.intl.string(i.t['ETE/oK'])
                                 })
                             ]
                         })

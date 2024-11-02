@@ -1,12 +1,12 @@
 t.d(n, {
     NR: function () {
-        return l;
+        return i;
     },
     Ob: function () {
         return s;
     },
     ZI: function () {
-        return i;
+        return l;
     },
     m1: function () {
         return c;
@@ -17,7 +17,7 @@ t.d(n, {
 });
 var o = t(987170),
     r = t(987338);
-let l = (0, o.Z)({
+let i = (0, o.Z)({
         kind: 'user',
         id: '2024-07_ctp_payment_flow_started_vanilla',
         label: 'CTP payment flow started - A/A test - Vanilla',
@@ -31,7 +31,7 @@ let l = (0, o.Z)({
             }
         ]
     }),
-    i = (0, o.Z)({
+    l = (0, o.Z)({
         kind: 'user',
         id: '2024-07_ctp_payment_flow_started_filters_',
         label: 'CTP payment flow started - A/A test - Filters',

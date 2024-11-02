@@ -1,29 +1,29 @@
 n.d(t, {
     $: function () {
-        return h;
+        return g;
     }
 }),
     n(653041);
 var r = n(200651),
-    s = n(192379),
-    a = n(120356),
-    i = n.n(a),
+    a = n(192379),
+    s = n(120356),
+    i = n.n(s),
     l = n(100621),
     o = n(873546),
     c = n(481060),
     d = n(774078),
-    u = n(689938),
+    u = n(388032),
     m = n(367797),
     f = n(781385),
     p = n(585616);
-function C(e) {
+function h(e) {
     let { endDate: t } = e,
-        { days: n, hours: s, minutes: a, seconds: i } = (0, d.Z)(t),
+        { days: n, hours: a, minutes: s, seconds: i } = (0, d.Z)(t),
         l = (function (e, t, n, r) {
-            let s = (e, t) => ''.concat(e.toString().padStart(2, '0')).concat(t),
-                a = [];
-            return e > 0 && a.push(s(e, u.Z.Messages.COUNTDOWN_UNITS_DAYS)), (t > 0 || a.length > 0) && a.push(s(t, u.Z.Messages.COUNTDOWN_UNITS_HOURS)), (n > 0 || a.length > 0) && a.push(s(n, u.Z.Messages.COUNTDOWN_UNITS_MINUTES)), a.push(s(r, u.Z.Messages.COUNTDOWN_UNITS_SECONDS)), a.join(':');
-        })(n, s, a, i);
+            let a = (e, t) => ''.concat(e.toString().padStart(2, '0')).concat(t),
+                s = [];
+            return e > 0 && s.push(a(e, u.intl.string(u.t.QJyuxc))), (t > 0 || s.length > 0) && s.push(a(t, u.intl.string(u.t['1LyF1t']))), (n > 0 || s.length > 0) && s.push(a(n, u.intl.string(u.t.n7dksL))), s.push(a(r, u.intl.string(u.t['6m/6nJ']))), s.join(':');
+        })(n, a, s, i);
     return (0, r.jsx)(c.Text, {
         variant: 'heading-md/medium',
         className: m.countdown,
@@ -35,8 +35,8 @@ function C(e) {
         })
     });
 }
-let h = s.memo(function (e) {
-    let { unpublishedAt: t, isVisible: n, displayOptions: s, isFullScreen: a } = e,
+let g = a.memo(function (e) {
+    let { unpublishedAt: t, isVisible: n, displayOptions: a, isFullScreen: s } = e,
         d = (0, c.useSpring)({
             transform: 'translateX(-50%) '.concat(n ? 'translateY(-75%)' : 'translateY(0%)'),
             opacity: n ? 1 : 0,
@@ -46,26 +46,26 @@ let h = s.memo(function (e) {
             }
         });
     return (0, r.jsxs)(l.animated.div, {
-        className: i()([m.countDownWrapper, a && m.fullScreenWrapper, o.tq && m.mobileWrapper]),
+        className: i()([m.countDownWrapper, s && m.fullScreenWrapper, o.tq && m.mobileWrapper]),
         role: 'status',
         style: {
-            ...s.style,
+            ...a.style,
             ...d
         },
         children: [
             (0, r.jsx)(c.Text, {
                 variant: 'text-md/medium',
                 className: m.countdownLabel,
-                children: s.label()
+                children: a.label()
             }),
-            null != s.iconSrc &&
+            null != a.iconSrc &&
                 (0, r.jsx)('img', {
-                    src: s.iconSrc,
+                    src: a.iconSrc,
                     className: m.countdownIcon,
                     alt: '',
                     'aria-hidden': !0
                 }),
-            (0, r.jsx)(C, { endDate: t }),
+            (0, r.jsx)(h, { endDate: t }),
             (0, r.jsx)('img', {
                 src: f.Z,
                 className: i()(m.sparkles, m.left),

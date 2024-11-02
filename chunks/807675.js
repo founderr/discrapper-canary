@@ -20,27 +20,27 @@ function c(e) {
 }
 function d(e) {
     var t, n, i, u, c, d;
-    let _ = (0, r.parse)(e, { arrayFormat: 'bracket' }),
-        E = l.Hn;
+    let f = (0, r.parse)(e, { arrayFormat: 'bracket' }),
+        _ = l.Hn;
     try {
-        E = a.vB(null != _.permissions && '' !== _.permissions ? _.permissions : '0');
+        _ = a.vB(null != f.permissions && '' !== f.permissions ? f.permissions : '0');
     } catch (e) {}
-    let f = _.channel_id,
-        h = null !== (u = null !== (i = null !== (n = _.guild_id) && void 0 !== n ? n : null === (t = s.Z.getChannel(f)) || void 0 === t ? void 0 : t.guild_id) && void 0 !== i ? i : o.Z.getGuildId()) && void 0 !== u ? u : void 0;
+    let h = f.channel_id,
+        p = null !== (u = null !== (i = null !== (n = f.guild_id) && void 0 !== n ? n : null === (t = s.Z.getChannel(h)) || void 0 === t ? void 0 : t.guild_id) && void 0 !== i ? i : o.Z.getGuildId()) && void 0 !== u ? u : void 0;
     return {
-        clientId: null !== (c = _.client_id) && void 0 !== c ? c : '',
-        scopes: (null !== (d = _.scope) && void 0 !== d ? d : '').split(' ').filter((e) => e.length > 0),
-        responseType: _.response_type,
-        redirectUri: _.redirect_uri,
-        codeChallenge: _.code_challenge,
-        codeChallengeMethod: _.code_challenge_method,
-        state: _.state,
-        permissions: E,
-        channelId: f,
-        guildId: h,
-        prompt: _.prompt,
-        disableGuildSelect: 'true' === _.disable_guild_select,
-        integrationType: null == _.integration_type ? void 0 : Number(_.integration_type),
-        nonce: _.nonce
+        clientId: null !== (c = f.client_id) && void 0 !== c ? c : '',
+        scopes: (null !== (d = f.scope) && void 0 !== d ? d : '').split(' ').filter((e) => e.length > 0),
+        responseType: f.response_type,
+        redirectUri: f.redirect_uri,
+        codeChallenge: f.code_challenge,
+        codeChallengeMethod: f.code_challenge_method,
+        state: f.state,
+        permissions: _,
+        channelId: h,
+        guildId: p,
+        prompt: f.prompt,
+        disableGuildSelect: 'true' === f.disable_guild_select,
+        integrationType: null == f.integration_type ? void 0 : Number(f.integration_type),
+        nonce: f.nonce
     };
 }

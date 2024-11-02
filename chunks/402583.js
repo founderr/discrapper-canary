@@ -1,40 +1,40 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return S;
+        return p;
     }
 });
-var n = t(200651),
-    a = t(192379),
-    i = t(442837),
-    r = t(409700),
-    o = t(480294),
-    l = t(63063),
-    c = t(838436),
-    d = t(51331),
-    _ = t(922628),
-    u = t(726985),
-    E = t(981631),
-    T = t(689938);
-function S() {
-    let e = (0, i.e7)([o.Z], () => o.Z.hasConsented(E.pjP.USAGE_STATISTICS)),
-        s = a.useCallback((e) => {
+var i = n(200651),
+    s = n(192379),
+    r = n(442837),
+    l = n(409700),
+    a = n(480294),
+    o = n(63063),
+    c = n(838436),
+    d = n(51331),
+    u = n(922628),
+    m = n(726985),
+    h = n(981631),
+    g = n(388032);
+function p() {
+    let e = (0, r.e7)([a.Z], () => a.Z.hasConsented(h.pjP.USAGE_STATISTICS)),
+        t = s.useCallback((e) => {
             e
-                ? (0, r.g)([E.pjP.USAGE_STATISTICS], []).catch(_.S)
-                : (0, _.V)({
-                      header: T.Z.Messages.USAGE_STATISTICS_DISABLE_MODAL_TITLE,
-                      body: T.Z.Messages.USAGE_STATISTICS_DISABLE_MODAL_BODY,
-                      confirmText: T.Z.Messages.USAGE_STATISTICS_DISABLE_MODAL_CONFIRM,
-                      cancelText: T.Z.Messages.USAGE_STATISTICS_DISABLE_MODAL_CANCEL,
-                      onConfirm: () => (0, r.g)([], [E.pjP.USAGE_STATISTICS]).catch(_.S)
+                ? (0, l.g)([h.pjP.USAGE_STATISTICS], []).catch(u.S)
+                : (0, u.V)({
+                      header: g.intl.string(g.t.OdPCbG),
+                      body: g.intl.string(g.t.MGWabG),
+                      confirmText: g.intl.string(g.t['D3+rU1']),
+                      cancelText: g.intl.string(g.t.kYpG0t),
+                      onConfirm: () => (0, l.g)([], [h.pjP.USAGE_STATISTICS]).catch(u.S)
                   });
         }, []);
-    return (0, n.jsx)(c.U, {
-        setting: u.s6.PRIVACY_DATA_IMPROVE_DISCORD_V2,
-        children: (0, n.jsx)(d.Z, {
-            title: T.Z.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE,
-            note: T.Z.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE_V2.format({ helpdeskArticle: l.Z.getArticleURL(E.BhN.DATA_PRIVACY_CONTROLS) }),
+    return (0, i.jsx)(c.U, {
+        setting: m.s6.PRIVACY_DATA_IMPROVE_DISCORD_V2,
+        children: (0, i.jsx)(d.Z, {
+            title: g.intl.string(g.t.XuADY2),
+            note: g.intl.format(g.t.igTSGx, { helpdeskArticle: o.Z.getArticleURL(h.BhN.DATA_PRIVACY_CONTROLS) }),
             value: e,
-            onChange: s
+            onChange: t
         })
     });
 }

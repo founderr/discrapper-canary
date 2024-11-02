@@ -1,33 +1,33 @@
 n.d(t, {
     L9: function () {
-        return E;
+        return _;
     },
     LY: function () {
         return r;
     },
     ND: function () {
-        return h;
+        return p;
     },
     WC: function () {
-        return I;
-    },
-    aW: function () {
-        return _;
-    },
-    af: function () {
-        return A;
-    },
-    k0: function () {
         return g;
     },
-    km: function () {
-        return S;
-    },
-    no: function () {
+    aW: function () {
         return f;
     },
-    o6: function () {
+    af: function () {
         return T;
+    },
+    k0: function () {
+        return S;
+    },
+    km: function () {
+        return I;
+    },
+    no: function () {
+        return h;
+    },
+    o6: function () {
+        return v;
     },
     tI: function () {
         return a;
@@ -36,7 +36,7 @@ n.d(t, {
         return i;
     },
     z8: function () {
-        return m;
+        return E;
     }
 }),
     n(411104);
@@ -48,8 +48,8 @@ var r,
     l,
     u = n(981631),
     c = n(474936),
-    d = n(689938);
-function _(e) {
+    d = n(388032);
+function f(e) {
     switch (e) {
         case 480:
             return 480;
@@ -65,7 +65,7 @@ function _(e) {
             throw Error('Unknown resolution: '.concat(e));
     }
 }
-function E(e) {
+function _(e) {
     switch (e) {
         case 5:
             return 5;
@@ -80,7 +80,7 @@ function E(e) {
     }
 }
 ((s = r || (r = {}))[(s.RESOLUTION_480 = 480)] = 'RESOLUTION_480'), (s[(s.RESOLUTION_720 = 720)] = 'RESOLUTION_720'), (s[(s.RESOLUTION_1080 = 1080)] = 'RESOLUTION_1080'), (s[(s.RESOLUTION_1440 = 1440)] = 'RESOLUTION_1440'), (s[(s.RESOLUTION_SOURCE = 0)] = 'RESOLUTION_SOURCE'), ((o = i || (i = {}))[(o.FPS_5 = 5)] = 'FPS_5'), (o[(o.FPS_15 = 15)] = 'FPS_15'), (o[(o.FPS_30 = 30)] = 'FPS_30'), (o[(o.FPS_60 = 60)] = 'FPS_60'), ((l = a || (a = {}))[(l.PRESET_VIDEO = 1)] = 'PRESET_VIDEO'), (l[(l.PRESET_DOCUMENTS = 2)] = 'PRESET_DOCUMENTS'), (l[(l.PRESET_CUSTOM = 3)] = 'PRESET_CUSTOM');
-let f = {
+let h = {
         2: [
             {
                 resolution: 0,
@@ -111,7 +111,7 @@ let f = {
         ],
         3: []
     },
-    h = [
+    p = [
         {
             resolution: 0,
             fps: 60,
@@ -205,7 +205,7 @@ let f = {
             fps: 5
         }
     ];
-function p(e, t) {
+function m(e, t) {
     return {
         value: e,
         get label() {
@@ -213,9 +213,9 @@ function p(e, t) {
         }
     };
 }
-let I = [p(720), p(1080), p(1440), p(0, () => d.Z.Messages.SCREENSHARE_SOURCE)],
-    m = [p(720), p(1080), p(1440)],
-    T = (e) => (0 === e ? d.Z.Messages.SCREENSHARE_SOURCE : d.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({ resolution: e })),
-    S = [p(480, () => T(480)), p(720, () => T(720)), p(1080, () => T(1080)), p(1440, () => T(1440)), p(0, () => T(0))],
-    g = [p(15), p(30), p(60)],
-    A = [p(15, () => d.Z.Messages.STREAM_FPS_OPTION.format({ value: 15 })), p(30, () => d.Z.Messages.STREAM_FPS_OPTION.format({ value: 30 })), p(60, () => d.Z.Messages.STREAM_FPS_OPTION.format({ value: 60 }))];
+let g = [m(720), m(1080), m(1440), m(0, () => d.intl.string(d.t.XjXqzs))],
+    E = [m(720), m(1080), m(1440)],
+    v = (e) => (0 === e ? d.intl.string(d.t.XjXqzs) : d.intl.formatToPlainString(d.t.TEOC0N, { resolution: e })),
+    I = [m(480, () => v(480)), m(720, () => v(720)), m(1080, () => v(1080)), m(1440, () => v(1440)), m(0, () => v(0))],
+    S = [m(15), m(30), m(60)],
+    T = [m(15, () => d.intl.formatToPlainString(d.t['bW+JCQ'], { value: 15 })), m(30, () => d.intl.formatToPlainString(d.t['bW+JCQ'], { value: 30 })), m(60, () => d.intl.formatToPlainString(d.t['bW+JCQ'], { value: 60 }))];

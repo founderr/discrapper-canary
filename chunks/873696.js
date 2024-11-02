@@ -3,7 +3,7 @@ n.d(t, {
         return l;
     }
 });
-var i = n(689938);
+var i = n(388032);
 function l(e) {
     if (null == e) return null;
     switch (e.type) {
@@ -11,7 +11,7 @@ function l(e) {
         case 'event':
             return { subtitle: e.name };
         case 'go-live':
-            return { subtitle: i.Z.Messages.GO_LIVE_SUBTITLE };
+            return { subtitle: i.intl.string(i.t.Pa817u) };
     }
     return null;
 }

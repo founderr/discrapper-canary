@@ -4,28 +4,28 @@ t.r(n),
             return d;
         },
         useHasGuildRoleItems: function () {
-            return r;
+            return s;
         }
     });
 var i = t(200651);
 t(192379);
-var a = t(481060),
-    l = t(239091),
-    s = t(241635),
-    o = t(689938);
-function r(e, n) {
-    return (0, s.Z)(e, n).length > 0;
+var l = t(481060),
+    r = t(239091),
+    a = t(241635),
+    o = t(388032);
+function s(e, n) {
+    return (0, a.Z)(e, n).length > 0;
 }
 function d(e) {
-    let { role: n, guild: t, onSelect: r } = e,
-        d = (0, s.Z)(t, n);
+    let { role: n, guild: t, onSelect: s } = e,
+        d = (0, a.Z)(t, n);
     return 0 === d.length
         ? null
-        : (0, i.jsx)(a.Menu, {
+        : (0, i.jsx)(l.Menu, {
               navId: 'guild-settings-role-context',
-              'aria-label': o.Z.Messages.GUILD_ROLE_ACTIONS_MENU_LABEL,
-              onClose: l.Zy,
-              onSelect: r,
+              'aria-label': o.intl.string(o.t['337Ja2']),
+              onClose: r.Zy,
+              onSelect: s,
               children: d
           });
 }

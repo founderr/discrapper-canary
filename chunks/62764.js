@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return L;
     }
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    a = n(120356),
-    l = n.n(a),
-    r = n(852229),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
+    s = n(852229),
     o = n(442837),
     c = n(52826),
     u = n(481060),
@@ -16,39 +16,39 @@ var i = n(200651),
     h = n(593472),
     m = n(393238),
     p = n(330726),
-    _ = n(48929),
-    f = n(333535),
-    E = n(566006),
-    g = n(443877),
-    C = n(60174),
-    I = n(216337),
-    T = n(920888),
-    x = n(287151),
-    S = n(569471),
-    v = n(346479),
-    N = n(592125),
-    A = n(934415),
-    Z = n(456269),
-    M = n(109590),
-    b = n(228392),
-    R = n(981631),
-    L = n(689938),
-    P = n(314251),
-    j = n(96042);
-function O(e) {
-    let { postId: t, isFirstMessage: n, isLastItem: a = !1, parentChannelId: O } = e,
-        { ref: y, width: D } = (0, m.Z)(),
-        [U, k] = s.useState(3),
-        [w, B] = s.useState(!n),
-        [H, G] = (0, p.Z)(!1, 2000),
-        V = (0, o.e7)([N.Z], () => N.Z.getChannel(t), [t]),
-        { firstMessage: F } = (0, M.cl)(V),
-        W = (0, o.e7)([S.Z], () => S.Z.hasJoined(t)),
-        { disableReactionUpdates: z, disableReactionCreates: Y, isLurking: K, isGuest: q, isPendingMember: X } = (0, g.Z)(V),
-        J = (0, o.e7)([N.Z], () => N.Z.getChannel(O)),
-        Q = (0, Z.Bs)(J),
-        $ = (0, o.e7)([_.Z], () => _.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
-        ee = s.useCallback(
+    f = n(48929),
+    g = n(333535),
+    C = n(566006),
+    x = n(443877),
+    v = n(60174),
+    _ = n(216337),
+    I = n(920888),
+    E = n(287151),
+    b = n(569471),
+    S = n(346479),
+    Z = n(592125),
+    T = n(934415),
+    N = n(456269),
+    j = n(109590),
+    A = n(228392),
+    y = n(981631),
+    P = n(388032),
+    M = n(314251),
+    R = n(96042);
+function L(e) {
+    let { postId: t, isFirstMessage: n, isLastItem: r = !1, parentChannelId: L } = e,
+        { ref: k, width: O } = (0, m.Z)(),
+        [w, D] = l.useState(3),
+        [U, B] = l.useState(!n),
+        [H, F] = (0, p.Z)(!1, 2000),
+        G = (0, o.e7)([Z.Z], () => Z.Z.getChannel(t), [t]),
+        { firstMessage: V } = (0, j.cl)(G),
+        z = (0, o.e7)([b.Z], () => b.Z.hasJoined(t)),
+        { disableReactionUpdates: W, disableReactionCreates: Y, isLurking: K, isGuest: q, isPendingMember: X } = (0, x.Z)(G),
+        J = (0, o.e7)([Z.Z], () => Z.Z.getChannel(L)),
+        Q = (0, N.Bs)(J),
+        $ = (0, o.e7)([f.Z], () => f.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
+        ee = l.useCallback(
             (e) => {
                 let t = e[0];
                 if (null != t && n) {
@@ -59,8 +59,8 @@ function O(e) {
             },
             [n]
         );
-    s.useLayoutEffect(() => {
-        let e = y.current;
+    l.useLayoutEffect(() => {
+        let e = k.current;
         if (null == e || !n) return;
         let t = new IntersectionObserver(ee, { threshold: 1 });
         return (
@@ -70,58 +70,58 @@ function O(e) {
             }
         );
     });
-    let [et, en] = s.useState(!0);
+    let [et, en] = l.useState(!0);
     if (
-        (s.useEffect(() => {
-            if (null != D) k(Math.floor((D - 280) / 58)), en(!1);
-        }, [D]),
-        null == V || null == F)
+        (l.useEffect(() => {
+            if (null != O) D(Math.floor((O - 280) / 58)), en(!1);
+        }, [O]),
+        null == G || null == V)
     )
         return null;
-    let ei = F.reactions.length > 0,
-        es = () => {
-            W ? v.Z.leaveThread(V, 'Forum Toolbar') : v.Z.joinThread(V, 'Forum Toolbar');
+    let ei = V.reactions.length > 0,
+        el = () => {
+            z ? S.Z.leaveThread(G, 'Forum Toolbar') : S.Z.joinThread(G, 'Forum Toolbar');
+        },
+        er = () => {
+            (0, A.B)({
+                postId: G.id,
+                location: { section: y.jXE.CHANNEL_HEADER }
+            }),
+                (0, s.J)((0, T.EO)(G, J)),
+                F(!0);
         },
         ea = () => {
-            (0, b.B)({
-                postId: V.id,
-                location: { section: R.jXE.CHANNEL_HEADER }
-            }),
-                (0, r.J)((0, A.EO)(V, J)),
-                G(!0);
-        },
-        el = () => {
             d.Z.jumpToMessage({
-                channelId: V.id,
-                messageId: V.id,
+                channelId: G.id,
+                messageId: G.id,
                 flash: !0,
                 jumpType: h.SR.INSTANT
             });
         },
-        er = W ? u.CheckmarkLargeIcon : u.BellIcon;
+        es = z ? u.CheckmarkLargeIcon : u.BellIcon;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
-                className: l()(P.container, { [P.header]: w }),
-                ref: y,
+                className: a()(M.container, { [M.header]: U }),
+                ref: k,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: l()(P.reactButtons, { [P.loading]: et }),
+                        className: a()(M.reactButtons, { [M.loading]: et }),
                         children: [
                             !ei &&
                                 !Y &&
                                 null != Q &&
                                 (0, i.jsx)('div', {
-                                    className: j.reactions,
-                                    children: (0, i.jsx)(x.le, {
-                                        message: F,
+                                    className: R.reactions,
+                                    children: (0, i.jsx)(E.le, {
+                                        message: V,
                                         readOnly: !1,
                                         useChatFontScaling: !1,
                                         isLurking: K,
                                         isGuest: q,
                                         isPendingMember: X,
                                         emoji: Q,
-                                        type: E.O.NORMAL,
+                                        type: C.O.NORMAL,
                                         hideCount: !0,
                                         count: 0,
                                         me: !1,
@@ -129,64 +129,64 @@ function O(e) {
                                         me_burst: !1
                                     })
                                 }),
-                            (0, i.jsx)(T.Z, {
-                                message: F,
-                                channel: V,
+                            (0, i.jsx)(I.Z, {
+                                message: V,
+                                channel: G,
                                 disableReactionCreates: !0,
-                                disableReactionUpdates: z,
+                                disableReactionUpdates: W,
                                 isLurking: K,
                                 isGuest: q,
                                 isPendingMember: X,
-                                maxReactions: U,
-                                className: P.reactions,
+                                maxReactions: w,
+                                className: M.reactions,
                                 useChatFontScaling: !1,
                                 isForumToolbar: !0,
                                 forceHideReactionCreates: !0
                             }),
                             !Y &&
-                                (0, i.jsx)(C.X, {
-                                    type: E.O.NORMAL,
-                                    message: F,
-                                    channel: V,
+                                (0, i.jsx)(v.X, {
+                                    type: C.O.NORMAL,
+                                    message: V,
+                                    channel: G,
                                     useChatFontScaling: !1,
-                                    className: P.addReactButton,
+                                    className: M.addReactButton,
                                     isForumToolbar: !0,
-                                    children: !ei && L.Z.Messages.FORUM_REACT_TO_POST
+                                    children: !ei && P.intl.string(P.t.xpOyTE)
                                 })
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: P.buttons,
+                        className: M.buttons,
                         children: [
                             (0, i.jsx)(u.Tooltip, {
-                                text: L.Z.Messages.FORUM_FOLLOW_TOOLTIP,
+                                text: P.intl.string(P.t.F7oeDg),
                                 children: (e) =>
                                     (0, i.jsxs)(u.Button, {
                                         ...e,
                                         look: u.Button.Looks.BLANK,
                                         size: u.Button.Sizes.SMALL,
-                                        onClick: es,
-                                        className: P.button,
-                                        innerClassName: l()(P.buttonInner, { [P.active]: W }),
+                                        onClick: el,
+                                        className: M.button,
+                                        innerClassName: a()(M.buttonInner, { [M.active]: z }),
                                         children: [
-                                            (0, i.jsx)(er, {
+                                            (0, i.jsx)(es, {
                                                 size: 'xs',
                                                 color: 'currentColor'
                                             }),
-                                            W ? L.Z.Messages.FORUM_FOLLOWING_POST : L.Z.Messages.FOLLOW
+                                            z ? P.intl.string(P.t['7OkUzs']) : P.intl.string(P.t['3aOv+v'])
                                         ]
                                     })
                             }),
                             (0, i.jsx)(u.Tooltip, {
-                                text: L.Z.Messages.COPY_LINK,
+                                text: P.intl.string(P.t.WqhZsr),
                                 children: (e) =>
                                     (0, i.jsxs)(u.Button, {
                                         ...e,
                                         look: u.Button.Looks.BLANK,
                                         size: u.Button.Sizes.SMALL,
-                                        onClick: ea,
-                                        className: P.button,
-                                        innerClassName: P.buttonInner,
+                                        onClick: er,
+                                        className: M.button,
+                                        innerClassName: M.buttonInner,
                                         children: [
                                             H
                                                 ? (0, i.jsx)(u.CheckmarkLargeIcon, {
@@ -201,21 +201,21 @@ function O(e) {
                                                       width: 16,
                                                       height: 16
                                                   }),
-                                            H ? L.Z.Messages.COPIED : null
+                                            H ? P.intl.string(P.t['t5VZ8/']) : null
                                         ]
                                     })
                             }),
                             !n &&
                                 (0, i.jsx)(u.Tooltip, {
-                                    text: L.Z.Messages.JUMP_TO_TOP,
+                                    text: P.intl.string(P.t.nFP4oa),
                                     children: (e) =>
                                         (0, i.jsx)(u.Button, {
                                             ...e,
                                             look: u.Button.Looks.BLANK,
                                             size: u.Button.Sizes.SMALL,
-                                            onClick: el,
-                                            className: P.button,
-                                            innerClassName: P.buttonInner,
+                                            onClick: ea,
+                                            className: M.button,
+                                            innerClassName: M.buttonInner,
                                             children: (0, i.jsx)(c.Z, {
                                                 size: 'custom',
                                                 color: 'currentColor',
@@ -228,10 +228,10 @@ function O(e) {
                     })
                 ]
             }),
-            $ && (0, i.jsx)(f.Z, { threadId: t }),
-            (0, i.jsx)(I.Z, {
-                channel: V,
-                isLastItem: a
+            $ && (0, i.jsx)(g.Z, { threadId: t }),
+            (0, i.jsx)(_.Z, {
+                channel: G,
+                isLastItem: r
             })
         ]
     });

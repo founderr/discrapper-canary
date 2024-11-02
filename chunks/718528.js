@@ -1,73 +1,73 @@
-t.d(n, {
+e.d(t, {
     T: function () {
         return C;
     },
     Z: function () {
-        return c;
+        return _;
     }
 }),
-    t(653041);
-var i = t(192379),
-    l = t(442837),
-    o = t(734307),
-    E = t(854444),
-    r = t(131704),
-    a = t(680089),
-    u = t(888369),
-    s = t(944486),
-    d = t(981631),
-    _ = t(647086);
-function c(e) {
-    let { withVoiceChannels: n = !1, withCurrentVoiceChannel: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+    e(653041);
+var i = e(192379),
+    l = e(442837),
+    o = e(734307),
+    r = e(854444),
+    u = e(131704),
+    a = e(680089),
+    d = e(888369),
+    E = e(944486),
+    s = e(981631),
+    c = e(647086);
+function _(n) {
+    let { withVoiceChannels: t = !1, withCurrentVoiceChannel: e = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         i = arguments.length > 2 ? arguments[2] : void 0;
-    return I(
-        e === _._ || e === d.I_8 ? (0, E.t)() : o.Z.getGuildWithoutChangingGuildActionRows(e).guildChannels,
+    return A(
+        n === c._ || n === s.I_8 ? (0, r.t)() : o.Z.getGuildWithoutChangingGuildActionRows(n).guildChannels,
         {
-            currentVoiceChannelId: s.Z.getVoiceChannelId(),
-            selectedChannelId: s.Z.getChannelId()
+            currentVoiceChannelId: E.Z.getVoiceChannelId(),
+            selectedChannelId: E.Z.getChannelId()
         },
         {
-            withVoiceChannels: n,
-            withCurrentVoiceChannel: t
+            withVoiceChannels: t,
+            withCurrentVoiceChannel: e
         },
         i
     );
 }
-function C(e, n, t) {
-    let { withVoiceChannels: o = !1, withCurrentVoiceChannel: E = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-        r = arguments.length > 4 ? arguments[4] : void 0,
-        d = (0, l.e7)([u.default], () => u.default.getGuildChangeSentinel(e)),
-        _ = (0, l.e7)([a.Z], () => a.Z.version),
-        { currentVoiceChannelId: c, selectedChannelId: C } = (0, l.cj)([s.Z], () => ({
-            currentVoiceChannelId: s.Z.getVoiceChannelId(),
-            selectedChannelId: s.Z.getChannelId()
+function C(n, t, e) {
+    let { withVoiceChannels: o = !1, withCurrentVoiceChannel: r = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
+        u = arguments.length > 4 ? arguments[4] : void 0,
+        s = (0, l.e7)([d.default], () => d.default.getGuildChangeSentinel(n)),
+        c = (0, l.e7)([a.Z], () => a.Z.version),
+        { currentVoiceChannelId: _, selectedChannelId: C } = (0, l.cj)([E.Z], () => ({
+            currentVoiceChannelId: E.Z.getVoiceChannelId(),
+            selectedChannelId: E.Z.getChannelId()
         }));
     return (0, i.useMemo)(
         () =>
-            I(
-                n,
+            A(
+                t,
                 {
-                    currentVoiceChannelId: c,
+                    currentVoiceChannelId: _,
                     selectedChannelId: C
                 },
                 {
                     withVoiceChannels: o,
-                    withCurrentVoiceChannel: E
+                    withCurrentVoiceChannel: r
                 },
-                r
-            ).map((e) => e.id),
-        [n, t, d, _]
+                u
+            ).map((n) => n.id),
+        [t, e, s, c]
     );
 }
-function I(e, n) {
-    let { currentVoiceChannelId: t, selectedChannelId: i } = n,
+function A(n, t) {
+    let { currentVoiceChannelId: e, selectedChannelId: i } = t,
         { withVoiceChannels: l, withCurrentVoiceChannel: o } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        E = arguments.length > 3 ? arguments[3] : void 0,
+        r = arguments.length > 3 ? arguments[3] : void 0,
         a = [];
     return (
-        e.forEachShownChannel((e) => {
-            ((0, r.r8)(e.type) || (l && (0, r.bw)(e.type)) || (o && (e.id === t || e.id === i))) && a.push(e);
-        }, E),
+        n.forEachShownChannel((n) => {
+            ((0, u.r8)(n.type) || (l && (0, u.bw)(n.type)) || (o && (n.id === e || n.id === i))) && a.push(n);
+        }, r),
         a
     );
 }

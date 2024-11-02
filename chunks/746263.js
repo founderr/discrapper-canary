@@ -1,46 +1,46 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return S;
+        return p;
     }
 }),
-    t(47120),
-    t(642549);
-var n = t(200651),
-    a = t(192379),
-    i = t(120356),
-    r = t.n(i),
-    o = t(772848),
-    l = t(481060),
-    c = t(53281),
-    d = t(451593),
-    _ = t(694539),
-    u = t(661065);
-let E = (e) => {
-        var s, t, a;
-        let { effect: i, onClick: o } = e,
+    n(47120),
+    n(642549);
+var i = n(200651),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(772848),
+    o = n(481060),
+    c = n(53281),
+    d = n(451593),
+    u = n(694539),
+    m = n(661065);
+let h = (e) => {
+        var t, n, s;
+        let { effect: r, onClick: a } = e,
             { deleteConfig: c } = (0, d.E)();
-        return (0, n.jsxs)(l.Clickable, {
-            className: u.previewCard,
+        return (0, i.jsxs)(o.Clickable, {
+            className: m.previewCard,
             onClick: () => {
-                o(i);
+                a(r);
             },
             children: [
-                (0, n.jsx)('div', {
-                    className: u.previewCardImage,
-                    style: { backgroundImage: 'url('.concat(null === (a = i.config) || void 0 === a ? void 0 : null === (t = a.effects) || void 0 === t ? void 0 : null === (s = t[0]) || void 0 === s ? void 0 : s.base64, ')') }
+                (0, i.jsx)('div', {
+                    className: m.previewCardImage,
+                    style: { backgroundImage: 'url('.concat(null === (s = r.config) || void 0 === s ? void 0 : null === (n = s.effects) || void 0 === n ? void 0 : null === (t = n[0]) || void 0 === t ? void 0 : t.base64, ')') }
                 }),
-                (0, n.jsxs)('div', {
-                    className: r()(u.previewCardFooter, u.row),
+                (0, i.jsxs)('div', {
+                    className: l()(m.previewCardFooter, m.row),
                     children: [
-                        (0, n.jsx)(l.Text, {
+                        (0, i.jsx)(o.Text, {
                             variant: 'text-md/bold',
-                            children: i.name
+                            children: r.name
                         }),
-                        (0, n.jsx)(l.Button, {
-                            color: l.ButtonColors.RED,
-                            look: l.ButtonLooks.LINK,
+                        (0, i.jsx)(o.Button, {
+                            color: o.ButtonColors.RED,
+                            look: o.ButtonLooks.LINK,
                             onClick: (e) => {
-                                e.preventDefault(), e.stopPropagation(), c(i.id);
+                                e.preventDefault(), e.stopPropagation(), c(r.id);
                             },
                             children: 'Delete'
                         })
@@ -49,46 +49,46 @@ let E = (e) => {
             ]
         });
     },
-    T = () => {
-        let e = (0, o.Z)();
+    g = () => {
+        let e = (0, a.Z)();
         return {
             id: e,
             name: 'New Profile Effect',
             config: { effects: [] }
         };
     };
-function S() {
-    let { profileEffects: e, upsertConfig: s } = (0, d.E)(),
-        [t, i] = a.useState(),
-        o = a.useRef(null),
-        S = (e) => {
-            (0, l.showToast)((0, l.createToast)(e, l.ToastType.FAILURE));
+function p() {
+    let { profileEffects: e, upsertConfig: t } = (0, d.E)(),
+        [n, r] = s.useState(),
+        a = s.useRef(null),
+        p = (e) => {
+            (0, o.showToast)((0, o.createToast)(e, o.ToastType.FAILURE));
         };
-    return (0, n.jsxs)('div', {
-        className: u.root,
+    return (0, i.jsxs)('div', {
+        className: m.root,
         children: [
-            null == t &&
-                (0, n.jsxs)(n.Fragment, {
+            null == n &&
+                (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, n.jsxs)('div', {
-                            className: u.col,
+                        (0, i.jsxs)('div', {
+                            className: m.col,
                             children: [
-                                (0, n.jsx)('div', {
-                                    className: u.section,
-                                    children: (0, n.jsx)(l.Heading, {
+                                (0, i.jsx)('div', {
+                                    className: m.section,
+                                    children: (0, i.jsx)(o.Heading, {
                                         variant: 'heading-lg/bold',
                                         children: 'Profile Effects'
                                     })
                                 }),
-                                (0, n.jsx)('div', {
-                                    className: u.grid,
+                                (0, i.jsx)('div', {
+                                    className: m.grid,
                                     children: Object.values(e).map((e) =>
-                                        (0, n.jsx)(
-                                            E,
+                                        (0, i.jsx)(
+                                            h,
                                             {
                                                 effect: e,
                                                 onClick: (e) => {
-                                                    i(e);
+                                                    r(e);
                                                 }
                                             },
                                             e.id
@@ -97,39 +97,39 @@ function S() {
                                 })
                             ]
                         }),
-                        (0, n.jsxs)('div', {
-                            className: r()(u.row, u.end, u.section),
+                        (0, i.jsxs)('div', {
+                            className: l()(m.row, m.end, m.section),
                             children: [
-                                (0, n.jsxs)('div', {
-                                    className: u.uploadButton,
+                                (0, i.jsxs)('div', {
+                                    className: m.uploadButton,
                                     children: [
-                                        (0, n.jsx)(l.Text, {
+                                        (0, i.jsx)(o.Text, {
                                             variant: 'text-md/normal',
                                             color: 'always-white',
                                             children: 'Import Shared Config'
                                         }),
-                                        (0, n.jsx)(c.Z, {
-                                            ref: o,
+                                        (0, i.jsx)(c.Z, {
+                                            ref: a,
                                             onChange: (e) => {
-                                                let t = e.currentTarget.files;
-                                                if (null == t) return;
-                                                let n = t[0],
-                                                    a = new FileReader();
-                                                (a.onload = (e) => {
-                                                    if (null == e.target || 'string' != typeof e.target.result) return S('Something went wrong, try again!');
-                                                    let [t, n] = e.target.result.split(',');
-                                                    if (!t.includes('text/plain')) return S("Make sure you're only uploading text files!");
-                                                    s(JSON.parse(atob(n))), (0, l.showToast)((0, l.createToast)('Profile Effect (maybe??) imported!', l.ToastType.SUCCESS));
+                                                let n = e.currentTarget.files;
+                                                if (null == n) return;
+                                                let i = n[0],
+                                                    s = new FileReader();
+                                                (s.onload = (e) => {
+                                                    if (null == e.target || 'string' != typeof e.target.result) return p('Something went wrong, try again!');
+                                                    let [n, i] = e.target.result.split(',');
+                                                    if (!n.includes('text/plain')) return p("Make sure you're only uploading text files!");
+                                                    t(JSON.parse(atob(i))), (0, o.showToast)((0, o.createToast)('Profile Effect (maybe??) imported!', o.ToastType.SUCCESS));
                                                 }),
-                                                    a.readAsDataURL(n);
+                                                    s.readAsDataURL(i);
                                             },
                                             multiple: !1
                                         })
                                     ]
                                 }),
-                                (0, n.jsx)(l.Button, {
+                                (0, i.jsx)(o.Button, {
                                     onClick: () => {
-                                        s(T());
+                                        t(g());
                                     },
                                     children: 'Create New Effect'
                                 })
@@ -137,11 +137,11 @@ function S() {
                         })
                     ]
                 }),
-            null != t &&
-                (0, n.jsx)(_.Z, {
-                    effect: t,
+            null != n &&
+                (0, i.jsx)(u.Z, {
+                    effect: n,
                     back: () => {
-                        i(void 0);
+                        r(void 0);
                     }
                 })
         ]

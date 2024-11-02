@@ -5,39 +5,39 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(399606),
-    a = n(481060),
-    l = n(210975),
-    r = n(158776),
+var l = n(399606),
+    r = n(481060),
+    a = n(210975),
+    s = n(158776),
     o = n(699516),
     c = n(594174),
     u = n(51144),
     d = n(984370),
-    h = n(689938),
+    h = n(388032),
     m = n(784237);
 function p(e) {
     let t = e.channel.getRecipientId(),
         n = e.channel.isSystemDM(),
-        p = (0, s.e7)([c.default], () => c.default.getUser(t)),
-        _ = (0, s.e7)([r.Z], () => r.Z.getStatus(t)),
-        f = (0, s.e7)([r.Z], () => r.Z.isMobileOnline(t)),
-        E = (0, s.e7)([o.Z], () => o.Z.getNickname(t)),
-        g = u.ZP.useUserTag(p),
-        C = (0, l.m$)({
+        p = (0, l.e7)([c.default], () => c.default.getUser(t)),
+        f = (0, l.e7)([s.Z], () => s.Z.getStatus(t)),
+        g = (0, l.e7)([s.Z], () => s.Z.isMobileOnline(t)),
+        C = (0, l.e7)([o.Z], () => o.Z.getNickname(t)),
+        x = u.ZP.useUserTag(p),
+        v = (0, a.m$)({
             channelId: e.channel.id,
             location: 'HeaderBarDirectMessageV2'
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(a.HiddenVisually, { children: h.Z.Messages.DIRECT_MESSAGE }),
+            (0, i.jsx)(r.HiddenVisually, { children: h.intl.string(h.t.EJRzg4) }),
             null != p &&
                 !n &&
                 (0, i.jsx)('div', {
-                    children: (0, i.jsx)(a.Avatar, {
-                        status: _,
-                        isMobile: f,
+                    children: (0, i.jsx)(r.Avatar, {
+                        status: f,
+                        isMobile: g,
                         className: m.avatar,
-                        size: a.AvatarSizes.SIZE_24,
+                        size: r.AvatarSizes.SIZE_24,
                         'aria-label': u.ZP.getName(p),
                         src: p.getAvatarURL(void 0, 24)
                     })
@@ -49,20 +49,20 @@ function p(e) {
                 className: null != e.handleClick ? m.cursorPointer : null,
                 children: (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(a.TooltipContainer, {
-                            text: g,
+                        (0, i.jsx)(r.TooltipContainer, {
+                            text: x,
                             position: 'bottom',
-                            children: null != E ? E : u.ZP.getName(p)
+                            children: null != C ? C : u.ZP.getName(p)
                         }),
-                        C &&
-                            (0, i.jsx)(a.Tooltip, {
-                                text: h.Z.Messages.E2EE_CALL_VERIFIED_TOOLTIP,
+                        v &&
+                            (0, i.jsx)(r.Tooltip, {
+                                text: h.intl.string(h.t.QyZ4TU),
                                 children: (e) =>
-                                    (0, i.jsx)(a.ShieldLockIcon, {
+                                    (0, i.jsx)(r.ShieldLockIcon, {
                                         ...e,
                                         size: 'xs',
-                                        'aria-label': h.Z.Messages.E2EE_CALL_VERIFIED_A11Y,
-                                        color: a.tokens.colors.INTERACTIVE_NORMAL,
+                                        'aria-label': h.intl.string(h.t.VHXh8f),
+                                        color: r.tokens.colors.INTERACTIVE_NORMAL,
                                         className: m.secureFramesIcon
                                     })
                             })

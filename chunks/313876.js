@@ -5,26 +5,26 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(442837),
-    s = n(955415),
-    r = n(314897),
-    l = n(782605),
-    o = n(689938);
+var r = n(442837),
+    l = n(955415),
+    a = n(314897),
+    o = n(782605),
+    s = n(388032);
 function c(e) {
     var t, n;
     let { author: c, inviteError: u } = e,
-        d = (0, a.e7)([r.default], () => r.default.getId()) === c.id ? o.Z.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID : o.Z.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID,
-        _ = (0, l.l)(null == u ? void 0 : u.code);
-    return (0, i.jsxs)(s.Z, {
+        d = (0, r.e7)([a.default], () => a.default.getId()) === c.id ? s.intl.string(s.t.C89OLC) : s.intl.string(s.t['YVub5+']),
+        m = (0, o.l)(null == u ? void 0 : u.code);
+    return (0, i.jsxs)(l.Z, {
         children: [
-            (0, i.jsx)(s.Z.Header, { text: d }),
-            (0, i.jsxs)(s.Z.Body, {
+            (0, i.jsx)(l.Z.Header, { text: d }),
+            (0, i.jsxs)(l.Z.Body, {
                 children: [
-                    (0, i.jsx)(s.Z.Icon, { expired: !0 }),
-                    (0, i.jsx)(s.Z.Info, {
+                    (0, i.jsx)(l.Z.Icon, { expired: !0 }),
+                    (0, i.jsx)(l.Z.Info, {
                         expired: !0,
-                        title: null !== (t = null == _ ? void 0 : _.title) && void 0 !== t ? t : o.Z.Messages.INVITE_BUTTON_INVALID,
-                        children: null !== (n = null == _ ? void 0 : _.description) && void 0 !== n ? n : null == u ? void 0 : u.message
+                        title: null !== (t = null == m ? void 0 : m.title) && void 0 !== t ? t : s.intl.string(s.t['Jhx/ub']),
+                        children: null !== (n = null == m ? void 0 : m.description) && void 0 !== n ? n : null == u ? void 0 : u.message
                     })
                 ]
             })

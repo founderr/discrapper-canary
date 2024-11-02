@@ -1,58 +1,58 @@
-t.d(n, {
+e.d(t, {
     $c: function () {
-        return c;
+        return _;
     },
     Nx: function () {
         return C;
     },
     On: function () {
-        return I;
+        return A;
     },
     tQ: function () {
-        return d;
+        return s;
     },
     x5: function () {
-        return _;
+        return c;
     }
 });
-var i = t(140492),
-    l = t(475468),
-    o = t(703656),
-    E = t(769654),
-    r = t(944486),
-    a = t(914010),
-    u = t(358085),
-    s = t(981631);
-let d = {
+var i = e(140492),
+    l = e(475468),
+    o = e(703656),
+    r = e(769654),
+    u = e(944486),
+    a = e(914010),
+    d = e(358085),
+    E = e(981631);
+let s = {
         binds: ['alt+down'],
         comboKeysBindGlobal: !0,
         action: () => ((0, i.Z)(), !1)
     },
-    _ = {
+    c = {
         binds: ['alt+up'],
         comboKeysBindGlobal: !0,
         action: () => ((0, i.Z)(-1), !1)
     },
-    c = {
+    _ = {
         binds: ['mod+alt+right'],
         comboKeysBindGlobal: !0,
         action() {
-            let e;
-            if (null != a.Z.getGuildId()) e = s.ME;
+            let n;
+            if (null != a.Z.getGuildId()) n = E.ME;
             else {
-                let n = a.Z.getLastSelectedGuildId();
-                null != n && ((e = n), (0, l.K)(n, r.Z.getChannelId(n)));
+                let t = a.Z.getLastSelectedGuildId();
+                null != t && ((n = t), (0, l.K)(t, u.Z.getChannelId(t)));
             }
-            return null != e && (0, E.X)(e), !1;
+            return null != n && (0, r.X)(n), !1;
         }
     },
     C = {
-        binds: (0, u.isMac)() ? ['mod+['] : ['alt+left'],
+        binds: (0, d.isMac)() ? ['mod+['] : ['alt+left'],
         comboKeysBindGlobal: !0,
         action: () => ((0, o.op)(), !1)
     },
-    I = {
-        binds: (0, u.isMac)() ? ['mod+]'] : ['alt+right'],
+    A = {
+        binds: (0, d.isMac)() ? ['mod+]'] : ['alt+right'],
         comboKeysBindGlobal: !0,
         action: () => ((0, o.eH)(), !1)
     };

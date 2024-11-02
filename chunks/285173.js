@@ -1,29 +1,29 @@
-E.d(_, {
+n.d(t, {
     Z: function () {
-        return a;
+        return o;
     }
 });
-var s = E(200651),
-    n = E(192379),
-    t = E(481060),
-    r = E(412899),
-    T = E(231338);
-function a(e) {
-    var _;
-    let { guildId: E, role: a, className: I, canRemove: l = !1, onRemove: o = T.dG } = e,
-        A = (0, t.useToken)(t.tokens.unsafe_rawColors.PRIMARY_300).hex(),
-        i = null !== (_ = null == a ? void 0 : a.colorString) && void 0 !== _ ? _ : A,
-        N = n.useMemo(() => ({ backgroundColor: ''.concat(i, '27') }), [i]);
-    return null == a
+var r = n(200651),
+    l = n(192379),
+    i = n(481060),
+    s = n(412899),
+    a = n(231338);
+function o(e) {
+    var t;
+    let { guildId: n, role: o, className: E, canRemove: u = !1, onRemove: c = a.dG } = e,
+        d = (0, i.useToken)(i.tokens.unsafe_rawColors.PRIMARY_300).hex(),
+        _ = null !== (t = null == o ? void 0 : o.colorString) && void 0 !== t ? t : d,
+        A = l.useMemo(() => ({ backgroundColor: ''.concat(_, '27') }), [_]);
+    return null == o
         ? null
-        : (0, s.jsx)(t.Clickable, {
-              children: (0, s.jsx)(r.UB, {
-                  className: I,
-                  style: N,
-                  role: a,
-                  guildId: E,
-                  canRemove: l,
-                  onRemove: o
+        : (0, r.jsx)(i.Clickable, {
+              children: (0, r.jsx)(s.UB, {
+                  className: E,
+                  style: A,
+                  role: o,
+                  guildId: n,
+                  canRemove: u,
+                  onRemove: c
               })
           });
 }

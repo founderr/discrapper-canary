@@ -18,14 +18,14 @@ function d(e) {
     switch ((o.Z.setState({ selectedTab: t }), t)) {
         case l.F$.SERVERS:
             var n, d;
-            let _ = e.selectedServersTab;
-            null != _
+            let f = e.selectedServersTab;
+            null != f
                 ? i.Z.setState({
-                      selectedTab: _,
+                      selectedTab: f,
                       entrypoint: null !== (n = e.entrypoint) && void 0 !== n ? n : c.Qq.UNKNOWN
                   })
                 : i.Z.setState({ entrypoint: null !== (d = e.entrypoint) && void 0 !== d ? d : c.Qq.UNKNOWN });
-            let E = (function (e) {
+            let _ = (function (e) {
                 let { extra: t } = e,
                     n = {},
                     i = r.GN.getState().entrypointGameId;
@@ -39,7 +39,7 @@ function d(e) {
                     n
                 );
             })({ extra: e.extra });
-            return (0, s.uL)(u.Z5c.GLOBAL_DISCOVERY_SERVERS, E);
+            return (0, s.uL)(u.Z5c.GLOBAL_DISCOVERY_SERVERS, _);
         case l.F$.APPS:
             return (0, s.uL)(u.Z5c.GLOBAL_DISCOVERY_APPS);
         case l.F$.QUESTS:

@@ -1,11 +1,11 @@
 n.d(t, {
     f: function () {
-        return r;
+        return a;
     }
 });
 var i = n(996106),
-    a = n(186901),
-    s = n(981631);
-function r(e) {
-    if (a.He.IPC !== e && a.He.POST_MESSAGE !== e) throw new i.Z({ errorCode: s.lTL.INVALID_COMMAND }, 'Invalid transport.');
+    r = n(186901),
+    l = n(981631);
+function a(e) {
+    if (r.He.IPC !== e && r.He.POST_MESSAGE !== e) throw new i.Z({ errorCode: l.lTL.INVALID_COMMAND }, 'Invalid transport.');
 }

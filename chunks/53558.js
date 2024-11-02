@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return f;
     }
 });
 var r = n(200651);
@@ -11,7 +11,7 @@ var i = n(442837),
     o = n(283836),
     l = n(621853),
     u = n(475413),
-    c = n(689938);
+    c = n(388032);
 function d(e) {
     let { user: t, onClick: n, ...i } = e;
     return (
@@ -19,7 +19,7 @@ function d(e) {
         (0, r.jsx)(u.tG, {
             action: 'PRESS_APP_STOREFRONT',
             icon: a.ShopIcon,
-            text: c.Z.Messages.STOREFRONT,
+            text: c.intl.string(c.t.V7j5aW),
             color: a.ButtonColors.BRAND,
             themeColor: 'none',
             onClick: n,
@@ -27,15 +27,15 @@ function d(e) {
         })
     );
 }
-function _(e) {
+function f(e) {
     var t;
     let { user: o, guildId: u, ...c } = e,
-        _ = (0, i.e7)([l.Z], () => {
+        f = (0, i.e7)([l.Z], () => {
             var e;
             return null === (e = l.Z.getUserProfile(o.id)) || void 0 === e ? void 0 : e.application;
         }),
-        E = (0, s.R)(null !== (t = null == _ ? void 0 : _.id) && void 0 !== t ? t : '');
-    return null != _ && E
+        _ = (0, s.R)(null !== (t = null == f ? void 0 : f.id) && void 0 !== t ? t : '');
+    return null != f && _
         ? (0, r.jsx)(d, {
               user: o,
               guildId: u,
@@ -44,7 +44,7 @@ function _(e) {
                       let { default: e } = await Promise.all([n.e('29549'), n.e('31605'), n.e('81272'), n.e('77803'), n.e('17704')]).then(n.bind(n, 7225));
                       return (t) =>
                           (0, r.jsx)(e, {
-                              appId: _.id,
+                              appId: f.id,
                               guildId: u,
                               ...t
                           });

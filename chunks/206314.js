@@ -7,8 +7,8 @@ var r = n(200651),
     a = n(192379),
     i = n(120356),
     o = n.n(i),
-    s = n(692547),
-    l = n(481060),
+    l = n(692547),
+    s = n(481060),
     c = n(600164),
     d = n(4912),
     u = n(701491);
@@ -18,13 +18,13 @@ class p extends a.PureComponent {
         let { label: e } = this.props;
         return m.includes(e)
             ? (0, r.jsx)(d.Z, {
-                  color: s.Z.unsafe_rawColors.YELLOW_300.css,
+                  color: l.Z.unsafe_rawColors.YELLOW_300.css,
                   className: u.valueIcon
               })
             : null;
     }
     render() {
-        let { children: e, className: t, valueRendered: n, section: a, label: i, renderGraph: s } = this.props;
+        let { children: e, className: t, valueRendered: n, section: a, label: i, renderGraph: l } = this.props;
         return (0, r.jsxs)(c.Z, {
             className: o()(u.item, t),
             direction: c.Z.Direction.VERTICAL,
@@ -35,7 +35,7 @@ class p extends a.PureComponent {
                     align: c.Z.Align.START,
                     children: [
                         (0, r.jsx)(c.Z.Child, {
-                            children: (0, r.jsx)(l.H, {
+                            children: (0, r.jsx)(s.H, {
                                 className: u.title,
                                 children: e
                             })
@@ -59,19 +59,19 @@ class p extends a.PureComponent {
                               })
                     ]
                 }),
-                null !== s &&
+                null !== l &&
                     (0, r.jsx)(
                         c.Z.Child,
                         {
                             className: u.graph,
-                            children: (0, r.jsx)(l.FormText, {
-                                type: l.FormTextTypes.DESCRIPTION,
-                                children: s
+                            children: (0, r.jsx)(s.FormText, {
+                                type: s.FormTextTypes.DESCRIPTION,
+                                children: l
                             })
                         },
                         null != a ? ''.concat(a, '-').concat(i) : i
                     ),
-                (0, r.jsx)(l.FormDivider, { className: u.divider })
+                (0, r.jsx)(s.FormDivider, { className: u.divider })
             ]
         });
     }

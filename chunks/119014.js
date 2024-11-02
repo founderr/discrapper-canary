@@ -5,18 +5,18 @@ n.d(t, {
 }),
     n(47120);
 var i = n(192379),
-    a = n(442837),
-    s = n(894653),
-    r = n(979007),
-    l = n(689938);
+    r = n(442837),
+    l = n(894653),
+    a = n(979007),
+    s = n(388032);
 function o() {
-    let e = (0, a.e7)([s.Z], () => s.Z.getCategories()),
-        [t, n] = i.useState(r.kK),
+    let e = (0, r.e7)([l.Z], () => l.Z.getCategories()),
+        [t, n] = i.useState(a.kK),
         o = i.useMemo(
             () => [
                 {
-                    id: r.kK,
-                    label: l.Z.Messages.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY
+                    id: a.kK,
+                    label: s.intl.string(s.t.ijDDw8)
                 },
                 ...e.map((e) => ({
                     id: e.id.toString(),

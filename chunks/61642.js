@@ -8,19 +8,19 @@ n(192379);
 var l = n(239091),
     r = n(396828),
     a = n(703656),
-    s = n(434479),
-    o = n(981631),
+    o = n(434479),
+    s = n(981631),
     c = n(176505),
-    u = n(689938);
+    u = n(388032);
 function d(e) {
     let { guild: t, selected: d } = e;
-    return (0, i.jsx)(s.m, {
+    return (0, i.jsx)(o.m, {
         id: 'subscriptions-'.concat(t.id),
         renderIcon: (e) => (0, i.jsx)(r.Z, { className: e }),
-        text: u.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
+        text: u.intl.string(u.t['KzCF//']),
         selected: d,
         onClick: () => {
-            (0, a.uL)(o.Z5c.CHANNEL(t.id, c.oC.ROLE_SUBSCRIPTIONS));
+            (0, a.uL)(s.Z5c.CHANNEL(t.id, c.oC.ROLE_SUBSCRIPTIONS));
         },
         onContextMenu: (e) => {
             null != t &&

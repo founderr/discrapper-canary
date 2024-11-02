@@ -12,30 +12,30 @@ var r,
     u = n(31775),
     c = n.n(u),
     d = n(442837),
-    _ = n(570140);
-function E(e) {
+    f = n(570140);
+function _(e) {
     let { applicationId: t, guildId: n, page: r } = e;
     return 'applicationId:'.concat(t, ' guildId:').concat(n, ' page:').concat(r);
 }
 ((r = o || (o = {}))[(r.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (r[(r.FETCHING = 1)] = 'FETCHING'), (r[(r.FETCHED = 2)] = 'FETCHED'), (r[(r.ERROR = 3)] = 'ERROR');
-let f = new (c())({ max: 20 }),
-    h = {};
-class p extends (l = d.ZP.Store) {
+let h = new (c())({ max: 20 }),
+    p = {};
+class m extends (l = d.ZP.Store) {
     getSimilarApplications(e) {
         let { applicationId: t, guildId: n, page: r } = e;
         if (null == t) return;
-        let i = E({
+        let i = _({
             applicationId: t,
             guildId: n,
             page: r
         });
-        return f.get(i);
+        return h.get(i);
     }
     getFetchState(e) {
         let { applicationId: t, guildId: n, page: r } = e;
         if (null != t)
-            return h[
-                E({
+            return p[
+                _({
                     applicationId: t,
                     guildId: n,
                     page: r
@@ -44,7 +44,7 @@ class p extends (l = d.ZP.Store) {
     }
 }
 (s = 'ApplicationDirectorySimilarApplicationsStore'),
-    (a = 'displayName') in (i = p)
+    (a = 'displayName') in (i = m)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -52,47 +52,47 @@ class p extends (l = d.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new p(_.Z, {
+    (t.Z = new m(f.Z, {
         APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS: function (e) {
             let { applicationId: t, guildId: n, page: r } = e,
-                i = E({
+                i = _({
                     applicationId: t,
                     guildId: n,
                     page: r
                 });
-            h = {
-                ...h,
+            p = {
+                ...p,
                 [i]: 1
             };
         },
         APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_SUCCESS: function (e) {
             let { applicationId: t, guildId: n, similarApplications: r, loadId: i, page: a, totalPages: s } = e,
-                o = E({
+                o = _({
                     applicationId: t,
                     guildId: n,
                     page: a
                 });
-            f.set(o, {
+            h.set(o, {
                 lastFetchTimeMs: Date.now(),
                 applications: r,
                 loadId: i,
                 page: a,
                 totalPages: s
             }),
-                (h = {
-                    ...h,
+                (p = {
+                    ...p,
                     [o]: 2
                 });
         },
         APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_FAILURE: function (e) {
             let { applicationId: t, guildId: n, page: r } = e,
-                i = E({
+                i = _({
                     applicationId: t,
                     guildId: n,
                     page: r
                 });
-            h = {
-                ...h,
+            p = {
+                ...p,
                 [i]: 3
             };
         }

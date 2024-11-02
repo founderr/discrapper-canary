@@ -21,13 +21,13 @@ var r = function (e, t, n, r, i) {
                 source: 'rgb'
             };
     } else {
-        var _ = void 0;
-        if (r !== (_ = u < 0 ? 0 : u > a ? 1 : Math.round((100 * u) / a) / 100))
+        var f = void 0;
+        if (r !== (f = u < 0 ? 0 : u > a ? 1 : Math.round((100 * u) / a) / 100))
             return {
                 h: t.h,
                 s: t.s,
                 l: t.l,
-                a: _,
+                a: f,
                 source: 'rgb'
             };
     }

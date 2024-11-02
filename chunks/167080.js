@@ -4,42 +4,42 @@ var r = n(200651),
     s = n(481060),
     o = n(626135),
     l = n(981631),
-    u = n(689938);
+    u = n(388032);
 t.Z = (e) => {
-    let { href: t, className: n, iconClassName: c, rel: d, target: _, mimeType: E, fileName: f, focusProps: h, onClick: p, ...I } = e,
-        m = i.useMemo(() => a.X.getDefaultLinkInterceptor(t), [t]),
-        T = i.useCallback(
+    let { href: t, className: n, iconClassName: c, rel: d, target: f, mimeType: _, fileName: h, focusProps: p, onClick: m, ...g } = e,
+        E = i.useMemo(() => a.X.getDefaultLinkInterceptor(t), [t]),
+        v = i.useCallback(
             (e) => {
                 o.default.track(l.rMx.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
-                    attachment_type: null == E ? void 0 : E[0],
-                    attachment_subtype: null == E ? void 0 : E[1]
+                    attachment_type: null == _ ? void 0 : _[0],
+                    attachment_subtype: null == _ ? void 0 : _[1]
                 }),
-                    null == p || p(),
-                    null == m || m(e);
+                    null == m || m(),
+                    null == E || E(e);
             },
-            [m, E, p]
+            [E, _, m]
         );
-    return null != f
+    return null != h
         ? (0, r.jsx)(s.Anchor, {
               href: t,
-              onClick: T,
-              target: _,
+              onClick: v,
+              target: f,
               rel: d,
               className: n,
-              'aria-label': u.Z.Messages.DOWNLOAD,
-              focusProps: h,
-              ...I,
-              children: f
+              'aria-label': u.intl.string(u.t['1WjMbG']),
+              focusProps: p,
+              ...g,
+              children: h
           })
         : (0, r.jsx)(s.Anchor, {
               href: t,
-              onClick: T,
-              target: _,
+              onClick: v,
+              target: f,
               rel: d,
               className: n,
-              'aria-label': u.Z.Messages.DOWNLOAD,
-              focusProps: h,
-              ...I,
+              'aria-label': u.intl.string(u.t['1WjMbG']),
+              focusProps: p,
+              ...g,
               children: (0, r.jsx)(s.DownloadIcon, {
                   size: 'md',
                   color: 'currentColor',

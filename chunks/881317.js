@@ -1,68 +1,68 @@
 n(47120);
-var s = n(200651),
+var i = n(200651),
     r = n(192379),
-    i = n(990547),
+    s = n(990547),
     a = n(442837),
     l = n(481060),
     o = n(893776),
     c = n(232567),
     u = n(388905),
     d = n(353926),
-    _ = n(82554),
-    h = n(726521),
-    E = n(185625),
-    g = n(314897),
+    h = n(82554),
+    g = n(726521),
+    m = n(185625),
+    f = n(314897),
     p = n(63063),
-    m = n(981631),
-    I = n(689938),
-    f = n(987742),
-    N = n(113207);
+    _ = n(981631),
+    x = n(388032),
+    E = n(987742),
+    v = n(113207);
 a.ZP.initialize();
-let T = (e) => {
+let I = (e) => {
     let { title: t, menuType: r } = e,
         a = () => {
             (0, l.openModalLazy)(async () => {
                 let { default: e } = await n.e('93288').then(n.bind(n, 396410));
                 return (t) =>
-                    (0, s.jsx)(e, {
+                    (0, i.jsx)(e, {
                         ...t,
                         onSuccess: o,
-                        headerText: I.Z.Messages.ENTER_EMAIL,
-                        confirmButtonText: I.Z.Messages.NEXT,
+                        headerText: x.intl.string(x.t.ZLRYGR),
+                        confirmButtonText: x.intl.string(x.t.PDTjLC),
                         confirmButtonColor: l.Button.Colors.BRAND,
-                        impressionName: i.ImpressionNames.URF_ENTER_EMAIL
+                        impressionName: s.ImpressionNames.URF_ENTER_EMAIL
                     });
             });
         },
         o = (e) => {
             let t = async () => {
-                    await (0, E.yL)(r, e);
+                    await (0, m.yL)(r, e);
                 },
-                a = async (t) => await (0, E.RV)(r, e, t),
+                a = async (t) => await (0, m.RV)(r, e, t),
                 o = (e) => {
                     let t = null == e ? void 0 : e.token;
-                    r === _.BM.MESSAGE ? (0, h.eE)(t) : r === _.BM.USER && (0, h.JM)(t);
+                    r === h.BM.MESSAGE ? (0, g.eE)(t) : r === h.BM.USER && (0, g.JM)(t);
                 };
             t(),
                 (0, l.openModalLazy)(async () => {
                     let { default: e } = await n.e('94566').then(n.bind(n, 965072));
                     return (n) =>
-                        (0, s.jsx)(e, {
+                        (0, i.jsx)(e, {
                             ...n,
                             onFormSubmit: a,
                             onResend: t,
                             onSuccess: o,
-                            headerText: I.Z.Messages.MEMBER_VERIFICATION_EMAIL_VERIFICATION_EMAIL_SENT,
-                            confirmButtonText: I.Z.Messages.VERIFY,
+                            headerText: x.intl.string(x.t.H3Q7U1),
+                            confirmButtonText: x.intl.string(x.t['13ofGh']),
                             confirmButtonColor: l.Button.Colors.BRAND,
-                            impressionName: i.ImpressionNames.URF_CONFIRM_EMAIL_CODE
+                            impressionName: s.ImpressionNames.URF_CONFIRM_EMAIL_CODE
                         });
                 });
         };
-    return (0, s.jsx)('div', {
-        className: f.buttonColumn,
-        children: (0, s.jsx)(l.Button, {
-            className: N.__invalid_reportButton,
+    return (0, i.jsx)('div', {
+        className: E.buttonColumn,
+        children: (0, i.jsx)(l.Button, {
+            className: v.__invalid_reportButton,
             fullWidth: !0,
             color: l.Button.Colors.BRAND,
             onClick: () => a(),
@@ -72,56 +72,56 @@ let T = (e) => {
 };
 t.Z = () => {
     let [e, t] = r.useState(!0),
-        [n, i] = r.useState(!1),
-        h = (0, a.e7)([g.default], () => g.default.isAuthenticated()),
-        A = (0, a.e7)([d.Z], () => d.Z.hasLoadedExperiments),
-        x = () => {
-            (0, E.qJ)()
+        [n, s] = r.useState(!1),
+        g = (0, a.e7)([f.default], () => f.default.isAuthenticated()),
+        b = (0, a.e7)([d.Z], () => d.Z.hasLoadedExperiments),
+        N = () => {
+            (0, m.qJ)()
                 .then(() => {
-                    t(!1), i(!0);
+                    t(!1), s(!0);
                 })
                 .catch(() => {
-                    t(!1), i(!1);
+                    t(!1), s(!1);
                 });
         };
     return (
         r.useEffect(() => {
-            h
+            g
                 ? (t(!0),
                   c
                       .k({ withAnalyticsToken: !0 })
-                      .then(() => x())
+                      .then(() => N())
                       .catch(() => t(!1)))
-                : x();
-        }, [h]),
+                : N();
+        }, [g]),
         r.useEffect(() => {
             (async () => {
-                !A && (await o.Z.getLocationMetadata(), o.Z.getExperiments());
+                !b && (await o.Z.getLocationMetadata(), o.Z.getExperiments());
             })();
-        }, [A]),
-        e || !A
-            ? (0, s.jsx)(u.ZP, { children: (0, s.jsx)(l.Spinner, {}) })
+        }, [b]),
+        e || !b
+            ? (0, i.jsx)(u.ZP, { children: (0, i.jsx)(l.Spinner, {}) })
             : n &&
-              (0, s.jsxs)(u.ZP, {
+              (0, i.jsxs)(u.ZP, {
                   children: [
-                      (0, s.jsx)(u.Dx, {
-                          className: N.marginBottom8,
-                          children: I.Z.Messages.URF_LANDING_PAGE_TITLE
+                      (0, i.jsx)(u.Dx, {
+                          className: v.marginBottom8,
+                          children: x.intl.string(x.t.Z11w19)
                       }),
-                      (0, s.jsx)(u.DK, {
-                          className: N.marginBottom8,
-                          children: I.Z.Messages.URF_LANDING_PAGE_SUBTITLE.format({ supportURL: p.Z.getArticleURL(m.BhN.COPYRIGHT_AND_IP_POLICY) })
+                      (0, i.jsx)(u.DK, {
+                          className: v.marginBottom8,
+                          children: x.intl.format(x.t['532l+v'], { supportURL: p.Z.getArticleURL(_.BhN.COPYRIGHT_AND_IP_POLICY) })
                       }),
-                      (0, s.jsxs)('div', {
-                          className: f.container,
+                      (0, i.jsxs)('div', {
+                          className: E.container,
                           children: [
-                              (0, s.jsx)(T, {
-                                  title: I.Z.Messages.URF_LANDING_PAGE_REPORT_MESSAGE_BUTTON,
-                                  menuType: _.BM.MESSAGE
+                              (0, i.jsx)(I, {
+                                  title: x.intl.string(x.t.fuqnBA),
+                                  menuType: h.BM.MESSAGE
                               }),
-                              (0, s.jsx)(T, {
-                                  title: I.Z.Messages.URF_LANDING_PAGE_REPORT_USER_PROFILE_BUTTON,
-                                  menuType: _.BM.USER
+                              (0, i.jsx)(I, {
+                                  title: x.intl.string(x.t.F4jrRU),
+                                  menuType: h.BM.USER
                               })
                           ]
                       })

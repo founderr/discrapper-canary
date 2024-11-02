@@ -1,15 +1,15 @@
 var i,
-    a,
-    s,
     r,
-    l = n(442837),
+    l,
+    a,
+    s = n(442837),
     o = n(570140),
     c = n(353926),
     d = n(160462);
 function u() {
     d.W.trigger();
 }
-class _ extends (r = l.ZP.Store) {
+class h extends (a = s.ZP.Store) {
     initialize() {
         this.waitFor(c.Z);
     }
@@ -17,13 +17,13 @@ class _ extends (r = l.ZP.Store) {
         super(o.Z, { CONNECTION_OPEN: u }, o.c.Early);
     }
 }
-(s = 'ExperimentTriggerPointStore'),
-    (a = 'displayName') in (i = _)
-        ? Object.defineProperty(i, a, {
-              value: s,
+(l = 'ExperimentTriggerPointStore'),
+    (r = 'displayName') in (i = h)
+        ? Object.defineProperty(i, r, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[a] = s),
-    new _();
+        : (i[r] = l),
+    new h();

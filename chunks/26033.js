@@ -6,16 +6,16 @@ n.d(t, {
         return c;
     },
     LP: function () {
-        return h;
+        return p;
     },
     Mq: function () {
-        return f;
+        return h;
     },
     Q0: function () {
         return s;
     },
     aA: function () {
-        return E;
+        return _;
     },
     dU: function () {
         return u;
@@ -30,7 +30,7 @@ n.d(t, {
         return l;
     },
     y0: function () {
-        return _;
+        return f;
     }
 });
 var r = n(876215),
@@ -56,16 +56,16 @@ function c(e) {
 function d(e) {
     return u(e) || c(e);
 }
-function _(e) {
+function f(e) {
     return (null == e ? void 0 : e.content_type) === r.s.WATCHED_MEDIA;
 }
-function E(e) {
+function _(e) {
     var t, n;
     return (!!o((t = e)) && t.extra.platform === i.z.XBOX) || (!!o((n = e)) && n.extra.platform === i.z.PLAYSTATION);
 }
-function f(e) {
+function h(e) {
     return (null == e ? void 0 : e.content_type) === r.s.LAUNCHED_ACTIVITY;
 }
-function h(e) {
-    return o(e) || d(e) || _(e) || l(e);
+function p(e) {
+    return o(e) || d(e) || f(e) || l(e);
 }

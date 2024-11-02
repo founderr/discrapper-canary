@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return s;
     }
 }),
     n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(314897);
-function r(e, t, n) {
+    r = n(192379),
+    l = n(314897);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,13 +20,13 @@ function r(e, t, n) {
         e
     );
 }
-function l(e) {
-    return class extends a.Component {
+function s(e) {
+    return class extends r.Component {
         componentDidMount() {
-            s.default.addChangeListener(this.onStoreChange);
+            l.default.addChangeListener(this.onStoreChange);
         }
         componentWillUnmount() {
-            s.default.removeChangeListener(this.onStoreChange);
+            l.default.removeChangeListener(this.onStoreChange);
         }
         render() {
             return (0, i.jsx)(e, {
@@ -36,9 +36,9 @@ function l(e) {
         }
         constructor(...e) {
             super(...e),
-                r(this, 'state', { isAuthenticated: s.default.isAuthenticated() }),
-                r(this, 'onStoreChange', () => {
-                    this.setState({ isAuthenticated: s.default.isAuthenticated() });
+                a(this, 'state', { isAuthenticated: l.default.isAuthenticated() }),
+                a(this, 'onStoreChange', () => {
+                    this.setState({ isAuthenticated: l.default.isAuthenticated() });
                 });
         }
     };

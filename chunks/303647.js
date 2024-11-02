@@ -1,98 +1,98 @@
-a.r(t),
-    a.d(t, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return _;
+            return m;
         }
     }),
-    a(47120);
-var s = a(200651),
-    l = a(192379),
-    n = a(481060),
-    i = a(479531),
-    o = a(600164),
-    r = a(99325),
-    c = a(486527),
-    d = a(689938),
-    u = a(294550);
-function _(e) {
-    var t, a;
-    let { transitionState: _, onClose: I, entry: m } = e,
-        [h, E] = l.useState(null !== (t = m.description) && void 0 !== t ? t : ''),
-        [g, p] = l.useState(null !== (a = m.primaryCategoryId) && void 0 !== a ? a : c.AR.UNCATEGORIZED),
-        [D, b] = l.useState(!1),
-        [C, x] = l.useState(null),
-        T = async () => {
-            if ((x(null), h !== m.description || g !== m.primaryCategoryId)) {
-                b(!0);
+    n(47120);
+var l = n(200651),
+    a = n(192379),
+    i = n(481060),
+    r = n(479531),
+    s = n(600164),
+    o = n(99325),
+    c = n(486527),
+    d = n(388032),
+    u = n(294550);
+function m(e) {
+    var t, n;
+    let { transitionState: m, onClose: h, entry: b } = e,
+        [p, g] = a.useState(null !== (t = b.description) && void 0 !== t ? t : ''),
+        [x, I] = a.useState(null !== (n = b.primaryCategoryId) && void 0 !== n ? n : c.AR.UNCATEGORIZED),
+        [j, C] = a.useState(!1),
+        [f, B] = a.useState(null),
+        N = async () => {
+            if ((B(null), p !== b.description || x !== b.primaryCategoryId)) {
+                C(!0);
                 try {
-                    await (0, r.Dr)(m.channelId, m.guildId, h, g), b(!1), I();
+                    await (0, o.Dr)(b.channelId, b.guildId, p, x), C(!1), h();
                 } catch (e) {
-                    b(!1), x(new i.Z(e));
+                    C(!1), B(new r.Z(e));
                 }
             }
         };
-    return (0, s.jsxs)(n.ModalRoot, {
-        transitionState: _,
-        'aria-label': d.Z.Messages.PAYMENT_SOURCES_ADD,
+    return (0, l.jsxs)(i.ModalRoot, {
+        transitionState: m,
+        'aria-label': d.intl.string(d.t.eQ2bLi),
         children: [
-            (0, s.jsxs)(n.ModalHeader, {
-                direction: o.Z.Direction.VERTICAL,
+            (0, l.jsxs)(i.ModalHeader, {
+                direction: s.Z.Direction.VERTICAL,
                 className: u.header,
                 separator: !1,
                 children: [
-                    (0, s.jsx)(n.Heading, {
+                    (0, l.jsx)(i.Heading, {
                         className: u.title,
                         variant: 'heading-xl/semibold',
-                        children: d.Z.Messages.HUB_ENTRY_UPDATE_DESCRIPTION_TITLE.format({ guildName: m.name })
+                        children: d.intl.format(d.t.w9tsNj, { guildName: b.name })
                     }),
-                    (0, s.jsx)(n.Text, {
+                    (0, l.jsx)(i.Text, {
                         className: u.subtitle,
                         color: 'header-secondary',
                         variant: 'text-md/normal',
-                        children: d.Z.Messages.HUB_ADD_GUILD_DESCRIPTION_HELP
+                        children: d.intl.string(d.t['vEkX//'])
                     }),
-                    null != I &&
-                        (0, s.jsx)(n.ModalCloseButton, {
+                    null != h &&
+                        (0, l.jsx)(i.ModalCloseButton, {
                             className: u.closeButton,
-                            onClick: I
+                            onClick: h
                         })
                 ]
             }),
-            (0, s.jsxs)(n.ModalContent, {
+            (0, l.jsxs)(i.ModalContent, {
                 className: u.createGuild,
                 paddingFix: !1,
                 children: [
-                    (0, s.jsx)(n.FormItem, {
-                        title: d.Z.Messages.HUB_ADD_GUILD_DESCRIPTION_TITLE,
-                        children: (0, s.jsx)(n.TextArea, {
-                            value: h,
+                    (0, l.jsx)(i.FormItem, {
+                        title: d.intl.string(d.t.FFFAGh),
+                        children: (0, l.jsx)(i.TextArea, {
+                            value: p,
                             maxLength: 200,
-                            placeholder: d.Z.Messages.HUB_ADD_GUILD_DESCRIPTION_PLACEHOLDER,
-                            onChange: E,
-                            error: null == C ? void 0 : C.getAnyErrorMessage()
+                            placeholder: d.intl.string(d.t.VzuITE),
+                            onChange: g,
+                            error: null == f ? void 0 : f.getAnyErrorMessage()
                         })
                     }),
-                    (0, s.jsx)(n.FormItem, {
+                    (0, l.jsx)(i.FormItem, {
                         className: u.formItemSpaced,
-                        title: d.Z.Messages.HUB_ADD_GUILD_CATEGORY_TITLE,
-                        children: (0, s.jsx)(n.SingleSelect, {
-                            placeholder: d.Z.Messages.SELECT,
-                            options: (0, c.b7)(m.channelId),
+                        title: d.intl.string(d.t.Olo8FB),
+                        children: (0, l.jsx)(i.SingleSelect, {
+                            placeholder: d.intl.string(d.t.XqMe3N),
+                            options: (0, c.b7)(b.channelId),
                             clearable: !1,
-                            value: g,
-                            onChange: p,
+                            value: x,
+                            onChange: I,
                             maxVisibleItems: 4
                         })
                     })
                 ]
             }),
-            (0, s.jsx)(n.ModalFooter, {
-                justify: o.Z.Justify.BETWEEN,
-                children: (0, s.jsx)(n.Button, {
-                    color: n.Button.Colors.BRAND,
-                    onClick: T,
-                    submitting: D,
-                    children: d.Z.Messages.SAVE
+            (0, l.jsx)(i.ModalFooter, {
+                justify: s.Z.Justify.BETWEEN,
+                children: (0, l.jsx)(i.Button, {
+                    color: i.Button.Colors.BRAND,
+                    onClick: N,
+                    submitting: j,
+                    children: d.intl.string(d.t.R3BPHx)
                 })
             })
         ]

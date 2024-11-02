@@ -1,4 +1,4 @@
-n.d(t, {
+n.d(e, {
     $p: function () {
         return s;
     },
@@ -35,33 +35,33 @@ n.d(t, {
 var r = n(392711),
     i = n(36793),
     a = n(486324);
-async function s(e, t, r, s, l) {
-    let { x: u, y: o, scaledCropWidth: c, scaledCropHeight: h } = (0, i.eu)(t, r, s, l),
-        d = await e.arrayBuffer(),
-        A = new Worker(new URL('/assets/' + n.u('86047'), n.b)),
-        p = new Promise((e, t) => {
-            A.onmessage = (n) => {
+async function s(t, e, r, s, l) {
+    let { x: u, y: o, scaledCropWidth: c, scaledCropHeight: h } = (0, i.eu)(e, r, s, l),
+        d = await t.arrayBuffer(),
+        p = new Worker(new URL('/assets/' + n.u('86047'), n.b)),
+        g = new Promise((t, e) => {
+            p.onmessage = (n) => {
                 let { data: r } = n;
                 if (r.type === a.u.CROP_GIF_COMPLETE) {
                     var i;
-                    e(
+                    t(
                         ((i = new Blob([r.result])),
-                        new Promise((e) => {
-                            let t = new FileReader();
-                            (t.onload = (t) => {
+                        new Promise((t) => {
+                            let e = new FileReader();
+                            (e.onload = (e) => {
                                 var n;
-                                let r = null === (n = t.target) || void 0 === n ? void 0 : n.result;
-                                'string' == typeof r ? e(r) : e('');
+                                let r = null === (n = e.target) || void 0 === n ? void 0 : n.result;
+                                'string' == typeof r ? t(r) : t('');
                             }),
-                                t.readAsDataURL(i);
+                                e.readAsDataURL(i);
                         }))
                     ),
-                        A.terminate();
-                } else r.type === a.u.CROP_GIF_ERROR && (t(Error('Error cropping GIF')), A.terminate());
+                        p.terminate();
+                } else r.type === a.u.CROP_GIF_ERROR && (e(Error('Error cropping GIF')), p.terminate());
             };
         });
     return (
-        A.postMessage({
+        p.postMessage({
             type: a.u.CROP_GIF_START,
             gif: new Uint8Array(d),
             x: 0 | u,
@@ -70,96 +70,96 @@ async function s(e, t, r, s, l) {
             height: 0 | h
         }),
         {
-            result: p,
-            cancelFn: () => A.terminate()
+            result: g,
+            cancelFn: () => p.terminate()
         }
     );
 }
-function l(e, t, n) {
+function l(t, e, n) {
     return {
-        x: (0, r.clamp)(e, n.left, n.right),
-        y: (0, r.clamp)(t, n.bottom, n.top)
+        x: (0, r.clamp)(t, n.left, n.right),
+        y: (0, r.clamp)(e, n.bottom, n.top)
     };
 }
-function u(e, t, n, r) {
+function u(t, e, n, r) {
     let i = n,
         s = r;
-    return (n > a.vJ && ((i = a.vJ), (s = r * (a.vJ / n))), n / r < e)
+    return (n > a.vJ && ((i = a.vJ), (s = r * (a.vJ / n))), n / r < t)
         ? {
               width: i,
               height: s
           }
         : {
-              width: (t / s) * i,
-              height: t
+              width: (e / s) * i,
+              height: e
           };
 }
-function o(e, t, n) {
-    switch (e) {
+function o(t, e, n) {
+    switch (t) {
         case a.pC.AVATAR:
         case a.pC.AVATAR_DECORATION:
             return {
-                width: t,
+                width: e,
                 height: n
             };
         case a.pC.BANNER:
-            return u(a.MY, a.qj, t, n);
+            return u(a.MY, a.qj, e, n);
         case a.pC.GUILD_BANNER:
-            return u(a.Ij, a.C5, t, n);
+            return u(a.Ij, a.C5, e, n);
         case a.pC.VIDEO_BACKGROUND:
-            return u(a.Ff, a.PB, t, n);
+            return u(a.Ff, a.PB, e, n);
         case a.pC.SCHEDULED_EVENT_IMAGE:
-            return u(a.ut, a.WV, t, n);
+            return u(a.ut, a.WV, e, n);
         case a.pC.HOME_HEADER:
-            return u(a.sX, a.SW, t, n);
+            return u(a.sX, a.SW, e, n);
     }
 }
-function c(e, t, n) {
+function c(t, e, n) {
     let r = {
             top: 0,
             bottom: 0,
             left: 0,
             right: 0
         },
-        i = e - n.width,
-        a = t - n.height;
+        i = t - n.width,
+        a = e - n.height;
     return 0 !== i && ((r.left = -Math.abs(i / 2)), (r.right = i / 2)), 0 !== a && ((r.bottom = -Math.abs(a / 2)), (r.top = a / 2)), r;
 }
-function h(e, t, n, r) {
-    switch (e) {
+function h(t, e, n, r) {
+    switch (t) {
         case a.pC.AVATAR:
         case a.pC.AVATAR_DECORATION:
-            let i = Math.min(t, n);
+            let i = Math.min(e, n);
             return {
                 width: i,
                 height: i
             };
         case a.pC.BANNER:
-            let s = Math.min(t, a.vJ);
+            let s = Math.min(e, a.vJ);
             return {
                 width: s,
                 height: s * (1 / a.MY)
             };
         case a.pC.GUILD_BANNER:
-            let l = Math.min(t, a.vJ);
+            let l = Math.min(e, a.vJ);
             return {
                 width: l,
                 height: Math.min((9 / 16) * l, r)
             };
         case a.pC.VIDEO_BACKGROUND:
-            let u = Math.min(t, a.vJ);
+            let u = Math.min(e, a.vJ);
             return {
                 width: u,
                 height: (9 / 16) * u
             };
         case a.pC.SCHEDULED_EVENT_IMAGE:
-            let o = Math.min(t, a.vJ);
+            let o = Math.min(e, a.vJ);
             return {
                 width: o,
                 height: 0.4 * o
             };
         case a.pC.HOME_HEADER:
-            let c = Math.min(t, a.vJ);
+            let c = Math.min(e, a.vJ);
             return {
                 width: c,
                 height: c * (1 / a.sX)

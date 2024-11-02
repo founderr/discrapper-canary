@@ -1,232 +1,232 @@
-t.r(a),
-    t.d(a, {
+a.r(t),
+    a.d(t, {
         default: function () {
-            return z;
+            return H;
         }
     }),
-    t(47120),
-    t(653041);
-var i = t(200651),
-    n = t(192379),
-    s = t(120356),
-    l = t.n(s),
-    r = t(218887),
-    o = t.n(r),
-    c = t(990547),
-    d = t(442837),
-    u = t(481060),
-    m = t(493683),
-    I = t(247272),
-    E = t(166459),
-    _ = t(966390),
-    f = t(476326),
-    h = t(213609),
-    g = t(835473),
-    S = t(43267),
-    p = t(933557),
-    C = t(957730),
-    T = t(592125),
-    N = t(703558),
-    b = t(430824),
-    M = t(751771),
-    w = t(496675),
-    A = t(699516),
-    x = t(117530),
-    v = t(594174),
-    y = t(626135),
-    Z = t(768581),
-    D = t(971130),
-    R = t(358085),
-    j = t(624138),
-    P = t(591759),
-    O = t(51144),
-    k = t(998502),
-    U = t(317381),
-    B = t(981631),
-    L = t(245335),
-    G = t(689938),
-    F = t(826373);
-async function H(e) {
-    return e.type === D.bm.DM || e.type === D.bm.FRIEND ? await m.Z.ensurePrivateChannel(e.item.id) : e.item.id;
+    a(47120),
+    a(653041);
+var i = a(200651),
+    n = a(192379),
+    l = a(120356),
+    s = a.n(l),
+    r = a(218887),
+    o = a.n(r),
+    c = a(990547),
+    d = a(442837),
+    u = a(481060),
+    m = a(493683),
+    f = a(247272),
+    h = a(166459),
+    g = a(966390),
+    p = a(476326),
+    S = a(213609),
+    I = a(835473),
+    b = a(43267),
+    C = a(933557),
+    _ = a(957730),
+    N = a(592125),
+    w = a(703558),
+    T = a(430824),
+    x = a(751771),
+    v = a(496675),
+    E = a(699516),
+    y = a(117530),
+    Z = a(594174),
+    A = a(626135),
+    j = a(768581),
+    M = a(971130),
+    D = a(358085),
+    R = a(624138),
+    P = a(591759),
+    U = a(51144),
+    k = a(998502),
+    L = a(317381),
+    O = a(981631),
+    B = a(245335),
+    F = a(388032),
+    G = a(826373);
+async function z(e) {
+    return e.type === M.bm.DM || e.type === M.bm.FRIEND ? await m.Z.ensurePrivateChannel(e.item.id) : e.item.id;
 }
-function z(e) {
-    let { applicationId: a, mediaUrl: t, channelId: s, onClose: l, transitionState: r, ...m } = e,
-        S = (0, d.e7)([U.ZP], () => U.ZP.getSelfEmbeddedActivityForChannel(s));
-    (0, h.Z)({
+function H(e) {
+    let { applicationId: t, mediaUrl: a, channelId: l, onClose: s, transitionState: r, ...m } = e,
+        b = (0, d.e7)([L.ZP], () => L.ZP.getSelfEmbeddedActivityForChannel(l));
+    (0, S.Z)({
         type: c.ImpressionTypes.MODAL,
         name: c.ImpressionNames.ACTIVITY_SHARE_MOMENT_MODAL,
         properties: {
-            application_id: a,
-            activity_session_id: null == S ? void 0 : S.compositeInstanceId
+            application_id: t,
+            activity_session_id: null == b ? void 0 : b.compositeInstanceId
         }
     });
-    let [p] = (0, g.Z)([a]),
-        b = (0, d.e7)([v.default], () => v.default.getCurrentUser()),
-        [A, Z] = n.useState(''),
-        [R, j] = n.useState([]),
-        [O, k] = n.useState(null),
-        [z, W] = n.useState(null);
+    let [C] = (0, I.Z)([t]),
+        T = (0, d.e7)([Z.default], () => Z.default.getCurrentUser()),
+        [E, j] = n.useState(''),
+        [D, R] = n.useState([]),
+        [U, k] = n.useState(null),
+        [H, K] = n.useState(null);
     n.useEffect(() => {
         (async () => {
-            let e = P.Z.toURLSafe(t);
+            let e = P.Z.toURLSafe(a);
             if (null == e) return;
-            let a = o().basename(e.pathname),
-                i = await fetch(t),
-                n = new File([await i.arrayBuffer()], a);
+            let t = o().basename(e.pathname),
+                i = await fetch(a),
+                n = new File([await i.arrayBuffer()], t);
             k(n);
-            let s = new FileReader();
-            (s.onload = () => {
+            let l = new FileReader();
+            (l.onload = () => {
                 var e;
-                return W(null == s ? void 0 : null === (e = s.result) || void 0 === e ? void 0 : e.toString());
+                return K(null == l ? void 0 : null === (e = l.result) || void 0 === e ? void 0 : e.toString());
             }),
-                s.readAsDataURL(n);
+                l.readAsDataURL(n);
         })();
-    }, [t, k]);
-    let Y = (0, d.Wu)([M.Z, w.Z], () => M.Z.getInviteSuggestionRows().filter((e) => e.type === D.bm.FRIEND || e.type === D.bm.DM || w.Z.can(B.Plq.ATTACH_FILES, e.item)));
+    }, [a, k]);
+    let Q = (0, d.Wu)([x.Z, v.Z], () => x.Z.getInviteSuggestionRows().filter((e) => e.type === M.bm.FRIEND || e.type === M.bm.DM || v.Z.can(O.Plq.ATTACH_FILES, e.item)));
     n.useEffect(() => {
-        (0, I.x)({
+        (0, f.x)({
             omitUserIds: new Set(),
-            applicationId: a,
-            inviteTargetType: L.Iq.EMBEDDED_APPLICATION
+            applicationId: t,
+            inviteTargetType: B.Iq.EMBEDDED_APPLICATION
         });
-    }, [a]),
-        n.useEffect(() => (0, I.C)(A), [A]);
-    let K = n.useCallback(async () => {
+    }, [t]),
+        n.useEffect(() => (0, f.C)(E), [E]);
+    let W = n.useCallback(async () => {
         await Promise.all(
-            R.map(async (e) => {
-                let a = Y.find((a) => a.item.id === e);
-                if (null != a) {
-                    let e = await H(a);
-                    E.Z.clearAll(e, N.d.ChannelMessage);
+            D.map(async (e) => {
+                let t = Q.find((t) => t.item.id === e);
+                if (null != t) {
+                    let e = await z(t);
+                    h.Z.clearAll(e, w.d.ChannelMessage);
                 }
             })
         );
-    }, [R, Y]);
+    }, [D, Q]);
     n.useEffect(() => {
-        r === u.ModalTransitionState.EXITING && K();
-    }, [K, r]);
-    let X = n.useCallback(async () => {
-            await K(), l();
-        }, [l, K]),
-        Q = n.useCallback(async () => {
+        r === u.ModalTransitionState.EXITING && W();
+    }, [W, r]);
+    let Y = n.useCallback(async () => {
+            await W(), s();
+        }, [s, W]),
+        X = n.useCallback(async () => {
             let e = 0,
-                t = 0,
+                a = 0,
                 i = 0;
             async function n(n) {
                 switch (n.type) {
-                    case D.bm.DM:
-                    case D.bm.FRIEND:
+                    case M.bm.DM:
+                    case M.bm.FRIEND:
                         e++;
                         break;
-                    case D.bm.GROUP_DM:
-                        t++;
+                    case M.bm.GROUP_DM:
+                        a++;
                         break;
-                    case D.bm.CHANNEL:
+                    case M.bm.CHANNEL:
                         i++;
                 }
-                let s = await H(n),
-                    l = x.Z.getUploads(s, N.d.ChannelMessage),
-                    r = T.Z.getChannel(s);
-                _.Z.uploadFiles({
-                    channelId: s,
-                    uploads: l,
-                    parsedMessage: null != p ? C.ZP.parse(r, G.Z.Messages.EMBEDDED_ACTIVITIES_SHARE_MOMENT_FROM_APP.format({ applicationName: '**'.concat(p.name, '**') })) : void 0,
-                    draftType: N.d.ChannelMessage,
-                    options: { applicationId: a }
+                let l = await z(n),
+                    s = y.Z.getUploads(l, w.d.ChannelMessage),
+                    r = N.Z.getChannel(l);
+                g.Z.uploadFiles({
+                    channelId: l,
+                    uploads: s,
+                    parsedMessage: null != C ? _.ZP.parse(r, F.intl.formatToPlainString(F.t.jQULqK, { applicationName: '**'.concat(C.name, '**') })) : void 0,
+                    draftType: w.d.ChannelMessage,
+                    options: { applicationId: t }
                 }),
-                    E.Z.clearAll(s, N.d.ChannelMessage);
+                    h.Z.clearAll(l, w.d.ChannelMessage);
             }
-            let s = M.Z.getInviteSuggestionRows()
-                .filter((e) => R.includes(e.item.id))
+            let l = x.Z.getInviteSuggestionRows()
+                .filter((e) => D.includes(e.item.id))
                 .map((e) => n(e));
-            y.default.track(B.rMx.ACTIVITY_SHARE_MOMENT_SEND, {
-                user_id: null == b ? void 0 : b.id,
-                application_id: a,
-                activity_session_id: null == S ? void 0 : S.compositeInstanceId,
+            A.default.track(O.rMx.ACTIVITY_SHARE_MOMENT_SEND, {
+                user_id: null == T ? void 0 : T.id,
+                application_id: t,
+                activity_session_id: null == b ? void 0 : b.compositeInstanceId,
                 n_users: e,
-                n_gdms: t,
+                n_gdms: a,
                 n_channels: i
             });
             try {
-                await Promise.all(s), null != p && (0, u.showToast)((0, u.createToast)(G.Z.Messages.EMBEDDED_ACTIVITIES_SHARE_MOMENT_FROM_APP.format({ applicationName: p.name }), u.ToastType.SUCCESS));
+                await Promise.all(l), null != C && (0, u.showToast)((0, u.createToast)(F.intl.formatToPlainString(F.t.jQULqK, { applicationName: C.name }), u.ToastType.SUCCESS));
             } catch (e) {
-                throw ((0, u.showToast)((0, u.createToast)(G.Z.Messages.UPLOAD_ERROR_TITLE, u.ToastType.FAILURE)), e);
+                throw ((0, u.showToast)((0, u.createToast)(F.intl.string(F.t.PanA4O), u.ToastType.FAILURE)), e);
             }
-            X();
-        }, [S, p, a, R, X, b]),
+            Y();
+        }, [b, C, t, D, Y, T]),
         J = (e) => {
-            let a = async () => {
-                let a = await H(e),
-                    t = [...R];
-                if (t.includes(e.item.id)) E.Z.clearAll(a, N.d.ChannelMessage), (t = t.filter((a) => a !== e.item.id));
+            let t = async () => {
+                let t = await z(e),
+                    a = [...D];
+                if (a.includes(e.item.id)) h.Z.clearAll(t, w.d.ChannelMessage), (a = a.filter((t) => t !== e.item.id));
                 else {
-                    if (t.length >= 10) return;
-                    null != O &&
-                        (E.Z.addFile({
+                    if (a.length >= 10) return;
+                    null != U &&
+                        (h.Z.addFile({
                             file: {
-                                file: O,
-                                platform: f.ow.WEB
+                                file: U,
+                                platform: p.ow.WEB
                             },
-                            channelId: a,
-                            draftType: N.d.ChannelMessage
+                            channelId: t,
+                            draftType: w.d.ChannelMessage
                         }),
-                        t.push(e.item.id));
+                        a.push(e.item.id));
                 }
-                j(t);
+                R(a);
             };
-            return () => a();
+            return () => t();
         };
-    return null == z
+    return null == H
         ? (0, i.jsx)(u.Spinner, {})
         : (0, i.jsxs)(u.ModalRoot, {
               transitionState: r,
               ...m,
-              className: F.modalRoot,
+              className: G.modalRoot,
               children: [
                   (0, i.jsxs)(u.ModalHeader, {
-                      className: F.header,
+                      className: G.header,
                       children: [
                           (0, i.jsxs)('div', {
-                              className: F.headerTitle,
+                              className: G.headerTitle,
                               children: [
                                   (0, i.jsx)(u.Heading, {
                                       variant: 'heading-md/semibold',
-                                      children: G.Z.Messages.EMBEDDED_ACTIVITIES_SHARE_MOMENT_HEADING
+                                      children: F.intl.string(F.t.r9qKo6)
                                   }),
-                                  (0, i.jsx)(u.ModalCloseButton, { onClick: X })
+                                  (0, i.jsx)(u.ModalCloseButton, { onClick: Y })
                               ]
                           }),
                           (0, i.jsx)('div', {
                               children: (0, i.jsx)('img', {
-                                  alt: t,
-                                  className: F.img,
-                                  src: z
+                                  alt: a,
+                                  className: G.img,
+                                  src: H
                               })
                           })
                       ]
                   }),
                   (0, i.jsxs)(u.ModalContent, {
-                      className: F.modalContent,
+                      className: G.modalContent,
                       children: [
                           (0, i.jsx)(u.SearchBox, {
-                              className: F.searchBar,
-                              placeholder: G.Z.Messages.SEARCH,
-                              label: G.Z.Messages.SEARCH,
-                              searchTerm: A,
-                              onChange: (e) => Z(e),
-                              onClear: () => Z('')
+                              className: G.searchBar,
+                              placeholder: F.intl.string(F.t['5h0QOD']),
+                              label: F.intl.string(F.t['5h0QOD']),
+                              searchTerm: E,
+                              onChange: (e) => j(e),
+                              onClear: () => j('')
                           }),
-                          Y.map((e, a) =>
+                          Q.map((e, t) =>
                               (0, i.jsxs)(
                                   n.Fragment,
                                   {
                                       children: [
-                                          0 === a ? null : (0, i.jsx)('div', { className: F.rowDivider }),
-                                          (0, i.jsx)(V, {
+                                          0 === t ? null : (0, i.jsx)('div', { className: G.rowDivider }),
+                                          (0, i.jsx)(q, {
                                               row: e,
                                               onClick: J(e),
-                                              checked: R.includes(e.item.id),
-                                              disabled: !R.includes(e.item.id) && R.length >= 10
+                                              checked: D.includes(e.item.id),
+                                              disabled: !D.includes(e.item.id) && D.length >= 10
                                           })
                                       ]
                                   },
@@ -236,25 +236,25 @@ function z(e) {
                       ]
                   }),
                   (0, i.jsx)(u.ModalFooter, {
-                      className: F.footer,
+                      className: G.footer,
                       children: (0, i.jsxs)('div', {
-                          className: F.copySendBar,
+                          className: G.copySendBar,
                           children: [
-                              (0, i.jsx)(q, {
-                                  applicationId: a,
-                                  activitySessionId: null == S ? void 0 : S.compositeInstanceId,
-                                  mediaUrl: t
+                              (0, i.jsx)(V, {
+                                  applicationId: t,
+                                  activitySessionId: null == b ? void 0 : b.compositeInstanceId,
+                                  mediaUrl: a
                               }),
-                              R.length >= 10
+                              D.length >= 10
                                   ? (0, i.jsx)(u.Text, {
                                         variant: 'text-xs/normal',
-                                        children: G.Z.Messages.EMBEDDED_ACTIVITIES_SHARE_LIMIT_WARNING.format({ maxShares: 10 })
+                                        children: F.intl.format(F.t.mdE9iI, { maxShares: 10 })
                                     })
                                   : null,
                               (0, i.jsx)(u.Button, {
-                                  onClick: Q,
-                                  disabled: R.length <= 0,
-                                  children: G.Z.Messages.SEND
+                                  onClick: X,
+                                  disabled: D.length <= 0,
+                                  children: F.intl.string(F.t.TXNS7e)
                               })
                           ]
                       })
@@ -262,52 +262,52 @@ function z(e) {
               ]
           });
 }
-function V(e) {
-    let { row: a, onClick: t, checked: n, disabled: s } = e,
+function q(e) {
+    let { row: t, onClick: a, checked: n, disabled: l } = e,
         r = null,
         o = null,
         c = null;
-    switch (a.type) {
-        case D.bm.DM:
-        case D.bm.FRIEND:
+    switch (t.type) {
+        case M.bm.DM:
+        case M.bm.FRIEND:
             (r = (0, i.jsx)(u.Avatar, {
                 size: u.AvatarSizes.SIZE_40,
-                src: a.item.getAvatarURL(null, 128, !1),
-                'aria-label': a.item.username
+                src: t.item.getAvatarURL(null, 128, !1),
+                'aria-label': t.item.username
             })),
-                (o = O.ZP.getName(a.item)),
-                (c = O.ZP.getUserTag(a.item));
+                (o = U.ZP.getName(t.item)),
+                (c = U.ZP.getUserTag(t.item));
             break;
-        case D.bm.GROUP_DM: {
-            let e = (0, S.x)(a.item),
-                t = (0, p.F6)(a.item, v.default, A.Z);
+        case M.bm.GROUP_DM: {
+            let e = (0, b.x)(t.item),
+                a = (0, C.F6)(t.item, Z.default, E.Z);
             (r = (0, i.jsx)(u.Avatar, {
                 src: e,
-                'aria-label': t,
+                'aria-label': a,
                 size: u.AvatarSizes.SIZE_40
             })),
-                (o = (0, p.F6)(a.item, v.default, A.Z));
+                (o = (0, C.F6)(t.item, Z.default, E.Z));
             break;
         }
-        case D.bm.CHANNEL: {
-            let e = a.item,
-                t = b.Z.getGuild(e.guild_id);
-            if (null == t) return null;
-            if (((o = '#'.concat((0, p.F6)(e, v.default, A.Z))), (c = t.name), null != t.icon)) {
-                let a = Z.ZP.getGuildIconURL({
+        case M.bm.CHANNEL: {
+            let e = t.item,
+                a = T.Z.getGuild(e.guild_id);
+            if (null == a) return null;
+            if (((o = '#'.concat((0, C.F6)(e, Z.default, E.Z))), (c = a.name), null != a.icon)) {
+                let t = j.ZP.getGuildIconURL({
                     id: e.guild_id,
-                    icon: t.icon,
+                    icon: a.icon,
                     size: 40
                 });
                 r = (0, i.jsx)(u.Avatar, {
-                    src: a,
+                    src: t,
                     'aria-label': o,
                     size: u.AvatarSizes.SIZE_40
                 });
             } else {
-                let e = (0, j.Zg)(t.name);
+                let e = (0, R.Zg)(a.name);
                 r = (0, i.jsx)('div', {
-                    className: F.acronym,
+                    className: G.acronym,
                     'aria-hidden': !0,
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-md/semibold',
@@ -318,27 +318,27 @@ function V(e) {
         }
     }
     return (0, i.jsxs)(u.Clickable, {
-        onClick: t,
-        className: l()(F.rowContainer, { [F.disabled]: s }),
+        onClick: a,
+        className: s()(G.rowContainer, { [G.disabled]: l }),
         children: [
             (0, i.jsxs)('div', {
-                className: F.rowLeft,
+                className: G.rowLeft,
                 children: [
                     (0, i.jsx)('div', {
-                        className: F.rowAvatar,
+                        className: G.rowAvatar,
                         children: r
                     }),
                     (0, i.jsxs)('div', {
-                        className: F.rowNameContainer,
+                        className: G.rowNameContainer,
                         children: [
                             (0, i.jsx)(u.Text, {
                                 variant: 'text-md/semibold',
-                                className: l()(F.rowName, { [F.disabled]: s }),
+                                className: s()(G.rowName, { [G.disabled]: l }),
                                 children: o
                             }),
                             (0, i.jsx)(u.Text, {
                                 variant: 'text-xs/medium',
-                                className: l()(F.rowSubName, { [F.disabled]: s }),
+                                className: s()(G.rowSubName, { [G.disabled]: l }),
                                 children: c
                             })
                         ]
@@ -346,32 +346,32 @@ function V(e) {
                 ]
             }),
             (0, i.jsx)(u.Checkbox, {
-                disabled: s,
+                disabled: l,
                 value: n,
                 type: u.Checkbox.Types.INVERTED,
                 displayOnly: !0,
-                className: F.rowRight
+                className: G.rowRight
             })
         ]
     });
 }
-function q(e) {
-    let { applicationId: a, mediaUrl: t, activitySessionId: s } = e,
-        [l, r] = n.useState(!1),
-        o = (0, d.e7)([v.default], () => v.default.getCurrentUser());
+function V(e) {
+    let { applicationId: t, mediaUrl: a, activitySessionId: l } = e,
+        [s, r] = n.useState(!1),
+        o = (0, d.e7)([Z.default], () => Z.default.getCurrentUser());
     async function c() {
-        y.default.track(B.rMx.ACTIVITY_SHARE_MOMENT_COPY, {
+        A.default.track(O.rMx.ACTIVITY_SHARE_MOMENT_COPY, {
             user_id: null == o ? void 0 : o.id,
-            application_id: a,
-            activity_session_id: s
+            application_id: t,
+            activity_session_id: l
         }),
-            await k.ZP.copyImage(t),
+            await k.ZP.copyImage(a),
             r(!0);
     }
     return (n.useEffect(() => {
         let e;
         return (
-            l &&
+            s &&
                 (e = setTimeout(() => {
                     r(!1);
                 }, 1000)),
@@ -379,15 +379,15 @@ function q(e) {
                 null != e && clearTimeout(e);
             }
         );
-    }, [l]),
-    R.isPlatformEmbedded && k.ZP.canCopyImage(t))
+    }, [s]),
+    D.isPlatformEmbedded && k.ZP.canCopyImage(a))
         ? (0, i.jsxs)(u.Button, {
               look: u.Button.Looks.LINK,
               color: u.Button.Colors.LINK,
               onClick: c,
-              innerClassName: F.copyButton,
+              innerClassName: G.copyButton,
               children: [
-                  l
+                  s
                       ? (0, i.jsx)(u.CircleCheckIcon, {
                             size: 'md',
                             color: 'currentColor'
@@ -396,7 +396,7 @@ function q(e) {
                             size: 'xs',
                             color: 'currentColor'
                         }),
-                  l ? G.Z.Messages.COPIED : G.Z.Messages.COPY_IMAGE_MENU_ITEM
+                  s ? F.intl.string(F.t['t5VZ8/']) : F.intl.string(F.t.tvUqWl)
               ]
           })
         : (0, i.jsx)('div', {});

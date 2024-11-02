@@ -1,31 +1,31 @@
-t.r(e);
-var i = t(200651);
-t(192379);
-var s = t(481060),
-    a = t(287734),
-    r = t(313201),
-    l = t(471253),
-    o = t(939863),
-    c = t(689938),
-    u = t(630489);
-e.default = (n) => {
-    let { channel: e, ...t } = n,
-        d = (0, r.Dt)();
-    return (0, i.jsxs)(s.ConfirmModal, {
-        confirmText: c.Z.Messages.END_STAGE,
-        cancelText: c.Z.Messages.CANCEL,
+e.r(t);
+var i = e(200651);
+e(192379);
+var r = e(481060),
+    l = e(287734),
+    a = e(313201),
+    o = e(471253),
+    c = e(939863),
+    s = e(388032),
+    u = e(630489);
+t.default = (n) => {
+    let { channel: t, ...e } = n,
+        d = (0, a.Dt)();
+    return (0, i.jsxs)(r.ConfirmModal, {
+        confirmText: s.intl.string(s.t.saZaRU),
+        cancelText: s.intl.string(s.t['ETE/oK']),
         onConfirm: () => {
-            (0, l.NZ)(e), a.default.disconnect();
+            (0, o.NZ)(t), l.default.disconnect();
         },
-        confirmButtonColor: s.Button.Colors.RED,
+        confirmButtonColor: r.Button.Colors.RED,
         bodyClassName: u.body,
-        ...t,
+        ...e,
         children: [
-            (0, i.jsx)(o.Z, {
+            (0, i.jsx)(c.Z, {
                 className: u.headerIconContainer,
                 children: (0, i.jsx)('div', {
                     className: u.iconBackground,
-                    children: (0, i.jsx)(s.StageXIcon, {
+                    children: (0, i.jsx)(r.StageXIcon, {
                         size: 'custom',
                         color: 'currentColor',
                         width: 40,
@@ -34,18 +34,18 @@ e.default = (n) => {
                     })
                 })
             }),
-            (0, i.jsx)(s.Heading, {
+            (0, i.jsx)(r.Heading, {
                 id: d,
                 variant: 'heading-xl/semibold',
                 color: 'header-primary',
                 className: u.title,
-                children: c.Z.Messages.END_EVENT_STAGE_CONFIRMATION_TITLE
+                children: s.intl.string(s.t.xrYNBA)
             }),
-            (0, i.jsx)(s.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
                 className: u.subtitle,
-                children: c.Z.Messages.END_EVENT_STAGE_CONFIRMATION_SUBTITLE
+                children: s.intl.string(s.t.TP1D8v)
             })
         ]
     });

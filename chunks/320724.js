@@ -1,27 +1,27 @@
-t.d(s, {
+n.d(t, {
     Ky: function () {
-        return r;
+        return l;
     },
     P7: function () {
-        return o;
+        return a;
     }
 }),
-    t(411104);
-var n = t(570140),
-    a = t(358085),
-    i = t(998502);
-function r() {
-    if (!(0, a.isDesktop)()) throw Error('Attempted to observe candidate games on a non-desktop platform');
-    i.ZP.setCandidateGamesCallback((e) => {
-        n.Z.dispatch({
+    n(411104);
+var i = n(570140),
+    s = n(358085),
+    r = n(998502);
+function l() {
+    if (!(0, s.isDesktop)()) throw Error('Attempted to observe candidate games on a non-desktop platform');
+    r.ZP.setCandidateGamesCallback((e) => {
+        i.Z.dispatch({
             type: 'CANDIDATE_GAMES_CHANGE',
             games: e
         });
     }),
-        n.Z.dispatch({ type: 'GAME_DETECTION_WATCH_CANDIDATE_GAMES_START' });
+        i.Z.dispatch({ type: 'GAME_DETECTION_WATCH_CANDIDATE_GAMES_START' });
 }
-function o() {
-    if (!(0, a.isDesktop)()) throw Error('Attempted to stop observing candidate games on a non-desktop platform');
-    i.ZP.clearCandidateGamesCallback(), n.Z.dispatch({ type: 'GAME_DETECTION_WATCH_CANDIDATE_GAMES_STOP' });
+function a() {
+    if (!(0, s.isDesktop)()) throw Error('Attempted to stop observing candidate games on a non-desktop platform');
+    r.ZP.clearCandidateGamesCallback(), i.Z.dispatch({ type: 'GAME_DETECTION_WATCH_CANDIDATE_GAMES_STOP' });
 }
-t(189451).l.ALL;
+n(189451).l.ALL;

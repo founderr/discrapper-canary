@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return l;
     }
 });
 var i = n(981631);
-let a = '<removed>';
-function s(e) {
+let r = '<removed>';
+function l(e) {
     var t, n;
-    let s = { ...e };
-    if ('object' == typeof (t = s).args && 'string' == typeof t.cmd)
-        s = (function (e) {
+    let l = { ...e };
+    if ('object' == typeof (t = l).args && 'string' == typeof t.cmd)
+        l = (function (e) {
             switch (e.cmd) {
                 case i.Etm.AUTHENTICATE:
                 case i.Etm.GET_PROVIDER_ACCESS_TOKEN:
@@ -17,15 +17,15 @@ function s(e) {
                         ...e,
                         args: {
                             ...e.args,
-                            access_token: a
+                            access_token: r
                         }
                     };
                 default:
                     return { ...e };
             }
-        })(s);
-    if ('object' == typeof (n = s).data && 'string' == typeof n.cmd)
-        s = (function (e) {
+        })(l);
+    if ('object' == typeof (n = l).data && 'string' == typeof n.cmd)
+        l = (function (e) {
             switch (e.cmd) {
                 case i.Etm.AUTHENTICATE:
                 case i.Etm.GET_PROVIDER_ACCESS_TOKEN:
@@ -33,12 +33,12 @@ function s(e) {
                         ...e,
                         data: {
                             ...e.data,
-                            access_token: a
+                            access_token: r
                         }
                     };
                 default:
                     return { ...e };
             }
-        })(s);
-    return s;
+        })(l);
+    return l;
 }

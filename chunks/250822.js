@@ -4,10 +4,10 @@ t.d(n, {
     }
 });
 var i = t(192379),
-    s = t(442837),
+    l = t(442837),
     o = t(621853);
-let l = [];
+let s = [];
 function r(e) {
-    let n = (0, s.e7)([o.Z], () => o.Z.getUserProfile(e));
-    return (0, i.useMemo)(() => ((null == n ? void 0 : n.applicationRoleConnections) == null ? l : n.applicationRoleConnections), [null == n ? void 0 : n.applicationRoleConnections]);
+    let n = (0, l.e7)([o.Z], () => o.Z.getUserProfile(e));
+    return (0, i.useMemo)(() => ((null == n ? void 0 : n.applicationRoleConnections) == null ? s : n.applicationRoleConnections), [null == n ? void 0 : n.applicationRoleConnections]);
 }

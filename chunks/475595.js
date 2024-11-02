@@ -1,6 +1,6 @@
 n.d(t, {
     Dm: function () {
-        return _;
+        return f;
     },
     N0: function () {
         return l;
@@ -57,7 +57,7 @@ function c(e, t, n) {
     }
     return (function (e, t, n) {
         let r = d(e, t, n),
-            i = _(t),
+            i = f(t),
             a = null != i && l.includes(i);
         return {
             url: r,
@@ -77,7 +77,7 @@ function d(e, t, n) {
         .concat(null != n ? '/'.concat(n) : '', '/')
         .concat(t);
 }
-function _(e) {
+function f(e) {
     var t, n, r;
     if (e.startsWith('blob:')) {
         let t = null !== (r = new URL(e).searchParams.get('mimetype')) && void 0 !== r ? r : void 0;

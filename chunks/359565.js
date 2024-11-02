@@ -1,28 +1,28 @@
 n.d(t, {
     q: function () {
-        return f;
+        return g;
     },
     s: function () {
-        return _;
+        return f;
     }
 });
 var i = n(200651),
-    s = n(192379),
-    a = n(120356),
-    l = n.n(a),
-    r = n(481060),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
+    s = n(481060),
     o = n(367907),
     c = n(626135),
     u = n(346479),
     d = n(665906),
     h = n(981631),
-    m = n(689938),
+    m = n(388032),
     p = n(314633);
-function _(e) {
+function f(e) {
     let { channel: t, narrow: n } = e,
-        a = (0, d.tc)(t);
+        r = (0, d.tc)(t);
     return (
-        s.useEffect(() => {
+        l.useEffect(() => {
             c.default.track(h.rMx.CHANNEL_BANNER_VIEWED, {
                 ...(0, o.hH)(t.getGuildId()),
                 ...(0, o.v_)(t),
@@ -30,19 +30,19 @@ function _(e) {
             });
         }, [t]),
         (0, i.jsxs)('div', {
-            className: l()(p.chatHeaderBar, { [p.narrow]: n }),
+            className: a()(p.chatHeaderBar, { [p.narrow]: n }),
             children: [
-                (0, i.jsx)(r.Text, {
+                (0, i.jsx)(s.Text, {
                     className: p.chatHeaderBarText,
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
-                    children: t.isForumPost() ? m.Z.Messages.FORUM_POST_HEADER_NOTICE_LOCKED : m.Z.Messages.THREAD_HEADER_NOTICE_LOCKED
+                    children: t.isForumPost() ? m.intl.string(m.t['833FDg']) : m.intl.string(m.t.rEeodH)
                 }),
-                a
-                    ? (0, i.jsx)(r.Button, {
-                          size: n ? r.Button.Sizes.SMALL : r.Button.Sizes.TINY,
+                r
+                    ? (0, i.jsx)(s.Button, {
+                          size: n ? s.Button.Sizes.SMALL : s.Button.Sizes.TINY,
                           className: p.chatHeaderBarButton,
-                          color: r.Button.Colors.PRIMARY,
+                          color: s.Button.Colors.PRIMARY,
                           onClick: () => {
                               c.default.track(h.rMx.CHANNEL_BANNER_CTA_CLICKED, {
                                   ...(0, o.hH)(t.getGuildId()),
@@ -52,18 +52,18 @@ function _(e) {
                               }),
                                   u.Z.unarchiveThread(t, !1);
                           },
-                          children: m.Z.Messages.UNARCHIVE
+                          children: m.intl.string(m.t['0dvvEh'])
                       })
                     : null
             ]
         })
     );
 }
-function f(e) {
+function g(e) {
     let { channel: t, narrow: n } = e,
-        a = (0, d.Xb)(t);
+        r = (0, d.Xb)(t);
     return (
-        s.useEffect(() => {
+        l.useEffect(() => {
             c.default.track(h.rMx.CHANNEL_BANNER_VIEWED, {
                 ...(0, o.hH)(t.getGuildId()),
                 ...(0, o.v_)(t),
@@ -71,19 +71,19 @@ function f(e) {
             });
         }, [t]),
         (0, i.jsxs)('div', {
-            className: l()(p.chatHeaderBar, { [p.narrow]: n }),
+            className: a()(p.chatHeaderBar, { [p.narrow]: n }),
             children: [
-                (0, i.jsx)(r.Text, {
+                (0, i.jsx)(s.Text, {
                     className: p.chatHeaderBarText,
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
-                    children: t.isForumPost() ? m.Z.Messages.FORUM_POST_HEADER_NOTICE_ACTIVE_LOCKED : m.Z.Messages.THREAD_HEADER_NOTICE_ACTIVE_LOCKED
+                    children: t.isForumPost() ? m.intl.string(m.t.E7oO8v) : m.intl.string(m.t['V/JF2N'])
                 }),
-                a
-                    ? (0, i.jsx)(r.Button, {
-                          size: n ? r.Button.Sizes.SMALL : r.Button.Sizes.TINY,
+                r
+                    ? (0, i.jsx)(s.Button, {
+                          size: n ? s.Button.Sizes.SMALL : s.Button.Sizes.TINY,
                           className: p.chatHeaderBarButton,
-                          color: r.Button.Colors.PRIMARY,
+                          color: s.Button.Colors.PRIMARY,
                           onClick: () => {
                               c.default.track(h.rMx.CHANNEL_BANNER_CTA_CLICKED, {
                                   ...(0, o.hH)(t.getGuildId()),
@@ -93,7 +93,7 @@ function f(e) {
                               }),
                                   u.Z.unlockThread(t);
                           },
-                          children: m.Z.Messages.UNLOCK
+                          children: m.intl.string(m.t.zA9d1N)
                       })
                     : null
             ]

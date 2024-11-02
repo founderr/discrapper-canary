@@ -1,67 +1,67 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return h;
     }
 }),
     n(47120);
-var s = n(200651),
-    a = n(192379),
-    i = n(120356),
-    r = n.n(i),
-    l = n(481060),
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    s = n.n(l),
+    a = n(481060),
     o = n(313201),
     c = n(259580),
     d = n(404203),
-    u = n(689938),
-    _ = n(777926);
-function I(e) {
-    let { intiallyExpanded: t = !1, title: n, description: i, children: I } = e,
-        [E, T] = a.useState(t),
-        m = () => T((e) => !e),
-        N = (0, o.Dt)();
-    return (0, s.jsxs)('div', {
-        className: _.container,
+    u = n(388032),
+    m = n(777926);
+function h(e) {
+    let { intiallyExpanded: t = !1, title: n, description: l, children: h } = e,
+        [g, x] = r.useState(t),
+        p = () => x((e) => !e),
+        f = (0, o.Dt)();
+    return (0, i.jsxs)('div', {
+        className: m.container,
         children: [
-            (0, s.jsx)(d.Z, {
-                className: r()(_.header, { [_.headerWithDescription]: E && null != i }),
-                onClick: m,
+            (0, i.jsx)(d.Z, {
+                className: s()(m.header, { [m.headerWithDescription]: g && null != l }),
+                onClick: p,
                 children: (e) => {
-                    let { areaRef: t, handleStopPropagation: a } = e;
-                    return (0, s.jsxs)(s.Fragment, {
+                    let { areaRef: t, handleStopPropagation: r } = e;
+                    return (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, s.jsx)(l.Heading, {
+                            (0, i.jsx)(a.Heading, {
                                 variant: 'heading-md/semibold',
                                 children: n
                             }),
-                            (0, s.jsx)(l.Clickable, {
-                                onClick: a(m),
-                                'aria-label': u.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TOGGLE_SECTION_LABEL,
-                                'aria-controls': N,
-                                'aria-expanded': E,
+                            (0, i.jsx)(a.Clickable, {
+                                onClick: r(p),
+                                'aria-label': u.intl.string(u.t.e5eQOz),
+                                'aria-controls': f,
+                                'aria-expanded': g,
                                 focusProps: { ringTarget: t },
-                                children: (0, s.jsx)(c.Z, {
-                                    className: _.caret,
-                                    direction: E ? c.Z.Directions.UP : c.Z.Directions.DOWN
+                                children: (0, i.jsx)(c.Z, {
+                                    className: m.caret,
+                                    direction: g ? c.Z.Directions.UP : c.Z.Directions.DOWN
                                 })
                             })
                         ]
                     });
                 }
             }),
-            E &&
-                (0, s.jsxs)('div', {
-                    id: N,
+            g &&
+                (0, i.jsxs)('div', {
+                    id: f,
                     children: [
-                        null != i &&
-                            (0, s.jsx)(l.FormText, {
-                                type: l.FormText.Types.DESCRIPTION,
-                                className: _.description,
-                                children: i
+                        null != l &&
+                            (0, i.jsx)(a.FormText, {
+                                type: a.FormText.Types.DESCRIPTION,
+                                className: m.description,
+                                children: l
                             }),
-                        (0, s.jsx)('div', { className: _.divider }),
-                        (0, s.jsx)('div', {
-                            className: _.content,
-                            children: I
+                        (0, i.jsx)('div', { className: m.divider }),
+                        (0, i.jsx)('div', {
+                            className: m.content,
+                            children: h
                         })
                     ]
                 })

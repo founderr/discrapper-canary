@@ -1,23 +1,23 @@
 n(653041);
 var i,
-    a = n(392711),
-    s = n.n(a),
-    r = n(442837),
-    l = n(570140),
+    r = n(392711),
+    l = n.n(r),
+    a = n(442837),
+    s = n(570140),
     o = n(194359),
     c = n(81825),
     d = n(5254),
     u = n(441623),
-    _ = n(735778),
-    E = n(199902),
-    h = n(271383),
-    m = n(430824),
-    I = n(158776),
-    p = n(699516),
-    g = n(594174),
-    T = n(981631),
-    S = n(474936);
-function C(e, t, n) {
+    h = n(735778),
+    m = n(199902),
+    p = n(271383),
+    g = n(430824),
+    f = n(158776),
+    _ = n(699516),
+    E = n(594174),
+    I = n(981631),
+    C = n(474936);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,8 +30,8 @@ function C(e, t, n) {
         e
     );
 }
-function f(e) {
-    let t = g.default.getUser(e);
+function S(e) {
+    let t = E.default.getUser(e);
     return {
         user: t,
         usernameLower: null != t ? t.username.toLowerCase() : null
@@ -39,17 +39,17 @@ function f(e) {
 }
 function N(e) {
     return {
-        status: I.Z.getStatus(e),
-        isMobile: I.Z.isMobileOnline(e),
-        activities: I.Z.getActivities(e),
-        applicationStream: E.Z.getAnyStreamForUser(e)
+        status: f.Z.getStatus(e),
+        isMobile: f.Z.isMobileOnline(e),
+        activities: f.Z.getActivities(e),
+        applicationStream: m.Z.getAnyStreamForUser(e)
     };
 }
-function A(e) {
+function T(e) {
     let t = [];
     return (
-        s()(h.ZP.memberOf(e))
-            .map(m.Z.getGuild)
+        l()(p.ZP.memberOf(e))
+            .map(g.Z.getGuild)
             .sortBy((e) => (null != e ? e.name.toLowerCase() : null))
             .forEach((e) => {
                 null != e && t.push(e);
@@ -60,59 +60,59 @@ function A(e) {
         }
     );
 }
-class v extends c.Z {
+class x extends c.Z {
     get comparator() {
-        var e, t, n, i, a;
-        return [this.type, null != this.giftIntentType ? 0 : 1, null !== (a = null !== (i = null === (e = this.nickname) || void 0 === e ? void 0 : e.toLowerCase()) && void 0 !== i ? i : null === (n = this.user) || void 0 === n ? void 0 : null === (t = n.globalName) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== a ? a : this.usernameLower];
+        var e, t, n, i, r;
+        return [this.type, null != this.giftIntentType ? 0 : 1, null !== (r = null !== (i = null === (e = this.nickname) || void 0 === e ? void 0 : e.toLowerCase()) && void 0 !== i ? i : null === (n = this.user) || void 0 === n ? void 0 : null === (t = n.globalName) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== r ? r : this.usernameLower];
     }
     constructor(e) {
-        super(), C(this, 'key', void 0), C(this, 'type', void 0), C(this, 'status', void 0), C(this, 'isMobile', void 0), C(this, 'activities', void 0), C(this, 'applicationStream', void 0), C(this, 'user', void 0), C(this, 'usernameLower', void 0), C(this, 'mutualGuildsLength', void 0), C(this, 'mutualGuilds', void 0), C(this, 'nickname', void 0), C(this, 'spam', void 0), C(this, 'giftIntentType', void 0), (this.key = e.key), (this.type = e.type), (this.status = e.status), (this.activities = e.activities), (this.applicationStream = e.applicationStream), (this.user = e.user), (this.isMobile = e.isMobile), (this.usernameLower = e.usernameLower), (this.mutualGuildsLength = e.mutualGuildsLength), (this.mutualGuilds = e.mutualGuilds), (this.nickname = e.nickname), (this.spam = e.spam), (this.giftIntentType = e.giftIntentType);
+        super(), v(this, 'key', void 0), v(this, 'type', void 0), v(this, 'status', void 0), v(this, 'isMobile', void 0), v(this, 'activities', void 0), v(this, 'applicationStream', void 0), v(this, 'user', void 0), v(this, 'usernameLower', void 0), v(this, 'mutualGuildsLength', void 0), v(this, 'mutualGuilds', void 0), v(this, 'nickname', void 0), v(this, 'spam', void 0), v(this, 'giftIntentType', void 0), (this.key = e.key), (this.type = e.type), (this.status = e.status), (this.activities = e.activities), (this.applicationStream = e.applicationStream), (this.user = e.user), (this.isMobile = e.isMobile), (this.usernameLower = e.usernameLower), (this.mutualGuildsLength = e.mutualGuildsLength), (this.mutualGuilds = e.mutualGuilds), (this.nickname = e.nickname), (this.spam = e.spam), (this.giftIntentType = e.giftIntentType);
     }
 }
-class Z {
+class b {
     reset() {
-        let e = s().map(
-                p.Z.getRelationships(),
+        let e = l().map(
+                _.Z.getRelationships(),
                 (e, t) =>
-                    new v({
+                    new x({
                         key: t,
                         type: e,
-                        nickname: p.Z.getNickname(t),
-                        ...f(t),
+                        nickname: _.Z.getNickname(t),
+                        ...S(t),
                         ...N(t),
-                        ...A(t),
-                        spam: (0, _.A)({ location: 'friend-store' }) && p.Z.isSpam(t),
-                        giftIntentType: e === T.OGo.FRIEND && u.Z.isTopAffinityFriendAnniversary({ userId: t }) ? S.hX.FRIEND_ANNIVERSARY : void 0
+                        ...T(t),
+                        spam: (0, h.A)({ location: 'friend-store' }) && _.Z.isSpam(t),
+                        giftIntentType: e === I.OGo.FRIEND && u.Z.isTopAffinityFriendAnniversary({ userId: t }) ? C.hX.FRIEND_ANNIVERSARY : void 0
                     })
             ),
-            t = s().map(
+            t = l().map(
                 d.Z.getSuggestions(),
                 (e) =>
-                    new v({
+                    new x({
                         key: e.key,
                         type: 99,
                         nickname: e.name,
-                        ...f(e.key),
+                        ...S(e.key),
                         ...N(e.key),
-                        ...A(e.key)
+                        ...T(e.key)
                     })
             );
-        return new Z(s().concat(e, t));
+        return new b(l().concat(e, t));
     }
     clone() {
-        return new Z(this._rows);
+        return new b(this._rows);
     }
     update(e) {
         let t = !1;
         for (let n = 0; n < this._rows.length; n++) {
             let i = this._rows[n],
-                a = i.merge(e(i.key));
-            (t = t || a !== i), (this._rows[n] = a);
+                r = i.merge(e(i.key));
+            (t = t || r !== i), (this._rows[n] = r);
         }
         return t;
     }
     filter(e, t) {
-        return s()(this._rows)
+        return l()(this._rows)
             .filter((e) => {
                 if (null == e.user) return !1;
                 if (null != t && '' !== t) {
@@ -123,19 +123,19 @@ class Z {
             })
             .filter((t) => {
                 switch (e) {
-                    case T.pJs.ONLINE:
-                        return t.type === T.OGo.FRIEND && t.status !== T.Skl.OFFLINE;
-                    case T.pJs.PENDING:
-                        return (t.type === T.OGo.PENDING_INCOMING && (!(0, _.A)({ location: 'friends-store' }) || !t.spam)) || t.type === T.OGo.PENDING_OUTGOING;
-                    case T.pJs.SPAM:
-                        return t.type === T.OGo.PENDING_INCOMING && t.spam;
-                    case T.pJs.SUGGESTIONS:
+                    case I.pJs.ONLINE:
+                        return t.type === I.OGo.FRIEND && t.status !== I.Skl.OFFLINE;
+                    case I.pJs.PENDING:
+                        return (t.type === I.OGo.PENDING_INCOMING && (!(0, h.A)({ location: 'friends-store' }) || !t.spam)) || t.type === I.OGo.PENDING_OUTGOING;
+                    case I.pJs.SPAM:
+                        return t.type === I.OGo.PENDING_INCOMING && t.spam;
+                    case I.pJs.SUGGESTIONS:
                         return 99 === t.type;
-                    case T.pJs.BLOCKED:
-                        return t.type === T.OGo.BLOCKED;
-                    case T.pJs.ALL:
+                    case I.pJs.BLOCKED:
+                        return t.type === I.OGo.BLOCKED;
+                    case I.pJs.ALL:
                     default:
-                        return t.type === T.OGo.FRIEND;
+                        return t.type === I.OGo.FRIEND;
                 }
             })
             .sortBy((e) => e.comparator)
@@ -143,11 +143,11 @@ class Z {
     }
     getRelationshipCounts() {
         let e = {
-            [T.OGo.FRIEND]: 0,
-            [T.OGo.PENDING_INCOMING]: 0,
-            [T.OGo.PENDING_OUTGOING]: 0,
+            [I.OGo.FRIEND]: 0,
+            [I.OGo.PENDING_INCOMING]: 0,
+            [I.OGo.PENDING_OUTGOING]: 0,
             99: 0,
-            [T.OGo.BLOCKED]: 0
+            [I.OGo.BLOCKED]: 0
         };
         return (
             this._rows.forEach((t) => {
@@ -157,68 +157,68 @@ class Z {
         );
     }
     constructor(e = []) {
-        C(this, '_rows', void 0), (this._rows = e);
+        v(this, '_rows', void 0), (this._rows = e);
     }
 }
-let L = !0,
-    R = !1,
-    O = T.pJs.ONLINE,
-    x = new Z(),
-    b = !0,
-    M = !1;
-function P() {
+let A = !0,
+    Z = !1,
+    y = I.pJs.ONLINE,
+    L = new b(),
+    R = !0,
+    P = !1;
+function O() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    L && (e || (O !== T.pJs.ONLINE && O !== T.pJs.ADD_FRIEND)) && !R && ((L = !1), (R = !0), o.Z.fetchRelationships());
+    A && (e || (y !== I.pJs.ONLINE && y !== I.pJs.ADD_FRIEND)) && !Z && ((A = !1), (Z = !0), o.Z.fetchRelationships());
+}
+function j() {
+    if (((A = !0), R ? (Z = !1) : O(), (L = L.reset()), P)) return;
+    let e = L.getRelationshipCounts();
+    y = 0 === e[I.OGo.FRIEND] ? (0 !== e[I.OGo.PENDING_INCOMING] ? I.pJs.PENDING : I.pJs.ADD_FRIEND) : I.pJs.ONLINE;
 }
 function D() {
-    if (((L = !0), b ? (R = !1) : P(), (x = x.reset()), M)) return;
-    let e = x.getRelationshipCounts();
-    O = 0 === e[T.OGo.FRIEND] ? (0 !== e[T.OGo.PENDING_INCOMING] ? T.pJs.PENDING : T.pJs.ADD_FRIEND) : T.pJs.ONLINE;
+    L = R ? new b() : L.reset();
 }
-function y() {
-    x = b ? new Z() : x.reset();
-}
-function j(e) {
+function M(e) {
     return function () {
-        return !b && !!x.update(e) && ((x = x.clone()), !0);
+        return !R && !!L.update(e) && ((L = L.clone()), !0);
     };
 }
-class U extends (i = r.ZP.Store) {
+class w extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(p.Z, I.Z, g.default, m.Z, h.ZP, E.Z, d.Z), this.syncWith([p.Z], y), this.syncWith([d.Z], y), this.syncWith([u.Z], y), this.syncWith([g.default], j(f)), this.syncWith([I.Z, E.Z], j(N)), D();
+        this.waitFor(_.Z, f.Z, E.default, g.Z, p.ZP, m.Z, d.Z), this.syncWith([_.Z], D), this.syncWith([d.Z], D), this.syncWith([u.Z], D), this.syncWith([E.default], M(S)), this.syncWith([f.Z, m.Z], M(N)), j();
     }
     getState() {
         return {
-            fetching: R,
-            section: O,
-            pendingCount: p.Z.getPendingCount(),
-            rows: x
+            fetching: Z,
+            section: y,
+            pendingCount: _.Z.getPendingCount(),
+            rows: L
         };
     }
 }
-C(U, 'displayName', 'FriendsStore'),
-    (t.ZP = new U(l.Z, {
+v(w, 'displayName', 'FriendsStore'),
+    (t.ZP = new w(s.Z, {
         CONNECTION_OPEN: function () {
-            D();
+            j();
         },
         FRIENDS_SET_SECTION: function (e) {
-            (O = e.section), P();
+            (y = e.section), O();
         },
         CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;
-            return (b = null != t), y(), !b;
+            return (R = null != t), D(), !R;
         },
         LOAD_RELATIONSHIPS_SUCCESS: function () {
-            R = !1;
+            Z = !1;
         },
         LOAD_RELATIONSHIPS_FAILURE: function () {
-            (L = !0), (R = !0);
+            (A = !0), (Z = !0);
         },
         DRAWER_SELECT_TAB: function (e) {
             let { tab: t } = e;
-            return (b = t !== T.cII.FRIENDS), y(), !b;
+            return (R = t !== I.cII.FRIENDS), D(), !R;
         },
         FRIENDS_SET_INITIAL_SECTION: function (e) {
-            (O = e.section), (M = !0);
+            (y = e.section), (P = !0);
         }
     }));

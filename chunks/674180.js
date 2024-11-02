@@ -1,12 +1,12 @@
 n.d(t, {
     eC: function () {
-        return f;
+        return h;
     },
     gX: function () {
-        return E;
+        return _;
     },
     uP: function () {
-        return _;
+        return f;
     }
 });
 var r = n(192379),
@@ -32,7 +32,7 @@ let d = (e) => {
             restrictionsLoading: (0, i.e7)([o.Z], () => o.Z.getMonetizationRestrictionsFetchState(null != n ? n : c.lds) === o.M.FETCHING)
         };
     },
-    _ = (e) => {
+    f = (e) => {
         var t;
         let n = (0, i.e7)([l.Z], () => l.Z.getGuild(e), [e]),
             { restrictions: r, restrictionsLoading: a } = d(n);
@@ -41,7 +41,7 @@ let d = (e) => {
             restrictionsLoading: a
         };
     },
-    E = (e) => {
+    _ = (e) => {
         var t;
         let n = (0, i.e7)([l.Z], () => l.Z.getGuild(e), [e]),
             { restrictions: r, restrictionsLoading: a } = d(n),
@@ -53,7 +53,7 @@ let d = (e) => {
             restrictionsLoading: a
         };
     },
-    f = (e) => {
+    h = (e) => {
         let { restrictions: t, restrictionsLoading: n } = d((0, i.e7)([l.Z], () => l.Z.getGuild(e), [e]));
         return {
             isMonetizationReapplicationDisabled: (0, u.m8)(t),

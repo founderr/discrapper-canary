@@ -10,7 +10,7 @@ t.Z = function (e) {
         u = e.first,
         c = e.last,
         d = e.active,
-        _ = (0, i.default)(
+        f = (0, i.default)(
             {
                 default: {
                     color: {
@@ -57,11 +57,11 @@ t.Z = function (e) {
         s.m4,
         {
             color: t,
-            style: _.color,
+            style: f.color,
             onClick: void 0 === n ? function () {} : n,
             onHover: l,
             focusStyle: { boxShadow: '0 0 4px ' + t }
         },
-        r.createElement('div', { style: _.check }, r.createElement(o.default, null))
+        r.createElement('div', { style: f.check }, r.createElement(o.default, null))
     );
 };

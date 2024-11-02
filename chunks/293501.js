@@ -15,8 +15,8 @@ t.d(n, {
 var l = t(192379),
     a = t(772848),
     i = t(304809),
-    s = t(586826),
-    r = t(943351);
+    r = t(586826),
+    s = t(943351);
 let u = new Worker(new URL('/assets/' + t.u('14315'), t.b)),
     o = (0, i.N)();
 async function c(e) {
@@ -29,41 +29,41 @@ function d(e) {
     return (
         l.useEffect(() => {
             if (null == e) return;
-            let n = (0, r.hp)(e);
+            let n = (0, s.hp)(e);
             n !== a && (i(n), t(null), c(e).then(t));
         }, [a, e]),
         n
     );
 }
-let f = { ...r.nl };
+let f = { ...s.nl };
 function m(e, n, t) {
     let [i, o] = l.useState(null),
         [c, d] = l.useState(null),
         [m, h] = l.useState(1),
-        { setMaxVolume: g } = (0, s.p)(),
+        { setMaxVolume: g } = (0, r.p)(),
         p = l.useCallback(
             (e, n) => {
-                var l, i, s, r, o;
+                var l, i, r, s, o;
                 d(null),
                     ((l = e),
                     (i = n.offsetWidth),
-                    (s = t),
-                    (r = f),
+                    (r = t),
+                    (s = f),
                     (o = h),
                     new Promise((e) => {
                         let n = (0, a.Z)(),
                             t = (l) => {
                                 let {
-                                    data: { waveform: a, id: i, normalizedVolumeMultipler: s }
+                                    data: { waveform: a, id: i, normalizedVolumeMultipler: r }
                                 } = l;
-                                n === i && (e(a), o(s)), null == u || u.removeEventListener('message', t);
+                                n === i && (e(a), o(r)), null == u || u.removeEventListener('message', t);
                             };
                         null == u || u.addEventListener('message', t),
                             null == u ||
                                 u.postMessage({
                                     id: n,
-                                    options: s,
-                                    config: r,
+                                    options: r,
+                                    config: s,
                                     width: i,
                                     rawBufferData: l
                                 });
@@ -74,7 +74,7 @@ function m(e, n, t) {
     return (
         l.useEffect(() => {
             if (null == e || null == n) return;
-            let l = (0, r.V3)(e, t);
+            let l = (0, s.V3)(e, t);
             i !== l && (o(l), p(e, n));
         }, [e, p, n, t, i]),
         l.useEffect(() => {

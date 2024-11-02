@@ -1,39 +1,39 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return T;
+        return g;
     }
 });
-var n = t(200651);
-t(192379);
-var a = t(442837),
-    i = t(409700),
-    r = t(480294),
-    o = t(63063),
-    l = t(838436),
-    c = t(51331),
-    d = t(922628),
-    _ = t(726985),
-    u = t(981631),
-    E = t(689938);
-function T() {
-    let e = (0, a.cj)([r.Z], () => r.Z.hasConsented(u.pjP.PERSONALIZATION));
-    return (0, n.jsx)(l.U, {
-        setting: _.s6.PRIVACY_DATA_PERSONALIZE_V2,
-        children: (0, n.jsx)(c.Z, {
-            title: E.Z.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE,
-            note: E.Z.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE_V2.format({ helpdeskArticle: o.Z.getArticleURL(u.BhN.DATA_USED_FOR_RECOMMENDED) }),
+var i = n(200651);
+n(192379);
+var s = n(442837),
+    r = n(409700),
+    l = n(480294),
+    a = n(63063),
+    o = n(838436),
+    c = n(51331),
+    d = n(922628),
+    u = n(726985),
+    m = n(981631),
+    h = n(388032);
+function g() {
+    let e = (0, s.cj)([l.Z], () => l.Z.hasConsented(m.pjP.PERSONALIZATION));
+    return (0, i.jsx)(o.U, {
+        setting: u.s6.PRIVACY_DATA_PERSONALIZE_V2,
+        children: (0, i.jsx)(c.Z, {
+            title: h.intl.string(h.t.MNKzys),
+            note: h.intl.format(h.t['eQL/Mj'], { helpdeskArticle: a.Z.getArticleURL(m.BhN.DATA_USED_FOR_RECOMMENDED) }),
             value: e,
             onChange: (e) => {
                 e
-                    ? (0, i.g)([u.pjP.PERSONALIZATION], []).catch(d.S)
+                    ? (0, r.g)([m.pjP.PERSONALIZATION], []).catch(d.S)
                     : (0, d.V)({
-                          header: E.Z.Messages.PERSONALIZATION_DISABLE_MODAL_TITLE,
-                          confirmText: E.Z.Messages.PERSONALIZATION_DISABLE_MODAL_CONFIRM,
-                          cancelText: E.Z.Messages.PERSONALIZATION_DISABLE_MODAL_CANCEL,
+                          header: h.intl.string(h.t['9SNpzs']),
+                          confirmText: h.intl.string(h.t['9g5UGx']),
+                          cancelText: h.intl.string(h.t['+ZLPw8']),
                           onConfirm: () => {
-                              (0, i.g)([], [u.pjP.PERSONALIZATION]).catch(d.S);
+                              (0, r.g)([], [m.pjP.PERSONALIZATION]).catch(d.S);
                           },
-                          body: E.Z.Messages.PERSONALIZATION_DISABLE_MODAL_BODY
+                          body: h.intl.string(h.t.gJvDDg)
                       });
             }
         })

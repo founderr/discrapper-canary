@@ -1,12 +1,12 @@
 n.d(t, {
     $F: function () {
-        return E;
+        return _;
     },
     Bt: function () {
         return a;
     },
     Gp: function () {
-        return f;
+        return h;
     },
     hQ: function () {
         return c;
@@ -24,7 +24,7 @@ n.d(t, {
         return u;
     },
     yi: function () {
-        return _;
+        return f;
     }
 }),
     n(223892);
@@ -77,7 +77,7 @@ function d(e) {
     );
     return t;
 }
-function _(e) {
+function f(e) {
     let { showCreatorPortalLink: t } = r.jJ.useExperiment(
         {
             guildId: null != e ? e : i.lds,
@@ -87,11 +87,11 @@ function _(e) {
     );
     return t;
 }
-function E() {
+function _() {
     let { enabled: e } = r.$i.getCurrentConfig({ location: '504714_12' }, { autoTrackExposure: !1 });
     return e;
 }
-function f() {
+function h() {
     let { enabled: e } = r.$i.useExperiment({ location: '504714_13' }, { autoTrackExposure: !1 });
     return e;
 }

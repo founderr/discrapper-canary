@@ -1,40 +1,40 @@
-t.d(e, {
+i.d(t, {
     Z: function () {
-        return s;
+        return u;
     }
 });
-var i = t(200651);
-t(192379);
-var a = t(481060),
-    l = t(695346),
-    r = t(572004),
-    d = t(689938);
-function s(n, e) {
-    let t = e.primarySkuId,
-        s = l.Sb.useSetting();
-    return !__OVERLAY__ && s && r.wS
-        ? (0, i.jsxs)(a.MenuItem, {
+var e = i(200651);
+i(192379);
+var l = i(481060),
+    a = i(695346),
+    r = i(572004),
+    d = i(388032);
+function u(n, t) {
+    let i = t.primarySkuId,
+        u = a.Sb.useSetting();
+    return !__OVERLAY__ && u && r.wS
+        ? (0, e.jsxs)(l.MenuItem, {
               id: 'application-dev',
-              label: d.Z.Messages.COPY,
-              action: () => (0, r.JG)(e.id),
+              label: d.intl.string(d.t.OpuAlJ),
+              action: () => (0, r.JG)(t.id),
               children: [
-                  (0, i.jsx)(a.MenuItem, {
+                  (0, e.jsx)(l.MenuItem, {
                       id: 'app-id',
-                      label: d.Z.Messages.APPLICATION_CONTEXT_MENU_APPLICATION_ID,
-                      action: () => (0, r.JG)(e.id)
+                      label: d.intl.string(d.t.qSHsho),
+                      action: () => (0, r.JG)(t.id)
                   }),
                   null != n
-                      ? (0, i.jsx)(a.MenuItem, {
+                      ? (0, e.jsx)(l.MenuItem, {
                             id: 'branch-id',
-                            label: d.Z.Messages.APPLICATION_CONTEXT_MENU_BRANCH_ID,
+                            label: d.intl.string(d.t.g7oyys),
                             action: () => (0, r.JG)(n.branchId)
                         })
                       : null,
-                  null != t
-                      ? (0, i.jsx)(a.MenuItem, {
+                  null != i
+                      ? (0, e.jsx)(l.MenuItem, {
                             id: 'sku-id',
-                            label: d.Z.Messages.APPLICATION_CONTEXT_MENU_SKU_ID,
-                            action: () => (0, r.JG)(t)
+                            label: d.intl.string(d.t.hReUdH),
+                            action: () => (0, r.JG)(i)
                         })
                       : null
               ]

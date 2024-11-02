@@ -8,46 +8,46 @@ var i = n(120356),
     u = n(813549),
     c = n(246946),
     d = n(51144),
-    _ = n(689938),
-    E = n(845286);
-let f = (e) => {
-    let { primary: t, secondary: n, botType: i, botVerified: s, discriminatorClass: u, className: c, usernameClass: d, color: f, botClass: h, showStreamerModeTooltip: p } = e;
+    f = n(388032),
+    _ = n(845286);
+let h = (e) => {
+    let { primary: t, secondary: n, botType: i, botVerified: s, discriminatorClass: u, className: c, usernameClass: d, color: h, botClass: p, showStreamerModeTooltip: m } = e;
     return (0, r.jsxs)('div', {
-        className: a()(E.info, c),
+        className: a()(_.info, c),
         children: [
             (0, r.jsx)(o.Tooltip, {
-                text: _.Z.Messages.STREAMER_MODE_ENABLED,
-                shouldShow: p,
-                'aria-label': !!p && void 0,
+                text: f.intl.string(f.t.Br1ls7),
+                shouldShow: m,
+                'aria-label': !!m && void 0,
                 children: (e) =>
                     (0, r.jsx)('span', {
                         ...e,
-                        className: a()(E.__invalid_username, d),
-                        style: null != f ? { color: f } : void 0,
+                        className: a()(_.__invalid_username, d),
+                        style: null != h ? { color: h } : void 0,
                         children: t
                     })
             }),
             null != n
                 ? (0, r.jsx)('span', {
-                      className: a()(E.infoSpacing, u),
+                      className: a()(_.infoSpacing, u),
                       children: n
                   })
                 : void 0,
             null != i &&
                 (0, r.jsx)(l.Z, {
                     type: i,
-                    className: a()(E.infoSpacing, h),
+                    className: a()(_.infoSpacing, p),
                     verified: s
                 })
         ]
     });
 };
 t.Z = (e) => {
-    let { user: t, nick: n, forceUsername: i, showAccountIdentifier: a, overrideDiscriminator: o, forcePomelo: l, hideBotTag: _ = !1, hideDiscriminator: E = !1, ...h } = e,
-        p = (0, s.e7)([c.Z], () => c.Z.hidePersonalInformation),
-        I = p || E || t.isNonUserBot(),
-        m = t.toString(),
-        T = _
+    let { user: t, nick: n, forceUsername: i, showAccountIdentifier: a, overrideDiscriminator: o, forcePomelo: l, hideBotTag: f = !1, hideDiscriminator: _ = !1, ...p } = e,
+        m = (0, s.e7)([c.Z], () => c.Z.hidePersonalInformation),
+        g = m || _ || t.isNonUserBot(),
+        E = t.toString(),
+        v = f
             ? null
             : (function (e) {
                   if (e.isSystemUser()) return u.J.SYSTEM_DM;
@@ -55,27 +55,27 @@ t.Z = (e) => {
                   if (e.bot) return u.J.BOT;
                   return null;
               })(t),
-        S = t.isVerifiedBot(),
-        g = d.ZP.getName(t),
-        A = i ? m : null != n ? n : g,
-        N = t.isPomelo() || l;
-    if (N || A !== m) {
-        let e = A === m && N && i ? d.ZP.getUserTag(t, { forcePomelo: l }) : A,
-            n = a && e !== '@'.concat(m) ? d.ZP.getUserTag(t) : void 0;
-        return (0, r.jsx)(f, {
+        I = t.isVerifiedBot(),
+        S = d.ZP.getName(t),
+        T = i ? E : null != n ? n : S,
+        b = t.isPomelo() || l;
+    if (b || T !== E) {
+        let e = T === E && b && i ? d.ZP.getUserTag(t, { forcePomelo: l }) : T,
+            n = a && e !== '@'.concat(E) ? d.ZP.getUserTag(t) : void 0;
+        return (0, r.jsx)(h, {
             primary: e,
             secondary: n,
-            botType: T,
-            botVerified: S,
-            showStreamerModeTooltip: p && d.ZP.isNameConcealed(e),
-            ...h
+            botType: v,
+            botVerified: I,
+            showStreamerModeTooltip: m && d.ZP.isNameConcealed(e),
+            ...p
         });
     }
     return (0, r.jsx)(u.Z, {
-        name: A,
-        botType: T,
-        botVerified: S,
-        discriminator: I || A !== m ? null : null != o ? o : t.discriminator,
-        ...h
+        name: T,
+        botType: v,
+        botVerified: I,
+        discriminator: g || T !== E ? null : null != o ? o : t.discriminator,
+        ...p
     });
 };

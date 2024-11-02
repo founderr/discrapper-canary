@@ -4,17 +4,17 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    a = n(192379),
-    s = n(100621),
-    r = n(481060),
-    l = n(532490),
+    r = n(192379),
+    l = n(100621),
+    a = n(481060),
+    s = n(532490),
     o = n(620929),
-    c = n(689938),
+    c = n(388032),
     d = n(837275);
 function u(e) {
-    let { guildId: t, signed: n, setSigned: u, sidebarWidth: _, windowWidth: E, transition: h, brandPrimaryColor: m } = e,
-        I = a.useMemo(() => (E - _) / 2, [_, E]);
-    return null == h
+    let { guildId: t, signed: n, setSigned: u, sidebarWidth: h, windowWidth: m, transition: p, brandPrimaryColor: g } = e,
+        f = r.useMemo(() => (m - h) / 2, [h, m]);
+    return null == p
         ? (0, i.jsx)('div', {
               className: d.sidebarContent,
               children: (0, i.jsx)('div', {
@@ -24,8 +24,8 @@ function u(e) {
                       canSignCharter: null != u,
                       signed: n,
                       onSignCharter: (e) => (null == u ? void 0 : u(e)),
-                      signHintPosition: l.p.RIGHT,
-                      primaryColor: m,
+                      signHintPosition: s.p.RIGHT,
+                      primaryColor: g,
                       className: d.charterScroll,
                       fullHeight: !0,
                       showDisclaimer: !0
@@ -35,29 +35,29 @@ function u(e) {
         : (0, i.jsxs)('div', {
               className: d.sidebarContent,
               children: [
-                  h(
+                  p(
                       (e, t) =>
                           t &&
-                          (0, i.jsx)(s.animated.div, {
+                          (0, i.jsx)(l.animated.div, {
                               className: d.sidebarLeftDecorationContainer,
                               style: {
                                   opacity: e.opacity,
                                   transform: e.opacity.to([0, 1], [40, 0]).to((e) => 'translateY('.concat(e, 'px)')),
-                                  width: I
+                                  width: f
                               },
                               children: (0, i.jsxs)('div', {
                                   className: d.sidebarLeftDecoration,
-                                  style: { width: I },
+                                  style: { width: f },
                                   children: [
-                                      (0, i.jsx)(r.Heading, {
+                                      (0, i.jsx)(a.Heading, {
                                           variant: 'heading-xxl/medium',
                                           className: d.header,
-                                          children: c.Z.Messages.CLAN_SETUP_SIGN_TITLE
+                                          children: c.intl.string(c.t.PAYPxM)
                                       }),
-                                      (0, i.jsx)(r.Text, {
+                                      (0, i.jsx)(a.Text, {
                                           variant: 'text-md/normal',
                                           color: 'text-muted',
-                                          children: c.Z.Messages.CLAN_SETUP_SIGN_SUBTITLE
+                                          children: c.intl.string(c.t.GKxdeX)
                                       })
                                   ]
                               })
@@ -70,8 +70,8 @@ function u(e) {
                           canSignCharter: null != u,
                           signed: n,
                           onSignCharter: (e) => (null == u ? void 0 : u(e)),
-                          signHintPosition: l.p.RIGHT,
-                          primaryColor: m,
+                          signHintPosition: s.p.RIGHT,
+                          primaryColor: g,
                           className: d.charterScroll,
                           fullHeight: !0,
                           showDisclaimer: !0

@@ -13,19 +13,19 @@ function i() {
     let [i, s] = r.useState(void 0),
         [o, l] = r.useState(void 0),
         [u, c] = r.useState(void 0),
-        [d, _] = r.useState(void 0),
-        E = r.useRef(null);
+        [d, f] = r.useState(void 0),
+        _ = r.useRef(null);
     return (
         a(
-            E,
+            _,
             (e) => {
                 let { width: t, height: n, scrollWidth: r, scrollHeight: i } = e;
-                l(n), s(t), c(r), _(i);
+                l(n), s(t), c(r), f(i);
             },
             t
         ),
         {
-            ref: E,
+            ref: _,
             width: i,
             height: o,
             scrollHeight: d,

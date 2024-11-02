@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return m;
     }
 }),
     n(789020),
@@ -20,10 +20,10 @@ var i = n(243814),
     u = n(709054),
     c = n(941532),
     d = n(713938),
-    _ = n(981631),
-    E = n(689938),
-    f = n(883540);
-let h = (e) => {
+    f = n(981631),
+    _ = n(388032),
+    h = n(883540);
+let p = (e) => {
     switch (e) {
         case o.ZC.IP_LOCATION:
             return s.GlobeEarthIcon;
@@ -33,53 +33,53 @@ let h = (e) => {
             return null;
     }
 };
-function p(e) {
+function m(e) {
     var t;
     let n,
-        { application: a, scopes: p, redirectUri: m, approximateGuildCount: T, isEmbeddedFlow: S, disclosures: g } = e,
-        A = new Date(u.default.extractTimestamp(a.id)),
-        N = (0, d.W3)(p),
-        R = (0, l.yE)(null !== (t = a.flags) && void 0 !== t ? t : 0, _.udG.EMBEDDED);
-    if (null != m && !R && !S)
+        { application: a, scopes: m, redirectUri: E, approximateGuildCount: v, isEmbeddedFlow: I, disclosures: S } = e,
+        T = new Date(u.default.extractTimestamp(a.id)),
+        b = (0, d.W3)(m),
+        y = (0, l.yE)(null !== (t = a.flags) && void 0 !== t ? t : 0, f.udG.EMBEDDED);
+    if (null != E && !y && !I)
         try {
-            let e = new URL(m);
+            let e = new URL(E);
             n = null != e.host && e.host.length > 0 ? e.origin : e.href;
         } catch (e) {
             n = null;
         }
     return (0, r.jsxs)('div', {
-        className: f.applicationDetails,
+        className: h.applicationDetails,
         children: [
             null != n
-                ? (0, r.jsx)(I, {
+                ? (0, r.jsx)(g, {
                       icon: s.LinkIcon,
-                      text: E.Z.Messages.OAUTH2_DETAILS_REDIRECT.format({ origin: n })
+                      text: _.intl.format(_.t['5k5OKC'], { origin: n })
                   })
                 : null,
-            (0, r.jsx)(I, {
+            (0, r.jsx)(g, {
                 icon: s.LockIcon,
                 text: (0, c.i)(a)
             }),
-            (0, r.jsx)(I, {
+            (0, r.jsx)(g, {
                 icon: s.ClockIcon,
-                text: E.Z.Messages.OAUTH2_DETAILS_CREATION_DATE.format({ date: A })
+                text: _.intl.formatToPlainString(_.t['+1bjc3'], { date: T })
             }),
-            p.includes(i.x.BOT) && null != T
-                ? (0, r.jsx)(I, {
+            m.includes(i.x.BOT) && null != v
+                ? (0, r.jsx)(g, {
                       icon: s.RobotIcon,
-                      text: E.Z.Messages.OAUTH2_DETAILS_GUILDS.format({ guildCount: T })
+                      text: _.intl.formatToPlainString(_.t.UHGHSE, { guildCount: v })
                   })
                 : null,
-            (0, r.jsx)(I, {
+            (0, r.jsx)(g, {
                 icon: s.ShieldIcon,
-                text: N
+                text: b
             }),
-            null != g
-                ? g.map((e) => {
+            null != S
+                ? S.map((e) => {
                       let t = (0, o.PM)(e),
-                          n = h(e);
+                          n = p(e);
                       return null != n && null != t
-                          ? (0, r.jsx)(I, {
+                          ? (0, r.jsx)(g, {
                                 icon: n,
                                 text: t
                             })
@@ -89,18 +89,18 @@ function p(e) {
         ]
     });
 }
-function I(e) {
+function g(e) {
     let { icon: t, text: n } = e;
     return (0, r.jsxs)('div', {
-        className: f.entry,
+        className: h.entry,
         children: [
             (0, r.jsx)(t, {
-                className: f.entryIcon,
+                className: h.entryIcon,
                 color: 'currentColor'
             }),
             (0, r.jsx)(a.x, {
                 variant: 'text-xs/normal',
-                className: f.entryInner,
+                className: h.entryInner,
                 children: n
             })
         ]

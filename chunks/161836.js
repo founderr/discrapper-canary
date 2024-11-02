@@ -1,27 +1,27 @@
-var t = a(200651);
-a(192379);
-var n = a(481060),
-    l = a(689938),
-    i = a(397503);
-s.Z = () =>
-    (0, t.jsxs)('div', {
-        className: i.container,
+var i = n(200651);
+n(192379);
+var s = n(481060),
+    l = n(388032),
+    a = n(397503);
+t.Z = () =>
+    (0, i.jsxs)('div', {
+        className: a.container,
         children: [
-            (0, t.jsx)('div', {
-                className: i.iconContainer,
-                children: (0, t.jsx)('div', { className: i.icon })
+            (0, i.jsx)('div', {
+                className: a.iconContainer,
+                children: (0, i.jsx)('div', { className: a.icon })
             }),
-            (0, t.jsx)(n.Text, {
+            (0, i.jsx)(s.Text, {
                 color: 'header-primary',
                 variant: 'text-lg/semibold',
-                className: i.header,
-                children: l.Z.Messages.HUB_EMAIL_CONNECTION_SIDEBAR_HEADER
+                className: a.header,
+                children: l.intl.string(l.t.PAnzbW)
             }),
-            (0, t.jsx)(n.Text, {
+            (0, i.jsx)(s.Text, {
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                className: i.description,
-                children: l.Z.Messages.HUB_EMAIL_CONNECTION_SIDEBAR_DESCRIPTION.format()
+                className: a.description,
+                children: l.intl.format(l.t['8Kp48/'], {})
             })
         ]
     });

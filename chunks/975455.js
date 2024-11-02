@@ -1,4 +1,4 @@
-e.exports = {
+n.exports = {
     header: 'header_fa4e6d',
     content: 'content_fa4e6d',
     icon: 'icon_fa4e6d',

@@ -13,11 +13,11 @@ function i(e, t, n) {
 }
 n.d(t, {
     Z: function () {
-        return a;
+        return r;
     }
 }),
     n(653041);
-class a {
+class r {
     _processQueue() {
         setTimeout(() => {
             if (this._queue.length > 0 && this._tokenCount > 0) {

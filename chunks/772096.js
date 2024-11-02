@@ -1,6 +1,6 @@
 n.d(t, {
     yw: function () {
-        return A;
+        return T;
     }
 }),
     n(47120),
@@ -20,47 +20,47 @@ var o = n(302454),
     u = n(830121),
     c = n(823379),
     d = n(172244),
-    _ = n(571989);
-let E = new (s())({ max: 50 });
-function f(e) {
-    let t = E.get(e);
+    f = n(571989);
+let _ = new (s())({ max: 50 });
+function h(e) {
+    let t = _.get(e);
     if (null != t) return t;
-    let n = (0, _.yx)(e),
-        r = (0, _.zq)(n),
+    let n = (0, f.yx)(e),
+        r = (0, f.zq)(n),
         i = {
             whitespaceSanitized: n,
             fullySanitized: r
         };
-    return E.set(e, i), i;
+    return _.set(e, i), i;
 }
-let h = ['http:', 'https:', 'discord:'],
-    p = [d.b.TEXT, d.b.UNDERLINE, d.b.STRONG, d.b.ITALICS, d.b.STRIKETHROUGH, d.b.INLINE_CODE, d.b.SPOILER, d.b.LINE_BREAK, d.b.TIMESTAMP],
-    I = [...p, d.b.EMOJI, d.b.CUSTOM_EMOJI],
-    m = [d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT],
-    T = [d.b.TEXT],
-    S = [d.b.UNDERLINE, d.b.STRONG, d.b.ITALICS, d.b.STRIKETHROUGH, d.b.INLINE_CODE, d.b.SPOILER, d.b.LINE_BREAK, d.b.TIMESTAMP, d.b.EMOJI, d.b.CUSTOM_EMOJI, d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT];
-function g(e, t) {
+let p = ['http:', 'https:', 'discord:'],
+    m = [d.b.TEXT, d.b.UNDERLINE, d.b.STRONG, d.b.ITALICS, d.b.STRIKETHROUGH, d.b.INLINE_CODE, d.b.SPOILER, d.b.LINE_BREAK, d.b.TIMESTAMP],
+    g = [...m, d.b.EMOJI, d.b.CUSTOM_EMOJI],
+    E = [d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT],
+    v = [d.b.TEXT],
+    I = [d.b.UNDERLINE, d.b.STRONG, d.b.ITALICS, d.b.STRIKETHROUGH, d.b.INLINE_CODE, d.b.SPOILER, d.b.LINE_BREAK, d.b.TIMESTAMP, d.b.EMOJI, d.b.CUSTOM_EMOJI, d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT];
+function S(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
     for (let r of (!Array.isArray(e) && (e = [e]), e)) {
         if (void 0 === r || !t.includes(r.type)) return null;
         if (r.type === d.b.INLINE_CODE) {
             let e = [...t, ...n];
-            if (null == g(r.validationChildContent, e)) return null;
+            if (null == S(r.validationChildContent, e)) return null;
         }
-        if (Array.isArray(r.content) && null == g(r.content, t)) return null;
+        if (Array.isArray(r.content) && null == S(r.content, t)) return null;
     }
     return e;
 }
-function A(e) {
+function T(e) {
     try {
         var t;
         let n = new URL(e),
             r = null !== (t = n.protocol) && void 0 !== t ? t : '';
-        if (!h.includes(r.toLowerCase())) throw Error('Provided protocol is not allowed: ' + r);
+        if (!p.includes(r.toLowerCase())) throw Error('Provided protocol is not allowed: ' + r);
         if (('http:' === r || 'https:' === r) && (null == n.hostname || 0 === n.hostname.length)) throw Error('no hostname');
-        let i = (0, _.MO)(n);
+        let i = (0, f.MO)(n);
         (n.username = ''), (n.password = '');
-        let a = (0, _.MO)(n);
+        let a = (0, f.MO)(n);
         return {
             target: i,
             displayTarget: a
@@ -74,34 +74,34 @@ t.ZP = {
     match: (e, t, n) => (t.allowLinks ? l().defaultRules.link.match(e, t, n) : null),
     parse(e, t, n) {
         let [r, a, s, o] = e,
-            _ = () => ({
+            f = () => ({
                 type: d.b.TEXT,
                 content: r
             }),
-            E = f(s),
-            h = f(a),
-            N = f(null != o ? o : ''),
-            R = E.whitespaceSanitized,
-            O = h.fullySanitized,
-            v = N.fullySanitized,
-            C = O.trim();
-        if (0 === R.trim().length || 0 === C.length) return _();
-        let L = A(l().unescapeUrl(s)),
-            D = (0, u.ZP)(a).length > 0 || (0, u.ZP)(o).length > 0;
-        if (null == L || D) return _();
-        let y = {
+            _ = h(s),
+            p = h(a),
+            b = h(null != o ? o : ''),
+            y = _.whitespaceSanitized,
+            A = p.fullySanitized,
+            N = b.fullySanitized,
+            C = A.trim();
+        if (0 === y.trim().length || 0 === C.length) return f();
+        let R = T(l().unescapeUrl(s)),
+            O = (0, u.ZP)(a).length > 0 || (0, u.ZP)(o).length > 0;
+        if (null == R || O) return f();
+        let D = {
                 ...n,
                 allowEscape: !1,
                 parseInlineCodeChildContent: !0
             },
-            b = n.allowEmojiLinks ? I : p,
-            M = [...b, ...m],
-            P = [...T, ...S],
-            U = g(t(O, y), M, [d.b.EMOJI]),
-            w = g(t(v, y), P);
+            L = n.allowEmojiLinks ? g : m,
+            x = [...L, ...E],
+            w = [...v, ...I],
+            M = S(t(A, D), x, [d.b.EMOJI]),
+            P = S(t(N, D), w);
         if (
-            null == U ||
-            null == w ||
+            null == M ||
+            null == P ||
             0 ===
                 (function e(t) {
                     let n = '';
@@ -140,17 +140,17 @@ t.ZP = {
                                 (0, c.vE)(r.type);
                         }
                     return n;
-                })(U).trim().length
+                })(M).trim().length
         )
-            return _();
-        let x = i().pick(t.rules, b),
-            G = l().parserFor(x)(h.whitespaceSanitized, y),
-            k = N.whitespaceSanitized,
-            { target: B } = L;
+            return f();
+        let k = i().pick(t.rules, L),
+            U = l().parserFor(k)(p.whitespaceSanitized, D),
+            G = b.whitespaceSanitized,
+            { target: B } = R;
         return {
-            content: G,
+            content: U,
             target: B,
-            title: k
+            title: G
         };
     }
 };

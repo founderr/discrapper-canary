@@ -5,10 +5,10 @@ n.d(t, {
 }),
     n(47120);
 var i = n(392711),
-    s = n.n(i),
-    a = n(442837),
-    l = n(544891),
-    r = n(570140),
+    l = n.n(i),
+    r = n(442837),
+    a = n(544891),
+    s = n(570140),
     o = n(375954),
     c = n(306680),
     u = n(748902),
@@ -20,8 +20,8 @@ function p(e) {
         {
             loaded: n,
             message: i,
-            error: s
-        } = (0, a.cj)(
+            error: l
+        } = (0, r.cj)(
             [u.Z, o.Z, c.ZP],
             () => {
                 let e = c.ZP.lastMessageId(t),
@@ -39,42 +39,42 @@ function p(e) {
             },
             [t]
         ),
-        l = (0, a.e7)([u.Z], () => u.Z.shouldLoadMessageRequestPreview(t), [t]);
+        a = (0, r.e7)([u.Z], () => u.Z.shouldLoadMessageRequestPreview(t), [t]);
     return (
         !n &&
             null == i &&
-            l &&
+            a &&
             (function (e) {
-                h.add(e), null == m && (m = setTimeout(_, 0));
+                h.add(e), null == m && (m = setTimeout(f, 0));
             })(t),
         {
             loaded: n,
-            error: s,
+            error: l,
             message: i
         }
     );
 }
-async function _() {
+async function f() {
     try {
-        for (; !s().isEmpty(h); ) await f();
+        for (; !l().isEmpty(h); ) await g();
     } finally {
         m = null;
     }
 }
-async function f() {
+async function g() {
     let e = Array.from(h).slice(0, 25);
     try {
-        let t = await l.tn.get({
+        let t = await a.tn.get({
             url: d.ANM.MESSAGE_REQUESTS_SUPPLEMENTAL_DATA,
             query: { channel_ids: e }
         });
-        r.Z.dispatch({
+        s.Z.dispatch({
             type: 'LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS',
             requestedChannelIds: e,
             supplementalData: t.body
         });
     } catch (t) {
-        r.Z.dispatch({
+        s.Z.dispatch({
             type: 'LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_ERROR',
             requestedChannelIds: e
         });

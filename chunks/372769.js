@@ -8,63 +8,63 @@ var r,
     u = n(481060),
     c = n(297700),
     d = n(665786),
-    _ = n(823379),
-    E = n(981631),
-    f = n(689938),
-    h = n(722612);
+    f = n(823379),
+    _ = n(981631),
+    h = n(388032),
+    p = n(722612);
 ((i = r || (r = {}))[(i.PARTNERED = 0)] = 'PARTNERED'), (i[(i.STAFF = 1)] = 'STAFF'), (i[(i.VERIFIED = 2)] = 'VERIFIED'), (i[(i.VERIFIED_AND_PARTNERED = 3)] = 'VERIFIED_AND_PARTNERED'), (i[(i.VERIFIED_AND_HUB = 4)] = 'VERIFIED_AND_HUB'), (i[(i.HUB = 5)] = 'HUB'), (i[(i.NONE = 6)] = 'NONE');
-class p extends s.PureComponent {
+class m extends s.PureComponent {
     renderBadge(e, t, n) {
-        let { className: r, badgeStrokeColor: i, tooltipColor: s = u.Tooltip.Colors.BRAND, tooltipPosition: o, tooltipDelay: d, size: E = 16, badgeColor: p, iconClassName: I, flowerStarClassName: m } = this.props,
-            T = (function (e) {
+        let { className: r, badgeStrokeColor: i, tooltipColor: s = u.Tooltip.Colors.BRAND, tooltipPosition: o, tooltipDelay: d, size: _ = 16, badgeColor: m, iconClassName: g, flowerStarClassName: E } = this.props,
+            v = (function (e) {
                 switch (e) {
                     case 2:
-                        return f.Z.Messages.GUILD_VERIFIED;
+                        return h.intl.string(h.t.iCehw8);
                     case 0:
-                        return f.Z.Messages.GUILD_PARTNERED;
+                        return h.intl.string(h.t.hfYfEB);
                     case 3:
-                        return f.Z.Messages.GUILD_VERIFIED_AND_PARTNERED;
+                        return h.intl.string(h.t['TX+iFB']);
                     case 4:
-                        return f.Z.Messages.HUB_VERIFIED_DISCORD_HUB;
+                        return h.intl.string(h.t.NSYGX1);
                     case 5:
-                        return f.Z.Messages.HUB_DISCORD_HUB;
+                        return h.intl.string(h.t.jjUTLy);
                     case 1:
-                        return f.Z.Messages.INTERNAL_EMPLOYEE_ONLY;
+                        return h.intl.string(h.t['lMrv9/']);
                     case 6:
                         return null;
                     default:
-                        (0, _.vE)(e);
+                        (0, f.vE)(e);
                 }
             })(e);
         return (0, a.jsx)(u.Tooltip, {
             color: s,
             position: o,
             delay: d,
-            text: T,
+            text: v,
             children: (s) =>
                 5 === e || 4 === e
                     ? (0, a.jsx)('div', {
                           ...s,
                           className: l()(n, r),
                           style: {
-                              width: E,
-                              height: E
+                              width: _,
+                              height: _
                           },
                           children: (0, a.jsx)(t, {
-                              className: l()(h.icon, I),
+                              className: l()(p.icon, g),
                               color: 'currentColor'
                           })
                       })
                     : (0, a.jsx)(c.Z, {
                           ...s,
                           className: l()(n, r),
-                          flowerStarClassName: m,
-                          color: p,
+                          flowerStarClassName: E,
+                          color: m,
                           stroke: i,
-                          size: E,
+                          size: _,
                           children: (0, a.jsx)(t, {
                               size: 'xxs',
-                              className: l()(h.icon, I),
+                              className: l()(p.icon, g),
                               color: 'currentColor'
                           })
                       })
@@ -73,7 +73,7 @@ class p extends s.PureComponent {
     render() {
         let { guild: e } = this.props,
             t = new Set(e.features);
-        return t.has(E.oNc.INTERNAL_EMPLOYEE_ONLY) ? this.renderBadge(1, u.StaffBadgeIcon, h.staff) : t.has(E.oNc.VERIFIED) && t.has(E.oNc.HUB) ? this.renderBadge(4, u.HubIcon, h.verifiedHub) : t.has(E.oNc.HUB) ? this.renderBadge(5, u.HubIcon, h.hub) : t.has(E.oNc.VERIFIED) && t.has(E.oNc.PARTNERED) ? this.renderBadge(3, u.CheckmarkSmallIcon, h.verified) : t.has(E.oNc.VERIFIED) ? this.renderBadge(2, u.CheckmarkSmallIcon, h.verified) : t.has(E.oNc.PARTNERED) ? this.renderBadge(0, (0, u.makeIconCompat)(d.Z), h.partnered) : null;
+        return t.has(_.oNc.INTERNAL_EMPLOYEE_ONLY) ? this.renderBadge(1, u.StaffBadgeIcon, p.staff) : t.has(_.oNc.VERIFIED) && t.has(_.oNc.HUB) ? this.renderBadge(4, u.HubIcon, p.verifiedHub) : t.has(_.oNc.HUB) ? this.renderBadge(5, u.HubIcon, p.hub) : t.has(_.oNc.VERIFIED) && t.has(_.oNc.PARTNERED) ? this.renderBadge(3, u.CheckmarkSmallIcon, p.verified) : t.has(_.oNc.VERIFIED) ? this.renderBadge(2, u.CheckmarkSmallIcon, p.verified) : t.has(_.oNc.PARTNERED) ? this.renderBadge(0, (0, u.makeIconCompat)(d.Z), p.partnered) : null;
     }
 }
-t.Z = p;
+t.Z = m;

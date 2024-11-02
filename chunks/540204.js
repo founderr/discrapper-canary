@@ -1,85 +1,85 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return I;
+        return x;
     }
 }),
-    t(733860);
-var n = t(200651),
-    a = t(192379),
-    i = t(442837),
-    r = t(481060),
-    o = t(565138),
-    l = t(430824),
-    c = t(771845),
-    d = t(823379),
-    _ = t(997950),
-    u = t(816108),
-    E = t(689938),
-    T = t(48143);
-let S = {
-    label: () => E.Z.Messages.PRIVACY_AND_SAFETY_ALL_SERVERS_OPTION_TITLE,
-    value: _.Th
+    n(733860);
+var i = n(200651),
+    s = n(192379),
+    r = n(442837),
+    l = n(481060),
+    a = n(565138),
+    o = n(430824),
+    c = n(771845),
+    d = n(823379),
+    u = n(997950),
+    m = n(816108),
+    h = n(388032),
+    g = n(48143);
+let p = {
+    label: () => h.intl.string(h.t['32u1Dw']),
+    value: u.Th
 };
-function I() {
-    let { selectedGuildId: e, setSelectedGuildId: s } = (0, _.xu)(),
-        t = (0, i.e7)([c.ZP], () => c.ZP.getFlattenedGuildIds()),
-        E = (0, i.e7)([l.Z], () => l.Z.getGuilds()),
-        { hideGuildOptions: I, hideGlobalOption: N } = (0, u.b)();
-    a.useEffect(() => {
-        e === _.Th && N && s(t[0]), e !== _.Th && I && s(_.Th);
-    }, [e, s, N, I, t]);
-    let m = a.useMemo(() => {
-            let e = I
+function x() {
+    let { selectedGuildId: e, setSelectedGuildId: t } = (0, u.xu)(),
+        n = (0, r.e7)([c.ZP], () => c.ZP.getFlattenedGuildIds()),
+        h = (0, r.e7)([o.Z], () => o.Z.getGuilds()),
+        { hideGuildOptions: x, hideGlobalOption: S } = (0, m.b)();
+    s.useEffect(() => {
+        e === u.Th && S && t(n[0]), e !== u.Th && x && t(u.Th);
+    }, [e, t, S, x, n]);
+    let T = s.useMemo(() => {
+            let e = x
                 ? []
-                : t
+                : n
                       .map((e) => {
-                          let s = E[e];
-                          return null == s
+                          let t = h[e];
+                          return null == t
                               ? null
                               : {
-                                    label: s.name,
-                                    value: s.id
+                                    label: t.name,
+                                    value: t.id
                                 };
                       })
                       .filter(d.lm);
             return (
-                !N &&
+                !S &&
                     e.unshift({
-                        ...S,
-                        label: S.label()
+                        ...p,
+                        label: p.label()
                     }),
                 e
             );
-        }, [I, t, N, E]),
-        C = a.useCallback(
+        }, [x, n, S, h]),
+        C = s.useCallback(
             (e) => {
-                let s = (null == e ? void 0 : e.label) === S.label() && (null == e ? void 0 : e.value) === S.value;
-                return null == e || '' === e.value || s
-                    ? (0, n.jsx)('div', {
-                          className: T.clydeIconContainer,
-                          children: (0, n.jsx)(r.ClydeIcon, {
+                let t = (null == e ? void 0 : e.label) === p.label() && (null == e ? void 0 : e.value) === p.value;
+                return null == e || '' === e.value || t
+                    ? (0, i.jsx)('div', {
+                          className: g.clydeIconContainer,
+                          children: (0, i.jsx)(l.ClydeIcon, {
                               size: 'sm',
                               color: 'white',
                               'aria-hidden': !0,
-                              className: T.guildSelectOptionIcon
+                              className: g.guildSelectOptionIcon
                           })
                       })
-                    : (0, n.jsx)(o.Z, {
-                          className: T.guildSelectOptionIcon,
-                          guild: E[e.value],
-                          size: o.Z.Sizes.SMALLER,
+                    : (0, i.jsx)(a.Z, {
+                          className: g.guildSelectOptionIcon,
+                          guild: h[e.value],
+                          size: a.Z.Sizes.SMALLER,
                           active: !0
                       });
             },
-            [E]
+            [h]
         );
-    return (0, n.jsx)(r.SearchableSelect, {
-        wrapperClassName: T.searchableSelect,
+    return (0, i.jsx)(l.SearchableSelect, {
+        wrapperClassName: g.searchableSelect,
         onChange: (e) => {
-            s(e);
+            t(e);
         },
         value: e,
-        options: m,
+        options: T,
         renderOptionPrefix: C
     });
 }

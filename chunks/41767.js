@@ -1,89 +1,89 @@
-t.r(n),
-    t.d(n, {
+e.r(n),
+    e.d(n, {
         default: function () {
-            return u;
+            return j;
         }
     }),
-    t(47120);
-var a = t(200651),
-    r = t(192379),
-    _ = t(481060),
-    s = t(313201),
-    l = t(556012),
-    A = t(590433),
-    o = t(689938),
-    I = t(531534);
-let O = (e) => {
+    e(47120);
+var r = e(200651),
+    l = e(192379),
+    i = e(481060),
+    a = e(313201),
+    o = e(556012),
+    u = e(590433),
+    c = e(388032),
+    s = e(531534);
+let d = (t) => {
     var n;
-    let { duration: t, onSelectDuration: r } = e,
-        s = (0, A.tr)(),
-        l = s.find((e) => e.value === t);
-    return (0, a.jsx)(_.FormItem, {
-        className: I.durationSelector,
+    let { duration: e, onSelectDuration: l } = t,
+        a = (0, u.tr)(),
+        o = a.find((t) => t.value === e);
+    return (0, r.jsx)(i.FormItem, {
+        className: s.durationSelector,
         required: !0,
-        children: (0, a.jsx)(_.SearchableSelect, {
-            value: null !== (n = null == l ? void 0 : l.value) && void 0 !== n ? n : A.UK.DURATION_60_SEC,
-            options: s,
-            onChange: (e) => {
-                let n = s.find((n) => n.value === e);
-                null != n && r(n.value);
+        children: (0, r.jsx)(i.SearchableSelect, {
+            value: null !== (n = null == o ? void 0 : o.value) && void 0 !== n ? n : u.UK.DURATION_60_SEC,
+            options: a,
+            onChange: (t) => {
+                let n = a.find((n) => n.value === t);
+                null != n && l(n.value);
             },
-            placeholder: o.Z.Messages.GUILD_AUTOMOD_DISABLE_GUILD_COMMUNICATION_PLACEHOLDER
+            placeholder: c.intl.string(c.t.k7yo6u)
         })
     });
 };
-function u(e) {
-    let { action: n, triggerType: t, isEdit: u, onUpdateDuration: c, onClose: i, transitionState: S } = e,
-        N = (0, s.Dt)(),
-        [E, C] = r.useState(() => (null != n.metadata.durationSeconds && n.metadata.durationSeconds > 0 ? n.metadata.durationSeconds : A.UK.DURATION_60_SEC)),
-        M = (0, l.c)(n.type, n, t);
-    if (null == M) return null;
-    let { headerText: d } = M;
-    return (0, a.jsxs)(_.ModalRoot, {
-        transitionState: S,
+function j(t) {
+    let { action: n, triggerType: e, isEdit: j, onUpdateDuration: A, onClose: S, transitionState: E } = t,
+        N = (0, a.Dt)(),
+        [_, C] = l.useState(() => (null != n.metadata.durationSeconds && n.metadata.durationSeconds > 0 ? n.metadata.durationSeconds : u.UK.DURATION_60_SEC)),
+        h = (0, o.c)(n.type, n, e);
+    if (null == h) return null;
+    let { headerText: I } = h;
+    return (0, r.jsxs)(i.ModalRoot, {
+        transitionState: E,
         'aria-labelledby': N,
-        size: _.ModalSize.SMALL,
+        size: i.ModalSize.SMALL,
         children: [
-            (0, a.jsxs)(_.ModalContent, {
-                className: I.actionContentContainer,
+            (0, r.jsxs)(i.ModalContent, {
+                className: s.actionContentContainer,
                 children: [
-                    (0, a.jsx)(_.Heading, {
+                    (0, r.jsx)(i.Heading, {
                         id: N,
                         color: 'header-primary',
                         variant: 'heading-lg/semibold',
-                        className: I.header,
-                        children: d
+                        className: s.header,
+                        children: I
                     }),
-                    (0, a.jsx)(_.Text, {
+                    (0, r.jsx)(i.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: o.Z.Messages.GUILD_AUTOMOD_DISABLE_GUILD_COMMUNICATION_MODAL_DESCRIPTION
+                        children: c.intl.string(c.t.DWGBAg)
                     }),
-                    (0, a.jsx)(O, {
-                        duration: E,
-                        onSelectDuration: (e) => {
-                            C(e);
+                    (0, r.jsx)(d, {
+                        duration: _,
+                        onSelectDuration: (t) => {
+                            C(t);
                         }
                     })
                 ]
             }),
-            (0, a.jsxs)(_.ModalFooter, {
+            (0, r.jsxs)(i.ModalFooter, {
                 children: [
-                    (0, a.jsx)(_.Button, {
+                    (0, r.jsx)(i.Button, {
                         onClick: () => {
-                            c(E);
+                            A(_);
                         },
-                        color: _.Button.Colors.BRAND,
-                        size: _.Button.Sizes.SMALL,
-                        children: u ? o.Z.Messages.EDIT : o.Z.Messages.SAVE
+                        color: i.Button.Colors.BRAND,
+                        size: i.Button.Sizes.SMALL,
+                        children: j ? c.intl.string(c.t.bt75u7) : c.intl.string(c.t.R3BPHx)
                     }),
-                    (0, a.jsx)(_.Button, {
+                    (0, r.jsx)(i.Button, {
                         onClick: () => {
-                            i();
+                            S();
                         },
-                        color: _.Button.Colors.TRANSPARENT,
-                        look: _.Button.Looks.LINK,
-                        children: o.Z.Messages.CANCEL
+                        color: i.Button.Colors.TRANSPARENT,
+                        look: i.Button.Looks.LINK,
+                        children: c.intl.string(c.t['ETE/oK'])
                     })
                 ]
             })

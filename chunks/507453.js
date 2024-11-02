@@ -1,13 +1,13 @@
-var n = s(200651);
-s(192379);
-var l = s(481060),
-    i = s(600164),
-    r = s(689938),
-    o = s(58259);
+var l = n(200651);
+n(192379);
+var i = n(481060),
+    s = n(600164),
+    r = n(388032),
+    o = n(58259);
 t.Z = {
     SlideContent: function (e) {
         let { children: t } = e;
-        return (0, n.jsx)(l.ModalContent, {
+        return (0, l.jsx)(i.ModalContent, {
             className: o.content,
             children: t
         });
@@ -16,7 +16,7 @@ t.Z = {
         let { error: t } = e;
         return null == t
             ? null
-            : (0, n.jsx)(l.Text, {
+            : (0, l.jsx)(i.Text, {
                   className: o.error,
                   variant: 'text-sm/normal',
                   color: 'text-danger',
@@ -24,51 +24,51 @@ t.Z = {
               });
     },
     SlideFooter: function (e) {
-        let { mfaChallenge: t, setSlide: s, showConfirm: a = !1, ...d } = e,
+        let { mfaChallenge: t, setSlide: n, showConfirm: a = !1, ...d } = e,
             u = t.methods.length > 1;
         return u || a
-            ? (0, n.jsxs)(l.ModalFooter, {
+            ? (0, l.jsxs)(i.ModalFooter, {
                   className: o.footer,
-                  direction: a && !u ? i.Z.Direction.HORIZONTAL_REVERSE : i.Z.Direction.HORIZONTAL,
+                  direction: a && !u ? s.Z.Direction.HORIZONTAL_REVERSE : s.Z.Direction.HORIZONTAL,
                   children: [
                       u &&
-                          (0, n.jsx)(l.Button, {
-                              look: l.Button.Looks.LINK,
-                              onClick: () => s('select'),
-                              color: l.Button.Colors.PRIMARY,
-                              children: r.Z.Messages.MFA_V2_GO_TO_SELECT
+                          (0, l.jsx)(i.Button, {
+                              look: i.Button.Looks.LINK,
+                              onClick: () => n('select'),
+                              color: i.Button.Colors.PRIMARY,
+                              children: r.intl.string(r.t.Tot4EB)
                           }),
                       a &&
-                          (0, n.jsx)(l.Button, {
+                          (0, l.jsx)(i.Button, {
                               type: 'submit',
                               ...d,
-                              children: r.Z.Messages.CONFIRM
+                              children: r.intl.string(r.t['cY+Ooa'])
                           })
                   ]
               })
             : null;
     },
     SlideHeader: function (e) {
-        let { subtitle: t, onClose: s } = e;
-        return (0, n.jsxs)(l.ModalHeader, {
-            direction: i.Z.Direction.VERTICAL,
+        let { subtitle: t, onClose: n } = e;
+        return (0, l.jsxs)(i.ModalHeader, {
+            direction: s.Z.Direction.VERTICAL,
             className: o.header,
             separator: !1,
             children: [
-                (0, n.jsx)(l.Heading, {
+                (0, l.jsx)(i.Heading, {
                     variant: 'heading-xl/semibold',
-                    children: r.Z.Messages.MFA_V2_HEADER
+                    children: r.intl.string(r.t.saHocH)
                 }),
                 null != t &&
-                    (0, n.jsx)(l.Text, {
+                    (0, l.jsx)(i.Text, {
                         color: 'header-secondary',
                         variant: 'text-md/normal',
                         className: o.subtitle,
                         children: t
                     }),
-                (0, n.jsx)(l.ModalCloseButton, {
+                (0, l.jsx)(i.ModalCloseButton, {
                     className: o.closeButton,
-                    onClick: s
+                    onClick: n
                 })
             ]
         });

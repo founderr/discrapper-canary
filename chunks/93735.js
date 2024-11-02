@@ -3,7 +3,7 @@ n.d(t, {
         return s;
     },
     N7: function () {
-        return _;
+        return f;
     },
     OR: function () {
         return i;
@@ -59,20 +59,20 @@ function c(e) {
 function d(e) {
     var t, n, r, i, a, s, o, l;
     let d = null !== (a = null == e ? void 0 : null === (t = e.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== a ? a : 0,
-        _ = null !== (s = null == e ? void 0 : null === (n = e.embeds) || void 0 === n ? void 0 : n.length) && void 0 !== s ? s : 0;
-    if (0 === d && 0 === _)
+        f = null !== (s = null == e ? void 0 : null === (n = e.embeds) || void 0 === n ? void 0 : n.length) && void 0 !== s ? s : 0;
+    if (0 === d && 0 === f)
         return {
             attachmentIds: [],
             embedIds: []
         };
-    let E = null !== (o = null == e ? void 0 : null === (r = e.attachments) || void 0 === r ? void 0 : r.filter(u)) && void 0 !== o ? o : [],
-        f = null !== (l = null == e ? void 0 : null === (i = e.embeds) || void 0 === i ? void 0 : i.filter(c)) && void 0 !== l ? l : [];
+    let _ = null !== (o = null == e ? void 0 : null === (r = e.attachments) || void 0 === r ? void 0 : r.filter(u)) && void 0 !== o ? o : [],
+        h = null !== (l = null == e ? void 0 : null === (i = e.embeds) || void 0 === i ? void 0 : i.filter(c)) && void 0 !== l ? l : [];
     return {
-        attachmentIds: E.map((e) => e.id).filter(Boolean),
-        embedIds: f.map((e, t) => 'embed_'.concat(t)).filter(Boolean)
+        attachmentIds: _.map((e) => e.id).filter(Boolean),
+        embedIds: h.map((e, t) => 'embed_'.concat(t)).filter(Boolean)
     };
 }
-function _(e) {
+function f(e) {
     let { attachmentIds: t, embedIds: n } = d(e);
     return t.length > 0 || n.length > 0;
 }

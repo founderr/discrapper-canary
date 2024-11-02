@@ -1,46 +1,46 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return g;
     }
 });
 var i = n(200651);
 n(192379);
-var s = n(442837),
-    a = n(481060),
-    l = n(787014),
-    r = n(933557),
+var l = n(442837),
+    r = n(481060),
+    a = n(787014),
+    s = n(933557),
     o = n(454585),
     c = n(131704),
     u = n(496675),
     d = n(396769),
     h = n(967128),
     m = n(981631),
-    p = n(689938),
-    _ = n(281484);
-function f(e) {
+    p = n(388032),
+    f = n(281484);
+function g(e) {
     let { channel: t } = e,
-        n = (0, r.ZP)(t, !0),
-        f = (0, s.e7)([u.Z], () => u.Z.can(m.Plq.MANAGE_CHANNELS, t) && c.dF.has(t.type));
+        n = (0, s.ZP)(t, !0),
+        g = (0, l.e7)([u.Z], () => u.Z.can(m.Plq.MANAGE_CHANNELS, t) && c.dF.has(t.type));
     return (0, i.jsxs)(h.ZP, {
         channelId: t.id,
         children: [
             (0, i.jsx)(h.Kq, { channelType: t.type }),
-            (0, i.jsx)(h.Ot, { children: p.Z.Messages.BEGINNING_CHANNEL_WELCOME.format({ channelName: n }) }),
+            (0, i.jsx)(h.Ot, { children: p.intl.format(p.t.I3R7Vl, { channelName: n }) }),
             (0, i.jsx)(h.jz, {
-                children: p.Z.Messages.BEGINNING_CHANNEL_DESCRIPTION.format({
+                children: p.intl.format(p.t.pYMVRU, {
                     channelName: n,
                     topicHook: () => o.Z.parseTopic(t.topic, !0, { channelId: t.id })
                 })
             }),
-            f
+            g
                 ? (0, i.jsx)('div', {
-                      className: _.buttonContainer,
+                      className: f.buttonContainer,
                       children: (0, i.jsx)(d.Z, {
-                          label: p.Z.Messages.EDIT_CHANNEL,
+                          label: p.intl.string(p.t['3gUsJS']),
                           onClick: () => {
-                              l.ZP.open(t.id);
+                              a.ZP.open(t.id);
                           },
-                          icon: (0, i.jsx)(a.PencilIcon, {
+                          icon: (0, i.jsx)(r.PencilIcon, {
                               size: 'xs',
                               color: 'currentColor'
                           })

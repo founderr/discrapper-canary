@@ -1,14 +1,14 @@
-s.d(t, {
+l.d(t, {
     Z: function () {
-        return o;
+        return r;
     }
 });
-var a = s(192379),
-    l = s(442837),
-    i = s(430824),
-    n = s(687476);
-function o(e) {
-    let t = (0, l.e7)([i.Z], () => i.Z.getRoles(e)),
-        s = (0, l.e7)([n.Z], () => n.Z.getSubscriptionRoles(e));
-    return a.useMemo(() => Object.values(t).filter((e) => s.has(e.id)), [t, s]);
+var a = l(192379),
+    i = l(442837),
+    n = l(430824),
+    s = l(687476);
+function r(e) {
+    let t = (0, i.e7)([n.Z], () => n.Z.getRoles(e)),
+        l = (0, i.e7)([s.Z], () => s.Z.getSubscriptionRoles(e));
+    return a.useMemo(() => Object.values(t).filter((e) => l.has(e.id)), [t, l]);
 }

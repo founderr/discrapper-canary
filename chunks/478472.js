@@ -1,24 +1,24 @@
-a.r(s),
-    a.d(s, {
+r.r(n),
+    r.d(n, {
         default: function () {
-            return _;
+            return c;
         }
     });
-var r = a(200651);
-a(192379);
-var n = a(481060),
-    t = a(689938);
-function _(e) {
-    let { ruleName: s, ...a } = e,
-        _ = null != s ? s : t.Z.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_NAME;
-    return (0, r.jsx)(n.ConfirmModal, {
-        ...a,
-        header: t.Z.Messages.GUILD_AUTOMOD_REMOVE_RULE_CONFIRM_TITLE,
-        cancelText: t.Z.Messages.CANCEL,
-        confirmText: t.Z.Messages.CONFIRM,
-        children: (0, r.jsx)(n.Text, {
+var i = r(200651);
+r(192379);
+var e = r(481060),
+    a = r(388032);
+function c(t) {
+    let { ruleName: n, ...r } = t,
+        c = null != n ? n : a.intl.string(a.t.ffR2cH);
+    return (0, i.jsx)(e.ConfirmModal, {
+        ...r,
+        header: a.intl.string(a.t.Hy8XgI),
+        cancelText: a.intl.string(a.t['ETE/oK']),
+        confirmText: a.intl.string(a.t['cY+Ooa']),
+        children: (0, i.jsx)(e.Text, {
             variant: 'text-md/normal',
-            children: t.Z.Messages.GUILD_AUTOMOD_REMOVE_RULE_CONFIRM_DESCRIPTION.format({ ruleName: _ })
+            children: a.intl.format(a.t.hO7PgY, { ruleName: c })
         })
     });
 }

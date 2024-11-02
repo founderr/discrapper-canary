@@ -1,46 +1,46 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return g;
     }
 }),
     n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(481060),
-    r = n(89182),
-    l = n(706454),
+    r = n(192379),
+    l = n(481060),
+    a = n(89182),
+    s = n(706454),
     o = n(164991),
     c = n(783393),
     d = n(112471),
     u = n(746728),
-    _ = n(689938),
-    E = n(868095);
-function h(e) {
+    h = n(388032),
+    m = n(868095);
+function p(e) {
     let { count: t, categoryId: n } = e,
-        a = t.toLocaleString(l.default.locale),
-        r = (0, c.E)({ categoryId: n });
+        r = t.toLocaleString(s.default.locale),
+        a = (0, c.E)({ categoryId: n });
     return (0, i.jsxs)('div', {
-        className: E.label,
+        className: m.label,
         children: [
-            (0, i.jsx)(s.Text, {
+            (0, i.jsx)(l.Text, {
                 variant: 'text-sm/medium',
                 color: 'header-primary',
-                children: r
+                children: a
             }),
-            (0, i.jsx)(s.Text, {
+            (0, i.jsx)(l.Text, {
                 variant: 'text-sm/normal',
                 color: 'text-muted',
-                children: a
+                children: r
             })
         ]
     });
 }
-function m(e) {
+function g(e) {
     let { loadId: t } = e,
         n = (0, o.lZ)(),
-        l = (0, d.q)(),
-        m = (0, c.E)({ categoryId: n }),
-        I = a.useCallback(
+        s = (0, d.q)(),
+        g = (0, c.E)({ categoryId: n }),
+        f = r.useCallback(
             (e) => {
                 (0, u.I)({
                     loadId: t,
@@ -49,39 +49,39 @@ function m(e) {
             },
             [t]
         ),
-        p = a.useMemo(
+        _ = r.useMemo(
             () =>
-                null == l
+                null == s
                     ? []
-                    : l.map((e) => {
+                    : s.map((e) => {
                           let [t, n] = e;
                           return {
                               id: ''.concat(t),
-                              label: (0, i.jsx)(h, {
+                              label: (0, i.jsx)(p, {
                                   categoryId: t,
                                   count: n
                               })
                           };
                       }),
-            [l]
+            [s]
         );
-    return null == l
+    return null == s
         ? null
         : (0, i.jsxs)('div', {
-              className: E.container,
+              className: m.container,
               children: [
-                  (0, i.jsx)(s.Text, {
+                  (0, i.jsx)(l.Text, {
                       variant: 'text-sm/medium',
                       color: 'text-secondary',
-                      children: _.Z.Messages.GLOBAL_DISCOVERY_SHOW
+                      children: h.intl.string(h.t.f09BQE)
                   }),
-                  (0, i.jsx)(r.Z, {
-                      className: E.filter,
-                      items: p,
-                      title: m,
-                      onSelect: I,
+                  (0, i.jsx)(a.Z, {
+                      className: m.filter,
+                      items: _,
+                      title: g,
+                      onSelect: f,
                       selected: ''.concat(n),
-                      'aria-label': _.Z.Messages.GLOBAL_DISCOVERY_SERVERS_LANGUAGE_FILTER
+                      'aria-label': h.intl.string(h.t.Ng5cTE)
                   })
               ]
           });

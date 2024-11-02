@@ -1,43 +1,43 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return E;
+            return f;
         }
     });
 var c = n(200651),
-    l = n(192379),
-    i = n(481060),
+    i = n(192379),
+    l = n(481060),
     a = n(561716),
     r = n(721383),
-    s = n(313201),
-    o = n(63063),
+    o = n(313201),
+    s = n(63063),
     u = n(857595),
-    _ = n(981631),
-    d = n(689938),
+    d = n(981631),
+    _ = n(388032),
     h = n(312573);
-function E(e) {
+function f(e) {
     let { transitionState: t, onClose: n } = e,
-        E = (0, s.Dt)();
+        f = (0, o.Dt)();
     return (
-        l.useEffect(() => {
+        i.useEffect(() => {
             u.r_();
         }, []),
-        (0, c.jsxs)(i.ModalRoot, {
+        (0, c.jsxs)(l.ModalRoot, {
             transitionState: t,
             role: 'alertdialog',
-            'aria-labelledby': E,
+            'aria-labelledby': f,
             children: [
-                (0, c.jsxs)(i.ModalContent, {
+                (0, c.jsxs)(l.ModalContent, {
                     className: h.content,
                     children: [
-                        (0, c.jsx)(i.Heading, {
+                        (0, c.jsx)(l.Heading, {
                             variant: 'heading-xl/semibold',
-                            id: E,
+                            id: f,
                             className: h.header,
-                            children: d.Z.Messages.KEYBOARD_SHORTCUTS_EXPLAINER_MODAL_TITLE.format({
+                            children: _.intl.format(_.t.V4fxrq, {
                                 tab: (e, t) =>
                                     (0, c.jsx)(
-                                        i.KeyCombo,
+                                        l.KeyCombo,
                                         {
                                             shortcut: 'tab',
                                             className: h.headerShortcut
@@ -46,46 +46,46 @@ function E(e) {
                                     )
                             })
                         }),
-                        (0, c.jsx)(i.Text, {
+                        (0, c.jsx)(l.Text, {
                             variant: 'text-md/normal',
-                            children: d.Z.Messages.KEYBOARD_SHORTCUTS_EXPLAINER_MODAL_BODY
+                            children: _.intl.string(_.t['oQA/OD'])
                         }),
                         (0, c.jsxs)('ul', {
                             className: h.tips,
                             children: [
                                 (0, c.jsxs)('li', {
                                     children: [
-                                        (0, c.jsx)(i.KeyCombo, { shortcut: r._.binds['0'] }),
-                                        (0, c.jsx)(i.Text, {
+                                        (0, c.jsx)(l.KeyCombo, { shortcut: r._.binds['0'] }),
+                                        (0, c.jsx)(l.Text, {
                                             variant: 'text-md/normal',
-                                            children: d.Z.Messages.KEYBOARD_SHORTCUTS_EXPLAINER_LIST_SHORTCUT
+                                            children: _.intl.string(_.t['43Qn2t'])
                                         })
                                     ]
                                 }),
                                 (0, c.jsxs)('li', {
                                     children: [
-                                        (0, c.jsx)(i.KeyCombo, { shortcut: a.$.binds['0'] }),
-                                        (0, c.jsx)(i.Text, {
+                                        (0, c.jsx)(l.KeyCombo, { shortcut: a.$.binds['0'] }),
+                                        (0, c.jsx)(l.Text, {
                                             variant: 'text-md/normal',
-                                            children: d.Z.Messages.KEYBOARD_SHORTCUTS_EXPLAINER_QUICKSWITCHER_SHORTCUT
+                                            children: _.intl.string(_.t.zJg4FR)
                                         })
                                     ]
                                 })
                             ]
                         }),
-                        (0, c.jsx)(i.Text, {
+                        (0, c.jsx)(l.Text, {
                             variant: 'text-md/normal',
-                            children: d.Z.Messages.KEYBOARD_SHORTCUTS_EXPLAINER_HELP_CENTER_LINK.format({ link: o.Z.getArticleURL(_.BhN.KEYBOARD_NAVIGATION) })
+                            children: _.intl.format(_.t.EWFVSU, { link: s.Z.getArticleURL(d.BhN.KEYBOARD_NAVIGATION) })
                         })
                     ]
                 }),
-                (0, c.jsx)(i.ModalFooter, {
-                    children: (0, c.jsx)(i.Button, {
+                (0, c.jsx)(l.ModalFooter, {
+                    children: (0, c.jsx)(l.Button, {
                         onClick: n,
-                        color: i.Button.Colors.BRAND,
-                        size: i.Button.Sizes.SMALL,
+                        color: l.Button.Colors.BRAND,
+                        size: l.Button.Sizes.SMALL,
                         autoFocus: !0,
-                        children: d.Z.Messages.OKAY
+                        children: _.intl.string(_.t.BddRzc)
                     })
                 })
             ]

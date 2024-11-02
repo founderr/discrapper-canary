@@ -1,143 +1,143 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return A;
     }
 }),
     n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(913527),
-    o = n.n(l),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    o = n(913527),
+    s = n.n(o),
     c = n(442837),
     u = n(524437),
     d = n(481060),
-    _ = n(239091),
-    E = n(294218),
-    I = n(703656),
-    m = n(324701),
-    f = n(768943),
-    T = n(695346),
-    h = n(592125),
-    N = n(655354),
-    p = n(324081),
-    C = n(791914),
-    g = n(981631),
-    S = n(689938),
-    A = n(816396),
-    x = n(42967);
-let R = {
+    m = n(239091),
+    f = n(294218),
+    h = n(703656),
+    p = n(324701),
+    g = n(768943),
+    _ = n(695346),
+    C = n(592125),
+    E = n(655354),
+    I = n(324081),
+    x = n(791914),
+    v = n(981631),
+    N = n(388032),
+    T = n(816396),
+    S = n(42967);
+let b = {
     offset: {
         left: 4,
         right: -12
     }
 };
-function v(e) {
+function A(e) {
     let { setTab: t, closePopout: n } = e,
-        s = (0, c.e7)([f.Z], () => f.Z.getMessageReminders()),
-        [r, l] = a.useState(!1),
-        o = a.useMemo(() => s.filter((e) => null == e.saveData.dueAt || e.saveData.dueAt < new Date()), [s]),
-        _ = r ? s : o;
+        l = (0, c.e7)([g.Z], () => g.Z.getMessageReminders()),
+        [a, o] = r.useState(!1),
+        s = r.useMemo(() => l.filter((e) => null == e.saveData.dueAt || e.saveData.dueAt < new Date()), [l]),
+        m = a ? l : s;
     return (0, i.jsxs)('div', {
-        className: A.container,
+        className: T.container,
         children: [
-            (0, i.jsx)(C.Z, {
+            (0, i.jsx)(x.Z, {
                 tab: u.X.TODOS,
                 setTab: t,
                 closePopout: n
             }),
             (0, i.jsxs)('div', {
-                className: A.headerText,
+                className: T.headerText,
                 children: [
                     (0, i.jsx)(d.Heading, {
                         variant: 'heading-lg/bold',
-                        children: r ? S.Z.Messages.MESSAGE_REMINDERS_HEADER_ALL : S.Z.Messages.MESSAGE_REMINDERS_HEADER_OVERDUE
+                        children: a ? N.intl.string(N.t['0KeMAw']) : N.intl.string(N.t.j5ZHEB)
                     }),
                     (0, i.jsx)(d.Anchor, {
-                        onClick: () => l(!r),
+                        onClick: () => o(!a),
                         children: (0, i.jsx)(d.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-link',
-                            children: r ? S.Z.Messages.MESSAGE_REMINDERS_HEADER_SHOW_OVERDUE.format({ count: o.length }) : S.Z.Messages.MESSAGE_REMINDERS_HEADER_SHOW_ALL.format({ count: s.length })
+                            children: a ? N.intl.formatToPlainString(N.t['/VlKx8'], { count: s.length }) : N.intl.formatToPlainString(N.t.QEO4Ii, { count: l.length })
                         })
                     })
                 ]
             }),
-            0 === _.length ? (0, i.jsx)(O, {}) : (0, i.jsx)(d.AdvancedScrollerThin, { children: _.map((e) => (0, i.jsx)(M, { messageReminder: e }, e.saveData.messageId)) })
+            0 === m.length ? (0, i.jsx)(Z, {}) : (0, i.jsx)(d.AdvancedScrollerThin, { children: m.map((e) => (0, i.jsx)(j, { messageReminder: e }, e.saveData.messageId)) })
         ]
     });
 }
-function M(e) {
+function j(e) {
     let t,
-        { messageReminder: a } = e,
-        s = a.saveData,
-        l = a.message,
-        u = (0, c.e7)([h.Z], () => h.Z.getChannel(s.channelId)),
-        f = () => {
-            (0, I.uL)(g.Z5c.CHANNEL(null == u ? void 0 : u.getGuildId(), s.channelId, s.messageId));
+        { messageReminder: r } = e,
+        l = r.saveData,
+        o = r.message,
+        u = (0, c.e7)([C.Z], () => C.Z.getChannel(l.channelId)),
+        g = () => {
+            (0, h.uL)(v.Z5c.CHANNEL(null == u ? void 0 : u.getGuildId(), l.channelId, l.messageId));
         },
-        C = null;
-    return (null != s.dueAt &&
-        (s.dueAt > new Date()
+        x = null;
+    return (null != l.dueAt &&
+        (l.dueAt > new Date()
             ? ((t = 'text-muted'),
-              (C = S.Z.Messages.MESSAGE_REMINDERS_DUE_IN.format({
-                  duration: o()
-                      .duration(s.dueAt.getTime() - Date.now(), 'millisecond')
+              (x = N.intl.formatToPlainString(N.t.H4gnX1, {
+                  duration: s()
+                      .duration(l.dueAt.getTime() - Date.now(), 'millisecond')
                       .humanize()
               })))
             : ((t = 'text-danger'),
-              (C = S.Z.Messages.MESSAGE_REMINDERS_OVERDUE.format({
-                  duration: o()
-                      .duration(Date.now() - s.dueAt.getTime(), 'millisecond')
+              (x = N.intl.formatToPlainString(N.t['Uq7Y+/'], {
+                  duration: s()
+                      .duration(Date.now() - l.dueAt.getTime(), 'millisecond')
                       .humanize()
               })))),
-    null == l || null == u)
+    null == o || null == u)
         ? null
         : (0, i.jsxs)('div', {
-              className: x.container,
+              className: S.container,
               children: [
-                  (0, i.jsx)(p.Z, {
+                  (0, i.jsx)(I.Z, {
                       channel: u,
-                      gotoChannel: f,
+                      gotoChannel: g,
                       children: (0, i.jsxs)('div', {
-                          className: A.reminderActions,
+                          className: T.reminderActions,
                           children: [
-                              null != a.saveData.notes && a.saveData.notes.length > 0
+                              null != r.saveData.notes && r.saveData.notes.length > 0
                                   ? (0, i.jsxs)(d.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'text-muted',
-                                        className: A.notes,
+                                        className: T.notes,
                                         selectable: !0,
                                         children: [
                                             (0, i.jsx)(d.FileIcon, {
                                                 size: 'xxs',
                                                 color: 'currentColor'
                                             }),
-                                            a.saveData.notes
+                                            r.saveData.notes
                                         ]
                                     })
                                   : null,
-                              null != C
+                              null != x
                                   ? (0, i.jsx)(d.Text, {
                                         variant: 'text-sm/medium',
                                         color: t,
-                                        children: C
+                                        children: x
                                     })
                                   : null,
                               (0, i.jsx)(d.TooltipContainer, {
-                                  text: S.Z.Messages.MESSAGE_REMINDERS_SNOOZE,
+                                  text: N.intl.string(N.t.GtBCn5),
                                   children: (0, i.jsx)(d.Clickable, {
                                       onClick: (e) =>
-                                          (0, _.jW)(e, async () => {
+                                          (0, m.jW)(e, async () => {
                                               let { default: e } = await n.e('6045').then(n.bind(n, 883150));
                                               return (t) =>
                                                   (0, i.jsx)(e, {
                                                       ...t,
-                                                      message: l
+                                                      message: o
                                                   });
                                           }),
-                                      className: A.clock,
+                                      className: T.clock,
                                       children: (0, i.jsx)(d.ClockIcon, {
                                           size: 'custom',
                                           width: 20,
@@ -147,10 +147,10 @@ function M(e) {
                                   })
                               }),
                               (0, i.jsx)(d.TooltipContainer, {
-                                  text: S.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE,
+                                  text: N.intl.string(N.t['1GzslZ']),
                                   children: (0, i.jsx)(d.Clickable, {
-                                      onClick: () => (0, m.x)(s),
-                                      className: A.delete,
+                                      onClick: () => (0, p.x)(l),
+                                      className: T.delete,
                                       children: (0, i.jsx)(d.TrashIcon, {
                                           size: 'custom',
                                           width: 20,
@@ -163,30 +163,30 @@ function M(e) {
                       })
                   }),
                   (0, i.jsxs)('div', {
-                      className: r()(x.messageContainer, A.unloadedMessage),
+                      className: a()(S.messageContainer, T.unloadedMessage),
                       children: [
-                          (0, i.jsx)(N.Z, {
-                              className: x.jumpMessageButton,
-                              onJump: f
+                          (0, i.jsx)(E.Z, {
+                              className: S.jumpMessageButton,
+                              onJump: g
                           }),
                           (0, i.jsx)(
-                              E.Z,
+                              f.Z,
                               {
-                                  message: l,
+                                  message: o,
                                   channel: u,
-                                  className: x.message,
-                                  compact: T.jU.getSetting(),
+                                  className: S.message,
+                                  compact: _.jU.getSetting(),
                                   animateAvatar: !1,
-                                  focusProps: R,
+                                  focusProps: b,
                                   trackAnnouncementViews: !0
                               },
-                              l.id
+                              o.id
                           )
                       ]
                   })
               ]
           });
 }
-function O() {
+function Z() {
     return null;
 }

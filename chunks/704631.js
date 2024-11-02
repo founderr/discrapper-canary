@@ -5,27 +5,27 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(82950),
-    r = n(981631),
-    l = n(921944),
-    o = n(689938),
+var r = n(481060),
+    l = n(82950),
+    a = n(981631),
+    s = n(921944),
+    o = n(388032),
     c = n(524094);
 function d(e) {
     let { guild: t, markAsDismissed: d } = e;
-    return (0, i.jsx)(s.Z, {
+    return (0, i.jsx)(l.Z, {
         guild: t,
-        onDismissed: () => d(l.L.UNKNOWN),
+        onDismissed: () => d(s.L.UNKNOWN),
         onClick: function () {
-            (0, a.openModalLazy)(async () => {
+            (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 650233));
                 return (t) => (0, i.jsx)(e, { ...t });
             });
         },
-        message: o.Z.Messages.HUB_LINK_CHANNEL_NOTICE_BODY,
-        cta: o.Z.Messages.LEARN_MORE,
-        trackingSource: r.PsQ.HUB_LINK_NOTICE,
-        type: r.vID.HUB_LINK,
+        message: o.intl.string(o.t['1+hiPz']),
+        cta: o.intl.string(o.t.hvVgAQ),
+        trackingSource: a.PsQ.HUB_LINK_NOTICE,
+        type: a.vID.HUB_LINK,
         image: c
     });
 }

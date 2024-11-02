@@ -1,113 +1,113 @@
-a.r(l), a(47120);
-var n = a(200651),
-    t = a(192379),
-    s = a(120356),
-    r = a.n(s),
-    o = a(97613),
-    i = a.n(o),
-    u = a(999153),
-    d = a(584922),
-    c = a(442837),
-    E = a(780384),
-    f = a(481060),
-    _ = a(410575),
-    m = a(881052),
-    R = a(410030),
-    I = a(541716),
-    C = a(752305),
-    x = a(893718),
-    h = a(44315),
-    M = a(592125),
-    g = a(984933),
-    p = a(246364),
-    N = a(915509),
-    L = a(592286),
-    v = a(981631),
-    B = a(689938),
-    j = a(352784);
-let T = 'RULE';
-function A(e) {
-    let { rule: l, rulesChannel: a, index: s, onChange: o, onKeyDown: i, onClear: c, onRuleReorder: E, isDropHovered: _, focused: m, onFocus: R, previewEnabled: h } = e,
-        M = t.useRef(null),
-        g = t.useRef(null),
-        [{ textValue: p, richValue: N }, v] = t.useState((0, C.eK)(l.value)),
-        [, A, b] = (0, u.c)({
-            type: T,
+n.r(l), n(47120);
+var t = n(200651),
+    a = n(192379),
+    r = n(120356),
+    i = n.n(r),
+    s = n(97613),
+    o = n.n(s),
+    u = n(999153),
+    d = n(584922),
+    c = n(442837),
+    f = n(780384),
+    m = n(481060),
+    x = n(410575),
+    h = n(881052),
+    C = n(410030),
+    p = n(541716),
+    g = n(752305),
+    v = n(893718),
+    j = n(44315),
+    I = n(592125),
+    R = n(984933),
+    b = n(246364),
+    _ = n(915509),
+    N = n(592286),
+    E = n(981631),
+    k = n(388032),
+    B = n(352784);
+let y = 'RULE';
+function S(e) {
+    let { rule: l, rulesChannel: n, index: r, onChange: s, onKeyDown: o, onClear: c, onRuleReorder: f, isDropHovered: x, focused: h, onFocus: C, previewEnabled: j } = e,
+        I = a.useRef(null),
+        R = a.useRef(null),
+        [{ textValue: b, richValue: _ }, E] = a.useState((0, g.eK)(l.value)),
+        [, S, T] = (0, u.c)({
+            type: y,
             item: {
                 rule: l,
-                index: s
+                index: r
             },
             end: (e, l) => {
-                null != e && !l.didDrop() && E(e.rule, null, !0);
+                null != e && !l.didDrop() && f(e.rule, null, !0);
             }
         }),
-        [, S] = (0, d.L)({
-            accept: T,
+        [, L] = (0, d.L)({
+            accept: y,
             hover: (e, l) => {
-                var a;
-                let { index: n } = e,
-                    t = null === (a = M.current) || void 0 === a ? void 0 : a.getBoundingClientRect(),
-                    r = l.getClientOffset();
-                if (null == t || null == r) return;
-                let o = (t.bottom - t.top) / 2,
-                    i = r.y - t.top;
-                (!(n < s) || !(i < o)) && (!(n > s) || !(i > o)) && E(e.rule, s, !1);
+                var n;
+                let { index: t } = e,
+                    a = null === (n = I.current) || void 0 === n ? void 0 : n.getBoundingClientRect(),
+                    i = l.getClientOffset();
+                if (null == a || null == i) return;
+                let s = (a.bottom - a.top) / 2,
+                    o = i.y - a.top;
+                (!(t < r) || !(o < s)) && (!(t > r) || !(o > s)) && f(e.rule, r, !1);
             },
             drop: (e) => {
-                E(e.rule, s, !0);
+                f(e.rule, r, !0);
             }
         });
-    t.useLayoutEffect(
+    a.useLayoutEffect(
         () => (
-            A(g),
-            b(S(M)),
+            S(R),
+            T(L(I)),
             () => {
-                A(null), S(null);
+                S(null), L(null);
             }
         ),
-        [A, S, b]
+        [S, L, T]
     );
     if (
-        (t.useEffect(() => {
-            '' !== l.value && '' === p && v((0, C.eK)(l.value));
-        }, [l.value, p]),
-        null == a)
+        (a.useEffect(() => {
+            '' !== l.value && '' === b && E((0, g.eK)(l.value));
+        }, [l.value, b]),
+        null == n)
     )
         return null;
-    let F = '' !== l.value ? l.value : l.id;
-    return (0, n.jsxs)('div', {
-        ref: M,
-        className: r()(j.draggableInputContainer, { [j.dragging]: _ }),
-        'data-dnd-name': F,
+    let D = '' !== l.value ? l.value : l.id;
+    return (0, t.jsxs)('div', {
+        ref: I,
+        className: i()(B.draggableInputContainer, { [B.dragging]: x }),
+        'data-dnd-name': D,
         children: [
-            (0, n.jsxs)('div', {
-                className: j.inputWrapper,
+            (0, t.jsxs)('div', {
+                className: B.inputWrapper,
                 children: [
-                    (0, n.jsx)(f.Clickable, {
-                        onMouseDown: () => R(s),
-                        children: (0, n.jsx)(x.Z, {
-                            innerClassName: j.rulesTextAreaInput,
-                            type: I.I.RULES_INPUT,
-                            textValue: p,
-                            richValue: N,
-                            channel: a,
-                            placeholder: B.Z.Messages.MEMBER_VERIFICATION_RULE_PLACEHOLDER,
-                            focused: m,
-                            onChange: (e, l, a) => {
-                                let n = l;
-                                n.length > L.fn && (n = n.slice(0, L.fn)),
-                                    l !== n && ((l = n), (a = (0, C.JM)(n))),
-                                    o(l),
-                                    v({
+                    (0, t.jsx)(m.Clickable, {
+                        onMouseDown: () => C(r),
+                        children: (0, t.jsx)(v.Z, {
+                            innerClassName: B.rulesTextAreaInput,
+                            type: p.I.RULES_INPUT,
+                            textValue: b,
+                            richValue: _,
+                            channel: n,
+                            placeholder: k.intl.string(k.t['BRkD4+']),
+                            focused: h,
+                            onChange: (e, l, n) => {
+                                let t = l;
+                                t.length > N.fn && (t = t.slice(0, N.fn)),
+                                    l !== t && ((l = t), (n = (0, g.JM)(t))),
+                                    s(l),
+                                    E({
                                         textValue: l,
-                                        richValue: a
+                                        richValue: n
                                     });
                             },
-                            onKeyDown: i,
-                            canMentionChannels: h,
-                            canMentionRoles: h,
-                            maxCharacterCount: L.fn,
-                            characterCountClassName: j.characterCount,
+                            onKeyDown: o,
+                            canMentionChannels: j,
+                            canMentionRoles: j,
+                            maxCharacterCount: N.fn,
+                            characterCountClassName: B.characterCount,
                             onSubmit: () =>
                                 Promise.resolve({
                                     shouldClear: !1,
@@ -115,58 +115,58 @@ function A(e) {
                                 })
                         })
                     }),
-                    (0, n.jsx)(f.Button, {
-                        className: j.clearButton,
+                    (0, t.jsx)(m.Button, {
+                        className: B.clearButton,
                         onClick: c,
-                        look: f.Button.Looks.BLANK,
-                        size: f.Button.Sizes.NONE,
-                        children: (0, n.jsx)(f.CircleXIcon, {
+                        look: m.Button.Looks.BLANK,
+                        size: m.Button.Sizes.NONE,
+                        children: (0, t.jsx)(m.CircleXIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: j.clearIcon
+                            className: B.clearIcon
                         })
                     }),
-                    (0, n.jsx)(f.Text, {
-                        className: j.rulesInputNumber,
+                    (0, t.jsx)(m.Text, {
+                        className: B.rulesInputNumber,
                         variant: 'text-md/normal',
                         color: 'text-muted',
-                        children: ''.concat(s + 1, '.')
+                        children: ''.concat(r + 1, '.')
                     })
                 ]
             }),
-            (0, n.jsx)('div', {
-                ref: g,
-                className: j.dragContainer,
-                'data-dnd-name': F,
-                children: (0, n.jsx)(f.DragIcon, {
+            (0, t.jsx)('div', {
+                ref: R,
+                className: B.dragContainer,
+                'data-dnd-name': D,
+                children: (0, t.jsx)(m.DragIcon, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: j.dragIcon
+                    className: B.dragIcon
                 })
             })
         ]
     });
 }
-function b(e) {
-    let { shortRule: l, fullRule: a, disabled: t, onClick: s } = e;
-    return t
-        ? (0, n.jsx)(f.Tooltip, {
-              text: B.Z.Messages.MEMBER_VERIFICATION_RULE_LIMIT.format({ number: L.X2 }),
+function T(e) {
+    let { shortRule: l, fullRule: n, disabled: a, onClick: r } = e;
+    return a
+        ? (0, t.jsx)(m.Tooltip, {
+              text: k.intl.formatToPlainString(k.t.tU718P, { number: N.X2 }),
               children: (e) =>
-                  (0, n.jsx)('div', {
+                  (0, t.jsx)('div', {
                       ...e,
-                      className: r()(j.exampleRule, { [j.disabled]: t }),
-                      children: (0, n.jsx)(f.Text, {
+                      className: i()(B.exampleRule, { [B.disabled]: a }),
+                      children: (0, t.jsx)(m.Text, {
                           variant: 'text-sm/normal',
                           color: 'header-secondary',
                           children: l
                       })
                   })
           })
-        : (0, n.jsx)(f.Clickable, {
-              className: r()(j.exampleRule, { [j.disabled]: t }),
-              onClick: () => s(a),
-              children: (0, n.jsx)(f.Text, {
+        : (0, t.jsx)(m.Clickable, {
+              className: i()(B.exampleRule, { [B.disabled]: a }),
+              onClick: () => r(n),
+              children: (0, t.jsx)(m.Text, {
                   variant: 'text-sm/normal',
                   color: 'header-secondary',
                   children: l
@@ -174,179 +174,179 @@ function b(e) {
           });
 }
 l.default = function (e) {
-    let { field: l, onSave: a, onClose: s, guild: r } = e,
-        o = (0, R.ZP)(),
-        u = r.rulesChannelId,
-        d = r.hasFeature(v.oNc.PREVIEW_ENABLED),
-        I = (0, c.e7)([M.Z], () => (null != u ? M.Z.getChannel(u) : null)),
-        C = (0, c.e7)([g.ZP], () => g.ZP.getDefaultChannel(r.id)),
-        [x, T] = t.useState(
+    let { field: l, onSave: n, onClose: r, guild: i } = e,
+        s = (0, C.ZP)(),
+        u = i.rulesChannelId,
+        d = i.hasFeature(E.oNc.PREVIEW_ENABLED),
+        p = (0, c.e7)([I.Z], () => (null != u ? I.Z.getChannel(u) : null)),
+        g = (0, c.e7)([R.ZP], () => R.ZP.getDefaultChannel(i.id)),
+        [v, y] = a.useState(
             (null == l ? void 0 : l.values) != null
                 ? null == l
                     ? void 0
                     : l.values.map((e) => ({
-                          id: i()(),
+                          id: o()(),
                           value: e
                       }))
                 : [
                       {
-                          id: i()(),
+                          id: o()(),
                           value: ''
                       }
                   ]
         ),
-        [S, F] = t.useState(null),
-        [U, O] = t.useState(null),
-        [Z, k] = t.useState(0),
-        y = (e) => {
-            if (x.length !== L.X2) {
-                if (null != e && '' === x[x.length - 1].value) {
-                    let l = [...x];
-                    (l[x.length - 1].value = e), T(l), k(l.length - 1);
+        [L, D] = a.useState(null),
+        [P, A] = a.useState(null),
+        [M, w] = a.useState(0),
+        z = (e) => {
+            if (v.length !== N.X2) {
+                if (null != e && '' === v[v.length - 1].value) {
+                    let l = [...v];
+                    (l[v.length - 1].value = e), y(l), w(l.length - 1);
                 } else
-                    T([
-                        ...x,
+                    y([
+                        ...v,
                         {
-                            id: i()(),
+                            id: o()(),
                             value: null != e ? e : ''
                         }
                     ]),
-                        k(x.length);
+                        w(v.length);
             }
         },
-        V = (e, l) => {
-            let a = [...x];
-            (a[l].value = e), T(a);
+        Z = (e, l) => {
+            let n = [...v];
+            (n[l].value = e), y(n);
         },
-        P = (e) => {
-            let l = [...x.slice(0, e), ...x.slice(e + 1)];
-            T(
+        U = (e) => {
+            let l = [...v.slice(0, e), ...v.slice(e + 1)];
+            y(
                 0 === l.length
                     ? [
                           {
-                              id: i()(),
+                              id: o()(),
                               value: ''
                           }
                       ]
                     : l
             );
         },
-        D = t.useCallback(
-            (e, l, a) => {
-                if (null == x) return;
-                let n = x.indexOf(e);
-                if (null != l && l !== n) {
-                    let a = [...x];
-                    a.splice(n, 1), a.splice(l, 0, e), T(a);
+        X = a.useCallback(
+            (e, l, n) => {
+                if (null == v) return;
+                let t = v.indexOf(e);
+                if (null != l && l !== t) {
+                    let n = [...v];
+                    n.splice(t, 1), n.splice(l, 0, e), y(n);
                 }
-                a ? null !== U && O(null) : l !== U && O(l);
+                n ? null !== P && A(null) : l !== P && A(l);
             },
-            [U, x]
+            [P, v]
         ),
-        w = async () => {
-            null != S && F(null);
-            let e = x.map((e) => e.value.trim()).filter((e) => '' !== e);
+        H = async () => {
+            null != L && D(null);
+            let e = v.map((e) => e.value.trim()).filter((e) => '' !== e);
             if (0 === e.length) {
-                F(B.Z.Messages.MEMBER_VERIFICATION_RULES_REQUIRED_ERROR);
+                D(k.intl.string(k.t.TCHkcX));
                 return;
             }
             let l = {
-                field_type: p.QJ.TERMS,
-                label: B.Z.Messages.MEMBER_VERIFICATION_FORM_RULES_LABEL,
+                field_type: b.QJ.TERMS,
+                label: k.intl.string(k.t['9suSIC']),
                 values: e,
                 required: !0
             };
             try {
-                await a(l), s();
+                await n(l), r();
             } catch (e) {
-                F(new m.Hx(e).getAnyErrorMessage());
+                D(new h.Hx(e).getAnyErrorMessage());
             }
         },
-        z = x.length === L.X2;
-    return (0, n.jsx)(_.Z, {
-        page: v.ZY5.GUILD_RULES_CREATE_MODAL,
-        children: (0, n.jsxs)(N.Z, {
+        K = v.length === N.X2;
+    return (0, t.jsx)(x.Z, {
+        page: E.ZY5.GUILD_RULES_CREATE_MODAL,
+        children: (0, t.jsxs)(_.Z, {
             ...e,
-            errorText: S,
-            title: B.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_RULES,
-            onCancel: s,
-            onConfirm: w,
+            errorText: L,
+            title: k.intl.string(k.t['3pz9t7']),
+            onCancel: r,
+            onConfirm: H,
             children: [
-                x.map((e, l) =>
-                    (0, n.jsx)(
-                        A,
+                v.map((e, l) =>
+                    (0, t.jsx)(
+                        S,
                         {
-                            rulesChannel: null != I ? I : C,
+                            rulesChannel: null != p ? p : g,
                             rule: e,
                             index: l,
-                            onChange: (e) => V(e, l),
-                            onClear: () => P(l),
-                            onRuleReorder: D,
-                            isDropHovered: l === U,
-                            focused: l === Z,
-                            onFocus: k,
+                            onChange: (e) => Z(e, l),
+                            onClear: () => U(l),
+                            onRuleReorder: X,
+                            isDropHovered: l === P,
+                            focused: l === M,
+                            onFocus: w,
                             previewEnabled: null == d || d
                         },
                         e.id
                     )
                 ),
-                !z &&
-                    (0, n.jsxs)('div', {
-                        className: j.addItemContainer,
+                !K &&
+                    (0, t.jsxs)('div', {
+                        className: B.addItemContainer,
                         children: [
-                            (0, n.jsx)(f.CirclePlusIcon, {
+                            (0, t.jsx)(m.CirclePlusIcon, {
                                 size: 'custom',
                                 height: 17,
                                 width: 17,
-                                color: (0, h.Lq)((0, E.wj)(o) ? v.Ilk.BLUE_345 : v.Ilk.BLUE_430)
+                                color: (0, j.Lq)((0, f.wj)(s) ? E.Ilk.BLUE_345 : E.Ilk.BLUE_430)
                             }),
-                            (0, n.jsx)(f.Clickable, {
-                                className: j.addItemButton,
-                                onClick: () => y(),
-                                children: (0, n.jsx)(f.Text, {
+                            (0, t.jsx)(m.Clickable, {
+                                className: B.addItemButton,
+                                onClick: () => z(),
+                                children: (0, t.jsx)(m.Text, {
                                     color: 'text-link',
                                     variant: 'text-md/normal',
-                                    children: B.Z.Messages.MEMBER_VERIFICATION_ADD_RULE
+                                    children: k.intl.string(k.t.Cq5Jub)
                                 })
                             })
                         ]
                     }),
-                (0, n.jsx)('div', { className: j.divider }),
-                (0, n.jsx)(f.FormTitle, { children: B.Z.Messages.MEMBER_VERIFICATION_EXAMPLE_RULES_SUBTITLE }),
-                (0, n.jsxs)('div', {
-                    className: j.termsExampleRulesContainer,
+                (0, t.jsx)('div', { className: B.divider }),
+                (0, t.jsx)(m.FormTitle, { children: k.intl.string(k.t.XHWj8f) }),
+                (0, t.jsxs)('div', {
+                    className: B.termsExampleRulesContainer,
                     children: [
-                        (0, n.jsxs)('div', {
-                            className: j.termsExampleRulePairContainer,
+                        (0, t.jsxs)('div', {
+                            className: B.termsExampleRulePairContainer,
                             children: [
-                                (0, n.jsx)(b, {
-                                    shortRule: B.Z.Messages.MEMBER_VERIFICATION_RULE_BE_RESPECTFUL,
-                                    fullRule: B.Z.Messages.MEMBER_VERIFICATION_RULE_BE_RESPECTFUL_FULL,
-                                    disabled: z,
-                                    onClick: y
+                                (0, t.jsx)(T, {
+                                    shortRule: k.intl.string(k.t.DXq2oa),
+                                    fullRule: k.intl.string(k.t.XudkSk),
+                                    disabled: K,
+                                    onClick: z
                                 }),
-                                (0, n.jsx)(b, {
-                                    shortRule: B.Z.Messages.MEMBER_VERIFICATION_RULE_NO_SPAM,
-                                    fullRule: B.Z.Messages.MEMBER_VERIFICATION_RULE_NO_SPAM_FULL,
-                                    disabled: z,
-                                    onClick: y
+                                (0, t.jsx)(T, {
+                                    shortRule: k.intl.string(k.t.nSqTjI),
+                                    fullRule: k.intl.string(k.t.np91jI),
+                                    disabled: K,
+                                    onClick: z
                                 })
                             ]
                         }),
-                        (0, n.jsxs)('div', {
-                            className: j.termsExampleRulePairContainer,
+                        (0, t.jsxs)('div', {
+                            className: B.termsExampleRulePairContainer,
                             children: [
-                                (0, n.jsx)(b, {
-                                    shortRule: B.Z.Messages.MEMBER_VERIFICATION_RULE_NO_NSFW,
-                                    fullRule: B.Z.Messages.MEMBER_VERIFICATION_RULE_NO_NSFW_FULL,
-                                    disabled: z,
-                                    onClick: y
+                                (0, t.jsx)(T, {
+                                    shortRule: k.intl.string(k.t.AtRxsL),
+                                    fullRule: k.intl.string(k.t.PNIDDA),
+                                    disabled: K,
+                                    onClick: z
                                 }),
-                                (0, n.jsx)(b, {
-                                    shortRule: B.Z.Messages.MEMBER_VERIFICATION_RULE_SAFE,
-                                    fullRule: B.Z.Messages.MEMBER_VERIFICATION_RULE_SAFE_FULL,
-                                    disabled: z,
-                                    onClick: y
+                                (0, t.jsx)(T, {
+                                    shortRule: k.intl.string(k.t['0K5NJi']),
+                                    fullRule: k.intl.string(k.t.HolIDw),
+                                    disabled: K,
+                                    onClick: z
                                 })
                             ]
                         })

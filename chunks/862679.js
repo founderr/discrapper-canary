@@ -1,28 +1,28 @@
 var i = n(200651),
-    s = n(192379),
-    a = n(873546),
-    l = n(442837),
-    r = n(481060),
+    l = n(192379),
+    r = n(873546),
+    a = n(442837),
+    s = n(481060),
     o = n(346486),
     c = n(433355),
     u = n(412178);
-t.Z = s.memo(function (e) {
-    let { message: t, subtitle: n, countdown: d, buttonText: h, buttonColor: m, buttonSubmitting: p, onButtonClick: _, imageSrc: f, animationSrc: E, secondaryButtonText: g, onSecondaryButtonClick: C, children: I, useReducedMotion: T = !1 } = e,
-        x = (0, l.e7)([c.ZP], () => c.ZP.getState().isMembersOpen);
-    if (a.tq && x) return null;
-    if (null == t) return (0, i.jsx)(i.Fragment, { children: s.Children.only(I) });
-    let S = null;
+t.Z = l.memo(function (e) {
+    let { message: t, subtitle: n, countdown: d, buttonText: h, buttonColor: m, buttonSubmitting: p, onButtonClick: f, imageSrc: g, animationSrc: C, secondaryButtonText: x, onSecondaryButtonClick: v, children: _, useReducedMotion: I = !1 } = e,
+        E = (0, a.e7)([c.ZP], () => c.ZP.getState().isMembersOpen);
+    if (r.tq && E) return null;
+    if (null == t) return (0, i.jsx)(i.Fragment, { children: l.Children.only(_) });
+    let b = null;
     return (
-        null != f
-            ? (S = (0, i.jsx)('img', {
+        null != g
+            ? (b = (0, i.jsx)('img', {
                   alt: '',
-                  src: f,
+                  src: g,
                   className: u.image
               }))
-            : null != E &&
-              (S = (0, i.jsx)(r.LottieAnimation, {
-                  importData: E,
-                  shouldAnimate: !T,
+            : null != C &&
+              (b = (0, i.jsx)(s.LottieAnimation, {
+                  importData: C,
+                  shouldAnimate: !I,
                   className: u.animation
               })),
         (0, i.jsxs)('div', {
@@ -31,17 +31,17 @@ t.Z = s.memo(function (e) {
                 (0, i.jsxs)('div', {
                     className: u.content,
                     children: [
-                        S,
+                        b,
                         (0, i.jsxs)('div', {
                             className: u.text,
                             children: [
-                                (0, i.jsx)(r.Heading, {
+                                (0, i.jsx)(s.Heading, {
                                     variant: 'heading-md/semibold',
                                     className: u.title,
                                     children: t
                                 }),
                                 null != n &&
-                                    (0, i.jsx)(r.Text, {
+                                    (0, i.jsx)(s.Text, {
                                         color: 'text-muted',
                                         variant: 'text-xs/normal',
                                         children: n
@@ -53,24 +53,24 @@ t.Z = s.memo(function (e) {
                 (0, i.jsxs)('div', {
                     className: u.buttonContainer,
                     children: [
-                        null != g &&
-                            (0, i.jsx)(r.Button, {
+                        null != x &&
+                            (0, i.jsx)(s.Button, {
                                 className: u.button,
-                                size: r.Button.Sizes.SMALL,
-                                onClick: C,
-                                look: r.Button.Looks.LINK,
-                                color: r.Button.Colors.PRIMARY,
+                                size: s.Button.Sizes.SMALL,
+                                onClick: v,
+                                look: s.Button.Looks.LINK,
+                                color: s.Button.Colors.PRIMARY,
                                 submitting: p,
-                                children: g
+                                children: x
                             }),
                         null != h &&
-                            (0, i.jsx)(r.Button, {
+                            (0, i.jsx)(s.Button, {
                                 className: u.button,
                                 innerClassName: u.innerButton,
-                                size: r.Button.Sizes.SMALL,
-                                onClick: _,
+                                size: s.Button.Sizes.SMALL,
+                                onClick: f,
                                 submitting: p,
-                                color: null != m ? m : r.Button.Colors.PRIMARY,
+                                color: null != m ? m : s.Button.Colors.PRIMARY,
                                 children: h
                             })
                     ]

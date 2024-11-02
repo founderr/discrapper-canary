@@ -1,6 +1,6 @@
 n.d(t, {
     C: function () {
-        return N;
+        return b;
     }
 });
 var r = n(200651),
@@ -12,77 +12,77 @@ var r = n(200651),
     u = n(906732),
     c = n(104494),
     d = n(639119),
-    _ = n(165583),
-    E = n(626135),
-    f = n(74538),
-    h = n(191177),
-    p = n(27733),
-    I = n(981631),
-    m = n(474936),
-    T = n(689938),
-    S = n(992798),
-    g = n(867250);
-let A = () => (0, h.f)(!1),
-    N = (e) => {
+    f = n(165583),
+    _ = n(626135),
+    h = n(74538),
+    p = n(191177),
+    m = n(27733),
+    g = n(981631),
+    E = n(474936),
+    v = n(388032),
+    I = n(992798),
+    S = n(867250);
+let T = () => (0, p.f)(!1),
+    b = (e) => {
         var t, n, a;
-        let { onLearnMore: h } = e,
-            { analyticsLocations: N } = (0, u.ZP)(l.Z.PREMIUM_UPSELL);
+        let { onLearnMore: p } = e,
+            { analyticsLocations: b } = (0, u.ZP)(l.Z.PREMIUM_UPSELL);
         i.useEffect(() => {
-            E.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
-                location_section: I.jXE.STICKER_PICKER_UPSELL,
-                type: m.cd.STICKER_PICKER_UPSELL,
-                location_stack: N
+            _.default.track(g.rMx.PREMIUM_UPSELL_VIEWED, {
+                location_section: g.jXE.STICKER_PICKER_UPSELL,
+                type: E.cd.STICKER_PICKER_UPSELL,
+                location_stack: b
             });
-        }, [N]);
-        let R = (0, d.N)(),
-            O = (0, c.Ng)(),
-            v = (null == R ? void 0 : null === (t = R.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === m.Si.TIER_0,
-            C = null != R || null != O;
+        }, [b]);
+        let y = (0, d.N)(),
+            A = (0, c.Ng)(),
+            N = (null == y ? void 0 : null === (t = y.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === E.Si.TIER_0,
+            C = null != y || null != A;
         return (0, r.jsxs)('div', {
-            className: s()(S.upsellWrapper, { [S.unifyTrialUpsell]: C }),
+            className: s()(I.upsellWrapper, { [I.unifyTrialUpsell]: C }),
             children: [
                 C
-                    ? (0, r.jsx)(_.ZP, {
-                          trialOffer: R,
-                          discountOffer: O,
-                          onClose: A,
-                          type: m.cd.STICKER_PICKER_UPSELL,
-                          subscriptionTier: null !== (a = null == R ? void 0 : null === (n = R.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : m.Si.TIER_2,
-                          children: v
-                              ? T.Z.Messages.STICKER_PICKER_PREMIUM_TIER_UPSELL_DESCRIPTION.format({
-                                    planName: (0, f.aq)(m.Xh.PREMIUM_MONTH_TIER_0),
-                                    onClick: h
+                    ? (0, r.jsx)(f.ZP, {
+                          trialOffer: y,
+                          discountOffer: A,
+                          onClose: T,
+                          type: E.cd.STICKER_PICKER_UPSELL,
+                          subscriptionTier: null !== (a = null == y ? void 0 : null === (n = y.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : E.Si.TIER_2,
+                          children: N
+                              ? v.intl.format(v.t.MAGag4, {
+                                    planName: (0, h.aq)(E.Xh.PREMIUM_MONTH_TIER_0),
+                                    onClick: p
                                 })
-                              : T.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION.format({ onClick: h })
+                              : v.intl.format(v.t.jt7JX1, { onClick: p })
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)('img', {
-                                  className: S.upsellImage,
-                                  src: g,
-                                  alt: T.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_ALT
+                                  className: I.upsellImage,
+                                  src: S,
+                                  alt: v.intl.string(v.t.do7AoK)
                               }),
                               (0, r.jsx)(o.Text, {
-                                  className: S.upsellTitle,
+                                  className: I.upsellTitle,
                                   color: 'header-primary',
                                   variant: 'text-lg/semibold',
-                                  children: T.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_TITLE
+                                  children: v.intl.string(v.t.jJG1pq)
                               }),
                               (0, r.jsx)(o.Text, {
-                                  className: S.upsellDescription,
+                                  className: I.upsellDescription,
                                   variant: 'text-md/normal',
-                                  children: T.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION.format({ onClick: h })
+                                  children: v.intl.format(v.t.jt7JX1, { onClick: p })
                               })
                           ]
                       }),
                 !C &&
-                    (0, r.jsx)(p.Z, {
-                        analyticsSection: I.jXE.EXPRESSION_PICKER,
-                        buttonText: C ? (v ? T.Z.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : T.Z.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT) : void 0
+                    (0, r.jsx)(m.Z, {
+                        analyticsSection: g.jXE.EXPRESSION_PICKER,
+                        buttonText: C ? (N ? v.intl.string(v.t.hz78hI) : v.intl.string(v.t['Gd/XHB'])) : void 0
                     }),
                 (0, r.jsx)(o.Clickable, {
-                    className: S.upsellClose,
-                    onClick: A,
+                    className: I.upsellClose,
+                    onClick: T,
                     children: (0, r.jsx)(o.XSmallIcon, {
                         size: 'md',
                         color: 'currentColor'

@@ -1,16 +1,16 @@
-var s, a, i, r;
+var i, r, l, s;
 n.d(t, {
     X: function () {
-        return s;
+        return i;
     },
     q: function () {
-        return a;
+        return r;
     }
 }),
-    ((i = s || (s = {})).OPEN = 'OPEN'),
-    (i.REJECTED = 'REJECTED'),
-    (i.APPROVED = 'APPROVED'),
-    (i.ACTION_REQUIRED = 'ACTION_REQUIRED'),
-    ((r = a || (a = {})).HOW_IT_WORKS = 'HOW_IT_WORKS'),
-    (r.BENEFITS = 'BENEFITS'),
-    (r.OTHER_CREATORS = 'OTHER_CREATORS');
+    ((l = i || (i = {})).OPEN = 'OPEN'),
+    (l.REJECTED = 'REJECTED'),
+    (l.APPROVED = 'APPROVED'),
+    (l.ACTION_REQUIRED = 'ACTION_REQUIRED'),
+    ((s = r || (r = {})).HOW_IT_WORKS = 'HOW_IT_WORKS'),
+    (s.BENEFITS = 'BENEFITS'),
+    (s.OTHER_CREATORS = 'OTHER_CREATORS');

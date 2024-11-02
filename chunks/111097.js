@@ -1,36 +1,36 @@
 n(411104), n(47120);
 var i = n(72924),
-    a = n(100527),
-    s = n(367207),
-    r = n(996106),
-    l = n(452426),
+    r = n(100527),
+    l = n(367207),
+    a = n(996106),
+    s = n(452426),
     o = n(561205),
     c = n(334288),
     d = n(852926),
     u = n(186901),
-    _ = n(981631),
-    E = n(474936);
-let h = [a.Z.RPC];
-function m(e, t) {
+    h = n(981631),
+    m = n(474936);
+let p = [r.Z.RPC];
+function g(e, t) {
     let n = {
-        subscriptionTier: E.Si.TIER_2,
-        analyticsLocations: h,
+        subscriptionTier: m.Si.TIER_2,
+        analyticsLocations: p,
         analyticsObject: t
     };
     switch (e) {
-        case _.IlC.APP:
-            return s.Z.openPremiumPaymentModalInApp(n);
-        case _.IlC.OVERLAY:
-            return s.Z.openPremiumPaymentModalInOverlay(n);
+        case h.IlC.APP:
+            return l.Z.openPremiumPaymentModalInApp(n);
+        case h.IlC.OVERLAY:
+            return l.Z.openPremiumPaymentModalInOverlay(n);
         default:
             throw Error('Unexpected app context: '.concat(e));
     }
 }
 t.Z = {
-    [_.Etm.START_PURCHASE]: {
+    [h.Etm.START_PURCHASE]: {
         [u.Gp.ANY]: [u.wE, u.lH],
         validation: (e) =>
-            (0, l.Z)(e)
+            (0, s.Z)(e)
                 .required()
                 .keys({
                     sku_id: e.string().required(),
@@ -39,52 +39,52 @@ t.Z = {
         handler(e) {
             let {
                 socket: t,
-                args: { sku_id: n, pid: a }
+                args: { sku_id: n, pid: r }
             } = e;
             (0, c.f)(t.transport);
-            let s = t.application.id;
-            if (null == s) throw new r.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'No application.');
-            let { lock: l, context: E } = (0, d.jU)(t.transport !== u.He.POST_MESSAGE ? a : null);
-            if (null == (0, o.Z)()) throw new r.Z({ errorCode: _.lTL.INVALID_CHANNEL }, 'Invalid channel');
-            let I = { page: _.ZY5.IN_APP };
+            let l = t.application.id;
+            if (null == l) throw new a.Z({ errorCode: h.lTL.INVALID_COMMAND }, 'No application.');
+            let { lock: s, context: m } = (0, d.jU)(t.transport !== u.He.POST_MESSAGE ? r : null);
+            if (null == (0, o.Z)()) throw new a.Z({ errorCode: h.lTL.INVALID_CHANNEL }, 'Invalid channel');
+            let f = { page: h.ZY5.IN_APP };
             return (async () => {
                 try {
                     let e = await (0, i.S)({
-                        applicationId: s,
+                        applicationId: l,
                         skuId: n,
-                        openPremiumPaymentModal: () => m(E, I),
-                        analyticsLocations: h,
-                        analyticsLocationObject: I,
-                        context: E
+                        openPremiumPaymentModal: () => g(m, f),
+                        analyticsLocations: p,
+                        analyticsLocationObject: f,
+                        context: m
                     });
-                    return l(), e;
+                    return s(), e;
                 } catch (e) {
-                    if ((l(), null != e)) {
+                    if ((s(), null != e)) {
                         let t = '';
-                        throw ((t = 'object' == typeof e && 'message' in e && 'string' == typeof e.message ? e.message : 'string' == typeof e ? e : JSON.stringify(e)), new r.Z({ errorCode: _.lTL.PURCHASE_ERROR }, t));
+                        throw ((t = 'object' == typeof e && 'message' in e && 'string' == typeof e.message ? e.message : 'string' == typeof e ? e : JSON.stringify(e)), new a.Z({ errorCode: h.lTL.PURCHASE_ERROR }, t));
                     }
-                    throw new r.Z({ errorCode: _.lTL.PURCHASE_CANCELED }, 'Purchase was canceled by the user.');
+                    throw new a.Z({ errorCode: h.lTL.PURCHASE_CANCELED }, 'Purchase was canceled by the user.');
                 }
             })();
         }
     },
-    [_.Etm.START_PREMIUM_PURCHASE]: {
+    [h.Etm.START_PREMIUM_PURCHASE]: {
         [u.Gp.ANY]: [u.wE, u.lH],
-        validation: (e) => (0, l.Z)(e).keys({ pid: e.number().min(0) }),
+        validation: (e) => (0, s.Z)(e).keys({ pid: e.number().min(0) }),
         handler(e) {
             let {
                 socket: t,
                 args: { pid: n }
             } = e;
-            if (((0, c.f)(t.transport), null == t.application.id)) throw new r.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'No application.');
-            let { lock: i, context: a } = (0, d.jU)(t.transport !== u.He.POST_MESSAGE ? n : null);
-            return m(a, { page: _.ZY5.IN_APP }).then(
+            if (((0, c.f)(t.transport), null == t.application.id)) throw new a.Z({ errorCode: h.lTL.INVALID_COMMAND }, 'No application.');
+            let { lock: i, context: r } = (0, d.jU)(t.transport !== u.He.POST_MESSAGE ? n : null);
+            return g(r, { page: h.ZY5.IN_APP }).then(
                 () => {
                     i();
                 },
                 (e) => {
-                    if ((i(), null != e)) throw new r.Z({ errorCode: _.lTL.PURCHASE_ERROR }, e);
-                    throw new r.Z({ errorCode: _.lTL.PURCHASE_CANCELED }, 'Purchase was canceled by the user.');
+                    if ((i(), null != e)) throw new a.Z({ errorCode: h.lTL.PURCHASE_ERROR }, e);
+                    throw new a.Z({ errorCode: h.lTL.PURCHASE_CANCELED }, 'Purchase was canceled by the user.');
                 }
             );
         }

@@ -1,14 +1,14 @@
 n.d(t, {
     m: function () {
-        return Z;
+        return N;
     }
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    a = n(120356),
-    l = n.n(a),
-    r = n(772848),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
+    s = n(772848),
     o = n(442837),
     c = n(481060),
     u = n(2052),
@@ -16,152 +16,152 @@ var i = n(200651),
     h = n(607070),
     m = n(100527),
     p = n(906732),
-    _ = n(895924),
-    f = n(390322),
-    E = n(626135),
-    g = n(566620),
-    C = n(127255),
-    I = n(5200),
-    T = n(558317),
-    x = n(403404),
-    S = n(981631),
-    v = n(689938),
-    N = n(735338);
-let A = 'vc-activities-'.concat((0, r.Z)()),
-    Z = s.forwardRef(function (e, t) {
-        let { channel: n, isHovered: a, closePopout: r, onMouseEnter: Z, onMouseLeave: M, onClick: b, className: R } = e,
-            L = (0, o.e7)([h.Z], () => h.Z.useReducedMotion),
-            { id: P, guild_id: j } = n;
-        s.useEffect(() => {
-            E.default.track(S.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
-                channel_id: P,
-                guild_id: j
+    f = n(895924),
+    g = n(390322),
+    C = n(626135),
+    x = n(566620),
+    v = n(127255),
+    _ = n(5200),
+    I = n(558317),
+    E = n(403404),
+    b = n(981631),
+    S = n(388032),
+    Z = n(735338);
+let T = 'vc-activities-'.concat((0, s.Z)()),
+    N = l.forwardRef(function (e, t) {
+        let { channel: n, isHovered: r, closePopout: s, onMouseEnter: N, onMouseLeave: j, onClick: A, className: y } = e,
+            P = (0, o.e7)([h.Z], () => h.Z.useReducedMotion),
+            { id: M, guild_id: R } = n;
+        l.useEffect(() => {
+            C.default.track(b.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
+                channel_id: M,
+                guild_id: R
             });
-        }, [P, j]),
-            s.useEffect(() => {
-                !a && r();
-            }, [r, a]);
-        let O = (0, d.bp)(),
-            { analyticsLocations: y } = (0, p.ZP)(m.Z.ACTIVITIES_MINI_SHELF),
-            { analyticsLocations: D } = (0, p.ZP)([...y, m.Z.ACTIVITIES_MINI_SHELF_BANNER]),
-            U = O === S.IlC.POPOUT,
-            k = (0, u.O)(),
-            w = (function (e) {
-                return (0, C.Z)({ guildId: e }).slice(0, 5);
+        }, [M, R]),
+            l.useEffect(() => {
+                !r && s();
+            }, [s, r]);
+        let L = (0, d.bp)(),
+            { analyticsLocations: k } = (0, p.ZP)(m.Z.ACTIVITIES_MINI_SHELF),
+            { analyticsLocations: O } = (0, p.ZP)([...k, m.Z.ACTIVITIES_MINI_SHELF_BANNER]),
+            w = L === b.IlC.POPOUT,
+            D = (0, u.O)(),
+            U = (function (e) {
+                return (0, v.Z)({ guildId: e }).slice(0, 5);
             })(n.getGuildId());
-        s.useEffect(() => {
-            let e = setTimeout(() => g.ux(), 1000);
+        l.useEffect(() => {
+            let e = setTimeout(() => x.ux(), 1000);
             return () => clearTimeout(e);
         }, []);
-        let B = s.useCallback(() => {
+        let B = l.useCallback(() => {
                 var e;
-                (0, x.Z)({
+                (0, E.Z)({
                     channel: n,
                     guildId: null !== (e = n.getGuildId()) && void 0 !== e ? e : void 0,
-                    locationObject: k.location,
-                    openInPopout: U,
-                    analyticsLocations: y,
+                    locationObject: D.location,
+                    openInPopout: w,
+                    analyticsLocations: k,
                     opensAppLauncherModal: !0
                 }),
-                    M(),
-                    b();
-            }, [k, y, n, b, M, U]),
-            H = s.useCallback(
+                    j(),
+                    A();
+            }, [D, k, n, A, j, w]),
+            H = l.useCallback(
                 (e) => {
-                    Z(),
-                        E.default.track(S.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
+                    N(),
+                        C.default.track(b.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
                             channel_id: n.id,
                             guild_id: n.getGuildId()
                         });
                 },
-                [Z, n]
+                [N, n]
             );
         return (0, i.jsx)(p.Gt, {
-            value: y,
-            children: (0, i.jsx)(f.Z, {
+            value: k,
+            children: (0, i.jsx)(g.Z, {
                 children: (0, i.jsxs)(c.Dialog, {
                     ref: t,
-                    'aria-labelledby': A,
-                    className: R,
+                    'aria-labelledby': T,
+                    className: y,
                     children: [
                         (0, i.jsx)(c.HeadingLevel, {
                             forceLevel: 2,
                             children: (0, i.jsx)(c.HiddenVisually, {
                                 children: (0, i.jsx)(c.H, {
-                                    id: A,
-                                    children: v.Z.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TITLE
+                                    id: T,
+                                    children: S.intl.string(S.t['2lnYtL'])
                                 })
                             })
                         }),
                         (0, i.jsxs)('div', {
-                            className: N.container,
+                            className: Z.container,
                             onMouseEnter: H,
-                            onMouseLeave: M,
+                            onMouseLeave: j,
                             children: [
                                 (0, i.jsxs)('div', {
-                                    className: N.titleContainer,
+                                    className: Z.titleContainer,
                                     children: [
                                         (0, i.jsxs)('div', {
-                                            className: N.titleLeft,
+                                            className: Z.titleLeft,
                                             children: [
                                                 (0, i.jsx)(c.ActivitiesIcon, {
                                                     size: 'md',
-                                                    className: N.titleLeftIcon,
+                                                    className: Z.titleLeftIcon,
                                                     color: 'var(--interactive-active)'
                                                 }),
                                                 (0, i.jsx)(c.Text, {
                                                     variant: 'eyebrow',
-                                                    children: v.Z.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_ACTIVITIES_TITLE
+                                                    children: S.intl.string(S.t.f3Cz29)
                                                 })
                                             ]
                                         }),
                                         (0, i.jsxs)(c.Clickable, {
-                                            className: N.titleRight,
+                                            className: Z.titleRight,
                                             onClick: B,
                                             children: [
                                                 (0, i.jsx)(c.Text, {
                                                     variant: 'eyebrow',
-                                                    children: v.Z.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_SEE_ALL
+                                                    children: S.intl.string(S.t['K8+z4e'])
                                                 }),
                                                 (0, i.jsx)(c.ChevronSmallRightIcon, {
                                                     size: 'custom',
                                                     width: 12,
                                                     height: 12,
                                                     color: 'var(--interactive-active)',
-                                                    className: N.titleRightIcon
+                                                    className: Z.titleRightIcon
                                                 })
                                             ]
                                         })
                                     ]
                                 }),
                                 (0, i.jsx)(p.Gt, {
-                                    value: D,
+                                    value: O,
                                     children: null
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: N.activityContainer,
+                                    className: Z.activityContainer,
                                     children: [
-                                        w.map((e) =>
+                                        U.map((e) =>
                                             (0, i.jsx)(
-                                                I.Y,
+                                                _.Y,
                                                 {
                                                     channel: n,
                                                     activityItem: e,
                                                     onClick: () => {
-                                                        r(), b();
+                                                        s(), A();
                                                     },
-                                                    aspectRatio: I.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
-                                                    animatedDivClass: N.activitySuggestion,
-                                                    commandOrigin: _.bB.MINI_SHELF
+                                                    aspectRatio: _.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
+                                                    animatedDivClass: Z.activitySuggestion,
+                                                    commandOrigin: f.bB.MINI_SHELF
                                                 },
                                                 e.application.id
                                             )
                                         ),
                                         (0, i.jsx)('div', {
-                                            className: l()(N.wumpusRocketOuterContainer, { [N.wumpusReducedMotion]: L }),
+                                            className: a()(Z.wumpusRocketOuterContainer, { [Z.wumpusReducedMotion]: P }),
                                             children: (0, i.jsx)('div', {
-                                                className: N.wumpusRocketInnerContainer,
-                                                children: (0, i.jsx)(T.Z, { className: N.wumpusRocket })
+                                                className: Z.wumpusRocketInnerContainer,
+                                                children: (0, i.jsx)(I.Z, { className: Z.wumpusRocket })
                                             })
                                         })
                                     ]

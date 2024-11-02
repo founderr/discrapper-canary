@@ -1,89 +1,89 @@
-t.r(a),
-    t.d(a, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return R;
+            return T;
         }
     }),
-    t(47120);
-var n = t(200651),
-    r = t(192379),
-    s = t(120356),
-    i = t.n(s),
-    c = t(512722),
-    l = t.n(c),
-    o = t(442837),
-    d = t(693789),
-    m = t(481060),
-    u = t(809086),
-    x = t(599456),
-    h = t(430824),
-    _ = t(937615),
-    j = t(495437),
-    p = t(240864),
-    O = t(942833),
-    f = t(598952),
-    C = t(392739),
-    N = t(400916),
-    I = t(916001),
-    T = t(689938),
-    v = t(926492);
-function D(e) {
-    let { guildProductListing: a, guildId: t, skuPricePreview: r } = e,
-        s = (0, O.C)(a),
-        i = (0, _.T4)(r.amount, r.currency),
-        c = (0, o.e7)([h.Z], () => h.Z.getGuild(t));
+    n(47120);
+var a = n(200651),
+    r = n(192379),
+    i = n(120356),
+    l = n.n(i),
+    s = n(512722),
+    c = n.n(s),
+    o = n(442837),
+    d = n(693789),
+    m = n(481060),
+    u = n(809086),
+    x = n(599456),
+    h = n(430824),
+    j = n(937615),
+    p = n(495437),
+    f = n(240864),
+    v = n(942833),
+    b = n(598952),
+    g = n(392739),
+    S = n(400916),
+    C = n(916001),
+    N = n(388032),
+    _ = n(926492);
+function y(e) {
+    let { guildProductListing: t, guildId: n, skuPricePreview: r } = e,
+        i = (0, v.C)(t),
+        l = (0, j.T4)(r.amount, r.currency),
+        s = (0, o.e7)([h.Z], () => h.Z.getGuild(n));
     return (
-        l()(null != c, 'guild cannot be null'),
-        (0, n.jsxs)('div', {
-            className: v.purchaseSummaryContainer,
+        c()(null != s, 'guild cannot be null'),
+        (0, a.jsxs)('div', {
+            className: _.purchaseSummaryContainer,
             children: [
-                (0, n.jsx)(u.Z, {
+                (0, a.jsx)(u.Z, {
                     alt: '',
-                    className: v.purchaseSummaryImage,
-                    listing: a,
+                    className: _.purchaseSummaryImage,
+                    listing: t,
                     imageSize: 100
                 }),
-                (0, n.jsxs)('div', {
-                    className: v.purchaseSummarInfo,
+                (0, a.jsxs)('div', {
+                    className: _.purchaseSummarInfo,
                     children: [
-                        (0, n.jsx)(m.Text, {
+                        (0, a.jsx)(m.Text, {
                             variant: 'text-md/medium',
                             color: 'header-primary',
-                            children: a.name
+                            children: t.name
                         }),
-                        (0, n.jsx)(m.Spacer, { size: 4 }),
-                        (0, n.jsxs)('div', {
-                            className: v.productTypeContainer,
+                        (0, a.jsx)(m.Spacer, { size: 4 }),
+                        (0, a.jsxs)('div', {
+                            className: _.productTypeContainer,
                             children: [
-                                (0, n.jsx)(m.Text, {
+                                (0, a.jsx)(m.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'text-muted',
-                                    children: s
+                                    children: i
                                 }),
-                                (0, n.jsx)('div', { className: v.dotSeparator }),
-                                (0, n.jsx)(m.Text, {
+                                (0, a.jsx)('div', { className: _.dotSeparator }),
+                                (0, a.jsx)(m.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'text-muted',
                                     lineClamp: 2,
-                                    children: c.name
+                                    children: s.name
                                 })
                             ]
                         })
                     ]
                 }),
-                (0, n.jsxs)('div', {
-                    className: v.purchaseSummaryPrice,
+                (0, a.jsxs)('div', {
+                    className: _.purchaseSummaryPrice,
                     children: [
-                        (0, n.jsx)(m.Text, {
+                        (0, a.jsx)(m.Text, {
                             variant: 'text-md/medium',
                             color: 'header-primary',
-                            children: i
+                            children: l
                         }),
-                        (0, n.jsx)(m.Spacer, { size: 4 }),
-                        (0, n.jsx)(m.Text, {
+                        (0, a.jsx)(m.Spacer, { size: 4 }),
+                        (0, a.jsx)(m.Text, {
                             variant: 'text-xs/normal',
                             color: 'text-muted',
-                            children: T.Z.Messages.GUILD_PRODUCT_PURCHASE_SUMMARY_TOTAL_PAID
+                            children: N.intl.string(N.t['5dWOZW'])
                         })
                     ]
                 })
@@ -91,149 +91,149 @@ function D(e) {
         })
     );
 }
-function M(e) {
-    var a;
-    let { guildProductListing: t, guildId: r } = e,
-        s = null !== (a = t.attachments) && void 0 !== a ? a : [],
-        c = s.length > 1;
-    return 0 === s.length
+function z(e) {
+    var t;
+    let { guildProductListing: n, guildId: r } = e,
+        i = null !== (t = n.attachments) && void 0 !== t ? t : [],
+        s = i.length > 1;
+    return 0 === i.length
         ? null
-        : (0, n.jsx)(C.Z, {
-              label: T.Z.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_DOWNLOADABLE_UNLOCKED,
-              children: (0, n.jsxs)('div', {
-                  className: i()(v.attachmentsContainer, { [v.attachmentsContainerMultiple]: c }),
+        : (0, a.jsx)(g.Z, {
+              label: N.intl.string(N.t.HOkHPD),
+              children: (0, a.jsxs)('div', {
+                  className: l()(_.attachmentsContainer, { [_.attachmentsContainerMultiple]: s }),
                   children: [
-                      (0, n.jsx)('div', {
-                          className: v.attachmentGrid,
-                          children: s.map((e) => (0, n.jsx)(f.Z, { attachment: e }, e.id))
+                      (0, a.jsx)('div', {
+                          className: _.attachmentGrid,
+                          children: i.map((e) => (0, a.jsx)(b.Z, { attachment: e }, e.id))
                       }),
-                      (0, n.jsx)('div', {
-                          children: (0, n.jsx)(N.Z, {
+                      (0, a.jsx)('div', {
+                          children: (0, a.jsx)(S.Z, {
                               guildId: r,
-                              productId: t.id
+                              productId: n.id
                           })
                       })
                   ]
               })
           });
 }
-function b(e) {
-    let { role: a } = e;
-    return null == a
+function I(e) {
+    let { role: t } = e;
+    return null == t
         ? null
-        : (0, n.jsx)(C.Z, {
-              label: T.Z.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_ROLE_UNLOCKED,
-              children: (0, n.jsx)(I.Z, { role: a })
+        : (0, a.jsx)(g.Z, {
+              label: N.intl.string(N.t.gWBNen),
+              children: (0, a.jsx)(C.Z, { role: t })
           });
 }
-function g(e) {
-    return (0, n.jsx)(m.Text, {
+function Z(e) {
+    return (0, a.jsx)(m.Text, {
         tag: 'span',
         variant: 'text-md/semibold',
         color: 'text-normal',
         children: e
     });
 }
-function R(e) {
-    var a;
-    let { onClose: t, transitionState: s, guildProductListingId: i, guildId: c, skuPricePreview: u } = e,
-        _ = (0, o.e7)([p.Z], () => p.Z.getGuildProduct(i));
-    l()(null != _, 'guildProductListing cannot be null');
-    let [O, f] = r.useState(!1);
+function T(e) {
+    var t;
+    let { onClose: n, transitionState: i, guildProductListingId: l, guildId: s, skuPricePreview: u } = e,
+        j = (0, o.e7)([f.Z], () => f.Z.getGuildProduct(l));
+    c()(null != j, 'guildProductListing cannot be null');
+    let [v, b] = r.useState(!1);
     r.useEffect(() => {
         (async function e() {
             try {
-                f(!0), await (0, j.cf)(c, i), f(!1);
+                b(!0), await (0, p.cf)(s, l), b(!1);
             } catch (e) {
-                t(),
+                n(),
                     (0, x.Z)({
-                        body: T.Z.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_GENRIC_ERROR_BODY,
-                        confirmText: T.Z.Messages.GOT_IT,
-                        header: T.Z.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_GENRIC_ERROR_HEADER,
+                        body: N.intl.string(N.t.VQ0lXV),
+                        confirmText: N.intl.string(N.t['NX+WJC']),
+                        header: N.intl.string(N.t.OCwKlp),
                         confirmButtonColor: d.zx.Colors.BRAND
                     });
             }
         })();
-    }, [c, i, t]);
-    let C = (null !== (a = _.attachments) && void 0 !== a ? a : []).length > 0,
-        N = _.role_id,
-        I = (0, o.e7)([h.Z], () => (null != N ? h.Z.getRole(c, N) : void 0));
-    return (0, n.jsx)(m.ModalRoot, {
-        className: v.modal,
+    }, [s, l, n]);
+    let g = (null !== (t = j.attachments) && void 0 !== t ? t : []).length > 0,
+        S = j.role_id,
+        C = (0, o.e7)([h.Z], () => (null != S ? h.Z.getRole(s, S) : void 0));
+    return (0, a.jsx)(m.ModalRoot, {
+        className: _.modal,
         size: m.ModalSize.DYNAMIC,
-        transitionState: s,
-        'aria-label': _.name,
-        children: (0, n.jsx)(m.ModalContent, {
-            children: (0, n.jsx)('div', {
-                className: v.container,
-                children: O
-                    ? (0, n.jsx)(m.Spinner, {})
-                    : (0, n.jsxs)(n.Fragment, {
+        transitionState: i,
+        'aria-label': j.name,
+        children: (0, a.jsx)(m.ModalContent, {
+            children: (0, a.jsx)('div', {
+                className: _.container,
+                children: v
+                    ? (0, a.jsx)(m.Spinner, {})
+                    : (0, a.jsxs)(a.Fragment, {
                           children: [
-                              (0, n.jsxs)('div', {
-                                  className: v.header,
+                              (0, a.jsxs)('div', {
+                                  className: _.header,
                                   children: [
-                                      (0, n.jsx)(m.Heading, {
+                                      (0, a.jsx)(m.Heading, {
                                           variant: 'heading-xl/semibold',
                                           color: 'header-primary',
-                                          children: T.Z.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_TITLE
+                                          children: N.intl.string(N.t.dhAgv7)
                                       }),
-                                      (0, n.jsx)(m.Clickable, {
-                                          onClick: t,
-                                          children: (0, n.jsx)(m.XSmallIcon, {
+                                      (0, a.jsx)(m.Clickable, {
+                                          onClick: n,
+                                          children: (0, a.jsx)(m.XSmallIcon, {
                                               size: 'md',
                                               color: 'currentColor',
-                                              className: v.close
+                                              className: _.close
                                           })
                                       })
                                   ]
                               }),
-                              (0, n.jsx)(m.Spacer, { size: 16 }),
-                              (0, n.jsx)(m.Text, {
+                              (0, a.jsx)(m.Spacer, { size: 16 }),
+                              (0, a.jsx)(m.Text, {
                                   variant: 'text-md/normal',
                                   color: 'text-normal',
-                                  children: T.Z.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_BODY_INTRO.format({
-                                      productName: _.name,
-                                      emphasisHook: g
+                                  children: N.intl.format(N.t.X6yvvr, {
+                                      productName: j.name,
+                                      emphasisHook: Z
                                   })
                               }),
-                              (0, n.jsx)(m.Spacer, { size: 12 }),
-                              (0, n.jsxs)(m.Text, {
+                              (0, a.jsx)(m.Spacer, { size: 12 }),
+                              (0, a.jsxs)(m.Text, {
                                   variant: 'text-md/normal',
                                   color: 'text-normal',
                                   children: [
-                                      C ? T.Z.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_BODY_ATTACHMENT + ' ' : '',
-                                      null != I
-                                          ? T.Z.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_BODY_ROLE.format({
-                                                roleName: I.name,
-                                                emphasisHook: g
+                                      g ? N.intl.string(N.t['A/RnkJ']) + ' ' : '',
+                                      null != C
+                                          ? N.intl.format(N.t.IeJDKi, {
+                                                roleName: C.name,
+                                                emphasisHook: Z
                                             })
                                           : ''
                                   ]
                               }),
-                              (0, n.jsx)(m.Spacer, { size: 12 }),
-                              (0, n.jsx)(m.Text, {
+                              (0, a.jsx)(m.Spacer, { size: 12 }),
+                              (0, a.jsx)(m.Text, {
                                   variant: 'text-md/normal',
                                   color: 'text-normal',
-                                  children: T.Z.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_BODY_THANK_YOU
+                                  children: N.intl.string(N.t['9S3QHB'])
                               }),
-                              (0, n.jsx)(m.Spacer, { size: 24 }),
-                              (0, n.jsx)(D, {
-                                  guildProductListing: _,
-                                  guildId: c,
+                              (0, a.jsx)(m.Spacer, { size: 24 }),
+                              (0, a.jsx)(y, {
+                                  guildProductListing: j,
+                                  guildId: s,
                                   skuPricePreview: u
                               }),
-                              (0, n.jsx)(m.Spacer, { size: 32 }),
-                              (0, n.jsx)('div', { className: v.divider }),
-                              (0, n.jsx)(m.Spacer, { size: 32 }),
-                              (0, n.jsxs)('ul', {
-                                  className: v.benefitsContainer,
+                              (0, a.jsx)(m.Spacer, { size: 32 }),
+                              (0, a.jsx)('div', { className: _.divider }),
+                              (0, a.jsx)(m.Spacer, { size: 32 }),
+                              (0, a.jsxs)('ul', {
+                                  className: _.benefitsContainer,
                                   children: [
-                                      (0, n.jsx)(M, {
-                                          guildProductListing: _,
-                                          guildId: c
+                                      (0, a.jsx)(z, {
+                                          guildProductListing: j,
+                                          guildId: s
                                       }),
-                                      (0, n.jsx)(b, { role: I })
+                                      (0, a.jsx)(I, { role: C })
                                   ]
                               })
                           ]

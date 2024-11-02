@@ -1,6 +1,6 @@
 n.d(t, {
     Av: function () {
-        return E;
+        return _;
     },
     gP: function () {
         return u;
@@ -19,7 +19,7 @@ let i = {
         'function' == typeof r.useId
             ? function (e) {
                   let t = r.useId(),
-                      [n] = (0, r.useState)(E()),
+                      [n] = (0, r.useState)(_()),
                       a = n ? 'react-aria' : `react-aria${i.prefix}`;
                   return e || `${a}-${t}`;
               }
@@ -54,9 +54,9 @@ function c() {
 function d() {
     return !0;
 }
-function _(e) {
+function f(e) {
     return () => {};
 }
-function E() {
-    return 'function' == typeof r.useSyncExternalStore ? r.useSyncExternalStore(_, c, d) : (0, r.useContext)(s);
+function _() {
+    return 'function' == typeof r.useSyncExternalStore ? r.useSyncExternalStore(f, c, d) : (0, r.useContext)(s);
 }

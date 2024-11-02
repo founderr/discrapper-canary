@@ -1,45 +1,45 @@
 n(789020);
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(481060),
-    i = n(630388),
-    r = n(402148),
-    l = n(981631),
-    o = n(689938),
+var r = n(481060),
+    l = n(630388),
+    s = n(402148),
+    a = n(981631),
+    o = n(388032),
     c = n(329070);
 t.Z = (e) => {
     let { role: t } = e;
-    return (0, i.yE)(t.flags, l.aO5.IN_PROMPT)
-        ? (0, r.F)(t)
-            ? (0, s.jsxs)('div', {
+    return (0, l.yE)(t.flags, a.aO5.IN_PROMPT)
+        ? (0, s.F)(t)
+            ? (0, i.jsxs)('div', {
                   className: c.notice,
                   children: [
-                      (0, s.jsx)(a.CircleWarningIcon, {
+                      (0, i.jsx)(r.CircleWarningIcon, {
                           size: 'custom',
                           width: 20,
                           height: 20,
                           color: 'currentColor',
                           className: c.noticeIconPowerful
                       }),
-                      (0, s.jsx)(a.Text, {
+                      (0, i.jsx)(r.Text, {
                           variant: 'text-sm/normal',
-                          children: o.Z.Messages.ROLE_IN_PROMPT_POWERFUL_NOTICE_TEXT
+                          children: o.intl.string(o.t.YRbgX1)
                       })
                   ]
               })
-            : (0, s.jsxs)('div', {
+            : (0, i.jsxs)('div', {
                   className: c.notice,
                   children: [
-                      (0, s.jsx)(a.CircleWarningIcon, {
+                      (0, i.jsx)(r.CircleWarningIcon, {
                           size: 'custom',
                           width: 20,
                           height: 20,
                           color: 'currentColor',
                           className: c.noticeIcon
                       }),
-                      (0, s.jsx)(a.Text, {
+                      (0, i.jsx)(r.Text, {
                           variant: 'text-sm/normal',
-                          children: o.Z.Messages.ROLE_IN_PROMPT_NOTICE_TEXT
+                          children: o.intl.string(o.t.mqeO2t)
                       })
                   ]
               })

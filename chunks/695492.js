@@ -5,23 +5,23 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(481060),
-    a = n(607187),
-    l = n(112560),
-    r = n(981631),
-    o = n(689938),
+var l = n(481060),
+    r = n(607187),
+    a = n(112560),
+    s = n(981631),
+    o = n(388032),
     c = n(795447),
     u = n(800350);
 function d(e) {
     let { channel: t, guild: d, width: h, inPopout: m } = e;
-    return (0, i.jsx)(a.Z, {
+    return (0, i.jsx)(r.Z, {
         className: c.root,
-        children: (0, i.jsx)(l.Z, {
+        children: (0, i.jsx)(a.Z, {
             artURL: u,
-            size: (0, l.L)(h),
-            header: o.Z.Messages.STREAM_SINGLE_PERSON_BODY,
+            size: (0, a.L)(h),
+            header: o.intl.string(o.t.O4FiWl),
             onCTAClick: () =>
-                (0, s.openModalLazy)(
+                (0, l.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([n.e('7654'), n.e('85683')]).then(n.bind(n, 560114));
                         return (n) =>
@@ -29,12 +29,12 @@ function d(e) {
                                 ...n,
                                 guild: d,
                                 channel: t,
-                                source: r.t4x.CHANNEL_CALL
+                                source: s.t4x.CHANNEL_CALL
                             });
                     },
-                    { contextKey: m ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT }
+                    { contextKey: m ? l.POPOUT_MODAL_CONTEXT : l.DEFAULT_MODAL_CONTEXT }
                 ),
-            callToAction: o.Z.Messages.INSTANT_INVITE
+            callToAction: o.intl.string(o.t.VINpSE)
         })
     });
 }

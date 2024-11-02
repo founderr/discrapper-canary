@@ -1,81 +1,81 @@
 n.d(t, {
     Z: function () {
-        return U;
+        return B;
     }
 }),
     n(47120);
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(319147),
-    r = n(306276),
-    i = n(510236),
+var r = n(319147),
+    a = n(306276),
+    s = n(510236),
     l = n(133398),
     o = n(722283),
     c = n(298274),
-    _ = n(569620),
-    d = n(16503),
-    E = n(64268),
-    u = n(697720),
-    T = n(578325),
-    I = n(56790),
-    R = n(90718),
-    g = n(897482),
-    N = n(4515),
-    m = n(474472),
-    C = n(156129),
-    A = n(799303),
-    p = n(245630),
-    f = n(842272),
-    M = n(486731),
-    S = n(346943),
-    h = n(55826),
-    x = n(218776),
-    b = n(414653),
-    O = n(297141),
+    d = n(569620),
+    u = n(16503),
+    g = n(64268),
+    m = n(697720),
+    f = n(578325),
+    p = n(56790),
+    _ = n(90718),
+    h = n(897482),
+    x = n(4515),
+    E = n(474472),
+    b = n(156129),
+    C = n(799303),
+    v = n(245630),
+    T = n(842272),
+    N = n(486731),
+    I = n(346943),
+    S = n(55826),
+    R = n(218776),
+    A = n(414653),
+    j = n(297141),
     P = n(26517),
-    v = n(93125),
-    L = n(278583),
-    Z = n(814437);
-let D = new Map([
-    ['BG', i],
+    O = n(93125),
+    Z = n(278583),
+    M = n(814437);
+let w = new Map([
+    ['BG', s],
     ['CZ', c],
-    ['HU', g],
+    ['HU', h],
     ['RO', P],
-    ['SE', v],
+    ['SE', O],
     ['CY', o],
-    ['EE', d],
-    ['IS', m],
-    ['IE', N],
-    ['LV', M],
-    ['LI', A],
-    ['LT', p],
-    ['LU', f],
-    ['MT', S],
-    ['SK', Z],
-    ['SI', L],
-    ['GR', I],
-    ['FI', u],
-    ['PT', O],
-    ['NO', x],
-    ['BE', r],
-    ['AT', a],
+    ['EE', u],
+    ['IS', E],
+    ['IE', x],
+    ['LV', N],
+    ['LI', C],
+    ['LT', v],
+    ['LU', T],
+    ['MT', I],
+    ['SK', M],
+    ['SI', Z],
+    ['GR', p],
+    ['FI', m],
+    ['PT', j],
+    ['NO', R],
+    ['BE', a],
+    ['AT', r],
     ['CH', l],
-    ['FR', T],
-    ['DE', _],
-    ['ES', E],
-    ['IT', C],
-    ['NL', h],
-    ['PL', b],
-    ['HR', R]
+    ['FR', f],
+    ['DE', d],
+    ['ES', g],
+    ['IT', b],
+    ['NL', S],
+    ['PL', A],
+    ['HR', _]
 ]);
-function U(e) {
+function B(e) {
     let { className: t, countryCode: n } = e;
-    if (null == n || !D.has(n)) return null;
-    let a = D.get(n);
-    return (0, s.jsx)('img', {
+    if (null == n || !w.has(n)) return null;
+    let r = w.get(n);
+    return (0, i.jsx)('img', {
         className: t,
         'aria-hidden': !0,
         alt: 'Wumpus holding a country-specific flag',
-        src: a
+        src: r
     });
 }

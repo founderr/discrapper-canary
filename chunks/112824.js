@@ -1,105 +1,105 @@
 n.d(t, {
     R: function () {
-        return m;
+        return p;
     },
     Z: function () {
-        return N;
+        return f;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(120356),
-    i = n.n(a),
-    r = n(149765),
-    l = n(442837),
+var r = n(120356),
+    l = n.n(r),
+    s = n(149765),
+    a = n(442837),
     o = n(481060),
     c = n(430824),
     d = n(496675),
     u = n(700785),
-    _ = n(647086),
-    I = n(135899),
-    E = n(689938),
-    T = n(176981);
-function m(e) {
-    return I.$X.filter((t) => (null == e ? void 0 : e.id) !== _._ && u.oz(t, e));
+    m = n(647086),
+    h = n(135899),
+    g = n(388032),
+    x = n(176981);
+function p(e) {
+    return h.$X.filter((t) => (null == e ? void 0 : e.id) !== m._ && u.oz(t, e));
 }
-function N(e) {
+function f(e) {
     let { guild: t } = e,
-        a = (0, l.e7)([c.Z], () => c.Z.getRole(t.id, t.getEveryoneRoleId())),
-        u = m(t),
-        _ = u.length > 0,
-        N = I.$X.some(
+        r = (0, a.e7)([c.Z], () => c.Z.getRole(t.id, t.getEveryoneRoleId())),
+        u = p(t),
+        m = u.length > 0,
+        f = h.$X.some(
             (e) =>
                 !d.Z.can(e, t, null, {
-                    [a.id]: {
-                        ...a,
-                        permissions: r.Od(a.permissions, e)
+                    [r.id]: {
+                        ...r,
+                        permissions: s.Od(r.permissions, e)
                     }
                 })
         ),
-        S = (0, s.jsxs)(s.Fragment, {
+        C = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, s.jsxs)('div', {
-                    className: T.itemContent,
+                (0, i.jsxs)('div', {
+                    className: x.itemContent,
                     children: [
-                        (0, s.jsx)(o.Heading, {
+                        (0, i.jsx)(o.Heading, {
                             variant: 'text-md/semibold',
                             color: 'header-primary',
-                            children: E.Z.Messages.GUILD_SETTINGS_SAFETY_EVERYONE_RISKY_PERMISSIONS
+                            children: g.intl.string(g.t['+vaUlJ'])
                         }),
-                        (0, s.jsx)(o.Text, {
+                        (0, i.jsx)(o.Text, {
                             variant: 'text-sm/medium',
                             color: 'header-secondary',
-                            children: E.Z.Messages.GUILD_SETTINGS_SAFETY_EVERYONE_RISKY_PERMISSIONS_DETAILS.format({ numPerms: u.length })
+                            children: g.intl.format(g.t.RXAtdH, { numPerms: u.length })
                         })
                     ]
                 }),
-                _
-                    ? (0, s.jsx)(o.CircleWarningIcon, {
+                m
+                    ? (0, i.jsx)(o.CircleWarningIcon, {
                           size: 'custom',
                           color: 'currentColor',
                           height: 24,
                           width: 24,
-                          className: T.warning,
-                          'aria-label': E.Z.Messages.SAFETY_REMOVE_RISKY_PERMS_ARIA_LABEL
+                          className: x.warning,
+                          'aria-label': g.intl.string(g.t.bG7Gu7)
                       })
-                    : (0, s.jsx)(o.CircleCheckIcon, {
+                    : (0, i.jsx)(o.CircleCheckIcon, {
                           size: 'custom',
                           color: 'currentColor',
                           height: 24,
                           width: 24,
-                          className: T.check,
-                          'aria-label': E.Z.Messages.SAFETY_REMOVE_RISKY_PERMS_ARIA_LABEL_COMPLETE
+                          className: x.check,
+                          'aria-label': g.intl.string(g.t['YQix8/'])
                       })
             ]
         });
-    return _
-        ? N
-            ? (0, s.jsx)(o.Tooltip, {
-                  text: E.Z.Messages.SAFETY_REMOVE_RISKY_PERMS_WARNING,
+    return m
+        ? f
+            ? (0, i.jsx)(o.Tooltip, {
+                  text: g.intl.string(g.t['E5v/a2']),
                   children: (e) =>
-                      (0, s.jsx)('div', {
-                          className: i()(T.simpleItemWrapper, T.disabled),
+                      (0, i.jsx)('div', {
+                          className: l()(x.simpleItemWrapper, x.disabled),
                           ...e,
-                          children: S
+                          children: C
                       })
               })
-            : (0, s.jsx)(o.Clickable, {
+            : (0, i.jsx)(o.Clickable, {
                   onClick: () => {
                       (0, o.openModalLazy)(async () => {
                           let { default: e } = await n.e('39627').then(n.bind(n, 193845));
                           return (n) =>
-                              (0, s.jsx)(e, {
+                              (0, i.jsx)(e, {
                                   guild: t,
                                   ...n
                               });
                       });
                   },
-                  className: i()(T.simpleItemWrapper, T.clickable),
-                  children: S
+                  className: l()(x.simpleItemWrapper, x.clickable),
+                  children: C
               })
-        : (0, s.jsx)('div', {
-              className: T.simpleItemWrapper,
-              children: S
+        : (0, i.jsx)('div', {
+              className: x.simpleItemWrapper,
+              children: C
           });
 }

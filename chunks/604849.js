@@ -1,15 +1,15 @@
-t.d(n, {
+e.d(n, {
     c: function () {
         return a;
     }
 });
-var i = t(442837),
-    r = t(581883),
-    o = t(981312);
+var i = e(442837),
+    r = e(581883),
+    o = e(981312);
 let a = () => {
-    let e = (0, i.e7)([r.Z], () => {
-        var e, n, t;
-        return null === (t = null === (n = r.Z.settings.privacy) || void 0 === n ? void 0 : null === (e = n.inappropriateConversationWarnings) || void 0 === e ? void 0 : e.value) || void 0 === t || t;
+    let t = (0, i.e7)([r.Z], () => {
+        var t, n, e;
+        return null === (e = null === (n = r.Z.settings.privacy) || void 0 === n ? void 0 : null === (t = n.inappropriateConversationWarnings) || void 0 === t ? void 0 : t.value) || void 0 === e || e;
     });
-    return (0, o.U)() && e;
+    return (0, o.U)() && t;
 };

@@ -15,15 +15,15 @@ var r = n(192379),
 function d(e, t) {
     var n;
     let d = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
-        _ = null !== (n = null == e ? void 0 : e.guild_id) && void 0 !== n ? n : u.lds,
-        E = (0, i.e7)([s.ZP], () => s.ZP.getFlattenedGuildIds()),
-        f = (0, i.e7)([a.Z], () => null == e || null == e.guild_id || a.Z.can(c.Pl.USE_EXTERNAL_SOUNDS, e));
+        f = null !== (n = null == e ? void 0 : e.guild_id) && void 0 !== n ? n : u.lds,
+        _ = (0, i.e7)([s.ZP], () => s.ZP.getFlattenedGuildIds()),
+        h = (0, i.e7)([a.Z], () => null == e || null == e.guild_id || a.Z.can(c.Pl.USE_EXTERNAL_SOUNDS, e));
     return r.useMemo(() => {
-        if ((l.ZP.canUseSoundboardEverywhere(d) || !t) && f) {
-            let e = '' !== _,
-                t = e ? E.filter((e) => e !== _) : E;
-            return e && t.unshift(_), t;
+        if ((l.ZP.canUseSoundboardEverywhere(d) || !t) && h) {
+            let e = '' !== f,
+                t = e ? _.filter((e) => e !== f) : _;
+            return e && t.unshift(f), t;
         }
-        return [_];
-    }, [d, t, _, E, f]);
+        return [f];
+    }, [d, t, f, _, h]);
 }

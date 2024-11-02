@@ -11,12 +11,12 @@ var r = n(100527),
     l = n(50493);
 function u(e, t, n) {
     var u, c, d;
-    let _ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { modViewPanel: l.k.INFO };
+    let f = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { modViewPanel: l.k.INFO };
     if (!(0, o.By)(e)) return Promise.resolve();
-    let E = null !== (u = _.modViewPanel) && void 0 !== u ? u : l.k.INFO,
-        f = null !== (c = _.sourceLocation) && void 0 !== c ? c : r.Z.MEMBER_SAFETY_PAGE;
+    let _ = null !== (u = f.modViewPanel) && void 0 !== u ? u : l.k.INFO,
+        h = null !== (c = f.sourceLocation) && void 0 !== c ? c : r.Z.MEMBER_SAFETY_PAGE;
     return (
-        (0, s.q)(e, t, E, f),
+        (0, s.q)(e, t, _, h),
         i.Z.openGuildSidebar({
             guildId: e,
             baseChannelId: n,
@@ -25,8 +25,8 @@ function u(e, t, n) {
                 type: a.Ff.GUILD_MEMBER_MOD_VIEW,
                 userId: t,
                 guildId: e,
-                ..._,
-                modViewPanel: null !== (d = _.modViewPanel) && void 0 !== d ? d : l.k.INFO
+                ...f,
+                modViewPanel: null !== (d = f.modViewPanel) && void 0 !== d ? d : l.k.INFO
             }
         })
     );

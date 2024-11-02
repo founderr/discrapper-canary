@@ -1,9 +1,9 @@
 n.d(t, {
     E: function () {
-        return R;
+        return y;
     },
     Z: function () {
-        return O;
+        return A;
     }
 });
 var r = n(200651),
@@ -15,155 +15,155 @@ var r = n(200651),
     u = n(410575),
     c = n(358221),
     d = n(418469),
-    _ = n(776031),
-    E = n(803647),
-    f = n(361291),
-    h = n(199902),
-    p = n(131951),
-    I = n(594174),
-    m = n(5192),
-    T = n(358085),
-    S = n(521147),
-    g = n(981631),
-    A = n(65154),
-    N = n(689938);
-function R(e, t, n) {
+    f = n(776031),
+    _ = n(803647),
+    h = n(361291),
+    p = n(199902),
+    m = n(131951),
+    g = n(594174),
+    E = n(5192),
+    v = n(358085),
+    I = n(521147),
+    S = n(981631),
+    T = n(65154),
+    b = n(388032);
+function y(e, t, n) {
     let r = (0, a.e7)([c.Z], () => c.Z.getSelectedParticipantId(e.id)),
-        i = (0, a.e7)([h.Z], () => (null != r ? h.Z.getActiveStreamForStreamKey(r) : null), [r]);
+        i = (0, a.e7)([p.Z], () => (null != r ? p.Z.getActiveStreamForStreamKey(r) : null), [r]);
     return (0, a.Wu)(
-        [I.default],
+        [g.default],
         () => {
             let r = n
                 .filter((e) => e.ownerId !== (null == t ? void 0 : t.id))
                 .map((t) => ({
                     stream: t,
-                    username: m.ZP.getName(e.getGuildId(), e.id, I.default.getUser(t.ownerId))
+                    username: E.ZP.getName(e.getGuildId(), e.id, g.default.getUser(t.ownerId))
                 }));
             return 1 === r.length && r[0].stream.ownerId === (null == i ? void 0 : i.ownerId) ? [] : r;
         },
         [e, i, n, t]
     );
 }
-function O(e) {
+function A(e) {
     var t, n, c;
-    let { channel: h, currentUser: I, activeStreams: m, hideSelfOptions: O = !1, showReportOption: v = !1, handleGoLive: C, onClose: L, onSelect: D, appContext: y = g.IlC.APP } = e,
-        b = (0, a.e7)([p.Z], () => p.Z.getGoLiveSource()),
-        M = (0, a.e7)([f.Z], () => f.Z.getState().soundshareEnabled),
-        P = p.Z.supports(A.AN.DESKTOP_CAPTURE_APPLICATIONS),
-        U = null !== (c = m.find((e) => e.ownerId === (null == I ? void 0 : I.id))) && void 0 !== c ? c : null,
-        w = R(h, I, m),
-        x = (0, _.Z)(U, y),
-        G = (0, d.Z)(U, y, g.VqG),
-        k = (0, a.e7)([p.Z], () => p.Z.supports(A.AN.SOUNDSHARE)),
-        B = (0, a.e7)([p.Z], () => p.Z.supportsScreenSoundshare()),
-        F = (null == b ? void 0 : b.desktopSource) != null,
-        V = null == b ? void 0 : null === (n = b.desktopSource) || void 0 === n ? void 0 : null === (t = n.id) || void 0 === t ? void 0 : t.startsWith('screen'),
-        H = S.Z.useExperiment(
+    let { channel: p, currentUser: g, activeStreams: E, hideSelfOptions: A = !1, showReportOption: N = !1, handleGoLive: C, onClose: R, onSelect: O, appContext: D = S.IlC.APP } = e,
+        L = (0, a.e7)([m.Z], () => m.Z.getGoLiveSource()),
+        x = (0, a.e7)([h.Z], () => h.Z.getState().soundshareEnabled),
+        w = m.Z.supports(T.AN.DESKTOP_CAPTURE_APPLICATIONS),
+        M = null !== (c = E.find((e) => e.ownerId === (null == g ? void 0 : g.id))) && void 0 !== c ? c : null,
+        P = y(p, g, E),
+        k = (0, f.Z)(M, D),
+        U = (0, d.Z)(M, D, S.VqG),
+        G = (0, a.e7)([m.Z], () => m.Z.supports(T.AN.SOUNDSHARE)),
+        B = (0, a.e7)([m.Z], () => m.Z.supportsScreenSoundshare()),
+        Z = (null == L ? void 0 : L.desktopSource) != null,
+        F = null == L ? void 0 : null === (n = L.desktopSource) || void 0 === n ? void 0 : null === (t = n.id) || void 0 === t ? void 0 : t.startsWith('screen'),
+        V = I.Z.useExperiment(
             { location: 'ManageStreamsMenu' },
             {
-                disable: !(F && k && (!V || B)),
+                disable: !(Z && G && (!F || B)),
                 autoTrackExposure: !0
             }
         ).enabled,
-        Z = i.useCallback(() => {
+        j = i.useCallback(() => {
             var e, t, n;
-            (null === (n = p.Z.getGoLiveSource()) || void 0 === n ? void 0 : null === (t = n.desktopSource) || void 0 === t ? void 0 : null === (e = t.id) || void 0 === e ? void 0 : e.startsWith('prepicked:'))
-                ? p.Z.getMediaEngine().eachConnection((e) => {
-                      e.context === A.Yn.STREAM && e.presentDesktopSourcePicker();
+            (null === (n = m.Z.getGoLiveSource()) || void 0 === n ? void 0 : null === (t = n.desktopSource) || void 0 === t ? void 0 : null === (e = t.id) || void 0 === e ? void 0 : e.startsWith('prepicked:'))
+                ? m.Z.getMediaEngine().eachConnection((e) => {
+                      e.context === T.Yn.STREAM && e.presentDesktopSourcePicker();
                   })
                 : C();
         }, [C]),
-        Y = i.useCallback(() => {
-            let { preset: e, resolution: t, fps: n } = f.Z.getState(),
+        H = i.useCallback(() => {
+            let { preset: e, resolution: t, fps: n } = h.Z.getState(),
                 r = {
                     qualityOptions: {
                         preset: e,
                         resolution: t,
                         frameRate: n
                     },
-                    context: A.Yn.STREAM
+                    context: T.Yn.STREAM
                 };
-            if ((null == b ? void 0 : b.desktopSource) != null) {
+            if ((null == L ? void 0 : L.desktopSource) != null) {
                 var i;
                 r.desktopSettings = {
-                    sourceId: null == b ? void 0 : null === (i = b.desktopSource) || void 0 === i ? void 0 : i.id,
-                    sound: !M
+                    sourceId: null == L ? void 0 : null === (i = L.desktopSource) || void 0 === i ? void 0 : i.id,
+                    sound: !x
                 };
             }
             (0, l.Rc)({
                 preset: e,
                 resolution: t,
                 frameRate: n,
-                soundshareEnabled: !M
+                soundshareEnabled: !x
             }),
                 o.Z.setGoLiveSource(r);
-        }, [b, M]),
-        j =
-            null == U
+        }, [L, x]),
+        Y =
+            null == M
                 ? (0, r.jsx)(s.MenuItem, {
                       id: 'share-your-screen',
-                      label: N.Z.Messages.SHARE_YOUR_SCREEN,
+                      label: b.intl.string(b.t.fjBNo6),
                       icon: s.ScreenArrowIcon,
                       action: C
                   })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          T.isPlatformEmbedded
+                          v.isPlatformEmbedded
                               ? (0, r.jsx)(s.MenuItem, {
                                     id: 'stream-settings',
-                                    label: N.Z.Messages.SCREENSHARE_STREAM_QUALITY,
-                                    children: x
+                                    label: b.intl.string(b.t.ytAD9f),
+                                    children: k
                                 })
                               : null,
-                          v ? G : null,
-                          H
+                          N ? U : null,
+                          V
                               ? (0, r.jsx)(s.MenuCheckboxItem, {
                                     id: 'stream-settings-audio-enable',
-                                    label: N.Z.Messages.SCREENSHARE_INCLUDE_AUDIO,
-                                    checked: M,
-                                    action: Y
+                                    label: b.intl.string(b.t.ZJEHt7),
+                                    checked: x,
+                                    action: H
                                 })
                               : null,
-                          P
+                          w
                               ? (0, r.jsx)(s.MenuItem, {
                                     id: 'change-windows',
-                                    label: N.Z.Messages.SCREENSHARE_CHANGE_WINDOWS,
+                                    label: b.intl.string(b.t.qntSam),
                                     icon: s.ScreenArrowIcon,
-                                    action: Z
+                                    action: j
                                 })
                               : null,
                           (0, r.jsx)(s.MenuItem, {
                               id: 'stop-streaming',
-                              label: N.Z.Messages.STOP_STREAMING,
+                              label: b.intl.string(b.t.S5anIS),
                               icon: s.ScreenXIcon,
-                              action: () => (0, E.Z)(U)
+                              action: () => (0, _.Z)(M)
                           })
                       ]
                   });
     return (0, r.jsx)(u.Z, {
-        section: g.jXE.CONTEXT_MENU,
+        section: S.jXE.CONTEXT_MENU,
         children: (0, r.jsxs)(s.Menu, {
-            onSelect: D,
+            onSelect: O,
             navId: 'manage-streams',
-            onClose: L,
-            'aria-label': null != U ? N.Z.Messages.STOP_STREAMING : N.Z.Messages.SHARE_YOUR_SCREEN,
+            onClose: R,
+            'aria-label': null != M ? b.intl.string(b.t.S5anIS) : b.intl.string(b.t.fjBNo6),
             children: [
                 (0, r.jsx)(s.MenuGroup, {
-                    children: w.map((e) => {
+                    children: P.map((e) => {
                         let { stream: t, username: n } = e;
                         return (0, r.jsx)(
                             s.MenuItem,
                             {
                                 id: t.ownerId,
-                                label: N.Z.Messages.STOP_WATCHING_USER.format({ username: n }),
+                                label: b.intl.formatToPlainString(b.t['7rkg+/'], { username: n }),
                                 icon: s.ScreenXIcon,
-                                action: () => (0, E.Z)(t)
+                                action: () => (0, _.Z)(t)
                             },
                             'manage-stream-menu'.concat(t.ownerId)
                         );
                     })
                 }),
-                O ? null : j
+                A ? null : Y
             ]
         })
     });

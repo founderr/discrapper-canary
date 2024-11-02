@@ -1,47 +1,47 @@
 n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(302454),
-    o = n.n(l),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    s = n(302454),
+    o = n.n(s),
     c = n(481060),
     d = n(939893),
     u = n(241209),
-    _ = n(689938),
-    E = n(408899);
-let h = o().parserFor(d.Z),
-    m = o().reactFor(o().ruleOutput(d.Z, 'react'));
-function I(e) {
+    h = n(388032),
+    m = n(408899);
+let p = o().parserFor(d.Z),
+    g = o().reactFor(o().ruleOutput(d.Z, 'react'));
+function f(e) {
     let { description: t, supportsMarkdown: n } = e,
-        [s, l] = a.useState(!1),
-        o = a.useRef(null);
-    a.useEffect(() => {
+        [l, s] = r.useState(!1),
+        o = r.useRef(null);
+    r.useEffect(() => {
         if (null == o.current) return;
         let e = new ResizeObserver(() => {
             var e, t, n, i;
-            let a = null !== (n = null === (e = o.current) || void 0 === e ? void 0 : e.scrollHeight) && void 0 !== n ? n : 0;
-            l(a - (null !== (i = null === (t = o.current) || void 0 === t ? void 0 : t.clientHeight) && void 0 !== i ? i : 0) > 1);
+            let r = null !== (n = null === (e = o.current) || void 0 === e ? void 0 : e.scrollHeight) && void 0 !== n ? n : 0;
+            s(r - (null !== (i = null === (t = o.current) || void 0 === t ? void 0 : t.clientHeight) && void 0 !== i ? i : 0) > 1);
         });
         return e.observe(o.current), () => e.disconnect();
     }, []);
-    let [d, _] = a.useState(!1),
-        I = a.useCallback(() => {
-            _((e) => !e);
+    let [d, h] = r.useState(!1),
+        f = r.useCallback(() => {
+            h((e) => !e);
         }, []);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
                 ref: o,
-                className: r()({
-                    [E.descriptionClamp]: !d,
-                    [E.descriptionClampSafari]: !d && 'Safari' === platform.name
+                className: a()({
+                    [m.descriptionClamp]: !d,
+                    [m.descriptionClampSafari]: !d && 'Safari' === platform.name
                 }),
                 children: n
                     ? (0, i.jsx)(u.Z, {
-                          className: E.detailedDescription,
-                          parser: h,
-                          output: m,
+                          className: m.detailedDescription,
+                          parser: p,
+                          output: g,
                           state: { allowLinks: !0 },
                           children: t
                       })
@@ -51,77 +51,77 @@ function I(e) {
                           children: t
                       })
             }),
-            s || d
-                ? (0, i.jsx)(p, {
+            l || d
+                ? (0, i.jsx)(_, {
                       isShowingMore: d,
-                      onToggle: I
+                      onToggle: f
                   })
                 : null
         ]
     });
 }
-function p(e) {
+function _(e) {
     let { onToggle: t, isShowingMore: n } = e,
-        s = a.useMemo(
+        l = r.useMemo(
             () =>
                 (0, i.jsxs)('div', {
-                    className: E.showMoreContent,
+                    className: m.showMoreContent,
                     children: [
                         (0, i.jsx)(c.Text, {
                             variant: 'text-md/semibold',
                             color: 'interactive-normal',
-                            children: n ? _.Z.Messages.APP_DIRECTORY_PROFILE_SHOW_LESS : _.Z.Messages.APP_DIRECTORY_PROFILE_SHOW_MORE
+                            children: n ? h.intl.string(h.t['vtfc4+']) : h.intl.string(h.t.ZDRyur)
                         }),
                         n
                             ? (0, i.jsx)(c.ChevronSmallUpIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: E.showMoreButtonIcon
+                                  className: m.showMoreButtonIcon
                               })
                             : (0, i.jsx)(c.ChevronSmallDownIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: E.showMoreButtonIcon
+                                  className: m.showMoreButtonIcon
                               })
                     ]
                 }),
             [n]
         );
     return (0, i.jsxs)(c.Clickable, {
-        className: E.showMoreButton,
+        className: m.showMoreButton,
         onClick: t,
-        children: [(0, i.jsx)('div', { className: E.divider }), s, (0, i.jsx)('div', { className: E.divider })]
+        children: [(0, i.jsx)('div', { className: m.divider }), l, (0, i.jsx)('div', { className: m.divider })]
     });
 }
 t.Z = function (e) {
     var t, n;
-    let { application: s } = e,
-        r = null === (t = s.directory_entry) || void 0 === t ? void 0 : t.detailed_description,
-        l = null === (n = s.directory_entry) || void 0 === n ? void 0 : n.short_description,
-        o = a.useMemo(
+    let { application: l } = e,
+        a = null === (t = l.directory_entry) || void 0 === t ? void 0 : t.detailed_description,
+        s = null === (n = l.directory_entry) || void 0 === n ? void 0 : n.short_description,
+        o = r.useMemo(
             () =>
-                null != r && r.length > 0
-                    ? (0, i.jsx)(I, {
-                          description: r,
+                null != a && a.length > 0
+                    ? (0, i.jsx)(f, {
+                          description: a,
                           supportsMarkdown: !0
                       })
-                    : null != l && l.length > 0
-                      ? (0, i.jsx)(I, {
-                            description: l,
+                    : null != s && s.length > 0
+                      ? (0, i.jsx)(f, {
+                            description: s,
                             supportsMarkdown: !1
                         })
                       : null,
-            [r, l]
+            [a, s]
         );
     return null == o
         ? null
         : (0, i.jsxs)('div', {
-              className: E.overviewContainer,
+              className: m.overviewContainer,
               children: [
                   (0, i.jsx)(c.Heading, {
                       variant: 'heading-lg/semibold',
                       color: 'header-primary',
-                      children: _.Z.Messages.APP_DIRECTORY_PROFILE_DESCRIPTION_HEADING
+                      children: h.intl.string(h.t.txraKS)
                   }),
                   o
               ]

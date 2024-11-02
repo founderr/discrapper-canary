@@ -1,31 +1,31 @@
-i.d(e, {
+e.d(i, {
     r: function () {
         return u;
     }
 });
-var l = i(200651);
-i(192379);
-var s = i(481060),
-    t = i(630388),
-    r = i(981631),
-    a = i(689938),
-    o = i(132313);
+var t = e(200651);
+e(192379);
+var l = e(481060),
+    r = e(630388),
+    s = e(981631),
+    a = e(388032),
+    o = e(132313);
 let d = {
     size: 'md',
-    color: s.tokens.colors.INTERACTIVE_NORMAL
+    color: l.tokens.colors.INTERACTIVE_NORMAL
 };
 function u(n) {
-    let { subscriptions: e } = n,
-        i = e.some((n) => (0, t.yE)(n.skuFlags, r.l4R.APPLICATION_GUILD_SUBSCRIPTION));
-    return (0, l.jsx)(s.Heading, {
+    let { subscriptions: i } = n,
+        e = i.some((n) => (0, r.yE)(n.skuFlags, s.l4R.APPLICATION_GUILD_SUBSCRIPTION));
+    return (0, t.jsx)(l.Heading, {
         variant: 'heading-lg/semibold',
         className: o.heading,
-        children: i
-            ? (0, l.jsxs)(l.Fragment, {
-                  children: [(0, l.jsx)(s.ServerIcon, { ...d }), a.Z.Messages.STOREFRONT_APP_SERVER_SUBSCRIPTIONS]
+        children: e
+            ? (0, t.jsxs)(t.Fragment, {
+                  children: [(0, t.jsx)(l.ServerIcon, { ...d }), a.intl.string(a.t.XIhSoq)]
               })
-            : (0, l.jsxs)(l.Fragment, {
-                  children: [(0, l.jsx)(s.UserIcon, { ...d }), a.Z.Messages.STOREFRONT_APP_PERSONAL_SUBSCRIPTIONS]
+            : (0, t.jsxs)(t.Fragment, {
+                  children: [(0, t.jsx)(l.UserIcon, { ...d }), a.intl.string(a.t.dxfZpq)]
               })
     });
 }

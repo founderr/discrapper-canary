@@ -1,24 +1,24 @@
 n.d(t, {
     RR: function () {
-        return A;
+        return T;
     },
     WW: function () {
-        return S;
+        return I;
     },
     bE: function () {
-        return R;
+        return y;
     },
     n4: function () {
         return C;
     },
     q8: function () {
-        return N;
+        return b;
     },
     t$: function () {
-        return g;
+        return S;
     },
     xl: function () {
-        return v;
+        return N;
     }
 }),
     n(411104),
@@ -33,31 +33,31 @@ var r = n(683860),
     u = n(703558),
     c = n(496675),
     d = n(117530),
-    _ = n(709054),
-    E = n(660189),
-    f = n(559241),
-    h = n(474387),
-    p = n(702225),
-    I = n(981631),
-    m = n(176505),
-    T = n(124368);
-function S(e) {
-    return p.Z.getForumChannelSessionId(e);
+    f = n(709054),
+    _ = n(660189),
+    h = n(559241),
+    p = n(474387),
+    m = n(702225),
+    g = n(981631),
+    E = n(176505),
+    v = n(124368);
+function I(e) {
+    return m.Z.getForumChannelSessionId(e);
 }
-function g(e) {
+function S(e) {
     switch (e) {
         case r.z.CREATION_DATE:
-            return T.SX.CREATION_DATE;
+            return v.SX.CREATION_DATE;
         case r.z.LATEST_ACTIVITY:
-            return T.SX.LATEST_ACTIVITY;
+            return v.SX.LATEST_ACTIVITY;
         default:
             throw Error('Unexpected sort order '.concat(e));
     }
 }
-function A(e) {
+function T(e) {
     return d.Z.getUploads(e, u.d.FirstThreadMessage).length;
 }
-function N(e) {
+function b(e) {
     var t, n;
     let r = l.Z.getChannel(e);
     if (null == r) return [];
@@ -68,14 +68,14 @@ function N(e) {
         o = new Set(a.map((e) => e.id));
     return Array.from(s).filter((e) => o.has(e));
 }
-function R(e, t) {
+function y(e, t) {
     return Object.keys(i.Z.getThreadsForParent(e, t)).length;
 }
-function O(e) {
-    let { loaded: t, firstMessage: n } = E.Z.getMessage(e);
+function A(e) {
+    let { loaded: t, firstMessage: n } = _.Z.getMessage(e);
     return t ? n : null;
 }
-function v(e) {
+function N(e) {
     var t, n, r, i;
     let { channelId: a, sessionId: s } = e,
         o = l.Z.getChannel(a);
@@ -85,12 +85,12 @@ function v(e) {
               forum_channel_default_emoji_reaction_id: null === (t = o.defaultReactionEmoji) || void 0 === t ? void 0 : t.emojiId,
               forum_channel_default_emoji_reaction_name: null === (n = o.defaultReactionEmoji) || void 0 === n ? void 0 : n.emojiName,
               forum_channel_available_tag_ids: null !== (i = null === (r = o.availableTags) || void 0 === r ? void 0 : r.map((e) => e.id)) && void 0 !== i ? i : [],
-              forum_channel_tag_required: o.hasFlag(m.zZ.REQUIRE_TAG),
-              forum_channel_can_create_post: c.Z.can(I.Plq.SEND_MESSAGES, o),
-              forum_channel_filter_tag_ids: f.Z.getFilterTagIdsAnalytics(),
-              forum_channel_sort_order: f.Z.getSortOrderAnalytics(o.id),
-              forum_channel_session_id: null != s ? s : S(o.id),
-              forum_channel_layout: f.Z.getLayoutAnalytics(o.id),
+              forum_channel_tag_required: o.hasFlag(E.zZ.REQUIRE_TAG),
+              forum_channel_can_create_post: c.Z.can(g.Plq.SEND_MESSAGES, o),
+              forum_channel_filter_tag_ids: h.Z.getFilterTagIdsAnalytics(),
+              forum_channel_sort_order: h.Z.getSortOrderAnalytics(o.id),
+              forum_channel_session_id: null != s ? s : I(o.id),
+              forum_channel_layout: h.Z.getLayoutAnalytics(o.id),
               forum_channel_default_sort_order: o.defaultSortOrder,
               forum_channel_default_layout: o.defaultForumLayout
           }
@@ -98,32 +98,32 @@ function v(e) {
 }
 function C(e) {
     var t, n, r, i, u, c, d;
-    let { channelId: E, sessionId: f } = e,
-        p = l.Z.getChannel(E);
-    if (null == p || !p.isForumPost()) return null;
-    let I = l.Z.getChannel(p.parent_id);
-    return null != I && I.isForumLikeChannel()
+    let { channelId: _, sessionId: h } = e,
+        m = l.Z.getChannel(_);
+    if (null == m || !m.isForumPost()) return null;
+    let g = l.Z.getChannel(m.parent_id);
+    return null != g && g.isForumLikeChannel()
         ? {
-              ...v({
-                  channelId: I.id,
-                  sessionId: f
+              ...N({
+                  channelId: g.id,
+                  sessionId: h
               }),
-              thread_approximate_member_count: s.Z.getMemberCount(E),
-              thread_approximate_message_count: o.Z.getCount(E),
-              thread_archived: (null === (t = p.threadMetadata) || void 0 === t ? void 0 : t.archived) === !0,
-              thread_locked: null !== (c = null === (n = p.threadMetadata) || void 0 === n ? void 0 : n.locked) && void 0 !== c && c,
-              thread_auto_archive_duration_minutes: null !== (d = null === (r = p.threadMetadata) || void 0 === r ? void 0 : r.autoArchiveDuration) && void 0 !== d ? d : 0,
-              thread_approximate_creation_date: _.default.extractTimestamp(E),
-              forum_post_id: p.id,
-              forum_post_first_message_id: _.default.castChannelIdAsMessageId(p.id),
+              thread_approximate_member_count: s.Z.getMemberCount(_),
+              thread_approximate_message_count: o.Z.getCount(_),
+              thread_archived: (null === (t = m.threadMetadata) || void 0 === t ? void 0 : t.archived) === !0,
+              thread_locked: null !== (c = null === (n = m.threadMetadata) || void 0 === n ? void 0 : n.locked) && void 0 !== c && c,
+              thread_auto_archive_duration_minutes: null !== (d = null === (r = m.threadMetadata) || void 0 === r ? void 0 : r.autoArchiveDuration) && void 0 !== d ? d : 0,
+              thread_approximate_creation_date: f.default.extractTimestamp(_),
+              forum_post_id: m.id,
+              forum_post_first_message_id: f.default.castChannelIdAsMessageId(m.id),
               forum_post_num_reactions: (function (e) {
-                  let t = O(e);
+                  let t = A(e);
                   return null == t ? 0 : t.reactions.reduce((e, t) => e + t.count, 0);
-              })(p.id),
+              })(m.id),
               forum_post_num_unique_reactions: (function (e) {
-                  let t = O(e);
+                  let t = A(e);
                   return null == t ? 0 : t.reactions.length;
-              })(p.id),
+              })(m.id),
               forum_post_applied_tag_ids: (function (e) {
                   var t, n;
                   let r = l.Z.getChannel(e);
@@ -133,20 +133,20 @@ function C(e) {
                   if (null == i || null == a) return [];
                   let s = new Set(a.map((e) => e.id));
                   return null !== (n = null === (t = r.appliedTags) || void 0 === t ? void 0 : t.filter((e) => s.has(e))) && void 0 !== n ? n : [];
-              })(p.id),
-              forum_post_is_pinned: p.hasFlag(m.zZ.PINNED),
-              forum_post_is_new: null === (i = h.Z.getReadStateSnapshotAnalytics(p.id)) || void 0 === i ? void 0 : i.isNew,
-              forum_post_is_unread: null === (u = h.Z.getReadStateSnapshotAnalytics(p.id)) || void 0 === u ? void 0 : u.hasUnreads,
-              forum_post_is_following: a.Z.hasJoined(p.id),
+              })(m.id),
+              forum_post_is_pinned: m.hasFlag(E.zZ.PINNED),
+              forum_post_is_new: null === (i = p.Z.getReadStateSnapshotAnalytics(m.id)) || void 0 === i ? void 0 : i.isNew,
+              forum_post_is_unread: null === (u = p.Z.getReadStateSnapshotAnalytics(m.id)) || void 0 === u ? void 0 : u.hasUnreads,
+              forum_post_is_following: a.Z.hasJoined(m.id),
               forum_post_attachment_mimetypes: (function (e) {
-                  let t = O(e);
+                  let t = A(e);
                   return null == t
                       ? []
                       : t.attachments.map((e) => {
                             var t;
                             return null !== (t = e.content_type) && void 0 !== t ? t : 'unknown';
                         });
-              })(p.id)
+              })(m.id)
           }
         : null;
 }

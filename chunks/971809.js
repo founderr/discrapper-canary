@@ -1,9 +1,9 @@
-t.d(a, {
+n.d(t, {
     G: function () {
-        return n;
+        return a;
     }
 });
-let n = [
+let a = [
     {
         label: 'Alabama',
         value: 'AL'

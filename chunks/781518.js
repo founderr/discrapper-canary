@@ -1,36 +1,36 @@
 n.d(t, {
     Ai: function () {
-        return h;
-    },
-    PW: function () {
         return p;
     },
+    PW: function () {
+        return m;
+    },
     Tu: function () {
-        return S;
+        return I;
     },
     am: function () {
         return function e(t, n, r) {
             let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 2;
-            return E.put(t, n, {
+            return _.put(t, n, {
                 url: c.C7.NOTIFICATIONS_PLAYER,
                 query: { connection_id: r }
             }).catch((s) => (a <= 0 ? Promise.reject(s) : (0, i.GR)(5000).then(() => e(t, n, r, a - 1))));
         };
     },
     hP: function () {
-        return f;
+        return h;
     },
     hY: function () {
-        return I;
+        return g;
     },
     k1: function () {
-        return T;
+        return v;
     },
     rC: function () {
-        return E;
+        return _;
     },
     wO: function () {
-        return m;
+        return E;
     }
 }),
     n(177593);
@@ -43,7 +43,7 @@ var r = n(544891),
     u = n(18323),
     c = n(616922),
     d = n(981631);
-function _(e, t, n, r) {
+function f(e, t, n, r) {
     let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1;
     return e(
         (r = {
@@ -56,22 +56,22 @@ function _(e, t, n, r) {
             let s = !0 !== r.onlyRetryOnAuthorizationErrors && 202 === n.status;
             return (401 === n.status || s) && a > 0
                 ? (202 === n.status ? (0, i.GR)(5000) : Promise.resolve())
-                      .then(() => f(t))
+                      .then(() => h(t))
                       .then((n) => {
                           let {
                               body: { access_token: i }
                           } = n;
-                          return _(e, t, i, r, a - 1);
+                          return f(e, t, i, r, a - 1);
                       })
                       .then((e) => new Promise((t) => setImmediate(() => t(e))))
                 : Promise.reject(n);
         });
 }
-let E = {
-    get: _.bind(null, r.tn.get),
-    put: _.bind(null, r.tn.put)
+let _ = {
+    get: f.bind(null, r.tn.get),
+    put: f.bind(null, r.tn.put)
 };
-function f(e) {
+function h(e) {
     return r.tn
         .get({
             url: d.ANM.CONNECTION_ACCESS_TOKEN(d.ABu.SPOTIFY, e),
@@ -87,7 +87,7 @@ function f(e) {
             else if (429 === t.status) {
                 let n = t.headers['retry-after'] * s.Z.Millis.SECOND,
                     r = isNaN(n) || 0 === n ? 5000 : n;
-                return (0, i.GR)(r).then(() => f(e));
+                return (0, i.GR)(r).then(() => h(e));
             }
             return Promise.reject(t);
         })
@@ -103,8 +103,8 @@ function f(e) {
             );
         });
 }
-function h(e, t) {
-    return E.get(e, t, { url: c.C7.PROFILE }).then(
+function p(e, t) {
+    return _.get(e, t, { url: c.C7.PROFILE }).then(
         (t) => (
             a.Z.dispatch({
                 type: 'SPOTIFY_PROFILE_UPDATE',
@@ -115,8 +115,8 @@ function h(e, t) {
         )
     );
 }
-function p(e, t) {
-    return E.get(e, t, { url: c.C7.PLAYER_DEVICES }).then(
+function m(e, t) {
+    return _.get(e, t, { url: c.C7.PLAYER_DEVICES }).then(
         (t) => (
             t.body &&
                 a.Z.dispatch({
@@ -128,11 +128,11 @@ function p(e, t) {
         )
     );
 }
-function I(e, t, n, r) {
+function g(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
         s = c.C7.PLAYER_OPEN(r, n, !1),
         { deviceId: o, position: l, contextUri: u, repeat: d } = i;
-    return E.put(e, t, {
+    return _.put(e, t, {
         url: c.C7.PLAYER_PLAY,
         query: { device_id: o },
         body: {
@@ -145,7 +145,7 @@ function I(e, t, n, r) {
         .then((n) =>
             null == d
                 ? n
-                : E.put(e, t, {
+                : _.put(e, t, {
                       url: c.C7.PLAYER_REPEAT,
                       query: {
                           device_id: o,
@@ -164,10 +164,10 @@ function I(e, t, n, r) {
             )
         );
 }
-function m(e, t) {
-    return E.put(e, t, { url: c.C7.PLAYER_PAUSE }).then((e) => (a.Z.dispatch({ type: 'SPOTIFY_PLAYER_PAUSE' }), e));
+function E(e, t) {
+    return _.put(e, t, { url: c.C7.PLAYER_PAUSE }).then((e) => (a.Z.dispatch({ type: 'SPOTIFY_PLAYER_PAUSE' }), e));
 }
-function T() {
+function v() {
     if (!u.Z.isProtocolRegistered())
         (0, l.isDesktop)() &&
             o.Z.isProtocolRegistered(c.M5).then((e) => {
@@ -177,7 +177,7 @@ function T() {
                 });
             });
 }
-function S(e, t) {
+function I(e, t) {
     a.Z.dispatch({
         type: 'SPOTIFY_SET_ACTIVE_DEVICE',
         accountId: e,

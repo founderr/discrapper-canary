@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return v;
     }
 });
 var r = n(200651);
@@ -13,79 +13,79 @@ var i = n(99815),
     u = n(553795),
     c = n(430824),
     d = n(496675),
-    _ = n(70956),
-    E = n(425128),
-    f = n(979192),
-    h = n(703733),
-    p = n(981631),
-    I = n(689938),
-    m = n(288984);
-function T(e) {
-    let { guildId: t, leaderboardId: T } = e,
-        S = (0, a.e7)([l.default], () => l.default.getId()),
-        g = (0, a.e7)([u.Z], () => u.Z.getAccount(null, p.ABu.RIOT_GAMES)),
-        A = (0, a.e7)([u.Z], () => u.Z.getAccount(null, p.ABu.LEAGUE_OF_LEGENDS)),
-        { leaderboardsDisabled: N } = (0, f.O)(t, T),
-        R =
-            null != A && null != g
+    f = n(70956),
+    _ = n(425128),
+    h = n(979192),
+    p = n(703733),
+    m = n(981631),
+    g = n(388032),
+    E = n(288984);
+function v(e) {
+    let { guildId: t, leaderboardId: v } = e,
+        I = (0, a.e7)([l.default], () => l.default.getId()),
+        S = (0, a.e7)([u.Z], () => u.Z.getAccount(null, m.ABu.RIOT_GAMES)),
+        T = (0, a.e7)([u.Z], () => u.Z.getAccount(null, m.ABu.LEAGUE_OF_LEGENDS)),
+        { leaderboardsDisabled: b } = (0, h.O)(t, v),
+        y =
+            null != T && null != S
                 ? () => {
-                      (0, E._7)({
-                          riotConnectionId: g.id,
-                          lolConnectionId: A.id
+                      (0, _._7)({
+                          riotConnectionId: S.id,
+                          lolConnectionId: T.id
                       });
                   }
-                : p.dG4,
-        O = null == g || N ? I.Z.Messages.JOIN_LEADERBOARD : I.Z.Messages.LEAVE_LEADERBOARD,
-        { lastUpdateRequested: v, statisticLastUpdatedDate: C } = (0, h.Z)({
-            userId: S,
+                : m.dG4,
+        A = null == S || b ? g.intl.string(g.t['0yRXHx']) : g.intl.string(g.t['KWpU6+']),
+        { lastUpdateRequested: N, statisticLastUpdatedDate: C } = (0, p.Z)({
+            userId: I,
             guildId: t,
-            leaderboardId: T,
+            leaderboardId: v,
             statisticId: i.E.LOL_TOTAL_KILLS
         }),
-        { disabled: L, subtext: D } = (function (e, t) {
+        { disabled: R, subtext: O } = (function (e, t) {
             if (null == e)
                 return {
                     disabled: !1,
                     subtext: void 0
                 };
-            let n = (Date.now() - e.getTime()) / _.Z.Millis.SECOND;
+            let n = (Date.now() - e.getTime()) / f.Z.Millis.SECOND;
             if (n < 0)
                 return {
                     disabled: !1,
                     subtext: void 0
                 };
-            let r = null != t ? e.getTime() > t.getTime() && n < _.Z.Seconds.HOUR : n < _.Z.Seconds.HOUR,
+            let r = null != t ? e.getTime() > t.getTime() && n < f.Z.Seconds.HOUR : n < f.Z.Seconds.HOUR,
                 i = r
-                    ? I.Z.Messages.LEADERBOARD_UPDATE_IN_PROGRESS
+                    ? g.intl.string(g.t['3gPhoa'])
                     : (function (e) {
-                          if (e > _.Z.Seconds.DAYS_30) {
-                              let t = Math.round(e / _.Z.Seconds.DAYS_30);
-                              return I.Z.Messages.LEADERBOARD_UPDATED_AGO_TIMESTAMP_MONTHS.format({ count: t });
+                          if (e > f.Z.Seconds.DAYS_30) {
+                              let t = Math.round(e / f.Z.Seconds.DAYS_30);
+                              return g.intl.formatToPlainString(g.t['HF7p4+'], { count: t });
                           }
-                          if (e > 2 * _.Z.Seconds.DAY) {
-                              let t = Math.round(e / _.Z.Seconds.DAY);
-                              return I.Z.Messages.LEADERBOARD_UPDATED_AGO_TIMESTAMP_DAYS.format({ count: t });
+                          if (e > 2 * f.Z.Seconds.DAY) {
+                              let t = Math.round(e / f.Z.Seconds.DAY);
+                              return g.intl.formatToPlainString(g.t.HkESOj, { count: t });
                           }
-                          if (e > _.Z.Seconds.DAY) return I.Z.Messages.LEADERBOARD_UPDATED_YESTERDAY;
-                          else if (e > _.Z.Seconds.HOUR) {
-                              let t = Math.round(e / _.Z.Seconds.HOUR);
-                              return I.Z.Messages.LEADERBOARD_UPDATED_AGO_TIMESTAMP_HOURS.format({ count: t });
+                          if (e > f.Z.Seconds.DAY) return g.intl.string(g.t.gvgh9P);
+                          else if (e > f.Z.Seconds.HOUR) {
+                              let t = Math.round(e / f.Z.Seconds.HOUR);
+                              return g.intl.formatToPlainString(g.t.mW55WV, { count: t });
                           } else {
-                              if (!(e > _.Z.Seconds.MINUTE)) return I.Z.Messages.LEADERBOARD_UPDATED_JUST_NOW;
-                              let t = Math.round(e / _.Z.Seconds.MINUTE);
-                              return I.Z.Messages.LEADERBOARD_UPDATED_AGO_TIMESTAMP_MINUTES.format({ count: t });
+                              if (!(e > f.Z.Seconds.MINUTE)) return g.intl.string(g.t.tT0mdn);
+                              let t = Math.round(e / f.Z.Seconds.MINUTE);
+                              return g.intl.formatToPlainString(g.t['1mNjX1'], { count: t });
                           }
                       })(n);
             return {
                 disabled: r,
                 subtext: i
             };
-        })(v, C),
-        y = (0, a.e7)(
+        })(N, C),
+        D = (0, a.e7)(
             [d.Z, c.Z],
             () => {
                 let e = c.Z.getGuild(t);
-                return d.Z.can(p.Plq.ADMINISTRATOR, e);
+                return d.Z.can(m.Plq.ADMINISTRATOR, e);
             },
             [t]
         );
@@ -100,22 +100,22 @@ function T(e) {
                 onClose: () => {
                     (0, o.Zy)(), i();
                 },
-                'aria-label': I.Z.Messages.LEADERBOARD_ACTIONS_MENU_LABEL,
+                'aria-label': g.intl.string(g.t.BjCuf3),
                 onSelect: void 0,
                 children: (0, r.jsx)(r.Fragment, {
                     children: (0, r.jsxs)(s.MenuGroup, {
                         children: [
-                            null != g &&
+                            null != S &&
                                 (0, r.jsx)(s.MenuItem, {
                                     id: 'refresh-my-data',
-                                    label: I.Z.Messages.MEMBER_LIST_CONTENT_FEED_LEADERBOARD_MENU_REFRESH_MY_DATA,
-                                    action: R,
-                                    disabled: L,
-                                    subtext: D
+                                    label: g.intl.string(g.t.iopWUV),
+                                    action: y,
+                                    disabled: R,
+                                    subtext: O
                                 }),
                             (0, r.jsx)(s.MenuItem, {
                                 id: 'leaderboard-modal',
-                                label: O,
+                                label: A,
                                 action: () => {
                                     (0, s.openModalLazy)(async () => {
                                         let { default: e } = await n.e('73217').then(n.bind(n, 139964));
@@ -128,10 +128,10 @@ function T(e) {
                                         null == i || i();
                                 }
                             }),
-                            y
+                            D
                                 ? (0, r.jsx)(s.MenuItem, {
                                       id: 'leaderboard-settings-modal',
-                                      label: I.Z.Messages.LEADERBOARD_CONTEXT_MENU_SETTINGS_LABEL,
+                                      label: g.intl.string(g.t['QV4/6u']),
                                       action: () => {
                                           (0, s.openModalLazy)(async () => {
                                               let { default: e } = await n.e('25526').then(n.bind(n, 262918));
@@ -139,7 +139,7 @@ function T(e) {
                                                   (0, r.jsx)(e, {
                                                       ...n,
                                                       guildId: t,
-                                                      leaderboardId: T
+                                                      leaderboardId: v
                                                   });
                                           }),
                                               null == i || i();
@@ -153,11 +153,11 @@ function T(e) {
         },
         children: (e) =>
             (0, r.jsx)(s.Tooltip, {
-                text: I.Z.Messages.MORE,
+                text: g.intl.string(g.t.UKOtz8),
                 children: (t) =>
                     (0, r.jsx)(s.Clickable, {
                         ...t,
-                        className: m.menuIcon,
+                        className: E.menuIcon,
                         ...e,
                         children: (0, r.jsx)(s.MoreHorizontalIcon, {
                             color: 'currentColor',

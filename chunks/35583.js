@@ -1,17 +1,17 @@
 n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(442837),
-    r = n(481060),
-    l = n(668781),
-    o = n(431583),
+    r = n(192379),
+    l = n(442837),
+    a = n(481060),
+    o = n(668781),
+    s = n(431583),
     c = n(91372),
     u = n(19780),
     d = n(35818),
-    _ = n(665149),
-    E = n(689938),
-    I = n(228856);
-function m(e, t, n) {
+    m = n(665149),
+    f = n(388032),
+    h = n(228856);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function m(e, t, n) {
         e
     );
 }
-class f extends a.PureComponent {
+class g extends r.PureComponent {
     static getDerivedStateFromProps(e, t) {
         return e.mode !== t.memoizedMode
             ? {
@@ -34,8 +34,8 @@ class f extends a.PureComponent {
             : null;
     }
     handleDownloadApps() {
-        (0, r.openModal)((e) =>
-            (0, i.jsx)(o.default, {
+        (0, a.openModal)((e) =>
+            (0, i.jsx)(s.default, {
                 source: 'Links',
                 ...e
             })
@@ -44,20 +44,20 @@ class f extends a.PureComponent {
     render() {
         switch (this.props.mode) {
             case 'UPDATE_AVAILABLE':
-                return (0, i.jsx)(_.JO, {
+                return (0, i.jsx)(m.JO, {
                     hideOnClick: !1,
-                    tooltip: E.Z.Messages.UPDATE_AVAILABLE,
-                    foreground: I.downloadArrow,
-                    background: I.cloud,
-                    icon: r.DownloadIcon
+                    tooltip: f.intl.string(f.t['zp9d//']),
+                    foreground: h.downloadArrow,
+                    background: h.cloud,
+                    icon: a.DownloadIcon
                 });
             case 'UPDATE_MANUALLY':
             case 'UPDATE_DOWNLOADED':
-                return (0, i.jsx)(_.JO, {
-                    tooltip: E.Z.Messages.UPDATE_DOWNLOADED,
-                    foreground: I.updateIconForeground,
+                return (0, i.jsx)(m.JO, {
+                    tooltip: f.intl.string(f.t.u18OXF),
+                    foreground: h.updateIconForeground,
                     onClick: this.handleInstallDownload,
-                    icon: r.DownloadIcon
+                    icon: a.DownloadIcon
                 });
             default:
                 return null;
@@ -65,24 +65,24 @@ class f extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            m(this, 'state', {
+            p(this, 'state', {
                 memoizedMode: this.props.mode,
                 clicked: !1
             }),
-            m(this, 'handleInstallDownload', () => {
+            p(this, 'handleInstallDownload', () => {
                 u.Z.isConnected()
-                    ? l.Z.show({
-                          title: E.Z.Messages.UPDATE_DURING_CALL_TITLE,
-                          body: E.Z.Messages.UPDATE_DURING_CALL_BODY,
+                    ? o.Z.show({
+                          title: f.intl.string(f.t.tiu1l5),
+                          body: f.intl.string(f.t['zK+lqa']),
                           onConfirm: this.doUpdate,
-                          cancelText: E.Z.Messages.CANCEL,
-                          confirmText: E.Z.Messages.UPDATE_DURING_CALL_CONTINUE
+                          cancelText: f.intl.string(f.t['ETE/oK']),
+                          confirmText: f.intl.string(f.t['QDX/qq'])
                       })
                     : this.doUpdate();
             }),
-            m(this, 'doUpdate', () => {
+            p(this, 'doUpdate', () => {
                 !this.state.clicked && (this.setState({ clicked: !0 }), (0, d.Q)());
             });
     }
 }
-t.Z = s.ZP.connectStores([c.Z], () => ({ mode: c.Z.getState() }))(f);
+t.Z = l.ZP.connectStores([c.Z], () => ({ mode: c.Z.getState() }))(g);

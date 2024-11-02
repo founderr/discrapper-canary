@@ -1,29 +1,29 @@
-n.d(a, {
+n.d(t, {
     l: function () {
-        return s;
+        return i;
     }
 });
-var t = n(192379),
-    r = n(367907),
-    l = n(981631);
-function s(e, a, n) {
+var a = n(192379),
+    l = n(367907),
+    r = n(981631);
+function i(e, t, n) {
     return {
-        trackPollCreationCancelled: t.useCallback(() => {
-            let t = 0,
-                s = 0,
+        trackPollCreationCancelled: a.useCallback(() => {
+            let a = 0,
+                i = 0,
                 o = 0;
             e.forEach((e) => {
-                let a = e.image;
-                null != a && (null != a.emoji ? (s += 1) : null != a.stickerId ? (o += 1) : null != a.mediaAttachmentState && (t += 1));
+                let t = e.image;
+                null != t && (null != t.emoji ? (i += 1) : null != t.stickerId ? (o += 1) : null != t.mediaAttachmentState && (a += 1));
             }),
-                r.ZP.trackWithMetadata(l.rMx.POLL_CREATION_CANCELLED, {
+                l.ZP.trackWithMetadata(r.rMx.POLL_CREATION_CANCELLED, {
                     answers_count: e.length,
-                    attachments_count: t,
-                    emojis_count: s,
+                    attachments_count: a,
+                    emojis_count: i,
                     stickers_count: o,
-                    allow_multiselect: a,
+                    allow_multiselect: t,
                     layout_type: n
                 });
-        }, [e, a, n])
+        }, [e, t, n])
     };
 }

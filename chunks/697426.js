@@ -1,5 +1,5 @@
-var r, i, a, s, o, l, u, c, d, _, E, f, h, p;
-function I(e, t) {
+var r, i, a, s, o, l, u, c, d, f, _, h, p, m;
+function g(e, t) {
     let { sound_id: n, emoji_id: r, emoji_name: i, user_id: a, available: s, ...o } = e;
     return {
         ...o,
@@ -11,7 +11,7 @@ function I(e, t) {
         available: null == s || s
     };
 }
-function m(e) {
+function E(e) {
     let { soundId: t, guildId: n, emojiId: r, emojiName: i, userId: a, ...s } = e;
     return {
         ...s,
@@ -33,7 +33,7 @@ n.d(t, {
         return r;
     },
     QL: function () {
-        return m;
+        return E;
     },
     YQ: function () {
         return u;
@@ -45,7 +45,7 @@ n.d(t, {
         return i;
     },
     o3: function () {
-        return I;
+        return g;
     },
     vB: function () {
         return l;
@@ -56,19 +56,19 @@ n.d(t, {
     ((d = i || (i = {})).ENTRY = 'entry_sound'),
     (d.EXIT = 'exit_sound'),
     (d.DEFAULT = 'default'),
-    ((_ = a || (a = {})).ADDED = 'added'),
-    (_.UPDATED = 'updated'),
-    (_.REMOVED = 'removed'),
-    ((E = s || (s = {})).DEFAULT = 'default'),
-    (E.CUSTOM = 'custom'),
-    ((f = o || (o = {}))[(f.FAVORITES = 0)] = 'FAVORITES'),
-    (f[(f.RECENTLY_HEARD = 1)] = 'RECENTLY_HEARD'),
-    (f[(f.FREQUENTLY_USED = 2)] = 'FREQUENTLY_USED'),
-    (f[(f.GUILD = 3)] = 'GUILD'),
-    (f[(f.DEFAULTS = 4)] = 'DEFAULTS'),
-    (f[(f.SEARCH = 5)] = 'SEARCH'),
-    ((h = l || (l = {}))[(h.SOUND = 0)] = 'SOUND'),
-    (h[(h.ADD_SOUND = 1)] = 'ADD_SOUND'),
-    ((p = u || (u = {}))[(p.GIFT_CODE = 0)] = 'GIFT_CODE'),
-    (p[(p.SOUNDBOARD = 1)] = 'SOUNDBOARD'),
-    (p[(p.JOINED_VOICE_CHANNEL = 2)] = 'JOINED_VOICE_CHANNEL');
+    ((f = a || (a = {})).ADDED = 'added'),
+    (f.UPDATED = 'updated'),
+    (f.REMOVED = 'removed'),
+    ((_ = s || (s = {})).DEFAULT = 'default'),
+    (_.CUSTOM = 'custom'),
+    ((h = o || (o = {}))[(h.FAVORITES = 0)] = 'FAVORITES'),
+    (h[(h.RECENTLY_HEARD = 1)] = 'RECENTLY_HEARD'),
+    (h[(h.FREQUENTLY_USED = 2)] = 'FREQUENTLY_USED'),
+    (h[(h.GUILD = 3)] = 'GUILD'),
+    (h[(h.DEFAULTS = 4)] = 'DEFAULTS'),
+    (h[(h.SEARCH = 5)] = 'SEARCH'),
+    ((p = l || (l = {}))[(p.SOUND = 0)] = 'SOUND'),
+    (p[(p.ADD_SOUND = 1)] = 'ADD_SOUND'),
+    ((m = u || (u = {}))[(m.GIFT_CODE = 0)] = 'GIFT_CODE'),
+    (m[(m.SOUNDBOARD = 1)] = 'SOUNDBOARD'),
+    (m[(m.JOINED_VOICE_CHANNEL = 2)] = 'JOINED_VOICE_CHANNEL');

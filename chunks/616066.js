@@ -1,40 +1,40 @@
-n.d(t, {
+n.d(e, {
     R: function () {
         return p;
     }
 });
-var a = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    s = n.n(r),
+var a = n(120356),
+    i = n.n(a),
     o = n(979554),
-    i = n(481060),
+    s = n(481060),
     l = n(1585),
     c = n(125988),
     d = n(998502),
-    u = n(689938),
+    u = n(388032),
     f = n(446563);
-let g = d.ZP.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar,
-    p = (e) => {
-        let { item: t, user: n, isHighlighted: r = !1, isPurchased: d = !1, avatarSize: p = i.AvatarSizes.SIZE_152, avatarPlaceholderSrc: E } = e,
-            T = (0, l.y9)(p),
+let g = d.ZP.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar,
+    p = (t) => {
+        let { item: e, user: n, isHighlighted: a = !1, isPurchased: d = !1, avatarSize: p = s.AvatarSizes.SIZE_152, avatarPlaceholderSrc: h } = t,
+            b = (0, l.y9)(p),
             {
-                avatarDecorationSrc: C,
-                eventHandlers: h,
-                avatarPlaceholderSrc: b
+                avatarDecorationSrc: m,
+                eventHandlers: v,
+                avatarPlaceholderSrc: C
             } = (0, c.Z)({
                 user: n,
-                avatarDecorationOverride: (null == t ? void 0 : t.type) === o.Z.AVATAR_DECORATION ? t : void 0,
-                size: T,
-                onlyAnimateOnHover: !r
+                avatarDecorationOverride: (null == e ? void 0 : e.type) === o.Z.AVATAR_DECORATION ? e : void 0,
+                size: b,
+                onlyAnimateOnHover: !a
             });
-        return (0, a.jsx)(g, {
-            ...h,
-            avatarDecoration: C,
-            src: r ? (null == n ? void 0 : n.getAvatarURL(void 0, 152, !0)) : null != E ? E : b,
-            imageClassName: r ? f.fadeInAvatarImg : void 0,
-            className: s()(f.avatar, { [f.avatarPurchased]: d }),
+        return (0, r.jsx)(g, {
+            ...v,
+            avatarDecoration: m,
+            src: a ? (null == n ? void 0 : n.getAvatarURL(void 0, 152, !0)) : null != h ? h : C,
+            imageClassName: a ? f.fadeInAvatarImg : void 0,
+            className: i()(f.avatar, { [f.avatarPurchased]: d }),
             size: p,
-            'aria-label': u.Z.Messages.USER_SETTINGS_AVATAR
+            'aria-label': u.intl.string(u.t.lqaIxM)
         });
     };

@@ -7,9 +7,9 @@ var r = n(192379),
     u = n(492253),
     c = n(974727),
     d = n(278860),
-    _ = n(48254),
-    E = n(849818),
-    f = (function () {
+    f = n(48254),
+    _ = n(849818),
+    h = (function () {
         function e(e, t) {
             for (var n = 0; n < t.length; n++) {
                 var r = t[n];
@@ -20,7 +20,7 @@ var r = n(192379),
             return n && e(t.prototype, n), r && e(t, r), t;
         };
     })(),
-    h = (function (e) {
+    p = (function (e) {
         function t(e) {
             !(function (e, t) {
                 if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
@@ -44,7 +44,7 @@ var r = n(192379),
                 })),
                     t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
             })(t, e),
-            f(t, [
+            h(t, [
                 {
                     key: 'render',
                     value: function () {
@@ -153,7 +153,7 @@ var r = n(192379),
                                         r.createElement(
                                             'div',
                                             { style: i.previews },
-                                            r.createElement(E.Z, {
+                                            r.createElement(_.Z, {
                                                 rgb: this.props.rgb,
                                                 currentColor: this.state.currentColor
                                             })
@@ -161,12 +161,12 @@ var r = n(192379),
                                         r.createElement(
                                             'div',
                                             { style: i.actions },
-                                            r.createElement(_.C, {
+                                            r.createElement(f.C, {
                                                 label: 'OK',
                                                 onClick: this.props.onAccept,
                                                 active: !0
                                             }),
-                                            r.createElement(_.C, {
+                                            r.createElement(f.C, {
                                                 label: 'Cancel',
                                                 onClick: this.props.onCancel
                                             }),
@@ -187,12 +187,12 @@ var r = n(192379),
             t
         );
     })(r.Component);
-(h.propTypes = {
+(p.propTypes = {
     header: a().string,
     styles: a().object
 }),
-    (h.defaultProps = {
+    (p.defaultProps = {
         header: 'Color Picker',
         styles: {}
     }),
-    (0, l.t1)(h);
+    (0, l.t1)(p);

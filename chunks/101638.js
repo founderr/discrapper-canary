@@ -4,35 +4,35 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(192379),
-    a = n(259443),
-    l = n(81897),
-    r = n(911284),
+    l = n(192379),
+    r = n(259443),
+    a = n(81897),
+    s = n(911284),
     o = n(369566),
     c = n(502762),
     u = n(527790),
     d = n(638785),
-    h = n(689938);
-let m = new a.Y('UserProfilePanelRecentActivity');
+    h = n(388032);
+let m = new r.Y('UserProfilePanelRecentActivity');
 function p(e) {
     let { user: t } = e,
         { recent: n } = (0, o.Z)(t.id),
-        a = (0, l.Z)();
-    return (s.useEffect(() => {
+        r = (0, a.Z)();
+    return (l.useEffect(() => {
         (async () => {
             try {
-                await (0, r.Z)(t.id, a);
+                await (0, s.Z)(t.id, r);
             } catch (e) {
                 m.log('Failed to fetch content inventory outbox for '.concat(t.id, ':'), e);
             }
         })();
-    }, [t.id, a]),
+    }, [t.id, r]),
     0 === n.length)
         ? null
         : (0, i.jsx)(c.Z.Overlay, {
               children: (0, i.jsx)(d.Z, {
                   section: 'ACTIVITY',
-                  header: h.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
+                  header: h.intl.string(h.t.M0zgnZ),
                   minItems: 3,
                   items: n.map((e) =>
                       (0, i.jsx)(

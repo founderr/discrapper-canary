@@ -1,91 +1,91 @@
-n.r(s),
-    n.d(s, {
+e.r(t),
+    e.d(t, {
         default: function () {
-            return M;
+            return S;
         }
     }),
-    n(47120);
-var o = n(200651),
-    c = n(192379),
-    r = n(481060),
-    t = n(369994),
-    a = n(781208),
-    S = n(689938),
-    _ = n(91221);
-function M(e) {
-    let { guildId: s, transitionState: n, onClose: M } = e,
-        [i, l] = c.useState([]),
-        I = c.useCallback(() => {
-            (0, t.KK)(s, i), (0, t.C4)(s), M();
-        }, [s, M, i]),
-        C = c.useCallback(
-            (e) => () => {
-                l((s) => (s.includes(e) ? s.filter((s) => s !== e) : [...s, e]));
+    e(47120);
+var o = e(200651),
+    r = e(192379),
+    c = e(481060),
+    i = e(369994),
+    s = e(781208),
+    l = e(388032),
+    a = e(91221);
+function S(n) {
+    let { guildId: t, transitionState: e, onClose: S } = n,
+        [u, d] = r.useState([]),
+        M = r.useCallback(() => {
+            (0, i.KK)(t, u), (0, i.C4)(t), S();
+        }, [t, S, u]),
+        h = r.useCallback(
+            (n) => () => {
+                d((t) => (t.includes(n) ? t.filter((t) => t !== n) : [...t, n]));
             },
             []
         ),
-        A = c.useCallback(() => {
-            open(a.RI);
+        C = r.useCallback(() => {
+            open(s.RI);
         }, []);
-    return (0, o.jsxs)(r.ModalRoot, {
-        transitionState: n,
-        size: r.ModalSize.SMALL,
+    return (0, o.jsxs)(c.ModalRoot, {
+        transitionState: e,
+        size: c.ModalSize.SMALL,
         children: [
-            (0, o.jsx)(r.ModalHeader, {
+            (0, o.jsx)(c.ModalHeader, {
                 separator: !1,
-                children: (0, o.jsx)(r.Heading, {
+                children: (0, o.jsx)(c.Heading, {
                     color: 'header-primary',
                     variant: 'heading-md/semibold',
-                    children: S.Z.Messages.GUILD_REPORT_RAID_MODAL_TITLE
+                    children: l.intl.string(l.t.uYPGsb)
                 })
             }),
-            (0, o.jsxs)(r.ModalContent, {
+            (0, o.jsxs)(c.ModalContent, {
                 children: [
-                    (0, o.jsx)(r.Text, {
+                    (0, o.jsx)(c.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: S.Z.Messages.GUILD_REPORT_RAID_MODAL_DESCRIPTION_CLICKABLE.format({ onClick: A })
+                        children: l.intl.format(l.t.Hg8Ee3, { onClick: C })
                     }),
                     (0, o.jsx)('div', {
-                        className: _.mainCheckboxContainer,
-                        children: a.Ud.map((e) =>
+                        className: a.mainCheckboxContainer,
+                        children: s.Ud.map((n) =>
                             (0, o.jsxs)(
-                                r.Clickable,
+                                c.Clickable,
                                 {
-                                    className: _.checkboxContainer,
-                                    onClick: C(e),
+                                    className: a.checkboxContainer,
+                                    onClick: h(n),
                                     children: [
-                                        (0, o.jsx)(r.Checkbox, {
-                                            type: r.Checkbox.Types.INVERTED,
-                                            className: _.checkbox,
-                                            value: i.includes(e),
+                                        (0, o.jsx)(c.Checkbox, {
+                                            type: c.Checkbox.Types.INVERTED,
+                                            className: a.checkbox,
+                                            value: u.includes(n),
                                             displayOnly: !0
                                         }),
-                                        (0, o.jsx)(r.Text, {
+                                        (0, o.jsx)(c.Text, {
                                             variant: 'text-sm/normal',
-                                            children: (0, a.$l)(e)
+                                            children: (0, s.$l)(n)
                                         })
                                     ]
                                 },
-                                e
+                                n
                             )
                         )
                     })
                 ]
             }),
-            (0, o.jsxs)(r.ModalFooter, {
+            (0, o.jsxs)(c.ModalFooter, {
                 children: [
-                    (0, o.jsx)(r.Button, {
-                        onClick: I,
-                        color: r.Button.Colors.BRAND,
-                        look: r.Button.Looks.FILLED,
-                        children: S.Z.Messages.SUBMIT
-                    }),
-                    (0, o.jsx)(r.Button, {
+                    (0, o.jsx)(c.Button, {
                         onClick: M,
-                        color: r.Button.Colors.PRIMARY,
-                        look: r.Button.Looks.LINK,
-                        children: S.Z.Messages.CANCEL
+                        color: c.Button.Colors.BRAND,
+                        look: c.Button.Looks.FILLED,
+                        children: l.intl.string(l.t.geKm7u)
+                    }),
+                    (0, o.jsx)(c.Button, {
+                        onClick: S,
+                        color: c.Button.Colors.PRIMARY,
+                        look: c.Button.Looks.LINK,
+                        children: l.intl.string(l.t['ETE/oK'])
                     })
                 ]
             })

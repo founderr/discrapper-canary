@@ -1,16 +1,16 @@
 n.d(t, {
     S: function () {
-        return _;
+        return m;
     }
 });
 var i = n(200651),
     l = n(192379),
     r = n(120356),
     a = n.n(r),
-    s = n(481060),
-    o = n(593214),
+    o = n(481060),
+    s = n(593214),
     c = n(981631),
-    u = n(689938),
+    u = n(388032),
     d = n(941443),
     h = n(516126),
     p = n(64056);
@@ -19,14 +19,14 @@ function f() {
         className: a()(h.row, h.rowGuildName),
         children: (0, i.jsx)('span', {
             className: a()(h.guildNameText, h.guildNameTextLimitedSize, d.tooltipText),
-            children: u.Z.Messages.FAVORITE_ADDED
+            children: u.intl.string(u.t['4tSWQk'])
         })
     });
 }
-let _ = l.memo(function (e) {
+let m = l.memo(function (e) {
     let { 'aria-label': t = !1, children: n } = e,
         r = (function () {
-            let { favoriteAdded: e, clearFavoriteAdded: t } = (0, o.up)();
+            let { favoriteAdded: e, clearFavoriteAdded: t } = (0, s.up)();
             return (
                 l.useEffect(() => {
                     if (e) {
@@ -41,9 +41,9 @@ let _ = l.memo(function (e) {
                 e
             );
         })();
-    return (0, i.jsx)(s.Tooltip, {
+    return (0, i.jsx)(o.Tooltip, {
         forceOpen: r,
-        color: s.TooltipColors.GREEN,
+        color: o.TooltipColors.GREEN,
         hideOnClick: !0,
         spacing: 20,
         position: 'right',

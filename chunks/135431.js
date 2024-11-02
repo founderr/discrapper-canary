@@ -26,13 +26,13 @@ function u(e) {
     return null != t || null != n || (null != r && Object.values(r).some((e) => (null == e ? void 0 : e.oauth2_install_params) != null || (null == e ? void 0 : e.oauth2InstallParams) != null));
 }
 function c(e) {
-    let { applicationId: t, customInstallUrl: n, installParams: u, integrationTypesConfig: c, guildId: d, channelId: _, disableGuildSelect: E, source: f, oauth2Callback: h } = e;
+    let { applicationId: t, customInstallUrl: n, installParams: u, integrationTypesConfig: c, guildId: d, channelId: f, disableGuildSelect: _, source: h, oauth2Callback: p } = e;
     if (null != n) {
         s.default.track(l.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
             application_id: t,
             guild_id: d,
             auth_type: 'custom_url',
-            source: f,
+            source: h,
             device_platform: r.tq ? 'mobile_web' : 'desktop_web'
         }),
             (0, o.q)({ href: n });
@@ -43,15 +43,15 @@ function c(e) {
             application_id: t,
             guild_id: d,
             auth_type: 'in_app',
-            source: f,
+            source: h,
             device_platform: r.tq ? 'mobile_web' : 'desktop_web'
         }),
             (0, a.openOAuth2Modal)({
                 clientId: t,
                 guildId: d,
-                channelId: _,
-                disableGuildSelect: E,
-                callback: h
+                channelId: f,
+                disableGuildSelect: _,
+                callback: p
             });
         return;
     }
@@ -60,17 +60,17 @@ function c(e) {
             application_id: t,
             guild_id: d,
             auth_type: 'in_app',
-            source: f,
+            source: h,
             device_platform: r.tq ? 'mobile_web' : 'desktop_web'
         }),
         (0, a.openOAuth2Modal)({
             clientId: t,
             guildId: d,
-            channelId: _,
-            disableGuildSelect: E,
+            channelId: f,
+            disableGuildSelect: _,
             scopes: u.scopes,
             permissions: null != u.permissions ? i.vB(u.permissions) : void 0,
-            callback: h
+            callback: p
         }));
 }
 function d(e) {

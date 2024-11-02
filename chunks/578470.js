@@ -1,20 +1,20 @@
 n.d(t, {
     g: function () {
-        return a;
+        return r;
     }
 }),
     n(47120);
 var i = n(192379);
-function a(e) {
+function r(e) {
     let [t, n] = i.useState(),
-        a = i.useCallback(
+        r = i.useCallback(
             (t) => {
                 n(t), e();
             },
             [e]
         );
     return {
-        onSelectApplication: a,
+        onSelectApplication: r,
         onCloseAppDetails: i.useCallback(() => {
             n(void 0), e();
         }, [e]),

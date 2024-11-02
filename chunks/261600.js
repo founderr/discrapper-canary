@@ -7,31 +7,31 @@ var i = n(200651),
     l = n(192379),
     r = n(399606),
     a = n(481060),
-    s = n(592125),
-    o = n(922482),
+    o = n(592125),
+    s = n(922482),
     c = n(750154),
     u = n(427679),
-    d = n(689938);
+    d = n(388032);
 function h(e) {
     var t, n;
     let { activity: h } = e,
         { channelId: p } = null !== (t = (0, c.rq)(h)) && void 0 !== t ? t : {},
         f = (0, r.e7)([u.Z], () => u.Z.getStageInstanceByChannel(p), [p]),
-        _ = l.useRef(null),
-        m = l.useCallback(() => {
-            let e = s.Z.getChannel(p);
-            null != e && o.Cq(e);
+        m = l.useRef(null),
+        g = l.useCallback(() => {
+            let e = o.Z.getChannel(p);
+            null != e && s.Cq(e);
         }, [p]),
-        g = null !== (n = null == f ? void 0 : f.topic) && void 0 !== n ? n : h.name,
-        C = d.Z.Messages.STAGE_CHANNEL_ACTIVITY_FEED_JOIN.format({ channel: g });
+        C = null !== (n = null == f ? void 0 : f.topic) && void 0 !== n ? n : h.name,
+        _ = d.intl.formatToPlainString(d.t['T+DNAA'], { channel: C });
     return (0, i.jsx)('div', {
-        ref: _,
+        ref: m,
         children: (0, i.jsx)(a.Clickable, {
-            onClick: m,
-            focusProps: { ringTarget: _ },
+            onClick: g,
+            focusProps: { ringTarget: m },
             children: (0, i.jsx)(a.Heading, {
                 variant: 'heading-sm/semibold',
-                children: C
+                children: _
             })
         })
     });
@@ -42,7 +42,7 @@ class p {
     }
     createHeader(e) {
         return {
-            subtitle: d.Z.Messages.STAGE_CHANNEL_ACTIVITY_FEED_DEFAULT,
+            subtitle: d.intl.string(d.t['+AJFJy']),
             icon: null
         };
     }

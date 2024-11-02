@@ -1,71 +1,71 @@
-e.r(a),
-    e.d(a, {
+a.r(t),
+    a.d(t, {
         default: function () {
-            return E;
+            return x;
         }
     }),
-    e(47120);
-var s = e(200651);
-e(192379);
-var t = e(512722),
-    o = e.n(t),
-    i = e(481060),
-    l = e(935369),
-    r = e(313201),
-    c = e(53365),
-    d = e(981631),
-    u = e(689938),
-    _ = e(591836);
-function E(n) {
-    let { transitionState: a, guild: e, onClose: t } = n,
-        E = (0, r.Dt)(),
-        [T, { loading: g, error: I }] = (0, l.Z)(c.oL),
-        N = async () => {
-            o()(null != e, 'no guild'), null != (await T(e.id)) && t();
+    a(47120);
+var e = a(200651);
+a(192379);
+var o = a(512722),
+    i = a.n(o),
+    l = a(481060),
+    s = a(935369),
+    r = a(313201),
+    c = a(53365),
+    d = a(981631),
+    u = a(388032),
+    g = a(591836);
+function x(n) {
+    let { transitionState: t, guild: a, onClose: o } = n,
+        x = (0, r.Dt)(),
+        [h, { loading: m, error: _ }] = (0, s.Z)(c.oL),
+        p = async () => {
+            i()(null != a, 'no guild'), null != (await h(a.id)) && o();
         };
-    return (0, s.jsxs)(i.ModalRoot, {
-        transitionState: a,
-        'aria-labelledby': E,
+    return (0, e.jsxs)(l.ModalRoot, {
+        transitionState: t,
+        'aria-labelledby': x,
         children: [
-            (0, s.jsxs)(i.ModalHeader, {
+            (0, e.jsxs)(l.ModalHeader, {
                 children: [
-                    (0, s.jsx)(i.Heading, {
-                        id: E,
+                    (0, e.jsx)(l.Heading, {
+                        id: x,
                         variant: 'heading-md/semibold',
-                        children: u.Z.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_MODAL_HEADER
+                        children: u.intl.string(u.t.rRpcEx)
                     }),
-                    (0, s.jsx)(i.ModalCloseButton, {
-                        className: _.closeButton,
-                        onClick: t
+                    (0, e.jsx)(l.ModalCloseButton, {
+                        className: g.closeButton,
+                        onClick: o
                     })
                 ]
             }),
-            (0, s.jsxs)(i.ModalContent, {
-                className: _.content,
+            (0, e.jsxs)(l.ModalContent, {
+                className: g.content,
                 children: [
-                    null != I
-                        ? (0, s.jsxs)(s.Fragment, {
-                              children: [(0, s.jsx)(i.FormErrorBlock, { children: I.message }), (0, s.jsx)(i.Spacer, { size: 24 })]
+                    null != _
+                        ? (0, e.jsxs)(e.Fragment, {
+                              children: [(0, e.jsx)(l.FormErrorBlock, { children: _.message }), (0, e.jsx)(l.Spacer, { size: 24 })]
                           })
                         : null,
-                    (0, s.jsx)(i.FormText, {
-                        type: i.FormText.Types.ERROR,
-                        children: u.Z.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_MODAL_DESCRIPTION.format({
-                            guildName: e.toString(),
+                    (0, e.jsx)(l.FormText, {
+                        type: l.FormText.Types.ERROR,
+                        children: u.intl.format(u.t['Oa5P6+'], {
+                            guildName: a.toString(),
                             url: d.EYA.DEVELOPER_PORTAL_TEAMS
                         })
                     }),
-                    (0, s.jsx)(i.Spacer, { size: 16 })
+                    (0, e.jsx)(l.Spacer, { size: 16 })
                 ]
             }),
-            (0, s.jsx)(i.ModalFooter, {
-                className: _.__invalid_footer,
-                children: (0, s.jsx)(i.Button, {
-                    color: i.Button.Colors.RED,
-                    className: _.__invalid_goBackButton,
-                    submitting: g,
-                    onClick: N,
-                    children: u.Z.Messages.SAVE
+            (0, e.jsx)(l.ModalFooter, {
+                className: g.__invalid_footer,
+                children: (0, e.jsx)(l.Button, {
+                    color: l.Button.Colors.RED,
+                    className: g.__invalid_goBackButton,
+                    submitting: m,
+                    onClick: p,
+                    children: u.intl.string(u.t.R3BPHx)
                 })
             })
         ]

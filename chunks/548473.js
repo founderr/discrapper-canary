@@ -14,8 +14,8 @@ x.d(i, {
 });
 var k = x(200651),
     r = x(192379),
-    s = x(120356),
-    t = x.n(s),
+    t = x(120356),
+    s = x.n(t),
     o = x(500923),
     n = x.n(o),
     m = x(442837),
@@ -30,10 +30,10 @@ var k = x(200651),
     u = x(487533),
     G = x(279876),
     A = x(180504),
-    E = x(790711),
-    D = x(535170),
+    D = x(790711),
+    E = x(535170),
     B = x(981631),
-    V = x(689938),
+    V = x(388032),
     b = x(288617);
 function F(a) {
     let i = (0, m.e7)([p.Z], () => p.Z.useReducedMotion),
@@ -61,7 +61,7 @@ function F(a) {
 function g() {
     let a = F(A);
     return (0, k.jsx)('div', {
-        className: t()(b.leftArt, b.altFloat),
+        className: s()(b.leftArt, b.altFloat),
         children: (0, k.jsx)('div', {
             ref: a,
             className: b.grillingIsland
@@ -69,9 +69,9 @@ function g() {
     });
 }
 function S() {
-    let a = F(D);
+    let a = F(E);
     return (0, k.jsx)('div', {
-        className: t()(b.rightArt, b.altFloat),
+        className: s()(b.rightArt, b.altFloat),
         children: (0, k.jsx)('div', {
             ref: a,
             className: b.waffleIsland
@@ -79,7 +79,7 @@ function S() {
     });
 }
 function v(a) {
-    let { guild: i, mainIslandClassName: x, balloonDogClassName: s } = a,
+    let { guild: i, mainIslandClassName: x, balloonDogClassName: t } = a,
         o = (0, m.e7)([p.Z], () => p.Z.useReducedMotion),
         e = r.useRef(null),
         l = F(G),
@@ -94,7 +94,7 @@ function v(a) {
             return (
                 null != e.current && null != h
                     ? (0, c.OF)(h).then((i) => {
-                          let x = (0, u.Z)(JSON.parse(JSON.stringify(E)), h, i[0]);
+                          let x = (0, u.Z)(JSON.parse(JSON.stringify(D)), h, i[0]);
                           a = n().loadAnimation({
                               container: e.current,
                               renderer: 'svg',
@@ -109,7 +109,7 @@ function v(a) {
                           renderer: 'svg',
                           loop: !0,
                           autoplay: !o,
-                          animationData: JSON.parse(JSON.stringify(E))
+                          animationData: JSON.parse(JSON.stringify(D))
                       })),
                 () => {
                     null == a || a.destroy();
@@ -117,14 +117,14 @@ function v(a) {
             );
         }, [h, e, o]),
         (0, k.jsxs)('div', {
-            className: t()(b.centerArt, b.float),
+            className: s()(b.centerArt, b.float),
             children: [
                 (0, k.jsx)('div', {
-                    className: t()(b.balloonDog, s),
+                    className: s()(b.balloonDog, t),
                     ref: l
                 }),
                 (0, k.jsx)('div', {
-                    className: t()(b.mainIsland, x),
+                    className: s()(b.mainIsland, x),
                     ref: e
                 })
             ]
@@ -132,7 +132,7 @@ function v(a) {
     );
 }
 function T(a) {
-    let { guild: i, onStart: x, onboardingStatus: s, headerId: t, disableTracking: o } = a,
+    let { guild: i, onStart: x, onboardingStatus: t, headerId: s, disableTracking: o } = a,
         n = (0, m.e7)([y.Z], () => y.Z.isLoading()),
         p = r.useRef(!1);
     r.useEffect(() => {
@@ -177,23 +177,23 @@ function T(a) {
                                     className: b.coverTitle,
                                     variant: 'text-md/medium',
                                     color: 'always-white',
-                                    id: t,
-                                    children: V.Z.Messages.WELCOME_CTA_TITLE_MOBILE.format({ guildName: null == i ? void 0 : i.name })
+                                    id: s,
+                                    children: V.intl.format(V.t['j59F/f'], { guildName: null == i ? void 0 : i.name })
                                 }),
                                 n
                                     ? (0, k.jsx)(e.Spinner, { className: b.__invalid_subtitle })
-                                    : s === f.uX.NOT_APPLICABLE
+                                    : t === f.uX.NOT_APPLICABLE
                                       ? (0, k.jsx)(e.Heading, {
                                             className: b.__invalid_subtitle,
                                             variant: 'heading-xl/semibold',
                                             color: 'always-white',
-                                            children: V.Z.Messages.ONBOARDING_NO_PROMPTS
+                                            children: V.intl.string(V.t.Q5ibtb)
                                         })
                                       : (0, k.jsx)(e.Heading, {
                                             className: b.__invalid_subtitle,
                                             variant: 'heading-xl/semibold',
                                             color: 'always-white',
-                                            children: V.Z.Messages.ONBOARDING_COVER_WELCOME_SUBTITLE
+                                            children: V.intl.string(V.t['Alcl/f'])
                                         })
                             ]
                         })

@@ -6,8 +6,8 @@ var s,
     u = n(238514),
     c = n(695346),
     d = n(581883),
-    _ = n(283595);
-function E(e, t, n) {
+    f = n(283595);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,27 +20,27 @@ function E(e, t, n) {
         e
     );
 }
-let f = {
+let h = {
         applicationId: null,
         originURL: null
     },
-    h = f,
-    p = new Set(),
-    I = !1;
-function m() {
+    p = h,
+    m = new Set(),
+    g = !1;
+function E() {
     a = null;
 }
-function T() {
-    (r = null), (i = null), (p = new Set()), (h.applicationId = null), (h.originURL = null), m();
+function v() {
+    (r = null), (i = null), (m = new Set()), (p.applicationId = null), (p.originURL = null), E();
 }
-class S extends (s = o.ZP.PersistedStore) {
+class I extends (s = o.ZP.PersistedStore) {
     initialize(e) {
-        (r = (h = { ...(null != e ? e : f) }).applicationId),
-            (i = h.originURL),
+        (r = (p = { ...(null != e ? e : h) }).applicationId),
+            (i = p.originURL),
             this.waitFor(d.Z, u.Z),
             this.syncWith([d.Z, u.Z], () => !0),
-            _.Z.whenInitialized(() => {
-                I = !0;
+            f.Z.whenInitialized(() => {
+                g = !0;
             });
     }
     inTestModeForApplication(e) {
@@ -53,13 +53,13 @@ class S extends (s = o.ZP.PersistedStore) {
         return c.Sb.getSetting() && this.inTestModeForApplication(e);
     }
     getState() {
-        return h;
+        return p;
     }
     get isTestMode() {
         return null != r;
     }
     get isFetchingAuthorization() {
-        return p.size > 0;
+        return m.size > 0;
     }
     get testModeEmbeddedApplicationId() {
         return null != i ? r : null;
@@ -75,30 +75,30 @@ class S extends (s = o.ZP.PersistedStore) {
     }
     whenInitialized(e) {
         this.addConditionalChangeListener(() => {
-            if (I) return setImmediate(e), !1;
+            if (g) return setImmediate(e), !1;
         });
     }
 }
-E(S, 'displayName', 'TestModeStore'),
-    E(S, 'persistKey', 'TestModeStore'),
-    (t.Z = new S(l.Z, {
+_(I, 'displayName', 'TestModeStore'),
+    _(I, 'persistKey', 'TestModeStore'),
+    (t.Z = new I(l.Z, {
         DEVELOPER_TEST_MODE_AUTHORIZATION_START: function (e) {
             let { applicationId: t } = e;
-            p.add(t), (a = null);
+            m.add(t), (a = null);
         },
         DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS: function (e) {
             let { applicationId: t, originURL: n } = e;
-            (r = t), (i = n), p.delete(t), (a = null), (h.applicationId = t), (h.originURL = n);
+            (r = t), (i = n), m.delete(t), (a = null), (p.applicationId = t), (p.originURL = n);
         },
         DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL: function (e) {
             let { applicationId: t, error: n } = e;
-            p.delete(t), (a = n);
+            m.delete(t), (a = n);
         },
         OVERLAY_INITIALIZE: function (e) {
             let { testModeApplicationId: t } = e;
             r = t;
         },
-        DEVELOPER_TEST_MODE_RESET_ERROR: m,
-        LOGOUT: T,
-        DEVELOPER_TEST_MODE_RESET: T
+        DEVELOPER_TEST_MODE_RESET_ERROR: E,
+        LOGOUT: v,
+        DEVELOPER_TEST_MODE_RESET: v
     }));

@@ -9,18 +9,18 @@ var s = n(788983),
     u = n(592125),
     c = n(731290),
     d = n(131951),
-    _ = n(944486),
-    E = n(914010),
-    f = n(594174),
-    h = n(934415),
-    p = n(604151),
-    I = n(981631);
+    f = n(944486),
+    _ = n(914010),
+    h = n(594174),
+    p = n(934415),
+    m = n(604151),
+    g = n(981631);
 t.default = {
     selectChannel(e) {
         let { guildId: t, channelId: n, messageId: i, jumpType: a, preserveDrawerState: s, source: o } = e;
         r.Z.dispatch({
             type: 'CHANNEL_SELECT',
-            guildId: t === I.ME ? null : t,
+            guildId: t === g.ME ? null : t,
             channelId: n,
             messageId: i,
             jumpType: a,
@@ -29,7 +29,7 @@ t.default = {
         });
     },
     selectPrivateChannel(e) {
-        (0, o.uL)(I.Z5c.CHANNEL(I.ME, e));
+        (0, o.uL)(g.Z5c.CHANNEL(g.ME, e));
     },
     selectVoiceChannel(e) {
         var t;
@@ -37,21 +37,21 @@ t.default = {
             r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             i = u.Z.getChannel(e),
             a = null == i ? void 0 : i.getGuildId();
-        if ((null == i ? void 0 : i.isGuildVocal()) && (null == i ? void 0 : i.isNSFW()) && (!(null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) || !c.Z.didAgree(a))) {
-            (0, o.uL)(I.Z5c.CHANNEL(a, e));
+        if ((null == i ? void 0 : i.isGuildVocal()) && (null == i ? void 0 : i.isNSFW()) && (!(null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) || !c.Z.didAgree(a))) {
+            (0, o.uL)(g.Z5c.CHANNEL(a, e));
             return;
         }
-        d.Z.isSupported() && (null != e && d.Z.getMediaEngine().interact(), (0, p.h)(e, a, n, r));
+        d.Z.isSupported() && (null != e && d.Z.getMediaEngine().interact(), (0, m.h)(e, a, n, r));
     },
     disconnect() {
         let e = a.Z.getRemoteSessionId();
         if ((null != e && i._(e), (0, l.ur)())) this.selectVoiceChannel(null);
         else {
-            let e = u.Z.getChannel(_.Z.getChannelId()),
-                t = _.Z.getChannelId() === _.Z.getVoiceChannelId() && (null == e ? void 0 : e.isThread()) === !0;
-            if ((this.selectVoiceChannel(null), s.xv(I.KJ3.CHANNEL_CALL_POPOUT), t)) {
-                let e = E.Z.getGuildId();
-                null != e && (0, o.uL)((0, h.LY)(e));
+            let e = u.Z.getChannel(f.Z.getChannelId()),
+                t = f.Z.getChannelId() === f.Z.getVoiceChannelId() && (null == e ? void 0 : e.isThread()) === !0;
+            if ((this.selectVoiceChannel(null), s.xv(g.KJ3.CHANNEL_CALL_POPOUT), t)) {
+                let e = _.Z.getGuildId();
+                null != e && (0, o.uL)((0, p.LY)(e));
             }
         }
     }

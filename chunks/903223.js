@@ -1,15 +1,15 @@
 var i,
-    s,
-    a,
     l,
-    r = n(392711),
-    o = n.n(r),
+    r,
+    a,
+    s = n(392711),
+    o = n.n(s),
     c = n(442837),
     u = n(570140),
     d = n(430824);
 let h = null,
     m = {};
-class p extends (l = c.ZP.Store) {
+class p extends (a = c.ZP.Store) {
     initialize() {
         this.waitFor(d.Z);
     }
@@ -46,15 +46,15 @@ class p extends (l = c.ZP.Store) {
         return null != e ? m[e] : h;
     }
 }
-(a = 'RegionStore'),
-    (s = 'displayName') in (i = p)
-        ? Object.defineProperty(i, s, {
-              value: a,
+(r = 'RegionStore'),
+    (l = 'displayName') in (i = p)
+        ? Object.defineProperty(i, l, {
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[s] = a),
+        : (i[l] = r),
     (t.Z = new p(u.Z, {
         LOAD_REGIONS: function (e) {
             let t = o().sortBy(e.regions, (e) => e.name);

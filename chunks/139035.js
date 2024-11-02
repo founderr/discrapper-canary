@@ -1,116 +1,116 @@
-t.r(n);
-var a = t(200651);
-t(192379);
-var i = t(481060),
-    s = t(239091),
-    r = t(108843),
-    l = t(100527),
-    u = t(299206),
-    d = t(916069),
-    o = t(697229),
-    c = t(212205),
-    _ = t(423589),
-    Z = t(411567),
-    E = t(672824),
-    M = t(3689),
-    C = t(323597),
-    A = t(852245),
-    N = t(461535),
-    g = t(776568),
-    h = t(218035),
-    f = t(775666),
-    I = t(442754),
-    O = t(623483),
-    T = t(689938);
-function p(e) {
-    let { channel: n, onSelect: t } = e,
-        r = (0, N.Z)(n),
-        l = (0, g.ZP)(n),
-        d = (0, h.Z)(n),
-        M = (0, E.Z)(n),
-        C = (0, Z.Z)(n),
-        A = (0, c.Z)(n),
-        I = (0, o.Z)(n),
-        p = (0, O.Z)(n),
-        L = (0, u.Z)({
-            id: n.id,
-            label: T.Z.Messages.COPY_ID_CHANNEL
+e.r(t);
+var i = e(200651);
+e(192379);
+var r = e(481060),
+    l = e(239091),
+    a = e(108843),
+    u = e(100527),
+    d = e(299206),
+    s = e(916069),
+    o = e(697229),
+    c = e(212205),
+    Z = e(423589),
+    g = e(411567),
+    h = e(672824),
+    f = e(3689),
+    M = e(323597),
+    _ = e(852245),
+    p = e(461535),
+    C = e(776568),
+    x = e(218035),
+    I = e(775666),
+    j = e(442754),
+    m = e(623483),
+    E = e(388032);
+function G(n) {
+    let { channel: t, onSelect: e } = n,
+        a = (0, p.Z)(t),
+        u = (0, C.ZP)(t),
+        s = (0, x.Z)(t),
+        f = (0, h.Z)(t),
+        M = (0, g.Z)(t),
+        _ = (0, c.Z)(t),
+        j = (0, o.Z)(t),
+        G = (0, m.Z)(t),
+        v = (0, d.Z)({
+            id: t.id,
+            label: E.intl.string(E.t.gFHI3t)
         }),
-        G = (0, _.Mn)('ChannelCategoryFavoritesMenu'),
-        x = (0, f.ZP)(n);
-    return (0, a.jsxs)(i.Menu, {
+        y = (0, Z.Mn)('ChannelCategoryFavoritesMenu'),
+        b = (0, I.ZP)(t);
+    return (0, i.jsxs)(r.Menu, {
         navId: 'channel-context',
-        onClose: s.Zy,
-        'aria-label': T.Z.Messages.CHANNEL_ACTIONS_MENU_LABEL,
-        onSelect: t,
+        onClose: l.Zy,
+        'aria-label': E.intl.string(E.t.Xm41aW),
+        onSelect: e,
         children: [
-            (0, a.jsxs)(i.MenuGroup, {
-                children: [r, I, A]
+            (0, i.jsxs)(r.MenuGroup, {
+                children: [a, j, _]
             }),
-            (0, a.jsxs)(i.MenuGroup, {
-                children: [l, G ? x : d]
+            (0, i.jsxs)(r.MenuGroup, {
+                children: [u, y ? b : s]
             }),
-            (0, a.jsxs)(i.MenuGroup, {
-                children: [M, C]
+            (0, i.jsxs)(r.MenuGroup, {
+                children: [f, M]
             }),
-            (0, a.jsx)(i.MenuGroup, { children: p }),
-            (0, a.jsx)(i.MenuGroup, { children: L })
+            (0, i.jsx)(r.MenuGroup, { children: G }),
+            (0, i.jsx)(r.MenuGroup, { children: v })
         ]
     });
 }
-function L(e) {
-    let { channel: n, guild: t, onSelect: r } = e,
-        l = (0, N.Z)(n),
-        d = (0, g.ZP)(n),
-        o = (0, h.Z)(n),
-        O = (0, E.Z)(n),
-        p = (0, Z.Z)(n),
-        L = (0, A.Z)(n),
-        G = (0, c.Z)(n),
-        x = (0, M.Z)(n, t),
-        j = (0, C.Z)(n),
-        P = (0, u.Z)({
-            id: n.id,
-            label: T.Z.Messages.COPY_ID_CHANNEL
+function v(n) {
+    let { channel: t, guild: e, onSelect: a } = n,
+        u = (0, p.Z)(t),
+        s = (0, C.ZP)(t),
+        o = (0, x.Z)(t),
+        m = (0, h.Z)(t),
+        G = (0, g.Z)(t),
+        v = (0, _.Z)(t),
+        y = (0, c.Z)(t),
+        b = (0, f.Z)(t, e),
+        O = (0, M.Z)(t),
+        P = (0, d.Z)({
+            id: t.id,
+            label: E.intl.string(E.t.gFHI3t)
         }),
-        R = (0, I.Z)(n),
-        v = (0, _.Mn)('ChannelCategoryNormalMenu'),
-        m = (0, f.ZP)(n);
-    return (0, a.jsxs)(i.Menu, {
+        A = (0, j.Z)(t),
+        N = (0, Z.Mn)('ChannelCategoryNormalMenu'),
+        T = (0, I.ZP)(t);
+    return (0, i.jsxs)(r.Menu, {
         navId: 'channel-context',
-        onClose: s.Zy,
-        'aria-label': T.Z.Messages.CHANNEL_ACTIONS_MENU_LABEL,
-        onSelect: r,
+        onClose: l.Zy,
+        'aria-label': E.intl.string(E.t.Xm41aW),
+        onSelect: a,
         children: [
-            (0, a.jsx)(i.MenuGroup, { children: l }, 'mark-as-read'),
-            (0, a.jsxs)(
-                i.MenuGroup,
+            (0, i.jsx)(r.MenuGroup, { children: u }, 'mark-as-read'),
+            (0, i.jsxs)(
+                r.MenuGroup,
                 {
-                    children: [R, O, p]
+                    children: [A, m, G]
                 },
                 'channel-actions'
             ),
-            (0, a.jsxs)(
-                i.MenuGroup,
+            (0, i.jsxs)(
+                r.MenuGroup,
                 {
-                    children: [d, v ? m : o]
+                    children: [s, N ? T : o]
                 },
                 'notifications'
             ),
-            (0, a.jsxs)(
-                i.MenuGroup,
+            (0, i.jsxs)(
+                r.MenuGroup,
                 {
-                    children: [L, G, x, j]
+                    children: [v, y, b, O]
                 },
                 'admin-actions'
             ),
-            (0, a.jsx)(i.MenuGroup, { children: P }, 'developer-actions')
+            (0, i.jsx)(r.MenuGroup, { children: P }, 'developer-actions')
         ]
     });
 }
-n.default = (0, r.Z)(
-    function (e) {
-        return (0, d.Z)() ? (0, a.jsx)(p, { ...e }) : (0, a.jsx)(L, { ...e });
+t.default = (0, a.Z)(
+    function (n) {
+        return (0, s.Z)() ? (0, i.jsx)(G, { ...n }) : (0, i.jsx)(v, { ...n });
     },
-    [l.Z.CONTEXT_MENU, l.Z.CHANNEL_CATEGORY_MENU]
+    [u.Z.CONTEXT_MENU, u.Z.CHANNEL_CATEGORY_MENU]
 );

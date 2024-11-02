@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return N;
     },
     c: function () {
-        return Z;
+        return T;
     }
 });
 var l = n(200651),
-    s = n(192379),
-    i = n(120356),
-    r = n.n(i),
+    i = n(192379),
+    r = n(120356),
+    s = n.n(r),
     a = n(848246),
     o = n(442837),
     c = n(481060),
@@ -19,17 +19,17 @@ var l = n(200651),
     h = n(1163),
     m = n(846401),
     x = n(48125),
-    _ = n(639119),
-    g = n(197115),
-    p = n(74538),
-    C = n(981631),
-    S = n(474936),
-    E = n(689938),
-    v = n(742769);
-function j(e) {
+    g = n(639119),
+    p = n(197115),
+    v = n(74538),
+    j = n(981631),
+    C = n(474936),
+    S = n(388032),
+    _ = n(742769);
+function Z(e) {
     let { location: t, ...n } = e,
-        i = (0, _.N)(),
-        a = null != i,
+        r = (0, g.N)(),
+        a = null != r,
         o = x.Z.useExperiment(
             { location: 'StreamSettingsUpsellBanner.NitroButton' },
             {
@@ -37,17 +37,17 @@ function j(e) {
                 disable: !a
             }
         ).enabled,
-        d = s.useCallback(() => {
+        d = i.useCallback(() => {
             if (o) {
                 var e;
-                return null !== (e = (0, p.fr)(i)) && void 0 !== e ? e : E.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_CTA;
+                return null !== (e = (0, v.fr)(r)) && void 0 !== e ? e : S.intl.string(S.t.Y2WKTk);
             }
-            return E.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_CTA;
-        }, [o, i]);
-    return (0, l.jsx)(g.Z, {
-        className: r()(v.enhancedCTA, v.ctaGradientBackground),
-        iconClassName: v.premiumIcon,
-        subscriptionTier: S.Si.TIER_2,
+            return S.intl.string(S.t.Y2WKTk);
+        }, [o, r]);
+    return (0, l.jsx)(p.Z, {
+        className: s()(_.enhancedCTA, _.ctaGradientBackground),
+        iconClassName: _.premiumIcon,
+        subscriptionTier: C.Si.TIER_2,
         buttonText: d(),
         size: c.Button.Sizes.TINY,
         premiumModalAnalyticsLocation: t,
@@ -57,45 +57,45 @@ function j(e) {
 function I() {
     let e = (0, m.Z)();
     return (0, l.jsxs)('div', {
-        className: v.extendedDemoContainer,
+        className: _.extendedDemoContainer,
         children: [
             (0, l.jsxs)('div', {
                 children: [
                     (0, l.jsxs)('div', {
-                        className: v.extendedDemoContainer,
+                        className: _.extendedDemoContainer,
                         children: [
                             (0, l.jsx)(c.Text, {
                                 variant: 'text-xs/bold',
                                 color: 'status-warning',
-                                className: v.extendedDemoDurationText,
+                                className: _.extendedDemoDurationText,
                                 children: e.toUpperCase()
                             }),
                             (0, l.jsx)(c.Text, {
                                 variant: 'text-xs/bold',
-                                children: E.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_UPSELL_TITLE.toUpperCase()
+                                children: S.intl.string(S.t.bbRRNT).toUpperCase()
                             })
                         ]
                     }),
                     (0, l.jsx)(c.Text, {
                         variant: 'text-sm/medium',
-                        children: E.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_UPSELL_BODY
+                        children: S.intl.string(S.t['1swibW'])
                     })
                 ]
             }),
             (0, l.jsx)('div', {
-                className: v.extendedDemoButton,
-                children: (0, l.jsx)(j, { size: c.Button.Sizes.SMALL })
+                className: _.extendedDemoButton,
+                children: (0, l.jsx)(Z, { size: c.Button.Sizes.SMALL })
             })
         ]
     });
 }
-function Z() {
+function T() {
     let e = (0, o.e7)([d.Z], () => d.Z.useReducedMotion);
     return (0, l.jsxs)('div', {
-        className: r()(v.reverseTrialEducationBannerContainer, { [v.reducedMotion]: e }),
+        className: s()(_.reverseTrialEducationBannerContainer, { [_.reducedMotion]: e }),
         children: [
             (0, l.jsx)(c.LottieAnimation, {
-                className: r()(v.unlockAnimation, { [v.reducedMotion]: e }),
+                className: s()(_.unlockAnimation, { [_.reducedMotion]: e }),
                 loop: !1,
                 shouldAnimate: !e,
                 pauseAtFrame: e ? 149 : void 0,
@@ -103,30 +103,30 @@ function Z() {
             }),
             (0, l.jsx)(c.Text, {
                 variant: 'text-xs/medium',
-                className: v.reverseTrialEducationText,
-                children: E.Z.Messages.PREMIUM_REVERSE_TRIAL_SCREEN_SHARE_QUALITY_EDUCATION.format()
+                className: _.reverseTrialEducationText,
+                children: S.intl.format(S.t.GimLpa, {})
             })
         ]
     });
 }
-function T(e) {
-    let { message: t, onClose: n, openStreamUpsellModal: s, glow: i = !1 } = e,
+function N(e) {
+    let { message: t, onClose: n, openStreamUpsellModal: i, glow: r = !1 } = e,
         o = {
-            section: C.jXE.STREAM_SETTINGS,
-            object: C.qAy.PREMIUM_UPSELL_BANNER,
-            objectType: C.Qqv.BUY
+            section: j.jXE.STREAM_SETTINGS,
+            object: j.qAy.PREMIUM_UPSELL_BANNER,
+            objectType: j.Qqv.BUY
         },
         d = (0, f.So)(a.q.STREAM_HIGH_QUALITY),
         m = h.Z.useExperiment({ location: 'StreamSettingsUpsellBanner' }, { autoTrackExposure: !1 }).extendedDemoDuration;
     return (0, l.jsx)('div', {
-        className: r()(v.upsellBanner, v.enhancedBanner, { [v.gradientGlow]: i }),
+        className: s()(_.upsellBanner, _.enhancedBanner, { [_.gradientGlow]: r }),
         children:
             d && m
                 ? (0, l.jsx)(I, {})
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsxs)('div', {
-                              className: v.iconTextContainer,
+                              className: _.iconTextContainer,
                               children: [
                                   (0, l.jsx)(c.NitroWheelIcon, {
                                       size: 'md',
@@ -134,27 +134,27 @@ function T(e) {
                                   }),
                                   (0, l.jsx)(c.Text, {
                                       variant: 'text-sm/medium',
-                                      className: r()(v.upsellText, v.enhancedUpsellText),
+                                      className: s()(_.upsellText, _.enhancedUpsellText),
                                       children:
                                           null != t
                                               ? t
                                               : d
                                                 ? (0, l.jsxs)(l.Fragment, {
                                                       children: [
-                                                          E.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_UPSELL_BODY,
+                                                          S.intl.string(S.t.zuZ2ws),
                                                           ' ',
-                                                          E.Z.Messages.LEARN_MORE_CLICK.format({
+                                                          S.intl.format(S.t.fjSvsL, {
                                                               onClick: () =>
-                                                                  s({
+                                                                  i({
                                                                       analyticsLocation: o,
                                                                       onClose: n
                                                                   })
                                                           })
                                                       ]
                                                   })
-                                                : E.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_LEARN_MORE_V3.format({
+                                                : S.intl.format(S.t['L/zCtr'], {
                                                       onClick: () =>
-                                                          s({
+                                                          i({
                                                               analyticsLocation: o,
                                                               onClose: n
                                                           })
@@ -163,8 +163,8 @@ function T(e) {
                               ]
                           }),
                           (0, l.jsx)('div', {
-                              className: v.enhancedCTAs,
-                              children: (0, l.jsx)(j, { location: o })
+                              className: _.enhancedCTAs,
+                              children: (0, l.jsx)(Z, { location: o })
                           })
                       ]
                   })

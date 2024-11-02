@@ -8,8 +8,8 @@ n(192379);
 var l = n(442837),
     r = n(239091),
     a = n(246364),
-    s = n(937111),
-    o = n(914010),
+    o = n(937111),
+    s = n(914010),
     c = n(451478),
     u = n(325257),
     d = n(674552),
@@ -27,18 +27,18 @@ function p(e, t) {
 function f(e) {
     let { guildNode: t } = e,
         n = t.id,
-        r = (0, l.e7)([s.Z], () => s.Z.getRequest(n)),
-        f = (0, l.e7)([s.Z], () => s.Z.getJoinRequestGuild(n), [n]),
-        _ = (0, l.e7)([c.Z], () => c.Z.isFocused()),
-        m = (0, l.e7)([o.Z], () => o.Z.getGuildId());
+        r = (0, l.e7)([o.Z], () => o.Z.getRequest(n)),
+        f = (0, l.e7)([o.Z], () => o.Z.getJoinRequestGuild(n), [n]),
+        m = (0, l.e7)([c.Z], () => c.Z.isFocused()),
+        g = (0, l.e7)([s.Z], () => s.Z.getGuildId());
     return null == f
         ? null
         : (0, i.jsx)(u.Z, {
               guildNode: t,
               guild: f,
-              animatable: _,
+              animatable: m,
               draggable: !1,
-              selected: n === m,
+              selected: n === g,
               preloadOnClick: !1,
               contextMenu: p,
               lowerBadge: (null == r ? void 0 : r.applicationStatus) === a.wB.REJECTED ? (0, d.jt)({ guildJoinRequestStatus: r.applicationStatus }) : void 0,

@@ -10,10 +10,10 @@ n.d(t, {
         return s;
     },
     Kl: function () {
-        return _;
+        return f;
     },
     U1: function () {
-        return E;
+        return _;
     },
     WB: function () {
         return i;
@@ -27,6 +27,6 @@ n.d(t, {
     (o.APPS = 'apps');
 let c = ['servers', 'apps', 'quests'],
     d = 'servers',
-    _ = 24,
-    E = 240;
+    f = 24,
+    _ = 240;
 ((l = i || (i = {})).DEFAULT = 'default'), (l.FLOATING = 'floating'), (l.COLLAPSED = 'collapsed'), ((u = a || (a = {})).ROOT = 'root'), (u.SERVERS_CATEGORY = 'server_tab'), (u.SERVERS_SEARCH = 'server_search'), ((s || (s = {})).GUILDS_BAR_ICON = 'guilds_bar_icon');

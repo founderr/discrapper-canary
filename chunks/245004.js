@@ -3,13 +3,13 @@ n(192379);
 var i = n(399606),
     a = n(481060),
     s = n(607070),
-    o = n(689938),
+    o = n(388032),
     l = n(841168),
     u = n(567949),
     c = n(552781),
     d = n(952567),
-    _ = n(807159);
-function E(e) {
+    f = n(807159);
+function _(e) {
     let { description: t, heading: n, imgSrc: i } = e;
     return (0, r.jsxs)('div', {
         className: l.topPerksCard,
@@ -40,25 +40,25 @@ t.Z = function () {
             (0, r.jsx)(a.Heading, {
                 className: l.heading,
                 variant: 'heading-xxl/extrabold',
-                children: o.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_HEADING
+                children: o.intl.string(o.t.aGdB3N)
             }),
             (0, r.jsxs)('div', {
                 className: l.topPerksCards,
                 children: [
-                    (0, r.jsx)(E, {
-                        description: o.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_HD_STREAMING_DESCRIPTION,
-                        heading: o.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_HD_STREAMING_HEADING,
+                    (0, r.jsx)(_, {
+                        description: o.intl.string(o.t.HTvLGh),
+                        heading: o.intl.string(o.t.IpRQw8),
                         imgSrc: d
                     }),
-                    (0, r.jsx)(E, {
-                        description: o.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_ANIMATED_GUILD_ICON_DESCRIPTION,
-                        heading: o.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_ANIMATED_GUILD_ICON_HEADING,
+                    (0, r.jsx)(_, {
+                        description: o.intl.string(o.t.wOYbTk),
+                        heading: o.intl.string(o.t.G6jZo6),
                         imgSrc: e ? c : u
                     }),
-                    (0, r.jsx)(E, {
-                        description: o.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_VANITY_URL_DESCRIPTION,
-                        heading: o.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_VANITY_URL_HEADING,
-                        imgSrc: _
+                    (0, r.jsx)(_, {
+                        description: o.intl.string(o.t.yCjoUF),
+                        heading: o.intl.string(o.t['/bX4Ji']),
+                        imgSrc: f
                     })
                 ]
             })

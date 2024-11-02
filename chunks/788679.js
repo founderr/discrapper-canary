@@ -1,50 +1,50 @@
 t.r(n),
     t.d(n, {
         default: function () {
-            return E;
+            return g;
         }
     });
 var i = t(200651);
 t(192379);
-var a = t(481060),
-    s = t(522664),
-    l = t(651530),
-    r = t(163268),
-    o = t(668058),
+var l = t(481060),
+    r = t(522664),
+    a = t(651530),
+    o = t(163268),
+    s = t(668058),
     u = t(112554),
     d = t(160877),
-    c = t(689938);
-function E(e) {
-    let { channelId: n, messageId: t, mediaItemUrl: E, embedId: M, transitionState: g, onClose: f } = e,
-        m = (0, l.yh)(),
-        I = (0, u.K)(n, t, E),
-        _ = (0, u.b)(n, t, M),
-        { reportFalsePositive: Z, isReportFalsePositiveLoading: S } = (0, o.$)({
-            onSuccess: () => (0, d.s)(f),
+    c = t(388032);
+function g(e) {
+    let { channelId: n, messageId: t, mediaItemUrl: g, embedId: m, transitionState: f, onClose: h } = e,
+        v = (0, a.yh)(),
+        I = (0, u.K)(n, t, g),
+        E = (0, u.b)(n, t, m),
+        { reportFalsePositive: p, isReportFalsePositiveLoading: M } = (0, s.$)({
+            onSuccess: () => (0, d.s)(h),
             onError: () => {
-                (0, a.showToast)((0, a.createToast)(c.Z.Messages.ERROR_GENERIC_TITLE, a.ToastType.FAILURE));
+                (0, l.showToast)((0, l.createToast)(c.intl.string(c.t.R0RpRU), l.ToastType.FAILURE));
             },
             report: () => {
-                (0, s.Uj)(
+                (0, r.Uj)(
                     n,
                     t,
                     I.map((e) => e.id),
-                    _.map((e) => e.id)
+                    E.map((e) => e.id)
                 );
             }
         });
     return (
-        !(m && (I.length > 0 || _.length > 0)) && f(),
+        !(v && (I.length > 0 || E.length > 0)) && h(),
         (0, i.jsx)(d.$, {
             messageId: t,
             channelId: n,
-            isReportFalsePositiveLoading: S,
-            analyticsContext: r.UU.EXPLICIT_MEDIA_OBSCURED_FALSE_POSITIVE_FLOW,
-            onConfirmPress: Z,
-            attachmentPreview: 1 === I.length && 0 === _.length ? I[0] : void 0,
-            embedPreview: 1 === _.length && 0 === I.length ? _[0] : void 0,
-            transitionState: g,
-            onClose: f
+            isReportFalsePositiveLoading: M,
+            analyticsContext: o.UU.EXPLICIT_MEDIA_OBSCURED_FALSE_POSITIVE_FLOW,
+            onConfirmPress: p,
+            attachmentPreview: 1 === I.length && 0 === E.length ? I[0] : void 0,
+            embedPreview: 1 === E.length && 0 === I.length ? E[0] : void 0,
+            transitionState: f,
+            onClose: h
         })
     );
 }

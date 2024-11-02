@@ -4,22 +4,22 @@ n.d(t, {
     }
 }),
     n(411104);
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(67523),
-    i = n(865267),
-    r = n(125664),
-    l = n(981631);
+var r = n(67523),
+    l = n(865267),
+    s = n(125664),
+    a = n(981631);
 function o(e) {
     let { tier: t, ...n } = e;
     switch (t) {
-        case l.Eu4.TIER_1:
-            return (0, s.jsx)(a.Z, { ...n });
-        case l.Eu4.TIER_2:
-            return (0, s.jsx)(i.Z, { ...n });
-        case l.Eu4.TIER_3:
-            return (0, s.jsx)(r.Z, { ...n });
-        case l.Eu4.NONE:
+        case a.Eu4.TIER_1:
+            return (0, i.jsx)(r.Z, { ...n });
+        case a.Eu4.TIER_2:
+            return (0, i.jsx)(l.Z, { ...n });
+        case a.Eu4.TIER_3:
+            return (0, i.jsx)(s.Z, { ...n });
+        case a.Eu4.NONE:
             return null;
         default:
             throw Error('Not a valid tier type');

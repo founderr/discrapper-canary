@@ -20,8 +20,8 @@ function d(e, t, n) {
         e
     );
 }
-let _ = 'lastSawPomelo';
-class E extends i.Z {
+let f = 'lastSawPomelo';
+class _ extends i.Z {
     constructor(...e) {
         super(...e),
             d(this, 'actions', { POST_CONNECTION_OPEN: () => this.onPostConnectionOpen() }),
@@ -32,14 +32,14 @@ class E extends i.Z {
                         let e = a.default.getCurrentUser();
                         if (null == e || e.isPomelo() || !e.hasVerifiedEmailOrPhone()) return !1;
                         let t = (0, l.ov)(),
-                            n = r.K.get(t ? 'lastSawPomeloMigration' : _);
+                            n = r.K.get(t ? 'lastSawPomeloMigration' : f);
                         return !(null != n && Date.now() - n < 604800000) && !0;
                     })()
                 ) {
                     let e = u.Z.getCurrentConfig({ location: 'uu_one_click' }, { autoTrackExposure: !1 }).enabled;
-                    (0, o.a)(c.Kq.APP_START, e, !1) && r.K.set(_, Date.now());
+                    (0, o.a)(c.Kq.APP_START, e, !1) && r.K.set(f, Date.now());
                 }
             });
     }
 }
-t.Z = new E();
+t.Z = new _();

@@ -4,16 +4,16 @@ n.d(t, {
     }
 });
 var l = n(553813),
-    s = n.n(l),
-    i = n(579806),
-    r = n(131951),
+    i = n.n(l),
+    r = n(579806),
+    s = n(131951),
     a = n(358085),
     o = n(70722),
     c = n(65154),
-    d = n(689938);
+    d = n(388032);
 function u() {
-    if (!r.Z.supports(c.AN.SOUNDSHARE)) return d.Z.Messages.GO_LIVE_SCREENSHARE_NO_SOUND;
-    if ((0, a.isWindows)() && !s().satisfies(null === i.Z || void 0 === i.Z ? void 0 : i.Z.os.release, o.I9)) return d.Z.Messages.GO_LIVE_SCREENSHARE_UPDATE_WINDOWS_FOR_SOUNDSHARE;
-    if ((0, a.isMac)() && !s().satisfies(null === i.Z || void 0 === i.Z ? void 0 : i.Z.os.release, o.Ec)) return d.Z.Messages.GO_LIVE_SCREENSHARE_UPDATE_MACOS_FOR_SOUNDSHARE;
+    if (!s.Z.supports(c.AN.SOUNDSHARE)) return d.intl.string(d.t['1b0Gm5']);
+    if ((0, a.isWindows)() && !i().satisfies(null === r.Z || void 0 === r.Z ? void 0 : r.Z.os.release, o.I9)) return d.intl.string(d.t.voRPTE);
+    if ((0, a.isMac)() && !i().satisfies(null === r.Z || void 0 === r.Z ? void 0 : r.Z.os.release, o.Ec)) return d.intl.string(d.t.v2y9PT);
     return null;
 }

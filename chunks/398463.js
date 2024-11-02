@@ -22,7 +22,7 @@ n.d(t, {
         return l;
     },
     Lj: function () {
-        return _;
+        return f;
     },
     Ls: function () {
         return d;
@@ -45,7 +45,7 @@ let i = 1000 / 60,
     u = 1000,
     c = 2,
     d = 50;
-class _ {
+class f {
     timeRemaining() {
         let e = performance.now() - this._startMs;
         return Math.max(0, this._deadlineMs - e);

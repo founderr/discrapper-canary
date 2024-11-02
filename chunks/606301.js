@@ -1,6 +1,6 @@
 n.d(t, {
     Tk: function () {
-        return _;
+        return f;
     },
     kT: function () {
         return c;
@@ -19,7 +19,7 @@ let l = /(!|\.|;|,|-|—|–|\?|"|')/g,
     u = /(\n|\t|\s)/g,
     c = (e) => e.replace(l, '').replace(u, ' '),
     d = (e) => (null == e ? [] : c(e).trim().split(' ')),
-    _ = i()(
+    f = i()(
         (e) => {
             a.default.track(o.rMx.AUTO_SUGGEST_DISPLAYED, { suggestion_trigger: e });
         },

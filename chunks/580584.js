@@ -8,30 +8,30 @@ var s = n(200651);
 n(192379);
 var a = n(332664),
     o = n(814249),
-    l = n(531578),
-    i = n(689938),
+    i = n(531578),
+    l = n(388032),
     r = n(443241);
 let c = [
     {
         className: r.emojiThumbsUp,
-        rating: l.aZ.GOOD,
+        rating: i.aZ.GOOD,
         classNameSelected: r.selected
     },
     {
         className: r.emojiThumbsDown,
-        rating: l.aZ.BAD,
+        rating: i.aZ.BAD,
         classNameSelected: r.selected
     }
 ];
 function d(e) {
-    let { transitionState: t, startRating: n, onClose: l, onSubmit: d } = e;
+    let { transitionState: t, startRating: n, onClose: i, onSubmit: d } = e;
     return (0, s.jsx)(a.Z, {
         modalType: 'summary',
-        header: i.Z.Messages.SUMMARIES_FEEDBACK_HEADER,
-        body: i.Z.Messages.SUMMARIES_FEEDBACK_BODY,
-        problemTitle: i.Z.Messages.SUMMARIES_FEEDBACK_PROBLEM_TITLE,
+        header: l.intl.string(l.t.hghcMj),
+        body: l.intl.string(l.t['QFU78/']),
+        problemTitle: l.intl.string(l.t.CtiHPj),
         onSubmit: d,
-        onClose: l,
+        onClose: i,
         ratingConfigs: c,
         transitionState: t,
         problems: (0, o.iq)(),

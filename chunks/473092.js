@@ -3,7 +3,7 @@ n.d(t, {
         return d;
     },
     Lm: function () {
-        return E;
+        return _;
     },
     MC: function () {
         return c;
@@ -15,7 +15,7 @@ n.d(t, {
         return a;
     },
     qc: function () {
-        return _;
+        return f;
     }
 });
 var r,
@@ -45,7 +45,7 @@ function d(e) {
         is_nudge_warning: s
     });
 }
-function _(e) {
+function f(e) {
     let { channelId: t, warningId: n, senderId: r, warningType: i, cta: a, isNudgeWarning: s } = e;
     l.default.track(u.rMx.SAFETY_WARNING_CTA_CLICKED, {
         channel_id: t,
@@ -56,7 +56,7 @@ function _(e) {
         is_nudge_warning: s
     });
 }
-function E() {
+function _() {
     var e;
     return !1 === (null === (e = o.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed);
 }

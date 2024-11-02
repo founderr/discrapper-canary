@@ -1,34 +1,34 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     },
     v: function () {
-        return E;
+        return g;
     }
 });
-var s = n(704215),
-    a = n(605236),
-    r = n(391110),
-    i = n(75077),
+var i = n(704215),
+    r = n(605236),
+    a = n(391110),
+    s = n(75077),
     l = n(595878),
     o = n(314684),
     c = n(735825),
-    _ = n(689938);
-function d() {
+    d = n(388032);
+function u() {
     let e = (0, o.yQ)(),
-        t = (0, l.cG)({ location: r.MQ.HOME }),
-        n = (0, l.AK)({ location: r.MQ.HOME }),
-        a = (0, l.mK)({ location: r.MQ.HOME });
+        t = (0, l.cG)({ location: a.MQ.HOME }),
+        n = (0, l.AK)({ location: a.MQ.HOME }),
+        r = (0, l.mK)({ location: a.MQ.HOME });
     if (null != e && !!t)
         return {
-            title: (0, i.k3)(e.nitroTenureStatus),
-            subtitle: (0, i.vZ)(e.nitroTenureStatus, null == e ? void 0 : e.tenureRewardSkuId, a && !n),
-            description: (0, i.BS)(e.nitroTenureStatus),
-            ctaDescription: (0, i.t2)(e.nitroTenureStatus, e.redeemableInDays),
-            pillText: e.nitroTenureStatus === c.EB.PENDING ? _.Z.Messages.REWARD.toLocaleUpperCase() : void 0,
-            dismissibleContentType: e.nitroTenureStatus === c.EB.REDEEMABLE ? s.z.TENURE_REWARD_REDEEMABLE_CONFETTI : void 0
+            title: (0, s.k3)(e.nitroTenureStatus),
+            subtitle: (0, s.vZ)(e.nitroTenureStatus, null == e ? void 0 : e.tenureRewardSkuId, r && !n),
+            description: (0, s.BS)(e.nitroTenureStatus),
+            ctaDescription: (0, s.t2)(e.nitroTenureStatus, e.redeemableInDays),
+            pillText: e.nitroTenureStatus === c.EB.PENDING ? d.intl.string(d.t.jyYgZ2).toLocaleUpperCase() : void 0,
+            dismissibleContentType: e.nitroTenureStatus === c.EB.REDEEMABLE ? i.z.TENURE_REWARD_REDEEMABLE_CONFETTI : void 0
         };
 }
-function E(e) {
-    return (null == e ? void 0 : e.showNotification) === !0 && (0, o.rM)(e).some((e) => !(0, a.un)(e));
+function g(e) {
+    return (null == e ? void 0 : e.showNotification) === !0 && (0, o.rM)(e).some((e) => !(0, r.un)(e));
 }

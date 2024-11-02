@@ -12,8 +12,8 @@ var r = n(192379),
     u = n(185923),
     c = n(981631);
 let d = (e) => {
-    let { emojiId: t, currentGuildId: n, popoutData: d, nonce: _, demoMode: E } = e,
-        { current: f } = r.useRef({
+    let { emojiId: t, currentGuildId: n, popoutData: d, nonce: f, demoMode: _ } = e,
+        { current: h } = r.useRef({
             guild_id: n,
             emoji_id: t,
             ...(0, i.v_)(a.Z.getChannel(s.Z.getChannelId(n)))
@@ -22,13 +22,13 @@ let d = (e) => {
         r.useEffect(() => {
             var e;
             (0, l.x)(u.qR.TrackOpenPopoutUsed),
-                !E &&
+                !_ &&
                     o.default.track(c.rMx.OPEN_POPOUT, {
                         type: null !== (e = null == d ? void 0 : d.analyticsType) && void 0 !== e ? e : 'Standard Emoji Popout',
-                        nonce: _,
-                        ...f
+                        nonce: f,
+                        ...h
                     });
         }, []),
-        f
+        h
     );
 };

@@ -1,8 +1,8 @@
 t(47120);
 var n,
-    a,
     r,
     o,
+    a,
     i = t(442837),
     c = t(570140);
 let l = {},
@@ -10,12 +10,12 @@ let l = {},
     d = [],
     f = !1,
     p = !1,
-    _ = null,
-    g = null;
-function T() {
+    g = null,
+    x = null;
+function b() {
     p = !0;
 }
-class x extends (n = i.ZP.Store) {
+class v extends (n = i.ZP.Store) {
     getAppliedGuildBoostsForGuild(e) {
         return null != l[e] ? l[e].subscriptions : null;
     }
@@ -32,10 +32,10 @@ class x extends (n = i.ZP.Store) {
         return p;
     }
     get applyBoostError() {
-        return _;
+        return g;
     }
     get unapplyBoostError() {
-        return g;
+        return x;
     }
     get cooldownEndsAt() {
         return u;
@@ -44,16 +44,16 @@ class x extends (n = i.ZP.Store) {
         return f;
     }
 }
-(o = 'AppliedGuildBoostStore'),
-    (r = 'displayName') in (a = x)
-        ? Object.defineProperty(a, r, {
-              value: o,
+(a = 'AppliedGuildBoostStore'),
+    (o = 'displayName') in (r = v)
+        ? Object.defineProperty(r, o, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[r] = o),
-    (s.Z = new x(c.Z, {
+        : (r[o] = a),
+    (s.Z = new v(c.Z, {
         GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function (e) {
             let { guildId: s, appliedBoosts: t } = e;
             l[s] = {
@@ -69,16 +69,16 @@ class x extends (n = i.ZP.Store) {
             let { endsAt: s } = e;
             u = s;
         },
-        GUILD_UNAPPLY_BOOST_START: T,
-        GUILD_APPLY_BOOST_START: T,
+        GUILD_UNAPPLY_BOOST_START: b,
+        GUILD_APPLY_BOOST_START: b,
         GUILD_APPLY_BOOST_SUCCESS: function (e) {
             let { appliedGuildBoost: s } = e,
                 t = new Set(s.map((e) => e.id));
-            (d = [...s, ...d.filter((e) => !t.has(e.id))]), (_ = null), (p = !1);
+            (d = [...s, ...d.filter((e) => !t.has(e.id))]), (g = null), (p = !1);
         },
         GUILD_APPLY_BOOST_FAIL: function (e) {
             let { error: s } = e;
-            (p = !1), (_ = s);
+            (p = !1), (g = s);
         },
         GUILD_UNAPPLY_BOOST_SUCCESS: function (e) {
             let { boostId: s } = e;
@@ -86,7 +86,7 @@ class x extends (n = i.ZP.Store) {
         },
         GUILD_UNAPPLY_BOOST_FAIL: function (e) {
             let { error: s } = e;
-            (p = !1), (g = s);
+            (p = !1), (x = s);
         },
         USER_APPLIED_BOOSTS_FETCH_START: function () {
             f = !0;

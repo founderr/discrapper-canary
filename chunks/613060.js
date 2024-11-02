@@ -14,26 +14,26 @@ function a(e, t, n) {
         e
     );
 }
-let s = {};
-class o extends (i = l.ZP.PersistedStore) {
+let o = {};
+class s extends (i = l.ZP.PersistedStore) {
     initialize(e) {
         null != e &&
             Object.keys(e).forEach((t) => {
-                'number' == typeof e[t] && (s[t] = e[t]);
+                'number' == typeof e[t] && (o[t] = e[t]);
             });
     }
     getState() {
-        return s;
+        return o;
     }
     hasViewed(e) {
-        return null != s[e];
+        return null != o[e];
     }
 }
-a(o, 'displayName', 'ViewHistoryStore'),
-    a(o, 'persistKey', 'ViewHistoryStore'),
-    (t.Z = new o(r.Z, {
+a(s, 'displayName', 'ViewHistoryStore'),
+    a(s, 'persistKey', 'ViewHistoryStore'),
+    (t.Z = new s(r.Z, {
         VIEW_HISTORY_MARK_VIEW: function (e) {
             let { key: t } = e;
-            s[t] = Date.now();
+            o[t] = Date.now();
         }
     }));

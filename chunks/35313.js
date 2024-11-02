@@ -3,12 +3,12 @@ t.d(n, {
         return o;
     }
 });
-var a = t(748780),
-    r = t(442837),
+var r = t(748780),
+    a = t(442837),
     i = t(481060),
     s = t(607070);
 function o() {
-    let e = (0, r.e7)([s.Z], () => s.Z.useReducedMotion);
+    let e = (0, a.e7)([s.Z], () => s.Z.useReducedMotion);
     return (0, i.useSpring)(
         {
             from: {
@@ -20,7 +20,7 @@ function o() {
                 transform: 'scale(1)'
             },
             config: {
-                easing: a.Z.Easing.quad,
+                easing: r.Z.Easing.quad,
                 duration: e ? 0 : 200,
                 clamp: !0
             }

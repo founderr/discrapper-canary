@@ -1,47 +1,47 @@
 n.d(t, {
     E: function () {
-        return I;
+        return h;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(120356),
-    i = n.n(a),
-    r = n(481060),
-    l = n(768581),
+var r = n(120356),
+    l = n.n(r),
+    s = n(481060),
+    a = n(768581),
     o = n(723047),
     c = n(570533),
-    d = n(689938),
+    d = n(388032),
     u = n(246435);
-function _(e) {
-    let { emoji: t, onRemoveEmoji: n, disabled: a = !1 } = e,
-        o = l.ZP.getEmojiURL({
+function m(e) {
+    let { emoji: t, onRemoveEmoji: n, disabled: r = !1 } = e,
+        o = a.ZP.getEmojiURL({
             id: t.id,
             animated: t.animated,
             size: 32
         });
-    return (0, s.jsxs)('div', {
-        className: i()(u.emojiRow, { [u.disabled]: a }),
+    return (0, i.jsxs)('div', {
+        className: l()(u.emojiRow, { [u.disabled]: r }),
         children: [
-            (0, s.jsx)('img', {
+            (0, i.jsx)('img', {
                 className: u.emojiImage,
                 src: o,
                 alt: t.name
             }),
-            (0, s.jsx)(r.Text, {
+            (0, i.jsx)(s.Text, {
                 color: 'header-primary',
                 variant: 'text-md/medium',
                 className: u.emojiAlias,
                 children: t.name
             }),
-            (0, s.jsx)(r.Button, {
-                look: r.Button.Looks.BLANK,
-                size: r.Button.Sizes.ICON,
+            (0, i.jsx)(s.Button, {
+                look: s.Button.Looks.BLANK,
+                size: s.Button.Sizes.ICON,
                 className: u.deleteButton,
                 onClick: () => n(t),
-                'aria-label': d.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_REMOVE_BUTTON_ARIA_LABEL,
-                disabled: a,
-                children: (0, s.jsx)(r.TrashIcon, {
+                'aria-label': d.intl.string(d.t.dVS92d),
+                disabled: r,
+                children: (0, i.jsx)(s.TrashIcon, {
                     size: 'md',
                     color: 'currentColor',
                     className: u.trashIcon
@@ -50,20 +50,20 @@ function _(e) {
         ]
     });
 }
-function I(e) {
-    let { tierEmojiIds: t, guildId: n, onRemoveEmoji: a } = e,
-        i = (0, c.Z)(n),
-        r = null != t ? i.filter((e) => t.has(e.id)) : [],
-        l = (0, o.mY)();
-    return (0, s.jsx)('div', {
+function h(e) {
+    let { tierEmojiIds: t, guildId: n, onRemoveEmoji: r } = e,
+        l = (0, c.Z)(n),
+        s = null != t ? l.filter((e) => t.has(e.id)) : [],
+        a = (0, o.mY)();
+    return (0, i.jsx)('div', {
         className: u.container,
-        children: r.map((e) =>
-            (0, s.jsx)(
-                _,
+        children: s.map((e) =>
+            (0, i.jsx)(
+                m,
                 {
                     emoji: e,
-                    onRemoveEmoji: () => a(e),
-                    disabled: l
+                    onRemoveEmoji: () => r(e),
+                    disabled: a
                 },
                 e.id
             )

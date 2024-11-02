@@ -1,104 +1,104 @@
 n(47120);
-var s = n(200651),
-    a = n(192379),
-    i = n(120356),
-    r = n.n(i),
-    l = n(481060),
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    s = n.n(l),
+    a = n(481060),
     o = n(700582),
     c = n(330726),
     d = n(51144),
     u = n(268350),
-    _ = n(419922),
-    I = n(689938),
-    E = n(102017);
+    m = n(419922),
+    h = n(388032),
+    g = n(102017);
 t.Z = (e) => {
-    let { className: t, isDisabled: i, sticker: T, canManageSticker: m } = e,
-        [N, S] = a.useState(!1),
-        [g, h] = (0, c.Z)(null, 4000),
-        C = () => {
-            (0, l.openModalLazy)(async () => {
+    let { className: t, isDisabled: l, sticker: x, canManageSticker: p } = e,
+        [f, C] = r.useState(!1),
+        [I, _] = (0, c.Z)(null, 4000),
+        N = () => {
+            (0, a.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e('93626'), n.e('2901')]).then(n.bind(n, 136735));
                 return (t) =>
-                    (0, s.jsx)(e, {
-                        sticker: T,
-                        guildId: T.guild_id,
+                    (0, i.jsx)(e, {
+                        sticker: x,
+                        guildId: x.guild_id,
                         ...t
                     });
             });
         },
-        x = async () => {
-            h(null), S(!0);
+        v = async () => {
+            _(null), C(!0);
             try {
-                await (0, u.Um)(T);
+                await (0, u.Um)(x);
             } catch (e) {
-                h(e.body.message), S(!1);
+                _(e.body.message), C(!1);
             }
         },
-        p = d.ZP.useUserTag(T.user);
-    return (0, s.jsx)(l.Tooltip, {
-        color: l.Tooltip.Colors.RED,
-        forceOpen: null != g,
-        text: g,
+        T = d.ZP.useUserTag(x.user);
+    return (0, i.jsx)(a.Tooltip, {
+        color: a.Tooltip.Colors.RED,
+        forceOpen: null != I,
+        text: I,
         children: () =>
-            (0, s.jsxs)('div', {
-                className: r()(E.wrapper, t, { [E.wrapperDisabled]: i }),
+            (0, i.jsxs)('div', {
+                className: s()(g.wrapper, t, { [g.wrapperDisabled]: l }),
                 children: [
-                    (0, s.jsxs)('div', {
-                        className: r()(E.content, { [E.contentRemoving]: N }),
+                    (0, i.jsxs)('div', {
+                        className: s()(g.content, { [g.contentRemoving]: f }),
                         children: [
-                            (0, s.jsx)(_.ZP, {
-                                className: E.sticker,
+                            (0, i.jsx)(m.ZP, {
+                                className: g.sticker,
                                 size: 72,
-                                sticker: T
+                                sticker: x
                             }),
-                            (0, s.jsxs)('div', {
+                            (0, i.jsxs)('div', {
                                 children: [
-                                    (0, s.jsx)(l.Text, {
+                                    (0, i.jsx)(a.Text, {
                                         color: 'header-primary',
                                         variant: 'text-xs/semibold',
-                                        className: E.stickerName,
-                                        children: T.name
+                                        className: g.stickerName,
+                                        children: x.name
                                     }),
-                                    null != T.user &&
-                                        (0, s.jsxs)('div', {
-                                            className: E.user,
+                                    null != x.user &&
+                                        (0, i.jsxs)('div', {
+                                            className: g.user,
                                             children: [
-                                                (0, s.jsx)(o.Z, {
-                                                    className: E.userAvatar,
-                                                    size: l.AvatarSizes.SIZE_16,
-                                                    user: T.user
+                                                (0, i.jsx)(o.Z, {
+                                                    className: g.userAvatar,
+                                                    size: a.AvatarSizes.SIZE_16,
+                                                    user: x.user
                                                 }),
-                                                (0, s.jsx)(l.Text, {
+                                                (0, i.jsx)(a.Text, {
                                                     color: 'header-secondary',
                                                     variant: 'text-xs/normal',
-                                                    children: p
+                                                    children: T
                                                 })
                                             ]
                                         })
                                 ]
                             }),
-                            m
-                                ? (0, s.jsxs)('div', {
-                                      className: E.actions,
+                            p
+                                ? (0, i.jsxs)('div', {
+                                      className: g.actions,
                                       children: [
-                                          (0, s.jsx)(l.Clickable, {
-                                              className: E.action,
-                                              onClick: C,
-                                              'aria-label': I.Z.Messages.EDIT,
-                                              children: (0, s.jsx)(l.PencilIcon, {
+                                          (0, i.jsx)(a.Clickable, {
+                                              className: g.action,
+                                              onClick: N,
+                                              'aria-label': h.intl.string(h.t.bt75u7),
+                                              children: (0, i.jsx)(a.PencilIcon, {
                                                   size: 'xs',
                                                   color: 'currentColor',
-                                                  className: E.icon
+                                                  className: g.icon
                                               })
                                           }),
-                                          (0, s.jsx)(l.Clickable, {
-                                              className: r()(E.action, E.actionRemove),
-                                              onClick: x,
-                                              'aria-label': I.Z.Messages.REMOVE,
-                                              children: (0, s.jsx)(l.XSmallIcon, {
+                                          (0, i.jsx)(a.Clickable, {
+                                              className: s()(g.action, g.actionRemove),
+                                              onClick: v,
+                                              'aria-label': h.intl.string(h.t.N86XcH),
+                                              children: (0, i.jsx)(a.XSmallIcon, {
                                                   size: 'md',
                                                   color: 'currentColor',
-                                                  className: E.icon
+                                                  className: g.icon
                                               })
                                           })
                                       ]
@@ -106,7 +106,7 @@ t.Z = (e) => {
                                 : null
                         ]
                     }),
-                    N && (0, s.jsx)(l.Spinner, { className: E.spinner })
+                    f && (0, i.jsx)(a.Spinner, { className: g.spinner })
                 ]
             })
     });

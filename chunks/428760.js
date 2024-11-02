@@ -3,49 +3,49 @@ n.d(t, {
         return u;
     }
 });
-var s = n(200651),
-    a = n(192379),
-    i = n(120356),
-    r = n.n(i),
-    l = n(481060),
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    s = n.n(l),
+    a = n(481060),
     o = n(730671),
-    c = n(689938),
+    c = n(388032),
     d = n(107636);
 function u(e) {
-    let { onChangeText: t, maxWordCount: n, className: i, textAreaClassName: u, subtitleText: _, initialValue: I } = e,
-        E = a.useMemo(() => (null != I ? I : []), [I]),
-        { value: T, onChange: m, errorMessage: N } = (0, o.Z)(t, I, n);
-    return (0, s.jsxs)(s.Fragment, {
+    let { onChangeText: t, maxWordCount: n, className: l, textAreaClassName: u, subtitleText: m, initialValue: h } = e,
+        g = r.useMemo(() => (null != h ? h : []), [h]),
+        { value: x, onChange: p, errorMessage: f } = (0, o.Z)(t, h, n);
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, s.jsxs)('div', {
-                className: r()(d.keywordsContainer, i),
+            (0, i.jsxs)('div', {
+                className: s()(d.keywordsContainer, l),
                 children: [
-                    (0, s.jsx)(l.TextAreaAutosize, {
-                        className: r()(d.keywordsTextArea, u),
-                        value: T,
-                        onChange: m,
-                        placeholder: c.Z.Messages.GUILD_AUTOMOD_KEYWORDS_PLACEHOLDER
+                    (0, i.jsx)(a.TextAreaAutosize, {
+                        className: s()(d.keywordsTextArea, u),
+                        value: x,
+                        onChange: p,
+                        placeholder: c.intl.string(c.t.UyaxJy)
                     }),
-                    (0, s.jsx)(l.Text, {
+                    (0, i.jsx)(a.Text, {
                         className: d.keywordsCounter,
                         variant: 'text-xs/normal',
                         color: 'text-muted',
-                        children: ''.concat(E.length, ' / ').concat(n)
+                        children: ''.concat(g.length, ' / ').concat(n)
                     })
                 ]
             }),
-            null != N
-                ? (0, s.jsx)(l.Text, {
-                      className: r()(d.paddingTop, d.errorText),
+            null != f
+                ? (0, i.jsx)(a.Text, {
+                      className: s()(d.paddingTop, d.errorText),
                       variant: 'text-xs/medium',
                       color: 'text-danger',
-                      children: N
+                      children: f
                   })
-                : (0, s.jsx)(l.Text, {
+                : (0, i.jsx)(a.Text, {
                       className: d.paddingTop,
                       variant: 'text-xs/normal',
                       color: 'header-secondary',
-                      children: null != _ ? _ : c.Z.Messages.GUILD_AUTOMOD_KEYWORD_ENTRY_HINT
+                      children: null != m ? m : c.intl.string(c.t['Gm6G5+'])
                   })
         ]
     });

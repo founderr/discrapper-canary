@@ -8,7 +8,7 @@ var r = n(544891),
     c = n(981631);
 t.Z = {
     updateActivity(e) {
-        let { applicationId: t, distributor: n, shareActivity: a, token: s = null, duration: o = 0, closed: l = !1, exePath: u = null, voiceChannelId: d = null, sessionId: _ = null, mediaSessionId: E = null } = e;
+        let { applicationId: t, distributor: n, shareActivity: a, token: s = null, duration: o = 0, closed: l = !1, exePath: u = null, voiceChannelId: d = null, sessionId: f = null, mediaSessionId: _ = null } = e;
         i.Z.wait(() =>
             i.Z.dispatch({
                 type: 'ACTIVITY_UPDATE_START',
@@ -29,8 +29,8 @@ t.Z = {
                         closed: l,
                         exePath: u,
                         voice_channel_id: d,
-                        session_id: _,
-                        media_session_id: E
+                        session_id: f,
+                        media_session_id: _
                     },
                     retries: 1,
                     oldFormErrors: !0
@@ -58,8 +58,8 @@ t.Z = {
         let { channelId: t, type: n, activity: r, content: i, location: l } = e,
             d = o.Z.getChannel(t);
         if (null == d) return Promise.resolve(null);
-        let _ = s.ZP.parse(d, null != i ? i : '');
-        return u.Z.sendMessage(d.id, _, !1, {
+        let f = s.ZP.parse(d, null != i ? i : '');
+        return u.Z.sendMessage(d.id, f, !1, {
             activityAction: {
                 type: n,
                 activity: r

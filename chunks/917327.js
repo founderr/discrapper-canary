@@ -1,47 +1,47 @@
-i.d(n, {
+t.d(e, {
     Z: function () {
-        return M;
+        return x;
     }
 });
-var t = i(200651);
-i(192379);
-var l = i(442837),
-    s = i(481060),
-    a = i(787014),
-    u = i(362721),
-    o = i(339340),
-    r = i(869768),
-    d = i(496675),
-    c = i(12498),
-    Z = i(981631),
-    E = i(689938);
-function M(e, n) {
-    let M = (0, l.e7)([d.Z], () => d.Z.can(Z.Plq.MANAGE_CHANNELS, n)),
-        _ = (0, u.Z)(e),
-        N = (0, r.W)(e),
-        C = (0, l.e7)([c.Z], () => c.Z.getChannelStatus(e)),
-        h = null != C && C.length > 0;
-    return e.isGuildVoice() && (M || _)
-        ? !N && M && h
-            ? (0, t.jsx)(s.MenuItem, {
+var i = t(200651);
+t(192379);
+var l = t(442837),
+    r = t(481060),
+    u = t(787014),
+    a = t(362721),
+    o = t(339340),
+    d = t(869768),
+    c = t(496675),
+    s = t(12498),
+    Z = t(981631),
+    h = t(388032);
+function x(n, e) {
+    let x = (0, l.e7)([c.Z], () => c.Z.can(Z.Plq.MANAGE_CHANNELS, e)),
+        g = (0, a.Z)(n),
+        f = (0, d.W)(n),
+        p = (0, l.e7)([s.Z], () => s.Z.getChannelStatus(n)),
+        M = null != p && p.length > 0;
+    return n.isGuildVoice() && (x || g)
+        ? !f && x && M
+            ? (0, i.jsx)(r.MenuItem, {
                   id: 'clear-status',
-                  label: E.Z.Messages.VOICE_CHANNEL_CLEAR_STATUS,
+                  label: h.intl.string(h.t['22CYiY']),
                   action: () => {
-                      a.ZP.updateVoiceChannelStatus(e.id, '');
+                      u.ZP.updateVoiceChannelStatus(n.id, '');
                   }
               })
-            : N && _
-              ? (0, t.jsx)(s.MenuItem, {
+            : f && g
+              ? (0, i.jsx)(r.MenuItem, {
                     id: 'set-status',
-                    label: E.Z.Messages.VOICE_CHANNEL_SET_STATUS,
+                    label: h.intl.string(h.t.Mgpxi4),
                     action: () => {
-                        (0, s.openModalLazy)(
+                        (0, r.openModalLazy)(
                             async () => {
-                                let { default: n } = await Promise.resolve().then(i.bind(i, 339340));
-                                return (i) =>
-                                    (0, t.jsx)(n, {
-                                        channel: e,
-                                        ...i
+                                let { default: e } = await Promise.resolve().then(t.bind(t, 339340));
+                                return (t) =>
+                                    (0, i.jsx)(e, {
+                                        channel: n,
+                                        ...t
                                     });
                             },
                             { modalKey: o.VOICE_CHANNEL_STATUS_MODAL_KEY }

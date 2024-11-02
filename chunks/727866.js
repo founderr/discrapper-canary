@@ -1,7 +1,7 @@
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(689938);
+    a = n(388032);
 let s = (e, t) =>
     (0, r.jsxs)(
         i.Text,
@@ -28,9 +28,9 @@ let s = (e, t) =>
     );
 t.Z = {
     getTextInVoiceSendMessageChannelPermissionText: function (e) {
-        return e ? a.Z.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_WITH_TIV_DESCRIPTION_TEXT_DISABLED.format({ warningHook: s }) : a.Z.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_DESCRIPTION_TEXT;
+        return e ? a.intl.format(a.t.Q1rwpq, { warningHook: s }) : a.intl.string(a.t.WQ6zpa);
     },
     getTextInVoiceReadMessageHistoryChannelPermissionText: function (e) {
-        return e ? a.Z.Messages.ROLE_PERMISSIONS_READ_MESSAGE_HISTORY_WITH_TIV_DESCRIPTION_TEXT_DISABLED.format({ warningHook: s }) : a.Z.Messages.ROLE_PERMISSIONS_READ_MESSAGE_HISTORY_DESCRIPTION_TEXT;
+        return e ? a.intl.format(a.t.Rx4pbG, { warningHook: s }) : a.intl.string(a.t.cuMfHx);
     }
 };

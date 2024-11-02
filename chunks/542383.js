@@ -1,21 +1,21 @@
-n.d(a, {
+n.d(t, {
     Z: function () {
-        return l;
+        return r;
     }
 });
-var t = n(192379),
-    r = n(358085);
-function l(e) {
-    let a = t.useRef(e);
+var a = n(192379),
+    l = n(358085);
+function r(e) {
+    let t = a.useRef(e);
     return (
-        t.useEffect(() => {
-            a.current = e;
+        a.useEffect(() => {
+            t.current = e;
         }, [e]),
-        t.useCallback((e) => {
+        a.useCallback((e) => {
             let n = e.ctrlKey && !(e.altKey || e.metaKey || e.shiftKey),
-                t = e.metaKey && !(e.altKey || e.ctrlKey || e.shiftKey),
-                { disabled: l = !1, onSubmit: s } = a.current;
-            if ('enter' === e.key.toLowerCase()) ('macos' === (0, r.getOS)() ? t : n) && !l && (e.preventDefault(), s());
+                a = e.metaKey && !(e.altKey || e.ctrlKey || e.shiftKey),
+                { disabled: r = !1, onSubmit: i } = t.current;
+            if ('enter' === e.key.toLowerCase()) ('macos' === (0, l.getOS)() ? a : n) && !r && (e.preventDefault(), i());
         }, [])
     );
 }

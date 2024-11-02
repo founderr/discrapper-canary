@@ -4,18 +4,18 @@ n.d(t, {
     }
 }),
     n(47120);
-var r = n(192379),
-    s = n(442837),
-    i = n(365943),
-    l = n(25251),
-    o = n(223143);
+var i = n(192379),
+    r = n(442837),
+    l = n(365943),
+    o = n(25251),
+    s = n(223143);
 function a() {
     var e;
-    let { isFetching: t, fetchCategoriesError: n, fetchPurchasesError: a, categories: c, purchases: d } = (0, o.Z)(),
-        [u, f, m] = (0, s.Wu)([l.Z], () => [l.Z.isFetching, l.Z.fetchError, l.Z.profileEffects]);
+    let { isFetching: t, fetchCategoriesError: n, fetchPurchasesError: a, categories: c, purchases: d } = (0, s.Z)(),
+        [u, f, m] = (0, r.Wu)([o.Z], () => [o.Z.isFetching, o.Z.fetchError, o.Z.profileEffects]);
     return (
-        r.useEffect(() => {
-            (0, i.z)(!0);
+        i.useEffect(() => {
+            (0, l.z)(!0);
         }, []),
         {
             isFetching: t || u,

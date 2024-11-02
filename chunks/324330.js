@@ -1,49 +1,49 @@
 n.d(t, {
     $: function () {
-        return T;
+        return x;
     },
     Z: function () {
-        return m;
+        return p;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(392711),
-    i = n(442837),
-    r = n(481060),
-    l = n(241559),
+var r = n(392711),
+    l = n(442837),
+    s = n(481060),
+    a = n(241559),
     o = n(527379),
     c = n(313364),
     d = n(434404),
     u = n(999382),
-    _ = n(981631),
-    I = n(689938),
-    E = n(535633);
-function T() {
+    m = n(981631),
+    h = n(388032),
+    g = n(535633);
+function x() {
     var e;
-    let t = (0, i.e7)([u.Z], () => u.Z.getProps().guild, []),
+    let t = (0, l.e7)([u.Z], () => u.Z.getProps().guild, []),
         n = null !== (e = null == t ? void 0 : t.isCommunity()) && void 0 !== e && e;
-    return (0, s.jsxs)(r.Clickable, {
+    return (0, i.jsxs)(s.Clickable, {
         onClick: (e) => {
-            if (null != t) n ? (e.preventDefault(), d.Z.close(), (0, o._X)(t.id)) : d.Z.open(t.id, _.pNK.MEMBERS);
+            if (null != t) n ? (e.preventDefault(), d.Z.close(), (0, o._X)(t.id)) : d.Z.open(t.id, m.pNK.MEMBERS);
         },
-        className: E.rowContainer,
+        className: g.rowContainer,
         children: [
-            (0, s.jsx)('div', { children: I.Z.Messages.MEMBERS }),
+            (0, i.jsx)('div', { children: h.intl.string(h.t['9Oq93t']) }),
             n &&
-                (0, s.jsx)(r.WindowLaunchIcon, {
+                (0, i.jsx)(s.WindowLaunchIcon, {
                     size: 'custom',
                     color: 'currentColor',
-                    className: E.linkIcon,
+                    className: g.linkIcon,
                     width: 16,
                     height: 16
                 })
         ]
     });
 }
-function m() {
+function p() {
     var e;
-    let { guild: t } = (0, i.e7)([u.Z], () => u.Z.getProps(), [], a.isEqual),
-        n = null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : _.lds;
-    return (0, l.n2)(n) ? (0, s.jsx)(c.Z, { guildId: n }) : null;
+    let { guild: t } = (0, l.e7)([u.Z], () => u.Z.getProps(), [], r.isEqual),
+        n = null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : m.lds;
+    return (0, a.n2)(n) ? (0, i.jsx)(c.Z, { guildId: n }) : null;
 }

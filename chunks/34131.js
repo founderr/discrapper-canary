@@ -5,30 +5,30 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(70097),
-    s = n(434404),
-    r = n(970731),
-    l = n(981631),
-    o = n(689938),
+var r = n(70097),
+    l = n(434404),
+    a = n(970731),
+    s = n(981631),
+    o = n(388032),
     c = n(743383);
 function d(e) {
     let { guildId: t, markAsDismissed: n } = e;
     return (0, i.jsx)('div', {
         className: c.container,
-        children: (0, i.jsx)(r.ZP, {
-            header: o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_UPSELL_TITLE,
-            content: o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_UPSELL_BODY,
-            asset: (0, i.jsx)(a.Z, {
+        children: (0, i.jsx)(a.ZP, {
+            header: o.intl.string(o.t.gCgirq),
+            content: o.intl.string(o.t.fLMZFx),
+            asset: (0, i.jsx)(r.Z, {
                 className: c.video,
                 src: 'https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov',
                 autoPlay: !0,
                 loop: !0
             }),
-            buttonCTA: o.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_UPSELL_CTA,
+            buttonCTA: o.intl.string(o.t.BQq86u),
             onClick: () => {
-                s.Z.open(t, l.pNK.ROLE_SUBSCRIPTIONS, void 0, l.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE);
+                l.Z.open(t, s.pNK.ROLE_SUBSCRIPTIONS, void 0, s.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE);
             },
-            secondaryButtonCTA: o.Z.Messages.DISMISS,
+            secondaryButtonCTA: o.intl.string(o.t.WAI6xs),
             markAsDismissed: n
         })
     });

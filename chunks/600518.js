@@ -1,19 +1,19 @@
 n.d(t, {
     v: function () {
-        return s;
+        return l;
     },
     z: function () {
-        return a;
+        return r;
     }
 });
 var i = n(570140);
-function s(e) {
+function l(e) {
     i.Z.dispatch({
         type: 'STAGE_MUSIC_MUTE',
         muted: e
     });
 }
-function a(e) {
+function r(e) {
     i.Z.dispatch({
         type: 'STAGE_MUSIC_PLAY',
         play: e

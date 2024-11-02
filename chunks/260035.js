@@ -15,36 +15,36 @@ var r = n(200651),
 function d(e) {
     let { children: t } = e,
         [n, d] = i.useState(null),
-        [_, E] = i.useState(null),
-        f = i.useRef(new Set()),
-        [h, p] = i.useState(!1),
-        I = (0, s.e7)([o.Z], () => o.Z.getCurrentlySelectedChannelId()),
-        m = i.useCallback((e) => {
-            f.current.delete(e), p(f.current.size > 0);
+        [f, _] = i.useState(null),
+        h = i.useRef(new Set()),
+        [p, m] = i.useState(!1),
+        g = (0, s.e7)([o.Z], () => o.Z.getCurrentlySelectedChannelId()),
+        E = i.useCallback((e) => {
+            h.current.delete(e), m(h.current.size > 0);
         }, []),
-        T = i.useCallback((e) => (f.current.add(e), p(!0), () => m(e)), [m]),
-        S = i.useCallback((e, t) => {
-            for (let n of f.current) n(e, t);
+        v = i.useCallback((e) => (h.current.add(e), m(!0), () => E(e)), [E]),
+        I = i.useCallback((e, t) => {
+            for (let n of h.current) n(e, t);
         }, []);
     return (
         i.useEffect(() => {
-            null == _ || _.clearConfetti();
-        }, [_, I]),
+            null == f || f.clearConfetti();
+        }, [f, g]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(l.d, {
-                    confettiCanvas: _,
+                    confettiCanvas: f,
                     spriteCanvas: n,
                     baseConfig: u.We,
-                    addClickListener: T,
-                    removeClickListener: m,
+                    addClickListener: v,
+                    removeClickListener: E,
                     children: t
                 }),
                 (0, r.jsx)(a.O_, {
-                    ref: E,
+                    ref: _,
                     className: c.canvas,
                     environment: u.rq,
-                    onClick: h ? S : void 0
+                    onClick: p ? I : void 0
                 }),
                 (0, r.jsx)(a.Ji, {
                     ref: d,

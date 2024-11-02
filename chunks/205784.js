@@ -1,68 +1,68 @@
-t.r(l),
-    t.d(l, {
+l.r(t),
+    l.d(t, {
         default: function () {
-            return _;
+            return p;
         }
     });
-var n = t(200651);
-t(192379);
-var d = t(442837),
-    i = t(481060),
-    u = t(239091),
-    a = t(749210),
-    s = t(664915),
-    r = t(771845),
-    o = t(181945),
-    c = t(945983),
-    f = t(981631),
-    E = t(689938);
-function _(e) {
-    var l;
-    let { folderId: _, folderName: m, folderColor: M, unread: p, onSelect: b } = e,
-        Z = (0, d.e7)([r.ZP], () => r.ZP.getGuildFolderById(_), [_]),
-        g = (0, c.Z)(null !== (l = null == Z ? void 0 : Z.guildIds) && void 0 !== l ? l : []),
-        L = (0, d.e7)([s.Z], () => s.Z.getExpandedFolders().size > 0);
-    return (0, n.jsxs)(i.Menu, {
+var n = l(200651);
+l(192379);
+var i = l(442837),
+    d = l(481060),
+    u = l(239091),
+    r = l(749210),
+    a = l(664915),
+    o = l(771845),
+    s = l(181945),
+    c = l(945983),
+    f = l(981631),
+    m = l(388032);
+function p(e) {
+    var t;
+    let { folderId: p, folderName: b, folderColor: g, unread: j, onSelect: x } = e,
+        Z = (0, i.e7)([o.ZP], () => o.ZP.getGuildFolderById(p), [p]),
+        k = (0, c.Z)(null !== (t = null == Z ? void 0 : Z.guildIds) && void 0 !== t ? t : []),
+        M = (0, i.e7)([a.Z], () => a.Z.getExpandedFolders().size > 0);
+    return (0, n.jsxs)(d.Menu, {
         navId: 'guild-context',
-        'aria-label': E.Z.Messages.GUILD_ACTIONS_MENU_LABEL,
+        'aria-label': m.intl.string(m.t.HpQykZ),
         onClose: u.Zy,
-        onSelect: b,
+        onSelect: x,
         children: [
-            (0, n.jsx)(i.MenuGroup, {
-                children: (0, n.jsx)(i.MenuItem, {
+            (0, n.jsx)(d.MenuGroup, {
+                children: (0, n.jsx)(d.MenuItem, {
                     id: 'mark-folder-read',
-                    label: E.Z.Messages.SERVER_FOLDER_MARK_AS_READ,
+                    label: m.intl.string(m.t.thzRJC),
                     action: function () {
                         if (null == Z) return;
                         let { guildIds: e } = Z;
-                        (0, o.Z)(e, f.jXE.GUILD_LIST);
+                        (0, s.Z)(e, f.jXE.GUILD_LIST);
                     },
-                    disabled: !p
+                    disabled: !j
                 })
             }),
-            null != g ? (0, n.jsx)(i.MenuGroup, { children: g }) : null,
-            (0, n.jsxs)(i.MenuGroup, {
+            null != k ? (0, n.jsx)(d.MenuGroup, { children: k }) : null,
+            (0, n.jsxs)(d.MenuGroup, {
                 children: [
-                    (0, n.jsx)(i.MenuItem, {
+                    (0, n.jsx)(d.MenuItem, {
                         id: 'folder-settings',
-                        label: E.Z.Messages.SERVER_FOLDER_SETTINGS,
+                        label: m.intl.string(m.t.Dx7im5),
                         action: () =>
-                            (0, i.openModalLazy)(async () => {
-                                let { default: e } = await t.e('66915').then(t.bind(t, 662708));
-                                return (l) =>
+                            (0, d.openModalLazy)(async () => {
+                                let { default: e } = await l.e('66915').then(l.bind(l, 662708));
+                                return (t) =>
                                     (0, n.jsx)(e, {
-                                        ...l,
-                                        folderId: _,
-                                        folderName: m,
-                                        folderColor: M
+                                        ...t,
+                                        folderId: p,
+                                        folderName: b,
+                                        folderColor: g
                                     });
                             })
                     }),
-                    L &&
-                        (0, n.jsx)(i.MenuItem, {
+                    M &&
+                        (0, n.jsx)(d.MenuItem, {
                             id: 'folder-collapse',
-                            label: E.Z.Messages.SERVER_FOLDER_COLLAPSE_ALL,
-                            action: () => a.Z.collapseAllFolders()
+                            label: m.intl.string(m.t.rCPsbm),
+                            action: () => r.Z.collapseAllFolders()
                         })
                 ]
             })

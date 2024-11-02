@@ -1,25 +1,25 @@
-t.d(n, {
+e.d(t, {
     Z: function () {
         return c;
     }
 }),
-    t(653041),
-    t(47120);
-var r = t(192379),
-    i = t(442837),
-    o = t(430824),
-    l = t(973001);
-function c(e) {
-    let { application: n, showMutualGuilds: t = !0 } = e,
-        c = (0, i.e7)([l.Z], () => l.Z.getGuildIdsForApplication(null == n ? void 0 : n.id), [n]),
+    e(653041),
+    e(47120);
+var r = e(192379),
+    i = e(442837),
+    o = e(430824),
+    l = e(973001);
+function c(n) {
+    let { application: t, showMutualGuilds: e = !0 } = n,
+        c = (0, i.e7)([l.Z], () => l.Z.getGuildIdsForApplication(null == t ? void 0 : t.id), [t]),
         u = (0, i.e7)([o.Z], () => o.Z.isLoaded());
     return r.useMemo(() => {
-        let e = [];
-        if (!u || !t || null == c || null == n) return e;
-        for (let n of c) {
-            let t = o.Z.getGuild(n);
-            null != t && e.push(t);
+        let n = [];
+        if (!u || !e || null == c || null == t) return n;
+        for (let t of c) {
+            let e = o.Z.getGuild(t);
+            null != e && n.push(e);
         }
-        return e;
-    }, [u, c, n, t]);
+        return n;
+    }, [u, c, t, e]);
 }

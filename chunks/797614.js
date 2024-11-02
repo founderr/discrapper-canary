@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-let _ = new Set(['darwin', 'linux', 'win32', 'ios', 'android']);
+let f = new Set(['darwin', 'linux', 'win32', 'ios', 'android']);
 ((i = r || (r = {})).COUNT = 'count'), (i.DISTRIBUTION = 'distribution');
 t.Z = new (class e {
     _getMetricWithDefaults(e, t) {
@@ -38,7 +38,7 @@ t.Z = new (class e {
             if ((0, o.isWeb)()) return 'web';
             {
                 let e = (0, o.getPlatformName)();
-                return _.has(e) ? e : null;
+                return f.has(e) ? e : null;
             }
         })();
         null != s && i.tags.push('platform:'.concat(s));
@@ -70,8 +70,8 @@ t.Z = new (class e {
                     body: {
                         metrics: e,
                         client_info: {
-                            built_at: '1730517554900',
-                            build_number: '341142'
+                            built_at: '1730590186696',
+                            build_number: '341192'
                         }
                     },
                     retries: 1

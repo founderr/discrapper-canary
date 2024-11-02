@@ -1,6 +1,6 @@
 n.d(t, {
     LU: function () {
-        return I;
+        return g;
     }
 }),
     n(47120),
@@ -15,8 +15,8 @@ var r,
     c = n(581883);
 n(689079);
 var d = n(674563),
-    _ = n(526761);
-function E(e, t, n) {
+    f = n(526761);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,16 +29,16 @@ function E(e, t, n) {
         e
     );
 }
-let f = [l.yU.CHAT, l.yU.PRIMARY_ENTRY_POINT],
-    h = { pendingUsages: [] },
-    p = new u.ZP({
+let h = [l.yU.CHAT, l.yU.PRIMARY_ENTRY_POINT],
+    p = { pendingUsages: [] },
+    m = new u.ZP({
         computeBonus: () => 1,
         computeWeight: (e) => (e <= 3 ? 100 : e <= 15 ? 70 : e <= 30 ? 50 : e <= 45 ? 30 : e <= 80 ? 10 : 1),
         lookupKey: (e) => e,
         afterCompute: () => {},
         numFrequentlyItems: d.yP
     });
-function I(e, t) {
+function g(e, t) {
     return e
         .filter((e) => {
             if (e.includes(':')) return (null == t ? void 0 : t.guild) != null && t.guild.id === e.split(':')[1];
@@ -46,61 +46,61 @@ function I(e, t) {
         })
         .map((e) => e.split(':')[0]);
 }
-function m(e, t) {
+function E(e, t) {
     return 0 > Number(t.id) ? t.id : (null == e ? void 0 : e.guild) != null && null != t.guildId ? ''.concat(t.id, ':').concat(e.guild.id) : t.id;
 }
-function T() {
+function v() {
     var e, t;
     let n = null !== (t = null === (e = c.Z.frecencyWithoutFetchingLatest.applicationCommandFrecency) || void 0 === e ? void 0 : e.applicationCommands) && void 0 !== t ? t : {};
-    p.overwriteHistory(
+    m.overwriteHistory(
         a().mapValues(n, (e) => ({
             ...e,
             recentUses: e.recentUses.map(Number).filter((e) => e > 0)
         })),
-        h.pendingUsages
+        p.pendingUsages
     );
 }
-class S extends (r = s.ZP.PersistedStore) {
+class I extends (r = s.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (h = e), this.syncWith([c.Z], T);
+        null != e && (p = e), this.syncWith([c.Z], v);
     }
     getState() {
-        return h;
+        return p;
     }
     hasPendingUsage() {
-        return h.pendingUsages.length > 0;
+        return p.pendingUsages.length > 0;
     }
     getCommandFrecencyWithoutLoadingLatest() {
-        return p;
+        return m;
     }
     getScoreWithoutLoadingLatest(e, t) {
         var n;
-        return null !== (n = p.getScore(m(e, t))) && void 0 !== n ? n : 0;
+        return null !== (n = m.getScore(E(e, t))) && void 0 !== n ? n : 0;
     }
     getTopCommandsWithoutLoadingLatest() {
-        return p.frequently;
+        return m.frequently;
     }
 }
-E(S, 'displayName', 'ApplicationCommandFrecencyStore'),
-    E(S, 'persistKey', 'ApplicationCommandFrecencyV2'),
-    (t.ZP = new S(o.Z, {
+_(I, 'displayName', 'ApplicationCommandFrecencyStore'),
+    _(I, 'persistKey', 'ApplicationCommandFrecencyV2'),
+    (t.ZP = new I(o.Z, {
         APPLICATION_COMMAND_USED: function (e) {
             let { command: t, context: n } = e;
-            if (!f.includes(t.type)) return !1;
-            let r = m(n, t);
-            h.pendingUsages.push({
+            if (!h.includes(t.type)) return !1;
+            let r = E(n, t);
+            p.pendingUsages.push({
                 key: r,
                 timestamp: Date.now()
             }),
-                p.track(r),
-                p.compute();
+                m.track(r),
+                m.compute();
         },
         USER_SETTINGS_PROTO_UPDATE: function (e) {
             let {
                 settings: { type: t },
                 wasSaved: n
             } = e;
-            if (t !== _.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
-            h.pendingUsages = [];
+            if (t !== f.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
+            p.pendingUsages = [];
         }
     }));

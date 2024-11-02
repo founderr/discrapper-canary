@@ -1,48 +1,48 @@
 n.d(t, {
     FD: function () {
-        return h;
-    },
-    I5: function () {
-        return A;
-    },
-    Mn: function () {
-        return T;
-    },
-    P6: function () {
-        return D;
-    },
-    S2: function () {
-        return m;
-    },
-    UZ: function () {
-        return N;
-    },
-    V3: function () {
-        return g;
-    },
-    W3: function () {
-        return L;
-    },
-    Zy: function () {
         return p;
     },
-    b9: function () {
+    I5: function () {
+        return T;
+    },
+    Mn: function () {
         return v;
     },
-    cV: function () {
+    P6: function () {
+        return O;
+    },
+    S2: function () {
+        return E;
+    },
+    UZ: function () {
+        return b;
+    },
+    V3: function () {
+        return S;
+    },
+    W3: function () {
         return R;
     },
+    Zy: function () {
+        return m;
+    },
+    b9: function () {
+        return N;
+    },
+    cV: function () {
+        return y;
+    },
     ol: function () {
-        return S;
+        return I;
     },
     si: function () {
         return C;
     },
     ss: function () {
-        return I;
+        return g;
     },
     xn: function () {
-        return O;
+        return A;
     }
 });
 var r = n(544891),
@@ -54,18 +54,18 @@ var r = n(544891),
     u = n(768581),
     c = n(546796),
     d = n(893776),
-    _ = n(981631),
-    E = n(792101),
-    f = n(689938);
-function h() {
+    f = n(981631),
+    _ = n(792101),
+    h = n(388032);
+function p() {
     s.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_INIT' });
 }
-function p() {
+function m() {
     s.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_CLOSE' });
 }
-function I(e, t) {
-    let n = t ? f.Z.Messages.DELETE_ACCOUNT : f.Z.Messages.DISABLE_ACCOUNT,
-        i = t ? _.ANM.DELETE_ACCOUNT : _.ANM.DISABLE_ACCOUNT;
+function g(e, t) {
+    let n = t ? h.intl.string(h.t['8lQ2ra']) : h.intl.string(h.t.jf5GGR),
+        i = t ? f.ANM.DELETE_ACCOUNT : f.ANM.DISABLE_ACCOUNT;
     return (0, c.Z)(
         (t) =>
             r.tn.post({
@@ -81,12 +81,12 @@ function I(e, t) {
             checkEnabled: !1
         }
     ).then(() => {
-        d.Z.logoutInternal(), (0, o.uL)(_.Z5c.DEFAULT_LOGGED_OUT);
+        d.Z.logoutInternal(), (0, o.uL)(f.Z5c.DEFAULT_LOGGED_OUT);
     });
 }
-async function m(e) {
+async function E(e) {
     let t = await r.tn.patch({
-            url: _.ANM.ME,
+            url: f.ANM.ME,
             oldFormErrors: !0,
             body: e
         }),
@@ -114,8 +114,8 @@ async function m(e) {
         t
     );
 }
-function T(e) {
-    let { username: t, discriminator: n, email: r, emailToken: a, password: o, avatar: d, avatarDecoration: h, newPassword: p, globalName: I } = e;
+function v(e) {
+    let { username: t, discriminator: n, email: r, emailToken: a, password: o, avatar: d, avatarDecoration: p, newPassword: m, globalName: g } = e;
     return (
         s.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT' }),
         (0, c.Z)(
@@ -127,20 +127,20 @@ function T(e) {
                     password: o,
                     avatar: d,
                     discriminator: n,
-                    global_name: I,
-                    new_password: p,
+                    global_name: g,
+                    new_password: m,
                     ...e
                 };
-                null === h && (s.avatar_decoration_id = null), null != h && ((s.avatar_decoration_id = h.id), (s.avatar_decoration_sku_id = h.skuId));
-                let l = i.K.get(_.JkL),
-                    u = (0, E.xJ)();
+                null === p && (s.avatar_decoration_id = null), null != p && ((s.avatar_decoration_id = p.id), (s.avatar_decoration_sku_id = p.skuId));
+                let l = i.K.get(f.JkL),
+                    u = (0, _.xJ)();
                 null != u && null != l && ((s.push_provider = u), (s.push_token = l));
-                let c = i.K.get(_.scU);
-                return null != E.mv && null != c && ((s.push_voip_provider = E.mv), (s.push_voip_token = c)), m(s);
+                let c = i.K.get(f.scU);
+                return null != _.mv && null != c && ((s.push_voip_provider = _.mv), (s.push_voip_token = c)), E(s);
             },
             {
                 checkEnabled: !1,
-                modalProps: { title: f.Z.Messages.TWO_FA_CHANGE_ACCOUNT },
+                modalProps: { title: h.intl.string(h.t.clQc1d) },
                 hooks: {
                     onEarlyClose: () =>
                         s.Z.dispatch({
@@ -152,7 +152,7 @@ function T(e) {
         ).then(
             (e) => {
                 let t = e.body;
-                return l.default.track(_.rMx.USER_AVATAR_UPDATED, { animated: (0, u.xR)(t.avatar) }), s.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS' }), e;
+                return l.default.track(f.rMx.USER_AVATAR_UPDATED, { animated: (0, u.xR)(t.avatar) }), s.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS' }), e;
             },
             (e) => (
                 s.Z.dispatch({
@@ -164,53 +164,53 @@ function T(e) {
         )
     );
 }
-function S() {
+function I() {
     return r.tn.get({
-        url: _.ANM.USER_HARVEST,
+        url: f.ANM.USER_HARVEST,
         oldFormErrors: !0
     });
 }
-function g(e) {
+function S(e) {
     return r.tn.post({
-        url: _.ANM.USER_HARVEST,
+        url: f.ANM.USER_HARVEST,
         body: { backends: e },
         oldFormErrors: !0
     });
 }
-function A(e) {
+function T(e) {
     s.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR',
         avatar: e
     }),
-        null == e ? a.uv.announce(f.Z.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE) : a.uv.announce(f.Z.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED);
+        null == e ? a.uv.announce(h.intl.string(h.t['f1+oNj'])) : a.uv.announce(h.intl.string(h.t.NstziY));
 }
-function N(e) {
+function b(e) {
     s.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME',
         globalName: e
     });
 }
-function R(e) {
+function y(e) {
     s.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION',
         avatarDecoration: e
     });
 }
-function O(e) {
+function A(e) {
     s.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID',
         profileEffectId: e
     });
 }
-function v() {
+function N() {
     s.Z.dispatch({ type: 'USER_SETTINGS_CLEAR_ERRORS' });
 }
 function C() {
     s.Z.dispatch({ type: 'USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES' });
 }
-function L() {
+function R() {
     s.Z.dispatch({ type: 'USER_SETTINGS_RESET_ALL_PENDING' });
 }
-function D() {
+function O() {
     s.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM' });
 }

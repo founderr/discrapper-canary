@@ -1,141 +1,141 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return T;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(481060),
-    i = n(825055),
-    r = n(937615),
-    l = n(730647),
+var r = n(481060),
+    l = n(825055),
+    s = n(937615),
+    a = n(730647),
     o = n(584825),
     c = n(723047),
     d = n(997519),
     u = n(146710),
-    _ = n(146610),
-    I = n(67152),
-    E = n(791382),
-    T = n(277369),
-    m = n(215124),
-    N = n(981631),
-    S = n(689938),
-    g = n(772236);
-function h(e) {
+    m = n(146610),
+    h = n(67152),
+    g = n(791382),
+    x = n(277369),
+    p = n(215124),
+    f = n(981631),
+    C = n(388032),
+    I = n(772236);
+function _(e) {
     let { payoutsByPeriod: t, team: n } = e,
-        i = (0, c.mY)() ? null : S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EDIT_PAYMENT_METHOD_LINK.format({ url: null != n ? N.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(n.id) : null });
+        l = (0, c.mY)() ? null : C.intl.format(C.t.d1sCiY, { url: null != n ? f.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(n.id) : null });
     return 0 === t.length
-        ? (0, s.jsxs)(a.FormText, {
-              type: a.FormText.Types.DESCRIPTION,
-              children: [S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EARNINGS_HISTORY_EMPTY, ' ', i]
+        ? (0, i.jsxs)(r.FormText, {
+              type: r.FormText.Types.DESCRIPTION,
+              children: [C.intl.string(C.t.RrtXu7), ' ', l]
           })
-        : (0, s.jsxs)(s.Fragment, {
+        : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, s.jsxs)(a.FormText, {
-                      type: a.FormText.Types.DESCRIPTION,
-                      children: [S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EARNINGS_HISTORY_DESCRIPTION, ' ', i]
+                  (0, i.jsxs)(r.FormText, {
+                      type: r.FormText.Types.DESCRIPTION,
+                      children: [C.intl.string(C.t['9Ub4KS']), ' ', l]
                   }),
-                  (0, s.jsx)(a.Spacer, { size: 16 }),
-                  (0, s.jsx)(I.ZP, { payoutsByPeriod: t })
+                  (0, i.jsx)(r.Spacer, { size: 16 }),
+                  (0, i.jsx)(h.ZP, { payoutsByPeriod: t })
               ]
           });
 }
-function C(e) {
+function N(e) {
     let { guildId: t, totalPayoutsForPeriod: n } = e,
-        a = (0, o.qi)(t, { includeSoftDeleted: !0 });
-    return null == n && 0 === a.length
+        r = (0, o.qi)(t, { includeSoftDeleted: !0 });
+    return null == n && 0 === r.length
         ? null
-        : (0, s.jsx)(_.Z, {
+        : (0, i.jsx)(m.Z, {
               totalPayoutsForPeriod: n,
               guildId: t,
-              className: g.currentMonthEarningsTable
+              className: I.currentMonthEarningsTable
           });
 }
-let x = (e) => {
+let v = (e) => {
     var t, n;
-    let { guildId: l, application: o } = e,
-        { loading: _, team: I, currentPeriod: x, allPeriods: p, metrics: R } = (0, d.Z)(l, o),
-        L = (0, u.u)(l),
-        f = (0, c.mY)();
-    return _
-        ? (0, s.jsx)(a.Spinner, {})
-        : (0, s.jsxs)(s.Fragment, {
+    let { guildId: a, application: o } = e,
+        { loading: m, team: h, currentPeriod: v, allPeriods: T, metrics: j } = (0, d.Z)(a, o),
+        E = (0, u.u)(a),
+        S = (0, c.mY)();
+    return m
+        ? (0, i.jsx)(r.Spinner, {})
+        : (0, i.jsxs)(i.Fragment, {
               children: [
-                  L &&
-                      (0, s.jsxs)(s.Fragment, {
-                          children: [(0, s.jsx)(i.Z, { children: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_INSIGHTS_NOTICE_TEXT.format({ insightsURL: N.EYA.DEVELOPER_PORTAL_GUILD_ANALYTICS_ROLE_SUBSCRIPTION(l) }) }), (0, s.jsx)(a.Spacer, { size: 32 })]
+                  E &&
+                      (0, i.jsxs)(i.Fragment, {
+                          children: [(0, i.jsx)(l.Z, { children: C.intl.format(C.t['2raBCQ'], { insightsURL: f.EYA.DEVELOPER_PORTAL_GUILD_ANALYTICS_ROLE_SUBSCRIPTION(a) }) }), (0, i.jsx)(r.Spacer, { size: 32 })]
                       }),
-                  (0, s.jsxs)(a.FormSection, {
-                      title: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_HEADER,
-                      className: g.formSection,
+                  (0, i.jsxs)(r.FormSection, {
+                      title: C.intl.string(C.t.ofmOzc),
+                      className: I.formSection,
                       children: [
-                          (0, s.jsx)(a.Spacer, { size: 8 }),
-                          (0, s.jsxs)('div', {
-                              className: g.metricsContainer,
+                          (0, i.jsx)(r.Spacer, { size: 8 }),
+                          (0, i.jsxs)('div', {
+                              className: I.metricsContainer,
                               children: [
-                                  (0, s.jsx)(E.Z, {
-                                      label: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_METRIC_REVENUE,
-                                      value: (0, r.T4)(null !== (t = R.revenue) && void 0 !== t ? t : 0, N.pKx.USD),
-                                      additionalContent: (0, s.jsx)(E.H, {
-                                          value: R.revenuePctChange,
+                                  (0, i.jsx)(g.Z, {
+                                      label: C.intl.string(C.t.iY1jW1),
+                                      value: (0, s.T4)(null !== (t = j.revenue) && void 0 !== t ? t : 0, f.pKx.USD),
+                                      additionalContent: (0, i.jsx)(g.H, {
+                                          value: j.revenuePctChange,
                                           isPercent: !0
                                       })
                                   }),
-                                  (0, s.jsx)(E.Z, {
-                                      label: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_METRIC_SUBSCRIBERS,
-                                      value: (0, s.jsxs)(s.Fragment, {
+                                  (0, i.jsx)(g.Z, {
+                                      label: C.intl.string(C.t.cXyw29),
+                                      value: (0, i.jsxs)(i.Fragment, {
                                           children: [
-                                              null !== (n = R.subscribers) && void 0 !== n ? n : '-',
+                                              null !== (n = j.subscribers) && void 0 !== n ? n : '-',
                                               ' ',
-                                              (0, s.jsx)(a.UserIcon, {
+                                              (0, i.jsx)(r.UserIcon, {
                                                   size: 'md',
                                                   color: 'currentColor',
-                                                  className: g.totalMembersIcon,
+                                                  className: I.totalMembersIcon,
                                                   'aria-hidden': !0
                                               })
                                           ]
                                       }),
-                                      additionalContent: (0, s.jsx)(E.H, { value: R.subscriberChange })
+                                      additionalContent: (0, i.jsx)(g.H, { value: j.subscriberChange })
                                   })
                               ]
                           }),
-                          (0, s.jsx)(C, {
-                              guildId: l,
-                              totalPayoutsForPeriod: x
+                          (0, i.jsx)(N, {
+                              guildId: a,
+                              totalPayoutsForPeriod: v
                           })
                       ]
                   }),
-                  (0, s.jsx)(a.FormSection, {
-                      title: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EARNINGS_HISTORY_HEADER,
-                      className: g.formSection,
-                      children: (0, s.jsx)(h, {
-                          payoutsByPeriod: p,
-                          team: I
+                  (0, i.jsx)(r.FormSection, {
+                      title: C.intl.string(C.t['+5Rmho']),
+                      className: I.formSection,
+                      children: (0, i.jsx)(_, {
+                          payoutsByPeriod: T,
+                          team: h
                       })
                   }),
-                  (0, s.jsx)(a.FormSection, {
-                      title: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TITLE,
-                      disabled: f,
-                      className: g.formSection,
-                      children: (0, s.jsx)(T.Z, {
-                          guildId: l,
+                  (0, i.jsx)(r.FormSection, {
+                      title: C.intl.string(C.t.O8cDAA),
+                      disabled: S,
+                      className: I.formSection,
+                      children: (0, i.jsx)(x.Z, {
+                          guildId: a,
                           application: o
                       })
                   }),
-                  (0, s.jsx)(a.FormSection, {
-                      title: S.Z.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_SECTION_TITLE,
-                      className: g.formSection,
-                      children: (0, s.jsx)(m.Z, {
-                          guildId: l,
-                          allPeriods: p
+                  (0, i.jsx)(r.FormSection, {
+                      title: C.intl.string(C.t['0n7R2d']),
+                      className: I.formSection,
+                      children: (0, i.jsx)(p.Z, {
+                          guildId: a,
+                          allPeriods: T
                       })
                   })
               ]
           });
 };
-function p(e) {
-    return (0, s.jsx)(l.l, {
+function T(e) {
+    return (0, i.jsx)(a.l, {
         guildId: e.guildId,
-        children: (0, s.jsx)(x, { ...e })
+        children: (0, i.jsx)(v, { ...e })
     });
 }

@@ -11,30 +11,30 @@ var i = n(243814),
     s = n(481060),
     o = n(63063),
     l = n(981631),
-    u = n(689938),
+    u = n(388032),
     c = n(702245);
 function d(e) {
     let t,
         { accountScopes: n } = e,
         a = [];
     return (n.includes(i.x.SDK_SOCIAL_LAYER) &&
-        ((t = u.Z.Messages.AUTHORIZE_EDUCATION_SOCIAL_LAYER_HEADING.format({ learnMoreURL: o.Z.getArticleURL(l.BhN.SOCIAL_LAYER_CONNECTIONS) })),
+        ((t = u.intl.formatToPlainString(u.t.DfBeUl, { learnMoreURL: o.Z.getArticleURL(l.BhN.SOCIAL_LAYER_CONNECTIONS) })),
         a.push(
             {
                 icon: s.FriendsIcon,
-                text: u.Z.Messages.AUTHORIZE_EDUCATION_SOCIAL_LAYER_FRIENDS.format({ maxFriends: l.L4X })
+                text: u.intl.formatToPlainString(u.t.WNKzo6, { maxFriends: l.L4X })
             },
             {
                 icon: s.ChatSmileIcon,
-                text: u.Z.Messages.AUTHORIZE_EDUCATION_SOCIAL_LAYER_MESSAGING
+                text: u.intl.string(u.t.j7peBg)
             },
             {
                 icon: s.GameControllerIcon,
-                text: u.Z.Messages.AUTHORIZE_EDUCATION_SOCIAL_LAYER_ACTIVITY
+                text: u.intl.string(u.t['feD3+v'])
             },
             {
                 icon: s.SettingsIcon,
-                text: u.Z.Messages.AUTHORIZE_EDUCATION_SOCIAL_LAYER_PROMOTIONS
+                text: u.intl.string(u.t.YFFVMz)
             }
         )),
     0 === a.length)
@@ -52,7 +52,7 @@ function d(e) {
                   a.map((e, t) => {
                       let { icon: n, text: i } = e;
                       return (0, r.jsx)(
-                          _,
+                          f,
                           {
                               icon: n,
                               text: i
@@ -63,7 +63,7 @@ function d(e) {
               ]
           });
 }
-function _(e) {
+function f(e) {
     let { icon: t, text: n } = e;
     return (0, r.jsxs)('div', {
         className: c.entry,

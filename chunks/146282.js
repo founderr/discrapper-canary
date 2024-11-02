@@ -8,13 +8,13 @@ var i,
     u = n(570140),
     c = n(180335);
 let d = new Map(),
+    f = new Map(),
     _ = new Map(),
-    E = new Map(),
-    f = !1;
-function h(e) {
+    h = !1;
+function p(e) {
     e(d), (d = new Map(d));
 }
-class p extends (i = l.ZP.Store) {
+class m extends (i = l.ZP.Store) {
     getFeeds() {
         return d;
     }
@@ -22,10 +22,10 @@ class p extends (i = l.ZP.Store) {
         return d.get(e);
     }
     getFeedState(e) {
-        return _.get(e);
+        return f.get(e);
     }
     getLastFeedFetchDate(e) {
-        return E.get(e);
+        return _.get(e);
     }
     getFilters() {
         return r;
@@ -35,7 +35,7 @@ class p extends (i = l.ZP.Store) {
         return null === (t = this.getFeed(e)) || void 0 === t ? void 0 : t.request_id;
     }
     getDebugImpressionCappingDisabled() {
-        return f;
+        return h;
     }
     getMatchingInboxEntry(e) {
         let { activity: t, userId: n, feedId: r } = e,
@@ -46,7 +46,7 @@ class p extends (i = l.ZP.Store) {
     }
 }
 (o = 'ContentInventoryStore'),
-    (s = 'displayName') in (a = p)
+    (s = 'displayName') in (a = m)
         ? Object.defineProperty(a, s, {
               value: o,
               enumerable: !0,
@@ -54,17 +54,17 @@ class p extends (i = l.ZP.Store) {
               writable: !0
           })
         : (a[s] = o),
-    (t.Z = new p(u.Z, {
+    (t.Z = new m(u.Z, {
         CONNECTION_OPEN: function () {
             d = new Map();
         },
         CONTENT_INVENTORY_SET_FEED: function (e) {
             let { feedId: t, feed: n } = e;
-            h((e) => e.set(t, n)), E.set(t, new Date());
+            p((e) => e.set(t, n)), _.set(t, new Date());
         },
         CONTENT_INVENTORY_SET_FEED_STATE: function (e) {
             let { feedId: t, state: n } = e;
-            _.set(t, n);
+            f.set(t, n);
         },
         CONTENT_INVENTORY_SET_FILTERS: function (e) {
             let { filters: t } = e;
@@ -73,9 +73,9 @@ class p extends (i = l.ZP.Store) {
         CONTENT_INVENTORY_CLEAR_FEED: function (e) {
             let { feedId: t } = e;
             if (!d.has(t)) return !1;
-            h((e) => e.delete(t));
+            p((e) => e.delete(t));
         },
         CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING: function () {
-            f = !f;
+            h = !h;
         }
     }));

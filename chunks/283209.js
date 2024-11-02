@@ -30,9 +30,9 @@ var r = n(192379),
                 },
                 attributes: {}
             }),
-            _ = d[0],
-            E = d[1],
-            f = r.useMemo(function () {
+            f = d[0],
+            _ = d[1],
+            h = r.useMemo(function () {
                 return {
                     name: 'updateState',
                     enabled: !0,
@@ -41,7 +41,7 @@ var r = n(192379),
                         var t = e.state,
                             n = Object.keys(t.elements);
                         i.flushSync(function () {
-                            E({
+                            _({
                                 styles: (0, l.sq)(
                                     n.map(function (e) {
                                         return [e, t.styles[e] || {}];
@@ -58,14 +58,14 @@ var r = n(192379),
                     requires: ['computeStyles']
                 };
             }, []),
-            h = r.useMemo(
+            p = r.useMemo(
                 function () {
                     var e = {
                         onFirstUpdate: c.onFirstUpdate,
                         placement: c.placement,
                         strategy: c.strategy,
                         modifiers: [].concat(c.modifiers, [
-                            f,
+                            h,
                             {
                                 name: 'applyStyles',
                                 enabled: !1
@@ -74,24 +74,24 @@ var r = n(192379),
                     };
                     return o()(s.current, e) ? s.current || e : ((s.current = e), e);
                 },
-                [c.onFirstUpdate, c.placement, c.strategy, c.modifiers, f]
+                [c.onFirstUpdate, c.placement, c.strategy, c.modifiers, h]
             ),
-            p = r.useRef();
+            m = r.useRef();
         return (
             (0, l.LI)(
                 function () {
-                    p.current && p.current.setOptions(h);
+                    m.current && m.current.setOptions(p);
                 },
-                [h]
+                [p]
             ),
             (0, l.LI)(
                 function () {
                     if (null != e && null != t) {
-                        var r = (n.createPopper || a.fi)(e, t, h);
+                        var r = (n.createPopper || a.fi)(e, t, p);
                         return (
-                            (p.current = r),
+                            (m.current = r),
                             function () {
-                                r.destroy(), (p.current = null);
+                                r.destroy(), (m.current = null);
                             }
                         );
                     }
@@ -99,11 +99,11 @@ var r = n(192379),
                 [e, t, n.createPopper]
             ),
             {
-                state: p.current ? p.current.state : null,
-                styles: _.styles,
-                attributes: _.attributes,
-                update: p.current ? p.current.update : null,
-                forceUpdate: p.current ? p.current.forceUpdate : null
+                state: m.current ? m.current.state : null,
+                styles: f.styles,
+                attributes: f.attributes,
+                update: m.current ? m.current.update : null,
+                forceUpdate: m.current ? m.current.forceUpdate : null
             }
         );
     };

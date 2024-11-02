@@ -1,48 +1,48 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 }),
     n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(399606),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    s = n(399606),
     o = n(243778),
     c = n(914010),
     d = n(566840),
     u = n(921944),
-    _ = n(464506);
-let E = a.memo(function (e) {
-    var t, n, s;
-    let { state: l, markAsDismissed: o } = e,
-        { name: c, guildId: d, boundingRect: u } = l,
-        E = a.useMemo(
+    h = n(464506);
+let m = r.memo(function (e) {
+    var t, n, l;
+    let { state: s, markAsDismissed: o } = e,
+        { name: c, guildId: d, boundingRect: u } = s,
+        m = r.useMemo(
             () =>
                 (function (e, t, n) {
                     return null;
                 })(c, 0, 0),
             [c, d, o]
         );
-    if (null == E) return null;
+    if (null == m) return null;
     return (0, i.jsx)('div', {
-        className: r()(_.upsell, !(null != (t = u) && !(t.y < 0)) && _.hidden),
+        className: a()(h.upsell, !(null != (t = u) && !(t.y < 0)) && h.hidden),
         style:
             ((n = c),
-            null == (s = u)
+            null == (l = u)
                 ? {}
                 : {
-                      top: s.top,
-                      left: s.right - s.x
+                      top: l.top,
+                      left: l.right - l.x
                   }),
-        children: E
+        children: m
     });
 });
-function h() {
-    let e = (0, l.e7)([c.Z], () => c.Z.getGuildId()),
+function p() {
+    let e = (0, s.e7)([c.Z], () => c.Z.getGuildId()),
         t = (0, d.Eg)(e),
-        [n, a] = (0, o.US)(
+        [n, r] = (0, o.US)(
             Object.values(t)
                 .filter((e) => {
                     let { disabled: t } = e;
@@ -55,14 +55,14 @@ function h() {
             u.R.SIDEBAR
         );
     if (null == n) return null;
-    let s = t[n];
-    return null == s
+    let l = t[n];
+    return null == l
         ? null
         : (0, i.jsx)('div', {
-              className: _.container,
-              children: (0, i.jsx)(E, {
-                  state: s,
-                  markAsDismissed: a
+              className: h.container,
+              children: (0, i.jsx)(m, {
+                  state: l,
+                  markAsDismissed: r
               })
           });
 }

@@ -7,30 +7,30 @@ n.d(t, {
     }
 });
 var i = n(913527),
-    a = n.n(i),
-    s = n(835913),
-    r = n(675478),
-    l = n(581883),
-    o = n(905567);
+    r = n.n(i),
+    l = n(835913),
+    a = n(675478),
+    o = n(581883),
+    s = n(905567);
 let c = (e) => {
         var t;
         if (!u(e)) return !1;
-        let n = null === (t = l.Z.settings.userContent) || void 0 === t ? void 0 : t.safetyUserSentimentNoticeDismissedAt,
-            i = null != n ? s.E.toDate(n) : void 0,
-            r = null != i ? a()().diff(i, 'days') : null,
+        let n = null === (t = o.Z.settings.userContent) || void 0 === t ? void 0 : t.safetyUserSentimentNoticeDismissedAt,
+            i = null != n ? l.E.toDate(n) : void 0,
+            a = null != i ? r()().diff(i, 'days') : null,
             c = null != n;
-        if (c && !(null != r && r > 30)) return !1;
-        let { isEligible: d } = o.C.getCurrentConfig({ location: '657a81_1' }, { autoTrackExposure: !0 });
+        if (c && !(null != a && a > 30)) return !1;
+        let { isEligible: d } = s.C.getCurrentConfig({ location: '657a81_1' }, { autoTrackExposure: !0 });
         return d;
     },
     u = (e) => null != e && Date.now() - e.createdAt.getTime() > 2592000000,
     d = () => {
-        let e = s.E.now();
-        r.hW.updateAsync(
+        let e = l.E.now();
+        a.hW.updateAsync(
             'userContent',
             (t) => {
                 t.safetyUserSentimentNoticeDismissedAt = e;
             },
-            r.fy.INFREQUENT_USER_ACTION
+            a.fy.INFREQUENT_USER_ACTION
         );
     };

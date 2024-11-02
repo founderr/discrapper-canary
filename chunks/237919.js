@@ -1,26 +1,26 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return v;
     }
 }),
     n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(442837),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    s = n(442837),
     o = n(481060),
     c = n(570140),
     d = n(287259),
     u = n(819640),
-    _ = n(490983),
-    E = n(799777),
-    h = n(5967),
-    m = n(346329),
-    I = n(981631),
-    p = n(689938),
-    g = n(560611);
-function T(e, t, n) {
+    h = n(490983),
+    m = n(799777),
+    p = n(5967),
+    g = n(346329),
+    f = n(981631),
+    _ = n(388032),
+    E = n(560611);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function T(e, t, n) {
         e
     );
 }
-class S extends a.Component {
+class C extends r.Component {
     componentDidMount() {
         document.addEventListener('keydown', this.handleKeyDown);
     }
@@ -50,21 +50,21 @@ class S extends a.Component {
     updateActiveRow(e) {
         let { applicationViewItems: t, activeRowKey: n } = this.props,
             i = t.findIndex((e) => e.key === n),
-            a = 0;
-        i >= 0 && (a = (i + e) % t.length) < 0 && (a = t.length - 1);
-        let s = t[a];
-        d.wX(null != s ? s.key : null, !0);
+            r = 0;
+        i >= 0 && (r = (i + e) % t.length) < 0 && (r = t.length - 1);
+        let l = t[r];
+        d.wX(null != l ? l.key : null, !0);
     }
     render() {
         let { filterQuery: e } = this.props,
             { focused: t } = this.state;
         return (0, i.jsx)('div', {
-            className: r()({
-                [g.libraryFilter]: !0,
-                [g.focused]: t
+            className: a()({
+                [E.libraryFilter]: !0,
+                [E.focused]: t
             }),
             children: (0, i.jsx)(o.SearchBar, {
-                className: g.searchBar,
+                className: E.searchBar,
                 ref: this.setRef,
                 onChange: d.JZ,
                 onFocus: () => this.setState({ focused: !0 }),
@@ -75,63 +75,63 @@ class S extends a.Component {
                 },
                 maxLength: 100,
                 query: e,
-                placeholder: p.Z.Messages.APPLICATION_LIBRARY_FILTER_PLACEHOLDER
+                placeholder: _.intl.string(_.t.aSxWSk)
             })
         });
     }
     constructor(...e) {
         super(...e),
-            T(this, 'searchBarRef', null),
-            T(this, 'state', { focused: !1 }),
-            T(this, 'setRef', (e) => {
+            I(this, 'searchBarRef', null),
+            I(this, 'state', { focused: !1 }),
+            I(this, 'setRef', (e) => {
                 this.searchBarRef = e;
             }),
-            T(this, 'handleKeyDown', (e) => {
+            I(this, 'handleKeyDown', (e) => {
                 var t;
-                let { activeRowKey: n, hasModalOpen: i, applicationViewItems: a } = this.props,
-                    { searchBarRef: s } = this;
-                if (i || e.ctrlKey || e.altKey || e.metaKey || null == s) return;
-                let r = null === (t = (0, h.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
-                if (!(r !== s.inputRef.current && (0, h.VG)(r)))
+                let { activeRowKey: n, hasModalOpen: i, applicationViewItems: r } = this.props,
+                    { searchBarRef: l } = this;
+                if (i || e.ctrlKey || e.altKey || e.metaKey || null == l) return;
+                let a = null === (t = (0, p.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
+                if (!(a !== l.inputRef.current && (0, p.VG)(a)))
                     switch (e.which) {
-                        case I.yXg.ESCAPE:
-                            e.target !== s.inputRef.current ? this.reset() : null != s.inputRef.current && s.blur();
+                        case f.yXg.ESCAPE:
+                            e.target !== l.inputRef.current ? this.reset() : null != l.inputRef.current && l.blur();
                             break;
-                        case I.yXg.ENTER:
+                        case f.yXg.ENTER:
                             if (null != n) {
                                 e.preventDefault();
-                                let t = a.find((e) => e.key === n);
+                                let t = r.find((e) => e.key === n);
                                 if (null == t) return;
                                 let i = t.libraryApplication;
-                                m.performDefaultLibraryApplicationAction(i, {
+                                g.performDefaultLibraryApplicationAction(i, {
                                     analyticsParams: {
-                                        source: I.Sbl.APPLICATION_LIBRARY,
+                                        source: f.Sbl.APPLICATION_LIBRARY,
                                         location: {
-                                            page: I.ZY5.LIBRARY,
-                                            section: I.jXE.LIBRARY_APPLICATION_LIST,
-                                            object: I.qAy.BUTTON_CTA
+                                            page: f.ZY5.LIBRARY,
+                                            section: f.jXE.LIBRARY_APPLICATION_LIST,
+                                            object: f.qAy.BUTTON_CTA
                                         }
                                     }
                                 });
                             }
                             break;
-                        case I.yXg.ARROW_DOWN:
-                        case I.yXg.ARROW_UP:
-                            e.preventDefault(), e.stopPropagation(), this.updateActiveRow(e.which === I.yXg.ARROW_DOWN ? 1 : -1);
+                        case f.yXg.ARROW_DOWN:
+                        case f.yXg.ARROW_UP:
+                            e.preventDefault(), e.stopPropagation(), this.updateActiveRow(e.which === f.yXg.ARROW_DOWN ? 1 : -1);
                             break;
                         default:
-                            null != s.inputRef.current && e.target !== s.inputRef.current && s.focus();
+                            null != l.inputRef.current && e.target !== l.inputRef.current && l.focus();
                     }
             });
     }
 }
-function C() {
-    let e = (0, l.e7)([u.Z], () => u.Z.hasLayers()),
+function v() {
+    let e = (0, s.e7)([u.Z], () => u.Z.hasLayers()),
         t = (0, o.useModalsStore)(o.hasAnyModalOpenSelector);
-    return (0, i.jsx)(S, {
-        activeRowKey: (0, l.e7)([E.Z], () => E.Z.activeRowKey),
+    return (0, i.jsx)(C, {
+        activeRowKey: (0, s.e7)([m.Z], () => m.Z.activeRowKey),
         hasModalOpen: t || e,
-        filterQuery: (0, l.e7)([_.Z], () => _.Z.applicationFilterQuery),
-        applicationViewItems: (0, l.e7)([_.Z], () => _.Z.sortedFilteredLibraryApplicationViewItems)
+        filterQuery: (0, s.e7)([h.Z], () => h.Z.applicationFilterQuery),
+        applicationViewItems: (0, s.e7)([h.Z], () => h.Z.sortedFilteredLibraryApplicationViewItems)
     });
 }

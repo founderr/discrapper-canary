@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return S;
     },
     r: function () {
-        return S;
+        return I;
     }
 });
 var r = n(200651);
@@ -16,106 +16,106 @@ var i = n(120356),
     u = n(481060),
     c = n(600164),
     d = n(528144),
-    _ = n(312956),
-    E = n(501967),
-    f = n(19780),
-    h = n(540028),
-    p = n(507675),
-    I = n(273716),
-    m = n(689938),
-    T = n(497041);
-function S(e) {
+    f = n(312956),
+    _ = n(501967),
+    h = n(19780),
+    p = n(540028),
+    m = n(507675),
+    g = n(273716),
+    E = n(388032),
+    v = n(497041);
+function I(e) {
     let { title: t, onJumpToChannel: n, onHide: i, idle: a, preventIdleComponent: l } = e,
-        c = (0, s.e7)([f.Z], () => f.Z.getChannelId()),
-        E =
+        c = (0, s.e7)([h.Z], () => h.Z.getChannelId()),
+        _ =
             null != c
-                ? (0, r.jsx)(h.Z, {
+                ? (0, r.jsx)(p.Z, {
                       voiceChannelId: c,
                       idle: a
                   })
                 : null,
-        { enabled: p } = _.Z.useExperiment({ location: 'PictureInPicturePlayer' });
+        { enabled: m } = f.Z.useExperiment({ location: 'PictureInPicturePlayer' });
     return (0, r.jsxs)(l, {
-        className: T.headerIdleContainer,
+        className: v.headerIdleContainer,
         children: [
             (0, r.jsxs)(u.Clickable, {
-                className: T.headerTitle,
+                className: v.headerTitle,
                 onClick: n,
                 children: [
                     (0, r.jsx)(u.ArrowSmallLeftIcon, {
                         size: 'custom',
                         color: 'currentColor',
-                        'aria-label': m.Z.Messages.OPEN_IN_THEATER,
-                        className: T.backButton,
+                        'aria-label': E.intl.string(E.t.mSfLs7),
+                        className: v.backButton,
                         width: 20,
                         height: 20
                     }),
                     (0, r.jsx)(d.Z, {
-                        className: T.headerText,
+                        className: v.headerText,
                         size: d.Z.Sizes.SIZE_16,
                         color: o.Z.unsafe_rawColors.WHITE_500.css,
                         children: t
                     })
                 ]
             }),
-            p && null != i
-                ? (0, r.jsx)(I.Z, {
+            m && null != i
+                ? (0, r.jsx)(g.Z, {
                       onClick: i,
-                      label: m.Z.Messages.PICTURE_IN_PICTURE_CLOSE_PIP
+                      label: E.intl.string(E.t.BEuDEh)
                   })
                 : null,
-            E
+            _
         ]
     });
 }
-function g(e) {
-    let { children: t, idle: n, onJumpToChannel: i, onHide: s, backgroundKey: o, onActive: u, onForceIdle: d, renderBottomLeftControls: _, renderBottomRightControls: f, screenMessage: h, hideControls: I = !1, className: m, innerClassName: g, ...A } = e;
+function S(e) {
+    let { children: t, idle: n, onJumpToChannel: i, onHide: s, backgroundKey: o, onActive: u, onForceIdle: d, renderBottomLeftControls: f, renderBottomRightControls: h, screenMessage: p, hideControls: g = !1, className: E, innerClassName: S, ...T } = e;
     return (0, r.jsxs)('div', {
         onMouseMove: u,
         onMouseDown: u,
         onMouseLeave: d,
-        className: a()(T.pictureInPictureVideo, { [T.idle]: n }, m),
+        className: a()(v.pictureInPictureVideo, { [v.idle]: n }, E),
         onDoubleClick: i,
         children: [
             (0, r.jsx)(l.W, {
                 children: (0, r.jsx)(
-                    E.B,
+                    _.B,
                     {
-                        className: g,
+                        className: S,
                         children: t
                     },
                     o
                 )
             }),
-            null != h
-                ? (0, r.jsx)(p.Z, {
+            null != p
+                ? (0, r.jsx)(m.Z, {
                       size: 'small',
-                      ...h
+                      ...p
                   })
                 : null,
-            !I &&
+            !g &&
                 (0, r.jsxs)('div', {
-                    className: a()(T.videoControls, 'theme-dark'),
+                    className: a()(v.videoControls, 'theme-dark'),
                     children: [
                         (0, r.jsx)('div', {
-                            className: T.topControls,
-                            children: (0, r.jsx)(S, {
+                            className: v.topControls,
+                            children: (0, r.jsx)(I, {
                                 idle: n,
                                 onJumpToChannel: i,
                                 onHide: s,
-                                ...A
+                                ...T
                             })
                         }),
                         (0, r.jsxs)('div', {
-                            className: T.bottomControls,
+                            className: v.bottomControls,
                             children: [
                                 (0, r.jsx)(c.Z, {
                                     grow: 0,
                                     shrink: 1,
                                     basis: '50%',
                                     align: c.Z.Align.CENTER,
-                                    className: T.bottomLeftControls,
-                                    children: null == _ ? void 0 : _()
+                                    className: v.bottomLeftControls,
+                                    children: null == f ? void 0 : f()
                                 }),
                                 (0, r.jsx)(c.Z, {
                                     grow: 0,
@@ -123,7 +123,7 @@ function g(e) {
                                     justify: c.Z.Justify.END,
                                     basis: '50%',
                                     align: c.Z.Align.CENTER,
-                                    children: null == f ? void 0 : f()
+                                    children: null == h ? void 0 : h()
                                 })
                             ]
                         })

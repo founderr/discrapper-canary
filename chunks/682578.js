@@ -1,13 +1,13 @@
-t.d(s, {
+n.d(t, {
     J: function () {
-        return i;
+        return r;
     }
 });
-var n = t(442837),
-    a = t(594174);
-let i = () =>
-    (0, n.e7)([a.default], () => {
+var i = n(442837),
+    s = n(594174);
+let r = () =>
+    (0, i.e7)([s.default], () => {
         var e;
-        let s = a.default.getCurrentUser();
-        return null !== (e = null == s ? void 0 : s.nsfwAllowed) && void 0 !== e ? e : null;
+        let t = s.default.getCurrentUser();
+        return null !== (e = null == t ? void 0 : t.nsfwAllowed) && void 0 !== e ? e : null;
     });

@@ -4,26 +4,26 @@ n.d(t, {
     }
 });
 var i = n(192379),
-    s = n(442837),
-    a = n(499254),
-    l = n(213459),
-    r = n(592125);
+    l = n(442837),
+    r = n(499254),
+    a = n(213459),
+    s = n(592125);
 function o(e) {
     let { isProfileFetching: t, wasProfileFetching: n, applicationId: o, channelId: c, commands: u } = e;
     i.useEffect(() => {
-        !t && n && null == o && (0, a.Tv)(c);
+        !t && n && null == o && (0, r.Tv)(c);
     }, [t, n, o, c]),
         i.useEffect(() => {
-            (0, a.Hm)(c);
+            (0, r.Hm)(c);
         }, [c]);
-    let d = (0, s.e7)([l.ZP], () => {
+    let d = (0, l.e7)([a.ZP], () => {
             var e, t;
-            return null !== (t = null === (e = l.ZP.getApplicationState(o)) || void 0 === e ? void 0 : e.fetchState.fetching) && void 0 !== t && t;
+            return null !== (t = null === (e = a.ZP.getApplicationState(o)) || void 0 === e ? void 0 : e.fetchState.fetching) && void 0 !== t && t;
         }),
-        h = (0, s.e7)([l.ZP, r.Z], () => {
+        h = (0, l.e7)([a.ZP, s.Z], () => {
             var e, t;
-            let n = r.Z.getChannel(c);
-            return null !== (t = null === (e = l.ZP.getContextState(n)) || void 0 === e ? void 0 : e.fetchState.fetching) && void 0 !== t && t;
+            let n = s.Z.getChannel(c);
+            return null !== (t = null === (e = a.ZP.getContextState(n)) || void 0 === e ? void 0 : e.fetchState.fetching) && void 0 !== t && t;
         }),
         m = i.useRef(!1),
         p = i.useRef(!1);
@@ -37,6 +37,6 @@ function o(e) {
             h && (p.current = !0);
         }, [h]),
         i.useEffect(() => {
-            !d && !h && m.current && p.current && 0 === u.length && (0, a.Tv)(c);
+            !d && !h && m.current && p.current && 0 === u.length && (0, r.Tv)(c);
         }, [d, h, u, c]);
 }

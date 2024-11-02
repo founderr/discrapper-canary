@@ -1,39 +1,39 @@
 var i = n(200651),
-    a = n(192379),
-    s = n(442837),
-    r = n(894653),
-    l = n(322665),
+    r = n(192379),
+    l = n(442837),
+    a = n(894653),
+    s = n(322665),
     o = n(17845),
     c = n(374939),
     d = n(283293),
     u = n(292191),
-    _ = n(683544),
-    E = n(689938),
-    h = n(624849);
+    h = n(683544),
+    m = n(388032),
+    p = n(624849);
 t.Z = function (e) {
-    let { tabId: t, onSelectApplication: n, onScroll: m } = e,
-        I = (0, s.e7)([r.Z], () => r.Z.getCategories()),
-        p = a.useMemo(() => I.find((e) => e.id === t), [I, t]),
-        g = a.useMemo(() => {
+    let { tabId: t, onSelectApplication: n, onScroll: g } = e,
+        f = (0, l.e7)([a.Z], () => a.Z.getCategories()),
+        _ = r.useMemo(() => f.find((e) => e.id === t), [f, t]),
+        E = r.useMemo(() => {
             var e;
-            return [null !== (e = null == p ? void 0 : p.name) && void 0 !== e ? e : '', E.Z.Messages.GLOBAL_DISCOVERY_APPS_CATEGORY_TITLE_END];
-        }, [p]);
+            return [null !== (e = null == _ ? void 0 : _.name) && void 0 !== e ? e : '', m.intl.string(m.t.wDEPGR)];
+        }, [_]);
     return (0, i.jsxs)(d.Z, {
-        onScroll: m,
+        onScroll: g,
         children: [
             (0, i.jsx)(o.Z, {
-                title: g,
-                children: (0, i.jsx)(l.Z, {})
+                title: E,
+                children: (0, i.jsx)(s.Z, {})
             }),
             (0, i.jsx)(c.Z, {
                 children:
-                    null == p
+                    null == _
                         ? (0, i.jsx)('div', {
-                              className: h.errorContainer,
-                              children: (0, i.jsx)(u.Z, { className: h.error })
+                              className: p.errorContainer,
+                              children: (0, i.jsx)(u.Z, { className: p.error })
                           })
-                        : (0, i.jsx)(_.Z, {
-                              categoryId: p.id,
+                        : (0, i.jsx)(h.Z, {
+                              categoryId: _.id,
                               onSelectApplication: n
                           })
             })

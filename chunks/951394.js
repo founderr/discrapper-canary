@@ -17,7 +17,7 @@ function l(e) {
     return (0, r.jsx)('div', { className: a()(t, o.separator) });
 }
 function u(e) {
-    let { onClick: t, onContextMenu: n, className: i, selected: l = !1, children: u, disabled: c = !1, dangerous: d, ..._ } = e;
+    let { onClick: t, onContextMenu: n, className: i, selected: l = !1, children: u, disabled: c = !1, dangerous: d, ...f } = e;
     return (0, r.jsx)(s.Clickable, {
         onClick: c ? void 0 : t,
         onContextMenu: c ? void 0 : n,
@@ -27,7 +27,7 @@ function u(e) {
             [o.disabled]: c,
             [o.dangerous]: d
         }),
-        ..._,
+        ...f,
         children: u
     });
 }

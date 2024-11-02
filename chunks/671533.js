@@ -1,17 +1,17 @@
 t(411104);
 var c,
-    a,
-    l = t(200651);
+    l,
+    o = t(200651);
 t(192379);
-var o = t(120356),
-    r = t.n(o),
+var a = t(120356),
+    r = t.n(a),
     i = t(325767),
     s = t(865244);
-((a = c || (c = {})).LEFT = 'LEFT'), (a.RIGHT = 'RIGHT'), (a.UP = 'UP'), (a.DOWN = 'DOWN'), (a.UP_LEFT = 'UP_LEFT'), (a.DOWN_RIGHT = 'DOWN_RIGHT');
+((l = c || (c = {})).LEFT = 'LEFT'), (l.RIGHT = 'RIGHT'), (l.UP = 'UP'), (l.DOWN = 'DOWN'), (l.UP_LEFT = 'UP_LEFT'), (l.DOWN_RIGHT = 'DOWN_RIGHT');
 let u = (e) => {
-    let { width: n = 24, height: t = 24, color: c = 'currentColor', direction: a, foreground: o, className: u, title: T, ...E } = e;
-    return (0, l.jsxs)('svg', {
-        ...(0, i.Z)(E),
+    let { width: n = 24, height: t = 24, color: c = 'currentColor', direction: l, foreground: a, className: u, title: d, ...T } = e;
+    return (0, o.jsxs)('svg', {
+        ...(0, i.Z)(T),
         width: n,
         height: t,
         className: r()(
@@ -33,13 +33,13 @@ let u = (e) => {
                     default:
                         throw Error('Invalid Direction '.concat(e));
                 }
-            })(a)
+            })(l)
         ),
         viewBox: '0 0 24 24',
         children: [
-            null != T ? (0, l.jsx)('title', { children: T }) : null,
-            (0, l.jsx)('polygon', {
-                className: o,
+            null != d ? (0, o.jsx)('title', { children: d }) : null,
+            (0, o.jsx)('polygon', {
+                className: a,
                 fill: c,
                 fillRule: 'nonzero',
                 points: '13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8'

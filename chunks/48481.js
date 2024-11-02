@@ -1,39 +1,39 @@
 n.d(t, {
     Uc: function () {
-        return _;
-    },
-    ac: function () {
-        return p;
-    },
-    cv: function () {
-        return I;
-    },
-    d5: function () {
-        return h;
-    },
-    i7: function () {
-        return g;
-    },
-    kI: function () {
         return f;
     },
-    re: function () {
-        return T;
-    },
-    tU: function () {
-        return R;
-    },
-    u0: function () {
-        return S;
-    },
-    uL: function () {
-        return A;
-    },
-    xU: function () {
+    ac: function () {
         return m;
     },
+    cv: function () {
+        return g;
+    },
+    d5: function () {
+        return p;
+    },
+    i7: function () {
+        return S;
+    },
+    kI: function () {
+        return h;
+    },
+    re: function () {
+        return v;
+    },
+    tU: function () {
+        return y;
+    },
+    u0: function () {
+        return I;
+    },
+    uL: function () {
+        return T;
+    },
+    xU: function () {
+        return E;
+    },
     xt: function () {
-        return N;
+        return b;
     }
 }),
     n(411104),
@@ -48,47 +48,47 @@ var r = n(647943),
     u = n(397696),
     c = n(526761),
     d = n(981631);
-let _ = { readerFactory: (e) => new r.o(e, new TextDecoder('utf-8')) },
-    E = {
+let f = { readerFactory: (e) => new r.o(e, new TextDecoder('utf-8')) },
+    _ = {
         [c.yP.PRELOADED_USER_SETTINGS]: l.o8,
         [c.yP.FRECENCY_AND_FAVORITES_SETTINGS]: o.ji
     };
-function f(e, t) {
-    return null != t && e in E ? h(E[e], t) : null;
-}
 function h(e, t) {
+    return null != t && e in _ ? p(_[e], t) : null;
+}
+function p(e, t) {
     if (null == t) return null;
     let n = (0, i.c)(t);
     try {
-        return e.fromBinary(n, _);
+        return e.fromBinary(n, f);
     } catch (e) {
         throw Error('Settings proto failed to deserialize (potentially corrupt): '.concat(e));
     }
 }
-function p(e) {
-    return h(l.o8, e);
+function m(e) {
+    return p(l.o8, e);
 }
-function I(e, t) {
-    return m(E[e], t);
+function g(e, t) {
+    return E(_[e], t);
 }
-function m(e, t) {
+function E(e, t) {
     return (0, i.m)(e.toBinary(t));
 }
-function T(e, t, n) {
+function v(e, t, n) {
     for (let e in ((t = { ...t }), n)) delete t[e];
     return e.mergePartial(t, n), t;
 }
-function S(e, t, n) {
+function I(e, t, n) {
     return (null == t || 'null' === t) && (t = d.aIL), !(t in e.guilds) && (e.guilds[t] = l.C4.create()), n(e.guilds[t]);
 }
-function g(e, t, n, r) {
+function S(e, t, n, r) {
     var i, a, s;
-    return (i = e), (a = t), (s = (e) => A(e, n, r)), null == i.guilds && (i.guilds = l.os.create()), S(i.guilds, a, s);
+    return (i = e), (a = t), (s = (e) => T(e, n, r)), null == i.guilds && (i.guilds = l.os.create()), I(i.guilds, a, s);
 }
-function A(e, t, n) {
+function T(e, t, n) {
     return !(t in e.channels) && (e.channels[t] = l.p5.create()), n(e.channels[t]);
 }
-function N(e, t) {
+function b(e, t) {
     null == e.versions && (e.versions = u.L.create());
     let n = 0;
     for (let e of t) {
@@ -117,7 +117,7 @@ function N(e, t) {
         cleanupFuncs: a
     };
 }
-function R(e, t) {
+function y(e, t) {
     let n = Object.entries(e);
     if (n.length > t)
         for (

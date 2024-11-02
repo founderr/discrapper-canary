@@ -3,14 +3,14 @@ t.d(n, {
         return o;
     }
 });
-var l = t(192379),
-    s = t(941028);
+var i = t(192379),
+    l = t(941028);
 function o(e) {
-    l.useEffect(
+    i.useEffect(
         () => (
-            s.k$(e),
+            l.k$(e),
             () => {
-                s.kr(e);
+                l.kr(e);
             }
         ),
         [e]

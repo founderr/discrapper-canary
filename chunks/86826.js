@@ -1,30 +1,30 @@
 var i = n(200651);
 n(192379);
-var a = n(120356),
-    s = n.n(a),
-    r = n(44315),
-    l = n(600164),
+var r = n(120356),
+    l = n.n(r),
+    a = n(44315),
+    s = n(600164),
     o = n(120998),
     c = n(353042),
-    d = n(689938),
+    d = n(388032),
     u = n(378088);
 t.Z = function (e) {
     var t;
-    let { title: n, className: a, color: _, animate: E, gradientStopColor: h, getHistoricalTotalBytes: m } = e,
-        I = (0, r.Sl)(_).hex,
-        p = null === (t = (0, r.Sl)(h)) || void 0 === t ? void 0 : t.hex;
+    let { title: n, className: r, color: h, animate: m, gradientStopColor: p, getHistoricalTotalBytes: g } = e,
+        f = (0, a.Sl)(h).hex,
+        _ = null === (t = (0, a.Sl)(p)) || void 0 === t ? void 0 : t.hex;
     return (0, i.jsx)(c.Z, {
-        getHistoricalTotalBytes: m,
-        children: (e, t, r) => {
+        getHistoricalTotalBytes: g,
+        children: (e, t, a) => {
             var c;
             return (0, i.jsx)('div', {
-                className: s()(u.monitor, a),
-                children: (0, i.jsxs)(l.Z, {
-                    align: l.Z.Align.CENTER,
+                className: l()(u.monitor, r),
+                children: (0, i.jsxs)(s.Z, {
+                    align: s.Z.Align.CENTER,
                     children: [
-                        (0, i.jsxs)(l.Z, {
+                        (0, i.jsxs)(s.Z, {
                             className: u.text,
-                            direction: l.Z.Direction.VERTICAL,
+                            direction: s.Z.Direction.VERTICAL,
                             children: [
                                 (0, i.jsx)('div', {
                                     className: u.title,
@@ -32,7 +32,7 @@ t.Z = function (e) {
                                 }),
                                 (0, i.jsx)('div', {
                                     className: u.rate,
-                                    children: (c = (e[e.length - 1] / t) * 1000) > 1000 ? d.Z.Messages.FILE_RATE_MB.format({ size: Math.round(c / 1000) }) : d.Z.Messages.FILE_RATE_KB.format({ size: Math.round(c) })
+                                    children: (c = (e[e.length - 1] / t) * 1000) > 1000 ? d.intl.formatToPlainString(d.t['WU+gTU'], { size: Math.round(c / 1000) }) : d.intl.formatToPlainString(d.t.wnF6TE, { size: Math.round(c) })
                                 })
                             ]
                         }),
@@ -43,10 +43,10 @@ t.Z = function (e) {
                                 maxValue: Math.max(Math.max.apply(null, e), 1000),
                                 className: u.sparkChart,
                                 updateInterval: t,
-                                color: I,
-                                gradientStopColor: p,
-                                numUpdatesToShow: r,
-                                animate: E,
+                                color: f,
+                                gradientStopColor: _,
+                                numUpdatesToShow: a,
+                                animate: m,
                                 pixelWidth: 600,
                                 pixelHeight: 48,
                                 lineWidth: 4

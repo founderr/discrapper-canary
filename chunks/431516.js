@@ -1,18 +1,18 @@
 n.d(t, {
     N: function () {
-        return l;
+        return a;
     }
 });
-var s = n(399606),
-    a = n(999382),
-    i = n(594174),
-    r = n(981631);
-function l() {
-    let e = (0, s.e7)([i.default], () => i.default.getCurrentUser()),
-        t = (0, s.e7)([a.Z], () => a.Z.getProps().mfaLevel),
+var i = n(399606),
+    r = n(999382),
+    l = n(594174),
+    s = n(981631);
+function a() {
+    let e = (0, i.e7)([l.default], () => l.default.getCurrentUser()),
+        t = (0, i.e7)([r.Z], () => r.Z.getProps().mfaLevel),
         n = (null == e ? void 0 : e.mfaEnabled) === !0;
     return {
         isUserMFAEnabled: n,
-        isModerationMFAEnabled: t === r.BpS.ELEVATED
+        isModerationMFAEnabled: t === s.BpS.ELEVATED
     };
 }

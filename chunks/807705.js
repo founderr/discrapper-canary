@@ -1,20 +1,20 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return l;
     }
 });
 var i = n(192379);
-function s(e, t) {
+function l(e, t) {
     let n = (0, i.useRef)(!1),
-        s = (0, i.useRef)(e);
+        l = (0, i.useRef)(e);
     (0, i.useEffect)(() => {
-        (n.current = e !== s.current), (s.current = e);
+        (n.current = e !== l.current), (l.current = e);
     }, [e]),
         (0, i.useEffect)(() => {
             let e = setTimeout(() => (n.current = !1), t);
             return () => clearTimeout(e);
         }, [e, t]);
-    let a = e !== s.current,
-        l = n.current;
-    return a || l;
+    let r = e !== l.current,
+        a = n.current;
+    return r || a;
 }

@@ -6,17 +6,17 @@ n.d(t, {
         return p;
     },
     xC: function () {
-        return _;
+        return f;
     }
 }),
     n(47120);
 var i = n(866442),
-    s = n(503438),
-    a = n(420660),
-    l = n(168631),
-    r = n(621853),
+    l = n(503438),
+    r = n(420660),
+    a = n(168631),
+    s = n(621853),
     o = n(981631),
-    c = n(689938);
+    c = n(388032);
 let u = (e) => (''.concat(e).length < 13 ? 1000 * e : e),
     d = (e) => {
         let t = Date.now() / 1000;
@@ -33,10 +33,10 @@ let u = (e) => (''.concat(e).length < 13 ? 1000 * e : e),
     h = (e, t) => {
         let n = Math.max(t - e, 0),
             i = Math.floor(n) % 60,
-            s = Math.floor(n / 60) % 60;
+            l = Math.floor(n / 60) % 60;
         return {
             hours: Math.floor(n / 3600) % 24,
-            minutes: s,
+            minutes: l,
             seconds: i
         };
     },
@@ -46,43 +46,43 @@ let u = (e) => (''.concat(e).length < 13 ? 1000 * e : e),
     },
     p = (e, t) => {
         var n;
-        let s = r.Z.getUserProfile(e.id),
-            [a, o] = null !== (n = null == s ? void 0 : s.themeColors) && void 0 !== n ? n : [],
-            c = (0, l.V3)(a),
+        let l = s.Z.getUserProfile(e.id),
+            [r, o] = null !== (n = null == l ? void 0 : l.themeColors) && void 0 !== n ? n : [],
+            c = (0, a.V3)(r),
             u = null != o ? (0, i.Rf)(o) : t;
         return {
             color: u,
             theme: u === t ? 'dark' : c
         };
     },
-    _ = (e, t) =>
-        (0, s.Z)(t)
-            ? c.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_SPOTIFY.format({
+    f = (e, t) =>
+        (0, l.Z)(t)
+            ? c.intl.formatToPlainString(c.t.Xuqn4e, {
                   username: e.username,
                   song: t.details,
                   artist: t.state
               })
             : t.type === o.IIU.PLAYING
-              ? c.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
+              ? c.intl.formatToPlainString(c.t.tAwI1t, {
                     username: e.username,
                     activity: t.name
                 })
               : t.type === o.IIU.WATCHING
-                ? c.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
+                ? c.intl.formatToPlainString(c.t.kCbfbG, {
                       username: e.username,
                       activity: t.name
                   })
                 : t.type === o.IIU.LISTENING
-                  ? c.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_LISTENING.format({
+                  ? c.intl.formatToPlainString(c.t.h2yWWV, {
                         username: e.username,
                         activity: t.name
                     })
-                  : (0, a.Z)(t) || t.type === o.IIU.STREAMING
-                    ? c.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING.format({
+                  : (0, r.Z)(t) || t.type === o.IIU.STREAMING
+                    ? c.intl.formatToPlainString(c.t.wqU7Wl, {
                           username: e.username,
                           activity: t.name
                       })
-                    : c.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_BASE.format({
+                    : c.intl.formatToPlainString(c.t['75iW6e'], {
                           username: e.username,
                           activity: t.name
                       });

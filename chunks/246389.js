@@ -9,7 +9,7 @@ var i = t(481060),
     a = t(906732),
     d = t(931617),
     _ = t(981631),
-    s = t(689938);
+    s = t(388032);
 n.default = (0, u.Z)(
     (0, o.Z)(
         function (e) {
@@ -23,7 +23,7 @@ n.default = (0, u.Z)(
                 onClose: () => {
                     (0, r.Zy)(), null == E || E();
                 },
-                'aria-label': s.Z.Messages.USER_ACTIONS_MENU_LABEL,
+                'aria-label': s.intl.string(s.t.liqwPD),
                 onSelect: u,
                 children: (0, l.jsx)(i.MenuGroup, { children: A })
             });

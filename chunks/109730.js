@@ -1,158 +1,158 @@
-a.r(t),
-    a.d(t, {
+l.r(e),
+    l.d(e, {
         default: function () {
-            return D;
+            return g;
         }
     }),
-    a(47120);
-var l = a(200651),
-    s = a(192379),
-    o = a(442837),
-    n = a(481060),
-    r = a(91176),
-    c = a(906732),
-    i = a(313201),
-    u = a(910693),
-    d = a(594174),
-    _ = a(626135),
-    I = a(5192),
-    C = a(590433),
-    N = a(981631),
-    f = a(689938),
-    T = a(293579);
-function U(e) {
+    l(47120);
+var n = l(200651),
+    a = l(192379),
+    o = l(442837),
+    s = l(481060),
+    r = l(91176),
+    i = l(906732),
+    c = l(313201),
+    u = l(910693),
+    d = l(594174),
+    f = l(626135),
+    x = l(5192),
+    m = l(590433),
+    T = l(981631),
+    h = l(388032),
+    _ = l(293579);
+function C(t) {
     return {
-        value: e,
+        value: t,
         get label() {
-            var t;
-            return null === (t = (0, C.L9)(e)) || void 0 === t ? void 0 : t.toLocaleUpperCase();
+            var e;
+            return null === (e = (0, m.L9)(t)) || void 0 === e ? void 0 : e.toLocaleUpperCase();
         }
     };
 }
-let x = [U(C.UK.DURATION_60_SEC), U(C.UK.DURATION_5_MIN), U(C.UK.DURATION_10_MIN), U(C.UK.DURATION_1_HOUR), U(C.UK.DURATION_1_DAY), U(C.UK.DURATION_1_WEEK)];
-function D(e) {
-    var t, a;
-    let { guildId: U, userId: D, anaylticsLocations: A, transitionState: O, onClose: S } = e,
-        M = (0, i.Dt)(),
-        { analyticsLocations: E } = (0, c.ZP)(),
-        m = null !== (a = null !== (t = null == A ? void 0 : A[0]) && void 0 !== t ? t : null == E ? void 0 : E[0]) && void 0 !== a ? a : null,
-        h = (0, o.e7)([d.default], () => d.default.getUser(D), [D]),
-        [L, R] = s.useState(C.UK.DURATION_60_SEC),
-        B = (0, u.sE)(U, {
-            location: m,
-            targetUserId: D
+let N = [C(m.UK.DURATION_60_SEC), C(m.UK.DURATION_5_MIN), C(m.UK.DURATION_10_MIN), C(m.UK.DURATION_1_HOUR), C(m.UK.DURATION_1_DAY), C(m.UK.DURATION_1_WEEK)];
+function g(t) {
+    var e, l;
+    let { guildId: C, userId: g, anaylticsLocations: U, transitionState: p, onClose: v } = t,
+        I = (0, c.Dt)(),
+        { analyticsLocations: S } = (0, i.ZP)(),
+        b = null !== (l = null !== (e = null == U ? void 0 : U[0]) && void 0 !== e ? e : null == S ? void 0 : S[0]) && void 0 !== l ? l : null,
+        j = (0, o.e7)([d.default], () => d.default.getUser(g), [g]),
+        [B, D] = a.useState(m.UK.DURATION_60_SEC),
+        k = (0, u.sE)(C, {
+            location: b,
+            targetUserId: g
         }),
-        [g, v] = s.useState(''),
-        [p, b] = s.useState(!1),
-        j = s.useCallback(async () => {
-            if (null != h) {
-                b(!0);
+        [O, A] = a.useState(''),
+        [E, R] = a.useState(!1),
+        y = a.useCallback(async () => {
+            if (null != j) {
+                R(!0);
                 try {
-                    await r.Z.setCommunicationDisabledDuration(U, D, L, g, m), B(u.jQ.TIMEOUT), (0, n.showToast)((0, n.createToast)(f.Z.Messages.GUILD_COMMUNICATION_DISABLED_SUCCESS.format({ user: I.ZP.getName(U, null, h) }), n.ToastType.SUCCESS)), S();
-                } catch (e) {
-                    (0, n.showToast)((0, n.createToast)(f.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR, n.ToastType.FAILURE));
+                    await r.Z.setCommunicationDisabledDuration(C, g, B, O, b), k(u.jQ.TIMEOUT), (0, s.showToast)((0, s.createToast)(h.intl.formatToPlainString(h.t.O9C3Nj, { user: x.ZP.getName(C, null, j) }), s.ToastType.SUCCESS)), v();
+                } catch (t) {
+                    (0, s.showToast)((0, s.createToast)(h.intl.string(h.t.epyCur), s.ToastType.FAILURE));
                 } finally {
-                    b(!1);
+                    R(!1);
                 }
             }
-        }, [U, h, D, S, L, g, m, B]);
-    return (s.useEffect(() => {
-        if (null != h)
-            _.default.track(N.rMx.OPEN_MODAL, {
-                type: C.Cl,
-                guild_id: U,
-                other_user_id: h.id
+        }, [C, j, g, v, B, O, b, k]);
+    return (a.useEffect(() => {
+        if (null != j)
+            f.default.track(T.rMx.OPEN_MODAL, {
+                type: m.Cl,
+                guild_id: C,
+                other_user_id: j.id
             });
     }, []),
-    s.useEffect(() => {
-        (null == h || null == U) && S();
-    }, [U, h, S]),
-    null == h || null == U)
+    a.useEffect(() => {
+        (null == j || null == C) && v();
+    }, [C, j, v]),
+    null == j || null == C)
         ? null
-        : (0, l.jsxs)(n.ModalRoot, {
-              transitionState: O,
-              'aria-labelledby': M,
+        : (0, n.jsxs)(s.ModalRoot, {
+              transitionState: p,
+              'aria-labelledby': I,
               children: [
-                  (0, l.jsxs)(n.ModalHeader, {
-                      className: T.header,
+                  (0, n.jsxs)(s.ModalHeader, {
+                      className: _.header,
                       separator: !1,
                       children: [
-                          (0, l.jsx)(n.Heading, {
-                              id: M,
+                          (0, n.jsx)(s.Heading, {
+                              id: I,
                               variant: 'heading-lg/semibold',
-                              children: f.Z.Messages.DISABLE_GUILD_COMMUNICATION_FOR_USER.format({ user: I.ZP.getName(U, null, h) })
+                              children: h.intl.format(h.t.OhsOy8, { user: x.ZP.getName(C, null, j) })
                           }),
-                          (0, l.jsx)(n.Clickable, {
-                              onClick: S,
-                              className: T.closeButton,
-                              'aria-label': f.Z.Messages.CLOSE,
-                              children: (0, l.jsx)(n.XSmallIcon, {
+                          (0, n.jsx)(s.Clickable, {
+                              onClick: v,
+                              className: _.closeButton,
+                              'aria-label': h.intl.string(h.t.cpT0Cg),
+                              children: (0, n.jsx)(s.XSmallIcon, {
                                   size: 'xs',
                                   color: 'currentColor',
-                                  className: T.closeIcon
+                                  className: _.closeIcon
                               })
                           })
                       ]
                   }),
-                  (0, l.jsxs)(n.ModalContent, {
-                      className: T.contentContainer,
+                  (0, n.jsxs)(s.ModalContent, {
+                      className: _.contentContainer,
                       children: [
-                          (0, l.jsx)(n.Text, {
+                          (0, n.jsx)(s.Text, {
                               variant: 'text-md/normal',
                               color: 'interactive-normal',
-                              children: f.Z.Messages.DISABLE_GUILD_COMMUNICATION_BODY_HEADER.format({ helpdeskArticle: C.cu })
+                              children: h.intl.format(h.t.Ns83GR, { helpdeskArticle: m.cu })
                           }),
-                          (0, l.jsx)(n.Text, {
-                              className: T.selectorHeader,
+                          (0, n.jsx)(s.Text, {
+                              className: _.selectorHeader,
                               variant: 'text-xs/semibold',
                               color: 'interactive-normal',
-                              children: f.Z.Messages.GUILD_COMMUNICATION_DISABLED_DURATION
+                              children: h.intl.string(h.t['9XsExs'])
                           }),
-                          (0, l.jsx)(n.ButtonGroup, {
-                              buttons: x.map((e) =>
-                                  (function (e, t, a) {
-                                      let { value: s, label: o } = e;
+                          (0, n.jsx)(s.ButtonGroup, {
+                              buttons: N.map((t) =>
+                                  (function (t, e, l) {
+                                      let { value: a, label: o } = t;
                                       return {
-                                          content: (0, l.jsx)(n.Text, {
+                                          content: (0, n.jsx)(s.Text, {
                                               variant: 'text-xs/normal',
-                                              className: t ? T.selectorTextSelected : T.selectorText,
+                                              className: e ? _.selectorTextSelected : _.selectorText,
                                               children: o
                                           }),
-                                          className: t ? T.selectorButtonSelected : T.selectorButton,
-                                          onClick: () => a(s)
+                                          className: e ? _.selectorButtonSelected : _.selectorButton,
+                                          onClick: () => l(a)
                                       };
-                                  })(e, e.value === L, R)
+                                  })(t, t.value === B, D)
                               )
                           }),
-                          (0, l.jsx)(n.Text, {
-                              className: T.selectorHeader,
+                          (0, n.jsx)(s.Text, {
+                              className: _.selectorHeader,
                               variant: 'text-xs/semibold',
                               color: 'interactive-normal',
-                              children: f.Z.Messages.GUILD_COMMUNICATION_DISABLED_REASON
+                              children: h.intl.string(h.t.ewHW19)
                           }),
-                          (0, l.jsx)(n.TextArea, {
-                              value: g,
-                              onChange: (e) => v(e),
-                              placeholder: f.Z.Messages.GUILD_COMMUNICATION_DISABLED_REASON_PLACEHOLDER,
+                          (0, n.jsx)(s.TextArea, {
+                              value: O,
+                              onChange: (t) => A(t),
+                              placeholder: h.intl.string(h.t.GakiHx),
                               rows: 2,
-                              maxLength: C.GN
+                              maxLength: m.GN
                           })
                       ]
                   }),
-                  (0, l.jsxs)(n.ModalFooter, {
+                  (0, n.jsxs)(s.ModalFooter, {
                       children: [
-                          (0, l.jsx)(n.Button, {
-                              onClick: j,
-                              color: n.Button.Colors.BRAND,
-                              submitting: p,
-                              children: f.Z.Messages.TIMEOUT_SUBMIT
+                          (0, n.jsx)(s.Button, {
+                              onClick: y,
+                              color: s.Button.Colors.BRAND,
+                              submitting: E,
+                              children: h.intl.string(h.t.MlPTIi)
                           }),
-                          (0, l.jsx)(n.Button, {
+                          (0, n.jsx)(s.Button, {
                               type: 'button',
-                              look: n.Button.Looks.LINK,
-                              color: n.Button.Colors.PRIMARY,
-                              onClick: S,
-                              children: f.Z.Messages.CANCEL
+                              look: s.Button.Looks.LINK,
+                              color: s.Button.Colors.PRIMARY,
+                              onClick: v,
+                              children: h.intl.string(h.t['ETE/oK'])
                           })
                       ]
                   })

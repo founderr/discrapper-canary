@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return f;
     }
 }),
     n(47120);
@@ -14,31 +14,31 @@ var i = n(120356),
     u = n(481060),
     c = n(607070),
     d = n(427788);
-function _(e) {
+function f(e) {
     let t,
-        { color: n, size: i, forcedIconColor: _, className: E, iconClassName: f } = e,
-        [h, p] = (0, o.Wu)([c.Z], () => [c.Z.desaturateUserColors, c.Z.saturation]),
-        I = (0, u.useToken)(l.Z.unsafe_rawColors.PRIMARY_300).hex(),
-        m = (0, s._i)(null != n ? n : I),
-        T = (0, s.ho)(m, !1, h ? p : null);
-    t = null != _ ? _ : 0.3 > (0, s.Bd)(m) ? l.Z.unsafe_rawColors.PRIMARY_630.css : l.Z.unsafe_rawColors.WHITE_500.css;
-    let S = i / 8;
+        { color: n, size: i, forcedIconColor: f, className: _, iconClassName: h } = e,
+        [p, m] = (0, o.Wu)([c.Z], () => [c.Z.desaturateUserColors, c.Z.saturation]),
+        g = (0, u.useToken)(l.Z.unsafe_rawColors.PRIMARY_300).hex(),
+        E = (0, s._i)(null != n ? n : g),
+        v = (0, s.ho)(E, !1, p ? m : null);
+    t = null != f ? f : 0.3 > (0, s.Bd)(E) ? l.Z.unsafe_rawColors.PRIMARY_630.css : l.Z.unsafe_rawColors.WHITE_500.css;
+    let I = i / 8;
     return (0, r.jsx)('div', {
         style: {
-            background: T,
+            background: v,
             width: i,
             height: i,
             borderRadius: i,
             lineHeight: ''.concat(i, 'px')
         },
-        className: E,
+        className: _,
         children: (0, r.jsx)(u.LinkIcon, {
             size: 'custom',
             color: t,
-            className: a()(d.linkIcon, f),
-            width: i - 2 * S,
-            height: i - 2 * S,
-            style: { margin: S }
+            className: a()(d.linkIcon, h),
+            width: i - 2 * I,
+            height: i - 2 * I,
+            style: { margin: I }
         })
     });
 }

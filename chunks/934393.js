@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return f;
     }
 });
 var r = n(200651);
@@ -12,22 +12,22 @@ var i = n(442837),
     l = n(553795),
     u = n(475413),
     c = n(981631),
-    d = n(689938);
-function _(e) {
-    let { platformType: t, icon: n, onAction: _ } = e,
-        { newestAnalyticsLocation: E } = (0, s.ZP)();
+    d = n(388032);
+function f(e) {
+    let { platformType: t, icon: n, onAction: f } = e,
+        { newestAnalyticsLocation: _ } = (0, s.ZP)();
     return (0, i.e7)([l.Z], () => null != l.Z.getAccount(null, t))
         ? null
         : (0, r.jsx)(u.tG, {
               icon: n,
-              text: d.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({ platform: a.Z.get(t).name }),
+              text: d.intl.formatToPlainString(d.t.XWSHTU, { platform: a.Z.get(t).name }),
               fullWidth: !0,
               onClick: () => {
                   let e = t === c.ABu.XBOX;
-                  null == _ || _({ action: e ? 'PRESS_CONNECT_XBOX_BUTTON' : 'PRESS_CONNECT_PLAYSTATION_BUTTON' }),
+                  null == f || f({ action: e ? 'PRESS_CONNECT_XBOX_BUTTON' : 'PRESS_CONNECT_PLAYSTATION_BUTTON' }),
                       (0, o.Z)({
                           platformType: t,
-                          location: E
+                          location: _
                       });
               }
           });

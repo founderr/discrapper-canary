@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return l;
     }
 });
 var i = n(699516),
-    a = n(453542);
-function s() {
+    r = n(453542);
+function l() {
     return {
         num_friends: i.Z.getFriendCount(),
         num_outgoing_requests: i.Z.getOutgoingCount(),
         num_incoming_requests: i.Z.getPendingCount(),
-        ...(0, a.X)()
+        ...(0, r.X)()
     };
 }

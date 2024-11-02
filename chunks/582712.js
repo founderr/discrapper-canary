@@ -1,126 +1,126 @@
-a.r(t),
-    a.d(t, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return g;
+            return x;
         }
     }),
-    a(47120);
-var n = a(200651),
-    s = a(192379),
-    l = a(286379),
-    i = a(442837),
-    r = a(481060),
-    o = a(565138),
-    u = a(797614),
-    _ = a(769654),
-    d = a(695346),
-    S = a(430824),
-    T = a(88658),
-    c = a(401416),
-    N = a(920133),
-    E = a(689938),
-    I = a(520182),
-    f = a(444812);
-function g(e) {
-    let { transitionState: t, guildId: g, onClose: m } = e,
-        M = (0, i.e7)([S.Z], () => S.Z.getGuild(g));
-    return (s.useEffect(() => {
-        (0, c.Y)(g), (0, N.L)(N.Q.MODAL_VIEWED, g), u.Z.increment({ name: l.V.DM_SETTINGS_UPSELL_VIEW });
-    }, [g]),
-    null == M)
+    n(47120);
+var a = n(200651),
+    l = n(192379),
+    i = n(286379),
+    r = n(442837),
+    s = n(481060),
+    o = n(565138),
+    u = n(797614),
+    d = n(769654),
+    c = n(695346),
+    f = n(430824),
+    g = n(88658),
+    m = n(401416),
+    h = n(920133),
+    S = n(388032),
+    D = n(520182),
+    _ = n(444812);
+function x(e) {
+    let { transitionState: t, guildId: x, onClose: I } = e,
+        b = (0, r.e7)([f.Z], () => f.Z.getGuild(x));
+    return (l.useEffect(() => {
+        (0, m.Y)(x), (0, h.L)(h.Q.MODAL_VIEWED, x), u.Z.increment({ name: i.V.DM_SETTINGS_UPSELL_VIEW });
+    }, [x]),
+    null == b)
         ? null
-        : (0, n.jsx)(r.ModalRoot, {
+        : (0, a.jsx)(s.ModalRoot, {
               transitionState: t,
-              className: I.modal,
-              children: (0, n.jsxs)('form', {
+              className: D.modal,
+              children: (0, a.jsxs)('form', {
                   onSubmit: (e) => {
                       e.preventDefault();
-                      let t = new Set((0, T.YK)());
-                      t.add(g), d.h2.updateSetting(Array.from(t)).then(() => (0, r.showToast)((0, r.createToast)(E.Z.Messages.DM_SETTINGS_UPSELL_SUCCESS_TOAST, r.ToastType.SUCCESS))), m(), (0, N.L)(N.Q.MODAL_DISABLED_DMS, g);
+                      let t = new Set((0, g.YK)());
+                      t.add(x), c.h2.updateSetting(Array.from(t)).then(() => (0, s.showToast)((0, s.createToast)(S.intl.string(S.t.rlYD1d), s.ToastType.SUCCESS))), I(), (0, h.L)(h.Q.MODAL_DISABLED_DMS, x);
                   },
                   children: [
-                      (0, n.jsx)('img', {
+                      (0, a.jsx)('img', {
                           alt: '',
-                          className: I.headerImage,
-                          src: f
+                          className: D.headerImage,
+                          src: _
                       }),
-                      (0, n.jsxs)(r.ModalHeader, {
+                      (0, a.jsxs)(s.ModalHeader, {
                           separator: !1,
-                          className: I.header,
+                          className: D.header,
                           children: [
-                              (0, n.jsx)(r.Heading, {
+                              (0, a.jsx)(s.Heading, {
                                   variant: 'heading-lg/bold',
-                                  className: I.title,
-                                  children: E.Z.Messages.DM_SETTINGS_UPSELL_TITLE
+                                  className: D.title,
+                                  children: S.intl.string(S.t.w2BvnJ)
                               }),
-                              (0, n.jsx)(r.Text, {
+                              (0, a.jsx)(s.Text, {
                                   variant: 'text-md/normal',
                                   color: 'header-secondary',
-                                  className: I.body,
-                                  children: E.Z.Messages.DM_SETTINGS_UPSELL_BODY.format({ guild_name: M.name })
+                                  className: D.body,
+                                  children: S.intl.format(S.t.Depjkp, { guild_name: b.name })
                               })
                           ]
                       }),
-                      (0, n.jsxs)(r.ModalContent, {
+                      (0, a.jsxs)(s.ModalContent, {
                           children: [
-                              (0, n.jsx)(r.Text, {
+                              (0, a.jsx)(s.Text, {
                                   variant: 'eyebrow',
                                   color: 'header-secondary',
-                                  className: I.subtitle,
-                                  children: E.Z.Messages.DM_SETTINGS_UPSELL_SUBTITLE
+                                  className: D.subtitle,
+                                  children: S.intl.string(S.t.KPB2i4)
                               }),
-                              (0, n.jsx)('div', {
-                                  className: I.guildContainer,
-                                  children: (0, n.jsxs)('div', {
-                                      className: I.guildInfo,
+                              (0, a.jsx)('div', {
+                                  className: D.guildContainer,
+                                  children: (0, a.jsxs)('div', {
+                                      className: D.guildInfo,
                                       children: [
-                                          (0, n.jsx)(o.Z, {
-                                              guild: M,
+                                          (0, a.jsx)(o.Z, {
+                                              guild: b,
                                               size: o.Z.Sizes.SMALL
                                           }),
-                                          (0, n.jsx)(r.Text, {
-                                              className: I.guildName,
+                                          (0, a.jsx)(s.Text, {
+                                              className: D.guildName,
                                               variant: 'text-md/semibold',
-                                              children: M.name
+                                              children: b.name
                                           })
                                       ]
                                   })
                               }),
-                              (0, n.jsxs)('div', {
-                                  className: I.content,
+                              (0, a.jsxs)('div', {
+                                  className: D.content,
                                   children: [
-                                      (0, n.jsx)(r.Button, {
-                                          className: I.button,
+                                      (0, a.jsx)(s.Button, {
+                                          className: D.button,
                                           type: 'submit',
-                                          color: r.Button.Colors.BRAND,
-                                          size: r.Button.Sizes.MEDIUM,
-                                          children: E.Z.Messages.DM_SETTINGS_UPSELL_YES_BUTTON
+                                          color: s.Button.Colors.BRAND,
+                                          size: s.Button.Sizes.MEDIUM,
+                                          children: S.intl.string(S.t.TD7iU1)
                                       }),
-                                      (0, n.jsx)(r.Button, {
-                                          className: I.button,
-                                          color: r.Button.Colors.PRIMARY,
+                                      (0, a.jsx)(s.Button, {
+                                          className: D.button,
+                                          color: s.Button.Colors.PRIMARY,
                                           onClick: () => {
-                                              m(), (0, N.L)(N.Q.MODAL_DISMISSED, g);
+                                              I(), (0, h.L)(h.Q.MODAL_DISMISSED, x);
                                           },
-                                          children: E.Z.Messages.DM_SETTINGS_UPSELL_NO_BUTTON
+                                          children: S.intl.string(S.t.PsWbcn)
                                       }),
-                                      (0, n.jsx)(r.Text, {
+                                      (0, a.jsx)(s.Text, {
                                           variant: 'text-xs/normal',
                                           color: 'header-secondary',
-                                          className: I.footer,
-                                          children: E.Z.Messages.DM_SETTINGS_UPSELL_FOOTER.format({
+                                          className: D.footer,
+                                          children: S.intl.format(S.t.IzZxXV, {
                                               onClick: () => {
-                                                  m(),
-                                                      (0, _.X)(g),
-                                                      (0, r.openModalLazy)(async () => {
-                                                          let { default: e } = await Promise.all([a.e('63288'), a.e('77298'), a.e('23357'), a.e('50506'), a.e('23755'), a.e('23217'), a.e('79189'), a.e('84605'), a.e('29549'), a.e('33053'), a.e('8016'), a.e('12013'), a.e('6380'), a.e('76540'), a.e('15669'), a.e('52249'), a.e('18543'), a.e('17938'), a.e('99783'), a.e('31605'), a.e('72181'), a.e('26182'), a.e('95900'), a.e('65840'), a.e('81272'), a.e('32776'), a.e('79107'), a.e('22646'), a.e('95393'), a.e('25183'), a.e('18101'), a.e('56602'), a.e('30419'), a.e('25788'), a.e('48923'), a.e('18824'), a.e('90508'), a.e('46097'), a.e('8739'), a.e('8821'), a.e('58059'), a.e('76447'), a.e('18895'), a.e('97313'), a.e('87624'), a.e('670'), a.e('99393'), a.e('37229'), a.e('59743'), a.e('68241'), a.e('24648'), a.e('28044'), a.e('50104'), a.e('22795'), a.e('24582'), a.e('25263')]).then(a.bind(a, 241420));
+                                                  I(),
+                                                      (0, d.X)(x),
+                                                      (0, s.openModalLazy)(async () => {
+                                                          let { default: e } = await Promise.all([n.e('63288'), n.e('77298'), n.e('23357'), n.e('50506'), n.e('23755'), n.e('23217'), n.e('79189'), n.e('84605'), n.e('29549'), n.e('33053'), n.e('8016'), n.e('12013'), n.e('6380'), n.e('76540'), n.e('15669'), n.e('52249'), n.e('18543'), n.e('17938'), n.e('99783'), n.e('31605'), n.e('72181'), n.e('26182'), n.e('95900'), n.e('65840'), n.e('81272'), n.e('32776'), n.e('79107'), n.e('22646'), n.e('95393'), n.e('25183'), n.e('18101'), n.e('56602'), n.e('30419'), n.e('25788'), n.e('48923'), n.e('18824'), n.e('90508'), n.e('46097'), n.e('8739'), n.e('8821'), n.e('58059'), n.e('76447'), n.e('18895'), n.e('97313'), n.e('87624'), n.e('670'), n.e('99393'), n.e('37229'), n.e('59743'), n.e('68241'), n.e('24648'), n.e('28044'), n.e('50104'), n.e('22795'), n.e('24582'), n.e('25263')]).then(n.bind(n, 241420));
                                                           return (t) =>
-                                                              (0, n.jsx)(e, {
+                                                              (0, a.jsx)(e, {
                                                                   ...t,
-                                                                  guild: M
+                                                                  guild: b
                                                               });
                                                       }),
-                                                      (0, N.L)(N.Q.MODAL_GUILD_SETTINGS_CLICKED, g);
+                                                      (0, h.L)(h.Q.MODAL_GUILD_SETTINGS_CLICKED, x);
                                               }
                                           })
                                       })

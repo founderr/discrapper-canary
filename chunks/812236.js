@@ -1,15 +1,15 @@
 n.d(t, {
     Fs: function () {
-        return f;
+        return h;
     },
     Xu: function () {
-        return E;
-    },
-    ZP: function () {
         return _;
     },
+    ZP: function () {
+        return f;
+    },
     ms: function () {
-        return h;
+        return p;
     },
     sV: function () {
         return d;
@@ -25,23 +25,23 @@ var r = n(192379),
     u = n(213459),
     c = n(367790);
 let d = 'no primary app command for application';
-async function _(e, t) {
+async function f(e, t) {
     let n,
         r = o.Z.getChannel(e);
     if (
         (null != r &&
-            null == (n = E(r, t)) &&
+            null == (n = _(r, t)) &&
             (await (0, u.FN)({
                 type: 'application',
                 applicationId: t
             }),
-            (n = E(r, t))),
+            (n = _(r, t))),
         null != n)
     )
         return n;
     throw Error(d);
 }
-function E(e, t) {
+function _(e, t) {
     return u.ZP.query(
         e,
         { commandTypes: [a.yU.PRIMARY_ENTRY_POINT] },
@@ -54,7 +54,7 @@ function E(e, t) {
         }
     ).commands[0];
 }
-function f(e, t) {
+function h(e, t) {
     let { commands: n, loading: i } = (function (e, t) {
             return (0, u.v1)(
                 e,
@@ -82,9 +82,9 @@ function f(e, t) {
         s
     );
 }
-function h(e) {
+function p(e) {
     let { channel: t, applicationId: n, botUserId: r } = e,
-        o = f(t, n),
+        o = h(t, n),
         l = (0, s.bG)('useIsPrimaryAppCommandUsableInAppDM');
     if (null == o) return !1;
     let u = null != o.integration_types && o.integration_types.includes(i.Y.USER_INSTALL),

@@ -11,45 +11,45 @@ var r = n(661763),
     a = n(921336);
 function s(e, t) {
     let n,
-        { elementType: s = 'button', isDisabled: o, onPress: l, onPressStart: u, onPressEnd: c, onPressUp: d, onPressChange: _, preventFocusOnPress: E, allowFocusWhenDisabled: f, onClick: h, href: p, target: I, rel: m, type: T = 'button' } = e;
+        { elementType: s = 'button', isDisabled: o, onPress: l, onPressStart: u, onPressEnd: c, onPressUp: d, onPressChange: f, preventFocusOnPress: _, allowFocusWhenDisabled: h, onClick: p, href: m, target: g, rel: E, type: v = 'button' } = e;
     n =
         'button' === s
             ? {
-                  type: T,
+                  type: v,
                   disabled: o
               }
             : {
                   role: 'button',
                   tabIndex: o ? void 0 : 0,
-                  href: 'a' === s && o ? void 0 : p,
-                  target: 'a' === s ? I : void 0,
-                  type: 'input' === s ? T : void 0,
+                  href: 'a' === s && o ? void 0 : m,
+                  target: 'a' === s ? g : void 0,
+                  type: 'input' === s ? v : void 0,
                   disabled: 'input' === s ? o : void 0,
                   'aria-disabled': o && 'input' !== s ? o : void 0,
-                  rel: 'a' === s ? m : void 0
+                  rel: 'a' === s ? E : void 0
               };
-    let { pressProps: S, isPressed: g } = (0, a.r7)({
+    let { pressProps: I, isPressed: S } = (0, a.r7)({
             onPressStart: u,
             onPressEnd: c,
-            onPressChange: _,
+            onPressChange: f,
             onPress: l,
             onPressUp: d,
             isDisabled: o,
-            preventFocusOnPress: E,
+            preventFocusOnPress: _,
             ref: t
         }),
-        { focusableProps: A } = (0, i.kc)(e, t);
-    f && (A.tabIndex = o ? -1 : A.tabIndex);
-    let N = (0, r.dG)(A, S, (0, r.zL)(e, { labelable: !0 }));
+        { focusableProps: T } = (0, i.kc)(e, t);
+    h && (T.tabIndex = o ? -1 : T.tabIndex);
+    let b = (0, r.dG)(T, I, (0, r.zL)(e, { labelable: !0 }));
     return {
-        isPressed: g,
-        buttonProps: (0, r.dG)(n, N, {
+        isPressed: S,
+        buttonProps: (0, r.dG)(n, b, {
             'aria-haspopup': e['aria-haspopup'],
             'aria-expanded': e['aria-expanded'],
             'aria-controls': e['aria-controls'],
             'aria-pressed': e['aria-pressed'],
             onClick: (e) => {
-                h && (h(e), console.warn('onClick is deprecated, please use onPress'));
+                p && (p(e), console.warn('onClick is deprecated, please use onPress'));
             }
         })
     };

@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return y;
+        return R;
     }
 }),
     t(47120),
@@ -10,38 +10,38 @@ var l = t(200651),
     a = t(192379),
     i = t(120356),
     r = t.n(i),
-    s = t(442837),
-    o = t(704215),
+    o = t(442837),
+    s = t(704215),
     c = t(692547),
     d = t(481060),
     u = t(239091),
     h = t(111028),
     m = t(605236),
-    _ = t(66999),
-    f = t(549631),
-    C = t(473403),
-    p = t(454585),
-    x = t(22082),
-    g = t(703656),
-    N = t(6025),
+    f = t(66999),
+    p = t(549631),
+    x = t(473403),
+    C = t(454585),
+    g = t(22082),
+    _ = t(703656),
+    b = t(6025),
     I = t(922482),
-    E = t(601070),
-    b = t(216306),
+    N = t(601070),
+    v = t(216306),
     Z = t(163),
-    v = t(753540),
-    T = t(70297),
-    j = t(981631),
+    j = t(753540),
+    E = t(70297),
+    B = t(981631),
     S = t(176505),
-    R = t(689938),
-    A = t(456944);
-let O = new Set([j.d4z.GUILD_FORUM, j.d4z.GUILD_MEDIA]),
-    B = new Set([j.d4z.GUILD_VOICE, j.d4z.GUILD_STAGE_VOICE]);
+    T = t(388032),
+    w = t(456944);
+let A = new Set([B.d4z.GUILD_FORUM, B.d4z.GUILD_MEDIA]),
+    y = new Set([B.d4z.GUILD_VOICE, B.d4z.GUILD_STAGE_VOICE]);
 function L(e) {
     let { guild: n, channel: a, onCategoryClick: i } = e,
-        s = (0, v.Mf)(n.id, a.id, a.id),
-        o = (0, v.t4)(n.id, a.id, a.id);
+        o = (0, j.Mf)(n.id, a.id, a.id),
+        s = (0, j.t4)(n.id, a.id, a.id);
     return (0, l.jsxs)('div', {
-        className: r()(A.categoryRow, { [A.uncategorized]: 'null' === a.id }),
+        className: r()(w.categoryRow, { [w.uncategorized]: 'null' === a.id }),
         onContextMenu: (e) => {
             (0, u.jW)(e, async () => {
                 let { default: e } = await t.e('8965').then(t.bind(t, 139035));
@@ -55,65 +55,65 @@ function L(e) {
         },
         children: [
             (0, l.jsx)(d.Text, {
-                className: A.categoryText,
+                className: w.categoryText,
                 color: 'text-muted',
                 variant: 'text-xs/semibold',
                 lineClamp: 1,
                 children: a.name
             }),
             'null' !== a.id &&
-                !o &&
+                !s &&
                 (0, l.jsxs)(d.Clickable, {
-                    className: A.selectAll,
+                    className: w.selectAll,
                     onClick: () => {
-                        !o && i(n.id, a.id, a.id);
+                        !s && i(n.id, a.id, a.id);
                     },
                     children: [
                         (0, l.jsx)(d.Checkbox, {
-                            className: A.selectAllCheckbox,
+                            className: w.selectAllCheckbox,
                             size: 14,
                             shape: d.Checkbox.Shapes.SMALL_BOX,
-                            value: s,
+                            value: o,
                             type: d.Checkbox.Types.INVERTED,
                             displayOnly: !0
                         }),
                         (0, l.jsx)(d.Text, {
                             color: 'text-muted',
                             variant: 'text-xs/medium',
-                            children: R.Z.Messages.CHANNEL_BROWSER_SELECT_ALL
+                            children: T.intl.string(T.t.mSQwnZ)
                         })
                     ]
                 })
         ]
     });
 }
-let M = a.memo(function () {
-        return (0, l.jsx)('div', { className: A.separator });
+let k = a.memo(function () {
+        return (0, l.jsx)('div', { className: w.separator });
     }),
-    w = a.memo(function (e) {
+    O = a.memo(function (e) {
         let { index: n } = e;
         return (0, l.jsx)(
             d.Text,
             {
                 variant: 'text-xs/normal',
-                className: A.subtitleSeparator,
+                className: w.subtitleSeparator,
                 children: '\xB7'
             },
             'separator-'.concat(n)
         );
     }),
     P = a.memo(function (e) {
-        let { channel: n, category: a, guild: i, isFirstChannel: o, isLastChannel: m, onChannelClick: Z, tooltipDirection: T = 'right' } = e,
-            { isSubscriptionGated: L } = (0, _.Z)(n.id),
-            P = (0, v.Mf)(i.id, n.id, a.id),
-            y = (0, v.t4)(i.id, n.id, a.id),
-            k = (0, v.EH)(i.id, a.id),
-            H = (0, s.e7)([E.Z], () => E.Z.getActiveThreadCount(i.id, n.id)),
-            D = (0, s.e7)([x.Z], () => x.Z.shouldIndicateNewChannel(i.id, n.id)),
+        let { channel: n, category: a, guild: i, isFirstChannel: s, isLastChannel: m, onChannelClick: Z, tooltipDirection: E = 'right' } = e,
+            { isSubscriptionGated: L } = (0, f.Z)(n.id),
+            P = (0, j.Mf)(i.id, n.id, a.id),
+            R = (0, j.t4)(i.id, n.id, a.id),
+            M = (0, j.EH)(i.id, a.id),
+            D = (0, o.e7)([N.Z], () => N.Z.getActiveThreadCount(i.id, n.id)),
+            H = (0, o.e7)([g.Z], () => g.Z.shouldIndicateNewChannel(i.id, n.id)),
             U = (e) => {
-                if (!y) return e.stopPropagation(), Z(i.id, n.id, a.id), !0;
+                if (!R) return e.stopPropagation(), Z(i.id, n.id, a.id), !0;
             },
-            W = (e) => {
+            G = (e) => {
                 n.isGuildVocal()
                     ? (0, u.jW)(e, async () => {
                           let { default: e } = await Promise.all([t.e('79695'), t.e('18320'), t.e('83331')]).then(t.bind(t, 213202));
@@ -134,30 +134,30 @@ let M = a.memo(function () {
                               });
                       });
             },
-            G = (function (e, n) {
+            W = (function (e, n) {
                 let t = [];
                 return (
-                    j.TPd.GUILD_THREADS_ONLY.has(e.type) &&
+                    B.TPd.GUILD_THREADS_ONLY.has(e.type) &&
                         n >= 1 &&
                         t.push(
                             (0, l.jsx)(
                                 d.Text,
                                 {
                                     variant: 'text-xs/normal',
-                                    className: A.channelSubtitle,
-                                    children: R.Z.Messages.ACTIVE_FORUM_POST_COUNT.format({ count: n })
+                                    className: w.channelSubtitle,
+                                    children: T.intl.format(T.t.z0qMLy, { count: n })
                                 },
                                 'thread-count'
                             )
                         ),
-                    !B.has(e.type) &&
+                    !y.has(e.type) &&
                         t.push(
                             (0, l.jsx)(
                                 d.Text,
                                 {
                                     variant: 'text-xs/normal',
-                                    className: A.channelSubtitle,
-                                    children: (0, b.qw)(e.id)
+                                    className: w.channelSubtitle,
+                                    children: (0, v.qw)(e.id)
                                 },
                                 'active'
                             )
@@ -169,107 +169,107 @@ let M = a.memo(function () {
                                 h.Z,
                                 {
                                     children: (0, l.jsx)(d.Text, {
-                                        className: A.topic,
+                                        className: w.topic,
                                         variant: 'text-xs/normal',
-                                        children: p.Z.parseTopic(e.topic, !0, { channelId: e.id })
+                                        children: C.Z.parseTopic(e.topic, !0, { channelId: e.id })
                                     })
                                 },
                                 'topic'
                             )
                         ),
-                    [t.map((e, n) => [e, (0, l.jsx)(w, { index: n }, 'subtitle-separator-'.concat(n))])].flat(2).slice(0, -1)
+                    [t.map((e, n) => [e, (0, l.jsx)(O, { index: n }, 'subtitle-separator-'.concat(n))])].flat(2).slice(0, -1)
                 );
-            })(n, H),
-            F = (e) =>
-                (e.stopPropagation(), O.has(n.type) || e.shiftKey)
-                    ? ((0, g.XU)(i.id, n.id), !0)
+            })(n, D),
+            z = (e) =>
+                (e.stopPropagation(), A.has(n.type) || e.shiftKey)
+                    ? ((0, _.XU)(i.id, n.id), !0)
                     : n.isGuildStageVoice() || n.isGuildVoice()
                       ? ((0, I.Cq)(n), !0)
-                      : (N.Z.openChannelAsSidebar({
+                      : (b.Z.openChannelAsSidebar({
                             guildId: n.guild_id,
                             channelId: n.id,
                             baseChannelId: S.oC.CHANNEL_BROWSER
                         }),
                         !0),
-            z = R.Z.Messages.CHANNEL_BROWSER_VIEW;
-        n.isGuildStageVoice() || n.isGuildVoice() ? (z = R.Z.Messages.JOIN) : n.isForumLikeChannel() && (z = R.Z.Messages.OPEN);
-        let V = y ? 'text-muted' : 'text-normal',
-            q = (0, d.useToken)(y ? c.Z.colors.TEXT_MUTED : c.Z.colors.TEXT_NORMAL).hex();
+            F = T.intl.string(T.t.vetGQk);
+        n.isGuildStageVoice() || n.isGuildVoice() ? (F = T.intl.string(T.t.VJlc0d)) : n.isForumLikeChannel() && (F = T.intl.string(T.t['3xjX0d']));
+        let q = R ? 'text-muted' : 'text-normal',
+            V = (0, d.useToken)(R ? c.Z.colors.TEXT_MUTED : c.Z.colors.TEXT_NORMAL).hex();
         return (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(d.Tooltip, {
-                    text: k,
+                    text: M,
                     delay: 500,
-                    position: T,
+                    position: E,
                     children: (e) =>
                         (0, l.jsxs)(d.Clickable, {
-                            className: r()(A.channelRow, {
-                                [A.firstChannel]: o,
-                                [A.lastChannel]: m,
-                                [A.disabled]: y
+                            className: r()(w.channelRow, {
+                                [w.firstChannel]: s,
+                                [w.lastChannel]: m,
+                                [w.disabled]: R
                             }),
                             ...e,
                             onClick: U,
-                            onContextMenu: W,
+                            onContextMenu: G,
                             children: [
                                 (0, l.jsxs)('div', {
-                                    className: A.channelInfo,
+                                    className: w.channelInfo,
                                     children: [
                                         (0, l.jsxs)('div', {
-                                            className: A.channelName,
+                                            className: w.channelName,
                                             children: [
-                                                (0, l.jsx)(C._, {
+                                                (0, l.jsx)(x._, {
                                                     channel: n,
                                                     guild: i
                                                 }),
                                                 (0, l.jsx)(h.Z, {
-                                                    className: A.__invalid_name,
+                                                    className: w.__invalid_name,
                                                     children: (0, l.jsx)(d.Text, {
-                                                        className: A.channelText,
+                                                        className: w.channelText,
                                                         variant: 'text-md/medium',
                                                         lineClamp: 1,
-                                                        color: V,
+                                                        color: q,
                                                         children: n.name
                                                     })
                                                 }),
                                                 L
-                                                    ? (0, l.jsx)(f.Z, {
-                                                          color: q,
-                                                          className: A.premiumIcon
+                                                    ? (0, l.jsx)(p.Z, {
+                                                          color: V,
+                                                          className: w.premiumIcon
                                                       })
                                                     : null,
-                                                D
+                                                H
                                                     ? (0, l.jsx)(d.TextBadge, {
-                                                          text: R.Z.Messages.NEW,
+                                                          text: T.intl.string(T.t.y2b7CA),
                                                           color: c.Z.unsafe_rawColors.BRAND_260.css,
-                                                          className: A.titleBadge
+                                                          className: w.titleBadge
                                                       })
                                                     : null
                                             ]
                                         }),
                                         (0, l.jsx)('div', {
-                                            className: A.channelSubtitles,
-                                            children: G
+                                            className: w.channelSubtitles,
+                                            children: W
                                         })
                                     ]
                                 }),
                                 (0, l.jsxs)('div', {
-                                    className: A.channelActions,
+                                    className: w.channelActions,
                                     children: [
                                         (0, l.jsx)(d.Button, {
                                             look: d.ButtonLooks.OUTLINED,
                                             color: d.ButtonColors.PRIMARY,
                                             size: d.ButtonSizes.SMALL,
-                                            className: A.viewChannelButton,
-                                            onClick: F,
-                                            children: z
+                                            className: w.viewChannelButton,
+                                            onClick: z,
+                                            children: F
                                         }),
                                         (0, l.jsx)(d.Checkbox, {
                                             'aria-checked': P,
                                             value: P,
                                             type: d.Checkbox.Types.INVERTED,
-                                            disabled: y,
-                                            innerClassName: A.checkboxInner,
+                                            disabled: R,
+                                            innerClassName: w.checkboxInner,
                                             displayOnly: !0
                                         })
                                     ]
@@ -277,15 +277,15 @@ let M = a.memo(function () {
                             ]
                         })
                 }),
-                !m && (0, l.jsx)(M, {})
+                !m && (0, l.jsx)(k, {})
             ]
         });
     });
-function y(e) {
-    let { categories: n, guild: t, className: i, innerClassName: s, hasSidebar: c } = e,
+function R(e) {
+    let { categories: n, guild: t, className: i, innerClassName: o, hasSidebar: c } = e,
         { onChannelClick: u } = (0, Z.Z)(t.id),
-        h = (0, m.wE)(o.z.CHANNEL_BROWSER_NUX) ? 0 : -1,
-        _ = a.useCallback(
+        h = (0, m.wE)(s.z.CHANNEL_BROWSER_NUX) ? 0 : -1,
+        f = a.useCallback(
             (e) => {
                 let { section: a } = e;
                 if (0 === a && -1 === h) return null;
@@ -302,42 +302,42 @@ function y(e) {
             },
             [n, t, h, u]
         ),
-        f = a.useCallback(
+        p = a.useCallback(
             (e) => {
                 let { section: a, row: i } = e;
-                if (0 === a && -1 === h) return (0, l.jsx)(T.Z, { guild: t });
+                if (0 === a && -1 === h) return (0, l.jsx)(E.Z, { guild: t });
                 let r = n._categories[a + h],
-                    s = n[r.channel.id][i];
-                return null == s
+                    o = n[r.channel.id][i];
+                return null == o
                     ? null
                     : (0, l.jsx)(
                           P,
                           {
                               category: r.channel,
-                              channel: s.channel,
+                              channel: o.channel,
                               guild: t,
                               isFirstChannel: 0 === i,
                               isLastChannel: n[r.channel.id].length - 1 === i,
                               tooltipDirection: c ? 'right' : 'top',
                               onChannelClick: u
                           },
-                          s.channel.id
+                          o.channel.id
                       );
             },
             [n, t, h, c, u]
         ),
-        C = (0, T.q)(t.id),
-        p = (0, b.tn)(t.id, n, 64, C);
+        x = (0, E.q)(t.id),
+        C = (0, v.tn)(t.id, n, 64, x);
     return (0, l.jsx)(
         d.ListAuto,
         {
             className: i,
-            innerClassName: r()(s, A.scrollerInner),
+            innerClassName: r()(o, w.scrollerInner),
             sectionHeight: 48,
-            rowHeight: (e) => p[e].rowHeight,
-            renderSection: _,
-            renderRow: f,
-            sections: p.map((e) => e.rowCount)
+            rowHeight: (e) => C[e].rowHeight,
+            renderSection: f,
+            renderRow: p,
+            sections: C.map((e) => e.rowCount)
         },
         'channel-browser-list'
     );

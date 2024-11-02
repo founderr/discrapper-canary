@@ -1,91 +1,91 @@
-var t = n(200651),
-    a = n(192379),
-    l = n(481060),
-    r = n(665149),
-    i = n(51144),
+var i = n(200651),
+    l = n(192379),
+    r = n(481060),
+    a = n(665149),
+    s = n(51144),
     o = n(246364),
     c = n(666233),
     d = n(50662),
     u = n(395716),
-    I = n(673885),
-    E = n(981631),
-    _ = n(689938),
-    T = n(794284);
-s.Z = function (e) {
-    let { guild: s, guildJoinRequest: m, guildJoinRequestUser: R, onClose: M } = e,
-        N = a.useMemo(() => {
+    m = n(673885),
+    h = n(981631),
+    x = n(388032),
+    b = n(794284);
+t.Z = function (e) {
+    let { guild: t, guildJoinRequest: j, guildJoinRequestUser: p, onClose: g } = e,
+        v = l.useMemo(() => {
             var e;
-            return null !== (e = m.formResponses) && void 0 !== e ? e : [];
-        }, [m.formResponses]),
-        C = s.hasFeature(E.oNc.CLAN) && m.applicationStatus === o.wB.SUBMITTED,
-        x = a.useCallback(
+            return null !== (e = j.formResponses) && void 0 !== e ? e : [];
+        }, [j.formResponses]),
+        f = t.hasFeature(h.oNc.CLAN) && j.applicationStatus === o.wB.SUBMITTED,
+        C = l.useCallback(
             () =>
-                (0, l.openModalLazy)(async () => {
+                (0, r.openModalLazy)(async () => {
                     let { default: e } = await n.e('17945').then(n.bind(n, 223926));
                     return (n) =>
-                        (0, t.jsx)(e, {
+                        (0, i.jsx)(e, {
                             ...n,
-                            guild: s,
-                            guildJoinRequest: m,
-                            user: R
+                            guild: t,
+                            guildJoinRequest: j,
+                            user: p
                         });
                 }),
-            [s, m, R]
+            [t, j, p]
         );
-    return (0, t.jsxs)(t.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, t.jsxs)(r.ZP, {
-                toolbar: (0, t.jsx)(r.ZP.Icon, {
-                    icon: l.XSmallIcon,
-                    onClick: M,
-                    tooltip: _.Z.Messages.CLOSE
+            (0, i.jsxs)(a.ZP, {
+                toolbar: (0, i.jsx)(a.ZP.Icon, {
+                    icon: r.XSmallIcon,
+                    onClick: g,
+                    tooltip: x.intl.string(x.t.cpT0Cg)
                 }),
                 children: [
-                    (0, t.jsx)(r.ZP.Icon, {
-                        icon: l.UserIcon,
+                    (0, i.jsx)(a.ZP.Icon, {
+                        icon: r.UserIcon,
                         disabled: !0,
-                        'aria-label': _.Z.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATION
+                        'aria-label': x.intl.string(x.t.PuCkTU)
                     }),
-                    (0, t.jsx)(l.Heading, {
+                    (0, i.jsx)(r.Heading, {
                         variant: 'heading-md/semibold',
-                        children: i.ZP.getName(R)
+                        children: s.ZP.getName(p)
                     })
                 ]
             }),
-            (0, t.jsx)(d.Z, {
-                guildJoinRequest: m,
-                guildJoinRequestUser: R,
-                guild: s
+            (0, i.jsx)(d.Z, {
+                guildJoinRequest: j,
+                guildJoinRequestUser: p,
+                guild: t
             }),
-            (0, t.jsxs)(l.Scroller, {
+            (0, i.jsxs)(r.Scroller, {
                 children: [
-                    (0, t.jsxs)('div', {
-                        className: T.container,
+                    (0, i.jsxs)('div', {
+                        className: b.container,
                         children: [
-                            (0, t.jsx)(I.Z, {
-                                user: R,
-                                joinRequestId: m.joinRequestId
+                            (0, i.jsx)(m.Z, {
+                                user: p,
+                                joinRequestId: j.joinRequestId
                             }),
-                            C &&
-                                (0, t.jsxs)('div', {
-                                    className: T.actionButtons,
+                            f &&
+                                (0, i.jsxs)('div', {
+                                    className: b.actionButtons,
                                     children: [
-                                        (0, t.jsx)(u.Z, { joinRequest: m }),
-                                        (0, t.jsx)(l.Button, {
-                                            color: l.ButtonColors.PRIMARY,
-                                            onClick: x,
-                                            children: _.Z.Messages.CLAN_MEMBER_APPLICATION_REPORT_CTA
+                                        (0, i.jsx)(u.Z, { joinRequest: j }),
+                                        (0, i.jsx)(r.Button, {
+                                            color: r.ButtonColors.PRIMARY,
+                                            onClick: C,
+                                            children: x.intl.string(x.t['6DpJRU'])
                                         })
                                     ]
                                 })
                         ]
                     }),
-                    (0, t.jsx)('div', {
-                        className: T.disabledFormRenderer,
-                        children: (0, t.jsx)(c.Z, {
-                            guildId: s.id,
-                            formFields: N,
-                            user: R
+                    (0, i.jsx)('div', {
+                        className: b.disabledFormRenderer,
+                        children: (0, i.jsx)(c.Z, {
+                            guildId: t.id,
+                            formFields: v,
+                            user: p
                         })
                     })
                 ]

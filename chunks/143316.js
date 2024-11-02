@@ -5,67 +5,67 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(481060),
-    r = n(626135),
-    l = n(288552),
-    o = n(981631),
-    c = n(689938),
+    r = n(192379),
+    l = n(481060),
+    a = n(626135),
+    o = n(288552),
+    s = n(981631),
+    c = n(388032),
     u = n(811304);
 function d(e) {
     let { type: t, onClick: n } = e,
-        [d, E] = a.useState(!1),
-        I = () => {
+        [d, f] = r.useState(!1),
+        h = () => {
             n(),
-                r.default.track(o.rMx.INBOX_CHANNEL_ACKED, {
+                a.default.track(s.rMx.INBOX_CHANNEL_ACKED, {
                     marked_all_channels_as_read: !0,
                     num_unread_channels_remaining: 0
                 });
         },
-        m = (e) => {
-            e.shiftKey ? I() : E(!0);
+        p = (e) => {
+            e.shiftKey ? h() : f(!0);
         };
     return (0, i.jsxs)(i.Fragment, {
         children: [
             d
-                ? (0, i.jsx)(_, {
-                      confirm: I,
-                      cancel: () => E(!1)
+                ? (0, i.jsx)(m, {
+                      confirm: h,
+                      cancel: () => f(!1)
                   })
                 : null,
             'bottom-floating' === t
-                ? (0, i.jsx)(l.a, {
-                      text: c.Z.Messages.MARK_ALL_AS_READ,
-                      icon: s.DoubleCheckmarkIcon,
-                      onClick: m
+                ? (0, i.jsx)(o.a, {
+                      text: c.intl.string(c.t['8k+6QU']),
+                      icon: l.DoubleCheckmarkIcon,
+                      onClick: p
                   })
-                : (0, i.jsx)(s.CircleIconButton, {
-                      tooltip: c.Z.Messages.MARK_ALL_AS_READ,
-                      color: s.CircleIconButtonColors.TERTIARY,
-                      icon: (0, i.jsx)(s.DoubleCheckmarkIcon, {
+                : (0, i.jsx)(l.CircleIconButton, {
+                      tooltip: c.intl.string(c.t['8k+6QU']),
+                      color: l.CircleIconButtonColors.TERTIARY,
+                      icon: (0, i.jsx)(l.DoubleCheckmarkIcon, {
                           size: 'xs',
                           color: 'currentColor'
                       }),
                       className: u.controlButton,
-                      onClick: m
+                      onClick: p
                   })
         ]
     });
 }
-function _(e) {
+function m(e) {
     let { cancel: t, confirm: n } = e;
-    return (0, i.jsx)(s.DeclarativeConfirmModal, {
+    return (0, i.jsx)(l.DeclarativeConfirmModal, {
         dismissable: !0,
-        header: c.Z.Messages.UNREADS_CONFIRM_MARK_ALL_READ_HEADER,
-        confirmText: c.Z.Messages.MARK_AS_READ,
-        cancelText: c.Z.Messages.CANCEL,
-        confirmButtonColor: s.Button.Colors.BRAND,
+        header: c.intl.string(c.t.h4bVZ2),
+        confirmText: c.intl.string(c.t.e6RscX),
+        cancelText: c.intl.string(c.t['ETE/oK']),
+        confirmButtonColor: l.Button.Colors.BRAND,
         onCancel: t,
         onConfirm: n,
-        children: (0, i.jsx)(s.Text, {
+        children: (0, i.jsx)(l.Text, {
             color: 'text-normal',
             variant: 'text-sm/normal',
-            children: c.Z.Messages.UNREADS_CONFIRM_MARK_ALL_READ_DESCRIPTION
+            children: c.intl.string(c.t['0MQ0BQ'])
         })
     });
 }

@@ -1,31 +1,31 @@
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(120356),
-    r = n.n(a),
-    i = n(481060),
+var r = n(120356),
+    a = n.n(r),
+    s = n(481060),
     l = n(785681),
     o = n(231994),
-    c = n(689938),
-    _ = n(205402),
-    d = n(113207);
-let E = (e) => {
-    let { header: t, description: n, icon: a, inModal: l } = e;
-    return (0, s.jsxs)('div', {
-        className: r()(_.row, d.marginBottom8, { [_.inModal]: l }),
+    c = n(388032),
+    d = n(205402),
+    u = n(113207);
+let g = (e) => {
+    let { header: t, description: n, icon: r, inModal: l } = e;
+    return (0, i.jsxs)('div', {
+        className: a()(d.row, u.marginBottom8, { [d.inModal]: l }),
         children: [
-            (0, s.jsx)('div', {
-                className: _.iconContainer,
-                children: a
+            (0, i.jsx)('div', {
+                className: d.iconContainer,
+                children: r
             }),
-            (0, s.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 children: [
-                    (0, s.jsx)(i.Text, {
-                        className: _.header,
+                    (0, i.jsx)(s.Text, {
+                        className: d.header,
                         variant: 'text-sm/bold',
                         color: 'header-primary',
                         children: t
                     }),
-                    (0, s.jsx)(i.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: 'text-xs/medium',
                         color: 'header-secondary',
                         children: n
@@ -37,64 +37,64 @@ let E = (e) => {
 };
 t.Z = (e) => {
     let { inModal: t } = e,
-        n = (0, l.o)(c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_INCLUDED_HEADER_TEEN, c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_INCLUDED_HEADER_PARENT),
-        a = (0, l.o)(c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_HEADER_TEEN, c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_HEADER_PARENT),
-        r = (0, l.o)(c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_HEADER_TEEN, c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_HEADER_PARENT),
-        d = (0, l.o)(c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_DESCRIPTION_TEEN, c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_DESCRIPTION_PARENT);
-    return (0, s.jsxs)('div', {
+        n = (0, l.o)(c.intl.string(c.t.Sm8Gq6), c.intl.string(c.t.YU7aaW)),
+        r = (0, l.o)(c.intl.string(c.t['TCzk/f']), c.intl.string(c.t['2OqtJC'])),
+        a = (0, l.o)(c.intl.string(c.t.ASf7XF), c.intl.string(c.t['82y87e'])),
+        u = (0, l.o)(c.intl.string(c.t['0QDVFB']), c.intl.string(c.t['1xBHHR']));
+    return (0, i.jsxs)('div', {
         children: [
-            (0, s.jsx)(i.Text, {
-                className: _.groupHeader,
+            (0, i.jsx)(s.Text, {
+                className: d.groupHeader,
                 variant: 'text-xxs/bold',
                 color: 'header-secondary',
                 children: n
             }),
-            (0, s.jsx)(E, {
-                header: c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_FRIEND_ADD_HEADER,
-                description: c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_FRIEND_ADD_DESCRIPTION,
-                icon: (0, s.jsx)(i.FriendsIcon, {
+            (0, i.jsx)(g, {
+                header: c.intl.string(c.t['/zMYZW']),
+                description: c.intl.string(c.t.DxFKkZ),
+                icon: (0, i.jsx)(s.FriendsIcon, {
                     size: 'custom',
                     width: 20,
                     height: 20,
-                    color: i.tokens.colors.WHITE.css
+                    color: s.tokens.colors.WHITE.css
                 }),
                 inModal: t
             }),
-            (0, s.jsx)(E, {
-                header: c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_GUILD_PARTICIPATION_HEADER,
-                description: c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_GUILD_PARTICIPATION_DESCRIPTION,
-                icon: (0, s.jsx)(i.ServerGridIcon, {
+            (0, i.jsx)(g, {
+                header: c.intl.string(c.t['44NEx8']),
+                description: c.intl.string(c.t.WrY56O),
+                icon: (0, i.jsx)(s.ServerGridIcon, {
                     size: 'custom',
                     width: 20,
                     height: 20,
-                    color: i.tokens.colors.WHITE.css
+                    color: s.tokens.colors.WHITE.css
                 }),
                 inModal: t
             }),
-            (0, s.jsx)(E, {
-                header: c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_USERS_MESSAGED_HEADER,
-                description: c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_USERS_MESSAGED_DESCRIPTION,
-                icon: (0, s.jsx)(o.Z, {
+            (0, i.jsx)(g, {
+                header: c.intl.string(c.t['Z3G+8v']),
+                description: c.intl.string(c.t.KBgAra),
+                icon: (0, i.jsx)(o.Z, {
                     width: 20,
                     height: 20,
-                    color: i.tokens.colors.WHITE.css
+                    color: s.tokens.colors.WHITE.css
                 }),
                 inModal: t
             }),
-            (0, s.jsx)(i.Text, {
-                className: _.groupHeader,
+            (0, i.jsx)(s.Text, {
+                className: d.groupHeader,
                 variant: 'text-xxs/bold',
                 color: 'header-secondary',
-                children: a
+                children: r
             }),
-            (0, s.jsx)(E, {
-                header: r,
-                description: d,
-                icon: (0, s.jsx)(i.XSmallIcon, {
+            (0, i.jsx)(g, {
+                header: a,
+                description: u,
+                icon: (0, i.jsx)(s.XSmallIcon, {
                     size: 'custom',
                     width: 20,
                     height: 20,
-                    color: i.tokens.colors.WHITE.css
+                    color: s.tokens.colors.WHITE.css
                 }),
                 inModal: t
             })

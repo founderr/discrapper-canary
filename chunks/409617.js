@@ -1,37 +1,37 @@
-s.d(n, {
+t.d(n, {
     Z: function () {
-        return m;
+        return _;
     }
 }),
-    s(47120);
-var a = s(200651),
-    t = s(192379),
-    i = s(120356),
-    l = s.n(i),
-    o = s(442837),
-    r = s(481060),
-    c = s(570140),
-    d = s(600164),
-    _ = s(236289),
-    E = s(788080),
-    N = s(613734),
-    u = s(800530),
-    A = s(689938),
-    x = s(332384),
-    I = s(487043);
-function m(e) {
-    let { className: n, isDsaEligible: s = !1, onClose: i, onNext: m, onBack: S } = e,
-        C = (0, N.U0)(),
-        T = (0, o.e7)([_.Z], () => _.Z.getFreeTextAppealReason()),
-        [h, L] = t.useState(''),
-        [M, p] = t.useState(!1);
-    t.useEffect(() => {
-        L(null != T ? T : ''), p(C === u.bK.SOMETHING_ELSE);
-    }, [T, C, s]);
-    let P = (e) => {
-            p(e === u.bK.SOMETHING_ELSE),
-                e !== u.bK.SOMETHING_ELSE &&
-                    (L(''),
+    t(47120);
+var i = t(200651),
+    l = t(192379),
+    a = t(120356),
+    s = t.n(a),
+    o = t(442837),
+    r = t(481060),
+    c = t(570140),
+    d = t(600164),
+    u = t(236289),
+    x = t(788080),
+    m = t(613734),
+    C = t(800530),
+    h = t(388032),
+    N = t(332384),
+    p = t(487043);
+function _(e) {
+    let { className: n, isDsaEligible: t = !1, onClose: a, onNext: _, onBack: g } = e,
+        j = (0, m.U0)(),
+        b = (0, o.e7)([u.Z], () => u.Z.getFreeTextAppealReason()),
+        [I, E] = l.useState(''),
+        [T, S] = l.useState(!1);
+    l.useEffect(() => {
+        E(null != b ? b : ''), S(j === C.bK.SOMETHING_ELSE);
+    }, [b, j, t]);
+    let v = (e) => {
+            S(e === C.bK.SOMETHING_ELSE),
+                e !== C.bK.SOMETHING_ELSE &&
+                    (E(''),
                     c.Z.dispatch({
                         type: 'SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE',
                         userInput: ''
@@ -41,100 +41,100 @@ function m(e) {
                     signal: e
                 });
         },
-        O = u.RY.map((e) => ({
+        f = C.RY.map((e) => ({
             value: e,
-            name: (0, E.ox)(e)
+            name: (0, x.ox)(e)
         }));
-    return (0, a.jsxs)(a.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, a.jsxs)(r.ModalHeader, {
+            (0, i.jsxs)(r.ModalHeader, {
                 direction: d.Z.Direction.VERTICAL,
-                className: I.header,
+                className: p.header,
                 separator: !1,
                 children: [
-                    (0, a.jsx)(r.Heading, {
-                        className: I.title,
+                    (0, i.jsx)(r.Heading, {
+                        className: p.title,
                         variant: 'heading-xl/semibold',
-                        children: A.Z.Messages.APPEAL_INGESTION_MODAL_HEADER
+                        children: h.intl.string(h.t['C5q+pa'])
                     }),
-                    (0, a.jsx)(r.Text, {
-                        className: I.subtitle,
+                    (0, i.jsx)(r.Text, {
+                        className: p.subtitle,
                         color: 'header-secondary',
                         variant: 'text-md/normal',
-                        children: A.Z.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_SUBHEADER
+                        children: h.intl.string(h.t.VEcRh4)
                     }),
-                    null != i &&
-                        (0, a.jsx)(r.ModalCloseButton, {
-                            className: I.closeButton,
-                            onClick: i
+                    null != a &&
+                        (0, i.jsx)(r.ModalCloseButton, {
+                            className: p.closeButton,
+                            onClick: a
                         })
                 ]
             }),
-            (0, a.jsxs)(r.ModalContent, {
-                className: l()(x.modalContent, n),
+            (0, i.jsxs)(r.ModalContent, {
+                className: s()(N.modalContent, n),
                 paddingFix: !1,
                 children: [
-                    (0, a.jsx)(r.RadioGroup, {
+                    (0, i.jsx)(r.RadioGroup, {
                         radioPosition: 'right',
-                        radioItemClassName: I.radioItem,
+                        radioItemClassName: p.radioItem,
                         size: r.RadioGroup.Sizes.NOT_SET,
-                        value: C,
-                        options: O,
+                        value: j,
+                        options: f,
                         onChange: (e) => {
                             let { value: n } = e;
-                            return P(n);
+                            return v(n);
                         }
                     }),
-                    s &&
-                        M &&
-                        (0, a.jsxs)(a.Fragment, {
+                    t &&
+                        T &&
+                        (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, a.jsx)(r.TextArea, {
+                                (0, i.jsx)(r.TextArea, {
                                     rows: 4,
                                     maxLength: 1024,
-                                    placeholder: A.Z.Messages.APPEAL_INGESTION_FREE_TEXT_REASON_ACTION_SHEET_PLACEHOLDER,
-                                    value: h,
-                                    onChange: L,
+                                    placeholder: h.intl.string(h.t.bQrZIC),
+                                    value: I,
+                                    onChange: E,
                                     autoFocus: !0
                                 }),
-                                (0, a.jsx)(r.Text, {
+                                (0, i.jsx)(r.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'header-muted',
-                                    children: A.Z.Messages.APPEAL_INGESTION_FREE_TEXT_REASON_ACTION_SHEET_FOOTER
+                                    children: h.intl.string(h.t.xfNY3N)
                                 })
                             ]
                         }),
-                    (0, a.jsx)(r.Text, {
+                    (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
-                        className: x.disclaimer,
-                        children: A.Z.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DISCLAIMER.format()
+                        className: N.disclaimer,
+                        children: h.intl.format(h.t['8k9GCQ'], {})
                     })
                 ]
             }),
-            (0, a.jsxs)(r.ModalFooter, {
+            (0, i.jsxs)(r.ModalFooter, {
                 children: [
-                    (0, a.jsx)(r.Button, {
+                    (0, i.jsx)(r.Button, {
                         onClick: () => {
                             c.Z.dispatch({
                                 type: 'SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE',
-                                userInput: h
+                                userInput: I
                             }),
-                                null == m || m();
+                                null == _ || _();
                         },
                         color: r.Button.Colors.BRAND,
-                        children: A.Z.Messages.NEXT
+                        children: h.intl.string(h.t.PDTjLC)
                     }),
-                    (0, a.jsx)(r.Button, {
+                    (0, i.jsx)(r.Button, {
                         onClick: () => {
                             c.Z.dispatch({
                                 type: 'SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE',
-                                userInput: h
+                                userInput: I
                             }),
-                                null == S || S();
+                                null == g || g();
                         },
                         color: r.Button.Colors.PRIMARY,
                         look: r.Button.Looks.LINK,
-                        children: A.Z.Messages.BACK
+                        children: h.intl.string(h.t['13/7kZ'])
                     })
                 ]
             })

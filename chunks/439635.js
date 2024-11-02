@@ -1,64 +1,64 @@
-t.r(n);
-var a = t(200651);
-t(192379);
-var i = t(481060),
-    l = t(239091),
-    u = t(108843),
-    o = t(100527),
-    r = t(299206),
-    s = t(423589),
-    c = t(398048),
-    d = t(315732),
-    _ = t(3689),
-    E = t(323597),
-    N = t(852245),
-    Z = t(367722),
-    p = t(776568),
-    M = t(218035),
-    C = t(775666),
-    I = t(593589),
-    T = t(442754),
-    f = t(981631),
-    h = t(689938);
-n.default = (0, u.Z)(
-    function (e) {
-        let { channel: n, guild: t, includeTopic: u = !1, onSelect: o } = e,
-            A = (0, T.Z)(n),
-            P = (0, p.ZP)(n),
-            g = (0, M.Z)(n),
-            O = (0, d.Z)(n),
-            x = (0, N.Z)(n),
-            L = (0, Z.Z)(n, t),
-            j = (0, c.Z)(n, t),
-            b = (0, _.Z)(n, t, f.d4z.GUILD_TEXT),
-            v = (0, _.Z)(n, t, f.d4z.GUILD_VOICE),
-            G = (0, E.Z)(n),
-            m = (0, r.Z)({
-                id: n.id,
-                label: h.Z.Messages.COPY_ID_CHANNEL
+e.r(t);
+var i = e(200651);
+e(192379);
+var l = e(481060),
+    a = e(239091),
+    r = e(108843),
+    u = e(100527),
+    o = e(299206),
+    c = e(423589),
+    d = e(398048),
+    s = e(315732),
+    p = e(3689),
+    _ = e(323597),
+    h = e(852245),
+    Z = e(367722),
+    f = e(776568),
+    g = e(218035),
+    E = e(775666),
+    M = e(593589),
+    x = e(442754),
+    I = e(981631),
+    C = e(388032);
+t.default = (0, r.Z)(
+    function (n) {
+        let { channel: t, guild: e, includeTopic: r = !1, onSelect: u } = n,
+            j = (0, x.Z)(t),
+            N = (0, f.ZP)(t),
+            b = (0, g.Z)(t),
+            P = (0, s.Z)(t),
+            T = (0, h.Z)(t),
+            v = (0, Z.Z)(t, e),
+            m = (0, d.Z)(t, e),
+            y = (0, p.Z)(t, e, I.d4z.GUILD_TEXT),
+            A = (0, p.Z)(t, e, I.d4z.GUILD_VOICE),
+            G = (0, _.Z)(t),
+            L = (0, o.Z)({
+                id: t.id,
+                label: C.intl.string(C.t.gFHI3t)
             }),
-            H = (0, I.Z)(n, 'title_context_menu'),
-            y = (0, s.Mn)('ChannelTitleContextMenu'),
-            U = (0, C.ZP)(n);
-        return (0, a.jsxs)(i.Menu, {
+            O = (0, M.Z)(t, 'title_context_menu'),
+            U = (0, c.Mn)('ChannelTitleContextMenu'),
+            w = (0, E.ZP)(t);
+        return (0, i.jsxs)(l.Menu, {
             navId: 'channel-context',
-            onClose: l.Zy,
-            'aria-label': h.Z.Messages.CHANNEL_ACTIONS_MENU_LABEL,
-            onSelect: o,
+            onClose: a.Zy,
+            'aria-label': C.intl.string(C.t.Xm41aW),
+            onSelect: u,
             children: [
-                (0, a.jsx)(i.MenuGroup, { children: A }),
-                (0, a.jsx)(i.MenuGroup, { children: P }),
-                (0, a.jsxs)(i.MenuGroup, {
-                    children: [u ? O : y ? U : g, x]
+                (0, i.jsx)(l.MenuGroup, { children: j }),
+                (0, i.jsx)(l.MenuGroup, { children: N }),
+                (0, i.jsxs)(l.MenuGroup, {
+                    children: [r ? P : U ? w : b, T]
                 }),
-                (0, a.jsxs)(i.MenuGroup, {
-                    children: [L, j, b, v]
+                (0, i.jsxs)(l.MenuGroup, {
+                    children: [v, m, y, A]
                 }),
-                (0, a.jsx)(i.MenuGroup, { children: H }),
-                (0, a.jsx)(i.MenuGroup, { children: G }),
-                (0, a.jsx)(i.MenuGroup, { children: m })
+                (0, i.jsx)(l.MenuGroup, { children: O }),
+                (0, i.jsx)(l.MenuGroup, { children: G }),
+                (0, i.jsx)(l.MenuGroup, { children: L })
             ]
         });
     },
-    [o.Z.CONTEXT_MENU, o.Z.CHANNEL_TITLE_MENU]
+    [u.Z.CONTEXT_MENU, u.Z.CHANNEL_TITLE_MENU]
 );

@@ -3,7 +3,7 @@ n.d(t, {
         return d;
     },
     z: function () {
-        return _;
+        return f;
     }
 });
 var r = n(493683),
@@ -12,7 +12,7 @@ var r = n(493683),
     s = n(703656),
     o = n(768581),
     l = n(981631),
-    u = n(689938);
+    u = n(388032);
 function c(e, t, n) {
     a.default.showNotification(
         o.ZP.getUserAvatarURL(e),
@@ -28,7 +28,7 @@ function c(e, t, n) {
     );
 }
 function d(e) {
-    c(e, u.Z.Messages.NOTIFICATION_PENDING_FRIEND_REQUEST, () => {
+    c(e, u.intl.string(u.t['t3+Af3']), () => {
         {
             let { openUserProfileModal: t } = n(171368);
             t({ userId: e.id });
@@ -36,8 +36,8 @@ function d(e) {
         (0, s.uL)(l.Z5c.FRIENDS), i.Z.setSection(l.pJs.PENDING);
     });
 }
-function _(e) {
-    c(e, u.Z.Messages.NOTIFICATION_ACCEPTED_FRIEND_REQUEST, () => {
+function f(e) {
+    c(e, u.intl.string(u.t.MYr3KS), () => {
         r.Z.openPrivateChannel(e.id);
     });
 }

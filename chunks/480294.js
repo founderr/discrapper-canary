@@ -7,8 +7,8 @@ var r,
 let u = !1,
     c = !1,
     d = {},
-    _ = null;
-class E extends (s = o.ZP.Store) {
+    f = null;
+class _ extends (s = o.ZP.Store) {
     hasConsented(e) {
         return null != d[e] && d[e].consented;
     }
@@ -19,11 +19,11 @@ class E extends (s = o.ZP.Store) {
         return c;
     }
     getAuthenticationConsentRequired() {
-        return _;
+        return f;
     }
 }
 (a = 'ConsentStore'),
-    (i = 'displayName') in (r = E)
+    (i = 'displayName') in (r = _)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -31,7 +31,7 @@ class E extends (s = o.ZP.Store) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = new E(l.Z, {
+    (t.Z = new _(l.Z, {
         CONNECTION_OPEN: function (e) {
             let { consents: t } = e;
             null != t &&
@@ -46,9 +46,9 @@ class E extends (s = o.ZP.Store) {
             (d = { ...t }), (u = !0);
         },
         SET_CONSENT_REQUIRED: function (e) {
-            _ = e.consentRequired;
+            f = e.consentRequired;
         },
         LOGOUT: function () {
-            _ = null;
+            f = null;
         }
     }));

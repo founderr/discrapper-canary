@@ -2,10 +2,10 @@ var r = n(200651);
 n(192379);
 var i = n(952265),
     a = n(468026),
-    s = n(689938);
+    s = n(388032);
 t.Z = {
     show(e) {
-        let { title: t, body: n, confirmColor: s, confirmText: o, cancelText: l, onConfirm: u, onCancel: c, onCloseCallback: d, secondaryConfirmText: _, onConfirmSecondary: E, className: f, titleClassName: h } = e;
+        let { title: t, body: n, confirmColor: s, confirmText: o, cancelText: l, onConfirm: u, onCancel: c, onCloseCallback: d, secondaryConfirmText: f, onConfirmSecondary: _, className: h, titleClassName: p } = e;
         (0, i.h7)(
             (e) =>
                 (0, r.jsx)(a.default, {
@@ -17,10 +17,10 @@ t.Z = {
                     cancelText: l,
                     onConfirm: u,
                     onCancel: c,
-                    secondaryConfirmText: _,
-                    onConfirmSecondary: E,
-                    className: f,
-                    titleClassName: h
+                    secondaryConfirmText: f,
+                    onConfirmSecondary: _,
+                    className: h,
+                    titleClassName: p
                 }),
             { onCloseCallback: d }
         );
@@ -32,7 +32,7 @@ t.Z = {
                 onConfirm() {
                     t(!0);
                 },
-                cancelText: s.Z.Messages.CANCEL,
+                cancelText: s.intl.string(s.t['ETE/oK']),
                 onCancel() {
                     t(!1);
                 },

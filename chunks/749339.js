@@ -1,22 +1,22 @@
 t.d(n, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = t(200651);
 t(192379);
-var a = t(481060),
-    s = t(39154),
-    l = t(572004),
-    r = t(689938);
-function o(e) {
-    return l.wS
-        ? (0, i.jsx)(a.MenuItem, {
+var l = t(481060),
+    r = t(39154),
+    a = t(572004),
+    o = t(388032);
+function s(e) {
+    return a.wS
+        ? (0, i.jsx)(l.MenuItem, {
               id: 'copy-text',
-              label: r.Z.Messages.COPY_TEXT,
-              icon: a.CopyIcon,
+              label: o.intl.string(o.t.JrGD7O),
+              icon: l.CopyIcon,
               action: () => {
-                  (e = (0, s.Z)(e)), (0, l.JG)(e.content);
+                  (e = (0, r.Z)(e)), (0, a.JG)(e.content);
               }
           })
         : null;

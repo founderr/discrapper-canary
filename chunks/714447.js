@@ -1,29 +1,29 @@
-u.d(n, {
+e.d(t, {
     Z: function () {
-        return i;
+        return s;
     }
 });
-var a = u(200651);
-u(192379);
-var l = u(481060),
-    r = u(36703),
-    t = u(208049),
-    s = u(242291),
-    o = u(689938);
-function i() {
-    let e = (0, s.pI)();
-    return (0, a.jsx)(l.MenuControlItem, {
+var l = e(200651);
+e(192379);
+var r = e(481060),
+    u = e(36703),
+    i = e(208049),
+    a = e(242291),
+    o = e(388032);
+function s() {
+    let n = (0, a.pI)();
+    return (0, l.jsx)(r.MenuControlItem, {
         id: 'user-volume',
         'aria-haspopup': !0,
-        label: o.Z.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME,
-        control: (n, u) =>
-            (0, a.jsx)(l.MenuSliderControl, {
-                ...n,
-                ref: u,
-                value: (0, r.P)(e),
+        label: o.intl.string(o.t.kbFsAA),
+        control: (t, e) =>
+            (0, l.jsx)(r.MenuSliderControl, {
+                ...t,
+                ref: e,
+                value: (0, u.P)(n),
                 maxValue: 100,
-                onChange: (e) => (0, t.xz)((0, r.A)(e)),
-                'aria-label': o.Z.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME
+                onChange: (n) => (0, i.xz)((0, u.A)(n)),
+                'aria-label': o.intl.string(o.t.kbFsAA)
             })
     });
 }

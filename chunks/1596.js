@@ -7,34 +7,34 @@ var r = n(200651);
 n(192379);
 var i = n(481060),
     a = n(138201),
-    s = n(689938),
+    s = n(388032),
     o = n(572184);
 function l() {
     return (0, r.jsxs)('div', {
         className: o.infoGroup,
         children: [
             (0, r.jsx)(a.Z, {
-                title: s.Z.Messages.BLOCKING_CONTEXT_DMS,
+                title: s.intl.string(s.t['WBxi8/']),
                 icon: i.ChatXIcon
             }),
             (0, r.jsx)(a.Z, {
-                title: s.Z.Messages.BLOCKING_CONTEXT_MESSAGES_HIDDEN,
+                title: s.intl.string(s.t.frCwaW),
                 icon: i.ChatEyeIcon
             }),
             (0, r.jsx)(a.Z, {
-                title: s.Z.Messages.BLOCKING_CONTEXT_NOTIFICATIONS,
+                title: s.intl.string(s.t.D0pstr),
                 icon: i.BellSlashIcon
             }),
             (0, r.jsx)(a.Z, {
-                title: s.Z.Messages.BLOCKING_CONTEXT_PROFILE_INFO,
+                title: s.intl.string(s.t['66d4UF']),
                 icon: i.UserCircleIcon
             }),
             (0, r.jsx)(a.Z, {
-                title: s.Z.Messages.BLOCKING_CONTEXT_ACTIVITIES,
+                title: s.intl.string(s.t.uAYpiY),
                 icon: i.GameControllerIcon
             }),
             (0, r.jsx)(a.Z, {
-                title: s.Z.Messages.BLOCKING_CONTEXT_UNFRIENDED,
+                title: s.intl.string(s.t.lR4Mc3),
                 icon: i.UserMinusIcon
             })
         ]

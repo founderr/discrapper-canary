@@ -1,123 +1,123 @@
 n(47120);
 var i,
-    a,
-    s,
     r,
     l,
+    a,
+    s,
     o = n(442837),
     c = n(433517),
     d = n(846519),
     u = n(570140),
-    _ = n(278323),
-    E = n(581567),
-    h = n(594190),
-    m = n(581883),
-    I = n(70956),
-    p = n(780570),
-    g = n(314897),
-    T = n(77498),
-    S = n(283595),
-    C = n(19780),
-    f = n(944486),
+    h = n(278323),
+    m = n(581567),
+    p = n(594190),
+    g = n(581883),
+    f = n(70956),
+    _ = n(780570),
+    E = n(314897),
+    I = n(77498),
+    C = n(283595),
+    v = n(19780),
+    S = n(944486),
     N = n(981631);
-let A = 'ActivityTrackingStore',
-    v = 30 * I.Z.Millis.MINUTE,
-    Z = 5 * I.Z.Millis.MINUTE,
-    L = null !== (i = c.K.get(A)) && void 0 !== i ? i : {},
-    R = {},
-    O = !1;
-function x(e) {
+let T = 'ActivityTrackingStore',
+    x = 30 * f.Z.Millis.MINUTE,
+    b = 5 * f.Z.Millis.MINUTE,
+    A = null !== (i = c.K.get(T)) && void 0 !== i ? i : {},
+    Z = {},
+    y = !1;
+function L(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    t && b(e, !0);
-    let n = R[e.applicationId];
-    null != n && (n.stop(), delete R[e.applicationId]), delete L[e.applicationId], c.K.set(A, L);
+    t && R(e, !0);
+    let n = Z[e.applicationId];
+    null != n && (n.stop(), delete Z[e.applicationId]), delete A[e.applicationId], c.K.set(T, A);
 }
-function b(e) {
+function R(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = Date.now(),
         i = null != e.updatedAt ? n - e.updatedAt : 0;
-    i > v + Z && (i = 0);
-    let a = (0, p.OT)(e.applicationId, S.Z),
-        s = f.Z.getVoiceChannelId(),
-        r = g.default.getSessionId(),
-        l = C.Z.getMediaSessionId();
-    _.Z.updateActivity({
+    i > x + b && (i = 0);
+    let r = (0, _.OT)(e.applicationId, C.Z),
+        l = S.Z.getVoiceChannelId(),
+        a = E.default.getSessionId(),
+        s = v.Z.getMediaSessionId();
+    h.Z.updateActivity({
         applicationId: e.applicationId,
         distributor: e.isDiscordApplication ? N.GQo.DISCORD : e.distributor,
-        shareActivity: a,
+        shareActivity: r,
         token: e.token,
         duration: Math.floor(i / 1000),
         closed: t,
         exePath: e.exePath,
-        voiceChannelId: s,
-        sessionId: r,
-        mediaSessionId: l
+        voiceChannelId: l,
+        sessionId: a,
+        mediaSessionId: s
     }),
         (e.updatedAt = n);
-    let o = R[e.applicationId];
-    null == o && (o = R[e.applicationId] = new d.Xp()).start(v, () => b(e)), !t && ((L[e.applicationId] = e), c.K.set(A, L));
+    let o = Z[e.applicationId];
+    null == o && (o = Z[e.applicationId] = new d.Xp()).start(x, () => R(e)), !t && ((A[e.applicationId] = e), c.K.set(T, A));
 }
-function M() {
+function P() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-        t = h.ZP.getVisibleRunningGames(),
+        t = p.ZP.getVisibleRunningGames(),
         n = new Set();
-    for (let { name: e, distributor: i, exePath: a } of t) {
-        let t = T.Z.getGameByName(e);
+    for (let { name: e, distributor: i, exePath: r } of t) {
+        let t = I.Z.getGameByName(e);
         if (null != t)
             n.add(t.id),
-                !(t.id in L) &&
-                    b({
+                !(t.id in A) &&
+                    R({
                         applicationId: t.id,
                         updatedAt: Date.now(),
                         distributor: i,
-                        exePath: (0, E.N6)(null != a ? a : '')
+                        exePath: (0, m.N6)(null != r ? r : '')
                     });
     }
-    for (let t of Object.keys(L)) !n.has(t) && x(L[t], e);
+    for (let t of Object.keys(A)) !n.has(t) && L(A[t], e);
 }
-function P() {
-    for (let e of Object.keys(L)) x(L[e]);
-    O = !1;
+function O() {
+    for (let e of Object.keys(A)) L(A[e]);
+    y = !1;
 }
-class D extends (a = o.ZP.Store) {
+class j extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(h.ZP, m.Z, S.Z), this.syncWith([m.Z], M);
+        this.waitFor(p.ZP, g.Z, C.Z), this.syncWith([g.Z], P);
     }
     getActivities() {
-        return L;
+        return A;
     }
 }
-(l = 'ActivityTrackingStore'),
-    (r = 'displayName') in (s = D)
-        ? Object.defineProperty(s, r, {
-              value: l,
+(s = 'ActivityTrackingStore'),
+    (a = 'displayName') in (l = j)
+        ? Object.defineProperty(l, a, {
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (s[r] = l),
-    new D(u.Z, {
-        RUNNING_GAMES_CHANGE: () => M(),
+        : (l[a] = s),
+    new j(u.Z, {
+        RUNNING_GAMES_CHANGE: () => P(),
         CONNECTION_OPEN: function () {
-            if (O) return !1;
-            for (let e of Object.keys(L)) b(L[e]);
-            M(!1), (O = !0);
+            if (y) return !1;
+            for (let e of Object.keys(A)) R(A[e]);
+            P(!1), (y = !0);
         },
         CONNECTION_CLOSED: function (e) {
             let { code: t } = e;
-            4004 === t && P();
+            4004 === t && O();
         },
-        LOGOUT: P,
+        LOGOUT: O,
         ACTIVITY_UPDATE_SUCCESS: function (e) {
             let { applicationId: t, token: n } = e,
-                i = L[t];
+                i = A[t];
             if (null == i) return !1;
-            (i.token = n), c.K.set(A, L);
+            (i.token = n), c.K.set(T, A);
         },
         ACTIVITY_UPDATE_FAIL: function (e) {
             let { applicationId: t } = e,
-                n = L[t];
+                n = A[t];
             if (null == n) return !1;
-            (n.token = null), (n.updatedAt = null), c.K.set(A, L);
+            (n.token = null), (n.updatedAt = null), c.K.set(T, A);
         }
     });

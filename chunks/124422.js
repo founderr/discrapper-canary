@@ -1,36 +1,36 @@
-t.d(n, {
+e.d(t, {
     Z: function () {
-        return o;
+        return s;
     }
 });
-var l = t(200651);
-t(192379);
-var i = t(442837),
-    u = t(481060),
-    s = t(357156),
-    r = t(924301),
-    a = t(554747),
-    d = t(981631),
-    E = t(689938);
-function o(e, n, o) {
-    var c;
-    let { canManageGuildEvent: _ } = (0, s.XJ)(null != o ? o : n),
-        T = (0, i.e7)([r.ZP], () => r.ZP.getGuildScheduledEvent(e), [e]),
-        N = _(T),
-        I = null != (0, a.qY)(null !== (c = null == o ? void 0 : o.id) && void 0 !== c ? c : d.lds),
-        Z = null != T && (0, r.xt)(T);
-    return N && !Z && !I
-        ? (0, l.jsx)(u.MenuItem, {
-              id: E.Z.Messages.START_EVENT,
-              label: E.Z.Messages.START_EVENT,
+var l = e(200651);
+e(192379);
+var i = e(442837),
+    r = e(481060),
+    u = e(357156),
+    d = e(924301),
+    a = e(554747),
+    o = e(981631),
+    c = e(388032);
+function s(n, t, s) {
+    var E;
+    let { canManageGuildEvent: g } = (0, u.XJ)(null != s ? s : t),
+        f = (0, i.e7)([d.ZP], () => d.ZP.getGuildScheduledEvent(n), [n]),
+        _ = g(f),
+        v = null != (0, a.qY)(null !== (E = null == s ? void 0 : s.id) && void 0 !== E ? E : o.lds),
+        Z = null != f && (0, d.xt)(f);
+    return _ && !Z && !v
+        ? (0, l.jsx)(r.MenuItem, {
+              id: c.intl.string(c.t.cK1GGR),
+              label: c.intl.string(c.t.cK1GGR),
               action: function () {
-                  null != T &&
-                      (0, u.openModalLazy)(async () => {
-                          let { default: e } = await Promise.all([t.e('84722'), t.e('66586')]).then(t.bind(t, 296864));
-                          return (n) =>
-                              (0, l.jsx)(e, {
-                                  ...n,
-                                  event: T
+                  null != f &&
+                      (0, r.openModalLazy)(async () => {
+                          let { default: n } = await Promise.all([e.e('84722'), e.e('66586')]).then(e.bind(e, 296864));
+                          return (t) =>
+                              (0, l.jsx)(n, {
+                                  ...t,
+                                  event: f
                               });
                       });
               }

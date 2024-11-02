@@ -1,4 +1,4 @@
-e.exports = {
+l.exports = {
     card: 'card_fa7401',
     itemGroup: 'itemGroup_fa7401',
     modalContent: 'modalContent_fa7401',

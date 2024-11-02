@@ -1,45 +1,45 @@
-s.r(o),
-    s.d(o, {
+o.r(n),
+    o.d(n, {
         default: function () {
-            return a;
+            return e;
         }
     });
-var r = s(200651);
-s(192379);
-var t = s(481060),
-    n = s(689938);
-function a(e) {
-    let { onClose: o, onConfirmDelete: s, transitionState: a } = e;
-    return (0, r.jsxs)(t.ModalRoot, {
-        transitionState: a,
-        'aria-label': n.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_DELETE_MODAL_HEADER,
+var r = o(200651);
+o(192379);
+var i = o(481060),
+    l = o(388032);
+function e(t) {
+    let { onClose: n, onConfirmDelete: o, transitionState: e } = t;
+    return (0, r.jsxs)(i.ModalRoot, {
+        transitionState: e,
+        'aria-label': l.intl.string(l.t['u/2TkZ']),
         children: [
-            (0, r.jsx)(t.ModalHeader, {
+            (0, r.jsx)(i.ModalHeader, {
                 separator: !1,
-                children: (0, r.jsx)(t.Heading, {
+                children: (0, r.jsx)(i.Heading, {
                     variant: 'heading-lg/semibold',
-                    children: n.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_DELETE_MODAL_HEADER
+                    children: l.intl.string(l.t['u/2TkZ'])
                 })
             }),
-            (0, r.jsx)(t.ModalContent, {
-                children: (0, r.jsx)(t.Text, {
+            (0, r.jsx)(i.ModalContent, {
+                children: (0, r.jsx)(i.Text, {
                     variant: 'text-md/normal',
                     color: 'header-primary',
-                    children: n.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_DELETE_MODAL_BODY
+                    children: l.intl.string(l.t['9sgGbG'])
                 })
             }),
-            (0, r.jsxs)(t.ModalFooter, {
+            (0, r.jsxs)(i.ModalFooter, {
                 children: [
-                    (0, r.jsx)(t.Button, {
-                        onClick: s,
-                        color: t.Button.Colors.RED,
-                        children: n.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_DELETE_MODAL_DELETE_BUTTON
-                    }),
-                    (0, r.jsx)(t.Button, {
+                    (0, r.jsx)(i.Button, {
                         onClick: o,
-                        look: t.Button.Looks.LINK,
-                        color: t.Button.Colors.PRIMARY,
-                        children: n.Z.Messages.CANCEL
+                        color: i.Button.Colors.RED,
+                        children: l.intl.string(l.t.dO8DLC)
+                    }),
+                    (0, r.jsx)(i.Button, {
+                        onClick: n,
+                        look: i.Button.Looks.LINK,
+                        color: i.Button.Colors.PRIMARY,
+                        children: l.intl.string(l.t['ETE/oK'])
                     })
                 ]
             })

@@ -1,51 +1,51 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(499033),
-    r = n(689938),
-    l = n(443269);
-function o(e) {
-    let { Icon: t, header: n, tip: o, disableStars: c } = e;
+var r = n(481060),
+    l = n(499033),
+    a = n(388032),
+    o = n(443269);
+function s(e) {
+    let { Icon: t, header: n, tip: s, disableStars: c } = e;
     return (0, i.jsxs)('div', {
-        className: l.container,
+        className: o.container,
         children: [
             (0, i.jsxs)('div', {
-                className: l.iconContainer,
+                className: o.iconContainer,
                 children: [
                     (0, i.jsx)(t, {
                         color: 'currentColor',
                         size: 'custom',
-                        className: l.icon,
+                        className: o.icon,
                         width: 36,
                         height: 36
                     }),
-                    c ? null : (0, i.jsx)(s.Z, { className: l.stars })
+                    c ? null : (0, i.jsx)(l.Z, { className: o.stars })
                 ]
             }),
-            (0, i.jsx)(a.Heading, {
-                className: l.header,
+            (0, i.jsx)(r.Heading, {
+                className: o.header,
                 variant: 'heading-xl/semibold',
                 children: n
             }),
-            (0, i.jsxs)(a.Text, {
+            (0, i.jsxs)(r.Text, {
                 color: 'header-secondary',
                 variant: 'text-xs/normal',
                 children: [
                     c
                         ? null
-                        : (0, i.jsxs)(a.Text, {
+                        : (0, i.jsxs)(r.Text, {
                               tag: 'span',
-                              className: l.protip,
+                              className: o.protip,
                               variant: 'text-xs/bold',
                               color: 'text-positive',
-                              children: [r.Z.Messages.FORM_LABEL_ROLES_PRO_TIP, ':', ' ']
+                              children: [a.intl.string(a.t['8tvIiI']), ':', ' ']
                           }),
-                    o
+                    s
                 ]
             })
         ]

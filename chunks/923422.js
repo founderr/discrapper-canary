@@ -1,118 +1,118 @@
 t.r(n), t(47120), t(757143);
-var o = t(200651),
-    r = t(192379),
-    a = t(481060),
-    i = t(239091),
-    l = t(230711),
+var r = t(200651),
+    o = t(192379),
+    i = t(481060),
+    l = t(239091),
+    a = t(230711),
     c = t(493544),
     u = t(108843),
-    s = t(100527),
-    d = t(906732),
-    _ = t(386506),
-    S = t(366953),
-    g = t(394644),
-    E = t(606669),
-    m = t(53432),
-    I = t(74869),
-    T = t(828064),
-    b = t(308512),
-    f = t(594791),
-    M = t(393431),
-    C = t(69021),
-    p = t(981631),
-    h = t(689938);
+    d = t(100527),
+    s = t(906732),
+    g = t(386506),
+    m = t(366953),
+    b = t(394644),
+    f = t(606669),
+    p = t(53432),
+    _ = t(74869),
+    h = t(828064),
+    S = t(308512),
+    x = t(594791),
+    C = t(393431),
+    M = t(69021),
+    Z = t(981631),
+    v = t(388032);
 n.default = (0, u.Z)(
     function (e) {
         let { webBuildOverride: n, onSelect: t } = e,
-            [u, s] = r.useState(!1),
-            Z = (0, T.Z)(),
-            R = (0, b.Z)(),
-            N = (0, m.Z)(),
-            x = (0, E.Z)(),
-            A = (0, M.Z)(),
-            B = (0, f.Z)(),
-            G = (0, I.Z)(),
-            v = (0, C.Z)(),
-            { analyticsLocations: O } = (0, d.ZP)(),
-            k = r.useMemo(() => (0, S.j)(), []);
-        async function D() {
+            [u, d] = o.useState(!1),
+            I = (0, h.Z)(),
+            k = (0, S.Z)(),
+            B = (0, p.Z)(),
+            j = (0, f.Z)(),
+            E = (0, C.Z)(),
+            R = (0, x.Z)(),
+            T = (0, _.Z)(),
+            D = (0, M.Z)(),
+            { analyticsLocations: G } = (0, s.ZP)(),
+            O = o.useMemo(() => (0, m.j)(), []);
+        async function U() {
             try {
-                s(!0), await (0, _.bF)(), window.location.reload(!0);
+                d(!0), await (0, g.bF)(), window.location.reload(!0);
             } catch (e) {
-                s(!1);
+                d(!1);
             }
         }
-        let j = (e) => {
+        let y = (e) => {
                 switch (e) {
-                    case p.oAB.GAMES:
-                        return Z;
-                    case p.oAB.STREAMER_MODE:
-                        return R;
-                    case p.oAB.APPEARANCE:
-                        return N;
-                    case p.oAB.ACCESSIBILITY:
-                        return x;
-                    case p.oAB.VOICE:
-                        return A;
-                    case p.oAB.TEXT:
+                    case Z.oAB.GAMES:
+                        return I;
+                    case Z.oAB.STREAMER_MODE:
+                        return k;
+                    case Z.oAB.APPEARANCE:
                         return B;
-                    case p.oAB.EXPERIMENTS:
-                        return G;
-                    case p.oAB.DEVELOPER_OPTIONS:
-                        return v;
+                    case Z.oAB.ACCESSIBILITY:
+                        return j;
+                    case Z.oAB.VOICE:
+                        return E;
+                    case Z.oAB.TEXT:
+                        return R;
+                    case Z.oAB.EXPERIMENTS:
+                        return T;
+                    case Z.oAB.DEVELOPER_OPTIONS:
+                        return D;
                     default:
                         return null;
                 }
             },
-            L = (0, g.VO)()
+            w = (0, b.VO)()
                 .filter((e) => {
                     let { section: n } = e;
                     return n !== c.ID.HEADER && n !== c.ID.CUSTOM && n !== c.ID.DIVIDER && 'logout' !== n;
                 })
                 .filter((e) => null == e.predicate || e.predicate());
-        return (0, o.jsx)(d.Gt, {
-            value: O,
-            children: (0, o.jsxs)(a.Menu, {
+        return (0, r.jsx)(s.Gt, {
+            value: G,
+            children: (0, r.jsxs)(i.Menu, {
                 navId: 'user-settings-cog',
-                onClose: i.Zy,
-                'aria-label': h.Z.Messages.USER_SETTINGS_ACTIONS_MENU_LABEL,
+                onClose: l.Zy,
+                'aria-label': v.intl.string(v.t.opYYHh),
                 onSelect: t,
                 children: [
-                    L.map((e) => {
-                        let { section: n, label: t, onClick: r } = e,
-                            i = n.replace(/\W/gi, '_');
-                        return (0, o.jsx)(
-                            a.MenuItem,
+                    w.map((e) => {
+                        let { section: n, label: t, onClick: o } = e,
+                            l = n.replace(/\W/gi, '_');
+                        return (0, r.jsx)(
+                            i.MenuItem,
                             {
-                                id: i,
+                                id: l,
                                 label: t,
                                 action: () =>
-                                    null != r
-                                        ? r()
+                                    null != o
+                                        ? o()
                                         : (function (e, n) {
-                                              let t = Object.values(p.oAB).filter((n) => n === e)[0];
-                                              null != t && l.Z.open(t, void 0, { analyticsLocations: n });
-                                          })(n, O),
-                                children: j(n)
+                                              let t = Object.values(Z.oAB).filter((n) => n === e)[0];
+                                              null != t && a.Z.open(t, void 0, { analyticsLocations: n });
+                                          })(n, G),
+                                children: y(n)
                             },
-                            i
+                            l
                         );
                     }),
-                    e.user.isStaff() && k.length > 0
-                        ? (0, o.jsx)(a.MenuItem, {
+                    e.user.isStaff() && O.length > 0
+                        ? (0, r.jsx)(i.MenuItem, {
                               label: 'Build overrides',
                               id: 'build_overrides',
-                              children: (0, o.jsx)(a.MenuGroup, {
-                                  children: k.map((e) =>
-                                      (0, o.jsx)(
-                                          a.MenuRadioItem,
+                              children: (0, r.jsx)(i.MenuGroup, {
+                                  children: O.map((e) =>
+                                      (0, r.jsx)(
+                                          i.MenuRadioItem,
                                           {
                                               id: 'input-'.concat(e.payload),
                                               group: 'build_overrides',
                                               label: e.id,
                                               checked: (null == n ? void 0 : n.id) === e.id,
                                               action: async () => {
-                                                  if ((null == n ? void 0 : n.id) !== e.id) 200 === (await (0, _.f0)(e.payload)).status && window.location.reload(!0);
+                                                  if ((null == n ? void 0 : n.id) !== e.id) 200 === (await (0, g.f0)(e.payload)).status && window.location.reload(!0);
                                               }
                                           },
                                           'input-'.concat(e.payload)
@@ -122,12 +122,12 @@ n.default = (0, u.Z)(
                           })
                         : null,
                     null != n
-                        ? (0, o.jsx)(a.MenuGroup, {
-                              children: (0, o.jsx)(a.MenuItem, {
+                        ? (0, r.jsx)(i.MenuGroup, {
+                              children: (0, r.jsx)(i.MenuItem, {
                                   id: 'clear-build-override',
                                   disabled: u,
-                                  label: h.Z.Messages.CLEAR_BUILD_OVERRIDE,
-                                  action: D,
+                                  label: v.intl.string(v.t['/Nz9ra']),
+                                  action: U,
                                   color: 'danger'
                               })
                           })
@@ -136,5 +136,5 @@ n.default = (0, u.Z)(
             })
         });
     },
-    [s.Z.CONTEXT_MENU, s.Z.USER_SETTINGS_MENU]
+    [d.Z.CONTEXT_MENU, d.Z.USER_SETTINGS_MENU]
 );

@@ -1,9 +1,9 @@
 n(47120);
 var i = n(200651),
-    s = n(192379),
-    a = n(442837),
-    l = n(998698),
-    r = n(933557),
+    l = n(192379),
+    r = n(442837),
+    a = n(998698),
+    s = n(933557),
     o = n(703558),
     c = n(731290),
     u = n(607744),
@@ -11,49 +11,49 @@ var i = n(200651),
     h = n(496675),
     m = n(699516),
     p = n(594174),
-    _ = n(585483),
-    f = n(127654),
-    E = n(205822),
-    g = n(731994),
-    C = n(981631),
-    I = n(689938);
+    f = n(585483),
+    g = n(127654),
+    C = n(205822),
+    x = n(731994),
+    v = n(981631),
+    _ = n(388032);
 t.Z = function (e) {
-    let { className: t, style: n, channel: T, draftType: x } = e,
-        [S, v] = s.useState(!0),
-        N = (0, a.e7)([d.Z], () => d.Z.hasLayers()),
-        A = (0, a.e7)([h.Z], () => null != T && h.Z.can(C.Plq.ATTACH_FILES, T), [T]),
-        Z = null != (0, a.e7)([l.Z], () => l.Z.getActiveCommand(T.id)),
-        M = T.getGuildId(),
-        b = x === o.d.FirstThreadMessage,
-        R = (0, a.e7)([p.default], () => {
+    let { className: t, style: n, channel: I, draftType: E } = e,
+        [b, S] = l.useState(!0),
+        Z = (0, r.e7)([d.Z], () => d.Z.hasLayers()),
+        T = (0, r.e7)([h.Z], () => null != I && h.Z.can(v.Plq.ATTACH_FILES, I), [I]),
+        N = null != (0, r.e7)([a.Z], () => a.Z.getActiveCommand(I.id)),
+        j = I.getGuildId(),
+        A = E === o.d.FirstThreadMessage,
+        y = (0, r.e7)([p.default], () => {
             var e;
             return !0 == !(null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed);
         }),
-        L = (0, a.e7)([c.Z], () => c.Z.didAgree(M)) && !R,
-        P = s.useMemo(() => !N && ((T.isPrivate() && !T.isManaged()) || (null != M && (!T.isNSFW() || L) && A && u.Z.canChatInGuild(M))), [A, L, T, M, N]),
-        j = b ? (C.TPd.GUILD_THREADS_ONLY.has(T.type) ? I.Z.Messages.UPLOAD_TO_NEW_POST : I.Z.Messages.UPLOAD_TO_NEW_THREAD) : S ? I.Z.Messages.UPLOAD_TO.format({ destination: (0, r.F6)(T, p.default, m.Z, !0) }) : I.Z.Messages.UPLOAD_AREA_TITLE_NO_CONFIRMATION;
-    return Z || !P
+        P = (0, r.e7)([c.Z], () => c.Z.didAgree(j)) && !y,
+        M = l.useMemo(() => !Z && ((I.isPrivate() && !I.isManaged()) || (null != j && (!I.isNSFW() || P) && T && u.Z.canChatInGuild(j))), [T, P, I, j, Z]),
+        R = A ? (v.TPd.GUILD_THREADS_ONLY.has(I.type) ? _.intl.string(_.t.RBBLhI) : _.intl.string(_.t.gUx4en)) : b ? _.intl.format(_.t.dYP2FR, { destination: (0, s.F6)(I, p.default, m.Z, !0) }) : _.intl.string(_.t.h76ulJ);
+    return N || !M
         ? null
-        : (0, i.jsx)(E.Z, {
+        : (0, i.jsx)(C.Z, {
               className: t,
               style: n,
-              title: j,
-              description: b ? I.Z.Messages.UPLOAD_AREA_NEW_THREAD_HELP : I.Z.Messages.UPLOAD_AREA_HELP,
-              icons: g.J6,
+              title: R,
+              description: A ? _.intl.string(_.t.lpgkzs) : _.intl.string(_.t.usQh4O),
+              icons: x.J6,
               onDrop: (e) => {
-                  if (Z) return !1;
-                  P &&
-                      null != T &&
-                      ((0, f.d)(e, T, x, {
-                          requireConfirm: S,
+                  if (N) return !1;
+                  M &&
+                      null != I &&
+                      ((0, g.d)(e, I, E, {
+                          requireConfirm: b,
                           showLargeMessageDialog: !1
                       }),
-                      _.S.dispatchToLastSubscribed(C.CkL.TEXTAREA_FOCUS));
+                      f.S.dispatchToLastSubscribed(v.CkL.TEXTAREA_FOCUS));
               },
-              onDragClear: () => v(!0),
+              onDragClear: () => S(!0),
               onDragOver: (e) => {
-                  if (Z) return !1;
-                  !b && e.shiftKey === S && v(!e.shiftKey);
+                  if (N) return !1;
+                  !A && e.shiftKey === b && S(!e.shiftKey);
               }
           });
 };

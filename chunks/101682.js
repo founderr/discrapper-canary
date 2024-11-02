@@ -54,18 +54,18 @@ a(l, s),
         return [r.redAdd(a).fromRed(), r.redSub(a).fromRed()];
     }),
     (l.prototype._getEndoBasis = function (e) {
-        for (var t, n, r, a, s, o, l, u, c, d = this.n.ushrn(Math.floor(this.n.bitLength() / 2)), _ = e, E = this.n.clone(), f = new i(1), h = new i(0), p = new i(0), I = new i(1), m = 0; 0 !== _.cmpn(0); ) {
-            var T = E.div(_);
-            (u = E.sub(T.mul(_))), (c = p.sub(T.mul(f)));
-            var S = I.sub(T.mul(h));
-            if (!r && 0 > u.cmp(d)) (t = l.neg()), (n = f), (r = u.neg()), (a = c);
-            else if (r && 2 == ++m) break;
-            (l = u), (E = _), (_ = u), (p = f), (f = c), (I = h), (h = S);
+        for (var t, n, r, a, s, o, l, u, c, d = this.n.ushrn(Math.floor(this.n.bitLength() / 2)), f = e, _ = this.n.clone(), h = new i(1), p = new i(0), m = new i(0), g = new i(1), E = 0; 0 !== f.cmpn(0); ) {
+            var v = _.div(f);
+            (u = _.sub(v.mul(f))), (c = m.sub(v.mul(h)));
+            var I = g.sub(v.mul(p));
+            if (!r && 0 > u.cmp(d)) (t = l.neg()), (n = h), (r = u.neg()), (a = c);
+            else if (r && 2 == ++E) break;
+            (l = u), (_ = f), (f = u), (m = h), (h = c), (g = p), (p = I);
         }
         (s = u.neg()), (o = c);
-        var g = r.sqr().add(a.sqr());
+        var S = r.sqr().add(a.sqr());
         return (
-            s.sqr().add(o.sqr()).cmp(g) >= 0 && ((s = t), (o = n)),
+            s.sqr().add(o.sqr()).cmp(S) >= 0 && ((s = t), (o = n)),
             r.negative && ((r = r.neg()), (a = a.neg())),
             s.negative && ((s = s.neg()), (o = o.neg())),
             [
@@ -303,10 +303,10 @@ a(l, s),
         var u = o.redSqr(),
             c = u.redMul(o),
             d = r.redMul(u),
-            _ = l.redSqr().redIAdd(c).redISub(d).redISub(d),
-            E = l.redMul(d.redISub(_)).redISub(a.redMul(c)),
-            f = this.z.redMul(e.z).redMul(o);
-        return this.curve.jpoint(_, E, f);
+            f = l.redSqr().redIAdd(c).redISub(d).redISub(d),
+            _ = l.redMul(d.redISub(f)).redISub(a.redMul(c)),
+            h = this.z.redMul(e.z).redMul(o);
+        return this.curve.jpoint(f, _, h);
     }),
     (c.prototype.mixedAdd = function (e) {
         if (this.isInfinity()) return e.toJ();
@@ -323,9 +323,9 @@ a(l, s),
             u = l.redMul(s),
             c = n.redMul(l),
             d = o.redSqr().redIAdd(u).redISub(c).redISub(c),
-            _ = o.redMul(c.redISub(d)).redISub(i.redMul(u)),
-            E = this.z.redMul(s);
-        return this.curve.jpoint(d, _, E);
+            f = o.redMul(c.redISub(d)).redISub(i.redMul(u)),
+            _ = this.z.redMul(s);
+        return this.curve.jpoint(d, f, _);
     }),
     (c.prototype.dblp = function (e) {
         if (0 === e || this.isInfinity()) return this;
@@ -346,15 +346,15 @@ a(l, s),
         for (t = 0; t < e; t++) {
             var c = a.redSqr(),
                 d = u.redSqr(),
-                _ = d.redSqr(),
-                E = c.redAdd(c).redIAdd(c).redIAdd(r.redMul(l)),
-                f = a.redMul(d),
-                h = E.redSqr().redISub(f.redAdd(f)),
-                p = f.redISub(h),
-                I = E.redMul(p);
-            I = I.redIAdd(I).redISub(_);
-            var m = u.redMul(o);
-            t + 1 < e && (l = l.redMul(_)), (a = h), (o = m), (u = I);
+                f = d.redSqr(),
+                _ = c.redAdd(c).redIAdd(c).redIAdd(r.redMul(l)),
+                h = a.redMul(d),
+                p = _.redSqr().redISub(h.redAdd(h)),
+                m = h.redISub(p),
+                g = _.redMul(m);
+            g = g.redIAdd(g).redISub(f);
+            var E = u.redMul(o);
+            t + 1 < e && (l = l.redMul(f)), (a = p), (o = E), (u = g);
         }
         return this.curve.jpoint(a, u.redMul(i), o);
     }),
@@ -378,13 +378,13 @@ a(l, s),
         } else {
             var c = this.x.redSqr(),
                 d = this.y.redSqr(),
-                _ = d.redSqr(),
-                E = this.x.redAdd(d).redSqr().redISub(c).redISub(_);
-            E = E.redIAdd(E);
-            var f = c.redAdd(c).redIAdd(c),
-                h = f.redSqr(),
-                p = _.redIAdd(_);
-            (p = (p = p.redIAdd(p)).redIAdd(p)), (e = h.redISub(E).redISub(E)), (t = f.redMul(E.redISub(e)).redISub(p)), (n = (n = this.y.redMul(this.z)).redIAdd(n));
+                f = d.redSqr(),
+                _ = this.x.redAdd(d).redSqr().redISub(c).redISub(f);
+            _ = _.redIAdd(_);
+            var h = c.redAdd(c).redIAdd(c),
+                p = h.redSqr(),
+                m = f.redIAdd(f);
+            (m = (m = m.redIAdd(m)).redIAdd(m)), (e = p.redISub(_).redISub(_)), (t = h.redMul(_.redISub(e)).redISub(m)), (n = (n = this.y.redMul(this.z)).redIAdd(n));
         }
         return this.curve.jpoint(e, t, n);
     }),
@@ -406,14 +406,14 @@ a(l, s),
         } else {
             var c = this.z.redSqr(),
                 d = this.y.redSqr(),
-                _ = this.x.redMul(d),
-                E = this.x.redSub(c).redMul(this.x.redAdd(c));
-            E = E.redAdd(E).redIAdd(E);
-            var f = _.redIAdd(_),
-                h = (f = f.redIAdd(f)).redAdd(f);
-            (e = E.redSqr().redISub(h)), (n = this.y.redAdd(this.z).redSqr().redISub(d).redISub(c));
-            var p = d.redSqr();
-            (p = (p = (p = p.redIAdd(p)).redIAdd(p)).redIAdd(p)), (t = E.redMul(f.redISub(e)).redISub(p));
+                f = this.x.redMul(d),
+                _ = this.x.redSub(c).redMul(this.x.redAdd(c));
+            _ = _.redAdd(_).redIAdd(_);
+            var h = f.redIAdd(f),
+                p = (h = h.redIAdd(h)).redAdd(h);
+            (e = _.redSqr().redISub(p)), (n = this.y.redAdd(this.z).redSqr().redISub(d).redISub(c));
+            var m = d.redSqr();
+            (m = (m = (m = m.redIAdd(m)).redIAdd(m)).redIAdd(m)), (t = _.redMul(h.redISub(e)).redISub(m));
         }
         return this.curve.jpoint(e, t, n);
     }),
@@ -430,11 +430,11 @@ a(l, s),
             u = (l = l.redIAdd(l)).redMul(s),
             c = o.redSqr().redISub(u.redAdd(u)),
             d = u.redISub(c),
-            _ = s.redSqr();
-        _ = (_ = (_ = _.redIAdd(_)).redIAdd(_)).redIAdd(_);
-        var E = o.redMul(d).redISub(_),
-            f = n.redAdd(n).redMul(r);
-        return this.curve.jpoint(c, E, f);
+            f = s.redSqr();
+        f = (f = (f = f.redIAdd(f)).redIAdd(f)).redIAdd(f);
+        var _ = o.redMul(d).redISub(f),
+            h = n.redAdd(n).redMul(r);
+        return this.curve.jpoint(c, _, h);
     }),
     (c.prototype.trpl = function () {
         if (!this.curve.zeroA) return this.dbl().add(this);
@@ -453,10 +453,10 @@ a(l, s),
         c = (c = c.redIAdd(c)).redIAdd(c);
         var d = this.x.redMul(o).redISub(c);
         d = (d = d.redIAdd(d)).redIAdd(d);
-        var _ = this.y.redMul(u.redMul(l.redISub(u)).redISub(s.redMul(o)));
-        _ = (_ = (_ = _.redIAdd(_)).redIAdd(_)).redIAdd(_);
-        var E = this.z.redAdd(s).redSqr().redISub(n).redISub(o);
-        return this.curve.jpoint(d, _, E);
+        var f = this.y.redMul(u.redMul(l.redISub(u)).redISub(s.redMul(o)));
+        f = (f = (f = f.redIAdd(f)).redIAdd(f)).redIAdd(f);
+        var _ = this.z.redAdd(s).redSqr().redISub(n).redISub(o);
+        return this.curve.jpoint(d, f, _);
     }),
     (c.prototype.mul = function (e, t) {
         return (e = new i(e, t)), this.curve._wnafMul(this, e);

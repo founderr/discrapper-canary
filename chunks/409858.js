@@ -1,92 +1,92 @@
-s.r(t), s(47120), s(411104);
-var i = s(200651),
-    l = s(192379),
-    n = s(120356),
-    a = s.n(n),
-    r = s(979554),
-    o = s(442837),
-    d = s(780384),
-    u = s(481060),
-    c = s(533307),
-    h = s(410030),
-    p = s(607070),
-    f = s(100527),
-    m = s(906732),
-    g = s(728345),
-    I = s(812206),
-    Z = s(884697),
-    S = s(583434),
-    E = s(551425),
-    T = s(832149),
-    R = s(745510),
-    C = s(313201),
-    _ = s(925329),
-    v = s(703656),
-    x = s(763296),
-    A = s(82142),
-    N = s(283595),
-    O = s(594174),
-    y = s(509545),
-    j = s(55563),
-    b = s(626135),
-    M = s(176354),
-    P = s(669079),
-    L = s(296848),
-    F = s(51144),
-    G = s(902653),
-    w = s(479446),
-    D = s(715627),
-    k = s(981632),
-    U = s(474936),
-    H = s(981631),
-    B = s(689938),
-    z = s(670629),
-    V = s(167969),
-    Y = s(557256);
-function Q(e, t, s) {
+i.r(e), i(47120), i(411104);
+var s = i(200651),
+    n = i(192379),
+    l = i(120356),
+    a = i.n(l),
+    r = i(979554),
+    o = i(442837),
+    d = i(780384),
+    u = i(481060),
+    c = i(533307),
+    h = i(410030),
+    p = i(607070),
+    f = i(100527),
+    m = i(906732),
+    g = i(728345),
+    Z = i(812206),
+    S = i(884697),
+    v = i(583434),
+    x = i(551425),
+    y = i(832149),
+    C = i(745510),
+    I = i(313201),
+    T = i(925329),
+    A = i(703656),
+    R = i(763296),
+    b = i(82142),
+    j = i(283595),
+    P = i(594174),
+    O = i(509545),
+    E = i(55563),
+    w = i(626135),
+    N = i(176354),
+    _ = i(669079),
+    k = i(296848),
+    L = i(51144),
+    G = i(902653),
+    D = i(479446),
+    M = i(715627),
+    F = i(981632),
+    U = i(474936),
+    H = i(981631),
+    z = i(388032),
+    B = i(670629),
+    V = i(167969),
+    W = i(557256);
+function Y(t, e, i) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: s,
+        e in t
+            ? Object.defineProperty(t, e, {
+                  value: i,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = s),
-        e
+            : (t[e] = i),
+        t
     );
 }
-let W = (e) => {
-        let { openedGift: t } = e,
-            { createMultipleConfettiAt: s } = l.useContext(R.h);
+let q = (t) => {
+        let { openedGift: e } = t,
+            { createMultipleConfettiAt: i } = n.useContext(C.h);
         return (
-            l.useEffect(() => {
-                t && s(window.innerWidth / 2, window.innerHeight / 4);
-            }, [s, t]),
+            n.useEffect(() => {
+                e && i(window.innerWidth / 2, window.innerHeight / 4);
+            }, [i, e]),
             null
         );
     },
-    $ = (e) => {
-        let { step: t, soundId: s } = e;
+    J = (t) => {
+        let { step: e, soundId: i } = t;
         return (
-            l.useEffect(() => {
-                var e;
-                if (t !== H.wZ8.CONFIRM) return;
-                let i = x.Z.getSoundById(s);
-                (0, G.playGiftSound)(s, null !== (e = null == i ? void 0 : i.volume) && void 0 !== e ? e : 1);
-            }, [t, s]),
+            n.useEffect(() => {
+                var t;
+                if (e !== H.wZ8.CONFIRM) return;
+                let s = R.Z.getSoundById(i);
+                (0, G.playGiftSound)(i, null !== (t = null == s ? void 0 : s.volume) && void 0 !== t ? t : 1);
+            }, [e, i]),
             null
         );
     };
-class q extends l.Component {
+class K extends n.Component {
     componentDidMount() {
-        let { application: e, sku: t, customGiftMessage: s, giftCode: i, emojiName: l } = this.props;
-        null == e && null != t && g.ZP.fetchApplication(t.applicationId);
-        let n = null != s || null != i.giftStyle,
-            a = (0, Z.mO)(i),
-            r = null != l ? M.ZP.getURL(l) : void 0;
+        let { application: t, sku: e, customGiftMessage: i, giftCode: s, emojiName: n } = this.props;
+        null == t && null != e && g.ZP.fetchApplication(e.applicationId);
+        let l = null != i || null != s.giftStyle,
+            a = (0, S.mO)(s),
+            r = null != n ? N.ZP.getURL(n) : void 0;
         this.setState({
-            isCustomGift: n,
+            isCustomGift: l,
             isCollectiblesGift: a,
             emojiURL: r,
             opened: a
@@ -94,68 +94,68 @@ class q extends l.Component {
             this.trackStepAnalytics();
     }
     get step() {
-        let { libraryApplication: e, accepting: t, giftCode: s } = this.props,
-            { error: i, accepted: l, opened: n, isCustomGift: a } = this.state;
-        return (0, P.TO)(e, s, i, l, t, n, a);
+        let { libraryApplication: t, accepting: e, giftCode: i } = this.props,
+            { error: s, accepted: n, opened: l, isCustomGift: a } = this.state;
+        return (0, _.TO)(t, i, s, n, e, l, a);
     }
     get buttonText() {
-        return (0, P.L2)(this.step, this.props.giftCode, this.state.isCustomGift);
+        return (0, _.L2)(this.step, this.props.giftCode, this.state.isCustomGift);
     }
     get firstHeaderText() {
-        let { isCustomGift: e, opened: t, accepted: s } = this.state,
-            { giftCode: i, subscriptionPlan: l, collectiblesItemType: n } = this.props;
-        if (e && this.step === H.wZ8.ERROR) return B.Z.Messages.GIFT_CONFIRMATION_HEADER_FAIL;
-        if (e && !s) {
-            if (!t) return B.Z.Messages.GIFT_RECIPIENT_INFO.format({ recipientDisplayName: F.ZP.getName(O.default.getCurrentUser()) });
+        let { isCustomGift: t, opened: e, accepted: i } = this.state,
+            { giftCode: s, subscriptionPlan: n, collectiblesItemType: l } = this.props;
+        if (t && this.step === H.wZ8.ERROR) return z.intl.formatToMarkdownString(z.t.JUvC0t, {});
+        if (t && !i) {
+            if (!e) return z.intl.formatToPlainString(z.t.xHzRub, { recipientDisplayName: L.ZP.getName(P.default.getCurrentUser()) });
             {
-                let e = O.default.getUser(i.userId),
-                    t = F.ZP.getName(e);
-                return n === r.Z.AVATAR_DECORATION
-                    ? B.Z.Messages.COLLECTIBLES_SENDER_GIFTED_YOU_DECORATION.format({ sender: t })
-                    : n === r.Z.PROFILE_EFFECT
-                      ? B.Z.Messages.COLLECTIBLES_SENDER_GIFTED_YOU_EFFECT.format({ sender: t })
-                      : B.Z.Messages.GIFT_SUBSCRIPTION_INFO.format({
-                            sender: t,
-                            timeInterval: (null == l ? void 0 : l.interval) === U.rV.MONTH ? B.Z.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH : B.Z.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_YEAR
+                let t = P.default.getUser(s.userId),
+                    e = L.ZP.getName(t);
+                return l === r.Z.AVATAR_DECORATION
+                    ? z.intl.formatToPlainString(z.t.SKduys, { sender: e })
+                    : l === r.Z.PROFILE_EFFECT
+                      ? z.intl.formatToPlainString(z.t['1w42T0'], { sender: e })
+                      : z.intl.formatToPlainString(z.t['0UR0u7'], {
+                            sender: e,
+                            timeInterval: (null == n ? void 0 : n.interval) === U.rV.MONTH ? z.intl.string(z.t.FPybU1) : z.intl.string(z.t.tfqrho)
                         });
             }
         }
-        return null == this.props.sku ? null : (0, P.dQ)(this.step, this.props.giftCode, this.props.sku);
+        return null == this.props.sku ? null : (0, _.dQ)(this.step, this.props.giftCode, this.props.sku);
     }
     get secondHeaderText() {
         if (!this.state.isCustomGift || this.state.opened || this.state.accepted) return null;
-        let e = O.default.getUser(this.props.giftCode.userId);
-        return B.Z.Messages.GIFT_SENDER_INFO.format({ sender: F.ZP.getName(e) });
+        let t = P.default.getUser(this.props.giftCode.userId);
+        return z.intl.formatToPlainString(z.t.DDO4W1, { sender: L.ZP.getName(t) });
     }
     get bodyText() {
-        let { sku: e, accepting: t, libraryApplication: s, subscriptionPlan: i } = this.props;
-        if (null == e) return null;
-        let { error: l, accepted: n, isCustomGift: a, opened: r } = this.state;
+        let { sku: t, accepting: e, libraryApplication: i, subscriptionPlan: s } = this.props;
+        if (null == t) return null;
+        let { error: n, accepted: l, isCustomGift: a, opened: r } = this.state;
         return !r && a
             ? null
-            : (0, P.iM)({
+            : (0, _.iM)({
                   step: this.step,
-                  sku: e,
-                  libraryApplication: s,
-                  error: l,
-                  accepted: n,
-                  accepting: t,
+                  sku: t,
+                  libraryApplication: i,
+                  error: n,
+                  accepted: l,
+                  accepting: e,
                   onGoToLibrary: this.handleGoToLibrary,
-                  subscriptionPlan: i
+                  subscriptionPlan: s
               });
     }
     get errorMessage() {
-        let { libraryApplication: e, accepting: t } = this.props,
-            { error: s, accepted: i } = this.state;
-        return (0, P.e$)(e, s, i, t, this.handleGoToLibrary);
+        let { libraryApplication: t, accepting: e } = this.props,
+            { error: i, accepted: s } = this.state;
+        return (0, _.e$)(t, i, s, e, this.handleGoToLibrary);
     }
     get handleClick() {
-        let { giftCode: e, onClose: t } = this.props;
+        let { giftCode: t, onClose: e } = this.props;
         switch (this.step) {
             case H.wZ8.ERROR:
-                return t;
+                return e;
             case H.wZ8.SUCCESS:
-                if (__OVERLAY__ || null != e.subscriptionPlanId) return t;
+                if (__OVERLAY__ || null != t.subscriptionPlanId) return e;
                 return this.handleGoToLibrary;
             case H.wZ8.OPEN:
                 return this.handleOpen;
@@ -165,132 +165,132 @@ class q extends l.Component {
         }
     }
     trackStepAnalytics() {
-        let { giftCode: e, customGiftMessage: t, emojiName: s, soundId: i } = this.props,
-            { isCustomGift: l } = this.state;
-        b.default.track(H.rMx.GIFT_ACCEPT_STEP, {
+        let { giftCode: t, customGiftMessage: e, emojiName: i, soundId: s } = this.props,
+            { isCustomGift: n } = this.state;
+        w.default.track(H.rMx.GIFT_ACCEPT_STEP, {
             to_step: this.step,
-            has_custom_message: l,
-            is_custom_message_edited: l && t !== B.Z.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE,
-            gift_style: e.giftStyle,
-            gift_code: e.code,
-            emoji_name: s,
-            sound_id: i
+            has_custom_message: n,
+            is_custom_message_edited: n && e !== z.intl.string(z.t.ZkOo1d),
+            gift_style: t.giftStyle,
+            gift_code: t.code,
+            emoji_name: i,
+            sound_id: s
         });
     }
     render() {
-        let { application: e, accepting: t, onClose: s, giftCode: l, headerId: n, transitionState: r, useReducedMotion: o, onComplete: d, customGiftMessage: c, emojiName: h, soundId: p, isThemeDark: f } = this.props,
-            m = O.default.getUser(l.userId),
-            { isCustomGift: g, isCollectiblesGift: I, accepted: Z, opened: S, emojiURL: T } = this.state,
-            R = O.default.getCurrentUser(),
-            C = this.step === H.wZ8.ERROR,
-            v = (null == l ? void 0 : l.userId) != null && null != R && (null == R ? void 0 : R.id) != null && l.userId === R.id;
+        let { application: t, accepting: e, onClose: i, giftCode: n, headerId: l, transitionState: r, useReducedMotion: o, onComplete: d, customGiftMessage: c, emojiName: h, soundId: p, isThemeDark: f } = this.props,
+            m = P.default.getUser(n.userId),
+            { isCustomGift: g, isCollectiblesGift: Z, accepted: S, opened: v, emojiURL: y } = this.state,
+            C = P.default.getCurrentUser(),
+            I = this.step === H.wZ8.ERROR,
+            A = (null == n ? void 0 : n.userId) != null && null != C && (null == C ? void 0 : C.id) != null && n.userId === C.id;
         switch (this.step) {
             case H.wZ8.ERROR:
-                null == d || d(l, !1);
+                null == d || d(n, !1);
                 break;
             case H.wZ8.SUCCESS:
-                null == d || d(l, !0);
+                null == d || d(n, !0);
         }
-        return (0, i.jsxs)('div', {
+        return (0, s.jsxs)('div', {
             ref: this.modalRef,
             children: [
-                (0, i.jsxs)(u.ModalRoot, {
+                (0, s.jsxs)(u.ModalRoot, {
                     transitionState: r,
                     size: u.ModalSize.SMALL,
-                    className: z.modal,
-                    'aria-labelledby': n,
+                    className: B.modal,
+                    'aria-labelledby': l,
                     children: [
-                        null != l.giftStyle &&
+                        null != n.giftStyle &&
                             !g &&
-                            !I &&
-                            (0, i.jsx)(k.Z, {
+                            !Z &&
+                            (0, s.jsx)(F.Z, {
                                 defaultAnimationState: this.getDefaultAnimationStatus(),
                                 idleAnimationState: this.getIdleAnimationStatus(),
-                                giftStyle: l.giftStyle,
-                                className: z.seasonalGiftIcon
+                                giftStyle: n.giftStyle,
+                                className: B.seasonalGiftIcon
                             }),
-                        (0, i.jsx)('div', { className: g ? void 0 : z.backSplash }),
-                        (0, i.jsxs)(u.ModalContent, {
+                        (0, s.jsx)('div', { className: g ? void 0 : B.backSplash }),
+                        (0, s.jsxs)(u.ModalContent, {
                             className: a()({
-                                [z.content]: !g,
-                                [z.contentCustomGift]: g
+                                [B.content]: !g,
+                                [B.contentCustomGift]: g
                             }),
                             children: [
-                                !I &&
-                                    (0, i.jsx)(u.ModalCloseButton, {
-                                        onClick: s,
-                                        className: z.closeButton
+                                !Z &&
+                                    (0, s.jsx)(u.ModalCloseButton, {
+                                        onClick: i,
+                                        className: B.closeButton
                                     }),
-                                !I &&
-                                    (null == l.giftStyle || (g && Z)) &&
-                                    (0, i.jsx)(_.Z, {
-                                        size: _.Z.Sizes.LARGE,
-                                        game: e,
-                                        skuId: l.skuId
+                                !Z &&
+                                    (null == n.giftStyle || (g && S)) &&
+                                    (0, s.jsx)(T.Z, {
+                                        size: T.Z.Sizes.LARGE,
+                                        game: t,
+                                        skuId: n.skuId
                                     }),
-                                C &&
-                                    (0, i.jsx)('img', {
+                                I &&
+                                    (0, s.jsx)('img', {
                                         alt: '',
-                                        src: f ? V : Y
+                                        src: f ? V : W
                                     }),
-                                (0, i.jsxs)(u.Heading, {
-                                    id: n,
+                                (0, s.jsxs)(u.Heading, {
+                                    id: l,
                                     className: a()({
-                                        [z.customGiftHeader]: g && !Z,
-                                        [z.header]: !g || Z
+                                        [B.customGiftHeader]: g && !S,
+                                        [B.header]: !g || S
                                     }),
                                     variant: 'heading-sm/semibold',
                                     children: [
-                                        (0, i.jsx)('div', {
-                                            className: a()({ [z.customGiftHeaderText]: g }),
+                                        (0, s.jsx)('div', {
+                                            className: a()({ [B.customGiftHeaderText]: g }),
                                             children: this.firstHeaderText
                                         }),
-                                        (0, i.jsx)('div', { children: this.secondHeaderText })
+                                        (0, s.jsx)('div', { children: this.secondHeaderText })
                                     ]
                                 }),
-                                !(g && !Z) &&
-                                    (0, i.jsx)(u.Text, {
-                                        className: z.body,
+                                !(g && !S) &&
+                                    (0, s.jsx)(u.Text, {
+                                        className: B.body,
                                         variant: 'text-sm/normal',
                                         children: this.bodyText
                                     }),
                                 g &&
-                                    !I &&
-                                    null != l.giftStyle &&
                                     !Z &&
-                                    (0, i.jsx)(k.Z, {
+                                    null != n.giftStyle &&
+                                    !S &&
+                                    (0, s.jsx)(F.Z, {
                                         defaultAnimationState: this.getDefaultAnimationStatus(),
                                         idleAnimationState: this.getIdleAnimationStatus(),
-                                        className: z.giftAnimation,
-                                        giftStyle: l.giftStyle
+                                        className: B.giftAnimation,
+                                        giftStyle: n.giftStyle
                                     }),
-                                this.state.opened && !C && (0, i.jsx)(E.Z, { giftCode: l }),
-                                C &&
-                                    (0, i.jsx)(u.Text, {
-                                        className: z.body,
+                                this.state.opened && !I && (0, s.jsx)(x.Z, { giftCode: n }),
+                                I &&
+                                    (0, s.jsx)(u.Text, {
+                                        className: B.body,
                                         variant: 'text-md/normal',
                                         children: this.errorMessage
                                     }),
                                 g &&
                                     this.state.opened &&
                                     !this.state.accepted &&
-                                    !C &&
+                                    !I &&
                                     null != c &&
                                     '' !== c &&
-                                    !v &&
-                                    (0, i.jsxs)(i.Fragment, {
+                                    !A &&
+                                    (0, s.jsxs)(s.Fragment, {
                                         children: [
-                                            (0, i.jsx)(u.FormTitle, { children: B.Z.Messages.GIFT_SENDER_INFO.format({ sender: F.ZP.getName(m) }) }),
-                                            (0, i.jsx)(u.Heading, {
-                                                id: n,
-                                                className: z.customMessage,
+                                            (0, s.jsx)(u.FormTitle, { children: z.intl.format(z.t.DDO4W1, { sender: L.ZP.getName(m) }) }),
+                                            (0, s.jsx)(u.Heading, {
+                                                id: l,
+                                                className: B.customMessage,
                                                 variant: 'heading-sm/bold',
                                                 children: c
                                             })
                                         ]
                                     }),
-                                (0, i.jsx)(u.Button, {
-                                    submitting: t,
+                                (0, s.jsx)(u.Button, {
+                                    submitting: e,
                                     onClick: () => {
                                         this.trackStepAnalytics(), this.handleClick();
                                     },
@@ -300,35 +300,35 @@ class q extends l.Component {
                         })
                     ]
                 }),
-                null != l.giftStyle &&
+                null != n.giftStyle &&
                     !o &&
                     this.step !== H.wZ8.ERROR &&
-                    (0, i.jsx)(i.Fragment, {
+                    (0, s.jsx)(s.Fragment, {
                         children:
-                            !Z &&
-                            !t &&
-                            S &&
-                            (null == h || null == T
-                                ? (0, i.jsx)(W, { openedGift: S && !Z && !t })
-                                : (0, i.jsx)(D.Z, {
+                            !S &&
+                            !e &&
+                            v &&
+                            (null == h || null == y
+                                ? (0, s.jsx)(q, { openedGift: v && !S && !e })
+                                : (0, s.jsx)(M.Z, {
                                       confettiTarget: this.modalRef.current,
-                                      emojiURL: T
+                                      emojiURL: y
                                   }))
                     }),
-                !Z &&
-                    !t &&
-                    S &&
+                !S &&
+                    !e &&
+                    v &&
                     null != p &&
-                    (0, i.jsx)($, {
+                    (0, s.jsx)(J, {
                         soundId: p,
                         step: this.step
                     })
             ]
         });
     }
-    constructor(...e) {
-        super(...e),
-            Q(this, 'state', {
+    constructor(...t) {
+        super(...t),
+            Y(this, 'state', {
                 error: null,
                 accepted: !1,
                 opened: !1,
@@ -337,80 +337,80 @@ class q extends l.Component {
                 step: void 0,
                 emojiURL: void 0
             }),
-            Q(this, 'modalRef', l.createRef()),
-            Q(this, 'handleOpen', () => {
+            Y(this, 'modalRef', n.createRef()),
+            Y(this, 'handleOpen', () => {
                 this.setState({ opened: !0 });
             }),
-            Q(this, 'handleAccept', async () => {
-                let { giftCode: e, channelContext: t, onAccept: s } = this.props;
-                if (null == e) throw Error('GiftCode is null at acceptance.');
+            Y(this, 'handleAccept', async () => {
+                let { giftCode: t, channelContext: e, onAccept: i } = this.props;
+                if (null == t) throw Error('GiftCode is null at acceptance.');
                 try {
                     await c.Z.redeemGiftCode({
-                        code: e.code,
-                        options: { channelId: t }
+                        code: t.code,
+                        options: { channelId: e }
                     }),
                         this.setState({ accepted: !0 }),
-                        null == s || s();
-                } catch (e) {
-                    this.setState({ error: e });
+                        null == i || i();
+                } catch (t) {
+                    this.setState({ error: t });
                 }
             }),
-            Q(this, 'handleGoToLibrary', () => {
-                let { onClose: e, libraryApplication: t } = this.props;
-                (0, v.uL)(H.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } }), e();
+            Y(this, 'handleGoToLibrary', () => {
+                let { onClose: t, libraryApplication: e } = this.props;
+                (0, A.uL)(H.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != e ? e.id : void 0 } }), t();
             }),
-            Q(this, 'getDefaultAnimationStatus', () => {
-                if (this.step === H.wZ8.OPEN) return w.SR.IDLE;
-                return w.SR.ACTION;
+            Y(this, 'getDefaultAnimationStatus', () => {
+                if (this.step === H.wZ8.OPEN) return D.SR.IDLE;
+                return D.SR.ACTION;
             }),
-            Q(this, 'getIdleAnimationStatus', () => {
-                if (this.step !== H.wZ8.OPEN) return w.SR.LOOP;
+            Y(this, 'getIdleAnimationStatus', () => {
+                if (this.step !== H.wZ8.OPEN) return D.SR.LOOP;
             });
     }
 }
-let J = o.ZP.connectStores([N.Z, j.Z, I.Z, A.Z, y.Z, p.Z], (e) => {
-    let { giftCode: t } = e,
-        s = j.Z.get(t.skuId),
-        i = null != s ? I.Z.getApplication(s.applicationId) : null,
-        l = p.Z.useReducedMotion;
+let Q = o.ZP.connectStores([j.Z, E.Z, Z.Z, b.Z, O.Z, p.Z], (t) => {
+    let { giftCode: e } = t,
+        i = E.Z.get(e.skuId),
+        s = null != i ? Z.Z.getApplication(i.applicationId) : null,
+        n = p.Z.useReducedMotion;
     return {
-        sku: s,
-        libraryApplication: null != s && (null == t ? void 0 : t.entitlementBranches) != null ? (0, P.z2)(t.entitlementBranches, s, N.Z) : null,
-        application: i,
-        subscriptionPlan: null != t.subscriptionPlanId ? (0, L.oE)(t.subscriptionPlanId) : null,
-        accepting: A.Z.getIsAccepting(t.code),
-        useReducedMotion: l
+        sku: i,
+        libraryApplication: null != i && (null == e ? void 0 : e.entitlementBranches) != null ? (0, _.z2)(e.entitlementBranches, i, j.Z) : null,
+        application: s,
+        subscriptionPlan: null != e.subscriptionPlanId ? (0, k.oE)(e.subscriptionPlanId) : null,
+        accepting: b.Z.getIsAccepting(e.code),
+        useReducedMotion: n
     };
-})(q);
-t.default = (e) => {
-    var t;
-    let { channelContext: s, code: l, customGiftMessage: n, emojiName: a, soundId: r, onClose: u, ...c } = e,
-        p = (0, C.Dt)(),
-        g = (0, o.e7)([A.Z], () => A.Z.get(l)),
-        I = (0, h.ZP)(),
-        { analyticsLocations: Z } = (0, m.ZP)(f.Z.GIFT_CODE_MODAL),
-        { product: E } = (0, S.T)(null == g ? void 0 : g.skuId);
+})(K);
+e.default = (t) => {
+    var e;
+    let { channelContext: i, code: n, customGiftMessage: l, emojiName: a, soundId: r, onClose: u, ...c } = t,
+        p = (0, I.Dt)(),
+        g = (0, o.e7)([b.Z], () => b.Z.get(n)),
+        Z = (0, h.ZP)(),
+        { analyticsLocations: S } = (0, m.ZP)(f.Z.GIFT_CODE_MODAL),
+        { product: x } = (0, v.T)(null == g ? void 0 : g.skuId);
     return null == g
         ? null
-        : (0, i.jsx)(J, {
+        : (0, s.jsx)(Q, {
               ...c,
-              customGiftMessage: n,
-              channelContext: s,
+              customGiftMessage: l,
+              channelContext: i,
               giftCode: g,
               headerId: p,
               emojiName: a,
               soundId: r,
-              analyticsLocations: Z,
-              isThemeDark: (0, d.wj)(I),
+              analyticsLocations: S,
+              isThemeDark: (0, d.wj)(Z),
               onClose: u,
-              collectiblesItemType: null == E ? void 0 : null === (t = E.items[0]) || void 0 === t ? void 0 : t.type,
+              collectiblesItemType: null == x ? void 0 : null === (e = x.items[0]) || void 0 === e ? void 0 : e.type,
               onAccept:
-                  null != E
+                  null != x
                       ? () => {
                             u(),
-                                (0, T.Z)({
-                                    product: E,
-                                    analyticsLocations: Z
+                                (0, y.Z)({
+                                    product: x,
+                                    analyticsLocations: S
                                 });
                         }
                       : void 0

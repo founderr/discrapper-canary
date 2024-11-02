@@ -1,28 +1,28 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return E;
+        return h;
     }
 });
-var n = t(200651),
-    a = t(604849),
-    i = t(278828),
-    r = t(63063),
-    o = t(838436),
-    l = t(51331),
-    c = t(526761),
-    d = t(726985),
-    _ = t(981631),
-    u = t(689938);
-function E() {
-    let e = (0, a.c)();
-    return (0, n.jsx)(o.U, {
+var i = n(200651),
+    s = n(604849),
+    r = n(278828),
+    l = n(63063),
+    a = n(838436),
+    o = n(51331),
+    c = n(526761),
+    d = n(726985),
+    u = n(981631),
+    m = n(388032);
+function h() {
+    let e = (0, s.c)();
+    return (0, i.jsx)(a.U, {
         setting: d.s6.PRIVACY_SAFETY_ALERTS_V2,
         scrollPosition: c.to.DM_SAFETY_ALERTS_V2,
-        children: (0, n.jsx)(l.Z, {
+        children: (0, i.jsx)(o.Z, {
             value: e,
-            onChange: i.Q,
-            title: u.Z.Messages.SAFETY_ALERTS_SETTING_TITLE,
-            note: u.Z.Messages.SAFETY_ALERTS_SETTING_DESCRIPTION.format({ learnMoreLink: r.Z.getArticleURL(_.BhN.SAFETY_ALERTS) })
+            onChange: r.Q,
+            title: m.intl.string(m.t.qFsx5u),
+            note: m.intl.format(m.t.lunaRk, { learnMoreLink: l.Z.getArticleURL(u.BhN.SAFETY_ALERTS) })
         })
     });
 }

@@ -8,27 +8,27 @@ var r = n(223428),
     c = n(530917),
     d = n(957578).Buffer;
 e.exports = function (e, t, n) {
-    _ = e.padding ? e.padding : n ? 1 : 4;
-    var _,
-        E,
-        f = r(e);
-    if (4 === _)
-        E = (function (e, t) {
+    f = e.padding ? e.padding : n ? 1 : 4;
+    var f,
+        _,
+        h = r(e);
+    if (4 === f)
+        _ = (function (e, t) {
             var n = e.modulus.byteLength(),
                 r = t.length,
                 u = a('sha1').update(d.alloc(0)).digest(),
                 c = u.length,
-                _ = 2 * c;
-            if (r > n - _ - 2) throw Error('message too long');
-            var E = d.alloc(n - r - _ - 2),
-                f = n - c - 1,
-                h = i(c),
-                p = o(d.concat([u, E, d.alloc(1, 1), t], f), s(h, f)),
-                I = o(h, s(p, c));
-            return new l(d.concat([d.alloc(1), I, p], n));
-        })(f, t);
-    else if (1 === _)
-        E = (function (e, t, n) {
+                f = 2 * c;
+            if (r > n - f - 2) throw Error('message too long');
+            var _ = d.alloc(n - r - f - 2),
+                h = n - c - 1,
+                p = i(c),
+                m = o(d.concat([u, _, d.alloc(1, 1), t], h), s(p, h)),
+                g = o(p, s(m, c));
+            return new l(d.concat([d.alloc(1), g, m], n));
+        })(h, t);
+    else if (1 === f)
+        _ = (function (e, t, n) {
             var r,
                 a = t.length,
                 s = e.modulus.byteLength();
@@ -42,9 +42,9 @@ e.exports = function (e, t, n) {
                       })(s - a - 3)),
                 new l(d.concat([d.from([0, n ? 1 : 2]), r, d.alloc(1), t], s))
             );
-        })(f, t, n);
-    else if (3 === _) {
-        if ((E = new l(t)).cmp(f.modulus) >= 0) throw Error('data too long for modulus');
+        })(h, t, n);
+    else if (3 === f) {
+        if ((_ = new l(t)).cmp(h.modulus) >= 0) throw Error('data too long for modulus');
     } else throw Error('unknown padding');
-    return n ? c(E, f) : u(E, f);
+    return n ? c(_, h) : u(_, h);
 };

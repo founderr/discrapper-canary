@@ -8,51 +8,51 @@ var r = n(200651),
     u = n(985375),
     c = n(585483),
     d = n(981631),
-    _ = n(689938),
-    E = n(591745);
+    f = n(388032),
+    _ = n(591745);
 t.Z = i.memo(function (e) {
-    let { width: t, height: n, src: a, url: f, format: h, className: p } = e,
-        [I, m] = i.useState(!1),
-        T = (0, u.hb)((0, l.iy)(f)),
-        S = T ? _.Z.Messages.GIF_TOOLTIP_REMOVE_FROM_FAVORITES : _.Z.Messages.GIF_TOOLTIP_ADD_TO_FAVORITES,
-        g = T ? o.StarIcon : o.StarOutlineIcon;
+    let { width: t, height: n, src: a, url: h, format: p, className: m } = e,
+        [g, E] = i.useState(!1),
+        v = (0, u.hb)((0, l.iy)(h)),
+        I = v ? f.intl.string(f.t['5/NS7+']) : f.intl.string(f.t.nIH0v7),
+        S = v ? o.StarIcon : o.StarOutlineIcon;
     i.useEffect(() => {
-        if (!I) return;
+        if (!g) return;
         let e = setTimeout(() => {
-            m(!1);
+            E(!1);
         }, 500);
         return () => clearTimeout(e);
-    }, [I]);
-    let A = (e) => {
+    }, [g]);
+    let T = (e) => {
         e.preventDefault(),
             e.stopPropagation(),
-            m(!0),
-            T
-                ? (0, l.PF)(f)
+            E(!0),
+            v
+                ? (0, l.PF)(h)
                 : ((0, l.uL)({
-                      url: f,
+                      url: h,
                       src: a,
                       width: t,
                       height: n,
-                      format: h
+                      format: p
                   }),
                   c.S.dispatch(d.CkL.FAVORITE_GIF));
     };
     return (0, r.jsx)(o.Tooltip, {
-        text: S,
+        text: I,
         children: (e) =>
             (0, r.jsx)(o.Clickable, {
                 ...e,
-                className: s()(p, E.size, E.gifFavoriteButton, {
-                    [E.selected]: T,
-                    [E.showPulse]: I
+                className: s()(m, _.size, _.gifFavoriteButton, {
+                    [_.selected]: v,
+                    [_.showPulse]: g
                 }),
                 onMouseDown: (e) => e.preventDefault(),
-                onClick: A,
+                onClick: T,
                 onDoubleClick: (e) => e.preventDefault(),
-                children: (0, r.jsx)(g, {
+                children: (0, r.jsx)(S, {
                     color: 'currentColor',
-                    className: E.icon
+                    className: _.icon
                 })
             })
     });

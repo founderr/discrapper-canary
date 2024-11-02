@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return D;
+        return M;
     }
 }),
     t(477488),
@@ -8,9 +8,9 @@ t.d(n, {
 var a = t(200651),
     r = t(192379),
     i = t(120356),
-    o = t.n(i),
-    l = t(299608),
-    s = t.n(l),
+    l = t.n(i),
+    o = t(299608),
+    s = t.n(o),
     u = t(100621),
     c = t(442837),
     d = t(481060),
@@ -22,22 +22,22 @@ var a = t(200651),
     C = t(394779),
     E = t(134432),
     g = t(169525),
-    S = t(375954),
-    L = t(585483),
+    L = t(375954),
+    S = t(585483),
     x = t(44488),
-    A = t(341176),
-    O = t(981631),
-    v = t(689938),
-    R = t(723638);
-function N(e, n) {
+    v = t(341176),
+    A = t(981631),
+    O = t(388032),
+    b = t(723638);
+function R(e, n) {
     return ((e % n) + n) % n;
 }
-function b(e) {
+function N(e) {
     let { width: n, height: t } = e;
     return null == n || 0 === n || null == t || 0 === t;
 }
-function M(e) {
-    let { children: n, hasMediaControls: t, isObscured: i, src: l } = e,
+function D(e) {
+    let { children: n, hasMediaControls: t, isObscured: i, src: o } = e,
         [s, u] = (0, r.useState)(!1);
     return i
         ? (0, a.jsx)(p.a.Provider, {
@@ -47,32 +47,32 @@ function M(e) {
                   {
                       type: p.Z.Types.ATTACHMENT,
                       reason: g.wk.EXPLICIT_CONTENT,
-                      className: R.obscureContainer,
+                      className: b.obscureContainer,
                       obscured: !0,
                       isSingleMosaicItem: !0,
-                      obscurityControlClassName: o()({ [R.controlsOffset]: t && s }),
+                      obscurityControlClassName: l()({ [b.controlsOffset]: t && s }),
                       onToggleObscurity: (e) => {
                           e.stopPropagation(), e.nativeEvent.stopPropagation(), u((e) => !e);
                       },
                       children: (e) =>
                           (0, a.jsx)(a.Fragment, {
                               children: (0, a.jsx)('div', {
-                                  className: o()(R.obscureWrapper, { [R.obscure]: e }),
+                                  className: l()(b.obscureWrapper, { [b.obscure]: e }),
                                   children: n(e)
                               })
                           })
                   },
-                  l
+                  o
               )
           })
         : (0, a.jsx)(a.Fragment, { children: n(!1) });
 }
-function D(e) {
+function M(e) {
     var n, t, i;
-    let { items: o, onIndexChange: l, fit: p, startIndex: g = 0, shouldRedactExplicitContent: N = !1, shouldHideMediaOptions: D = !1, shouldAnimateCarousel: I = !1 } = e,
-        [k, T] = (0, r.useState)(g),
+    let { items: l, onIndexChange: o, fit: p, startIndex: g = 0, shouldRedactExplicitContent: R = !1, shouldHideMediaOptions: M = !1, shouldAnimateCarousel: I = !1 } = e,
+        [k, y] = (0, r.useState)(g),
         P = (0, r.useRef)(g),
-        [y, j] = (0, r.useState)([]);
+        [T, j] = (0, r.useState)([]);
     (0, r.useEffect)(
         () => (
             _.Z.disable(),
@@ -85,17 +85,17 @@ function D(e) {
     ),
         (0, r.useEffect)(() => {
             var e, n;
-            let t = (((k + 1) % (e = o.length)) + e) % e;
-            let a = (((k - 1) % (n = o.length)) + n) % n;
-            b(o[t]) && (0, E.po)(o[t].url), b(o[a]) && (0, E.po)(o[a].url);
-        }, [k, o]);
+            let t = (((k + 1) % (e = l.length)) + e) % e;
+            let a = (((k - 1) % (n = l.length)) + n) % n;
+            N(l[t]) && (0, E.po)(l[t].url), N(l[a]) && (0, E.po)(l[a].url);
+        }, [k, l]);
     let w = (0, r.useCallback)(
         (e) => {
             var n;
             let t = e - P.current;
-            T((e = ((e % (n = o.length)) + n) % n)), (P.current = e), j((e) => [...e, t]), null == l || l(e);
+            y((e = ((e % (n = l.length)) + n) % n)), (P.current = e), j((e) => [...e, t]), null == o || o(e);
         },
-        [l, o]
+        [o, l]
     );
     (0, r.useEffect)(() => {
         let e = s()(() => {
@@ -105,18 +105,18 @@ function D(e) {
                 w(P.current - 1);
             }, 300);
         return (
-            L.S.subscribe(O.CkL.MODAL_CAROUSEL_NEXT, e),
-            L.S.subscribe(O.CkL.MODAL_CAROUSEL_PREV, n),
+            S.S.subscribe(A.CkL.MODAL_CAROUSEL_NEXT, e),
+            S.S.subscribe(A.CkL.MODAL_CAROUSEL_PREV, n),
             () => {
-                L.S.unsubscribe(O.CkL.MODAL_CAROUSEL_NEXT, e), L.S.unsubscribe(O.CkL.MODAL_CAROUSEL_PREV, n);
+                S.S.unsubscribe(A.CkL.MODAL_CAROUSEL_NEXT, e), S.S.unsubscribe(A.CkL.MODAL_CAROUSEL_PREV, n);
             }
         );
     }, [w]);
-    let Z = o[k],
+    let Z = l[k],
         F = null !== (i = Z.sourceMetadata) && void 0 !== i ? i : {},
         W = null == F ? void 0 : null === (n = F.message) || void 0 === n ? void 0 : n.id,
         U = null == F ? void 0 : null === (t = F.message) || void 0 === t ? void 0 : t.channel_id,
-        B = (0, c.e7)([S.Z], () => (null != U && null != W ? S.Z.getMessage(U, W) : null), [U, W]),
+        B = (0, c.e7)([L.Z], () => (null != U && null != W ? L.Z.getMessage(U, W) : null), [U, W]),
         G = null != B ? B : null == F ? void 0 : F.message,
         z = null != G && null != F.identifier ? (0, C.s)(G, F.identifier) : null,
         H = (0, m.KP)(
@@ -124,25 +124,25 @@ function D(e) {
                 type: m.lJ.GenericMedia,
                 media: Z
             },
-            N
+            R
         ),
-        X = D
+        X = M
             ? (e) => {
                   e.stopPropagation(), e.preventDefault();
               }
             : void 0,
-        V = (function (e) {
+        K = (function (e) {
             if (0 === e) return ['translateX(0)'];
             let n = ['translateX(100px)', 'translateX(-100px)'];
             return e > 0 ? n : n.toReversed();
-        })(y[y.length - 1]),
-        K = (0, d.useTransition)(
+        })(T[T.length - 1]),
+        V = (0, d.useTransition)(
             Z,
             {
                 key: Z.url,
                 from: {
                     opacity: 0,
-                    transform: V[0]
+                    transform: K[0]
                 },
                 enter: {
                     opacity: 1,
@@ -150,7 +150,7 @@ function D(e) {
                 },
                 leave: {
                     opacity: 0,
-                    transform: V[V.length - 1]
+                    transform: K[K.length - 1]
                 },
                 config: {
                     friction: 20,
@@ -160,30 +160,30 @@ function D(e) {
             I ? 'respect-motion-settings' : 'animate-never'
         );
     return (0, a.jsxs)('div', {
-        className: R.wrapper,
+        className: b.wrapper,
         children: [
-            o.length > 1
+            l.length > 1
                 ? (0, a.jsx)(x.am, {
-                      className: R.navPrev,
-                      onClick: () => L.S.dispatch(O.CkL.MODAL_CAROUSEL_PREV)
+                      className: b.navPrev,
+                      onClick: () => S.S.dispatch(A.CkL.MODAL_CAROUSEL_PREV)
                   })
                 : null,
-            K((e, n) => {
+            V((e, n) => {
                 var t;
                 return (0, a.jsx)(a.Fragment, {
                     children: (0, a.jsx)(
                         u.animated.div,
                         {
                             style: e,
-                            className: R.zoomedMediaFitWrapper,
+                            className: b.zoomedMediaFitWrapper,
                             children: (0, a.jsxs)('div', {
-                                onClick: (e) => (null != p && [A.D.CONTAIN, A.D.SCALE_DOWN].includes(p) ? null : e.stopPropagation()),
+                                onClick: (e) => (null != p && [v.D.CONTAIN, v.D.SCALE_DOWN].includes(p) ? null : e.stopPropagation()),
                                 children: [
-                                    (0, a.jsx)(M, {
+                                    (0, a.jsx)(D, {
                                         isObscured: H,
                                         src: n.url,
                                         children: (e) =>
-                                            (0, a.jsx)(A.Z, {
+                                            (0, a.jsx)(v.Z, {
                                                 media: n,
                                                 fit: p,
                                                 obscured: e,
@@ -191,16 +191,16 @@ function D(e) {
                                             })
                                     }),
                                     ('IMAGE' !== n.type || null != n.original) &&
-                                        !D &&
+                                        !M &&
                                         (0, a.jsxs)('div', {
-                                            className: R.optionsContainer,
+                                            className: b.optionsContainer,
                                             children: [
                                                 (0, a.jsx)(f.Z, {
                                                     href: null !== (t = n.original) && void 0 !== t ? t : n.url,
-                                                    className: R.downloadLink,
-                                                    children: v.Z.Messages.OPEN_IN_BROWSER
+                                                    className: b.downloadLink,
+                                                    children: O.intl.string(O.t.q5jLJC)
                                                 }),
-                                                null != z && (0, a.jsx)(z, { className: R.forward })
+                                                null != z && (0, a.jsx)(z, { className: b.forward })
                                             ]
                                         })
                                 ]
@@ -210,10 +210,10 @@ function D(e) {
                     )
                 });
             }),
-            o.length > 1
+            l.length > 1
                 ? (0, a.jsx)(x.Pz, {
-                      className: R.navNext,
-                      onClick: () => L.S.dispatch(O.CkL.MODAL_CAROUSEL_NEXT)
+                      className: b.navNext,
+                      onClick: () => S.S.dispatch(A.CkL.MODAL_CAROUSEL_NEXT)
                   })
                 : null
         ]

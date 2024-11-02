@@ -9,8 +9,8 @@ var i = n(525654),
     u = n(317770),
     c = n(63063),
     d = n(981631),
-    _ = n(689938);
-class E extends u.Z {
+    f = n(388032);
+class _ extends u.Z {
     _initialize() {
         o.Z.subscribe('MEDIA_ENGINE_PERMISSION', this.handlePermission);
     }
@@ -29,10 +29,10 @@ class E extends u.Z {
                     let e = 'audio' !== t;
                     (0, s.openModal)((t) =>
                         (0, r.jsx)(l.default, {
-                            title: e ? _.Z.Messages.NO_CAMERA_TITLE : _.Z.Messages.NO_MIC_TITLE,
-                            body: e ? _.Z.Messages.NO_CAMERA_BODY : _.Z.Messages.NO_MIC_BODY,
+                            title: e ? f.intl.string(f.t.OqloHx) : f.intl.string(f.t['kI+OOT']),
+                            body: e ? f.intl.string(f.t.l3P7Ky) : f.intl.string(f.t.l3jwOT),
                             onConfirm: () => window.open(c.Z.getArticleURL(i), '_blank'),
-                            confirmText: _.Z.Messages.HELP_DESK,
+                            confirmText: f.intl.string(f.t.psXQHB),
                             ...t
                         })
                     );
@@ -48,4 +48,4 @@ class E extends u.Z {
                 : (t[n] = i);
     }
 }
-t.Z = new E();
+t.Z = new _();

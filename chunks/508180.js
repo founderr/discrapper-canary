@@ -5,7 +5,7 @@ var r = n(200651),
     o = n(846027),
     l = n(468026),
     u = n(131951),
-    c = n(689938);
+    c = n(388032);
 t.Z = () => {
     let e = (0, a.e7)([u.Z], () => u.Z.isInteractionRequired(), []),
         t = i.useRef(null);
@@ -21,10 +21,10 @@ t.Z = () => {
                 e
                     ? (t.current = (0, s.openModal)((e) =>
                           (0, r.jsx)(l.default, {
-                              title: c.Z.Messages.INTERACTION_REQUIRED_TITLE,
-                              body: c.Z.Messages.INTERACTION_REQUIRED_BODY,
+                              title: c.intl.string(c.t.dLLxCw),
+                              body: c.intl.string(c.t['64lmt7']),
                               onConfirm: d,
-                              confirmText: c.Z.Messages.OKAY,
+                              confirmText: c.intl.string(c.t.BddRzc),
                               ...e
                           })
                       ))

@@ -22,20 +22,20 @@ function u(e) {
         c = s.useRef(-1);
     s.useLayoutEffect(() => () => clearTimeout(c.current));
     let [, d] = s.useState(o),
-        _ = s.useRef(null),
-        E = s.useMemo(() => {
+        f = s.useRef(null),
+        _ = s.useMemo(() => {
             var e;
-            let i = new Set(null === (e = _.current) || void 0 === e ? void 0 : e.keys()),
-                a = new Map(_.current);
+            let i = new Set(null === (e = f.current) || void 0 === e ? void 0 : e.keys()),
+                a = new Map(f.current);
             for (let e of t) {
                 let t = r(e),
                     s = a.get(t);
                 if (null == s) {
-                    let r = null != _.current ? 1 : 0,
+                    let r = null != f.current ? 1 : 0,
                         i = () => {
                             var e, n;
-                            let r = null === (e = _.current) || void 0 === e ? void 0 : e.get(t);
-                            null == r || (2 === r.state ? (null === (n = _.current) || void 0 === n || n.delete(t), null != u ? (clearTimeout(c.current), (c.current = setTimeout(() => d({}), u))) : d({})) : __DEV__ && console.warn("SimpleTransitionGroup.cleanUp: Attempted to remove an item that isn't yeetable: ".concat(t)));
+                            let r = null === (e = f.current) || void 0 === e ? void 0 : e.get(t);
+                            null == r || (2 === r.state ? (null === (n = f.current) || void 0 === n || n.delete(t), null != u ? (clearTimeout(c.current), (c.current = setTimeout(() => d({}), u))) : d({})) : __DEV__ && console.warn("SimpleTransitionGroup.cleanUp: Attempted to remove an item that isn't yeetable: ".concat(t)));
                         },
                         a = n(t, e, r, i);
                     s = {
@@ -82,15 +82,15 @@ function u(e) {
         }, [t, r, n, u]);
     s.useInsertionEffect(
         () => (
-            (_.current = E),
+            (f.current = _),
             () => {
                 var e;
-                return null === (e = _.current) || void 0 === e ? void 0 : e.clear();
+                return null === (e = f.current) || void 0 === e ? void 0 : e.clear();
             }
         ),
-        [E]
+        [_]
     );
-    let f = [];
-    for (let [, e] of E) f.push(e.children);
-    return (0, a.jsx)(a.Fragment, { children: f.length > 0 ? i(f, t) : null });
+    let h = [];
+    for (let [, e] of _) h.push(e.children);
+    return (0, a.jsx)(a.Fragment, { children: h.length > 0 ? i(h, t) : null });
 }

@@ -1,52 +1,52 @@
 n.d(t, {
     u: function () {
-        return I;
+        return p;
     }
 });
-var s = n(200651),
-    a = n(192379),
-    r = n(512722),
-    i = n.n(r),
+var i = n(200651),
+    r = n(192379),
+    a = n(512722),
+    s = n.n(a),
     l = n(399606),
     o = n(481060),
     c = n(594174),
-    _ = n(933970),
-    d = n(340453),
-    E = n(292352),
-    u = n(689938),
-    T = n(279324);
-function I(e) {
+    d = n(933970),
+    u = n(340453),
+    g = n(292352),
+    m = n(388032),
+    f = n(279324);
+function p(e) {
     let { user: t } = e,
-        r = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
-        I = a.useCallback(() => {
-            i()(void 0 !== r, 'User must be logged in to accept a link request'),
+        a = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
+        p = r.useCallback(() => {
+            s()(void 0 !== a, 'User must be logged in to accept a link request'),
                 (0, o.openModalLazy)(async () => {
                     let { default: e } = await n.e('50872').then(n.bind(n, 442673));
                     return (n) =>
-                        (0, s.jsx)(e, {
+                        (0, i.jsx)(e, {
                             ...n,
-                            currentUser: r,
+                            currentUser: a,
                             otherUser: t
                         });
                 });
-        }, [r, t]);
-    return (0, s.jsxs)('div', {
-        className: T.container,
+        }, [a, t]);
+    return (0, i.jsxs)('div', {
+        className: f.container,
         children: [
-            (0, s.jsx)('div', {
-                className: T.details,
-                children: (0, s.jsx)(d.Z, {
+            (0, i.jsx)('div', {
+                className: f.details,
+                children: (0, i.jsx)(u.Z, {
                     otherUser: t,
-                    status: E.ne.ACTIVE
+                    status: g.ne.ACTIVE
                 })
             }),
-            (0, s.jsx)('div', {
-                className: T.actions,
-                children: (0, s.jsx)(_.Z, {
+            (0, i.jsx)('div', {
+                className: f.actions,
+                children: (0, i.jsx)(d.Z, {
                     icon: o.XSmallIcon,
-                    className: T.__invalid_actionDeny,
-                    tooltip: u.Z.Messages.FAMILY_CENTER_LINK_ACTION_DISCONNECT,
-                    onClick: I
+                    className: f.__invalid_actionDeny,
+                    tooltip: m.intl.string(m.t.l20ZZm),
+                    onClick: p
                 })
             })
         ]

@@ -14,25 +14,25 @@ n(192379);
 var r = n(120356),
     a = n.n(r),
     i = n(481060),
-    s = n(489813),
-    l = n(592286),
+    l = n(489813),
+    s = n(592286),
     c = n(738912);
 function u(e) {
-    let { value: t, placeholder: n, onChange: r, disabled: s, className: u, autofocus: d } = e;
+    let { value: t, placeholder: n, onChange: r, disabled: l, className: u, autofocus: d } = e;
     return (0, o.jsx)(i.TextArea, {
         className: a()(c.paragraphFieldBody, u),
-        maxLength: l.RS,
+        maxLength: s.RS,
         value: null != t ? t : '',
         placeholder: null != n ? n : '',
         onChange: r,
-        disabled: s,
+        disabled: l,
         autoFocus: d,
         autosize: !0
     });
 }
 function d(e) {
     let { formField: t } = e;
-    return (0, o.jsx)(s.hK, {
+    return (0, o.jsx)(l.hK, {
         title: t.label,
         children: (0, o.jsx)(u, {
             className: c.fieldBackground,
@@ -43,7 +43,7 @@ function d(e) {
 }
 function m(e) {
     let { formField: t, autofocus: n, onChange: r } = e;
-    return (0, o.jsx)(s.hK, {
+    return (0, o.jsx)(l.hK, {
         title: t.label,
         children: (0, o.jsx)(u, {
             className: c.fieldBackground,

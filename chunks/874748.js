@@ -1,12 +1,12 @@
 n.d(t, {
     BC: function () {
-        return f;
+        return h;
     },
     LR: function () {
-        return E;
+        return _;
     },
     ku: function () {
-        return _;
+        return f;
     }
 }),
     n(789020);
@@ -18,63 +18,63 @@ var r = n(830121),
     l = n(154135),
     u = n(981631),
     c = n(959517),
-    d = n(689938);
-function _(e) {
+    d = n(388032);
+function f(e) {
     var t, n, r, i, a;
-    let { mediaPostEmbedData: u, guild: _, parentChannel: E, postThread: f, user: h, selectedGuildId: p, canAccess: I = !1 } = e;
+    let { mediaPostEmbedData: u, guild: f, parentChannel: _, postThread: h, user: p, selectedGuildId: m, canAccess: g = !1 } = e;
     if (null == u) return null;
-    let m = (0, l.EY)(u.thumbnail),
-        T = !I && u.has_media_attachment,
-        S = I ? d.Z.Messages.MEDIA_POST_EMBED_SUBSCRIBED_CTA : d.Z.Messages.MEDIA_POST_EMBED_SUBSCRIBE_CTA,
-        g = null != h ? o.ZP.getName(u.guild_id, u.channel_id, h) : void 0,
-        A = null == h ? void 0 : h.getAvatarURL(null == _ ? void 0 : _.id, 40);
-    (null == A || p !== u.guild_id) &&
-        (A = s.ZP.getGuildIconURL({
+    let E = (0, l.EY)(u.thumbnail),
+        v = !g && u.has_media_attachment,
+        I = g ? d.intl.string(d.t.UsZEBA) : d.intl.string(d.t.ReFzYW),
+        S = null != p ? o.ZP.getName(u.guild_id, u.channel_id, p) : void 0,
+        T = null == p ? void 0 : p.getAvatarURL(null == f ? void 0 : f.id, 40);
+    (null == T || m !== u.guild_id) &&
+        (T = s.ZP.getGuildIconURL({
             id: u.guild_id,
             icon: u.guild_icon,
             size: 40,
             canAnimate: !1
         }));
-    let N =
+    let b =
             (function (e) {
                 if (null == e) return !1;
                 let { height: t, width: n } = e;
                 return null != t && null != n && t >= n;
-            })(u.thumbnail) && !T,
-        R = (null === (t = u.thumbnail) || void 0 === t ? void 0 : t.filename) != null && (null === (r = u.thumbnail) || void 0 === r ? void 0 : null === (n = r.filename) || void 0 === n ? void 0 : n.startsWith(c._j));
+            })(u.thumbnail) && !v,
+        y = (null === (t = u.thumbnail) || void 0 === t ? void 0 : t.filename) != null && (null === (r = u.thumbnail) || void 0 === r ? void 0 : null === (n = r.filename) || void 0 === n ? void 0 : n.startsWith(c._j));
     return {
         title: null !== (i = u.title) && void 0 !== i ? i : '',
         subtitle: u.description,
-        ctaText: S,
-        coverImage: m,
-        coverImageOverlayText: T ? d.Z.Messages.MEDIA_POST_EMBED_BLURRED_THUMBNAIL_TEXT : void 0,
+        ctaText: I,
+        coverImage: E,
+        coverImageOverlayText: v ? d.intl.string(d.t.YonliY) : void 0,
         parentChannelId: u.parent_channel_id,
         threadId: u.channel_id,
-        postThread: f,
+        postThread: h,
         messageId: u.message_id,
-        canAccess: I,
+        canAccess: g,
         guildId: u.guild_id,
-        guildName: null !== (a = null == _ ? void 0 : _.name) && void 0 !== a ? a : u.guild_name,
+        guildName: null !== (a = null == f ? void 0 : f.name) && void 0 !== a ? a : u.guild_name,
         authorId: null == u ? void 0 : u.author_id,
-        authorName: g,
-        channelName: null == E ? void 0 : E.name,
-        avatarUrl: A,
-        shouldShowBlurredThumbnailImage: T,
-        shouldContainMediaWithBackground: N,
-        shouldSpoiler: R,
+        authorName: S,
+        channelName: null == _ ? void 0 : _.name,
+        avatarUrl: T,
+        shouldShowBlurredThumbnailImage: v,
+        shouldContainMediaWithBackground: b,
+        shouldSpoiler: y,
         obscureAwaitingScan: !1,
         flags: u.flags,
         contentScanVersion: u.content_scan_version
     };
 }
-function E(e) {
+function _(e) {
     if (null == e) return;
     let t = (0, r.FO)(e);
     if (null == t) return;
     let n = (0, r.Sq)(t);
     if (null != n) return (0, i.Qj)(n);
 }
-function f(e, t) {
+function h(e, t) {
     let n = a.Z.getGuild(e);
     if (null == n || null == t) return !1;
     let r = n.hasFeature(u.oNc.CREATOR_MONETIZABLE) || n.hasFeature(u.oNc.CREATOR_MONETIZABLE_PROVISIONAL);

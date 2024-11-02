@@ -5,30 +5,30 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(481060),
-    a = n(493683),
-    l = n(726521),
-    r = n(213010),
+var l = n(481060),
+    r = n(493683),
+    a = n(726521),
+    s = n(213010),
     o = n(718538),
-    c = n(689938);
+    c = n(388032);
 function u(e) {
-    let { otherUserId: t, channel: n, buttonSize: u = s.ButtonSizes.TINY, className: d, buttonText: h, navigateAwayOnReportSuccess: m = !0, onReportClick: p, onReportSubmit: _, onMouseEnter: f, onMouseLeave: E } = e,
-        g = (0, r.Q)(t),
-        C = (0, o.V)(n.id, t);
-    if (!g || null == C) return null;
-    let I = () => {
-        null == _ || _(), a.Z.closePrivateChannel(n.id, m);
+    let { otherUserId: t, channel: n, buttonSize: u = l.ButtonSizes.TINY, className: d, buttonText: h, navigateAwayOnReportSuccess: m = !0, onReportClick: p, onReportSubmit: f, onMouseEnter: g, onMouseLeave: C } = e,
+        x = (0, s.Q)(t),
+        v = (0, o.V)(n.id, t);
+    if (!x || null == v) return null;
+    let _ = () => {
+        null == f || f(), r.Z.closePrivateChannel(n.id, m);
     };
-    return (0, i.jsx)(s.Button, {
+    return (0, i.jsx)(l.Button, {
         className: d,
         size: u,
-        color: s.Button.Colors.RED,
-        disabled: null == C,
+        color: l.Button.Colors.RED,
+        disabled: null == v,
         onClick: () => {
-            null == p || p(), (0, l.WL)(C, I);
+            null == p || p(), (0, a.WL)(v, _);
         },
-        onMouseEnter: f,
-        onMouseLeave: E,
-        children: null != h ? h : c.Z.Messages.REPORT_SPAM
+        onMouseEnter: g,
+        onMouseLeave: C,
+        children: null != h ? h : c.intl.string(c.t.HHZmDg)
     });
 }

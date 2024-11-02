@@ -1,24 +1,24 @@
-t.d(l, {
+l.d(t, {
     i: function () {
         return d;
     }
 });
-var a = t(392711),
-    s = t.n(a),
-    n = t(442837),
-    i = t(77498),
-    r = t(823379),
-    o = t(353093),
-    c = t(308083);
+var n = l(392711),
+    i = l.n(n),
+    a = l(442837),
+    s = l(77498),
+    r = l(823379),
+    o = l(353093),
+    c = l(308083);
 function d(e) {
-    return (0, n.e7)([i.Z], () => {
-        let l = s()(e)
+    return (0, a.e7)([s.Z], () => {
+        let t = i()(e)
             .map((e) => {
-                var l;
-                return null === (l = i.Z.getDetectableGame(e)) || void 0 === l ? void 0 : l.name;
+                var t;
+                return null === (t = s.Z.getDetectableGame(e)) || void 0 === t ? void 0 : t.name;
             })
             .filter(r.lm)
             .value();
-        return (0, o.f6)(l, c.uw);
+        return (0, o.f6)(t, c.uw);
     });
 }

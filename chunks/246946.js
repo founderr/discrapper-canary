@@ -32,75 +32,75 @@ let d = {
         disableNotifications: !0,
         enableContentProtection: !1
     },
-    _ = {},
-    E = { ...d };
-class f extends (r = i.ZP.PersistedStore) {
+    f = {},
+    _ = { ...d };
+class h extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        Object.assign(_, e),
+        Object.assign(f, e),
             this.syncWith([o.default], () => {
                 var e;
                 let t,
                     n = o.default.getId();
-                E = null != n ? (null == (t = _[(e = n)]) && (t = _[e] = { ...d }), t) : { ...d };
+                _ = null != n ? (null == (t = f[(e = n)]) && (t = f[e] = { ...d }), t) : { ...d };
             });
     }
     getState() {
-        return _;
+        return f;
     }
     getSettings() {
-        return E;
+        return _;
     }
     get enabled() {
-        return E.enabled;
+        return _.enabled;
     }
     get autoToggle() {
-        return E.autoToggle;
+        return _.autoToggle;
     }
     get hideInstantInvites() {
-        return this.enabled && E.hideInstantInvites;
+        return this.enabled && _.hideInstantInvites;
     }
     get hidePersonalInformation() {
-        return this.enabled && E.hidePersonalInformation;
+        return this.enabled && _.hidePersonalInformation;
     }
     get disableSounds() {
-        return this.enabled && E.disableSounds;
+        return this.enabled && _.disableSounds;
     }
     get disableNotifications() {
-        return this.enabled && E.disableNotifications;
+        return this.enabled && _.disableNotifications;
     }
     get enableContentProtection() {
-        return this.enabled && E.enableContentProtection;
+        return this.enabled && _.enableContentProtection;
     }
 }
-u(f, 'displayName', 'StreamerModeStore'),
-    u(f, 'persistKey', 'StreamerModeStore'),
-    u(f, 'migrations', [
+u(h, 'displayName', 'StreamerModeStore'),
+    u(h, 'persistKey', 'StreamerModeStore'),
+    u(h, 'migrations', [
         (e) => {
             let t = o.default.getId();
             return null == e || null == t ? {} : { [t]: { ...e } };
         }
     ]),
-    (t.Z = new f(a.Z, {
+    (t.Z = new h(a.Z, {
         LOGOUT: function (e) {
-            !e.isSwitchingAccount && (_ = {});
+            !e.isSwitchingAccount && (f = {});
         },
         MULTI_ACCOUNT_REMOVE_ACCOUNT: function (e) {
-            e.userId in _ && delete _[e.userId];
+            e.userId in f && delete f[e.userId];
         },
         STREAMER_MODE_UPDATE: function (e) {
-            let t = { ...E };
+            let t = { ..._ };
             return (
-                (E[e.key] = e.value),
+                (_[e.key] = e.value),
                 'enabled' === e.key
                     ? c(e.value, !1)
                     : s.default.track(l.rMx.UPDATE_STREAMER_MODE_SETTINGS, {
-                          enabled: E.enabled,
-                          automatic: E.autoToggle,
-                          disable_notifications: E.disableNotifications,
-                          disable_sounds: E.disableSounds,
-                          hide_instant_invites: E.hideInstantInvites,
-                          hide_personal_info: E.hidePersonalInformation,
-                          enable_content_protection: E.enableContentProtection,
+                          enabled: _.enabled,
+                          automatic: _.autoToggle,
+                          disable_notifications: _.disableNotifications,
+                          disable_sounds: _.disableSounds,
+                          hide_instant_invites: _.hideInstantInvites,
+                          hide_personal_info: _.hidePersonalInformation,
+                          enable_content_protection: _.enableContentProtection,
                           old_enabled: t.enabled,
                           old_automatic: t.autoToggle,
                           old_disable_notifications: t.disableNotifications,
@@ -113,10 +113,10 @@ u(f, 'displayName', 'StreamerModeStore'),
             );
         },
         RUNNING_STREAMER_TOOLS_CHANGE: function (e) {
-            if (!E.autoToggle) return !1;
+            if (!_.autoToggle) return !1;
             {
                 let t = e.count > 0;
-                return (E.enabled = t), c(t, !0), !0;
+                return (_.enabled = t), c(t, !0), !0;
             }
         }
     }));

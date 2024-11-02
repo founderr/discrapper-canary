@@ -1,76 +1,76 @@
-e.r(t),
-    e.d(t, {
+i.r(t),
+    i.d(t, {
         default: function () {
-            return l;
+            return s;
         }
     }),
-    e(47120);
-var a = e(200651),
-    r = e(192379),
-    i = e(481060),
-    o = e(53365),
-    c = e(377176),
-    s = e(689938),
-    u = e(383089);
-function l(n) {
-    let { guildId: t, transitionState: e, onClose: l } = n,
-        [T, _] = r.useState(!1),
-        [E, N] = r.useState(!1),
-        R = async () => {
-            _(!0);
+    i(47120);
+var e = i(200651),
+    r = i(192379),
+    o = i(481060),
+    a = i(53365),
+    c = i(377176),
+    l = i(388032),
+    u = i(383089);
+function s(n) {
+    let { guildId: t, transitionState: i, onClose: s } = n,
+        [T, E] = r.useState(!1),
+        [_, A] = r.useState(!1),
+        N = async () => {
+            E(!0);
             try {
-                await (0, o.zo)(t), l();
+                await (0, a.zo)(t), s();
             } finally {
-                _(!1);
+                E(!1);
             }
         },
-        A = s.Z.Messages.GUILD_PRODUCT_TERMS_NOT_ACCEPTED_ERROR_TITLE;
-    return (0, a.jsxs)(i.ModalRoot, {
+        d = l.intl.string(l.t['22itmp']);
+    return (0, e.jsxs)(o.ModalRoot, {
         className: u.__invalid_container,
-        size: i.ModalSize.DYNAMIC,
-        transitionState: e,
-        'aria-label': A,
+        size: o.ModalSize.DYNAMIC,
+        transitionState: i,
+        'aria-label': d,
         children: [
-            (0, a.jsxs)(i.ModalContent, {
+            (0, e.jsxs)(o.ModalContent, {
                 className: u.content,
                 children: [
-                    (0, a.jsxs)('div', {
+                    (0, e.jsxs)('div', {
                         className: u.header,
                         children: [
-                            (0, a.jsx)(i.CircleWarningIcon, {
+                            (0, e.jsx)(o.CircleWarningIcon, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 20,
                                 height: 20,
                                 className: u.warningIcon
                             }),
-                            (0, a.jsx)(i.Spacer, {
+                            (0, e.jsx)(o.Spacer, {
                                 size: 8,
                                 horizontal: !0
                             }),
-                            (0, a.jsx)(i.Heading, {
+                            (0, e.jsx)(o.Heading, {
                                 variant: 'heading-xl/semibold',
                                 color: 'header-primary',
-                                children: A
+                                children: d
                             })
                         ]
                     }),
-                    (0, a.jsx)(i.Spacer, { size: 12 }),
-                    (0, a.jsx)(i.Text, {
+                    (0, e.jsx)(o.Spacer, { size: 12 }),
+                    (0, e.jsx)(o.Text, {
                         variant: 'text-md/normal',
                         color: 'text-muted',
                         className: u.__invalid_body,
-                        children: s.Z.Messages.GUILD_PRODUCT_TERMS_NOT_ACCEPTED_ERROR_BODY
+                        children: l.intl.string(l.t.kdbm9P)
                     }),
-                    (0, a.jsx)(i.Spacer, { size: 28 }),
-                    (0, a.jsx)(i.Checkbox, {
+                    (0, e.jsx)(o.Spacer, { size: 28 }),
+                    (0, e.jsx)(o.Checkbox, {
                         onChange: () => {
-                            N((n) => !n);
+                            A((n) => !n);
                         },
                         size: 20,
-                        type: i.Checkbox.Types.INVERTED,
-                        value: E,
-                        children: (0, a.jsx)(i.Text, {
+                        type: o.Checkbox.Types.INVERTED,
+                        value: _,
+                        children: (0, e.jsx)(o.Text, {
                             variant: 'text-md/normal',
                             color: 'header-secondary',
                             children: (0, c.f)()
@@ -78,24 +78,24 @@ function l(n) {
                     })
                 ]
             }),
-            (0, a.jsxs)(i.ModalFooter, {
+            (0, e.jsxs)(o.ModalFooter, {
                 children: [
-                    (0, a.jsx)(i.Button, {
-                        color: i.Button.Colors.BRAND,
-                        disabled: !E,
-                        onClick: R,
+                    (0, e.jsx)(o.Button, {
+                        color: o.Button.Colors.BRAND,
+                        disabled: !_,
+                        onClick: N,
                         submitting: T,
-                        children: s.Z.Messages.CONFIRM
+                        children: l.intl.string(l.t['cY+Ooa'])
                     }),
-                    (0, a.jsx)(i.Spacer, {
+                    (0, e.jsx)(o.Spacer, {
                         size: 12,
                         horizontal: !0
                     }),
-                    (0, a.jsx)(i.Button, {
-                        color: i.Button.Colors.PRIMARY,
-                        look: i.Button.Looks.OUTLINED,
-                        onClick: l,
-                        children: s.Z.Messages.CANCEL
+                    (0, e.jsx)(o.Button, {
+                        color: o.Button.Colors.PRIMARY,
+                        look: o.Button.Looks.OUTLINED,
+                        onClick: s,
+                        children: l.intl.string(l.t['ETE/oK'])
                     })
                 ]
             })

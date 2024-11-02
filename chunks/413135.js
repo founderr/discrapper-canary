@@ -37,20 +37,20 @@ function l(e, t, n) {
     if ('string' == typeof e)
         return (function (e, t) {
             if ((('string' != typeof t || '' === t) && (t = 'utf8'), !o.isEncoding(t))) throw TypeError('Unknown encoding: ' + t);
-            var n = 0 | f(e, t),
+            var n = 0 | h(e, t),
                 r = s(n),
                 i = r.write(e, t);
             return i !== n && (r = r.slice(0, i)), r;
         })(e, t);
     if (ArrayBuffer.isView(e)) return d(e);
     if (null == e) throw TypeError('The first argument must be one of type string, Buffer, ArrayBuffer, Array, or Array-like Object. Received type ' + typeof e);
-    if (b(e, ArrayBuffer) || (e && b(e.buffer, ArrayBuffer)) || ('undefined' != typeof SharedArrayBuffer && (b(e, SharedArrayBuffer) || (e && b(e.buffer, SharedArrayBuffer))))) return _(e, t, n);
+    if (L(e, ArrayBuffer) || (e && L(e.buffer, ArrayBuffer)) || ('undefined' != typeof SharedArrayBuffer && (L(e, SharedArrayBuffer) || (e && L(e.buffer, SharedArrayBuffer))))) return f(e, t, n);
     if ('number' == typeof e) throw TypeError('The "value" argument must not be of type number. Received type number');
     var r = e.valueOf && e.valueOf();
     if (null != r && r !== e) return o.from(r, t, n);
     var i = (function (e) {
         if (o.isBuffer(e)) {
-            var t = 0 | E(e.length),
+            var t = 0 | _(e.length),
                 n = s(t);
             return 0 === n.length ? n : (e.copy(n, 0, 0, t), n);
         }
@@ -90,7 +90,7 @@ Object.defineProperty(o.prototype, 'parent', {
     Object.setPrototypeOf(o.prototype, Uint8Array.prototype),
     Object.setPrototypeOf(o, Uint8Array);
 function c(e) {
-    return u(e), s(e < 0 ? 0 : 0 | E(e));
+    return u(e), s(e < 0 ? 0 : 0 | _(e));
 }
 (o.alloc = function (e, t, n) {
     var r, i, a;
@@ -103,22 +103,22 @@ function c(e) {
         return c(e);
     });
 function d(e) {
-    for (var t = e.length < 0 ? 0 : 0 | E(e.length), n = s(t), r = 0; r < t; r += 1) n[r] = 255 & e[r];
+    for (var t = e.length < 0 ? 0 : 0 | _(e.length), n = s(t), r = 0; r < t; r += 1) n[r] = 255 & e[r];
     return n;
 }
-function _(e, t, n) {
+function f(e, t, n) {
     var r;
     if (t < 0 || e.byteLength < t) throw RangeError('"offset" is outside of buffer bounds');
     if (e.byteLength < t + (n || 0)) throw RangeError('"length" is outside of buffer bounds');
     return Object.setPrototypeOf((r = void 0 === t && void 0 === n ? new Uint8Array(e) : void 0 === n ? new Uint8Array(e, t) : new Uint8Array(e, t, n)), o.prototype), r;
 }
-function E(e) {
+function _(e) {
     if (e >= 2147483647) throw RangeError('Attempt to allocate Buffer larger than maximum size: 0x' + '7fffffff bytes');
     return 0 | e;
 }
-function f(e, t) {
+function h(e, t) {
     if (o.isBuffer(e)) return e.length;
-    if (ArrayBuffer.isView(e) || b(e, ArrayBuffer)) return e.byteLength;
+    if (ArrayBuffer.isView(e) || L(e, ArrayBuffer)) return e.byteLength;
     if ('string' != typeof e) throw TypeError('The "string" argument must be one of type string, Buffer, or ArrayBuffer. Received type ' + typeof e);
     var n = e.length,
         r = arguments.length > 2 && !0 === arguments[2];
@@ -140,13 +140,13 @@ function f(e, t) {
             case 'hex':
                 return n >>> 1;
             case 'base64':
-                return D(e).length;
+                return O(e).length;
             default:
                 if (i) return r ? -1 : C(e).length;
                 (t = ('' + t).toLowerCase()), (i = !0);
         }
 }
-function h(e, t, n) {
+function p(e, t, n) {
     var i = !1;
     if (((void 0 === t || t < 0) && (t = 0), t > this.length)) return '';
     if (((void 0 === n || n > this.length) && (n = this.length), n <= 0 || (n >>>= 0) <= (t >>>= 0))) return '';
@@ -156,12 +156,12 @@ function h(e, t, n) {
                 return (function (e, t, n) {
                     var r = e.length;
                     (!t || t < 0) && (t = 0), (!n || n < 0 || n > r) && (n = r);
-                    for (var i = '', a = t; a < n; ++a) i += P[e[a]];
+                    for (var i = '', a = t; a < n; ++a) i += w[e[a]];
                     return i;
                 })(this, t, n);
             case 'utf8':
             case 'utf-8':
-                return S(this, t, n);
+                return I(this, t, n);
             case 'ascii':
                 return (function (e, t, n) {
                     var r = '';
@@ -194,11 +194,11 @@ function h(e, t, n) {
                 (e = (e + '').toLowerCase()), (i = !0);
         }
 }
-function p(e, t, n) {
+function m(e, t, n) {
     var r = e[t];
     (e[t] = e[n]), (e[n] = r);
 }
-function I(e, t, n, r, i) {
+function g(e, t, n, r, i) {
     if (0 === e.length) return -1;
     if (
         ('string' == typeof n ? ((r = n), (n = 0)) : n > 2147483647 ? (n = 2147483647) : n < -2147483648 && (n = -2147483648),
@@ -214,14 +214,14 @@ function I(e, t, n, r, i) {
         if (!i) return -1;
         n = 0;
     }
-    if (('string' == typeof t && (t = o.from(t, r)), o.isBuffer(t))) return 0 === t.length ? -1 : m(e, t, n, r, i);
+    if (('string' == typeof t && (t = o.from(t, r)), o.isBuffer(t))) return 0 === t.length ? -1 : E(e, t, n, r, i);
     if ('number' == typeof t) {
         if (((t &= 255), 'function' == typeof Uint8Array.prototype.indexOf)) return i ? Uint8Array.prototype.indexOf.call(e, t, n) : Uint8Array.prototype.lastIndexOf.call(e, t, n);
-        return m(e, [t], n, r, i);
+        return E(e, [t], n, r, i);
     }
     throw TypeError('val must be string, number or Buffer');
 }
-function m(e, t, n, r, i) {
+function E(e, t, n, r, i) {
     var a,
         s = 1,
         o = e.length,
@@ -241,8 +241,8 @@ function m(e, t, n, r, i) {
             } else -1 !== c && (a -= a - c), (c = -1);
     } else
         for (n + l > o && (n = o - l), a = n; a >= 0; a--) {
-            for (var d = !0, _ = 0; _ < l; _++)
-                if (u(e, a + _) !== u(t, _)) {
+            for (var d = !0, f = 0; f < l; f++)
+                if (u(e, a + f) !== u(t, f)) {
                     d = !1;
                     break;
                 }
@@ -254,7 +254,7 @@ function m(e, t, n, r, i) {
     return null != e && !0 === e._isBuffer && e !== o.prototype;
 }),
     (o.compare = function (e, t) {
-        if ((b(e, Uint8Array) && (e = o.from(e, e.offset, e.byteLength)), b(t, Uint8Array) && (t = o.from(t, t.offset, t.byteLength)), !o.isBuffer(e) || !o.isBuffer(t))) throw TypeError('The "buf1", "buf2" arguments must be one of type Buffer or Uint8Array');
+        if ((L(e, Uint8Array) && (e = o.from(e, e.offset, e.byteLength)), L(t, Uint8Array) && (t = o.from(t, t.offset, t.byteLength)), !o.isBuffer(e) || !o.isBuffer(t))) throw TypeError('The "buf1", "buf2" arguments must be one of type Buffer or Uint8Array');
         if (e === t) return 0;
         for (var n = e.length, r = t.length, i = 0, a = Math.min(n, r); i < a; ++i)
             if (e[i] !== t[i]) {
@@ -290,34 +290,34 @@ function m(e, t, n, r, i) {
             i = 0;
         for (n = 0; n < e.length; ++n) {
             var a = e[n];
-            if ((b(a, Uint8Array) && (a = o.from(a)), !o.isBuffer(a))) throw TypeError('"list" argument must be an Array of Buffers');
+            if ((L(a, Uint8Array) && (a = o.from(a)), !o.isBuffer(a))) throw TypeError('"list" argument must be an Array of Buffers');
             a.copy(r, i), (i += a.length);
         }
         return r;
     }),
-    (o.byteLength = f),
+    (o.byteLength = h),
     (o.prototype._isBuffer = !0),
     (o.prototype.swap16 = function () {
         var e = this.length;
         if (e % 2 != 0) throw RangeError('Buffer size must be a multiple of 16-bits');
-        for (var t = 0; t < e; t += 2) p(this, t, t + 1);
+        for (var t = 0; t < e; t += 2) m(this, t, t + 1);
         return this;
     }),
     (o.prototype.swap32 = function () {
         var e = this.length;
         if (e % 4 != 0) throw RangeError('Buffer size must be a multiple of 32-bits');
-        for (var t = 0; t < e; t += 4) p(this, t, t + 3), p(this, t + 1, t + 2);
+        for (var t = 0; t < e; t += 4) m(this, t, t + 3), m(this, t + 1, t + 2);
         return this;
     }),
     (o.prototype.swap64 = function () {
         var e = this.length;
         if (e % 8 != 0) throw RangeError('Buffer size must be a multiple of 64-bits');
-        for (var t = 0; t < e; t += 8) p(this, t, t + 7), p(this, t + 1, t + 6), p(this, t + 2, t + 5), p(this, t + 3, t + 4);
+        for (var t = 0; t < e; t += 8) m(this, t, t + 7), m(this, t + 1, t + 6), m(this, t + 2, t + 5), m(this, t + 3, t + 4);
         return this;
     }),
     (o.prototype.toString = function () {
         var e = this.length;
-        return 0 === e ? '' : 0 == arguments.length ? S(this, 0, e) : h.apply(this, arguments);
+        return 0 === e ? '' : 0 == arguments.length ? I(this, 0, e) : p.apply(this, arguments);
     }),
     (o.prototype.toLocaleString = o.prototype.toString),
     (o.prototype.equals = function (e) {
@@ -337,7 +337,7 @@ function m(e, t, n, r, i) {
     }),
     a && (o.prototype[a] = o.prototype.inspect),
     (o.prototype.compare = function (e, t, n, r, i) {
-        if ((b(e, Uint8Array) && (e = o.from(e, e.offset, e.byteLength)), !o.isBuffer(e))) throw TypeError('The "target" argument must be one of type Buffer or Uint8Array. Received type ' + typeof e);
+        if ((L(e, Uint8Array) && (e = o.from(e, e.offset, e.byteLength)), !o.isBuffer(e))) throw TypeError('The "target" argument must be one of type Buffer or Uint8Array. Received type ' + typeof e);
         if ((void 0 === t && (t = 0), void 0 === n && (n = e ? e.length : 0), void 0 === r && (r = 0), void 0 === i && (i = this.length), t < 0 || n > e.length || r < 0 || i > this.length)) throw RangeError('out of range index');
         if (r >= i && t >= n) return 0;
         if (r >= i) return -1;
@@ -354,13 +354,13 @@ function m(e, t, n, r, i) {
         return -1 !== this.indexOf(e, t, n);
     }),
     (o.prototype.indexOf = function (e, t, n) {
-        return I(this, e, t, n, !0);
+        return g(this, e, t, n, !0);
     }),
     (o.prototype.lastIndexOf = function (e, t, n) {
-        return I(this, e, t, n, !1);
+        return g(this, e, t, n, !1);
     });
-function T(e, t, n, r) {
-    return y(L(t), e, n, r);
+function v(e, t, n, r) {
+    return D(R(t), e, n, r);
 }
 (o.prototype.write = function (e, t, n, r) {
     if (void 0 === t) (r = 'utf8'), (n = this.length), (t = 0);
@@ -375,18 +375,18 @@ function T(e, t, n, r) {
         u,
         c,
         d,
-        _,
-        E,
         f,
+        _,
         h,
         p,
-        I,
         m,
-        T,
-        S = this.length - t;
-    if (((void 0 === n || n > S) && (n = S), (e.length > 0 && (n < 0 || t < 0)) || t > this.length)) throw RangeError('Attempt to write outside buffer bounds');
+        g,
+        E,
+        v,
+        I = this.length - t;
+    if (((void 0 === n || n > I) && (n = I), (e.length > 0 && (n < 0 || t < 0)) || t > this.length)) throw RangeError('Attempt to write outside buffer bounds');
     !r && (r = 'utf8');
-    for (var g = !1; ; )
+    for (var S = !1; ; )
         switch (r) {
             case 'hex':
                 return (function (e, t, n, r) {
@@ -409,39 +409,39 @@ function T(e, t, n, r) {
                 })(this, e, t, n);
             case 'utf8':
             case 'utf-8':
-                return (i = this), (a = e), (s = t), (o = n), y(C(a, i.length - s), i, s, o);
+                return (i = this), (a = e), (s = t), (o = n), D(C(a, i.length - s), i, s, o);
             case 'ascii':
-                return (l = this), (u = e), (c = t), (d = n), y(L(u), l, c, d);
+                return (l = this), (u = e), (c = t), (d = n), D(R(u), l, c, d);
             case 'latin1':
             case 'binary':
                 return (function (e, t, n, r) {
                     var i, a, s, o;
-                    return (i = e), (a = t), (s = n), (o = r), y(L(a), i, s, o);
+                    return (i = e), (a = t), (s = n), (o = r), D(R(a), i, s, o);
                 })(this, e, t, n);
             case 'base64':
-                return (_ = this), (E = e), (f = t), (h = n), y(D(E), _, f, h);
+                return (f = this), (_ = e), (h = t), (p = n), D(O(_), f, h, p);
             case 'ucs2':
             case 'ucs-2':
             case 'utf16le':
             case 'utf-16le':
                 return (
-                    (p = this),
-                    (I = e),
-                    (m = t),
-                    (T = n),
-                    y(
+                    (m = this),
+                    (g = e),
+                    (E = t),
+                    (v = n),
+                    D(
                         (function (e, t) {
                             for (var n, r, i, a = [], s = 0; s < e.length && !((t -= 2) < 0); ++s) (r = (n = e.charCodeAt(s)) >> 8), (i = n % 256), a.push(i), a.push(r);
                             return a;
-                        })(I, p.length - m),
-                        p,
+                        })(g, m.length - E),
                         m,
-                        T
+                        E,
+                        v
                     )
                 );
             default:
-                if (g) throw TypeError('Unknown encoding: ' + r);
-                (r = ('' + r).toLowerCase()), (g = !0);
+                if (S) throw TypeError('Unknown encoding: ' + r);
+                (r = ('' + r).toLowerCase()), (S = !0);
         }
 }),
     (o.prototype.toJSON = function () {
@@ -450,7 +450,7 @@ function T(e, t, n, r) {
             data: Array.prototype.slice.call(this._arr || this, 0)
         };
     });
-function S(e, t, n) {
+function I(e, t, n) {
     n = Math.min(e.length, n);
     for (var r = [], i = t; i < n; ) {
         var a,
@@ -483,23 +483,23 @@ function S(e, t, n) {
         return n;
     })(r);
 }
-function g(e, t, n) {
+function S(e, t, n) {
     if (e % 1 != 0 || e < 0) throw RangeError('offset is not uint');
     if (e + t > n) throw RangeError('Trying to access beyond buffer length');
 }
-function A(e, t, n, r, i, a) {
+function T(e, t, n, r, i, a) {
     if (!o.isBuffer(e)) throw TypeError('"buffer" argument must be a Buffer instance');
     if (t > i || t < a) throw RangeError('"value" argument is out of bounds');
     if (n + r > e.length) throw RangeError('Index out of range');
 }
-function N(e, t, n, r, i, a) {
+function b(e, t, n, r, i, a) {
     if (n + r > e.length || n < 0) throw RangeError('Index out of range');
 }
-function R(e, t, n, r, a) {
-    return (t = +t), (n >>>= 0), !a && N(e, t, n, 4, 3.4028234663852886e38, -3.4028234663852886e38), i.write(e, t, n, r, 23, 4), n + 4;
+function y(e, t, n, r, a) {
+    return (t = +t), (n >>>= 0), !a && b(e, t, n, 4, 3.4028234663852886e38, -3.4028234663852886e38), i.write(e, t, n, r, 23, 4), n + 4;
 }
-function O(e, t, n, r, a) {
-    return (t = +t), (n >>>= 0), !a && N(e, t, n, 8, 1.7976931348623157e308, -1.7976931348623157e308), i.write(e, t, n, r, 52, 8), n + 8;
+function A(e, t, n, r, a) {
+    return (t = +t), (n >>>= 0), !a && b(e, t, n, 8, 1.7976931348623157e308, -1.7976931348623157e308), i.write(e, t, n, r, 52, 8), n + 8;
 }
 (o.prototype.slice = function (e, t) {
     var n = this.length;
@@ -508,75 +508,75 @@ function O(e, t, n, r, a) {
     return Object.setPrototypeOf(r, o.prototype), r;
 }),
     (o.prototype.readUIntLE = function (e, t, n) {
-        (e >>>= 0), (t >>>= 0), !n && g(e, t, this.length);
+        (e >>>= 0), (t >>>= 0), !n && S(e, t, this.length);
         for (var r = this[e], i = 1, a = 0; ++a < t && (i *= 256); ) r += this[e + a] * i;
         return r;
     }),
     (o.prototype.readUIntBE = function (e, t, n) {
-        (e >>>= 0), (t >>>= 0), !n && g(e, t, this.length);
+        (e >>>= 0), (t >>>= 0), !n && S(e, t, this.length);
         for (var r = this[e + --t], i = 1; t > 0 && (i *= 256); ) r += this[e + --t] * i;
         return r;
     }),
     (o.prototype.readUInt8 = function (e, t) {
-        return (e >>>= 0), !t && g(e, 1, this.length), this[e];
+        return (e >>>= 0), !t && S(e, 1, this.length), this[e];
     }),
     (o.prototype.readUInt16LE = function (e, t) {
-        return (e >>>= 0), !t && g(e, 2, this.length), this[e] | (this[e + 1] << 8);
+        return (e >>>= 0), !t && S(e, 2, this.length), this[e] | (this[e + 1] << 8);
     }),
     (o.prototype.readUInt16BE = function (e, t) {
-        return (e >>>= 0), !t && g(e, 2, this.length), (this[e] << 8) | this[e + 1];
+        return (e >>>= 0), !t && S(e, 2, this.length), (this[e] << 8) | this[e + 1];
     }),
     (o.prototype.readUInt32LE = function (e, t) {
-        return (e >>>= 0), !t && g(e, 4, this.length), (this[e] | (this[e + 1] << 8) | (this[e + 2] << 16)) + 16777216 * this[e + 3];
+        return (e >>>= 0), !t && S(e, 4, this.length), (this[e] | (this[e + 1] << 8) | (this[e + 2] << 16)) + 16777216 * this[e + 3];
     }),
     (o.prototype.readUInt32BE = function (e, t) {
-        return (e >>>= 0), !t && g(e, 4, this.length), 16777216 * this[e] + ((this[e + 1] << 16) | (this[e + 2] << 8) | this[e + 3]);
+        return (e >>>= 0), !t && S(e, 4, this.length), 16777216 * this[e] + ((this[e + 1] << 16) | (this[e + 2] << 8) | this[e + 3]);
     }),
     (o.prototype.readIntLE = function (e, t, n) {
-        (e >>>= 0), (t >>>= 0), !n && g(e, t, this.length);
+        (e >>>= 0), (t >>>= 0), !n && S(e, t, this.length);
         for (var r = this[e], i = 1, a = 0; ++a < t && (i *= 256); ) r += this[e + a] * i;
         return r >= (i *= 128) && (r -= Math.pow(2, 8 * t)), r;
     }),
     (o.prototype.readIntBE = function (e, t, n) {
-        (e >>>= 0), (t >>>= 0), !n && g(e, t, this.length);
+        (e >>>= 0), (t >>>= 0), !n && S(e, t, this.length);
         for (var r = t, i = 1, a = this[e + --r]; r > 0 && (i *= 256); ) a += this[e + --r] * i;
         return a >= (i *= 128) && (a -= Math.pow(2, 8 * t)), a;
     }),
     (o.prototype.readInt8 = function (e, t) {
-        return ((e >>>= 0), !t && g(e, 1, this.length), 128 & this[e]) ? -((255 - this[e] + 1) * 1) : this[e];
+        return ((e >>>= 0), !t && S(e, 1, this.length), 128 & this[e]) ? -((255 - this[e] + 1) * 1) : this[e];
     }),
     (o.prototype.readInt16LE = function (e, t) {
-        (e >>>= 0), !t && g(e, 2, this.length);
+        (e >>>= 0), !t && S(e, 2, this.length);
         var n = this[e] | (this[e + 1] << 8);
         return 32768 & n ? 4294901760 | n : n;
     }),
     (o.prototype.readInt16BE = function (e, t) {
-        (e >>>= 0), !t && g(e, 2, this.length);
+        (e >>>= 0), !t && S(e, 2, this.length);
         var n = this[e + 1] | (this[e] << 8);
         return 32768 & n ? 4294901760 | n : n;
     }),
     (o.prototype.readInt32LE = function (e, t) {
-        return (e >>>= 0), !t && g(e, 4, this.length), this[e] | (this[e + 1] << 8) | (this[e + 2] << 16) | (this[e + 3] << 24);
+        return (e >>>= 0), !t && S(e, 4, this.length), this[e] | (this[e + 1] << 8) | (this[e + 2] << 16) | (this[e + 3] << 24);
     }),
     (o.prototype.readInt32BE = function (e, t) {
-        return (e >>>= 0), !t && g(e, 4, this.length), (this[e] << 24) | (this[e + 1] << 16) | (this[e + 2] << 8) | this[e + 3];
+        return (e >>>= 0), !t && S(e, 4, this.length), (this[e] << 24) | (this[e + 1] << 16) | (this[e + 2] << 8) | this[e + 3];
     }),
     (o.prototype.readFloatLE = function (e, t) {
-        return (e >>>= 0), !t && g(e, 4, this.length), i.read(this, e, !0, 23, 4);
+        return (e >>>= 0), !t && S(e, 4, this.length), i.read(this, e, !0, 23, 4);
     }),
     (o.prototype.readFloatBE = function (e, t) {
-        return (e >>>= 0), !t && g(e, 4, this.length), i.read(this, e, !1, 23, 4);
+        return (e >>>= 0), !t && S(e, 4, this.length), i.read(this, e, !1, 23, 4);
     }),
     (o.prototype.readDoubleLE = function (e, t) {
-        return (e >>>= 0), !t && g(e, 8, this.length), i.read(this, e, !0, 52, 8);
+        return (e >>>= 0), !t && S(e, 8, this.length), i.read(this, e, !0, 52, 8);
     }),
     (o.prototype.readDoubleBE = function (e, t) {
-        return (e >>>= 0), !t && g(e, 8, this.length), i.read(this, e, !1, 52, 8);
+        return (e >>>= 0), !t && S(e, 8, this.length), i.read(this, e, !1, 52, 8);
     }),
     (o.prototype.writeUIntLE = function (e, t, n, r) {
         if (((e = +e), (t >>>= 0), (n >>>= 0), !r)) {
             var i = Math.pow(2, 8 * n) - 1;
-            A(this, e, t, n, i, 0);
+            T(this, e, t, n, i, 0);
         }
         var a = 1,
             s = 0;
@@ -586,7 +586,7 @@ function O(e, t, n, r, a) {
     (o.prototype.writeUIntBE = function (e, t, n, r) {
         if (((e = +e), (t >>>= 0), (n >>>= 0), !r)) {
             var i = Math.pow(2, 8 * n) - 1;
-            A(this, e, t, n, i, 0);
+            T(this, e, t, n, i, 0);
         }
         var a = n - 1,
             s = 1;
@@ -594,24 +594,24 @@ function O(e, t, n, r, a) {
         return t + n;
     }),
     (o.prototype.writeUInt8 = function (e, t, n) {
-        return (e = +e), (t >>>= 0), !n && A(this, e, t, 1, 255, 0), (this[t] = 255 & e), t + 1;
+        return (e = +e), (t >>>= 0), !n && T(this, e, t, 1, 255, 0), (this[t] = 255 & e), t + 1;
     }),
     (o.prototype.writeUInt16LE = function (e, t, n) {
-        return (e = +e), (t >>>= 0), !n && A(this, e, t, 2, 65535, 0), (this[t] = 255 & e), (this[t + 1] = e >>> 8), t + 2;
+        return (e = +e), (t >>>= 0), !n && T(this, e, t, 2, 65535, 0), (this[t] = 255 & e), (this[t + 1] = e >>> 8), t + 2;
     }),
     (o.prototype.writeUInt16BE = function (e, t, n) {
-        return (e = +e), (t >>>= 0), !n && A(this, e, t, 2, 65535, 0), (this[t] = e >>> 8), (this[t + 1] = 255 & e), t + 2;
+        return (e = +e), (t >>>= 0), !n && T(this, e, t, 2, 65535, 0), (this[t] = e >>> 8), (this[t + 1] = 255 & e), t + 2;
     }),
     (o.prototype.writeUInt32LE = function (e, t, n) {
-        return (e = +e), (t >>>= 0), !n && A(this, e, t, 4, 4294967295, 0), (this[t + 3] = e >>> 24), (this[t + 2] = e >>> 16), (this[t + 1] = e >>> 8), (this[t] = 255 & e), t + 4;
+        return (e = +e), (t >>>= 0), !n && T(this, e, t, 4, 4294967295, 0), (this[t + 3] = e >>> 24), (this[t + 2] = e >>> 16), (this[t + 1] = e >>> 8), (this[t] = 255 & e), t + 4;
     }),
     (o.prototype.writeUInt32BE = function (e, t, n) {
-        return (e = +e), (t >>>= 0), !n && A(this, e, t, 4, 4294967295, 0), (this[t] = e >>> 24), (this[t + 1] = e >>> 16), (this[t + 2] = e >>> 8), (this[t + 3] = 255 & e), t + 4;
+        return (e = +e), (t >>>= 0), !n && T(this, e, t, 4, 4294967295, 0), (this[t] = e >>> 24), (this[t + 1] = e >>> 16), (this[t + 2] = e >>> 8), (this[t + 3] = 255 & e), t + 4;
     }),
     (o.prototype.writeIntLE = function (e, t, n, r) {
         if (((e = +e), (t >>>= 0), !r)) {
             var i = Math.pow(2, 8 * n - 1);
-            A(this, e, t, n, i - 1, -i);
+            T(this, e, t, n, i - 1, -i);
         }
         var a = 0,
             s = 1,
@@ -622,7 +622,7 @@ function O(e, t, n, r, a) {
     (o.prototype.writeIntBE = function (e, t, n, r) {
         if (((e = +e), (t >>>= 0), !r)) {
             var i = Math.pow(2, 8 * n - 1);
-            A(this, e, t, n, i - 1, -i);
+            T(this, e, t, n, i - 1, -i);
         }
         var a = n - 1,
             s = 1,
@@ -631,31 +631,31 @@ function O(e, t, n, r, a) {
         return t + n;
     }),
     (o.prototype.writeInt8 = function (e, t, n) {
-        return (e = +e), (t >>>= 0), !n && A(this, e, t, 1, 127, -128), e < 0 && (e = 255 + e + 1), (this[t] = 255 & e), t + 1;
+        return (e = +e), (t >>>= 0), !n && T(this, e, t, 1, 127, -128), e < 0 && (e = 255 + e + 1), (this[t] = 255 & e), t + 1;
     }),
     (o.prototype.writeInt16LE = function (e, t, n) {
-        return (e = +e), (t >>>= 0), !n && A(this, e, t, 2, 32767, -32768), (this[t] = 255 & e), (this[t + 1] = e >>> 8), t + 2;
+        return (e = +e), (t >>>= 0), !n && T(this, e, t, 2, 32767, -32768), (this[t] = 255 & e), (this[t + 1] = e >>> 8), t + 2;
     }),
     (o.prototype.writeInt16BE = function (e, t, n) {
-        return (e = +e), (t >>>= 0), !n && A(this, e, t, 2, 32767, -32768), (this[t] = e >>> 8), (this[t + 1] = 255 & e), t + 2;
+        return (e = +e), (t >>>= 0), !n && T(this, e, t, 2, 32767, -32768), (this[t] = e >>> 8), (this[t + 1] = 255 & e), t + 2;
     }),
     (o.prototype.writeInt32LE = function (e, t, n) {
-        return (e = +e), (t >>>= 0), !n && A(this, e, t, 4, 2147483647, -2147483648), (this[t] = 255 & e), (this[t + 1] = e >>> 8), (this[t + 2] = e >>> 16), (this[t + 3] = e >>> 24), t + 4;
+        return (e = +e), (t >>>= 0), !n && T(this, e, t, 4, 2147483647, -2147483648), (this[t] = 255 & e), (this[t + 1] = e >>> 8), (this[t + 2] = e >>> 16), (this[t + 3] = e >>> 24), t + 4;
     }),
     (o.prototype.writeInt32BE = function (e, t, n) {
-        return (e = +e), (t >>>= 0), !n && A(this, e, t, 4, 2147483647, -2147483648), e < 0 && (e = 4294967295 + e + 1), (this[t] = e >>> 24), (this[t + 1] = e >>> 16), (this[t + 2] = e >>> 8), (this[t + 3] = 255 & e), t + 4;
+        return (e = +e), (t >>>= 0), !n && T(this, e, t, 4, 2147483647, -2147483648), e < 0 && (e = 4294967295 + e + 1), (this[t] = e >>> 24), (this[t + 1] = e >>> 16), (this[t + 2] = e >>> 8), (this[t + 3] = 255 & e), t + 4;
     }),
     (o.prototype.writeFloatLE = function (e, t, n) {
-        return R(this, e, t, !0, n);
+        return y(this, e, t, !0, n);
     }),
     (o.prototype.writeFloatBE = function (e, t, n) {
-        return R(this, e, t, !1, n);
+        return y(this, e, t, !1, n);
     }),
     (o.prototype.writeDoubleLE = function (e, t, n) {
-        return O(this, e, t, !0, n);
+        return A(this, e, t, !0, n);
     }),
     (o.prototype.writeDoubleBE = function (e, t, n) {
-        return O(this, e, t, !1, n);
+        return A(this, e, t, !1, n);
     }),
     (o.prototype.copy = function (e, t, n, r) {
         if (!o.isBuffer(e)) throw TypeError('argument should be a Buffer');
@@ -691,7 +691,7 @@ function O(e, t, n, r, a) {
         }
         return this;
     });
-var v = /[^+/0-9A-Za-z-_]/g;
+var N = /[^+/0-9A-Za-z-_]/g;
 function C(e, t) {
     t = t || 1 / 0;
     for (var n, r = e.length, i = null, a = [], s = 0; s < r; ++s) {
@@ -730,30 +730,30 @@ function C(e, t) {
     }
     return a;
 }
-function L(e) {
+function R(e) {
     for (var t = [], n = 0; n < e.length; ++n) t.push(255 & e.charCodeAt(n));
     return t;
 }
-function D(e) {
+function O(e) {
     return r.toByteArray(
         (function (e) {
-            if ((e = (e = e.split('=')[0]).trim().replace(v, '')).length < 2) return '';
+            if ((e = (e = e.split('=')[0]).trim().replace(N, '')).length < 2) return '';
             for (; e.length % 4 != 0; ) e += '=';
             return e;
         })(e)
     );
 }
-function y(e, t, n, r) {
+function D(e, t, n, r) {
     for (var i = 0; i < r && !(i + n >= t.length) && !(i >= e.length); ++i) t[i + n] = e[i];
     return i;
 }
-function b(e, t) {
+function L(e, t) {
     return e instanceof t || (null != e && null != e.constructor && null != e.constructor.name && e.constructor.name === t.name);
 }
-function M(e) {
+function x(e) {
     return e != e;
 }
-var P = (function () {
+var w = (function () {
     for (var e = '0123456789abcdef', t = Array(256), n = 0; n < 16; ++n) {
         for (var r = 16 * n, i = 0; i < 16; ++i) t[r + i] = e[n] + e[i];
     }

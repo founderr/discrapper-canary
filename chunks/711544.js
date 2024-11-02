@@ -34,18 +34,18 @@ t.Z = {
             u = (0, i.Z)(t, { elementContext: 'reference' }),
             c = (0, i.Z)(t, { altBoundary: !0 }),
             d = a(u, r),
-            _ = a(c, o, l),
-            E = s(d),
-            f = s(_);
+            f = a(c, o, l),
+            _ = s(d),
+            h = s(f);
         (t.modifiersData[n] = {
             referenceClippingOffsets: d,
-            popperEscapeOffsets: _,
-            isReferenceHidden: E,
-            hasPopperEscaped: f
+            popperEscapeOffsets: f,
+            isReferenceHidden: _,
+            hasPopperEscaped: h
         }),
             (t.attributes.popper = Object.assign({}, t.attributes.popper, {
-                'data-popper-reference-hidden': E,
-                'data-popper-escaped': f
+                'data-popper-reference-hidden': _,
+                'data-popper-escaped': h
             }));
     }
 };

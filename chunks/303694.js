@@ -7,18 +7,18 @@ n.d(t, {
     }
 });
 var r = n(430824),
-    i = n(689938);
+    i = n(388032);
 let a = (e) => {
         switch (e) {
             case 'home':
             case 'guide':
-                return i.Z.Messages.SERVER_GUIDE;
+                return i.intl.string(i.t.VbpLyc);
             case 'browse':
-                return i.Z.Messages.CHANNEL_BROWSER_TITLE;
+                return i.intl.string(i.t.et6wam);
             case 'customize':
-                return i.Z.Messages.CHANNELS_AND_ROLES;
+                return i.intl.string(i.t.h9mGOD);
             case 'linked-roles':
-                return i.Z.Messages.CONNECTIONS_ROLES_CHANNEL_NAME;
+                return i.intl.string(i.t.ghtnsr);
         }
         return null;
     },

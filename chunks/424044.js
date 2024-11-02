@@ -1,84 +1,84 @@
 n(47120);
-var s = n(200651),
+var i = n(200651),
     r = n(192379),
-    i = n(442837),
+    s = n(442837),
     a = n(481060),
     l = n(893776),
     o = n(232567),
     c = n(129293),
     u = n(388905),
     d = n(353926),
-    _ = n(185625),
-    h = n(551549),
-    E = n(108427),
-    g = n(314897),
+    h = n(185625),
+    g = n(551549),
+    m = n(108427),
+    f = n(314897),
     p = n(981631),
-    m = n(689938),
-    I = n(113207);
-i.ZP.initialize();
+    _ = n(388032),
+    x = n(113207);
+s.ZP.initialize();
 t.Z = (e) => {
     let { location: t } = e,
-        n = (0, i.e7)([g.default], () => g.default.isAuthenticated()),
-        f = (0, i.e7)([d.Z], () => d.Z.hasLoadedExperiments),
-        N = (0, h.oK)('RSL - Landing Page'),
-        [T, A] = r.useState(!1),
-        [x, C] = r.useState(m.Z.Messages.AUTHORIZING),
-        [R, S] = r.useState(!0),
-        O = (e) => {
+        n = (0, s.e7)([f.default], () => f.default.isAuthenticated()),
+        E = (0, s.e7)([d.Z], () => d.Z.hasLoadedExperiments),
+        v = (0, g.oK)('RSL - Landing Page'),
+        [I, b] = r.useState(!1),
+        [N, C] = r.useState(_.intl.string(_.t['9exy+f'])),
+        [S, T] = r.useState(!0),
+        A = (e) => {
             switch (e) {
                 case p.evJ.INVALID_FORM_BODY:
                 case p.evJ.DSA_RSL_REPORT_NOT_FOUND:
-                    C(m.Z.Messages.REPORT_SECOND_LOOK_NOT_FOUND_ERROR);
+                    C(_.intl.string(_.t.bzXDfX));
                     break;
                 case p.evJ.DSA_RSL_ALREADY_REQUESTED:
-                    C(m.Z.Messages.REPORT_SECOND_LOOK_ALREADY_REQUESTED_ERROR);
+                    C(_.intl.string(_.t.rV00ws));
                     break;
                 case p.evJ.DSA_RSL_LIMITED_TIME:
-                    C(m.Z.Messages.REPORT_SECOND_LOOK_LIMITED_TIME_ERROR);
+                    C(_.intl.string(_.t['0dI29v']));
                     break;
                 case p.evJ.DSA_RSL_REPORT_INELIGIBLE:
-                    C(m.Z.Messages.REPORT_SECOND_LOOK_INELIGIBLE_ERROR);
+                    C(_.intl.string(_.t['RGa/GR']));
                     break;
                 default:
-                    C(m.Z.Messages.REPORT_SECOND_LOOK_UNKNOWN_ERROR);
+                    C(_.intl.string(_.t['0QLzfn']));
             }
         };
     return (
         r.useEffect(() => {
             n
-                ? (S(!0),
+                ? (T(!0),
                   o
                       .k({ withAnalyticsToken: !0 })
-                      .then(() => S(!1))
-                      .catch(() => S(!1)))
-                : S(!1);
+                      .then(() => T(!1))
+                      .catch(() => T(!1)))
+                : T(!1);
         }, [n]),
         r.useEffect(() => {
-            !f && !N && l.Z.getExperiments();
-        }, [f, N]),
+            !E && !v && l.Z.getExperiments();
+        }, [E, v]),
         r.useEffect(() => {
             let e = async (e) => {
                 var t, n;
                 try {
-                    let n = null != e ? await (0, _.hs)(e) : void 0;
-                    null != n ? C(m.Z.Messages.REPORT_SECOND_LOOK_SUCCESS_TITLE) : O(null === (t = n.body) || void 0 === t ? void 0 : t.code);
+                    let n = null != e ? await (0, h.hs)(e) : void 0;
+                    null != n ? C(_.intl.string(_.t.e6mZMj)) : A(null === (t = n.body) || void 0 === t ? void 0 : t.code);
                 } catch (e) {
-                    O(null === (n = e.body) || void 0 === n ? void 0 : n.code);
+                    A(null === (n = e.body) || void 0 === n ? void 0 : n.code);
                 } finally {
-                    A(!1);
+                    b(!1);
                 }
             };
-            A(!0), e((0, c.Z)(t)), (0, E.e)('report_second_look');
+            b(!0), e((0, c.Z)(t)), (0, m.e)('report_second_look');
         }, [t]),
-        N &&
-            !R &&
-            (0, s.jsxs)(u.ZP, {
+        v &&
+            !S &&
+            (0, i.jsxs)(u.ZP, {
                 children: [
-                    (0, s.jsx)(u.Dx, {
-                        className: I.marginBottom8,
-                        children: x
+                    (0, i.jsx)(u.Dx, {
+                        className: x.marginBottom8,
+                        children: N
                     }),
-                    T && (0, s.jsx)(a.Spinner, {})
+                    I && (0, i.jsx)(a.Spinner, {})
                 ]
             })
     );

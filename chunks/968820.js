@@ -1,41 +1,41 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return m;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(481060),
-    i = n(791382),
-    r = n(937615),
-    l = n(217597),
+var r = n(481060),
+    l = n(791382),
+    s = n(937615),
+    a = n(217597),
     o = n(685389),
     c = n(981631),
-    d = n(689938),
+    d = n(388032),
     u = n(967790);
-function _(e) {
-    let { children: t, revenue: n, revenueTrend: _, summaryMetricLabel: I, summaryMetricValue: E, summaryMetricTrend: T, summaryMetricTrendIsPercent: m } = e;
-    return (0, s.jsx)(a.FormSection, {
-        title: d.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_HEADER,
-        children: (0, s.jsxs)('div', {
+function m(e) {
+    let { children: t, revenue: n, revenueTrend: m, summaryMetricLabel: h, summaryMetricValue: g, summaryMetricTrend: x, summaryMetricTrendIsPercent: p } = e;
+    return (0, i.jsx)(r.FormSection, {
+        title: d.intl.string(d.t.ofmOzc),
+        children: (0, i.jsxs)('div', {
             className: u.paymentInfoGroup,
             children: [
-                (0, s.jsxs)(o.H, {
+                (0, i.jsxs)(o.H, {
                     children: [
-                        (0, s.jsx)(l.Z, {
-                            label: d.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_METRIC_REVENUE,
-                            value: (0, r.T4)(null != n ? n : 0, c.pKx.USD),
-                            additionalContent: (0, s.jsx)(i.H, {
-                                value: _,
+                        (0, i.jsx)(a.Z, {
+                            label: d.intl.string(d.t.iY1jW1),
+                            value: (0, s.T4)(null != n ? n : 0, c.pKx.USD),
+                            additionalContent: (0, i.jsx)(l.H, {
+                                value: m,
                                 isPercent: !0
                             })
                         }),
-                        (0, s.jsx)(l.Z, {
-                            label: I,
-                            value: E,
-                            additionalContent: (0, s.jsx)(i.H, {
-                                value: T,
-                                isPercent: m
+                        (0, i.jsx)(a.Z, {
+                            label: h,
+                            value: g,
+                            additionalContent: (0, i.jsx)(l.H, {
+                                value: x,
+                                isPercent: p
                             })
                         })
                     ]

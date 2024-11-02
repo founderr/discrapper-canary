@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-class _ extends r.Z {
+class f extends r.Z {
     _initialize() {
         this.subscription = l.Z.subscribe(this.handleExperimentUpdated);
     }
@@ -50,4 +50,4 @@ class _ extends r.Z {
             });
     }
 }
-t.Z = new _();
+t.Z = new f();

@@ -3,64 +3,64 @@ n.d(t, {
         return p;
     },
     u: function () {
-        return g;
+        return f;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
 var r = n(120356),
-    i = n.n(r),
+    s = n.n(r),
     a = n(692547),
     l = n(481060),
     o = n(388905),
     c = n(600164),
     u = n(981631),
-    d = n(689938),
-    _ = n(684190),
-    h = n(739017),
-    E = n(113207);
-function g(e) {
+    d = n(388032),
+    h = n(684190),
+    g = n(739017),
+    m = n(113207);
+function f(e) {
     let { text: t, buttonCta: r, onClick: u } = e;
-    return (0, s.jsxs)(s.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, s.jsx)(o.Ee, { src: n(689411) }),
-            (0, s.jsx)(o.Dx, {
-                className: i()(E.marginTop20, E.marginBottom8, h.flexCenter),
-                children: d.Z.Messages.DISCORD_DESC_SHORT
+            (0, i.jsx)(o.Ee, { src: n(689411) }),
+            (0, i.jsx)(o.Dx, {
+                className: s()(m.marginTop20, m.marginBottom8, g.flexCenter),
+                children: d.intl.string(d.t.eL5z0t)
             }),
-            (0, s.jsx)(o.DK, {
-                className: E.marginBottom40,
-                children: d.Z.Messages.DISCORD_DESC_LONG
+            (0, i.jsx)(o.DK, {
+                className: m.marginBottom40,
+                children: d.intl.string(d.t['poAv6+'])
             }),
-            (0, s.jsxs)(l.Card, {
-                className: _.card,
+            (0, i.jsxs)(l.Card, {
+                className: h.card,
                 type: l.Card.Types.CUSTOM,
                 children: [
-                    (0, s.jsx)('img', {
+                    (0, i.jsx)('img', {
                         alt: '',
-                        className: _.cardAccentLeft,
+                        className: h.cardAccentLeft,
                         src: n(70519)
                     }),
-                    (0, s.jsx)('img', {
+                    (0, i.jsx)('img', {
                         alt: '',
-                        className: _.cardAccentRight,
+                        className: h.cardAccentRight,
                         src: n(806848)
                     }),
-                    (0, s.jsxs)(c.Z, {
-                        className: _.cardContents,
+                    (0, i.jsxs)(c.Z, {
+                        className: h.cardContents,
                         direction: c.Z.Direction.VERTICAL,
                         align: c.Z.Align.STRETCH,
                         grow: 0,
                         children: [
-                            (0, s.jsx)(l.Text, {
+                            (0, i.jsx)(l.Text, {
                                 tag: 'strong',
-                                className: _.buttonTitle,
+                                className: h.buttonTitle,
                                 variant: 'text-md/normal',
                                 style: { color: a.Z.unsafe_rawColors.PRIMARY_300.css },
                                 children: t
                             }),
-                            (0, s.jsx)(o.zx, {
-                                className: _.button,
+                            (0, i.jsx)(o.zx, {
+                                className: h.button,
                                 onClick: u,
                                 children: r
                             })
@@ -72,13 +72,13 @@ function g(e) {
     });
 }
 function p(e) {
-    let { text: t, buttonCta: n, theme: r = u.BRd.DARK, onClick: i } = e;
-    return (0, s.jsx)(o.ZP, {
+    let { text: t, buttonCta: n, theme: r = u.BRd.DARK, onClick: s } = e;
+    return (0, i.jsx)(o.ZP, {
         theme: r,
-        children: (0, s.jsx)(g, {
+        children: (0, i.jsx)(f, {
             text: t,
             buttonCta: n,
-            onClick: i
+            onClick: s
         })
     });
 }

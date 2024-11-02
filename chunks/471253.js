@@ -1,71 +1,71 @@
-t.d(e, {
+e.d(t, {
     DT: function () {
-        return p;
+        return N;
     },
     Ef: function () {
-        return R;
-    },
-    HO: function () {
-        return C;
-    },
-    NZ: function () {
-        return m;
-    },
-    Pq: function () {
-        return g;
-    },
-    Q1: function () {
-        return A;
-    },
-    RK: function () {
-        return S;
-    },
-    _0: function () {
-        return h;
-    },
-    hz: function () {
         return O;
     },
+    HO: function () {
+        return y;
+    },
+    NZ: function () {
+        return k;
+    },
+    Pq: function () {
+        return b;
+    },
+    Q1: function () {
+        return g;
+    },
+    RK: function () {
+        return I;
+    },
+    _0: function () {
+        return A;
+    },
+    hz: function () {
+        return S;
+    },
     yi: function () {
-        return M;
+        return m;
     }
 });
-var i = t(512722),
-    s = t.n(i),
-    l = t(149765),
-    a = t(544891),
-    r = t(493683);
-t(749210);
-var c = t(911969),
-    o = t(367907),
-    u = t(944486),
-    d = t(979651),
-    _ = t(700785),
-    E = t(922482),
-    I = t(192079),
-    T = t(706058),
-    N = t(590415),
-    f = t(981631);
-function A(n, e) {
-    let t = n.getGuildId();
+var i = e(512722),
+    l = e.n(i),
+    r = e(149765),
+    c = e(544891),
+    o = e(493683);
+e(749210);
+var a = e(911969),
+    s = e(367907),
+    u = e(944486),
+    d = e(979651),
+    _ = e(700785),
+    f = e(922482),
+    h = e(192079),
+    T = e(706058),
+    p = e(590415),
+    E = e(981631);
+function g(n, t) {
+    let e = n.getGuildId();
     return (
-        s()(null != t, 'This channel cannot be guildless.'),
-        e && (0, o.yw)(f.rMx.REQUEST_TO_SPEAK_INITIATED, { ...(0, I.s$)(n) }),
-        a.tn.patch({
-            url: f.ANM.UPDATE_VOICE_STATE(t),
+        l()(null != e, 'This channel cannot be guildless.'),
+        t && (0, s.yw)(E.rMx.REQUEST_TO_SPEAK_INITIATED, { ...(0, h.s$)(n) }),
+        c.tn.patch({
+            url: E.ANM.UPDATE_VOICE_STATE(e),
             body: {
-                request_to_speak_timestamp: e ? new Date().toISOString() : null,
+                request_to_speak_timestamp: t ? new Date().toISOString() : null,
                 channel_id: n.id
             }
         })
     );
 }
-function h(n, e) {
-    let t = n.getGuildId();
+function A(n, t) {
+    let e = n.getGuildId();
     return (
-        s()(null != t, 'This channel cannot be guildless.'),
-        a.tn.patch({
-            url: f.ANM.UPDATE_VOICE_STATE(t, e),
+        l()(null != e, 'This channel cannot be guildless.'),
+        c.tn.patch({
+            url: E.ANM.UPDATE_VOICE_STATE(e, t),
             body: {
                 suppress: !1,
                 request_to_speak_timestamp: new Date().toISOString(),
@@ -74,30 +74,30 @@ function h(n, e) {
         })
     );
 }
-function S(n, e) {
-    let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+function I(n, t) {
+    let e = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = null == n ? void 0 : n.getGuildId();
-    s()(null != i, 'This channel cannot be guildless.');
-    let l = d.Z.getVoiceStateForChannel(n.id);
+    l()(null != i, 'This channel cannot be guildless.');
+    let r = d.Z.getVoiceStateForChannel(n.id);
     return (
-        (0, N.gf)(l) === N.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && !e && (0, o.yw)(f.rMx.PROMOTED_TO_SPEAKER, { ...(0, I.s$)(n) }),
-        a.tn.patch({
-            url: f.ANM.UPDATE_VOICE_STATE(i),
+        (0, p.gf)(r) === p.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && !t && (0, s.yw)(E.rMx.PROMOTED_TO_SPEAKER, { ...(0, h.s$)(n) }),
+        c.tn.patch({
+            url: E.ANM.UPDATE_VOICE_STATE(i),
             body: {
-                suppress: e,
+                suppress: t,
                 request_to_speak_timestamp: null,
                 channel_id: n.id,
-                ...(t ? { silent: t } : {})
+                ...(e ? { silent: e } : {})
             }
         })
     );
 }
-function M(n) {
-    let e = null == n ? void 0 : n.getGuildId();
+function m(n) {
+    let t = null == n ? void 0 : n.getGuildId();
     return (
-        s()(null != e, 'This channel cannot be guildless.'),
-        a.tn.patch({
-            url: f.ANM.UPDATE_VOICE_STATE(e),
+        l()(null != t, 'This channel cannot be guildless.'),
+        c.tn.patch({
+            url: E.ANM.UPDATE_VOICE_STATE(t),
             body: {
                 suppress: !0,
                 channel_id: n.id,
@@ -107,58 +107,58 @@ function M(n) {
         })
     );
 }
-function p(n, e, t) {
+function N(n, t, e) {
     let i = n.getGuildId();
     return (
-        s()(null != i, 'This channel cannot be guildless.'),
-        a.tn.patch({
-            url: f.ANM.UPDATE_VOICE_STATE(i, e),
+        l()(null != i, 'This channel cannot be guildless.'),
+        c.tn.patch({
+            url: E.ANM.UPDATE_VOICE_STATE(i, t),
             body: {
-                suppress: t,
+                suppress: e,
                 channel_id: n.id
             }
         })
     );
 }
-function O(n, e) {
-    if (null == e || null == n) return;
-    let t = e.getGuildId();
+function S(n, t) {
+    if (null == t || null == n) return;
+    let e = t.getGuildId();
     return (
-        s()(null != t, 'This channel cannot be guildless.'),
-        p(e, n.id, !0),
-        a.tn.patch({
-            url: f.ANM.UPDATE_VOICE_STATE(t, n.id),
+        l()(null != e, 'This channel cannot be guildless.'),
+        N(t, n.id, !0),
+        c.tn.patch({
+            url: E.ANM.UPDATE_VOICE_STATE(e, n.id),
             body: {
                 suppress: !0,
-                channel_id: e.id,
+                channel_id: t.id,
                 self_video: !1,
                 self_stream: !1
             }
         })
     );
 }
-function g(n, e, t) {
+function b(n, t, e) {
     let i = n.getGuildId();
-    s()(null != i, 'Channel cannot be guildless');
-    let a = n.permissionOverwrites[i],
-        o = {
+    l()(null != i, 'Channel cannot be guildless');
+    let c = n.permissionOverwrites[i],
+        s = {
             id: i,
-            type: c.BN.ROLE,
+            type: a.BN.ROLE,
             allow: _.Hn,
             deny: _.Hn,
-            ...a
+            ...c
         };
-    t ? ((o.allow = l.IH(o.allow, e)), (o.deny = l.Od(o.deny, e))) : ((o.allow = l.Od(o.allow, e)), (o.deny = l.IH(o.deny, e))), r.Z.updatePermissionOverwrite(n.id, o);
+    e ? ((s.allow = r.IH(s.allow, t)), (s.deny = r.Od(s.deny, t))) : ((s.allow = r.Od(s.allow, t)), (s.deny = r.IH(s.deny, t))), o.Z.updatePermissionOverwrite(n.id, s);
 }
-async function C(n, e, t, i) {
-    if ('' === e) return;
-    u.Z.getVoiceChannelId() !== n.id && (0, E.TM)(n);
-    let s = await (0, T.me)(n.id, e, t, i);
-    return S(n, !1, !0), s;
+async function y(n, t, e, i) {
+    if ('' === t) return;
+    u.Z.getVoiceChannelId() !== n.id && (0, f.TM)(n);
+    let l = await (0, T.me)(n.id, t, e, i);
+    return I(n, !1, !0), l;
 }
-async function R(n, e, t) {
-    if ('' !== e) return await (0, T.Dk)(n.id, e, t);
+async function O(n, t, e) {
+    if ('' !== t) return await (0, T.Dk)(n.id, t, e);
 }
-async function m(n) {
+async function k(n) {
     await (0, T.Ix)(n.id);
 }

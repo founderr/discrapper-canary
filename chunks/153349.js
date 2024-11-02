@@ -1,138 +1,138 @@
 n.d(t, {
     Z: function () {
-        return y;
+        return k;
     }
 }),
     n(47120);
 var i,
-    s,
-    a = n(200651),
-    l = n(192379),
-    r = n(120356),
-    o = n.n(r),
+    l,
+    r = n(200651),
+    a = n(192379),
+    s = n(120356),
+    o = n.n(s),
     c = n(512722),
     u = n.n(c),
     d = n(442837),
     h = n(481060),
     m = n(239091),
     p = n(99690),
-    _ = n(58540),
-    f = n(665149),
-    E = n(484459),
-    g = n(347475),
-    C = n(271383),
-    I = n(496675),
-    T = n(158776),
-    x = n(471253),
-    S = n(431328),
-    v = n(62526),
-    N = n(590415),
-    A = n(614173),
-    Z = n(618896),
-    M = n(231338),
-    b = n(689938),
-    R = n(425205);
-let L = l.memo(function (e) {
+    f = n(58540),
+    g = n(665149),
+    C = n(484459),
+    x = n(347475),
+    v = n(271383),
+    _ = n(496675),
+    I = n(158776),
+    E = n(471253),
+    b = n(431328),
+    S = n(62526),
+    Z = n(590415),
+    T = n(614173),
+    N = n(618896),
+    j = n(231338),
+    A = n(388032),
+    y = n(425205);
+let P = a.memo(function (e) {
         let { toggleRequestToSpeakSidebar: t, chatOpen: n } = e,
-            i = (0, a.jsx)(f.ZP.Icon, {
+            i = (0, r.jsx)(g.ZP.Icon, {
                 icon: h.XSmallIcon,
-                tooltip: b.Z.Messages.CLOSE,
+                tooltip: A.intl.string(A.t.cpT0Cg),
                 onClick: t
             });
-        return (0, a.jsxs)(f.ZP, {
+        return (0, r.jsxs)(g.ZP, {
             toolbar: i,
-            className: o()(R.headerContainer, { [R.chatOpen]: n }),
+            className: o()(y.headerContainer, { [y.chatOpen]: n }),
             children: [
-                (0, a.jsx)(f.ZP.Icon, {
+                (0, r.jsx)(g.ZP.Icon, {
                     icon: h.HandRequestSpeakIcon,
                     disabled: !0,
-                    'aria-label': b.Z.Messages.REQUEST_TO_SPEAK_AREA_TITLE
+                    'aria-label': A.intl.string(A.t.TYZgzc)
                 }),
-                (0, a.jsx)(f.ZP.Title, { children: b.Z.Messages.REQUEST_TO_SPEAK_AREA_TITLE })
+                (0, r.jsx)(g.ZP.Title, { children: A.intl.string(A.t.TYZgzc) })
             ]
         });
     }),
-    P = l.memo(function (e) {
-        let { channel: t, participant: i, tempDisableOnInit: s = !1 } = e,
-            [r, c] = l.useState(s);
-        l.useEffect(() => {
-            if (!r) return;
+    M = a.memo(function (e) {
+        let { channel: t, participant: i, tempDisableOnInit: l = !1 } = e,
+            [s, c] = a.useState(l);
+        a.useEffect(() => {
+            if (!s) return;
             let e = setTimeout(() => c(!1), 1000);
             return () => clearTimeout(e);
         }, []);
-        let f = t.getGuildId();
-        u()(null != f, 'Channel cannot be guildless');
-        let { isMobile: I, status: S } = (0, d.cj)([T.Z], () => ({
-                isMobile: T.Z.isMobileOnline(i.user.id),
-                status: T.Z.getStatus(i.user.id, f)
+        let g = t.getGuildId();
+        u()(null != g, 'Channel cannot be guildless');
+        let { isMobile: _, status: b } = (0, d.cj)([I.Z], () => ({
+                isMobile: I.Z.isMobileOnline(i.user.id),
+                status: I.Z.getStatus(i.user.id, g)
             })),
-            A = (0, d.e7)([C.ZP], () => C.ZP.getMember(f, i.user.id)),
-            Z = l.useMemo(() => ({ [f]: [i.user.id] }), [f, i.user.id]);
-        (0, _.$)(Z);
-        let M = i.rtsState === N.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
-        function L() {
-            (0, x.DT)(t, i.user.id, !1);
-        }
+            T = (0, d.e7)([v.ZP], () => v.ZP.getMember(g, i.user.id)),
+            N = a.useMemo(() => ({ [g]: [i.user.id] }), [g, i.user.id]);
+        (0, f.$)(N);
+        let j = i.rtsState === Z.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
         function P() {
-            (0, x.DT)(t, i.user.id, !0);
+            (0, E.DT)(t, i.user.id, !1);
         }
-        let j = (e) => {
+        function M() {
+            (0, E.DT)(t, i.user.id, !0);
+        }
+        let R = (e) => {
             (0, m.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('13125'), n.e('91864')]).then(n.bind(n, 757387));
                 return (n) =>
-                    (0, a.jsx)(e, {
+                    (0, r.jsx)(e, {
                         ...n,
                         user: i.user,
-                        guildId: f,
+                        guildId: g,
                         channel: t,
                         showMediaItems: !0
                     });
             });
         };
-        return (0, a.jsxs)('div', {
-            className: R.participantRowContainer,
+        return (0, r.jsxs)('div', {
+            className: y.participantRowContainer,
             children: [
-                (0, a.jsx)(h.Popout, {
+                (0, r.jsx)(h.Popout, {
                     preload: () =>
-                        (0, E.Z)(i.user.id, i.user.getAvatarURL(t.guild_id, 80), {
+                        (0, C.Z)(i.user.id, i.user.getAvatarURL(t.guild_id, 80), {
                             guildId: t.guild_id,
                             channelId: t.id
                         }),
                     renderPopout: (e) =>
-                        (0, a.jsx)(g.Z, {
+                        (0, r.jsx)(x.Z, {
                             ...e,
                             userId: i.user.id,
-                            guildId: f,
+                            guildId: g,
                             channelId: t.id
                         }),
                     position: 'left',
                     spacing: 16,
                     children: (e) => {
                         var t;
-                        return (0, a.jsxs)(h.Clickable, {
-                            className: R.participantMemberContainer,
-                            onContextMenu: j,
+                        return (0, r.jsxs)(h.Clickable, {
+                            className: y.participantMemberContainer,
+                            onContextMenu: R,
                             ...e,
                             children: [
-                                (0, a.jsx)(p.Z, {
+                                (0, r.jsx)(p.Z, {
                                     size: h.AvatarSizes.SIZE_40,
-                                    className: R.participantAvatar,
+                                    className: y.participantAvatar,
                                     user: i.user,
-                                    isMobile: I,
-                                    status: S
+                                    isMobile: _,
+                                    status: b
                                 }),
-                                (0, a.jsxs)('div', {
-                                    className: R.participantTextContainer,
+                                (0, r.jsxs)('div', {
+                                    className: y.participantTextContainer,
                                     children: [
-                                        (0, a.jsx)(h.NameWithRole, {
+                                        (0, r.jsx)(h.NameWithRole, {
                                             name: i.userNick,
-                                            color: null !== (t = null == A ? void 0 : A.colorString) && void 0 !== t ? t : void 0,
-                                            className: R.participantName
+                                            color: null !== (t = null == T ? void 0 : T.colorString) && void 0 !== t ? t : void 0,
+                                            className: y.participantName
                                         }),
-                                        (0, a.jsx)(h.Text, {
+                                        (0, r.jsx)(h.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'header-secondary',
-                                            children: (0, v.$)(i)
+                                            children: (0, S.$)(i)
                                         })
                                     ]
                                 })
@@ -140,32 +140,32 @@ let L = l.memo(function (e) {
                         });
                     }
                 }),
-                (0, a.jsx)(h.Tooltip, {
-                    text: M ? b.Z.Messages.REQUEST_TO_SPEAK_INVITATION_SEND : b.Z.Messages.REQUEST_TO_SPEAK_ACCEPT,
+                (0, r.jsx)(h.Tooltip, {
+                    text: j ? A.intl.string(A.t.h9rsTU) : A.intl.string(A.t.f0T7hI),
                     children: (e) =>
-                        (0, a.jsx)(h.Button, {
+                        (0, r.jsx)(h.Button, {
                             ...e,
-                            innerClassName: R.buttonContainer,
+                            innerClassName: y.buttonContainer,
                             look: h.Button.Looks.BLANK,
                             size: h.Button.Sizes.NONE,
-                            onClick: L,
-                            disabled: M || r,
-                            children: (0, a.jsx)(h.MicrophoneArrowRightIcon, {
+                            onClick: P,
+                            disabled: j || s,
+                            children: (0, r.jsx)(h.MicrophoneArrowRightIcon, {
                                 size: 'xs',
                                 color: 'currentColor'
                             })
                         })
                 }),
-                (0, a.jsx)(h.Tooltip, {
-                    text: b.Z.Messages.REQUEST_TO_SPEAK_DECLINE,
+                (0, r.jsx)(h.Tooltip, {
+                    text: A.intl.string(A.t.moABMz),
                     children: (e) =>
-                        (0, a.jsx)(h.Button, {
+                        (0, r.jsx)(h.Button, {
                             ...e,
-                            innerClassName: o()(R.buttonContainer, R.buttonMargin),
+                            innerClassName: o()(y.buttonContainer, y.buttonMargin),
                             look: h.Button.Looks.BLANK,
                             size: h.Button.Sizes.NONE,
-                            onClick: P,
-                            children: (0, a.jsx)(h.XSmallIcon, {
+                            onClick: M,
+                            children: (0, r.jsx)(h.XSmallIcon, {
                                 size: 'xs',
                                 color: 'currentColor'
                             })
@@ -174,50 +174,50 @@ let L = l.memo(function (e) {
             ]
         });
     }),
-    j = l.memo(function (e) {
+    R = a.memo(function (e) {
         let { channel: t } = e,
-            [n, i] = (0, A.h)(t.id);
-        return (0, a.jsx)(h.FormSwitch, {
-            className: R.toggle,
+            [n, i] = (0, T.h)(t.id);
+        return (0, r.jsx)(h.FormSwitch, {
+            className: y.toggle,
             onChange: i,
             value: n,
-            children: b.Z.Messages.MODERATOR_ALLOW_EVERYONE_RAISE_HAND
+            children: A.intl.string(A.t.GYCh0d)
         });
     }),
-    O = l.memo(function () {
-        return (0, a.jsxs)('div', {
-            className: R.emptyStateContainer,
+    L = a.memo(function () {
+        return (0, r.jsxs)('div', {
+            className: y.emptyStateContainer,
             children: [
-                (0, a.jsx)(Z.Z, {}),
-                (0, a.jsx)(h.Text, {
-                    className: R.emptyStateTitle,
+                (0, r.jsx)(N.Z, {}),
+                (0, r.jsx)(h.Text, {
+                    className: y.emptyStateTitle,
                     variant: 'text-lg/semibold',
                     color: 'header-primary',
-                    children: b.Z.Messages.REQUEST_TO_SPEAK_EMPTY_LIST_TITLE
+                    children: A.intl.string(A.t['7R24mZ'])
                 }),
-                (0, a.jsx)(h.Text, {
-                    className: R.emptyStateBody,
+                (0, r.jsx)(h.Text, {
+                    className: y.emptyStateBody,
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
-                    children: b.Z.Messages.REQUEST_TO_SPEAK_EMPTY_LIST_BODY
+                    children: A.intl.string(A.t.Rpr2s7)
                 })
             ]
         });
     });
-function y(e) {
+function k(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, chatOpen: i } = e,
-        s = (0, S.Fd)(t.id),
-        l = [(0, d.e7)([I.Z], () => I.Z.can(M.Pl.MANAGE_CHANNELS, t) || I.Z.can(M.Pl.MANAGE_ROLES, t)) ? 1 : 0, Math.max(1, s.length)];
-    return (0, a.jsxs)('div', {
-        className: o()(R.container, { [R.chatOpen]: i }),
+        l = (0, b.Fd)(t.id),
+        a = [(0, d.e7)([_.Z], () => _.Z.can(j.Pl.MANAGE_CHANNELS, t) || _.Z.can(j.Pl.MANAGE_ROLES, t)) ? 1 : 0, Math.max(1, l.length)];
+    return (0, r.jsxs)('div', {
+        className: o()(y.container, { [y.chatOpen]: i }),
         children: [
-            (0, a.jsx)(L, {
+            (0, r.jsx)(P, {
                 toggleRequestToSpeakSidebar: n,
                 chatOpen: i
             }),
-            (0, a.jsx)(h.List, {
-                className: R.contentContainer,
-                sections: l,
+            (0, r.jsx)(h.List, {
+                className: y.contentContainer,
+                sections: a,
                 sectionHeight: function (e) {
                     if (1 === e) return 40;
                     return 0;
@@ -227,7 +227,7 @@ function y(e) {
                         case 0:
                             return 66;
                         case 1:
-                            if (0 === s.length) return 178;
+                            if (0 === l.length) return 178;
                             return 48;
                     }
                     return 0;
@@ -236,12 +236,12 @@ function y(e) {
                     let { section: n, row: i } = e;
                     switch (n) {
                         case 0:
-                            return (0, a.jsx)(j, { channel: t }, 'rts-toggle');
+                            return (0, r.jsx)(R, { channel: t }, 'rts-toggle');
                         case 1: {
-                            if (0 === s.length) return (0, a.jsx)(O, {}, 'participants-empty');
-                            let e = s[i];
-                            return (0, a.jsx)(
-                                P,
+                            if (0 === l.length) return (0, r.jsx)(L, {}, 'participants-empty');
+                            let e = l[i];
+                            return (0, r.jsx)(
+                                M,
                                 {
                                     channel: t,
                                     participant: e,
@@ -256,13 +256,13 @@ function y(e) {
                 renderSection: function (e) {
                     let { section: t } = e;
                     if (1 === t)
-                        return (0, a.jsx)(
+                        return (0, r.jsx)(
                             h.Text,
                             {
-                                className: R.listTitle,
+                                className: y.listTitle,
                                 variant: 'text-xs/bold',
                                 color: 'header-secondary',
-                                children: s.length > 0 ? b.Z.Messages.REQUEST_TO_SPEAK_LIST_TITLE.format({ numHands: s.length }) : b.Z.Messages.REQUEST_TO_SPEAK_AREA_TITLE
+                                children: l.length > 0 ? A.intl.formatToPlainString(A.t['5z7q5e'], { numHands: l.length }) : A.intl.string(A.t.TYZgzc)
                             },
                             'participants-section'
                         );
@@ -272,4 +272,4 @@ function y(e) {
         ]
     });
 }
-((s = i || (i = {}))[(s.TOGGLE_REQUEST_TO_SPEAK = 0)] = 'TOGGLE_REQUEST_TO_SPEAK'), (s[(s.PARTICIPANTS = 1)] = 'PARTICIPANTS');
+((l = i || (i = {}))[(l.TOGGLE_REQUEST_TO_SPEAK = 0)] = 'TOGGLE_REQUEST_TO_SPEAK'), (l[(l.PARTICIPANTS = 1)] = 'PARTICIPANTS');

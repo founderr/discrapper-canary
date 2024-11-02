@@ -1,9 +1,9 @@
 n(47120);
 var i = n(200651),
-    s = n(192379),
-    a = n(442837),
-    l = n(481060),
-    r = n(23536),
+    l = n(192379),
+    r = n(442837),
+    a = n(481060),
+    s = n(23536),
     o = n(40851),
     c = n(731290),
     u = n(306680),
@@ -11,10 +11,10 @@ var i = n(200651),
     h = n(585483),
     m = n(665149),
     p = n(981631),
-    _ = n(689938);
+    f = n(388032);
 t.Z = function (e) {
     let { channel: t } = e,
-        n = (0, a.e7)(
+        n = (0, r.e7)(
             [c.Z, d.default],
             () => {
                 let e = d.default.getCurrentUser();
@@ -22,51 +22,51 @@ t.Z = function (e) {
             },
             [t]
         ),
-        [f, E] = s.useState(!1),
-        g = (0, a.e7)([u.ZP], () => u.ZP.hasUnreadPins(t.id), [t]),
-        C = (0, o.Aq)(),
-        I = s.useCallback(() => {
-            !n && E((e) => !e);
+        [g, C] = l.useState(!1),
+        x = (0, r.e7)([u.ZP], () => u.ZP.hasUnreadPins(t.id), [t]),
+        v = (0, o.Aq)(),
+        _ = l.useCallback(() => {
+            !n && C((e) => !e);
         }, [n]);
-    function T(e) {
-        !(null == e ? void 0 : e.shiftKey) && C.dispatch(p.CkL.POPOUT_CLOSE);
+    function I(e) {
+        !(null == e ? void 0 : e.shiftKey) && v.dispatch(p.CkL.POPOUT_CLOSE);
     }
     return (
-        s.useEffect(
+        l.useEffect(
             () => (
-                h.S.subscribe(p.CkL.TOGGLE_CHANNEL_PINS, I),
+                h.S.subscribe(p.CkL.TOGGLE_CHANNEL_PINS, _),
                 () => {
-                    h.S.unsubscribe(p.CkL.TOGGLE_CHANNEL_PINS, I);
+                    h.S.unsubscribe(p.CkL.TOGGLE_CHANNEL_PINS, _);
                 }
             ),
-            [I]
+            [_]
         ),
-        (0, i.jsx)(l.Popout, {
-            shouldShow: f,
-            animation: l.Popout.Animation.NONE,
+        (0, i.jsx)(a.Popout, {
+            shouldShow: g,
+            animation: a.Popout.Animation.NONE,
             position: 'bottom',
             align: 'right',
             autoInvert: !1,
             ignoreModalClicks: !0,
-            onRequestClose: () => E(!1),
+            onRequestClose: () => C(!1),
             renderPopout: function (e) {
-                return (0, i.jsx)(r.Z, {
+                return (0, i.jsx)(s.Z, {
                     ...e,
-                    onJump: T,
+                    onJump: I,
                     channel: t
                 });
             },
             children: (e, t) => {
-                let { isShown: s } = t;
+                let { isShown: l } = t;
                 return (0, i.jsx)(m.JO, {
                     ...e,
-                    onClick: I,
-                    tooltip: s ? null : _.Z.Messages.PINNED_MESSAGES,
-                    icon: l.PinIcon,
-                    'aria-label': _.Z.Messages.PINNED_MESSAGES,
+                    onClick: _,
+                    tooltip: l ? null : f.intl.string(f.t['mp1N//']),
+                    icon: a.PinIcon,
+                    'aria-label': f.intl.string(f.t['mp1N//']),
                     disabled: n,
-                    showBadge: g,
-                    selected: s
+                    showBadge: x,
+                    selected: l
                 });
             }
         })

@@ -1,6 +1,6 @@
 n.d(t, {
     Dw: function () {
-        return _;
+        return f;
     },
     I: function () {
         return o;
@@ -18,7 +18,7 @@ n.d(t, {
 var r,
     i,
     a = n(814391),
-    s = n(689938);
+    s = n(388032);
 let o = {
         month: 'short',
         day: 'numeric',
@@ -35,22 +35,22 @@ let o = {
     };
 ((r = i || (i = {}))[(r.JOINED_AT = 0)] = 'JOINED_AT'), (r[(r.ACCOUNT_AGE = 1)] = 'ACCOUNT_AGE');
 let u = () => ({
-        seconds: s.Z.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS,
-        minutes: s.Z.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES,
-        hours: s.Z.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS,
-        days: s.Z.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS,
-        months: s.Z.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH,
-        years: s.Z.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_YEAR
+        seconds: s.t.FsBhl5,
+        minutes: s.t['4d1mgY'],
+        hours: s.t['2wkczM'],
+        days: s.t['ocdS+f'],
+        months: s.t['az14+v'],
+        years: s.t['5Gk1np']
     }),
     c = () => ({
-        hours: s.Z.Messages.MEMBERS_TABLE_ACCOUNT_AGE_TIMESTAMP_HOURS,
-        days: s.Z.Messages.MEMBERS_TABLE_ACCOUNT_AGE_TIMESTAMP_DAYS,
-        months: s.Z.Messages.MEMBERS_TABLE_ACCOUNT_AGE_TIMESTAMP_MORE_THAN_MONTH,
-        years: s.Z.Messages.MEMBERS_TABLE_ACCOUNT_AGE_TIMESTAMP_MORE_THAN_YEAR
+        hours: s.t.JZP2Rk,
+        days: s.t['3moSHR'],
+        months: s.t['0Ddwr6'],
+        years: s.t.cR7lcn
     }),
     d = (e, t) => {
         var n;
         let r = 0 === (n = t) ? u : 1 === n ? c : void 0;
         return (0, a.Z)(e, r, !1);
     },
-    _ = (e) => (null != e ? new Date(e) : new Date()).getTime();
+    f = (e) => (null != e ? new Date(e) : new Date()).getTime();

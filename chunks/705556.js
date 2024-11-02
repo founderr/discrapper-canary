@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return _;
     }
 });
 var r = n(200651);
@@ -12,53 +12,53 @@ var i = n(442837),
     l = n(430824),
     u = n(785717),
     c = n(475413),
-    d = n(689938),
-    _ = n(534934);
-function E(e) {
-    let { user: t, guildId: n, fullWidth: E, onClose: f } = e,
-        h = (0, i.e7)([o.default], () => o.default.getId() === t.id),
-        p = (0, i.e7)([l.Z], () => (null != n ? l.Z.getGuild(n) : null)),
-        I = (0, s.Z)({ guild: p }),
-        m = (0, s.Z)(),
-        { trackUserProfileAction: T } = (0, u.KZ)();
-    return h
-        ? null == p
+    d = n(388032),
+    f = n(534934);
+function _(e) {
+    let { user: t, guildId: n, fullWidth: _, onClose: h } = e,
+        p = (0, i.e7)([o.default], () => o.default.getId() === t.id),
+        m = (0, i.e7)([l.Z], () => (null != n ? l.Z.getGuild(n) : null)),
+        g = (0, s.Z)({ guild: m }),
+        E = (0, s.Z)(),
+        { trackUserProfileAction: v } = (0, u.KZ)();
+    return p
+        ? null == m
             ? (0, r.jsx)(c.tG, {
                   action: 'EDIT_PROFILE',
-                  text: d.Z.Messages.EDIT_PROFILE,
+                  text: d.intl.string(d.t.s5vZlZ),
                   icon: a.PencilIcon,
                   autoFocus: !0,
-                  fullWidth: E,
+                  fullWidth: _,
                   onClick: () => {
-                      null == f || f(), m();
+                      null == h || h(), E();
                   }
               })
             : (0, r.jsx)(a.Popout, {
                   renderPopout: (e) => {
                       let { closePopout: t } = e;
                       return (0, r.jsxs)(a.Menu, {
-                          className: _.popoutMenu,
+                          className: f.popoutMenu,
                           onSelect: void 0,
                           navId: 'edit-profile-popout',
                           onClose: () => {
-                              t(), null == f || f();
+                              t(), null == h || h();
                           },
-                          'aria-label': d.Z.Messages.PROFILE_ACTIONS_MENU_LABEL,
+                          'aria-label': d.intl.string(d.t.AXIHpa),
                           children: [
                               (0, r.jsx)(a.MenuItem, {
                                   id: 'edit-server-profile',
-                                  label: d.Z.Messages.CHANGE_IDENTITY,
-                                  subtext: d.Z.Messages.CHANGE_IDENTITY_SERVER_PROFILE_MENU_HELP,
+                                  label: d.intl.string(d.t['PKQB/P']),
+                                  subtext: d.intl.string(d.t.VYHWKC),
                                   action: () => {
-                                      T({ action: 'EDIT_GUILD_PROFILE' }), I();
+                                      v({ action: 'EDIT_GUILD_PROFILE' }), g();
                                   }
                               }),
                               (0, r.jsx)(a.MenuItem, {
                                   id: 'edit-main-profile',
-                                  label: d.Z.Messages.EDIT_MAIN_PROFILE,
-                                  subtext: d.Z.Messages.USER_PROFILE_MENU_HELP,
+                                  label: d.intl.string(d.t.HmFaFB),
+                                  subtext: d.intl.string(d.t['+EERMj']),
                                   action: () => {
-                                      T({ action: 'EDIT_PROFILE' }), m();
+                                      v({ action: 'EDIT_PROFILE' }), E();
                                   }
                               })
                           ]
@@ -66,10 +66,10 @@ function E(e) {
                   },
                   children: (e) =>
                       (0, r.jsx)(c.tG, {
-                          text: d.Z.Messages.EDIT_PROFILE,
+                          text: d.intl.string(d.t.s5vZlZ),
                           icon: a.PencilIcon,
                           autoFocus: !0,
-                          fullWidth: E,
+                          fullWidth: _,
                           ...e
                       })
               })

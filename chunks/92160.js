@@ -3,66 +3,66 @@ n.d(t, {
         return c;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(120356),
-    i = n.n(a),
-    r = n(481060),
-    l = n(689938),
+var r = n(120356),
+    l = n.n(r),
+    s = n(481060),
+    a = n(388032),
     o = n(382689);
 function c(e) {
-    let { className: t, enabled: n, previewCTA: a, onPreview: c, onToggle: d, animateStatus: u, firstLine: _, secondLine: I, disabled: E } = e;
-    return (0, s.jsxs)('div', {
-        className: i()(t, o.enableContainer),
+    let { className: t, enabled: n, previewCTA: r, onPreview: c, onToggle: d, animateStatus: u, firstLine: m, secondLine: h, disabled: g } = e;
+    return (0, i.jsxs)('div', {
+        className: l()(t, o.enableContainer),
         children: [
             n
-                ? (0, s.jsx)(r.CheckmarkLargeIcon, {
+                ? (0, i.jsx)(s.CheckmarkLargeIcon, {
                       size: 'custom',
                       color: 'currentColor',
                       width: 24,
                       height: 24,
-                      className: i()(o.activeCircle, { [o.animate]: u })
+                      className: l()(o.activeCircle, { [o.animate]: u })
                   })
-                : (0, s.jsx)(r.PencilIcon, {
+                : (0, i.jsx)(s.PencilIcon, {
                       size: 'custom',
                       color: 'currentColor',
                       width: 24,
                       height: 24,
-                      className: i()(o.editCircle, { [o.animate]: u })
+                      className: l()(o.editCircle, { [o.animate]: u })
                   }),
-            (0, s.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: o.enableDescription,
                 children: [
-                    (0, s.jsx)(r.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: 'text-sm/normal',
-                        children: _
+                        children: m
                     }),
-                    (0, s.jsx)(r.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: 'text-sm/normal',
-                        children: I
+                        children: h
                     })
                 ]
             }),
-            (0, s.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: o.buttonContainer,
                 children: [
                     null == c
                         ? null
-                        : (0, s.jsx)(r.Button, {
+                        : (0, i.jsx)(s.Button, {
                               className: o.previewButton,
-                              look: r.Button.Looks.LINK,
-                              size: r.Button.Sizes.SMALL,
+                              look: s.Button.Looks.LINK,
+                              size: s.Button.Sizes.SMALL,
                               onClick: c,
-                              disabled: E,
-                              color: r.Button.Colors.PRIMARY,
-                              children: null != a ? a : l.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PREVIEW
+                              disabled: g,
+                              color: s.Button.Colors.PRIMARY,
+                              children: null != r ? r : a.intl.string(a.t['5U0kLy'])
                           }),
-                    (0, s.jsx)(r.Button, {
-                        disabled: null == d || E,
-                        size: r.Button.Sizes.SMALL,
-                        color: n ? r.Button.Colors.RED : r.Button.Colors.BRAND,
+                    (0, i.jsx)(s.Button, {
+                        disabled: null == d || g,
+                        size: s.Button.Sizes.SMALL,
+                        color: n ? s.Button.Colors.RED : s.Button.Colors.BRAND,
                         onClick: d,
-                        children: n ? l.Z.Messages.DISABLE : l.Z.Messages.ENABLE
+                        children: n ? a.intl.string(a.t.R9GHyc) : a.intl.string(a.t.JFfinp)
                     })
                 ]
             })

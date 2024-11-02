@@ -1,6 +1,6 @@
 n.d(t, {
     $: function () {
-        return _;
+        return f;
     },
     R: function () {
         return i;
@@ -13,13 +13,13 @@ var r,
     o = n(120356),
     l = n.n(o),
     u = n(186325),
-    c = n(689938),
+    c = n(388032),
     d = n(987454);
 ((r = i || (i = {})).WANDERING_CUBES = 'wanderingCubes'), (r.CHASING_DOTS = 'chasingDots'), (r.PULSING_ELLIPSIS = 'pulsingEllipsis'), (r.SPINNING_CIRCLE = 'spinningCircle'), (r.SPINNING_CIRCLE_SIMPLE = 'spinningCircleSimple'), (r.LOW_MOTION = 'lowMotion');
-function _(e) {
-    let { type: t = 'wanderingCubes', animated: n = !0, className: r, itemClassName: i, 'aria-label': o, ..._ } = e,
-        { reducedMotion: E } = s.useContext(u.S),
-        f = E.enabled
+function f(e) {
+    let { type: t = 'wanderingCubes', animated: n = !0, className: r, itemClassName: i, 'aria-label': o, ...f } = e,
+        { reducedMotion: _ } = s.useContext(u.S),
+        h = _.enabled
             ? (function (e) {
                   switch (e) {
                       case 'wanderingCubes':
@@ -30,19 +30,19 @@ function _(e) {
                   }
               })(t)
             : t;
-    if (((o = null != o ? o : c.Z.Messages.LOADING), 'spinningCircle' === f || 'spinningCircleSimple' === f))
+    if (((o = null != o ? o : c.intl.string(c.t.ZTNur6)), 'spinningCircle' === h || 'spinningCircleSimple' === h))
         return (0, a.jsx)('div', {
-            className: l()(d.spinner, d[f], r, { [d.stopAnimation]: !n }),
+            className: l()(d.spinner, d[h], r, { [d.stopAnimation]: !n }),
             role: 'img',
             'aria-label': o,
-            ..._,
+            ...f,
             children: (0, a.jsx)('div', {
                 className: d.spinningCircleInner,
                 children: (0, a.jsxs)('svg', {
                     className: d.circular,
                     viewBox: '25 25 50 50',
                     children: [
-                        'spinningCircle' === f &&
+                        'spinningCircle' === h &&
                             (0, a.jsxs)(a.Fragment, {
                                 children: [
                                     (0, a.jsx)('circle', {
@@ -69,16 +69,16 @@ function _(e) {
                 })
             })
         });
-    let h = l()(d.item, i);
+    let p = l()(d.item, i);
     return (0, a.jsx)('span', {
         className: l()(d.spinner, r, { [d.stopAnimation]: !n }),
         role: 'img',
         'aria-label': o,
-        ..._,
+        ...f,
         children: (0, a.jsxs)('span', {
-            className: l()(d.inner, d[f]),
-            children: [(0, a.jsx)('span', { className: h }), (0, a.jsx)('span', { className: h }), 'pulsingEllipsis' === f || 'lowMotion' === f ? (0, a.jsx)('span', { className: h }) : null]
+            className: l()(d.inner, d[h]),
+            children: [(0, a.jsx)('span', { className: p }), (0, a.jsx)('span', { className: p }), 'pulsingEllipsis' === h || 'lowMotion' === h ? (0, a.jsx)('span', { className: p }) : null]
         })
     });
 }
-_.Type = i;
+f.Type = i;

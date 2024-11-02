@@ -1,93 +1,93 @@
 t.d(n, {
     Z: function () {
-        return v;
+        return j;
     }
 }),
     t(47120);
 var i = t(200651);
 t(192379);
-var a = t(481060),
-    s = t(668781),
-    l = t(829883),
-    r = t(976853),
-    o = t(626135),
+var l = t(481060),
+    r = t(668781),
+    a = t(829883),
+    o = t(976853),
+    s = t(626135),
     u = t(358085),
     d = t(960048),
     c = t(591759),
-    E = t(998502),
-    M = t(36998),
-    g = t(981631),
-    f = t(689938);
-let m = 'https://media.discordapp.net',
+    g = t(998502),
+    m = t(36998),
+    f = t(981631),
+    h = t(388032);
+let v = 'https://media.discordapp.net',
     I = /^.*\.discordapp\.net$/,
-    _ = 'cdn.discordapp.com',
-    Z = ''.concat(m, '/stickers'),
-    S = new Set(['jpg', 'jpeg', 'png', 'webp', 'gif', 'tiff', 'bmp']),
-    h = new Set(['jpg', 'jpeg', 'png']),
-    A = (e) => {
-        var n, t, i, a;
-        return null === (a = c.Z.toURLSafe(e)) || void 0 === a ? void 0 : null === (i = a.pathname) || void 0 === i ? void 0 : null === (t = i.split('.')) || void 0 === t ? void 0 : null === (n = t.pop()) || void 0 === n ? void 0 : n.toLowerCase();
+    E = 'cdn.discordapp.com',
+    p = ''.concat(v, '/stickers'),
+    M = new Set(['jpg', 'jpeg', 'png', 'webp', 'gif', 'tiff', 'bmp']),
+    Z = new Set(['jpg', 'jpeg', 'png']),
+    x = (e) => {
+        var n, t, i, l;
+        return null === (l = c.Z.toURLSafe(e)) || void 0 === l ? void 0 : null === (i = l.pathname) || void 0 === i ? void 0 : null === (t = i.split('.')) || void 0 === t ? void 0 : null === (n = t.pop()) || void 0 === n ? void 0 : n.toLowerCase();
     };
-function N(e, n) {
-    s.Z.show({
-        title: f.Z.Messages.ERROR,
+function S(e, n) {
+    r.Z.show({
+        title: h.intl.string(h.t.j2d6Ki),
         body: e
     }),
         d.Z.captureException(n);
 }
-function v(e, n, t) {
+function j(e, n, t) {
     if (
-        (0, r.Z)(null == n ? void 0 : n.getChannelId()) ||
+        (0, o.Z)(null == n ? void 0 : n.getChannelId()) ||
         (null == t ? void 0 : t.shouldHideMediaOptions) === !0 ||
         !u.isPlatformEmbedded ||
         null == e ||
         !(function (e) {
             let n = c.Z.toURLSafe(e);
             if (null == n) return !1;
-            let t = A(e);
-            return (I.test(n.hostname) || n.host === _) && !e.startsWith(Z) && !(0, l.zt)(e) && null != t && S.has(t);
+            let t = x(e);
+            return (I.test(n.hostname) || n.host === E) && !e.startsWith(p) && !(0, a.zt)(e) && null != t && M.has(t);
         })(e)
     )
         return null;
-    let s = (function (e) {
+    let r = (function (e) {
             let n = c.Z.toURLSafe(e);
-            return null == n || n.host === _ ? e : n.origin === m ? ((n.host = _), n.searchParams.delete('size'), n.searchParams.delete('width'), n.searchParams.delete('height'), n.searchParams.delete('quality'), n.searchParams.delete('format'), n.toString()) : (n.searchParams.delete('width'), n.searchParams.delete('height'), n.searchParams.set('quality', 'lossless'), n.toString());
+            return null == n || n.host === E ? e : n.origin === v ? ((n.host = E), n.searchParams.delete('size'), n.searchParams.delete('width'), n.searchParams.delete('height'), n.searchParams.delete('quality'), n.searchParams.delete('format'), n.toString()) : (n.searchParams.delete('width'), n.searchParams.delete('height'), n.searchParams.set('quality', 'lossless'), n.toString());
         })(e),
         d = async () => {
             try {
-                await E.ZP.saveImage(s), o.default.track(g.rMx.CONTEXT_MENU_IMAGE_SAVED, { ...(0, M.v)() });
+                await g.ZP.saveImage(r), s.default.track(f.rMx.CONTEXT_MENU_IMAGE_SAVED, { ...(0, m.v)() });
             } catch (e) {
-                o.default.track(g.rMx.CONTEXT_MENU_IMAGE_SAVE_FAILED, { ...(0, M.v)() }), N(f.Z.Messages.ERROR_SAVING_IMAGE, e);
+                s.default.track(f.rMx.CONTEXT_MENU_IMAGE_SAVE_FAILED, { ...(0, m.v)() }), S(h.intl.string(h.t['8Ve/S0']), e);
             }
         },
-        v = async () => {
+        j = async () => {
             try {
-                await E.ZP.copyImage(s), o.default.track(g.rMx.CONTEXT_MENU_IMAGE_COPIED, { ...(0, M.v)() });
+                await g.ZP.copyImage(r), s.default.track(f.rMx.CONTEXT_MENU_IMAGE_COPIED, { ...(0, m.v)() });
             } catch (e) {
-                N(f.Z.Messages.ERROR_COPYING_IMAGE, e), o.default.track(g.rMx.CONTEXT_MENU_IMAGE_COPY_FAILED, { ...(0, M.v)() });
+                S(h.intl.string(h.t.PTPbj4), e), s.default.track(f.rMx.CONTEXT_MENU_IMAGE_COPY_FAILED, { ...(0, m.v)() });
             }
         };
     return [
-        E.ZP.canCopyImage() &&
+        g.ZP.canCopyImage() &&
         (function (e) {
-            let n = A(e);
-            return null != n && h.has(n);
+            let n = x(e);
+            return null != n && Z.has(n);
         })(e)
             ? (0, i.jsx)(
-                  a.MenuItem,
+                  l.MenuItem,
                   {
                       id: 'copy-image',
-                      label: f.Z.Messages.COPY_IMAGE_MENU_ITEM,
-                      action: v
+                      label: h.intl.string(h.t.tvUqWl),
+                      action: j
                   },
                   'copy-image'
               )
             : null,
         (0, i.jsx)(
-            a.MenuItem,
+            l.MenuItem,
             {
                 id: 'save-image',
-                label: f.Z.Messages.SAVE_IMAGE_MENU_ITEM,
+                label: h.intl.string(h.t.PeXhgI),
                 action: d
             },
             'save-image'

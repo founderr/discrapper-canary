@@ -1,104 +1,104 @@
 n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(442837),
-    r = n(481060),
-    l = n(430824),
+    r = n(192379),
+    l = n(442837),
+    a = n(481060),
+    s = n(430824),
     o = n(970606),
     c = n(979264),
     d = n(550271),
     u = n(116175),
-    _ = n(308083),
-    E = n(689938),
-    h = n(969676),
-    m = n(602075);
+    h = n(308083),
+    m = n(388032),
+    p = n(969676),
+    g = n(602075);
 t.Z = (e) => {
     var t, n;
-    let { guildId: I, badge: p, primaryColor: g, secondaryColor: T, tag: S, inSettings: C } = e,
-        f = a.useMemo(() => {
+    let { guildId: f, badge: _, primaryColor: E, secondaryColor: I, tag: C, inSettings: v } = e,
+        S = r.useMemo(() => {
             let e = (0, u.yf)();
             return {
-                primary: null != g ? g : e.primary,
-                secondary: null != T ? T : e.secondary
+                primary: null != E ? E : e.primary,
+                secondary: null != I ? I : e.secondary
             };
-        }, [g, T]),
-        [N, A] = a.useState(!1),
-        v = a.useCallback(
+        }, [E, I]),
+        [N, T] = r.useState(!1),
+        x = r.useCallback(
             (e) => {
                 e &&
                     (0, o.Gx)({
-                        guildId: I,
+                        guildId: f,
                         signupPage: o._9.CUSTOMIZE_DISCOVERY,
                         actionType: o.eI.CHOOSE_GUILD_DISCOVERY,
                         enabledDiscovery: e,
-                        inSettings: C
+                        inSettings: v
                     }),
-                    A(e);
+                    T(e);
             },
-            [I, C]
+            [f, v]
         ),
-        Z = (0, s.e7)([l.Z], () => l.Z.getGuild(I), [I]);
+        b = (0, l.e7)([s.Z], () => s.Z.getGuild(f), [f]);
     return (0, i.jsxs)('div', {
-        className: m.slideContent,
+        className: g.slideContent,
         children: [
-            (0, i.jsx)(r.Heading, {
+            (0, i.jsx)(a.Heading, {
                 variant: 'heading-xxl/medium',
-                className: m.title,
-                children: E.Z.Messages.CLAN_SETUP_EARLY_SIGNUP_DISCOVERY_TITLE
+                className: g.title,
+                children: m.intl.string(m.t.Z36xlZ)
             }),
-            (0, i.jsx)(r.Text, {
+            (0, i.jsx)(a.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                className: m.subtitle,
-                children: E.Z.Messages.CLAN_SETUP_EARLY_SIGNUP_DISCOVERY_SUBTITLE
+                className: g.subtitle,
+                children: m.intl.string(m.t['07QTAg'])
             }),
             (0, i.jsx)('div', {
-                className: h.container,
+                className: p.container,
                 children: (0, i.jsxs)('div', {
-                    className: h.mainContainer,
+                    className: p.mainContainer,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: h.itemContainer,
+                            className: p.itemContainer,
                             children: [
-                                (0, i.jsx)(r.Text, {
+                                (0, i.jsx)(a.Text, {
                                     variant: 'text-xs/medium',
                                     color: 'text-muted',
-                                    children: E.Z.Messages.CLAN_SETUP_EARLY_SIGNUP_DISCOVERY_REQUIRED_HEADER
+                                    children: m.intl.string(m.t.WO4DiI)
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: h.itemSelectionContainer,
+                                    className: p.itemSelectionContainer,
                                     children: [
                                         (0, i.jsx)('div', {
                                             children: (0, i.jsx)('div', {
-                                                className: h.iconContainer,
+                                                className: p.iconContainer,
                                                 children: (0, i.jsx)('div', {
                                                     children: (0, i.jsx)(c.aG, {
-                                                        guildId: I,
-                                                        clanTag: S,
-                                                        className: h.tag,
+                                                        guildId: f,
+                                                        clanTag: C,
+                                                        className: p.tag,
                                                         clanBadge: (0, i.jsx)(d.A, {
-                                                            badge: p,
-                                                            width: _.NC.SIZE_12,
-                                                            height: _.NC.SIZE_12,
-                                                            primaryTintColor: f.primary,
-                                                            secondaryTintColor: f.secondary
+                                                            badge: _,
+                                                            width: h.NC.SIZE_12,
+                                                            height: h.NC.SIZE_12,
+                                                            primaryTintColor: S.primary,
+                                                            secondaryTintColor: S.secondary
                                                         })
                                                     })
                                                 })
                                             })
                                         }),
                                         (0, i.jsxs)('div', {
-                                            className: h.itemDescription,
+                                            className: p.itemDescription,
                                             children: [
-                                                (0, i.jsx)(r.Text, {
+                                                (0, i.jsx)(a.Text, {
                                                     variant: 'text-md/semibold',
                                                     color: 'header-primary',
-                                                    children: E.Z.Messages.CLAN_SETUP_EARLY_SIGNUP_DISCOVERY_TAG_DISCOVERY_HEADER
+                                                    children: m.intl.string(m.t.QotFUV)
                                                 }),
-                                                (0, i.jsx)(r.Text, {
+                                                (0, i.jsx)(a.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-muted',
-                                                    children: E.Z.Messages.CLAN_SETUP_EARLY_SIGNUP_DISCOVERY_TAG_DISCOVERY_DESCRIPTION.format({ guildName: null !== (t = null == Z ? void 0 : Z.name) && void 0 !== t ? t : '' })
+                                                    children: m.intl.format(m.t['g/mtUF'], { guildName: null !== (t = null == b ? void 0 : b.name) && void 0 !== t ? t : '' })
                                                 })
                                             ]
                                         })
@@ -107,20 +107,20 @@ t.Z = (e) => {
                             ]
                         }),
                         (0, i.jsxs)('div', {
-                            className: h.itemContainer,
+                            className: p.itemContainer,
                             children: [
-                                (0, i.jsx)(r.Text, {
+                                (0, i.jsx)(a.Text, {
                                     variant: 'text-xs/medium',
                                     color: 'text-muted',
-                                    children: E.Z.Messages.CLAN_SETUP_EARLY_SIGNUP_DISCOVERY_OPTIONAL_HEADER
+                                    children: m.intl.string(m.t.LMz2R0)
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: h.itemSelectionContainer,
+                                    className: p.itemSelectionContainer,
                                     children: [
                                         (0, i.jsx)('div', {
                                             children: (0, i.jsx)('div', {
-                                                className: h.iconContainer,
-                                                children: (0, i.jsx)(r.CompassIcon, {
+                                                className: p.iconContainer,
+                                                children: (0, i.jsx)(a.CompassIcon, {
                                                     width: 24,
                                                     height: 24,
                                                     size: 'custom'
@@ -128,24 +128,24 @@ t.Z = (e) => {
                                             })
                                         }),
                                         (0, i.jsxs)('div', {
-                                            className: h.itemDescription,
+                                            className: p.itemDescription,
                                             children: [
-                                                (0, i.jsx)(r.Text, {
+                                                (0, i.jsx)(a.Text, {
                                                     variant: 'text-md/semibold',
                                                     color: 'header-primary',
-                                                    children: E.Z.Messages.CLAN_SETUP_EARLY_SIGNUP_DISCOVERY_GUILD_DISCOVERY_HEADER
+                                                    children: m.intl.string(m.t.s0u7oq)
                                                 }),
-                                                (0, i.jsx)(r.Text, {
+                                                (0, i.jsx)(a.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-muted',
-                                                    children: E.Z.Messages.CLAN_SETUP_EARLY_SIGNUP_DISCOVERY_GUILD_DISCOVERY_DESCRIPTION.format({ guildName: null !== (n = null == Z ? void 0 : Z.name) && void 0 !== n ? n : '' })
+                                                    children: m.intl.format(m.t['5uK+gY'], { guildName: null !== (n = null == b ? void 0 : b.name) && void 0 !== n ? n : '' })
                                                 })
                                             ]
                                         }),
-                                        (0, i.jsx)(r.FormSwitch, {
-                                            className: h.toggle,
+                                        (0, i.jsx)(a.FormSwitch, {
+                                            className: p.toggle,
                                             hideBorder: !0,
-                                            onChange: v,
+                                            onChange: x,
                                             value: N
                                         })
                                     ]

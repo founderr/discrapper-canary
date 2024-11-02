@@ -4,10 +4,10 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    a = n(192379),
-    s = n(100621),
-    r = n(481060),
-    l = n(512114);
+    r = n(192379),
+    l = n(100621),
+    a = n(481060),
+    s = n(512114);
 let o = {
         mass: 1,
         tension: 300,
@@ -21,13 +21,13 @@ let o = {
         clamp: !0
     };
 function d(e) {
-    var t, n, a;
-    let { state: d, direction: u, cleanUp: _, children: E } = e;
-    let h = (0, r.useSpring)(
+    var t, n, r;
+    let { state: d, direction: u, cleanUp: h, children: m } = e;
+    let p = (0, a.useSpring)(
         ((t = d),
         (n = u),
-        (a = _),
-        t === r.TransitionStates.MOUNTED
+        (r = h),
+        t === a.TransitionStates.MOUNTED
             ? {
                   from: {
                       opacity: 0,
@@ -40,7 +40,7 @@ function d(e) {
                   config: o,
                   delay: 500
               }
-            : t === r.TransitionStates.ENTERED
+            : t === a.TransitionStates.ENTERED
               ? {
                     from: {
                         opacity: 0,
@@ -64,33 +64,33 @@ function d(e) {
                     },
                     config: c,
                     onRest: () => {
-                        a();
+                        r();
                     }
                 })
     );
-    return (0, i.jsx)(s.animated.div, {
-        style: h,
-        className: l.step,
-        children: (0, i.jsx)(r.ScrollerThin, {
-            className: l.scroller,
-            children: E
+    return (0, i.jsx)(l.animated.div, {
+        style: p,
+        className: s.step,
+        children: (0, i.jsx)(a.ScrollerThin, {
+            className: s.scroller,
+            children: m
         })
     });
 }
 function u(e) {
-    let { currentStep: t, renderItem: n, items: s, getItemKey: o } = e,
-        c = a.useRef(t - 1);
-    a.useEffect(() => {
+    let { currentStep: t, renderItem: n, items: l, getItemKey: o } = e,
+        c = r.useRef(t - 1);
+    r.useEffect(() => {
         c.current = t;
     }, [t]);
-    let u = a.useMemo(() => (null == c.current || t === c.current ? 0 : c.current < t ? 1 : -1), [t]),
-        _ = a.useCallback(
-            (e, t, a, s) =>
+    let u = r.useMemo(() => (null == c.current || t === c.current ? 0 : c.current < t ? 1 : -1), [t]),
+        h = r.useCallback(
+            (e, t, r, l) =>
                 (0, i.jsx)(
                     d,
                     {
-                        state: a,
-                        cleanUp: s,
+                        state: r,
+                        cleanUp: l,
                         direction: u,
                         children: n(t)
                     },
@@ -99,10 +99,10 @@ function u(e) {
             [u, n]
         );
     return (0, i.jsx)('div', {
-        className: l.stepsTransitionGroup,
-        children: (0, i.jsx)(r.TransitionGroup, {
-            items: s,
-            renderItem: _,
+        className: s.stepsTransitionGroup,
+        children: (0, i.jsx)(a.TransitionGroup, {
+            items: l,
+            renderItem: h,
             getItemKey: o
         })
     });

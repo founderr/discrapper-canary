@@ -1,126 +1,126 @@
-t.r(n),
-    t.d(n, {
+e.r(n),
+    e.d(n, {
         default: function () {
-            return C;
+            return E;
         }
     }),
-    t(47120);
-var _ = t(200651),
-    a = t(192379),
-    l = t(442837),
-    s = t(481060),
-    r = t(933557),
-    A = t(313201),
-    O = t(592125),
-    o = t(984933),
-    N = t(699516),
-    i = t(594174),
-    I = t(556012),
-    c = t(689938),
-    u = t(646866);
-let E = (e) => {
-    let { guildId: n, channel: t, onSelectChannel: a } = e,
-        A = (0, l.Wu)(
-            [o.ZP],
+    e(47120);
+var l = e(200651),
+    r = e(192379),
+    i = e(442837),
+    a = e(481060),
+    o = e(933557),
+    s = e(313201),
+    c = e(592125),
+    u = e(984933),
+    d = e(699516),
+    j = e(594174),
+    A = e(556012),
+    h = e(388032),
+    N = e(646866);
+let C = (t) => {
+    let { guildId: n, channel: e, onSelectChannel: r } = t,
+        s = (0, i.Wu)(
+            [u.ZP],
             () =>
-                o.ZP.getChannels(n)
-                    [o.sH].filter((e) => {
-                        let { channel: n } = e;
+                u.ZP.getChannels(n)
+                    [u.sH].filter((t) => {
+                        let { channel: n } = t;
                         return !n.isGuildVocal() && !n.isThread() && !n.isForumLikeChannel();
                     })
-                    .map((e) => {
-                        let { channel: n } = e;
+                    .map((t) => {
+                        let { channel: n } = t;
                         return n;
                     }),
             [n]
         );
-    return (0, _.jsx)(s.FormItem, {
-        className: u.channelSelector,
+    return (0, l.jsx)(a.FormItem, {
+        className: N.channelSelector,
         required: !0,
-        children: (0, _.jsx)(s.SearchableSelect, {
-            value: null == t ? void 0 : t.id,
-            options: A.map((e) => ({
-                value: e.id,
-                label: (0, r.F6)(e, i.default, N.Z, !0)
+        children: (0, l.jsx)(a.SearchableSelect, {
+            value: null == e ? void 0 : e.id,
+            options: s.map((t) => ({
+                value: t.id,
+                label: (0, o.F6)(t, j.default, d.Z, !0)
             })),
-            onChange: (e) => {
-                let n = A.find((n) => n.id === e);
-                a(null != n ? n : void 0);
+            onChange: (t) => {
+                let n = s.find((n) => n.id === t);
+                r(null != n ? n : void 0);
             },
-            placeholder: c.Z.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_MODAL_CHANNEL_PLACEHOLDER
+            placeholder: h.intl.string(h.t['N+T69/'])
         })
     });
 };
-function C(e) {
-    let { action: n, triggerType: t, guildId: r, isEdit: o, onEditChannel: N, onClose: i, transitionState: C } = e,
-        S = (0, A.Dt)(),
-        [L, M] = a.useState(n.metadata.channelId),
-        [T, d] = a.useState(null),
-        U = (0, l.e7)([O.Z], () => O.Z.getChannel(L), [L]),
-        D = (0, I.c)(n.type, n, t);
-    if (null == D) return null;
-    let { headerText: j } = D;
-    return (0, _.jsxs)(s.ModalRoot, {
-        transitionState: C,
+function E(t) {
+    let { action: n, triggerType: e, guildId: o, isEdit: u, onEditChannel: d, onClose: j, transitionState: E } = t,
+        S = (0, s.Dt)(),
+        [_, I] = r.useState(n.metadata.channelId),
+        [L, f] = r.useState(null),
+        g = (0, i.e7)([c.Z], () => c.Z.getChannel(_), [_]),
+        T = (0, A.c)(n.type, n, e);
+    if (null == T) return null;
+    let { headerText: x } = T;
+    return (0, l.jsxs)(a.ModalRoot, {
+        transitionState: E,
         'aria-labelledby': S,
-        size: s.ModalSize.SMALL,
+        size: a.ModalSize.SMALL,
         children: [
-            (0, _.jsxs)(s.ModalContent, {
-                className: u.actionContentContainer,
+            (0, l.jsxs)(a.ModalContent, {
+                className: N.actionContentContainer,
                 children: [
-                    (0, _.jsx)(s.Heading, {
+                    (0, l.jsx)(a.Heading, {
                         id: S,
                         color: 'header-primary',
                         variant: 'heading-lg/semibold',
-                        className: u.header,
-                        children: j
+                        className: N.header,
+                        children: x
                     }),
-                    (0, _.jsx)(s.Text, {
+                    (0, l.jsx)(a.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: c.Z.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_MODAL_DESCRIPTION
+                        children: h.intl.string(h.t['z/ZF2t'])
                     }),
-                    (0, _.jsx)(E, {
-                        guildId: r,
-                        channel: U,
-                        onSelectChannel: (e) => {
-                            if (null != e) M(e.id);
+                    (0, l.jsx)(C, {
+                        guildId: o,
+                        channel: g,
+                        onSelectChannel: (t) => {
+                            if (null != t) I(t.id);
                         }
                     }),
-                    null != T
-                        ? (0, _.jsx)(s.Text, {
+                    null != L
+                        ? (0, l.jsx)(a.Text, {
                               color: 'text-danger',
                               variant: 'text-sm/normal',
-                              children: T
+                              children: L
                           })
-                        : (0, _.jsx)(s.Text, {
+                        : (0, l.jsx)(a.Text, {
                               color: 'text-muted',
                               variant: 'text-sm/normal',
-                              children: c.Z.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_MODAL_CHANNEL_HELPER
+                              children: h.intl.string(h.t['ric+5u'])
                           })
                 ]
             }),
-            (0, _.jsxs)(s.ModalFooter, {
+            (0, l.jsxs)(a.ModalFooter, {
                 children: [
-                    (0, _.jsx)(s.Button, {
+                    (0, l.jsx)(a.Button, {
                         onClick: () => {
-                            if (null == L) {
-                                d(c.Z.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_MODAL_ERROR_NO_CHANNEL);
+                            if (null == _) {
+                                f(h.intl.string(h.t.lM1NLi));
                                 return;
                             }
-                            N(L);
+                            d(_);
                         },
-                        color: s.Button.Colors.BRAND,
-                        size: s.Button.Sizes.SMALL,
-                        children: o ? c.Z.Messages.EDIT : c.Z.Messages.SAVE
+                        color: a.Button.Colors.BRAND,
+                        size: a.Button.Sizes.SMALL,
+                        children: u ? h.intl.string(h.t.bt75u7) : h.intl.string(h.t.R3BPHx)
                     }),
-                    (0, _.jsx)(s.Button, {
+                    (0, l.jsx)(a.Button, {
                         onClick: () => {
-                            i();
+                            j();
                         },
-                        color: s.Button.Colors.TRANSPARENT,
-                        look: s.Button.Looks.LINK,
-                        children: c.Z.Messages.CANCEL
+                        color: a.Button.Colors.TRANSPARENT,
+                        look: a.Button.Looks.LINK,
+                        children: h.intl.string(h.t['ETE/oK'])
                     })
                 ]
             })

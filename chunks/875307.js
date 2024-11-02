@@ -1,9 +1,9 @@
-a.d(s, {
+n.d(t, {
     R: function () {
-        return _;
+        return i;
     }
 });
-var E = a(837748);
-function _(e) {
-    return (0, E.Z)(e).author;
+var r = n(837748);
+function i(e) {
+    return (0, r.Z)(e).author;
 }

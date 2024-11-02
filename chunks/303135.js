@@ -1,22 +1,22 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return o;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(739566),
-    s = n(834129),
-    r = n(689938);
-function l(e) {
-    let { message: t, usernameHook: l, compact: o } = e,
-        c = (0, a.ZP)(t),
-        u = l(c);
-    return (0, i.jsx)(s.Z, {
+var r = n(739566),
+    l = n(834129),
+    a = n(388032);
+function o(e) {
+    let { message: t, usernameHook: o, compact: s } = e,
+        c = (0, r.ZP)(t),
+        u = o(c);
+    return (0, i.jsx)(l.Z, {
         icon: n(819373),
         timestamp: t.timestamp,
-        compact: o,
-        children: r.Z.Messages.SYSTEM_MESSAGE_CHANNEL_ICON_CHANGE_HOOK.format({
+        compact: s,
+        children: a.intl.format(a.t.OEdU6e, {
             username: c.nick,
             usernameHook: u
         })

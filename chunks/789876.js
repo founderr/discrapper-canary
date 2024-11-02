@@ -11,21 +11,21 @@ var r;
         u = 0,
         c = !1,
         d = 7,
-        _ = 35,
-        E = 125,
-        f = 0,
+        f = 35,
+        _ = 125,
         h = 0,
         p = 0,
-        I = {
+        m = 0,
+        g = {
             get didTimeout() {
                 return !1;
             },
             timeRemaining: function () {
-                var e = d - (Date.now() - h);
+                var e = d - (Date.now() - p);
                 return e < 0 ? 0 : e;
             }
         },
-        m = (function (e) {
+        E = (function (e) {
             var t,
                 n,
                 r = function () {
@@ -36,33 +36,33 @@ var r;
                 (n = Date.now()), !t && (t = setTimeout(r, 99));
             };
         })(function () {
-            (d = 22), (E = 66), (_ = 0);
+            (d = 22), (_ = 66), (f = 0);
         });
-    function T() {
-        125 != E && ((d = 7), (E = 125), (_ = 35), c && (c && (i && o(i), r && clearTimeout(r), (c = !1)), A())), m();
+    function v() {
+        125 != _ && ((d = 7), (_ = 125), (f = 35), c && (c && (i && o(i), r && clearTimeout(r), (c = !1)), T())), E();
+    }
+    function I() {
+        (i = null), (r = setTimeout(b, 0));
     }
     function S() {
-        (i = null), (r = setTimeout(N, 0));
+        (r = null), s(I);
     }
-    function g() {
-        (r = null), s(S);
+    function T() {
+        if (!c) (t = _ - (Date.now() - p)), (e = Date.now()), (c = !0), f && t < f && (t = f), t > 9 ? (r = setTimeout(S, t)) : ((t = 0), S());
     }
-    function A() {
-        if (!c) (t = E - (Date.now() - h)), (e = Date.now()), (c = !0), _ && t < _ && (t = _), t > 9 ? (r = setTimeout(g, t)) : ((t = 0), g());
-    }
-    function N() {
+    function b() {
         var n,
             i,
             a,
             s = d > 9 ? 9 : 1;
-        if (((h = Date.now()), (c = !1), (r = null), u > 2 || h - t - 50 < e)) for (i = 0, a = l.length; i < a && I.timeRemaining() > s; i++) (n = l.shift()), p++, n && n(I);
-        l.length ? A() : (u = 0);
+        if (((p = Date.now()), (c = !1), (r = null), u > 2 || p - t - 50 < e)) for (i = 0, a = l.length; i < a && g.timeRemaining() > s; i++) (n = l.shift()), m++, n && n(g);
+        l.length ? T() : (u = 0);
     }
-    function R(e) {
-        return f++, l.push(e), A(), f;
+    function y(e) {
+        return h++, l.push(e), T(), h;
     }
-    function O(e) {
-        var t = e - 1 - p;
+    function A(e) {
+        var t = e - 1 - m;
         l[t] && (l[t] = null);
     }
     if (a.requestIdleCallback && a.cancelIdleCallback)
@@ -89,29 +89,29 @@ var r;
             })(a.requestIdleCallback);
         }
     else
-        (a.requestIdleCallback = R),
-            (a.cancelIdleCallback = O),
+        (a.requestIdleCallback = y),
+            (a.cancelIdleCallback = A),
             a.document &&
                 document.addEventListener &&
-                (a.addEventListener('scroll', T, !0),
-                a.addEventListener('resize', T),
-                document.addEventListener('focus', T, !0),
-                document.addEventListener('mouseover', T, !0),
+                (a.addEventListener('scroll', v, !0),
+                a.addEventListener('resize', v),
+                document.addEventListener('focus', v, !0),
+                document.addEventListener('mouseover', v, !0),
                 ['click', 'keypress', 'touchstart', 'mousedown'].forEach(function (e) {
-                    document.addEventListener(e, T, {
+                    document.addEventListener(e, v, {
                         capture: !0,
                         passive: !0
                     });
                 }),
                 a.MutationObserver &&
-                    new MutationObserver(T).observe(document.documentElement, {
+                    new MutationObserver(v).observe(document.documentElement, {
                         childList: !0,
                         subtree: !0,
                         attributes: !0
                     }));
     return {
-        request: R,
-        cancel: O
+        request: y,
+        cancel: A
     };
 }),
     'function' == typeof define && define.amd ? define([], r) : e.exports ? (e.exports = r()) : (window.idleCallbackShim = r());

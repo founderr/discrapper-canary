@@ -3,35 +3,35 @@ e.d(n, {
         return a;
     },
     KK: function () {
-        return _;
+        return l;
     },
     Vp: function () {
         return u;
     },
     hW: function () {
-        return c;
+        return s;
     },
     zu: function () {
-        return s;
+        return c;
     }
 });
-var o = e(544891),
-    i = e(570140),
+var i = e(544891),
+    o = e(570140),
     r = e(981631);
 function a() {
-    i.Z.dispatch({ type: 'VIBING_WUMPUS_PLAY_MUSIC' });
-}
-function s() {
-    i.Z.dispatch({ type: 'VIBING_WUMPUS_STOP_MUSIC' });
+    o.Z.dispatch({ type: 'VIBING_WUMPUS_PLAY_MUSIC' });
 }
 function c() {
-    i.Z.dispatch({ type: 'VIBING_WUMPUS_PAUSE_MUSIC' });
+    o.Z.dispatch({ type: 'VIBING_WUMPUS_STOP_MUSIC' });
+}
+function s() {
+    o.Z.dispatch({ type: 'VIBING_WUMPUS_PAUSE_MUSIC' });
 }
 function u(t) {
-    return o.tn.del({ url: r.ANM.DELETE_SAFETY_WARNINGS(t) });
+    return i.tn.del({ url: r.ANM.DELETE_SAFETY_WARNINGS(t) });
 }
-function _(t, n) {
-    return o.tn.post({
+function l(t, n) {
+    return i.tn.post({
         url: r.ANM.ADD_SAFETY_WARNING(t),
         body: { safety_warning_type: n }
     });

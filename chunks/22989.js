@@ -1,64 +1,64 @@
-a.r(t),
-    a.d(t, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return C;
+            return j;
         }
     }),
-    a(47120),
-    a(315314),
-    a(610138),
-    a(216116),
-    a(78328),
-    a(815648);
-var n = a(200651),
-    l = a(192379),
-    i = a(990547),
-    r = a(481060),
-    o = a(240872),
-    s = a(579806),
-    u = a(100527),
-    d = a(906732),
-    c = a(39604),
-    m = a(212039),
-    p = a(259612),
-    v = a(572720),
-    f = a(362693),
-    b = a(674908),
-    h = a(20437),
-    x = a(689938),
-    g = a(948061);
-function C(e) {
-    var t, a, C, _, j, S, I, E;
-    let { clip: T, channelId: y, transitionState: w, onClose: N } = e,
-        [L, k] = l.useState(!0),
-        [R, M] = l.useState(null),
-        [P, Z] = l.useState(null),
-        { analyticsLocations: A } = (0, d.ZP)(u.Z.CLIPS_EDITOR);
+    n(47120),
+    n(315314),
+    n(610138),
+    n(216116),
+    n(78328),
+    n(815648);
+var a = n(200651),
+    l = n(192379),
+    i = n(990547),
+    r = n(481060),
+    o = n(240872),
+    s = n(579806),
+    u = n(100527),
+    d = n(906732),
+    c = n(39604),
+    m = n(212039),
+    p = n(259612),
+    v = n(572720),
+    f = n(362693),
+    b = n(674908),
+    h = n(20437),
+    x = n(388032),
+    g = n(948061);
+function j(e) {
+    var t, n, j, C, y, w, _, k;
+    let { clip: S, channelId: N, transitionState: T, onClose: L } = e,
+        [F, R] = l.useState(!0),
+        [E, I] = l.useState(null),
+        [P, B] = l.useState(null),
+        { analyticsLocations: M } = (0, d.ZP)(u.Z.CLIPS_EDITOR);
     l.useEffect(() => {
         (async function e() {
             let e;
             try {
-                e = await s.Z.clips.loadClip(T.filepath);
+                e = await s.Z.clips.loadClip(S.filepath);
             } catch {
-                N(),
+                L(),
                     o.Z.show({
-                        title: x.Z.Messages.CLIPS_LOAD_ERROR_TITLE,
-                        body: x.Z.Messages.CLIPS_LOAD_ERROR_BODY
+                        title: x.intl.string(x.t.yjoSOD),
+                        body: x.intl.string(x.t.JmYczc)
                     });
                 return;
             }
             let t = e.data.buffer,
-                a = await (0, m.w)(t),
-                n = URL.createObjectURL(new Blob([a], { type: 'audio/mp4' })),
+                n = await (0, m.w)(t),
+                a = URL.createObjectURL(new Blob([n], { type: 'audio/mp4' })),
                 l = URL.createObjectURL(new Blob([e.data], { type: 'video/mp4' }));
-            Z(n), M(l);
+            B(a), I(l);
         })();
-    }, [T.filepath, N]),
+    }, [S.filepath, L]),
         l.useEffect(
             () => () => {
-                null != R && URL.revokeObjectURL(R);
+                null != E && URL.revokeObjectURL(E);
             },
-            [R]
+            [E]
         ),
         l.useEffect(
             () => () => {
@@ -66,37 +66,37 @@ function C(e) {
             },
             [P]
         );
-    let [F, D] = l.useState(null === (j = null === (t = T.editMetadata) || void 0 === t ? void 0 : t.voiceAudio) || void 0 === j || j),
-        [B, O] = l.useState(null === (S = null === (a = T.editMetadata) || void 0 === a ? void 0 : a.applicationAudio) || void 0 === S || S),
-        [H, U] = l.useState({
-            start: null !== (I = null === (C = T.editMetadata) || void 0 === C ? void 0 : C.start) && void 0 !== I ? I : 0,
-            end: null !== (E = null === (_ = T.editMetadata) || void 0 === _ ? void 0 : _.end) && void 0 !== E ? E : 0
+    let [A, Z] = l.useState(null === (y = null === (t = S.editMetadata) || void 0 === t ? void 0 : t.voiceAudio) || void 0 === y || y),
+        [D, z] = l.useState(null === (w = null === (n = S.editMetadata) || void 0 === n ? void 0 : n.applicationAudio) || void 0 === w || w),
+        [O, H] = l.useState({
+            start: null !== (_ = null === (j = S.editMetadata) || void 0 === j ? void 0 : j.start) && void 0 !== _ ? _ : 0,
+            end: null !== (k = null === (C = S.editMetadata) || void 0 === C ? void 0 : C.end) && void 0 !== k ? k : 0
         }),
-        [z, W] = l.useState(T.name),
+        [W, U] = l.useState(S.name),
         V = l.useRef({
-            name: z,
+            name: W,
             editMetadata: {
-                start: H.start,
-                end: H.end,
-                voiceAudio: F,
-                applicationAudio: B
+                start: O.start,
+                end: O.end,
+                voiceAudio: A,
+                applicationAudio: D
             }
         });
     V.current = {
-        name: z,
+        name: W,
         editMetadata: {
-            start: H.start,
-            end: H.end,
-            voiceAudio: F,
-            applicationAudio: B
+            start: O.start,
+            end: O.end,
+            voiceAudio: A,
+            applicationAudio: D
         }
     };
-    let G = (0, v.l)(T);
+    let K = (0, v.l)(S);
     l.useEffect(() => {
         async function e() {
             let e = {};
-            null != G && (e = { thumbnail: await (0, p.R)(G, V.current.editMetadata.start) }),
-                (0, c.Tm)(T.id, {
+            null != K && (e = { thumbnail: await (0, p.R)(K, V.current.editMetadata.start) }),
+                (0, c.Tm)(S.id, {
                     ...V.current,
                     ...e
                 });
@@ -104,53 +104,53 @@ function C(e) {
         return () => {
             e();
         };
-    }, [T.id, G]);
-    let K = l.useRef(null),
-        Y = l.useMemo(
+    }, [S.id, K]);
+    let G = l.useRef(null),
+        X = l.useMemo(
             () => ({
-                videoPlayerRef: K,
-                applicationAudioEnabled: B,
-                setApplicationAudioEnabled: O,
-                voiceAudioEnabled: F,
-                setVoiceAudioEnabled: D,
-                cropData: H,
-                setCropData: U
+                videoPlayerRef: G,
+                applicationAudioEnabled: D,
+                setApplicationAudioEnabled: z,
+                voiceAudioEnabled: A,
+                setVoiceAudioEnabled: Z,
+                cropData: O,
+                setCropData: H
             }),
-            [B, F, H]
+            [D, A, O]
         );
-    return (0, n.jsx)(r.ModalRoot, {
+    return (0, a.jsx)(r.ModalRoot, {
         impression: { impressionName: i.ImpressionNames.CLIP_EDITOR_VIEWED },
         size: r.ModalSize.DYNAMIC,
         className: g.modalRoot,
-        transitionState: w,
-        children: (0, n.jsx)(d.Gt, {
-            value: A,
-            children: (0, n.jsx)(r.ModalContent, {
+        transitionState: T,
+        children: (0, a.jsx)(d.Gt, {
+            value: M,
+            children: (0, a.jsx)(r.ModalContent, {
                 className: g.modalContent,
-                children: (0, n.jsx)(h.Q.Provider, {
-                    value: Y,
+                children: (0, a.jsx)(h.Q.Provider, {
+                    value: X,
                     children:
-                        null == R || null == P
-                            ? (0, n.jsx)('div', {
+                        null == E || null == P
+                            ? (0, a.jsx)('div', {
                                   className: g.spinnerContainer,
-                                  children: (0, n.jsx)(r.Spinner, {})
+                                  children: (0, a.jsx)(r.Spinner, {})
                               })
-                            : (0, n.jsxs)(n.Fragment, {
+                            : (0, a.jsxs)(a.Fragment, {
                                   children: [
-                                      (0, n.jsx)(f.Z, {
-                                          videoURL: R,
-                                          isLoading: L,
-                                          onDoneLoading: () => k(!1),
+                                      (0, a.jsx)(f.Z, {
+                                          videoURL: E,
+                                          isLoading: F,
+                                          onDoneLoading: () => R(!1),
                                           audioURL: P,
-                                          transitionState: w
+                                          transitionState: T
                                       }),
-                                      !L &&
-                                          (0, n.jsx)(b.Z, {
-                                              channelId: y,
-                                              onSetClipName: W,
-                                              clipName: z,
-                                              clip: T,
-                                              onClose: N
+                                      !F &&
+                                          (0, a.jsx)(b.Z, {
+                                              channelId: N,
+                                              onSetClipName: U,
+                                              clipName: W,
+                                              clip: S,
+                                              onClose: L
                                           })
                                   ]
                               })

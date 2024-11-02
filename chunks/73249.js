@@ -1,49 +1,49 @@
 var r = t(200651),
     i = t(192379),
-    a = t(481060),
-    l = t(346610),
-    o = t(868643),
+    l = t(481060),
+    o = t(346610),
+    a = t(868643),
     s = t(912332),
     u = t(49012),
     c = t(358085),
     d = t(212459),
     m = t(701865),
-    _ = t(689938),
-    f = t(92718);
-function h() {
-    (0, a.closeModal)(m.U);
+    f = t(388032),
+    h = t(92718);
+function _() {
+    (0, l.closeModal)(m.U);
 }
-function E(e) {
-    let { onClick: n, tooltipText: t, children: i, ...l } = e;
-    return (0, r.jsx)(a.Tooltip, {
+function x(n) {
+    let { onClick: e, tooltipText: t, children: i, ...o } = n;
+    return (0, r.jsx)(l.Tooltip, {
         text: t,
-        children: (e) => {
-            let { ...t } = e;
-            return (0, r.jsx)(a.Button, {
+        children: (n) => {
+            let { ...t } = n;
+            return (0, r.jsx)(l.Button, {
                 ...t,
-                onClick: n,
-                look: a.ButtonLooks.BLANK,
-                size: a.ButtonSizes.ICON,
-                color: a.ButtonColors.CUSTOM,
-                className: f.actionButton,
-                ...l,
+                onClick: e,
+                look: l.ButtonLooks.BLANK,
+                size: l.ButtonSizes.ICON,
+                color: l.ButtonColors.CUSTOM,
+                className: h.actionButton,
+                ...o,
                 children: i
             });
         }
     });
 }
-function x() {
-    let { zoomed: e, setZoomed: n } = (0, d.Y)();
-    return (0, r.jsx)(E, {
-        onClick: () => n(!e),
-        tooltipText: e ? _.Z.Messages.MEDIA_VIEWER_CTA_ZOOM_OUT : _.Z.Messages.MEDIA_VIEWER_CTA_ZOOM_IN,
-        children: e ? (0, r.jsx)(a.XLargeIcon, {}) : (0, r.jsx)(a.MagnifyingGlassIcon, {})
+function p() {
+    let { zoomed: n, setZoomed: e } = (0, d.Y)();
+    return (0, r.jsx)(x, {
+        onClick: () => e(!n),
+        tooltipText: n ? f.intl.string(f.t.vOFof3) : f.intl.string(f.t.Kt4gZ2),
+        children: n ? (0, r.jsx)(l.XLargeIcon, {}) : (0, r.jsx)(l.MagnifyingGlassIcon, {})
     });
 }
-function p(e) {
-    var n, t;
-    let { item: u } = e,
-        c = null === (n = u.sourceMetadata) || void 0 === n ? void 0 : n.message,
+function C(n) {
+    var e, t;
+    let { item: u } = n,
+        c = null === (e = u.sourceMetadata) || void 0 === e ? void 0 : e.message,
         d = null === (t = u.sourceMetadata) || void 0 === t ? void 0 : t.identifier,
         m = i.useCallback(() => {
             if (null != c && null != d) {
@@ -54,7 +54,7 @@ function p(e) {
                         message: c,
                         source: 'media-viewer',
                         forwardOptions: { onlyEmbedIndices: [d.embedIndex] },
-                        onRequestSent: h
+                        onRequestSent: _
                     });
                     return;
                 }
@@ -64,54 +64,54 @@ function p(e) {
                     message: c,
                     source: 'media-viewer',
                     forwardOptions: { onlyAttachmentIds: [d.attachmentId] },
-                    onRequestSent: h
+                    onRequestSent: _
                 });
             }
         }, [c, d]),
-        { canForwardMessages: f } = (0, l.yk)({ location: 'ForwardLink' }, { autoTrackExposure: !1 });
-    return null != c && f && (0, o.h)(c)
-        ? (0, r.jsx)(E, {
+        { canForwardMessages: h } = (0, o.yk)({ location: 'ForwardLink' }, { autoTrackExposure: !1 });
+    return null != c && h && (0, a.h)(c)
+        ? (0, r.jsx)(x, {
               onClick: m,
-              tooltipText: _.Z.Messages.MESSAGE_ACTION_FORWARD,
-              children: (0, r.jsx)(a.ArrowAngleRightUpIcon, {})
+              tooltipText: f.intl.string(f.t.I3ltXF),
+              children: (0, r.jsx)(l.ArrowAngleRightUpIcon, {})
           })
         : null;
 }
-function C(e) {
-    let {} = e;
+function g(n) {
+    let {} = n;
     return c.isPlatformEmbedded
-        ? (0, r.jsx)(E, {
-              tooltipText: _.Z.Messages.DOWNLOAD,
-              children: (0, r.jsx)(a.DownloadIcon, {})
+        ? (0, r.jsx)(x, {
+              tooltipText: f.intl.string(f.t['1WjMbG']),
+              children: (0, r.jsx)(l.DownloadIcon, {})
           })
         : null;
 }
-function g(e) {
-    var n;
-    let { item: t } = e,
-        i = null !== (n = t.original) && void 0 !== n ? n : t.url;
-    return (0, r.jsx)(E, {
+function S(n) {
+    var e;
+    let { item: t } = n,
+        i = null !== (e = t.original) && void 0 !== e ? e : t.url;
+    return (0, r.jsx)(x, {
         onClick: () => (0, u.q)({ href: i }),
-        tooltipText: _.Z.Messages.OPEN_LINK,
-        children: (0, r.jsx)(a.WindowLaunchIcon, {})
+        tooltipText: f.intl.string(f.t.wuRE8P),
+        children: (0, r.jsx)(l.WindowLaunchIcon, {})
     });
 }
-function A(e) {
-    let {} = e;
-    return (0, r.jsx)(E, {
-        tooltipText: _.Z.Messages.MORE,
-        children: (0, r.jsx)(a.MoreHorizontalIcon, {})
+function E(n) {
+    let {} = n;
+    return (0, r.jsx)(x, {
+        tooltipText: f.intl.string(f.t.UKOtz8),
+        children: (0, r.jsx)(l.MoreHorizontalIcon, {})
     });
 }
-n.Z = i.memo(function (e) {
-    let { item: n, hideMediaOptions: t } = e;
+e.Z = i.memo(function (n) {
+    let { item: e, hideMediaOptions: t } = n;
     return (0, r.jsxs)('div', {
-        className: f.actionButtons,
+        className: h.actionButtons,
         children: [
-            (0, r.jsx)(x, {}),
+            (0, r.jsx)(p, {}),
             !t &&
                 (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(p, { item: n }), (0, r.jsx)(C, { item: n }), (0, r.jsx)(g, { item: n }), (0, r.jsx)(A, { item: n })]
+                    children: [(0, r.jsx)(C, { item: e }), (0, r.jsx)(g, { item: e }), (0, r.jsx)(S, { item: e }), (0, r.jsx)(E, { item: e })]
                 })
         ]
     });

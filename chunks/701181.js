@@ -5,28 +5,28 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(739566),
-    r = n(834129),
-    l = n(689938),
-    o = n(437814);
+var r = n(481060),
+    l = n(739566),
+    a = n(834129),
+    o = n(388032),
+    s = n(437814);
 function c(e) {
     let { message: t, compact: n, usernameHook: c } = e,
-        u = (0, s.ZP)(t),
+        u = (0, l.ZP)(t),
         d = c(u),
-        _ = l.Z.Messages.SYSTEM_MESSAGE_STAGE_SPEAKER_HOOK.format({
+        m = o.intl.format(o.t.dKW5Cw, {
             username: u.nick,
             usernameHook: d
         });
-    return (0, i.jsx)(r.Z, {
-        className: o.stageSystemMessage,
-        iconNode: (0, i.jsx)(a.MicrophoneArrowRightIcon, {
+    return (0, i.jsx)(a.Z, {
+        className: s.stageSystemMessage,
+        iconNode: (0, i.jsx)(r.MicrophoneArrowRightIcon, {
             size: 'md',
             color: 'currentColor'
         }),
-        iconContainerClassName: o.iconContainer,
+        iconContainerClassName: s.iconContainer,
         timestamp: t.timestamp,
         compact: n,
-        children: _
+        children: m
     });
 }

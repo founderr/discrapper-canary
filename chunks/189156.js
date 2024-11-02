@@ -8,7 +8,7 @@ n(192379);
 var i = n(481060),
     a = n(502762),
     s = n(63063),
-    o = n(689938),
+    o = n(388032),
     l = n(511582);
 let u = {
     profile: {
@@ -47,12 +47,12 @@ function c(e) {
                         (0, r.jsx)(i.Heading, {
                             variant: c,
                             color: 'text-normal',
-                            children: o.Z.Messages.PROVISIONAL_ACCOUNT
+                            children: o.intl.string(o.t.Iyka0d)
                         }),
                         (0, r.jsx)(i.Text, {
                             variant: d,
                             color: 'text-normal',
-                            children: o.Z.Messages.PROVISIONAL_ACCOUNT_EXPLAINER_BODY.format({ helpdeskArticle: s.Z.getArticleURL('') })
+                            children: o.intl.format(o.t['q+N8Ly'], { helpdeskArticle: s.Z.getArticleURL('') })
                         })
                     ]
                 })

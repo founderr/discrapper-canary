@@ -6,23 +6,23 @@ t.d(n, {
 var o = t(200651);
 t(192379);
 var r = t(120356),
-    l = t.n(r),
-    i = t(481060),
-    a = t(689938),
+    i = t.n(r),
+    l = t(481060),
+    a = t(388032),
     s = t(638635),
     c = t(739017);
 function u() {
     return (0, o.jsxs)('div', {
-        className: l()(s.paymentModalLockIcon, c.flex, c.alignCenter),
+        className: i()(s.paymentModalLockIcon, c.flex, c.alignCenter),
         children: [
-            (0, o.jsx)(i.LockIcon, {
+            (0, o.jsx)(l.LockIcon, {
                 size: 'sm',
                 color: 'currentColor',
                 className: s.lockIcon
             }),
-            (0, o.jsx)(i.Text, {
+            (0, o.jsx)(l.Text, {
                 variant: 'text-sm/medium',
-                children: a.Z.Messages.BILLING_SECURE
+                children: a.intl.string(a.t.Kv6Z4O)
             })
         ]
     });

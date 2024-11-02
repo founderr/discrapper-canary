@@ -6,7 +6,7 @@ n.d(t, {
         return u;
     },
     TB: function () {
-        return _;
+        return f;
     },
     Z0: function () {
         return l;
@@ -156,7 +156,7 @@ function d(e) {
         )
     };
 }
-function _(e, t, n, r) {
+function f(e, t, n, r) {
     var i,
         a = e && e[t];
     if ((a && (i = a[n]), i)) return i;

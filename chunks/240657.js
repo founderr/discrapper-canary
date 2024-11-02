@@ -1,38 +1,38 @@
-t.d(A, {
+n.d(t, {
     Z: function () {
         return c;
     }
 });
-var a = t(200651),
-    n = t(192379),
-    r = t(120356),
-    s = t.n(r),
-    o = t(481060),
-    l = t(741914),
-    i = t(677390),
-    d = t(554034);
+var A = n(200651),
+    r = n(192379),
+    a = n(120356),
+    l = n.n(a),
+    i = n(481060),
+    o = n(741914),
+    s = n(677390),
+    d = n(554034);
 function c(e) {
-    let { color: A, className: t, variant: r, text: c, lineClamp: u } = e,
-        C = (0, o.usePrivateHeadingLevel)(),
-        g = n.useMemo(
+    let { color: t, className: n, variant: a, text: c, lineClamp: u } = e,
+        g = (0, i.usePrivateHeadingLevel)(),
+        h = r.useMemo(
             () =>
                 null == c
                     ? null
-                    : (0, l.Z)(c, !0, {
+                    : (0, o.Z)(c, !0, {
                           allowHeading: null == u,
                           allowList: null == u,
-                          initialHeaderLevel: C
+                          initialHeaderLevel: g
                       }),
-            [c, u, C]
+            [c, u, g]
         );
-    return (0, a.jsx)(o.Text, {
-        className: s()(t, d.markup, {
-            [i.lineClamp2Plus]: null != u && u > 1,
-            [i.lineClamp1]: 1 === u
+    return (0, A.jsx)(i.Text, {
+        className: l()(n, d.markup, {
+            [s.lineClamp2Plus]: null != u && u > 1,
+            [s.lineClamp1]: 1 === u
         }),
-        color: A,
-        variant: r,
+        color: t,
+        variant: a,
         lineClamp: u,
-        children: g
+        children: h
     });
 }

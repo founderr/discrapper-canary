@@ -4,10 +4,10 @@ n.d(t, {
     }
 }),
     n(757143);
-var i = n(689938);
+var i = n(388032);
 let l = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
 function r(e) {
-    let t = i.Z.Messages.ACTIVITY_PANEL_GO_LIVE;
+    let t = i.intl.string(i.t.FeUKeH);
     return (
         null != e && null != e.sourceName && e.sourceName.length > 0 && (t = e.sourceName),
         {

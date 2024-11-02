@@ -31,30 +31,30 @@ var s = n(133495),
     u = Symbol('error'),
     c = Symbol('ended'),
     d = Symbol('lastPromise'),
-    _ = Symbol('handlePromise'),
-    E = Symbol('stream');
-function f(e, t) {
+    f = Symbol('handlePromise'),
+    _ = Symbol('stream');
+function h(e, t) {
     return {
         value: e,
         done: t
     };
 }
-function h(e) {
+function p(e) {
     var t = e[o];
     if (null !== t) {
-        var n = e[E].read();
-        null !== n && ((e[d] = null), (e[o] = null), (e[l] = null), t(f(n, !1)));
+        var n = e[_].read();
+        null !== n && ((e[d] = null), (e[o] = null), (e[l] = null), t(h(n, !1)));
     }
 }
-function p(e) {
-    i.nextTick(h, e);
+function m(e) {
+    i.nextTick(p, e);
 }
-var I = Object.getPrototypeOf(function () {}),
-    m = Object.setPrototypeOf(
+var g = Object.getPrototypeOf(function () {}),
+    E = Object.setPrototypeOf(
         (a(
             (r = {
                 get stream() {
-                    return this[E];
+                    return this[_];
                 },
                 next: function () {
                     var e,
@@ -63,11 +63,11 @@ var I = Object.getPrototypeOf(function () {}),
                         r = this,
                         a = this[u];
                     if (null !== a) return Promise.reject(a);
-                    if (this[c]) return Promise.resolve(f(void 0, !0));
-                    if (this[E].destroyed)
+                    if (this[c]) return Promise.resolve(h(void 0, !0));
+                    if (this[_].destroyed)
                         return new Promise(function (e, t) {
                             i.nextTick(function () {
-                                r[u] ? t(r[u]) : e(f(void 0, !0));
+                                r[u] ? t(r[u]) : e(h(void 0, !0));
                             });
                         });
                     var s = this[d];
@@ -78,17 +78,17 @@ var I = Object.getPrototypeOf(function () {}),
                             function (n, r) {
                                 e.then(function () {
                                     if (t[c]) {
-                                        n(f(void 0, !0));
+                                        n(h(void 0, !0));
                                         return;
                                     }
-                                    t[_](n, r);
+                                    t[f](n, r);
                                 }, r);
                             })
                         );
                     } else {
-                        var o = this[E].read();
-                        if (null !== o) return Promise.resolve(f(o, !1));
-                        n = new Promise(this[_]);
+                        var o = this[_].read();
+                        if (null !== o) return Promise.resolve(h(o, !1));
+                        n = new Promise(this[f]);
                     }
                     return (this[d] = n), n;
                 }
@@ -101,23 +101,23 @@ var I = Object.getPrototypeOf(function () {}),
         a(r, 'return', function () {
             var e = this;
             return new Promise(function (t, n) {
-                e[E].destroy(null, function (e) {
+                e[_].destroy(null, function (e) {
                     if (e) {
                         n(e);
                         return;
                     }
-                    t(f(void 0, !0));
+                    t(h(void 0, !0));
                 });
             });
         }),
         r),
-        I
+        g
     );
 e.exports = function (e) {
     var t,
         n = Object.create(
-            m,
-            (a((t = {}), E, {
+            E,
+            (a((t = {}), _, {
                 value: e,
                 writable: !0
             }),
@@ -137,10 +137,10 @@ e.exports = function (e) {
                 value: e._readableState.endEmitted,
                 writable: !0
             }),
-            a(t, _, {
+            a(t, f, {
                 value: function (e, t) {
-                    var r = n[E].read();
-                    r ? ((n[d] = null), (n[o] = null), (n[l] = null), e(f(r, !1))) : ((n[o] = e), (n[l] = t));
+                    var r = n[_].read();
+                    r ? ((n[d] = null), (n[o] = null), (n[l] = null), e(h(r, !1))) : ((n[o] = e), (n[l] = t));
                 },
                 writable: !0
             }),
@@ -155,9 +155,9 @@ e.exports = function (e) {
                 return;
             }
             var r = n[o];
-            null !== r && ((n[d] = null), (n[o] = null), (n[l] = null), r(f(void 0, !0))), (n[c] = !0);
+            null !== r && ((n[d] = null), (n[o] = null), (n[l] = null), r(h(void 0, !0))), (n[c] = !0);
         }),
-        e.on('readable', p.bind(null, n)),
+        e.on('readable', m.bind(null, n)),
         n
     );
 };

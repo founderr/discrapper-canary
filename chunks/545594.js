@@ -1,45 +1,45 @@
 n.d(t, {
     i: function () {
-        return r;
+        return s;
     }
 });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    a = n.n(s),
-    l = n(244119);
-function r(e) {
-    let { bannerIcon: t, bannerHeader: n, bannerSubtext: s, containerStyles: r, headerStyles: o, children: c } = e;
+var l = n(120356),
+    r = n.n(l),
+    a = n(244119);
+function s(e) {
+    let { bannerIcon: t, bannerHeader: n, bannerSubtext: l, containerStyles: s, headerStyles: o, children: c } = e;
     return (0, i.jsxs)('div', {
-        className: l.spamBanner,
+        className: a.spamBanner,
         children: [
             (0, i.jsxs)('div', {
-                className: a()(l.bannerTextContainer, r),
+                className: r()(a.bannerTextContainer, s),
                 children: [
                     'string' == typeof t
                         ? (0, i.jsx)('img', {
                               src: t,
                               alt: '',
-                              className: l.bannerIcon
+                              className: a.bannerIcon
                           })
                         : t,
                     (0, i.jsxs)('div', {
-                        className: l.bannerText,
+                        className: a.bannerText,
                         children: [
                             (0, i.jsx)('div', {
-                                className: a()(l.bannerHeader, o),
+                                className: r()(a.bannerHeader, o),
                                 children: n
                             }),
                             (0, i.jsx)('div', {
-                                className: l.bannerSubtext,
-                                children: s
+                                className: a.bannerSubtext,
+                                children: l
                             })
                         ]
                     })
                 ]
             }),
             (0, i.jsx)('div', {
-                className: l.actionButtons,
+                className: a.actionButtons,
                 children: c
             })
         ]

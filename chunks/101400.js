@@ -1,25 +1,25 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return s;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(924489),
-    s = n(824606),
-    r = n(889280);
-function l(e) {
+var r = n(924489),
+    l = n(824606),
+    a = n(889280);
+function s(e) {
     let { className: t, application: n } = e,
-        l = (0, s.Z)({ application: n });
+        s = (0, l.Z)({ application: n });
     return (0, i.jsx)('div', {
         className: t,
-        children: (0, i.jsx)(a.Z, {
+        children: (0, i.jsx)(r.Z, {
             application: n,
-            mutualGuilds: l,
+            mutualGuilds: s,
             mutualGuildShownMax: 3,
-            className: r.guildCountContainer,
-            guildIconSize: a.x.SMALL,
-            guildsClassName: r.guildsIconContainer,
+            className: a.guildCountContainer,
+            guildIconSize: r.x.SMALL,
+            guildsClassName: a.guildsIconContainer,
             compact: !0
         })
     });

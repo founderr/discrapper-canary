@@ -1,106 +1,106 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return g;
+        return E;
     }
 }),
-    t(47120),
-    t(773603);
-var n = t(200651),
-    a = t(192379),
-    i = t(913527),
-    r = t.n(i),
-    o = t(442837),
-    l = t(481060),
-    c = t(668781),
-    d = t(594174),
-    _ = t(63063),
-    u = t(88658),
-    E = t(398826),
-    T = t(575356),
-    S = t(838436),
-    I = t(726985),
-    N = t(981631),
-    m = t(689938),
-    C = t(472346);
-let A = (e) => {
-    (0, l.openModalLazy)(async () => {
-        let { default: s } = await t.e('25120').then(t.bind(t, 926281));
-        return (t) =>
-            (0, n.jsx)(s, {
-                modalProps: t,
+    n(47120),
+    n(773603);
+var i = n(200651),
+    s = n(192379),
+    r = n(913527),
+    l = n.n(r),
+    a = n(442837),
+    o = n(481060),
+    c = n(668781),
+    d = n(594174),
+    u = n(63063),
+    m = n(88658),
+    h = n(398826),
+    g = n(575356),
+    p = n(838436),
+    x = n(726985),
+    S = n(981631),
+    T = n(388032),
+    C = n(472346);
+let _ = (e) => {
+    (0, o.openModalLazy)(async () => {
+        let { default: t } = await n.e('25120').then(n.bind(n, 926281));
+        return (n) =>
+            (0, i.jsx)(t, {
+                modalProps: n,
                 settings: e
             });
     });
 };
-function g() {
-    let e = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
-        { currentHarvestType: s, awaitingInitialRequest: t } = (0, o.cj)([T.Z], () => ({
-            currentHarvestType: T.Z.harvestType,
-            awaitingInitialRequest: T.Z.requestingHarvest
+function E() {
+    let e = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
+        { currentHarvestType: t, awaitingInitialRequest: n } = (0, a.cj)([g.Z], () => ({
+            currentHarvestType: g.Z.harvestType,
+            awaitingInitialRequest: g.Z.requestingHarvest
         })),
-        [i, g] = a.useState(!1);
+        [r, E] = s.useState(!1);
     if (null == e) return null;
-    let h = (0, u.$6)(s, e) || t,
-        O = h && null != s,
-        p = () => {
-            A({
-                header: m.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_TITLE,
-                body: m.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_WEB_NOTE.format({ helpdeskArticle: _.Z.getArticleURL(N.BhN.GDPR_PACKAGE_CONTENTS) }),
-                confirmText: m.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_CONFIRM,
-                cancelText: m.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_CANCEL,
-                confirmButtonColor: l.Button.Colors.BRAND,
+    let f = (0, m.$6)(t, e) || n,
+        I = f && null != t,
+        N = () => {
+            _({
+                header: T.intl.string(T.t.jxXMEx),
+                body: T.intl.format(T.t.fSv59f, { helpdeskArticle: u.Z.getArticleURL(S.BhN.GDPR_PACKAGE_CONTENTS) }),
+                confirmText: T.intl.string(T.t.NYgNg4),
+                cancelText: T.intl.string(T.t.jpVjsr),
+                confirmButtonColor: o.Button.Colors.BRAND,
                 onConfirm: (e) => {
-                    g(!0),
-                        (0, E.h)(e)
+                    E(!0),
+                        (0, h.h)(e)
                             .then(
                                 (e) => {
                                     null != e && null != e.body
-                                        ? c.Z.show({ body: m.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_SUCCESS })
+                                        ? c.Z.show({ body: T.intl.string(T.t['6Nmv4u']) })
                                         : c.Z.show({
-                                              title: m.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_TITLE,
-                                              body: m.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_BODY
+                                              title: T.intl.string(T.t.OjbtDg),
+                                              body: T.intl.string(T.t['0F5Jys'])
                                           });
                                 },
                                 () =>
                                     c.Z.show({
-                                        title: m.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_TITLE,
-                                        body: m.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_BODY
+                                        title: T.intl.string(T.t.OjbtDg),
+                                        body: T.intl.string(T.t['0F5Jys'])
                                     })
                             )
-                            .finally(() => g(!1));
+                            .finally(() => E(!1));
                 }
             });
         };
-    return (0, n.jsxs)(S.U, {
-        setting: I.s6.PRIVACY_DATA_REQUEST,
+    return (0, i.jsxs)(p.U, {
+        setting: x.s6.PRIVACY_DATA_REQUEST,
         children: [
-            (0, n.jsx)(S.H, {
-                header: m.Z.Messages.DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE,
-                description: m.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_NOTE_V2.format({ helpdeskArticle: _.Z.getArticleURL(N.BhN.GDPR_REQUEST_DATA) })
+            (0, i.jsx)(p.H, {
+                header: T.intl.string(T.t.XAHCgI),
+                description: T.intl.format(T.t.P3kNfn, { helpdeskArticle: u.Z.getArticleURL(S.BhN.GDPR_REQUEST_DATA) })
             }),
-            O
-                ? (0, n.jsx)(l.Card, {
+            I
+                ? (0, i.jsx)(o.Card, {
                       className: C.card,
-                      children: (0, n.jsx)(l.Text, {
+                      children: (0, i.jsx)(o.Text, {
                           variant: 'text-md/normal',
-                          children: m.Z.Messages.DATA_DOWNLOAD_REQUESTED_STATUS_NOTE.format({ date: r()(s.created_at).add(N.eBq, 'days').format('MMMM Do YYYY') })
+                          children: T.intl.format(T.t.RNDlV1, { date: l()(t.created_at).add(S.eBq, 'days').format('MMMM Do YYYY') })
                       })
                   })
-                : (0, n.jsx)('div', {
+                : (0, i.jsx)('div', {
                       className: C.button,
-                      children: (0, n.jsx)(l.Tooltip, {
-                          text: e.verified ? null : m.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_TOOLTIP,
+                      children: (0, i.jsx)(o.Tooltip, {
+                          text: e.verified ? null : T.intl.string(T.t['c1f88/']),
                           children: (e) => {
-                              let { onMouseEnter: s, onMouseLeave: a } = e;
-                              return (0, n.jsx)(l.Button, {
-                                  disabled: h,
-                                  onClick: p,
-                                  onMouseEnter: s,
-                                  onMouseLeave: a,
-                                  look: l.Button.Looks.FILLED,
-                                  color: l.Button.Colors.BRAND,
-                                  submitting: i || t,
-                                  children: m.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_DOWNLOAD
+                              let { onMouseEnter: t, onMouseLeave: s } = e;
+                              return (0, i.jsx)(o.Button, {
+                                  disabled: f,
+                                  onClick: N,
+                                  onMouseEnter: t,
+                                  onMouseLeave: s,
+                                  look: o.Button.Looks.FILLED,
+                                  color: o.Button.Colors.BRAND,
+                                  submitting: r || n,
+                                  children: T.intl.string(T.t.dmBSKi)
                               });
                           }
                       })

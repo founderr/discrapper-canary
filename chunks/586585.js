@@ -5,42 +5,42 @@ t.d(n, {
 });
 var o,
     r,
-    l = t(200651);
+    i = t(200651);
 t(192379);
-var i = t(481060),
+var l = t(481060),
     a = t(600164),
     s = t(612853),
-    c = t(689938),
+    c = t(388032),
     u = t(297908);
 ((o = r || (r = {}))[(o.CONTINUE = 0)] = 'CONTINUE'), (o[(o.UPGRADE = 1)] = 'UPGRADE'), (o[(o.PURCHASE = 2)] = 'PURCHASE');
 let d = (e) => {
-    let { onBack: n, backText: t, primaryIcon: o, primaryCTA: r, primaryType: d, primaryText: p, primaryTooltip: f, primaryDisabled: _, primarySubmitting: m, onPrimary: S, secondaryText: E, onSecondary: h } = e;
-    return (0, l.jsxs)(i.ModalFooter, {
+    let { onBack: n, backText: t, primaryIcon: o, primaryCTA: r, primaryType: d, primaryText: p, primaryTooltip: f, primaryDisabled: m, primarySubmitting: h, onPrimary: _, secondaryText: g, onSecondary: S } = e;
+    return (0, i.jsxs)(l.ModalFooter, {
         justify: a.Z.Justify.BETWEEN,
         align: a.Z.Align.CENTER,
         children: [
             (() => {
                 if (null == r || null == p) return null;
-                let e = 2 === r ? i.ShinyButton : i.Button,
+                let e = 2 === r ? l.ShinyButton : l.Button,
                     n = {
                         innerClassName: u.button,
                         type: d,
-                        disabled: _,
-                        submitting: m,
-                        color: 0 === r ? i.Button.Colors.BRAND : i.Button.Colors.GREEN,
-                        onClick: S
+                        disabled: m,
+                        submitting: h,
+                        color: 0 === r ? l.Button.Colors.BRAND : l.Button.Colors.GREEN,
+                        onClick: _
                     };
                 return null != f
-                    ? (0, l.jsx)(i.Tooltip, {
+                    ? (0, i.jsx)(l.Tooltip, {
                           text: f,
                           children: (t) =>
-                              (0, l.jsxs)(e, {
+                              (0, i.jsxs)(e, {
                                   ...t,
                                   ...n,
                                   children: [
                                       null == o
                                           ? null
-                                          : (0, l.jsx)(o, {
+                                          : (0, i.jsx)(o, {
                                                 color: 'currentColor',
                                                 className: u.primaryIcon
                                             }),
@@ -48,12 +48,12 @@ let d = (e) => {
                                   ]
                               })
                       })
-                    : (0, l.jsxs)(e, {
+                    : (0, i.jsxs)(e, {
                           ...n,
                           children: [
                               null == o
                                   ? null
-                                  : (0, l.jsx)(o, {
+                                  : (0, i.jsx)(o, {
                                         color: 'currentColor',
                                         className: u.primaryIcon
                                     }),
@@ -61,23 +61,23 @@ let d = (e) => {
                           ]
                       });
             })(),
-            null == E
+            null == g
                 ? null
-                : (0, l.jsx)(i.Button, {
-                      color: i.Button.Colors.PRIMARY,
-                      look: i.Button.Looks.LINK,
-                      onClick: h,
-                      children: E
+                : (0, i.jsx)(l.Button, {
+                      color: l.Button.Colors.PRIMARY,
+                      look: l.Button.Looks.LINK,
+                      onClick: S,
+                      children: g
                   }),
-            (0, l.jsx)(s.Z, {}),
+            (0, i.jsx)(s.Z, {}),
             null == n
                 ? null
-                : (0, l.jsx)(i.Button, {
+                : (0, i.jsx)(l.Button, {
                       className: u.back,
-                      color: i.Button.Colors.PRIMARY,
-                      look: i.Button.Looks.LINK,
+                      color: l.Button.Colors.PRIMARY,
+                      look: l.Button.Looks.LINK,
                       onClick: n,
-                      children: null != t ? t : c.Z.Messages.BACK
+                      children: null != t ? t : c.intl.string(c.t['13/7kZ'])
                   })
         ]
     });

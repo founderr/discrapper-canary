@@ -3,42 +3,42 @@ n.d(t, {
         return o;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(120356),
-    r = n.n(a),
-    i = n(481060),
+var r = n(120356),
+    a = n.n(r),
+    s = n(481060),
     l = n(315771);
 function o(e) {
-    let { message: t, error: n, onClick: a, submitting: o, className: c, ctaMessage: _ } = e;
-    return (0, s.jsxs)('div', {
-        className: r()(l.container, c),
+    let { message: t, error: n, onClick: r, submitting: o, className: c, ctaMessage: d } = e;
+    return (0, i.jsxs)('div', {
+        className: a()(l.container, c),
         children: [
-            (0, s.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: l.textContainer,
                 children: [
-                    (0, s.jsx)(i.CircleWarningIcon, {
+                    (0, i.jsx)(s.CircleWarningIcon, {
                         size: 'custom',
                         width: 20,
                         height: 20,
                         color: 'currentColor',
                         className: l.warningIcon
                     }),
-                    (0, s.jsx)(i.Spacer, {
+                    (0, i.jsx)(s.Spacer, {
                         size: 10,
                         horizontal: !0
                     }),
-                    (0, s.jsxs)('div', {
+                    (0, i.jsxs)('div', {
                         children: [
-                            (0, s.jsx)(i.Spacer, { size: 1 }),
-                            (0, s.jsx)(i.Text, {
+                            (0, i.jsx)(s.Spacer, { size: 1 }),
+                            (0, i.jsx)(s.Text, {
                                 className: l.info,
                                 variant: 'text-sm/normal',
                                 children: t
                             }),
                             null != n &&
-                                (0, s.jsx)(i.Text, {
-                                    className: r()(l.info, l.error),
+                                (0, i.jsx)(s.Text, {
+                                    className: a()(l.info, l.error),
                                     variant: 'text-sm/normal',
                                     children: n
                                 })
@@ -46,18 +46,18 @@ function o(e) {
                     })
                 ]
             }),
-            (0, s.jsx)(i.Spacer, {
+            (0, i.jsx)(s.Spacer, {
                 size: 16,
                 horizontal: !0
             }),
-            (0, s.jsx)(i.Button, {
+            (0, i.jsx)(s.Button, {
                 className: l.undoButton,
-                color: i.Button.Colors.LINK,
-                look: i.Button.Looks.LINK,
-                size: i.Button.Sizes.ICON,
-                onClick: a,
+                color: s.Button.Colors.LINK,
+                look: s.Button.Looks.LINK,
+                size: s.Button.Sizes.ICON,
+                onClick: r,
                 submitting: o,
-                children: _
+                children: d
             })
         ]
     });

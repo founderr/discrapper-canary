@@ -1,12 +1,12 @@
-t.d(n, {
+e.d(n, {
     S: function () {
         return o;
     }
 });
-var i = t(442837),
-    r = t(359119);
-function o(e, n) {
-    return (0, i.e7)([r.ZP], () => r.ZP.getChannelSafetyWarnings(e), [e])
-        .filter((e) => e.type === n)
-        .find((e) => null == e.dismiss_timestamp);
+var i = e(442837),
+    r = e(359119);
+function o(t, n) {
+    return (0, i.e7)([r.ZP], () => r.ZP.getChannelSafetyWarnings(t), [t])
+        .filter((t) => t.type === n)
+        .find((t) => null == t.dismiss_timestamp);
 }

@@ -15,7 +15,7 @@ var i = n(442837),
     a = n(481060),
     s = n(430824),
     o = n(275759),
-    l = n(689938);
+    l = n(388032);
 let u = 'guild-connection-roles';
 function c(e) {
     (0, a.openModalLazy)(
@@ -40,7 +40,7 @@ function d(e) {
     return (0, i.e7)([s.Z], () => (0, o.kQ)(e, s.Z.getRoles(e.id)), [e])
         ? (0, r.jsx)(a.MenuItem, {
               id: 'guild-connection-roles',
-              label: l.Z.Messages.CONNECTIONS_ROLES_CHANNEL_NAME,
+              label: l.intl.string(l.t.ghtnsr),
               icon: a.LinkIcon,
               action: () => c(e.id)
           })

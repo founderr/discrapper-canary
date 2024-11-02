@@ -3,20 +3,20 @@ t.d(n, {
         return u;
     }
 });
-var o = t(200651);
+var r = t(200651);
 t(192379);
-var r = t(442837),
-    a = t(481060),
-    i = t(223245),
-    l = t(246946),
-    c = t(689938);
+var o = t(442837),
+    i = t(481060),
+    l = t(223245),
+    a = t(246946),
+    c = t(388032);
 function u() {
-    let e = (0, r.e7)([l.Z], () => l.Z.enabled, []);
-    return (0, o.jsx)(a.MenuCheckboxItem, {
+    let e = (0, o.e7)([a.Z], () => a.Z.enabled, []);
+    return (0, r.jsx)(i.MenuCheckboxItem, {
         id: 'streamer-mode-toggle',
-        label: c.Z.Messages.ENABLE_STREAMER_MODE_LABEL,
+        label: c.intl.string(c.t.p9ZAJS),
         action: () => {
-            i.Z.setEnabled(!e);
+            l.Z.setEnabled(!e);
         },
         checked: e
     });

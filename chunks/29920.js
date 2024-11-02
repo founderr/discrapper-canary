@@ -1,24 +1,24 @@
 n.d(t, {
     H: function () {
-        return r;
+        return a;
     }
 });
 var i = n(544891),
-    a = n(960048),
-    s = n(981631);
-async function r(e) {
-    let { userTrialOffer: t, userDiscount: n, userDiscountOffer: r } = e;
+    r = n(960048),
+    l = n(981631);
+async function a(e) {
+    let { userTrialOffer: t, userDiscount: n, userDiscountOffer: a } = e;
     try {
         let e = await i.tn.post({
-            url: s.ANM.PREMIUM_MARKETING,
+            url: l.ANM.PREMIUM_MARKETING,
             body: {
                 user_trial_offer: t,
                 user_discount: n,
-                user_discount_offer: r
+                user_discount_offer: a
             }
         });
         if (e.ok) return e.body;
-        return a.Z.captureMessage('fetchPremiumMarketingContentWithUserOffer failed'), [];
+        return r.Z.captureMessage('fetchPremiumMarketingContentWithUserOffer failed'), [];
     } catch (e) {
         return [];
     }

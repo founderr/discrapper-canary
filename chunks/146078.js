@@ -3,7 +3,7 @@ n.d(t, {
         return i;
     }
 });
-var r = n(689938);
+var r = n(388032);
 function i(e) {
-    return void 0 === e ? r.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER : 0 === e ? r.Z.Messages.USER_PROFILE_NO_MUTUAL_SERVERS : r.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({ count: e });
+    return void 0 === e ? r.intl.string(r.t['4lTDZm']) : 0 === e ? r.intl.string(r.t.jpY0X1) : r.intl.formatToPlainString(r.t.eE3oen, { count: e });
 }

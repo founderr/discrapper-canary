@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return h;
     },
     i: function () {
-        return _;
+        return f;
     }
 });
 var r = n(200651),
@@ -13,26 +13,26 @@ var r = n(200651),
     o = n(626135),
     l = n(981631),
     u = n(921944),
-    c = n(689938),
+    c = n(388032),
     d = n(326707);
-function _(e) {
-    return e || !(a.tq || a.Em) ? c.Z.Messages.SEASONAL_GIFTING_DM_POPUP_BODY : c.Z.Messages.SEASONAL_GIFTING_MAKE_SOMEONES_DAY_TOOLTIP;
+function f(e) {
+    return e || !(a.tq || a.Em) ? c.intl.string(c.t.gV5p7O) : c.intl.string(c.t['WNk//v']);
 }
-function E(e) {
-    let { onComplete: t, onDMCheckItOutClick: u, isDM: E } = e;
+function _(e) {
+    let { onComplete: t, onDMCheckItOutClick: u, isDM: _ } = e;
     i.useEffect(() => {
         o.default.track(l.rMx.PREMIUM_GIFT_UPSELL_VIEWED, { type: 'holiday_gifting_tip' });
     }, []);
-    let f = i.useMemo(() => [() => n.e('36278').then(n.t.bind(n, 268147, 19)), () => n.e('66902').then(n.t.bind(n, 7171, 19)), () => n.e('99694').then(n.t.bind(n, 55562, 19))], []),
-        h = E || !(a.tq || a.Em),
-        p = h ? c.Z.Messages.SEASONAL_GIFTING_DM_POPUP_HEADER : c.Z.Messages.SEASONAL_GIFTING_POPUP_HEADER,
-        I = h ? c.Z.Messages.SEASONAL_GIFTING_DM_POPUP_CTA : c.Z.Messages.SEASONAL_GIFTING_SEND_GIFT_CTA;
+    let h = i.useMemo(() => [() => n.e('36278').then(n.t.bind(n, 268147, 19)), () => n.e('66902').then(n.t.bind(n, 7171, 19)), () => n.e('99694').then(n.t.bind(n, 55562, 19))], []),
+        p = _ || !(a.tq || a.Em),
+        m = p ? c.intl.string(c.t.IYHmjI) : c.intl.string(c.t.kgJi9P),
+        g = p ? c.intl.string(c.t.aKD15e) : c.intl.string(c.t.g2V4X1);
     return (0, r.jsxs)('div', {
         className: d.container,
         children: [
             (0, r.jsx)(s.ChainedLottieAnimation, {
                 className: d.image,
-                animationData: f
+                animationData: h
             }),
             (0, r.jsxs)('div', {
                 className: d.body,
@@ -40,12 +40,12 @@ function E(e) {
                     (0, r.jsx)(s.Heading, {
                         className: d.text,
                         variant: 'heading-sm/semibold',
-                        children: p
+                        children: m
                     }),
                     (0, r.jsx)(s.Text, {
                         className: d.text,
                         variant: 'text-sm/normal',
-                        children: _(E)
+                        children: f(_)
                     })
                 ]
             }),
@@ -57,13 +57,13 @@ function E(e) {
                         look: s.Button.Looks.FILLED,
                         color: s.Button.Colors.BRAND,
                         onClick: () => t(),
-                        children: c.Z.Messages.GOT_IT
+                        children: c.intl.string(c.t['NX+WJC'])
                     }),
                     (0, r.jsx)(s.Button, {
                         className: d.dmButton,
                         color: s.Button.Colors.BRAND_INVERTED,
                         onClick: () => u(),
-                        children: I
+                        children: g
                     })
                 ]
             }),
@@ -71,7 +71,7 @@ function E(e) {
         ]
     });
 }
-function f(e) {
+function h(e) {
     let { onComplete: t, onDMCheckItOutClick: n, markAsDismissed: i, isDM: a } = e;
     return (0, r.jsx)(s.Popout, {
         spacing: 0,
@@ -79,7 +79,7 @@ function f(e) {
         position: 'top',
         align: 'center',
         renderPopout: (e) =>
-            (0, r.jsx)(E, {
+            (0, r.jsx)(_, {
                 ...e,
                 onComplete: () => {
                     t(), i(u.L.USER_DISMISS);

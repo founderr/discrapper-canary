@@ -8,19 +8,19 @@ n.d(t, {
 }),
     n(47120);
 var o = n(200651),
-    s = n(192379),
-    r = n(100621),
+    r = n(192379),
+    s = n(100621),
     a = n(442837),
-    l = n(481060),
-    i = n(393238),
+    i = n(481060),
+    l = n(393238),
     c = n(110924),
     d = n(607070);
-let u = s.createContext({
+let u = r.createContext({
     springConfig: {},
     isExpanded: !1
 });
 function p(e) {
-    let t = s.useMemo(
+    let t = r.useMemo(
         () => ({
             springConfig: e.springConfig,
             isExpanded: e.isExpanded
@@ -35,30 +35,30 @@ function p(e) {
 function m(e) {
     var t;
     let { children: n } = e,
-        { springConfig: p, isExpanded: m } = s.useContext(u),
+        { springConfig: p, isExpanded: m } = r.useContext(u),
         x = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
-        { ref: C, height: _ = null } = (0, i.Z)(),
-        g = null !== (t = (0, c.Z)(_)) && void 0 !== t ? t : null,
-        [{ height: f }, h] = (0, l.useSpring)(() => ({
+        { ref: g, height: f = null } = (0, l.Z)(),
+        h = null !== (t = (0, c.Z)(f)) && void 0 !== t ? t : null,
+        [{ height: C }, v] = (0, i.useSpring)(() => ({
             from: { height: 0 },
             config: p
         }));
     return (
-        s.useLayoutEffect(() => {
-            null !== _ &&
-                h({
-                    height: _,
-                    immediate: !m || x || null === g
+        r.useLayoutEffect(() => {
+            null !== f &&
+                v({
+                    height: f,
+                    immediate: !m || x || null === h
                 });
-        }, [_, h, m, x, g]),
-        (0, o.jsx)(r.animated.div, {
+        }, [f, v, m, x, h]),
+        (0, o.jsx)(s.animated.div, {
             style: {
-                height: null === g ? 'auto' : f,
+                height: null === h ? 'auto' : C,
                 overflow: 'hidden'
             },
             children: (0, o.jsx)('div', {
                 style: { overflow: 'hidden' },
-                ref: C,
+                ref: g,
                 children: n
             })
         })

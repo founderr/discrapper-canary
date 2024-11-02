@@ -1,81 +1,81 @@
 var i = n(200651),
-    a = n(192379),
-    s = n(990547),
-    r = n(481060),
-    l = n(213609),
+    r = n(192379),
+    l = n(990547),
+    a = n(481060),
+    s = n(213609),
     o = n(252618),
     c = n(979233),
     d = n(175307),
     u = n(17845),
-    _ = n(374939),
-    E = n(233374),
-    h = n(611928),
-    m = n(283293),
-    I = n(63063),
-    p = n(113434),
-    g = n(833435),
-    T = n(150560),
-    S = n(558652),
-    C = n(736683),
-    f = n(452081),
+    h = n(374939),
+    m = n(233374),
+    p = n(611928),
+    g = n(283293),
+    f = n(63063),
+    _ = n(113434),
+    E = n(833435),
+    I = n(150560),
+    C = n(558652),
+    v = n(736683),
+    S = n(452081),
     N = n(46140),
-    A = n(981631),
-    v = n(689938),
-    Z = n(431418);
+    T = n(981631),
+    x = n(388032),
+    b = n(431418);
 t.Z = function () {
-    let { tabs: e, selectedTab: t, onSelectTab: n } = (0, f.z)(),
-        { onScroll: L, scrollPosition: R } = (0, c.M)(),
-        O = T.Z.getState().getUtmCurrentContext(),
-        x = (0, g._)({ location: N.dr.QUEST_HOME_DESKTOP }) ? C.Z : C.j;
-    a.useEffect(() => {
-        (0, l.h)({
-            name: s.ImpressionNames.QUEST_HOME,
-            type: s.ImpressionTypes.VIEW,
+    let { tabs: e, selectedTab: t, onSelectTab: n } = (0, S.z)(),
+        { onScroll: A, scrollPosition: Z } = (0, c.M)(),
+        y = I.Z.getState().getUtmCurrentContext(),
+        L = (0, E._)({ location: N.dr.QUEST_HOME_DESKTOP }) ? v.Z : v.j;
+    r.useEffect(() => {
+        (0, s.h)({
+            name: l.ImpressionNames.QUEST_HOME,
+            type: l.ImpressionTypes.VIEW,
             properties: {
-                utm_source_current: O.utmSourceCurrent,
-                utm_medium_current: O.utmMediumCurrent,
-                utm_campaign_current: O.utmCampaignCurrent,
-                utm_content_current: O.utmContentCurrent,
+                utm_source_current: y.utmSourceCurrent,
+                utm_medium_current: y.utmMediumCurrent,
+                utm_campaign_current: y.utmCampaignCurrent,
+                utm_content_current: y.utmContentCurrent,
                 tab: t
             }
         });
     }, [t]);
-    let b = a.useCallback(() => {
-        window.open(I.Z.getArticleURL(A.BhN.QUESTS_LEARN_MORE));
+    let R = r.useCallback(() => {
+        window.open(f.Z.getArticleURL(T.BhN.QUESTS_LEARN_MORE));
     }, []);
     return (
-        (0, o.Tt)({ location: v.Z.Messages.QUESTS }),
+        (0, o.Tt)({ location: x.intl.string(x.t.JALI2N) }),
         (0, i.jsxs)('div', {
-            className: Z.container,
+            className: b.container,
             children: [
-                (0, i.jsxs)(h.ZP, {
-                    children: [(0, i.jsx)('div', { className: Z.dragRegion }), (0, i.jsx)(h.z6, { scrollPosition: R }), (0, i.jsx)(h.aV, { icon: r.QuestsIcon })]
+                (0, i.jsxs)(p.ZP, {
+                    children: [(0, i.jsx)('div', { className: b.dragRegion }), (0, i.jsx)(p.z6, { scrollPosition: Z }), (0, i.jsx)(p.aV, { icon: a.QuestsIcon })]
                 }),
-                (0, i.jsxs)(m.Z, {
-                    onScroll: L,
+                (0, i.jsxs)(g.Z, {
+                    onScroll: A,
                     children: [
                         (0, i.jsx)(u.Z, {
-                            title: v.Z.Messages.GLOBAL_DISCOVERY_QUESTS_HOME_TITLE.format({}),
-                            description: v.Z.Messages.GLOBAL_DISCOVERY_QUESTS_HOME_DESCRIPTION,
+                            title: x.intl.formatToPlainString(x.t.lmMBf3, {}),
+                            description: x.intl.string(x.t.oWCrBg),
                             button: (0, i.jsx)(d.u, {
-                                text: v.Z.Messages.LEARN_MORE,
-                                onClick: b
+                                text: x.intl.string(x.t.hvVgAQ),
+                                onClick: R
                             }),
-                            className: Z.bannerContainer,
+                            className: b.bannerContainer,
                             children: (0, i.jsx)('div', {
-                                className: Z.bannerImage,
-                                children: (0, i.jsx)('div', { className: Z.bannerGradient })
+                                className: b.bannerImage,
+                                children: (0, i.jsx)('div', { className: b.bannerGradient })
                             })
                         }),
-                        (0, i.jsxs)(_.Z, {
+                        (0, i.jsxs)(h.Z, {
                             children: [
-                                (0, i.jsx)(E.Z, {
+                                (0, i.jsx)(m.Z, {
                                     tabs: e,
                                     selectedTab: t,
                                     onTabSelect: n,
-                                    className: Z.tabs
+                                    className: b.tabs
                                 }),
-                                t === p.e5.CLAIMED ? (0, i.jsx)(x, { onSelectTab: n }) : (0, i.jsx)(S.Z, {})
+                                t === _.e5.CLAIMED ? (0, i.jsx)(L, { onSelectTab: n }) : (0, i.jsx)(C.Z, {})
                             ]
                         })
                     ]

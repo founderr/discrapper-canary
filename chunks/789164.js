@@ -11,27 +11,27 @@ var r = n(200651),
     l = n(276580);
 let u = i.forwardRef(function (e, t) {
     var n;
-    let { children: u, className: c, titleClassName: d, title: _, icon: E, disabled: f, htmlFor: h, tag: p = 'h5', ...I } = e,
-        m = i.useId(),
-        T = null !== (n = I.titleId) && void 0 !== n ? n : m;
+    let { children: u, className: c, titleClassName: d, title: f, icon: _, disabled: h, htmlFor: p, tag: m = 'h5', ...g } = e,
+        E = i.useId(),
+        v = null !== (n = g.titleId) && void 0 !== n ? n : E;
     return (0, r.jsx)('div', {
         ref: t,
         className: c,
         children:
-            null != _
+            null != f
                 ? (0, r.jsx)(a.HeadingLevel, {
                       component: (0, r.jsxs)('div', {
                           className: l.sectionTitle,
                           children: [
-                              E,
-                              null != _
+                              _,
+                              null != f
                                   ? (0, r.jsx)(o.v, {
-                                        tag: p,
-                                        id: T,
-                                        htmlFor: h,
-                                        disabled: f,
+                                        tag: m,
+                                        id: v,
+                                        htmlFor: p,
+                                        disabled: h,
                                         className: d,
-                                        children: _
+                                        children: f
                                     })
                                   : null
                           ]
@@ -39,7 +39,7 @@ let u = i.forwardRef(function (e, t) {
                       children: (0, r.jsx)('div', {
                           className: l.children,
                           children: (0, r.jsx)(s.ol, {
-                              titleId: T,
+                              titleId: v,
                               children: u
                           })
                       })

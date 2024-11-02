@@ -3,27 +3,27 @@ n.d(t, {
         return c;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
 var r = n(481060),
-    i = n(471445),
+    s = n(471445),
     a = n(742593),
     l = n(577491);
 function o(e) {
     let { channel: t } = e,
-        n = (0, i.Th)(t.type);
-    return (0, s.jsxs)('div', {
+        n = (0, s.Th)(t.type);
+    return (0, i.jsxs)('div', {
         className: l.channelInfoContainer,
         children: [
             null != n
-                ? (0, s.jsx)(n, {
+                ? (0, i.jsx)(n, {
                       color: 'currentColor',
                       size: 'custom',
                       width: 20,
                       height: 20
                   })
                 : null,
-            (0, s.jsx)(r.Text, {
+            (0, i.jsx)(r.Text, {
                 className: l.channelInfoText,
                 color: 'none',
                 variant: 'text-sm/semibold',
@@ -34,21 +34,21 @@ function o(e) {
 }
 function c(e) {
     let { channel: t, guildScheduledEvent: n } = e;
-    return (0, s.jsxs)('div', {
+    return (0, i.jsxs)('div', {
         className: l.container,
         children: [
-            (0, s.jsx)(a.HZ, {
+            (0, i.jsx)(a.HZ, {
                 className: l.statusContainer,
                 guildId: n.guild_id,
                 guildEvent: n,
                 eventPreview: n
             }),
-            (0, s.jsx)(a.Rf, {
+            (0, i.jsx)(a.Rf, {
                 name: n.name,
                 description: n.description,
                 guildId: n.guild_id
             }),
-            null != t && n.channel_id === t.id ? (0, s.jsx)(o, { channel: t }) : null
+            null != t && n.channel_id === t.id ? (0, i.jsx)(o, { channel: t }) : null
         ]
     });
 }

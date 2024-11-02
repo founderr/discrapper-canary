@@ -1,15 +1,15 @@
 n.d(t, {
     b: function () {
-        return P;
+        return M;
     }
 }),
     n(47120),
     n(773603);
 var i = n(200651),
-    s = n(192379),
-    a = n(120356),
-    l = n.n(a),
-    r = n(848246),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
+    s = n(848246),
     o = n(793030),
     c = n(442837),
     u = n(46973),
@@ -17,155 +17,155 @@ var i = n(200651),
     h = n(846027),
     m = n(607070),
     p = n(361291),
-    _ = n(131951),
-    f = n(626135),
-    E = n(120522),
-    g = n(386542),
-    C = n(933843),
-    I = n(746599),
-    T = n(1163),
-    x = n(738672),
-    S = n(981631),
-    v = n(37113),
-    N = n(689938),
-    A = n(351065);
-function Z(e) {
+    f = n(131951),
+    g = n(626135),
+    C = n(120522),
+    x = n(386542),
+    v = n(933843),
+    _ = n(746599),
+    I = n(1163),
+    E = n(738672),
+    b = n(981631),
+    S = n(37113),
+    Z = n(388032),
+    T = n(351065);
+function N(e) {
     let { className: t, onDismiss: n } = e;
     return (0, i.jsx)(d.Button, {
         className: t,
-        'aria-label': N.Z.Messages.CLOSE,
+        'aria-label': Z.intl.string(Z.t.cpT0Cg),
         look: d.Button.Looks.BLANK,
         size: d.Button.Sizes.NONE,
         onClick: n,
         children: (0, i.jsx)(d.XSmallIcon, {
             size: 'xs',
-            className: A.closeIcon,
+            className: T.closeIcon,
             color: 'white'
         })
     });
 }
-let M = v.LY.RESOLUTION_1440,
-    b = v.ws.FPS_60;
-function R(e) {
+let j = S.LY.RESOLUTION_1440,
+    A = S.ws.FPS_60;
+function y(e) {
     let { channel: t } = e,
         n = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
-        [a, l] = s.useState(!1),
+        [r, a] = l.useState(!1),
         { preset: o } = (0, c.cj)([p.Z], () => p.Z.getState()),
-        g = (0, c.e7)([_.Z], () => _.Z.getGoLiveSource()),
-        T = s.useCallback(() => {
-            l(!0),
-                (0, E.S)(r.q.STREAM_HIGH_QUALITY)
+        x = (0, c.e7)([f.Z], () => f.Z.getGoLiveSource()),
+        I = l.useCallback(() => {
+            a(!0),
+                (0, C.S)(s.q.STREAM_HIGH_QUALITY)
                     .then((e) => {
                         if (e) {
                             if (
-                                ((0, I.J1)(!(0, C.mc)(M, b)),
-                                f.default.track(S.rMx.PERK_DEMO_OFFER_ACCEPTED, {
+                                ((0, _.J1)(!(0, v.mc)(j, A)),
+                                g.default.track(b.rMx.PERK_DEMO_OFFER_ACCEPTED, {
                                     guild_id: t.guild_id,
                                     channel_id: t.id,
-                                    perk_type: r.q.STREAM_HIGH_QUALITY,
-                                    resolution: M,
-                                    max_fps: b
+                                    perk_type: s.q.STREAM_HIGH_QUALITY,
+                                    resolution: j,
+                                    max_fps: A
                                 }),
-                                (0, I.cD)(!1),
-                                null == g)
+                                (0, _.cD)(!1),
+                                null == x)
                             )
                                 return;
                             let e = {
                                 qualityOptions: {
                                     preset: o,
-                                    resolution: M,
-                                    frameRate: b
+                                    resolution: j,
+                                    frameRate: A
                                 },
                                 context: u.Yn.STREAM
                             };
-                            null != g.desktopSource
+                            null != x.desktopSource
                                 ? (e.desktopSettings = {
-                                      sourceId: g.desktopSource.id,
+                                      sourceId: x.desktopSource.id,
                                       sound: !0
                                   })
-                                : null != g.cameraSource &&
+                                : null != x.cameraSource &&
                                   (e.cameraSettings = {
-                                      videoDeviceGuid: g.cameraSource.videoDeviceGuid,
-                                      audioDeviceGuid: g.cameraSource.audioDeviceGuid
+                                      videoDeviceGuid: x.cameraSource.videoDeviceGuid,
+                                      audioDeviceGuid: x.cameraSource.audioDeviceGuid
                                   }),
                                 h.Z.setGoLiveSource(e);
                         }
                     })
                     .catch(() => {})
                     .finally(() => {
-                        l(!1);
+                        a(!1);
                     });
-        }, [o, t, g]);
+        }, [o, t, x]);
     return (0, i.jsx)(d.ShinyButton, {
         fullWidth: !0,
         pauseAnimation: n,
         color: d.Button.Colors.GREEN,
         size: d.Button.Sizes.SMALL,
-        className: A.optInButton,
-        onClick: T,
-        submitting: a,
-        children: N.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_POPOUT_CTA_V2
+        className: T.optInButton,
+        onClick: I,
+        submitting: r,
+        children: Z.intl.string(Z.t['Rpn/09'])
     });
 }
-function L(e) {
-    let { channel: t, hidden: n, onDismiss: s } = e,
-        a = T.Z.useExperiment({ location: 'StreamButtonDemoOptInPopoutContent' }, { autoTrackExposure: !1 }).extendedDemoDuration;
+function P(e) {
+    let { channel: t, hidden: n, onDismiss: l } = e,
+        r = I.Z.useExperiment({ location: 'StreamButtonDemoOptInPopoutContent' }, { autoTrackExposure: !1 }).extendedDemoDuration;
     return (0, i.jsxs)('div', {
-        className: l()(A.optInPopout, A.variant2OptInPopout, { [A.hidden]: n }),
+        className: a()(T.optInPopout, T.variant2OptInPopout, { [T.hidden]: n }),
         children: [
             (0, i.jsx)('img', {
-                className: A.image,
+                className: T.image,
                 src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png',
                 alt: 'HD Streaming Nitro Perk'
             }),
-            (0, i.jsx)(Z, {
-                className: A.variant2CloseButton,
-                onDismiss: s
+            (0, i.jsx)(N, {
+                className: T.variant2CloseButton,
+                onDismiss: l
             }),
             (0, i.jsx)('div', {
-                className: A.variant2InfoContainerParent,
+                className: T.variant2InfoContainerParent,
                 children: (0, i.jsxs)('div', {
-                    className: A.variant2InfoContainer,
+                    className: T.variant2InfoContainer,
                     children: [
                         (0, i.jsx)(o.xv, {
-                            className: A.variant2Text,
+                            className: T.variant2Text,
                             variant: 'text-sm/medium',
-                            children: a ? N.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_POPOUT_BODY : N.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_POPOUT_BODY
+                            children: r ? Z.intl.string(Z.t.ZYQ2zc) : Z.intl.string(Z.t.kr8AEx)
                         }),
-                        (0, i.jsx)(R, { channel: t })
+                        (0, i.jsx)(y, { channel: t })
                     ]
                 })
             })
         ]
     });
 }
-function P(e) {
+function M(e) {
     let { channel: t, ...n } = e,
-        { shouldShowOptInPopout: a } = (0, g.k)(r.q.STREAM_HIGH_QUALITY),
-        { enabled: l } = T.Z.useExperiment(
+        { shouldShowOptInPopout: r } = (0, x.k)(s.q.STREAM_HIGH_QUALITY),
+        { enabled: a } = I.Z.useExperiment(
             { location: 'StreamButtonDemoOptInPopout' },
             {
                 autoTrackExposure: !1,
-                disable: !a
+                disable: !r
             }
         ),
-        o = s.useRef(!1);
-    return (s.useEffect(() => {
-        a &&
-            l &&
+        o = l.useRef(!1);
+    return (l.useEffect(() => {
+        r &&
+            a &&
             !o.current &&
             ((o.current = !0),
-            f.default.track(S.rMx.PERK_DEMO_OFFER_VIEWED, {
+            g.default.track(b.rMx.PERK_DEMO_OFFER_VIEWED, {
                 guild_id: t.guild_id,
                 channel_id: t.id,
-                perk_type: r.q.STREAM_HIGH_QUALITY
+                perk_type: s.q.STREAM_HIGH_QUALITY
             }));
-    }, [a, l, t]),
-    a && l)
-        ? (0, i.jsx)(x.h, {
+    }, [r, a, t]),
+    r && a)
+        ? (0, i.jsx)(E.h, {
               ...n,
               renderComponent: (e) =>
-                  (0, i.jsx)(L, {
+                  (0, i.jsx)(P, {
                       ...e,
                       channel: t
                   })

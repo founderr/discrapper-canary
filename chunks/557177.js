@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
     GN: function () {
-        return _;
+        return f;
     },
     tu: function () {
         return d;
@@ -30,7 +30,7 @@ function d(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
     return new r(e, t, n);
 }
-function _(e) {
+function f(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         r = arguments.length > 2 ? arguments[2] : void 0,

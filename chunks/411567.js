@@ -1,26 +1,26 @@
-t.d(n, {
+e.d(t, {
     Z: function () {
         return c;
     }
 });
-var a = t(200651);
-t(192379);
-var i = t(442837),
-    s = t(481060),
-    r = t(211739),
-    l = t(680089),
-    u = t(592125),
-    d = t(981631),
-    o = t(689938);
-function c(e) {
-    return (0, i.e7)([l.Z, u.Z], () => {
-        let n = Object.values(u.Z.getMutableBasicGuildChannelsForGuild(e.guild_id)).filter((e) => e.type === d.d4z.GUILD_CATEGORY);
-        return 0 === n.length || n.every((e) => l.Z.isCollapsed(e.id));
+var i = e(200651);
+e(192379);
+var r = e(442837),
+    l = e(481060),
+    a = e(211739),
+    u = e(680089),
+    d = e(592125),
+    s = e(981631),
+    o = e(388032);
+function c(n) {
+    return (0, r.e7)([u.Z, d.Z], () => {
+        let t = Object.values(d.Z.getMutableBasicGuildChannelsForGuild(n.guild_id)).filter((n) => n.type === s.d4z.GUILD_CATEGORY);
+        return 0 === t.length || t.every((n) => u.Z.isCollapsed(n.id));
     })
         ? null
-        : (0, a.jsx)(s.MenuItem, {
+        : (0, i.jsx)(l.MenuItem, {
               id: 'collapse-all-categories',
-              label: o.Z.Messages.COLLAPSE_ALL_CATEGORIES,
-              action: () => (0, r.N5)(e.guild_id)
+              label: o.intl.string(o.t['9dqzUl']),
+              action: () => (0, a.N5)(n.guild_id)
           });
 }

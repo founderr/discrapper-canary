@@ -3,10 +3,10 @@ n.d(t, {
         return c;
     }
 });
-var s = n(442837),
-    a = n(607070),
-    r = n(314684),
-    i = n(391110),
+var i = n(442837),
+    r = n(607070),
+    a = n(314684),
+    s = n(391110),
     l = n(180129);
 let o = {
         subtitle: { onlyShowOnHover: !1 },
@@ -17,11 +17,11 @@ let o = {
         descriptionCta: { onlyShowOnHover: !0 }
     },
     c = (e) => {
-        let t = (0, s.e7)([a.Z], () => a.Z.useReducedMotion),
-            n = (0, r.IB)() && !t,
+        let t = (0, i.e7)([r.Z], () => r.Z.useReducedMotion),
+            n = (0, a.IB)() && !t,
             c = {
-                [i.zW.DEFAULT]: o,
-                [i.zW.REWARD]: {
+                [s.zW.DEFAULT]: o,
+                [s.zW.REWARD]: {
                     subtitle: {
                         onlyShowOnHover: !0,
                         textVariant: 'text-sm/semibold'
@@ -37,7 +37,7 @@ let o = {
                     },
                     cardContainer: { className: n ? l.glowingCardContainer : void 0 }
                 },
-                [i.zW.NITRO_GRADIENT_HOVER_BORDER]: { cardContainer: { className: l.nitroGradientBorderHover } }
+                [s.zW.NITRO_GRADIENT_HOVER_BORDER]: { cardContainer: { className: l.nitroGradientBorderHover } }
             };
-        return null != e ? c[e] : c[i.zW.DEFAULT];
+        return null != e ? c[e] : c[s.zW.DEFAULT];
     };

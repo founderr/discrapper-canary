@@ -1,86 +1,86 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return I;
+        return x;
     }
 }),
-    t(47120);
-var n = t(200651),
-    a = t(192379),
-    i = t(442837),
-    r = t(481060),
-    o = t(401430),
-    l = t(921801),
-    c = t(695103),
-    d = t(998502),
-    _ = t(695346),
-    u = t(399970),
-    E = t(726985),
-    T = t(981631),
-    S = t(689938);
-function I() {
-    let [e] = a.useState(() => d.ZP.getEnableHardwareAcceleration()),
-        s = _.bm.useSetting(),
-        t = _.Sb.useSetting(),
-        I = (0, i.e7)([c.Z], () => c.Z.testModeApplicationId),
-        N = a.useCallback((e) => {
-            _.bm.updateSetting(!e);
+    n(47120);
+var i = n(200651),
+    s = n(192379),
+    r = n(442837),
+    l = n(481060),
+    a = n(401430),
+    o = n(921801),
+    c = n(695103),
+    d = n(998502),
+    u = n(695346),
+    m = n(399970),
+    h = n(726985),
+    g = n(981631),
+    p = n(388032);
+function x() {
+    let [e] = s.useState(() => d.ZP.getEnableHardwareAcceleration()),
+        t = u.bm.useSetting(),
+        n = u.Sb.useSetting(),
+        x = (0, r.e7)([c.Z], () => c.Z.testModeApplicationId),
+        S = s.useCallback((e) => {
+            u.bm.updateSetting(!e);
         }, []),
-        m = a.useCallback((e) => {
-            e ? (0, r.openModal)((e) => (0, n.jsx)(u.Z, { ...e })) : o.mc();
+        T = s.useCallback((e) => {
+            e ? (0, l.openModal)((e) => (0, i.jsx)(m.Z, { ...e })) : a.mc();
         }, []),
-        C = a.useCallback((e) => {
-            (0, r.openModal)((s) =>
-                (0, n.jsx)(r.ConfirmModal, {
-                    header: S.Z.Messages.SWITCH_HARDWARE_ACCELERATION,
-                    confirmText: S.Z.Messages.OKAY,
-                    cancelText: S.Z.Messages.CANCEL,
+        C = s.useCallback((e) => {
+            (0, l.openModal)((t) =>
+                (0, i.jsx)(l.ConfirmModal, {
+                    header: p.intl.string(p.t.aqpAvr),
+                    confirmText: p.intl.string(p.t.BddRzc),
+                    cancelText: p.intl.string(p.t['ETE/oK']),
                     onConfirm: () => d.ZP.setEnableHardwareAcceleration(e),
-                    ...s,
-                    children: (0, n.jsx)(r.Text, {
+                    ...t,
+                    children: (0, i.jsx)(l.Text, {
                         variant: 'text-sm/normal',
-                        children: S.Z.Messages.SWITCH_HARDWARE_ACCELERATION_BODY
+                        children: p.intl.string(p.t.uDP3Ky)
                     })
                 })
             );
         }, []);
-    return (0, n.jsxs)(r.FormSection, {
-        tag: r.FormTitleTags.H1,
-        title: S.Z.Messages.SETTINGS_ADVANCED,
+    return (0, i.jsxs)(l.FormSection, {
+        tag: l.FormTitleTags.H1,
+        title: p.intl.string(p.t['8/udY2']),
         children: [
-            (0, n.jsx)(l.F, {
-                setting: E.s6.SETTINGS_ADVANCED_DEVELOPER_MODE,
-                children: (0, n.jsx)(r.FormSwitch, {
-                    value: t,
-                    onChange: _.Sb.updateSetting,
-                    note: S.Z.Messages.DEVELOPER_MODE_HELP_TEXT.format({ apiDocsUrl: T.EYA.API_DOCS }),
-                    children: S.Z.Messages.DEVELOPER_MODE
+            (0, i.jsx)(o.F, {
+                setting: h.s6.SETTINGS_ADVANCED_DEVELOPER_MODE,
+                children: (0, i.jsx)(l.FormSwitch, {
+                    value: n,
+                    onChange: u.Sb.updateSetting,
+                    note: p.intl.format(p.t['CY6q/f'], { apiDocsUrl: g.EYA.API_DOCS }),
+                    children: p.intl.string(p.t.ObIb1d)
                 })
             }),
-            (0, n.jsx)(l.F, {
-                setting: E.s6.SETTINGS_ADVANCED_HARDWARE_ACCELERATION,
-                children: (0, n.jsx)(r.FormSwitch, {
+            (0, i.jsx)(o.F, {
+                setting: h.s6.SETTINGS_ADVANCED_HARDWARE_ACCELERATION,
+                children: (0, i.jsx)(l.FormSwitch, {
                     value: e,
                     onChange: C,
-                    note: S.Z.Messages.HARDWARE_ACCELERATION_HELP_TEXT,
-                    children: S.Z.Messages.HARDWARE_ACCELERATION
+                    note: p.intl.string(p.t.Afc7l5),
+                    children: p.intl.string(p.t['eOC/Fx'])
                 })
             }),
-            (0, n.jsx)(l.F, {
-                setting: E.s6.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY,
-                children: (0, n.jsx)(r.FormSwitch, {
-                    value: !s,
-                    onChange: N,
-                    note: S.Z.Messages.USER_SETTINGS_SHOW_LIBRARY_NOTE,
-                    children: S.Z.Messages.USER_SETTINGS_SHOW_LIBRARY
+            (0, i.jsx)(o.F, {
+                setting: h.s6.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY,
+                children: (0, i.jsx)(l.FormSwitch, {
+                    value: !t,
+                    onChange: S,
+                    note: p.intl.string(p.t['8mYp39']),
+                    children: p.intl.string(p.t.fi3UQE)
                 })
             }),
-            (0, n.jsx)(l.F, {
-                setting: E.s6.SETTINGS_ADVANCED_APPLICATION_TEST_MODE,
-                children: (0, n.jsx)(r.FormSwitch, {
-                    value: null != I,
-                    note: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_NOTE,
-                    onChange: m,
-                    children: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE
+            (0, i.jsx)(o.F, {
+                setting: h.s6.SETTINGS_ADVANCED_APPLICATION_TEST_MODE,
+                children: (0, i.jsx)(l.FormSwitch, {
+                    value: null != x,
+                    note: p.intl.string(p.t['52hMnJ']),
+                    onChange: T,
+                    children: p.intl.string(p.t.erOqlp)
                 })
             })
         ]

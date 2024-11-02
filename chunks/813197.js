@@ -12,7 +12,7 @@ var r,
     a = n(192379),
     s = n(53281),
     o = n(869783),
-    l = n(689938);
+    l = n(388032);
 function u(e, t, n) {
     return (
         t in e
@@ -29,7 +29,7 @@ function u(e, t, n) {
 function c() {
     return [
         {
-            name: l.Z.Messages.IMAGES,
+            name: l.intl.string(l.t.Sp2NFx),
             extensions: ['jpg', 'jpeg', 'png', 'gif']
         }
     ];
@@ -56,7 +56,7 @@ function d(e, t, n) {
             });
     });
 }
-class _ extends (r = a.PureComponent) {
+class f extends (r = a.PureComponent) {
     componentDidMount() {
         this._isMounted = !0;
     }
@@ -100,15 +100,15 @@ class _ extends (r = a.PureComponent) {
             u(this, 'handleFileError', async () => {
                 let { openUploadError: e } = await Promise.resolve().then(n.bind(n, 531643));
                 e({
-                    title: l.Z.Messages.PREMIUM_ALERT_ERROR_TITLE,
-                    help: l.Z.Messages.UNABLE_TO_PROCESS_IMAGE
+                    title: l.intl.string(l.t['0egKg4']),
+                    help: l.intl.string(l.t['7PnXqq'])
                 });
             });
     }
 }
-u(_, 'defaultProps', {
+u(f, 'defaultProps', {
     multiple: !0,
     tabIndex: -1,
     maxFileSizeBytes: 1 / 0
 }),
-    (t.ZP = _);
+    (t.ZP = f);

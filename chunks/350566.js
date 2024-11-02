@@ -1,45 +1,45 @@
-var E = a(544891),
-    _ = a(570140),
-    t = a(38618),
-    n = a(769654),
-    r = a(430824),
-    L = a(981631);
-s.Z = {
-    acceptGuildTemplate: (e, s, a) => (
-        _.Z.dispatch({
+var r = n(544891),
+    i = n(570140),
+    s = n(38618),
+    l = n(769654),
+    a = n(430824),
+    c = n(981631);
+t.Z = {
+    acceptGuildTemplate: (e, t, n) => (
+        i.Z.dispatch({
             type: 'GUILD_TEMPLATE_ACCEPT',
             code: e
         }),
-        new Promise((l, i) => {
-            E.tn
+        new Promise((u, d) => {
+            r.tn
                 .post({
-                    url: L.ANM.UNRESOLVED_GUILD_TEMPLATE(e),
+                    url: c.ANM.UNRESOLVED_GUILD_TEMPLATE(e),
                     body: {
-                        name: s,
-                        icon: a
+                        name: t,
+                        icon: n
                     },
                     oldFormErrors: !0
                 })
                 .then(
-                    (s) => {
-                        let a = s.body;
-                        _.Z.dispatch({
+                    (t) => {
+                        let n = t.body;
+                        i.Z.dispatch({
                             type: 'GUILD_TEMPLATE_ACCEPT_SUCCESS',
                             code: e,
-                            guild: a
+                            guild: n
                         }),
-                            t.Z.isConnected()
-                                ? r.Z.addConditionalChangeListener(() => {
-                                      if (null != r.Z.getGuild(a.id)) return (0, n.X)(a.id), l(a), !1;
+                            s.Z.isConnected()
+                                ? a.Z.addConditionalChangeListener(() => {
+                                      if (null != a.Z.getGuild(n.id)) return (0, l.X)(n.id), u(n), !1;
                                   })
-                                : ((0, n.X)(a.id), l(a));
+                                : ((0, l.X)(n.id), u(n));
                     },
-                    (s) => {
-                        _.Z.dispatch({
+                    (t) => {
+                        i.Z.dispatch({
                             type: 'GUILD_TEMPLATE_ACCEPT_FAILURE',
                             code: e
                         }),
-                            i(s.body);
+                            d(t.body);
                     }
                 );
         })

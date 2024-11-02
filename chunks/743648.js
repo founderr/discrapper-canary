@@ -1,43 +1,43 @@
 s.r(a);
-var d = s(200651);
+var t = s(200651);
 s(192379);
-var t = s(120356),
-    c = s.n(t),
+var d = s(120356),
+    c = s.n(d),
     n = s(793030),
-    r = s(481060),
-    i = s(313201),
+    i = s(481060),
+    r = s(313201),
     l = s(976465),
     o = s(474936),
-    m = s(689938),
-    _ = s(707707);
+    m = s(388032),
+    b = s(707707);
 a.default = (e) => {
     let { transitionState: a, onClose: s } = e,
-        t = (0, i.Dt)(),
-        b = Object.values(o.VU).map((e) => {
+        d = (0, r.Dt)(),
+        x = Object.values(o.VU).map((e) => {
             let a = (0, l.f9)(e),
                 s = (0, l.g_)(e),
-                t = (0, l.sf)(e);
-            return (0, d.jsxs)(
+                d = (0, l.sf)(e);
+            return (0, t.jsxs)(
                 'div',
                 {
-                    className: _.badge,
+                    className: b.badge,
                     children: [
-                        (0, d.jsx)('img', {
+                        (0, t.jsx)('img', {
                             src: s,
                             alt: a,
-                            className: _.badgeImage
+                            className: b.badgeImage
                         }),
-                        (0, d.jsxs)('div', {
-                            className: _.badgeText,
+                        (0, t.jsxs)('div', {
+                            className: b.badgeText,
                             children: [
-                                (0, d.jsx)(n.xv, {
+                                (0, t.jsx)(n.xv, {
                                     variant: 'text-md/semibold',
-                                    className: _.badgeName,
+                                    className: b.badgeName,
                                     children: a
                                 }),
-                                (0, d.jsx)(n.xv, {
+                                (0, t.jsx)(n.xv, {
                                     variant: 'text-xs/normal',
-                                    children: t
+                                    children: d
                                 })
                             ]
                         })
@@ -46,31 +46,31 @@ a.default = (e) => {
                 e
             );
         });
-    return (0, d.jsxs)(r.ModalRoot, {
+    return (0, t.jsxs)(i.ModalRoot, {
         transitionState: a,
-        'aria-labelledby': t,
-        className: c()(_.container, 'theme-dark'),
+        'aria-labelledby': d,
+        className: c()(b.container, 'theme-dark'),
         children: [
-            (0, d.jsx)(r.ModalCloseButton, {
+            (0, t.jsx)(i.ModalCloseButton, {
                 onClick: s,
-                className: _.closeButton
+                className: b.closeButton
             }),
-            (0, d.jsxs)(r.ModalContent, {
-                className: _.content,
+            (0, t.jsxs)(i.ModalContent, {
+                className: b.content,
                 children: [
-                    (0, d.jsx)(n.xv, {
+                    (0, t.jsx)(n.xv, {
                         variant: 'display-md',
-                        className: _.header,
-                        children: m.Z.Messages.NITRO_HOME_TIERED_TENURE_BADGES_MODAL_HEADER
+                        className: b.header,
+                        children: m.intl.string(m.t['rmUN7+'])
                     }),
-                    (0, d.jsx)(n.xv, {
+                    (0, t.jsx)(n.xv, {
                         variant: 'text-md/medium',
-                        className: _.subHeader,
-                        children: m.Z.Messages.NITRO_HOME_TIERED_TENURE_BADGES_MODAL_SUB_HEADER
+                        className: b.subHeader,
+                        children: m.intl.string(m.t.OI50am)
                     }),
-                    (0, d.jsx)('div', {
-                        className: _.badgeList,
-                        children: b
+                    (0, t.jsx)('div', {
+                        className: b.badgeList,
+                        children: x
                     })
                 ]
             })

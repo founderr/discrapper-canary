@@ -7,36 +7,36 @@ var r = n(200651),
     l = n(98528),
     u = n(729480);
 let c = i.forwardRef(function (e, t) {
-    let { categories: n, store: c, hasSearchResults: d, listPadding: _, renderRow: E, renderSection: f, renderSectionHeader: h, renderSectionFooter: p, renderInspector: I, renderEmptySearchState: m, rowCount: T, rowCountBySection: S, rowHeight: g, sectionHeaderHeight: A, sectionFooterHeight: N, renderUpsell: R, setShowUpsell: O } = e,
-        v = i.useRef(!1),
+    let { categories: n, store: c, hasSearchResults: d, listPadding: f, renderRow: _, renderSection: h, renderSectionHeader: p, renderSectionFooter: m, renderInspector: g, renderEmptySearchState: E, rowCount: v, rowCountBySection: I, rowHeight: S, sectionHeaderHeight: T, sectionFooterHeight: b, renderUpsell: y, setShowUpsell: A } = e,
+        N = i.useRef(!1),
         C = i.useRef(null),
-        L = (0, o.Iu)((e) => e.searchQuery),
-        D = c.useStore((e) => e.activeCategoryIndex),
-        y = n.map((e) => ((0, s._O)(e.categoryInfo) ? { isNitroLocked: e.categoryInfo.isNitroLocked } : { isNitroLocked: !1 })),
-        b = (0, l.Uf)({
+        R = (0, o.Iu)((e) => e.searchQuery),
+        O = c.useStore((e) => e.activeCategoryIndex),
+        D = n.map((e) => ((0, s._O)(e.categoryInfo) ? { isNitroLocked: e.categoryInfo.isNitroLocked } : { isNitroLocked: !1 })),
+        L = (0, l.Uf)({
             listRef: C,
-            searchQuery: L,
-            nitroLockedSectionStates: y,
-            setShowUpsell: O
+            searchQuery: R,
+            nitroLockedSectionStates: D,
+            setShowUpsell: A
         }),
-        M = (0, l.Qs)({
-            activeCategoryIndex: D,
-            isScrolling: v,
+        x = (0, l.Qs)({
+            activeCategoryIndex: O,
+            isScrolling: N,
             listRef: C,
             onActiveCategoryIndexChange: c.setActiveCategoryIndex,
             scrollOffset: 20,
-            searchQuery: L
+            searchQuery: R
         }),
-        P = i.useCallback(
+        w = i.useCallback(
             (e) => {
-                b(e), M(e);
+                L(e), x(e);
             },
-            [b, M]
+            [L, x]
         );
     return (
         (0, l.Xs)({
-            searchQuery: L,
-            activeCategoryIndex: D,
+            searchQuery: R,
+            activeCategoryIndex: O,
             listRef: C
         }),
         i.useImperativeHandle(
@@ -85,26 +85,26 @@ let c = i.forwardRef(function (e, t) {
         (0, r.jsxs)('div', {
             className: u.wrapper,
             children: [
-                L.length > 0 && !d && null != m
-                    ? m()
+                R.length > 0 && !d && null != E
+                    ? E()
                     : (0, r.jsx)(a.Z, {
                           role: 'none presentation',
-                          listPadding: _,
-                          onScroll: P,
-                          renderRow: E,
-                          renderSection: f,
-                          renderSectionHeader: h,
-                          renderSectionFooter: p,
-                          rowCount: T,
-                          rowCountBySection: S,
-                          rowHeight: g,
-                          sectionHeaderHeight: A,
-                          sectionFooterHeight: N,
+                          listPadding: f,
+                          onScroll: w,
+                          renderRow: _,
+                          renderSection: h,
+                          renderSectionHeader: p,
+                          renderSectionFooter: m,
+                          rowCount: v,
+                          rowCountBySection: I,
+                          rowHeight: S,
+                          sectionHeaderHeight: T,
+                          sectionFooterHeight: b,
                           stickyHeaders: !0,
                           ref: C
                       }),
-                null == R ? void 0 : R(),
-                null == I ? void 0 : I()
+                null == y ? void 0 : y(),
+                null == g ? void 0 : g()
             ]
         })
     );

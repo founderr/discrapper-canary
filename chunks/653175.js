@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 });
 var r = n(570140),
@@ -12,8 +12,8 @@ var r = n(570140),
     u = n(131951),
     c = n(19780),
     d = n(944486),
-    _ = n(594174);
-let E = (e, t) => ({
+    f = n(594174);
+let _ = (e, t) => ({
         channel_id: e.id,
         channel_type: e.type,
         guild_id: e.getGuildId(),
@@ -22,9 +22,9 @@ let E = (e, t) => ({
         media_session_id: c.Z.getMediaSessionId(),
         ...(0, i.kO)(c.Z.getGuildId(), c.Z.getChannelId(), t)
     }),
-    f = () => {
+    h = () => {
         var e;
-        let t = (0, a.P)(_.default.getCurrentUser());
+        let t = (0, a.P)(f.default.getCurrentUser());
         return {
             video_device_name: null === (e = u.Z.getVideoDevices()[u.Z.getVideoDeviceId()]) || void 0 === e ? void 0 : e.name,
             video_hardware_scaling_enabled: u.Z.getHardwareEncoding(),
@@ -32,15 +32,15 @@ let E = (e, t) => ({
             video_effect_detail: (0, o.V$)(t)
         };
     };
-function h(e, t, n, i) {
+function p(e, t, n, i) {
     let a = d.Z.getVoiceChannelId(),
         o = l.Z.getChannel(a);
     if (null == t && null != a && null != o) {
-        let t = E(o, i);
+        let t = _(o, i);
         if ((e(), s.Z.hasUsedBackgroundInCall)) {
             let e = {
                 ...t,
-                ...f()
+                ...h()
             };
             r.Z.dispatch({
                 type: 'VIDEO_BACKGROUND_SHOW_FEEDBACK',

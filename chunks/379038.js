@@ -1,41 +1,41 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return _;
+            return h;
         }
     }),
     n(47120);
 var l = n(200651),
-    s = n(192379),
-    i = n(481060),
-    r = n(981888),
+    i = n(192379),
+    r = n(481060),
+    d = n(981888),
     a = n(157689),
-    d = n(894017),
+    s = n(894017),
     o = n(854698),
     u = n(440371),
-    c = n(689938),
-    E = n(563384);
-function _(e) {
-    let { guildEvent: t, recurrenceId: n, transitionState: _, onClose: x } = e,
-        h = (0, d.Z)(n, t.id),
-        m = (0, o.iA)(n, t),
-        g = (0, o.x6)(m, h),
-        [D, I] = s.useState(g),
-        [T, { loading: j, error: N }] = (0, r.Z)(() => {
-            let e = (0, a.Z)(t, n, D, h);
-            return null == N && x(), e;
+    c = n(388032),
+    x = n(563384);
+function h(e) {
+    let { guildEvent: t, recurrenceId: n, transitionState: h, onClose: m } = e,
+        g = (0, s.Z)(n, t.id),
+        j = (0, o.iA)(n, t),
+        _ = (0, o.x6)(j, g),
+        [v, I] = i.useState(_),
+        [f, { loading: D, error: p }] = (0, d.Z)(() => {
+            let e = (0, a.Z)(t, n, v, g);
+            return null == p && m(), e;
         });
-    return (0, l.jsxs)(i.ModalRoot, {
-        transitionState: _,
+    return (0, l.jsxs)(r.ModalRoot, {
+        transitionState: h,
         children: [
-            (0, l.jsx)(i.ModalHeader, {
-                children: (0, l.jsx)(i.Heading, {
+            (0, l.jsx)(r.ModalHeader, {
+                children: (0, l.jsx)(r.Heading, {
                     variant: 'heading-lg/semibold',
-                    children: c.Z.Messages.EDIT_THIS_EVENT
+                    children: c.intl.string(c.t.wmVmXF)
                 })
             }),
-            (0, l.jsxs)(i.ModalContent, {
-                className: E.content,
+            (0, l.jsxs)(r.ModalContent, {
+                className: x.content,
                 children: [
                     (0, l.jsx)(u.Z, {
                         onScheduleChange: (e) => {
@@ -46,37 +46,37 @@ function _(e) {
                                     endDate: n
                                 });
                         },
-                        schedule: D,
-                        showEndDate: null != D.endDate,
-                        requireEndDate: null != D.endDate,
+                        schedule: v,
+                        showEndDate: null != v.endDate,
+                        requireEndDate: null != v.endDate,
                         guildId: t.guild_id,
                         recurrenceRule: t.recurrence_rule
                     }),
-                    null != N
-                        ? (0, l.jsx)(i.Text, {
+                    null != p
+                        ? (0, l.jsx)(r.Text, {
                               color: 'text-danger',
                               variant: 'text-xs/normal',
-                              className: E.warning,
-                              children: N.getAnyErrorMessage()
+                              className: x.warning,
+                              children: p.getAnyErrorMessage()
                           })
                         : null
                 ]
             }),
-            (0, l.jsxs)(i.ModalFooter, {
-                className: E.footer,
+            (0, l.jsxs)(r.ModalFooter, {
+                className: x.footer,
                 children: [
-                    (0, l.jsx)(i.Button, {
-                        color: i.Button.Colors.BRAND,
-                        onClick: T,
-                        className: E.button,
-                        submitting: j,
-                        disabled: (0, o.Y4)(D, g),
-                        children: c.Z.Messages.SAVE_EVENT
+                    (0, l.jsx)(r.Button, {
+                        color: r.Button.Colors.BRAND,
+                        onClick: f,
+                        className: x.button,
+                        submitting: D,
+                        disabled: (0, o.Y4)(v, _),
+                        children: c.intl.string(c.t.e5VEcH)
                     }),
-                    (0, l.jsx)(i.Button, {
-                        color: i.Button.Colors.PRIMARY,
-                        onClick: x,
-                        children: c.Z.Messages.CANCEL
+                    (0, l.jsx)(r.Button, {
+                        color: r.Button.Colors.PRIMARY,
+                        onClick: m,
+                        children: c.intl.string(c.t['ETE/oK'])
                     })
                 ]
             })

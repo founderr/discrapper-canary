@@ -1,9 +1,9 @@
-t.d(s, {
+n.d(t, {
     u: function () {
-        return o;
+        return s;
     }
 });
-let n = (0, t(818083).B)({
+let o = (0, n(818083).B)({
     kind: 'user',
     id: '2024-10_email_change_reasoning_buttons_free_text_response',
     label: 'Email Change Reasoning Buttons Free Text Response',
@@ -16,7 +16,7 @@ let n = (0, t(818083).B)({
         }
     ]
 });
-function o(e) {
-    return !!n.useExperiment({ location: e }, { autoTrackExposure: !1 }).enabled;
+function s(e) {
+    return !!o.useExperiment({ location: e }, { autoTrackExposure: !1 }).enabled;
 }
-s.Z = n;
+t.Z = o;

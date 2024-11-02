@@ -8,8 +8,8 @@ var r = n(544891),
     u = n(546796),
     c = n(37234),
     d = n(981631),
-    _ = n(792101),
-    E = n(689938);
+    f = n(792101),
+    _ = n(388032);
 t.Z = {
     open() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
@@ -73,26 +73,26 @@ t.Z = {
     },
     saveAccountChanges(e, t) {
         a.Z.dispatch({ type: 'USER_SETTINGS_MODAL_SUBMIT' });
-        let { username: n, email: s, emailToken: c, password: f, avatar: h, newPassword: p, discriminator: I } = e,
-            { close: m } = t;
+        let { username: n, email: s, emailToken: c, password: h, avatar: p, newPassword: m, discriminator: g } = e,
+            { close: E } = t;
         return (0, u.Z)(
             (e) => {
                 let t = {
                         username: n,
                         email: s,
                         email_token: c,
-                        password: f,
-                        avatar: h,
-                        new_password: p,
+                        password: h,
+                        avatar: p,
+                        new_password: m,
                         ...e,
-                        discriminator: null != I && '' !== I ? I : void 0
+                        discriminator: null != g && '' !== g ? g : void 0
                     },
                     a = i.K.get(d.JkL),
-                    o = (0, _.xJ)();
+                    o = (0, f.xJ)();
                 null != o && null != a && ((t.push_provider = o), (t.push_token = a));
                 let l = i.K.get(d.scU);
                 return (
-                    null != _.mv && null != l && ((t.push_voip_provider = _.mv), (t.push_voip_token = l)),
+                    null != f.mv && null != l && ((t.push_voip_provider = f.mv), (t.push_voip_token = l)),
                     r.tn.patch({
                         url: d.ANM.ME,
                         oldFormErrors: !0,
@@ -102,7 +102,7 @@ t.Z = {
             },
             {
                 checkEnabled: !1,
-                modalProps: { title: E.Z.Messages.TWO_FA_CHANGE_ACCOUNT },
+                modalProps: { title: _.intl.string(_.t.clQc1d) },
                 hooks: {
                     onEarlyClose: () =>
                         a.Z.dispatch({
@@ -127,19 +127,19 @@ t.Z = {
                         type: 'CURRENT_USER_UPDATE',
                         user: t
                     }),
-                    null != p &&
+                    null != m &&
                         a.Z.dispatch({
                             type: 'USER_PASSWORD_UPDATE',
                             user: t,
-                            newPassword: p
+                            newPassword: m
                         }),
-                    null != f &&
-                        null != p &&
+                    null != h &&
+                        null != m &&
                         a.Z.dispatch({
                             type: 'PASSWORD_UPDATED',
                             userId: t.id
                         }),
-                    m ? this.close() : this.submitComplete(),
+                    E ? this.close() : this.submitComplete(),
                     e
                 );
             },

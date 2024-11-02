@@ -1,41 +1,41 @@
-t.r(n),
-    t.d(n, {
+e.r(t),
+    e.d(t, {
         default: function () {
             return _;
         }
     });
-var s = t(200651);
-t(192379);
-var i = t(481060),
-    r = t(313201),
-    c = t(471253),
-    a = t(930180),
-    o = t(582019),
-    l = t(939863),
-    d = t(689938),
-    u = t(851836);
-function _(e) {
-    let { channel: n, transitionState: t, onClose: _, ...E } = e,
-        I = (0, r.Dt)(),
-        T = (0, a._d)(n.id),
-        N = async () => {
-            await (0, c.yi)(n), _();
+var i = e(200651);
+e(192379);
+var r = e(481060),
+    c = e(313201),
+    l = e(471253),
+    s = e(930180),
+    o = e(582019),
+    a = e(939863),
+    d = e(388032),
+    u = e(851836);
+function _(n) {
+    let { channel: t, transitionState: e, onClose: _, ...h } = n,
+        m = (0, c.Dt)(),
+        g = (0, s._d)(t.id),
+        f = async () => {
+            await (0, l.yi)(t), _();
         },
-        h = async () => {
-            await (0, c.RK)(n, !1), _();
+        p = async () => {
+            await (0, l.RK)(t, !1), _();
         };
-    return (0, s.jsx)(i.ModalRoot, {
-        transitionState: t,
-        'aria-labelledby': I,
-        ...E,
-        size: i.ModalSize.SMALL,
-        children: (0, s.jsxs)(i.ModalContent, {
+    return (0, i.jsx)(r.ModalRoot, {
+        transitionState: e,
+        'aria-labelledby': m,
+        ...h,
+        size: r.ModalSize.SMALL,
+        children: (0, i.jsxs)(r.ModalContent, {
             className: u.content,
             children: [
-                (0, s.jsx)(l.Z, {
-                    children: (0, s.jsx)('div', {
+                (0, i.jsx)(a.Z, {
+                    children: (0, i.jsx)('div', {
                         className: u.stageIconBackground,
-                        children: (0, s.jsx)(i.StageIcon, {
+                        children: (0, i.jsx)(r.StageIcon, {
                             size: 'custom',
                             color: 'currentColor',
                             width: 40,
@@ -44,57 +44,57 @@ function _(e) {
                         })
                     })
                 }),
-                (0, s.jsx)(i.Heading, {
-                    id: I,
+                (0, i.jsx)(r.Heading, {
+                    id: m,
                     variant: 'heading-xl/semibold',
                     color: 'header-primary',
                     className: u.headerTitle,
-                    children: d.Z.Messages.STAGE_MODERATOR_JOIN_MODAL_TITLE
+                    children: d.intl.string(d.t.njetU1)
                 }),
-                (0, s.jsx)(i.Text, {
+                (0, i.jsx)(r.Text, {
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
                     className: u.headerSubtitle,
-                    children: d.Z.Messages.STAGE_MODERATOR_JOIN_MODAL_SUBTITLE
+                    children: d.intl.string(d.t.LQY4JS)
                 }),
-                T > 0 && (0, s.jsx)(o.mv, { channelId: n.id }),
-                (0, s.jsxs)('div', {
+                g > 0 && (0, i.jsx)(o.mv, { channelId: t.id }),
+                (0, i.jsxs)('div', {
                     className: u.buttonsContainer,
                     children: [
-                        (0, s.jsxs)(i.Button, {
-                            color: i.Button.Colors.PRIMARY,
+                        (0, i.jsxs)(r.Button, {
+                            color: r.Button.Colors.PRIMARY,
                             className: u.button,
                             innerClassName: u.innerButton,
-                            onClick: h,
+                            onClick: p,
                             children: [
-                                (0, s.jsx)('div', {
+                                (0, i.jsx)('div', {
                                     className: u.icon,
-                                    children: (0, s.jsx)(i.MicrophoneIcon, {
+                                    children: (0, i.jsx)(r.MicrophoneIcon, {
                                         size: 'custom',
                                         color: 'currentColor',
                                         width: 20,
                                         height: 20
                                     })
                                 }),
-                                d.Z.Messages.STAGE_MODERATOR_JOIN_MODAL_JOIN_SPEAKER
+                                d.intl.string(d.t['Q8o/tb'])
                             ]
                         }),
-                        (0, s.jsxs)(i.Button, {
-                            color: i.Button.Colors.PRIMARY,
+                        (0, i.jsxs)(r.Button, {
+                            color: r.Button.Colors.PRIMARY,
                             className: u.button,
                             innerClassName: u.innerButton,
-                            onClick: N,
+                            onClick: f,
                             children: [
-                                (0, s.jsx)('div', {
+                                (0, i.jsx)('div', {
                                     className: u.icon,
-                                    children: (0, s.jsx)(i.GroupIcon, {
+                                    children: (0, i.jsx)(r.GroupIcon, {
                                         size: 'custom',
                                         color: 'currentColor',
                                         width: 20,
                                         height: 20
                                     })
                                 }),
-                                d.Z.Messages.STAGE_MODERATOR_JOIN_MODAL_JOIN_AUDIENCE
+                                d.intl.string(d.t['N3/Oyc'])
                             ]
                         })
                     ]

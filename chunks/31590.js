@@ -1,4 +1,4 @@
-let n = (0, t(818083).B)({
+let i = (0, n(818083).B)({
     id: '2024-08_premium_user_profile_try_it_out_desktop',
     label: 'Try It Out Entry Points',
     kind: 'user',
@@ -28,4 +28,4 @@ let n = (0, t(818083).B)({
         }
     ]
 });
-s.Z = n;
+t.Z = i;

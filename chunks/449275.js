@@ -1,9 +1,9 @@
 var i = n(200651),
-    a = n(192379),
-    s = n(770146),
-    r = n(689938),
-    l = n(658793);
-class o extends a.PureComponent {
+    r = n(192379),
+    l = n(770146),
+    a = n(388032),
+    s = n(658793);
+class o extends r.PureComponent {
     render() {
         let { className: e, sku: t } = this.props;
         return null == t.legalNotice
@@ -11,9 +11,9 @@ class o extends a.PureComponent {
             : (0, i.jsxs)('div', {
                   className: e,
                   children: [
-                      (0, i.jsx)(s.Z, { children: r.Z.Messages.APPLICATION_STORE_SECTION_TITLE_COPYRIGHT }),
+                      (0, i.jsx)(l.Z, { children: a.intl.string(a.t.m8OiMj) }),
                       (0, i.jsx)('div', {
-                          className: l.content,
+                          className: s.content,
                           children: t.legalNotice
                       })
                   ]

@@ -8,100 +8,100 @@ var r = n(200651),
     u = n(442837),
     c = n(570140),
     d = n(166459),
-    _ = n(911969),
-    E = n(607070),
-    f = n(209613),
-    h = n(998698),
-    p = n(661824),
-    I = n(703558),
-    m = n(117530),
-    T = n(459273),
-    S = n(444282),
-    g = n(898463),
-    A = n(981631),
-    N = n(989796),
-    R = n(112864);
-let O = [];
-function v(e) {
+    f = n(911969),
+    _ = n(607070),
+    h = n(209613),
+    p = n(998698),
+    m = n(661824),
+    g = n(703558),
+    E = n(117530),
+    v = n(459273),
+    I = n(444282),
+    S = n(898463),
+    T = n(981631),
+    b = n(989796),
+    y = n(112864);
+let A = [];
+function N(e) {
     let { channelId: t, type: n } = e,
-        a = (0, u.e7)([E.Z], () => E.Z.keyboardModeEnabled),
-        v = (0, f.Z)('attachments', l.hy.HORIZONTAL),
-        C = (0, u.e7)([m.Z], () => m.Z.getUploads(t, n.drafts.type)),
+        a = (0, u.e7)([_.Z], () => _.Z.keyboardModeEnabled),
+        N = (0, h.Z)('attachments', l.hy.HORIZONTAL),
+        C = (0, u.e7)([E.Z], () => E.Z.getUploads(t, n.drafts.type)),
         {
-            isApplicationCommand: L,
-            commandOptions: D,
-            commandOptionStates: y
-        } = (0, u.cj)([h.Z], () => {
-            let e = h.Z.getActiveCommand(t);
+            isApplicationCommand: R,
+            commandOptions: O,
+            commandOptionStates: D
+        } = (0, u.cj)([p.Z], () => {
+            let e = p.Z.getActiveCommand(t);
             if (null == e)
                 return {
                     isApplicationCommand: !1,
-                    commandOptions: O,
+                    commandOptions: A,
                     commandOptionStates: null
                 };
-            let n = h.Z.getOptionStates(t);
+            let n = p.Z.getOptionStates(t);
             return {
                 isApplicationCommand: !0,
                 commandOptions: e.options,
                 commandOptionStates: n
             };
         }),
-        b = i.useMemo(() => {
+        L = i.useMemo(() => {
             var e;
             return null !==
                 (e =
-                    null == D
+                    null == O
                         ? void 0
-                        : D.filter((e) => {
+                        : O.filter((e) => {
                               var t;
-                              return e.type === _.jw.ATTACHMENT && (null == y ? void 0 : null === (t = y[e.name]) || void 0 === t ? void 0 : t.hasValue);
+                              return e.type === f.jw.ATTACHMENT && (null == D ? void 0 : null === (t = D[e.name]) || void 0 === t ? void 0 : t.hasValue);
                           })) && void 0 !== e
                 ? e
                 : [];
-        }, [D, y]),
-        [M, P] = i.useState([]);
+        }, [O, D]),
+        [x, w] = i.useState([]);
     i.useEffect(() => {
         let e = () => {
             d.Z.clearAll(t, n.drafts.type);
         };
         return c.Z.subscribe('APPLICATION_COMMAND_SET_ACTIVE_COMMAND', e), () => c.Z.unsubscribe('APPLICATION_COMMAND_SET_ACTIVE_COMMAND', e);
     }, [t, n]);
-    let U = i.useCallback(() => {
-        v.focusFirstVisibleItem();
-    }, [v]);
-    return ((0, T.yp)({
-        event: A.CkL.FOCUS_ATTACHMENT_AREA,
-        handler: U
+    let M = i.useCallback(() => {
+        N.focusFirstVisibleItem();
+    }, [N]);
+    return ((0, v.yp)({
+        event: T.CkL.FOCUS_ATTACHMENT_AREA,
+        handler: M
     }),
     i.useEffect(() => {
-        if (L) {
+        if (R) {
             let e = [];
-            M.forEach((t) => {
-                !b.some((e) => t.name === e.name) && e.push(t);
+            x.forEach((t) => {
+                !L.some((e) => t.name === e.name) && e.push(t);
             }),
                 e.forEach((e) => {
                     d.Z.remove(t, e.name, n.drafts.type);
                 }),
-                P(b);
+                w(L);
         }
-    }, [t, b.length, n]),
-    (!L && 0 === C.length) || (L && 0 === b.length))
+    }, [t, L.length, n]),
+    (!R && 0 === C.length) || (R && 0 === L.length))
         ? null
         : (0, r.jsxs)(i.Fragment, {
               children: [
                   (0, r.jsx)(o.bG, {
-                      navigator: v,
+                      navigator: N,
                       children: (0, r.jsx)(o.SJ, {
                           children: (e) => {
                               let { ref: i, ...o } = e;
                               return (0, r.jsx)('ul', {
                                   ref: i,
                                   ...o,
-                                  className: s()(N.channelAttachmentArea, R.scrollbarGhost),
-                                  children: L
-                                      ? b.map((e) =>
+                                  className: s()(b.channelAttachmentArea, y.scrollbarGhost),
+                                  children: R
+                                      ? L.map((e) =>
                                             (0, r.jsx)(
-                                                S.Z,
+                                                I.Z,
                                                 {
                                                     channelId: t,
                                                     keyboardModeEnabled: a,
@@ -112,7 +112,7 @@ function v(e) {
                                         )
                                       : C.map((e) =>
                                             (0, r.jsx)(
-                                                g.Z,
+                                                S.Z,
                                                 {
                                                     channelId: t,
                                                     draftType: n.drafts.type,
@@ -127,14 +127,14 @@ function v(e) {
                           }
                       })
                   }),
-                  n.drafts.type === I.d.FirstThreadMessage ? null : (0, r.jsx)(p.Z, {})
+                  n.drafts.type === g.d.FirstThreadMessage ? null : (0, r.jsx)(m.Z, {})
               ]
           });
 }
 t.Z = i.memo(function (e) {
     let { channelId: t, type: n, canAttachFiles: i } = e;
     return i
-        ? (0, r.jsx)(v, {
+        ? (0, r.jsx)(N, {
               channelId: t,
               type: n
           })

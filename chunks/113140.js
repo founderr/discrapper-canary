@@ -1,35 +1,35 @@
-a.r(e),
-    a.d(e, {
+o.r(t),
+    o.d(t, {
         default: function () {
             return d;
         }
     });
-var o = a(200651);
-a(192379);
-var c = a(481060),
-    s = a(313201),
-    t = a(471253),
-    l = a(939863),
-    i = a(689938),
-    r = a(183442);
+var a = o(200651);
+o(192379);
+var e = o(481060),
+    c = o(313201),
+    l = o(471253),
+    i = o(939863),
+    s = o(388032),
+    r = o(183442);
 function d(n) {
-    let { transitionState: e, onClose: a, channel: d } = n,
-        h = (0, s.Dt)(),
+    let { transitionState: t, onClose: o, channel: d } = n,
+        h = (0, c.Dt)(),
         u = (n) => {
-            (0, t.RK)(d, n), a();
+            (0, l.RK)(d, n), o();
         };
-    return (0, o.jsx)(c.ModalRoot, {
-        size: c.ModalSize.SMALL,
-        transitionState: e,
+    return (0, a.jsx)(e.ModalRoot, {
+        size: e.ModalSize.SMALL,
+        transitionState: t,
         'aria-labelledby': h,
         className: r.container,
-        children: (0, o.jsxs)(c.ModalContent, {
+        children: (0, a.jsxs)(e.ModalContent, {
             className: r.content,
             children: [
-                (0, o.jsx)(l.Z, {
-                    children: (0, o.jsx)('div', {
+                (0, a.jsx)(i.Z, {
+                    children: (0, a.jsx)('div', {
                         className: r.iconBackground,
-                        children: (0, o.jsx)(c.MicrophoneIcon, {
+                        children: (0, a.jsx)(e.MicrophoneIcon, {
                             size: 'custom',
                             color: 'currentColor',
                             height: 40,
@@ -38,28 +38,28 @@ function d(n) {
                         })
                     })
                 }),
-                (0, o.jsx)(c.Heading, {
+                (0, a.jsx)(e.Heading, {
                     className: r.header,
                     variant: 'heading-lg/semibold',
-                    children: i.Z.Messages.STAGE_SPEAK_INVITE_HEADER
+                    children: s.intl.string(s.t.Ul1RJS)
                 }),
-                (0, o.jsx)(c.Text, {
+                (0, a.jsx)(e.Text, {
                     color: 'header-secondary',
                     className: r.description,
                     variant: 'text-sm/normal',
-                    children: i.Z.Messages.STAGE_SPEAK_INVITE_MODAL.format({
+                    children: s.intl.format(s.t['Z+3bW1'], {
                         stageChannelHook: () =>
-                            (0, o.jsxs)('div', {
+                            (0, a.jsxs)('div', {
                                 className: r.channel,
                                 children: [
-                                    (0, o.jsx)(c.StageIcon, {
+                                    (0, a.jsx)(e.StageIcon, {
                                         size: 'custom',
                                         color: 'currentColor',
                                         height: 14,
                                         width: 14,
                                         className: r.channelIcon
                                     }),
-                                    (0, o.jsx)(c.Text, {
+                                    (0, a.jsx)(e.Text, {
                                         className: r.channelName,
                                         variant: 'text-sm/normal',
                                         children: d.name
@@ -68,26 +68,26 @@ function d(n) {
                             })
                     })
                 }),
-                (0, o.jsx)(c.Button, {
+                (0, a.jsx)(e.Button, {
                     fullWidth: !0,
-                    color: c.Button.Colors.GREEN,
+                    color: e.Button.Colors.GREEN,
                     onClick: () => u(!1),
                     className: r.button,
-                    children: i.Z.Messages.ACCEPT
+                    children: s.intl.string(s.t.MMlhsr)
                 }),
-                (0, o.jsx)(c.Button, {
+                (0, a.jsx)(e.Button, {
                     fullWidth: !0,
-                    color: c.Button.Colors.RED,
+                    color: e.Button.Colors.RED,
                     onClick: () => u(!0),
                     className: r.button,
-                    children: i.Z.Messages.DECLINE
+                    children: s.intl.string(s.t.BVN4pK)
                 }),
-                (0, o.jsx)(c.Button, {
+                (0, a.jsx)(e.Button, {
                     fullWidth: !0,
-                    color: c.Button.Colors.PRIMARY,
-                    look: c.Button.Looks.LINK,
-                    onClick: a,
-                    children: i.Z.Messages.NOT_NOW
+                    color: e.Button.Colors.PRIMARY,
+                    look: e.Button.Looks.LINK,
+                    onClick: o,
+                    children: s.intl.string(s.t.L5eIZ2)
                 })
             ]
         })

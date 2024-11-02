@@ -5,23 +5,23 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(997638),
-    a = n(113570),
-    l = n(482641),
-    r = n(613725);
+var l = n(997638),
+    r = n(113570),
+    a = n(482641),
+    s = n(613725);
 let o = Object.freeze({
         'voice-conversations': {
             popoutPosition: 'right',
             highPriority: !0,
-            textAlign: s.iu.CENTER,
-            media: () => (0, i.jsx)(l.Z, {})
+            textAlign: l.iu.CENTER,
+            media: () => (0, i.jsx)(a.Z, {})
         },
         'writing-messages': {
             popoutPosition: 'top',
             highPriority: !0,
-            textAlign: s.iu.CENTER,
+            textAlign: l.iu.CENTER,
             spacing: 10,
-            media: () => (0, i.jsx)(r.Z, {})
+            media: () => (0, i.jsx)(s.Z, {})
         },
         'direct-messages': { popoutPosition: 'right' },
         'create-first-server': {
@@ -30,9 +30,9 @@ let o = Object.freeze({
         },
         'organize-by-topic': {
             popoutPosition: 'right',
-            textAlign: s.iu.CENTER,
+            textAlign: l.iu.CENTER,
             spacing: 8,
-            media: () => (0, i.jsx)(a.Z, {})
+            media: () => (0, i.jsx)(r.Z, {})
         },
         'instant-invite': {
             popoutPosition: 'right',

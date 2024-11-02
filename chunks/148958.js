@@ -6,8 +6,8 @@ t.d(n, {
     t(47120),
     t(653041);
 var i = t(192379),
-    a = t(442837),
-    l = t(581364),
+    l = t(442837),
+    a = t(581364),
     o = t(675478),
     r = t(709054),
     s = t(822245),
@@ -16,7 +16,7 @@ function d(e, n) {
     i.useEffect(() => {
         o.DZ.loadIfUncached(c.yP.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
-    let t = (0, a.e7)([s.Z], () => s.Z.getApplicationFrecencyWithoutLoadingLatest()),
+    let t = (0, l.e7)([s.Z], () => s.Z.getApplicationFrecencyWithoutLoadingLatest()),
         d = i.useMemo(
             () =>
                 null == n || 0 === n.length
@@ -39,32 +39,32 @@ function d(e, n) {
                     null == t.getEntry(e.application.id) && t.track(e.application.id, n);
                 }),
                 t.compute();
-            let n = null !== (e = null == u ? void 0 : u.map((e) => (0, l.X0)(e.application, !0))) && void 0 !== e ? e : [],
+            let n = null !== (e = null == u ? void 0 : u.map((e) => (0, a.X0)(e.application, !0))) && void 0 !== e ? e : [],
                 i = [...d];
             return (
                 i.push(...n),
                 i.sort((e, n) => {
-                    var i, a;
-                    let l = (null !== (i = t.getScore(n.id)) && void 0 !== i ? i : 0) - (null !== (a = t.getScore(e.id)) && void 0 !== a ? a : 0);
-                    return 0 !== l ? l : e.name.localeCompare(n.name);
+                    var i, l;
+                    let a = (null !== (i = t.getScore(n.id)) && void 0 !== i ? i : 0) - (null !== (l = t.getScore(e.id)) && void 0 !== l ? l : 0);
+                    return 0 !== a ? a : e.name.localeCompare(n.name);
                 }),
                 i
             );
         }, [d, t, u]);
     return i.useMemo(() => {
         var e, i;
-        let a, l;
+        let l, a;
         null == n ||
             n.forEach((e) => {
                 let n = r.default.extractTimestamp(e.id);
-                (null == l || n > l) && ((a = e), (l = n));
+                (null == a || n > a) && ((l = e), (a = n));
             }),
             d.forEach((e) => {
                 var n, i;
                 let o = Math.max(...(null !== (i = null === (n = t.getEntry(e.id)) || void 0 === n ? void 0 : n.recentUses) && void 0 !== i ? i : []));
-                (null == l || o > l) && ((a = e), (l = o));
+                (null == a || o > a) && ((l = e), (a = o));
             });
-        let o = null !== (i = null == a ? void 0 : null === (e = a.application) || void 0 === e ? void 0 : e.id) && void 0 !== i ? i : '',
+        let o = null !== (i = null == l ? void 0 : null === (e = l.application) || void 0 === e ? void 0 : e.id) && void 0 !== i ? i : '',
             s = m.filter((e) => e.id === o);
         return [...s, ...m.filter((e) => e.id !== o)];
     }, [m, d, t, n]);

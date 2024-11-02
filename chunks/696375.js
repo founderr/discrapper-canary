@@ -1,30 +1,30 @@
-s.d(n, {
+t.d(n, {
     Z: function () {
         return o;
     }
 });
-var a = s(200651);
-s(192379);
-var t = s(481060),
-    i = s(259580),
-    l = s(78648);
+var i = t(200651);
+t(192379);
+var l = t(481060),
+    a = t(259580),
+    s = t(78648);
 function o(e) {
-    let { url: n, text: s, onClick: o } = e;
-    return (0, a.jsx)(t.Anchor, {
+    let { url: n, text: t, onClick: o } = e;
+    return (0, i.jsx)(l.Anchor, {
         href: n,
         onClick: o,
-        className: l.externalLinkWrapper,
-        children: (0, a.jsxs)(t.Clickable, {
-            className: l.childButton,
+        className: s.externalLinkWrapper,
+        children: (0, i.jsxs)(l.Clickable, {
+            className: s.childButton,
             children: [
-                (0, a.jsx)(t.Text, {
-                    className: l.childText,
+                (0, i.jsx)(l.Text, {
+                    className: s.childText,
                     variant: 'text-md/semibold',
-                    children: s
+                    children: t
                 }),
-                (0, a.jsx)(i.Z, {
-                    className: l.childIcon,
-                    direction: i.Z.Directions.RIGHT
+                (0, i.jsx)(a.Z, {
+                    className: s.childIcon,
+                    direction: a.Z.Directions.RIGHT
                 })
             ]
         })

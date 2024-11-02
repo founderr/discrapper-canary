@@ -1,76 +1,76 @@
 n.d(t, {
     RB: function () {
-        return R;
+        return b;
     },
     VH: function () {
-        return S;
+        return N;
     },
     Vi: function () {
-        return v;
+        return A;
     },
     Vu: function () {
-        return M;
+        return j;
     },
     q7: function () {
-        return x;
+        return S;
     }
 });
 var i,
-    a,
-    s,
     r,
-    l = n(692547),
-    o = n(497089),
+    l,
+    a,
+    o = n(692547),
+    s = n(497089),
     c = n(650473),
     u = n(389765),
     d = n(137492),
-    _ = n(387661),
-    E = n(659953),
-    I = n(319707),
-    m = n(584914),
-    f = n(334702),
-    T = n(333722),
-    h = n(549931),
-    N = n(178561),
-    p = n(39863),
-    C = n(130312);
-((i = s || (s = {})).CHECKED = 'CHECKED'), (i.FRIENDS = 'FRIENDS'), (i.SHARE_SCREEN = 'SHARE_SCREEN'), (i.NEW_MESSAGE = 'NEW_MESSAGE');
-let g = {
-    CHECKED: _,
-    FRIENDS: I,
-    SHARE_SCREEN: p,
-    NEW_MESSAGE: h
+    m = n(387661),
+    f = n(659953),
+    h = n(319707),
+    p = n(584914),
+    g = n(334702),
+    _ = n(333722),
+    C = n(549931),
+    E = n(178561),
+    I = n(39863),
+    x = n(130312);
+((i = l || (l = {})).CHECKED = 'CHECKED'), (i.FRIENDS = 'FRIENDS'), (i.SHARE_SCREEN = 'SHARE_SCREEN'), (i.NEW_MESSAGE = 'NEW_MESSAGE');
+let v = {
+    CHECKED: m,
+    FRIENDS: h,
+    SHARE_SCREEN: I,
+    NEW_MESSAGE: C
 };
-((a = r || (r = {})).MISSED_MESSAGES = 'MISSED_MESSAGES'), (a.FRIEND_REQUEST_REMINDER = 'FRIEND_REQUEST_REMINDER'), (a.SCHEDULED_GUILD_EVENT = 'SCHEDULED_GUILD_EVENT'), (a.TOP_MESSAGES = 'TOP_MESSAGES'), (a.NOTIFICATION_CENTER = 'NOTIFICATION_CENTER'), (a.UPDATE_PROFILE = 'UPDATE_PROFILE'), (a.FIND_FRIENDS = 'FIND_FRIENDS'), (a.ADD_FRIEND = 'ADD_FRIEND'), (a.FIRST_MESSAGE = 'FIRST_MESSAGE');
-let S = {
-        MISSED_MESSAGES: T,
-        FRIEND_REQUEST_REMINDER: m,
-        SCHEDULED_GUILD_EVENT: E,
-        TOP_MESSAGES: f,
+((r = a || (a = {})).MISSED_MESSAGES = 'MISSED_MESSAGES'), (r.FRIEND_REQUEST_REMINDER = 'FRIEND_REQUEST_REMINDER'), (r.SCHEDULED_GUILD_EVENT = 'SCHEDULED_GUILD_EVENT'), (r.TOP_MESSAGES = 'TOP_MESSAGES'), (r.NOTIFICATION_CENTER = 'NOTIFICATION_CENTER'), (r.UPDATE_PROFILE = 'UPDATE_PROFILE'), (r.FIND_FRIENDS = 'FIND_FRIENDS'), (r.ADD_FRIEND = 'ADD_FRIEND'), (r.FIRST_MESSAGE = 'FIRST_MESSAGE');
+let N = {
+        MISSED_MESSAGES: _,
+        FRIEND_REQUEST_REMINDER: p,
+        SCHEDULED_GUILD_EVENT: f,
+        TOP_MESSAGES: g,
         NOTIFICATION_CENTER: d,
-        UPDATE_PROFILE: C,
+        UPDATE_PROFILE: x,
         FIND_FRIENDS: u,
         ADD_FRIEND: u,
-        FIRST_MESSAGE: N
+        FIRST_MESSAGE: E
     },
-    A = (e) => {
+    T = (e) => {
         switch (e.item_enum) {
-            case o.AM.ADD_FRIEND:
+            case s.AM.ADD_FRIEND:
                 return 'ADD_FRIEND';
-            case o.AM.FIND_FRIENDS:
+            case s.AM.FIND_FRIENDS:
                 return 'FIND_FRIENDS';
-            case o.AM.FIRST_MESSAGE:
+            case s.AM.FIRST_MESSAGE:
                 return 'FIRST_MESSAGE';
-            case o.AM.UPDATE_PROFILE:
+            case s.AM.UPDATE_PROFILE:
                 return 'UPDATE_PROFILE';
             default:
                 return 'NOTIFICATION_CENTER';
         }
     },
-    x = (e) => {
+    S = (e) => {
         switch (e.type) {
             case 'lifecycle_item':
-                return A(e);
+                return T(e);
             case 'missed_messages':
                 return 'MISSED_MESSAGES';
             case 'friend_request_reminder':
@@ -83,53 +83,53 @@ let S = {
                 return 'NOTIFICATION_CENTER';
         }
     },
-    R = (e) => {
+    b = (e) => {
         if ('icHighlight' === e) return 'TOP_MESSAGES';
         return 'NOTIFICATION_CENTER';
     },
-    v = (e) => {
+    A = (e) => {
         switch (e) {
-            case o.DY.GO_LIVE_PUSH:
+            case s.DY.GO_LIVE_PUSH:
                 return {
-                    icon: g.SHARE_SCREEN,
-                    color: l.Z.colors.BACKGROUND_ACCENT
+                    icon: v.SHARE_SCREEN,
+                    color: o.Z.colors.BACKGROUND_ACCENT
                 };
-            case o.DY.FRIEND_REQUEST_ACCEPTED:
+            case s.DY.FRIEND_REQUEST_ACCEPTED:
                 return {
-                    icon: g.CHECKED,
-                    color: l.Z.colors.STATUS_POSITIVE_BACKGROUND
+                    icon: v.CHECKED,
+                    color: o.Z.colors.STATUS_POSITIVE_BACKGROUND
                 };
-            case o.DY.FRIEND_REQUEST_PENDING:
-            case o.DY.FRIEND_SUGGESTION_CREATED:
+            case s.DY.FRIEND_REQUEST_PENDING:
+            case s.DY.FRIEND_SUGGESTION_CREATED:
                 return {
-                    icon: g.FRIENDS,
-                    color: l.Z.colors.BACKGROUND_ACCENT
+                    icon: v.FRIENDS,
+                    color: o.Z.colors.BACKGROUND_ACCENT
                 };
-            case o.DY.DM_FRIEND_NUDGE:
+            case s.DY.DM_FRIEND_NUDGE:
                 return {
-                    icon: g.NEW_MESSAGE,
-                    color: l.Z.colors.BACKGROUND_ACCENT
+                    icon: v.NEW_MESSAGE,
+                    color: o.Z.colors.BACKGROUND_ACCENT
                 };
-            case o.O7.INCOMING_FRIEND_REQUESTS:
-            case o.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED:
+            case s.O7.INCOMING_FRIEND_REQUESTS:
+            case s.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED:
                 return {
-                    icon: g.FRIENDS,
-                    color: l.Z.colors.BACKGROUND_ACCENT
+                    icon: v.FRIENDS,
+                    color: o.Z.colors.BACKGROUND_ACCENT
                 };
             default:
                 return null;
         }
     },
-    M = (e) => {
+    j = (e) => {
         switch (e.item_enum) {
-            case o.AM.UPDATE_PROFILE:
+            case s.AM.UPDATE_PROFILE:
                 return c.Y9;
-            case o.AM.ADD_FRIEND:
-            case o.AM.FIND_FRIENDS:
+            case s.AM.ADD_FRIEND:
+            case s.AM.FIND_FRIENDS:
                 return c.AZ;
-            case o.AM.FIRST_MESSAGE:
+            case s.AM.FIRST_MESSAGE:
                 return c.bj;
             default:
-                return l.Z.unsafe_rawColors.BRAND_500.css;
+                return o.Z.unsafe_rawColors.BRAND_500.css;
         }
     };

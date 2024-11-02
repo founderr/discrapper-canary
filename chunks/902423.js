@@ -4,21 +4,21 @@ t.d(n, {
     }
 });
 var i = t(200651),
-    s = t(481060),
+    l = t(481060),
     o = t(906732),
-    l = t(335131),
+    s = t(335131),
     r = t(475413),
     c = t(228168),
-    a = t(689938);
+    a = t(388032);
 function d(e) {
     let { onClose: n } = e,
         { analyticsLocations: t, newestAnalyticsLocation: d } = (0, o.ZP)();
     return (0, i.jsx)(r.Ht, {
         action: c.yM.VISIT_SHOP,
-        icon: s.ShopIcon,
-        text: a.Z.Messages.USER_PROFILE_ENTRY_POINTS_SHOP,
+        icon: l.ShopIcon,
+        text: a.intl.string(a.t.b2d0Nz),
         onClick: () => {
-            (0, l.mK)({
+            (0, s.mK)({
                 analyticsSource: d,
                 analyticsLocations: t,
                 openInLayer: !1

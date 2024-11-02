@@ -3,9 +3,9 @@ t.d(n, {
         return d;
     }
 });
-var a = t(192379),
-    r = t(392711),
-    i = t.n(r),
+var r = t(192379),
+    a = t(392711),
+    i = t.n(a),
     s = t(442837),
     o = t(77498),
     l = t(308083);
@@ -15,7 +15,7 @@ function c(e) {
 }
 function d() {
     let e = (0, s.e7)([o.Z], () => o.Z.games),
-        n = a.useMemo(
+        n = r.useMemo(
             () =>
                 i()(e)
                     .map((e) => ({
@@ -30,10 +30,10 @@ function d() {
                     .value(),
             [e]
         ),
-        t = a.useCallback((e, n) => c(n.item.value) - c(e.item.value), []);
+        t = r.useCallback((e, n) => c(n.item.value) - c(e.item.value), []);
     return {
         options: n,
-        matchSorterOptions: a.useMemo(
+        matchSorterOptions: r.useMemo(
             () => ({
                 baseSort: t,
                 keys: ['label']

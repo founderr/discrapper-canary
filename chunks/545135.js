@@ -1,194 +1,194 @@
 t.r(n),
     t.d(n, {
         default: function () {
-            return v;
+            return P;
         }
     });
-var s = t(200651);
+var i = t(200651);
 t(192379);
-var i = t(512722),
-    a = t.n(i),
-    l = t(442837),
+var l = t(512722),
+    a = t.n(l),
+    s = t(442837),
     u = t(481060),
-    o = t(239091),
-    r = t(100527),
+    r = t(239091),
+    o = t(100527),
     d = t(906732),
     c = t(299206),
-    E = t(894059),
-    _ = t(423589),
-    M = t(837949),
-    N = t(122074),
-    I = t(314897),
-    S = t(984933),
-    g = t(594174),
-    L = t(241851),
-    T = t(94953),
-    A = t(976192),
-    h = t(904483),
-    f = t(429824),
-    O = t(919815),
-    Z = t(858822),
-    p = t(993356),
-    C = t(58338),
-    m = t(422525),
-    x = t(522762),
+    g = t(894059),
+    E = t(423589),
+    h = t(837949),
+    M = t(122074),
+    _ = t(314897),
+    N = t(984933),
+    f = t(594174),
+    S = t(241851),
+    I = t(94953),
+    p = t(976192),
+    m = t(904483),
+    x = t(429824),
+    L = t(919815),
+    b = t(858822),
+    A = t(993356),
+    Z = t(58338),
+    v = t(422525),
+    C = t(522762),
     G = t(466330),
-    b = t(981631),
-    U = t(689938);
-function P(e) {
-    let { guild: n, onSelect: i, hideSettings: r } = e,
+    j = t(981631),
+    T = t(388032);
+function O(e) {
+    let { guild: n, onSelect: l, hideSettings: o } = e,
         d = n.id,
-        P = S.ZP.getDefaultChannel(d),
-        v = (0, l.e7)(
-            [g.default],
+        O = N.ZP.getDefaultChannel(d),
+        P = (0, s.e7)(
+            [f.default],
             () => {
-                let e = g.default.getCurrentUser();
+                let e = f.default.getCurrentUser();
                 return a()(null != e, 'GuildContextMenu: user cannot be undefined'), n.isOwner(e);
             },
             [n]
         ),
-        R = (0, G.Z)({
+        y = (0, G.Z)({
             guild: n,
-            source: b.t4x.GUILD_CONTEXT_MENU,
-            channel: P
+            source: j.t4x.GUILD_CONTEXT_MENU,
+            channel: O
         }),
-        j = (0, x.Z)(d),
-        D = (0, Z.Z)(n),
-        y = (0, p.Z)(n),
-        k = (0, m.Z)(n),
-        F = (0, A.Z)({
+        U = (0, C.Z)(d),
+        R = (0, b.Z)(n),
+        D = (0, A.Z)(n),
+        k = (0, v.Z)(n),
+        B = (0, p.Z)({
             guildId: n.id,
-            userId: I.default.getId(),
+            userId: _.default.getId(),
             analyticsLocation: {
-                page: b.ZY5.GUILD_CHANNEL,
-                section: b.jXE.CHAT_USERNAME,
-                object: b.qAy.CONTEXT_MENU_ITEM
+                page: j.ZY5.GUILD_CHANNEL,
+                section: j.jXE.CHAT_USERNAME,
+                object: j.qAy.CONTEXT_MENU_ITEM
             }
         }),
-        B = (0, T.Z)({
+        w = (0, I.Z)({
             guildId: n.id,
-            userId: I.default.getId(),
+            userId: _.default.getId(),
             analyticsLocation: {
-                page: b.ZY5.GUILD_CHANNEL,
-                section: b.jXE.CHAT_USERNAME,
-                object: b.qAy.CONTEXT_MENU_ITEM
+                page: j.ZY5.GUILD_CHANNEL,
+                section: j.jXE.CHAT_USERNAME,
+                object: j.qAy.CONTEXT_MENU_ITEM
             }
         }),
-        Y = (0, h.Z)(n),
-        H = (0, E.Z)(n.id),
-        V = (0, c.Z)({
+        F = (0, m.Z)(n),
+        H = (0, g.Z)(n.id),
+        Y = (0, c.Z)({
             id: n.id,
-            label: U.Z.Messages.COPY_ID_GUILD
+            label: T.intl.string(T.t['94lLDw'])
         }),
-        w = (0, O.Z)(n, { section: b.jXE.GUILD_LIST }),
-        z = (0, M.Z)(n.id),
-        q = (0, C.Z)(n.id),
-        K = (0, N.ng)(n.id, !1),
-        X = (0, f.Z)(n),
-        W = (0, _.Mn)('GuildContextMenu');
+        z = (0, L.Z)(n, { section: j.jXE.GUILD_LIST }),
+        q = (0, h.Z)(n.id),
+        V = (0, Z.Z)(n.id),
+        X = (0, M.ng)(n.id, !1),
+        K = (0, x.Z)(n),
+        W = (0, E.Mn)('GuildContextMenu');
     function Q() {
         (0, u.openModal)((e) =>
-            (0, s.jsx)(L.g, {
+            (0, i.jsx)(S.g, {
                 ...e,
                 guild: n
             })
         );
     }
-    return n.hasFeature(b.oNc.HUB)
-        ? (0, s.jsxs)(u.Menu, {
+    return n.hasFeature(j.oNc.HUB)
+        ? (0, i.jsxs)(u.Menu, {
               navId: 'guild-context',
-              onClose: o.Zy,
-              'aria-label': U.Z.Messages.GUILD_ACTIONS_MENU_LABEL,
-              onSelect: i,
+              onClose: r.Zy,
+              'aria-label': T.intl.string(T.t.HpQykZ),
+              onSelect: l,
               children: [
-                  (0, s.jsxs)(u.MenuGroup, {
+                  (0, i.jsxs)(u.MenuGroup, {
                       children: [
-                          R,
-                          (0, s.jsx)(u.MenuItem, {
+                          y,
+                          (0, i.jsx)(u.MenuItem, {
                               id: 'privacy',
-                              label: U.Z.Messages.HUB_PRIVACY_SETTINGS,
+                              label: T.intl.string(T.t.IlFwwc),
                               action: () =>
                                   (0, u.openModalLazy)(async () => {
                                       let { default: e } = await Promise.all([t.e('77298'), t.e('23357'), t.e('50506'), t.e('23217'), t.e('79189'), t.e('84605'), t.e('29549'), t.e('8016'), t.e('12013'), t.e('6380'), t.e('76540'), t.e('52249'), t.e('18543'), t.e('17938'), t.e('99783'), t.e('31605'), t.e('72181'), t.e('26182'), t.e('95900'), t.e('81272'), t.e('32776'), t.e('79107'), t.e('22646'), t.e('95393'), t.e('25183'), t.e('18101'), t.e('56602'), t.e('30419'), t.e('25788'), t.e('48923'), t.e('18824'), t.e('46097'), t.e('8739'), t.e('8821'), t.e('58059'), t.e('76447'), t.e('18895'), t.e('87624'), t.e('670'), t.e('99393'), t.e('37229'), t.e('68241'), t.e('24648'), t.e('28044'), t.e('22795'), t.e('24582'), t.e('70482')]).then(t.bind(t, 241420));
                                       return (t) =>
-                                          (0, s.jsx)(e, {
+                                          (0, i.jsx)(e, {
                                               ...t,
                                               guild: n
                                           });
                                   })
                           }),
-                          F
+                          B
                       ]
                   }),
-                  v
+                  P
                       ? null
-                      : (0, s.jsx)(u.MenuGroup, {
-                            children: (0, s.jsx)(u.MenuItem, {
+                      : (0, i.jsx)(u.MenuGroup, {
+                            children: (0, i.jsx)(u.MenuItem, {
                                 id: 'leave-guild',
-                                label: U.Z.Messages.LEAVE_HUB,
+                                label: T.intl.string(T.t.Dv8gFR),
                                 action: Q,
                                 color: 'danger'
                             })
                         }),
-                  (0, s.jsx)(u.MenuGroup, { children: V })
+                  (0, i.jsx)(u.MenuGroup, { children: Y })
               ]
           })
-        : (0, s.jsxs)(u.Menu, {
+        : (0, i.jsxs)(u.Menu, {
               navId: 'guild-context',
-              onClose: o.Zy,
-              'aria-label': U.Z.Messages.GUILD_ACTIONS_MENU_LABEL,
-              onSelect: i,
+              onClose: r.Zy,
+              'aria-label': T.intl.string(T.t.HpQykZ),
+              onSelect: l,
               children: [
-                  (0, s.jsx)(u.MenuGroup, { children: w }),
-                  (0, s.jsx)(u.MenuGroup, { children: R }),
-                  (0, s.jsxs)(u.MenuGroup, {
-                      children: [D, W || __OVERLAY__ ? null : y, W && !__OVERLAY__ ? q : null, K, j, z]
+                  (0, i.jsx)(u.MenuGroup, { children: z }),
+                  (0, i.jsx)(u.MenuGroup, { children: y }),
+                  (0, i.jsxs)(u.MenuGroup, {
+                      children: [R, W || __OVERLAY__ ? null : D, W && !__OVERLAY__ ? V : null, X, U, q]
                   }),
-                  (0, s.jsxs)(u.MenuGroup, {
+                  (0, i.jsxs)(u.MenuGroup, {
                       children: [
-                          r ? null : k,
+                          o ? null : k,
                           __OVERLAY__
                               ? null
-                              : (0, s.jsx)(u.MenuItem, {
+                              : (0, i.jsx)(u.MenuItem, {
                                     id: 'privacy',
-                                    label: U.Z.Messages.PRIVACY_SETTINGS,
+                                    label: T.intl.string(T.t.BayiAg),
                                     action: () =>
                                         (0, u.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([t.e('77298'), t.e('23357'), t.e('50506'), t.e('23217'), t.e('79189'), t.e('84605'), t.e('29549'), t.e('8016'), t.e('12013'), t.e('6380'), t.e('76540'), t.e('52249'), t.e('18543'), t.e('17938'), t.e('99783'), t.e('31605'), t.e('72181'), t.e('26182'), t.e('95900'), t.e('81272'), t.e('32776'), t.e('79107'), t.e('22646'), t.e('95393'), t.e('25183'), t.e('18101'), t.e('56602'), t.e('30419'), t.e('25788'), t.e('48923'), t.e('18824'), t.e('46097'), t.e('8739'), t.e('8821'), t.e('58059'), t.e('76447'), t.e('18895'), t.e('87624'), t.e('670'), t.e('99393'), t.e('37229'), t.e('68241'), t.e('24648'), t.e('28044'), t.e('22795'), t.e('24582'), t.e('70482')]).then(t.bind(t, 241420));
                                             return (t) =>
-                                                (0, s.jsx)(e, {
+                                                (0, i.jsx)(e, {
                                                     ...t,
                                                     guild: n
                                                 });
                                         })
                                 }),
-                          F,
-                          B
+                          B,
+                          w
                       ]
                   }),
-                  (0, s.jsxs)(u.MenuGroup, {
-                      children: [Y, H]
+                  (0, i.jsxs)(u.MenuGroup, {
+                      children: [F, H]
                   }),
-                  (0, s.jsxs)(u.MenuGroup, {
+                  (0, i.jsxs)(u.MenuGroup, {
                       children: [
-                          X,
-                          !v &&
-                              (0, s.jsx)(u.MenuItem, {
+                          K,
+                          !P &&
+                              (0, i.jsx)(u.MenuItem, {
                                   id: 'leave-guild',
-                                  label: U.Z.Messages.LEAVE_SERVER,
+                                  label: T.intl.string(T.t.J2TBi4),
                                   action: Q,
                                   color: 'danger'
                               })
                       ]
                   }),
-                  (0, s.jsx)(u.MenuGroup, { children: V })
+                  (0, i.jsx)(u.MenuGroup, { children: Y })
               ]
           });
 }
-function v(e) {
-    let { analyticsLocations: n } = (0, d.ZP)(r.Z.CONTEXT_MENU);
-    return (0, s.jsx)(d.Gt, {
+function P(e) {
+    let { analyticsLocations: n } = (0, d.ZP)(o.Z.CONTEXT_MENU);
+    return (0, i.jsx)(d.Gt, {
         value: n,
-        children: (0, s.jsx)(P, { ...e })
+        children: (0, i.jsx)(O, { ...e })
     });
 }

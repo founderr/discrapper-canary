@@ -34,7 +34,7 @@ function d(e) {
     let { applicationId: t, guildId: n } = e;
     null == c.applicationIdToGuildIds[t] && (c.applicationIdToGuildIds[t] = new Set()), c.applicationIdToGuildIds[t].add(n), (c.applicationIdToGuildIds[t] = new Set(c.applicationIdToGuildIds[t]));
 }
-class _ extends (i = s.ZP.PersistedStore) {
+class f extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) for (let t in ((c.lastFetchTimeMs = e.lastFetchTimeMs), (c.nextFetchRetryTimeMs = e.nextFetchRetryTimeMs), (c.fetchState = e.fetchState), e.applicationIdToGuildIds)) c.applicationIdToGuildIds[t] = new Set(e.applicationIdToGuildIds[t]);
     }
@@ -54,9 +54,9 @@ class _ extends (i = s.ZP.PersistedStore) {
         return c.fetchState;
     }
 }
-u(_, 'displayName', 'MyGuildApplicationsStore'),
-    u(_, 'persistKey', 'MyGuildApplicationsStore'),
-    (t.Z = new _(o.Z, {
+u(f, 'displayName', 'MyGuildApplicationsStore'),
+    u(f, 'persistKey', 'MyGuildApplicationsStore'),
+    (t.Z = new f(o.Z, {
         LOGOUT: function () {
             (c.applicationIdToGuildIds = {}), (c.lastFetchTimeMs = null), (c.nextFetchRetryTimeMs = null), (c.fetchState = 0);
         },

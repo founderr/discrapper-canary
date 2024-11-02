@@ -1,9 +1,9 @@
-var s, a;
+var i, r;
 n.d(t, {
     T: function () {
-        return s;
+        return i;
     }
 }),
-    ((a = s || (s = {})).ADMIN = 'admin'),
-    (a.DEVELOPER = 'developer'),
-    (a.READ_ONLY = 'read_only');
+    ((r = i || (i = {})).ADMIN = 'admin'),
+    (r.DEVELOPER = 'developer'),
+    (r.READ_ONLY = 'read_only');

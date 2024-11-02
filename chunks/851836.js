@@ -1,4 +1,4 @@
-e.exports = {
+n.exports = {
     content: 'content_d26d60',
     stageIconBackground: 'stageIconBackground_d26d60',
     stageIcon: 'stageIcon_d26d60',

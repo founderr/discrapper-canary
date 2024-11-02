@@ -1,23 +1,23 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return h;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(740492),
-    r = n(626135),
-    l = n(358085),
+var r = n(481060),
+    l = n(740492),
+    a = n(626135),
+    s = n(358085),
     o = n(998502),
     c = n(258220),
     d = n(981631);
 let u = 'activity-hardware-acceleration-modal';
-function _(e) {
-    !s.ZP.disableActivityHardwareAccelerationPrompt &&
-        l.isPlatformEmbedded &&
+function h(e) {
+    !l.ZP.disableActivityHardwareAccelerationPrompt &&
+        s.isPlatformEmbedded &&
         !o.ZP.getEnableHardwareAcceleration() &&
-        (0, a.openModalLazy)(
+        (0, r.openModalLazy)(
             async () => {
                 let { default: t } = await Promise.resolve().then(n.bind(n, 258220));
                 return (n) =>
@@ -29,7 +29,7 @@ function _(e) {
             {
                 modalKey: u,
                 onCloseRequest: () => {
-                    r.default.track(d.rMx.MODAL_DISMISSED, { type: c.ACTIVITY_ENCOURAGES_HW_ACCELERATION }), (0, a.closeModal)(u);
+                    a.default.track(d.rMx.MODAL_DISMISSED, { type: c.ACTIVITY_ENCOURAGES_HW_ACCELERATION }), (0, r.closeModal)(u);
                 }
             }
         );

@@ -58,14 +58,14 @@ e.exports = function (e) {
             relevance: 0
         },
         d = t.optional(i) + e.IDENT_RE + '\\s*\\(',
-        _ = {
+        f = {
             keyword: ['asm', 'auto', 'break', 'case', 'continue', 'default', 'do', 'else', 'enum', 'extern', 'for', 'fortran', 'goto', 'if', 'inline', 'register', 'restrict', 'return', 'sizeof', 'struct', 'switch', 'typedef', 'union', 'volatile', 'while', '_Alignas', '_Alignof', '_Atomic', '_Generic', '_Noreturn', '_Static_assert', '_Thread_local', 'alignas', 'alignof', 'noreturn', 'static_assert', 'thread_local', '_Pragma'],
             type: ['float', 'double', 'signed', 'unsigned', 'int', 'short', 'long', 'char', 'void', '_Bool', '_Complex', '_Imaginary', '_Decimal32', '_Decimal64', '_Decimal128', 'const', 'static', 'complex', 'bool', 'imaginary'],
             literal: 'true false NULL',
             built_in: 'std string wstring cin cout cerr clog stdin stdout stderr stringstream istringstream ostringstream auto_ptr deque list queue stack vector map set pair bitset multiset multimap unordered_set unordered_map unordered_multiset unordered_multimap priority_queue make_pair array shared_ptr abort terminate abs acos asin atan2 atan calloc ceil cosh cos exit exp fabs floor fmod fprintf fputs free frexp fscanf future isalnum isalpha iscntrl isdigit isgraph islower isprint ispunct isspace isupper isxdigit tolower toupper labs ldexp log10 log malloc realloc memchr memcmp memcpy memset modf pow printf putchar puts scanf sinh sin snprintf sprintf sqrt sscanf strcat strchr strcmp strcpy strcspn strlen strncat strncmp strncpy strpbrk strrchr strspn strstr tanh tan vfprintf vprintf vsprintf endl initializer_list unique_ptr'
         },
-        E = [u, s, n, e.C_BLOCK_COMMENT_MODE, l, o],
-        f = {
+        _ = [u, s, n, e.C_BLOCK_COMMENT_MODE, l, o],
+        h = {
             variants: [
                 {
                     begin: /=/,
@@ -80,29 +80,29 @@ e.exports = function (e) {
                     end: /;/
                 }
             ],
-            keywords: _,
-            contains: E.concat([
+            keywords: f,
+            contains: _.concat([
                 {
                     begin: /\(/,
                     end: /\)/,
-                    keywords: _,
-                    contains: E.concat(['self']),
+                    keywords: f,
+                    contains: _.concat(['self']),
                     relevance: 0
                 }
             ]),
             relevance: 0
         },
-        h = {
+        p = {
             begin: '(' + a + '[\\*&\\s]+)+' + d,
             returnBegin: !0,
             end: /[{;=]/,
             excludeEnd: !0,
-            keywords: _,
+            keywords: f,
             illegal: /[^\w\s\*&:<>.]/,
             contains: [
                 {
                     begin: r,
-                    keywords: _,
+                    keywords: f,
                     relevance: 0
                 },
                 {
@@ -119,7 +119,7 @@ e.exports = function (e) {
                     className: 'params',
                     begin: /\(/,
                     end: /\)/,
-                    keywords: _,
+                    keywords: f,
                     relevance: 0,
                     contains: [
                         n,
@@ -130,7 +130,7 @@ e.exports = function (e) {
                         {
                             begin: /\(/,
                             end: /\)/,
-                            keywords: _,
+                            keywords: f,
                             relevance: 0,
                             contains: ['self', n, e.C_BLOCK_COMMENT_MODE, o, l, s]
                         }
@@ -145,14 +145,14 @@ e.exports = function (e) {
     return {
         name: 'C',
         aliases: ['h'],
-        keywords: _,
+        keywords: f,
         disableAutodetect: !0,
         illegal: '</',
-        contains: [].concat(f, h, E, [
+        contains: [].concat(h, p, _, [
             u,
             {
                 begin: e.IDENT_RE + '::',
-                keywords: _
+                keywords: f
             },
             {
                 className: 'class',
@@ -164,7 +164,7 @@ e.exports = function (e) {
         exports: {
             preprocessor: u,
             strings: o,
-            keywords: _
+            keywords: f
         }
     };
 };

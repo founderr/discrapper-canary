@@ -67,15 +67,15 @@ function o(e, t, n) {
                 var u = i in t,
                     c = i in s,
                     d = t[i],
-                    _ = (0, r.isValidElement)(d) && !d.props.in;
-                c && (!u || _)
+                    f = (0, r.isValidElement)(d) && !d.props.in;
+                c && (!u || f)
                     ? (o[i] = (0, r.cloneElement)(l, {
                           onExited: n.bind(null, l),
                           in: !0,
                           exit: a(l, 'exit', e),
                           enter: a(l, 'enter', e)
                       }))
-                    : c || !u || _
+                    : c || !u || f
                       ? c &&
                         u &&
                         (0, r.isValidElement)(d) &&

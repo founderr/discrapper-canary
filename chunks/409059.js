@@ -7,13 +7,13 @@ var r,
     u = n(741847),
     c = n(58346);
 let d = {},
-    _ = null;
-function E(e) {
+    f = null;
+function _(e) {
     return null != e && 'function' != typeof d[e] && !0;
 }
-function f(e, t) {
+function h(e, t) {
     var n;
-    if (!E(e)) return null;
+    if (!_(e)) return null;
     let r =
         null !== (n = d[e]) && void 0 !== n
             ? n
@@ -27,23 +27,23 @@ function f(e, t) {
             [e]: r
         });
 }
-function h(e) {
-    p(e.guildTemplate);
-}
 function p(e) {
-    return f(e.code, (t) => {
+    m(e.guildTemplate);
+}
+function m(e) {
+    return h(e.code, (t) => {
         let n = (0, u.Z)(e);
         for (let e in n) t[e] = n[e];
     });
 }
-function I(e) {
-    return f(e.code, (e) => {
+function g(e) {
+    return h(e.code, (e) => {
         e.state = c.Rj.EXPIRED;
     });
 }
-class m extends (s = o.ZP.Store) {
+class E extends (s = o.ZP.Store) {
     getGuildTemplate(e) {
-        if (!!E(e)) return null != e ? d[e] : null;
+        if (!!_(e)) return null != e ? d[e] : null;
     }
     getGuildTemplates() {
         return d;
@@ -55,11 +55,11 @@ class m extends (s = o.ZP.Store) {
         }
     }
     getDisplayedGuildTemplateCode() {
-        return _;
+        return f;
     }
 }
 (a = 'GuildTemplateStore'),
-    (i = 'displayName') in (r = m)
+    (i = 'displayName') in (r = E)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -67,10 +67,10 @@ class m extends (s = o.ZP.Store) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = new m(l.Z, {
+    (t.Z = new E(l.Z, {
         GUILD_TEMPLATE_RESOLVE: function (e) {
             let { code: t } = e;
-            if (!E(t)) return !0;
+            if (!_(t)) return !0;
             d = {
                 ...d,
                 [t]: {
@@ -79,35 +79,35 @@ class m extends (s = o.ZP.Store) {
                 }
             };
         },
-        GUILD_TEMPLATE_CREATE_SUCCESS: h,
-        GUILD_TEMPLATE_SYNC_SUCCESS: h,
-        GUILD_TEMPLATE_RESOLVE_SUCCESS: h,
+        GUILD_TEMPLATE_CREATE_SUCCESS: p,
+        GUILD_TEMPLATE_SYNC_SUCCESS: p,
+        GUILD_TEMPLATE_RESOLVE_SUCCESS: p,
         GUILD_TEMPLATE_LOAD_FOR_GUILD_SUCCESS: function (e) {
             let { guildTemplates: t } = e;
-            t.forEach((e) => p(e));
+            t.forEach((e) => m(e));
         },
-        GUILD_TEMPLATE_RESOLVE_FAILURE: I,
-        GUILD_TEMPLATE_DELETE_SUCCESS: I,
+        GUILD_TEMPLATE_RESOLVE_FAILURE: g,
+        GUILD_TEMPLATE_DELETE_SUCCESS: g,
         GUILD_TEMPLATE_ACCEPT: function (e) {
-            return f(e.code, (e) => {
+            return h(e.code, (e) => {
                 e.state = c.Rj.ACCEPTING;
             });
         },
         GUILD_TEMPLATE_ACCEPT_SUCCESS: function (e) {
-            return f(e.code, (e) => {
+            return h(e.code, (e) => {
                 var t;
                 (e.state = c.Rj.ACCEPTED), (e.usageCount = (null !== (t = e.usageCount) && void 0 !== t ? t : 0) + 1);
             });
         },
         GUILD_TEMPLATE_ACCEPT_FAILURE: function (e) {
-            return f(e.code, (e) => {
+            return h(e.code, (e) => {
                 e.state = c.Rj.RESOLVED;
             });
         },
         GUILD_TEMPLATE_MODAL_SHOW: function (e) {
-            _ = e.code;
+            f = e.code;
         },
         GUILD_TEMPLATE_MODAL_HIDE: function (e) {
-            _ = null;
+            f = null;
         }
     }));

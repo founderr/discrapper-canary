@@ -1,74 +1,74 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return _;
+        return v;
     }
 }),
-    t(47120);
-var n = t(200651),
-    i = t(192379),
-    l = t(481060),
-    a = t(230711),
-    r = t(2052),
-    o = t(434650),
-    d = t(906732),
-    c = t(436774),
-    u = t(690221),
-    h = t(626135),
-    N = t(197115),
-    S = t(474936),
-    E = t(981631),
-    g = t(689938),
-    m = t(999317);
-function _(e) {
-    let { onClose: s } = e,
-        t = (0, r.O)(),
-        { analyticsLocations: _ } = (0, d.ZP)(),
-        [T, x] = i.useState(!1),
-        I = i.useCallback(
+    n(47120);
+var i = n(200651),
+    s = n(192379),
+    l = n(481060),
+    r = n(230711),
+    a = n(2052),
+    o = n(434650),
+    d = n(906732),
+    c = n(436774),
+    u = n(690221),
+    h = n(626135),
+    m = n(197115),
+    g = n(474936),
+    x = n(981631),
+    S = n(388032),
+    p = n(999317);
+function v(e) {
+    let { onClose: t } = e,
+        n = (0, a.O)(),
+        { analyticsLocations: v } = (0, d.ZP)(),
+        [N, j] = s.useState(!1),
+        C = s.useCallback(
             (e) => {
-                if (!T && !!e)
-                    h.default.track(E.rMx.PREMIUM_UPSELL_VIEWED, {
-                        type: S.cd.CUSTOM_NOTIFICATION_SOUNDS_SETTINGS_UPSELL,
-                        location: t.location,
-                        location_stack: _
+                if (!N && !!e)
+                    h.default.track(x.rMx.PREMIUM_UPSELL_VIEWED, {
+                        type: g.cd.CUSTOM_NOTIFICATION_SOUNDS_SETTINGS_UPSELL,
+                        location: n.location,
+                        location_stack: v
                     }),
-                        x(!0);
+                        j(!0);
             },
-            [t.location, _, T]
+            [n.location, v, N]
         ),
-        O = (0, o.O)(I, 0.8, !0);
-    return (0, n.jsxs)('div', {
-        ref: O,
-        className: m.container,
+        f = (0, o.O)(C, 0.8, !0);
+    return (0, i.jsxs)('div', {
+        ref: f,
+        className: p.container,
         children: [
-            (0, n.jsx)(l.NitroWheelIcon, {
+            (0, i.jsx)(l.NitroWheelIcon, {
                 size: 'md',
                 color: c.JX.PREMIUM_TIER_2,
-                className: m.nitroWheel
+                className: p.nitroWheel
             }),
-            (0, n.jsxs)(l.Text, {
-                className: m.text,
+            (0, i.jsxs)(l.Text, {
+                className: p.text,
                 variant: 'text-sm/normal',
                 children: [
-                    g.Z.Messages.PREMIUM_CUSTOM_NOTIFICATION_SOUND_NOTIFICATION_SETTINGS_UPSELL,
+                    S.intl.string(S.t['Pb0O6+']),
                     ' ',
-                    (0, n.jsx)(u.Z, {
+                    (0, i.jsx)(u.Z, {
                         onClick: () => {
-                            s(), a.Z.open(E.oAB.PREMIUM);
+                            t(), r.Z.open(x.oAB.PREMIUM);
                         },
-                        children: g.Z.Messages.LEARN_MORE
+                        children: S.intl.string(S.t.hvVgAQ)
                     })
                 ]
             }),
-            (0, n.jsx)('div', {
-                className: m.nitroButton,
-                children: (0, n.jsx)(N.Z, {
+            (0, i.jsx)('div', {
+                className: p.nitroButton,
+                children: (0, i.jsx)(m.Z, {
                     showGradient: !0,
-                    buttonText: g.Z.Messages.PREMIUM_UPSELL_GET_NITRO,
+                    buttonText: S.intl.string(S.t.pj0XBA),
                     size: l.Button.Sizes.SMALL,
-                    shinyButtonClassName: m.nitroButton,
-                    subscriptionTier: S.Si.TIER_2,
-                    premiumModalAnalyticsLocation: { section: E.jXE.PREMIUM_CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPSELL }
+                    shinyButtonClassName: p.nitroButton,
+                    subscriptionTier: g.Si.TIER_2,
+                    premiumModalAnalyticsLocation: { section: x.jXE.PREMIUM_CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPSELL }
                 })
             })
         ]

@@ -5,7 +5,7 @@ var i = n(998698),
     a = n(588468),
     s = n(877565),
     o = n(590921),
-    l = n(689938);
+    l = n(388032);
 let u = { results: { commandOptions: [] } },
     c = {
         stores: [i.Z],
@@ -34,7 +34,7 @@ let u = { results: { commandOptions: [] } },
             t.forEach((e) => {
                 (e.required ? c : d).push(e);
             });
-            let _ =
+            let f =
                     c.length > 0
                         ? (0, s.HI)({
                               query: i,
@@ -42,8 +42,8 @@ let u = { results: { commandOptions: [] } },
                               autocompletes: c,
                               onHover: o,
                               onClick: u,
-                              titleWithQuery: l.Z.Messages.REQUIRED_OPTIONS_MATCHING,
-                              titleWithoutQuery: l.Z.Messages.REQUIRED_OPTIONS,
+                              titleWithQuery: l.t['iO/jnJ'],
+                              titleWithoutQuery: l.intl.string(l.t['7II2Gx']),
                               Component: a.ZP.Generic,
                               getProps: (e, t) => ({
                                   key: t.toString(),
@@ -54,7 +54,7 @@ let u = { results: { commandOptions: [] } },
                               key: 'required-options'
                           })
                         : null,
-                E =
+                _ =
                     d.length > 0
                         ? (0, s.HI)({
                               query: i,
@@ -62,8 +62,8 @@ let u = { results: { commandOptions: [] } },
                               autocompletes: d,
                               onHover: o,
                               onClick: u,
-                              titleWithQuery: l.Z.Messages.OPTIONS_MATCHING,
-                              titleWithoutQuery: c.length > 0 ? l.Z.Messages.OTHER_OPTIONS : l.Z.Messages.OPTIONS,
+                              titleWithQuery: l.t.pg0anJ,
+                              titleWithoutQuery: c.length > 0 ? l.intl.string(l.t.TpDXm5) : l.intl.string(l.t['+1H47u']),
                               Component: a.ZP.Generic,
                               getProps: (e, t) => ({
                                   key: t.toString(),
@@ -76,7 +76,7 @@ let u = { results: { commandOptions: [] } },
                           })
                         : null;
             return (0, r.jsxs)(r.Fragment, {
-                children: [_, E]
+                children: [f, _]
             });
         },
         onSelect(e) {

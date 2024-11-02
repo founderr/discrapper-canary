@@ -1,48 +1,48 @@
 n(47120);
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(442837),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    s = n(442837),
     o = n(433517),
     c = n(481060),
     d = n(304761),
     u = n(865427),
-    _ = n(820254),
-    E = n(689938),
-    h = n(231483);
-let m = 'isHideDevBanner';
+    h = n(820254),
+    m = n(388032),
+    p = n(231483);
+let g = 'isHideDevBanner';
 t.Z = () => {
     var e;
-    let [t, n] = (0, a.useState)((null === (e = o.K.get(m, 'false')) || void 0 === e ? void 0 : e.toString()) === 'true'),
-        s = (0, l.e7)([d.C], () => {
+    let [t, n] = (0, r.useState)((null === (e = o.K.get(g, 'false')) || void 0 === e ? void 0 : e.toString()) === 'true'),
+        l = (0, s.e7)([d.C], () => {
             var e;
             return (0, u.fD)() ? (null === (e = d.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         });
     if (t) return null;
-    let I = () => {
-            o.K.set(m, !0), n(!0);
+    let f = () => {
+            o.K.set(g, !0), n(!0);
         },
-        p = () =>
+        _ = () =>
             (0, i.jsx)(c.Clickable, {
-                onClick: I,
-                className: h.closeButton,
-                'aria-label': E.Z.Messages.DISMISS,
+                onClick: f,
+                className: p.closeButton,
+                'aria-label': m.intl.string(m.t.WAI6xs),
                 children: (0, i.jsx)(c.XSmallIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: h.closeIcon
+                    className: p.closeIcon
                 })
             });
-    return null != s
+    return null != l
         ? (0, i.jsxs)('div', {
-              className: r()(h.devBanner, h.buildOverride),
-              children: [(0, i.jsx)(_.Z, { className: h.icon }), E.Z.Messages.BUILD_OVERRIDE, (0, i.jsx)(p, {})]
+              className: a()(p.devBanner, p.buildOverride),
+              children: [(0, i.jsx)(h.Z, { className: p.icon }), m.intl.string(m.t.Wj3LW1), (0, i.jsx)(_, {})]
           })
         : 'staging' === window.GLOBAL_ENV.RELEASE_CHANNEL
           ? (0, i.jsxs)('div', {
-                className: r()(h.devBanner, h.staging),
-                children: [(0, i.jsx)(_.Z, { className: h.icon }), E.Z.Messages.DEV_NOTICE_STAGING.format({ buildNumber: '341142' }), (0, i.jsx)(p, {})]
+                className: a()(p.devBanner, p.staging),
+                children: [(0, i.jsx)(h.Z, { className: p.icon }), m.intl.format(m.t.uyrfYG, { buildNumber: '341192' }), (0, i.jsx)(_, {})]
             })
           : null;
 };

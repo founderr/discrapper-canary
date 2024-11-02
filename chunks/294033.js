@@ -1,18 +1,18 @@
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
-    o = n(846337);
+    r = n(192379),
+    s = n(120356),
+    o = n.n(s),
+    a = n(846337);
 let l = (e) => {
-    let { keybind: t, separator: n, className: r } = e;
+    let { keybind: t, separator: n, className: s } = e;
     return (0, i.jsx)(i.Fragment, {
         children: t.map((e, l) =>
             (0, i.jsxs)(
-                s.Fragment,
+                r.Fragment,
                 {
                     children: [
                         (0, i.jsx)('span', {
-                            className: a()(o.key, r),
+                            className: o()(a.key, s),
                             children: e
                         }),
                         l === t.length - 1 ? void 0 : n

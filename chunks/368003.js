@@ -1,48 +1,48 @@
-s.d(t, {
+n.d(t, {
     Z: function () {
         return h;
     }
 }),
-    s(47120);
-var n = s(200651),
-    r = s(192379),
-    o = s(404759),
-    a = s.n(o),
-    i = s(423650),
-    l = s.n(i),
-    u = s(481060),
-    d = s(689938),
-    c = s(984600);
-function p(e, t, s) {
+    n(47120);
+var s = n(200651),
+    r = n(192379),
+    i = n(404759),
+    o = n.n(i),
+    a = n(423650),
+    l = n.n(a),
+    u = n(481060),
+    d = n(388032),
+    c = n(984600);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: s,
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = s),
+            : (e[t] = n),
         e
     );
 }
 class h extends r.Component {
     render() {
         let { selectedValue: e } = this.state;
-        return (0, n.jsxs)(r.Fragment, {
+        return (0, s.jsxs)(r.Fragment, {
             children: [
-                (0, n.jsx)(u.Heading, {
+                (0, s.jsx)(u.Heading, {
                     className: c.prompt,
                     variant: 'heading-md/semibold',
                     children: this.props.prompt
                 }),
-                (0, n.jsx)('hr', { className: c.separator }),
-                (0, n.jsx)(u.Text, {
+                (0, s.jsx)('hr', { className: c.separator }),
+                (0, s.jsx)(u.Text, {
                     className: c.selectYourAnswer,
                     variant: 'text-xs/normal',
-                    children: d.Z.Messages.HYPESQUAD_QUIZ_SELECT_ANSWER
+                    children: d.intl.string(d.t.YeiLeH)
                 }),
-                (0, n.jsx)(u.RadioGroup, {
+                (0, s.jsx)(u.RadioGroup, {
                     options: this.getQuestionOptions(),
                     onChange: this.handleOptionChange,
                     value: e
@@ -56,7 +56,7 @@ class h extends r.Component {
             p(
                 this,
                 'getQuestionOptions',
-                a()(() =>
+                o()(() =>
                     l()(
                         this.props.options.map((e) => ({
                             name: e.copy,

@@ -22,7 +22,7 @@ function u(e, t, n, i) {
     };
     return {
         getSetting: a,
-        updateSetting: _(a, (n) =>
+        updateSetting: f(a, (n) =>
             s.hW.updateAsync(
                 e,
                 (e) => {
@@ -50,7 +50,7 @@ function c(e, t, n) {
                 });
             return null != s ? s : i;
         },
-        updateSetting: _(s, (r) =>
+        updateSetting: f(s, (r) =>
             a.Z.shouldSync(t)
                 ? e.updateSetting(r)
                 : (i.Z.dispatch({
@@ -73,7 +73,7 @@ function d(e, t, n, r) {
                 n = r();
             return null != n ? n : t;
         },
-        updateSetting: _(
+        updateSetting: f(
             a,
             (n) => (
                 i.Z.dispatch({
@@ -85,7 +85,7 @@ function d(e, t, n, r) {
         )
     };
 }
-function _(e, t) {
+function f(e, t) {
     return function (n) {
         return 'function' == typeof n ? t(n(e())) : t(n);
     };

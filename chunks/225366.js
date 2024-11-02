@@ -24,21 +24,21 @@ function c(e, t, n, u) {
     var c = e.locale,
         d = e.onError;
     void 0 === u && (u = {}), !Intl.ListFormat && d(new a.u_('Intl.ListFormat is not available in this environment.\nTry polyfilling it using "@formatjs/intl-listformat"\n', a.jK.MISSING_INTL_API));
-    var _ = (0, i.L6)(u, o);
+    var f = (0, i.L6)(u, o);
     try {
-        var E = {},
-            f = n.map(function (e, t) {
+        var _ = {},
+            h = n.map(function (e, t) {
                 if ('object' == typeof e) {
                     var n,
                         r = ((n = t), ''.concat(l, '_').concat(n, '_').concat(l));
-                    return (E[r] = e), r;
+                    return (_[r] = e), r;
                 }
                 return String(e);
             });
-        return t(c, _)
-            .formatToParts(f)
+        return t(c, f)
+            .formatToParts(h)
             .map(function (e) {
-                return 'literal' === e.type ? e : (0, r.pi)((0, r.pi)({}, e), { value: E[e.value] || e.value });
+                return 'literal' === e.type ? e : (0, r.pi)((0, r.pi)({}, e), { value: _[e.value] || e.value });
             });
     } catch (e) {
         d(new s.Qe('Error formatting list.', c, e));

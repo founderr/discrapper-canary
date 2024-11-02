@@ -1,53 +1,53 @@
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(120356),
-    r = n.n(a),
-    i = n(481060),
+var r = n(120356),
+    a = n.n(r),
+    s = n(481060),
     l = n(906732),
     o = n(646476),
     c = n(197115),
-    _ = n(689938),
-    d = n(222301),
-    E = n(568147),
-    u = n(332796);
+    d = n(388032),
+    u = n(222301),
+    g = n(568147),
+    m = n(332796);
 t.Z = (e) => {
-    let { className: t, imageClassName: n, textContainerOverrideStyles: a, location: T, analyticsLocation: I } = e,
-        { analyticsLocations: R } = (0, l.ZP)(T),
-        g = (0, o.rK)(),
-        { enabled: N } = o.RO.useExperiment({ location: 'GiftNitro' }, { autoTrackExposure: g }),
-        m = N && g;
-    return (0, s.jsx)(l.Gt, {
-        value: R,
-        children: (0, s.jsxs)('div', {
-            className: r()(d.container, t),
+    let { className: t, imageClassName: n, textContainerOverrideStyles: r, location: f, analyticsLocation: p } = e,
+        { analyticsLocations: _ } = (0, l.ZP)(f),
+        h = (0, o.rK)(),
+        { enabled: x } = o.RO.useExperiment({ location: 'GiftNitro' }, { autoTrackExposure: h }),
+        E = x && h;
+    return (0, i.jsx)(l.Gt, {
+        value: _,
+        children: (0, i.jsxs)('div', {
+            className: a()(u.container, t),
             children: [
-                (0, s.jsxs)('div', {
-                    className: d.textContainer,
-                    style: a,
+                (0, i.jsxs)('div', {
+                    className: u.textContainer,
+                    style: r,
                     children: [
-                        (0, s.jsx)(i.Heading, {
+                        (0, i.jsx)(s.Heading, {
                             variant: 'heading-lg/extrabold',
-                            className: d.heading,
-                            children: m ? _.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : _.Z.Messages.GIFT_NITRO
+                            className: u.heading,
+                            children: E ? d.intl.string(d.t.LB3bJC) : d.intl.string(d.t.Ve9Ge3)
                         }),
-                        (0, s.jsx)(i.Text, {
+                        (0, i.jsx)(s.Text, {
                             variant: 'text-sm/medium',
-                            children: m ? _.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : _.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
+                            children: E ? d.intl.string(d.t.u49cn5) : d.intl.string(d.t.yQ06u7)
                         }),
-                        (0, s.jsx)(c.Z, {
+                        (0, i.jsx)(c.Z, {
                             isGift: !0,
-                            className: d.giftCardButton,
-                            look: i.Button.Looks.OUTLINED,
-                            buttonText: _.Z.Messages.GIFT_NITRO,
-                            buttonTextClassName: d.giftButtonCTA,
-                            color: i.Button.Colors.CUSTOM,
-                            premiumModalAnalyticsLocation: I
+                            className: u.giftCardButton,
+                            look: s.Button.Looks.OUTLINED,
+                            buttonText: d.intl.string(d.t.Ve9Ge3),
+                            buttonTextClassName: u.giftButtonCTA,
+                            color: s.Button.Colors.CUSTOM,
+                            premiumModalAnalyticsLocation: p
                         })
                     ]
                 }),
-                (0, s.jsx)('img', {
-                    src: m ? u : E,
-                    className: r()(d.bannerImage, n),
+                (0, i.jsx)('img', {
+                    src: E ? m : g,
+                    className: a()(u.bannerImage, n),
                     alt: 'gift nitro banner'
                 })
             ]

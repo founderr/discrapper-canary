@@ -1,17 +1,17 @@
 n.d(t, {
     U: function () {
-        return _;
+        return f;
     },
     Z: function () {
-        return E;
+        return C;
     }
 }),
     n(653041);
 var i = n(392711),
-    s = n.n(i),
-    a = n(772848),
-    l = n(903797),
-    r = n(731965),
+    l = n.n(i),
+    r = n(772848),
+    a = n(903797),
+    s = n(731965),
     o = n(125268),
     c = n(673125),
     u = n(292793),
@@ -30,81 +30,81 @@ let p = {
         SIZE_MIN: m.qh / 2,
         SIZE_MAX: m.qh
     },
-    _ = (0, l.Z)(() => ({
+    f = (0, a.Z)(() => ({
         particles: {},
         lastSpawned: {}
     }));
-function f(e, t) {
+function g(e, t) {
     var n;
-    s()(null !== (n = _.getState().particles[e.id]) && void 0 !== n ? n : {}).forEach(t);
+    l()(null !== (n = f.getState().particles[e.id]) && void 0 !== n ? n : {}).forEach(t);
 }
-function E(e) {
-    var t, n, i, l;
-    let { emojiHose: E, context: g, canvasWidth: C, canvasHeight: I, fallbackColor: T, outlineColorDark: x, outlineColorLight: S, streamerId: v, deadDrawables: N } = e;
-    g.save();
-    let A = c.Z.getEmojiImage(null !== (n = null !== (t = E.emojiId) && void 0 !== t ? t : E.emojiName) && void 0 !== n ? n : ''),
-        Z = (0, d.np)(E.x, C),
-        M = (0, d.np)(E.y, I),
-        { outlineColor: b } = (0, d.bg)(E.userId, x, S, T);
+function C(e) {
+    var t, n, i, a;
+    let { emojiHose: C, context: x, canvasWidth: v, canvasHeight: _, fallbackColor: I, outlineColorDark: E, outlineColorLight: b, streamerId: S, deadDrawables: Z } = e;
+    x.save();
+    let T = c.Z.getEmojiImage(null !== (n = null !== (t = C.emojiId) && void 0 !== t ? t : C.emojiName) && void 0 !== n ? n : ''),
+        N = (0, d.np)(C.x, v),
+        j = (0, d.np)(C.y, _),
+        { outlineColor: A } = (0, d.bg)(C.userId, E, b, I);
     if (
-        (f(E, (e) => {
+        (g(C, (e) => {
             var t, n;
             return (
-                (t = E),
+                (t = C),
                 (n = e),
                 void ((n.x += n.xSpeed * window.devicePixelRatio),
                 (n.y += n.ySpeed * window.devicePixelRatio),
                 (n.opacity -= n.opacitySpeed),
                 n.opacity <= 0 &&
-                    (0, r.j)(() => {
-                        _.setState((e) => (delete e.particles[t.id][n.id], 0 === Object.keys(e.particles[t.id]).length && delete e.particles[t.id], e));
+                    (0, s.j)(() => {
+                        f.setState((e) => (delete e.particles[t.id][n.id], 0 === Object.keys(e.particles[t.id]).length && delete e.particles[t.id], e));
                     }))
             );
         }),
         !(function (e, t, n) {
             var i;
-            let l = null !== (i = _.getState().lastSpawned[e.id]) && void 0 !== i ? i : 0,
+            let a = null !== (i = f.getState().lastSpawned[e.id]) && void 0 !== i ? i : 0,
                 o = Date.now();
-            if (!(l + 100 > o) && e.state !== u.f.STOP && !!(0.8 >= Math.random() || l + 300 < o))
-                (0, r.j)(() => {
-                    _.setState((i) => {
-                        var l, r, o;
-                        let c = null !== (l = i.particles[e.id]) && void 0 !== l ? l : {},
-                            u = s().random(1, 2);
+            if (!(a + 100 > o) && e.state !== u.f.STOP && !!(0.8 >= Math.random() || a + 300 < o))
+                (0, s.j)(() => {
+                    f.setState((i) => {
+                        var a, s, o;
+                        let c = null !== (a = i.particles[e.id]) && void 0 !== a ? a : {},
+                            u = l().random(1, 2);
                         for (let e = 0; e < u; e++) {
                             let e =
-                                ((r = t),
+                                ((s = t),
                                 (o = n),
                                 {
-                                    id: (0, a.Z)(),
-                                    x: r + s().random(-p.X_OFFSET, p.X_OFFSET),
-                                    y: o + s().random(-p.Y_OFFSET, p.Y_OFFSET),
-                                    xSpeed: s().random(-p.X_SPEED, p.X_SPEED),
-                                    ySpeed: s().random(p.Y_SPEED_MIN, p.Y_SPEED_MAX),
+                                    id: (0, r.Z)(),
+                                    x: s + l().random(-p.X_OFFSET, p.X_OFFSET),
+                                    y: o + l().random(-p.Y_OFFSET, p.Y_OFFSET),
+                                    xSpeed: l().random(-p.X_SPEED, p.X_SPEED),
+                                    ySpeed: l().random(p.Y_SPEED_MIN, p.Y_SPEED_MAX),
                                     opacity: p.OPACITY,
-                                    opacitySpeed: s().random(p.OPACITY_SPEED_MIN, p.OPACITY_SPEED_MAX),
-                                    size: s().random(p.SIZE_MIN, p.SIZE_MAX)
+                                    opacitySpeed: l().random(p.OPACITY_SPEED_MIN, p.OPACITY_SPEED_MAX),
+                                    size: l().random(p.SIZE_MIN, p.SIZE_MAX)
                                 });
                             c[e.id] = e;
                         }
                         return (i.particles[e.id] = c), (i.lastSpawned[e.id] = Date.now()), i;
                     });
                 });
-        })(E, Z, M),
-        (0, h.I)(g, Z, M, b, m.q2),
-        (0, h.T)(g, Z, M, E.userId),
-        f(E, (e) =>
+        })(C, N, j),
+        (0, h.I)(x, N, j, A, m.q2),
+        (0, h.T)(x, N, j, C.userId),
+        g(C, (e) =>
             (function (e, t, n) {
                 if (null == t) return;
                 let i = n.size * window.devicePixelRatio,
-                    s = n.x - (i / 2) * window.devicePixelRatio,
-                    a = n.y - 1.2 * i * window.devicePixelRatio;
-                (e.globalAlpha = n.opacity), e.drawImage(t, i / 2 + s, i / 2 + a, i, i);
-            })(g, A, e)
+                    l = n.x - (i / 2) * window.devicePixelRatio,
+                    r = n.y - 1.2 * i * window.devicePixelRatio;
+                (e.globalAlpha = n.opacity), e.drawImage(t, i / 2 + l, i / 2 + r, i, i);
+            })(x, T, e)
         ),
-        E.lastUpdatedAt + m.FO < Date.now() && (0, o.ZZ)(v, E),
-        E.state === u.f.STOP && ((i = E), !(Object.keys(null !== (l = _.getState().particles[i.id]) && void 0 !== l ? l : {}).length > 0)))
+        C.lastUpdatedAt + m.FO < Date.now() && (0, o.ZZ)(S, C),
+        C.state === u.f.STOP && ((i = C), !(Object.keys(null !== (a = f.getState().particles[i.id]) && void 0 !== a ? a : {}).length > 0)))
     )
-        N.push(E);
-    g.restore();
+        Z.push(C);
+    x.restore();
 }

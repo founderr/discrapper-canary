@@ -1,40 +1,40 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return S;
+        return p;
     }
 }),
-    t(47120);
-var n = t(200651),
-    a = t(192379),
-    i = t(63063),
-    r = t(88658),
-    o = t(695346),
-    l = t(639814),
-    c = t(838436),
-    d = t(51331),
-    _ = t(726985),
-    u = t(736530),
-    E = t(981631),
-    T = t(689938);
-function S() {
-    let e = (0, l.is)(),
-        s = o.iH.useSetting().includes(e),
-        t = a.useCallback(
-            (s) => {
-                let t = new Set((0, r.rr)());
-                s ? t.delete(e) : t.add(e), o.iH.updateSetting([...t]);
+    n(47120);
+var i = n(200651),
+    s = n(192379),
+    r = n(63063),
+    l = n(88658),
+    a = n(695346),
+    o = n(639814),
+    c = n(838436),
+    d = n(51331),
+    u = n(726985),
+    m = n(736530),
+    h = n(981631),
+    g = n(388032);
+function p() {
+    let e = (0, o.is)(),
+        t = a.iH.useSetting().includes(e),
+        n = s.useCallback(
+            (t) => {
+                let n = new Set((0, l.rr)());
+                t ? n.delete(e) : n.add(e), a.iH.updateSetting([...n]);
             },
             [e]
         );
-    return e === u.T
+    return e === m.T
         ? null
-        : (0, n.jsx)(c.U, {
-              setting: _.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_JOINING_V2,
-              children: (0, n.jsx)(d.Z, {
-                  title: T.Z.Messages.USER_SETTINGS_ACTIVITY_JOINING_TITLE,
-                  value: !s,
-                  onChange: t,
-                  note: T.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_JOINING_DESC_V2.format({ helpdeskArticle: i.Z.getArticleURL(E.BhN.ACTIVITY_STATUS_SETTINGS) })
+        : (0, i.jsx)(c.U, {
+              setting: u.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_JOINING_V2,
+              children: (0, i.jsx)(d.Z, {
+                  title: g.intl.string(g.t['T+nevL']),
+                  value: !t,
+                  onChange: n,
+                  note: g.intl.format(g.t.jXKQCg, { helpdeskArticle: r.Z.getArticleURL(h.BhN.ACTIVITY_STATUS_SETTINGS) })
               })
           });
 }

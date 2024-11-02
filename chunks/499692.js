@@ -1,57 +1,57 @@
 var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    l = n(873199),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    s = n(873199),
     o = n(442837),
     c = n(481060),
     d = n(674588),
     u = n(368862),
-    _ = n(125909),
-    E = n(857192),
-    h = n(797908),
-    m = n(292191),
-    I = n(253509);
+    h = n(125909),
+    m = n(857192),
+    p = n(797908),
+    g = n(292191),
+    f = n(253509);
 t.Z = function (e) {
     let { onSelectApplication: t } = e,
-        n = (0, o.e7)([E.default], () => E.default.appDirectoryIncludesInactiveCollections),
-        s = (0, o.e7)([u.Z], () => u.Z.getFetchState({ includesInactive: n })),
-        p = (0, o.e7)([u.Z], () => u.Z.getCollections({ includesInactive: n }));
-    a.useEffect(() => {
+        n = (0, o.e7)([m.default], () => m.default.appDirectoryIncludesInactiveCollections),
+        l = (0, o.e7)([u.Z], () => u.Z.getFetchState({ includesInactive: n })),
+        _ = (0, o.e7)([u.Z], () => u.Z.getCollections({ includesInactive: n }));
+    r.useEffect(() => {
         d.bG({ includesInactive: n });
     }, [n]);
-    let g = a.useMemo(() => (null == p ? void 0 : p.filter((e) => e.type !== l.o.GALLERY)), [p]);
-    return s === u.M.ERROR
+    let E = r.useMemo(() => (null == _ ? void 0 : _.filter((e) => e.type !== s.o.GALLERY)), [_]);
+    return l === u.M.ERROR
         ? (0, i.jsx)('div', {
-              className: I.errorContainer,
-              children: (0, i.jsx)(m.Z, { className: I.error })
+              className: f.errorContainer,
+              children: (0, i.jsx)(g.Z, { className: f.error })
           })
-        : (0, i.jsx)(_.Z, {
-              loading: s === u.M.FETCHING,
+        : (0, i.jsx)(h.Z, {
+              loading: l === u.M.FETCHING,
               children:
-                  null == g
+                  null == E
                       ? void 0
-                      : g.map((e, n) =>
+                      : E.map((e, n) =>
                             (0, i.jsxs)(
                                 'div',
                                 {
                                     children: [
                                         (0, i.jsx)(c.Heading, {
-                                            className: r()(I.sectionTitle, { [I.titleExtraPadding]: 0 === n }),
+                                            className: a()(f.sectionTitle, { [f.titleExtraPadding]: 0 === n }),
                                             variant: 'heading-lg/semibold',
                                             color: 'header-primary',
                                             children: e.title
                                         }),
                                         (0, i.jsx)('div', {
-                                            className: I.content,
+                                            className: f.content,
                                             children: e.application_directory_collection_items.map((e) => {
-                                                let { id: n, application: a } = e;
-                                                return null == a
+                                                let { id: n, application: r } = e;
+                                                return null == r
                                                     ? null
                                                     : (0, i.jsx)(
-                                                          h.Z,
+                                                          p.Z,
                                                           {
-                                                              application: a,
+                                                              application: r,
                                                               onSelectApplication: t,
                                                               showCategory: !0
                                                           },

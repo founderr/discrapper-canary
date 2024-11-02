@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var a = n(192379);
-function r(e) {
-    let t = a.useRef();
+var r = n(192379);
+function i(e) {
+    let t = r.useRef();
     (t.current = e),
-        a.useEffect(
+        r.useEffect(
             () => () => {
                 var e;
                 return null === (e = t.current) || void 0 === e ? void 0 : e.call(t);

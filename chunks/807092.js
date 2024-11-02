@@ -7,8 +7,8 @@ var r,
     u = n(375954);
 let c = {},
     d = {},
-    _ = {};
-function E(e) {
+    f = {};
+function _(e) {
     if (null == e) return !1;
     let t = d[e];
     if (null == t) return !1;
@@ -22,10 +22,10 @@ function E(e) {
     }),
         delete d[e];
 }
-function f() {
-    (c = {}), (d = {}), (_ = {});
+function h() {
+    (c = {}), (d = {}), (f = {});
 }
-class h extends (s = o.ZP.Store) {
+class p extends (s = o.ZP.Store) {
     initialize() {
         this.waitFor(u.Z);
     }
@@ -33,11 +33,11 @@ class h extends (s = o.ZP.Store) {
         return c[e];
     }
     getPendingReplyActionSource(e) {
-        return _[e];
+        return f[e];
     }
 }
 (a = 'PendingReplyStore'),
-    (i = 'displayName') in (r = h)
+    (i = 'displayName') in (r = p)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -45,7 +45,7 @@ class h extends (s = o.ZP.Store) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = new h(l.Z, {
+    (t.Z = new p(l.Z, {
         CREATE_PENDING_REPLY: function (e) {
             let { channel: t, message: n, shouldMention: r = !0, showMentionToggle: i = !0, source: a } = e;
             (c[t.id] = {
@@ -54,7 +54,7 @@ class h extends (s = o.ZP.Store) {
                 shouldMention: r,
                 showMentionToggle: i
             }),
-                (_[t.id] = a);
+                (f[t.id] = a);
         },
         CREATE_SHALLOW_PENDING_REPLY: function (e) {
             let { channel: t, messageId: n, shouldMention: r = !0, showMentionToggle: i = !0 } = e;
@@ -82,23 +82,23 @@ class h extends (s = o.ZP.Store) {
             let { channelId: t } = e;
             delete c[t], delete d[t];
         },
-        CONNECTION_OPEN: f,
-        LOGOUT: f,
+        CONNECTION_OPEN: h,
+        LOGOUT: h,
         MESSAGE_DELETE: function (e) {
             var t, n, r;
             let { id: i, channelId: a } = e;
-            if ((null === (n = c[a]) || void 0 === n ? void 0 : null === (t = n.message) || void 0 === t ? void 0 : t.id) === i) delete c[a], delete _[a];
+            if ((null === (n = c[a]) || void 0 === n ? void 0 : null === (t = n.message) || void 0 === t ? void 0 : t.id) === i) delete c[a], delete f[a];
             else {
                 if ((null === (r = d[a]) || void 0 === r ? void 0 : r.messageId) !== i) return !1;
-                delete d[a], delete _[a];
+                delete d[a], delete f[a];
             }
         },
         CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;
-            E(t);
+            _(t);
         },
         LOAD_MESSAGES_SUCCESS: function (e) {
             let { channelId: t } = e;
-            E(t);
+            _(t);
         }
     }));

@@ -1,9 +1,9 @@
 n.d(t, {
     V1: function () {
-        return E;
+        return _;
     },
     ZI: function () {
-        return h;
+        return p;
     }
 });
 var r = n(524437),
@@ -15,8 +15,8 @@ var r = n(524437),
     u = n(695346),
     c = n(675478),
     d = n(981631),
-    _ = n(874893);
-function E(e) {
+    f = n(874893);
+function _(e) {
     return c.hW.updateAsync(
         'guildFolders',
         (t) => {
@@ -28,7 +28,7 @@ function E(e) {
         c.fy.FREQUENT_USER_ACTION
     );
 }
-function f(e) {
+function h(e) {
     switch (e) {
         case d.BRd.DARK:
             return r.Q2.DARK;
@@ -42,10 +42,10 @@ function f(e) {
             return r.Q2.DARK;
     }
 }
-function h(e) {
+function p(e) {
     let { backgroundGradientPresetId: t, theme: n, useSystemTheme: r } = e,
         s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.fy.INFREQUENT_USER_ACTION,
-        l = 'system' === n ? _.K.ON : _.K.OFF;
+        l = 'system' === n ? f.K.ON : f.K.OFF;
     if (
         (a.Z.dispatch({
             type: 'UNSYNCED_USER_SETTINGS_UPDATE',
@@ -68,7 +68,7 @@ function h(e) {
             'appearance',
             (e) => {
                 var r;
-                (e.theme = f(n)), (e.clientThemeSettings = { backgroundGradientPresetId: null != (r = { backgroundGradientPresetId: t }).backgroundGradientPresetId ? i.yC.create({ value: r.backgroundGradientPresetId }) : void 0 });
+                (e.theme = h(n)), (e.clientThemeSettings = { backgroundGradientPresetId: null != (r = { backgroundGradientPresetId: t }).backgroundGradientPresetId ? i.yC.create({ value: r.backgroundGradientPresetId }) : void 0 });
             },
             s
         );
@@ -155,7 +155,7 @@ t.ZP = {
                 c.hW.updateAsync(
                     'appearance',
                     (t) => {
-                        t.theme = f(e);
+                        t.theme = h(e);
                     },
                     c.fy.INFREQUENT_USER_ACTION
                 );

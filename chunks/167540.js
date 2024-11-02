@@ -1,59 +1,59 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return m;
+        return T;
     }
 }),
-    t(47120);
-var n = t(200651),
-    a = t(192379),
-    i = t(120356),
-    r = t.n(i),
-    o = t(442837),
-    l = t(481060),
-    c = t(921801),
-    d = t(131951),
-    _ = t(962100),
-    u = t(445817),
-    E = t(726985),
-    T = t(65154),
-    S = t(689938),
-    I = t(113207);
-function N() {
-    return (0, n.jsx)(l.FormNotice, {
-        type: l.CardTypes.PRIMARY,
-        title: S.Z.Messages.VIDEO_UNSUPPORTED_BROWSER_TITLE,
-        body: S.Z.Messages.VIDEO_UNSUPPORTED_BROWSER_BODY,
-        button: (0, n.jsx)(l.Button, {
-            size: l.Button.Sizes.SMALL,
-            className: I.marginTop20,
-            onClick: () => (0, _.y)('Video unsupported browser'),
-            children: S.Z.Messages.DOWNLOAD_APP
+    n(47120);
+var i = n(200651),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(442837),
+    o = n(481060),
+    c = n(921801),
+    d = n(131951),
+    u = n(962100),
+    m = n(445817),
+    h = n(726985),
+    g = n(65154),
+    p = n(388032),
+    x = n(113207);
+function S() {
+    return (0, i.jsx)(o.FormNotice, {
+        type: o.CardTypes.PRIMARY,
+        title: p.intl.string(p.t.XLw6FB),
+        body: p.intl.string(p.t.wVjKGh),
+        button: (0, i.jsx)(o.Button, {
+            size: o.Button.Sizes.SMALL,
+            className: x.marginTop20,
+            onClick: () => (0, u.y)('Video unsupported browser'),
+            children: p.intl.string(p.t.BK8LKy)
         })
     });
 }
-function m() {
-    let e = (0, o.e7)([d.Z], () => d.Z.supports(T.AN.VIDEO)),
-        [s, t] = a.useState(!1);
-    return (0, n.jsxs)('div', {
+function T() {
+    let e = (0, a.e7)([d.Z], () => d.Z.supports(g.AN.VIDEO)),
+        [t, n] = s.useState(!1);
+    return (0, i.jsxs)('div', {
         children: [
-            (0, n.jsxs)(l.HeadingLevel, {
-                component: (0, n.jsx)(l.FormTitle, {
-                    tag: l.FormTitleTags.H1,
-                    className: I.marginBottom20,
-                    children: S.Z.Messages.VIDEO_SETTINGS
+            (0, i.jsxs)(o.HeadingLevel, {
+                component: (0, i.jsx)(o.FormTitle, {
+                    tag: o.FormTitleTags.H1,
+                    className: x.marginBottom20,
+                    children: p.intl.string(p.t.LKzQSE)
                 }),
                 children: [
-                    (0, n.jsx)(c.F, {
-                        setting: E.s6.VOICE_AND_VIDEO_VIDEO_CAMERA,
-                        children: (0, n.jsx)(u.Z, {
-                            previewEnabled: s,
-                            onEnablePreview: () => t(!0)
+                    (0, i.jsx)(c.F, {
+                        setting: h.s6.VOICE_AND_VIDEO_VIDEO_CAMERA,
+                        children: (0, i.jsx)(m.Z, {
+                            previewEnabled: t,
+                            onEnablePreview: () => n(!0)
                         })
                     }),
-                    !e && (0, n.jsx)(N, {})
+                    !e && (0, i.jsx)(S, {})
                 ]
             }),
-            (0, n.jsx)(l.FormDivider, { className: r()(I.marginBottom40, I.marginTop40) })
+            (0, i.jsx)(o.FormDivider, { className: l()(x.marginBottom40, x.marginTop40) })
         ]
     });
 }

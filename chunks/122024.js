@@ -27,8 +27,8 @@ var u = (t.Checkboard = function (e) {
         u = e.renderers,
         c = e.borderRadius,
         d = e.boxShadow,
-        _ = e.children,
-        E = (0, s.default)({
+        f = e.children,
+        _ = (0, s.default)({
             default: {
                 grid: {
                     borderRadius: c,
@@ -38,7 +38,7 @@ var u = (t.Checkboard = function (e) {
                 }
             }
         });
-    return (0, i.isValidElement)(_) ? a.default.cloneElement(_, r({}, _.props, { style: r({}, _.props.style, E.grid) })) : a.default.createElement('div', { style: E.grid });
+    return (0, i.isValidElement)(f) ? a.default.cloneElement(f, r({}, f.props, { style: r({}, f.props.style, _.grid) })) : a.default.createElement('div', { style: _.grid });
 });
 (u.defaultProps = {
     size: 8,

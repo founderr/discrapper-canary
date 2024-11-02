@@ -1,35 +1,35 @@
-t.d(a, {
+n.d(t, {
     k: function () {
         return u;
     }
 });
-var n = t(200651);
-t(192379);
-var s = t(120356),
-    r = t.n(s),
-    l = t(481060),
-    o = t(219929),
-    i = t(689938),
-    c = t(454469);
+var a = n(200651);
+n(192379);
+var r = n(120356),
+    l = n.n(r),
+    i = n(481060),
+    s = n(219929),
+    o = n(388032),
+    c = n(454469);
 let u = (e) => {
-    let { className: a, submitting: t, stripePaymentMethod: s } = e,
-        { card: u } = null != s ? s : {},
-        d = null != u ? o.ZP.getType(u.brand) : o.ZP.Types.UNKNOWN;
-    return (0, n.jsx)(l.FormSection, {
-        className: a,
-        title: i.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_INFO_TITLE,
-        children: (0, n.jsxs)('div', {
+    let { className: t, submitting: n, stripePaymentMethod: r } = e,
+        { card: u } = null != r ? r : {},
+        d = null != u ? s.ZP.getType(u.brand) : s.ZP.Types.UNKNOWN;
+    return (0, a.jsx)(i.FormSection, {
+        className: t,
+        title: o.intl.string(o.t.mmDvV1),
+        children: (0, a.jsxs)('div', {
             className: c.cardNumberWrapper,
             children: [
-                (0, n.jsx)(o.ZP, {
-                    className: r()(c.cardIcon, { [c.submitting]: t }),
+                (0, a.jsx)(s.ZP, {
+                    className: l()(c.cardIcon, { [c.submitting]: n }),
                     type: d
                 }),
-                (0, n.jsx)(l.TextInput, {
-                    value: t && null != u ? i.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_INFO_CREATING.format(u) : void 0,
+                (0, a.jsx)(i.TextInput, {
+                    value: n && null != u ? o.intl.formatToPlainString(o.t.bCynoK, u) : void 0,
                     editable: !1,
                     readOnly: !0,
-                    placeholder: i.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_INFO_LOADING,
+                    placeholder: o.intl.string(o.t['bWMH7+']),
                     inputClassName: c.cardNumberInput
                 })
             ]

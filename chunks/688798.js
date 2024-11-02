@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-class _ extends a.Z {
+class f extends a.Z {
     constructor(...e) {
         super(...e),
             d(this, 'actions', { POST_CONNECTION_OPEN: (e) => this.handleConnectionOpen(e) }),
@@ -43,17 +43,17 @@ class _ extends a.Z {
                 )
                     return;
                 let d = l.Z.lastSeenChangelogId(),
-                    _ = l.Z.lastSeenChangelogDate();
+                    f = l.Z.lastSeenChangelogDate();
                 if (null != d && 0 >= o.default.compare(a, d)) return;
-                let E = await i.Z.fetchChangelog(a, s.default.locale);
-                if (null != E) {
-                    if (null == _ || null == l.Z.lastSeenChangelogDate()) {
-                        i.Z.markChangelogAsSeen(a, E.date);
+                let _ = await i.Z.fetchChangelog(a, s.default.locale);
+                if (null != _) {
+                    if (null == f || null == l.Z.lastSeenChangelogDate()) {
+                        i.Z.markChangelogAsSeen(a, _.date);
                         return;
                     }
-                    !l.Z.isLocked() && new Date(E.date) > new Date(_) && (0, c.Z)();
+                    !l.Z.isLocked() && new Date(_.date) > new Date(f) && (0, c.Z)();
                 }
             });
     }
 }
-t.Z = new _();
+t.Z = new f();

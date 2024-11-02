@@ -1,36 +1,36 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return a;
     }
 }),
     n(653041);
 var i = n(88315),
-    s = n(199766),
-    a = n(813900);
-function l(e) {
-    let { line: t, context: n, canvasWidth: l, canvasHeight: r, fallbackColor: o, outlineColorDark: c, outlineColorLight: u, linesDrawnAt: d, deadDrawables: h } = e;
+    l = n(199766),
+    r = n(813900);
+function a(e) {
+    let { line: t, context: n, canvasWidth: a, canvasHeight: s, fallbackColor: o, outlineColorDark: c, outlineColorLight: u, linesDrawnAt: d, deadDrawables: h } = e;
     null == d.current[t.id] && (d.current[t.id] = Date.now()), (n.lineCap = 'round'), (n.lineJoin = 'round');
-    let m = t.points.map((e) => (0, i.RR)(e, l, r)),
+    let m = t.points.map((e) => (0, i.RR)(e, a, s)),
         p = d.current[t.id],
-        _ = (e) => p + e.deltaTime,
-        f = (e) => _(e) + 1500 >= Date.now(),
-        E = (e) => _(e) <= Date.now() && f(e),
-        g = m.find(E);
-    if (null == g) {
-        !f(t.points[t.points.length - 1]) && h.push(t);
+        f = (e) => p + e.deltaTime,
+        g = (e) => f(e) + 1500 >= Date.now(),
+        C = (e) => f(e) <= Date.now() && g(e),
+        x = m.find(C);
+    if (null == x) {
+        !g(t.points[t.points.length - 1]) && h.push(t);
         return;
     }
-    let C = (e, t) => {
+    let v = (e, t) => {
             let i = null;
-            (n.lineWidth = t * window.devicePixelRatio), (n.strokeStyle = e), n.beginPath(), n.moveTo(g.x, g.y);
+            (n.lineWidth = t * window.devicePixelRatio), (n.strokeStyle = e), n.beginPath(), n.moveTo(x.x, x.y);
             for (let e = 1; e < m.length; e++) {
                 let t = m[e];
-                E(t) && (n.lineTo(t.x, t.y), (i = t));
+                C(t) && (n.lineTo(t.x, t.y), (i = t));
             }
             return n.stroke(), i;
         },
-        { fillColor: I, outlineColor: T } = (0, i.bg)(t.userId, c, u, o),
-        x = C(T, 6 + a.q2),
-        S = null != x && E(x);
-    S && (0, s.I)(n, x.x, x.y, T, a.q2), C(I, 6), S && (0, s.T)(n, x.x, x.y, t.userId);
+        { fillColor: _, outlineColor: I } = (0, i.bg)(t.userId, c, u, o),
+        E = v(I, 6 + r.q2),
+        b = null != E && C(E);
+    b && (0, l.I)(n, E.x, E.y, I, r.q2), v(_, 6), b && (0, l.T)(n, E.x, E.y, t.userId);
 }

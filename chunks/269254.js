@@ -1,61 +1,61 @@
-n.r(t),
-    n.d(t, {
+e.r(n),
+    e.d(n, {
         default: function () {
-            return E;
+            return S;
         }
     });
-var a = n(200651);
-n(192379);
-var i = n(828214),
-    l = n(481060),
-    u = n(239091),
-    s = n(299206),
-    o = n(519110),
-    r = n(695346),
-    c = n(572004),
-    I = n(691251),
-    d = n(689938);
-function E(e) {
-    let { target: t, onSelect: n } = e,
-        E = t.getAttribute('data-type'),
-        M = t.getAttribute('data-id'),
-        S = t.getAttribute('data-name'),
-        g = t.getAttribute('data-surrogates'),
-        O = 'true' === t.getAttribute('data-animated'),
-        C = r.Sb.useSetting(),
-        b = (0, o.Z)({
-            type: E,
-            id: M,
-            name: S,
+var i = e(200651);
+e(192379);
+var l = e(828214),
+    a = e(481060),
+    r = e(239091),
+    u = e(299206),
+    o = e(519110),
+    s = e(695346),
+    c = e(572004),
+    d = e(691251),
+    g = e(388032);
+function S(t) {
+    let { target: n, onSelect: e } = t,
+        S = n.getAttribute('data-type'),
+        I = n.getAttribute('data-id'),
+        b = n.getAttribute('data-name'),
+        f = n.getAttribute('data-surrogates'),
+        E = 'true' === n.getAttribute('data-animated'),
+        p = s.Sb.useSetting(),
+        m = (0, o.Z)({
+            type: S,
+            id: I,
+            name: b,
             isInExpressionPicker: !0
         }),
-        f =
-            null != g
-                ? (0, a.jsx)(i.sN, {
+        v =
+            null != f
+                ? (0, i.jsx)(l.sN, {
                       id: 'copy',
-                      label: d.Z.Messages.COPY_EMOJI,
-                      action: () => (0, c.JG)(g)
+                      label: g.intl.string(g.t.ad58UF),
+                      action: () => (0, c.JG)(f)
                   })
                 : null,
-        Z = (0, s.Z)({
-            id: M,
+        M = (0, u.Z)({
+            id: I,
             shiftId:
-                E === I.S.EMOJI
+                S === d.S.EMOJI
                     ? '<'
-                          .concat(O ? 'a' : '', ':')
-                          .concat(null == S ? void 0 : S.split('~')[0], ':')
-                          .concat(M, '>')
+                          .concat(E ? 'a' : '', ':')
+                          .concat(null == b ? void 0 : b.split('~')[0], ':')
+                          .concat(I, '>')
                     : void 0,
-            label: E === I.S.STICKER ? d.Z.Messages.COPY_ID_STICKER : d.Z.Messages.COPY_ID_EMOJI
+            label: S === d.S.STICKER ? g.intl.string(g.t['SJ324+']) : g.intl.string(g.t.Ap2oV1)
         });
-    return (0, a.jsx)(l.Menu, {
+    return (0, i.jsx)(a.Menu, {
         navId: 'expression-picker',
-        onClose: u.Zy,
-        'aria-label': d.Z.Messages.EXPRESSION_PICKER_ACTIONS_MENU_LABEL,
-        onSelect: n,
+        onClose: r.Zy,
+        'aria-label': g.intl.string(g.t.XoasSE),
+        onSelect: e,
         className: 'context-menu',
-        children: (0, a.jsxs)(l.MenuGroup, {
-            children: [b, c.wS && C ? (null != f ? f : Z) : null]
+        children: (0, i.jsxs)(a.MenuGroup, {
+            children: [m, c.wS && p ? (null != v ? v : M) : null]
         })
     });
 }

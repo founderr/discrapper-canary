@@ -3,7 +3,7 @@ n.d(t, {
         return i;
     },
     w: function () {
-        return E;
+        return _;
     }
 });
 var r,
@@ -28,7 +28,7 @@ function d(e, t, n) {
     );
 }
 ((r = i || (i = {})).WindowVisibilityChanged = 'window-visibility-changed'), (r.IncomingVideoEnabledChanged = 'incoming-video-enabled-changed');
-class _ extends a.Z {
+class f extends a.Z {
     isIncomingVideoEnabled() {
         return this.incomingVideoEnabled;
     }
@@ -53,4 +53,4 @@ class _ extends a.Z {
             o.Z.subscribe('WINDOW_VISIBILITY_CHANGE', this.handleWindowVisibilityChange);
     }
 }
-let E = new _();
+let _ = new f();

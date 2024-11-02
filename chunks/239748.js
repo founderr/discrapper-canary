@@ -1,21 +1,21 @@
-t.d(n, {
+e.d(t, {
     F: function () {
         return a;
     }
 });
-var i = t(925549),
-    l = t(475468),
-    o = t(19780),
-    E = t(944486),
-    r = t(981631);
+var i = e(925549),
+    l = e(475468),
+    o = e(19780),
+    r = e(944486),
+    u = e(981631);
 let a = {
     binds: ['mod+alt+left'],
     comboKeysBindGlobal: !0,
     action() {
-        var e;
+        var n;
         if (!o.Z.isConnected()) return !1;
-        let n = null !== (e = o.Z.getGuildId()) && void 0 !== e ? e : r.ME,
-            t = E.Z.getChannelId(n);
-        return (0, l.K)(n, t), i.Z.channelListScrollTo(n, o.Z.getChannelId()), !1;
+        let t = null !== (n = o.Z.getGuildId()) && void 0 !== n ? n : u.ME,
+            e = r.Z.getChannelId(t);
+        return (0, l.K)(t, e), i.Z.channelListScrollTo(t, o.Z.getChannelId()), !1;
     }
 };

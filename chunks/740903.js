@@ -1,11 +1,11 @@
-var s, a;
+var i, r;
 n.d(t, {
     u: function () {
-        return s;
+        return i;
     }
 }),
-    ((a = s || (s = {}))[(a.OVERVIEW = 0)] = 'OVERVIEW'),
-    (a[(a.CAPTCHA_AND_RAID_PROTECTION = 1)] = 'CAPTCHA_AND_RAID_PROTECTION'),
-    (a[(a.DM_AND_SPAM_PROTECTION = 2)] = 'DM_AND_SPAM_PROTECTION'),
-    (a[(a.AUTOMOD = 3)] = 'AUTOMOD'),
-    (a[(a.PERMISSIONS = 4)] = 'PERMISSIONS');
+    ((r = i || (i = {}))[(r.OVERVIEW = 0)] = 'OVERVIEW'),
+    (r[(r.CAPTCHA_AND_RAID_PROTECTION = 1)] = 'CAPTCHA_AND_RAID_PROTECTION'),
+    (r[(r.DM_AND_SPAM_PROTECTION = 2)] = 'DM_AND_SPAM_PROTECTION'),
+    (r[(r.AUTOMOD = 3)] = 'AUTOMOD'),
+    (r[(r.PERMISSIONS = 4)] = 'PERMISSIONS');

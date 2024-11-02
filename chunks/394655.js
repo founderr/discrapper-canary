@@ -1,31 +1,31 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return u;
+        return m;
     }
 });
-var n = t(200651),
-    a = t(905405),
-    i = t(63063),
-    r = t(695346),
-    o = t(838436),
-    l = t(51331),
-    c = t(726985),
-    d = t(981631),
-    _ = t(689938);
-function u() {
-    let e = (0, a.p)();
-    return (0, n.jsx)(o.U, {
+var i = n(200651),
+    s = n(905405),
+    r = n(63063),
+    l = n(695346),
+    a = n(838436),
+    o = n(51331),
+    c = n(726985),
+    d = n(981631),
+    u = n(388032);
+function m() {
+    let e = (0, s.p)();
+    return (0, i.jsx)(a.U, {
         setting: c.s6.PRIVACY_KEYWORD_FILTER_V2,
-        children: (0, n.jsx)(l.Z, {
+        children: (0, i.jsx)(o.Z, {
             value: e,
             onChange: (e) =>
-                r.gw.updateSetting({
+                l.gw.updateSetting({
                     profanity: e,
                     slurs: e,
                     sexualContent: e
                 }),
-            title: _.Z.Messages.USER_KEYWORD_FILTERS_TOGGLE_TITLE_V2,
-            note: _.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION_V3.format({ learnMoreLink: i.Z.getArticleURL(d.BhN.KEYWORD_FILTERS) })
+            title: u.intl.string(u.t.CB5reH),
+            note: u.intl.format(u.t.kAyJIS, { learnMoreLink: r.Z.getArticleURL(d.BhN.KEYWORD_FILTERS) })
         })
     });
 }

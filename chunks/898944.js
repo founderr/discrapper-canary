@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     closeButton: 'closeButton_d801f7',
     content: 'content_d801f7',
     iconContainer: 'iconContainer_d801f7',

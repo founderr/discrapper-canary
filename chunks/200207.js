@@ -1,66 +1,66 @@
-i.d(e, {
+e.d(i, {
     I: function () {
         return c;
     }
 });
-var l = i(200651);
-i(192379);
-var s = i(557533),
-    t = i.n(s),
-    r = i(489948),
-    a = i(790472),
-    o = i(777207),
-    d = i(147333),
-    u = i(103077);
+var t = e(200651);
+e(192379);
+var l = e(557533),
+    r = e.n(l),
+    s = e(489948),
+    a = e(790472),
+    o = e(777207),
+    d = e(147333),
+    u = e(103077);
 function c(n) {
-    let { title: e, description: i, headerImage: s, onDetails: c, onPurchase: m, PurchaseButton: v, availabilityLabel: p } = n;
-    return (0, l.jsx)(r.tE, {
-        children: (0, l.jsxs)('div', {
-            className: t()(d.wrapper, u.hoverCard),
+    let { title: i, description: e, headerImage: l, onDetails: c, onPurchase: m, PurchaseButton: v, availabilityLabel: p } = n;
+    return (0, t.jsx)(s.tE, {
+        children: (0, t.jsxs)('div', {
+            className: r()(d.wrapper, u.hoverCard),
             tabIndex: 0,
             onClick: () => {
                 null != c ? c() : null != m && m();
             },
             children: [
-                (0, l.jsx)('div', {
+                (0, t.jsx)('div', {
                     className: d.cardHeaderImg,
-                    style: null != s ? { backgroundImage: null != s ? 'url('.concat(s.toString(), ')') : void 0 } : void 0,
+                    style: null != l ? { backgroundImage: null != l ? 'url('.concat(l.toString(), ')') : void 0 } : void 0,
                     children:
-                        null == s &&
-                        (0, l.jsx)(a.P, {
+                        null == l &&
+                        (0, t.jsx)(a.P, {
                             color: 'white',
                             size: 'custom',
                             height: 80,
                             width: 80
                         })
                 }),
-                (0, l.jsxs)('div', {
+                (0, t.jsxs)('div', {
                     className: d.details,
                     children: [
-                        (0, l.jsx)(o.x, {
+                        (0, t.jsx)(o.x, {
                             color: 'header-primary',
                             variant: 'text-md/semibold',
-                            children: e
+                            children: i
                         }),
-                        null != i &&
-                            (0, l.jsx)(o.x, {
+                        null != e &&
+                            (0, t.jsx)(o.x, {
                                 className: d.description,
                                 color: 'text-muted',
                                 variant: 'text-sm/normal',
-                                children: i
+                                children: e
                             })
                     ]
                 }),
                 null != v &&
-                    (0, l.jsxs)('div', {
+                    (0, t.jsxs)('div', {
                         className: d.footer,
                         children: [
-                            (0, l.jsx)(o.x, {
+                            (0, t.jsx)(o.x, {
                                 color: 'interactive-normal',
                                 variant: 'text-sm/normal',
                                 children: p
                             }),
-                            (0, l.jsx)(v, {
+                            (0, t.jsx)(v, {
                                 onClick: (n) => {
                                     n.stopPropagation(), null == m || m();
                                 }

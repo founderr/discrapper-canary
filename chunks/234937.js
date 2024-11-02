@@ -4,7 +4,7 @@ var i = n(442837),
     a = n(481060),
     s = n(565138),
     o = n(430824),
-    l = n(689938),
+    l = n(388032),
     u = n(69563);
 t.Z = (e) => {
     let { event: t } = e,
@@ -17,7 +17,7 @@ t.Z = (e) => {
                   (0, r.jsx)(a.Heading, {
                       className: u.header,
                       variant: 'heading-sm/semibold',
-                      children: l.Z.Messages.MOBILE_REPORTS_EVENT_PREVIEW_TITLE
+                      children: l.intl.string(l.t.SDTOLy)
                   }),
                   (0, r.jsxs)('div', {
                       className: u.guildContainer,

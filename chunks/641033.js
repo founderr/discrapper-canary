@@ -1,6 +1,6 @@
 n.d(t, {
     Eo: function () {
-        return _;
+        return f;
     },
     KH: function () {
         return s;
@@ -78,7 +78,7 @@ let a = function (e, t) {
                         color: i.Ilk.ORANGE_345,
                         flair: !0
                     };
-function _(e) {
+function f(e) {
     var t;
     return e.value * (null !== (t = e.multiplier) && void 0 !== t ? t : 1);
 }

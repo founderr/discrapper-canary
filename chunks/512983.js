@@ -16,7 +16,7 @@ var s = n(120356),
     u = n(326460);
 function c(e) {
     let t,
-        { tag: n = 'h5', children: r, className: i, faded: s, disabled: c, required: d = !1, error: _, errorId: E, ...f } = e;
+        { tag: n = 'h5', children: r, className: i, faded: s, disabled: c, required: d = !1, error: f, errorId: _, ...h } = e;
     switch (n) {
         case 'legend':
         case 'label':
@@ -30,20 +30,20 @@ function c(e) {
             [u['defaultMargin'.concat(n)]]: null == i,
             [u.faded]: s,
             [u.disabled]: c,
-            [u.error]: null != _
+            [u.error]: null != f
         }),
-        ...f,
+        ...h,
         children: [
             r,
-            d && null == _
+            d && null == f
                 ? (0, a.jsx)('span', {
                       className: u.required,
                       children: '*'
                   })
                 : null,
-            null != _
+            null != f
                 ? (0, a.jsxs)('span', {
-                      id: E,
+                      id: _,
                       className: u.errorMessage,
                       children: [
                           null != r
@@ -52,7 +52,7 @@ function c(e) {
                                     children: '-'
                                 })
                               : null,
-                          _
+                          f
                       ]
                   })
                 : null

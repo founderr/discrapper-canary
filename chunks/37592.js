@@ -1,29 +1,29 @@
-t(47120);
-var n = t(200651),
-    s = t(192379),
-    r = t(481060),
-    l = t(600164),
-    o = t(710845),
-    i = t(219929),
-    c = t(358085),
-    u = t(622999),
-    d = t(981631),
-    E = t(689938);
-function _(e, a, t) {
+n(47120);
+var a = n(200651),
+    r = n(192379),
+    l = n(481060),
+    i = n(600164),
+    s = n(710845),
+    o = n(219929),
+    c = n(358085),
+    u = n(622999),
+    d = n(981631),
+    m = n(388032);
+function p(e, t, n) {
     return (
-        a in e
-            ? Object.defineProperty(e, a, {
-                  value: t,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[a] = t),
+            : (e[t] = n),
         e
     );
 }
-let A = new o.Z('PaymentRequest');
-class m extends s.Component {
+let h = new s.Z('PaymentRequest');
+class A extends r.Component {
     componentDidMount() {
         (0, u.d2)().then((e) => {
             this.initPaymentRequest(e);
@@ -32,33 +32,33 @@ class m extends s.Component {
     render() {
         let { canMakePayment: e } = this.state;
         if (null == e)
-            return (0, n.jsx)(r.Button, {
+            return (0, a.jsx)(l.Button, {
                 submitting: !0,
-                look: r.Button.Looks.FILLED
+                look: l.Button.Looks.FILLED
             });
         if (!1 === e)
-            return (0, n.jsx)(r.Button, {
+            return (0, a.jsx)(l.Button, {
                 disabled: !0,
-                look: r.Button.Looks.FILLED,
-                children: E.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_UNSUPPORTED
+                look: l.Button.Looks.FILLED,
+                children: m.intl.string(m.t.lNZLh4)
             });
-        let a = (0, c.isAndroidChrome)(),
-            t = a ? E.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_BUTTON_GPAY : E.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_BUTTON_GENERIC,
-            s = a ? i.ZP.Types.G_PAY : i.ZP.Types.PAYMENT_REQUEST,
-            { className: o, iconClassName: u } = this.props;
-        return (0, n.jsx)(
-            r.Button,
+        let t = (0, c.isAndroidChrome)(),
+            n = t ? m.intl.string(m.t.p2jr2N) : m.intl.string(m.t.f19PPT),
+            r = t ? o.ZP.Types.G_PAY : o.ZP.Types.PAYMENT_REQUEST,
+            { className: s, iconClassName: u } = this.props;
+        return (0, a.jsx)(
+            l.Button,
             {
                 onClick: this.handleOnClick,
-                className: o,
-                children: (0, n.jsxs)(l.Z, {
-                    align: l.Z.Align.CENTER,
+                className: s,
+                children: (0, a.jsxs)(i.Z, {
+                    align: i.Z.Align.CENTER,
                     children: [
-                        (0, n.jsx)(i.ZP, {
+                        (0, a.jsx)(o.ZP, {
                             className: u,
-                            type: s
+                            type: r
                         }),
-                        t
+                        n
                     ]
                 })
             },
@@ -67,10 +67,10 @@ class m extends s.Component {
     }
     constructor(...e) {
         super(...e),
-            _(this, 'state', {}),
-            _(this, 'initPaymentRequest', async (e) => {
+            p(this, 'state', {}),
+            p(this, 'initPaymentRequest', async (e) => {
                 if (null == e) return;
-                let a = e.paymentRequest({
+                let t = e.paymentRequest({
                         country: 'US',
                         currency: 'usd',
                         total: {
@@ -80,27 +80,27 @@ class m extends s.Component {
                         },
                         requestPayerName: !0
                     }),
-                    { onStripePaymentMethodReceived: t } = this.props;
-                a.on('paymentmethod', (e) => {
-                    let { complete: a, paymentMethod: n } = e;
-                    t(n), a('success');
+                    { onStripePaymentMethodReceived: n } = this.props;
+                t.on('paymentmethod', (e) => {
+                    let { complete: t, paymentMethod: a } = e;
+                    n(a), t('success');
                 }),
-                    a.on('cancel', () => {
-                        t(null);
+                    t.on('cancel', () => {
+                        n(null);
                     });
-                let n = await a.canMakePayment();
-                A.info('PaymentRequest availablity check', n),
+                let a = await t.canMakePayment();
+                h.info('PaymentRequest availablity check', a),
                     this.setState({
-                        canMakePayment: !!n,
-                        paymentRequest: a
+                        canMakePayment: !!a,
+                        paymentRequest: t
                     });
             }),
-            _(this, 'handleOnClick', () => {
+            p(this, 'handleOnClick', () => {
                 let { onChooseType: e } = this.props;
                 e(d.HeQ.PAYMENT_REQUEST);
-                let { paymentRequest: a } = this.state;
-                null != a && a.show();
+                let { paymentRequest: t } = this.state;
+                null != t && t.show();
             });
     }
 }
-a.Z = m;
+t.Z = A;

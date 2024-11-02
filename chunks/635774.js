@@ -1,56 +1,56 @@
-s.d(t, {
+n.d(t, {
     Z: function () {
-        return m;
+        return h;
     }
 });
-var n = s(200651);
-s(192379);
-var i = s(120356),
-    a = s.n(i),
-    r = s(442837),
-    o = s(481060),
-    l = s(230711),
-    u = s(706454),
-    c = s(346585),
-    d = s(347649),
-    E = s(981631),
-    _ = s(689938),
-    g = s(923112);
-function m(e) {
-    let { onClose: t, handleStartFlow: s } = e,
-        i = (0, d.CC)(),
-        m = (0, r.e7)([u.default], () => u.default.locale);
-    return (0, n.jsxs)('div', {
-        className: g.infoContainer,
+var i = n(200651);
+n(192379);
+var s = n(120356),
+    r = n.n(s),
+    a = n(442837),
+    l = n(481060),
+    o = n(230711),
+    u = n(706454),
+    c = n(346585),
+    d = n(347649),
+    m = n(981631),
+    g = n(388032),
+    E = n(923112);
+function h(e) {
+    let { onClose: t, handleStartFlow: n } = e,
+        s = (0, d.CC)(),
+        h = (0, a.e7)([u.default], () => u.default.locale);
+    return (0, i.jsxs)('div', {
+        className: E.infoContainer,
         children: [
-            (0, n.jsx)(o.Heading, {
-                className: a()(g.finishTitle, { [g.finishTitlePadding]: i }),
+            (0, i.jsx)(l.Heading, {
+                className: r()(E.finishTitle, { [E.finishTitlePadding]: s }),
                 color: 'header-primary',
                 variant: 'heading-xl/bold',
-                children: i ? _.Z.Messages.UU_FORCE_MIGRATION_EXISTING_FLOW_REMINDER_BODY_1.format({ date: (0, c.IE)(m) }) : _.Z.Messages.POMELO_EXISTING_FLOW_REMINDER_TITLE
+                children: s ? g.intl.formatToPlainString(g.t.XOWfNj, { date: (0, c.IE)(h) }) : g.intl.string(g.t['3C+rbG'])
             }),
-            (0, n.jsx)(o.Text, {
-                className: g.subtitleFinish,
+            (0, i.jsx)(l.Text, {
+                className: E.subtitleFinish,
                 color: 'header-secondary',
                 variant: 'text-md/medium',
-                children: i ? _.Z.Messages.UU_FORCE_MIGRATION_EXISTING_FLOW_REMINDER_BODY_2.format({ date: (0, c.IE)(m) }) : _.Z.Messages.POMELO_EXISTING_FLOW_REMINDER_BODY_1
+                children: s ? g.intl.formatToPlainString(g.t['g/gkAw'], { date: (0, c.IE)(h) }) : g.intl.string(g.t.TS1L09)
             }),
-            (0, n.jsx)(o.Text, {
-                className: g.promptFinish,
+            (0, i.jsx)(l.Text, {
+                className: E.promptFinish,
                 color: 'header-secondary',
                 variant: 'text-md/medium',
-                children: _.Z.Messages.POMELO_EXISTING_FLOW_REMINDER_BODY_2.format({
+                children: g.intl.format(g.t.bWE0ZG, {
                     onClick: () => {
-                        t(), l.Z.open(E.oAB.ACCOUNT);
+                        t(), o.Z.open(m.oAB.ACCOUNT);
                     }
                 })
             }),
-            (0, n.jsx)(o.Button, {
-                className: g.button,
+            (0, i.jsx)(l.Button, {
+                className: E.button,
                 type: 'button',
-                size: o.Button.Sizes.SMALL,
-                onClick: i ? s : t,
-                children: i ? _.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_INVALID_PAYMENT_NOTICE_BUTTON_TEXT : _.Z.Messages.INVITES_DISABLED_CONFIRMATION
+                size: l.Button.Sizes.SMALL,
+                onClick: s ? n : t,
+                children: s ? g.intl.string(g.t['Zpd+Ym']) : g.intl.string(g.t['yD/zkp'])
             })
         ]
     });

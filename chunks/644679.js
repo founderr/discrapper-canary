@@ -1,15 +1,15 @@
 n(47120);
 var i = n(200651),
-    a = n(481060),
-    s = n(570140),
-    r = n(317770),
-    l = n(19780),
+    r = n(481060),
+    l = n(570140),
+    a = n(317770),
+    s = n(19780),
     o = n(594174),
     c = n(979651),
     d = n(960048),
     u = n(699910),
-    _ = n(981631);
-function E(e, t, n) {
+    h = n(981631);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,59 +22,59 @@ function E(e, t, n) {
         e
     );
 }
-let h = 'CollectiblesExpiryModal';
-class m extends r.Z {
+let p = 'CollectiblesExpiryModal';
+class g extends a.Z {
     _initialize() {
-        s.Z.subscribe('POST_CONNECTION_OPEN', this.handleMaybeOpenModal), s.Z.subscribe('CURRENT_USER_UPDATE', this.handleMaybeOpenModal);
+        l.Z.subscribe('POST_CONNECTION_OPEN', this.handleMaybeOpenModal), l.Z.subscribe('CURRENT_USER_UPDATE', this.handleMaybeOpenModal);
     }
     _terminate() {
-        s.Z.unsubscribe('POST_CONNECTION_OPEN', this.handleMaybeOpenModal), s.Z.unsubscribe('CURRENT_USER_UPDATE', this.handleMaybeOpenModal), null != this.timeout && (clearTimeout(this.timeout), (this.timeout = null));
+        l.Z.unsubscribe('POST_CONNECTION_OPEN', this.handleMaybeOpenModal), l.Z.unsubscribe('CURRENT_USER_UPDATE', this.handleMaybeOpenModal), null != this.timeout && (clearTimeout(this.timeout), (this.timeout = null));
     }
     constructor(...e) {
         super(...e),
-            E(this, 'timeout', null),
-            E(this, 'handleMaybeOpenModal', () => {
+            m(this, 'timeout', null),
+            m(this, 'handleMaybeOpenModal', () => {
                 var e, t;
                 let n = o.default.getCurrentUser(),
                     i = null == n ? void 0 : null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId,
-                    a = null == n ? void 0 : null === (t = n.avatarDecoration) || void 0 === t ? void 0 : t.expiresAt;
-                if ((('1251324401459265537' === i || '1252353273256480818' === i) && (a = 1726106879), null != a && !!(0, u.v)('CollectiblesExpiryManager'))) !this.maybeOpenModal() && (null != this.timeout && clearTimeout(this.timeout), (this.timeout = setTimeout(this.maybeOpenModal, 1000 * a - Date.now() + 1000)));
+                    r = null == n ? void 0 : null === (t = n.avatarDecoration) || void 0 === t ? void 0 : t.expiresAt;
+                if ((('1251324401459265537' === i || '1252353273256480818' === i) && (r = 1726106879), null != r && !!(0, u.v)('CollectiblesExpiryManager'))) !this.maybeOpenModal() && (null != this.timeout && clearTimeout(this.timeout), (this.timeout = setTimeout(this.maybeOpenModal, 1000 * r - Date.now() + 1000)));
             }),
-            E(this, 'maybeOpenModal', () => {
-                var e, t, s, r, u;
-                let E = o.default.getCurrentUser(),
-                    m = l.Z.getState(),
-                    I = null == E ? void 0 : null === (e = E.avatarDecoration) || void 0 === e ? void 0 : e.skuId,
-                    p = null == E ? void 0 : null === (t = E.avatarDecoration) || void 0 === t ? void 0 : t.expiresAt;
-                if ((('1251324401459265537' === I || '1252353273256480818' === I) && (p = 1726106879), null == E)) return !1;
-                let g = c.Z.getVoiceStateForUser(E.id);
-                return null != p && 1000 * p < Date.now() && m !== _.hes.RTC_CONNECTED
-                    ? ((0, a.closeModal)(h),
-                      (0, a.openModalLazy)(
+            m(this, 'maybeOpenModal', () => {
+                var e, t, l, a, u;
+                let m = o.default.getCurrentUser(),
+                    g = s.Z.getState(),
+                    f = null == m ? void 0 : null === (e = m.avatarDecoration) || void 0 === e ? void 0 : e.skuId,
+                    _ = null == m ? void 0 : null === (t = m.avatarDecoration) || void 0 === t ? void 0 : t.expiresAt;
+                if ((('1251324401459265537' === f || '1252353273256480818' === f) && (_ = 1726106879), null == m)) return !1;
+                let E = c.Z.getVoiceStateForUser(m.id);
+                return null != _ && 1000 * _ < Date.now() && g !== h.hes.RTC_CONNECTED
+                    ? ((0, r.closeModal)(p),
+                      (0, r.openModalLazy)(
                           async () => {
                               let { default: e } = await n.e('77370').then(n.bind(n, 83950));
                               return (t) =>
                                   (0, i.jsx)(e, {
                                       ...t,
-                                      skuId: I
+                                      skuId: f
                                   });
                           },
-                          { modalKey: h }
+                          { modalKey: p }
                       ),
                       d.Z.captureMessage('Collectible expiry modal shown'),
                       !0)
-                    : (('1251324401459265537' === I || '1252353273256480818' === I) &&
+                    : (('1251324401459265537' === f || '1252353273256480818' === f) &&
                           d.Z.captureMessage('Collectible expiry modal not shown', {
                               tags: {
-                                  isExpired: (null != p && 1000 * p < Date.now()).toString(),
-                                  rtcConnected: (m === _.hes.RTC_CONNECTED).toString(),
-                                  decoExpiresAt: null !== (r = null == p ? void 0 : p.toString()) && void 0 !== r ? r : 'N/A',
-                                  voiceStateAvailable: (null != g).toString(),
-                                  selfStream: null !== (u = null == g ? void 0 : null === (s = g.selfStream) || void 0 === s ? void 0 : s.toString()) && void 0 !== u ? u : 'N/A'
+                                  isExpired: (null != _ && 1000 * _ < Date.now()).toString(),
+                                  rtcConnected: (g === h.hes.RTC_CONNECTED).toString(),
+                                  decoExpiresAt: null !== (a = null == _ ? void 0 : _.toString()) && void 0 !== a ? a : 'N/A',
+                                  voiceStateAvailable: (null != E).toString(),
+                                  selfStream: null !== (u = null == E ? void 0 : null === (l = E.selfStream) || void 0 === l ? void 0 : l.toString()) && void 0 !== u ? u : 'N/A'
                               }
                           }),
                       !1);
             });
     }
 }
-t.Z = new m();
+t.Z = new g();

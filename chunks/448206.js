@@ -1,18 +1,18 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return s;
     }
 });
 var i = n(442837),
-    a = n(314897),
-    s = n(944486),
-    r = n(88751);
-function l(e) {
+    r = n(314897),
+    l = n(944486),
+    a = n(88751);
+function s(e) {
     return (0, i.e7)(
-        [a.default, s.Z, r.ZP],
+        [r.default, l.Z, a.ZP],
         () => {
-            let t = a.default.getId();
-            return s.Z.getVoiceChannelId() === e ? r.ZP.getPermissionsForUser(t, e) : null;
+            let t = r.default.getId();
+            return l.Z.getVoiceChannelId() === e ? a.ZP.getPermissionsForUser(t, e) : null;
         },
         [e]
     );

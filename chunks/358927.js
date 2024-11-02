@@ -1,28 +1,28 @@
-n.r(r);
-var t = n(200651);
-n(192379);
-var s = n(481060),
-    a = n(63063),
-    o = n(937615),
-    c = n(981631),
-    C = n(689938);
-r.default = (e) => {
-    let { modalProps: r, onConfirm: n, onCancel: i, newInvoice: _ } = e,
-        l = {
-            newCurrencyAndPrice: (0, o.T4)(_.total, _.currency),
-            helpCenterLink: a.Z.getArticleURL(c.BhN.LOCALIZED_PRICING)
+r.r(n);
+var e = r(200651);
+r(192379);
+var i = r(481060),
+    o = r(63063),
+    c = r(937615),
+    l = r(981631),
+    a = r(388032);
+n.default = (t) => {
+    let { modalProps: n, onConfirm: r, onCancel: s, newInvoice: d } = t,
+        u = {
+            newCurrencyAndPrice: (0, c.T4)(d.total, d.currency),
+            helpCenterLink: o.Z.getArticleURL(l.BhN.LOCALIZED_PRICING)
         };
-    return (0, t.jsx)(s.ConfirmModal, {
-        header: C.Z.Messages.BILLING_CONFIRM_PRICE_CHANGE_TITLE,
-        confirmText: C.Z.Messages.YES_TEXT,
-        cancelText: C.Z.Messages.NO_TEXT,
-        onConfirm: n,
-        onCancel: i,
-        confirmButtonColor: s.Button.Colors.BRAND,
-        ...r,
-        children: (0, t.jsx)(s.Text, {
+    return (0, e.jsx)(i.ConfirmModal, {
+        header: a.intl.string(a.t.eZFTbm),
+        confirmText: a.intl.string(a.t.p89ACg),
+        cancelText: a.intl.string(a.t.gm1Ven),
+        onConfirm: r,
+        onCancel: s,
+        confirmButtonColor: i.Button.Colors.BRAND,
+        ...n,
+        children: (0, e.jsx)(i.Text, {
             variant: 'text-md/normal',
-            children: C.Z.Messages.LOCALIZED_PRICING_ON_CHANGE_PAYMENT_METHOD.format(l)
+            children: a.intl.format(a.t.oZBduL, u)
         })
     });
 };

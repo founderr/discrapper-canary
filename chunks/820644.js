@@ -5,19 +5,19 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var a = n(120356),
-    s = n.n(a),
-    r = n(481060),
-    l = n(506021),
-    o = n(482617);
+var r = n(120356),
+    l = n.n(r),
+    a = n(481060),
+    o = n(506021),
+    s = n(482617);
 function c(e) {
     let { text: t } = e;
     return (0, i.jsxs)('div', {
-        className: s()(o.toast, l.toast),
+        className: l()(s.toast, o.toast),
         children: [
-            (0, i.jsx)(r.ShieldIcon, { color: r.tokens.colors.TEXT_BRAND }),
-            (0, i.jsx)(r.Text, {
-                className: o.__invalid_content,
+            (0, i.jsx)(a.ShieldIcon, { color: a.tokens.colors.TEXT_BRAND }),
+            (0, i.jsx)(a.Text, {
+                className: s.__invalid_content,
                 color: 'header-primary',
                 variant: 'text-md/normal',
                 children: t

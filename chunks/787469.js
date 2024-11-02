@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return x;
     }
 });
 var i = n(200651),
-    s = n(192379),
-    a = n(120356),
-    l = n.n(a),
-    r = n(399606),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
+    s = n(399606),
     o = n(481060),
     c = n(893966),
     u = n(472596),
@@ -15,88 +15,88 @@ var i = n(200651),
     h = n(430824),
     m = n(496675),
     p = n(776767),
-    _ = n(981631),
-    f = n(689938),
-    E = n(194898);
-function g(e) {
+    f = n(981631),
+    g = n(388032),
+    C = n(194898);
+function x(e) {
     let { member: t } = e,
-        n = (0, r.e7)([h.Z], () => h.Z.getGuild(t.guildId)),
-        a = (0, r.e7)([h.Z], () => h.Z.getRoles(t.guildId)),
-        g = s.useMemo(
+        n = (0, s.e7)([h.Z], () => h.Z.getGuild(t.guildId)),
+        r = (0, s.e7)([h.Z], () => h.Z.getRoles(t.guildId)),
+        x = l.useMemo(
             () =>
                 null == n
                     ? []
                     : null == t.highestRoleId
                       ? t.roles
-                      : Object.values(a)
+                      : Object.values(r)
                             .filter((e) => e.id !== t.highestRoleId && t.roles.includes(e.id))
                             .sort((e, t) => {
                                 var n, i;
                                 return null !== (i = null !== (n = null == e ? void 0 : e.position) && void 0 !== n ? n : 0 - (null == t ? void 0 : t.position)) && void 0 !== i ? i : 0;
                             })
                             .map((e) => e.id),
-            [t.roles, t.highestRoleId, n, a]
+            [t.roles, t.highestRoleId, n, r]
         ),
-        C = (0, r.e7)([c.Z], () => c.Z.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]),
-        I = (0, u.zq)(C),
-        T = (0, u.vN)(t),
-        x = (0, r.e7)([m.Z], () => m.Z.can(_.Plq.MANAGE_ROLES, n), [n]);
+        v = (0, s.e7)([c.Z], () => c.Z.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]),
+        _ = (0, u.zq)(v),
+        I = (0, u.vN)(t),
+        E = (0, s.e7)([m.Z], () => m.Z.can(f.Plq.MANAGE_ROLES, n), [n]);
     return null == n
         ? null
         : (0, i.jsx)(o.FormItem, {
-              title: f.Z.Messages.ROLES,
-              titleClassName: E.infoTitle,
+              title: g.intl.string(g.t.LPJmLy),
+              titleClassName: C.infoTitle,
               children: (0, i.jsx)(p.WM, {
                   children: (0, i.jsx)(p._2, {
                       description:
-                          t.roles.length > 0 || x
+                          t.roles.length > 0 || E
                               ? (0, i.jsxs)('div', {
-                                    className: E.roleContainer,
+                                    className: C.roleContainer,
                                     children: [
                                         (0, i.jsx)(o.Tooltip, {
-                                            'aria-label': f.Z.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL,
+                                            'aria-label': g.intl.string(g.t['0g8Xd3']),
                                             allowOverflow: !0,
-                                            text: f.Z.Messages.GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE,
+                                            text: g.intl.string(g.t['93S+lJ']),
                                             children: (e) => {
-                                                let { onMouseEnter: n, onMouseLeave: s } = e;
+                                                let { onMouseEnter: n, onMouseLeave: l } = e;
                                                 return (0, i.jsx)(o.Clickable, {
                                                     onMouseEnter: n,
-                                                    onMouseLeave: s,
+                                                    onMouseLeave: l,
                                                     children: (0, i.jsx)(d.Z, {
-                                                        className: l()(E.roleTooltipItem, E.highestRole),
-                                                        role: I,
+                                                        className: a()(C.roleTooltipItem, C.highestRole),
+                                                        role: _,
                                                         guildId: t.guildId
                                                     })
                                                 });
                                             }
                                         }),
-                                        g.map((e) =>
+                                        x.map((e) =>
                                             (0, i.jsx)(
                                                 d.Z,
                                                 {
-                                                    className: E.roleTooltipItem,
-                                                    role: a[e],
+                                                    className: C.roleTooltipItem,
+                                                    role: r[e],
                                                     guildId: t.guildId
                                                 },
                                                 e
                                             )
                                         ),
-                                        x &&
+                                        E &&
                                             (0, i.jsx)(o.Tooltip, {
-                                                'aria-label': f.Z.Messages.ADD_ROLE_A11Y_LABEL,
+                                                'aria-label': g.intl.string(g.t.ljnBlp),
                                                 allowOverflow: !0,
-                                                text: f.Z.Messages.ADD_ROLE_A11Y_LABEL,
+                                                text: g.intl.string(g.t.ljnBlp),
                                                 children: (e) => {
                                                     let { onMouseEnter: t, onMouseLeave: n } = e;
                                                     return (0, i.jsx)(o.Clickable, {
-                                                        className: E.addRoleContainer,
-                                                        onClick: T,
+                                                        className: C.addRoleContainer,
+                                                        onClick: I,
                                                         onMouseEnter: t,
                                                         onMouseLeave: n,
                                                         children: (0, i.jsx)(o.CirclePlusIcon, {
                                                             size: 'custom',
                                                             color: 'currentColor',
-                                                            className: E.addRoleIcon,
+                                                            className: C.addRoleIcon,
                                                             width: 20,
                                                             height: 20
                                                         })
@@ -106,10 +106,10 @@ function g(e) {
                                     ]
                                 })
                               : (0, i.jsx)('div', {
-                                    className: E.noRoles,
+                                    className: C.noRoles,
                                     children: (0, i.jsx)(o.Text, {
                                         variant: 'text-sm/normal',
-                                        children: f.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES
+                                        children: g.intl.string(g.t.nZfHsb)
                                     })
                                 })
                   })

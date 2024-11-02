@@ -1,12 +1,12 @@
 n.d(t, {
     CO: function () {
-        return _;
-    },
-    Rz: function () {
         return f;
     },
+    Rz: function () {
+        return h;
+    },
     S1: function () {
-        return E;
+        return _;
     },
     T_: function () {
         return o;
@@ -59,7 +59,7 @@ function d(e) {
         isElementFullscreen: (0, a.rB)(null, e.document)
     });
 }
-function _(e) {
+function f(e) {
     let t = (0, s.ZY)(e);
     i.Z.dispatch({
         type: 'WINDOW_VISIBILITY_CHANGE',
@@ -67,7 +67,7 @@ function _(e) {
         visible: 'visible' === e.document.visibilityState
     });
 }
-function E(e) {
+function _(e) {
     let t = (0, s.ZY)(e),
         n = e.document;
     i.Z.dispatch({
@@ -80,7 +80,7 @@ function E(e) {
         visible: 'visible' === n.visibilityState
     });
 }
-function f(e) {
+function h(e) {
     i.Z.dispatch({
         type: 'WINDOW_UNLOAD',
         windowId: (0, s.ZY)(e)

@@ -1,27 +1,27 @@
 var i,
-    s,
-    a,
     l,
     r,
+    a,
+    s,
     o,
     c = n(442837),
     u = n(570140);
-((i = r || (r = {})).FAILED = 'failed'), (i.SUCCEEDED = 'succeeded');
+((i = s || (s = {})).FAILED = 'failed'), (i.SUCCEEDED = 'succeeded');
 let d = {};
 class h extends (o = c.ZP.Store) {
     getFollowerStatsForChannel(e) {
         return d[e];
     }
 }
-(l = 'ChannelFollowerStatsStore'),
-    (a = 'displayName') in (s = h)
-        ? Object.defineProperty(s, a, {
-              value: l,
+(a = 'ChannelFollowerStatsStore'),
+    (r = 'displayName') in (l = h)
+        ? Object.defineProperty(l, r, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (s[a] = l),
+        : (l[r] = a),
     (t.Z = new h(u.Z, {
         CONNECTION_OPEN: function () {
             d = {};

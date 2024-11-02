@@ -1,131 +1,131 @@
-i.r(n),
-    i.d(n, {
+t.r(e),
+    t.d(e, {
         __import__useLazyAPIPromise: function () {
-            return D;
+            return M;
         },
         default: function () {
-            return S;
+            return L;
         }
     });
-var l = i(200651),
-    t = i(192379),
-    a = i(392711),
-    r = i.n(a),
-    s = i(442837),
-    o = i(481060),
-    c = i(45114),
-    u = i(313201),
-    d = i(597),
-    E = i(147754),
-    g = i(984933),
-    h = i(720202),
-    v = i(430824),
-    Z = i(306680),
-    C = i(626135),
-    m = i(823379),
-    N = i(981888),
-    x = i(709054),
-    f = i(897285),
-    _ = i(518756),
-    I = i(554747),
-    p = i(710679),
-    T = i(74562),
-    j = i(576749),
-    L = i(765305),
-    M = i(981631),
-    k = i(490897),
-    P = i(689938),
-    G = i(975455);
-let D = N.Z;
-function S(e) {
-    let { transitionState: n, onClose: a, guildId: N } = e,
-        D = (0, u.Dt)(),
-        S = (0, s.e7)([v.Z], () => v.Z.getGuild(N)),
-        y = (0, _.Z)(null == S ? void 0 : S.id),
-        A = (0, I.ZP)(N),
-        R = t.useRef(Z.ZP.ackMessageId(N, k.W.GUILD_EVENT)),
-        U = (0, j.Z)();
+var i = t(200651),
+    l = t(192379),
+    r = t(392711),
+    a = t.n(r),
+    o = t(442837),
+    c = t(481060),
+    s = t(45114),
+    u = t(313201),
+    d = t(597),
+    g = t(147754),
+    h = t(984933),
+    v = t(720202),
+    m = t(430824),
+    x = t(306680),
+    Z = t(626135),
+    f = t(823379),
+    C = t(981888),
+    p = t(709054),
+    N = t(897285),
+    j = t(518756),
+    E = t(554747),
+    k = t(710679),
+    I = t(74562),
+    _ = t(576749),
+    P = t(765305),
+    T = t(981631),
+    y = t(490897),
+    b = t(388032),
+    G = t(975455);
+let M = C.Z;
+function L(n) {
+    let { transitionState: e, onClose: r, guildId: C } = n,
+        M = (0, u.Dt)(),
+        L = (0, o.e7)([m.Z], () => m.Z.getGuild(C)),
+        S = (0, j.Z)(null == L ? void 0 : L.id),
+        A = (0, E.ZP)(C),
+        R = l.useRef(x.ZP.ackMessageId(C, y.W.GUILD_EVENT)),
+        w = (0, _.Z)();
     return (
-        t.useEffect(() => {
-            A.forEach((e) => f.Z.getGuildEventUserCounts(N, e.id, [])), f.Z.getGuildEventsForCurrentUser(N);
-        }, [A, N]),
-        t.useEffect(() => {
-            let e = v.Z.getGuild(N);
-            if (!(null == e ? void 0 : e.hasFeature(M.oNc.HUB))) return;
-            let { showHubEventsList: n } = E.Z.getCurrentConfig({
-                guildId: N,
+        l.useEffect(() => {
+            A.forEach((n) => N.Z.getGuildEventUserCounts(C, n.id, [])), N.Z.getGuildEventsForCurrentUser(C);
+        }, [A, C]),
+        l.useEffect(() => {
+            let n = m.Z.getGuild(C);
+            if (!(null == n ? void 0 : n.hasFeature(T.oNc.HUB))) return;
+            let { showHubEventsList: e } = g.Z.getCurrentConfig({
+                guildId: C,
                 location: 'd3755f_1'
             });
-            if (!n) return;
-            let i = g.ZP.getDefaultChannel(N);
-            null != i && d.c(i.id);
-        }, [N]),
-        t.useEffect(() => {
-            C.default.track(M.rMx.OPEN_MODAL, {
-                type: L.zw,
-                guild_id: N,
+            if (!e) return;
+            let t = h.ZP.getDefaultChannel(C);
+            null != t && d.c(t.id);
+        }, [C]),
+        l.useEffect(() => {
+            Z.default.track(T.rMx.OPEN_MODAL, {
+                type: P.zw,
+                guild_id: C,
                 guild_events_count: A.length
             });
         }, []),
-        t.useEffect(() => {
-            r()(A)
-                .map((e) => e.creator_id)
-                .filter(m.lm)
+        l.useEffect(() => {
+            a()(A)
+                .map((n) => n.creator_id)
+                .filter(f.lm)
                 .uniq()
-                .forEach((e) => {
-                    h.Z.requestMember(N, e);
+                .forEach((n) => {
+                    v.Z.requestMember(C, n);
                 });
-        }, [N, A]),
-        t.useEffect(() => {
-            null != N && (0, c.Ju)(N, k.W.GUILD_EVENT);
-        }, [N]),
-        (0, l.jsxs)(o.ModalRoot, {
-            size: o.ModalSize.MEDIUM,
-            transitionState: n,
-            'aria-labelledby': D,
+        }, [C, A]),
+        l.useEffect(() => {
+            null != C && (0, s.Ju)(C, y.W.GUILD_EVENT);
+        }, [C]),
+        (0, i.jsxs)(c.ModalRoot, {
+            size: c.ModalSize.MEDIUM,
+            transitionState: e,
+            'aria-labelledby': M,
             children: [
-                (0, l.jsxs)(o.ModalHeader, {
+                (0, i.jsxs)(c.ModalHeader, {
                     className: G.header,
                     children: [
-                        (0, l.jsx)(o.CalendarIcon, {
+                        (0, i.jsx)(c.CalendarIcon, {
                             size: 'md',
                             color: 'currentColor',
                             className: G.icon
                         }),
-                        (0, l.jsx)(o.Heading, {
-                            id: D,
+                        (0, i.jsx)(c.Heading, {
+                            id: M,
                             variant: 'heading-md/semibold',
-                            children: A.length > 0 ? P.Z.Messages.GUILD_EVENTS_PLURAL.format({ number: A.length }) : P.Z.Messages.GUILD_EVENTS
+                            children: A.length > 0 ? b.intl.formatToPlainString(b.t.IBdqSk, { number: A.length }) : b.intl.string(b.t.tlopTE)
                         }),
-                        y &&
-                            (0, l.jsxs)(l.Fragment, {
+                        S &&
+                            (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    (0, l.jsx)('div', {
+                                    (0, i.jsx)('div', {
                                         className: G.divider,
                                         children: '|'
                                     }),
-                                    (0, l.jsx)(o.Button, {
-                                        size: o.Button.Sizes.MIN,
+                                    (0, i.jsx)(c.Button, {
+                                        size: c.Button.Sizes.MIN,
                                         onClick: () => {
-                                            (0, o.openModalLazy)(async () => {
-                                                let { default: e } = await Promise.all([i.e('58023'), i.e('25417')]).then(i.bind(i, 779250));
-                                                return (n) =>
-                                                    (0, l.jsx)(e, {
-                                                        ...n,
-                                                        guildId: N
+                                            (0, c.openModalLazy)(async () => {
+                                                let { default: n } = await Promise.all([t.e('58023'), t.e('25417')]).then(t.bind(t, 779250));
+                                                return (e) =>
+                                                    (0, i.jsx)(n, {
+                                                        ...e,
+                                                        guildId: C
                                                     });
-                                            }, U);
+                                            }, w);
                                         },
                                         innerClassName: G.button,
-                                        children: P.Z.Messages.SCHEDULE_EVENT
+                                        children: b.intl.string(b.t['60lJ0N'])
                                     })
                                 ]
                             }),
-                        (0, l.jsx)(o.Clickable, {
-                            onClick: a,
+                        (0, i.jsx)(c.Clickable, {
+                            onClick: r,
                             className: G.iconButton,
-                            'aria-label': P.Z.Messages.CLOSE,
-                            children: (0, l.jsx)(o.XSmallIcon, {
+                            'aria-label': b.intl.string(b.t.cpT0Cg),
+                            children: (0, i.jsx)(c.XSmallIcon, {
                                 size: 'md',
                                 color: 'currentColor',
                                 className: G.icon
@@ -133,25 +133,25 @@ function S(e) {
                         })
                     ]
                 }),
-                (0, l.jsx)(o.ModalContent, {
+                (0, i.jsx)(c.ModalContent, {
                     className: G.content,
                     children:
                         A.length > 0
-                            ? A.map((e) =>
-                                  (0, l.jsx)(
-                                      p.Z,
+                            ? A.map((n) =>
+                                  (0, i.jsx)(
+                                      k.Z,
                                       {
-                                          guildEvent: e,
-                                          guildId: N,
-                                          onActionTaken: a,
-                                          isNew: null != R.current && x.default.compare(e.id, R.current) > 0
+                                          guildEvent: n,
+                                          guildId: C,
+                                          onActionTaken: r,
+                                          isNew: null != R.current && p.default.compare(n.id, R.current) > 0
                                       },
-                                      e.id
+                                      n.id
                                   )
                               )
-                            : (0, l.jsx)(T.Z, {
-                                  guildId: N,
-                                  onClose: a
+                            : (0, i.jsx)(I.Z, {
+                                  guildId: C,
+                                  onClose: r
                               })
                 })
             ]

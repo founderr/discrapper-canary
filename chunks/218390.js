@@ -4,197 +4,197 @@ n.d(t, {
     }
 }),
     n(47120);
-var s = n(200651),
-    a = n(192379),
-    r = n(120356),
-    i = n.n(r),
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
     l = n(913527),
     o = n.n(l),
     c = n(442837),
-    _ = n(622535),
-    d = n(780384),
-    E = n(481060),
-    u = n(570140),
-    T = n(355467),
-    I = n(37234),
-    R = n(821849),
-    g = n(230711),
-    N = n(497321),
-    m = n(634894),
-    C = n(410030),
-    A = n(100527),
-    p = n(906732),
-    f = n(211242),
-    M = n(975298),
-    S = n(15640),
-    h = n(89057),
-    x = n(406128),
-    b = n(703656),
-    O = n(246946),
+    d = n(622535),
+    u = n(780384),
+    g = n(481060),
+    m = n(570140),
+    f = n(355467),
+    p = n(37234),
+    _ = n(821849),
+    h = n(230711),
+    x = n(497321),
+    E = n(634894),
+    b = n(410030),
+    C = n(100527),
+    v = n(906732),
+    T = n(211242),
+    N = n(975298),
+    I = n(15640),
+    S = n(89057),
+    R = n(406128),
+    A = n(703656),
+    j = n(246946),
     P = n(78839),
-    v = n(483444),
-    L = n(626135),
-    Z = n(63063),
-    D = n(74538),
-    U = n(140465),
-    B = n(599659),
-    j = n(91802),
-    G = n(898997),
-    w = n(197115),
-    y = n(823188),
-    H = n(504865),
-    k = n(179984),
-    F = n(938736),
-    V = n(386733),
+    O = n(483444),
+    Z = n(626135),
+    M = n(63063),
+    w = n(74538),
+    B = n(140465),
+    y = n(599659),
+    k = n(91802),
+    L = n(898997),
+    U = n(197115),
+    D = n(823188),
+    G = n(504865),
+    H = n(179984),
+    V = n(938736),
+    F = n(386733),
     W = n(474936),
-    K = n(981631),
-    Y = n(689938),
-    z = n(957781),
+    z = n(981631),
+    Y = n(388032),
+    K = n(957781),
     Q = n(881188),
     J = n(434691),
-    X = n(507579);
-let q = 'gifting_button',
+    q = n(507579);
+let X = 'gifting_button',
     $ = 'payment modal';
 function ee(e) {
-    let { premiumSubscription: t, isDiscountApplied: n, inReverseTrial: a, activeDiscountInfo: r, theme: i } = e,
+    let { premiumSubscription: t, isDiscountApplied: n, inReverseTrial: r, activeDiscountInfo: a, theme: s } = e,
         l = null != t.trialId,
         c = t.planIdFromItems === W.Xh.PREMIUM_YEAR_TIER_2,
-        _ = n || l,
-        u = null != t.trialEndsAt ? o()(t.trialEndsAt).diff(o()(), 'd') : 0,
-        T = W.GP[t.planIdFromItems],
-        I = D.ZP.formatPriceString(D.ZP.getDefaultPrice(T.id), T.interval);
-    return _
-        ? (0, s.jsxs)(s.Fragment, {
+        d = n || l,
+        m = null != t.trialEndsAt ? o()(t.trialEndsAt).diff(o()(), 'd') : 0,
+        f = W.GP[t.planIdFromItems],
+        p = w.ZP.formatPriceString(w.ZP.getDefaultPrice(f.id), f.interval);
+    return d
+        ? (0, i.jsxs)(i.Fragment, {
               children: [
                   (l || !c) &&
-                      (0, s.jsx)(y.Cy, {
-                          text: l ? Y.Z.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED : Y.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED,
-                          className: z.topRimPillWithSparkles,
-                          colorOptions: (0, d.wj)(i) ? y.VE.PREMIUM_TIER_2_WHITE_FILL : y.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
+                      (0, i.jsx)(D.Cy, {
+                          text: l ? Y.intl.string(Y.t.qYKftb) : Y.intl.string(Y.t.EyjDRE),
+                          className: K.topRimPillWithSparkles,
+                          colorOptions: (0, u.wj)(s) ? D.VE.PREMIUM_TIER_2_WHITE_FILL : D.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
                       }),
-                  (l || !c) && (0, s.jsx)('div', { className: z.rimGlowTier2 }),
-                  (0, s.jsx)(E.Heading, {
+                  (l || !c) && (0, i.jsx)('div', { className: K.rimGlowTier2 }),
+                  (0, i.jsx)(g.Heading, {
                       variant: 'heading-md/normal',
                       color: 'always-white',
-                      className: z.trialHeader,
+                      className: K.trialHeader,
                       children: (() => {
-                          var e, n, s;
+                          var e, n, i;
                           if (l) {
-                              if (a) {
-                                  let e = D.ZP.getReverseTrialWeeks(t.trialId);
-                                  return Y.Z.Messages.REVERSE_TRIAL_SUBSCRIBER_MANAGEMENT_SUBHEADER.format({ weeks: e });
+                              if (r) {
+                                  let e = w.ZP.getReverseTrialWeeks(t.trialId);
+                                  return Y.intl.format(Y.t.jLglur, { weeks: e });
                               }
-                              return Y.Z.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION.format({
-                                  remainingTime: u,
-                                  price: I
+                              return Y.intl.format(Y.t['2CGBrq'], {
+                                  remainingTime: m,
+                                  price: p
                               });
                           }
                           if (c)
-                              return Y.Z.Messages.PREMIUM_TIER_CARD_ANNUAL_DISCOUNT_HEADER.format({
-                                  percent: null !== (e = null == r ? void 0 : r.percentage) && void 0 !== e ? e : W.Bo,
-                                  regularPrice: I
+                              return Y.intl.format(Y.t['+qqh6u'], {
+                                  percent: null !== (e = null == a ? void 0 : a.percentage) && void 0 !== e ? e : W.Bo,
+                                  regularPrice: p
                               });
-                          return Y.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC.format({
-                              percent: null !== (n = null == r ? void 0 : r.percentage) && void 0 !== n ? n : W.M_,
-                              regularPrice: I,
-                              numMonths: null !== (s = null == r ? void 0 : r.duration) && void 0 !== s ? s : W.rt
+                          return Y.intl.formatToPlainString(Y.t['3Ziutb'], {
+                              percent: null !== (n = null == a ? void 0 : a.percentage) && void 0 !== n ? n : W.M_,
+                              regularPrice: p,
+                              numMonths: null !== (i = null == a ? void 0 : a.duration) && void 0 !== i ? i : W.rt
                           });
                       })()
                   })
               ]
           })
-        : (0, s.jsx)(H.Z, {
+        : (0, i.jsx)(G.Z, {
               variant: void 0,
               subscriptionTier: W.Si.TIER_2,
-              interval: T.interval
+              interval: f.interval
           });
 }
 function et() {
-    let e = (0, U.t7)(),
-        t = (0, U.lr)(),
+    let e = (0, B.t7)(),
+        t = (0, B.lr)(),
         n = (0, c.e7)([P.ZP], () => P.ZP.inReverseTrial()),
-        a = (0, C.ZP)(),
-        r = (0, c.e7)([P.ZP], () => P.ZP.getPremiumTypeSubscription()),
-        { fractionalState: l } = (0, M.Z)(),
-        o = null !== r && null !== r.planIdFromItems;
+        r = (0, b.ZP)(),
+        a = (0, c.e7)([P.ZP], () => P.ZP.getPremiumTypeSubscription()),
+        { fractionalState: l } = (0, N.Z)(),
+        o = null !== a && null !== a.planIdFromItems;
     if (!o && l === W.a$.NONE) return null;
-    let _ = l !== W.a$.NONE,
-        d = null !== r && null != r.trialId,
-        u = e || d;
-    return (0, s.jsxs)('div', {
-        className: i()(z.tierCard, { [z.withTier2Rim]: u }),
+    let d = l !== W.a$.NONE,
+        u = null !== a && null != a.trialId,
+        m = e || u;
+    return (0, i.jsxs)('div', {
+        className: s()(K.tierCard, { [K.withTier2Rim]: m }),
         children: [
-            (0, s.jsxs)('div', {
-                className: z.tierInfo,
+            (0, i.jsxs)('div', {
+                className: K.tierInfo,
                 children: [
-                    (0, s.jsx)(v.Z, { className: z.tierTitle }),
-                    _
-                        ? (0, s.jsxs)(s.Fragment, {
+                    (0, i.jsx)(O.Z, { className: K.tierTitle }),
+                    d
+                        ? (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, s.jsx)(y.mn, {
-                                      text: Y.Z.Messages.FRACTIONAL_PREMIUM_CREDITS_ACTIVATED,
-                                      className: z.fractionalPremiumTopRimPill,
-                                      colorOptions: y.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
+                                  (0, i.jsx)(D.mn, {
+                                      text: Y.intl.string(Y.t.uXF4c3),
+                                      className: K.fractionalPremiumTopRimPill,
+                                      colorOptions: D.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
                                   }),
-                                  (0, s.jsx)(E.Heading, {
+                                  (0, i.jsx)(g.Heading, {
                                       variant: 'heading-md/normal',
                                       color: 'always-white',
-                                      className: z.fractionalPremiumSubheader,
-                                      children: Y.Z.Messages.FRACTIONAL_PREMIUM_SETTINGS_HERO_SUBHEADER.format({ helpCenterLink: Z.Z.getArticleURL(K.BhN.FRACTIONAL_PREMIUM_ABOUT) })
+                                      className: K.fractionalPremiumSubheader,
+                                      children: Y.intl.format(Y.t.sK7fGh, { helpCenterLink: M.Z.getArticleURL(z.BhN.FRACTIONAL_PREMIUM_ABOUT) })
                                   })
                               ]
                           })
                         : o
-                          ? (0, s.jsx)(ee, {
-                                premiumSubscription: r,
+                          ? (0, i.jsx)(ee, {
+                                premiumSubscription: a,
                                 isDiscountApplied: e,
                                 inReverseTrial: n,
                                 activeDiscountInfo: t,
-                                theme: a
+                                theme: r
                             })
                           : null,
-                    (0, s.jsx)(y.nT, { featureSet: _ ? y.uZ.FRACTIONAL_PREMIUM : y.uZ.DEFAULT }),
-                    (0, s.jsx)(E.Button, {
-                        className: z.tierCardButton,
-                        color: E.Button.Colors.WHITE,
+                    (0, i.jsx)(D.nT, { featureSet: d ? D.uZ.FRACTIONAL_PREMIUM : D.uZ.DEFAULT }),
+                    (0, i.jsx)(g.Button, {
+                        className: K.tierCardButton,
+                        color: g.Button.Colors.WHITE,
                         onClick: () => {
-                            L.default.track(K.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                            Z.default.track(z.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: 'to_premium_home_button',
                                 target: 'premium home page'
                             }),
-                                (0, I.xf)(),
-                                (0, b.uL)(K.Z5c.APPLICATION_STORE);
+                                (0, p.xf)(),
+                                (0, A.uL)(z.Z5c.APPLICATION_STORE);
                         },
-                        children: (0, s.jsx)(E.Text, {
-                            className: z.tierCardButtonCTA,
+                        children: (0, i.jsx)(g.Text, {
+                            className: K.tierCardButtonCTA,
                             variant: 'text-sm/medium',
-                            children: Y.Z.Messages.PREMIUM_SETTINGS_NAVIGATE_TO_HOME_CTA_V2
+                            children: Y.intl.string(Y.t.VR2iVF)
                         })
                     }),
-                    (0, s.jsx)(E.Button, {
-                        className: z.managePlanButton,
-                        look: E.Button.Looks.OUTLINED,
-                        color: E.Button.Colors.WHITE,
+                    (0, i.jsx)(g.Button, {
+                        className: K.managePlanButton,
+                        look: g.Button.Looks.OUTLINED,
+                        color: g.Button.Colors.WHITE,
                         onClick: () => {
-                            L.default.track(K.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                            Z.default.track(z.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: 'to_subscriptions_button',
                                 target: 'subscriptions settings'
                             }),
-                                g.Z.open(K.oAB.SUBSCRIPTIONS);
+                                h.Z.open(z.oAB.SUBSCRIPTIONS);
                         },
-                        children: (0, s.jsx)(E.Text, {
-                            className: z.__invalid_managePlanButtonCTA,
+                        children: (0, i.jsx)(g.Text, {
+                            className: K.__invalid_managePlanButtonCTA,
                             variant: 'text-sm/medium',
                             color: 'always-white',
-                            children: Y.Z.Messages.PREMIUM_SETTINGS_NATIGATE_TO_SUBSCRIPTIONS_CTA
+                            children: Y.intl.string(Y.t['9uDy6O'])
                         })
                     })
                 ]
             }),
-            (0, s.jsx)('div', {
-                className: z.tierImage,
-                children: (0, s.jsx)('img', {
-                    className: z.tierImage,
+            (0, i.jsx)('div', {
+                className: K.tierImage,
+                children: (0, i.jsx)('img', {
+                    className: K.tierImage,
                     alt: '',
                     src: Q
                 })
@@ -204,40 +204,40 @@ function et() {
 }
 function en(e) {
     let { className: t } = e;
-    return (0, s.jsxs)('div', {
-        className: i()(z.giftCard, z.giftCardHalloween, t),
+    return (0, i.jsxs)('div', {
+        className: s()(K.giftCard, K.giftCardHalloween, t),
         children: [
-            (0, s.jsx)('img', {
+            (0, i.jsx)('img', {
                 alt: '',
-                className: i()(z.giftImage, z.giftImageHalloween),
+                className: s()(K.giftImage, K.giftImageHalloween),
                 'aria-hidden': !0,
-                src: X.Z
+                src: q.Z
             }),
-            (0, s.jsxs)('div', {
-                className: z.giftInfo,
+            (0, i.jsxs)('div', {
+                className: K.giftInfo,
                 children: [
-                    (0, s.jsx)(E.Heading, {
-                        className: z.giftTitle,
+                    (0, i.jsx)(g.Heading, {
+                        className: K.giftTitle,
                         color: 'always-white',
                         variant: 'heading-xl/extrabold',
-                        children: Y.Z.Messages.NITROWEEN_GIFT_UPSELL_TITLE
+                        children: Y.intl.string(Y.t['YMI+UV'])
                     }),
-                    (0, s.jsx)(E.Text, {
-                        className: z.giftText,
+                    (0, i.jsx)(g.Text, {
+                        className: K.giftText,
                         color: 'always-white',
                         variant: 'text-sm/normal',
-                        children: Y.Z.Messages.NITROWEEN_DESKTOP_BILLING_SETTINGS_SUBTITLE
+                        children: Y.intl.string(Y.t.TWxqHh)
                     }),
-                    (0, s.jsx)(w.Z, {
+                    (0, i.jsx)(U.Z, {
                         isGift: !0,
-                        className: i()(z.giftCardButton, z.halloweenColor),
-                        look: E.Button.Looks.OUTLINED,
-                        buttonText: Y.Z.Messages.GIFT_NITRO,
-                        buttonTextClassName: z.giftButtonCTA,
-                        color: E.Button.Colors.CUSTOM,
+                        className: s()(K.giftCardButton, K.halloweenColor),
+                        look: g.Button.Looks.OUTLINED,
+                        buttonText: Y.intl.string(Y.t.Ve9Ge3),
+                        buttonTextClassName: K.giftButtonCTA,
+                        color: g.Button.Colors.CUSTOM,
                         onClick: () => {
-                            L.default.track(K.rMx.PREMIUM_SETTINGS_INTERACTED, {
-                                cta_type: q,
+                            Z.default.track(z.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                                cta_type: X,
                                 target: $
                             });
                         }
@@ -247,41 +247,41 @@ function en(e) {
         ]
     });
 }
-function es() {
-    let { enabled: e } = B.O.useExperiment({ location: 'GiftNitro' }, { autoTrackExposure: !1 });
+function ei() {
+    let { enabled: e } = y.O.useExperiment({ location: 'GiftNitro' }, { autoTrackExposure: !1 });
     return e
-        ? (0, s.jsx)(en, {})
-        : (0, s.jsxs)('div', {
-              className: i()(z.giftCard),
+        ? (0, i.jsx)(en, {})
+        : (0, i.jsxs)('div', {
+              className: s()(K.giftCard),
               children: [
-                  (0, s.jsx)('img', {
-                      className: z.giftImage,
+                  (0, i.jsx)('img', {
+                      className: K.giftImage,
                       alt: '',
                       src: J
                   }),
-                  (0, s.jsxs)('div', {
-                      className: z.giftInfo,
+                  (0, i.jsxs)('div', {
+                      className: K.giftInfo,
                       children: [
-                          (0, s.jsx)(E.Heading, {
-                              className: z.giftTitle,
+                          (0, i.jsx)(g.Heading, {
+                              className: K.giftTitle,
                               variant: 'heading-xl/extrabold',
-                              children: Y.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_HEADING
+                              children: Y.intl.string(Y.t['3KomGR'])
                           }),
-                          (0, s.jsx)(E.Text, {
-                              className: z.giftText,
+                          (0, i.jsx)(g.Text, {
+                              className: K.giftText,
                               variant: 'text-sm/normal',
-                              children: Y.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
+                              children: Y.intl.string(Y.t.yQ06u7)
                           }),
-                          (0, s.jsx)(w.Z, {
+                          (0, i.jsx)(U.Z, {
                               isGift: !0,
-                              className: i()(z.giftCardButton, z.giftCardButtonColor),
-                              look: E.Button.Looks.OUTLINED,
-                              buttonText: Y.Z.Messages.GIFT_NITRO,
-                              buttonTextClassName: z.giftButtonCTA,
-                              color: E.Button.Colors.CUSTOM,
+                              className: s()(K.giftCardButton, K.giftCardButtonColor),
+                              look: g.Button.Looks.OUTLINED,
+                              buttonText: Y.intl.string(Y.t.Ve9Ge3),
+                              buttonTextClassName: K.giftButtonCTA,
+                              color: g.Button.Colors.CUSTOM,
                               onClick: () => {
-                                  L.default.track(K.rMx.PREMIUM_SETTINGS_INTERACTED, {
-                                      cta_type: q,
+                                  Z.default.track(z.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                                      cta_type: X,
                                       target: $
                                   });
                               }
@@ -292,70 +292,70 @@ function es() {
           });
 }
 t.Z = function () {
-    let e = (0, f.Q)(),
-        { analyticsLocations: t } = (0, p.ZP)(A.Z.PREMIUM_SETTINGS),
+    let e = (0, T.Q)(),
+        { analyticsLocations: t } = (0, v.ZP)(C.Z.PREMIUM_SETTINGS),
         n = (0, c.e7)([P.ZP], () => P.ZP.getPremiumTypeSubscription()),
-        r = (0, c.e7)([P.ZP], () => P.ZP.hasFetchedSubscriptions()),
-        i = (0, S.V)(),
-        [l, o] = a.useState(!0),
-        { fractionalState: d } = (0, M.Z)(),
-        I = (0, j.n)(),
-        g = null == I ? void 0 : I.countryCode,
-        C = (0, c.e7)([O.Z], () => O.Z.enabled),
-        b = 'PremiumManagementSettings';
-    (0, m.j)({
-        location: b + ' auto on',
+        a = (0, c.e7)([P.ZP], () => P.ZP.hasFetchedSubscriptions()),
+        s = (0, I.V)(),
+        [l, o] = r.useState(!0),
+        { fractionalState: u } = (0, N.Z)(),
+        p = (0, k.n)(),
+        h = null == p ? void 0 : p.countryCode,
+        b = (0, c.e7)([j.Z], () => j.Z.enabled),
+        A = 'PremiumManagementSettings';
+    (0, E.j)({
+        location: A + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, m.j)({
-            location: b + ' auto off',
+        (0, E.j)({
+            location: A + ' auto off',
             autoTrackExposure: !1
         }),
-        (0, G.B)('PremiumManagementSettings');
-    let v = (0, F.bD)('PremiumManagementSettings'),
-        Z = (0, F.pn)('PremiumManagementSettings');
-    a.useEffect(() => {
-        u.Z.wait(async () => {
-            !C && !e && (await Promise.all([T.jg(), T.tZ(), (0, R.Y2)(g, null, K.JjL.DISCOVERY)])), o(!1);
+        (0, L.B)('PremiumManagementSettings');
+    let O = (0, V.bD)('PremiumManagementSettings'),
+        M = (0, V.pn)('PremiumManagementSettings');
+    r.useEffect(() => {
+        m.Z.wait(async () => {
+            !b && !e && (await Promise.all([f.jg(), f.tZ(), (0, _.Y2)(h, null, z.JjL.DISCOVERY)])), o(!1);
         });
-    }, [g, C, e]);
-    let [D, U] = a.useState(!1);
-    if (C) return (0, s.jsx)(N.Z, {});
-    if (e) return (0, s.jsx)(h.c8, {});
-    let B = r && null !== n && i,
-        w = d !== W.a$.NONE;
-    if (!B && !w && !l)
-        return (0, s.jsx)(x.Z, {
-            title: Y.Z.Messages.REDIRECTED_CALLBACK_ERROR,
+    }, [h, b, e]);
+    let [w, B] = r.useState(!1);
+    if (b) return (0, i.jsx)(x.Z, {});
+    if (e) return (0, i.jsx)(S.c8, {});
+    let y = a && null !== n && s,
+        U = u !== W.a$.NONE;
+    if (!y && !U && !l)
+        return (0, i.jsx)(R.Z, {
+            title: Y.intl.string(Y.t.dyq9TU),
             note: null
         });
-    if ((!B && !w) || l) return (0, s.jsx)(E.Spinner, {});
-    let y = null !== n && null != n.trialId;
-    return (0, s.jsx)(p.Gt, {
+    if ((!y && !U) || l) return (0, i.jsx)(g.Spinner, {});
+    let D = null !== n && null != n.trialId;
+    return (0, i.jsx)(v.Gt, {
         value: t,
-        children: (0, s.jsxs)(s.Fragment, {
+        children: (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, s.jsxs)('div', {
-                    className: z.__invalid_container,
+                (0, i.jsxs)('div', {
+                    className: K.__invalid_container,
                     children: [
-                        (0, s.jsx)(et, {}),
-                        (v || Z) && (0, s.jsx)(V.Z, { isInSettings: !0 }),
-                        (0, s.jsx)(es, {}),
-                        (0, s.jsx)(k.Z, {
-                            className: z.__invalid_planComparisonTable,
+                        (0, i.jsx)(et, {}),
+                        (O || M) && (0, i.jsx)(F.Z, { isInSettings: !0 }),
+                        (0, i.jsx)(ei, {}),
+                        (0, i.jsx)(H.Z, {
+                            className: K.__invalid_planComparisonTable,
                             hideCTAs: !0,
-                            headingOverride: Y.Z.Messages.PREMIUM_COMPARISON_TABLE_WHAT_YOU_HAVE_GOT_TITLE,
-                            hidePill: !y,
-                            selectedPlanColumnClassName: z.tier2PlanComparisonTableBackground,
+                            headingOverride: Y.intl.string(Y.t.dnVvQU),
+                            hidePill: !D,
+                            selectedPlanColumnClassName: K.tier2PlanComparisonTableBackground,
                             selectedPlanTier: W.p9.TIER_2
                         })
                     ]
                 }),
-                (0, s.jsx)(_.$, {
+                (0, i.jsx)(d.$, {
                     onChange: (e) => {
-                        e && !D && (L.default.track(K.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }), U(!0));
+                        e && !w && (Z.default.track(z.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }), B(!0));
                     },
-                    children: (0, s.jsx)('div', { className: z.bottomOfPageVisibilitySensor })
+                    children: (0, i.jsx)('div', { className: K.bottomOfPageVisibilitySensor })
                 })
             ]
         })

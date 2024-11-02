@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 });
 var r = n(200651);
@@ -13,35 +13,35 @@ var i = n(974674),
     u = n(630388),
     c = n(489863),
     d = n(981631),
-    _ = n(182294),
-    E = n(689938),
-    f = n(178677);
-function h(e) {
-    let { id: t, user: n, application: h, bot: p, accountScopes: I, showLogout: m, location: T } = e,
-        S = l.ZP.getApplicationIconURL({
-            id: h.id,
-            icon: h.icon
+    f = n(182294),
+    _ = n(388032),
+    h = n(178677);
+function p(e) {
+    let { id: t, user: n, application: p, bot: m, accountScopes: g, showLogout: E, location: v } = e,
+        I = l.ZP.getApplicationIconURL({
+            id: p.id,
+            icon: p.icon
         }),
-        g = l.ZP.getUserAvatarURL(n);
+        S = l.ZP.getUserAvatarURL(n);
     return (0, r.jsxs)('header', {
         id: t,
-        className: f.header,
+        className: h.header,
         children: [
             (0, r.jsxs)('div', {
-                className: f.headerIcons,
+                className: h.headerIcons,
                 children: [
                     (0, r.jsx)(i.qE, {
-                        src: S,
-                        size: _.EF.SIZE_56,
-                        'aria-label': h.name
+                        src: I,
+                        size: f.EF.SIZE_56,
+                        'aria-label': p.name
                     }),
                     (0, r.jsxs)('div', {
-                        className: f.ellipseGroup,
-                        children: [(0, r.jsx)('div', { className: f.ellipse }), (0, r.jsx)('div', { className: f.ellipse }), (0, r.jsx)('div', { className: f.ellipse })]
+                        className: h.ellipseGroup,
+                        children: [(0, r.jsx)('div', { className: h.ellipse }), (0, r.jsx)('div', { className: h.ellipse }), (0, r.jsx)('div', { className: h.ellipse })]
                     }),
                     (0, r.jsx)(i.qE, {
-                        src: g,
-                        size: _.EF.SIZE_56,
+                        src: S,
+                        size: f.EF.SIZE_56,
                         'aria-label': n.username
                     })
                 ]
@@ -50,47 +50,47 @@ function h(e) {
                 variant: 'text-lg/bold',
                 color: 'header-primary',
                 children: [
-                    h.name,
-                    null != p
+                    p.name,
+                    null != m
                         ? (0, r.jsx)(o.Z, {
-                              className: f.botTag,
-                              verified: null != p.public_flags && (0, u.yE)(p.public_flags, d.xW$.VERIFIED_BOT)
+                              className: h.botTag,
+                              verified: null != m.public_flags && (0, u.yE)(m.public_flags, d.xW$.VERIFIED_BOT)
                           })
                         : null
                 ]
             }),
-            I.length > 0
+            g.length > 0
                 ? (0, r.jsx)(s.x, {
                       variant: 'text-md/normal',
                       color: 'header-secondary',
-                      className: f.label,
-                      children: E.Z.Messages.OAUTH2_REQUESTS_ACCOUNT_ACCESS
+                      className: h.label,
+                      children: _.intl.string(_.t.jFbDnJ)
                   })
                 : (0, r.jsx)(s.x, {
                       variant: 'text-md/normal',
                       color: 'header-secondary',
-                      className: f.label,
-                      children: E.Z.Messages.OAUTH2_CONNECT_TO_DISCORD
+                      className: h.label,
+                      children: _.intl.string(_.t['X+Fdpq'])
                   }),
-            m
+            E
                 ? (0, r.jsx)('div', {
-                      className: f.currentUser,
+                      className: h.currentUser,
                       children: (0, r.jsxs)(s.x, {
                           variant: 'text-sm/normal',
                           color: 'text-muted',
                           children: [
-                              E.Z.Messages.OAUTH2_SIGNED_IN_AS.format({
+                              _.intl.format(_.t.qRvpYW, {
                                   userHook: () =>
                                       (0, r.jsxs)(
                                           s.x,
                                           {
-                                              className: f.currentUserTag,
+                                              className: h.currentUserTag,
                                               variant: 'text-sm/normal',
                                               children: [
                                                   n.username,
                                                   !n.isPomelo() &&
                                                       (0, r.jsx)(s.x, {
-                                                          className: f.currentUserDiscriminator,
+                                                          className: h.currentUserDiscriminator,
                                                           variant: 'text-sm/normal',
                                                           children: '#'.concat(n.discriminator)
                                                       })
@@ -101,9 +101,9 @@ function h(e) {
                               }),
                               (0, r.jsx)(a.P, {
                                   tag: 'a',
-                                  className: f.logoutLink,
-                                  onClick: () => (0, c.c$)(T),
-                                  children: E.Z.Messages.OAUTH2_LOGOUT
+                                  className: h.logoutLink,
+                                  onClick: () => (0, c.c$)(v),
+                                  children: _.intl.string(_.t['yV/hjI'])
                               })
                           ]
                       })

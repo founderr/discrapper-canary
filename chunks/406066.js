@@ -8,26 +8,26 @@ var r,
     u = n(442837),
     c = n(570140),
     d = n(742738);
-let _ = [d.Z],
-    E = [];
-function f() {
+let f = [d.Z],
+    _ = [];
+function h() {
     let e = [];
-    for (let t of _) {
+    for (let t of f) {
         let n = t.getActivity();
         null != n && e.push(n);
     }
-    return !l()(e, E) && ((E = e), !0);
+    return !l()(e, _) && ((_ = e), !0);
 }
-class h extends (r = u.ZP.Store) {
+class p extends (r = u.ZP.Store) {
     initialize() {
-        this.syncWith(_, f);
+        this.syncWith(f, h);
     }
     getActivities() {
-        return E;
+        return _;
     }
 }
 (s = 'FirstPartyRichPresenceStore'),
-    (a = 'displayName') in (i = h)
+    (a = 'displayName') in (i = p)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -35,4 +35,4 @@ class h extends (r = u.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new h(c.Z));
+    (t.Z = new p(c.Z));

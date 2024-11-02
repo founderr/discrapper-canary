@@ -1,9 +1,9 @@
-n.d(s, {
+t.d(n, {
     eP: function () {
         return r;
     }
 });
-let r = (0, n(818083).B)({
+let r = (0, t(818083).B)({
     kind: 'user',
     id: '2023-12_pause_subscriptions_experiment',
     label: 'Pause Subscriptions Experiment',
@@ -16,13 +16,13 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-s.ZP = (e) => {
-    let { location: s, autoTrackExposure: n = !0, trackExposureOptions: t = {} } = e;
+n.ZP = (e) => {
+    let { location: n, autoTrackExposure: t = !0, trackExposureOptions: s = {} } = e;
     return r.useExperiment(
-        { location: s },
+        { location: n },
         {
-            autoTrackExposure: n,
-            trackExposureOptions: t
+            autoTrackExposure: t,
+            trackExposureOptions: s
         }
     );
 };

@@ -44,23 +44,23 @@ function l(e) {
 var u = Object.defineProperty,
     c = Object.getOwnPropertyNames,
     d = Object.getOwnPropertySymbols,
-    _ = Object.getOwnPropertyDescriptor,
-    E = Object.getPrototypeOf,
-    f = Object.prototype;
+    f = Object.getOwnPropertyDescriptor,
+    _ = Object.getPrototypeOf,
+    h = Object.prototype;
 e.exports = function e(t, n, r) {
     if ('string' != typeof n) {
-        if (f) {
-            var i = E(n);
-            i && i !== f && e(t, i, r);
+        if (h) {
+            var i = _(n);
+            i && i !== h && e(t, i, r);
         }
         var s = c(n);
         d && (s = s.concat(d(n)));
-        for (var o = l(t), h = l(n), p = 0; p < s.length; ++p) {
-            var I = s[p];
-            if (!a[I] && !(r && r[I]) && !(h && h[I]) && !(o && o[I])) {
-                var m = _(n, I);
+        for (var o = l(t), p = l(n), m = 0; m < s.length; ++m) {
+            var g = s[m];
+            if (!a[g] && !(r && r[g]) && !(p && p[g]) && !(o && o[g])) {
+                var E = f(n, g);
                 try {
-                    u(t, I, m);
+                    u(t, g, E);
                 } catch (e) {}
             }
         }

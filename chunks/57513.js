@@ -1,6 +1,6 @@
 n.d(t, {
     l: function () {
-        return p;
+        return m;
     }
 });
 var r = n(544891),
@@ -12,11 +12,11 @@ var r = n(544891),
     u = n(129542),
     c = n(70956),
     d = n(981631);
-let _ = 10 * c.Z.Millis.MINUTE,
-    E = 10 * c.Z.Millis.MINUTE,
-    f = 1 * c.Z.Millis.MINUTE,
-    h = {};
-async function p(e, t) {
+let f = 10 * c.Z.Millis.MINUTE,
+    _ = 10 * c.Z.Millis.MINUTE,
+    h = 1 * c.Z.Millis.MINUTE,
+    p = {};
+async function m(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         c = o.default.locale;
     return (
@@ -26,7 +26,7 @@ async function p(e, t) {
             branchId: t,
             locale: c
         }),
-        n && (await (0, i._v)(Math.random() * f)),
+        n && (await (0, i._v)(Math.random() * h)),
         r.tn
             .get({
                 url: d.ANM.APPLICATION_LIVE_BUILD(e, t),
@@ -66,9 +66,9 @@ async function p(e, t) {
                     else {
                         var i, o;
                         (i = e),
-                            null == h[(o = t)] && (h[o] = new a.V7()),
-                            h[o].start(_ + Math.random() * E, () => {
-                                null != l.Z.getLibraryApplication(i, o) && p(i, o);
+                            null == p[(o = t)] && (p[o] = new a.V7()),
+                            p[o].start(f + Math.random() * _, () => {
+                                null != l.Z.getLibraryApplication(i, o) && m(i, o);
                             });
                     }
                 }

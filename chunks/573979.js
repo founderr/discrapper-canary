@@ -4,13 +4,13 @@ n.d(t, {
     }
 });
 var i,
-    a,
-    s,
     r,
-    l = n(358085);
+    l,
+    a,
+    s = n(358085);
 function o(e) {
-    if ((0, l.isIOS)()) return e;
-    if (!(0, l.isAndroid)()) return -1;
+    if ((0, s.isIOS)()) return e;
+    if (!(0, s.isAndroid)()) return -1;
     switch (e) {
         case 0:
             return 0;
@@ -27,4 +27,4 @@ function o(e) {
             return -1;
     }
 }
-((i = s || (s = {}))[(i.UNHANDLED = -1)] = 'UNHANDLED'), (i[(i.NOMINAL = 0)] = 'NOMINAL'), (i[(i.FAIR = 1)] = 'FAIR'), (i[(i.SERIOUS = 2)] = 'SERIOUS'), (i[(i.CRITICAL = 3)] = 'CRITICAL'), ((a = r || (r = {}))[(a.NONE = 0)] = 'NONE'), (a[(a.LIGHT = 1)] = 'LIGHT'), (a[(a.MODERATE = 2)] = 'MODERATE'), (a[(a.SEVERE = 3)] = 'SEVERE'), (a[(a.CRITICAL = 4)] = 'CRITICAL'), (a[(a.EMERGENCY = 5)] = 'EMERGENCY'), (a[(a.SHUTDOWN = 6)] = 'SHUTDOWN');
+((i = l || (l = {}))[(i.UNHANDLED = -1)] = 'UNHANDLED'), (i[(i.NOMINAL = 0)] = 'NOMINAL'), (i[(i.FAIR = 1)] = 'FAIR'), (i[(i.SERIOUS = 2)] = 'SERIOUS'), (i[(i.CRITICAL = 3)] = 'CRITICAL'), ((r = a || (a = {}))[(r.NONE = 0)] = 'NONE'), (r[(r.LIGHT = 1)] = 'LIGHT'), (r[(r.MODERATE = 2)] = 'MODERATE'), (r[(r.SEVERE = 3)] = 'SEVERE'), (r[(r.CRITICAL = 4)] = 'CRITICAL'), (r[(r.EMERGENCY = 5)] = 'EMERGENCY'), (r[(r.SHUTDOWN = 6)] = 'SHUTDOWN');

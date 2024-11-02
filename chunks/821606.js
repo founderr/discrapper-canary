@@ -1,62 +1,62 @@
-n.r(e),
-    n.d(e, {
+e.r(n),
+    e.d(n, {
         default: function () {
             return d;
         }
     });
-var a = n(200651);
-n(192379);
-var o = n(481060),
-    r = n(600164),
-    s = n(313201),
-    l = n(988158),
-    i = n(689938),
-    c = n(293784);
+var a = e(200651);
+e(192379);
+var r = e(481060),
+    o = e(600164),
+    i = e(313201),
+    l = e(988158),
+    s = e(388032),
+    c = e(293784);
 function d(t) {
-    let { url: e, onClose: d, transitionState: u } = t,
-        x = (0, s.Dt)(),
-        { protocol: h, hostname: m, theRestOfTheUrl: b } = (0, l.h)(e);
-    return (0, a.jsxs)(o.ModalRoot, {
+    let { url: n, onClose: d, transitionState: u } = t,
+        x = (0, i.Dt)(),
+        { protocol: h, hostname: m, theRestOfTheUrl: b } = (0, l.h)(n);
+    return (0, a.jsxs)(r.ModalRoot, {
         transitionState: u,
         'aria-labelledby': x,
         children: [
             (0, a.jsx)('img', {
                 className: c.art,
-                src: n(902623),
+                src: e(902623),
                 alt: ''
             }),
-            (0, a.jsx)(o.ModalContent, {
-                children: (0, a.jsxs)(r.Z, {
-                    direction: r.Z.Direction.VERTICAL,
-                    justify: r.Z.Justify.CENTER,
+            (0, a.jsx)(r.ModalContent, {
+                children: (0, a.jsxs)(o.Z, {
+                    direction: o.Z.Direction.VERTICAL,
+                    justify: o.Z.Justify.CENTER,
                     children: [
-                        (0, a.jsx)(o.Heading, {
+                        (0, a.jsx)(r.Heading, {
                             id: x,
                             variant: 'heading-lg/semibold',
                             className: c.title,
-                            children: i.Z.Messages.BAD_LINK_WARNING_TITLE_V2
+                            children: s.intl.string(s.t['2B3wj4'])
                         }),
-                        (0, a.jsx)(o.Text, {
+                        (0, a.jsx)(r.Text, {
                             variant: 'text-md/normal',
                             className: c.body,
-                            children: i.Z.Messages.BAD_LINK_WARNING_BODY_V2.format()
+                            children: s.intl.format(s.t.jnHyYW, {})
                         }),
-                        (0, a.jsxs)(o.Scroller, {
+                        (0, a.jsxs)(r.Scroller, {
                             className: c.linkCalloutContainer,
                             children: [
-                                (0, a.jsxs)(o.Text, {
+                                (0, a.jsxs)(r.Text, {
                                     tag: 'span',
                                     variant: 'text-md/normal',
                                     color: 'text-muted',
                                     children: [h, '//']
                                 }),
-                                (0, a.jsx)(o.Text, {
+                                (0, a.jsx)(r.Text, {
                                     tag: 'span',
                                     variant: 'text-md/semibold',
                                     color: 'text-normal',
                                     children: m
                                 }),
-                                (0, a.jsx)(o.Text, {
+                                (0, a.jsx)(r.Text, {
                                     tag: 'span',
                                     variant: 'text-md/normal',
                                     color: 'text-muted',
@@ -67,13 +67,13 @@ function d(t) {
                     ]
                 })
             }),
-            (0, a.jsx)(o.ModalFooter, {
-                children: (0, a.jsx)(o.Button, {
+            (0, a.jsx)(r.ModalFooter, {
+                children: (0, a.jsx)(r.Button, {
                     type: 'button',
-                    size: o.Button.Sizes.MEDIUM,
-                    color: o.Button.Colors.BRAND,
+                    size: r.Button.Sizes.MEDIUM,
+                    color: r.Button.Colors.BRAND,
                     onClick: d,
-                    children: i.Z.Messages.GO_BACK
+                    children: s.intl.string(s.t['/g10LC'])
                 })
             })
         ]

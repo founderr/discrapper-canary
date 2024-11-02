@@ -61,15 +61,15 @@ function o(e) {
         u = (0, r.useMemo)(() => ({ suppressTextValueWarning: e.suppressTextValueWarning }), [e.suppressTextValueWarning]),
         c = (0, a.Kx)(e, l, u),
         d = (0, r.useMemo)(() => new i.Z(c, n), [c, n]),
-        _ = (0, r.useRef)(null);
+        f = (0, r.useRef)(null);
     return (
         (0, r.useEffect)(() => {
             if (null != n.focusedKey && !c.getItem(n.focusedKey)) {
                 let e;
-                let t = _.current.getItem(n.focusedKey),
-                    r = [..._.current.getKeys()]
+                let t = f.current.getItem(n.focusedKey),
+                    r = [...f.current.getKeys()]
                         .map((e) => {
-                            let t = _.current.getItem(e);
+                            let t = f.current.getItem(e);
                             return 'item' === t.type ? t : null;
                         })
                         .filter((e) => null !== e),
@@ -90,7 +90,7 @@ function o(e) {
                 }
                 n.setFocusedKey(e ? e.key : null);
             }
-            _.current = c;
+            f.current = c;
         }, [c, d, n, n.focusedKey]),
         {
             collection: c,

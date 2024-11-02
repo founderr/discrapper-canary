@@ -1,51 +1,51 @@
-n.d(t, {
+e.d(n, {
     Z: function () {
         return d;
     }
 }),
-    n(47120);
-var a = n(200651),
-    r = n(192379),
-    i = n(120356),
-    o = n.n(i),
-    s = n(481060),
-    l = n(456692);
-function c(e) {
-    let { alt: t, ...n } = e,
-        [i, o] = r.useState(!0);
+    e(47120);
+var a = e(200651),
+    i = e(192379),
+    r = e(120356),
+    o = e.n(r),
+    l = e(481060),
+    c = e(456692);
+function s(t) {
+    let { alt: n, ...e } = t,
+        [r, o] = i.useState(!0);
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            i &&
-                (0, a.jsx)(s.Spinner, {
-                    type: s.Spinner.Type.LOW_MOTION,
-                    className: l.loader
+            r &&
+                (0, a.jsx)(l.Spinner, {
+                    type: l.Spinner.Type.LOW_MOTION,
+                    className: c.loader
                 }),
             (0, a.jsx)('img', {
-                ...n,
-                alt: t,
+                ...e,
+                alt: n,
                 onLoad: () => o(!1)
             })
         ]
     });
 }
-function d(e) {
-    let { src: t, backgroundSrc: n, alt: r, aspectRatio: i, className: s, imageChildClassName: d, ...u } = e;
+function d(t) {
+    let { src: n, backgroundSrc: e, alt: i, aspectRatio: r, className: l, imageChildClassName: d, ...u } = t;
     return (0, a.jsxs)('div', {
-        className: o()(l.container, s),
+        className: o()(c.container, l),
         children: [
             (0, a.jsx)('img', {
-                src: n,
-                alt: r,
-                className: l.backgroundImage
+                src: e,
+                alt: i,
+                className: c.backgroundImage
             }),
-            (0, a.jsx)('div', { className: l.backgroundImageFilter }),
+            (0, a.jsx)('div', { className: c.backgroundImageFilter }),
             (0, a.jsx)('div', {
-                style: { aspectRatio: i },
-                className: l.imageContainer,
-                children: (0, a.jsx)(c, {
-                    src: t,
-                    alt: r,
-                    className: o()(l.image, d),
+                style: { aspectRatio: r },
+                className: c.imageContainer,
+                children: (0, a.jsx)(s, {
+                    src: n,
+                    alt: i,
+                    className: o()(c.image, d),
                     ...u
                 })
             })

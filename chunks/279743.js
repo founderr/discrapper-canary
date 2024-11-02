@@ -1,105 +1,105 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return S;
+        return p;
     }
 }),
-    t(47120);
-var n = t(200651),
-    a = t(192379),
-    i = t(120356),
-    r = t.n(i),
-    o = t(100621),
-    l = t(748780),
-    c = t(481060),
-    d = t(442837),
-    _ = t(607070),
-    u = t(663389),
-    E = t(36968);
-function T(e) {
-    let { children: s, className: t, onFlashEnd: i, animationDelay: u = 500 } = e,
-        T = c.tokens.colors.TEXT_LINK,
-        S = (0, d.e7)([_.Z], () => _.Z.useReducedMotion),
-        I = (0, c.useToken)(T).spring({ opacity: 0 }),
-        N = (0, c.useToken)(T).spring({ opacity: 0.1 }),
-        m = (0, c.useToken)(T).spring({ opacity: 0 }),
-        C = (0, c.useToken)(T).spring({ opacity: 1 }),
-        A = (e) => {
-            e.finished && (null == i || i());
+    n(47120);
+var i = n(200651),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(100621),
+    o = n(748780),
+    c = n(481060),
+    d = n(442837),
+    u = n(607070),
+    m = n(663389),
+    h = n(36968);
+function g(e) {
+    let { children: t, className: n, onFlashEnd: r, animationDelay: m = 500 } = e,
+        g = c.tokens.colors.TEXT_LINK,
+        p = (0, d.e7)([u.Z], () => u.Z.useReducedMotion),
+        x = (0, c.useToken)(g).spring({ opacity: 0 }),
+        S = (0, c.useToken)(g).spring({ opacity: 0.1 }),
+        T = (0, c.useToken)(g).spring({ opacity: 0 }),
+        C = (0, c.useToken)(g).spring({ opacity: 1 }),
+        _ = (e) => {
+            e.finished && (null == r || r());
         },
-        [g, h] = (0, c.useSpring)(
+        [E, f] = (0, c.useSpring)(
             () => ({
                 from: {
-                    backgroundColor: I,
-                    borderColor: I
+                    backgroundColor: x,
+                    borderColor: x
                 }
             }),
             'animate-never'
         ),
-        O = u + 200 + 200,
-        p = S ? 0 : 200;
+        I = m + 200 + 200,
+        N = p ? 0 : 200;
     return (
-        a.useEffect(() => {
-            h({
+        s.useEffect(() => {
+            f({
                 reset: !0,
                 immediate: !1,
                 to: {
-                    backgroundColor: I,
-                    borderColor: I
+                    backgroundColor: x,
+                    borderColor: x
                 },
                 config: {
-                    duration: p,
-                    easing: l.Z.Easing.ease
+                    duration: N,
+                    easing: o.Z.Easing.ease
                 }
             }),
-                h({
-                    delay: u,
-                    immediate: S,
+                f({
+                    delay: m,
+                    immediate: p,
                     to: [
                         {
-                            backgroundColor: N,
+                            backgroundColor: S,
                             borderColor: C
                         }
                     ],
                     config: {
-                        duration: p,
-                        easing: l.Z.Easing.ease
+                        duration: N,
+                        easing: o.Z.Easing.ease
                     }
                 }),
-                h({
-                    delay: O,
-                    immediate: S,
+                f({
+                    delay: I,
+                    immediate: p,
                     to: [
                         {
-                            backgroundColor: m,
-                            borderColor: m
+                            backgroundColor: T,
+                            borderColor: T
                         }
                     ],
                     config: {
-                        duration: p,
-                        easing: l.Z.Easing.ease
+                        duration: N,
+                        easing: o.Z.Easing.ease
                     },
-                    onRest: A
+                    onRest: _
                 });
-        }, [h]),
-        (0, n.jsx)(o.animated.div, {
-            style: g,
-            className: r()(E.settingsItemHighlight, t),
-            children: s
+        }, [f]),
+        (0, i.jsx)(a.animated.div, {
+            style: E,
+            className: l()(h.settingsItemHighlight, n),
+            children: t
         })
     );
 }
-function S(e) {
-    let { children: s, scrollPosition: t, animationDelay: i } = e,
-        r = (0, d.e7)([u.Z], () => u.Z.getScrollPosition() === t),
-        [o, l] = a.useState(!1);
-    return (a.useEffect(() => {
-        r && l(!0);
-    }, [r]),
-    o)
-        ? (0, n.jsx)(T, {
-              animationDelay: i,
-              onFlashEnd: () => l(!1),
-              children: s
+function p(e) {
+    let { children: t, scrollPosition: n, animationDelay: r } = e,
+        l = (0, d.e7)([m.Z], () => m.Z.getScrollPosition() === n),
+        [a, o] = s.useState(!1);
+    return (s.useEffect(() => {
+        l && o(!0);
+    }, [l]),
+    a)
+        ? (0, i.jsx)(g, {
+              animationDelay: r,
+              onFlashEnd: () => o(!1),
+              children: t
           })
-        : (0, n.jsx)(n.Fragment, { children: s });
+        : (0, i.jsx)(i.Fragment, { children: t });
 }

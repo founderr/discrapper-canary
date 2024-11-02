@@ -1,9 +1,9 @@
 n.d(t, {
     FT: function () {
-        return E;
+        return _;
     },
     Qd: function () {
-        return f;
+        return h;
     }
 });
 var r = n(442837),
@@ -15,18 +15,18 @@ var r = n(442837),
     u = n(981631),
     c = n(921944),
     d = n(526761);
-function _(e, t) {
+function f(e, t) {
     let n = s.Z.getDismissedGuildContent(t);
     return null != n && (0, l.jl)(n, e);
 }
-function E(e, t) {
-    return (0, r.e7)([s.Z], () => _(e, t));
+function _(e, t) {
+    return (0, r.e7)([s.Z], () => f(e, t));
 }
-function f(e, t, n, r) {
+function h(e, t, n, r) {
     (0, a.PS)(
         t,
         (n) => {
-            if (_(e, t)) return !1;
+            if (f(e, t)) return !1;
             n.dismissedGuildContent = (0, l.GV)(n.dismissedGuildContent, e);
         },
         d.fy.INFREQUENT_USER_ACTION

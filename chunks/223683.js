@@ -9,7 +9,7 @@ n.d(t, {
         return o;
     },
     dt: function () {
-        return _;
+        return f;
     },
     xx: function () {
         return u;
@@ -41,7 +41,7 @@ async function d() {
         t = i().sortBy(e, (e) => new Date(e.recorded_at).getTime());
     0 !== t.length && (await u(t[t.length - 1].id));
 }
-async function _(e) {
+async function f(e) {
     if (e.length > 0) {
         var t;
         let n = i().sum(e.map((e) => e.length)),

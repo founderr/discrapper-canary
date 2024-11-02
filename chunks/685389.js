@@ -1,15 +1,15 @@
 n.d(t, {
     H: function () {
-        return i;
+        return l;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(967790);
-function i(e) {
+var r = n(967790);
+function l(e) {
     let { children: t } = e;
-    return (0, s.jsx)('div', {
-        className: a.metricsContainer,
+    return (0, i.jsx)('div', {
+        className: r.metricsContainer,
         children: t
     });
 }

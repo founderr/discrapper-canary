@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return j;
     }
 }),
     n(724458),
     n(47120);
 var l = n(200651),
-    s = n(192379),
-    i = n(512722),
-    r = n.n(i),
+    i = n(192379),
+    r = n(512722),
+    s = n.n(r),
     a = n(392711),
     o = n.n(a),
     c = n(856901),
@@ -17,60 +17,60 @@ var l = n(200651),
     f = n(131951),
     h = n(537135),
     m = n(176940),
-    x = n(689938),
-    _ = n(836471),
-    g = n(410894),
-    p = n(113207);
-function C(e) {
-    let { selectedSource: t, onChangeVideoDeviceSource: n, onChangeAudioDevice: i } = e;
-    r()(null != t, 'Camera capture device cannot be null');
+    x = n(388032),
+    g = n(836471),
+    p = n(410894),
+    v = n(113207);
+function j(e) {
+    let { selectedSource: t, onChangeVideoDeviceSource: n, onChangeAudioDevice: r } = e;
+    s()(null != t, 'Camera capture device cannot be null');
     let a = (0, m.Z)(),
-        C = (0, d.e7)([f.Z], () => f.Z.getInputDevices()),
-        [S, E] = s.useState(
+        j = (0, d.e7)([f.Z], () => f.Z.getInputDevices()),
+        [C, S] = i.useState(
             (function (e, t, n) {
                 if (null != t && null != n) {
                     let l = t.find((t) => t.id === e);
                     if (null == l) return;
-                    let s = o().reduce(n, (e, t) => ((0, c.stringSimilarity)(l.name, t.name) > (0, c.stringSimilarity)(l.name, e.name) ? t : e));
-                    if (null != s) return s.id;
+                    let i = o().reduce(n, (e, t) => ((0, c.stringSimilarity)(l.name, t.name) > (0, c.stringSimilarity)(l.name, e.name) ? t : e));
+                    if (null != i) return i.id;
                 }
-            })(t.id, a, C)
+            })(t.id, a, j)
         );
     return (
-        null != S && i(S),
-        (0, l.jsx)(s.Fragment, {
+        null != C && r(C),
+        (0, l.jsx)(i.Fragment, {
             children: (0, l.jsxs)(u.FormItem, {
                 title: 'Capture Device',
-                className: g.modalContent,
+                className: p.modalContent,
                 children: [
                     (0, l.jsx)(u.FormItem, {
-                        className: p.marginTop8,
+                        className: v.marginTop8,
                         children: (0, l.jsxs)(h.Z, {
                             children: [
                                 (0, l.jsx)('span', {
-                                    className: _.ellipsisText,
+                                    className: g.ellipsisText,
                                     children: t.name
                                 }),
                                 (0, l.jsx)(u.Button, {
-                                    className: _.changeButton,
+                                    className: g.changeButton,
                                     color: u.Button.Colors.PRIMARY,
                                     size: u.Button.Sizes.SMALL,
                                     onClick: n,
-                                    children: x.Z.Messages.CHANGE
+                                    children: x.intl.string(x.t.GEgsAw)
                                 })
                             ]
                         })
                     }),
                     (0, l.jsx)(u.FormItem, {
-                        className: p.marginTop8,
-                        title: x.Z.Messages.GO_LIVE_FORM_LABEL_AUDIO_DEVICE,
+                        className: v.marginTop8,
+                        title: x.intl.string(x.t.y4ooen),
                         children: (0, l.jsx)(u.SingleSelect, {
-                            value: S,
-                            className: p.__invalid_marginaTop8,
+                            value: C,
+                            className: v.__invalid_marginaTop8,
                             onChange: (e) => {
-                                E(e), i(e);
+                                S(e), r(e);
                             },
-                            options: o().map(C, (e) => {
+                            options: o().map(j, (e) => {
                                 let { id: t, name: n } = e;
                                 return {
                                     value: t,

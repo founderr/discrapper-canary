@@ -1,33 +1,33 @@
-n.d(t, {
+n.d(e, {
     Z: function () {
-        return r;
+        return E;
     }
 }),
     n(47120);
-var E = n(192379);
-function r(e) {
-    var t;
-    let { stepConfigs: n, breadcrumbs: r } = e,
-        [u, i] = E.useState(null === (t = n[0]) || void 0 === t ? void 0 : t.key),
-        S = E.useRef(null);
-    E.useEffect(() => {
-        S.current = u;
-    }, [S, u]);
-    let _ = n.map((e) => e.key).filter((e) => null != e);
+var r = n(192379);
+function E(t) {
+    var e;
+    let { stepConfigs: n, breadcrumbs: E } = t,
+        [i, u] = r.useState(null === (e = n[0]) || void 0 === e ? void 0 : e.key),
+        S = r.useRef(null);
+    r.useEffect(() => {
+        S.current = i;
+    }, [S, i]);
+    let o = n.map((t) => t.key).filter((t) => null != t);
     return {
-        steps: _,
-        step: u,
-        setStep: i,
+        steps: o,
+        step: i,
+        setStep: u,
         breadcrumbsData: n
-            .filter((e) => {
-                var t;
-                return null != e.key && (null == e ? void 0 : null === (t = e.options) || void 0 === t ? void 0 : t.useBreadcrumbLabel) != null;
+            .filter((t) => {
+                var e;
+                return null != t.key && (null == t ? void 0 : null === (e = t.options) || void 0 === e ? void 0 : e.useBreadcrumbLabel) != null;
             })
-            .map((e) => ({
-                id: e.key,
-                useBreadcrumbLabel: e.options.useBreadcrumbLabel
+            .map((t) => ({
+                id: t.key,
+                useBreadcrumbLabel: t.options.useBreadcrumbLabel
             }))
-            .sort((e, t) => (null != r ? r.indexOf(e.id) - r.indexOf(t.id) : 0)),
+            .sort((t, e) => (null != E ? E.indexOf(t.id) - E.indexOf(e.id) : 0)),
         previousStepRef: S
     };
 }

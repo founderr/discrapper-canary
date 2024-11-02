@@ -1,45 +1,45 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return d;
     }
 });
-var s = n(200651);
+var i = n(200651);
 n(192379);
-var a = n(481060),
-    r = n(518950),
-    i = n(182294),
-    l = n(689938),
+var r = n(481060),
+    a = n(518950),
+    s = n(182294),
+    l = n(388032),
     o = n(458269),
     c = n(144343);
-function _(e) {
+function d(e) {
     var t;
     let { referrer: n } = e,
-        { avatarSrc: _, eventHandlers: d } = (0, r.Z)({
+        { avatarSrc: d, eventHandlers: u } = (0, a.Z)({
             user: n,
-            size: i.EF.SIZE_32,
+            size: s.EF.SIZE_32,
             animateOnHover: !0
         });
-    return (0, s.jsx)('div', {
+    return (0, i.jsx)('div', {
         className: o.attributionBannerContainer,
-        children: (0, s.jsxs)('div', {
+        children: (0, i.jsxs)('div', {
             className: o.attributionBannerContent,
             children: [
-                (0, s.jsx)('div', {
+                (0, i.jsx)('div', {
                     className: o.iconContainer,
-                    children: (0, s.jsx)(a.Avatar, {
+                    children: (0, i.jsx)(r.Avatar, {
                         className: o.icon,
-                        src: _,
+                        src: d,
                         'aria-label': n.username,
-                        size: i.EF.SIZE_32,
-                        ...d
+                        size: s.EF.SIZE_32,
+                        ...u
                     })
                 }),
-                (0, s.jsx)(a.Heading, {
+                (0, i.jsx)(r.Heading, {
                     variant: 'heading-lg/medium',
                     className: o.textContainer,
-                    children: l.Z.Messages.REFERRAL_PROGRAM_SUBSCRIBER_HOMER_BANNER.format({ username: null != (t = n).globalName ? t.globalName : t.username })
+                    children: l.intl.format(l.t.IqxblZ, { username: null != (t = n).globalName ? t.globalName : t.username })
                 }),
-                (0, s.jsx)('img', {
+                (0, i.jsx)('img', {
                     src: c,
                     alt: '',
                     className: o.attributionIcon

@@ -10,15 +10,15 @@ e.exports = function (e, t) {
         c = u.match(r);
     if (c) {
         var d = 'aes' + c[1],
-            _ = l.from(c[2], 'hex'),
-            E = l.from(c[3].replace(/[\r\n]/g, ''), 'base64'),
-            f = s(t, _.slice(0, 8), parseInt(c[1], 10)).key,
-            h = [],
-            p = o.createDecipheriv(d, f, _);
-        h.push(p.update(E)), h.push(p.final()), (n = l.concat(h));
+            f = l.from(c[2], 'hex'),
+            _ = l.from(c[3].replace(/[\r\n]/g, ''), 'base64'),
+            h = s(t, f.slice(0, 8), parseInt(c[1], 10)).key,
+            p = [],
+            m = o.createDecipheriv(d, h, f);
+        p.push(m.update(_)), p.push(m.final()), (n = l.concat(p));
     } else {
-        var I = u.match(a);
-        n = l.from(I[2].replace(/[\r\n]/g, ''), 'base64');
+        var g = u.match(a);
+        n = l.from(g[2].replace(/[\r\n]/g, ''), 'base64');
     }
     return {
         tag: u.match(i)[1],

@@ -1,83 +1,83 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return m;
+        return T;
     }
 }),
-    t(47120);
-var n = t(200651);
-t(192379);
-var a = t(512722),
-    i = t.n(a),
-    r = t(481060),
-    o = t(100527),
-    l = t(906732),
-    c = t(509545),
-    d = t(74538),
-    _ = t(937615),
-    u = t(374649),
-    E = t(474936),
-    T = t(981631),
-    S = t(689938),
-    I = t(405766);
-function N(e) {
-    let s,
-        { subscription: t, withOverheadSeparator: a } = e,
-        { analyticsLocations: N } = (0, l.ZP)(),
-        [m] = (0, u.ED)({
-            subscriptionId: t.id,
+    n(47120);
+var i = n(200651);
+n(192379);
+var s = n(512722),
+    r = n.n(s),
+    l = n(481060),
+    a = n(100527),
+    o = n(906732),
+    c = n(509545),
+    d = n(74538),
+    u = n(937615),
+    m = n(374649),
+    h = n(474936),
+    g = n(981631),
+    p = n(388032),
+    x = n(405766);
+function S(e) {
+    let t,
+        { subscription: n, withOverheadSeparator: s } = e,
+        { analyticsLocations: S } = (0, o.ZP)(),
+        [T] = (0, m.ED)({
+            subscriptionId: n.id,
             renewal: !0,
-            analyticsLocations: N,
-            analyticsLocation: o.Z.PREMIUM_SUBSCRIPTION_FINE_PRINT_CONTENT
+            analyticsLocations: S,
+            analyticsLocation: a.Z.PREMIUM_SUBSCRIPTION_FINE_PRINT_CONTENT
         });
-    if (null == m) return null;
-    let C = a ? I.finePrintWithOverheadSeparator : I.finePrint,
-        A = m.invoiceItems.find((e) => {
-            let { subscriptionPlanId: s } = e;
-            return (0, d.uZ)(s);
+    if (null == T) return null;
+    let C = s ? x.finePrintWithOverheadSeparator : x.finePrint,
+        _ = T.invoiceItems.find((e) => {
+            let { subscriptionPlanId: t } = e;
+            return (0, d.uZ)(t);
         });
-    if (null == A) return null;
-    let g = A.subscriptionPlanId,
-        h = c.Z.get(g);
-    i()(null != h, 'Missing plan');
-    let O = (0, _.T4)(m.total, m.currency);
+    if (null == _) return null;
+    let E = _.subscriptionPlanId,
+        f = c.Z.get(E);
+    r()(null != f, 'Missing plan');
+    let I = (0, u.T4)(T.total, T.currency);
     return (
-        h.interval === E.rV.YEAR
-            ? (s = S.Z.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
-                  price: O,
-                  termsUrl: T.EYA.TERMS,
-                  paidURL: T.EYA.PAID_TERMS,
-                  privacyUrl: T.EYA.PRIVACY
+        f.interval === h.rV.YEAR
+            ? (t = p.intl.format(p.t['jPz/39'], {
+                  price: I,
+                  termsUrl: g.EYA.TERMS,
+                  paidURL: g.EYA.PAID_TERMS,
+                  privacyUrl: g.EYA.PRIVACY
               }))
-            : h.interval === E.rV.MONTH &&
-              (s =
-                  1 === h.intervalCount
-                      ? S.Z.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MONTHLY.format({
-                            price: O,
-                            termsUrl: T.EYA.TERMS,
-                            paidURL: T.EYA.PAID_TERMS,
-                            privacyUrl: T.EYA.PRIVACY
+            : f.interval === h.rV.MONTH &&
+              (t =
+                  1 === f.intervalCount
+                      ? p.intl.format(p.t.m27GpK, {
+                            price: I,
+                            termsUrl: g.EYA.TERMS,
+                            paidURL: g.EYA.PAID_TERMS,
+                            privacyUrl: g.EYA.PRIVACY
                         })
-                      : S.Z.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MULTI_MONTH.format({
-                            price: O,
-                            termsUrl: T.EYA.TERMS,
-                            paidURL: T.EYA.PAID_TERMS,
-                            privacyUrl: T.EYA.PRIVACY,
-                            intervalCount: h.intervalCount
+                      : p.intl.format(p.t['9xf5V1'], {
+                            price: I,
+                            termsUrl: g.EYA.TERMS,
+                            paidURL: g.EYA.PAID_TERMS,
+                            privacyUrl: g.EYA.PRIVACY,
+                            intervalCount: f.intervalCount
                         })),
-        (0, n.jsx)(r.Text, {
+        (0, i.jsx)(l.Text, {
             color: 'text-muted',
             className: C,
             variant: 'text-xs/normal',
-            children: s
+            children: t
         })
     );
 }
-function m(e) {
-    let { subscription: s, withOverheadSeparator: t } = e;
-    return s.status === T.O0b.CANCELED || s.isPurchasedExternally
+function T(e) {
+    let { subscription: t, withOverheadSeparator: n } = e;
+    return t.status === g.O0b.CANCELED || t.isPurchasedExternally
         ? null
-        : (0, n.jsx)(N, {
-              subscription: s,
-              withOverheadSeparator: t
+        : (0, i.jsx)(S, {
+              subscription: t,
+              withOverheadSeparator: n
           });
 }

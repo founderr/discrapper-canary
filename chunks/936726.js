@@ -1,199 +1,199 @@
 t.d(n, {
     Z: function () {
-        return R;
+        return E;
     }
 }),
     t(47120),
     t(653041);
 var i = t(200651),
-    a = t(192379),
-    l = t(120356),
-    s = t.n(l),
+    l = t(192379),
+    r = t(120356),
+    a = t.n(r),
     o = t(544891),
-    r = t(846519),
+    s = t(846519),
     d = t(481060),
     c = t(668781),
     u = t(139387),
-    I = t(308063),
-    m = t(600164),
-    _ = t(208567),
-    N = t(598077),
-    E = t(259580),
-    T = t(768581),
-    h = t(572004),
-    g = t(709054),
-    p = t(51144),
-    f = t(486199),
-    C = t(981631),
-    x = t(689938),
-    O = t(230685);
-let S = (e) => {
+    m = t(308063),
+    h = t(600164),
+    p = t(208567),
+    g = t(598077),
+    f = t(259580),
+    x = t(768581),
+    b = t(572004),
+    v = t(709054),
+    C = t(51144),
+    I = t(486199),
+    N = t(981631),
+    T = t(388032),
+    _ = t(230685);
+let j = (e) => {
     if (null == e) return null;
-    let n = new N.Z(e);
-    return p.ZP.getUserTag(n);
+    let n = new g.Z(e);
+    return C.ZP.getUserTag(n);
 };
-function A(e, n) {
+function S(e, n) {
     return null != n && /^data:/.test(n)
         ? n
-        : (0, T.ov)({
+        : (0, x.ov)({
               id: e.id,
               avatar: n,
-              discriminator: C.fo$
+              discriminator: N.fo$
           });
 }
-function R(e) {
-    let { id: n, webhook: t, editedWebhook: l, channelOptions: N, isExpanded: T, isNew: p, errors: R, onToggleExpand: b } = e,
-        [Z, v] = a.useState(!1),
-        [M] = a.useState(new r.V7());
-    a.useEffect(() => () => M.stop(), [M]);
-    let L = a.useMemo(() => A(t, t.avatar), [t]),
-        j = a.useCallback(() => {
-            let e = ''.concat((0, o.K0)(!1)).concat(C.ANM.WEBHOOK_INTEGRATION(t.id, t.token));
-            (0, h.JG)(e);
+function E(e) {
+    let { id: n, webhook: t, editedWebhook: r, channelOptions: g, isExpanded: x, isNew: C, errors: E, onToggleExpand: Z } = e,
+        [A, y] = l.useState(!1),
+        [R] = l.useState(new s.V7());
+    l.useEffect(() => () => R.stop(), [R]);
+    let O = l.useMemo(() => S(t, t.avatar), [t]),
+        L = l.useCallback(() => {
+            let e = ''.concat((0, o.K0)(!1)).concat(N.ANM.WEBHOOK_INTEGRATION(t.id, t.token));
+            (0, b.JG)(e);
         }, [t]),
-        D = a.useCallback(() => {
+        k = l.useCallback(() => {
             (0, d.openModal)((e) =>
                 (0, i.jsx)(d.ConfirmModal, {
                     ...e,
-                    header: x.Z.Messages.WEBHOOK_DELETE_TITLE.format({ name: t.name }),
-                    confirmText: x.Z.Messages.WEBHOOK_DELETE,
-                    cancelText: x.Z.Messages.WEBHOOK_CANCEL,
+                    header: T.intl.formatToPlainString(T.t.QVFjHh, { name: t.name }),
+                    confirmText: T.intl.string(T.t['W+K1Fh']),
+                    cancelText: T.intl.string(T.t.xNhj0N),
                     onConfirm: () => {
-                        I.Z.delete(t.guild_id, t.id).catch((e) => {
+                        m.Z.delete(t.guild_id, t.id).catch((e) => {
                             let { status: n } = e;
                             429 === n
                                 ? c.Z.show({
-                                      title: x.Z.Messages.WEBHOOK_ERROR_DELETING_WEBHOOK,
-                                      body: x.Z.Messages.WEBHOOK_ERROR_DELETING_WEBHOOK_RATE_LIMIT
+                                      title: T.intl.string(T.t.N5riYm),
+                                      body: T.intl.string(T.t.eAxcCQ)
                                   })
                                 : c.Z.show({
-                                      title: x.Z.Messages.WEBHOOK_ERROR_DELETING_WEBHOOK,
-                                      body: x.Z.Messages.WEBHOOK_ERROR_INTERNAL_SERVER_ERROR
+                                      title: T.intl.string(T.t.N5riYm),
+                                      body: T.intl.string(T.t['/4TwKS'])
                                   });
                         });
                     },
                     children: (0, i.jsx)(d.Text, {
                         variant: 'text-md/normal',
-                        children: x.Z.Messages.WEBHOOK_DELETE_BODY.format({ name: t.name })
+                        children: T.intl.format(T.t['rIWe+/'], { name: t.name })
                     })
                 })
             );
         }, [t.guild_id, t.id, t.name]),
-        P = [];
+        w = [];
     null != t.user
-        ? P.push({
+        ? w.push({
               icon: d.ClockIcon,
-              text: x.Z.Messages.INTEGRATION_CREATED_USER_DATE.format({
-                  user: S(t.user),
-                  timestamp: g.default.extractTimestamp(t.id)
+              text: T.intl.formatToPlainString(T.t['7EcUbm'], {
+                  user: j(t.user),
+                  timestamp: v.default.extractTimestamp(t.id)
               })
           })
-        : P.push({
+        : w.push({
               icon: d.ClockIcon,
-              text: x.Z.Messages.INTEGRATION_CREATED_DATE.format({ timestamp: g.default.extractTimestamp(t.id) })
+              text: T.intl.formatToPlainString(T.t['7mv59P'], { timestamp: v.default.extractTimestamp(t.id) })
           });
-    let B = null;
+    let M = null;
     return (
-        T &&
-            null != l &&
-            (B = (0, i.jsxs)('div', {
-                className: O.body,
+        x &&
+            null != r &&
+            (M = (0, i.jsxs)('div', {
+                className: _.body,
                 children: [
-                    (0, i.jsx)(d.FormDivider, { className: O.topDivider }),
-                    (0, i.jsxs)(m.Z, {
+                    (0, i.jsx)(d.FormDivider, { className: _.topDivider }),
+                    (0, i.jsxs)(h.Z, {
                         children: [
-                            (0, i.jsx)(m.Z.Child, {
+                            (0, i.jsx)(h.Z.Child, {
                                 shrink: 1,
                                 grow: 0,
-                                children: (0, i.jsxs)(m.Z, {
-                                    className: O.avatarWrapper,
-                                    direction: m.Z.Direction.VERTICAL,
+                                children: (0, i.jsxs)(h.Z, {
+                                    className: _.avatarWrapper,
+                                    direction: h.Z.Direction.VERTICAL,
                                     children: [
-                                        (0, i.jsx)(_.Z, {
-                                            image: l.avatar,
+                                        (0, i.jsx)(p.Z, {
+                                            image: r.avatar,
                                             onChange: (e) => {
                                                 u.Z.updateWebhook({ avatar: e });
                                             },
-                                            makeURL: (e) => A(t, e),
-                                            imageClassName: O.avatarUploaderInner,
+                                            makeURL: (e) => S(t, e),
+                                            imageClassName: _.avatarUploaderInner,
                                             showIcon: !0
                                         }),
-                                        null != R.avatar && '' !== R.avatar
+                                        null != E.avatar && '' !== E.avatar
                                             ? (0, i.jsx)(d.Text, {
                                                   color: 'text-danger',
                                                   variant: 'text-sm/normal',
-                                                  children: R.avatar
+                                                  children: E.avatar
                                               })
                                             : null
                                     ]
                                 })
                             }),
-                            (0, i.jsxs)(m.Z, {
-                                direction: m.Z.Direction.VERTICAL,
+                            (0, i.jsxs)(h.Z, {
+                                direction: h.Z.Direction.VERTICAL,
                                 children: [
-                                    (0, i.jsxs)(m.Z, {
+                                    (0, i.jsxs)(h.Z, {
                                         children: [
-                                            (0, i.jsx)(m.Z.Child, {
+                                            (0, i.jsx)(h.Z.Child, {
                                                 basis: '50%',
                                                 children: (0, i.jsx)(d.FormItem, {
-                                                    title: x.Z.Messages.WEBHOOK_FORM_NAME,
+                                                    title: T.intl.string(T.t.ukdxur),
                                                     children: (0, i.jsx)(d.TextInput, {
-                                                        value: l.name,
+                                                        value: r.name,
                                                         onChange: (e) => {
                                                             u.Z.updateWebhook({ name: e });
                                                         },
                                                         maxLength: 80,
-                                                        error: R.name
+                                                        error: E.name
                                                     })
                                                 })
                                             }),
-                                            (0, i.jsx)(m.Z.Child, {
+                                            (0, i.jsx)(h.Z.Child, {
                                                 basis: '50%',
                                                 children: (0, i.jsx)(d.FormItem, {
-                                                    title: x.Z.Messages.CHANNEL,
+                                                    title: T.intl.string(T.t.GK18KC),
                                                     children: (0, i.jsx)(d.SearchableSelect, {
-                                                        value: l.channel_id,
-                                                        options: N,
+                                                        value: r.channel_id,
+                                                        options: g,
                                                         onChange: (e) => {
                                                             u.Z.updateWebhook({ channelId: e });
                                                         },
-                                                        placeholder: x.Z.Messages.CHANNEL_SELECT
+                                                        placeholder: T.intl.string(T.t.r2pts7)
                                                     })
                                                 })
                                             })
                                         ]
                                     }),
-                                    (0, i.jsx)(d.FormDivider, { className: O.bottomDivider }),
-                                    (0, i.jsxs)(m.Z, {
+                                    (0, i.jsx)(d.FormDivider, { className: _.bottomDivider }),
+                                    (0, i.jsxs)(h.Z, {
                                         children: [
                                             (0, i.jsx)(d.Tooltip, {
-                                                text: x.Z.Messages.INTEGRATIONS_WEBHOOK_COPIED_URL,
-                                                forceOpen: Z,
+                                                text: T.intl.string(T.t.wwdb3t),
+                                                forceOpen: A,
                                                 color: d.TooltipColors.GREEN,
                                                 disableTooltipPointerEvents: !0,
                                                 children: (e) => {
-                                                    let { onClick: n, onMouseEnter: a, onMouseLeave: l, onBlur: s, onFocus: o, ...r } = e;
+                                                    let { onClick: n, onMouseEnter: l, onMouseLeave: r, onBlur: a, onFocus: o, ...s } = e;
                                                     return (0, i.jsx)(d.Button, {
-                                                        ...r,
+                                                        ...s,
                                                         'aria-label': '',
                                                         onClick: () => {
-                                                            null == n || n(), v(!0), d.AccessibilityAnnouncer.announce(x.Z.Messages.INTEGRATIONS_WEBHOOK_COPIED_URL), M.start(1000, () => v(!1)), j();
+                                                            null == n || n(), y(!0), d.AccessibilityAnnouncer.announce(T.intl.string(T.t.wwdb3t)), R.start(1000, () => y(!1)), L();
                                                         },
                                                         size: d.Button.Sizes.SMALL,
                                                         color: d.Button.Colors.PRIMARY,
                                                         look: d.Button.Looks.FILLED,
-                                                        className: O.copyButton,
+                                                        className: _.copyButton,
                                                         disabled: null == t.token || '' === t.token,
-                                                        children: x.Z.Messages.INTEGRATIONS_WEBHOOK_COPY_URL
+                                                        children: T.intl.string(T.t.Ae9rUV)
                                                     });
                                                 }
                                             }),
                                             (0, i.jsx)(d.Button, {
-                                                onClick: D,
+                                                onClick: k,
                                                 size: d.Button.Sizes.SMALL,
                                                 color: d.Button.Colors.RED,
                                                 look: d.Button.Looks.LINK,
-                                                children: x.Z.Messages.INTEGRATIONS_WEBHOOK_DELETE
+                                                children: T.intl.string(T.t.jVrUnJ)
                                             })
                                         ]
                                     })
@@ -206,31 +206,31 @@ function R(e) {
         (0, i.jsx)(d.Card, {
             editable: !0,
             id: n,
-            className: s()(O.card, p ? O.pulse : null),
-            children: (0, i.jsxs)(m.Z, {
-                direction: m.Z.Direction.VERTICAL,
+            className: a()(_.card, C ? _.pulse : null),
+            children: (0, i.jsxs)(h.Z, {
+                direction: h.Z.Direction.VERTICAL,
                 children: [
                     (0, i.jsx)(d.Clickable, {
-                        className: O.header,
-                        'aria-expanded': T,
-                        onClick: b,
-                        children: (0, i.jsxs)(m.Z, {
-                            align: m.Z.Align.CENTER,
+                        className: _.header,
+                        'aria-expanded': x,
+                        onClick: Z,
+                        children: (0, i.jsxs)(h.Z, {
+                            align: h.Z.Align.CENTER,
                             children: [
-                                (0, i.jsx)(f.Z, {
+                                (0, i.jsx)(I.Z, {
                                     name: t.name,
-                                    imageSrc: L,
-                                    details: P
+                                    imageSrc: O,
+                                    details: w
                                 }),
-                                (0, i.jsx)(E.Z, {
-                                    className: O.expandIcon,
-                                    expanded: T,
+                                (0, i.jsx)(f.Z, {
+                                    className: _.expandIcon,
+                                    expanded: x,
                                     'aria-hidden': !0
                                 })
                             ]
                         })
                     }),
-                    B
+                    M
                 ]
             })
         })

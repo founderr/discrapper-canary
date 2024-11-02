@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return _;
     }
 });
 var r = n(991656),
@@ -12,24 +12,24 @@ var r = n(991656),
     u = n(188650),
     c = n(291750),
     d = n(528734),
-    _ = n(951516);
-function E(e) {
-    (0, _.Z)(1, arguments);
+    f = n(951516);
+function _(e) {
+    (0, f.Z)(1, arguments);
     var t = (0, d.default)(e.start),
         n = (0, d.default)(e.end);
     if (isNaN(t.getTime())) throw RangeError('Start Date is invalid');
     if (isNaN(n.getTime())) throw RangeError('End Date is invalid');
-    var E = {};
-    E.years = Math.abs((0, c.Z)(n, t));
-    var f = (0, r.Z)(n, t),
-        h = (0, i.Z)(t, { years: f * E.years });
-    E.months = Math.abs((0, l.Z)(n, h));
-    var p = (0, i.Z)(h, { months: f * E.months });
-    E.days = Math.abs((0, a.Z)(n, p));
-    var I = (0, i.Z)(p, { days: f * E.days });
-    E.hours = Math.abs((0, s.Z)(n, I));
-    var m = (0, i.Z)(I, { hours: f * E.hours });
-    E.minutes = Math.abs((0, o.Z)(n, m));
-    var T = (0, i.Z)(m, { minutes: f * E.minutes });
-    return (E.seconds = Math.abs((0, u.Z)(n, T))), E;
+    var _ = {};
+    _.years = Math.abs((0, c.Z)(n, t));
+    var h = (0, r.Z)(n, t),
+        p = (0, i.Z)(t, { years: h * _.years });
+    _.months = Math.abs((0, l.Z)(n, p));
+    var m = (0, i.Z)(p, { months: h * _.months });
+    _.days = Math.abs((0, a.Z)(n, m));
+    var g = (0, i.Z)(m, { days: h * _.days });
+    _.hours = Math.abs((0, s.Z)(n, g));
+    var E = (0, i.Z)(g, { hours: h * _.hours });
+    _.minutes = Math.abs((0, o.Z)(n, E));
+    var v = (0, i.Z)(E, { minutes: h * _.minutes });
+    return (_.seconds = Math.abs((0, u.Z)(n, v))), _;
 }

@@ -1,14 +1,14 @@
 var i = n(570140),
-    a = n(812206),
-    s = n(877481),
-    r = n(592745);
-function l(e) {
+    r = n(812206),
+    l = n(877481),
+    a = n(592745);
+function s(e) {
     let { gameId: t } = e;
     !(function (e) {
         let t;
-        let n = r.Z.launchableGames[e],
-            l = a.Z.getApplication(e);
-        (t = null != l ? s.Z.isLaunchable(l) : s.Z.isGameLaunchable(e)).then((t) => {
+        let n = a.Z.launchableGames[e],
+            s = r.Z.getApplication(e);
+        (t = null != s ? l.Z.isLaunchable(s) : l.Z.isGameLaunchable(e)).then((t) => {
             t !== n &&
                 i.Z.dispatch({
                     type: 'GAME_LAUNCHABLE_UPDATE',
@@ -20,6 +20,6 @@ function l(e) {
 }
 t.Z = {
     initialize() {
-        i.Z.subscribe('CHECK_LAUNCHABLE_GAME', l);
+        i.Z.subscribe('CHECK_LAUNCHABLE_GAME', s);
     }
 };

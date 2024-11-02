@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return f;
     }
 }),
     n(653041);
@@ -13,9 +13,9 @@ var r,
     u = n(442837),
     c = n(433517),
     d = n(570140);
-class _ extends (r = u.ZP.Store) {
+class f extends (r = u.ZP.Store) {
     static clearAll() {
-        _.allStores.forEach((e) => e.clear());
+        f.allStores.forEach((e) => e.clear());
     }
     get persistKey() {
         return ''.concat(this.getClass().displayName, '-snapshot');
@@ -46,11 +46,11 @@ class _ extends (r = u.ZP.Store) {
             l()(null != this.getClass().displayName, 'Snapshot stores need a display name'),
             l()(!('CLEAR_CACHES' in e), "SnapshotStores cannot use the 'CLEAR_CACHES' action"),
             l()(!('WRITE_CACHES' in e), "SnapshotStores cannot use the 'WRITE_CACHES' action"),
-            _.allStores.push(this);
+            f.allStores.push(this);
     }
 }
 (s = []),
-    (a = 'allStores') in (i = _)
+    (a = 'allStores') in (i = f)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,

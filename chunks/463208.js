@@ -1,9 +1,9 @@
 n.d(t, {
     o: function () {
-        return T;
+        return v;
     },
     p: function () {
-        return m;
+        return E;
     }
 });
 var r,
@@ -15,11 +15,11 @@ var r,
     u = n(84735),
     c = n(15127),
     d = n(481060),
-    _ = n(699682),
-    E = n(540059),
-    f = n(689938),
-    h = n(803636);
-function p(e, t, n) {
+    f = n(699682),
+    _ = n(540059),
+    h = n(388032),
+    p = n(803636);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,13 +32,13 @@ function p(e, t, n) {
         e
     );
 }
-let I = {
-    DEFAULT: h.inputDefault,
-    MINI: h.inputMini
+let g = {
+    DEFAULT: p.inputDefault,
+    MINI: p.inputMini
 };
-function m(e) {
+function E(e) {
     let { error: t } = e,
-        n = (0, E.Q)('TextInputError'),
+        n = (0, _.Q)('TextInputError'),
         r = (0, d.useTransition)(t, {
             config: {
                 tension: 250,
@@ -63,7 +63,7 @@ function m(e) {
                 transform: 'translate3d(0, -100%, 0)'
             }
         }),
-        a = (0, _.Z)(t);
+        a = (0, f.Z)(t);
     return (0, i.jsx)(i.Fragment, {
         children: r((e, r, s) => {
             let { key: o } = s,
@@ -78,7 +78,7 @@ function m(e) {
                           },
                           children: (0, i.jsxs)(l.animated.div, {
                               style: { transform: u },
-                              className: h.inputError,
+                              className: p.inputError,
                               children: [
                                   n
                                       ? (0, i.jsx)(d.CircleWarningIcon, {
@@ -100,7 +100,7 @@ function m(e) {
         })
     });
 }
-class T extends (r = a.Component) {
+class v extends (r = a.Component) {
     componentDidMount() {
         var e, t, n, r;
         null === (e = (t = this.context).setHasValue) || void 0 === e || e.call(t, (null != this.props.defaultValue && '' !== this.props.defaultValue) || (null != this.props.value && '' !== this.props.value)), null === (n = (r = this.context).setIsFocused) || void 0 === n || n.call(r, !1);
@@ -113,80 +113,80 @@ class T extends (r = a.Component) {
     }
     render() {
         var e, t;
-        let { className: n, inputClassName: r, inputPrefix: a, disabled: s, size: l, editable: c, inputRef: d, prefixElement: _, focusProps: E, ...f } = this.props,
-            p = null !== (t = f['aria-labelledby']) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId;
+        let { className: n, inputClassName: r, inputPrefix: a, disabled: s, size: l, editable: c, inputRef: d, prefixElement: f, focusProps: _, ...h } = this.props,
+            m = null !== (t = h['aria-labelledby']) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId;
         return (0, i.jsxs)('div', {
-            className: o()(h.inputWrapper, n),
+            className: o()(p.inputWrapper, n),
             children: [
-                null != _ && _,
+                null != f && f,
                 null != a
                     ? (0, i.jsx)('span', {
-                          className: h.inputPrefix,
+                          className: p.inputPrefix,
                           children: a
                       })
                     : null,
                 (0, i.jsx)(u.t, {
-                    ...E,
+                    ..._,
                     children: (0, i.jsx)('input', {
                         className: o()(l, r, {
-                            [h.error]: this.hasError(),
-                            [h.disabled]: s,
-                            [h.editable]: c
+                            [p.error]: this.hasError(),
+                            [p.disabled]: s,
+                            [p.editable]: c
                         }),
                         disabled: s,
                         readOnly: !1 === c || void 0,
-                        ...f,
-                        'aria-labelledby': p,
+                        ...h,
+                        'aria-labelledby': m,
                         onChange: this.onChange,
                         onBlur: this.onBlur,
                         onFocus: this.onFocus,
                         ref: d
                     })
                 }),
-                (0, i.jsx)(m, { error: this.getError() })
+                (0, i.jsx)(E, { error: this.getError() })
             ]
         });
     }
     constructor(e) {
         var t;
         super(e),
-            p(this, 'hasError', () => (null != this.props.error && !!(this.props.error.length > 0)) || (!1 !== this.state.dirty && (this.getIsUnderFlowing() || this.getIsOverFlowing()))),
-            p(this, 'getError', () => {
+            m(this, 'hasError', () => (null != this.props.error && !!(this.props.error.length > 0)) || (!1 !== this.state.dirty && (this.getIsUnderFlowing() || this.getIsOverFlowing()))),
+            m(this, 'getError', () => {
                 let { error: e, minLength: t, maxLength: n } = this.props,
-                    r = this.getIsUnderFlowing() ? f.Z.Messages.MINIMUM_LENGTH_ERROR.format({ minLength: t }) : null,
-                    i = this.getIsOverFlowing() ? f.Z.Messages.MAXIMUM_LENGTH_ERROR.format({ maxLength: n }) : null;
+                    r = this.getIsUnderFlowing() ? h.intl.formatToPlainString(h.t['62rk1N'], { minLength: t }) : null,
+                    i = this.getIsOverFlowing() ? h.intl.formatToPlainString(h.t.ICT5S0, { maxLength: n }) : null;
                 return (null != e && e.length < 1) || null === e ? null : null != e ? e : !1 === this.state.dirty ? null : null != r ? r : i;
             }),
-            p(this, 'getIsUnderFlowing', () => {
+            m(this, 'getIsUnderFlowing', () => {
                 var e;
                 let { value: t, minLength: n } = this.props;
                 return null != n && (null !== (e = null == t ? void 0 : t.length) && void 0 !== e ? e : 0) < n;
             }),
-            p(this, 'getIsOverFlowing', () => {
+            m(this, 'getIsOverFlowing', () => {
                 var e;
                 let { value: t, maxLength: n } = this.props;
                 return null != n && (null !== (e = null == t ? void 0 : t.length) && void 0 !== e ? e : 0) > n;
             }),
-            p(this, 'onChange', (e) => {
+            m(this, 'onChange', (e) => {
                 var t, n, r, i;
                 null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, e.currentTarget.value, this.props.name), this.setState({ dirty: !0 }), null === (r = (i = this.context).setHasValue) || void 0 === r || r.call(i, '' !== e.currentTarget.value);
             }),
-            p(this, 'onFocus', (e) => {
+            m(this, 'onFocus', (e) => {
                 var t, n, r, i;
                 null === (t = (n = this.props).onFocus) || void 0 === t || t.call(n, e, this.props.name), null === (r = (i = this.context).setIsFocused) || void 0 === r || r.call(i, !0);
             }),
-            p(this, 'onBlur', (e) => {
+            m(this, 'onBlur', (e) => {
                 var t, n, r, i;
                 null === (t = (n = this.props).onBlur) || void 0 === t || t.call(n, e, this.props.name), null === (r = (i = this.context).setIsFocused) || void 0 === r || r.call(i, !1);
             }),
             (this.state = { dirty: null !== (t = e.defaultDirty) && void 0 !== t && t });
     }
 }
-p(T, 'Sizes', I),
-    p(T, 'contextType', c.q3),
-    p(T, 'defaultProps', {
+m(v, 'Sizes', g),
+    m(v, 'contextType', c.q3),
+    m(v, 'defaultProps', {
         name: '',
-        size: I.DEFAULT,
+        size: g.DEFAULT,
         disabled: !1,
         type: 'text',
         placeholder: '',

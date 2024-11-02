@@ -9,19 +9,19 @@ n.d(t, {
         return a;
     },
     lG: function () {
-        return g;
+        return S;
     },
     m7: function () {
-        return R;
+        return y;
     },
     nt: function () {
-        return O;
+        return A;
     },
     u7: function () {
         return r;
     },
     z4: function () {
-        return N;
+        return b;
     }
 }),
     n(47120),
@@ -35,9 +35,9 @@ var r,
     u,
     c,
     d = n(379649),
-    _ = n(909766),
-    E = n(179654);
-function f(e, t, n) {
+    f = n(909766),
+    _ = n(179654);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -50,12 +50,12 @@ function f(e, t, n) {
         e
     );
 }
-let h = [0, 500000, 1000000, 1500000, 2000000, 3000000, 4000000, 5000000, 6000000, 7000000, 8000000],
-    p = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60],
-    I = [720, 480, 360],
-    m = ['framesCodec', 'framesNetwork', 'packets', 'packetsLost', 'framesDropped', 'framesCodecError', 'bytes', 'nackCount', 'pliCount', 'qpSum', 'freezeCount', 'pauseCount', 'totalFreezesDuration', 'totalPausesDuration', 'totalFramesDuration', 'keyframes', 'passthroughCount', 'cryptorSuccessCount', 'cryptorFailureCount', 'cryptorDuration', 'cryptorAttempts', 'qualityDecodeErrors', 'qualityDecoderReboots', 'qualityScoreErrors', 'qualityFrameDrops', 'qualitySizeMismatches'];
+let p = [0, 500000, 1000000, 1500000, 2000000, 3000000, 4000000, 5000000, 6000000, 7000000, 8000000],
+    m = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60],
+    g = [720, 480, 360],
+    E = ['framesCodec', 'framesNetwork', 'packets', 'packetsLost', 'framesDropped', 'framesCodecError', 'bytes', 'nackCount', 'pliCount', 'qpSum', 'freezeCount', 'pauseCount', 'totalFreezesDuration', 'totalPausesDuration', 'totalFramesDuration', 'keyframes', 'passthroughCount', 'cryptorSuccessCount', 'cryptorFailureCount', 'cryptorDuration', 'cryptorAttempts', 'qualityDecodeErrors', 'qualityDecoderReboots', 'qualityScoreErrors', 'qualityFrameDrops', 'qualitySizeMismatches'];
 ((o = r || (r = {})).H264 = 'H264'), (o.H265 = 'H265'), (o.VP8 = 'VP8'), (o.VP9 = 'VP9'), (o.AV1 = 'AV1'), (o.UNKNOWN = 'UNKNOWN'), ((l = i || (i = {})).NVIDIA_CUDA = 'nvidia_cuda'), (l.NVIDIA_DIRECT_3D = 'nvidia_direct_3d'), (l.OPENH264 = 'openh264'), (l.VIDEOTOOLBOX = 'videotoolbox'), (l.AMD_DIRECT_3D = 'amd_direct_3d'), (l.INTEL = 'intel'), (l.INTEL_DIRECT_3D = 'intel_direct_3d'), (l.VP8_LIBVPX = 'vp8_libvpx'), (l.UNCATEGORIZED = 'uncategorized'), (l.UNKNOWN = 'unknown'), ((u = a || (a = {})).VIDEOTOOLBOX = 'videotoolbox'), (u.VP8_LIBVPX = 'vp8_libvpx'), (u.ELECTRON = 'electron'), (u.FFMPEG = 'ffmpeg'), (u.DAV1D = 'dav1d'), (u.UNCATEGORIZED = 'uncategorized'), (u.UNKNOWN = 'unknown');
-let T = Object.freeze({
+let v = Object.freeze({
         'nvidia: cuda': 'nvidia_cuda',
         'nvidia: direct3d': 'nvidia_direct_3d',
         'amd: direct3d': 'amd_direct_3d',
@@ -65,20 +65,20 @@ let T = Object.freeze({
         OpenH264: 'openh264',
         libvpx: 'vp8_libvpx'
     }),
-    S = Object.freeze({
+    I = Object.freeze({
         VideoToolbox: 'videotoolbox',
         libvpx: 'vp8_libvpx',
         electron: 'electron',
         ffmpeg: 'ffmpeg',
         dav1d: 'dav1d'
     });
-function g(e) {
+function S(e) {
     if (null == e) return 'unknown';
-    for (let t of Object.keys(T)) if (e.includes(t)) return T[t];
+    for (let t of Object.keys(v)) if (e.includes(t)) return v[t];
     return 'uncategorized';
 }
 ((c = s || (s = {}))[(c.None = 0)] = 'None'), (c[(c.ClientSideDisableVideo = 1)] = 'ClientSideDisableVideo'), (c[(c.SenderStopped = 2)] = 'SenderStopped');
-function A(e) {
+function T(e) {
     if (null == e) return 'UNKNOWN';
     if ('H264' === (e = e.toUpperCase())) return 'H264';
     if ('H265' === e) return 'H265';
@@ -87,10 +87,10 @@ function A(e) {
     else if ('AV1' === e || 'AV1X' === e) return 'AV1';
     else return 'UNKNOWN';
 }
-class N {
+class b {
     static parseInboundStats(e, t) {
         var n, r, i, a, s, o, l, u;
-        let c = new N();
+        let c = new b();
         return null == e
             ? c
             : ((c.bytes = e.bytesReceived),
@@ -108,10 +108,10 @@ class N {
               (c.pliCount = e.pliCount),
               (c.decoder = (function (e) {
                   if (null == e) return 'unknown';
-                  for (let t of Object.keys(S)) if (e.includes(t)) return S[t];
+                  for (let t of Object.keys(I)) if (e.includes(t)) return I[t];
                   return 'uncategorized';
               })(e.decoderImplementationName)),
-              (c.codecType = A(e.codec.name)),
+              (c.codecType = T(e.codec.name)),
               (c.qpSum = 0),
               (c.freezeCount = e.freezeCount),
               (c.pauseCount = e.pauseCount),
@@ -128,10 +128,10 @@ class N {
               c);
     }
     static parseOutboundStats(e, t) {
-        var n, r, i, a, s, o, l, u, c, d, _, E, f, h, p, I, m, T, S, R, O, v, C, L;
-        let D = new N();
+        var n, r, i, a, s, o, l, u, c, d, f, _, h, p, m, g, E, v, I, y, A, N, C, R;
+        let O = new b();
         return null == e
-            ? D
+            ? O
             : {
                   bytes: e.bytesSent,
                   framesCodec: e.framesEncoded,
@@ -144,9 +144,9 @@ class N {
                   minorResolution: null != e.resolution ? Math.min(e.resolution.height, e.resolution.width) : 0,
                   majorResolution: null != e.resolution ? Math.max(e.resolution.height, e.resolution.width) : 0,
                   timestamp: t,
-                  encoder: g(e.encoderImplementationName),
+                  encoder: S(e.encoderImplementationName),
                   decoder: null,
-                  codecType: A(e.codec.name),
+                  codecType: T(e.codec.name),
                   nackCount: e.nackCount,
                   pliCount: e.pliCount,
                   qpSum: e.qpSum,
@@ -160,28 +160,28 @@ class N {
                   qualityDecodeErrors: null !== (u = e.qualityDecodeErrors) && void 0 !== u ? u : 0,
                   qualityDecoderReboots: null !== (c = e.qualityDecoderReboots) && void 0 !== c ? c : 0,
                   qualityScoreErrors: null !== (d = e.qualityScoreErrors) && void 0 !== d ? d : 0,
-                  qualityFrameDrops: null !== (_ = e.qualityFrameDrops) && void 0 !== _ ? _ : 0,
-                  qualitySizeMismatches: null !== (E = e.qualitySizeMismatches) && void 0 !== E ? E : 0,
-                  psnrDb: null !== (f = e.encoderQualityPsnr) && void 0 !== f ? f : null,
-                  keyframes: null !== (h = e.keyFramesEncoded) && void 0 !== h ? h : null,
-                  framesDroppedRateLimiter: null !== (p = e.framesDroppedRateLimiter) && void 0 !== p ? p : null,
-                  framesDroppedEncoderQueue: null !== (I = e.framesDroppedEncoderQueue) && void 0 !== I ? I : null,
-                  framesDroppedCongestionWindow: null !== (m = e.framesDroppedCongestionWindow) && void 0 !== m ? m : null,
-                  framesDroppedEncoder: null !== (T = e.framesDroppedEncoder) && void 0 !== T ? T : null,
-                  passthroughCount: null !== (S = e.passthroughCount) && void 0 !== S ? S : 0,
-                  cryptorSuccessCount: null !== (R = e.encryptSuccessCount) && void 0 !== R ? R : 0,
-                  cryptorFailureCount: null !== (O = e.encryptFailureCount) && void 0 !== O ? O : 0,
-                  cryptorDuration: null !== (v = e.encryptDuration) && void 0 !== v ? v : 0,
+                  qualityFrameDrops: null !== (f = e.qualityFrameDrops) && void 0 !== f ? f : 0,
+                  qualitySizeMismatches: null !== (_ = e.qualitySizeMismatches) && void 0 !== _ ? _ : 0,
+                  psnrDb: null !== (h = e.encoderQualityPsnr) && void 0 !== h ? h : null,
+                  keyframes: null !== (p = e.keyFramesEncoded) && void 0 !== p ? p : null,
+                  framesDroppedRateLimiter: null !== (m = e.framesDroppedRateLimiter) && void 0 !== m ? m : null,
+                  framesDroppedEncoderQueue: null !== (g = e.framesDroppedEncoderQueue) && void 0 !== g ? g : null,
+                  framesDroppedCongestionWindow: null !== (E = e.framesDroppedCongestionWindow) && void 0 !== E ? E : null,
+                  framesDroppedEncoder: null !== (v = e.framesDroppedEncoder) && void 0 !== v ? v : null,
+                  passthroughCount: null !== (I = e.passthroughCount) && void 0 !== I ? I : 0,
+                  cryptorSuccessCount: null !== (y = e.encryptSuccessCount) && void 0 !== y ? y : 0,
+                  cryptorFailureCount: null !== (A = e.encryptFailureCount) && void 0 !== A ? A : 0,
+                  cryptorDuration: null !== (N = e.encryptDuration) && void 0 !== N ? N : 0,
                   cryptorAttempts: null !== (C = e.encryptAttempts) && void 0 !== C ? C : 0,
-                  cryptorMaxAttempts: null !== (L = e.encryptMaxAttempts) && void 0 !== L ? L : 0,
+                  cryptorMaxAttempts: null !== (R = e.encryptMaxAttempts) && void 0 !== R ? R : 0,
                   localWant: 0
               };
     }
     constructor() {
-        f(this, 'bytes', 0), f(this, 'framesCodec', 0), f(this, 'framesCodecError', null), f(this, 'framesNetwork', 0), f(this, 'resolution', 0), f(this, 'minorResolution', 0), f(this, 'majorResolution', 0), f(this, 'timestamp', 0), f(this, 'packets', 0), f(this, 'packetsLost', 0), f(this, 'framesDropped', 0), f(this, 'nackCount', 0), f(this, 'pliCount', 0), f(this, 'encoder', null), f(this, 'decoder', null), f(this, 'codecType', null), f(this, 'qpSum', 0), f(this, 'freezeCount', 0), f(this, 'pauseCount', 0), f(this, 'totalFreezesDuration', 0), f(this, 'totalPausesDuration', 0), f(this, 'totalFramesDuration', 0), f(this, 'vmafScore', null), f(this, 'psnrDb', null), f(this, 'outboundSinkWant', null), f(this, 'keyframes', null), f(this, 'framesDroppedRateLimiter', null), f(this, 'framesDroppedEncoderQueue', null), f(this, 'framesDroppedCongestionWindow', null), f(this, 'framesDroppedEncoder', null), f(this, 'passthroughCount', 0), f(this, 'cryptorSuccessCount', 0), f(this, 'cryptorFailureCount', 0), f(this, 'cryptorDuration', 0), f(this, 'cryptorAttempts', 0), f(this, 'cryptorMaxAttempts', 0), f(this, 'qualityDecodeErrors', 0), f(this, 'qualityDecoderReboots', 0), f(this, 'qualityScoreErrors', 0), f(this, 'qualityFrameDrops', 0), f(this, 'qualitySizeMismatches', 0), f(this, 'localWant', 0);
+        h(this, 'bytes', 0), h(this, 'framesCodec', 0), h(this, 'framesCodecError', null), h(this, 'framesNetwork', 0), h(this, 'resolution', 0), h(this, 'minorResolution', 0), h(this, 'majorResolution', 0), h(this, 'timestamp', 0), h(this, 'packets', 0), h(this, 'packetsLost', 0), h(this, 'framesDropped', 0), h(this, 'nackCount', 0), h(this, 'pliCount', 0), h(this, 'encoder', null), h(this, 'decoder', null), h(this, 'codecType', null), h(this, 'qpSum', 0), h(this, 'freezeCount', 0), h(this, 'pauseCount', 0), h(this, 'totalFreezesDuration', 0), h(this, 'totalPausesDuration', 0), h(this, 'totalFramesDuration', 0), h(this, 'vmafScore', null), h(this, 'psnrDb', null), h(this, 'outboundSinkWant', null), h(this, 'keyframes', null), h(this, 'framesDroppedRateLimiter', null), h(this, 'framesDroppedEncoderQueue', null), h(this, 'framesDroppedCongestionWindow', null), h(this, 'framesDroppedEncoder', null), h(this, 'passthroughCount', 0), h(this, 'cryptorSuccessCount', 0), h(this, 'cryptorFailureCount', 0), h(this, 'cryptorDuration', 0), h(this, 'cryptorAttempts', 0), h(this, 'cryptorMaxAttempts', 0), h(this, 'qualityDecodeErrors', 0), h(this, 'qualityDecoderReboots', 0), h(this, 'qualityScoreErrors', 0), h(this, 'qualityFrameDrops', 0), h(this, 'qualitySizeMismatches', 0), h(this, 'localWant', 0);
     }
 }
-class R {
+class y {
     get isVideoStopped() {
         return 0 !== this.videoStoppedReason;
     }
@@ -189,7 +189,7 @@ class R {
         return this.videoStoppedWatch.elapsed();
     }
     collectAggregationStats(e, t) {
-        for (let r of m) {
+        for (let r of E) {
             var n;
             let i = e[r];
             if (null === i) continue;
@@ -211,27 +211,27 @@ class R {
         let t = this.statsWindow[this.statsWindow.length - 1],
             n = this.statsWindow[this.statsWindow.length - 2];
         this.collectAggregationStats(t, n);
-        let { bytes: r, framesCodec: i, timestamp: a, resolution: s, minorResolution: o, majorResolution: l, encoder: u, decoder: c, codecType: d, localWant: _ } = t,
-            { timestamp: E } = n,
-            f = (a - E) / 1000;
-        if (((this.intervalTotal += f), (this.resolutionTotal += s * f), (this.minorResolutionTotal += o * f), (this.majorResolutionTotal += l * f), (this.cryptorMaxAttempts = Math.max(this.cryptorMaxAttempts, t.cryptorMaxAttempts)), null != u && null != d && 'encoderBuckets' in this && ((this.encoderBuckets[u] += f), (this.codecBuckets[d] += f), null != t.codecType && 'UNKNOWN' !== t.codecType && (this.encoderCodec = t.codecType), null != e.vmafScore && e.vmafScore >= 0 && ((this.vmafScoreNum += 1), (this.vmafScoreSum += e.vmafScore), this.vmafHistogram.addSample(e.vmafScore)), null != e.psnrDb && e.psnrDb >= 0 && ((this.psnrDbNum += 1), (this.psnrDbSum += e.psnrDb), this.psnrHistogram.addSample(e.psnrDb)), null != e.outboundSinkWant && 0 !== e.outboundSinkWant && ((this.outboundSinkWantNum += 1), (this.outboundSinkWantSum += e.outboundSinkWant))), null != c && null != d && 'decoderBuckets' in this && ((this.decoderBuckets[c] += f), (this.codecBuckets[d] += f), null != t.codecType && 'UNKNOWN' !== t.codecType && (this.decoderCodec = t.codecType)), this.statsWindow.length < 6)) return;
-        let { bytes: m, framesCodec: T, timestamp: S } = this.statsWindow[this.statsWindow.length - 3];
-        I.forEach((e) => {
-            s <= e && (this.resolutionBuckets[e] += f);
+        let { bytes: r, framesCodec: i, timestamp: a, resolution: s, minorResolution: o, majorResolution: l, encoder: u, decoder: c, codecType: d, localWant: f } = t,
+            { timestamp: _ } = n,
+            h = (a - _) / 1000;
+        if (((this.intervalTotal += h), (this.resolutionTotal += s * h), (this.minorResolutionTotal += o * h), (this.majorResolutionTotal += l * h), (this.cryptorMaxAttempts = Math.max(this.cryptorMaxAttempts, t.cryptorMaxAttempts)), null != u && null != d && 'encoderBuckets' in this && ((this.encoderBuckets[u] += h), (this.codecBuckets[d] += h), null != t.codecType && 'UNKNOWN' !== t.codecType && (this.encoderCodec = t.codecType), null != e.vmafScore && e.vmafScore >= 0 && ((this.vmafScoreNum += 1), (this.vmafScoreSum += e.vmafScore), this.vmafHistogram.addSample(e.vmafScore)), null != e.psnrDb && e.psnrDb >= 0 && ((this.psnrDbNum += 1), (this.psnrDbSum += e.psnrDb), this.psnrHistogram.addSample(e.psnrDb)), null != e.outboundSinkWant && 0 !== e.outboundSinkWant && ((this.outboundSinkWantNum += 1), (this.outboundSinkWantSum += e.outboundSinkWant))), null != c && null != d && 'decoderBuckets' in this && ((this.decoderBuckets[c] += h), (this.codecBuckets[d] += h), null != t.codecType && 'UNKNOWN' !== t.codecType && (this.decoderCodec = t.codecType)), this.statsWindow.length < 6)) return;
+        let { bytes: E, framesCodec: v, timestamp: I } = this.statsWindow[this.statsWindow.length - 3];
+        g.forEach((e) => {
+            s <= e && (this.resolutionBuckets[e] += h);
         });
-        let g = (a - S) / 1000,
-            A = ((r - m) * 8) / g,
-            N = (i - T) / g;
-        h.forEach((e) => {
-            A <= e && (this.bitrateBuckets[e] += f);
+        let S = (a - I) / 1000,
+            T = ((r - E) * 8) / S,
+            b = (i - v) / S;
+        p.forEach((e) => {
+            T <= e && (this.bitrateBuckets[e] += h);
         }),
-            p.forEach((e) => {
-                N <= e && (this.fpsBuckets[e] += f);
+            m.forEach((e) => {
+                b <= e && (this.fpsBuckets[e] += h);
             }),
             this.resolutionHistogram.addSample(s),
-            this.bitrateHistogram.addSample(A),
-            this.fpsHistogram.addSample(N),
-            this.localWantHistogram.addSample(_),
+            this.bitrateHistogram.addSample(T),
+            this.fpsHistogram.addSample(b),
+            this.localWantHistogram.addSample(f),
             this.statsWindow.shift();
     }
     addSystemResources() {
@@ -246,7 +246,7 @@ class R {
         return e;
     }
     constructor(e) {
-        f(this, 'decoderBuckets', {
+        h(this, 'decoderBuckets', {
             vp8_libvpx: 0,
             dav1d: 0,
             ffmpeg: 0,
@@ -255,7 +255,7 @@ class R {
             uncategorized: 0,
             unknown: 0
         }),
-            f(this, 'codecBuckets', {
+            h(this, 'codecBuckets', {
                 H264: 0,
                 H265: 0,
                 VP8: 0,
@@ -263,17 +263,17 @@ class R {
                 AV1: 0,
                 UNKNOWN: 0
             }),
-            f(this, 'statsWindow', []),
-            f(this, 'fpsHistogram', new _.b()),
-            f(this, 'bitrateHistogram', new _.b()),
-            f(this, 'inboundBitrateEstimateHistogram', new _.b()),
-            f(this, 'resolutionHistogram', new _.b()),
-            f(this, 'localWantHistogram', new _.b()),
-            f(this, 'systemResources', new E.Z()),
-            f(this, 'decoderCodec', 'UNKNOWN'),
-            f(this, 'startTime', void 0),
-            f(this, 'timeToFirstFrame', void 0),
-            f(this, 'aggregatedProperties', {
+            h(this, 'statsWindow', []),
+            h(this, 'fpsHistogram', new f.b()),
+            h(this, 'bitrateHistogram', new f.b()),
+            h(this, 'inboundBitrateEstimateHistogram', new f.b()),
+            h(this, 'resolutionHistogram', new f.b()),
+            h(this, 'localWantHistogram', new f.b()),
+            h(this, 'systemResources', new _.Z()),
+            h(this, 'decoderCodec', 'UNKNOWN'),
+            h(this, 'startTime', void 0),
+            h(this, 'timeToFirstFrame', void 0),
+            h(this, 'aggregatedProperties', {
                 framesCodec: 0,
                 framesNetwork: 0,
                 packets: 0,
@@ -301,31 +301,31 @@ class R {
                 qualityFrameDrops: 0,
                 qualitySizeMismatches: 0
             }),
-            f(this, 'aggregationDuration', 0),
-            f(this, 'bitrateBuckets', {}),
-            f(this, 'fpsBuckets', {}),
-            f(this, 'resolutionBuckets', {}),
-            f(this, 'resolutionTotal', 0),
-            f(this, 'minorResolutionTotal', 0),
-            f(this, 'majorResolutionTotal', 0),
-            f(this, 'intervalTotal', 0),
-            f(this, 'cryptorMaxAttempts', 0),
-            f(this, 'videoStoppedWatch', void 0),
-            f(this, 'videoStoppedReason', 0),
+            h(this, 'aggregationDuration', 0),
+            h(this, 'bitrateBuckets', {}),
+            h(this, 'fpsBuckets', {}),
+            h(this, 'resolutionBuckets', {}),
+            h(this, 'resolutionTotal', 0),
+            h(this, 'minorResolutionTotal', 0),
+            h(this, 'majorResolutionTotal', 0),
+            h(this, 'intervalTotal', 0),
+            h(this, 'cryptorMaxAttempts', 0),
+            h(this, 'videoStoppedWatch', void 0),
+            h(this, 'videoStoppedReason', 0),
             (this.startTime = e.now()),
             (this.videoStoppedWatch = new d.G9(e)),
-            h.forEach((e) => {
+            p.forEach((e) => {
                 this.bitrateBuckets[e] = 0;
             }),
-            p.forEach((e) => {
+            m.forEach((e) => {
                 this.fpsBuckets[e] = 0;
             }),
-            I.forEach((e) => {
+            g.forEach((e) => {
                 this.resolutionBuckets[e] = 0;
             });
     }
 }
-class O extends R {
+class A extends y {
     appendTargetRates(e, t, n, r) {
         if (this.statsWindow.length < 2) return;
         (e = null != e ? e : 0), (t = null != t ? t : 0), (n = null != n ? n : 0), (r = null != r ? r : 0);
@@ -334,7 +334,7 @@ class O extends R {
     }
     constructor(...e) {
         super(...e),
-            f(this, 'encoderBuckets', {
+            h(this, 'encoderBuckets', {
                 nvidia_cuda: 0,
                 nvidia_direct_3d: 0,
                 openh264: 0,
@@ -346,30 +346,30 @@ class O extends R {
                 uncategorized: 0,
                 unknown: 0
             }),
-            f(this, 'encoderCodec', 'UNKNOWN'),
-            f(this, 'targetFrames', 0),
-            f(this, 'targetBytesMax', 0),
-            f(this, 'targetBytesNetwork', 0),
-            f(this, 'targetBitrateHistogram', new _.b()),
-            f(this, 'outboundBytesAvailable', 0),
-            f(this, 'outboundBandwidthSurplus', new _.b()),
-            f(this, 'averageEncodeTime', 0),
-            f(this, 'vmafScoreSum', 0),
-            f(this, 'vmafScoreNum', 0),
-            f(this, 'vmafHistogram', new _.b()),
-            f(this, 'psnrDbSum', 0),
-            f(this, 'psnrDbNum', 0),
-            f(this, 'psnrHistogram', new _.b()),
-            f(this, 'qualityDecodeErrors', 0),
-            f(this, 'qualityDecoderReboots', 0),
-            f(this, 'qualityScoreErrors', 0),
-            f(this, 'qualityFrameDrops', 0),
-            f(this, 'qualitySizeMismatches', 0),
-            f(this, 'outboundSinkWantSum', 0),
-            f(this, 'outboundSinkWantNum', 0),
-            f(this, 'framesDroppedRateLimiter', null),
-            f(this, 'framesDroppedEncoderQueue', null),
-            f(this, 'framesDroppedCongestionWindow', null),
-            f(this, 'framesDroppedEncoder', null);
+            h(this, 'encoderCodec', 'UNKNOWN'),
+            h(this, 'targetFrames', 0),
+            h(this, 'targetBytesMax', 0),
+            h(this, 'targetBytesNetwork', 0),
+            h(this, 'targetBitrateHistogram', new f.b()),
+            h(this, 'outboundBytesAvailable', 0),
+            h(this, 'outboundBandwidthSurplus', new f.b()),
+            h(this, 'averageEncodeTime', 0),
+            h(this, 'vmafScoreSum', 0),
+            h(this, 'vmafScoreNum', 0),
+            h(this, 'vmafHistogram', new f.b()),
+            h(this, 'psnrDbSum', 0),
+            h(this, 'psnrDbNum', 0),
+            h(this, 'psnrHistogram', new f.b()),
+            h(this, 'qualityDecodeErrors', 0),
+            h(this, 'qualityDecoderReboots', 0),
+            h(this, 'qualityScoreErrors', 0),
+            h(this, 'qualityFrameDrops', 0),
+            h(this, 'qualitySizeMismatches', 0),
+            h(this, 'outboundSinkWantSum', 0),
+            h(this, 'outboundSinkWantNum', 0),
+            h(this, 'framesDroppedRateLimiter', null),
+            h(this, 'framesDroppedEncoderQueue', null),
+            h(this, 'framesDroppedCongestionWindow', null),
+            h(this, 'framesDroppedEncoder', null);
     }
 }

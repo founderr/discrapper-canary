@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return A;
     }
 });
 var i = n(200651),
-    s = n(192379),
-    a = n(392711),
-    l = n.n(a),
-    r = n(442837),
+    l = n(192379),
+    r = n(392711),
+    a = n.n(r),
+    s = n(442837),
     o = n(570140),
     c = n(239091),
     u = n(561472),
@@ -15,70 +15,70 @@ var i = n(200651),
     h = n(731429),
     m = n(188471),
     p = n(933557),
-    _ = n(287746),
-    f = n(541716),
-    E = n(665149),
-    g = n(910611),
-    C = n(359110),
-    I = n(592125),
-    T = n(703558),
-    x = n(430824),
-    S = n(979651),
-    v = n(664342),
-    N = n(124368),
-    A = n(981631),
-    Z = n(689938),
-    M = n(972270);
-function b(e) {
-    let { channelId: t, baseChannelId: a, channelViewSource: b = 'Split View' } = e,
-        R = (0, r.e7)([I.Z], () => I.Z.getChannel(t)),
-        L = (0, r.e7)([x.Z], () => x.Z.getGuild(null == R ? void 0 : R.getGuildId())),
-        P = (0, p.ZP)(R);
+    f = n(287746),
+    g = n(541716),
+    C = n(665149),
+    x = n(910611),
+    v = n(359110),
+    _ = n(592125),
+    I = n(703558),
+    E = n(430824),
+    b = n(979651),
+    S = n(664342),
+    Z = n(124368),
+    T = n(981631),
+    N = n(388032),
+    j = n(972270);
+function A(e) {
+    let { channelId: t, baseChannelId: r, channelViewSource: A = 'Split View' } = e,
+        y = (0, s.e7)([_.Z], () => _.Z.getChannel(t)),
+        P = (0, s.e7)([E.Z], () => E.Z.getGuild(null == y ? void 0 : y.getGuildId())),
+        M = (0, p.ZP)(y);
     (function (e) {
-        let t = (0, r.e7)([S.Z], () => null != e && !l().isEmpty(S.Z.getVoiceStatesForChannel(e.id)));
-        s.useEffect(() => {
+        let t = (0, s.e7)([b.Z], () => null != e && !a().isEmpty(b.Z.getVoiceStatesForChannel(e.id)));
+        l.useEffect(() => {
             t &&
                 null != e &&
                 (o.Z.dispatch({
                     type: 'SIDEBAR_CLOSE',
                     baseChannelId: e.parent_id
                 }),
-                (0, C.ad)(e, { source: N.on.VOICE_AUTO_OPEN }));
+                (0, v.ad)(e, { source: Z.on.VOICE_AUTO_OPEN }));
         }, [t, e]);
-    })(R);
-    let j = s.useRef(!1);
+    })(y);
+    let R = l.useRef(!1);
     if (
-        (s.useEffect(() => {
-            if (null == R || j.current) return;
-            j.current = !0;
-            let e = (0, h.K)(I.Z.getChannel(R.id), !0);
-            (0, d.yw)(A.rMx.CHANNEL_OPENED, {
+        (l.useEffect(() => {
+            if (null == y || R.current) return;
+            R.current = !0;
+            let e = (0, h.K)(_.Z.getChannel(y.id), !0);
+            (0, d.yw)(T.rMx.CHANNEL_OPENED, {
                 ...e,
-                ...(0, d.$H)(R.id),
-                channel_view: b
+                ...(0, d.$H)(y.id),
+                channel_view: A
             }),
-                (0, m.a)(A.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: R.id });
-        }, [R, b]),
-        null == R || null == L)
+                (0, m.a)(T.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: y.id });
+        }, [y, A]),
+        null == y || null == P)
     )
         return null;
-    let O = (0, i.jsx)(v.Z, {
-        channel: R,
-        baseChannelId: a
+    let L = (0, i.jsx)(S.Z, {
+        channel: y,
+        baseChannelId: r
     });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(u.Z, {
-                channel: R,
-                draftType: T.d.ChannelMessage
+                channel: y,
+                draftType: I.d.ChannelMessage
             }),
-            (0, i.jsx)(E.ZP, {
-                toolbar: O,
-                'aria-label': Z.Z.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
-                children: (0, g.ud)({
-                    channel: R,
-                    channelName: P,
-                    guild: L,
+            (0, i.jsx)(C.ZP, {
+                toolbar: L,
+                'aria-label': N.intl.string(N.t.Pwe8tL),
+                children: (0, x.ud)({
+                    channel: y,
+                    channelName: M,
+                    guild: P,
                     inSidebar: !0,
                     handleContextMenu: function (e) {
                         (0, c.jW)(e, async () => {
@@ -86,23 +86,23 @@ function b(e) {
                             return (t) =>
                                 (0, i.jsx)(e, {
                                     ...t,
-                                    channel: R
+                                    channel: y
                                 });
                         });
                     },
                     handleClick: function () {
-                        if (null != R) (0, C.Kh)(R.id);
+                        if (null != y) (0, v.Kh)(y.id);
                     }
                 })
             }),
             (0, i.jsx)('div', {
-                className: M.chat,
+                className: j.chat,
                 children: (0, i.jsx)(
-                    _.Z,
+                    f.Z,
                     {
-                        channel: R,
-                        guild: L,
-                        chatInputType: f.I.SIDEBAR
+                        channel: y,
+                        guild: P,
+                        chatInputType: g.I.SIDEBAR
                     },
                     t
                 )

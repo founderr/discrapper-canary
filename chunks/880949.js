@@ -7,24 +7,24 @@ var r = n(200651),
     l = n(686546),
     u = n(90837);
 t.Z = (e) => {
-    let { className: t, guild: n, isSelected: a = !0, width: c = 32, height: d = 32, shouldAnimate: _ = !0, isLocked: E = !1 } = e,
-        [f, h] = i.useState(!1),
-        p = n.getIconURL(32, _ && a),
-        I = () => h(!0),
-        m = () => h(!1);
+    let { className: t, guild: n, isSelected: a = !0, width: c = 32, height: d = 32, shouldAnimate: f = !0, isLocked: _ = !1 } = e,
+        [h, p] = i.useState(!1),
+        m = n.getIconURL(32, f && a),
+        g = () => p(!0),
+        E = () => p(!1);
     return (0, r.jsxs)('div', {
-        onFocus: I,
-        onBlur: m,
-        onMouseOver: I,
-        onMouseLeave: m,
+        onFocus: g,
+        onBlur: E,
+        onMouseOver: g,
+        onMouseLeave: E,
         children: [
             (0, r.jsx)(l.ZP, {
                 className: s()(u.mask, t),
-                mask: a || f ? l.QS.SQUIRCLE : l.QS.AVATAR_DEFAULT,
+                mask: a || h ? l.QS.SQUIRCLE : l.QS.AVATAR_DEFAULT,
                 width: c,
                 height: d,
                 children:
-                    null == p
+                    null == m
                         ? (0, r.jsx)('div', {
                               className: s()(u.guildIcon, u.guildIconWithoutImage),
                               children: (0, r.jsx)('div', {
@@ -34,11 +34,11 @@ t.Z = (e) => {
                           })
                         : (0, r.jsx)('img', {
                               alt: n.toString(),
-                              src: p,
+                              src: m,
                               className: u.guildIcon
                           })
             }),
-            E
+            _
                 ? (0, r.jsx)('div', {
                       className: u.categoryItemLockIconContainer,
                       children: (0, r.jsx)(o.LockIcon, {

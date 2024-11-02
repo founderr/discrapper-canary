@@ -1,6 +1,6 @@
 n.d(t, {
     V: function () {
-        return E;
+        return _;
     }
 });
 var r = n(573654),
@@ -30,7 +30,7 @@ function d(e) {
             (0, r.k)(!1, 'Cannot parse handler ID: '.concat(e));
     }
 }
-function _(e, t) {
+function f(e, t) {
     var n = e.entries(),
         r = !1;
     do {
@@ -81,7 +81,7 @@ function _(e, t) {
     } while (!r);
     return !1;
 }
-var E = (function () {
+var _ = (function () {
     var e, t, n;
     function c(e) {
         !(function (e, t) {
@@ -116,7 +116,7 @@ var E = (function () {
             {
                 key: 'containsHandler',
                 value: function (e) {
-                    return _(this.dragSources, e) || _(this.dropTargets, e);
+                    return f(this.dragSources, e) || f(this.dropTargets, e);
                 }
             },
             {

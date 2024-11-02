@@ -1,29 +1,29 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return _;
     }
 });
 var i = n(200651),
-    a = n(192379),
-    s = n(481060),
-    r = n(194359),
-    l = n(906732),
+    r = n(192379),
+    l = n(481060),
+    a = n(194359),
+    s = n(906732),
     o = n(388380),
     c = n(171368),
     d = n(626135),
     u = n(321488),
-    _ = n(417183),
-    E = n(170245),
-    h = n(981631),
-    m = n(689938),
-    I = n(796147);
-function p(e) {
-    let { user: t, nickname: n, status: p, isFocused: g } = e,
-        T = a.useContext(d.AnalyticsContext),
-        { analyticsLocations: S } = (0, l.ZP)(),
-        C = (e) => {
+    h = n(417183),
+    m = n(170245),
+    p = n(981631),
+    g = n(388032),
+    f = n(796147);
+function _(e) {
+    let { user: t, nickname: n, status: _, isFocused: E } = e,
+        I = r.useContext(d.AnalyticsContext),
+        { analyticsLocations: C } = (0, s.ZP)(),
+        v = (e) => {
             null == e || e.stopPropagation(),
-                r.Z.addRelationship({
+                a.Z.addRelationship({
                     userId: t.id,
                     context: { location: 'Friends' },
                     type: void 0,
@@ -31,51 +31,51 @@ function p(e) {
                     fromFriendSuggestion: !0
                 });
         },
-        f = (e) => {
+        S = (e) => {
             null == e || e.stopPropagation(), o.Z.ignore(t.id);
         },
-        N = p === h.Skl.OFFLINE ? h.Skl.UNKNOWN : p;
-    return (0, i.jsx)(_.Z, {
-        isFocused: g,
+        N = _ === p.Skl.OFFLINE ? p.Skl.UNKNOWN : _;
+    return (0, i.jsx)(h.Z, {
+        isFocused: E,
         user: t,
         onClick: () =>
             (0, c.openUserProfileModal)({
                 userId: t.id,
-                sourceAnalyticsLocations: S,
-                analyticsLocation: T.location
+                sourceAnalyticsLocations: C,
+                analyticsLocation: I.location
             }),
         children: (e) => {
-            let a = (0, i.jsxs)(i.Fragment, {
+            let r = (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(u.Z, {
-                        icon: s.CheckmarkLargeIcon,
+                        icon: l.CheckmarkLargeIcon,
                         actionType: u.Z.ActionTypes.ACCEPT,
-                        tooltip: m.Z.Messages.FRIEND_REQUEST_ACCEPT,
-                        onClick: C,
+                        tooltip: g.intl.string(g.t.ZcibdX),
+                        onClick: v,
                         shouldHighlight: e
                     }),
                     (0, i.jsx)(u.Z, {
-                        icon: s.XSmallIcon,
+                        icon: l.XSmallIcon,
                         actionType: u.Z.ActionTypes.DENY,
-                        tooltip: m.Z.Messages.FRIEND_REQUEST_IGNORE,
-                        onClick: f,
+                        tooltip: g.intl.string(g.t.xuio0N),
+                        onClick: S,
                         shouldHighlight: e
                     })
                 ]
             });
             return (0, i.jsxs)('div', {
-                className: I.listItemContents,
+                className: f.listItemContents,
                 children: [
-                    (0, i.jsx)(E.Z, {
+                    (0, i.jsx)(m.Z, {
                         user: t,
                         hovered: e,
                         status: N,
                         subText: n,
-                        className: I.__invalid_userInfo
+                        className: f.__invalid_userInfo
                     }),
                     (0, i.jsx)('div', {
-                        className: I.actions,
-                        children: a
+                        className: f.actions,
+                        children: r
                     })
                 ]
             });

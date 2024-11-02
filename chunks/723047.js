@@ -1,9 +1,9 @@
 n.d(t, {
     in: function () {
-        return s.AL;
+        return i.AL;
     },
     mY: function () {
-        return s.f3;
+        return i.f3;
     }
 });
-var s = n(395586);
+var i = n(395586);

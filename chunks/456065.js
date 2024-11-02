@@ -1,45 +1,45 @@
 n(47120);
 var i,
-    a,
-    s,
     r,
-    l = n(442837),
+    l,
+    a,
+    s = n(442837),
     o = n(570140),
     c = n(810788),
     d = n(430824),
     u = n(981631);
-let _ = !1;
-function E(e) {
+let h = !1;
+function m(e) {
     let t = d.Z.getGuild(e);
-    return !!(null != t && t.hasFeature(u.oNc.HUB)) && ((_ = !0), !0);
+    return !!(null != t && t.hasFeature(u.oNc.HUB)) && ((h = !0), !0);
 }
-function h() {
+function p() {
     return !0;
 }
-class m extends (i = l.ZP.Store) {
+class g extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(d.Z, c.Z), this.syncWith([c.Z], h);
+        this.waitFor(d.Z, c.Z), this.syncWith([c.Z], p);
     }
     channelNoticePredicate(e) {
-        return !!e.hasFeature(u.oNc.LINKED_TO_HUB) && !_ && !0;
+        return !!e.hasFeature(u.oNc.LINKED_TO_HUB) && !h && !0;
     }
 }
-(r = 'HubLinkNoticeStore'),
-    (s = 'displayName') in (a = m)
-        ? Object.defineProperty(a, s, {
-              value: r,
+(a = 'HubLinkNoticeStore'),
+    (l = 'displayName') in (r = g)
+        ? Object.defineProperty(r, l, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[s] = r),
-    (t.Z = new m(o.Z, {
+        : (r[l] = a),
+    (t.Z = new g(o.Z, {
         CONNECTION_OPEN: function (e) {
-            for (let t of e.guilds) if (E(t.id)) return !0;
+            for (let t of e.guilds) if (m(t.id)) return !0;
             return !1;
         },
         GUILD_CREATE: function (e) {
             let { guild: t } = e;
-            return E(t.id);
+            return m(t.id);
         }
     }));

@@ -1,55 +1,55 @@
 n.d(t, {
     HU: function () {
-        return m;
+        return g;
     },
     KW: function () {
-        return E;
+        return m;
     },
     dO: function () {
-        return _;
+        return h;
     },
     gQ: function () {
-        return h;
+        return p;
     }
 });
 var i = n(392711),
-    a = n.n(i),
-    s = n(570140),
-    r = n(317381),
-    l = n(594174),
+    r = n.n(i),
+    l = n(570140),
+    a = n(317381),
+    s = n(594174),
     o = n(823379),
     c = n(5192),
     d = n(863141),
     u = n(186901);
-function _() {
-    let e = r.ZP.getCurrentEmbeddedActivity();
+function h() {
+    let e = a.ZP.getCurrentEmbeddedActivity();
     if (null == e) return { participants: [] };
     let { guildId: t, channelId: n } = e;
     return {
         participants: Array.from(e.userIds, (e) => {
-            let i = l.default.getUser(e);
+            let i = s.default.getUser(e);
             if (null == i) return;
-            let a = (0, c.y)(t, n, i);
+            let r = (0, c.y)(t, n, i);
             return {
                 ...(0, d.Z)(i),
-                nickname: null != a ? a : void 0
+                nickname: null != r ? r : void 0
             };
         }).filter(o.lm)
     };
 }
-let E = { [u.Gp.ANY]: [u.wE] },
-    h = {
-        scope: E,
+let m = { [u.Gp.ANY]: [u.wE] },
+    p = {
+        scope: m,
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
-                i = _();
-            return !a().isEqual(i, t) && n(i), i;
+                i = h();
+            return !r().isEqual(i, t) && n(i), i;
         }
     };
-function m(e) {
+function g(e) {
     let t = 'EMBEDDED_ACTIVITY_UPDATE',
         n = () => {
-            e(_());
+            e(h());
         };
-    return s.Z.subscribe(t, n), () => s.Z.unsubscribe(t, n);
+    return l.Z.subscribe(t, n), () => l.Z.unsubscribe(t, n);
 }

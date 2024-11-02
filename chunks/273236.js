@@ -1,146 +1,146 @@
-a(47120);
-var t = a(200651),
-    n = a(192379),
-    i = a(120356),
-    l = a.n(i),
-    r = a(995295),
-    c = a(481060),
-    d = a(689938),
-    o = a(987671),
-    _ = a(55011);
-function I(e) {
-    let { text: s, className: a, hidden: n } = e;
-    return (0, t.jsxs)('div', {
-        className: l()(a, o.tip, { [o.hidden]: n }),
+n(47120);
+var i = n(200651),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(995295),
+    c = n(481060),
+    d = n(388032),
+    o = n(987671),
+    m = n(55011);
+function x(e) {
+    let { text: t, className: n, hidden: s } = e;
+    return (0, i.jsxs)('div', {
+        className: l()(n, o.tip, { [o.hidden]: s }),
         children: [
-            (0, t.jsx)(c.Text, {
+            (0, i.jsx)(c.Text, {
                 className: o.__invalid_tipText,
                 variant: 'text-sm/normal',
                 color: 'text-secondary',
-                children: s
+                children: t
             }),
-            (0, t.jsx)('div', { className: o.tipLine })
+            (0, i.jsx)('div', { className: o.tipLine })
         ]
     });
 }
-function N(e) {
-    let { grey: s, mention: a, name: n } = e;
-    return (0, t.jsxs)('div', {
+function h(e) {
+    let { grey: t, mention: n, name: s } = e;
+    return (0, i.jsxs)('div', {
         className: l()(o.channel, {
-            [o.grey]: s,
-            [o.mention]: a
+            [o.grey]: t,
+            [o.mention]: n
         }),
         children: [
-            (0, t.jsx)(c.TextIcon, {
+            (0, i.jsx)(c.TextIcon, {
                 size: 'xs',
                 color: 'currentColor',
                 className: o.channelIcon
             }),
-            (0, t.jsx)(c.Text, {
+            (0, i.jsx)(c.Text, {
                 variant: 'text-md/medium',
                 className: o.channelName,
-                children: n
+                children: s
             })
         ]
     });
 }
-s.Z = n.forwardRef(function (e, s) {
+t.Z = s.forwardRef(function (e, t) {
     let {} = e,
-        [i, l] = n.useState('before'),
-        [x, m] = n.useState(!1),
-        [T, h] = n.useState(!1);
-    n.useImperativeHandle(s, () => ({ maybeChangeToAfterTab: () => (!T && u('after'), T) }));
-    let u = n.useCallback((e) => {
-        m(!0),
+        [r, l] = s.useState('before'),
+        [u, j] = s.useState(!1),
+        [g, b] = s.useState(!1);
+    s.useImperativeHandle(t, () => ({ maybeChangeToAfterTab: () => (!g && v('after'), g) }));
+    let v = s.useCallback((e) => {
+        j(!0),
             setTimeout(() => {
-                r.unstable_batchedUpdates(() => {
-                    'after' === e && h(!0), m(!1), l(e);
+                a.unstable_batchedUpdates(() => {
+                    'after' === e && b(!0), j(!1), l(e);
                 });
             }, 400);
     }, []);
-    return (0, t.jsxs)(c.Scroller, {
-        className: _.content,
+    return (0, i.jsxs)(c.Scroller, {
+        className: m.content,
         children: [
-            (0, t.jsxs)('div', {
-                className: _.header,
+            (0, i.jsxs)('div', {
+                className: m.header,
                 children: [
-                    (0, t.jsx)(c.BellIcon, {
+                    (0, i.jsx)(c.BellIcon, {
                         size: 'custom',
                         color: 'currentColor',
                         width: 40,
                         height: 40
                     }),
-                    (0, t.jsx)(c.Heading, {
+                    (0, i.jsx)(c.Heading, {
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
-                        children: d.Z.Messages.NOTIF_MIGRATION_INTRO_TITLE
+                        children: d.intl.string(d.t.c0Fhpa)
                     }),
-                    (0, t.jsx)(c.Text, {
-                        className: _.__invalid_subtitle,
+                    (0, i.jsx)(c.Text, {
+                        className: m.__invalid_subtitle,
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: d.Z.Messages.NOTIF_MIGRATION_INTRO_SUB_TITLE
+                        children: d.intl.string(d.t.dKPfBQ)
                     })
                 ]
             }),
-            (0, t.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: o.container,
                 children: [
-                    (0, t.jsxs)('div', {
+                    (0, i.jsxs)('div', {
                         className: o.tabs,
                         children: [
-                            (0, t.jsx)('div', {
+                            (0, i.jsx)('div', {
                                 className: o.tabBackground,
-                                style: { left: 'before' === i ? 0 : '50%' }
+                                style: { left: 'before' === r ? 0 : '50%' }
                             }),
-                            (0, t.jsx)(c.Clickable, {
+                            (0, i.jsx)(c.Clickable, {
                                 className: o.tab,
-                                onClick: () => u('before'),
-                                children: (0, t.jsx)(c.Text, {
+                                onClick: () => v('before'),
+                                children: (0, i.jsx)(c.Text, {
                                     variant: 'text-sm/medium',
-                                    color: 'before' === i ? 'header-primary' : 'text-muted',
-                                    children: d.Z.Messages.NOTIF_MIGRATION_INTRO_BEFORE
+                                    color: 'before' === r ? 'header-primary' : 'text-muted',
+                                    children: d.intl.string(d.t.sLv7LC)
                                 })
                             }),
-                            (0, t.jsx)(c.Clickable, {
+                            (0, i.jsx)(c.Clickable, {
                                 className: o.tab,
-                                onClick: () => u('after'),
-                                children: (0, t.jsx)(c.Text, {
+                                onClick: () => v('after'),
+                                children: (0, i.jsx)(c.Text, {
                                     variant: 'text-sm/medium',
-                                    color: 'after' === i ? 'header-primary' : 'text-muted',
-                                    children: d.Z.Messages.NOTIF_MIGRATION_INTRO_AFTER
+                                    color: 'after' === r ? 'header-primary' : 'text-muted',
+                                    children: d.intl.string(d.t.R8eSY2)
                                 })
                             })
                         ]
                     }),
-                    (0, t.jsxs)('div', {
+                    (0, i.jsxs)('div', {
                         className: o.previewContainer,
                         children: [
-                            (0, t.jsxs)('div', {
+                            (0, i.jsxs)('div', {
                                 className: o.guilds,
                                 children: [
-                                    (0, t.jsx)('div', {
+                                    (0, i.jsx)('div', {
                                         className: o.unreadGuild,
-                                        children: (0, t.jsx)('img', {
-                                            src: a(180681),
+                                        children: (0, i.jsx)('img', {
+                                            src: n(180681),
                                             width: 36,
                                             height: 36,
                                             alt: 'Example Guild Icon'
                                         })
                                     }),
-                                    (0, t.jsx)('div', {
-                                        className: 'after' === i ? o.guild : o.unreadGuild,
-                                        children: (0, t.jsx)('img', {
-                                            src: a(390115),
+                                    (0, i.jsx)('div', {
+                                        className: 'after' === r ? o.guild : o.unreadGuild,
+                                        children: (0, i.jsx)('img', {
+                                            src: n(390115),
                                             width: 36,
                                             height: 36,
                                             alt: 'Example Guild Icon'
                                         })
                                     }),
-                                    (0, t.jsx)('div', {
-                                        className: 'after' === i ? o.guild : o.unreadGuild,
-                                        children: (0, t.jsx)('img', {
-                                            src: a(536411),
+                                    (0, i.jsx)('div', {
+                                        className: 'after' === r ? o.guild : o.unreadGuild,
+                                        children: (0, i.jsx)('img', {
+                                            src: n(536411),
                                             width: 36,
                                             height: 36,
                                             alt: 'Example Guild Icon'
@@ -148,54 +148,54 @@ s.Z = n.forwardRef(function (e, s) {
                                     })
                                 ]
                             }),
-                            (0, t.jsxs)('div', {
+                            (0, i.jsxs)('div', {
                                 className: o.channels,
                                 children: [
-                                    (0, t.jsx)(N, {
+                                    (0, i.jsx)(h, {
                                         mention: !0,
-                                        name: d.Z.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_1
+                                        name: d.intl.string(d.t.WFejRk)
                                     }),
-                                    (0, t.jsx)(N, { name: d.Z.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_2 }),
-                                    (0, t.jsx)(N, {
-                                        grey: 'after' === i,
-                                        name: d.Z.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_3
+                                    (0, i.jsx)(h, { name: d.intl.string(d.t.jqWm9f) }),
+                                    (0, i.jsx)(h, {
+                                        grey: 'after' === r,
+                                        name: d.intl.string(d.t.p9z9Iy)
                                     }),
-                                    (0, t.jsx)(N, {
-                                        grey: 'after' === i,
-                                        name: d.Z.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_4
+                                    (0, i.jsx)(h, {
+                                        grey: 'after' === r,
+                                        name: d.intl.string(d.t['2bdWDw'])
                                     }),
-                                    (0, t.jsx)(N, { name: d.Z.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_5 }),
-                                    (0, t.jsx)(N, {
-                                        grey: 'after' === i,
-                                        name: d.Z.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_6
+                                    (0, i.jsx)(h, { name: d.intl.string(d.t['Ci+Our']) }),
+                                    (0, i.jsx)(h, {
+                                        grey: 'after' === r,
+                                        name: d.intl.string(d.t['/7TEdn'])
                                     }),
-                                    (0, t.jsx)(N, {
-                                        grey: 'after' === i,
-                                        name: d.Z.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_7
+                                    (0, i.jsx)(h, {
+                                        grey: 'after' === r,
+                                        name: d.intl.string(d.t['Ime/t7'])
                                     })
                                 ]
                             })
                         ]
                     }),
-                    (0, t.jsx)(I, {
-                        hidden: x || 'after' === i,
+                    (0, i.jsx)(x, {
+                        hidden: u || 'after' === r,
                         className: o.tipBefore1,
-                        text: d.Z.Messages.NOTIF_MIGRATION_INTRO_TIP_BEFORE1
+                        text: d.intl.string(d.t.WrPMOD)
                     }),
-                    (0, t.jsx)(I, {
-                        hidden: x || 'after' === i,
+                    (0, i.jsx)(x, {
+                        hidden: u || 'after' === r,
                         className: o.tipBefore2,
-                        text: d.Z.Messages.NOTIF_MIGRATION_INTRO_TIP_BEFORE2
+                        text: d.intl.string(d.t['pApL7+'])
                     }),
-                    (0, t.jsx)(I, {
-                        hidden: x || 'before' === i,
+                    (0, i.jsx)(x, {
+                        hidden: u || 'before' === r,
                         className: o.tipAfter1,
-                        text: d.Z.Messages.NOTIF_MIGRATION_INTRO_TIP_AFTER1
+                        text: d.intl.string(d.t.eZb3iY)
                     }),
-                    (0, t.jsx)(I, {
-                        hidden: x || 'before' === i,
+                    (0, i.jsx)(x, {
+                        hidden: u || 'before' === r,
                         className: o.tipAfter2,
-                        text: d.Z.Messages.NOTIF_MIGRATION_INTRO_TIP_AFTER2
+                        text: d.intl.string(d.t.M3KrJS)
                     })
                 ]
             })

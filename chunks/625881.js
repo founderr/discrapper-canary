@@ -1,123 +1,123 @@
-t(47120);
-var n = t(200651),
-    a = t(192379),
-    i = t(120356),
-    r = t.n(i),
-    o = t(544891),
-    l = t(780384),
-    c = t(481060),
-    d = t(410030),
-    _ = t(63063),
-    u = t(74538),
-    E = t(937615),
-    T = t(230916),
-    S = t(798769),
-    I = t(474936),
-    N = t(981631),
-    m = t(689938),
-    C = t(864678),
-    A = t(982404),
-    g = t(299156);
-s.Z = function (e) {
-    let { premiumSubscription: s, premiumType: t, onClose: i, onConfirm: h, userDiscountOffer: O } = e,
-        [p, R] = a.useState(!1),
-        [x, M] = a.useState(!1),
-        f = async (e) => {
+n(47120);
+var i = n(200651),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(544891),
+    o = n(780384),
+    c = n(481060),
+    d = n(410030),
+    u = n(63063),
+    m = n(74538),
+    h = n(937615),
+    g = n(230916),
+    p = n(798769),
+    x = n(474936),
+    S = n(981631),
+    T = n(388032),
+    C = n(864678),
+    _ = n(982404),
+    E = n(299156);
+t.Z = function (e) {
+    let { premiumSubscription: t, premiumType: n, onClose: r, onConfirm: f, userDiscountOffer: I } = e,
+        [N, A] = s.useState(!1),
+        [b, v] = s.useState(!1),
+        j = async (e) => {
             try {
-                M(!0),
-                    R(!1),
-                    await o.tn.post({
-                        url: N.ANM.USER_OFFER_REDEEM,
+                v(!0),
+                    A(!1),
+                    await a.tn.post({
+                        url: S.ANM.USER_OFFER_REDEEM,
                         body: { user_discount_offer_id: e }
                     }),
-                    h();
+                    f();
             } catch (e) {
-                R(!0);
+                A(!0);
             }
-            M(!1);
+            v(!1);
         },
-        D = (0, d.ZP)(),
-        L = (0, l.wj)(D) ? A : g,
-        P = (0, T._)(s, I.Xh.PREMIUM_MONTH_TIER_2, O),
-        b = (0, u.aS)(I.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
-            currency: s.currency,
-            paymentSourceId: s.paymentSourceId
+        O = (0, d.ZP)(),
+        R = (0, o.wj)(O) ? _ : E,
+        P = (0, g._)(t, x.Xh.PREMIUM_MONTH_TIER_2, I),
+        D = (0, m.aS)(x.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
+            currency: t.currency,
+            paymentSourceId: t.paymentSourceId
         }),
-        Z = (0, E.T4)(b.amount, b.currency);
-    return null == O
+        y = (0, h.T4)(D.amount, D.currency);
+    return null == I
         ? null
-        : (0, n.jsxs)(n.Fragment, {
+        : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, n.jsx)(S.Z, {
-                      premiumType: t,
-                      onClose: i
+                  (0, i.jsx)(p.Z, {
+                      premiumType: n,
+                      onClose: r
                   }),
-                  (0, n.jsx)(c.ModalContent, {
+                  (0, i.jsx)(c.ModalContent, {
                       className: C.body,
-                      children: (0, n.jsxs)('div', {
+                      children: (0, i.jsxs)('div', {
                           className: C.confirmDiscountContent,
                           children: [
-                              (0, n.jsx)(c.Heading, {
+                              (0, i.jsx)(c.Heading, {
                                   variant: 'heading-xl/bold',
-                                  children: m.Z.Messages.CHURN_DISCOUNT_CONFIRM_HEADER.format({ percent: O.discount.amount })
+                                  children: T.intl.format(T.t.q9Vxu7, { percent: I.discount.amount })
                               }),
-                              (0, n.jsxs)('div', {
+                              (0, i.jsxs)('div', {
                                   className: C.confirmDiscountDescription,
                                   children: [
-                                      (0, n.jsx)('img', {
+                                      (0, i.jsx)('img', {
                                           alt: '',
-                                          src: L,
+                                          src: R,
                                           className: C.confirmDiscountIcon
                                       }),
-                                      (0, n.jsx)(c.Text, {
+                                      (0, i.jsx)(c.Text, {
                                           variant: 'text-sm/medium',
-                                          children: m.Z.Messages.CHURN_DISCOUNT_CONFIRM_DESCRIPTION.format({
-                                              percent: O.discount.amount,
-                                              numMonths: O.discount.user_usage_limit,
-                                              price: Z
+                                          children: T.intl.format(T.t.Eq1RHB, {
+                                              percent: I.discount.amount,
+                                              numMonths: I.discount.user_usage_limit,
+                                              price: y
                                           })
                                       })
                                   ]
                               }),
-                              (0, n.jsx)('div', {
+                              (0, i.jsx)('div', {
                                   className: C.confirmDiscountLegalese,
-                                  children: (0, n.jsx)(c.Text, {
+                                  children: (0, i.jsx)(c.Text, {
                                       variant: 'text-xs/semibold',
                                       className: C.confirmDiscountLegaleseText,
-                                      children: m.Z.Messages.CHURN_DISCOUNT_CONFIRM_LEGALESE.format({
+                                      children: T.intl.format(T.t.hrGTjI, {
                                           discountedPrice: P,
-                                          billingPeriod: (0, u.JP)(O.discount.user_usage_limit_interval),
-                                          numMonths: O.discount.user_usage_limit,
-                                          fullPrice: Z,
-                                          helpdeskArticle: _.Z.getArticleURL(N.BhN.PAID_TERMS)
+                                          billingPeriod: (0, m.JP)(I.discount.user_usage_limit_interval),
+                                          numMonths: I.discount.user_usage_limit,
+                                          fullPrice: y,
+                                          helpdeskArticle: u.Z.getArticleURL(S.BhN.PAID_TERMS)
                                       })
                                   })
                               }),
-                              p &&
-                                  (0, n.jsx)('div', {
+                              N &&
+                                  (0, i.jsx)('div', {
                                       className: C.redemptionFailedMessage,
-                                      children: (0, n.jsx)(c.Text, {
+                                      children: (0, i.jsx)(c.Text, {
                                           variant: 'text-xs/semibold',
                                           className: C.redemptionFailedMessageCopy,
-                                          children: m.Z.Messages.CHURN_DISCOUNT_REDEMPTION_ERROR
+                                          children: T.intl.string(T.t.AD6odn)
                                       })
                                   }),
-                              (0, n.jsxs)('div', {
-                                  className: r()(C.confirmDiscountButtons, {
-                                      [C.confrimDiscountsButtonsError]: p,
-                                      [C.confrimDiscountsButtonsNoError]: !p
+                              (0, i.jsxs)('div', {
+                                  className: l()(C.confirmDiscountButtons, {
+                                      [C.confrimDiscountsButtonsError]: N,
+                                      [C.confrimDiscountsButtonsNoError]: !N
                                   }),
                                   children: [
-                                      (0, n.jsx)(c.Button, {
+                                      (0, i.jsx)(c.Button, {
                                           look: c.ButtonLooks.LINK,
-                                          onClick: () => i(),
-                                          children: m.Z.Messages.CHURN_DISCOUNT_NEVERMIND
+                                          onClick: () => r(),
+                                          children: T.intl.string(T.t.zl7LZm)
                                       }),
-                                      (0, n.jsx)(c.Button, {
+                                      (0, i.jsx)(c.Button, {
                                           size: c.ButtonSizes.SMALL,
-                                          submitting: x,
-                                          onClick: () => f(O.id),
-                                          children: m.Z.Messages.CHURN_DISCOUNT_CONFIRM_DISCOUNT
+                                          submitting: b,
+                                          onClick: () => j(I.id),
+                                          children: T.intl.string(T.t.CKSuZG)
                                       })
                                   ]
                               })

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return f;
     }
 });
 var r = n(685516),
@@ -12,50 +12,50 @@ var r = n(685516),
     u = n(882159),
     c = n(544338),
     d = n(581206);
-function _(e, t) {
+function f(e, t) {
     void 0 === t && (t = {});
     var n = t,
-        _ = n.placement,
-        E = void 0 === _ ? e.placement : _,
-        f = n.strategy,
-        h = void 0 === f ? e.strategy : f,
-        p = n.boundary,
-        I = void 0 === p ? l.zV : p,
-        m = n.rootBoundary,
-        T = void 0 === m ? l.Pj : m,
-        S = n.elementContext,
-        g = void 0 === S ? l.k5 : S,
-        A = n.altBoundary,
-        N = n.padding,
-        R = void 0 === N ? 0 : N,
-        O = (0, c.Z)('number' != typeof R ? R : (0, d.Z)(R, l.mv)),
-        v = g === l.k5 ? l.YP : l.k5,
+        f = n.placement,
+        _ = void 0 === f ? e.placement : f,
+        h = n.strategy,
+        p = void 0 === h ? e.strategy : h,
+        m = n.boundary,
+        g = void 0 === m ? l.zV : m,
+        E = n.rootBoundary,
+        v = void 0 === E ? l.Pj : E,
+        I = n.elementContext,
+        S = void 0 === I ? l.k5 : I,
+        T = n.altBoundary,
+        b = n.padding,
+        y = void 0 === b ? 0 : b,
+        A = (0, c.Z)('number' != typeof y ? y : (0, d.Z)(y, l.mv)),
+        N = S === l.k5 ? l.YP : l.k5,
         C = e.rects.popper,
-        L = e.elements[void 0 !== A && A ? v : g],
-        D = (0, r.Z)((0, u.kK)(L) ? L : L.contextElement || (0, i.Z)(e.elements.popper), I, T, h),
-        y = (0, a.Z)(e.elements.reference),
-        b = (0, s.Z)({
-            reference: y,
+        R = e.elements[void 0 !== T && T ? N : S],
+        O = (0, r.Z)((0, u.kK)(R) ? R : R.contextElement || (0, i.Z)(e.elements.popper), g, v, p),
+        D = (0, a.Z)(e.elements.reference),
+        L = (0, s.Z)({
+            reference: D,
             element: C,
             strategy: 'absolute',
-            placement: E
+            placement: _
         }),
-        M = (0, o.Z)(Object.assign({}, C, b)),
-        P = g === l.k5 ? M : y,
-        U = {
-            top: D.top - P.top + O.top,
-            bottom: P.bottom - D.bottom + O.bottom,
-            left: D.left - P.left + O.left,
-            right: P.right - D.right + O.right
+        x = (0, o.Z)(Object.assign({}, C, L)),
+        w = S === l.k5 ? x : D,
+        M = {
+            top: O.top - w.top + A.top,
+            bottom: w.bottom - O.bottom + A.bottom,
+            left: O.left - w.left + A.left,
+            right: w.right - O.right + A.right
         },
-        w = e.modifiersData.offset;
-    if (g === l.k5 && w) {
-        var x = w[E];
-        Object.keys(U).forEach(function (e) {
+        P = e.modifiersData.offset;
+    if (S === l.k5 && P) {
+        var k = P[_];
+        Object.keys(M).forEach(function (e) {
             var t = [l.F2, l.I].indexOf(e) >= 0 ? 1 : -1,
                 n = [l.we, l.I].indexOf(e) >= 0 ? 'y' : 'x';
-            U[e] += x[n] * t;
+            M[e] += k[n] * t;
         });
     }
-    return U;
+    return M;
 }

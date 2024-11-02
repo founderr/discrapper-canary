@@ -1,6 +1,6 @@
-a.d(t, {
+n.d(e, {
     z: function () {
-        return s;
+        return a;
     }
 });
-let s = 'https://support.discord.com/hc/en-us/articles/6461420677527-Limited-Access-FAQ';
+let a = 'https://support.discord.com/hc/en-us/articles/6461420677527-Limited-Access-FAQ';

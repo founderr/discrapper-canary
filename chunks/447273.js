@@ -1,18 +1,18 @@
-s.d(t, {
+n.d(e, {
     B: function () {
-        return l;
+        return i;
     },
     D: function () {
-        return n;
+        return s;
     }
 });
-var a = s(570140);
-function l() {
-    a.Z.dispatch({ type: 'APPLICATION_STORE_ACCEPT_STORE_TERMS' });
+var l = n(570140);
+function i() {
+    l.Z.dispatch({ type: 'APPLICATION_STORE_ACCEPT_STORE_TERMS' });
 }
-function n(e) {
-    a.Z.dispatch({
+function s(t) {
+    l.Z.dispatch({
         type: 'APPLICATION_STORE_ACCEPT_EULA',
-        eulaId: e
+        eulaId: t
     });
 }

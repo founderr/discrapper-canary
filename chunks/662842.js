@@ -1,142 +1,142 @@
 n.d(t, {
     Z: function () {
-        return w;
+        return U;
     }
 }),
     n(47120);
 var i,
-    a,
-    s = n(200651),
-    r = n(192379),
-    l = n(120356),
-    o = n.n(l),
+    r,
+    l = n(200651),
+    a = n(192379),
+    s = n(120356),
+    o = n.n(s),
     c = n(442837),
     d = n(692547),
     u = n(481060),
-    _ = n(232567),
-    E = n(100527),
-    h = n(471445),
-    m = n(15274),
-    I = n(924301),
-    p = n(504160),
-    g = n(151864),
-    T = n(725436),
-    S = n(497656),
-    C = n(554747),
-    f = n(230900),
+    h = n(232567),
+    m = n(100527),
+    p = n(471445),
+    g = n(15274),
+    f = n(924301),
+    _ = n(504160),
+    E = n(151864),
+    I = n(725436),
+    C = n(497656),
+    v = n(554747),
+    S = n(230900),
     N = n(854698),
-    A = n(703656),
-    v = n(922482),
-    Z = n(565799),
-    L = n(501655),
-    R = n(427679),
-    O = n(448206),
-    x = n(184301),
-    b = n(347475),
-    M = n(496675),
-    P = n(594174),
-    D = n(662868),
-    y = n(981631),
-    j = n(765305),
-    U = n(689938),
-    G = n(599293);
-((a = i || (i = {}))[(a.STAGE = 0)] = 'STAGE'), (a[(a.EVENT_EXTERNAL = 1)] = 'EVENT_EXTERNAL'), (a[(a.EVENT_VOICE = 2)] = 'EVENT_VOICE'), (a[(a.STUDY_ROOM = 3)] = 'STUDY_ROOM');
-function w(e) {
+    T = n(703656),
+    x = n(922482),
+    b = n(565799),
+    A = n(501655),
+    Z = n(427679),
+    y = n(448206),
+    L = n(184301),
+    R = n(347475),
+    P = n(496675),
+    O = n(594174),
+    j = n(662868),
+    D = n(981631),
+    M = n(765305),
+    w = n(388032),
+    k = n(599293);
+((r = i || (i = {}))[(r.STAGE = 0)] = 'STAGE'), (r[(r.EVENT_EXTERNAL = 1)] = 'EVENT_EXTERNAL'), (r[(r.EVENT_VOICE = 2)] = 'EVENT_VOICE'), (r[(r.STUDY_ROOM = 3)] = 'STUDY_ROOM');
+function U(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
-        i = (0, S.y)(t.id),
-        a = (0, C.k5)(t.id),
-        l = (0, c.e7)([R.Z], () => R.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]),
-        { isStageNoticeHidden: w, isEventNoticeHidden: k } = (0, c.cj)(
-            [g.Z],
+        i = (0, C.y)(t.id),
+        r = (0, v.k5)(t.id),
+        s = (0, c.e7)([Z.Z], () => Z.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]),
+        { isStageNoticeHidden: U, isEventNoticeHidden: G } = (0, c.cj)(
+            [E.Z],
             () => ({
-                isStageNoticeHidden: g.Z.isLiveChannelNoticeHidden({ stageId: null == l ? void 0 : l.id }),
-                isEventNoticeHidden: g.Z.isLiveChannelNoticeHidden({ eventId: null == a ? void 0 : a.id })
+                isStageNoticeHidden: E.Z.isLiveChannelNoticeHidden({ stageId: null == s ? void 0 : s.id }),
+                isEventNoticeHidden: E.Z.isLiveChannelNoticeHidden({ eventId: null == r ? void 0 : r.id })
             }),
-            [l, a]
+            [s, r]
         ),
         B = null == i ? void 0 : i.id,
-        H = (0, c.Wu)([Z.Z], () => [...new Set(Z.Z.getMutableParticipants(B, L.pV.SPEAKER).map((e) => e.user))], [B]),
-        V = (0, c.e7)([Z.Z], () => (null != B ? Z.Z.getParticipantCount(B, L.pV.AUDIENCE) : 0), [B]),
-        F = (0, c.e7)([M.Z], () => M.Z.can(y.Plq.CONNECT, i)),
-        Y = (0, O.Z)(null == i ? void 0 : i.id),
-        z = null == a ? void 0 : a.creator_id,
-        W = (0, c.e7)([P.default], () => P.default.getUser(z), [z]);
-    r.useEffect(() => {
-        null != z && (0, _.PR)(z);
-    }, [z]);
+        H = (0, c.Wu)([b.Z], () => [...new Set(b.Z.getMutableParticipants(B, A.pV.SPEAKER).map((e) => e.user))], [B]),
+        V = (0, c.e7)([b.Z], () => (null != B ? b.Z.getParticipantCount(B, A.pV.AUDIENCE) : 0), [B]),
+        F = (0, c.e7)([P.Z], () => P.Z.can(D.Plq.CONNECT, i)),
+        z = (0, y.Z)(null == i ? void 0 : i.id),
+        Y = null == r ? void 0 : r.creator_id,
+        W = (0, c.e7)([O.default], () => O.default.getUser(Y), [Y]);
+    a.useEffect(() => {
+        null != Y && (0, h.PR)(Y);
+    }, [Y]);
     let {
         noticeType: K,
         title: q,
-        location: Q,
-        locationIcon: X,
+        location: X,
+        locationIcon: Q,
         canListenIn: J,
         buttonText: $,
         users: ee,
         overflowUsers: et,
         onClose: en
-    } = r.useMemo(
+    } = a.useMemo(
         () =>
             (function (e) {
-                let { guildEvent: t, stageInstance: n, activeChannel: i, canConnect: a, myRole: r, eventCreator: l, speakers: o, listenerCount: c, isEventNoticeHidden: d, isStageNoticeHidden: _, isStudyRoomNotice: E } = e,
-                    m = null != n && null != i && !_,
-                    g = null != t ? (0, N.DK)(t) : null;
-                if (E && null != i) {
-                    let e = (0, h.KS)(i);
+                let { guildEvent: t, stageInstance: n, activeChannel: i, canConnect: r, myRole: a, eventCreator: s, speakers: o, listenerCount: c, isEventNoticeHidden: d, isStageNoticeHidden: h, isStudyRoomNotice: m } = e,
+                    g = null != n && null != i && !h,
+                    E = null != t ? (0, N.DK)(t) : null;
+                if (m && null != i) {
+                    let e = (0, p.KS)(i);
                     return {
                         noticeType: 3,
                         title: '\uD83D\uDCDA\u2615 '.concat(i.name),
-                        location: U.Z.Messages.HUB_STUDY_ROOM_VOICE_CHANNEL_TOOLTIP,
+                        location: w.intl.string(w.t.LZA6NT),
                         locationIcon:
                             null != e
-                                ? (0, s.jsx)(e, {
+                                ? (0, l.jsx)(e, {
                                       size: 'xs',
                                       color: 'currentColor',
-                                      className: G.locationIcon
+                                      className: k.locationIcon
                                   })
                                 : null,
-                        canListenIn: a,
-                        buttonText: U.Z.Messages.HUB_STUDY_ROOM_NOTICE_VOICE_CTA,
+                        canListenIn: r,
+                        buttonText: w.intl.string(w.t.wBoE6O),
                         users: [],
                         overflowUsers: null
                     };
                 }
                 if (null == t || d) {
-                    if (m) {
-                        let e = U.Z.Messages.STAGE_CHANNEL_JOIN_BUTTON;
+                    if (g) {
+                        let e = w.intl.string(w.t.ZYO5OD);
                         return (
-                            (null == r ? void 0 : r.speaker) ? (e = U.Z.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON) : null != r && (e = U.Z.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON),
+                            (null == a ? void 0 : a.speaker) ? (e = w.intl.string(w.t['/cnSFR'])) : null != a && (e = w.intl.string(w.t.btSGOj)),
                             {
                                 noticeType: 0,
                                 title: n.topic,
                                 location: i.name,
-                                locationIcon: (0, s.jsx)(u.StageIcon, {
+                                locationIcon: (0, l.jsx)(u.StageIcon, {
                                     size: 'custom',
                                     color: 'currentColor',
                                     width: 16,
                                     height: 16,
-                                    className: G.locationIcon
+                                    className: k.locationIcon
                                 }),
-                                canListenIn: a,
+                                canListenIn: r,
                                 buttonText: e,
-                                onClose: () => (0, p.ji)({ stageId: null == n ? void 0 : n.id }),
+                                onClose: () => (0, _.ji)({ stageId: null == n ? void 0 : n.id }),
                                 users: o.length > 5 ? o.slice(0, 5) : o,
                                 overflowUsers:
                                     c < 1
                                         ? null
-                                        : (0, s.jsxs)('div', {
-                                              className: G.pill,
+                                        : (0, l.jsxs)('div', {
+                                              className: k.pill,
                                               children: [
-                                                  (0, s.jsx)(u.HeadphonesIcon, {
+                                                  (0, l.jsx)(u.HeadphonesIcon, {
                                                       size: 'custom',
                                                       color: 'currentColor',
                                                       width: 12,
                                                       height: 12,
-                                                      className: G.pillIcon
+                                                      className: k.pillIcon
                                                   }),
-                                                  (0, s.jsx)(u.Text, {
+                                                  (0, l.jsx)(u.Text, {
                                                       variant: 'text-xs/medium',
                                                       color: 'header-secondary',
-                                                      className: G.pillLabel,
+                                                      className: k.pillLabel,
                                                       children: c
                                                   })
                                               ]
@@ -145,42 +145,42 @@ function w(e) {
                         );
                     }
                 } else {
-                    if (t.entity_type === j.WX.STAGE_INSTANCE && m) {
-                        let e = U.Z.Messages.STAGE_CHANNEL_JOIN_BUTTON;
+                    if (t.entity_type === M.WX.STAGE_INSTANCE && g) {
+                        let e = w.intl.string(w.t.ZYO5OD);
                         return (
-                            (null == r ? void 0 : r.speaker) ? (e = U.Z.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON) : null != r && (e = U.Z.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON),
+                            (null == a ? void 0 : a.speaker) ? (e = w.intl.string(w.t['/cnSFR'])) : null != a && (e = w.intl.string(w.t.btSGOj)),
                             {
                                 noticeType: 0,
                                 title: n.topic,
                                 location: i.name,
-                                locationIcon: (0, s.jsx)(u.StageIcon, {
+                                locationIcon: (0, l.jsx)(u.StageIcon, {
                                     size: 'custom',
                                     color: 'currentColor',
                                     width: 16,
                                     height: 16,
-                                    className: G.locationIcon
+                                    className: k.locationIcon
                                 }),
-                                canListenIn: a,
+                                canListenIn: r,
                                 buttonText: e,
-                                onClose: () => (0, p.ji)({ stageId: null == n ? void 0 : n.id }),
+                                onClose: () => (0, _.ji)({ stageId: null == n ? void 0 : n.id }),
                                 users: o.length > 5 ? o.slice(0, 5) : o,
                                 overflowUsers:
                                     c < 1
                                         ? null
-                                        : (0, s.jsxs)('div', {
-                                              className: G.pill,
+                                        : (0, l.jsxs)('div', {
+                                              className: k.pill,
                                               children: [
-                                                  (0, s.jsx)(u.HeadphonesIcon, {
+                                                  (0, l.jsx)(u.HeadphonesIcon, {
                                                       size: 'custom',
                                                       color: 'currentColor',
                                                       width: 12,
                                                       height: 12,
-                                                      className: G.pillIcon
+                                                      className: k.pillIcon
                                                   }),
-                                                  (0, s.jsx)(u.Text, {
+                                                  (0, l.jsx)(u.Text, {
                                                       variant: 'text-xs/medium',
                                                       color: 'header-secondary',
-                                                      className: G.pillLabel,
+                                                      className: k.pillLabel,
                                                       children: c
                                                   })
                                               ]
@@ -188,83 +188,83 @@ function w(e) {
                             }
                         );
                     }
-                    if (t.entity_type === j.WX.EXTERNAL) {
-                        let e = (0, f.cS)(t);
+                    if (t.entity_type === M.WX.EXTERNAL) {
+                        let e = (0, S.cS)(t);
                         if (null == e) return { noticeType: null };
-                        let n = I.ZP.getUserCount(t.id, g);
+                        let n = f.ZP.getUserCount(t.id, E);
                         return {
                             noticeType: 1,
                             title: t.name,
-                            location: (0, T.m)(e, !0),
-                            locationIcon: (0, s.jsx)(u.LocationIcon, {
+                            location: (0, I.m)(e, !0),
+                            locationIcon: (0, l.jsx)(u.LocationIcon, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 16,
                                 height: 16,
-                                className: G.locationIcon
+                                className: k.locationIcon
                             }),
                             canListenIn: !1,
-                            buttonText: U.Z.Messages.GUILD_EVENT_DETAILS_INFO_TAB_TITLE,
-                            onClose: () => (0, p.ji)({ eventId: null == t ? void 0 : t.id }),
-                            users: null == l ? [] : [l],
+                            buttonText: w.intl.string(w.t.iW6Xur),
+                            onClose: () => (0, _.ji)({ eventId: null == t ? void 0 : t.id }),
+                            users: null == s ? [] : [s],
                             overflowUsers:
                                 n < 1
                                     ? null
-                                    : (0, s.jsxs)('div', {
-                                          className: G.pill,
+                                    : (0, l.jsxs)('div', {
+                                          className: k.pill,
                                           children: [
-                                              (0, s.jsx)(u.StarIcon, {
+                                              (0, l.jsx)(u.StarIcon, {
                                                   size: 'custom',
                                                   color: 'currentColor',
                                                   width: 12,
                                                   height: 12,
-                                                  className: G.pillIcon
+                                                  className: k.pillIcon
                                               }),
-                                              (0, s.jsx)(u.Text, {
+                                              (0, l.jsx)(u.Text, {
                                                   variant: 'text-xs/medium',
                                                   color: 'header-secondary',
-                                                  className: G.pillLabel,
+                                                  className: k.pillLabel,
                                                   children: n
                                               })
                                           ]
                                       })
                         };
-                    } else if (t.entity_type === j.WX.VOICE && null != i) {
-                        let e = (0, h.KS)(i),
-                            n = I.ZP.getUserCount(t.id, g);
+                    } else if (t.entity_type === M.WX.VOICE && null != i) {
+                        let e = (0, p.KS)(i),
+                            n = f.ZP.getUserCount(t.id, E);
                         return {
                             noticeType: 2,
                             title: t.name,
                             location: i.name,
                             locationIcon:
                                 null != e
-                                    ? (0, s.jsx)(e, {
+                                    ? (0, l.jsx)(e, {
                                           size: 'xs',
                                           color: 'currentColor',
-                                          className: G.locationIcon
+                                          className: k.locationIcon
                                       })
                                     : null,
-                            canListenIn: a,
-                            buttonText: U.Z.Messages.GUILD_EVENT_JOIN,
-                            onClose: () => (0, p.ji)({ eventId: null == t ? void 0 : t.id }),
-                            users: null == l ? [] : [l],
+                            canListenIn: r,
+                            buttonText: w.intl.string(w.t.nxUtoa),
+                            onClose: () => (0, _.ji)({ eventId: null == t ? void 0 : t.id }),
+                            users: null == s ? [] : [s],
                             overflowUsers:
                                 n < 1
                                     ? null
-                                    : (0, s.jsxs)('div', {
-                                          className: G.pill,
+                                    : (0, l.jsxs)('div', {
+                                          className: k.pill,
                                           children: [
-                                              (0, s.jsx)(u.StarIcon, {
+                                              (0, l.jsx)(u.StarIcon, {
                                                   size: 'custom',
                                                   color: 'currentColor',
                                                   width: 12,
                                                   height: 12,
-                                                  className: G.pillIcon
+                                                  className: k.pillIcon
                                               }),
-                                              (0, s.jsx)(u.Text, {
+                                              (0, l.jsx)(u.Text, {
                                                   variant: 'text-xs/medium',
                                                   color: 'header-secondary',
-                                                  className: G.pillLabel,
+                                                  className: k.pillLabel,
                                                   children: n
                                               })
                                           ]
@@ -274,76 +274,76 @@ function w(e) {
                 }
                 return { noticeType: null };
             })({
-                guildEvent: a,
-                stageInstance: l,
+                guildEvent: r,
+                stageInstance: s,
                 activeChannel: i,
                 canConnect: F,
-                myRole: Y,
+                myRole: z,
                 eventCreator: W,
                 speakers: H,
                 listenerCount: V,
-                isEventNoticeHidden: k,
-                isStageNoticeHidden: w,
+                isEventNoticeHidden: G,
+                isStageNoticeHidden: U,
                 isStudyRoomNotice: n
             }),
-        [a, l, i, F, Y, W, H, V, k, w, n]
+        [r, s, i, F, z, W, H, V, G, U, n]
     );
     return null == K
         ? null
-        : (0, s.jsxs)('div', {
-              className: G.container,
+        : (0, l.jsxs)('div', {
+              className: k.container,
               children: [
                   null != en
-                      ? (0, s.jsx)(u.Clickable, {
+                      ? (0, l.jsx)(u.Clickable, {
                             onClick: en,
-                            className: G.close,
-                            'aria-label': U.Z.Messages.DISMISS,
-                            children: (0, s.jsx)(u.XSmallIcon, {
+                            className: k.close,
+                            'aria-label': w.intl.string(w.t.WAI6xs),
+                            children: (0, l.jsx)(u.XSmallIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: G.closeIcon
+                                className: k.closeIcon
                             })
                         })
                       : null,
-                  (0, s.jsxs)('div', {
-                      className: G.header,
+                  (0, l.jsxs)('div', {
+                      className: k.header,
                       children: [
-                          (0, s.jsx)(D.Z, {
+                          (0, l.jsx)(j.Z, {
                               color: d.Z.unsafe_rawColors.GREEN_230.css,
                               width: 16,
                               height: 16
                           }),
-                          (0, s.jsx)(u.Text, {
+                          (0, l.jsx)(u.Text, {
                               variant: 'text-xs/semibold',
                               color: 'text-positive',
-                              children: U.Z.Messages.LIVE
+                              children: w.intl.string(w.t.dI3q4u)
                           })
                       ]
                   }),
                   (ee.length > 0 || null != et) &&
-                      (0, s.jsxs)('div', {
-                          className: G.participants,
+                      (0, l.jsxs)('div', {
+                          className: k.participants,
                           children: [
                               ee.map((e) =>
-                                  (0, s.jsx)(
+                                  (0, l.jsx)(
                                       u.Popout,
                                       {
-                                          preload: () => (0, x.Z)(e, { guildId: t.id }),
+                                          preload: () => (0, L.Z)(e, { guildId: t.id }),
                                           renderPopout: (n) =>
-                                              (0, s.jsx)(b.Z, {
+                                              (0, l.jsx)(R.Z, {
                                                   ...n,
                                                   userId: e.id,
                                                   guildId: t.id,
-                                                  newAnalyticsLocations: [E.Z.AVATAR]
+                                                  newAnalyticsLocations: [m.Z.AVATAR]
                                               }),
                                           position: 'right',
                                           children: (n) =>
-                                              (0, s.jsx)(u.Avatar, {
+                                              (0, l.jsx)(u.Avatar, {
                                                   ...n,
                                                   src: e.getAvatarURL(t.id, 24),
                                                   'aria-label': e.username,
                                                   size: u.AvatarSizes.SIZE_24,
-                                                  className: G.avatar
+                                                  className: k.avatar
                                               })
                                       },
                                       e.id
@@ -352,36 +352,36 @@ function w(e) {
                               et
                           ]
                       }),
-                  (0, s.jsx)(u.Text, {
+                  (0, l.jsx)(u.Text, {
                       variant: 'text-md/medium',
                       color: 'header-primary',
-                      className: o()(G.title, G.live),
+                      className: o()(k.title, k.live),
                       children: q
                   }),
-                  (0, s.jsxs)('div', {
-                      className: G.locationContainer,
+                  (0, l.jsxs)('div', {
+                      className: k.locationContainer,
                       children: [
-                          X,
-                          (0, s.jsx)(u.Text, {
+                          Q,
+                          (0, l.jsx)(u.Text, {
                               variant: 'text-xs/normal',
                               color: 'text-muted',
-                              className: G.location,
-                              children: Q
+                              className: k.location,
+                              children: X
                           })
                       ]
                   }),
                   J || 1 === K
-                      ? (0, s.jsx)(u.Button, {
+                      ? (0, l.jsx)(u.Button, {
                             size: u.Button.Sizes.SMALL,
                             color: u.Button.Colors.GREEN,
                             onClick: () => {
-                                if (J) null != i && null != i.getGuildId() && ((0, v.Cq)(i), (0, A.XU)(i.getGuildId(), i.id));
+                                if (J) null != i && null != i.getGuildId() && ((0, x.Cq)(i), (0, T.XU)(i.getGuildId(), i.id));
                                 else {
-                                    if (null == a) return;
-                                    (0, m.bO)({ eventId: a.id });
+                                    if (null == r) return;
+                                    (0, g.bO)({ eventId: r.id });
                                 }
                             },
-                            className: G.button,
+                            className: k.button,
                             fullWidth: !0,
                             children: $
                         })

@@ -1,34 +1,34 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return a;
     }
 }),
     n(47120);
-var s = n(192379),
-    a = n(392711),
-    i = n(236413),
-    r = n(422303);
-function l(e) {
+var i = n(192379),
+    r = n(392711),
+    l = n(236413),
+    s = n(422303);
+function a(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
         n = arguments.length > 2 ? arguments[2] : void 0,
-        [l, o] = s.useState((0, r.se)(t)),
+        [a, o] = i.useState((0, s.se)(t)),
         { errorMessage: c, handleValidateKeywords: d } = (function (e) {
-            let [t, n] = s.useState(null),
-                r = s.useRef(null);
+            let [t, n] = i.useState(null),
+                s = i.useRef(null);
             return {
                 errorMessage: t,
-                handleValidateKeywords: s.useCallback(
+                handleValidateKeywords: i.useCallback(
                     () =>
-                        (0, a.debounce)(
+                        (0, r.debounce)(
                             (t) => {
-                                clearTimeout(r.current),
-                                    (r.current = setTimeout(() => {
+                                clearTimeout(s.current),
+                                    (s.current = setTimeout(() => {
                                         try {
-                                            (0, i.km)(t, e), n(null);
+                                            (0, l.km)(t, e), n(null);
                                         } catch (e) {
                                             n(e.message);
                                         }
-                                        clearTimeout(r.current);
+                                        clearTimeout(s.current);
                                     }, 500));
                             },
                             300,
@@ -41,16 +41,16 @@ function l(e) {
                 )
             };
         })(n),
-        u = s.useCallback((e) => (0 !== e.length && (0, r.kU)(e) ? (0, r.se)((0, r.Ac)(e)) : e), []);
+        u = i.useCallback((e) => (0 !== e.length && (0, s.kU)(e) ? (0, s.se)((0, s.Ac)(e)) : e), []);
     return {
-        value: l,
+        value: a,
         errorMessage: c,
-        onChange: s.useCallback(
+        onChange: i.useCallback(
             (t) => {
                 let n = t.currentTarget.value;
                 'insertFromPaste' === t.nativeEvent.inputType && (n = u(n));
-                let s = (0, r.Ac)(n);
-                o(n), e(s), d()(s);
+                let i = (0, s.Ac)(n);
+                o(n), e(i), d()(i);
             },
             [d, u, e]
         )

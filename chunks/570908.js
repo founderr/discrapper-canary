@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = n(200651);
@@ -8,18 +8,18 @@ n(192379);
 var l = n(120356),
     r = n.n(l),
     a = n(609415);
-function s(e) {
-    let { selected: t, muted: n = !1, highlighted: l = !1, wrapContent: s = !1, avatar: o, decorators: c, name: u, subText: d, avatarClassName: h, innerClassName: p } = e;
+function o(e) {
+    let { selected: t, muted: n = !1, highlighted: l = !1, wrapContent: o = !1, avatar: s, decorators: c, name: u, subText: d, avatarClassName: h, innerClassName: p } = e;
     return (0, i.jsxs)('div', {
         className: r()(p, a.layout, {
             [a.muted]: !t && n,
             [a.highlighted]: l,
-            [a.wrappedLayout]: s
+            [a.wrappedLayout]: o
         }),
         children: [
             (0, i.jsx)('div', {
                 className: r()(a.avatar, h),
-                children: o
+                children: s
             }),
             (0, i.jsxs)('div', {
                 className: a.content,
@@ -28,7 +28,7 @@ function s(e) {
                         className: a.nameAndDecorators,
                         children: [
                             (0, i.jsx)('div', {
-                                className: r()(a.name, { [a.wrappedName]: s }),
+                                className: r()(a.name, { [a.wrappedName]: o }),
                                 children: u
                             }),
                             c

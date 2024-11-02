@@ -1,33 +1,33 @@
-n.d(s, {
+e.d(n, {
     W: function () {
-        return i;
+        return a;
     },
     Z: function () {
-        return E;
+        return c;
     }
 });
-var t = n(200651);
-n(192379);
-var o = n(120356),
-    a = n.n(o),
-    l = n(481060),
-    r = n(915938);
-let i = {
+var i = e(200651);
+e(192379);
+var s = e(120356),
+    l = e.n(s),
+    o = e(481060),
+    r = e(915938);
+let a = {
     RED: r.redMessageBlock,
     YELLOW: r.yellowMessageBlock,
     BROWN: r.brownMessageBlock
 };
-function E(e) {
-    let { color: s, icon: n, children: o, className: i } = e;
-    return (0, t.jsx)(l.FormErrorBlock, {
-        icon: (e) =>
-            (0, t.jsx)(n, {
+function c(t) {
+    let { color: n, icon: e, children: s, className: a } = t;
+    return (0, i.jsx)(o.FormErrorBlock, {
+        icon: (t) =>
+            (0, i.jsx)(e, {
                 height: 20,
                 width: 20,
-                ...e
+                ...t
             }),
         iconClassName: r.messageBlockIcon,
-        className: a()(s, i),
-        children: o
+        className: l()(n, a),
+        children: s
     });
 }

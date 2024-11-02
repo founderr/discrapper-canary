@@ -26,13 +26,13 @@ var r = n(384111),
     d = r.define('Validity', function () {
         this.seq().obj(this.key('notBefore').use(i), this.key('notAfter').use(i));
     }),
-    _ = r.define('Extension', function () {
+    f = r.define('Extension', function () {
         this.seq().obj(this.key('extnID').objid(), this.key('critical').bool().def(!1), this.key('extnValue').octstr());
     }),
-    E = r.define('TBSCertificate', function () {
-        this.seq().obj(this.key('version').explicit(0).int().optional(), this.key('serialNumber').int(), this.key('signature').use(s), this.key('issuer').use(c), this.key('validity').use(d), this.key('subject').use(c), this.key('subjectPublicKeyInfo').use(o), this.key('issuerUniqueID').implicit(1).bitstr().optional(), this.key('subjectUniqueID').implicit(2).bitstr().optional(), this.key('extensions').explicit(3).seqof(_).optional());
+    _ = r.define('TBSCertificate', function () {
+        this.seq().obj(this.key('version').explicit(0).int().optional(), this.key('serialNumber').int(), this.key('signature').use(s), this.key('issuer').use(c), this.key('validity').use(d), this.key('subject').use(c), this.key('subjectPublicKeyInfo').use(o), this.key('issuerUniqueID').implicit(1).bitstr().optional(), this.key('subjectUniqueID').implicit(2).bitstr().optional(), this.key('extensions').explicit(3).seqof(f).optional());
     }),
-    f = r.define('X509Certificate', function () {
-        this.seq().obj(this.key('tbsCertificate').use(E), this.key('signatureAlgorithm').use(s), this.key('signatureValue').bitstr());
+    h = r.define('X509Certificate', function () {
+        this.seq().obj(this.key('tbsCertificate').use(_), this.key('signatureAlgorithm').use(s), this.key('signatureValue').bitstr());
     });
-e.exports = f;
+e.exports = h;

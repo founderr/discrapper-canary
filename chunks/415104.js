@@ -1,43 +1,43 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return g;
     }
 }),
     n(47120);
 var o = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
-    l = n(617136),
-    i = n(113434),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    i = n(617136),
+    l = n(113434),
     c = n(497505),
     d = n(602667),
     u = n(439826),
     p = n(43779),
     m = n(981631),
     x = n(968470);
-function C(e) {
-    let { quest: t, className: n, questContent: r, contentPosition: C, rowIndex: _ } = e,
-        [g, f] = s.useState(!1),
-        [h, E] = s.useState([]),
-        S = (0, i.qb)(t),
-        T = s.useCallback(() => {
-            f(!0),
-                (0, l.dA)({
+function g(e) {
+    let { quest: t, className: n, questContent: s, contentPosition: g, rowIndex: f } = e,
+        [h, C] = r.useState(!1),
+        [v, j] = r.useState([]),
+        _ = (0, l.qb)(t),
+        E = r.useCallback(() => {
+            C(!0),
+                (0, i.dA)({
                     questId: t.id,
                     event: m.rMx.QUEST_HOVER,
-                    properties: (0, l.mH)(r)
+                    properties: (0, i.mH)(s)
                 });
-        }, [f, r, t.id]),
-        v = s.useCallback(() => {
-            f(!1);
-        }, [f]);
+        }, [C, s, t.id]),
+        b = r.useCallback(() => {
+            C(!1);
+        }, [C]);
     return (0, o.jsx)(d.A, {
         questOrQuests: t,
-        questContent: r,
-        questContentPosition: C,
-        questContentRowIndex: _,
-        trackGuildAndChannelMetadata: r === c.jn.QUESTS_EMBED,
+        questContent: s,
+        questContentPosition: g,
+        questContentRowIndex: f,
+        trackGuildAndChannelMetadata: s === c.jn.QUESTS_EMBED,
         children: (e) =>
             (0, o.jsxs)('div', {
                 id: 'quest-tile-'.concat(t.id),
@@ -45,22 +45,22 @@ function C(e) {
                     e.current = t;
                 },
                 className: a()(x.container, n),
-                onMouseEnter: T,
-                onMouseLeave: v,
+                onMouseEnter: E,
+                onMouseLeave: b,
                 children: [
                     (0, o.jsx)(u.Z, {
                         quest: t,
-                        isHovering: g,
-                        errorHints: h,
-                        warningHints: S
+                        isHovering: h,
+                        errorHints: v,
+                        warningHints: _
                     }),
                     (0, o.jsx)(p.Z, {
                         quest: t,
-                        questContent: r,
-                        isHovering: g,
-                        contentPosition: C,
-                        rowIndex: _,
-                        onReceiveErrorHints: E
+                        questContent: s,
+                        isHovering: h,
+                        contentPosition: g,
+                        rowIndex: f,
+                        onReceiveErrorHints: j
                     })
                 ]
             })

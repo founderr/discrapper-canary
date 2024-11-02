@@ -11,40 +11,40 @@ var r = n(200651),
     o = n(958920);
 let l = i.forwardRef(function (e, t) {
     var n, l;
-    let { children: u, disabled: c = !1, className: d, titleClassName: _, tag: E = 'h5', required: f = !1, style: h, title: p, error: I, ...m } = e,
-        T = i.useId(),
-        S = i.useId(),
-        g = null !== (n = m.titleId) && void 0 !== n ? n : T,
-        A = null != I ? (null !== (l = m.errorId) && void 0 !== l ? l : S) : void 0,
-        [N, R] = i.useState(void 0),
-        [O, v] = i.useState(void 0),
-        C = void 0 !== O;
+    let { children: u, disabled: c = !1, className: d, titleClassName: f, tag: _ = 'h5', required: h = !1, style: p, title: m, error: g, ...E } = e,
+        v = i.useId(),
+        I = i.useId(),
+        S = null !== (n = E.titleId) && void 0 !== n ? n : v,
+        T = null != g ? (null !== (l = E.errorId) && void 0 !== l ? l : I) : void 0,
+        [b, y] = i.useState(void 0),
+        [A, N] = i.useState(void 0),
+        C = void 0 !== A;
     return (0, r.jsx)('div', {
         ref: t,
         className: null != d ? d : void 0,
-        style: null != h ? h : void 0,
+        style: null != p ? p : void 0,
         children: (0, r.jsx)(a.ol, {
-            titleId: g,
-            errorId: A,
-            error: null != I ? I : void 0,
-            isFocused: N,
-            setIsFocused: R,
-            hasValue: O,
-            setHasValue: v,
+            titleId: S,
+            errorId: T,
+            error: null != g ? g : void 0,
+            isFocused: b,
+            setIsFocused: y,
+            hasValue: A,
+            setHasValue: N,
             children: (0, r.jsxs)('div', {
                 className: C ? o.fieldWrapper : void 0,
                 children: [
-                    null != p || null != I
+                    null != m || null != g
                         ? (0, r.jsx)(s.v, {
-                              tag: E,
+                              tag: _,
                               disabled: c,
-                              required: f,
-                              error: I,
-                              className: _,
-                              id: g,
-                              errorId: A,
-                              ...m,
-                              children: p
+                              required: h,
+                              error: g,
+                              className: f,
+                              id: S,
+                              errorId: T,
+                              ...E,
+                              children: m
                           })
                         : null,
                     u

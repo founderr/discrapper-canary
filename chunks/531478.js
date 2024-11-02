@@ -33,9 +33,9 @@ n(
     n(
         'ERR_INVALID_ARG_TYPE',
         function (e, t, n) {
-            if ('string' == typeof t && ((i = 'not '), t.substr(0, i.length) === i)) (_ = 'must not be'), (t = t.replace(/^not /, ''));
-            else _ = 'must be';
-            if (((s = e), (o = ' argument'), (void 0 === l || l > s.length) && (l = s.length), s.substring(l - o.length, l) === o)) E = 'The '.concat(e, ' ').concat(_, ' ').concat(r(t, 'type'));
+            if ('string' == typeof t && ((i = 'not '), t.substr(0, i.length) === i)) (f = 'must not be'), (t = t.replace(/^not /, ''));
+            else f = 'must be';
+            if (((s = e), (o = ' argument'), (void 0 === l || l > s.length) && (l = s.length), s.substring(l - o.length, l) === o)) _ = 'The '.concat(e, ' ').concat(f, ' ').concat(r(t, 'type'));
             else {
                 var i,
                     a,
@@ -45,12 +45,12 @@ n(
                     u,
                     c,
                     d,
+                    f,
                     _,
-                    E,
-                    f = ((u = e), (c = '.'), 'number' != typeof d && (d = 0), d + 1 > u.length || -1 === u.indexOf(c, d)) ? 'argument' : 'property';
-                E = 'The "'.concat(e, '" ').concat(f, ' ').concat(_, ' ').concat(r(t, 'type'));
+                    h = ((u = e), (c = '.'), 'number' != typeof d && (d = 0), d + 1 > u.length || -1 === u.indexOf(c, d)) ? 'argument' : 'property';
+                _ = 'The "'.concat(e, '" ').concat(h, ' ').concat(f, ' ').concat(r(t, 'type'));
             }
-            return (E += '. Received type '.concat(typeof n));
+            return (_ += '. Received type '.concat(typeof n));
         },
         TypeError
     ),

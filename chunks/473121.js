@@ -3,14 +3,14 @@ var r = n(200651),
     a = n(481060),
     s = n(454585),
     o = n(273744),
-    l = n(689938),
+    l = n(388032),
     u = n(476915);
 t.Z = (e) => {
     let {
             node: { header: t, subheader: n, button: c }
         } = e,
         d = (null == c ? void 0 : c.type) === 'submit',
-        _ = i.useRef(
+        f = i.useRef(
             s.Z.reactParserFor({
                 ...s.Z.defaultRules,
                 link: o.s
@@ -30,13 +30,13 @@ t.Z = (e) => {
                 ? (0, r.jsx)(a.Text, {
                       variant: 'text-md/normal',
                       color: 'header-secondary',
-                      children: _.current(n)
+                      children: f.current(n)
                   })
                 : null,
             d &&
                 (0, r.jsx)(a.Text, {
                     variant: 'text-sm/normal',
-                    children: l.Z.Messages.MOBILE_REPORTS_SUBMIT_INFO_TEXT.format()
+                    children: l.intl.format(l.t.Q0tSKS, {})
                 })
         ]
     });

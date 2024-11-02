@@ -7,47 +7,47 @@ var r = n(200651),
     u = n(85235),
     c = n(367907),
     d = n(998698),
-    _ = n(895924),
-    E = n(588468),
-    f = n(600164),
-    h = n(718745),
-    p = n(590921),
-    I = n(665692),
-    m = n(981631),
-    T = n(689938),
-    S = n(243450);
-let g = {
+    f = n(895924),
+    _ = n(588468),
+    h = n(600164),
+    p = n(718745),
+    m = n(590921),
+    g = n(665692),
+    E = n(981631),
+    v = n(388032),
+    I = n(243450);
+let S = {
     results: {
         command: null,
         integrations: [],
         isLoading: !1
     }
 };
-function A(e, t, n) {
+function T(e, t, n) {
     var r, i;
     let a;
     return (
-        n.commands === p.L8.OLD_BUILT_INS ? ((a = t.split(' ')[0].substring(I.GI.length)), (t = t.substring((null !== (r = a.length) && void 0 !== r ? r : 0) + I.GI.length))) : (a = null === (i = d.Z.getActiveCommand(e.id)) || void 0 === i ? void 0 : i.untranslatedName),
+        n.commands === m.L8.OLD_BUILT_INS ? ((a = t.split(' ')[0].substring(g.GI.length)), (t = t.substring((null !== (r = a.length) && void 0 !== r ? r : 0) + g.GI.length))) : (a = null === (i = d.Z.getActiveCommand(e.id)) || void 0 === i ? void 0 : i.untranslatedName),
         {
             command: a,
             query: t.trim()
         }
     );
 }
-let N = {
-    stores: [d.Z, h.Z],
+let b = {
+    stores: [d.Z, p.Z],
     matches(e, t, n, r, i) {
         var a;
-        return i.commands !== p.L8.DISABLED && (i.commands === p.L8.OLD_BUILT_INS ? n.startsWith(I.GI + 'gif') || n.startsWith(I.GI + 'tenor') : (null === (a = d.Z.getActiveCommand(e.id)) || void 0 === a ? void 0 : a.integrationType) === m.q9n.GIF && d.Z.getOptionStates(e.id).query.hasValue);
+        return i.commands !== m.L8.DISABLED && (i.commands === m.L8.OLD_BUILT_INS ? n.startsWith(g.GI + 'gif') || n.startsWith(g.GI + 'tenor') : (null === (a = d.Z.getActiveCommand(e.id)) || void 0 === a ? void 0 : a.integrationType) === E.q9n.GIF && d.Z.getOptionStates(e.id).query.hasValue);
     },
     queryResults(e, t, n, r, i) {
-        let { command: a, query: o } = A(e, n, r);
-        if (null == a) return g;
-        let l = s().findKey(m.nkL, (e) => e.command === a);
+        let { command: a, query: o } = T(e, n, r);
+        if (null == a) return S;
+        let l = s().findKey(E.nkL, (e) => e.command === a);
         i && null != l && o.length > 0 && u.Z.search(l, o);
-        let c = h.Z.getResults(l, o);
+        let c = p.Z.getResults(l, o);
         return null == c
-            ? g
+            ? S
             : {
                   results: {
                       command: a,
@@ -64,28 +64,28 @@ let N = {
                 query: l,
                 options: u,
                 onHover: c,
-                onClick: _
+                onClick: f
             } = e,
-            { command: h, query: I } = A(s, l, u);
-        if (null == h || 0 === I.length) return null;
+            { command: p, query: g } = T(s, l, u);
+        if (null == p || 0 === g.length) return null;
         if (n)
             return (0, r.jsx)(o.Spinner, {
-                className: S.spinner,
+                className: I.spinner,
                 type: o.Spinner.Type.SPINNING_CIRCLE
             });
         if (null != t) {
-            var g, N;
+            var S, b;
             let e = !1,
                 n = t.map((t, n) => {
-                    if (t.type === m.q9n.GIF) {
+                    if (t.type === E.q9n.GIF) {
                         var i, s, o;
                         return (
                             (e = !0),
                             (0, r.jsx)(
-                                E.ZP.GIFIntegration,
+                                _.ZP.GIFIntegration,
                                 {
-                                    className: S.horizontalAutocomplete,
-                                    onClick: _,
+                                    className: I.horizontalAutocomplete,
+                                    onClick: f,
                                     onHover: c,
                                     selected: a === n,
                                     index: n,
@@ -99,24 +99,24 @@ let N = {
                         );
                     }
                 }),
-                o = u.commands === p.L8.OLD_BUILT_INS ? h : null !== (N = null === (g = d.Z.getActiveCommand(s.id)) || void 0 === g ? void 0 : g.integrationTitle) && void 0 !== N ? N : h,
+                o = u.commands === m.L8.OLD_BUILT_INS ? p : null !== (b = null === (S = d.Z.getActiveCommand(s.id)) || void 0 === S ? void 0 : S.integrationTitle) && void 0 !== b ? b : p,
                 l =
-                    I.length > 0 && null != o
-                        ? T.Z.Messages.CONTENT_MATCHING.format({
-                              query: I,
+                    g.length > 0 && null != o
+                        ? v.intl.format(v.t['3njXz8'], {
+                              query: g,
                               command: o
                           })
                         : null != o
                           ? o
-                          : h;
+                          : p;
             return (0, r.jsxs)(
                 i.Fragment,
                 {
                     children: [
-                        (0, r.jsx)(E.ZP.Title, { title: l }),
+                        (0, r.jsx)(_.ZP.Title, { title: l }),
                         e
-                            ? (0, r.jsx)(f.Z, {
-                                  className: S.horizontalAutocompletes,
+                            ? (0, r.jsx)(h.Z, {
+                                  className: I.horizontalAutocompletes,
                                   children: n
                               })
                             : n
@@ -138,7 +138,7 @@ let N = {
         if (null == t) return { type: null };
         let u = n[r];
         if (
-            (i === p.QB.INSERT
+            (i === m.QB.INSERT
                 ? a.replaceText(
                       (function (e) {
                           return e.meta.url;
@@ -149,15 +149,15 @@ let N = {
                           return e.meta.url;
                       })(u)
                   ),
-            c.ZP.trackWithMetadata(m.rMx.SEARCH_RESULT_SELECTED, {
-                search_type: m.aib.GIF,
+            c.ZP.trackWithMetadata(E.rMx.SEARCH_RESULT_SELECTED, {
+                search_type: E.aib.GIF,
                 index_num: r,
                 source_object: '/'.concat(t)
             }),
-            a.commands !== p.L8.OLD_BUILT_INS)
+            a.commands !== m.L8.OLD_BUILT_INS)
         ) {
             let e = d.Z.getActiveCommand(s.id);
-            (null == e ? void 0 : e.inputType) === _.iw.BUILT_IN_INTEGRATION &&
+            (null == e ? void 0 : e.inputType) === f.iw.BUILT_IN_INTEGRATION &&
                 (l.Z.dispatch({
                     type: 'APPLICATION_COMMAND_USED',
                     context: {
@@ -165,19 +165,19 @@ let N = {
                         guild: o
                     },
                     command: e,
-                    commandOrigin: _.bB.CHAT
+                    commandOrigin: f.bB.CHAT
                 }),
-                c.ZP.trackWithMetadata(m.rMx.APPLICATION_COMMAND_USED, {
+                c.ZP.trackWithMetadata(E.rMx.APPLICATION_COMMAND_USED, {
                     command_id: e.id,
                     application_id: e.applicationId,
                     command_type: e.type,
                     source: d.Z.getSource(s.id)
                 }));
         }
-        return { type: p.z2.GIF };
+        return { type: m.z2.GIF };
     }
 };
-function R(e) {
+function y(e) {
     return e.meta.url;
 }
-t.Z = N;
+t.Z = b;

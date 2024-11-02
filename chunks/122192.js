@@ -1,30 +1,30 @@
-t.d(a, {
+n.d(t, {
     j: function () {
         return u;
     }
 });
-var n = t(200651),
-    s = t(192379),
-    r = t(481060),
-    l = t(462566);
-t(600164);
-var o = t(603421),
-    i = t(689938),
-    c = t(132493);
+var a = n(200651),
+    r = n(192379),
+    l = n(481060),
+    i = n(462566);
+n(600164);
+var s = n(603421),
+    o = n(388032),
+    c = n(132493);
 let u = (e) => {
-    let { billingError: a, onCardInfoChange: t } = e,
-        u = null != a && (null == a.code || (0, o.ly)(a) === o.Rg.CREDIT_CARD_INFORMATION);
-    return (0, n.jsxs)(s.Fragment, {
+    let { billingError: t, onCardInfoChange: n } = e,
+        u = null != t && (null == t.code || (0, s.ly)(t) === s.Rg.CREDIT_CARD_INFORMATION);
+    return (0, a.jsxs)(r.Fragment, {
         children: [
             u
-                ? (0, n.jsx)(r.FormErrorBlock, {
+                ? (0, a.jsx)(l.FormErrorBlock, {
                       className: c.errorBlock,
-                      children: i.Z.Messages.BILLING_ERROR_SECTION_CARD
+                      children: o.intl.string(o.t['4vnhKS'])
                   })
                 : null,
-            (0, n.jsx)(l.Z, {
-                onCardInfoChange: t,
-                error: a
+            (0, a.jsx)(i.Z, {
+                onCardInfoChange: n,
+                error: t
             })
         ]
     });

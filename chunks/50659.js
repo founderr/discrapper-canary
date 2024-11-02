@@ -3,10 +3,10 @@ n.d(t, {
         return c;
     },
     hm: function () {
-        return p;
+        return m;
     },
     py: function () {
-        return h;
+        return p;
     }
 }),
     n(47120);
@@ -54,7 +54,7 @@ function d(e, t) {
     let s = r.substring(i, a),
         u = {};
     return (
-        E({
+        _({
             result: u,
             text: s,
             startIndex: i,
@@ -62,7 +62,7 @@ function d(e, t) {
             type1: 'italics',
             type2: 'bold'
         }),
-        E({
+        _({
             result: u,
             text: s,
             startIndex: i,
@@ -70,27 +70,27 @@ function d(e, t) {
             type1: 'italics',
             type2: 'underline'
         }),
-        _(u, s, i, '**', 'bold'),
-        _(u, s, i, '*', 'italics'),
-        _(u, s, i, '_', 'italics'),
-        _(u, s, i, '__', 'underline'),
-        _(u, s, i, '`', 'inlineCode'),
-        _(u, s, i, '~~', 'strikethrough'),
-        _(u, s, i, '||', 'spoiler'),
+        f(u, s, i, '**', 'bold'),
+        f(u, s, i, '*', 'italics'),
+        f(u, s, i, '_', 'italics'),
+        f(u, s, i, '__', 'underline'),
+        f(u, s, i, '`', 'inlineCode'),
+        f(u, s, i, '~~', 'strikethrough'),
+        f(u, s, i, '||', 'spoiler'),
         u
     );
 }
-function _(e, t, n, r, i) {
-    let a = f(t, r);
+function f(e, t, n, r, i) {
+    let a = h(t, r);
     a >= 0 &&
         (e[i] = {
             chars: r,
             location: n + a
         });
 }
-function E(e) {
+function _(e) {
     let { result: t, text: n, startIndex: r, syntax: i, type1: a, type2: s } = e,
-        o = f(n, i);
+        o = h(n, i);
     o >= 0 &&
         ((t[a] = {
             chars: i.substring(0, 1),
@@ -101,7 +101,7 @@ function E(e) {
             location: o + r + 1
         }));
 }
-function f(e, t) {
+function h(e, t) {
     let n = e.indexOf(t);
     if (n >= 0) {
         let r = t.charAt(0);
@@ -109,7 +109,7 @@ function f(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function p(e, t) {
     a.T.withSingleEntry(e, () => {
         o.bN.withoutNormalizing(e, () => {
             i()(null != e.selection, 'Editor has no selection');
@@ -117,10 +117,10 @@ function h(e, t) {
                 a = c(e, n, r),
                 l = a.before[t],
                 d = a.after[t],
-                _ = o.bN.node(e, n.path),
-                E = o.bN.node(e, r.path);
-            if (null == _ || null == E || !o.LC.isText(_[0]) || !o.LC.isText(E[0])) return;
-            let f = o.C0.equals(_[1], E[1]);
+                f = o.bN.node(e, n.path),
+                _ = o.bN.node(e, r.path);
+            if (null == f || null == _ || !o.LC.isText(f[0]) || !o.LC.isText(_[0])) return;
+            let h = o.C0.equals(f[1], _[1]);
             if (null != l && null != d) {
                 let t = {
                         path: n.path,
@@ -141,7 +141,7 @@ function h(e, t) {
                 let a = n.offset,
                     u = r.offset;
                 !o.Jz.isBefore(n, t) && (a -= l.chars.length),
-                    f && !o.Jz.isBefore(r, t) && (u -= l.chars.length),
+                    h && !o.Jz.isBefore(r, t) && (u -= l.chars.length),
                     o.Jz.isAfter(r, i) && (u -= d.chars.length),
                     s.Q.select(e, {
                         anchor: {
@@ -156,8 +156,8 @@ function h(e, t) {
             } else {
                 let i = u[t];
                 s.Q.insertText(e, i, { at: r }), s.Q.insertText(e, i, { at: n });
-                let a = _[0].text.length + i.length,
-                    o = E[0].text.length + (f ? 2 * i.length : i.length);
+                let a = f[0].text.length + i.length,
+                    o = _[0].text.length + (h ? 2 * i.length : i.length);
                 s.Q.select(e, {
                     anchor: {
                         path: n.path,
@@ -165,7 +165,7 @@ function h(e, t) {
                     },
                     focus: {
                         path: r.path,
-                        offset: Math.min(o, r.offset + (f ? i.length : 0))
+                        offset: Math.min(o, r.offset + (h ? i.length : 0))
                     }
                 });
             }
@@ -173,7 +173,7 @@ function h(e, t) {
     }),
         o.bN.focus(e);
 }
-function p(e, t) {
+function m(e, t) {
     let n = e.selection;
     if (null == n) return;
     let r = !0;

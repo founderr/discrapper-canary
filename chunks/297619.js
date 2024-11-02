@@ -1,20 +1,20 @@
-var a = t(200651);
+var r = t(200651);
 t(192379);
-var r = t(120356),
-    i = t.n(r),
+var a = t(120356),
+    i = t.n(a),
     s = t(481060),
     o = t(246364),
     l = t(700833),
-    c = t(689938),
+    c = t(388032),
     d = t(631403);
 n.Z = function (e) {
     let { addFormField: n, guild: t } = e;
-    return (0, a.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: i()(d.spacingContainer, d.leftRailIconContainer, d.backgroundContainer),
         children: [
-            (0, a.jsx)('div', {
+            (0, r.jsx)('div', {
                 className: d.iconContainer,
-                children: (0, a.jsx)(s.BookCheckIcon, {
+                children: (0, r.jsx)(s.BookCheckIcon, {
                     size: 'custom',
                     color: 'currentColor',
                     width: 18,
@@ -22,21 +22,21 @@ n.Z = function (e) {
                     className: d.icon
                 })
             }),
-            (0, a.jsxs)(s.FormSection, {
+            (0, r.jsxs)(s.FormSection, {
                 children: [
-                    (0, a.jsx)(s.FormTitle, {
+                    (0, r.jsx)(s.FormTitle, {
                         tag: 'h3',
                         className: d.leftRailIconContainerTitle,
-                        children: c.Z.Messages.MEMBER_VERIFICATION_GET_STARTED_TITLE
+                        children: c.intl.string(c.t.qWqnws)
                     }),
-                    (0, a.jsx)(s.FormText, {
+                    (0, r.jsx)(s.FormText, {
                         className: d.leftRailIconContainerDescription,
                         type: s.FormText.Types.DESCRIPTION,
-                        children: c.Z.Messages.MEMBER_VERIFICATION_GET_STARTED_DESCRIPTION
+                        children: c.intl.string(c.t['3+rPkp'])
                     }),
-                    (0, a.jsx)(s.Button, {
+                    (0, r.jsx)(s.Button, {
                         onClick: () => (0, l.Md)(o.QJ.TERMS, n, t),
-                        children: c.Z.Messages.MEMBER_VERIFICATION_GET_STARTED_BUTTON
+                        children: c.intl.string(c.t['5AelkZ'])
                     })
                 ]
             })

@@ -1,16 +1,16 @@
 n(47120);
 var i = n(243814),
-    a = n(846027),
-    s = n(131951),
-    r = n(13140),
-    l = n(996106),
+    r = n(846027),
+    l = n(131951),
+    a = n(13140),
+    s = n(996106),
     o = n(452426),
     c = n(186901),
     d = n(981631),
     u = n(65154);
-function _(e) {
+function h(e) {
     let t = e.application.id;
-    if (null == t) throw new l.Z({ errorCode: d.lTL.INVALID_COMMAND }, 'No application.');
+    if (null == t) throw new s.Z({ errorCode: d.lTL.INVALID_COMMAND }, 'No application.');
     return t;
 }
 t.Z = {
@@ -30,10 +30,10 @@ t.Z = {
         handler(e) {
             let {
                     socket: t,
-                    args: { input_mode: n, self_mute: i, self_deaf: l }
+                    args: { input_mode: n, self_mute: i, self_deaf: s }
                 } = e,
-                o = _(t);
-            null != n && a.Z.setMode(n.type, { shortcut: (0, r.Kd)(n.shortcut) }, o), null != i && i !== s.Z.isSelfMute(o) && a.Z.toggleSelfMute({ context: o }), null != l && l !== s.Z.isSelfDeaf(o) && a.Z.toggleSelfDeaf({ context: o });
+                o = h(t);
+            null != n && r.Z.setMode(n.type, { shortcut: (0, a.Kd)(n.shortcut) }, o), null != i && i !== l.Z.isSelfMute(o) && r.Z.toggleSelfMute({ context: o }), null != s && s !== l.Z.isSelfDeaf(o) && r.Z.toggleSelfDeaf({ context: o });
         }
     },
     [d.Etm.SET_USER_VOICE_SETTINGS_2]: {
@@ -49,10 +49,10 @@ t.Z = {
         handler(e) {
             let {
                     socket: t,
-                    args: { user_id: n, mute: i, volume: r }
+                    args: { user_id: n, mute: i, volume: a }
                 } = e,
-                l = _(t);
-            null != i && i !== s.Z.isLocalMute(n, l) && a.Z.toggleLocalMute(n, l), null != r && a.Z.setLocalVolume(n, r, l);
+                s = h(t);
+            null != i && i !== l.Z.isLocalMute(n, s) && r.Z.toggleLocalMute(n, s), null != a && r.Z.setLocalVolume(n, a, s);
         }
     },
     [d.Etm.PUSH_TO_TALK]: {
@@ -64,7 +64,7 @@ t.Z = {
             let {
                 args: { active: t }
             } = e;
-            if (s.Z.getMode(u.Yn.DEFAULT) === d.pM4.PUSH_TO_TALK) s.Z.getMediaEngine().eachConnection((e) => e.setForceAudioInput(t), u.Yn.DEFAULT);
+            if (l.Z.getMode(u.Yn.DEFAULT) === d.pM4.PUSH_TO_TALK) l.Z.getMediaEngine().eachConnection((e) => e.setForceAudioInput(t), u.Yn.DEFAULT);
         }
     }
 };

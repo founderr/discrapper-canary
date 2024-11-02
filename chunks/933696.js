@@ -1,35 +1,35 @@
-e.r(c),
-    e.d(c, {
+c.r(n),
+    c.d(n, {
         default: function () {
-            return i;
+            return d;
         }
     });
-var n = e(200651);
-e(192379);
-var a = e(98278),
-    s = e(790527),
-    o = e(474936),
-    _ = e(981631),
-    L = e(689938);
-function i(t) {
-    let { onClose: c, source: i, ...r } = t,
-        d = L.Z.Messages.GUILD_IDENTITY_UPSELL_MODAL_BODY.format({
+var e = c(200651);
+c(192379);
+var a = c(98278),
+    o = c(790527),
+    i = c(474936),
+    s = c(981631),
+    r = c(388032);
+function d(t) {
+    let { onClose: n, source: d, ...f } = t,
+        p = r.intl.format(r.t.WMO9pq, {
             onAndMore: function () {
-                c(), (0, a.z)(!0);
+                n(), (0, a.z)(!0);
             }
         });
-    return (0, n.jsx)(s.Z, {
-        artURL: e(102525),
-        type: o.cd.PREMIUM_GUILD_IDENTITY_MODAL,
-        title: L.Z.Messages.GUILD_IDENTITY_UPSELL_MODAL_TITLE,
-        body: d,
-        glowUp: d,
-        analyticsSource: i,
+    return (0, e.jsx)(o.Z, {
+        artURL: c(102525),
+        type: i.cd.PREMIUM_GUILD_IDENTITY_MODAL,
+        title: r.intl.string(r.t.kOEBKC),
+        body: p,
+        glowUp: p,
+        analyticsSource: d,
         analyticsLocation: {
-            section: _.jXE.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_MODAL,
-            object: _.qAy.BUTTON_CTA
+            section: s.jXE.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_MODAL,
+            object: s.qAy.BUTTON_CTA
         },
-        onClose: c,
-        ...r
+        onClose: n,
+        ...f
     });
 }

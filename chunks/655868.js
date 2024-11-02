@@ -1,29 +1,29 @@
-t(47120), t(757143);
-var n = t(200651),
-    a = t(192379),
-    i = t(481060),
-    r = t(218872);
-function o(e, s, t) {
+n(47120), n(757143);
+var i = n(200651),
+    s = n(192379),
+    r = n(481060),
+    l = n(218872);
+function a(e, t, n) {
     return (
-        s in e
-            ? Object.defineProperty(e, s, {
-                  value: t,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[s] = t),
+            : (e[t] = n),
         e
     );
 }
-let l = /[^0-9]/g;
-class c extends a.PureComponent {
+let o = /[^0-9]/g;
+class c extends s.PureComponent {
     componentDidUpdate(e) {
-        let s = this._inputRef;
-        e.value !== this.props.value && null != s && s.setSelectionRange(this.selectionStart, this.selectionStart);
+        let t = this._inputRef;
+        e.value !== this.props.value && null != t && t.setSelectionRange(this.selectionStart, this.selectionStart);
     }
     render() {
-        return (0, n.jsx)(i.TextInput, {
+        return (0, i.jsx)(r.TextInput, {
             ...this.props,
             inputMode: 'numeric',
             onChange: this.handleChange,
@@ -32,20 +32,20 @@ class c extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            o(this, '_inputRef', void 0),
-            o(this, 'selectionStart', 0),
-            o(this, 'setRef', (e) => {
-                let { inputRef: s } = this.props;
-                (this._inputRef = e), null != s && s(e);
+            a(this, '_inputRef', void 0),
+            a(this, 'selectionStart', 0),
+            a(this, 'setRef', (e) => {
+                let { inputRef: t } = this.props;
+                (this._inputRef = e), null != t && t(e);
             }),
-            o(this, 'handleChange', (e, s) => {
-                let { value: t, onChange: n } = this.props,
-                    a = this._inputRef;
-                if (e === t || null == a || null == t) return;
-                let i = (0, r.M)(e),
-                    o = a.selectionStart;
-                i === t && i.length <= 3 && t.includes('/') && !e.includes('/') ? (i = i.replace(l, '')) : i === t && e.includes('/') && !t.includes('/') && (i += '/'), i.length > e.length && (o += i.length - e.length), (this.selectionStart = o), null != n && n(i, s);
+            a(this, 'handleChange', (e, t) => {
+                let { value: n, onChange: i } = this.props,
+                    s = this._inputRef;
+                if (e === n || null == s || null == n) return;
+                let r = (0, l.M)(e),
+                    a = s.selectionStart;
+                r === n && r.length <= 3 && n.includes('/') && !e.includes('/') ? (r = r.replace(o, '')) : r === n && e.includes('/') && !n.includes('/') && (r += '/'), r.length > e.length && (a += r.length - e.length), (this.selectionStart = a), null != i && i(r, t);
             });
     }
 }
-s.Z = c;
+t.Z = c;

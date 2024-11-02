@@ -1,4 +1,4 @@
-t.d(a, {
+n.d(t, {
     F: function () {
         return u;
     },
@@ -6,35 +6,35 @@ t.d(a, {
         return d;
     }
 });
-var n = t(200651);
-t(192379);
-var s = t(512722),
-    r = t.n(s),
-    l = t(481060),
-    o = t(598),
-    i = t(185139),
-    c = t(689938);
+var a = n(200651);
+n(192379);
+var r = n(512722),
+    l = n.n(r),
+    i = n(481060),
+    s = n(598),
+    o = n(185139),
+    c = n(388032);
 let u = (e) => {
-    let { className: a } = e;
-    return (0, n.jsx)(l.FormSection, {
-        className: a,
-        children: (0, n.jsx)(l.FormTitle, { children: c.Z.Messages.PAYMENT_WAITING_FOR_AUTHENTICATION })
+    let { className: t } = e;
+    return (0, a.jsx)(i.FormSection, {
+        className: t,
+        children: (0, a.jsx)(i.FormTitle, { children: c.intl.string(c.t.eALkIS) })
     });
 };
 function d(e) {
-    let { steps: a, currentStep: t, paymentError: s, className: l } = e,
-        { steps: c, step: d, paymentError: E } = (0, o.usePaymentContext)();
+    let { steps: t, currentStep: n, paymentError: r, className: i } = e,
+        { steps: c, step: d, paymentError: m } = (0, s.usePaymentContext)();
     return (
-        (a = null != a ? a : c),
-        null == t && null != d && (t = d),
-        r()(t, 'step should be set'),
-        r()(a, 'step should be set'),
-        (s = null != s ? s : E),
-        (0, n.jsx)(i.Z, {
-            steps: a,
-            currentStep: t,
-            paymentError: s,
-            body: (0, n.jsx)(u, { className: l }),
+        (t = null != t ? t : c),
+        null == n && null != d && (n = d),
+        l()(n, 'step should be set'),
+        l()(t, 'step should be set'),
+        (r = null != r ? r : m),
+        (0, a.jsx)(o.Z, {
+            steps: t,
+            currentStep: n,
+            paymentError: r,
+            body: (0, a.jsx)(u, { className: i }),
             footer: null
         })
     );

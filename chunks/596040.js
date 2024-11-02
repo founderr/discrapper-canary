@@ -4,17 +4,17 @@ n.d(t, {
     }
 });
 var i = n(192379),
-    s = n(566620),
-    a = n(782769),
-    l = n(451576);
-let r = (e) => null != e && '' !== e;
+    l = n(566620),
+    r = n(782769),
+    a = n(451576);
+let s = (e) => null != e && '' !== e;
 function o(e, t) {
-    let n = (0, a.z)(null != t ? t : void 0),
-        o = (0, l.Z)(t),
-        c = r(e) || o;
+    let n = (0, r.z)(null != t ? t : void 0),
+        o = (0, a.Z)(t),
+        c = s(e) || o;
     return (
         i.useEffect(() => {
-            c && n && (0, s.w1)({ guildId: e });
+            c && n && (0, l.w1)({ guildId: e });
         }, [e, n, c]),
         c && n
     );

@@ -1,92 +1,92 @@
-var n = l(200651),
-    s = l(192379),
-    i = l(442837),
+var a = l(200651),
+    i = l(192379),
+    t = l(442837),
     o = l(481060),
-    t = l(271383),
-    r = l(430824),
+    r = l(271383),
+    s = l(430824),
     d = l(594174),
     c = l(5192),
     u = l(645896),
-    _ = l(979264),
-    m = l(308083),
-    v = l(689938),
-    x = l(402488);
-a.Z = s.memo(function (e) {
-    var a, l, s, C, g, A;
-    let { guildId: N, isTagAdopted: h, onChangeUseTag: S } = e,
-        T = (0, u.Cc)(N),
-        f = (0, i.e7)([r.Z], () => r.Z.getGuild(N)),
-        L = null !== (C = null == T ? void 0 : null === (a = T.badge) || void 0 === a ? void 0 : a.imageHash) && void 0 !== C ? C : null == f ? void 0 : null === (l = f.clan) || void 0 === l ? void 0 : l.badge,
-        M = null !== (g = null == T ? void 0 : T.tag) && void 0 !== g ? g : null == f ? void 0 : null === (s = f.clan) || void 0 === s ? void 0 : s.tag,
-        E = (0, i.e7)([d.default], () => d.default.getCurrentUser()),
-        j = (0, i.e7)([t.ZP], () => (null != E ? t.ZP.getMember(N, E.id) : null));
-    return null == f || null == E || null == j || null == L
+    m = l(979264),
+    v = l(308083),
+    x = l(388032),
+    g = l(402488);
+n.Z = i.memo(function (e) {
+    var n, l, i, h, f, C;
+    let { guildId: N, isTagAdopted: j, onChangeUseTag: S } = e,
+        _ = (0, u.Cc)(N),
+        p = (0, t.e7)([s.Z], () => s.Z.getGuild(N)),
+        k = null !== (h = null == _ ? void 0 : null === (n = _.badge) || void 0 === n ? void 0 : n.imageHash) && void 0 !== h ? h : null == p ? void 0 : null === (l = p.clan) || void 0 === l ? void 0 : l.badge,
+        b = null !== (f = null == _ ? void 0 : _.tag) && void 0 !== f ? f : null == p ? void 0 : null === (i = p.clan) || void 0 === i ? void 0 : i.tag,
+        T = (0, t.e7)([d.default], () => d.default.getCurrentUser()),
+        w = (0, t.e7)([r.ZP], () => (null != T ? r.ZP.getMember(N, T.id) : null));
+    return null == p || null == T || null == w || null == k
         ? null
-        : (0, n.jsxs)('div', {
-              className: x.previewSection,
+        : (0, a.jsxs)('div', {
+              className: g.previewSection,
               children: [
-                  (0, n.jsxs)('div', {
-                      className: x.chatPreview,
+                  (0, a.jsxs)('div', {
+                      className: g.chatPreview,
                       children: [
-                          (0, n.jsx)(o.Avatar, {
-                              src: E.getAvatarURL(N, 40),
+                          (0, a.jsx)(o.Avatar, {
+                              src: T.getAvatarURL(N, 40),
                               size: o.AvatarSizes.SIZE_40,
                               'aria-hidden': !0
                           }),
-                          (0, n.jsxs)('div', {
-                              className: x.previewText,
+                          (0, a.jsxs)('div', {
+                              className: g.previewText,
                               children: [
-                                  (0, n.jsxs)('div', {
-                                      className: x.userName,
+                                  (0, a.jsxs)('div', {
+                                      className: g.userName,
                                       children: [
-                                          (0, n.jsx)(o.NameWithRole, {
-                                              className: x.userName,
-                                              name: c.ZP.getName(N, null, E),
-                                              color: null !== (A = j.colorString) && void 0 !== A ? A : void 0
+                                          (0, a.jsx)(o.NameWithRole, {
+                                              className: g.userName,
+                                              name: c.ZP.getName(N, null, T),
+                                              color: null !== (C = w.colorString) && void 0 !== C ? C : void 0
                                           }),
-                                          h &&
-                                              (0, n.jsx)(_.aG, {
+                                          j &&
+                                              (0, a.jsx)(m.aG, {
                                                   guildId: N,
-                                                  clanBadge: L,
-                                                  clanTag: M,
-                                                  badgeSize: m.NC.SIZE_12,
+                                                  clanBadge: k,
+                                                  clanTag: b,
+                                                  badgeSize: v.NC.SIZE_12,
                                                   textVariant: 'text-xs/semibold'
                                               })
                                       ]
                                   }),
-                                  (0, n.jsx)('div', {
-                                      className: x.fakeMessage,
+                                  (0, a.jsx)('div', {
+                                      className: g.fakeMessage,
                                       style: { width: '80%' }
                                   }),
-                                  (0, n.jsx)('div', {
-                                      className: x.fakeMessage,
+                                  (0, a.jsx)('div', {
+                                      className: g.fakeMessage,
                                       style: { width: '50%' }
                                   })
                               ]
                           })
                       ]
                   }),
-                  (0, n.jsx)('div', { className: x.divider }),
-                  (0, n.jsxs)('div', {
-                      className: x.settingSection,
+                  (0, a.jsx)('div', { className: g.divider }),
+                  (0, a.jsxs)('div', {
+                      className: g.settingSection,
                       children: [
-                          (0, n.jsxs)('div', {
+                          (0, a.jsxs)('div', {
                               children: [
-                                  (0, n.jsx)(o.Text, {
+                                  (0, a.jsx)(o.Text, {
                                       variant: 'text-md/normal',
                                       color: 'header-primary',
-                                      children: v.Z.Messages.CLAN_SUCCESS_USE_TAG_TEXT
+                                      children: x.intl.string(x.t.nwNzVV)
                                   }),
-                                  (0, n.jsx)(o.Text, {
+                                  (0, a.jsx)(o.Text, {
                                       variant: 'text-xs/normal',
                                       color: 'text-muted',
-                                      children: v.Z.Messages.CLAN_SUCCESS_USE_TAG_HELP
+                                      children: x.intl.string(x.t.Dpl68P)
                                   })
                               ]
                           }),
-                          (0, n.jsx)(o.Switch, {
+                          (0, a.jsx)(o.Switch, {
                               onChange: S,
-                              checked: h
+                              checked: j
                           })
                       ]
                   })

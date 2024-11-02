@@ -1,33 +1,33 @@
 n.d(t, {
     GC: function () {
-        return m;
+        return g;
     },
     _X: function () {
-        return h;
+        return p;
     },
     em: function () {
-        return E;
+        return m;
     },
     jU: function () {
-        return _;
+        return h;
     }
 });
 var i = n(13245),
-    a = n(808506),
-    s = n(998502),
-    r = n(13140),
-    l = n(996106),
+    r = n(808506),
+    l = n(998502),
+    a = n(13140),
+    s = n(996106),
     o = n(914946),
     c = n(186901),
     d = n(981631);
 let u = ['207646673902501888'];
-function _(e) {
+function h(e) {
     return null == e
         ? {
               lock: d.VqG,
               context: d.IlC.APP
           }
-        : a.Z.isReady(e)
+        : r.Z.isReady(e)
           ? (i.Z.setLocked(!1, e),
             {
                 lock() {
@@ -35,21 +35,21 @@ function _(e) {
                 },
                 context: d.IlC.OVERLAY
             })
-          : (s.ZP.focus(null, !0),
+          : (l.ZP.focus(null, !0),
             {
                 lock() {
-                    s.ZP.setForegroundProcess(e);
+                    l.ZP.setForegroundProcess(e);
                 },
                 context: d.IlC.APP
             });
 }
-let E = async (e, t, n) => {
+let m = async (e, t, n) => {
         if (((0, o.YK)(e, t), (null == n || '' === n) && (0, o.s9)(t))) return (e.authorization.scopes = [c.cE, c.CN]), Promise.resolve();
-        if (null == n || '' === n) return Promise.reject(new l.Z({ closeCode: d.$VG.INVALID_CLIENTID }, 'No Client ID Specified'));
-        let i = s.ZP.releaseChannel !== d.R5N.CANARY && !u.includes(n) && e.transport !== c.He.POST_MESSAGE;
+        if (null == n || '' === n) return Promise.reject(new s.Z({ closeCode: d.$VG.INVALID_CLIENTID }, 'No Client ID Specified'));
+        let i = l.ZP.releaseChannel !== d.R5N.CANARY && !u.includes(n) && e.transport !== c.He.POST_MESSAGE;
         return await (0, o.vv)(n, i), (0, o.fy)(e, n, t);
     },
-    h = () =>
+    p = () =>
         (0, o.tr)((e) => {
             let t = [];
             if (null != e.modeOptions.shortcut && Array.isArray(e.modeOptions.shortcut))
@@ -58,13 +58,13 @@ let E = async (e, t, n) => {
                     return {
                         type: e[0],
                         code: e[1],
-                        name: null !== (t = (0, r.H9)(e)) && void 0 !== t ? t : 'unknown'
+                        name: null !== (t = (0, a.H9)(e)) && void 0 !== t ? t : 'unknown'
                     };
                 });
             return t;
         }),
-    m = (e) =>
+    g = (e) =>
         (0, o.FJ)(e, (e) => {
             let t = '';
-            return null != e.modeOptions.shortcut && Array.isArray(e.modeOptions.shortcut) && (t = (0, r.BB)(e.modeOptions.shortcut)), t;
+            return null != e.modeOptions.shortcut && Array.isArray(e.modeOptions.shortcut) && (t = (0, a.BB)(e.modeOptions.shortcut)), t;
         });

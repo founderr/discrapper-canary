@@ -4,7 +4,7 @@ var i = n(120356),
     a = n.n(i),
     s = n(481060),
     o = n(457926),
-    l = n(689938),
+    l = n(388032),
     u = n(578786);
 t.Z = function (e) {
     let { iconType: t, children: n } = e,
@@ -15,7 +15,7 @@ t.Z = function (e) {
                 size: 'md',
                 color: 'currentColor',
                 className: u.icon,
-                'aria-label': l.Z.Messages.VOICE_CHANNEL
+                'aria-label': l.intl.string(l.t.BVZqJi)
             });
             break;
         case 'voice-locked':
@@ -23,7 +23,7 @@ t.Z = function (e) {
                 size: 'md',
                 color: 'currentColor',
                 className: u.icon,
-                'aria-label': l.Z.Messages.VOICE_CHANNEL_LOCKED
+                'aria-label': l.intl.string(l.t.aa0FYm)
             });
             break;
         case 'stage':
@@ -31,7 +31,7 @@ t.Z = function (e) {
                 size: 'lg',
                 color: 'currentColor',
                 className: u.icon,
-                'aria-label': l.Z.Messages.STAGE_CHANNEL
+                'aria-label': l.intl.string(l.t.EErMzM)
             });
             break;
         case 'stage-locked':
@@ -39,7 +39,7 @@ t.Z = function (e) {
                 size: 'md',
                 color: 'currentColor',
                 className: u.icon,
-                'aria-label': l.Z.Messages.STAGE_CHANNEL_LOCKED
+                'aria-label': l.intl.string(l.t.pKZ4Iy)
             });
             break;
         case 'thread':
@@ -47,7 +47,7 @@ t.Z = function (e) {
                 size: 'md',
                 color: 'currentColor',
                 className: u.icon,
-                'aria-label': l.Z.Messages.THREAD
+                'aria-label': l.intl.string(l.t['7Xm5QE'])
             });
             break;
         case 'text':
@@ -55,7 +55,7 @@ t.Z = function (e) {
                 size: 'md',
                 color: 'currentColor',
                 className: u.icon,
-                'aria-label': l.Z.Messages.CHANNEL
+                'aria-label': l.intl.string(l.t.GK18KC)
             });
             break;
         case 'forum':
@@ -63,7 +63,7 @@ t.Z = function (e) {
                 size: 'md',
                 color: 'currentColor',
                 className: u.icon,
-                'aria-label': l.Z.Messages.FORUM_CHANNEL
+                'aria-label': l.intl.string(l.t.GbryDQ)
             });
             break;
         case 'post':
@@ -71,7 +71,7 @@ t.Z = function (e) {
                 size: 'md',
                 color: 'currentColor',
                 className: u.icon,
-                'aria-label': l.Z.Messages.FORUM_POST
+                'aria-label': l.intl.string(l.t.Y4REmJ)
             });
             break;
         case 'home':
@@ -80,7 +80,7 @@ t.Z = function (e) {
                 size: 'md',
                 color: 'currentColor',
                 className: u.icon,
-                'aria-label': l.Z.Messages.SERVER_GUIDE
+                'aria-label': l.intl.string(l.t.VbpLyc)
             });
             break;
         case 'browse':
@@ -89,7 +89,7 @@ t.Z = function (e) {
                 size: 'md',
                 color: 'currentColor',
                 className: u.icon,
-                'aria-label': l.Z.Messages.CHANNEL_BROWSER_TITLE
+                'aria-label': l.intl.string(l.t.et6wam)
             });
             break;
         case 'message':
@@ -97,7 +97,7 @@ t.Z = function (e) {
                 size: 'md',
                 color: 'currentColor',
                 className: u.icon,
-                'aria-label': l.Z.Messages.MESSAGE_A11Y_ROLE_DESCRIPTION
+                'aria-label': l.intl.string(l.t.BAB0yM)
             });
             break;
         case 'locked':
@@ -105,7 +105,7 @@ t.Z = function (e) {
                 size: 'md',
                 color: 'currentColor',
                 className: u.icon,
-                'aria-label': l.Z.Messages.NO_ACCESS
+                'aria-label': l.intl.string(l.t['/YzI6+'])
             });
             break;
         case 'media':
@@ -113,7 +113,7 @@ t.Z = function (e) {
                 size: 'md',
                 color: 'currentColor',
                 className: u.icon,
-                'aria-label': l.Z.Messages.MEDIA_CHANNEL
+                'aria-label': l.intl.string(l.t.seKITE)
             });
             break;
         case 'linked-roles':
@@ -121,7 +121,7 @@ t.Z = function (e) {
                 size: 'md',
                 color: 'currentColor',
                 className: u.icon,
-                'aria-label': l.Z.Messages.CONNECTIONS_ROLES_CHANNEL_NAME
+                'aria-label': l.intl.string(l.t.ghtnsr)
             });
     }
     return (0, r.jsxs)('span', {

@@ -1,31 +1,31 @@
 n.d(t, {
     i: function () {
-        return i;
+        return l;
     },
     p: function () {
-        return r;
+        return s;
     }
 });
-var s = n(981631),
-    a = n(689938);
-function i(e) {
+var i = n(981631),
+    r = n(388032);
+function l(e) {
     switch (e) {
-        case s.evJ.UNKNOWN_CHANNEL:
-            return a.Z.Messages.SET_VANITY_URL_ERROR_MESSAGE_UNKNOWN_CHANNEL;
-        case s.evJ.INVALID_PERMISSIONS:
-            return a.Z.Messages.SET_VANITY_URL_ERROR_MESSAGE_INVALID_PERMISSIONS;
-        case s.evJ.INVALID_ACCESS:
-            return a.Z.Messages.SET_VANITY_URL_ERROR_MESSAGE_INVALID_ACCESS;
-        case s.evJ.VANITY_URL_REQUIRED_FOR_PUBLISHED_GUILDS:
-            return a.Z.Messages.SET_VANITY_URL_ERROR_MESSAGE_REQUIRED_FOR_PUBLISHED_GUILDS;
-        case s.evJ.VANITY_URL_EMPLOYEE_ONLY_GUILD_DISABLED:
-            return a.Z.Messages.VANITY_URL_EMPLOYEE_ONLY_GUILD_DISABLED;
-        case s.evJ.VANITY_URL_REQUIREMENTS_NOT_MET:
-            return a.Z.Messages.SET_VANITY_URL_ERROR_MESSAGE_REQUIREMENTS_NOT_MET;
+        case i.evJ.UNKNOWN_CHANNEL:
+            return r.intl.string(r.t.ETCmRU);
+        case i.evJ.INVALID_PERMISSIONS:
+            return r.intl.string(r.t.lXtut7);
+        case i.evJ.INVALID_ACCESS:
+            return r.intl.string(r.t.TAXOKy);
+        case i.evJ.VANITY_URL_REQUIRED_FOR_PUBLISHED_GUILDS:
+            return r.intl.string(r.t.ZpuxVl);
+        case i.evJ.VANITY_URL_EMPLOYEE_ONLY_GUILD_DISABLED:
+            return r.intl.string(r.t.tSBmIi);
+        case i.evJ.VANITY_URL_REQUIREMENTS_NOT_MET:
+            return r.intl.string(r.t['w+yGQU']);
         default:
-            return a.Z.Messages.CHANGE_VANITY_URL_ERROR;
+            return r.intl.string(r.t.ckQidX);
     }
 }
-function r(e) {
-    return e.hasFeature(s.oNc.VANITY_URL) || (e.hasFeature(s.oNc.GUILD_WEB_PAGE_VANITY_URL) && null != e.vanityURLCode);
+function s(e) {
+    return e.hasFeature(i.oNc.VANITY_URL) || (e.hasFeature(i.oNc.GUILD_WEB_PAGE_VANITY_URL) && null != e.vanityURLCode);
 }

@@ -1,38 +1,38 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return x;
     }
 });
 var i = n(200651),
-    a = n(192379),
-    s = n(481060),
-    r = n(100527),
-    l = n(906732),
-    o = n(739566),
+    r = n(192379),
+    l = n(481060),
+    a = n(100527),
+    o = n(906732),
+    s = n(739566),
     c = n(942951),
     u = n(834129),
     d = n(703656),
-    _ = n(35125),
-    E = n(626751),
-    I = n(891614),
-    m = n(981631),
-    f = n(176505),
-    T = n(689938),
-    h = n(341738);
-function N(e) {
+    m = n(35125),
+    f = n(626751),
+    h = n(891614),
+    p = n(981631),
+    g = n(176505),
+    _ = n(388032),
+    C = n(341738);
+function E(e) {
     let { username: t } = e;
     return (0, i.jsx)('div', {
-        className: h.welcomeCardText,
-        children: (0, i.jsx)(s.Text, {
+        className: C.welcomeCardText,
+        children: (0, i.jsx)(l.Text, {
             tag: 'p',
-            className: h.welcomeCardText,
+            className: C.welcomeCardText,
             color: 'status-positive-text',
             variant: 'heading-xl/medium',
-            children: T.Z.Messages.ROLE_SUBSCRIPTION_WELCOME_CARD_TEXT.format({
+            children: _.intl.format(_.t.MLKSlp, {
                 username: t,
                 usernameHook: (e, t) =>
                     (0, i.jsx)(
-                        s.Text,
+                        l.Text,
                         {
                             tag: 'span',
                             color: 'status-positive-text',
@@ -46,74 +46,74 @@ function N(e) {
         })
     });
 }
-function p(e) {
-    let { guildId: t, user: n, username: a } = e;
+function I(e) {
+    let { guildId: t, user: n, username: r } = e;
     return (0, i.jsxs)('div', {
-        className: h.welcomeCard,
+        className: C.welcomeCard,
         role: 'img',
-        'aria-label': T.Z.Messages.ROLE_SUBSCRIPTION_WELCOME_CARD_ARIA_LABEL.format({ username: a }),
+        'aria-label': _.intl.formatToPlainString(_.t['utf8+f'], { username: r }),
         children: [
-            (0, i.jsx)(I.Z, {
+            (0, i.jsx)(h.Z, {
                 guildId: t,
                 user: n,
-                className: h.welcomeCardBadge
+                className: C.welcomeCardBadge
             }),
-            (0, i.jsx)(N, { username: a })
+            (0, i.jsx)(E, { username: r })
         ]
     });
 }
-function C(e) {
-    var t, s;
-    let { channel: I, message: T, compact: h } = e,
-        N = (0, o.ZP)(T),
-        C = (function (e) {
+function x(e) {
+    var t, l;
+    let { channel: h, message: _, compact: C } = e,
+        E = (0, s.ZP)(_),
+        x = (function (e) {
             let { author: t, channel: n, message: i } = e,
-                s = n.guild_id,
-                o = (0, c.l)({
+                l = n.guild_id,
+                s = (0, c.l)({
                     user: i.author,
                     channelId: n.id,
-                    guildId: s,
+                    guildId: l,
                     messageId: i.id
                 })(t),
-                { analyticsLocations: u } = (0, l.ZP)(r.Z.GUILD_ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE),
-                E = i.roleSubscriptionData,
-                I = a.useCallback(() => {
-                    (0, d.uL)(m.Z5c.CHANNEL(s, f.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: u }), (null == E ? void 0 : E.role_subscription_listing_id) != null && (0, _.y8)(s, n.id, i.id, E.role_subscription_listing_id);
-                }, [s, n, i, E, u]);
-            return null == E
+                { analyticsLocations: u } = (0, o.ZP)(a.Z.GUILD_ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE),
+                f = i.roleSubscriptionData,
+                h = r.useCallback(() => {
+                    (0, d.uL)(p.Z5c.CHANNEL(l, g.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: u }), (null == f ? void 0 : f.role_subscription_listing_id) != null && (0, m.y8)(l, n.id, i.id, f.role_subscription_listing_id);
+                }, [l, n, i, f, u]);
+            return null == f
                 ? null
-                : (0, _.Tn)({
+                : (0, m.Tn)({
                       username: t.nick,
-                      usernameOnClickHandler: o,
-                      roleSubscriptionOnClickHandler: I,
-                      guildId: s,
+                      usernameOnClickHandler: s,
+                      roleSubscriptionOnClickHandler: h,
+                      guildId: l,
                       roleSubscriptionData: i.roleSubscriptionData
                   });
         })({
-            channel: I,
-            message: T,
-            author: N
+            channel: h,
+            message: _,
+            author: E
         }),
-        g = (null === (t = T.roleSubscriptionData) || void 0 === t ? void 0 : t.total_months_subscribed) != null && (null === (s = T.roleSubscriptionData) || void 0 === s ? void 0 : s.total_months_subscribed) <= 1;
-    return null == C
+        v = (null === (t = _.roleSubscriptionData) || void 0 === t ? void 0 : t.total_months_subscribed) != null && (null === (l = _.roleSubscriptionData) || void 0 === l ? void 0 : l.total_months_subscribed) <= 1;
+    return null == x
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(u.Z, {
                       icon: n(570111),
-                      timestamp: T.timestamp,
-                      compact: h,
-                      children: C
+                      timestamp: _.timestamp,
+                      compact: C,
+                      children: x
                   }),
-                  g &&
-                      (0, i.jsx)(p, {
-                          guildId: I.guild_id,
-                          user: T.author,
-                          username: N.nick
+                  v &&
+                      (0, i.jsx)(I, {
+                          guildId: h.guild_id,
+                          user: _.author,
+                          username: E.nick
                       }),
-                  (0, i.jsx)(E.Z, {
-                      channel: I,
-                      message: T
+                  (0, i.jsx)(f.Z, {
+                      channel: h,
+                      message: _
                   })
               ]
           });

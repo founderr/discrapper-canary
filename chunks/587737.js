@@ -1,29 +1,29 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return o;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(739566),
-    s = n(834129),
-    r = n(689938);
-function l(e) {
-    let { message: t, channel: l, targetUser: o, actorUsernameHook: c, targetUsernameHook: u, compact: d } = e,
-        _ = (0, a.ZP)(t),
-        E = (0, a.Sw)(o, l),
-        I = c(_),
-        m = u(null != E ? E : void 0),
-        f = r.Z.Messages.SYSTEM_MESSAGE_THREAD_MEMBER_ADD.format({
-            actorName: _.nick,
-            actorHook: I,
-            targetName: null == E ? void 0 : E.nick,
-            targetHook: m
+var r = n(739566),
+    l = n(834129),
+    a = n(388032);
+function o(e) {
+    let { message: t, channel: o, targetUser: s, actorUsernameHook: c, targetUsernameHook: u, compact: d } = e,
+        m = (0, r.ZP)(t),
+        f = (0, r.Sw)(s, o),
+        h = c(m),
+        p = u(null != f ? f : void 0),
+        g = a.intl.format(a.t.tusv2t, {
+            actorName: m.nick,
+            actorHook: h,
+            targetName: null == f ? void 0 : f.nick,
+            targetHook: p
         });
-    return (0, i.jsx)(s.Z, {
+    return (0, i.jsx)(l.Z, {
         icon: n(570111),
         timestamp: t.timestamp,
         compact: d,
-        children: f
+        children: g
     });
 }

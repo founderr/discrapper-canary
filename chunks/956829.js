@@ -1,9 +1,9 @@
-t.d(n, {
+n.d(t, {
     h: function () {
         return l;
     }
 });
-let l = (0, t(818083).B)({
+let l = (0, n(818083).B)({
     kind: 'guild',
     id: '2023-04_community_endless_invites',
     label: 'Community Endless Invites',

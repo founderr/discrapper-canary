@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return h;
     }
 });
 var r = n(200651);
@@ -13,29 +13,29 @@ var i = n(442837),
     u = n(740605),
     c = n(180335),
     d = n(553795),
-    _ = n(981631),
-    E = n(689938);
-function f(e) {
-    let { activity: t, entry: n, display: f, onAction: h, onClose: p } = e,
-        I = (0, i.e7)([d.Z], () => null != d.Z.getAccount(null, _.ABu.CRUNCHYROLL));
+    f = n(981631),
+    _ = n(388032);
+function h(e) {
+    let { activity: t, entry: n, display: h, onAction: p, onClose: m } = e,
+        g = (0, i.e7)([d.Z], () => null != d.Z.getAccount(null, f.ABu.CRUNCHYROLL));
     if (!(0, l.Z)(t) && !(0, c.gr)(n)) return null;
-    if (!I)
+    if (!g)
         return (0, r.jsx)(a.MenuItem, {
             id: 'connect-crunchyroll',
-            label: E.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({ platform: o.Z.get(_.ABu.CRUNCHYROLL).name }),
+            label: _.intl.formatToPlainString(_.t.XWSHTU, { platform: o.Z.get(f.ABu.CRUNCHYROLL).name }),
             action: () => {
-                null == h || h({ action: 'PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM' }), s.Z.open(_.oAB.CONNECTIONS), null == p || p();
+                null == p || p({ action: 'PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM' }), s.Z.open(f.oAB.CONNECTIONS), null == m || m();
             }
         });
-    if ('live' === f || !(0, c.gr)(n)) return null;
-    let m = n.extra.url;
-    return null == m || '' === m
+    if ('live' === h || !(0, c.gr)(n)) return null;
+    let E = n.extra.url;
+    return null == E || '' === E
         ? null
         : (0, r.jsx)(a.MenuItem, {
               id: 'watch-on-crunchyroll',
-              label: E.Z.Messages.WATCH_ON_CRUNCHYROLL,
+              label: _.intl.string(_.t.OpxQVF),
               action: () => {
-                  null == h || h({ action: 'PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM' }), (0, u.Y)(m);
+                  null == p || p({ action: 'PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM' }), (0, u.Y)(E);
               }
           });
 }

@@ -35,21 +35,21 @@ let l = i.createContext(null),
     },
     c = (e) => {
         var t;
-        let { layout: n, userId: r, guildId: s, channelId: o, messageId: u, roleId: c, sourceSessionId: d, showGuildProfile: _ = !0 } = e,
-            E = null === (t = i.useContext(l)) || void 0 === t ? void 0 : t.sessionId;
+        let { layout: n, userId: r, guildId: s, channelId: o, messageId: u, roleId: c, sourceSessionId: d, showGuildProfile: f = !0 } = e,
+            _ = null === (t = i.useContext(l)) || void 0 === t ? void 0 : t.sessionId;
         return i.useMemo(
             () => ({
                 sessionId: (0, a.Z)(),
-                sourceSessionId: null != d ? d : E,
+                sourceSessionId: null != d ? d : _,
                 layout: n,
                 userId: r,
                 guildId: s,
                 channelId: o,
                 messageId: u,
                 roleId: c,
-                showGuildProfile: _
+                showGuildProfile: f
             }),
-            [E, n, r, s, o, u, c, d, _]
+            [_, n, r, s, o, u, c, d, f]
         );
     },
     d = () => {

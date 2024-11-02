@@ -9,8 +9,8 @@ n(192379);
 var l = n(481060),
     r = n(619915),
     a = n(737592),
-    s = n(561788),
-    o = n(289223);
+    o = n(561788),
+    s = n(289223);
 function c(e) {
     let { channel: t, onAction: n } = e,
         c = (0, r.ZP)(t),
@@ -18,13 +18,13 @@ function c(e) {
     return 0 === u.length
         ? null
         : (0, i.jsxs)(l.Scroller, {
-              className: o.container,
+              className: s.container,
               children: [
                   (0, i.jsx)('div', {
-                      className: o.popoutHeaderContainer,
-                      children: (0, i.jsx)(s.Z, { channel: t })
+                      className: s.popoutHeaderContainer,
+                      children: (0, i.jsx)(o.Z, { channel: t })
                   }),
-                  (0, i.jsx)('div', { className: o.headerDivider }),
+                  (0, i.jsx)('div', { className: s.headerDivider }),
                   u.map((e, l) => {
                       var r;
                       return (0, i.jsx)(

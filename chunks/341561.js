@@ -8,30 +8,30 @@ var i = n(952265),
     u = n(373228),
     c = n(419922),
     d = n(430824),
-    _ = n(483360),
-    E = n(877565),
-    f = n(590921),
-    h = n(665692),
-    p = n(981631),
-    I = n(689938),
-    m = n(438993);
-function T(e, t) {
+    f = n(483360),
+    _ = n(877565),
+    h = n(590921),
+    p = n(665692),
+    m = n(981631),
+    g = n(388032),
+    E = n(438993);
+function v(e, t) {
     return (0, r.jsx)(c.ZP, {
         sticker: e,
         isInteracting: t,
         size: 40
     });
 }
-let S = {
-    sentinel: h.Iv,
+let I = {
+    sentinel: p.Iv,
     stores: [l.Z],
     matches: (e, t, n, r, i) => n.length > 1,
     queryResults(e, t, n, r, i) {
         let a = r.allowStickers ? 0 : 40,
-            l = p.rnv + a,
+            l = m.rnv + a,
             {
                 emojis: { unlocked: u }
-            } = _.ZP.queryEmojiResults({
+            } = f.ZP.queryEmojiResults({
                 query: n,
                 channel: e,
                 intention: r.emojiIntention,
@@ -45,7 +45,7 @@ let S = {
         let c = [];
         if (r.allowStickers) {
             (0, o.$p)();
-            let t = _.ZP.queryStickers([n], !0, [e, (e, t) => t === s.eb.SENDABLE]),
+            let t = f.ZP.queryStickers([n], !0, [e, (e, t) => t === s.eb.SENDABLE]),
                 r = Math.max(4, 8 - u.length);
             (c = t.slice(0, r)), '-' === n[0] && (c = t.filter((e) => e.sticker.name === n));
         }
@@ -69,30 +69,30 @@ let S = {
             selectedIndex: l,
             query: u,
             onHover: c,
-            onClick: _
+            onClick: f
         } = e;
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, E.HI)({
+                (0, _.HI)({
                     query: u,
                     selectedIndex: l,
                     autocompletes: t,
                     onHover: c,
-                    onClick: _,
-                    titleWithQuery: I.Z.Messages.EMOJI_MATCHING,
-                    titleWithoutQuery: I.Z.Messages.EMOJI,
+                    onClick: f,
+                    titleWithQuery: g.t.ksAVYm,
+                    titleWithoutQuery: g.intl.string(g.t.sMOuub),
                     Component: a.ZP.Emoji,
                     getProps: (e) => ({
                         emoji: e,
                         key: e.id || e.uniqueName || e.name,
-                        sentinel: h.Iv,
+                        sentinel: p.Iv,
                         guild: null != e.guildId ? d.Z.getGuild(e.guildId) : null
                     }),
-                    getQuery: (e) => ''.concat(h.Iv).concat(e),
+                    getQuery: (e) => ''.concat(p.Iv).concat(e),
                     key: 'emoji'
                 }),
                 o.length > 0
-                    ? (0, E.HI)({
+                    ? (0, _.HI)({
                           query: u,
                           selectedIndex: l,
                           autocompletes: o,
@@ -103,8 +103,8 @@ let S = {
                                   return (t) => (0, r.jsx)(e, { ...t });
                               });
                           },
-                          titleWithQuery: 0 === t.length ? I.Z.Messages.EMOJI_MATCHING : null,
-                          titleWithoutQuery: 0 === t.length ? I.Z.Messages.EMOJI : null,
+                          titleWithQuery: 0 === t.length ? g.t.ksAVYm : null,
+                          titleWithoutQuery: 0 === t.length ? g.intl.string(g.t.sMOuub) : null,
                           Component: a.ZP.EmojiUpsell,
                           getProps: (e) => {
                               let { emojis: t } = e;
@@ -113,25 +113,25 @@ let S = {
                                   emojis: t
                               };
                           },
-                          getQuery: (e) => ''.concat(h.Iv).concat(e),
+                          getQuery: (e) => ''.concat(p.Iv).concat(e),
                           key: 'emoji-upsell',
                           indexOffset: t.length
                       })
                     : null,
-                (t.length > 0 || o.length > 0) && s.length > 0 && (0, r.jsx)(a.ZP.Divider, { className: m.emojiStickersDivider }),
-                (0, E.HI)({
+                (t.length > 0 || o.length > 0) && s.length > 0 && (0, r.jsx)(a.ZP.Divider, { className: E.emojiStickersDivider }),
+                (0, _.HI)({
                     query: u,
                     selectedIndex: l,
                     autocompletes: s,
                     onHover: c,
-                    onClick: _,
-                    titleWithQuery: I.Z.Messages.STICKERS_MATCHING,
-                    titleWithoutQuery: I.Z.Messages.STICKER,
+                    onClick: f,
+                    titleWithQuery: g.t.uferGB,
+                    titleWithoutQuery: g.intl.string(g.t['fT+Yjo']),
                     Component: a.ZP.Sticker,
                     getProps: (e) => {
                         let { comparator: t, sticker: n } = e;
                         return {
-                            renderSticker: T,
+                            renderSticker: v,
                             queryMatch: t !== n.name.toLocaleLowerCase() ? t : void 0,
                             sticker: n,
                             key: n.id
@@ -140,7 +140,7 @@ let S = {
                     getQuery: (e) => e,
                     key: 'stickers',
                     indexOffset: t.length + o.length,
-                    headerClassName: t.length > 0 ? m.stickersHeaderWithEmojiResults : void 0
+                    headerClassName: t.length > 0 ? E.stickersHeaderWithEmojiResults : void 0
                 })
             ]
         });
@@ -156,13 +156,13 @@ let S = {
             return (
                 a.insertText(
                     (function (e) {
-                        return ''.concat(h.Iv).concat(e.name).concat(h.Iv);
+                        return ''.concat(p.Iv).concat(e.name).concat(p.Iv);
                     })(e),
                     (function (e) {
                         var t;
                         let n = e.animated ? 'a' : '';
                         return e.managed || null == e.id
-                            ? ''.concat(h.Iv).concat(e.name).concat(h.Iv)
+                            ? ''.concat(p.Iv).concat(e.name).concat(p.Iv)
                             : '<'
                                   .concat(n, ':')
                                   .concat(null !== (t = e.originalName) && void 0 !== t ? t : e.name, ':')
@@ -170,7 +170,7 @@ let S = {
                     })(e)
                 ),
                 {
-                    type: f.z2.EMOJI,
+                    type: h.z2.EMOJI,
                     metadata: {
                         emojiId: e.id,
                         numEmojiResults: t.length,
@@ -189,7 +189,7 @@ let S = {
                 a.insertText(''),
                 a.sendSticker(e.sticker, u.V0.AUTOCOMPLETE),
                 {
-                    type: f.z2.STICKER,
+                    type: h.z2.STICKER,
                     metadata: {
                         numEmojiResults: t.length,
                         numStickerResults: r.length,
@@ -201,4 +201,4 @@ let S = {
         return { type: null };
     }
 };
-t.Z = S;
+t.Z = I;

@@ -53,7 +53,7 @@ t.Z = function (e) {
                     ((s[2] = s[2].replace('%', '')),
                     (s[1] = s[1].replace('%', '')),
                     (s[0] = s[0].replace('\xB0', '')),
-                    1 == f[1] ? (f[1] = 0.01) : 1 == f[2] && (f[2] = 0.01),
+                    1 == h[1] ? (h[1] = 0.01) : 1 == h[2] && (h[2] = 0.01),
                     t(
                         {
                             h: Number(s[0]),
@@ -140,9 +140,9 @@ t.Z = function (e) {
                 }
             }
         }),
-        _ = n.r + ', ' + n.g + ', ' + n.b,
-        E = Math.round(o.h) + '\xB0, ' + Math.round(100 * o.s) + '%, ' + Math.round(100 * o.l) + '%',
-        f = Math.round(u.h) + '\xB0, ' + Math.round(100 * u.s) + '%, ' + Math.round(100 * u.v) + '%';
+        f = n.r + ', ' + n.g + ', ' + n.b,
+        _ = Math.round(o.h) + '\xB0, ' + Math.round(100 * o.s) + '%, ' + Math.round(100 * o.l) + '%',
+        h = Math.round(u.h) + '\xB0, ' + Math.round(100 * u.s) + '%, ' + Math.round(100 * u.v) + '%';
     return r.createElement(
         'div',
         {
@@ -177,19 +177,6 @@ t.Z = function (e) {
                             label: d.label2
                         },
                         label: 'rgb',
-                        value: _,
-                        onChange: c
-                    })
-                ),
-                r.createElement(
-                    'div',
-                    { style: d.single },
-                    r.createElement(s.Vm, {
-                        style: {
-                            input: d.input2,
-                            label: d.label2
-                        },
-                        label: 'hsv',
                         value: f,
                         onChange: c
                     })
@@ -202,8 +189,21 @@ t.Z = function (e) {
                             input: d.input2,
                             label: d.label2
                         },
+                        label: 'hsv',
+                        value: h,
+                        onChange: c
+                    })
+                ),
+                r.createElement(
+                    'div',
+                    { style: d.single },
+                    r.createElement(s.Vm, {
+                        style: {
+                            input: d.input2,
+                            label: d.label2
+                        },
                         label: 'hsl',
-                        value: E,
+                        value: _,
                         onChange: c
                     })
                 )

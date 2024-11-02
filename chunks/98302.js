@@ -8,10 +8,10 @@ var r = n(846519),
     u = n(885110),
     c = n(606304),
     d = n(938475),
-    _ = n(70956),
-    E = n(367907),
-    f = n(981631);
-function h(e, t, n) {
+    f = n(70956),
+    _ = n(367907),
+    h = n(981631);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,8 +24,8 @@ function h(e, t, n) {
         e
     );
 }
-let p = 1 * _.Z.Millis.MINUTE;
-class I extends i.Z {
+let m = 1 * f.Z.Millis.MINUTE;
+class g extends i.Z {
     _initialize() {
         __OVERLAY__ ? (this.stores = new Map()) : ((this.stores = new Map().set(c.Z, () => this._handleSpeakingStoreChanged()).set(l.Z, () => this._handleRTCConnectionStoreChanged())), this._reset());
     }
@@ -36,7 +36,7 @@ class I extends i.Z {
         if (this._currentUserSpeaking) {
             let e = l.Z.getChannelId(),
                 t = l.Z.getGuildId();
-            (0, E.yw)(f.rMx.START_SPEAKING, {
+            (0, _.yw)(h.rMx.START_SPEAKING, {
                 mode: o.Z.getMode(),
                 priority: c.Z.isCurrentUserPrioritySpeaking(),
                 channel: e,
@@ -55,7 +55,7 @@ class I extends i.Z {
         if (o.Z.isDeaf() || !this._anyoneElseSpeaking) return;
         let e = l.Z.getChannelId(),
             t = l.Z.getGuildId();
-        (0, E.yw)(f.rMx.START_LISTENING, {
+        (0, _.yw)(h.rMx.START_LISTENING, {
             mute: o.Z.isMute(),
             anyone_priority: c.Z.isAnyonePrioritySpeaking(),
             channel: e,
@@ -72,7 +72,7 @@ class I extends i.Z {
         this._reset(), c.Z.removeChangeListener(this._handleSpeakingStoreChanged), l.Z.removeChangeListener(this._handleRTCConnectionStoreChanged);
     }
     getGameMetadata() {
-        let e = u.Z.findActivity((e) => e.type === f.IIU.PLAYING),
+        let e = u.Z.findActivity((e) => e.type === h.IIU.PLAYING),
             t = s.ZP.getCurrentGameForAnalytics();
         return {
             game_platform: (0, a.Z)(e),
@@ -83,11 +83,11 @@ class I extends i.Z {
     }
     constructor(...e) {
         super(...e),
-            h(this, '_currentUserSpeaking', !1),
-            h(this, '_anyoneElseSpeaking', !1),
-            h(this, '_voiceChannelId', void 0),
-            h(this, '_reportInterval', void 0),
-            h(this, '_handleRTCConnectionStoreChanged', () => {
+            p(this, '_currentUserSpeaking', !1),
+            p(this, '_anyoneElseSpeaking', !1),
+            p(this, '_voiceChannelId', void 0),
+            p(this, '_reportInterval', void 0),
+            p(this, '_handleRTCConnectionStoreChanged', () => {
                 let e = l.Z.getChannelId();
                 if (this._voiceChannelId !== e) {
                     if (((this._voiceChannelId = e), null == e)) {
@@ -96,12 +96,12 @@ class I extends i.Z {
                     }
                     null == this._reportInterval &&
                         ((this._reportInterval = new r.Xp()),
-                        this._reportInterval.start(p, () => {
+                        this._reportInterval.start(m, () => {
                             this._trackStartSpeaking(), this._trackStartListening();
                         }));
                 }
             }),
-            h(this, '_handleSpeakingStoreChanged', () => {
+            p(this, '_handleSpeakingStoreChanged', () => {
                 let e = c.Z.isCurrentUserSpeaking();
                 this._currentUserSpeaking !== e && ((this._currentUserSpeaking = e), this._trackStartSpeaking());
                 let t = c.Z.isAnyoneElseSpeaking();
@@ -109,4 +109,4 @@ class I extends i.Z {
             });
     }
 }
-t.Z = new I();
+t.Z = new g();

@@ -1,39 +1,39 @@
-s.d(t, {
+n.d(t, {
     Z: function () {
         return d;
     }
 });
-var n = s(200651);
-s(192379);
-var l = s(481060),
-    i = s(507453),
-    r = s(48550),
-    o = s(689938),
-    a = s(58259);
+var l = n(200651);
+n(192379);
+var i = n(481060),
+    s = n(507453),
+    r = n(48550),
+    o = n(388032),
+    a = n(58259);
 function d(e) {
-    let { mfaChallenge: t, setSlide: s, onClose: d } = e;
-    return (0, n.jsxs)(n.Fragment, {
+    let { mfaChallenge: t, setSlide: n, onClose: d } = e;
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, n.jsx)(i.Z.SlideHeader, {
-                subtitle: o.Z.Messages.MFA_V2_SELECT_HEADER,
+            (0, l.jsx)(s.Z.SlideHeader, {
+                subtitle: o.intl.string(o.t['XQaT+/']),
                 onClose: d
             }),
-            (0, n.jsx)(i.Z.SlideContent, {
+            (0, l.jsx)(s.Z.SlideContent, {
                 children: t.methods.map((e) =>
-                    (0, n.jsxs)(
-                        l.Clickable,
+                    (0, l.jsxs)(
+                        i.Clickable,
                         {
                             className: a.listItemContainer,
                             onClick: () => {
-                                s(e.type);
+                                n(e.type);
                             },
                             children: [
-                                (0, n.jsx)(l.Text, {
+                                (0, l.jsx)(i.Text, {
                                     className: a.listItemText,
                                     variant: 'text-md/semibold',
                                     children: r.P[e.type]
                                 }),
-                                (0, n.jsx)(l.ChevronSmallRightIcon, {
+                                (0, l.jsx)(i.ChevronSmallRightIcon, {
                                     size: 'custom',
                                     color: 'currentColor',
                                     width: 20,

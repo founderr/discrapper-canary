@@ -1,58 +1,58 @@
-var t = n(200651),
-    r = n(192379),
-    l = n(120356),
-    s = n.n(l),
+var a = n(200651),
+    l = n(192379),
+    r = n(120356),
+    i = n.n(r),
     o = n(263568),
-    i = n(481060),
-    c = n(689938),
+    s = n(481060),
+    c = n(388032),
     u = n(104295);
 function d(e) {
-    let { label: a, isSelected: n, onClick: r, children: l } = e,
-        o = (0, i.useRadioItem)({
+    let { label: t, isSelected: n, onClick: l, children: r } = e,
+        o = (0, s.useRadioItem)({
             isSelected: n,
-            label: a
+            label: t
         });
-    return (0, t.jsx)(i.Clickable, {
+    return (0, a.jsx)(s.Clickable, {
         ...o,
-        onClick: r,
-        className: s()(u.option, n && u.optionSelected),
-        children: l
+        onClick: l,
+        className: i()(u.option, n && u.optionSelected),
+        children: r
     });
 }
-a.Z = function (e) {
-    let { selectedLayoutType: a, onSelectedLayoutType: n } = e,
-        l = (0, i.useRadioGroup)({ orientation: 'horizontal' }),
-        s = r.useMemo(
+t.Z = function (e) {
+    let { selectedLayoutType: t, onSelectedLayoutType: n } = e,
+        r = (0, s.useRadioGroup)({ orientation: 'horizontal' }),
+        i = l.useMemo(
             () => [
                 {
                     name: o.C.DEFAULT,
-                    label: c.Z.Messages.CREATE_POLL_LAYOUT_DEFAULT,
-                    icon: i.ListBulletsIcon
+                    label: c.intl.string(c.t.GhK6X1),
+                    icon: s.ListBulletsIcon
                 },
                 {
                     name: o.C.IMAGE_ONLY_ANSWERS,
-                    label: c.Z.Messages.CREATE_POLL_LAYOUT_IMAGE,
-                    icon: i.ImageIcon
+                    label: c.intl.string(c.t.an4GKS),
+                    icon: s.ImageIcon
                 }
             ],
             []
         ),
-        _ = (e) => {
+        m = (e) => {
             n(e);
         };
-    return (0, t.jsx)('div', {
+    return (0, a.jsx)('div', {
         className: u.container,
-        'aria-label': c.Z.Messages.CREATE_POLL_LAYOUTS_RADIOGROUP_ARIA_LABEL,
-        ...l,
-        children: s.map((e) => {
+        'aria-label': c.intl.string(c.t.e9hWx8),
+        ...r,
+        children: i.map((e) => {
             let n = e.icon;
-            return (0, t.jsx)(
+            return (0, a.jsx)(
                 d,
                 {
                     label: e.label,
-                    isSelected: e.name === a,
-                    onClick: () => _(e.name),
-                    children: (0, t.jsx)(n, { className: u.icon })
+                    isSelected: e.name === t,
+                    onClick: () => m(e.name),
+                    children: (0, a.jsx)(n, { className: u.icon })
                 },
                 e.name
             );

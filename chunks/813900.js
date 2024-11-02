@@ -1,22 +1,22 @@
 n.d(t, {
     FO: function () {
-        return r;
+        return s;
     },
     Fq: function () {
-        return l;
+        return a;
     },
     Ks: function () {
         return i;
     },
     q2: function () {
-        return a;
+        return r;
     },
     qh: function () {
-        return s;
+        return l;
     }
 });
 let i = 80,
-    s = 48,
-    a = 3,
-    l = 500,
-    r = 5000;
+    l = 48,
+    r = 3,
+    a = 500,
+    s = 5000;

@@ -3,10 +3,10 @@ n.d(t, {
         return l;
     },
     Je: function () {
-        return f;
+        return h;
     },
     KJ: function () {
-        return _;
+        return f;
     },
     OT: function () {
         return u;
@@ -18,7 +18,7 @@ n.d(t, {
         return d;
     },
     lK: function () {
-        return E;
+        return _;
     },
     xI: function () {
         return c;
@@ -51,13 +51,13 @@ function c(e, t) {
 function d(e, t, n) {
     return !(null == t || (n.enabled && t.hasFlag(s.eHb.PRIVATE))) && !t.isHidden();
 }
-function _(e) {
+function f(e) {
     return null == e ? null : e.type === s.vxO.INSTALLING || e.type === s.vxO.UPDATING || e.type === s.vxO.UNINSTALLING ? e : null;
 }
-function E(e) {
+function _(e) {
     return e.reduce(
         (e, t) => {
-            let n = _(t);
+            let n = f(t);
             return null == n || t.type === s.vxO.UP_TO_DATE
                 ? e
                 : {
@@ -71,6 +71,6 @@ function E(e) {
         }
     );
 }
-function f(e) {
+function h(e) {
     return !!e.isDiscordApplication() && e.isEntitled(i.default.getCurrentUser(), a.Z);
 }

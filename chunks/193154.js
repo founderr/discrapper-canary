@@ -8,13 +8,13 @@ var i = n(200651),
     l = n(192379),
     r = n(481060),
     a = n(460562),
-    s = n(768581),
-    o = n(682662),
+    o = n(768581),
+    s = n(682662),
     c = n(662146),
     u = n(779033);
 function d(e) {
     let [t, d] = l.useState(!1);
-    return (0, i.jsx)(o.H, {
+    return (0, i.jsx)(s.H, {
         children: (0, i.jsx)(c.Z, {
             text: e.name,
             children: (0, i.jsx)(r.BlobMask, {
@@ -46,7 +46,7 @@ function d(e) {
                     },
                     icon:
                         null != e.icon
-                            ? s.ZP.getGuildIconURL({
+                            ? o.ZP.getGuildIconURL({
                                   id: e.id,
                                   icon: e.icon,
                                   canAnimate: !1,

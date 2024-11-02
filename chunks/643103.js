@@ -6,8 +6,8 @@ a.d(t, {
     a(47120);
 var n = a(200651),
     s = a(192379),
-    r = a(557533),
-    i = a.n(r),
+    i = a(557533),
+    r = a.n(i),
     l = a(435935),
     o = a(982905),
     c = a(431138),
@@ -32,7 +32,7 @@ class h extends s.PureComponent {
     }
     render() {
         let { isOpen: e, languages: t, current: s } = this.state,
-            { className: r } = this.props,
+            { className: i } = this.props,
             d = null;
         return (
             null != t &&
@@ -66,7 +66,7 @@ class h extends s.PureComponent {
                               );
                     })),
             (0, n.jsxs)('div', {
-                className: i()(u.localePicker, r),
+                className: r()(u.localePicker, i),
                 onMouseEnter: this.open,
                 onMouseLeave: this.close,
                 onClick: this.toggle,

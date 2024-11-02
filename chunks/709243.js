@@ -1,44 +1,44 @@
 n.d(t, {
     U: function () {
-        return o;
+        return r;
     },
     e: function () {
-        return r;
+        return l;
     }
 });
-var a,
-    o,
-    s = n(689938);
-function r() {
+var o,
+    r,
+    a = n(388032);
+function l() {
     return [
         {
             value: 'Too hard',
-            label: s.Z.Messages.GUILD_DELETE_FEEDBACK_TOO_HARD
+            label: a.intl.string(a.t['iZf+eH'])
         },
         {
             value: 'Testing purposes',
-            label: s.Z.Messages.GUILD_DELETE_FEEDBACK_TEST
+            label: a.intl.string(a.t.SSvKBg)
         },
         {
             value: 'Created on accident',
-            label: s.Z.Messages.GUILD_DELETE_FEEDBACK_ACCIDENT
+            label: a.intl.string(a.t.NY8qOj)
         },
         {
             value: 'Curious about server/template',
-            label: s.Z.Messages.GUILD_DELETE_FEEDBACK_TEMPLATE
+            label: a.intl.string(a.t.QoHpTk)
         },
         {
             value: 'Empty server',
-            label: s.Z.Messages.GUILD_DELETE_FEEDBACK_LONELY
+            label: a.intl.string(a.t['+bETpK'])
         },
         {
             value: 'Inactive server',
-            label: s.Z.Messages.GUILD_DELETE_FEEDBACK_INACTIVE
+            label: a.intl.string(a.t.S9NQEh)
         },
         {
             value: 'Other',
-            label: s.Z.Messages.GUILD_DELETE_FEEDBACK_OTHER
+            label: a.intl.string(a.t.LqXaV1)
         }
     ];
 }
-((a = o || (o = {})).TOO_HARD = 'Too hard'), (a.TEST = 'Testing purposes'), (a.ACCIDENT = 'Created on accident'), (a.TEMPLATE = 'Curious about server/template'), (a.LONELY = 'Empty server'), (a.INACTIVE = 'Inactive server'), (a.OTHER = 'Other');
+((o = r || (r = {})).TOO_HARD = 'Too hard'), (o.TEST = 'Testing purposes'), (o.ACCIDENT = 'Created on accident'), (o.TEMPLATE = 'Curious about server/template'), (o.LONELY = 'Empty server'), (o.INACTIVE = 'Inactive server'), (o.OTHER = 'Other');

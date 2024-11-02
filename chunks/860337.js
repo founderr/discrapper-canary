@@ -8,8 +8,8 @@ var r = n(200651),
     l = n(120356),
     i = n.n(l),
     o = n(481060),
-    s = n(931240),
-    c = n(207796),
+    c = n(931240),
+    s = n(207796),
     d = n(836768),
     u = n(859921),
     h = n(785287),
@@ -22,12 +22,12 @@ function x() {
         children: [
             (0, r.jsx)(o.Button, {
                 size: o.Button.Sizes.SMALL,
-                onClick: s.LX,
+                onClick: c.LX,
                 children: 'Reset Every Clan Setup State'
             }),
             (0, r.jsx)(o.Button, {
                 size: o.Button.Sizes.SMALL,
-                onClick: c.PJ,
+                onClick: s.PJ,
                 children: 'Reset Clan Discovery State'
             }),
             (0, r.jsx)(o.Button, {

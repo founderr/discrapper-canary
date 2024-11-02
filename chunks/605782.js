@@ -1,16 +1,16 @@
-var s = n(200651),
-    i = n(192379),
+var i = n(200651),
+    s = n(192379),
     r = n(512969),
-    o = n(215569);
-class l extends i.Component {
+    l = n(215569);
+class o extends s.Component {
     render() {
-        let { children: e, location: t, history: n, staticContext: l, match: a, ...c } = this.props,
+        let { children: e, location: t, history: n, staticContext: o, match: a, ...c } = this.props,
             d = null,
             u = null;
         return (
-            i.Children.forEach(e, (e) => {
-                if (null == d && i.isValidElement(e)) {
-                    let { component: s, render: o, ...a } = e.props,
+            s.Children.forEach(e, (e) => {
+                if (null == d && s.isValidElement(e)) {
+                    let { component: i, render: l, ...a } = e.props,
                         c = a.path || a.from;
                     if (
                         null !=
@@ -28,16 +28,16 @@ class l extends i.Component {
                             location: t,
                             match: d,
                             history: n,
-                            staticContext: l
+                            staticContext: o
                         }),
-                            null != s ? (u = i.createElement(s, a)) : null != o && (u = o(a));
+                            null != i ? (u = s.createElement(i, a)) : null != l && (u = l(a));
                 }
             }),
-            (0, s.jsx)(o.W, {
+            (0, i.jsx)(l.W, {
                 ...c,
                 children: u
             })
         );
     }
 }
-t.Z = (0, r.EN)(l);
+t.Z = (0, r.EN)(o);

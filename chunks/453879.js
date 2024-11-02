@@ -1,15 +1,15 @@
 n.d(t, {
     v: function () {
-        return l;
+        return a;
     }
 }),
     n(47120),
     n(653041);
 var i = n(975984),
-    s = n(486527),
-    a = n(689938);
-function l(e, t) {
-    if (t !== s.AR.ALL)
+    l = n(486527),
+    r = n(388032);
+function a(e, t) {
+    if (t !== l.AR.ALL)
         return [
             {
                 entries: (0, i.TR)(e),
@@ -17,19 +17,19 @@ function l(e, t) {
             }
         ];
     let n = [],
-        l = (0, i.Lz)(e),
-        r = new Set(l.map((e) => e.guildId));
-    l.length > 0 &&
+        a = (0, i.Lz)(e),
+        s = new Set(a.map((e) => e.guildId));
+    a.length > 0 &&
         n.push({
-            header: a.Z.Messages.SEARCH_NEWEST,
-            entries: l,
+            header: r.intl.string(r.t.CbaapK),
+            entries: a,
             appendEndCard: !1
         });
-    let o = e.filter((e) => !r.has(e.guildId));
+    let o = e.filter((e) => !s.has(e.guildId));
     return (
         (o = (0, i.Th)(o)).length > 0 &&
             n.push({
-                header: a.Z.Messages.ALL_SERVERS,
+                header: r.intl.string(r.t.wxbhER),
                 entries: o,
                 appendEndCard: !0
             }),

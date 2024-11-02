@@ -4,46 +4,46 @@ t.d(n, {
     }
 });
 var i,
-    a,
-    l = t(200651),
+    l,
+    a = t(200651),
     o = t(192379),
     r = t(481060),
-    s = t(689938),
+    s = t(388032),
     c = t(633236);
 function d(e) {
     let { title: n, buttonType: t, onClickViewButton: i } = e;
-    return (0, l.jsxs)('div', {
+    return (0, a.jsxs)('div', {
         className: c.header,
         children: [
-            (0, l.jsx)(r.Text, {
+            (0, a.jsx)(r.Text, {
                 variant: 'text-md/medium',
                 color: 'header-primary',
                 children: n
             }),
             null != t &&
                 null != i &&
-                (0, l.jsx)(r.Clickable, {
+                (0, a.jsx)(r.Clickable, {
                     className: c.viewMore,
                     onClick: i,
-                    'aria-label': s.Z.Messages.APP_LAUNCHER_VIEW_MORE_ROW_ARIA_LABEL.format({ title: n }),
-                    children: (0, l.jsx)(r.Text, {
+                    'aria-label': s.intl.formatToPlainString(s.t['bj/2kZ'], { title: n }),
+                    children: (0, a.jsx)(r.Text, {
                         variant: 'text-md/medium',
                         color: 'text-brand',
-                        children: 0 === t ? s.Z.Messages.APP_LAUNCHER_VIEW_MORE_ROW : s.Z.Messages.APP_LAUNCHER_VIEW_LESS_ROW
+                        children: 0 === t ? s.intl.format(s.t.gVw57u, {}) : s.intl.string(s.t.nPGLFR)
                     })
                 })
         ]
     });
 }
-((i = a || (a = {}))[(i.VIEW_MORE = 0)] = 'VIEW_MORE'),
+((i = l || (l = {}))[(i.VIEW_MORE = 0)] = 'VIEW_MORE'),
     (i[(i.VIEW_LESS = 1)] = 'VIEW_LESS'),
-    (d.buttonTypes = a),
+    (d.buttonTypes = l),
     (d.Loading = function () {
         let e = o.useMemo(() => ({ width: ''.concat(10 + 20 * Math.random(), '%') }), []);
-        return (0, l.jsx)('div', {
+        return (0, a.jsx)('div', {
             className: c.loadingHeader,
             style: e,
-            children: (0, l.jsx)(r.Text, {
+            children: (0, a.jsx)(r.Text, {
                 className: c.hidden,
                 variant: 'text-md/medium',
                 color: 'header-primary',
