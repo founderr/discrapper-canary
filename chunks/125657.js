@@ -61,7 +61,7 @@ function I(e) {
                               (0, i.jsx)(o.Text, {
                                   color: 'header-primary',
                                   variant: 'text-sm/normal',
-                                  children: v.intl.format(v.t.GyhzGx, { user: _ })
+                                  children: v.intl.format(v.t.GyhzGx, { user: _.toString() })
                               }),
                               (0, i.jsx)(u.Z, {
                                   className: C.tag,

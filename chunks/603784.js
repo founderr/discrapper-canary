@@ -59,7 +59,7 @@ class Z extends r.PureComponent {
                   className: b.overflowEllipsis,
                   children: S.intl.format(o, {
                       user: l,
-                      target: s,
+                      target: s.toString(),
                       userHook: (n, r) => {
                           if (null != e.user)
                               return (0, i.jsx)(
