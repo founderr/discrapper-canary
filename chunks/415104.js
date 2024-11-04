@@ -30,8 +30,13 @@ function g(e) {
                 });
         }, [C, s, t.id]),
         b = r.useCallback(() => {
-            C(!1);
-        }, [C]);
+            C(!1),
+                (0, i.dA)({
+                    questId: t.id,
+                    event: m.rMx.QUEST_HOVER_OFF,
+                    properties: (0, i.mH)(s)
+                });
+        }, [C, s, t.id]);
     return (0, o.jsx)(d.A, {
         questOrQuests: t,
         questContent: s,

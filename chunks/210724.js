@@ -27,8 +27,8 @@ var o = n(200651),
     b = n(617889),
     N = n(130653),
     S = n(46140),
-    B = n(981631),
-    T = n(604330);
+    T = n(981631),
+    B = n(604330);
 function A(e) {
     let { isExpanded: t, questId: n } = e;
     return (
@@ -63,8 +63,8 @@ function y(e) {
         Q = r.useRef(L),
         Z = (0, b.B)(s, L && !M),
         D = (0, f.vI)(s, S.dr.QUESTS_BAR) ? f.WV : Z.collapsedHeight,
-        U = r.useRef(-1),
-        H = r.useRef(!1),
+        H = r.useRef(-1),
+        U = r.useRef(!1),
         [V, z] = r.useState(!1),
         [F, G] = r.useState(!1),
         [K, Y] = r.useState(!0),
@@ -85,17 +85,17 @@ function y(e) {
             z(!0);
         }, []),
         ea = r.useCallback(() => {
-            z(!1), !H.current && !P && en(!1);
+            z(!1), !U.current && !P && en(!1);
         }, [P, en]),
         ei = r.useCallback(() => {
-            z(!1), !P && en(!1), (H.current = !1);
+            z(!1), !P && en(!1), (U.current = !1);
         }, [P, en]),
         el = r.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                 if (F) return;
                 let { withDelay: t = !1 } = e;
-                t ? (U.current = window.setTimeout(er, 75)) : er();
+                t ? (H.current = window.setTimeout(er, 75)) : er();
             },
             [er, F]
         ),
@@ -103,28 +103,34 @@ function y(e) {
             el();
         }, [el]),
         ed = r.useCallback(() => {
-            if ((window.clearTimeout(U.current), !!Z.canCollapseOnBlur && !V)) !H.current && en(!1);
+            if ((window.clearTimeout(H.current), !!Z.canCollapseOnBlur && !V)) !U.current && en(!1);
         }, [V, Z, en]),
         eu = r.useCallback(() => {
             (0, m.dA)({
                 questId: s.id,
-                event: B.rMx.QUEST_HOVER,
+                event: T.rMx.QUEST_HOVER,
                 properties: (0, m.mH)(g.jn.QUEST_BAR)
             }),
-                (H.current = !0),
+                (U.current = !0),
                 el({ withDelay: !0 });
         }, [el, s]),
         ep = r.useCallback(() => {
-            (H.current = !1), ed();
-        }, [ed]);
+            (0, m.dA)({
+                questId: s.id,
+                event: T.rMx.QUEST_HOVER_OFF,
+                properties: (0, m.mH)(g.jn.QUEST_BAR)
+            }),
+                (U.current = !1),
+                ed();
+        }, [ed, s]);
     r.useLayoutEffect(() => {
         P && Z.shouldExpandOnQuestComplete && er();
     }, [er, P, Z.shouldExpandOnQuestComplete]),
         r.useLayoutEffect(() => {
-            k && !q && H.current && er();
+            k && !q && U.current && er();
         }, [er, k, q]),
         r.useLayoutEffect(() => {
-            !P && k && !q && !H.current && en(!1);
+            !P && k && !q && !U.current && en(!1);
         }, [k, P, q, en]),
         r.useLayoutEffect(() => {
             L !== Q.current && J(!1), (Q.current = L);
@@ -168,7 +174,7 @@ function y(e) {
         M &&
             (0, m.dA)({
                 questId: s.id,
-                event: B.rMx.QUEST_CONTENT_RENDERING_FAILURE,
+                event: T.rMx.QUEST_CONTENT_RENDERING_FAILURE,
                 properties: {
                     ...(0, m.mH)(g.jn.QUEST_BAR),
                     reason: 'asset_loading_error'
@@ -177,7 +183,7 @@ function y(e) {
             !y &&
                 (0, m.dA)({
                     questId: s.id,
-                    event: B.rMx.QUEST_CONTENT_RENDERING_FAILURE,
+                    event: T.rMx.QUEST_CONTENT_RENDERING_FAILURE,
                     properties: {
                         ...(0, m.mH)(g.jn.QUEST_BAR),
                         reason: 'not_eligible_for_quest'
@@ -192,7 +198,7 @@ function y(e) {
               children: () => {
                   let e = Z.component;
                   return (0, o.jsxs)('div', {
-                      className: T.mask,
+                      className: B.mask,
                       children: [
                           L &&
                               (0, o.jsx)(A, {
@@ -205,9 +211,9 @@ function y(e) {
                               onMouseEnter: eu,
                               onFocus: ec,
                               onBlur: ed,
-                              className: a()(T.wrapper, {
-                                  [T.wrapperInvisible]: !L,
-                                  [T.wrapperVisible]: L && X
+                              className: a()(B.wrapper, {
+                                  [B.wrapperInvisible]: !L,
+                                  [B.wrapperVisible]: L && X
                               }),
                               style: {
                                   color: s.config.colors.secondary,
@@ -217,9 +223,9 @@ function y(e) {
                                   })
                               },
                               children: (0, o.jsx)(i.animated.div, {
-                                  className: a()(T.contentWrapper, {
-                                      [T.contentWrapperExpanded]: F,
-                                      [T.contentWrapperAccepted]: k
+                                  className: a()(B.contentWrapper, {
+                                      [B.contentWrapperExpanded]: F,
+                                      [B.contentWrapperAccepted]: k
                                   }),
                                   style: {
                                       backgroundColor: Z.preEnrollmentBackgroundColor,
