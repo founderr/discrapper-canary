@@ -39,6 +39,7 @@ function u(e, t) {
                 let r = (0, l.Vw)(e, m, !1),
                     s = (0, l.eu)(e, m, !1);
                 a.default.track(d.rMx.COLLECTIBLES_TILE_IMPRESSION, {
+                    collectibles_shop_session_id: null == n ? void 0 : n.sessionId,
                     sku_id: e.skuId,
                     display_price: null == r ? void 0 : r.amount,
                     display_price_currency: null == r ? void 0 : r.currency.toString(),
@@ -51,7 +52,7 @@ function u(e, t) {
                     category_position: null == n ? void 0 : n.categoryPosition
                 });
             }
-        }, [null == n ? void 0 : n.categoryPosition, null == n ? void 0 : n.pageCategory, null == n ? void 0 : n.pageSection, null == n ? void 0 : n.tilePosition, g, m, b, t, e]),
+        }, [null == n ? void 0 : n.sessionId, null == n ? void 0 : n.categoryPosition, null == n ? void 0 : n.pageCategory, null == n ? void 0 : n.pageSection, null == n ? void 0 : n.tilePosition, g, m, b, t, e]),
         {
             handleCardVisibilityChange: (e) => {
                 h(e);
