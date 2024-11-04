@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(209173),
-    a = n(288385),
+    a = n(209173),
+    l = n(288385),
     s = n(442837),
     o = n(481060),
     c = n(110924),
@@ -38,14 +38,14 @@ function S(e) {
                 categoryId: N,
                 page: x,
                 pageSize: C.IV,
-                source: a.F.APP_DIRECTORY
+                source: l.F.APP_DIRECTORY
             }),
             searchResults: m.Z.getSearchResults({
                 query: n,
                 categoryId: N,
                 page: x,
                 pageSize: C.IV,
-                source: a.F.APP_DIRECTORY
+                source: l.F.APP_DIRECTORY
             })
         })),
         D = (0, s.cj)([m.Z], () => {
@@ -53,7 +53,7 @@ function S(e) {
                 query: n,
                 page: 1,
                 pageSize: C.IV,
-                source: a.F.APP_DIRECTORY
+                source: l.F.APP_DIRECTORY
             });
             return null != e
                 ? {
@@ -74,7 +74,7 @@ function S(e) {
                     options: {
                         page: e,
                         pageSize: C.IV,
-                        source: a.F.APP_DIRECTORY,
+                        source: l.F.APP_DIRECTORY,
                         categoryId: N
                     }
                 }),
@@ -99,7 +99,7 @@ function S(e) {
                         query: n,
                         options: {
                             page: 1,
-                            source: a.F.APP_DIRECTORY,
+                            source: l.F.APP_DIRECTORY,
                             categoryId: e
                         }
                     });
@@ -122,13 +122,14 @@ function S(e) {
                                         null == w
                                             ? void 0
                                             : w.results.map((e) => {
-                                                  if (e.type === l.s.APPLICATION) {
+                                                  if (e.type === a.s.APPLICATION) {
                                                       let t = e.data;
                                                       return (0, i.jsx)(
                                                           E.Z,
                                                           {
                                                               application: t,
-                                                              onSelectApplication: S
+                                                              onSelectApplication: S,
+                                                              showCategory: !0
                                                           },
                                                           t.id
                                                       );
