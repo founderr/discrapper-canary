@@ -1,18 +1,21 @@
 n.d(t, {
     Nx: function () {
-        return h;
+        return p;
     },
     UV: function () {
-        return v;
+        return I;
     },
     WR: function () {
-        return E;
+        return v;
     },
     lr: function () {
-        return m;
+        return g;
     },
     t7: function () {
-        return p;
+        return m;
+    },
+    x8: function () {
+        return S;
     }
 }),
     n(47120);
@@ -23,56 +26,57 @@ var r = n(192379),
     o = n(544891),
     l = n(78839),
     u = n(775412),
-    c = n(104494),
-    d = n(639119),
-    f = n(474936),
-    _ = n(981631);
-function h() {
-    let e = (0, d.N)(),
+    c = n(769415),
+    d = n(104494),
+    f = n(639119),
+    _ = n(474936),
+    h = n(981631);
+function p() {
+    let e = (0, f.N)(),
         t = (0, u._O)(),
-        n = (0, c.Ng)(),
-        r = p();
+        n = (0, d.Ng)(),
+        r = m();
     return null != e || t || null != n || r;
 }
-let p = () => {
+let m = () => {
         var e;
         let t = (0, s.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
             n = null == t ? void 0 : null === (e = t.metadata) || void 0 === e ? void 0 : e.active_discount_expires_at;
         return null != n && a()(Date.now()) <= a()(n);
     },
-    m = () => {
+    g = () => {
         var e;
         let t = (0, s.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription());
         switch (null == t ? void 0 : null === (e = t.metadata) || void 0 === e ? void 0 : e.active_discount_id) {
-            case f.dT:
-            case f.rB:
+            case _.dT:
+            case _.rB:
                 return {
                     duration: 1,
                     percentage: 30
                 };
-            case f.dB:
-            case f.hs:
-            case f.RU:
+            case _.dB:
+            case _.hs:
+            case _.RU:
                 return {
                     duration: 3,
                     percentage: 30
                 };
-            case f.ih:
+            case _.ih:
                 return {
                     duration: 1,
                     percentage: 40
                 };
-            case f.gW:
+            case _.gW:
                 return {
                     duration: 1,
                     percentage: 20
                 };
-            case f.Nl:
+            case _.Nl:
                 return {
                     duration: 1,
                     percentage: 25
                 };
-            case f.n5:
+            case _.n5:
                 return {
                     duration: 1,
                     percentage: 40
@@ -81,16 +85,16 @@ let p = () => {
                 return;
         }
     },
-    g = async () => {
+    E = async () => {
         let e = null;
         try {
             var t;
-            let n = await o.tn.post({ url: _.ANM.CHURN_USER_OFFER });
+            let n = await o.tn.post({ url: h.ANM.CHURN_USER_OFFER });
             e = null !== (t = n.body.offer) && void 0 !== t ? t : null;
         } catch (e) {}
         return e;
     },
-    E = (e) => {
+    v = (e) => {
         let [t, n] = r.useState(!1),
             [i, a] = r.useState(!1),
             [s, o] = r.useState(null);
@@ -106,7 +110,7 @@ let p = () => {
             !i &&
                 !t &&
                 (a(!0),
-                g()
+                E()
                     .then((e) => {
                         o(e), l();
                     })
@@ -119,10 +123,25 @@ let p = () => {
             }
         );
     },
-    v = () => {
+    I = () => {
         let e = (0, s.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
-            t = p(),
+            t = m(),
             n = null !== e && e.hasPremiumNitroMonthly,
             r = null != e && null != e.trialId;
         return n && !r && !t;
+    },
+    S = (e) => {
+        let t = (0, s.e7)([l.ZP], () => l.ZP.inReverseTrial()),
+            n = (0, s.e7)([l.ZP], () => {
+                var e;
+                return (null === (e = l.ZP.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialId) === _.jz;
+            }),
+            r = c.Z.useExperiment(
+                { location: e },
+                {
+                    disable: !n,
+                    autoTrackExposure: n
+                }
+            ).enabled;
+        return t || r;
     };
