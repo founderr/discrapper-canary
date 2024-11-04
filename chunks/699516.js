@@ -146,10 +146,11 @@ class R extends (r = u.ZP.Store) {
                     });
         },
         RELATIONSHIP_REMOVE: function (e) {
-            (g = { ...g }), delete g[e.relationship.id], null != E[e.relationship.id] && ((E = { ...E }), delete E[e.relationship.id]), null != v[e.relationship.id] && ((v = { ...v }), delete v[e.relationship.id]), I.delete(e.relationship.id), C();
+            (g = { ...g }), delete g[e.relationship.id], null != E[e.relationship.id] && ((E = { ...E }), delete E[e.relationship.id]), null != v[e.relationship.id] && ((v = { ...v }), delete v[e.relationship.id]), !e.relationship.userIgnored && S.delete(e.relationship.id), I.delete(e.relationship.id), C();
         },
         RELATIONSHIP_UPDATE: function (e) {
-            null == e.relationship.since ? delete v[e.relationship.id] : (v[e.relationship.id] = e.relationship.since), null == e.relationship.nickname ? delete E[e.relationship.id] : (E[e.relationship.id] = e.relationship.nickname), (0, d.A)({ location: 'relationship_store' }) && e.relationship.isSpamRequest ? I.add(e.relationship.id) : I.delete(e.relationship.id);
+            let { relationship: t } = e;
+            null == t.since ? delete v[t.id] : (v[t.id] = t.since), null == t.nickname ? delete E[t.id] : (E[t.id] = t.nickname), (0, d.A)({ location: 'relationship_store' }) && t.isSpamRequest ? I.add(t.id) : I.delete(t.id), t.userIgnored ? S.add(t.id) : S.delete(t.id);
         },
         RELATIONSHIP_PENDING_INCOMING_REMOVED: function (e) {
             (g = { ...g }),

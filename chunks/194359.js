@@ -179,6 +179,16 @@ let S = {
             })
             .catch(() => {
                 s.uv.announce(E.intl.string(E.t.n6Jo3N));
-            })
+            }),
+    ignoreUser: (e, t) =>
+        a.tn.put({
+            url: g.ANM.IGNORE_USER(e),
+            context: { location: t }
+        }),
+    unignoreUser: (e, t) =>
+        a.tn.del({
+            url: g.ANM.IGNORE_USER(e),
+            context: { location: t }
+        })
 };
 t.Z = S;

@@ -2440,7 +2440,8 @@ let aq = '@me',
         ACCOUNT_REVERT: '/auth/revert',
         GUILD_LEADERBOARD: (e, t) => '/guilds/'.concat(e, '/leaderboards/').concat(t),
         UPDATE_MY_LOL_LEADERBOARD: () => '/users/@me/update-league-of-legends-leaderboard',
-        GUILD_LEADERBOARD_SETTINGS: (e, t) => '/guilds/'.concat(e, '/leaderboards/').concat(t, '/settings')
+        GUILD_LEADERBOARD_SETTINGS: (e, t) => '/guilds/'.concat(e, '/leaderboards/').concat(t, '/settings'),
+        IGNORE_USER: (e) => '/users/'.concat(e, '/ignore')
     }),
     a5 = Object.freeze({
         INDEX: '/',
