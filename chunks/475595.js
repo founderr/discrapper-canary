@@ -55,6 +55,7 @@ function c(e, t, n) {
         case 'logo_type':
             r = e.config.assets.logotype;
     }
+    let o = e.config.features.includes(s.S7.QUESTS_CDN);
     return (function (e, t, n) {
         let r = d(e, t, n),
             i = f(t),
@@ -64,17 +65,21 @@ function c(e, t, n) {
             mimetype: i,
             isAnimated: a
         };
-    })(e.id, r, n);
+    })(e.id, r, {
+        theme: n,
+        newCdn: o
+    });
 }
 function d(e, t, n) {
     if (t.startsWith('blob:')) {
         var r, i;
         return null !== (i = (r = t).split('?', 1).at(0)) && void 0 !== i ? i : r;
     }
+    let a = (null == n ? void 0 : n.newCdn) ? s.tD : s.Uo;
     return ''
-        .concat(s.tD)
+        .concat(a)
         .concat(e)
-        .concat(null != n ? '/'.concat(n) : '', '/')
+        .concat((null == n ? void 0 : n.theme) != null ? '/'.concat(n.theme) : '', '/')
         .concat(t);
 }
 function f(e) {

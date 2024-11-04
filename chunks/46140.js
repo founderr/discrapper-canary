@@ -11,6 +11,9 @@ n.d(t, {
     S7: function () {
         return f.S;
     },
+    Uo: function () {
+        return g;
+    },
     XZ: function () {
         return h;
     },
@@ -50,5 +53,6 @@ let _ = c.Z.Millis.MINUTE * u.c.ConsecutiveHeartbeatPeriodMinutes,
         clamp: !0
     };
 ((i = o || (o = {})).CONSOLE = 'CONSOLE'), (i.DESKTOP = 'DESKTOP');
-let m = 'https://cdn.discordapp.com/assets/quests/';
+let m = 'https://cdn.discordapp.com/quests/',
+    g = 'https://cdn.discordapp.com/assets/quests/';
 ((a = l || (l = {})).COLLAPSED = 'collapsed'), (a.EXPANDED = 'expanded'), (a.CLOSED = 'closed'), (a.SOFT_DISMISSED = 'soft-dismissed'), (a.RESET_TO_PREVIOUS = 'reset-to-previous');

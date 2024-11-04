@@ -3,14 +3,15 @@ n.d(t, {
         return i;
     },
     z: function () {
-        return s;
+        return o;
     }
 });
 var r,
     i,
-    a = n(475595);
+    a = n(475595),
+    s = n(46140);
 ((r = i || (i = {})).VIDEO_PLAYER_VIDEO = 'video_player_video'), (r.VIDEO_PLAYER_VIDEO_LOW_RES = 'video_player_video_low_res'), (r.VIDEO_PLAYER_THUMBNAIL = 'video_player_thumbnail'), (r.VIDEO_PLAYER_CAPTION = 'video_player_caption'), (r.VIDEO_PLAYER_TRANSCRIPT = 'video_player_transcript'), (r.QUEST_BAR_PREVIEW_VIDEO = 'quest_bar_preview_video'), (r.QUEST_BAR_PREVIEW_THUMBNAIL = 'quest_bar_preview_thumbnail'), (r.QUEST_HOME_VIDEO = 'quest_home_video');
-function s(e, t) {
+function o(e, t) {
     let n = (function (e, t) {
         var n, r, i, a, s, o, l, u;
         switch (e) {
@@ -35,13 +36,14 @@ function s(e, t) {
         }
     })(e, t);
     if (null == n) return null;
-    let r = (0, a.Dm)(n);
-    if (null == r) return null;
-    let i = (0, a.Q2)(t.id, n),
-        s = a.N0.includes(r);
+    let r = t.config.features.includes(s.S7.QUESTS_CDN),
+        i = (0, a.Dm)(n);
+    if (null == i) return null;
+    let o = (0, a.Q2)(t.id, n, { newCdn: r }),
+        l = a.N0.includes(i);
     return {
-        url: i,
-        mimetype: r,
-        isAnimated: s
+        url: o,
+        mimetype: i,
+        isAnimated: l
     };
 }
