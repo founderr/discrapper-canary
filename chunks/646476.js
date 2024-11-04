@@ -12,11 +12,11 @@ var r = n(192379),
     a = n.n(i),
     s = n(846519),
     o = n(987170);
-let l = new Date('2024-01-04T07:59:59.000Z'),
+let l = new Date('2025-01-06T07:59:59.000Z'),
     u = a()(l),
     c = (0, o.Z)({
-        id: '2023-11_seasonal_gifting',
-        label: 'Seasonal Gifting 2023',
+        id: '2024-11_seasonal_gifting',
+        label: 'Seasonal Gifting 2024',
         kind: 'user',
         defaultConfig: { enabled: !1 },
         treatments: [
