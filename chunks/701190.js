@@ -1,4 +1,4 @@
-n(789020);
+n(47120), n(789020);
 var r,
     i,
     a,
@@ -7,14 +7,14 @@ var r,
     l = n(570140),
     u = n(264229),
     c = n(981631);
-let d = {},
-    f = {},
+let d = new Map(),
+    f = new Map(),
     _ = {};
 function h(e, t) {
     var n;
     e = null != e ? e : '';
     let r = (0, u.fU)(e),
-        i = d[e],
+        i = d.get(e),
         a =
             null != i
                 ? {
@@ -26,10 +26,7 @@ function h(e, t) {
                       code: r.baseCode
                   };
     t(a),
-        (d = {
-            ...d,
-            [e]: a
-        }),
+        (d = new Map(d)).set(e, a),
         (null === (n = a.guild) || void 0 === n ? void 0 : n.id) != null &&
             (_ = {
                 ..._,
@@ -43,10 +40,10 @@ function p(e) {
 }
 class m extends (r = o.ZP.Store) {
     getInvite(e) {
-        return d[e];
+        return d.get(e);
     }
     getInviteError(e) {
-        return f[e];
+        return f.get(e);
     }
     getInvites() {
         return d;
@@ -68,13 +65,10 @@ class m extends (r = o.ZP.Store) {
         INVITE_RESOLVE: function (e) {
             let { code: t } = e,
                 n = (0, u.fU)(t);
-            d = {
-                ...d,
-                [t]: {
-                    code: n.baseCode,
-                    state: c.r2o.RESOLVING
-                }
-            };
+            (d = new Map(d)).set(t, {
+                code: n.baseCode,
+                state: c.r2o.RESOLVING
+            });
         },
         INVITE_RESOLVE_SUCCESS: function (e) {
             return h(e.code, (t) => {
@@ -120,7 +114,7 @@ class m extends (r = o.ZP.Store) {
         },
         INVITE_ACCEPT_FAILURE: function (e) {
             return (
-                (f[e.code] = e.error),
+                f.set(e.code, e.error),
                 h(e.code, (e) => {
                     e.state = c.r2o.ERROR;
                 })
