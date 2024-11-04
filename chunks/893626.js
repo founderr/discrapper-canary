@@ -1,182 +1,156 @@
-t.r(n),
-    t.d(n, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return b;
+            return p;
         }
     }),
-    t(47120);
-var l = t(200651),
-    r = t(192379),
-    a = t(658722),
-    o = t.n(a),
-    s = t(399606),
-    i = t(481060),
-    u = t(313201),
-    d = t(734893),
-    c = t(271383),
-    m = t(430824),
-    g = t(594174),
-    h = t(700785),
-    f = t(580357),
-    x = t(981631),
-    p = t(388032),
-    v = t(224474);
-function b(e) {
-    var n, t, a;
-    let { transitionState: b, onClose: I, guildId: _, welcomeMessage: j, onSave: k } = e,
-        B = (0, u.Dt)(),
-        [C, L] = r.useState({ ...j }),
-        M = (0, s.e7)([m.Z], () => m.Z.getGuild(_)),
-        N = r.useCallback(
+    n(47120);
+var l = n(200651),
+    r = n(192379),
+    a = n(658722),
+    o = n.n(a),
+    s = n(399606),
+    i = n(481060),
+    u = n(313201),
+    d = n(734893),
+    c = n(271383),
+    m = n(430824),
+    g = n(594174),
+    h = n(903518),
+    f = n(580357),
+    v = n(388032),
+    x = n(224474);
+function p(e) {
+    var t, n, a;
+    let { transitionState: p, onClose: b, guildId: I, welcomeMessage: j, onSave: k } = e,
+        _ = (0, u.Dt)(),
+        [B, C] = r.useState({ ...j }),
+        L = (0, s.e7)([m.Z], () => m.Z.getGuild(I)),
+        M = r.useCallback(
             (e) => {
-                let n = {};
+                let t = {};
                 return Promise.resolve(
-                    c.ZP.getMembers(_)
-                        .filter((t) => {
-                            var l, r, a;
-                            let s = g.default.getUser(t.userId);
-                            if (
-                                (null != s && (n[t.userId] = s),
-                                null == M ||
-                                    null == s ||
-                                    ((r = M),
-                                    (a = s),
-                                    !(
-                                        r.isOwner(a) ||
-                                        h.BT({
-                                            permission: x.Plq.ADMINISTRATOR,
-                                            context: r,
-                                            user: a
-                                        }) ||
-                                        (h.BT({
-                                            permission: x.Plq.MANAGE_GUILD,
-                                            context: r,
-                                            user: a
-                                        }) &&
-                                            h.BT({
-                                                permission: x.Plq.MANAGE_ROLES,
-                                                context: r,
-                                                user: a
-                                            }))
-                                    )))
-                            )
-                                return !1;
-                            let i = ''.concat(null !== (l = t.nick) && void 0 !== l ? l : '', ' ').concat(null == s ? void 0 : s.username);
-                            return o()(e.toLowerCase(), i.toLowerCase());
+                    c.ZP.getMembers(I)
+                        .filter((n) => {
+                            var l;
+                            let r = g.default.getUser(n.userId);
+                            if ((null != r && (t[n.userId] = r), null == L || null == r || !(0, h.Y)(L, r))) return !1;
+                            let a = ''.concat(null !== (l = n.nick) && void 0 !== l ? l : '', ' ').concat(null == r ? void 0 : r.username);
+                            return o()(e.toLowerCase(), a.toLowerCase());
                         })
                         .map((e) => {
-                            var t, l, r;
+                            var n, l, r;
                             return {
                                 value: e.userId,
-                                label: null !== (r = null !== (l = e.nick) && void 0 !== l ? l : null === (t = n[e.userId]) || void 0 === t ? void 0 : t.username) && void 0 !== r ? r : ''
+                                label: null !== (r = null !== (l = e.nick) && void 0 !== l ? l : null === (n = t[e.userId]) || void 0 === n ? void 0 : n.username) && void 0 !== r ? r : ''
                             };
                         })
                 );
             },
-            [_, M]
+            [I, L]
         ),
-        T = r.useCallback(
+        N = r.useCallback(
             (e) => {
-                if (null == _ || null == e) return null;
-                let n = c.ZP.getMember(_, e.value);
-                if (null == n) return null;
-                let t = g.default.getUser(n.userId);
+                if (null == I || null == e) return null;
+                let t = c.ZP.getMember(I, e.value);
                 if (null == t) return null;
-                let r = t.getAvatarURL(_, 20);
+                let n = g.default.getUser(t.userId);
+                if (null == n) return null;
+                let r = n.getAvatarURL(I, 20);
                 return (0, l.jsx)(i.AnimatedAvatar, {
                     size: i.AvatarSizes.SIZE_20,
                     src: r,
                     'aria-hidden': !0
                 });
             },
-            [_]
+            [I]
         ),
         S = r.useCallback(
             (e) => {
-                let { value: n } = e;
-                L((e) => ({
+                let { value: t } = e;
+                C((e) => ({
                     ...e,
-                    authorIds: null != n ? [n] : []
+                    authorIds: null != t ? [t] : []
                 }));
             },
-            [L]
+            [C]
         ),
-        A = r.useCallback(
+        Z = r.useCallback(
             (e) => {
-                L((n) => ({
-                    ...n,
+                C((t) => ({
+                    ...t,
                     message: null != e ? e : ''
                 }));
             },
-            [L]
+            [C]
         ),
-        P = r.useCallback(() => {
-            k(null), I();
-        }, [k, I]),
-        R = null !== (n = C.authorIds[0]) && void 0 !== n ? n : '',
-        Z = (0, s.e7)([c.ZP], () => (null != _ ? c.ZP.getMember(_, R) : null)),
-        G = (0, s.e7)([g.default], () => (null != Z ? g.default.getUser(Z.userId) : null)),
-        H = null !== (a = null !== (t = null == Z ? void 0 : Z.nick) && void 0 !== t ? t : null == G ? void 0 : G.username) && void 0 !== a ? a : '',
+        T = r.useCallback(() => {
+            k(null), b();
+        }, [k, b]),
+        H = null !== (t = B.authorIds[0]) && void 0 !== t ? t : '',
+        P = (0, s.e7)([c.ZP], () => (null != I ? c.ZP.getMember(I, H) : null)),
+        R = (0, s.e7)([g.default], () => (null != P ? g.default.getUser(P.userId) : null)),
+        y = null !== (a = null !== (n = null == P ? void 0 : P.nick) && void 0 !== n ? n : null == R ? void 0 : R.username) && void 0 !== a ? a : '',
         w = (function (e) {
             if (null == e.message || 0 === e.message.length) return null;
-            if (null == e.authorIds || 0 === e.authorIds.length) return e.message.length < d.ZR ? p.intl.formatToPlainString(p.t.Lj831N, { minLength: d.ZR }) : p.intl.string(p.t['4m7gtr']);
-            return e.message.length < d.ZR ? p.intl.formatToPlainString(p.t.TJGHXl, { minLength: d.ZR }) : null;
-        })(C);
+            if (null == e.authorIds || 0 === e.authorIds.length) return e.message.length < d.ZR ? v.intl.formatToPlainString(v.t.Lj831N, { minLength: d.ZR }) : v.intl.string(v.t['4m7gtr']);
+            return e.message.length < d.ZR ? v.intl.formatToPlainString(v.t.TJGHXl, { minLength: d.ZR }) : null;
+        })(B);
     return (0, l.jsxs)(i.ModalRoot, {
-        transitionState: b,
-        'aria-labelledby': B,
+        transitionState: p,
+        'aria-labelledby': _,
         children: [
             (0, l.jsxs)('div', {
-                className: v.container,
+                className: x.container,
                 children: [
                     (0, l.jsx)(i.ModalCloseButton, {
-                        className: v.closeButton,
-                        onClick: I
+                        className: x.closeButton,
+                        onClick: b
                     }),
                     (0, l.jsxs)('div', {
-                        className: v.formGroup,
+                        className: x.formGroup,
                         children: [
                             (0, l.jsxs)(i.Heading, {
                                 variant: 'heading-md/semibold',
                                 color: 'header-primary',
-                                children: [p.intl.string(p.t.zNQfQ0), (0, l.jsx)(f.Z, {})]
+                                children: [v.intl.string(v.t.zNQfQ0), (0, l.jsx)(f.Z, {})]
                             }),
                             (0, l.jsx)(i.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                children: p.intl.string(p.t.mQHK2d)
+                                children: v.intl.string(v.t.mQHK2d)
                             }),
                             (0, l.jsx)(i.SearchableSelect, {
                                 value: {
-                                    value: R,
-                                    label: H
+                                    value: H,
+                                    label: y
                                 },
-                                renderOptionPrefix: T,
-                                options: N,
+                                renderOptionPrefix: N,
+                                options: M,
                                 onChange: S,
                                 filter: !1
                             })
                         ]
                     }),
-                    (0, l.jsx)('div', { className: v.separator }),
+                    (0, l.jsx)('div', { className: x.separator }),
                     (0, l.jsxs)('div', {
-                        className: v.formGroup,
+                        className: x.formGroup,
                         children: [
                             (0, l.jsx)(i.Heading, {
                                 variant: 'heading-md/semibold',
                                 color: 'header-primary',
-                                children: p.intl.string(p.t.SHQcv7)
+                                children: v.intl.string(v.t.SHQcv7)
                             }),
                             (0, l.jsx)(i.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                children: p.intl.format(p.t['6biC4e'], {})
+                                children: v.intl.format(v.t['6biC4e'], {})
                             }),
                             (0, l.jsx)(i.TextArea, {
-                                className: v.welcomeMessageTextInput,
-                                placeholder: p.intl.string(p.t['kX/Sb2']),
-                                value: C.message,
-                                onChange: A,
+                                className: x.welcomeMessageTextInput,
+                                placeholder: v.intl.string(v.t['kX/Sb2']),
+                                value: B.message,
+                                onChange: Z,
                                 maxLength: d.W4
                             }),
                             null != w
@@ -192,34 +166,34 @@ function b(e) {
             }),
             (0, l.jsx)(i.ModalFooter, {
                 children: (0, l.jsxs)('div', {
-                    className: v.footerButtons,
+                    className: x.footerButtons,
                     children: [
                         (0, l.jsx)('div', {
-                            className: v.__invalid_leftButtons,
+                            className: x.__invalid_leftButtons,
                             children: (0, l.jsx)(i.Button, {
                                 size: i.Button.Sizes.SMALL,
                                 look: i.Button.Looks.LINK,
                                 color: i.Button.Colors.RED,
-                                onClick: P,
-                                children: p.intl.string(p.t.N86XcH)
+                                onClick: T,
+                                children: v.intl.string(v.t.N86XcH)
                             })
                         }),
                         (0, l.jsxs)('div', {
-                            className: v.rightButtons,
+                            className: x.rightButtons,
                             children: [
                                 (0, l.jsx)(i.Button, {
-                                    onClick: I,
+                                    onClick: b,
                                     size: i.Button.Sizes.SMALL,
                                     look: i.Button.Looks.LINK,
                                     color: i.Button.Colors.PRIMARY,
-                                    children: p.intl.string(p.t['ETE/oK'])
+                                    children: v.intl.string(v.t['ETE/oK'])
                                 }),
                                 (0, l.jsx)(i.Button, {
-                                    disabled: 0 === C.message.length || null != w,
+                                    disabled: 0 === B.message.length || null != w,
                                     onClick: () => {
-                                        k(C), I();
+                                        k(B), b();
                                     },
-                                    children: p.intl.string(p.t.R3BPHx)
+                                    children: v.intl.string(v.t.R3BPHx)
                                 })
                             ]
                         })
