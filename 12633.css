@@ -52560,16 +52560,6 @@ html.disable-forced-colors * {
     --space-xxl: var(--space-48)
 }
 
-.density-spacious {
-    --space-xxs: var(--space-12);
-    --space-xs: var(--space-16);
-    --space-sm: var(--space-20);
-    --space-md: var(--space-24);
-    --space-lg: var(--space-32);
-    --space-xl: var(--space-48);
-    --space-xxl: var(--space-64)
-}
-
 :root {
     --radius-none: 0px;
     --radius-xs: 4px;
