@@ -73,6 +73,9 @@ function g() {
         },
         u = async () => {
             await c.tn.del('/debug/payment-source'), await (0, d.tZ)();
+        },
+        g = async () => {
+            await c.tn.del('/debug/rate-limits'), window.location.reload();
         };
     return (
         a.useEffect(() => {
@@ -112,7 +115,12 @@ function g() {
                                     size: s.Button.Sizes.SMALL,
                                     onClick: u,
                                     children: 'Delete All Payment Sources'
-                                })
+                                }),
+                            (0, r.jsx)(s.Button, {
+                                size: s.Button.Sizes.SMALL,
+                                onClick: g,
+                                children: 'Reset API Rate limits and reload app'
+                            })
                         ]
                     }),
                     (0, r.jsx)(s.Text, {
