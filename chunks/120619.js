@@ -12,8 +12,9 @@ let d = new Map(),
     f = new Set(),
     p = new Set(),
     h = new Map(),
-    g = !1;
-class v extends (i = s.ZP.Store) {
+    g = !1,
+    v = null;
+class S extends (i = s.ZP.Store) {
     getPrice(e) {
         return d.get(e);
     }
@@ -35,9 +36,12 @@ class v extends (i = s.ZP.Store) {
     getPlayedAnimation() {
         return g;
     }
+    getPreviousGoLiveSettings() {
+        return v;
+    }
 }
 (r = 'ConsumablesStore'),
-    (a = 'displayName') in (l = v)
+    (a = 'displayName') in (l = S)
         ? Object.defineProperty(l, a, {
               value: r,
               enumerable: !0,
@@ -45,7 +49,7 @@ class v extends (i = s.ZP.Store) {
               writable: !0
           })
         : (l[a] = r),
-    (t.Z = new v(o.Z, {
+    (t.Z = new S(o.Z, {
         CONSUMABLES_PRICE_FETCH_STARTED: (e) => {
             m.add(e.skuId);
         },
@@ -77,5 +81,8 @@ class v extends (i = s.ZP.Store) {
         },
         CONSUMABLES_ENTITLEMENT_FETCH_STARTED: (e) => {
             f.add(e.skuId);
+        },
+        SET_PREVIOUS_GO_LIVE_SETTINGS: (e) => {
+            v = e.previousGoLiveSettings;
         }
     }));

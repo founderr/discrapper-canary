@@ -49,6 +49,9 @@ n.d(t, {
     },
     qg: function () {
         return b;
+    },
+    x8: function () {
+        return P;
     }
 }),
     n(411104);
@@ -308,4 +311,10 @@ let g = (e) => {
     },
     M = () => {
         s.Z.dispatch({ type: 'RESET_PLAYED_HD_STREAMING_POTION_ANIMATION' });
+    },
+    P = (e) => {
+        s.Z.dispatch({
+            type: 'SET_PREVIOUS_GO_LIVE_SETTINGS',
+            previousGoLiveSettings: e
+        });
     };

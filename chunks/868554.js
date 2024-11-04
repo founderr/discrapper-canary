@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return I;
     }
 });
 var i = n(200651),
@@ -9,41 +9,58 @@ var i = n(200651),
     r = n.n(a),
     s = n(442837),
     o = n(481060),
-    c = n(909820),
-    d = n(518950),
-    u = n(594174),
-    h = n(63063),
-    p = n(981631),
-    m = n(388032),
-    f = n(277865),
-    g = n(454120);
-function C(e) {
-    let { buttonRef: t, userId: a, streaming: C, onClose: x } = e,
-        v = (0, s.e7)([u.default], () => u.default.getUser(a)),
-        _ = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
-        { avatarSrc: I, eventHandlers: E } = (0, d.Z)({
-            user: v,
+    c = n(846027),
+    d = n(909820),
+    u = n(518950),
+    h = n(131951),
+    p = n(594174),
+    m = n(63063),
+    f = n(120619),
+    g = n(578976),
+    C = n(981631),
+    x = n(388032),
+    v = n(277865),
+    _ = n(454120);
+function I(e) {
+    let { buttonRef: t, userId: a, streaming: I, onClose: E } = e,
+        b = (0, s.e7)([p.default], () => p.default.getUser(a)),
+        N = (0, s.e7)([p.default], () => p.default.getCurrentUser()),
+        { avatarSrc: Z, eventHandlers: S } = (0, u.Z)({
+            user: b,
             size: o.AvatarSizes.SIZE_48,
             animateOnHover: !0
         }),
-        b = l.useMemo(
+        T = l.useMemo(
             () =>
-                null == v || null == _
+                null == b || null == N
                     ? ''
-                    : v.id === _.id
-                      ? m.intl.string(m.t.IjKvNT)
-                      : !0 === C
-                        ? m.intl.format(m.t.JkWoqK, {
-                              username: v.username,
-                              helpCenterLink: h.Z.getArticleURL(p.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+                    : b.id === N.id
+                      ? x.intl.string(x.t.IjKvNT)
+                      : !0 === I
+                        ? x.intl.format(x.t.JkWoqK, {
+                              username: b.username,
+                              helpCenterLink: m.Z.getArticleURL(C.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
                           })
-                        : m.intl.formatToPlainString(m.t.vNbVXF, { username: v.username }),
-            [v, _, C]
-        );
-    if (null == v || null == _) return null;
-    let N = () => {
-        if (!0 === C && _.id === v.id) {
-            x();
+                        : x.intl.formatToPlainString(x.t.vNbVXF, { username: b.username }),
+            [b, N, I]
+        ),
+        j = !0 !== I && (null == N ? void 0 : N.id) === (null == b ? void 0 : b.id),
+        A = l.useMemo(() => (I ? x.intl.string(x.t.o7NIjY) : j ? x.intl.string(x.t.r6xhBw) : x.intl.string(x.t.yKw8Dg)), [I, j]);
+    if (null == b || null == N) return null;
+    let y = () => {
+        if (I) {
+            let e = f.Z.getPreviousGoLiveSettings(),
+                t = h.Z.getGoLiveSource();
+            if (null == e) {
+                E();
+                return;
+            }
+            let n = (0, g.s)(e.resolution, e.frameRate, t);
+            c.Z.setGoLiveSource(n), E();
+            return;
+        }
+        if (j) {
+            E();
             return;
         }
         (0, o.openModalLazy)(async () => {
@@ -53,9 +70,10 @@ function C(e) {
                     analyticsLocation: 'HDStreamingPotionBanner',
                     ...t
                 });
-        });
+        }),
+            E();
     };
-    return (0, i.jsx)(c.ZP, {
+    return (0, i.jsx)(d.ZP, {
         children: (0, i.jsx)(o.ReferencePositionLayer, {
             targetRef: t,
             position: 'top',
@@ -63,39 +81,39 @@ function C(e) {
             spacing: 30,
             children: () =>
                 (0, i.jsxs)('div', {
-                    className: f.banner,
+                    className: v.banner,
                     children: [
                         (0, i.jsxs)('div', {
                             children: [
                                 (0, i.jsx)(o.Avatar, {
-                                    src: I,
-                                    'aria-label': v.username,
+                                    src: Z,
+                                    'aria-label': b.username,
                                     size: o.AvatarSizes.SIZE_48,
-                                    ...E
+                                    ...S
                                 }),
                                 (0, i.jsx)('img', {
-                                    className: f.potion,
-                                    src: g,
+                                    className: v.potion,
+                                    src: _,
                                     alt: ''
                                 })
                             ]
                         }),
                         (0, i.jsx)(o.Heading, {
                             variant: 'heading-sm/medium',
-                            children: b
+                            children: T
                         }),
                         (0, i.jsxs)('div', {
-                            className: f.subsection,
+                            className: v.subsection,
                             children: [
                                 (0, i.jsx)(o.Button, {
-                                    onClick: N,
-                                    className: r()({ [f.actionButton]: !0 !== C }),
-                                    children: !0 === C && _.id === v.id ? m.intl.string(m.t.r6xhBw) : m.intl.string(m.t.yKw8Dg)
+                                    onClick: y,
+                                    className: r()({ [v.actionButton]: !0 !== I }),
+                                    children: A
                                 }),
-                                !0 !== C &&
+                                !j &&
                                     (0, i.jsx)(o.Clickable, {
-                                        className: f.x,
-                                        onClick: x,
+                                        className: v.x,
+                                        onClick: E,
                                         children: (0, i.jsx)(o.XSmallIcon, { name: 'close' })
                                     })
                             ]
