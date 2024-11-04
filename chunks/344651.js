@@ -883,7 +883,8 @@ B(
                 user: e.user,
                 nickname: e.nickname,
                 since: e.since,
-                isSpamRequest: e.is_spam_request || !1
+                isSpamRequest: e.is_spam_request || !1,
+                userIgnored: e.user_ignored || !1
             }
         });
     }),
