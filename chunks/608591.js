@@ -1,7 +1,11 @@
 function r(e) {
     if (null != e)
         return {
-            messages: { videoTitle: e.messages.video_title },
+            messages: {
+                videoTitle: e.messages.video_title,
+                videoEndCtaTitle: e.messages.video_end_cta_title,
+                videoEndCtaSubtitle: e.messages.video_end_cta_subtitle
+            },
             assets: {
                 videoPlayerVideo: e.assets.video_player_video,
                 videoPlayerThumbnail: e.assets.video_player_thumbnail,
