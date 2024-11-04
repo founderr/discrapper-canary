@@ -1,35 +1,35 @@
 var i,
     l,
+    a,
     r,
     s,
-    a,
     o,
     c = n(442837),
-    u = n(570140);
-((i = a || (a = {})).FAILED = 'failed'), (i.SUCCEEDED = 'succeeded');
-let d = {};
+    d = n(570140);
+((i = s || (s = {})).FAILED = 'failed'), (i.SUCCEEDED = 'succeeded');
+let u = {};
 class h extends (o = c.ZP.Store) {
     getFollowerStatsForChannel(e) {
-        return d[e];
+        return u[e];
     }
 }
-(s = 'ChannelFollowerStatsStore'),
-    (r = 'displayName') in (l = h)
-        ? Object.defineProperty(l, r, {
-              value: s,
+(r = 'ChannelFollowerStatsStore'),
+    (a = 'displayName') in (l = h)
+        ? Object.defineProperty(l, a, {
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = s),
-    (t.Z = new h(u.Z, {
+        : (l[a] = r),
+    (t.Z = new h(d.Z, {
         CONNECTION_OPEN: function () {
-            d = {};
+            u = {};
         },
         CHANNEL_FOLLOWER_STATS_FETCH_SUCCESS: function (e) {
             let { channelId: t, stats: n } = e;
             (n = null != n ? n : {}),
-                (d[t] = {
+                (u[t] = {
                     loadingStatus: 'succeeded',
                     lastFetched: Date.now(),
                     channelsFollowing: n.channels_following,
@@ -42,7 +42,7 @@ class h extends (o = c.ZP.Store) {
         },
         CHANNEL_FOLLOWER_STATS_FETCH_FAILURE: function (e) {
             let { channelId: t } = e;
-            d[t] = {
+            u[t] = {
                 loadingStatus: 'failed',
                 lastFetched: Date.now(),
                 channelsFollowing: 0,

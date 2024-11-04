@@ -1,97 +1,97 @@
-n(47120);
-var i = n(200651),
-    l = n(192379),
-    r = n(120356),
-    a = n.n(r),
-    o = n(46973),
-    s = n(481060),
-    c = n(304680),
-    u = n(706619),
-    d = n(695346),
-    h = n(131951),
-    p = n(626135),
-    f = n(572004),
-    m = n(63063),
-    g = n(476221),
-    C = n(981631),
-    _ = n(65154),
-    x = n(388032),
-    v = n(108983);
-let I = () => {
-    h.Z.getMediaEngine().once(o.aB.ConnectionStats, (e) => {
-        let t = Object.values(_.Yn)
-            .map((t) => {
-                let n = e
-                    .filter((e) => {
-                        let { connection: n } = e;
-                        return n.context === t;
+e(47120);
+var i = e(200651),
+    s = e(192379),
+    r = e(120356),
+    o = e.n(r),
+    l = e(46973),
+    a = e(481060),
+    c = e(304680),
+    u = e(706619),
+    E = e(695346),
+    d = e(131951),
+    N = e(626135),
+    C = e(572004),
+    T = e(63063),
+    g = e(476221),
+    h = e(981631),
+    I = e(65154),
+    _ = e(388032),
+    R = e(108983);
+let p = () => {
+    d.Z.getMediaEngine().once(l.aB.ConnectionStats, (t) => {
+        let n = Object.values(I.Yn)
+            .map((n) => {
+                let e = t
+                    .filter((t) => {
+                        let { connection: e } = t;
+                        return e.context === n;
                     })
-                    .map((e, n) => {
-                        let i = e.stats;
-                        return (i.context = t), (i.index = n), i;
+                    .map((t, e) => {
+                        let i = t.stats;
+                        return (i.context = n), (i.index = e), i;
                     });
-                for (let e of n) {
+                for (let t of e) {
                     var i;
-                    (null == e ? void 0 : null === (i = e.transport) || void 0 === i ? void 0 : i.localAddress) != null && (e.transport.localAddress = '(redacted)');
+                    (null == t ? void 0 : null === (i = t.transport) || void 0 === i ? void 0 : i.localAddress) != null && (t.transport.localAddress = '(redacted)');
                 }
-                return n;
+                return e;
             })
-            .filter((e) => e.length > 0);
-        (0, f.JG)(JSON.stringify(t, null, 2)), (0, s.showToast)((0, s.createToast)(x.intl.string(x.t['t5VZ8/']), s.ToastType.SUCCESS));
+            .filter((t) => t.length > 0);
+        (0, C.JG)(JSON.stringify(n, null, 2)), (0, a.showToast)((0, a.createToast)(_.intl.string(_.t['t5VZ8/']), a.ToastType.SUCCESS));
     });
 };
-t.Z = function (e) {
-    (0, l.useEffect)(() => {
-        p.default.track(C.rMx.OPEN_POPOUT, { type: 'RTC Connection' });
+n.Z = function (t) {
+    (0, s.useEffect)(() => {
+        N.default.track(h.rMx.OPEN_POPOUT, { type: 'RTC Connection' });
     }, []);
-    let t = (0, l.useCallback)(() => {
-            let { closePopout: t } = e;
-            null != t && t(), c.bA();
-        }, [e]),
-        n = (0, l.useCallback)(() => {
-            let { hostname: t, averagePing: n, lastPing: r, outboundLossRate: o } = e,
-                s = d.Sb.getSetting();
-            return (0, i.jsxs)(l.Fragment, {
+    let n = (0, s.useCallback)(() => {
+            let { closePopout: n } = t;
+            null != n && n(), c.bA();
+        }, [t]),
+        e = (0, s.useCallback)(() => {
+            let { hostname: n, averagePing: e, lastPing: r, outboundLossRate: l } = t,
+                a = E.Sb.getSetting();
+            return (0, i.jsxs)(s.Fragment, {
                 children: [
-                    s &&
+                    a &&
                         (0, i.jsxs)('div', {
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: v.graphContainer,
+                                    className: R.graphContainer,
                                     children: (0, i.jsx)(u.Z, {
-                                        dataPoints: e.pings,
+                                        dataPoints: t.pings,
                                         width: 258,
                                         height: 80
                                     })
                                 }),
                                 (0, i.jsx)('div', {
-                                    className: v.popoutText,
-                                    children: (0, i.jsx)('strong', { children: g.Z.getShortHostname(t) })
+                                    className: R.popoutText,
+                                    children: (0, i.jsx)('strong', { children: g.Z.getShortHostname(n) })
                                 })
                             ]
                         }),
                     (0, i.jsx)('div', {
-                        className: v.popoutText,
-                        children: x.intl.format(x.t['X58/lJ'], { averagePing: n.toFixed(0) })
+                        className: R.popoutText,
+                        children: _.intl.format(_.t['X58/lJ'], { averagePing: e.toFixed(0) })
                     }),
                     null != r
                         ? (0, i.jsx)('div', {
-                              className: v.popoutText,
-                              children: x.intl.format(x.t['6iv2TE'], { lastPing: r.toFixed(0) })
+                              className: R.popoutText,
+                              children: _.intl.format(_.t['6iv2TE'], { lastPing: r.toFixed(0) })
                           })
                         : null,
-                    null != o
+                    null != l
                         ? (0, i.jsx)('div', {
-                              className: v.popoutText,
-                              children: x.intl.format(x.t.VIBJMz, { outboundLossRate: o.toFixed(1) })
+                              className: R.popoutText,
+                              children: _.intl.format(_.t.VIBJMz, { outboundLossRate: l.toFixed(1) })
                           })
                         : null,
                     (0, i.jsxs)('div', {
-                        className: a()(v.popoutText, v.popoutTextDetails),
+                        className: o()(R.popoutText, R.popoutTextDetails),
                         children: [
-                            null == o ? x.intl.formatToPlainString(x.t.vggaMj, { badPing: 250 }) : null,
-                            null != o
-                                ? x.intl.formatToPlainString(x.t['3pFz1N'], {
+                            null == l ? _.intl.formatToPlainString(_.t.vggaMj, { badPing: 250 }) : null,
+                            null != l
+                                ? _.intl.formatToPlainString(_.t['3pFz1N'], {
                                       badPing: 250,
                                       badLossRate: 10
                                   })
@@ -100,82 +100,82 @@ t.Z = function (e) {
                     })
                 ]
             });
-        }, [e]),
-        { connectionState: r, connectionTypeText: o } = e,
-        f = d.Sb.getSetting(),
-        b = {
-            [C.hes.AWAITING_ENDPOINT]: x.intl.format(x.t.Eu2vUV, { url: C.yXt.STATUS }),
-            [C.hes.CONNECTING]: x.intl.string(x.t['y+E8aG']),
-            [C.hes.AUTHENTICATING]: x.intl.string(x.t['5lGIZG']),
-            [C.hes.DISCONNECTED]: x.intl.string(x.t.fOX25O),
-            [C.hes.RTC_CONNECTING]: x.intl.string(x.t.b5Ubd3),
-            [C.hes.ICE_CHECKING]: x.intl.format(x.t.SyoYUV, { url: m.Z.getArticleURL(C.BhN.VOICE_CONNECTION_ERRORS) }),
-            [C.hes.DTLS_CONNECTING]: x.intl.format(x.t.SyoYUV, { url: m.Z.getArticleURL(C.BhN.VOICE_CONNECTION_ERRORS) }),
-            [C.hes.RTC_CONNECTED]: n,
-            [C.hes.NO_ROUTE]: x.intl.format(x.t['2tgQnp'], { url: m.Z.getArticleURL(C.BhN.VOICE_CONNECTION_ERRORS) }),
-            [C.hes.RTC_DISCONNECTED]: x.intl.string(x.t.fOX25O)
+        }, [t]),
+        { connectionState: r, connectionTypeText: l } = t,
+        C = E.Sb.getSetting(),
+        O = {
+            [h.hes.AWAITING_ENDPOINT]: _.intl.format(_.t.Eu2vUV, { url: h.yXt.STATUS }),
+            [h.hes.CONNECTING]: _.intl.string(_.t['y+E8aG']),
+            [h.hes.AUTHENTICATING]: _.intl.string(_.t['5lGIZG']),
+            [h.hes.DISCONNECTED]: _.intl.string(_.t.fOX25O),
+            [h.hes.RTC_CONNECTING]: _.intl.string(_.t.b5Ubd3),
+            [h.hes.ICE_CHECKING]: _.intl.format(_.t.SyoYUV, { url: T.Z.getArticleURL(h.BhN.VOICE_CONNECTION_ERRORS) }),
+            [h.hes.DTLS_CONNECTING]: _.intl.format(_.t.SyoYUV, { url: T.Z.getArticleURL(h.BhN.VOICE_CONNECTION_ERRORS) }),
+            [h.hes.RTC_CONNECTED]: e,
+            [h.hes.NO_ROUTE]: _.intl.format(_.t['2tgQnp'], { url: T.Z.getArticleURL(h.BhN.VOICE_CONNECTION_ERRORS) }),
+            [h.hes.RTC_DISCONNECTED]: _.intl.string(_.t.fOX25O)
         }[r];
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            'function' == typeof b
-                ? b()
+            'function' == typeof O
+                ? O()
                 : (0, i.jsx)('p', {
-                      className: a()(v.popoutText, v.popoutTextDetails),
-                      children: b
+                      className: o()(R.popoutText, R.popoutTextDetails),
+                      children: O
                   }),
-            (0, i.jsx)('hr', { className: v.separator }),
+            (0, i.jsx)('hr', { className: R.separator }),
             (0, i.jsxs)('div', {
-                className: v.popoutBottom,
+                className: R.popoutBottom,
                 children: [
                     (0, i.jsxs)('span', {
-                        className: a()(v.secured, v.textWithIcon),
+                        className: o()(R.secured, R.textWithIcon),
                         children: [
-                            (0, i.jsx)(s.LockIcon, {
+                            (0, i.jsx)(a.LockIcon, {
                                 size: 'xxs',
-                                color: s.tokens.colors.TEXT_POSITIVE.css,
-                                className: v.__invalid_icon
+                                color: a.tokens.colors.TEXT_POSITIVE.css,
+                                className: R.__invalid_icon
                             }),
-                            o
+                            l
                         ]
                     }),
-                    f &&
-                        h.Z.supports(_.AN.DIAGNOSTICS) &&
+                    C &&
+                        d.Z.supports(I.AN.DIAGNOSTICS) &&
                         !__OVERLAY__ &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsxs)(s.Anchor, {
-                                    className: a()(v.debugButton, v.textWithIcon),
-                                    onClick: t,
+                                (0, i.jsxs)(a.Anchor, {
+                                    className: o()(R.debugButton, R.textWithIcon),
+                                    onClick: n,
                                     children: [
-                                        x.intl.string(x.t.KBoWg4),
-                                        (0, i.jsx)(s.WindowLaunchIcon, {
+                                        _.intl.string(_.t.KBoWg4),
+                                        (0, i.jsx)(a.WindowLaunchIcon, {
                                             size: 'xxs',
                                             color: 'currentColor',
-                                            className: v.__invalid_icon
+                                            className: R.__invalid_icon
                                         })
                                     ]
                                 }),
-                                (0, i.jsxs)(s.Anchor, {
-                                    className: a()(v.copyStatsButton, v.textWithIcon),
-                                    onClick: I,
+                                (0, i.jsxs)(a.Anchor, {
+                                    className: o()(R.copyStatsButton, R.textWithIcon),
+                                    onClick: p,
                                     title: 'Copy to clipboard',
                                     children: [
-                                        x.intl.string(x.t['XEb+Sk']),
-                                        (0, i.jsx)(s.CopyIcon, {
+                                        _.intl.string(_.t['XEb+Sk']),
+                                        (0, i.jsx)(a.CopyIcon, {
                                             size: 'xxs',
                                             color: 'currentColor',
-                                            className: v.__invalid_icon
+                                            className: R.__invalid_icon
                                         })
                                     ]
                                 })
                             ]
                         }),
-                    !f &&
+                    !C &&
                         !__OVERLAY__ &&
-                        (0, i.jsx)(s.Anchor, {
-                            className: v.debugButton,
-                            href: m.Z.getArticleURL(C.BhN.VOICE_VIDEO_TROUBLESHOOTING),
-                            children: x.intl.string(x.t.hvVgAQ)
+                        (0, i.jsx)(a.Anchor, {
+                            className: R.debugButton,
+                            href: T.Z.getArticleURL(h.BhN.VOICE_VIDEO_TROUBLESHOOTING),
+                            children: _.intl.string(_.t.hvVgAQ)
                         })
                 ]
             })

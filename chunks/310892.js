@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return p;
+            return m;
         },
         openEffectsUpsellModal: function () {
             return f;
@@ -10,48 +10,48 @@ n.r(t),
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    r = n(70097),
-    s = n(174609),
-    a = n(98278),
+    a = n(70097),
+    r = n(174609),
+    s = n(98278),
     o = n(790527),
     c = n(626135),
-    u = n(981631),
-    d = n(388032),
+    d = n(981631),
+    u = n(388032),
     h = n(517301),
-    m = n(626065);
-function p(e) {
+    p = n(626065);
+function m(e) {
     let { onClose: t, analytics: n, ...l } = e,
-        p = d.intl.format(d.t['7aNIkZ'], {
+        m = u.intl.format(u.t['7aNIkZ'], {
             onPressMore: function () {
-                (0, s.Z)(),
+                (0, r.Z)(),
                     t(),
-                    c.default.track(u.rMx.PREMIUM_PROMOTION_OPENED, {
-                        location_section: u.jXE.VOICE_CHANNEL_EFFECTS_UPSELL_MODAL,
-                        location_object: u.qAy.NAVIGATION_LINK
+                    c.default.track(d.rMx.PREMIUM_PROMOTION_OPENED, {
+                        location_section: d.jXE.VOICE_CHANNEL_EFFECTS_UPSELL_MODAL,
+                        location_object: d.qAy.NAVIGATION_LINK
                     }),
-                    (0, a.z)();
+                    (0, s.z)();
             }
         });
     return (0, i.jsx)(o.Z, {
-        title: d.intl.string(d.t.K49fZG),
-        glowUp: p,
-        body: p,
+        title: u.intl.string(u.t.K49fZG),
+        glowUp: m,
+        body: m,
         artContainerClassName: h.artContainer,
         enableArtBoxShadow: !1,
         type: n.type,
         analyticsLocation: {
-            section: u.jXE.VOICE_CHANNEL_EFFECTS_UPSELL_MODAL,
+            section: d.jXE.VOICE_CHANNEL_EFFECTS_UPSELL_MODAL,
             object: n.object
         },
         analyticsSource: {
-            page: u.ZY5.CHANNEL_CALL,
+            page: d.ZY5.CHANNEL_CALL,
             section: n.section
         },
         onClose: t,
-        onSubscribeClick: s.Z,
-        artElement: (0, i.jsx)(r.Z, {
+        onSubscribeClick: r.Z,
+        artElement: (0, i.jsx)(a.Z, {
             className: h.video,
-            src: m,
+            src: p,
             loop: !0,
             autoPlay: !0
         }),

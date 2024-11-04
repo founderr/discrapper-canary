@@ -12,8 +12,8 @@ var l = t(192379),
 function s(e) {
     let { stageInstance: n, defaultStep: t, error: i, onSave: s } = e,
         [c, d] = l.useState(t),
-        [u, h] = l.useState(),
-        [m, x] = l.useState(null);
+        [u, m] = l.useState(),
+        [h, x] = l.useState(null);
     return (
         l.useEffect(() => {
             null != i && d(r.lv.STAGE_CHANNEL_SETTINGS);
@@ -21,13 +21,13 @@ function s(e) {
         {
             modalStep: c,
             setModalStep: d,
-            readySlide: m,
+            readySlide: h,
             handleSlideReady: function (e) {
                 return x(e);
             },
             savedOptions: u,
             handleSettingsSave: function (e) {
-                if ((h(e), e.privacyLevel === o.j8.PUBLIC && (null == n ? void 0 : n.privacy_level) !== o.j8.PUBLIC)) {
+                if ((m(e), e.privacyLevel === o.j8.PUBLIC && (null == n ? void 0 : n.privacy_level) !== o.j8.PUBLIC)) {
                     d(r.lv.PUBLIC_STAGE_PREVIEW);
                     return;
                 }

@@ -1,37 +1,37 @@
 n.d(t, {
     i: function () {
-        return a;
+        return s;
     }
 });
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    s = n(244119);
-function a(e) {
-    let { bannerIcon: t, bannerHeader: n, bannerSubtext: l, containerStyles: a, headerStyles: o, children: c } = e;
+    a = n.n(l),
+    r = n(244119);
+function s(e) {
+    let { bannerIcon: t, bannerHeader: n, bannerSubtext: l, containerStyles: s, headerStyles: o, children: c } = e;
     return (0, i.jsxs)('div', {
-        className: s.spamBanner,
+        className: r.spamBanner,
         children: [
             (0, i.jsxs)('div', {
-                className: r()(s.bannerTextContainer, a),
+                className: a()(r.bannerTextContainer, s),
                 children: [
                     'string' == typeof t
                         ? (0, i.jsx)('img', {
                               src: t,
                               alt: '',
-                              className: s.bannerIcon
+                              className: r.bannerIcon
                           })
                         : t,
                     (0, i.jsxs)('div', {
-                        className: s.bannerText,
+                        className: r.bannerText,
                         children: [
                             (0, i.jsx)('div', {
-                                className: r()(s.bannerHeader, o),
+                                className: a()(r.bannerHeader, o),
                                 children: n
                             }),
                             (0, i.jsx)('div', {
-                                className: s.bannerSubtext,
+                                className: r.bannerSubtext,
                                 children: l
                             })
                         ]
@@ -39,7 +39,7 @@ function a(e) {
                 ]
             }),
             (0, i.jsx)('div', {
-                className: s.actionButtons,
+                className: r.actionButtons,
                 children: c
             })
         ]

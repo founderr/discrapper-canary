@@ -1,13 +1,13 @@
 n(47120);
 var i,
     l = n(200651),
-    r = n(192379),
-    s = n(120356),
-    a = n.n(s),
+    a = n(192379),
+    r = n(120356),
+    s = n.n(r),
     o = n(481060),
     c = n(600164),
-    u = n(210080);
-function d(e, t, n) {
+    d = n(210080);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,10 +20,10 @@ function d(e, t, n) {
         e
     );
 }
-class h extends (i = r.PureComponent) {
+class h extends (i = a.PureComponent) {
     render() {
         let e;
-        let { renderFooter: t, selectable: n, renderHeader: i, className: r, onClose: s, children: d } = this.props;
+        let { renderFooter: t, selectable: n, renderHeader: i, className: a, onClose: r, children: u } = this.props;
         return (
             null != t &&
                 (e = (0, l.jsx)(o.ModalFooter, {
@@ -31,12 +31,12 @@ class h extends (i = r.PureComponent) {
                     children: t()
                 })),
             (0, l.jsx)(o.Modal, {
-                onCloseRequest: s,
+                onCloseRequest: r,
                 renderModal: (t) => {
-                    let { onClose: h, ...m } = t;
+                    let { onClose: h, ...p } = t;
                     return (0, l.jsxs)(o.ModalRoot, {
-                        className: u.modal,
-                        ...m,
+                        className: d.modal,
+                        ...p,
                         children: [
                             (0, l.jsxs)(o.ModalHeader, {
                                 align: c.Z.Justify.BETWEEN,
@@ -47,17 +47,17 @@ class h extends (i = r.PureComponent) {
                                         grow: 0,
                                         children: (0, l.jsx)(o.ModalCloseButton, {
                                             onClick: () => {
-                                                null != s && s(), h();
+                                                null != r && r(), h();
                                             }
                                         })
                                     })
                                 ]
                             }),
                             (0, l.jsx)(o.ModalContent, {
-                                className: a()(r, u.content, { selectable: n }),
+                                className: s()(a, d.content, { selectable: n }),
                                 scrollerRef: this.scrollerRef,
                                 onScroll: this.handleScroll,
-                                children: d
+                                children: u
                             }),
                             e
                         ]
@@ -68,8 +68,8 @@ class h extends (i = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            d(this, 'scrollerRef', r.createRef()),
-            d(this, 'handleScroll', () => {
+            u(this, 'scrollerRef', a.createRef()),
+            u(this, 'handleScroll', () => {
                 let { current: e } = this.scrollerRef;
                 if (null != e) {
                     var t, n;
@@ -78,4 +78,4 @@ class h extends (i = r.PureComponent) {
             });
     }
 }
-d(h, 'defaultProps', { selectable: !1 }), (t.Z = h);
+u(h, 'defaultProps', { selectable: !1 }), (t.Z = h);

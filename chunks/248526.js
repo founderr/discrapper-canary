@@ -9,8 +9,8 @@ var r = n(200651),
     l = n(848246),
     i = n(442837),
     o = n(481060),
-    c = n(570140),
-    s = n(746599),
+    s = n(570140),
+    c = n(746599),
     d = n(594174),
     u = n(246992),
     h = n(373839);
@@ -93,7 +93,7 @@ function p() {
             }),
             (0, r.jsx)(o.Button, {
                 onClick: () =>
-                    void (c.Z.dispatch({
+                    void (s.Z.dispatch({
                         type: 'PREMIUM_PERKS_DEMO_OVERRIDE',
                         perkType: l.q.STREAM_HIGH_QUALITY,
                         user: e,
@@ -101,7 +101,7 @@ function p() {
                         activateSuccess: p,
                         demoDuration: b
                     }),
-                    (0, s.Vk)()),
+                    (0, c.Vk)()),
                 children: 'Update'
             })
         ]

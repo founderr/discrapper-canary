@@ -1,8 +1,8 @@
 var i = n(200651),
     r = n(192379),
     s = n(442837),
-    l = n(831218),
-    a = n(840780),
+    a = n(831218),
+    l = n(840780),
     o = n(51596),
     c = n(905423),
     d = n(237997),
@@ -10,9 +10,9 @@ var i = n(200651),
     h = n(981631),
     p = n(388032),
     f = n(53800);
-let m = () => (0, o.$Z)('DM_SEARCH');
+let g = () => (0, o.$Z)('DM_SEARCH');
 t.Z = r.memo(function () {
-    let e = (0, s.e7)([d.Z], () => (d.Z.isUILocked((0, u.QF)()) ? 'true' : 'false')),
+    let e = (0, s.e7)([d.Z], () => (d.Z.isLocked((0, u.QF)()) ? 'true' : 'false')),
         t = (0, c.Z)((e) => {
             let { channelId: t } = e;
             return t;
@@ -25,11 +25,11 @@ t.Z = r.memo(function () {
                 children: (0, i.jsx)('button', {
                     type: 'button',
                     className: f.searchBarComponent,
-                    onClick: m,
+                    onClick: g,
                     children: p.intl.string(p.t.LzcpeX)
                 })
             }),
-            (0, i.jsx)(l.Z, {
+            (0, i.jsx)(a.Z, {
                 padding: 8,
                 theme: h.BRd.DARK,
                 version: e,
@@ -38,7 +38,7 @@ t.Z = r.memo(function () {
             (0, i.jsx)('section', {
                 className: f.panels,
                 'aria-label': p.intl.string(p.t.StREWF),
-                children: (0, i.jsx)(a.Z, { guildId: null })
+                children: (0, i.jsx)(l.Z, { guildId: null })
             })
         ]
     });

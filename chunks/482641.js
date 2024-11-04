@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return s;
     }
 });
 var i = n(200651);
 n(192379);
 var l = n(195898),
-    r = n(192029),
-    s = n(527119);
-function a() {
+    a = n(192029),
+    r = n(527119);
+function s() {
     return (0, i.jsx)('div', {
         className: l.container,
         children: (0, i.jsxs)('svg', {
@@ -146,7 +146,7 @@ function a() {
                                 y: '0',
                                 height: '44',
                                 width: '44',
-                                href: r
+                                href: a
                             })
                         }),
                         (0, i.jsx)('pattern', {
@@ -161,7 +161,7 @@ function a() {
                                 y: '0',
                                 height: '44',
                                 width: '44',
-                                href: s
+                                href: r
                             })
                         })
                     ]

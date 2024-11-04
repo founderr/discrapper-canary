@@ -102,7 +102,7 @@ function C(e) {
             }),
         N.forEach((e, t) => {
             var n, r, l, m, g, _, v, x, A;
-            let { activity: y, game: L, playingMembers: R, activityUser: P } = e;
+            let { activity: y, game: L, playingMembers: R, activityUser: O } = e;
             if (null == y || null == y.type) return null;
             if (N.length > 1 && y.type === I.IIU.PLAYING && !(0, a.Z)(y) && null != L)
                 Z(
@@ -145,7 +145,7 @@ function C(e) {
                             activity: y,
                             getAssetImage: p.getAssetImage
                         },
-                        'rich-presence-'.concat(null !== (m = y.session_id) && void 0 !== m ? m : t, '-').concat(P.id)
+                        'rich-presence-'.concat(null !== (m = y.session_id) && void 0 !== m ? m : t, '-').concat(O.id)
                     )
                 );
             else if ((0, d.Z)(y)) {
@@ -157,7 +157,7 @@ function C(e) {
                         {
                             guildId: null == b ? void 0 : b.id,
                             activity: y,
-                            user: e || n ? P : null,
+                            user: e || n ? O : null,
                             getAssetImage: p.getAssetImage
                         },
                         'streaming-'.concat(null !== (g = y.session_id) && void 0 !== g ? g : t)
@@ -179,7 +179,7 @@ function C(e) {
                                   getAssetImage: p.getAssetImage,
                                   members: R
                               },
-                              'spotify-'.concat(null !== (_ = y.session_id) && void 0 !== _ ? _ : t, '-').concat(P.id)
+                              'spotify-'.concat(null !== (_ = y.session_id) && void 0 !== _ ? _ : t, '-').concat(O.id)
                           )
                       )
                     : (null != y.assets || (0, a.Z)(y)) && y.type === I.IIU.LISTENING
@@ -190,7 +190,7 @@ function C(e) {
                                     activity: y,
                                     getAssetImage: p.getAssetImage
                                 },
-                                'rich-presence-'.concat(null !== (v = y.session_id) && void 0 !== v ? v : t, '-').concat(P.id)
+                                'rich-presence-'.concat(null !== (v = y.session_id) && void 0 !== v ? v : t, '-').concat(O.id)
                             )
                         )
                       : (0, c.Z)(y) && Z((0, i.jsx)(f.Z.XboxSection, { title: L.name }, 'xbox-'.concat(null !== (x = y.session_id) && void 0 !== x ? x : t)));

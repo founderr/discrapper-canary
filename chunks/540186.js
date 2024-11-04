@@ -14,32 +14,32 @@ var i = t(442837),
     c = t(5192),
     d = t(431328),
     u = t(501655),
-    h = t(659972),
-    m = t(981631),
+    m = t(659972),
+    h = t(981631),
     x = t(765305),
-    f = t(388032),
-    g = t(537889);
-function _(e) {
+    g = t(388032),
+    f = t(537889);
+function v(e) {
     let { icon: n } = e;
     return (0, l.jsx)('div', {
-        className: g.iconContainer,
+        className: f.iconContainer,
         children: (0, l.jsx)(n, {
             color: 'currentColor',
             size: 'md'
         })
     });
 }
-function v(e) {
+function _(e) {
     let { icon: n, text: t } = e;
     return (0, l.jsxs)('div', {
-        className: g.listItemContainer,
+        className: f.listItemContainer,
         children: [
             (0, l.jsx)('div', {
-                className: g.listItemIconContainer,
+                className: f.listItemIconContainer,
                 children: n
             }),
             (0, l.jsx)(a.Text, {
-                className: g.listItemText,
+                className: f.listItemText,
                 variant: 'text-md/normal',
                 color: 'header-secondary',
                 children: t
@@ -51,7 +51,7 @@ function I(e) {
     var n;
     let { guild: t, channel: a, stageData: o } = e,
         s = (0, i.e7)([r.default], () => r.default.getCurrentUser(), []),
-        m = {
+        h = {
             id: '1337',
             guild_id: t.id,
             channel_id: a.id,
@@ -59,32 +59,32 @@ function I(e) {
             description: o.description,
             privacy_level: null !== (n = o.privacyLevel) && void 0 !== n ? n : x.j8.PUBLIC
         },
-        f = (0, d.w8)(a.id, u.pV.SPEAKER),
-        _ = (0, d.Rk)(a.id, u.pV.AUDIENCE),
-        v = f.slice(0, 5);
+        g = (0, d.w8)(a.id, u.pV.SPEAKER),
+        v = (0, d.Rk)(a.id, u.pV.AUDIENCE),
+        _ = g.slice(0, 5);
     return (
         null ==
-            v.find((e) => {
+            _.find((e) => {
                 var n;
                 return (null === (n = e.user) || void 0 === n ? void 0 : n.id) === (null == s ? void 0 : s.id);
             }) &&
-            v.push({
+            _.push({
                 user: s,
                 userNick: c.ZP.getName(t.id, a.id, s)
             }),
         (0, l.jsx)('div', {
-            className: g.previewCardContainer,
+            className: f.previewCardContainer,
             children: (0, l.jsx)('div', {
-                className: g.previewCard,
-                children: (0, l.jsx)(h.Z, {
+                className: f.previewCard,
+                children: (0, l.jsx)(m.Z, {
                     guild: t,
-                    stageInstance: m,
+                    stageInstance: h,
                     showGuildPopout: !1,
                     setShowGuildPopout: () => {},
-                    source: h.k.UNSPECIFIED,
-                    speakers: v,
-                    speakerCount: f.length,
-                    audienceCount: Math.max(1337, _),
+                    source: m.k.UNSPECIFIED,
+                    speakers: _,
+                    speakerCount: g.length,
+                    audienceCount: Math.max(1337, v),
                     channelName: a.name
                 })
             })
@@ -92,7 +92,7 @@ function I(e) {
     );
 }
 function N(e) {
-    let { guild: n, channel: t, stageData: i, headerId: r, loading: c, onNext: d, onCancel: u, onBack: h } = e;
+    let { guild: n, channel: t, stageData: i, headerId: r, loading: c, onNext: d, onCancel: u, onBack: m } = e;
     return null == n || null == t || null == i
         ? null
         : (0, l.jsxs)(l.Fragment, {
@@ -103,48 +103,48 @@ function N(e) {
                       stageData: i
                   }),
                   (0, l.jsxs)(a.ModalContent, {
-                      className: g.container,
+                      className: f.container,
                       children: [
                           (0, l.jsxs)('div', {
-                              className: g.header,
+                              className: f.header,
                               children: [
                                   (0, l.jsx)(a.Heading, {
                                       id: r,
-                                      className: g.__invalid_title,
+                                      className: f.__invalid_title,
                                       variant: 'heading-xl/semibold',
-                                      children: f.intl.string(f.t.GXpXTE)
+                                      children: g.intl.string(g.t.GXpXTE)
                                   }),
                                   (0, l.jsx)(a.Text, {
-                                      className: g.subtitle,
+                                      className: f.subtitle,
                                       color: 'header-secondary',
                                       variant: 'text-sm/normal',
-                                      children: f.intl.string(f.t.JaYMvL)
+                                      children: g.intl.string(g.t.JaYMvL)
                                   })
                               ]
                           }),
                           (0, l.jsxs)('div', {
-                              className: g.__invalid_list,
+                              className: f.__invalid_list,
                               children: [
-                                  (0, l.jsx)(v, {
-                                      icon: (0, l.jsx)(_, { icon: a.CompassIcon }),
-                                      text: f.intl.string(f.t.u6oOcn)
+                                  (0, l.jsx)(_, {
+                                      icon: (0, l.jsx)(v, { icon: a.CompassIcon }),
+                                      text: g.intl.string(g.t.u6oOcn)
                                   }),
-                                  (0, l.jsx)(v, {
-                                      icon: (0, l.jsx)(_, { icon: a.FriendsIcon }),
-                                      text: f.intl.string(f.t.QC8ymZ)
+                                  (0, l.jsx)(_, {
+                                      icon: (0, l.jsx)(v, { icon: a.FriendsIcon }),
+                                      text: g.intl.string(g.t.QC8ymZ)
                                   }),
-                                  (0, l.jsx)(v, {
-                                      icon: (0, l.jsx)(_, { icon: a.PencilIcon }),
-                                      text: f.intl.string(f.t.mgGOT0)
+                                  (0, l.jsx)(_, {
+                                      icon: (0, l.jsx)(v, { icon: a.PencilIcon }),
+                                      text: g.intl.string(g.t.mgGOT0)
                                   }),
-                                  (0, l.jsx)(v, {
+                                  (0, l.jsx)(_, {
                                       icon: (0, l.jsx)(o.Z, {
-                                          className: g.badgeIconBackground,
-                                          foreground: g.badgeIconForeground,
+                                          className: f.badgeIconBackground,
+                                          foreground: f.badgeIconForeground,
                                           width: 40,
                                           height: 40
                                       }),
-                                      text: f.intl.format(f.t.qLmNLC, { articleURL: s.Z.getArticleURL(m.BhN.STAGE_CHANNEL_GUIDELINES) })
+                                      text: g.intl.format(g.t.qLmNLC, { articleURL: s.Z.getArticleURL(h.BhN.STAGE_CHANNEL_GUIDELINES) })
                                   })
                               ]
                           })
@@ -156,21 +156,21 @@ function N(e) {
                               color: a.Button.Colors.GREEN,
                               onClick: d,
                               submitting: c,
-                              children: f.intl.string(f.t.s8mM8P)
+                              children: g.intl.string(g.t.s8mM8P)
                           }),
                           (0, l.jsx)(a.Button, {
                               color: a.Button.Colors.PRIMARY,
-                              className: g.cancelButton,
+                              className: f.cancelButton,
                               onClick: u,
-                              children: f.intl.string(f.t['ETE/oK'])
+                              children: g.intl.string(g.t['ETE/oK'])
                           }),
                           (0, l.jsx)(a.Button, {
                               look: a.Button.Looks.LINK,
                               color: a.Button.Colors.LINK,
-                              className: g.backButton,
-                              onClick: h,
+                              className: f.backButton,
+                              onClick: m,
                               size: a.Button.Sizes.MIN,
-                              children: f.intl.string(f.t['13/7kZ'])
+                              children: g.intl.string(g.t['13/7kZ'])
                           })
                       ]
                   })

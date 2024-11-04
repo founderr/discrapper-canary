@@ -1,12 +1,12 @@
 n.d(t, {
     A: function () {
-        return l;
+        return a;
     }
 });
 var i = n(913527),
     r = n.n(i),
     s = n(388032);
-function l(e) {
+function a(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.intl.string(s.t['Yl1D8/']),
         i = r().duration(e, 'seconds');

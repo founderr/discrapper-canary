@@ -21,33 +21,33 @@ var i = n(200651),
 function _(e) {
     let { channel: t, connected: n, hovered: r, subtitle: _, onClick: x, enableHangStatus: v, allowChannelTopic: I } = e,
         b = (0, o.e7)([u.Z], () => u.Z.getChannelStatus(t)),
-        N = null != b && b.length > 0,
-        E = (0, c.Z)(t, !0),
-        S = (!v || !!I) && E,
-        Z = null != _ && _.length > 0;
+        S = null != b && b.length > 0,
+        Z = (0, c.Z)(t, !0),
+        N = (!v || !!I) && Z,
+        E = null != _ && _.length > 0;
     l.useEffect(() => {
-        N &&
+        S &&
             p.default.track(f.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
                 guild_id: t.guild_id,
                 channel_id: t.id
             });
-    }, [t.id, N, t.guild_id]);
+    }, [t.id, S, t.guild_id]);
     let y = (0, s.useRedesignIconContext)().enabled ? 12 : 14;
     if (null == t.guild_id) return null;
-    let T = a()(g.statusDiv, n && S ? g.hoverable : null);
-    if (N)
+    let j = a()(g.statusDiv, n && N ? g.hoverable : null);
+    if (S)
         return (0, i.jsx)(s.Clickable, {
-            className: T,
-            onClick: S ? x : void 0,
+            className: j,
+            onClick: N ? x : void 0,
             children: (0, i.jsx)(s.Text, {
                 variant: 'text-xs/medium',
                 className: a()(g.statusText, C.markup),
                 children: (0, i.jsx)(d.Z, { children: h.Z.parseVoiceChannelStatus(b, !0, { channelId: t.id }) })
             })
         });
-    if (n && S && (!Z || r))
+    if (n && N && (!E || r))
         return (0, i.jsxs)(s.Clickable, {
-            className: T,
+            className: j,
             onClick: x,
             children: [
                 (0, i.jsx)(s.Text, {
@@ -64,6 +64,6 @@ function _(e) {
                 })
             ]
         });
-    if (Z) return (0, i.jsx)(d.Z, { children: _ });
+    if (E) return (0, i.jsx)(d.Z, { children: _ });
     return null;
 }

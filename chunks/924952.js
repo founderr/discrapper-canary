@@ -8,23 +8,23 @@ t(192379);
 var l = t(442837),
     r = t(481060),
     u = t(357156),
-    a = t(471253),
-    o = t(924301),
-    d = t(482241),
-    c = t(765305),
+    o = t(471253),
+    a = t(924301),
+    c = t(482241),
+    d = t(765305),
     s = t(388032);
 function Z(n, e, t) {
     let { canManageGuildEvent: Z } = (0, u.XJ)(null != t ? t : e),
-        h = (0, l.e7)([o.ZP], () => o.ZP.isActive(n)),
-        x = (0, l.e7)([o.ZP], () => o.ZP.getGuildScheduledEvent(n), [n]),
-        g = Z(x);
-    if (null == n || !g || !h || (null == x ? void 0 : x.entity_type) === c.WX.EXTERNAL) return null;
-    let f = () => {
+        h = (0, l.e7)([a.ZP], () => a.ZP.isActive(n)),
+        x = (0, l.e7)([a.ZP], () => a.ZP.getGuildScheduledEvent(n), [n]),
+        f = Z(x);
+    if (null == n || !f || !h || (null == x ? void 0 : x.entity_type) === d.WX.EXTERNAL) return null;
+    let g = () => {
         if (null == t ? void 0 : t.isGuildStageVoice()) {
-            (0, a.NZ)(t);
+            (0, o.NZ)(t);
             return;
         }
-        null != n && d.Z.endEvent(n, e.id), (0, r.closeAllModals)();
+        null != n && c.Z.endEvent(n, e.id), (0, r.closeAllModals)();
     };
     return (0, i.jsx)(r.MenuItem, {
         id: s.intl.string(s.t.qaYzPD),
@@ -36,7 +36,7 @@ function Z(n, e, t) {
                     header: s.intl.string(s.t.qaYzPD),
                     confirmText: s.intl.string(s.t.mjB9pa),
                     cancelText: s.intl.string(s.t['ETE/oK']),
-                    onConfirm: f,
+                    onConfirm: g,
                     children: (0, i.jsx)(r.Text, {
                         variant: 'text-md/normal',
                         children: s.intl.string(s.t.bnDQ7O)

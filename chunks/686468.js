@@ -6,16 +6,16 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    r = n(692547),
-    s = n(481060),
-    a = n(884338),
+    a = n(692547),
+    r = n(481060),
+    s = n(884338),
     o = n(688641),
     c = n(596449),
-    u = n(459502),
-    d = n(856691),
+    d = n(459502),
+    u = n(856691),
     h = n(357156),
-    m = n(496675),
-    p = n(146085),
+    p = n(496675),
+    m = n(146085),
     f = n(979339),
     g = n(643632),
     C = n(939863),
@@ -25,14 +25,14 @@ function _(e) {
     let { onClick: t } = e;
     return (0, i.jsx)(o.Z, {
         iconContainerClassName: v.continueIconContainer,
-        icon: (0, i.jsx)(s.StageIcon, {
+        icon: (0, i.jsx)(r.StageIcon, {
             size: 'custom',
             color: 'currentColor',
             className: v.continueIcon,
             height: 20,
             width: 20
         }),
-        color: r.Z.unsafe_rawColors.PRIMARY_700.css,
+        color: a.Z.unsafe_rawColors.PRIMARY_700.css,
         title: x.intl.string(x.t.jMLfp6),
         description: x.intl.string(x.t['Vd/rER']),
         onClick: t
@@ -44,13 +44,13 @@ function I(e) {
     return (0, i.jsxs)('div', {
         className: v.audienceSummary,
         children: [
-            (0, i.jsx)(a.Z, {
+            (0, i.jsx)(s.Z, {
                 className: v.summaryItem,
                 guildId: t.guild_id,
                 users: l,
-                size: a.u.SIZE_16
+                size: s.u.SIZE_16
             }),
-            (0, i.jsx)(s.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
                 children: (function (e) {
@@ -74,8 +74,8 @@ function I(e) {
 }
 function E(e) {
     let { channel: t, onContinueClick: n } = e,
-        r = (0, l.e7)([m.Z], () => m.Z.can(p.yP, t), [t]),
-        a = t.guild_id,
+        a = (0, l.e7)([p.Z], () => p.Z.can(m.yP, t), [t]),
+        s = t.guild_id,
         { canCreateGuildEvent: o } = (0, h.XJ)(t),
         E = (0, g.Z)(t.id),
         { usersInSummary: b } = (0, f.Z)(t.id);
@@ -84,7 +84,7 @@ function E(e) {
             (0, i.jsx)(C.Z, {
                 children: (0, i.jsx)('div', {
                     className: v.iconBackground,
-                    children: (0, i.jsx)(s.StageIcon, {
+                    children: (0, i.jsx)(r.StageIcon, {
                         size: 'custom',
                         color: 'currentColor',
                         width: 40,
@@ -96,21 +96,21 @@ function E(e) {
             (0, i.jsxs)('div', {
                 className: v.headerContainer,
                 children: [
-                    (0, i.jsx)(s.Heading, {
+                    (0, i.jsx)(r.Heading, {
                         className: v.__invalid_title,
                         variant: 'heading-xl/semibold',
                         children: x.intl.string(x.t.QGnDLi)
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, i.jsx)(r.Text, {
                         className: v.subtitle,
                         variant: 'text-sm/normal',
                         children: x.intl.string(x.t.djfK39)
                     })
                 ]
             }),
-            E ? null : (0, i.jsx)(u.Z, { channelId: t.id }),
-            r
-                ? (0, i.jsx)(d.Z, {
+            E ? null : (0, i.jsx)(d.Z, { channelId: t.id }),
+            a
+                ? (0, i.jsx)(u.Z, {
                       className: v.eventPrompt,
                       channel: t
                   })
@@ -118,11 +118,11 @@ function E(e) {
             o
                 ? (0, i.jsx)(c.Z, {
                       className: v.eventPrompt,
-                      guildId: a
+                      guildId: s
                   })
                 : null,
-            (r || b.length > 0) && (0, i.jsx)('hr', { className: v.separator }),
-            r ? (0, i.jsx)(_, { onClick: n }) : null,
+            (a || b.length > 0) && (0, i.jsx)('hr', { className: v.separator }),
+            a ? (0, i.jsx)(_, { onClick: n }) : null,
             (0, i.jsx)(I, { channel: t })
         ]
     });

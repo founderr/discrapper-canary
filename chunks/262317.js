@@ -1,24 +1,24 @@
 n.d(t, {
     XX: function () {
-        return w;
+        return D;
     },
     ul: function () {
-        return D;
+        return w;
     }
 }),
     n(47120);
 var i,
     l = n(200651),
-    r = n(192379),
-    s = n(120356),
-    a = n.n(s),
+    a = n(192379),
+    r = n(120356),
+    s = n.n(r),
     o = n(149765),
     c = n(846519),
-    u = n(481060),
-    d = n(475179),
+    d = n(481060),
+    u = n(475179),
     h = n(239091),
-    m = n(287734),
-    p = n(872810),
+    p = n(287734),
+    m = n(872810),
     f = n(888651),
     g = n(100527),
     C = n(258609),
@@ -28,10 +28,10 @@ var i,
     I = n(525925),
     E = n(701362),
     b = n(224184),
-    S = n(184301),
+    N = n(184301),
     Z = n(347475),
     T = n(597998),
-    N = n(314897),
+    S = n(314897),
     j = n(430824),
     A = n(496675),
     y = n(979651),
@@ -53,32 +53,32 @@ function O(e, t, n) {
         e
     );
 }
-function w(e) {
+function D(e) {
     let { numUsers: t } = e;
     return (0, l.jsx)('div', {
         className: k.moreContainer,
-        children: (0, l.jsxs)(u.Text, {
+        children: (0, l.jsxs)(d.Text, {
             color: 'text-muted',
             variant: 'text-sm/medium',
             children: ['+', t]
         })
     });
 }
-function D(e) {
+function w(e) {
     let { numAudience: t, collapsed: n } = e,
         i = n ? t : L.intl.formatToPlainString(L.t['+v2pNz'], { count: t });
     return (0, l.jsxs)('div', {
-        className: a()(k.audienceContainer, { [k.audienceContainerCollapsed]: n }),
+        className: s()(k.audienceContainer, { [k.audienceContainerCollapsed]: n }),
         children: [
             (0, l.jsx)('div', {
                 className: k.audienceIconContainer,
-                children: (0, l.jsx)(u.HeadphonesIcon, {
+                children: (0, l.jsx)(d.HeadphonesIcon, {
                     size: 'md',
                     color: 'currentColor',
                     className: k.audienceIcon
                 })
             }),
-            (0, l.jsx)(u.Text, {
+            (0, l.jsx)(d.Text, {
                 color: 'text-muted',
                 variant: 'text-sm/medium',
                 children: i
@@ -86,24 +86,24 @@ function D(e) {
         ]
     });
 }
-class U extends (i = r.PureComponent) {
+class B extends (i = a.PureComponent) {
     get canWatchStream() {
         let { channel: e, isStreaming: t } = this.props;
         return t && (0, _.p9)(e, y.Z, j.Z, A.Z, C.Z)[0];
     }
     render() {
         let { userPopoutOpen: e } = this.state,
-            { connectUserDragSource: t, canDrag: n, isSelfOnOtherClient: i, user: r, channel: s } = this.props,
-            a = (0, l.jsx)('div', {
+            { connectUserDragSource: t, canDrag: n, isSelfOnOtherClient: i, user: a, channel: r } = this.props,
+            s = (0, l.jsx)('div', {
                 className: k.draggable,
-                'data-dnd-name': s.name,
+                'data-dnd-name': r.name,
                 onMouseEnter: i ? void 0 : this.handleMouseEnter,
                 onMouseLeave: i ? void 0 : this.handleHidePreview,
-                children: (0, l.jsx)(u.Popout, {
+                children: (0, l.jsx)(d.Popout, {
                     preload: () =>
-                        (0, S.Z)(r.id, r.getAvatarURL(s.guild_id, 80), {
-                            guildId: s.guild_id,
-                            channelId: s.id
+                        (0, N.Z)(a.id, a.getAvatarURL(r.guild_id, 80), {
+                            guildId: r.guild_id,
+                            channelId: r.id
                         }),
                     position: 'right',
                     renderPopout: this.renderUserPopout,
@@ -112,11 +112,11 @@ class U extends (i = r.PureComponent) {
                     children: (e) => this.renderUser(e)
                 })
             });
-        return n ? t(a) : a;
+        return n ? t(s) : s;
     }
     constructor(...e) {
         super(...e),
-            O(this, 'domElementRef', r.createRef()),
+            O(this, 'domElementRef', a.createRef()),
             O(this, 'state', {
                 userPopoutOpen: !1,
                 isHoveringHangStatus: !1
@@ -158,11 +158,11 @@ class U extends (i = r.PureComponent) {
                     channelId: t.id,
                     guildId: t.guild_id
                 };
-                N.default.getId() !== e.id && m.default.selectVoiceChannel(t.id), n ? ((0, I.Z)(l), d.Z.selectParticipant(l.channelId, (0, v.V9)(l))) : (0, p.iV)(l), null == i || i(e.id);
+                S.default.getId() !== e.id && p.default.selectVoiceChannel(t.id), n ? ((0, I.Z)(l), u.Z.selectParticipant(l.channelId, (0, v.V9)(l))) : (0, m.iV)(l), null == i || i(e.id);
             }),
             O(this, 'handleJoinVoice', () => {
                 let { user: e, channel: t, hidePreview: n } = this.props;
-                A.Z.can(o.$e(P.Plq.CONNECT, P.Plq.VIEW_CHANNEL), t) && (m.default.selectVoiceChannel(t.id), null == n || n(e.id));
+                A.Z.can(o.$e(P.Plq.CONNECT, P.Plq.VIEW_CHANNEL), t) && (p.default.selectVoiceChannel(t.id), null == n || n(e.id));
             }),
             O(this, 'handleUserContextMenu', (e) => {
                 let { channel: t, user: i } = this.props;
@@ -210,65 +210,65 @@ class U extends (i = r.PureComponent) {
                 });
             }),
             O(this, 'renderUser', (e) => {
-                let { isSelfOnOtherClient: t, otherClientSessionType: n, voicePlatform: i, shouldShowPreview: r, mute: s, localMute: o, localVideoDisabled: c, speaking: d, disconnected: h, user: m, deaf: p, priority: f, collapsed: g, isStreaming: C, isGuest: v, nick: _, video: I, serverMute: E, serverDeaf: b, tabIndex: S, embeddedApplication: Z, channel: N, hangStatusActivity: j, showHangStatus: A, isSelf: y, application: P } = this.props,
+                let { isSelfOnOtherClient: t, otherClientSessionType: n, voicePlatform: i, shouldShowPreview: a, mute: r, localMute: o, localVideoDisabled: c, speaking: u, disconnected: h, user: p, deaf: m, priority: f, collapsed: g, isStreaming: C, isGuest: v, nick: _, video: I, serverMute: E, serverDeaf: b, tabIndex: N, embeddedApplication: Z, channel: S, hangStatusActivity: j, showHangStatus: A, isSelf: y, application: P } = this.props,
                     { userPopoutOpen: R, isHoveringHangStatus: O } = this.state,
-                    w = M.al.has(null != n ? n : ''),
-                    D = {
-                        user: m,
-                        speaking: d,
+                    D = M.al.has(null != n ? n : ''),
+                    w = {
+                        user: p,
+                        speaking: u,
                         disconnected: h,
-                        mute: s,
+                        mute: r,
                         localMute: o,
                         localVideoDisabled: c,
                         isStreaming: C,
                         isGuest: v,
                         video: I,
                         priority: f,
-                        deaf: p,
+                        deaf: m,
                         nick: _,
                         collapsed: g,
                         overlap: g,
                         serverMute: E,
                         serverDeaf: b,
-                        tabIndex: S,
+                        tabIndex: N,
                         otherClientSessionType: n,
                         voicePlatform: i,
                         embeddedApplication: Z,
-                        avatarContainerClass: a()({ [k.userAvatar]: !0 }),
-                        disabled: t && !w,
+                        avatarContainerClass: s()({ [k.userAvatar]: !0 }),
+                        disabled: t && !D,
                         selected: R,
-                        onClick: w ? void 0 : this.handleClickUser,
+                        onClick: D ? void 0 : this.handleClickUser,
                         onDoubleClick: this.handleWatchStream,
                         onContextMenu: this.handleUserContextMenu,
-                        guildId: N.guild_id,
+                        guildId: S.guild_id,
                         hangStatusActivity: j,
                         showHangStatus: A,
                         isSelf: y,
                         application: P,
-                        channelId: N.id
+                        channelId: S.id
                     };
                 if (t) {
-                    var U;
-                    return (0, l.jsx)(u.Tooltip, {
-                        text: null !== (U = (0, x.Z)(n)) && void 0 !== U ? U : L.intl.string(L.t.IyYqqa),
+                    var B;
+                    return (0, l.jsx)(d.Tooltip, {
+                        text: null !== (B = (0, x.Z)(n)) && void 0 !== B ? B : L.intl.string(L.t.IyYqqa),
                         children: (e) => {
                             let { onClick: t, onContextMenu: n, ...i } = e;
-                            return (0, l.jsx)(T.Z, {
-                                ...D,
+                            return (0, l.jsx)(T.ZP, {
+                                ...w,
                                 ...i
                             });
                         }
                     });
                 }
-                return (0, l.jsx)(u.Popout, {
+                return (0, l.jsx)(d.Popout, {
                     position: 'right',
                     renderPopout: (A && O) || !C ? this.renderHangStatusPopout : this.renderStreamPopout,
-                    shouldShow: r && !R,
+                    shouldShow: a && !R,
                     onRequestClose: this.handleHidePreview,
                     spacing: 0,
                     children: () =>
-                        (0, l.jsx)(T.Z, {
-                            ...D,
+                        (0, l.jsx)(T.ZP, {
+                            ...w,
                             onMouseDown: e.onMouseDown,
                             onKeyDown: e.onKeyDown,
                             handleHoverHangStatus: this.handleHoverHangStatus,
@@ -278,4 +278,4 @@ class U extends (i = r.PureComponent) {
             });
     }
 }
-O(U, 'defaultProps', { isSelfOnOtherClient: !1 }), (t.ZP = (0, f.$)(U));
+O(B, 'defaultProps', { isSelfOnOtherClient: !1 }), (t.ZP = (0, f.$)(B));

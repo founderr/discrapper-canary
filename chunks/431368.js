@@ -1,33 +1,33 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 }),
     n(47120);
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    r = n(481060),
-    s = n(740492),
-    a = n(984014),
+    a = n(481060),
+    r = n(740492),
+    s = n(984014),
     o = n(295510),
     c = n(394059),
-    u = n(388032);
-function d(e, t) {
-    let [n, d, h] = (0, a.Z)(e, t),
-        m = (0, l.e7)([s.ZP], () => s.ZP.disableHideSelfStreamAndVideoConfirmationAlert);
+    d = n(388032);
+function u(e, t) {
+    let [n, u, h] = (0, s.Z)(e, t),
+        p = (0, l.e7)([r.ZP], () => r.ZP.disableHideSelfStreamAndVideoConfirmationAlert);
     return n
-        ? (0, i.jsx)(r.MenuCheckboxItem, {
+        ? (0, i.jsx)(a.MenuCheckboxItem, {
               id: 'self-stream-hide',
-              label: u.intl.string(u.t.aol7iY),
-              checked: !d,
+              label: d.intl.string(d.t.aol7iY),
+              checked: !u,
               action: () => {
-                  if (m || d) return h(!d);
-                  (0, r.openModal)((e) =>
+                  if (p || u) return h(!u);
+                  (0, a.openModal)((e) =>
                       (0, i.jsx)(o.Z, {
                           ...e,
                           type: c.K.STREAM,
-                          onConfirm: () => h(!d)
+                          onConfirm: () => h(!u)
                       })
                   );
               }

@@ -6,44 +6,44 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(512722),
-    s = n.n(r),
-    a = n(442837),
+    a = n(512722),
+    r = n.n(a),
+    s = n(442837),
     o = n(911367),
     c = n(699516),
-    u = n(594174),
-    d = n(971393),
+    d = n(594174),
+    u = n(971393),
     h = n(646915),
-    m = n(184301),
-    p = n(432958),
+    p = n(184301),
+    m = n(432958),
     f = n(792379),
     g = n(177222);
 function C(e) {
     let { channel: t, ...n } = e,
-        r = (0, h.Z)();
+        a = (0, h.Z)();
     (0, o.t)();
     let [C] = t.recipients,
-        x = (0, a.e7)([u.default], () => u.default.getUser(C));
-    s()(null != x, 'UserProfilePanelWrapper: user cannot be undefined');
-    let v = (0, a.e7)([u.default], () => u.default.getCurrentUser());
-    s()(null != v, 'UserProfilePanelWrapper: currentUser cannot be undefined'),
+        x = (0, s.e7)([d.default], () => d.default.getUser(C));
+    r()(null != x, 'UserProfilePanelWrapper: user cannot be undefined');
+    let v = (0, s.e7)([d.default], () => d.default.getCurrentUser());
+    r()(null != v, 'UserProfilePanelWrapper: currentUser cannot be undefined'),
         l.useEffect(() => {
-            (0, m.Z)(x, {
+            (0, p.Z)(x, {
                 withMutualFriends: !x.bot,
                 withMutualGuilds: !0,
                 channelId: t.id
             });
         }, [x, t.id]);
-    let _ = (0, a.e7)([c.Z], () => c.Z.isBlocked(x.id)),
+    let _ = (0, s.e7)([c.Z], () => c.Z.isBlocked(x.id)),
         [I, E] = l.useState(_),
-        b = (0, d.sS)({ location: 'UserProfilePanelWrapper' });
+        b = (0, u.sS)({ location: 'UserProfilePanelWrapper' });
     return (l.useEffect(() => {
         E(_);
     }, [_]),
-    r)
+    a)
         ? null
         : I && b
-          ? (0, i.jsx)(p.Z, {
+          ? (0, i.jsx)(m.Z, {
                 user: x,
                 currentUser: v,
                 channel: t,

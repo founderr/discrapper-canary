@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return S;
     }
 });
 var i = n(200651),
@@ -39,16 +39,16 @@ function b(e) {
         return (t) => (0, i.jsx)(e, { ...t });
     });
 }
-function N(e) {
+function S(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
         o = (0, r.e7)([p.Z], () => p.Z.getGuilds()),
-        N = l.useMemo(() => Object.values(o), [o]),
-        E = (0, r.e7)([f.default], () => f.default.getCurrentUser()),
-        S = l.useMemo(() => N.some((e) => e.isOwner(E)), [N, E]),
-        Z = (0, a.useModalsStore)((e) => (0, a.hasModalOpenSelector)(e, _.PU)),
+        S = l.useMemo(() => Object.values(o), [o]),
+        Z = (0, r.e7)([f.default], () => f.default.getCurrentUser()),
+        N = l.useMemo(() => S.some((e) => e.isOwner(Z)), [S, Z]),
+        E = (0, a.useModalsStore)((e) => (0, a.hasModalOpenSelector)(e, _.PU)),
         { analyticsLocations: y } = (0, s.ZP)(),
-        T = (0, a.useRedesignIconContext)().enabled,
-        j = (0, i.jsx)(g.Z, {
+        j = (0, a.useRedesignIconContext)().enabled,
+        T = (0, i.jsx)(g.Z, {
             showPill: !1,
             id: 'create-join-button',
             onClick: () => {
@@ -63,21 +63,21 @@ function N(e) {
                       })
                     : c.Z.openCreateGuildModal({ location: 'Guild List' });
             },
-            selected: Z,
+            selected: E,
             onContextMenu: b,
             tooltip: x.intl.string(x.t.l5WIbW),
-            icon: T ? a.PlusMediumIcon : a.PlusSmallIcon
+            icon: j ? a.PlusMediumIcon : a.PlusSmallIcon
         });
     return t
-        ? j
+        ? T
         : (0, i.jsx)('div', {
               className: v.tutorialContainer,
               children: (0, i.jsxs)(h.Z, {
-                  tutorialId: S ? 'create-more-servers' : 'create-first-server',
+                  tutorialId: N ? 'create-more-servers' : 'create-first-server',
                   inlineSpecs: I,
                   position: 'right',
                   children: [
-                      j,
+                      T,
                       null != n &&
                           (0, i.jsx)(m.ZP, {
                               name: x.intl.string(x.t['45xjMz']),

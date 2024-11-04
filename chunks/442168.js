@@ -1,41 +1,41 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return I;
     }
 });
 var i = n(200651),
     l = n(192379),
-    r = n(100621),
-    s = n(442837),
-    a = n(780384),
+    a = n(100621),
+    r = n(442837),
+    s = n(780384),
     o = n(481060),
     c = n(435064),
     u = n(39604),
     d = n(175470),
-    h = n(569545),
-    m = n(314910),
+    m = n(569545),
+    f = n(314910),
     p = n(247280);
-let f = { visibility: 'hidden' },
+let h = { visibility: 'hidden' },
     g = {
         precision: 0.0001,
         duration: 300
     },
-    C = {
+    v = {
         tension: 150,
         friction: 20,
         precision: 0.0001,
         bounce: 0
     },
-    x = { duration: 1000 };
-function v(e) {
+    S = { duration: 1000 };
+function I(e) {
     let { stream: t, inPopout: n } = e,
-        { reducedMotion: v } = l.useContext(a.Sf),
+        { reducedMotion: I } = l.useContext(s.Sf),
         _ = (0, l.useRef)(null),
-        I = d.n.getState().clipsButtonRef,
-        E = (0, h.V9)(t),
-        b = (0, s.e7)([c.Z], () => c.Z.getActiveAnimation()),
-        S = (0, s.Wu)([c.Z], () => c.Z.getStreamClipAnimations(E)),
-        Z = (0, l.useRef)();
+        x = d.n.getState().clipsButtonRef,
+        E = (0, m.V9)(t),
+        C = (0, r.e7)([c.Z], () => c.Z.getActiveAnimation()),
+        Z = (0, r.Wu)([c.Z], () => c.Z.getStreamClipAnimations(E)),
+        y = (0, l.useRef)();
     l.useEffect(
         () => () => {
             (0, u.Gh)(E);
@@ -46,7 +46,7 @@ function v(e) {
             var e;
             let t = null === (e = _.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
             return null == t || n
-                ? f
+                ? h
                 : {
                       width: t.width,
                       height: t.height,
@@ -54,9 +54,9 @@ function v(e) {
                       left: t.left
                   };
         },
-        N = (e) => {
-            let t = null == I ? void 0 : I.getBoundingClientRect();
-            if (((Z.current = t), e.timestamp !== b || null == t || n)) return f;
+        b = (e) => {
+            let t = null == x ? void 0 : x.getBoundingClientRect();
+            if (((y.current = t), e.timestamp !== C || null == t || n)) return h;
             let { top: i, left: l } = t;
             return {
                 top: i + 36,
@@ -65,81 +65,81 @@ function v(e) {
                 width: 268
             };
         },
-        j = (0, l.useRef)(null),
-        A = (0, o.useTransition)(
-            S,
+        A = (0, l.useRef)(null),
+        N = (0, o.useTransition)(
+            Z,
             {
                 keys: (e) => e.timestamp,
-                ref: j,
+                ref: A,
                 from: { opacity: 0.2 },
                 enter: { opacity: 0 },
                 config: g
             },
             'animate-always'
         ),
-        y = (0, l.useRef)(null),
+        w = (0, l.useRef)(null),
         P = (0, o.useTransition)(
-            S,
+            Z,
             {
-                ref: y,
+                ref: w,
                 keys: (e) => e.timestamp,
                 from: (e) => ({
                     position: 'fixed',
                     visibility: 'hidden',
                     opacity: 1,
-                    ...(v.enabled ? N(e) : T())
+                    ...(I.enabled ? b(e) : T())
                 }),
                 enter: (e) => [
                     {
                         opacity: 1,
                         visibility: 'visible',
-                        ...N(e)
+                        ...b(e)
                     }
                 ],
                 leave: {
                     opacity: 0,
-                    ...(!v.enabled && {
+                    ...(!I.enabled && {
                         height: 0,
                         width: 0,
                         ...(() => {
-                            if (null != Z.current)
+                            if (null != y.current)
                                 return {
-                                    top: Z.current.top + 12,
-                                    left: Z.current.left + 12
+                                    top: y.current.top + 12,
+                                    left: y.current.left + 12
                                 };
                         })()
                     })
                 },
-                config: v.enabled ? x : C,
+                config: I.enabled ? S : v,
                 onRest: (e, t) => {
-                    null != t.item && null != S.find((e) => e.timestamp === t.item.timestamp) && (0, u.Gh)(E, t.item.timestamp);
+                    null != t.item && null != Z.find((e) => e.timestamp === t.item.timestamp) && (0, u.Gh)(E, t.item.timestamp);
                 }
             },
             'animate-always'
         );
     return (
-        (0, r.useChain)([j, y], [0, 0.1], 3000),
+        (0, a.useChain)([A, w], [0, 0.1], 3000),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('div', {
                     className: p.hidden,
                     ref: _
                 }),
-                A(
+                N(
                     (e, t) =>
                         null != t &&
-                        (0, i.jsx)(r.animated.div, {
+                        (0, i.jsx)(a.animated.div, {
                             className: p.whiteFlash,
                             style: e
                         })
                 ),
-                (0, i.jsx)(m.ZP, {
+                (0, i.jsx)(f.ZP, {
                     children: (0, i.jsx)('div', {
                         className: p.hidden,
                         children: P(
                             (e, t, n, l) =>
                                 (null == t ? void 0 : t.thumbnail) != null &&
-                                (0, i.jsx)(r.animated.img, {
+                                (0, i.jsx)(a.animated.img, {
                                     src: t.thumbnail,
                                     className: p.movingImage,
                                     style: e

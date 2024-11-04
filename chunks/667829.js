@@ -96,7 +96,7 @@ class M extends i.Component {
     insertSound(e) {
         let { textValue: t } = this.props,
             n = this.ref.current;
-        null != e && null != n && (!t.endsWith(' ') && n.insertText(' ', void 0, !1), n.insertText('<sound:' + e.soundId + '>'));
+        null != e && null != n && (!t.endsWith(' ') && n.insertText(' ', void 0, !1), n.insertText('<sound:' + e.soundId + '>', void 0, !0));
     }
     handleOuterClick() {
         this.focus();

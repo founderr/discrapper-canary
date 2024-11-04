@@ -1,9 +1,9 @@
 n.d(t, {
     CR: function () {
-        return x;
+        return h;
     },
     UU: function () {
-        return h;
+        return m;
     },
     jE: function () {
         return d;
@@ -11,51 +11,51 @@ n.d(t, {
 }),
     n(627494),
     n(757143);
-var i = n(884439),
-    l = n(55000),
-    a = n(693824),
+var l = n(884439),
+    a = n(55000),
+    i = n(693824),
     r = n(690725),
     o = n(561308),
     s = n(737583),
-    u = n(169040),
-    c = n(388032);
+    c = n(169040),
+    u = n(388032);
 let d = (e) => {
         let { timestamp: t } = e;
         return [
             {
-                iconPath: u.mb,
+                iconPath: c.mb,
                 text: t
             }
         ];
     },
-    h = (e) => {
+    m = (e) => {
         var t;
-        let n = null === (t = (0, o.PJ)(e, i.N.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
+        let n = null === (t = (0, o.PJ)(e, l.N.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
         return null == n
             ? []
             : [
                   {
-                      iconPath: u.eF,
-                      text: c.intl.formatToPlainString(c.t.HtifnJ, { count: n })
+                      iconPath: c.eF,
+                      text: u.intl.formatToPlainString(u.t.HtifnJ, { count: n })
                   }
               ];
     },
-    m = (e) => {
+    x = (e) => {
         let { avatarSrc: t, mediaImageSrc: n } = e;
         return {
             AvatarImage: t,
             ...(null != n && { MediaImage: n })
         };
     },
-    x = async (e) => {
-        let { user: t, channel: n, mediaImageSrc: i, artist: o, description: c, colors: d, badges: h } = e,
-            x = m({
+    h = async (e) => {
+        let { user: t, channel: n, mediaImageSrc: l, artist: o, description: u, colors: d, badges: m } = e,
+            h = x({
                 avatarSrc: t.getAvatarURL(n.guild_id, 128),
-                mediaImageSrc: i
+                mediaImageSrc: l
             }),
-            v = o.replaceAll(/[^a-zA-Z0-9 ]/g, '').replaceAll(' ', '-');
+            p = o.replaceAll(/[^a-zA-Z0-9 ]/g, '').replaceAll(' ', '-');
         return await (0, r.f)({
-            assetsToLoad: x,
+            assetsToLoad: h,
             drawImage: (e) => {
                 (function (e, t) {
                     let n = t.map((e, t) => ({
@@ -64,8 +64,8 @@ let d = (e) => {
                     }));
                     e.setSize(
                         {
-                            w: u.nx,
-                            h: u.bg
+                            w: c.nx,
+                            h: c.bg
                         },
                         4
                     ),
@@ -73,17 +73,17 @@ let d = (e) => {
                             n,
                             {
                                 x: 0,
-                                y: u.bg
+                                y: c.bg
                             },
                             {
-                                x: u.nx,
+                                x: c.nx,
                                 y: 0
                             },
                             {
                                 x: 0,
                                 y: 0,
-                                h: u.bg,
-                                w: u.nx
+                                h: c.bg,
+                                w: c.nx
                             },
                             8
                         );
@@ -92,21 +92,21 @@ let d = (e) => {
                         e.drawRoundedImage(
                             'MediaImage',
                             {
-                                x: u.sB,
-                                y: u.sB
+                                x: c.sB,
+                                y: c.sB
                             },
                             {
-                                w: u.Pu,
-                                h: u.Pu
+                                w: c.Pu,
+                                h: c.Pu
                             },
                             8,
-                            { fillMode: a.JU.Contain }
-                        ) === a.vP.Failure &&
+                            { fillMode: i.JU.Contain }
+                        ) === i.vP.Failure &&
                             e.drawPath(
-                                l.Cv,
+                                a.Cv,
                                 {
-                                    x: u.sB,
-                                    y: u.sB
+                                    x: c.sB,
+                                    y: c.sB
                                 },
                                 !0,
                                 2 + 2 / 3
@@ -116,12 +116,12 @@ let d = (e) => {
                         e.drawRoundedImage(
                             'AvatarImage',
                             {
-                                x: u.Iq,
-                                y: u.sB
+                                x: c.Iq,
+                                y: c.sB
                             },
                             {
-                                w: u.$S,
-                                h: u.$S
+                                w: c.$S,
+                                h: c.$S
                             },
                             50
                         );
@@ -130,32 +130,32 @@ let d = (e) => {
                         e.setColor('white'),
                             e.setFont({
                                 size: 16,
-                                family: u.I8,
-                                weight: u.Ue,
-                                truncate: a.GX.Wrap
+                                family: c.I8,
+                                weight: c.Ue,
+                                truncate: i.GX.Wrap
                             }),
                             e.drawText(
                                 t,
                                 {
-                                    x: u.Iq,
+                                    x: c.Iq,
                                     y: 64,
                                     h: 32,
-                                    w: u.kC
+                                    w: c.kC
                                 },
                                 !0
                             );
-                    })(e, c),
+                    })(e, u),
                     (0, s.J)({
                         canvas: e,
-                        badges: h,
-                        startPosition: u.Iq,
-                        maxWidth: u.kC
+                        badges: m,
+                        startPosition: c.Iq,
+                        maxWidth: c.kC
                     });
             },
             exportConfigs: {
-                format: a.kH.CloudUpload,
+                format: i.kH.CloudUpload,
                 quality: 1,
-                fileName: 'user-reacting-to-'.concat(v, '.png').toLowerCase(),
+                fileName: 'user-reacting-to-'.concat(p, '.png').toLowerCase(),
                 fileType: 'png',
                 channelId: n.id
             }

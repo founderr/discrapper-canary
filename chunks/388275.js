@@ -22,13 +22,13 @@ var l = n(200651),
     E = n(463061);
 function I(e) {
     let { message: t, forwardOptions: n, sendLabel: I, canSend: S, selectedDestinations: A, isSending: C, onSend: v, showPreview: b } = e,
-        L = (0, d.Z)(),
+        x = (0, d.Z)(),
         N = (0, f.nm)(A),
-        x = (0, f.y)(A),
+        L = (0, f.y)(A),
         T = (0, _.Ad)(),
-        P = (0, a.e7)([h.Z], () => h.Z.getDraft(t.channel_id, h.d.ForwardContextMessage)),
-        [y, Z] = i.useState(() => (0, c.eK)(P)),
-        { textValue: w, richValue: R } = y,
+        y = (0, a.e7)([h.Z], () => h.Z.getDraft(t.channel_id, h.d.ForwardContextMessage)),
+        [P, Z] = i.useState(() => (0, c.eK)(y)),
+        { textValue: w, richValue: R } = P,
         [O, D] = i.useState(!1),
         j = i.useCallback(() => D(!0), []),
         M = i.useCallback(() => D(!1), []),
@@ -48,7 +48,7 @@ function I(e) {
         }, [t.channel_id, v, w]),
         G = i.useCallback(
             () =>
-                !S || w.length > L
+                !S || w.length > x
                     ? Promise.resolve({
                           shouldClear: !1,
                           shouldRefocus: !0
@@ -58,7 +58,7 @@ function I(e) {
                           shouldClear: !1,
                           shouldRefocus: !0
                       })),
-            [F, w, L, S]
+            [F, w, x, S]
         );
     return (0, l.jsxs)(r.ModalFooter, {
         className: E.footerWithMessage,
@@ -98,20 +98,20 @@ function I(e) {
                             (0, l.jsx)(r.Button, {
                                 className: E.sendWithMessage,
                                 submitting: C,
-                                disabled: !S || w.length > L,
+                                disabled: !S || w.length > x,
                                 onClick: F,
                                 children: I
                             })
                         ]
                     }),
-                    x.length > 0 &&
+                    L.length > 0 &&
                         w.length > 0 &&
                         (0, l.jsx)(r.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-warning',
                             children: p.intl.format(p.t.xJFpio, {
-                                count: x.length,
-                                channelNames: x.join(', ')
+                                count: L.length,
+                                channelNames: L.join(', ')
                             })
                         })
                 ]

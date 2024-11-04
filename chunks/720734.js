@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return eO;
+        return eP;
     }
 }),
     n(47120),
@@ -34,8 +34,8 @@ var i = n(200651),
     y = n(628581),
     L = n(55311),
     R = n(575175),
-    P = n(64220),
-    O = n(377171),
+    O = n(64220),
+    P = n(377171),
     j = n(600164),
     D = n(676035),
     M = n(427217),
@@ -158,7 +158,7 @@ function eR(e) {
               })
           });
 }
-class eP extends r.PureComponent {
+class eO extends r.PureComponent {
     get isCopiedStreakGodlike() {
         let { copiedStreak: e } = this.state;
         return e >= 10;
@@ -232,7 +232,7 @@ class eP extends r.PureComponent {
                       children: (e) => {
                           let { visibleContent: t, markAsDismissed: n } = e;
                           if (t === o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)
-                              return (0, i.jsx)(P.Z, {
+                              return (0, i.jsx)(O.Z, {
                                   markAsDismissed: n,
                                   children: () => this.renderAvatarWithPopout()
                               });
@@ -488,7 +488,7 @@ class eP extends r.PureComponent {
             );
     }
 }
-function eO() {
+function eP() {
     var e;
     let t = (0, s.e7)([ed.default], () => ed.default.getCurrentUser()),
         n = (0, s.e7)([ei.default], () => ei.default.getId()),
@@ -513,8 +513,8 @@ function eO() {
         y = (0, s.e7)([eu.ZP], () => eu.ZP.getPremiumTypeSubscription()),
         L = (0, s.e7)([ea.Z], () => ea.Z.getSpeakingWhileMuted()),
         R = (0, s.e7)([el.Z], () => el.Z.hasLayers()),
-        P = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || R || e_.s.isDisallowPopupsSet(),
-        O = (0, H.b)(),
+        O = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || R || e_.s.isDisallowPopupsSet(),
+        P = (0, H.b)(),
         j = (0, s.e7)([U.Z], () => null != U.Z.getAwaitingRemoteSessionInfo()),
         M = (0, Y.D)(),
         k = (0, E.u)(),
@@ -560,16 +560,16 @@ function eO() {
             settings: []
         };
     return (
-        !P && (X && $.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), M && (1 === k ? $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), q && $.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), G && $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), B && $.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), z && $.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)),
+        !O && (X && $.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), M && (1 === k ? $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), q && $.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), G && $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), B && $.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), z && $.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)),
         (0, i.jsx)(N.Gt, {
             value: J,
-            children: (0, i.jsx)(eP, {
+            children: (0, i.jsx)(eO, {
                 currentUser: t,
                 customStatusActivity: l,
                 dismissibleContents: $,
                 userTag: u,
                 hidePrivateData: h,
-                occluded: P,
+                occluded: O,
                 premiumSubscription: y,
                 selfDeaf: T,
                 selfMute: _,
@@ -582,7 +582,7 @@ function eO() {
                 suppress: v,
                 webBuildOverride: Z,
                 awaitingRemote: j,
-                isEligibleForPomelo: O
+                isEligibleForPomelo: P
             })
         })
     );
@@ -607,7 +607,7 @@ function ej(e) {
                 }))
               : n &&
                 (s = (0, i.jsx)(m.CircleBadge, {
-                    color: O.Z.STATUS_DANGER,
+                    color: P.Z.STATUS_DANGER,
                     className: eb.hasBuildOverride,
                     'aria-hidden': !0
                 })),

@@ -1,16 +1,16 @@
 n(757143), n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    s = n.n(r),
-    a = n(442837),
+    a = n(120356),
+    r = n.n(a),
+    s = n(442837),
     o = n(481060),
     c = n(771340),
-    u = n(600164),
-    d = n(903223),
+    d = n(600164),
+    u = n(903223),
     h = n(388032),
-    m = n(953320);
-function p(e, t, n) {
+    p = n(953320);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ let f = {
         autoInvert: !1
     },
     g = (e) => {
-        let { region: t, className: n = m.regionSelectName } = e,
+        let { region: t, className: n = p.regionSelectName } = e,
             l = t.name.replace(/ \(VIP\)$/, '');
         return (0, i.jsx)('div', {
             className: n,
@@ -38,15 +38,15 @@ let f = {
 class C extends l.PureComponent {
     render() {
         let { region: e, selected: t } = this.props;
-        return (0, i.jsxs)(u.Z, {
-            align: u.Z.Align.CENTER,
-            className: s()({ selected: t }),
+        return (0, i.jsxs)(d.Z, {
+            align: d.Z.Align.CENTER,
+            className: r()({ selected: t }),
             children: [
                 (0, i.jsx)(g, {
                     region: e,
-                    className: m.regionSelectName
+                    className: p.regionSelectName
                 }),
-                t ? (0, i.jsx)('i', { className: m.check }) : null
+                t ? (0, i.jsx)('i', { className: p.check }) : null
             ]
         });
     }
@@ -77,12 +77,12 @@ class x extends l.PureComponent {
             onChange: this.handleChangeVoiceRegion,
             renderOption: this.renderOption,
             popoutProps: f,
-            popoutClassName: m.regionSelectPopout
+            popoutClassName: p.regionSelectPopout
         });
     }
     constructor(...e) {
         super(...e),
-            p(this, 'renderOption', (e, t) =>
+            m(this, 'renderOption', (e, t) =>
                 (0, i.jsx)(
                     C,
                     {
@@ -92,7 +92,7 @@ class x extends l.PureComponent {
                     e.value.id
                 )
             ),
-            p(this, 'getSelectedRegion', () => {
+            m(this, 'getSelectedRegion', () => {
                 var e;
                 let { regions: t, call: n } = this.props;
                 return n.regionUpdated && null != t && null != n.region
@@ -114,11 +114,11 @@ class x extends l.PureComponent {
                           hidden: !1
                       };
             }),
-            p(this, 'handleChangeVoiceRegion', (e) => {
+            m(this, 'handleChangeVoiceRegion', (e) => {
                 let { value: t } = e,
                     { channelId: n } = this.props.call;
                 c.Z.changeCallRegion(n, t.id);
             });
     }
 }
-t.Z = a.ZP.connectStores([d.Z], () => ({ regions: d.Z.getRegions(null) }))(x);
+t.Z = s.ZP.connectStores([u.Z], () => ({ regions: u.Z.getRegions(null) }))(x);

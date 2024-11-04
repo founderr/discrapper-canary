@@ -9,8 +9,8 @@ var r = n(200651),
     l = n(120356),
     i = n.n(l),
     o = n(442837),
-    c = n(481060),
-    s = n(38618),
+    s = n(481060),
+    c = n(38618),
     d = n(980361),
     u = n(219299);
 let h = 1000 / 60,
@@ -33,7 +33,7 @@ function p(e) {
         })(t),
         {
             currentFPS: o,
-            averageFrameTime: s,
+            averageFrameTime: c,
             timeSinceLastDrop: u,
             onResetFrameData: m,
             droppedFramesRef: p,
@@ -46,35 +46,35 @@ function p(e) {
                 l = a.useRef(0),
                 i = a.useRef(0),
                 o = a.useRef(0),
-                c = a.useRef(0),
                 s = a.useRef(0),
+                c = a.useRef(0),
                 d = a.useRef(0),
                 u = a.useCallback(() => {
-                    n.current.fill(0), (l.current = 0), (i.current = 0), (c.current = 0), (s.current = 0), (r.current = performance.now()), (o.current = 0);
+                    n.current.fill(0), (l.current = 0), (i.current = 0), (s.current = 0), (c.current = 0), (r.current = performance.now()), (o.current = 0);
                 }, []),
                 m = a.useCallback(
                     function () {
                         let a = performance.now(),
                             u = a - r.current;
                         if (((r.current = a), t.current)) return;
-                        if (((i.current -= n.current[s.current]), (n.current[s.current] = u), (i.current += u), c.current < f && (c.current += 1), (s.current = (s.current + 1) % f), u > x)) {
-                            let t = 0 === c.current ? h : i.current / c.current,
+                        if (((i.current -= n.current[c.current]), (n.current[c.current] = u), (i.current += u), s.current < f && (s.current += 1), (c.current = (c.current + 1) % f), u > x)) {
+                            let t = 0 === s.current ? h : i.current / s.current,
                                 n = Math.min(2 * h, t),
                                 r = Math.floor(u / (e ? n : h));
                             r > 0 && (d.current = performance.now()), (l.current += r);
                         }
-                        let m = 0 === c.current ? h : i.current / c.current;
+                        let m = 0 === s.current ? h : i.current / s.current;
                         o.current += u / m;
                     },
                     [e, t]
                 ),
-                p = 0 === c.current ? 0 : i.current / c.current;
+                p = 0 === s.current ? 0 : i.current / s.current;
             return {
                 currentFPS: 0 === p ? 0 : (h / p) * 60,
                 averageFrameTime: p,
                 timeSinceLastDrop: (performance.now() - d.current) / 1000,
                 droppedFramesRef: l,
-                bufferFramecountRef: c,
+                bufferFramecountRef: s,
                 renderedFrameCount: o,
                 frameCheckerEffect: m,
                 onResetFrameData: u
@@ -87,16 +87,16 @@ function p(e) {
                 l = a.useRef(0),
                 i = a.useRef(0),
                 o = e.dispatcher.getIsSchedulerBackgrounded(),
-                c = a.useRef(o);
-            c.current = o;
-            let s = a.useRef(o ? performance.now() : 0);
+                s = a.useRef(o);
+            s.current = o;
+            let c = a.useRef(o ? performance.now() : 0);
             a.useEffect(() => {
-                e.dispatcher.getIsSchedulerBackgrounded() && (s.current = performance.now());
+                e.dispatcher.getIsSchedulerBackgrounded() && (c.current = performance.now());
             });
             let d = a.useCallback(function () {
                 let e = performance.now(),
                     a = e - n.current;
-                if (((n.current = e), !c.current)) (r.current -= t.current[i.current]), (t.current[i.current] = a), (r.current += a), l.current < f && (l.current += 1), (i.current = (i.current + 1) % f);
+                if (((n.current = e), !s.current)) (r.current -= t.current[i.current]), (t.current[i.current] = a), (r.current += a), l.current < f && (l.current += 1), (i.current = (i.current + 1) % f);
             }, []);
             return [
                 d,
@@ -134,7 +134,7 @@ function p(e) {
             ];
         })(j, v),
         N = performance.now() - i.current < 5000,
-        y = _(s, b.current);
+        y = _(c, b.current);
     a.useEffect(
         () => (
             T(),
@@ -150,13 +150,13 @@ function p(e) {
     return (0, r.jsxs)('div', {
         className: d.panelGroup,
         children: [
-            (0, r.jsxs)(c.Text, {
+            (0, r.jsxs)(s.Text, {
                 variant: 'text-md/normal',
                 color: 'text-muted',
                 children: [
                     'FPS (~3sec):',
                     ' ',
-                    (0, r.jsx)(c.Text, {
+                    (0, r.jsx)(s.Text, {
                         tag: 'span',
                         variant: 'text-md/bold',
                         color: o < 30 ? 'text-danger' : o < 45 ? 'text-warning' : 'text-primary',
@@ -164,19 +164,19 @@ function p(e) {
                     })
                 ]
             }),
-            (0, r.jsxs)(c.Text, {
+            (0, r.jsxs)(s.Text, {
                 variant: 'text-md/normal',
                 color: 'text-muted',
                 children: [
                     'Dropped Frames:',
                     ' ',
-                    (0, r.jsx)(c.Text, {
+                    (0, r.jsx)(s.Text, {
                         tag: 'span',
                         variant: 'text-md/bold',
                         color: u < 2 ? 'text-danger' : u < 5 ? 'text-warning' : 'text-primary',
                         children: p.current
                     }),
-                    (0, r.jsxs)(c.Text, {
+                    (0, r.jsxs)(s.Text, {
                         tag: 'span',
                         variant: 'text-sm/normal',
                         color: 'text-muted',
@@ -184,13 +184,13 @@ function p(e) {
                         children: ['(Dropped: ', ((p.current / g.current) * 100).toFixed(4), '%)']
                     }),
                     N &&
-                        (0, r.jsx)(c.Tooltip, {
+                        (0, r.jsx)(s.Tooltip, {
                             position: 'left',
                             text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",
                             children: (e) =>
                                 (0, r.jsx)('span', {
                                     ...e,
-                                    children: (0, r.jsx)(c.Text, {
+                                    children: (0, r.jsx)(s.Text, {
                                         tag: 'span',
                                         variant: 'text-xs/bold',
                                         color: 'text-danger',
@@ -201,13 +201,13 @@ function p(e) {
                         })
                 ]
             }),
-            (0, r.jsxs)(c.Text, {
+            (0, r.jsxs)(s.Text, {
                 variant: 'text-md/normal',
                 color: 'text-muted',
                 children: [
                     'Rendered Frames:',
                     ' ',
-                    (0, r.jsx)(c.Text, {
+                    (0, r.jsx)(s.Text, {
                         tag: 'span',
                         variant: 'text-md/semibold',
                         color: 'text-secondary',
@@ -215,46 +215,46 @@ function p(e) {
                     })
                 ]
             }),
-            (0, r.jsxs)(c.Text, {
+            (0, r.jsxs)(s.Text, {
                 variant: 'text-md/normal',
                 color: 'text-muted',
                 children: [
                     'Frame Times (~3sec):',
                     ' ',
-                    (0, r.jsxs)(c.Text, {
+                    (0, r.jsxs)(s.Text, {
                         tag: 'span',
                         variant: 'text-md/semibold',
-                        color: s > 1.1 * h ? 'text-warning' : 'text-secondary',
-                        children: [s.toFixed(2), 'ms']
+                        color: c > 1.1 * h ? 'text-warning' : 'text-secondary',
+                        children: [c.toFixed(2), 'ms']
                     })
                 ]
             }),
-            (0, r.jsx)(c.Tooltip, {
+            (0, r.jsx)(s.Tooltip, {
                 position: 'left',
                 text: "The average amount of 'lag' between us rendering a frame and being able to process background tasks. Values constantly above 1-2ms means our main thread is being burried by work and is taking all of its time in animation frames, most likely producing user interaciton blocking jank. (This doesn't work when the app is backgrounded though)",
                 children: (e) =>
                     (0, r.jsx)('div', {
                         ...e,
-                        children: (0, r.jsxs)(c.Text, {
+                        children: (0, r.jsxs)(s.Text, {
                             variant: 'text-md/normal',
                             color: 'text-muted',
                             children: [
                                 'Idle Frame Delta (~3sec):',
                                 ' ',
-                                (0, r.jsxs)(c.Text, {
+                                (0, r.jsxs)(s.Text, {
                                     tag: 'span',
                                     variant: 'text-md/semibold',
                                     color: y > 1 ? 'text-danger' : 'text-secondary',
                                     children: [y.toFixed(2), 'ms']
                                 }),
                                 N &&
-                                    (0, r.jsx)(c.Tooltip, {
+                                    (0, r.jsx)(s.Tooltip, {
                                         position: 'left',
                                         text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",
                                         children: (e) =>
                                             (0, r.jsx)('span', {
                                                 ...e,
-                                                children: (0, r.jsx)(c.Text, {
+                                                children: (0, r.jsx)(s.Text, {
                                                     tag: 'span',
                                                     variant: 'text-xs/bold',
                                                     color: 'text-danger',
@@ -269,8 +269,8 @@ function p(e) {
             }),
             (0, r.jsx)('div', {
                 className: d.bottomPanelButton,
-                children: (0, r.jsx)(c.Button, {
-                    size: c.Button.Sizes.SMALL,
+                children: (0, r.jsx)(s.Button, {
+                    size: s.Button.Sizes.SMALL,
                     onClick: I,
                     children: 'Reset Frame Data'
                 })
@@ -281,15 +281,15 @@ function p(e) {
 function g(e) {
     let { socket: t, isAverageFrameTime: n, onToggleAverageFrameTime: l } = e,
         [i, o] = a.useState(t.dispatcher.getIsRequestIdleCallbackEnabled()),
-        s = a.useRef(null);
+        c = a.useRef(null);
     a.useEffect(() => {
         let e = setInterval(() => {
             o(t.dispatcher.getIsRequestIdleCallbackEnabled());
         }, m);
         return (
-            (s.current = e),
+            (c.current = e),
             () => {
-                null != s.current && clearInterval(s.current);
+                null != c.current && clearInterval(c.current);
             }
         );
     }, [t.dispatcher]);
@@ -299,19 +299,19 @@ function g(e) {
     return (0, r.jsxs)('div', {
         className: d.panelGroup,
         children: [
-            (0, r.jsx)(c.Tooltip, {
+            (0, r.jsx)(s.Tooltip, {
                 position: 'left',
                 text: 'Instead of using 60fps to calculate the number of dropped frames, we use the average framerate to more accurately determine the number of actual dropped frames. Turn this off when benchmarking to get better comparsion between two different runtimes, where higher FPS might result in a higher dropped frame count.',
                 children: (e) =>
                     (0, r.jsx)('div', {
                         ...e,
-                        children: (0, r.jsx)(c.Checkbox, {
+                        children: (0, r.jsx)(s.Checkbox, {
                             value: n,
                             onChange: () => l(!n),
                             size: 18,
-                            type: c.Checkbox.Types.INVERTED,
-                            shape: c.Checkbox.Shapes.BOX,
-                            children: (0, r.jsx)(c.Text, {
+                            type: s.Checkbox.Types.INVERTED,
+                            shape: s.Checkbox.Shapes.BOX,
+                            children: (0, r.jsx)(s.Text, {
                                 tag: 'span',
                                 variant: 'text-md/normal',
                                 color: 'text-muted',
@@ -320,13 +320,13 @@ function g(e) {
                         })
                     })
             }),
-            (0, r.jsx)(c.Checkbox, {
+            (0, r.jsx)(s.Checkbox, {
                 value: i,
                 onChange: () => u(!i),
                 size: 18,
-                type: c.Checkbox.Types.INVERTED,
-                shape: c.Checkbox.Shapes.BOX,
-                children: (0, r.jsx)(c.Text, {
+                type: s.Checkbox.Types.INVERTED,
+                shape: s.Checkbox.Shapes.BOX,
+                children: (0, r.jsx)(s.Text, {
                     tag: 'span',
                     variant: 'text-md/normal',
                     color: 'text-muted',
@@ -345,13 +345,13 @@ function b(e) {
         children: [
             (0, r.jsx)('div', {
                 className: i()(l && d.topPanelToggle),
-                children: (0, r.jsx)(c.Checkbox, {
+                children: (0, r.jsx)(s.Checkbox, {
                     value: l,
                     onChange: () => o((e) => !e),
                     size: 18,
-                    type: c.Checkbox.Types.INVERTED,
-                    shape: c.Checkbox.Shapes.BOX,
-                    children: (0, r.jsx)(c.Text, {
+                    type: s.Checkbox.Types.INVERTED,
+                    shape: s.Checkbox.Shapes.BOX,
+                    children: (0, r.jsx)(s.Text, {
                         tag: 'span',
                         variant: 'text-md/normal',
                         color: 'text-muted',
@@ -362,7 +362,7 @@ function b(e) {
             l
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)(c.Text, {
+                          (0, r.jsx)(s.Text, {
                               variant: 'text-md/medium',
                               color: 'text-muted',
                               children: 'Gateway Dispatch Timings:'
@@ -376,14 +376,14 @@ function b(e) {
                                       {
                                           children: [
                                               (0, r.jsx)('td', {
-                                                  children: (0, r.jsx)(c.Text, {
+                                                  children: (0, r.jsx)(s.Text, {
                                                       variant: 'text-xs/normal',
                                                       color: 'text-normal',
                                                       children: t
                                                   })
                                               }),
                                               (0, r.jsx)('td', {
-                                                  children: (0, r.jsxs)(c.Text, {
+                                                  children: (0, r.jsxs)(s.Text, {
                                                       tag: 'span',
                                                       variant: 'text-xs/bold',
                                                       color: 'text-normal',
@@ -391,7 +391,7 @@ function b(e) {
                                                   })
                                               }),
                                               (0, r.jsx)('td', {
-                                                  children: (0, r.jsxs)(c.Text, {
+                                                  children: (0, r.jsxs)(s.Text, {
                                                       tag: 'span',
                                                       variant: 'text-xs/normal',
                                                       color: 'text-muted',
@@ -414,20 +414,20 @@ function v(e) {
     let { socket: t } = e,
         n = t.dispatcher.getSchedulerTelemetry(),
         [l, o] = a.useState(n.isTelemetryEnabled),
-        [s, u] = a.useState(n.isTelemetryEnabled),
+        [c, u] = a.useState(n.isTelemetryEnabled),
         h = (e) => {
             u(e), n.toggleTelemetry(e);
         };
     return (0, r.jsxs)('div', {
         className: d.panelGroup,
         children: [
-            (0, r.jsx)(c.Checkbox, {
-                value: s,
-                onChange: () => h(!s),
+            (0, r.jsx)(s.Checkbox, {
+                value: c,
+                onChange: () => h(!c),
                 size: 18,
-                type: c.Checkbox.Types.INVERTED,
-                shape: c.Checkbox.Shapes.BOX,
-                children: (0, r.jsx)(c.Text, {
+                type: s.Checkbox.Types.INVERTED,
+                shape: s.Checkbox.Shapes.BOX,
+                children: (0, r.jsx)(s.Text, {
                     tag: 'span',
                     variant: 'text-md/normal',
                     color: 'text-muted',
@@ -436,7 +436,7 @@ function v(e) {
             }),
             (0, r.jsx)('div', {
                 className: i()(l && d.topPanelToggle),
-                children: (0, r.jsx)(c.Checkbox, {
+                children: (0, r.jsx)(s.Checkbox, {
                     value: l,
                     onChange: () => {
                         o((e) => {
@@ -445,9 +445,9 @@ function v(e) {
                         });
                     },
                     size: 18,
-                    type: c.Checkbox.Types.INVERTED,
-                    shape: c.Checkbox.Shapes.BOX,
-                    children: (0, r.jsx)(c.Text, {
+                    type: s.Checkbox.Types.INVERTED,
+                    shape: s.Checkbox.Shapes.BOX,
+                    children: (0, r.jsx)(s.Text, {
                         tag: 'span',
                         variant: 'text-md/normal',
                         color: 'text-muted',
@@ -458,7 +458,7 @@ function v(e) {
             l
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)(c.Text, {
+                          (0, r.jsx)(s.Text, {
                               variant: 'text-md/medium',
                               color: 'text-muted',
                               children: 'Dispatch Scheduler Telemetry:'
@@ -472,14 +472,14 @@ function v(e) {
                                       {
                                           children: [
                                               (0, r.jsx)('td', {
-                                                  children: (0, r.jsx)(c.Text, {
+                                                  children: (0, r.jsx)(s.Text, {
                                                       variant: 'text-xs/normal',
                                                       color: 'text-normal',
                                                       children: t
                                                   })
                                               }),
                                               (0, r.jsx)('td', {
-                                                  children: (0, r.jsx)(c.Text, {
+                                                  children: (0, r.jsx)(s.Text, {
                                                       tag: 'span',
                                                       variant: 'text-xs/bold',
                                                       color: 'text-normal',
@@ -494,8 +494,8 @@ function v(e) {
                           }),
                           (0, r.jsx)('div', {
                               className: d.bottomPanelButton,
-                              children: (0, r.jsx)(c.Button, {
-                                  size: c.Button.Sizes.SMALL,
+                              children: (0, r.jsx)(s.Button, {
+                                  size: s.Button.Sizes.SMALL,
                                   onClick: () => {
                                       n.reset();
                                   },
@@ -509,7 +509,7 @@ function v(e) {
     });
 }
 function j() {
-    let e = (0, o.e7)([s.Z], () => s.Z.getSocket()),
+    let e = (0, o.e7)([c.Z], () => c.Z.getSocket()),
         [t, n] = a.useState(!1);
     return (
         !(function () {
@@ -525,7 +525,7 @@ function j() {
         })(),
         (0, r.jsx)('div', {
             className: i()(u.panel, d.panel),
-            children: (0, r.jsxs)(c.ScrollerThin, {
+            children: (0, r.jsxs)(s.ScrollerThin, {
                 className: d.panel,
                 children: [
                     (0, r.jsx)(p, {

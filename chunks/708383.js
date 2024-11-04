@@ -1,8 +1,8 @@
 var i = n(200651),
     r = n(192379),
     s = n(512969),
-    l = n(749210),
-    a = n(287734),
+    a = n(749210),
+    l = n(287734),
     o = n(765717),
     c = n(893607),
     d = n(703656),
@@ -28,8 +28,8 @@ class h extends r.Component {
             };
         })(e);
         (0, c.Ss)(t) && (0, c.cq)(n)
-            ? (l.Z.selectGuild(t),
-              a.default.selectChannel({
+            ? (a.Z.selectGuild(t),
+              l.default.selectChannel({
                   guildId: t,
                   channelId: n,
                   messageId: i

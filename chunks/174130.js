@@ -1,34 +1,34 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return p;
     }
 });
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    r = n(481060),
-    s = n(665149),
-    a = n(853856),
+    a = n(481060),
+    r = n(665149),
+    s = n(853856),
     o = n(117984),
     c = n(593214),
-    u = n(362658),
-    d = n(916069),
+    d = n(362658),
+    u = n(916069),
     h = n(388032);
-function m(e) {
+function p(e) {
     let { channel: t } = e,
-        { isFavoritesPerk: n } = (0, u.z)('ChannelFavoritesHeaderButton'),
-        m = (0, d.Z)(),
-        { notifyFavoriteAdded: p } = (0, c.up)(),
-        f = (0, l.e7)([a.Z], () => a.Z.isFavorite(t.id));
-    if (!n || m) return null;
-    let g = f ? r.StarIcon : r.StarOutlineIcon,
+        { isFavoritesPerk: n } = (0, d.z)('ChannelFavoritesHeaderButton'),
+        p = (0, u.Z)(),
+        { notifyFavoriteAdded: m } = (0, c.up)(),
+        f = (0, l.e7)([s.Z], () => s.Z.isFavorite(t.id));
+    if (!n || p) return null;
+    let g = f ? a.StarIcon : a.StarOutlineIcon,
         C = f ? h.intl.string(h.t.Bou7lZ) : h.intl.string(h.t['4wcdEx']);
-    return (0, i.jsx)(s.ZP.Icon, {
+    return (0, i.jsx)(r.ZP.Icon, {
         icon: g,
         tooltip: C,
         'aria-label': C,
         onClick: () => {
-            f ? (0, o.oC)(t.id) : (p(), (0, o.kj)(t.id));
+            f ? (0, o.oC)(t.id) : (m(), (0, o.kj)(t.id));
         }
     });
 }

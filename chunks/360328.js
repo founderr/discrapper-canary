@@ -6,34 +6,34 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(481060),
-    s = n(693546),
-    a = n(246364),
+    a = n(481060),
+    r = n(693546),
+    s = n(246364),
     o = n(388032);
 function c(e, t, c) {
-    let [u, d] = l.useState(!1),
+    let [d, u] = l.useState(!1),
         h = () => {
-            (0, r.showToast)((0, r.createToast)(o.intl.string(o.t.R0RpRU), r.ToastType.FAILURE));
+            (0, a.showToast)((0, a.createToast)(o.intl.string(o.t.R0RpRU), a.ToastType.FAILURE));
         },
-        m = async () => {
-            if (!u && null != e && null != t && null != c) {
-                d(!0);
+        p = async () => {
+            if (!d && null != e && null != t && null != c) {
+                u(!0);
                 try {
-                    await s.Z.updateGuildJoinRequest(e, t, c, a.wB.APPROVED);
+                    await r.Z.updateGuildJoinRequest(e, t, c, s.wB.APPROVED);
                 } catch {
                     h();
                 } finally {
-                    d(!1);
+                    u(!1);
                 }
             }
         };
     return {
-        approveRequest: m,
+        approveRequest: p,
         rejectRequest: () => {
             null != e &&
                 null != t &&
                 null != c &&
-                (0, r.openModalLazy)(async () => {
+                (0, a.openModalLazy)(async () => {
                     let { default: l } = await n.e('56496').then(n.bind(n, 113886));
                     return (n) =>
                         (0, i.jsx)(l, {
@@ -45,6 +45,6 @@ function c(e, t, c) {
                         });
                 });
         },
-        submitting: u
+        submitting: d
     };
 }

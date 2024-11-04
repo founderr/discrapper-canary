@@ -3,16 +3,16 @@ e.d(n, {
         return u;
     },
     Md: function () {
-        return a;
+        return o;
     },
     Q8: function () {
-        return o;
+        return l;
     }
 });
 var i = e(373228),
     r = e(388032);
-let o = () => [r.intl.string(r.t.b6wEe3), r.intl.string(r.t.i8o9hY)],
-    a = () => [r.intl.string(r.t.vqnToa), r.intl.string(r.t['9yh+dH'])],
+let l = () => [r.intl.string(r.t.b6wEe3), r.intl.string(r.t.i8o9hY)],
+    o = () => [r.intl.string(r.t.vqnToa), r.intl.string(r.t['9yh+dH'])],
     u = [
         {
             id: '781323471249604648',

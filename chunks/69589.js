@@ -3,17 +3,17 @@ n.d(t, {
         return o;
     }
 });
-var i = n(200651),
-    l = n(481060),
-    a = n(531501),
+var l = n(200651),
+    a = n(481060),
+    i = n(531501),
     r = n(211494);
 function o(e) {
     let { rank: t } = e;
-    return (0, i.jsx)(a.Z, {
+    return (0, l.jsx)(i.Z, {
         color: '#cbaa62',
-        children: (0, i.jsx)('div', {
+        children: (0, l.jsx)('div', {
             className: r.innerContainer,
-            children: (0, i.jsx)(l.Text, {
+            children: (0, l.jsx)(a.Text, {
                 variant: 'text-sm/medium',
                 className: r.rankText,
                 children: t

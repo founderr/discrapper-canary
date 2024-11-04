@@ -5,49 +5,49 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    s = n.n(r),
-    a = n(399606),
+    a = n(120356),
+    r = n.n(a),
+    s = n(399606),
     o = n(481060),
     c = n(893966),
-    u = n(472596),
-    d = n(285173),
+    d = n(472596),
+    u = n(285173),
     h = n(430824),
-    m = n(496675),
-    p = n(776767),
+    p = n(496675),
+    m = n(776767),
     f = n(981631),
     g = n(388032),
     C = n(194898);
 function x(e) {
     let { member: t } = e,
-        n = (0, a.e7)([h.Z], () => h.Z.getGuild(t.guildId)),
-        r = (0, a.e7)([h.Z], () => h.Z.getRoles(t.guildId)),
+        n = (0, s.e7)([h.Z], () => h.Z.getGuild(t.guildId)),
+        a = (0, s.e7)([h.Z], () => h.Z.getRoles(t.guildId)),
         x = l.useMemo(
             () =>
                 null == n
                     ? []
                     : null == t.highestRoleId
                       ? t.roles
-                      : Object.values(r)
+                      : Object.values(a)
                             .filter((e) => e.id !== t.highestRoleId && t.roles.includes(e.id))
                             .sort((e, t) => {
                                 var n, i;
                                 return null !== (i = null !== (n = null == e ? void 0 : e.position) && void 0 !== n ? n : 0 - (null == t ? void 0 : t.position)) && void 0 !== i ? i : 0;
                             })
                             .map((e) => e.id),
-            [t.roles, t.highestRoleId, n, r]
+            [t.roles, t.highestRoleId, n, a]
         ),
-        v = (0, a.e7)([c.Z], () => c.Z.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]),
-        _ = (0, u.zq)(v),
-        I = (0, u.vN)(t),
-        E = (0, a.e7)([m.Z], () => m.Z.can(f.Plq.MANAGE_ROLES, n), [n]);
+        v = (0, s.e7)([c.Z], () => c.Z.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]),
+        _ = (0, d.zq)(v),
+        I = (0, d.vN)(t),
+        E = (0, s.e7)([p.Z], () => p.Z.can(f.Plq.MANAGE_ROLES, n), [n]);
     return null == n
         ? null
         : (0, i.jsx)(o.FormItem, {
               title: g.intl.string(g.t.LPJmLy),
               titleClassName: C.infoTitle,
-              children: (0, i.jsx)(p.WM, {
-                  children: (0, i.jsx)(p._2, {
+              children: (0, i.jsx)(m.WM, {
+                  children: (0, i.jsx)(m._2, {
                       description:
                           t.roles.length > 0 || E
                               ? (0, i.jsxs)('div', {
@@ -62,8 +62,8 @@ function x(e) {
                                                 return (0, i.jsx)(o.Clickable, {
                                                     onMouseEnter: n,
                                                     onMouseLeave: l,
-                                                    children: (0, i.jsx)(d.Z, {
-                                                        className: s()(C.roleTooltipItem, C.highestRole),
+                                                    children: (0, i.jsx)(u.Z, {
+                                                        className: r()(C.roleTooltipItem, C.highestRole),
                                                         role: _,
                                                         guildId: t.guildId
                                                     })
@@ -72,10 +72,10 @@ function x(e) {
                                         }),
                                         x.map((e) =>
                                             (0, i.jsx)(
-                                                d.Z,
+                                                u.Z,
                                                 {
                                                     className: C.roleTooltipItem,
-                                                    role: r[e],
+                                                    role: a[e],
                                                     guildId: t.guildId
                                                 },
                                                 e

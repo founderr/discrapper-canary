@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return p;
     },
     r: function () {
         return i;
@@ -9,35 +9,35 @@ n.d(t, {
     n(653041);
 var i,
     l,
-    r = n(481060),
-    s = n(620662),
-    a = n(933557),
+    a = n(481060),
+    r = n(620662),
+    s = n(933557),
     o = n(377171),
     c = n(699516),
-    u = n(594174),
-    d = n(981631),
+    d = n(594174),
+    u = n(981631),
     h = n(388032);
-function m(e) {
-    let { canAttachFiles: t, canStartThreads: n, useSlate: i, canUseApplicationCommands: l, hasClips: m, channel: p, activities: f, newClipsCount: g, canPostPolls: C, canLaunchActivities: x, appContext: v } = e,
+function p(e) {
+    let { canAttachFiles: t, canStartThreads: n, useSlate: i, canUseApplicationCommands: l, hasClips: p, channel: m, activities: f, newClipsCount: g, canPostPolls: C, canLaunchActivities: x, appContext: v } = e,
         _ = [];
     return (
         t &&
             (_.push({
                 type: 'UPLOAD_A_FILE',
-                icon: r.FileUpIcon,
+                icon: a.FileUpIcon,
                 display: h.intl.string(h.t['d3+iYm'])
             }),
             _.push({
                 type: 'UPLOAD_TEXT_AS_FILE',
-                icon: r.FileUpIcon,
+                icon: a.FileUpIcon,
                 display: h.intl.string(h.t['G9s+EB'])
             })),
-        m &&
+        p &&
             t &&
-            v !== d.IlC.POPOUT &&
+            v !== u.IlC.POPOUT &&
             _.push({
                 type: 'CLIPS',
-                icon: r.ClipsIcon,
+                icon: a.ClipsIcon,
                 display: h.intl.string(h.t.o034cn),
                 badgeVal: g,
                 badgeColor: o.Z.BG_BRAND
@@ -45,59 +45,59 @@ function m(e) {
         n &&
             _.push({
                 type: 'CREATE_THREAD',
-                icon: r.ThreadPlusIcon,
+                icon: a.ThreadPlusIcon,
                 display: h.intl.string(h.t.rBIGBA)
             }),
         C &&
             _.push({
                 type: 'POLL',
-                icon: r.PollsIcon,
+                icon: a.PollsIcon,
                 display: h.intl.string(h.t.Flr51t)
             }),
         i &&
             l &&
             _.push({
                 type: 'SLASH_COMMAND',
-                icon: r.AppsIcon,
+                icon: a.AppsIcon,
                 display: h.intl.string(h.t.Bbvp6O)
             }),
         x &&
             _.push({
                 type: 'ACTIVITY',
-                icon: r.ActivitiesIcon,
+                icon: a.ActivitiesIcon,
                 display: h.intl.string(h.t['16Lfra'])
             }),
         f.forEach((e) => {
-            if (!(0, s.Z)(e, d.xjy.EMBEDDED))
-                e.type === d.IIU.PLAYING &&
-                    (0, s.Z)(e, d.xjy.JOIN) &&
+            if (!(0, r.Z)(e, u.xjy.EMBEDDED))
+                e.type === u.IIU.PLAYING &&
+                    (0, r.Z)(e, u.xjy.JOIN) &&
                     _.push({
                         type: 'INVITE_TO_GAME',
-                        icon: r.DpadIcon,
+                        icon: a.DpadIcon,
                         display: h.intl.formatToPlainString(h.t['KHLo+P'], {
-                            channel: (0, a.F6)(p, u.default, c.Z, !0),
+                            channel: (0, s.F6)(m, d.default, c.Z, !0),
                             game: null != e ? e.name : ''
                         }),
                         activity: e
                     }),
-                    e.type === d.IIU.LISTENING &&
-                        (0, s.Z)(e, d.xjy.SYNC) &&
+                    e.type === u.IIU.LISTENING &&
+                        (0, r.Z)(e, u.xjy.SYNC) &&
                         _.push({
                             type: 'INVITE_TO_LISTEN',
-                            icon: r.UserPlayIcon,
+                            icon: a.UserPlayIcon,
                             display: h.intl.formatToPlainString(h.t.I479p6, {
-                                channel: (0, a.F6)(p, u.default, c.Z, !0),
+                                channel: (0, s.F6)(m, d.default, c.Z, !0),
                                 name: null != e ? e.name : ''
                             }),
                             activity: e
                         }),
-                    e.type === d.IIU.WATCHING &&
-                        (0, s.Z)(e, d.xjy.SYNC) &&
+                    e.type === u.IIU.WATCHING &&
+                        (0, r.Z)(e, u.xjy.SYNC) &&
                         _.push({
                             type: 'INVITE_TO_WATCH',
-                            icon: r.EyeIcon,
+                            icon: a.EyeIcon,
                             display: h.intl.formatToPlainString(h.t['EvCP/v'], {
-                                channel: (0, a.F6)(p, u.default, c.Z, !0),
+                                channel: (0, s.F6)(m, d.default, c.Z, !0),
                                 name: null != e ? e.name : ''
                             }),
                             activity: e

@@ -89,7 +89,7 @@ let R = {
     [d.s.WATCHED_MEDIA]: [Y, W],
     [d.s.LAUNCHED_ACTIVITY]: [M, P, w, H, j, G]
 };
-((r = i || (i = {}))[(r.CARD = 0)] = 'CARD'), (r[(r.POPOUT = 1)] = 'POPOUT'), (r[(r.STREAMING_POPOUT = 2)] = 'STREAMING_POPOUT'), (r[(r.GAME_PROFILE = 3)] = 'GAME_PROFILE'), (r[(r.USER_PROFILE = 4)] = 'USER_PROFILE'), (r[(r.EMBED = 5)] = 'EMBED'), (r[(r.LEADERBOARD_POPOUT = 6)] = 'LEADERBOARD_POPOUT');
+((r = i || (i = {}))[(r.CARD = 0)] = 'CARD'), (r[(r.POPOUT = 1)] = 'POPOUT'), (r[(r.STREAMING_POPOUT = 2)] = 'STREAMING_POPOUT'), (r[(r.GAME_PROFILE = 3)] = 'GAME_PROFILE'), (r[(r.USER_PROFILE = 4)] = 'USER_PROFILE'), (r[(r.EMBED = 5)] = 'EMBED'), (r[(r.LEADERBOARD_POPOUT = 6)] = 'LEADERBOARD_POPOUT'), (r[(r.OVERLAY = 7)] = 'OVERLAY');
 let O = s.createContext({});
 function D() {
     return s.useContext(O);
@@ -141,7 +141,7 @@ function w(e) {
 function M(e) {
     let { entry: t, hovered: n } = e,
         { defaultTextColor: r, defaultIconColor: i, location: s } = D(),
-        o = (0, T.Jg)(t) && (0, g.Hi)(s, [0, 4]),
+        o = (0, T.Jg)(t) && (0, g.Hi)(s, [0, 4, 7]),
         l = o ? p.tokens.colors.TEXT_POSITIVE : i,
         { streamPreviewUrl: u } = (0, S.Z)(t),
         c = null != u ? p.ScreenArrowIcon : (0, I.Mq)(t) ? p.AppsIcon : p.GameControllerIcon;

@@ -25,8 +25,8 @@ var i = n(200651),
     v = n(710111),
     I = n(601539);
 function b(e) {
-    let { guildId: t, channel: n, width: b, height: N, keepOpen: E, interactive: S = !0, analyticsSource: Z, onClose: y } = e,
-        T = (function (e) {
+    let { guildId: t, channel: n, width: b, height: S, keepOpen: Z, interactive: N = !0, analyticsSource: E, onClose: y } = e,
+        j = (function (e) {
             let [t, n] = (0, a.Wu)([f.Z], () => [f.Z.getSounds(), f.Z.getFavorites()]);
             return l.useMemo(() => {
                 let i = [],
@@ -41,12 +41,12 @@ function b(e) {
                 return l.forEach((e) => r(e, !0)), l.forEach((e) => r(e, !1)), i;
             }, [t, n, e]);
         })((0, C.h)(n, !0)),
-        j = (0, g.j)(),
-        A = l.useRef(null),
-        [P, R] = l.useState(void 0),
-        M = (0, a.e7)([d.Z], () => d.Z.getMediaSessionId()),
+        T = (0, g.j)(),
+        P = l.useRef(null),
+        [A, M] = l.useState(void 0),
+        w = (0, a.e7)([d.Z], () => d.Z.getMediaSessionId()),
         { analyticsLocations: L } = (0, s.ZP)(o.Z.SOUNDBOARD_WHEEL),
-        w = l.useCallback(
+        R = l.useCallback(
             (e) => {
                 (0, m.GN)(e, n.id, L), y();
             },
@@ -56,29 +56,29 @@ function b(e) {
         p.w(), u.DZ.loadIfNecessary();
     }, []),
         l.useEffect(() => {
-            0 === T.length && 0 === j.length && y();
-        }, [T.length, j, y]),
+            0 === j.length && 0 === T.length && y();
+        }, [j.length, T, y]),
         l.useEffect(
             () => () => {
-                let e = A.current;
-                !E && null != e && w(e);
+                let e = P.current;
+                !Z && null != e && R(e);
             },
-            [E, w]
+            [Z, R]
         ),
         (0, c.Z)(
             {
                 type: r.ImpressionTypes.POPOUT,
                 name: r.ImpressionNames.SOUNDBOARD_POPOUT,
                 properties: {
-                    source: Z,
+                    source: E,
                     guild_id: t,
-                    media_session_id: M
+                    media_session_id: w
                 }
             },
-            { disableTrack: !S }
+            { disableTrack: !N }
         );
     let D = l.useCallback((e) => {
-            (A.current = e), R(null == e ? void 0 : e.soundId);
+            (P.current = e), M(null == e ? void 0 : e.soundId);
         }, []),
         O = l.useCallback(
             (e) => {
@@ -86,51 +86,51 @@ function b(e) {
                     D(null);
                     return;
                 }
-                let t = T[e];
+                let t = j[e];
                 if (null != t) D(t);
             },
-            [D, T]
+            [D, j]
         ),
         k = l.useCallback(
             (e) => {
                 if (null == e) return;
-                let t = T[e];
-                if (null != t) w(t);
+                let t = j[e];
+                if (null != t) R(t);
             },
-            [T, w]
+            [j, R]
         ),
-        G = l.useMemo(
+        U = l.useMemo(
             () =>
-                T.map((e) =>
+                j.map((e) =>
                     (0, i.jsx)(
                         x.ZP,
                         {
-                            interactive: S,
+                            interactive: N,
                             className: I.soundButton,
                             sound: e,
-                            focused: P === e.soundId,
+                            focused: A === e.soundId,
                             channel: n
                         },
                         e.soundId
                     )
                 ),
-            [P, n, S, T]
+            [A, n, N, j]
         );
-    return 0 === T.length
+    return 0 === j.length
         ? null
         : (0, i.jsx)(s.Gt, {
               value: L,
               children: (0, i.jsx)(_.Z, {
                   wheelWidth: b,
-                  wheelHeight: N,
+                  wheelHeight: S,
                   itemWidth: 96,
                   itemHeight: 52,
-                  showDeadZoneIndicator: !E,
-                  activeItem: P,
+                  showDeadZoneIndicator: !Z,
+                  activeItem: A,
                   onItemSelect: O,
                   onItemAction: k,
-                  interactive: S,
-                  children: G
+                  interactive: N,
+                  children: U
               })
           });
 }

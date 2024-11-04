@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return E;
     }
 }),
     n(47120);
@@ -99,7 +99,7 @@ function b(e) {
         children: o
     });
 }
-function N(e) {
+function S(e) {
     let { activity: t, user: n, onOpenSpotifyArtist: l } = e,
         r = null == t ? void 0 : t.details,
         o = null == t ? void 0 : t.state,
@@ -128,7 +128,7 @@ function N(e) {
               children: s
           });
 }
-function E(e) {
+function Z(e) {
     let { activity: t } = e,
         n = null == t ? void 0 : t.state;
     return null == n || '' === n || (0, c.Z)(t)
@@ -138,7 +138,7 @@ function E(e) {
               children: n
           });
 }
-function S(e) {
+function N(e) {
     let { activity: t } = e;
     if (null == t || !(0, c.Z)(t)) return null;
     let { timestamps: n } = t;
@@ -152,13 +152,13 @@ function S(e) {
         singleLine: !0
     });
 }
-function Z(e) {
+function E(e) {
     let { activity: t, embeddedApp: n, user: r, channel: a, sortedVoiceStates: u, onOpenSpotifyTrack: h, onOpenSpotifyArtist: p, onOpenSpotifyAlbum: m } = e,
         g = [];
     null != n ? (g = Array.from(n.embeddedActivity.userIds)) : (0, c.Z)(t) && null != u && (g = u.map((e) => e.user.id));
-    let Z = (0, o.Wu)([f.default], () => g.map((e) => f.default.getUser(e)).filter(C.lm)),
+    let E = (0, o.Wu)([f.default], () => g.map((e) => f.default.getUser(e)).filter(C.lm)),
         y = null != n || (0, c.Z)(t),
-        T = l.useMemo(() => {
+        j = l.useMemo(() => {
             let e = new Map();
             return (
                 y &&
@@ -191,23 +191,23 @@ function Z(e) {
                                       embeddedApp: n,
                                       onOpenSpotifyTrack: h
                                   }),
-                                  (0, i.jsx)(N, {
+                                  (0, i.jsx)(S, {
                                       activity: t,
                                       user: r,
                                       onOpenSpotifyArtist: p
                                   }),
-                                  (0, i.jsx)(E, { activity: t }),
+                                  (0, i.jsx)(Z, { activity: t }),
                                   g.length > 0 &&
                                       (0, i.jsx)(d.Z, {
                                           className: x.usersSummary,
                                           guildId: a.guild_id,
-                                          users: Z,
+                                          users: E,
                                           size: v,
                                           max: 7,
                                           renderUser: (e) => {
                                               var t;
                                               if (null == e) return null;
-                                              let n = T.get(e.id),
+                                              let n = j.get(e.id),
                                                   l = null !== (t = null == n ? void 0 : n.nick) && void 0 !== t ? t : _.ZP.getName(e);
                                               return (0, i.jsx)(
                                                   s.TooltipContainer,
@@ -232,7 +232,7 @@ function Z(e) {
                           })
                       ]
                   }),
-                  (0, i.jsx)(S, { activity: t })
+                  (0, i.jsx)(N, { activity: t })
               ]
           })
         : null;

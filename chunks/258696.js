@@ -162,11 +162,11 @@ t.Z = i.memo(function (e) {
                 'submit'
             )
         ),
-    J && H.push((0, r.jsx)('div', { id: 'visual-refresh-app-launcher-portal' }, 'app')),
     0 === H.length)
         ? null
-        : (0, r.jsx)('div', {
+        : (J && H.push((0, r.jsx)('div', { id: 'visual-refresh-app-launcher-portal' }, 'app')),
+          (0, r.jsx)('div', {
               className: O.buttons,
               children: H
-          });
+          }));
 });

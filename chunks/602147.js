@@ -19,11 +19,11 @@ var i = n(200651),
     v = n(55869);
 let I = l.forwardRef(function (e, t) {
     let { selected: n, className: I, onClick: b } = e,
-        N = (0, s.Z)('discovery_button'),
-        E = (0, p.Ws)({ location: _.dr.CONFLICT_CHECKS }),
-        [S, Z] = (0, c.US)(N && E ? [a.z.RAPIDASH_MORE_GUILDS_UPSELL] : [], m.R.SIDEBAR, !0),
-        y = S === a.z.RAPIDASH_MORE_GUILDS_UPSELL,
-        T = l.useCallback(() => {
+        S = (0, s.Z)('discovery_button'),
+        Z = (0, p.Ws)({ location: _.dr.CONFLICT_CHECKS }),
+        [N, E] = (0, c.US)(S && Z ? [a.z.RAPIDASH_MORE_GUILDS_UPSELL] : [], m.R.SIDEBAR, !0),
+        y = N === a.z.RAPIDASH_MORE_GUILDS_UPSELL,
+        j = l.useCallback(() => {
             null == b || b(),
                 (0, u.k5)({ source: g.JU.GUILDS_BAR_ICON }),
                 !(function (e) {
@@ -43,9 +43,9 @@ let I = l.forwardRef(function (e, t) {
                             return (0, h.transitionToGlobalDiscovery)({ tab: e });
                     }
                 })(d.Z.getField('selectedTab')),
-                y && Z(m.L.DISMISS);
-        }, [b, Z, y]),
-        j = l.useMemo(
+                y && E(m.L.DISMISS);
+        }, [b, E, y]),
+        T = l.useMemo(
             () => ({
                 lowerBadgeSize: {
                     width: 12,
@@ -59,11 +59,11 @@ let I = l.forwardRef(function (e, t) {
         id: 'guild-discover-button',
         ref: t,
         className: I,
-        onClick: T,
+        onClick: j,
         selected: n,
         tooltip: x.intl.string(x.t['4nEZLi']),
         icon: o.CompassIcon,
-        ...j
+        ...T
     });
 });
 t.Z = I;

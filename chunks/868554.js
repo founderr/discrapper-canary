@@ -5,23 +5,23 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    s = n.n(r),
-    a = n(442837),
+    a = n(120356),
+    r = n.n(a),
+    s = n(442837),
     o = n(481060),
     c = n(909820),
-    u = n(518950),
-    d = n(594174),
+    d = n(518950),
+    u = n(594174),
     h = n(63063),
-    m = n(981631),
-    p = n(388032),
+    p = n(981631),
+    m = n(388032),
     f = n(277865),
     g = n(454120);
 function C(e) {
-    let { buttonRef: t, userId: r, streaming: C, onClose: x } = e,
-        v = (0, a.e7)([d.default], () => d.default.getUser(r)),
-        _ = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
-        { avatarSrc: I, eventHandlers: E } = (0, u.Z)({
+    let { buttonRef: t, userId: a, streaming: C, onClose: x } = e,
+        v = (0, s.e7)([u.default], () => u.default.getUser(a)),
+        _ = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
+        { avatarSrc: I, eventHandlers: E } = (0, d.Z)({
             user: v,
             size: o.AvatarSizes.SIZE_48,
             animateOnHover: !0
@@ -31,17 +31,17 @@ function C(e) {
                 null == v || null == _
                     ? ''
                     : v.id === _.id
-                      ? p.intl.string(p.t.IjKvNT)
+                      ? m.intl.string(m.t.IjKvNT)
                       : !0 === C
-                        ? p.intl.format(p.t.JkWoqK, {
+                        ? m.intl.format(m.t.JkWoqK, {
                               username: v.username,
-                              helpCenterLink: h.Z.getArticleURL(m.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+                              helpCenterLink: h.Z.getArticleURL(p.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
                           })
-                        : p.intl.formatToPlainString(p.t.vNbVXF, { username: v.username }),
+                        : m.intl.formatToPlainString(m.t.vNbVXF, { username: v.username }),
             [v, _, C]
         );
     if (null == v || null == _) return null;
-    let S = () => {
+    let N = () => {
         if (!0 === C && _.id === v.id) {
             x();
             return;
@@ -88,9 +88,9 @@ function C(e) {
                             className: f.subsection,
                             children: [
                                 (0, i.jsx)(o.Button, {
-                                    onClick: S,
-                                    className: s()({ [f.actionButton]: !0 !== C }),
-                                    children: !0 === C && _.id === v.id ? p.intl.string(p.t.r6xhBw) : p.intl.string(p.t.yKw8Dg)
+                                    onClick: N,
+                                    className: r()({ [f.actionButton]: !0 !== C }),
+                                    children: !0 === C && _.id === v.id ? m.intl.string(m.t.r6xhBw) : m.intl.string(m.t.yKw8Dg)
                                 }),
                                 !0 !== C &&
                                     (0, i.jsx)(o.Clickable, {

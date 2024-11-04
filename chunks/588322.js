@@ -5,16 +5,16 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(442837),
-    s = n(239091),
-    a = n(561472),
+    a = n(442837),
+    r = n(239091),
+    s = n(561472),
     o = n(933557),
     c = n(287746),
-    u = n(541716),
-    d = n(665149),
+    d = n(541716),
+    u = n(665149),
     h = n(910611),
-    m = n(703656),
-    p = n(664342),
+    p = n(703656),
+    m = n(664342),
     f = n(592125),
     g = n(703558),
     C = n(430824),
@@ -23,10 +23,10 @@ var i = n(200651),
     _ = n(474923);
 function I(e) {
     let { channelId: t } = e,
-        I = (0, r.e7)([f.Z], () => f.Z.getChannel(t)),
-        E = (0, r.e7)([f.Z], () => f.Z.getChannel(null == I ? void 0 : I.parent_id)),
-        b = (0, r.e7)([C.Z], () => C.Z.getGuild(null == I ? void 0 : I.getGuildId())),
-        S = (0, o.ZP)(I),
+        I = (0, a.e7)([f.Z], () => f.Z.getChannel(t)),
+        E = (0, a.e7)([f.Z], () => f.Z.getChannel(null == I ? void 0 : I.parent_id)),
+        b = (0, a.e7)([C.Z], () => C.Z.getGuild(null == I ? void 0 : I.getGuildId())),
+        N = (0, o.ZP)(I),
         Z = l.useRef(!1);
     if (
         (l.useEffect(() => {
@@ -35,24 +35,24 @@ function I(e) {
         null == I || null == b)
     )
         return null;
-    let T = (0, i.jsx)(p.Z, { channel: I });
+    let T = (0, i.jsx)(m.Z, { channel: I });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(a.Z, {
+            (0, i.jsx)(s.Z, {
                 channel: I,
                 draftType: g.d.ChannelMessage
             }),
-            (0, i.jsx)(d.ZP, {
+            (0, i.jsx)(u.ZP, {
                 toolbar: T,
                 'aria-label': v.intl.string(v.t.Pwe8tL),
                 children: (0, h.ud)({
                     channel: I,
                     parentChannel: E,
-                    channelName: S,
+                    channelName: N,
                     guild: b,
                     inSidebar: !0,
                     handleContextMenu: function (e) {
-                        (0, s.jW)(e, async () => {
+                        (0, r.jW)(e, async () => {
                             let { default: e } = await n.e('40157').then(n.bind(n, 422200));
                             return (t) =>
                                 (0, i.jsx)(e, {
@@ -62,7 +62,7 @@ function I(e) {
                         });
                     },
                     handleClick: function () {
-                        null != I && (0, m.XU)(I.guild_id, I.id);
+                        null != I && (0, p.XU)(I.guild_id, I.id);
                     }
                 })
             }),
@@ -73,7 +73,7 @@ function I(e) {
                     {
                         channel: I,
                         guild: b,
-                        chatInputType: u.I.SIDEBAR
+                        chatInputType: d.I.SIDEBAR
                     },
                     t
                 )

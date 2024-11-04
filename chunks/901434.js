@@ -1,37 +1,37 @@
 var i = n(200651),
     l = n(192379),
-    r = n(442837),
-    s = n(481060),
-    a = n(287734),
+    a = n(442837),
+    r = n(481060),
+    s = n(287734),
     o = n(358221),
     c = n(305325),
-    u = n(281956),
-    d = n(27457),
+    d = n(281956),
+    u = n(27457),
     h = n(823379),
-    m = n(5192),
-    p = n(501655),
+    p = n(5192),
+    m = n(501655),
     f = n(388032),
     g = n(754833);
-let C = (e, t) => m.ZP.getName(e.getGuildId(), e.id, t.user);
+let C = (e, t) => p.ZP.getName(e.getGuildId(), e.id, t.user);
 t.Z = function (e) {
     var t, n;
-    let { participants: m, channel: x, hasConnectPermission: v } = e,
-        _ = (0, u.J)(x.guild_id),
+    let { participants: p, channel: x, hasConnectPermission: v } = e,
+        _ = (0, d.J)(x.guild_id),
         I = l.useCallback(() => {
-            _ ? (0, c.hk)(x.guild_id, () => a.default.selectVoiceChannel(x.id)) : a.default.selectVoiceChannel(x.id);
+            _ ? (0, c.hk)(x.guild_id, () => s.default.selectVoiceChannel(x.id)) : s.default.selectVoiceChannel(x.id);
         }, [x.id, x.guild_id, _]),
-        E = m.filter((e) => e.type === p.Ui.VOICE),
+        E = p.filter((e) => e.type === m.Ui.VOICE),
         b = 4 === E.length ? 2 : 3,
-        S = (0, r.Wu)([o.Z], () => E.map((e) => o.Z.getParticipant(x.id, e.id)).filter(h.lm), [x.id, E]);
+        N = (0, a.Wu)([o.Z], () => E.map((e) => o.Z.getParticipant(x.id, e.id)).filter(h.lm), [x.id, E]);
     return (0, i.jsxs)('div', {
         className: g.container,
         children: [
             (0, i.jsx)('div', {
                 className: g.tiles,
                 style: { maxWidth: 168 * b },
-                children: S.slice(0, 5).map((e) =>
+                children: N.slice(0, 5).map((e) =>
                     (0, i.jsx)(
-                        d.ZP,
+                        u.ZP,
                         {
                             participant: e,
                             channel: x,
@@ -46,14 +46,14 @@ t.Z = function (e) {
                     )
                 )
             }),
-            (0, i.jsx)(s.Heading, {
+            (0, i.jsx)(r.Heading, {
                 className: g.channelName,
                 variant: 'heading-xxl/semibold',
                 children: x.name
             }),
             (0, i.jsx)('div', {
                 className: g.participantsRow,
-                children: (0, i.jsx)(s.Text, {
+                children: (0, i.jsx)(r.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
                     children:
@@ -76,12 +76,12 @@ t.Z = function (e) {
                                   : void 0)
                 })
             }),
-            (0, i.jsx)(s.Button, {
+            (0, i.jsx)(r.Button, {
                 disabled: !v,
                 className: g.joinButton,
-                color: v ? s.Button.Colors.GREEN : s.Button.Colors.PRIMARY,
+                color: v ? r.Button.Colors.GREEN : r.Button.Colors.PRIMARY,
                 onClick: I,
-                size: s.Button.Sizes.MEDIUM,
+                size: r.Button.Sizes.MEDIUM,
                 children: v ? f.intl.string(f.t['7vb2cX']) : f.intl.string(f.t.TVBCKS)
             })
         ]

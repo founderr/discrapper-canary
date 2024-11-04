@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return a;
     }
 }),
     n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(481060);
+var i = n(200651),
+    o = n(192379),
+    r = n(481060);
 function l(e, t, n) {
     return (
         t in e
@@ -20,12 +20,12 @@ function l(e, t, n) {
         e
     );
 }
-class o extends i.PureComponent {
+class s extends o.PureComponent {
     render() {
         let { text: e, lastItem: t, className: n } = this.props;
-        return (0, r.jsxs)('span', {
+        return (0, i.jsxs)('span', {
             children: [
-                (0, r.jsx)(a.Anchor, {
+                (0, i.jsx)(r.Anchor, {
                     className: n,
                     onClick: this.handleClick,
                     children: e
@@ -42,14 +42,14 @@ class o extends i.PureComponent {
             });
     }
 }
-class s extends i.PureComponent {
+class a extends o.PureComponent {
     render() {
         let e = this.props.artists.split(';');
         if (!this.props.canOpen) return e.join(', ');
         let t = e.length - 1;
         return e.map((e, n) =>
-            (0, r.jsx)(
-                o,
+            (0, i.jsx)(
+                s,
                 {
                     text: e,
                     index: n,

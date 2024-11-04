@@ -2,8 +2,8 @@ n(47120), n(653041);
 var i,
     r,
     s,
-    l,
     a,
+    l,
     o,
     c,
     d,
@@ -11,14 +11,14 @@ var i,
     h = n.n(u),
     p = n(772848),
     f = n(442837),
-    m = n(570140),
-    g = n(13245),
+    g = n(570140),
+    m = n(13245),
     v = n(836932),
     _ = n(175553),
     E = n(158979),
     x = n(181912),
-    I = n(791288),
-    Z = n(194295),
+    Z = n(791288),
+    I = n(194295),
     S = n(998033),
     C = n(181364),
     y = n(435064),
@@ -26,27 +26,27 @@ var i,
     T = n(86071),
     b = n(358446),
     O = n(695346),
-    R = n(314897),
+    j = n(314897),
     A = n(592125),
     P = n(292959),
-    j = n(158776),
+    R = n(158776),
     L = n(944486),
     w = n(885110),
     M = n(246946),
     D = n(594174),
     k = n(974180),
     z = n(237997),
-    U = n(70956),
-    B = n(150097),
-    V = n(129724),
-    G = n(449224),
-    W = n(981631),
+    V = n(70956),
+    U = n(150097),
+    B = n(129724),
+    W = n(449224),
+    G = n(981631),
     F = n(987650),
     H = n(388032);
-((l = i || (i = {}))[(l.GENERIC = 0)] = 'GENERIC'), (l[(l.TEXT = 1)] = 'TEXT'), (l[(l.INCOMING_CALL = 2)] = 'INCOMING_CALL'), ((a = r || (r = {}))[(a.NORMAL = 0)] = 'NORMAL'), (a[(a.HIGH = 1)] = 'HIGH'), (a[(a.URGENT = 2)] = 'URGENT');
-let Y = 5 * U.Z.Millis.SECOND,
-    K = 8 * U.Z.Millis.SECOND,
-    X = 30 * U.Z.Millis.SECOND,
+((a = i || (i = {}))[(a.GENERIC = 0)] = 'GENERIC'), (a[(a.TEXT = 1)] = 'TEXT'), (a[(a.INCOMING_CALL = 2)] = 'INCOMING_CALL'), ((l = r || (r = {}))[(l.NORMAL = 0)] = 'NORMAL'), (l[(l.HIGH = 1)] = 'HIGH'), (l[(l.URGENT = 2)] = 'URGENT');
+let Y = 5 * V.Z.Millis.SECOND,
+    K = 8 * V.Z.Millis.SECOND,
+    X = 30 * V.Z.Millis.SECOND,
     Q = Object.freeze({
         priority: 0,
         duration: Y,
@@ -55,18 +55,18 @@ let Y = 5 * U.Z.Millis.SECOND,
     }),
     q = [],
     J = (e, t, n) => {
-        let i = t ? W._1z.TIMED_OUT : W._1z.DISMISSED;
-        return setTimeout(() => g.Z.updateNotificationStatus(e, i), null != n ? n : Y);
+        let i = t ? G._1z.TIMED_OUT : G._1z.DISMISSED;
+        return setTimeout(() => m.Z.updateNotificationStatus(e, i), null != n ? n : Y);
     };
 function $(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : W._1z.DISMISSED;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : G._1z.DISMISSED;
     if (null == e) return !1;
     let n = q.findIndex((t) => t.id === e);
     if (-1 === n) return !1;
     let i = q[n];
     clearTimeout(i.timerId),
         (q = [...q]),
-        t === W._1z.DISMISSED
+        t === G._1z.DISMISSED
             ? q.splice(n, 1)
             : (q[n] = {
                   ...i,
@@ -90,7 +90,7 @@ function en(e, t) {
     let i = (0, p.Z)(),
         r = {
             id: i,
-            status: W._1z.ACTIVE,
+            status: G._1z.ACTIVE,
             timerId: J(i, n.expirationExternallyManaged, n.duration),
             props: e,
             ...n
@@ -101,11 +101,11 @@ function en(e, t) {
 function ei(e) {
     let { channelId: t, ringing: n } = e,
         i = et(t);
-    if (!n.includes(R.default.getId())) return $(i);
+    if (!n.includes(j.default.getId())) return $(i);
     if (null != i) return !1;
     let r = A.Z.getChannel(t);
-    if (null == r || !r.isPrivate() || w.Z.getStatus() === W.Skl.DND || O.QZ.getSetting()) return !1;
-    let s = q.find((e) => 1 === e.type && e.channelId === t && e.messageType === W.uaV.CALL);
+    if (null == r || !r.isPrivate() || w.Z.getStatus() === G.Skl.DND || O.QZ.getSetting()) return !1;
+    let s = q.find((e) => 1 === e.type && e.channelId === t && e.messageType === G.uaV.CALL);
     null != s && $(s.id),
         en((0, x.Z)(r), {
             priority: 1,
@@ -132,7 +132,7 @@ class er extends (s = f.ZP.Store) {
           })
         : (o[c] = d),
     (t.Z = new er(
-        m.Z,
+        g.Z,
         __OVERLAY__
             ? {
                   OVERLAY_UPDATE_NOTIFICATION_STATUS: function (e) {
@@ -163,7 +163,7 @@ class er extends (s = f.ZP.Store) {
                       let { locked: t } = e;
                       if (t) return !1;
                       q = q.map((e) =>
-                          e.status === W._1z.ACTIVE
+                          e.status === G._1z.ACTIVE
                               ? (clearTimeout(e.timerId),
                                 {
                                     ...e,
@@ -175,40 +175,40 @@ class er extends (s = f.ZP.Store) {
                   MESSAGE_CREATE: function (e) {
                       var t, n, i;
                       let { channelId: r, message: s } = e,
-                          l = A.Z.getChannel(r),
-                          a = D.default.getUser(null === (t = s.author) || void 0 === t ? void 0 : t.id);
-                      if (null == l || null == a) return !1;
-                      if ((null === (n = s.activity) || void 0 === n ? void 0 : n.type) === W.mFx.JOIN || (null === (i = s.activity) || void 0 === i ? void 0 : i.type) === W.mFx.JOIN_REQUEST) {
-                          if (!(0, B.eF)(s, r, !0, !0)) return !1;
+                          a = A.Z.getChannel(r),
+                          l = D.default.getUser(null === (t = s.author) || void 0 === t ? void 0 : t.id);
+                      if (null == a || null == l) return !1;
+                      if ((null === (n = s.activity) || void 0 === n ? void 0 : n.type) === G.mFx.JOIN || (null === (i = s.activity) || void 0 === i ? void 0 : i.type) === G.mFx.JOIN_REQUEST) {
+                          if (!(0, U.eF)(s, r, !0, !0)) return !1;
                           let e = (function (e, t, n) {
                               let i, r;
-                              if ((h()(null != t.activity, 'received null message activity'), n.id === R.default.getId())) return !1;
-                              let s = G.Z.getGame();
+                              if ((h()(null != t.activity, 'received null message activity'), n.id === j.default.getId())) return !1;
+                              let s = W.Z.getGame();
                               if (null == s) return !1;
                               switch (t.activity.type) {
-                                  case W.mFx.JOIN:
-                                      if (null == (i = j.Z.getApplicationActivity(n.id, s.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
+                                  case G.mFx.JOIN:
+                                      if (null == (i = R.Z.getApplicationActivity(n.id, s.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
                                       r = (0, v.Z)(e, t, n, s, i);
                                       break;
-                                  case W.mFx.JOIN_REQUEST:
+                                  case G.mFx.JOIN_REQUEST:
                                       if (null == (i = w.Z.getApplicationActivity(s.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
-                                      r = (0, Z.Z)(e, n, s, i);
+                                      r = (0, I.Z)(e, n, s, i);
                               }
                               if (null == r) return !1;
-                              let l = en(r, {
+                              let a = en(r, {
                                   priority: 2,
                                   expirationExternallyManaged: !0,
                                   channelId: e.id
                               });
-                              return null != l && J(l, !1, X), !0;
-                          })(l, s, a);
+                              return null != a && J(a, !1, X), !0;
+                          })(a, s, l);
                           if (!1 !== e) return e;
                       }
-                      if (((!z.Z.isInstanceUILocked() || z.Z.isPinned(W.Odu.TEXT)) && r === L.Z.getChannelId()) || z.Z.getTextChatNotificationMode() === W.Ypu.DISABLED || M.Z.disableNotifications || !(0, B.eF)(s, r)) return !1;
+                      if (((!z.Z.isInstanceLocked() || z.Z.isPinned(G.Odu.TEXT)) && r === L.Z.getChannelId()) || z.Z.getTextChatNotificationMode() === G.Ypu.DISABLED || M.Z.disableNotifications || !(0, U.eF)(s, r)) return !1;
                       let o = !P.Z.isSoundDisabled(k.Ay);
-                      en((0, S.Z)(l, s, a, o), {
+                      en((0, S.Z)(a, s, l, o), {
                           type: 1,
-                          channelId: l.id,
+                          channelId: a.id,
                           messageType: s.type
                       });
                   },
@@ -229,9 +229,9 @@ class er extends (s = f.ZP.Store) {
                   ACTIVITY_USER_ACTION: function (e) {
                       let t,
                           { actionType: n, user: i, applicationId: r } = e,
-                          s = G.Z.getGame();
+                          s = W.Z.getGame();
                       if (null == s || s.id !== r) return !1;
-                      if (n === W.mFx.JOIN) t = (0, _.Z)(i, s);
+                      if (n === G.mFx.JOIN) t = (0, _.Z)(i, s);
                       if (null == t) return !1;
                       en(t, {
                           priority: 2,
@@ -242,7 +242,7 @@ class er extends (s = f.ZP.Store) {
                       en((0, N.f)(H.intl.string(H.t.NBMK9v)));
                   },
                   CLIPS_SAVE_CLIP: function () {
-                      en((0, N.f)(H.intl.formatToPlainString(H.t.KLhk6u, { duration: (0, V.A)(y.Z.getSettings().clipsLength / 1000, !0) })));
+                      en((0, N.f)(H.intl.formatToPlainString(H.t.KLhk6u, { duration: (0, B.A)(y.Z.getSettings().clipsLength / 1000, !0) })));
                   },
                   CLIPS_SAVE_CLIP_ERROR: function () {
                       en((0, N.f)(H.intl.string(H.t['1ZbZur'])));
@@ -254,15 +254,15 @@ class er extends (s = f.ZP.Store) {
                   OVERLAY_CONTENT_INVENTORY_READY: function (e) {
                       let { contentInventoryEntries: t } = e;
                       if (0 === t.length) return;
-                      let n = G.Z.getGame();
+                      let n = W.Z.getGame();
                       if (null == n) return;
                       let { enabled: i } = T.Z.getCurrentConfig({ location: 'OverlayNotificationsStore' }, { autoTrackExposure: !0 });
                       i &&
-                          en((0, I.Z)(n, t), {
+                          en((0, Z.Z)(n, t), {
                               priority: 2,
                               type: 0,
                               expirationExternallyManaged: !0,
-                              duration: 30 * U.Z.Millis.SECOND
+                              duration: 30 * V.Z.Millis.SECOND
                           });
                   }
               }

@@ -6,16 +6,16 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    s = n.n(r),
-    a = n(392711),
-    o = n.n(a),
+    a = n(120356),
+    r = n.n(a),
+    s = n(392711),
+    o = n.n(s),
     c = n(149765),
-    u = n(866442),
-    d = n(442837),
+    d = n(866442),
+    u = n(442837),
     h = n(481060),
-    m = n(787014),
-    p = n(911969),
+    p = n(787014),
+    m = n(911969),
     f = n(933557),
     g = n(605436),
     C = n(185413),
@@ -25,10 +25,10 @@ var i = n(200651),
     I = n(454585),
     E = n(430824),
     b = n(496675),
-    S = n(594174),
+    N = n(594174),
     Z = n(700785),
     T = n(51144),
-    N = n(396769),
+    S = n(396769),
     j = n(967128),
     A = n(318374),
     y = n(981631),
@@ -36,13 +36,13 @@ var i = n(200651),
     M = n(293081);
 function R(e) {
     let { channel: t } = e,
-        [n, r] = l.useState(!1),
-        a = (0, f.ZP)(t, !0),
+        [n, a] = l.useState(!1),
+        s = (0, f.ZP)(t, !0),
         R = t.guild_id,
-        L = (0, d.e7)([E.Z], () => (null != R ? E.Z.getRoles(R) : void 0)),
-        k = (0, d.e7)([S.default, E.Z], () => {
+        L = (0, u.e7)([E.Z], () => (null != R ? E.Z.getRoles(R) : void 0)),
+        k = (0, u.e7)([N.default, E.Z], () => {
             var e;
-            return S.default.getUser(null === (e = E.Z.getGuild(R)) || void 0 === e ? void 0 : e.ownerId);
+            return N.default.getUser(null === (e = E.Z.getGuild(R)) || void 0 === e ? void 0 : e.ownerId);
         }),
         O = l.useMemo(
             () =>
@@ -54,7 +54,7 @@ function R(e) {
                     : [],
             [R, L]
         ),
-        w = l.useMemo(
+        D = l.useMemo(
             () =>
                 o()(O)
                     .filter((e) => {
@@ -68,13 +68,13 @@ function R(e) {
                     .value(),
             [t, R, O]
         ),
-        D = (0, d.Wu)(
-            [S.default],
+        w = (0, u.Wu)(
+            [N.default],
             () => {
                 let e = {};
                 for (let n of (null != k && (e[k.id] = k), Object.values(t.permissionOverwrites))) {
-                    if (n.type !== p.BN.MEMBER || null != e[n.id]) continue;
-                    let t = S.default.getUser(n.id);
+                    if (n.type !== m.BN.MEMBER || null != e[n.id]) continue;
+                    let t = N.default.getUser(n.id);
                     null != t && (e[t.id] = t);
                 }
                 return o()(e)
@@ -86,18 +86,18 @@ function R(e) {
                                 context: t
                             }),
                             l = null !== (n = t.permissionOverwrites[e.id]) && void 0 !== n ? n : Z.Hn,
-                            r = c.e$(l.allow, y.Plq.VIEW_CHANNEL);
-                        return i || r;
+                            a = c.e$(l.allow, y.Plq.VIEW_CHANNEL);
+                        return i || a;
                     })
                     .value();
             },
             [t, k]
         ),
-        U = b.Z.can(y.Plq.MANAGE_CHANNELS, t) || b.Z.can(y.Plq.MANAGE_ROLES, t);
-    function B() {
-        m.ZP.open(t.id);
+        B = b.Z.can(y.Plq.MANAGE_CHANNELS, t) || b.Z.can(y.Plq.MANAGE_ROLES, t);
+    function U() {
+        p.ZP.open(t.id);
     }
-    let H = l.useCallback(() => r(!1), []);
+    let H = l.useCallback(() => a(!1), []);
     return (0, i.jsxs)(j.ZP, {
         channelId: t.id,
         children: [
@@ -105,28 +105,28 @@ function R(e) {
                 locked: !0,
                 channelType: t.type
             }),
-            (0, i.jsx)(j.Ot, { children: P.intl.format(P.t.I3R7Vl, { channelName: a }) }),
+            (0, i.jsx)(j.Ot, { children: P.intl.format(P.t.I3R7Vl, { channelName: s }) }),
             (0, i.jsx)(j.jz, {
                 children: P.intl.format(P.t.QuwqjI, {
-                    channelName: a,
+                    channelName: s,
                     topicHook: () => I.Z.parseTopic(t.topic, !0, { channelId: t.id })
                 })
             }),
-            U
+            B
                 ? (0, i.jsxs)('div', {
                       className: M.channelSettingButtons,
                       children: [
-                          (0, i.jsx)(N.Z, {
+                          (0, i.jsx)(S.Z, {
                               label: P.intl.string(P.t.dMJ3Y2),
-                              onClick: () => r(!0),
+                              onClick: () => a(!0),
                               icon: (0, i.jsx)(h.GroupIcon, {
                                   size: 'xs',
                                   color: 'currentColor'
                               })
                           }),
-                          (0, i.jsx)(N.Z, {
+                          (0, i.jsx)(S.Z, {
                               label: P.intl.string(P.t['3gUsJS']),
-                              onClick: B,
+                              onClick: U,
                               icon: (0, i.jsx)(h.PencilIcon, {
                                   size: 'xs',
                                   color: 'currentColor'
@@ -139,14 +139,14 @@ function R(e) {
                 className: M.members,
                 children: [
                     (function () {
-                        if (1 !== D.length || w.length > 0)
+                        if (1 !== w.length || D.length > 0)
                             return (0, i.jsx)(A.Z, {
                                 guildId: t.guild_id,
                                 className: M.avatars,
                                 maxUsers: 5,
-                                users: D
+                                users: w
                             });
-                        let e = D[0],
+                        let e = w[0],
                             n = T.ZP.getName(e);
                         return (0, i.jsxs)('div', {
                             className: M.avatars,
@@ -172,18 +172,18 @@ function R(e) {
                             ]
                         });
                     })(),
-                    w.map((e, n) => {
-                        var l, r;
-                        let a = null !== (r = e.colorString) && void 0 !== r ? r : (0, u.Rf)(y.p6O),
+                    D.map((e, n) => {
+                        var l, a;
+                        let s = null !== (a = e.colorString) && void 0 !== a ? a : (0, d.Rf)(y.p6O),
                             o = (null === (l = e.tags) || void 0 === l ? void 0 : l.guild_connections) !== void 0;
-                        return U
+                        return B
                             ? (0, i.jsx)(
                                   x.Z,
                                   {
-                                      className: s()(M.role, { [M.last]: n === w.length - 1 }),
+                                      className: r()(M.role, { [M.last]: n === D.length - 1 }),
                                       roleName: e.name,
-                                      roleColor: a,
-                                      disabled: !U,
+                                      roleColor: s,
+                                      disabled: !B,
                                       verified: o,
                                       onClick: () => {
                                           _.Z.open(t.guild_id, y.pNK.MEMBERS), _.Z.selectRole(e.id);
@@ -194,9 +194,9 @@ function R(e) {
                             : (0, i.jsx)(
                                   v.Z,
                                   {
-                                      className: s()(M.role, { [M.last]: n === w.length - 1 }),
+                                      className: r()(M.role, { [M.last]: n === D.length - 1 }),
                                       roleName: e.name,
-                                      roleColor: a,
+                                      roleColor: s,
                                       verified: o
                                   },
                                   e.id
@@ -212,7 +212,7 @@ function R(e) {
                               onClose: () => (H(), e.onClose()),
                               channelId: t.id
                           }),
-                      onCloseRequest: () => r(!1)
+                      onCloseRequest: () => a(!1)
                   })
                 : null
         ]

@@ -31,7 +31,7 @@ t.Z = {
                 socket: { application: i }
             } = e;
             if (null == i.id) throw new h.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'No application.');
-            o.Z.setLocked(t, n);
+            o.Z.setInputLocked(t, n);
         }
     },
     [_.Etm.OPEN_OVERLAY_ACTIVITY_INVITE]: {
@@ -52,10 +52,10 @@ t.Z = {
             if (null == r) throw new h.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'No application.');
             let l = d.Z.getApplicationActivity(r);
             if (null == l || null == l.secrets || !(0, m.t9)(n, l.party, l.secrets)) throw new h.Z({ errorCode: _.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
-            let { lock: s } = (0, g.jU)(i),
-                o = (0, c.Z)(l, u.Z);
-            return (0, a.h7)(l, o).then(() => {
-                if ((s(), o)) throw new h.Z({ errorCode: _.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure user does have have privacy enabled.');
+            let { lock: s, context: o } = (0, g.jU)(i),
+                p = (0, c.Z)(l, u.Z);
+            return (0, a.h7)(l, p, o).then(() => {
+                if ((s(), p)) throw new h.Z({ errorCode: _.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure user does have have privacy enabled.');
             });
         }
     },

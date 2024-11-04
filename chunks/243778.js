@@ -18,13 +18,13 @@ var i = n(399606),
     o = n(280328);
 function l(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        r = (0, i.e7)([a.Z], () => !!__OVERLAY__ && a.Z.isInstanceUILocked()),
+        r = (0, i.e7)([a.Z], () => !!__OVERLAY__ && a.Z.isInstanceLocked()),
         [l, u] = (0, s.cv)(e, t, r);
     return (0, o.A)(l, u, n), [l, u];
 }
 function u(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        l = (0, i.e7)([a.Z], () => !!__OVERLAY__ && a.Z.isInstanceUILocked()),
+        l = (0, i.e7)([a.Z], () => !!__OVERLAY__ && a.Z.isInstanceLocked()),
         [u, c] = (0, s.EM)(e, t, n, l);
     return (0, o.A)(u, c, r), [u, c];
 }

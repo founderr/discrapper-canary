@@ -8,19 +8,19 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    s = n.n(r),
-    a = n(481060),
+    a = n(120356),
+    r = n.n(a),
+    s = n(481060),
     o = n(367907),
     c = n(626135),
-    u = n(346479),
-    d = n(665906),
+    d = n(346479),
+    u = n(665906),
     h = n(981631),
-    m = n(388032),
-    p = n(314633);
+    p = n(388032),
+    m = n(314633);
 function f(e) {
     let { channel: t, narrow: n } = e,
-        r = (0, d.tc)(t);
+        a = (0, u.tc)(t);
     return (
         l.useEffect(() => {
             c.default.track(h.rMx.CHANNEL_BANNER_VIEWED, {
@@ -30,19 +30,19 @@ function f(e) {
             });
         }, [t]),
         (0, i.jsxs)('div', {
-            className: s()(p.chatHeaderBar, { [p.narrow]: n }),
+            className: r()(m.chatHeaderBar, { [m.narrow]: n }),
             children: [
-                (0, i.jsx)(a.Text, {
-                    className: p.chatHeaderBarText,
+                (0, i.jsx)(s.Text, {
+                    className: m.chatHeaderBarText,
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
-                    children: t.isForumPost() ? m.intl.string(m.t['833FDg']) : m.intl.string(m.t.rEeodH)
+                    children: t.isForumPost() ? p.intl.string(p.t['833FDg']) : p.intl.string(p.t.rEeodH)
                 }),
-                r
-                    ? (0, i.jsx)(a.Button, {
-                          size: n ? a.Button.Sizes.SMALL : a.Button.Sizes.TINY,
-                          className: p.chatHeaderBarButton,
-                          color: a.Button.Colors.PRIMARY,
+                a
+                    ? (0, i.jsx)(s.Button, {
+                          size: n ? s.Button.Sizes.SMALL : s.Button.Sizes.TINY,
+                          className: m.chatHeaderBarButton,
+                          color: s.Button.Colors.PRIMARY,
                           onClick: () => {
                               c.default.track(h.rMx.CHANNEL_BANNER_CTA_CLICKED, {
                                   ...(0, o.hH)(t.getGuildId()),
@@ -50,9 +50,9 @@ function f(e) {
                                   banner_type: 'thread',
                                   cta_type: 'unarchive'
                               }),
-                                  u.Z.unarchiveThread(t, !1);
+                                  d.Z.unarchiveThread(t, !1);
                           },
-                          children: m.intl.string(m.t['0dvvEh'])
+                          children: p.intl.string(p.t['0dvvEh'])
                       })
                     : null
             ]
@@ -61,7 +61,7 @@ function f(e) {
 }
 function g(e) {
     let { channel: t, narrow: n } = e,
-        r = (0, d.Xb)(t);
+        a = (0, u.Xb)(t);
     return (
         l.useEffect(() => {
             c.default.track(h.rMx.CHANNEL_BANNER_VIEWED, {
@@ -71,19 +71,19 @@ function g(e) {
             });
         }, [t]),
         (0, i.jsxs)('div', {
-            className: s()(p.chatHeaderBar, { [p.narrow]: n }),
+            className: r()(m.chatHeaderBar, { [m.narrow]: n }),
             children: [
-                (0, i.jsx)(a.Text, {
-                    className: p.chatHeaderBarText,
+                (0, i.jsx)(s.Text, {
+                    className: m.chatHeaderBarText,
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
-                    children: t.isForumPost() ? m.intl.string(m.t.E7oO8v) : m.intl.string(m.t['V/JF2N'])
+                    children: t.isForumPost() ? p.intl.string(p.t.E7oO8v) : p.intl.string(p.t['V/JF2N'])
                 }),
-                r
-                    ? (0, i.jsx)(a.Button, {
-                          size: n ? a.Button.Sizes.SMALL : a.Button.Sizes.TINY,
-                          className: p.chatHeaderBarButton,
-                          color: a.Button.Colors.PRIMARY,
+                a
+                    ? (0, i.jsx)(s.Button, {
+                          size: n ? s.Button.Sizes.SMALL : s.Button.Sizes.TINY,
+                          className: m.chatHeaderBarButton,
+                          color: s.Button.Colors.PRIMARY,
                           onClick: () => {
                               c.default.track(h.rMx.CHANNEL_BANNER_CTA_CLICKED, {
                                   ...(0, o.hH)(t.getGuildId()),
@@ -91,9 +91,9 @@ function g(e) {
                                   banner_type: 'thread',
                                   cta_type: 'unlock'
                               }),
-                                  u.Z.unlockThread(t);
+                                  d.Z.unlockThread(t);
                           },
-                          children: m.intl.string(m.t.zA9d1N)
+                          children: p.intl.string(p.t.zA9d1N)
                       })
                     : null
             ]

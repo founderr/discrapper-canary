@@ -1,4 +1,4 @@
-t.d(n, {
+n.d(t, {
     h: function () {
         return c;
     },
@@ -6,14 +6,14 @@ t.d(n, {
         return s;
     }
 });
-var i = t(200651);
-t(192379);
-var r = t(481060),
-    o = t(17894),
-    a = t(388032),
-    l = t(632354);
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    o = n(17894),
+    a = n(388032),
+    l = n(632354);
 let c = (e) => {
-    let { onConfirm: n, onCancel: t, title: c, subtitle: s, confirmCta: d, showOpenDiscord: u = !0 } = e;
+    let { onConfirm: t, onCancel: n, title: c, subtitle: s, confirmCta: d, showOpenDiscord: u = !0 } = e;
     return (0, i.jsxs)('div', {
         className: l.confirmationContainer,
         children: [
@@ -42,15 +42,15 @@ let c = (e) => {
                     (0, i.jsx)(r.Button, {
                         fullWidth: !0,
                         color: r.Button.Colors.PRIMARY,
-                        onClick: n,
+                        onClick: t,
                         children: d
                     }),
-                    null != t &&
+                    null != n &&
                         (0, i.jsx)(r.Button, {
                             fullWidth: !0,
                             color: r.Button.Colors.PRIMARY,
                             look: r.Button.Looks.LINK,
-                            onClick: t,
+                            onClick: n,
                             children: a.intl.string(a.t.iAfxo6)
                         })
                 ]
@@ -59,14 +59,14 @@ let c = (e) => {
     });
 };
 function s(e) {
-    let { onConfirm: n, tierName: t, subscription: c } = e;
+    let { onConfirm: t, tierName: n, subscription: c } = e;
     return (0, i.jsxs)('div', {
         className: l.confirmationContainer,
         children: [
             (0, i.jsx)(r.Heading, {
                 className: l.confirmationHeader,
                 variant: 'heading-lg/extrabold',
-                children: a.intl.format(a.t['wLFT6+'], { tier: t })
+                children: a.intl.format(a.t['wLFT6+'], { tier: n })
             }),
             (0, i.jsx)(r.Text, {
                 className: l.confirmationSubtitle,
@@ -85,7 +85,7 @@ function s(e) {
                     (0, i.jsx)(r.Button, {
                         className: l.__invalid_doneButton,
                         look: r.Button.Looks.BLANK,
-                        onClick: n,
+                        onClick: t,
                         children: a.intl.string(a.t.nlkyw8)
                     })
                 ]

@@ -7,8 +7,8 @@ n.d(t, {
 var i,
     r = n(192379),
     s = n(392711),
-    l = n.n(s),
-    a = n(995295),
+    a = n.n(s),
+    l = n(995295),
     o = n(374470),
     c = n(902704),
     d = n(846519),
@@ -16,8 +16,8 @@ var i,
     h = n(671999),
     p = n(358085),
     f = n(998502),
-    m = n(145597);
-function g(e, t, n) {
+    g = n(145597);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function E(e) {
     (_ = !0), (v.x = t), (v.y = n);
 }
 let x = new Map();
-function I(e, t) {
+function Z(e, t) {
     if (null == t) x.delete(e), 0 === x.size && (window.removeEventListener('mousemove', E), (_ = !1));
     else {
         let n = x.get(e);
@@ -48,7 +48,7 @@ function I(e, t) {
         0 === x.size && window.addEventListener('mousemove', E), x.set(e, t);
     }
     p.isPlatformEmbedded &&
-        ((0, m.W2)()
+        ((0, g.W2)()
             ? u.Z.setClickZones(
                   Array.from(x.values()).map((e) => {
                       let { zone: t } = e;
@@ -69,21 +69,21 @@ function I(e, t) {
                   })
               }),
               (function () {
-                  if (!Z)
+                  if (!I)
                       f.ZP.requireModule('discord_overlay2').setClickZoneCallback((e, t, n) => {
                           let i = x.get(e);
                           null != i && (!_ && ((v.x = t), (v.y = n)), i.instance.click());
                       }),
-                          (Z = !0);
+                          (I = !0);
               })()));
 }
-let Z = !1;
+let I = !1;
 class S extends (i = r.PureComponent) {
     componentDidMount() {
         this.props.observe ? this.observeZone() : this.updateZone();
     }
     componentWillUnmount() {
-        this.interval.stop(), I(this.zone, null);
+        this.interval.stop(), Z(this.zone, null);
     }
     componentDidUpdate(e) {
         let { observe: t } = this.props;
@@ -101,13 +101,13 @@ class S extends (i = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            g(this, 'zone', l().uniqueId('ClickArea')),
-            g(this, 'interval', new d.Xp()),
-            g(this, 'updateZone', () => {
-                let e = (0, a.findDOMNode)(this);
+            m(this, 'zone', a().uniqueId('ClickArea')),
+            m(this, 'interval', new d.Xp()),
+            m(this, 'updateZone', () => {
+                let e = (0, l.findDOMNode)(this);
                 if ((0, o.k)(e)) {
                     let { left: t, top: n, right: i, bottom: r } = e.getBoundingClientRect();
-                    I(this.zone, {
+                    Z(this.zone, {
                         instance: this,
                         zone: {
                             name: this.zone,
@@ -121,7 +121,7 @@ class S extends (i = r.PureComponent) {
             });
     }
 }
-g(S, 'defaultProps', {
+m(S, 'defaultProps', {
     observe: !0,
     observeInterval: 1000
 });

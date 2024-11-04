@@ -3,17 +3,17 @@ n.d(t, {
         return l;
     },
     Z: function () {
-        return s;
+        return r;
     }
 });
 var i,
     l,
-    r = n(536895);
+    a = n(536895);
 ((i = l || (l = {})).UPDATE_ITEM_COUNT = 'UPDATE_ITEM_COUNT'), (i.SET_FOCUSED_INDEX = 'SET_FOCUSED_INDEX');
-function s(e, t) {
-    var n, i, l, s, a, o, c;
+function r(e, t) {
+    var n, i, l, r, s, o, c;
     switch (t.type) {
-        case r.Us.NAVIGATE_UP:
+        case a.Us.NAVIGATE_UP:
             return (
                 (i = 0),
                 {
@@ -21,23 +21,23 @@ function s(e, t) {
                     focusedIndex: Math.max(0, n.focusedIndex - 1)
                 }
             );
-        case r.Us.NAVIGATE_DOWN:
+        case a.Us.NAVIGATE_DOWN:
             return (
-                (s = 0),
+                (r = 0),
                 {
                     ...(l = e),
                     focusedIndex: Math.min(l.focusedIndex + 1, l.itemCount - 1)
                 }
             );
-        case r.Us.NAVIGATE_START:
+        case a.Us.NAVIGATE_START:
             return (
-                (a = 0),
+                (s = 0),
                 {
                     ...e,
                     focusedIndex: 0
                 }
             );
-        case r.Us.NAVIGATE_END:
+        case a.Us.NAVIGATE_END:
             return (
                 (c = 0),
                 {
@@ -62,7 +62,7 @@ function s(e, t) {
                     focusedIndex: Math.max(0, Math.min(n, e.itemCount - 1))
                 };
             })(e, t);
-        case r.Us.SELECT_FOCUSED_ITEM:
+        case a.Us.SELECT_FOCUSED_ITEM:
             break;
         default:
             console.warn('Listbox navigator was given an unhandled action '.concat(t.type));

@@ -1,4 +1,4 @@
-n.d(t, {
+n.d(e, {
     Z: function () {
         return s;
     }
@@ -6,23 +6,23 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(655922),
-    a = n(420660),
-    r = n(915863),
-    o = n(388032);
-function s(e) {
-    let { activity: t, onAction: n, ButtonComponent: s = r.Z, ...u } = e;
-    return (0, a.Z)(t)
+    r = n(420660),
+    o = n(915863),
+    a = n(388032);
+function s(t) {
+    let { activity: e, onAction: n, ButtonComponent: s = o.Z, ...u } = t;
+    return (0, r.Z)(e)
         ? (0, i.jsx)(
               s,
               {
                   onClick: () => {
                       null == n || n();
-                      let e = (0, l.Z)(t);
-                      return window.open(null != e ? e : void 0);
+                      let t = (0, l.Z)(e);
+                      return window.open(null != t ? t : void 0);
                   },
                   fullWidth: !0,
                   ...u,
-                  children: o.intl.string(o.t['I6JG4+'])
+                  children: a.intl.string(a.t['I6JG4+'])
               },
               'play-activity'
           )

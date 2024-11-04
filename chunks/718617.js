@@ -5,16 +5,16 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(100621),
-    s = n(442837),
-    a = n(186325),
+    a = n(100621),
+    r = n(442837),
+    s = n(186325),
     o = n(481060),
     c = n(110924),
-    u = n(714338),
-    d = n(237617),
+    d = n(714338),
+    u = n(237617),
     h = n(433355),
-    m = n(189432),
-    p = n(727381),
+    p = n(189432),
+    m = n(727381),
     f = n(313692),
     g = n(596443),
     C = n(50493),
@@ -24,22 +24,22 @@ function v(e, t) {
         if (0 === n) return 'auto';
         let i = 'forwards' === t.current,
             l = n > 0,
-            r = !1;
-        return l && i && 'left' === e && (r = !0), l && !i && 'right' === e && (r = !0), !l && i && 'right' === e && (r = !0), !l && !i && 'left' === e && (r = !0), r ? 'calc('.concat(100 * Math.abs(n), '% + ').concat(Math.round(12 * Math.abs(n)), 'px)') : 'auto';
+            a = !1;
+        return l && i && 'left' === e && (a = !0), l && !i && 'right' === e && (a = !0), !l && i && 'right' === e && (a = !0), !l && !i && 'left' === e && (a = !0), a ? 'calc('.concat(100 * Math.abs(n), '% + ').concat(Math.round(12 * Math.abs(n)), 'px)') : 'auto';
     };
 }
 function _(e) {
     var t, n;
-    let { userId: _, guildId: I, onClose: E, analyticsLocation: b, className: S } = e,
-        Z = (0, s.e7)([h.ZP], () => h.ZP.getGuildSidebarState(I), [I]),
+    let { userId: _, guildId: I, onClose: E, analyticsLocation: b, className: N } = e,
+        Z = (0, r.e7)([h.ZP], () => h.ZP.getGuildSidebarState(I), [I]),
         T = null !== (t = null == Z ? void 0 : Z.details.modViewPanel) && void 0 !== t ? t : C.k.INFO,
-        N = (0, c.Z)(_);
+        S = (0, c.Z)(_);
     let j = null == (n = T) ? null : n === C.k.INFO ? 'backwards' : 'forwards',
-        A = (0, d.Z)(j),
-        { reducedMotion: y } = l.useContext(a.S),
+        A = (0, u.Z)(j),
+        { reducedMotion: y } = l.useContext(s.S),
         P = l.useCallback(
             (e) => {
-                null != Z && (0, m.r)(I, _, Z.baseChannelId, { modViewPanel: e });
+                null != Z && (0, p.r)(I, _, Z.baseChannelId, { modViewPanel: e });
             },
             [Z, I, _]
         ),
@@ -56,7 +56,7 @@ function _(e) {
             }),
             [E, T, P]
         );
-    l.useEffect(() => (u.Z.enable(), u.Z.enableTemp(M), () => u.Z.disableTemp()), [M]);
+    l.useEffect(() => (d.Z.enable(), d.Z.enableTemp(M), () => d.Z.disableTemp()), [M]);
     let R = (0, o.useTransition)(
         T,
         {
@@ -65,9 +65,9 @@ function _(e) {
             enter: { value: 0 },
             leave: { value: -1 }
         },
-        N !== _ ? 'animate-never' : 'animate-always'
+        S !== _ ? 'animate-never' : 'animate-always'
     );
-    return (0, i.jsx)(r.animated.div, {
+    return (0, i.jsx)(a.animated.div, {
         style: {
             position: 'relative',
             height: '100%',
@@ -75,10 +75,10 @@ function _(e) {
             overflow: 'hidden'
         },
         children: R((e, t, n) => {
-            var l, s, a;
+            var l, r, s;
             let { key: o } = n;
             return (0, i.jsx)(
-                r.animated.div,
+                a.animated.div,
                 {
                     style: {
                         position: 'absolute',
@@ -90,32 +90,32 @@ function _(e) {
                         ...(y.enabled
                             ? { opacity: null === (l = e.value) || void 0 === l ? void 0 : l.to((e) => 1 - Math.abs(e)) }
                             : {
-                                  left: null === (s = e.value) || void 0 === s ? void 0 : s.to(v('left', A)),
-                                  right: null === (a = e.value) || void 0 === a ? void 0 : a.to(v('right', A))
+                                  left: null === (r = e.value) || void 0 === r ? void 0 : r.to(v('left', A)),
+                                  right: null === (s = e.value) || void 0 === s ? void 0 : s.to(v('right', A))
                               })
                     },
                     children: (function (e) {
                         switch (e) {
                             case C.k.INFO:
-                                return (0, i.jsx)(p.Z, {
+                                return (0, i.jsx)(m.Z, {
                                     userId: _,
                                     guildId: I,
                                     onNavigate: P,
-                                    className: S
+                                    className: N
                                 });
                             case C.k.MESSAGE_HISTORY:
                                 return (0, i.jsx)(f.Z, {
                                     userId: _,
                                     guildId: I,
                                     onNavigate: () => P(C.k.INFO),
-                                    className: S
+                                    className: N
                                 });
                             case C.k.PERMISSIONS:
                                 return (0, i.jsx)(g.Z, {
                                     userId: _,
                                     guildId: I,
                                     onNavigate: () => P(C.k.INFO),
-                                    className: S
+                                    className: N
                                 });
                             default:
                                 return null;

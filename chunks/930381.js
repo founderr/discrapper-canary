@@ -12,7 +12,7 @@ var r = n(481060),
     l = n(145597),
     o = n(388032);
 function u(t) {
-    let { onSelect: e } = t;
+    let { onSelect: e, layoutId: n = l.qU, version: u } = t;
     return (0, a.jsx)(r.Menu, {
         navId: 'overlay',
         onClose: i.Zy,
@@ -22,7 +22,7 @@ function u(t) {
             id: 'reset',
             label: o.intl.string(o.t['hW+EMj']),
             action: (t) => {
-                t.stopPropagation(), s.Z.resetDefaultLayout(l.qU);
+                t.stopPropagation(), s.Z.resetDefaultLayout(n, u);
             }
         })
     });

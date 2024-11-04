@@ -1,23 +1,23 @@
-n.d(t, {
+e.d(t, {
     Z: function () {
-        return p;
+        return E;
     }
 });
-var i = n(200651);
-n(192379);
-var r = n(442837),
-    a = n(692547),
-    o = n(481060),
-    l = n(493683),
-    d = n(129861),
-    s = n(700582),
-    u = n(594174),
-    c = n(388032),
-    I = n(346411);
-function T(e) {
-    let { color: t, className: n } = e;
+var i = e(200651);
+e(192379);
+var r = e(442837),
+    l = e(692547),
+    a = e(481060),
+    o = e(493683),
+    u = e(129861),
+    d = e(700582),
+    s = e(594174),
+    c = e(388032),
+    T = e(346411);
+function I(n) {
+    let { color: t, className: e } = n;
     return (0, i.jsx)('svg', {
-        className: n,
+        className: e,
         height: '16',
         width: '80',
         viewBox: '0 0 80 16',
@@ -47,66 +47,66 @@ function T(e) {
         })
     });
 }
-function p(e, t) {
-    let n = (0, r.e7)([u.default], () => u.default.getCurrentUser());
-    return null == n || t.ownerId !== n.id || e.id === n.id
+function E(n, t) {
+    let e = (0, r.e7)([s.default], () => s.default.getCurrentUser());
+    return null == e || t.ownerId !== e.id || n.id === e.id
         ? null
-        : (0, i.jsx)(o.MenuItem, {
+        : (0, i.jsx)(a.MenuItem, {
               id: 'make-dm-owner',
               color: 'danger',
               label: c.intl.string(c.t['6t3CyM']),
               action: () => {
                   var r;
                   return (
-                      (r = n),
-                      void (0, o.openModal)((n) =>
-                          (0, i.jsxs)(o.ConfirmModal, {
-                              bodyClassName: I.confirmModal,
+                      (r = e),
+                      void (0, a.openModal)((e) =>
+                          (0, i.jsxs)(a.ConfirmModal, {
+                              bodyClassName: T.confirmModal,
                               header: c.intl.string(c.t.WZoUsr),
                               confirmText: c.intl.string(c.t['cY+Ooa']),
                               cancelText: c.intl.string(c.t['ETE/oK']),
-                              onConfirm: () => l.Z.setDMOwner(t.id, e.id),
-                              ...n,
+                              onConfirm: () => o.Z.setDMOwner(t.id, n.id),
+                              ...e,
                               children: [
-                                  (0, i.jsx)(T, { color: a.Z.unsafe_rawColors.PRIMARY_300.css }),
+                                  (0, i.jsx)(I, { color: l.Z.unsafe_rawColors.PRIMARY_300.css }),
                                   (0, i.jsxs)('div', {
-                                      className: I.fromToWrapper,
+                                      className: T.fromToWrapper,
                                       children: [
                                           (0, i.jsx)('div', {
-                                              className: I.from,
-                                              children: (0, i.jsx)(s.Z, {
+                                              className: T.from,
+                                              children: (0, i.jsx)(d.Z, {
                                                   user: r,
-                                                  size: o.AvatarSizes.SIZE_80
+                                                  size: a.AvatarSizes.SIZE_80
                                               })
                                           }),
                                           (0, i.jsx)('div', {
-                                              className: I.to,
-                                              children: (0, i.jsx)(s.Z, {
-                                                  user: e,
-                                                  size: o.AvatarSizes.SIZE_80
+                                              className: T.to,
+                                              children: (0, i.jsx)(d.Z, {
+                                                  user: n,
+                                                  size: a.AvatarSizes.SIZE_80
                                               })
                                           })
                                       ]
                                   }),
-                                  (0, i.jsx)(o.Text, {
+                                  (0, i.jsx)(a.Text, {
                                       variant: 'text-md/normal',
                                       children: c.intl.format(c.t.gsBb3N, {
-                                          usernameHook: (t, n) =>
+                                          usernameHook: (t, e) =>
                                               (0, i.jsx)(
-                                                  d.Z,
+                                                  u.Z,
                                                   {
-                                                      usernameIcon: (0, i.jsx)(o.Avatar, {
-                                                          className: I.avatarIcon,
-                                                          src: e.getAvatarURL(void 0, 16),
-                                                          size: o.AvatarSizes.SIZE_16,
+                                                      usernameIcon: (0, i.jsx)(a.Avatar, {
+                                                          className: T.avatarIcon,
+                                                          src: n.getAvatarURL(void 0, 16),
+                                                          size: a.AvatarSizes.SIZE_16,
                                                           'aria-hidden': !0
                                                       }),
-                                                      className: I.discordTag,
-                                                      usernameClass: I.username,
-                                                      discriminatorClass: I.discriminator,
-                                                      user: e
+                                                      className: T.discordTag,
+                                                      usernameClass: T.username,
+                                                      discriminatorClass: T.discriminator,
+                                                      user: n
                                                   },
-                                                  n
+                                                  e
                                               )
                                       })
                                   })

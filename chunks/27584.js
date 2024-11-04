@@ -1,26 +1,26 @@
-e.d(n, {
+n.d(t, {
     Z: function () {
-        return d;
+        return c;
     }
 });
-var i = e(442837),
-    r = e(846027),
-    o = e(314897),
-    a = e(131951),
-    u = e(981631),
-    l = e(65154);
-function d(t) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.Yn.DEFAULT,
-        e = (0, i.e7)([o.default], () => o.default.getId()),
-        d = (0, i.e7)([a.Z], () => a.Z.supports(l.AN.DISABLE_VIDEO) && a.Z.isVideoEnabled()),
-        s = (0, i.e7)([a.Z], () => a.Z.isLocalVideoDisabled(e, n), [e, n]),
-        c = null == t || t === e;
+var i = n(442837),
+    l = n(846027),
+    a = n(314897),
+    r = n(131951),
+    s = n(981631),
+    o = n(65154);
+function c(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.Yn.DEFAULT,
+        n = (0, i.e7)([a.default], () => a.default.getId()),
+        c = (0, i.e7)([r.Z], () => r.Z.supports(o.AN.DISABLE_VIDEO) && r.Z.isVideoEnabled()),
+        d = (0, i.e7)([r.Z], () => r.Z.isLocalVideoDisabled(n, t), [n, t]),
+        u = null == e || e === n;
     return [
-        c && (d || s),
-        s,
-        (t) => {
-            let i = t ? u.ZUi.DISABLED : u.ZUi.MANUAL_ENABLED;
-            r.Z.setDisableLocalVideo(e, i, n);
+        u && (c || d),
+        d,
+        (e) => {
+            let i = e ? s.ZUi.DISABLED : s.ZUi.MANUAL_ENABLED;
+            l.Z.setDisableLocalVideo(n, i, t);
         }
     ];
 }

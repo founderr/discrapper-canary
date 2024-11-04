@@ -1,15 +1,15 @@
 n.d(t, {
     FO: function () {
-        return a;
+        return s;
     },
     Fq: function () {
-        return s;
+        return r;
     },
     Ks: function () {
         return i;
     },
     q2: function () {
-        return r;
+        return a;
     },
     qh: function () {
         return l;
@@ -17,6 +17,6 @@ n.d(t, {
 });
 let i = 80,
     l = 48,
-    r = 3,
-    s = 500,
-    a = 5000;
+    a = 3,
+    r = 500,
+    s = 5000;

@@ -1,16 +1,16 @@
 n(653041);
 var i = n(200651),
     l = n(192379),
-    r = n(374470),
-    s = n(442837),
-    a = n(952265),
+    a = n(374470),
+    r = n(442837),
+    s = n(952265),
     o = n(481060),
     c = n(40851),
-    u = n(835473),
-    d = n(314910),
+    d = n(835473),
+    u = n(314910),
     h = n(585483),
-    m = n(5967),
-    p = n(499254),
+    p = n(5967),
+    m = n(499254),
     f = n(541099),
     g = n(827498),
     C = n(695676),
@@ -20,23 +20,23 @@ var i = n(200651),
     I = n(388032),
     E = n(767346);
 let b = { height: v.lv };
-function S() {
-    p.yT(g.ti.DISMISSED);
+function N() {
+    m.yT(g.ti.DISMISSED);
 }
 function Z(e) {
-    let { channel: t, closeOnModalOuterClick: n = !1, parentModalKey: d } = e,
-        p = l.useRef(null),
+    let { channel: t, closeOnModalOuterClick: n = !1, parentModalKey: u } = e,
+        m = l.useRef(null),
         { renderWindow: I, windowDispatch: E } = l.useContext(c.ZP),
-        b = null != d,
-        Z = (0, a.Jw)(null != d ? d : ''),
+        b = null != u,
+        Z = (0, s.Jw)(null != u ? u : ''),
         T = l.useCallback(
             (e) => {
                 var t;
-                if ((!b && (0, a.$s)()) || (b && !(Z && n))) return;
+                if ((!b && (0, s.$s)()) || (b && !(Z && n))) return;
                 let { target: i } = e;
-                if ((0, r.k)(i) && null != i.closest('.' + v.Jh)) return;
-                for (; (0, r.k)(i); ) {
-                    if (i === p.current) return;
+                if ((0, a.k)(i) && null != i.closest('.' + v.Jh)) return;
+                for (; (0, a.k)(i); ) {
+                    if (i === m.current) return;
                     if (i.classList.contains(v.t4)) {
                         e.preventDefault();
                         return;
@@ -44,8 +44,8 @@ function Z(e) {
                     if (i.classList.contains(v.NN)) return;
                     i = i.parentNode;
                 }
-                S();
-                let l = null === (t = (0, m.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
+                N();
+                let l = null === (t = (0, p.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
                 (null == l || 'BODY' === l.tagName) && h.S.dispatchToLastSubscribed(_.CkL.TEXTAREA_FOCUS);
             },
             [n, Z, b]
@@ -54,24 +54,24 @@ function Z(e) {
         () => (
             I.addEventListener('mousedown', T),
             I.addEventListener('contextmenu', T),
-            E.subscribe(_.CkL.POPOUT_CLOSE, S),
+            E.subscribe(_.CkL.POPOUT_CLOSE, N),
             () => {
-                I.removeEventListener('mousedown', T), I.removeEventListener('contextmenu', T), E.unsubscribe(_.CkL.POPOUT_CLOSE, S);
+                I.removeEventListener('mousedown', T), I.removeEventListener('contextmenu', T), E.unsubscribe(_.CkL.POPOUT_CLOSE, N);
             }
         ),
         [T, I, E]
     ),
-        (0, o.useFocusLock)(p),
+        (0, o.useFocusLock)(m),
         l.useEffect(() => {
-            ((!b && (0, a.$s)()) || (b && !Z)) && S();
+            ((!b && (0, s.$s)()) || (b && !Z)) && N();
         }, [Z, b]);
-    let N = (0, s.e7)([f.Z], () => f.Z.initialState(), []),
-        j = (0, u.q)(null == N ? void 0 : N.applicationId),
+    let S = (0, r.e7)([f.Z], () => f.Z.initialState(), []),
+        j = (0, d.q)(null == S ? void 0 : S.applicationId),
         A = l.useMemo(() => {
-            if (null == N) return;
+            if (null == S) return;
             let e = [{ type: C.gc.HOME }];
             return (
-                null != N.applicationId &&
+                null != S.applicationId &&
                     null != j &&
                     e.push({
                         type: C.gc.APPLICATION,
@@ -79,9 +79,9 @@ function Z(e) {
                     }),
                 e
             );
-        }, [N, j]);
+        }, [S, j]);
     return (0, i.jsx)(x.Z, {
-        ref: p,
+        ref: m,
         channel: t,
         entrypoint: g._b.TEXT,
         initHistory: A
@@ -91,7 +91,7 @@ t.Z = l.memo(function (e) {
     let { positionTargetRef: t, ...n } = e;
     return (0, i.jsx)('span', {
         style: v.u$,
-        children: (0, i.jsx)(d.W5, {
+        children: (0, i.jsx)(u.W5, {
             className: E.positionLayer,
             targetRef: t,
             position: 'top',

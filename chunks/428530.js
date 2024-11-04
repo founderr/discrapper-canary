@@ -10,8 +10,8 @@ var a = n(189223),
     l = n(692547),
     i = n(410030),
     o = n(95398),
-    c = n(981631),
-    s = n(219299);
+    s = n(981631),
+    c = n(219299);
 let d = {
     base00: l.Z.colors.BACKGROUND_SECONDARY.css,
     base03: l.Z.colors.TEXT_WARNING.css,
@@ -29,7 +29,7 @@ function u(e) {
 let h = u(d),
     m = u(d);
 function x(e) {
-    return c.Jn9.test(e)
+    return s.Jn9.test(e)
         ? (0, r.jsx)(o.Z, {
               type: o.Z.Types.TEXT,
               children: () => (0, r.jsx)(r.Fragment, { children: e })
@@ -40,7 +40,7 @@ function f(e) {
     let { data: t } = e,
         n = (0, i.ZP)();
     return (0, r.jsx)('div', {
-        className: s.inspectorWrapper,
+        className: c.inspectorWrapper,
         children: (0, r.jsx)(a.L, {
             data: t,
             theme: 'light' === n ? m : h,

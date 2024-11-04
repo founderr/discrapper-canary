@@ -1,12 +1,12 @@
-e.d(t, {
+i.d(t, {
     u: function () {
-        return o;
+        return E;
     }
 });
-var i = e(585483),
-    l = e(981631);
-let o = {
+var o = i(585483),
+    r = i(981631);
+let E = {
     binds: ['mod+p'],
     comboKeysBindGlobal: !0,
-    action: () => (i.S.dispatch(l.CkL.TOGGLE_CHANNEL_PINS), !1)
+    action: () => (o.S.dispatch(r.CkL.TOGGLE_CHANNEL_PINS), !1)
 };

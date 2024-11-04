@@ -6,12 +6,12 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(925975),
-    s = n(957730),
-    a = n(981631),
+    a = n(925975),
+    r = n(957730),
+    s = n(981631),
     o = n(388032),
     c = n(507737);
-function u(e, t, n) {
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,22 +24,22 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function u(e) {
     e.stopPropagation();
 }
 class h extends l.PureComponent {
     render() {
-        let { className: e, textValue: t, richValue: n, message: l, channel: r, onCancel: s, children: a } = this.props;
+        let { className: e, textValue: t, richValue: n, message: l, channel: a, onCancel: r, children: s } = this.props;
         return (0, i.jsxs)('div', {
             className: e,
             ref: this.node,
-            onContextMenu: d,
+            onContextMenu: u,
             children: [
-                a({
+                s({
                     textValue: t,
                     richValue: n,
                     message: l,
-                    channel: r,
+                    channel: a,
                     onChange: this.onChange,
                     onSubmit: this.onSubmit,
                     onKeyDown: this.onKeyDown
@@ -47,7 +47,7 @@ class h extends l.PureComponent {
                 (0, i.jsx)('div', {
                     className: c.operations,
                     children: o.intl.format(o.t.wDsPXl, {
-                        onCancel: () => s(r.id),
+                        onCancel: () => r(a.id),
                         onSave: this.onClickSave
                     })
                 })
@@ -56,13 +56,13 @@ class h extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            u(this, 'node', l.createRef()),
-            u(this, 'onClickSave', () => {
+            d(this, 'node', l.createRef()),
+            d(this, 'onClickSave', () => {
                 let { textValue: e } = this.props;
                 this.onSubmit(e);
             }),
-            u(this, 'onSubmit', (e) => {
-                let { message: t, channel: n, onConfirmDelete: i, onCancel: l, saveMessage: a, validateEdit: o } = this.props;
+            d(this, 'onSubmit', (e) => {
+                let { message: t, channel: n, onConfirmDelete: i, onCancel: l, saveMessage: s, validateEdit: o } = this.props;
                 return 0 === e.length
                     ? (i(n, t),
                       l(n.id),
@@ -80,14 +80,14 @@ class h extends l.PureComponent {
                                   shouldClear: !1,
                                   shouldRefocus: !1
                               });
-                          let o = (0, r.g)(e, {
+                          let o = (0, a.g)(e, {
                               channel: n,
                               isEdit: !0
                           });
                           (null == o ? void 0 : o.content) != null && (e = o.content);
-                          let c = s.ZP.parse(this.props.channel, e);
+                          let c = r.ZP.parse(this.props.channel, e);
                           return (
-                              c.content !== this.props.message.content && a(this.props.channel.id, this.props.message.id, c),
+                              c.content !== this.props.message.content && s(this.props.channel.id, this.props.message.id, c),
                               l(n.id),
                               Promise.resolve({
                                   shouldClear: !0,
@@ -96,12 +96,12 @@ class h extends l.PureComponent {
                           );
                       });
             }),
-            u(this, 'onChange', (e, t, n) => {
+            d(this, 'onChange', (e, t, n) => {
                 let { channel: i, onChange: l } = this.props;
                 l(i.id, t, n);
             }),
-            u(this, 'onKeyDown', (e) => {
-                if (e.keyCode === a.yXg.ESCAPE && !e.shiftKey) {
+            d(this, 'onKeyDown', (e) => {
+                if (e.keyCode === s.yXg.ESCAPE && !e.shiftKey) {
                     let { channel: t, onCancel: n } = this.props;
                     e.preventDefault(), e.stopPropagation(), n(t.id);
                 }

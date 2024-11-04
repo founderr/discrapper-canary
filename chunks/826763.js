@@ -6,26 +6,26 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    r = n(434404),
-    s = n(962086),
-    a = n(303737),
+    a = n(434404),
+    r = n(962086),
+    s = n(303737),
     o = n(981631),
     c = n(388032),
-    u = n(206293),
-    d = n(497224);
+    d = n(206293),
+    u = n(497224);
 function h(e) {
     let { guildId: t } = e;
     return (0, i.jsx)('div', {
-        className: u.upsellPage,
+        className: d.upsellPage,
         children: (0, i.jsxs)('div', {
-            className: u.upsellContainer,
+            className: d.upsellContainer,
             children: [
                 (0, i.jsx)('img', {
-                    src: d,
+                    src: u,
                     alt: ''
                 }),
                 (0, i.jsxs)('div', {
-                    className: u.upsellContent,
+                    className: d.upsellContent,
                     children: [
                         (0, i.jsx)(l.Heading, {
                             variant: 'heading-xl/semibold',
@@ -33,15 +33,15 @@ function h(e) {
                         }),
                         (0, i.jsx)(l.Text, {
                             variant: 'text-sm/normal',
-                            className: u.bodyText,
+                            className: d.bodyText,
                             children: c.intl.string(c.t.GpOWIi)
                         }),
                         (0, i.jsx)(l.Button, {
                             size: l.Button.Sizes.MEDIUM,
                             onClick: () => {
-                                (0, s.mL)(t), r.Z.open(t, o.pNK.ROLE_SUBSCRIPTIONS, void 0, o.KsC.ROLE_SUBSCRIPTION_TIERS), (0, a.GN)(t);
+                                (0, r.mL)(t), a.Z.open(t, o.pNK.ROLE_SUBSCRIPTIONS, void 0, o.KsC.ROLE_SUBSCRIPTION_TIERS), (0, s.GN)(t);
                             },
-                            className: u.__invalid_button,
+                            className: d.__invalid_button,
                             children: c.intl.string(c.t['I/XhUl'])
                         })
                     ]

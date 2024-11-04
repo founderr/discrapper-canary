@@ -10,7 +10,7 @@ n.d(t, {
     n(192379);
 var i = n(570140);
 n(238246), n(788983), n(592125), n(19780);
-var l = n(808506);
+var l = n(237997);
 n(998502), n(487029);
 var r = n(710111);
 n(981631), n(388032);
@@ -47,7 +47,7 @@ function s(e) {
         pid: e,
         enabled: !1
     }),
-        !l.Z.isInputLocked(e) &&
+        !l.Z.isLocked(e) &&
             i.Z.dispatch({
                 type: 'OVERLAY_SET_INPUT_LOCKED',
                 locked: !0,

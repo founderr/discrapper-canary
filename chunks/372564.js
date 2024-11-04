@@ -1,16 +1,16 @@
 n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    s = n.n(r),
-    a = n(374470),
+    a = n(120356),
+    r = n.n(a),
+    s = n(374470),
     o = n(481060),
     c = n(239091),
-    u = n(822951),
-    d = n(835473),
+    d = n(822951),
+    u = n(835473),
     h = n(933557),
-    m = n(471445),
-    p = n(454585),
+    p = n(471445),
+    m = n(454585),
     f = n(63063),
     g = n(984370),
     C = n(981631),
@@ -31,23 +31,23 @@ function _(e, t, n) {
 }
 function I(e) {
     var t;
-    let { channel: n, onClose: l, guild: r, transitionState: s } = e,
-        a = (0, m.KS)(n, r),
+    let { channel: n, onClose: l, guild: a, transitionState: r } = e,
+        s = (0, p.KS)(n, a),
         c = (0, h.ZP)(n, !1),
-        g = (0, d.q)(null === (t = n.linkedLobby) || void 0 === t ? void 0 : t.application_id);
+        g = (0, u.q)(null === (t = n.linkedLobby) || void 0 === t ? void 0 : t.application_id);
     return (0, i.jsx)(o.ModalRoot, {
-        transitionState: s,
+        transitionState: r,
         'aria-label': x.intl.string(x.t.X8jMDg),
         children: (0, i.jsx)(o.ModalContent, {
-            children: (0, i.jsxs)(u.Z, {
+            children: (0, i.jsxs)(d.Z, {
                 selectable: !0,
                 onClose: l,
                 renderHeader: () =>
                     (0, i.jsxs)('div', {
                         className: v.header,
                         children: [
-                            null != a &&
-                                (0, i.jsx)(a, {
+                            null != s &&
+                                (0, i.jsx)(s, {
                                     size: 'md',
                                     color: 'currentColor',
                                     className: v.channelIcon
@@ -64,7 +64,7 @@ function I(e) {
                         selectable: !0,
                         variant: 'text-md/normal',
                         className: v.content,
-                        children: p.Z.parseTopic(n.topic, !0, { channelId: n.id })
+                        children: m.Z.parseTopic(n.topic, !0, { channelId: n.id })
                     }),
                     null != g
                         ? (0, i.jsxs)('div', {
@@ -108,7 +108,7 @@ class b extends l.Component {
                   children: [
                       (0, i.jsx)(g.Z.Divider, {}),
                       (0, i.jsxs)('div', {
-                          className: s()(v.topic, v.expandable),
+                          className: r()(v.topic, v.expandable),
                           onMouseDown: this.onMouseDown,
                           onMouseMove: this.onMouseMove,
                           onMouseUp: this.onMouseUp,
@@ -120,7 +120,7 @@ class b extends l.Component {
                                   'aria-label': x.intl.string(x.t.mKwsSk),
                                   className: v.topicClickTarget
                               }),
-                              p.Z.parseTopic(e.topic, !0, {
+                              m.Z.parseTopic(e.topic, !0, {
                                   channelId: e.id,
                                   allowLinks: !0
                               })
@@ -135,10 +135,10 @@ class b extends l.Component {
             _(this, '_mouseUp', !1),
             _(this, 'handleOpenTopic', (e) => {
                 let t = e.target;
-                if ((0, a.k)(t)) {
+                if ((0, s.k)(t)) {
                     if (E(t)) return;
                     let e = t.parentNode;
-                    if ((0, a.k)(e) && E(e)) return;
+                    if ((0, s.k)(e) && E(e)) return;
                 }
                 (0, o.openModal)((e) =>
                     (0, i.jsx)(I, {

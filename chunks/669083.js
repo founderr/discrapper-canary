@@ -7,8 +7,8 @@ n.d(t, {
 var i,
     r,
     s = n(200651),
-    l = n(192379),
-    a = n(442837),
+    a = n(192379),
+    l = n(442837),
     o = n(481060),
     c = n(13245),
     d = n(600164),
@@ -16,14 +16,14 @@ var i,
     h = n(906467),
     p = n(556296),
     f = n(237997),
-    m = n(998502),
-    g = n(13140),
+    g = n(998502),
+    m = n(13140),
     v = n(658785),
     _ = n(981631),
     E = n(388032),
     x = n(635958),
-    I = n(113207);
-function Z(e, t, n) {
+    Z = n(113207);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -82,11 +82,11 @@ function N() {
         notifications_position: t ? e : null,
         text_notifications_mode: f.Z.getTextChatNotificationMode(),
         text_opacity_slider: f.Z.getTextWidgetOpacity(),
-        hotkey: null != n ? (0, g.BB)(n.shortcut) : null,
-        text_activation_hotkey: null != i ? (0, g.BB)(i.shortcut) : null
+        hotkey: null != n ? (0, m.BB)(n.shortcut) : null,
+        text_activation_hotkey: null != i ? (0, m.BB)(i.shortcut) : null
     });
 }
-class T extends l.PureComponent {
+class T extends a.PureComponent {
     componentDidMount() {
         c.Z.track(_.rMx.SETTINGS_PANE_VIEWED, {
             settings_type: 'overlay',
@@ -187,11 +187,11 @@ class T extends l.PureComponent {
     renderGeneralSettings() {
         let { textChatNotificationMode: e, notificationPositionMode: t, shouldShowKeybindIndicators: n, showKeybindIndicators: i } = this.props,
             r = t !== _._vf.DISABLED;
-        return (0, s.jsxs)(l.Fragment, {
+        return (0, s.jsxs)(a.Fragment, {
             children: [
                 (0, s.jsx)(o.FormItem, {
                     title: E.intl.string(E.t.IQv8Eh),
-                    className: I.marginBottom20,
+                    className: Z.marginBottom20,
                     children: (0, s.jsx)(u.Z, {
                         position: t,
                         onChange: this.handleChangeNotificationPositionMode
@@ -216,11 +216,11 @@ class T extends l.PureComponent {
     }
     renderVoiceSettings() {
         let { avatarSizeMode: e, displayNameMode: t, displayUserMode: n } = this.props;
-        return (0, s.jsxs)(l.Fragment, {
+        return (0, s.jsxs)(a.Fragment, {
             children: [
                 (0, s.jsx)(o.FormItem, {
                     title: E.intl.string(E.t.dnvZSk),
-                    className: I.marginBottom20,
+                    className: Z.marginBottom20,
                     children: (0, s.jsx)(o.RadioGroup, {
                         onChange: this.handleChangeAvatarSizeMode,
                         options: S(),
@@ -230,7 +230,7 @@ class T extends l.PureComponent {
                 }),
                 (0, s.jsx)(o.FormItem, {
                     title: E.intl.string(E.t.J0dpcH),
-                    className: I.marginBottom20,
+                    className: Z.marginBottom20,
                     children: (0, s.jsx)(o.RadioGroup, {
                         onChange: this.handleChangeDisplayNameMode,
                         options: C(),
@@ -240,7 +240,7 @@ class T extends l.PureComponent {
                 }),
                 (0, s.jsx)(o.FormItem, {
                     title: E.intl.string(E.t.swsWWF),
-                    className: I.marginBottom20,
+                    className: Z.marginBottom20,
                     children: (0, s.jsx)(o.RadioGroup, {
                         onChange: this.handleChangeDisplayUserMode,
                         options: y(),
@@ -252,10 +252,10 @@ class T extends l.PureComponent {
         });
     }
     renderDeveloperSettings() {
-        return (0, s.jsx)(l.Fragment, {
+        return (0, s.jsx)(a.Fragment, {
             children: (0, s.jsx)(o.FormItem, {
                 title: 'Crashes',
-                className: I.marginBottom20,
+                className: Z.marginBottom20,
                 children: (0, s.jsx)(o.SingleSelect, {
                     value: void 0,
                     options: [
@@ -284,7 +284,7 @@ class T extends l.PureComponent {
                             label: 'Out of Memory'
                         }
                     ],
-                    onChange: (e) => null != e && m.ZP.crash(e)
+                    onChange: (e) => null != e && g.ZP.crash(e)
                 })
             })
         });
@@ -298,11 +298,11 @@ class T extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            Z(this, 'state', { selectedSection: 'GENERAL' }),
-            Z(this, 'handleSelectSection', (e) => {
+            I(this, 'state', { selectedSection: 'GENERAL' }),
+            I(this, 'handleSelectSection', (e) => {
                 this.setState({ selectedSection: e });
             }),
-            Z(this, 'handleToggleTextChatNotifications', () => {
+            I(this, 'handleToggleTextChatNotifications', () => {
                 let { ENABLED: e, DISABLED: t } = _.Ypu,
                     n = this.props.textChatNotificationMode === e ? t : e;
                 c.Z.setTextChatNotificationMode(n), N();
@@ -315,10 +315,10 @@ function b(e) {
             avatarSizeMode: n,
             displayNameMode: i,
             displayUserMode: r,
-            notificationPositionMode: l,
+            notificationPositionMode: a,
             textChatNotificationMode: o,
             shouldShowKeybindIndicators: c
-        } = (0, a.cj)([f.Z], () => ({
+        } = (0, l.cj)([f.Z], () => ({
             avatarSizeMode: f.Z.getAvatarSizeMode(),
             displayNameMode: f.Z.getDisplayNameMode(),
             displayUserMode: f.Z.getDisplayUserMode(),
@@ -332,7 +332,7 @@ function b(e) {
         avatarSizeMode: n,
         displayNameMode: i,
         displayUserMode: r,
-        notificationPositionMode: l,
+        notificationPositionMode: a,
         textChatNotificationMode: o,
         shouldShowKeybindIndicators: c,
         showKeybindIndicators: d

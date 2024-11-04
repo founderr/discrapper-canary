@@ -1,20 +1,20 @@
-e.d(t, {
+t.d(n, {
     B2: function () {
         return o;
     },
     gN: function () {
-        return r;
+        return a;
     }
 });
-var i = e(585483),
-    l = e(981631);
+var l = t(585483),
+    i = t(981631);
 let o = {
         binds: ['pageup'],
         comboKeysBindGlobal: !0,
-        action: () => (i.S.dispatchToLastSubscribed(l.CkL.SCROLL_PAGE_UP), !1)
+        action: () => (l.S.dispatchToLastSubscribed(i.CkL.SCROLL_PAGE_UP), !1)
     },
-    r = {
+    a = {
         binds: ['pagedown'],
         comboKeysBindGlobal: !0,
-        action: () => (i.S.dispatchToLastSubscribed(l.CkL.SCROLL_PAGE_DOWN), !1)
+        action: () => (l.S.dispatchToLastSubscribed(i.CkL.SCROLL_PAGE_DOWN), !1)
     };

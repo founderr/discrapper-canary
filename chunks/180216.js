@@ -6,48 +6,48 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(442837),
-    s = n(481060),
-    a = n(592125),
+    a = n(442837),
+    r = n(481060),
+    s = n(592125),
     o = n(430824),
     c = n(584825),
-    u = n(406074),
-    d = n(660196),
+    d = n(406074),
+    u = n(660196),
     h = n(36246),
-    m = n(305342),
-    p = n(981631),
+    p = n(305342),
+    m = n(981631),
     f = n(388032),
     g = n(698170);
 function C(e) {
     let { guildId: t, channelId: n } = e,
-        C = (0, u.C)({
+        C = (0, d.C)({
             guildId: t,
             channelId: n
         }),
         x = (0, c.GG)(t),
         v = (0, c.YB)(t),
-        _ = (0, r.e7)([o.Z], () => o.Z.getGuild(t), [t]),
+        _ = (0, a.e7)([o.Z], () => o.Z.getGuild(t), [t]),
         I = null == _ ? void 0 : _.name,
-        E = (0, r.e7)([a.Z], () => a.Z.getChannel(n)),
+        E = (0, a.e7)([s.Z], () => s.Z.getChannel(n)),
         b = l.useMemo(() => {
             let e = {};
             for (let t of x) for (let n of t.subscription_listings_ids) e[n] = t.id;
             return e;
         }, [x]);
-    return ((0, d.Z)({
+    return ((0, u.Z)({
         guildId: t,
-        location: p.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL,
+        location: m.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL,
         relevantSubscriptionListingIds: C.map((e) => e.id)
     }),
     null == _)
         ? (0, i.jsx)('div', {
               className: g.__invalid_spinnerContainer,
-              children: (0, i.jsx)(s.Spinner, { className: g.__invalid_spinner })
+              children: (0, i.jsx)(r.Spinner, { className: g.__invalid_spinner })
           })
-        : (0, i.jsxs)(s.ScrollerAuto, {
+        : (0, i.jsxs)(r.ScrollerAuto, {
               className: g.pageContainer,
               children: [
-                  (0, i.jsx)(s.Heading, {
+                  (0, i.jsx)(r.Heading, {
                       variant: 'heading-xl/semibold',
                       className: g.joinCtaTitle,
                       children: f.intl.format(f.t.xHMpys, {
@@ -55,7 +55,7 @@ function C(e) {
                           channelName: null == E ? void 0 : E.name
                       })
                   }),
-                  (0, i.jsx)(s.Text, {
+                  (0, i.jsx)(r.Text, {
                       className: g.joinCtaSubtitle,
                       variant: 'text-md/normal',
                       color: 'header-secondary',
@@ -65,12 +65,12 @@ function C(e) {
                       guildId: t,
                       children: C.filter((e) => null != b[e.id]).map((e) =>
                           (0, i.jsx)(
-                              m.Z,
+                              p.Z,
                               {
                                   guildId: t,
                                   listingId: e.id,
                                   groupListingId: b[e.id],
-                                  analyticsLocation: p.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL
+                                  analyticsLocation: m.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL
                               },
                               e.id
                           )

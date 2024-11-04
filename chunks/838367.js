@@ -1,62 +1,62 @@
-var a,
-    t,
+var l,
     i,
-    n,
+    a,
+    s,
     r,
     c,
-    d = s(442837),
-    o = s(570140),
-    u = s(314897),
-    h = s(900849);
-((a = r || (r = {})).UNSET = 'unset'), (a.FETCHING = 'fetching'), (a.FAILED = 'failed'), (a.SUCCEEDED = 'succeeded');
+    u = t(442837),
+    d = t(570140),
+    o = t(314897),
+    h = t(900849);
+((l = r || (r = {})).UNSET = 'unset'), (l.FETCHING = 'fetching'), (l.FAILED = 'failed'), (l.SUCCEEDED = 'succeeded');
 let m = {};
-class x extends (c = d.ZP.Store) {
+class g extends (c = u.ZP.Store) {
     initialize() {
-        this.waitFor(u.default);
+        this.waitFor(o.default);
     }
     isFetchingGuild(e) {
-        let l = m[e];
-        return null != l && 'fetching' === l.fetchState;
+        let n = m[e];
+        return null != n && 'fetching' === n.fetchState;
     }
     getGuild(e) {
-        let l = m[e];
-        return null != l ? l.guild : null;
+        let n = m[e];
+        return null != n ? n.guild : null;
     }
     hasFetchFailed(e) {
-        let l = m[e];
-        return null != l && 'failed' === l.fetchState;
+        let n = m[e];
+        return null != n && 'failed' === n.fetchState;
     }
 }
-(n = 'GuildPopoutStore'),
-    (i = 'displayName') in (t = x)
-        ? Object.defineProperty(t, i, {
-              value: n,
+(s = 'GuildPopoutStore'),
+    (a = 'displayName') in (i = g)
+        ? Object.defineProperty(i, a, {
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (t[i] = n),
-    (l.Z = new x(o.Z, {
+        : (i[a] = s),
+    (n.Z = new g(d.Z, {
         GUILD_POPOUT_FETCH_START: function (e) {
-            let { guildId: l } = e;
-            m[l] = {
-                ...m[l],
+            let { guildId: n } = e;
+            m[n] = {
+                ...m[n],
                 fetchState: 'fetching'
             };
         },
         GUILD_POPOUT_FETCH_SUCCESS: function (e) {
-            let { guildId: l, guild: s } = e,
-                a = (0, h.PP)(s);
-            m[l] = {
-                ...m[l],
-                guild: a,
+            let { guildId: n, guild: t } = e,
+                l = (0, h.PP)(t);
+            m[n] = {
+                ...m[n],
+                guild: l,
                 fetchState: 'succeeded'
             };
         },
         GUILD_POPOUT_FETCH_FAILURE: function (e) {
-            let { guildId: l } = e;
-            m[l] = {
-                ...m[l],
+            let { guildId: n } = e;
+            m[n] = {
+                ...m[n],
                 fetchState: 'failed'
             };
         }

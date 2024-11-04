@@ -7,16 +7,16 @@ n.d(t, {
     n(773603);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    s = n.n(r),
-    a = n(848246),
+    a = n(120356),
+    r = n.n(a),
+    s = n(848246),
     o = n(793030),
     c = n(442837),
-    u = n(46973),
-    d = n(481060),
+    d = n(46973),
+    u = n(481060),
     h = n(846027),
-    m = n(607070),
-    p = n(361291),
+    p = n(607070),
+    m = n(361291),
     f = n(131951),
     g = n(626135),
     C = n(120522),
@@ -26,35 +26,35 @@ var i = n(200651),
     I = n(1163),
     E = n(738672),
     b = n(981631),
-    S = n(37113),
+    N = n(37113),
     Z = n(388032),
     T = n(351065);
-function N(e) {
+function S(e) {
     let { className: t, onDismiss: n } = e;
-    return (0, i.jsx)(d.Button, {
+    return (0, i.jsx)(u.Button, {
         className: t,
         'aria-label': Z.intl.string(Z.t.cpT0Cg),
-        look: d.Button.Looks.BLANK,
-        size: d.Button.Sizes.NONE,
+        look: u.Button.Looks.BLANK,
+        size: u.Button.Sizes.NONE,
         onClick: n,
-        children: (0, i.jsx)(d.XSmallIcon, {
+        children: (0, i.jsx)(u.XSmallIcon, {
             size: 'xs',
             className: T.closeIcon,
             color: 'white'
         })
     });
 }
-let j = S.LY.RESOLUTION_1440,
-    A = S.ws.FPS_60;
+let j = N.LY.RESOLUTION_1440,
+    A = N.ws.FPS_60;
 function y(e) {
     let { channel: t } = e,
-        n = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
-        [r, s] = l.useState(!1),
-        { preset: o } = (0, c.cj)([p.Z], () => p.Z.getState()),
+        n = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
+        [a, r] = l.useState(!1),
+        { preset: o } = (0, c.cj)([m.Z], () => m.Z.getState()),
         x = (0, c.e7)([f.Z], () => f.Z.getGoLiveSource()),
         I = l.useCallback(() => {
-            s(!0),
-                (0, C.S)(a.q.STREAM_HIGH_QUALITY)
+            r(!0),
+                (0, C.S)(s.q.STREAM_HIGH_QUALITY)
                     .then((e) => {
                         if (e) {
                             if (
@@ -62,7 +62,7 @@ function y(e) {
                                 g.default.track(b.rMx.PERK_DEMO_OFFER_ACCEPTED, {
                                     guild_id: t.guild_id,
                                     channel_id: t.id,
-                                    perk_type: a.q.STREAM_HIGH_QUALITY,
+                                    perk_type: s.q.STREAM_HIGH_QUALITY,
                                     resolution: j,
                                     max_fps: A
                                 }),
@@ -76,7 +76,7 @@ function y(e) {
                                     resolution: j,
                                     frameRate: A
                                 },
-                                context: u.Yn.STREAM
+                                context: d.Yn.STREAM
                             };
                             null != x.desktopSource
                                 ? (e.desktopSettings = {
@@ -93,32 +93,32 @@ function y(e) {
                     })
                     .catch(() => {})
                     .finally(() => {
-                        s(!1);
+                        r(!1);
                     });
         }, [o, t, x]);
-    return (0, i.jsx)(d.ShinyButton, {
+    return (0, i.jsx)(u.ShinyButton, {
         fullWidth: !0,
         pauseAnimation: n,
-        color: d.Button.Colors.GREEN,
-        size: d.Button.Sizes.SMALL,
+        color: u.Button.Colors.GREEN,
+        size: u.Button.Sizes.SMALL,
         className: T.optInButton,
         onClick: I,
-        submitting: r,
+        submitting: a,
         children: Z.intl.string(Z.t['Rpn/09'])
     });
 }
 function P(e) {
     let { channel: t, hidden: n, onDismiss: l } = e,
-        r = I.Z.useExperiment({ location: 'StreamButtonDemoOptInPopoutContent' }, { autoTrackExposure: !1 }).extendedDemoDuration;
+        a = I.Z.useExperiment({ location: 'StreamButtonDemoOptInPopoutContent' }, { autoTrackExposure: !1 }).extendedDemoDuration;
     return (0, i.jsxs)('div', {
-        className: s()(T.optInPopout, T.variant2OptInPopout, { [T.hidden]: n }),
+        className: r()(T.optInPopout, T.variant2OptInPopout, { [T.hidden]: n }),
         children: [
             (0, i.jsx)('img', {
                 className: T.image,
                 src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png',
                 alt: 'HD Streaming Nitro Perk'
             }),
-            (0, i.jsx)(N, {
+            (0, i.jsx)(S, {
                 className: T.variant2CloseButton,
                 onDismiss: l
             }),
@@ -130,7 +130,7 @@ function P(e) {
                         (0, i.jsx)(o.xv, {
                             className: T.variant2Text,
                             variant: 'text-sm/medium',
-                            children: r ? Z.intl.string(Z.t.ZYQ2zc) : Z.intl.string(Z.t.kr8AEx)
+                            children: a ? Z.intl.string(Z.t.ZYQ2zc) : Z.intl.string(Z.t.kr8AEx)
                         }),
                         (0, i.jsx)(y, { channel: t })
                     ]
@@ -141,27 +141,27 @@ function P(e) {
 }
 function M(e) {
     let { channel: t, ...n } = e,
-        { shouldShowOptInPopout: r } = (0, x.k)(a.q.STREAM_HIGH_QUALITY),
-        { enabled: s } = I.Z.useExperiment(
+        { shouldShowOptInPopout: a } = (0, x.k)(s.q.STREAM_HIGH_QUALITY),
+        { enabled: r } = I.Z.useExperiment(
             { location: 'StreamButtonDemoOptInPopout' },
             {
                 autoTrackExposure: !1,
-                disable: !r
+                disable: !a
             }
         ),
         o = l.useRef(!1);
     return (l.useEffect(() => {
-        r &&
-            s &&
+        a &&
+            r &&
             !o.current &&
             ((o.current = !0),
             g.default.track(b.rMx.PERK_DEMO_OFFER_VIEWED, {
                 guild_id: t.guild_id,
                 channel_id: t.id,
-                perk_type: a.q.STREAM_HIGH_QUALITY
+                perk_type: s.q.STREAM_HIGH_QUALITY
             }));
-    }, [r, s, t]),
-    r && s)
+    }, [a, r, t]),
+    a && r)
         ? (0, i.jsx)(E.h, {
               ...n,
               renderComponent: (e) =>

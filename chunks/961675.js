@@ -1,8 +1,8 @@
 n(47120);
 var i,
     l = n(442837),
-    r = n(570140);
-function s(e, t, n) {
+    a = n(570140);
+function r(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,23 +15,23 @@ function s(e, t, n) {
         e
     );
 }
-let a = new Set();
+let s = new Set();
 class o extends (i = l.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (a = new Set(e));
+        null != e && (s = new Set(e));
     }
     hasHidden(e) {
-        return a.has(e);
+        return s.has(e);
     }
     getState() {
-        return a;
+        return s;
     }
 }
-s(o, 'displayName', 'ForumChannelAdminOnboardingGuideStore'),
-    s(o, 'persistKey', 'ForumChannelAdminOnboardingGuideStore'),
-    (t.Z = new o(r.Z, {
+r(o, 'displayName', 'ForumChannelAdminOnboardingGuideStore'),
+    r(o, 'persistKey', 'ForumChannelAdminOnboardingGuideStore'),
+    (t.Z = new o(a.Z, {
         ADMIN_ONBOARDING_GUIDE_HIDE: function (e) {
             let { channelId: t, hide: n } = e;
-            n ? a.add(t) : a.delete(t);
+            n ? s.add(t) : s.delete(t);
         }
     }));

@@ -1,15 +1,15 @@
 var i = n(200651),
     l = n(192379),
-    r = n(704215),
-    s = n(481060),
-    a = n(475179),
+    a = n(704215),
+    r = n(481060),
+    s = n(475179),
     o = n(561472),
     c = n(287746),
-    u = n(325708),
-    d = n(541716),
+    d = n(325708),
+    u = n(541716),
     h = n(605236),
-    m = n(665149),
-    p = n(703558),
+    p = n(665149),
+    m = n(703558),
     f = n(585483),
     g = n(909820),
     C = n(981631),
@@ -19,35 +19,35 @@ var i = n(200651),
 t.Z = function (e) {
     let { channel: t, guild: n, maxWidth: I } = e;
     l.useEffect(() => {
-        (0, h.EW)(r.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: x.L.AUTO });
+        (0, h.EW)(a.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: x.L.AUTO });
     }, []);
     let E = l.useCallback(() => {
-            a.Z.updateChatOpen(t.id, !1), f.S.safeDispatch(C.CkL.FOCUS_CHAT_BUTTON);
+            s.Z.updateChatOpen(t.id, !1), f.S.safeDispatch(C.CkL.FOCUS_CHAT_BUTTON);
         }, [t.id]),
-        b = (0, i.jsx)(m.ZP.Icon, {
-            icon: s.XSmallIcon,
+        b = (0, i.jsx)(p.ZP.Icon, {
+            icon: r.XSmallIcon,
             tooltip: v.intl.string(v.t.cpT0Cg),
             onClick: E
         });
-    return (0, i.jsxs)(u.Z, {
-        sidebarType: u.y.CallChatSidebar,
+    return (0, i.jsxs)(d.Z, {
+        sidebarType: d.y.CallChatSidebar,
         maxWidth: I,
         floatingLayer: g.ZP,
         children: [
             (0, i.jsx)(o.Z, {
                 channel: t,
-                draftType: p.d.ChannelMessage
+                draftType: m.d.ChannelMessage
             }),
-            (0, i.jsxs)(m.ZP, {
+            (0, i.jsxs)(p.ZP, {
                 toolbar: b,
                 'aria-label': v.intl.string(v.t.BIYAqa),
                 children: [
-                    (0, i.jsx)(m.ZP.Icon, {
-                        icon: s.ChatIcon,
+                    (0, i.jsx)(p.ZP.Icon, {
+                        icon: r.ChatIcon,
                         disabled: !0,
                         'aria-label': v.intl.string(v.t.Kx5kCA)
                     }),
-                    (0, i.jsx)(m.ZP.Title, { children: t.name })
+                    (0, i.jsx)(p.ZP.Title, { children: t.name })
                 ]
             }),
             (0, i.jsx)('div', {
@@ -57,7 +57,7 @@ t.Z = function (e) {
                     {
                         channel: t,
                         guild: n,
-                        chatInputType: d.I.SIDEBAR
+                        chatInputType: u.I.SIDEBAR
                     },
                     t.id
                 )

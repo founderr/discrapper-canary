@@ -1,12 +1,12 @@
 n.d(t, {
     O: function () {
-        return a;
+        return s;
     }
 });
 var i = n(200651),
     l = n(192379),
-    r = n(709014);
-let s = {
+    a = n(709014);
+let r = {
         mute: {
             name: 'mute',
             start: 0,
@@ -28,10 +28,10 @@ let s = {
             duration: 40
         }
     },
-    a = (e) => {
+    s = (e) => {
         let t = l.useRef(null),
-            a = l.useRef(e);
-        a.current = e;
+            s = l.useRef(e);
+        s.current = e;
         let o = l.useMemo(
                 () => () => {
                     null != t.current && t.current.play(e);
@@ -57,12 +57,12 @@ let s = {
             play: o,
             Component: l.useCallback(
                 (e) =>
-                    (0, i.jsx)(r.L, {
+                    (0, i.jsx)(a.L, {
                         ...e,
                         src: () => n.e('410').then(n.t.bind(n, 992285, 19)),
                         ref: t,
-                        initialAnimation: a.current,
-                        markers: s
+                        initialAnimation: s.current,
+                        markers: r
                     }),
                 []
             )

@@ -7,38 +7,38 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    r = n(100527),
-    s = n(906732),
-    a = n(545594),
+    a = n(100527),
+    r = n(906732),
+    s = n(545594),
     o = n(295474),
     c = n(981631),
-    u = n(388032),
-    d = n(473313);
+    d = n(388032),
+    u = n(473313);
 function h(e) {
     var t, n;
     let { guild: h } = e,
-        { analyticsLocations: m } = (0, s.ZP)(r.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT),
-        [p, f] = (0, o.ww)({
+        { analyticsLocations: p } = (0, r.ZP)(a.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT),
+        [m, f] = (0, o.ww)({
             guildId: null !== (t = null == h ? void 0 : h.id) && void 0 !== t ? t : c.lds,
-            analyticsLocations: m,
+            analyticsLocations: p,
             openWithoutBackstack: !0
         }),
-        g = f ? u.intl.string(u.t['9ph2v7']) : u.intl.string(u.t.ldh9Cg),
-        C = f ? u.intl.string(u.t['/PGQf3']) : u.intl.string(u.t.WikgZ2);
+        g = f ? d.intl.string(d.t['9ph2v7']) : d.intl.string(d.t.ldh9Cg),
+        C = f ? d.intl.string(d.t['/PGQf3']) : d.intl.string(d.t.WikgZ2);
     return (0, i.jsx)('div', {
-        children: (0, i.jsx)(a.i, {
+        children: (0, i.jsx)(s.i, {
             bannerIcon: (0, i.jsx)(l.ChatXIcon, {
                 size: 'lg',
                 color: 'currentColor',
-                className: d.bannerIcon
+                className: u.bannerIcon
             }),
-            bannerHeader: u.intl.format(u.t.kcYdTk, { guildName: null !== (n = null == h ? void 0 : h.name) && void 0 !== n ? n : '' }),
+            bannerHeader: d.intl.format(d.t.kcYdTk, { guildName: null !== (n = null == h ? void 0 : h.name) && void 0 !== n ? n : '' }),
             bannerSubtext: g,
-            containerStyles: d.bannerContainer,
-            headerStyles: d.bannerHeader,
+            containerStyles: u.bannerContainer,
+            headerStyles: u.bannerHeader,
             children: (0, i.jsx)(l.Button, {
                 onClick: () => {
-                    p();
+                    m();
                 },
                 size: l.Button.Sizes.SMALL,
                 children: C

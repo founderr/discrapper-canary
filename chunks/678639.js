@@ -9,8 +9,8 @@ var r = n(200651),
     l = n(120356),
     i = n.n(l),
     o = n(442837),
-    c = n(481060),
-    s = n(665149),
+    s = n(481060),
+    c = n(665149),
     d = n(428530),
     u = n(484036),
     h = n(681619),
@@ -34,7 +34,7 @@ function g(e) {
                 }
             );
         }, [t, n]),
-        (0, r.jsx)(c.ScrollerThin, {
+        (0, r.jsx)(s.ScrollerThin, {
             className: f.inspectorContainer,
             children: (0, r.jsx)(d.Z, { data: l })
         })
@@ -88,14 +88,14 @@ function j(e) {
         initialHeight: n,
         children: [
             (0, r.jsx)(a, {}),
-            (0, r.jsxs)(s.ZP, {
+            (0, r.jsxs)(c.ZP, {
                 className: i()(x.headerBar, f.subPanelHeaderBar),
                 children: [
-                    (0, r.jsx)(s.ZP.Icon, {
-                        icon: c.TagIcon,
+                    (0, r.jsx)(c.ZP.Icon, {
+                        icon: s.TagIcon,
                         tooltip: t.getName()
                     }),
-                    (0, r.jsx)(s.ZP.Title, { children: t.getName() })
+                    (0, r.jsx)(c.ZP.Title, { children: t.getName() })
                 ]
             }),
             l({ store: t })
@@ -106,7 +106,7 @@ function _() {
     let e = a.useRef(null),
         [t, n] = a.useState(''),
         l = o.yh.getAll(),
-        s = a
+        c = a
             .useMemo(
                 () =>
                     l
@@ -131,9 +131,9 @@ function _() {
         children: [
             (0, r.jsx)('div', {
                 className: f.toolbar,
-                children: (0, r.jsx)(c.SearchBar, {
+                children: (0, r.jsx)(s.SearchBar, {
                     className: f.searchBar,
-                    size: c.SearchBar.Sizes.SMALL,
+                    size: s.SearchBar.Sizes.SMALL,
                     query: t,
                     onChange: n,
                     onClear: () => n(''),
@@ -143,7 +143,7 @@ function _() {
             }),
             (0, r.jsx)(h.Z, {
                 columns: b,
-                data: s,
+                data: c,
                 selectedRowKey: d,
                 onClickRow: (e) => u(e.key)
             }),

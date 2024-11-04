@@ -71,7 +71,7 @@ let N = (0, g.Un)({
 function R() {
     return l.useEffect(() => (p.Z.enable(), p.Z.enableTemp(m.u), () => p.Z.disableTemp()), []), null;
 }
-class P extends (i = l.PureComponent) {
+class O extends (i = l.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         return e.mode !== t.mode
             ? {
@@ -184,8 +184,8 @@ class P extends (i = l.PureComponent) {
             });
     }
 }
-S(P, 'defaultProps', { baseLayer: !1 }), S(P, 'contextType', u.AccessibilityPreferencesContext);
-class O extends l.PureComponent {
+S(O, 'defaultProps', { baseLayer: !1 }), S(O, 'contextType', u.AccessibilityPreferencesContext);
+class P extends l.PureComponent {
     componentDidMount() {
         I.S.subscribe(C.CkL.LAYER_POP_ESCAPE_KEY, h.xf);
     }
@@ -199,7 +199,7 @@ class O extends l.PureComponent {
         return (
             l.push(
                 (0, r.jsx)(
-                    P,
+                    O,
                     {
                         mode: 0 !== i || n ? y : Z,
                         baseLayer: !0,
@@ -217,7 +217,7 @@ class O extends l.PureComponent {
         return (
             (i = 'string' == typeof e ? A[e]() : (0, r.jsx)(e, {})),
             (0, r.jsxs)(
-                P,
+                O,
                 {
                     mode: t === n - 1 ? Z : y,
                     children: [(0, r.jsx)(R, {}), i]
@@ -249,7 +249,7 @@ function j(e) {
     let t = (0, c.e7)([_.Z], () => _.Z.darkSidebar) ? C.BRd.DARK : void 0,
         n = (0, c.e7)([E.Z], () => E.Z.getLayers()),
         i = (0, f.QP)((e) => e.fullScreenLayers.length > 0);
-    return (0, r.jsx)(O, {
+    return (0, r.jsx)(P, {
         ...e,
         sidebarTheme: t,
         layers: n,

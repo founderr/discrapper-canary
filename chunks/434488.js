@@ -5,16 +5,16 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    s = n.n(r),
-    a = n(704215),
+    a = n(120356),
+    r = n.n(a),
+    s = n(704215),
     o = n(692547),
     c = n(481060),
-    u = n(2052),
-    d = n(127255),
+    d = n(2052),
+    u = n(127255),
     h = n(5200),
-    m = n(403404),
-    p = n(100527),
+    p = n(403404),
+    m = n(100527),
     f = n(906732),
     g = n(895924),
     C = n(605236),
@@ -24,50 +24,50 @@ var i = n(200651),
     I = n(981631),
     E = n(388032),
     b = n(896659),
-    S = n(334732);
+    N = n(334732);
 function Z(e) {
-    let { channel: t, guild: n, width: l, inPopout: r, handleClose: s, userParticipantCount: a } = e;
+    let { channel: t, guild: n, width: l, inPopout: a, handleClose: r, userParticipantCount: s } = e;
     return l < 250
         ? (0, i.jsx)(T, {
               channel: t,
               guild: n,
               width: l,
-              inPopout: r,
-              handleClose: s,
-              userParticipantCount: a
+              inPopout: a,
+              handleClose: r,
+              userParticipantCount: s
           })
-        : a > 1
+        : s > 1
           ? (0, i.jsx)(j, {
                 channel: t,
                 guild: n,
                 width: l,
-                inPopout: r,
-                handleClose: s,
-                userParticipantCount: a
+                inPopout: a,
+                handleClose: r,
+                userParticipantCount: s
             })
-          : (0, i.jsx)(N, {
+          : (0, i.jsx)(S, {
                 channel: t,
                 guild: n,
                 width: l,
-                inPopout: r
+                inPopout: a
             });
 }
 function T(e) {
     let { channel: t, inPopout: n, handleClose: l } = e,
-        { analyticsLocations: r } = (0, f.ZP)(p.Z.VC_TILE_ACTIVITY_SHELF_BUTTON),
-        a = (0, u.O)(),
-        d = () => {
-            (0, m.Z)({
+        { analyticsLocations: a } = (0, f.ZP)(m.Z.VC_TILE_ACTIVITY_SHELF_BUTTON),
+        s = (0, d.O)(),
+        u = () => {
+            (0, p.Z)({
                 channel: t,
                 guildId: t.guild_id,
-                locationObject: a.location,
+                locationObject: s.location,
                 openInPopout: n,
-                analyticsLocations: r,
+                analyticsLocations: a,
                 opensAppLauncherModal: !0
             });
         };
     return (0, i.jsx)(f.Gt, {
-        value: r,
+        value: a,
         children: (0, i.jsxs)(_.Z, {
             className: b.root,
             children: [
@@ -79,7 +79,7 @@ function T(e) {
                             ...n,
                             className: b.clickableTile,
                             onClick: () => {
-                                null == t || t(), d();
+                                null == t || t(), u();
                             },
                             children: (0, i.jsx)('div', {
                                 className: b.iconContainer,
@@ -98,7 +98,7 @@ function T(e) {
                     children: (e) =>
                         (0, i.jsx)(c.Clickable, {
                             onClick: l,
-                            className: s()(e, b.shelfButtonCloseButton),
+                            className: r()(e, b.shelfButtonCloseButton),
                             children: (0, i.jsx)(c.CircleXIcon, {
                                 size: 'md',
                                 color: 'currentColor',
@@ -111,24 +111,24 @@ function T(e) {
         })
     });
 }
-function N(e) {
-    let { channel: t, guild: r, inPopout: s, width: a } = e;
+function S(e) {
+    let { channel: t, guild: a, inPopout: r, width: s } = e;
     l.useEffect(() => {
         v.default.track(I.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: 'activity invite',
             n_participants: 1
         });
     }, []);
-    let o = (0, u.O)(),
-        { analyticsLocations: d } = (0, f.ZP)(p.Z.VC_TILE_ACTIVITY_INVITE);
+    let o = (0, d.O)(),
+        { analyticsLocations: u } = (0, f.ZP)(m.Z.VC_TILE_ACTIVITY_INVITE);
     return (0, i.jsx)(f.Gt, {
-        value: d,
+        value: u,
         children: (0, i.jsxs)(_.Z, {
             className: b.root,
             children: [
-                a > 400
+                s > 400
                     ? (0, i.jsx)('img', {
-                          src: S,
+                          src: N,
                           className: b.art,
                           alt: E.intl.string(E.t['3Y9xdH'])
                       })
@@ -154,12 +154,12 @@ function N(e) {
                                         return (n) =>
                                             (0, i.jsx)(e, {
                                                 ...n,
-                                                guild: r,
+                                                guild: a,
                                                 channel: t,
                                                 source: I.t4x.ACTIVITY_ENTRY_POINT_TILE
                                             });
                                     },
-                                    { contextKey: s ? c.POPOUT_MODAL_CONTEXT : c.DEFAULT_MODAL_CONTEXT }
+                                    { contextKey: r ? c.POPOUT_MODAL_CONTEXT : c.DEFAULT_MODAL_CONTEXT }
                                 );
                             },
                             children: [
@@ -175,12 +175,12 @@ function N(e) {
                             className: b.button,
                             innerClassName: b.buttonContents,
                             onClick: function () {
-                                (0, m.Z)({
+                                (0, p.Z)({
                                     channel: t,
                                     guildId: t.guild_id,
                                     locationObject: o.location,
-                                    openInPopout: s,
-                                    analyticsLocations: d,
+                                    openInPopout: r,
+                                    analyticsLocations: u,
                                     opensAppLauncherModal: !0
                                 });
                             },
@@ -199,15 +199,15 @@ function N(e) {
     });
 }
 function j(e) {
-    let { channel: t, guild: n, handleClose: r, width: o, userParticipantCount: u } = e;
+    let { channel: t, guild: n, handleClose: a, width: o, userParticipantCount: d } = e;
     l.useEffect(() => {
         v.default.track(I.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: 'activity suggestion',
-            n_participants: u
+            n_participants: d
         });
     }, []);
-    let m = (0, d.Z)({ guildId: n.id }).slice(0, 3),
-        { analyticsLocations: Z } = (0, f.ZP)(p.Z.VC_TILE_ACTIVITY_SUGGESTION);
+    let p = (0, u.Z)({ guildId: n.id }).slice(0, 3),
+        { analyticsLocations: Z } = (0, f.ZP)(m.Z.VC_TILE_ACTIVITY_SUGGESTION);
     return (0, i.jsx)(f.Gt, {
         value: Z,
         children: (0, i.jsxs)(_.Z, {
@@ -216,7 +216,7 @@ function j(e) {
                 o > 480
                     ? (0, i.jsx)('img', {
                           className: b.art,
-                          src: S,
+                          src: N,
                           alt: E.intl.string(E.t['3Y9xdH'])
                       })
                     : null,
@@ -228,8 +228,8 @@ function j(e) {
                       })
                     : null,
                 (0, i.jsx)('div', {
-                    className: s()(b.activitiesContainer, { [b.activitiesContainerSmol]: o <= 300 }),
-                    children: m.map((e) =>
+                    className: r()(b.activitiesContainer, { [b.activitiesContainerSmol]: o <= 300 }),
+                    children: p.map((e) =>
                         (0, i.jsx)(
                             h.Y,
                             {
@@ -249,9 +249,9 @@ function j(e) {
                         v.default.track(I.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
                             tile_type: 'activity suggestion',
                             close_type: 'permanent',
-                            n_participants: u
+                            n_participants: d
                         }),
-                            (0, C.EW)(a.z.VC_TILE_ACTIVITIES_ENTRY_POINT);
+                            (0, C.EW)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT);
                     },
                     children: [
                         (0, i.jsx)(x.Z, {}),
@@ -267,9 +267,9 @@ function j(e) {
                         v.default.track(I.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
                             tile_type: 'activity suggestion',
                             close_type: 'temporary',
-                            n_participants: u
+                            n_participants: d
                         }),
-                            r();
+                            a();
                     },
                     children: (0, i.jsx)(c.XSmallIcon, {
                         size: 'md',

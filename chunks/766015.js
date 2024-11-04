@@ -1,7 +1,7 @@
 var i,
     l = n(796075),
-    r = n(481060),
-    s = n(916515),
-    a = n(558025);
-let o = (0, r.createListScroller)(s.auto, s.fade, a.customTheme, null !== (i = window.ResizeObserver) && void 0 !== i ? i : l.d);
+    a = n(481060),
+    r = n(916515),
+    s = n(558025);
+let o = (0, a.createListScroller)(r.auto, r.fade, s.customTheme, null !== (i = window.ResizeObserver) && void 0 !== i ? i : l.d);
 t.Z = o;

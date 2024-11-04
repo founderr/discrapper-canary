@@ -541,7 +541,7 @@ class ev extends (i = f.ZP.Store) {
         return z.gameOverrides[eu(e)];
     }
     getGameOverlayStatus(e) {
-        if (e.hidden || e.isLauncher || e.elevated || e.sandboxed) return P.verbose('getGameOverlayStatus: Overlay not supported.', e), null;
+        if (e.isLauncher || e.elevated || e.sandboxed) return P.verbose('getGameOverlayStatus: Overlay not supported.', e), null;
         let t = ec(e);
         return t.enabled ? t : null;
     }

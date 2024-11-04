@@ -1,42 +1,42 @@
-n.d(t, {
+e.d(n, {
     Z: function () {
-        return s;
+        return a;
     }
 }),
-    n(47120);
-var i = n(200651),
-    l = n(192379),
-    r = n(311308),
-    a = n(692547),
-    o = n(481060);
-function s(e) {
-    let t = (0, l.useRef)(null),
-        [n, s] = (0, l.useState)(null),
-        [c] = (0, l.useState)(() => new r.TimelineDataSeries()),
-        u = (0, o.useToken)(a.Z.colors.BACKGROUND_PRIMARY).hsl(),
-        d = (0, o.useToken)(a.Z.colors.TEXT_NORMAL).hsl(),
-        h = (0, o.useToken)(a.Z.colors.BACKGROUND_ACCENT).hsl(),
-        p = (0, o.useToken)(a.Z.unsafe_rawColors.BRAND_500).hsl();
-    (0, l.useEffect)(() => {
-        var e;
-        let n = t.current;
-        if (null == n) return;
-        let i = new r.TimelineGraphView(n, null !== (e = window.devicePixelRatio) && void 0 !== e ? e : 1);
-        (i.backgroundColor = u), (i.textColor = d), (i.gridColor = h), (i.timeOptions = { timeStyle: 'short' }), (i.fontFamily = 'gg sans'), (i.fontSize = 11), c.setColor(p), i.addDataSeries(c), i.updateEndDate(), s(i);
-    }, [t, u, p, h, d, c]),
-        c.setPoints(e.dataPoints),
-        null == n || n.updateEndDate();
-    let f = {
-        width: e.width,
-        height: e.height
+    e(47120);
+var i = e(200651),
+    s = e(192379),
+    r = e(311308),
+    o = e(692547),
+    l = e(481060);
+function a(t) {
+    let n = (0, s.useRef)(null),
+        [e, a] = (0, s.useState)(null),
+        [c] = (0, s.useState)(() => new r.TimelineDataSeries()),
+        u = (0, l.useToken)(o.Z.colors.BACKGROUND_PRIMARY).hsl(),
+        E = (0, l.useToken)(o.Z.colors.TEXT_NORMAL).hsl(),
+        d = (0, l.useToken)(o.Z.colors.BACKGROUND_ACCENT).hsl(),
+        N = (0, l.useToken)(o.Z.unsafe_rawColors.BRAND_500).hsl();
+    (0, s.useEffect)(() => {
+        var t;
+        let e = n.current;
+        if (null == e) return;
+        let i = new r.TimelineGraphView(e, null !== (t = window.devicePixelRatio) && void 0 !== t ? t : 1);
+        (i.backgroundColor = u), (i.textColor = E), (i.gridColor = d), (i.timeOptions = { timeStyle: 'short' }), (i.fontFamily = 'gg sans'), (i.fontSize = 11), c.setColor(N), i.addDataSeries(c), i.updateEndDate(), a(i);
+    }, [n, u, N, d, E, c]),
+        c.setPoints(t.dataPoints),
+        null == e || e.updateEndDate();
+    let C = {
+        width: t.width,
+        height: t.height
     };
     return (0, i.jsx)(
         'canvas',
         {
-            style: f,
-            width: e.width,
-            height: e.height,
-            ref: t
+            style: C,
+            width: t.width,
+            height: t.height,
+            ref: n
         },
         'canvas'
     );

@@ -41,6 +41,6 @@ class h extends (s = o.ZP.Store) {
         },
         LAYER_PUSH: _,
         CONTEXT_MENU_CLOSE: _,
-        OVERLAY_SET_UI_LOCKED: _,
+        OVERLAY_SET_INPUT_LOCKED: _,
         OVERLAY_DEACTIVATE_ALL_REGIONS: _
     }));

@@ -33,8 +33,8 @@ var i,
     y = n(448206),
     L = n(184301),
     R = n(347475),
-    P = n(496675),
-    O = n(594174),
+    O = n(496675),
+    P = n(594174),
     j = n(662868),
     D = n(981631),
     M = n(765305),
@@ -57,10 +57,10 @@ function U(e) {
         B = null == i ? void 0 : i.id,
         H = (0, c.Wu)([b.Z], () => [...new Set(b.Z.getMutableParticipants(B, A.pV.SPEAKER).map((e) => e.user))], [B]),
         V = (0, c.e7)([b.Z], () => (null != B ? b.Z.getParticipantCount(B, A.pV.AUDIENCE) : 0), [B]),
-        F = (0, c.e7)([P.Z], () => P.Z.can(D.Plq.CONNECT, i)),
+        F = (0, c.e7)([O.Z], () => O.Z.can(D.Plq.CONNECT, i)),
         z = (0, y.Z)(null == i ? void 0 : i.id),
         Y = null == r ? void 0 : r.creator_id,
-        W = (0, c.e7)([O.default], () => O.default.getUser(Y), [Y]);
+        W = (0, c.e7)([P.default], () => P.default.getUser(Y), [Y]);
     a.useEffect(() => {
         null != Y && (0, h.PR)(Y);
     }, [Y]);

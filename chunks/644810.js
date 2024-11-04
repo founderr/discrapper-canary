@@ -1,12 +1,12 @@
 n.d(t, {
     B: function () {
-        return c;
+        return u;
     }
 }),
     n(653041);
-var i = n(55000),
-    l = n(693824),
-    a = n(690725),
+var l = n(55000),
+    a = n(693824),
+    i = n(690725),
     r = n(737583),
     o = n(169040);
 let s = (e, t, n) => ({
@@ -14,7 +14,7 @@ let s = (e, t, n) => ({
         ...(null != t && { MediaImage: t }),
         ...(null != n && { ApplicationImage: n })
     }),
-    u = (e, t) => {
+    c = (e, t) => {
         let n = [
             {
                 iconPath: o.i6,
@@ -30,14 +30,14 @@ let s = (e, t, n) => ({
             n
         );
     },
-    c = async (e) => {
-        let { mediaImageSrc: t, entry: n, avatarSrc: c, description: d, timestamp: h, episodeDescription: m, colors: x, channelId: v } = e,
-            f = n.extra.media_title,
-            p = s(c, t);
-        return await (0, a.f)({
-            assetsToLoad: p,
+    u = async (e) => {
+        let { mediaImageSrc: t, entry: n, avatarSrc: u, description: d, timestamp: m, episodeDescription: x, colors: h, channelId: p } = e,
+            C = n.extra.media_title,
+            v = s(u, t);
+        return await (0, i.f)({
+            assetsToLoad: v,
             drawImage: (e) => {
-                let t = x.map((e, t) => ({
+                let t = h.map((e, t) => ({
                     color: e,
                     stop: t
                 }));
@@ -78,9 +78,9 @@ let s = (e, t, n) => ({
                         h: o.Pu
                     },
                     8,
-                    { fillMode: l.JU.Contain }
+                    { fillMode: a.JU.Contain }
                 );
-                n === l.vP.Failure &&
+                n === a.vP.Failure &&
                     (n = e.drawRoundedImage(
                         'ApplicationImage',
                         {
@@ -93,9 +93,9 @@ let s = (e, t, n) => ({
                         },
                         8
                     )),
-                    n === l.vP.Failure &&
+                    n === a.vP.Failure &&
                         e.drawPath(
-                            i.Cv,
+                            l.Cv,
                             {
                                 x: o.sB,
                                 y: o.sB
@@ -119,7 +119,7 @@ let s = (e, t, n) => ({
                         size: 16,
                         family: o.I8,
                         weight: o.Ue,
-                        truncate: l.GX.Wrap
+                        truncate: a.GX.Wrap
                     }),
                     e.drawText(
                         d,
@@ -131,20 +131,20 @@ let s = (e, t, n) => ({
                         },
                         !0
                     );
-                let a = u(h, m);
+                let i = c(m, x);
                 (0, r.J)({
                     canvas: e,
-                    badges: a,
+                    badges: i,
                     startPosition: o.Iq,
                     maxWidth: o.kC
                 });
             },
             exportConfigs: {
-                format: l.kH.CloudUpload,
+                format: a.kH.CloudUpload,
                 quality: 1,
-                fileName: 'user-reacting-to-'.concat(f, '.png').toLowerCase(),
+                fileName: 'user-reacting-to-'.concat(C, '.png').toLowerCase(),
                 fileType: 'png',
-                channelId: v
+                channelId: p
             }
         });
     };

@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return f;
+        return g;
     },
     k: function () {
         return i;
@@ -16,11 +16,11 @@ var r = t(120356),
     c = t(565138),
     d = t(372769),
     u = t(857395),
-    h = t(131154),
-    m = t(38981),
+    m = t(131154),
+    h = t(38981),
     x = t(142664);
-function f(e) {
-    let { guild: n, stageInstance: t, showGuildPopout: l, setShowGuildPopout: i, handleGuildNameClick: r, source: f, speakers: g, speakerCount: _, audienceCount: v, channelName: I } = e,
+function g(e) {
+    let { guild: n, stageInstance: t, showGuildPopout: l, setShowGuildPopout: i, handleGuildNameClick: r, source: g, speakers: f, speakerCount: v, audienceCount: _, channelName: I } = e,
         N = n.id;
     return (0, a.jsx)('div', {
         className: x.contentContainer,
@@ -62,7 +62,7 @@ function f(e) {
                         (0, a.jsxs)('div', {
                             className: x.rightJustifiedContent,
                             children: [
-                                6 === f &&
+                                6 === g &&
                                     (0, a.jsx)('div', {
                                         className: x.featuredTag,
                                         children: (0, a.jsx)(s.Text, {
@@ -71,8 +71,8 @@ function f(e) {
                                             children: 'Featured'
                                         })
                                     }),
-                                (0, a.jsx)(m.Z, {
-                                    count: v,
+                                (0, a.jsx)(h.Z, {
+                                    count: _,
                                     className: x.__invalid_audienceCount
                                 })
                             ]
@@ -91,10 +91,10 @@ function f(e) {
                     variant: 'text-sm/normal',
                     children: t.description
                 }),
-                (0, a.jsx)(h.Z, {
+                (0, a.jsx)(m.Z, {
                     guild: n,
-                    speakers: g,
-                    speakerCount: _,
+                    speakers: f,
+                    speakerCount: v,
                     className: x.speakers
                 }),
                 null != I &&

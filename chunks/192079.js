@@ -1,59 +1,59 @@
-e.d(t, {
+t.d(n, {
     ER: function () {
-        return d;
+        return o;
     },
     kk: function () {
-        return _;
+        return h;
     },
     s$: function () {
-        return f;
+        return m;
     }
 }),
-    e(724458),
-    e(47120),
-    e(392711);
-var i = e(19780),
-    l = e(5192),
-    r = e(700785),
-    c = e(427679),
-    o = e(157925),
-    a = e(981631),
-    s = e(71080),
-    u = e(388032);
-function d(n, t, e, i) {
-    let r = t[0],
-        c = l.ZP.getName(n, e, r),
-        o = null != i ? i : t.length;
-    return 1 === o && null != r
-        ? c
-        : null == r
-          ? u.intl.formatToPlainString(u.t.chmM9P, { count: o })
-          : u.intl.formatToPlainString(u.t.GhkJ29, {
-                name: c,
-                count: o - 1
+    t(724458),
+    t(47120),
+    t(392711);
+var l = t(19780),
+    i = t(5192),
+    a = t(700785),
+    s = t(427679),
+    r = t(157925),
+    c = t(981631),
+    u = t(71080),
+    d = t(388032);
+function o(e, n, t, l) {
+    let a = n[0],
+        s = i.ZP.getName(e, t, a),
+        r = null != l ? l : n.length;
+    return 1 === r && null != a
+        ? s
+        : null == a
+          ? d.intl.formatToPlainString(d.t.chmM9P, { count: r })
+          : d.intl.formatToPlainString(d.t.GhkJ29, {
+                name: s,
+                count: r - 1
             });
 }
-function _(n, t) {
-    switch (n) {
-        case s.aC.OWNER:
-            return u.intl.string(u.t.icuNBA);
-        case s.aC.ADMINISTRATOR:
-            return u.intl.string(u.t.eTmN5e);
-        case s.aC.MEMBER:
-        case s.aC.ROLE:
-            return t ? u.intl.string(u.t.Hw3XW1) : u.intl.string(u.t.YieyPj);
-        case s.aC.EMPTY_STATE:
+function h(e, n) {
+    switch (e) {
+        case u.aC.OWNER:
+            return d.intl.string(d.t.icuNBA);
+        case u.aC.ADMINISTRATOR:
+            return d.intl.string(d.t.eTmN5e);
+        case u.aC.MEMBER:
+        case u.aC.ROLE:
+            return n ? d.intl.string(d.t.Hw3XW1) : d.intl.string(d.t.YieyPj);
+        case u.aC.EMPTY_STATE:
     }
     return null;
 }
-function f(n) {
-    let t = c.Z.getStageInstanceByChannel(n.id);
+function m(e) {
+    let n = s.Z.getStageInstanceByChannel(e.id);
     return {
-        channel_id: n.id,
-        guild_id: n.guild_id,
-        topic: null == t ? void 0 : t.topic,
-        media_session_id: i.Z.getMediaSessionId(),
-        request_to_speak_state: r.Uu(a.Plq.REQUEST_TO_SPEAK, n) ? o.BM.EVERYONE : o.BM.NO_ONE,
-        stage_instance_id: null == t ? void 0 : t.id
+        channel_id: e.id,
+        guild_id: e.guild_id,
+        topic: null == n ? void 0 : n.topic,
+        media_session_id: l.Z.getMediaSessionId(),
+        request_to_speak_state: a.Uu(c.Plq.REQUEST_TO_SPEAK, e) ? r.BM.EVERYONE : r.BM.NO_ONE,
+        stage_instance_id: null == n ? void 0 : n.id
     };
 }

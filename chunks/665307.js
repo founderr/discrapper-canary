@@ -46,8 +46,8 @@ function L(e, t, n) {
     );
 }
 let R = (0, x.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
-    P = (0, x.Mg)(u.Z.GAME_LIST_LINKED_TO_GLOW_DURATION),
-    O = Object.freeze({
+    O = (0, x.Mg)(u.Z.GAME_LIST_LINKED_TO_GLOW_DURATION),
+    P = Object.freeze({
         [A.iEv.PLATFORM]: 'Platform',
         [A.iEv.LAST_PLAYED]: 'Last Played',
         [A.iEv.NAME]: 'Name'
@@ -178,7 +178,7 @@ let R = (0, x.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
                         }),
                         (0, T.Je)(e.libraryApplication)
                             ? (0, r.jsx)(f.Z, {
-                                  analyticsListSort: ((i = t.sortKey), (a = t.sortDirection), ''.concat(O[i], ' ').concat(a === A.sHY.ASCENDING ? 'ASC' : 'DESC')),
+                                  analyticsListSort: ((i = t.sortKey), (a = t.sortDirection), ''.concat(P[i], ' ').concat(a === A.sHY.ASCENDING ? 'ASC' : 'DESC')),
                                   analyticsListIndex: n,
                                   source: A.Sbl.APPLICATION_LIBRARY,
                                   libraryApplication: e.libraryApplication,
@@ -234,7 +234,7 @@ class w extends (i = l.PureComponent) {
         null != e &&
             null != this._rowRefs[e] &&
             (this.props.scrollToRow(this._rowRefs[e], R),
-            new d.V7().start(P, () => {
+            new d.V7().start(O, () => {
                 !this._didUnmount && this.setState({ highlightedApplicationKey: null });
             }));
     }

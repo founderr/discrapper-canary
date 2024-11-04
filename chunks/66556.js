@@ -1,24 +1,24 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return m;
     }
 }),
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(442837),
-    s = n(481060),
-    a = n(665149),
+    a = n(442837),
+    r = n(481060),
+    s = n(665149),
     o = n(731290),
     c = n(594174),
-    u = n(91159),
-    d = n(593130),
+    d = n(91159),
+    u = n(593130),
     h = n(388032),
-    m = n(402135);
-function p(e) {
+    p = n(402135);
+function m(e) {
     let { channel: t } = e,
-        [n, p] = l.useState(!1),
-        f = (0, r.e7)(
+        [n, m] = l.useState(!1),
+        f = (0, a.e7)(
             [o.Z, c.default],
             () => {
                 let e = c.default.getCurrentUser();
@@ -27,22 +27,22 @@ function p(e) {
             [t]
         ),
         g = l.useCallback(() => {
-            p(!1);
+            m(!1);
         }, []),
         C = l.useCallback(() => {
-            !n && (0, u.U4)('Popout'), p(!n);
+            !n && (0, d.U4)('Popout'), m(!n);
         }, [n]);
-    return (0, i.jsx)(s.Popout, {
-        animation: s.Popout.Animation.NONE,
+    return (0, i.jsx)(r.Popout, {
+        animation: r.Popout.Animation.NONE,
         position: 'bottom',
         align: 'right',
         autoInvert: !1,
         shouldShow: n,
         onRequestClose: g,
         renderPopout: function () {
-            return (0, i.jsx)(s.Dialog, {
-                children: (0, i.jsx)(d.Z, {
-                    className: m.browser,
+            return (0, i.jsx)(r.Dialog, {
+                children: (0, i.jsx)(u.Z, {
+                    className: p.browser,
                     channel: t,
                     onClose: g
                 })
@@ -50,11 +50,11 @@ function p(e) {
         },
         children: (e, t) => {
             let { isShown: n } = t;
-            return (0, i.jsx)(a.JO, {
+            return (0, i.jsx)(s.JO, {
                 ...e,
-                className: m.icon,
+                className: p.icon,
                 onClick: C,
-                icon: s.ThreadIcon,
+                icon: r.ThreadIcon,
                 'aria-label': h.intl.string(h.t.B2panJ),
                 tooltip: n ? null : h.intl.string(h.t.B2panJ),
                 disabled: f,

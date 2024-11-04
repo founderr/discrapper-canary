@@ -1,33 +1,33 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return p;
     }
 });
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    r = n(481060),
-    s = n(479313),
-    a = n(765104),
+    a = n(481060),
+    r = n(479313),
+    s = n(765104),
     o = n(626135),
     c = n(665149),
-    u = n(981631),
-    d = n(814249),
+    d = n(981631),
+    u = n(814249),
     h = n(388032);
-function m(e) {
+function p(e) {
     let { channel: t } = e,
-        n = (0, l.e7)([a.Z], () => a.Z.shouldShowTopicsBar());
+        n = (0, l.e7)([s.Z], () => s.Z.shouldShowTopicsBar());
     return (0, i.jsx)(c.ZP.Icon, {
-        icon: r.TopicsIcon,
+        icon: a.TopicsIcon,
         onClick: () => {
-            o.default.track(u.rMx.SUMMARIES_SIDEBAR_TOGGLED, {
+            o.default.track(d.rMx.SUMMARIES_SIDEBAR_TOGGLED, {
                 summaries_sidebar_open: !n,
-                source: d.Dc.TOOLBAR_BUTTON,
+                source: u.Dc.TOOLBAR_BUTTON,
                 guild_id: t.guild_id,
                 channel_id: t.id,
                 channel_type: t.type
             }),
-                (0, s.e7)();
+                (0, r.e7)();
         },
         tooltip: n ? h.intl.string(h.t.nGs3kJ) : h.intl.string(h.t.bIm2sL),
         selected: n,

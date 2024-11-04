@@ -1,36 +1,36 @@
 var i = n(200651),
     l = n(192379),
-    r = n(481060),
-    s = n(287734),
-    a = n(305325),
+    a = n(481060),
+    r = n(287734),
+    s = n(305325),
     o = n(281956),
     c = n(584729),
-    u = n(27457),
-    d = n(354459),
+    d = n(27457),
+    u = n(354459),
     h = n(388032),
-    m = n(754833);
+    p = n(754833);
 t.Z = function (e) {
     var t, n;
-    let { participants: p, channel: f, hasConnectPermission: g } = e,
-        C = p.filter(d.Io),
+    let { participants: m, channel: f, hasConnectPermission: g } = e,
+        C = m.filter(u.Io),
         x = (0, o.J)(f.guild_id),
         v = l.useCallback(() => {
-            x ? (0, a.hk)(f.guild_id, () => s.default.selectVoiceChannel(f.id)) : s.default.selectVoiceChannel(f.id);
+            x ? (0, s.hk)(f.guild_id, () => r.default.selectVoiceChannel(f.id)) : r.default.selectVoiceChannel(f.id);
         }, [f.id, f.guild_id, x]),
         _ = 4 === C.length ? 2 : 3;
     return (0, i.jsxs)('div', {
-        className: m.container,
+        className: p.container,
         children: [
             (0, i.jsx)('div', {
-                className: m.tiles,
+                className: p.tiles,
                 style: { maxWidth: 168 * _ },
                 children: C.slice(0, 5).map((e) =>
                     (0, i.jsx)(
-                        u.ZP,
+                        d.ZP,
                         {
                             participant: e,
                             channel: f,
-                            className: m.tile,
+                            className: p.tile,
                             paused: !0,
                             inCall: !0,
                             noVideoRender: !0,
@@ -41,14 +41,14 @@ t.Z = function (e) {
                     )
                 )
             }),
-            (0, i.jsx)(r.Heading, {
-                className: m.channelName,
+            (0, i.jsx)(a.Heading, {
+                className: p.channelName,
                 variant: 'heading-xxl/semibold',
                 children: f.name
             }),
             (0, i.jsx)('div', {
-                className: m.participantsRow,
-                children: (0, i.jsx)(r.Text, {
+                className: p.participantsRow,
+                children: (0, i.jsx)(a.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
                     children:
@@ -71,12 +71,12 @@ t.Z = function (e) {
                                   : void 0)
                 })
             }),
-            (0, i.jsx)(r.Button, {
+            (0, i.jsx)(a.Button, {
                 disabled: !g,
-                className: m.joinButton,
-                color: g ? r.Button.Colors.GREEN : r.Button.Colors.PRIMARY,
+                className: p.joinButton,
+                color: g ? a.Button.Colors.GREEN : a.Button.Colors.PRIMARY,
                 onClick: v,
-                size: r.Button.Sizes.MEDIUM,
+                size: a.Button.Sizes.MEDIUM,
                 children: g ? h.intl.string(h.t['96ANUF']) : h.intl.string(h.t.TVBCKS)
             })
         ]

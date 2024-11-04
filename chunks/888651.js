@@ -1,7 +1,7 @@
 if (
     (n.d(t, {
         $: function () {
-            return m;
+            return p;
         },
         Q: function () {
             return h;
@@ -11,30 +11,30 @@ if (
 )
     var i = n(155281);
 var l = n(222146),
-    r = n(749210),
-    s = n(430824),
-    a = n(496675),
+    a = n(749210),
+    r = n(430824),
+    s = n(496675),
     o = n(979651),
     c = n(938475),
-    u = n(981631);
-let d = 'DRAGGABLE_USER';
+    d = n(981631);
+let u = 'DRAGGABLE_USER';
 function h(e) {
     return (0, i.G)(
-        d,
+        u,
         {
             canDrop(e) {
                 var t, n;
                 let { channel: i } = e,
                     l = i.getGuildId(),
-                    r = null !== (n = null === (t = s.Z.getGuild(l)) || void 0 === t ? void 0 : t.maxVideoChannelUsers) && void 0 !== n ? n : -1,
-                    d = c.ZP.countVoiceStatesForChannel(i.id),
-                    h = null != l && o.Z.hasVideo(i.id) && r > 0 && d >= r + 1;
-                return a.Z.can(u.Plq.MOVE_MEMBERS, i) && a.Z.can(u.Plq.CONNECT, i) && !h;
+                    a = null !== (n = null === (t = r.Z.getGuild(l)) || void 0 === t ? void 0 : t.maxVideoChannelUsers) && void 0 !== n ? n : -1,
+                    u = c.ZP.countVoiceStatesForChannel(i.id),
+                    h = null != l && o.Z.hasVideo(i.id) && a > 0 && u >= a + 1;
+                return s.Z.can(d.Plq.MOVE_MEMBERS, i) && s.Z.can(d.Plq.CONNECT, i) && !h;
             },
             drop(e, t) {
                 let { channel: n } = e,
                     i = o.Z.getVoiceStateForUser(t.getItem().user.id);
-                (null == i ? void 0 : i.channelId) !== n.id && r.Z.setChannel(n.getGuildId(), t.getItem().user.id, n.id);
+                (null == i ? void 0 : i.channelId) !== n.id && a.Z.setChannel(n.getGuildId(), t.getItem().user.id, n.id);
             }
         },
         (e, t) => ({
@@ -43,9 +43,9 @@ function h(e) {
         })
     )(e);
 }
-function m(e) {
+function p(e) {
     return (0, l.E)(
-        d,
+        u,
         {
             canDrag(e) {
                 let { user: t, canDrag: n } = e;

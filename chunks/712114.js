@@ -1,29 +1,29 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return p;
     }
 });
 var i = n(200651),
     l = n(192379),
-    r = n(990547),
-    s = n(481060),
-    a = n(213609),
+    a = n(990547),
+    r = n(481060),
+    s = n(213609),
     o = n(536442),
     c = n(39604),
-    u = n(176127),
-    d = n(388032),
+    d = n(176127),
+    u = n(388032),
     h = n(894438);
-function m(e) {
-    let { onOpenClips: t, lastClipsSession: n, closePopout: m } = e;
+function p(e) {
+    let { onOpenClips: t, lastClipsSession: n, closePopout: p } = e;
     return (l.useEffect(
         () => () => {
             (0, c.eL)();
         },
         []
     ),
-    (0, a.Z)({
-        type: r.ImpressionTypes.VIEW,
-        name: r.ImpressionNames.HOTSPOT,
+    (0, s.Z)({
+        type: a.ImpressionTypes.VIEW,
+        name: a.ImpressionNames.HOTSPOT,
         properties: { hotspot_location: o.v6.CLIPS_CHANNEL_ATTACH_REMINDER }
     }),
     null == n)
@@ -33,35 +33,35 @@ function m(e) {
               children: [
                   (0, i.jsx)('div', {
                       className: h.thumbnailStackContainer,
-                      children: (0, i.jsx)(u.Z, {})
+                      children: (0, i.jsx)(d.Z, {})
                   }),
-                  (0, i.jsx)(s.Heading, {
+                  (0, i.jsx)(r.Heading, {
                       className: h.header,
                       color: 'header-primary',
                       variant: 'heading-md/extrabold',
-                      children: d.intl.format(d.t['+qxkzM'], { count: n.newClipIds.length })
+                      children: u.intl.format(u.t['+qxkzM'], { count: n.newClipIds.length })
                   }),
-                  (0, i.jsx)(s.Text, {
+                  (0, i.jsx)(r.Text, {
                       color: 'text-normal',
                       className: h.__invalid_content,
                       variant: 'text-sm/medium',
-                      children: d.intl.format(d.t['7XX0/f'], { applicationName: n.applicationName })
+                      children: u.intl.format(u.t['7XX0/f'], { applicationName: n.applicationName })
                   }),
                   (0, i.jsxs)('div', {
                       className: h.buttonsContainer,
                       children: [
-                          (0, i.jsx)(s.Button, {
-                              color: s.Button.Colors.PRIMARY,
-                              look: s.Button.Looks.LINK,
+                          (0, i.jsx)(r.Button, {
+                              color: r.Button.Colors.PRIMARY,
+                              look: r.Button.Looks.LINK,
                               onClick: function () {
-                                  (0, o.Kw)(o.v6.CLIPS_CHANNEL_ATTACH_REMINDER), m();
+                                  (0, o.Kw)(o.v6.CLIPS_CHANNEL_ATTACH_REMINDER), p();
                               },
-                              children: d.intl.string(d.t['7r5Z19'])
+                              children: u.intl.string(u.t['7r5Z19'])
                           }),
-                          (0, i.jsx)(s.Button, {
-                              color: s.Button.Colors.BRAND,
+                          (0, i.jsx)(r.Button, {
+                              color: r.Button.Colors.BRAND,
                               onClick: t,
-                              children: d.intl.string(d.t.md4qKy)
+                              children: u.intl.string(u.t.md4qKy)
                           })
                       ]
                   })

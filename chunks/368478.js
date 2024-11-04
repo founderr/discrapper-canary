@@ -10,65 +10,65 @@ n.d(t, {
     n(789020);
 var i = n(192379),
     l = n(442837),
-    r = n(317381),
-    s = n(122613),
-    a = n(574952),
+    a = n(317381),
+    r = n(122613),
+    s = n(574952),
     o = n(100527),
     c = n(906732),
-    u = n(783097),
-    d = n(895924),
+    d = n(783097),
+    u = n(895924),
     h = n(812236),
-    m = n(630388),
-    p = n(981631),
+    p = n(630388),
+    m = n(981631),
     f = n(388032);
 function g(e) {
-    let { channel: t, primaryEntryPointCommand: n, application: s } = e,
-        [a, d] = i.useState(!1),
-        g = (0, l.e7)([r.ZP], () => r.ZP.getCurrentEmbeddedActivity()),
-        C = i.useMemo(() => (null != n ? (0, u.XZ)(n.displayName) : f.intl.string(f.t['3xjX0d'])), [n]),
-        x = void 0 !== s.flags && (0, m.yE)(s.flags, p.udG.EMBEDDED),
-        v = null != g && g.applicationId === s.id && g.channelId === t.id,
+    let { channel: t, primaryEntryPointCommand: n, application: r } = e,
+        [s, u] = i.useState(!1),
+        g = (0, l.e7)([a.ZP], () => a.ZP.getCurrentEmbeddedActivity()),
+        C = i.useMemo(() => (null != n ? (0, d.XZ)(n.displayName) : f.intl.string(f.t['3xjX0d'])), [n]),
+        x = void 0 !== r.flags && (0, p.yE)(r.flags, m.udG.EMBEDDED),
+        v = null != g && g.applicationId === r.id && g.channelId === t.id,
         { analyticsLocations: _ } = (0, c.ZP)(o.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON),
         I = null != t.recipients ? t.recipients[0] : void 0,
         E = (0, h.ms)({
             channel: t,
-            applicationId: s.id,
+            applicationId: r.id,
             botUserId: I
         });
     return {
-        isExecutingLaunchInteraction: a,
+        isExecutingLaunchInteraction: s,
         buttonText: E && x ? (v ? f.intl.string(f.t['Hi1/aW']) : null != C ? C : f.intl.string(f.t.zKX8Nj)) : f.intl.string(f.t['3xjX0d']),
         hasActiveMatchingEmbeddedActivity: v,
         isEmbeddedApp: x,
         currentEmbeddedActivity: g,
         channelRecipientUserId: I,
-        setIsExecutingLaunchInteraction: d,
+        setIsExecutingLaunchInteraction: u,
         analyticsLocations: _
     };
 }
 function C(e) {
-    let { channel: t, application: n, isEmbeddedApp: l, hasActiveMatchingEmbeddedActivity: r, currentEmbeddedActivity: o, onOpenButtonPress: c, channelRecipientUserId: u, setIsExecutingLaunchInteraction: m, analyticsLocations: p } = e,
+    let { channel: t, application: n, isEmbeddedApp: l, hasActiveMatchingEmbeddedActivity: a, currentEmbeddedActivity: o, onOpenButtonPress: c, channelRecipientUserId: d, setIsExecutingLaunchInteraction: p, analyticsLocations: m } = e,
         f = (0, h.ms)({
             channel: t,
             applicationId: n.id,
-            botUserId: u
+            botUserId: d
         }),
         g = i.useCallback(() => {
-            r && null != o
-                ? (0, a.Z)().leaveActivity({
+            a && null != o
+                ? (0, s.Z)().leaveActivity({
                       channelId: t.id,
                       applicationId: o.applicationId
                   })
-                : (m(!0),
-                  (0, s.Z)({
+                : (p(!0),
+                  (0, r.Z)({
                       targetApplicationId: n.id,
                       channelId: t.id,
-                      analyticsLocations: p,
+                      analyticsLocations: m,
                       onExecutedCallback: () => {
-                          m(!1);
+                          p(!1);
                       },
-                      commandOrigin: d.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON
+                      commandOrigin: u.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON
                   }));
-        }, [r, t.id, n.id, o, p, m]);
+        }, [a, t.id, n.id, o, m, p]);
     return f && l ? g : c;
 }

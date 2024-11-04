@@ -9,8 +9,8 @@ var a = n(120356),
     l = n.n(a),
     i = n(149765),
     o = n(442837),
-    c = n(481060),
-    s = n(933557),
+    s = n(481060),
+    c = n(933557),
     d = n(592125),
     u = n(430824),
     h = n(496675),
@@ -22,7 +22,7 @@ var a = n(120356),
     b = n(219299);
 function v(e) {
     let { title: t, can: n } = e,
-        a = n ? c.CheckmarkLargeIcon : c.XSmallIcon,
+        a = n ? s.CheckmarkLargeIcon : s.XSmallIcon,
         i = (0, r.jsx)('div', {
             className: l()(g.iconOuter, n ? g.iconCheck : g.iconCross),
             children: (0, r.jsx)(a, { className: g.icon })
@@ -33,7 +33,7 @@ function v(e) {
             i,
             (0, r.jsx)('div', {
                 className: g.scopeInner,
-                children: (0, r.jsx)(c.Text, {
+                children: (0, r.jsx)(s.Text, {
                     variant: 'text-md/normal',
                     children: t
                 })
@@ -48,7 +48,7 @@ function j() {
         a = (0, o.e7)([u.Z], () => u.Z.getGuild(t)),
         j = (0, o.e7)([h.Z], () => h.Z.computePermissions(n)),
         _ = (0, o.e7)([h.Z], () => h.Z.computePermissions(a)),
-        C = (0, s.ZP)(n, !0),
+        C = (0, c.ZP)(n, !0),
         T = null != n ? (0, p.IG)(n, !1, !0) : null,
         S = null != a ? f.Z.getGuildPermissionSpecMap(a) : null,
         N = Object.values(null != T ? T : {}).map((e) => {
@@ -83,7 +83,7 @@ function j() {
                 (0, r.jsxs)('section', {
                     className: g.section,
                     children: [
-                        (0, r.jsx)(c.Heading, {
+                        (0, r.jsx)(s.Heading, {
                             variant: 'heading-md/semibold',
                             children: null != C ? 'Permissions in '.concat(C) : 'No channel selected'
                         }),
@@ -93,7 +93,7 @@ function j() {
                 (0, r.jsxs)('section', {
                     className: g.section,
                     children: [
-                        (0, r.jsx)(c.Heading, {
+                        (0, r.jsx)(s.Heading, {
                             variant: 'heading-md/semibold',
                             children: null != a ? 'Permissions in '.concat(a.name) : 'No guild selected'
                         }),

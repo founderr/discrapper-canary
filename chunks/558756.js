@@ -5,19 +5,19 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(442837),
-    r = n(481060),
-    s = n(9156),
-    a = n(388032);
+    a = n(481060),
+    r = n(9156),
+    s = n(388032);
 let o = (e) => {
     let { className: t, channel: o, user: c } = e,
-        u = (0, l.e7)([s.ZP], () => s.ZP.isChannelMuted(null, o.id));
+        d = (0, l.e7)([r.ZP], () => r.ZP.isChannelMuted(null, o.id));
     return c.bot
-        ? (0, i.jsx)(r.Button, {
+        ? (0, i.jsx)(a.Button, {
               className: t,
-              size: r.ButtonSizes.SMALL,
-              color: u ? r.Button.Colors.PRIMARY : r.Button.Colors.RED,
+              size: a.ButtonSizes.SMALL,
+              color: d ? a.Button.Colors.PRIMARY : a.Button.Colors.RED,
               onClick: function () {
-                  (0, r.openModalLazy)(async () => {
+                  (0, a.openModalLazy)(async () => {
                       let { default: e } = await n.e('83545').then(n.bind(n, 53149));
                       return (t) =>
                           (0, i.jsx)(e, {
@@ -26,7 +26,7 @@ let o = (e) => {
                           });
                   });
               },
-              children: u ? a.intl.string(a.t.YqAjX1) : a.intl.string(a.t['w4m94+'])
+              children: d ? s.intl.string(s.t.YqAjX1) : s.intl.string(s.t['w4m94+'])
           })
         : null;
 };

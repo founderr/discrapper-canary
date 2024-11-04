@@ -1,12 +1,12 @@
 n.d(t, {
     YR: function () {
-        return s;
+        return r;
     },
     _A: function () {
-        return a;
+        return s;
     }
 });
-let { Layer: i, LayerContainer: l, LayerProvider: r } = (0, n(481060).createLayer)('VoiceChannelEffectsCall'),
-    s = l,
-    a = r;
+let { Layer: i, LayerContainer: l, LayerProvider: a } = (0, n(481060).createLayer)('VoiceChannelEffectsCall'),
+    r = l,
+    s = a;
 t.ZP = i;

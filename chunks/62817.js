@@ -1,130 +1,130 @@
 n(47120), n(177593);
 var i,
     l,
-    a,
     r,
-    o = n(442837),
+    o,
+    a = n(442837),
     s = n(570140),
     u = n(375954);
 let c = Object.freeze([]),
     d = {},
     h = {},
-    m = {},
-    x = {},
-    v = {};
-function f(e, t) {}
-function p() {
-    v = {};
+    f = {},
+    v = {},
+    p = {};
+function x(t, e) {}
+function g() {
+    p = {};
 }
-function g(e, t) {
-    let n = d[e];
-    return null != n && ((d[e] = n.filter((e) => e.id !== t)), delete h[t], delete m[t], n.length !== d[e].length);
+function m(t, e) {
+    let n = d[t];
+    return null != n && ((d[t] = n.filter((t) => t.id !== e)), delete h[e], delete f[e], n.length !== d[t].length);
 }
-function C(e, t) {
-    let n = d[e];
+function w(t, e) {
+    let n = d[t];
     if (null == n) return !1;
-    d[e] = n.map((e) =>
-        e.id === t.id
+    d[t] = n.map((t) =>
+        t.id === e.id
             ? {
-                  ...e,
-                  ...t
+                  ...t,
+                  ...e
               }
-            : e
+            : t
     );
-    let i = m[t.id];
+    let i = f[e.id];
     null != i &&
-        null != x[i.id] &&
-        (x[i.id] = {
-            ...x[i.id],
-            ...t
+        null != v[i.id] &&
+        (v[i.id] = {
+            ...v[i.id],
+            ...e
         });
 }
-class I extends (i = o.ZP.Store) {
+class y extends (i = a.ZP.Store) {
     initialize() {
         this.waitFor(u.Z);
     }
-    getFiles(e) {
-        var t;
-        return null !== (t = d[e]) && void 0 !== t ? t : c;
+    getFiles(t) {
+        var e;
+        return null !== (e = d[t]) && void 0 !== e ? e : c;
     }
-    getMessageForFile(e) {
-        return m[e];
+    getMessageForFile(t) {
+        return f[t];
     }
-    getUploaderFileForMessageId(e) {
-        return x[e];
+    getUploaderFileForMessageId(t) {
+        return v[t];
     }
-    getUploadAttachments(e) {
-        if (null != e) return v[e];
+    getUploadAttachments(t) {
+        if (null != t) return p[t];
     }
 }
-(r = 'UploadStore'),
-    (a = 'displayName') in (l = I)
-        ? Object.defineProperty(l, a, {
-              value: r,
+(o = 'UploadStore'),
+    (r = 'displayName') in (l = y)
+        ? Object.defineProperty(l, r, {
+              value: o,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[a] = r),
-    (t.Z = new I(s.Z, {
+        : (l[r] = o),
+    (e.Z = new y(s.Z, {
         CONNECTION_OPEN: function () {
-            v = {};
+            p = {};
         },
         LOGOUT: function () {
-            v = {};
+            p = {};
         },
-        UPLOAD_START: function (e) {
-            var t;
-            let { channelId: n, file: i, uploader: l, message: a } = e;
+        UPLOAD_START: function (t) {
+            var e;
+            let { channelId: n, file: i, uploader: l, message: r } = t;
             if (l._aborted || l._errored) return;
-            let r = null !== (t = d[n]) && void 0 !== t ? t : c;
-            (h[i.id] = l), (d[n] = [...r, i]), (m[i.id] = a);
-            let { items: o } = i;
-            null != o &&
-                (x[a.id] = {
+            let o = null !== (e = d[n]) && void 0 !== e ? e : c;
+            (h[i.id] = l), (d[n] = [...o, i]), (f[i.id] = r);
+            let { items: a } = i;
+            null != a &&
+                (v[r.id] = {
                     ...i,
-                    items: o
+                    items: a
                 }),
-                f(a.nonce, i);
+                x(r.nonce, i);
         },
-        UPLOAD_COMPRESSION_PROGRESS: function (e) {
-            let { channelId: t, file: n } = e;
-            C(t, n);
+        UPLOAD_COMPRESSION_PROGRESS: function (t) {
+            let { channelId: e, file: n } = t;
+            w(e, n);
         },
-        UPLOAD_PROGRESS: function (e) {
-            let { channelId: t, file: n } = e;
-            C(t, n);
+        UPLOAD_PROGRESS: function (t) {
+            let { channelId: e, file: n } = t;
+            w(e, n);
         },
-        UPLOAD_COMPLETE: function (e) {
-            let { channelId: t, file: n } = e;
-            return g(t, n.id);
+        UPLOAD_COMPLETE: function (t) {
+            let { channelId: e, file: n } = t;
+            return m(e, n.id);
         },
-        UPLOAD_FAIL: function (e) {
-            let { channelId: t, file: n } = e;
-            return g(t, n.id);
+        UPLOAD_FAIL: function (t) {
+            let { channelId: e, file: n } = t;
+            return m(e, n.id);
         },
-        UPLOAD_CANCEL_REQUEST: function (e) {
-            let { file: t } = e,
-                n = h[t.id];
+        UPLOAD_CANCEL_REQUEST: function (t) {
+            let { file: e } = t,
+                n = h[e.id];
             if (null == n) return !1;
             setImmediate(() => {
-                var e;
-                return null === (e = n.cancel) || void 0 === e ? void 0 : e.call(n);
+                var t;
+                return null === (t = n.cancel) || void 0 === t ? void 0 : t.call(n);
             });
         },
-        UPLOAD_ITEM_CANCEL_REQUEST: function (e) {
-            let { file: t, itemId: n } = e,
-                i = h[t.id];
+        UPLOAD_ITEM_CANCEL_REQUEST: function (t) {
+            let { file: e, itemId: n } = t,
+                i = h[e.id];
             if (null == i) return !1;
             setImmediate(() => i.cancelItem(n));
         },
-        UPLOAD_FILE_UPDATE: function (e) {
-            let { channelId: t, file: n } = e,
-                i = m[n.id];
-            null != i && f(i.nonce, n), C(t, n);
+        UPLOAD_FILE_UPDATE: function (t) {
+            let { channelId: e, file: n } = t,
+                i = f[n.id];
+            null != i && x(i.nonce, n), w(e, n);
         },
-        UPLOAD_RESTORE_FAILED_UPLOAD: function (e) {
-            let { file: t, messageId: n } = e;
-            x[n] = t;
+        UPLOAD_RESTORE_FAILED_UPLOAD: function (t) {
+            let { file: e, messageId: n } = t;
+            v[n] = e;
         }
     }));

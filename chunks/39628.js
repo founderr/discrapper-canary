@@ -1,9 +1,9 @@
 n(47120);
 var i,
     l = n(200651),
-    r = n(192379),
-    s = n(120356),
-    a = n.n(s),
+    a = n(192379),
+    r = n(120356),
+    s = n.n(r),
     o = n(846519),
     c = n(600164),
     u = n(486296);
@@ -20,10 +20,10 @@ function d(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     let { percentage: t, isSingleLine: n } = e;
     return (0, l.jsx)('div', {
-        className: a()({
+        className: s()({
             [u.bar]: n,
             [u.barInMultiLine]: !n
         }),
@@ -33,17 +33,17 @@ function h(e) {
         })
     });
 }
-function m(e) {
+function f(e) {
     return String(e).padStart(2, '0');
 }
 function p(e) {
     let { time: t, padLargestUnit: n } = e,
         i = Math.floor(t) % 60,
         l = Math.floor(t / 60) % 60,
-        r = Math.floor(t / 3600);
-    return 0 === r ? (n ? ''.concat(m(l), ':').concat(m(i)) : ''.concat(l, ':').concat(m(i))) : n ? ''.concat(m(r), ':').concat(m(l), ':').concat(m(i)) : ''.concat(r, ':').concat(m(l), ':').concat(m(i));
+        a = Math.floor(t / 3600);
+    return 0 === a ? (n ? ''.concat(f(l), ':').concat(f(i)) : ''.concat(l, ':').concat(f(i))) : n ? ''.concat(f(a), ':').concat(f(l), ':').concat(f(i)) : ''.concat(a, ':').concat(f(l), ':').concat(f(i));
 }
-class f extends (i = r.PureComponent) {
+class h extends (i = a.PureComponent) {
     componentDidMount() {
         this.timer.start(500, () => {
             this.setState({ now: Date.now() });
@@ -53,13 +53,13 @@ class f extends (i = r.PureComponent) {
         this.timer.stop();
     }
     render() {
-        let { start: e, end: t, className: n, themed: i, singleLine: r = !1 } = this.props,
-            { now: s } = this.state,
+        let { start: e, end: t, className: n, themed: i, singleLine: a = !1 } = this.props,
+            { now: r } = this.state,
             o = (t - e) / 1000,
-            d = Math.max(Math.min((s - e) / 1000, o), 0);
-        return r
+            d = Math.max(Math.min((r - e) / 1000, o), 0);
+        return a
             ? (0, l.jsxs)('div', {
-                  className: a()(n, { [u.themed]: i }, u.singleLineContainer),
+                  className: s()(n, { [u.themed]: i }, u.singleLineContainer),
                   children: [
                       (0, l.jsx)('div', {
                           className: u.textLeftInSingleLine,
@@ -70,7 +70,7 @@ class f extends (i = r.PureComponent) {
                       }),
                       (0, l.jsx)('div', {
                           className: u.barInSingleLine,
-                          children: (0, l.jsx)(h, {
+                          children: (0, l.jsx)(m, {
                               percentage: d / o,
                               isSingleLine: !0
                           })
@@ -85,9 +85,9 @@ class f extends (i = r.PureComponent) {
                   ]
               })
             : (0, l.jsxs)('div', {
-                  className: a()(n, { [u.themed]: i }),
+                  className: s()(n, { [u.themed]: i }),
                   children: [
-                      (0, l.jsx)(h, {
+                      (0, l.jsx)(m, {
                           percentage: d / o,
                           isSingleLine: !1
                       }),
@@ -118,4 +118,4 @@ class f extends (i = r.PureComponent) {
         super(...e), d(this, 'timer', new o.Xp()), d(this, 'state', { now: Date.now() });
     }
 }
-d(f, 'defaultProps', { themed: !1 }), (t.Z = f);
+d(h, 'defaultProps', { themed: !1 }), (t.Z = h);

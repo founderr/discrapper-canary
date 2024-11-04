@@ -1,12 +1,12 @@
-n.d(t, {
+n.d(e, {
     p: function () {
-        return a;
+        return r;
     }
 });
 var i = n(904245),
     l = n(957730);
-function a(e) {
-    let { channel: t, content: n, entry: a, whenReady: r } = e,
-        o = l.ZP.parse(t, n);
-    return i.Z.sendMessage(t.id, o, r, { contentInventoryEntry: { unverified_content: a } });
+function r(t) {
+    let { channel: e, content: n, entry: r, whenReady: o } = t,
+        a = l.ZP.parse(e, n);
+    return i.Z.sendMessage(e.id, a, o, { contentInventoryEntry: { unverified_content: r } });
 }

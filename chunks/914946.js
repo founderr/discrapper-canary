@@ -91,8 +91,8 @@ let L = null !== (i = r.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && v
             n = t[t.length - 1];
         return /^\d+$/.test(n) ? e : t.slice(-2).join('.');
     })(),
-    P = new RegExp('^'.concat(x.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(x.Z.escape(R), '|discordapp.com|discord.com)$')),
-    O = 1 * N.Z.Millis.MINUTE,
+    O = new RegExp('^'.concat(x.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(x.Z.escape(R), '|discordapp.com|discord.com)$')),
+    P = 1 * N.Z.Millis.MINUTE,
     j = {};
 function D(e) {
     return 'customEmoji' === e.type && (e.type = 'emoji'), 'emoji' === e.type && e.src && (e.src = M(e.src)), Array.isArray(e.content) && (e.content = e.content.map(D)), e;
@@ -209,7 +209,7 @@ function H(e) {
     } catch (e) {
         return !1;
     }
-    return (window.location.hostname === t && 'localhost' === t) || (null == e.match('staging') && (!!(P.test(e) && P.test(n)) || !1));
+    return (window.location.hostname === t && 'localhost' === t) || (null == e.match('staging') && (!!(O.test(e) && O.test(n)) || !1));
 }
 function V(e, t, n) {
     let i = _.Z.getGuild(e.getGuildId());
@@ -268,7 +268,7 @@ function W(e, t, n) {
 }
 async function K(e, t) {
     let n = j[e];
-    null == n && ((n = new s.Z(t ? 2 : 60, O)), (j[e] = n)), await n.process();
+    null == n && ((n = new s.Z(t ? 2 : 60, P)), (j[e] = n)), await n.process();
 }
 function q(e, t) {
     null == t && (e.authorization.scopes = [Z.lH]);

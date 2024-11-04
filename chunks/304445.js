@@ -4,8 +4,8 @@ var r = n(572299),
     l = n(905423),
     i = n(622143),
     o = n(703656),
-    c = n(981631);
-function s(e, t, n) {
+    s = n(981631);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -69,22 +69,22 @@ t.Z = new (class e {
         return (0, o.s1)();
     }
     constructor() {
-        s(this, 'unlistenHistory', void 0),
-            s(this, 'unlistenKeyboardChange', void 0),
-            s(this, 'rewrites', new Set()),
-            s(this, 'listeners', new Set()),
-            s(this, 'routeChangeCount', 0),
-            s(this, 'timer', -1),
-            s(this, 'connected', !1),
-            s(this, 'handleConnectionChange', () => {
+        c(this, 'unlistenHistory', void 0),
+            c(this, 'unlistenKeyboardChange', void 0),
+            c(this, 'rewrites', new Set()),
+            c(this, 'listeners', new Set()),
+            c(this, 'routeChangeCount', 0),
+            c(this, 'timer', -1),
+            c(this, 'connected', !1),
+            c(this, 'handleConnectionChange', () => {
                 let e = a.Z.isConnected(),
                     t = e && !this.connected;
                 (this.connected = e), t && ((this.routeChangeCount = 0), this.executeRouteRewrites((0, o.s1)().location, 'REPLACE'));
             }),
-            s(this, 'handleRouteChange', (e, t) => {
+            c(this, 'handleRouteChange', (e, t) => {
                 if (this.executeRouteRewrites(e, t)) return;
                 if (!(0, i.r)(e)) {
-                    (0, o.dL)(c.Z5c.ME);
+                    (0, o.dL)(s.Z5c.ME);
                     return;
                 }
                 let n = l.Z.getState();
@@ -96,11 +96,11 @@ t.Z = new (class e {
                     }
                 this.routeChangeCount = 0;
             }),
-            s(this, 'handleKeybindRouteChange', (e) => {
+            c(this, 'handleKeybindRouteChange', (e) => {
                 let { path: t } = e;
                 null != t ? (clearTimeout(this.timer), (this.timer = setTimeout(this.flushRoute, 200))) : null == t && clearTimeout(this.timer);
             }),
-            s(this, 'flushRoute', () => {
+            c(this, 'flushRoute', () => {
                 clearTimeout(this.timer);
                 let e = l.Z.getState();
                 null != e.path && (0, o.uL)(e.path);

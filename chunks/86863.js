@@ -1,40 +1,40 @@
 n.d(t, {
     n: function () {
-        return m;
+        return p;
     }
 });
 var i = n(200651),
     l = n(442837),
-    r = n(481060),
-    s = n(384275),
-    a = n(468026),
+    a = n(481060),
+    r = n(384275),
+    s = n(468026),
     o = n(317381),
     c = n(513202),
-    u = n(626135),
-    d = n(981631),
+    d = n(626135),
+    u = n(981631),
     h = n(388032);
-let m = (e) => {
-    let { className: t, channel: n, user: m, application: p, oauth2Token: f } = e,
+let p = (e) => {
+    let { className: t, channel: n, user: p, application: m, oauth2Token: f } = e,
         g = (0, l.e7)([o.ZP], () => o.ZP.getSelfEmbeddedActivities());
-    if (!m.bot || null == p) return null;
+    if (!p.bot || null == m) return null;
     function C() {
-        s.Z.delete(f.id);
-        let e = g.get(p.id);
+        r.Z.delete(f.id);
+        let e = g.get(m.id);
         null != e &&
             c.Z.leaveActivity({
                 channelId: e.channelId,
-                applicationId: p.id
+                applicationId: m.id
             });
     }
-    return (0, i.jsx)(r.Button, {
+    return (0, i.jsx)(a.Button, {
         className: t,
-        size: r.ButtonSizes.SMALL,
-        color: r.Button.Colors.PRIMARY,
+        size: a.ButtonSizes.SMALL,
+        color: a.Button.Colors.PRIMARY,
         onClick: () =>
             (function (e, t, n) {
                 let l = h.intl.formatToPlainString(h.t.QWGvxM, { applicationName: e.name });
-                (0, r.openModal)((e) =>
-                    (0, i.jsx)(a.default, {
+                (0, a.openModal)((e) =>
+                    (0, i.jsx)(s.default, {
                         title: h.intl.string(h.t.DT39Aw),
                         body: l,
                         confirmText: h.intl.string(h.t.xUqheH),
@@ -43,12 +43,12 @@ let m = (e) => {
                         ...e
                     })
                 ),
-                    u.default.track(d.rMx.APP_MANAGE_CTA_CLICKED, {
+                    d.default.track(u.rMx.APP_MANAGE_CTA_CLICKED, {
                         application_id: e.id,
                         channel_id: n.id,
                         channel_type: n.type
                     });
-            })(p, C, n),
+            })(m, C, n),
         children: h.intl.string(h.t['5S3sQE'])
     });
 };

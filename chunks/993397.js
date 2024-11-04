@@ -1,41 +1,41 @@
 n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    s = n.n(r),
-    a = n(481060),
+    a = n(120356),
+    r = n.n(a),
+    s = n(481060),
     o = n(492593),
     c = n(534469),
-    u = n(511010),
-    d = n(834129),
+    d = n(511010),
+    u = n(834129),
     h = n(981631),
-    m = n(388032),
-    p = n(590008),
+    p = n(388032),
+    m = n(590008),
     f = n(916315);
 function g(e) {
-    let { expanded: t, onClick: n, count: l, compact: r, collapsedReason: s } = e;
+    let { expanded: t, onClick: n, count: l, compact: a, collapsedReason: r } = e;
     return (0, i.jsx)(o.Z, {
-        compact: r,
+        compact: a,
         role: 'group',
-        childrenMessageContent: (0, i.jsx)(d.Z, {
-            compact: r,
-            className: p.blockedSystemMessage,
-            iconNode: (0, i.jsx)(a.XSmallIcon, {
+        childrenMessageContent: (0, i.jsx)(u.Z, {
+            compact: a,
+            className: m.blockedSystemMessage,
+            iconNode: (0, i.jsx)(s.XSmallIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: p.blockedIcon
+                className: m.blockedIcon
             }),
             children: (0, i.jsxs)('div', {
-                className: p.blockedMessageText,
+                className: m.blockedMessageText,
                 children: [
-                    m.intl.format(s, { count: l }),
+                    p.intl.format(r, { count: l }),
                     ' \u2014',
                     ' ',
-                    (0, i.jsx)(a.Clickable, {
+                    (0, i.jsx)(s.Clickable, {
                         tag: 'span',
                         onClick: n,
-                        className: p.blockedAction,
-                        children: t ? m.intl.formatToPlainString(m.t['5XFZjY'], { count: l }) : m.intl.formatToPlainString(m.t.wUJXIi, { count: l })
+                        className: m.blockedAction,
+                        children: t ? p.intl.formatToPlainString(p.t['5XFZjY'], { count: l }) : p.intl.formatToPlainString(p.t.wUJXIi, { count: l })
                     })
                 ]
             })
@@ -44,20 +44,20 @@ function g(e) {
 }
 t.Z = l.memo(function (e) {
     var t;
-    let { messages: n, channel: r, compact: a = !1, unreadId: o, collapsedReason: d } = e,
-        { hasJumpTarget: m = !1 } = n,
-        [C, x] = l.useState(m),
+    let { messages: n, channel: a, compact: s = !1, unreadId: o, collapsedReason: u } = e,
+        { hasJumpTarget: p = !1 } = n,
+        [C, x] = l.useState(p),
         v = l.useCallback(() => x((e) => !e), []),
         _ = n.hasUnread ? n.content.length - 1 : n.content.length;
     return (0, i.jsxs)('div', {
-        className: s()({
+        className: r()({
             [f.groupStart]: !0,
-            [p.expanded]: C
+            [m.expanded]: C
         }),
         children: [
             n.hasUnread && (!C || (null === (t = n.content[0]) || void 0 === t ? void 0 : t.type) === h.ys_.DIVIDER)
                 ? (0, i.jsx)(
-                      u.Z,
+                      d.Z,
                       {
                           isUnread: !0,
                           id: o
@@ -69,20 +69,20 @@ t.Z = l.memo(function (e) {
                 g,
                 {
                     count: _,
-                    compact: a,
+                    compact: s,
                     expanded: C,
                     onClick: v,
-                    collapsedReason: d
+                    collapsedReason: u
                 },
                 'collapsed-message-item'
             ),
             C
                 ? n.content.map((e, t) => {
                       if (e.type === h.ys_.DIVIDER && t > 0) {
-                          var l, s;
-                          let e = null !== (s = null === (l = n.content[t + 1]) || void 0 === l ? void 0 : l.isGroupStart) && void 0 !== s && s;
+                          var l, r;
+                          let e = null !== (r = null === (l = n.content[t + 1]) || void 0 === l ? void 0 : l.isGroupStart) && void 0 !== r && r;
                           return (0, i.jsx)(
-                              u.Z,
+                              d.Z,
                               {
                                   isUnread: !0,
                                   isBeforeGroup: e,
@@ -96,9 +96,9 @@ t.Z = l.memo(function (e) {
                           return (0, i.jsx)(
                               t,
                               {
-                                  className: p.__invalid_blocked,
-                                  compact: a,
-                                  channel: r,
+                                  className: m.__invalid_blocked,
+                                  compact: s,
+                                  channel: a,
                                   message: e.content,
                                   groupId: e.groupId,
                                   flashKey: e.flashKey,

@@ -6,39 +6,39 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    s = n(512722),
-    a = n.n(s),
+    a = n.n(l),
+    r = n(512722),
+    s = n.n(r),
     o = n(442837),
     c = n(481060),
-    u = n(924301),
-    d = n(786915),
+    d = n(924301),
+    u = n(786915),
     h = n(430824),
-    m = n(496675),
-    p = n(981631),
+    p = n(496675),
+    m = n(981631),
     f = n(388032),
     g = n(632189);
 function C(e) {
     var t, l;
-    let { stream: s, applicationId: C, channel: x, exitFullScreen: v, appContext: _, analyticsLocation: I, className: E, ...b } = e,
-        S = null == x ? void 0 : x.getGuildId(),
+    let { stream: r, applicationId: C, channel: x, exitFullScreen: v, appContext: _, analyticsLocation: I, className: E, ...b } = e,
+        N = null == x ? void 0 : x.getGuildId(),
         Z = null == x ? void 0 : x.id,
-        T = (0, o.e7)([h.Z], () => (null != S ? h.Z.getGuild(S) : null), [S]),
-        N = (0, o.e7)([u.ZP], () => u.ZP.getActiveEventByChannel(Z), [Z]);
-    if (((t = T), (l = x), !(null != t && null != l && m.Z.can(p.Plq.CREATE_INSTANT_INVITE, l)))) return null;
+        T = (0, o.e7)([h.Z], () => (null != N ? h.Z.getGuild(N) : null), [N]),
+        S = (0, o.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(Z), [Z]);
+    if (((t = T), (l = x), !(null != t && null != l && p.Z.can(m.Plq.CREATE_INSTANT_INVITE, l)))) return null;
     let j = f.intl.string(f.t.VINpSE);
     return (
-        null != s ? (j = f.intl.string(f.t['6VQaqa'])) : null != C && (j = f.intl.string(f.t['OzOM/v'])),
+        null != r ? (j = f.intl.string(f.t['6VQaqa'])) : null != C && (j = f.intl.string(f.t['OzOM/v'])),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(c.Button, {
                     size: c.Button.Sizes.SMALL,
                     color: g.buttonColor,
                     onClick: () => {
-                        a()(null != T, 'guild cannot be null'),
-                            a()(null != x, 'channel cannot be null'),
+                        s()(null != T, 'guild cannot be null'),
+                            s()(null != x, 'channel cannot be null'),
                             !(function (e) {
-                                let { guild: t, channel: l, streamUserId: r, applicationId: s, appContext: a, exitFullScreen: o, analyticsLocation: u, guildScheduledEvent: d } = e;
+                                let { guild: t, channel: l, streamUserId: a, applicationId: r, appContext: s, exitFullScreen: o, analyticsLocation: d, guildScheduledEvent: u } = e;
                                 null == o || o(),
                                     (0, c.openModalLazy)(
                                         async () => {
@@ -48,41 +48,41 @@ function C(e) {
                                                     ...n,
                                                     guild: t,
                                                     channel: l,
-                                                    streamUserId: r,
-                                                    applicationId: s,
-                                                    analyticsLocation: u,
-                                                    source: l.isGuildStageVoice() ? p.t4x.STAGE_CHANNEL : p.t4x.STREAM_INVITE,
-                                                    guildScheduledEvent: d
+                                                    streamUserId: a,
+                                                    applicationId: r,
+                                                    analyticsLocation: d,
+                                                    source: l.isGuildStageVoice() ? m.t4x.STAGE_CHANNEL : m.t4x.STREAM_INVITE,
+                                                    guildScheduledEvent: u
                                                 });
                                         },
                                         {
                                             modalKey: 'stream-invite-modal',
-                                            contextKey: a === p.IlC.POPOUT ? c.POPOUT_MODAL_CONTEXT : c.DEFAULT_MODAL_CONTEXT
+                                            contextKey: s === m.IlC.POPOUT ? c.POPOUT_MODAL_CONTEXT : c.DEFAULT_MODAL_CONTEXT
                                         }
                                     );
                             })({
                                 guild: T,
                                 channel: x,
-                                streamUserId: null == s ? void 0 : s.ownerId,
+                                streamUserId: null == r ? void 0 : r.ownerId,
                                 applicationId: C,
                                 appContext: _,
                                 exitFullScreen: v,
                                 analyticsLocation: I,
-                                guildScheduledEvent: N
+                                guildScheduledEvent: S
                             });
                     },
-                    className: r()(E, g.textButton),
+                    className: a()(E, g.textButton),
                     ...b,
                     children: j
                 }),
-                (0, i.jsx)(d.Z, {
+                (0, i.jsx)(u.Z, {
                     channel: x,
-                    stream: s,
+                    stream: r,
                     appContext: _,
-                    className: r()(E, g.iconButton),
+                    className: a()(E, g.iconButton),
                     exitFullScreen: v,
                     analyticsLocation: I,
-                    guildScheduledEvent: N
+                    guildScheduledEvent: S
                 })
             ]
         })

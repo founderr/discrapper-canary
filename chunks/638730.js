@@ -1,43 +1,43 @@
 n.d(t, {
     T: function () {
-        return s;
+        return r;
     },
     h: function () {
-        return a;
+        return s;
     }
 }),
     n(47120);
 var i = n(192379),
     l = n(392711);
-let r = (e) => e,
-    s = function (e, t) {
+let a = (e) => e,
+    r = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
             l = arguments.length > 3 ? arguments[3] : void 0,
-            s = a(r, t, n, l),
+            r = s(a, t, n, l),
             o = i.useRef(e);
         return (
             i.useEffect(() => {
-                let t = s(e);
+                let t = r(e);
                 o.current = t;
-            }, [e, s]),
+            }, [e, r]),
             0 === t ? e : o.current
         );
     },
-    a = function (e, t) {
+    s = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-            r = arguments.length > 3 ? arguments[3] : void 0,
-            s = i.useRef((0, l.throttle)(e, t, r));
+            a = arguments.length > 3 ? arguments[3] : void 0,
+            r = i.useRef((0, l.throttle)(e, t, a));
         return (
             i.useEffect(
                 () => (
-                    (s.current = (0, l.throttle)(e, t, r)),
+                    (r.current = (0, l.throttle)(e, t, a)),
                     () => {
                         var e;
-                        null === (e = s.current) || void 0 === e || e.cancel();
+                        null === (e = r.current) || void 0 === e || e.cancel();
                     }
                 ),
-                [e, t, r, ...n]
+                [e, t, a, ...n]
             ),
-            s.current
+            r.current
         );
     };

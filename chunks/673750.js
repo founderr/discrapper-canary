@@ -124,7 +124,7 @@ class D extends v.Z {
                 });
             return;
         }
-        null != A && (A.isInstanceUILocked() ? (n = { location: 'overlay_locked_activated' }) : !A.isInstanceUILocked() && (n = A.isPinned(T.Odu.TEXT) ? { location: 'overlay_unlocked_pinned' } : { location: 'overlay_unlocked' }));
+        null != A && (A.isInstanceLocked() ? (n = { location: 'overlay_locked_activated' }) : !A.isInstanceLocked() && (n = A.isPinned(T.Odu.TEXT) ? { location: 'overlay_unlocked_pinned' } : { location: 'overlay_unlocked' }));
         let o = this.createResponseHandler(e.nonce, t),
             l = new AbortController();
         this.startQueueMetricTimers(e.nonce),

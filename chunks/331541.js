@@ -32,8 +32,8 @@ var i = n(200651),
     y = n(438163),
     L = n(483424),
     R = n(681837),
-    P = n(502762),
-    O = n(530),
+    O = n(502762),
+    P = n(530),
     j = n(544989),
     D = n(309494),
     M = n(969205),
@@ -324,7 +324,7 @@ function er(e) {
             children: (0, i.jsx)(c.Dialog, {
                 ref: ed,
                 'aria-label': V.username,
-                children: (0, i.jsxs)(P.Z, {
+                children: (0, i.jsxs)(O.Z, {
                     className: $.themeContainer,
                     user: V,
                     displayProfile: ea,
@@ -367,7 +367,7 @@ function er(e) {
                         (0, i.jsxs)(c.Scroller, {
                             className: $.body,
                             children: [
-                                (0, i.jsx)(O.Z, {
+                                (0, i.jsx)(P.Z, {
                                     user: V,
                                     className: $.username,
                                     profileType: Q.y0.BITE_SIZE,
@@ -403,7 +403,7 @@ function er(e) {
                                 (0, i.jsxs)('div', {
                                     className: $.menus,
                                     children: [
-                                        (0, i.jsx)(P.Z.Overlay, {
+                                        (0, i.jsx)(O.Z.Overlay, {
                                             className: $.menuOverlay,
                                             children: (0, i.jsxs)(K.PB, {
                                                 id: 'profile-'.concat(V.id),
@@ -526,7 +526,7 @@ function er(e) {
                                                 ]
                                             })
                                         }),
-                                        (0, i.jsx)(P.Z.Overlay, {
+                                        (0, i.jsx)(O.Z.Overlay, {
                                             className: $.menuOverlay,
                                             children: (0, i.jsxs)(K.PB, {
                                                 id: 'account-'.concat(V.id),

@@ -1,48 +1,48 @@
-var i = n(981631),
-    l = n(388032);
-t.Z = {
-    getStatus: function (e) {
-        let t,
-            n,
+var i = e(981631),
+    s = e(388032);
+n.Z = {
+    getStatus: function (t) {
+        let n,
+            e,
             r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        switch (e) {
+        switch (t) {
             case i.hes.CONNECTING:
-                (t = i.QKv.CONNECTING), (n = l.intl.string(l.t.MzW9sL));
+                (n = i.QKv.CONNECTING), (e = s.intl.string(s.t.MzW9sL));
                 break;
             case i.hes.AUTHENTICATING:
-                (t = i.QKv.CONNECTING), (n = l.intl.string(l.t.GxXwEx));
+                (n = i.QKv.CONNECTING), (e = s.intl.string(s.t.GxXwEx));
                 break;
             case i.hes.AWAITING_ENDPOINT:
-                (t = i.QKv.CONNECTING), (n = l.intl.string(l.t.xEbu0d));
+                (n = i.QKv.CONNECTING), (e = s.intl.string(s.t.xEbu0d));
                 break;
             case i.hes.RTC_CONNECTED:
-                (t = i.QKv.CONNECTED), (n = r ? l.intl.string(l.t.HtVOdX) : l.intl.string(l.t['daXg4+']));
+                (n = i.QKv.CONNECTED), (e = r ? s.intl.string(s.t.HtVOdX) : s.intl.string(s.t['daXg4+']));
                 break;
             case i.hes.RTC_CONNECTING:
-                (t = i.QKv.CONNECTING), (n = l.intl.string(l.t.Gp51dn));
+                (n = i.QKv.CONNECTING), (e = s.intl.string(s.t.Gp51dn));
                 break;
             case i.hes.ICE_CHECKING:
-                (t = i.QKv.CONNECTING), (n = l.intl.string(l.t.rdCyAw));
+                (n = i.QKv.CONNECTING), (e = s.intl.string(s.t.rdCyAw));
                 break;
             case i.hes.DTLS_CONNECTING:
-                (t = i.QKv.CONNECTING), (n = l.intl.string(l.t.UvB3gY));
+                (n = i.QKv.CONNECTING), (e = s.intl.string(s.t.UvB3gY));
                 break;
             case i.hes.NO_ROUTE:
-                (t = i.QKv.ERROR), (n = l.intl.string(l.t.mGhOIi));
+                (n = i.QKv.ERROR), (e = s.intl.string(s.t.mGhOIi));
                 break;
             case i.hes.RTC_DISCONNECTED:
-                (t = i.QKv.ERROR), (n = l.intl.string(l.t.M7LDmJ));
+                (n = i.QKv.ERROR), (e = s.intl.string(s.t.M7LDmJ));
                 break;
             case i.hes.DISCONNECTED:
             default:
-                (t = i.QKv.ERROR), (n = l.intl.string(l.t.NLKQb2));
+                (n = i.QKv.ERROR), (e = s.intl.string(s.t.NLKQb2));
         }
         return {
-            connectionStatus: t,
-            connectionStatusText: n
+            connectionStatus: n,
+            connectionStatusText: e
         };
     },
-    getShortHostname: function (e) {
-        return null == e ? '' : e.split('.')[0];
+    getShortHostname: function (t) {
+        return null == t ? '' : t.split('.')[0];
     }
 };

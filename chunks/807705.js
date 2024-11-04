@@ -14,7 +14,7 @@ function l(e, t) {
             let e = setTimeout(() => (n.current = !1), t);
             return () => clearTimeout(e);
         }, [e, t]);
-    let r = e !== l.current,
-        s = n.current;
-    return r || s;
+    let a = e !== l.current,
+        r = n.current;
+    return a || r;
 }

@@ -6,16 +6,16 @@ n.d(t, {
     n(47120);
 var i,
     l,
-    r = n(200651),
-    s = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    a = n(200651),
+    r = n(192379),
+    s = n(120356),
+    o = n.n(s),
     c = n(100621),
-    u = n(481060),
-    d = n(542094),
+    d = n(481060),
+    u = n(542094),
     h = n(182906),
-    m = n(556505),
-    p = n(513202),
+    p = n(556505),
+    m = n(513202),
     f = n(981631),
     g = n(388032),
     C = n(967960);
@@ -26,36 +26,36 @@ let x = ['embedded_cover'],
     };
 function _(e) {
     var t;
-    let { channel: n, activityItem: i, onClick: l, aspectRatio: a = 0, animatedDivClass: _, commandOrigin: I } = e,
+    let { channel: n, activityItem: i, onClick: l, aspectRatio: s = 0, animatedDivClass: _, commandOrigin: I } = e,
         {
             onActivityItemSelected: E,
             imageBackground: b,
-            activityAction: S,
+            activityAction: N,
             labelType: Z
-        } = (0, d.ZP)({
+        } = (0, u.ZP)({
             channel: n,
             activityItem: i,
             guildId: null !== (t = n.getGuildId()) && void 0 !== t ? t : void 0,
             locationObject: {},
             onActivityItemSelected: l,
-            embeddedActivitiesManager: p.Z,
+            embeddedActivitiesManager: m.Z,
             assetNames: x,
             commandOrigin: I
         }),
-        [T, N] = s.useState(!1),
-        j = s.useCallback(() => {
-            N(!0);
-        }, [N]),
-        A = s.useCallback(() => {
-            N(!1);
-        }, [N]),
-        y = s.useMemo(
+        [T, S] = r.useState(!1),
+        j = r.useCallback(() => {
+            S(!0);
+        }, [S]),
+        A = r.useCallback(() => {
+            S(!1);
+        }, [S]),
+        y = r.useMemo(
             () =>
-                (0, r.jsx)('div', {
+                (0, a.jsx)('div', {
                     className: C.overlayBadge,
-                    children: (0, r.jsx)('div', {
+                    children: (0, a.jsx)('div', {
                         className: C.badgeContainer,
-                        children: (0, r.jsx)(m.Z, {
+                        children: (0, a.jsx)(p.Z, {
                             name: i.application.name,
                             labelType: Z
                         })
@@ -63,67 +63,67 @@ function _(e) {
                 }),
             [i.application.name, Z]
         ),
-        P = s.useMemo(() => {
-            switch (S) {
-                case d.JS.JOIN:
-                    return (0, r.jsx)('div', {
+        P = r.useMemo(() => {
+            switch (N) {
+                case u.JS.JOIN:
+                    return (0, a.jsx)('div', {
                         className: C.activityAction,
-                        children: (0, r.jsx)('div', {
+                        children: (0, a.jsx)('div', {
                             className: C.activityActionButton,
-                            children: (0, r.jsx)(u.Text, {
+                            children: (0, a.jsx)(d.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'always-white',
                                 children: g.intl.string(g.t.VJlc0d)
                             })
                         })
                     });
-                case d.JS.LEAVE:
-                    return (0, r.jsx)('div', {
+                case u.JS.LEAVE:
+                    return (0, a.jsx)('div', {
                         className: C.activityAction,
-                        children: (0, r.jsx)('div', {
+                        children: (0, a.jsx)('div', {
                             className: o()(C.activityActionButton, C.activityActionButtonDanger),
-                            children: (0, r.jsx)(u.Text, {
+                            children: (0, a.jsx)(d.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'always-white',
                                 children: g.intl.string(g.t['wH/wDA'])
                             })
                         })
                     });
-                case d.JS.START:
+                case u.JS.START:
                 default:
-                    return (0, r.jsx)(r.Fragment, {});
+                    return (0, a.jsx)(a.Fragment, {});
             }
-        }, [S]);
-    return (0, r.jsx)(u.Button, {
+        }, [N]);
+    return (0, a.jsx)(d.Button, {
         onClick: E,
         color: 'transparent',
-        look: u.Button.Looks.BLANK,
-        size: u.Button.Sizes.NONE,
+        look: d.Button.Looks.BLANK,
+        size: d.Button.Sizes.NONE,
         onFocus: j,
         onBlur: A,
         onMouseEnter: j,
         onMouseLeave: A,
         innerClassName: C.activityItemButtonInnerClass,
-        children: (0, r.jsx)(u.Spring, {
+        children: (0, a.jsx)(d.Spring, {
             config: v,
             from: { value: 0 },
             to: { value: T ? 1 : 0 },
             children: (e) => {
                 let { value: t } = e;
-                return (0, r.jsx)(u.ThemeProvider, {
+                return (0, a.jsx)(d.ThemeProvider, {
                     theme: f.BRd.DARK,
                     children: (e) =>
-                        (0, r.jsx)(c.animated.div, {
+                        (0, a.jsx)(c.animated.div, {
                             className: o()(e, C.activityItem, _, {
-                                [C.activityItem_13_11]: 0 === a,
-                                [C.activityItem_16_9]: 1 === a
+                                [C.activityItem_13_11]: 0 === s,
+                                [C.activityItem_16_9]: 1 === s
                             }),
                             style: {
                                 transform: t.to([0, 1], [1, 1.05]).to((e) => 'scale('.concat(e, ')'))
                             },
-                            children: (0, r.jsxs)(r.Fragment, {
+                            children: (0, a.jsxs)(a.Fragment, {
                                 children: [
-                                    (0, r.jsx)(h.Z, {
+                                    (0, a.jsx)(h.Z, {
                                         imageBackground: b,
                                         applicationName: i.application.name,
                                         imageClassName: C.activitySuggestionImage,

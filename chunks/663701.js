@@ -33,8 +33,8 @@ var i = n(200651),
     y = n(795448),
     L = n(441623),
     R = n(457396),
-    P = n(108989),
-    O = n(51596),
+    O = n(108989),
+    P = n(51596),
     j = n(905423),
     D = n(155409),
     M = n(210887),
@@ -95,7 +95,7 @@ let $ = (e) => {
                 }),
                 m &&
                     !d &&
-                    (0, i.jsx)(P.Z, {
+                    (0, i.jsx)(O.Z, {
                         className: J.confetti,
                         wind: 0,
                         sprites: q.CA,
@@ -207,7 +207,7 @@ let $ = (e) => {
                     }
                 });
     },
-    el = () => (0, O.$Z)('DM_SEARCH');
+    el = () => (0, P.$Z)('DM_SEARCH');
 function ea(e) {
     switch (e) {
         case K.Z5c.APPLICATION_LIBRARY:

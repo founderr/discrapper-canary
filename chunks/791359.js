@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return P;
     }
 }),
     n(47120);
@@ -91,8 +91,8 @@ let L = 15 * I.Z.Millis.MINUTE,
               })
             : null;
     }),
-    P = a().throttle(() => p.W(!1), 300000);
-function O() {
+    O = a().throttle(() => p.W(!1), 300000);
+function P() {
     let {
             nowPlayingCards: e,
             loaded: t,
@@ -109,7 +109,7 @@ function O() {
         s = (0, c.e7)([h.Z], () => h.Z.quests);
     r.useEffect(() => (u.Z.wait(() => C.L()), () => u.Z.wait(() => C.v())), [null == a ? void 0 : a.id]),
         r.useEffect(() => {
-            n && !l && P();
+            n && !l && O();
         }, [n, l]);
     let o = r.useMemo(() => {
             let t = new Map(),

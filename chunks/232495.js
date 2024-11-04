@@ -7,20 +7,20 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    r = n(481060),
-    s = n(430824),
-    a = n(914010),
+    a = n(481060),
+    r = n(430824),
+    s = n(914010),
     o = n(388032),
     c = n(60719);
-let u = () =>
+let d = () =>
         (0, i.jsx)(i.Fragment, {
             children: o.intl.format(o.t.ymkBtr, {
                 shareIcon: o.intl.string(o.t.VINpSE),
-                shareIconHook: () => (0, i.jsx)(r.GroupPlusIcon, { className: c.icon }, 'icon')
+                shareIconHook: () => (0, i.jsx)(a.GroupPlusIcon, { className: c.icon }, 'icon')
             })
         }),
-    d = () => {
-        let e = (0, l.e7)([s.Z, a.Z], () => s.Z.getGuild(a.Z.getGuildId()), []),
+    u = () => {
+        let e = (0, l.e7)([r.Z, s.Z], () => r.Z.getGuild(s.Z.getGuildId()), []),
             t = null == e ? void 0 : e.name;
         return (0, i.jsx)(i.Fragment, { children: o.intl.format(o.t.oQuG3N, { serverName: t }) });
     },
@@ -39,7 +39,7 @@ let u = () =>
                         className: c.writingMessagesTitle,
                         children: o.intl.string(o.t.nkP0l5)
                     }),
-                    body: (0, i.jsx)(d, {})
+                    body: (0, i.jsx)(u, {})
                 },
                 ORGANIZE_BY_TOPIC: {
                     title: (0, i.jsx)('div', {
@@ -54,7 +54,7 @@ let u = () =>
                 },
                 INSTANT_INVITE: {
                     title: o.intl.string(o.t.XcehY2),
-                    body: (0, i.jsx)(u, {})
+                    body: (0, i.jsx)(d, {})
                 },
                 SERVER_SETTINGS: {
                     title: o.intl.string(o.t.wc8wi4),
@@ -77,10 +77,10 @@ let u = () =>
                     body: o.intl.format(o.t.NTq0AQ, {})
                 }
             },
-            r = null !== (t = l[e.replace(/-/g, '_').toUpperCase()]) && void 0 !== t ? t : {};
+            a = null !== (t = l[e.replace(/-/g, '_').toUpperCase()]) && void 0 !== t ? t : {};
         return {
-            title: r.title,
-            body: r.body,
-            isLongText: null !== (n = r.isLongText) && void 0 !== n && n
+            title: a.title,
+            body: a.body,
+            isLongText: null !== (n = a.isLongText) && void 0 !== n && n
         };
     };

@@ -1,26 +1,26 @@
 n.d(t, {
     ZP: function () {
-        return d;
+        return u;
     }
 }),
     n(47120);
 var i = n(192379),
     l = n(714319),
-    r = n(536895),
-    s = n(260866);
-let a = [r.R8.TAB, r.R8.UP, r.R8.DOWN];
+    a = n(536895),
+    r = n(260866);
+let s = [a.R8.TAB, a.R8.UP, a.R8.DOWN];
 function o(e, t, n) {
     return null != n ? '#'.concat(e(t, n)) : '#'.concat(t);
 }
 function c(e) {
     return document.querySelector(e);
 }
-function u(e) {
+function d(e) {
     var t;
     null === (t = document.getElementById(e)) || void 0 === t || t.focus();
 }
-function d(e) {
-    let { navId: t, itemCount: n, focusedIndex: d = 0, onSelect: h, setFocus: m, getNewFocusIndex: p, maintainFocusPosition: f = !0, includeSetSizes: g = !0, focusOnMount: C = !0, enabled: x = !0, onDispatch: v } = e,
+function u(e) {
+    let { navId: t, itemCount: n, focusedIndex: u = 0, onSelect: h, setFocus: p, getNewFocusIndex: m, maintainFocusPosition: f = !0, includeSetSizes: g = !0, focusOnMount: C = !0, enabled: x = !0, onDispatch: v } = e,
         _ = i.useCallback(
             (e, t) => {
                 let n = (0, l.Z)(e, t);
@@ -29,11 +29,11 @@ function d(e) {
             [v]
         ),
         [I, E] = i.useReducer(_, {
-            focusedIndex: d,
+            focusedIndex: u,
             itemCount: n
         }),
-        { itemCount: b, focusedIndex: S } = I,
-        [Z] = i.useState(() => (0, s.P2)(E, 16));
+        { itemCount: b, focusedIndex: N } = I,
+        [Z] = i.useState(() => (0, r.P2)(E, 16));
     return (
         i.useEffect(() => {
             E({
@@ -42,18 +42,18 @@ function d(e) {
             });
         }, [n]),
         (function (e) {
-            let { navId: t, itemCount: n, focusedIndex: d, onSelect: h, setFocus: m = u, getNewFocusIndex: p, dispatch: f, maintainFocusPosition: g, includeSetSizes: C, focusOnMount: x, enabled: v, makeId: _ = s.qR, getIndexFromId: I } = e,
+            let { navId: t, itemCount: n, focusedIndex: u, onSelect: h, setFocus: p = d, getNewFocusIndex: m, dispatch: f, maintainFocusPosition: g, includeSetSizes: C, focusOnMount: x, enabled: v, makeId: _ = r.qR, getIndexFromId: I } = e,
                 E = i.useRef(n),
                 b = i.useRef(I);
             (b.current = I), (E.current = n);
-            let S = i.useRef();
+            let N = i.useRef();
             i.useEffect(() => {
-                S.current = v;
+                N.current = v;
             }, [v]);
             let [Z, T] = i.useState(!1),
-                [N] = i.useState(
+                [S] = i.useState(
                     () =>
-                        new s.$o((e) => () => {
+                        new r.$o((e) => () => {
                             let t = null != b.current && 'string' == typeof e ? b.current(e) : e;
                             'number' == typeof t &&
                                 !(t < 0) &&
@@ -63,12 +63,12 @@ function d(e) {
                                 });
                         })
                 );
-            i.useEffect(() => () => N.clean(), [N]);
+            i.useEffect(() => () => S.clean(), [S]);
             let j = i.useCallback(
                     (e, t) => {
-                        S.current && m(e, t);
+                        N.current && p(e, t);
                     },
-                    [m]
+                    [p]
                 ),
                 [A, y] = i.useState(!0);
             i.useEffect(() => {
@@ -76,81 +76,81 @@ function d(e) {
                     y(!1);
                     return;
                 }
-                j(_(t, d), d);
-            }, [d]);
+                j(_(t, u), u);
+            }, [u]);
             let P = i.useCallback(
                     function () {
                         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-                            n = null != p ? p(d) : d;
-                        n !== d &&
+                            n = null != m ? m(u) : u;
+                        n !== u &&
                             f({
                                 type: l.G.SET_FOCUSED_INDEX,
                                 index: n
                             }),
                             e && j(_(t, n), n);
                     },
-                    [_, d, p, f, t, j]
+                    [_, u, m, f, t, j]
                 ),
                 M = i.useCallback(
                     (e) => {
-                        if (!S.current) return;
-                        if (a.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
+                        if (!N.current) return;
+                        if (s.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
                             e.preventDefault(), e.stopPropagation(), P();
                             return;
                         }
                         let n = (function (e) {
                             switch (e.key) {
-                                case r.R8.ENTER:
-                                case r.R8.SPACE:
-                                    return r.Us.SELECT_FOCUSED_ITEM;
-                                case r.R8.UP:
-                                    return r.Us.NAVIGATE_UP;
-                                case r.R8.DOWN:
-                                    return r.Us.NAVIGATE_DOWN;
-                                case r.R8.HOME:
-                                    return r.Us.NAVIGATE_START;
-                                case r.R8.END:
-                                    return r.Us.NAVIGATE_END;
+                                case a.R8.ENTER:
+                                case a.R8.SPACE:
+                                    return a.Us.SELECT_FOCUSED_ITEM;
+                                case a.R8.UP:
+                                    return a.Us.NAVIGATE_UP;
+                                case a.R8.DOWN:
+                                    return a.Us.NAVIGATE_DOWN;
+                                case a.R8.HOME:
+                                    return a.Us.NAVIGATE_START;
+                                case a.R8.END:
+                                    return a.Us.NAVIGATE_END;
                             }
                         })(e);
                         switch (n) {
-                            case r.Us.NAVIGATE_UP:
-                            case r.Us.NAVIGATE_DOWN:
-                            case r.Us.NAVIGATE_START:
-                            case r.Us.NAVIGATE_END:
+                            case a.Us.NAVIGATE_UP:
+                            case a.Us.NAVIGATE_DOWN:
+                            case a.Us.NAVIGATE_START:
+                            case a.Us.NAVIGATE_END:
                                 e.preventDefault(), e.stopPropagation(), f({ type: n });
                                 return;
-                            case r.Us.SELECT_FOCUSED_ITEM:
+                            case a.Us.SELECT_FOCUSED_ITEM:
                                 var i;
-                                let l = c(o(_, t, d));
+                                let l = c(o(_, t, u));
                                 if ((null == (i = l) ? void 0 : i.ownerDocument.activeElement) !== i || e.repeat) return;
                                 if ((e.preventDefault(), e.stopPropagation(), f({ type: n }), null != h)) {
-                                    h(d);
+                                    h(u);
                                     return;
                                 }
                                 null == l || l.click();
                         }
                     },
-                    [_, t, f, d, P, h]
+                    [_, t, f, u, P, h]
                 ),
                 R = i.useCallback(() => {
                     Z || T(!0);
                 }, [Z]),
                 L = i.useCallback(() => {
-                    if (!Z) g ? j(_(t, d), d) : P(!0);
-                }, [_, t, j, g, Z, d, P]),
+                    if (!Z) g ? j(_(t, u), u) : P(!0);
+                }, [_, t, j, g, Z, u, P]),
                 k = i.useCallback(
                     (e) => {
                         if (!e.currentTarget.contains(e.relatedTarget))
                             requestAnimationFrame(() => {
-                                if (null == c(o(_, t, d))) {
+                                if (null == c(o(_, t, u))) {
                                     j(t);
                                     return;
                                 }
                                 T(!1);
                             });
                     },
-                    [_, t, d, j]
+                    [_, t, u, j]
                 ),
                 O = i.useRef(null);
             i.useLayoutEffect(() => {
@@ -165,7 +165,7 @@ function d(e) {
                         }
                     );
             }, [L, R, k]);
-            let w = i.useCallback(
+            let D = i.useCallback(
                     () => ({
                         role: 'list',
                         tabIndex: Z && g ? -1 : 0,
@@ -175,7 +175,7 @@ function d(e) {
                     }),
                     [t, Z, M, g]
                 ),
-                D = i.useCallback(
+                w = i.useCallback(
                     (e) => {
                         let { index: n } = e;
                         return {
@@ -183,28 +183,28 @@ function d(e) {
                             'aria-setsize': C ? E.current : void 0,
                             'aria-posinset': C ? n + 1 : void 0,
                             id: _(t, n),
-                            tabIndex: g && n === d ? 0 : -1,
-                            onFocus: N.get(null != b.current ? _(t, n) : n)
+                            tabIndex: g && n === u ? 0 : -1,
+                            onFocus: S.get(null != b.current ? _(t, n) : n)
                         };
                     },
-                    [_, t, d, g, N, C]
+                    [_, t, u, g, S, C]
                 );
             return i.useMemo(
                 () => ({
                     dispatch: f,
-                    getContainerProps: w,
-                    getItemProps: D
+                    getContainerProps: D,
+                    getItemProps: w
                 }),
-                [f, w, D]
+                [f, D, w]
             );
         })({
             navId: t,
             itemCount: b,
-            focusedIndex: S,
+            focusedIndex: N,
             dispatch: Z,
             onSelect: h,
-            setFocus: m,
-            getNewFocusIndex: p,
+            setFocus: p,
+            getNewFocusIndex: m,
             maintainFocusPosition: f,
             includeSetSizes: g,
             focusOnMount: C,

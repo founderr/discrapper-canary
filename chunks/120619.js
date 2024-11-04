@@ -1,70 +1,70 @@
 n(47120);
 var i,
     l,
+    a,
     r,
-    s,
-    a = n(442837),
+    s = n(442837),
     o = n(570140),
     c = n(959546),
     u = n(215023);
 let d = new Map(),
-    h = new Set(),
     m = new Set(),
+    f = new Set(),
     p = new Set(),
-    f = new Map(),
+    h = new Map(),
     g = !1;
-class C extends (i = a.ZP.Store) {
+class v extends (i = s.ZP.Store) {
     getPrice(e) {
         return d.get(e);
     }
     isFetchingPrice(e) {
-        return h.has(e);
+        return m.has(e);
     }
     getErrored(e) {
         return p.has(e);
     }
     getEntitlement(e) {
-        return f.get(e);
+        return h.get(e);
     }
     isEntitlementFetched(e) {
-        return f.has(e);
+        return h.has(e);
     }
     isEntitlementFetching(e) {
-        return m.has(e);
+        return f.has(e);
     }
     getPlayedAnimation() {
         return g;
     }
 }
-(s = 'ConsumablesStore'),
-    (r = 'displayName') in (l = C)
-        ? Object.defineProperty(l, r, {
-              value: s,
+(r = 'ConsumablesStore'),
+    (a = 'displayName') in (l = v)
+        ? Object.defineProperty(l, a, {
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = s),
-    (t.Z = new C(o.Z, {
+        : (l[a] = r),
+    (t.Z = new v(o.Z, {
         CONSUMABLES_PRICE_FETCH_STARTED: (e) => {
-            h.add(e.skuId);
+            m.add(e.skuId);
         },
         CONSUMABLES_PRICE_FETCH_SUCCEEDED: (e) => {
-            d.set(e.skuId, e.price), h.delete(e.skuId);
+            d.set(e.skuId, e.price), m.delete(e.skuId);
         },
         CONSUMABLES_PRICE_FETCH_FAILED: (e) => {
-            h.delete(e.skuId), p.add(e.skuId);
+            m.delete(e.skuId), p.add(e.skuId);
         },
         CONSUMABLES_CLEAR_ERROR: (e) => {
             p.delete(e.skuId);
         },
         CONSUMABLES_ENTITLEMENT_FETCH_COMPLETED: (e) => {
-            m.delete(e.skuId), f.set(e.skuId, e.entitlement);
+            f.delete(e.skuId), h.set(e.skuId, e.entitlement);
         },
         SKU_PURCHASE_SUCCESS: (e) => {
             if (1 !== e.entitlements.length) return;
             let t = e.entitlements[0];
-            if (t.sku_id === u.FX) f.set(e.skuId, c.Z.createFromServer(t));
+            if (t.sku_id === u.FX) h.set(e.skuId, c.Z.createFromServer(t));
         },
         PLAYED_HD_STREAMING_POTION_ANIMATION: (e) => {
             g = !0;
@@ -73,9 +73,9 @@ class C extends (i = a.ZP.Store) {
             g = !1;
         },
         CONSUMABLES_ENTITLEMENT_FETCH_FAILED: (e) => {
-            p.add(e.skuId), m.delete(e.skuId);
+            p.add(e.skuId), f.delete(e.skuId);
         },
         CONSUMABLES_ENTITLEMENT_FETCH_STARTED: (e) => {
-            m.add(e.skuId);
+            f.add(e.skuId);
         }
     }));

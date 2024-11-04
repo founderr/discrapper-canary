@@ -5,16 +5,16 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(597312),
-    s = n(481060),
-    a = n(410030),
+    a = n(597312),
+    r = n(481060),
+    s = n(410030),
     o = n(100527),
     c = n(906732),
-    u = n(785717),
-    d = n(221292),
+    d = n(785717),
+    u = n(221292),
     h = n(687158),
-    m = n(471879),
-    p = n(502762),
+    p = n(471879),
+    m = n(502762),
     f = n(475413),
     g = n(228168),
     C = n(388032),
@@ -23,9 +23,9 @@ var i = n(200651),
 function _(e) {
     let { user: t, channel: n, onViewBlockedProfileClick: _ } = e,
         I = (0, h.ZP)(t.id),
-        E = (0, a.ZP)(),
+        E = (0, s.ZP)(),
         { analyticsLocations: b } = (0, c.ZP)(o.Z.BLOCKED_PROFILE_PANEL),
-        S = (0, u.ZB)({
+        N = (0, d.ZB)({
             layout: 'BLOCKED_PROFILE_PANEL',
             userId: t.id,
             channelId: n.id
@@ -33,16 +33,16 @@ function _(e) {
         Z = l.useRef(null);
     return (0, i.jsx)(c.Gt, {
         value: b,
-        children: (0, i.jsx)(u.Mt, {
-            value: S,
-            children: (0, i.jsx)(p.Z, {
+        children: (0, i.jsx)(d.Mt, {
+            value: N,
+            children: (0, i.jsx)(m.Z, {
                 ref: Z,
                 user: t,
                 displayProfile: I,
                 profileType: g.y0.PANEL,
                 themeOverride: E,
                 className: x.container,
-                children: (0, i.jsx)(r.u2, {
+                children: (0, i.jsx)(a.u2, {
                     children: (0, i.jsxs)('div', {
                         className: x.container,
                         children: [
@@ -55,20 +55,20 @@ function _(e) {
                             (0, i.jsxs)('div', {
                                 className: x.body,
                                 children: [
-                                    (0, i.jsx)(m.Z, {
+                                    (0, i.jsx)(p.Z, {
                                         user: t,
                                         guildId: null
                                     }),
-                                    (0, i.jsx)(s.Heading, {
+                                    (0, i.jsx)(r.Heading, {
                                         variant: 'heading-lg/bold',
                                         className: x.header,
                                         children: C.intl.string(C.t.VNJ7UF)
                                     }),
-                                    (0, i.jsx)(s.Text, {
+                                    (0, i.jsx)(r.Text, {
                                         variant: 'text-sm/medium',
                                         children: C.intl.format(C.t.LXbngo, { username: t.username })
                                     }),
-                                    (0, i.jsx)(s.Text, {
+                                    (0, i.jsx)(r.Text, {
                                         variant: 'text-sm/medium',
                                         children: C.intl.string(C.t['20WzZ2'])
                                     }),
@@ -80,10 +80,10 @@ function _(e) {
                                         fullWidth: !1,
                                         onClick: () => {
                                             null == _ || _(),
-                                                (0, d.pQ)({
+                                                (0, u.pQ)({
                                                     action: 'VIEW_BLOCKED_PROFILE',
                                                     analyticsLocations: b,
-                                                    ...S
+                                                    ...N
                                                 });
                                         }
                                     })

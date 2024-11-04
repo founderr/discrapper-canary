@@ -31,8 +31,8 @@ var r = n(200651),
     l = n(688619),
     i = n.n(l),
     o = n(392711),
-    c = n.n(o),
-    s = n(765053),
+    s = n.n(o),
+    c = n(765053),
     d = n(190558),
     u = n(203165),
     h = n(481060),
@@ -74,9 +74,9 @@ function S() {
                     if (null == i) return '';
                     let o = _(n);
                     if (l) return '--'.concat(o, ': magenta !important;');
-                    let c = _(i.color),
-                        s = i.opacity,
-                        d = s < 1 ? 'hsl(var(--'.concat(c, '-hsl) / ').concat(s, ')') : 'var(--'.concat(c, ')');
+                    let s = _(i.color),
+                        c = i.opacity,
+                        d = c < 1 ? 'hsl(var(--'.concat(s, '-hsl) / ').concat(c, ')') : 'var(--'.concat(s, ')');
                     return '--'.concat(o, ': color-mix(\n        in oklab,\n        ').concat(d, ' 100%,\n        var(--theme-base-color, black) var(--theme-base-color-amount, 0%)\n      );');
                 }),
                 n = Object.keys(j).flatMap((e) => {
@@ -87,15 +87,15 @@ function S() {
                             l: a
                         } = (function (e) {
                             let [t, n, r] = 'transparent' === e ? [0, 0, 0] : i()(e).hsl(),
-                                a = isNaN(t) ? 0 : c().round(t, 1),
-                                l = c().round(100 * r, 1);
+                                a = isNaN(t) ? 0 : s().round(t, 1),
+                                l = s().round(100 * r, 1);
                             return {
                                 h: a,
-                                s: c().round(100 * n, 1),
+                                s: s().round(100 * n, 1),
                                 l: l
                             };
                         })(t.highlight ? '#FF00FF' : t.color),
-                        l = c().kebabCase(e);
+                        l = s().kebabCase(e);
                     return ['--'.concat(l, '-hsl: ').concat(n, ' calc(var(--saturation-factor, 1) * ').concat(r, '%) ').concat(a, '% !important;'), '--'.concat(l, ': hsl(var(--').concat(l, '-hsl)) !important;')];
                 }),
                 r = S.reduce((e, t) => {
@@ -230,7 +230,7 @@ function S() {
                     setState: n
                 })
             }),
-            (0, r.jsx)(s.ql, {
+            (0, r.jsx)(c.ql, {
                 children: (0, r.jsx)('style', {
                     id: 'devtools-color-overrides',
                     children: y
@@ -243,7 +243,7 @@ function N(e) {
     let { state: t, setState: n } = e,
         l = (0, m.Fg)(),
         { semanticColorOverrides: i, rawColorOverrides: o } = t,
-        c = a.useMemo(
+        s = a.useMemo(
             () =>
                 Object.keys(u.b).reduce(
                     (e, t) => [
@@ -257,7 +257,7 @@ function N(e) {
                 ),
             []
         ),
-        s = a.useCallback(
+        c = a.useCallback(
             (e) => {
                 n((t) => {
                     var n;
@@ -346,7 +346,7 @@ function N(e) {
                 options: p,
                 placeholder: 'Search for a semantic token...',
                 value: void 0,
-                onChange: s,
+                onChange: c,
                 renderOptionPrefix: (e) =>
                     null == e
                         ? null
@@ -364,7 +364,7 @@ function N(e) {
                         i = a.colors[l];
                     if (null == i) return null;
                     let o = C(i.color),
-                        s = i.opacity,
+                        c = i.opacity,
                         d = b.jC[t][l];
                     return (0, r.jsx)(
                         y,
@@ -393,7 +393,7 @@ function N(e) {
                                 children: [
                                     (0, r.jsx)(h.SearchableSelect, {
                                         value: o,
-                                        options: c,
+                                        options: s,
                                         onChange: (e) => {
                                             n((n) => {
                                                 let { semanticColorOverrides: r } = n,
@@ -425,7 +425,7 @@ function N(e) {
                                     (0, r.jsx)(h.TextInput, {
                                         inputClassName: v.opacityInput,
                                         type: 'number',
-                                        value: s,
+                                        value: c,
                                         min: 0,
                                         max: 1,
                                         step: 0.01,
@@ -571,7 +571,7 @@ function N(e) {
     });
 }
 function y(e) {
-    let { title: t, subtitle: n, highlight: a, onReset: l, onRemove: i, onHighlightToggle: o, children: c } = e;
+    let { title: t, subtitle: n, highlight: a, onReset: l, onRemove: i, onHighlightToggle: o, children: s } = e;
     return (0, r.jsxs)('li', {
         className: v.override,
         'data-highlight': a,
@@ -627,7 +627,7 @@ function y(e) {
             }),
             (0, r.jsx)('div', {
                 className: v.overrideContent,
-                children: c
+                children: s
             })
         ]
     });

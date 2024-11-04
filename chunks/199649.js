@@ -6,22 +6,22 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    r = n(481060),
-    s = n(194359),
-    a = n(631937),
+    a = n(481060),
+    r = n(194359),
+    s = n(631937),
     o = n(702321),
     c = n(377171),
-    u = n(699516),
-    d = n(626135),
+    d = n(699516),
+    u = n(626135),
     h = n(63063),
-    m = n(862679),
-    p = n(981631),
+    p = n(862679),
+    m = n(981631),
     f = n(596401),
     g = n(388032);
 function C(e) {
     let { channel: t, children: C } = e,
-        x = (0, l.e7)([u.Z], () => u.Z.isBlocked(t.getRecipientId()));
-    (0, a.Z)(t.id);
+        x = (0, l.e7)([d.Z], () => d.Z.isBlocked(t.getRecipientId()));
+    (0, s.Z)(t.id);
     let v = (0, o.Z)(t.id),
         _ = t.isSystemDM(),
         I = x && !_ && !t.isMultiUserDM(),
@@ -31,7 +31,7 @@ function C(e) {
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       g.intl.string(g.t['+KSnWV']),
-                      (0, i.jsx)(r.WindowLaunchIcon, {
+                      (0, i.jsx)(a.WindowLaunchIcon, {
                           size: 'xs',
                           color: c.Z.HEADER_PRIMARY
                       })
@@ -44,13 +44,13 @@ function C(e) {
             (E.onButtonClick = () => {
                 if (v) {
                     open(f.D2),
-                        d.default.track(p.rMx.CHANGE_LOG_CTA_CLICKED, {
+                        u.default.track(m.rMx.CHANGE_LOG_CTA_CLICKED, {
                             cta_type: 'chat_blocker',
                             target: f.D2
                         });
                     return;
                 }
-                open(h.Z.getArticleURL(p.BhN.SYSTEM_DMS));
+                open(h.Z.getArticleURL(m.BhN.SYSTEM_DMS));
             }),
             (E.imageSrc = n(780961));
     } else
@@ -58,9 +58,9 @@ function C(e) {
             ((E.message = g.intl.string(g.t['9T6N5+'])),
             (E.buttonText = g.intl.string(g.t.XyHpKC)),
             (E.onButtonClick = () => {
-                s.Z.unblockUser(t.getRecipientId());
+                r.Z.unblockUser(t.getRecipientId());
             }));
-    return (0, i.jsx)(m.Z, {
+    return (0, i.jsx)(p.Z, {
         ...E,
         children: C
     });

@@ -1,10 +1,10 @@
 t.d(n, {
     Z: function () {
-        return k;
+        return A;
     }
 });
-var o = t(200651),
-    r = t(192379),
+var r = t(200651),
+    o = t(192379),
     i = t(120356),
     l = t.n(i),
     a = t(442837),
@@ -22,40 +22,40 @@ var o = t(200651),
     E = t(626135),
     b = t(930153),
     x = t(74538),
-    v = t(937615),
+    P = t(937615),
     C = t(981631),
-    P = t(474936),
+    v = t(474936),
     T = t(388032),
     I = t(75115);
 function y(e) {
     let { shouldUpsellFromNoneTier: n } = e,
         t = (0, a.e7)([g.default], () => g.default.locale);
-    return (0, o.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: I.perksList,
         children: [
-            (0, o.jsx)(_.Z, {
+            (0, r.jsx)(_.Z, {
                 icon: S.Z,
                 iconClassName: I.perkIconGuild,
-                description: T.intl.formatToPlainString(T.t.sQBgs7, { numFreeGuildSubscriptions: P.cb })
+                description: T.intl.formatToPlainString(T.t.sQBgs7, { numFreeGuildSubscriptions: v.cb })
             }),
-            (0, o.jsx)(_.Z, {
+            (0, r.jsx)(_.Z, {
                 icon: S.Z,
                 iconClassName: I.perkIconGuild,
-                description: T.intl.formatToPlainString(T.t['1A6vXl'], { percent: (0, b.T3)(t, P.Rr / 100) })
+                description: T.intl.formatToPlainString(T.t['1A6vXl'], { percent: (0, b.T3)(t, v.Rr / 100) })
             }),
             n
-                ? (0, o.jsx)(_.Z, {
+                ? (0, r.jsx)(_.Z, {
                       icon: c.ReactionIcon,
                       iconClassName: I.perkIconChatPerks,
                       description: T.intl.string(T.t.Z9b2x8)
                   })
                 : null,
-            (0, o.jsx)(_.Z, {
+            (0, r.jsx)(_.Z, {
                 icon: c.ScreenArrowIcon,
                 iconClassName: I.perkIconStream,
                 description: T.intl.string(T.t['8dqG5O'])
             }),
-            (0, o.jsx)(_.Z, {
+            (0, r.jsx)(_.Z, {
                 icon: c.UploadIcon,
                 iconClassName: I.perkIconUpload,
                 description: T.intl.string(T.t.cBorIy)
@@ -63,64 +63,64 @@ function y(e) {
         ]
     });
 }
-function k(e) {
+function A(e) {
     var n;
-    let { premiumSubscriptionPlan: t, onClose: i, onBack: a, onSkip: _, onSubscriptionConfirmation: g, analyticsLocation: S, analyticsSourceLocation: b, priceOptions: k } = e,
-        { analyticsLocations: N, sourceAnalyticsLocations: M } = (0, d.ZP)(u.Z.GUILD_BOOSTING_PREMIUM_UPSELL),
-        { theme: A } = (0, c.useThemeContext)(),
-        R = (0, s.ap)(A) ? c.Button.Colors.PRIMARY : c.Button.Colors.WHITE,
+    let { premiumSubscriptionPlan: t, onClose: i, onBack: a, onSkip: _, onSubscriptionConfirmation: g, analyticsLocation: S, analyticsSourceLocation: b, priceOptions: A } = e,
+        { analyticsLocations: N, sourceAnalyticsLocations: k } = (0, d.ZP)(u.Z.GUILD_BOOSTING_PREMIUM_UPSELL),
+        { theme: M } = (0, c.useThemeContext)(),
+        R = (0, s.ap)(M) ? c.Button.Colors.PRIMARY : c.Button.Colors.WHITE,
         L = null == t || null == t.premiumSubscriptionType,
-        O = x.ZP.getPrice(P.Xh.PREMIUM_MONTH_TIER_2, !1, !1, k),
-        j = (0, v.T4)(O.amount, O.currency),
+        O = x.ZP.getPrice(v.Xh.PREMIUM_MONTH_TIER_2, !1, !1, A),
+        j = (0, P.T4)(O.amount, O.currency),
         B = (0, m.N)(),
         Z = null == B ? void 0 : B.trial_id,
-        D = (null == B ? void 0 : null === (n = B.subscription_trial) || void 0 === n ? void 0 : n.sku_id) === P.Si.TIER_2;
+        D = (null == B ? void 0 : null === (n = B.subscription_trial) || void 0 === n ? void 0 : n.sku_id) === v.Si.TIER_2;
     return (
-        r.useEffect(() => {
+        o.useEffect(() => {
             E.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: P.cd.GUILD_PREMIUM_UPSELL_MODAL,
-                location_stack: M
+                type: v.cd.GUILD_PREMIUM_UPSELL_MODAL,
+                location_stack: k
             });
-        }, [M]),
-        (0, o.jsxs)(o.Fragment, {
+        }, [k]),
+        (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, o.jsxs)(c.ModalContent, {
+                (0, r.jsxs)(c.ModalContent, {
                     className: I.content,
                     children: [
-                        (0, o.jsx)(c.ModalCloseButton, {
+                        (0, r.jsx)(c.ModalCloseButton, {
                             onClick: i,
                             className: I.closeButton
                         }),
-                        D && (0, o.jsx)(h.dz, { className: I.premiumTrialBadge }),
-                        (0, o.jsx)('div', { className: l()(I.upsellImage, { [I.upsellImageWithTrialOffer]: D }) }),
-                        (0, o.jsx)('div', {
+                        D && (0, r.jsx)(h.dz, { className: I.premiumTrialBadge }),
+                        (0, r.jsx)('div', { className: l()(I.upsellImage, { [I.upsellImageWithTrialOffer]: D }) }),
+                        (0, r.jsx)('div', {
                             className: I.bodyText,
                             children: null != Z ? T.intl.string(T.t.AoSzEh) : T.intl.format(T.t['7vePZW'], { monthlyPrice: j })
                         }),
-                        (0, o.jsx)(y, { shouldUpsellFromNoneTier: L })
+                        (0, r.jsx)(y, { shouldUpsellFromNoneTier: L })
                     ]
                 }),
-                (0, o.jsxs)(c.ModalFooter, {
+                (0, r.jsxs)(c.ModalFooter, {
                     align: p.Z.Align.CENTER,
                     justify: p.Z.Justify.END,
                     children: [
-                        (0, o.jsxs)('div', {
+                        (0, r.jsxs)('div', {
                             className: I.footerRight,
                             children: [
-                                (0, o.jsx)(c.Button, {
+                                (0, r.jsx)(c.Button, {
                                     look: c.Button.Looks.LINK,
                                     color: R,
                                     onClick: _,
                                     children: T.intl.string(T.t['SI/adn'])
                                 }),
-                                (0, o.jsx)(c.Button, {
+                                (0, r.jsx)(c.Button, {
                                     color: c.Button.Colors.GREEN,
                                     type: 'submit',
                                     onClick: () => {
                                         i(),
                                             (0, f.Z)({
                                                 initialPlanId: null,
-                                                subscriptionTier: P.Si.TIER_2,
+                                                subscriptionTier: v.Si.TIER_2,
                                                 analyticsLocations: N,
                                                 analyticsObject: {
                                                     ...S,
@@ -135,9 +135,9 @@ function k(e) {
                                 })
                             ]
                         }),
-                        (0, o.jsx)('div', {
+                        (0, r.jsx)('div', {
                             className: I.backStep,
-                            children: (0, o.jsx)(c.Button, {
+                            children: (0, r.jsx)(c.Button, {
                                 color: R,
                                 look: c.Button.Looks.LINK,
                                 size: c.Button.Sizes.NONE,

@@ -1,107 +1,107 @@
-var i = e(392711),
-    r = e.n(i),
-    o = e(544891),
-    a = e(570140),
-    u = e(981631);
-let l = ['Spidey Bot', 'Captain Hook'];
-n.Z = {
+var r = n(392711),
+    i = n.n(r),
+    l = n(544891),
+    u = n(570140),
+    a = n(981631);
+let o = ['Spidey Bot', 'Captain Hook'];
+e.Z = {
     fetchForGuild(t) {
-        a.Z.dispatch({
+        u.Z.dispatch({
             type: 'WEBHOOKS_FETCHING',
             guildId: t
         }),
-            o.tn
+            l.tn
                 .get({
-                    url: u.ANM.GUILD_WEBHOOKS(t),
-                    oldFormErrors: !0
-                })
-                .then((n) => {
-                    let { body: e } = n;
-                    return a.Z.dispatch({
-                        type: 'WEBHOOKS_UPDATE',
-                        guildId: t,
-                        webhooks: e
-                    });
-                })
-                .catch((n) => {
-                    let { body: e } = n;
-                    a.Z.dispatch({
-                        type: 'WEBHOOKS_UPDATE',
-                        guildId: t,
-                        error: e.message
-                    });
-                });
-    },
-    fetchForChannel(t, n) {
-        a.Z.dispatch({
-            type: 'WEBHOOKS_FETCHING',
-            guildId: t,
-            channelId: n
-        }),
-            o.tn
-                .get({
-                    url: u.ANM.CHANNEL_WEBHOOKS(n),
+                    url: a.ANM.GUILD_WEBHOOKS(t),
                     oldFormErrors: !0
                 })
                 .then((e) => {
-                    let { body: i } = e;
-                    return a.Z.dispatch({
+                    let { body: n } = e;
+                    return u.Z.dispatch({
                         type: 'WEBHOOKS_UPDATE',
                         guildId: t,
-                        channelId: n,
-                        webhooks: i
+                        webhooks: n
+                    });
+                })
+                .catch((e) => {
+                    let { body: n } = e;
+                    u.Z.dispatch({
+                        type: 'WEBHOOKS_UPDATE',
+                        guildId: t,
+                        error: n.message
                     });
                 });
     },
-    create: (t, n, e) => (
-        null == e && (e = l[r().random(0, l.length - 1)]),
-        o.tn
+    fetchForChannel(t, e) {
+        u.Z.dispatch({
+            type: 'WEBHOOKS_FETCHING',
+            guildId: t,
+            channelId: e
+        }),
+            l.tn
+                .get({
+                    url: a.ANM.CHANNEL_WEBHOOKS(e),
+                    oldFormErrors: !0
+                })
+                .then((n) => {
+                    let { body: r } = n;
+                    return u.Z.dispatch({
+                        type: 'WEBHOOKS_UPDATE',
+                        guildId: t,
+                        channelId: e,
+                        webhooks: r
+                    });
+                });
+    },
+    create: (t, e, n) => (
+        null == n && (n = o[i().random(0, o.length - 1)]),
+        l.tn
             .post({
-                url: u.ANM.CHANNEL_WEBHOOKS(n),
-                body: { name: e },
+                url: a.ANM.CHANNEL_WEBHOOKS(e),
+                body: { name: n },
                 oldFormErrors: !0
             })
-            .then((n) => {
-                let { body: e } = n;
+            .then((e) => {
+                let { body: n } = e;
                 return (
-                    a.Z.dispatch({
+                    u.Z.dispatch({
                         type: 'WEBHOOK_CREATE',
                         guildId: t,
-                        webhook: e
+                        webhook: n
                     }),
-                    e
+                    n
                 );
             })
     ),
-    delete: (t, n) =>
-        o.tn
+    delete: (t, e) =>
+        l.tn
             .del({
-                url: u.ANM.WEBHOOK(n),
+                url: a.ANM.WEBHOOK(e),
                 oldFormErrors: !0
             })
             .then(() => {
-                a.Z.dispatch({
+                u.Z.dispatch({
                     type: 'WEBHOOK_DELETE',
                     guildId: t,
-                    webhookId: n
+                    webhookId: e
                 });
             }),
-    update: (t, n, e) =>
-        o.tn
+    update: (t, e, n) =>
+        l.tn
             .patch({
-                url: u.ANM.WEBHOOK(n),
-                body: e,
+                url: a.ANM.WEBHOOK(e),
+                body: n,
                 oldFormErrors: !0
             })
-            .then((n) => {
-                let { body: e } = n;
+            .then((e) => {
+                let { body: n } = e;
                 return (
-                    a.Z.dispatch({
+                    u.Z.dispatch({
                         type: 'WEBHOOK_UPDATE',
                         guildId: t,
-                        webhook: e
+                        webhook: n
                     }),
-                    e
+                    n
                 );
             })
 };

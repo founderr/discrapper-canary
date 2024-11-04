@@ -8,27 +8,27 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(782690),
-    s = n(481060),
-    a = n(570140),
+    a = n(782690),
+    r = n(481060),
+    s = n(570140),
     o = n(668781),
     c = n(966390),
-    u = n(680287),
-    d = n(470623),
+    d = n(680287),
+    u = n(470623),
     h = n(957730),
-    m = n(48854),
-    p = n(703558),
+    p = n(48854),
+    m = n(703558),
     f = n(403182),
     g = n(928477),
     C = n(981631),
     x = n(388032);
 function v(e) {
-    let { parentChannel: t, parentMessageId: n, threadSettings: i, privateThreadMode: r, location: s, onThreadCreated: a, useDefaultThreadName: o } = e,
-        u = l.useCallback((e, t, n, i) => {
+    let { parentChannel: t, parentMessageId: n, threadSettings: i, privateThreadMode: a, location: r, onThreadCreated: s, useDefaultThreadName: o } = e,
+        d = l.useCallback((e, t, n, i) => {
             c.Z.uploadFiles({
                 channelId: e.id,
                 uploads: t,
-                draftType: p.d.FirstThreadMessage,
+                draftType: m.d.FirstThreadMessage,
                 options: { stickerIds: i },
                 parsedMessage: h.ZP.parse(e, n)
             });
@@ -37,42 +37,42 @@ function v(e) {
         parentChannel: t,
         parentMessageId: n,
         threadSettings: i,
-        privateThreadMode: r,
-        location: s,
-        onThreadCreated: a,
+        privateThreadMode: a,
+        location: r,
+        onThreadCreated: s,
         useDefaultThreadName: o,
-        uploadHandler: u
+        uploadHandler: d
     });
 }
 function _(e) {
     let { parentChannel: t } = e,
-        { name: l, appliedTags: c } = (0, d.xH)((e) => {
+        { name: l, appliedTags: c } = (0, u.xH)((e) => {
             let { name: t, appliedTags: n } = e;
             return {
                 name: t,
                 appliedTags: n
             };
-        }, r.Z);
+        }, a.Z);
     return (0, g.Wj)({
         parentChannel: t,
         name: l,
         appliedTags: c,
-        upload: function (e, l, r) {
-            return new Promise((c, d) => {
-                let h = new u.Z(e);
-                h.on('error', (e, l, r) => {
+        upload: function (e, l, a) {
+            return new Promise((c, u) => {
+                let h = new d.Z(e);
+                h.on('error', (e, l, a) => {
                     if (l === C.evJ.EXPLICIT_CONTENT) {
-                        let e = (0, m.r)();
-                        null != r &&
-                            null != r.attachments &&
-                            r.attachments.length > 0 &&
-                            (a.Z.dispatch({
+                        let e = (0, p.r)();
+                        null != a &&
+                            null != a.attachments &&
+                            a.attachments.length > 0 &&
+                            (s.Z.dispatch({
                                 type: 'MESSAGE_EXPLICIT_CONTENT_FP_CREATE',
                                 messageId: e,
                                 channelId: t.id,
-                                attachments: r.attachments
+                                attachments: a.attachments
                             }),
-                            (0, s.openModalLazy)(async () => {
+                            (0, r.openModalLazy)(async () => {
                                 let { default: l } = await n.e('57539').then(n.bind(n, 924188));
                                 return (n) =>
                                     (0, i.jsx)(l, {
@@ -93,12 +93,12 @@ function _(e) {
                                 title: x.intl.string(x.t.wOr6hI),
                                 body: x.intl.formatToPlainString(x.t['qqyp/f'], { limit: C.dN1 })
                             });
-                    d({ body: r });
+                    u({ body: a });
                 }),
                     h.on('complete', (e, t) => {
                         c({ body: t });
                     }),
-                    h.uploadFiles(r, l, { addFilesTo: 'message.attachments' });
+                    h.uploadFiles(a, l, { addFilesTo: 'message.attachments' });
             });
         }
     });

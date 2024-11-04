@@ -6,16 +6,16 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    s = n(442837),
-    a = n(481060),
+    a = n.n(l),
+    r = n(442837),
+    s = n(481060),
     o = n(239091),
     c = n(100527),
-    u = n(906732),
-    d = n(471445),
+    d = n(906732),
+    u = n(471445),
     h = n(184301),
-    m = n(347475),
-    p = n(271383),
+    p = n(347475),
+    m = n(271383),
     f = n(594174),
     g = n(51144),
     C = n(967128),
@@ -24,10 +24,10 @@ var l = n(120356),
     _ = n(966319);
 function I(e) {
     var t, l;
-    let { userId: d, channel: C } = e,
-        { analyticsLocations: x } = (0, u.ZP)(c.Z.USERNAME),
-        v = (0, s.e7)([f.default], () => f.default.getUser(d)),
-        I = (0, s.e7)([p.ZP], () => (null != d ? p.ZP.getMember(C.guild_id, d) : null));
+    let { userId: u, channel: C } = e,
+        { analyticsLocations: x } = (0, d.ZP)(c.Z.USERNAME),
+        v = (0, r.e7)([f.default], () => f.default.getUser(u)),
+        I = (0, r.e7)([m.ZP], () => (null != u ? m.ZP.getMember(C.guild_id, u) : null));
     function E(e) {
         if (null == v) return null;
         (0, o.jW)(e, async () => {
@@ -42,22 +42,22 @@ function I(e) {
         });
     }
     let b = null !== (l = null !== (t = null == I ? void 0 : I.nick) && void 0 !== t ? t : g.ZP.getName(v)) && void 0 !== l ? l : '???',
-        S = null == I ? void 0 : I.colorString;
+        N = null == I ? void 0 : I.colorString;
     return null == v
         ? (0, i.jsx)('span', {
-              className: r()(_.threadCreatorName, _.unknownCreatorName),
+              className: a()(_.threadCreatorName, _.unknownCreatorName),
               children: b
           })
-        : (0, i.jsx)(u.Gt, {
+        : (0, i.jsx)(d.Gt, {
               value: x,
-              children: (0, i.jsx)(a.Popout, {
+              children: (0, i.jsx)(s.Popout, {
                   preload: () =>
                       (0, h.Z)(v, {
                           guildId: C.guild_id,
                           channelId: C.id
                       }),
                   renderPopout: (e) =>
-                      (0, i.jsx)(m.Z, {
+                      (0, i.jsx)(p.Z, {
                           userId: v.id,
                           guildId: C.guild_id,
                           channelId: C.id,
@@ -66,14 +66,14 @@ function I(e) {
                       }),
                   position: 'right',
                   children: (e) =>
-                      (0, i.jsx)(a.Clickable, {
+                      (0, i.jsx)(s.Clickable, {
                           ...e,
                           tag: 'span',
                           className: _.threadCreatorName,
                           onContextMenu: E,
-                          children: (0, i.jsx)(a.NameWithRole, {
+                          children: (0, i.jsx)(s.NameWithRole, {
                               name: b,
-                              color: null != S ? S : void 0
+                              color: null != N ? N : void 0
                           })
                       })
               })
@@ -86,7 +86,7 @@ function E(e) {
         ? (0, i.jsx)('div', { style: { marginTop: -8 } })
         : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(a.Text, {
+                  (0, i.jsx)(s.Text, {
                       variant: 'text-md/normal',
                       color: 'header-secondary',
                       children: (0, i.jsx)('div', {
@@ -105,7 +105,7 @@ function E(e) {
                       })
                   }),
                   t.type === x.d4z.PRIVATE_THREAD
-                      ? (0, i.jsx)(a.Text, {
+                      ? (0, i.jsx)(s.Text, {
                             variant: 'text-md/normal',
                             color: 'header-secondary',
                             children: v.intl.string(v.t['1awbZG'])
@@ -117,7 +117,7 @@ function E(e) {
 function b(e) {
     var t;
     let { channel: n } = e,
-        l = null !== (t = (0, d.KS)(n)) && void 0 !== t ? t : a.ThreadIcon;
+        l = null !== (t = (0, u.KS)(n)) && void 0 !== t ? t : s.ThreadIcon;
     return (0, i.jsxs)(C.ZP, {
         channelId: n.id,
         children: [

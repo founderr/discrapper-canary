@@ -1,9 +1,9 @@
 n.d(t, {
     J: function () {
-        return P;
+        return A;
     },
     y: function () {
-        return j;
+        return T;
     }
 }),
     n(47120);
@@ -27,20 +27,20 @@ var i = n(200651),
     v = n(131704),
     I = n(626135),
     b = n(870569),
-    N = n(981631),
-    E = n(921944),
-    S = n(49898),
-    Z = n(128449),
+    S = n(981631),
+    Z = n(921944),
+    N = n(49898),
+    E = n(128449),
     y = n(388032),
-    T = n(900087);
-function j(e, t, n) {
-    return null != e && (null != n ? n.applicationId === e.id : null != t && t.application_id === e.id && t.type === N.IIU.PLAYING && (0, u.Z)(t, N.xjy.JOIN));
+    j = n(900087);
+function T(e, t, n) {
+    return null != e && (null != n ? n.applicationId === e.id : null != t && t.application_id === e.id && t.type === S.IIU.PLAYING && (0, u.Z)(t, S.xjy.JOIN));
 }
-function A(e) {
+function P(e) {
     let { badged: t } = e;
     return t
         ? (0, i.jsxs)('div', {
-              className: T.badgedGuildIcon,
+              className: j.badgedGuildIcon,
               children: [
                   (0, i.jsx)(f.ZP, {
                       mask: f.ZP.Masks.BADGED_GUILD_ICON,
@@ -52,7 +52,7 @@ function A(e) {
                           color: 'currentColor'
                       })
                   }),
-                  (0, i.jsx)('div', { className: T.badge })
+                  (0, i.jsx)('div', { className: j.badge })
               ]
           })
         : (0, i.jsx)(h.Z, {
@@ -61,25 +61,25 @@ function A(e) {
               color: 'currentColor'
           });
 }
-let P = l.memo(function (e) {
+let A = l.memo(function (e) {
     let t,
         r,
         u,
         h,
-        { stream: f, canGoLive: P, guildId: R, isStreaming: M, channel: L, canStream: w, runningGame: D, embeddedActivity: O, activity: k, application: G, analyticsContext: U } = e,
-        B = j(G, k, O),
-        { enabled: H } = (0, _.I7)(),
-        [V, F] = (0, g.US)(H ? [o.z.RAPIDASH_RTC_BROWSE_GUILDS] : [], void 0, !0),
-        W = V === o.z.RAPIDASH_RTC_BROWSE_GUILDS,
+        { stream: f, canGoLive: A, guildId: M, isStreaming: w, channel: L, canStream: R, runningGame: D, embeddedActivity: O, activity: k, application: U, analyticsContext: G } = e,
+        B = T(U, k, O),
+        { enabled: V } = (0, _.I7)(),
+        [H, F] = (0, g.US)(V ? [o.z.RAPIDASH_RTC_BROWSE_GUILDS] : [], void 0, !0),
+        W = H === o.z.RAPIDASH_RTC_BROWSE_GUILDS,
         z = l.useCallback(() => {
             a()(null != k, 'Received null activity'),
-                I.default.track(N.rMx.OPEN_MODAL, {
+                I.default.track(S.rMx.OPEN_MODAL, {
                     type: 'Send Join Invite',
                     application_id: k.application_id,
-                    location: U.location
+                    location: G.location
                 }),
                 (0, c.h7)(k, !1);
-        }, [k, U]),
+        }, [k, G]),
         Y = l.useCallback(
             (e, t) => () => {
                 d.Z.leaveActivity({
@@ -95,7 +95,7 @@ let P = l.memo(function (e) {
         }, [f]),
         q = l.useCallback(() => {
             let e = null != L && (0, v.vd)(L.type) ? L : null,
-                t = null != e ? e.getGuildId() : R;
+                t = null != e ? e.getGuildId() : M;
             (0, s.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e('46746'), n.e('33641')]).then(n.bind(n, 60594));
                 return (n) =>
@@ -103,24 +103,24 @@ let P = l.memo(function (e) {
                         ...n,
                         selectSource: !1,
                         guildId: t,
-                        analyticsLocation: N.Sbl.ACTIVITY_PANEL
+                        analyticsLocation: S.Sbl.ACTIVITY_PANEL
                     });
             });
-        }, [L, R]),
+        }, [L, M]),
         Q = l.useCallback(() => {
             (null == D ? void 0 : D.id) != null && m.GN.getState().setSelectedGames([D.id]),
-                F(E.L.PRIMARY),
+                F(Z.L.PRIMARY),
                 (0, C.transitionToGlobalDiscovery)({
-                    tab: S.F$.SERVERS,
-                    selectedServersTab: Z.vf.GUILDS,
-                    entrypoint: Z.Qq.RTC_PANEL
+                    tab: N.F$.SERVERS,
+                    selectedServersTab: E.vf.GUILDS,
+                    entrypoint: E.Qq.RTC_PANEL
                 });
         }, [D, F]);
-    let X =
-            (null != D || null == O) && (M || (P && null != D))
-                ? (M ? ((t = !1), (r = K), (u = s.ScreenXIcon), (h = y.intl.string(y.t.S5anIS))) : w ? ((t = !1), (r = q), (u = s.ScreenArrowIcon), (h = null != D ? y.intl.formatToPlainString(y.t.AB5gT0, { game: D.name }) : y.intl.string(y.t.FeUKeH))) : ((t = !0), (r = null), (u = s.ScreenArrowIcon), (h = null != L && (0, v.vd)(L.type) ? y.intl.string(y.t.uQn9Bw) : null != R ? y.intl.string(y.t.fBXEoK) : y.intl.string(y.t.n3feND))),
+    let J =
+            (null != D || null == O) && (w || (A && null != D))
+                ? (w ? ((t = !1), (r = K), (u = s.ScreenXIcon), (h = y.intl.string(y.t.S5anIS))) : R ? ((t = !1), (r = q), (u = s.ScreenArrowIcon), (h = null != D ? y.intl.formatToPlainString(y.t.AB5gT0, { game: D.name }) : y.intl.string(y.t.FeUKeH))) : ((t = !0), (r = null), (u = s.ScreenArrowIcon), (h = null != L && (0, v.vd)(L.type) ? y.intl.string(y.t.uQn9Bw) : null != M ? y.intl.string(y.t.fBXEoK) : y.intl.string(y.t.n3feND))),
                   (0, i.jsx)('div', {
-                      className: T.panelButtonContainer,
+                      className: j.panelButtonContainer,
                       children: (0, i.jsx)(b.Z, {
                           tooltipText: h,
                           disabled: t,
@@ -129,7 +129,7 @@ let P = l.memo(function (e) {
                       })
                   }))
                 : null,
-        J =
+        X =
             B && null == O
                 ? (0, i.jsx)(b.Z, {
                       tooltipText: y.intl.string(y.t['hC/Ze3']),
@@ -146,24 +146,24 @@ let P = l.memo(function (e) {
                       icon: s.DoorExitIcon
                   }),
         ee = null == f ? null : (0, i.jsx)(p.Z, {}),
-        et = H && !M && null == O && null != D;
-    return null == X && null == J && null == $
+        et = V && !w && null == O && null != D;
+    return null == J && null == X && null == $
         ? null
         : (0, i.jsxs)('div', {
-              className: T.actions,
+              className: j.actions,
               children: [
                   et
                       ? (0, i.jsx)(b.Z, {
                             'aria-label': y.intl.formatToPlainString(y.t.iz7mkp, { gameName: null == D ? void 0 : D.name }),
                             tooltipText: y.intl.format(y.t['NN+Y8P'], { gameName: null == D ? void 0 : D.name }),
-                            tooltipContentClassName: T.centeredTooltip,
+                            tooltipContentClassName: j.centeredTooltip,
                             onClick: Q,
-                            icon: (0, i.jsx)(A, { badged: W })
+                            icon: (0, i.jsx)(P, { badged: W })
                         })
                       : null,
-                  X,
                   J,
-                  null == X ? $ : ee
+                  X,
+                  null == J ? $ : ee
               ]
           });
 });

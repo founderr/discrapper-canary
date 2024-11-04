@@ -67,10 +67,10 @@ t.Z = function (e) {
         [E, I] = r.useState(!1),
         A = r.useCallback(() => I(!0), []),
         R = r.useCallback(() => I(!1), []),
-        P = r.useCallback((e) => {
+        O = r.useCallback((e) => {
             e.stopPropagation();
         }, []),
-        O = r.useCallback(() => {
+        P = r.useCallback(() => {
             (0, h.AH)(o.id, {
                 questContent: g.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.ACCEPT_QUEST
@@ -121,8 +121,8 @@ t.Z = function (e) {
                           e.current = t;
                       },
                       className: a()(y.wrapper, { [y.wrapperQuestAccepted]: k }),
-                      onClick: P,
-                      onKeyPress: P,
+                      onClick: O,
+                      onKeyPress: O,
                       onFocus: A,
                       onMouseEnter: A,
                       onBlur: R,
@@ -190,7 +190,7 @@ t.Z = function (e) {
                                                   className: y.cta,
                                                   color: c.Button.Colors.BRAND,
                                                   fullWidth: !0,
-                                                  onClick: O,
+                                                  onClick: P,
                                                   size: c.Button.Sizes.SMALL,
                                                   submitting: d,
                                                   children: Z.intl.string(Z.t.l7E81t)

@@ -34,8 +34,8 @@ var i = n(200651),
     y = n(131951),
     L = n(375954),
     R = n(19780),
-    P = n(944486),
-    O = n(914010),
+    O = n(944486),
+    P = n(914010),
     j = n(885110),
     D = n(9156),
     M = n(594174),
@@ -55,7 +55,7 @@ class Y extends r.PureComponent {
     }
     componentDidUpdate(e) {
         var t, n, i;
-        let { voiceChannelId: r, voiceChannelGuildId: l, voiceChannelType: o, voiceChannelBitrate: E, videoEnabled: I, isScreenSharing: S, runningGame: A, runningGamePid: y, selectedChannelId: P, selectedGuildId: M, connected: w, homeLink: k, friendsTabSection: Y, isNSFWChannel: W, isMemberPending: K, hasPreviewEnabled: q, postableChannelCount: X, isTextInVoice: Q, numMessageRequests: J } = this.props;
+        let { voiceChannelId: r, voiceChannelGuildId: l, voiceChannelType: o, voiceChannelBitrate: E, videoEnabled: I, isScreenSharing: S, runningGame: A, runningGamePid: y, selectedChannelId: O, selectedGuildId: M, connected: w, homeLink: k, friendsTabSection: Y, isNSFWChannel: W, isMemberPending: K, hasPreviewEnabled: q, postableChannelCount: X, isTextInVoice: Q, numMessageRequests: J } = this.props;
         if (e.voiceChannelId !== r && null != e.voiceChannelId) {
             let t = _.ZP.getCurrentGameForAnalytics(),
                 n = null != t ? t.name : '',
@@ -172,13 +172,13 @@ class Y extends r.PureComponent {
                       }
                     : {}),
                 postable_channels: X,
-                premium_progress_bar_enabled: null !== (n = null === (t = Z.Z.getGuild(O.Z.getGuildId())) || void 0 === t ? void 0 : t.premiumProgressBarEnabled) && void 0 !== n && n,
+                premium_progress_bar_enabled: null !== (n = null === (t = Z.Z.getGuild(P.Z.getGuildId())) || void 0 === t ? void 0 : t.premiumProgressBarEnabled) && void 0 !== n && n,
                 viewing_all_channels: !D.ZP.isOptInEnabled(M),
                 num_recent_channels: v.Z.recentsChannelCount(M)
             };
             (0, c.yw)(F.rMx.GUILD_VIEWED, e), (0, u.a)(F.rMx.GUILD_VIEWED_CLICKSTREAM, { guildId: M });
         } else w && null == M && k === F.Z5c.FRIENDS && (!e.connected || Y !== e.friendsTabSection || k !== e.homeLink) ? (0, h.Z)({ tab_opened: Y }) : w && null == M && k === F.Z5c.MESSAGE_REQUESTS && (!e.connected || k !== e.homeLink) && !this.isMessageRequestsInitialized && ((this.isMessageRequestsInitialized = !0), G.default.track(F.rMx.MESSAGE_REQUESTS_INITIALIZED, { num_message_requests: J }));
-        if (w && null != P && (!e.connected || P !== e.selectedChannelId || M !== e.selectedGuildId)) {
+        if (w && null != O && (!e.connected || O !== e.selectedChannelId || M !== e.selectedGuildId)) {
             let t = e.selectedChannelId,
                 n = x.Z.getChannel(t),
                 r = Z.Z.getGuild(null == n ? void 0 : n.getGuildId());
@@ -199,12 +199,12 @@ class Y extends r.PureComponent {
                     ...(0, c.hH)(r.id)
                 });
             }
-            let l = (0, d.K)(x.Z.getChannel(P), !0);
+            let l = (0, d.K)(x.Z.getChannel(O), !0);
             (0, c.yw)(F.rMx.CHANNEL_OPENED, {
                 ...l,
-                ...(0, c.$H)(P)
+                ...(0, c.$H)(O)
             }),
-                (0, u.a)(F.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: P }),
+                (0, u.a)(F.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: O }),
                 Q && (0, c.yw)(F.rMx.TEXT_IN_VOICE_OPENED, { channel_is_nsfw: W });
         }
     }
@@ -235,12 +235,12 @@ class Y extends r.PureComponent {
     }
 }
 function W() {
-    let [e, t] = (0, l.Wu)([P.Z], () => [P.Z.getVoiceChannelId(), P.Z.getChannelId()], []),
+    let [e, t] = (0, l.Wu)([O.Z], () => [O.Z.getVoiceChannelId(), O.Z.getChannelId()], []),
         n = (0, l.e7)([x.Z], () => x.Z.getChannel(t), [t]),
         r = (0, l.e7)([p.Z], () => (null == n ? void 0 : n.id) != null && p.Z.getChatOpen(n.id), [n]),
         a = null == n ? void 0 : n.nsfw,
         s = (0, l.e7)([x.Z], () => x.Z.getChannel(e), [e]),
-        c = (0, l.e7)([O.Z], () => O.Z.getGuildId(), []),
+        c = (0, l.e7)([P.Z], () => P.Z.getGuildId(), []),
         d = (0, l.e7)([Z.Z], () => Z.Z.getGuild(c), [c]),
         u = (0, l.e7)([M.default], () => M.default.getCurrentUser(), []),
         h = (0, l.e7)(

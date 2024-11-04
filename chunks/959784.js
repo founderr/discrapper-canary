@@ -15,14 +15,14 @@ t.d(n, {
         return a;
     }
 });
-var o = t(987170),
-    r = t(987338);
-let i = (0, o.Z)({
+var r = t(987170),
+    o = t(987338);
+let i = (0, r.Z)({
         kind: 'user',
         id: '2024-07_ctp_payment_flow_started_vanilla',
         label: 'CTP payment flow started - A/A test - Vanilla',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: r.$P.PAYMENT_FLOW_STARTED,
+        commonTriggerPoint: o.$P.PAYMENT_FLOW_STARTED,
         treatments: [
             {
                 id: 1,
@@ -31,12 +31,12 @@ let i = (0, o.Z)({
             }
         ]
     }),
-    l = (0, o.Z)({
+    l = (0, r.Z)({
         kind: 'user',
         id: '2024-07_ctp_payment_flow_started_filters_',
         label: 'CTP payment flow started - A/A test - Filters',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: r.$P.PAYMENT_FLOW_STARTED,
+        commonTriggerPoint: o.$P.PAYMENT_FLOW_STARTED,
         treatments: [
             {
                 id: 1,
@@ -45,12 +45,12 @@ let i = (0, o.Z)({
             }
         ]
     }),
-    a = (0, o.Z)({
+    a = (0, r.Z)({
         kind: 'user',
         id: '2024-07_ctp_payment_flow_started_multiple_buckets',
         label: 'CTP payment flow started - A/A test - Multiple buckets',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: r.$P.PAYMENT_FLOW_STARTED,
+        commonTriggerPoint: o.$P.PAYMENT_FLOW_STARTED,
         treatments: [
             {
                 id: 1,
@@ -64,12 +64,12 @@ let i = (0, o.Z)({
             }
         ]
     }),
-    s = (0, o.Z)({
+    s = (0, r.Z)({
         kind: 'user',
         id: '2024-07_ctp_payment_flow_started_everyone',
         label: 'CTP payment flow started - A/A test - Everyone',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: r.$P.PAYMENT_FLOW_STARTED,
+        commonTriggerPoint: o.$P.PAYMENT_FLOW_STARTED,
         treatments: [
             {
                 id: 1,
@@ -78,12 +78,12 @@ let i = (0, o.Z)({
             }
         ]
     }),
-    c = (0, o.Z)({
+    c = (0, r.Z)({
         kind: 'user',
         id: '2024-07_ctp_payment_flow_started_uneven_buckets_',
         label: 'CTP payment flow started - A/A test - Uneven buckets',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: r.$P.PAYMENT_FLOW_STARTED,
+        commonTriggerPoint: o.$P.PAYMENT_FLOW_STARTED,
         treatments: [
             {
                 id: 1,

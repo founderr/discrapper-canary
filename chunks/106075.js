@@ -30,7 +30,7 @@ function T() {
         { tabs: x, selectedTab: b, setSelectedTab: A } = (0, _.Y)(),
         Z = (0, p.lg)(b),
         y = !C.MU.has(b),
-        { searchQuery: L, onSearchTextChange: R, onClearSearch: P, onSearchSubmit: O, isSearchVisible: j } = (0, f.H)({ loadId: e.current }),
+        { searchQuery: L, onSearchTextChange: R, onClearSearch: O, onSearchSubmit: P, isSearchVisible: j } = (0, f.H)({ loadId: e.current }),
         {
             searchBarState: D,
             onTabsAvailableWidthChange: M,
@@ -44,9 +44,9 @@ function T() {
         G = (0, h.NL)(),
         B = r.useCallback(
             (e) => {
-                A(e), j && P();
+                A(e), j && O();
             },
-            [j, P, A]
+            [j, O, A]
         ),
         H = r.useMemo(
             () =>
@@ -82,7 +82,7 @@ function T() {
                         !j && (0, i.jsx)(c.z6, { scrollPosition: n }),
                         (0, i.jsx)(c.aV, {
                             icon: j ? l.ArrowLargeLeftIcon : l.ServerIcon,
-                            onClick: j ? P : void 0
+                            onClick: j ? O : void 0
                         }),
                         !j &&
                             (0, i.jsx)(d.Z, {
@@ -104,8 +104,8 @@ function T() {
                                 query: L,
                                 placeholder: S.intl.string(S.t['5h0QOD']),
                                 onTextChange: R,
-                                onClear: P,
-                                onSubmit: O,
+                                onClear: O,
+                                onSubmit: P,
                                 onCollapsedClick: w,
                                 state: j ? v.WB.DEFAULT : D,
                                 onBlur: k

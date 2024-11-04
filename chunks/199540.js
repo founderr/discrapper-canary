@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return S;
     }
 }),
     n(47120);
@@ -46,26 +46,26 @@ function b(e) {
         p = null != u ? u : g.Wyy,
         f = h.map((e) => e.id),
         [m, C] = l.useState(!1),
-        [b, N] = l.useState(c),
-        E = c ? 0 : -v,
-        S = (0, d.useSpring)(
+        [b, S] = l.useState(c),
+        Z = c ? 0 : -v,
+        N = (0, d.useSpring)(
             {
-                transform: 'translate3d(0, '.concat(E, 'px, 0)'),
+                transform: 'translate3d(0, '.concat(Z, 'px, 0)'),
                 config: { duration: x },
                 onStart() {
-                    C(!0), N(c);
+                    C(!0), S(c);
                 },
                 onRest() {
-                    C(!1), N(c);
+                    C(!1), S(c);
                 }
             },
             'animate-always'
         ),
-        Z = m ? S : void 0;
+        E = m ? N : void 0;
     return (
         (m || b) &&
             (t = (0, i.jsx)(o.animated.div, {
-                style: Z,
+                style: E,
                 className: _.expandedFolderIconWrapper,
                 children: (0, i.jsx)(d.FolderIcon, {
                     size: 'md',
@@ -75,7 +75,7 @@ function b(e) {
             })),
         (m || !b) &&
             (n = (0, i.jsx)(o.animated.div, {
-                style: Z,
+                style: E,
                 className: _.closedFolderIconWrapper,
                 children: f.slice(0, 4).map((e) =>
                     (0, i.jsx)(
@@ -96,7 +96,7 @@ function b(e) {
         })
     );
 }
-function N(e) {
+function S(e) {
     let {
             folderNode: t,
             forceCircular: n,
@@ -111,27 +111,27 @@ function N(e) {
             onContextMenu: g,
             onHoverChange: x,
             onKeyDown: v,
-            treeItemProps: { onFocus: I, ...N }
+            treeItemProps: { onFocus: I, ...S }
         } = e,
-        [E, S] = l.useState(!1),
-        Z = l.useCallback(() => {
-            o || S(!0), null == x || x(!0);
+        [Z, N] = l.useState(!1),
+        E = l.useCallback(() => {
+            o || N(!0), null == x || x(!0);
         }, [o, x]),
         y = l.useCallback(() => {
-            o || S(!1), null == x || x(!1);
+            o || N(!1), null == x || x(!1);
         }, [o, x]),
-        T = r || null == s ? null : (0, m.Or)(s),
-        j = !r && c > 0 ? (0, m.Ne)(c) : null;
+        j = r || null == s ? null : (0, m.Or)(s),
+        T = !r && c > 0 ? (0, m.Ne)(c) : null;
     return (0, i.jsx)(d.BlobMask, {
         selected: !n,
-        upperBadge: T,
-        lowerBadge: j,
+        upperBadge: j,
+        lowerBadge: T,
         lowerBadgeSize: { width: (0, d.getBadgeWidthForValue)(c) },
         children: (0, i.jsx)(d.Clickable, {
-            className: a()(_.folder, { [_.hover]: E }),
+            className: a()(_.folder, { [_.hover]: Z }),
             onClick: f,
             onContextMenu: g,
-            onMouseEnter: Z,
+            onMouseEnter: E,
             onMouseLeave: y,
             onKeyDown: v,
             onFocus: I,
@@ -142,7 +142,7 @@ function N(e) {
             'aria-expanded': r,
             'aria-owns': h,
             focusProps: { enabled: !1 },
-            ...N,
+            ...S,
             role: 'treeitem',
             children:
                 null != p
@@ -152,7 +152,7 @@ function N(e) {
                       })
                     : (0, i.jsx)(b, {
                           folderNode: t,
-                          hovered: E,
+                          hovered: Z,
                           expanded: r
                       })
         })

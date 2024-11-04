@@ -1,17 +1,17 @@
 var i,
     l,
+    a,
     r,
-    s,
-    a = n(392711),
-    o = n.n(a),
+    s = n(392711),
+    o = n.n(s),
     c = n(442837),
-    u = n(570140),
-    d = n(430824);
+    d = n(570140),
+    u = n(430824);
 let h = null,
-    m = {};
-class p extends (s = c.ZP.Store) {
+    p = {};
+class m extends (r = c.ZP.Store) {
     initialize() {
-        this.waitFor(d.Z);
+        this.waitFor(u.Z);
     }
     getOptimalRegion() {
         var e;
@@ -43,24 +43,24 @@ class p extends (s = c.ZP.Store) {
         return null != t ? t.id : null;
     }
     getRegions(e) {
-        return null != e ? m[e] : h;
+        return null != e ? p[e] : h;
     }
 }
-(r = 'RegionStore'),
-    (l = 'displayName') in (i = p)
+(a = 'RegionStore'),
+    (l = 'displayName') in (i = m)
         ? Object.defineProperty(i, l, {
-              value: r,
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[l] = r),
-    (t.Z = new p(u.Z, {
+        : (i[l] = a),
+    (t.Z = new m(d.Z, {
         LOAD_REGIONS: function (e) {
             let t = o().sortBy(e.regions, (e) => e.name);
-            null != e.guildId ? (m[e.guildId] = t) : (h = t);
+            null != e.guildId ? (p[e.guildId] = t) : (h = t);
         },
         GUILD_DELETE: function (e) {
-            delete m[e.guild.id];
+            delete p[e.guild.id];
         }
     }));

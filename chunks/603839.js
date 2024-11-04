@@ -48,24 +48,24 @@ function x(e) {
         }),
         Z = r.useMemo(() => (0, v.G)(b), [b]),
         [y, L] = r.useState(!1),
-        [R, P] = r.useState(window.innerWidth),
-        [O, j] = r.useState(1),
+        [R, O] = r.useState(window.innerWidth),
+        [P, j] = r.useState(1),
         [D, M] = r.useState(!0),
         w = (0, f.f)(),
         k = (0, d.useSpring)({
-            opacity: O,
+            opacity: P,
             config: T,
             onStart: () => M(!0),
-            onRest: () => M(1 === O)
+            onRest: () => M(1 === P)
         }),
         U = (0, d.useSpring)(
             {
-                transform: 'translateX('.concat(1 === O ? 0 : (-1 * (R - 380)) / 2 + 47.5, 'px)'),
+                transform: 'translateX('.concat(1 === P ? 0 : (-1 * (R - 380)) / 2 + 47.5, 'px)'),
                 config: T
             },
             'respect-motion-settings'
         ),
-        G = (0, d.useTransition)(0 === O, {
+        G = (0, d.useTransition)(0 === P, {
             from: { opacity: 0 },
             enter: {
                 opacity: 1,
@@ -73,7 +73,7 @@ function x(e) {
             },
             config: T
         }),
-        B = (0, d.useTransition)(0 === O, {
+        B = (0, d.useTransition)(0 === P, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
@@ -82,7 +82,7 @@ function x(e) {
         H = r.useCallback(
             (e) => {
                 if (e === Z.length) j(0), (0, p.Lp)(t, 'signature');
-                else if (0 === O) j(1);
+                else if (0 === P) j(1);
                 else {
                     var n;
                     m._9(t, {
@@ -91,15 +91,15 @@ function x(e) {
                     });
                 }
             },
-            [O, t, x.furthestStep, Z.length]
+            [P, t, x.furthestStep, Z.length]
         );
     r.useEffect(() => {
         (0, p.Lp)(t, (0, p.Qh)(x.currentStep));
     }, [t, x.currentStep]),
         r.useEffect(() => {
-            let e = (0, h.pP)((0, s.debounce)(() => P(window.innerWidth), 250));
+            let e = (0, h.pP)((0, s.debounce)(() => O(window.innerWidth), 250));
             return (0, h.YP)(e, document.body), () => (0, h.UC)(e, document.body);
-        }, [O, D]);
+        }, [P, D]);
     let V = r.useMemo(() => null != b && Object.values(b).some((e) => null != e), [b]),
         F = r.useMemo(() => (null != b && Object.values(b).length > 0 ? (0, v.G)(b).find((e) => e.hasError) : null), [b]),
         z = r.useCallback(() => {

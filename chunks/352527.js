@@ -1,12 +1,12 @@
 var i,
     r,
     s,
-    l,
-    a = n(442837),
+    a,
+    l = n(442837),
     o = n(570140);
 let c = !1,
     d = !1;
-class u extends (l = a.ZP.Store) {
+class u extends (a = l.ZP.Store) {
     get keepOpen() {
         return d;
     }

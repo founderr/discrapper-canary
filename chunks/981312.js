@@ -1,16 +1,16 @@
-e.d(n, {
+e.d(t, {
     U: function () {
-        return o;
+        return u;
     }
 });
 var i = e(442837),
     r = e(594174);
-function o() {
+function u() {
     return (
         !1 ===
         (0, i.e7)([r.default], () => {
-            var t;
-            return null === (t = r.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed;
+            var n;
+            return null === (n = r.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed;
         })
     );
 }

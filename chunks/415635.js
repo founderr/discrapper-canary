@@ -6,38 +6,38 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(772848),
-    s = n(442837),
-    a = n(570140),
+    a = n(772848),
+    r = n(442837),
+    s = n(570140),
     o = n(607070),
     c = n(367907),
     u = n(37091),
     d = n(721264),
-    h = n(963838),
-    m = n(39127),
+    m = n(963838),
+    f = n(39127),
     p = n(981631),
-    f = n(776042);
+    h = n(776042);
 function g(e) {
-    let { channelId: t, guildId: n, userId: g, containerDimensions: C } = e,
-        x = (0, s.e7)([o.Z], () => o.Z.useReducedMotion),
-        [v, _] = l.useState([]),
-        I = v.length < 50;
+    let { channelId: t, guildId: n, userId: g, containerDimensions: v } = e,
+        S = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
+        [I, _] = l.useState([]),
+        x = I.length < 50;
     l.useEffect(() => {
         function e(e) {
             var i;
-            let { channelId: l, userId: s, emoji: a, animationType: o, animationId: m } = e;
-            if ((null != g && g !== s) || (u.Z.getEnabled() && (0, d.Z)(null !== (i = null == a ? void 0 : a.name) && void 0 !== i ? i : ''))) return;
-            let f = null != a && null != o && null != m;
-            if (l === t && !x && I && f) {
-                let e = (0, h._r)(a),
-                    i = null != a.id && !a.animated,
+            let { channelId: l, userId: r, emoji: s, animationType: o, animationId: f } = e;
+            if ((null != g && g !== r) || (u.Z.getEnabled() && (0, d.Z)(null !== (i = null == s ? void 0 : s.name) && void 0 !== i ? i : ''))) return;
+            let h = null != s && null != o && null != f;
+            if (l === t && !S && x && h) {
+                let e = (0, m._r)(s),
+                    i = null != s.id && !s.animated,
                     l = {
-                        id: (0, r.Z)(),
+                        id: (0, a.Z)(),
                         animationType: o,
-                        animationId: m,
+                        animationId: f,
                         shouldResize: i,
                         url: e,
-                        userId: s
+                        userId: r
                     };
                 _((e) => [...e, l]),
                     c.ZP.trackWithMetadata(p.rMx.VOICE_CHANNEL_EFFECT_VIEWED, {
@@ -47,12 +47,12 @@ function g(e) {
             }
         }
         return (
-            a.Z.subscribe('VOICE_CHANNEL_EFFECT_SEND', e),
+            s.Z.subscribe('VOICE_CHANNEL_EFFECT_SEND', e),
             () => {
-                a.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
+                s.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
             }
         );
-    }, [t, n, g, x, I]);
+    }, [t, n, g, S, x]);
     let E = l.useCallback((e) => {
         _((t) => {
             let n = [...t],
@@ -60,18 +60,18 @@ function g(e) {
             return n.splice(i, 1), n;
         });
     }, []);
-    return x
+    return S
         ? null
         : (0, i.jsx)('div', {
-              className: f.effectsWrapper,
-              style: { width: C.width },
+              className: h.effectsWrapper,
+              style: { width: v.width },
               children: (0, i.jsx)('div', {
-                  className: f.effects,
-                  children: v.map((e) =>
+                  className: h.effects,
+                  children: I.map((e) =>
                       (0, i.jsx)(
-                          m.Z,
+                          f.Z,
                           {
-                              containerDimensions: C,
+                              containerDimensions: v,
                               effect: e,
                               onComplete: E
                           },

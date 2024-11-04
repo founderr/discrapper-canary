@@ -6,26 +6,26 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    s = n(134433),
-    a = n(139513);
+    a = n.n(l),
+    r = n(134433),
+    s = n(139513);
 function o(e) {
     let t,
-        { className: n, children: l, verified: o, roleColor: c, roleName: u } = e;
+        { className: n, children: l, verified: o, roleColor: c, roleName: d } = e;
     return (
         (t = o
-            ? (0, i.jsx)(s.Z, {
+            ? (0, i.jsx)(r.Z, {
                   size: 12,
                   color: c,
-                  className: a.linkedRoleColor
+                  className: s.linkedRoleColor
               })
             : (0, i.jsx)('div', {
-                  className: a.roleColor,
+                  className: s.roleColor,
                   style: { backgroundColor: c }
               })),
         (0, i.jsxs)('div', {
-            className: r()(n, a.role),
-            children: [t, u, l]
+            className: a()(n, s.role),
+            children: [t, d, l]
         })
     );
 }

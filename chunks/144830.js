@@ -1,20 +1,20 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return h;
     }
 }),
     n(411104),
     n(47120);
 var i,
     l,
+    a,
     r,
-    s,
-    a = n(200651),
+    s = n(200651),
     o = n(192379),
     c = n(379649),
     u = n(846519),
     d = n(388032);
-function h(e, t, n) {
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,8 +27,8 @@ function h(e, t, n) {
         e
     );
 }
-((r = i || (i = {})).ACTIVITY_FEED = 'ACTIVITY_FEED'), (r.ACTIVITY_FEED_NEW = 'ACTIVITY_FEED_NEW'), (r.USER_ACTIVITY = 'USER_ACTIVITY'), (r.GAME_LIBRARY_TIME_PLAYED = 'GAME_LIBRARY_TIME_PLAYED'), (r.GAME_LIBRARY_LAST_PLAYED = 'GAME_LIBRARY_LAST_PLAYED'), ((s = l || (l = {})).START = 'START'), (s.END = 'END'), (s.TIME = 'TIME');
-let m = (e) => (t, n) =>
+((a = i || (i = {})).ACTIVITY_FEED = 'ACTIVITY_FEED'), (a.ACTIVITY_FEED_NEW = 'ACTIVITY_FEED_NEW'), (a.USER_ACTIVITY = 'USER_ACTIVITY'), (a.GAME_LIBRARY_TIME_PLAYED = 'GAME_LIBRARY_TIME_PLAYED'), (a.GAME_LIBRARY_LAST_PLAYED = 'GAME_LIBRARY_LAST_PLAYED'), ((r = l || (l = {})).START = 'START'), (r.END = 'END'), (r.TIME = 'TIME');
+let f = (e) => (t, n) =>
         null == n
             ? ''
             : d.intl.format(e(), {
@@ -55,10 +55,10 @@ let m = (e) => (t, n) =>
         },
         ACTIVITY_FEED_NEW: {
             START: {
-                [c.J6.SECONDS]: m(() => d.t.Bf3PRU),
-                [c.J6.MINUTES]: m(() => d.t['A9P+dX']),
-                [c.J6.HOURS]: m(() => d.t.KwVzfn),
-                [c.J6.DAYS]: m(() => d.t.hbUpBA)
+                [c.J6.SECONDS]: f(() => d.t.Bf3PRU),
+                [c.J6.MINUTES]: f(() => d.t['A9P+dX']),
+                [c.J6.HOURS]: f(() => d.t.KwVzfn),
+                [c.J6.DAYS]: f(() => d.t.hbUpBA)
             },
             END: {
                 [c.J6.SECONDS]: (e) => d.intl.formatToPlainString(d.t.C3MTOD, { seconds: e }),
@@ -105,7 +105,7 @@ let m = (e) => (t, n) =>
             }
         }
     };
-function f(e) {
+function h(e) {
     var t, n;
     return (
         (n = class extends (t = o.PureComponent) {
@@ -149,30 +149,30 @@ function f(e) {
             }
             render() {
                 let { location: t, messageProps: n, isApplicationStreaming: i, ...l } = this.props,
-                    { time: r } = this.state,
-                    s = this.getType();
-                if (null == s) return null;
-                let o = this.getTimeUnit(r, t, s),
-                    u = p[t][s];
+                    { time: a } = this.state,
+                    r = this.getType();
+                if (null == r) return null;
+                let o = this.getTimeUnit(a, t, r),
+                    u = p[t][r];
                 if (null == u) return null;
                 let d = u[o],
-                    h = Math.floor((0, c.A3)(r, o));
-                return (0, a.jsx)(e, {
+                    m = Math.floor((0, c.A3)(a, o));
+                return (0, s.jsx)(e, {
                     ...l,
-                    children: null == d ? void 0 : d(h, n, i)
+                    children: null == d ? void 0 : d(m, n, i)
                 });
             }
             constructor(...e) {
                 super(...e),
-                    h(this, 'timer', new u.Xp()),
-                    h(this, 'state', { time: this.getDiff() }),
-                    h(this, 'update', () => {
+                    m(this, 'timer', new u.Xp()),
+                    m(this, 'state', { time: this.getDiff() }),
+                    m(this, 'update', () => {
                         this.setState({ time: this.getDiff() });
                     });
             }
         }),
-        h(n, 'Locations', i),
-        h(n, 'Types', l),
+        m(n, 'Locations', i),
+        m(n, 'Types', l),
         n
     );
 }

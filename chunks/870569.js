@@ -12,7 +12,7 @@ var l = n(120356),
     s = n(904297);
 function c(e) {
     let { tooltipText: t, children: n, onContextMenu: l, onClick: c, disabled: u, icon: d, iconForeground: h, innerClassName: p, tooltipClassName: f, onMouseEnter: m, onMouseLeave: g, 'aria-label': C, 'aria-checked': _, role: x, tooltipColor: v, tooltipForceOpen: I, tooltipContentClassName: b } = e,
-        N =
+        S =
             'function' == typeof d
                 ? (0, i.jsx)(d, {
                       width: 20,
@@ -60,9 +60,9 @@ function c(e) {
                               width: 20,
                               height: 20,
                               mask: o.ZP.Masks.PANEL_BUTTON,
-                              children: N
+                              children: S
                           })
-                        : N,
+                        : S,
                     n
                 ]
             });

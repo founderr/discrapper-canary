@@ -1,69 +1,69 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return m;
     }
 });
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    r = n(43267),
-    s = n(933557),
-    a = n(297700),
+    a = n(43267),
+    r = n(933557),
+    s = n(297700),
     o = n(534091),
     c = n(967128),
-    u = n(388032),
-    d = n(302028),
+    d = n(388032),
+    u = n(302028),
     h = n(191986);
-let m = () =>
+let p = () =>
     (0, i.jsx)('svg', {
         width: '46',
         height: '34',
         viewBox: '0 0 46 34',
-        className: d.chatBubbleLip,
+        className: u.chatBubbleLip,
         xmlns: 'http://www.w3.org/2000/svg',
         children: (0, i.jsx)('path', { d: 'M0 33.4637C16.1697 28.954 21.1764 9.59155 19.2146 0L45.681 0.000148089C45.681 0.000148089 44.681 9.14498 40.1914 18.3023C34.4077 30.0996 6.2893 33.1232 0 33.4637Z' })
     });
-function p(e) {
+function m(e) {
     var t;
     let { channel: n } = e,
-        p = null !== (t = (0, s.ZP)(n)) && void 0 !== t ? t : '';
+        m = null !== (t = (0, r.ZP)(n)) && void 0 !== t ? t : '';
     return (0, i.jsxs)('div', {
         id: (0, o.p)(n.id, n.id),
-        className: d.headerContainer,
+        className: u.headerContainer,
         children: [
             (0, i.jsx)('img', {
                 src: h,
-                className: d.wumpusImage,
+                className: u.wumpusImage,
                 alt: ''
             }),
             (0, i.jsxs)('div', {
-                className: d.chatBubbleContainer,
+                className: u.chatBubbleContainer,
                 children: [
-                    (0, i.jsx)(m, {}),
+                    (0, i.jsx)(p, {}),
                     (0, i.jsxs)('div', {
-                        className: d.chatBubble,
+                        className: u.chatBubble,
                         children: [
                             (0, i.jsx)(l.Avatar, {
-                                'aria-label': p,
+                                'aria-label': m,
                                 size: l.AvatarSizes.SIZE_80,
-                                src: (0, r.x)(n, 80, !1)
+                                src: (0, a.x)(n, 80, !1)
                             }),
                             (0, i.jsxs)(c.Ot, {
-                                className: d.emptyMessageHeader,
+                                className: u.emptyMessageHeader,
                                 children: [
-                                    p,
-                                    (0, i.jsx)(a.Z, {
-                                        className: d.flowerStar,
+                                    m,
+                                    (0, i.jsx)(s.Z, {
+                                        className: u.flowerStar,
                                         size: 24,
                                         children: (0, i.jsx)(l.CheckmarkSmallIcon, {
                                             size: 'md',
                                             color: 'currentColor',
-                                            className: d.verified
+                                            className: u.verified
                                         })
                                     })
                                 ]
                             }),
-                            (0, i.jsx)(c.jz, { children: u.intl.string(u.t.Rzvnio) })
+                            (0, i.jsx)(c.jz, { children: d.intl.string(d.t.Rzvnio) })
                         ]
                     })
                 ]

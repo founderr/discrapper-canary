@@ -321,7 +321,7 @@ t.Z = i.memo(
                 i.useCallback(
                     (e) => {
                         let t = ev.current;
-                        null != e && null != t && t.insertSound(e), (0, A._Q)();
+                        null != e && null != t && t.insertSound(e), (0, A._Q)(), null == t || t.focus();
                     },
                     [ev]
                 )),

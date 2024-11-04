@@ -28,8 +28,8 @@ var i,
     y = n(382182),
     L = n(871118),
     R = n(707409),
-    P = n(849171),
-    O = n(314897),
+    O = n(849171),
+    P = n(314897),
     j = n(592125),
     D = n(594174),
     M = n(395361),
@@ -496,9 +496,9 @@ let ee = (e) => {
                     return o(t);
                 });
         }, [d]);
-        let h = (0, c.Wu)([D.default, O.default], () =>
+        let h = (0, c.Wu)([D.default, P.default], () =>
                 Array.from(r)
-                    .map((e) => (O.default.getId() === e ? null : D.default.getUser(e)))
+                    .map((e) => (P.default.getId() === e ? null : D.default.getUser(e)))
                     .filter(U.lm)
             ),
             p = (0, m.O)(),
@@ -550,7 +550,7 @@ let ee = (e) => {
                         (0, l.jsxs)('div', {
                             className: F.embeddedActivityImageOverlay,
                             children: [
-                                (0, l.jsx)(P.OV, {
+                                (0, l.jsx)(O.OV, {
                                     users: h,
                                     guildId: i,
                                     channelId: n.id

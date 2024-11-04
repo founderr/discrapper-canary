@@ -1,9 +1,9 @@
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    r = n(313201),
-    s = n(388032),
-    a = n(780735);
+    a = n(313201),
+    r = n(388032),
+    s = n(780735);
 let o = () =>
     n
         .e('39248')
@@ -13,40 +13,40 @@ let o = () =>
             return t;
         });
 t.Z = (e) => {
-    let t = (0, r.Dt)();
+    let t = (0, a.Dt)();
     return (0, i.jsxs)(l.ModalRoot, {
         ...e,
         transitionState: e.transitionState,
         'aria-labelledby': t,
         children: [
             (0, i.jsx)('div', {
-                className: a.animationContainer,
+                className: s.animationContainer,
                 children: (0, i.jsx)(l.LottieAnimation, {
                     importData: o,
-                    className: a.animationMiddle
+                    className: s.animationMiddle
                 })
             }),
             (0, i.jsx)(l.ModalContent, {
                 children: (0, i.jsxs)('div', {
-                    className: a.container,
+                    className: s.container,
                     children: [
                         (0, i.jsx)(l.Heading, {
                             variant: 'heading-xl/semibold',
-                            className: a.header,
+                            className: s.header,
                             id: t,
-                            children: s.intl.format(s.t.z9qozM, { guildName: e.guildName })
+                            children: r.intl.format(r.t.z9qozM, { guildName: e.guildName })
                         }),
                         (0, i.jsx)(l.Text, {
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
-                            children: s.intl.string(s.t.nwpqyc)
+                            children: r.intl.string(r.t.nwpqyc)
                         }),
                         (0, i.jsx)(l.Button, {
-                            className: a.button,
+                            className: s.button,
                             onClick: () => {
                                 e.onAccept(), e.onClose();
                             },
-                            children: s.intl.string(s.t.NuzmOD)
+                            children: r.intl.string(r.t.NuzmOD)
                         })
                     ]
                 })

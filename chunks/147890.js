@@ -19,10 +19,10 @@ n.r(t),
             return p;
         },
         goToCategory: function () {
-            return m;
+            return g;
         },
         replaceAppDirectoryURLWith: function () {
-            return g;
+            return m;
         }
     }),
     n(610138),
@@ -33,29 +33,29 @@ n.r(t),
 var i = n(703656),
     r = n(626135),
     s = n(34674),
-    l = n(132871),
-    a = n(272242),
+    a = n(132871),
+    l = n(272242),
     o = n(981631);
 let c = (e) => {
-        let { view: t = l.ApplicationDirectoryViews.HOME, guildId: n, applicationId: i, applicationSection: s, entrypoint: c, skuId: m } = e,
-            g = {
+        let { view: t = a.ApplicationDirectoryViews.HOME, guildId: n, applicationId: i, applicationSection: s, entrypoint: c, skuId: g } = e,
+            m = {
                 ...c,
                 pathname: window.location.pathname
             };
-        switch ((r.default.track(o.rMx.APP_DIRECTORY_OPENED, { source: null == g ? void 0 : g.name }), (0, l.resetApplicationDirectoryHistory)(), (0, l.setEntrypoint)(g), null != n && (0, l.setGuildId)(n), t === l.ApplicationDirectoryViews.APPLICATION && null == i && (t = l.ApplicationDirectoryViews.HOME), t)) {
-            case l.ApplicationDirectoryViews.HOME:
+        switch ((r.default.track(o.rMx.APP_DIRECTORY_OPENED, { source: null == m ? void 0 : m.name }), (0, a.resetApplicationDirectoryHistory)(), (0, a.setEntrypoint)(m), null != n && (0, a.setGuildId)(n), t === a.ApplicationDirectoryViews.APPLICATION && null == i && (t = a.ApplicationDirectoryViews.HOME), t)) {
+            case a.ApplicationDirectoryViews.HOME:
                 d();
                 break;
-            case l.ApplicationDirectoryViews.SEARCH:
+            case a.ApplicationDirectoryViews.SEARCH:
                 f();
                 break;
-            case l.ApplicationDirectoryViews.APPLICATION:
+            case a.ApplicationDirectoryViews.APPLICATION:
                 if (null != i) {
                     if (null != s) {
-                        if (s === a.ApplicationDirectoryProfileSections.STORE && null != m) {
+                        if (s === l.ApplicationDirectoryProfileSections.STORE && null != g) {
                             p({
                                 applicationId: i,
-                                skuId: m
+                                skuId: g
                             });
                             break;
                         }
@@ -70,28 +70,28 @@ let c = (e) => {
         }
     },
     d = () => {
-        let e = { previousView: (0, l.getCurrentView)() };
+        let e = { previousView: (0, a.getCurrentView)() };
         (0, i.uL)(o.Z5c.APPLICATION_DIRECTORY, { state: e });
     },
     u = (e) => {
         let { applicationId: t } = e,
-            n = { previousView: (0, l.getCurrentView)() };
+            n = { previousView: (0, a.getCurrentView)() };
         (0, i.uL)(o.Z5c.APPLICATION_DIRECTORY_PROFILE(t), { state: n });
     },
     h = (e) => {
         let { applicationId: t, section: n } = e,
-            r = { previousView: (0, l.getCurrentView)() };
+            r = { previousView: (0, a.getCurrentView)() };
         (0, i.uL)(o.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(t, n), { state: r });
     },
     p = (e) => {
         let { applicationId: t, skuId: n } = e,
-            r = { previousView: (0, l.getCurrentView)() };
+            r = { previousView: (0, a.getCurrentView)() };
         (0, i.uL)(o.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(t, n), { state: r });
     },
     f = function () {
         let { query: e, categoryId: t, page: n } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
             r = new URLSearchParams(),
-            s = { previousView: (0, l.getCurrentView)() };
+            s = { previousView: (0, a.getCurrentView)() };
         null != e && r.set('q', e),
             null != t && r.set('category_id', t.toString()),
             null != n && r.set('page', n.toString()),
@@ -100,11 +100,11 @@ let c = (e) => {
                 state: s
             });
     },
-    m = (e) => {
+    g = (e) => {
         let { categoryId: t } = e;
         f({ categoryId: null != t ? t : s.MU });
     },
-    g = (e) => {
+    m = (e) => {
         let {
             location: { state: t }
         } = (0, i.s1)();

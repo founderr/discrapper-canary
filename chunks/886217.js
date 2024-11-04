@@ -1,102 +1,102 @@
 n(627494), n(757143);
-var i = n(200651),
-    l = n(192379),
-    a = n(317261),
+var l = n(200651),
+    a = n(192379),
+    i = n(317261),
     r = n(423875),
     o = n(442837),
     s = n(18323),
-    u = n(594174),
-    c = n(908841),
+    c = n(594174),
+    u = n(908841),
     d = n(823379),
-    h = n(5192),
-    m = n(561308),
-    x = n(256726),
-    v = n(206295),
-    f = n(278399),
-    p = n(297781),
+    m = n(5192),
+    x = n(561308),
+    h = n(256726),
+    p = n(206295),
+    C = n(278399),
+    v = n(297781),
     g = n(591853),
-    C = n(410441),
-    I = n(616922),
-    P = n(388032);
-let Z = (e, t, n, i) => {
-        let l = (function (e) {
-                if (e === a._.WEEK) return P.t.SjOZfn;
-            })(i),
-            r = h.ZP.getName(t.guild_id, t.id, n),
+    f = n(410441),
+    j = n(616922),
+    I = n(388032);
+let Z = (e, t, n, l) => {
+        let a = (function (e) {
+                if (e === i._.WEEK) return I.t.SjOZfn;
+            })(l),
+            r = m.ZP.getName(t.guild_id, t.id, n),
             o = e.extra.artist.name;
-        return P.intl
-            .formatToMarkdownString(l, {
+        return I.intl
+            .formatToMarkdownString(a, {
                 artist: o,
                 userName: r
             })
             .replaceAll('*', '');
     },
-    y = (e, t) =>
-        P.intl.formatToPlainString(P.t.Osmpr6, {
+    P = (e, t) =>
+        I.intl.formatToPlainString(I.t.Osmpr6, {
             username: t.username,
             artist: e.extra.artist.name
         });
 t.Z = (e) => {
-    let { channel: t, entry: n, onReaction: a, onVoiceChannelPreview: h } = e,
-        { parent_title: j, provider: w, image_url: T } = n.extra.media,
-        L = n.extra.artist.name,
-        S = (0, o.e7)([u.default], () => u.default.getUser(n.author_id)),
-        { primaryColor: N, secondaryColor: E } = (0, v.Z)(T),
-        _ = (0, m.Nq)(n),
-        A = l.useCallback(() => {
-            if (null == t || null == S || !(0, d.Hi)(_, f.y9)) return;
-            let e = Z(n, t, S, _);
-            return (0, x.CR)({
-                user: S,
+    let { channel: t, entry: n, onReaction: i, onVoiceChannelPreview: m } = e,
+        { parent_title: y, provider: L, image_url: T } = n.extra.media,
+        N = n.extra.artist.name,
+        _ = (0, o.e7)([c.default], () => c.default.getUser(n.author_id)),
+        { primaryColor: S, secondaryColor: E } = (0, p.Z)(T),
+        A = (0, x.Nq)(n),
+        M = a.useCallback(() => {
+            if (null == t || null == _ || !(0, d.Hi)(A, C.y9)) return;
+            let e = Z(n, t, _, A);
+            return (0, h.CR)({
+                user: _,
                 channel: t,
                 mediaImageSrc: T,
-                artist: L,
+                artist: N,
                 description: e,
-                colors: [N, E],
-                badges: (0, x.UU)(n)
+                colors: [S, E],
+                badges: (0, h.UU)(n)
             });
-        }, [T, L, t, n, N, _, E, S]);
-    if (null == S || !(0, d.Hi)(_, f.y9)) return null;
-    let R = () => {
-        let e = I.Hw.ALBUM,
-            t = s.Z.isProtocolRegistered() ? I.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id) : I.C7.WEB_OPEN(e, n.extra.media.external_parent_id);
+        }, [T, N, t, n, S, A, E, _]);
+    if (null == _ || !(0, d.Hi)(A, C.y9)) return null;
+    let k = () => {
+        let e = j.Hw.ALBUM,
+            t = s.Z.isProtocolRegistered() ? j.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id) : j.C7.WEB_OPEN(e, n.extra.media.external_parent_id);
         window.open(t);
     };
-    return (0, i.jsxs)(g.yR, {
+    return (0, l.jsxs)(g.yR, {
         children: [
-            (0, i.jsx)(g.wG, {
-                onClickTitle: R,
+            (0, l.jsx)(g.wG, {
+                onClickTitle: k,
                 onClickSubtitle: () => {
-                    let e = I.Hw.ARTIST,
-                        t = s.Z.isProtocolRegistered() ? I.C7.PLAYER_OPEN(e, n.extra.artist.external_id) : I.C7.WEB_OPEN(e, n.extra.artist.external_id);
+                    let e = j.Hw.ARTIST,
+                        t = s.Z.isProtocolRegistered() ? j.C7.PLAYER_OPEN(e, n.extra.artist.external_id) : j.C7.WEB_OPEN(e, n.extra.artist.external_id);
                     window.open(t);
                 },
-                onClickThumbnail: R,
+                onClickThumbnail: k,
                 channel: t,
                 entry: n,
                 headerIcons:
-                    w === r.p.SPOTIFY
-                        ? (0, i.jsx)(C.Z, {
-                              Icon: c.Z,
-                              'aria-label': P.intl.string(P.t['0ZB/XF'])
+                    L === r.p.SPOTIFY
+                        ? (0, l.jsx)(f.Z, {
+                              Icon: u.Z,
+                              'aria-label': I.intl.string(I.t['0ZB/XF'])
                           })
                         : null,
-                userDescription: P.t.CcVI1d,
-                title: j,
-                subtitle: L,
-                badges: (0, i.jsx)(p.Gk, {
-                    location: p.Gt.POPOUT,
-                    children: f.Ho.map((e, t) => (0, i.jsx)(e, { entry: n }, t))
+                userDescription: I.t.CcVI1d,
+                title: y,
+                subtitle: N,
+                badges: (0, l.jsx)(v.Gk, {
+                    location: v.Gt.POPOUT,
+                    children: C.Ho.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
                 })
             }),
-            (0, i.jsx)(g.St, {
-                children: (0, i.jsx)(g.WT, {
-                    onReaction: a,
-                    onVoiceChannelPreview: h,
-                    user: S,
+            (0, l.jsx)(g.St, {
+                children: (0, l.jsx)(g.WT, {
+                    onReaction: i,
+                    onVoiceChannelPreview: m,
+                    user: _,
                     channel: t,
-                    generateReactionImage: A,
-                    reactionImageAltText: y(n, S),
+                    generateReactionImage: M,
+                    reactionImageAltText: P(n, _),
                     entry: n
                 })
             })

@@ -3,26 +3,26 @@ n.d(t, {
         return p;
     },
     RR: function () {
-        return m;
+        return f;
     },
     UN: function () {
         return u;
     },
     bg: function () {
-        return f;
+        return h;
     },
     hn: function () {
         return d;
     },
     np: function () {
-        return h;
+        return m;
     }
 });
 var i = n(979590),
     l = n.n(i),
-    r = n(866442),
-    s = n(220082),
-    a = n(594174),
+    a = n(866442),
+    r = n(220082),
+    s = n(594174),
     o = n(292793),
     c = n(813900);
 function u(e) {
@@ -31,44 +31,44 @@ function u(e) {
     if (null != t && null != n) n.clearRect(0, 0, t.width, t.height);
 }
 function d(e, t) {
-    let { width: n, height: i, left: l, top: r } = e.getBoundingClientRect(),
-        s = (t.clientX - l) / n;
+    let { width: n, height: i, left: l, top: a } = e.getBoundingClientRect(),
+        r = (t.clientX - l) / n;
     return {
-        x: s,
-        y: (t.clientY - r) / i
+        x: r,
+        y: (t.clientY - a) / i
     };
 }
-function h(e, t) {
+function m(e, t) {
     return Math.round(e * t * window.devicePixelRatio);
 }
-function m(e, t, n) {
+function f(e, t, n) {
     return {
-        x: h(e.x, t),
-        y: h(e.y, n),
+        x: m(e.x, t),
+        y: m(e.y, n),
         deltaTime: e.deltaTime
     };
 }
 function p(e) {
     return e.type === o.W.LINE;
 }
-function f(e, t, n, i) {
+function h(e, t, n, i) {
     var o;
-    let u = a.default.getUser(e),
+    let u = s.default.getUser(e),
         d = null == u ? void 0 : u.getAvatarURL(null, c.Ks),
-        h = null != d ? (null === (o = s.SR.getState().palette[d]) || void 0 === o ? void 0 : o[0]) : null,
-        m =
-            null != h
+        m = null != d ? (null === (o = r.SR.getState().palette[d]) || void 0 === o ? void 0 : o[0]) : null,
+        f =
+            null != m
                 ? '#'.concat(
                       l()({
-                          r: h[0],
-                          g: h[1],
-                          b: h[2]
+                          r: m[0],
+                          g: m[1],
+                          b: m[2]
                       }).toHex()
                   )
                 : i,
-        p = (0, r.Bd)((0, r._i)(m)) > 0.5 ? n : t;
+        p = (0, a.Bd)((0, a._i)(f)) > 0.5 ? n : t;
     return {
-        fillColor: m,
+        fillColor: f,
         outlineColor: p
     };
 }

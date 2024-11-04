@@ -1,79 +1,79 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return x;
     }
 });
-var i = n(200651);
+var l = n(200651);
 n(192379);
-var l = n(481060),
-    a = n(239091),
+var a = n(481060),
+    i = n(239091),
     r = n(299206),
     o = n(810568),
     s = n(168524),
-    u = n(725119),
-    c = n(26033),
+    c = n(725119),
+    u = n(26033),
     d = n(388032),
-    h = n(301698);
-function m(e) {
+    m = n(301698);
+function x(e) {
     var t;
-    let { user: n, guildId: m, channel: x, entry: v, onSelect: f, disableGameProfileLinks: p } = e,
-        g = (0, u.Z)({
+    let { user: n, guildId: x, channel: h, entry: p, onSelect: C, disableGameProfileLinks: v } = e,
+        g = (0, c.Z)({
             userId: n.id,
-            guildId: m,
-            channelId: null == x ? void 0 : x.id
+            guildId: x,
+            channelId: null == h ? void 0 : h.id
         }),
-        C = (0, r.Z)({
+        f = (0, r.Z)({
             id: n.id,
             label: d.intl.string(d.t['/AXYnJ'])
         }),
-        I = (0, c.dX)(v),
-        P = (0, s.Z)({
+        j = (0, u.dX)(p),
+        I = (0, s.Z)({
             location: 'ContentPopoutContextMenu',
-            applicationId: I && !0 !== p ? (null === (t = v.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
+            applicationId: j && !0 !== v ? (null === (t = p.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
             source: o.m1.ActivityCardContextMenu,
             trackEntryPointImpression: !0,
-            sourceUserId: v.author_id
+            sourceUserId: p.author_id
         });
-    return (0, i.jsx)(l.Popout, {
+    return (0, l.jsx)(a.Popout, {
         align: 'top',
         position: 'right',
         disablePointerEvents: !1,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(l.Menu, {
+            return (0, l.jsx)(a.Menu, {
                 navId: 'content-inventory-context',
                 onClose: () => {
-                    (0, a.Zy)(), t();
+                    (0, i.Zy)(), t();
                 },
                 'aria-label': d.intl.string(d.t.liqwPD),
-                onSelect: f,
-                children: (0, i.jsxs)(i.Fragment, {
+                onSelect: C,
+                children: (0, l.jsxs)(l.Fragment, {
                     children: [
-                        (0, i.jsxs)(l.MenuGroup, {
+                        (0, l.jsxs)(a.MenuGroup, {
                             children: [
                                 g,
-                                null != P &&
-                                    (0, i.jsx)(l.MenuItem, {
+                                null != I &&
+                                    (0, l.jsx)(a.MenuItem, {
                                         id: 'game-profile',
                                         label: d.intl.string(d.t.f7aVGh),
-                                        action: P
+                                        action: I
                                     })
                             ]
                         }),
-                        (0, i.jsx)(l.MenuGroup, { children: C })
+                        (0, l.jsx)(a.MenuGroup, { children: f })
                     ]
                 })
             });
         },
         children: (e) =>
-            (0, i.jsx)(l.Tooltip, {
+            (0, l.jsx)(a.Tooltip, {
                 text: d.intl.string(d.t.UKOtz8),
                 children: (t) =>
-                    (0, i.jsx)(l.Clickable, {
+                    (0, l.jsx)(a.Clickable, {
                         ...t,
-                        className: h.menuIcon,
+                        className: m.menuIcon,
                         ...e,
-                        children: (0, i.jsx)(l.MoreHorizontalIcon, {
+                        children: (0, l.jsx)(a.MoreHorizontalIcon, {
                             color: 'currentColor',
                             size: 'custom',
                             width: 16,

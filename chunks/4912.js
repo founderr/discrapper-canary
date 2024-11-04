@@ -1,17 +1,17 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return i;
     }
 });
-var o = t(200651);
-t(192379);
-var r = t(325767);
+var o = n(200651);
+n(192379);
+var r = n(325767);
 function i(e) {
-    let { width: n = 14, height: t = 14, color: i = 'currentColor', foreground: a, ...c } = e;
+    let { width: t = 14, height: n = 14, color: i = 'currentColor', foreground: a, ...c } = e;
     return (0, o.jsx)('svg', {
         ...(0, r.Z)(c),
-        width: n,
-        height: t,
+        width: t,
+        height: n,
         viewBox: '0 0 14 14',
         children: (0, o.jsx)('path', {
             className: a,

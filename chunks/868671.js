@@ -10,16 +10,16 @@ n.d(t, {
     n(724458);
 var i = n(192379),
     l = n(442837),
-    r = n(570140),
-    s = n(439170),
-    a = n(592125),
+    a = n(570140),
+    r = n(439170),
+    s = n(592125),
     o = n(430824),
     c = n(451478),
-    u = n(626135),
-    d = n(162461),
+    d = n(626135),
+    u = n(162461),
     h = n(71585),
-    m = n(34586),
-    p = n(69259),
+    p = n(34586),
+    m = n(69259),
     f = n(590026),
     g = n(178762),
     C = n(206583),
@@ -33,29 +33,29 @@ function E(e) {
             channelId: E,
             guildId: b
         } = e,
-        [S, Z] = i.useState(!1),
-        { requestId: T, entries: N, impressionCappedEntryIds: j, hasLeaderboardEntry: A } = (0, f.Z)(E),
+        [N, Z] = i.useState(!1),
+        { requestId: T, entries: S, impressionCappedEntryIds: j, hasLeaderboardEntry: A } = (0, f.Z)(E),
         y = (0, l.e7)([h.Z], () => h.Z.hidden),
         P = (0, l.e7)([c.Z], () => c.Z.isFocused()),
-        M = (0, l.e7)([a.Z], () => a.Z.getChannel(E)),
+        M = (0, l.e7)([s.Z], () => s.Z.getChannel(E)),
         R = (0, l.e7)([o.Z], () => o.Z.getGuild(b), [b]),
-        L = (0, m.E)(R),
+        L = (0, p.E)(R),
         k = null != L && L && (null == M ? void 0 : M.isForumChannel()) === !1,
-        [O, w, D, U] = i.useMemo(() => {
+        [O, D, w, B] = i.useMemo(() => {
             let e;
-            if (null == N || 0 === N.length || null == T || !k) return [t, n, I];
-            let i = S ? N.length : A ? 4 : 3,
-                l = N.slice(0, i);
+            if (null == S || 0 === S.length || null == T || !k) return [t, n, I];
+            let i = N ? S.length : A ? 4 : 3,
+                l = S.slice(0, i);
             e = y
-                ? [{ type: s.so.HIDDEN_CONTENT_INVENTORY }]
+                ? [{ type: r.so.HIDDEN_CONTENT_INVENTORY }]
                 : l.map((e) => ({
-                      type: s.so.CONTENT_INVENTORY,
+                      type: r.so.CONTENT_INVENTORY,
                       entry: e,
                       requestId: T
                   }));
-            let r = {
+            let a = {
                 id: x.G,
-                type: s.so.CONTENT_INVENTORY_GROUP,
+                type: r.so.CONTENT_INVENTORY_GROUP,
                 key: x.G,
                 count: e.length,
                 index: n.length,
@@ -64,7 +64,7 @@ function E(e) {
                     Z((e) => {
                         let t = !e;
                         return (
-                            u.default.track(v.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
+                            d.default.track(v.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
                                 channel_id: E,
                                 guild_id: b,
                                 expanded: t
@@ -73,54 +73,54 @@ function E(e) {
                         );
                     });
                 },
-                expanded: S,
-                expandedCount: N.length,
+                expanded: N,
+                expandedCount: S.length,
                 feedHeight: e.map(g.iZ).reduce((e, t) => e + t, 0)
             };
-            return [[r, ...t], [...n, r, ...e], Math.random(), e];
-        }, [E, N, S, t, b, T, n, I, y, k, A]),
-        B = i.useRef(0),
-        H = i.useRef(N),
-        F = i.useRef(),
-        G = i.useRef({ impressionCappedEntryIds: j }),
+            return [[a, ...t], [...n, a, ...e], Math.random(), e];
+        }, [E, S, N, t, b, T, n, I, y, k, A]),
+        U = i.useRef(0),
+        H = i.useRef(S),
+        G = i.useRef(),
+        F = i.useRef({ impressionCappedEntryIds: j }),
         V = i.useCallback(
             (e) => {
                 var t;
                 let n = Math.floor(e / g.YN),
-                    i = Math.min(null !== (t = null == U ? void 0 : U.length) && void 0 !== t ? t : 0, n);
-                B.current = Math.max(B.current, i);
+                    i = Math.min(null !== (t = null == B ? void 0 : B.length) && void 0 !== t ? t : 0, n);
+                U.current = Math.max(U.current, i);
             },
-            [U]
+            [B]
         );
     return (
         i.useEffect(() => {
-            H.current = N;
-        }, [N]),
+            H.current = S;
+        }, [S]),
         i.useEffect(() => {
-            G.current = { impressionCappedEntryIds: j };
+            F.current = { impressionCappedEntryIds: j };
         }, [j]),
         i.useEffect(
             () => (
-                (B.current = 0),
-                (F.current = Date.now()),
+                (U.current = 0),
+                (G.current = Date.now()),
                 () => {
                     var e, t;
-                    if (null == T || null == F.current || Date.now() - F.current < 3000) return;
+                    if (null == T || null == G.current || Date.now() - G.current < 3000) return;
                     let n = null !== (t = null === (e = H.current) || void 0 === e ? void 0 : e.map((e) => e.id)) && void 0 !== t ? t : [],
-                        i = n.slice(0, B.current);
+                        i = n.slice(0, U.current);
                     if (!y && !!P && !!k)
-                        (0, p.e)(v.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
+                        (0, m.e)(v.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
                             request_id: T,
-                            first_shown_at: F.current,
+                            first_shown_at: G.current,
                             item_ids: i,
                             surface_type: C.Kd.GUILD_MEMBER_LIST,
                             channel_id: E,
                             guild_id: b,
                             all_item_ids: n,
-                            impression_capped_item_ids: [...G.current.impressionCappedEntryIds]
+                            impression_capped_item_ids: [...F.current.impressionCappedEntryIds]
                         }),
-                            (0, d.wm)('useInjectContentInventoryFeed') &&
-                                r.Z.dispatch({
+                            (0, u.wm)('useInjectContentInventoryFeed') &&
+                                a.Z.dispatch({
                                     type: 'CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS',
                                     itemIds: i
                                 });
@@ -130,8 +130,8 @@ function E(e) {
         ),
         {
             groups: O,
-            rows: w,
-            version: D,
+            rows: D,
+            version: w,
             updateMaxRowSeen: V
         }
     );

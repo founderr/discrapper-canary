@@ -1,34 +1,34 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    r = n(481060),
-    s = n(207055),
-    a = n(938475),
+    a = n(481060),
+    r = n(207055),
+    s = n(938475),
     o = n(981631),
     c = n(388032),
-    u = n(868610);
-function d(e) {
+    d = n(868610);
+function u(e) {
     let { channel: t } = e,
-        n = (0, l.e7)([a.ZP], () => a.ZP.getVoiceStatesForChannel(t));
+        n = (0, l.e7)([s.ZP], () => s.ZP.getVoiceStatesForChannel(t));
     return (0, i.jsxs)('div', {
-        className: u.root,
+        className: d.root,
         children: [
-            (0, i.jsx)(r.Text, {
+            (0, i.jsx)(a.Text, {
                 variant: 'text-xs/bold',
-                className: u.header,
+                className: d.header,
                 children: c.intl.format(c.t.e95u3N, { count: n.length })
             }),
-            (0, i.jsx)(r.Scroller, {
-                className: u.scroller,
-                children: (0, i.jsx)(s.Z, {
+            (0, i.jsx)(a.Scroller, {
+                className: d.scroller,
+                children: (0, i.jsx)(r.Z, {
                     allowDragging: !1,
                     allowPreviews: !1,
-                    className: u.voiceUsers,
+                    className: d.voiceUsers,
                     channel: t,
                     voiceStates: n,
                     collapsed: !1,

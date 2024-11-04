@@ -1,32 +1,32 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return m;
     }
 });
 var i = n(200651),
     l = n(192379),
-    r = n(442837),
-    s = n(911969),
-    a = n(581364),
+    a = n(442837),
+    r = n(911969),
+    s = n(581364),
     o = n(869765),
     c = n(699516),
-    u = n(697451),
-    d = n(348238),
+    d = n(697451),
+    u = n(348238),
     h = n(614584);
-let m = l.memo(function (e) {
+let p = l.memo(function (e) {
     var t, n;
-    let { message: m, channel: p, compact: f = !1, interactionUsernameProfile: g, interactionAvatarProfile: C, interactionData: x, referencedUsernameProfile: v, referencedAvatarProfile: _, setPopout: I } = e,
-        E = (0, r.e7)([c.Z], () => c.Z.isBlockedForMessage(m), [m]),
-        b = (0, r.e7)([o.Z], () => o.Z.getMessageByReference(null == m ? void 0 : m.messageReference)),
-        S = (0, d.wq)(null === (t = m.interaction) || void 0 === t ? void 0 : t.user.id, p.id),
-        Z = (0, d.Nk)(m.interaction, p, g, I),
-        T = (0, d.NU)(C, I),
-        N = (0, a.t0)(m),
-        j = (null == N ? void 0 : N.type) === s.B8.APPLICATION_COMMAND ? (null === (n = N.target_user) || void 0 === n ? void 0 : n.id) : void 0,
-        A = (0, d.wq)(j, p.id),
-        y = (0, d.JC)(j, p, v, I),
-        P = (0, d.rY)(_, I),
-        M = (0, d.Xn)(x, I),
+    let { message: p, channel: m, compact: f = !1, interactionUsernameProfile: g, interactionAvatarProfile: C, interactionData: x, referencedUsernameProfile: v, referencedAvatarProfile: _, setPopout: I } = e,
+        E = (0, a.e7)([c.Z], () => c.Z.isBlockedForMessage(p), [p]),
+        b = (0, a.e7)([o.Z], () => o.Z.getMessageByReference(null == p ? void 0 : p.messageReference)),
+        N = (0, u.wq)(null === (t = p.interaction) || void 0 === t ? void 0 : t.user.id, m.id),
+        Z = (0, u.Nk)(p.interaction, m, g, I),
+        T = (0, u.NU)(C, I),
+        S = (0, s.t0)(p),
+        j = (null == S ? void 0 : S.type) === r.B8.APPLICATION_COMMAND ? (null === (n = S.target_user) || void 0 === n ? void 0 : n.id) : void 0,
+        A = (0, u.wq)(j, m.id),
+        y = (0, u.JC)(j, m, v, I),
+        P = (0, u.rY)(_, I),
+        M = (0, u.Xn)(x, I),
         R = l.useCallback(
             () =>
                 I({
@@ -41,22 +41,22 @@ let m = l.memo(function (e) {
         L = l.useCallback(
             () =>
                 (0, h.Z)({
-                    message: m,
-                    channel: p,
+                    message: p,
+                    channel: m,
                     compact: f,
                     setPopout: I,
                     referencedAvatarProfile: _,
                     referencedUsernameProfile: v,
-                    replyReference: m.messageReference,
+                    replyReference: p.messageReference,
                     replyMessage: b,
                     isReplySpineClickable: !1,
                     showReplySpine: !1
                 }),
-            [p, f, m, _, b, v, I]
+            [m, f, p, _, b, v, I]
         );
-    return (0, i.jsx)(u.Z, {
-        message: m,
-        channel: p,
+    return (0, i.jsx)(d.Z, {
+        message: p,
+        channel: m,
         compact: f,
         isInteractionUserBlocked: E,
         showAvatarPopout: C,
@@ -67,7 +67,7 @@ let m = l.memo(function (e) {
         onClickAvatar: T,
         onClickUsername: Z,
         onClickCommand: M,
-        onUserContextMenu: S,
+        onUserContextMenu: N,
         onClickTargetAvatar: P,
         onClickTargetUsername: y,
         onTargetUserContextMenu: A,
@@ -75,13 +75,13 @@ let m = l.memo(function (e) {
         renderTargetMessage: L
     });
 });
-function p(e, t, n) {
-    let { message: l, channel: r, compact: s } = e;
+function m(e, t, n) {
+    let { message: l, channel: a, compact: r } = e;
     return null != l.interaction && '' !== l.interaction.displayName
-        ? (0, i.jsx)(m, {
+        ? (0, i.jsx)(p, {
               message: l,
-              channel: r,
-              compact: s,
+              channel: a,
+              compact: r,
               setPopout: t,
               ...n
           })

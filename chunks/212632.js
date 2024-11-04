@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651),
     r = n(192379),
     s = n(120356),
-    l = n.n(s),
-    a = n(481060),
+    a = n.n(s),
+    l = n(481060),
     o = n(981631),
     c = n(388032),
     d = n(167740),
@@ -24,23 +24,23 @@ let h = 0,
                 return c.intl.string(c.t.AlY4ZW);
         }
     },
-    m = [o._vf.DISABLED, o._vf.TOP_LEFT, o._vf.TOP_RIGHT, o._vf.BOTTOM_LEFT, o._vf.BOTTOM_RIGHT];
-function g(e) {
+    g = [o._vf.DISABLED, o._vf.TOP_LEFT, o._vf.TOP_RIGHT, o._vf.BOTTOM_LEFT, o._vf.BOTTOM_RIGHT];
+function m(e) {
     let { position: t, onChange: n } = e,
         [s] = r.useState(() => p()),
         h = t === o._vf.DISABLED ? c.intl.string(c.t.R6LxVV) : c.intl.formatToPlainString(c.t.XXHDMz, { position: f(t) });
     return (0, i.jsxs)('div', {
         children: [
-            (0, i.jsx)(a.FocusRing, {
+            (0, i.jsx)(l.FocusRing, {
                 within: !0,
                 offset: -2,
                 children: (0, i.jsx)('div', {
-                    className: l()(d.wrapper, { [d.disabledSelected]: t === o._vf.DISABLED }),
-                    children: m.map((e) =>
+                    className: a()(d.wrapper, { [d.disabledSelected]: t === o._vf.DISABLED }),
+                    children: g.map((e) =>
                         (0, i.jsxs)(
                             'label',
                             {
-                                className: l()({
+                                className: a()({
                                     [d.selected]: e === t,
                                     [d.disabled]: e === o._vf.DISABLED,
                                     [d.topRight]: e === o._vf.TOP_RIGHT,
@@ -51,7 +51,7 @@ function g(e) {
                                 children: [
                                     f(e),
                                     e === o._vf.DISABLED
-                                        ? (0, i.jsx)(a.DenyIcon, {
+                                        ? (0, i.jsx)(l.DenyIcon, {
                                               size: 'md',
                                               color: 'currentColor',
                                               className: d.disabledIcon
@@ -71,12 +71,12 @@ function g(e) {
                     )
                 })
             }),
-            (0, i.jsx)(a.FormText, {
-                type: a.FormTextTypes.DESCRIPTION,
+            (0, i.jsx)(l.FormText, {
+                type: l.FormTextTypes.DESCRIPTION,
                 className: u.marginTop8,
                 children: h
             })
         ]
     });
 }
-(g.Positions = o._vf), (t.Z = g);
+(m.Positions = o._vf), (t.Z = m);

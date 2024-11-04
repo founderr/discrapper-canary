@@ -1,24 +1,24 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
 var i = n(399606),
     l = n(317381),
-    r = n(917107),
-    s = n(592125),
-    a = n(226027),
+    a = n(917107),
+    r = n(592125),
+    s = n(226027),
     o = n(918559);
 let c = 'no_text_activity',
-    u = {
-        [c]: [a.E.NEW_MESSAGES, a.E.OPT_IN_CHANNEL, a.E.SUMMARIES],
-        [o.Ez.DISCONNECTED]: [a.E.NEW_MESSAGES, a.E.OPT_IN_CHANNEL, a.E.SUMMARIES],
-        [o.Ez.LAUNCHING_WITH_ORIENTATION_CHANGE]: [a.E.NEW_MESSAGES, a.E.OPT_IN_CHANNEL, a.E.SUMMARIES],
+    d = {
+        [c]: [s.E.NEW_MESSAGES, s.E.OPT_IN_CHANNEL, s.E.SUMMARIES],
+        [o.Ez.DISCONNECTED]: [s.E.NEW_MESSAGES, s.E.OPT_IN_CHANNEL, s.E.SUMMARIES],
+        [o.Ez.LAUNCHING_WITH_ORIENTATION_CHANGE]: [s.E.NEW_MESSAGES, s.E.OPT_IN_CHANNEL, s.E.SUMMARIES],
         [o.Ez.PANEL]: [],
-        [o.Ez.PIP]: [a.E.NEW_MESSAGES, a.E.OPT_IN_CHANNEL, a.E.SUMMARIES]
+        [o.Ez.PIP]: [s.E.NEW_MESSAGES, s.E.OPT_IN_CHANNEL, s.E.SUMMARIES]
     };
-function d() {
+function u() {
     let e = (0, i.e7)([l.ZP], () => l.ZP.getCurrentEmbeddedActivity()),
         t = (0, i.e7)([l.ZP], () => l.ZP.getActivityPanelMode());
-    return void 0 === e || (0, r.Z)(null == e ? void 0 : e.channelId, s.Z) ? u[c] : u[t];
+    return void 0 === e || (0, a.Z)(null == e ? void 0 : e.channelId, r.Z) ? d[c] : d[t];
 }

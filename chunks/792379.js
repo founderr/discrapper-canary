@@ -5,16 +5,16 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(597312),
-    s = n(481060),
-    a = n(727637),
+    a = n(597312),
+    r = n(481060),
+    s = n(727637),
     o = n(410030),
     c = n(100527),
-    u = n(906732),
-    d = n(580552),
+    d = n(906732),
+    u = n(580552),
     h = n(688465),
-    m = n(680295),
-    p = n(5192),
+    p = n(680295),
+    m = n(5192),
     f = n(785717),
     g = n(221292),
     C = n(687158),
@@ -24,10 +24,10 @@ var i = n(200651),
     I = n(280885),
     E = n(900927),
     b = n(678738),
-    S = n(502762),
+    N = n(502762),
     Z = n(530),
     T = n(679332),
-    N = n(544989),
+    S = n(544989),
     j = n(171368),
     A = n(228168),
     y = n(388032),
@@ -35,39 +35,39 @@ var i = n(200651),
     M = n(299336);
 function R(e) {
     let { user: t, channel: n } = e,
-        R = __OVERLAY__ || !(0, d.Z)(t.id),
+        R = __OVERLAY__ || !(0, u.Z)(t.id),
         L = (0, C.ZP)(t.id),
         k = (0, o.ZP)(),
-        { analyticsLocations: O } = (0, u.ZP)(c.Z.PROFILE_PANEL),
-        w = (0, f.ZB)({
+        { analyticsLocations: O } = (0, d.ZP)(c.Z.PROFILE_PANEL),
+        D = (0, f.ZB)({
             layout: 'SIMPLIFIED_DM_PANEL',
             userId: t.id,
             channelId: n.id
         }),
-        D = l.useRef(null),
-        U = (0, a.Z)(D),
-        B = (e) => {
+        w = l.useRef(null),
+        B = (0, s.Z)(w),
+        U = (e) => {
             (0, j.openUserProfileModal)({
                 sourceAnalyticsLocations: O,
-                ...w,
+                ...D,
                 ...e
             });
         };
-    return (0, i.jsx)(u.Gt, {
+    return (0, i.jsx)(d.Gt, {
         value: O,
         children: (0, i.jsx)(f.Mt, {
-            value: w,
-            children: (0, i.jsxs)(S.Z, {
-                ref: D,
+            value: D,
+            children: (0, i.jsxs)(N.Z, {
+                ref: w,
                 user: t,
                 displayProfile: L,
                 profileType: A.y0.PANEL,
                 themeOverride: k,
                 className: P.container,
                 children: [
-                    (0, i.jsxs)(r.u2, {
+                    (0, i.jsxs)(a.u2, {
                         children: [
-                            (0, i.jsx)(N.Z, {
+                            (0, i.jsx)(S.Z, {
                                 profileType: A.y0.PANEL,
                                 children: (0, i.jsx)(T.Z, { user: t })
                             }),
@@ -78,14 +78,14 @@ function R(e) {
                                         user: t,
                                         displayProfile: L,
                                         profileType: A.y0.PANEL,
-                                        animateOnHover: !U
+                                        animateOnHover: !B
                                     }),
                                     (0, i.jsx)(x.Z, {
                                         user: t,
                                         displayProfile: L,
                                         channelId: n.id,
                                         profileType: A.y0.PANEL,
-                                        onOpenProfile: R ? void 0 : B
+                                        onOpenProfile: R ? void 0 : U
                                     }),
                                     t.isClyde() && (0, i.jsx)(h.Z, { className: P.headerTag })
                                 ]
@@ -96,15 +96,15 @@ function R(e) {
                                     (0, i.jsx)(Z.Z, {
                                         user: t,
                                         profileType: A.y0.PANEL,
-                                        nickname: p.ZP.getName(null, n.id, t),
+                                        nickname: m.ZP.getName(null, n.id, t),
                                         pronouns: null == L ? void 0 : L.pronouns,
-                                        onOpenProfile: R ? void 0 : B,
+                                        onOpenProfile: R ? void 0 : U,
                                         tags: (0, i.jsx)(v.Z, {
                                             displayProfile: L,
                                             profileType: A.y0.PANEL
                                         })
                                     }),
-                                    (0, i.jsxs)(S.Z.Overlay, {
+                                    (0, i.jsxs)(N.Z.Overlay, {
                                         className: M.overlay,
                                         children: [
                                             (0, i.jsx)(b.Z, {
@@ -114,7 +114,7 @@ function R(e) {
                                                     userBio: null == L ? void 0 : L.bio,
                                                     userId: t.id,
                                                     animateOnHover: !0,
-                                                    isHovering: U
+                                                    isHovering: B
                                                 })
                                             }),
                                             (0, i.jsx)(b.Z, {
@@ -131,26 +131,26 @@ function R(e) {
                     !R &&
                         (0, i.jsx)('footer', {
                             className: P.footer,
-                            children: (0, i.jsx)(s.Button, {
+                            children: (0, i.jsx)(r.Button, {
                                 fullWidth: !0,
-                                size: s.Button.Sizes.LARGE,
-                                look: s.Button.Looks.BLANK,
+                                size: r.Button.Sizes.LARGE,
+                                look: r.Button.Looks.BLANK,
                                 color: P.footerButtonColor,
                                 onClick: () => {
-                                    B(),
+                                    U(),
                                         (0, g.pQ)({
                                             action: 'PRESS_VIEW_PROFILE',
                                             analyticsLocations: O,
-                                            ...w
+                                            ...D
                                         });
                                 },
                                 children: y.intl.string(y.t['+Xp3ho'])
                             })
                         }),
                     (null == L ? void 0 : L.profileEffectId) != null &&
-                        (0, i.jsx)(m.Z, {
+                        (0, i.jsx)(p.Z, {
                             profileEffectId: null == L ? void 0 : L.profileEffectId,
-                            isHovering: U
+                            isHovering: B
                         })
                 ]
             })

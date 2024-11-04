@@ -1,18 +1,18 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    r = n(688465),
-    s = n(690221),
-    a = n(447564),
+    a = n(688465),
+    r = n(690221),
+    s = n(447564),
     o = n(388032),
     c = n(188090),
-    u = n(495841);
-function d(e) {
+    d = n(495841);
+function u(e) {
     let { channel: t } = e;
     return (0, i.jsxs)(l.Dialog, {
         className: c.bar,
@@ -26,7 +26,7 @@ function d(e) {
                         className: c.title,
                         children: o.intl.string(o.t.bVbBT0)
                     }),
-                    (0, i.jsx)(r.Z, {})
+                    (0, i.jsx)(a.Z, {})
                 ]
             }),
             (0, i.jsx)(l.Clickable, {
@@ -41,14 +41,14 @@ function d(e) {
                                     ...n
                                 });
                         },
-                        { modalKey: a.HD_STREAMING_POTION_MODAL_KEY }
+                        { modalKey: s.HD_STREAMING_POTION_MODAL_KEY }
                     );
                 },
                 children: (0, i.jsxs)('div', {
                     className: c.buttonContent,
                     children: [
                         (0, i.jsx)('img', {
-                            src: u,
+                            src: d,
                             alt: o.intl.string(o.t.htEhYm)
                         }),
                         (0, i.jsxs)(l.Text, {
@@ -59,7 +59,7 @@ function d(e) {
                 })
             }),
             (0, i.jsx)('div', { className: c.divider }),
-            (0, i.jsx)(s.Z, {
+            (0, i.jsx)(r.Z, {
                 onClick: () => {},
                 children: (0, i.jsx)(l.Text, {
                     color: 'text-link',

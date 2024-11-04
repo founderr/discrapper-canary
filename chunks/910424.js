@@ -1,87 +1,87 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return S;
     }
 }),
     n(47120);
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    r = n(481060),
-    s = n(572691),
-    a = n(287734),
+    a = n(481060),
+    r = n(572691),
+    s = n(287734),
     o = n(872810),
     c = n(40851),
     u = n(382182),
     d = n(199902),
-    h = n(592125),
-    m = n(585483),
+    m = n(592125),
+    f = n(585483),
     p = n(915863),
-    f = n(981631),
+    h = n(981631),
     g = n(388032),
-    C = n(511292);
-function x(e) {
-    let { isCurrentUser: t, color: n, look: x, applicationStream: v, onAction: _ } = e,
-        { activeStream: I, watchingOtherStream: E } = (0, l.cj)([d.Z], () => ({
-            activeStream: d.Z.getActiveStreamForApplicationStream(v),
+    v = n(511292);
+function S(e) {
+    let { isCurrentUser: t, color: n, look: S, applicationStream: I, onAction: _ } = e,
+        { activeStream: x, watchingOtherStream: E } = (0, l.cj)([d.Z], () => ({
+            activeStream: d.Z.getActiveStreamForApplicationStream(I),
             watchingOtherStream:
-                null != v &&
-                d.Z.getAllActiveStreamsForChannel(v.channelId).filter((e) => {
+                null != I &&
+                d.Z.getAllActiveStreamsForChannel(I.channelId).filter((e) => {
                     let { ownerId: t } = e;
-                    return t !== v.ownerId;
+                    return t !== I.ownerId;
                 }).length > 0
         })),
-        b = (0, l.e7)([h.Z], () => h.Z.getChannel(null == v ? void 0 : v.channelId)),
-        [S, Z] = (0, u.wq)(b),
+        C = (0, l.e7)([m.Z], () => m.Z.getChannel(null == I ? void 0 : I.channelId)),
+        [Z, y] = (0, u.wq)(C),
         T = (0, c.Aq)(),
-        N = null != I && null != v && I.state !== f.jm8.ENDED && I.ownerId === v.ownerId,
-        j = (e) => {
-            if (null != v) null == _ || _(), a.default.selectVoiceChannel(v.channelId), !N && (0, o.iV)(v, { forceMultiple: e }), T.dispatch(f.CkL.POPOUT_CLOSE), m.S.dispatch(f.CkL.MODAL_CLOSE), s.Z.popAll();
+        b = null != x && null != I && x.state !== h.jm8.ENDED && x.ownerId === I.ownerId,
+        A = (e) => {
+            if (null != I) null == _ || _(), s.default.selectVoiceChannel(I.channelId), !b && (0, o.iV)(I, { forceMultiple: e }), T.dispatch(h.CkL.POPOUT_CLOSE), f.S.dispatch(h.CkL.MODAL_CLOSE), r.Z.popAll();
         };
-    if (null == v) return null;
-    let A = (0, u.P9)(Z);
-    t ? (A = g.intl.string(g.t.XvBdeX)) : N && (A = g.intl.string(g.t.JH1SJy));
-    let y = {
+    if (null == I) return null;
+    let N = (0, u.P9)(y);
+    t ? (N = g.intl.string(g.t.XvBdeX)) : b && (N = g.intl.string(g.t.JH1SJy));
+    let w = {
         color: n,
-        look: x
+        look: S
     };
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(
                 p.Z,
                 {
-                    disabled: t || N || !S,
-                    onClick: () => j(!1),
-                    ...y,
+                    disabled: t || b || !Z,
+                    onClick: () => A(!1),
+                    ...w,
                     fullWidth: !0,
                     children: [
-                        (0, i.jsx)(r.ScreenArrowIcon, {
+                        (0, i.jsx)(a.ScreenArrowIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: C.streamIcon
+                            className: v.streamIcon
                         }),
-                        A
+                        N
                     ]
                 },
                 'play'
             ),
-            E && !N
-                ? (0, i.jsx)(r.Tooltip, {
+            E && !b
+                ? (0, i.jsx)(a.Tooltip, {
                       text: g.intl.string(g.t.wCrzur),
                       children: (e) =>
                           (0, i.jsx)(p.Z, {
                               ...e,
                               onClick: () => {
                                   var t;
-                                  null === (t = e.onClick) || void 0 === t || t.call(e), j(!0);
+                                  null === (t = e.onClick) || void 0 === t || t.call(e), A(!0);
                               },
-                              ...y,
-                              className: C.iconButton,
-                              size: C.iconButtonSize,
-                              children: (0, i.jsx)(r.EyePlusIcon, {
+                              ...w,
+                              className: v.iconButton,
+                              size: v.iconButtonSize,
+                              children: (0, i.jsx)(a.EyePlusIcon, {
                                   size: 'xs',
                                   color: 'currentColor',
-                                  className: C.iconSize
+                                  className: v.iconSize
                               })
                           })
                   })

@@ -1,51 +1,51 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return p;
     }
 });
 var i = n(192379),
     l = n(442837),
-    r = n(661111),
-    s = n(706454),
-    a = n(306680),
+    a = n(661111),
+    r = n(706454),
+    s = n(306680),
     o = n(626135),
     c = n(802098),
-    u = n(193701),
-    d = n(702321),
+    d = n(193701),
+    u = n(702321),
     h = n(981631);
-function m(e) {
-    let t = (0, u.Z)(e),
-        n = (0, l.e7)([s.default], () => s.default.locale),
-        m = (0, l.e7)([c.Z], () => c.Z.getChangelog(null != t ? t : '', n), [t, n]),
-        p = (0, d.Z)(e),
-        f = i.useRef(p ? Date.now() : null),
-        g = (0, l.e7)([a.ZP], () => a.ZP.getUnreadCount(e), [e]);
+function p(e) {
+    let t = (0, d.Z)(e),
+        n = (0, l.e7)([r.default], () => r.default.locale),
+        p = (0, l.e7)([c.Z], () => c.Z.getChangelog(null != t ? t : '', n), [t, n]),
+        m = (0, u.Z)(e),
+        f = i.useRef(m ? Date.now() : null),
+        g = (0, l.e7)([s.ZP], () => s.ZP.getUnreadCount(e), [e]);
     i.useEffect(() => {
         f.current = Date.now();
-    }, [p]),
+    }, [m]),
         i.useEffect(() => {
-            p && null != t && r.Z.fetchChangelog(t, n, !0);
-        }, [t, n, p]),
+            m && null != t && a.Z.fetchChangelog(t, n, !0);
+        }, [t, n, m]),
         i.useEffect(() => {
-            p &&
-                null != m &&
+            m &&
+                null != p &&
                 o.default.track(h.rMx.CHANGE_LOG_OPENED, {
-                    change_log_id: ''.concat(m.date, ':').concat(m.revision),
+                    change_log_id: ''.concat(p.date, ':').concat(p.revision),
                     unread_count: g
                 });
-        }, [p, m]),
+        }, [m, p]),
         i.useEffect(() => {
             let e = f.current;
             return () => {
-                p &&
-                    null != m &&
+                m &&
+                    null != p &&
                     null != e &&
                     (o.default.track(h.rMx.CHANGE_LOG_CLOSED, {
                         seconds_open: Math.round((Date.now() - e) / 1000),
-                        change_log_id: ''.concat(m.date, ':').concat(m.revision),
+                        change_log_id: ''.concat(p.date, ':').concat(p.revision),
                         unread_count: g
                     }),
                     (f.current = 0));
             };
-        }, [p, m]);
+        }, [m, p]);
 }

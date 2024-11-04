@@ -5,46 +5,46 @@ n.d(t, {
 });
 var i = n(192379),
     l = n(442837),
-    r = n(569545),
-    s = n(959457),
-    a = n(626135),
+    a = n(569545),
+    r = n(959457),
+    s = n(626135),
     o = n(981631),
     c = n(474936);
 function u(e, t) {
-    let { handleMouseDown: n, handleMouseMove: u, handleMouseUp: d, handleMouseEnter: h } = e,
-        m = i.useRef(null),
-        p = (0, l.e7)([s.Z], () => s.Z.getRTCConnection((0, r.V9)(t))),
-        f = i.useCallback(
+    let { handleMouseDown: n, handleMouseMove: u, handleMouseUp: d, handleMouseEnter: m } = e,
+        f = i.useRef(null),
+        p = (0, l.e7)([r.Z], () => r.Z.getRTCConnection((0, a.V9)(t))),
+        h = i.useCallback(
             (e, t, i) => {
-                (m.current = Date.now()), n(e, t, i);
+                (f.current = Date.now()), n(e, t, i);
             },
             [n]
         );
     return {
         handleMouseUp: i.useCallback(
             (e, t, n) => {
-                if ((d(e, t, n), null != m.current)) {
+                if ((d(e, t, n), null != f.current)) {
                     if (null != p) {
-                        var i, l, r;
+                        var i, l, a;
                         (i = e),
                             (l = p),
-                            (r = Date.now() - m.current),
-                            a.default.track(o.rMx.PREMIUM_FEATURE_USAGE, {
+                            (a = Date.now() - f.current),
+                            s.default.track(o.rMx.PREMIUM_FEATURE_USAGE, {
                                 feature_name: ''.concat(c.QP.SHARED_CANVAS, '_').concat(i.type),
                                 feature_tier: c.h1.FREE,
                                 media_session_id: l.getMediaSessionId(),
                                 parent_media_session_id: l.parentMediaSessionId,
                                 guild_id: l.guildId,
-                                duration: r
+                                duration: a
                             });
                     }
-                    m.current = null;
+                    f.current = null;
                 }
             },
             [d, p]
         ),
-        handleMouseDown: f,
+        handleMouseDown: h,
         handleMouseMove: u,
-        handleMouseEnter: h
+        handleMouseEnter: m
     };
 }

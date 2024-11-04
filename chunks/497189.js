@@ -32,7 +32,7 @@ let R = {
     tension: 600,
     friction: 60
 };
-function P(e) {
+function O(e) {
     let { children: t } = e;
     return (0, i.jsxs)(s.animated.div, {
         className: Z.clanEnvelope,
@@ -55,7 +55,7 @@ function P(e) {
         ]
     });
 }
-function O(e) {
+function P(e) {
     let { text: t, icon: n } = e;
     return (0, i.jsxs)('div', {
         className: Z.upsellDetail,
@@ -117,15 +117,15 @@ function j(e) {
                           (0, i.jsxs)('div', {
                               className: Z.upsellDetails,
                               children: [
-                                  (0, i.jsx)(O, {
+                                  (0, i.jsx)(P, {
                                       icon: c.CompassIcon,
                                       text: A.intl.string(A.t.v0ZdNj)
                                   }),
-                                  (0, i.jsx)(O, {
+                                  (0, i.jsx)(P, {
                                       icon: c.CircleCheckIcon,
                                       text: A.intl.string(A.t.L1fEc3)
                                   }),
-                                  (0, i.jsx)(O, {
+                                  (0, i.jsx)(P, {
                                       icon: c.GroupIcon,
                                       text: A.intl.string(A.t.ChMjnp)
                                   })
@@ -200,7 +200,7 @@ t.Z = r.memo(function (e) {
                 location: h.Z.CLAN_DISCOVERY
             });
     }, [a, y]);
-    let O = (0, o.e7)([v.Z], () => v.Z.getGuild(y)),
+    let P = (0, o.e7)([v.Z], () => v.Z.getGuild(y)),
         D = (0, o.e7)([f.ZP], () => (null != y ? f.ZP.getStateForGuild(y).progress : null)),
         M = (0, g.c7)({
             guildId: y,
@@ -238,7 +238,7 @@ t.Z = r.memo(function (e) {
             M ? (0, N.kw)() : (0, N.Ce)();
         }, [M]),
         U = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-        G = (0, T.L)({ guild: O }),
+        G = (0, T.L)({ guild: P }),
         B = (0, x.n)(),
         [H, V] = r.useState(!0),
         F = (0, c.useSpring)(
@@ -367,7 +367,7 @@ t.Z = r.memo(function (e) {
                         (0, i.jsx)(s.animated.div, {
                             className: Z.clanEnvelope,
                             style: q,
-                            children: (0, i.jsx)(P, {
+                            children: (0, i.jsx)(O, {
                                 children: (0, i.jsx)('div', {
                                     className: Z.clanCardCenterContainer,
                                     style: { overflow: H ? 'hidden' : 'visible' },

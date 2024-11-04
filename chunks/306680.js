@@ -1123,7 +1123,7 @@ let e0 = new e$(m.Z, {
             }
         } else null == d && ((t = $.Z.getChannelId()), (n = H.ZP.getCurrentSidebarChannelId(t)));
         let _ = t === i || n === i;
-        if ((_ && eD(o) && !s) || (null != r && r.isInstanceFocused() && _ && r.isInstanceUILocked() && r.isPinned(er.Odu.TEXT))) return o.ack({ messageId: a.id });
+        if ((_ && eD(o) && !s) || (null != r && r.isInstanceFocused() && _ && r.isInstanceLocked() && r.isPinned(er.Odu.TEXT))) return o.ack({ messageId: a.id });
         (null == o.oldestUnreadMessageId || o.oldestUnreadMessageIdStale) && (o.oldestUnreadMessageId = a.id),
             !l && o.unreadCount++,
             !(J.Z.isBlockedForMessage(a) || (a.type === er.uaV.RECIPIENT_REMOVE && (null == c ? void 0 : c.type) === er.d4z.GROUP_DM)) &&

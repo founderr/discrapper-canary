@@ -26,7 +26,7 @@ t.Z = (0, r.memo)(function (e) {
     let { quest: A } = e,
         [Z, y] = (0, r.useState)(!1),
         [L, R] = (0, r.useState)(24),
-        [P, O] = (0, r.useState)(!1),
+        [O, P] = (0, r.useState)(!1),
         j = (0, r.useRef)(null),
         D = (0, r.useRef)(null),
         M = (0, r.useRef)(null),
@@ -63,14 +63,14 @@ t.Z = (0, r.memo)(function (e) {
         },
         J = () => y(!1),
         $ = (e) => {
-            O(!0),
+            P(!0),
                 _.default.track(S.rMx.QUEST_ASSET_LOADING_FAILURE, {
                     source: e,
                     asset_id: e,
                     quest_id: A.id
                 });
         };
-    return null == V || P
+    return null == V || O
         ? null
         : (0, i.jsx)(d.FocusRing, {
               children: (0, i.jsxs)('div', {

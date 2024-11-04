@@ -52,8 +52,8 @@ t.Z = function (e) {
         }, [t]);
     let E = (0, c.e7)([v.Z], () => v.Z.theme),
         { section: L, pendingCount: R } = (0, c.cj)([S.ZP], () => S.ZP.getState()),
-        P = (0, c.cj)([f.Z], () => f.Z.getSuggestionCount()),
-        O = (e) => {
+        O = (0, c.cj)([f.Z], () => f.Z.getSuggestionCount()),
+        P = (e) => {
             m.Z.setSection(e);
         },
         j = (0, g.Dt)(),
@@ -86,7 +86,7 @@ t.Z = function (e) {
                                 'aria-label': A.intl.string(A.t.TdEu5e),
                                 selectedItem: L,
                                 type: 'top-pill',
-                                onItemSelect: O,
+                                onItemSelect: P,
                                 className: Z.tabBar,
                                 children: [
                                     (0, i.jsx)(d.TabBar.Item, {
@@ -113,7 +113,7 @@ t.Z = function (e) {
                                                 : null
                                         ]
                                     }),
-                                    P > 0
+                                    O > 0
                                         ? (0, i.jsxs)(d.TabBar.Item, {
                                               id: x.pJs.SUGGESTIONS,
                                               className: Z.item,
@@ -121,7 +121,7 @@ t.Z = function (e) {
                                               children: [
                                                   A.intl.string(A.t['8rSi19']),
                                                   (0, i.jsx)(d.NumberBadge, {
-                                                      count: P,
+                                                      count: O,
                                                       className: Z.badge
                                                   })
                                               ]

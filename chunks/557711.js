@@ -6,34 +6,34 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    s = n(481060),
-    a = n(5192),
+    a = n.n(l),
+    r = n(481060),
+    s = n(5192),
     o = n(829820),
     c = n(26118);
 function u(e) {
-    let { activity: t, user: n, channelId: l, guildId: u, source: d, size: h, look: m, color: p, className: f, onAction: g } = e,
-        { tooltip: C, loading: x, disabled: v, onClick: _ } = (0, o.Fe)(t, n, d, a.ZP.getNickname(u, l, n)),
-        I = () => {
+    let { activity: t, user: n, channelId: l, guildId: u, source: d, size: m, look: f, color: p, className: h, onAction: g } = e,
+        { tooltip: v, loading: S, disabled: I, onClick: _ } = (0, o.Fe)(t, n, d, s.ZP.getNickname(u, l, n)),
+        x = () => {
             null == g || g(), _();
         };
-    return (0, i.jsx)(s.Tooltip, {
-        text: C,
+    return (0, i.jsx)(r.Tooltip, {
+        text: v,
         children: (e) => {
             let { onMouseEnter: n, onMouseLeave: l } = e;
-            return (0, i.jsx)(s.Button, {
-                size: h,
-                className: r()(c.syncButton, f),
+            return (0, i.jsx)(r.Button, {
+                size: m,
+                className: a()(c.syncButton, h),
                 innerClassName: c.syncButtonInner,
-                look: m,
+                look: f,
                 color: p,
-                onClick: I,
+                onClick: x,
                 onMouseEnter: n,
                 onMouseLeave: l,
-                disabled: v,
-                submitting: x,
-                'aria-label': null != C ? C : t.name,
-                children: (0, i.jsx)(s.UserPlayIcon, {
+                disabled: I,
+                submitting: S,
+                'aria-label': null != v ? v : t.name,
+                children: (0, i.jsx)(r.UserPlayIcon, {
                     size: 'xs',
                     color: 'currentColor'
                 })

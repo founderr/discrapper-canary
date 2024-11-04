@@ -6,16 +6,16 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    s = n.n(r),
-    a = n(100621),
+    a = n(120356),
+    r = n.n(a),
+    s = n(100621),
     o = n(704215),
     c = n(481060),
-    u = n(442837),
-    d = n(410030),
+    d = n(442837),
+    u = n(410030),
     h = n(607070),
-    m = n(645041),
-    p = n(430824),
+    p = n(645041),
+    m = n(430824),
     f = n(914010),
     g = n(594174),
     C = n(626135),
@@ -25,26 +25,26 @@ var i = n(200651),
     I = n(353093),
     E = n(940725),
     b = n(114487),
-    S = n(979264),
+    N = n(979264),
     Z = n(981631),
     T = n(921944),
-    N = n(388032),
+    S = n(388032),
     j = n(882070);
 function A(e) {
     var t;
-    let { guild: n, showToast: r, onConfirm: o, onDismiss: m } = e,
-        [p, f] = l.useState(!1),
+    let { guild: n, showToast: a, onConfirm: o, onDismiss: p } = e,
+        [m, f] = l.useState(!1),
         C = l.useRef(null),
         v = (0, x.Cc)(n.id),
-        E = (0, d.ZP)(),
-        Z = (0, u.e7)([h.Z], () => h.Z.useReducedMotion),
+        E = (0, u.ZP)(),
+        Z = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
         T = (0, _.nP)(null == v ? void 0 : null === (t = v.branding) || void 0 === t ? void 0 : t.primaryColor, [c.tokens.colors.BG_BRAND, 0.5]),
         A = c.tokens.colors.BG_SURFACE_OVERLAY.resolve({
             theme: E,
             saturation: 1
         }).hex(),
         y = (0, _.nj)(T, A, 'top left', 0.3, '30%'),
-        P = (0, u.e7)(
+        P = (0, d.e7)(
             [g.default],
             () => {
                 var e;
@@ -65,9 +65,9 @@ function A(e) {
     }, []);
     let M = l.useCallback(
             (e) => {
-                e.stopPropagation(), e.preventDefault(), m();
+                e.stopPropagation(), e.preventDefault(), p();
             },
-            [m]
+            [p]
         ),
         R = l.useCallback(
             (e) => {
@@ -76,7 +76,7 @@ function A(e) {
             [o]
         ),
         L = (0, c.useTransition)(
-            r,
+            a,
             {
                 from: {
                     transform: Z ? 'translateY(0)' : 'translateY(16px)',
@@ -104,27 +104,27 @@ function A(e) {
             'animate-always'
         ),
         k = (0, I.Zp)(n, P),
-        O = k ? N.intl.formatToPlainString(N.t.qFqINz, { guildName: n.name }) : N.intl.formatToPlainString(N.t.bFwASk, { guildName: n.name }),
-        w = k ? N.intl.string(N.t.eA1ymp) : N.intl.string(N.t.MF0Ntb),
-        D = k ? N.intl.formatToPlainString(N.t['60PXOz'], { guildName: n.name }) : N.intl.formatToPlainString(N.t.i27ioq, { guildName: n.name });
+        O = k ? S.intl.formatToPlainString(S.t.qFqINz, { guildName: n.name }) : S.intl.formatToPlainString(S.t.bFwASk, { guildName: n.name }),
+        D = k ? S.intl.string(S.t.eA1ymp) : S.intl.string(S.t.MF0Ntb),
+        w = k ? S.intl.formatToPlainString(S.t['60PXOz'], { guildName: n.name }) : S.intl.formatToPlainString(S.t.i27ioq, { guildName: n.name });
     return L((e, t) => {
-        var l, r;
+        var l, a;
         return (
             t &&
-            (0, i.jsx)(a.animated.div, {
+            (0, i.jsx)(s.animated.div, {
                 onMouseEnter: () => f(!0),
                 onMouseLeave: () => f(!1),
-                className: s()(j.wrapper),
+                className: r()(j.wrapper),
                 style: {
                     ...e,
                     ...y
                 },
                 ref: C,
                 children: (0, i.jsx)(c.ClickableContainer, {
-                    'aria-label': D,
+                    'aria-label': w,
                     onClick: R,
                     children: (0, i.jsxs)('div', {
-                        className: s()(j.toastContainerInner, p ? j.hovered : null),
+                        className: r()(j.toastContainerInner, m ? j.hovered : null),
                         children: [
                             (0, i.jsxs)('div', {
                                 className: j.guildIconContainer,
@@ -135,10 +135,10 @@ function A(e) {
                                     }),
                                     (0, i.jsx)('div', {
                                         className: j.guildTagContainer,
-                                        children: (0, i.jsx)(S.aG, {
+                                        children: (0, i.jsx)(N.aG, {
                                             guildId: n.id,
                                             clanTag: null === (l = n.clan) || void 0 === l ? void 0 : l.tag,
-                                            clanBadge: null === (r = n.clan) || void 0 === r ? void 0 : r.badge,
+                                            clanBadge: null === (a = n.clan) || void 0 === a ? void 0 : a.badge,
                                             className: j.guildClanTag
                                         })
                                     })
@@ -157,7 +157,7 @@ function A(e) {
                                         children: (0, i.jsx)(c.Text, {
                                             variant: 'text-sm/medium',
                                             color: 'header-secondary',
-                                            children: w
+                                            children: D
                                         })
                                     })
                                 ]
@@ -182,16 +182,16 @@ function A(e) {
 }
 function y(e) {
     let {} = e,
-        t = (0, u.e7)([f.Z], () => f.Z.getGuildId()),
+        t = (0, d.e7)([f.Z], () => f.Z.getGuildId()),
         n = (0, E.h)(t, 'clan_tag_upsell_toast'),
-        r = (0, u.e7)([p.Z], () => p.Z.getGuild(t), [t]),
-        [s, a] = l.useState(!1),
+        a = (0, d.e7)([m.Z], () => m.Z.getGuild(t), [t]),
+        [r, s] = l.useState(!1),
         c = l.useRef(null);
     l.useEffect(
         () => (
             n &&
                 (c.current = window.setTimeout(() => {
-                    a(!0),
+                    s(!0),
                         C.default.track(Z.rMx.DISMISSIBLE_CONTENT_SHOWN, {
                             type: o.C[o.C.ADOPT_CLAN_IDENTITY_NOTICE],
                             guild_id: null != t ? t : Z.lds
@@ -203,18 +203,18 @@ function y(e) {
         ),
         []
     );
-    let d = l.useCallback(() => {
-            if ((a(!1), null != t)) (0, v.SJ)(t);
+    let u = l.useCallback(() => {
+            if ((s(!1), null != t)) (0, v.SJ)(t);
         }, [, t]),
         h = l.useCallback(() => {
-            if ((a(!1), null != t)) (0, m.Qd)(o.C.ADOPT_CLAN_IDENTITY_NOTICE, null != t ? t : Z.lds, !0, T.L.DISMISS);
+            if ((s(!1), null != t)) (0, p.Qd)(o.C.ADOPT_CLAN_IDENTITY_NOTICE, null != t ? t : Z.lds, !0, T.L.DISMISS);
         }, [t]);
-    return n && null != t && null != r
+    return n && null != t && null != a
         ? (0, i.jsx)(A, {
-              guild: r,
-              onConfirm: d,
+              guild: a,
+              onConfirm: u,
               onDismiss: h,
-              showToast: s
+              showToast: r
           })
         : null;
 }

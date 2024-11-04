@@ -1,57 +1,57 @@
-e.d(t, {
+t.d(n, {
     Z: function () {
-        return T;
+        return A;
     }
 }),
-    e(47120),
-    e(733860);
-var i = e(718528),
-    l = e(931261),
-    o = e(355298),
-    r = e(333984),
-    u = e(905423),
-    a = e(695346),
-    d = e(283595),
-    E = e(923834),
-    s = e(55589),
-    c = e(823379),
-    _ = e(475468),
-    C = e(981631),
-    A = e(176505);
+    t(47120),
+    t(733860);
+var l = t(718528),
+    i = t(931261),
+    o = t(355298),
+    a = t(333984),
+    u = t(905423),
+    r = t(695346),
+    d = t(283595),
+    c = t(923834),
+    s = t(55589),
+    E = t(823379),
+    C = t(475468),
+    _ = t(981631),
+    h = t(176505);
 let S = () => {
-    let n = o.Z.getMessageRequestsCount() > 0 || r.Z.getSpamChannelsCount() > 0;
-    return [C.Z5c.FRIENDS, d.Z.hasLibraryApplication() && !a.bm.getSetting() ? C.Z5c.APPLICATION_LIBRARY : null, C.Z5c.APPLICATION_STORE, n ? C.Z5c.MESSAGE_REQUESTS : null, C.Z5c.COLLECTIBLES_SHOP, a.Ex.getSetting() ? C.Z5c.FAMILY_CENTER : null].filter(c.lm);
+    let e = o.Z.getMessageRequestsCount() > 0 || a.Z.getSpamChannelsCount() > 0;
+    return [_.Z5c.FRIENDS, d.Z.hasLibraryApplication() && !r.bm.getSetting() ? _.Z5c.APPLICATION_LIBRARY : null, _.Z5c.APPLICATION_STORE, e ? _.Z5c.MESSAGE_REQUESTS : null, _.Z5c.COLLECTIBLES_SHOP, r.Ex.getSetting() ? _.Z5c.FAMILY_CENTER : null].filter(E.lm);
 };
-function I(n, t) {
-    (0, _.K)(n, t);
+function I(e, n) {
+    (0, C.K)(e, n);
 }
-function T() {
-    let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-        t = u.Z.getState().guildId;
-    null == t
-        ? !(function (n) {
-              var t, e, i;
-              let { channelId: l, path: o, basePath: r } = u.Z.getState(),
-                  a = s.Z.getPrivateChannelIds(),
-                  d = __OVERLAY__ ? a : [...S(), ...a];
-              let c = (null == l ? ((t = null != o ? o : r), S().findIndex((n) => t.startsWith(n))) : null != l ? d.indexOf(l) : 0) + n;
-              c >= d.length ? (c = 0) : c < 0 && (c = d.length - 1);
-              let A = d[c];
-              if (S().includes(A))
-                  !(function (n) {
-                      let t = E.Z.getCurrentRoute();
-                      n === C.Z5c.APPLICATION_STORE && null != t ? (0, _.z)(t) : (0, _.z)(n);
-                  })(A);
+function A() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+        n = u.Z.getState().guildId;
+    null == n
+        ? !(function (e) {
+              var n, t, l;
+              let { channelId: i, path: o, basePath: a } = u.Z.getState(),
+                  r = s.Z.getPrivateChannelIds(),
+                  d = __OVERLAY__ ? r : [...S(), ...r];
+              let E = (null == i ? ((n = null != o ? o : a), S().findIndex((e) => n.startsWith(e))) : null != i ? d.indexOf(i) : 0) + e;
+              E >= d.length ? (E = 0) : E < 0 && (E = d.length - 1);
+              let h = d[E];
+              if (S().includes(h))
+                  !(function (e) {
+                      let n = c.Z.getCurrentRoute();
+                      e === _.Z5c.APPLICATION_STORE && null != n ? (0, C.z)(n) : (0, C.z)(e);
+                  })(h);
               else {
-                  (e = C.ME), (i = A), (0, _.K)(e, i);
+                  (t = _.ME), (l = h), (0, C.K)(t, l);
               }
-          })(n)
-        : !(function (n, t) {
-              var e, o, r, a;
+          })(e)
+        : !(function (e, n) {
+              var t, o, a, r;
               let d = u.Z.getState().channelId,
-                  E = (0, i.Z)(t, { withCurrentVoiceChannel: !0 }).map((n) => n.id);
-              (0, l.s)(t) && E.unshift(A.oC.GUILD_HOME);
-              let s = ((e = (null != d ? E.indexOf(d) : -1) + n), (o = E.length), e < 0 ? o - 1 : e >= o ? 0 : e);
-              (r = t), (a = E[s]), (0, _.K)(r, a);
-          })(n, t);
+                  c = (0, l.Z)(n, { withCurrentVoiceChannel: !0 }).map((e) => e.id);
+              (0, i.s)(n) && c.unshift(h.oC.GUILD_HOME);
+              let s = ((t = (null != d ? c.indexOf(d) : -1) + e), (o = c.length), t < 0 ? o - 1 : t >= o ? 0 : t);
+              (a = n), (r = c[s]), (0, C.K)(a, r);
+          })(e, n);
 }

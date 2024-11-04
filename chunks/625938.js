@@ -6,16 +6,16 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    s = n.n(r),
-    a = n(392711),
-    o = n.n(a),
+    a = n(120356),
+    r = n.n(a),
+    s = n(392711),
+    o = n.n(s),
     c = n(442837),
-    u = n(704215),
-    d = n(481060),
+    d = n(704215),
+    u = n(481060),
     h = n(788307),
-    m = n(605236),
-    p = n(594174),
+    p = n(605236),
+    m = n(594174),
     f = n(768581),
     g = n(906605),
     C = n(106301),
@@ -25,29 +25,29 @@ var i = n(200651),
     I = n(981631),
     E = n(231338),
     b = n(388032),
-    S = n(29150);
+    N = n(29150);
 let Z = (e) => {
-        let { style: t, className: n, name: l, icon: r } = e;
-        return (0, i.jsx)(d.Tooltip, {
+        let { style: t, className: n, name: l, icon: a } = e;
+        return (0, i.jsx)(u.Tooltip, {
             text: l,
             children: (e) =>
                 (0, i.jsx)('div', {
-                    className: s()(n, S.iconWidget),
+                    className: r()(n, N.iconWidget),
                     style: t,
                     ...e,
-                    children: null != r && r
+                    children: null != a && a
                 })
         });
     },
     T = (e) => {
-        let { currentStatus: t, channel: r } = e,
-            a = l.useRef(C.Z.getRecentCustomStatuses()),
-            T = l.useRef((0, m.un)(u.z.HANG_STATUS_NEW_BADGE)).current,
-            N = (0, x.V)(),
+        let { currentStatus: t, channel: a } = e,
+            s = l.useRef(C.Z.getRecentCustomStatuses()),
+            T = l.useRef((0, p.un)(d.z.HANG_STATUS_NEW_BADGE)).current,
+            S = (0, x.V)(),
             [j, A] = l.useState(null != t ? t : null),
-            y = (0, c.e7)([p.default], () => p.default.getCurrentUser()),
+            y = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
             P = () => {
-                !T && (0, m.EW)(u.z.HANG_STATUS_NEW_BADGE);
+                !T && (0, p.EW)(d.z.HANG_STATUS_NEW_BADGE);
             },
             M = (e, t) => {
                 e.stopPropagation(), (0, g.Zx)(t, !0), P();
@@ -60,7 +60,7 @@ let Z = (e) => {
             }, []),
             k = (e) => {
                 e.stopPropagation(),
-                    (0, d.openModalLazy)(async () => {
+                    (0, u.openModalLazy)(async () => {
                         let { default: e } = await n.e('1631').then(n.bind(n, 333541));
                         return (t) => (0, i.jsx)(e, { ...t });
                     }),
@@ -73,7 +73,7 @@ let Z = (e) => {
                     state: e
                 });
             }, []),
-            w = l.useCallback((e) => {
+            D = l.useCallback((e) => {
                 A({
                     type: I.IIU.HANG_STATUS,
                     name: 'Hang Status',
@@ -83,54 +83,54 @@ let Z = (e) => {
                 });
             }, []);
         return (0, i.jsxs)('div', {
-            className: S.popout,
+            className: N.popout,
             children: [
                 !T &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, i.jsx)('div', { className: S.popoutBackground }),
+                            (0, i.jsx)('div', { className: N.popoutBackground }),
                             (0, i.jsxs)('div', {
-                                className: S.onboarding,
+                                className: N.onboarding,
                                 children: [
                                     (0, i.jsxs)('div', {
-                                        className: S.title,
+                                        className: N.title,
                                         children: [
-                                            (0, i.jsx)(d.Text, {
+                                            (0, i.jsx)(u.Text, {
                                                 variant: 'text-md/semibold',
                                                 color: 'header-primary',
                                                 children: b.intl.string(b.t['8ka8lp'])
                                             }),
-                                            (0, i.jsx)(d.TextBadge, {
+                                            (0, i.jsx)(u.TextBadge, {
                                                 text: b.intl.string(b.t.oW0eUV),
                                                 disableColor: !0,
-                                                className: S.newBadge
+                                                className: N.newBadge
                                             })
                                         ]
                                     }),
-                                    (0, i.jsx)(d.Text, {
+                                    (0, i.jsx)(u.Text, {
                                         variant: 'text-xs/normal',
                                         color: 'text-muted',
-                                        className: S.helpText,
+                                        className: N.helpText,
                                         children: b.intl.string(b.t.GFo2Gh)
                                     }),
                                     (0, i.jsxs)('div', {
-                                        className: S.iconGroup,
+                                        className: N.iconGroup,
                                         children: [
                                             null != y &&
                                                 (0, i.jsxs)('div', {
-                                                    className: S.avatarWrapper,
+                                                    className: N.avatarWrapper,
                                                     children: [
-                                                        (0, i.jsx)(d.Avatar, {
-                                                            className: S.avatar,
-                                                            size: d.AvatarSizes.SIZE_40,
+                                                        (0, i.jsx)(u.Avatar, {
+                                                            className: N.avatar,
+                                                            size: u.AvatarSizes.SIZE_40,
                                                             src: (0, f.ov)(y),
                                                             'aria-hidden': !0
                                                         }),
-                                                        (0, i.jsx)('div', { className: S.outline })
+                                                        (0, i.jsx)('div', { className: N.outline })
                                                     ]
                                                 }),
                                             (0, i.jsx)(_.Z, {
-                                                className: S.statusIcon,
+                                                className: N.statusIcon,
                                                 hangStatusActivity: j
                                             })
                                         ]
@@ -140,26 +140,26 @@ let Z = (e) => {
                         ]
                     }),
                 (0, i.jsxs)('div', {
-                    className: S.options,
+                    className: N.options,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: S.iconsContainer,
+                            className: N.iconsContainer,
                             children: [
-                                Object.entries(N).map((e) => {
+                                Object.entries(S).map((e) => {
                                     let [n, l] = e;
                                     return (0, i.jsx)(
-                                        d.Clickable,
+                                        u.Clickable,
                                         {
                                             'aria-label': l.title,
                                             onMouseEnter: () => O(n),
                                             onClick: (e) => M(e, n),
                                             children: (0, i.jsx)(Z, {
-                                                className: s()(S.iconWidget, { [S.selectedWidget]: n === (null == t ? void 0 : t.state) }),
+                                                className: r()(N.iconWidget, { [N.selectedWidget]: n === (null == t ? void 0 : t.state) }),
                                                 name: l.title,
                                                 icon: (0, i.jsx)('img', {
                                                     src: l.icon,
                                                     alt: '',
-                                                    className: S.icon
+                                                    className: N.icon
                                                 }),
                                                 style: n === (null == t ? void 0 : t.state) ? { backgroundColor: null != l.color ? l.color : void 0 } : {}
                                             })
@@ -167,58 +167,58 @@ let Z = (e) => {
                                         n
                                     );
                                 }),
-                                (0, i.jsx)(d.Clickable, {
+                                (0, i.jsx)(u.Clickable, {
                                     'aria-label': b.intl.string(b.t.S90Fub),
                                     onClick: L,
                                     onMouseEnter: () => A(null),
                                     children: (0, i.jsx)(Z, {
-                                        className: S.optionButton,
+                                        className: N.optionButton,
                                         name: b.intl.string(b.t.S90Fub),
-                                        icon: (0, i.jsx)(d.DenyIcon, {
+                                        icon: (0, i.jsx)(u.DenyIcon, {
                                             size: 'md',
                                             color: 'currentColor',
-                                            className: S.editIcon,
-                                            colorClass: S.editIconColor
+                                            className: N.editIcon,
+                                            colorClass: N.editIconColor
                                         })
                                     })
                                 })
                             ]
                         }),
-                        (0, i.jsx)('div', { className: S.divider }),
+                        (0, i.jsx)('div', { className: N.divider }),
                         (0, i.jsxs)('div', {
-                            className: S.iconsContainer,
+                            className: N.iconsContainer,
                             children: [
-                                a.current.map((e, n) => {
+                                s.current.map((e, n) => {
                                     let l = e.status === (null == t ? void 0 : t.details) && o().isEqual(e.emoji, null == t ? void 0 : t.emoji),
-                                        a = null != e.emoji && !(0, v.K)(e.emoji, r);
+                                        s = null != e.emoji && !(0, v.K)(e.emoji, a);
                                     return (0, i.jsxs)(
-                                        d.Clickable,
+                                        u.Clickable,
                                         {
                                             'aria-label': e.status,
-                                            onMouseEnter: () => w(e),
-                                            onClick: a ? void 0 : (t) => R(t, e),
-                                            className: S.statusOptionContainer,
+                                            onMouseEnter: () => D(e),
+                                            onClick: s ? void 0 : (t) => R(t, e),
+                                            className: N.statusOptionContainer,
                                             children: [
                                                 (0, i.jsx)(Z, {
-                                                    className: s()(S.iconWidget, { [S.selectedWidget]: l }),
+                                                    className: r()(N.iconWidget, { [N.selectedWidget]: l }),
                                                     name: e.status,
                                                     icon:
                                                         null != e.emoji
                                                             ? (0, i.jsx)(h.Iv, {
-                                                                  className: S.customIcon,
+                                                                  className: N.customIcon,
                                                                   emoji: e.emoji,
                                                                   hideTooltip: !0
                                                               })
                                                             : null,
                                                     style: l ? { backgroundColor: '#7174B7B3' } : { backgroundColor: '#6466914D' }
                                                 }),
-                                                a
+                                                s
                                                     ? (0, i.jsx)('div', {
-                                                          className: S.emojiLockIconContainer,
-                                                          children: (0, i.jsx)(d.LockIcon, {
+                                                          className: N.emojiLockIconContainer,
+                                                          children: (0, i.jsx)(u.LockIcon, {
                                                               size: 'xs',
                                                               color: 'currentColor',
-                                                              className: S.emojiLockIcon
+                                                              className: N.emojiLockIcon
                                                           })
                                                       })
                                                     : null
@@ -227,40 +227,40 @@ let Z = (e) => {
                                         'custom-status-'.concat(n)
                                     );
                                 }),
-                                a.current.length > 0
+                                s.current.length > 0
                                     ? (0, i.jsx)(
-                                          d.Clickable,
+                                          u.Clickable,
                                           {
                                               'aria-label': null != t ? b.intl.string(b.t.IN2LTk) : b.intl.string(b.t.UDg0qK),
                                               onClick: k,
                                               children: (0, i.jsx)(Z, {
-                                                  className: S.optionButton,
+                                                  className: N.optionButton,
                                                   name: null != t ? b.intl.string(b.t.IN2LTk) : b.intl.string(b.t.UDg0qK),
-                                                  icon: (0, i.jsx)(d.PencilIcon, {
+                                                  icon: (0, i.jsx)(u.PencilIcon, {
                                                       size: 'custom',
                                                       color: 'currentColor',
                                                       width: 20,
                                                       height: 20,
-                                                      colorClass: S.editIconColor
+                                                      colorClass: N.editIconColor
                                                   })
                                               })
                                           },
                                           'custom-status-edit'
                                       )
                                     : (0, i.jsxs)(
-                                          d.Clickable,
+                                          u.Clickable,
                                           {
                                               'aria-label': b.intl.string(b.t.UDg0qK),
                                               onClick: k,
-                                              className: S.setCustomButton,
+                                              className: N.setCustomButton,
                                               children: [
-                                                  (0, i.jsx)(d.PencilIcon, {
+                                                  (0, i.jsx)(u.PencilIcon, {
                                                       size: 'xs',
                                                       color: 'currentColor',
-                                                      className: S.editIcon,
-                                                      colorClass: S.editIconColor
+                                                      className: N.editIcon,
+                                                      colorClass: N.editIconColor
                                                   }),
-                                                  (0, i.jsx)(d.Text, {
+                                                  (0, i.jsx)(u.Text, {
                                                       variant: 'text-xs/medium',
                                                       color: 'interactive-active',
                                                       children: b.intl.string(b.t.UDg0qK)

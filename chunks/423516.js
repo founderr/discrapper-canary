@@ -1,18 +1,18 @@
-var i = n(200651);
-n(192379);
-var l = n(120356),
-    r = n.n(l),
-    a = n(570928),
-    o = n(977059),
-    s = n(388032),
-    c = n(666790);
-t.Z = function (e) {
-    let { className: t, hasVideo: n, text: l } = e,
-        { enabled: u } = (0, o.S)({ location: 'RTCConnectionStatusText' }),
-        d = n ? s.intl.string(s.t.IlHdW1) : s.intl.string(s.t.WsOisr);
-    return (0, i.jsx)(a.Z, {
-        className: r()(t, u ? c.hoverableStatus : c.status),
-        hoverText: u ? d : null,
-        children: l
+var i = e(200651);
+e(192379);
+var s = e(120356),
+    r = e.n(s),
+    o = e(570928),
+    l = e(977059),
+    a = e(388032),
+    c = e(666790);
+n.Z = function (t) {
+    let { className: n, hasVideo: e, text: s, hasConnectedChannel: u } = t,
+        { enabled: E } = (0, l.S)({ location: 'RTCConnectionStatusText' }),
+        d = e ? a.intl.string(a.t.IlHdW1) : a.intl.string(a.t.WsOisr);
+    return (0, i.jsx)(o.Z, {
+        className: r()(n, E ? c.hoverableStatus : c.status),
+        hoverText: E && u ? d : null,
+        children: s
     });
 };

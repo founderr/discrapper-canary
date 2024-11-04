@@ -108,25 +108,25 @@ let m = (e, t) => {
     };
 };
 t.Z = l.memo(function (e) {
-    let { wheelWidth: t, wheelHeight: n, itemWidth: g, itemHeight: C, showDeadZoneIndicator: _, activeItem: x, onItemSelect: v, onItemAction: I, interactive: b = !0, children: N } = e,
-        E = l.useRef(null),
-        S = l.useRef([]),
-        Z = l.useRef(!1),
+    let { wheelWidth: t, wheelHeight: n, itemWidth: g, itemHeight: C, showDeadZoneIndicator: _, activeItem: x, onItemSelect: v, onItemAction: I, interactive: b = !0, children: S } = e,
+        Z = l.useRef(null),
+        N = l.useRef([]),
+        E = l.useRef(!1),
         y = l.useRef(null),
-        [T, j] = l.useState(0),
-        [A, P] = l.useState({
+        [j, T] = l.useState(0),
+        [P, A] = l.useState({
             x: 0,
             y: 0
         }),
-        R = Math.abs(A.x) + Math.abs(A.y) > 0,
-        M = l.useMemo(() => a().chunk(N, p), [N]),
+        M = Math.abs(P.x) + Math.abs(P.y) > 0,
+        w = l.useMemo(() => a().chunk(S, p), [S]),
         L = l.useCallback(
             (e, t) => {
-                null == S.current[T] ? (S.current[T] = []) : (S.current[T][t] = e);
+                null == N.current[j] ? (N.current[j] = []) : (N.current[j][t] = e);
             },
-            [T]
+            [j]
         ),
-        w = l.useCallback(
+        R = l.useCallback(
             (e, t) => {
                 (y.current = t), v(p * e + t);
             },
@@ -137,13 +137,13 @@ t.Z = l.memo(function (e) {
         }, [v]),
         O = l.useCallback(
             (e) => {
-                D(), (Z.current = e);
+                D(), (E.current = e);
             },
             [D]
         ),
         k = l.useCallback((e, t, n) => {
-            if (Z.current) {
-                P({
+            if (E.current) {
+                A({
                     x: 0,
                     y: 0
                 });
@@ -157,22 +157,22 @@ t.Z = l.memo(function (e) {
                 r = i.y < 0,
                 a = m(n, i),
                 o = l ? Math.max(i.x, -a.x) : Math.min(i.x, a.x);
-            P({
+            A({
                 x: o / 2,
                 y: (r ? Math.max(i.y, -a.y) : Math.min(i.y, a.y)) / 2
             });
         }, []),
-        G = l.useCallback(
+        U = l.useCallback(
             (e) => {
-                if (null != y.current) e.preventDefault(), e.stopPropagation(), null == I || I(p * T + y.current);
+                if (null != y.current) e.preventDefault(), e.stopPropagation(), null == I || I(p * j + y.current);
             },
-            [I, T]
+            [I, j]
         ),
-        U = l.useMemo(
+        G = l.useMemo(
             () =>
                 (0, r.throttle)((e) => {
-                    if (null == E.current) return;
-                    let i = E.current.getBoundingClientRect(),
+                    if (null == Z.current) return;
+                    let i = Z.current.getBoundingClientRect(),
                         l = i.left + i.width / 2,
                         r = {
                             x: l,
@@ -182,37 +182,37 @@ t.Z = l.memo(function (e) {
                             x: e.clientX,
                             y: e.clientY
                         };
-                    if ((k(a, r, Math.max(t, n)), Z.current)) {
+                    if ((k(a, r, Math.max(t, n)), E.current)) {
                         null != x && D();
                         return;
                     }
                     let o = (0, s.ld)(r, a, Math.max(t, n));
-                    for (let e = 0; e < S.current[T].length; e++) {
-                        let t = S.current[T][e];
+                    for (let e = 0; e < N.current[j].length; e++) {
+                        let t = N.current[j][e];
                         if (null == t) continue;
                         let n = t.getBoundingClientRect();
                         if ((0, s.Vr)(r, o, n)) {
-                            w(T, e);
+                            R(j, e);
                             return;
                         }
                     }
                     D();
                 }, 16),
-            [x, k, D, w, T, n, t]
+            [x, k, D, R, j, n, t]
         ),
         B = l.useCallback(
             (e) => {
                 if (!b) return;
-                let t = T + (e.deltaY > 0 ? 1 : -1);
-                t >= 0 && t < M.length && (null != y.current && (M[t].length > y.current ? w(t, y.current) : D()), j(t));
+                let t = j + (e.deltaY > 0 ? 1 : -1);
+                t >= 0 && t < w.length && (null != y.current && (w[t].length > y.current ? R(t, y.current) : D()), T(t));
             },
-            [b, T, M, w, D]
+            [b, j, w, R, D]
         ),
-        H = l.useMemo(
+        V = l.useMemo(
             () =>
-                M[T].map((e, l) => {
+                w[j].map((e, l) => {
                     let r = h[l];
-                    if (null == r) throw Error('Too many items supplied '.concat(N.length, ' expected max of ').concat(h.length));
+                    if (null == r) throw Error('Too many items supplied '.concat(S.length, ' expected max of ').concat(h.length));
                     let a = f(r.x, t, g),
                         o = f(r.y, n, C);
                     return (0, i.jsx)(
@@ -231,15 +231,15 @@ t.Z = l.memo(function (e) {
                         l
                     );
                 }),
-            [M, T, t, g, n, C, N.length, L]
+            [w, j, t, g, n, C, S.length, L]
         );
     return (0, i.jsx)(o.Clickable, {
         className: u.chatWheelMouseInput,
-        onMouseMove: U,
+        onMouseMove: G,
         onWheel: B,
-        onClick: G,
+        onClick: U,
         children: (0, i.jsxs)('div', {
-            ref: E,
+            ref: Z,
             className: u.chatWheel,
             style: {
                 width: t,
@@ -302,11 +302,11 @@ t.Z = l.memo(function (e) {
                                         cy: 144,
                                         r: 28.8
                                     }),
-                                R &&
+                                M &&
                                     (0, i.jsx)('circle', {
                                         className: u.chatWheelCenter,
-                                        cx: 144 + A.x,
-                                        cy: 144 + A.y,
+                                        cx: 144 + P.x,
+                                        cy: 144 + P.y,
                                         r: 28.8
                                     })
                             ]
@@ -327,7 +327,7 @@ t.Z = l.memo(function (e) {
                     className: u.innerContent,
                     children: [
                         _ && (0, i.jsx)(d, { className: u.chatWheelDeadZoneIcon }),
-                        b && M.length > 1
+                        b && w.length > 1
                             ? (0, i.jsx)('div', {
                                   className: u.paginationHint,
                                   children: c.intl.string(c.t['Xy+S09'])
@@ -335,7 +335,7 @@ t.Z = l.memo(function (e) {
                             : null
                     ]
                 }),
-                H
+                V
             ]
         })
     });

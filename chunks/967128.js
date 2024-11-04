@@ -1,9 +1,9 @@
 n.d(t, {
     Kq: function () {
-        return u;
+        return d;
     },
     Ot: function () {
-        return d;
+        return u;
     },
     jz: function () {
         return h;
@@ -12,28 +12,28 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    s = n(481060),
-    a = n(534091),
+    a = n.n(l),
+    r = n(481060),
+    s = n(534091),
     o = n(981631),
     c = n(83700);
-function u(e) {
+function d(e) {
     let { locked: t = !1, channelType: n } = e,
-        l = (0, s.useRedesignIconContext)().enabled,
-        a = n === o.d4z.GUILD_VOICE || n === o.d4z.GUILD_STAGE_VOICE;
+        l = (0, r.useRedesignIconContext)().enabled,
+        s = n === o.d4z.GUILD_VOICE || n === o.d4z.GUILD_STAGE_VOICE;
     if (!l)
         return (0, i.jsx)('div', {
-            className: r()(c.emptyChannelIcon, c.emptyChannelIconSvg, {
+            className: a()(c.emptyChannelIcon, c.emptyChannelIconSvg, {
                 [c.locked]: t,
-                [c.voiceChat]: a
+                [c.voiceChat]: s
             })
         });
     {
-        let e = a ? s.ChatIcon : t ? s.TextLockIcon : s.TextIcon;
+        let e = s ? r.ChatIcon : t ? r.TextLockIcon : r.TextIcon;
         return (0, i.jsx)('div', {
-            className: r()(c.emptyChannelIcon, c.emptyChannelIconComponent),
+            className: a()(c.emptyChannelIcon, c.emptyChannelIconComponent),
             children: (0, i.jsx)(e, {
-                color: s.tokens.colors.WHITE,
+                color: r.tokens.colors.WHITE,
                 size: 'custom',
                 width: 42,
                 height: 42
@@ -41,18 +41,18 @@ function u(e) {
         });
     }
 }
-function d(e) {
+function u(e) {
     let { children: t, className: n } = e;
-    return (0, i.jsx)(s.Heading, {
+    return (0, i.jsx)(r.Heading, {
         'aria-hidden': 'true',
-        className: r()(n, c.header),
+        className: a()(n, c.header),
         variant: 'heading-xxl/extrabold',
         children: t
     });
 }
 function h(e) {
     let { children: t } = e;
-    return (0, i.jsx)(s.Text, {
+    return (0, i.jsx)(r.Text, {
         variant: 'text-md/normal',
         color: 'none',
         className: c.description,
@@ -60,11 +60,11 @@ function h(e) {
     });
 }
 t.ZP = function (e) {
-    let { className: t, channelId: n, children: l, ...s } = e;
+    let { className: t, channelId: n, children: l, ...r } = e;
     return (0, i.jsx)('div', {
-        className: r()(t, c.container),
-        id: (0, a.p)(n, n),
-        ...s,
+        className: a()(t, c.container),
+        id: (0, s.p)(n, n),
+        ...r,
         children: l
     });
 };

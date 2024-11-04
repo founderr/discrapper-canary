@@ -1,51 +1,51 @@
-e(411104);
-var r = e(200651);
-e(192379);
-var i = e(481060),
-    u = e(981631),
-    o = e(388032);
-n.Z = {
-    openSecureFramesStreamVerification: function (t, n) {
+n(411104);
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    o = n(981631),
+    u = n(388032);
+e.Z = {
+    openSecureFramesStreamVerification: function (t, e) {
         (0, i.openModalLazy)(async () => {
-            let i = (await e.e('94904').then(e.bind(e, 660250))).default;
-            return (e) =>
+            let i = (await n.e('94904').then(n.bind(n, 660250))).default;
+            return (n) =>
                 (0, r.jsx)(i, {
                     streamKey: t,
-                    channelId: n,
-                    ...e
+                    channelId: e,
+                    ...n
                 });
         });
     },
-    openSecureFramesUserVerificationModal: function (t, n, o, a) {
-        o() &&
+    openSecureFramesUserVerificationModal: function (t, e, u, a) {
+        u() &&
             (0, i.openModalLazy)(
                 async () => {
-                    let i = (await e.e('33397').then(e.bind(e, 963410))).default;
-                    return (e) =>
+                    let i = (await n.e('33397').then(n.bind(n, 963410))).default;
+                    return (n) =>
                         (0, r.jsx)(i, {
                             userId: t,
-                            channelId: n,
-                            ...e
+                            channelId: e,
+                            ...n
                         });
                 },
-                { contextKey: a === u.IlC.POPOUT ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT }
+                { contextKey: a === o.IlC.POPOUT ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT }
             );
     },
     openSecureFramesUpdateConfirmation: function (t) {
-        let { title: n, subtitle: u, confirmText: a = o.intl.string(o.t['cY+Ooa']), onConfirm: l } = t;
+        let { title: e, subtitle: o, confirmText: a = u.intl.string(u.t['cY+Ooa']), onConfirm: c } = t;
         (0, i.openModalLazy)(async () => {
-            let { ConfirmModal: t } = await Promise.resolve().then(e.bind(e, 481060));
-            return (e) =>
+            let { ConfirmModal: t } = await Promise.resolve().then(n.bind(n, 481060));
+            return (n) =>
                 (0, r.jsx)(t, {
-                    header: n,
+                    header: e,
                     confirmText: a,
-                    cancelText: o.intl.string(o.t['ETE/oK']),
-                    onConfirm: l,
-                    ...e,
+                    cancelText: u.intl.string(u.t['ETE/oK']),
+                    onConfirm: c,
+                    ...n,
                     children: (0, r.jsx)(i.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: u
+                        children: o
                     })
                 });
         });
