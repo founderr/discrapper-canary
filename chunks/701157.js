@@ -10,7 +10,7 @@ var i = n(200651),
     u = n(388032),
     m = n(826105);
 t.Z = function (e) {
-    let { hasAppliedGuildBoosts: t, subscriptionIsPausedOrPausePending: n } = e,
+    let { canAddBoosts: t, canApplyBoosts: n } = e,
         h = (0, r.e7)([a.Z], () => a.Z.affinities),
         g = (0, r.e7)([o.ZP], () => o.ZP.getFlattenedGuildIds()),
         p = s.useMemo(() => {
@@ -43,7 +43,7 @@ t.Z = function (e) {
                           e
                       )
                   ),
-                  g.length > 3 && !1 === n && (0, i.jsx)(c.Z, {})
+                  g.length > 3 && n && (0, i.jsx)(c.Z, {})
               ]
           });
 };

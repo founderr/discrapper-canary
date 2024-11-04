@@ -3,10 +3,10 @@ n.d(t, {
         return r;
     },
     K7: function () {
-        return l;
+        return a;
     },
     xm: function () {
-        return a;
+        return l;
     }
 });
 var i = n(570140);
@@ -16,13 +16,13 @@ function r(e) {
         guildId: e
     });
 }
-function l(e) {
+function a(e) {
     i.Z.dispatch({
         type: 'PUBLIC_UPSELL_NOTICE_DISMISS',
         guildId: e
     });
 }
-function a(e) {
+function l(e) {
     i.Z.dispatch({
         type: 'MAX_MEMBER_COUNT_NOTICE_DISMISS',
         guildId: e

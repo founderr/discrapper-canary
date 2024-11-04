@@ -10,8 +10,8 @@ n.r(t),
     n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(481060),
-    a = n(153867),
+    a = n(481060),
+    l = n(153867),
     s = n(835473),
     o = n(600164),
     c = n(626135),
@@ -31,61 +31,61 @@ function g(e) {
     }, []);
     let C = () => {
         let e = 'temporary';
-        f && ((e = 'permanent'), a.ZP.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
+        f && ((e = 'permanent'), l.ZP.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
             c.default.track(u.rMx.MODAL_DISMISSED, {
                 type: p,
                 dismiss_type: e
             }),
             g.onClose();
     };
-    return (0, i.jsxs)(l.ModalRoot, {
+    return (0, i.jsxs)(a.ModalRoot, {
         className: m.root,
         'aria-label': h.intl.string(h.t.NQkK4u),
         ...g,
         children: [
-            (0, i.jsxs)(l.ModalHeader, {
+            (0, i.jsxs)(a.ModalHeader, {
                 separator: !1,
                 children: [
-                    (0, i.jsx)(l.Text, {
+                    (0, i.jsx)(a.Text, {
                         className: m.__invalid_header,
                         variant: 'text-lg/normal',
                         children: h.intl.string(h.t.NQkK4u)
                     }),
-                    (0, i.jsx)(l.ModalCloseButton, {
+                    (0, i.jsx)(a.ModalCloseButton, {
                         onClick: C,
                         className: m.closeButton
                     })
                 ]
             }),
-            (0, i.jsx)(l.ModalContent, {
+            (0, i.jsx)(a.ModalContent, {
                 className: m.content,
-                children: (0, i.jsx)(l.Text, {
+                children: (0, i.jsx)(a.Text, {
                     variant: 'text-md/normal',
                     className: m.__invalid_ratingBody,
                     children: h.intl.format(h.t.B9eiaG, { applicationName: I })
                 })
             }),
-            (0, i.jsxs)(l.ModalFooter, {
+            (0, i.jsxs)(a.ModalFooter, {
                 className: m.footer,
                 direction: o.Z.Direction.HORIZONTAL,
                 children: [
-                    (0, i.jsx)(l.Checkbox, {
-                        type: l.Checkbox.Types.INVERTED,
+                    (0, i.jsx)(a.Checkbox, {
+                        type: a.Checkbox.Types.INVERTED,
                         size: 18,
                         value: f,
                         onChange: () => _(!f),
-                        children: (0, i.jsx)(l.Text, {
+                        children: (0, i.jsx)(a.Text, {
                             variant: 'text-sm/normal',
                             children: h.intl.string(h.t['5E9SBw'])
                         })
                     }),
-                    (0, i.jsx)(l.Button, {
-                        color: l.Button.Colors.PRIMARY,
+                    (0, i.jsx)(a.Button, {
+                        color: a.Button.Colors.PRIMARY,
                         onClick: C,
                         children: h.intl.string(h.t['Ibf5/v'])
                     }),
-                    (0, i.jsx)(l.Button, {
-                        color: l.Button.Colors.BRAND,
+                    (0, i.jsx)(a.Button, {
+                        color: a.Button.Colors.BRAND,
                         onClick: () => {
                             c.default.track(u.rMx.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: n }), d.ZP.setEnableHardwareAcceleration(!0);
                         },

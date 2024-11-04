@@ -1,7 +1,7 @@
 var i,
     r,
-    l,
     a,
+    l,
     s = n(442837),
     o = n(570140),
     c = n(656063),
@@ -36,11 +36,11 @@ function I(e) {
     return (
         i.forEach((e) => {
             (function (e, t) {
-                var n, i, r, l;
-                let a = (0, c.Z)(e);
-                if (null == a) return E(t.id);
+                var n, i, r, a;
+                let l = (0, c.Z)(e);
+                if (null == l) return E(t.id);
                 let s = f[t.id];
-                null != s && s.gameId !== a && E(t.id);
+                null != s && s.gameId !== l && E(t.id);
                 let o = null !== (i = null === (n = e.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== i ? i : Date.now(),
                     d = {
                         userId: t.id,
@@ -48,20 +48,20 @@ function I(e) {
                         startedPlaying: o
                     };
                 return (
-                    (r = a),
-                    (l = d),
+                    (r = l),
+                    (a = d),
                     (g = {
                         ...g,
                         [r]: {
                             ...g[r],
-                            [l.userId]: l
+                            [a.userId]: a
                         }
                     }),
                     (f = {
                         ...f,
-                        [l.userId]: {
+                        [a.userId]: {
                             gameId: r,
-                            startedPlaying: l.startedPlaying
+                            startedPlaying: a.startedPlaying
                         }
                     }),
                     !0
@@ -91,7 +91,7 @@ function C() {
     }
     return (p = !d.Z.needsRefresh()), e;
 }
-class v extends (a = s.ZP.Store) {
+class v extends (l = s.ZP.Store) {
     initialize() {
         this.waitFor(d.Z), this.syncWith([d.Z], C);
     }
@@ -111,15 +111,15 @@ class v extends (a = s.ZP.Store) {
         return f[e];
     }
 }
-(l = 'NowPlayingStore'),
+(a = 'NowPlayingStore'),
     (r = 'displayName') in (i = v)
         ? Object.defineProperty(i, r, {
-              value: l,
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[r] = l),
+        : (i[r] = a),
     (t.Z = new v(o.Z, {
         CONNECTION_OPEN: function () {
             (g = {}), (f = {});

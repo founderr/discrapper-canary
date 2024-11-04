@@ -5,11 +5,11 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(481060),
-    l = n(410030),
-    a = n(388032);
+    a = n(410030),
+    l = n(388032);
 function s(e) {
     let { onClick: t } = e,
-        s = (0, l.ZP)();
+        s = (0, a.ZP)();
     return (0, i.jsxs)(r.EmptyState, {
         theme: s,
         children: [
@@ -19,7 +19,7 @@ function s(e) {
                 width: 415,
                 height: 200
             }),
-            (0, i.jsx)(r.EmptyStateText, { note: a.intl.format(a.t.Pv8u2t, { onClick: t }) })
+            (0, i.jsx)(r.EmptyStateText, { note: l.intl.format(l.t.Pv8u2t, { onClick: t }) })
         ]
     });
 }

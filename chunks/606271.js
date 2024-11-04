@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(392711),
     r = n.n(i),
-    l = n(442837),
-    a = n(570140),
+    a = n(442837),
+    l = n(570140),
     s = n(573979),
     o = n(814443),
     c = n(592125),
@@ -51,7 +51,7 @@ class y {
     init() {
         (this.rpcServer.getCurrentUser = () => _.default.getCurrentUser()),
             (this.rpcServer.onConnect = (e) => {
-                a.Z.dispatch({
+                l.Z.dispatch({
                     type: 'RPC_APP_CONNECTED',
                     socketId: e.id,
                     application: e.application
@@ -62,7 +62,7 @@ class y {
                     });
             }),
             (this.rpcServer.onDisconnect = (e, t) => {
-                a.Z.dispatch({
+                l.Z.dispatch({
                     type: 'RPC_APP_DISCONNECTED',
                     socketId: e.id,
                     application: e.application,
@@ -70,7 +70,7 @@ class y {
                 });
             });
         let e = [c.Z, d.ZP, m.Z, E.Z, h.Z, p.Z];
-        new l.Fh(e.concat(this.stores), () => this.rpcServer.updateSubscriptions()).attach('RPCServerManager'), a.Z.subscribe('MESSAGE_CREATE', (e) => this.handleMessage(e)), a.Z.subscribe('MESSAGE_UPDATE', (e) => this.handleMessage(e)), a.Z.subscribe('MESSAGE_DELETE', (e) => this.handleMessage(e)), a.Z.subscribe('SPEAKING', (e) => this.handleSpeaking(e)), a.Z.subscribe('OAUTH2_TOKEN_REVOKE', (e) => this.handleOAuth2TokenRevoke(e)), a.Z.subscribe('GUILD_CREATE', (e) => this.handleGuildCreate(e)), a.Z.subscribe('CHANNEL_CREATE', (e) => this.handleChannelCreate(e)), a.Z.subscribe('LOGOUT', () => this.handleLogout()), a.Z.subscribe('VOICE_CHANNEL_SELECT', (e) => this.handleVoiceChannelSelect(e)), a.Z.subscribe('RPC_NOTIFICATION_CREATE', (e) => this.handleNotificationCreate(e)), a.Z.subscribe('ACTIVITY_JOIN', (e) => this.handleActivityJoin(e)), a.Z.subscribe('ACTIVITY_LAYOUT_MODE_UPDATE', (e) => this.handleActivityLayoutModeUpdate(e)), a.Z.subscribe('THERMAL_STATE_CHANGE', (e) => this.handleThermalStateChange(e)), a.Z.subscribe('ACTIVITY_SCREEN_ORIENTATION_UPDATE', (e) => this.handleScreenOrientationUpdate(e)), (0, N.HU)((e) => this.rpcServer.dispatchToSubscriptions(x.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {}, e)), a.Z.subscribe('RELATIONSHIP_ADD', (e) => this.handleRelationshipAdd(e)), a.Z.subscribe('RELATIONSHIP_REMOVE', (e) => this.handleRelationshipRemove(e)), a.Z.subscribe('PRESENCE_UPDATES', (e) => this.handlePresenceUpdate(e)), a.Z.subscribe('PRESENCES_REPLACE', () => this.handlePresencesReplace()), a.Z.subscribe('ENTITLEMENT_CREATE', (e) => this.handleEntitlementCreate(e)), a.Z.subscribe('ENTITLEMENT_DELETE', (e) => this.handleEntitlementDelete(e)), a.Z.subscribe('USER_ACHIEVEMENT_UPDATE', (e) => this.handleUserAchievementUpdate(e));
+        new a.Fh(e.concat(this.stores), () => this.rpcServer.updateSubscriptions()).attach('RPCServerManager'), l.Z.subscribe('MESSAGE_CREATE', (e) => this.handleMessage(e)), l.Z.subscribe('MESSAGE_UPDATE', (e) => this.handleMessage(e)), l.Z.subscribe('MESSAGE_DELETE', (e) => this.handleMessage(e)), l.Z.subscribe('SPEAKING', (e) => this.handleSpeaking(e)), l.Z.subscribe('OAUTH2_TOKEN_REVOKE', (e) => this.handleOAuth2TokenRevoke(e)), l.Z.subscribe('GUILD_CREATE', (e) => this.handleGuildCreate(e)), l.Z.subscribe('CHANNEL_CREATE', (e) => this.handleChannelCreate(e)), l.Z.subscribe('LOGOUT', () => this.handleLogout()), l.Z.subscribe('VOICE_CHANNEL_SELECT', (e) => this.handleVoiceChannelSelect(e)), l.Z.subscribe('RPC_NOTIFICATION_CREATE', (e) => this.handleNotificationCreate(e)), l.Z.subscribe('ACTIVITY_JOIN', (e) => this.handleActivityJoin(e)), l.Z.subscribe('ACTIVITY_LAYOUT_MODE_UPDATE', (e) => this.handleActivityLayoutModeUpdate(e)), l.Z.subscribe('THERMAL_STATE_CHANGE', (e) => this.handleThermalStateChange(e)), l.Z.subscribe('ACTIVITY_SCREEN_ORIENTATION_UPDATE', (e) => this.handleScreenOrientationUpdate(e)), (0, N.HU)((e) => this.rpcServer.dispatchToSubscriptions(x.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {}, e)), l.Z.subscribe('RELATIONSHIP_ADD', (e) => this.handleRelationshipAdd(e)), l.Z.subscribe('RELATIONSHIP_REMOVE', (e) => this.handleRelationshipRemove(e)), l.Z.subscribe('PRESENCE_UPDATES', (e) => this.handlePresenceUpdate(e)), l.Z.subscribe('PRESENCES_REPLACE', () => this.handlePresencesReplace()), l.Z.subscribe('ENTITLEMENT_CREATE', (e) => this.handleEntitlementCreate(e)), l.Z.subscribe('ENTITLEMENT_DELETE', (e) => this.handleEntitlementDelete(e)), l.Z.subscribe('USER_ACHIEVEMENT_UPDATE', (e) => this.handleUserAchievementUpdate(e));
     }
     handleMessage(e) {
         let t, n, i;
@@ -136,7 +136,7 @@ class y {
             );
     }
     handleNotificationCreate(e) {
-        let { channelId: t, message: n, icon: i, title: r, body: l } = e;
+        let { channelId: t, message: n, icon: i, title: r, body: a } = e;
         if (0 !== this.rpcServer.subscriptions.length)
             this.rpcServer.dispatchToSubscriptions(
                 x.zMe.NOTIFICATION_CREATE,
@@ -146,15 +146,15 @@ class y {
                     message: (0, S.Xb)(n),
                     icon_url: null != i ? (0, S.RE)(i) : null,
                     title: r,
-                    body: l
+                    body: a
                 }
             );
     }
     handleActivityJoin(e) {
         let { applicationId: t, secret: n, intent: i, embedded: r } = e;
         if (0 === this.rpcServer.subscriptions.length) return;
-        let l = { secret: n };
-        r && (l.intent = i), this.rpcServer.dispatchToSubscriptions(x.zMe.ACTIVITY_JOIN, (e) => e.socket.application.id === t, l), this.rpcServer.dispatchToSubscriptions(x.zMe.GAME_JOIN, (e) => e.socket.application.id === t, l);
+        let a = { secret: n };
+        r && (a.intent = i), this.rpcServer.dispatchToSubscriptions(x.zMe.ACTIVITY_JOIN, (e) => e.socket.application.id === t, a), this.rpcServer.dispatchToSubscriptions(x.zMe.GAME_JOIN, (e) => e.socket.application.id === t, a);
     }
     handleActivityLayoutModeUpdate(e) {
         let { applicationId: t, layoutMode: n } = e;
@@ -177,27 +177,27 @@ class y {
         var t;
         let { channelId: n, message: i } = e;
         if (0 === this.rpcServer.subscriptions.length) return;
-        let { application: r, activity: l } = i;
-        if (null == r || null == l || null == l.party_id) return;
-        let a = _.default.getUser(null === (t = i.author) || void 0 === t ? void 0 : t.id);
-        if (null == a) return;
+        let { application: r, activity: a } = i;
+        if (null == r || null == a || null == a.party_id) return;
+        let l = _.default.getUser(null === (t = i.author) || void 0 === t ? void 0 : t.id);
+        if (null == l) return;
         let s = _.default.getCurrentUser();
-        if (null == s || a.id === s.id) return;
-        let o = l.type === x.mFx.JOIN_REQUEST ? m.Z.getApplicationActivity(s.id, r.id) : m.Z.getApplicationActivity(a.id, r.id);
-        if (null == o || null == o.party || o.party.id !== l.party_id) return;
+        if (null == s || l.id === s.id) return;
+        let o = a.type === x.mFx.JOIN_REQUEST ? m.Z.getApplicationActivity(s.id, r.id) : m.Z.getApplicationActivity(l.id, r.id);
+        if (null == o || null == o.party || o.party.id !== a.party_id) return;
         let c = o.application_id;
-        switch (l.type) {
+        switch (a.type) {
             case x.mFx.JOIN:
                 this.rpcServer.dispatchToSubscriptions(x.zMe.ACTIVITY_INVITE, (e) => e.socket.application.id === c, {
-                    user: (0, T.Z)(a),
+                    user: (0, T.Z)(l),
                     activity: o,
-                    type: l.type,
+                    type: a.type,
                     channel_id: n,
                     message_id: i.id
                 });
                 break;
             case x.mFx.JOIN_REQUEST:
-                this.rpcServer.dispatchToSubscriptions(x.zMe.ACTIVITY_JOIN_REQUEST, (e) => e.socket.application.id === c, { user: (0, T.Z)(a) });
+                this.rpcServer.dispatchToSubscriptions(x.zMe.ACTIVITY_JOIN_REQUEST, (e) => e.socket.application.id === c, { user: (0, T.Z)(l) });
         }
     }
     handleOAuth2TokenRevoke(e) {

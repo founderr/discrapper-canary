@@ -9,8 +9,8 @@ n.r(t),
     });
 var i = n(200651),
     r = n(192379),
-    l = n(903797),
-    a = n(442837),
+    a = n(903797),
+    l = n(442837),
     s = n(481060),
     o = n(230711),
     c = n(174556),
@@ -27,15 +27,15 @@ var i = n(200651),
     C = n(981631),
     v = n(741764),
     S = n(350133);
-let N = (0, l.Z)(() => ({ isOpen: !0 }));
+let N = (0, a.Z)(() => ({ isOpen: !0 }));
 function T(e) {
     e.stopPropagation();
 }
 function x() {
-    let e = (0, a.e7)([_.Z], () => _.Z.getChannelId()),
-        t = (0, a.e7)([g.Z], () => g.Z.getChannel(e), [e]),
+    let e = (0, l.e7)([_.Z], () => _.Z.getChannelId()),
+        t = (0, l.e7)([g.Z], () => g.Z.getChannel(e), [e]),
         n = f.Z.getGuild(null == t ? void 0 : t.guild_id),
-        l = N((e) => e.isOpen),
+        a = N((e) => e.isOpen),
         { hasBugReporterAccess: x } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
     r.useLayoutEffect(() => {
         I.ZP.setMinimumSize(v.J, v.N);
@@ -49,10 +49,10 @@ function x() {
         children: [
             (0, i.jsx)('div', {
                 className: S.left,
-                'data-sidebar-collapsed': !l,
+                'data-sidebar-collapsed': !a,
                 onDoubleClick: T,
                 children:
-                    !l &&
+                    !a &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)(s.Clickable, {

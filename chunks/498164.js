@@ -1,9 +1,9 @@
 n(315314), n(610138), n(216116), n(78328), n(815648), n(47120);
 var i,
     r,
-    l = n(200651);
+    a = n(200651);
 n(192379);
-var a = n(756647),
+var l = n(756647),
     s = n(481060),
     o = n(570140),
     c = n(355467),
@@ -30,7 +30,7 @@ function A(e, t) {
             invite_code: null,
             has_auth_token: null,
             is_backgrounded: null,
-            fingerprint: (0, a.s)(e),
+            fingerprint: (0, l.s)(e),
             link_type: t
         });
 }
@@ -82,7 +82,7 @@ function A(e, t) {
                     (0, s.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([n.e('10778'), n.e('27815')]).then(n.bind(n, 766775));
                         return (t) =>
-                            (0, l.jsx)(e, {
+                            (0, a.jsx)(e, {
                                 ...t,
                                 guildTemplate: i
                             });
@@ -113,7 +113,7 @@ function A(e, t) {
                                     (0, s.openModalLazy)(async () => {
                                         let { default: e } = await Promise.all([n.e('92446'), n.e('89793')]).then(n.bind(n, 409858));
                                         return (n) =>
-                                            (0, l.jsx)(e, {
+                                            (0, a.jsx)(e, {
                                                 code: t,
                                                 ...n
                                             });

@@ -1,7 +1,7 @@
 var i = n(200651);
 n(192379);
 t.Z = (e) => {
-    let { id: t, startColor: n, stopColor: r, color: l, stop: a } = e;
+    let { id: t, startColor: n, stopColor: r, color: a, stop: l } = e;
     return (0, i.jsxs)('linearGradient', {
         id: t,
         children: [
@@ -10,16 +10,16 @@ t.Z = (e) => {
                 stopColor: n
             }),
             (0, i.jsx)('stop', {
-                offset: a,
+                offset: l,
                 stopColor: r
             }),
             (0, i.jsx)('stop', {
-                offset: a,
-                stopColor: l
+                offset: l,
+                stopColor: a
             }),
             (0, i.jsx)('stop', {
                 offset: '1',
-                stopColor: l
+                stopColor: a
             })
         ]
     });

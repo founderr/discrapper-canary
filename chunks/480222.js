@@ -1,7 +1,7 @@
 var i = n(200651),
     r = n(192379),
-    l = n(100621),
-    a = n(481060),
+    a = n(100621),
+    l = n(481060),
     s = n(425493),
     o = n(207796),
     c = n(420212),
@@ -30,13 +30,13 @@ t.Z = function (e) {
         };
         return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
     }, [f, n]);
-    let I = (0, a.useSpring)({
+    let I = (0, l.useSpring)({
             from: { opacity: 0 },
             to: { opacity: 1 },
             config: h,
             delay: 200
         }),
-        C = (0, a.useSpring)({
+        C = (0, l.useSpring)({
             from: { opacity: 0 },
             to: { opacity: n ? 1 : 0 },
             config: h,
@@ -53,19 +53,19 @@ t.Z = function (e) {
                     keybind: 'ESC'
                 })
             }),
-            (0, i.jsxs)(l.animated.div, {
+            (0, i.jsxs)(a.animated.div, {
                 style: {
                     opacity: I.opacity,
                     transform: I.opacity.to([0, 1], [40, 0]).to((e) => 'translateY('.concat(e, 'px)'))
                 },
                 className: u.contentWrapper,
                 children: [
-                    (0, i.jsx)(a.Scroller, {
+                    (0, i.jsx)(l.Scroller, {
                         fade: !0,
                         className: u.content,
                         children: t
                     }),
-                    (0, i.jsxs)(l.animated.div, {
+                    (0, i.jsxs)(a.animated.div, {
                         style: {
                             opacity: C.opacity,
                             transform: C.opacity.to([0, 1], [40, 0]).to((e) => 'translateY('.concat(e, 'px)')),
@@ -73,7 +73,7 @@ t.Z = function (e) {
                         },
                         className: u.saveToolbar,
                         children: [
-                            (0, i.jsx)(a.Text, {
+                            (0, i.jsx)(l.Text, {
                                 variant: 'text-md/normal',
                                 color: 'header-secondary',
                                 className: u.saveToolbarText,
@@ -82,18 +82,18 @@ t.Z = function (e) {
                             (0, i.jsxs)('div', {
                                 className: u.saveToolbarActions,
                                 children: [
-                                    (0, i.jsx)(a.Button, {
+                                    (0, i.jsx)(l.Button, {
                                         onClick: E,
-                                        size: a.ButtonSizes.SMALL,
-                                        look: a.ButtonLooks.LINK,
-                                        color: a.ButtonColors.WHITE,
+                                        size: l.ButtonSizes.SMALL,
+                                        look: l.ButtonLooks.LINK,
+                                        color: l.ButtonColors.WHITE,
                                         children: d.intl.string(d.t.yBZMsb)
                                     }),
-                                    (0, i.jsx)(a.Button, {
+                                    (0, i.jsx)(l.Button, {
                                         onClick: _,
-                                        size: a.ButtonSizes.SMALL,
-                                        look: a.ButtonLooks.FILLED,
-                                        color: a.ButtonColors.BRAND,
+                                        size: l.ButtonSizes.SMALL,
+                                        look: l.ButtonLooks.FILLED,
+                                        color: l.ButtonColors.BRAND,
                                         children: d.intl.string(d.t.K344S0)
                                     })
                                 ]

@@ -37,12 +37,12 @@ var r,
     I = n(806966),
     S = n(28546),
     T = n(357156),
-    b = n(984933),
-    y = n(430824),
-    A = n(914010),
-    N = n(771845),
-    C = n(594174),
-    R = n(78839),
+    b = n(140465),
+    y = n(984933),
+    A = n(430824),
+    N = n(914010),
+    C = n(771845),
+    R = n(594174),
     O = n(176354),
     D = n(111361),
     L = n(111846),
@@ -57,7 +57,7 @@ var r,
 let B = (e) => {
     let { channel: t, collapsedSections: n, includeCreateEmojiButton: r = !0, pickerIntention: i, emojiSearchResults: a, gridWidth: s, emojiPaddingHorizontal: o, emojiSpriteSize: l } = e,
         c = (0, _.e7)([p.ZP], () => p.ZP.categories),
-        h = (0, _.e7)([y.Z], () => y.Z.getGuild(null == t ? void 0 : t.getGuildId()), [t]),
+        h = (0, _.e7)([A.Z], () => A.Z.getGuild(null == t ? void 0 : t.getGuildId()), [t]),
         I = null == t ? null : t.getGuildId(),
         S = (0, _.e7)([p.ZP], () => p.ZP.getDisambiguatedEmojiContext(I), [I]),
         B = (0, w.NJ)(I),
@@ -73,12 +73,12 @@ let B = (e) => {
         });
     E.Xb.useExperiment({ location: 'useEmojiGrid' }, { autoTrackExposure: !0 });
     let { topEmojis: H, newlyAddedEmojis: Y } = (0, P.Z)(I, i),
-        W = (0, _.Wu)([N.ZP], () => N.ZP.getFlattenedGuildIds(), []),
+        W = (0, _.Wu)([C.ZP], () => C.ZP.getFlattenedGuildIds(), []),
         K = (0, _.e7)([p.ZP], () => p.ZP.expandedSectionsByGuildIds),
         { canCreateExpressions: z } = (0, T.XJ)(h),
-        q = (0, _.e7)([C.default], () => C.default.getCurrentUser()),
+        q = (0, _.e7)([R.default], () => R.default.getCurrentUser()),
         Q = (0, D.I5)(q),
-        X = (0, _.e7)([R.ZP], () => R.ZP.inReverseTrial()),
+        X = (0, b.x8)('useEmojiGrid'),
         J = S.getCustomEmoji(),
         $ = (e) => {
             if (e.type === m.B.GUILD) return e.guildId;
@@ -121,12 +121,12 @@ let B = (e) => {
                         }),
                         v = f.concat(h),
                         S = s.guild,
-                        T = A.Z.getGuildId(),
+                        T = N.Z.getGuildId(),
                         b = s.sectionId === k.En.TOP_GUILD_EMOJI,
                         y = !b && null != S && T === S.id && v.length < S.getMaxEmojiSlots(),
-                        N = b && v.length < E && !et,
+                        A = b && v.length < E && !et,
                         C = null != S && b && et && en === x.B.WITH_TOP_LIST && ee[S.id].length < S.getMaxEmojiSlots(),
-                        R = r && z && null != S && (y || N || C);
+                        R = r && z && null != S && (y || A || C);
                     R && C && v.length === E && v.shift();
                     let D = v.length > I,
                         L = er && D && null != S && s.isNitroLocked,
@@ -233,12 +233,12 @@ let B = (e) => {
                                 (e) =>
                                     O.ZP.getEmojiUnavailableReason({
                                         emoji: e,
-                                        channel: null != t ? t : b.ZP.getDefaultChannel(n),
+                                        channel: null != t ? t : y.ZP.getDefaultChannel(n),
                                         intention: i
                                     }) !== U.Z5.DISALLOW_EXTERNAL
                             );
                             if (0 === a.length) return;
-                            let s = y.Z.getGuild(n),
+                            let s = A.Z.getGuild(n),
                                 o =
                                     X ||
                                     (!Q &&
@@ -266,7 +266,7 @@ let B = (e) => {
                             t.length > 0 &&
                                 S(t, {
                                     categoryId: e,
-                                    guild: y.Z.getGuild(h.id),
+                                    guild: A.Z.getGuild(h.id),
                                     type: k.En.TOP_GUILD_EMOJI,
                                     sectionId: k.En.TOP_GUILD_EMOJI,
                                     count: t.length,

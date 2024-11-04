@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(786761),
     r = n(23750),
-    l = n(306680),
-    a = n(709054);
+    a = n(306680),
+    l = n(709054);
 function s(e, t, n) {
     return (
         t in e
@@ -29,7 +29,7 @@ class o {
         let n = this.messages.get(e);
         return null == n
             ? -1 / 0
-            : n.generation !== t && null != n.message && n.message.id === l.ZP.lastMessageId(e)
+            : n.generation !== t && null != n.message && n.message.id === a.ZP.lastMessageId(e)
               ? (this.messages.set(e, {
                     ...n,
                     generation: t
@@ -61,7 +61,7 @@ class o {
         let r = this.messages.get(e);
         null != t &&
             (function (e, t) {
-                return null == t || a.default.compare(e, t) > 0;
+                return null == t || l.default.compare(e, t) > 0;
             })(t.id, null == r ? void 0 : null === (i = r.message) || void 0 === i ? void 0 : i.id) &&
             this.put(e, t, n);
     }
@@ -72,12 +72,12 @@ class o {
         var t;
         if (null == e.id || null == e.channel_id) return;
         let n = e.channel_id,
-            l = this.messages.get(n);
-        if ((null == l ? void 0 : null === (t = l.message) || void 0 === t ? void 0 : t.id) !== e.id) return;
-        let a = l.message instanceof r.ZP ? (0, i.wi)(l.message, e) : (0, i.gx)(l.message, e);
+            a = this.messages.get(n);
+        if ((null == a ? void 0 : null === (t = a.message) || void 0 === t ? void 0 : t.id) !== e.id) return;
+        let l = a.message instanceof r.ZP ? (0, i.wi)(a.message, e) : (0, i.gx)(a.message, e);
         this.messages.set(n, {
-            ...l,
-            message: a
+            ...a,
+            message: l
         });
     }
     delete(e) {

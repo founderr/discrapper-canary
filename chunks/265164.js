@@ -1,8 +1,8 @@
 n(47120), n(724458), n(653041);
 var i,
     r = n(876215),
-    l = n(442837),
-    a = n(570140),
+    a = n(442837),
+    l = n(570140),
     s = n(146282),
     o = n(26033),
     c = n(561308),
@@ -67,10 +67,10 @@ let R = 1 * N.Z.Millis.DAY,
     en = [],
     ei = 0,
     er = !0;
-function el(e) {
+function ea(e) {
     return Date.now() - D > 6 * N.Z.Millis.HOUR && [...e, ...k, ...w].slice(0, 3).reduce((e, t) => e + t.score, 0) >= x.jp;
 }
-function ea(e, t, n, i) {
+function el(e, t, n, i) {
     let r = e.filter((e) => e.type !== n);
     return (
         t.forEach((e, t) => {
@@ -127,15 +127,15 @@ function es() {
             (B[e.id] = e), null != b.Z.getReadTimestamp(e.id) ? r.push(e) : i.push(e);
         }),
             (w = i),
-            ($ = ea($, i, x.Rr.GUILD_EVENT, 7)),
-            (ee = ea(ee, r, x.Rr.GUILD_EVENT, 7));
+            ($ = el($, i, x.Rr.GUILD_EVENT, 7)),
+            (ee = el(ee, r, x.Rr.GUILD_EVENT, 7));
     })(),
         (function () {
             var e, t;
             let n = new Set(),
                 i = {},
-                l = [],
                 a = [],
+                l = [],
                 d = null !== (t = null === (e = s.Z.getFeed(y.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.entries) && void 0 !== t ? t : [];
             d.sort((e, t) => e.rank - t.rank),
                 d.forEach((e) => {
@@ -160,11 +160,11 @@ function es() {
                             content_id: e.content.id
                         }
                     };
-                    n.add(e.content.id), (B[t.id] = t), null != b.Z.getReadTimestamp(t.id) ? a.push(t) : l.push(t);
+                    n.add(e.content.id), (B[t.id] = t), null != b.Z.getReadTimestamp(t.id) ? l.push(t) : a.push(t);
                 }),
-                (k = l),
-                ($ = ea($, l, x.Rr.ACTIVITY, 5)),
-                (ee = ea(ee, a, x.Rr.ACTIVITY, 5));
+                (k = a),
+                ($ = el($, a, x.Rr.ACTIVITY, 5)),
+                (ee = el(ee, l, x.Rr.ACTIVITY, 5));
         })(),
         eo();
 }
@@ -240,11 +240,11 @@ function eg(e, t) {
     if ((0, A.jv)(t) === A.aL.MUTED) (O = ep(O, e)), ($ = ep($, e)), (ee = ep(ee, e)), (M = ep(M, e)), (U = ep(U, e));
 }
 function ef(e) {
-    let { type: t, messageId: n, userId: i, emoji: r, reactionType: l } = e,
-        a = H[n];
-    if (null == a || a.type !== x.Rr.MESSAGE) return !1;
+    let { type: t, messageId: n, userId: i, emoji: r, reactionType: a } = e,
+        l = H[n];
+    if (null == l || l.type !== x.Rr.MESSAGE) return !1;
     let s = p.default.getId() === i;
-    'MESSAGE_REACTION_ADD' === t ? (a.message = a.message.addReaction(r, s, e.colors, l)) : (a.message = a.message.removeReaction(r, s, l));
+    'MESSAGE_REACTION_ADD' === t ? (l.message = l.message.addReaction(r, s, e.colors, a)) : (l.message = l.message.removeReaction(r, s, a));
 }
 function e_(e) {
     let { channelId: t } = e,
@@ -254,22 +254,22 @@ function e_(e) {
         (r > et || !q) && (e.type === x.Rr.MESSAGE || e.type === x.Rr.SUMMARY) && e.data.channel_id === t ? n.push(e) : i.push(e);
     });
     let r = K,
-        [l, a] = ed(M);
-    if (((U = eu(l, t)), (K = q ? r && U.length >= x.Lb : r && el(i)), 0 === n.length && r === K)) return !1;
+        [a, l] = ed(M);
+    if (((U = eu(a, t)), (K = q ? r && U.length >= x.Lb : r && ea(i)), 0 === n.length && r === K)) return !1;
     if (0 !== n.length) ($ = i), (ee = [...ee, ...n]);
 }
-class eE extends (i = l.ZP.PersistedStore) {
+class eE extends (i = a.ZP.PersistedStore) {
     initialize(e) {
         if ((this.waitFor(E.Z, g.Z, I.ZP, d.Z, v.ZP, p.default, b.Z, s.Z), null != e)) {
-            var t, n, i, r, l, a;
+            var t, n, i, r, a, l;
             (O = null !== (t = e.dehydratedItems) && void 0 !== t ? t : []).forEach((e) => {
                 B[e.id] = e;
             }),
                 (F = null !== (n = e.customGuildScores) && void 0 !== n ? n : {}),
                 (z = null !== (i = e.customChannelScoresByGuild) && void 0 !== i ? i : {}),
                 (J = null !== (r = e.numOpens) && void 0 !== r ? r : 0),
-                (D = null !== (l = e.lastOpened) && void 0 !== l ? l : 0),
-                (ei = null !== (a = e.lastJoinedRecommendedGuild) && void 0 !== a ? a : 0);
+                (D = null !== (a = e.lastOpened) && void 0 !== a ? a : 0),
+                (ei = null !== (l = e.lastJoinedRecommendedGuild) && void 0 !== l ? l : 0);
         }
     }
     getVersion() {
@@ -358,7 +358,7 @@ class eE extends (i = l.ZP.PersistedStore) {
 }
 L(eE, 'displayName', 'GravityStore'),
     L(eE, 'persistKey', 'GravityStore'),
-    (t.Z = new eE(a.Z, {
+    (t.Z = new eE(l.Z, {
         POST_CONNECTION_OPEN: function () {
             if (O.length > 0 && (!q || 0 === Y)) {
                 let [e, t] = ed(O);
@@ -411,20 +411,20 @@ L(eE, 'displayName', 'GravityStore'),
                     load_time_millis: Date.now() - i,
                     feed_item_ids: M.map((e) => e.id)
                 });
-            let [l, a] = ed(M);
-            if (((U = eu(l)), q && 0 !== Y)) {
+            let [a, l] = ed(M);
+            if (((U = eu(a)), q && 0 !== Y)) {
                 let e = U.length > x.Lb;
-                !r && (K = e), e && (0, A.em)([...l, ...a], 0, x.xy);
+                !r && (K = e), e && (0, A.em)([...a, ...l], 0, x.xy);
             } else
                 (Y = 0),
-                    !q && el(l) && ((K = !0), (W = !0)),
+                    !q && ea(a) && ((K = !0), (W = !0)),
                     ec({
-                        newUnread: l,
-                        newRead: a
+                        newUnread: a,
+                        newRead: l
                     });
         },
         LOAD_GRAVITY_HYDRATED: function (e) {
-            let { messageItems: t, summaryItems: n, activityItems: i, requestMessageItems: r, requestSummaryItems: l, requestActivityItems: a, startingIndex: s, endingIndex: o } = e;
+            let { messageItems: t, summaryItems: n, activityItems: i, requestMessageItems: r, requestSummaryItems: a, requestActivityItems: l, startingIndex: s, endingIndex: o } = e;
             H = { ...H };
             let c = t.reduce((e, t) => ((e[t.message.id] = t), e), {}),
                 d = n.reduce((e, t) => ((e[t.id] = t), e), {}),
@@ -459,7 +459,7 @@ L(eE, 'displayName', 'GravityStore'),
                               message: (0, h.e5)(t.message)
                           });
             }),
-                l.forEach((e) => {
+                a.forEach((e) => {
                     let t = d[e.summary_id];
                     if (null == t) {
                         V[e.summary_id] = !0;
@@ -475,7 +475,7 @@ L(eE, 'displayName', 'GravityStore'),
                         summary: (0, A.wV)(t, n.data.guild_id)
                     };
                 }),
-                a.forEach((e) => {
+                l.forEach((e) => {
                     let t = u[e.content_id];
                     if (null == t) {
                         V[e.content_id] = !0;
@@ -564,7 +564,7 @@ L(eE, 'displayName', 'GravityStore'),
             if (t !== y.YN.GLOBAL_FEED) return !1;
             if (!q) {
                 let [e, t] = ed(O);
-                ($ = e), (ee = t), es(), (K = el(e));
+                ($ = e), (ee = t), es(), (K = ea(e));
             }
         },
         GRAVITY_JOINED_RECOMMENDED_GUILD: function () {

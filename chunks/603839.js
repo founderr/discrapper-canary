@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(392711),
     o = n(100621),
     c = n(442837),
@@ -33,7 +33,7 @@ let T = {
 };
 function x(e) {
     let { guildId: t, onClose: n } = e,
-        l = (0, g.Wg)(),
+        a = (0, g.Wg)(),
         {
             progress: x,
             errors: b,
@@ -41,7 +41,7 @@ function x(e) {
         } = (0, c.cj)([g.ZP], () => {
             var e, n, i, r;
             return {
-                progress: null !== (r = null === (e = g.ZP.getStateForGuild(t)) || void 0 === e ? void 0 : e.progress) && void 0 !== r ? r : l,
+                progress: null !== (r = null === (e = g.ZP.getStateForGuild(t)) || void 0 === e ? void 0 : e.progress) && void 0 !== r ? r : a,
                 errors: null === (n = g.ZP.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
                 submitting: null === (i = g.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : i.submitting
             };
@@ -179,31 +179,31 @@ function x(e) {
                             children: [
                                 (0, i.jsx)(o.animated.div, {
                                     style: k,
-                                    className: a()(N.stepsContainer, { [N.hidden]: !D }),
+                                    className: l()(N.stepsContainer, { [N.hidden]: !D }),
                                     children: (0, i.jsx)(C.Z, { guildId: t })
                                 }),
                                 (0, i.jsx)('div', {
-                                    className: a()(N.navigationContainer, { [N.elevatedNavigationContainer]: !D }),
+                                    className: l()(N.navigationContainer, { [N.elevatedNavigationContainer]: !D }),
                                     children: (0, i.jsx)(E.Z, {
                                         steps: Z,
                                         progress: x,
                                         updateCurrentStep: H,
                                         animationStyle: k,
-                                        animationClassName: a()({ [N.hidden]: !D })
+                                        animationClassName: l()({ [N.hidden]: !D })
                                     })
                                 })
                             ]
                         }),
                         (0, i.jsx)(o.animated.div, {
                             style: k,
-                            className: a()(N.divider, {
+                            className: l()(N.divider, {
                                 [N.hidden]: !D,
                                 [N.dividerResponsive]: D
                             })
                         }),
                         (0, i.jsx)(o.animated.div, {
                             style: U,
-                            className: a()(N.sidebar, { [N.sidebarResponsive]: D }),
+                            className: l()(N.sidebar, { [N.sidebarResponsive]: D }),
                             children: (0, i.jsx)(I.Z, {
                                 guildId: t,
                                 signed: y,

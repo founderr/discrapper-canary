@@ -6,9 +6,9 @@ n.d(t, {
     n(47120);
 var i = n(192379),
     r = n(166516),
-    l = n.n(r),
-    a = n(525654),
-    s = n.n(a),
+    a = n.n(r),
+    l = n(525654),
+    s = n.n(l),
     o = n(442837),
     c = n(888369),
     d = n(292959),
@@ -23,7 +23,7 @@ let E = new Set(['Blink', 'Gecko', 'WebKit']),
     I = f.dG4;
 if (m.isPlatformEmbedded) I = (e) => p.ZP.setBadge(e);
 else if (E.has(s().layout)) {
-    let e = new (l())({ animation: 'none' });
+    let e = new (a())({ animation: 'none' });
     I = (t) => {
         try {
             (0, g.PR)(t), e.badge(-1 === t ? '\u2022' : t);

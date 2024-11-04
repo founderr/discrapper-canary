@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    l = n(722770),
-    a = n(873546),
+    a = n(722770),
+    l = n(873546),
     s = n(852229),
     o = n(442837),
     c = n(481060),
@@ -59,8 +59,8 @@ var i = n(200651),
     en = n(228168),
     ei = n(388032),
     er = n(217593),
-    el = n(451563);
-let ea = [
+    ea = n(451563);
+let el = [
     {
         duration: 30 * W.Z.Millis.MINUTE,
         label: () => ei.intl.string(ei.t.RxJGbG)
@@ -88,13 +88,13 @@ let ea = [
 ];
 function es(e, t, n) {
     let r = (0, i.jsx)(i.Fragment, {
-        children: ea.map((n) => {
-            let { duration: r, label: l } = n;
+        children: el.map((n) => {
+            let { duration: r, label: a } = n;
             return (0, i.jsx)(
                 c.MenuItem,
                 {
                     id: ''.concat(e, '-').concat(r),
-                    label: l(),
+                    label: a(),
                     action: () => (0, Q.Z)(e, t, void 0, r),
                     dontCloseOnAction: !0
                 },
@@ -191,7 +191,7 @@ function ec(e) {
             let t = I.Y.useExperiment({ location: 'AccountProfilePopout' }).expiringStatus,
                 n = V.Cr.useSetting(),
                 r = (0, C.p)(),
-                a = v.e.useExperiment({ location: 'AccountProfilePopout' }).allowQuietMode || r,
+                l = v.e.useExperiment({ location: 'AccountProfilePopout' }).allowQuietMode || r,
                 s = V.fv.useSetting(),
                 o = e === et.Skl.DND,
                 d = (t) => {
@@ -209,7 +209,7 @@ function ec(e) {
                     if (e === t && null != i) return i;
                     switch (t) {
                         case et.Skl.DND:
-                            return a ? ei.intl.string(ei.t.day5Aw) : ei.intl.string(ei.t.U9Vv19);
+                            return l ? ei.intl.string(ei.t.day5Aw) : ei.intl.string(ei.t.U9Vv19);
                         case et.Skl.INVISIBLE:
                             return ei.intl.string(ei.t.MqanVF);
                         default:
@@ -217,7 +217,7 @@ function ec(e) {
                     }
                 },
                 u = (0, i.jsx)(i.Fragment, {
-                    children: ea.map((t) => {
+                    children: el.map((t) => {
                         let { duration: n, label: r } = t;
                         return (0, i.jsx)(
                             c.MenuItem,
@@ -240,7 +240,7 @@ function ec(e) {
                     t ? es(et.Skl.IDLE, e, d(et.Skl.IDLE)) : eo(et.Skl.IDLE, e, d(et.Skl.IDLE)),
                     t ? es(et.Skl.DND, e, d(et.Skl.DND)) : eo(et.Skl.DND, e, d(et.Skl.DND)),
                     t ? es(et.Skl.INVISIBLE, e, d(et.Skl.INVISIBLE)) : eo(et.Skl.INVISIBLE, e, d(et.Skl.INVISIBLE)),
-                    a || r
+                    l || r
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(c.MenuSeparator, {}, 'menu-separator-statuses'),
@@ -266,7 +266,7 @@ function ec(e) {
                                                               ei.intl.string(ei.t.gJRnwM),
                                                               (0, i.jsx)(c.TextBadge, {
                                                                   text: r ? ei.intl.string(ei.t.ApAu9f) : o ? ei.intl.string(ei.t.gH3Fra) : ei.intl.string(ei.t['64pl8/']),
-                                                                  color: r ? l.Z.BRAND_500 : o ? l.Z.RED_400 : l.Z.PRIMARY_500
+                                                                  color: r ? a.Z.BRAND_500 : o ? a.Z.RED_400 : a.Z.PRIMARY_500
                                                               })
                                                           ]
                                                       }),
@@ -348,7 +348,7 @@ function ec(e) {
                                 })
                             }),
                         (0, i.jsxs)('header', {
-                            className: el.header,
+                            className: ea.header,
                             children: [
                                 (0, i.jsx)(P.Z, {
                                     user: W,
@@ -487,7 +487,7 @@ function ec(e) {
                                                                 size: 12
                                                             }),
                                                         hint: (eI || e_ === et.Skl.DND) && (0, i.jsx)(c.BellSlashIcon, { size: 'xxs' }),
-                                                        renderSubmenu: a.tq
+                                                        renderSubmenu: l.tq
                                                             ? void 0
                                                             : (e) => {
                                                                   let { closePopout: t } = e;
@@ -499,7 +499,7 @@ function ec(e) {
                                                                       children: eS
                                                                   });
                                                               },
-                                                        onClick: a.tq
+                                                        onClick: l.tq
                                                             ? () => {
                                                                   Q(),
                                                                       (0, c.openModalLazy)(

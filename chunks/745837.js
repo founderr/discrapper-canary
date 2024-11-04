@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(120356),
-    l = n.n(r),
-    a = n(442837),
+    a = n.n(r),
+    l = n(442837),
     s = n(481060),
     o = n(547972),
     c = n(556296),
@@ -24,7 +24,7 @@ function I(e) {
     (0, o.Z)(f.Z.CLIPS), (0, m.UW)(e);
 }
 function C() {
-    let e = (0, a.e7)([c.Z], () => c.Z.getKeybindForAction(g.kg4.SAVE_CLIP));
+    let e = (0, l.e7)([c.Z], () => c.Z.getKeybindForAction(g.kg4.SAVE_CLIP));
     if (null == e) return (0, i.jsx)(i.Fragment, { children: _.intl.string(_.t.miecxM) });
     let t = u.BB(e.shortcut, !0);
     return (0, i.jsx)(i.Fragment, {
@@ -76,24 +76,24 @@ let v = {
         bodyCopy: () => (0, i.jsx)(C, {}),
         buttonCopy: () => _.intl.string(_.t.GMLBKS),
         ctaOnClick: () => I(p.D5.Enabled),
-        containerClass: l()(E.container, E.containerEnabled)
+        containerClass: a()(E.container, E.containerEnabled)
     }
 };
 function S() {
     var e;
-    let { decoupledClipsEnabled: t, clipsError: n } = (0, a.cj)([h.Z], () => ({
+    let { decoupledClipsEnabled: t, clipsError: n } = (0, l.cj)([h.Z], () => ({
         decoupledClipsEnabled: h.Z.getSettings().decoupledClipsEnabled,
         clipsError: h.Z.getLastClipsError()
     }));
     let r = ((e = t), null != n ? p.D5.Error : e ? p.D5.Enabled : p.D5.Disabled),
-        { bodyCopy: l, buttonCopy: o, ctaOnClick: c, textColor: d, buttonColor: u, buttonLook: g, containerClass: f } = v[r];
+        { bodyCopy: a, buttonCopy: o, ctaOnClick: c, textColor: d, buttonColor: u, buttonLook: g, containerClass: f } = v[r];
     return (0, i.jsxs)('div', {
         className: f,
         children: [
             (0, i.jsx)(s.Text, {
                 color: d,
                 variant: 'text-sm/medium',
-                children: l()
+                children: a()
             }),
             (0, i.jsx)(s.Button, {
                 onClick: () => (0, m.UW)(r),

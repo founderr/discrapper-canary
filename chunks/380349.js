@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(442837),
-    l = n(481060),
-    a = n(314897),
+    a = n(481060),
+    l = n(314897),
     s = n(768419),
     o = n(456190),
     c = n(239470),
@@ -16,13 +16,13 @@ var r = n(442837),
     h = n(616922),
     m = n(388032);
 function p(e, t, n) {
-    let p = (0, r.e7)([s.Z, a.default], () => (null != t ? (0, c.Z)(s.Z, a.default, t, e) : void 0), [e, t]);
+    let p = (0, r.e7)([s.Z, l.default], () => (null != t ? (0, c.Z)(s.Z, l.default, t, e) : void 0), [e, t]);
     if (null == p || null == e || null == t) return null;
     let g = p.isCurrentUser || p.notPlayable || p.playingSameTrack,
         f = p.isCurrentUser || p.syncingWithUser || p.syncingWithParty;
     return [
         (0, i.jsx)(
-            l.MenuItem,
+            a.MenuItem,
             {
                 id: 'spotify-play-'.concat(e.session_id),
                 action: () => (0, u.Z)(p, h.kG.USER_ACTIVITY_PLAY, n),
@@ -34,7 +34,7 @@ function p(e, t, n) {
         ),
         p.canPlaySpotify
             ? (0, i.jsx)(
-                  l.MenuItem,
+                  a.MenuItem,
                   {
                       id: 'spotify-sync-'.concat(e.session_id),
                       action: () => (0, d.Z)(p, h.kG.USER_ACTIVITY_SYNC, n),

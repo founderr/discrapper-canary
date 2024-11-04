@@ -58,8 +58,8 @@ n.d(t, {
     n(392711);
 var i,
     r = n(729594),
-    l = n(243814),
-    a = n(544891),
+    a = n(243814),
+    l = n(544891),
     s = n(63023),
     o = n(433517),
     c = n(904245),
@@ -127,7 +127,7 @@ function k(e, t) {
         Promise.all(n).then(() => {
             var n;
             let r = (!e.isNSFW() || (null === (n = v.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? I.Z.getMessages(e.id).toArray().map(U) : [],
-                l = Object.values(S.Z.getVoiceStatesForChannel(e.id)).map((t) => G(i, e.id, t));
+                a = Object.values(S.Z.getVoiceStatesForChannel(e.id)).map((t) => G(i, e.id, t));
             return {
                 id: e.id,
                 name: e.name,
@@ -138,7 +138,7 @@ function k(e, t) {
                 guild_id: i,
                 position: e.position,
                 messages: r,
-                voice_states: l
+                voice_states: a
             };
         })
     );
@@ -169,7 +169,7 @@ function U(e) {
     };
 }
 function G(e, t, n) {
-    let { mute: i, deaf: r, selfMute: l, selfDeaf: a, suppress: s, userId: o } = n,
+    let { mute: i, deaf: r, selfMute: a, selfDeaf: l, suppress: s, userId: o } = n,
         c = v.default.getUser(o);
     if (null == c) throw Error('Invalid user id: '.concat(o));
     return {
@@ -180,8 +180,8 @@ function G(e, t, n) {
         voice_state: {
             mute: i,
             deaf: r,
-            self_mute: l,
-            self_deaf: a,
+            self_mute: a,
+            self_deaf: l,
             suppress: s
         },
         user: (0, A.Z)(c)
@@ -213,7 +213,7 @@ function H(e) {
 }
 function V(e, t, n) {
     let i = _.Z.getGuild(e.getGuildId());
-    return (null != i ? i.getApplicationId() : e.getApplicationId()) === t || n.indexOf(l.x.MESSAGES_READ) > -1;
+    return (null != i ? i.getApplicationId() : e.getApplicationId()) === t || n.indexOf(a.x.MESSAGES_READ) > -1;
 }
 function F(e) {
     switch (e) {
@@ -228,15 +228,15 @@ function F(e) {
 function z(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { instance: n, secrets: i, party: r } = e,
-        l = 0;
-    return (n && (l |= y.xjy.INSTANCE), (null == i ? void 0 : i.join) != null && (l |= y.xjy.JOIN), t) ? ((l |= y.xjy.EMBEDDED), (l |= y.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) : (((null == r ? void 0 : r.privacy) === y.RYY.PUBLIC || o.K.get('ACTIVITIES_FORCE_PUBLIC')) && (m.cP.getSetting() && (l |= y.xjy.PARTY_PRIVACY_FRIENDS), m.Ou.getSetting() && (l |= y.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), l);
+        a = 0;
+    return (n && (a |= y.xjy.INSTANCE), (null == i ? void 0 : i.join) != null && (a |= y.xjy.JOIN), t) ? ((a |= y.xjy.EMBEDDED), (a |= y.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) : (((null == r ? void 0 : r.privacy) === y.RYY.PUBLIC || o.K.get('ACTIVITIES_FORCE_PUBLIC')) && (m.cP.getSetting() && (a |= y.xjy.PARTY_PRIVACY_FRIENDS), m.Ou.getSetting() && (a |= y.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), a);
 }
 function Y(e, t, n) {
     if (e === y.mFx.JOIN) return null != t && null != t.id && null != n.join;
     return !1;
 }
 function W(e, t, n) {
-    return a.tn
+    return l.tn
         .get({
             url: y.ANM.APPLICATION_RPC(t),
             oldFormErrors: !0,
@@ -245,7 +245,7 @@ function W(e, t, n) {
         .then(
             (i) => {
                 let {
-                    body: { rpc_origins: r, id: l, name: a, icon: s, cover_image: o, flags: c }
+                    body: { rpc_origins: r, id: a, name: l, icon: s, cover_image: o, flags: c }
                 } = i;
                 if ('string' == typeof n) {
                     if (e.transport === Z.He.POST_MESSAGE) {
@@ -254,8 +254,8 @@ function W(e, t, n) {
                     } else if (!w(n, r)) throw new b.Z({ closeCode: y.$VG.INVALID_ORIGIN }, 'Invalid Origin');
                 }
                 e.application = {
-                    id: l,
-                    name: a,
+                    id: a,
+                    name: l,
                     icon: s,
                     coverImage: o,
                     flags: c

@@ -29,7 +29,7 @@ var i = n(200651),
     S = n(669079),
     b = n(74538),
     A = n(51144),
-    j = n(598),
+    j = n(563132),
     Z = n(981631),
     R = n(474936),
     P = n(388032),
@@ -45,7 +45,7 @@ function L(e) {
         U = () => (null != o ? o.skuId : null != l ? l.id : null),
         F = () => {
             let e;
-            let t = null != s && R.V4.includes(s);
+            let t = null != s && R.kJ.includes(s);
             if (null != C) return P.intl.string(P.t.qB8ayc);
             if (null == o) return null;
             if (o.interval === R.rV.MONTH) {

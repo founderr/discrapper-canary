@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    l = n(481060),
-    a = n(212093),
+    a = n(481060),
+    l = n(212093),
     s = n(703656),
     o = n(769654),
     c = n(430824),
@@ -28,7 +28,7 @@ function f(e, t, n) {
                           className: g.icon,
                           children: (0, i.jsx)(e, {
                               className: g.__invalid_iconInner,
-                              color: l.tokens.colors.WHITE.css
+                              color: a.tokens.colors.WHITE.css
                           })
                       })
                     : (0, i.jsx)('img', {
@@ -36,7 +36,7 @@ function f(e, t, n) {
                           alt: '',
                           src: e
                       }),
-                (0, i.jsx)(l.Text, {
+                (0, i.jsx)(a.Text, {
                     className: g.text,
                     variant: 'text-md/medium',
                     children: t
@@ -56,7 +56,7 @@ function _() {
         children: [
             (0, i.jsx)('header', {
                 className: g.header,
-                children: (0, i.jsx)(l.FormTitle, {
+                children: (0, i.jsx)(a.FormTitle, {
                     tag: 'h2',
                     className: g.title,
                     children: p.intl.string(p.t['qj7o//'])
@@ -78,8 +78,8 @@ function _() {
                             }
                         )
                     ),
-                    f(l.CompassIcon, p.intl.string(p.t.AhKnz8), () => {
-                        (0, a.AQ)(), d.default.track(m.rMx.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, s.uL)(m.Z5c.GUILD_DISCOVERY);
+                    f(a.CompassIcon, p.intl.string(p.t.AhKnz8), () => {
+                        (0, l.AQ)(), d.default.track(m.rMx.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, s.uL)(m.Z5c.GUILD_DISCOVERY);
                     })
                 ]
             })

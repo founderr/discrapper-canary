@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(481060),
     o = n(770146),
     c = n(600164),
@@ -21,14 +21,14 @@ let _ = {
 class E extends r.PureComponent {
     render() {
         let { active: e, children: t, pageSize: n, onClick: r } = this.props,
-            l = n === m.b.LARGE;
+            a = n === m.b.LARGE;
         return (0, i.jsx)(s.Button, {
-            size: l ? s.Button.Sizes.MIN : s.Button.Sizes.LARGE,
-            fullWidth: !l,
+            size: a ? s.Button.Sizes.MIN : s.Button.Sizes.LARGE,
+            fullWidth: !a,
             color: e ? f.tabSelectedColor : f.tabNotSelectedColor,
-            className: a()({
-                [f.tabPageLarge]: l,
-                [f.tabPageSmall]: !l,
+            className: l()({
+                [f.tabPageLarge]: a,
+                [f.tabPageSmall]: !a,
                 [f.tabSelected]: e,
                 [f.tabNotSelected]: !e
             }),
@@ -176,10 +176,10 @@ class C extends r.PureComponent {
                   })
                 : (t[n] = i);
         let r = (0, h.getPlatform)(),
-            l = Object.keys(e.systemRequirements),
-            a = l[0];
-        for (let e of l) _[e] === r && (a = e);
-        this.state = { selectedOperatingSystem: a };
+            a = Object.keys(e.systemRequirements),
+            l = a[0];
+        for (let e of a) _[e] === r && (l = e);
+        this.state = { selectedOperatingSystem: l };
     }
 }
 t.Z = C;

@@ -1,7 +1,7 @@
 var i = n(200651),
     r = n(192379),
-    l = n(442837),
-    a = n(894653),
+    a = n(442837),
+    l = n(894653),
     s = n(322665),
     o = n(17845),
     c = n(374939),
@@ -12,7 +12,7 @@ var i = n(200651),
     p = n(624849);
 t.Z = function (e) {
     let { tabId: t, onSelectApplication: n, onScroll: g } = e,
-        f = (0, l.e7)([a.Z], () => a.Z.getCategories()),
+        f = (0, a.e7)([l.Z], () => l.Z.getCategories()),
         _ = r.useMemo(() => f.find((e) => e.id === t), [f, t]),
         E = r.useMemo(() => {
             var e;

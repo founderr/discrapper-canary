@@ -4,52 +4,52 @@ var a = l(200651),
     r = l(481060),
     s = l(904245),
     d = l(368844),
-    c = l(249842),
-    o = l(838367),
+    o = l(249842),
+    c = l(838367),
     u = l(6025),
     h = l(592125),
     m = l(375954),
     g = l(496675),
     x = l(768581),
-    C = l(526120),
-    f = l(825334),
+    f = l(526120),
+    C = l(825334),
     v = l(981631),
     I = l(388032),
-    Z = l(469085);
-let p = i.memo(function (e) {
+    p = l(469085);
+let Z = i.memo(function (e) {
         let { guild: n } = e,
-            l = (0, t.e7)([o.Z], () => o.Z.getGuild(n.id), [n]);
+            l = (0, t.e7)([c.Z], () => c.Z.getGuild(n.id), [n]);
         return (
             i.useEffect(() => {
-                null == l && (0, c.P)(n.id);
+                null == l && (0, o.P)(n.id);
             }, [n.id, l]),
             (0, a.jsx)('div', {
-                className: Z.sidebarCardWrapper,
+                className: p.sidebarCardWrapper,
                 children: (0, a.jsxs)('div', {
-                    className: Z.sidebarCard,
+                    className: p.sidebarCard,
                     children: [
                         (0, a.jsx)(r.Heading, {
-                            className: Z.sidebarCardHeader,
+                            className: p.sidebarCardHeader,
                             variant: 'heading-md/bold',
                             color: 'header-primary',
                             children: I.intl.string(I.t['6YriCA'])
                         }),
                         (0, a.jsx)(r.Text, {
-                            className: Z.guildDescription,
+                            className: p.guildDescription,
                             variant: 'text-md/normal',
                             color: 'text-normal',
                             children: n.description
                         }),
                         (0, a.jsx)('div', {
-                            className: Z.guildInfo,
+                            className: p.guildInfo,
                             children:
                                 (null == l ? void 0 : l.memberCount) != null &&
                                 (null == l ? void 0 : l.presenceCount) != null &&
                                 (0, a.jsxs)(a.Fragment, {
                                     children: [
-                                        (0, a.jsx)('div', { className: Z.dotOnline }),
+                                        (0, a.jsx)('div', { className: p.dotOnline }),
                                         (0, a.jsx)(r.Text, {
-                                            className: Z.guildInfoText,
+                                            className: p.guildInfoText,
                                             variant: 'text-xs/normal',
                                             color: 'text-muted',
                                             children: I.intl.format(I.t.QAdRCw, {
@@ -66,14 +66,14 @@ let p = i.memo(function (e) {
         );
     }),
     j = (e) => {
-        let { channelId: n, title: l, icon: c } = e,
-            o = (0, t.e7)([h.Z], () => h.Z.getChannel(n)),
-            f = (0, t.e7)([m.Z], () => m.Z.getMessages(n)),
-            I = (0, t.e7)([g.Z], () => g.Z.can(v.Plq.VIEW_CHANNEL, o)),
-            p = f.first(),
-            j = (0, d.zy)(p, !1),
+        let { channelId: n, title: l, icon: o } = e,
+            c = (0, t.e7)([h.Z], () => h.Z.getChannel(n)),
+            C = (0, t.e7)([m.Z], () => m.Z.getMessages(n)),
+            I = (0, t.e7)([g.Z], () => g.Z.can(v.Plq.VIEW_CHANNEL, c)),
+            Z = C.first(),
+            j = (0, d.zy)(Z, !1),
             N = (null == j ? void 0 : j.length) > 0 ? j[0] : null,
-            _ = null != o && null == p && !f.loadingMore && !f.ready && !f.hasFetched && I;
+            _ = null != c && null == Z && !C.loadingMore && !C.ready && !C.hasFetched && I;
         i.useEffect(() => {
             _ &&
                 s.Z.fetchMessages({
@@ -83,41 +83,41 @@ let p = i.memo(function (e) {
                 });
         }, [n, _]);
         let b = (e) => {
-            null != o &&
+            null != c &&
                 (e.shiftKey
-                    ? (0, C.C3)(o.guild_id, o.id)
+                    ? (0, f.C3)(c.guild_id, c.id)
                     : u.Z.openResourceChannelAsSidebar({
-                          guildId: o.guild_id,
-                          channelId: o.id
+                          guildId: c.guild_id,
+                          channelId: c.id
                       }));
         };
         return (0, a.jsx)(
             r.Clickable,
             {
-                className: Z.resourceChannel,
+                className: p.resourceChannel,
                 onClick: (e) => b(e),
                 children: (0, a.jsxs)(a.Fragment, {
                     children: [
                         (() => {
                             let e = x.ZP.getResourceChannelIconURL({
                                 channelId: n,
-                                icon: c
+                                icon: o
                             });
-                            return null != c && null != e
+                            return null != o && null != e
                                 ? (0, a.jsx)('img', {
                                       src: e,
-                                      className: Z.resourceImage,
+                                      className: p.resourceImage,
                                       alt: '',
                                       'aria-hidden': !0
                                   })
                                 : null != N
                                   ? (0, a.jsx)('img', {
-                                        className: Z.resourceImage,
+                                        className: p.resourceImage,
                                         src: N.src,
                                         alt: N.alt
                                     })
                                   : (0, a.jsx)('div', {
-                                        className: Z.placeholderImage,
+                                        className: p.placeholderImage,
                                         children: (0, a.jsx)(r.PaperIcon, {
                                             size: 'xs',
                                             color: 'currentColor'
@@ -125,7 +125,7 @@ let p = i.memo(function (e) {
                                     });
                         })(),
                         (0, a.jsx)(r.Text, {
-                            className: Z.guildInfoText,
+                            className: p.guildInfoText,
                             variant: 'text-sm/semibold',
                             color: 'none',
                             children: l
@@ -138,22 +138,22 @@ let p = i.memo(function (e) {
     },
     N = i.memo(function (e) {
         let { guild: n } = e,
-            l = (0, f.Z)(n.id);
+            l = (0, C.Z)(n.id);
         return 0 === l.length
             ? null
             : (0, a.jsx)('div', {
-                  className: Z.sidebarCardWrapper,
+                  className: p.sidebarCardWrapper,
                   children: (0, a.jsxs)('div', {
-                      className: Z.sidebarCard,
+                      className: p.sidebarCard,
                       children: [
                           (0, a.jsx)(r.Heading, {
-                              className: Z.sidebarCardHeader,
+                              className: p.sidebarCardHeader,
                               variant: 'heading-md/bold',
                               color: 'header-primary',
                               children: I.intl.string(I.t.xwY4LS)
                           }),
                           (0, a.jsx)('div', {
-                              className: Z.resourceChannelsList,
+                              className: p.resourceChannelsList,
                               children: l.map((e) =>
                                   (0, a.jsx)(
                                       j,
@@ -173,8 +173,8 @@ let p = i.memo(function (e) {
     _ = i.memo(function (e) {
         let { guild: n, isNewMember: l } = e;
         return (0, a.jsxs)('aside', {
-            className: Z.sidebar,
-            children: [(0, a.jsx)(p, { guild: n }), l && (0, a.jsx)(N, { guild: n })]
+            className: p.sidebar,
+            children: [(0, a.jsx)(Z, { guild: n }), l && (0, a.jsx)(N, { guild: n })]
         });
     });
 n.Z = _;

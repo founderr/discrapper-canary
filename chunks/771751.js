@@ -13,7 +13,7 @@ var r = n(200651),
     c = n(481060),
     d = n(937579),
     u = n(675478),
-    h = n(295226),
+    h = n(431),
     m = n(572004),
     x = n(74538),
     f = n(246992),
@@ -102,8 +102,8 @@ function y(e) {
                 ? n
                 : 'Unknown',
         O = null != k,
-        B = null != k && new Date(k).getTime() < Date.now(),
-        A = (null == Z ? void 0 : Z.sku_id) === g.Si.TIER_0,
+        A = null != k && new Date(k).getTime() < Date.now(),
+        B = (null == Z ? void 0 : Z.sku_id) === g.Si.TIER_0,
         L = async () => {
             S(!0), O ? await T(I, 'trial') : await (0, d.a)(s), h(), S(!1);
         };
@@ -128,9 +128,9 @@ function y(e) {
     let P = 'Active';
     return (
         O && (P = 'Acknowledged'),
-        B && (P = 'Expired'),
+        A && (P = 'Expired'),
         (0, r.jsxs)('div', {
-            className: i()(v.card, A ? v.gradientWrapperTier0 : v.gradientWrapperTier2),
+            className: i()(v.card, B ? v.gradientWrapperTier0 : v.gradientWrapperTier2),
             children: [
                 (0, r.jsxs)('div', {
                     className: i()(v.row, v.nameRow),
@@ -222,7 +222,7 @@ function y(e) {
                             onClick: L,
                             className: i()(v.badge, v.clickable, {
                                 [v.acked]: O,
-                                [v.expired]: B
+                                [v.expired]: A
                             }),
                             children: (0, r.jsx)(c.Text, {
                                 variant: 'eyebrow',

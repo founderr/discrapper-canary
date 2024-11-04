@@ -1,7 +1,7 @@
 var i = n(200651),
     r = n(192379),
-    l = n(512969),
-    a = n(252618),
+    a = n(512969),
+    l = n(252618),
     s = n(352057),
     o = n(319443),
     c = n(106075),
@@ -27,7 +27,7 @@ t.Z = function () {
                     (0, u.vE)(e);
             }
         })(t),
-        _ = (0, l.TH)();
+        _ = (0, a.TH)();
     return (
         r.useEffect(() => {
             let t = _.pathname,
@@ -39,7 +39,7 @@ t.Z = function () {
         }, [t]),
         (0, i.jsxs)('section', {
             className: f.container,
-            children: [(0, i.jsx)(a.yY, { location: (0, p.sm)(t) }), (0, i.jsx)('div', { className: f.dragRegion }), n]
+            children: [(0, i.jsx)(l.yY, { location: (0, p.sm)(t) }), (0, i.jsx)('div', { className: f.dragRegion }), n]
         })
     );
 };

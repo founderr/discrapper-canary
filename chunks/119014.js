@@ -6,16 +6,16 @@ n.d(t, {
     n(47120);
 var i = n(192379),
     r = n(442837),
-    l = n(894653),
-    a = n(979007),
+    a = n(894653),
+    l = n(979007),
     s = n(388032);
 function o() {
-    let e = (0, r.e7)([l.Z], () => l.Z.getCategories()),
-        [t, n] = i.useState(a.kK),
+    let e = (0, r.e7)([a.Z], () => a.Z.getCategories()),
+        [t, n] = i.useState(l.kK),
         o = i.useMemo(
             () => [
                 {
-                    id: a.kK,
+                    id: l.kK,
                     label: s.intl.string(s.t.ijDDw8)
                 },
                 ...e.map((e) => ({

@@ -711,7 +711,7 @@ var e, r;
             }),
             (tP.prototype.mergeDeepWith = function (t) {
                 var e = l.call(arguments, 1);
-                return t2(this, t8(t), e);
+                return t2(this, t9(t), e);
             }),
             (tP.prototype.mergeDeepIn = function (t) {
                 var e = l.call(arguments, 1);
@@ -998,19 +998,19 @@ var e, r;
                     })),
                     n.push(a);
             }
-            return t9(t, e, n);
+            return t8(t, e, n);
         }
         function t5(t, e, r) {
             return t && t.mergeDeep && y(e) ? t.mergeDeep(e) : tv(t, e) ? t : e;
         }
-        function t8(t) {
+        function t9(t) {
             return function (e, r, n) {
                 if (e && e.mergeDeepWith && y(r)) return e.mergeDeepWith(t, r);
                 var i = t(e, r, n);
                 return tv(e, i) ? e : i;
             };
         }
-        function t9(t, e, r) {
+        function t8(t, e, r) {
             return 0 ===
                 (r = r.filter(function (t) {
                     return 0 !== t.size;
@@ -1136,7 +1136,7 @@ var e, r;
             }),
             (en.prototype.mergeDeepWith = function (t) {
                 var e = l.call(arguments, 1);
-                return ey(this, t8(t), e);
+                return ey(this, t9(t), e);
             }),
             (en.prototype.setSize = function (t) {
                 return eg(this, 0, t);
@@ -1324,7 +1324,7 @@ var e, r;
                         })),
                     n.push(u);
             }
-            return i > t.size && (t = t.setSize(i)), t9(t, e, n);
+            return i > t.size && (t = t.setSize(i)), t8(t, e, n);
         }
         function ev(t) {
             return t < E ? 0 : ((t - 1) >>> 5) << 5;
@@ -2212,13 +2212,13 @@ var e, r;
                 return this.__toString('OrderedSet {', '}');
             }),
             (e2.isOrderedSet = e5);
-        var e8 = e2.prototype;
-        function e9(t, e) {
-            var r = Object.create(e8);
+        var e9 = e2.prototype;
+        function e8(t, e) {
+            var r = Object.create(e9);
             return (r.size = t ? t.size : 0), (r._map = t), (r.__ownerID = e), r;
         }
         function e7() {
-            return s || (s = e9(eS()));
+            return s || (s = e8(eS()));
         }
         function e4(t) {
             return null == t ? ri() : rt(t) ? t : ri().unshiftAll(t);
@@ -2226,9 +2226,9 @@ var e, r;
         function rt(t) {
             return !!(t && t[re]);
         }
-        (e8[x] = !0),
-            (e8.__empty = e7),
-            (e8.__make = e9),
+        (e9[x] = !0),
+            (e9.__empty = e7),
+            (e9.__make = e8),
             f(e4, tx),
             (e4.of = function () {
                 return this(arguments);

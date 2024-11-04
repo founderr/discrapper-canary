@@ -1,5 +1,5 @@
 n(47120), n(757143);
-var r = n(946188),
+var r = n(336317),
     i = n(768581),
     a = n(302221),
     s = n(956664),
@@ -9,7 +9,7 @@ function u(e) {
     if (l.has(e)) return '';
     try {
         let t = 0 > e.indexOf('‍') ? e.replace('️', '') : e;
-        return n(916529)('./'.concat(r.Z.convert.toCodePoint(t), '.svg'));
+        return n(723080)('./'.concat(r.Z.convert.toCodePoint(t), '.svg'));
     } catch (t) {
         return console.warn(t, 'no emoji for', e), '';
     }

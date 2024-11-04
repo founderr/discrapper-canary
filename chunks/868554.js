@@ -25,12 +25,12 @@ function I(e) {
     let { buttonRef: t, userId: a, streaming: I, onClose: E } = e,
         b = (0, s.e7)([p.default], () => p.default.getUser(a)),
         N = (0, s.e7)([p.default], () => p.default.getCurrentUser()),
-        { avatarSrc: Z, eventHandlers: S } = (0, u.Z)({
+        { avatarSrc: Z, eventHandlers: T } = (0, u.Z)({
             user: b,
             size: o.AvatarSizes.SIZE_48,
             animateOnHover: !0
         }),
-        T = l.useMemo(
+        S = l.useMemo(
             () =>
                 null == b || null == N
                     ? ''
@@ -89,7 +89,7 @@ function I(e) {
                                     src: Z,
                                     'aria-label': b.username,
                                     size: o.AvatarSizes.SIZE_48,
-                                    ...S
+                                    ...T
                                 }),
                                 (0, i.jsx)('img', {
                                     className: v.potion,
@@ -100,7 +100,7 @@ function I(e) {
                         }),
                         (0, i.jsx)(o.Heading, {
                             variant: 'heading-sm/medium',
-                            children: T
+                            children: S
                         }),
                         (0, i.jsxs)('div', {
                             className: v.subsection,

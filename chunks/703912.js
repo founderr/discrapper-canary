@@ -7,8 +7,8 @@ n.d(t, {
     n(47120);
 var i = n(664751),
     r = n(373793),
-    l = n(243814),
-    a = n(149765),
+    a = n(243814),
+    l = n(149765),
     s = n(544891),
     o = n(45792),
     c = n(433517),
@@ -27,7 +27,7 @@ var i = n(664751),
     S = n(981631);
 let N = 'CachedTokens';
 async function T(e, t, n) {
-    var i, l;
+    var i, a;
     let s;
     let o,
         c,
@@ -39,7 +39,7 @@ async function T(e, t, n) {
     if (null != x) throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'Redirect URI cannot be used in the RPC OAuth2 Authorization flow');
     let U = [];
     if (('string' == typeof L ? (U = L.split(' ').filter((e) => e.length > 0)) : Array.isArray(L) && (U = L), null == _.default.getCurrentUser())) throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'Client is not logged in');
-    let G = null !== (l = u.Z.getApplication(N)) && void 0 !== l ? l : null;
+    let G = null !== (a = u.Z.getApplication(N)) && void 0 !== a ? a : null;
     (null == G ||
         (function (e) {
             var t;
@@ -94,7 +94,7 @@ async function T(e, t, n) {
     null == n || n(c.application, O, w);
     let H = I.Hn;
     try {
-        H = a.vB(null != R ? R : 0);
+        H = l.vB(null != R ? R : 0);
     } catch (e) {}
     return (
         null != c.integration_type && Object.values(r.Y).includes(c.integration_type) && (s = new Map()).set(c.integration_type, c),
@@ -132,14 +132,14 @@ function x(e, t) {
             .then(
                 (n) => {
                     e.authorization.authing = !1;
-                    let { application: i, user: r, scopes: l, expires: a } = n.body;
+                    let { application: i, user: r, scopes: a, expires: l } = n.body;
                     if (e.application.id !== i.id) throw new C.Z({ errorCode: S.lTL.INVALID_CLIENTID }, "Application does not match the connection's");
                     let s = _.default.getCurrentUser();
                     if (null == s || !r || s.id !== r.id) throw new C.Z({ errorCode: S.lTL.INVALID_TOKEN }, 'Token does not match current user');
                     return (
-                        (e.authorization.scopes = [...e.authorization.scopes, ...l, v.wE]),
+                        (e.authorization.scopes = [...e.authorization.scopes, ...a, v.wE]),
                         (e.authorization.accessToken = t),
-                        (e.authorization.expires = new Date(a)),
+                        (e.authorization.expires = new Date(l)),
                         d.Z.dispatch({
                             type: 'RPC_APP_AUTHENTICATED',
                             socketId: e.id,
@@ -166,43 +166,43 @@ function b(e, t) {
             handler(n) {
                 let {
                     socket: r,
-                    signal: a,
+                    signal: l,
                     args: { access_token: s }
                 } = n;
                 if (null == s && r.transport === v.He.IPC) {
                     let n = r.application.id;
                     if (null == n) throw new C.Z({ errorCode: S.lTL.INVALID_COMMAND }, 'No application.');
-                    let o = l.x.IDENTIFY,
+                    let o = a.x.IDENTIFY,
                         d = () =>
                             T(
                                 {
                                     client_id: n,
                                     scope: o,
                                     response_type: 'token',
-                                    signal: a
+                                    signal: l
                                 },
                                 e,
                                 t
                             ).then((e) => {
                                 if (null == e) throw new C.Z({ errorCode: S.lTL.UNKNOWN_ERROR }, 'Unknown error occurred');
                                 let t = e.split(/#|\?/),
-                                    l = i.parse(t[t.length - 1]);
-                                if (null != l.error) {
-                                    var a;
-                                    throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'OAuth2 Error: '.concat(l.error, ': ').concat(null !== (a = l.error_description) && void 0 !== a ? a : 'unknown error'));
+                                    a = i.parse(t[t.length - 1]);
+                                if (null != a.error) {
+                                    var l;
+                                    throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'OAuth2 Error: '.concat(a.error, ': ').concat(null !== (l = a.error_description) && void 0 !== l ? l : 'unknown error'));
                                 }
                                 return (
                                     !(function (e, t, n, i) {
                                         var r;
-                                        let l = null !== (r = c.K.get(N)) && void 0 !== r ? r : {};
-                                        (l[e] = {
+                                        let a = null !== (r = c.K.get(N)) && void 0 !== r ? r : {};
+                                        (a[e] = {
                                             accessToken: t,
                                             scope: n,
                                             expires: Date.now() + i
                                         }),
-                                            c.K.set(N, l);
-                                    })(n, l.access_token, l.scope, l.expires_in),
-                                    x(r, l.access_token)
+                                            c.K.set(N, a);
+                                    })(n, a.access_token, a.scope, a.expires_in),
+                                    x(r, a.access_token)
                                 );
                             });
                     return null !=
@@ -232,8 +232,8 @@ function b(e, t) {
         }),
         [S.Etm.AUTHORIZE]: {
             handler(n) {
-                let { socket: r, signal: l, args: a } = n,
-                    o = a.client_id;
+                let { socket: r, signal: a, args: l } = n,
+                    o = l.client_id;
                 if (!o) throw new C.Z({ errorCode: S.lTL.INVALID_CLIENTID }, 'No client id provided');
                 if (null != r.authorization.accessToken) throw new C.Z({ errorCode: S.lTL.INVALID_COMMAND }, 'Already authenticated');
                 if (r.authorization.authing) throw new C.Z({ errorCode: S.lTL.INVALID_COMMAND }, 'Already authing');
@@ -243,20 +243,20 @@ function b(e, t) {
                         .get({
                             url: S.ANM.APPLICATION_RPC(o),
                             oldFormErrors: !0,
-                            signal: l
+                            signal: a
                         })
                         .then(
                             (n) => {
                                 let i = n.body;
                                 if (r.application.id !== i.id) throw new C.Z({ errorCode: S.lTL.INVALID_CLIENTID }, "Application does not match the connection's");
-                                let s = a.scopes || a.scope;
+                                let s = l.scopes || l.scope;
                                 return (
-                                    delete a.scopes,
+                                    delete l.scopes,
                                     T(
                                         {
-                                            ...a,
+                                            ...l,
                                             scope: s,
-                                            signal: l
+                                            signal: a
                                         },
                                         e,
                                         t

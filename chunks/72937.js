@@ -1,10 +1,10 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return a;
     }
 });
 var i = n(570140),
     r = n(594174);
-function l() {
+function a() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Number.MAX_VALUE;
 }

@@ -1,8 +1,8 @@
 var i = n(200651);
 n(192379);
 var r = n(120356),
-    l = n.n(r),
-    a = n(981631),
+    a = n.n(r),
+    l = n(981631),
     s = n(691412);
 let o = {
         EVERYONE: '1',
@@ -20,7 +20,7 @@ let o = {
         EIGHTEEN: '5'
     },
     d = {
-        [a.aIt.ESRB]: {
+        [l.aIt.ESRB]: {
             [o.EVERYONE]: s.esrbEveryone,
             [o.EVERYONE_TEN_PLUS]: s.esrbEveryoneTenPlus,
             [o.TEEN]: s.esrbTeen,
@@ -28,7 +28,7 @@ let o = {
             [o.ADULT]: s.esrbAdult,
             [o.RATING_PENDING]: s.esrbRatingPending
         },
-        [a.aIt.PEGI]: {
+        [l.aIt.PEGI]: {
             [c.THREE]: s.pegiThree,
             [c.SEVEN]: s.pegiSeven,
             [c.TWELVE]: s.pegiTwelve,
@@ -38,6 +38,6 @@ let o = {
     };
 t.Z = (e) => {
     let { agency: t, rating: n, className: r } = e,
-        a = d[t][n];
-    return null == a ? null : (0, i.jsx)('div', { className: l()(s.contentRating, a, r) });
+        l = d[t][n];
+    return null == l ? null : (0, i.jsx)('div', { className: a()(s.contentRating, l, r) });
 };

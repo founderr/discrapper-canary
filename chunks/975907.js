@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(192379),
     r = n(288385),
-    l = n(674588),
-    a = n(979007);
+    a = n(674588),
+    l = n(979007);
 function s() {
     let [e, t] = i.useState(''),
         [n, s] = i.useState(''),
@@ -19,12 +19,12 @@ function s() {
             t(''), s(''), c(!1);
         }, []),
         h = i.useCallback(() => {
-            l.yC({
+            a.yC({
                 query: e,
                 options: {
                     page: 1,
                     source: r.F.APP_DIRECTORY,
-                    pageSize: a.IV
+                    pageSize: l.IV
                 }
             }),
                 c(!0),

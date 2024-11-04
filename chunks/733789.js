@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(481060),
     o = n(100527),
     c = n(707409),
@@ -106,7 +106,7 @@ class I extends r.PureComponent {
         return 0 === r.length
             ? null
             : (0, i.jsxs)('div', {
-                  className: a()(f.recommendationActivity, t),
+                  className: l()(f.recommendationActivity, t),
                   children: [
                       (0, i.jsx)(h.Z, {
                           className: f.players,
@@ -143,8 +143,8 @@ class I extends r.PureComponent {
             ),
             _(this, 'renderPlayer', (e, t, n, r) => {
                 if (null == e) return null;
-                let l = this.props.reason.userInfo.find((t) => t.user === e);
-                return null == l
+                let a = this.props.reason.userInfo.find((t) => t.user === e);
+                return null == a
                     ? null
                     : (0, i.jsx)(
                           s.Popout,
@@ -159,11 +159,11 @@ class I extends r.PureComponent {
                               position: 'right',
                               children: (t) =>
                                   (0, i.jsx)(s.Tooltip, {
-                                      text: this.renderUserTooltip(e, l.startTime, l.endTime),
+                                      text: this.renderUserTooltip(e, a.startTime, a.endTime),
                                       'aria-label': (0, m.W5)(e, { decoration: 'never' }),
                                       children: (n) =>
                                           (0, i.jsx)(s.Avatar, {
-                                              className: a()(f.playerAvatar, { [f.avatarMasked]: !r }),
+                                              className: l()(f.playerAvatar, { [f.avatarMasked]: !r }),
                                               src: e.getAvatarURL(void 0, 32),
                                               'aria-label': e.username,
                                               size: s.AvatarSizes.SIZE_32,

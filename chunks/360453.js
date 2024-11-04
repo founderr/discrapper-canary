@@ -1,8 +1,8 @@
 var i = n(200651);
 n(192379);
 var r = n(442837),
-    l = n(481060),
-    a = n(949389),
+    a = n(481060),
+    l = n(949389),
     s = n(82950),
     o = n(434404),
     c = n(899667),
@@ -19,7 +19,7 @@ t.Z = (e) => {
         : (0, i.jsx)(s.Z, {
               guild: t,
               onDismissed: () => {
-                  (0, a.GO)(n);
+                  (0, l.GO)(n);
               },
               onClick: () => {
                   o.Z.open(n, u.pNK.GUILD_PREMIUM);
@@ -29,6 +29,6 @@ t.Z = (e) => {
               type: u.vID.GUILD_BOOSTING_GRACE_PERIOD,
               image: m,
               cta: h.intl.string(h.t['4E1M8P']),
-              ctaColor: l.ButtonColors.PRIMARY
+              ctaColor: a.ButtonColors.PRIMARY
           });
 };

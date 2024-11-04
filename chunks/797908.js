@@ -1,7 +1,7 @@
 var i = n(200651),
     r = n(192379),
-    l = n(481060),
-    a = n(783097),
+    a = n(481060),
+    l = n(783097),
     s = n(924489),
     o = n(824606),
     c = n(66637),
@@ -15,7 +15,7 @@ t.Z = function (e) {
     let { application: E, onSelectApplication: I, showCategory: C = !1 } = e,
         v = (0, o.Z)({ application: E }),
         S = null === (t = E.categories) || void 0 === t ? void 0 : t[0],
-        N = (0, a.lf)(E),
+        N = (0, l.lf)(E),
         T = r.useCallback(() => {
             I(E.id);
         }, [I, E.id]),
@@ -77,7 +77,7 @@ t.Z = function (e) {
                             className: m.titleContainer,
                             children: (0, i.jsx)('div', {
                                 className: m.title,
-                                children: (0, i.jsx)(l.Heading, {
+                                children: (0, i.jsx)(a.Heading, {
                                     variant: 'heading-md/semibold',
                                     color: 'header-primary',
                                     className: m.appName,
@@ -90,7 +90,7 @@ t.Z = function (e) {
                                   className: m.infoContainer,
                                   children: [
                                       Z
-                                          ? (0, i.jsx)(l.Text, {
+                                          ? (0, i.jsx)(a.Text, {
                                                 className: m.appCategory,
                                                 variant: 'text-xs/medium',
                                                 color: 'text-normal',
@@ -98,14 +98,14 @@ t.Z = function (e) {
                                             })
                                           : null,
                                       Z && N
-                                          ? (0, i.jsx)(l.Text, {
+                                          ? (0, i.jsx)(a.Text, {
                                                 variant: 'text-xs/medium',
                                                 color: 'text-secondary',
                                                 children: '\u2022'
                                             })
                                           : null,
                                       N
-                                          ? (0, i.jsx)(l.Text, {
+                                          ? (0, i.jsx)(a.Text, {
                                                 variant: 'text-xs/medium',
                                                 color: 'text-secondary',
                                                 children: h.intl.string(h.t['/eVltr'])
@@ -114,7 +114,7 @@ t.Z = function (e) {
                                   ]
                               })
                             : null,
-                        (0, i.jsx)(l.Text, {
+                        (0, i.jsx)(a.Text, {
                             className: m.description,
                             variant: 'text-sm/medium',
                             color: 'header-secondary',

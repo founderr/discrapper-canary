@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i,
     r,
-    l = n(200651),
-    a = n(192379),
+    a = n(200651),
+    l = n(192379),
     s = n(120356),
     o = n.n(s),
     c = n(442837),
@@ -61,7 +61,7 @@ function U(e) {
         z = (0, y.Z)(null == i ? void 0 : i.id),
         Y = null == r ? void 0 : r.creator_id,
         W = (0, c.e7)([O.default], () => O.default.getUser(Y), [Y]);
-    a.useEffect(() => {
+    l.useEffect(() => {
         null != Y && (0, h.PR)(Y);
     }, [Y]);
     let {
@@ -74,10 +74,10 @@ function U(e) {
         users: ee,
         overflowUsers: et,
         onClose: en
-    } = a.useMemo(
+    } = l.useMemo(
         () =>
             (function (e) {
-                let { guildEvent: t, stageInstance: n, activeChannel: i, canConnect: r, myRole: a, eventCreator: s, speakers: o, listenerCount: c, isEventNoticeHidden: d, isStageNoticeHidden: h, isStudyRoomNotice: m } = e,
+                let { guildEvent: t, stageInstance: n, activeChannel: i, canConnect: r, myRole: l, eventCreator: s, speakers: o, listenerCount: c, isEventNoticeHidden: d, isStageNoticeHidden: h, isStudyRoomNotice: m } = e,
                     g = null != n && null != i && !h,
                     E = null != t ? (0, N.DK)(t) : null;
                 if (m && null != i) {
@@ -88,7 +88,7 @@ function U(e) {
                         location: w.intl.string(w.t.LZA6NT),
                         locationIcon:
                             null != e
-                                ? (0, l.jsx)(e, {
+                                ? (0, a.jsx)(e, {
                                       size: 'xs',
                                       color: 'currentColor',
                                       className: k.locationIcon
@@ -104,12 +104,12 @@ function U(e) {
                     if (g) {
                         let e = w.intl.string(w.t.ZYO5OD);
                         return (
-                            (null == a ? void 0 : a.speaker) ? (e = w.intl.string(w.t['/cnSFR'])) : null != a && (e = w.intl.string(w.t.btSGOj)),
+                            (null == l ? void 0 : l.speaker) ? (e = w.intl.string(w.t['/cnSFR'])) : null != l && (e = w.intl.string(w.t.btSGOj)),
                             {
                                 noticeType: 0,
                                 title: n.topic,
                                 location: i.name,
-                                locationIcon: (0, l.jsx)(u.StageIcon, {
+                                locationIcon: (0, a.jsx)(u.StageIcon, {
                                     size: 'custom',
                                     color: 'currentColor',
                                     width: 16,
@@ -123,17 +123,17 @@ function U(e) {
                                 overflowUsers:
                                     c < 1
                                         ? null
-                                        : (0, l.jsxs)('div', {
+                                        : (0, a.jsxs)('div', {
                                               className: k.pill,
                                               children: [
-                                                  (0, l.jsx)(u.HeadphonesIcon, {
+                                                  (0, a.jsx)(u.HeadphonesIcon, {
                                                       size: 'custom',
                                                       color: 'currentColor',
                                                       width: 12,
                                                       height: 12,
                                                       className: k.pillIcon
                                                   }),
-                                                  (0, l.jsx)(u.Text, {
+                                                  (0, a.jsx)(u.Text, {
                                                       variant: 'text-xs/medium',
                                                       color: 'header-secondary',
                                                       className: k.pillLabel,
@@ -148,12 +148,12 @@ function U(e) {
                     if (t.entity_type === M.WX.STAGE_INSTANCE && g) {
                         let e = w.intl.string(w.t.ZYO5OD);
                         return (
-                            (null == a ? void 0 : a.speaker) ? (e = w.intl.string(w.t['/cnSFR'])) : null != a && (e = w.intl.string(w.t.btSGOj)),
+                            (null == l ? void 0 : l.speaker) ? (e = w.intl.string(w.t['/cnSFR'])) : null != l && (e = w.intl.string(w.t.btSGOj)),
                             {
                                 noticeType: 0,
                                 title: n.topic,
                                 location: i.name,
-                                locationIcon: (0, l.jsx)(u.StageIcon, {
+                                locationIcon: (0, a.jsx)(u.StageIcon, {
                                     size: 'custom',
                                     color: 'currentColor',
                                     width: 16,
@@ -167,17 +167,17 @@ function U(e) {
                                 overflowUsers:
                                     c < 1
                                         ? null
-                                        : (0, l.jsxs)('div', {
+                                        : (0, a.jsxs)('div', {
                                               className: k.pill,
                                               children: [
-                                                  (0, l.jsx)(u.HeadphonesIcon, {
+                                                  (0, a.jsx)(u.HeadphonesIcon, {
                                                       size: 'custom',
                                                       color: 'currentColor',
                                                       width: 12,
                                                       height: 12,
                                                       className: k.pillIcon
                                                   }),
-                                                  (0, l.jsx)(u.Text, {
+                                                  (0, a.jsx)(u.Text, {
                                                       variant: 'text-xs/medium',
                                                       color: 'header-secondary',
                                                       className: k.pillLabel,
@@ -196,7 +196,7 @@ function U(e) {
                             noticeType: 1,
                             title: t.name,
                             location: (0, I.m)(e, !0),
-                            locationIcon: (0, l.jsx)(u.LocationIcon, {
+                            locationIcon: (0, a.jsx)(u.LocationIcon, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 16,
@@ -210,17 +210,17 @@ function U(e) {
                             overflowUsers:
                                 n < 1
                                     ? null
-                                    : (0, l.jsxs)('div', {
+                                    : (0, a.jsxs)('div', {
                                           className: k.pill,
                                           children: [
-                                              (0, l.jsx)(u.StarIcon, {
+                                              (0, a.jsx)(u.StarIcon, {
                                                   size: 'custom',
                                                   color: 'currentColor',
                                                   width: 12,
                                                   height: 12,
                                                   className: k.pillIcon
                                               }),
-                                              (0, l.jsx)(u.Text, {
+                                              (0, a.jsx)(u.Text, {
                                                   variant: 'text-xs/medium',
                                                   color: 'header-secondary',
                                                   className: k.pillLabel,
@@ -238,7 +238,7 @@ function U(e) {
                             location: i.name,
                             locationIcon:
                                 null != e
-                                    ? (0, l.jsx)(e, {
+                                    ? (0, a.jsx)(e, {
                                           size: 'xs',
                                           color: 'currentColor',
                                           className: k.locationIcon
@@ -251,17 +251,17 @@ function U(e) {
                             overflowUsers:
                                 n < 1
                                     ? null
-                                    : (0, l.jsxs)('div', {
+                                    : (0, a.jsxs)('div', {
                                           className: k.pill,
                                           children: [
-                                              (0, l.jsx)(u.StarIcon, {
+                                              (0, a.jsx)(u.StarIcon, {
                                                   size: 'custom',
                                                   color: 'currentColor',
                                                   width: 12,
                                                   height: 12,
                                                   className: k.pillIcon
                                               }),
-                                              (0, l.jsx)(u.Text, {
+                                              (0, a.jsx)(u.Text, {
                                                   variant: 'text-xs/medium',
                                                   color: 'header-secondary',
                                                   className: k.pillLabel,
@@ -290,30 +290,30 @@ function U(e) {
     );
     return null == K
         ? null
-        : (0, l.jsxs)('div', {
+        : (0, a.jsxs)('div', {
               className: k.container,
               children: [
                   null != en
-                      ? (0, l.jsx)(u.Clickable, {
+                      ? (0, a.jsx)(u.Clickable, {
                             onClick: en,
                             className: k.close,
                             'aria-label': w.intl.string(w.t.WAI6xs),
-                            children: (0, l.jsx)(u.XSmallIcon, {
+                            children: (0, a.jsx)(u.XSmallIcon, {
                                 size: 'md',
                                 color: 'currentColor',
                                 className: k.closeIcon
                             })
                         })
                       : null,
-                  (0, l.jsxs)('div', {
+                  (0, a.jsxs)('div', {
                       className: k.header,
                       children: [
-                          (0, l.jsx)(j.Z, {
+                          (0, a.jsx)(j.Z, {
                               color: d.Z.unsafe_rawColors.GREEN_230.css,
                               width: 16,
                               height: 16
                           }),
-                          (0, l.jsx)(u.Text, {
+                          (0, a.jsx)(u.Text, {
                               variant: 'text-xs/semibold',
                               color: 'text-positive',
                               children: w.intl.string(w.t.dI3q4u)
@@ -321,16 +321,16 @@ function U(e) {
                       ]
                   }),
                   (ee.length > 0 || null != et) &&
-                      (0, l.jsxs)('div', {
+                      (0, a.jsxs)('div', {
                           className: k.participants,
                           children: [
                               ee.map((e) =>
-                                  (0, l.jsx)(
+                                  (0, a.jsx)(
                                       u.Popout,
                                       {
                                           preload: () => (0, L.Z)(e, { guildId: t.id }),
                                           renderPopout: (n) =>
-                                              (0, l.jsx)(R.Z, {
+                                              (0, a.jsx)(R.Z, {
                                                   ...n,
                                                   userId: e.id,
                                                   guildId: t.id,
@@ -338,7 +338,7 @@ function U(e) {
                                               }),
                                           position: 'right',
                                           children: (n) =>
-                                              (0, l.jsx)(u.Avatar, {
+                                              (0, a.jsx)(u.Avatar, {
                                                   ...n,
                                                   src: e.getAvatarURL(t.id, 24),
                                                   'aria-label': e.username,
@@ -352,17 +352,17 @@ function U(e) {
                               et
                           ]
                       }),
-                  (0, l.jsx)(u.Text, {
+                  (0, a.jsx)(u.Text, {
                       variant: 'text-md/medium',
                       color: 'header-primary',
                       className: o()(k.title, k.live),
                       children: q
                   }),
-                  (0, l.jsxs)('div', {
+                  (0, a.jsxs)('div', {
                       className: k.locationContainer,
                       children: [
                           Q,
-                          (0, l.jsx)(u.Text, {
+                          (0, a.jsx)(u.Text, {
                               variant: 'text-xs/normal',
                               color: 'text-muted',
                               className: k.location,
@@ -371,7 +371,7 @@ function U(e) {
                       ]
                   }),
                   J || 1 === K
-                      ? (0, l.jsx)(u.Button, {
+                      ? (0, a.jsx)(u.Button, {
                             size: u.Button.Sizes.SMALL,
                             color: u.Button.Colors.GREEN,
                             onClick: () => {

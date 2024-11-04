@@ -1,7 +1,7 @@
 n(47120);
 var r = n(147913),
     i = n(604375),
-    a = n(828354);
+    a = n(268004);
 class s extends r.Z {
     handleVoiceChannelSelect() {
         a.M.trigger();

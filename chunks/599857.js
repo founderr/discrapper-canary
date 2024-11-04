@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    l = n(29978),
-    a = n(780384),
+    a = n(29978),
+    l = n(780384),
     s = n(481060),
     o = n(756148),
     c = n(981631);
@@ -37,8 +37,8 @@ function d(e) {
 }
 let u = (e) => {
     let { theme: t, ...n } = e,
-        r = (0, a.wj)(t) ? 'dark' : 'light';
-    return (0, i.jsx)(l.Z, {
+        r = (0, l.wj)(t) ? 'dark' : 'light';
+    return (0, i.jsx)(a.Z, {
         sitekey: c.OL7,
         ...n,
         theme: r

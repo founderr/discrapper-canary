@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(100527),
-    l = n(906732),
-    a = n(82950),
+    a = n(906732),
+    l = n(82950),
     s = n(26323),
     o = n(267642),
     c = n(981631),
@@ -18,8 +18,8 @@ var r = n(100527),
 function p(e) {
     let { guild: t, markAsDismissed: n } = e,
         p = (0, o.KK)(t, c.Eu4.TIER_2),
-        { analyticsLocations: g } = (0, l.ZP)(r.Z.GUILD_BANNER_NOTICE);
-    return (0, i.jsx)(a.Z, {
+        { analyticsLocations: g } = (0, a.ZP)(r.Z.GUILD_BANNER_NOTICE);
+    return (0, i.jsx)(l.Z, {
         guild: t,
         onDismissed: () => n(d.L.UNKNOWN),
         cta: h.intl.string(h.t['oPAx7+']),

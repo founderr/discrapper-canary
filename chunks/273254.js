@@ -6,15 +6,15 @@ n.d(t, {
     n(47120);
 var i = n(192379),
     r = n(468194),
-    l = n(645896),
-    a = n(559469),
+    a = n(645896),
+    l = n(559469),
     s = n(308083),
     o = n(388032);
 function c(e) {
     let { guild: t } = e,
-        n = (0, a.n)(),
-        c = (0, l.Cc)(null == t ? void 0 : t.id),
-        [d, u] = (0, l.L_)(null == t ? void 0 : t.id);
+        n = (0, l.n)(),
+        c = (0, a.Cc)(null == t ? void 0 : t.id),
+        [d, u] = (0, a.L_)(null == t ? void 0 : t.id);
     return (
         i.useEffect(() => {
             !d && null != t && u();

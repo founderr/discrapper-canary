@@ -1,12 +1,12 @@
 n.d(t, {
     v: function () {
-        return l;
+        return a;
     }
 });
 var i = n(200651);
 n(192379);
 var r = n(481060);
-function l(e) {
+function a(e) {
     (0, r.openModalLazy)(
         async () => {
             let { default: t } = await n.e('8102').then(n.bind(n, 674189));

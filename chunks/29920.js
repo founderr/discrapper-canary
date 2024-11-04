@@ -1,20 +1,20 @@
 n.d(t, {
     H: function () {
-        return a;
+        return l;
     }
 });
 var i = n(544891),
     r = n(960048),
-    l = n(981631);
-async function a(e) {
-    let { userTrialOffer: t, userDiscount: n, userDiscountOffer: a } = e;
+    a = n(981631);
+async function l(e) {
+    let { userTrialOffer: t, userDiscount: n, userDiscountOffer: l } = e;
     try {
         let e = await i.tn.post({
-            url: l.ANM.PREMIUM_MARKETING,
+            url: a.ANM.PREMIUM_MARKETING,
             body: {
                 user_trial_offer: t,
                 user_discount: n,
-                user_discount_offer: a
+                user_discount_offer: l
             }
         });
         if (e.ok) return e.body;

@@ -28,7 +28,7 @@ let i = 1060,
         [''.concat(r.T.BREAKFAST)]: [n(289901), n(402344)],
         [''.concat(r.T.FALL)]: [n(432170), n(15888)],
         [''.concat(r.T.WINTER)]: [n(304088), n(774694)],
-        [''.concat(r.T.MONSTERS)]: [n(16724), n(441506)]
+        [''.concat(r.T.MONSTERS)]: [n(857578), n(441506)]
     },
     d = (t) => {
         var e;

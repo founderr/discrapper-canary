@@ -1,28 +1,28 @@
 var i,
     r,
-    l = n(200651);
+    a = n(200651);
 n(192379);
-var a = n(120356),
-    s = n.n(a),
+var l = n(120356),
+    s = n.n(l),
     o = n(873546),
     c = n(481060),
     d = n(886733);
 function u(e) {
-    let { icon: t, tooltip: n, onClick: i, actionType: r = 2, shouldHighlight: a } = e;
-    return (0, l.jsx)(c.Tooltip, {
+    let { icon: t, tooltip: n, onClick: i, actionType: r = 2, shouldHighlight: l } = e;
+    return (0, a.jsx)(c.Tooltip, {
         text: n,
         children: (e) =>
-            (0, l.jsx)(c.Clickable, {
+            (0, a.jsx)(c.Clickable, {
                 ...e,
                 'aria-label': n,
                 onClick: i,
                 className: s()(d.actionButton, {
                     [d.actionAccept]: 0 === r,
                     [d.actionDeny]: 1 === r,
-                    [d.highlight]: a,
+                    [d.highlight]: l,
                     [d.actionButtonMobile]: o.tq
                 }),
-                children: (0, l.jsx)(t, {
+                children: (0, a.jsx)(t, {
                     className: d.icon,
                     color: 'currentColor'
                 })

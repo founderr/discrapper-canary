@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(481060),
     o = n(55935),
     c = n(981631),
@@ -15,7 +15,7 @@ var i = n(200651),
 let h = (e) => {
         let { IconComponent: t, className: n } = e;
         return (0, i.jsx)('div', {
-            className: a()(u.iconCircle, n),
+            className: l()(u.iconCircle, n),
             children: (0, i.jsx)(t, {
                 className: u.icon,
                 color: 'currentColor'
@@ -23,9 +23,9 @@ let h = (e) => {
         });
     },
     m = (e) => {
-        let { circle: t, smallHeader: n, text: r, className: l } = e;
+        let { circle: t, smallHeader: n, text: r, className: a } = e;
         return (0, i.jsxs)('div', {
-            className: a()(u.recommendationReason, l),
+            className: l()(u.recommendationReason, a),
             children: [
                 t,
                 (0, i.jsxs)('div', {

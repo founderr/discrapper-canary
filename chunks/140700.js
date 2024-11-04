@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(481060),
-    a = n(89182),
+    a = n(481060),
+    l = n(89182),
     s = n(706454),
     o = n(164991),
     c = n(783393),
@@ -18,16 +18,16 @@ var i = n(200651),
 function p(e) {
     let { count: t, categoryId: n } = e,
         r = t.toLocaleString(s.default.locale),
-        a = (0, c.E)({ categoryId: n });
+        l = (0, c.E)({ categoryId: n });
     return (0, i.jsxs)('div', {
         className: m.label,
         children: [
-            (0, i.jsx)(l.Text, {
+            (0, i.jsx)(a.Text, {
                 variant: 'text-sm/medium',
                 color: 'header-primary',
-                children: a
+                children: l
             }),
-            (0, i.jsx)(l.Text, {
+            (0, i.jsx)(a.Text, {
                 variant: 'text-sm/normal',
                 color: 'text-muted',
                 children: r
@@ -70,12 +70,12 @@ function g(e) {
         : (0, i.jsxs)('div', {
               className: m.container,
               children: [
-                  (0, i.jsx)(l.Text, {
+                  (0, i.jsx)(a.Text, {
                       variant: 'text-sm/medium',
                       color: 'text-secondary',
                       children: h.intl.string(h.t.f09BQE)
                   }),
-                  (0, i.jsx)(a.Z, {
+                  (0, i.jsx)(l.Z, {
                       className: m.filter,
                       items: _,
                       title: g,

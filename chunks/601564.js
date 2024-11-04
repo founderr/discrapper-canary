@@ -7,8 +7,8 @@ n.r(t),
     n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(593473),
-    a = n(512969),
+    a = n(593473),
+    l = n(512969),
     s = n(442837),
     o = n(930118),
     c = n(355467),
@@ -94,10 +94,10 @@ class y extends r.PureComponent {
                         match: {
                             params: { skuId: t, applicationId: n, slug: r }
                         },
-                        location: a
+                        location: l
                     } = e,
                     { width: s } = this.props,
-                    o = (0, l.parse)(a.search);
+                    o = (0, a.parse)(l.search);
                 return (0, i.jsx)(d.Z, {
                     page: N.ZY5.STORE_LISTING,
                     root: !0,
@@ -105,16 +105,16 @@ class y extends r.PureComponent {
                         skuId: t,
                         applicationId: n,
                         slug: r,
-                        location: a,
+                        location: l,
                         storeListingId: o.store_listing_id,
                         pageSize: Z(s)
                     })
                 });
             }),
             b(this, 'renderContent', () =>
-                (0, i.jsxs)(a.rs, {
+                (0, i.jsxs)(l.rs, {
                     children: [
-                        (0, i.jsx)(a.AW, {
+                        (0, i.jsx)(l.AW, {
                             path: N.Z5c.APPLICATION_STORE,
                             exact: !0,
                             render: () =>
@@ -124,26 +124,26 @@ class y extends r.PureComponent {
                                     children: (0, i.jsx)(C.Z, {})
                                 })
                         }),
-                        (0, i.jsx)(a.AW, {
+                        (0, i.jsx)(l.AW, {
                             path: N.Z5c.APPLICATION_STORE_LISTING_APPLICATION(':applicationId', ':slug'),
                             render: this.renderStoreListing
                         }),
-                        (0, i.jsx)(a.AW, {
+                        (0, i.jsx)(l.AW, {
                             path: N.Z5c.APPLICATION_STORE_LISTING_APPLICATION(':applicationId'),
                             render: this.renderStoreListing
                         }),
-                        (0, i.jsx)(a.AW, {
+                        (0, i.jsx)(l.AW, {
                             path: N.Z5c.APPLICATION_STORE_LISTING_SKU(':skuId', ':slug'),
                             render: this.renderStoreListing
                         }),
-                        (0, i.jsx)(a.AW, {
+                        (0, i.jsx)(l.AW, {
                             path: N.Z5c.APPLICATION_STORE_LISTING_SKU(':skuId'),
                             render: this.renderStoreListing
                         }),
-                        (0, i.jsx)(a.l_, { to: N.Z5c.APP })
+                        (0, i.jsx)(l.l_, { to: N.Z5c.APP })
                     ]
                 })
             );
     }
 }
-t.default = (0, a.EN)((0, u.Z)((0, h.Z)(y)));
+t.default = (0, l.EN)((0, u.Z)((0, h.Z)(y)));

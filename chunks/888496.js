@@ -141,7 +141,7 @@ function p(e) {
                     {
                         className: a,
                         label: T.intl.format(T.t['Y88M5+'], { count: s }),
-                        imageSrc: t(448238),
+                        imageSrc: t(738535),
                         imageAlt: T.intl.string(T.t.HKUEZm)
                     },
                     d.PC.STEAM_ITEM_COUNT_DOTA2

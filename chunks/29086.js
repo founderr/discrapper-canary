@@ -6,12 +6,12 @@ n.d(t, {
     n(733860);
 var i = n(192379),
     r = n(963202),
-    l = n(169559),
-    a = n(726115),
+    a = n(169559),
+    l = n(726115),
     s = n(859921),
     o = n(128449);
 function c() {
-    let e = (0, l.Z)('global_discovery'),
+    let e = (0, a.Z)('global_discovery'),
         { enableClanCreation: t } = (0, r.C3)({
             location: 'global_discovery',
             includeConverted: !0,
@@ -28,7 +28,7 @@ function c() {
                 e || t || n ? i.unshift(o.vf.GUILDS) : i.unshift(o.vf.FEATURED),
                 i.map((e) => ({
                     id: e,
-                    label: (0, a.vb)(e)
+                    label: (0, l.vb)(e)
                 }))
             );
         }, [t, e, n]),

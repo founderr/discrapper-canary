@@ -1,11 +1,11 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(442837),
     o = n(481060),
-    c = n(758059),
+    c = n(529103),
     d = n(194359),
     u = n(410575),
     h = n(607070),
@@ -28,7 +28,7 @@ var i = n(200651),
     y = n(388032),
     L = n(522756);
 t.Z = function (e) {
-    let { sectionFilter: t, titleId: l } = e,
+    let { sectionFilter: t, titleId: a } = e,
         { analyticsLocations: R } = (0, p.ZP)(m.Z.FRIENDS_LIST),
         { rows: P, section: O } = (0, s.cj)([E.ZP], () => E.ZP.getState()),
         j = (0, s.e7)([I.Z], () => I.Z.isFocused()),
@@ -94,7 +94,7 @@ t.Z = function (e) {
             section: Z.jXE.FRIENDS_LIST,
             children: [
                 (0, i.jsx)(o.SearchBar, {
-                    className: a()(L.searchBar, F ? L.searchEmptyState : null),
+                    className: l()(L.searchBar, F ? L.searchEmptyState : null),
                     query: M[t],
                     onChange: U,
                     onClear: G,
@@ -104,7 +104,7 @@ t.Z = function (e) {
                     className: L.sectionTitle,
                     children: [
                         (0, i.jsx)(x.Z, {
-                            id: l,
+                            id: a,
                             title: (function (e, t) {
                                 switch (e) {
                                     case Z.pJs.ONLINE:

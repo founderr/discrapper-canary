@@ -2,32 +2,32 @@ n(47120);
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    l = n(570140),
-    a = n(317770),
+    a = n(570140),
+    l = n(317770),
     s = n(314897),
     o = n(592125),
     c = n(797258),
     d = n(590415),
     u = n(981631);
 let h = 'STAGE_INVITED_TO_SPEAK_MODAL';
-class m extends a.Z {
+class m extends l.Z {
     _initialize() {
-        l.Z.subscribe('VOICE_STATE_UPDATES', this.handleVoiceStateUpdates);
+        a.Z.subscribe('VOICE_STATE_UPDATES', this.handleVoiceStateUpdates);
     }
     _terminate() {
-        l.Z.unsubscribe('VOICE_STATE_UPDATES', this.handleVoiceStateUpdates);
+        a.Z.unsubscribe('VOICE_STATE_UPDATES', this.handleVoiceStateUpdates);
     }
     constructor(...e) {
-        var t, l, a;
+        var t, a, l;
         super(...e),
             (t = this),
-            (l = 'handleVoiceStateUpdates'),
-            (a = (e) => {
+            (a = 'handleVoiceStateUpdates'),
+            (l = (e) => {
                 var t;
-                let { voiceStates: l } = e,
-                    a = s.default.getId(),
+                let { voiceStates: a } = e,
+                    l = s.default.getId(),
                     m = null === (t = c.Z.getSession()) || void 0 === t ? void 0 : t.sessionId,
-                    p = l.find((e) => e.userId === a && e.sessionId === m);
+                    p = a.find((e) => e.userId === l && e.sessionId === m);
                 if (null == p) return;
                 let g = p.channelId;
                 if (null == g) {
@@ -55,14 +55,14 @@ class m extends a.Z {
                     );
                 }
             }),
-            l in t
-                ? Object.defineProperty(t, l, {
-                      value: a,
+            a in t
+                ? Object.defineProperty(t, a, {
+                      value: l,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[l] = a);
+                : (t[a] = l);
     }
 }
 t.Z = new m();

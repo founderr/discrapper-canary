@@ -1,7 +1,7 @@
 var i,
     r,
-    l,
     a,
+    l,
     s = n(442837),
     o = n(433517),
     c = n(570140);
@@ -15,7 +15,7 @@ function m(e) {
         [t]: !1
     };
 }
-class p extends (a = s.ZP.Store) {
+class p extends (l = s.ZP.Store) {
     shouldShowGuildTemplateDirtyTooltip(e) {
         var t;
         return null !== (t = u[e]) && void 0 !== t && t;
@@ -24,15 +24,15 @@ class p extends (a = s.ZP.Store) {
         return !h;
     }
 }
-(l = 'GuildTemplateTooltipStore'),
+(a = 'GuildTemplateTooltipStore'),
     (r = 'displayName') in (i = p)
         ? Object.defineProperty(i, r, {
-              value: l,
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[r] = l),
+        : (i[r] = a),
     (t.Z = new p(c.Z, {
         GUILD_TEMPLATE_DIRTY_TOOLTIP_REFRESH: function (e) {
             let { guildTemplate: t } = e;

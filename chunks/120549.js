@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(442837),
     o = n(481060),
     c = n(894653),
@@ -15,14 +15,14 @@ var i = n(200651),
     u = n(706454),
     h = n(93651);
 function m(e) {
-    let { category: t, count: n, onSelectCategory: l, selected: s } = e,
+    let { category: t, count: n, onSelectCategory: a, selected: s } = e,
         c = r.useCallback(() => {
-            l(t.id);
-        }, [t.id, l]),
+            a(t.id);
+        }, [t.id, a]),
         d = n.toLocaleString(u.default.locale);
     return (0, i.jsxs)(o.Clickable, {
         onClick: c,
-        className: a()(h.category, { [h.selected]: s }),
+        className: l()(h.category, { [h.selected]: s }),
         children: [
             (0, i.jsx)(o.Text, {
                 className: h.name,
@@ -40,25 +40,25 @@ function m(e) {
     });
 }
 function p(e) {
-    let { countsByCategory: t, onSelectCategory: n, selectedCategoryId: l } = e,
-        a = (0, s.e7)([c.Z], () => c.Z.getCategories()),
-        o = r.useMemo(() => [(0, d.KQ)(), ...a], [a]);
+    let { countsByCategory: t, onSelectCategory: n, selectedCategoryId: a } = e,
+        l = (0, s.e7)([c.Z], () => c.Z.getCategories()),
+        o = r.useMemo(() => [(0, d.KQ)(), ...l], [l]);
     return (0, i.jsx)('div', {
         className: h.categories,
         children: o.map((e) => {
             var r;
-            let a = e.id,
-                s = null !== (r = t[a]) && void 0 !== r ? r : 0;
+            let l = e.id,
+                s = null !== (r = t[l]) && void 0 !== r ? r : 0;
             return 0 !== s
                 ? (0, i.jsx)(
                       m,
                       {
                           category: e,
                           count: s,
-                          selected: a === l,
+                          selected: l === a,
                           onSelectCategory: n
                       },
-                      a
+                      l
                   )
                 : null;
         })

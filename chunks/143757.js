@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(442837),
     o = n(481060),
     c = n(493683),
@@ -36,15 +36,15 @@ async function L(e, t, n) {
     let i = e.bot;
     if (null == i)
         try {
-            var r, l, a;
-            i = null !== (a = null === (r = x.Z.getApplication(e.id)) || void 0 === r ? void 0 : r.bot) && void 0 !== a ? a : null === (l = I.Z.createFromServer(await (0, T.UM)(e.id))) || void 0 === l ? void 0 : l.bot;
+            var r, a, l;
+            i = null !== (l = null === (r = x.Z.getApplication(e.id)) || void 0 === r ? void 0 : r.bot) && void 0 !== l ? l : null === (a = I.Z.createFromServer(await (0, T.UM)(e.id))) || void 0 === a ? void 0 : a.bot;
         } catch (e) {
             t(void 0);
             return;
         }
     if (null != i) {
         let r,
-            l = null == C.Z.getDMFromUserId(i.id);
+            a = null == C.Z.getDMFromUserId(i.id);
         try {
             r = await c.Z.openPrivateChannel([i.id], !1, !1, h.Z.APP_DMS_QUICK_LAUNCHER);
         } catch (e) {
@@ -53,7 +53,7 @@ async function L(e, t, n) {
         if (
             (v.default.track(b.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
                 application_id: e.id,
-                is_new_dm: l,
+                is_new_dm: a,
                 channel_id: r
             }),
             null == r)
@@ -81,14 +81,14 @@ async function L(e, t, n) {
     } else t(void 0);
 }
 function R(e) {
-    let { application: t, loadingAppId: n, setLoadingAppId: r, botUserId: l, analyticsLocations: c } = e,
-        u = (0, s.e7)([C.Z], () => C.Z.getDMFromUserId(l)),
+    let { application: t, loadingAppId: n, setLoadingAppId: r, botUserId: a, analyticsLocations: c } = e,
+        u = (0, s.e7)([C.Z], () => C.Z.getDMFromUserId(a)),
         h = (0, s.e7)([d.ZP], () => d.ZP.getCurrentEmbeddedActivity()),
         m = null != h && h.applicationId === t.id && h.channelId === u,
         p = n === t.id,
         f = null != n;
     return (0, i.jsx)(o.Clickable, {
-        className: a()(Z.clickable, { [Z.disabledClickable]: f }),
+        className: l()(Z.clickable, { [Z.disabledClickable]: f }),
         onClick: () => (m || f ? null : L(t, r, c)),
         'aria-label': A.intl.formatToPlainString(A.t['zLhr9/'], {
             applicationName: t.name,
@@ -123,7 +123,7 @@ function R(e) {
     });
 }
 function P(e) {
-    let { frecentApps: t, loadingAppId: n, setLoadingAppId: r, analyticsLocations: l } = e;
+    let { frecentApps: t, loadingAppId: n, setLoadingAppId: r, analyticsLocations: a } = e;
     return (0, i.jsx)('div', {
         className: Z.itemContainer,
         children: t.map((e) => {
@@ -135,7 +135,7 @@ function P(e) {
                     loadingAppId: n,
                     setLoadingAppId: r,
                     botUserId: null === (t = e.bot) || void 0 === t ? void 0 : t.id,
-                    analyticsLocations: l
+                    analyticsLocations: a
                 },
                 e.id
             );
@@ -150,7 +150,7 @@ function O() {
             allowCommandFetch: e,
             includeAuthorizedAppsAndFetch: !1
         }),
-        [n, l] = r.useState(void 0),
+        [n, a] = r.useState(void 0),
         { analyticsLocations: s } = (0, m.ZP)(h.Z.APP_DMS_QUICK_LAUNCHER),
         o = e && t.length > 0,
         [c, d] = r.useState(!1),
@@ -168,7 +168,7 @@ function O() {
     }, [o, u, c]),
     o)
         ? (0, i.jsx)(E.Z, {
-              className: a()(Z.headerContainer, y.privateChannelsHeaderContainer),
+              className: l()(Z.headerContainer, y.privateChannelsHeaderContainer),
               children: (0, i.jsxs)('div', {
                   className: Z.container,
                   children: [
@@ -182,7 +182,7 @@ function O() {
                       (0, i.jsx)(P, {
                           frecentApps: u,
                           loadingAppId: n,
-                          setLoadingAppId: l,
+                          setLoadingAppId: a,
                           analyticsLocations: s
                       })
                   ]

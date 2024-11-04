@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    l = n(873546),
-    a = n(442837),
+    a = n(873546),
+    l = n(442837),
     s = n(481060),
     o = n(355467),
     c = n(270237),
@@ -30,11 +30,11 @@ var i = n(200651),
     A = n(752335);
 function Z(e) {
     let { guildId: t } = e,
-        n = (0, a.e7)([f.Z], () => f.Z.getGuild(t), [t]),
-        Z = (0, a.e7)([p.Z], () => p.Z.isConnected()),
+        n = (0, l.e7)([f.Z], () => f.Z.getGuild(t), [t]),
+        Z = (0, l.e7)([p.Z], () => p.Z.isConnected()),
         y = (0, h.Z)(t),
         L = (0, I.Z)(t),
-        R = (0, a.e7)([_.Z], () => _.Z.isSubscriptionFetching),
+        R = (0, l.e7)([_.Z], () => _.Z.isSubscriptionFetching),
         P = (0, E.f)(),
         { shouldHideGuildPurchaseEntryPoints: O, restrictionsLoading: j } = (0, m.uP)(t),
         D = null == n || !P || R || j;
@@ -42,16 +42,16 @@ function Z(e) {
         subsection: b.intl.string(b.t['KzCF//']),
         location: null == n ? void 0 : n.name
     }),
-        (0, c.Z)(l.tq ? 'role-subscriptions-overview' : void 0);
+        (0, c.Z)(a.tq ? 'role-subscriptions-overview' : void 0);
     let M = Z && (null == n || !(y || L) || (O && !j));
     if (
         (r.useEffect(() => {
             o.jg();
         }, []),
         r.useEffect(() => {
-            M && !l.tq && (0, u.M)(t, x.oC.ROLE_SUBSCRIPTIONS);
+            M && !a.tq && (0, u.M)(t, x.oC.ROLE_SUBSCRIPTIONS);
         }, [t, M]),
-        l.tq && M)
+        a.tq && M)
     ) {
         let e = null == n ? S.J.NOT_GUILD_MEMBER : S.J.GUILD_NOT_ELIGIBLE;
         return (0, i.jsx)(S.z, { errorType: e });

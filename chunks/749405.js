@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    l = n(481060),
-    a = n(359110),
+    a = n(481060),
+    l = n(359110),
     s = n(6025),
     o = n(433355),
     c = n(26373),
@@ -18,13 +18,13 @@ function p(e) {
     let { active: t, user: n, channel: p } = e,
         g = (0, c.K)(),
         f = r.useCallback(() => {
-            (0, l.showToast)((0, l.createToast)(h.intl.string(h.t.EDYbS0), l.ToastType.FAILURE));
+            (0, a.showToast)((0, a.createToast)(h.intl.string(h.t.EDYbS0), a.ToastType.FAILURE));
         }, []),
         _ = r.useCallback(() => {
             s.Z.closeChannelSidebar(o.uZ);
         }, []),
         E = r.useCallback(() => {
-            s.Z.closeChannelSidebar(o.uZ), g && (0, a.Kh)(p.id);
+            s.Z.closeChannelSidebar(o.uZ), g && (0, l.Kh)(p.id);
         }, [p.id, g]),
         {
             acceptMessageRequest: I,
@@ -52,10 +52,10 @@ function p(e) {
             (0, i.jsxs)('div', {
                 className: m.actions,
                 children: [
-                    (0, i.jsx)(l.Button, {
+                    (0, i.jsx)(a.Button, {
                         className: m.button,
-                        color: l.ButtonColors.PRIMARY,
-                        size: l.Button.Sizes.SMALL,
+                        color: a.ButtonColors.PRIMARY,
+                        size: a.Button.Sizes.SMALL,
                         onClick: (e) => {
                             e.stopPropagation(), C(p.id);
                         },
@@ -63,10 +63,10 @@ function p(e) {
                         submitting: S || x,
                         children: h.intl.string(h.t.B2nygY)
                     }),
-                    (0, i.jsx)(l.Button, {
+                    (0, i.jsx)(a.Button, {
                         className: m.button,
-                        color: l.ButtonColors.BRAND,
-                        size: l.Button.Sizes.SMALL,
+                        color: a.ButtonColors.BRAND,
+                        size: a.Button.Sizes.SMALL,
                         onClick: (e) => {
                             e.stopPropagation(), I(p.id);
                         },

@@ -1,7 +1,7 @@
 var i = n(200651),
     r = n(192379),
-    l = n(924826),
-    a = n(91192),
+    a = n(924826),
+    l = n(91192),
     s = n(442837),
     o = n(481060),
     c = n(607070),
@@ -11,10 +11,10 @@ t.Z = function (e) {
     let { statusSections: t, renderRow: n, searchQuery: h, footer: m } = e,
         p = (e) => {
             let { section: i, row: r } = e,
-                l = t[i];
-            if (null == l || null == r) return null;
-            let a = l[r];
-            return null == a ? null : n(a);
+                a = t[i];
+            if (null == a || null == r) return null;
+            let l = a[r];
+            return null == l ? null : n(l);
         },
         g = (0, s.e7)([c.Z], () => c.Z.keyboardModeEnabled),
         f = r.useRef(null),
@@ -47,16 +47,16 @@ t.Z = function (e) {
                     callback: () => (null == t ? void 0 : t.focus())
                 });
         }, []),
-        C = (0, l.ZP)({
+        C = (0, a.ZP)({
             id: 'people-list',
             isEnabled: g,
             scrollToStart: _,
             scrollToEnd: E,
             setFocus: I
         });
-    return (0, i.jsx)(a.bG, {
+    return (0, i.jsx)(l.bG, {
         navigator: C,
-        children: (0, i.jsx)(a.SJ, {
+        children: (0, i.jsx)(l.SJ, {
             children: (e) => {
                 let { ref: n, ...r } = e;
                 return (0, i.jsxs)(i.Fragment, {

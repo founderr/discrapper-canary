@@ -1,8 +1,8 @@
 n(653041);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(392711),
     o = n.n(s),
     c = n(442837),
@@ -47,14 +47,14 @@ class Z extends r.PureComponent {
     }
     componentDidUpdate(e, t) {
         let { ready: n, hide: i, problems: r } = this.state,
-            { connected: l, soundpack: a } = this.props,
-            s = l && n && !i && !r;
-        e.soundpack !== a && (this._connectedSound = this.createSound()),
-            e.connected !== l || s
-                ? (l && null != this.videoRef && d.K.get(T.wli) && this._connectedSound.play(),
+            { connected: a, soundpack: l } = this.props,
+            s = a && n && !i && !r;
+        e.soundpack !== l && (this._connectedSound = this.createSound()),
+            e.connected !== a || s
+                ? (a && null != this.videoRef && d.K.get(T.wli) && this._connectedSound.play(),
                   this.setState({
                       problems: !1,
-                      hide: l
+                      hide: a
                   }))
                 : t.hide !== i
                   ? (i ? this.clearProblemsTimeout() : this.setProblemsTimeout(), this.setState({ shouldRender: !0 }), setTimeout(() => this.setState({ shouldRender: !i }), 200))
@@ -69,10 +69,10 @@ class Z extends r.PureComponent {
         if (!this.state.shouldRender) return null;
         {
             let r = this._loadingText,
-                l = null;
+                a = null;
             return (
                 null != this._eventLoadingText && (r = this._eventLoadingText),
-                null != t && ((r = t.name), (l = t.incident_updates[0].body)),
+                null != t && ((r = t.name), (a = t.incident_updates[0].body)),
                 (0, i.jsxs)('div', {
                     className: b.container,
                     'data-fade': n,
@@ -89,7 +89,7 @@ class Z extends r.PureComponent {
                                     loop: !e,
                                     setRef: this.setVideoRef,
                                     onReady: this.handleReady,
-                                    className: a()(b.spinner, this.state.ready ? b.ready : '')
+                                    className: l()(b.spinner, this.state.ready ? b.ready : '')
                                 }),
                                 (0, i.jsxs)('div', {
                                     className: b.text,
@@ -106,14 +106,14 @@ class Z extends r.PureComponent {
                                         }),
                                         (0, i.jsx)('div', {
                                             className: b.body,
-                                            children: l
+                                            children: a
                                         })
                                     ]
                                 })
                             ]
                         }),
                         (0, i.jsxs)('div', {
-                            className: a()(b.problems, { [b.slideIn]: this.state.problems }),
+                            className: l()(b.problems, { [b.slideIn]: this.state.problems }),
                             children: [
                                 (0, i.jsx)('div', {
                                     className: b.problemsText,
@@ -378,11 +378,11 @@ t.Z = c.ZP.connectStores([p.Z, E.Z, f.Z, m.Z], () => ({
     soundpack: f.Z.getSoundpack(),
     reducedMotion: m.Z.useReducedMotion
 }))((e) => {
-    let { isTryingToConnect: t, connected: n, incident: r, soundpack: l, reducedMotion: a } = e;
+    let { isTryingToConnect: t, connected: n, incident: r, soundpack: a, reducedMotion: l } = e;
     return t
         ? (0, i.jsx)(Z, {
-              reducedMotion: a,
-              soundpack: l,
+              reducedMotion: l,
+              soundpack: a,
               connected: n,
               incident: r
           })

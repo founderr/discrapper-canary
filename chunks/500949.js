@@ -100,8 +100,8 @@ var r,
     Z = n(596136),
     R = n(341901),
     O = n(856308),
-    B = n(665352),
-    A = n(394900),
+    A = n(665352),
+    B = n(394900),
     L = n(661105),
     P = n(525169),
     M = n(433517),
@@ -136,7 +136,7 @@ let H = {
         XYZ_D65: O.Z
     },
     U = Object.fromEntries(Object.keys(H).map((e) => [e, e]));
-Object.values(H).forEach((e) => B.Z.register(e));
+Object.values(H).forEach((e) => A.Z.register(e));
 let { SemanticColors: G } = D.V,
     z = G,
     V = CSS.supports('color', 'color(display-p3 1 0 0)') && CSS.supports('color', 'color(display-p3 1 0 0 / 1)');
@@ -188,7 +188,7 @@ function X(e) {
     };
 }
 function q(e) {
-    return (0, A.Z)((0, L.Z)(e, s.Z), { format: 'hex' });
+    return (0, B.Z)((0, L.Z)(e, s.Z), { format: 'hex' });
 }
 function $() {
     return (function (e, t) {

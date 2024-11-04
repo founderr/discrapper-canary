@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(442837),
     o = n(433517),
     c = n(481060),
@@ -15,7 +15,7 @@ let g = 'isHideDevBanner';
 t.Z = () => {
     var e;
     let [t, n] = (0, r.useState)((null === (e = o.K.get(g, 'false')) || void 0 === e ? void 0 : e.toString()) === 'true'),
-        l = (0, s.e7)([d.C], () => {
+        a = (0, s.e7)([d.C], () => {
             var e;
             return (0, u.fD)() ? (null === (e = d.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         });
@@ -34,15 +34,15 @@ t.Z = () => {
                     className: p.closeIcon
                 })
             });
-    return null != l
+    return null != a
         ? (0, i.jsxs)('div', {
-              className: a()(p.devBanner, p.buildOverride),
+              className: l()(p.devBanner, p.buildOverride),
               children: [(0, i.jsx)(h.Z, { className: p.icon }), m.intl.string(m.t.Wj3LW1), (0, i.jsx)(_, {})]
           })
         : 'staging' === window.GLOBAL_ENV.RELEASE_CHANNEL
           ? (0, i.jsxs)('div', {
-                className: a()(p.devBanner, p.staging),
-                children: [(0, i.jsx)(h.Z, { className: p.icon }), m.intl.format(m.t.uyrfYG, { buildNumber: '341479' }), (0, i.jsx)(_, {})]
+                className: l()(p.devBanner, p.staging),
+                children: [(0, i.jsx)(h.Z, { className: p.icon }), m.intl.format(m.t.uyrfYG, { buildNumber: '341559' }), (0, i.jsx)(_, {})]
             })
           : null;
 };

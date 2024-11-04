@@ -1,7 +1,7 @@
 var i = n(200651),
     r = n(192379),
-    l = n(442837),
-    a = n(481060),
+    a = n(442837),
+    l = n(481060),
     s = n(150192),
     o = n(164991),
     c = n(726115),
@@ -12,7 +12,7 @@ var i = n(200651),
 t.Z = function (e) {
     let { loadId: t } = e,
         n = (0, o.lZ)(),
-        p = (0, l.e7)([s.Z], () => s.Z.getCategoryName(n)),
+        p = (0, a.e7)([s.Z], () => s.Z.getCategoryName(n)),
         g = r.useCallback(() => {
             (0, o.LD)({ categoryId: d.Hk }),
                 (0, c.oT)({
@@ -32,12 +32,12 @@ t.Z = function (e) {
                 src: m,
                 className: h.image
             }),
-            (0, i.jsx)(a.Heading, {
+            (0, i.jsx)(l.Heading, {
                 variant: 'heading-xl/semibold',
                 className: h.header,
                 children: f
             }),
-            (0, i.jsx)(a.Text, {
+            (0, i.jsx)(l.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
                 children: _

@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(887003),
     o = n(442837),
     c = n(780384),
@@ -22,7 +22,7 @@ var i = n(200651),
     N = n(388032),
     T = n(874976);
 t.Z = (0, r.memo)(function (e) {
-    var t, n, l, x, b;
+    var t, n, a, x, b;
     let { quest: A } = e,
         [Z, y] = (0, r.useState)(!1),
         [L, R] = (0, r.useState)(24),
@@ -41,7 +41,7 @@ t.Z = (0, r.memo)(function (e) {
         V = A.config.rewards[H],
         F = (null == V ? void 0 : V.type) === s.w.COLLECTIBLE,
         { product: z } = (0, p.T)(F && null != V ? V.skuId : null),
-        Y = null == z ? void 0 : null === (l = z.items) || void 0 === l ? void 0 : l[0];
+        Y = null == z ? void 0 : null === (a = z.items) || void 0 === a ? void 0 : a[0];
     (0, u.P)(j, (e) => {
         let { height: t } = e;
         if (!F || null == t || null == D.current || null == j.current || null == M.current) return;
@@ -80,7 +80,7 @@ t.Z = (0, r.memo)(function (e) {
                   onBlur: J,
                   onMouseEnter: Q,
                   onMouseLeave: J,
-                  className: a()(T.container, { [T.hovered]: Z }),
+                  className: l()(T.container, { [T.hovered]: Z }),
                   children: [
                       null != w &&
                           F &&
@@ -113,7 +113,7 @@ t.Z = (0, r.memo)(function (e) {
                                 onError: () => $(q.url)
                             }),
                       (0, i.jsx)('div', {
-                          className: a()(T.overlay, {
+                          className: l()(T.overlay, {
                               [T.darkThemeGradient]: W,
                               [T.lightThemeGradient]: !W
                           })

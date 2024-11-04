@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    l = n(442837),
-    a = n(224706),
+    a = n(442837),
+    l = n(224706),
     s = n(931240),
     o = n(650461),
     c = n(598131),
@@ -18,7 +18,7 @@ var i = n(200651),
     g = n(388032);
 function f(e) {
     let t = (0, o.Wg)(),
-        { progress: n, errors: i } = (0, l.cj)([o.ZP], () => {
+        { progress: n, errors: i } = (0, a.cj)([o.ZP], () => {
             var n;
             let i = o.ZP.getStateForGuild(e);
             return {
@@ -36,24 +36,24 @@ let _ = {
     [p.Wy.GAMES]: function (e) {
         let { guildId: t } = e;
         r.useEffect(() => {
-            a.Z.getDetectableGames();
+            l.Z.getDetectableGames();
         }, []);
-        let { progress: n, errors: l, handleClanUpdate: s } = f(t);
+        let { progress: n, errors: a, handleClanUpdate: s } = f(t);
         return (0, i.jsx)(u.Z, {
             title: g.intl.string(g.t.t6Mbq6),
             description: g.intl.string(g.t.E7Ymwc),
             onUpdateGames: (e) => s({ gameApplicationIds: e }),
             gameApplicationIds: n.gameApplicationIds,
-            error: null == l ? void 0 : l.gameApplicationIds,
+            error: null == a ? void 0 : a.gameApplicationIds,
             guildId: t,
             includeSuggestedGames: !0
         });
     },
     [p.Wy.CUSTOMIZE_TAG_BADGE]: function (e) {
         let { guildId: t } = e,
-            { progress: n, errors: r, handleClanUpdate: l } = f(t);
+            { progress: n, errors: r, handleClanUpdate: a } = f(t);
         return (0, i.jsx)(h.Z, {
-            handleUpdate: l,
+            handleUpdate: a,
             tag: n.tag,
             error: null == r ? void 0 : r.tag,
             badge: n.badgeKind,
@@ -91,25 +91,25 @@ function I(e) {
 function C(e) {
     let { guildId: t } = e,
         n = (0, o.Wg)(),
-        a = (0, l.e7)([o.ZP], () => {
+        l = (0, a.e7)([o.ZP], () => {
             var e, i, r;
             return null !== (r = null === (i = o.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : null === (e = i.progress) || void 0 === e ? void 0 : e.currentStep) && void 0 !== r ? r : n.currentStep;
         });
     r.useEffect(() => {
         var e;
-        if (((e = a), !_.hasOwnProperty(e))) s.LX();
-    }, [a]);
+        if (((e = l), !_.hasOwnProperty(e))) s.LX();
+    }, [l]);
     let c = r.useMemo(
         () => [
             {
-                currentStep: a,
+                currentStep: l,
                 guildId: t
             }
         ],
-        [a, t]
+        [l, t]
     );
     return (0, i.jsx)(m.Z, {
-        currentStep: a,
+        currentStep: l,
         items: c,
         renderItem: I,
         getItemKey: E

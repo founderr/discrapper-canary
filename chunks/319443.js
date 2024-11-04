@@ -1,7 +1,7 @@
 var i = n(200651),
     r = n(192379),
-    l = n(481060),
-    a = n(674588),
+    a = n(481060),
+    l = n(674588),
     s = n(979233),
     o = n(88693),
     c = n(611928),
@@ -21,10 +21,10 @@ t.Z = function () {
     let { onScroll: e, scrollPosition: t, resetScrollPosition: n } = (0, s.M)(),
         { tabs: S, selectedTab: N, onSelectTab: T } = (0, m.i)();
     r.useEffect(() => {
-        a.CP();
+        l.CP();
     }, []),
         r.useEffect(() => {
-            a.g5();
+            l.g5();
         }, []);
     let { searchQuery: x, searchFetchedQuery: b, onSearchTextChange: A, onClearSearch: Z, onSearchSubmit: y, hasSearchView: L } = (0, h.M)(),
         {
@@ -61,11 +61,11 @@ t.Z = function () {
                             k ? 'apps' : ''
                         ),
                     (0, i.jsx)(c.aV, {
-                        icon: U || k ? l.ArrowLargeLeftIcon : l.AppsIcon,
+                        icon: U || k ? a.ArrowLargeLeftIcon : a.AppsIcon,
                         onClick: k ? M : U ? Z : void 0
                     }),
                     k || U
-                        ? (0, i.jsx)(l.Heading, {
+                        ? (0, i.jsx)(a.Heading, {
                               variant: 'heading-lg/semibold',
                               color: 'header-primary',
                               className: v.alternateHeader,

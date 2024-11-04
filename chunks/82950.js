@@ -1,7 +1,7 @@
 var i = n(200651),
     r = n(192379),
-    l = n(392711),
-    a = n.n(l),
+    a = n(392711),
+    l = n.n(a),
     s = n(481060),
     o = n(367907),
     c = n(626135),
@@ -10,9 +10,9 @@ var i = n(200651),
     h = n(981631),
     m = n(388032),
     p = n(768336);
-let g = a().debounce(o.ZP.trackWithMetadata, 500),
+let g = l().debounce(o.ZP.trackWithMetadata, 500),
     f = (e) => {
-        let { guild: t, title: n, message: l, image: a, type: d, imageMarginX: u, imageMarginTop: f, trackingSource: _, undismissable: E, onDismissed: I, onClick: C, cta: v, ctaColor: S } = e;
+        let { guild: t, title: n, message: a, image: l, type: d, imageMarginX: u, imageMarginTop: f, trackingSource: _, undismissable: E, onDismissed: I, onClick: C, cta: v, ctaColor: S } = e;
         r.useEffect(() => {
             g(h.rMx.CHANNEL_NOTICE_VIEWED, {
                 notice_type: d,
@@ -66,7 +66,7 @@ let g = a().debounce(o.ZP.trackWithMetadata, 500),
                     },
                     children: (0, i.jsx)('img', {
                         className: p.image,
-                        src: a,
+                        src: l,
                         alt: ''
                     })
                 }),
@@ -82,7 +82,7 @@ let g = a().debounce(o.ZP.trackWithMetadata, 500),
                             : null,
                         (0, i.jsx)(s.Text, {
                             variant: 'text-sm/normal',
-                            children: l
+                            children: a
                         }),
                         N
                     ]

@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    l = n(709014);
-let a = {
+    a = n(709014);
+let l = {
         disable: {
             name: 'disable',
             start: 0,
@@ -57,12 +57,12 @@ let a = {
             play: o,
             Component: r.useCallback(
                 (e) =>
-                    (0, i.jsx)(l.L, {
+                    (0, i.jsx)(a.L, {
                         ...e,
                         src: () => n.e('7584').then(n.t.bind(n, 883488, 19)),
                         ref: t,
                         initialAnimation: s.current,
-                        markers: a
+                        markers: l
                     }),
                 []
             )

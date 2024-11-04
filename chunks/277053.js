@@ -1,7 +1,7 @@
 let i, r;
 n(47120);
-var l,
-    a,
+var a,
+    l,
     s,
     o,
     c = n(392711),
@@ -34,7 +34,7 @@ function L() {
     let e = T.getGuildId();
     (N = S = y(T)), null == S[b] && (b = e), (r = null != x), (i = p.o4(T, x)), (A = null), (v = !1), (C = _.QZA.CLOSED), I.clear();
 }
-class R extends (l = u.ZP.Store) {
+class R extends (a = u.ZP.Store) {
     initialize() {
         this.waitFor(g.Z, f.Z);
     }
@@ -76,14 +76,14 @@ class R extends (l = u.ZP.Store) {
     }
 }
 (o = 'ChannelSettingsPermissionsStore'),
-    (s = 'displayName') in (a = R)
-        ? Object.defineProperty(a, s, {
+    (s = 'displayName') in (l = R)
+        ? Object.defineProperty(l, s, {
               value: o,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[s] = o),
+        : (l[s] = o),
     (t.Z = new R(m.Z, {
         CHANNEL_SETTINGS_SET_SECTION: function (e) {
             let { section: t } = e;
@@ -93,16 +93,16 @@ class R extends (l = u.ZP.Store) {
         CHANNEL_SETTINGS_PERMISSIONS_INIT: L,
         CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION: function (e) {
             let { id: t, allow: n, deny: r } = e,
-                l = null == S ? void 0 : S[t];
-            if (null == l || null == T) return !1;
-            (l = {
-                ...l,
+                a = null == S ? void 0 : S[t];
+            if (null == a || null == T) return !1;
+            (a = {
+                ...a,
                 allow: n,
                 deny: r
             }),
                 (S = {
                     ...S,
-                    [t]: l
+                    [t]: a
                 }),
                 I.add(t),
                 (C = _.QZA.OPEN),

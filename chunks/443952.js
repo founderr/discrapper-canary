@@ -2,8 +2,8 @@ n(47120), n(411104), n(789020);
 var i = n(200651);
 n(192379);
 var r = n(243814),
-    l = n(45792),
-    a = n(481060),
+    a = n(45792),
+    l = n(481060),
     s = n(278323),
     o = n(988298),
     c = n(224706),
@@ -32,19 +32,19 @@ var r = n(243814),
     P = n(981631);
 async function O(e, t, n, i) {
     let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : '',
-        l = E.Z.getApplicationActivity(t);
-    if (null == l || null == l.secrets || !(0, b.t9)(i, l.party, l.secrets)) throw new x.Z({ errorCode: P.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
-    let a = (0, p.Z)(l, I.Z);
-    if (a) {
+        a = E.Z.getApplicationActivity(t);
+    if (null == a || null == a.secrets || !(0, b.t9)(i, a.party, a.secrets)) throw new x.Z({ errorCode: P.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
+    let l = (0, p.Z)(a, I.Z);
+    if (l) {
         let { lock: t } = (0, L.jU)(e);
-        return (0, o.h7)(l, a).then(() => {
+        return (0, o.h7)(a, l).then(() => {
             throw (t(), new x.Z({ errorCode: P.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure user does have have privacy enabled.'));
         });
     }
     await s.Z.sendActivityInviteUser({
         userId: n,
         type: i,
-        activity: l,
+        activity: a,
         content: r,
         location: 'In-Game Invite'
     });
@@ -92,11 +92,11 @@ t.Z = {
         handler(e) {
             let {
                     socket: t,
-                    args: { type: n, user_id: i, content: r, pid: l }
+                    args: { type: n, user_id: i, content: r, pid: a }
                 } = e,
-                a = t.application.id;
-            if (null == a) throw new x.Z({ errorCode: P.lTL.INVALID_COMMAND }, 'No application.');
-            return O(l, a, i, n, r);
+                l = t.application.id;
+            if (null == l) throw new x.Z({ errorCode: P.lTL.INVALID_COMMAND }, 'No application.');
+            return O(a, l, i, n, r);
         }
     },
     [P.Etm.ACCEPT_ACTIVITY_INVITE]: {
@@ -116,7 +116,7 @@ t.Z = {
         handler(e) {
             let {
                     socket: t,
-                    args: { type: n, user_id: i, session_id: r, channel_id: l, message_id: a }
+                    args: { type: n, user_id: i, session_id: r, channel_id: a, message_id: l }
                 } = e,
                 s = t.application.id;
             if (null == s) throw new x.Z({ errorCode: P.lTL.INVALID_COMMAND }, 'No application.');
@@ -126,8 +126,8 @@ t.Z = {
                     userId: i,
                     sessionId: r,
                     applicationId: s,
-                    channelId: l,
-                    messageId: a
+                    channelId: a,
+                    messageId: l
                 });
             return o.then((e) => {
                 if (!e) throw new x.Z({ errorCode: P.lTL.INVALID_INVITE }, 'Invite is expired or invalid.');
@@ -140,29 +140,29 @@ t.Z = {
         },
         handler(e) {
             let { socket: t } = e,
-                { channel: r, guild: l } = (0, y.T)(),
+                { channel: r, guild: a } = (0, y.T)(),
                 s = f.Z.getWindow(P.KJ3.CHANNEL_CALL_POPOUT);
             (null == s ? void 0 : s.closed) && (s = null);
             let o = null != s ? P.IlC.POPOUT : P.IlC.APP;
             (0, T.Pr)({}, null == s ? void 0 : s.document),
-                (0, a.openModalLazy)(
+                (0, l.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([n.e('7654'), n.e('85683')]).then(n.bind(n, 560114));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
-                                guild: l,
+                                guild: a,
                                 channel: r,
                                 applicationId: t.application.id,
                                 analyticsLocation: P.Sbl.ACTIVITY_RPC,
                                 source: P.t4x.ACTIVITY_INVITE
                             });
                     },
-                    { contextKey: o === P.IlC.POPOUT ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT }
+                    { contextKey: o === P.IlC.POPOUT ? l.POPOUT_MODAL_CONTEXT : l.DEFAULT_MODAL_CONTEXT }
                 );
         }
     },
-    [P.Etm.INITIATE_IMAGE_UPLOAD]: (0, l.S)(P.Etm.INITIATE_IMAGE_UPLOAD, {
+    [P.Etm.INITIATE_IMAGE_UPLOAD]: (0, a.S)(P.Etm.INITIATE_IMAGE_UPLOAD, {
         scope: {
             [R.Gp.ANY]: [r.x.RPC, R.lH, R.wE]
         },
@@ -179,28 +179,28 @@ t.Z = {
                     let i = C.Z.getLastFocusedWindowId(),
                         r = null == i ? null : null === (n = (0, h.g0)(i)) || void 0 === n ? void 0 : n.renderWindow;
                     if (null == r) throw new x.Z({ errorCode: P.lTL.UNKNOWN_ERROR }, 'No valid window found');
-                    let l = r.document.createElement('input');
-                    (l.style.display = 'none'), (l.type = 'file'), (l.accept = 'image/jpeg, image/jpg, image/png, image/gif');
-                    let a = () => {
-                        (null == l.files || 0 === l.files.length) && t(),
-                            r.document.body.removeEventListener('focus', a, !0),
+                    let a = r.document.createElement('input');
+                    (a.style.display = 'none'), (a.type = 'file'), (a.accept = 'image/jpeg, image/jpg, image/png, image/gif');
+                    let l = () => {
+                        (null == a.files || 0 === a.files.length) && t(),
+                            r.document.body.removeEventListener('focus', l, !0),
                             setTimeout(() => {
-                                r.document.body.removeChild(l);
+                                r.document.body.removeChild(a);
                             }, 1000);
                     };
-                    l.addEventListener('change', () => {
-                        (0, S.lm)(l.files) && e(l.files[0]), a();
+                    a.addEventListener('change', () => {
+                        (0, S.lm)(a.files) && e(a.files[0]), l();
                     }),
-                        l.addEventListener('cancel', () => {
-                            a();
+                        a.addEventListener('cancel', () => {
+                            l();
                         }),
-                        r.document.body.addEventListener('focus', a, !0),
-                        r.document.body.appendChild(l),
-                        l.click();
+                        r.document.body.addEventListener('focus', l, !0),
+                        r.document.body.appendChild(a),
+                        a.click();
                 })(
                     async (n) => {
-                        let l = await (0, m.kv)(i, r, n);
-                        (0, S.lm)(l) && (0, S.lm)(l.url) && !(l instanceof u.Z) ? e({ image_url: l.url }) : t(l);
+                        let a = await (0, m.kv)(i, r, n);
+                        (0, S.lm)(a) && (0, S.lm)(a.url) && !(a instanceof u.Z) ? e({ image_url: a.url }) : t(a);
                     },
                     () => t(Error('Upload canceled'))
                 );
@@ -210,7 +210,7 @@ t.Z = {
             });
         }
     }),
-    [P.Etm.OPEN_SHARE_MOMENT_DIALOG]: (0, l.S)(P.Etm.OPEN_SHARE_MOMENT_DIALOG, {
+    [P.Etm.OPEN_SHARE_MOMENT_DIALOG]: (0, a.S)(P.Etm.OPEN_SHARE_MOMENT_DIALOG, {
         scope: { [R.Gp.ANY]: [R.wE] },
         handler(e) {
             var t;
@@ -222,12 +222,12 @@ t.Z = {
             let r = n.application.id;
             if (null == r) throw new x.Z({ errorCode: P.lTL.INVALID_COMMAND }, 'No application.');
             if (!(0, v.yE)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, P.udG.EMBEDDED)) throw new x.Z({ errorCode: P.lTL.INVALID_COMMAND }, 'This application cannot access this API');
-            let l = (0, Z.Z)();
-            if (null == l) throw new x.Z({ errorCode: P.lTL.INVALID_COMMAND }, 'No channel found');
+            let a = (0, Z.Z)();
+            if (null == a) throw new x.Z({ errorCode: P.lTL.INVALID_COMMAND }, 'No channel found');
             if (!N.Z.isDiscordCdnUrl(i)) throw new x.Z({ errorCode: P.lTL.INVALID_PAYLOAD }, 'mediaUrl must be a Discord CDN url');
             (0, g.Z)({
                 applicationId: r,
-                channelId: l.id,
+                channelId: a.id,
                 mediaUrl: i
             });
         }

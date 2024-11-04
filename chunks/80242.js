@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(192379),
     r = n(970606),
-    l = n(41152),
-    a = n(116175),
+    a = n(41152),
+    l = n(116175),
     s = n(308083);
 let o = [s.Wy.GAMES, s.Wy.CUSTOMIZE_TAG_BADGE, s.IS.CUSTOMIZE_DISCOVERY, s.IS.THANK_YOU_END];
 function c(e) {
@@ -18,7 +18,7 @@ function c(e) {
                     case s.Wy.GAMES:
                         (0, r.Gx)({
                             guildId: t,
-                            signupPage: (0, l.F)(e),
+                            signupPage: (0, a.F)(e),
                             actionType: r.eI.CHOOSE_GAME_IDS,
                             gameApplicationIds: Array.from(n.gameApplicationIds),
                             inSettings: c
@@ -27,10 +27,10 @@ function c(e) {
                     case s.Wy.CUSTOMIZE_TAG_BADGE:
                         (0, r.Gx)({
                             guildId: t,
-                            signupPage: (0, l.F)(e),
+                            signupPage: (0, a.F)(e),
                             actionType: r.eI.UPDATE_GUILD_IDENTITY,
                             guildTag: n.tag,
-                            badgeName: (0, a.VF)(n.badgeKind),
+                            badgeName: (0, l.VF)(n.badgeKind),
                             badgePrimaryColor: n.badgePrimaryColor,
                             badgeSecondaryColor: n.badgeSecondaryColor,
                             inSettings: c

@@ -1,8 +1,8 @@
 n(47120);
 var i = n(594174),
     r = n(768581),
-    l = n(956664),
-    a = n(996106),
+    a = n(956664),
+    l = n(996106),
     s = n(452426),
     o = n(186901),
     c = n(981631);
@@ -29,12 +29,12 @@ t.Z = {
                     t = r.ZP.getUserAvatarURL(e, !1, d, o);
                     let n = window.GLOBAL_ENV.CDN_HOST;
                     null != n && -1 !== t.indexOf(n) && (t += '&_=');
-                } else throw new a.Z({ errorCode: c.lTL.INVALID_USER }, 'Invalid user id: '.concat(s));
+                } else throw new l.Z({ errorCode: c.lTL.INVALID_USER }, 'Invalid user id: '.concat(s));
             }
-            if (null == t) throw new a.Z({ errorCode: c.lTL.INVALID_COMMAND }, 'No valid type.');
+            if (null == t) throw new l.Z({ errorCode: c.lTL.INVALID_COMMAND }, 'No valid type.');
             return fetch(t)
                 .then((e) => e.blob())
-                .then((e) => (0, l.fD)(e))
+                .then((e) => (0, a.fD)(e))
                 .then((e) => ({ data_url: e }));
         }
     }

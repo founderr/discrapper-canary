@@ -112,12 +112,12 @@ function E() {
             },
             [E]
         ),
-        B = (0, b.Z)({
+        A = (0, b.Z)({
             applicationId: O,
             location: 'DevToolsContentInventory',
             source: g.m1.DevTools
         }),
-        A = Object.entries(null !== (t = u.K.get('GameProfileModal')) && void 0 !== t ? t : {})
+        B = Object.entries(null !== (t = u.K.get('GameProfileModal')) && void 0 !== t ? t : {})
             .filter((e) => {
                 let [t, n] = e;
                 return n;
@@ -126,7 +126,7 @@ function E() {
                 let [t] = e;
                 return t;
             }),
-        L = (0, f.Z)(A).filter(j.lm);
+        L = (0, f.Z)(B).filter(j.lm);
     return (0, r.jsx)('div', {
         className: i()(I.panel),
         children: (0, r.jsxs)(h.ScrollerThin, {
@@ -200,10 +200,10 @@ function E() {
                             placeholder: 'App ID or full name',
                             onChange: (e) => (0 === e.length || e.length >= 18) && R(e),
                             onKeyDown: (e) => {
-                                'Enter' === e.key && (E === e.currentTarget.value ? null == B || B(e) : R(e.currentTarget.value));
+                                'Enter' === e.key && (E === e.currentTarget.value ? null == A || A(e) : R(e.currentTarget.value));
                             },
-                            error: E.length > 0 && null == B ? 'No game profile for '.concat(null != O ? O : E + ' - try by id', '.') : void 0,
-                            style: null != B ? { border: '1px solid green' } : {}
+                            error: E.length > 0 && null == A ? 'No game profile for '.concat(null != O ? O : E + ' - try by id', '.') : void 0,
+                            style: null != A ? { border: '1px solid green' } : {}
                         }),
                         (0, r.jsx)('ul', { children: L.map((e) => (0, r.jsx)('li', { children: (0, r.jsx)(Z, { application: e }) }, 'follow-game-'.concat(e.id))) })
                     ]

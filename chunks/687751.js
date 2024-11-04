@@ -1,8 +1,8 @@
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    l = n(570140),
-    a = n(317770),
+    a = n(570140),
+    l = n(317770),
     s = n(592125),
     o = n(944486),
     c = n(914010),
@@ -18,12 +18,12 @@ function f(e, t) {
     let i = d.default.getCurrentUser();
     (null === (n = s.Z.getChannel(t)) || void 0 === n ? void 0 : n.isNSFW()) && null != i && null == i.nsfwAllowed && (0, u.mN)(p.L0.NSFW_CHANNEL);
 }
-class _ extends a.Z {
+class _ extends l.Z {
     _initialize() {
-        l.Z.subscribe('CONNECTION_OPEN', this.handleConnectionOpen), l.Z.subscribe('CHANNEL_SELECT', this.handleChannelSelect), l.Z.subscribe('AGE_GATE_MODAL_OPEN', this.handleAgeGateModalOpen), l.Z.subscribe('AGE_GATE_MODAL_CLOSE', this.handleAgeGateModalClose), l.Z.subscribe('AGE_GATE_SUCCESS_MODAL_OPEN', this.handleAgeGateSuccess), l.Z.subscribe('AGE_GATE_FAILURE_MODAL_OPEN', this.handleAgeGateFailure);
+        a.Z.subscribe('CONNECTION_OPEN', this.handleConnectionOpen), a.Z.subscribe('CHANNEL_SELECT', this.handleChannelSelect), a.Z.subscribe('AGE_GATE_MODAL_OPEN', this.handleAgeGateModalOpen), a.Z.subscribe('AGE_GATE_MODAL_CLOSE', this.handleAgeGateModalClose), a.Z.subscribe('AGE_GATE_SUCCESS_MODAL_OPEN', this.handleAgeGateSuccess), a.Z.subscribe('AGE_GATE_FAILURE_MODAL_OPEN', this.handleAgeGateFailure);
     }
     _terminate() {
-        l.Z.unsubscribe('CONNECTION_OPEN', this.handleConnectionOpen), l.Z.unsubscribe('CHANNEL_SELECT', this.handleChannelSelect), l.Z.unsubscribe('AGE_GATE_MODAL_OPEN', this.handleAgeGateModalOpen), l.Z.unsubscribe('AGE_GATE_MODAL_CLOSE', this.handleAgeGateModalClose), l.Z.unsubscribe('AGE_GATE_SUCCESS_MODAL_OPEN', this.handleAgeGateSuccess), l.Z.unsubscribe('AGE_GATE_FAILURE_MODAL_OPEN', this.handleAgeGateFailure);
+        a.Z.unsubscribe('CONNECTION_OPEN', this.handleConnectionOpen), a.Z.unsubscribe('CHANNEL_SELECT', this.handleChannelSelect), a.Z.unsubscribe('AGE_GATE_MODAL_OPEN', this.handleAgeGateModalOpen), a.Z.unsubscribe('AGE_GATE_MODAL_CLOSE', this.handleAgeGateModalClose), a.Z.unsubscribe('AGE_GATE_SUCCESS_MODAL_OPEN', this.handleAgeGateSuccess), a.Z.unsubscribe('AGE_GATE_FAILURE_MODAL_OPEN', this.handleAgeGateFailure);
     }
     handleChannelSelect(e) {
         let { guildId: t, channelId: n } = e;

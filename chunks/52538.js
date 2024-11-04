@@ -1,15 +1,15 @@
 var i = n(200651);
 n(192379);
 var r = n(704215),
-    l = n(765585),
-    a = n(16703),
+    a = n(765585),
+    l = n(16703),
     s = n(300284),
     o = n(388032),
     c = n(343111);
 t.Z = () => {
-    let e = (0, a.Z)(),
+    let e = (0, l.Z)(),
         t = (0, s.Z)({ guild: e });
-    return (0, i.jsx)(l.Z, {
+    return (0, i.jsx)(a.Z, {
         isPremiumFeature: !0,
         shouldUseHorizontalButtons: !0,
         artClassName: c.coachmarkArt,

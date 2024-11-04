@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(481060),
     o = n(706454),
     c = n(164991),
@@ -26,7 +26,7 @@ function p(e) {
         });
 }
 function g(e) {
-    let { loadId: t, categoryId: n, count: l } = e,
+    let { loadId: t, categoryId: n, count: a } = e,
         d = r.useCallback(() => {
             p({
                 categoryId: n,
@@ -34,11 +34,11 @@ function g(e) {
             });
         }, [n, t]),
         h = (0, c.lZ)() === n,
-        g = l.toLocaleString(o.default.locale),
+        g = a.toLocaleString(o.default.locale),
         f = (0, u.E)({ categoryId: n });
     return (0, i.jsxs)(s.Clickable, {
         onClick: d,
-        className: a()(m.category, { [m.selected]: h }),
+        className: l()(m.category, { [m.selected]: h }),
         children: [
             (0, i.jsx)(s.Text, {
                 className: m.name,

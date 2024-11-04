@@ -6,24 +6,24 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(990547),
-    l = n(481060),
-    a = n(313201),
+    a = n(481060),
+    l = n(313201),
     s = n(758119),
     o = n(388032),
     c = n(403252);
 function d(e) {
     let { transitionState: t } = e,
-        d = (0, a.Dt)();
-    return (0, i.jsxs)(l.ModalRoot, {
+        d = (0, l.Dt)();
+    return (0, i.jsxs)(a.ModalRoot, {
         transitionState: t,
-        size: l.ModalSize.SMALL,
+        size: a.ModalSize.SMALL,
         'aria-labelledby': d,
         impression: {
             impressionName: r.ImpressionNames.USER_AGE_GATE,
             impressionProperties: { existing_user: !0 }
         },
         children: [
-            (0, i.jsx)(l.ModalContent, {
+            (0, i.jsx)(a.ModalContent, {
                 children: (0, i.jsxs)('div', {
                     className: c.container,
                     children: [
@@ -32,13 +32,13 @@ function d(e) {
                             src: n(863181),
                             className: c.img
                         }),
-                        (0, i.jsx)(l.Heading, {
+                        (0, i.jsx)(a.Heading, {
                             variant: 'heading-xl/semibold',
                             className: c.title,
                             id: d,
                             children: o.intl.string(o.t.gUiIGR)
                         }),
-                        (0, i.jsx)(l.Text, {
+                        (0, i.jsx)(a.Text, {
                             color: 'header-secondary',
                             className: c.subtitle,
                             variant: 'text-sm/normal',
@@ -47,9 +47,9 @@ function d(e) {
                     ]
                 })
             }),
-            (0, i.jsx)(l.ModalFooter, {
-                children: (0, i.jsx)(l.Button, {
-                    size: l.ButtonSizes.SMALL,
+            (0, i.jsx)(a.ModalFooter, {
+                children: (0, i.jsx)(a.Button, {
+                    size: a.ButtonSizes.SMALL,
                     fullWidth: !0,
                     onClick: function () {
                         (0, s.qV)();

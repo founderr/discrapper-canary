@@ -1,8 +1,8 @@
 n(47120), n(789020), n(411104);
 var i = n(392711),
     r = n.n(i),
-    l = n(243814),
-    a = n(570140),
+    a = n(243814),
+    l = n(570140),
     s = n(626135),
     o = n(81063),
     c = n(70956),
@@ -15,7 +15,7 @@ let g = ['349134787773988865'];
 t.Z = {
     [p.Etm.SET_ACTIVITY]: {
         scope: {
-            [m.Gp.ANY]: [l.x.RPC, l.x.RPC_ACTIVITIES_WRITE, m.lH]
+            [m.Gp.ANY]: [a.x.RPC, a.x.RPC_ACTIVITIES_WRITE, m.lH]
         },
         validation: (e) =>
             (0, h.Z)(e)
@@ -67,17 +67,17 @@ t.Z = {
             let n,
                 {
                     socket: i,
-                    args: { pid: l, activity: h },
+                    args: { pid: a, activity: h },
                     isSocketConnected: f
                 } = e;
             if (![m.He.IPC, m.He.WEBSOCKET, m.He.POST_MESSAGE].includes(i.transport)) throw new d.Z({ errorCode: p.lTL.INVALID_COMMAND }, 'command not available from "'.concat(i.transport, '" transport'));
-            if (null == l && m.He.IPC === i.transport) throw new d.Z({ errorCode: p.lTL.INVALID_COMMAND }, 'nonzero pid required');
+            if (null == a && m.He.IPC === i.transport) throw new d.Z({ errorCode: p.lTL.INVALID_COMMAND }, 'nonzero pid required');
             if (null == h)
                 return (
-                    a.Z.dispatch({
+                    l.Z.dispatch({
                         type: 'LOCAL_ACTIVITY_UPDATE',
                         socketId: i.id,
-                        pid: l,
+                        pid: a,
                         activity: h
                     }),
                     Promise.resolve(h)
@@ -105,10 +105,10 @@ t.Z = {
                 var t, n;
                 let [r, o] = e;
                 if ((null != I && (null != r ? (I.large_image = r) : delete I.large_image, null != o ? (I.small_image = o) : delete I.small_image), !f())) return;
-                a.Z.dispatch({
+                l.Z.dispatch({
                     type: 'LOCAL_ACTIVITY_UPDATE',
                     socketId: i.id,
-                    pid: l,
+                    pid: a,
                     activity: h
                 });
                 let { secrets: c, party: d } = h,

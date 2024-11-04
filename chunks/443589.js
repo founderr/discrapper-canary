@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(100621),
     o = n(990547),
     c = n(873546),
@@ -32,7 +32,7 @@ let A = {
     height: 14
 };
 function Z(e) {
-    let { recipientUser: t, giftIntentType: n, analyticsPage: l, shouldHighlight: Z } = e,
+    let { recipientUser: t, giftIntentType: n, analyticsPage: a, shouldHighlight: Z } = e,
         { analyticsLocations: y } = (0, u.ZP)(),
         { isHovered: L, setIsHovered: R, onMouseEnter: P, onMouseLeave: O } = (0, p.Z)(200, 300),
         { enableEmojiCTA: j } = E.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 });
@@ -67,7 +67,7 @@ function Z(e) {
                     analyticsLocation: (0, C.F)(n).actionButton,
                     analyticsLocations: y,
                     analyticsObject: {
-                        page: l,
+                        page: a,
                         section: N.jXE.FRIENDS_LIST_FRIEND_ROW,
                         object: N.qAy.BUTTON_CTA,
                         objectType: N.Qqv.GIFT
@@ -88,7 +88,7 @@ function Z(e) {
                 ? (0, i.jsx)(d.Clickable, {
                       'aria-label': k(),
                       onClick: M,
-                      className: a()(b.actionButton, x.popoutButton, {
+                      className: l()(b.actionButton, x.popoutButton, {
                           [b.highlight]: Z,
                           [b.actionButtonMobile]: c.tq
                       }),
@@ -140,7 +140,7 @@ function Z(e) {
                 onMouseEnter: P,
                 onMouseLeave: O,
                 popoutPosition: e.position,
-                analyticsPage: l,
+                analyticsPage: a,
                 analyticsSection: N.jXE.FRIENDS_LIST_FRIEND_ROW_GIFT_POPOUT,
                 giftIntentSecondaryAction: S.X2.SEND_MESSAGE,
                 glow: !0

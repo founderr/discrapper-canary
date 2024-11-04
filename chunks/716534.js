@@ -18,7 +18,7 @@ var i = t(200651),
     x = t(672971),
     h = t(128069),
     f = t(987209),
-    v = t(598),
+    v = t(563132),
     g = t(45572),
     S = t(919778),
     j = t(614223),
@@ -234,7 +234,7 @@ function W(e) {
         {
             checkboxLabel: e2,
             checkboxClassname: e9,
-            checkboxLabelClassname: e4
+            checkboxLabelClassname: e3
         } = (function (e, n, t) {
             let i = null,
                 l = null,
@@ -258,9 +258,9 @@ function W(e) {
                 checkboxLabelClassname: r
             };
         })(null != em && em, ew, Y),
-        e8 = G.intl.formatToPlainString(G.t['sBpy9/'], { planName: eA.name });
+        e4 = G.intl.formatToPlainString(G.t['sBpy9/'], { planName: eA.name });
     return (
-        eP && !eU ? (e8 = G.intl.string(G.t.J5a0eX)) : eP && eU ? (e8 = '') : (0, N.PV)(eA.id) && (e8 = N.ZP.getBillingReviewSubheader(null, eA)),
+        eP && !eU ? (e4 = G.intl.string(G.t.J5a0eX)) : eP && eU ? (e4 = '') : (0, N.PV)(eA.id) && (e4 = N.ZP.getBillingReviewSubheader(null, eA)),
         eK
             ? null
             : (0, i.jsxs)('div', {
@@ -315,7 +315,7 @@ function W(e) {
                       !em &&
                           (0, i.jsx)(u.FormTitle, {
                               tag: u.FormTitleTags.H5,
-                              children: e8
+                              children: e4
                           }),
                       eU &&
                           null != eN &&
@@ -392,7 +392,7 @@ function W(e) {
                               forceShow: !0,
                               checkboxLabel: e2,
                               checkboxClassname: e9,
-                              checkboxLabelClassname: e4,
+                              checkboxLabelClassname: e3,
                               finePrint:
                                   null !== (V = !ey && es) && void 0 !== V
                                       ? V

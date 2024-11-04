@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(685072),
-    l = n(287734),
-    a = n(15274),
+    a = n(287734),
+    l = n(15274),
     s = n(389303),
     o = n(881824),
     c = n(719100),
@@ -15,12 +15,12 @@ var r = n(685072),
     u = n(388032);
 function h(e) {
     let { tooltipText: t, onClick: n } = e,
-        l = (0, r.K)();
+        a = (0, r.K)();
     return (0, i.jsx)(d.Z, {
         tooltipText: t,
         onClick: n,
-        ...l.events,
-        icon: l.Component
+        ...a.events,
+        icon: a.Component
     });
 }
 function m(e) {
@@ -32,7 +32,7 @@ function m(e) {
                 (0, o.Us)(t);
                 return;
             }
-            l.default.disconnect();
+            a.default.disconnect();
         }
     });
 }
@@ -42,10 +42,10 @@ function p(e) {
         tooltipText: u.intl.string(u.t['6vrfgo']),
         onClick: () => {
             if ((0, s.Z)(t)) {
-                (0, a.lC)(t);
+                (0, l.lC)(t);
                 return;
             }
-            l.default.disconnect();
+            a.default.disconnect();
         }
     });
 }

@@ -6,9 +6,9 @@ n.d(t, {
     n(47120);
 var i,
     r,
-    l = n(200651);
+    a = n(200651);
 n(192379);
-var a = n(91192),
+var l = n(91192),
     s = n(442837),
     o = n(704215),
     c = n(481060),
@@ -34,7 +34,7 @@ var a = n(91192),
     y = n(655525),
     L = n(314684),
     R = n(52188),
-    P = n(248042),
+    P = n(346497),
     O = n(924540),
     j = n(474486),
     D = n(565626),
@@ -58,15 +58,15 @@ let W = (e) => {
         X = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
         Q = (0, s.e7)([I.ZP], () => I.ZP.getPremiumTypeSubscription()),
         J = (0, v.Qo)(X, Q),
-        $ = (0, a.JA)('nitro'),
+        $ = (0, l.JA)('nitro'),
         ee = (0, Z.N)(),
         et = (0, A.Ng)(),
         en = (0, s.e7)([I.ZP], () => I.ZP.inReverseTrial()),
         ei = (null == ee ? void 0 : ee.trial_id) === G.jz,
         er = (0, s.e7)([E.Z], () => E.Z.isLocalizedPromoEnabled) && null == ee,
-        el = (0, P.Vi)(),
-        { enabled: ea } = (0, N.Z)();
-    (0, u.Z)(new Date(2024, 10, 21), 1000, void 0, !ea);
+        ea = (0, P.Vi)(),
+        { enabled: el } = (0, N.Z)();
+    (0, u.Z)(new Date(2024, 10, 21), 1000, void 0, !el);
     let es = (0, D.ZP)(),
         eo = (0, L.$_)(),
         ec = (0, M.V6)(),
@@ -77,7 +77,7 @@ let W = (e) => {
         ep = (0, s.e7)([f.Z], () => f.Z.hasLayers()),
         { fractionalState: eg, endsAt: ef } = (0, m.Z)({ forceFetch: !0 }),
         e_ = null != em ? em : null == X ? void 0 : X.createdAt,
-        eE = r || null != ee || null != et || el || eu || eh || es || null != eo || null != ec || J,
+        eE = r || null != ee || null != et || ea || eu || eh || es || null != eo || null != ec || J,
         { enabled: eI } = x._.useExperiment({ location: z }, { autoTrackExposure: !1 }),
         { enabled: eC } = T.Z.useExperiment({ location: z }, { autoTrackExposure: !1 }),
         ev = eI && (null == ee ? void 0 : ee.trial_id) === G.a7,
@@ -85,7 +85,7 @@ let W = (e) => {
     if (!(eE = eE || (null != X && null != e_ && Date.now() - e_.getTime() > Y))) return null;
     eg !== G.a$.NONE &&
         ((i = 9),
-        (n = (0, l.jsx)(b.Z, {
+        (n = (0, a.jsx)(b.Z, {
             className: '',
             endsAt: ef,
             messageStyle: h.a.SHORT_TIME,
@@ -93,7 +93,7 @@ let W = (e) => {
         }))),
         ei
             ? ((i = 10),
-              (n = (0, l.jsx)(j.dX, {
+              (n = (0, a.jsx)(j.dX, {
                   isSelected: r,
                   trialOffer: ee,
                   q4MarketingEnabled: eC
@@ -101,23 +101,23 @@ let W = (e) => {
             : eu
               ? ((t = F.referralIncentive), (i = 7))
               : eh
-                ? ((n = (0, l.jsx)(w.Z, { copy: V.intl.string(V.t.jyYgZ2) })), (i = 8))
-                : el
-                  ? ((n = (0, l.jsx)(y.Z, {})), (i = 0))
+                ? ((n = (0, a.jsx)(w.Z, { copy: V.intl.string(V.t.jyYgZ2) })), (i = 8))
+                : ea
+                  ? ((n = (0, a.jsx)(y.Z, {})), (i = 0))
                   : null != eS && eS === o.z.REVERSE_TRIAL_NITRO_TAB_BADGE
-                    ? ((n = (0, l.jsx)(U.Z, {
+                    ? ((n = (0, a.jsx)(U.Z, {
                           copy: V.intl.string(V.t.HwUCnp),
                           showStars: !1
                       })),
                       (i = 4))
                     : null != eo
-                      ? ((n = (0, l.jsx)(w.Z, { copy: eo })), (i = 1))
+                      ? ((n = (0, a.jsx)(w.Z, { copy: eo })), (i = 1))
                       : null != ec
-                        ? ((n = (0, l.jsx)(w.Z, { copy: ec })), (i = 1))
+                        ? ((n = (0, a.jsx)(w.Z, { copy: ec })), (i = 1))
                         : es
-                          ? ((n = (0, l.jsx)(w.Z, {})), (i = 2))
+                          ? ((n = (0, a.jsx)(w.Z, {})), (i = 2))
                           : null != et
-                            ? ((n = (0, l.jsx)(O.GN, {
+                            ? ((n = (0, a.jsx)(O.GN, {
                                   userDiscount: et,
                                   isTabSelected: r,
                                   includesAmountOff: !1
@@ -125,18 +125,18 @@ let W = (e) => {
                               (i = 3))
                             : null == ee || ev
                               ? ed
-                                  ? ((n = (0, l.jsx)(j.lH, {
+                                  ? ((n = (0, a.jsx)(j.lH, {
                                         isSelected: r,
                                         onSelect: () => (0, p.EW)(o.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, { dismissAction: H.L.TAKE_ACTION })
                                     })),
                                     (i = 6))
-                                  : er && ((n = (0, l.jsx)(R.k, { entryPoint: R.U.PrivateMessages })), !r && (t = F.localizeBadge), (i = 5))
-                              : ((n = (0, l.jsx)(O.$H, {
+                                  : er && ((n = (0, a.jsx)(R.k, { entryPoint: R.U.PrivateMessages })), !r && (t = F.localizeBadge), (i = 5))
+                              : ((n = (0, a.jsx)(O.$H, {
                                     trialOffer: ee,
                                     isTabSelected: r
                                 })),
                                 (i = 4));
-    let eT = (0, l.jsx)(d.Qj, {
+    let eT = (0, a.jsx)(d.Qj, {
         selected: r,
         route: W,
         icon: c.NitroWheelIcon,
@@ -155,17 +155,17 @@ let W = (e) => {
         children: n
     });
     return ei && eC
-        ? (0, l.jsx)(j.CI, {
+        ? (0, a.jsx)(j.CI, {
               variant: j.j$.TRIAL_FOR_ALL,
               trialOffer: ee,
               children: eT
           })
         : ed
-          ? (0, l.jsx)(j.CI, {
+          ? (0, a.jsx)(j.CI, {
                 variant: j.j$.REFERRAL_PROGRAM,
                 children: eT
             })
           : eu && !ep
-            ? (0, l.jsx)(j.A7, { children: () => eT })
+            ? (0, a.jsx)(j.A7, { children: () => eT })
             : eT;
 };

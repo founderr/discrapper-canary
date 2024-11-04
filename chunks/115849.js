@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(512722),
     o = n.n(s),
     c = n(481060),
@@ -54,7 +54,7 @@ function S(e, t) {
 function N() {
     let e = r.createRef(),
         t = r.createRef(),
-        [n, l] = r.useReducer(S, E),
+        [n, a] = r.useReducer(S, E),
         { canSend: s, hint: u, success: N, error: T } = n;
     return (
         r.useEffect(() => {
@@ -67,7 +67,7 @@ function N() {
                 !n.includes('#') && n.startsWith('@') && (n = n.substring(1));
                 let i = (0, h.Zy)(n);
                 if (null != i) {
-                    l({
+                    a({
                         type: 'ERROR',
                         text: i
                     });
@@ -78,13 +78,13 @@ function N() {
                     context: { location: 'Add Friend' }
                 }).then(
                     () =>
-                        l({
+                        a({
                             type: 'SUCCESS',
                             text: g.intl.format(g.t.Rtl1Eh, { discordTag: n })
                         }),
                     (e) => {
                         var t;
-                        return l({
+                        return a({
                             type: 'ERROR',
                             text: (0, h.NF)(null === (t = e.body) || void 0 === t ? void 0 : t.code, n)
                         });
@@ -104,7 +104,7 @@ function N() {
                     ringClassName: f.ring,
                     children: (0, i.jsxs)('div', {
                         ref: t,
-                        className: a()(f.addFriendInputWrapper, {
+                        className: l()(f.addFriendInputWrapper, {
                             [f.success]: N,
                             [f.error]: T
                         }),
@@ -121,21 +121,21 @@ function N() {
                                             o()(null != e.current, 'Input is handling keypress when not mounted');
                                             let i = n.indexOf('#'),
                                                 r = e.current.selectionStart,
-                                                l = t.key === p.mR.Backspace || t.key === p.mR.ArrowRight || t.key === p.mR.ArrowLeft,
-                                                a = t.which >= 48 && t.which <= 57;
-                                            null != r && r > i && /^(.+?#\d{4})$/.test(n) && !l ? t.preventDefault() : null != r && r > i && !a && !l && t.preventDefault();
+                                                a = t.key === p.mR.Backspace || t.key === p.mR.ArrowRight || t.key === p.mR.ArrowLeft,
+                                                l = t.which >= 48 && t.which <= 57;
+                                            null != r && r > i && /^(.+?#\d{4})$/.test(n) && !a ? t.preventDefault() : null != r && r > i && !l && !a && t.preventDefault();
                                         }
                                     }
                                 },
                                 onChange: (e) => {
                                     if (e.length <= 0) {
-                                        l({ type: 'RESET' });
+                                        a({ type: 'RESET' });
                                         return;
                                     }
                                     let t = '',
                                         [, n] = e.split('#');
                                     null != n && (t = e + m.LYt.slice(null != n ? n.length + 1 : 0)),
-                                        l({
+                                        a({
                                             type: 'HINT',
                                             text: t
                                         });

@@ -1,8 +1,8 @@
 n(47120), n(653041);
 var i = n(392711),
     r = n.n(i),
-    l = n(442837),
-    a = n(377108),
+    a = n(442837),
+    l = n(377108),
     s = n(433517),
     o = n(709054),
     c = n(48481),
@@ -13,7 +13,7 @@ function m(e) {
     var t;
     let n;
     ((t = n || (n = {})).IMAGE = 'IMAGE'), (t.VIDEO = 'VIDEO');
-    let { state: i } = l.ZP.PersistedStore.migrateAndReadStoreState('GIFFavoritesStore', [
+    let { state: i } = a.ZP.PersistedStore.migrateAndReadStoreState('GIFFavoritesStore', [
         (e) =>
             null == e
                 ? {
@@ -37,9 +37,9 @@ function m(e) {
     return null == i || 0 === i.favorites.length
         ? []
         : i.favorites.map((t, n) => {
-              let r = a.JM.create();
+              let r = l.JM.create();
               return (
-                  (r.format = 'IMAGE' === t.format ? a.EO.IMAGE : 'VIDEO' === t.format ? a.EO.VIDEO : a.EO.NONE),
+                  (r.format = 'IMAGE' === t.format ? l.EO.IMAGE : 'VIDEO' === t.format ? l.EO.VIDEO : l.EO.NONE),
                   (r.src = t.src),
                   (r.width = t.width),
                   (r.height = t.height),
@@ -57,7 +57,7 @@ let p = [
         run(e) {
             let t = m(1);
             if (0 === t.length) return !1;
-            for (let { url: n, favorite: i } of (null == e.favoriteGifs && (e.favoriteGifs = a.wK.create()), (e.favoriteGifs.gifs = {}), t)) e.favoriteGifs.gifs[n] = i;
+            for (let { url: n, favorite: i } of (null == e.favoriteGifs && (e.favoriteGifs = l.wK.create()), (e.favoriteGifs.gifs = {}), t)) e.favoriteGifs.gifs[n] = i;
             return (e.favoriteGifs.hideTooltip = t.length > 2), !0;
         },
         cleanup() {}
@@ -71,10 +71,10 @@ let p = [
                     favorites: []
                 };
             }
-            let { state: n } = l.ZP.PersistedStore.migrateAndReadStoreState('StickersPersistedStore', [(e) => (null == e || 0 === Object.keys(e).length ? t() : e), (e) => (null == e || 0 === Object.keys(e).length ? t() : (null == e.favorites && (e.favorites = []), e))]);
+            let { state: n } = a.ZP.PersistedStore.migrateAndReadStoreState('StickersPersistedStore', [(e) => (null == e || 0 === Object.keys(e).length ? t() : e), (e) => (null == e || 0 === Object.keys(e).length ? t() : (null == e.favorites && (e.favorites = []), e))]);
             if (null == n) return !1;
             let i = !1;
-            return n.favorites.length > 0 && ((e.favoriteStickers = a.Lt.create()), (e.favoriteStickers.stickerIds = r().uniq(n.favorites).slice(0, d.oX)), (i = !0)), r().size(n.usageHistory) > 0 && ((e.stickerFrecency = a.ls.create()), (e.stickerFrecency.stickers = (0, c.tU)(n.usageHistory, 100)), (i = !0)), i;
+            return n.favorites.length > 0 && ((e.favoriteStickers = l.Lt.create()), (e.favoriteStickers.stickerIds = r().uniq(n.favorites).slice(0, d.oX)), (i = !0)), r().size(n.usageHistory) > 0 && ((e.stickerFrecency = l.ls.create()), (e.stickerFrecency.stickers = (0, c.tU)(n.usageHistory, 100)), (i = !0)), i;
         },
         cleanup() {
             s.K.remove('StickersPersistedStore');
@@ -83,10 +83,10 @@ let p = [
     {
         version: 4,
         run(e) {
-            let { state: t } = l.ZP.PersistedStore.migrateAndReadStoreState('EmojiStore', [() => ({ usageHistory: s.K.get('EmojiUsageHistory') || {} })]);
+            let { state: t } = a.ZP.PersistedStore.migrateAndReadStoreState('EmojiStore', [() => ({ usageHistory: s.K.get('EmojiUsageHistory') || {} })]);
             if (null == t) return !1;
             let n = !1;
-            return null != t.favorites && t.favorites.length > 0 && ((e.favoriteEmojis = a.ND.create()), (e.favoriteEmojis.emojis = r().uniq(t.favorites).slice(0, d.oX)), (n = !0)), r().size(t.usageHistory) > 0 && ((e.emojiFrecency = a.PL.create()), (e.emojiFrecency.emojis = (0, c.tU)(t.usageHistory, 100)), (n = !0)), n;
+            return null != t.favorites && t.favorites.length > 0 && ((e.favoriteEmojis = l.ND.create()), (e.favoriteEmojis.emojis = r().uniq(t.favorites).slice(0, d.oX)), (n = !0)), r().size(t.usageHistory) > 0 && ((e.emojiFrecency = l.PL.create()), (e.emojiFrecency.emojis = (0, c.tU)(t.usageHistory, 100)), (n = !0)), n;
         },
         cleanup() {
             s.K.remove('EmojiStore'), s.K.remove('EmojiUsageHistory'), s.K.remove('EmojiDiversitySurrogate');
@@ -95,27 +95,27 @@ let p = [
     {
         version: 6,
         run(e) {
-            null == e.favoriteGifs && (e.favoriteGifs = a.wK.create()), null == e.favoriteGifs.gifs && (e.favoriteGifs.gifs = {});
+            null == e.favoriteGifs && (e.favoriteGifs = l.wK.create()), null == e.favoriteGifs.gifs && (e.favoriteGifs.gifs = {});
             let t = m(1);
             if (0 === t.length) return !1;
             r()(e.favoriteGifs.gifs)
                 .values()
                 .sortBy('order')
                 .forEach((e, n) => (e.order = t.length + 1 + n));
-            let n = a.wK.toBinary(e.favoriteGifs).length,
+            let n = l.wK.toBinary(e.favoriteGifs).length,
                 i = 0;
-            for (let { url: r, favorite: l } of t) {
-                if (((l.order = t.length - i), i++, r in e.favoriteGifs.gifs)) {
-                    e.favoriteGifs.gifs[r].order = l.order;
+            for (let { url: r, favorite: a } of t) {
+                if (((a.order = t.length - i), i++, r in e.favoriteGifs.gifs)) {
+                    e.favoriteGifs.gifs[r].order = a.order;
                     continue;
                 }
-                let s = a.JM.toBinary(l).length + r.length + 7;
-                !(n + s > d.vY) && ((n += s), (e.favoriteGifs.gifs[r] = l));
+                let s = l.JM.toBinary(a).length + r.length + 7;
+                !(n + s > d.vY) && ((n += s), (e.favoriteGifs.gifs[r] = a));
             }
-            for (n = a.wK.toBinary(e.favoriteGifs).length; n > d.vY; ) {
+            for (n = l.wK.toBinary(e.favoriteGifs).length; n > d.vY; ) {
                 let t = 0;
                 for (let n in e.favoriteGifs.gifs) if ((delete e.favoriteGifs.gifs[n], ++t >= 10)) break;
-                n = a.wK.toBinary(e.favoriteGifs).length;
+                n = l.wK.toBinary(e.favoriteGifs).length;
             }
             return !0;
         },
@@ -124,10 +124,10 @@ let p = [
     {
         version: 7,
         run(e) {
-            let { state: t } = l.ZP.PersistedStore.migrateAndReadStoreState('ApplicationCommandFrecency', []);
+            let { state: t } = a.ZP.PersistedStore.migrateAndReadStoreState('ApplicationCommandFrecency', []);
             if (null == t) return !1;
             let n = !1;
-            return r().size(t.usageHistory) > 0 && ((e.applicationCommandFrecency = a.YI.create()), (e.applicationCommandFrecency.applicationCommands = (0, c.tU)(t.usageHistory, 500)), (n = !0)), n;
+            return r().size(t.usageHistory) > 0 && ((e.applicationCommandFrecency = l.YI.create()), (e.applicationCommandFrecency.applicationCommands = (0, c.tU)(t.usageHistory, 500)), (n = !0)), n;
         },
         cleanup() {
             s.K.remove('ApplicationCommandFrecency');
@@ -136,12 +136,12 @@ let p = [
     {
         version: 8,
         run(e) {
-            let { state: t } = l.ZP.PersistedStore.migrateAndReadStoreState('SoundboardFavoriteStore', []);
+            let { state: t } = a.ZP.PersistedStore.migrateAndReadStoreState('SoundboardFavoriteStore', []);
             if (null == t) return !1;
             let n = !1;
             return (
                 r().size(t.favoriteSounds) > 0 &&
-                    ((e.favoriteSoundboardSounds = a.h_.create()),
+                    ((e.favoriteSoundboardSounds = l.h_.create()),
                     o.default.keys(t.favoriteSounds).forEach((n) => {
                         new Set(t.favoriteSounds[n]).forEach((t) => {
                             var n;
@@ -162,7 +162,7 @@ let p = [
             let t = s.K.get(h);
             if (null == t) return !1;
             for (let e in t) !u.Xyh.test(e) && delete t[e];
-            return (e.guildAndChannelFrecency = a.lG.create()), (e.guildAndChannelFrecency.guildAndChannels = (0, c.tU)(t, 100)), !0;
+            return (e.guildAndChannelFrecency = l.lG.create()), (e.guildAndChannelFrecency.guildAndChannels = (0, c.tU)(t, 100)), !0;
         },
         cleanup() {
             s.K.remove(h);
@@ -176,8 +176,8 @@ let p = [
             let n = null !== (t = e.emojiFrecency.emojis) && void 0 !== t ? t : {},
                 i = !1;
             if (r().size(n) > 0) {
-                let t = a.PL.create();
-                a.PL.mergePartial(t, e.emojiFrecency), null != e.emojiReactionFrecency && a.PL.mergePartial(t, e.emojiReactionFrecency), (e.emojiReactionFrecency = t), (i = !0);
+                let t = l.PL.create();
+                l.PL.mergePartial(t, e.emojiFrecency), null != e.emojiReactionFrecency && l.PL.mergePartial(t, e.emojiReactionFrecency), (e.emojiReactionFrecency = t), (i = !0);
             }
             return i;
         },

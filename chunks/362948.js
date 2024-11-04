@@ -43,7 +43,7 @@ let m = [
     {
         getPerkHeading: () => h.intl.string(h.t.SMYauL),
         getPerkPreviewLightTheme: () => n(989015),
-        getPerkPreviewDarkTheme: () => n(815152),
+        getPerkPreviewDarkTheme: () => n(904257),
         getTier0Value: () =>
             h.intl.formatToPlainString(h.t.zZ6Rdn, {
                 resolution: _.HO[f.Eu4.NONE].limits.screenShareQualityResolution,

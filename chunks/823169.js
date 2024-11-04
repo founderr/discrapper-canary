@@ -1,8 +1,8 @@
 n(47120);
 var i = n(570140),
     r = n(317770),
-    l = n(430824),
-    a = n(594174),
+    a = n(430824),
+    l = n(594174),
     s = n(358085),
     o = n(53365),
     c = n(981631);
@@ -20,8 +20,8 @@ class d extends r.Z {
             (n = 'maybeFetchEligiblity'),
             (i = async () => {
                 if ((0, s.isDesktop)() || (0, s.isWeb)()) {
-                    let e = Object.values(l.Z.getGuilds()),
-                        t = a.default.getCurrentUser(),
+                    let e = Object.values(a.Z.getGuilds()),
+                        t = l.default.getCurrentUser(),
                         n = e.filter((e) => e.isOwner(t) && !e.hasFeature(c.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE) && !e.hasFeature(c.oNc.CREATOR_MONETIZABLE_RESTRICTED) && !e.hasFeature(c.oNc.CREATOR_MONETIZABLE_DISABLED) && (e.hasFeature(c.oNc.CREATOR_MONETIZABLE) || e.hasFeature(c.oNc.CREATOR_MONETIZABLE_PROVISIONAL)));
                     n.length > 0 && (await (0, o.av)(n.map((e) => e.id)));
                 }

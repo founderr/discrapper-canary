@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    l = n(393238),
-    a = n(540059),
+    a = n(393238),
+    l = n(540059),
     s = n(720734),
     o = n(840780),
     c = n(235555),
@@ -28,10 +28,10 @@ function _(e) {
     });
 }
 function E() {
-    let e = (0, a.Q)('AppPanels'),
+    let e = (0, l.Q)('AppPanels'),
         t = r.useRef(null);
     return (
-        (0, l.P)(
+        (0, a.P)(
             t,
             (t) => {
                 let { height: n } = t;

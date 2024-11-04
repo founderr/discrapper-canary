@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(314897);
-function a(e, t, n) {
+    a = n(314897);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,10 +23,10 @@ function a(e, t, n) {
 function s(e) {
     return class extends r.Component {
         componentDidMount() {
-            l.default.addChangeListener(this.onStoreChange);
+            a.default.addChangeListener(this.onStoreChange);
         }
         componentWillUnmount() {
-            l.default.removeChangeListener(this.onStoreChange);
+            a.default.removeChangeListener(this.onStoreChange);
         }
         render() {
             return (0, i.jsx)(e, {
@@ -36,9 +36,9 @@ function s(e) {
         }
         constructor(...e) {
             super(...e),
-                a(this, 'state', { isAuthenticated: l.default.isAuthenticated() }),
-                a(this, 'onStoreChange', () => {
-                    this.setState({ isAuthenticated: l.default.isAuthenticated() });
+                l(this, 'state', { isAuthenticated: a.default.isAuthenticated() }),
+                l(this, 'onStoreChange', () => {
+                    this.setState({ isAuthenticated: a.default.isAuthenticated() });
                 });
         }
     };

@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(748780),
     o = n(91192),
     c = n(481060),
@@ -10,7 +10,7 @@ var i = n(200651),
     u = n(687683),
     h = n(454515);
 t.Z = function (e) {
-    let { index: t, children: l, user: m, channel: p, onClick: g, isFocused: f, isActive: _, onOtherHover: E, className: I } = e,
+    let { index: t, children: a, user: m, channel: p, onClick: g, isFocused: f, isActive: _, onOtherHover: E, className: I } = e,
         [C, v] = r.useState(!1),
         [S, N] = r.useState(!1),
         T = () => {
@@ -48,7 +48,7 @@ t.Z = function (e) {
                     right: -8
                 },
                 children: (0, i.jsx)(s.Z.div, {
-                    className: a()(h.messageRequestItem, I, {
+                    className: l()(h.messageRequestItem, I, {
                         [h.active]: _ || S,
                         [h.firstItem]: 0 === t
                     }),
@@ -61,7 +61,7 @@ t.Z = function (e) {
                         opacity: 1
                     },
                     ...e,
-                    children: l(C || _ || S)
+                    children: a(C || _ || S)
                 })
             })
     });

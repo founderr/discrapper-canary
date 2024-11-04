@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(704215),
-    l = n(740111),
-    a = n(481060),
+    a = n(740111),
+    l = n(481060),
     s = n(963249),
     o = n(703656),
     c = n(626135),
@@ -24,9 +24,9 @@ function _(e) {
         S = 'AnnouncementModalVariant1_'.concat(r.z[Number(_.dismissKey)]),
         { onClose: N } = E,
         T = null != _.button && '' !== _.button.copy ? _.button.copy : p.intl.string(p.t.YScQSE),
-        x = (null === (t = _.button) || void 0 === t ? void 0 : t.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button',
+        x = (null === (t = _.button) || void 0 === t ? void 0 : t.buttonAction) === a.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button',
         b =
-            (null === (n = _.button) || void 0 === n ? void 0 : n.buttonAction) === l.Wc.OPEN_MARKETING_PAGE
+            (null === (n = _.button) || void 0 === n ? void 0 : n.buttonAction) === a.Wc.OPEN_MARKETING_PAGE
                 ? () => {
                       (0, o.uL)(m.Z5c.APPLICATION_STORE), N();
                   }
@@ -46,7 +46,7 @@ function _(e) {
         A =
             '' !== _.helpArticleId
                 ? () =>
-                      (0, i.jsx)(a.Anchor, {
+                      (0, i.jsx)(l.Anchor, {
                           className: g.termsApplyAnchor,
                           href: d.Z.getArticleURL(_.helpArticleId),
                           children: p.intl.string(p.t['sBp+u7'])
@@ -94,11 +94,11 @@ function _(e) {
         changeLogId: S,
         button: () => {
             let e = Date.now();
-            return (0, i.jsxs)(a.ShinyButton, {
+            return (0, i.jsxs)(l.ShinyButton, {
                 className: g.buttonWide,
                 innerClassName: g.innerButton,
                 wrapperClassName: g.tier2Gradient,
-                size: a.Button.Sizes.SMALL,
+                size: l.Button.Sizes.SMALL,
                 onClick: () => {
                     c.default.track(m.rMx.CHANGE_LOG_CTA_CLICKED, {
                         change_log_id: S,

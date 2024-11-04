@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(442837),
-    a = n(481060),
+    a = n(442837),
+    l = n(481060),
     s = n(568154),
     o = n(703656),
     c = n(430824),
@@ -25,10 +25,10 @@ t.Z = (e) => {
     let n, T;
     let { guildId: x, inviteCode: b } = e,
         [A, Z] = r.useState(v.hO.INITIAL),
-        y = (0, l.e7)([p.Z], () => p.Z.get(x)),
-        L = (0, l.e7)([f.Z], () => f.Z.getRequest(x)),
-        R = (0, l.e7)([c.Z], () => c.Z.getGuild(x)),
-        { hasFetchedRequestToJoinGuilds: P, guildPreviewDisabled: O } = (0, l.cj)([f.Z], () => ({
+        y = (0, a.e7)([p.Z], () => p.Z.get(x)),
+        L = (0, a.e7)([f.Z], () => f.Z.getRequest(x)),
+        R = (0, a.e7)([c.Z], () => c.Z.getGuild(x)),
+        { hasFetchedRequestToJoinGuilds: P, guildPreviewDisabled: O } = (0, a.cj)([f.Z], () => ({
             hasFetchedRequestToJoinGuilds: f.Z.hasFetchedRequestToJoinGuilds,
             guildPreviewDisabled: f.Z.getJoinRequestGuild(x)
         }));
@@ -53,15 +53,15 @@ t.Z = (e) => {
                 Z(Math.max(A, v.hO.FILLING)), h.Z.removeGuildJoinRequest(x), (0, o.uL)(C.Z5c.ME);
             }),
             () => {
-                (0, a.openModal)((e) =>
-                    (0, i.jsx)(a.ConfirmModal, {
+                (0, l.openModal)((e) =>
+                    (0, i.jsx)(l.ConfirmModal, {
                         header: S.intl.string(S.t.y0CVen),
                         cancelText: S.intl.string(S.t.oEAioK),
                         onConfirm: T,
                         confirmText: S.intl.string(S.t.p89ACg),
-                        confirmButtonColor: a.Button.Colors.RED,
+                        confirmButtonColor: l.Button.Colors.RED,
                         ...e,
-                        children: (0, i.jsx)(a.Text, {
+                        children: (0, i.jsx)(l.Text, {
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
                             children: n

@@ -1,8 +1,8 @@
 n(47120);
 var i,
     r,
-    l,
     a,
+    l,
     s = n(442837),
     o = n(570140),
     c = n(810788),
@@ -24,15 +24,15 @@ class g extends (i = s.ZP.Store) {
         return !!e.hasFeature(u.oNc.LINKED_TO_HUB) && !h && !0;
     }
 }
-(a = 'HubLinkNoticeStore'),
-    (l = 'displayName') in (r = g)
-        ? Object.defineProperty(r, l, {
-              value: a,
+(l = 'HubLinkNoticeStore'),
+    (a = 'displayName') in (r = g)
+        ? Object.defineProperty(r, a, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (r[l] = a),
+        : (r[a] = l),
     (t.Z = new g(o.Z, {
         CONNECTION_OPEN: function (e) {
             for (let t of e.guilds) if (m(t.id)) return !0;

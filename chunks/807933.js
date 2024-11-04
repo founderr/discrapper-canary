@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(348327),
     o = n.n(s),
     c = n(100621),
@@ -30,17 +30,17 @@ let T = {
         [E.v0.PLAYSTYLE]: function () {
             let e = (0, E.GN)((e) => e.selectedPlaystyle, d.Z),
                 [t, n] = r.useState(E.GN.getState().selectedPlaystyle),
-                l = r.useCallback(() => {
+                a = r.useCallback(() => {
                     E.GN.getState().setSelectedPlaystyle(t);
                 }, [t]),
-                a = r.useCallback(() => {
+                l = r.useCallback(() => {
                     n(e);
                 }, [e]),
                 s = r.useMemo(() => !o()(t, e), [t, e]);
             return (0, i.jsx)(_.Z, {
                 hasChanges: s,
-                onSave: l,
-                onReset: a,
+                onSave: a,
+                onReset: l,
                 children: (0, i.jsx)(p.Z, {
                     title: S.intl.string(S.t.nSOnKS),
                     description: S.intl.string(S.t.Kfz1aW),
@@ -52,17 +52,17 @@ let T = {
         [E.v0.TRAITS]: function () {
             let e = (0, E.GN)((e) => e.selectedTraits, d.Z),
                 [t, n] = r.useState(new Set(e)),
-                l = r.useCallback(() => {
+                a = r.useCallback(() => {
                     E.GN.getState().setSelectedTraits(Array.from(t));
                 }, [t]),
-                a = r.useCallback(() => {
+                l = r.useCallback(() => {
                     n(new Set(e));
                 }, [e]),
                 s = r.useMemo(() => !o()(t, e), [t, e]);
             return (0, i.jsx)(_.Z, {
                 hasChanges: s,
-                onSave: l,
-                onReset: a,
+                onSave: a,
+                onReset: l,
                 children: (0, i.jsx)(g.Z, {
                     title: S.intl.string(S.t['hLYj+v']),
                     description: S.intl.string(S.t.DBtgV1),
@@ -75,17 +75,17 @@ let T = {
         [E.v0.GAMES]: function () {
             let e = (0, E.GN)((e) => e.selectedGames, d.Z),
                 [t, n] = r.useState(new Set(e)),
-                l = r.useCallback(() => {
+                a = r.useCallback(() => {
                     E.GN.getState().setSelectedGames(Array.from(t));
                 }, [t]),
-                a = r.useCallback(() => {
+                l = r.useCallback(() => {
                     n(new Set(e));
                 }, [e]),
                 s = r.useMemo(() => !o()(t, e), [t, e]);
             return (0, i.jsx)(_.Z, {
                 hasChanges: s,
-                onSave: l,
-                onReset: a,
+                onSave: a,
+                onReset: l,
                 children: (0, i.jsx)(m.Z, {
                     title: S.intl.string(S.t.CsPdQE),
                     description: S.intl.string(S.t.VF1Fbm),
@@ -98,16 +98,16 @@ let T = {
             let e = (0, E.GN)((e) => e.selectedGames, d.Z),
                 t = (0, E.GN)((e) => e.selectedPlaystyle, d.Z),
                 n = (0, E.GN)((e) => e.selectedTraits, d.Z),
-                [l, a] = r.useState(new Set(e)),
+                [a, l] = r.useState(new Set(e)),
                 [s, c] = r.useState(t),
                 [u, h] = r.useState(new Set(n)),
                 m = r.useMemo(
                     () => ({
-                        games: Array.from(l),
+                        games: Array.from(a),
                         playstyle: s,
                         traits: Array.from(u)
                     }),
-                    [l, s, u]
+                    [a, s, u]
                 ),
                 p = r.useMemo(
                     () => ({
@@ -123,7 +123,7 @@ let T = {
                     E.GN.getState().setSelectedGames(m.games), E.GN.getState().setSelectedPlaystyle(null !== (e = m.playstyle) && void 0 !== e ? e : null), E.GN.getState().setSelectedTraits(m.traits), (0, f.Og)();
                 }, [m.games, m.playstyle, m.traits]),
                 v = r.useCallback(() => {
-                    a(new Set(p.games)), c(p.playstyle), h(new Set(p.traits));
+                    l(new Set(p.games)), c(p.playstyle), h(new Set(p.traits));
                 }, [p.games, p.playstyle, p.traits]);
             return (0, i.jsx)(_.Z, {
                 hasChanges: g,
@@ -131,9 +131,9 @@ let T = {
                 onReset: v,
                 children: (0, i.jsx)(I.Z, {
                     traits: u,
-                    gameApplicationIds: l,
+                    gameApplicationIds: a,
                     playstyle: s,
-                    onUpdateGames: a,
+                    onUpdateGames: l,
                     onUpdateTraits: h,
                     onUpdatePlaystyle: c
                 })
@@ -150,7 +150,7 @@ let T = {
                 children: (0, i.jsx)('div', {
                     className: N.innerContainer,
                     children: (0, i.jsxs)('div', {
-                        className: a()(n, N.userOnboarding),
+                        className: l()(n, N.userOnboarding),
                         children: [
                             (0, i.jsx)('div', { className: N.backgroundImageBlur }),
                             (0, i.jsx)('div', {
@@ -164,8 +164,8 @@ let T = {
         }
     };
 function b(e) {
-    let { item: t, state: n, cleanUp: l } = e,
-        a = r.useMemo(() => {
+    let { item: t, state: n, cleanUp: a } = e,
+        l = r.useMemo(() => {
             let e = x[t];
             return null == e ? null : (0, i.jsx)(e, {});
         }, [t]),
@@ -174,12 +174,12 @@ function b(e) {
             to: { opacity: n === u.TransitionStates.YEETED ? 0 : 1 },
             config: T,
             onRest: () => {
-                n === u.TransitionStates.YEETED && l();
+                n === u.TransitionStates.YEETED && a();
             }
         });
     return (0, i.jsx)(c.animated.div, {
         style: s,
-        children: a
+        children: l
     });
 }
 function A(e) {

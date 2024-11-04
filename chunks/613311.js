@@ -1,8 +1,8 @@
 n(411104), n(724458), n(653041), n(733860), n(47120), n(789020);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(442837),
     o = n(846519),
     c = n(780384),
@@ -19,7 +19,7 @@ var i = n(200651),
     C = n(812206),
     v = n(770146),
     S = n(600164),
-    N = n(811066),
+    N = n(606081),
     T = n(252618),
     x = n(100159),
     b = n(646288),
@@ -55,8 +55,8 @@ var i = n(200651),
     en = n(176055),
     ei = n(843445),
     er = n(981631),
-    el = n(186901),
-    ea = n(388032),
+    ea = n(186901),
+    el = n(388032),
     es = n(695471);
 function eo(e, t, n) {
     return (
@@ -76,21 +76,21 @@ class ec extends r.PureComponent {
         return null != this.props.channel;
     }
     componentDidMount() {
-        let { sku: e, storeListing: t, isFetchingEntitlements: n, shouldFetchStatistics: i, didFetchEntitlements: r, location: l, fetchStoreListing: a } = this.props;
-        if (null != l.state) {
-            let { analyticsSource: e, analyticsProperties: t } = l.state;
+        let { sku: e, storeListing: t, isFetchingEntitlements: n, shouldFetchStatistics: i, didFetchEntitlements: r, location: a, fetchStoreListing: l } = this.props;
+        if (null != a.state) {
+            let { analyticsSource: e, analyticsProperties: t } = a.state;
             (this._analyticsSource = e), (this._extraAnalyticsProperties = t);
         } else this._analyticsSource = er.SaU;
-        (null == t || t.isSlimDirectoryVersion()) && a(), null != e && (!n && !r && (0, m.yD)(e.applicationId), i && u.Z.wait(() => (0, h.$)(e.applicationId))), this.trackViewed(), this.replaceUrlWithSlug();
+        (null == t || t.isSlimDirectoryVersion()) && l(), null != e && (!n && !r && (0, m.yD)(e.applicationId), i && u.Z.wait(() => (0, h.$)(e.applicationId))), this.trackViewed(), this.replaceUrlWithSlug();
     }
     componentDidUpdate(e) {
-        let { locale: t, sku: n, shouldFetchStatistics: i, skuId: r, storeListingId: l, slug: a, storeListing: s, fetchStoreListing: o } = this.props;
+        let { locale: t, sku: n, shouldFetchStatistics: i, skuId: r, storeListingId: a, slug: l, storeListing: s, fetchStoreListing: o } = this.props;
         if (
             (s !== e.storeListing &&
                 null != s &&
-                (0, F.s)(el.jE.STORE_LISTING, {
+                (0, F.s)(ea.jE.STORE_LISTING, {
                     skuId: r,
-                    slug: a
+                    slug: l
                 }),
             (t !== e.locale || r !== e.skuId) && o(),
             i && !e.shouldFetchStatistics)
@@ -98,7 +98,7 @@ class ec extends r.PureComponent {
             if (null == n) throw Error('Unexpected missing sku');
             u.Z.wait(() => (0, h.$)(n.applicationId));
         }
-        (r !== e.skuId || l !== e.storeListingId) && (this._trackedViewed = !1), this.trackViewed(), this.replaceUrlWithSlug();
+        (r !== e.skuId || a !== e.storeListingId) && (this._trackedViewed = !1), this.trackViewed(), this.replaceUrlWithSlug();
     }
     componentWillUnmount() {
         this.showCopyLinkTextTimeout.stop();
@@ -133,9 +133,9 @@ class ec extends r.PureComponent {
             (this._trackedViewed = !0);
     }
     renderHeader(e, t) {
-        let { channel: n, isAuthenticated: l } = this.props;
+        let { channel: n, isAuthenticated: a } = this.props;
         return (0, i.jsx)(A.Z, {
-            isAuthenticated: l,
+            isAuthenticated: a,
             toolbar: this.renderHeaderToolbar(e, t),
             children:
                 null != n
@@ -143,7 +143,7 @@ class ec extends r.PureComponent {
                           children: [
                               (0, i.jsx)(A.Z.Icon, {
                                   icon: d.TagIcon,
-                                  'aria-label': ea.intl.string(ea.t['P1/Erq'])
+                                  'aria-label': el.intl.string(el.t['P1/Erq'])
                               }),
                               (0, i.jsx)(A.Z.Title, { children: n.name })
                           ]
@@ -153,7 +153,7 @@ class ec extends r.PureComponent {
                             children: [
                                 (0, i.jsx)(A.Z.Icon, {
                                     icon: d.NitroWheelIcon,
-                                    'aria-label': ea.intl.string(ea.t.Ipxkoq)
+                                    'aria-label': el.intl.string(el.t.Ipxkoq)
                                 }),
                                 (0, i.jsx)($.Z, { sku: t })
                             ]
@@ -163,7 +163,7 @@ class ec extends r.PureComponent {
                               children: [
                                   (0, i.jsx)(A.Z.Icon, {
                                       icon: d.TagIcon,
-                                      'aria-label': ea.intl.string(ea.t['P1/Erq'])
+                                      'aria-label': el.intl.string(el.t['P1/Erq'])
                                   }),
                                   (0, i.jsx)(A.Z.Title, { children: t.name })
                               ]
@@ -203,20 +203,20 @@ class ec extends r.PureComponent {
     }
     renderHeaderAssets(e, t, n) {
         let { theme: r } = this.props,
-            l = t.headerBackground,
-            a = (0, c.ap)(r) ? t.headerLogoLightTheme : t.headerLogoDarkTheme;
-        return null == l || null == a
+            a = t.headerBackground,
+            l = (0, c.ap)(r) ? t.headerLogoLightTheme : t.headerLogoDarkTheme;
+        return null == a || null == l
             ? (0, i.jsx)('div', { className: es.noHeaderSpacer })
             : (0, i.jsxs)('div', {
                   className: es.headerAssets,
                   children: [
                       (0, i.jsx)('div', {
                           className: es.headerBackground,
-                          style: { backgroundImage: 'url('.concat((0, V._W)(e.id, l, 1024, 'png'), ')') }
+                          style: { backgroundImage: 'url('.concat((0, V._W)(e.id, a, 1024, 'png'), ')') }
                       }),
                       (0, i.jsx)('img', {
                           className: es.headerLogo,
-                          src: (0, V._W)(e.id, a, 1024, 'png'),
+                          src: (0, V._W)(e.id, l, 1024, 'png'),
                           alt: n.name
                       })
                   ]
@@ -253,19 +253,19 @@ class ec extends r.PureComponent {
               });
     }
     renderDescription(e, t, n) {
-        let { description: l } = t;
-        if (null == l) throw Error('Rendering ApplicationStoreListing without description');
+        let { description: a } = t;
+        if (null == a) throw Error('Rendering ApplicationStoreListing without description');
         return (0, i.jsxs)(r.Fragment, {
             children: [
                 (0, i.jsx)(v.Z, {
                     tag: 'h1',
-                    children: ea.intl.format(ea.t.tluX4O, { name: n.name })
+                    children: el.intl.format(el.t.tluX4O, { name: n.name })
                 }),
                 (0, i.jsx)(f.Z, {}),
                 (0, i.jsx)(Y.Z, {
                     applicationId: e.id,
                     blurb: t.summary,
-                    description: l,
+                    description: a,
                     className: es.description,
                     assets: t.assets
                 })
@@ -288,9 +288,9 @@ class ec extends r.PureComponent {
         let { sku: e, storeListing: t, application: n } = this.props;
         if (null == e || null == t || null == n) return null;
         let r = [],
-            l = n.getSplashURL(1024);
-        null != l && r.push(l), null != t.headerLogoLightTheme && r.unshift((0, V._W)(n.id, t.headerLogoLightTheme, 1024, 'jpg'));
-        let a = N.Z.Product({
+            a = n.getSplashURL(1024);
+        null != a && r.push(a), null != t.headerLogoLightTheme && r.unshift((0, V._W)(n.id, t.headerLogoLightTheme, 1024, 'jpg'));
+        let l = N.Z.Product({
                 name: e.name,
                 description: null != e.summary && '' !== e.summary ? e.summary : t.tagline,
                 image: N.Z.Product.Image(r),
@@ -299,17 +299,17 @@ class ec extends r.PureComponent {
             s = e.getPrice();
         if (null != s) {
             let { amount: e, currency: t } = s;
-            a.offers = N.Z.Offer({
+            l.offers = N.Z.Offer({
                 priceCurrency: t.toUpperCase(),
                 price: (0, H.T4)(e, t, { style: 'decimal' })
             });
         }
-        let o = N.Z.ItemPage({ mainEntity: a });
+        let o = N.Z.ItemPage({ mainEntity: l });
         return (0, i.jsx)(N.Z, { data: o });
     }
     renderSmall(e, t, n) {
         return (0, i.jsxs)('div', {
-            className: a()(es.listing, es.listingSmall),
+            className: l()(es.listing, es.listingSmall),
             children: [this.renderHeaderAssets(e, t, n), this.renderCarousel(e, t), this.renderWhyYouMightLikeThis(n, t), this.renderDescription(e, t, n), this.renderVerifiedGuildInvite(t, n), this.renderFeatures(n), this.renderSystemRequirements(n), this.renderApplicationContentRating(n), this.renderApplicationLegalInfo(n)]
         });
     }
@@ -339,7 +339,7 @@ class ec extends r.PureComponent {
         });
     }
     render() {
-        let { application: e, sku: t, storeListing: n, matureAgree: l, isAuthenticated: a } = this.props;
+        let { application: e, sku: t, storeListing: n, matureAgree: a, isAuthenticated: l } = this.props;
         if (null == e || null == t || null == n || n.isSlimDirectoryVersion())
             return (0, i.jsxs)(r.Fragment, {
                 children: [
@@ -351,8 +351,8 @@ class ec extends r.PureComponent {
                     })
                 ]
             });
-        if (!l && t.showAgeGate) {
-            let n = a
+        if (!a && t.showAgeGate) {
+            let n = l
                 ? null
                 : (0, i.jsx)('div', {
                       className: es.gatedListing,
@@ -362,7 +362,7 @@ class ec extends r.PureComponent {
                 children: [(0, i.jsx)(T.yY, { location: e.name }), this.renderJsonLD(), this.renderHeader(e, t), (0, i.jsx)(X.Z, { game: e }), n]
             });
         }
-        return a
+        return l
             ? (0, i.jsxs)('div', {
                   className: es.listingWrapper,
                   children: [
@@ -430,7 +430,7 @@ class ec extends r.PureComponent {
                 let { channel: e, guild: t } = this.props;
                 return null != e && null != t && (R.Z.can(er.Plq.CREATE_INSTANT_INVITE, t) || null != t.vanityURLCode)
                     ? (0, i.jsx)(d.Button, {
-                          'aria-label': ea.intl.string(ea.t.zJrgTE),
+                          'aria-label': el.intl.string(el.t.zJrgTE),
                           look: d.Button.Looks.BLANK,
                           size: d.Button.Sizes.NONE,
                           onClick: this.handleCreateInstantInvite,
@@ -448,13 +448,13 @@ class ec extends r.PureComponent {
                 return this.isChannelType
                     ? this.renderInviteLink()
                     : (0, i.jsx)(d.Tooltip, {
-                          text: e ? ea.intl.string(ea.t.uvTCOT) : null,
+                          text: e ? el.intl.string(el.t.uvTCOT) : null,
                           position: 'left',
                           forceOpen: e,
                           children: (t) => {
                               let { onMouseEnter: n, onMouseLeave: r } = t;
                               return (0, i.jsx)(d.Button, {
-                                  'aria-label': e ? ea.intl.string(ea.t.uvTCOT) : ea.intl.string(ea.t.WqhZsr),
+                                  'aria-label': e ? el.intl.string(el.t.uvTCOT) : el.intl.string(el.t.WqhZsr),
                                   look: d.Button.Looks.BLANK,
                                   size: d.Button.Sizes.NONE,
                                   onClick: this.copyCurrentUrl,
@@ -474,7 +474,7 @@ class ec extends r.PureComponent {
                 let {
                         isInTestMode: n,
                         slug: r,
-                        storeListing: l,
+                        storeListing: a,
                         analyticsContext: { location: s }
                     } = this.props,
                     { showHeaderPurchaseUnit: o } = this.state;
@@ -492,7 +492,7 @@ class ec extends r.PureComponent {
                                           color: et.y.Colors.RED,
                                           skuId: t.id,
                                           className: es.testModeSelectButton,
-                                          currentStoreListingId: null != l ? l.id : null,
+                                          currentStoreListingId: null != a ? a.id : null,
                                           onStoreListingSelect: (e) => {
                                               null != t &&
                                                   (0, p.yt)(t.id, {
@@ -511,7 +511,7 @@ class ec extends r.PureComponent {
                         (0, i.jsx)('div', {
                             className: es.headerSection,
                             children: (0, i.jsxs)('div', {
-                                className: a()(es.headerPurchase, { [es.active]: o }),
+                                className: l()(es.headerPurchase, { [es.active]: o }),
                                 children: [
                                     null != t ? (0, b.Z)(t) : null,
                                     null != e && null != t ? (0, i.jsx)('div', { children: 'deprecated!' }) : null,
@@ -560,31 +560,31 @@ t.Z = (0, _.Z)(
             let t,
                 n,
                 i,
-                { inputSkuId: r, applicationId: l, storeListingId: a, isAuthenticated: s, channel: o } = e;
-            if (null == l) {
+                { inputSkuId: r, applicationId: a, storeListingId: l, isAuthenticated: s, channel: o } = e;
+            if (null == a) {
                 if (null == r) throw Error('Needs applicationId or skuId');
-                (t = r), null != (l = null != (n = D.Z.get(r)) ? n.applicationId : null) && (i = C.Z.getApplication(l));
+                (t = r), null != (a = null != (n = D.Z.get(r)) ? n.applicationId : null) && (i = C.Z.getApplication(a));
             } else if (null == r) {
-                if (null == l) throw Error('Needs applicationId or skuId');
-                null != (i = C.Z.getApplication(l)) && (t = i.destinationSkuId), (n = null != t ? D.Z.get(t) : null);
+                if (null == a) throw Error('Needs applicationId or skuId');
+                null != (i = C.Z.getApplication(a)) && (t = i.destinationSkuId), (n = null != t ? D.Z.get(t) : null);
             }
             (null == n ? void 0 : n.flags) != null && (0, B.yE)(n.flags, er.l4R.STICKER_PACK) && (n = null);
-            let c = null != l && (w.Z.inTestModeForApplication(l) || I.Z.inDevModeForApplication(l));
+            let c = null != a && (w.Z.inTestModeForApplication(a) || I.Z.inDevModeForApplication(a));
             return {
                 skuId: t,
-                application: null != l ? C.Z.getApplication(l) : null,
-                isFetchingEntitlements: null != l && j.Z.applicationIdsFetching.has(l),
-                didFetchEntitlements: null != l && j.Z.applicationIdsFetched.has(l),
-                shouldFetchStatistics: s && null != l && P.Z.shouldFetchStatisticsForApplication(l),
+                application: null != a ? C.Z.getApplication(a) : null,
+                isFetchingEntitlements: null != a && j.Z.applicationIdsFetching.has(a),
+                didFetchEntitlements: null != a && j.Z.applicationIdsFetched.has(a),
+                shouldFetchStatistics: s && null != a && P.Z.shouldFetchStatisticsForApplication(a),
                 sku: n,
                 isFocused: k.Z.isFocused(),
                 storeListing: M.Z.getStoreListing({
-                    storeListingId: a,
+                    storeListingId: l,
                     skuId: t,
                     channelId: null != o ? o.id : null,
                     isTestMode: c
                 }),
-                isInTestMode: null != l && c,
+                isInTestMode: null != a && c,
                 matureAgree: O.Z.didMatureAgree,
                 theme: y.Z.theme,
                 locale: Z.default.locale,

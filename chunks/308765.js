@@ -106,7 +106,7 @@ let i = {
     },
     HolidayEventsManager: {
         actions: ['NOTIFICATIONS_SET_DISABLED_SOUNDS'],
-        inlineRequire: () => n(103547).Z,
+        inlineRequire: () => n(951755).Z,
         hasStoreChangeListeners: !0
     },
     SignUpManager: {
@@ -270,7 +270,7 @@ let i = {
     },
     VoicePermissionManager: {
         actions: ['VOICE_CHANNEL_SELECT', 'VOICE_STATE_UPDATES'],
-        inlineRequire: () => n(17300).Z
+        inlineRequire: () => n(39846).Z
     },
     VoiceProcessingErrorManager: {
         actions: ['MEDIA_ENGINE_NOISE_CANCELLATION_ERROR'],
@@ -340,7 +340,7 @@ let i = {
     },
     ContentInventoryManager: {
         actions: ['POST_CONNECTION_OPEN', 'CONNECTION_CLOSED', 'IDLE', 'WINDOW_FOCUS', 'CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN', 'CONTENT_INVENTORY_MANUAL_REFRESH', 'CONTENT_INVENTORY_INBOX_STALE', 'SPOTIFY_NEW_TRACK', 'GAME_PROFILE_OPEN', 'OVERLAY_INITIALIZE'],
-        inlineRequire: () => n(342879).Z,
+        inlineRequire: () => n(345765).Z,
         neverLoadBeforeConnectionOpen: !0
     },
     GuildLeaderboardManager: {

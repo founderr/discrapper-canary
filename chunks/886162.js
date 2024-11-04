@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(990547),
-    a = n(399606),
+    a = n(990547),
+    l = n(399606),
     s = n(481060),
     o = n(232567),
     c = n(213609),
@@ -18,7 +18,7 @@ var i = n(200651),
     p = n(646634);
 function g(e) {
     let { transitionState: t } = e,
-        g = (0, a.e7)([u.Z], () => u.Z.getAction()),
+        g = (0, l.e7)([u.Z], () => u.Z.getAction()),
         [f, _] = r.useState(!1),
         E = (0, d.Dt)();
     async function I() {
@@ -27,8 +27,8 @@ function g(e) {
     return (
         (0, c.Z)(
             {
-                type: l.ImpressionTypes.VIEW,
-                name: l.ImpressionNames.USER_AGREEMENTS,
+                type: a.ImpressionTypes.VIEW,
+                name: a.ImpressionNames.USER_AGREEMENTS,
                 properties: { required_action: g }
             },
             {},

@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(481060),
     o = n(686546),
     c = n(778045),
@@ -38,10 +38,10 @@ function m(e) {
 function p(e) {
     let { className: t, style: n } = e;
     return (0, i.jsx)('div', {
-        className: a()(h.clickableCard, t),
+        className: l()(h.clickableCard, t),
         style: n,
         children: (0, i.jsxs)('div', {
-            className: a()(h.card, h.skeletonCard),
+            className: l()(h.card, h.skeletonCard),
             children: [
                 (0, i.jsx)('div', {
                     className: h.cardBrandingHeader,

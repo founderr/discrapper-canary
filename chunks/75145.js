@@ -2,7 +2,7 @@ n.d(t, {
     Kn: function () {
         return p;
     },
-    mY: function () {
+    fi: function () {
         return m;
     }
 }),
@@ -22,8 +22,8 @@ var r = n(200651),
 let p = 41;
 function m() {
     let e = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
-        [t, a] = (0, d.US)([l.z.REVERSE_TRIAL_EMOJI_PICKER]),
-        p = t === l.z.REVERSE_TRIAL_EMOJI_PICKER;
+        [t, a] = (0, d.US)([l.z.REVERSE_TRIAL_EMOJI_PICKER, l.z.TRIAL_FOR_ALL_EMOJI_PCIKER]),
+        p = t === l.z.REVERSE_TRIAL_EMOJI_PICKER || t === l.z.TRIAL_FOR_ALL_EMOJI_PCIKER;
     return (
         i.useEffect(
             () => () => {

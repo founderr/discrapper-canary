@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    l = n(100621),
-    a = n(481060),
+    a = n(100621),
+    l = n(481060),
     s = n(512114);
 let o = {
         mass: 1,
@@ -23,11 +23,11 @@ let o = {
 function d(e) {
     var t, n, r;
     let { state: d, direction: u, cleanUp: h, children: m } = e;
-    let p = (0, a.useSpring)(
+    let p = (0, l.useSpring)(
         ((t = d),
         (n = u),
         (r = h),
-        t === a.TransitionStates.MOUNTED
+        t === l.TransitionStates.MOUNTED
             ? {
                   from: {
                       opacity: 0,
@@ -40,7 +40,7 @@ function d(e) {
                   config: o,
                   delay: 500
               }
-            : t === a.TransitionStates.ENTERED
+            : t === l.TransitionStates.ENTERED
               ? {
                     from: {
                         opacity: 0,
@@ -68,29 +68,29 @@ function d(e) {
                     }
                 })
     );
-    return (0, i.jsx)(l.animated.div, {
+    return (0, i.jsx)(a.animated.div, {
         style: p,
         className: s.step,
-        children: (0, i.jsx)(a.ScrollerThin, {
+        children: (0, i.jsx)(l.ScrollerThin, {
             className: s.scroller,
             children: m
         })
     });
 }
 function u(e) {
-    let { currentStep: t, renderItem: n, items: l, getItemKey: o } = e,
+    let { currentStep: t, renderItem: n, items: a, getItemKey: o } = e,
         c = r.useRef(t - 1);
     r.useEffect(() => {
         c.current = t;
     }, [t]);
     let u = r.useMemo(() => (null == c.current || t === c.current ? 0 : c.current < t ? 1 : -1), [t]),
         h = r.useCallback(
-            (e, t, r, l) =>
+            (e, t, r, a) =>
                 (0, i.jsx)(
                     d,
                     {
                         state: r,
-                        cleanUp: l,
+                        cleanUp: a,
                         direction: u,
                         children: n(t)
                     },
@@ -100,8 +100,8 @@ function u(e) {
         );
     return (0, i.jsx)('div', {
         className: s.stepsTransitionGroup,
-        children: (0, i.jsx)(a.TransitionGroup, {
-            items: l,
+        children: (0, i.jsx)(l.TransitionGroup, {
+            items: a,
             renderItem: h,
             getItemKey: o
         })

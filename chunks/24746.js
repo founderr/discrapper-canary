@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(302454),
     o = n.n(s),
     c = n(481060),
@@ -14,7 +14,7 @@ let p = o().parserFor(d.Z),
     g = o().reactFor(o().ruleOutput(d.Z, 'react'));
 function f(e) {
     let { description: t, supportsMarkdown: n } = e,
-        [l, s] = r.useState(!1),
+        [a, s] = r.useState(!1),
         o = r.useRef(null);
     r.useEffect(() => {
         if (null == o.current) return;
@@ -33,7 +33,7 @@ function f(e) {
         children: [
             (0, i.jsx)('div', {
                 ref: o,
-                className: a()({
+                className: l()({
                     [m.descriptionClamp]: !d,
                     [m.descriptionClampSafari]: !d && 'Safari' === platform.name
                 }),
@@ -51,7 +51,7 @@ function f(e) {
                           children: t
                       })
             }),
-            l || d
+            a || d
                 ? (0, i.jsx)(_, {
                       isShowingMore: d,
                       onToggle: f
@@ -62,7 +62,7 @@ function f(e) {
 }
 function _(e) {
     let { onToggle: t, isShowingMore: n } = e,
-        l = r.useMemo(
+        a = r.useMemo(
             () =>
                 (0, i.jsxs)('div', {
                     className: m.showMoreContent,
@@ -90,19 +90,19 @@ function _(e) {
     return (0, i.jsxs)(c.Clickable, {
         className: m.showMoreButton,
         onClick: t,
-        children: [(0, i.jsx)('div', { className: m.divider }), l, (0, i.jsx)('div', { className: m.divider })]
+        children: [(0, i.jsx)('div', { className: m.divider }), a, (0, i.jsx)('div', { className: m.divider })]
     });
 }
 t.Z = function (e) {
     var t, n;
-    let { application: l } = e,
-        a = null === (t = l.directory_entry) || void 0 === t ? void 0 : t.detailed_description,
-        s = null === (n = l.directory_entry) || void 0 === n ? void 0 : n.short_description,
+    let { application: a } = e,
+        l = null === (t = a.directory_entry) || void 0 === t ? void 0 : t.detailed_description,
+        s = null === (n = a.directory_entry) || void 0 === n ? void 0 : n.short_description,
         o = r.useMemo(
             () =>
-                null != a && a.length > 0
+                null != l && l.length > 0
                     ? (0, i.jsx)(f, {
-                          description: a,
+                          description: l,
                           supportsMarkdown: !0
                       })
                     : null != s && s.length > 0
@@ -111,7 +111,7 @@ t.Z = function (e) {
                             supportsMarkdown: !1
                         })
                       : null,
-            [a, s]
+            [l, s]
         );
     return null == o
         ? null

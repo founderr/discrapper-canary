@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(512969),
-    a = n(442837),
+    a = n(512969),
+    l = n(442837),
     s = n(493683),
     o = n(112724),
     c = n(108427),
@@ -36,7 +36,7 @@ class _ extends r.Component {
                   root: !0,
                   children: (0, i.jsx)('div', {
                       className: g.applicationStore,
-                      children: (0, i.jsx)(l.AW, {
+                      children: (0, i.jsx)(a.AW, {
                           path: '*',
                           render: this.renderApplicationListing
                       })
@@ -52,19 +52,19 @@ class _ extends r.Component {
             }),
             f(this, 'renderApplicationListing', (e) => {
                 let { location: t } = e,
-                    { channel: n, skuId: r, width: l } = this.props;
+                    { channel: n, skuId: r, width: a } = this.props;
                 return (0, i.jsx)(h.Z, {
                     channel: n,
                     inputSkuId: r,
                     fetchStoreListing: this.fetchStoreListing,
                     location: t,
-                    pageSize: (0, m.getPageSize)(l)
+                    pageSize: (0, m.getPageSize)(a)
                 });
             });
     }
 }
 t.Z = (0, o.Z)(
-    a.ZP.connectStores([d.Z], (e) => {
+    l.ZP.connectStores([d.Z], (e) => {
         let { channel: t, inputSkuId: n } = e;
         return { skuId: null != n ? n : d.Z.getSkuIdForChannel(t.id) };
     })(_)

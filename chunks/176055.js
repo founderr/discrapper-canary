@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(593473),
     o = n(442837),
     c = n(481060),
@@ -57,7 +57,7 @@ class b extends r.PureComponent {
               });
     }
     render() {
-        let { guild: e, inChannel: t, isInGuild: n, isLurking: r, isAuthenticated: l, className: s, pageSize: o } = this.props;
+        let { guild: e, inChannel: t, isInGuild: n, isLurking: r, isAuthenticated: a, className: s, pageSize: o } = this.props;
         if (t && n) return null;
         let d = new I.ZP(e),
             u = N.intl.string(N.t.pxwdrK),
@@ -65,7 +65,7 @@ class b extends r.PureComponent {
             f = c.Button.Looks.FILLED,
             _ = c.Button.Colors.PRIMARY;
         return (
-            l
+            a
                 ? n
                     ? ((f = c.Button.Looks.OUTLINED),
                       (_ = T.buttonColorInGuild),
@@ -83,7 +83,7 @@ class b extends r.PureComponent {
                     : r && t && (u = N.intl.string(N.t.XpeFYm))
                 : ((u = N.intl.string(N.t.dKhVQE)), (h = this.handleLogin)),
             (0, i.jsxs)('div', {
-                className: a()(s, o === v.b.SMALL ? T.inviteSmall : T.inviteLarge),
+                className: l()(s, o === v.b.SMALL ? T.inviteSmall : T.inviteLarge),
                 children: [
                     (0, i.jsx)(m.Z, { children: N.intl.string(N.t.s1KcLi) }),
                     (0, i.jsxs)('div', {

@@ -1,8 +1,8 @@
 n(653041);
 var i,
     r = n(392711),
-    l = n.n(r),
-    a = n(442837),
+    a = n.n(r),
+    l = n(442837),
     s = n(570140),
     o = n(194359),
     c = n(81825),
@@ -48,7 +48,7 @@ function N(e) {
 function T(e) {
     let t = [];
     return (
-        l()(p.ZP.memberOf(e))
+        a()(p.ZP.memberOf(e))
             .map(g.Z.getGuild)
             .sortBy((e) => (null != e ? e.name.toLowerCase() : null))
             .forEach((e) => {
@@ -71,7 +71,7 @@ class x extends c.Z {
 }
 class b {
     reset() {
-        let e = l().map(
+        let e = a().map(
                 _.Z.getRelationships(),
                 (e, t) =>
                     new x({
@@ -85,7 +85,7 @@ class b {
                         giftIntentType: e === I.OGo.FRIEND && u.Z.isTopAffinityFriendAnniversary({ userId: t }) ? C.hX.FRIEND_ANNIVERSARY : void 0
                     })
             ),
-            t = l().map(
+            t = a().map(
                 d.Z.getSuggestions(),
                 (e) =>
                     new x({
@@ -97,7 +97,7 @@ class b {
                         ...T(e.key)
                     })
             );
-        return new b(l().concat(e, t));
+        return new b(a().concat(e, t));
     }
     clone() {
         return new b(this._rows);
@@ -112,7 +112,7 @@ class b {
         return t;
     }
     filter(e, t) {
-        return l()(this._rows)
+        return a()(this._rows)
             .filter((e) => {
                 if (null == e.user) return !1;
                 if (null != t && '' !== t) {
@@ -183,7 +183,7 @@ function M(e) {
         return !R && !!L.update(e) && ((L = L.clone()), !0);
     };
 }
-class w extends (i = a.ZP.Store) {
+class w extends (i = l.ZP.Store) {
     initialize() {
         this.waitFor(_.Z, f.Z, E.default, g.Z, p.ZP, m.Z, d.Z), this.syncWith([_.Z], D), this.syncWith([d.Z], D), this.syncWith([u.Z], D), this.syncWith([E.default], M(S)), this.syncWith([f.Z, m.Z], M(N)), j();
     }

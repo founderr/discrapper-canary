@@ -1,7 +1,7 @@
 var i = n(200651),
     r = n(192379),
-    l = n(481060),
-    a = n(770146),
+    a = n(481060),
+    l = n(770146),
     s = n(863969),
     o = n(38761),
     c = n(6074),
@@ -14,43 +14,43 @@ let p = [
             feature: u.Qa3.SINGLE_PLAYER,
             getText: () => h.intl.string(h.t['V+/FjI']),
             getTooltip: () => h.intl.string(h.t['w+X9sb']),
-            IconComponent: l.UserIcon
+            IconComponent: a.UserIcon
         },
         {
             feature: u.Qa3.LOCAL_MULTIPLAYER,
             getText: () => h.intl.string(h.t.srnWrq),
             getTooltip: () => h.intl.string(h.t.sDdLWF),
-            IconComponent: l.GroupIcon
+            IconComponent: a.GroupIcon
         },
         {
             feature: u.Qa3.ONLINE_MULTIPLAYER,
             getText: () => h.intl.string(h.t.xPHbgI),
             getTooltip: () => h.intl.string(h.t.g6kR4O),
-            IconComponent: l.GroupIcon
+            IconComponent: a.GroupIcon
         },
         {
             feature: u.Qa3.PVP,
             getText: () => h.intl.string(h.t.qhgwx8),
             getTooltip: () => h.intl.string(h.t['5jGrhI']),
-            IconComponent: l.ModerationIcon
+            IconComponent: a.ModerationIcon
         },
         {
             feature: u.Qa3.LOCAL_COOP,
             getText: () => h.intl.string(h.t.FqbalJ),
             getTooltip: () => h.intl.string(h.t.vIgDgY),
-            IconComponent: l.GroupIcon
+            IconComponent: a.GroupIcon
         },
         {
             feature: u.Qa3.ONLINE_COOP,
             getText: () => h.intl.string(h.t.lDHO4e),
             getTooltip: () => h.intl.string(h.t.VXDpho),
-            IconComponent: l.GroupIcon
+            IconComponent: a.GroupIcon
         },
         {
             feature: u.Qa3.CROSS_PLATFORM,
             getText: () => h.intl.string(h.t.SWo2HR),
             getTooltip: () => h.intl.string(h.t.ll2wzc),
-            IconComponent: l.RefreshIcon
+            IconComponent: a.RefreshIcon
         },
         {
             feature: u.Qa3.RICH_PRESENCE,
@@ -68,13 +68,13 @@ let p = [
             feature: u.Qa3.SPECTATOR_MODE,
             getText: () => h.intl.string(h.t['ZtiU7+']),
             getTooltip: () => h.intl.string(h.t.kUtiKS),
-            IconComponent: l.VideoIcon
+            IconComponent: a.VideoIcon
         },
         {
             feature: u.Qa3.CONTROLLER_SUPPORT,
             getText: () => h.intl.string(h.t.UlBQ8P),
             getTooltip: () => h.intl.string(h.t.iG00jI),
-            IconComponent: l.DpadIcon
+            IconComponent: a.DpadIcon
         },
         {
             feature: u.Qa3.CLOUD_SAVES,
@@ -94,7 +94,7 @@ let p = [
         return (0, i.jsxs)('div', {
             className: m.row,
             children: [
-                (0, i.jsx)(l.Tooltip, {
+                (0, i.jsx)(a.Tooltip, {
                     text: r,
                     children: (e) =>
                         (0, i.jsx)(t, {
@@ -106,7 +106,7 @@ let p = [
                     className: m.featureText,
                     children: n
                 }),
-                (0, i.jsx)(l.CheckmarkLargeIcon, {
+                (0, i.jsx)(a.CheckmarkLargeIcon, {
                     size: 'md',
                     color: 'currentColor',
                     className: m.checkmarkIcon
@@ -123,13 +123,13 @@ class f extends r.PureComponent {
                     return e.features.has(n);
                 })
                 .map((e) => {
-                    let { feature: t, IconComponent: n, getText: r, getTooltip: l } = e;
+                    let { feature: t, IconComponent: n, getText: r, getTooltip: a } = e;
                     return (0, i.jsx)(
                         g,
                         {
                             IconComponent: n,
                             text: r(),
-                            tooltip: l()
+                            tooltip: a()
                         },
                         t
                     );
@@ -138,7 +138,7 @@ class f extends r.PureComponent {
             ? null
             : (0, i.jsxs)('div', {
                   className: m.features,
-                  children: [(0, i.jsx)(a.Z, { children: h.intl.string(h.t.XXENra) }), t]
+                  children: [(0, i.jsx)(l.Z, { children: h.intl.string(h.t.XXENra) }), t]
               });
     }
 }

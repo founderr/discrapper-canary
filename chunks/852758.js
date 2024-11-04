@@ -12,8 +12,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(990547),
-    a = n(442837),
+    a = n(990547),
+    l = n(442837),
     s = n(544891),
     o = n(481060),
     c = n(893776),
@@ -34,7 +34,7 @@ var i = n(200651),
 let T = 'Email Verification',
     x = 'PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY';
 function b() {
-    let { action: e, theme: t } = (0, a.cj)([E.Z, _.Z], () => ({
+    let { action: e, theme: t } = (0, l.cj)([E.Z, _.Z], () => ({
             action: E.Z.getAction(),
             theme: _.Z.theme
         })),
@@ -43,8 +43,8 @@ function b() {
         y = (0, h.Z)(b);
     (0, p.Z)(
         {
-            type: l.ImpressionTypes.MODAL,
-            name: l.ImpressionNames.USER_ACTION_REQUIRED,
+            type: a.ImpressionTypes.MODAL,
+            name: a.ImpressionNames.USER_ACTION_REQUIRED,
             properties: {
                 verification_type: b[0],
                 verification_types: b

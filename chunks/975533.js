@@ -1,7 +1,7 @@
 var i = n(570140),
     r = n(846027),
-    l = n(13245),
-    a = n(287734),
+    a = n(13245),
+    l = n(287734),
     s = n(872810),
     o = n(223245),
     c = n(317770),
@@ -95,7 +95,7 @@ let b = {
     [T.kg4.TOGGLE_OVERLAY]: {
         onTrigger() {
             let e = C.Z.enabled;
-            l.Z.setEnabled(!e, C.Z.legacyEnabled, !1);
+            a.Z.setEnabled(!e, C.Z.legacyEnabled, !1);
         },
         keyEvents: {
             keyup: !0,
@@ -105,7 +105,7 @@ let b = {
     [T.kg4.TOGGLE_OVERLAY_INPUT_LOCK]: {
         onTrigger() {
             let e = (0, N.Z)();
-            if (null != e) l.Z.setInputLocked(!v.Z.isLocked(e), e);
+            if (null != e) a.Z.setInputLocked(!v.Z.isLocked(e), e);
         },
         keyEvents: {
             keyup: !0,
@@ -116,7 +116,7 @@ let b = {
         onTrigger() {
             let e = C.Z.getFocusedPID(),
                 t = null != e;
-            null != e && t && v.Z.isPinned(T.Odu.TEXT) && v.Z.isLocked(e) && C.Z.isReady(e) && l.Z.activateRegion(T.O0n.TEXT_WIDGET);
+            null != e && t && v.Z.isPinned(T.Odu.TEXT) && v.Z.isLocked(e) && C.Z.isReady(e) && a.Z.activateRegion(T.O0n.TEXT_WIDGET);
         },
         keyEvents: {
             keyup: !0,
@@ -200,7 +200,7 @@ let b = {
             let {
                 params: { channelId: n }
             } = t;
-            null != n && a.default.selectVoiceChannel(n);
+            null != n && l.default.selectVoiceChannel(n);
         },
         keyEvents: {
             keyup: !0,
@@ -211,7 +211,7 @@ let b = {
     },
     [T.kg4.DISCONNECT_FROM_VOICE_CHANNEL]: {
         onTrigger() {
-            a.default.selectVoiceChannel(null);
+            l.default.selectVoiceChannel(null);
         },
         keyEvents: {
             keyup: !0,

@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(782690),
     o = n(622535),
     c = n(970606),
@@ -15,7 +15,7 @@ var i = n(200651),
     f = n(981631),
     _ = n(641388);
 t.Z = r.memo(function (e) {
-    let { title: t, subtitle: n, className: l } = e,
+    let { title: t, subtitle: n, className: a } = e,
         { loaded: E, clans: I, searchResult: C, searchCriteria: v } = (0, h.Qc)(20),
         S = (0, m.GN)((e) => e.selectedTraits, s.Z),
         N = r.useMemo(() => new Set(v.games), [v.games]),
@@ -50,7 +50,7 @@ t.Z = r.memo(function (e) {
               onChange: b,
               threshold: 0.25,
               children: (0, i.jsxs)('div', {
-                  className: a()(_.previewListContainer, l),
+                  className: l()(_.previewListContainer, a),
                   children: [
                       (0, i.jsx)('div', {
                           className: _.previewListSection,

@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(442837),
-    l = n(481060),
-    a = n(129861),
+    a = n(481060),
+    l = n(129861),
     s = n(607070),
     o = n(570928),
     c = n(388905),
@@ -27,7 +27,7 @@ let S = (e) => {
         let { userId: t } = e,
             n = (0, E.O)(t);
         return null == n || 0 === n.length
-            ? (0, i.jsx)(l.Text, {
+            ? (0, i.jsx)(a.Text, {
                   className: v.mutualGuilds,
                   variant: 'text-sm/normal',
                   color: 'text-muted',
@@ -42,7 +42,7 @@ let S = (e) => {
                           size: c.Vj.Sizes.SMOL,
                           hideOverflowCount: !0
                       }),
-                      (0, i.jsx)(l.Text, {
+                      (0, i.jsx)(a.Text, {
                           className: v.mutualGuilds,
                           variant: 'text-sm/normal',
                           color: 'text-muted',
@@ -51,7 +51,7 @@ let S = (e) => {
                   ]
               });
     },
-    N = f.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
+    N = f.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 function T(e) {
     var t;
     let { channel: n, otherUser: c, active: m } = e,
@@ -61,7 +61,7 @@ function T(e) {
         x = (0, _.c)(n),
         { avatarDecorationSrc: b } = (0, u.Z)({
             user: c,
-            size: (0, d.y9)(l.AvatarSizes.SIZE_40),
+            size: (0, d.y9)(a.AvatarSizes.SIZE_40),
             onlyAnimateOnHover: !0
         });
     return (0, i.jsxs)(i.Fragment, {
@@ -70,7 +70,7 @@ function T(e) {
                 className: v.avatar,
                 src: (0, h.x)(n, 40, T),
                 avatarDecoration: b,
-                size: l.AvatarSizes.SIZE_40,
+                size: a.AvatarSizes.SIZE_40,
                 'aria-label': null !== (t = null == c ? void 0 : c.username) && void 0 !== t ? t : C.intl.string(C.t['30mdIy'])
             }),
             (0, i.jsxs)('div', {
@@ -79,7 +79,7 @@ function T(e) {
                     (0, i.jsxs)('div', {
                         className: v.userContainerWithPreview,
                         children: [
-                            (0, i.jsx)(a.Z, {
+                            (0, i.jsx)(l.Z, {
                                 nick: E,
                                 user: c,
                                 showAccountIdentifier: !0,
@@ -87,7 +87,7 @@ function T(e) {
                                 usernameClass: v.username,
                                 discriminatorClass: null != g.ZP.getGlobalName(c) ? v.globalName : v.discriminator
                             }),
-                            (0, i.jsx)(l.Text, {
+                            (0, i.jsx)(a.Text, {
                                 className: v.timestampWithPreview,
                                 color: 'text-muted',
                                 variant: 'text-xs/normal',

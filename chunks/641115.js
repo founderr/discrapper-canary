@@ -19,11 +19,11 @@ var l = n(200651),
     x = n(600164),
     g = n(436774),
     p = n(933843),
-    v = n(1163),
-    j = n(592125),
-    C = n(944486),
-    S = n(594174),
-    _ = n(78839),
+    v = n(140465),
+    j = n(1163),
+    C = n(592125),
+    S = n(944486),
+    _ = n(594174),
     Z = n(74538),
     I = n(451467),
     T = n(122186),
@@ -113,23 +113,23 @@ function P(e) {
 }
 function B(e) {
     let { onClose: t, selectedPreset: n, selectedResolution: r, selectedFPS: s, onResolutionChange: a, onFPSChange: g, onPresetChange: A, targetGuildPremiumTier: B, captureDeviceSelected: L } = e,
-        G = (0, d.e7)([S.default], () => {
-            let e = S.default.getCurrentUser();
+        G = (0, d.e7)([_.default], () => {
+            let e = _.default.getCurrentUser();
             return o()(null != e, 'StreamSettings: user cannot be undefined'), e;
         }),
-        D = (0, d.e7)([C.Z, j.Z], () => j.Z.getChannel(C.Z.getVoiceChannelId())),
+        D = (0, d.e7)([S.Z, C.Z], () => C.Z.getChannel(S.Z.getVoiceChannelId())),
         O = Z.ZP.canStreamQuality(Z.U2.MID, G),
         { location: U } = (0, h.O)(),
         F = (0, m.Zq)({ autoTrackExposure: !1 }),
         W = (0, Z.I5)(G, b.p9.TIER_1);
-    v.Z.useExperiment(
+    j.Z.useExperiment(
         { location: 'Go Live Modal' },
         {
             autoTrackExposure: !0,
             disable: W
         }
     );
-    let H = (0, d.e7)([_.ZP], () => _.ZP.inReverseTrial()),
+    let H = (0, v.x8)('StreamSettings'),
         V = (0, p.So)(c.q.STREAM_HIGH_QUALITY),
         z = (!O && !F) || V,
         [K, Y] = i.useState(!1),
@@ -158,7 +158,7 @@ function B(e) {
                     type: e,
                     selected: e.value === s,
                     needsPremium: !(0, I.Z)(n, r, e.value, G, B, D),
-                    needsDemo: V && e.value === N.ws.FPS_60,
+                    needsDemo: (V || H) && e.value === N.ws.FPS_60,
                     analyticsLocation: J,
                     onClick: () => g(e.value),
                     onClose: t,

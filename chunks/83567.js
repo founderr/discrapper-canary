@@ -1,8 +1,8 @@
 n(47120);
 var i = n(570140),
     r = n(457330),
-    l = n(726542),
-    a = n(231757),
+    a = n(726542),
+    l = n(231757),
     s = n(553795),
     o = n(585483),
     c = n(996106),
@@ -28,14 +28,14 @@ t.Z = {
             } = e;
             (0, d.bu)(t.transport);
             let h = (0, d._f)(t.application),
-                p = l.Z.get(n);
+                p = a.Z.get(n);
             if (null == p) throw new c.Z({ errorCode: g.lT.INVALID_PROVIDER }, 'Platform not found for provider "'.concat(n, '"'));
             if (n === m.ABu.AMAZON_MUSIC) {
                 if (!f.has(h)) throw new c.Z({ errorCode: g.lT.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
             } else throw new c.Z({ errorCode: g.lT.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
             return new Promise(async (e, t) => {
-                let l = s.Z.getAccount(null, n);
-                if (null == l) {
+                let a = s.Z.getAccount(null, n);
+                if (null == a) {
                     function d(t) {
                         var n;
                         if (null == p) return;
@@ -50,14 +50,14 @@ t.Z = {
                     }
                     i.Z.subscribe('USER_CONNECTIONS_UPDATE', d),
                         o.S.subscribe(m.CkL.CONNECTIONS_CALLBACK_ERROR, h),
-                        (0, a.Z)({
+                        (0, l.Z)({
                             platformType: p.type,
                             location: m.Sbl.ACTIVITY_RPC,
                             successRedirect: u
                         });
                 } else
                     try {
-                        let t = await r.Z.refreshAccessToken(p.type, l.id);
+                        let t = await r.Z.refreshAccessToken(p.type, a.id);
                         if (null == t) throw new c.Z({ errorCode: g.lT.OAUTH2_ERROR }, 'Refreshing access token did not return a new access token');
                         e({ access_token: t });
                     } catch (e) {
@@ -76,14 +76,14 @@ t.Z = {
             } = e;
             (0, d.bu)(t.transport);
             let i = (0, d._f)(t.application),
-                a = l.Z.get(n);
-            if (null == a) throw new c.Z({ errorCode: g.lT.INVALID_PROVIDER }, 'Platform not found for provider "'.concat(n, '"'));
+                l = a.Z.get(n);
+            if (null == l) throw new c.Z({ errorCode: g.lT.INVALID_PROVIDER }, 'Platform not found for provider "'.concat(n, '"'));
             if (n === m.ABu.AMAZON_MUSIC) {
                 if (!f.has(i)) throw new c.Z({ errorCode: g.lT.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
             } else throw new c.Z({ errorCode: g.lT.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
             let o = s.Z.getAccount(null, n);
             if (null == o) throw new c.Z({ errorCode: g.lT.NO_CONNECTION_FOUND }, 'No connection found');
-            let u = await r.Z.refreshAccessToken(a.type, o.id);
+            let u = await r.Z.refreshAccessToken(l.type, o.id);
             if (null == u) throw new c.Z({ errorCode: g.lT.OAUTH2_ERROR }, 'Refreshing access token did not return a new access token');
             return { access_token: u };
         }

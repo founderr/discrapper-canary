@@ -12,7 +12,7 @@ var a = t(200651),
     d = t(981631),
     l = t(486324),
     u = t(388032),
-    f = t(734471);
+    f = t(366201);
 function p(e) {
     let { uploadType: n, className: t, ...c } = e,
         p = i.useCallback(() => {

@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    l = n(570140),
-    a = n(988298),
+    a = n(570140),
+    l = n(988298),
     s = n(447543),
     o = n(13245),
     c = n(596223),
@@ -50,11 +50,11 @@ t.Z = {
                 } = e,
                 r = t.application.id;
             if (null == r) throw new h.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'No application.');
-            let l = d.Z.getApplicationActivity(r);
-            if (null == l || null == l.secrets || !(0, m.t9)(n, l.party, l.secrets)) throw new h.Z({ errorCode: _.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
+            let a = d.Z.getApplicationActivity(r);
+            if (null == a || null == a.secrets || !(0, m.t9)(n, a.party, a.secrets)) throw new h.Z({ errorCode: _.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
             let { lock: s, context: o } = (0, g.jU)(i),
-                p = (0, c.Z)(l, u.Z);
-            return (0, a.h7)(l, p, o).then(() => {
+                p = (0, c.Z)(a, u.Z);
+            return (0, l.h7)(a, p, o).then(() => {
                 if ((s(), p)) throw new h.Z({ errorCode: _.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure user does have have privacy enabled.');
             });
         }
@@ -77,16 +77,16 @@ t.Z = {
             return s.Z.resolveInvite(t, 'Game SDK').then((e) => {
                 let { invite: t, code: i } = e;
                 if (null == t) throw new h.Z({ errorCode: _.lTL.INVALID_INVITE }, 'Invalid invite id: '.concat(i));
-                let { context: r, lock: a } = (0, g.jU)(n);
+                let { context: r, lock: l } = (0, g.jU)(n);
                 return new Promise((e) => {
-                    l.Z.dispatch({
+                    a.Z.dispatch({
                         type: 'INVITE_MODAL_OPEN',
                         invite: t,
                         code: i,
                         context: r,
                         resolve: e
                     });
-                }).then(a);
+                }).then(l);
             });
         }
     },
@@ -99,10 +99,10 @@ t.Z = {
         handler(e) {
             let {
                     args: { pid: t },
-                    socket: l
+                    socket: a
                 } = e,
-                a = l.application.id;
-            if (null == a) throw new h.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'No application.');
+                l = a.application.id;
+            if (null == l) throw new h.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'No application.');
             let { lock: s } = (0, g.jU)(t);
             return new Promise((e) => {
                 (0, r.openModalLazy)(async () => {
@@ -110,8 +110,8 @@ t.Z = {
                     return (n) =>
                         (0, i.jsx)(t, {
                             ...n,
-                            mediaEngineContext: a,
-                            title: l.application.name,
+                            mediaEngineContext: l,
+                            title: a.application.name,
                             onClose: () => {
                                 n.onClose(), s(), e();
                             }

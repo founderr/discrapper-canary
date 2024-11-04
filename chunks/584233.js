@@ -1,24 +1,24 @@
 n.d(t, {
     x: function () {
-        return a;
+        return l;
     }
 });
 var i = n(447543),
     r = n(652898),
-    l = n(430824);
-async function a(e) {
+    a = n(430824);
+async function l(e) {
     let { code: t } = e,
-        a = (await (0, r.Z)(t)).invite;
-    if (null == a || null == a.guild) return;
+        l = (await (0, r.Z)(t)).invite;
+    if (null == l || null == l.guild) return;
     if (
         (await (function () {
             return new Promise((e) => {
-                l.Z.addConditionalChangeListener(() => !l.Z.isLoaded() || (e(), !1));
+                a.Z.addConditionalChangeListener(() => !a.Z.isLoaded() || (e(), !1));
             });
         })(),
-        null == l.Z.getGuild(a.guild.id))
+        null == a.Z.getGuild(l.guild.id))
     )
         return;
     let { default: s } = await Promise.resolve().then(n.bind(n, 17181));
-    await s({ guildId: a.guild.id }), i.Z.transitionToInvite(a);
+    await s({ guildId: l.guild.id }), i.Z.transitionToInvite(l);
 }

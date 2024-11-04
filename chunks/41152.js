@@ -9,30 +9,30 @@ n.d(t, {
     n(47120);
 var i = n(970606),
     r = n(641037),
-    l = n(308083),
-    a = n(388032);
+    a = n(308083),
+    l = n(388032);
 function s(e) {
     return [
         ...(0, r.G)(e),
         {
-            index: l.IS.CUSTOMIZE_DISCOVERY,
-            name: a.intl.string(a.t.wuMIQ0)
+            index: a.IS.CUSTOMIZE_DISCOVERY,
+            name: l.intl.string(l.t.wuMIQ0)
         },
         {
-            index: l.IS.THANK_YOU_END,
-            name: a.intl.string(a.t['32Xq1d'])
+            index: a.IS.THANK_YOU_END,
+            name: l.intl.string(l.t['32Xq1d'])
         }
     ];
 }
 function o(e) {
     switch (e) {
-        case l.Wy.GAMES:
+        case a.Wy.GAMES:
             return i._9.GAMES_CHOICE;
-        case l.Wy.CUSTOMIZE_TAG_BADGE:
+        case a.Wy.CUSTOMIZE_TAG_BADGE:
             return i._9.CUSTOMIZE_IDENTITY;
-        case l.IS.CUSTOMIZE_DISCOVERY:
+        case a.IS.CUSTOMIZE_DISCOVERY:
             return i._9.CUSTOMIZE_DISCOVERY;
-        case l.IS.THANK_YOU_END:
+        case a.IS.THANK_YOU_END:
             return i._9.THANK_YOU_END;
         default:
             return i._9.UNKNOWN;

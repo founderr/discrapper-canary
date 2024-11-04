@@ -1,7 +1,7 @@
 var i = n(200651),
     r = n(192379),
-    l = n(481060),
-    a = n(115849),
+    a = n(481060),
+    l = n(115849),
     s = n(645792),
     o = n(787642),
     c = n(437314),
@@ -12,12 +12,12 @@ function m() {
     return (0, i.jsxs)('header', {
         className: h.header,
         children: [
-            (0, i.jsx)(l.FormTitle, {
+            (0, i.jsx)(a.FormTitle, {
                 tag: 'h2',
                 className: h.title,
                 children: u.intl.string(u.t.w5uwoK)
             }),
-            (0, i.jsx)(a.Z, {})
+            (0, i.jsx)(l.Z, {})
         ]
     });
 }

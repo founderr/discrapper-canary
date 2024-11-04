@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(481060),
-    a = n(921944),
+    a = n(481060),
+    l = n(921944),
     s = n(388032),
     o = n(332057);
 function c(e) {
@@ -15,19 +15,19 @@ function c(e) {
     return (
         r.useEffect(() => {
             let e = setTimeout(() => {
-                t(a.L.AUTO_DISMISS);
+                t(l.L.AUTO_DISMISS);
             }, 8000);
             return () => {
                 clearTimeout(e);
             };
         }, [t]),
-        (0, i.jsxs)(l.Clickable, {
+        (0, i.jsxs)(a.Clickable, {
             className: o.container,
             onClick: () => {
-                t(a.L.USER_DISMISS);
+                t(l.L.USER_DISMISS);
             },
             children: [
-                (0, i.jsx)(l.Text, {
+                (0, i.jsx)(a.Text, {
                     variant: 'text-sm/medium',
                     color: 'always-white',
                     children: s.intl.string(s.t.fJNqJi)
@@ -39,7 +39,7 @@ function c(e) {
 }
 function d(e) {
     let { children: t, markAsDismissed: n } = e,
-        [a, s] = r.useState(!1);
+        [l, s] = r.useState(!1);
     return (
         r.useEffect(() => {
             let e = setTimeout(() => {
@@ -49,10 +49,10 @@ function d(e) {
                 clearTimeout(e);
             };
         }, [s]),
-        (0, i.jsx)(l.Popout, {
+        (0, i.jsx)(a.Popout, {
             position: 'top',
             align: 'left',
-            shouldShow: a,
+            shouldShow: l,
             renderPopout: () => (0, i.jsx)(c, { markAsDismissed: n }),
             children: t
         })

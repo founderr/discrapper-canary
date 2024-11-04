@@ -6,15 +6,15 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(481060),
     o = n(497505),
     c = n(415104),
     d = n(468128);
 function u(e) {
     var t;
-    let { quests: n, isFetching: l } = e,
+    let { quests: n, isFetching: a } = e,
         u = null;
     if (window.location.hash.length > 0) {
         let e = window.location.hash.slice(1);
@@ -50,7 +50,7 @@ function u(e) {
         );
     }, []);
     let g = (t = m) >= 1610 ? 3 : t >= 1340 ? 2 : 1;
-    return l && 0 === n.length
+    return a && 0 === n.length
         ? (0, i.jsx)(s.Spinner, { className: d.spinner })
         : (0, i.jsx)(
               'div',
@@ -65,7 +65,7 @@ function u(e) {
                               questContent: o.jn.QUEST_HOME_DESKTOP,
                               contentPosition: t,
                               rowIndex: n,
-                              className: a()(d.questTile, {
+                              className: l()(d.questTile, {
                                   [d.selected]: h && e.id === u,
                                   [d.unselected]: h && e.id !== u
                               })

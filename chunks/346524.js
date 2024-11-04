@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(120356),
-    l = n.n(r),
-    a = n(754961),
+    a = n.n(r),
+    l = n(754961),
     s = n(80242),
     o = n(837275);
 function c(e) {
@@ -26,10 +26,10 @@ function c(e) {
         { brandPrimaryColor: f } = n;
     return (0, i.jsx)('div', {
         className: o.navigation,
-        children: (0, i.jsx)(a.i, {
+        children: (0, i.jsx)(l.i, {
             isBackDisabled: g,
             isNextDisabled: p,
-            backButtonClassName: l()(g && o.hiddenBackButton),
+            backButtonClassName: a()(g && o.hiddenBackButton),
             onNextClick: h,
             onBackClick: m,
             nextButtonBackgroundColor: f,

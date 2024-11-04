@@ -8,8 +8,8 @@ n.d(t, {
 });
 var i = n(192379),
     r = n(442837),
-    l = n(296386),
-    a = n(900849),
+    a = n(296386),
+    l = n(900849),
     s = n(762692),
     o = n(356164),
     c = n(164991),
@@ -20,15 +20,15 @@ var i = n(192379),
 function p(e) {
     let { loadId: t } = e,
         n = (0, c.NL)(),
-        l = (0, c.lZ)(),
-        a = (0, c.Dm)(),
+        a = (0, c.lZ)(),
+        l = (0, c.Dm)(),
         s = i.useMemo(
             () => ({
-                categoryId: l,
+                categoryId: a,
                 query: n,
-                languageCode: a
+                languageCode: l
             }),
-            [l, a, n]
+            [a, l, n]
         ),
         u = (0, r.e7)([o.Z], () => {
             var e;
@@ -50,9 +50,9 @@ function p(e) {
                 i = o.Z.getGuildIds(s),
                 r = o.Z.getTotal(s);
             if (null == i || null == r) return;
-            let l = o.Z.getIsFetching(s),
-                a = o.Z.getIsInitialFetchComplete(s);
-            if (l || !a || i.length >= r) return;
+            let a = o.Z.getIsFetching(s),
+                l = o.Z.getIsInitialFetchComplete(s);
+            if (a || !l || i.length >= r) return;
             let u = (0, c.a7)();
             (0, d.CD)({
                 loadId: t,
@@ -68,10 +68,10 @@ function p(e) {
             loading: !p && (f || m),
             searchResultsQuery: g,
             loadMore: _,
-            searchCategoryId: l,
+            searchCategoryId: a,
             isBlockedSearchQuery: p
         }),
-        [u, p, f, m, g, _, l]
+        [u, p, f, m, g, _, a]
     );
 }
 function g(e) {
@@ -79,13 +79,13 @@ function g(e) {
         n = u.Z.useField('isSearchVisible'),
         r = (0, c.A3)();
     i.useEffect(() => {
-        s.Z.createAlgoliaIndex(), (0, l.le)();
+        s.Z.createAlgoliaIndex(), (0, a.le)();
     }, []);
     let o = i.useCallback((e) => {
             (0, c.LD)({ query: e });
         }, []),
         h = i.useCallback(() => {
-            a.IZ(t),
+            l.IZ(t),
                 s.Z.clearAlgoliaSearchResults(),
                 s.Z.resetSearchLayout(),
                 (0, c.LD)({

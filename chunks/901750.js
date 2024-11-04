@@ -4,7 +4,7 @@ var s = n(481060),
     r = n(388032),
     l = n(251529);
 t.Z = function (e) {
-    let { hasGuildBoostSlots: t, hasAppliedGuildBoosts: a, isUserPremiumTier2: o, subscriptionIsPausedOrPausePending: c } = e;
+    let { hasGuildBoostSlots: t, hasAppliedGuildBoosts: a, hasBoostPerk: o, canAddBoosts: c } = e;
     return (0, i.jsxs)('div', {
         className: l.wrapper,
         children: [
@@ -23,13 +23,13 @@ t.Z = function (e) {
                         variant: 'display-md',
                         className: l.heading,
                         children: (function (e) {
-                            let { hasGuildBoostSlots: t, hasAppliedGuildBoosts: n, isUserPremiumTier2: i, subscriptionIsPausedOrPausePending: s } = e;
-                            return s ? r.intl.format(r.t.Rb8Jho, {}) : t ? (i && !n ? r.intl.format(r.t.s9zQyM, {}) : r.intl.format(r.t.Rb8Jho, {})) : r.intl.string(r.t['2rh0b2']);
+                            let { hasGuildBoostSlots: t, hasAppliedGuildBoosts: n, hasBoostPerk: i, canAddBoosts: s } = e;
+                            return s ? (t ? (i && !n ? r.intl.format(r.t.s9zQyM, {}) : r.intl.format(r.t.Rb8Jho, {})) : r.intl.string(r.t['2rh0b2'])) : r.intl.format(r.t.Rb8Jho, {});
                         })({
                             hasGuildBoostSlots: t,
-                            isUserPremiumTier2: o,
+                            hasBoostPerk: o,
                             hasAppliedGuildBoosts: a,
-                            subscriptionIsPausedOrPausePending: c
+                            canAddBoosts: c
                         })
                     }),
                     (0, i.jsx)('svg', {

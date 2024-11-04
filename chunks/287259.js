@@ -1,12 +1,12 @@
 n.d(t, {
     JZ: function () {
-        return l;
+        return a;
     },
     fS: function () {
         return r;
     },
     wX: function () {
-        return a;
+        return l;
     }
 });
 var i = n(570140);
@@ -17,13 +17,13 @@ function r(e, t) {
         direction: t
     });
 }
-function l(e) {
+function a(e) {
     i.Z.dispatch({
         type: 'LIBRARY_APPLICATION_FILTER_UPDATE',
         query: e
     });
 }
-function a(e) {
+function l(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     i.Z.dispatch({
         type: 'LIBRARY_TABLE_ACTIVE_ROW_ID_UPDATE',

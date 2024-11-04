@@ -1,6 +1,6 @@
 n.d(t, {
     RY: function () {
-        return l;
+        return a;
     },
     Tb: function () {
         return s;
@@ -9,13 +9,13 @@ n.d(t, {
         return o;
     },
     iD: function () {
-        return a;
+        return l;
     }
 }),
     n(47120);
 var i = n(570140),
     r = n(830168);
-function l(e) {
+function a(e) {
     r.Z.queryDirectory(e, (t, n) => {
         if (null == t && null != n)
             i.Z.dispatch({
@@ -25,7 +25,7 @@ function l(e) {
             });
     });
 }
-function a(e) {
+function l(e) {
     i.Z.dispatch({
         type: 'INSTALLATION_LOCATION_REMOVE',
         path: e
@@ -43,11 +43,11 @@ function s(e, t) {
 function o(e) {
     let t = {},
         n = 0;
-    for (let l of e) {
-        if (null != l && 'string' == typeof l)
-            r.Z.queryDirectory(l, (r, a) => {
+    for (let a of e) {
+        if (null != a && 'string' == typeof a)
+            r.Z.queryDirectory(a, (r, l) => {
                 ++n,
-                    null == r && null != a && (t[l] = a),
+                    null == r && null != l && (t[a] = l),
                     n === e.length &&
                         i.Z.dispatch({
                             type: 'INSTALLATION_LOCATION_FETCH_METADATA',

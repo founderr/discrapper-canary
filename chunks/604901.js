@@ -1,7 +1,7 @@
 var r = {
     './spritesheet-emoji-32.png': '63215',
     './spritesheet-emoji-40.png': '926720',
-    './spritesheet-emoji-48.png': '332936'
+    './spritesheet-emoji-48.png': '178915'
 };
 function i(e) {
     return n(a(e));

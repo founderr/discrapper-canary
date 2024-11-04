@@ -15,7 +15,7 @@ var r = n(200651),
     d = n(607070),
     f = n(243778),
     _ = n(130402),
-    h = n(78839),
+    h = n(140465),
     p = n(626135),
     m = n(153066),
     g = n(981631),
@@ -52,7 +52,7 @@ t.Z = function (e) {
     let { tabIndex: n, className: a, renderButtonContents: y, active: A, onClick: N, 'aria-controls': C, focusProps: R } = e,
         [O, D] = i.useState(!1),
         [L, x] = i.useState(50),
-        w = (0, l.e7)([h.ZP], () => h.ZP.inReverseTrial()),
+        w = (0, h.x8)('EmojiButton'),
         M = O || A,
         P = (0, m.l)(S, 'emojiButton', M ? 'Hovered' : 'Normal');
     let k =
@@ -71,8 +71,8 @@ t.Z = function (e) {
             D(!1);
         }, [D]),
         B = i.useCallback(() => (0, _.x)(v.qR.EmojiButtonFocused), []),
-        [Z, F] = (0, f.US)(w ? [u.z.REVERSE_TRIAL_EMOJI_BUTTON] : [], void 0, !0),
-        V = Z === u.z.REVERSE_TRIAL_EMOJI_BUTTON,
+        [Z, F] = (0, f.US)(w ? [u.z.REVERSE_TRIAL_EMOJI_BUTTON, u.z.TRIAL_FOR_ALL_EMOJI_BUTTON] : [], void 0, !0),
+        V = Z === u.z.REVERSE_TRIAL_EMOJI_BUTTON || Z === u.z.TRIAL_FOR_ALL_EMOJI_BUTTON,
         j = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
     return (0, r.jsx)(c.Tooltip, {
         text: b(),

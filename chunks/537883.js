@@ -1,7 +1,7 @@
 var i,
     r,
-    l,
     a,
+    l,
     s = n(442837),
     o = n(570140),
     c = n(331114),
@@ -10,7 +10,7 @@ let u = [];
 function h() {
     u = [];
 }
-class m extends (a = s.ZP.Store) {
+class m extends (l = s.ZP.Store) {
     initialize() {
         this.waitFor(c.Z, d.Z);
     }
@@ -18,15 +18,15 @@ class m extends (a = s.ZP.Store) {
         return u;
     }
 }
-(l = 'GlobalDiscoveryServersSearchLayoutStore'),
+(a = 'GlobalDiscoveryServersSearchLayoutStore'),
     (r = 'displayName') in (i = m)
         ? Object.defineProperty(i, r, {
-              value: l,
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[r] = l),
+        : (i[r] = a),
     (t.Z = new m(o.Z, {
         CONNECTION_OPEN: h,
         GLOBAL_DISCOVERY_SERVERS_SEARCH_LAYOUT_RESET: h,

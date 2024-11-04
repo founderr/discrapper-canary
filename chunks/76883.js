@@ -2,7 +2,7 @@ var n = r(381538),
     i = r(505728),
     o = r(192379),
     a = r(581079),
-    u = r(772467),
+    u = r(845936),
     s = r(46925).setDraftEditorSelection,
     c = (function (t) {
         function e() {

@@ -14,7 +14,7 @@ function o(e) {
     return (
         (0, i.openModalLazy)(
             async () => {
-                let { ActivityAgeGateModal: e } = await n.e('57951').then(n.bind(n, 224604));
+                let { ActivityAgeGateModal: e } = await n.e('57951').then(n.bind(n, 252528));
                 return (n) =>
                     (0, r.jsx)(e, {
                         ...n,

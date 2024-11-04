@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(392711),
-    a = n.n(l),
+    a = n(392711),
+    l = n.n(a),
     s = n(954955),
     o = n.n(s),
     c = n(442837),
@@ -33,15 +33,15 @@ var i = n(200651),
     y = n(888816);
 let L = 15 * I.Z.Millis.MINUTE,
     R = (0, x.Z)(function (e) {
-        let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
+        let { party: t, onUserContextMenu: n, onChannelContextMenu: a, quest: l } = e,
             s = (0, i.jsx)(S.Z, {
                 party: t,
                 onUserContextMenu: n
             }),
             c = (0, i.jsx)(v.Z, {
                 party: t,
-                onChannelContextMenu: l,
-                quest: a
+                onChannelContextMenu: a,
+                quest: l
             }),
             { partiedMembers: u, applicationStreams: h, currentActivities: m, voiceChannels: p } = t,
             g = u.length,
@@ -91,14 +91,14 @@ let L = 15 * I.Z.Millis.MINUTE,
               })
             : null;
     }),
-    P = a().throttle(() => p.W(!1), 300000);
+    P = l().throttle(() => p.W(!1), 300000);
 function O() {
     let {
             nowPlayingCards: e,
             loaded: t,
             needsRefresh: n,
-            fetching: l,
-            currentUser: a
+            fetching: a,
+            currentUser: l
         } = (0, c.cj)([_.Z, g.Z, f.default], () => ({
             nowPlayingCards: _.Z.nowPlayingCards,
             loaded: _.Z.loaded,
@@ -107,10 +107,10 @@ function O() {
             currentUser: f.default.getCurrentUser()
         })),
         s = (0, c.e7)([h.Z], () => h.Z.quests);
-    r.useEffect(() => (u.Z.wait(() => C.L()), () => u.Z.wait(() => C.v())), [null == a ? void 0 : a.id]),
+    r.useEffect(() => (u.Z.wait(() => C.L()), () => u.Z.wait(() => C.v())), [null == l ? void 0 : l.id]),
         r.useEffect(() => {
-            n && !l && P();
-        }, [n, l]);
+            n && !a && P();
+        }, [n, a]);
     let o = r.useMemo(() => {
             let t = new Map(),
                 n = new Set();

@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i,
     r = n(392711),
-    l = n.n(r),
-    a = n(442837),
+    a = n.n(r),
+    l = n(442837),
     s = n(570140),
     o = n(846027),
     c = n(581883),
@@ -62,7 +62,7 @@ function x(e, t, n) {
             }
           : e;
 }
-class b extends (i = a.ZP.DeviceSettingsStore) {
+class b extends (i = l.ZP.DeviceSettingsStore) {
     initialize(e) {
         this.waitFor(u.Z, c.Z), (f = null != e ? e : g);
     }
@@ -117,26 +117,26 @@ p(b, 'displayName', 'ConnectedDeviceStore'),
                 (E = i), (I = r), (_ = !0);
                 return;
             }
-            let a = Object.keys(E),
+            let l = Object.keys(E),
                 s = Object.keys(i),
                 o = Object.keys(I),
                 c = Object.keys(r),
-                d = l().difference(a, s),
-                u = l().difference(o, c);
+                d = a().difference(l, s),
+                u = a().difference(o, c);
             return (
                 d.length > 0 || u.length > 0
                     ? (C = {})
-                    : (l()
-                          .difference(s, a)
+                    : (a()
+                          .difference(s, l)
                           .forEach((e) => {
                               C[e] = x(C[e], e, h.QyF.INPUT);
                           }),
-                      l()
+                      a()
                           .difference(c, o)
                           .forEach((e) => {
                               C[e] = x(C[e], e, h.QyF.OUTPUT);
                           })),
-                !(l().isEqual(a, s) && l().isEqual(o, c)) && ((E = i), (I = r), !0)
+                !(a().isEqual(l, s) && a().isEqual(o, c)) && ((E = i), (I = r), !0)
             );
         },
         CONNECTED_DEVICE_SET: function (e) {

@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    l = n(570140),
-    a = n(536442),
+    a = n(570140),
+    l = n(536442),
     s = n(810788),
     o = n(592125),
     c = n(131951),
@@ -33,10 +33,10 @@ function v(e, t, n) {
 }
 class S extends h.Z {
     _initialize() {
-        super._initialize(), !__OVERLAY__ && l.Z.subscribe('OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', this._handleOverlaySoundboardSoundsFetchRequest);
+        super._initialize(), !__OVERLAY__ && a.Z.subscribe('OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', this._handleOverlaySoundboardSoundsFetchRequest);
     }
     _terminate() {
-        super._terminate(), !__OVERLAY__ && l.Z.unsubscribe('OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', this._handleOverlaySoundboardSoundsFetchRequest);
+        super._terminate(), !__OVERLAY__ && a.Z.unsubscribe('OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', this._handleOverlaySoundboardSoundsFetchRequest);
     }
     constructor(...e) {
         var t;
@@ -57,8 +57,8 @@ class S extends h.Z {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
                     i = arguments.length > 2 ? arguments[2] : void 0,
                     r = arguments.length > 3 ? arguments[3] : void 0,
-                    l = null != r && d.Z.getVoiceChannelId() === r;
-                if ((null == r || l) && !c.Z.isDeaf() && !p.Z.isLocalSoundboardMuted(i))
+                    a = null != r && d.Z.getVoiceChannelId() === r;
+                if ((null == r || a) && !c.Z.isDeaf() && !p.Z.isLocalSoundboardMuted(i))
                     try {
                         let r = {
                             soundKey: ''.concat(i, '-').concat(e),
@@ -76,12 +76,12 @@ class S extends h.Z {
             }),
             v(this, '_handleOpenEducationModal', (e, t) => {
                 if (null == e) return;
-                let l = o.Z.getChannel(t),
+                let a = o.Z.getChannel(t),
                     c = u.Z.getKeybindForAction(I.kg4.SOUNDBOARD_HOLD);
-                null != l &&
-                    (0, g.Z)(l) &&
+                null != a &&
+                    (0, g.Z)(a) &&
                     null != c &&
-                    s.Z.hasHotspot(a.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL) &&
+                    s.Z.hasHotspot(l.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL) &&
                     (0, r.openModalLazy)(async () => {
                         let { default: t } = await n.e('69208').then(n.bind(n, 490166));
                         return (n) =>
@@ -89,7 +89,7 @@ class S extends h.Z {
                                 ...n,
                                 guildId: e,
                                 keybind: c,
-                                channel: l
+                                channel: a
                             });
                     });
             });

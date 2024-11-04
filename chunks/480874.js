@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(91192),
     o = n(286379),
     c = n(481060),
@@ -30,7 +30,7 @@ function b() {
     let e = r.useRef(null),
         t = (0, E.Z)(),
         n = (0, I.w)(),
-        l = (0, g.V)(),
+        a = (0, g.V)(),
         b = (0, d.N)(),
         A = (0, u.Z)('message-requests-spam-list'),
         { channelId: Z } = (0, _._)(),
@@ -55,18 +55,18 @@ function b() {
                     v.Z,
                     {
                         index: s,
-                        className: a()({
+                        className: l()({
                             [x.selected]: null != Z && Z === d,
                             [x.siblingSelected]: null != Z && Z === c
                         }),
                         channel: o.channel,
                         user: o.user,
-                        hasSingleMessageRequest: l
+                        hasSingleMessageRequest: a
                     },
                     d
                 );
             },
-            [t, l, Z]
+            [t, a, Z]
         ),
         O = r.useCallback(
             () =>
@@ -110,12 +110,12 @@ function b() {
               navigator: A,
               children: (0, i.jsx)(s.SJ, {
                   children: (n) => {
-                      let { ref: r, role: l, ...a } = n;
+                      let { ref: r, role: a, ...l } = n;
                       return (0, i.jsx)(
                           c.List,
                           {
                               className: x.list,
-                              innerRole: l,
+                              innerRole: a,
                               innerAriaLabel: T.intl.string(T.t.e7GWjY),
                               ref: (t) => {
                                   var n;
@@ -130,7 +130,7 @@ function b() {
                               sections: [t.length],
                               chunkSize: 30,
                               fade: !0,
-                              ...a
+                              ...l
                           },
                           'message-requests-spam-list'
                       );

@@ -10,9 +10,9 @@ var s = n(481060),
     u = n(388032),
     m = n(68964);
 t.Z = function (e) {
-    let { hasAppliedGuildBoosts: t, isUserPremiumTier2: n, hasGuildAffinitiesOrInGuild: h, subscriptionIsPausedOrPausePending: g } = e,
+    let { hasAppliedGuildBoosts: t, hasBoostPerk: n, hasGuildAffinitiesOrInGuild: h, subscriptionIsPausedOrPausePending: g } = e,
         { subtitle: p, flavor: x } = (function (e) {
-            let { hasAppliedGuildBoosts: t, isUserPremiumTier2: n, hasGuildAffinitiesOrInGuild: i, subscriptionIsPausedOrPausePending: s } = e;
+            let { hasAppliedGuildBoosts: t, hasBoostPerk: n, hasGuildAffinitiesOrInGuild: i, subscriptionIsPausedOrPausePending: s } = e;
             if (s) return { flavor: u.intl.format(u.t.doslJi, { onClick: () => r.Z.open(c.oAB.SUBSCRIPTIONS) }) };
             if (!i) return { subtitle: u.intl.string(u.t.oiWYAQ) };
             if (t)
@@ -29,7 +29,7 @@ t.Z = function (e) {
             };
         })({
             hasAppliedGuildBoosts: t,
-            isUserPremiumTier2: n,
+            hasBoostPerk: n,
             hasGuildAffinitiesOrInGuild: h,
             subscriptionIsPausedOrPausePending: g
         });

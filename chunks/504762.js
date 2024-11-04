@@ -6,30 +6,30 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    l = n(388032),
-    a = n(599475),
+    a = n(388032),
+    l = n(599475),
     s = n(217110);
 function o() {
     return (0, i.jsx)('div', {
-        className: a.container,
+        className: l.container,
         children: (0, i.jsxs)('div', {
-            className: a.content,
+            className: l.content,
             children: [
                 (0, i.jsx)('img', {
                     src: s,
-                    alt: l.intl.string(l.t.MvLOqq)
+                    alt: a.intl.string(a.t.MvLOqq)
                 }),
                 (0, i.jsx)(r.Spacer, { size: 12 }),
                 (0, i.jsx)(r.Heading, {
-                    className: a.header,
+                    className: l.header,
                     variant: 'heading-lg/semibold',
-                    children: l.intl.string(l.t.t18lFh)
+                    children: a.intl.string(a.t.t18lFh)
                 }),
                 (0, i.jsx)(r.Spacer, { size: 8 }),
                 (0, i.jsx)(r.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
-                    children: l.intl.string(l.t.TvGJgo)
+                    children: a.intl.string(a.t.TvGJgo)
                 })
             ]
         })

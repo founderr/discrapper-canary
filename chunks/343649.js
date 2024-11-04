@@ -29,7 +29,7 @@ var r,
     x = t(89057),
     P = t(600164),
     C = t(232127),
-    v = t(598),
+    v = t(563132),
     T = t(409813),
     I = t(45572),
     y = t(98278),
@@ -198,11 +198,11 @@ function et(e) {
     let e1 = i.useRef(null),
         [e8, e2] = (0, g.Z)(!1, 500),
         [e7, e9] = i.useState(null),
-        [e4, e5] = i.useState([]),
-        [e3, e6] = i.useState(!1);
+        [e4, e3] = i.useState([]),
+        [e5, e6] = i.useState(!1);
     i.useEffect(() => {
         let e;
-        if (!!eZ) null != Z.Z.get(z.Xh.PREMIUM_MONTH_GUILD) && e5((e = (0, W.DE)(z.Xh.PREMIUM_MONTH_GUILD, eC, !1))), null == eC && null != eu && null != eu.paymentSourceId ? e9(eu.currency) : null != e && e9(e[0]);
+        if (!!eZ) null != Z.Z.get(z.Xh.PREMIUM_MONTH_GUILD) && e3((e = (0, W.DE)(z.Xh.PREMIUM_MONTH_GUILD, eC, !1))), null == eC && null != eu && null != eu.paymentSourceId ? e9(eu.currency) : null != e && e9(e[0]);
     }, [eC, eu, eZ, JSON.stringify(e4)]);
     let ne = (0, k.vP)({
         paymentModalArgs: eb,
@@ -370,7 +370,7 @@ function et(e) {
                                                   guild_id: eo,
                                                   application_id: ec
                                               }),
-                                              e3)
+                                              e5)
                                           )
                                               return;
                                           if (null == eu || null == em) {
@@ -405,7 +405,7 @@ function et(e) {
                                                   duration_ms: Date.now() - eU
                                               });
                                       } finally {
-                                          !e3 && ev(!1);
+                                          !e5 && ev(!1);
                                       }
                                   },
                                   children: q.intl.string(q.t.eUEeCg)

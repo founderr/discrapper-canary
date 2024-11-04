@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(100621),
-    a = n(782690),
+    a = n(100621),
+    l = n(782690),
     s = n(442837),
     o = n(481060),
     c = n(607070),
@@ -20,7 +20,7 @@ let E = {
     friction: 60
 };
 function I() {
-    let e = (0, g.GN)((e) => e.selectedGames, a.Z),
+    let e = (0, g.GN)((e) => e.selectedGames, l.Z),
         t = r.useMemo(() => new Set(e), [e]),
         n = r.useCallback((e) => g.GN.getState().setSelectedGames(Array.from(e)), []);
     return (0, i.jsx)(d.Z, {
@@ -32,7 +32,7 @@ function I() {
     });
 }
 function C() {
-    let e = (0, g.GN)((e) => e.selectedPlaystyle, a.Z),
+    let e = (0, g.GN)((e) => e.selectedPlaystyle, l.Z),
         t = r.useCallback((e) => g.GN.getState().setSelectedPlaystyle(e), []);
     return (0, i.jsx)(u.Z, {
         title: f.intl.string(f.t.nSOnKS),
@@ -42,7 +42,7 @@ function C() {
     });
 }
 function v() {
-    let e = (0, g.GN)((e) => e.selectedTraits, a.Z),
+    let e = (0, g.GN)((e) => e.selectedTraits, l.Z),
         t = r.useMemo(() => new Set(e), [e]),
         n = r.useCallback((e) => g.GN.getState().setSelectedTraits([...e]), []);
     return (0, i.jsx)(p.Z, {
@@ -64,7 +64,7 @@ t.Z = r.memo(function (e) {
         p = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
         [N, T] = r.useState(0),
         [x, b] = r.useState(0),
-        A = (0, g.GN)((e) => e.selectedPlaystyle, a.Z),
+        A = (0, g.GN)((e) => e.selectedPlaystyle, l.Z),
         Z = r.useCallback(
             (e) => {
                 T(e), x < e && b(e);
@@ -134,7 +134,7 @@ t.Z = r.memo(function (e) {
             },
             'animate-always'
         );
-    (0, l.useChain)([n, d, u], [0, 0.2, 0.5]);
+    (0, a.useChain)([n, d, u], [0, 0.2, 0.5]);
     let M = r.useMemo(() => [N], [N]),
         w = r.useCallback((e) => {
             switch (e) {
@@ -146,11 +146,11 @@ t.Z = r.memo(function (e) {
                     return (0, i.jsx)(v, {});
             }
         }, []);
-    return (0, i.jsxs)(l.animated.div, {
+    return (0, i.jsxs)(a.animated.div, {
         className: _.container,
         style: O,
         children: [
-            (0, i.jsx)(l.animated.div, {
+            (0, i.jsx)(a.animated.div, {
                 className: _.sequencer,
                 style: j,
                 children: (0, i.jsx)(m.Z, {
@@ -160,7 +160,7 @@ t.Z = r.memo(function (e) {
                     getItemKey: S
                 })
             }),
-            (0, i.jsxs)(l.animated.div, {
+            (0, i.jsxs)(a.animated.div, {
                 className: _.footer,
                 style: D,
                 children: [

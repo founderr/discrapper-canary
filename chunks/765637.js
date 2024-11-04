@@ -1,5 +1,5 @@
 var r = n(219842),
-    i = n(498866),
+    i = n(7835),
     a = Object.prototype.propertyIsEnumerable,
     s = Object.getOwnPropertySymbols,
     o = s

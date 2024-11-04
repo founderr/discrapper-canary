@@ -1,8 +1,8 @@
 n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817);
 var i = n(442837),
     r = n(704215),
-    l = n(524437),
-    a = n(381499),
+    a = n(524437),
+    l = n(381499),
     s = n(433517),
     o = n(581364),
     c = n(536442),
@@ -35,22 +35,22 @@ let _ = [
             var t, n, i;
             let r;
             if ((((i = r || (r = {})).Mentions = 'Recent Mentions'), (i.Unreads = 'Inbox'), null != e.inbox)) return !1;
-            let a = !1,
-                o = l.f9.create();
-            (e.inbox = o), s.K.get('seenInboxTutorial', !1) && ((o.viewedTutorial = !0), (a = !0));
+            let l = !1,
+                o = a.f9.create();
+            (e.inbox = o), s.K.get('seenInboxTutorial', !1) && ((o.viewedTutorial = !0), (l = !0));
             let c = s.K.get('recentsButtonTab2');
-            null != c && ((o.currentTab = 'Recent Mentions' === c ? l.X.MENTIONS : l.X.UNREADS), (a = !0));
+            null != c && ((o.currentTab = 'Recent Mentions' === c ? a.X.MENTIONS : a.X.UNREADS), (l = !0));
             let u = null !== (t = s.K.get('unread-messages-collapsed-channels')) && void 0 !== t ? t : {};
             for (let t in u) {
                 if (!u[t]) continue;
                 let i = d.Z.getChannel(t);
                 null != i &&
-                    ((a = !0),
+                    ((l = !0),
                     (0, h.i7)(e, null !== (n = i.guild_id) && void 0 !== n ? n : '0', i.id, (e) => {
                         e.collapsedInInbox = !0;
                     }));
             }
-            return a;
+            return l;
         },
         cleanup() {
             s.K.remove('seenInboxTutorial'), s.K.remove('recentsButtonTab2'), s.K.remove('unread-messages-collapsed-channels');
@@ -62,7 +62,7 @@ let _ = [
             let { state: t } = i.ZP.PersistedStore.migrateAndReadStoreState('EmojiStore', [() => ({ diversitySurrogate: s.K.get('EmojiDiversitySurrogate') || '' })]);
             if (null == t) return !1;
             let n = !1;
-            return null != t.diversitySurrogate && '' !== t.diversitySurrogate && (null == e.textAndImages && (e.textAndImages = l.Me.create()), null == e.textAndImages.diversitySurrogate && (e.textAndImages.diversitySurrogate = a.Gm.create()), (e.textAndImages.diversitySurrogate.value = t.diversitySurrogate), (n = !0)), n;
+            return null != t.diversitySurrogate && '' !== t.diversitySurrogate && (null == e.textAndImages && (e.textAndImages = a.Me.create()), null == e.textAndImages.diversitySurrogate && (e.textAndImages.diversitySurrogate = l.Gm.create()), (e.textAndImages.diversitySurrogate.value = t.diversitySurrogate), (n = !0)), n;
         },
         cleanup() {}
     },
@@ -81,9 +81,9 @@ let _ = [
         run(e) {
             var t, n, i, r, o, c, d;
             let u = !1;
-            (e.textAndImages = null !== (t = e.textAndImages) && void 0 !== t ? t : l.Me.create()), (e.notifications = null !== (n = e.notifications) && void 0 !== n ? n : l.sf.create()), (e.privacy = null !== (i = e.privacy) && void 0 !== i ? i : l.bE.create()), (e.voiceAndVideo = null !== (r = e.voiceAndVideo) && void 0 !== r ? r : l.v_.create()), (e.gameLibrary = null !== (o = e.gameLibrary) && void 0 !== o ? o : l.Fm.create()), (e.debug = null !== (c = e.debug) && void 0 !== c ? c : l.tA.create());
+            (e.textAndImages = null !== (t = e.textAndImages) && void 0 !== t ? t : a.Me.create()), (e.notifications = null !== (n = e.notifications) && void 0 !== n ? n : a.sf.create()), (e.privacy = null !== (i = e.privacy) && void 0 !== i ? i : a.bE.create()), (e.voiceAndVideo = null !== (r = e.voiceAndVideo) && void 0 !== r ? r : a.v_.create()), (e.gameLibrary = null !== (o = e.gameLibrary) && void 0 !== o ? o : a.Fm.create()), (e.debug = null !== (c = e.debug) && void 0 !== c ? c : a.tA.create());
             let h = null !== (d = s.K.get('UserSettingsStore')) && void 0 !== d ? d : {};
-            return 'boolean' == typeof h.useRichChatTextBox && ((e.textAndImages.useRichChatInput = a.D5.create({ value: h.useRichChatTextBox })), (u = !0)), 'string' == typeof h.renderSpoilers && ((e.textAndImages.renderSpoilers = a.Gm.create({ value: h.renderSpoilers })), (u = !0)), 'boolean' == typeof h.useThreadSidebar && ((e.textAndImages.useThreadSidebar = a.D5.create({ value: h.useThreadSidebar })), (u = !0)), 'boolean' == typeof h.showInAppNotifications && ((e.notifications.showInAppNotifications = a.D5.create({ value: h.showInAppNotifications })), (u = !0)), h.emojiPickerCollapsedSections instanceof Array && ((e.textAndImages.emojiPickerCollapsedSections = h.emojiPickerCollapsedSections), (u = !0)), h.stickerPickerCollapsedSections instanceof Array && ((e.textAndImages.stickerPickerCollapsedSections = h.stickerPickerCollapsedSections), (u = !0)), 'boolean' == typeof h.viewImageDescriptions && ((e.textAndImages.viewImageDescriptions = a.D5.create({ value: h.viewImageDescriptions })), (u = !0)), 'boolean' == typeof h.showCommandSuggestions && ((e.textAndImages.showCommandSuggestions = a.D5.create({ value: h.showCommandSuggestions })), (u = !0)), 'boolean' == typeof h.alwaysPreviewVideo && ((e.voiceAndVideo.alwaysPreviewVideo = a.D5.create({ value: h.alwaysPreviewVideo })), (u = !0)), 'boolean' == typeof h.notifyFriendsOnGoLive && ((e.notifications.notifyFriendsOnGoLive = a.D5.create({ value: h.notifyFriendsOnGoLive })), (u = !0)), 'boolean' == typeof h.installShortcutDesktop && ((e.gameLibrary.installShortcutDesktop = a.D5.create({ value: h.installShortcutDesktop })), (u = !0)), 'boolean' == typeof h.installShortcutStartMenu && ((e.gameLibrary.installShortcutStartMenu = a.D5.create({ value: h.installShortcutStartMenu })), (u = !0)), 'boolean' == typeof h.allowActivityPartyPrivacyFriends && ((e.privacy.allowActivityPartyPrivacyFriends = a.D5.create({ value: h.allowActivityPartyPrivacyFriends })), (u = !0)), 'boolean' == typeof h.allowActivityPartyPrivacyVoiceChannel && ((e.privacy.allowActivityPartyPrivacyVoiceChannel = a.D5.create({ value: h.allowActivityPartyPrivacyVoiceChannel })), (u = !0)), 'boolean' == typeof h.rtcPanelShowVoiceStates && ((e.debug.rtcPanelShowVoiceStates = a.D5.create({ value: h.rtcPanelShowVoiceStates })), (u = !0)), u;
+            return 'boolean' == typeof h.useRichChatTextBox && ((e.textAndImages.useRichChatInput = l.D5.create({ value: h.useRichChatTextBox })), (u = !0)), 'string' == typeof h.renderSpoilers && ((e.textAndImages.renderSpoilers = l.Gm.create({ value: h.renderSpoilers })), (u = !0)), 'boolean' == typeof h.useThreadSidebar && ((e.textAndImages.useThreadSidebar = l.D5.create({ value: h.useThreadSidebar })), (u = !0)), 'boolean' == typeof h.showInAppNotifications && ((e.notifications.showInAppNotifications = l.D5.create({ value: h.showInAppNotifications })), (u = !0)), h.emojiPickerCollapsedSections instanceof Array && ((e.textAndImages.emojiPickerCollapsedSections = h.emojiPickerCollapsedSections), (u = !0)), h.stickerPickerCollapsedSections instanceof Array && ((e.textAndImages.stickerPickerCollapsedSections = h.stickerPickerCollapsedSections), (u = !0)), 'boolean' == typeof h.viewImageDescriptions && ((e.textAndImages.viewImageDescriptions = l.D5.create({ value: h.viewImageDescriptions })), (u = !0)), 'boolean' == typeof h.showCommandSuggestions && ((e.textAndImages.showCommandSuggestions = l.D5.create({ value: h.showCommandSuggestions })), (u = !0)), 'boolean' == typeof h.alwaysPreviewVideo && ((e.voiceAndVideo.alwaysPreviewVideo = l.D5.create({ value: h.alwaysPreviewVideo })), (u = !0)), 'boolean' == typeof h.notifyFriendsOnGoLive && ((e.notifications.notifyFriendsOnGoLive = l.D5.create({ value: h.notifyFriendsOnGoLive })), (u = !0)), 'boolean' == typeof h.installShortcutDesktop && ((e.gameLibrary.installShortcutDesktop = l.D5.create({ value: h.installShortcutDesktop })), (u = !0)), 'boolean' == typeof h.installShortcutStartMenu && ((e.gameLibrary.installShortcutStartMenu = l.D5.create({ value: h.installShortcutStartMenu })), (u = !0)), 'boolean' == typeof h.allowActivityPartyPrivacyFriends && ((e.privacy.allowActivityPartyPrivacyFriends = l.D5.create({ value: h.allowActivityPartyPrivacyFriends })), (u = !0)), 'boolean' == typeof h.allowActivityPartyPrivacyVoiceChannel && ((e.privacy.allowActivityPartyPrivacyVoiceChannel = l.D5.create({ value: h.allowActivityPartyPrivacyVoiceChannel })), (u = !0)), 'boolean' == typeof h.rtcPanelShowVoiceStates && ((e.debug.rtcPanelShowVoiceStates = l.D5.create({ value: h.rtcPanelShowVoiceStates })), (u = !0)), u;
         },
         cleanup() {}
     },
@@ -158,7 +158,7 @@ let _ = [
             let t = s.K.get('PromotionsPersistedStore');
             if (null == t) return !1;
             let n = t._state.lastDismissedOutboundPromotionStartDate;
-            return null != n && (null == e.userContent && (e.userContent = l.az.create()), null == e.userContent.lastDismissedOutboundPromotionStartDate) && ((e.userContent.lastDismissedOutboundPromotionStartDate = a.Gm.create({ value: n })), !0);
+            return null != n && (null == e.userContent && (e.userContent = a.az.create()), null == e.userContent.lastDismissedOutboundPromotionStartDate) && ((e.userContent.lastDismissedOutboundPromotionStartDate = l.Gm.create({ value: n })), !0);
         },
         cleanup() {}
     },
@@ -168,7 +168,7 @@ let _ = [
             let { state: t } = i.ZP.PersistedStore.migrateAndReadStoreState('ExpressionSuggestionsPersistedStore', null);
             if (null == t) return !1;
             let n = t.expressionSuggestionsEnabled;
-            return null != n && (null == e.textAndImages && (e.textAndImages = l.Me.create()), null == e.textAndImages.expressionSuggestionsEnabled) && ((e.textAndImages.expressionSuggestionsEnabled = a.D5.create({ value: n })), !0);
+            return null != n && (null == e.textAndImages && (e.textAndImages = a.Me.create()), null == e.textAndImages.expressionSuggestionsEnabled) && ((e.textAndImages.expressionSuggestionsEnabled = l.D5.create({ value: n })), !0);
         },
         cleanup() {
             s.K.remove('ExpressionSuggestionsPersistedStore');
@@ -199,7 +199,7 @@ let _ = [
             let t = s.K.get('lastChangeLogId');
             if (null == t) return !1;
             if (!(0, o.BH)(t)) return s.K.remove('lastChangeLogId'), !1;
-            if (null == e.userContent) e.userContent = l.az.create();
+            if (null == e.userContent) e.userContent = a.az.create();
             else if (null != e.userContent && null != e.userContent.lastReceivedChangelogId && '0' !== e.userContent.lastReceivedChangelogId) return s.K.remove('lastChangeLogId'), !1;
             return (e.userContent.lastReceivedChangelogId = t), !0;
         },

@@ -1,15 +1,15 @@
 n(610138), n(216116), n(78328), n(815648), n(47120), n(757143);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(512969),
     o = n(873546),
     c = n(442837),
     d = n(481060),
     u = n(570140),
     h = n(150063),
-    m = n(758059),
+    m = n(529103),
     p = n(252618),
     g = n(313201),
     f = n(5254),
@@ -34,16 +34,16 @@ function y() {
 t.Z = function (e) {
     let { initialSection: t } = e,
         n = (0, s.TH)(),
-        l = (0, s.k6)();
+        a = (0, s.k6)();
     r.useEffect(() => {
         'true' === new URLSearchParams(n.search).get('confirm-age') &&
             u.Z.dispatch({
                 type: 'AGE_GATE_MODAL_OPEN',
                 source: b.L0.DEEP_LINK_PROMPT
             }).then(() => {
-                l.replace(x.Z5c.ME);
+                a.replace(x.Z5c.ME);
             });
-    }, [l, n]),
+    }, [a, n]),
         r.useEffect(() => {
             h.Y(x.Z5c.FRIENDS), (0, C.e)('friends');
         }, []),
@@ -134,7 +134,7 @@ t.Z = function (e) {
                                     }),
                                     (0, i.jsx)(d.TabBar.Item, {
                                         'aria-label': A.intl.string(A.t.j0wbEx),
-                                        className: a()(Z.item, Z.addFriend),
+                                        className: l()(Z.item, Z.addFriend),
                                         id: x.pJs.ADD_FRIEND,
                                         children: (0, i.jsx)('span', { children: A.intl.string(A.t.j0wbEx) })
                                     })

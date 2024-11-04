@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    l = n(367907),
-    a = n(70097),
+    a = n(367907),
+    l = n(70097),
     s = n(970731),
     o = n(626135),
     c = n(63063),
@@ -34,7 +34,7 @@ function m(e) {
     return (0, i.jsx)(s.ZP, {
         header: u.intl.string(u.t.fW7UqK),
         content: p,
-        asset: (0, i.jsx)(a.Z, {
+        asset: (0, i.jsx)(l.Z, {
             className: h.video,
             src: 'https://cdn.discordapp.com/assets/media_channel/media_channel_upsell_demo.mp4',
             autoPlay: !0,
@@ -42,7 +42,7 @@ function m(e) {
         }),
         buttonCTA: u.intl.string(u.t.JzJpg4),
         onClick: () => {
-            o.default.track(d.rMx.MEDIA_CHANNEL_UPSELL_CLICKED, { ...(0, l.hH)(t) }),
+            o.default.track(d.rMx.MEDIA_CHANNEL_UPSELL_CLICKED, { ...(0, a.hH)(t) }),
                 (0, r.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([n.e('45094'), n.e('5324')]).then(n.bind(n, 218613));
                     return (n) =>

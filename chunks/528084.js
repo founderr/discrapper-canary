@@ -6,7 +6,7 @@ n.d(t, {
 var i = n(442837),
     s = n(663389),
     r = n(996733),
-    l = n(394644),
+    l = n(991346),
     a = n(295545);
 function o(e, t) {
     let n = (0, a.eA)({ location: 'settingsTabs' }),

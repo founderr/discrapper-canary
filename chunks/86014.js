@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(782690),
-    a = n(442837),
+    a = n(782690),
+    l = n(442837),
     s = n(481060),
     o = n(100527),
     c = n(970606),
@@ -28,28 +28,28 @@ var i = n(200651),
     y = n(641388);
 function L(e) {
     let { showPickGameButton: t, showAdminGuildPicker: n } = e,
-        { guilds: l } = (0, d.C3)({
+        { guilds: a } = (0, d.C3)({
             location: 'ClanDiscoveryContentCtaContent',
             includeConverted: !1
         }),
-        [a, m] = r.useState(() => {
+        [l, m] = r.useState(() => {
             var e;
             let t = new Set(u.ZP.getGuildIds());
-            for (let e of l) if (t.has(e.id)) return e.id;
-            return null === (e = l[0]) || void 0 === e ? void 0 : e.id;
+            for (let e of a) if (t.has(e.id)) return e.id;
+            return null === (e = a[0]) || void 0 === e ? void 0 : e.id;
         }),
         p = r.useMemo(
             () =>
-                l.map((e) => ({
+                a.map((e) => ({
                     value: e.id,
                     label: e.name
                 })),
-            [l]
+            [a]
         ),
-        g = n && l.length > 0,
+        g = n && a.length > 0,
         f = r.useCallback(() => {
             (0, c.aN)({
-                guildId: a,
+                guildId: l,
                 location: o.Z.GLOBAL_DISCOVERY
             }),
                 (0, I.q4)(
@@ -57,12 +57,12 @@ function L(e) {
                         let { closeLayer: t } = e;
                         return (0, i.jsx)(h.Z, {
                             onClose: t,
-                            guildId: a
+                            guildId: l
                         });
                     },
                     { layerKey: A.Pv }
                 );
-        }, [a]),
+        }, [l]),
         _ = r.useMemo(
             () =>
                 t
@@ -91,13 +91,13 @@ function L(e) {
         ),
         E = r.useMemo(
             () =>
-                n && l.length > 0
+                n && a.length > 0
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
-                              l.length > 0 &&
+                              a.length > 0 &&
                                   (0, i.jsx)(s.SearchableSelect, {
                                       className: y.upsellSelect,
-                                      value: a,
+                                      value: l,
                                       options: p,
                                       onChange: m
                                   }),
@@ -118,7 +118,7 @@ function L(e) {
                           ]
                       })
                     : null,
-            [n, l.length, p, a, f]
+            [n, a.length, p, l, f]
         );
     return (0, i.jsxs)('div', {
         className: y.contentCtaContainer,
@@ -131,8 +131,8 @@ t.Z = r.memo(function (e) {
         { enabled: A } = (0, E.I7)(),
         R = r.useRef(null),
         P = r.useRef(null),
-        O = (0, T.GN)((e) => e.completedNux, l.Z),
-        j = (0, T.GN)((e) => e.entrypointGameId, l.Z),
+        O = (0, T.GN)((e) => e.completedNux, a.Z),
+        j = (0, T.GN)((e) => e.entrypointGameId, a.Z),
         [D, M] = r.useState(null),
         { backgroundImageUrl: w, gameName: k } = (0, S.kN)(j),
         U = r.useCallback(() => {
@@ -166,7 +166,7 @@ t.Z = r.memo(function (e) {
                 }),
             [O, I]
         ),
-        H = (0, a.e7)([v.Z], () => v.Z.getSavedGuilds().length),
+        H = (0, l.e7)([v.Z], () => v.Z.getSavedGuilds().length),
         V = r.useMemo(
             () => [
                 {
@@ -181,7 +181,7 @@ t.Z = r.memo(function (e) {
             ],
             [H]
         ),
-        F = (0, T.GN)((e) => e.mode, l.Z),
+        F = (0, T.GN)((e) => e.mode, a.Z),
         { enableClanCreation: z } = (0, d.C3)({
             location: 'ClanDiscoveryContent',
             includeConverted: !0

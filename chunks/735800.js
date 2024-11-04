@@ -19,7 +19,7 @@ var r = {
     './spritesheet-1f3ff-48.png': '300878',
     './spritesheet-emoji-32.png': '63215',
     './spritesheet-emoji-40.png': '926720',
-    './spritesheet-emoji-48.png': '332936',
+    './spritesheet-emoji-48.png': '178915',
     './spritesheet-picker-22.png': '899565'
 };
 function i(e) {

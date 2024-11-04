@@ -1,8 +1,8 @@
 n(653041);
 var i = n(200651),
     r = n(192379),
-    l = n(481060),
-    a = n(783097),
+    a = n(481060),
+    l = n(783097),
     s = n(768581),
     o = n(956965),
     c = n(548514),
@@ -22,7 +22,7 @@ t.Z = function (e) {
         ),
         m = r.useMemo(() => {
             let e = [];
-            return (0, a.vJ)(t) && e.push(d.intl.string(d.t.LO4f0N)), (0, a.Cb)(t) && (0 !== e.length && e.push('\u2022'), e.push(d.intl.string(d.t['8z5B2d']))), (0, a.Hu)(t) && (0 !== e.length && e.push('\u2022'), e.push(d.intl.string(d.t['5khEk5']))), e;
+            return (0, l.vJ)(t) && e.push(d.intl.string(d.t.LO4f0N)), (0, l.Cb)(t) && (0 !== e.length && e.push('\u2022'), e.push(d.intl.string(d.t['8z5B2d']))), (0, l.Hu)(t) && (0 !== e.length && e.push('\u2022'), e.push(d.intl.string(d.t['5khEk5']))), e;
         }, [t]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -52,7 +52,7 @@ t.Z = function (e) {
                     (0, i.jsxs)('div', {
                         className: u.metadataContainer,
                         children: [
-                            (0, i.jsx)(l.Heading, {
+                            (0, i.jsx)(a.Heading, {
                                 variant: 'heading-xxl/bold',
                                 color: 'header-primary',
                                 children: t.name
@@ -61,7 +61,7 @@ t.Z = function (e) {
                                 className: u.disclosuresContainer,
                                 children: m.map((e, t) =>
                                     (0, i.jsx)(
-                                        l.Text,
+                                        a.Text,
                                         {
                                             className: u.disclosuresText,
                                             variant: 'text-xs/normal',

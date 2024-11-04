@@ -9,8 +9,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(442837),
     o = n(622535),
     c = n(481060),
@@ -36,14 +36,14 @@ var i = n(200651),
     y = n(330065),
     L = n(755386);
 function R(e) {
-    let { guild: t, onClick: l, onView: s } = e,
+    let { guild: t, onClick: a, onView: s } = e,
         [E, I] = r.useState(!1),
         [T, R] = r.useState(!1),
         [P, O] = r.useState(!1),
         j = r.useCallback(async () => {
             R(!0);
             try {
-                await l(t.id);
+                await a(t.id);
             } catch (n) {
                 var e;
                 let t = new h.Hx(n);
@@ -54,7 +54,7 @@ function R(e) {
             } finally {
                 R(!1);
             }
-        }, [t.id, l]),
+        }, [t.id, a]),
         D = r.useCallback(
             (e) => {
                 e && !E && (I(!0), null == s || s(t.id));
@@ -128,7 +128,7 @@ function R(e) {
                             className: A.header,
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: a()(A.banner, { [A.loaded]: P }),
+                                    className: l()(A.banner, { [A.loaded]: P }),
                                     children: (0, i.jsx)('img', {
                                         src: U,
                                         alt: '',
@@ -229,17 +229,17 @@ function R(e) {
 }
 function P(e) {
     let { guildId: t, onClick: n, onView: r } = e,
-        l = (0, s.e7)([T.Z], () => T.Z.getGuild(t));
-    return null == l
+        a = (0, s.e7)([T.Z], () => T.Z.getGuild(t));
+    return null == a
         ? null
         : (0, i.jsx)(R, {
-              guild: l,
+              guild: a,
               onClick: n,
               onView: r
           });
 }
 function O(e) {
-    let { guildId: t, index: n, onClick: l, onView: a } = e,
+    let { guildId: t, index: n, onClick: a, onView: l } = e,
         s = r.useRef(null == t),
         o = r.useCallback(
             (e, t, n, r) =>
@@ -261,13 +261,13 @@ function O(e) {
                               animate: s.current,
                               children: (0, i.jsx)(P, {
                                   guildId: t.guildId,
-                                  onClick: l,
-                                  onView: a
+                                  onClick: a,
+                                  onView: l
                               })
                           },
                           e
                       ),
-            [l, a]
+            [a, l]
         ),
         d = r.useCallback((e) => {
             var t;

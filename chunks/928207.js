@@ -1,8 +1,8 @@
 var i = n(200651);
 n(192379);
 var r = n(512969),
-    l = n(442837),
-    a = n(481060),
+    a = n(442837),
+    l = n(481060),
     s = n(410575),
     o = n(730749),
     c = n(666743),
@@ -16,11 +16,11 @@ var r = n(512969),
     _ = n(474936),
     E = n(388032),
     I = n(537553);
-let C = l.ZP.connectStores([g.default], () => ({ user: g.default.getCurrentUser() }))(
+let C = a.ZP.connectStores([g.default], () => ({ user: g.default.getCurrentUser() }))(
     (0, c.Z)(
         (0, o.Z)((e) => {
             let { analyticsLocations: t } = (0, u.ZP)(d.Z.HOME_PAGE_PREMIUM_TAB),
-                { isAuthenticated: n, user: l } = e;
+                { isAuthenticated: n, user: a } = e;
             return n
                 ? (0, i.jsxs)('div', {
                       className: I.homeWrapperNormal,
@@ -32,7 +32,7 @@ let C = l.ZP.connectStores([g.default], () => ({ user: g.default.getCurrentUser(
                                   className: I.headerBar,
                                   children: [
                                       (0, i.jsx)(m.Z.Icon, {
-                                          icon: a.NitroWheelIcon,
+                                          icon: l.NitroWheelIcon,
                                           'aria-hidden': !0
                                       }),
                                       (0, i.jsx)(m.Z.Title, { children: E.intl.string(E.t.Ipxkoq) })
@@ -42,11 +42,11 @@ let C = l.ZP.connectStores([g.default], () => ({ user: g.default.getCurrentUser(
                           (0, i.jsx)(u.Gt, {
                               value: t,
                               children:
-                                  null == l
+                                  null == a
                                       ? (0, i.jsx)(h.Z, {
                                             align: h.Z.Align.CENTER,
                                             justify: h.Z.Justify.CENTER,
-                                            children: (0, i.jsx)(a.Spinner, { className: I.spinner })
+                                            children: (0, i.jsx)(l.Spinner, { className: I.spinner })
                                         })
                                       : (0, i.jsx)(p.Z, { entrypoint: _.EZ.ApplicationStoreHome })
                           })

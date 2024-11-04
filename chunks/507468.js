@@ -1,7 +1,7 @@
 var i = n(392711),
     r = n.n(i),
-    l = n(570140),
-    a = n(755264),
+    a = n(570140),
+    l = n(755264),
     s = n(315341),
     o = n(262847),
     c = n(675478),
@@ -40,6 +40,6 @@ function g(e) {
 }
 t.Z = {
     init() {
-        (o.Z[u.yP.PRELOADED_USER_SETTINGS] = s.Z), (o.Z[u.yP.FRECENCY_AND_FAVORITES_SETTINGS] = a.Z), l.Z.subscribe('CONNECTION_OPEN', h), l.Z.subscribe('USER_SETTINGS_PROTO_ENQUEUE_UPDATE', m), l.Z.subscribe('USER_SETTINGS_PROTO_LOAD_IF_NECESSARY', p), l.Z.subscribe('APP_STATE_UPDATE', g);
+        (o.Z[u.yP.PRELOADED_USER_SETTINGS] = s.Z), (o.Z[u.yP.FRECENCY_AND_FAVORITES_SETTINGS] = l.Z), a.Z.subscribe('CONNECTION_OPEN', h), a.Z.subscribe('USER_SETTINGS_PROTO_ENQUEUE_UPDATE', m), a.Z.subscribe('USER_SETTINGS_PROTO_LOAD_IF_NECESSARY', p), a.Z.subscribe('APP_STATE_UPDATE', g);
     }
 };

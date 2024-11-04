@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(782690),
     o = n(990547),
     c = n(91192),
@@ -17,7 +17,7 @@ var i = n(200651),
     m = n(952265),
     p = n(481060),
     g = n(493683),
-    f = n(758059),
+    f = n(529103),
     _ = n(607070),
     E = n(213609),
     I = n(143757),
@@ -56,8 +56,8 @@ var i = n(200651),
     J = n(465200);
 let $ = (e) => {
         let { selected: t, ...n } = e,
-            l = (0, c.JA)('friends'),
-            a = (0, u.e7)([U.Z], () => U.Z.getPendingCount()),
+            a = (0, c.JA)('friends'),
+            l = (0, u.e7)([U.Z], () => U.Z.getPendingCount()),
             s = (0, u.e7)([L.Z], () => L.Z.canShowFriendsTabBadge()),
             d = (0, u.e7)([_.Z], () => _.Z.useReducedMotion),
             { enabled: h } = Z.w.useExperiment({ location: 'Friends Tab' }, { autoTrackExposure: !1 }),
@@ -90,8 +90,8 @@ let $ = (e) => {
                         I(!1);
                     },
                     ...n,
-                    ...l,
-                    children: a > 0 ? (0, i.jsx)(p.NumberBadge, { count: a }) : null
+                    ...a,
+                    children: l > 0 ? (0, i.jsx)(p.NumberBadge, { count: l }) : null
                 }),
                 m &&
                     !d &&
@@ -120,15 +120,15 @@ let $ = (e) => {
     },
     ee = (e) => {
         let { selected: t, hideGameUpdateProgressIndicator: n, ...r } = e,
-            l = (0, c.JA)('library');
+            a = (0, c.JA)('library');
         return (0, i.jsx)(z.Qj, {
             selected: t,
             route: K.Z5c.APPLICATION_LIBRARY,
             icon: p.InventoryIcon,
             text: Q.intl.string(Q.t.cw57am),
             ...r,
-            ...l,
-            children: (0, i.jsx)(W.Z, { className: a()(J.downloadProgressCircle, { [J.hideGameUpdateProgressIndicator]: n }) })
+            ...a,
+            children: (0, i.jsx)(W.Z, { className: l()(J.downloadProgressCircle, { [J.hideGameUpdateProgressIndicator]: n }) })
         });
     },
     et = () => {
@@ -140,13 +140,13 @@ let $ = (e) => {
             n = (0, c.JA)('messageRequests'),
             { channelId: r } = (0, N._)();
         if (!(0, x.a)()) return null;
-        let l = null == r ? void 0 : () => g.Z.preload(K.ME, r);
+        let a = null == r ? void 0 : () => g.Z.preload(K.ME, r);
         return (0, i.jsx)(z.Qj, {
             selected: t,
             route: K.Z5c.MESSAGE_REQUESTS,
             icon: p.EnvelopeIcon,
             text: Q.intl.string(Q.t.e7GWjY),
-            onClick: l,
+            onClick: a,
             ...n,
             children: (0, i.jsx)(et, {})
         });
@@ -154,11 +154,11 @@ let $ = (e) => {
     ei = (e) => {
         let { selected: t } = e,
             n = Q.intl.string(Q.t.Rkdixs),
-            l = (0, c.JA)('family-center'),
-            a = w.Ex.useSetting(),
+            a = (0, c.JA)('family-center'),
+            l = w.Ex.useSetting(),
             s = (0, b.Z)(),
             [o, d] = r.useState(!0);
-        return a && s
+        return l && s
             ? (0, i.jsx)(z.Qj, {
                   selected: t,
                   route: K.Z5c.FAMILY_CENTER,
@@ -171,7 +171,7 @@ let $ = (e) => {
                       d(!1);
                   },
                   interactiveClassName: J.familyCenterLinkButton,
-                  ...l,
+                  ...a,
                   children: (0, i.jsx)(er, { isParentHovered: o })
               })
             : null;
@@ -207,8 +207,8 @@ let $ = (e) => {
                     }
                 });
     },
-    el = () => (0, O.$Z)('DM_SEARCH');
-function ea(e) {
+    ea = () => (0, O.$Z)('DM_SEARCH');
+function el(e) {
     switch (e) {
         case K.Z5c.APPLICATION_LIBRARY:
             return K.ZY5.LIBRARY;
@@ -221,7 +221,7 @@ function ea(e) {
     return K.ZY5.DM_CHANNEL;
 }
 let es = (e) => {
-    let { showLibrary: t, hasLibraryApplication: n, homeLink: r, premiumTabSelected: l } = e,
+    let { showLibrary: t, hasLibraryApplication: n, homeLink: r, premiumTabSelected: a } = e,
         [o, c] = (0, j.Z)((e) => {
             let { channelId: t, path: n } = e;
             return [t, n];
@@ -235,11 +235,11 @@ let es = (e) => {
                 position: 'right',
                 offsetX: -52,
                 children: (0, i.jsx)('div', {
-                    className: a()(J.searchBar, { [J.themedHeaderMobile]: d.tq }),
+                    className: l()(J.searchBar, { [J.themedHeaderMobile]: d.tq }),
                     children: (0, i.jsx)('button', {
                         type: 'button',
-                        className: a()(J.searchBarComponent, { [J.themedSearchBarMobile]: d.tq }),
-                        onClick: el,
+                        className: l()(J.searchBarComponent, { [J.themedSearchBarMobile]: d.tq }),
+                        onClick: ea,
                         children: Q.intl.string(Q.t.LzcpeX)
                     })
                 })
@@ -264,11 +264,11 @@ let es = (e) => {
                     (0, i.jsx)(
                         R.g,
                         {
-                            selected: null == c ? l : c.startsWith(K.Z5c.APPLICATION_STORE),
+                            selected: null == c ? a : c.startsWith(K.Z5c.APPLICATION_STORE),
                             route: K.Z5c.APPLICATION_STORE,
                             locationState: {
                                 analyticsSource: {
-                                    page: ea(r),
+                                    page: el(r),
                                     section: K.jXE.NAVIGATION,
                                     object: K.qAy.NAVIGATION_LINK
                                 }
@@ -283,7 +283,7 @@ let es = (e) => {
                             selected: c === K.Z5c.COLLECTIBLES_SHOP || (null == r ? void 0 : r.startsWith(K.Z5c.COLLECTIBLES_SHOP)),
                             locationState: {
                                 analyticsSource: {
-                                    page: ea(r),
+                                    page: el(r),
                                     section: K.jXE.NAVIGATION,
                                     object: K.qAy.NAVIGATION_LINK
                                 }
@@ -315,13 +315,13 @@ function eo() {
         ),
         n = !w.bm.useSetting(),
         { theme: r } = (0, u.cj)([M.Z], () => ({ theme: M.Z.theme })),
-        l = (0, u.e7)([k.Z], () => k.Z.hasLibraryApplication()),
-        a = (0, u.e7)([G.Z], () => G.Z.getCurrentPath());
+        a = (0, u.e7)([k.Z], () => k.Z.hasLibraryApplication()),
+        l = (0, u.e7)([G.Z], () => G.Z.getCurrentPath());
     return (0, i.jsx)(es, {
         theme: r,
         showLibrary: n,
-        hasLibraryApplication: l,
-        storeLink: a,
+        hasLibraryApplication: a,
+        storeLink: l,
         homeLink: e,
         premiumTabSelected: t
     });

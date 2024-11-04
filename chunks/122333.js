@@ -2,8 +2,8 @@ let i;
 n(47120);
 var r = n(200651);
 n(192379);
-var l = n(481060),
-    a = n(570140),
+var a = n(481060),
+    l = n(570140),
     s = n(317770),
     o = n(622822),
     c = n(391650),
@@ -26,21 +26,21 @@ var l = n(481060),
     b = n(188785),
     A = n(630724);
 function Z() {
-    null != i && (0, l.closeModal)(i);
+    null != i && (0, a.closeModal)(i);
 }
 class y extends s.Z {
     _initialize() {
-        a.Z.subscribe('CONNECTION_OPEN', this.handleConnectionOpen), a.Z.subscribe('LOGOUT', Z);
+        l.Z.subscribe('CONNECTION_OPEN', this.handleConnectionOpen), l.Z.subscribe('LOGOUT', Z);
     }
     _terminate() {
-        a.Z.unsubscribe('CONNECTION_OPEN', this.handleConnectionOpen), a.Z.unsubscribe('LOGOUT', Z);
+        l.Z.unsubscribe('CONNECTION_OPEN', this.handleConnectionOpen), l.Z.unsubscribe('LOGOUT', Z);
     }
     handleConnectionOpen() {
         var e;
         let t,
-            a = S.Z.getType();
-        if (null == a) return;
-        switch (a) {
+            l = S.Z.getType();
+        if (null == l) return;
+        switch (l) {
             case N.M5.INVITE_UNCLAIMED:
                 h.Z.flowStart(A.MK.INVITE, A.EW.NUF_STARTED);
                 break;
@@ -52,7 +52,7 @@ class y extends s.Z {
         }
         let s = !1,
             Z = _.Z.getGuildId();
-        if (a === N.M5.INVITE_UNCLAIMED) {
+        if (l === N.M5.INVITE_UNCLAIMED) {
             let e = f.Z.getGuild(Z);
             (null == e ? void 0 : e.hasVerificationGate()) && ((s = !0), (0, m.RM)(e.id));
         }
@@ -91,7 +91,7 @@ class y extends s.Z {
                                 I.vE(e);
                         }
                     };
-                    i = await (0, l.openModalLazy)(
+                    i = await (0, a.openModalLazy)(
                         async () => {
                             let { default: e } = await Promise.all([n.e('42483'), n.e('17525')]).then(n.bind(n, 599219));
                             return (n) =>
@@ -133,7 +133,7 @@ class y extends s.Z {
             {
                 key: 'Guild Welcome Modal',
                 open: (e) =>
-                    (0, l.openModalLazy)(
+                    (0, a.openModalLazy)(
                         async () => {
                             let { default: e } = await n.e('77578').then(n.bind(n, 184782));
                             return (t) =>

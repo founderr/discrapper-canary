@@ -1,8 +1,8 @@
 n(411104), n(47120), n(724458), n(653041);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(392711),
     o = n.n(s),
     c = n(442837),
@@ -47,10 +47,10 @@ function w(e, t, n) {
     );
 }
 let k = (e) => {
-        let { className: t, children: n, onContextMenu: r, item: l } = e;
+        let { className: t, children: n, onContextMenu: r, item: a } = e;
         return (0, i.jsx)('div', {
             className: t,
-            onContextMenu: (e) => r(e, l),
+            onContextMenu: (e) => r(e, a),
             children: n
         });
     },
@@ -60,7 +60,7 @@ let k = (e) => {
         return (0, i.jsx)(h.Tooltip, {
             text: t,
             children: (e) => {
-                let { onMouseEnter: l, onMouseLeave: a } = e;
+                let { onMouseEnter: a, onMouseLeave: l } = e;
                 return (0, i.jsx)(h.Button, {
                     'aria-label': t,
                     className: M.actionButton,
@@ -68,8 +68,8 @@ let k = (e) => {
                     color: h.Button.Colors.PRIMARY,
                     size: h.Button.Sizes.ICON,
                     onClick: n,
-                    onMouseEnter: l,
-                    onMouseLeave: a,
+                    onMouseEnter: a,
+                    onMouseLeave: l,
                     children: (0, i.jsx)(r, { className: M.actionIcon })
                 });
             }
@@ -176,18 +176,18 @@ let H = {
     }
 };
 function V(e, t, n, i, r) {
-    let l = H[t],
-        a = null != l ? Object.keys(l) : [],
-        { unit: s, time: o } = (0, T.CI)(null != e ? e / 60 : null, a);
-    if (null != l && null != s) {
-        let e = l[s];
+    let a = H[t],
+        l = null != a ? Object.keys(a) : [],
+        { unit: s, time: o } = (0, T.CI)(null != e ? e / 60 : null, l);
+    if (null != a && null != s) {
+        let e = a[s];
         return null != e ? e(n, i, r, o) : null;
     }
     return null;
 }
 function F(e) {
-    let { type: t, stage: n, percent: i, progress: r, total: l, secondsRemaining: a } = e,
-        s = B(l, n),
+    let { type: t, stage: n, percent: i, progress: r, total: a, secondsRemaining: l } = e,
+        s = B(a, n),
         o = B(r, n);
     switch (n) {
         case j.f07.QUEUED:
@@ -202,7 +202,7 @@ function F(e) {
         case j.f07.ALLOCATING_DISK:
             return D.intl.formatToPlainString(D.t.XigoJy, { percent: i });
         case j.f07.PATCHING:
-            return V(a, t, i, o, s);
+            return V(l, t, i, o, s);
         case j.f07.FINALIZING:
             return D.intl.formatToPlainString(D.t['6PHDUF'], { percent: i });
         case j.f07.PAUSING:
@@ -224,7 +224,7 @@ function F(e) {
                 total: s
             });
         case j.f07.REPAIRING:
-            if (t === j.vxO.REPAIRING) return V(a, t, i, o, s);
+            if (t === j.vxO.REPAIRING) return V(l, t, i, o, s);
             return D.intl.formatToPlainString(D.t.OCzETU, {
                 percent: i,
                 progress: o,
@@ -242,7 +242,7 @@ class K extends r.PureComponent {
         return null != e && e.isFocused;
     }
     renderBody(e) {
-        let { percent: t, foregroundColor: n, foregroundGradientColor: r, message: l } = e;
+        let { percent: t, foregroundColor: n, foregroundGradientColor: r, message: a } = e;
         return (0, i.jsxs)(v.Z, {
             direction: v.Z.Direction.VERTICAL,
             children: [
@@ -255,7 +255,7 @@ class K extends r.PureComponent {
                 }),
                 (0, i.jsx)('div', {
                     className: M.progressCellText,
-                    children: null != l ? l : ''
+                    children: null != a ? a : ''
                 })
             ]
         });
@@ -292,21 +292,21 @@ class K extends r.PureComponent {
             item: { state: n, theme: i }
         } = this.props;
         if (null != n) {
-            let { progress: i, total: r, stage: l } = n;
+            let { progress: i, total: r, stage: a } = n;
             if (null != i && null != r) {
-                let n = B(r, l),
-                    a = B(i, l),
+                let n = B(r, a),
+                    l = B(i, a),
                     s = Math.floor((t = R.xI(i, r)));
                 e =
-                    l === j.f07.PAUSING
+                    a === j.f07.PAUSING
                         ? D.intl.formatToPlainString(D.t.vjxhWl, {
                               percent: s,
-                              progress: a,
+                              progress: l,
                               total: n
                           })
                         : D.intl.formatToPlainString(D.t.voT3Bg, {
                               percent: s,
-                              progress: a,
+                              progress: l,
                               total: n
                           });
             }
@@ -328,17 +328,17 @@ class K extends r.PureComponent {
         let { progress: n, total: i } = e;
         if (null == n || null == i) return null;
         let r = R.xI(n, i),
-            l = Math.floor(r),
-            a =
+            a = Math.floor(r),
+            l =
                 0 === n && 1 === i
                     ? D.intl.string(D.t['+pfsFR'])
                     : D.intl.formatToPlainString(D.t['+feX8f'], {
-                          percent: l,
+                          percent: a,
                           progress: (0, L.BU)(n),
                           total: (0, L.BU)(i)
                       });
         return this.renderBody({
-            message: a,
+            message: l,
             foregroundColor: (0, u.ap)(t) ? j.Ilk.PRIMARY_300 : j.Ilk.PRIMARY_500,
             percent: r
         });
@@ -355,14 +355,14 @@ class K extends r.PureComponent {
         if (null == e) return null;
         let { total: t, progress: n, stage: i, type: r } = e;
         if (null == t || null == n || null == i) return null;
-        let l = R.xI(n, t),
-            a = Math.floor(l);
+        let a = R.xI(n, t),
+            l = Math.floor(a);
         return this.renderBody({
-            percent: l,
+            percent: a,
             message: F({
                 type: r,
                 stage: i,
-                percent: a,
+                percent: l,
                 progress: n,
                 total: t
             }),
@@ -393,18 +393,18 @@ class K extends r.PureComponent {
                     item: { state: n }
                 } = this.props;
                 if (null == n) return null;
-                let { stage: i, progress: r, total: l, type: a, readerProgress: s } = n;
-                if (null == r || null == l || null == i) return null;
-                let o = R.xI(r, l),
-                    c = R.xI(null != s ? s : 0, l),
+                let { stage: i, progress: r, total: a, type: l, readerProgress: s } = n;
+                if (null == r || null == a || null == i) return null;
+                let o = R.xI(r, a),
+                    c = R.xI(null != s ? s : 0, a),
                     d = (e[e.length - 1] / t) * 1000,
-                    u = l - r,
+                    u = a - r,
                     h = F({
-                        type: a,
+                        type: l,
                         stage: i,
                         percent: Math.floor(o),
                         progress: r,
-                        total: l,
+                        total: a,
                         secondsRemaining: 0 !== d ? Math.max(1, u / d) : null
                     });
                 return this.renderStackedProgress({
@@ -519,7 +519,7 @@ class ee extends r.PureComponent {
             (this.isUnmounted = !0);
     }
     render() {
-        let { applications: e, paused: t, isFocused: r, theme: l, analyticsContext: s } = this.props;
+        let { applications: e, paused: t, isFocused: r, theme: a, analyticsContext: s } = this.props;
         return 0 === e.length
             ? null
             : (0, i.jsxs)('div', {
@@ -529,14 +529,14 @@ class ee extends r.PureComponent {
                           className: M.headerRow,
                           children: [
                               (0, i.jsx)(O.Z, {
-                                  className: a()(M.headerCell, M.networkProgress),
+                                  className: l()(M.headerCell, M.networkProgress),
                                   title: D.intl.string(D.t.ytoXKi),
                                   getHistoricalTotalBytes: A.Z.getHistoricalTotalBytesDownloaded,
                                   color: j.Ilk.GREEN_360,
                                   animate: r
                               }),
                               (0, i.jsx)(O.Z, {
-                                  className: a()(M.headerCell, M.diskProgress),
+                                  className: l()(M.headerCell, M.diskProgress),
                                   title: D.intl.string(D.t.SjohhI),
                                   getHistoricalTotalBytes: A.Z.getHistoricalTotalBytesWritten,
                                   color: j.Ilk.BLUE_345,
@@ -554,23 +554,23 @@ class ee extends r.PureComponent {
                           cellProps: {
                               paused: t,
                               isFocused: r,
-                              theme: l
+                              theme: a
                           },
                           rowProps: {
                               onContextMenu: (e, t) => {
-                                  var r, l, a;
+                                  var r, a, l;
                                   return (
                                       (r = e),
-                                      (l = t),
-                                      (a = s),
+                                      (a = t),
+                                      (l = s),
                                       void p.jW(r, async () => {
                                           let { default: e } = await n.e('98335').then(n.bind(n, 485292));
                                           return (t) =>
                                               (0, i.jsx)(e, {
                                                   ...t,
-                                                  applicationId: l.applicationId,
-                                                  branchId: l.branchId,
-                                                  analyticsContext: a
+                                                  applicationId: a.applicationId,
+                                                  branchId: a.branchId,
+                                                  analyticsContext: l
                                               });
                                       })
                                   );
@@ -598,21 +598,21 @@ class ee extends r.PureComponent {
     }
 }
 function et(e, t, n, i) {
-    return e.reduce((e, r, l) => {
-        let { applicationId: a, branchId: s } = r,
-            o = n.getApplication(a),
-            c = i.getState(a, s);
+    return e.reduce((e, r, a) => {
+        let { applicationId: l, branchId: s } = r,
+            o = n.getApplication(l),
+            c = i.getState(l, s);
         return (
             null != o &&
                 e.push({
-                    key: ''.concat(a, ':').concat(s),
-                    applicationId: a,
+                    key: ''.concat(l, ':').concat(s),
+                    applicationId: l,
                     branchId: s,
                     state: c,
                     application: o,
-                    libraryApplication: b.Z.getLibraryApplication(a, s),
+                    libraryApplication: b.Z.getLibraryApplication(l, s),
                     finished: t,
-                    index: l
+                    index: a
                 }),
             e
         );

@@ -1,4 +1,4 @@
-var r = n(972910),
+var r = n(81021),
     i = n(160171),
     a = r('%Promise.resolve%', !0),
     s = a && i(a);

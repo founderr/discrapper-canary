@@ -9,8 +9,8 @@ n.d(t, {
     n(47120);
 var i,
     r,
-    l,
     a,
+    l,
     s = n(200651),
     o = n(192379),
     c = n(120356),
@@ -43,7 +43,7 @@ function O(e) {
 }
 function j(e) {
     var t;
-    let { clan: n, entranceDelay: i = 0, hide: r, searchCriteria: l, className: a, source: o, ...c } = e;
+    let { clan: n, entranceDelay: i = 0, hide: r, searchCriteria: a, className: l, source: o, ...c } = e;
     return (0, s.jsx)('div', {
         style: {
             opacity: r ? 0 : void 0,
@@ -54,8 +54,8 @@ function j(e) {
             S.ZP,
             {
                 clan: n,
-                affinity: null !== (t = n.affininty) && void 0 !== t ? t : (0, v.y)(n, l),
-                className: d()(R.card, a),
+                affinity: null !== (t = n.affininty) && void 0 !== t ? t : (0, v.y)(n, a),
+                className: d()(R.card, l),
                 source: null != o ? o : y.jXE.DISCOVER_SEARCH,
                 onlyAnimateIconOnHover: !0,
                 ...c
@@ -64,9 +64,9 @@ function j(e) {
         )
     });
 }
-((l = i || (i = {})).TOP_PICKS = 'top_picks'), (l.OTHER_GUILDS = 'other_guilds'), (l.PAGINATION = 'pagination'), (l.HEADER_SPACER = 'header_spacer'), ((a = r || (r = {})).DEFAULT = 'default'), (a.GLOBAL_DISCOVERY = 'global_discovery'), (a.SAVED_GUILDS = 'saved_guilds');
+((a = i || (i = {})).TOP_PICKS = 'top_picks'), (a.OTHER_GUILDS = 'other_guilds'), (a.PAGINATION = 'pagination'), (a.HEADER_SPACER = 'header_spacer'), ((l = r || (r = {})).DEFAULT = 'default'), (l.GLOBAL_DISCOVERY = 'global_discovery'), (l.SAVED_GUILDS = 'saved_guilds');
 t.ZP = o.memo(function (e) {
-    var t, n, i, r, l, a;
+    var t, n, i, r, a, l;
     let { width: c, paddingVertical: v = 16, paddingHorizontal: S = 32, variant: y = 'default', onUpdatePage: O } = e,
         D = o.useMemo(() => Math.max(Math.min(null != c ? c : 1024, 1300) - 2 * S, 0), [c, S]),
         M = o.useMemo(() => {
@@ -95,8 +95,8 @@ t.ZP = o.memo(function (e) {
             (n = M),
             (i = y),
             (r = z),
-            (l = Q),
-            (a = w),
+            (a = Q),
+            (l = w),
             o.useMemo(() => {
                 if (null == t) return [];
                 switch (i) {
@@ -128,10 +128,10 @@ t.ZP = o.memo(function (e) {
                                 sectionHeight: 24,
                                 header: r > 1 ? L.intl.string(L.t.rjMRnZ) : L.intl.string(L.t.CZwZeX),
                                 props: { style: { paddingTop: 8 } },
-                                subtitle: r > 1 ? void 0 : l,
+                                subtitle: r > 1 ? void 0 : a,
                                 skeletonCount: n
                             },
-                            !a || t.length > n
+                            !l || t.length > n
                                 ? {
                                       section: 'other_guilds',
                                       items: t.slice(n),
@@ -152,7 +152,7 @@ t.ZP = o.memo(function (e) {
                     default:
                         return [];
                 }
-            }, [t, i, n, r, l, a])),
+            }, [t, i, n, r, a, l])),
         $ = o.useCallback(
             (e) => {
                 Y(e),
@@ -169,19 +169,19 @@ t.ZP = o.memo(function (e) {
         en = o.useCallback(
             (e, t, n, i) => {
                 let { items: r } = J[e],
-                    l = (z - 1) * K + (e * M + t),
-                    a = r[t];
-                null != a && n
+                    a = (z - 1) * K + (e * M + t),
+                    l = r[t];
+                null != l && n
                     ? (i.current = setTimeout(
                           () =>
                               ee((e) => {
                                   let t = new Set(e);
                                   return (
-                                      t.add(a.id),
+                                      t.add(l.id),
                                       t.size > e.size &&
                                           (0, g.CK)({
-                                              guildId: a.id,
-                                              position: l
+                                              guildId: l.id,
+                                              position: a
                                           }),
                                       t
                                   );
@@ -197,15 +197,15 @@ t.ZP = o.memo(function (e) {
             (e, t, n) => {
                 let { items: i } = J[e],
                     r = e * M + t,
-                    l = (z - 1) * K + r,
-                    a = i[t],
+                    a = (z - 1) * K + r,
+                    l = i[t],
                     o = ei ? 0 : Math.min(125 * Math.floor(r / M) + (r % M) * 25, 1000);
                 return (0, s.jsx)(
                     j,
                     {
-                        clan: a,
+                        clan: l,
                         index: r,
-                        position: l,
+                        position: a,
                         searchCriteria: G,
                         traitsToHighlight: H,
                         prioritizedGameIds: et,
@@ -213,13 +213,13 @@ t.ZP = o.memo(function (e) {
                         hide: n,
                         entranceDelay: o
                     },
-                    ''.concat(a.id, ':').concat(y)
+                    ''.concat(l.id, ':').concat(y)
                 );
             },
             [J, M, z, K, ei, y, G, H, et, en]
         ),
-        el = o.useCallback((e) => (0, s.jsx)(N.Z, { style: { transform: 'translateY(-6px)' } }, e), []),
-        ea = o.useCallback(
+        ea = o.useCallback((e) => (0, s.jsx)(N.Z, { style: { transform: 'translateY(-6px)' } }, e), []),
+        el = o.useCallback(
             (e) => {
                 let { header: t, subtitle: n, section: i } = J[e];
                 switch (i) {
@@ -337,14 +337,14 @@ t.ZP = o.memo(function (e) {
                 children: es.map((e, t) => {
                     var n, i;
                     let r = J[t],
-                        l = ea(t);
+                        a = el(t);
                     return (0, s.jsxs)(
                         'div',
                         {
                             className: R.section,
                             style: { gap: ''.concat(16, 'px') },
                             children: [
-                                null != l &&
+                                null != a &&
                                     (0, s.jsx)('div', {
                                         ...r.props,
                                         className: d()(R.sectionHeader, null === (n = r.props) || void 0 === n ? void 0 : n.className),
@@ -352,7 +352,7 @@ t.ZP = o.memo(function (e) {
                                             height: ''.concat(r.sectionHeight, 'px'),
                                             ...(null === (i = r.props) || void 0 === i ? void 0 : i.style)
                                         },
-                                        children: l
+                                        children: a
                                     }),
                                 e > 0 &&
                                     (0, s.jsx)('div', {
@@ -360,7 +360,7 @@ t.ZP = o.memo(function (e) {
                                         style: { gridTemplateColumns: 'repeat('.concat(M, ', minmax(252px, 1fr))') },
                                         children: Array.from({ length: e }).map((e, n) => {
                                             let i = ''.concat(t, '-').concat(n);
-                                            return w ? er(t, n, null == c) : el(i);
+                                            return w ? er(t, n, null == c) : ea(i);
                                         })
                                     })
                             ]

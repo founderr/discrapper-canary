@@ -35,7 +35,7 @@ let j = (e) => {
         { enabled: D } = p.O.useExperiment({ location: 'gift card' }),
         L = null;
     return (
-        Z && (L = M && w ? v.V4 : v.QI),
+        Z && (L = M && w ? v.kJ : v.QI),
         D && (L = v.RQ),
         (0, i.jsxs)('div', {
             children: [

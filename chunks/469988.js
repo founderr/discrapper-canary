@@ -1,15 +1,15 @@
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    l = n(388032),
-    a = n(860768);
+    a = n(388032),
+    l = n(860768);
 t.Z = (e) => {
     let { hasHub: t } = e;
     return (0, i.jsxs)('div', {
-        className: a.container,
+        className: l.container,
         children: [
             (0, i.jsx)('div', {
-                className: a.iconContainer,
+                className: l.iconContainer,
                 children: (0, i.jsx)(r.HubIcon, {
                     size: 'md',
                     color: r.tokens.colors.WHITE.css
@@ -18,16 +18,16 @@ t.Z = (e) => {
             (0, i.jsx)(r.Text, {
                 color: 'header-primary',
                 variant: 'text-lg/semibold',
-                className: a.header,
-                children: t ? l.intl.string(l.t.hsSHh4) : l.intl.string(l.t.Wf6iio)
+                className: l.header,
+                children: t ? a.intl.string(a.t.hsSHh4) : a.intl.string(a.t.Wf6iio)
             }),
             (0, i.jsx)(r.Text, {
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                className: a.__invalid_description,
-                children: t ? l.intl.string(l.t.FZ2J3d) : l.intl.string(l.t.TvHcv7)
+                className: l.__invalid_description,
+                children: t ? a.intl.string(a.t.FZ2J3d) : a.intl.string(a.t.TvHcv7)
             }),
-            (0, i.jsx)('div', { className: a.gap }),
+            (0, i.jsx)('div', { className: l.gap }),
             (0, i.jsx)(r.Button, {
                 size: r.Button.Sizes.LARGE,
                 color: t ? r.Button.Colors.PRIMARY : r.Button.Colors.GREEN,
@@ -38,9 +38,9 @@ t.Z = (e) => {
                     }),
                 children: (0, i.jsx)(r.Text, {
                     variant: 'text-sm/semibold',
-                    className: a.addButton,
+                    className: l.addButton,
                     color: 'none',
-                    children: t ? l.intl.string(l.t.IyjHDw) : l.intl.string(l.t['KU/aNz'])
+                    children: t ? a.intl.string(a.t.IyjHDw) : a.intl.string(a.t['KU/aNz'])
                 })
             })
         ]

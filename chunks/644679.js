@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(481060),
-    l = n(570140),
-    a = n(317770),
+    a = n(570140),
+    l = n(317770),
     s = n(19780),
     o = n(594174),
     c = n(979651),
@@ -23,12 +23,12 @@ function m(e, t, n) {
     );
 }
 let p = 'CollectiblesExpiryModal';
-class g extends a.Z {
+class g extends l.Z {
     _initialize() {
-        l.Z.subscribe('POST_CONNECTION_OPEN', this.handleMaybeOpenModal), l.Z.subscribe('CURRENT_USER_UPDATE', this.handleMaybeOpenModal);
+        a.Z.subscribe('POST_CONNECTION_OPEN', this.handleMaybeOpenModal), a.Z.subscribe('CURRENT_USER_UPDATE', this.handleMaybeOpenModal);
     }
     _terminate() {
-        l.Z.unsubscribe('POST_CONNECTION_OPEN', this.handleMaybeOpenModal), l.Z.unsubscribe('CURRENT_USER_UPDATE', this.handleMaybeOpenModal), null != this.timeout && (clearTimeout(this.timeout), (this.timeout = null));
+        a.Z.unsubscribe('POST_CONNECTION_OPEN', this.handleMaybeOpenModal), a.Z.unsubscribe('CURRENT_USER_UPDATE', this.handleMaybeOpenModal), null != this.timeout && (clearTimeout(this.timeout), (this.timeout = null));
     }
     constructor(...e) {
         super(...e),
@@ -41,7 +41,7 @@ class g extends a.Z {
                 if ((('1251324401459265537' === i || '1252353273256480818' === i) && (r = 1726106879), null != r && !!(0, u.v)('CollectiblesExpiryManager'))) !this.maybeOpenModal() && (null != this.timeout && clearTimeout(this.timeout), (this.timeout = setTimeout(this.maybeOpenModal, 1000 * r - Date.now() + 1000)));
             }),
             m(this, 'maybeOpenModal', () => {
-                var e, t, l, a, u;
+                var e, t, a, l, u;
                 let m = o.default.getCurrentUser(),
                     g = s.Z.getState(),
                     f = null == m ? void 0 : null === (e = m.avatarDecoration) || void 0 === e ? void 0 : e.skuId,
@@ -68,9 +68,9 @@ class g extends a.Z {
                               tags: {
                                   isExpired: (null != _ && 1000 * _ < Date.now()).toString(),
                                   rtcConnected: (g === h.hes.RTC_CONNECTED).toString(),
-                                  decoExpiresAt: null !== (a = null == _ ? void 0 : _.toString()) && void 0 !== a ? a : 'N/A',
+                                  decoExpiresAt: null !== (l = null == _ ? void 0 : _.toString()) && void 0 !== l ? l : 'N/A',
                                   voiceStateAvailable: (null != E).toString(),
-                                  selfStream: null !== (u = null == E ? void 0 : null === (l = E.selfStream) || void 0 === l ? void 0 : l.toString()) && void 0 !== u ? u : 'N/A'
+                                  selfStream: null !== (u = null == E ? void 0 : null === (a = E.selfStream) || void 0 === a ? void 0 : a.toString()) && void 0 !== u ? u : 'N/A'
                               }
                           }),
                       !1);

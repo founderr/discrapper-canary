@@ -223,7 +223,7 @@ let l = [
                 lightSVG: n(66992),
                 darkSVG: n(158173),
                 whiteSVG: n(158173),
-                customPNG: n(606115)
+                customPNG: n(436740)
             },
             enabled: !0
         },

@@ -1,8 +1,8 @@
 n(47120);
 var i,
     r,
-    l,
     a,
+    l,
     s,
     o = n(442837),
     c = n(433517),
@@ -38,8 +38,8 @@ function R(e) {
         i = null != e.updatedAt ? n - e.updatedAt : 0;
     i > x + b && (i = 0);
     let r = (0, _.OT)(e.applicationId, C.Z),
-        l = S.Z.getVoiceChannelId(),
-        a = E.default.getSessionId(),
+        a = S.Z.getVoiceChannelId(),
+        l = E.default.getSessionId(),
         s = v.Z.getMediaSessionId();
     h.Z.updateActivity({
         applicationId: e.applicationId,
@@ -49,8 +49,8 @@ function R(e) {
         duration: Math.floor(i / 1000),
         closed: t,
         exePath: e.exePath,
-        voiceChannelId: l,
-        sessionId: a,
+        voiceChannelId: a,
+        sessionId: l,
         mediaSessionId: s
     }),
         (e.updatedAt = n);
@@ -88,14 +88,14 @@ class j extends (r = o.ZP.Store) {
     }
 }
 (s = 'ActivityTrackingStore'),
-    (a = 'displayName') in (l = j)
-        ? Object.defineProperty(l, a, {
+    (l = 'displayName') in (a = j)
+        ? Object.defineProperty(a, l, {
               value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[a] = s),
+        : (a[l] = s),
     new j(u.Z, {
         RUNNING_GAMES_CHANGE: () => P(),
         CONNECTION_OPEN: function () {

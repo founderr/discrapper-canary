@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(100621),
     o = n(442837),
     c = n(481060),
@@ -74,21 +74,21 @@ function O(e) {
     });
 }
 function j(e) {
-    let { selectedGuildId: t, setSelectedGuildId: n, eligibleGuilds: l, onButtonClick: s, onDismiss: o, buttonText: d, hasCompletedUpsell: u } = e,
+    let { selectedGuildId: t, setSelectedGuildId: n, eligibleGuilds: a, onButtonClick: s, onDismiss: o, buttonText: d, hasCompletedUpsell: u } = e,
         h = (0, g.iN)('clan_discovery_admin_upsell'),
         m = (0, g.YH)('clan_discovery_admin_upsell'),
         p = r.useMemo(
             () =>
-                l.map((e) => ({
+                a.map((e) => ({
                     value: e.id,
                     label: e.name
                 })),
-            [l]
+            [a]
         );
     r.useEffect(() => {
-        0 === l.length && m && (0, N.Ce)();
-    }, [l, m]);
-    let f = l.length > 1;
+        0 === a.length && m && (0, N.Ce)();
+    }, [a, m]);
+    let f = a.length > 1;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             u
@@ -150,7 +150,7 @@ function j(e) {
                                     look: c.ButtonLooks.FILLED,
                                     size: c.ButtonSizes.LARGE,
                                     color: c.ButtonColors.BRAND,
-                                    className: a()(Z.reserveButton, { [Z.buttonWithSelect]: f }),
+                                    className: l()(Z.reserveButton, { [Z.buttonWithSelect]: f }),
                                     onClick: s,
                                     children: (0, i.jsx)(c.Text, {
                                         variant: 'text-sm/medium',
@@ -185,21 +185,21 @@ function j(e) {
 }
 t.Z = r.memo(function (e) {
     let { eligibleGuilds: t, eligibleGuildsIncludingConverted: n } = e,
-        l = (0, g.iN)('clan_discovery_admin_upsell'),
-        a = 0 === t.length,
+        a = (0, g.iN)('clan_discovery_admin_upsell'),
+        l = 0 === t.length,
         [y, L] = r.useState(() => {
             var e, i;
             let r = new Set(f.ZP.getGuildIds());
             for (let e of t) if (r.has(e.id)) return e.id;
-            return a ? (null === (e = n[0]) || void 0 === e ? void 0 : e.id) : null === (i = t[0]) || void 0 === i ? void 0 : i.id;
+            return l ? (null === (e = n[0]) || void 0 === e ? void 0 : e.id) : null === (i = t[0]) || void 0 === i ? void 0 : i.id;
         });
     r.useEffect(() => {
-        !a &&
+        !l &&
             (0, p.TE)({
                 guildId: y,
                 location: h.Z.CLAN_DISCOVERY
             });
-    }, [a, y]);
+    }, [l, y]);
     let O = (0, o.e7)([v.Z], () => v.Z.getGuild(y)),
         D = (0, o.e7)([f.ZP], () => (null != y ? f.ZP.getStateForGuild(y).progress : null)),
         M = (0, g.c7)({
@@ -207,7 +207,7 @@ t.Z = r.memo(function (e) {
             location: h.Z.CLAN_DISCOVERY
         }),
         w = r.useCallback(() => {
-            !a &&
+            !l &&
                 ((0, p.aN)({
                     guildId: y,
                     location: h.Z.CLAN_DISCOVERY
@@ -233,7 +233,7 @@ t.Z = r.memo(function (e) {
                           },
                           { layerKey: b.Pv }
                       ));
-        }, [M, a, y]),
+        }, [M, l, y]),
         k = r.useCallback(() => {
             M ? (0, N.kw)() : (0, N.Ce)();
         }, [M]),
@@ -316,7 +316,7 @@ t.Z = r.memo(function (e) {
             },
             'animate-always'
         ),
-        Q = r.useMemo(() => (l ? A.intl.string(A.t.ZA9f19) : null == D ? A.intl.string(A.t.fLiOgI) : A.intl.string(A.t.GnIKBA)), [D, l]),
+        Q = r.useMemo(() => (a ? A.intl.string(A.t.ZA9f19) : null == D ? A.intl.string(A.t.fLiOgI) : A.intl.string(A.t.GnIKBA)), [D, a]),
         J = r.useCallback(async () => {
             await (0, m.Zx)(y), d.Z.transitionToGuildSync('936317138904440892');
         }, [y]),
@@ -415,10 +415,10 @@ t.Z = r.memo(function (e) {
                     onButtonClick: w,
                     onDismiss: k,
                     buttonText: Q,
-                    hasCompletedUpsell: a
+                    hasCompletedUpsell: l
                 })
             }),
-            a
+            l
                 ? (0, i.jsx)('div', {
                       className: Z.joinWFSContainer,
                       children: (0, i.jsx)('div', {

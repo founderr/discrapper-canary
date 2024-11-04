@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(442837),
-    l = n(481060),
-    a = n(44315),
+    a = n(481060),
+    l = n(44315),
     s = n(598077),
     o = n(246946),
     c = n(594174),
@@ -34,7 +34,7 @@ function I(e) {
                 d = r.tokenStatus === m.q.INVALID,
                 h = n ? null : '#'.concat(o.discriminator);
             return (0, i.jsx)(
-                l.MenuItem,
+                a.MenuItem,
                 {
                     id: o.id,
                     focusedClassName: E.focused,
@@ -43,15 +43,15 @@ function I(e) {
                         return (0, i.jsxs)('div', {
                             className: E.userMenuItem,
                             children: [
-                                (0, i.jsx)(l.Avatar, {
+                                (0, i.jsx)(a.Avatar, {
                                     src: o.getAvatarURL(void 0, 40),
-                                    size: l.AvatarSizes.SIZE_24,
+                                    size: a.AvatarSizes.SIZE_24,
                                     'aria-label': r.username
                                 }),
                                 (0, i.jsxs)('div', {
                                     className: E.userMenuUsername,
                                     children: [
-                                        (0, i.jsx)(l.Text, {
+                                        (0, i.jsx)(a.Text, {
                                             className: E.userMenuText,
                                             variant: 'text-sm/normal',
                                             children: u.ZP.getUserTag(o, {
@@ -60,7 +60,7 @@ function I(e) {
                                             })
                                         }),
                                         !o.isPomelo() &&
-                                            (0, i.jsx)(l.Text, {
+                                            (0, i.jsx)(a.Text, {
                                                 className: E.userMenuDiscriminator,
                                                 variant: 'text-sm/normal',
                                                 children: h
@@ -68,16 +68,16 @@ function I(e) {
                                     ]
                                 }),
                                 c &&
-                                    (0, i.jsx)(l.CircleCheckIcon, {
+                                    (0, i.jsx)(a.CircleCheckIcon, {
                                         size: 'sm',
-                                        color: (0, a.Lq)(t ? f.Ilk.WHITE_500 : f.Ilk.BRAND_500),
-                                        secondaryColor: (0, a.Lq)(t ? f.Ilk.BRAND_500 : f.Ilk.WHITE_500),
+                                        color: (0, l.Lq)(t ? f.Ilk.WHITE_500 : f.Ilk.BRAND_500),
+                                        secondaryColor: (0, l.Lq)(t ? f.Ilk.BRAND_500 : f.Ilk.WHITE_500),
                                         className: E.activeIcon
                                     }),
                                 d &&
-                                    (0, i.jsx)(l.CircleWarningIcon, {
-                                        color: (0, a.Lq)(f.Ilk.RED_400),
-                                        secondaryColor: (0, a.Lq)(f.Ilk.WHITE_500),
+                                    (0, i.jsx)(a.CircleWarningIcon, {
+                                        color: (0, l.Lq)(f.Ilk.RED_400),
+                                        secondaryColor: (0, l.Lq)(f.Ilk.WHITE_500),
                                         size: 'xs',
                                         className: E.activeIcon
                                     })
@@ -95,8 +95,8 @@ function I(e) {
         v.push(
             (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(l.MenuSeparator, {}),
-                    (0, i.jsx)(l.MenuItem, {
+                    (0, i.jsx)(a.MenuSeparator, {}),
+                    (0, i.jsx)(a.MenuItem, {
                         id: 'manage-accounts',
                         label: _.intl.string(_.t.WbFpq6),
                         action: () => {

@@ -1,7 +1,7 @@
 var i = n(200651),
     r = n(192379),
-    l = n(481060),
-    a = n(984370),
+    a = n(481060),
+    l = n(984370),
     s = n(703656),
     o = n(626135),
     c = n(804739),
@@ -13,17 +13,17 @@ t.Z = r.memo(function (e) {
     let { currentRoute: t, renderToolbar: n } = e,
         c = r.useContext(o.AnalyticsContext),
         p = m || t === d.Z5c.APPLICATION_LIBRARY_SETTINGS;
-    return (0, i.jsxs)(a.Z, {
+    return (0, i.jsxs)(l.Z, {
         className: h.libraryHeader,
         toolbar: null == n ? void 0 : n(),
         children: [
-            (0, i.jsx)(a.Z.Icon, {
-                icon: l.InventoryIcon,
+            (0, i.jsx)(l.Z.Icon, {
+                icon: a.InventoryIcon,
                 'aria-hidden': !0
             }),
-            (0, i.jsx)(a.Z.Title, { children: u.intl.string(u.t.cw57am) }),
-            (0, i.jsx)(a.Z.Divider, {}),
-            (0, i.jsxs)(l.TabBar, {
+            (0, i.jsx)(l.Z.Title, { children: u.intl.string(u.t.cw57am) }),
+            (0, i.jsx)(l.Z.Divider, {}),
+            (0, i.jsxs)(a.TabBar, {
                 type: 'top-pill',
                 selectedItem: t,
                 onItemSelect: function (e) {
@@ -39,12 +39,12 @@ t.Z = r.memo(function (e) {
                         });
                 },
                 children: [
-                    (0, i.jsx)(l.TabBar.Item, {
+                    (0, i.jsx)(a.TabBar.Item, {
                         id: d.Z5c.APPLICATION_LIBRARY,
                         children: u.intl.string(u.t.p7ARTE)
                     }),
                     p
-                        ? (0, i.jsx)(l.TabBar.Item, {
+                        ? (0, i.jsx)(a.TabBar.Item, {
                               id: d.Z5c.APPLICATION_LIBRARY_SETTINGS,
                               children: u.intl.string(u.t['3D5yo6'])
                           })

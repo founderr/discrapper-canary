@@ -1,8 +1,8 @@
 n(47120), n(315314), n(610138), n(216116), n(78328), n(815648);
 var i = n(230711),
     r = n(12647),
-    l = n(49012),
-    a = n(358085),
+    a = n(49012),
+    l = n(358085),
     s = n(996106),
     o = n(914946),
     c = n(452426),
@@ -24,7 +24,7 @@ t.Z = {
             (0, o.bu)(t.transport);
             try {
                 let e = new URL(n);
-                a.isPlatformEmbedded && r.Z.focus(null, !0), (0, l.q)({ href: e.toString() });
+                l.isPlatformEmbedded && r.Z.focus(null, !0), (0, a.q)({ href: e.toString() });
             } catch (e) {
                 throw new s.Z({ errorCode: u.lTL.INVALID_COMMAND }, 'Invalid URL: '.concat(n));
             }

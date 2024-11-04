@@ -6,14 +6,14 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(82950),
-    l = n(434404),
-    a = n(929507),
+    a = n(434404),
+    l = n(929507),
     s = n(981631),
     o = n(388032),
     c = n(943935);
 function d(e) {
     let { guild: t } = e,
-        n = () => a.Z.dismissNotice(t.id);
+        n = () => l.Z.dismissNotice(t.id);
     return (0, i.jsx)(r.Z, {
         guild: t,
         onDismissed: n,
@@ -22,7 +22,7 @@ function d(e) {
         type: s.vID.COMMANDS_MIGRATION,
         image: c,
         onClick: () => {
-            n(), l.Z.open(t.id, s.pNK.INTEGRATIONS);
+            n(), a.Z.open(t.id, s.pNK.INTEGRATIONS);
         },
         imageMarginTop: 15,
         imageMarginX: 22

@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(748780),
     o = n(91192),
     c = n(481060),
@@ -51,7 +51,7 @@ class p extends r.PureComponent {
     }
     render() {
         let { height: e, opacity: t, hovered: n, isContextMenuActive: r } = this.state,
-            { children: l, user: d, onClick: u, isActive: m, className: p, activeClassName: g } = this.props;
+            { children: a, user: d, onClick: u, isActive: m, className: p, activeClassName: g } = this.props;
         return (0, i.jsx)(o.mh, {
             id: d.id,
             children: (o) =>
@@ -61,7 +61,7 @@ class p extends r.PureComponent {
                         right: -8
                     },
                     children: (0, i.jsx)(s.Z.div, {
-                        className: a()(p, h.peopleListItem, null != g ? { [g]: m || r } : null, { [h.active]: m || r }),
+                        className: l()(p, h.peopleListItem, null != g ? { [g]: m || r } : null, { [h.active]: m || r }),
                         onContextMenu: (e) => this.handleContextMenu(e, d),
                         onMouseEnter: this.handleMouseEnter,
                         onMouseLeave: this.handleMouseLeave,
@@ -71,7 +71,7 @@ class p extends r.PureComponent {
                             opacity: t
                         },
                         ...o,
-                        children: l(n || m || r)
+                        children: a(n || m || r)
                     })
                 })
         });

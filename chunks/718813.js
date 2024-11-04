@@ -6,9 +6,9 @@ n.d(t, {
     n(653041);
 var i,
     r = n(200651),
-    l = n(192379),
-    a = n(120356),
-    s = n.n(a),
+    a = n(192379),
+    l = n(120356),
+    s = n.n(l),
     o = n(748780),
     c = n(442837),
     d = n(215569),
@@ -69,9 +69,9 @@ let N = (0, g.Un)({
         tension: 100
     };
 function R() {
-    return l.useEffect(() => (p.Z.enable(), p.Z.enableTemp(m.u), () => p.Z.disableTemp()), []), null;
+    return a.useEffect(() => (p.Z.enable(), p.Z.enableTemp(m.u), () => p.Z.disableTemp()), []), null;
 }
-class P extends (i = l.PureComponent) {
+class P extends (i = a.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         return e.mode !== t.mode
             ? {
@@ -142,8 +142,8 @@ class P extends (i = l.PureComponent) {
     }
     render() {
         let { animating: e } = this.state,
-            { mode: t, children: n, baseLayer: i, ...l } = this.props,
-            a = e || t === y ? this.getAnimatedStyle() : null,
+            { mode: t, children: n, baseLayer: i, ...a } = this.props,
+            l = e || t === y ? this.getAnimatedStyle() : null,
             c = (0, r.jsx)(o.Z.div, {
                 ref: (e) => (this.containerRef.current = null != e ? e.refs.node : void 0),
                 'aria-hidden': t === y,
@@ -152,8 +152,8 @@ class P extends (i = l.PureComponent) {
                     [v.animating]: e,
                     'stop-animations': t === y
                 }),
-                style: a,
-                ...l,
+                style: l,
+                ...a,
                 children: n
             });
         return i
@@ -172,7 +172,7 @@ class P extends (i = l.PureComponent) {
         };
     }
     constructor(e) {
-        super(e), S(this, 'containerRef', l.createRef());
+        super(e), S(this, 'containerRef', a.createRef());
         let t = 1,
             n = 1;
         e.mode === y && ((t = 0.93), (n = 0)),
@@ -185,7 +185,7 @@ class P extends (i = l.PureComponent) {
     }
 }
 S(P, 'defaultProps', { baseLayer: !1 }), S(P, 'contextType', u.AccessibilityPreferencesContext);
-class O extends l.PureComponent {
+class O extends a.PureComponent {
     componentDidMount() {
         I.S.subscribe(C.CkL.LAYER_POP_ESCAPE_KEY, h.xf);
     }
@@ -195,9 +195,9 @@ class O extends l.PureComponent {
     renderLayers() {
         let { children: e, layers: t, hasFullScreenLayer: n } = this.props,
             { length: i } = t,
-            l = [];
+            a = [];
         return (
-            l.push(
+            a.push(
                 (0, r.jsx)(
                     P,
                     {
@@ -208,8 +208,8 @@ class O extends l.PureComponent {
                     'layer-base'
                 )
             ),
-            t.forEach((e, t) => l.push(this.renderComponent(e, t, i))),
-            l
+            t.forEach((e, t) => a.push(this.renderComponent(e, t, i))),
+            a
         );
     }
     renderComponent(e, t, n) {

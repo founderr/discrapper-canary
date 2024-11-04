@@ -1,7 +1,7 @@
 var i = n(200651),
     r = n(192379),
-    l = n(990547),
-    a = n(481060),
+    a = n(990547),
+    l = n(481060),
     s = n(213609),
     o = n(252618),
     c = n(979233),
@@ -29,8 +29,8 @@ t.Z = function () {
         L = (0, E._)({ location: N.dr.QUEST_HOME_DESKTOP }) ? v.Z : v.j;
     r.useEffect(() => {
         (0, s.h)({
-            name: l.ImpressionNames.QUEST_HOME,
-            type: l.ImpressionTypes.VIEW,
+            name: a.ImpressionNames.QUEST_HOME,
+            type: a.ImpressionTypes.VIEW,
             properties: {
                 utm_source_current: y.utmSourceCurrent,
                 utm_medium_current: y.utmMediumCurrent,
@@ -49,7 +49,7 @@ t.Z = function () {
             className: b.container,
             children: [
                 (0, i.jsxs)(p.ZP, {
-                    children: [(0, i.jsx)('div', { className: b.dragRegion }), (0, i.jsx)(p.z6, { scrollPosition: Z }), (0, i.jsx)(p.aV, { icon: a.QuestsIcon })]
+                    children: [(0, i.jsx)('div', { className: b.dragRegion }), (0, i.jsx)(p.z6, { scrollPosition: Z }), (0, i.jsx)(p.aV, { icon: l.QuestsIcon })]
                 }),
                 (0, i.jsxs)(g.Z, {
                     onScroll: A,

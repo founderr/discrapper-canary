@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(399606),
-    l = n(607070),
-    a = n(70097),
+    a = n(607070),
+    l = n(70097),
     s = n(970731),
     o = n(111653),
     c = n(921944),
@@ -15,10 +15,10 @@ var r = n(399606),
     u = n(526973);
 let h = (e) => {
     let { markAsDismissed: t } = e,
-        n = (0, r.e7)([l.Z], () => l.Z.useReducedMotion);
+        n = (0, r.e7)([a.Z], () => a.Z.useReducedMotion);
     return (0, o.t)()
         ? (0, i.jsx)(s.ZP, {
-              asset: (0, i.jsx)(a.Z, {
+              asset: (0, i.jsx)(l.Z, {
                   src: 'https://cdn.discordapp.com/attachments/1063579271815245944/1095089224421740695/CEC_Reporting_Animation_v03_EN_1x1_Music_1.mp4',
                   loop: !0,
                   autoPlay: !n,

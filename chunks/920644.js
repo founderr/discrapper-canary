@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(990547),
-    l = n(481060),
-    a = n(313201),
+    a = n(481060),
+    l = n(313201),
     s = n(703656),
     o = n(63063),
     c = n(758119),
@@ -19,17 +19,17 @@ function m() {
 }
 function p(e) {
     let { underageMessage: t, transitionState: s } = e,
-        c = (0, a.Dt)();
-    return (0, i.jsxs)(l.ModalRoot, {
+        c = (0, l.Dt)();
+    return (0, i.jsxs)(a.ModalRoot, {
         transitionState: s,
-        size: l.ModalSize.SMALL,
+        size: a.ModalSize.SMALL,
         'aria-labelledby': c,
         impression: {
             impressionName: r.ImpressionNames.USER_AGE_GATE_UNDERAGE,
             impressionProperties: { existing_user: !0 }
         },
         children: [
-            (0, i.jsx)(l.ModalContent, {
+            (0, i.jsx)(a.ModalContent, {
                 children: (0, i.jsxs)('div', {
                     className: h.container,
                     children: [
@@ -38,13 +38,13 @@ function p(e) {
                             src: n(231443),
                             className: h.img
                         }),
-                        (0, i.jsx)(l.Heading, {
+                        (0, i.jsx)(a.Heading, {
                             variant: 'heading-xl/semibold',
                             className: h.title,
                             id: c,
                             children: u.intl.string(u.t['NR/zrK'])
                         }),
-                        (0, i.jsx)(l.Text, {
+                        (0, i.jsx)(a.Text, {
                             color: 'header-secondary',
                             className: h.subtitle,
                             variant: 'text-sm/normal',
@@ -53,7 +53,7 @@ function p(e) {
                                 helpURL: o.Z.getArticleURL(d.BhN.AGE_GATE)
                             })
                         }),
-                        (0, i.jsx)(l.Text, {
+                        (0, i.jsx)(a.Text, {
                             color: 'header-secondary',
                             className: h.subtitle,
                             variant: 'text-sm/normal',
@@ -62,9 +62,9 @@ function p(e) {
                     ]
                 })
             }),
-            (0, i.jsx)(l.ModalFooter, {
-                children: (0, i.jsx)(l.Button, {
-                    size: l.ButtonSizes.SMALL,
+            (0, i.jsx)(a.ModalFooter, {
+                children: (0, i.jsx)(a.Button, {
+                    size: a.ButtonSizes.SMALL,
                     fullWidth: !0,
                     onClick: m,
                     children: u.intl.string(u.t.szzQ6O)

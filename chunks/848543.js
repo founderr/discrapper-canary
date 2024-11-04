@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(399606),
     o = n(704215),
     c = n(582019),
@@ -27,7 +27,7 @@ var i = n(200651),
     N = n(388032),
     T = n(663031);
 function x(e) {
-    let { channel: t, iconClassName: l, className: x, innerClassName: b, ...A } = e,
+    let { channel: t, iconClassName: a, className: x, innerClassName: b, ...A } = e,
         { mute: Z, suppress: y } = (0, g.Z)(t),
         L = (0, s.e7)([f.Z], () => f.Z.isDeaf()),
         R = Z || y || L,
@@ -78,7 +78,7 @@ function x(e) {
                         children: (0, i.jsx)(d.Button, {
                             ...e,
                             ...t,
-                            className: a()(x, {
+                            className: l()(x, {
                                 [T.buttonActive]: P,
                                 [T.disabled]: R
                             }),
@@ -102,7 +102,7 @@ function x(e) {
                             size: d.Button.Sizes.SMALL,
                             ...A,
                             children: (0, i.jsx)(G, {
-                                className: l,
+                                className: a,
                                 size: 'sm',
                                 color: P ? 'white' : d.tokens.colors.INTERACTIVE_ACTIVE
                             })

@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    l = n(921944),
-    a = n(388032),
+    a = n(921944),
+    l = n(388032),
     s = n(114922);
 function o(e) {
     let { markAsDismissed: t } = e;
@@ -18,15 +18,15 @@ function o(e) {
             (0, i.jsx)(r.Text, {
                 variant: 'text-sm/normal',
                 className: s.content,
-                children: a.intl.string(a.t.rdzeVF)
+                children: l.intl.string(l.t.rdzeVF)
             }),
             (0, i.jsx)(r.Button, {
                 color: r.Button.Colors.BRAND_INVERTED,
                 fullWidth: !0,
                 onClick: () => {
-                    t(l.L.AUTO);
+                    t(a.L.AUTO);
                 },
-                children: a.intl.string(a.t['NX+WJC'])
+                children: l.intl.string(l.t['NX+WJC'])
             })
         ]
     });

@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(392711),
     o = n(100621),
     c = n(442837),
@@ -34,7 +34,7 @@ let x = {
 };
 function b(e) {
     let { guildId: t, onClose: n } = e,
-        l = (0, g.Wg)(),
+        a = (0, g.Wg)(),
         {
             progress: b,
             errors: A,
@@ -42,7 +42,7 @@ function b(e) {
         } = (0, c.cj)([g.ZP], () => {
             var e, n, i, r;
             return {
-                progress: null !== (r = null === (e = g.ZP.getStateForGuild(t)) || void 0 === e ? void 0 : e.progress) && void 0 !== r ? r : l,
+                progress: null !== (r = null === (e = g.ZP.getStateForGuild(t)) || void 0 === e ? void 0 : e.progress) && void 0 !== r ? r : a,
                 errors: null === (n = g.ZP.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
                 submitting: null === (i = g.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : i.submitting
             };
@@ -162,30 +162,30 @@ function b(e) {
                             className: T.panel,
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: a()(T.stepsContainer),
+                                    className: l()(T.stepsContainer),
                                     children: (0, i.jsx)(C.Z, { guildId: t })
                                 }),
                                 (0, i.jsx)('div', {
-                                    className: a()(T.navigationContainer, T.elevatedNavigationContainer),
+                                    className: l()(T.navigationContainer, T.elevatedNavigationContainer),
                                     children: (0, i.jsx)(I.Z, {
                                         guildId: t,
                                         progress: b,
                                         updateCurrentStep: k,
-                                        animationClassName: a()({ [T.hidden]: P }),
+                                        animationClassName: l()({ [T.hidden]: P }),
                                         inSettings: !1
                                     })
                                 })
                             ]
                         }),
                         (0, i.jsx)(o.animated.div, {
-                            className: a()(T.divider, {
+                            className: l()(T.divider, {
                                 [T.hidden]: P,
                                 [T.dividerResponsive]: !P
                             })
                         }),
                         (0, i.jsx)(o.animated.div, {
                             style: M,
-                            className: a()(T.sidebar, {
+                            className: l()(T.sidebar, {
                                 [T.sidebarResponsive]: !P,
                                 [T.sidebarHidden]: P
                             }),

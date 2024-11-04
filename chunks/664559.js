@@ -7,7 +7,7 @@ n.d(t, {
     n(653041);
 var i = n(192379),
     r = n(768943),
-    l = n(818260);
+    l = n(429828);
 function a() {
     return r.Z.getSavedMessages().map((e) => e.saveData);
 }

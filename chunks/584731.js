@@ -1,8 +1,8 @@
 n(47120);
 var i = n(442837),
     r = n(570140),
-    l = n(513418),
-    a = n(710845),
+    a = n(513418),
+    l = n(710845),
     s = n(592125),
     o = n(375954),
     c = n(625236);
@@ -20,7 +20,7 @@ function d(e, t, n) {
     );
 }
 let u = -1 / 0,
-    h = new a.Z('MessagePreviewStore');
+    h = new l.Z('MessagePreviewStore');
 class m extends i.ZP.Store {
     isLatest(e, t) {
         var n;
@@ -72,9 +72,9 @@ class m extends i.ZP.Store {
             i = e.message.channel_id,
             r = e.message.id;
         if (null == i || null == r) return !1;
-        let l = this.data(n);
-        if ((null == l ? void 0 : l.messageId(i)) !== r) return !1;
-        null == l || l.update(e.message);
+        let a = this.data(n);
+        if ((null == a ? void 0 : a.messageId(i)) !== r) return !1;
+        null == a || a.update(e.message);
     }
     handleThreadListSync(e) {
         var t;
@@ -84,13 +84,13 @@ class m extends i.ZP.Store {
         var t, n;
         let i = s.Z.getBasicChannel(e.channelId);
         if (null == i) return !1;
-        (0, l.Z)(e.messages), e.isAfter || e.isBefore || e.hasMoreAfter ? this.data(i.guild_id).putNew(e.channelId, null !== (n = e.messages[0]) && void 0 !== n ? n : null, this.generation) : this.data(i.guild_id).put(e.channelId, null !== (t = e.messages[0]) && void 0 !== t ? t : null, this.generation);
+        (0, a.Z)(e.messages), e.isAfter || e.isBefore || e.hasMoreAfter ? this.data(i.guild_id).putNew(e.channelId, null !== (n = e.messages[0]) && void 0 !== n ? n : null, this.generation) : this.data(i.guild_id).put(e.channelId, null !== (t = e.messages[0]) && void 0 !== t ? t : null, this.generation);
     }
     handleLocalMessagesLoaded(e) {
         let t = s.Z.getBasicChannel(e.channelId);
         if (null != t) {
             var n;
-            (0, l.Z)(e.messages), this.data(t.guild_id).putNew(e.channelId, null !== (n = e.messages[0]) && void 0 !== n ? n : null, u);
+            (0, a.Z)(e.messages), this.data(t.guild_id).putNew(e.channelId, null !== (n = e.messages[0]) && void 0 !== n ? n : null, u);
         }
     }
     handleMessagePreviewsLoaded(e) {

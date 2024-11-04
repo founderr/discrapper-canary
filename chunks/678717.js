@@ -26,7 +26,7 @@ n(381996);
 var v = n(392750),
     j = n(926976),
     _ = n(592197),
-    C = n(860337),
+    C = n(806240),
     T = n(789654),
     S = n(691867),
     N = n(916790),
@@ -38,8 +38,8 @@ var v = n(392750),
     Z = n(246992),
     R = n(496025),
     O = n(442954),
-    B = n(702904),
-    A = n(178821),
+    A = n(702904),
+    B = n(178821),
     L = n(248526),
     P = n(958328),
     M = n(514866),
@@ -116,7 +116,7 @@ function K() {
                     e.push({
                         id: 'performance',
                         name: 'Performance',
-                        render: () => (0, r.jsx)(A.Z, {})
+                        render: () => (0, r.jsx)(B.Z, {})
                     }),
                     e.push({
                         id: 'feedback',
@@ -183,7 +183,7 @@ function K() {
                     e.push({
                         id: 'payments',
                         name: 'Payments',
-                        render: () => (0, r.jsx)(B.Z, {})
+                        render: () => (0, r.jsx)(A.Z, {})
                     }),
                     e.push({
                         id: 'subscriptions',

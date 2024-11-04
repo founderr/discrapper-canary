@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(512969),
     o = n(990547),
     c = n(608787),
@@ -60,8 +60,8 @@ var i = n(200651),
     en = n(709054),
     ei = n(374005),
     er = n(191741),
-    el = n(409292),
-    ea = n(316173),
+    ea = n(409292),
+    el = n(316173),
     es = n(256638),
     eo = n(663701),
     ec = n(425369),
@@ -122,7 +122,7 @@ let eg = 'resizable-sidebar-width',
                 let e = $.Z.getChannelId();
                 return X.Z.getChannel(e);
             }),
-            { guildId: r, channelId: l, messageId: a } = t.params,
+            { guildId: r, channelId: a, messageId: l } = t.params,
             s = (0, u.e7)([J.Z], () => J.Z.getGuild(r)),
             o = (0, u.e7)([Q.ZP], () => (null == r ? null : Q.ZP.getSelfMember(r))),
             c = (0, u.e7)([w.Z], () => {
@@ -139,8 +139,8 @@ let eg = 'resizable-sidebar-width',
                     }
             }),
             d = (0, T.C4)(r, 'channel_renderer');
-        if (null != r && null != l && (0, eh.AB)(l))
-            switch (l) {
+        if (null != r && null != a && (0, eh.AB)(a))
+            switch (a) {
                 case eh.oC.ROLE_SUBSCRIPTIONS:
                     return d
                         ? (0, i.jsx)(eE, {
@@ -151,7 +151,7 @@ let eg = 'resizable-sidebar-width',
                 case eh.oC.GUILD_SHOP:
                     return (0, i.jsx)(eE, {
                         guildId: r,
-                        productId: a,
+                        productId: l,
                         initialTab: c
                     });
                 case eh.oC.MEMBER_APPLICATIONS:
@@ -173,17 +173,17 @@ let eg = 'resizable-sidebar-width',
                 case eh.oC.MEMBER_SAFETY:
                     return (0, i.jsx)(ev, { guildId: r });
                 default:
-                    (0, et.vE)(l);
+                    (0, et.vE)(a);
             }
         if ((0, R.p3)(s, o))
             return (0, i.jsx)(P.Z, {
                 guildId: r,
-                channelId: l
+                channelId: a
             });
         if ((null == n ? void 0 : n.type) === eu.d4z.GUILD_STORE) {
             let e = en.default.cast(t.params.messageId);
             return (0, i.jsx)(
-                el.Z,
+                ea.Z,
                 {
                     channel: n,
                     inputSkuId: e
@@ -282,7 +282,7 @@ function ek(e) {
     document.body.style.setProperty('--custom-guild-sidebar-width', ''.concat(e, 'px'));
 }
 function eU(e) {
-    let { hasNotice: t, sidebarTheme: n, hideSidebar: l, isSidebarOpen: s, isOnFullScreenCollectiblesShopRoute: o } = e;
+    let { hasNotice: t, sidebarTheme: n, hideSidebar: a, isSidebarOpen: s, isOnFullScreenCollectiblesShopRoute: o } = e;
     (0, g.t)(!0);
     let c = 'app view user trigger debugging';
     p.R6.useExperiment({ location: c }, { autoTrackExposure: !1 }), p.R6.trackExposure({ location: c });
@@ -346,7 +346,7 @@ function eU(e) {
         (r.useLayoutEffect(() => {
             I && ek(76);
         }, [I]),
-        l)
+        a)
     )
         return null;
     let Z = E ? 'div' : r.Fragment,
@@ -357,7 +357,7 @@ function eU(e) {
             (0, i.jsxs)('div', {
                 ref: E ? v : void 0,
                 'data-collapsed': I,
-                className: a()(ep.sidebar, e, {
+                className: l()(ep.sidebar, e, {
                     [ep.hasNotice]: t,
                     [ep.fullWidth]: d.tq,
                     [ep.hidden]: _
@@ -383,7 +383,7 @@ function eU(e) {
                           })
                         : null,
                     (0, i.jsx)(ei.b, {}),
-                    (0, i.jsx)(ea.Z, {})
+                    (0, i.jsx)(el.Z, {})
                 ]
             })
     });
@@ -392,7 +392,7 @@ function eG() {
     var e;
     let t = (0, u.e7)([ee.Z], () => ee.Z.hasNotice()),
         n = (0, u.e7)([q.Z], () => (q.Z.darkSidebar ? eu.BRd.DARK : void 0)),
-        l = (function () {
+        a = (function () {
             let [e, t] = r.useState(() => window.location.pathname.startsWith(eu.Z5c.GUILD_MEMBER_VERIFICATION('')));
             return (
                 r.useEffect(
@@ -405,7 +405,7 @@ function eG() {
                 e
             );
         })(),
-        a = (function () {
+        l = (function () {
             let [e, t] = r.useState(() => window.location.pathname.startsWith(eu.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB('')));
             return (
                 r.useEffect(
@@ -431,7 +431,7 @@ function eG() {
         m = (0, u.e7)([B.Z], () => B.Z.getIsOpen()),
         p = (0, s.$B)([eu.Z5c.CHANNEL(eu.ME, W.Hw.channelId()), eu.Z5c.CHANNEL(W.Hw.guildId(), W.Hw.channelId({ optional: !0 }), ':messageId?')]),
         g = (null == p ? void 0 : null === (e = p.params) || void 0 === e ? void 0 : e.channelId) === eh.oC.GUILD_ONBOARDING,
-        f = l || a || c || h || g,
+        f = a || l || c || h || g,
         E = r.useCallback(() => G.Z.openSidebar(), []),
         C = (0, b.Q)('AppView');
     return (0, i.jsx)(i.Fragment, {

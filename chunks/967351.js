@@ -1,8 +1,8 @@
 n(47120), n(411104);
 var i = n(413135),
     r = n(836560),
-    l = n(392711),
-    a = n.n(l),
+    a = n(392711),
+    l = n.n(a),
     s = n(710845),
     o = n(998502),
     c = n(901077),
@@ -62,39 +62,39 @@ function E(e) {
                     throw (i(), e);
                 }
             );
-        return e.write(I(g.PING, a().uniqueId())), r.then(t, n);
+        return e.write(I(g.PING, l().uniqueId())), r.then(t, n);
     });
 }
 function I(e, t) {
     var n;
     t = JSON.stringify(t);
     let r = i.Buffer.byteLength(t),
-        l = i.Buffer.alloc(8 + r);
-    return l.writeInt32LE(e, 0), l.writeInt32LE(r, 4), l.write(t, 8, r), (n = l).buffer.slice(n.byteOffset, n.byteOffset + n.byteLength);
+        a = i.Buffer.alloc(8 + r);
+    return a.writeInt32LE(e, 0), a.writeInt32LE(r, 4), a.write(t, 8, r), (n = a).buffer.slice(n.byteOffset, n.byteOffset + n.byteLength);
 }
 function C(e) {
     let t = e.read(8);
     if (null == t) return;
     let n = i.Buffer.from(t),
         r = n.readInt32LE(0),
-        l = n.readInt32LE(4);
-    if (!Object.values(g).includes(r) || l < 0) throw Error('protocol error');
-    if (null == (t = e.read(l))) throw Error('data size does not match what was received');
-    let a = JSON.parse((n = i.Buffer.from(t)).toString());
+        a = n.readInt32LE(4);
+    if (!Object.values(g).includes(r) || a < 0) throw Error('protocol error');
+    if (null == (t = e.read(a))) throw Error('data size does not match what was received');
+    let l = JSON.parse((n = i.Buffer.from(t)).toString());
     switch (r) {
         case g.PING:
-            e.emit('ping', a), e.write(I(g.PONG, a));
+            e.emit('ping', l), e.write(I(g.PONG, l));
             break;
         case g.PONG:
-            e.emit('pong', a);
+            e.emit('pong', l);
             break;
         case g.HANDSHAKE:
             if (_(e)) throw Error('already did handshake');
-            f(e, !0), e.emit('handshake', a);
+            f(e, !0), e.emit('handshake', l);
             break;
         case g.FRAME:
             if (!_(e)) throw Error('did not handshake');
-            e.emit('request', a);
+            e.emit('request', l);
             break;
         case g.CLOSE:
             e.end(), e.destroy();
@@ -115,18 +115,18 @@ class v extends d.Z {
             this.socket.destroy();
     }
     constructor(e, t, n) {
-        var i, r, l;
+        var i, r, a;
         super('ipc', t, n),
             (i = this),
-            (l = void 0),
+            (a = void 0),
             (r = 'socket') in i
                 ? Object.defineProperty(i, r, {
-                      value: l,
+                      value: a,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (i[r] = l),
+                : (i[r] = a),
             (this.socket = e);
     }
 }

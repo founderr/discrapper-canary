@@ -1,13 +1,13 @@
 n(47120);
 var i = n(710845),
     r = n(914946),
-    l = n(452426),
-    a = n(981631);
-let s = new i.Z(a.BZL);
+    a = n(452426),
+    l = n(981631);
+let s = new i.Z(l.BZL);
 t.Z = {
-    [a.Etm.CAPTURE_LOG]: {
+    [l.Etm.CAPTURE_LOG]: {
         validation: (e) =>
-            (0, l.Z)(e)
+            (0, a.Z)(e)
                 .required()
                 .keys({
                     level: e.string().max(10).required(),
@@ -19,23 +19,23 @@ t.Z = {
                 args: { level: n, message: i }
             } = e;
             (0, r.bu)(t.transport);
-            let l = t.application.id,
-                a = ''.concat(l, ' - ').concat(i);
+            let a = t.application.id,
+                l = ''.concat(a, ' - ').concat(i);
             switch (n) {
                 case 'log':
-                    s.log(a);
+                    s.log(l);
                     break;
                 case 'warn':
-                    s.warn(a);
+                    s.warn(l);
                     break;
                 case 'debug':
-                    s.verbose(a);
+                    s.verbose(l);
                     break;
                 case 'info':
-                    s.info(a);
+                    s.info(l);
                     break;
                 case 'error':
-                    s.error(a);
+                    s.error(l);
             }
         }
     }

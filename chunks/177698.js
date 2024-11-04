@@ -1,8 +1,8 @@
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    l = n(570140),
-    a = n(813615),
+    a = n(570140),
+    l = n(813615),
     s = n(812206),
     o = n(69580),
     c = n(568963),
@@ -23,13 +23,13 @@ t.Z = (0, p.Z)(
         return new Promise((e, t) => {
             let s = (0, g.jU)(A),
                 y = (i) => {
-                    let { clientId: r, location: a } = i;
-                    if (null == r || r === n) s.lock(), l.Z.unsubscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', y), null != location ? e(a) : t(new m.Z({ errorCode: f.lTL.OAUTH2_ERROR }, 'User cancelled authorization'));
+                    let { clientId: r, location: l } = i;
+                    if (null == r || r === n) s.lock(), a.Z.unsubscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', y), null != location ? e(l) : t(new m.Z({ errorCode: f.lTL.OAUTH2_ERROR }, 'User cancelled authorization'));
                 },
                 R = (0, c.R)();
             if (s.context === f.IlC.OVERLAY && !R) {
-                l.Z.subscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', y),
-                    l.Z.dispatch({
+                a.Z.subscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', y),
+                    a.Z.dispatch({
                         type: 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN',
                         clientId: n,
                         authorizeProps: {
@@ -79,13 +79,13 @@ t.Z = (0, p.Z)(
                         (0, r.closeModal)(Z), t(new m.Z({ errorCode: f.lTL.OAUTH2_ERROR }, 'User cancelled authorization'));
                     }
                 },
-                (null != L && (0, a.Z)(L, S)) || R ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT
+                (null != L && (0, l.Z)(L, S)) || R ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT
             );
         });
     },
     function (e, t, n) {
         if (d.Z.isReady(null != n ? n : 0) || !u.isPlatformEmbedded) return;
-        let i = (0, a.Z)(e, t) ? f.KJ3.CHANNEL_CALL_POPOUT : null;
+        let i = (0, l.Z)(e, t) ? f.KJ3.CHANNEL_CALL_POPOUT : null;
         (0, u.isWindows)() ? h.ZP.minimize(i) : h.ZP.restore(i), h.ZP.focus(i);
     }
 );

@@ -1,8 +1,8 @@
 n(47120);
 var i,
     r,
-    l,
     a,
+    l,
     s = n(392711),
     o = n.n(s),
     c = n(442837),
@@ -43,15 +43,15 @@ class C extends (i = c.ZP.Store) {
         return g[e];
     }
 }
-(a = 'FriendSuggestionStore'),
-    (l = 'displayName') in (r = C)
-        ? Object.defineProperty(r, l, {
-              value: a,
+(l = 'FriendSuggestionStore'),
+    (a = 'displayName') in (r = C)
+        ? Object.defineProperty(r, a, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (r[l] = a),
+        : (r[a] = l),
     (t.Z = new C(d.Z, {
         CONNECTION_OPEN: function (e) {
             (g = {}), (f = e.friendSuggestionCount) > 0 ? ((E = !0), _ || !E || ((_ = !0), (E = !1), m.Z.fetch())) : (0, p.Z)();

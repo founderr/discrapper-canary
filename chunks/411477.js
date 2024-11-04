@@ -9,7 +9,7 @@ var o = n(120356),
     a = n.n(o),
     r = n(481060),
     c = n(436774),
-    l = n(112831),
+    l = n(118012),
     s = n(148393);
 function u(e) {
     let { text: t, textSize: n = l.Z.Sizes.SIZE_12, textColor: o = l.Z.Colors.STANDARD, className: u, button: d, reducedRightPadding: b = !1 } = e;

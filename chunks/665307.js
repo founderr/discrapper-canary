@@ -7,9 +7,9 @@ n.d(t, {
     n(47120);
 var i,
     r = n(200651),
-    l = n(192379),
-    a = n(120356),
-    s = n.n(a),
+    a = n(192379),
+    l = n(120356),
+    s = n.n(l),
     o = n(512969),
     c = n(442837),
     d = n(846519),
@@ -53,13 +53,13 @@ let R = (0, x.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
         [A.iEv.NAME]: 'Name'
     }),
     j = (e) => {
-        let { flag: t, icon: n, item: i, tooltip: l } = e,
-            a = i.libraryApplication.hasFlag(t);
+        let { flag: t, icon: n, item: i, tooltip: a } = e,
+            l = i.libraryApplication.hasFlag(t);
         return (0, r.jsx)(h.Tooltip, {
-            text: l,
+            text: a,
             children: (e) =>
                 (0, r.jsx)(n, {
-                    className: s()(y.settingIcon, { [y.hidden]: !a }),
+                    className: s()(y.settingIcon, { [y.hidden]: !l }),
                     ...e
                 })
         });
@@ -150,10 +150,10 @@ let R = (0, x.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
             renderHeader: () => null,
             cellClassName: y.actionsCell,
             render(e, t, n) {
-                var i, a;
+                var i, l;
                 if (null == t) throw Error('No cell props defined.');
                 let o = e.key === t.activeRowKey;
-                return (0, r.jsxs)(l.Fragment, {
+                return (0, r.jsxs)(a.Fragment, {
                     children: [
                         (0, r.jsxs)('div', {
                             className: y.settingIcons,
@@ -178,7 +178,7 @@ let R = (0, x.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
                         }),
                         (0, T.Je)(e.libraryApplication)
                             ? (0, r.jsx)(f.Z, {
-                                  analyticsListSort: ((i = t.sortKey), (a = t.sortDirection), ''.concat(O[i], ' ').concat(a === A.sHY.ASCENDING ? 'ASC' : 'DESC')),
+                                  analyticsListSort: ((i = t.sortKey), (l = t.sortDirection), ''.concat(O[i], ' ').concat(l === A.sHY.ASCENDING ? 'ASC' : 'DESC')),
                                   analyticsListIndex: n,
                                   source: A.Sbl.APPLICATION_LIBRARY,
                                   libraryApplication: e.libraryApplication,
@@ -196,7 +196,7 @@ let R = (0, x.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
         }
     ],
     M = (e) => {
-        let { item: t, activeRowKey: n, highlightedApplicationKey: i, onMouseEnter: l, onMouseLeave: a, onContextMenu: o, setRef: c, ...d } = e,
+        let { item: t, activeRowKey: n, highlightedApplicationKey: i, onMouseEnter: a, onMouseLeave: l, onContextMenu: o, setRef: c, ...d } = e,
             u = t.key === n,
             h = t.key === i;
         return (0, r.jsx)('div', {
@@ -207,13 +207,13 @@ let R = (0, x.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
                 [y.rowWrapperDim]: !u && !t.isLaunchable
             }),
             ref: (e) => c(e, t.key),
-            onMouseEnter: () => l(t),
-            onMouseLeave: a,
+            onMouseEnter: () => a(t),
+            onMouseLeave: l,
             onContextMenu: (e) => o(e, t),
             children: (0, r.jsx)('div', { ...d })
         });
     };
-class w extends (i = l.PureComponent) {
+class w extends (i = a.PureComponent) {
     componentDidMount() {
         let { fetched: e } = this.props;
         e && (this.handleHighlightedApplicationKey(), this.trackViewed());
@@ -320,9 +320,9 @@ class w extends (i = l.PureComponent) {
               }));
     }
     render() {
-        let { sortKey: e, sortDirection: t, applicationViewItems: n, activeRowKey: i, stickyHeader: a } = this.props,
+        let { sortKey: e, sortDirection: t, applicationViewItems: n, activeRowKey: i, stickyHeader: l } = this.props,
             { overflowMenuRowKey: s, highlightedApplicationKey: o } = this.state;
-        return (0, r.jsxs)(l.Fragment, {
+        return (0, r.jsxs)(a.Fragment, {
             children: [
                 n.length > 0
                     ? (0, r.jsx)(E.Z, {
@@ -331,14 +331,14 @@ class w extends (i = l.PureComponent) {
                           sortData: !1,
                           rowComponent: M,
                           className: y.table,
-                          headerClassName: a ? y.stickyHeader : y.header,
+                          headerClassName: l ? y.stickyHeader : y.header,
                           headerCellClassName: y.headerCell,
                           sortedHeaderCellClassName: y.headerCellSorted,
                           bodyCellClassName: y.bodyCell,
                           rowClassName: y.row,
                           sortKey: e,
                           sortDirection: t,
-                          stickyHeader: a,
+                          stickyHeader: l,
                           rowProps: {
                               activeRowKey: null != s ? s : i,
                               highlightedApplicationKey: o,
@@ -406,11 +406,11 @@ class w extends (i = l.PureComponent) {
     }
 }
 function k(e) {
-    let t = l.useContext(N.AnalyticsContext),
+    let t = a.useContext(N.AnalyticsContext),
         n = (0, o.TH)(),
         {
             applicationViewItems: i,
-            filterQuery: a,
+            filterQuery: l,
             fetched: s
         } = (0, c.cj)([v.Z], () => ({
             applicationViewItems: v.Z.sortedFilteredLibraryApplicationViewItems,
@@ -433,7 +433,7 @@ function k(e) {
         analyticsContext: t,
         location: n,
         applicationViewItems: i,
-        filterQuery: a,
+        filterQuery: l,
         fetched: s,
         sortKey: d,
         sortDirection: u,

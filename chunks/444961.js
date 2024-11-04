@@ -1,8 +1,8 @@
 n(47120);
 var i = n(846519),
     r = n(570140),
-    l = n(287734),
-    a = n(317770),
+    a = n(287734),
+    l = n(317770),
     s = n(199902),
     o = n(592125),
     c = n(430824),
@@ -13,7 +13,7 @@ var i = n(846519),
     p = n(981631);
 let g = new i.V7(),
     f = new i.V7();
-class _ extends a.Z {
+class _ extends l.Z {
     _initialize() {
         r.Z.subscribe('IDLE', this.handleIdleUpdate);
     }
@@ -28,7 +28,7 @@ class _ extends a.Z {
         let t = u.Z.getChannelId();
         if (null == t) return;
         f.start(18000000, () => {
-            l.default.selectVoiceChannel(null);
+            a.default.selectVoiceChannel(null);
         });
         let n = c.Z.getGuild(u.Z.getGuildId());
         if (null == n || null == n.afkChannelId || n.afkChannelId === t || null == n.afkTimeout) return;
@@ -36,7 +36,7 @@ class _ extends a.Z {
         if (null != i)
             !i.isGuildStageVoice() &&
                 g.start(e + n.afkTimeout * h.Z.Millis.SECOND - Date.now(), () => {
-                    null != (n = c.Z.getGuild(u.Z.getGuildId())) && null != n.afkChannelId && l.default.selectVoiceChannel(n.afkChannelId);
+                    null != (n = c.Z.getGuild(u.Z.getGuildId())) && null != n.afkChannelId && a.default.selectVoiceChannel(n.afkChannelId);
                 });
     }
 }

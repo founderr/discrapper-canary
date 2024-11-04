@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    l = n(570140),
-    a = n(71509);
+    a = n(570140),
+    l = n(71509);
 function s() {
     (0, r.openModalLazy)(
         async () => {
@@ -16,13 +16,13 @@ function s() {
         },
         {
             onCloseCallback: () => {
-                l.Z.dispatch({ type: 'CLEAR_AUTHENTICATION_ERRORS' }),
-                    l.Z.dispatch({
+                a.Z.dispatch({ type: 'CLEAR_AUTHENTICATION_ERRORS' }),
+                    a.Z.dispatch({
                         type: 'LOGIN_RESET',
                         isMultiAccount: !0
                     });
             },
-            modalKey: a.Ui
+            modalKey: l.Ui
         }
     );
 }

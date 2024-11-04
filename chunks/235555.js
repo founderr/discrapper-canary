@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(392711),
-    a = n.n(l),
+    a = n(392711),
+    l = n.n(a),
     s = n(442837),
     o = n(239091),
     c = n(476669),
@@ -73,10 +73,10 @@ t.Z = s.ZP.connectStores([u.Z, p.default, m.Z, h.Z], () => {
     let n = u.Z.getSyncingWith(),
         i = u.Z.getActivity(),
         r = p.default.getCurrentUser(),
-        l = [];
+        a = [];
     if ((null != n ? ((e = p.default.getUser(n.userId)), (t = n.partyId)) : null != i && null != i.party && null != i.party.id && ((e = r), (t = i.party.id)), null != t)) {
         var s;
-        l = a()(Array.from(null !== (s = h.Z.getParty(t)) && void 0 !== s ? s : []))
+        a = l()(Array.from(null !== (s = h.Z.getParty(t)) && void 0 !== s ? s : []))
             .map((e) => p.default.getUser(e))
             .filter(g.lm)
             .orderBy([(t) => null == e || e.id === t.id, (e) => m.Z.isFriend(e.id)], ['desc', 'desc'])
@@ -85,6 +85,6 @@ t.Z = s.ZP.connectStores([u.Z, p.default, m.Z, h.Z], () => {
     return {
         currentUser: r,
         host: e,
-        party: l
+        party: a
     };
 })(I);

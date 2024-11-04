@@ -1,8 +1,8 @@
 n(47120), n(653041);
 var i = n(846519),
     r = n(570140),
-    l = n(317770),
-    a = n(220082),
+    a = n(317770),
+    l = n(220082),
     s = n(594174),
     o = n(125268),
     c = n(813900);
@@ -19,7 +19,7 @@ function d(e, t, n) {
         e
     );
 }
-class u extends l.Z {
+class u extends a.Z {
     _initialize() {
         !__OVERLAY__ && (r.Z.subscribe('SHARED_CANVAS_DRAW_LINE_POINT', this._handleDrawLinePoint), r.Z.subscribe('VOICE_CHANNEL_EFFECT_SEND', this._handleVoiceChannelEffectReceived));
     }
@@ -28,12 +28,12 @@ class u extends l.Z {
     }
     _handleVoiceChannelEffectReceived(e) {
         var t;
-        let { lineId: n, points: i, userId: r, streamerId: l, emojiHose: d } = e;
-        if (null != l && r !== (null === (t = s.default.getCurrentUser()) || void 0 === t ? void 0 : t.id))
+        let { lineId: n, points: i, userId: r, streamerId: a, emojiHose: d } = e;
+        if (null != a && r !== (null === (t = s.default.getCurrentUser()) || void 0 === t ? void 0 : t.id))
             if (null != i && null != n) {
                 let e = s.default.getUser(r);
-                null != e && (0, a.vM)(e.getAvatarURL(null, c.Ks)), (0, o.cV)(n, r, l, i);
-            } else null != d && ((d.lastUpdatedAt = Date.now()), (0, o.gr)(d, r, l));
+                null != e && (0, l.vM)(e.getAvatarURL(null, c.Ks)), (0, o.cV)(n, r, a, i);
+            } else null != d && ((d.lastUpdatedAt = Date.now()), (0, o.gr)(d, r, a));
     }
     constructor(...e) {
         super(...e),

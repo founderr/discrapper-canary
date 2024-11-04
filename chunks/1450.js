@@ -16,7 +16,7 @@ var r = n(200651),
     E = n(981631),
     v = n(30513),
     I = n(388032),
-    S = n(562907);
+    S = n(40847);
 t.Z = (e) => {
     let { className: t, guildId: n, channel: a, shouldTrackUpsellViewed: T, setTrackedUpsellViewed: b } = e,
         { location: y } = (0, u.O)(),

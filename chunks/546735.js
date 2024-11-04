@@ -1,42 +1,42 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return l;
     }
 });
 var i = n(192379),
     r = n(246364),
-    l = n(308083);
-function a(e) {
+    a = n(308083);
+function l(e) {
     let { progress: t, updateCurrentStep: n } = e,
-        { currentStep: a, gameApplicationIds: s, playstyle: o, interests: c, description: d, tag: u, verificationForm: h } = t,
+        { currentStep: l, gameApplicationIds: s, playstyle: o, interests: c, description: d, tag: u, verificationForm: h } = t,
         m = i.useMemo(() => null != h && h.formFields.some((e) => !(0, r.J)(e)), [h]),
-        p = i.useMemo(() => Array.from(c).filter((e) => !l.WZ.has(e) && !l.gh.has(e)), [c]),
+        p = i.useMemo(() => Array.from(c).filter((e) => !a.WZ.has(e) && !a.gh.has(e)), [c]),
         g = i.useCallback(() => {
-            n(a + 1);
-        }, [a, n]),
+            n(l + 1);
+        }, [l, n]),
         f = i.useCallback(() => {
-            n(a - 1);
-        }, [a, n]),
+            n(l - 1);
+        }, [l, n]),
         _ = i.useCallback((e) => n(e), [n]),
         E = i.useMemo(() => {
-            switch (a) {
-                case l.Wy.GAMES:
+            switch (l) {
+                case a.Wy.GAMES:
                     return 0 === s.size;
-                case l.Wy.PLAYSTYLE:
-                    return o === l.zv.NONE;
-                case l.Wy.INTERESTS:
+                case a.Wy.PLAYSTYLE:
+                    return o === a.zv.NONE;
+                case a.Wy.INTERESTS:
                     return p.length < 3;
-                case l.Wy.DESCRIPTION:
+                case a.Wy.DESCRIPTION:
                     return 0 === d.length;
-                case l.Wy.CUSTOMIZE_TAG_BADGE:
+                case a.Wy.CUSTOMIZE_TAG_BADGE:
                     return u.length < 2;
-                case l.Wy.MEMBER_APPLICATION:
+                case a.Wy.MEMBER_APPLICATION:
                     return !m;
                 default:
                     return !1;
             }
-        }, [a, d.length, s.size, m, p.length, o, u.length]),
-        I = 0 === a;
+        }, [l, d.length, s.size, m, p.length, o, u.length]),
+        I = 0 === l;
     return i.useMemo(
         () => ({
             onStepClick: _,

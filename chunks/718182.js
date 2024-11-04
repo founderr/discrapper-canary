@@ -34,7 +34,7 @@ class v extends (a = o.PureComponent) {
             children: [
                 (0, l.jsx)('img', {
                     alt: '',
-                    src: n(211095),
+                    src: n(262467),
                     className: E.marginBottom20
                 }),
                 (0, l.jsx)(f.Dx, {

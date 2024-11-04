@@ -1,8 +1,8 @@
 var i = n(200651);
 n(192379);
 var r = n(120356),
-    l = n.n(r),
-    a = n(44315),
+    a = n.n(r),
+    l = n(44315),
     s = n(600164),
     o = n(120998),
     c = n(353042),
@@ -11,14 +11,14 @@ var r = n(120356),
 t.Z = function (e) {
     var t;
     let { title: n, className: r, color: h, animate: m, gradientStopColor: p, getHistoricalTotalBytes: g } = e,
-        f = (0, a.Sl)(h).hex,
-        _ = null === (t = (0, a.Sl)(p)) || void 0 === t ? void 0 : t.hex;
+        f = (0, l.Sl)(h).hex,
+        _ = null === (t = (0, l.Sl)(p)) || void 0 === t ? void 0 : t.hex;
     return (0, i.jsx)(c.Z, {
         getHistoricalTotalBytes: g,
-        children: (e, t, a) => {
+        children: (e, t, l) => {
             var c;
             return (0, i.jsx)('div', {
-                className: l()(u.monitor, r),
+                className: a()(u.monitor, r),
                 children: (0, i.jsxs)(s.Z, {
                     align: s.Z.Align.CENTER,
                     children: [
@@ -45,7 +45,7 @@ t.Z = function (e) {
                                 updateInterval: t,
                                 color: f,
                                 gradientStopColor: _,
-                                numUpdatesToShow: a,
+                                numUpdatesToShow: l,
                                 animate: m,
                                 pixelWidth: 600,
                                 pixelHeight: 48,

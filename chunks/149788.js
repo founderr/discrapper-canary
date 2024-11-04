@@ -1,7 +1,7 @@
 var i = n(200651),
     r = n(192379),
-    l = n(481060),
-    a = n(749210),
+    a = n(481060),
+    l = n(749210),
     s = n(322665),
     o = n(17845),
     c = n(374939),
@@ -39,7 +39,7 @@ t.Z = function (e) {
                     n.length > 0
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(l.Heading, {
+                                  (0, i.jsx)(a.Heading, {
                                       className: g.sectionTitle,
                                       variant: 'heading-lg/semibold',
                                       color: 'header-primary',
@@ -53,7 +53,7 @@ t.Z = function (e) {
                                                   m.VD,
                                                   {
                                                       guild: e,
-                                                      onClick: () => a.Z.transitionToGuildSync(e.id)
+                                                      onClick: () => l.Z.transitionToGuildSync(e.id)
                                                   },
                                                   e.id
                                               )
@@ -71,13 +71,13 @@ t.Z = function (e) {
                     (0, i.jsxs)('div', {
                         className: f.disclaimer,
                         children: [
-                            (0, i.jsxs)(l.Text, {
+                            (0, i.jsxs)(a.Text, {
                                 className: f.text,
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
                                 children: [p.intl.string(p.t.O1k9XV), ' ']
                             }),
-                            (0, i.jsx)(l.Text, {
+                            (0, i.jsx)(a.Text, {
                                 className: f.text,
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',

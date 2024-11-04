@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(442837),
-    a = n(704215),
+    a = n(442837),
+    l = n(704215),
     s = n(433517),
     o = n(963202),
     c = n(824991),
@@ -42,7 +42,7 @@ function P(e) {
             location: 'ChannelNoticesGuard',
             includeConverted: !1
         }),
-        C = (0, l.Wu)(Z.HG, () =>
+        C = (0, a.Wu)(Z.HG, () =>
             Z.XN.filter((e) => {
                 let { type: t, store: i } = e;
                 if (t === y.vID.CLAN_ADMIN_UPSELL) return !n.hasFeature(y.oNc.CLAN) && I;
@@ -54,45 +54,45 @@ function P(e) {
         groupName: L.R.CHANNEL_NOTICES,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: r } = e,
-                l = () => {
+                a = () => {
                     _(Date.now()), r(L.L.UNKNOWN);
                 },
                 s = (() => {
                     switch (t) {
-                        case a.z.CHANNEL_NOTICE_HUBLINK:
+                        case l.z.CHANNEL_NOTICE_HUBLINK:
                             return (0, i.jsx)(f.Z, {
                                 guild: n,
-                                markAsDismissed: l
+                                markAsDismissed: a
                             });
-                        case a.z.CHANNEL_NOTICE_INVITE:
+                        case l.z.CHANNEL_NOTICE_INVITE:
                             return (0, i.jsx)(T.Z, {
                                 guild: n,
-                                markAsDismissed: l
+                                markAsDismissed: a
                             });
-                        case a.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION:
+                        case l.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION:
                             return (0, i.jsx)(p.Z, {
                                 guild: n,
-                                markAsDismissed: l
+                                markAsDismissed: a
                             });
-                        case a.z.CHANNEL_NOTICE_QUICKSWITCHER:
+                        case l.z.CHANNEL_NOTICE_QUICKSWITCHER:
                             return (0, i.jsx)(b.Z, {
                                 guild: n,
-                                markAsDismissed: l
+                                markAsDismissed: a
                             });
-                        case a.z.CHANNEL_NOTICE_GUILD_BANNER:
+                        case l.z.CHANNEL_NOTICE_GUILD_BANNER:
                             return (0, i.jsx)(m.Z, {
                                 guild: n,
-                                markAsDismissed: l
+                                markAsDismissed: a
                             });
-                        case a.z.LINKED_ROLE_ADMIN_GUILD:
+                        case l.z.LINKED_ROLE_ADMIN_GUILD:
                             return (0, i.jsx)(d.Z, {
                                 guild: n,
                                 markAsDismissed: () => r(L.L.UNKNOWN)
                             });
-                        case a.z.CHANNEL_LIST_CLAN_ADMIN_UPSELL:
+                        case l.z.CHANNEL_LIST_CLAN_ADMIN_UPSELL:
                             return (0, i.jsx)(c.ZP, {
                                 guild: n,
-                                markAsDismissed: l,
+                                markAsDismissed: a,
                                 defaultGameId: E
                             });
                         default:

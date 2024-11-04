@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    l = n(481060),
-    a = n(117496),
+    a = n(481060),
+    l = n(117496),
     s = n(979233),
     o = n(88693),
     c = n(611928),
@@ -25,7 +25,7 @@ var i = n(200651),
     S = n(388032),
     N = n(636872);
 function T() {
-    let e = r.useRef((0, a.P)()),
+    let e = r.useRef((0, l.P)()),
         { onScroll: t, scrollPosition: n, resetScrollPosition: T } = (0, s.M)(),
         { tabs: x, selectedTab: b, setSelectedTab: A } = (0, _.Y)(),
         Z = (0, p.lg)(b),
@@ -81,7 +81,7 @@ function T() {
                     children: [
                         !j && (0, i.jsx)(c.z6, { scrollPosition: n }),
                         (0, i.jsx)(c.aV, {
-                            icon: j ? l.ArrowLargeLeftIcon : l.ServerIcon,
+                            icon: j ? a.ArrowLargeLeftIcon : a.ServerIcon,
                             onClick: j ? P : void 0
                         }),
                         !j &&
@@ -93,7 +93,7 @@ function T() {
                                 onAvailableWidthChange: M
                             }),
                         j &&
-                            (0, i.jsx)(l.Heading, {
+                            (0, i.jsx)(a.Heading, {
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
                                 className: N.searchResultsHeader,

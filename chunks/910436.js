@@ -8,8 +8,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(287734),
-    l = n(872810),
-    a = n(122810),
+    a = n(872810),
+    l = n(122810),
     s = n(841784),
     o = n(503438),
     c = n(802856),
@@ -35,19 +35,19 @@ function C(e) {
                 A.push(e);
                 return;
             }
-            let l = A[r - 1],
-                a = ''.concat(null !== (t = null == e ? void 0 : e.key) && void 0 !== t ? t : ''),
-                s = ''.concat(null !== (n = null == l ? void 0 : l.key) && void 0 !== n ? n : '').startsWith('game') && a.startsWith('rich-presence');
-            A.push((0, i.jsx)(f.Z.Separator, { inset: s }, 'sep-'.concat(a))), A.push(e);
+            let a = A[r - 1],
+                l = ''.concat(null !== (t = null == e ? void 0 : e.key) && void 0 !== t ? t : ''),
+                s = ''.concat(null !== (n = null == a ? void 0 : a.key) && void 0 !== n ? n : '').startsWith('game') && l.startsWith('rich-presence');
+            A.push((0, i.jsx)(f.Z.Separator, { inset: s }, 'sep-'.concat(l))), A.push(e);
         };
     for (let { activity: e } of (S.length > 0 &&
         S.forEach((e) => {
-            let { members: t, channel: r, guild: l } = e;
+            let { members: t, channel: r, guild: a } = e;
             Z(
                 (0, i.jsx)(
                     f.Z.VoiceSection,
                     {
-                        guild: l,
+                        guild: a,
                         channel: r,
                         members: t,
                         partySize: (function (e, t) {
@@ -64,7 +64,7 @@ function C(e) {
                         })(t),
                         onChannelContextMenu: n,
                         onGuildClick: () => {
-                            (0, m.X)(l.id);
+                            (0, m.X)(a.id);
                         }
                     },
                     'voice-'.concat(r.id)
@@ -83,17 +83,17 @@ function C(e) {
         x.length > 0 &&
             v &&
             x.forEach((e) => {
-                let { stream: t, streamUser: n, activity: a } = e;
+                let { stream: t, streamUser: n, activity: l } = e;
                 Z(
                     (0, i.jsx)(
                         f.Z.ApplicationStreamingSection,
                         {
                             guildId: null == b ? void 0 : b.id,
                             user: n,
-                            activity: a,
+                            activity: l,
                             applicationStream: t,
                             onPreviewClick: () => {
-                                r.default.selectVoiceChannel(t.channelId), (0, l.iV)(t);
+                                r.default.selectVoiceChannel(t.channelId), (0, a.iV)(t);
                             }
                         },
                         'application-stream-'.concat(t.ownerId)
@@ -101,10 +101,10 @@ function C(e) {
                 );
             }),
         N.forEach((e, t) => {
-            var n, r, l, m, g, _, v, x, A;
+            var n, r, a, m, g, _, v, x, A;
             let { activity: y, game: L, playingMembers: R, activityUser: P } = e;
             if (null == y || null == y.type) return null;
-            if (N.length > 1 && y.type === I.IIU.PLAYING && !(0, a.Z)(y) && null != L)
+            if (N.length > 1 && y.type === I.IIU.PLAYING && !(0, l.Z)(y) && null != L)
                 Z(
                     (0, i.jsx)(
                         f.Z.GameSection,
@@ -123,7 +123,7 @@ function C(e) {
                 );
             else if ((0, s.Z)(y)) {
                 let e = new Set(R.map((e) => e.id)),
-                    t = null === (l = S.find((e) => null != e)) || void 0 === l ? void 0 : l.channel;
+                    t = null === (a = S.find((e) => null != e)) || void 0 === a ? void 0 : a.channel;
                 null != t &&
                     Z(
                         (0, i.jsx)(
@@ -137,7 +137,7 @@ function C(e) {
                             'embedded-activity-'.concat(y.application_id)
                         )
                     );
-            } else if ((null != y.assets || (0, a.Z)(y)) && y.type === I.IIU.PLAYING)
+            } else if ((null != y.assets || (0, l.Z)(y)) && y.type === I.IIU.PLAYING)
                 Z(
                     (0, i.jsx)(
                         f.Z.RichPresenceSection,
@@ -182,7 +182,7 @@ function C(e) {
                               'spotify-'.concat(null !== (_ = y.session_id) && void 0 !== _ ? _ : t, '-').concat(P.id)
                           )
                       )
-                    : (null != y.assets || (0, a.Z)(y)) && y.type === I.IIU.LISTENING
+                    : (null != y.assets || (0, l.Z)(y)) && y.type === I.IIU.LISTENING
                       ? Z(
                             (0, i.jsx)(
                                 f.Z.RichPresenceSection,

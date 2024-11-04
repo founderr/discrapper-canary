@@ -8,9 +8,9 @@ n.d(t, {
 });
 var i,
     r,
-    l = n(200651);
+    a = n(200651);
 n(192379);
-var a = n(990547),
+var l = n(990547),
     s = n(481060),
     o = n(213609),
     c = n(388032),
@@ -21,26 +21,26 @@ let h = (e) => {
     let { errorType: t } = e;
     return (
         (0, o.Z)({
-            type: a.ImpressionTypes.PAGE,
-            name: a.ImpressionNames.ROLE_SUBSCRIPTION_LISTING_UPSELL_ERROR_PAGE,
+            type: l.ImpressionTypes.PAGE,
+            name: l.ImpressionNames.ROLE_SUBSCRIPTION_LISTING_UPSELL_ERROR_PAGE,
             properties: { error_page_type: t }
         }),
-        (0, l.jsx)('div', {
+        (0, a.jsx)('div', {
             className: d.errorPageContainer,
-            children: (0, l.jsxs)('div', {
+            children: (0, a.jsxs)('div', {
                 className: d.errorPageContent,
                 children: [
-                    (0, l.jsx)('img', {
+                    (0, a.jsx)('img', {
                         src: u,
                         alt: '',
                         className: d.errorPageIllo
                     }),
-                    (0, l.jsx)(s.Heading, {
+                    (0, a.jsx)(s.Heading, {
                         variant: 'heading-xl/extrabold',
                         className: d.errorPageTitle,
                         children: 'guild_not_eligible' === t ? c.intl.string(c.t.atZQVV) : c.intl.string(c.t.gAdWBg)
                     }),
-                    (0, l.jsx)(s.Text, {
+                    (0, a.jsx)(s.Text, {
                         variant: 'text-md/normal',
                         className: d.errorPagSubtitle,
                         children: 'guild_not_eligible' === t ? c.intl.string(c.t.teWe5O) : c.intl.string(c.t['X/yMrK'])

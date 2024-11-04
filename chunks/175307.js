@@ -6,28 +6,28 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(780384),
-    l = n(481060),
-    a = n(410030),
+    a = n(481060),
+    l = n(410030),
     s = n(779216);
 function o(e) {
     let { text: t, onClick: n } = e,
-        o = (0, a.ZP)(),
+        o = (0, l.ZP)(),
         c = (0, r.wj)(o);
-    return (0, i.jsxs)(l.Button, {
+    return (0, i.jsxs)(a.Button, {
         size: 'medium',
-        color: c ? l.ButtonColors.TRANSPARENT : l.ButtonColors.WHITE,
+        color: c ? a.ButtonColors.TRANSPARENT : a.ButtonColors.WHITE,
         className: s.button,
         onClick: n,
         innerClassName: s.innerButton,
         children: [
-            (0, i.jsx)(l.Text, {
+            (0, i.jsx)(a.Text, {
                 variant: 'text-sm/semibold',
                 color: 'header-primary',
                 children: t
             }),
-            (0, i.jsx)(l.LinkExternalSmallIcon, {
+            (0, i.jsx)(a.LinkExternalSmallIcon, {
                 size: 'sm',
-                color: l.tokens.colors.HEADER_PRIMARY
+                color: a.tokens.colors.HEADER_PRIMARY
             })
         ]
     });

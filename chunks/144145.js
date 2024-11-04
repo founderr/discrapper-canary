@@ -7,8 +7,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(442837),
-    a = n(481060),
+    a = n(442837),
+    l = n(481060),
     s = n(278323),
     o = n(287734),
     c = n(230711),
@@ -33,14 +33,14 @@ function b(e) {
         n = t.length > 1,
         b = (function (e) {
             let { currentActivities: t } = e,
-                n = (0, l.e7)([f.Z], () => f.Z.getAccounts().some((e) => e.type === d.Z.get(N.ABu.XBOX).type)),
+                n = (0, a.e7)([f.Z], () => f.Z.getAccounts().some((e) => e.type === d.Z.get(N.ABu.XBOX).type)),
                 r = t.some((e) => {
                     let { activity: t } = e;
                     return (0, m.Z)(t);
                 });
             return n || !r
                 ? null
-                : (0, i.jsx)(a.MenuItem, {
+                : (0, i.jsx)(l.MenuItem, {
                       id: 'xbox-connect',
                       action: () => c.Z.open(N.oAB.CONNECTIONS),
                       label: T.intl.formatToPlainString(T.t.XWSHTU, { platform: x })
@@ -49,7 +49,7 @@ function b(e) {
         A = (function (e) {
             let { currentActivities: t } = e,
                 n = r.useContext(C.AnalyticsContext);
-            return (0, l.Wu)(
+            return (0, a.Wu)(
                 [p.ZP, E.Z, g.Z, I.Z, _.Z],
                 () =>
                     t
@@ -84,32 +84,32 @@ function b(e) {
             null != t.type &&
             Z.push(
                 (function (e, t) {
-                    let { canJoin: n, activity: r, activityUser: l } = e;
+                    let { canJoin: n, activity: r, activityUser: a } = e;
                     if (!n || null == r) return null;
                     async function c() {
                         if (null == r) return;
                         let e = await s.Z.sendActivityInviteUser({
                             type: N.mFx.JOIN_REQUEST,
-                            userId: l.id,
+                            userId: a.id,
                             activity: r,
                             location: N.Sbl.PROFILE_POPOUT
                         });
                         null != e && o.default.selectPrivateChannel(e.id);
                     }
-                    return (0, i.jsx)(a.MenuItem, {
+                    return (0, i.jsx)(l.MenuItem, {
                         id: 'join-'.concat(r.session_id),
-                        label: t ? T.intl.formatToPlainString(T.t.wFAvxM, { name: l.toString() }) : T.intl.string(T.t.OKsSCQ),
+                        label: t ? T.intl.formatToPlainString(T.t.wFAvxM, { name: a.toString() }) : T.intl.string(T.t.OKsSCQ),
                         action: c
                     });
                 })(e, n),
                 (function (e, t) {
-                    let { activity: n, game: r, libraryApplication: l, location: s, canPlay: o, isRunning: c, isLaunching: d } = e;
+                    let { activity: n, game: r, libraryApplication: a, location: s, canPlay: o, isRunning: c, isLaunching: d } = e;
                     if (!o || null == n) return null;
                     let u = c ? T.intl.formatToPlainString(T.t['gBme//'], { name: r.name }) : d ? T.intl.formatToPlainString(T.t.WtSQwM, { name: r.name }) : void 0;
-                    return (0, i.jsx)(a.MenuItem, {
+                    return (0, i.jsx)(l.MenuItem, {
                         id: 'play-'.concat(n.session_id),
                         action: function () {
-                            (0, S.playApplication)(r.id, l, {
+                            (0, S.playApplication)(r.id, a, {
                                 analyticsParams: {
                                     location: {
                                         ...s,

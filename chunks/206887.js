@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     s = n(481060),
     o = n(951394),
     c = n(455839),
@@ -10,11 +10,11 @@ var i = n(200651),
     u = n(271183);
 t.Z = function (e) {
     let { guild: t, className: n } = e,
-        [l, h] = r.useState(!1),
+        [a, h] = r.useState(!1),
         m = r.useCallback(() => h(!0), [h]),
         p = r.useCallback(() => h(!0), [h]);
     return (0, i.jsx)('div', {
-        className: a()(u.actionButtonsContainer, n, { [u.forceButtonsShow]: l }),
+        className: l()(u.actionButtonsContainer, n, { [u.forceButtonsShow]: a }),
         children: (0, i.jsx)(o.ZP, {
             children: (0, i.jsx)(c.GuildDiscoveryMenuPopout, {
                 onRequestOpen: m,
@@ -26,10 +26,10 @@ t.Z = function (e) {
                         text: d.intl.string(d.t.UKOtz8),
                         hideOnClick: !0,
                         children: (e) => {
-                            let { onClick: r, ...l } = e;
+                            let { onClick: r, ...a } = e;
                             return (0, i.jsx)(o.zx, {
                                 ...n,
-                                ...l,
+                                ...a,
                                 onClick: (e) => {
                                     e.stopPropagation(), null == r || r(), t(e);
                                 },

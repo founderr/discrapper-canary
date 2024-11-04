@@ -29,7 +29,7 @@ var i = n(200651),
     y = n(37091),
     T = n(6572),
     b = n(352978),
-    A = n(535400),
+    A = n(936847),
     N = n(512384),
     w = n(6242),
     P = n(757692),
@@ -136,14 +136,14 @@ let ed = l.memo((e) => {
             location: 'VoiceUsers'
         }),
         { showGameIcon: e7 } = x.ZP.useExperiment({ location: 'voice_users' }, { autoTrackExposure: !1 }),
-        e4 = e7 || e3,
-        { hangStatusActivity: e8, gameActivity: e6 } = (0, o.cj)(
+        e8 = e7 || e3,
+        { hangStatusActivity: e4, gameActivity: e6 } = (0, o.cj)(
             [z.Z],
             () => ({
                 hangStatusActivity: e3 && null != eU ? z.Z.findActivity(eU, (e) => e.type === ea.IIU.HANG_STATUS) : null,
-                gameActivity: e4 && null != eU ? z.Z.findActivity(eU, (e) => null != e.application_id && e.type === ea.IIU.PLAYING) : null
+                gameActivity: e8 && null != eU ? z.Z.findActivity(eU, (e) => null != e.application_id && e.type === ea.IIU.PLAYING) : null
             }),
-            [e3, eU, e4]
+            [e3, eU, e8]
         ),
         e5 = (0, o.e7)([G.Z], () => ((null == e6 ? void 0 : e6.application_id) != null ? G.Z.getDetectableGame(e6.application_id) : null)),
         te = (0, o.e7)([p.Z], () => (null != e5 && (null == e6 ? void 0 : e6.application_id) != null ? p.Z.getApplication(null == e6 ? void 0 : e6.application_id) : void 0)),
@@ -283,7 +283,7 @@ let ed = l.memo((e) => {
                 eL(!1);
             },
             children: [
-                tr && C.type === er.fO.STREAM && (0, i.jsx)(I.Z, {}),
+                tr && C.type === er.fO.STREAM && (0, i.jsx)(I.Z, { baseTileRef: tI.current }),
                 (0, i.jsxs)(N.Z, {
                     shakeLocation: es.oZ.VOICE_USER,
                     isShaking: eH,
@@ -371,7 +371,7 @@ let ed = l.memo((e) => {
                                               onContextMenu: tp,
                                               onToggleMute: tu,
                                               participantUserId: eU,
-                                              hangStatusActivity: e8,
+                                              hangStatusActivity: e4,
                                               application: te,
                                               speaking: eH,
                                               secureFramesVerified: ti

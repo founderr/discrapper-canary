@@ -12,8 +12,8 @@ n.d(t, {
     n(47120);
 var i,
     r,
-    l = n(200651),
-    a = n(192379),
+    a = n(200651),
+    l = n(192379),
     s = n(120356),
     o = n.n(s),
     c = n(442837),
@@ -49,33 +49,33 @@ var i,
     U = n(981631),
     G = n(388032),
     B = n(257956);
-let H = a.memo(function (e) {
-    let { heading: t, location: n, locationIcon: i, details: r, detailsIcon: a, topic: s, onClickCloseIcon: c, onClickTopicText: u, children: h } = e,
-        m = (0, l.jsx)(d.Text, {
+let H = l.memo(function (e) {
+    let { heading: t, location: n, locationIcon: i, details: r, detailsIcon: l, topic: s, onClickCloseIcon: c, onClickTopicText: u, children: h } = e,
+        m = (0, a.jsx)(d.Text, {
             color: 'header-primary',
             variant: 'text-md/semibold',
             className: B.eventName,
             children: s
         });
-    return (0, l.jsxs)('div', {
+    return (0, a.jsxs)('div', {
         className: B.channelNotice,
         children: [
-            (0, l.jsxs)('div', {
+            (0, a.jsxs)('div', {
                 className: o()(B.textBlock, B.singleLine),
                 children: [
-                    (0, l.jsx)('div', { className: B.liveIndicator }),
-                    (0, l.jsx)(d.Text, {
+                    (0, a.jsx)('div', { className: B.liveIndicator }),
+                    (0, a.jsx)(d.Text, {
                         color: 'text-positive',
                         variant: 'text-xs/bold',
                         className: B.liveNowText,
                         children: t
                     }),
                     null != c &&
-                        (0, l.jsx)(d.Clickable, {
+                        (0, a.jsx)(d.Clickable, {
                             onClick: c,
                             className: B.closeIcon,
                             'aria-label': G.intl.string(G.t.cpT0Cg),
-                            children: (0, l.jsx)(d.XSmallIcon, {
+                            children: (0, a.jsx)(d.XSmallIcon, {
                                 size: 'xs',
                                 color: 'currentColor'
                             })
@@ -84,35 +84,35 @@ let H = a.memo(function (e) {
             }),
             null == u
                 ? m
-                : (0, l.jsx)(d.Button, {
+                : (0, a.jsx)(d.Button, {
                       size: d.Button.Sizes.MIN,
                       look: d.Button.Looks.LINK,
                       color: d.Button.Colors.PRIMARY,
                       onClick: u,
                       children: m
                   }),
-            (0, l.jsxs)('div', {
+            (0, a.jsxs)('div', {
                 className: o()(B.textBlock, B.singleLine),
                 children: [
                     i,
-                    (0, l.jsx)(d.Text, {
+                    (0, a.jsx)(d.Text, {
                         color: 'header-secondary',
                         variant: 'text-xs/normal',
                         className: B.channelName,
                         children: n
                     }),
                     null != r &&
-                        null != a &&
-                        (0, l.jsxs)(l.Fragment, {
+                        null != l &&
+                        (0, a.jsxs)(a.Fragment, {
                             children: [
-                                (0, l.jsx)(d.Text, {
+                                (0, a.jsx)(d.Text, {
                                     className: B.dotDivider,
                                     color: 'header-secondary',
                                     variant: 'text-xs/normal',
                                     children: '\u2022'
                                 }),
-                                a,
-                                (0, l.jsx)(d.Text, {
+                                l,
+                                (0, a.jsx)(d.Text, {
                                     color: 'header-secondary',
                                     variant: 'text-xs/normal',
                                     children: r
@@ -137,20 +137,20 @@ function V(e) {
             [n]
         ),
         r = (0, h.KS)(n);
-    return (0, l.jsx)(H, {
+    return (0, a.jsx)(H, {
         onClickCloseIcon: () => (0, Z.ji)({ eventId: null == t ? void 0 : t.id }),
         heading: G.intl.string(G.t['X2K3//']),
         topic: t.name,
         location: n.name,
         locationIcon:
             null != r
-                ? (0, l.jsx)(r, {
+                ? (0, a.jsx)(r, {
                       size: 'xs',
                       color: 'currentColor',
                       className: B.stageIcon
                   })
                 : null,
-        children: (0, l.jsx)(X, {
+        children: (0, a.jsx)(X, {
             channel: n,
             speakers: i,
             voiceType: 1
@@ -161,10 +161,10 @@ function F(e) {
     let { guildEvent: t, noticeType: n } = e,
         i = (0, M.DK)(t),
         r = (0, c.e7)([A.ZP], () => A.ZP.isInterestedInEventRecurrence(t.id, i), [t.id, i]),
-        a = (0, c.e7)([L.Z], () => L.Z.getUpcomingNoticeSeenTime(t.id), [t.id]);
+        l = (0, c.e7)([L.Z], () => L.Z.getUpcomingNoticeSeenTime(t.id), [t.id]);
     return (
-        !r && null == a && (0, Z._6)(t.id),
-        (0, l.jsxs)(d.Button, {
+        !r && null == l && (0, Z._6)(t.id),
+        (0, a.jsxs)(d.Button, {
             fullWidth: !0,
             className: B.joinButton,
             innerClassName: B.rsvpButton,
@@ -180,14 +180,14 @@ function F(e) {
             size: d.Button.Sizes.SMALL,
             children: [
                 r
-                    ? (0, l.jsx)(d.CheckmarkLargeIcon, {
+                    ? (0, a.jsx)(d.CheckmarkLargeIcon, {
                           size: 'custom',
                           color: 'currentColor',
                           width: 16,
                           height: 16,
                           className: B.buttonIcon
                       })
-                    : (0, l.jsx)(d.BellIcon, {
+                    : (0, a.jsx)(d.BellIcon, {
                           size: 'custom',
                           color: 'currentColor',
                           width: 16,
@@ -210,29 +210,29 @@ function z(e) {
         { startDateTimeString: g, upcomingEvent: f, diffMinutes: _ } = (0, M.ub)(m.toISOString(), null == p ? void 0 : p.toISOString()),
         E = f ? (_ > 0 ? G.intl.formatToPlainString(G.t.PQlCWl, { minutes: _ }) : G.intl.string(G.t.WINqKS)) : G.intl.formatToPlainString(G.t.DC6h3N, { date: g });
     return (
-        a.useEffect(() => {
+        l.useEffect(() => {
             T.default.track(U.rMx.CHANNEL_NOTICE_VIEWED, {
                 notice_type: i,
                 guild_id: n.guild_id
             });
         }, [n, i]),
-        (0, l.jsxs)('div', {
+        (0, a.jsxs)('div', {
             className: B.channelNotice,
             children: [
-                (0, l.jsxs)('div', {
+                (0, a.jsxs)('div', {
                     className: B.textBlock,
                     children: [
-                        (0, l.jsx)(d.Clickable, {
+                        (0, a.jsx)(d.Clickable, {
                             onClick: () => (0, b.bO)({ eventId: n.id }),
                             className: B.eventNameClickable,
-                            children: (0, l.jsx)(d.Text, {
+                            children: (0, a.jsx)(d.Text, {
                                 color: 'header-primary',
                                 variant: 'text-md/semibold',
                                 className: B.eventName,
                                 children: n.name
                             })
                         }),
-                        (0, l.jsx)(d.Clickable, {
+                        (0, a.jsx)(d.Clickable, {
                             onClick: () => {
                                 T.default.track(U.rMx.CHANNEL_NOTICE_CLOSED, {
                                     notice_type: i,
@@ -242,24 +242,24 @@ function z(e) {
                             },
                             className: B.closeIcon,
                             'aria-label': G.intl.string(G.t.cpT0Cg),
-                            children: (0, l.jsx)(d.XSmallIcon, {
+                            children: (0, a.jsx)(d.XSmallIcon, {
                                 size: 'xs',
                                 color: 'currentColor'
                             })
                         })
                     ]
                 }),
-                (0, l.jsxs)('div', {
+                (0, a.jsxs)('div', {
                     className: o()(B.textBlock, B.singleLine),
                     children: [
-                        (0, l.jsx)(d.CalendarIcon, {
+                        (0, a.jsx)(d.CalendarIcon, {
                             size: 'custom',
                             color: 'currentColor',
                             className: B.stageIcon,
                             width: 16,
                             height: 16
                         }),
-                        (0, l.jsx)(d.Text, {
+                        (0, a.jsx)(d.Text, {
                             color: 'header-secondary',
                             variant: 'text-xs/normal',
                             className: B.startTime,
@@ -267,23 +267,23 @@ function z(e) {
                         })
                     ]
                 }),
-                (0, l.jsxs)('div', {
+                (0, a.jsxs)('div', {
                     className: o()(B.textBlock, B.singleLine),
                     children: [
                         null != u
-                            ? (0, l.jsx)(u, {
+                            ? (0, a.jsx)(u, {
                                   size: 'xs',
                                   color: 'currentColor',
                                   className: B.stageIcon
                               })
-                            : (0, l.jsx)(d.LocationIcon, {
+                            : (0, a.jsx)(d.LocationIcon, {
                                   size: 'custom',
                                   color: 'currentColor',
                                   width: 16,
                                   height: 16,
                                   className: B.stageIcon
                               }),
-                        (0, l.jsx)(d.Text, {
+                        (0, a.jsx)(d.Text, {
                             color: 'header-secondary',
                             variant: 'text-xs/normal',
                             className: B.channelName,
@@ -291,7 +291,7 @@ function z(e) {
                         })
                     ]
                 }),
-                (0, l.jsx)(F, {
+                (0, a.jsx)(F, {
                     guildEvent: n,
                     noticeType: i
                 })
@@ -304,27 +304,27 @@ function Y(e) {
         n = (0, D.cS)(t);
     return null == n
         ? null
-        : (0, l.jsx)(H, {
+        : (0, a.jsx)(H, {
               onClickCloseIcon: () => (0, Z.ji)({ eventId: null == t ? void 0 : t.id }),
               heading: G.intl.string(G.t['1+boPj']),
               topic: t.name,
               location: (0, R.m)(n, !0),
-              locationIcon: (0, l.jsx)(d.LocationIcon, {
+              locationIcon: (0, a.jsx)(d.LocationIcon, {
                   size: 'custom',
                   color: 'currentColor',
                   width: 16,
                   height: 16,
                   className: B.stageIcon
               }),
-              children: (0, l.jsx)(W, { guildEvent: t })
+              children: (0, a.jsx)(W, { guildEvent: t })
           });
 }
 function W(e) {
     let { guildEvent: t } = e,
-        n = a.useCallback(() => {
+        n = l.useCallback(() => {
             (0, b.bO)({ eventId: t.id });
         }, [t]);
-    return (0, l.jsx)(d.Button, {
+    return (0, a.jsx)(d.Button, {
         fullWidth: !0,
         className: B.joinButton,
         onClick: n,
@@ -335,7 +335,7 @@ function W(e) {
 }
 function K(e) {
     let { channel: t, label: n } = e;
-    return (0, l.jsx)(d.Button, {
+    return (0, a.jsx)(d.Button, {
         fullWidth: !0,
         className: B.joinButton,
         onClick: () => {
@@ -350,20 +350,20 @@ function q(e) {
     let { stageInstance: t, channel: n } = e,
         i = (0, c.Wu)([_.Z], () => [...new Set(_.Z.getMutableParticipants(n.id, E.pV.SPEAKER).map((e) => e.user))], [n.id]),
         r = (0, c.e7)([_.Z], () => _.Z.getParticipantCount(n.id, E.pV.AUDIENCE), [n.id]),
-        a = G.intl.formatToPlainString(G.t['+v2pNz'], { count: ''.concat(r) });
-    return (0, l.jsx)(H, {
+        l = G.intl.formatToPlainString(G.t['+v2pNz'], { count: ''.concat(r) });
+    return (0, a.jsx)(H, {
         onClickCloseIcon: () => (0, Z.ji)({ stageId: null == t ? void 0 : t.id }),
         heading: G.intl.string(G.t['X2K3//']),
         location: n.name,
-        details: a,
-        detailsIcon: (0, l.jsx)(d.HeadphonesIcon, {
+        details: l,
+        detailsIcon: (0, a.jsx)(d.HeadphonesIcon, {
             size: 'custom',
             color: 'currentColor',
             width: 14,
             height: 14,
             className: B.stageIcon
         }),
-        locationIcon: (0, l.jsx)(d.StageIcon, {
+        locationIcon: (0, a.jsx)(d.StageIcon, {
             size: 'custom',
             color: 'currentColor',
             width: 16,
@@ -371,7 +371,7 @@ function q(e) {
             className: B.stageIcon
         }),
         topic: t.topic,
-        children: (0, l.jsx)(X, {
+        children: (0, a.jsx)(X, {
             channel: n,
             speakers: i,
             voiceType: 2
@@ -381,7 +381,7 @@ function q(e) {
 function X(e) {
     let { channel: t, speakers: n, voiceType: i } = e,
         r = t.getGuildId(),
-        s = a.useMemo(() => n.slice(0, 3), [n]),
+        s = l.useMemo(() => n.slice(0, 3), [n]),
         h = (0, c.e7)([S.Z], () => S.Z.can(U.Plq.CONNECT, t)),
         m = (0, v.Z)(t.id),
         p = G.intl.string(G.t.VJlc0d);
@@ -400,19 +400,19 @@ function X(e) {
     }
     return null == r
         ? null
-        : (0, l.jsxs)(l.Fragment, {
+        : (0, a.jsxs)(a.Fragment, {
               children: [
                   s.length > 0
-                      ? (0, l.jsxs)('div', {
+                      ? (0, a.jsxs)('div', {
                             className: o()(B.textBlock, B.singleLine),
                             children: [
-                                (0, l.jsx)(u.Z, {
+                                (0, a.jsx)(u.Z, {
                                     guildId: r,
                                     users: s,
                                     showUserPopout: !0,
                                     size: u.u.SIZE_16
                                 }),
-                                (0, l.jsx)(d.Text, {
+                                (0, a.jsx)(d.Text, {
                                     color: 'header-secondary',
                                     variant: 'text-xs/normal',
                                     className: B.userNames,
@@ -423,7 +423,7 @@ function X(e) {
                       : null,
                   h &&
                       null == m &&
-                      (0, l.jsx)(K, {
+                      (0, a.jsx)(K, {
                           channel: t,
                           label: p
                       })
@@ -433,12 +433,12 @@ function X(e) {
 ((r = i || (i = {}))[(r.VOICE = 1)] = 'VOICE'),
     (r[(r.STAGE = 2)] = 'STAGE'),
     (r[(r.STUDY_ROOM = 3)] = 'STUDY_ROOM'),
-    (t.ZP = a.memo(function (e) {
+    (t.ZP = l.memo(function (e) {
         let { guild: t } = e,
             { showRedesignedLiveChannelNotice: n } = (0, m.o)(!0),
             i = (0, P.y)(t.id),
             r = (0, j.k5)(t.id),
-            a = (0, j.Vm)(t.id),
+            l = (0, j.Vm)(t.id),
             s = (0, c.e7)([C.Z], () => C.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]),
             { isStageNoticeHidden: o, isEventNoticeHidden: d } = (0, c.cj)(
                 [y.Z],
@@ -450,30 +450,30 @@ function X(e) {
             ),
             u = null,
             h = null != s && null != i && !o;
-        if (n) return (0, l.jsx)(p.Z, { guild: t });
+        if (n) return (0, a.jsx)(p.Z, { guild: t });
         null == r || d
             ? h &&
-              (u = (0, l.jsx)(q, {
+              (u = (0, a.jsx)(q, {
                   stageInstance: s,
                   channel: i
               }))
             : r.entity_type === k.WX.STAGE_INSTANCE && h
-              ? (u = (0, l.jsx)(q, {
+              ? (u = (0, a.jsx)(q, {
                     stageInstance: s,
                     channel: i
                 }))
               : r.entity_type === k.WX.EXTERNAL
-                ? (u = (0, l.jsx)(Y, { guildEvent: r }))
+                ? (u = (0, a.jsx)(Y, { guildEvent: r }))
                 : r.entity_type === k.WX.VOICE &&
                   null != i &&
-                  (u = (0, l.jsx)(V, {
+                  (u = (0, a.jsx)(V, {
                       guildEvent: r,
                       channel: i
                   }));
         let g = t.hasFeature(U.oNc.COMMUNITY) || t.hasFeature(U.oNc.HUB);
-        if (null == u && null != a && !g) {
-            let { upcomingEvent: e, noticeType: t } = a;
-            u = (0, l.jsx)(z, {
+        if (null == u && null != l && !g) {
+            let { upcomingEvent: e, noticeType: t } = l;
+            u = (0, a.jsx)(z, {
                 guildEvent: e,
                 noticeType: t
             });

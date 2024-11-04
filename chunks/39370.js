@@ -6,14 +6,14 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(704215),
-    l = n(765585),
-    a = n(300284),
+    a = n(765585),
+    l = n(300284),
     s = n(526761),
     o = n(388032),
     c = n(734491);
 function d() {
-    let e = (0, a.Z)({ scrollPosition: s.Y_.TRY_IT_OUT });
-    return (0, i.jsx)(l.Z, {
+    let e = (0, l.Z)({ scrollPosition: s.Y_.TRY_IT_OUT });
+    return (0, i.jsx)(a.Z, {
         isPremiumFeature: !0,
         shouldUseHorizontalButtons: !0,
         inlineArt: !0,

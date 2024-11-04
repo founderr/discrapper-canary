@@ -1,12 +1,12 @@
 n.d(t, {
     b: function () {
-        return a;
+        return l;
     }
 });
 var i = n(594174),
     r = n(709054);
-let l = new Date('06/16/2020');
-function a() {
+let a = new Date('06/16/2020');
+function l() {
     let e = i.default.getCurrentUser();
-    return null != e && r.default.extractTimestamp(e.id) > l.getTime() && !e.isClaimed() && null == e.nsfwAllowed;
+    return null != e && r.default.extractTimestamp(e.id) > a.getTime() && !e.isClaimed() && null == e.nsfwAllowed;
 }
