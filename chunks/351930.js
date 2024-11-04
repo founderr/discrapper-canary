@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return T;
     }
 }),
     n(47120);
@@ -13,103 +13,98 @@ var r = n(200651),
     s = n(481060),
     d = n(355467),
     u = n(78839),
-    h = n(709054),
-    m = n(246992),
-    x = n(981631),
-    f = n(219299),
-    p = n(423705);
-let g = [
+    h = n(259580),
+    m = n(709054),
+    x = n(246992),
+    f = n(981631),
+    p = n(474936),
+    g = n(219299),
+    b = n(595058),
+    v = n(423705);
+let j = [
         {
             label: 'Nitro Monthly',
-            value: '511651880837840896'
+            value: p.Xh.PREMIUM_MONTH_TIER_2
         },
         {
             label: 'Nitro Yearly',
-            value: '511651885459963904'
+            value: p.Xh.PREMIUM_YEAR_TIER_2
         },
         {
             label: 'Nitro Classic Monthly',
-            value: '511651871736201216'
+            value: p.Xh.PREMIUM_MONTH_TIER_1
         },
         {
             label: 'Nitro Classic Yearly',
-            value: '511651876987469824'
+            value: p.Xh.PREMIUM_YEAR_TIER_1
         },
         {
             label: 'Basic Monthly',
-            value: '978380692553465866'
+            value: p.Xh.PREMIUM_MONTH_TIER_0
         },
         {
             label: 'Basic Yearly',
-            value: '1024422698568122368'
+            value: p.Xh.PREMIUM_YEAR_TIER_0
         },
         {
             label: 'Reverse Trial 1-week',
-            value: '1267968635301789696'
+            value: p.dO
         },
         {
             label: 'Reverse Trial 2-week',
-            value: '1267969164312576000'
+            value: p.xT
         }
     ],
-    b = {
-        [x.O0b.UNPAID]: 'Unpaid',
-        [x.O0b.ACTIVE]: 'Active',
-        [x.O0b.PAST_DUE]: 'Past Due',
-        [x.O0b.CANCELED]: 'Canceled',
-        [x.O0b.ENDED]: 'Ended',
-        [x.O0b.ACCOUNT_HOLD]: 'Account Hold',
-        [x.O0b.BILLING_RETRY]: 'Billing Retry',
-        [x.O0b.PAUSED]: 'Paused',
-        [x.O0b.PAUSE_PENDING]: 'Pause Pending'
+    _ = {
+        [f.O0b.UNPAID]: 'Unpaid',
+        [f.O0b.ACTIVE]: 'Active',
+        [f.O0b.PAST_DUE]: 'Past Due',
+        [f.O0b.CANCELED]: 'Canceled',
+        [f.O0b.ENDED]: 'Ended',
+        [f.O0b.ACCOUNT_HOLD]: 'Account Hold',
+        [f.O0b.BILLING_RETRY]: 'Billing Retry',
+        [f.O0b.PAUSED]: 'Paused',
+        [f.O0b.PAUSE_PENDING]: 'Pause Pending'
     },
-    v = [
+    C = [
         {
             label: 'Unpaid',
-            value: x.O0b.UNPAID
+            value: f.O0b.UNPAID
         },
         {
             label: 'Active',
-            value: x.O0b.ACTIVE
+            value: f.O0b.ACTIVE
         },
         {
             label: 'Past Due',
-            value: x.O0b.PAST_DUE
+            value: f.O0b.PAST_DUE
         },
         {
             label: 'Canceled',
-            value: x.O0b.CANCELED
+            value: f.O0b.CANCELED
         },
         {
             label: 'Ended',
-            value: x.O0b.ENDED
+            value: f.O0b.ENDED
         },
         {
             label: 'Account Hold',
-            value: x.O0b.ACCOUNT_HOLD
+            value: f.O0b.ACCOUNT_HOLD
         },
         {
             label: 'Billing Retry',
-            value: x.O0b.BILLING_RETRY
+            value: f.O0b.BILLING_RETRY
         },
         {
             label: 'Paused',
-            value: x.O0b.PAUSED
+            value: f.O0b.PAUSED
         },
         {
             label: 'Pause Pending',
-            value: x.O0b.PAUSE_PENDING
+            value: f.O0b.PAUSE_PENDING
         }
-    ],
-    j = {
-        '511651880837840896': 'Nitro Monthly',
-        '511651885459963904': 'Nitro Yearly',
-        '511651871736201216': 'Nitro Classic Monthly',
-        '511651876987469824': 'Nitro Classic Yearly',
-        '978380692553465866': 'Basic Monthly',
-        '1024422698568122368': 'Basic Yearly'
-    };
-function C() {
+    ];
+function T() {
     let [e, t] = a.useState('511651880837840896'),
         n = (0, o.e7)([u.ZP], () => u.ZP.getPremiumSubscription()),
         l = async () => {
@@ -123,9 +118,9 @@ function C() {
             await c.tn.del('/debug/subscription'), await (0, d.jg)();
         };
     return (0, r.jsx)(s.ScrollerThin, {
-        className: i()(f.panel),
+        className: i()(g.panel),
         children: (0, r.jsxs)('div', {
-            className: p.panelInner,
+            className: v.panelInner,
             children: [
                 (0, r.jsx)(s.Text, {
                     style: { marginBottom: '16px' },
@@ -133,7 +128,7 @@ function C() {
                     children: 'Manage Subscription'
                 }),
                 (0, r.jsxs)('section', {
-                    className: p.buttons,
+                    className: v.buttons,
                     children: [
                         null == n &&
                             (0, r.jsxs)(r.Fragment, {
@@ -145,9 +140,9 @@ function C() {
                                     (0, r.jsx)(s.Select, {
                                         serialize: (e) => e,
                                         isSelected: (t) => t === e,
-                                        options: g,
+                                        options: j,
                                         select: t,
-                                        popoutLayerContext: m.O$
+                                        popoutLayerContext: x.O$
                                     }),
                                     (0, r.jsx)(s.Button, {
                                         size: s.Button.Sizes.SMALL,
@@ -163,25 +158,27 @@ function C() {
                         })
                     ]
                 }),
-                null != n && (0, r.jsx)(_, { subscription: n })
+                null != n && (0, r.jsx)(S, { subscription: n })
             ]
         })
     });
 }
-function _(e) {
+function S(e) {
     var t;
     let { subscription: n } = e,
-        a = (e) => ((null == e && (e = n.status), e in b) ? b[e] : 'Unknown status '.concat(e)),
-        l = async (e) => {
+        [l, o] = a.useState(!1),
+        [u, f] = a.useState(!1),
+        g = (e) => ((null == e && (e = n.status), e in _) ? _[e] : 'Unknown status '.concat(e)),
+        j = async (e) => {
             await c.tn.patch({
                 url: '/debug/subscription',
                 body: { subscription_status: e }
             }),
                 await (0, d.jg)();
         },
-        o = async (e) => {
+        T = async (e) => {
             let t = new Date(e),
-                r = h.default.fromTimestamp(t.getTime());
+                r = m.default.fromTimestamp(t.getTime());
             await c.tn.patch({
                 url: '/debug/subscription',
                 body: {
@@ -191,12 +188,7 @@ function _(e) {
             }),
                 await (0, d.jg)();
         },
-        u =
-            n.planIdFromItems in
-            {
-                '978380692553465866': !0,
-                '1024422698568122368': !0
-            };
+        S = p.GP[n.planIdFromItems].premiumType === p.p9.TIER_0;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.Text, {
@@ -205,44 +197,119 @@ function _(e) {
                 children: 'Existing Subscription'
             }),
             (0, r.jsxs)('div', {
-                className: i()(p.card, u ? p.gradientWrapperTier0 : p.gradientWrapperTier2),
+                className: i()(v.card, S ? v.gradientWrapperTier0 : v.gradientWrapperTier2),
                 children: [
                     (0, r.jsxs)(s.Text, {
                         variant: 'text-md/normal',
                         children: [
-                            ' Subscription Type: ',
+                            'Type: ',
                             (() => {
                                 let e = n.planIdFromItems;
-                                return null == e ? 'No plan id' : e in j ? j[e] : 'Unknown plan id '.concat(e);
+                                return null == e ? 'No plan id' : e in p.GP ? p.GP[e].name : 'Unknown plan id '.concat(e);
                             })(),
                             ' '
                         ]
                     }),
                     (0, r.jsxs)(s.Text, {
                         variant: 'text-md/normal',
-                        children: [' Subscription ID ', n.id, ' ']
+                        children: ['ID: ', n.id, ' ']
                     }),
                     (0, r.jsxs)(s.Text, {
                         style: { marginBottom: '15px' },
                         variant: 'text-md/normal',
-                        children: ['Subscription Status: ', a()]
+                        children: ['Status: ', g()]
                     }),
-                    (0, r.jsx)(s.Select, {
-                        serialize: (e) => a(e),
-                        isSelected: (e) => e === n.status,
-                        options: v,
-                        select: l,
-                        popoutLayerContext: m.O$
-                    }),
-                    (0, r.jsx)(s.FormSection, {
-                        title: 'Override Premium Streak Start Date',
-                        tag: s.FormTitleTags.H3,
-                        className: f.premiumStreakOverride,
-                        children: (0, r.jsx)('input', {
-                            type: 'date',
-                            value: null === (t = n.premiumSince) || void 0 === t ? void 0 : t.toISOString().substring(0, 10),
-                            onChange: (e) => o(e.target.value)
-                        })
+                    null != n.metadata &&
+                        (0, r.jsxs)('div', {
+                            className: b.collapsablePane,
+                            children: [
+                                (0, r.jsxs)(s.Clickable, {
+                                    onClick: () => {
+                                        o(!l);
+                                    },
+                                    className: b.collapsablePaneHeader,
+                                    children: [
+                                        (0, r.jsx)('div', {
+                                            children: (0, r.jsx)(s.Text, {
+                                                variant: 'text-md/bold',
+                                                children: 'Metadata'
+                                            })
+                                        }),
+                                        (0, r.jsx)(h.Z, { direction: l ? h.Z.Directions.UP : h.Z.Directions.DOWN })
+                                    ]
+                                }),
+                                l &&
+                                    (0, r.jsx)('ul', {
+                                        style: { marginBottom: '15px' },
+                                        children: Object.entries(n.metadata).map((e) => {
+                                            let [t, n] = e;
+                                            return (0, r.jsxs)(
+                                                'li',
+                                                {
+                                                    style: { margin: '8px 0' },
+                                                    children: [
+                                                        (0, r.jsx)(s.Text, {
+                                                            variant: 'text-md/bold',
+                                                            children: t
+                                                        }),
+                                                        (0, r.jsx)(s.Text, {
+                                                            variant: 'text-sm/normal',
+                                                            children: n
+                                                        })
+                                                    ]
+                                                },
+                                                t
+                                            );
+                                        })
+                                    })
+                            ]
+                        }),
+                    (0, r.jsxs)('div', {
+                        className: b.collapsablePane,
+                        children: [
+                            (0, r.jsxs)(s.Clickable, {
+                                onClick: () => {
+                                    f(!u);
+                                },
+                                className: b.collapsablePaneHeader,
+                                children: [
+                                    (0, r.jsx)('div', {
+                                        children: (0, r.jsx)(s.Text, {
+                                            variant: 'text-md/bold',
+                                            children: 'Modifications'
+                                        })
+                                    }),
+                                    (0, r.jsx)(h.Z, { direction: u ? h.Z.Directions.UP : h.Z.Directions.DOWN })
+                                ]
+                            }),
+                            u &&
+                                (0, r.jsxs)(r.Fragment, {
+                                    children: [
+                                        (0, r.jsx)(s.FormSection, {
+                                            title: 'Status',
+                                            tag: s.FormTitleTags.H3,
+                                            className: b.formSection,
+                                            children: (0, r.jsx)(s.Select, {
+                                                serialize: (e) => g(e),
+                                                isSelected: (e) => e === n.status,
+                                                options: C,
+                                                select: j,
+                                                popoutLayerContext: x.O$
+                                            })
+                                        }),
+                                        (0, r.jsx)(s.FormSection, {
+                                            title: 'Override Premium Streak Start Date',
+                                            tag: s.FormTitleTags.H3,
+                                            className: b.formSection,
+                                            children: (0, r.jsx)('input', {
+                                                type: 'date',
+                                                value: null === (t = n.premiumSince) || void 0 === t ? void 0 : t.toISOString().substring(0, 10),
+                                                onChange: (e) => T(e.target.value)
+                                            })
+                                        })
+                                    ]
+                                })
+                        ]
                     })
                 ]
             })
