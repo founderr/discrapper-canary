@@ -165,13 +165,13 @@ let A = !0,
     y = I.pJs.ONLINE,
     L = new b(),
     R = !0,
-    O = !1;
-function P() {
+    P = !1;
+function O() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     A && (e || (y !== I.pJs.ONLINE && y !== I.pJs.ADD_FRIEND)) && !Z && ((A = !1), (Z = !0), o.Z.fetchRelationships());
 }
 function j() {
-    if (((A = !0), R ? (Z = !1) : P(), (L = L.reset()), O)) return;
+    if (((A = !0), R ? (Z = !1) : O(), (L = L.reset()), P)) return;
     let e = L.getRelationshipCounts();
     y = 0 === e[I.OGo.FRIEND] ? (0 !== e[I.OGo.PENDING_INCOMING] ? I.pJs.PENDING : I.pJs.ADD_FRIEND) : I.pJs.ONLINE;
 }
@@ -202,7 +202,7 @@ v(w, 'displayName', 'FriendsStore'),
             j();
         },
         FRIENDS_SET_SECTION: function (e) {
-            (y = e.section), P();
+            (y = e.section), O();
         },
         CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;
@@ -219,6 +219,6 @@ v(w, 'displayName', 'FriendsStore'),
             return (R = t !== I.cII.FRIENDS), D(), !R;
         },
         FRIENDS_SET_INITIAL_SECTION: function (e) {
-            (y = e.section), (O = !0);
+            (y = e.section), (P = !0);
         }
     }));

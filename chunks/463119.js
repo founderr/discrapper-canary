@@ -74,7 +74,7 @@ let y = (e) => {
             children: (0, i.jsx)(y, {})
         });
     },
-    O = r.memo(function (e) {
+    P = r.memo(function (e) {
         var t;
         let { displayOptions: n, assetId: r, reducedMotion: l = !1 } = e,
             a = null != r ? (0, _.Z)(r, d.AvatarSizes.SIZE_80, !l) : void 0,
@@ -112,12 +112,12 @@ let y = (e) => {
             ]
         });
     }),
-    P = (e) => {
+    O = (e) => {
         var t, n, l, s, u, h, g, f, _, E, I, v;
         let S, N;
         let { selected: T, locationState: x, displayOptions: b } = e,
             R = (0, o.e7)([p.Z], () => p.Z.useReducedMotion),
-            [P, j] = r.useState(0),
+            [O, j] = r.useState(0),
             [D, M] = r.useState(!1),
             w = (0, m.ZP)(),
             k = b.entrypointDecorationAssets,
@@ -134,9 +134,9 @@ let y = (e) => {
             }, []),
             H = b.title();
         return (0, i.jsx)(d.Tooltip, {
-            text: (0, i.jsx)(O, {
+            text: (0, i.jsx)(P, {
                 displayOptions: b,
-                assetId: b.assetIds[P],
+                assetId: b.assetIds[O],
                 reducedMotion: R
             }),
             tooltipClassName: Z.marketingBadgeTooltip,
@@ -221,7 +221,7 @@ let y = (e) => {
                         displayOptions: r
                     });
                 case x.k2.COACHTIP:
-                    return (0, i.jsx)(P, {
+                    return (0, i.jsx)(O, {
                         selected: t,
                         locationState: n,
                         displayOptions: r

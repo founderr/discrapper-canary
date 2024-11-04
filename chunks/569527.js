@@ -31,8 +31,8 @@ function S(e) {
         [A, Z] = r.useState(!0),
         y = r.useRef(A),
         [L, R] = r.useState(0),
-        O = r.useRef(null),
-        { fetchState: P, searchResults: j } = (0, s.cj)([m.Z], () => ({
+        P = r.useRef(null),
+        { fetchState: O, searchResults: j } = (0, s.cj)([m.Z], () => ({
             fetchState: m.Z.getFetchState({
                 query: n,
                 categoryId: N,
@@ -63,7 +63,7 @@ function S(e) {
                 : {};
         }),
         M = (0, c.Z)(j),
-        w = r.useMemo(() => (P === h.M.FETCHING ? M : j), [P, M, j]);
+        w = r.useMemo(() => (O === h.M.FETCHING ? M : j), [O, M, j]);
     r.useEffect(() => {
         T(void 0), b(1);
     }, [n]);
@@ -88,7 +88,7 @@ function S(e) {
             if (null == n) return;
             let i = n.width;
             i < 1024 && y.current ? ((y.current = !1), Z(!1)) : i > 1024 && !y.current && ((y.current = !0), Z(!0));
-            let r = null === (t = O.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
+            let r = null === (t = P.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
             null != r && R(r.width);
         }),
         G = r.useCallback(
@@ -112,7 +112,7 @@ function S(e) {
                 children: (0, i.jsxs)(f.Z, {
                     children: [
                         (0, i.jsx)(g.Z, {
-                            loading: P === h.M.FETCHING,
+                            loading: O === h.M.FETCHING,
                             children: (0, i.jsx)('div', {
                                 ref: U,
                                 children: (0, i.jsx)('div', {
@@ -153,7 +153,7 @@ function S(e) {
             A &&
                 (0, i.jsx)('div', {
                     className: v.sidebar,
-                    ref: O,
+                    ref: P,
                     children: (0, i.jsx)('div', {
                         className: v.sidebarContent,
                         children: (0, i.jsx)(I.Z, {

@@ -3,7 +3,7 @@ n.d(t, {
         return r;
     },
     s: function () {
-        return P;
+        return O;
     }
 }),
     n(47120);
@@ -36,8 +36,8 @@ var i,
     y = n(981631),
     L = n(388032),
     R = n(641388),
-    O = n(882008);
-function P(e) {
+    P = n(882008);
+function O(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'default';
     return e === b.v0.SAVED_GUILDS ? 'saved_guilds' : t;
 }
@@ -67,7 +67,7 @@ function j(e) {
 ((l = i || (i = {})).TOP_PICKS = 'top_picks'), (l.OTHER_GUILDS = 'other_guilds'), (l.PAGINATION = 'pagination'), (l.HEADER_SPACER = 'header_spacer'), ((a = r || (r = {})).DEFAULT = 'default'), (a.GLOBAL_DISCOVERY = 'global_discovery'), (a.SAVED_GUILDS = 'saved_guilds');
 t.ZP = o.memo(function (e) {
     var t, n, i, r, l, a;
-    let { width: c, paddingVertical: v = 16, paddingHorizontal: S = 32, variant: y = 'default', onUpdatePage: P } = e,
+    let { width: c, paddingVertical: v = 16, paddingHorizontal: S = 32, variant: y = 'default', onUpdatePage: O } = e,
         D = o.useMemo(() => Math.max(Math.min(null != c ? c : 1024, 1300) - 2 * S, 0), [c, S]),
         M = o.useMemo(() => {
             if (0 === D) return 1;
@@ -160,9 +160,9 @@ t.ZP = o.memo(function (e) {
                         fromPage: z,
                         toPage: e
                     }),
-                    null == P || P();
+                    null == O || O();
             },
-            [Y, P, z]
+            [Y, O, z]
         ),
         [, ee] = o.useState(new Set()),
         et = o.useMemo(() => new Set(G.games), [G.games]),
@@ -310,7 +310,7 @@ t.ZP = o.memo(function (e) {
                 children: [
                     (0, s.jsx)('img', {
                         alt: '',
-                        src: O,
+                        src: P,
                         className: R.errorImage
                     }),
                     (0, s.jsx)(m.Heading, {

@@ -28,8 +28,8 @@ var i = n(200651),
     y = n(451478),
     L = n(424218),
     R = n(780570),
-    O = n(353042),
-    P = n(86826),
+    P = n(353042),
+    O = n(86826),
     j = n(981631),
     D = n(388032),
     M = n(734744);
@@ -344,7 +344,7 @@ class K extends r.PureComponent {
         });
     }
     renderProgressPatching() {
-        return (0, i.jsx)(O.Z, {
+        return (0, i.jsx)(P.Z, {
             getHistoricalTotalBytes: A.Z.getHistoricalTotalBytesWritten,
             updateInterval: 5000,
             children: this.renderProgressPatchingBody
@@ -528,14 +528,14 @@ class ee extends r.PureComponent {
                       (0, i.jsxs)('div', {
                           className: M.headerRow,
                           children: [
-                              (0, i.jsx)(P.Z, {
+                              (0, i.jsx)(O.Z, {
                                   className: a()(M.headerCell, M.networkProgress),
                                   title: D.intl.string(D.t.ytoXKi),
                                   getHistoricalTotalBytes: A.Z.getHistoricalTotalBytesDownloaded,
                                   color: j.Ilk.GREEN_360,
                                   animate: r
                               }),
-                              (0, i.jsx)(P.Z, {
+                              (0, i.jsx)(O.Z, {
                                   className: a()(M.headerCell, M.diskProgress),
                                   title: D.intl.string(D.t.SjohhI),
                                   getHistoricalTotalBytes: A.Z.getHistoricalTotalBytesWritten,

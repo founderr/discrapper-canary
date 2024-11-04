@@ -104,14 +104,14 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                         };
                 }
             })(i),
-            { analyticsLocations: O } = (0, m.ZP)(r);
+            { analyticsLocations: P } = (0, m.ZP)(r);
         a.useEffect(() => {
             f.default.track(_.rMx.TOOLTIP_VIEWED, { type: N });
         }, [N]);
-        let P = (0, c.bp)() === _.IlC.POPOUT,
+        let O = (0, c.bp)() === _.IlC.POPOUT,
             j = (0, s.e7)([g.Z], () => g.Z.getChannel(t), [t]);
         return (0, l.jsx)(m.Gt, {
-            value: O,
+            value: P,
             children: (0, l.jsx)('div', {
                 className: C.wrapper,
                 children: (0, l.jsx)('div', {
@@ -184,8 +184,8 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                                                   object: _.qAy.ACTIVITIES_COACH_MARK,
                                                                   objectType: _.Qqv.ACTIVITY
                                                               },
-                                                              openInPopout: P,
-                                                              analyticsLocations: O,
+                                                              openInPopout: O,
+                                                              analyticsLocations: P,
                                                               opensAppLauncherModal: !0
                                                           }),
                                                               (0, d.w1)({ guildId: j.guild_id });

@@ -28,7 +28,7 @@ t.Z = (e) => {
         y = (0, l.e7)([p.Z], () => p.Z.get(x)),
         L = (0, l.e7)([f.Z], () => f.Z.getRequest(x)),
         R = (0, l.e7)([c.Z], () => c.Z.getGuild(x)),
-        { hasFetchedRequestToJoinGuilds: O, guildPreviewDisabled: P } = (0, l.cj)([f.Z], () => ({
+        { hasFetchedRequestToJoinGuilds: P, guildPreviewDisabled: O } = (0, l.cj)([f.Z], () => ({
             hasFetchedRequestToJoinGuilds: f.Z.hasFetchedRequestToJoinGuilds,
             guildPreviewDisabled: f.Z.getJoinRequestGuild(x)
         }));
@@ -36,8 +36,8 @@ t.Z = (e) => {
         null != R && (0, o.uL)(C.Z5c.CHANNEL(x));
     }, [R, x]),
         r.useEffect(() => {
-            !O && h.Z.fetchRequestToJoinGuilds();
-        }, [O]);
+            !P && h.Z.fetchRequestToJoinGuilds();
+        }, [P]);
     let j = r.useCallback((e) => {
             Z((t) => Math.max(t, e));
         }, []),
@@ -48,7 +48,7 @@ t.Z = (e) => {
             h.Z.resetGuildJoinRequest(x);
         };
     let w =
-            ((n = S.intl.format(S.t['9ZezpK'], { name: null == P ? void 0 : P.toString() })),
+            ((n = S.intl.format(S.t['9ZezpK'], { name: null == O ? void 0 : O.toString() })),
             (T = () => {
                 Z(Math.max(A, v.hO.FILLING)), h.Z.removeGuildJoinRequest(x), (0, o.uL)(C.Z5c.ME);
             }),
@@ -93,7 +93,7 @@ t.Z = (e) => {
                             case g.wB.SUBMITTED:
                                 return (0, i.jsx)(E.Z, {
                                     onWithdrawApplication: w,
-                                    guild: P
+                                    guild: O
                                 });
                             case g.wB.REJECTED:
                                 return (0, i.jsx)(_.Z, {
@@ -102,7 +102,7 @@ t.Z = (e) => {
                                     confirmText: S.intl.string(S.t.mqtdmZ),
                                     onWithdrawApplication: w,
                                     rejectionReason: null == L ? void 0 : L.rejectionReason,
-                                    guild: P
+                                    guild: O
                                 });
                             default:
                                 return (0, i.jsx)(I.Z, {

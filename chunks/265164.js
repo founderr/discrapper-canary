@@ -40,8 +40,8 @@ function L(e, t, n) {
     );
 }
 let R = 1 * N.Z.Millis.DAY,
-    O = 3 * N.Z.Millis.DAY,
-    P = [],
+    P = 3 * N.Z.Millis.DAY,
+    O = [],
     j = null,
     D = 0,
     M = [],
@@ -173,7 +173,7 @@ function eo() {
     let e = 'recommendedGuilds',
         t = Object.values(_.Z.getGuilds()).filter((e) => e.isCommunity()).length >= 5,
         n = b.Z.getReadTimestamp(e);
-    if (t && null != n && Date.now() - ei > R && Date.now() - n < O) return;
+    if (t && null != n && Date.now() - ei > R && Date.now() - n < P) return;
     let i = {
         id: e,
         type: x.Rr.RECOMMENDED_GUILDS,
@@ -187,9 +187,9 @@ function eo() {
     } else $.splice(5, 0, i);
 }
 function ec(e) {
-    if ((M.length > 0 && ((P = M), (M = []), (U = [])), Y++, null != e)) ($ = e.newUnread), (ee = e.newRead);
+    if ((M.length > 0 && ((O = M), (M = []), (U = [])), Y++, null != e)) ($ = e.newUnread), (ee = e.newRead);
     else {
-        let [e, t] = ed(P);
+        let [e, t] = ed(O);
         ($ = e), (ee = t);
     }
     if ((es(), null != G.load_id && j !== G.load_id)) {
@@ -221,7 +221,7 @@ function ed(e) {
 }
 function eu(e, t) {
     let n = [],
-        i = new Set(P.map((e) => e.id));
+        i = new Set(O.map((e) => e.id));
     for (let r of e) {
         if (!(r.type === x.Rr.RECOMMENDED_GUILDS || i.has(r.id)) && null == b.Z.getReadTimestamp(r.id) && (r.type !== x.Rr.MESSAGE || (!!(0, A.$U)(r.data.channel_id, r.data.message_id) && r.data.channel_id !== t)) && (r.type !== x.Rr.SUMMARY || (!!(0, A.$U)(r.data.channel_id, r.data.summary_id) && r.data.channel_id !== t))) n.push(r);
     }
@@ -231,13 +231,13 @@ function eh(e, t) {
     return e.filter((e) => (e.type !== x.Rr.MESSAGE && e.type !== x.Rr.SUMMARY && e.type !== x.Rr.GUILD_EVENT) || e.data.channel_id !== t);
 }
 function em(e, t) {
-    if ((0, A.jv)(t) === A.aL.MUTED) (P = eh(P, e)), ($ = eh($, e)), (ee = eh(ee, e)), (M = eh(M, e)), (U = eh(U, e));
+    if ((0, A.jv)(t) === A.aL.MUTED) (O = eh(O, e)), ($ = eh($, e)), (ee = eh(ee, e)), (M = eh(M, e)), (U = eh(U, e));
 }
 function ep(e, t) {
     return e.filter((e) => (e.type !== x.Rr.MESSAGE && e.type !== x.Rr.SUMMARY && e.type !== x.Rr.GUILD_EVENT) || e.data.guild_id !== t);
 }
 function eg(e, t) {
-    if ((0, A.jv)(t) === A.aL.MUTED) (P = ep(P, e)), ($ = ep($, e)), (ee = ep(ee, e)), (M = ep(M, e)), (U = ep(U, e));
+    if ((0, A.jv)(t) === A.aL.MUTED) (O = ep(O, e)), ($ = ep($, e)), (ee = ep(ee, e)), (M = ep(M, e)), (U = ep(U, e));
 }
 function ef(e) {
     let { type: t, messageId: n, userId: i, emoji: r, reactionType: l } = e,
@@ -262,7 +262,7 @@ class eE extends (i = l.ZP.PersistedStore) {
     initialize(e) {
         if ((this.waitFor(E.Z, g.Z, I.ZP, d.Z, v.ZP, p.default, b.Z, s.Z), null != e)) {
             var t, n, i, r, l, a;
-            (P = null !== (t = e.dehydratedItems) && void 0 !== t ? t : []).forEach((e) => {
+            (O = null !== (t = e.dehydratedItems) && void 0 !== t ? t : []).forEach((e) => {
                 B[e.id] = e;
             }),
                 (F = null !== (n = e.customGuildScores) && void 0 !== n ? n : {}),
@@ -276,7 +276,7 @@ class eE extends (i = l.ZP.PersistedStore) {
         return Y;
     }
     getDehydratedItems() {
-        return P;
+        return O;
     }
     getNewDehydratedItems() {
         return M;
@@ -347,7 +347,7 @@ class eE extends (i = l.ZP.PersistedStore) {
     }
     getState() {
         return {
-            dehydratedItems: P,
+            dehydratedItems: O,
             numOpens: J,
             customGuildScores: F,
             customChannelScoresByGuild: z,
@@ -360,8 +360,8 @@ L(eE, 'displayName', 'GravityStore'),
     L(eE, 'persistKey', 'GravityStore'),
     (t.Z = new eE(a.Z, {
         POST_CONNECTION_OPEN: function () {
-            if (P.length > 0 && (!q || 0 === Y)) {
-                let [e, t] = ed(P);
+            if (O.length > 0 && (!q || 0 === Y)) {
+                let [e, t] = ed(O);
                 ($ = e), (ee = t), es(), (et = 0), (0, A.em)([...$, ...ee], 0, x.xy);
             }
         },
@@ -390,7 +390,7 @@ L(eE, 'displayName', 'GravityStore'),
                 }),
                 null == j && null == G)
             ) {
-                let [e, t] = ed((P = [n, ...P]));
+                let [e, t] = ed((O = [n, ...O]));
                 ($ = e), (ee = t);
             } else (M = [n, ...M]), ec();
         },
@@ -563,7 +563,7 @@ L(eE, 'displayName', 'GravityStore'),
             let { feedId: t } = e;
             if (t !== y.YN.GLOBAL_FEED) return !1;
             if (!q) {
-                let [e, t] = ed(P);
+                let [e, t] = ed(O);
                 ($ = e), (ee = t), es(), (K = el(e));
             }
         },

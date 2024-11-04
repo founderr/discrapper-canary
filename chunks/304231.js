@@ -78,7 +78,7 @@ t.Z = r.memo(function (e) {
             2 === N ? t() : Z(N + 1);
         }, [N, Z, t]),
         R = r.useMemo(() => 1 === N && null == A, [A, N]),
-        O = r.useMemo(
+        P = r.useMemo(
             () => [
                 {
                     index: 0,
@@ -95,7 +95,7 @@ t.Z = r.memo(function (e) {
             ],
             []
         ),
-        P = (0, o.useSpring)(
+        O = (0, o.useSpring)(
             {
                 ref: n,
                 from: { opacity: 0 },
@@ -148,7 +148,7 @@ t.Z = r.memo(function (e) {
         }, []);
     return (0, i.jsxs)(l.animated.div, {
         className: _.container,
-        style: P,
+        style: O,
         children: [
             (0, i.jsx)(l.animated.div, {
                 className: _.sequencer,
@@ -166,7 +166,7 @@ t.Z = r.memo(function (e) {
                 children: [
                     (0, i.jsx)(h.T, {
                         currentStepIndex: N,
-                        steps: O,
+                        steps: P,
                         furthestStepIndex: x,
                         onStepClick: Z
                     }),

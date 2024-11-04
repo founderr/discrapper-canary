@@ -33,7 +33,7 @@ async function T(e, t, n) {
         c,
         d,
         v,
-        { client_id: N, response_type: T = 'code', redirect_uri: x, code_challenge: b, code_challenge_method: A, state: Z, nonce: y, scope: L, permissions: R, guild_id: O, channel_id: P, prompt: j, disable_guild_select: D, integration_type: M, pid: w, signal: k } = e;
+        { client_id: N, response_type: T = 'code', redirect_uri: x, code_challenge: b, code_challenge_method: A, state: Z, nonce: y, scope: L, permissions: R, guild_id: P, channel_id: O, prompt: j, disable_guild_select: D, integration_type: M, pid: w, signal: k } = e;
     if (null == k ? void 0 : k.aborted) throw new C.Z({ errorCode: S.lTL.UNKNOWN_ERROR }, 'Request aborted');
     if (null == N) throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'No Client ID provided');
     if (null != x) throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'Redirect URI cannot be used in the RPC OAuth2 Authorization flow');
@@ -91,7 +91,7 @@ async function T(e, t, n) {
             let { body: e } = t;
             throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'OAuth2 Authorize Error: '.concat((null == e ? void 0 : e.message) || 'Unknown Error'));
         }
-    null == n || n(c.application, P, w);
+    null == n || n(c.application, O, w);
     let H = I.Hn;
     try {
         H = a.vB(null != R ? R : 0);
@@ -108,8 +108,8 @@ async function T(e, t, n) {
             codeChallenge: b,
             codeChallengeMethod: A,
             state: Z,
-            guildId: O,
-            channelId: P,
+            guildId: P,
+            channelId: O,
             prompt: j,
             disableGuildSelect: D,
             disclosures: d,

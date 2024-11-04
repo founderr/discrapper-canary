@@ -130,8 +130,8 @@ t.Z = r.memo(function (e) {
         { width: n, paddingVertical: o = 16, paddingHorizontal: c = 32, variant: u = b.Bj.DEFAULT, onScroll: h, withAdminContent: I = !1 } = e,
         { enabled: A } = (0, E.I7)(),
         R = r.useRef(null),
-        O = r.useRef(null),
-        P = (0, T.GN)((e) => e.completedNux, l.Z),
+        P = r.useRef(null),
+        O = (0, T.GN)((e) => e.completedNux, l.Z),
         j = (0, T.GN)((e) => e.entrypointGameId, l.Z),
         [D, M] = r.useState(null),
         { backgroundImageUrl: w, gameName: k } = (0, S.kN)(j),
@@ -139,7 +139,7 @@ t.Z = r.memo(function (e) {
             var e, t, n;
             if (!A) return;
             let i = null === (e = R.current) || void 0 === e ? void 0 : e.getBoundingClientRect().top,
-                r = null !== (n = null === (t = O.current) || void 0 === t ? void 0 : t.getScrollerState().scrollTop) && void 0 !== n ? n : 0;
+                r = null !== (n = null === (t = P.current) || void 0 === t ? void 0 : t.getScrollerState().scrollTop) && void 0 !== n ? n : 0;
             null != i && D !== i && M(i + r);
         }, [D, A]);
     r.useEffect(() => {
@@ -150,21 +150,21 @@ t.Z = r.memo(function (e) {
     let G = r.useCallback(() => {
             var e, t;
             A && null != D
-                ? null === (e = O.current) ||
+                ? null === (e = P.current) ||
                   void 0 === e ||
                   e.scrollTo({
                       to: D - 64,
                       animate: !1
                   })
-                : null === (t = O.current) || void 0 === t || t.scrollToTop();
+                : null === (t = P.current) || void 0 === t || t.scrollToTop();
         }, [D, A]),
         B = r.useMemo(
             () =>
                 (0, i.jsx)(L, {
-                    showPickGameButton: !P,
+                    showPickGameButton: !O,
                     showAdminGuildPicker: I
                 }),
-            [P, I]
+            [O, I]
         ),
         H = (0, a.e7)([v.Z], () => v.Z.getSavedGuilds().length),
         V = r.useMemo(
@@ -220,12 +220,12 @@ t.Z = r.memo(function (e) {
                   ? (0, i.jsx)(x.Z, {})
                   : (0, i.jsx)(p.Z, {
                         title: Z.intl.formatToPlainString(Z.t['l8D/Oz'], {}),
-                        description: P ? Z.intl.string(Z.t.JWBE0d) : Z.intl.string(Z.t['b+qgxc']),
+                        description: O ? Z.intl.string(Z.t.JWBE0d) : Z.intl.string(Z.t['b+qgxc']),
                         button: B,
                         children: (0, i.jsx)(m.Z, {})
                     })),
         (0, i.jsxs)(_.Z, {
-            ref: O,
+            ref: P,
             onScroll: h,
             children: [
                 t,

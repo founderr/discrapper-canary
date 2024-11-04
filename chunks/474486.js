@@ -140,9 +140,9 @@ let b = () =>
                       children: [
                           (0, l.jsx)('div', {
                               className: S.t4ACoachtipArtOuterContainer,
-                              children: (0, l.jsx)(O, {})
+                              children: (0, l.jsx)(P, {})
                           }),
-                          (null == r ? void 0 : r.expires_at) != null && (0, l.jsx)(P, { trialExpiration: Date.parse(r.expires_at) })
+                          (null == r ? void 0 : r.expires_at) != null && (0, l.jsx)(O, { trialExpiration: Date.parse(r.expires_at) })
                       ]
                   })),
             (0, l.jsx)(o.Tooltip, {
@@ -169,7 +169,7 @@ let b = () =>
             (0, l.jsx)(E.Z, { copy: v.intl.string(v.t.y2b7CA) })
         );
     },
-    O = () =>
+    P = () =>
         (0, l.jsx)('div', {
             className: S.t4ACoachtipArtInnerContainer,
             children: (0, l.jsx)('img', {
@@ -177,7 +177,7 @@ let b = () =>
                 alt: ''
             })
         }),
-    P = (e) => {
+    O = (e) => {
         let { trialExpiration: t } = e,
             n = (0, c.Z)(t, 1000);
         return (0, l.jsxs)('div', {

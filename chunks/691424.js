@@ -155,7 +155,7 @@ let U = {
     },
     soundboard: {
         react: (e) =>
-            (0, r.jsx)(v.Z, {
+            (0, r.jsx)(v.ZP, {
                 channelId: e.channelId,
                 soundId: e.soundId,
                 jumbo: e.jumboable

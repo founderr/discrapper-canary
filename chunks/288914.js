@@ -32,8 +32,8 @@ var i = n(200651),
     y = n(687158),
     L = n(899007),
     R = n(648052),
-    O = n(867176),
-    P = n(438163),
+    P = n(867176),
+    O = n(438163),
     j = n(483424),
     D = n(681837),
     M = n(502762),
@@ -350,7 +350,7 @@ function ec(e) {
                         (0, i.jsxs)('header', {
                             className: el.header,
                             children: [
-                                (0, i.jsx)(O.Z, {
+                                (0, i.jsx)(P.Z, {
                                     user: W,
                                     displayProfile: eu,
                                     profileType: en.y0.BITE_SIZE
@@ -361,7 +361,7 @@ function ec(e) {
                                     profileType: en.y0.BITE_SIZE,
                                     onOpenProfile: ed ? void 0 : eA
                                 }),
-                                (0, i.jsx)(P.Z, {
+                                (0, i.jsx)(O.Z, {
                                     user: W,
                                     profileType: en.y0.BITE_SIZE,
                                     onCloseProfile: Q

@@ -1,6 +1,6 @@
 n.d(t, {
     Eo: function () {
-        return P;
+        return O;
     },
     VD: function () {
         return R;
@@ -39,7 +39,7 @@ function R(e) {
     let { guild: t, onClick: l, onView: s } = e,
         [E, I] = r.useState(!1),
         [T, R] = r.useState(!1),
-        [O, P] = r.useState(!1),
+        [P, O] = r.useState(!1),
         j = r.useCallback(async () => {
             R(!0);
             try {
@@ -128,12 +128,12 @@ function R(e) {
                             className: A.header,
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: a()(A.banner, { [A.loaded]: O }),
+                                    className: a()(A.banner, { [A.loaded]: P }),
                                     children: (0, i.jsx)('img', {
                                         src: U,
                                         alt: '',
                                         className: A.bannerImage,
-                                        onLoad: () => P(!0)
+                                        onLoad: () => O(!0)
                                     })
                                 }),
                                 (H || B) &&
@@ -227,7 +227,7 @@ function R(e) {
         ]
     });
 }
-function O(e) {
+function P(e) {
     let { guildId: t, onClick: n, onView: r } = e,
         l = (0, s.e7)([T.Z], () => T.Z.getGuild(t));
     return null == l
@@ -238,7 +238,7 @@ function O(e) {
               onView: r
           });
 }
-function P(e) {
+function O(e) {
     let { guildId: t, index: n, onClick: l, onView: a } = e,
         s = r.useRef(null == t),
         o = r.useCallback(
@@ -259,7 +259,7 @@ function P(e) {
                               state: n,
                               cleanUp: r,
                               animate: s.current,
-                              children: (0, i.jsx)(O, {
+                              children: (0, i.jsx)(P, {
                                   guildId: t.guildId,
                                   onClick: l,
                                   onView: a
@@ -291,4 +291,4 @@ function P(e) {
         })
     });
 }
-t.ZP = r.memo(O);
+t.ZP = r.memo(P);

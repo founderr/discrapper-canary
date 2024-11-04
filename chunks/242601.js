@@ -34,8 +34,8 @@ var i = n(200651),
     y = n(596557),
     L = n(817520),
     R = n(999309),
-    O = n(408987),
-    P = n(130734),
+    P = n(408987),
+    O = n(130734),
     j = n(499137),
     D = n(258871),
     M = n(972264),
@@ -371,7 +371,7 @@ class eI extends r.PureComponent {
             }),
             eg(this, 'handleCloseTemplateDirtyTooltip', () => {
                 let { guild: e, showGuildTemplateDirtyTooltip: t } = this.props;
-                null != e && t && O.Z.hideGuildTemplateDirtyTooltip(e.id);
+                null != e && t && P.Z.hideGuildTemplateDirtyTooltip(e.id);
             }),
             eg(this, 'renderMenuPopout', async () => {
                 let { default: e } = await n.e('46826').then(n.bind(n, 859432));
@@ -423,7 +423,7 @@ function eC(e) {
     let h = (0, A.Z)(n),
         m = (0, o.e7)([z.Z], () => z.Z.getGuildDimensions(n).scrollTo),
         p = (0, o.e7)([$.Z], () => $.Z.getChannelId()),
-        [v, b, O] = (0, o.Wu)([Q.Z], () => [Q.Z.can(ec.Plq.MANAGE_GUILD, d), Q.Z.can(ec.Plq.MANAGE_ROLES, d), Q.Z.can(ec.Plq.MANAGE_THREADS, d)]),
+        [v, b, P] = (0, o.Wu)([Q.Z], () => [Q.Z.can(ec.Plq.MANAGE_GUILD, d), Q.Z.can(ec.Plq.MANAGE_ROLES, d), Q.Z.can(ec.Plq.MANAGE_THREADS, d)]),
         D = (0, o.e7)([Y.Z], () => Y.Z.isUnavailable(n)),
         k = (0, o.e7)([ee.default], () => ee.default.getCurrentUser()),
         G = (0, o.e7)([V.Z], () => (V.Z.darkSidebar ? ec.BRd.DARK : V.Z.theme)),
@@ -451,11 +451,11 @@ function eC(e) {
         eb = v && (null == d ? void 0 : d.hasFeature(ec.oNc.DISCOVERABLE)) === !0,
         eA = (0, I.Q)(),
         eZ = (v || (null == d ? void 0 : d.premiumTier) === ec.Eu4.NONE) && !en.s.isDisallowPopupsSet() && !eA,
-        ey = (0, o.e7)([P.Z, X.Z], () => null != d && null != k && v && !X.Z.hasLayers() && P.Z.shouldShowGuildTemplateDirtyTooltip(n)),
+        ey = (0, o.e7)([O.Z, X.Z], () => null != d && null != k && v && !X.Z.hasLayers() && O.Z.shouldShowGuildTemplateDirtyTooltip(n)),
         eL = (0, o.e7)([F.Z], () => F.Z.getChannel(s)),
         { isPopoutOpen: eR } = (0, Z.y)(),
-        eO = null !== (t = null == d ? void 0 : d.hasFeature(ec.oNc.COMMUNITY)) && void 0 !== t && t,
-        eP = (0, o.e7)([U.Z], () => !a().isEmpty(U.Z.getThreadsForGuild(n))),
+        eP = null !== (t = null == d ? void 0 : d.hasFeature(ec.oNc.COMMUNITY)) && void 0 !== t && t,
+        eO = (0, o.e7)([U.Z], () => !a().isEmpty(U.Z.getThreadsForGuild(n))),
         ej = et.ZP.isNewUser(k),
         eD = ei && !ej,
         eM = (0, S.Z)(k);
@@ -491,8 +491,8 @@ function eC(e) {
         showRoleSubscriptionUpsell: eN,
         showDiscoveryTooltip: eT,
         showHubPrivacySettingsTooltip: ex,
-        showNewUnreadsBar: eO,
-        showActiveThreadsNotice: O && null != eC && eC >= 200 && eP,
+        showNewUnreadsBar: eP,
+        showActiveThreadsNotice: P && null != eC && eC >= 200 && eO,
         showGuildSoundboardPermissionUpsell: eS,
         showMediaChannelUpsell: ek,
         showTierTemplatesUpsell: eU,

@@ -44,7 +44,7 @@ function b() {
     r.useEffect(() => {
         p.default.track(N.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), m.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
     }, []);
-    let O = r.useCallback(
+    let P = r.useCallback(
             (e) => {
                 var n, r;
                 let { row: s } = e,
@@ -68,7 +68,7 @@ function b() {
             },
             [t, l, Z]
         ),
-        P = r.useCallback(
+        O = r.useCallback(
             () =>
                 (0, i.jsxs)(
                     h.Z,
@@ -125,8 +125,8 @@ function b() {
                               paddingBottom: 24,
                               sectionHeight: S.oi,
                               rowHeight: S.WN,
-                              renderSection: P,
-                              renderRow: O,
+                              renderSection: O,
+                              renderRow: P,
                               sections: [t.length],
                               chunkSize: 30,
                               fade: !0,

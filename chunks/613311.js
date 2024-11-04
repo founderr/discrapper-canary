@@ -28,8 +28,8 @@ var i = n(200651),
     y = n(210887),
     L = n(430824),
     R = n(496675),
-    O = n(525395),
-    P = n(558314),
+    P = n(525395),
+    O = n(558314),
     j = n(580130),
     D = n(55563),
     M = n(551428),
@@ -556,7 +556,7 @@ class ec extends r.PureComponent {
 }
 t.Z = (0, _.Z)(
     (0, E.Z)(
-        s.ZP.connectStores([P.Z, y.Z, Z.default, k.Z, M.Z, D.Z, w.Z, I.Z, C.Z, O.Z, L.Z, j.Z], (e) => {
+        s.ZP.connectStores([O.Z, y.Z, Z.default, k.Z, M.Z, D.Z, w.Z, I.Z, C.Z, P.Z, L.Z, j.Z], (e) => {
             let t,
                 n,
                 i,
@@ -575,7 +575,7 @@ t.Z = (0, _.Z)(
                 application: null != l ? C.Z.getApplication(l) : null,
                 isFetchingEntitlements: null != l && j.Z.applicationIdsFetching.has(l),
                 didFetchEntitlements: null != l && j.Z.applicationIdsFetched.has(l),
-                shouldFetchStatistics: s && null != l && O.Z.shouldFetchStatisticsForApplication(l),
+                shouldFetchStatistics: s && null != l && P.Z.shouldFetchStatisticsForApplication(l),
                 sku: n,
                 isFocused: k.Z.isFocused(),
                 storeListing: M.Z.getStoreListing({
@@ -585,7 +585,7 @@ t.Z = (0, _.Z)(
                     isTestMode: c
                 }),
                 isInTestMode: null != l && c,
-                matureAgree: P.Z.didMatureAgree,
+                matureAgree: O.Z.didMatureAgree,
                 theme: y.Z.theme,
                 locale: Z.default.locale,
                 guild: null != o ? L.Z.getGuild(o.getGuildId()) : null

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return O;
     }
 }),
     n(47120);
@@ -122,7 +122,7 @@ function R(e) {
         })
     });
 }
-function O(e) {
+function P(e) {
     let { frecentApps: t, loadingAppId: n, setLoadingAppId: r, analyticsLocations: l } = e;
     return (0, i.jsx)('div', {
         className: Z.itemContainer,
@@ -142,7 +142,7 @@ function O(e) {
         })
     });
 }
-function P() {
+function O() {
     let e = (0, N.en)(h.Z.APP_DMS_QUICK_LAUNCHER),
         { frecentApps: t } = (0, p.f)({
             channel: void 0,
@@ -179,7 +179,7 @@ function P() {
                               children: A.intl.string(A.t.SCViVl)
                           })
                       }),
-                      (0, i.jsx)(O, {
+                      (0, i.jsx)(P, {
                           frecentApps: u,
                           loadingAppId: n,
                           setLoadingAppId: l,

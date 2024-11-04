@@ -34,7 +34,7 @@ let A = {
 function Z(e) {
     let { recipientUser: t, giftIntentType: n, analyticsPage: l, shouldHighlight: Z } = e,
         { analyticsLocations: y } = (0, u.ZP)(),
-        { isHovered: L, setIsHovered: R, onMouseEnter: O, onMouseLeave: P } = (0, p.Z)(200, 300),
+        { isHovered: L, setIsHovered: R, onMouseEnter: P, onMouseLeave: O } = (0, p.Z)(200, 300),
         { enableEmojiCTA: j } = E.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 });
     r.useEffect(() => {
         let e = g.Z.getUserAffinity(t.id);
@@ -49,9 +49,9 @@ function Z(e) {
     }, [t, n]);
     let D = r.useCallback(
             (e) => {
-                'focus' !== e.type && O();
+                'focus' !== e.type && P();
             },
-            [O]
+            [P]
         ),
         M = (e) => {
             e.stopPropagation();
@@ -93,7 +93,7 @@ function Z(e) {
                           [b.actionButtonMobile]: c.tq
                       }),
                       onMouseEnter: D,
-                      onMouseLeave: P,
+                      onMouseLeave: O,
                       children: (0, i.jsx)(s.animated.div, {
                           className: x.spriteContainer,
                           children: (0, i.jsx)('div', { className: x.sprite })
@@ -102,7 +102,7 @@ function Z(e) {
                 : (0, i.jsx)(d.Button, {
                       onClick: M,
                       onMouseEnter: D,
-                      onMouseLeave: P,
+                      onMouseLeave: O,
                       children: (0, i.jsxs)('div', {
                           className: x.pillContentContainer,
                           children: [
@@ -137,8 +137,8 @@ function Z(e) {
                 giftIntentType: n,
                 premiumGiftIntentCardType: v.U.COACHMARK,
                 recipientUser: t,
-                onMouseEnter: O,
-                onMouseLeave: P,
+                onMouseEnter: P,
+                onMouseLeave: O,
                 popoutPosition: e.position,
                 analyticsPage: l,
                 analyticsSection: N.jXE.FRIENDS_LIST_FRIEND_ROW_GIFT_POPOUT,

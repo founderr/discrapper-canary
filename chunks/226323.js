@@ -62,8 +62,8 @@ function S(e) {
         L = p.getAvatarURL(l.guild_id, 24),
         R = null != S ? S : f.ZP.getName(p),
         {
-            icon: O,
-            colorize: P,
+            icon: P,
+            colorize: O,
             getStatus: j
         } = null !==
             (r = (function (e) {
@@ -143,9 +143,9 @@ function S(e) {
                                 className: a()(I.avatar, { [I.speaking]: Z }),
                                 style: { backgroundImage: 'url('.concat(L, ')') },
                                 children:
-                                    null != O
-                                        ? (0, i.jsx)(O, {
-                                              className: a()(I.avatarIconOverlay, { [I.avatarIconRed]: P }),
+                                    null != P
+                                        ? (0, i.jsx)(P, {
+                                              className: a()(I.avatarIconOverlay, { [I.avatarIconRed]: O }),
                                               color: 'currentColor',
                                               size: 'xs'
                                           })

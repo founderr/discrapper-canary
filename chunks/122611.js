@@ -30,7 +30,7 @@ var i = n(200651),
 function R(e) {
     e.stopPropagation();
 }
-function O(e) {
+function P(e) {
     var t;
     let { guild: n } = e,
         [h, g] = r.useState(null !== (t = s.K.get(Z.Iv)) && void 0 !== t ? t : 0),
@@ -130,5 +130,5 @@ t.Z = (e) => {
         case A.R.SIGNUP:
             return (0, i.jsx)(v.Z, { guild: t });
     }
-    return S.s.isDisallowPopupsSet() ? null : (0, i.jsx)(O, { guild: e.guild });
+    return S.s.isDisallowPopupsSet() ? null : (0, i.jsx)(P, { guild: e.guild });
 };

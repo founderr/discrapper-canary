@@ -49,17 +49,17 @@ function b(e) {
         }),
         y = r.useMemo(() => (0, f.D)(A), [A]),
         [L, R] = r.useState(window.innerWidth),
-        O = Number(b.currentStep) >= S.IS.THANK_YOU_END,
-        [P, j] = r.useState(O ? 0 : 1),
+        P = Number(b.currentStep) >= S.IS.THANK_YOU_END,
+        [O, j] = r.useState(P ? 0 : 1),
         D = (0, _.f)(),
         M = (0, d.useSpring)(
             {
-                opacity: P,
+                opacity: O,
                 config: x
             },
             'respect-motion-settings'
         ),
-        w = (0, d.useTransition)(O, {
+        w = (0, d.useTransition)(P, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
@@ -68,13 +68,13 @@ function b(e) {
         k = r.useCallback(
             (e) => {
                 var n;
-                e === y.length - 1 ? (j(0), (0, p.Lp)(t, 'fake_door_end')) : 0 === P && j(1),
+                e === y.length - 1 ? (j(0), (0, p.Lp)(t, 'fake_door_end')) : 0 === O && j(1),
                     m._9(t, {
                         currentStep: e,
                         furthestStep: Math.max(null !== (n = b.furthestStep) && void 0 !== n ? n : 0, e)
                     });
             },
-            [P, t, b.furthestStep, y]
+            [O, t, b.furthestStep, y]
         );
     r.useEffect(() => {
         (0, p.Gx)({
@@ -86,7 +86,7 @@ function b(e) {
         r.useEffect(() => {
             let e = (0, h.pP)((0, s.debounce)(() => R(window.innerWidth), 250));
             return (0, h.YP)(e, document.body), () => (0, h.UC)(e, document.body);
-        }, [P, O]);
+        }, [O, P]);
     let U = r.useMemo(() => null != A && Object.values(A).some((e) => null != e), [A]),
         G = r.useMemo(() => (null != A && Object.values(A).length > 0 ? (0, f.D)(A).find((e) => e.hasError) : null), [A]),
         B = r.useCallback(() => {
@@ -99,8 +99,8 @@ function b(e) {
             H(), n();
         }, [H, n]),
         F = r.useCallback(() => {
-            O && H(), n();
-        }, [O, n, H]),
+            P && H(), n();
+        }, [P, n, H]),
         z = r.useRef(null),
         Y =
             null != G
@@ -171,7 +171,7 @@ function b(e) {
                                         guildId: t,
                                         progress: b,
                                         updateCurrentStep: k,
-                                        animationClassName: a()({ [T.hidden]: O }),
+                                        animationClassName: a()({ [T.hidden]: P }),
                                         inSettings: !1
                                     })
                                 })
@@ -179,21 +179,21 @@ function b(e) {
                         }),
                         (0, i.jsx)(o.animated.div, {
                             className: a()(T.divider, {
-                                [T.hidden]: O,
-                                [T.dividerResponsive]: !O
+                                [T.hidden]: P,
+                                [T.dividerResponsive]: !P
                             })
                         }),
                         (0, i.jsx)(o.animated.div, {
                             style: M,
                             className: a()(T.sidebar, {
-                                [T.sidebarResponsive]: !O,
-                                [T.sidebarHidden]: O
+                                [T.sidebarResponsive]: !P,
+                                [T.sidebarHidden]: P
                             }),
                             children: (0, i.jsx)(v.Z, {
                                 guildId: t,
                                 signed: !1,
                                 setSigned: void 0,
-                                sidebarWidth: O ? 0 : 380,
+                                sidebarWidth: P ? 0 : 380,
                                 windowWidth: L,
                                 brandPrimaryColor: b.brandPrimaryColor
                             })
@@ -217,7 +217,7 @@ function b(e) {
                                     (0, i.jsx)(E.Z, {
                                         ...e,
                                         themeColor: b.brandPrimaryColor,
-                                        disabled: !O || U,
+                                        disabled: !P || U,
                                         submitting: Z,
                                         look: d.Button.Looks.FILLED,
                                         size: d.Button.Sizes.MEDIUM,

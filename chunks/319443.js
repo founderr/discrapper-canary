@@ -29,8 +29,8 @@ t.Z = function () {
     let { searchQuery: x, searchFetchedQuery: b, onSearchTextChange: A, onClearSearch: Z, onSearchSubmit: y, hasSearchView: L } = (0, h.M)(),
         {
             searchBarState: R,
-            onTabsAvailableWidthChange: O,
-            onCollapsedSearchBarClick: P,
+            onTabsAvailableWidthChange: P,
+            onCollapsedSearchBarClick: O,
             onSearchBarBlur: j
         } = (0, o.U)({
             isSearchBarVisible: !0,
@@ -75,7 +75,7 @@ t.Z = function () {
                               tabs: S,
                               selectedTab: N,
                               onTabSelect: G,
-                              onAvailableWidthChange: O
+                              onAvailableWidthChange: P
                           }),
                     !k &&
                         (0, i.jsx)(u.Z, {
@@ -84,7 +84,7 @@ t.Z = function () {
                             onTextChange: A,
                             onClear: Z,
                             onSubmit: y,
-                            onCollapsedClick: P,
+                            onCollapsedClick: O,
                             state: R,
                             onBlur: j
                         })

@@ -35,15 +35,15 @@ function Z(e) {
         y = (0, h.Z)(t),
         L = (0, I.Z)(t),
         R = (0, a.e7)([_.Z], () => _.Z.isSubscriptionFetching),
-        O = (0, E.f)(),
-        { shouldHideGuildPurchaseEntryPoints: P, restrictionsLoading: j } = (0, m.uP)(t),
-        D = null == n || !O || R || j;
+        P = (0, E.f)(),
+        { shouldHideGuildPurchaseEntryPoints: O, restrictionsLoading: j } = (0, m.uP)(t),
+        D = null == n || !P || R || j;
     (0, d.Tt)({
         subsection: b.intl.string(b.t['KzCF//']),
         location: null == n ? void 0 : n.name
     }),
         (0, c.Z)(l.tq ? 'role-subscriptions-overview' : void 0);
-    let M = Z && (null == n || !(y || L) || (P && !j));
+    let M = Z && (null == n || !(y || L) || (O && !j));
     if (
         (r.useEffect(() => {
             o.jg();

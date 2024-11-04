@@ -42,7 +42,7 @@ function N(e) {
             onError: L
         });
     if (null == t || !t.isDM()) return null;
-    let O = [
+    let P = [
         (0, i.jsx)(
             o.ZP.Icon,
             {
@@ -56,7 +56,7 @@ function N(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(o.ZP, {
-                toolbar: O,
+                toolbar: P,
                 'aria-label': C.intl.string(C.t.BIYAqa),
                 children: (0, c.ud)({
                     channel: t,
