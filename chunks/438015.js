@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651),
     r = n(192379),
     s = n(13245),
-    l = n(593481),
-    a = n(692546),
+    a = n(593481),
+    l = n(692546),
     o = n(981631),
     c = n(668697);
 function d(e, t, n) {
@@ -55,28 +55,29 @@ class u extends r.Component {
                     locked: e,
                     index: t,
                     notification: {
-                        props: { onNotificationShow: n, onDismissClick: r, onNotificationClick: s, onConfirmClick: o, onCancelClick: d, ...u }
+                        props: { renderFooter: n, onNotificationShow: r, onDismissClick: s, onNotificationClick: o, onConfirmClick: d, onCancelClick: u, ...h }
                     }
                 }
             } = this,
-            h = (0, i.jsx)('div', {
+            p = (0, i.jsx)('div', {
                 className: c.notificationContainer,
-                children: (0, i.jsx)(l.ZP, {
-                    ...u,
+                children: (0, i.jsx)(a.ZP, {
+                    ...h,
                     onNotificationShow: 0 === t ? this.handleNotificationShow : null,
                     onDismissClick: this.handleDismissClick,
-                    onNotificationClick: null != s ? this.handleNotificationClick : null,
-                    onConfirmClick: null != o ? this.handleConfirmClick : null,
-                    onCancelClick: null != d ? this.handleCancelClick : null,
+                    onNotificationClick: null != o ? this.handleNotificationClick : null,
+                    onConfirmClick: null != d ? this.handleConfirmClick : null,
+                    onCancelClick: null != u ? this.handleCancelClick : null,
+                    renderFooter: this.renderFooter,
                     expand: !e && 0 === t
                 })
             });
         return 0 === t
-            ? (0, i.jsx)(a.Z, {
+            ? (0, i.jsx)(l.Z, {
                   observeInterval: 200,
-                  children: h
+                  children: p
               })
-            : h;
+            : p;
     }
     constructor(...e) {
         super(...e),
@@ -114,6 +115,13 @@ class u extends r.Component {
                     props: { onCancelClick: n }
                 } = this.props.notification;
                 null != n && n(e, t);
+            }),
+            d(this, 'renderFooter', (e) => {
+                let {
+                    id: t,
+                    props: { renderFooter: n }
+                } = this.props.notification;
+                return null != n ? n(e, t) : null;
             });
     }
 }

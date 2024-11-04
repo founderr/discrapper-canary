@@ -1,40 +1,40 @@
 let r, i;
 n.d(t, {
     FW: function () {
-        return l;
-    },
-    Gr: function () {
-        return o;
-    },
-    Ht: function () {
-        return h;
-    },
-    Js: function () {
-        return c;
-    },
-    QF: function () {
-        return f;
-    },
-    Te: function () {
-        return p;
-    },
-    Tq: function () {
-        return s;
-    },
-    VS: function () {
-        return g;
-    },
-    W2: function () {
-        return E;
-    },
-    qU: function () {
         return u;
     },
-    tB: function () {
+    Gr: function () {
+        return l;
+    },
+    Ht: function () {
+        return p;
+    },
+    Js: function () {
+        return d;
+    },
+    QF: function () {
         return _;
     },
-    vR: function () {
+    Te: function () {
         return m;
+    },
+    Tq: function () {
+        return o;
+    },
+    VS: function () {
+        return E;
+    },
+    W2: function () {
+        return v;
+    },
+    qU: function () {
+        return c;
+    },
+    tB: function () {
+        return h;
+    },
+    vR: function () {
+        return g;
     }
 }),
     n(610138),
@@ -43,42 +43,48 @@ n.d(t, {
     n(815648),
     n(47120),
     n(490029);
-var a = n(358085);
+var a = n(568963),
+    s = n(358085);
 n(981631);
-let s = 2,
-    o = {
+let o = 2,
+    l = {
         width: 3840,
         height: 2160
     },
-    l = {
+    u = {
         width: 768,
         height: 432
     },
-    u = 'overlay_default',
-    c = -2,
-    d = !1;
-function f() {
+    c = 'overlay_default',
+    d = -2,
+    f = !1;
+function _() {
     var e;
     if (void 0 !== r) return r;
     let t = parseInt(null !== (e = new URLSearchParams(window.location.search).get('pid')) && void 0 !== e ? e : '', 10);
     return isNaN(t) && (t = -1), (r = t);
 }
-function _(e) {
-    E() && (r = e);
+function h(e) {
+    v() && (r = e);
 }
-function h() {
+function p() {
     return new URLSearchParams(window.location.search).get('rpc_auth_token');
 }
-function p(e) {
-    return !a.isPlatformEmbedded || (e.width >= l.width && e.height >= l.height);
-}
 function m(e) {
-    d = e;
+    return !s.isPlatformEmbedded || (e.width >= u.width && e.height >= u.height);
 }
-function g() {
-    return d;
+function g(e) {
+    f = e;
 }
 function E() {
-    var e;
-    return void 0 !== i ? i : (i = (null !== (e = new URLSearchParams(window.location.search).get('oop')) && void 0 !== e ? e : '') === 'true');
+    return f;
+}
+function v() {
+    if (void 0 !== i) return i;
+    if ((0, a.R)()) i = !0;
+    else {
+        var e;
+        i = (null !== (e = new URLSearchParams(window.location.search).get('oop')) && void 0 !== e ? e : '') === 'true';
+    }
+    return i;
 }

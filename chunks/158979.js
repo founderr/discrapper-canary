@@ -1,79 +1,44 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return h;
     }
 });
 var i = n(200651);
 n(192379);
 var r = n(481060),
     s = n(13245),
-    l = n(593481),
     a = n(312839),
-    o = n(981631),
-    c = n(987650),
-    d = n(388032),
-    u = n(57266);
-function h() {
+    l = n(981631),
+    o = n(987650),
+    c = n(388032),
+    d = n(57266);
+function u() {
     return (0, i.jsx)('div', {
-        className: u.footer,
+        className: d.footer,
         children: (0, i.jsx)(r.Button, {
             color: r.Button.Colors.GREEN,
             size: r.Button.Sizes.SMALL,
-            className: u.ctaButton,
-            children: d.intl.string(d.t.U76Ft7)
+            className: d.ctaButton,
+            children: c.intl.string(c.t.U76Ft7)
         })
     });
 }
-function p(e) {
+function h(e) {
     switch (e.type) {
-        case c.nc.GO_LIVE_VOICE: {
-            let { game: t, voiceGuild: u } = e,
-                { trackView: p, trackClick: f } = (0, a.R)(c.n0.GoLiveNudge, { notif_type: c.n0.GoLiveNudge });
+        case o.nc.GO_LIVE_VOICE: {
+            let { game: t, voiceGuild: d } = e,
+                { trackView: h, trackClick: p } = (0, a.R)(o.n0.GoLiveNudge, { notif_type: o.n0.GoLiveNudge });
             return {
-                colorScheme: l.IC.PRIMARY,
                 icon: n(847881),
                 title: null,
-                body: d.intl.formatToPlainString(d.t.z9znpa, {
+                body: c.intl.formatToPlainString(c.t.z9znpa, {
                     game: t.name,
-                    server: u.toString()
+                    server: d.toString()
                 }),
-                hint: () => (0, i.jsx)(h, {}),
-                renderFooter: () => (0, i.jsx)(h, {}),
+                hint: () => (0, i.jsx)(u, {}),
+                renderFooter: () => (0, i.jsx)(u, {}),
                 onNotificationShow: () => {
-                    p();
-                },
-                onNotificationClick: (e, t) => {
-                    f('unlock'),
-                        s.Z.updateNotificationStatus(t),
-                        s.Z.setInstanceLocked(!1),
-                        (0, r.openModalLazy)(async () => {
-                            let { default: e } = await Promise.all([n.e('46746'), n.e('33641')]).then(n.bind(n, 60594));
-                            return (t) =>
-                                (0, i.jsx)(e, {
-                                    ...t,
-                                    selectSource: !1,
-                                    guildId: u.id,
-                                    analyticsLocation: o.Sbl.OVERLAY_NUDGE
-                                });
-                        });
-                },
-                onDismissClick: () => {
-                    f('dismiss');
-                }
-            };
-        }
-        case c.nc.GO_LIVE_NON_VOICE: {
-            let { game: t } = e,
-                { trackView: u, trackClick: p } = (0, a.R)(c.n0.GoLiveNonVoiceNudge, { notif_type: c.n0.GoLiveNonVoiceNudge });
-            return {
-                colorScheme: l.IC.PRIMARY,
-                icon: n(847881),
-                title: null,
-                body: d.intl.formatToPlainString(d.t['0SVWgI'], { game: t.name }),
-                hint: () => (0, i.jsx)(h, {}),
-                renderFooter: () => (0, i.jsx)(h, {}),
-                onNotificationShow: () => {
-                    u();
+                    h();
                 },
                 onNotificationClick: (e, t) => {
                     p('unlock'),
@@ -85,13 +50,45 @@ function p(e) {
                                 (0, i.jsx)(e, {
                                     ...t,
                                     selectSource: !1,
-                                    selectGuild: !0,
-                                    analyticsLocation: o.Sbl.OVERLAY_NUDGE
+                                    guildId: d.id,
+                                    analyticsLocation: l.Sbl.OVERLAY_NUDGE
                                 });
                         });
                 },
                 onDismissClick: () => {
                     p('dismiss');
+                }
+            };
+        }
+        case o.nc.GO_LIVE_NON_VOICE: {
+            let { game: t } = e,
+                { trackView: d, trackClick: h } = (0, a.R)(o.n0.GoLiveNonVoiceNudge, { notif_type: o.n0.GoLiveNonVoiceNudge });
+            return {
+                icon: n(847881),
+                title: null,
+                body: c.intl.formatToPlainString(c.t['0SVWgI'], { game: t.name }),
+                hint: () => (0, i.jsx)(u, {}),
+                renderFooter: () => (0, i.jsx)(u, {}),
+                onNotificationShow: () => {
+                    d();
+                },
+                onNotificationClick: (e, t) => {
+                    h('unlock'),
+                        s.Z.updateNotificationStatus(t),
+                        s.Z.setInstanceLocked(!1),
+                        (0, r.openModalLazy)(async () => {
+                            let { default: e } = await Promise.all([n.e('46746'), n.e('33641')]).then(n.bind(n, 60594));
+                            return (t) =>
+                                (0, i.jsx)(e, {
+                                    ...t,
+                                    selectSource: !1,
+                                    selectGuild: !0,
+                                    analyticsLocation: l.Sbl.OVERLAY_NUDGE
+                                });
+                        });
+                },
+                onDismissClick: () => {
+                    h('dismiss');
                 }
             };
         }

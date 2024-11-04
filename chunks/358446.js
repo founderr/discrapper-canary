@@ -1,6 +1,6 @@
 n.d(t, {
     K: function () {
-        return m;
+        return f;
     },
     Z: function () {
         return g;
@@ -11,18 +11,17 @@ var i = n(200651);
 n(192379);
 var r = n(704215),
     s = n(481060),
-    l = n(13245),
-    a = n(312839),
+    a = n(13245),
+    l = n(312839),
     o = n(706140),
-    c = n(593481),
-    d = n(658785),
-    u = n(987650),
-    h = n(921944),
-    p = n(388032),
-    f = n(240209);
-function m() {
+    c = n(658785),
+    d = n(987650),
+    u = n(921944),
+    h = n(388032),
+    p = n(240209);
+function f() {
     let [e, t] = (0, o.cv)([r.z.OVERLAY_KEYBIND_NOTIFICATION]),
-        { showKeybindIndicators: n } = d.Z.useExperiment({ location: 'Overlay' }, { autoTrackExposure: !1 });
+        { showKeybindIndicators: n } = c.Z.useExperiment({ location: 'Overlay' }, { autoTrackExposure: !1 });
     return {
         showKeybindIndicators: null != e && n,
         dismissKeybindNotification: t
@@ -30,14 +29,14 @@ function m() {
 }
 function g(e) {
     let { markAsDismissed: t } = e,
-        { trackView: n, trackClick: r } = (0, a.R)(u.n0.KeybindIndicatorsNotification, { notif_type: u.n0.KeybindIndicatorsNotification });
+        { trackView: n, trackClick: r } = (0, l.R)(d.n0.KeybindIndicatorsNotification, { notif_type: d.n0.KeybindIndicatorsNotification });
     return {
         icon: null,
         body: (0, i.jsxs)('div', {
-            className: f.notificationBody,
+            className: p.notificationBody,
             children: [
                 (0, i.jsx)('div', {
-                    className: f.iconContainer,
+                    className: p.iconContainer,
                     children: (0, i.jsx)(s.MicrophoneIcon, {
                         size: 'custom',
                         color: 'currentColor',
@@ -47,16 +46,15 @@ function g(e) {
                 }),
                 (0, i.jsx)(s.Text, {
                     variant: 'text-sm/normal',
-                    children: p.intl.string(p.t.EFRNtL)
+                    children: h.intl.string(h.t.EFRNtL)
                 })
             ]
         }),
-        colorScheme: c.IC.PRIMARY,
         onDismissClick: (e, n) => {
-            r('dismiss'), t(h.L.DISMISS), l.Z.updateNotificationStatus(n);
+            r('dismiss'), t(u.L.DISMISS), a.Z.updateNotificationStatus(n);
         },
         onNotificationShow: () => {
-            t(h.L.AUTO_DISMISS), n();
+            t(u.L.AUTO_DISMISS), n();
         }
     };
 }

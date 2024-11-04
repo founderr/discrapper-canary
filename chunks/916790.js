@@ -9,8 +9,8 @@ var r = n(200651),
     l = n(120356),
     i = n.n(l),
     o = n(392711),
-    c = n(913527),
-    s = n.n(c),
+    s = n(913527),
+    c = n.n(s),
     d = n(481060),
     u = n(570140),
     h = n(665149),
@@ -69,7 +69,7 @@ let y = [
         render(e) {
             var t;
             let { actionLog: n } = e,
-                a = s()(n.createdAt);
+                a = c()(n.createdAt);
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsxs)(g.E, {
@@ -146,7 +146,7 @@ function I(e) {
                     : y,
             [t]
         ),
-        { TabBar: o, renderSelectedTab: c } = (0, j.Z)({ tabs: l }, [l]);
+        { TabBar: o, renderSelectedTab: s } = (0, j.Z)({ tabs: l }, [l]);
     return (0, r.jsxs)(b.Z, {
         className: _.subPanel,
         minHeight: 100,
@@ -163,7 +163,7 @@ function I(e) {
                     (0, r.jsx)(h.ZP.Title, { children: t.name })
                 ]
             }),
-            c({ actionLog: t })
+            s({ actionLog: t })
         ]
     });
 }
@@ -206,7 +206,7 @@ function w() {
                 t
             );
         })(u.Z.actionLogger),
-        c = a.useMemo(
+        s = a.useMemo(
             () =>
                 l.map((e) => ({
                     key: e.id.toString(),
@@ -214,17 +214,19 @@ function w() {
                 })),
             [l]
         ),
-        [s, h] = a.useState(c),
-        [x, f] = a.useState(),
-        p = a.useRef(null),
-        g = a.useCallback(
+        [c, h] = a.useState(s),
+        [x, f] = a.useState(s),
+        [p, g] = a.useState(!1),
+        [b, j] = a.useState(),
+        T = a.useRef(null),
+        S = a.useCallback(
             (0, o.throttle)(
                 async (e, t) => {
                     if ('' === e) {
-                        h(t);
+                        f(t);
                         return;
                     }
-                    p.current = (0, o.uniqueId)();
+                    T.current = (0, o.uniqueId)();
                     let n = await (0, m.H)(
                         t,
                         (e) => {
@@ -234,46 +236,66 @@ function w() {
                         e,
                         !0
                     );
-                    if (null != p.current) h(n);
+                    if (null != T.current) f(n);
                 },
                 300,
                 { leading: !0 }
             ),
             []
+        ),
+        N = a.useCallback(
+            (e) => {
+                h(s), g(e);
+            },
+            [s]
         );
-    return (
+    a.useEffect(() => {
+        if (p) {
+            S(t, null != c ? c : s);
+            return;
+        }
+        S(t, s);
+    }, [p, t, S, s, c]),
         a.useEffect(() => {
-            g(t, c);
-        }, [t, g, c]),
-        a.useEffect(() => {
-            p.current = null;
-        }, []),
-        (0, r.jsxs)('div', {
-            ref: e,
-            className: i()(C.panel, _.panel),
-            children: [
-                (0, r.jsx)('div', {
-                    className: _.toolbar,
-                    children: (0, r.jsx)(d.SearchBar, {
+            T.current = null;
+        }, []);
+    let y = t.trim().length > 0,
+        w = a.useMemo(() => (y ? x : p ? c : s), [s, x, y, p, c]);
+    return (0, r.jsxs)('div', {
+        ref: e,
+        className: i()(C.panel, _.panel),
+        children: [
+            (0, r.jsxs)('div', {
+                className: _.toolbar,
+                children: [
+                    (0, r.jsx)('div', {
+                        title: 'Toggles the flow of Actions',
+                        className: _.pausedEvents,
+                        children: (0, r.jsx)(d.Switch, {
+                            checked: !p,
+                            onChange: (e) => N(!e)
+                        })
+                    }),
+                    (0, r.jsx)(d.SearchBar, {
                         className: _.searchBar,
                         query: t,
                         onChange: n,
                         onClear: () => n(''),
                         placeholder: 'Search by action name'
                     })
-                }),
-                (0, r.jsx)(v.Z, {
-                    columns: k,
-                    data: t.trim().length > 0 ? s : c,
-                    selectedRowKey: null == x ? void 0 : x.id.toString(),
-                    onClickRow: (e) => f(e.actionLog)
-                }),
-                null != x &&
-                    (0, r.jsx)(I, {
-                        actionLog: x,
-                        initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
-                    })
-            ]
-        })
-    );
+                ]
+            }),
+            (0, r.jsx)(v.Z, {
+                columns: k,
+                data: w,
+                selectedRowKey: null == b ? void 0 : b.id.toString(),
+                onClickRow: (e) => j(e.actionLog)
+            }),
+            null != b &&
+                (0, r.jsx)(I, {
+                    actionLog: b,
+                    initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
+                })
+        ]
+    });
 }

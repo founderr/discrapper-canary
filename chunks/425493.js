@@ -1,3 +1,8 @@
+n.d(t, {
+    Z: function () {
+        return f;
+    }
+});
 var r,
     i,
     a = n(200651);
@@ -8,9 +13,8 @@ var s = n(120356),
     u = n(481060),
     c = n(388032),
     d = n(619558);
-((r = i || (i = {})).DEFAULT = ''), (r.BOLD = 'Bold'), (r.SOLID = 'Solid');
-let f = (e) => {
-    let { closeAction: t, variant: n, keybind: r, className: i } = e;
+function f(e) {
+    let { closeAction: t, variant: n = '', keybind: r, className: i } = e;
     return (0, a.jsxs)('div', {
         className: o()(d.container, i),
         children: [
@@ -43,5 +47,5 @@ let f = (e) => {
                   })
         ]
     });
-};
-(f.defaultProps = { variant: '' }), (f.Variants = i), (t.Z = f);
+}
+((r = i || (i = {})).DEFAULT = ''), (r.BOLD = 'Bold'), (r.SOLID = 'Solid'), (f.Variants = i);

@@ -1,48 +1,59 @@
 n.d(t, {
     ZB: function () {
-        return C;
+        return v;
     },
     ZP: function () {
-        return x;
+        return S;
     },
     cF: function () {
-        return m;
+        return f;
     }
 }),
     n(47120),
     n(653041);
 var i = n(200651),
     l = n(192379),
-    r = n(392711),
-    s = n(933546),
-    a = n(314897),
+    a = n(392711),
+    r = n(933546),
+    s = n(314897),
     o = n(70956),
     c = n(823379),
     u = n(27457),
     d = n(354459),
-    h = n(192698);
-let m = 112,
-    p = (16 / 9) * m + 8,
-    f = 10 * o.Z.Millis.SECOND;
+    m = n(192698);
+let f = 112,
+    p = (16 / 9) * f + 8,
+    h = 10 * o.Z.Millis.SECOND;
 function g(e) {
     var t;
-    let n = a.default.getId();
+    let n = s.default.getId();
     return e.type === d.fO.USER && e.user.id === n && (null === (t = e.voiceState) || void 0 === t ? void 0 : t.selfVideo);
 }
-function C(e, t) {
-    let [n, i] = l.useState(Date.now());
+function v(e, t) {
+    let n =
+            arguments.length > 2 && void 0 !== arguments[2]
+                ? arguments[2]
+                : {
+                      tileWidth: p,
+                      tileMinWidth: 124,
+                      tileMargin: 8,
+                      limit: 12,
+                      cropSelfVideo: !1
+                  },
+        { tileWidth: i, tileMinWidth: s, tileMargin: o, limit: u, cropSelfVideo: m, version: f } = n,
+        [v, S] = l.useState(Date.now());
     l.useEffect(() => {
         let e = setTimeout(() => {
-            i(Date.now());
-        }, f);
+            S(Date.now());
+        }, h);
         return () => {
             clearTimeout(e);
         };
     }, [t]);
-    let a = l.useRef({}),
-        { visibleParticipants: o, participantTileWidth: u } = l.useMemo(() => {
+    let I = l.useRef({}),
+        { visibleParticipants: _, participantTileWidth: x } = l.useMemo(() => {
             let n = Date.now(),
-                i = (0, r.sortBy)(t, (e) =>
+                l = (0, a.sortBy)(t, (e) =>
                     (function (e) {
                         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
                         switch (e.type) {
@@ -50,12 +61,12 @@ function C(e, t) {
                                 return '\0'.concat(e.sortKey);
                             case d.fO.HIDDEN_STREAM:
                             case d.fO.STREAM:
-                                return '\x01'.concat((0, s.Z)(e.userNick, e.user));
+                                return '\x01'.concat((0, r.Z)(e.userNick, e.user));
                             case d.fO.USER:
                                 var n;
                                 let i = '\x05';
                                 return (
-                                    e.speaking ? (i = '\x02') : t - e.lastSpoke < f ? (i = '\x03') : (null === (n = e.voiceState) || void 0 === n ? void 0 : n.selfVideo) && (i = '\x04'),
+                                    e.speaking ? (i = '\x02') : t - e.lastSpoke < h ? (i = '\x03') : (null === (n = e.voiceState) || void 0 === n ? void 0 : n.selfVideo) && (i = '\x04'),
                                     ''
                                         .concat(i)
                                         .concat(
@@ -64,78 +75,78 @@ function C(e, t) {
                                                 return String(8640000000000000 - e).padStart(t, '0');
                                             })(e.lastSpoke)
                                         )
-                                        .concat((0, s.Z)(e.userNick, e.user))
+                                        .concat((0, r.Z)(e.userNick, e.user))
                                 );
                         }
                     })(e, n)
                 ),
-                [l, o] = (0, r.partition)(i, d.Io),
-                u = l.findIndex(g),
-                h = null;
-            -1 !== u && ((h = l[u]), l.splice(u, 1));
-            let m = null != h ? e - p - 8 : e,
-                C = Math.max(0, Math.min(Math.floor((m - 8) / 132), 12, t.length)),
-                x = Math.min((m - 8) / C - 8, p),
-                v = Math.max(0, C - o.length),
-                _ = o.slice(0, C),
-                I = l.slice(0, v),
-                E = Array(v);
-            if (v > 0) {
+                [f, p] = (0, a.partition)(l, d.Io),
+                v = f.findIndex(g),
+                S = null;
+            -1 !== v && ((S = f[v]), f.splice(v, 1));
+            let _ = null == S || m ? e : e - i - o,
+                x = Math.max(0, Math.min(Math.floor((_ - o) / (s + o)), u, t.length)),
+                E = Math.min((_ - o) / x - o, i),
+                C = Math.max(0, x - p.length),
+                Z = p.slice(0, x),
+                y = f.slice(0, C),
+                T = Array(C);
+            if (C > 0) {
                 let e = [];
-                for (let t of I) {
-                    let n = a.current[t.id];
-                    null != n && n < v ? (E[n] = t) : e.push(t);
+                for (let t of y) {
+                    let n = I.current[t.id];
+                    null != n && n < C ? (T[n] = t) : e.push(t);
                 }
-                for (let t = 0; t < E.length; t++) {
-                    if (null != E[t]) continue;
+                for (let t = 0; t < T.length; t++) {
+                    if (null != T[t]) continue;
                     let n = e.shift();
                     if (null == n) break;
-                    E[t] = n;
+                    T[t] = n;
                 }
             }
-            let b = E.filter(c.lm),
-                S = (0, r.keyBy)((0, r.range)(b.length), (e) => b[e].id);
-            a.current = S;
-            let Z = [..._, ...b];
+            let b = T.filter(c.lm),
+                A = (0, a.keyBy)((0, a.range)(b.length), (e) => b[e].id);
+            I.current = A;
+            let N = [...Z, ...b];
             return (
-                null != h && Z.push(h),
+                null != S && (m && N.length >= x ? (N[Math.max(0, N.length - 1)] = S) : N.push(S)),
                 {
-                    visibleParticipants: Z,
-                    participantTileWidth: x
+                    visibleParticipants: N,
+                    participantTileWidth: E
                 }
             );
-        }, [e, t, n]);
+        }, [e, t, v, f]);
     return {
-        visibleParticipants: o,
-        participantTileWidth: u
+        visibleParticipants: _,
+        participantTileWidth: x
     };
 }
-function x(e) {
-    let { participants: t, participantTileWidth: n, selectedParticipantId: l, onDoubleClick: r, onContextMenu: s, onClick: a, channel: o, inCall: c, popoutWindow: d, paused: m = !1 } = e,
-        f = null != d;
+function S(e) {
+    let { participants: t, participantTileWidth: n, selectedParticipantId: l, onDoubleClick: a, onContextMenu: r, onClick: s, channel: o, inCall: c, popoutWindow: d, paused: f = !1 } = e,
+        h = null != d;
     return (0, i.jsx)('div', {
-        className: h.root,
+        className: m.root,
         children: t.map((e) => {
             if (null == e) return null;
             let t = g(e);
             return (0, i.jsx)(
                 'div',
                 {
-                    className: h.tileSizer,
+                    className: m.tileSizer,
                     style: t ? { flexShrink: 0 } : void 0,
                     children: (0, i.jsx)(u.ZP, {
                         participant: e,
                         selected: l === e.id,
                         channel: o,
-                        className: h.tile,
+                        className: m.tile,
                         fit: u.BP.COVER,
-                        onClick: a,
-                        onDoubleClick: r,
-                        onContextMenu: s,
+                        onClick: s,
+                        onDoubleClick: a,
+                        onContextMenu: r,
                         width: t ? p : n,
                         inCall: c,
-                        paused: m,
-                        inPopout: f
+                        paused: f,
+                        inPopout: h
                     })
                 },
                 e.id

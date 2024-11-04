@@ -194,7 +194,8 @@ class M extends i.Component {
                     [D.textAreaWithoutAttachmentButton]: g !== T.I.NORMAL && g !== T.I.OVERLAY && g !== T.I.THREAD_CREATION && g !== T.I.SIDEBAR,
                     [D.textAreaForPostCreation]: g === T.I.CREATE_FORUM_POST,
                     [D.textAreaCustomGift]: g === T.I.CUSTOM_GIFT,
-                    [D.textAreaForUserProfile]: g === T.I.USER_PROFILE
+                    [D.textAreaForUserProfile]: g === T.I.USER_PROFILE,
+                    [D.textAreaForOverlayInlineReply]: g === T.I.OVERLAY_INLINE_REPLY
                 }),
                 spellcheckEnabled: S,
                 useNewSlashCommands: y,

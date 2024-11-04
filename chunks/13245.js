@@ -13,7 +13,6 @@ let _ = {
     track(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
             n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (!__OVERLAY__) throw Error('OverlayActionCreators.track: Must be called within Overlay context');
         (0, a.Q)(e, t, n);
     },
     overlayReady(e) {
@@ -41,34 +40,16 @@ let _ = {
             pid: t
         });
     },
-    setUILocked(e, t) {
-        i.Z.dispatch({
-            type: 'OVERLAY_SET_UI_LOCKED',
-            locked: e,
-            pid: t
-        });
-    },
-    setLocked(e, t) {
-        i.Z.dispatch({
-            type: 'OVERLAY_SET_INPUT_LOCKED',
-            locked: e,
-            pid: t
-        }),
-            i.Z.dispatch({
-                type: 'OVERLAY_SET_UI_LOCKED',
-                locked: e,
-                pid: t
-            });
-    },
     setInstanceLocked(e) {
         if (!__OVERLAY__) throw Error('OverlayActionCreators.setInstanceLocked: Must be called within Overlay context');
-        _.setLocked(e, (0, c.QF)());
+        _.setInputLocked(e, (0, c.QF)());
     },
-    setEnabled(e, t) {
+    setEnabled(e, t, n) {
         i.Z.dispatch({
             type: 'OVERLAY_SET_ENABLED',
             enabled: e,
-            legacyEnabled: t
+            legacyEnabled: t,
+            global: n
         });
     },
     selectCall(e) {
@@ -281,7 +262,8 @@ let _ = {
         }
     },
     resetDefaultLayout(e) {
-        if (null != s.Z.getLayout(e)) (0, d.sz)(e), (0, d.jx)(s.Z.getDefaultLayout(e));
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        if (null != s.Z.getLayout(e)) (0, d.sz)(e), (0, d.jx)(s.Z.getDefaultLayout(e, t));
     },
     setClickZones(e) {
         i.Z.dispatch({

@@ -2,8 +2,11 @@ n.d(t, {
     $s: function () {
         return S;
     },
-    DE: function () {
+    Ay: function () {
         return A;
+    },
+    DE: function () {
+        return N;
     },
     Fv: function () {
         return E;
@@ -33,7 +36,7 @@ n.d(t, {
         return m;
     },
     nf: function () {
-        return N;
+        return C;
     },
     o: function () {
         return v;
@@ -89,7 +92,7 @@ async function p(e) {
     return (
         clearTimeout(o),
         s
-            ? N(a, n) && v(a, l, r.onCloseRequest, r.onCloseCallback, n)
+            ? C(a, n) && v(a, l, r.onCloseRequest, r.onCloseCallback, n)
             : m(
                   l,
                   {
@@ -246,11 +249,16 @@ function y() {
     let e = h.getState();
     for (let t in e) for (let n of e[t]) g(n.key, t);
 }
-function A(e, t) {
+function A() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : f(),
+        t = h.getState()[e];
+    if (null != t) for (let n of t) g(n.key, e);
+}
+function N(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.z1,
         r = e[n];
     return null != r && r.some((e) => e.key === t);
 }
-function N(e, t) {
-    return A(h.getState(), e, t);
+function C(e, t) {
+    return N(h.getState(), e, t);
 }

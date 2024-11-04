@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     s = n(512722),
-    l = n.n(s),
-    a = n(442837),
+    a = n.n(s),
+    l = n(442837),
     o = n(481060),
     c = n(493683),
     d = n(13245),
@@ -16,14 +16,14 @@ var i = n(200651),
     h = n(835473),
     p = n(194082),
     f = n(442550),
-    m = n(297781),
-    g = n(371991),
+    g = n(297781),
+    m = n(371991),
     v = n(656709),
     _ = n(561308),
     E = n(593481),
     x = n(703656),
-    I = n(199902),
-    Z = n(592125),
+    Z = n(199902),
+    I = n(592125),
     S = n(158776),
     C = n(594174),
     y = n(5192),
@@ -31,7 +31,7 @@ var i = n(200651),
     T = n(981631),
     b = n(701488),
     O = n(987650),
-    R = n(388032),
+    j = n(388032),
     A = n(810489);
 function P(e) {
     let { game: t } = e,
@@ -56,15 +56,15 @@ function P(e) {
         })
     });
 }
-function j(e) {
+function R(e) {
     let { entry: t, idx: n } = e,
-        s = (0, a.e7)([C.default], () => C.default.getUser(t.author_id)),
+        s = (0, l.e7)([C.default], () => C.default.getUser(t.author_id)),
         h = (0, _.kr)(t),
         f = h ? o.tokens.colors.TEXT_POSITIVE : o.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
         [E, N] = r.useState('unsent'),
         [b, O] = r.useState(!1),
-        P = (0, a.e7)([I.Z], () => (null != s ? I.Z.getAnyStreamForUser(s.id) : null), [s]),
-        { isMobileOnline: j, status: L } = (0, a.cj)(
+        P = (0, l.e7)([Z.Z], () => (null != s ? Z.Z.getAnyStreamForUser(s.id) : null), [s]),
+        { isMobileOnline: R, status: L } = (0, l.cj)(
             [S.Z],
             () =>
                 null == s
@@ -91,12 +91,12 @@ function j(e) {
                     var i;
                     N('sending');
                     let e = await c.Z.getOrEnsurePrivateChannel(s.id),
-                        r = null !== (i = Z.Z.getChannel(e)) && void 0 !== i ? i : null;
-                    l()(null != r, 'Send channel must be defined'),
+                        r = null !== (i = I.Z.getChannel(e)) && void 0 !== i ? i : null;
+                    a()(null != r, 'Send channel must be defined'),
                         (0, x.uL)(T.Z5c.CHANNEL(r.guild_id, r.id)),
                         await (0, v.p)({
                             channel: r,
-                            content: R.intl.string(R.t.DwAcMz),
+                            content: j.intl.string(j.t.DwAcMz),
                             entry: t,
                             whenReady: !0
                         }),
@@ -115,8 +115,8 @@ function j(e) {
             var e;
             if (null == s) return;
             let t = await c.Z.getOrEnsurePrivateChannel(s.id),
-                n = null !== (e = Z.Z.getChannel(t)) && void 0 !== e ? e : null;
-            l()(null != n, 'Send channel must be defined'), (0, x.uL)(T.Z5c.CHANNEL(n.guild_id, n.id));
+                n = null !== (e = I.Z.getChannel(t)) && void 0 !== e ? e : null;
+            a()(null != n, 'Send channel must be defined'), (0, x.uL)(T.Z5c.CHANNEL(n.guild_id, n.id));
         };
     return null == s
         ? null
@@ -126,7 +126,7 @@ function j(e) {
                   (0, i.jsx)(u.Z, {
                       className: A.avatarContainer,
                       user: s,
-                      isMobile: j,
+                      isMobile: R,
                       status: L
                   }),
                   (0, i.jsxs)('div', {
@@ -144,13 +144,13 @@ function j(e) {
                                   null != P && (0, i.jsx)(p.ZP, {})
                               ]
                           }),
-                          (0, i.jsxs)(m.m7, {
+                          (0, i.jsxs)(g.m7, {
                               children: [
                                   (0, i.jsx)(o.GameControllerIcon, {
                                       size: 'xxs',
                                       color: f
                                   }),
-                                  (0, i.jsx)(g.ZP, {
+                                  (0, i.jsx)(m.ZP, {
                                       entry: t,
                                       textColor: h ? 'text-positive' : 'content-inventory-overlay-text-secondary',
                                       bold: !0
@@ -192,11 +192,11 @@ function L(e) {
                 className: A.helpText,
                 variant: 'text-sm/medium',
                 color: 'header-secondary',
-                children: [(0, i.jsx)(o.ChatPlusIcon, { size: 'xxs' }), R.intl.string(R.t.y9eo7e)]
+                children: [(0, i.jsx)(o.ChatPlusIcon, { size: 'xxs' }), j.intl.string(j.t.y9eo7e)]
             }),
             n.map((e, t) =>
                 (0, i.jsx)(
-                    j,
+                    R,
                     {
                         idx: t,
                         entry: e
@@ -210,9 +210,8 @@ function L(e) {
 function w(e, t) {
     let { trackView: n, trackClick: r } = (0, N.R)(O.n0.SendGameInvitesNotification, { notif_type: O.n0.SendGameInvitesNotification });
     return (
-        l()(t.length > 0, 'Some entries must be present'),
+        a()(t.length > 0, 'Some entries must be present'),
         {
-            colorScheme: E.IC.PRIMARY,
             icon: null,
             title: (0, i.jsx)(P, { game: e }),
             body: (0, i.jsx)(L, { entries: t }),

@@ -23,21 +23,23 @@ var i = n(200651),
     N = n(112831),
     A = n(482215),
     b = n(38618),
-    v = n(921801),
-    j = n(857192),
-    O = n(558724),
-    R = n(808506),
-    P = n(998502),
-    D = n(210887),
-    y = n(601948),
-    B = n(726985),
-    L = n(981631),
-    Z = n(908442),
-    F = n(933553),
-    M = n(869042),
-    k = n(113207),
-    w = n(112864);
-function U(e, t, n) {
+    v = n(568963),
+    j = n(388627),
+    O = n(921801),
+    R = n(857192),
+    P = n(558724),
+    D = n(808506),
+    y = n(998502),
+    B = n(210887),
+    L = n(601948),
+    Z = n(726985),
+    F = n(981631),
+    M = n(908442),
+    k = n(933553),
+    w = n(869042),
+    U = n(113207),
+    V = n(112864);
+function G(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -50,8 +52,8 @@ function U(e, t, n) {
         e
     );
 }
-let V = ['discord_web', 'discord_marketing', 'discord_developers', 'discord_ios', 'discord_android'],
-    G = [
+let Y = ['discord_web', 'discord_marketing', 'discord_developers', 'discord_ios', 'discord_android'],
+    H = [
         {
             value: 'branch',
             label: 'Branch Name'
@@ -61,30 +63,30 @@ let V = ['discord_web', 'discord_marketing', 'discord_developers', 'discord_ios'
             label: 'Build ID'
         }
     ];
-function Y(e) {
+function z(e) {
     return 'discord_ios' in e || 'discord_android' in e;
 }
-class H extends s.Component {
+class W extends s.Component {
     render() {
         let { project: e, overrideType: t, overrideId: n, disabled: s, error: r } = this.props;
         return (0, i.jsxs)(I.Z, {
             direction: I.Z.Direction.VERTICAL,
-            className: l()(F.buildOverrideGroup, k.marginBottom20, M.card, F.row),
+            className: l()(k.buildOverrideGroup, U.marginBottom20, w.card, k.row),
             children: [
                 (0, i.jsx)(S.Z, {
-                    className: l()(F.removeBuildOverride, { [F.removeBuildOverrideDisabled]: s }),
+                    className: l()(k.removeBuildOverride, { [k.removeBuildOverrideDisabled]: s }),
                     onClick: s ? void 0 : this.handleRemoveBuildOverride
                 }),
                 (0, i.jsxs)(I.Z, {
-                    className: k.marginBottom8,
+                    className: U.marginBottom8,
                     children: [
                         (0, i.jsx)(I.Z.Child, {
                             basis: '50%',
                             children: (0, i.jsx)(m.FormItem, {
                                 title: 'Override Type',
-                                className: F.item,
+                                className: k.item,
                                 children: (0, i.jsx)(m.SingleSelect, {
-                                    options: G,
+                                    options: H,
                                     onChange: this.handleOverrideTypeChanged,
                                     value: t,
                                     isDisabled: s
@@ -95,7 +97,7 @@ class H extends s.Component {
                             basis: '50%',
                             children: (0, i.jsx)(m.FormItem, {
                                 title: 'branch' === t ? 'Branch Name' : 'Build ID',
-                                className: F.item,
+                                className: k.item,
                                 children: (0, i.jsx)(m.TextInput, {
                                     value: n,
                                     onChange: this.handleOverrideIdChanged,
@@ -110,13 +112,13 @@ class H extends s.Component {
                         null != r &&
                             '' !== r &&
                             (0, i.jsx)(m.FormText, {
-                                className: F.item,
+                                className: k.item,
                                 style: { color: u.Z.unsafe_rawColors.RED_400.css },
                                 type: m.FormText.Types.DESCRIPTION,
                                 children: r
                             }),
                         (0, i.jsxs)(m.FormText, {
-                            className: F.item,
+                            className: k.item,
                             type: m.FormText.Types.DESCRIPTION,
                             children: ['This controls the build that will be served for the ', (0, i.jsx)('code', { children: e }), ' project.']
                         })
@@ -127,13 +129,13 @@ class H extends s.Component {
     }
     constructor(...e) {
         super(...e),
-            U(this, 'handleRemoveBuildOverride', () => {
+            G(this, 'handleRemoveBuildOverride', () => {
                 this.props.onBuildOverrideRemoved(this.props.project);
             }),
-            U(this, 'handleOverrideIdChanged', (e) => {
+            G(this, 'handleOverrideIdChanged', (e) => {
                 this.props.onBuildOverrideUpdated(this.props.project, { id: e });
             }),
-            U(this, 'handleOverrideTypeChanged', (e) => {
+            G(this, 'handleOverrideTypeChanged', (e) => {
                 this.props.onBuildOverrideUpdated(this.props.project, {
                     type: e,
                     id: ''
@@ -141,7 +143,7 @@ class H extends s.Component {
             });
     }
 }
-class z extends s.Component {
+class K extends s.Component {
     async refreshBuildOverrides() {
         this.setState({ loading: !0 });
         let e = await (0, _.Ce)();
@@ -163,12 +165,12 @@ class z extends s.Component {
         let { buildOverrides: e } = this.state;
         if (null == e) return [];
         let t = Object.keys(e);
-        return o().without(V, ...t);
+        return o().without(Y, ...t);
     }
     renderEmpty() {
         return (0, i.jsxs)(m.EmptyState, {
-            theme: D.Z.theme,
-            className: l()(k.marginTop40, k.marginBottom20),
+            theme: B.Z.theme,
+            className: l()(U.marginTop40, U.marginBottom20),
             children: [
                 (0, i.jsx)(m.EmptyStateImage, {
                     darkSrc: n(770227),
@@ -186,7 +188,7 @@ class z extends s.Component {
             ? null
             : o().map(e, (e, s) =>
                   (0, i.jsx)(
-                      H,
+                      W,
                       {
                           project: s,
                           overrideType: e.type,
@@ -243,7 +245,7 @@ class z extends s.Component {
                 (0, i.jsx)(I.Z.Child, {
                     grow: 0,
                     children: (0, i.jsx)(m.Button, {
-                        disabled: Y(null != t ? t : {}),
+                        disabled: z(null != t ? t : {}),
                         onClick: this.handleSaveChanges,
                         submitting: e,
                         color: m.Button.Colors.GREEN,
@@ -265,23 +267,23 @@ class z extends s.Component {
     render() {
         let e;
         let { loading: t, saving: n, buildOverrides: s } = this.state;
-        e = t ? (0, i.jsx)(m.Spinner, { className: k.marginTop20 }) : null != s && 0 === Object.keys(s).length ? this.renderEmpty() : this.renderItems();
+        e = t ? (0, i.jsx)(m.Spinner, { className: U.marginTop20 }) : null != s && 0 === Object.keys(s).length ? this.renderEmpty() : this.renderItems();
         let r = !n && !t && this.getAvailableProjects().length > 0,
             l =
-                Y(null != s ? s : {}) && 'stable' !== window.GLOBAL_ENV.RELEASE_CHANNEL
+                z(null != s ? s : {}) && 'stable' !== window.GLOBAL_ENV.RELEASE_CHANNEL
                     ? (0, i.jsx)(m.Text, {
                           color: 'text-danger',
                           variant: 'text-md/normal',
                           children: 'Mobile build overrides must be generated using the desktop/web stable client for now!'
                       })
                     : null;
-        return (0, i.jsx)(v.F, {
-            setting: B.s6.DEVELOPER_OPTIONS_BUILD_OVERRIDE,
+        return (0, i.jsx)(O.F, {
+            setting: Z.s6.DEVELOPER_OPTIONS_BUILD_OVERRIDE,
             children: (0, i.jsxs)(m.FormSection, {
-                className: k.marginTop60,
+                className: U.marginTop60,
                 children: [
                     (0, i.jsxs)(I.Z, {
-                        className: k.marginBottom20,
+                        className: U.marginBottom20,
                         children: [
                             (0, i.jsx)(I.Z.Child, {
                                 children: (0, i.jsx)(m.FormTitle, {
@@ -319,7 +321,7 @@ class z extends s.Component {
     }
     constructor(...e) {
         super(...e),
-            U(this, 'state', {
+            G(this, 'state', {
                 loading: !0,
                 buildOverrides: {},
                 loadedBuildOverrides: {},
@@ -327,7 +329,7 @@ class z extends s.Component {
                 saving: !1,
                 didSave: !1
             }),
-            U(this, 'handleAddBuildOverride', async () => {
+            G(this, 'handleAddBuildOverride', async () => {
                 var e;
                 let t = await ((e = this.getAvailableProjects()),
                 new Promise((t) => {
@@ -348,7 +350,7 @@ class z extends s.Component {
                                 }),
                                 (0, i.jsx)(m.ModalContent, {
                                     children: (0, i.jsx)('div', {
-                                        className: F.buildOverrideList,
+                                        className: k.buildOverrideList,
                                         children: e.map((e) =>
                                             (0, i.jsx)(
                                                 m.Button,
@@ -385,7 +387,7 @@ class z extends s.Component {
                 };
                 this.setState({ buildOverrides: n });
             }),
-            U(this, 'handleBuildOverrideUpdated', (e, t) => {
+            G(this, 'handleBuildOverrideUpdated', (e, t) => {
                 let { buildOverrides: n } = this.state,
                     i = {
                         ...(null != n ? n[e] : {}),
@@ -397,18 +399,18 @@ class z extends s.Component {
                     };
                 this.setState({ buildOverrides: s });
             }),
-            U(this, 'handleBuildOverrideRemoved', (e) => {
+            G(this, 'handleBuildOverrideRemoved', (e) => {
                 let t = { ...this.state.buildOverrides };
                 delete t[e], this.setState({ buildOverrides: t });
             }),
-            U(this, 'handleDiscardChanges', () => {
+            G(this, 'handleDiscardChanges', () => {
                 this.setState({
                     buildOverrides: o().cloneDeep(this.state.loadedBuildOverrides),
                     errors: {},
                     didSave: !1
                 });
             }),
-            U(this, 'handleSaveChanges', async () => {
+            G(this, 'handleSaveChanges', async () => {
                 let { buildOverrides: e } = this.state;
                 if (null == e) return;
                 this.setState({ saving: !0 });
@@ -435,10 +437,10 @@ class z extends s.Component {
                         didSave: !1
                     });
             }),
-            U(this, 'handleLinkGeneration', () => {
+            G(this, 'handleLinkGeneration', () => {
                 let { buildOverrides: e } = this.state;
                 (0, m.openModal)((t) =>
-                    (0, i.jsx)(W, {
+                    (0, i.jsx)(q, {
                         ...t,
                         buildOverrides: e
                     })
@@ -446,14 +448,14 @@ class z extends s.Component {
             });
     }
 }
-class W extends s.Component {
+class q extends s.Component {
     isMobile() {
         var e;
-        return Y(null !== (e = this.props.buildOverrides) && void 0 !== e ? e : {});
+        return z(null !== (e = this.props.buildOverrides) && void 0 !== e ? e : {});
     }
     renderSettingsForm() {
         let { ttlSeconds: e, releaseChannel: t, userIdEntry: n, userIdEntryError: s, allowedVersions: r, allowedVersionEntry: l, allowedVersionEntryError: a, allowLoggedOut: o, experiments: c, experimentsError: d } = this.state,
-            u = Z.S6.find((t) => t.value === e),
+            u = M.S6.find((t) => t.value === e),
             h = r.map((e) => ({
                 label: e,
                 value: e
@@ -463,10 +465,10 @@ class W extends s.Component {
             children: [
                 (0, i.jsx)(m.FormItem, {
                     title: 'Expire After',
-                    className: k.marginBottom20,
+                    className: U.marginBottom20,
                     children: (0, i.jsx)(m.SingleSelect, {
                         value: null != u ? u.value : null,
-                        options: Z.S6,
+                        options: M.S6,
                         onChange: this.handleExpirationChange
                     })
                 }),
@@ -474,10 +476,10 @@ class W extends s.Component {
                     ? null
                     : (0, i.jsx)(m.FormItem, {
                           title: 'Release Channel',
-                          className: k.marginBottom20,
+                          className: U.marginBottom20,
                           children: (0, i.jsx)(m.SingleSelect, {
                               value: t,
-                              options: Z.F$,
+                              options: M.F$,
                               onChange: this.handleReleaseChannelChange
                           })
                       }),
@@ -486,7 +488,7 @@ class W extends s.Component {
                           children: [
                               (0, i.jsx)(m.FormItem, {
                                   title: 'Add allowed app version (required)',
-                                  className: k.marginBottom20,
+                                  className: U.marginBottom20,
                                   children: (0, i.jsxs)(I.Z, {
                                       direction: I.Z.Direction.HORIZONTAL,
                                       children: [
@@ -511,7 +513,7 @@ class W extends s.Component {
                               }),
                               (0, i.jsx)(m.FormItem, {
                                   title: 'Remove allowed app version',
-                                  className: k.marginBottom20,
+                                  className: U.marginBottom20,
                                   children: (0, i.jsx)(m.SingleSelect, {
                                       value: null,
                                       options: h,
@@ -527,7 +529,7 @@ class W extends s.Component {
                     : (0, i.jsx)(i.Fragment, {
                           children: (0, i.jsxs)(m.FormItem, {
                               title: 'Limit to User IDs (optional)',
-                              className: k.marginBottom20,
+                              className: U.marginBottom20,
                               children: [
                                   (0, i.jsx)(I.Z, {
                                       direction: I.Z.Direction.HORIZONTAL,
@@ -545,7 +547,7 @@ class W extends s.Component {
                                   (0, i.jsx)(m.Text, {
                                       variant: 'text-sm/normal',
                                       color: 'text-muted',
-                                      className: k.marginTop8,
+                                      className: U.marginTop8,
                                       children: 'User IDs can be separated by whitespace or commas.'
                                   })
                               ]
@@ -553,7 +555,7 @@ class W extends s.Component {
                       }),
                 (0, i.jsxs)(m.FormItem, {
                     title: 'Client Experiment Override',
-                    className: k.marginBottom20,
+                    className: U.marginBottom20,
                     children: [
                         (0, i.jsx)(I.Z, {
                             direction: I.Z.Direction.HORIZONTAL,
@@ -571,7 +573,7 @@ class W extends s.Component {
                         (0, i.jsx)(m.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-muted',
-                            className: k.marginTop8,
+                            className: U.marginTop8,
                             children: 'Locally override the given experiments to the given bucket. This ONLY applies locally and WILL NOT affect the server. When the user clears build override, the experiment override is removed as well.'
                         })
                     ]
@@ -596,7 +598,7 @@ class W extends s.Component {
                     return null == s
                         ? t()
                         : (0, i.jsx)('code', {
-                              className: 'hljs scroller '.concat(s.language, ' ').concat(w.scrollbarGhost, ' ').concat(F.codebox),
+                              className: 'hljs scroller '.concat(s.language, ' ').concat(V.scrollbarGhost, ' ').concat(k.codebox),
                               dangerouslySetInnerHTML: { __html: s.value }
                           });
                 }
@@ -625,7 +627,7 @@ class W extends s.Component {
                 }),
                 (0, i.jsx)(N.Z, {
                     color: e,
-                    className: ''.concat(k.marginBottom8, ' ').concat(k.marginTop8),
+                    className: ''.concat(U.marginBottom8, ' ').concat(U.marginTop8),
                     children: t
                 })
             ]
@@ -662,7 +664,7 @@ class W extends s.Component {
     }
     constructor(...e) {
         super(...e),
-            U(this, 'state', {
+            G(this, 'state', {
                 ttlSeconds: 3600,
                 releaseChannel: 'all',
                 userIds: new Set(),
@@ -676,16 +678,16 @@ class W extends s.Component {
                 statusTextColor: N.Z.Colors.STATUS_RED,
                 allowLoggedOut: !1
             }),
-            U(this, 'setUserEntryError', (e) => {
+            G(this, 'setUserEntryError', (e) => {
                 this.setState({ userIdEntryError: e });
             }),
-            U(this, 'setStatusMessage', (e, t) => {
+            G(this, 'setStatusMessage', (e, t) => {
                 this.setState({
                     statusText: e,
                     statusTextColor: null != t ? t : N.Z.Colors.STATUS_RED
                 });
             }),
-            U(this, 'handleUserIDEntry', (e) => {
+            G(this, 'handleUserIDEntry', (e) => {
                 if (!/^[\d\s,]*$/.test(e)) return this.setUserEntryError('User IDs are numbers!');
                 let t = new Set(e.split(/[,\s]+/).filter(Boolean));
                 this.setState({
@@ -693,16 +695,16 @@ class W extends s.Component {
                     userIds: t
                 });
             }),
-            U(this, 'setAllowedVersionError', (e) => {
+            G(this, 'setAllowedVersionError', (e) => {
                 this.setState({ allowedVersionEntryError: e });
             }),
-            U(this, 'handleAllowedVersionEntry', (e) => {
+            G(this, 'handleAllowedVersionEntry', (e) => {
                 this.setState({ allowedVersionEntry: e });
             }),
-            U(this, 'handleAllowedVersionEnter', (e) => {
-                e.charCode === L.yXg.ENTER && this.handleAddAllowedVersion();
+            G(this, 'handleAllowedVersionEnter', (e) => {
+                e.charCode === F.yXg.ENTER && this.handleAddAllowedVersion();
             }),
-            U(this, 'handleAddAllowedVersion', () => {
+            G(this, 'handleAddAllowedVersion', () => {
                 let { allowedVersions: e, allowedVersionEntry: t } = this.state;
                 return 0 === (t = t.trim()).length
                     ? this.setAllowedVersionError('Enter a valid version number!')
@@ -714,20 +716,20 @@ class W extends s.Component {
                             allowedVersionEntryError: ''
                         });
             }),
-            U(this, 'handleRemoveAllowedVersion', (e) => {
+            G(this, 'handleRemoveAllowedVersion', (e) => {
                 let { allowedVersions: t } = this.state;
                 (t = t.filter((t) => t !== e)), this.setState({ allowedVersions: t });
             }),
-            U(this, 'handleAllowLoggedOut', (e) => {
+            G(this, 'handleAllowLoggedOut', (e) => {
                 this.setState({ allowLoggedOut: e });
             }),
-            U(this, 'handleExpirationChange', (e) => {
+            G(this, 'handleExpirationChange', (e) => {
                 this.setState({ ttlSeconds: e });
             }),
-            U(this, 'handleReleaseChannelChange', (e) => {
+            G(this, 'handleReleaseChannelChange', (e) => {
                 this.setState({ releaseChannel: e });
             }),
-            U(this, 'handleExperiments', (e) => {
+            G(this, 'handleExperiments', (e) => {
                 if (0 === e.trim().length) {
                     this.setState({ experimentsError: void 0 });
                     return;
@@ -753,7 +755,7 @@ class W extends s.Component {
                     experimentsError: void 0
                 });
             }),
-            U(this, 'generatePayload', () => ({
+            G(this, 'generatePayload', () => ({
                 overrides: this.props.buildOverrides,
                 meta: {
                     release_channel: 'all' === this.state.releaseChannel ? null : this.state.releaseChannel,
@@ -764,7 +766,7 @@ class W extends s.Component {
                     experiments: null == this.state.experiments ? null : JSON.parse(this.state.experiments)
                 }
             })),
-            U(this, 'handleGenerateLink', async () => {
+            G(this, 'handleGenerateLink', async () => {
                 if (this.isMobile() && 0 === this.state.allowedVersions.length) {
                     this.setAllowedVersionError('You must add at least one allowed version for iOS');
                     return;
@@ -776,7 +778,7 @@ class W extends s.Component {
             });
     }
 }
-function K(e) {
+function Q(e) {
     let { layoutDebuggingEnabled: t, cssDebuggingEnabled: n } = e,
         { horizontalSpacing: r, verticalSpacing: l, maxHorizontalSpacing: a, maxVerticalSpacing: o } = (0, A.i)(),
         c = s.useMemo(() => Array.from({ length: a + 1 }, (e, t) => t), [a]),
@@ -787,8 +789,8 @@ function K(e) {
                 tag: m.FormTitleTags.H1,
                 children: 'Design Tools'
             }),
-            (0, i.jsx)(v.F, {
-                setting: B.s6.DEVELOPER_OPTIONS_CSS_DEBUGGING,
+            (0, i.jsx)(O.F, {
+                setting: Z.s6.DEVELOPER_OPTIONS_CSS_DEBUGGING,
                 children: (0, i.jsx)(m.FormSwitch, {
                     value: n,
                     note: 'Display raw colors as pink. Toggling this will refresh the browser.',
@@ -798,8 +800,8 @@ function K(e) {
                     children: 'Enable CSS Debugging'
                 })
             }),
-            (0, i.jsx)(v.F, {
-                setting: B.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING,
+            (0, i.jsx)(O.F, {
+                setting: Z.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING,
                 children: (0, i.jsx)(m.FormSwitch, {
                     value: t,
                     note: 'Renders a grid on top of the app to help debug layout alignment issues.',
@@ -809,15 +811,15 @@ function K(e) {
                     children: 'Enable Layout Debugging'
                 })
             }),
-            (0, i.jsxs)(v.F, {
-                setting: B.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING_OPTIONS,
+            (0, i.jsxs)(O.F, {
+                setting: Z.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING_OPTIONS,
                 children: [
                     (0, i.jsxs)(m.FormSection, {
-                        className: k.marginBottom20,
+                        className: U.marginBottom20,
                         children: [
                             (0, i.jsx)(m.FormTitle, { children: 'Horizontal Grid Spacing' }),
                             (0, i.jsx)(m.FormText, {
-                                className: k.marginBottom20,
+                                className: U.marginBottom20,
                                 type: m.FormTextTypes.DESCRIPTION,
                                 children: 'Adjust the spacing between horizontal grid lines. Set to 0 to disable horizontal grid lines.'
                             }),
@@ -834,11 +836,11 @@ function K(e) {
                         ]
                     }),
                     (0, i.jsxs)(m.FormSection, {
-                        className: k.marginBottom20,
+                        className: U.marginBottom20,
                         children: [
                             (0, i.jsx)(m.FormTitle, { children: 'Vertical Grid Spacing' }),
                             (0, i.jsx)(m.FormText, {
-                                className: k.marginBottom20,
+                                className: U.marginBottom20,
                                 type: m.FormTextTypes.DESCRIPTION,
                                 children: 'Adjust the spacing between vertical grid lines. Set to 0 to disable vertical grid lines.'
                             }),
@@ -859,34 +861,40 @@ function K(e) {
         ]
     });
 }
-function q() {
+function X() {
     throw Error('Send help');
 }
-function Q() {
-    let [e, t] = s.useState(!1),
-        [n, r] = s.useState('');
+function J() {
+    let { useOverlayV3: e } = v.Z.useExperiment({ location: 'developer_settings' }),
+        [t, n] = s.useState(!1),
+        [r, l] = s.useState('');
     return (s.useEffect(() => {
         (async () => {
-            r(await (0, R.Y)());
+            l(await (0, D.Y)());
         })();
     }, []),
-    e)
+    t)
         ? {}
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsxs)('div', {
-                      className: [F.buttonsContainer, k.marginBottom20].join(' '),
+                      className: [k.buttonsContainer, U.marginBottom20].join(' '),
                       children: [
-                          (0, i.jsx)(v.F, {
-                              setting: B.s6.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY,
-                              children: (0, i.jsx)(m.Button, {
-                                  onClick: () => window.open(n, '_blank'),
-                                  disabled: '' === n,
-                                  children: 'Open Overlay'
-                              })
+                          (0, i.jsx)(O.F, {
+                              setting: Z.s6.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY,
+                              children: e
+                                  ? (0, i.jsx)(m.Button, {
+                                        onClick: j.fK,
+                                        children: 'Open Overlay'
+                                    })
+                                  : (0, i.jsx)(m.Button, {
+                                        onClick: () => window.open(r, '_blank'),
+                                        disabled: '' === r,
+                                        children: 'Open Overlay'
+                                    })
                           }),
-                          (0, i.jsx)(v.F, {
-                              setting: B.s6.DEVELOPER_OPTIONS_RESET_SOCKET,
+                          (0, i.jsx)(O.F, {
+                              setting: Z.s6.DEVELOPER_OPTIONS_RESET_SOCKET,
                               children: (0, i.jsx)(m.Button, {
                                   onClick: () => {
                                       b.Z.getSocket().close(), b.Z.getSocket().connect();
@@ -894,8 +902,8 @@ function Q() {
                                   children: 'Reset Socket'
                               })
                           }),
-                          (0, i.jsx)(v.F, {
-                              setting: B.s6.DEVELOPER_OPTIONS_CLEAR_CACHES,
+                          (0, i.jsx)(O.F, {
+                              setting: Z.s6.DEVELOPER_OPTIONS_CLEAR_CACHES,
                               children: (0, i.jsx)(m.Button, {
                                   onClick: () => {
                                       h.Z.dispatch({
@@ -910,13 +918,13 @@ function Q() {
                           })
                       ]
                   }),
-                  (0, i.jsx)(v.F, {
-                      setting: B.s6.DEVELOPER_OPTIONS_CRASHES,
+                  (0, i.jsx)(O.F, {
+                      setting: Z.s6.DEVELOPER_OPTIONS_CRASHES,
                       children: (0, i.jsx)(m.FormSection, {
                           title: 'Crashes',
                           tag: m.FormTitleTags.H1,
                           children: (0, i.jsxs)('div', {
-                              className: F.buttonsContainer,
+                              className: k.buttonsContainer,
                               children: [
                                   (0, i.jsx)(m.SingleSelect, {
                                       value: void 0,
@@ -946,7 +954,7 @@ function Q() {
                                               label: 'Out of Memory'
                                           }
                                       ],
-                                      onChange: (e) => null != e && P.ZP.crash(e)
+                                      onChange: (e) => null != e && y.ZP.crash(e)
                                   }),
                                   (0, i.jsx)(m.SingleSelect, {
                                       value: void 0,
@@ -970,15 +978,15 @@ function Q() {
                                       ],
                                       onChange: (e) => {
                                           var t;
-                                          return null != e ? ((t = e), void P.ZP.triggerJSException(t)) : void 0;
+                                          return null != e ? ((t = e), void y.ZP.triggerJSException(t)) : void 0;
                                       }
                                   }),
                                   (0, i.jsx)(m.Button, {
-                                      onClick: () => t(!0),
+                                      onClick: () => n(!0),
                                       children: 'React Crash'
                                   }),
                                   (0, i.jsx)(m.Button, {
-                                      onClick: q,
+                                      onClick: X,
                                       children: 'onClick Throw'
                                   })
                               ]
@@ -988,31 +996,31 @@ function Q() {
               ]
           });
 }
-let X = d.ZP.connectStores([j.default], () => ({
-    isTracingRequests: j.default.isTracingRequests,
-    isForcedCanary: j.default.isForcedCanary,
-    isLoggingGatewayEvents: j.default.isLoggingGatewayEvents,
-    isLoggingOverlayEvents: j.default.isLoggingOverlayEvents,
-    isLoggingAnalyticsEvents: j.default.isLoggingAnalyticsEvents,
-    isAxeEnabled: j.default.isAxeEnabled,
-    cssDebuggingEnabled: j.default.cssDebuggingEnabled,
-    layoutDebuggingEnabled: j.default.layoutDebuggingEnabled,
-    isSourceMapsEnabled: j.default.sourceMapsEnabled,
-    isAnalyticsDebuggerEnabled: j.default.isAnalyticsDebuggerEnabled,
-    isIdleStatusIndicatorEnabled: j.default.isIdleStatusIndicatorEnabled,
-    appDirectoryIncludesInactiveCollections: j.default.appDirectoryIncludesInactiveCollections
+let $ = d.ZP.connectStores([R.default], () => ({
+    isTracingRequests: R.default.isTracingRequests,
+    isForcedCanary: R.default.isForcedCanary,
+    isLoggingGatewayEvents: R.default.isLoggingGatewayEvents,
+    isLoggingOverlayEvents: R.default.isLoggingOverlayEvents,
+    isLoggingAnalyticsEvents: R.default.isLoggingAnalyticsEvents,
+    isAxeEnabled: R.default.isAxeEnabled,
+    cssDebuggingEnabled: R.default.cssDebuggingEnabled,
+    layoutDebuggingEnabled: R.default.layoutDebuggingEnabled,
+    isSourceMapsEnabled: R.default.sourceMapsEnabled,
+    isAnalyticsDebuggerEnabled: R.default.isAnalyticsDebuggerEnabled,
+    isIdleStatusIndicatorEnabled: R.default.isIdleStatusIndicatorEnabled,
+    appDirectoryIncludesInactiveCollections: R.default.appDirectoryIncludesInactiveCollections
 }))((e) => {
     let { isTracingRequests: t, isForcedCanary: n, isLoggingGatewayEvents: s, isLoggingOverlayEvents: r, isLoggingAnalyticsEvents: l, isAxeEnabled: a, cssDebuggingEnabled: o, layoutDebuggingEnabled: c, isSourceMapsEnabled: d, isAnalyticsDebuggerEnabled: u, isIdleStatusIndicatorEnabled: h, appDirectoryIncludesInactiveCollections: g } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(v.F, {
-                setting: B.s6.DEVELOPER_OPTIONS_FLAGS,
+            (0, i.jsx)(O.F, {
+                setting: Z.s6.DEVELOPER_OPTIONS_FLAGS,
                 children: (0, i.jsxs)(m.FormSection, {
                     title: 'Developer Flags',
                     tag: m.FormTitleTags.H1,
                     children: [
-                        (0, i.jsx)(v.F, {
-                            setting: B.s6.DEVELOPER_OPTIONS_TRACING_REQUESTS,
+                        (0, i.jsx)(O.F, {
+                            setting: Z.s6.DEVELOPER_OPTIONS_TRACING_REQUESTS,
                             children: (0, i.jsx)(m.FormSwitch, {
                                 value: t,
                                 note: 'Force trace all client requests with APM',
@@ -1020,8 +1028,8 @@ let X = d.ZP.connectStores([j.default], () => ({
                                 children: 'Enable Tracing Requests'
                             })
                         }),
-                        (0, i.jsx)(v.F, {
-                            setting: B.s6.DEVELOPER_OPTIONS_FORCED_CANARY,
+                        (0, i.jsx)(O.F, {
+                            setting: Z.s6.DEVELOPER_OPTIONS_FORCED_CANARY,
                             children: (0, i.jsx)(m.FormSwitch, {
                                 value: n,
                                 note: 'Force all API requests to canary instances',
@@ -1029,8 +1037,8 @@ let X = d.ZP.connectStores([j.default], () => ({
                                 children: 'Enable Forced Canary'
                             })
                         }),
-                        (0, i.jsx)(v.F, {
-                            setting: B.s6.DEVELOPER_OPTIONS_GATEWAY_EVENTS_TO_CONSOLE,
+                        (0, i.jsx)(O.F, {
+                            setting: Z.s6.DEVELOPER_OPTIONS_GATEWAY_EVENTS_TO_CONSOLE,
                             children: (0, i.jsx)(m.FormSwitch, {
                                 value: s,
                                 note: 'Logs all incoming and outgoing gateway events to the developer console, enable verbose logging in the developer console to see! This includes all message content.',
@@ -1038,8 +1046,8 @@ let X = d.ZP.connectStores([j.default], () => ({
                                 children: 'Enable Logging of Gateway Events to Console'
                             })
                         }),
-                        (0, i.jsx)(v.F, {
-                            setting: B.s6.DEVELOPER_OPTIONS_OVERLAY_RPC_EVENTS_COMMANDS,
+                        (0, i.jsx)(O.F, {
+                            setting: Z.s6.DEVELOPER_OPTIONS_OVERLAY_RPC_EVENTS_COMMANDS,
                             children: (0, i.jsx)(m.FormSwitch, {
                                 value: r,
                                 note: 'Logs all overlay related RPC events. Super noisy if an overlay is connected',
@@ -1047,8 +1055,8 @@ let X = d.ZP.connectStores([j.default], () => ({
                                 children: 'Enable Logging of Overlay RPC Events & Commands'
                             })
                         }),
-                        (0, i.jsx)(v.F, {
-                            setting: B.s6.DEVELOPER_OPTIONS_ANALYTICS_EVENTS_LOGGING,
+                        (0, i.jsx)(O.F, {
+                            setting: Z.s6.DEVELOPER_OPTIONS_ANALYTICS_EVENTS_LOGGING,
                             children: (0, i.jsx)(m.FormSwitch, {
                                 value: l,
                                 note: 'Logs all analytics events to the developer console',
@@ -1056,8 +1064,8 @@ let X = d.ZP.connectStores([j.default], () => ({
                                 children: 'Enable Logging of Analytics Events'
                             })
                         }),
-                        (0, i.jsx)(v.F, {
-                            setting: B.s6.DEVELOPER_OPTIONS_SOURCE_MAPS,
+                        (0, i.jsx)(O.F, {
+                            setting: Z.s6.DEVELOPER_OPTIONS_SOURCE_MAPS,
                             children: (0, i.jsx)(m.FormSwitch, {
                                 value: d,
                                 note: 'Only enable on devices you trust.',
@@ -1065,8 +1073,8 @@ let X = d.ZP.connectStores([j.default], () => ({
                                 children: 'Enable source maps to be loaded on this client'
                             })
                         }),
-                        (0, i.jsx)(v.F, {
-                            setting: B.s6.DEVELOPER_OPTIONS_ANALYTICS_DEBUGGER_VIEW,
+                        (0, i.jsx)(O.F, {
+                            setting: Z.s6.DEVELOPER_OPTIONS_ANALYTICS_DEBUGGER_VIEW,
                             children: (0, i.jsx)(m.FormSwitch, {
                                 value: u,
                                 note: 'Displays a floating debugger with viewed impressions',
@@ -1074,8 +1082,8 @@ let X = d.ZP.connectStores([j.default], () => ({
                                 children: 'Enable standard analytics debugger view'
                             })
                         }),
-                        (0, i.jsx)(v.F, {
-                            setting: B.s6.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR,
+                        (0, i.jsx)(O.F, {
+                            setting: Z.s6.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR,
                             children: (0, i.jsx)(m.FormSwitch, {
                                 value: h,
                                 note: 'Displays a floating idle status indicator',
@@ -1083,8 +1091,8 @@ let X = d.ZP.connectStores([j.default], () => ({
                                 children: 'Enable idle status indicator'
                             })
                         }),
-                        (0, i.jsx)(v.F, {
-                            setting: B.s6.DEVELOPER_OPTIONS_ACCESSIBILITY_AUDITING,
+                        (0, i.jsx)(O.F, {
+                            setting: Z.s6.DEVELOPER_OPTIONS_ACCESSIBILITY_AUDITING,
                             children: (0, i.jsx)(m.FormSwitch, {
                                 value: a,
                                 note: 'Runs Axe auditing for accessibility while using the app. Violations get logged to the console. Only available in development',
@@ -1092,8 +1100,8 @@ let X = d.ZP.connectStores([j.default], () => ({
                                 children: 'Enable Accessibility Auditing'
                             })
                         }),
-                        (0, i.jsx)(v.F, {
-                            setting: B.s6.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS,
+                        (0, i.jsx)(O.F, {
+                            setting: Z.s6.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS,
                             children: (0, i.jsx)(m.FormSwitch, {
                                 value: g,
                                 note: 'In App Directory, include inactive collections on the homepage. Use this to preview changes to collections before publishing them.',
@@ -1101,45 +1109,45 @@ let X = d.ZP.connectStores([j.default], () => ({
                                 children: 'Preview Unpublished Collections on App Directory Homepage'
                             })
                         }),
-                        (0, i.jsxs)(v.F, {
-                            setting: B.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
+                        (0, i.jsxs)(O.F, {
+                            setting: Z.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: [F.buttonsContainer, k.marginBottom20].join(' '),
-                                    children: (0, i.jsx)(y.S, {})
+                                    className: [k.buttonsContainer, U.marginBottom20].join(' '),
+                                    children: (0, i.jsx)(L.S, {})
                                 }),
-                                (0, i.jsx)(m.FormDivider, { className: F.divider })
+                                (0, i.jsx)(m.FormDivider, { className: k.divider })
                             ]
                         })
                     ]
                 })
             }),
-            (0, i.jsx)(K, {
+            (0, i.jsx)(Q, {
                 layoutDebuggingEnabled: c,
                 cssDebuggingEnabled: o
             })
         ]
     });
 });
-function J() {
-    let e = (0, d.e7)([O.Z], () => O.Z.getSurveyOverride()),
+function ee() {
+    let e = (0, d.e7)([P.Z], () => P.Z.getSurveyOverride()),
         [t, n] = s.useState(null != e ? e : '');
-    return (0, i.jsx)(v.F, {
-        setting: B.s6.DEVELOPER_OPTIONS_SURVEY_OVERRIDE,
+    return (0, i.jsx)(O.F, {
+        setting: Z.s6.DEVELOPER_OPTIONS_SURVEY_OVERRIDE,
         children: (0, i.jsxs)(m.FormSection, {
             tag: m.FormTitleTags.H1,
             title: 'Survey Override',
-            className: k.marginTop60,
+            className: U.marginTop60,
             children: [
                 (0, i.jsx)(m.FormTitle, { children: 'Copy the ID of the Survey you want to test:' }),
                 (0, i.jsxs)('form', {
-                    className: F.surveyOverride,
+                    className: k.surveyOverride,
                     onSubmit: (e) => {
                         e.preventDefault(), t.length > 0 ? x.Xq(t) : x.Xq(null);
                     },
                     children: [
                         (0, i.jsx)(m.TextInput, {
-                            className: F.surveyOverrideInput,
+                            className: k.surveyOverrideInput,
                             value: t,
                             onChange: n
                         }),
@@ -1153,23 +1161,23 @@ function J() {
         })
     });
 }
-function $() {
+function et() {
     var e;
     let t = (0, d.e7)([E.Z], () => E.Z.overrideId()),
         [n, r] = s.useState(null !== (e = E.Z.overrideId()) && void 0 !== e ? e : '');
-    return (0, i.jsx)(v.F, {
-        setting: B.s6.DEVELOPER_OPTIONS_CHANGELOG_OVERRIDE,
+    return (0, i.jsx)(O.F, {
+        setting: Z.s6.DEVELOPER_OPTIONS_CHANGELOG_OVERRIDE,
         children: (0, i.jsxs)(m.FormSection, {
             tag: m.FormTitleTags.H1,
             title: 'Changelog Override',
-            className: k.marginTop60,
+            className: U.marginTop60,
             children: [
                 (0, i.jsx)(m.FormTitle, { children: 'Enter the ID of the changelog you want to test' }),
                 (0, i.jsxs)('div', {
-                    className: F.surveyOverride,
+                    className: k.surveyOverride,
                     children: [
                         (0, i.jsx)(m.TextInput, {
-                            className: F.surveyOverrideInput,
+                            className: k.surveyOverrideInput,
                             value: n,
                             onChange: r
                         }),
@@ -1186,11 +1194,11 @@ function $() {
         })
     });
 }
-class ee extends s.PureComponent {
+class en extends s.PureComponent {
     render() {
         return (0, i.jsxs)(s.Fragment, {
-            children: [(0, i.jsx)(X, {}), (0, i.jsx)(Q, {}), (0, i.jsx)(J, {}), (0, i.jsx)($, {}), (0, i.jsx)(z, {})]
+            children: [(0, i.jsx)($, {}), (0, i.jsx)(J, {}), (0, i.jsx)(ee, {}), (0, i.jsx)(et, {}), (0, i.jsx)(K, {})]
         });
     }
 }
-t.Z = ee;
+t.Z = en;

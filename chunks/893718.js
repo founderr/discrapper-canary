@@ -519,7 +519,8 @@ t.Z = i.memo(
                                                     className: s()(
                                                         {
                                                             [es.textAreaThreadCreation]: eL === K.I.THREAD_CREATION,
-                                                            [es.profileBioInput]: eL === K.I.PROFILE_BIO_INPUT
+                                                            [es.profileBioInput]: eL === K.I.PROFILE_BIO_INPUT,
+                                                            [es.overlayInlineReply]: eL === K.I.OVERLAY_INLINE_REPLY
                                                         },
                                                         ey
                                                     ),

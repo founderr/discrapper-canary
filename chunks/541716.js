@@ -1,6 +1,6 @@
 n.d(t, {
     I: function () {
-        return b;
+        return y;
     },
     O: function () {
         return i;
@@ -222,6 +222,21 @@ let o = {
         toolbarType: 2
     },
     g = {
+        analyticsName: 'overlay_inline_reply',
+        drafts: { type: s.d.ChannelMessage },
+        permissions: { requireSendMessages: !0 },
+        users: { allowMentioning: !0 },
+        autocomplete: {
+            alwaysUseLayer: !0,
+            small: !0
+        },
+        submit: {
+            useDisabledStylesOnSubmit: !1,
+            clearOnSubmit: !0
+        },
+        toolbarType: 2
+    },
+    E = {
         analyticsName: 'user_profile_reply',
         drafts: { type: s.d.ChannelMessage },
         emojis: { button: !0 },
@@ -237,7 +252,7 @@ let o = {
         },
         toolbarType: 2
     },
-    E = {
+    v = {
         analyticsName: 'profile_bio_input',
         drafts: { type: s.d.ChannelMessage },
         emojis: { button: !0 },
@@ -249,7 +264,7 @@ let o = {
         disableAutoFocus: !0,
         showCharacterCount: !0
     },
-    v = {
+    I = {
         analyticsName: 'custom_gift_type',
         drafts: { type: s.d.ChannelMessage },
         emojis: {},
@@ -261,7 +276,7 @@ let o = {
         disableAutoFocus: !0,
         showCharacterCount: !0
     },
-    I = {
+    S = {
         analyticsName: 'rules_input',
         drafts: { type: s.d.ChannelMessage },
         permissions: { requireSendMessages: !0 },
@@ -271,7 +286,7 @@ let o = {
         },
         showCharacterCount: !0
     },
-    S = {
+    T = {
         analyticsName: 'forum_channel_guidelines',
         drafts: { type: s.d.ChannelMessage },
         permissions: { requireSendMessages: !1 },
@@ -286,7 +301,7 @@ let o = {
         showCharacterCount: !0,
         toolbarType: 1
     },
-    T = {
+    b = {
         analyticsName: 'atomic_reator_reply_input',
         drafts: { type: s.d.ChannelMessage },
         permissions: { requireSendMessages: !0 },
@@ -298,23 +313,24 @@ let o = {
         disableAutoFocus: !0,
         showCharacterCount: !0
     },
-    b = {
+    y = {
         NORMAL: o,
         OVERLAY: l,
+        OVERLAY_INLINE_REPLY: g,
         SIDEBAR: u,
         EDIT: c,
         FORM: d,
         VOICE_CHANNEL_STATUS: f,
         THREAD_CREATION: _,
         USER_PROFILE: m,
-        USER_PROFILE_REPLY: g,
-        PROFILE_BIO_INPUT: E,
-        CUSTOM_GIFT: v,
-        RULES_INPUT: I,
+        USER_PROFILE_REPLY: E,
+        PROFILE_BIO_INPUT: v,
+        CUSTOM_GIFT: I,
+        RULES_INPUT: S,
         CREATE_FORUM_POST: h,
         CREATE_POLL: p,
-        FORUM_CHANNEL_GUIDELINES: S,
-        ATOMIC_REACTOR_REPLY_INPUT: T,
+        FORUM_CHANNEL_GUIDELINES: T,
+        ATOMIC_REACTOR_REPLY_INPUT: b,
         FORWARD_MESSAGE_INPUT: {
             analyticsName: 'forward_message_input',
             drafts: { type: s.d.ChannelMessage },

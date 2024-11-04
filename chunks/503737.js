@@ -4,12 +4,13 @@ var l = n(481060),
     r = n(570140),
     a = n(468026),
     o = n(317770),
-    s = n(388032);
-let c = 'ActivityInviteManager',
-    u = () => {
+    s = n(981631),
+    c = n(388032);
+let u = 'ActivityInviteManager',
+    d = () => {
         r.Z.dispatch({ type: 'ACTIVITY_INVITE_MODAL_CLOSE' });
     };
-class d extends o.Z {
+class h extends o.Z {
     _initialize() {
         r.Z.subscribe('ACTIVITY_INVITE_MODAL_OPEN', this.handleModalOpen), r.Z.subscribe('ACTIVITY_INVITE_MODAL_CLOSE', this.handleModalClose);
     }
@@ -17,20 +18,22 @@ class d extends o.Z {
         r.Z.unsubscribe('ACTIVITY_INVITE_MODAL_OPEN', this.handleModalOpen), r.Z.unsubscribe('ACTIVITY_INVITE_MODAL_CLOSE', this.handleModalClose);
     }
     handleModalOpen(e) {
-        let { activity: t, isPrivate: r } = e;
+        let { activity: t, isPrivate: r, context: o } = e,
+            h = o === s.IlC.POPOUT ? l.POPOUT_MODAL_CONTEXT : l.DEFAULT_MODAL_CONTEXT;
         r
             ? (0, l.openModal)(
                   (e) =>
                       (0, i.jsx)(a.default, {
-                          title: s.intl.formatToPlainString(s.t['2tN7io'], { name: t.name }),
-                          body: s.intl.string(s.t.MAxtkp),
-                          confirmText: s.intl.string(s.t.BddRzc),
+                          title: c.intl.formatToPlainString(c.t['2tN7io'], { name: t.name }),
+                          body: c.intl.string(c.t.MAxtkp),
+                          confirmText: c.intl.string(c.t.BddRzc),
                           ...e
                       }),
                   {
-                      onCloseCallback: u,
-                      modalKey: c
-                  }
+                      onCloseCallback: d,
+                      modalKey: u
+                  },
+                  h
               )
             : (0, l.openModalLazy)(
                   async () => {
@@ -38,13 +41,14 @@ class d extends o.Z {
                       return (t) => (0, i.jsx)(e, { ...t });
                   },
                   {
-                      onCloseCallback: u,
-                      modalKey: c
+                      onCloseCallback: d,
+                      modalKey: u,
+                      contextKey: h
                   }
               );
     }
     handleModalClose(e) {
-        (0, l.closeModal)(c);
+        (0, l.closeModal)(u);
     }
 }
-t.Z = new d();
+t.Z = new h();
