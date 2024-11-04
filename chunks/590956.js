@@ -62,7 +62,10 @@ let v = (e) => {
                                 var n;
                                 g(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t);
                             },
-                            className: s()(E.emojiContainer, { [E.emojiContainerClickable]: o }),
+                            className: s()(E.emojiContainer, {
+                                [E.emojiContainerClickable]: o,
+                                [E.emojiJumbo]: n.jumboable
+                            }),
                             children: v(t)
                         })
                 });
@@ -121,7 +124,7 @@ let v = (e) => {
                                 }),
                                 (0, d.x)(m.qR.CustomEmojiTooltipShown));
                     },
-                    children: (t) =>
+                    children: (n) =>
                         (0, r.jsx)(l.Clickable, {
                             ...e,
                             onMouseEnter: () => {
@@ -138,8 +141,11 @@ let v = (e) => {
                                 b && (f.default.track(p.rMx.CLOSE_POPOUT, { nonce: R }), y(!1));
                             },
                             tag: 'span',
-                            className: s()(E.emojiContainer, { [E.emojiContainerClickable]: c }),
-                            children: C(t)
+                            className: s()(E.emojiContainer, {
+                                [E.emojiContainerClickable]: c,
+                                [E.emojiJumbo]: t.jumboable
+                            }),
+                            children: C(n)
                         })
                 });
         return c

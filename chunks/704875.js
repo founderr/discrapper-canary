@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return f;
     }
 }),
     n(47120);
@@ -8,15 +8,16 @@ var r = n(200651);
 n(192379);
 var i = n(120356),
     a = n.n(i),
-    s = n(845537),
-    o = n(653309),
-    l = n(631853),
-    u = n(896061),
-    c = n(554034);
-function d(e, t, n) {
-    var i, u;
-    let { attributes: d, children: _, element: h, decorations: p } = e,
-        m = (function (e) {
+    s = n(628692),
+    o = n(845537),
+    l = n(653309),
+    u = n(631853),
+    c = n(896061),
+    d = n(554034);
+function f(e, t, n) {
+    var i, c;
+    let { attributes: f, children: h, element: p, decorations: m } = e,
+        g = (function (e) {
             return Object.entries(e)
                 .filter((e) => {
                     let [t] = e;
@@ -24,138 +25,138 @@ function d(e, t, n) {
                 })
                 .map((e) => {
                     let [t, n] = e;
-                    return !0 === n && t in o.U ? o.U[t] : null;
+                    return !0 === n && t in l.U ? l.U[t] : null;
                 })
                 .filter((e) => null != e)
                 .join(' ');
-        })(null !== (i = null == p ? void 0 : p[0]) && void 0 !== i ? i : {});
-    switch (h.type) {
+        })(null !== (i = null == m ? void 0 : m[0]) && void 0 !== i ? i : {});
+    switch (p.type) {
         case 'line':
-            if (null === (u = h.codeBlockState) || void 0 === u ? void 0 : u.isInCodeBlock)
+            if (null === (c = p.codeBlockState) || void 0 === c ? void 0 : c.isInCodeBlock)
                 return (0, r.jsx)('div', {
-                    className: l.codeLine,
-                    spellCheck: null == h.codeBlockState || null == h.codeBlockState.lang,
-                    ...d,
-                    children: _
+                    className: u.codeLine,
+                    spellCheck: null == p.codeBlockState || null == p.codeBlockState.lang,
+                    ...f,
+                    children: h
                 });
             return (0, r.jsx)('div', {
-                ...d,
-                children: _
+                ...f,
+                children: h
             });
         case 'blockQuote': {
-            let e = a()(c.blockquoteContainer, c.slateBlockquoteContainer);
+            let e = a()(d.blockquoteContainer, d.slateBlockquoteContainer);
             return (0, r.jsxs)('div', {
-                ...d,
+                ...f,
                 className: e,
                 children: [
                     (0, r.jsx)('span', {
                         contentEditable: !1,
-                        className: c.blockquoteDivider
+                        className: d.blockquoteDivider
                     }),
-                    (0, r.jsx)('blockquote', { children: _ })
+                    (0, r.jsx)('blockquote', { children: h })
                 ]
             });
         }
         case 'emoji':
-            return (0, r.jsxs)(f, {
-                attributes: d,
-                className: m,
-                children: [(0, r.jsx)(s.dy, { emoji: h.emoji }), _]
+            return (0, r.jsxs)(_, {
+                attributes: f,
+                className: g,
+                children: [(0, r.jsx)(o.dy, { emoji: p.emoji }), h]
             });
         case 'customEmoji':
-            return (0, r.jsxs)(f, {
-                attributes: d,
-                className: m,
-                children: [(0, r.jsx)(s.wP, { emoji: h.emoji }), _]
+            return (0, r.jsxs)(_, {
+                attributes: f,
+                className: g,
+                children: [(0, r.jsx)(o.wP, { emoji: p.emoji }), h]
             });
         case 'textMention':
-            return (0, r.jsxs)(f, {
-                attributes: d,
-                className: m,
+            return (0, r.jsxs)(_, {
+                attributes: f,
+                className: g,
                 children: [
-                    (0, r.jsx)(s.Ox, {
-                        text: h.name,
+                    (0, r.jsx)(o.Ox, {
+                        text: p.name,
                         channelId: n,
                         guildId: t
                     }),
-                    _
+                    h
                 ]
             });
         case 'userMention':
-            return (0, r.jsxs)(f, {
-                attributes: d,
-                className: m,
+            return (0, r.jsxs)(_, {
+                attributes: f,
+                className: g,
                 children: [
-                    (0, r.jsx)(s.cB, {
-                        id: h.userId,
+                    (0, r.jsx)(o.cB, {
+                        id: p.userId,
                         channelId: n,
                         guildId: t
                     }),
-                    _
+                    h
                 ]
             });
         case 'roleMention':
-            return (0, r.jsxs)(f, {
-                attributes: d,
-                className: m,
+            return (0, r.jsxs)(_, {
+                attributes: f,
+                className: g,
                 children: [
-                    (0, r.jsx)(s.Vq, {
-                        id: h.roleId,
+                    (0, r.jsx)(o.Vq, {
+                        id: p.roleId,
                         guildId: t
                     }),
-                    _
+                    h
                 ]
             });
         case 'channelMention':
-            return (0, r.jsxs)(f, {
-                attributes: d,
-                className: m,
-                children: [(0, r.jsx)(s.Io, { id: h.channelId }), _]
+            return (0, r.jsxs)(_, {
+                attributes: f,
+                className: g,
+                children: [(0, r.jsx)(o.Io, { id: p.channelId }), h]
             });
         case 'staticRouteLink':
-            return (0, r.jsxs)(f, {
-                attributes: d,
-                className: m,
+            return (0, r.jsxs)(_, {
+                attributes: f,
+                className: g,
                 children: [
-                    (0, r.jsx)(s.NY, {
-                        id: h.id,
-                        itemId: h.itemId,
+                    (0, r.jsx)(o.NY, {
+                        id: p.id,
+                        itemId: p.itemId,
                         guildId: t
                     }),
-                    _
+                    h
                 ]
             });
         case 'soundboard':
-            return (0, r.jsxs)(f, {
-                attributes: d,
-                className: m,
-                children: [(0, r.jsx)(s.mb, { id: h.soundId }), _]
+            return (0, r.jsxs)(_, {
+                attributes: f,
+                className: g,
+                children: [(0, r.jsx)(s.mv, { soundId: p.soundId }), h]
             });
         case 'commandMention':
-            return (0, r.jsxs)(f, {
-                attributes: d,
-                className: m,
+            return (0, r.jsxs)(_, {
+                attributes: f,
+                className: g,
                 children: [
-                    (0, r.jsx)(s.Wf, {
-                        text: h.commandName,
-                        id: h.commandId
+                    (0, r.jsx)(o.Wf, {
+                        text: p.commandName,
+                        id: p.commandId
                     }),
-                    _
+                    h
                 ]
             });
         case 'timestamp':
-            return (0, r.jsxs)(f, {
-                attributes: d,
-                className: m,
-                children: [(0, r.jsx)(s.EK, { timestamp: h.parsed }), _]
+            return (0, r.jsxs)(_, {
+                attributes: f,
+                className: g,
+                children: [(0, r.jsx)(o.EK, { timestamp: p.parsed }), h]
             });
         default:
             return null;
     }
 }
-let f = (e) => {
+let _ = (e) => {
     let { className: t, attributes: n, children: i } = e,
-        s = a()(u.inlineElement, u.inlineVoid, t);
+        s = a()(c.inlineElement, c.inlineVoid, t);
     return (0, r.jsx)('span', {
         ...n,
         className: s,
